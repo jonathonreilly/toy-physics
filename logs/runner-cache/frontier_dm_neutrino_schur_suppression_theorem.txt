@@ -1,0 +1,62 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_schur_suppression_theorem.py
+runner_sha256: f7cfeffb78d370c52478f8881fb3e9d678ae2aa17d2c22663976e1f7cd4656af
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+==============================================================================
+NEUTRINO SCHUR SUPPRESSION THEOREM
+==============================================================================
+
+Part 1: Exact selector curvature at the weak-axis minimum
+  Hessian at e1:
+[[ 0.  0.  0.]
+ [ 0. 64.  0.]
+ [ 0.  0. 64.]]
+
+  [PASS] finite-difference Hessian matches the exact axis Hessian  (H(e1) = diag(0,64,64))
+  [PASS] transverse selector curvature is degenerate
+  [PASS] quadratic selector coefficient is 32  (V_sel(e1 + d_perp) = 32 |d_perp|^2 + O(d^3))
+
+Part 2: Exact Schur complement on T1 after integrating out O0 + T2
+  [PASS] Schur complement gives (m-j^2/m)I on T1 for m=0.5, j=0.01  (error = 0.000e+00)
+  [PASS] Schur complement gives (m-j^2/m)I on T1 for m=0.5, j=0.1  (error = 0.000e+00)
+  [PASS] Schur complement gives (m-j^2/m)I on T1 for m=0.5, j=0.2  (error = 0.000e+00)
+  [PASS] Schur complement gives (m-j^2/m)I on T1 for m=1.0, j=0.01  (error = 0.000e+00)
+  [PASS] Schur complement gives (m-j^2/m)I on T1 for m=1.0, j=0.1  (error = 0.000e+00)
+  [PASS] Schur complement gives (m-j^2/m)I on T1 for m=1.0, j=0.2  (error = 0.000e+00)
+  [PASS] Schur complement gives (m-j^2/m)I on T1 for m=32.0, j=0.01  (error = 0.000e+00)
+  [PASS] Schur complement gives (m-j^2/m)I on T1 for m=32.0, j=0.1  (error = 0.000e+00)
+  [PASS] Schur complement gives (m-j^2/m)I on T1 for m=32.0, j=0.2  (error = 0.000e+00)
+  [PASS] intermediate return identity on T1 is exact  (P_T1 Gamma_1 P_int Gamma_1 P_T1 = I)
+
+Part 3: Physical retained coefficient from the selected base surface
+  selected base j = g_weak/sqrt(2) = 0.461740728115
+  selector coefficient m = 32      = 32.000000000000
+  generated y_eff = j^2 / m        = 6.662640625000e-03
+  alpha_LM^2                      = 8.220656488058e-03
+  implied staircase level k_eff   = 8.010545
+
+  [PASS] generated coefficient equals g_weak^2 / 64
+  [PASS] generated coefficient lands near alpha_LM^2  (y_eff / alpha_LM^2 = 0.810475)
+  [PASS] generated coefficient selects k_B ~= 8  (k_eff = 8.010545)
+
+Honest read:
+  1. The exact weak-axis selector gives transverse quadratic coefficient 32.
+  2. The exact T1 Schur complement of mI + jGamma_1 generates a second-
+     order return with coefficient j^2/m and no free flavor matrix.
+  3. Using the already-selected bosonic base surface j=g_weak/sqrt(2)
+     and the exact selector coefficient m=32 gives y_nu^eff = g_weak^2/64.
+  4. That lands at k_eff ~= 8.01, so the old bounded k_B=8 attraction is
+     upgraded to an exact local suppression theorem on the retained lane.
+  5. This still does not close the full DM denominator by itself: the
+     downstream Majorana/Z3 activation law remains a separate theorem.
+
+==============================================================================
+RESULT: 16 PASS, 0 FAIL
+==============================================================================
+
+----- stderr -----
+

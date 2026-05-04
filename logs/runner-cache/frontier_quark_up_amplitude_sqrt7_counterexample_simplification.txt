@@ -1,0 +1,93 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_up_amplitude_sqrt7_counterexample_simplification.py
+runner_sha256: 619ef838844c21c232e535b76b1d46168de8f459ff7200f2effa63fe24072b7f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.72
+status: ok
+----- stdout -----
+========================================================================
+  FRONTIER: Quark sqrt(7) Counterexample Simplification
+========================================================================
+
+========================================================================
+PART 1: Direct sqrt(7) Anchored Law
+========================================================================
+
+  delta_A1(q_dem)              = 0.023809523810
+  projector magnitude          = sqrt(5/6) = 0.912870929175
+  solved anchored a_u          = 0.778161628656
+  direct law                   = sqrt(5/6) * (6/7 - delta_A1/sqrt(7))
+  direct denominator D0        = sqrt(7)   = 2.645751311065
+  direct anchored amplitude    = 0.774245730253
+  direct anchor aggregate      = 0.722589%
+  direct anchor max            = 0.668244%
+  direct refit objective       = 0.055094
+  direct refit max             = 1.062090%
+  [PASS] Direct denominator reproduces the explicit sqrt(7) anchored law  (D0 = 2.645751311065)
+
+========================================================================
+PART 2: Bounded Denominator Counterexamples
+========================================================================
+
+  bounded denominator grammar size  = 429
+  physical-band denominator count   = 425
+  beaters of direct sqrt(7) anchor  = 17
+  complexity counts                 = {3: 2, 5: 7, 6: 8}
+  family counts                     = {'one-step-quotient': 1, 'one-step-sum': 1, 'two-step-product': 4, 'two-step-quotient': 1, 'two-step-sqrt-product': 5, 'two-step-sum': 5}
+  beater denominator window         = [2.659075191684, 2.955442792204]
+
+  leading denominator beaters:
+  2 + sqrt(5/6)                          D=2.912870929175  a_u=0.774999078203  anchor=0.716114%  refit_obj=0.054274
+  sqrt(42/5)                             D=2.898275349238  a_u=0.774961501337  anchor=0.716378%  refit_obj=0.054310
+  (((2-sqrt(5/6)))*(sqrt(7)))            D=2.876273164431  a_u=0.774904135131  anchor=0.716876%  refit_obj=0.054367
+  (((sqrt(5/6)*sqrt(5/6)))+(2))          D=2.833333333333  a_u=0.774789612157  anchor=0.717869%  refit_obj=0.054484
+  sqrt((((2+2))*(2)))                    D=2.828427124746  a_u=0.774776305670  anchor=0.717985%  refit_obj=0.054498
+  (((sqrt(5/6)*2))+(1))                  D=2.825741858351  a_u=0.774769003196  anchor=0.718048%  refit_obj=0.054506
+  sqrt((((2+1))*(sqrt(7))))              D=2.817313247261  a_u=0.774745991508  anchor=0.718248%  refit_obj=0.054530
+  sqrt((((sqrt(5/6)+2))*(sqrt(7))))      D=2.776100156664  a_u=0.774631459994  anchor=0.719242%  refit_obj=0.054652
+  [PASS] Every bounded denominator beater lifts the denominator above sqrt(7)  (min beater D = 2.659075191684)
+  [PASS] Only two minimal-complexity denominator beaters survive  (complexity-3 beaters = 2)
+  [PASS] The simplest projector-rescaled beater is sqrt(42/5)  (D = 2.898275349238)
+  [PASS] The strongest bounded two-step denominator beater is 2 + sqrt(5/6)  (D = 2.912870929175)
+  [PASS] The projector-rescaled beater already captures more than 95% of the best anchored improvement  (capture = 0.959197)
+  [PASS] The strongest denominator beater still leaves the full package bounded  (refit_max = 1.029376%)
+
+========================================================================
+PART 3: Simplified Endpoint
+========================================================================
+
+  direct benchmark:
+    - D0 = sqrt(7)               = 2.645751311065
+      anchor = 0.722589%
+      a_u    = 0.774245730253
+
+  minimal representatives:
+    - projector-rescaled beater  = sqrt(42/5) = sqrt(7)/sqrt(5/6)
+      D = 2.898275349238
+      anchor = 0.716378%
+      a_u    = 0.774961501337
+    - strongest two-step beater  = 2 + sqrt(5/6)
+      D = 2.912870929175
+      anchor = 0.716114%
+      a_u    = 0.774999078203
+
+  structural explanation:
+    every beater satisfies D > sqrt(7), so the correction term
+      delta_A1 / D
+    is smaller than in the direct law. That lifts a_u upward from the
+    direct sqrt(7) value and moves the anchored CKM+J package closer to
+    the exact-support anchor.
+
+  bounded classification:
+    - raw beaters in the bounded denominator grammar: 17
+    - all beaters lie in a narrow lifted window above sqrt(7):
+      2.659075191684 <= D <= 2.955442792204
+    - no cleaner unique theorem-grade law emerges from this lane alone.
+
+========================================================================
+FINAL STATUS: PASS=7 FAIL=0
+========================================================================
+
+----- stderr -----
+

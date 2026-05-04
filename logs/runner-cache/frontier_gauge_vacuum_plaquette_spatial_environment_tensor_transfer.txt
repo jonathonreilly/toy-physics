@@ -1,0 +1,55 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer.py
+runner_sha256: fb3075abfa53fd223e3b505cffa238fadabc18c2bc41d10d21fc223979dbfa2c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.23
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE SPATIAL ENVIRONMENT TENSOR-TRANSFER
+==============================================================================
+
+Exact Wilson local coefficients at beta = 6
+  audited truncations                    = NMAX = 4, MODE_MAX = 80
+  c_(0,0)                              = 3.441440354987777
+  normalized c(0, 0)      = 1.000000000000000   dim = 1
+  normalized c(1, 0)      = 0.422531739649983   dim = 3
+  normalized c(0, 1)      = 0.422531739649983   dim = 3
+  normalized c(1, 1)      = 0.162259799479938   dim = 8
+  normalized c(2, 0)      = 0.135961727363391   dim = 6
+  conjugation-symmetry error           = 2.776e-17
+
+Exact SU(3) fusion primitives on the dominant-weight box
+  N_f entries in {0,1}               = True
+  N_fbar entries in {0,1}            = True
+  swap intertwining error (N_f)        = 0
+  swap intertwining error (N_fbar)     = 0
+
+Tensor-transfer support word from exact ingredients
+  tensor-word minimum entry            = 0.000000000000
+  tensor-word swap error               = 1.388e-17
+  boundary-amplitude minimum           = 0.000000000000
+  boundary-amplitude swap error        = 1.388e-17
+
+  [PASS] [THEOREM] the Wilson local class-function coefficients at beta = 6 are explicit, positive, and conjugation-symmetric on the audited SU(3) irreps
+         min normalized coefficient=2.275225e-05, swap error=2.776e-17
+  [PASS] [THEOREM] multiplication by the fundamental and antifundamental characters gives exact nonnegative dominant-weight fusion primitives
+         the exact SU(3) recurrence matrices furnish the local intertwiner primitives on the class sector
+  [PASS] [THEOREM] every truncated tensor-transfer word built from those exact Wilson coefficients and fusion primitives is positivity-preserving on the audited class sector
+         word min=0.000000e+00, amplitude min=0.000000e+00
+  [PASS] [THEOREM] the residual spatial-environment boundary amplitudes therefore arise from an explicit positive tensor-transfer class rather than a generic free positive sequence
+         tensor-word swap=1.388e-17, amplitude swap=1.388e-17
+  [PASS] [SUPPORT] the exact tensor-transfer class is atlas-reusable independently of any full beta=6 Perron solve
+         the remaining problem is the full environment Perron evaluation, not local coefficient ambiguity
+  [PASS] [SUPPORT] the current plaquette gap is therefore an explicit tensor-transfer boundary-state problem
+         trivial-channel boundary amplitude=8.450635e-01
+  [PASS] [SUPPORT] the tensor-transfer packet strengthens the environment lane without claiming analytic P(6)
+         the explicit local tensor ingredients are closed; the beta=6 Perron state still is not
+
+==============================================================================
+SUMMARY: THEOREM PASS=4 SUPPORT=3 FAIL=0
+==============================================================================
+
+----- stderr -----
+

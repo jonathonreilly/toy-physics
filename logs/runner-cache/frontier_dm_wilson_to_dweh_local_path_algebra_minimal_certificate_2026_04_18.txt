@@ -1,0 +1,45 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_to_dweh_local_path_algebra_minimal_certificate_2026_04_18.py
+runner_sha256: 583b5db7eeb0878f55d9a892cdf099bade0206c290c21e108ba368f601d89405
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.84
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON-TO-dW_e^H LOCAL PATH-ALGEBRA MINIMAL CERTIFICATE
+========================================================================================
+
+========================================================================================
+PART 1: CURRENT STACK ALREADY FIXES THE TWO LAYERS
+========================================================================================
+  [PASS] The local chain target note already isolates Phi_chain as the structured generator layer
+  [PASS] The projected-source law note states that dW_e^H reconstructs H_e and fixes the selected transport column downstream
+  [PASS] The charged source-response reduction note states that dW_e^H is the exact charged-sector Schur pushforward
+
+========================================================================================
+PART 2: THE GENERATOR LAYER IS ALREADY STRUCTURALLY MINIMAL
+========================================================================================
+  [PASS] One adjacent two-edge chain gives only the local seed generators before algebraic closure  (seed rank=4)
+  [PASS] Algebraic closure on that same chain lifts the Hermitian shadow to the full 9-dimensional codomain  (full rank=9)
+  [PASS] So there is no honest intermediate source-side layer between Phi_chain and a full Herm(3) law  (the same local chain already generates all 9 Hermitian directions)
+
+========================================================================================
+PART 3: ONCE THE DESCENDED IDENTITY HOLDS, THE DM CHAIN IS ALREADY ALGORITHMIC
+========================================================================================
+  [PASS] The descended Hermitian law reconstructs H_e exactly on the full chain-generated basis  (err=0.00e+00)
+  [PASS] That reconstructed H_e fixes the charged packet downstream  (col sums=[1. 1. 1.])
+  [PASS] The exact flavored selector then determines the relevant column algorithmically  (best column=1, eta=[0.82075559 0.9895127  0.92061708])
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The whole structured Wilson-to-dW_e^H route is exactly one minimal local generator-plus-response certificate  (Phi_chain plus dW_W o Phi_chain = dW_e^H already suffices for the downstream DM chain)
+  [PASS] So the reviewer-facing target is finite, local, and two-layer rather than a diffuse 9-probe search  (generator layer plus descended-response layer)
+
+========================================================================================
+SUMMARY: PASS=11 FAIL=0
+========================================================================================
+
+----- stderr -----
+

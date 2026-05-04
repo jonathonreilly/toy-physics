@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_current_bank_value_selection_nogo.py
+runner_sha256: 44ec8f955b7eff7625f0590cf6b1df1f6c96e2ed8c6882674463fa432da6c018
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+PMNS CURRENT BANK VALUE-SELECTION NO-GO
+========================================================================================
+
+Question:
+  Does the current exact bank contain a positive value-selection law for
+  the retained PMNS lane?
+
+========================================================================================
+PART 1: FREE AND SCALAR ROUTES ARE TOO SMALL
+========================================================================================
+  [PASS] The sole-axiom free response profiles are rejected by the retained PMNS closure stack  (pair is not on a one-sided minimal PMNS class)
+  [PASS] The free point carries no nontrivial active support
+  [PASS] A retained local-scalar diagonal triplet block stays diagonal on the active response chain
+  [PASS] The retained PMNS closure stack rejects the diagonal/scalar route as well  (response packs do not realize a one-sided minimal PMNS class)
+
+========================================================================================
+PART 2: GRAPH-FIRST REDUCES THE ONLY SURVIVING POSITIVE CARRIER
+========================================================================================
+  [PASS] The graph-first residual antiunitary symmetry fixes the reduced oriented-cycle block  (error=0.00e+00)
+  [PASS] The reduced oriented-cycle coordinates are read exactly as (u,v,w)  (coords=[0.41 0.32 0.28])
+  [PASS] The surviving positive carrier has the retained canonical diagonal-plus-forward-cycle support
+
+========================================================================================
+PART 3: EVERY REDUCED-CHANNEL POINT IS REALIZED BUT NOT SELECTED
+========================================================================================
+  [PASS] Two distinct reduced-channel points are both realized exactly on the lower-level active response chain  (|A-B|=0.715961)
+  [PASS] The native oriented-cycle observable law separates those realized points exactly  (|Δcoords|=0.508035)
+  [PASS] Both realized points satisfy the same graph-first residual antiunitary symmetry
+  [INFO] The current exact bank fixes the carrier and observable law, but not a unique value
+
+========================================================================================
+PART 4: CIRCULARITY GUARD
+========================================================================================
+  [PASS] The lower-level active response derivation does not take PMNS-side value targets as inputs  (bad=[])
+  [PASS] The native oriented-cycle readout does not take reduced-channel coordinates as inputs  (bad=[])
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-bank closeout:
+    - the sole axiom gives only the trivial free response profiles
+    - the retained scalar deformation routes stay too small
+    - the only surviving positive carrier is the graph-first reduced
+      oriented forward-cycle channel
+    - every point of that reduced channel is realized exactly on the
+      lower-level active response chain
+    - the current exact bank therefore does not select a unique value
+
+  So the retained PMNS lane closes negatively on the current exact bank.
+  Any further positive value-selection law would require genuinely new
+  dynamics or a further admitted extension.
+
+PASS=12 FAIL=0
+
+----- stderr -----
+

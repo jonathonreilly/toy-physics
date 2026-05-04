@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_dag.py
+runner_sha256: 47bf642b2ce0e7fe21477dc8b89a19c04b5329c2fcf58d4167896fafc0e3be92
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.32
+status: ok
+----- stdout -----
+======================================================================
+STAGGERED FERMION ON LAYERED DAG-DERIVED FAMILY
+======================================================================
+Layered acyclic template with causal ordering and symmetrized transport.
+
+======================================================================
+LAYERED DAG-DERIVED CONTROL (36 nodes, 8 layers, width=5)
+======================================================================
+  Bipartite: True
+  [D1] Force: +6.9064e-05 TOWARD PASS
+  [D2] N-stability: 14/14 TOWARD PASS
+  [D3] Norm: 6.6613e-16 PASS
+  [D4] Born: 7.8092e-16 PASS
+  [D5] Forward-depth: forward_frac=0.1266 PASS
+    gauss : F=+6.9064e-05 TW
+    even  : F=+1.3682e-04 TW
+    odd   : F=+9.6251e-05 TW
+  [D6] Families: 3/3 PASS
+
+  SCORE: 6/6
+
+======================================================================
+LAYERED DAG-DERIVED CONTROL (45 nodes, 12 layers, width=4)
+======================================================================
+  Bipartite: True
+  [D1] Force: +2.7530e-05 TOWARD PASS
+  [D2] N-stability: 14/14 TOWARD PASS
+  [D3] Norm: 0.0000e+00 PASS
+  [D4] Born: 7.7286e-16 PASS
+  [D5] Forward-depth: forward_frac=0.1266 PASS
+    gauss : F=+2.7530e-05 TW
+    even  : F=+5.4040e-05 TW
+    odd   : F=+3.8343e-05 TW
+  [D6] Families: 3/3 PASS
+
+  SCORE: 6/6
+
+======================================================================
+LAYERED DAG-DERIVED CONTROL (41 nodes, 6 layers, width=8)
+======================================================================
+  Bipartite: True
+  [D1] Force: +1.2505e-04 TOWARD PASS
+  [D2] N-stability: 14/14 TOWARD PASS
+  [D3] Norm: 2.2204e-16 PASS
+  [D4] Born: 8.9208e-16 PASS
+  [D5] Forward-depth: forward_frac=0.1266 PASS
+    gauss : F=+1.2505e-04 TW
+    even  : F=+3.2622e-04 TW
+    odd   : F=+2.0351e-04 TW
+  [D6] Families: 3/3 PASS
+
+  SCORE: 6/6
+
+SUMMARY: scores=[np.int64(6), np.int64(6), np.int64(6)]
+Time: 0.1s
+
+----- stderr -----
+

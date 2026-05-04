@@ -1,0 +1,220 @@
+===== runner cache v1 =====
+runner: scripts/frontier_full_pl_s3_atlas_cocycle_closure.py
+runner_sha256: 7ad4c684459bfcb93d5b220d60ede51e0dc66d71623dad8edd7180e212da2a59
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+
+======================================================================
+Step 1: PL S^3 = ∂(4-simplex) combinatorics
+======================================================================
+  [PASS] 5 vertices on the 4-simplex boundary
+         vertices = [0, 1, 2, 3, 4]
+  [PASS] 10 edges (= chart pairwise overlaps)
+         edges = [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+  [PASS] 10 triangles (= triple overlaps with cocycle conditions)
+         triangles = [(0, 1, 2), (0, 1, 3), (0, 1, 4), (0, 2, 3), (0, 2, 4), (0, 3, 4), (1, 2, 3), (1, 2, 4), (1, 3, 4), (2, 3, 4)]
+  [PASS] 5 tetrahedra (= facets of the boundary)
+         tetrahedra = [(0, 1, 2, 3), (0, 1, 2, 4), (0, 1, 3, 4), (0, 2, 3, 4), (1, 2, 3, 4)]
+
+======================================================================
+Step 2: Construct atlas data — 5 backgrounds + 10 transitions
+======================================================================
+  [PASS] All 10 chart transitions T_{ij} constructed (4 free + 6 cocycle-forced)
+         T keys: [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+  [PASS] All 10 transitions T_{ij} are invertible
+         |det T_(0, 1)|=1.667; |det T_(0, 2)|=2.137; |det T_(0, 3)|=3.528; ...
+
+======================================================================
+Step 3: All 5 backgrounds D_i invertible + Lorentzian signature
+======================================================================
+  [PASS] D_0 invertible (det != 0)
+         det(D_0) = -1.0000
+  [PASS] D_1 invertible (det != 0)
+         det(D_1) = -2.7805
+  [PASS] D_2 invertible (det != 0)
+         det(D_2) = -4.5678
+  [PASS] D_3 invertible (det != 0)
+         det(D_3) = -12.4438
+  [PASS] D_4 invertible (det != 0)
+         det(D_4) = -0.6572
+  [PASS] D_0 has Lorentzian signature (1 negative eigenvalue)
+         D_0 negative-eigenvalue count = 1
+  [PASS] D_1 preserves Lorentzian signature (1 negative eigenvalue)
+         D_1 negative-eigenvalue count = 1
+  [PASS] D_2 preserves Lorentzian signature (1 negative eigenvalue)
+         D_2 negative-eigenvalue count = 1
+  [PASS] D_3 preserves Lorentzian signature (1 negative eigenvalue)
+         D_3 negative-eigenvalue count = 1
+  [PASS] D_4 preserves Lorentzian signature (1 negative eigenvalue)
+         D_4 negative-eigenvalue count = 1
+
+======================================================================
+Step 4: K_GR(D_i) nondegeneracy on all 5 charts
+======================================================================
+  [PASS] K_GR(D_0) is 10×10 nondegenerate
+         shape=(10, 10), |det K_GR(D_0)|=1.000e+00
+  [PASS] K_GR(D_1) is 10×10 nondegenerate
+         shape=(10, 10), |det K_GR(D_1)|=6.017e-03
+  [PASS] K_GR(D_2) is 10×10 nondegenerate
+         shape=(10, 10), |det K_GR(D_2)|=5.029e-04
+  [PASS] K_GR(D_3) is 10×10 nondegenerate
+         shape=(10, 10), |det K_GR(D_3)|=3.351e-06
+  [PASS] K_GR(D_4) is 10×10 nondegenerate
+         shape=(10, 10), |det K_GR(D_4)|=8.155e+00
+  [PASS] K_GR(D_0) symmetric
+         max asymmetry = 0.000e+00
+  [PASS] K_GR(D_1) symmetric
+         max asymmetry = 1.776e-15
+  [PASS] K_GR(D_2) symmetric
+         max asymmetry = 3.553e-15
+  [PASS] K_GR(D_3) symmetric
+         max asymmetry = 1.110e-16
+  [PASS] K_GR(D_4) symmetric
+         max asymmetry = 4.441e-16
+
+======================================================================
+Step 5: 10 pairwise overlap-invariance relations on every edge
+======================================================================
+  [PASS] Overlap-invariance on edge (0,1): B_{D_1}(T^T h T, T^T k T) = B_{D_0}(h, k)
+         max |diff| over 5 pairs = 8.882e-15
+  [PASS] Overlap-invariance on edge (0,2): B_{D_2}(T^T h T, T^T k T) = B_{D_0}(h, k)
+         max |diff| over 5 pairs = 1.474e-13
+  [PASS] Overlap-invariance on edge (0,3): B_{D_3}(T^T h T, T^T k T) = B_{D_0}(h, k)
+         max |diff| over 5 pairs = 6.217e-15
+  [PASS] Overlap-invariance on edge (0,4): B_{D_4}(T^T h T, T^T k T) = B_{D_0}(h, k)
+         max |diff| over 5 pairs = 3.109e-15
+  [PASS] Overlap-invariance on edge (1,2): B_{D_2}(T^T h T, T^T k T) = B_{D_1}(h, k)
+         max |diff| over 5 pairs = 2.416e-13
+  [PASS] Overlap-invariance on edge (1,3): B_{D_3}(T^T h T, T^T k T) = B_{D_1}(h, k)
+         max |diff| over 5 pairs = 1.705e-13
+  [PASS] Overlap-invariance on edge (1,4): B_{D_4}(T^T h T, T^T k T) = B_{D_1}(h, k)
+         max |diff| over 5 pairs = 6.395e-14
+  [PASS] Overlap-invariance on edge (2,3): B_{D_3}(T^T h T, T^T k T) = B_{D_2}(h, k)
+         max |diff| over 5 pairs = 6.253e-13
+  [PASS] Overlap-invariance on edge (2,4): B_{D_4}(T^T h T, T^T k T) = B_{D_2}(h, k)
+         max |diff| over 5 pairs = 2.046e-12
+  [PASS] Overlap-invariance on edge (3,4): B_{D_4}(T^T h T, T^T k T) = B_{D_3}(h, k)
+         max |diff| over 5 pairs = 3.197e-14
+
+======================================================================
+Step 6: 10 K_GR transition rules on every edge
+======================================================================
+  [PASS] K_GR transition on edge (0,1): G_1 = R(T_{01})^{-T} G_0 R(T_{01})^{-1}
+         max |G_1 - R^{-T} G_0 R^{-1}| = 3.837e-13
+  [PASS] K_GR transition on edge (0,2): G_2 = R(T_{02})^{-T} G_0 R(T_{02})^{-1}
+         max |G_2 - R^{-T} G_0 R^{-1}| = 7.034e-13
+  [PASS] K_GR transition on edge (0,3): G_3 = R(T_{03})^{-T} G_0 R(T_{03})^{-1}
+         max |G_3 - R^{-T} G_0 R^{-1}| = 9.437e-16
+  [PASS] K_GR transition on edge (0,4): G_4 = R(T_{04})^{-T} G_0 R(T_{04})^{-1}
+         max |G_4 - R^{-T} G_0 R^{-1}| = 1.776e-14
+  [PASS] K_GR transition on edge (1,2): G_2 = R(T_{12})^{-T} G_1 R(T_{12})^{-1}
+         max |G_2 - R^{-T} G_1 R^{-1}| = 4.157e-13
+  [PASS] K_GR transition on edge (1,3): G_3 = R(T_{13})^{-T} G_1 R(T_{13})^{-1}
+         max |G_3 - R^{-T} G_1 R^{-1}| = 1.443e-14
+  [PASS] K_GR transition on edge (1,4): G_4 = R(T_{14})^{-T} G_1 R(T_{14})^{-1}
+         max |G_4 - R^{-T} G_1 R^{-1}| = 2.061e-13
+  [PASS] K_GR transition on edge (2,3): G_3 = R(T_{23})^{-T} G_2 R(T_{23})^{-1}
+         max |G_3 - R^{-T} G_2 R^{-1}| = 4.489e-14
+  [PASS] K_GR transition on edge (2,4): G_4 = R(T_{24})^{-T} G_2 R(T_{24})^{-1}
+         max |G_4 - R^{-T} G_2 R^{-1}| = 7.248e-13
+  [PASS] K_GR transition on edge (3,4): G_4 = R(T_{34})^{-T} G_3 R(T_{34})^{-1}
+         max |G_4 - R^{-T} G_3 R^{-1}| = 7.105e-14
+
+======================================================================
+Step 7: 10 triangle cocycle conditions T_{ij} T_{jk} = T_{ik}
+======================================================================
+  [PASS] Triangle cocycle (0,1,2): T_{01} T_{12} = T_{02}
+         max |T_{01} T_{12} - T_{02}| = 8.882e-16
+  [PASS] Triangle cocycle (0,1,3): T_{01} T_{13} = T_{03}
+         max |T_{01} T_{13} - T_{03}| = 5.551e-16
+  [PASS] Triangle cocycle (0,1,4): T_{01} T_{14} = T_{04}
+         max |T_{01} T_{14} - T_{04}| = 4.441e-16
+  [PASS] Triangle cocycle (0,2,3): T_{02} T_{23} = T_{03}
+         max |T_{02} T_{23} - T_{03}| = 1.055e-15
+  [PASS] Triangle cocycle (0,2,4): T_{02} T_{24} = T_{04}
+         max |T_{02} T_{24} - T_{04}| = 8.882e-16
+  [PASS] Triangle cocycle (0,3,4): T_{03} T_{34} = T_{04}
+         max |T_{03} T_{34} - T_{04}| = 3.331e-16
+  [PASS] Triangle cocycle (1,2,3): T_{12} T_{23} = T_{13}
+         max |T_{12} T_{23} - T_{13}| = 1.332e-15
+  [PASS] Triangle cocycle (1,2,4): T_{12} T_{24} = T_{14}
+         max |T_{12} T_{24} - T_{14}| = 1.554e-15
+  [PASS] Triangle cocycle (1,3,4): T_{13} T_{34} = T_{14}
+         max |T_{13} T_{34} - T_{14}| = 8.882e-16
+  [PASS] Triangle cocycle (2,3,4): T_{23} T_{34} = T_{24}
+         max |T_{23} T_{34} - T_{24}| = 1.332e-15
+  [PASS] All 10 triangle cocycles pass simultaneously
+         PL S^3 (∂4-simplex) atlas multi-chart cocycle compatibility verified
+
+======================================================================
+Step 8: Counterfactual — broken cocycle is detected
+======================================================================
+  [PASS] Broken-cocycle counterfactual: triangle (0,1,2) now fails
+         max |T_{01} T_{12} - T_{02}| = 1.963e-01
+  [PASS] Broken-cocycle counterfactual: triangle (1,2,3) now fails
+         max |T_{12} T_{23} - T_{13}| = 5.930e-01
+  [PASS] Broken-cocycle counterfactual: triangle (1,2,4) now fails
+         max |T_{12} T_{24} - T_{14}| = 4.036e-01
+  [PASS] Restoration: cocycle on triangle (0,1,2) holds again
+         max diff after restore = 8.882e-16
+
+======================================================================
+Step 9: Optional — patched stationary system spot check (one edge)
+======================================================================
+  [PASS] Local stationary solve K_GR(D_0) v_0 = J_0 succeeds
+         |v_0|_inf = 0.5000, |residual|_inf = 0.000e+00
+  [PASS] Overlap compatibility: v_1 from chart-1 solve matches transported v_0
+         max |v_1_expected - v_1_solved| = 8.621e-14
+  [PASS] Local residuals < 1e-9 on charts 0 and 1
+         |res_0|=0.000e+00, |res_1|=3.331e-16
+
+======================================================================
+Step 10: Sanity — only spokes are free; cycles forced by cocycle
+======================================================================
+  [PASS] Cycle edge (1,2) is forced: T_{12} = T_{01}^{-1} T_{02}
+         max diff = 0.000e+00
+  [PASS] Cycle edge (1,3) is forced: T_{13} = T_{01}^{-1} T_{03}
+         max diff = 0.000e+00
+  [PASS] Cycle edge (1,4) is forced: T_{14} = T_{01}^{-1} T_{04}
+         max diff = 0.000e+00
+  [PASS] Cycle edge (2,3) is forced: T_{23} = T_{02}^{-1} T_{03}
+         max diff = 0.000e+00
+  [PASS] Cycle edge (2,4) is forced: T_{24} = T_{02}^{-1} T_{04}
+         max diff = 0.000e+00
+  [PASS] Cycle edge (3,4) is forced: T_{34} = T_{03}^{-1} T_{04}
+         max diff = 0.000e+00
+
+======================================================================
+Step 11: Aggregate verification — closes Obstruction 1 of cycle 10
+======================================================================
+  [PASS] AGGREGATE: 5 K_GR nondegenerate + 10 overlap-invariance + 10 K_GR transition + 10 cocycles all pass
+         Full PL S^3 multi-chart atlas closure verified — closes Obstruction 1 of cycle 10
+
+======================================================================
+Step 12: Remaining named obstructions (for future cycles)
+======================================================================
+  - Obstruction A (was cycle 10's Obstruction 2): full global stationary section on the patched atlas for arbitrary sources NOT solved. Spot check on one edge succeeds (Step 9), but not on all triangles and not for the full physical source class.
+  - Obstruction B (was cycle 10's Obstruction 3): atlas-refinement / continuum limit not addressed. Adding a chart preserves the cocycle by construction (one more spoke), but the continuum limit remains open.
+  [PASS] Two remaining named obstructions documented for future cycles
+         Specific repair targets for Obstruction 2 (global stationary section) and 3 (atlas-refinement)
+
+======================================================================
+PASS=72  FAIL=0
+======================================================================
+CLOSING-DERIVATION OUTCOME (output type a):
+  Full PL S^3 = ∂(4-simplex) atlas constructed:
+    5 charts, 10 edges, 10 triangles, 5 tetrahedra.
+  All 5 K_GR(D_i) are 10×10 nondegenerate on the symmetric-tensor basis.
+  All 10 pairwise overlap-invariance relations verified (B_D-bilinear identity).
+  All 10 K_GR transition rules verified (G_j = R^{-T} G_i R^{-1}).
+  All 10 triangle cocycle conditions T_{ij} T_{jk} = T_{ik} verified.
+  Cycle 10 Obstruction 1 (multi-chart cocycle conditions) is CLOSED.
+  Patched stationary system spot-check on one edge succeeds.
+Two remaining obstructions (global stationary section on full atlas,
+  atlas-refinement / continuum limit) documented for future cycles.
+
+----- stderr -----
+

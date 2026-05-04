@@ -1,0 +1,147 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_p2_taste_staircase_transport.py
+runner_sha256: 1611bc7e98746678aa0206e2e259db5d3ca1d7fbb9e35e6e42d14efa4852f69f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+==============================================================================
+P2 TASTE-STAIRCASE TRANSPORT: VERIFICATION (PARTIAL)
+==============================================================================
+
+BLOCK 1. Retained canonical-surface constants.
+  <P>                = 0.593400
+  u_0                = 0.877681
+  alpha_bare         = 0.079577
+  alpha_LM           = 0.090668
+  alpha_s(v)_SM      = 0.103304
+  (7/8)^(1/4)        = 0.967168
+  g_s(M_Pl)_lattice  = 1.067411
+  g_s(v)_SM          = 1.139366
+  1/sqrt(6) Ward     = 0.408248
+  y_t(M_Pl) Ward BC  = 0.435769
+
+BLOCK 2. Step count and scale-span reproduction.
+  n_steps            = 16
+  per-step alpha_LM  = 0.090668
+  product over 16    = 2.085701e-17
+  v / M_Pl           = 2.017223e-17
+  v / (M_Pl*C_APBC)  = 2.085701e-17
+  [PASS (C)] 16 steps reproduce 17-decade compression
+         relative error = 7.426e-08
+  [PASS (C)] Log-scale span matches M_Pl -> v (within APBC factor)
+         predicted = 38.409, observed = 38.442
+
+BLOCK 3. Per-rung scales mu_k = M_Pl * alpha_LM^k.
+  mu_0  (M_Pl)       = 1.221e+19 GeV
+  mu_8               = 5.576e+10 GeV
+  mu_15              = 2.809e+03 GeV
+  mu_16              = 254.643211 GeV
+  mu_16 * C_APBC     = 246.282818 GeV
+  v (derived)        = 246.282800 GeV
+  [PASS (C)] mu_16 * (7/8)^{1/4} = v (hierarchy closure)
+         mu_16 * C_APBC = 246.282818 vs v = 246.282800
+
+BLOCK 4. Per-rung gauge coupling: uniform u_0^{-1/32} dressing.
+  per-rung factor    = 1.004086
+  g_s(mu_0)          = 1.067411
+  g_s(mu_8)          = 1.102801
+  g_s(mu_16)         = 1.139366
+  1 / u_0 (CMT)      = 1.139366
+  [PASS (C)] g_s(mu_16) = 1/u_0 (CMT endpoint)
+         g_s(mu_16) = 1.139366 vs 1/u_0 = 1.139366, err = 1.56e-15
+
+BLOCK 5. Per-rung Ward identity y_t/g_s = 1/sqrt(6).
+  y_t(mu_0)/g_s(mu_0)   = 0.4082482905
+  y_t(mu_8)/g_s(mu_8)   = 0.4082482905
+  y_t(mu_16)/g_s(mu_16) = 0.4082482905
+  1/sqrt(6)             = 0.4082482905
+  max deviation         = 5.55e-17
+  [PASS (C)] UV Ward at mu_0 (M_Pl)
+         ratio = 0.4082482905
+  [PASS (C)] Per-rung Ward preservation (all 17 rungs, k=0..16)
+         max |y_t/g_s - 1/sqrt(6)| over all rungs = 5.55e-17
+
+BLOCK 6. Rung-by-rung trajectory.
+    k     mu_k [GeV]        g_s        y_t    y_t/g_s
+    0     1.2209e+19   1.067411   0.435769   0.408248
+    1     1.1070e+18   1.071772   0.437549   0.408248
+    2     1.0037e+17   1.076150   0.439337   0.408248
+    3     9.1000e+15   1.080547   0.441132   0.408248
+    4     8.2507e+14   1.084962   0.442934   0.408248
+    5     7.4808e+13   1.089394   0.444743   0.408248
+    6     6.7827e+12   1.093845   0.446560   0.408248
+    7     6.1497e+11   1.098314   0.448385   0.408248
+    8     5.5758e+10   1.102801   0.450217   0.408248
+    9     5.0554e+09   1.107307   0.452056   0.408248
+   10     4.5837e+08   1.111831   0.453903   0.408248
+   11     4.1559e+07   1.116373   0.455758   0.408248
+   12     3.7681e+06   1.120934   0.457620   0.408248
+   13     3.4164e+05   1.125514   0.459489   0.408248
+   14     3.0976e+04   1.130112   0.461366   0.408248
+   15     2.8085e+03   1.134730   0.463251   0.408248
+   16     2.5464e+02   1.139366   0.465144   0.408248
+
+BLOCK 7. SM EFT matching coefficient at v.
+  lattice ratio at mu_16 (pre-match)  = 0.408248
+  SM ratio at v (primary chain)       = 0.805619
+  matching coefficient M              = 1.973355
+  (M expected ~2 from QFP focusing)
+  [PASS (C)] Matching coefficient M is finite and order-unity
+         M = 1.9734; this is the narrowed open residual
+
+BLOCK 8. Ratio at v: lattice-side vs SM-side.
+  lattice-side ratio at mu_16: y_t/g_s = 0.408248 = 1/sqrt(6)
+  SM-side ratio at v:          y_t/g_s = 0.805619 (primary chain)
+  diff (matching coefficient): M = 1.973355
+  [PASS (C)] Lattice-side ratio at v preserves 1/sqrt(6) (Ward BC)
+         lattice ratio = 0.4082482905 vs Ward = 0.4082482905
+  [PASS (C)] SM-side ratio at v differs from Ward by matching coefficient
+         |SM - Ward| = 0.3974 (expected ~0.4)
+
+BLOCK 9. QFP insensitivity bound on the matching jump.
+  QFP insensitivity bound: 3.0%
+  Taste-staircase satisfies both QFP conditions:
+    (a) smooth monotonic (16 algebraic rungs + uniform dressing)
+    (b) Ward BC at M_Pl: y_t(M_Pl)/g_s(M_Pl) = 1/sqrt(6)
+    (c) gauge anchor at v: g_s(v)_lat = 1/u_0 (CMT)
+  [PASS (C)] Taste staircase satisfies QFP insensitivity conditions
+         Ward BC + CMT anchor + smooth monotonic dressing
+
+BLOCK 10. Outcome classification.
+  Outcome: PARTIAL
+  
+  Lattice-side transport (mu = M_Pl -> mu_16 near v):
+    Ward ratio preserved EXACTLY on all 16 rungs.
+    Gauge coupling reaches CMT endpoint 1/u_0 at mu_16.
+    Closes the 17-decade transport on the lattice side.
+  
+  SM-side matching (at v):
+    Matching coefficient M = 1.9734
+    Separate from the staircase; not derived in this theorem.
+    Bounded by QFP insensitivity at ~3%.
+  
+  P2 narrowing: 17 decades of 2-loop SM RGE surrogate
+                -> 0 decades of matching at v (open)
+  [PASS (C)] Outcome = PARTIAL (taste staircase closes UV-to-matching surface)
+         Ward preserved above v; matching at v open; bounded by QFP
+  [PASS (C)] Hierarchy theorem reproduced from retained constants
+         v = 246.2828 vs 246.2828
+
+==============================================================================
+RESULT: 12 PASS, 0 FAIL   (0.00s)
+==============================================================================
+
+OUTCOME: PARTIAL
+  Lattice-side ratio at v: y_t/g_s = 0.408248 (= 1/sqrt(6))
+  SM-side ratio at v:      y_t/g_s = 0.805619  (primary chain)
+  Matching coefficient M = 1.9734  (OPEN residual)
+
+This runner verifies the taste-staircase transport theorem's PARTIAL
+closure of P2. The 17-decade UV-to-IR transport is reduced to a single
+matching jump at v, narrowing (but not closing) the P2 primitive.
+
+
+----- stderr -----
+

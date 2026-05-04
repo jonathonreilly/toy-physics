@@ -1,0 +1,41 @@
+===== runner cache v1 =====
+runner: scripts/PORTABLE_CARD_EXTENSION_COMPARE.py
+runner_sha256: ad3d27d1dde52e52594cd22853033ab31627e1e15659239050a6ca4fb2c45213
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.10
+status: ok
+----- stdout -----
+================================================================================================
+PORTABLE CARD EXTENSION COMPARE
+  three-family card vs portable package vs distance-law holdout
+================================================================================================
+Question:
+Does the new three-family card extend the portable package cleanly, with distance law remaining the main holdout subset?
+
+Retained card baseline:
+| family | drift | restore | portable core | distance alpha | note |
+| --- | ---: | ---: | --- | --- | --- |
+| Family 1 (center) | 0.20 | 0.70 | retained | -0.962 | baseline retained grown family |
+| Family 2 | 0.05 | 0.30 | retained | -0.947 | second independent grown family |
+| Family 3 | 0.50 | 0.90 | retained | not yet / holdout | strongest newer family candidate |
+
+Distance-law source-placement diagnostic on family 3:
+   b picked node                      pos        delta
+--------------------------------------------------------------------
+   5         802    (3.000, 0.477, 2.532)   +2.318e-05
+   6         802    (3.000, 0.477, 2.532)   +2.318e-05
+   7         802    (3.000, 0.477, 2.532)   +2.318e-05
+   8         802    (3.000, 0.477, 2.532)   +2.318e-05
+  10         802    (3.000, 0.477, 2.532)   +2.318e-05
+
+Safe read:
+  family 3 source lookup collapses to one boundary node across the tested b-window; fitted alpha=0.000, r2=1.000
+  this is a source-placement / harness issue, not a physics failure, because the probe never samples distinct distance rows
+  the portable package itself stays clean on the three-family card; the distance-law subset is the holdout
+
+Verdict:
+retained narrow extension positive: the three-family card extends the portable package cleanly, while the distance law remains the main holdout subset on the current family-3 probe
+
+----- stderr -----
+

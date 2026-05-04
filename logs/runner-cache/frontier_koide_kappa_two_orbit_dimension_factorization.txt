@@ -1,0 +1,91 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_kappa_two_orbit_dimension_factorization.py
+runner_sha256: a126e8aa4fc1ce05172325fca5958692d7e2e046da06f6e7718f1a22ed7c59ea
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.82
+status: ok
+----- stdout -----
+========================================================================
+Section 1 - Cyclic bundle B_0, B_1, B_2 and circulant Gram matrix
+========================================================================
+   Tr(B_0^2) = 3
+   Tr(B_1^2) = 6
+   Tr(B_2^2) = 6
+[PASS] Tr(B_0^2) == 3
+[PASS] Tr(B_1^2) == 6
+[PASS] Tr(B_2^2) == 6
+[PASS] Cyclic Gram matrix == diag(3, 6, 6)
+[PASS] Orbit-dimension ratio Tr(B_1^2)/Tr(B_0^2) == 2  (ratio=2)
+
+========================================================================
+Section 2 - Master identity 2 r_0^2 - (r_1^2 + r_2^2) == 18 (g_0^2 - 2|g_1|^2)
+========================================================================
+[PASS] G = g0 I + g1 C + g1* C^2 is Hermitian
+   r_0 = Re Tr(G B_0) = 3*g0
+   r_1 = Re Tr(G B_1) = 6*g1r
+   r_2 = Re Tr(G B_2) = 6*g1i
+[PASS] r_0 == 3 g0
+[PASS] r_1 == 6 g1r
+[PASS] r_2 == 6 g1i
+   LHS - RHS = 0
+[PASS] Master identity (*) symbolically verified
+
+========================================================================
+Section 3 - Basis robustness of the master identity
+========================================================================
+[PASS] Master identity invariant under SO(2) rotation of (B_1, B_2)  (residual=0)
+[PASS] Non-orthonormal rescaling breaks master identity (residual nonzero)  (residual contains lam, mu: Add(Mul(Integer(-1), Integer(36), Pow(Symbol('g1i', real=Tru...)
+
+========================================================================
+Section 4 - Z_3-invariant quadratics in (r_0, r_1, r_2)
+========================================================================
+[PASS] Setting gamma=delta=epsilon=0 makes Q Z_3-invariant  (residual=0)
+[PASS] Cross-term gamma alone breaks Z_3-invariance  (residual contains gamma)
+[PASS] Cross-term delta alone breaks Z_3-invariance  (residual contains delta)
+[PASS] Cross-term epsilon alone breaks Z_3-invariance  (residual contains epsilon)
+   Surviving Z_3-invariant quadratic family: alpha r_0^2 + beta (r_1^2 + r_2^2).
+   Q = 0 gives kappa = g_0^2/|g_1|^2 = -4 beta / alpha (one free scalar).
+
+========================================================================
+Section 5 - No-go cross-checks on kappa=2
+========================================================================
+[PASS] sigma=0 no-go: responses depend only on (g_0, g_1r, g_1i)  (free symbols={g1i, g0, g1r})
+[PASS] right-conj no-go: C B_0 C^dag == B_0
+[PASS] right-conj no-go: C B_1 C^dag == B_1
+[PASS] right-conj no-go: C B_2 C^dag == B_2
+[PASS] positive-parent-axis no-go: diagonal-axis data collapses to g_0  (diag responses=[g0, g0, g0])
+
+========================================================================
+Section 6 - Uniqueness of Z_3 among cyclic groups
+========================================================================
+[PASS] Z_3 real irrep dims == [1, 2]
+[PASS] Z_3 is the UNIQUE cyclic group with real irrep dims [1, 2]
+[PASS] Z_4 real irrep dims == [1, 1, 2] (not Koide pattern)
+[PASS] Z_2 real irrep dims == [1, 1] (not Koide pattern)
+
+========================================================================
+Section 7 - Observational PDG check (flagged; not axiom-native)
+========================================================================
+   PDG-derived (a, |b|) = (17.715562, 12.526678)
+   kappa_observed = a^2 / |b|^2 = 2.000037
+[PASS] OBSERVATIONAL PDG charged-lepton masses: kappa ~= 2 sub-percent (flagged)  (kappa_obs=2.000037)
+
+========================================================================
+kappa=2 Orbit-Dimension Factorization - certification summary
+========================================================================
+
+Piece (i) AXIOM-NATIVE:  Tr(B_1^2)/Tr(B_0^2) = 6/3 = 2, forced by Z_3
+orbit-dimension ratio dim_R(non-triv)/dim_R(triv) = 2/1.
+
+Piece (ii) OPEN:  Koide cone normalization alpha:beta = 2:-1 not forced
+by Z_3-invariance alone. Surviving 1-parameter family:
+   Q(G) = alpha r_0^2 + beta (r_1^2 + r_2^2),  kappa = -4 beta/alpha.
+
+Residual open scalar: derive CoV(sqrt(m_k)) = 1 from A0-A3, equivalently
+Var(sqrt(m_k)) = <sqrt(m_k)>^2, equivalently alpha/beta = -2.
+
+PASS=26 FAIL=0
+
+----- stderr -----
+

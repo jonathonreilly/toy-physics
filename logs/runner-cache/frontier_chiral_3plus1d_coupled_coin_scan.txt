@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_chiral_3plus1d_coupled_coin_scan.py
+runner_sha256: 4b1cb6d9ab49054f7fc16906e5fa2d6b1378bab9dc0efad4e0883942a49a110e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.48
+status: ok
+----- stdout -----
+FRONTIER: 3+1D COUPLED-COIN SCAN
+==============================================================================
+  Interpolate from factorized 2x2⊕2x2⊕2x2 coin to a coupled family.
+  Measure low-k KG/isotropy and a 3D AB/Wilson return signal.
+
+  mix=0.00: running dispersion scan...
+  mix=0.00: running gauge scan...
+  mix=0.12: running dispersion scan...
+  mix=0.12: running gauge scan...
+  mix=0.25: running dispersion scan...
+  mix=0.25: running gauge scan...
+  mix=0.38: running dispersion scan...
+  mix=0.38: running gauge scan...
+  mix=0.50: running dispersion scan...
+  mix=0.50: running gauge scan...
+  mix=0.62: running dispersion scan...
+  mix=0.62: running gauge scan...
+  mix=0.75: running dispersion scan...
+  mix=0.75: running gauge scan...
+  mix=0.88: running dispersion scan...
+  mix=0.88: running gauge scan...
+  mix=1.00: running dispersion scan...
+  mix=1.00: running gauge scan...
+
+==============================================================================
+3+1D COUPLED-COIN SCAN
+==============================================================================
+  theta0=0.3, strength=0.0005, n=17, L=16
+  mix=0 is the current factorized direct-sum coin; mix=1 is the most
+  strongly cross-coupled unitary in this family.
+
+   mix     KG R^2     dir_CV        m^2    gauge V  gauge R^2
+------------------------------------------------------------------------------
+  0.00     0.0627     0.0603     0.0900     0.0000     0.0000
+  0.12     0.2517     0.0637     0.0682     0.1458     0.9147
+  0.25     0.2736     0.0750     0.0491     0.4277     0.8713
+  0.38     0.2811     0.0905     0.0332     0.8097     0.8765
+  0.50     0.2848     0.1134     0.0204     0.6663     0.9669
+  0.62     0.2867     0.1514     0.0107     0.4865     0.9771
+  0.75     0.2870     0.2264     0.0041     0.7924     0.8431
+  0.88     0.2814     0.4407     0.0005     0.9142     0.7004
+  1.00     0.4787     0.8670     2.4364     0.8329     0.7210
+
+Best/Worst
+  Best KG fit:    mix=1.00, R^2=0.4787, dir_CV=0.8670, m^2=2.4364
+  Worst KG fit:   mix=0.00, R^2=0.0627, dir_CV=0.0603, m^2=0.0900
+  Best gauge:     mix=0.88, V=0.9142, R^2=0.7004, target=[1.224360e-05, 2.731432e-04]
+  Worst gauge:    mix=0.00, V=0.0000, R^2=0.0000, target=[0.000000e+00, 0.000000e+00]
+
+  KG gain across scan:    +0.4160
+  Gauge gain across scan: +0.9142
+  Separability looks like the blocker: YES
+
+==============================================================================
+SUMMARY
+==============================================================================
+  Runtime: 1.4s
+  Best KG point:    mix=1.00 (R^2=0.4787, dir_CV=0.8670)
+  Best gauge point: mix=0.88 (V=0.9142, R^2=0.7004)
+  Worst KG point:   mix=0.00 (R^2=0.0627, dir_CV=0.0603)
+  Worst gauge point:mix=0.00 (V=0.0000, R^2=0.0000)
+
+----- stderr -----
+

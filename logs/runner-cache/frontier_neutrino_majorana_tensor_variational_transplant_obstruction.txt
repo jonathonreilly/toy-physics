@@ -1,0 +1,56 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_tensor_variational_transplant_obstruction.py
+runner_sha256: 3f8193432c45e4c5f31698069ed2103ede878509c4d59418e4f12c4ba334809f
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.08
+status: nonzero_exit
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: TENSOR-VARIATIONAL TRANSPLANT OBSTRUCTION
+========================================================================================
+
+Question:
+  Can the exact direct-universal tensor-variational / positive-
+  background local-closure family act as the missing absolute
+  Majorana staircase selector on the current self-dual source ray?
+
+========================================================================================
+PART 1: THE ATLAS ALREADY CONTAINS THE TENSOR / LOCAL-CLOSURE FAMILY
+========================================================================================
+  [PASS] Atlas retains the universal tensor-variational row
+  [PASS] Atlas retains the universal positive-background local-closure row
+  [PASS] The tensor-variational note defines the metric-source Hessian candidate
+  [FAIL] The local-closure note gives a unique stationary solution family
+  [PASS] The current Majorana blocker note already fixes the self-dual source family to one positive ray
+
+========================================================================================
+PART 2: THE TRANSPLANTED TENSOR STATIONARY FAMILY STAYS HOMOGENEOUS
+========================================================================================
+  [PASS] Normalized stationary tensor profiles are identical across Majorana staircase rescalings  (max normalized profile difference=2.86e-16)
+  [PASS] The stationary action scales exactly as lambda^2 on that family  (spread in I_*/lambda^2=7.28e-12)
+  [PASS] The stationary field norm scales exactly as lambda on that family  (spread in ||F_*||/lambda=4.55e-13)
+
+========================================================================================
+PART 3: THE STATIONARY TENSOR ACTION STILL HAS NO FINITE SCALE SELECTOR
+========================================================================================
+  [PASS] The exact stationary action coefficient is positive  (<J_0,K^-1 J_0>=1.138111e+05)
+  [PASS] d I_*(lambda) / d lambda = -lambda <J_0,K^-1 J_0> stays strictly negative on lambda > 0  (derivatives=[-0.00573363597512657, -0.0005198687738647261, -4.7136501726314714e-05])
+  [PASS] So the tensor/local-closure family has no intrinsic finite positive stationary selector  (only the trivial lambda=0 boundary is stationary on the homogeneous ray)
+
+========================================================================================
+RESULT
+========================================================================================
+  No. The direct-universal tensor/local-closure family remains
+  homogeneous when fed by the current self-dual Majorana source ray:
+  the stationary field scales linearly, the stationary action scales
+  quadratically, normalized profiles are unchanged, and no finite
+  positive staircase selector emerges.
+
+  So this gravity/atlas route is not the missing non-homogeneous
+  local-to-generation bridge on the present stack.
+
+  PASS=10  FAIL=1
+
+----- stderr -----
+

@@ -1,0 +1,61 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_gamma_orbit_positive_one_clock_semigroup.py
+runner_sha256: c1a228763bee10c78b3370e9ed4333feac1aa56c27f1da634f3e28e4103abee8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.44
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: one positive clock step carries a unique Hermitian generator
+========================================================================================
+  [PASS] [NUMERIC] H_* is Hermitian
+  [PASS] [NUMERIC] The one-clock block X_1 = exp(H_*) is positive Hermitian  (min eig=0.270065)
+  [PASS] [NUMERIC] A positive Hermitian one-clock block has a Hermitian logarithm
+  [PASS] [NUMERIC] The recovered generator log(X_1) matches the live H_* witness  (max error=1.003e-15)
+  [PASS] [NUMERIC] Exponentiating the recovered generator returns the original one-clock block
+
+========================================================================================
+PART 2: repeated identical local clock steps force one exponential family
+========================================================================================
+  [PASS] [NUMERIC] Semigroup law holds at beta=0.150000, gamma=0.350000
+  [PASS] [NUMERIC] Semigroup law holds at beta=0.400000, gamma=0.200000
+  [PASS] [NUMERIC] Semigroup law holds at beta=0.500000, gamma=0.133571
+  [PASS] [NUMERIC] The full positive family is fixed by the one-clock block alone
+  [PASS] [NUMERIC] Half a clock composed with itself gives one full clock
+
+========================================================================================
+PART 3: once the T_2 semigroup is fixed, the orbit-slot law reduces to one branch
+========================================================================================
+  [PASS] [NUMERIC] The small cone branch is negative at beta=0, so positivity makes branch selection nontrivial  (u_-(0)=-0.242641)
+  [PASS] [NUMERIC] The small branch becomes positive at one sharp threshold beta_c  (beta_c=0.593363519623)
+  [PASS] [NUMERIC] Beyond beta_c both cone roots are positive, so the remaining datum is branch choice  (u_-=0.045717, u_+=12.911735)
+  [PASS] [NUMERIC] The charged-lepton candidate sits on the positive side of the small branch threshold  (u_-(0.635)=0.045717)
+
+========================================================================================
+PART 4: the charged-lepton fit sits inside the exact one-clock semigroup class
+========================================================================================
+  [PASS] [NUMERIC] The optimized semigroup candidate lies exactly on the Koide cone  (beta*=0.633571358484, Q=0.666666666666667)
+  [PASS] [NUMERIC] The semigroup candidate direction is essentially the PDG sqrt(m) direction  (cos-sim=0.999999999989)
+  [PASS] [NUMERIC] After one overall scale fit, the semigroup candidate is within 0.03% of PDG sqrt(m)  (scaled_pred=[0.7146774060134597, 10.278915391462442, 42.15284698558699])
+  [PASS] [NUMERIC] The large branch remains the wrong charged-lepton direction inside the same semigroup class  (u_+=12.886067)
+
+========================================================================================
+PART 5: what the one-clock reduction closes
+========================================================================================
+  [PASS] The open value-law problem is reduced from an arbitrary three-slot family to one Hermitian generator plus a cone branch  (physical repeated-step law -> X_beta = exp(beta G) on T_2)
+  [PASS] Using H_* as generator is a positive witness inside the exact class, not yet a retained charged-lepton derivation  (the remaining work is generator selection and branch selection from charged-lepton physics)
+
+Interpretation:
+  On the exact Gamma_i / full-cube route, once the microscopic lattice
+  value law is required to come from repeated identical positive local
+  clock steps on the reachable T_2 block, the family is forced into the
+  exponential semigroup class X_beta = exp(beta G). The charged-lepton
+  problem therefore reduces to selecting one Hermitian generator G and
+  one positive cone branch. The live H_* witness lands almost exactly on
+  the observed sqrt(m) direction inside that exact class.
+
+PASS=20 FAIL=0
+
+----- stderr -----
+

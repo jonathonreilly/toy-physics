@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_ne_active_column_axiom_boundary.py
+runner_sha256: fc92ddb9b3c1a789046b890972b2afc43918e28f70a339fd83a9c1aaf358acd0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.97
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS N_e ACTIVE-COLUMN AXIOM BOUNDARY
+========================================================================================
+
+========================================================================================
+PART 1: FIX THE EXACT DM TRANSPORT SELECTOR
+========================================================================================
+  [PASS] The exact one-source flavored selector functional is already fixed on the DM branch  (K=47.235979629898)
+  [PASS] So any remaining PMNS-side ambiguity can only come from the active packet, not from transport selection itself  (source_min=7.225e-14)
+
+  The DM transport selector is already exact:
+    F_K(P) = Σ_alpha Psi_K(P_alpha)
+  The only remaining question is whether current PMNS native data force
+  the relevant active column on N_e.
+
+========================================================================================
+PART 2: SAME CURRENTLY NATIVE N_e DATA CAN REALIZE THREE DIFFERENT COLUMNS
+========================================================================================
+  [PASS] Sample A realizes the intended selected active column  (F=[0.02532231 0.02291106 0.02336374])
+  [PASS] Sample B realizes the intended selected active column  (F=[0.01857142 0.02188918 0.01801366])
+  [PASS] Sample C realizes the intended selected active column  (F=[0.0180392  0.01732683 0.01825886])
+  [PASS] All three samples share the same active seed averages  ((xbar,ybar)=(0.973333333333,0.410000000000))
+  [PASS] All three samples share the same fixed active phase delta  (delta=0.200000000000)
+  [PASS] All three samples share the same one-sided active support pattern  (support_counts=[2, 2, 2])
+  [PASS] All three samples share the same active branch bit  (branch_bits=[0, 0, 0])
+  [PASS] But they still carry different active five-real source data  (distinct (xi_1,xi_2,eta_1,eta_2,delta))
+  [PASS] Those distinct five-real source data induce different active packets  (packet distances are nonzero)
+  [PASS] And they induce three different transport-selected columns on the same current-native N_e data class  (selected_columns=[0, 1, 2])
+
+  sample A packet:
+[[0.894104 0.067205 0.038691]
+ [0.031881 0.825148 0.14297 ]
+ [0.074015 0.107647 0.818338]]
+  selected column = 0
+  sample B packet:
+[[0.146874 0.594869 0.258257]
+ [0.469645 0.045515 0.48484 ]
+ [0.383481 0.359616 0.256903]]
+  selected column = 1
+  sample C packet:
+[[0.232106 0.461184 0.306711]
+ [0.485148 0.008845 0.506007]
+ [0.282747 0.529971 0.187283]]
+  selected column = 2
+
+========================================================================================
+PART 3: BOTTOM LINE
+========================================================================================
+  [PASS] The selected N_e active transport column is not fixed by the currently native PMNS data coming from Cl(3) on Z^3  (same seed pair, delta, support, and branch bit can select columns 0, 1, or 2)
+  [PASS] So the exact remaining PMNS-side DM gap is still the active five-real source law, not merely a weaker column-choice ambiguity  (the column becomes algorithmic once the active source is known)
+  [PASS] The honest sole-axiom endpoint on this lane is therefore a column-level boundary, not a hidden positive closure theorem  (current PMNS native laws fix carrier and selector, not the selected active column)
+
+  Sole-axiom read:
+    - transport selector is exact
+    - one-sided localization to the active block is exact
+    - the selected N_e column is still not fixed
+    - the remaining missing object is the PMNS active five-real source law
+
+========================================================================================
+SUMMARY: PASS=15 FAIL=0
+========================================================================================
+
+----- stderr -----
+

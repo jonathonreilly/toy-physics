@@ -1,0 +1,80 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_up_amplitude_provenance_audit.py
+runner_sha256: b7aea98a9ef3b0f463fb7a2e05cdb0166b3dffabd2a297027a2ee76ac2942553
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.87
+status: ok
+----- stdout -----
+
+========================================================================
+PART 1: Exact Provenance Atoms
+========================================================================
+
+  delta_std                = atan(sqrt(5)) = 1.150261991511
+  projector magnitude      = sqrt(5/6)     = 0.912870929175
+  eta theorem              = sqrt(5)/6     = 0.372677996250
+  democratic delta_A1      = 1/42          = 0.023809523810
+  noncentral support frac  = 6/7           = 0.857142857143
+  rho_scalar               = 1/sqrt(42)    = 0.154303349962
+  [PASS] Projector magnitude matches the exact projector angle  (sin(delta_std) = 0.912870929175)
+  [PASS] Democratic support fraction is the exact affine dressing 1 - 6 delta_A1  (1 - 6 delta_A1 = 0.857142857143)
+  [PASS] Atlas/support/tensor notes still carry the exact provenance atoms  (checked atlas/support/tensor note stack)
+
+========================================================================
+PART 2: Shortlist Classification
+========================================================================
+
+  candidate                        class                         anchor      refit_max
+  7/9                             external empirical              0.835%     0.908%
+    rationale: best small-rational bounded refit baseline, but not promoted by the exact atlas/support notes
+    refs: docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md:53, docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md:149, docs/QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md:138
+  sqrt(3/5)                       external empirical              0.720%     1.047%
+    rationale: best small-radical bounded anchored baseline, but not promoted by the exact atlas/support notes
+    refs: docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md:75, docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md:149, docs/QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md:139
+  sqrt(5/6) * (6/7)               support-native                  1.106%     0.928%
+    rationale: projector magnitude dressed by the exact democratic support fraction
+    refs: docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md:72, docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md:84, docs/TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md:45, docs/QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md:109
+  sqrt(5/6) * (1 - 1/sqrt(42))    scalar-comparison-native        0.742%     1.159%
+    rationale: projector magnitude dressed by the retained scalar-comparison package rho_scalar = 1/sqrt(42)
+    refs: docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md:72, docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md:128, docs/QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md:103, docs/QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md:82
+  atan(sqrt(5)) - sqrt(5)/6       projector-native                0.827%     0.917%
+    rationale: built entirely from exact projector-side theorem quantities delta_std and eta
+    refs: docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md:74, docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md:123, docs/QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md:61
+
+========================================================================
+PART 3: Provenance Checks
+========================================================================
+  [PASS] Support-native candidate is exactly the affine support dressing of the projector magnitude  (value = 0.782460796436)
+  [PASS] Scalar-comparison-native candidate is exactly the rho_scalar dressing  (value = 0.772011886721)
+  [PASS] Projector-native candidate uses only projector theorem atoms  (value = 0.777583995261)
+  [PASS] Support-native candidate keeps the anchored CKM+J package near closure  (anchor aggregate = 1.106%)
+  [PASS] Scalar-comparison-native candidate is the strongest anchored native law on the shortlist  (anchor aggregate = 0.742%)
+  [PASS] Projector-native candidate is the strongest refit native law on the shortlist  (refit objective = 0.052782)
+  [PASS] 7/9 remains the strongest refit baseline among the current top five  (refit objective = 0.052752)
+  [PASS] sqrt(3/5) remains the strongest anchored baseline among the current top five  (anchor aggregate = 0.720%)
+  [PASS] External baselines are still documented as bounded, not framework-forced  (candidate/native notes yes; atlas note no)
+
+========================================================================
+PART 4: Bounded Provenance Summary
+========================================================================
+
+  strongest provenance conclusions:
+    - 7/9                            -> external empirical         (anchor = 0.835%, refit_max = 0.908%)
+    - sqrt(3/5)                      -> external empirical         (anchor = 0.720%, refit_max = 1.047%)
+    - sqrt(5/6) * (6/7)              -> support-native             (anchor = 1.106%, refit_max = 0.928%)
+    - sqrt(5/6) * (1 - 1/sqrt(42))   -> scalar-comparison-native   (anchor = 0.742%, refit_max = 1.159%)
+    - atan(sqrt(5)) - sqrt(5)/6      -> projector-native           (anchor = 0.827%, refit_max = 0.917%)
+
+  honest endpoint:
+    - 7/9 and sqrt(3/5) stay as external empirical baselines;
+    - sqrt(5/6) * (6/7) is the cleanest support-native dressing;
+    - sqrt(5/6) * (1 - 1/sqrt(42)) is the strongest scalar-comparison-native anchored law;
+    - atan(sqrt(5)) - sqrt(5)/6 is the strongest projector-native refit law.
+
+========================================================================
+FINAL STATUS: PASS=12 FAIL=0
+========================================================================
+
+----- stderr -----
+

@@ -1,0 +1,62 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_odd_circulant_current_stack_zero_law.py
+runner_sha256: 1496dd8c4c2a573716b266baff3341a77e734c395d4c2da09e507c4b81b0886e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO ODD-CIRCULANT CURRENT-STACK ZERO LAW
+========================================================================================
+
+Authority stack:
+  - exact weak-axis 1+2 split
+  - DM odd-circulant residual-Z2 slot theorem
+  - retained support/Hermitian/scalar bank on the DM lane
+
+Question:
+  What activation law does the stack retained today assign to the unique
+  odd circulant coefficient c_odd?
+
+========================================================================================
+PART 1: THE CURRENT LOCAL INPUT SURFACE IS RESIDUAL-Z2 EVEN
+========================================================================================
+  [PASS] The exact weak-axis split is residual-Z2 even in the local site basis  (site-even error=0.00e+00)
+  [PASS] Its bridged local Dirac surface remains residual-Z2 even  (Dirac-even error=1.68e-16)
+  [PASS] Its Hermitian kernel is residual-Z2 even and has zero odd slot  (odd coeff=2.50e-16)
+
+  So the retained local DM bank starts on a strictly residual-Z2-even surface.
+
+========================================================================================
+PART 2: EQUIVARIANT FUNCTIONALS OF EVEN DATA STAY EVEN
+========================================================================================
+  [PASS] Representative current-bank-like equivariant functionals preserve residual-Z2 evenness  (Y^dag Y: even=1.5e-16, odd=2.5e-16; Hermitian symmetrization: even=9.6e-17, odd=2.2e-16; Hermitian quadratic combination: even=1.2e-16, odd=3.2e-16; Resolvent of H: even=1.6e-16, odd=5.2e-17)
+
+  So scalar/Hermitian/equivariant post-processing of the retained even
+  local data cannot activate the odd slot by itself.
+
+========================================================================================
+PART 3: THE CURRENT-STACK LAW FOR THE ODD SLOT IS ZERO
+========================================================================================
+  [PASS] The current even stack sits at c_odd = 0  (c_odd,current=0.00e+00)
+  [PASS] A future positive activation would have to leave the current even surface  (future c_odd=0.190000)
+
+  So the exact current-stack answer is not an unknown coefficient.
+  It is the zero law c_odd,current = 0.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-stack answer:
+    - the retained local DM bank is residual-Z2 even
+    - equivariant functionals of that bank stay residual-Z2 even
+    - so the current law for the odd slot is c_odd,current = 0
+
+  Any future positive DM coefficient law must therefore introduce a
+  genuinely new residual-Z2-odd bridge or activator.
+
+PASS=6  FAIL=0
+
+----- stderr -----
+

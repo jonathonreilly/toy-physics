@@ -1,0 +1,97 @@
+===== runner cache v1 =====
+runner: scripts/frontier_thales_right_angle_narrow.py
+runner_sha256: d2aa17b372d3ccd6ede15ac20024c625f714b6da021714b70b5072e415aef1b9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.52
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: Thales right-angle on diameter [0, 1]
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: symbolic Thales identity
+----------------------------------------------------------------------------------------
+
+  Edge dot product at (rho, eta) symbolically: eta**2 + rho**2 - rho
+  Under hypothesis eta^2 = rho(1-rho): dot = 0
+  [PASS (A)] symbolic dot product at (rho, eta) reduces to eta^2 - rho(1-rho)  (dot = eta**2 + rho**2 - rho)
+  [PASS (A)] Thales hypothesis eta^2 = rho(1-rho) forces dot product to zero (pi/2 angle)  (zero dot product <=> right angle)
+
+----------------------------------------------------------------------------------------
+Part 2: arctan-sum form of the identity
+----------------------------------------------------------------------------------------
+
+  tan(arctan(eta/rho)) * tan(arctan(eta/(1-rho))) = -eta**2/(rho*(rho - 1))
+  Under hypothesis eta^2 = rho(1-rho): product = 1
+  [PASS (A)] tan-product on Thales circle equals 1  (tan(a) * tan(b) = 1 implies a + b = pi/2 for a, b in (0, pi/2))
+
+----------------------------------------------------------------------------------------
+Part 3: concrete numerical verifications
+----------------------------------------------------------------------------------------
+  [PASS (A)] CKM atlas instance: (rho, eta) = (1/6, sqrt(5)/6) satisfies eta^2 = rho(1-rho)  (eta^2 = 5/36, rho(1-rho) = 5/36)
+  [PASS (A)] CKM atlas instance: dot product zero (right angle at vertex)  (dot = 0)
+  [PASS (A)] CKM atlas instance: arctan(eta/rho) + arctan(eta/(1-rho)) = pi/2 (50-digit)  (angle_sum - pi/2 = 0E-160)
+  [PASS (A)] midpoint case: (rho, eta) = (1/2, 1/2) satisfies eta^2 = rho(1-rho)  (eta^2 = 1/4, rho(1-rho) = 1/4)
+  [PASS (A)] midpoint case: dot product zero (right angle at vertex)  (dot = 0)
+  [PASS (A)] midpoint case: arctan(eta/rho) + arctan(eta/(1-rho)) = pi/2 (50-digit)  (angle_sum - pi/2 = 0)
+  [PASS (A)] rational point #2: (rho, eta) = (1/3, sqrt(2)/3) satisfies eta^2 = rho(1-rho)  (eta^2 = 2/9, rho(1-rho) = 2/9)
+  [PASS (A)] rational point #2: dot product zero (right angle at vertex)  (dot = 0)
+  [PASS (A)] rational point #2: arctan(eta/rho) + arctan(eta/(1-rho)) = pi/2 (50-digit)  (angle_sum - pi/2 = 0E-159)
+  [PASS (A)] rational point #3: (rho, eta) = (1/4, sqrt(3)/4) satisfies eta^2 = rho(1-rho)  (eta^2 = 3/16, rho(1-rho) = 3/16)
+  [PASS (A)] rational point #3: dot product zero (right angle at vertex)  (dot = 0)
+  [PASS (A)] rational point #3: arctan(eta/rho) + arctan(eta/(1-rho)) = pi/2 (50-digit)  (angle_sum - pi/2 = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: independence from any CKM-specific input
+----------------------------------------------------------------------------------------
+  [PASS (A)] non-CKM instance (rho, eta) = (7/13, sqrt(42)/13): right-angle holds  (confirms no dependency on CKM-specific (rho, eta) values)
+
+----------------------------------------------------------------------------------------
+Part 5: parent row context (no ledger modification)
+----------------------------------------------------------------------------------------
+
+  Parent row state on origin/main:
+    claim_type: positive_theorem
+    transitive_descendants: 238
+    load_bearing_step_class: A
+    deps: ['ckm_cp_phase_structural_identity_theorem_note_2026-04-24']
+  [PASS (A)] parent row class-A load-bearing step (purely geometric)  ()
+  [PASS (A)] parent row is bounded_theorem or positive_theorem (carve-out applies)  ()
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let (rho, eta) be any pair of real numbers with
+        0 < rho < 1, eta > 0, eta^2 = rho(1 - rho).
+    (i.e., (rho, eta) lies on the upper half of the Thales circle on the
+     diameter [0, 1].)
+
+  CONCLUSION:
+    The triangle with vertices (0, 0), (1, 0), (rho, eta) has a right
+    angle at (rho, eta), i.e. the two edges meeting at (rho, eta) are
+    orthogonal in the Euclidean plane.
+
+  Audit-lane class:
+    (A) — pure algebraic / Euclidean-geometric identity. No external
+    observed/fitted/literature/CKM-specific input. Proof is one-line
+    Pythagoras / dot-product calculation.
+
+  This narrow theorem is independent of the parent's CKM-specific
+  (rho, eta) = (1/6, sqrt(5)/6) supply. The CKM instance is just one
+  point on the Thales circle; the right-angle conclusion holds for any
+  such point by the same geometric identity.
+
+
+========================================================================================
+  TOTAL: PASS=18, FAIL=0
+========================================================================================
+
+----- stderr -----
+

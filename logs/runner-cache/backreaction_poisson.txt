@@ -1,0 +1,36 @@
+===== runner cache v1 =====
+runner: scripts/backreaction_poisson.py
+runner_sha256: 17244ab7bd6fd3a37f01f805f4f63eb772ace7a3013e3b750772b13a242beb16
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 94.64
+status: ok
+----- stdout -----
+================================================================================
+POISSON SELF-GRAVITY: |psi|^2 generates 1/r field
+  h=0.5, W=6, L=30, s_ext=0.004, z_src=3.0
+  Baseline gravity: +1.073461e-02 TOWARD
+================================================================================
+
+     G  iters        delta    dir   escape f_self_max  converged
+----------------------------------------------------------------------
+ 0.000      2 +1.073461e-02 TOWARD   1.0461   0.000000     iter 2
+ 0.001      5 +1.091395e-02 TOWARD   1.0470   0.010000     iter 5
+ 0.005      6 +1.149967e-02 TOWARD   1.0498   0.050000     iter 6
+ 0.010     15 +1.234071e-02 TOWARD   1.0502   0.100000   NOT (15)
+ 0.050     12 +1.419413e-02 TOWARD   0.9631   0.500000    iter 12
+ 0.100     15 +2.723267e-02 TOWARD   0.7547   1.000000   NOT (15)
+ 0.500     15 -2.321624e-05   AWAY  41.5336   5.000000   NOT (15)
+ 1.000     15 -9.084843e-01   AWAY 1030703.1296  10.000000   NOT (15)
+
+(95s total)
+
+SAFE READ
+  G > 0: self-gravity should ENHANCE deflection (positive feedback)
+  if escape drops < 1 at some G: self-gravitational collapse
+  if the system converges: stable self-consistent solution exists
+  if NOT: chaotic/unstable → critical G threshold
+  comparison to Schrodinger-Newton: same physics, discrete setting
+
+----- stderr -----
+

@@ -1,0 +1,89 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_endpoint_denominator_admissibility.py
+runner_sha256: 177529f47dc267e86d83983e45564aee2b84b5c6fdc40723ea4ffa23789326e5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+
+========================================================================
+PART 1: Exact Endpoint Atom Reduction
+========================================================================
+
+  support-side exponent basis:
+    value = 5^(a5/2) 6^(a6/2) 7^(a7/2)
+    admissible denominator slots come from negative support exponents
+
+  live endpoint atoms:
+    delta_A1             (a5, a6, a7) = (0, -1, -1)  [support-datum]
+    6/7                  (a5, a6, a7) = (0, 1, -1)  [bridge-ratio]
+    1/6                  (a5, a6, a7) = (0, -1, 0)  [support-reciprocal]
+    1/sqrt(42)           (a5, a6, a7) = (0, -1/2, -1/2)  [support-reciprocal]
+    1/sqrt(7)            (a5, a6, a7) = (0, 0, -1/2)  [support-reciprocal]
+    sqrt(6/7)            (a5, a6, a7) = (0, 1/2, -1/2)  [bridge-ratio]
+    sqrt(5/6)            (a5, a6, a7) = (1/2, -1/2, 0)  [projector-prefactor]
+
+  direct pure reciprocal support slots:
+    delta_A1             -> 1/42
+    1/6                  -> 1/6
+    1/sqrt(42)           -> 1/sqrt(42)
+    1/sqrt(7)            -> 1/sqrt(7)
+    sqrt(5/6)|support-proj -> 1/sqrt(6)
+
+  bridge atoms with numerator contamination:
+    6/7                  -> 6^1 7^-1
+    sqrt(6/7)            -> 6^1/2 7^-1/2
+  [PASS] Every live endpoint atom lies on the half-integer six/seven support lattice  (all support exponents have denominator <= 2)
+  [PASS] Bridge ratios 6/7 and sqrt(6/7) do not define pure reciprocal denominators  (both carry positive six numerator content)
+  [PASS] Stripping the fixed projector sqrt(5/6) leaves exactly the sqrt(6) denominator slot  (pair = (Fraction(1, 2), Fraction(0, 1)))
+
+========================================================================
+PART 2: Minimal Admissible Denominator Class
+========================================================================
+
+  exact rational seven witness:
+    delta_A1 / (1/6) = 1/7
+    (6/7) * (1/6)    = 1/7
+    recovered pair   = (Fraction(0, 1), Fraction(1, 1)) -> 1/7
+
+  smallest structurally admissible generator class:
+    ['6', '7', 'sqrt(6)', 'sqrt(7)']
+
+  datum-inclusive realized admissible class:
+    ['42', '6', '7', 'sqrt(42)', 'sqrt(6)', 'sqrt(7)']
+  [PASS] The exact rational seven slot is recovered from the live support atoms  (pair = (Fraction(0, 1), Fraction(1, 1)))
+  [PASS] The smallest generator class is exactly {6, 7, sqrt(6), sqrt(7)}  (class = ['6', '7', 'sqrt(6)', 'sqrt(7)'])
+  [PASS] The datum-inclusive realized class is exactly {6, 7, 42, sqrt(6), sqrt(7), sqrt(42)}  (class = ['42', '6', '7', 'sqrt(42)', 'sqrt(6)', 'sqrt(7)'])
+  [PASS] delta_A1 and 1/sqrt(42) are composite support denominators over the generator class  (42 = 6*7 and sqrt(42) = sqrt(6)*sqrt(7))
+
+========================================================================
+PART 3: sqrt(7) Uniqueness / No-Go
+========================================================================
+
+  seven-bearing realized denominators:
+    ['42', '7', 'sqrt(42)', 'sqrt(7)']
+
+  irrational seven-bearing realized denominators:
+    ['sqrt(42)', 'sqrt(7)']
+
+  pure seven-only irrational generator subclass:
+    ['sqrt(7)']
+
+  projector-stripped simplification:
+    sqrt(42/5) * sqrt(5/6) = sqrt(7)
+
+  additive two-step string:
+    2 + sqrt(5/6)
+    is outside the admissible multiplicative denominator grammar
+  [PASS] sqrt(7) is not unique on the full realized admissible class  (seven-bearing class = ['42', '7', 'sqrt(42)', 'sqrt(7)'])
+  [PASS] sqrt(7) is not unique even among irrational seven-bearing realized denominators  (irrational seven-bearing class = ['sqrt(42)', 'sqrt(7)'])
+  [PASS] sqrt(7) is the unique pure seven-only irrational generator  (generator class = ['6', '7', 'sqrt(6)', 'sqrt(7)'])
+  [PASS] The simplified sqrt(42/5) denominator reduces to the sqrt(7) slot after restoring the fixed projector prefactor  (pair = (Fraction(0, 1), Fraction(1, 2)) -> 1/sqrt(7))
+
+========================================================================
+SUMMARY: PASS=11 FAIL=0
+========================================================================
+
+----- stderr -----
+

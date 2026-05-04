@@ -1,0 +1,77 @@
+===== runner cache v1 =====
+runner: scripts/frontier_qcd_low_energy_running_bridge.py
+runner_sha256: 6433fe12229c9b9e46c193901f8e09bfded82bd628f1528fa8cf3aad54c7f5ac
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.57
+status: ok
+----- stdout -----
+==============================================================================
+QCD Low-Energy Running Bridge: alpha_s(v) -> alpha_s(M_Z)
+==============================================================================
+
+Bounded-scope same-surface running bridge using standard SM 2-loop
+RGE plus quark-mass threshold matching at m_t, m_b, m_c.
+Boundary: alpha_s(v=246.28) = 0.103304
+Target:   alpha_s(M_Z=91.1876) ~ 0.1180 +/- 0.0009 (PDG)
+
+
+=== Part 1: 1-loop QCD beta-coefficient sanity ===
+
+  [PASS] b_3(n_f=5) = -(11 - 10/3) = -23/3 (asymptotic freedom holds)  (b_3(5) = -7.666667, expected -23/3 = -7.666667)
+  [PASS] b_3(n_f=6) = -(11 - 12/3) = -7 (top-active asymptotic freedom)  (b_3(6) = -7.000000)
+  [PASS] b_3 < 0 for all n_f <= 16 (asymptotic freedom)  (QCD remains asymptotically free for the SM matter content)
+
+=== Part 2: threshold-matching continuity ===
+
+  [PASS] threshold n_f flip changes slope but not the value AT the threshold (LO)  (|Delta g_3(m_t; n_f=6 vs n_f=5)|/g_3 = 0.0020 (slope-only at LO))
+  [PASS] g_3 monotonically grows toward IR through m_b, m_c (asymptotic freedom)  (g_3(v) = 1.1394, g_3(m_b)=1.6340, g_3(m_c)=2.1598)
+
+=== Part 3: one-decade transfer v -> M_Z ===
+
+  Boundary: alpha_s(v=246.28 GeV) = 0.103304
+  Result:   alpha_s(M_Z=91.1876 GeV) = 0.118067
+  PDG ref:  0.1180 +/- 0.0009
+  [PASS] [BOUNDED] alpha_s(M_Z) within 2% of PDG world average  (alpha_s(M_Z) = 0.118067, PDG = 0.118, rel = 0.06%)
+  [PASS] [BOUNDED] alpha_s(M_Z) within 1-sigma of PDG world average (0.1180 +/- 0.0009)  (|alpha_s(M_Z) - 0.1180| = 0.0001, sigma = 0.0009)
+  [PASS] [BOUNDED] alpha_s(M_Z) reproduces canonical 0.1181 to within 0.001  (alpha_s(M_Z) = 0.118067, canonical = 0.1181)
+
+=== Part 4: bridge structural independence from plaquette insertion ===
+
+  Varying alpha_s(v) in [0.0950, 0.1100] (a 7% window around 0.1033):
+    alpha_s(v)     g_3(v)   alpha_s(M_Z)
+  --------------------------------------------
+        0.0950     1.0926       0.107308
+        0.1000     1.1210       0.113755
+        0.1033     1.1393       0.118062
+        0.1066     1.1574       0.122411
+        0.1100     1.1757       0.126936
+  [PASS] alpha_s(M_Z) monotonically tracks alpha_s(v) (bridge has no hidden discontinuity)  (monotone propagation across the full 7% window)
+  [PASS] bridge transfer Jacobian d(alpha_s(M_Z)) / d(alpha_s(v)) is structurally consistent  (d(alpha_s(M_Z))/d(alpha_s(v)) = 1.3086 (compressive RGE flow))
+
+=== Part 5: 1-loop vs 2-loop truncation envelope ===
+
+  2-loop alpha_s(M_Z) = 0.118067
+  1-loop alpha_s(M_Z) = 0.117571
+  Truncation shift   = 0.000496
+  [PASS] [BOUNDED] 1-loop and 2-loop agree within 5% (truncation envelope)  (|2L - 1L| = 0.0005, 5% of 2L = 0.0059)
+  [PASS] [BOUNDED] truncation envelope is positive (well-defined residual)  (residual = 0.0005)
+
+=== Part 6: PDG envelope cross-check ===
+
+  [PASS] [BOUNDED] alpha_s(M_Z) inside PDG world-average 1-sigma band (0.1180 +/- 0.0009)  (alpha_s(M_Z) = 0.118067)
+  [PASS] [BOUNDED] alpha_s(M_Z) inside PDG restricted-average 2-sigma band (0.1179 +/- 0.0008)  (alpha_s(M_Z) = 0.118067)
+
+=== Part 7: explicit-scope assertions ===
+
+  [PASS] note declares bounded-scope (not framework-native derivation)  (QCD_LOW_ENERGY_RUNNING_BRIDGE_NOTE_2026-05-01.md status = bounded)
+  [PASS] quark-mass thresholds are PDG infrastructure inputs (not framework-derived)  (m_t = 172.69 GeV, m_b = 4.18 GeV, m_c = 1.27 GeV from PDG)
+  [PASS] M_Z is a PDG infrastructure input (not framework-derived)  (M_Z = 91.1876 GeV from PDG)
+  [PASS] 2-loop SM RGE is standard Machacek-Vaughn / Arason et al infrastructure  (Nucl. Phys. B 222, 83 (1983); Phys. Rev. D 46, 3945 (1992))
+
+==============================================================================
+SUMMARY: PASS=18  FAIL=0
+==============================================================================
+
+----- stderr -----
+

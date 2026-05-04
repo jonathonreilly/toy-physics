@@ -1,0 +1,74 @@
+===== runner cache v1 =====
+runner: scripts/shapiro_complex_interaction.py
+runner_sha256: 4b79832190efcbfed2ad1dcecd81d14e0f4a36ce38b8a362e666541b1cea0985
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+# Shapiro Complex Interaction Note
+
+**Date:** 2026-04-06
+**Status:** retained narrow interaction note; phase lag survives the complex-action crossover as a broad causal observable
+
+## Artifact Chain
+
+- [`scripts/shapiro_complex_interaction.py`](../scripts/shapiro_complex_interaction.py)
+- [`docs/SHAPIRO_DIAMOND_BRIDGE_NOTE.md`](../docs/SHAPIRO_DIAMOND_BRIDGE_NOTE.md)
+- [`docs/CAUSAL_PROPAGATING_FIELD_NOTE.md`](../docs/CAUSAL_PROPAGATING_FIELD_NOTE.md)
+- [`docs/CAUSAL_FIELD_RECONCILIATION_NOTE.md`](../docs/CAUSAL_FIELD_RECONCILIATION_NOTE.md)
+- [`docs/CAUSAL_MOVING_UNIFICATION_NOTE.md`](../docs/CAUSAL_MOVING_UNIFICATION_NOTE.md)
+- [`docs/CLAUDE_COMPLEX_ACTION_GROWN_COMPANION_NOTE.md`](../docs/CLAUDE_COMPLEX_ACTION_GROWN_COMPANION_NOTE.md)
+- [`docs/COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md`](../docs/COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md)
+- [`docs/DIAMOND_PHASE_RAMP_BRIDGE_CARD_NOTE.md`](../docs/DIAMOND_PHASE_RAMP_BRIDGE_CARD_NOTE.md)
+
+## Question
+
+Does the retained c-dependent phase lag survive when carried through the retained complex-action crossover architecture, or does the complex branch narrow or collapse it?
+
+## Retained Phase Lag
+
+The Shapiro-style phase lag is the causal phase observable:
+- c = 2: phase lag mean +0.0401 rad, family spread 0.0001 rad (fam1 +0.0401, fam2 +0.0401, fam3 +0.0400)
+- c = 1: phase lag mean +0.0500 rad, family spread 0.0002 rad (fam1 +0.0499, fam2 +0.0501, fam3 +0.0499)
+- c = 0.5: phase lag mean +0.0621 rad, family spread 0.0002 rad (fam1 +0.0621, fam2 +0.0622, fam3 +0.0620)
+- c = 0.25: phase lag mean +0.0679 rad, family spread 0.0000 rad (fam1 +0.0679, fam2 +0.0679, fam3 +0.0679)
+
+## Complex-Action Companion
+
+The retained grown-row complex-action companion changes amplitude / escape and flips the TOWARD sign at its own crossover:
+
+| gamma | direction | escape | deflection |
+| ---: | --- | ---: | ---: |
+| 0.00 | 2/2 TOWARD | 2.0077 | +2.606923e-01 |
+| 0.05 | 2/2 TOWARD | 1.7063 | +1.823141e-01 |
+| 0.10 | 2/2 TOWARD | 1.4522 | +1.042271e-01 |
+| 0.20 | 0/2 AWAY | 1.0558 | -4.931754e-02 |
+| 0.50 | 0/2 AWAY | 0.4156 | -4.760660e-01 |
+| 1.00 | 0/2 AWAY | 0.0935 | -1.074474e+00 |
+
+## Interaction Check
+
+The complex-action factor is a real attenuation term, so it does not rotate the phase phasor.
+For the retained causal phase rows, the phase angle is unchanged at leading order:
+
+| c | phase before | phase after complex factor | delta |
+| ---: | ---: | ---: | ---: |
+| 2.00 | +0.0401 | +0.0401 | +0.0e+00 |
+| 1.00 | +0.0500 | +0.0500 | +0.0e+00 |
+| 0.50 | +0.0621 | +0.0621 | +0.0e+00 |
+| 0.25 | +0.0679 | +0.0679 | +0.0e+00 |
+
+## Safe Read
+
+- the c-dependent phase lag survives the complex-action crossover
+- the complex branch narrows escape / amplitude, not the phase angle itself
+- the phase lag therefore belongs to the broad causal package
+- the complex-action branch remains the narrower amplitude-selective branch
+
+## Final Verdict
+
+**retained causal phase lag survives the complex-action crossover; the complex-action branch narrows amplitude/escape, but not the phase-lag observable itself**
+
+----- stderr -----
+

@@ -1,0 +1,25 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hubble_lane5_c1_a2_action_unit_metrology_obstruction.py
+runner_sha256: 51df6c191e8d2de45fe2be4997cf1a1751a4147ec8e98795358f8d4c0d355fbe
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+==============================================================================
+Lane 5 (C1) A2 action-unit metrology obstruction verifier
+==============================================================================
+[PASS] g_bare fixes the dimensionless Wilson beta: N_c=3, g_bare=1.0, beta=6.000000000000
+[PASS] plaquette surface supplies dimensionless coupling data: P=0.5934000000, u0=0.8776813812, alpha_LM=0.0906678360, alpha_s(v)=0.1033038161
+[PASS] minimal APBC hierarchy factor is dimensionless: C_APBC=(7/8)^(1/4)=0.967168210134
+[PASS] Hilbert phase is invariant under common action-unit rescaling: exp(i S/kappa) is unchanged by (S,kappa)->(lambda S,lambda kappa)
+[PASS] Wilson plaquette weight uses dimensionless action only: S_lat=beta*(1-ReP)=3.480000000000, exp(-S_lat)=0.030807411033
+[PASS] P_A trace coefficient is dimensionless and scale-invariant: c_cell=rank(P_A)/dim(H_cell)=4/16=0.250000000000
+[PASS] different kappa readings give the same projected P_A phase: same dimensionless P_A action with kappa in {0.5,1,2,8}; phase=0.959717864954+0.280965513343i
+[PASS] finite rank-four block cannot realize a nonzero canonical action commutator: Tr([X,P])=0 for finite matrices but Tr(i*kappa*I_4)=4i*kappa
+------------------------------------------------------------------------------
+TOTAL: PASS=8, FAIL=0
+Conclusion: retained g_bare, plaquette/u0, APBC, and c_cell data are dimensionless. They do not pin a dimensional kappa on P_A H_cell; A2 needs an additional clock/source/action metrology theorem.
+
+----- stderr -----
+

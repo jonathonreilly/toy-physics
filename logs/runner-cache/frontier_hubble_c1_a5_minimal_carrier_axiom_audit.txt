@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hubble_c1_a5_minimal_carrier_axiom_audit.py
+runner_sha256: 912c3a12f1e16f6450abb73b0e8ebac3a56e10849db155fc6171eaaaad5854f1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+LANE 5 (C1) GATE — A5 MINIMAL-CARRIER-AXIOM AUDIT RUNNER
+==============================================================================
+
+Question: which minimal carrier axiom would close (G1) on
+P_A H_cell without violating the no-fitted-parameter posture?
+
+[PASS] (a) Cl_4(C) candidate has four Hermitian anticommuting generators: max||g - g^dag|| = 0.00e+00, max Clifford err = 0.00e+00
+[PASS] (a) Cl_4(C) candidate generates the full M_4(C) on the block: span rank = 16
+[PASS] (a) Cl_4(C) candidate is exactly the (G1) edge-statistics principle: Cl_4(C) on rank-four block is the irreducible Cl_4(C) module ~= F(C^2) two-mode CAR Fock space
+[PASS] (b) two-orbital CAR has 2+2 fermion-parity grading: parity eigenvalues = [-1, -1, 1, 1]
+[PASS] (b) two-orbital CAR is Cl_4(C) up to unitary equivalence: {c_a, c_b^dag} = delta_ab => Majoranas span Cl_4(C); structural equivalence to (a)
+[PASS] (c) Hermitian pair {X, Y} = 0 (anticommutation): ||{X, Y}|| = 0.00e+00
+[PASS] (c) X^2 = Y^2 = I in the canonical Cl_4(C) normalisation: {gamma_a, gamma_a} = 2 gamma_a^2 = 2 I implies gamma_a^2 = I
+[PASS] (c) Cl_2(C) pair generates only a 4-dim subalgebra of M_4(C): span rank = 4; 4 < 16 = dim M_4(C)
+[PASS] (c) candidate is strictly weaker than (a): does not force CAR: Cl_2 < Cl_4; needs a third + fourth generator to close (G1)
+[PASS] (d) Hermitian triple satisfies Cl_3(C) anticommutation: max Cl_3 error = 0.00e+00
+[PASS] (d) Hermitian triple alone generates only a 8-dim subalgebra: span rank = 8; 8 < 16
+[PASS] (d) triple + extra generator closes Cl_4(C) on the block: span rank = 16; 16 = dim M_4(C)
+[PASS] (d) is structurally equivalent to (a) once the parity element is forced to anticommute with the triple: Cl_3 + 1 = Cl_4 if the extra generator is a fourth anticommuting Hermitian element
+[PASS] (a), (b), (d strong) all reduce to the irreducible Cl_4(C) axiom: structural equivalence; differ only by presentation
+[PASS] (c) is strictly weaker; does not close (G1) alone: Cl_2 generates a proper subalgebra of M_4(C)
+[PASS] minimal carrier-axiom class is the irreducible Cl_4(C) module on P_A H_cell: all four candidates collapse to (a) modulo strict-weakness of (c)
+[PASS] minimal carrier axiom can be stated without observed values or fitted parameters: Cl_4(C) anticommutation is purely algebraic; no decimal value or observation enters the statement
+[PASS] minimal carrier axiom is non-derivable from A_min by Cycle 2-4 results: A1 (bulk Grassmann projection), A2 (g_bare action-unit), A4 (parity-gate carrier theorem) all closed negatively
+[PASS] minimal Cl_4(C) axiom + Gauss-flux source-unit ⇒ (G1) + (G2) ⇒ (C1): via PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md conditional bridge
+[PASS] minimal Cl_4(C) axiom does not duplicate any A_min axiom: Cl(3) on Z^3 is bulk algebra; Cl_4(C) on P_A H_cell is intrinsic to the rank-four primitive boundary block
+[PASS] minimal Cl_4(C) axiom is not equivalent to any retained no-go-closed selector: see Cycle 1 audit's no-go inventory: finite-automorphism-only, carrier-only parent-source, simple-fiber Widom, multipocket selector, primitive-edge-entropy, algebraic-spectrum entropies all closed; Cl_4(C) is a different mechanism
+
+==============================================================================
+SUMMARY: PASS=21  FAIL=0
+==============================================================================
+
+Verdict: A5 audit identifies a single minimal carrier-axiom class
+for (G1): the irreducible Cl_4(C) module on P_A H_cell.  The four
+audit candidates (a) Cl_4(C), (b) two-orbital CAR Fock, (c) Cl_2
+Hermitian pair, (d) Cl_3 triple + parity all collapse to (a) modulo
+the strict weakness of (c).  The minimal carrier axiom is
+statable without observed values, fitted parameters, or hidden
+imports; it is not derivable from A_min by Cycles 2-4 results;
+and it is structurally distinct from every retained no-go-closed
+selector.  An honest closure of (G1) requires acknowledging that
+this Cl_4(C) carrier axiom must be ADDED to A_min.
+
+Implication: (C1) gate cannot close on A_min alone.  Either A_min
+is extended by an honest Cl_4(C) carrier axiom on P_A H_cell, or
+(C1) remains open and (G2) remains coupled.  The next cycle
+should run a stuck fan-out across orthogonal premises beyond
+the audit's A1-A6 frames per Deep Work Rules.
+
+----- stderr -----
+

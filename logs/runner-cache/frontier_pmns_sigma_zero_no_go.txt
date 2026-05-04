@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_sigma_zero_no_go.py
+runner_sha256: f61fda2024b55cdd6e4fcbb9ca0257b09881ccf2b0895e23775b4e2d597ea4a5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+PMNS SIGMA-ZERO NO-GO
+========================================================================================
+
+Question:
+  On the current pure-retained sole-axiom PMNS bank, can the retained
+  native sources/readouts/selectors force nonzero sigma?
+
+========================================================================================
+PART 1: SIGMA IS A NATIVE PMNS OBSERVABLE AND THE CANDIDATE SOURCE FOR J_chi
+========================================================================================
+  [PASS] Sigma is exactly the native active transport mean on the PMNS block  (xbar=1.000000, sigma=0.230000+0.000000j)
+  [PASS] At the C3-covariant point the native nontrivial current equals sigma  (J_chi=0.230000+0.000000j, sigma=0.230000+0.000000j)
+  [PASS] So nonzero sigma would already be a pure-PMNS source of nonzero J_chi
+
+========================================================================================
+PART 2: EVERY CURRENT PURE-RETAINED SOURCE ROUTE HAS SIGMA = 0
+========================================================================================
+  [PASS] The free retained PMNS route has sigma = 0  (sigma=0.000000+0.000000j)
+  [PASS] The canonical sole-axiom hw=1 source/transfer route has sigma = 0  (sigma=0.000000+0.000000j)
+  [PASS] The retained scalar PMNS route has sigma = 0  (sigma=0.000000+0.000000j)
+  [PASS] So the current pure-retained PMNS source bank does not furnish a nonzero sigma surface
+
+========================================================================================
+PART 3: EVERY CURRENT PURE-RETAINED READOUT OF THOSE ROUTES HAS J_chi = 0
+========================================================================================
+  [PASS] The free retained PMNS route has J_chi = 0  (J_chi=0.000000+0.000000j)
+  [PASS] The canonical sole-axiom hw=1 source/transfer route has J_chi = 0  (J_chi=0.000000+0.000000j)
+  [PASS] The retained scalar PMNS route has J_chi = 0  (J_chi=0.000000+0.000000j)
+  [PASS] So the current pure-retained PMNS readout stack still annihilates the remaining nontrivial character current
+
+========================================================================================
+PART 4: THE ONLY CURRENT NATIVE SELECTOR WITHOUT EXTRA CONSTRAINT ALSO SELECTS SIGMA = 0
+========================================================================================
+  [PASS] The unconstrained native effective action is minimized at the retained seed  (S_seed=0.000000000000)
+  [PASS] A nonzero sigma candidate on the canonical positive lift has strictly larger action  (S_candidate=0.134512845972)
+  [PASS] So the current native selector stack does not generate nonzero sigma without an extra pure-PMNS constraint surface
+
+========================================================================================
+PART 5: CLOSEOUT
+========================================================================================
+  [PASS] The current pure-retained PMNS bank contains no nonzero sigma source route
+  [PASS] The same bank contains no current selector that lifts sigma away from zero without extra input
+  [PASS] Therefore sigma = 0 on the current pure-retained sole-axiom PMNS lane
+  [PASS] Any nonzero sigma requires a genuinely new pure-PMNS source or constraint law beyond the current retained bank
+
+========================================================================================
+RESULT
+========================================================================================
+  Pure-retained PMNS closeout:
+    - sigma is the native PMNS cycle/transport mean
+    - every current pure-retained PMNS source route sets sigma = 0
+    - every current pure-retained PMNS readout then has J_chi = 0
+    - the current unconstrained native selector also stays at sigma = 0
+
+  Therefore sigma = 0 on the current pure-retained sole-axiom PMNS
+  lane. Any nonzero sigma requires a genuinely new pure-PMNS source or
+  constraint law beyond the current retained bank.
+
+PASS=18 FAIL=0
+
+----- stderr -----
+

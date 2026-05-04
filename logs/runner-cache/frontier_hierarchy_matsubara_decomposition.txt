@@ -1,0 +1,106 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_matsubara_decomposition.py
+runner_sha256: 2587ea724a43677e48294bfa6501de2cd72a482af3071b2c3b306fe849d28d99
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+Hierarchy Matsubara decomposition
+==============================================================================
+
+==============================================================================
+PART 1: CLOSED-FORM DETERMINANT
+==============================================================================
+  Lt=2, u0=0.6, m=0.0: direct=1.84884259e+01, exact=1.84884259e+01, rel=5.76e-16
+  Lt=2, u0=0.6, m=0.1: direct=1.95408755e+01, exact=1.95408755e+01, rel=1.82e-16
+  Lt=2, u0=0.6, m=0.5: direct=6.65416609e+01, exact=6.65416609e+01, rel=2.14e-16
+  Lt=2, u0=0.9, m=0.0: direct=1.21439531e+04, exact=1.21439531e+04, rel=1.35e-15
+  Lt=2, u0=0.9, m=0.1: direct=1.24470630e+04, exact=1.24470630e+04, rel=4.38e-16
+  Lt=2, u0=0.9, m=0.5: direct=2.20091574e+04, exact=2.20091574e+04, rel=0.00e+00
+  Lt=2, u0=1.2, m=0.0: direct=1.21165748e+06, exact=1.21165748e+06, rel=7.69e-16
+  Lt=2, u0=1.2, m=0.1: direct=1.22858867e+06, exact=1.22858867e+06, rel=9.48e-16
+  Lt=2, u0=1.2, m=0.5: direct=1.70214195e+06, exact=1.70214195e+06, rel=3.15e-15
+  Lt=4, u0=0.6, m=0.0: direct=4.03579151e+01, exact=4.03579151e+01, rel=1.76e-16
+  Lt=4, u0=0.6, m=0.1: direct=4.57993733e+01, exact=4.57993733e+01, rel=1.55e-15
+  Lt=4, u0=0.6, m=0.5: direct=7.30518396e+02, exact=7.30518396e+02, rel=1.40e-15
+  Lt=4, u0=0.9, m=0.0: direct=1.74120142e+07, exact=1.74120142e+07, rel=3.42e-15
+  Lt=4, u0=0.9, m=0.1: direct=1.84211327e+07, exact=1.84211327e+07, rel=6.07e-15
+  Lt=4, u0=0.9, m=0.5: direct=6.73104810e+07, exact=6.73104810e+07, rel=4.65e-15
+  Lt=4, u0=1.2, m=0.0: direct=1.73335925e+11, exact=1.73335925e+11, rel=2.11e-15
+  Lt=4, u0=1.2, m=0.1: direct=1.78921302e+11, exact=1.78921302e+11, rel=6.82e-16
+  Lt=4, u0=1.2, m=0.5: direct=3.76089105e+11, exact=3.76089105e+11, rel=4.87e-16
+  Lt=6, u0=0.6, m=0.0: direct=2.27967914e+02, exact=2.27967914e+02, rel=7.48e-16
+  Lt=6, u0=0.6, m=0.1: direct=2.76093470e+02, exact=2.76093470e+02, rel=1.24e-15
+  Lt=6, u0=0.6, m=0.5: direct=1.81847421e+04, exact=1.81847421e+04, rel=1.00e-15
+  Lt=6, u0=0.9, m=0.0: direct=6.46032192e+10, exact=6.46032192e+10, rel=1.18e-15
+  Lt=6, u0=0.9, m=0.1: direct=7.03569207e+10, exact=7.03569207e+10, rel=4.34e-16
+  Lt=6, u0=0.9, m=0.5: direct=4.99933767e+11, exact=4.99933767e+11, rel=6.59e-15
+  Lt=6, u0=1.2, m=0.0: direct=6.41672632e+16, exact=6.41672632e+16, rel=2.32e-14
+  Lt=6, u0=1.2, m=0.1: direct=6.73243220e+16, exact=6.73243220e+16, rel=1.15e-14
+  Lt=6, u0=1.2, m=0.5: direct=2.07274790e+17, exact=2.07274790e+17, rel=7.10e-15
+  Lt=8, u0=0.6, m=0.0: direct=1.38225440e+03, exact=1.38225440e+03, rel=8.22e-16
+  Lt=8, u0=0.6, m=0.1: direct=1.78473280e+03, exact=1.78473280e+03, rel=1.91e-15
+  Lt=8, u0=0.6, m=0.5: direct=4.76119350e+05, exact=4.76119350e+05, rel=2.08e-15
+  Lt=8, u0=0.9, m=0.0: direct=2.57293349e+14, exact=2.57293349e+14, rel=1.82e-15
+  Lt=8, u0=0.9, m=0.1: direct=2.88314106e+14, exact=2.88314106e+14, rel=1.19e-14
+  Lt=8, u0=0.9, m=0.5: direct=3.94481801e+15, exact=3.94481801e+15, rel=1.39e-15
+  Lt=8, u0=1.2, m=0.0: direct=2.54980932e+22, exact=2.54980932e+22, rel=1.50e-14
+  Lt=8, u0=1.2, m=0.1: direct=2.71855459e+22, exact=2.71855459e+22, rel=1.56e-14
+  Lt=8, u0=1.2, m=0.5: direct=1.21876455e+23, exact=1.21876455e+23, rel=2.62e-14
+  [PASS] exact Matsubara determinant formula matches direct determinant
+         max relative error = 2.62e-14
+
+==============================================================================
+PART 2: CLOSED-FORM FREE-ENERGY AND CONDENSATE DENSITIES
+==============================================================================
+  Lt=2, m=0.001: f_direct=1.5432096390e-07, f_exact=1.5432096384e-07, c_direct=3.0864188005e-04, c_exact=3.0864188005e-04
+  Lt=2, m=0.01: f_direct=1.5431860621e-05, f_exact=1.5431860621e-05, c_direct=3.0863244962e-03, c_exact=3.0863244962e-03
+  Lt=2, m=0.1: f_direct=1.5408332687e-03, f_exact=1.5408332687e-03, c_direct=3.0769230769e-02, c_exact=3.0769230769e-02
+  Lt=4, m=0.001: f_direct=1.7636681171e-07, f_exact=1.7636681193e-07, c_direct=3.5273356165e-04, c_exact=3.5273356165e-04
+  Lt=4, m=0.01: f_direct=1.7636373258e-05, f_exact=1.7636373258e-05, c_direct=3.5272124440e-03, c_exact=3.5272124440e-03
+  Lt=4, m=0.1: f_direct=1.7605651993e-03, f_exact=1.7605651993e-03, c_direct=3.5149384886e-02, c_exact=3.5149384886e-02
+  Lt=6, m=0.001: f_direct=1.7806264604e-07, f_exact=1.7806264607e-07, c_direct=3.5612522817e-04, c_exact=3.5612522817e-04
+  Lt=6, m=0.01: f_direct=1.7805947932e-05, f_exact=1.7805947932e-05, c_direct=3.5611256133e-03, c_exact=3.5611256133e-03
+  Lt=6, m=0.1: f_direct=1.7774356683e-03, f_exact=1.7774356683e-03, c_direct=3.5485044757e-02, c_exact=3.5485044757e-02
+  Lt=8, m=0.001: f_direct=1.7818502585e-07, f_exact=1.7818502584e-07, c_direct=3.5636998752e-04, c_exact=3.5636998752e-04
+  Lt=8, m=0.01: f_direct=1.7818185060e-05, f_exact=1.7818185060e-05, c_direct=3.5635728673e-03, c_exact=3.5635728673e-03
+  Lt=8, m=0.1: f_direct=1.7786509425e-03, f_exact=1.7786509425e-03, c_direct=3.5509180746e-02, c_exact=3.5509180746e-02
+  Lt=10, m=0.001: f_direct=1.7819381579e-07, f_exact=1.7819381554e-07, c_direct=3.5638756692e-04, c_exact=3.5638756692e-04
+  Lt=10, m=0.01: f_direct=1.7819063954e-05, f_exact=1.7819063954e-05, c_direct=3.5637486306e-03, c_exact=3.5637486306e-03
+  Lt=10, m=0.1: f_direct=1.7787380724e-03, f_exact=1.7787380724e-03, c_direct=3.5510908107e-02, c_exact=3.5510908107e-02
+  [PASS] exact free-energy density formula matches direct computation
+         max absolute error = 2.58e-16
+  [PASS] exact condensate density formula matches direct computation
+         max absolute error = 6.94e-18
+
+==============================================================================
+PART 3: UV ENDPOINT INTERPRETATION
+==============================================================================
+  cond(Lt=2)  = 0.0030863245
+  cond(Lt=10) = 0.0035637486
+  ratio       = 1.1546901938
+  C_obs       = 0.9669215187
+  ratio^(-1/4)  = 0.9646807905
+  ratio^(-1/16) = 0.9910507799
+  [PASS] dimension-4 compression is closer to the observed hierarchy prefactor than 16th-root compression
+         |root4-C_obs|=0.002241, |root16-C_obs|=0.024129
+
+==============================================================================
+SCORECARD: 4 pass, 0 fail out of 4
+==============================================================================
+
+----- stderr -----
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2406: RuntimeWarning: divide by zero encountered in det
+  r = _umath_linalg.det(a, signature=signature)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2406: RuntimeWarning: overflow encountered in det
+  r = _umath_linalg.det(a, signature=signature)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2406: RuntimeWarning: invalid value encountered in det
+  r = _umath_linalg.det(a, signature=signature)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2349: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2349: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2349: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+

@@ -1,0 +1,69 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_ew_matching_rule_m_stretch.py
+runner_sha256: f9f02900e6c169dc67d069baf070ed84dd46904364fff434f261026f9ff0c8cd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: stretch-attempt note structure
+----------------------------------------------------------------------------------------
+  [PASS (A)] note contains required substring: 'yt_ew Matching Rule M Stretch Attempt'  (len(note)=10284)
+  [PASS (A)] note contains required substring: 'named obstruction'  (len(note)=10284)
+  [PASS (A)] note contains required substring: 'A_min'  (len(note)=10284)
+  [PASS (A)] note contains required substring: 'Forbidden imports'  (len(note)=10284)
+  [PASS (A)] note contains required substring: 'graph-first SU(N_c) integration'  (len(note)=10284)
+  [PASS (A)] note contains required substring: "'t Hooft 1/N_c topological expansion"  (len(note)=10284)
+  [PASS (A)] note contains required substring: 'Fierz identity'  (len(note)=10284)
+  [PASS (A)] note contains required substring: 'OZI rule'  (len(note)=10284)
+  [PASS (A)] note contains required substring: 'PDG observed y_t'  (len(note)=10284)
+  [PASS (A)] note contains required substring: 'Fitted lattice empirical R_conn'  (len(note)=10284)
+  [PASS (A)] note contains required substring: '(O1)'  (len(note)=10284)
+  [PASS (A)] note contains required substring: '(O2)'  (len(note)=10284)
+  [PASS (A)] note contains required substring: '(O3)'  (len(note)=10284)
+  [PASS (A)] note contains required substring: 'proposal_allowed: false'  (len(note)=10284)
+  [PASS (A)] note avoids forbidden substring: '\nStatus: retained\n'  ()
+  [PASS (A)] note avoids forbidden substring: '\nStatus: promoted\n'  ()
+  [PASS (A)] note avoids forbidden substring: 'would become retained'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: leading-order Fierz channel decomposition at exact Fraction precision
+----------------------------------------------------------------------------------------
+  [PASS (A)] dim(singlet) = 1  (dim_singlet = 1)
+  [PASS (A)] dim(adjoint) = N_c^2 - 1 = 8 at N_c = 3  (dim_adjoint = 8)
+  [PASS (A)] dim(singlet) + dim(adjoint) = N_c^2 (completeness)  (1 + 8 = 9, N_c^2 = 9)
+  [PASS (A)] R_conn^{leading} = (N_c^2 - 1)/N_c^2 = 8/9 at N_c = 3  (R_conn^leading = 8/9)
+
+----------------------------------------------------------------------------------------
+Part 3: bounded large-N_c result with O(1/N_c^4) gap
+----------------------------------------------------------------------------------------
+  [PASS (A)] O(1/N_c^4) ~ 1/81 at N_c = 3  (correction = 1/81)
+  [PASS (A)] O(1/N_c^4) ~ 1.2% relative correction  (correction = 1.23%)
+  [PASS (A)] bounded result R_conn ∈ [8/9 - 1/81, 8/9 + 1/81]  ([71/81, 73/81])
+
+----------------------------------------------------------------------------------------
+Part 4: three named obstruction routes documented
+----------------------------------------------------------------------------------------
+  [PASS (A)] (O1) obstruction documented in note  (disconnected piece vanishes identically)
+  [PASS (A)] (O2) obstruction documented in note  (disconnected piece contributes only to v)
+  [PASS (A)] (O3) obstruction documented in note  (exact OZI-vanishing theorem at all genus orders)
+  [PASS (A)] obstruction failure-mode documented: Glueball intermediate states exist  (failure mode documentation)
+  [PASS (A)] obstruction failure-mode documented: renormalization scheme choice  (failure mode documentation)
+  [PASS (A)] obstruction failure-mode documented: phenomenological  (failure mode documentation)
+
+----------------------------------------------------------------------------------------
+Part 5: explicit non-closure of exact matching
+----------------------------------------------------------------------------------------
+  [PASS (A)] explicit non-closure: matching rule M is NOT exact at finite N_c  (key 'NOT exact' present)
+  [PASS (A)] explicit non-closure: bounded support tier is the narrowest honest tier  (key 'bounded support' present)
+  [PASS (A)] explicit non-closure: yt_ew_color_projection_theorem retention not promoted  (key 'audited_conditional' present)
+  [PASS (A)] explicit non-closure: rconn_derived_note retention not promoted  (key 'audited_conditional' present)
+
+========================================================================================
+  TOTAL: PASS=34, FAIL=0
+========================================================================================
+
+----- stderr -----
+

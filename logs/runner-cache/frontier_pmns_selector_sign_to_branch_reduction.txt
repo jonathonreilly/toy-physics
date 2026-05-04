@@ -1,0 +1,68 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_selector_sign_to_branch_reduction.py
+runner_sha256: dbf84e96cf25116e7174f46e7d51597398b8feb37ae616a97967fd71aad2d197
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+PMNS SELECTOR: SIGN-TO-BRANCH REDUCTION
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - PMNS selector unique amplitude slot
+  - Neutrino two-amplitude last-mile boundary
+  - Neutrino Dirac two-Higgs canonical reduction
+  - Charged-lepton two-Higgs canonical reduction
+
+Question:
+  If the unique reduced selector amplitude becomes nonzero, what
+  exactly remains?
+
+========================================================================================
+PART 1: THE SIGN OF A_SEL SELECTS THE BRANCH
+========================================================================================
+  [PASS] Positive a_sel gives positive weight on N_nu and negative on N_e  (vector=[0.0, 0.0, 0.7, -0.7])
+  [PASS] Negative a_sel gives negative weight on N_nu and positive on N_e  (vector=[-0.0, -0.0, -0.8, 0.8])
+  [PASS] Zero a_sel leaves the reduced selector unresolved  (||zero||=0.00e+00)
+
+  So once the bridge turns on, its sign is exactly the class-level
+  branch selector on the reduced quotient.
+
+========================================================================================
+PART 2: AFTER SIGN SELECTION, ONLY THE BRANCH-CONDITIONED COEFFICIENTS REMAIN
+========================================================================================
+  [PASS] The two-amplitude last-mile note keeps sole-axiom closure separate
+  [PASS] The neutrino-side canonical reduction records the seven remaining quantities
+  [PASS] The charged-lepton-side canonical reduction records the seven remaining quantities
+  [PASS] The two canonical reductions keep selector realization outside their claims
+
+  So after a nonzero selector amplitude chooses the branch, the
+  remaining problem is exactly the existing finite-dimensional
+  coefficient inverse problem on that branch.
+
+========================================================================================
+PART 3: THE CURRENT BANK NOW RECORDS THE BRIDGE-TO-COEFFICIENT HANDOFF
+========================================================================================
+  [PASS] The unique-amplitude note fixes one scalar a_sel
+  [PASS] The sign-to-branch note records sign selection and branch-conditioned coefficient handoff
+  [PASS] The atlas carries the sign-to-branch reduction row
+
+  So once the microscopic bridge is realized, the current atlas no
+  longer needs another selector theorem. It hands off directly to
+  coefficient derivation on the selected branch.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-bank answer:
+    - sign(a_sel) is the reduced branch selector
+    - once sign(a_sel) is known, no branch ambiguity remains
+    - the remaining work is exactly the branch-conditioned
+      coefficient inverse problem already isolated by the atlas
+
+PASS=10  FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,138 @@
+===== runner cache v1 =====
+runner: scripts/frontier_chiral_3plus1d_boundary_phase_diagram.py
+runner_sha256: 49b7ce1ed1d6236d1ca3ca7d45fa7b3fff653cdec214dec7d8a8bd160715780c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 70.10
+status: ok
+----- stdout -----
+======================================================================================
+FRONTIER: 3+1D CHIRAL BOUNDARY-PHASE DIAGRAM
+======================================================================================
+theta0=0.3, strength=0.0005
+sizes=(21, 31)
+lambda targets=(0.48, 0.57, 0.67, 0.76, 0.86)
+delta targets=(0.1, 0.14, 0.19, 0.24, 0.29)
+periodic uses torus-aware z expectation; others use raw z centroid
+
+
+[PERIODIC] mode=coherent
+delta \ lambda |   0.48 |   0.57 |   0.67 |   0.76 |   0.86
+-----------------------------------------------------------
+        0.10 |   T/T     M/M     T/T     T/T     M/M  
+        0.14 |   T/T     M/M     M/M     T/T     T/T  
+        0.19 |   T/T     M/M     M/M     T/T     T/T  
+        0.24 |   T/T     A/A     M/M     M/M     A/A  
+        0.29 |   T/T     A/A     M/M     M/M     A/A  
+  consensus cells: T=11, A=4, mixed=10 out of 25 ratio cells (each cell aggregates 2 sizes)
+  torus-sensitive cells (torus vs raw sign mismatch): 0
+  AWAY consensus cells: [(0.24, 0.57), (0.24, 0.86), (0.29, 0.57), (0.29, 0.86)]
+
+[PERIODIC] mode=classical
+delta \ lambda |   0.48 |   0.57 |   0.67 |   0.76 |   0.86
+-----------------------------------------------------------
+        0.10 |   T/T     T/T     T/T     A/A     A/A  
+        0.14 |   T/T     M/M     T/T     M/M     A/A  
+        0.19 |   T/T     A/A     T/T     T/T     T/T  
+        0.24 |   T/T     A/A     A/A     T/T     T/T  
+        0.29 |   T/T     A/A     A/A     A/A     A/A  
+  consensus cells: T=13, A=10, mixed=2 out of 25 ratio cells (each cell aggregates 2 sizes)
+  torus-sensitive cells (torus vs raw sign mismatch): 0
+  AWAY consensus cells: [(0.1, 0.76), (0.1, 0.86), (0.14, 0.86), (0.19, 0.57), (0.24, 0.57), (0.24, 0.67), (0.29, 0.57), (0.29, 0.67), (0.29, 0.76), (0.29, 0.86)]
+
+[PERIODIC] mode=phase-kill
+delta \ lambda |   0.48 |   0.57 |   0.67 |   0.76 |   0.86
+-----------------------------------------------------------
+        0.10 |   T/T     T/T     T/T     A/A     A/A  
+        0.14 |   T/T     M/M     T/T     M/M     A/A  
+        0.19 |   T/T     A/A     T/T     T/T     T/T  
+        0.24 |   T/T     A/A     A/A     T/T     T/T  
+        0.29 |   T/T     A/A     A/A     A/A     A/A  
+  consensus cells: T=13, A=10, mixed=2 out of 25 ratio cells (each cell aggregates 2 sizes)
+  torus-sensitive cells (torus vs raw sign mismatch): 0
+  AWAY consensus cells: [(0.1, 0.76), (0.1, 0.86), (0.14, 0.86), (0.19, 0.57), (0.24, 0.57), (0.24, 0.67), (0.29, 0.57), (0.29, 0.67), (0.29, 0.76), (0.29, 0.86)]
+
+[REFLECTING] mode=coherent
+delta \ lambda |   0.48 |   0.57 |   0.67 |   0.76 |   0.86
+-----------------------------------------------------------
+        0.10 |    T       T       T       T       T   
+        0.14 |    T       T       T       T       T   
+        0.19 |    T       T       T       T       T   
+        0.24 |    T       T       T       T       T   
+        0.29 |    T       T       T       T       T   
+  consensus cells: T=25, A=0, mixed=0 out of 25 ratio cells (each cell aggregates 2 sizes)
+  AWAY consensus cells: none
+
+[REFLECTING] mode=classical
+delta \ lambda |   0.48 |   0.57 |   0.67 |   0.76 |   0.86
+-----------------------------------------------------------
+        0.10 |    T       T       T       T       T   
+        0.14 |    T       T       T       T       T   
+        0.19 |    T       T       T       T       T   
+        0.24 |    T       T       T       T       T   
+        0.29 |    T       T       T       T       T   
+  consensus cells: T=25, A=0, mixed=0 out of 25 ratio cells (each cell aggregates 2 sizes)
+  AWAY consensus cells: none
+
+[REFLECTING] mode=phase-kill
+delta \ lambda |   0.48 |   0.57 |   0.67 |   0.76 |   0.86
+-----------------------------------------------------------
+        0.10 |    T       T       T       T       T   
+        0.14 |    T       T       T       T       T   
+        0.19 |    T       T       T       T       T   
+        0.24 |    T       T       T       T       T   
+        0.29 |    T       T       T       T       T   
+  consensus cells: T=25, A=0, mixed=0 out of 25 ratio cells (each cell aggregates 2 sizes)
+  AWAY consensus cells: none
+
+[OPEN] mode=coherent
+delta \ lambda |   0.48 |   0.57 |   0.67 |   0.76 |   0.86
+-----------------------------------------------------------
+        0.10 |    T       T       T       T       T   
+        0.14 |    T       M       T       T       T   
+        0.19 |    T       M       M       T       T   
+        0.24 |    T       M       M       T       M   
+        0.29 |    T       M       M       M       A   
+  consensus cells: T=15, A=1, mixed=9 out of 25 ratio cells (each cell aggregates 2 sizes)
+  AWAY consensus cells: [(0.29, 0.86)]
+
+[OPEN] mode=classical
+delta \ lambda |   0.48 |   0.57 |   0.67 |   0.76 |   0.86
+-----------------------------------------------------------
+        0.10 |    T       T       T       T       T   
+        0.14 |    T       T       T       T       T   
+        0.19 |    T       T       T       T       T   
+        0.24 |    T       T       T       T       T   
+        0.29 |    T       T       T       T       T   
+  consensus cells: T=25, A=0, mixed=0 out of 25 ratio cells (each cell aggregates 2 sizes)
+  AWAY consensus cells: none
+
+[OPEN] mode=phase-kill
+delta \ lambda |   0.48 |   0.57 |   0.67 |   0.76 |   0.86
+-----------------------------------------------------------
+        0.10 |    T       T       T       T       T   
+        0.14 |    T       T       T       T       T   
+        0.19 |    T       T       T       T       T   
+        0.24 |    T       T       T       T       T   
+        0.29 |    T       T       T       T       T   
+  consensus cells: T=25, A=0, mixed=0 out of 25 ratio cells (each cell aggregates 2 sizes)
+  AWAY consensus cells: none
+
+======================================================================================
+SUMMARY
+======================================================================================
+  periodic /   coherent: AWAY consensus cells = 4
+  periodic /  classical: AWAY consensus cells = 10
+  periodic / phase-kill: AWAY consensus cells = 10
+reflecting /   coherent: AWAY consensus cells = 0
+reflecting /  classical: AWAY consensus cells = 0
+reflecting / phase-kill: AWAY consensus cells = 0
+      open /   coherent: AWAY consensus cells = 1
+      open /  classical: AWAY consensus cells = 0
+      open / phase-kill: AWAY consensus cells = 0
+periodic torus-sensitive cells = 0
+Interpretation: AWAY windows that vanish under reflecting/open boundaries or disappear when the periodic observable is torus-aware are consistent with recurrence artifacts; AWAY windows that persist across all three boundary classes are structural.
+Total raw cases evaluated: 450
+
+----- stderr -----
+

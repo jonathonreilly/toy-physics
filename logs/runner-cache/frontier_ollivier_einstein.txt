@@ -1,0 +1,133 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ollivier_einstein.py
+runner_sha256: bd8cb8e363ad2ae7318cea8ab6d3381946e6667560be8d9dbfe53ebc869d7825
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 10.96
+status: ok
+----- stdout -----
+==============================================================================
+POTENTIAL-WEIGHTED OLLIVIER CURVATURE vs STRESS-ENERGY PROXY
+Does self-consistent gravity induce a bounded Delta_kappa ~ G*T proxy?
+==============================================================================
+
+Lattice: 10x10 periodic staggered (n=100)
+MASS=0.3, MU2=0.22, DT=0.12, N_STEPS=30
+G values: [1, 5, 10, 20, 50]
+
+Graph: 100 nodes, 200 edges
+Computing all-pairs BFS distances...
+Computing Ollivier-Ricci curvature BEFORE gravity (uniform, flat)...
+  kappa_before: mean=0.000000, std=0.000000
+  (On a regular torus, kappa=0 everywhere by symmetry.)
+
+==============================================================================
+SWEEP OVER G VALUES — THREE CURVATURE METHODS
+==============================================================================
+
+======================================== G = 1 ========================================
+  Evolved 30 steps (0.1s)
+  rho: mean=0.010000, std=0.011910, max/mean=5.38
+  phi: mean=0.045455, std=0.013196
+  [   density]  mean_dk=-0.2648  R2(dk,GT)=0.2261  R2(dk,T)=0.2261  slope_T=16.0651
+  [ potential]  mean_dk=-0.0000  R2(dk,GT)=0.9840  R2(dk,T)=0.9840  slope_T=0.1869
+  [  combined]  mean_dk=-0.2686  R2(dk,GT)=0.2313  R2(dk,T)=0.2313  slope_T=16.2330
+
+======================================== G = 5 ========================================
+  Evolved 30 steps (0.1s)
+  rho: mean=0.010000, std=0.015408, max/mean=8.91
+  phi: mean=0.227273, std=0.085955
+  [   density]  mean_dk=-0.2905  R2(dk,GT)=0.1780  R2(dk,T)=0.1780  slope_T=10.7494
+  [ potential]  mean_dk=-0.0006  R2(dk,GT)=0.9693  R2(dk,T)=0.9693  slope_T=0.6842
+  [  combined]  mean_dk=-0.3086  R2(dk,GT)=0.1899  R2(dk,T)=0.1899  slope_T=11.0185
+
+======================================== G = 10 ========================================
+  Evolved 30 steps (0.1s)
+  rho: mean=0.010000, std=0.016531, max/mean=7.96
+  phi: mean=0.454545, std=0.191583
+  [   density]  mean_dk=-0.3384  R2(dk,GT)=0.1284  R2(dk,T)=0.1284  slope_T=9.9362
+  [ potential]  mean_dk=-0.0019  R2(dk,GT)=0.9722  R2(dk,T)=0.9722  slope_T=1.1153
+  [  combined]  mean_dk=-0.3729  R2(dk,GT)=0.1491  R2(dk,T)=0.1491  slope_T=10.6379
+
+======================================== G = 20 ========================================
+  Evolved 30 steps (0.1s)
+  rho: mean=0.010000, std=0.021110, max/mean=11.40
+  phi: mean=0.909091, std=0.480967
+  [   density]  mean_dk=-0.3848  R2(dk,GT)=0.1148  R2(dk,T)=0.1148  slope_T=7.4541
+  [ potential]  mean_dk=-0.0055  R2(dk,GT)=0.9696  R2(dk,T)=0.9696  slope_T=1.3767
+  [  combined]  mean_dk=-0.4531  R2(dk,GT)=0.1543  R2(dk,T)=0.1543  slope_T=8.4161
+
+======================================== G = 50 ========================================
+  Evolved 30 steps (0.1s)
+  rho: mean=0.010000, std=0.024230, max/mean=12.37
+  phi: mean=2.272727, std=1.488172
+  [   density]  mean_dk=-0.2957  R2(dk,GT)=0.0931  R2(dk,T)=0.0931  slope_T=5.5781
+  [ potential]  mean_dk=-0.0145  R2(dk,GT)=0.9690  R2(dk,T)=0.9690  slope_T=1.5408
+  [  combined]  mean_dk=-0.4464  R2(dk,GT)=0.1463  R2(dk,T)=0.1463  slope_T=6.6838
+
+==============================================================================
+SUMMARY TABLE
+==============================================================================
+
+--- Method: density ---
+    G    slope(dk,GT)   R2(dk,GT)     slope(dk,T)    R2(dk,T)
+------------------------------------------------------------
+    1       16.065092      0.2261       16.065092      0.2261
+    5        2.149887      0.1780       10.749433      0.1780
+   10        0.993621      0.1284        9.936210      0.1284
+   20        0.372707      0.1148        7.454147      0.1148
+   50        0.111563      0.0931        5.578140      0.0931
+  slope_T vs G:  slope=-0.167509  intercept=12.837768  R2=0.6848
+
+
+--- Method: potential ---
+    G    slope(dk,GT)   R2(dk,GT)     slope(dk,T)    R2(dk,T)
+------------------------------------------------------------
+    1        0.186902      0.9840        0.186902      0.9840
+    5        0.136831      0.9693        0.684154      0.9693
+   10        0.111533      0.9722        1.115326      0.9722
+   20        0.068837      0.9696        1.376745      0.9696
+   50        0.030816      0.9690        1.540776      0.9690
+  slope_T vs G:  slope=0.022619  intercept=0.591729  R2=0.6558
+
+
+--- Method: combined ---
+    G    slope(dk,GT)   R2(dk,GT)     slope(dk,T)    R2(dk,T)
+------------------------------------------------------------
+    1       16.232977      0.2313       16.232977      0.2313
+    5        2.203709      0.1899       11.018547      0.1899
+   10        1.063795      0.1491       10.637948      0.1491
+   20        0.420807      0.1543        8.416149      0.1543
+   50        0.133676      0.1463        6.683809      0.1463
+  slope_T vs G:  slope=-0.149470  intercept=13.168763  R2=0.6644
+
+==============================================================================
+VERDICT
+==============================================================================
+
+     density:  mean_R2(dk,GT)=0.1481  R2(slope_T vs G)=0.6848  score=0.8329
+   potential:  mean_R2(dk,GT)=0.9728  R2(slope_T vs G)=0.6558  score=1.6286
+    combined:  mean_R2(dk,GT)=0.1742  R2(slope_T vs G)=0.6644  score=0.8386
+
+  Best method: potential
+
+  MODERATE PROXY EVIDENCE: partial curvature-stress-energy
+  correlation on the potential-weighted observable.
+
+  Sign check (does positive T give positive Delta_kappa?):
+       density G=10: dk(high_T)=-0.1363  dk(low_T)=-0.5404  correct
+       density G=50: dk(high_T)=-0.0706  dk(low_T)=-0.5207  correct
+     potential G=10: dk(high_T)=+0.0081  dk(low_T)=-0.0118  correct
+     potential G=50: dk(high_T)=+0.0014  dk(low_T)=-0.0303  correct
+      combined G=10: dk(high_T)=-0.1726  dk(low_T)=-0.5733  correct
+      combined G=50: dk(high_T)=-0.2828  dk(low_T)=-0.6100  correct
+
+  Total time: 6.9s
+
+Plot saved to /private/tmp/gate-fix-worktree/scripts/frontier_ollivier_einstein.png
+Slope plot saved to /private/tmp/gate-fix-worktree/scripts/frontier_ollivier_einstein_slopes.png
+
+Done.
+
+----- stderr -----
+

@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hadron_lane1_sqrt_sigma_b5_framework_link_audit.py
+runner_sha256: 7168213526297fbcf187008d7d2c1818753afe0c35f588f63d27ae7f1d44e502
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.05
+status: nonzero_exit
+----- stdout -----
+========================================================================================
+LANE 1 SQRT(SIGMA) B5 FRAMEWORK LINK AUDIT
+========================================================================================
+
+Question:
+  Does the current repo surface close the framework-to-standard-QCD
+  link needed to import static-energy/string-tension bridge values?
+
+Answer:
+  No. The current surface has structural SU(3) and beta=6 support,
+  but not a large-volume framework-side Wilson/Creutz/force-scale
+  validation with uncertainty.
+
+----------------------------------------------------------------------------------------
+Part 1: B5 claim-state surface
+----------------------------------------------------------------------------------------
+  [PASS] Lane 1 gate audit marks B5 as open structural bridge
+  [PASS] B5 paths require volume scaling or asymptotic Wilson-loop checks
+  [PASS] confinement note says quantitative sigma uses standard lattice simulations
+  [FAIL] audit ledger keeps confinement/string-tension row conditional
+
+----------------------------------------------------------------------------------------
+Part 2: B5 dependency status
+----------------------------------------------------------------------------------------
+  [PASS] graph-first SU3 support is structural, not a lattice-QCD dynamics equivalence
+  [PASS] g_bare normalization leaves Wilson action form imported
+  [PASS] canonical plaquette surface stores evaluated constants, not a volume-scaling proof
+  [PASS] confinement runner still hard-codes standard lattice bridge constants
+
+----------------------------------------------------------------------------------------
+Part 3: B5 closure-gate model
+----------------------------------------------------------------------------------------
+  current_4^4_plaquette_wilson_loop_check: 3/5 gate bits; closes=False
+  graph_first_su3_plus_gbare_normalization: 1/5 gate bits; closes=False
+  future_large_volume_creutz_or_force_scale_ladder: 5/5 gate bits; closes=True
+  [PASS] current 4^4 check is useful but fails large-volume and uncertainty gates
+  [PASS] structural SU3/g_bare support does not by itself instantiate lattice dynamics
+  [PASS] future large-volume Creutz/force ladder would close the B5 gate by construction
+  [PASS] no current-surface B5 candidate closes
+
+----------------------------------------------------------------------------------------
+Part 4: artifact checks
+----------------------------------------------------------------------------------------
+  [PASS] note records B5 as current-surface no-go, not closure
+  [PASS] note defines the future large-volume ladder
+
+========================================================================================
+PASS=13 FAIL=1
+========================================================================================
+
+----- stderr -----
+

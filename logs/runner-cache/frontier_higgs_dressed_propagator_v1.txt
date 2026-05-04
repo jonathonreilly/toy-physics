@@ -1,0 +1,245 @@
+===== runner cache v1 =====
+runner: scripts/frontier_higgs_dressed_propagator_v1.py
+runner_sha256: 78b5517beee10ec5424bb2e3094c1736be25147e88cbc562c449abd5414ac503
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+==============================================================================
+G5 AVENUE G — HIGGS-DRESSED INTERMEDIATE PROPAGATOR
+==============================================================================
+
+==============================================================================
+PHASE 1 — baseline Sigma_identity on the Dirac-bridge carrier
+==============================================================================
+  [PASS] Gamma_1 Hermitian
+  [PASS] Gamma_1^2 = I_16
+  [PASS] P_T1 Gamma_1 (P_O0 + P_T2) Gamma_1 P_T1 species-block = I_3
+  diag(Sigma_identity species) = [ 1.000000e+00,  1.000000e+00,  1.000000e+00]
+
+  Verifying Gamma_1 hopping on L-taste:
+    species 0 in=(1, 0, 0)(L) -> out=[(0, 0, 0, 0)]
+    species 1 in=(0, 1, 0)(L) -> out=[(1, 1, 0, 0)]
+    species 2 in=(0, 0, 1)(L) -> out=[(1, 0, 1, 0)]
+
+==============================================================================
+CONSTRUCTION G-1 — W(H) = f(H_lift) (function of lifted H)
+==============================================================================
+  lift=missing-axis       h_O0=+0.0000 f=H        diag=[ 0.000000e+00, -9.338063e-01,  9.338063e-01]
+    |  Q_diag=nan cs_diag=nan | Q_eig=nan cs_eig=nan | offdiag=4.29e-01
+  lift=missing-axis       h_O0=+0.0000 f=H^2      diag=[ 0.000000e+00,  1.306540e+00,  3.056332e+00]
+    |  Q_diag=nan cs_diag=nan | Q_eig=nan cs_eig=nan | offdiag=7.07e-01
+  lift=missing-axis       h_O0=+0.0000 f=exp(H)   diag=[ 1.000000e+00,  6.155888e-01,  5.522953e+00]
+    |  Q_diag=0.4176 cs_diag=0.9302 | Q_eig=0.4377 cs_eig=0.9622 | offdiag=1.00e+00
+  lift=missing-axis       h_O0=+0.0000 f=|H|      diag=[ 0.000000e+00,  1.033502e+00,  1.504242e+00]
+    |  Q_diag=nan cs_diag=nan | Q_eig=nan cs_eig=nan | offdiag=3.53e-01
+  lift=missing-axis       h_O0=+0.0000 f=H+shift  diag=[ 1.409094e+00,  4.752880e-01,  2.342901e+00]
+    |  Q_diag=0.3642 cs_diag=0.8121 | Q_eig=0.3732 cs_eig=0.8792 | offdiag=4.29e-01
+  lift=hopping-aligned    h_O0=+0.0000 f=H        diag=[ 0.000000e+00,  9.338063e-01, -9.338063e-01]
+    |  Q_diag=nan cs_diag=nan | Q_eig=nan cs_eig=nan | offdiag=4.29e-01
+  lift=hopping-aligned    h_O0=+0.0000 f=H^2      diag=[ 0.000000e+00,  3.056332e+00,  1.306540e+00]
+    |  Q_diag=nan cs_diag=nan | Q_eig=nan cs_eig=nan | offdiag=7.07e-01
+  lift=hopping-aligned    h_O0=+0.0000 f=exp(H)   diag=[ 1.000000e+00,  5.522953e+00,  6.155888e-01]
+    |  Q_diag=0.4176 cs_diag=0.4998 | Q_eig=0.4377 cs_eig=0.9622 | offdiag=1.00e+00
+  lift=hopping-aligned    h_O0=+0.0000 f=|H|      diag=[ 0.000000e+00,  1.504242e+00,  1.033502e+00]
+    |  Q_diag=nan cs_diag=nan | Q_eig=nan cs_eig=nan | offdiag=3.53e-01
+  lift=hopping-aligned    h_O0=+0.0000 f=H+shift  diag=[ 1.409094e+00,  2.342901e+00,  4.752880e-01]
+    |  Q_diag=0.3642 cs_diag=0.5116 | Q_eig=0.3732 cs_eig=0.8792 | offdiag=4.29e-01
+  lift=missing-axis       h_O0=+0.2190 f=H        diag=[ 2.190204e-01, -9.338063e-01,  9.338063e-01]
+    |  Q_diag=0.3621 cs_diag=0.8136 | Q_eig=0.3652 cs_eig=0.7376 | offdiag=4.29e-01
+  lift=missing-axis       h_O0=+0.2190 f=H^2      diag=[ 4.796996e-02,  1.306540e+00,  3.056332e+00]
+    |  Q_diag=0.4560 cs_diag=0.9392 | Q_eig=0.4695 cs_eig=0.9587 | offdiag=7.07e-01
+  lift=missing-axis       h_O0=+0.2190 f=exp(H)   diag=[ 1.244857e+00,  6.155888e-01,  5.522953e+00]
+    |  Q_diag=0.4087 cs_diag=0.9153 | Q_eig=0.4279 cs_eig=0.9562 | offdiag=1.00e+00
+  lift=missing-axis       h_O0=+0.2190 f=|H|      diag=[ 2.190204e-01,  1.033502e+00,  1.504242e+00]
+    |  Q_diag=0.3751 cs_diag=0.8672 | Q_eig=0.3815 cs_eig=0.8971 | offdiag=3.53e-01
+  lift=missing-axis       h_O0=+0.2190 f=H+shift  diag=[ 1.628115e+00,  4.752880e-01,  2.342901e+00]
+    |  Q_diag=0.3638 cs_diag=0.7926 | Q_eig=0.3726 cs_eig=0.8673 | offdiag=4.29e-01
+  lift=hopping-aligned    h_O0=+0.2190 f=H        diag=[ 2.190204e-01,  9.338063e-01, -9.338063e-01]
+    |  Q_diag=0.3621 cs_diag=0.8136 | Q_eig=0.3652 cs_eig=0.7376 | offdiag=4.29e-01
+  lift=hopping-aligned    h_O0=+0.2190 f=H^2      diag=[ 4.796996e-02,  3.056332e+00,  1.306540e+00]
+    |  Q_diag=0.4560 cs_diag=0.7276 | Q_eig=0.4695 cs_eig=0.9587 | offdiag=7.07e-01
+  lift=hopping-aligned    h_O0=+0.2190 f=exp(H)   diag=[ 1.244857e+00,  5.522953e+00,  6.155888e-01]
+    |  Q_diag=0.4087 cs_diag=0.4921 | Q_eig=0.4279 cs_eig=0.9562 | offdiag=1.00e+00
+  lift=hopping-aligned    h_O0=+0.2190 f=|H|      diag=[ 2.190204e-01,  1.504242e+00,  1.033502e+00]
+    |  Q_diag=0.3751 cs_diag=0.7744 | Q_eig=0.3815 cs_eig=0.8971 | offdiag=3.53e-01
+  lift=hopping-aligned    h_O0=+0.2190 f=H+shift  diag=[ 1.628115e+00,  2.342901e+00,  4.752880e-01]
+    |  Q_diag=0.3638 cs_diag=0.4995 | Q_eig=0.3726 cs_eig=0.8673 | offdiag=4.29e-01
+
+  BEST cos-sim: 0.9622 (lift=missing-axis, h_O0=0.0000, f=exp(H))
+       diag=[ 1.000000e+00,  6.155888e-01,  5.522953e+00]  eigs=[ 4.180821e-01,  1.000000e+00,  5.720460e+00]  Q=0.4377
+  BEST |Q-2/3|: 1.9720e-01 (lift=hopping-aligned, h_O0=0.2190, f=H^2)
+       diag=[ 4.796996e-02,  3.056332e+00,  1.306540e+00]  eigs=[ 4.796996e-02,  1.056288e+00,  3.306584e+00]  cs=0.9587
+  [PASS] G-1: Sigma_Higgs Hermitian for H-lift probe
+  [PASS] G-1: produces species-resolved diagonals for at least one (lift, f)  (max std(diag) across candidates = 2.228e+00)
+
+  G-1 verdict: NO_MATCH (best cos-sim or Q-deviation exceeds thresholds)
+
+==============================================================================
+CONSTRUCTION G-2 — W(H) = 1 / (lambda - H_lift) (resolvent)
+==============================================================================
+  lift=missing-axis       h_O0=+0.0000 lambda=E1            diag=[ 6.123724e-01,  3.507918e-01, -6.002607e-01]
+    |  Q_diag=0.3384 cs_diag=0.7244 | Q_eig=0.3369 cs_eig=0.7162
+  lift=missing-axis       h_O0=+0.0000 lambda=E2            diag=[ 1.060660e+00,  5.225354e-01, -7.481379e-02]
+    |  Q_diag=0.4038 cs_diag=0.3525 | Q_eig=0.3825 cs_eig=0.8924
+  lift=missing-axis       h_O0=+0.0000 lambda=-E1           diag=[-6.123724e-01, -2.327272e+00, -8.107052e-01]
+    |  Q_diag=0.3643 cs_diag=0.6449 | Q_eig=0.3843 cs_eig=0.4733
+  lift=missing-axis       h_O0=+0.0000 lambda=chamber_slack diag=[ 6.306955e+01,  1.395039e+00,  8.491914e-01]
+    |  Q_diag=0.6474 cs_diag=0.1616 | Q_eig=0.6664 cs_eig=0.9963
+  lift=missing-axis       h_O0=+0.0000 lambda=eig_max+0.1   diag=[ 4.190080e-01,  5.123646e-01,  5.490105e+00]
+    |  Q_diag=0.4675 cs_diag=0.9693 | Q_eig=0.4995 cs_eig=0.9792
+  lift=missing-axis       h_O0=+0.0000 lambda=eig_min-0.1   diag=[-7.096757e-01, -7.060675e+00, -1.818804e+00]
+    |  Q_diag=0.4080 cs_diag=0.6308 | Q_eig=0.4726 cs_eig=0.3271
+  lift=missing-axis       h_O0=+0.0000 lambda=+3.0          diag=[ 3.333333e-01,  2.783164e-01,  8.784125e-01]
+    |  Q_diag=0.3573 cs_diag=0.8560 | Q_eig=0.3610 cs_eig=0.8748
+  lift=missing-axis       h_O0=+0.0000 lambda=+10.0         diag=[ 1.000000e-01,  9.186683e-02,  1.131924e-01]
+    |  Q_diag=0.3340 cs_diag=0.7311 | Q_eig=0.3341 cs_eig=0.7388
+  lift=hopping-aligned    h_O0=+0.0000 lambda=E1            diag=[ 6.123724e-01, -6.002607e-01,  3.507918e-01]
+    |  Q_diag=0.3384 cs_diag=0.6172 | Q_eig=0.3369 cs_eig=0.7162
+  lift=hopping-aligned    h_O0=+0.0000 lambda=E2            diag=[ 1.060660e+00, -7.481379e-02,  5.225354e-01]
+    |  Q_diag=0.4038 cs_diag=0.6088 | Q_eig=0.3825 cs_eig=0.8924
+  lift=hopping-aligned    h_O0=+0.0000 lambda=-E1           diag=[-6.123724e-01, -8.107052e-01, -2.327272e+00]
+    |  Q_diag=0.3643 cs_diag=0.8820 | Q_eig=0.3843 cs_eig=0.4733
+  lift=hopping-aligned    h_O0=+0.0000 lambda=chamber_slack diag=[ 6.306955e+01,  8.491914e-01,  1.395039e+00]
+    |  Q_diag=0.6474 cs_diag=0.1852 | Q_eig=0.6664 cs_eig=0.9963
+  lift=hopping-aligned    h_O0=+0.0000 lambda=eig_max+0.1   diag=[ 4.190080e-01,  5.490105e+00,  5.123646e-01]
+    |  Q_diag=0.4675 cs_diag=0.4976 | Q_eig=0.4995 cs_eig=0.9792
+  lift=hopping-aligned    h_O0=+0.0000 lambda=eig_min-0.1   diag=[-7.096757e-01, -1.818804e+00, -7.060675e+00]
+    |  Q_diag=0.4080 cs_diag=0.9412 | Q_eig=0.4726 cs_eig=0.3271
+  lift=hopping-aligned    h_O0=+0.0000 lambda=+3.0          diag=[ 3.333333e-01,  8.784125e-01,  2.783164e-01]
+    |  Q_diag=0.3573 cs_diag=0.6095 | Q_eig=0.3610 cs_eig=0.8748
+  lift=hopping-aligned    h_O0=+0.0000 lambda=+10.0         diag=[ 1.000000e-01,  1.131924e-01,  9.186683e-02]
+    |  Q_diag=0.3340 cs_diag=0.6868 | Q_eig=0.3341 cs_eig=0.7388
+  lift=missing-axis       h_O0=+0.2190 lambda=0             diag=[-4.565784e+00,  1.445490e+00,  9.005870e-01]
+    |  Q_diag=0.3759 cs_diag=0.4724 | Q_eig=0.4038 cs_eig=0.5892
+  lift=missing-axis       h_O0=+0.2190 lambda=E1            diag=[ 7.072272e-01,  3.507918e-01, -6.002607e-01]
+    |  Q_diag=0.3401 cs_diag=0.7041 | Q_eig=0.3381 cs_eig=0.7394
+  lift=missing-axis       h_O0=+0.2190 lambda=E2            diag=[ 1.381619e+00,  5.225354e-01, -7.481379e-02]
+    |  Q_diag=0.4196 cs_diag=0.3244 | Q_eig=0.3965 cs_eig=0.9188
+  lift=missing-axis       h_O0=+0.2190 lambda=-E1           diag=[-5.399528e-01, -2.327272e+00, -8.107052e-01]
+    |  Q_diag=0.3681 cs_diag=0.6508 | Q_eig=0.3886 cs_eig=0.4721
+  lift=missing-axis       h_O0=+0.2190 lambda=chamber_slack diag=[-4.922109e+00,  1.395039e+00,  8.491914e-01]
+    |  Q_diag=0.3838 cs_diag=0.4526 | Q_eig=0.4107 cs_eig=0.5665
+  lift=missing-axis       h_O0=+0.2190 lambda=eig_max+0.1   diag=[ 4.613463e-01,  5.123646e-01,  5.490105e+00]
+    |  Q_diag=0.4626 cs_diag=0.9663 | Q_eig=0.4940 cs_eig=0.9790
+  lift=missing-axis       h_O0=+0.2190 lambda=eig_min-0.1   diag=[-6.142073e-01, -7.060675e+00, -1.818804e+00]
+    |  Q_diag=0.4139 cs_diag=0.6337 | Q_eig=0.4803 cs_eig=0.3231
+  lift=missing-axis       h_O0=+0.2190 lambda=+3.0          diag=[ 3.595855e-01,  2.783164e-01,  8.784125e-01]
+    |  Q_diag=0.3558 cs_diag=0.8489 | Q_eig=0.3594 cs_eig=0.8715
+  lift=missing-axis       h_O0=+0.2190 lambda=+10.0         diag=[ 1.022392e-01,  9.186683e-02,  1.131924e-01]
+    |  Q_diag=0.3339 cs_diag=0.7286 | Q_eig=0.3340 cs_eig=0.7376
+  lift=hopping-aligned    h_O0=+0.2190 lambda=0             diag=[-4.565784e+00,  9.005870e-01,  1.445490e+00]
+    |  Q_diag=0.3759 cs_diag=0.5431 | Q_eig=0.4038 cs_eig=0.5892
+  lift=hopping-aligned    h_O0=+0.2190 lambda=E1            diag=[ 7.072272e-01, -6.002607e-01,  3.507918e-01]
+    |  Q_diag=0.3401 cs_diag=0.6001 | Q_eig=0.3381 cs_eig=0.7394
+  lift=hopping-aligned    h_O0=+0.2190 lambda=E2            diag=[ 1.381619e+00, -7.481379e-02,  5.225354e-01]
+    |  Q_diag=0.4196 cs_diag=0.5590 | Q_eig=0.3965 cs_eig=0.9188
+  lift=hopping-aligned    h_O0=+0.2190 lambda=-E1           diag=[-5.399528e-01, -8.107052e-01, -2.327272e+00]
+    |  Q_diag=0.3681 cs_diag=0.8902 | Q_eig=0.3886 cs_eig=0.4721
+  lift=hopping-aligned    h_O0=+0.2190 lambda=chamber_slack diag=[-4.922109e+00,  8.491914e-01,  1.395039e+00]
+    |  Q_diag=0.3838 cs_diag=0.5238 | Q_eig=0.4107 cs_eig=0.5665
+  lift=hopping-aligned    h_O0=+0.2190 lambda=eig_max+0.1   diag=[ 4.613463e-01,  5.490105e+00,  5.123646e-01]
+    |  Q_diag=0.4626 cs_diag=0.4962 | Q_eig=0.4940 cs_eig=0.9790
+  lift=hopping-aligned    h_O0=+0.2190 lambda=eig_min-0.1   diag=[-6.142073e-01, -1.818804e+00, -7.060675e+00]
+    |  Q_diag=0.4139 cs_diag=0.9456 | Q_eig=0.4803 cs_eig=0.3231
+  lift=hopping-aligned    h_O0=+0.2190 lambda=+3.0          diag=[ 3.595855e-01,  8.784125e-01,  2.783164e-01]
+    |  Q_diag=0.3558 cs_diag=0.6045 | Q_eig=0.3594 cs_eig=0.8715
+  lift=hopping-aligned    h_O0=+0.2190 lambda=+10.0         diag=[ 1.022392e-01,  1.131924e-01,  9.186683e-02]
+    |  Q_diag=0.3339 cs_diag=0.6844 | Q_eig=0.3340 cs_eig=0.7376
+
+  BEST cos-sim: 0.9963 (lift=missing-axis, h_O0=0.0000, lambda=chamber_slack)
+       diag=[ 6.306955e+01,  1.395039e+00,  8.491914e-01]  eigs=[ 3.312983e-01,  1.912933e+00,  6.306955e+01]  Q=0.6664
+  BEST |Q-2/3|: 3.0886e-04 (lift=missing-axis, h_O0=0.0000, lambda=chamber_slack)
+       diag=[ 6.306955e+01,  1.395039e+00,  8.491914e-01]  eigs=[ 3.312983e-01,  1.912933e+00,  6.306955e+01]  cs=0.9963
+  [PASS] G-2: resolvent weight produces species-resolved diagonals  (max std(diag) = 2.920e+01)
+
+  G-2 verdict: MATCH
+
+==============================================================================
+CONSTRUCTION G-3 — W(H) directly from G1-pin eigenvalues
+==============================================================================
+  retained neutrino-mixing chamber-pin H eigenvalues: [-1.309094e+00, -3.204337e-01,  2.286589e+00]
+  These three scalars are assigned as weights to the three intermediate T_2 states
+  in all six possible orderings (3! permutations), plus an O_0 weight from
+  retained scalars: tr(H)/3, mean of |eigs|, and zero.
+
+  Top-8 by cos-similarity to PDG direction:
+    cs=0.9877 Q=0.6341 tau=square   perm=(0, 2, 1) h_O0=lambda_2^2
+      diag=[ 1.026778e-01,  1.026778e-01,  5.228491e+00]
+    cs=0.9864 Q=0.5953 tau=shifted  perm=(1, 2, 0) h_O0=lambda_2^2
+      diag=[ 1.026778e-01,  1.000000e-01,  3.695684e+00]
+    cs=0.9783 Q=0.5870 tau=square   perm=(0, 2, 1) h_O0=tr(H)/3  
+      diag=[ 2.190204e-01,  1.026778e-01,  5.228491e+00]
+    cs=0.9770 Q=0.4710 tau=id       perm=(0, 2, 1) h_O0=lambda_2^2
+      diag=[ 1.026778e-01, -3.204337e-01,  2.286589e+00]
+    cs=0.9770 Q=0.4710 tau=abs      perm=(0, 2, 1) h_O0=lambda_2^2
+      diag=[ 1.026778e-01,  3.204337e-01,  2.286589e+00]
+    cs=0.9766 Q=0.5047 tau=square   perm=(2, 0, 1) h_O0=lambda_2^2
+      diag=[ 1.026778e-01,  1.026778e-01,  1.713728e+00]
+    cs=0.9732 Q=0.5480 tau=shifted  perm=(1, 2, 0) h_O0=tr(H)/3  
+      diag=[ 2.190204e-01,  1.000000e-01,  3.695684e+00]
+    cs=0.9702 Q=0.5613 tau=square   perm=(0, 2, 1) h_O0=min|eig| 
+      diag=[ 3.204337e-01,  1.026778e-01,  5.228491e+00]
+
+  Top-8 by |Q - 2/3|:
+    |Q-2/3|=3.2612e-02 cs=0.3682 tau=square   perm=(0, 1, 2) h_O0=lambda_2^2
+      diag=[ 1.026778e-01,  5.228491e+00,  1.026778e-01]
+    |Q-2/3|=3.2612e-02 cs=0.9877 tau=square   perm=(0, 2, 1) h_O0=lambda_2^2
+      diag=[ 1.026778e-01,  1.026778e-01,  5.228491e+00]
+    |Q-2/3|=7.1395e-02 cs=0.3889 tau=shifted  perm=(1, 0, 2) h_O0=lambda_2^2
+      diag=[ 1.026778e-01,  3.695684e+00,  1.000000e-01]
+    |Q-2/3|=7.1395e-02 cs=0.9864 tau=shifted  perm=(1, 2, 0) h_O0=lambda_2^2
+      diag=[ 1.026778e-01,  1.000000e-01,  3.695684e+00]
+    |Q-2/3|=7.9702e-02 cs=0.3653 tau=square   perm=(0, 1, 2) h_O0=tr(H)/3  
+      diag=[ 2.190204e-01,  5.228491e+00,  1.026778e-01]
+    |Q-2/3|=7.9702e-02 cs=0.9783 tau=square   perm=(0, 2, 1) h_O0=tr(H)/3  
+      diag=[ 2.190204e-01,  1.026778e-01,  5.228491e+00]
+    |Q-2/3|=1.0535e-01 cs=0.3627 tau=square   perm=(0, 1, 2) h_O0=min|eig| 
+      diag=[ 3.204337e-01,  5.228491e+00,  1.026778e-01]
+    |Q-2/3|=1.0535e-01 cs=0.3627 tau=square   perm=(0, 1, 2) h_O0=lambda_2 
+      diag=[-3.204337e-01,  5.228491e+00,  1.026778e-01]
+
+  BEST cos-sim: 0.9877 with Q=0.6341
+  BEST |Q-2/3|: 3.2612e-02 with cs=0.3682
+  Candidates with (cs>0.99 AND |Q-2/3|<1e-3): 0
+  [PASS] G-3: chamber-eigenvalue weights produce species-resolved diagonals  (max std(diag) = 2.877e+00)
+
+  G-3 verdict: NO_MATCH (no permutation saturates both Koide and direction)
+
+==============================================================================
+PHASE 4 — FOUR-OUTCOME VERDICT
+==============================================================================
+
+  VERDICT: FRAMEWORK_DERIVES_KOIDE = INCONCLUSIVE (numerical match achieved, but H-lift and lambda choice are not retained primitives; see honest caveat)
+
+  Numerical summary (best per construction):
+  G-1 (f(H) lift):    numeric-match=False, partial=True
+     best cs=0.9622 Q=0.4377 (cs_criterion: False, Q_criterion: False)
+  G-2 (resolvent):    numeric-match=True, partial=True
+     best cs=0.9963 Q=0.6664 (cs_criterion: True, Q_criterion: True)
+  G-3 (chamber eigs): numeric-match=False, partial=True
+     best cs=0.9877 Q=0.6341 (cs_criterion: False, Q_criterion: False)
+
+  Honest caveat on the H-lift:
+  The missing-axis identification T_2[011,101,110] <-> species (1,2,3)
+  is retained as a Z_3 / Cl(3) sector covariance statement, but using
+  it to transport the G1 H-operator (which is defined on T_1 via the
+  neutrino f(H) closure) as a PROPAGATOR WEIGHT between two Gamma_1
+  hops on the intermediate subspace O_0 ⊕ T_2 is a structural choice
+  not itself proven to be retained. The retained Dirac-bridge theorem
+  fixes W(intermediate) = (P_O0 + P_T2), i.e. unit-weight. Replacing
+  this with W(H) is a NEW retained primitive if it were to be adopted
+  — and (as a companion runner's AMBIGUOUS result showed on a different lift)
+  requires a retained justification for that specific choice.
+
+  If no construction matches numerically, the outcome remains
+  NO_NATURAL_CONSTRUCTION or INCONCLUSIVE (the latter if the lift
+  itself is unretained).
+==============================================================================
+RESULT: 7 PASS, 0 FAIL
+VERDICT: FRAMEWORK_DERIVES_KOIDE = INCONCLUSIVE (numerical match achieved, but H-lift and lambda choice are not retained primitives; see honest caveat)
+==============================================================================
+
+----- stderr -----
+

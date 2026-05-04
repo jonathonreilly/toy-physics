@@ -1,0 +1,75 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_bridge_action_invariant.py
+runner_sha256: 438d22558a0c22597f8bc065fe3bb6fcf023cd966235b8167df10440d3443878
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 19.74
+status: ok
+----- stdout -----
+==============================================================================
+y_t BRIDGE ACTION INVARIANT
+==============================================================================
+
+Scan the constructive UV-localized bridge class and test whether the
+low-energy endpoint collapses onto a small set of bridge invariants.
+
+Profiles retained inside |dev| < 0.5%: 83
+
+Invariant statistics on the viable class:
+  action_1 mean/std/cv = 0.021318 / 0.002576 / 12.08%
+  action_2 mean/std/cv = 0.030015 / 0.003536 / 11.78%
+  centroid_1 mean/std  = 0.976435 / 0.004954
+  centroid_2 mean/std  = 0.978185 / 0.004250
+
+Correlation with endpoint deviation:
+  corr(action_1, dev)   = +0.949955
+  corr(action_2, dev)   = +0.999889
+  corr(centroid_1, dev) = -0.532447
+  corr(centroid_2, dev) = -0.581388
+
+Per-family monotonicity in I2:
+  logistic     rows= 32 violations= 0 I2 range=[0.023937, 0.035924]
+  erf          rows= 27 violations= 3 I2 range=[0.023874, 0.034720]
+  smoothstep   rows= 24 violations= 0 I2 range=[0.024771, 0.034948]
+
+Closest viable rows:
+  shape          center    width       dev%         I2         c2
+  logistic        0.975    0.020    +0.0005   0.029929   0.974044
+  smoothstep      0.965    0.016    +0.0057   0.030116   0.982532
+  smoothstep      0.965    0.018    -0.0076   0.029947   0.982427
+  erf             0.965    0.022    +0.0145   0.030162   0.977951
+  smoothstep      0.965    0.014    +0.0189   0.030286   0.982612
+  logistic        0.985    0.024    -0.0207   0.029633   0.972085
+  smoothstep      0.965    0.020    -0.0208   0.029777   0.982296
+  logistic        0.965    0.012    +0.0232   0.030278   0.978295
+  erf             0.965    0.020    -0.0252   0.029672   0.978822
+  logistic        0.980    0.022    -0.0262   0.029579   0.973160
+
+  [PASS] 1a-action2-dominates-endpoint: corr(action_2, dev) = +0.999889
+  [PASS] 1b-viable-class-has-tight-uv-centroid: centroid_2 = 0.978185 +/- 0.004250
+  [PASS] 1c-viable-class-has-finite-action-band: action_2 coefficient of variation = 11.78%
+  [PASS] 1d-best-rows-collapse-near-common-I2: top-10 action_2 band width = 0.000357
+  [PASS] 1e-I2-ordering-is-nearly-family-monotone: logistic: violations=0; erf: violations=3; smoothstep: violations=0
+  [PASS] 1f-near-target-rows-share-common-I2-band: |dev|<0.1% rows have I2 band width = 0.002059
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+Inside the constructive UV-localized class, the endpoint is not being
+set by arbitrary profile details. It is overwhelmingly controlled by a
+single bridge functional, the normalized gauge-surplus action I2, plus
+a tight UV centroid.
+
+That means the remaining theorem problem can be stated more sharply:
+
+  derive why the exact interacting bridge selects the observed action
+  invariant and UV centroid, rather than derive an arbitrary function
+  of scale.
+
+==============================================================================
+FINAL TALLY: 6 PASS / 0 FAIL
+Elapsed: 19.18 s
+==============================================================================
+
+----- stderr -----
+

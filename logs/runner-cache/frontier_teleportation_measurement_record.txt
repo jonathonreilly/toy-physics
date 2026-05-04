@@ -1,0 +1,48 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_measurement_record.py
+runner_sha256: 106b4ea4b6f48efa1ef172b0ba4fab5fc9ec1c4c222030e9b93eeb501efe6521
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.11
+status: ok
+----- stdout -----
+TELEPORTATION BELL-MEASUREMENT RECORD MODEL
+Status: explicit ideal record model; not a measurement derivation
+
+Model:
+  V |Psi>_ARB = sum_zx (P_zx^AR tensor I_B)|Psi>_ARB tensor |zx>_M
+  record basis: four orthogonal Bell labels Phi+, Phi-, Psi+, Psi-
+  correction convention after delivered record: U_zx = Z^z X^x
+
+Bell projectors:
+  resolution error: 0.000e+00
+  orthogonality error: 0.000e+00
+  idempotence error: 0.000e+00
+  state-projector error: 1.110e-16
+
+Record trials:
+  random input states: 64 (seed=20260425)
+  max premeasurement isometry norm error: 6.661e-16
+  max Bell-record probability error from 1/4: 1.665e-16
+  max pairwise record-probability distance across inputs: 1.665e-16
+  max Bob trace distance to I/2 before receiving record: 3.331e-16
+  max pairwise Bob pre-record distance across inputs: 3.331e-16
+  delivered records conditioned: Phi+, Phi-, Psi+, Psi-
+  minimum post-delivery corrected fidelity: 0.9999999999999997
+  maximum post-delivery infidelity: 3.331e-16
+  max corrected-state trace distance to input: 2.618e-16
+
+Acceptance gates:
+  Bell projector algebra: PASS
+  record isometry: PASS
+  record marginal input-independence: PASS
+  Bob pre-record input-independence: PASS
+  delivered-record correction: PASS
+
+Claim boundary:
+  This models an ideal orthogonal Bell-measurement record register.
+  It does not derive record durability, apparatus dynamics, Born weights,
+  environmental decoherence, matter transport, or faster-than-light signaling.
+
+----- stderr -----
+

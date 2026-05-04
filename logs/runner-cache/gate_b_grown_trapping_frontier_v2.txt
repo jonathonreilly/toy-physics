@@ -1,0 +1,45 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_grown_trapping_frontier_v2.py
+runner_sha256: 40e7c33e039de19765bda08f085ca5ccfaaf58f950ad622d27f3fd457d2a0e4e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 17.69
+status: ok
+----- stdout -----
+========================================================================================================
+GATE B GROWN TRAPPING FRONTIER V2
+  retained grown row only: drift=0.2, restore=0.7
+  promoted observable: frontier_radius_shift(eta) = <|z|>_det(eta) - <|z|>_det(0)
+  transport control: escape(eta) = P_det(eta) / P_det(0)
+  guardrail: eta=0 must exactly reproduce the retained grown baseline
+========================================================================================================
+h=0.5, W=8, NL=25, seeds=[0, 1, 2, 3], trap_layers=[11, 12, 13], trap_radius=2.0
+eta sweep: [0.0, 0.05, 0.1, 0.2, 0.35, 0.5]
+
+eta=0 exact reduction: escape=1.000 and frontier_radius_shift=0.000 by construction on the retained grown baseline
+
+seed       P_det(0)       0.05       0.10       0.20       0.35       0.50
+--------------------------------------------------------------------------------------------------------
+   0   3.557956e+10      0.924      0.859      0.755      0.650      0.581
+   1   3.961347e+10      0.911      0.836      0.720      0.605      0.535
+   2   4.067656e+10      0.917      0.845      0.733      0.618      0.545
+   3   3.446533e+10      0.923      0.857      0.751      0.641      0.569
+
+AGGREGATE
+  mean P_det(0) = 3.758373e+10
+  eta=0.05  escape= 0.919  trapped= 0.081  frontier_radius_shift=+0.0684
+  eta=0.10  escape= 0.849  trapped= 0.151  frontier_radius_shift=+0.1320
+  eta=0.20  escape= 0.740  trapped= 0.260  frontier_radius_shift=+0.2427
+  eta=0.35  escape= 0.628  trapped= 0.372  frontier_radius_shift=+0.3666
+  eta=0.50  escape= 0.557  trapped= 0.443  frontier_radius_shift=+0.4480
+
+SAFE READ
+  eta=0 reproduces the retained grown baseline exactly by construction.
+  The promoted observable is the detector frontier radius shift, not just escape.
+  If the radius shift rises with eta, the trap is pushing surviving mass
+  outward on the detector shell; if not, this frontier probe is too weak.
+
+Total time: 18s
+
+----- stderr -----
+

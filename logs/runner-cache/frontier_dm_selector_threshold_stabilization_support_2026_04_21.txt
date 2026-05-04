@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_selector_threshold_stabilization_support_2026_04_21.py
+runner_sha256: e1c6af2258a313071da80d4def94fd119f862200b644448be43b6fa1c206e53a
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.51
+status: nonzero_exit
+----- stdout -----
+========================================================================================
+DM SELECTOR THRESHOLD STABILIZATION SUPPORT THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE INTRINSIC THRESHOLD-VOLUME FAMILY IS EXACT ON THE RECOVERED BANK
+========================================================================================
+  [PASS] The preferred recovered lift is the first recovered-bank point used throughout the selector packet  (preferred lift = [1.02103884 1.38079143 0.21567748])
+  [PASS] One common positive comparison window still exists on the full recovered bank  (mu_bank = 5.726185878913)
+  [PASS] The nonrealization note already records the exact intrinsic threshold-volume family V_tau(H)
+  [PASS] The preferred recovered lift has the smallest terminal inverse eigenvalue a among the recovered bank  (a values = [0.24158609 0.31211605 0.33033825 0.52254032 5.        ])
+
+========================================================================================
+PART 2: PAIRWISE CROSSOVERS ISOLATE THE LAST STABILIZATION THRESHOLD
+========================================================================================
+  [PASS] The preferred lift crosses below lift 4 first, then lift 3, then lift 2, and last lift 1  (roots = {4: 0.122908754273491, 3: 0.12817024396053295, 2: 0.1306121825699742, 1: 0.1316375782215522})
+  [PASS] The last pairwise crossover defines the high-threshold stabilization onset tau_star  (tau_star = 0.131637578221552)
+  [PASS] The preferred lift reaches zero witness volume before every competing lift  ((tau_zero_0, tau_zero_next)=(0.216389667205294,0.271641142726493))
+  [PASS] So there is a nonempty open threshold window after tau_star and before the next zero-volume tie  (window = (0.131637578221552, 0.271641142726493))
+
+  Pairwise high-threshold crossover values:
+    tau_04 = 0.122908754273491
+    tau_03 = 0.128170243960533
+    tau_02 = 0.130612182569974
+    tau_01 = 0.131637578221552
+  tau_star      = 0.131637578221552
+  tau_zero(0)   = 0.216389667205294
+  tau_zero(next)= 0.271641142726493
+
+========================================================================================
+PART 3: THE PREFERRED LIFT IS THE UNIQUE MINIMIZER ON THE WHOLE WINDOW
+========================================================================================
+  [PASS] Representative points from the stabilization window all choose the preferred recovered lift uniquely  (tau=0.140000: winner=0, vals=[0.863787 0.918633 0.926735 0.952121 0.994319] ; tau=0.174014: winner=0, vals=[0.285619 0.63261  0.668836 0.801632 0.979799] ; tau=0.244015: winner=0, vals=[0.       0.054361 0.099255 0.439507 0.944958])
+  [PASS] After the preferred lift reaches zero witness volume it stays uniquely minimal until the next lift also reaches zero  (post-zero volumes = [0.         0.0543614  0.09925485 0.43950749 0.94495788])
+  [PASS] Across every piecewise branch before zero-volume onset, the preferred lift already stays strictly below all competitors  ((0.131638,0.148036)->[0.866105 0.919494 0.927511 0.952588 0.994368] ; (0.148036,0.160535)->[0.601582 0.824701 0.842054 0.90188  0.989127] ; (0.160535,0.171205)->[0.402682 0.720896 0.748452 0.847267 0.983735] ; (0.171205,0.176382)->[0.288533 0.635167 0.671142 0.802896 0.979905] ; (0.176382,0.177376)->[0.249005 0.59851  0.63805  0.785248 0.978408] ; (0.177376,0.216390)->[0.061914 0.379913 0.43302  0.674371 0.968615])
+
+========================================================================================
+PART 4: SCIENTIFIC CONSEQUENCE
+========================================================================================
+  [PASS] The prior selector-side note already said the missing datum is an intrinsic threshold law
+  [FAIL] The review register still lists the finer right-sensitive microscopic point-selection law as open
+  [PASS] So this theorem narrows the open selector burden without overstating closure  (any future threshold law landing in the stabilization window selects the preferred recovered lift immediately)
+
+========================================================================================
+RESULT
+========================================================================================
+  The exact intrinsic threshold-volume family already has a nontrivial
+  high-threshold stabilization window on the recovered bank.
+  Immediately above tau_star, the preferred recovered lift becomes the
+  unique minimizer and stays unique until the next zero-volume tie.
+  So the remaining selector-side burden is not an arbitrary threshold law.
+  It is a threshold law landing in that exact stabilization window.
+
+SUMMARY: PASS=13 FAIL=1
+
+----- stderr -----
+

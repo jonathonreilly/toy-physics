@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_oriented_phase_sheet_selector_theorem.py
+runner_sha256: e4299fe226d5a51a1fca51e5ac7137df1751282b65a6c6cff3343ff01f8d683f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.39
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS ORIENTED-PHASE SHEET-SELECTOR THEOREM
+========================================================================================
+
+Question:
+  After the residual projected-source selector has been reduced to sign(A13),
+  what is the smallest upstream microscopic selector object on the active
+  PMNS family?
+
+========================================================================================
+PART 1: THE ACTIVE WITNESS PAIR DIFFERS ONLY BY ORIENTED PHASE
+========================================================================================
+  [PASS] The constructive witness and its CP-flipped partner share the same active magnitudes x and y  (x=[1.17416156 0.46254435 0.05329409], y=[0.75874142 0.0269043  0.13435428])
+  [PASS] They sit on the same fixed native seed surface with the same off-seed xi and eta data  (xi=[ 0.61082823 -0.10078899 -0.51003924], eta=[ 0.45207475 -0.27976237 -0.17231238])
+  [PASS] So the only active-family difference is the sign of the oriented phase delta  ((delta+,delta-)=(1.882595756164,-1.882595756164))
+
+========================================================================================
+PART 2: THE ODD PROJECTED-SOURCE BIT IS EXACTLY SIGN OF SIN(DELTA)
+========================================================================================
+  [PASS] The constructive witness pair stays in the positive interior x1 > 0, y3 > 0  ((x1,y3)=(1.174161560603,0.134354284590))
+  [PASS] On the active family A13 = 2 gamma = 2 x1 y3 sin(delta) exactly  ((A13+,A13-)=(0.300294489332,-0.300294489332))
+  [PASS] Therefore sign(A13) is exactly sign(sin(delta)) on the positive seed surface  ((sin delta+,sin delta-)=(0.951783096910,-0.951783096910))
+
+========================================================================================
+PART 3: ALL CURRENT EVEN ACTIVE DATA AGREE ON THE WITNESS PAIR
+========================================================================================
+  [PASS] The current exact even active data give the same E1 and E2 on the witness pair  ((E1,E2)=(0.296562850784,1.986407435174))
+  [PASS] They also give the same exact flavored transport values  (eta=[0.92932093 1.05222031 0.80149003])
+  [PASS] And the current exact even selector objectives still agree on the pair  ((ΔI,ΔS)=(0.000e+00,0.000e+00))
+  [PASS] So the residual upstream selector object is only the oriented-phase bit sign(sin(delta))  (all current exact even active data are already quotiented out)
+
+========================================================================================
+PART 4: THE THEOREM NOTE RECORDS THE ORIENTED-PHASE SELECTOR
+========================================================================================
+  [PASS] The new note records sign(sin(delta)) as the minimal upstream selector object
+  [PASS] The note records the one-bit reduction from upstream phase to projected-source sign
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact PMNS answer:
+    - upstream of dW_e^H, the residual microscopic selector is the
+      one-bit oriented phase sign(sin(delta))
+    - on the positive seed surface this is exactly sign(A13)
+    - so any theorem-grade microscopic selector law must reduce to
+      forcing sin(delta) > 0
+
+PASS=12 FAIL=0
+
+----- stderr -----
+

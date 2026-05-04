@@ -1,0 +1,70 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_native_gaussian_nogo.py
+runner_sha256: 669be91670686255478b4e25f19d8c77e635087cdee3a351780d147c28db6bf2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA COEFFICIENT: NATIVE-GAUSSIAN NO-GO
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+    rows: Framework axiom; Observable principle; Anomaly-forced time;
+          Native weak algebra; Structural SU(3) closure; One-generation matter closure
+  - docs/NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md
+  - docs/UNIFIED_AXIOM_BOUNDARY_NOTE.md
+  - scripts/frontier_right_handed_sector.py
+
+Question:
+  Does the current native quadratic Hamiltonian / determinant source
+  surface generate a nonzero coefficient for the unique Majorana
+  operator candidate?
+
+
+========================================================================================
+PART 1: NUMBER CONSERVATION ON THE NORMAL QUADRATIC FAMILY
+========================================================================================
+  [PASS (C)] Any c^dag K c Hamiltonian commutes with total fermion number  (||[N,H_native]||=0.00e+00)
+  [PASS (C)] Adding an ordinary local bilinear source preserves number conservation  (||[N,H_native+J]||=0.00e+00)
+  [PASS (C)] Pair-annihilation operator carries charge -2 under N  (||[N,cc]+2cc||=0.00e+00)
+  [PASS (C)] Pair-creation operator carries charge +2 under N  (||[N,c^dag c^dag]-2c^dag c^dag||=0.00e+00)
+  [PASS (C)] Hermitian pairing operator does not commute with total fermion number  (||[N,cc+h.c.]||=5.66e+00)
+  [PASS (C)] A pairing insertion breaks the exact U(1) number symmetry  (||[N,H+pair]||=1.13e+00)
+
+  Conclusion: the native quadratic source family c^dag (K+J) c stays
+  in the number-conserving sector exactly, while a Majorana-style
+  pairing operator lives in the charge-2 sector and requires a new
+  microscopic insertion.
+
+========================================================================================
+PART 2: THE NATIVE STAGGERED KERNEL NEVER POPULATES A PAIRING BLOCK
+========================================================================================
+  [PASS (C)] Native staggered single-particle kernel is Hermitian  (||K-K^dag||=0.00e+00)
+  [PASS (C)] Native staggered Hamiltonian has zero anomalous Nambu block  (||Delta_native||=0.00e+00)
+  [PASS (C)] Local scalar projector sources keep the anomalous block exactly zero  (||Delta_sourced||=0.00e+00)
+  [PASS (C)] An explicit pairing source is required to populate the anomalous block  (||Delta_pair||=2.83e-01)
+
+  On the current microscopic surface, K and J live entirely in the
+  normal c^dag c block. The same-chirality Majorana operator sits in
+  the anomalous pairing block Delta, which is absent identically until
+  one adds a new microscopic pairing source.
+
+========================================================================================
+RESULT
+========================================================================================
+  On the present native quadratic/determinant surface, the answer is no.
+  The exact operator candidate nu_R^T C P_R nu_R is allowed by the
+  anomaly-fixed gauge/chirality structure, but its coefficient is
+  exactly zero on the current c^dag(K+J)c Gaussian family.
+
+  A nonzero coefficient would require a different microscopic surface:
+  an explicit pairing/Nambu source, Pfaffian Gaussian, or another
+  genuine DeltaL=2 extension beyond the current determinant toolbox.
+
+PASS=10  FAIL=0
+
+----- stderr -----
+

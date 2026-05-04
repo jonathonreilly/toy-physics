@@ -1,0 +1,51 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_abcc_five_basin_chamber_dple_support_2026_04_21.py
+runner_sha256: b649c1368b9513a44b6e87ea6c3314cac69551efe5becd90ddd60df6dc710796
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
+==============================================================================
+DM A-BCC corrected five-basin chamber+DPLE support theorem
+==============================================================================
+
+--- T1: corrected chamber survivors on the five-basin chart ---
+    Basin 1  q+delta=1.648848  [IN]
+    Basin N  q+delta=1.279459  [OUT]
+    Basin P  q+delta=0.103471  [OUT]
+    Basin X  q+delta=14.769263  [IN]
+    Basin 2  q+delta=25.734000  [IN]
+  [PASS] Corrected chamber survivors are exactly {Basin 1, Basin 2, Basin X}  (survivors=['Basin 1', 'Basin 2', 'Basin X'])
+
+--- T2: F_4 on the corrected five-basin chart ---
+  [PASS] Basin 1: closed-form F_4 matches corrected reference  (Δ=+7.803928e+00)
+  [PASS] Basin 1: Newton F_4 matches corrected reference
+  [PASS] Basin 1: sampled F_4 matches corrected reference
+  [PASS] Basin N: closed-form F_4 matches corrected reference  (Δ=-1.010661e+01)
+  [PASS] Basin N: Newton F_4 matches corrected reference
+  [PASS] Basin N: sampled F_4 matches corrected reference
+  [PASS] Basin P: closed-form F_4 matches corrected reference  (Δ=+4.587359e+02)
+  [PASS] Basin P: Newton F_4 matches corrected reference
+  [PASS] Basin P: sampled F_4 matches corrected reference
+  [PASS] Basin X: closed-form F_4 matches corrected reference  (Δ=-4.715190e+06)
+  [PASS] Basin X: Newton F_4 matches corrected reference
+  [PASS] Basin X: sampled F_4 matches corrected reference
+  [PASS] Basin 2: closed-form F_4 matches corrected reference  (Δ=-1.939245e+07)
+  [PASS] Basin 2: Newton F_4 matches corrected reference
+  [PASS] Basin 2: sampled F_4 matches corrected reference
+  [PASS] Basin 2 has negative DPLE discriminant  (Δ_2=-1.939245e+07)
+
+--- T3: corrected composition ---
+  [PASS] Basin 1: all three F_4 routes agree  (cf=True, nw=True, sm=True)
+  [PASS] Basin N: all three F_4 routes agree  (cf=False, nw=False, sm=False)
+  [PASS] Basin P: all three F_4 routes agree  (cf=False, nw=False, sm=False)
+  [PASS] Basin X: all three F_4 routes agree  (cf=False, nw=False, sm=False)
+  [PASS] Basin 2: all three F_4 routes agree  (cf=False, nw=False, sm=False)
+  [PASS] Corrected chamber ∩ F_4 still selects Basin 1 uniquely  (chamber=['Basin 1', 'Basin 2', 'Basin X'], F4=['Basin 1'], ∩=['Basin 1'])
+  [PASS] Basin 2 is still a C_neg endpoint  (det(Basin 2)=-70538.603772)
+
+TOTAL: PASS=24 FAIL=0
+
+----- stderr -----
+

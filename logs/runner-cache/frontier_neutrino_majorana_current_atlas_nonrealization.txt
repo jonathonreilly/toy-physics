@@ -1,0 +1,83 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_current_atlas_nonrealization.py
+runner_sha256: 54804db54ec88351630ee7a3c05fe15ef76efb7f12fdd61399022d9760f2d6cf
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.04
+status: nonzero_exit
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: CURRENT ATLAS NON-REALIZATION
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+  - docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md
+  - docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md
+  - scripts/frontier_right_handed_sector.py
+  - docs/NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md
+
+Question:
+  Does the current main-branch atlas / retained matter toolkit already
+  contain the missing charge-2 Majorana primitive under another name?
+
+========================================================================================
+PART 1: THE CURRENT ATLAS OBSERVABLE BACKBONE IS SCALAR / DETERMINANT-BASED
+========================================================================================
+  [PASS] Atlas explicitly retains the determinant observable-principle row
+  [PASS] Atlas retains observable-principle closure on the same determinant surface
+  [PASS] Observable-principle note is explicitly scalar
+  [PASS] Observable-principle note is explicitly determinant-based
+  [PASS] Current observable-backbone rows do not already switch to a Pfaffian/Nambu generator
+
+  So the retained observable backbone is exact, but scalar/normal.
+  It fixes the current grammar; it does not already supply a charge-2
+  fermionic primitive.
+
+========================================================================================
+PART 2: THE EXISTING SPATIAL COMPOSITE ROUTE DOES NOT REALIZE THE nu_R PRIMITIVE
+========================================================================================
+  [PASS] Retained matter closure includes nu_R as the final right-handed singlet
+  [PASS] Right-handed-sector audit has an explicit antisymmetric wedge^2(C^8) composite route
+  [PASS] That route realizes d_R and e_R degree-2 singlets
+  [PASS] That route explicitly misses u_R on wedge^2(C^8)
+  [PASS] The same wedge^2(C^8) audit also misses the Y=0 slot needed for nu_R
+  [PASS] The script itself labels the composite route structurally awkward
+
+  So the existing antisymmetric composite object on the spatial side is
+  not the missing Majorana primitive: it does not realize the nu_R slot.
+
+========================================================================================
+PART 3: CURRENT ATLAS PRIMITIVES BEYOND THE SCALAR BACKBONE ARE GRAVITY/TENSOR-SIDE
+========================================================================================
+  [PASS] Atlas contains the current non-scalar tensor/gravity primitive rows  (missing rows=0)
+  [FAIL] Current atlas Majorana rows are reduction/boundary rows plus the explicit source-principle, local-observable, local-comparator/background-normalization, local fixed-point, self-dual lift boundary, algebraic-bridge boundary, scalar-datum boundary, source-response-matching boundary, tensor-variational transplant boundary, partition/projective transplant boundary, continuum-bridge transplant boundary, and scale-boundary rows  (majorana rows=['Majorana operator classification', 'Majorana finite normal-grammar no-go', 'Majorana Nambu source principle', 'Majorana source-ray theorem', 'Three-generation Majorana `Z_3` non-activation', 'Majorana staircase blindness', 'Majorana no-stationary-scale theorem', 'Majorana algebraic-bridge obstruction', 'Majorana endpoint-exchange midpoint theorem', 'Majorana residual-sharing split theorem', 'Majorana adjacent singlet-placement + background-normalization theorem pair', 'Majorana lower-level pairing no-go', 'Three-generation Majorana current-stack zero matrix'])
+  [FAIL] Current atlas Pfaffian rows are boundary/uniqueness rows only  (pfaffian rows=['Pfaffian no-forcing theorem'])
+  [FAIL] Current atlas has no unexpected Majorana row title  (unexpected titles=['Majorana operator classification', 'Majorana finite normal-grammar no-go', 'Majorana source-ray theorem', 'Three-generation Majorana `Z_3` non-activation', 'Majorana algebraic-bridge obstruction', 'Majorana endpoint-exchange midpoint theorem', 'Majorana residual-sharing split theorem', 'Majorana adjacent singlet-placement + background-normalization theorem pair', 'Majorana lower-level pairing no-go', 'Three-generation Majorana current-stack zero matrix'])
+
+  The atlas now contains Majorana reduction/boundary rows, one
+  explicit source-principle extension row, positive local
+  comparator/background-normalization rows, a local self-dual
+  fixed-point row, a self-dual staircase-lift obstruction row,
+  an algebraic/spectral bridge obstruction row, a scalar-datum
+  transplant obstruction row, a source-response matching
+  obstruction row, a tensor-variational transplant
+  obstruction row, a partition/projective transplant
+  obstruction row, a continuum-bridge transplant
+  obstruction row, and source-selection / scale-boundary
+  refinements, plus the
+  existing tensor/gravity objects. None of
+  them is yet a fully realized fermionic charge-2 primitive with an
+  absolute staircase embedding.
+
+========================================================================================
+RESULT
+========================================================================================
+  No. The current atlas fixes the channel and provides real scalar and
+  tensor tool surfaces, but it does not already contain the missing
+  fermionic charge-2 primitive on the nu_R Majorana lane.
+
+  PASS=12  FAIL=3
+
+----- stderr -----
+

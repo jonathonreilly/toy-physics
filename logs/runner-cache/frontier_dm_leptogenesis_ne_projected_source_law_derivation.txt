@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_ne_projected_source_law_derivation.py
+runner_sha256: 34f4942fa2dc7ba763eb02f8931ff89d7db036b2331c2689f53fa7ed35ab2846
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.94
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS N_e PROJECTED-SOURCE-LAW DERIVATION
+========================================================================================
+
+========================================================================================
+PART 1: THE PROJECTED HERMITIAN SOURCE PACK RECOVERS H_e EXACTLY
+========================================================================================
+  [PASS] Nine Hermitian projected source responses on E_e reconstruct the charged-lepton active block exactly  (err=0.00e+00)
+  [PASS] So the PMNS-assisted DM problem does not need the raw active five-real source once dW_e^H is supplied  (H_e is already exact from the projected Hermitian source pack)
+
+  On N_e, the transport-facing active object can be taken to be dW_e^H,
+  not the raw five-real PMNS source coordinates.
+
+========================================================================================
+PART 2: H_e ALONE DETERMINES THE N_e ACTIVE TRANSPORT PACKET
+========================================================================================
+  [PASS] On the charged-lepton-active branch, the PMNS packet is exactly |U_e|^2^T  (col sums=[1. 1. 1.])
+  [PASS] The packet recovered from H_e matches the canonical N_e active packet exactly  (err=1.00e-06)
+
+  recovered N_e packet from H_e:
+[[0.915868 0.071267 0.012865]
+ [0.074689 0.900307 0.025004]
+ [0.009443 0.028427 0.962131]]
+
+========================================================================================
+PART 3: THE EXACT TRANSPORT SELECTOR THEN PICKS THE MIDDLE COLUMN
+========================================================================================
+  [PASS] Once H_e is known, the exact DM transport selector determines the relevant N_e column algorithmically  (func_vals=[0.02099667 0.02531384 0.02355134])
+  [PASS] The selected column reproduces the near-closing PMNS-assisted DM value  (eta/eta_obs=0.989512704600)
+
+  columnwise eta/eta_obs from dW_e^H-derived packet = [0.82075559 0.9895127  0.92061708]
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The PMNS-assisted flavored DM derivation is stronger than the old five-real-source target  (for N_e transport, dW_e^H is sufficient)
+  [PASS] The exact remaining PMNS-side DM object is now the charged-lepton projected Hermitian source law, not the full active five-real source law  (derive dW_e^H on E_e from Cl(3) on Z^3)
+  [PASS] So the sole-axiom DM/PMNS bridge now reduces to evaluating the projected charged-lepton Hermitian response pack  (packet and selected column are downstream algorithmic once H_e is known)
+
+  Updated DM-side reduction:
+    - transport selector is exact
+    - N_e packet is exact from H_e
+    - H_e is exact from dW_e^H
+    - remaining target is dW_e^H from Cl(3) on Z^3
+
+========================================================================================
+SUMMARY: PASS=9 FAIL=0
+========================================================================================
+
+----- stderr -----
+

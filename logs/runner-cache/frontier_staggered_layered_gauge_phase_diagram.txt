@@ -1,0 +1,63 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_layered_gauge_phase_diagram.py
+runner_sha256: d80d5864e11940bea8cc018aec8652316b76380a8de622ee8d8862b13640528e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.31
+status: ok
+----- stdout -----
+====================================================================================================
+STAGGERED LAYERED GAUGE PHASE DIAGRAM
+  explicit geometry criterion on the same graph-native staggered transport law
+  controls: loop size, loop density, wrap/open choice, plaquette quality
+====================================================================================================
+  dt=0.12, mass=0.3, source_strength=0.0004
+  retained battery reused from the staggered graph lane
+
+layered_dag_control                n=36  L=8  W=5  open  step=1 sq=0.00 rank=0   dens=0.000 girth=N/A retained=8/8 force=TOWARD F~M=1.000 achrom=1.699e-16 equiv=1.683e-16 robust=3/3 J_span=N/A J_resid=N/A gauge=N/A
+layered_sparse_holdout             n=55  L=10 W=6  open  step=1 sq=0.00 rank=13  dens=0.236 girth=4   retained=7/8 force=TOWARD F~M=1.000 achrom=1.126e-16 equiv=0.000e+00 robust=3/3 J_span=3.370e-35 J_resid=6.882e-36 gauge=FAIL
+brickwall_w4_s1_open               n=32  L=8  W=4  open  step=1 sq=0.00 rank=18  dens=0.562 girth=4   retained=8/8 force=TOWARD F~M=1.000 achrom=1.231e-16 equiv=7.384e-17 robust=3/3 J_span=4.268e-03 J_resid=6.996e-19 gauge=PASS
+brickwall_w4_s1_wrap               n=32  L=8  W=4  wrap  step=1 sq=0.06 rank=25  dens=0.781 girth=4   retained=8/8 force=TOWARD F~M=1.000 achrom=1.959e-16 equiv=1.031e-16 robust=3/3 J_span=5.190e-03 J_resid=1.692e-18 gauge=PASS
+brickwall_w4_s2_open               n=32  L=8  W=4  open  step=2 sq=0.00 rank=12  dens=0.375 girth=4   retained=7/8 force=TOWARD F~M=1.000 achrom=9.287e-17 equiv=1.017e-16 robust=3/3 J_span=1.745e-31 J_resid=2.456e-32 gauge=FAIL
+brickwall_w4_s2_wrap               n=32  L=8  W=4  wrap  step=2 sq=0.25 rank=26  dens=0.812 girth=4   retained=7/8 force=TOWARD F~M=1.000 achrom=1.126e-16 equiv=1.850e-16 robust=3/3 J_span=3.239e-32 J_resid=1.037e-33 gauge=FAIL
+brickwall_w4_s3_open               n=32  L=8  W=4  open  step=3 sq=0.00 rank=6   dens=0.188 girth=4   retained=8/8 force=TOWARD F~M=1.000 achrom=1.671e-16 equiv=1.057e-16 robust=3/3 J_span=1.203e-02 J_resid=1.465e-18 gauge=PASS
+brickwall_w4_s3_wrap               n=32  L=8  W=4  wrap  step=3 sq=0.06 rank=25  dens=0.781 girth=4   retained=8/8 force=TOWARD F~M=1.000 achrom=1.534e-16 equiv=1.029e-16 robust=3/3 J_span=1.375e-03 J_resid=2.276e-19 gauge=PASS
+brickwall_w6_s1_open               n=48  L=8  W=6  open  step=1 sq=0.00 rank=30  dens=0.625 girth=4   retained=8/8 force=TOWARD F~M=1.000 achrom=0.000e+00 equiv=1.930e-16 robust=3/3 J_span=1.146e-03 J_resid=3.158e-19 gauge=PASS
+brickwall_w6_s1_wrap               n=48  L=8  W=6  wrap  step=1 sq=0.06 rank=37  dens=0.771 girth=4   retained=8/8 force=TOWARD F~M=1.000 achrom=0.000e+00 equiv=1.772e-16 robust=3/3 J_span=2.997e-03 J_resid=3.838e-19 gauge=PASS
+brickwall_w6_s2_open               n=48  L=8  W=6  open  step=2 sq=0.00 rank=24  dens=0.500 girth=4   retained=7/8 force=TOWARD F~M=1.000 achrom=2.432e-16 equiv=1.032e-16 robust=3/3 J_span=1.512e-32 J_resid=8.268e-34 gauge=FAIL
+brickwall_w6_s2_wrap               n=48  L=8  W=6  wrap  step=2 sq=0.02 rank=38  dens=0.792 girth=4   retained=7/8 force=TOWARD F~M=1.000 achrom=0.000e+00 equiv=1.052e-16 robust=3/3 J_span=2.870e-33 J_resid=6.925e-35 gauge=FAIL
+brickwall_w6_s3_open               n=48  L=8  W=6  open  step=3 sq=0.00 rank=18  dens=0.375 girth=4   retained=7/8 force=TOWARD F~M=1.000 achrom=2.774e-16 equiv=1.032e-16 robust=3/3 J_span=1.360e-18 J_resid=1.360e-18 gauge=FAIL
+brickwall_w6_s3_wrap               n=48  L=8  W=6  wrap  step=3 sq=0.17 rank=39  dens=0.812 girth=4   retained=7/8 force=TOWARD F~M=1.000 achrom=1.444e-16 equiv=1.036e-16 robust=3/3 J_span=3.086e-31 J_resid=1.371e-32 gauge=FAIL
+brickwall_w8_s1_open               n=64  L=8  W=8  open  step=1 sq=0.00 rank=42  dens=0.656 girth=4   retained=8/8 force=TOWARD F~M=1.000 achrom=2.428e-16 equiv=1.262e-16 robust=3/3 J_span=4.896e-04 J_resid=5.374e-19 gauge=PASS
+brickwall_w8_s1_wrap               n=64  L=8  W=8  wrap  step=1 sq=0.05 rank=49  dens=0.766 girth=4   retained=8/8 force=TOWARD F~M=1.000 achrom=1.206e-16 equiv=1.253e-16 robust=3/3 J_span=1.530e-03 J_resid=2.184e-18 gauge=PASS
+brickwall_w8_s2_open               n=64  L=8  W=8  open  step=2 sq=0.00 rank=36  dens=0.562 girth=4   retained=7/8 force=TOWARD F~M=1.000 achrom=2.381e-16 equiv=1.939e-16 robust=3/3 J_span=5.449e-19 J_resid=5.449e-19 gauge=FAIL
+brickwall_w8_s2_wrap               n=64  L=8  W=8  wrap  step=2 sq=0.03 rank=50  dens=0.781 girth=4   retained=7/8 force=TOWARD F~M=1.000 achrom=1.896e-16 equiv=1.272e-16 robust=3/3 J_span=3.647e-19 J_resid=2.140e-19 gauge=FAIL
+brickwall_w8_s3_open               n=64  L=8  W=8  open  step=3 sq=0.00 rank=30  dens=0.469 girth=4   retained=7/8 force=TOWARD F~M=1.000 achrom=2.590e-16 equiv=1.696e-16 robust=3/3 J_span=5.904e-32 J_resid=3.891e-32 gauge=FAIL
+brickwall_w8_s3_wrap               n=64  L=8  W=8  wrap  step=3 sq=0.05 rank=49  dens=0.766 girth=4   retained=8/8 force=TOWARD F~M=1.000 achrom=1.829e-16 equiv=1.480e-16 robust=3/3 J_span=1.419e-03 J_resid=9.529e-19 gauge=PASS
+defect_q75_open                    n=48  L=8  W=6  open  step=1 sq=0.00 rank=21  dens=0.438 girth=4   retained=8/8 force=TOWARD F~M=1.000 achrom=1.230e-16 equiv=1.044e-16 robust=3/3 J_span=5.359e-03 J_resid=1.668e-18 gauge=PASS
+defect_q75_wrap                    n=48  L=8  W=6  wrap  step=1 sq=0.02 rank=26  dens=0.542 girth=4   retained=8/8 force=TOWARD F~M=1.000 achrom=0.000e+00 equiv=1.922e-16 robust=3/3 J_span=4.226e-03 J_resid=8.605e-20 gauge=PASS
+defect_q50_open                    n=48  L=8  W=6  open  step=1 sq=0.00 rank=12  dens=0.250 girth=4   retained=8/8 force=TOWARD F~M=1.000 achrom=1.211e-16 equiv=0.000e+00 robust=3/3 J_span=6.661e-03 J_resid=2.727e-18 gauge=PASS
+defect_q50_wrap                    n=48  L=8  W=6  wrap  step=1 sq=0.00 rank=16  dens=0.333 girth=4   retained=8/8 force=TOWARD F~M=1.000 achrom=3.785e-16 equiv=0.000e+00 robust=3/3 J_span=2.247e-03 J_resid=2.840e-18 gauge=PASS
+defect_q25_open                    n=48  L=8  W=6  open  step=1 sq=0.00 rank=4   dens=0.083 girth=8   retained=8/8 force=TOWARD F~M=1.000 achrom=0.000e+00 equiv=1.028e-16 robust=3/3 J_span=2.209e-03 J_resid=2.589e-18 gauge=PASS
+defect_q25_wrap                    n=48  L=8  W=6  wrap  step=1 sq=0.00 rank=6   dens=0.125 girth=8   retained=8/8 force=TOWARD F~M=1.000 achrom=0.000e+00 equiv=1.230e-16 robust=3/3 J_span=2.525e-03 J_resid=5.263e-18 gauge=PASS
+
+SUMMARY
+  PASS: 15
+  FAIL: 10
+  N/A:  1
+
+  Empirical boundary (from this sweep):
+    min pass square-plaquette density = 0.00
+    max fail square-plaquette density = 0.25
+    min pass cycle rank = 4
+    min pass loop density = 0.083
+    wrap/open and loop size modulate current span, but do not appear to set the boundary.
+
+Interpretation:
+  - Gauge/current closure is a local plaquette-quality problem, not a raw wrap/open problem.
+  - Acyclic layered graphs are correctly N/A for gauge/current.
+  - Sparse layered graphs with weak plaquette quality remain the holdout.
+  - Force remains the primary gravity observable; current is the gauge observable.
+
+----- stderr -----
+

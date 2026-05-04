@@ -1,0 +1,34 @@
+===== runner cache v1 =====
+runner: scripts/wave_static_matrixfree_shared_geometry_compare.py
+runner_sha256: 57e92056ecd9526d6aa3e4dc5ac4ffa66a80c4632e9575fec5b4cc939e476340
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 59.84
+status: ok
+----- stdout -----
+============================================================================================================
+WAVE STATIC MATRIX-FREE SHARED-GEOMETRY COMPARE
+============================================================================================================
+Shared H = 0.350
+Frozen source z_phys = 3.000 (realized z = 3.150)
+NL=43  PW=5.950  src_layer=14
+
+Static solve comparison:
+  direct residual      = 1.997e-10
+  matrix-free residual = 2.292e-10
+  matrix-free iters    = 86
+  max |direct - mf|    = 1.203e-08
+  rel field mismatch   = 4.481e-06
+
+Beam-side comparison with the same beam setup:
+  dM         = +0.008380
+  dS direct  = +0.010863
+  dS mf      = +0.010863
+  rel(dS)    = 2.825e-06
+  rel_MS dir = 2.286e-01
+  rel_MS mf  = 2.286e-01
+
+Verdict: matrix-free is close, but not yet proven identical to the direct static comparator.
+
+----- stderr -----
+

@@ -1,0 +1,37 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py
+runner_sha256: 73db19953339a285fb6383f9be86a413fabda3c5f1c46fa22057f86f7bec9c4e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.17
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE INFINITE-HIERARCHY OBSTRUCTION
+==============================================================================
+
+Local exact one-plaquette samples
+  sampled betas                            = [0.0, 0.1, 1.0, 6.0, 20.0, 40.0]
+  sampled P_1plaq(betas)                   = [0.0, 0.00560184644, 0.060126554834, 0.42253173965, 0.803193676744, 0.900700892162]
+
+  [PASS] [THEOREM] if the diagonal connected hierarchy truncated at finite order, the diagonal source generator would be polynomial
+         finite Taylor support of K(t) is exactly polynomial truncation on the diagonal source surface
+  [PASS] [THEOREM] the derivative of any polynomial with a finite limit at infinity must be constant
+         any nonconstant polynomial derivative diverges in magnitude along some real direction
+  [PASS] [THEOREM] the local one-plaquette diagonal hierarchy therefore cannot truncate at finite order
+         P_1plaq(0)=0 while lim_(beta->infinity) P_1plaq(beta)=1, so P_1plaq cannot be a constant polynomial derivative
+  [PASS] [THEOREM] the same obstruction applies to every finite periodic Wilson source surface
+         P_L(0)=0 and lim_(beta->infinity) P_L(beta)=1 on the finite Wilson surface, so the diagonal generator cannot be polynomial
+  [PASS] [SUPPORT] the exact local block is visibly nonconstant on the tested beta range
+         P_1plaq(0)=0.000000000000, P_1plaq(40)=0.900700892162
+  [PASS] [SUPPORT] the local exact plaquette is already deep in its approach to the beta->infinity limit by beta=40
+         P_1plaq(40) = 0.900700892162
+  [PASS] [SUPPORT] analytic plaquette closure therefore cannot come from an exact finite-order truncation
+         the remaining gap must be a genuinely nonpolynomial connected-hierarchy closure problem
+
+==============================================================================
+SUMMARY: THEOREM PASS=4 SUPPORT=3 FAIL=0
+==============================================================================
+
+----- stderr -----
+

@@ -1,0 +1,95 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_microscopic_d_last_mile.py
+runner_sha256: c86b89fd8da647b1828485af64d0fa1781f687e19c0fe8a75eb1e13aa7f18758
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.95
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS MICROSCOPIC D LAST-MILE REDUCTION
+========================================================================================
+
+Framework convention:
+  "axiom" means only Cl(3) on Z^3.
+
+Question:
+  After reducing the PMNS-assisted flavored-DM route all the way to the
+  microscopic D surface, what exact D-level object is still missing?
+
+========================================================================================
+PART 1: THE ALIGNED SEED PATCH IS CLOSED BUT NOT THE NEAR-CLOSING N_e SAMPLE
+========================================================================================
+  [PASS] The canonical near-closing charged-lepton-active sample is genuinely off-seed  (xbar=0.563333, ybar=0.306667, delta=1.100000)
+  [PASS] The aligned seed patch built from the same derived seed pair has the exact reduced best lift eta/eta_obs = 0.719082536061  (etas=[0.433077 0.719083 0.719083], best column=2)
+  [PASS] The canonical off-seed N_e sample still gives the near-closing best lift eta/eta_obs = 0.989512597197  (etas=[0.820756 0.989513 0.920617], best column=1)
+  [PASS] So the exact positive seed law is not by itself enough to close the PMNS-assisted DM route  (delta_eta=0.270430061136)
+
+  old exact one-flavor miss factor           = 5.297004933778
+  aligned seed-patch miss factor             = 1.390660946207
+  PMNS-assisted canonical N_e miss factor    = 1.010598554109
+  seed-to-canonical improvement factor       = 1.376076524702
+
+  canonical packet:
+[[0.915868 0.071267 0.012865]
+ [0.074689 0.900307 0.025004]
+ [0.009443 0.028427 0.962131]]
+  aligned-seed packet:
+[[0.666667 0.166667 0.166667]
+ [0.       0.5      0.5     ]
+ [0.333333 0.333333 0.333333]]
+
+========================================================================================
+PART 2: THE SEED PAIR IS NOT THE REMAINING VALUE LAW
+========================================================================================
+  [PASS] The two off-seed active samples share the same derived seed pair exactly  ((xbar,ybar)=(0.973333,0.410000))
+  [PASS] Their active 5-real corner-breaking source data are different  (xi_a=[ 0.176667 -0.153333 -0.023333], xi_b=[ 0.076667 -0.003333 -0.073333]; eta_a=[ 0.   -0.13  0.13], eta_b=[ 0.19 -0.32  0.13])
+  [PASS] Those different off-seed source data induce different flavored packets  (packet distance=0.442445)
+  [PASS] They also induce different selected columns and different DM outputs on the same exact branch  ((idx,eta)_a=(1,0.789720167247), (idx,eta)_b=(0,0.773565941623))
+
+  source A packet:
+[[0.17435  0.598407 0.227243]
+ [0.26016  0.316816 0.423024]
+ [0.565491 0.084776 0.349733]]
+  source A eta/eta_obs = [0.723965 0.78972  0.701302]
+  source B packet:
+[[0.376531 0.408505 0.214964]
+ [0.014967 0.417065 0.567968]
+ [0.608502 0.17443  0.217068]]
+  source B eta/eta_obs = [0.773566 0.713467 0.719833]
+
+========================================================================================
+PART 3: THE REMAINING D-LEVEL OBJECT IS ONLY THE ACTIVE 5-REAL BREAKING SOURCE
+========================================================================================
+  [PASS] Seed pair plus the 5-real active breaking source reconstruct x exactly  (err=0.00e+00)
+  [PASS] Seed pair plus the 5-real active breaking source reconstruct y exactly  (err=1.11e-16)
+  [PASS] So the active microscopic operator D_act is fixed exactly from those seven real values  (err=1.24e-16)
+  [PASS] After that, the downstream PMNS-assisted DM packet is algorithmic  (err=8.08e-16)
+  [PASS] And the near-closing transport value is recovered without any further D-level ambiguity  (etas=[0.820756 0.989513 0.920617], best column=1)
+
+  Exact last-mile reduction on the PMNS-assisted N_e route:
+    - the aligned seed pair (xbar, ybar) is already native
+    - the remaining active data are only (xi1, xi2, eta1, eta2, delta)
+    - once those are supplied, D_act, H_e, the flavored packet,
+      the selected column, and eta are all fixed algorithmically
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The remaining PMNS-assisted DM target is not the whole microscopic operator again  (free core and seed pair are already fixed; the unresolved part is off-seed breaking data)
+  [PASS] The exact last-mile D-level object is the active 5-real corner-breaking source beyond the seed pair  ((xi1, xi2, eta1, eta2, delta))
+  [PASS] Equivalently, the remaining projected-source target is the charge-(-1) off-seed source law dW_e^H beyond the aligned seed patch  (transport, projector selection, and microscopic-to-packet reduction are already closed)
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact reduction answer:
+    - the aligned weak-axis seed patch is already positively closed at D level
+    - the near-closing N_e repair is genuinely off-seed
+    - the remaining microscopic D target is only the active 5-real
+      corner-breaking source beyond the already-derived seed pair
+
+PASS=16  FAIL=0
+
+----- stderr -----
+

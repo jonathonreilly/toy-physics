@@ -1,0 +1,89 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_op_locality_c3_fixed_source_support.py
+runner_sha256: 381e04003023372d2dcc7d52d92f33ce8eb502c68365b0dc00660712786bb00e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+Koide Q OP-locality / C3-fixed source conditional support audit
+See docs/KOIDE_Q_OP_LOCALITY_C3_FIXED_SOURCE_SUPPORT_NOTE_2026-04-27.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Status boundary
+----------------------------------------------------------------------------------------
+  [PASS] support note exists  (docs/KOIDE_Q_OP_LOCALITY_C3_FIXED_SOURCE_SUPPORT_NOTE_2026-04-27.md)
+  [PASS] reference exists: OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md
+  [PASS] reference exists: THREE_GENERATION_STRUCTURE_NOTE.md
+  [PASS] reference exists: KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md
+  [PASS] reference exists: KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md
+  [PASS] note states boundary: conditional support note
+  [PASS] note states boundary: not retained Koide closure
+  [PASS] note states boundary: This note proves what follows from `P_SOURCE`; it does not prove `P_SOURCE`.
+  [PASS] note states boundary: KOIDE_Q_RETAINED_NATIVE_CLOSURE=FALSE
+  [PASS] note states boundary: KOIDE_DELTA_RETAINED_NATIVE_CLOSURE=FALSE
+  [PASS] note states boundary: CD_PHYSICAL_PREMISE_DERIVED_FROM_R1_PLUS_R2=FALSE
+  [PASS] note states boundary: CRIT_PHYSICAL_PREMISE_DERIVED_FROM_R1_PLUS_R2=FALSE
+  [PASS] note states boundary: RESIDUAL_Q=derive_physical_charged_lepton_source_selection_strict_onsite_C3_fixed
+  [PASS] note avoids overclaim: KOIDE_Q_RETAINED_NATIVE_CLOSURE=TRUE
+  [PASS] note avoids overclaim: CD_PHYSICAL_PREMISE_DERIVED_FROM_R1_PLUS_R2=TRUE
+  [PASS] note avoids overclaim: CRIT_PHYSICAL_PREMISE_DERIVED_FROM_R1_PLUS_R2=TRUE
+  [PASS] note avoids overclaim: retained native closure
+
+----------------------------------------------------------------------------------------
+C3 projector algebra
+----------------------------------------------------------------------------------------
+  [PASS] C^3 = I
+  [PASS] P_+ = (I + C + C^2)/3
+  [PASS] P_+ idempotent
+  [PASS] P_perp idempotent
+  [PASS] P_+ + P_perp = I
+  [PASS] P_+ P_perp = 0
+  [PASS] Tr(P_+) = 1
+  [PASS] Tr(P_perp) = 2
+  [PASS] Z = P_+ - P_perp
+  [PASS] Tr(Z) = -1
+
+----------------------------------------------------------------------------------------
+Conditional C3-fixed onsite source
+----------------------------------------------------------------------------------------
+  [PASS] generic onsite source is not automatically C3-fixed
+  [PASS] J = sI is C3-fixed
+  [PASS] C3-fixed onsite source lands in span{I}
+  [PASS] on diagonal samples, C3-fixed iff j1=j2=j3
+
+----------------------------------------------------------------------------------------
+Projection of J = sI into two C3 isotype channels
+----------------------------------------------------------------------------------------
+  [PASS] Frobenius coefficient K_+ = s  (K_+=11/13)
+  [PASS] Frobenius coefficient K_perp = s  (K_perp=11/13)
+  [PASS] trace-zero reduced source coordinate z = 0  (z=0)
+
+----------------------------------------------------------------------------------------
+Canonical descent cross-check
+----------------------------------------------------------------------------------------
+  [PASS] E_loc(sI + zZ) = (s - z/3)I
+  [PASS] E_loc target is strict onsite scalar
+  [PASS] reduced traceless coordinate is killed by descent
+
+----------------------------------------------------------------------------------------
+Criterion-carrier Q consequence
+----------------------------------------------------------------------------------------
+  [PASS] Q(z=0) = 2/3
+  [PASS] nonzero z=-1/3 gives non-Koide Q  (Q=1)
+  [PASS] nonzero z=1/5 gives non-Koide Q  (Q=5/9)
+  [PASS] nonzero z=2/7 gives non-Koide Q  (Q=14/27)
+  [PASS] inverse map z(Q=2/3) = 0
+
+----------------------------------------------------------------------------------------
+Final support flags
+----------------------------------------------------------------------------------------
+  [PASS] positive support flags present
+  [PASS] retained-closure flags remain false
+
+TOTAL: PASS=44 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,84 @@
+===== runner cache v1 =====
+runner: scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py
+runner_sha256: a2dc9489e3352d745ed8fa4e2b91512031858c52583e282c2a1776586432ccd0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+
+========================================================================================
+A. Source surfaces
+========================================================================================
+PASS: source surface exists: CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md
+PASS: source surface exists: KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md
+PASS: source surface exists: KOIDE_Q_OP_LOCALITY_C3_FIXED_SOURCE_SUPPORT_NOTE_2026-04-27.md
+PASS: source surface exists: KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md
+PASS: source surface exists: KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md
+PASS: source surface exists: KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM_NOTE_2026-04-24.md
+PASS: source surface exists: KOIDE_Q_DELTA_READOUT_RETENTION_SPLIT_NO_GO_NOTE_2026-04-24.md
+PASS: source surface exists: CHARGED_LEPTON_RADIATIVE_TAU_SELECTOR_FIREWALL_NOTE_2026-04-26.md
+PASS: broad ratio/source selector route is already closed
+PASS: Koide package leaves Q and delta physical bridges open
+PASS: Q source support is conditional, not retained closure
+PASS: onsite-source synthesis keeps the source-domain law open
+PASS: selected-line radian bridge remains primitive
+PASS: unpointed retained data do not force a pointed origin
+PASS: closed APS readout does not remove selected-line endpoint split
+PASS: radiative scale support still requires a generation selector
+
+========================================================================================
+B. Granted non-PDG support data
+========================================================================================
+PASS: granted selected-line vector is positive
+PASS: granted selected-line vector has Koide Q=2/3 -- Q=0.666666666666667
+PASS: C3 rotations preserve Q -- Q_values=(0.666666666666667, 0.666666666666667, 0.666666666666667)
+PASS: C3 rotations preserve unordered normalized ratios -- ratio=(0.79314605721109, 0.19340397338251, 0.0134499694064)
+PASS: C3 rotations move the largest slot -- max_slots=(0, 2, 1)
+PASS: PDG charged-lepton masses are not proof inputs -- proof_inputs=['Brannen carrier at c^2=2', 'C3 action on the three-generation orbit', 'C3-fixed onsite source algebra', 'previous support/no-go closeout flags', 'selected-line phase support delta=2/9', 'unbased orbit quotient']
+
+========================================================================================
+C. Unbased C3 orbit cannot select one generation label
+========================================================================================
+PASS: C3 label action is free on single generation labels
+PASS: no natural single-label map exists from the unbased orbit quotient -- fixed_single_labels=[]
+PASS: the only nonempty invariant label subset is the full generation orbit -- subsets=[frozenset({0, 1, 2})]
+PASS: no invariant singleton subset selects tau/e/mu
+PASS: based equivariant selectors exist only after a base choice -- three choices correspond to three basepoint labels
+PASS: heaviest-slot rule is representative-dependent on the unbased orbit -- heaviest_slots_under_relabeling=(0, 2, 1)
+PASS: sorted heavy/middle/light ratios are not generation labels
+
+========================================================================================
+D. Current source and endpoint supports are symmetric or unbased
+========================================================================================
+PASS: only common onsite source sample is C3-fixed -- fixed=(True, False, False)
+PASS: C3-fixed onsite source has no distinguished generation slot
+PASS: closed eta value leaves selected-line endpoint split free -- splits=((0.0, 0.2222222222222222), (0.1111111111111111, 0.1111111111111111), (0.2222222222222222, 0.0))
+PASS: pointed-origin note identifies basepoint law as the residual
+PASS: A1 audit identifies Type-B-to-radian law as still missing
+
+========================================================================================
+E. Comparator firewall
+========================================================================================
+PASS: PDG masses are comparator-only and near the Koide value -- Q_PDG=0.666660511477; not used above as a proof input
+PASS: support ratios are not fitted from PDG masses -- max_sorted_ratio_gap=5.015174e-06
+
+========================================================================================
+F. Verdict
+========================================================================================
+PASS: unbased selected-line data do not provide a retained generation selector
+PASS: remaining primitive is based endpoint/source/generation law
+
+========================================================================================
+Summary
+========================================================================================
+TOTAL: PASS=38, FAIL=0
+VERDICT: selected-line generation-selector no-go.
+CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO=TRUE
+UNBASED_C3_ORBIT_SELECTS_SINGLE_GENERATION_LABEL=FALSE
+BASED_ENDPOINT_OR_SOURCE_LAW_REQUIRED=TRUE
+PDG_MASSES_USED_AS_COMPARATORS_ONLY=TRUE
+CHARGED_LEPTON_MASS_RETENTION=FALSE
+
+----- stderr -----
+

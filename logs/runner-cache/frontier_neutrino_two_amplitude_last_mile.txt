@@ -1,0 +1,55 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_two_amplitude_last_mile.py
+runner_sha256: 8c4b12440d76ff55afa5366b6d697c3604b0e15384b3d5075ccc5122d9719109
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO TWO-AMPLITUDE LAST-MILE REDUCTION
+========================================================================================
+
+Question:
+  After all current reductions, what exact data are still missing for
+  full retained neutrino sole-axiom closure?
+
+========================================================================================
+PART 1: PMNS LAST MILE IS ONE COMPLEX CURRENT J_chi
+========================================================================================
+  [PASS] The PMNS last mile is one exact complex current J_chi  (from the native C3 nontrivial character mode)
+  [PASS] The sole-axiom free PMNS route sets J_chi = 0  (J_chi=0.000000+0.000000j)
+  [PASS] The sole-axiom hw=1 source/transfer PMNS route sets J_chi = 0  (J_chi=0.000000+0.000000j)
+  [PASS] The retained scalar PMNS route sets J_chi = 0  (J_chi=0.000000+0.000000j)
+
+========================================================================================
+PART 2: MAJORANA LAST MILE IS ONE REAL AMPLITUDE mu
+========================================================================================
+  [PASS] The Majorana last mile is one exact real amplitude mu in mu J2
+  [PASS] The scalar nu_R response family has zero anomalous Nambu block  (|anom|=0.00e+00)
+  [PASS] So the current sole-axiom retained Majorana route sets mu = 0  (mu=0.000000)
+  [PASS] A nonzero Majorana reopening would require the off-diagonal J2 slot itself
+
+========================================================================================
+PART 3: FULL NEUTRINO LAST MILE REDUCES TO THE PAIR (J_chi, mu)
+========================================================================================
+  [PASS] The PMNS blocker is exactly one complex amplitude J_chi
+  [PASS] The Majorana blocker is exactly one real amplitude mu
+  [PASS] So full retained sole-axiom neutrino closure now reduces to deriving only the pair (J_chi, mu)
+  [PASS] The current exact bank sets that pair to (0, 0) on the retained routes
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact full-neutrino last-mile reduction:
+    - PMNS needs one complex nontrivial-character current J_chi
+    - Majorana needs one real charge-2 source amplitude mu
+    - the current retained sole-axiom bank sets both to zero
+
+  So the entire remaining full-closure frontier is exactly the pair
+  (J_chi, mu).
+
+PASS=12 FAIL=0
+
+----- stderr -----
+

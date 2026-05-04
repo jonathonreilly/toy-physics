@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_adiabatic_time_evolution.py
+runner_sha256: 283ef2eeba63121639f1ea556bea129eca2ced287a67914e6afeb9ec016c6849
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 14.72
+status: ok
+----- stdout -----
+FINITE-TIME ADIABATIC TASTE-QUBIT TELEPORTATION RESOURCE EVOLUTION
+Status: planning / first artifact; ordinary quantum state teleportation only
+Evolution: midpoint piecewise-unitary Schrodinger evolution under H(s)=H(G=0)+s(t)*(H(G_target)-H(G=0))
+Extraction: trace cells/spectator tastes, keep the last KS taste bit per species
+Schedules: linear: s(t)=t/T; smoothstep: s(u)=3u^2-2u^3 with zero endpoint velocity
+Numerics: runtimes=1.000000,2.000000,5.000000,10.000000,20.000000,40.000000,80.000000, null_runtime=20, steps_per_unit=8, min_steps=160, method=auto
+
+Case: 2d_null
+  setup: dim=2 side=4 N=16 envs=8, mass=0, G_target=0, ||dH/ds||_2=0
+  start/target: initial E0=-8.000000, initial gap=2.000000, initial degeneracy=1, target gap=2.000000
+  start mode: unique G=0 ground state
+  target ground resource: Phi+=0.500000, Bell*=0.500000 (Phi+), Favg=0.666667, CHSH=2.000000, neg=0.000000
+  finite-time rows:
+    sched            T  steps        dt  |<gT|psi>|2        loss      Phi+     Bell* label      Favg       neg
+    linear      20.000    160  0.125000     1.000000           0  0.500000  0.500000  Phi+  0.666667  0.000000
+  best final-ground overlap: 1.000000 (linear, T=20, loss=0)
+  best standard teleportation fidelity: 0.666667 (linear, T=20, Phi+=0.500000, energy excess=0)
+  null/control non-resource check: PASS
+
+Case: 2d_poisson_chsh
+  setup: dim=2 side=4 N=16 envs=8, mass=0, G_target=1000, ||dH/ds||_2=268.229167
+  start/target: initial E0=-8.000000, initial gap=2.000000, initial degeneracy=1, target gap=0.246378
+  start mode: unique G=0 ground state
+  target ground resource: Phi+=0.970283, Bell*=0.970283 (Phi+), Favg=0.980189, CHSH=2.745662, neg=0.470283
+  finite-time rows:
+    sched            T  steps        dt  |<gT|psi>|2        loss      Phi+     Bell* label      Favg       neg
+    linear       1.000    160  0.006250     0.529913    0.470087  0.836850  0.836850  Phi+  0.891233  0.345314
+    linear       2.000    160  0.012500     0.707471    0.292529  0.759362  0.759362  Phi+  0.839575  0.269698
+    linear       5.000    160  0.031250     0.880580    0.119420  0.877385  0.877385  Phi+  0.918257  0.393445
+    linear      10.000    160  0.062500     0.946609    0.053391  0.916670  0.916670  Phi+  0.944447  0.425589
+    linear      20.000    160  0.125000     0.979209    0.020791  0.940209  0.940209  Phi+  0.960140  0.443442
+    linear      40.000    320  0.125000     0.992742    0.007258  0.951895  0.951895  Phi+  0.967930  0.452665
+    linear      80.000    640  0.125000     0.997848    0.002152  0.958617  0.958617  Phi+  0.972411  0.458633
+    smoothstep   1.000    160  0.006250     0.528450    0.471550  0.831341  0.831341  Phi+  0.887561  0.355526
+    smoothstep   2.000    160  0.012500     0.798036    0.201964  0.795008  0.795008  Phi+  0.863339  0.295340
+    smoothstep   5.000    160  0.031250     0.971091    0.028909  0.952638  0.952638  Phi+  0.968425  0.459760
+    smoothstep  10.000    160  0.062500     0.995417    0.004583  0.963139  0.963139  Phi+  0.975426  0.464192
+    smoothstep  20.000    160  0.125000     0.999667 3.333244e-04  0.966438  0.966438  Phi+  0.977626  0.466462
+    smoothstep  40.000    320  0.125000     0.999985 1.546251e-05  0.970437  0.970437  Phi+  0.980291  0.470440
+    smoothstep  80.000    640  0.125000     0.999999 1.206717e-06  0.970077  0.970077  Phi+  0.980051  0.470077
+  best final-ground overlap: 0.999999 (smoothstep, T=80, loss=1.206717e-06)
+  best standard teleportation fidelity: 0.980291 (smoothstep, T=40, Phi+=0.970437, energy excess=4.832825e-04)
+  finite-time sensitivity: 10/14 rows have Favg >= 0.900; 3/14 rows have diabatic loss <= 1e-3
+
+Final candidate audit:
+  selected by best available standard mean fidelity (preferring 2D when present): 2d_poisson_chsh, schedule=smoothstep, T=40, steps=320, method=expm_multiply
+  resource: ground overlap=0.999985, diabatic loss=1.546251e-05, Phi+=0.970437, Favg=0.980291, Bell*=0.970437 (Phi+)
+  sampled teleportation/no-message audit: 70 inputs (seed=20260425), mean/min/max fidelity=0.980813/0.970437/1.000000, trace error=7.773e-16
+  Bob before message: distance to resource marginal=4.996e-16, pairwise input distance=2.776e-16, marginal bias from I/2=1.210e-01, input-independence=PASS
+
+Conclusion:
+  null/control paths non-resource: 1/1
+  non-null finite-time rows above Favg 0.900: 10/14
+  verdict: useful preparation candidate diagnostic on this small ideal model; not a preparation proof
+  Claim boundary: ordinary quantum state teleportation only; no matter, mass, charge, energy, object, or faster-than-light transport.
+
+----- stderr -----
+

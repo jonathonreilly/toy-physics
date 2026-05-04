@@ -1,0 +1,74 @@
+===== runner cache v1 =====
+runner: scripts/axiom_first_cluster_decomposition_check.py
+runner_sha256: e84dd93be2dcf95c9a0ed1655b3b1778cbd91c4f12dfb6e1d46a0109b942efdd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.27
+status: ok
+----- stdout -----
+========================================================================
+ axiom_first_cluster_decomposition_check.py
+ Loop: axiom-first-foundations, Cycle 3 / Route R3
+ Exhibits Lieb–Robinson envelope and exponential clustering
+ on a free-fermion 1D lattice as representative of A_min.
+========================================================================
+
+--- Exhibits E1, E3, E4: Lieb–Robinson envelope ---
+  L=24, J=0.5, m=0.3
+  predicted v_LR = 2 · e · J_op · R_int · Z_lat = 10.873
+
+  log₁₀ |[c_0(t), c_d^†]| / 2  (≤ ‖[A(t),B]‖ envelope):
+    d \ t |   0.00   0.50   1.00   1.50   2.00   2.50   3.00   3.50   4.00
+      0    |  +0.30  +0.27  +0.19  +0.05  -0.09  -0.06  +0.04  +0.08  +0.06
+      1    |    -∞    -0.32  -0.06  +0.03  +0.03  -0.07  -0.31  -1.21  -0.47
+      2    |    -∞    -1.21  -0.64  -0.34  -0.17  -0.08  -0.06  -0.09  -0.17
+      3    |    -∞    -2.29  -1.41  -0.92  -0.61  -0.39  -0.25  -0.18  -0.16
+      4    |    -∞    -3.49  -2.31  -1.64  -1.18  -0.85  -0.61  -0.43  -0.31
+      5    |    -∞    -4.79  -3.30  -2.45  -1.86  -1.43  -1.09  -0.83  -0.63
+      6    |    -∞    -6.17  -4.38  -3.35  -2.63  -2.09  -1.67  -1.33  -1.05
+      7    |    -∞    -7.62  -5.52  -4.31  -3.46  -2.82  -2.31  -1.90  -1.56
+      8    |    -∞    -9.12  -6.73  -5.34  -4.36  -3.62  -3.02  -2.54  -2.13
+      9    |    -∞    -10.68  -7.98  -6.41  -5.31  -4.47  -3.79  -3.23  -2.76
+     10    |    -∞    -12.28  -9.28  -7.53  -6.30  -5.36  -4.60  -3.97  -3.44
+     11    |    -∞    -13.93  -10.62  -8.70  -7.35  -6.30  -5.47  -4.77  -4.17
+     12    |    -∞    -15.31  -11.70  -9.60  -8.12  -6.98  -6.05  -5.28  -4.62
+
+  E1 at t = 1.0: log₁₀ |U_{0,d}(t)| vs d, fit slope:
+    spacelike slope (log scale) at t=1.0: -2.481  (decay length 1/|slope| = 0.403)
+
+  E3 lattice light cone: fraction of (d,t) cells with d > v_LR·t having|U|<0.05:
+    spacelike cells: 21, fraction with |U| < 0.05: 1.000
+
+  E4 estimated effective LR velocity from propagation front:
+    propagation front d_threshold(t) ≈ 1.167 · t + +1.25
+    v_eff (data) = 1.167    vs    v_LR (LR-1972 bound) = 10.873
+    v_eff < v_LR ? True  (expected: yes; LR is a CONSERVATIVE bound)
+
+--- Exhibit E2: connected two-point clustering at T=0 ---
+  L=24, J=0.5, m=0.3, half-filling at n_fill=12
+  log₁₀ |<n_0 n_d>_conn| for d = 1, 2, 4, 8, …:
+    d =  1: |<n_0 n_d>_conn| = 8.354e-02,  log₁₀ = -1.08
+    d =  2: |<n_0 n_d>_conn| = 5.003e-03,  log₁₀ = -2.30
+    d =  4: |<n_0 n_d>_conn| = 8.954e-04,  log₁₀ = -3.05
+    d =  6: |<n_0 n_d>_conn| = 1.987e-04,  log₁₀ = -3.70
+    d =  8: |<n_0 n_d>_conn| = 5.189e-05,  log₁₀ = -4.28
+    d = 10: |<n_0 n_d>_conn| = 1.810e-05,  log₁₀ = -4.74
+  log-log slope:    -3.515  (polynomial decay if mass-gap absent)
+  log-lin slope:    -0.863  (exponential decay if gap present)
+  E2 verdict: PASS
+
+========================================================================
+ SUMMARY
+========================================================================
+   E1 (LR envelope): PASS
+   E2 (clustering): PASS
+   E3 (lattice light cone): PASS
+   E4 (front velocity): PASS
+
+   PASSED: 4/4
+   v_LR (predicted from LR-1972 constants) = 10.873
+
+ verdict: cluster decomposition / LR (L1)–(L4) exhibited.
+
+----- stderr -----
+

@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/lattice_3d_l2_wide_h0125_w4.py
+runner_sha256: aead4e9b3924cec344d8a7881769bab44ce5f1ec80e70b3fabc9ab0687798c48
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

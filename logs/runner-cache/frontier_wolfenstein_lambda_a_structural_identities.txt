@@ -1,0 +1,82 @@
+===== runner cache v1 =====
+runner: scripts/frontier_wolfenstein_lambda_a_structural_identities.py
+runner_sha256: f85f43ba30bd0803608da8f1bd7862b9e97e0707441d14264e447b1f933d201c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+================================================================================
+Wolfenstein lambda and A structural identities audit
+================================================================================
+
+--------------------------------------------------------------------------------
+Retained CKM atlas inputs
+--------------------------------------------------------------------------------
+  n_pair       = 2
+  n_color      = 3
+  n_quark      = 6
+  alpha_s(v)   = 0.103303816122267
+  [PASS] n_pair = 2
+  [PASS] n_color = 3
+  [PASS] n_quark = n_pair*n_color = 6
+  [PASS] canonical alpha_s(v) is positive
+
+--------------------------------------------------------------------------------
+W1: lambda^2 = alpha_s(v)/2
+--------------------------------------------------------------------------------
+  lambda^2 = 0.051651908061134
+  lambda   = 0.227270561360537
+  [PASS] lambda^2 = alpha_s(v)/n_pair
+  [PASS] n_pair specialization gives lambda^2 = alpha_s(v)/2
+  [PASS] lambda is the positive square root
+
+--------------------------------------------------------------------------------
+W2: A^2 = n_pair/n_color = 2/3
+--------------------------------------------------------------------------------
+  A^2 = 2/3
+  A   = 0.816496580927726
+  [PASS] A^2 exact rational is 2/3
+  [PASS] A^2 float equals 2/3
+  [PASS] A is the positive square root
+
+--------------------------------------------------------------------------------
+W3: A^2 lambda^2 = alpha_s(v)/3
+--------------------------------------------------------------------------------
+  A^2 lambda^2 = 0.034434605374089
+  alpha_s(v)/3 = 0.034434605374089
+  [PASS] A^2 lambda^2 = alpha_s(v)/n_color
+  [PASS] n_pair cancels in exact rational product
+
+--------------------------------------------------------------------------------
+CKM corollary: |V_cb| = alpha_s(v)/sqrt(6)
+--------------------------------------------------------------------------------
+  A lambda^2          = 0.042173606330309
+  alpha_s(v)/sqrt(6) = 0.042173606330309
+  [PASS] |V_cb| atlas form equals alpha_s(v)/sqrt(6)
+  [PASS] |V_cb| squared equals alpha_s(v)^2/6
+
+--------------------------------------------------------------------------------
+CKM corollary: |V_ub| with CP radius
+--------------------------------------------------------------------------------
+  A lambda^3 sqrt(1/6)              = 0.003912986046799
+  alpha_s(v)^(3/2)/(6 sqrt(2))     = 0.003912986046799
+  [PASS] CP radius squared is 1/6
+  [PASS] |V_ub| atlas form equals alpha_s(v)^(3/2)/(6 sqrt(2))
+
+--------------------------------------------------------------------------------
+Joint Wolfenstein/CP identity surface
+--------------------------------------------------------------------------------
+  rho^2 + eta^2 = 1/6
+  J_0 surface    = 3.423746495301758e-05
+  J_0 clean      = 3.423746495301758e-05
+  [PASS] rho^2 + eta^2 = 1/6
+  [PASS] J_0 factorization equals alpha_s(v)^3 sqrt(5)/72
+  [PASS] complete named surface covers lambda, A, rho, eta, delta, J_0
+
+================================================================================
+TOTAL: PASS=19, FAIL=0
+================================================================================
+
+----- stderr -----
+

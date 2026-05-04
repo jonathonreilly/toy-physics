@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_constructive_continuity_closure_theorem.py
+runner_sha256: 58b246b88e4fa67f11fa6cbb22ed1a7d5be654474dacd418e099875415482d4a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.92
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS CONSTRUCTIVE CONTINUITY CLOSURE THEOREM
+========================================================================================
+
+Question:
+  Does the constructive projected-source chamber on the fixed native N_e
+  seed surface contain an exact eta/eta_obs = 1 point, or only an
+  overshooting witness?
+
+========================================================================================
+PART 1: THE CONSTRUCTIVE INTERPOLATION FAMILY STAYS ON THE FIXED SEED SURFACE
+========================================================================================
+  [PASS] The lambda = 0 endpoint is the exact aligned native seed point  ((xbar,ybar)=(0.563333333333,0.306666666667))
+  [PASS] The lambda = 1 endpoint is the exact constructive projected-source witness  (delta_w=1.882595756164)
+  [PASS] Every interpolation point stays on the exact fixed native seed surface  ((xbar,ybar)=(0.563333333333,0.306666666667))
+
+========================================================================================
+PART 2: THE CONSTRUCTIVE COLUMN CROSSES EXACT CLOSURE
+========================================================================================
+  [PASS] On the aligned seed point the constructive column is still below exact closure  (eta_1(0)=0.719082664368)
+  [PASS] On the constructive witness the same column overshoots exact closure  (eta_1(1)=1.052220313052)
+  [PASS] Therefore continuity gives a lambda_* in (0,1) with eta_1(lambda_*) = 1  (lambda_*=0.795532193595)
+
+  eta_1(0)      = 0.719082664368
+  eta_1(1)      = 1.052220313052
+  lambda_*      = 0.795532193595
+  eta_1(lambda_*) = 1.000000000000
+
+========================================================================================
+PART 3: THE EXACT CLOSURE POINT IS STILL CONSTRUCTIVE
+========================================================================================
+  [PASS] The exact closure point remains genuinely off-seed and phase-oriented  (delta_*=1.497665531553)
+  [PASS] At lambda_* the projected-source triplet still satisfies gamma > 0, E1 > 0, and E2 > 0  ((gamma,E1,E2)=(0.177466004463,0.247922610478,1.552085732579))
+  [PASS] So the exact eta = 1 point lies inside the constructive projected-source chamber  (eta=[1.03944619 1.         0.85860962])
+
+  x_*     = [1.04926685 0.48315245 0.1575807 ]
+  y_*     = [0.66630668 0.0841067  0.16958662]
+  delta_* = 1.497665531553
+  eta_*   = [1.03944619 1.         0.85860962]
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE CONSTRUCTIVE CLOSURE THEOREM
+========================================================================================
+  [PASS] The note records the aligned-seed to constructive-witness interpolation family
+  [PASS] The note records the exact constructive eta = 1 consequence
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact constructive answer:
+    - the constructive projected-source chamber contains an exact eta = 1 point
+    - it lies on the fixed native N_e seed surface
+    - and it still satisfies gamma > 0, E1 > 0, E2 > 0
+
+PASS=11 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/gaussian_beam_eikonal.py
+runner_sha256: 9415a164aef2688959a9825a872cb7a90dc220f7e024cf17a600094a6a3dbafc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+================================================================================
+GAUSSIAN-BEAM-CORRECTED EIKONAL DEFLECTION
+  β=0.8, L=15.0, x_src=5.0
+  Beam width at source: σ_y = x_src/√(2β) = 3.953
+  Beam angular width: σ_θ = 1/√(2β) = 0.791 rad = 45.3°
+================================================================================
+
+      b       I_plane       I_gauss     ratio
+  --------------------------------------------------
+    1.0      1.975618      0.099310    0.0503
+    2.0      0.954529      0.275624    0.2888
+    3.0      0.605106      0.305465    0.5048
+    4.0      0.427336      0.257168    0.6018
+    5.0      0.320307      0.273525    0.8539
+    6.0      0.249613      0.228613    0.9159
+    8.0      0.163858      0.169583    1.0349
+   10.0      0.115432      0.124584    1.0793
+
+  POWER-LAW FITS on b ∈ {3..6}:
+    Plane-wave:    I ≈ 2.4766 · b^(-1.2753)   R²=0.999242
+    Gaussian-beam: I ≈ 0.4421 · b^(-0.3485)   R²=0.741117
+    LATTICE:       kubo ≈ 28.4 · b^(−1.43)
+
+    Plane-wave  Δslope = 0.1547
+    Gauss-beam  Δslope = 1.0815
+    → Gaussian correction does NOT improve the match
+
+  L-INDEPENDENCE TEST:
+  Does the Gaussian-beam slope depend on L?
+  (Lattice shows L-independence: slope ≈ −1.43 at both T=7.5 and T=15)
+
+       L   x_src     slope        R²
+  ----------------------------------------
+     7.5    2.50   -1.2287  0.996115
+    10.0    3.33   -0.9680  0.945004
+    15.0    5.00   -0.3485  0.741117
+    22.5    7.50   -0.0605  0.022701
+    30.0   10.00    0.0619  0.052317
+    45.0   15.00    6.1355  0.826788
+
+  BETA SWEEP of Gaussian-beam slope (L=15.0, x_src=5.0):
+  Does varying β predict the lattice β-sweep?
+
+       β       σ_y     slope        R²
+  ----------------------------------------
+    0.10    11.180   -0.6293  0.492800
+    0.20     7.906   -0.3157  0.401950
+    0.40     5.590    0.1835  0.136022
+    0.80     3.953   -0.3485  0.741117
+    1.50     2.887   -0.5851  0.882670
+    3.00     2.041   -0.9424  0.966265
+    5.00     1.581   -1.3022  0.990428
+   10.00     1.118   -1.4868  0.999844
+   20.00     0.791   -1.3923  0.999966
+
+================================================================================
+VERDICT
+================================================================================
+  Plane-wave eikonal:     slope = -1.2753 (Δ = 0.1547 from lattice)
+  Gaussian-beam eikonal:  slope = -0.3485 (Δ = 1.0815 from lattice)
+  Lattice measurement:    slope = −1.43
+
+----- stderr -----
+

@@ -1,0 +1,125 @@
+===== runner cache v1 =====
+runner: scripts/frontier_g_bare_derivation.py
+runner_sha256: 7dfdc335ad93bc485791dba4786ec8c6dfe208ec0446d80f6f61fc3dff1570b7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.27
+status: ok
+----- stdout -----
+========================================================================================
+G_BARE = 1 PRIMARY DERIVATION RUNNER
+Cl(3) -> End(V) -> su(3) -> Wilson action -> g_bare = 1
+========================================================================================
+
+========================================================================================
+SECTION A: Cl(3) -> End(V=C^8) chiral representation (axiom A1)
+========================================================================================
+  [PASS] Cl(3) anticommutator {G_1, G_1} = 2 delta_11 I_8  (||{G_1, G_1} - target|| = 0.00e+00)
+  [PASS] Cl(3) anticommutator {G_1, G_2} = 2 delta_12 I_8  (||{G_1, G_2} - target|| = 0.00e+00)
+  [PASS] Cl(3) anticommutator {G_1, G_3} = 2 delta_13 I_8  (||{G_1, G_3} - target|| = 0.00e+00)
+  [PASS] Cl(3) anticommutator {G_2, G_2} = 2 delta_22 I_8  (||{G_2, G_2} - target|| = 0.00e+00)
+  [PASS] Cl(3) anticommutator {G_2, G_3} = 2 delta_23 I_8  (||{G_2, G_3} - target|| = 0.00e+00)
+  [PASS] Cl(3) anticommutator {G_3, G_3} = 2 delta_33 I_8  (||{G_3, G_3} - target|| = 0.00e+00)
+  [PASS] pseudoscalar omega = G_1 G_2 G_3 satisfies omega^2 = -I_8  (||omega^2 + I|| = 0.00e+00)
+  [PASS] Cl(3) -> End(V) is faithful: 8 basis elements remain linearly independent in End(V)  (rank = 8, expected = 8)
+
+========================================================================================
+SECTION B: canonical orthonormal su(3) generators on canonical triplet
+========================================================================================
+  [PASS] canonical Tr(T_a T_b) = delta_ab / 2 holds on triplet (Gell-Mann basis)  (max |Gram - delta/2| = 1.11e-16)
+  [PASS] canonical Gram is real (Hermitian basis)  (max |Im Gram| = 0.00e+00)
+  [PASS] T_1 is Hermitian  (||T - T^dag|| = 0.00e+00)
+  [PASS] T_2 is Hermitian  (||T - T^dag|| = 0.00e+00)
+  [PASS] T_3 is Hermitian  (||T - T^dag|| = 0.00e+00)
+  [PASS] T_4 is Hermitian  (||T - T^dag|| = 0.00e+00)
+  [PASS] T_5 is Hermitian  (||T - T^dag|| = 0.00e+00)
+  [PASS] T_6 is Hermitian  (||T - T^dag|| = 0.00e+00)
+  [PASS] T_7 is Hermitian  (||T - T^dag|| = 0.00e+00)
+  [PASS] T_8 is Hermitian  (||T - T^dag|| = 0.00e+00)
+  [PASS] quadratic Casimir sum_a T_a T_a = (4/3) I_3 in fundamental  (||casimir - C_F I|| = 2.22e-16)
+
+========================================================================================
+SECTION C: Wilson plaquette small-a expansion forces beta = 2 N_c / g^2
+========================================================================================
+  [PASS] A_mu, A_nu are Hermitian su(3) elements
+  [PASS] F_munu = i [A_mu, A_nu] is Hermitian (constant-A limit)
+  [PASS] Wilson plaquette a^4 coefficient = Tr(F^2) / (2 N_c)  (fit = 2.359221e-01, predicted = 2.359221e-01, rel_err = 6.32e-09)
+  [PASS] matching: beta = 2 N_c / g^2 at g^2 = 0.5 gives beta = 12.0000  (beta * g^2 = 6.000000 = 2 N_c = 6)
+  [PASS] matching: beta = 2 N_c / g^2 at g^2 = 1.0 gives beta = 6.0000  (beta * g^2 = 6.000000 = 2 N_c = 6)
+  [PASS] matching: beta = 2 N_c / g^2 at g^2 = 1.5 gives beta = 4.0000  (beta * g^2 = 6.000000 = 2 N_c = 6)
+  [PASS] matching: beta = 2 N_c / g^2 at g^2 = 2.0 gives beta = 3.0000  (beta * g^2 = 6.000000 = 2 N_c = 6)
+  [PASS] at N_c = 3, the canonical normalization gives beta = 6 and g_bare^2 = 1  (beta = 2 N_c = 6; g_bare^2 = 2 N_c / beta = 1.0)
+
+========================================================================================
+SECTION D: rescaling A -> c * A shifts beta by c^2, not g_bare
+========================================================================================
+  [PASS] rescale T -> c T at c = 0.5000: Gram = c^2 * delta/2  (||Gram_scaled - c^2 delta/2|| = 2.78e-17)
+  [PASS] rescale T -> c T at c = 0.5000: Gram NOT equal to canonical delta/2  (non-canonical normalization (forbidden by canonical Cl(3) basis))
+  [PASS] rescale shifts beta by c^2 = 0.2500: beta_new = 1.5000  (beta_old * c^2 = 1.5000, beta_new (matched) = 1.5000, no shift to g_bare)
+  [PASS] rescale T -> c T at c = 1.4142: Gram = c^2 * delta/2  (||Gram_scaled - c^2 delta/2|| = 0.00e+00)
+  [PASS] rescale T -> c T at c = 1.4142: Gram NOT equal to canonical delta/2  (non-canonical normalization (forbidden by canonical Cl(3) basis))
+  [PASS] rescale shifts beta by c^2 = 2.0000: beta_new = 12.0000  (beta_old * c^2 = 12.0000, beta_new (matched) = 12.0000, no shift to g_bare)
+  [PASS] rescale T -> c T at c = 2.0000: Gram = c^2 * delta/2  (||Gram_scaled - c^2 delta/2|| = 4.44e-16)
+  [PASS] rescale T -> c T at c = 2.0000: Gram NOT equal to canonical delta/2  (non-canonical normalization (forbidden by canonical Cl(3) basis))
+  [PASS] rescale shifts beta by c^2 = 4.0000: beta_new = 24.0000  (beta_old * c^2 = 24.0000, beta_new (matched) = 24.0000, no shift to g_bare)
+  [PASS] rescale T -> c T at c = 3.0000: Gram = c^2 * delta/2  (||Gram_scaled - c^2 delta/2|| = 1.78e-15)
+  [PASS] rescale T -> c T at c = 3.0000: Gram NOT equal to canonical delta/2  (non-canonical normalization (forbidden by canonical Cl(3) basis))
+  [PASS] rescale shifts beta by c^2 = 9.0000: beta_new = 54.0000  (beta_old * c^2 = 54.0000, beta_new (matched) = 54.0000, no shift to g_bare)
+
+  Conclusion: under canonical Tr(T_a T_b) = delta_ab / 2,
+  the rescaling A -> c * A shifts the matched beta by c^2, NOT g_bare.
+  The continuum rescaling freedom is removed by the canonical normalization.
+
+========================================================================================
+SECTION E: constraint-vs-convention disambiguation
+========================================================================================
+  [PASS] canonical beta = 2 N_c = 6 for SU(3) (exact)  (beta = 6)
+  [PASS] given canonical normalization + beta = 6, g_bare^2 = 1 forced (exact)  (g_bare^2 = 2 N_c / beta = 1)
+  [PASS] alternative g^2 = 1/2 requires beta = 12 != 6  (incompatible with canonical normalization-forced beta = 6)
+  [PASS] alternative g^2 = 2 requires beta = 3 != 6  (incompatible with canonical normalization-forced beta = 6)
+  [PASS] alternative g^2 = 4 requires beta = 3/2 != 6  (incompatible with canonical normalization-forced beta = 6)
+  [PASS] convention layer: canonical Tr(T_a T_b) = delta_ab/2 is the framework normalization  (carried by cl3_color_automorphism_theorem (axiom A4 normalization input))
+  [PASS] constraint layer: given canonical normalization, g_bare = 1 is structurally derived  (no separate g_bare convention layer; g_bare = 1 follows as a constraint)
+  [PASS] [BOUNDED] bounded boundary: Wilson action form itself remains a convention-layer input  (see G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18 Claim 3 caveat)
+
+========================================================================================
+SECTION F: end-to-end derivation chain (no circular use of g_bare = 1)
+========================================================================================
+  [PASS] Step 1: Cl(3) A1 -> End(V=C^8) chiral rep built without g_bare input  ({G_mu, G_nu} = 2 delta_munu I_8 verified in Section A)
+  [PASS] Step 2: canonical orthonormal su(3) Gram = delta/2 (no g_bare input)  (||Gram - delta/2|| = 1.11e-16)
+  [PASS] Step 3: Wilson matching gives beta = 2 N_c / g^2 (symbolic, no g_bare input)  (verified in Section C across g^2 in {0.5, 1.0, 1.5, 2.0})
+  [PASS] Step 4: canonical normalization + matching -> g_bare = 1 (derived, not input)  (g_bare^2 = 1.0, derived from beta = 2 N_c = 6)
+
+  Circularity audit:
+  - Step 1 uses Cl(3) anticommutator (axiom A1); no beta or g input.
+  - Step 2 uses canonical Gell-Mann basis; Tr normalization is structural.
+  - Step 3 uses Wilson plaquette form + small-a expansion; symbolic beta, g.
+  - Step 4 derives g_bare from canonical normalization + matching; no g input.
+  - Final g_bare = 1 is derived from the chain, not asserted.
+  [PASS] no circular use of g_bare = 1 or beta = 6 as input in the chain  (forward-only relative to canonical normalization and Wilson matching)
+
+========================================================================================
+SECTION G: ledger visibility for the new theorem rows
+========================================================================================
+  [PASS] [BOUNDED] declared dep 'cl3_color_automorphism_theorem' present in audit ledger  (effective_status = audited_renaming)
+  [PASS] [BOUNDED] new row 'g_bare_rescaling_freedom_removal_theorem_note_2026-05-03' seeded with deps = ['cl3_color_automorphism_theorem']  (audit_status = unaudited; effective_status = unaudited)
+  [PASS] [BOUNDED] new row 'g_bare_constraint_vs_convention_theorem_note_2026-05-03' seeded with deps = ['g_bare_rescaling_freedom_removal_theorem_note_2026-05-03']  (audit_status = unaudited; effective_status = unaudited)
+
+========================================================================================
+SUMMARY
+========================================================================================
+  EXACT   : PASS = 51,   FAIL = 0
+  BOUNDED : PASS = 4, FAIL = 0
+  TOTAL   : PASS = 55, FAIL = 0
+
+  All exact checks passed.
+  The Cl(3) -> End(V) -> su(3) -> Wilson action chain derives g_bare = 1
+  under the canonical Cl(3) connection normalization Tr(T_a T_b) = delta_ab/2,
+  which is carried through the declared cl3_color_automorphism_theorem dependency.
+
+  Rescaling A -> c * A shifts the matched beta by c^2, NOT g_bare.
+  Therefore g_bare = 1 is queued as a structural constraint candidate
+  relative to the canonical normalization, not an independent free convention.
+
+----- stderr -----
+

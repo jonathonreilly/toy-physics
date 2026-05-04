@@ -1,0 +1,48 @@
+===== runner cache v1 =====
+runner: scripts/source_resolved_geometry_rule_repair_probe.py
+runner_sha256: c798f572aa9a633813e576f805ce5afbf2b1923c0580eda355278e1425d7b735
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.18
+status: ok
+----- stdout -----
+========================================================================================================
+SOURCE-RESOLVED GEOMETRY-RULE REPAIR PROBE
+  compact generated DAG family, geometry-sector repair vs kNN-floor bridge
+========================================================================================================
+family seeds=0..3, layers=16, nodes/layer=24, connect_radius=3.2
+baseline bridge: k-nearest floor augmentation (k=3, min_edges=5)
+repair bridge: adaptive sector stencil + floor=9
+static Green kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.50
+source strengths=[0.001, 0.002, 0.004, 0.008]
+field target max=0.02
+observables: zero-source reduction, centroid sign counts, F~M exponent, detector N_eff
+diagnostic: does a geometry repair widen support enough to improve the weak-field read?
+
+seed=0 baseline zero=0.000e+00 TOWARD=2/4 F~M=0.822 N_eff=6.60
+seed=0   repair zero=0.000e+00 TOWARD=4/4 F~M=0.484 N_eff=2.30
+seed=1 baseline zero=0.000e+00 TOWARD=1/4 F~M=-0.224 N_eff=4.46
+seed=1   repair zero=0.000e+00 TOWARD=1/4 F~M=1.225 N_eff=1.27
+seed=2 baseline zero=0.000e+00 TOWARD=4/4 F~M=-0.612 N_eff=2.93
+seed=2   repair zero=0.000e+00 TOWARD=3/4 F~M=-0.289 N_eff=3.46
+seed=3 baseline zero=0.000e+00 TOWARD=0/4 F~M=0.246 N_eff=6.25
+seed=3   repair zero=0.000e+00 TOWARD=0/4 F~M=-0.081 N_eff=4.17
+
+SUMMARY
+baseline  zero=0.000e+00  TOWARD=7/16  F~M=0.058  N_eff=5.06  support_frac=0.422
+  repair  zero=0.000e+00  TOWARD=8/16  F~M=0.335  N_eff=2.80  support_frac=0.277
+
+REPAIR DELTA
+  delta_TOWARD=+1  delta_N_eff=-2.26  baseline_alpha=0.058  repair_alpha=0.335
+
+SAFE READ
+  - The baseline kNN-floor bridge is the retained control.
+  - The repair is only interesting if it widens support and improves
+    the weak-field sign or mass-law read without a field-rule change.
+  - If support broadens but sign and F~M do not improve, the family is
+    still geometry-limited, just with a wider bottleneck.
+  - If the repair worsens both support and sign, that is a clean no-go
+    for this geometry-rule idea on the compact generated family.
+
+----- stderr -----
+

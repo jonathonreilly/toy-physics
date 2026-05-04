@@ -1,0 +1,51 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py
+runner_sha256: de8639c5622055bdf528b2085c4a1e1d376e1442e19783709f4e0f89c1d0cad8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.23
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE LOCAL / ENVIRONMENT FACTORIZATION
+==============================================================================
+
+Exact one-link Wilson character coefficients at beta = 6
+  c_(0,0)                              = 3.441440354987777
+  a_link(0, 0)      = 1.000000000000000   a_link^4 = 1.000000000000000
+  a_link(1, 0)      = 0.422531739649983   a_link^4 = 0.031874057444848
+  a_link(0, 1)      = 0.422531739649983   a_link^4 = 0.031874057444848
+  a_link(1, 1)      = 0.162259799479938   a_link^4 = 0.000693176354575
+  a_link(2, 0)      = 0.135961727363391   a_link^4 = 0.000341717085993
+
+Normalized mixed-kernel locality
+  non-marked trivial-channel factor     = 1.000000000000000
+  mixed-kernel normalized spread        = 0.000e+00
+  local-factor swap error               = 2.711e-19
+  min/max local factor                  = 0.000000000000, 1.000000000000
+
+Residual source-sector consequence
+  local mixed-kernel Perron <J>         = 0.452407043968
+  |local-only - 0.5934|                 = 1.409930e-01
+
+  [PASS] [THEOREM] the one-link Wilson class function has explicit normalized SU(3) character coefficients from the Bessel-determinant mode sum
+         c_(0,0)=3.441440354988, a_(0,0)=1.000000000000
+  [PASS] [THEOREM] non-marked mixed-link factors act only through the trivial irrep on the marked source sector
+         after trivial-channel normalization, a non-marked mixed-link factor is the identity on marked-plaquette class functions
+  [PASS] [THEOREM] the four marked mixed-link convolutions contribute the exact local plaquette-loop factor a_(p,q)(beta)^4
+         local-factor symmetry=2.711e-19, min local factor=8.821392e-26
+  [PASS] [THEOREM] the normalized mixed-kernel compression is therefore exactly the local Wilson marked-link factor with no further representation-dependent mixed-kernel environment sequence
+         all non-marked mixed-link factors collapse to the same trivial-channel scalar, so normalized mixed-kernel coefficients are exactly a_(p,q)^4
+  [PASS] [SUPPORT] the local mixed-kernel factor alone does not already reproduce the full same-surface plaquette value
+         |local-only - 0.5934| = 1.409930e-01
+  [PASS] [SUPPORT] the remaining framework-point ambiguity is therefore residual source-sector environment data beyond the normalized mixed kernel
+         the mixed kernel is exact-local after normalization; what remains open cannot be hidden mixed-kernel coefficient freedom
+  [PASS] [SUPPORT] the exact local Wilson link factor is explicit and reusable as an atlas tool even though full analytic P(6) remains open
+         this exact factor can now be reused independently of the still-open residual source-sector environment solve
+
+==============================================================================
+SUMMARY: THEOREM PASS=4 SUPPORT=3 FAIL=0
+==============================================================================
+
+----- stderr -----
+

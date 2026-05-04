@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_minimal_a13_sheet_selector_theorem.py
+runner_sha256: 7fae44e5a404f59d2c25d801fdf21efe6f1f9d42cedd024464010859fb6b7502
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.56
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS MINIMAL A13 SHEET-SELECTOR THEOREM
+========================================================================================
+
+Question:
+  After quotienting by the current exact even PMNS data, what is the
+  smallest remaining selector object that distinguishes the constructive
+  projected-source witness from its CP-flipped partner?
+
+========================================================================================
+PART 1: A13 IS EXACTLY THE ODD PROJECTED-SOURCE SLOT
+========================================================================================
+  [PASS] On dW_e^H the odd projected-source slot is exactly A13 = 2 gamma  ((A13+,A13-) = (0.300294489332,-0.300294489332))
+  [PASS] The constructive witness has A13 > 0 while its CP-flipped partner has A13 < 0  ((A13+,A13-) = (0.300294489332,-0.300294489332))
+  [PASS] So sign(A13) is exactly the sign of the odd CP-supporting source slot  ((gamma+,gamma-) = (0.150147244666,-0.150147244666))
+
+========================================================================================
+PART 2: THE CURRENT EXACT EVEN DATA AGREE ON THE WITNESS PAIR
+========================================================================================
+  [PASS] The constructive witness and its CP-flipped partner have the same even projected-source channels E1 and E2  ((E1,E2)=(0.296562850784,1.986407435174))
+  [PASS] They also have the same exact flavored transport outputs  (eta=[0.92932093 1.05222031 0.80149003])
+  [PASS] And the current exact even selector objectives still agree on that pair  ((ΔI,ΔS)=(0.000e+00,0.000e+00))
+  [PASS] But the intrinsic CP pair flips sign because only the odd slot changes sign  ((cp+,cp-) = (-0.029685396610,0.198835735450) / (0.029685396610,-0.198835735450))
+
+========================================================================================
+PART 3: A13 IS ALREADY A LEGITIMATE D_- LEVEL TARGET
+========================================================================================
+  [PASS] The microscopic witnesses preserve charge exactly  (both full-D witnesses commute with charge)
+  [PASS] Their Schur pushforwards on D_- recover the same opposite-sign A13 values  ((A13+,A13-) = (0.300294489332,-0.300294489332))
+  [PASS] So the residual sheet selector is already a microscopic law on dW_e^H = Schur_Ee(D_-)  (A13 is not a downstream artifact; it is a Schur-side target)
+
+========================================================================================
+PART 4: THE THEOREM NOTE RECORDS THE MINIMAL SELECTOR OBJECT
+========================================================================================
+  [PASS] The new note records that sign(A13) is the minimal residual selector object
+  [PASS] The note also records the equivalent identity sign(A13) = sign(2 gamma)
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact selector answer:
+    - after quotienting by current even data, the residual sheet selector
+      is exactly sign(A13) = sign(2 gamma)
+    - the constructive witness and its CP-flipped partner agree on E1, E2,
+      transport, and current selector objectives
+    - so any theorem-grade microscopic sheet selector must reduce to a law
+      fixing A13 > 0 on dW_e^H = Schur_Ee(D_-)
+
+PASS=12 FAIL=0
+
+----- stderr -----
+

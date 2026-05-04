@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_selected_slice_frozen_bank_decomposition.py
+runner_sha256: 2a69c5c175b314fb346cef5241fd10d43fb85166ec5c2b841a63cb690b8952a6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.06
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: exact bank identities anchor the selected slice
+========================================================================================
+  [PASS (C)] The frozen slot pair carries the real selected-slice offset exactly  (Re(a_* + b_*) = 2 cp2 = 4 sqrt(2)/9)
+  [PASS (C)] The observable-selector point is already encoded in the frozen CP constant cp1  (q_+* = -3 cp1 / 2 = sqrt(6)/3)
+  [PASS (C)] The selected-slice imaginary doublet-mixing offset is already encoded in cp2  (Im K12 = -3 cp2 / 2)
+  [PASS (C)] The selected doublet-block trace offset is fixed by the same frozen bank  (K11 + K22 = 2 cp2 + 3 cp1)
+
+========================================================================================
+PART 2: the entire selected kernel is frozen plus one real direction
+========================================================================================
+  [PASS (C)] [NUMERIC] Along the full selected m-line the slot pair and CP pair stay exactly frozen  (cp=(-0.544331053952,0.314269680527))
+  [PASS (C)] [NUMERIC] Those frozen bank constants reconstruct the full selected K_Z3 kernel exactly once m is supplied  (max reconstruction err=2.89e-15)
+  [PASS (C)] [NUMERIC] So the selected slice is exactly the affine line K_frozen + m T_m^(K)  (T_m^(K) carries only K00 and the real K12/K21 direction)
+
+========================================================================================
+PART 3: only one real microscopic direction survives
+========================================================================================
+  [PASS (C)] [NUMERIC] Differences between any two selected-slice kernels lie exactly on the one fixed matrix T_m^(K)  (delta_m=0.800000000000)
+  [PASS (C)] [NUMERIC] No additional slot, CP, or q_+/delta directions survive on the selected slice  (the live microscopic selector is one real coefficient only)
+
+Interpretation:
+  On the charged-lepton selected slice, the full intrinsic K_Z3 kernel
+  is already decomposed as a frozen slot/CP bank plus one real matrix
+  direction T_m^(K). So the remaining charged-lepton selector is not a
+  free doublet-block law anymore; it is one residual real coefficient.
+
+PASS=9 FAIL=0
+
+----- stderr -----
+

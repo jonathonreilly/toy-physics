@@ -1,0 +1,92 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_interacting_bridge_locality.py
+runner_sha256: aa215651774aa1cd818547e3953cbc4a1db8164a118160929bbc952ebf0dc2c1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 4.58
+status: ok
+----- stdout -----
+==============================================================================
+y_t INTERACTING BRIDGE LOCALITY PROXY
+==============================================================================
+
+Scan smooth UV-to-IR bridge profiles satisfying exact endpoint data:
+  g_3(v)     = 1.139366
+  g_3(M_Pl)  = 1.067411
+  y_t(M_Pl)  = 0.435769  [Ward identity]
+  target y_t(v, physical) = 0.9176
+
+Boundary summary:
+  g_1(v) = 0.463986, g_2(v) = 0.646288
+  g_1(M_Pl) = 0.614428, g_2(M_Pl) = 0.504054
+  SM-like g_3(M_Pl) from low-energy anchor = 0.489206
+  lattice-side g_3(M_Pl) endpoint          = 1.067411
+  UV endpoint ratio lattice/SM-like        = 2.182
+
+------------------------------------------------------------------------------
+Representative scan rows
+------------------------------------------------------------------------------
+    center    width    y_t(phys)       dev%    m_t proxy
+      0.45     0.02     1.190572     +29.75       223.91
+      0.45     0.05     1.190259     +29.71       223.85
+      0.45     0.15     1.189748     +29.66       223.75
+      0.75     0.02     1.042028     +13.56       195.97
+      0.75     0.05     1.039545     +13.29       195.50
+      0.75     0.15     1.074545     +17.10       202.09
+      0.92     0.02     0.944488      +2.93       177.63
+      0.92     0.05     0.956621      +4.25       179.91
+      0.92     0.15     1.025825     +11.79       192.92
+      0.97     0.02     0.919438      +0.20       172.92
+      0.97     0.05     0.940674      +2.51       176.91
+      0.97     0.15     1.015362     +10.65       190.96
+      0.99     0.02     0.913116      -0.49       171.73
+      0.99     0.05     0.936078      +2.01       176.05
+      0.99     0.15     1.011684     +10.25       190.26
+
+Best-fit smooth profiles:
+    center    width    y_t(phys)       dev%    m_t proxy
+      0.98     0.02     0.915938      -0.18       172.26
+      0.97     0.02     0.919438      +0.20       172.92
+      0.97     0.01     0.914559      -0.33       172.00
+      0.99     0.03     0.920745      +0.34       173.16
+      0.99     0.02     0.913116      -0.49       171.73
+      0.98     0.03     0.923208      +0.61       173.62
+      0.98     0.01     0.909562      -0.88       171.06
+      0.97     0.03     0.926115      +0.93       174.17
+      0.95     0.01     0.926384      +0.96       174.22
+      0.95     0.02     0.928249      +1.16       174.57
+
+Window summary:
+  Profiles scanned: 70
+  Within 1% of accepted y_t(v): 9
+  Within 3% of accepted y_t(v): 16
+  Smallest center fraction among 1% profiles: 0.95
+  Largest width fraction among 1% profiles: 0.03
+
+  [PASS] 1a-endpoints-preserved: all scanned bridge families preserve exact g_3(v) and g_3(M_Pl) endpoints
+  [PASS] 1b-diffuse-bridges-overshoot: all diffuse / early bridge profiles overshoot accepted y_t(v) by more than 5%
+  [PASS] 1c-uv-localized-window-exists: profiles within 1% exist only in the UV-localized window center>=0.95, width<=0.03
+  [PASS] 1d-best-profile-near-target: best smooth profile gives y_t(v)=0.915938 (-0.18%)
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+This proxy does NOT prove the final bridge theorem.
+It does show a sharper structural fact:
+
+  A successful interacting bridge cannot be a broad deformation of the
+  SM-like transport over the full [v, M_Pl] interval.
+
+  To preserve the accepted low-energy y_t endpoint, the lattice-side
+  correction must be concentrated in a narrow UV window near M_Pl,
+  leaving the bridge SM-like over most of the interval.
+
+That materially narrows the remaining theorem target.
+
+==============================================================================
+FINAL TALLY: 4 PASS / 0 FAIL
+Elapsed: 4.02 s
+==============================================================================
+
+----- stderr -----
+

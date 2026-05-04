@@ -1,0 +1,32 @@
+===== runner cache v1 =====
+runner: scripts/poisson_self_gravity_mechanism.py
+runner_sha256: c23ab02c062db03b9fea1f1ec76127d2320e24326cdba9a60e59972419c81f3d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+POISSON SELF-GRAVITY MECHANISM
+  exact-lattice self-gravity lane
+  strict retained verdict: control-only
+
+HARD BAR CHECK
+  exact zero-coupling identity: True
+  matched null needed:         True
+  step-local Born clean:       True
+  end-to-end Born clean:       False
+  loop effect size:            tiny control effect
+  weak-field sign:             TOWARD in the control regime
+
+FINAL VERDICT
+  control-only family
+
+REOPEN ONLY IF A FUTURE VERSION SHOWS:
+  1. exact identity at epsilon = 0
+  2. matched-null stability under the same update machinery
+  3. per-step and end-to-end Born both defensible
+  4. a stronger observable than raw escape
+  5. a stable converged loop with a non-tiny effect
+
+----- stderr -----
+

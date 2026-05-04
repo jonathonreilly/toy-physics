@@ -1,0 +1,81 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_projector_parameter_audit.py
+runner_sha256: d00e3d83aa54cddfb1f2f065ae0cf30927b6abaf336ce94c4032aae1ddd9fef7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.18
+status: ok
+----- stdout -----
+========================================================================
+  FRONTIER: Quark Projector-Parameter Audit
+========================================================================
+
+========================================================================
+PART 1: Strongest Reduced-Closure Reference
+========================================================================
+
+  projector ray        = +0.408248 +0.912871 i
+  best reduced amp_u   = -0.814317
+  best reduced amp_d   = -0.158082
+  best shared phase    = +177.720825 deg
+  J/J_atlas            = 1.002013
+  [PASS] Strongest reduced closure still matches J within 1%  (ratio = 1.002013)
+
+========================================================================
+PART 2: Exact Support-Side Anchor
+========================================================================
+
+  exact down amplitude = 1/sqrt(42) = 0.154303349962
+  exact support angle  = -1/42 rad  = -1.364185 deg
+  solved up amplitude  = 0.778162
+
+  m_u/m_c              = 1.681654e-03  (dev: -0.891%)
+  m_c/m_t              = 7.365650e-03  (dev: -0.150%)
+  |V_us|               = 0.227270099  (dev: -0.000%)
+  |V_cb|               = 0.042171938  (dev: -0.004%)
+  |V_ub|               = 0.003909793  (dev: -0.082%)
+  J                    = 3.305616157e-05  (dev: -0.766%)
+  arg det(M_u M_d)     = 2.220e-15 rad
+  objective score      = 0.052727
+  [PASS] Exact down amplitude plus support-angle anchor keeps all CKM observables within 2%  (devs = (-0.000%, -0.004%, -0.082%, -0.766%))
+  [PASS] Exact support-side anchor keeps the quark ratios within 1%  (devs = (-0.891%, -0.150%))
+  [PASS] Exact support-side anchor preserves determinant neutrality  (arg det = 2.220e-15)
+
+========================================================================
+PART 3: Up-Amplitude Exact-Candidate Audit
+========================================================================
+
+  audited exact up-amplitude candidates on the exact support-side anchor:
+          pi/4: a_u = 0.785398163, devs = (+0.059%, -0.006%, -0.268%, -0.947%)
+     sqrt(2/3): a_u = 0.816496581, devs = (+0.317%, -0.017%, -1.064%, -1.724%)
+           5/6: a_u = 0.833333333, devs = (+0.458%, -0.023%, -1.492%, -2.146%)
+     sqrt(5)/6: a_u = 0.372677996, devs = (-3.062%, +0.185%, +10.955%, +9.348%)
+     sqrt(6/7): a_u = 0.925820100, devs = (+1.247%, -0.050%, -3.800%, -4.465%)
+
+  best audited exact candidate = pi/4  (aggregate abs-dev = 1.281%)
+  [PASS] No baseline exact candidate in this limited audit set reaches sub-percent closure on the exact support-side anchor  (best aggregate abs-dev = 1.281%)
+  [PASS] The solved up amplitude is not equal to the audited exact candidates within 0.5%  (solved a_u = 0.778162)
+
+========================================================================
+PART 4: Summary
+========================================================================
+
+  Strong partial exact law on the current surface:
+    - fixed CKM projector ray is exact
+    - down-sector reduced amplitude a_d = 1/sqrt(42) is exact-support compatible
+    - support-angle probe phi = -1/42 rad is exact-support compatible
+
+  Remaining missing primitive:
+    one scalar up-sector amplitude law, currently solved as a_u = 0.778162
+
+  Honest endpoint:
+    the current projector/tensor machinery reduces the quark closure gap
+    to one non-derived scalar amplitude, not a generic CP-carrier family
+    A wider exact-candidate shortlist now exists, but it is still bounded.
+
+========================================================================
+  TOTAL: PASS=6, FAIL=0
+========================================================================
+
+----- stderr -----
+

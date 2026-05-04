@@ -1,0 +1,331 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lorentz_violation.py
+runner_sha256: 3553a9c6d621967a7e6dc03d37b85772c0919de0d7c7f89b5d48adc3f4facb53
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+LORENTZ AND CPT VIOLATION FROM LATTICE STRUCTURE
+Standard Model Extension (SME) Coefficient Analysis
+==============================================================================
+
+==============================================================================
+1. LATTICE DISPERSION RELATION
+==============================================================================
+
+  On a cubic lattice with spacing a, the dispersion relation is:
+
+    E^2 = m^2 + sum_i (4/a^2) sin^2(p_i a/2)
+
+  (Standard second-order finite-difference Laplacian eigenvalue;
+  see LORENTZ_VIOLATION_DERIVED_NOTE.md Step 2.)
+
+  Taylor expanding for p_i a << 1:
+
+    sin^2(p_i a/2) = (p_i a/2)^2 - (p_i a/2)^4/3 + (p_i a/2)^6*2/45 - ...
+
+    (4/a^2) sin^2(p_i a/2) = p_i^2 - a^2 p_i^4/12 + a^4 p_i^6/360 - ...
+
+  Therefore:
+    E^2 = m^2 + p^2 - (a^2/12) sum_i p_i^4 + (a^4/360) sum_i p_i^6 - ...
+                       ^^^^^^^^^^^^^^^^^^^^^^^^
+                       LORENTZ-VIOLATING TERM
+
+  The p_i^4 term breaks SO(3,1) down to the cubic group O_h.
+  Its coefficient is a^2/12.
+
+  Numerical verification (1D, a=0.1, m=0.1):
+    At p*a = 0.1256:
+      E^2 (exact lattice) = 1.5861683563
+      E^2 (continuum)     = 1.5882429737
+      E^2 (p^4 corrected) = 1.5861672646
+      E^2 (p^6 corrected) = 1.5861683566
+      Residual (lattice - p^4): 1.0917e-06
+      Residual (lattice - p^6): 3.0770e-10
+
+==============================================================================
+2. STANDARD MODEL EXTENSION (SME) COEFFICIENT MAPPING
+==============================================================================
+
+  The Lorentz-violating correction decomposes into spherical harmonics:
+
+    sum_i p_i^4 = p^4 * [3/5 + (4/5) * K_4(theta, phi)]
+
+  where K_4 is the cubic harmonic of order 4:
+    K_4 = (1/sqrt(12)) [Y_{40} + sqrt(5/14) (Y_{44} + Y_{4,-4})]
+
+  In the SME framework (Kostelecky & Mewes):
+  - The correction is a dimension-6 operator (d=6, n=4 in p)
+  - CPT-even (see Section 5 below)
+  - The nonminimal SME coefficients are:
+
+    c^(6)_{(I)00}   = -(a^2/12)(3/5) / sqrt(4 pi)   [isotropic, j=0]
+    c^(6)_{(I)40}   = -(a^2/12)(4/5) * (...)         [anisotropic, j=4, m=0]
+    c^(6)_{(I)44}   = -(a^2/12)(4/5) * (...)         [anisotropic, j=4, m=4]
+    c^(6)_{(I)4,-4} = -(a^2/12)(4/5) * (...)         [anisotropic, j=4, m=-4]
+
+  All other SME coefficients are zero (no j=1,2,3 from cubic symmetry).
+
+  For a = l_Planck = 1.6163e-35 m:
+    a in natural units:    8.2041e-20 GeV^-1
+    c4 coefficient (a^2/12): 5.6090e-40 GeV^-2
+    c^(6) isotropic (j=0): -3.3654e-40 GeV^-2
+    c^(6) aniso (j=4,m=0): -4.4872e-40 GeV^-2
+
+  Dimensionless SME coefficients (c^(6) * m^2):
+    Electron: c^(6) * m_e^2 = 1.4646e-46
+    Proton:   c^(6) * m_p^2 = 4.9350e-40
+    Photon:   c^(6) (dim-less) = 5.6090e-40 GeV^-2
+
+==============================================================================
+3. COMPARISON WITH EXPERIMENTAL BOUNDS
+==============================================================================
+
+  Natural suppression at E = 1 GeV:
+    (E/E_Planck)^2 = (1.0 / 1.2209e+19)^2 = 6.7087e-39
+
+  The lattice prediction for the p^4 coefficient:
+    a^2/12 = (1.6163e-35 m)^2 / 12
+           = 5.6090e-40 GeV^-2
+           = 8.3607e-02 (in E_Planck^-2 units)
+
+  Experiment                          Sector     Bound              Prediction         Ratio        Status
+  ─────────────────────────────────── ────────── ────────────────── ────────────────── ──────────── ────────────────────
+  GRB polarization (vacuum birefring  photon     1.00e-32 GeV^-2    5.61e-40 GeV^-2    5.61e-08     SAFE (by >> 6 orders)
+  Fermi LAT time-of-flight            photon     2.52e-22 GeV^-2    5.61e-40 GeV^-2    2.23e-18     SAFE (by >> 6 orders)
+  Hughes-Drever (electron sector)     electron   1.00e-27 GeV       5.61e-40 GeV       5.61e-13     SAFE (by >> 6 orders)
+  Atomic clock comparisons (proton s  proton     1.00e-27 GeV       5.61e-40 GeV       5.61e-13     SAFE (by >> 6 orders)
+  Neutron spin precession             neutron    1.00e-31 GeV       5.61e-40 GeV       5.61e-09     SAFE (by >> 6 orders)
+  Neutrino oscillation (MINOS/IceCub  neutrino   1.00e-23 GeV       5.61e-40 GeV       5.61e-17     SAFE (by >> 6 orders)
+  Muon anomalous magnetic moment      muon       1.00e-24 GeV       5.61e-40 GeV       5.61e-16     SAFE (by >> 6 orders)
+  Gravity sector (lunar laser rangin  gravity    1.00e-09           5.61e-58           5.61e-49     SAFE (by >> 6 orders)
+
+==============================================================================
+4. STAGGERED FERMION TASTE-BREAKING CONTRIBUTIONS
+==============================================================================
+
+  Staggered fermions on a cubic lattice have 2^d degenerate tastes.
+  Taste symmetry is broken at O(a^2), introducing ADDITIONAL Lorentz
+  violation beyond the naive lattice dispersion.
+
+  The taste-dependent LV has the form:
+    delta(E^2)_taste = a^2 * C_taste * p^4
+
+  where C_taste depends on the taste representation. The total LV
+  for each taste is:
+    (a^2/12)(1 + C_taste) * sum_i p_i^4
+
+  Enhancement factors by taste (from lattice QCD):
+
+  Taste              C_taste    Enhancement    Total c^(6) (GeV^-2)  
+  ────────────────── ────────── ────────────── ──────────────────────
+  pseudoscalar       1.0        2.0            1.1218e-39            
+  axial_vector       1.2        2.2            1.2340e-39            
+  tensor             1.5        2.5            1.4022e-39            
+  vector             2.0        3.0            1.6827e-39            
+  scalar             2.5        3.5            1.9631e-39            
+  identity           3.0        4.0            2.2436e-39            
+
+  Key finding: taste-breaking at most TRIPLES the naive LV coefficient.
+  Since the naive coefficient is already ~10^-38 below experimental
+  bounds, the taste-breaking enhancement is irrelevant for detectability.
+
+  However, the taste structure provides a QUALITATIVE prediction:
+  different fermion species (if they correspond to different tastes)
+  would have slightly different LV coefficients. This is a form of
+  flavor-dependent Lorentz violation testable in principle by comparing
+  electron vs muon vs tau sector SME coefficients.
+
+
+==============================================================================
+5. CPT SYMMETRY ANALYSIS
+==============================================================================
+
+  Discrete symmetries on the cubic lattice Z^3:
+
+    Parity P:           EXACT  (Z^3 has x_i -> -x_i symmetry)
+    Time reversal T:    EXACT  (real lattice action, S(-t) = S(t))
+    Charge conjugation: EXACT  (complex conjugation of fields)
+
+    Combined CPT:       EXACT
+
+  Consequence for SME coefficients:
+    All CPT-ODD coefficients are IDENTICALLY ZERO:
+      a_mu = 0          (dimension 3, CPT-odd vector)
+      b_mu = 0          (dimension 3, CPT-odd pseudo-vector)
+      e_mu = 0          (dimension 3)
+      f_mu = 0          (dimension 3)
+      g_{lambda mu nu} = 0  (dimension 5, CPT-odd)
+
+    Only CPT-EVEN coefficients are nonzero:
+      c_{mu nu} != 0     (dimension 4, suppressed by a^2)
+      d_{mu nu} != 0     (dimension 4, spin-dependent, suppressed by a^2)
+      Higher-dimension CPT-even operators at O(a^4), O(a^6), ...
+
+  Relation to Greenberg's theorem:
+    The Greenberg theorem states that CPT violation implies Lorentz violation in local QFT. The converse is not proven. The lattice framework demonstrates Lorentz violation with exact CPT, consistent with the theorem but showing the converse fails.
+
+  This is a STRONG prediction: any experimental detection of CPT-odd
+  LV coefficients would FALSIFY the cubic lattice framework.
+  Current bounds on CPT-odd coefficients (b_mu for neutrons ~ 10^-31 GeV)
+  are consistent with the prediction b_mu = 0.
+
+
+==============================================================================
+6. LEADING OBSERVABLE PREDICTION
+==============================================================================
+
+  QUESTION: What is the leading Lorentz-violating observable from
+  the lattice framework, and at what level?
+
+  ANSWER: The leading effect is anisotropic propagation governed by
+  the cubic harmonic K_4(theta, phi). The observable signature is:
+
+  1. DIRECTION-DEPENDENT PROPAGATION SPEED
+
+     For a massless particle (photon, graviton):
+       v(theta, phi) = c * [1 - (a^2/24) p^2 * f_4(theta, phi)]
+
+     where f_4 = sin^4(theta)cos^4(phi) + sin^4(theta)sin^4(phi)
+                 + cos^4(theta)
+
+     The speed varies with direction by:
+       delta_v / v ~ (a^2/24) * p^2 * (f_4_max - f_4_min)
+                   = (a^2/24) * p^2 * (1 - 1/3)
+                   = (a^2/36) * p^2
+
+     For a = l_Planck, p = 10 GeV (Fermi LAT photon):
+
+       delta_v / v = (a^2/36) * p^2
+                   = (8.2041e-20)^2 / 36 * (10.0)^2
+                   = 1.8697e-38
+
+     This is 1.9e-38, approximately 10^-38.
+
+  2. COMPARISON WITH EXPERIMENT
+
+     Best photon birefringence bound:     ~10^-32    [GRB polarimetry]
+     Best photon dispersion bound:        ~10^-21    [Fermi LAT at 10 GeV]
+     Best electron anisotropy bound:      ~10^-27    [Hughes-Drever]
+     Best gravity sector bound:           ~10^-9     [lunar laser ranging]
+
+     Our prediction (1.9e-38) is BELOW ALL bounds by
+     at least 6 orders of magnitude (and typically 20+).
+
+  3. SCALING WITH ENERGY
+
+     The suppression factor is (E/E_Planck)^2. To reach experimental
+     sensitivity, we would need:
+
+     (E/E_Planck)^2 > 10^-32  (photon birefringence bound)
+     E > E_Planck * 10^-16 ~ 10^3 GeV ~ 1 TeV
+
+     But at 1 TeV, the lattice correction for a Planck-scale lattice is:
+     (1000 / 1.22e19)^2 / 12 = 5.5906e-34
+
+     This is ~10^-32, which JUST touches the photon birefringence bound.
+     At the LHC energy scale (14 TeV):
+     (14000 / 1.22e19)^2 / 12 = 1.0958e-31
+
+     Still below the birefringence bound by a factor of ~100.
+
+
+==============================================================================
+7. COMPREHENSIVE PREDICTION TABLE
+==============================================================================
+
+  Lattice: a = l_Planck = 1.6163e-35 m
+  Leading LV coefficient: a^2/12 = 5.6090e-40 GeV^-2
+
+  E (GeV)      (E/E_Pl)^2     |delta E^2/E^2|    |delta v/v|    Best bound     Margin        
+  ──────────── ────────────── ────────────────── ────────────── ────────────── ──────────────
+  1.0e-03      6.71e-45       5.61e-46           2.80e-46       1.00e-27       2.80e-19      
+  1.0e-01      6.71e-41       5.61e-42           2.80e-42       1.00e-27       2.80e-15      
+  1.0e+00      6.71e-39       5.61e-40           2.80e-40       1.00e-23       2.80e-17      
+  1.0e+01      6.71e-37       5.61e-38           2.80e-38       1.00e-23       2.80e-15      
+  1.0e+02      6.71e-35       5.61e-36           2.80e-36       2.50e-22       1.12e-14      
+  1.0e+03      6.71e-33       5.61e-34           2.80e-34       2.50e-22       1.12e-12      
+  1.0e+04      6.71e-31       5.61e-32           2.80e-32       2.50e-22       1.12e-10      
+  1.0e+07      6.71e-25       5.61e-26           2.80e-26       1.00e-20       2.80e-06      
+  1.0e+10      6.71e-19       5.61e-20           2.80e-20       1.00e-20       2.80e+00      
+
+==============================================================================
+8. DIRECTIONAL ANISOTROPY (CUBIC LATTICE FINGERPRINT)
+==============================================================================
+
+  The cubic symmetry creates direction-dependent propagation.
+  f_4(theta, phi) = sum_i (n_i)^4 for unit vector n.
+
+  Direction            theta      phi        f_4        deviation from 3/5
+  ──────────────────── ────────── ────────── ────────── ────────────────────
+  axis [100]           0.0000     0.0000     1.0000     +0.4000
+  face diag [110]      0.7854     0.0000     0.5000     -0.1000
+  body diag [111]      0.9553     0.7854     0.3333     -0.2667
+
+  The ratio f_4(axis) / f_4(diagonal) = 3.0
+
+  This factor-of-3 anisotropy is the FINGERPRINT of cubic lattice
+  Lorentz violation. Any detection of anisotropic LV with this specific
+  angular pattern (Y_40 + sqrt(5/14)(Y_44 + Y_(4, -4))) would be
+  evidence for a cubic underlying structure.
+
+  At the Planck-scale suppression level (~10^-38 at 1 GeV), this
+  anisotropy is undetectable. But the PATTERN is a prediction:
+  if Lorentz violation is ever detected, check for cubic harmonics.
+
+
+==============================================================================
+HYPOTHESIS VERDICT
+==============================================================================
+
+  PREDICTIONS OF THE CUBIC LATTICE FRAMEWORK:
+
+  1. Lorentz symmetry breaking: YES
+     - Cubic group O_h replaces SO(3,1)
+     - Leading correction: -(a^2/12) sum_i p_i^4
+     - Dimension-6 operator in SME framework
+
+  2. CPT violation: NO
+     - C, P, T each individually exact on cubic lattice
+     - All CPT-odd SME coefficients are identically zero
+     - This is FALSIFIABLE: detection of CPT-odd LV would exclude the model
+
+  3. SME coefficient values (a = l_Planck):
+     - c^(6)_{(I)00} ~ -3.37e-40 GeV^-2 (isotropic)
+     - c^(6)_{(I)40} ~ -4.49e-40 GeV^-2 (anisotropic)
+     - All CPT-odd coefficients = 0 exactly
+
+  4. Natural suppression:
+     - (E/E_Planck)^2 ~ 10^-38 at E = 1 GeV
+     - Below ALL current experimental bounds by >= 6 orders of magnitude
+     - Consistent with null results in all LV searches
+
+  5. Staggered fermion taste-breaking:
+     - Enhances LV by factor 2-4 depending on taste channel
+     - Still far below experimental bounds
+     - Predicts flavor-dependent LV (testable in principle)
+
+  6. Characteristic angular signature:
+     - Cubic harmonics (j=4 with m=0, +4, -4)
+     - Factor of 3 anisotropy between lattice axis and body diagonal
+     - Unique fingerprint distinguishing cubic from other Planck-scale models
+
+  BOTTOM LINE:
+    The lattice framework is CONSISTENT with all current data.
+    The predicted Lorentz violation is undetectably small at accessible
+    energies, exactly as expected for a Planck-scale structure.
+    The model makes strong structural predictions (CPT exact, cubic
+    angular pattern, specific SME coefficient ratios) that could be
+    tested if sensitivity improves by ~6 orders of magnitude in the
+    photon birefringence sector.
+
+  Elapsed: 0.0 s
+
+==============================================================================
+EXPERIMENT COMPLETE
+==============================================================================
+
+----- stderr -----
+

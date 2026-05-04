@@ -1,0 +1,98 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_fusion_engine.py
+runner_sha256: 2a6ed68c8a346fcb034c783037f44b9ec7c876e09978267781df238d3fa6a5ca
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.55
+status: ok
+----- stdout -----
+==============================================================================
+SU(3) Fusion Engine via Cartan-Torus Character Orthogonality
+PR 1 of 5-PR engine roadmap
+  NMAX = 4, Cartan-torus n_grid = 80
+==============================================================================
+
+Dominant-weight box (25 weights): [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4)]...[(4, 2), (4, 3), (4, 4)]
+Highest-dim irrep in box: (4, 4) (dim 125)
+
+Pre-computing character table on Cartan-torus grid...
+  characters computed:    shape (25, 80, 80)
+  Haar normalization Z:   1.0000000000  (should be 1.0)
+
+Sanity checks: <chi_lambda, chi_lambda> = 1 (orthogonality of characters)
+  (0,0)  ->  <chi, chi> = 1.00000000
+  (0,1)  ->  <chi, chi> = 1.00000000
+  (0,2)  ->  <chi, chi> = 1.00000000
+  (0,3)  ->  <chi, chi> = 1.00000000
+  (0,4)  ->  <chi, chi> = 1.00000000
+  max |<chi,chi> - 1| = 1.110e-16
+
+Computing full fusion table N^nu_(lambda, mu) via character orthogonality...
+  fusion table:           shape (25, 25, 25), dtype int64
+  max integer residual:   5.187e-15  (should be << 0.5)
+  total nonzero entries:  3049
+
+Selected explicit fusion decompositions:
+  (1,0)[d=3] ⊗ (0,1)[d=3] (d_lhs=9) = 
+    (0,0)[d=1] + (1,1)[d=8]
+    (sum d = 9, ratio 1.0000)
+  (1,0)[d=3] ⊗ (1,0)[d=3] (d_lhs=9) = 
+    (0,1)[d=3] + (2,0)[d=6]
+    (sum d = 9, ratio 1.0000)
+  (1,1)[d=8] ⊗ (1,0)[d=3] (d_lhs=24) = 
+    (1,0)[d=3] + (0,2)[d=6] + (2,1)[d=15]
+    (sum d = 24, ratio 1.0000)
+  (2,0)[d=6] ⊗ (0,2)[d=6] (d_lhs=36) = 
+    (0,0)[d=1] + (1,1)[d=8] + (2,2)[d=27]
+    (sum d = 36, ratio 1.0000)
+  (1,1)[d=8] ⊗ (1,1)[d=8] (d_lhs=64) = 
+    (0,0)[d=1] + 2*(1,1)[d=8] + (0,3)[d=10] + (3,0)[d=10] + (2,2)[d=27]
+    (sum d = 64, ratio 1.0000)
+  (2,1)[d=15] ⊗ (1,0)[d=3] (d_lhs=45) = 
+    (2,0)[d=6] + (1,2)[d=15] + (3,1)[d=24]
+    (sum d = 45, ratio 1.0000)
+
+Validation suite:
+
+  [PASS] [PASS] V1: 3 ⊗ 3̄ = 8 ⊕ 1
+           got (0,0)[d=1] + (1,1)[d=8]; expected (0,0)[d=1] + (1,1)[d=8]
+  [PASS] [PASS] V2: 3 ⊗ 3 = 6 ⊕ 3̄
+           got (0,1)[d=3] + (2,0)[d=6]; expected (0,1)[d=3] + (2,0)[d=6]
+  [PASS] [PASS] V3: 8 ⊗ 8 = 27 ⊕ 10 ⊕ 10̄ ⊕ 8 ⊕ 8 ⊕ 1
+           got (0,0)[d=1] + 2*(1,1)[d=8] + (0,3)[d=10] + (3,0)[d=10] + (2,2)[d=27]; expected (0,0)+2(1,1)+(0,3)+(3,0)+(2,2)
+  [PASS] [PASS] V4: 6 ⊗ 6̄ = 27 ⊕ 8 ⊕ 1
+           got (0,0)[d=1] + (1,1)[d=8] + (2,2)[d=27]; expected (0,0)+(1,1)+(2,2)
+  [PASS] [PASS] V5: commutativity N^ν_(λ,μ) = N^ν_(μ,λ)
+           asymmetric entries: 0
+  [PASS] [PASS] V6: singlet selection N^(0,0)_(λ,μ) = δ_(μ, λ̄)
+           selection-rule errors: 0
+  [PASS] [PASS] V7: dimension count sum_ν N^ν_(λ,μ) d_ν ≤ d_λ d_μ (= when product fits in NMAX box)
+           dimension overflow errors: 0; examples: []
+  [PASS] [PASS] V8: crossing N^ν_(λ,μ) = N^λ_(ν, μ̄)
+           crossing errors: 0
+  [PASS] [PASS] V9: fundamental Pieri (1,0) ⊗ (a,b) = (a+1,b) + (a-1,b+1) + (a,b-1)
+           Pieri rule errors: 0
+
+Numerical noise diagnostics:
+  max integer residual over all (lam, mu, nu): 5.187e-15
+  PASS: residual < 0.05; integer rounding is safe.
+
+  total dim sum over weight box: 825
+
+==============================================================================
+SUMMARY: BOUNDED PASS=10 FAIL=0
+==============================================================================
+
+Engine status: PR 1 deliverable — bounded fusion multiplicities N^ν_(λ,μ)
+computed for all triples within the finite dominant-weight box.
+
+Next steps in the engine roadmap:
+  PR 2: SU(3) Wigner intertwiner / Clebsch-Gordan coefficient engine
+  PR 3: SU(3) Haar integral primitives (1-link, multi-link)
+  PR 4: generic tensor-network contraction engine on lattice graphs
+  PR 5: L_s=2 APBC cube geometry + ρ_(p,q)(6) computation + P(6) bridge-gate check
+
+See docs/SU3_TENSOR_NETWORK_ENGINE_ROADMAP_NOTE_2026-05-03.md
+
+----- stderr -----
+

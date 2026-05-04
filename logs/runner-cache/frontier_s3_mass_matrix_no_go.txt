@@ -1,0 +1,47 @@
+===== runner cache v1 =====
+runner: scripts/frontier_s3_mass_matrix_no_go.py
+runner_sha256: b9e9480816a49471c6f84dbd984bb6bf7cda5a8007e8b4cc8071b68c3bd94c6c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================
+S_3 MASS-MATRIX NO-GO ON THE hw=1 TRIPLET
+========================================================================
+
+========================================================================
+PART 1: S_3-invariant Hermitian algebra on hw=1
+========================================================================
+  [PASS] dim End(C^3)^(S_3) = 2  (rank = 2)
+  [PASS] I_3 is S_3-invariant
+  [PASS] J_3 is S_3-invariant
+  [PASS] P_(A_1) is idempotent
+  [PASS] rank P_(A_1) = 1
+
+========================================================================
+PART 2: Forced two-value spectrum
+========================================================================
+  [PASS] spectrum matches (+1.00, +0.00)  (got [1.0, 1.0, 1.0])
+  [PASS] spectrum matches (+1.00, +1.00)  (got [1.0, 1.0000000000000002, 2.0])
+  [PASS] spectrum matches (+0.50, +2.00)  (got [0.4999999999999999, 0.49999999999999994, 2.5])
+  [PASS] spectrum matches (-1.00, +3.00)  (got [-1.0000000000000002, -1.0, 1.9999999999999998])
+  [PASS] beta = 0 gives one distinct eigenvalue
+  [PASS] beta != 0 gives exactly two distinct eigenvalues  (distinct = 2)
+
+========================================================================
+PART 3: Random audit of the exact S_3 class
+========================================================================
+  [PASS] no random S_3-invariant sample exceeds two spectral values  (max distinct = 2)
+
+========================================================================
+PART 4: Residual Z_2 dimension jump
+========================================================================
+  [PASS] dim End(C^3)^(Z_2) = 5  (rank = 5)
+
+========================================================================
+TOTAL: PASS=13, FAIL=0
+========================================================================
+
+----- stderr -----
+

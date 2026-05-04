@@ -1,0 +1,20 @@
+===== runner cache v1 =====
+runner: scripts/frontier_planck_parent_source_hidden_character_nogo.py
+runner_sha256: 7df907f610b12f3d00db4f67266e48d63e4ca5220738d2e1b33658dcb4b6a86b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+[PASS] carrier map has a nontrivial hidden-character kernel: hidden direction (0,1) leaves carrier data fixed but shifts Schur-event scalar equality
+[PASS] same carrier data allow different parent-source scalars: C(parent_a)=C(parent_b)=0.250; p_Schur=0.250 vs 0.350
+[PASS] no carrier-only function can recover the Schur scalar on the fiber: any function of carrier data alone gives one value on both parents, but the Schur scalar gives two
+[PASS] Schur/event equality is equivalent to the no-hidden-character law on this fiber: p_Schur = p_event iff delta = 0
+[PASS] hidden scalar changes the Planck normalization if used as the coefficient: delta=0 gives a/l_P=1.000000000000; delta=0.10 gives 1.183215956620
+[PASS] parent-source scalar route closes negatively without an extra law: carrier commutation alone leaves an affine scalar free; promotion requires a no-hidden-character law, not another carrier-only diagram
+
+Summary: 6/6 checks passed.
+Verdict: the unconstrained parent-source scalar route is a no-go; the remaining positive target is an explicit no-hidden-character law or a direct carrier-identification theorem.
+
+----- stderr -----
+

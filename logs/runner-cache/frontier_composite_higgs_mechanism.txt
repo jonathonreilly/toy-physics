@@ -1,0 +1,179 @@
+===== runner cache v1 =====
+runner: scripts/frontier_composite_higgs_mechanism.py
+runner_sha256: 227d93e46d7ecd5e88cdaf6d07d61d4ce121777dc363c808018f89beb918e2f7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.86
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 0: Cited authority files exist on disk (one-hop discipline)
+----------------------------------------------------------------------------------------
+  [PASS (A)] docs/COMPOSITE_HIGGS_MECHANISM_STRETCH_ATTEMPT_NOTE_2026-05-03.md exists  (path=/private/tmp/gate-fix-worktree/docs/COMPOSITE_HIGGS_MECHANISM_STRETCH_ATTEMPT_NOTE_2026-05-03.md)
+  [PASS (A)] Current matter-content/EWSB harness exists  (path=UNIFIED_MATTER_CONTENT_EWSB_HARNESS_THEOREM_NOTE_2026-05-03.md)
+  [PASS (A)] Current hypercharge normalization support exists  (path=LHCM_Y_NORMALIZATION_FROM_ANOMALY_AND_CONVENTION_NOTE_2026-05-02.md)
+  [PASS (A)] One-Higgs Yukawa gauge-selection guardrail exists  (path=SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md)
+  [PASS (A)] Higgs-Y from LHCM/Yukawa support exists  (path=HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md)
+  [PASS (A)] Koide Z3 scalar potential authority exists  (path=KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md)
+  [PASS (A)] EW Fierz channel decomposition authority exists  (path=EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md)
+
+----------------------------------------------------------------------------------------
+Part 1: Cycle 06 derived rep — Y values at exact Fraction precision
+----------------------------------------------------------------------------------------
+  [PASS (A)] Y(Q_L) = +1/3 (cycle 06)  (1/3)
+  [PASS (A)] Y(L_L) = -1 (cycle 06)  (-1)
+  [PASS (A)] Y(u_R) = +4/3 (cycle 06)  (4/3)
+  [PASS (A)] Y(d_R) = -2/3 (cycle 06)  (-2/3)
+  [PASS (A)] Y(e_R) = -2 (cycle 06)  (-2)
+  [PASS (A)] Y(ν_R) = 0 (cycle 06)  (0)
+
+----------------------------------------------------------------------------------------
+Part 2: Bilinear hypercharges — cycle 08 quantum-number match
+----------------------------------------------------------------------------------------
+  [PASS (A)] Y(q̄_L) = -1/3  (-1/3)
+  [PASS (A)] Y(l̄_L) = +1  (1)
+  [PASS (A)] Y(Φ_1) = Y(q̄_L u_R) = +1 (Φ̃-equivalent)  (-1/3 + 4/3 = 1)
+  [PASS (A)] Y(Φ_2) = Y(q̄_L d_R) = -1 (Φ-equivalent)  (-1/3 + (-2/3) = -1)
+  [PASS (A)] Y(Φ_3) = Y(l̄_L e_R) = -1 (Φ-equivalent)  (+1 + (-2) = -1)
+  [PASS (A)] Counterfactual Y(q̄_L Q_L) = 0 (no doublet/Higgs-like)  (-1/3 + 1/3 = 0)
+  [PASS (A)] Counterfactual Y(u_R d_R) = +2/3 (no SU(2) doublet)  (4/3 + (-2/3) = 2/3)
+
+----------------------------------------------------------------------------------------
+Part 3: Y-flip convention — Φ̃ = i σ_2 Φ* gives Y → -Y
+----------------------------------------------------------------------------------------
+  [PASS (A)] Y(Φ_1') = -Y(Φ_1) = -1 (i σ_2 conjugate convention)  (-1 = -1)
+  [PASS (A)] Y(Φ_2') = Y(Φ_2) = -1 (no flip needed)  (-1)
+  [PASS (A)] Y(Φ_3') = Y(Φ_3) = -1 (no flip needed)  (-1)
+  [PASS (A)] All three Φ_i' share Y = -1 (uniform doublet basis for Z3 action)  ((-1, -1, -1))
+
+----------------------------------------------------------------------------------------
+Part 4: Z3 cube-root-of-unity arithmetic (sympy exact)
+----------------------------------------------------------------------------------------
+  [PASS (A)] 1 + ω + ω² = 0 (sympy exact, canonical form)  (= 0)
+  [PASS (A)] ω³ = 1 (sympy exact)  (= 1)
+  [PASS (A)] ω · ω² = 1 (sympy exact)  (= 1)
+  [PASS (A)] conjugate(ω) = ω² (Z3 outer automorphism)  (conj(ω)=-1/2 - sqrt(3)*I/2, ω²=-1/2 - sqrt(3)*I/2)
+
+----------------------------------------------------------------------------------------
+Part 5: Z3-covariant composite scalar decomposition
+----------------------------------------------------------------------------------------
+  [PASS (A)] Z3 cycle preserves Φ_eff^(0) (Z3-singlet)  (diff = 0)
+  [PASS (A)] Z3 cycle on Φ_eff^(1) gives ω² · Φ_eff^(1)  (Φ_eff^(1) is Z3 charge ω²)
+  [PASS (A)] Z3 cycle on Φ_eff^(2) gives ω · Φ_eff^(2)  (Φ_eff^(2) is Z3 charge ω)
+  [PASS (A)] P1 = (1/3)(Φ_eff^(0) + Φ_eff^(1) + Φ_eff^(2)) (spans recovered)  (P1_rec = P1)
+
+----------------------------------------------------------------------------------------
+Part 6: Multi-channel effective Yukawa suppression
+----------------------------------------------------------------------------------------
+  [PASS (A)] Multi-channel suppression factor = 1/N_z3 = 1/3  (1/N_z3 = 1/3 = 1/3)
+  [PASS (A)] Multi-channel m_top^multi = m_top^BHL_single / 3 = 200 GeV (structural)  (600/3 = 200 (NOT a closing derivation))
+  [PASS (A)] Residual factor 200/173 named as gap for NO3 (strong-coupling magnitude)  (200/173 = 1.1561 ≈ 1.16x (gap = NO3))
+
+----------------------------------------------------------------------------------------
+Part 7: Z3-symmetric VEV — Φ_eff^(1) and Φ_eff^(2) vanish
+----------------------------------------------------------------------------------------
+  [PASS (A)] ⟨Φ_eff^(0)⟩ = 3 v_unit at Z3-symmetric VEV  (Φ_eff^(0) = 3*v_unit)
+  [PASS (A)] ⟨Φ_eff^(1)⟩ = 0 at Z3-symmetric VEV (1+ω+ω²=0)  (Φ_eff^(1) = 0)
+  [PASS (A)] ⟨Φ_eff^(2)⟩ = 0 at Z3-symmetric VEV  (Φ_eff^(2) = 0)
+
+----------------------------------------------------------------------------------------
+Part 8: Counterfactual — single-channel condensate breaks Z3
+----------------------------------------------------------------------------------------
+  [PASS (A)] Single-channel ⟨P1⟩ ≠ 0, ⟨P2⟩ = ⟨P3⟩ = 0 breaks Z3 explicitly  ((v,0,0) and (0,v,0) not proportional ⇒ NOT a Z3 eigenvector)
+  [PASS (A)] Single-channel projects onto ALL THREE Z3 charges (1/3, 1/3, 1/3)  ((v,0,0) = (v/3)(Φ_eff^(0) + Φ_eff^(1) + Φ_eff^(2)))
+
+----------------------------------------------------------------------------------------
+Part 9: Counterfactual — Z3 phase orderings (1, ω, ω²) ~ (1, ω², ω) under conjugation
+----------------------------------------------------------------------------------------
+  [PASS (A)] Z3 outer automorphism: conjugate(ω) = ω² ⇒ phase orderings equivalent  (conj(ω) - ω² = 0)
+
+----------------------------------------------------------------------------------------
+Part 10: Mass-ratio falsifier — equal-magnitude H2 + Z3-symmetric Yukawa contradicts observation
+----------------------------------------------------------------------------------------
+  [PASS (A)] Falsifier: m_top ≠ m_bottom ≠ m_tau (full Z3 sym broken in observation)  ((173, 209/50, 89/50) — not equal ⇒ Z3 broken somewhere)
+  [PASS (A)] Falsifier: m_top/m_bottom ≈ 41 ⇒ structural Z3 breaking in Yukawa or condensate  (m_top/m_bottom = 41.39 ≈ 41)
+
+----------------------------------------------------------------------------------------
+Part 11: Goldstone mode counting — preserved under multi-channel
+----------------------------------------------------------------------------------------
+  [PASS (A)] 4 SU(2)×U(1)_Y generators - 1 unbroken U(1)_em = 3 Goldstones  (4 - 1 = 3)
+  [PASS (A)] Z3 discrete symmetry adds 0 Goldstones (multi-channel preserves count)  (Z3 is discrete, not continuous; total Goldstones = 3 (preserved))
+
+----------------------------------------------------------------------------------------
+Part 12: Cycle 15 g_2²|_lattice = 1/(d+1) = 1/4 at one hop
+----------------------------------------------------------------------------------------
+  [PASS (A)] g_2²|_lattice = 1/(d+1) = 1/4 (cycle 15 retained)  (1/(3+1) = 1/4)
+  [PASS (A)] g_2² = 1/4 cited at one hop in cycle 20 cross-references  (cycle 15 retained; one-hop reference only (not load-bearing for Route B))
+
+----------------------------------------------------------------------------------------
+Part 13: EW Fierz channel decomposition — adjoint vs singlet fractions
+----------------------------------------------------------------------------------------
+  [PASS (A)] Adjoint channel fraction = 8/9 at N_c = 3  ((9-1)/9 = 8/9)
+  [PASS (A)] Singlet channel fraction = 1/9 at N_c = 3  (1/9 = 1/9)
+  [PASS (A)] Adjoint + singlet = 1 (exhaustive decomposition)  (8/9 + 1/9 = 1)
+
+----------------------------------------------------------------------------------------
+Part 14: Named residual obstructions NO1, NO2, NO3 present in note
+----------------------------------------------------------------------------------------
+  [PASS (A)] Note contains: 'NO1'  ()
+  [PASS (A)] Note contains: 'NO2'  ()
+  [PASS (A)] Note contains: 'NO3'  ()
+  [PASS (A)] Note contains: 'Z3 generation action'  ()
+  [PASS (A)] Note contains: 'Equal-magnitude condensate'  ()
+  [PASS (A)] Note contains: 'Strong-coupling magnitude'  ()
+
+----------------------------------------------------------------------------------------
+Part 15: Note structure (cycle 08 sharpening + Route B candidate)
+----------------------------------------------------------------------------------------
+  [PASS (A)] Note contains section: 'Multi-Channel Z3-Phased Composite Scalar'  ()
+  [PASS (A)] Note contains section: 'stretch_attempt'  ()
+  [PASS (A)] Note contains section: 'A_min'  ()
+  [PASS (A)] Note contains section: 'Forbidden imports'  ()
+  [PASS (A)] Note contains section: 'Worked attempt'  ()
+  [PASS (A)] Note contains section: 'Step 1'  ()
+  [PASS (A)] Note contains section: 'Step 2'  ()
+  [PASS (A)] Note contains section: 'Step 3'  ()
+  [PASS (A)] Note contains section: 'Step 4'  ()
+  [PASS (A)] Note contains section: 'Step 5'  ()
+  [PASS (A)] Note contains section: 'Step 6'  ()
+  [PASS (A)] Note contains section: 'Step 7'  ()
+  [PASS (A)] Note contains section: 'Step 8'  ()
+  [PASS (A)] Note contains section: 'NO1'  ()
+  [PASS (A)] Note contains section: 'NO2'  ()
+  [PASS (A)] Note contains section: 'NO3'  ()
+  [PASS (A)] Note contains section: 'Cited dependencies'  ()
+  [PASS (A)] Note contains section: 'Validation'  ()
+  [PASS (A)] Note contains section: 'Cross-references'  ()
+
+----------------------------------------------------------------------------------------
+Part 16: Forbidden imports — no PDG values consumed as derivation inputs
+----------------------------------------------------------------------------------------
+  [PASS (A)] Note contains forbidden-import disclaimer: 'No PDG values'  ()
+  [PASS (A)] Note contains forbidden-import disclaimer: 'No PDG observed values consumed as derivation inputs'  ()
+  [PASS (A)] Note contains forbidden-import disclaimer: 'NOT used as fitting input'  ()
+  [PASS (A)] Note contains forbidden-import disclaimer: 'falsifier-target'  ()
+
+----------------------------------------------------------------------------------------
+Part 17: Y-arithmetic for three bilinears (exact Fraction recompute)
+----------------------------------------------------------------------------------------
+  [PASS (A)] Recompute Y(q̄_L u_R) = +1  (4/3 - 1/3 = 1)
+  [PASS (A)] Recompute Y(q̄_L d_R) = -1  (-2/3 - 1/3 = -1)
+  [PASS (A)] Recompute Y(l̄_L e_R) = -1  (-2 - (-1) = -1)
+
+========================================================================================
+  TOTAL: PASS=82, FAIL=0
+========================================================================================
+
+  Output type: (c) STRETCH ATTEMPT with multi-channel Z3 candidate
+  + 3 named residual obstructions (NO1, NO2, NO3)
+  Cycle 20 of physics-loop campaign successor
+  Note: docs/COMPOSITE_HIGGS_MECHANISM_STRETCH_ATTEMPT_NOTE_2026-05-03.md
+
+  All cycle-08 obstructions O1, O2, O3 SHARPENED with Route B candidate.
+  Cycle-08 O3 (multi-bilinear selector) NARROWED structurally under H1/H2.
+  Cycle-08 O2 (BHL m_top ~ 600 GeV) PARTIALLY ADDRESSED (multi-channel suppression 1/3).
+  Cycle-08 O1 (mechanism for ⟨q̄_L u_R⟩ ≠ 0) CANDIDATE DIRECTION IDENTIFIED, magnitude → NO3.
+
+----- stderr -----
+

@@ -1,0 +1,61 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lattice_physical_matching_cluster_obstruction.py
+runner_sha256: f9cfab4b97beb2f9d8965332654a7cb6f8a9933e0e8cbbe69298e100f14e0a07
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: cluster note structure
+----------------------------------------------------------------------------------------
+  [PASS (A)] contains: 'Lattice → Physical Matching Cluster Obstruction Theorem'  ()
+  [PASS (A)] contains: 'named-obstruction synthesis theorem'  ()
+  [PASS (A)] contains: 'yt_ew matching rule M'  ()
+  [PASS (A)] contains: 'gauge-scalar observable bridge'  ()
+  [PASS (A)] contains: 'Higgs mass from axiom'  ()
+  [PASS (A)] contains: '(O1) Schwinger-Dyson'  ()
+  [PASS (A)] contains: '(O2) Effective-action'  ()
+  [PASS (A)] contains: '(O3) Renormalization-group'  ()
+  [PASS (A)] contains: 'Nature-grade target'  ()
+  [PASS (A)] contains: 'proposal_allowed: false'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: 3 sister cycles cited
+----------------------------------------------------------------------------------------
+  [PASS (A)] sister PR: #260  ()
+  [PASS (A)] sister PR: #268  ()
+  [PASS (A)] sister PR: #271  ()
+  [PASS (A)] sister cycle: Cycle 5  ()
+  [PASS (A)] sister cycle: Cycle 9  ()
+  [PASS (A)] sister cycle: Cycle 11  ()
+
+----------------------------------------------------------------------------------------
+Part 3: 3 resolution routes documented
+----------------------------------------------------------------------------------------
+  [PASS (A)] resolution path: Resolution A:  ()
+  [PASS (A)] resolution path: Resolution B:  ()
+  [PASS (A)] resolution path: Resolution C:  ()
+  [PASS (A)] resolution path: novel non-perturbative matching theorem  ()
+  [PASS (A)] resolution path: renormalization-scheme classification  ()
+  [PASS (A)] resolution path: lattice MC computation  ()
+
+----------------------------------------------------------------------------------------
+Part 4: A_min and forbidden imports
+----------------------------------------------------------------------------------------
+  [PASS (A)] A_min: graph-first SU(N_c) integration  ()
+  [PASS (A)] A_min: Wilson gauge action  ()
+  [PASS (A)] A_min: 1/N_c topological expansion  ()
+  [PASS (A)] A_min: Fierz identity  ()
+  [PASS (A)] A_min: OZI rule  ()
+  [PASS (A)] forbidden: PDG observed values  ()
+  [PASS (A)] forbidden: Lattice MC empirical  ()
+  [PASS (A)] forbidden: Fitted matching coefficients  ()
+
+========================================================================================
+  TOTAL: PASS=30, FAIL=0
+========================================================================================
+
+----- stderr -----
+

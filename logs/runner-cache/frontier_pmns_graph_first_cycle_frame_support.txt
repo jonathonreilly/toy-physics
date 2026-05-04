@@ -1,0 +1,68 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_graph_first_cycle_frame_support.py
+runner_sha256: 6bab808d772216952c6038347f5fefd6f506f49918b98b4a50422cec19a24e9f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.06
+status: ok
+----- stdout -----
+========================================================================================
+PMNS GRAPH-FIRST CYCLE FRAME SUPPORT
+========================================================================================
+
+Question:
+  Does graph-first axis selection plus graph-first SU(3) integration
+  canonically order / frame-fix the oriented-cycle basis strongly enough
+  to support a future value law?
+
+========================================================================================
+PART 1: SELECTED AXIS FIXES A SINGLE GRAPH FRAME
+========================================================================================
+  [PASS] S_1 is Hermitian
+  [PASS] S_2 is Hermitian
+  [PASS] S_3 is Hermitian
+  [PASS] The graph-first selector has exactly three axis minima  (count=3)
+  [PASS] Axis minimum e1 is a coordinate axis
+  [PASS] Axis minimum e2 is a coordinate axis
+  [PASS] Axis minimum e3 is a coordinate axis
+  [PASS] Selected-axis graph basis is unitary
+  [PASS] Selected-axis graph basis factorization is exact
+
+========================================================================================
+PART 2: GRAPH-FIRST SU(3) INTEGRATION FIXES THE CYCLE TRANSPORT ORDER
+========================================================================================
+  [PASS] Forward transport from E11 gives E12
+  [PASS] Forward transport from E22 gives E23
+  [PASS] Forward transport from E33 gives E31
+  [PASS] The canonical oriented-cycle frame is exactly E12,E23,E31
+
+========================================================================================
+PART 3: RESIDUAL SWAP FIXES THE FRAME UP TO THE EXISTING CYCLE REVERSAL
+========================================================================================
+  [PASS] Residual swap exchanges E12 and E31
+  [PASS] Residual swap fixes E23
+  [PASS] Residual swap exchanges E31 and E12
+  [PASS] A generic cycle block is not fixed unless coefficients satisfy the reduced symmetry  (error=1.13e-01)
+
+========================================================================================
+PART 4: THE FRAME IS FIXED ENOUGH TO SUPPORT A FUTURE VALUE LAW
+========================================================================================
+  [PASS] The ordered cycle frame is canonical
+  [INFO] The frame is support-fixed, not coefficient-fixed
+  [INFO] The route is enough to state future value laws invariantly
+
+========================================================================================
+RESULT
+========================================================================================
+  The graph-first selector and graph-first SU(3) integration do canonically
+  fix the oriented-cycle frame:
+    E12, E23, E31
+  This is strong enough to support a future coefficient/value law, but it
+  is not itself a positive selector for those coefficients.
+
+  So the answer is a sharp support theorem, not a value-selection theorem.
+
+PASS=18 FAIL=0
+
+----- stderr -----
+

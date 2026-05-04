@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_active_half_plane_theorem.py
+runner_sha256: f539b4aa3f6da7cc83bb653316a9e98981f89f23cec7cdc00a40a0d98ec33612
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.60
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE ACTIVE HALF-PLANE THEOREM
+========================================================================================
+
+Question:
+  After reducing the live source-oriented quotient bundle to active
+  carrier coordinates (delta, q_+), what exact domain remains, and how
+  much of that domain is still seen by the current exact source-facing bank?
+
+========================================================================================
+PART 1: THE ACTIVE BUNDLE IS EXACTLY A CLOSED HALF-PLANE
+========================================================================================
+  [PASS] The active coordinates admit an exact inverse chart r31 = sqrt((q_+ - sqrt(8/3) + delta)^2 + 1/4)  (q_+ <-> r31 is exact on the positive carrier chart)
+  [PASS] The active bundle is therefore the closed half-plane q_+ >= sqrt(8/3) - delta  (the square-root offset is nonnegative by construction)
+  [PASS] The boundary q_+ = sqrt(8/3) - delta is exactly r31 = 1/2 and phi_+ = pi/2  (gamma=0.500000000000)
+
+========================================================================================
+PART 2: EVERY ACTIVE HALF-PLANE POINT HAS A POSITIVE REPRESENTATIVE
+========================================================================================
+  [PASS] Every active half-plane point already has a positive Hermitian representative after a common diagonal shift  (positivity is not an extra restriction on the active chamber)
+  [PASS] On that chamber the exact carrier response is gamma = 1/2, delta+rho = sqrt(8/3), sigma sin(2v) = 8/9, sigma cos(2v) = sqrt(8)/9 - 3 q_+  (max err=1.44e-15)
+
+========================================================================================
+PART 3: THE CURRENT EXACT SOURCE-FACING BANK IS CONSTANT ON THE WHOLE HALF-PLANE
+========================================================================================
+  [PASS] Across the exact active half-plane the source-surface data, intrinsic CP pair, intrinsic slot pair, and slot torsion stay fixed  (torsion=0.429300367240)
+  [PASS] Keeping delta fixed while changing q_+ leaves the current exact source-facing bank unchanged  (so q_+ is not selected by the current bank)
+  [PASS] Keeping q_+ fixed while changing delta also leaves the current exact source-facing bank unchanged  (so delta is not selected by the current bank either)
+  [PASS] So the current bank determines the exact active chamber but not a point inside it  (the remaining mainline object is the law selecting one active-half-plane point)
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE ACTIVE HALF-PLANE
+========================================================================================
+  [PASS] The new note records the exact active half-plane q_+ >= sqrt(8/3) - delta
+  [PASS] The new note records that the current bank fixes the chamber but not a point inside it
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact mainline answer:
+    - the live active bundle is exactly the closed half-plane
+      q_+ >= sqrt(8/3) - delta
+    - every point on that chamber already has a positive Hermitian
+      representative and the exact carrier response
+    - the current exact source-facing bank is constant on that whole chamber
+    - so the remaining mainline object is the post-canonical law that
+      selects one point on the active half-plane
+
+PASS=11 FAIL=0
+
+----- stderr -----
+

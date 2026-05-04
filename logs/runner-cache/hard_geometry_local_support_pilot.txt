@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/hard_geometry_local_support_pilot.py
+runner_sha256: bb4bd4c696c070fd52433d263faadc701a55f9f79341d81fe2c71f85bbc2abf1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 20.44
+status: ok
+----- stdout -----
+================================================================================================================================
+HARD-GEOMETRY LOCAL SUPPORT PILOT
+  local event-persistence rules vs hard-gap comparator
+  npl=60, connect_radius=3.0, xyz_range=12.0
+  support_thresh=0.65, |y|_thresh=2.0, seeds=4
+================================================================================================================================
+
+     N              mode      pur_cl    S_norm        grav    rem%   ok
+  --------------------------------------------------------------------------
+    40          baseline   0.9441±0.037    0.1285     +0.0300      --    4
+    40        local-1hop   0.9422±0.038    0.1398     -0.4460    7.6%    4
+    40        local-2hop   0.9563±0.039    0.1524     -0.6874   11.0%    4
+    40           |y|<2.0   0.9671±0.025    0.1769     -0.0564   17.1%    4
+
+    60          baseline   0.9748±0.010    0.0959     -1.6056      --    4
+    60        local-1hop   0.9687±0.015    0.0972     -1.4505    7.4%    4
+    60        local-2hop   0.9563±0.012    0.1035     -1.3148    9.1%    4
+    60           |y|<2.0   0.9784±0.008    0.1401     -0.8216   16.2%    4
+
+    80          baseline   0.9847±0.014    0.0145     -0.2357      --    4
+    80        local-1hop   0.9927±0.005    0.0144     +0.2137    7.9%    4
+    80        local-2hop   0.9936±0.004    0.0146     +0.2797    9.7%    4
+    80           |y|<2.0   0.9950±0.004    0.0181     +0.8871   16.7%    4
+
+READ:
+  local-1hop / local-2hop near hard-gap => local persistence may be enough
+  hard-gap still best => geometry remains the main ingredient
+  all local rules weak => nonlocal path structure still needed
+
+----- stderr -----
+

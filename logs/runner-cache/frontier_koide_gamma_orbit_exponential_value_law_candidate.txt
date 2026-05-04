@@ -1,0 +1,48 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_gamma_orbit_exponential_value_law_candidate.py
+runner_sha256: 34cfe237a42f4f31b93ffd819248382a8bd33785ea7f6ec356554f7d1d6b5633
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.45
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: a natural positive T_2 spectral family gives exact slot values v(beta), w(beta)
+========================================================================================
+  [PASS] [NUMERIC] H_* is Hermitian
+  [PASS] [NUMERIC] exp(beta H_*) is positive Hermitian for beta=-1.0  (min eig=0.101612)
+  [PASS] [NUMERIC] exp(beta H_*) is positive Hermitian for beta=+0.0  (min eig=1.000000)
+  [PASS] [NUMERIC] exp(beta H_*) is positive Hermitian for beta=+1.0  (min eig=0.270065)
+  [PASS] [NUMERIC] At beta=0 the positive block is the identity so v(0)=w(0)=1  (v(0)=1.000000, w(0)=1.000000)
+
+========================================================================================
+PART 2: the Koide cone fixes the O_0 weight u(beta) algebraically
+========================================================================================
+  [PASS] [NUMERIC] The pulled-back selector gives the exact two-root formula u = 2(v+w) ± sqrt(3(v^2+4vw+w^2))  (u_-=0.045717, u_+=12.911735)
+  [PASS] [NUMERIC] For beta near the charged-lepton fit, the small branch is already positive  (u_-(beta=0.635)=0.045717)
+
+========================================================================================
+PART 3: the small-root exponential family has a near-perfect charged-lepton amplitude direction
+========================================================================================
+  [PASS] [NUMERIC] The optimized small-root branch lies exactly on the Koide cone  (beta*=0.633571493560, Q=0.666666666666667)
+  [PASS] [NUMERIC] The optimized amplitude direction is essentially identical to the PDG sqrt(m) direction  (cos-sim=0.999999999989)
+  [PASS] [NUMERIC] After one overall scale fit, the predicted amplitudes are within 0.03% of PDG sqrt(m)  (scaled_pred=[0.7146797656683945, 10.278912323758988, 42.152847693636076])
+  [PASS] [NUMERIC] The large-root branch is positive but directionally wrong, so the small branch is the charged-lepton candidate  (u_+=12.886069)
+
+========================================================================================
+PART 4: what this candidate does and does not solve
+========================================================================================
+  [PASS] This is a positive one-parameter value-law family on the exact three-slot template  (beta determines the positive T_2 block; the cone then fixes u)
+  [PASS] This is not yet a retained derivation because it uses the observational H_* pin and the selector as inputs  (good positive candidate family, not current retained closure)
+
+Interpretation:
+  The exact full-cube Gamma_i route now has a concrete positive value-law
+  candidate family: put the T_2 block on exp(beta H_*), read the two
+  reachable slot values v(beta), w(beta), then fix the O_0 slot by the
+  exact orbit-slot Koide cone. The small-root branch gives an almost
+  perfect charged-lepton amplitude direction at beta ~= 0.63357.
+
+PASS=13 FAIL=0
+
+----- stderr -----
+

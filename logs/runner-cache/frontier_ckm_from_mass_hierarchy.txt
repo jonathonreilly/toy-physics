@@ -1,0 +1,191 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_from_mass_hierarchy.py
+runner_sha256: 4b60dca3240566cc09de96746208afff64c9a8ff2cbe20699dbd4610966a5b69
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+==============================================================================
+CKM FROM MASS HIERARCHY: V_CKM = U_u^dag U_d
+==============================================================================
+
+STATUS: BOUNDED -- CKM from derived mass hierarchy via GST relations
+
+==============================================================================
+PART A: GATTO-SARTORI-TONIN PARAMETRIC RELATIONS (EXACT)
+==============================================================================
+
+  A1. GST relation: |V_us| ~ sqrt(m_d/m_s)
+    sqrt(m_d/m_s) = sqrt(0.00467/0.093) = 0.2241
+    |V_us| PDG = 0.2243
+    Deviation: 0.1%
+  [PASS] gst_V_us_relation  (sqrt(m_d/m_s) = 0.2241, |V_us| = 0.2243, dev = 0.1%)
+
+  A2. Up-sector correction: sqrt(m_u/m_c) = 0.0412
+    This is 18.4% of the leading term
+    |V_us| ~ sqrt(m_d/m_s) - sqrt(m_u/m_c) * cos(delta)
+    Range: [0.1828, 0.2653]
+  [PASS] up_correction_small  (sqrt(m_u/m_c) = 0.0412 << sqrt(m_d/m_s) = 0.2241)
+  [PASS] V_us_pdg_in_corrected_range  (0.2243 in [0.1828, 0.2653])
+
+  A3. |V_cb| ~ |m_s/m_b - m_c/m_t|
+    m_s/m_b = 0.0222
+    m_c/m_t = 0.0074
+    Leading: |V_cb| ~ 0.0149
+    Range: [0.0149, 0.0296]
+    |V_cb| PDG = 0.0422
+  [PASS] [BOUNDED] V_cb_right_order  (leading 0.0149 vs PDG 0.0422, ratio = 0.35)
+
+  A4. |V_ub| ~ m_d/m_b
+    m_d/m_b = 0.001117
+    m_u/m_t = 0.000013
+    |V_ub| PDG = 0.00394
+  [PASS] [BOUNDED] V_ub_right_order  (m_d/m_b = 0.001117 vs PDG 0.00394, ratio = 0.28)
+
+  Step 5. Hierarchy ordering:
+    |V_us| ~ sqrt(m_d/m_s) = 0.2241
+    |V_cb| ~ m_s/m_b       = 0.0222
+    |V_ub| ~ m_d/m_b       = 0.001117
+    Ordering: |V_us| >> |V_cb| >> |V_ub|
+  [PASS] parametric_hierarchy_ordering  (0.2241 > 0.0222 > 0.001117)
+
+  A6. Sector dominance:
+    theta_12(up)   = sqrt(m_u/m_c) = 0.041241
+    theta_12(down) = sqrt(m_d/m_s) = 0.2241
+    Ratio: 5.4x
+    Up mixing is 18.4% of down mixing
+    -> V_CKM ~ U_d (down sector controls CKM)
+  [PASS] up_mixing_suppressed  (up: 0.0412 << down: 0.2241)
+
+==============================================================================
+PART B: OBSERVED MASSES IN THE FRAMEWORK PREDICTION BAND
+==============================================================================
+
+  Up-type prediction band: log10(m_t/m_u) in (3.5, 5.5)
+  Observed: 4.90
+  [PASS] [BOUNDED] up_hierarchy_in_band  (4.90 in [3.5, 5.5])
+
+  Down-type prediction band: log10(m_b/m_d) in (2.0, 4.0)
+  Observed: 2.95
+  [PASS] [BOUNDED] down_hierarchy_in_band  (2.95 in [2.0, 4.0])
+
+  Hierarchy asymmetry: 1.66
+  [PASS] up_steeper_than_down  (up: 4.90 > down: 2.95)
+  [PASS] asymmetry_in_range  (asymmetry = 1.66 in [1.3, 2.5])
+  [PASS] em_charge_ratio_is_four  (Q_up^2/Q_down^2 = 4.0)
+
+  Intra-generation mass ratios:
+    m_d/m_s = 0.0502  -> sqrt(m_d/m_s) = 0.2241 ~ |V_us|
+    m_s/m_b = 0.0222  -> sqrt(m_s/m_b) = 0.1492 ~ |V_cb|
+    m_u/m_c = 0.001701 -> sqrt(m_u/m_c) = 0.0412
+    m_c/m_t = 0.007351 -> sqrt(m_c/m_t) = 0.0857
+
+==============================================================================
+PART C: CKM PREDICTION BAND FROM MASS HIERARCHY BAND
+==============================================================================
+
+  Scan: 20 x 20 = 400 points
+  Mass hierarchy bands:
+    log10(m_t/m_u) in [3.5, 5.5]
+    log10(m_b/m_d) in [2.0, 4.0]
+
+  CKM prediction bands (from GST parametric relations):
+    |V_us| in [0.1000, 0.3162]  (PDG: 0.2243)
+    |V_cb| in [0.000298, 0.098222]  (PDG: 0.0422)
+    |V_ub| in [0.000100, 0.010000]  (PDG: 0.00394)
+  [PASS] [BOUNDED] V_us_pdg_in_band  (|V_us| = 0.2243 in [0.1000, 0.3162])
+  [PASS] [BOUNDED] V_cb_pdg_in_band  (|V_cb| = 0.0422 in [0.000298, 0.098222])
+  [PASS] [BOUNDED] V_ub_pdg_in_band  (|V_ub| = 0.00394 in [0.000100, 0.010000])
+
+  Hierarchy ordering |V_us| >= |V_cb| >= |V_ub|: 400/400 = 100%
+  [PASS] [BOUNDED] hierarchy_ordering_dominant  (100% of band has correct ordering)
+
+  Representative point at observed hierarchies:
+    H_up = 79981, H_down = 895
+    |V_us| = 0.1828  (PDG: 0.2243, ratio: 0.82)
+    |V_cb| = 0.0299  (PDG: 0.0422, ratio: 0.71)
+    |V_ub| = 0.001117  (PDG: 0.00394, ratio: 0.28)
+
+  Actual observed GST values (not using geometric mean pattern):
+    sqrt(m_d/m_s) = 0.2241  (PDG: 0.2243)
+    sqrt(m_s/m_b) = 0.1492  (PDG: 0.0422)
+    sqrt(m_d/m_b) = 0.033425  (PDG: 0.00394)
+
+==============================================================================
+PART D: EWSB 1+2 SPLIT (EXACT)
+==============================================================================
+  [PASS] ewsb_breaks_C3  (C3 moves VEV -> C3 is broken)
+  [PASS] ewsb_preserves_Z2  (Z_2 (swap dirs 2,3) preserves VEV)
+  [PASS] V_sel_zero_at_axis_1  (V_sel(e_1) = 0.00e+00)
+  [PASS] V_sel_zero_at_axis_2  (V_sel(e_2) = 0.00e+00)
+  [PASS] V_sel_zero_at_axis_3  (V_sel(e_3) = 0.00e+00)
+  [PASS] V_sel_positive_off_axis  (V_sel([1,1,0]) = 8.0000 > 0)
+
+  EWSB selects one axis -> 1 heavy generation (tree-level VEV)
+  + 2 lighter generations (radiative coupling).
+
+==============================================================================
+PART E: COMPARISON TO FN CHARGE APPROACH
+==============================================================================
+
+  FN (eps=1/3):
+    |V_us| = eps^2 = 0.1111
+    |V_cb| = eps^2 = 0.1111
+    |V_ub| = eps^4 = 0.012346
+    Problem: |V_us| = |V_cb| (no hierarchy between them!)
+  [PASS] fn_cannot_distinguish  (FN: |V_us| = |V_cb| = 0.1111)
+
+  Mass hierarchy + GST:
+    |V_us| ~ sqrt(m_d/m_s) = 0.2241
+    |V_cb| ~ sqrt(m_s/m_b) = 0.1492
+    |V_ub| ~ sqrt(m_d/m_b) = 0.033425
+    Correct hierarchy: |V_us| >> |V_cb| >> |V_ub|
+  [PASS] mass_hierarchy_gives_correct_ordering  (0.2241 > 0.1492 > 0.033425)
+
+  Advantages of mass-hierarchy route:
+    1. Uses DERIVED mass spectrum, not FN charges
+    2. Gets |V_us| >> |V_cb| automatically (FN cannot)
+    3. GST gives |V_us| to <1% accuracy
+    4. Same model dependence as mass hierarchy
+    5. Zero additional free parameters beyond the mass prediction
+
+==============================================================================
+SUMMARY
+==============================================================================
+
+  EXACT RESULTS:
+  E1. GST relation: sqrt(m_d/m_s) = 0.2241 = |V_us| to 0.1%
+  E2. Up mixing << down mixing: sqrt(m_u/m_c) / sqrt(m_d/m_s) = 0.18
+      -> V_CKM controlled by DOWN sector mass ratios
+  E3. Hierarchy ordering: |V_us| > |V_cb| > |V_ub| follows from
+      m_d/m_s > m_s/m_b > m_d/m_b (algebraic)
+  E4. EWSB breaks S_3 -> Z_2: exact 1+2 generation split
+
+  BOUNDED RESULTS:
+  B1. Observed hierarchies in framework prediction band:
+      log10(m_t/m_u) = 4.90 in [3.5, 5.5]
+      log10(m_b/m_d) = 2.95 in [2.0, 4.0]
+  B2. CKM band from GST + mass hierarchy band:
+      |V_us| in [0.1000, 0.3162] (PDG: 0.2243)
+      |V_cb| in [0.000298, 0.098222] (PDG: 0.0422)
+      |V_ub| in [0.000100, 0.010000] (PDG: 0.00394)
+  B3. Hierarchy |V_us| >> |V_cb| >> |V_ub| robust across band
+  B4. FN charge approach CANNOT produce |V_us| >> |V_cb|;
+      mass-hierarchy route resolves this via up/down asymmetry
+
+  STATUS: BOUNDED. The CKM prediction inherits the same model
+  dependence as the mass hierarchy (strong-coupling anomalous
+  dimension, EWSB log-enhancement). The GST relation that connects
+  mass ratios to CKM elements is exact; the mass ratios themselves
+  are bounded predictions. The Higgs Z_3 charge blocker remains
+  live for full quantitative CKM closure (review.md).
+
+==============================================================================
+FINAL: PASS=24 FAIL=0
+  Exact:   PASS=16 FAIL=0
+  Bounded: PASS=8 FAIL=0
+==============================================================================
+
+----- stderr -----
+

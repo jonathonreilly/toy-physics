@@ -1,0 +1,42 @@
+===== runner cache v1 =====
+runner: scripts/persistent_record_overlap_kernel.py
+runner_sha256: 57d4a199f7a3e735d8c06c28308c3a59adca79aafce29c01fbe72f1b30f8dc40
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 56.86
+status: ok
+----- stdout -----
+==============================================================================
+PERSISTENT RECORD OVERLAP KERNEL
+  Record state: mesoscopic counts over post-barrier worldtube cells
+  Kernel: K(r,r') = exp(-gamma * ||r-r'||^2)
+  Propagator: 1/L^p * exp(-0.8 * theta^2) * exp(i k S_spent)
+  N sweep: [8, 12, 18]  seeds=3  k_band=[3.0, 5.0, 7.0]
+  Record grid: y_bins=5, dir_bins=3, max_count=2
+  side_bit: False
+  packet_bit: False
+  entry_bit: False
+  active_write: False
+  marker_weight: 1.0
+  gamma sweep: [0.25, 1.0]
+==============================================================================
+
+           N   pur_trace       n_env   pur_g0.25      pur_g1    ov_g0.25       ov_g1
+  ------------------------------------------------------------------------------------
+           8      0.8317         8.5      0.9556      0.8672      0.7216      0.3836
+          12      0.6898        21.7      0.8744      0.7398      0.7315      0.4763
+          18      0.8237        68.7      0.9058      0.8126      0.6253      0.3596
+
+Fit summary
+  trace: (1-pur) ~ 0.182 * N^+0.057
+  gamma=0.25: (1-pur) ~ 0.00802 * N^+0.929
+  gamma=1: (1-pur) ~ 0.0648 * N^+0.425
+
+Interpretation:
+  pur_trace = exact trace over orthogonal record sectors for this record model
+  pur_gX = soft-overlap reduced purity with residual branch connection
+  ov_gX = detector-weighted mean branch overlap under that kernel
+  Lower purity and flatter/positive scaling of (1-pur) are the interesting signs
+
+----- stderr -----
+

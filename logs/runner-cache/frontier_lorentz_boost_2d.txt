@@ -1,0 +1,85 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lorentz_boost_2d.py
+runner_sha256: 6860c87f411913f450123781a6381b46696b48488b2dfc0d25fc1eeb07618c0b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.69
+status: ok
+----- stdout -----
+==============================================================================
+1+1D SO(1,1) Boost Covariance of the Path-Sum 2-Point Function
+==============================================================================
+
+THEOREM:  lim_{a -> 0} W_lat(Δt, Δx; a, m) = K_0(m sqrt(-s²))/(2π)
+          for s² = Δt² - Δx² < 0, depending only on s².
+
+
+=== Part 1: Lattice dispersion -- continuum limit ===
+
+  [PASS] E_lat^2 -> m^2 + p^2 as a -> 0  (a=0.01: rel_err = 4.17e-07 (predicted (a^2 p^4)/(12 E^2) = 4.17e-07))
+  [PASS] O(a^2) convergence of dispersion  (err(a=0.1)/err(a=0.05) = 4.000 (expected ~4))
+  [PASS] E_lat(p) = E_lat(-p) (Z parity exact)  (max|E(p) - E(-p)| = 0.00e+00)
+  [PASS] E_lat(p) real and positive  (min E_lat = 1.049138, max E_lat = 20.024984)
+  [PASS] Lattice maximum E at BZ edge: E(π/a, m=0) = 2/a  (E(π/a) = 20.000000, expected 2/a = 20.000000)
+
+=== Part 2: Lorentz-invariant on-shell measure dp/E ===
+
+  [PASS] Lorentz-invariant measure: dp/E = dp'/E' (numerical)  (max(|dp'/E' - dp/E|/dp) = 3.17e-07 at eta=0.7)
+  [PASS] Mass-shell invariance: E'^2 - p'^2 = m^2  (max|E'^2 - p'^2 - m^2| = 4.55e-13 across 5 boosts)
+  [PASS] Boost composition: B(η₁)∘B(η₂) = B(η₁+η₂)  (|ΔE| = 0.00e+00, |Δp| = 4.44e-16)
+  [PASS] Identity boost: B(0) = identity  (|ΔE| = 0.00e+00, |Δp| = 0.00e+00)
+  [PASS] Boost on (Δt, Δx) preserves s² = Δt² - Δx²  (max|Δs²| = 2.84e-14 across 4 points × 5 boosts)
+
+=== Part 3: Continuum 2-point function ===
+
+  [PASS] W_cont(0, r; m) = K_0(mr)/(2π) (5 spacelike radii)  (max rel err = 4.72e-09 (oscillatory quadrature))
+  [PASS] W_cont depends only on s² (4 boost-equivalent spacelike points)  (max - min = 0.00e+00 across 4 boosts of (0, 2))
+  [PASS] W_cont real for spacelike separations  (W = 0.006746860378280078 (purely real Macdonald function))
+  [PASS] Cluster decomposition: W -> 0 at large spacelike separation  (W(r=30) = 3.39e-15, W(r=1) = 0.0670)
+  [PASS] Asymptotic: W ~ sqrt(π/(2mr))exp(-mr)/(2π) at large mr  (W_exact/W_asymp - 1 = 1.487e-02 at mr=8.0)
+
+=== Part 4: Lattice -> continuum convergence ===
+
+  [PASS] W_lat(0, r) -> W_cont(0, r) as a -> 0  (a sweep [0.5, 0.25, 0.125, 0.0625], errs [1.48e-03, 4.00e-04, 1.02e-04, 2.57e-05])
+  [PASS] Monotone convergence under a-refinement  (errors monotonically decreasing)
+  [PASS] Convergence rate compatible with O(a^2)  (err(a=0.5)/err(a=0.25) = 4.000 (expected ~4))
+
+=== Part 5: SO(1,1) boost covariance ===
+
+  [PASS] Boost η=0.1: W_cont invariant across 4 base points  (max|W_boost - W_base| = 1.39e-17)
+  [PASS] Boost η=0.5: W_cont invariant across 4 base points  (max|W_boost - W_base| = 1.39e-17)
+  [PASS] Boost η=1.0: W_cont invariant across 4 base points  (max|W_boost - W_base| = 9.54e-18)
+  [PASS] Boost η=1.5: W_cont invariant across 4 base points  (max|W_boost - W_base| = 3.82e-17)
+  [PASS] Boost η=2.0: W_cont invariant across 4 base points  (max|W_boost - W_base| = 1.82e-16)
+  [PASS] Boost composition on spacetime points  (|Δdt| = 4.44e-16, |Δdx| = 8.88e-16)
+  [PASS] Reverse boost: B(-η) ∘ B(η) = identity  (|Δdt| = 2.22e-16, |Δdx| = 8.88e-16)
+  [PASS] Lattice W at base and boosted points -> continuum invariant as a -> 0  (|W_lat - W_cont| at (a=0.2, 0.1, 0.05): base [4.69e-06, 1.19e-06, 2.98e-07], boost [2.67e-03, 1.52e-03, 3.76e-04])
+  [PASS] Lattice asymmetry between boost-equivalent points shrinks as a -> 0  (||W_base - W_an| - |W_boost - W_an||/|W_an|: a=0.2 -> 1.47e-01, a=0.05 -> 2.07e-02)
+
+=== Part 6: Special limits and structural identities ===
+
+  [PASS] Light-cone limit: W diverges as -ln(-s²)/(4π)  (W(0, 0.001) = 1.1179, log_estimate = 1.2097)
+  [PASS] Time-reversal: W(-Δt, Δx) = W(Δt, Δx) for spacelike  (|W(1,3) - W(-1,3)| = 0.00e+00)
+  [PASS] Spatial reflection: W(Δt, -Δx) = W(Δt, Δx) for spacelike  (|W(1,3) - W(1,-3)| = 0.00e+00)
+  [PASS] Mass scaling consistent with K_0 form  (max rel err = 0.00e+00)
+  [PASS] BZ-edge contribution small at a=0.1 (continuum bulk dominant)  (|W_full - W_inner|/|W_full| = 0.001)
+
+=== Part 7: Combined SO(1,1) boost-covariance theorem ===
+
+  [PASS] 1+1D Z_t × Z_x lattice has only Z₂ × Z₂ × time-translation microscopic symmetry  (no microscopic boost; SO(1,1) is non-compact and cannot live on a finite lattice)
+  [PASS] Lattice dispersion E_lat^2 = m^2 + (4/a^2)sin^2(pa/2) is parity-symmetric  (Z_2 spatial reflection forbids odd-power LV corrections)
+  [PASS] Continuum dispersion E^2 = m^2 + p^2 is the unique boost-invariant limit  (lattice corrections are O(a^2 p^4) and vanish in the continuum)
+  [PASS] Continuum W(Δt, Δx; m) = K_0(m sqrt(-s²))/(2π) for s² < 0 (Macdonald form)  (depends only on SO(1,1) invariant s²)
+  [PASS] THEOREM: lim_{a→0} W_lat(Δt, Δx; a, m) is SO(1,1) boost-covariant  (spatial reflection + time translation + dispersion isotropy → continuum boost covariance)
+  [PASS] Mechanism: dp/E is the unique boost-invariant on-shell measure  (Liouville measure on the mass-shell hyperbola; standard relativistic measure)
+  [PASS] No-go consequence: at finite a, W_lat is NOT boost-covariant  (lattice corrections to E_lat give O(a^2) deviation; recovered as a → 0)
+
+==============================================================================
+SUMMARY: PASS=39  FAIL=0
+==============================================================================
+
+All checks passed. SO(1,1) boost covariance recovered in continuum limit.
+Dispersion-isotropy + Z_2 spatial reflection => boost-invariant 2-point function.
+
+----- stderr -----
+

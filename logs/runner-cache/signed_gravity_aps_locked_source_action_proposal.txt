@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_aps_locked_source_action_proposal.py
+runner_sha256: 6a1a5ce783cdd5f7074cbbf61ee495b4e83ba4d577958a5f41d6221ee5b88f12
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+================================================================================================
+SIGNED GRAVITY APS-LOCKED SOURCE ACTION PROPOSAL
+  conditional action ansatz; not a physical signed-gravity claim
+================================================================================================
+
+[PASS] APS boundary eta supplies +/- sectors and null control
+
+PROPOSED ACTION TERM
+  S_int[Phi,psi,Y] = - chi_eta(Y) M_phys sum_x |psi_x|^2 Phi_x
+  chi_eta(Y) = sign eta_delta(D_Y), only on a gapped boundary sector
+  This is a new source-action premise unless derived elsewhere.
+
+[PASS] source variation gives +M rho in chi=+ sector  (residual=1.628e-12, active=+2.750000)
+[PASS] source variation gives -M rho in chi=- sector  (residual=1.628e-12, active=-2.750000)
+[PASS] positive Wald/area carrier is not multiplied by chi
+[PASS] positive inertial mass is branch independent  (M_+=M_-=2.750)
+[PASS] same-point +/- active source cancels with positive inertia  (C_signed_sum=+0.000e+00, M_sum=5.500)
+[PASS] source-unit conversion consumes the proposed signed source  (q_bare=4*pi*chi_eta*M_phys)
+
+SOURCE / RESPONSE LOCKING TABLE
+  law                             max balance    table old-derived  reads
+  retained_positive                 0.000e+00     FAIL         YES  ATTRACT,ATTRACT,ATTRACT,ATTRACT
+  aps_eta_spectator                 0.000e+00     FAIL         YES  ZERO,ZERO,ZERO,ZERO
+  aps_source_only_inserted          2.000e+00     FAIL          NO  ATTRACT,UNBALANCED,UNBALANCED,REPEL
+  aps_response_only_inserted        2.000e+00     FAIL          NO  ATTRACT,UNBALANCED,UNBALANCED,REPEL
+  aps_locked_action_ansatz          0.000e+00     PASS          NO  ATTRACT,REPEL,REPEL,ATTRACT
+[PASS] proposed action gives locked four-pair table
+
+[PASS] Born I3 control stays linear in chi=+ sector  (I3=+5.381e-43)
+[PASS] Born I3 control stays linear in chi=- sector  (I3=+5.381e-43)
+[PASS] norm stays unitary in both fixed sectors  (max drift=3.331e-15)
+
+OPEN PROOF OBLIGATIONS
+  1. derive this APS-locked source action from retained boundary/Wald/Gauss
+     structure, rather than postulating it
+  2. prove the eta sector is superselected for admissible boundary dynamics
+  3. supply an energy-stability/no-runaway argument for positive inertial
+     masses with opposite active signs
+  4. lift the scalar active monopole action without claiming full tensor GR
+
+SUMMARY: PASS=11 FAIL=0
+FINAL_TAG: APS_LOCKED_SOURCE_ACTION_CONDITIONAL_CANDIDATE
+
+----- stderr -----
+

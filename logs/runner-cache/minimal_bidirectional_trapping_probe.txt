@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/minimal_bidirectional_trapping_probe.py
+runner_sha256: 5e5f4539ed9fdb0574050535c0f2b7c4c5b2d0a510abd5fc828c12e2167da280
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

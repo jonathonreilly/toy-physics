@@ -1,0 +1,45 @@
+===== runner cache v1 =====
+runner: scripts/frontier_strc_lo_collinearity_theorem.py
+runner_sha256: f47a9e95d3a559e9b41e1e850e5552db761970197aad51696644f161e544f1ce
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================
+  STRC-LO / BICAC theorem on the exact 1(+)5 carrier
+========================================================================
+
+  Exact carrier data:
+    e1         = [1. 0.]
+    e5         = [0. 1.]
+    p          = [0.40824829 0.91287093]
+    r          = [0.15430335 0.34503278]
+    a_d        = Re(r) = 0.154303349962
+    Im(p)      = 0.912870929175
+    Pi_5 p     = [0.         0.91287093]
+    T_p        =
+[[0.         0.        ]
+ [0.91287093 0.        ]]
+    T_p(a_d e1)= [0.         0.14085904]
+    residual_5 = [0.         0.77201189]
+    a_u        = 0.772011886721
+  [PASS] T1  p is the unit physical projector ray on H_(1+5)  (|p|^2 = 1.000000000000000)
+  [PASS] T2  r = p/sqrt(7) and a_d = Re(r) = 1/sqrt(42)  (a_d = 0.154303349962092)
+  [PASS] T3  Pi_5 projects the physical ray to the exact 5-budget Im(p) e5  (Pi_5 p = [0.         0.91287093])
+  [PASS] T4  T_p = Pi_5 |p><e1| = sin_d |e5><e1|  (T_p[1,0] = 0.912870929175277)
+  [PASS] T5  T_p is the unique A1 -> 5 transfer induced by p: T_p e1 = Pi_5 p and T_p e5 = 0  (T_p e1 = [0.         0.91287093], T_p e5 = [0. 0.])
+  [PASS] T6  The retained down occupancy produces exact mixed-channel budget a_d Im(p) e5  (T_p(a_d e1) = [0.         0.14085904])
+  [PASS] T7  The off-diagonal A1 -> 5 entry of r tensor p is exactly a_d Im(p)  ((r tensor p)_(1->5) = 0.140859042454753)
+  [PASS] T8  Collinearity makes the two mixed-channel off-diagonal entries equal  (upper-right = 0.140859042454753, lower-left = 0.140859042454753)
+  [PASS] T9  The residual 5 vector is pure e5 and defines a_u uniquely  (residual_5 = [0.         0.77201189])
+  [PASS] T10 BICAC / STRC-LO: a_u + a_d Im(p) = Im(p)  (|LHS-RHS| = 0.000e+00)
+  [PASS] T11 Downstream NLO step gives a_u = sin_d (1 - 48 a_d / 49)  (a_u_full = 0.774886561056)
+  [PASS] T12 The RPSR target remains 0.7748865611 at 10 decimals  (a_u_full = 0.7748865611)
+
+========================================================================
+PASS=12 FAIL=0
+========================================================================
+
+----- stderr -----
+

@@ -1,0 +1,46 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_bimodule_norm_existence_theorem.py
+runner_sha256: 2ffa981884a000efdce318709d45c50bc348e1541445c2253044fa31e75150aa
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================
+  Quark Bimodule NORM-Existence Theorem
+  Binary residue: does an LO split law exist on the bimodule?
+========================================================================
+
+  Retained channel and laws:
+    I = R * Im(p),    Im(p) = sin_d = 0.912870929175
+    rho = Re(r) = 0.154303349962
+    interval = [sqrt(6/7), 1] = [0.925820099773, 1.000000000000]
+
+    support  kappa=0.925820099773  D(x)=0.142857142857 x  U(x)=0.857142857143 x
+    target   kappa=0.979591836735  D(x)=0.151154302004 x  U(x)=0.848845697996 x
+    BICAC    kappa=1.000000000000  D(x)=0.154303349962 x  U(x)=0.845696650038 x
+
+  Theorem checks:
+  [PASS] T1  Retained interval is nonempty: sqrt(supp) <= 1  (sqrt(supp) = 0.925820099773)
+  [PASS] T2  support / target / BICAC kappas lie in the retained interval  (support=0.925820099773, target=0.979591836735, BICAC=1.000000000000)
+  [PASS] T3  Each D_kappa, U_kappa is a real-linear endomorphism of I  (checked on the basis generator of the one-real channel)
+  [PASS] T4  Complementarity: U_kappa + D_kappa = Id_I  (support:1.000000000000000, target:1.000000000000000, BICAC:1.000000000000000)
+  [PASS] T5  Contractivity: 0 <= rho*kappa <= 1 on the retained interval  (support:0.142857142857, target:0.151154302004, BICAC:0.154303349962)
+  [PASS] T6  Applying U_kappa to Im(p) reproduces the exact bridge family  (support:0.782460796436, target:0.774886561056, BICAC:0.772011886721)
+  [PASS] T7  Support endpoint gives a_u = sin_d * supp exactly  (a_u_support = 0.782460796435952)
+  [PASS] T8  Target point gives a_u = 0.7748865611 (10 decimals)  (a_u_target = 0.7748865611)
+  [PASS] T9  BICAC endpoint gives STRC-LO exactly  (|LHS-RHS| = 0.000e+00)
+  [PASS] T10 The three distinguished laws are pairwise distinct  (support:0.857142857143, target:0.848845697996, BICAC:0.845696650038)
+
+  Consequence:
+    The bimodule already carries actual LO split laws on the one-real
+    imaginary channel. The residue is no longer existence; it is which
+    law is canonical or retained-physics-selected.
+
+========================================================================
+PASS=10 FAIL=0
+Quark bimodule NORM-existence theorem: VERIFIED
+========================================================================
+
+----- stderr -----
+

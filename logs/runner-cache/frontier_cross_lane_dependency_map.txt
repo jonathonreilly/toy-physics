@@ -1,0 +1,100 @@
+===== runner cache v1 =====
+runner: scripts/frontier_cross_lane_dependency_map.py
+runner_sha256: 94f190eb220732890a015e45f8b9b78a4644f8aaae11b1a823af3193293647dc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Cross-lane dependency map verification
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: per-lane firewall notes exist
+----------------------------------------------------------------------------------------
+  [PASS] firewall note exists: docs/HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27.md
+  [PASS] firewall note exists: docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md
+  [PASS] firewall note exists: docs/ATOMIC_LANE2_QED_RUNNING_DEPENDENCY_FIREWALL_NOTE_2026-04-30.md
+  [PASS] firewall note exists: docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md
+  [PASS] firewall note exists: docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md
+  [PASS] firewall note exists: docs/HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md
+
+----------------------------------------------------------------------------------------
+Part 2: firewall status language is honest (no bare retained)
+----------------------------------------------------------------------------------------
+  [PASS] docs/HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27.md: uses an accepted status phrase
+  [PASS] docs/HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27.md: no bare 'Status: retained' line
+  [PASS] docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md: uses an accepted status phrase
+  [PASS] docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md: no bare 'Status: retained' line
+  [PASS] docs/ATOMIC_LANE2_QED_RUNNING_DEPENDENCY_FIREWALL_NOTE_2026-04-30.md: uses an accepted status phrase
+  [PASS] docs/ATOMIC_LANE2_QED_RUNNING_DEPENDENCY_FIREWALL_NOTE_2026-04-30.md: no bare 'Status: retained' line
+  [PASS] docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md: uses an accepted status phrase
+  [PASS] docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md: no bare 'Status: retained' line
+  [PASS] docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md: uses an accepted status phrase
+  [PASS] docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md: no bare 'Status: retained' line
+  [PASS] docs/HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md: uses an accepted status phrase
+  [PASS] docs/HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md: no bare 'Status: retained' line
+
+----------------------------------------------------------------------------------------
+Part 3: cross-lane map structure
+----------------------------------------------------------------------------------------
+  [PASS] cross-lane note exists with correct title
+  [PASS] cross-lane note status is support-only synthesis
+  [PASS] cross-lane note does NOT use bare 'Status: retained'
+  [PASS] cross-lane note references HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27
+  [PASS] cross-lane note references ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27
+  [PASS] cross-lane note references ATOMIC_LANE2_QED_RUNNING_DEPENDENCY_FIREWALL_NOTE_2026-04-30
+  [PASS] cross-lane note references QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27
+  [PASS] cross-lane note references NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27
+  [PASS] cross-lane note references HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27
+
+----------------------------------------------------------------------------------------
+Part 4: dependency graph components are named
+----------------------------------------------------------------------------------------
+  [PASS] component named: Matter-mass component
+  [PASS] component named: Neutrino component
+  [PASS] component named: Cosmology component
+  [PASS] graph asserted to have three disjoint components
+
+----------------------------------------------------------------------------------------
+Part 5: transitive blocker structure
+----------------------------------------------------------------------------------------
+  [PASS] transitive blocker 'Lane 6 closure' reaches 'Lane 2'
+  [PASS] transitive blocker 'Lane 6 closure' reaches 'Lane 3'
+  [PASS] transitive blocker 'Lane 3 closure' reaches 'Lane 1'
+  [PASS] transitive blocker 'Lane 3 closure' reaches 'Lane 2'
+  [PASS] transitive blocker 'Lane 1 substrate' reaches 'Lane 2'
+  [PASS] transitive blocker 'Lane 1 substrate' reaches 'Lane 1'
+  [PASS] closure-ordering: Lane 6 listed before Lane 3 in §4 chain
+  [PASS] closure-ordering: Lane 3 listed before Lane 1 in §4 chain
+  [PASS] closure-ordering: Lane 1 listed before Lane 2 substitution in §4 chain
+
+----------------------------------------------------------------------------------------
+Part 6: retired shortcuts each cite a concrete firewall
+----------------------------------------------------------------------------------------
+  [PASS] retired shortcut #1 present
+  [PASS] retired shortcut #2 present
+  [PASS] retired shortcut #3 present
+  [PASS] retired shortcut #4 present
+  [PASS] §5 cites Lane 1
+  [PASS] §5 cites Lane 2
+  [PASS] §5 cites Lane 3
+  [PASS] §5 cites Lane 4
+  [PASS] §5 cites Lane 5
+  [PASS] §5 cites Lane 6
+
+----------------------------------------------------------------------------------------
+Part 7: synthesis-only — no new physics inputs
+----------------------------------------------------------------------------------------
+  [PASS] note states pure synthesis posture
+  [PASS] note states no new numerical comparators
+  [PASS] note states no new admitted observations
+
+----------------------------------------------------------------------------------------
+PASS=53 FAIL=0
+----------------------------------------------------------------------------------------
+
+----- stderr -----
+

@@ -1,0 +1,46 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_first_sector_truncated_environment_packet_theorem_2026_04_19.py
+runner_sha256: cc076c8ee6c4dee414271f4819e01e9ab6f63d8d5ccb8b94471ee16dc1533a01
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 22.03
+status: ok
+----- stdout -----
+================================================================================================================
+GAUGE-VACUUM PLAQUETTE FIRST-SECTOR TRUNCATED ENVIRONMENT PACKET
+================================================================================================================
+
+Question:
+  Does the completed first-sector triple already determine a retained
+  diagonal/environment packet inside the canonical character-measure
+  description, even before the full framework-point extension is known?
+
+  v_min                                       = [0.349606952458, 0.093393849311, 0.093393849311, 0.0]
+  z00_min                                     = 0.349606952458
+  rho_ret                                     = [1.0, 0.267139565315, 0.267139565315, 0.0]
+  reconstructed sample triple                 = [0.135165279562, 0.374012880009, 0.543843858544]
+  reconstruction gap                          = 1.777224e-16
+
+  [PASS] The factorization and character-measure notes already fix the canonical environment description as an overall scale z_(0,0)^env together with normalized coefficients rho_(p,q)(6)
+  [PASS] The completion note already fixes one explicit retained first-sector coefficient vector v_min for the completed triple Z_min
+  [PASS] Normalizing by the retained trivial-channel coefficient defines one exact truncated environment packet rho_ret with rho_(0,0)=1  (rho_ret=[1.0, 0.2671395653, 0.2671395653, 0.0])
+  [PASS] That truncated packet is conjugation-symmetric on the retained first-symmetric sector  (|rho_(1,0)-rho_(0,1)|=0.000e+00)
+  [PASS] The retained three-sample triple reconstructs exactly from the pair (z00_min, rho_ret)  (||z_recon-Z_min||=1.777e-16)
+  [PASS] So the remaining framework-point seam is not existence of a retained diagonal/environment packet itself, but extension of this truncated packet to the full beta=6 environment data  (z00_min=0.349607)
+
+================================================================================================================
+RESULT
+================================================================================================================
+  Exact refinement:
+    - the completed first-sector triple already determines one explicit
+      retained diagonal/environment packet on the first-symmetric sector
+    - namely one overall scale z00_min together with one normalized
+      conjugation-symmetric retained coefficient packet rho_ret
+    - therefore the remaining open object is the extension / realization
+      of this retained packet inside the full beta=6 framework-point
+      environment packet, not retained diagonal-packet existence
+
+PASS=6 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,41 @@
+===== runner cache v1 =====
+runner: scripts/ordered_lattice_quasi_persistent_relaunch_2d.py
+runner_sha256: 66cf672a657c365983f73cdd5a6e02d8a6b8c00d2c37cb3210920c54e842df95
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.52
+status: ok
+----- stdout -----
+============================================================================================
+ORDERED-LATTICE QUASI-PERSISTENT RELAUNCH CONTROL (2D)
+  Cross-family sanity check for the relaunch-packet idea
+  h=0.5, W=12, L=20, max_d=10, source_y=5.0
+  Goal: ask whether a compact packet surrogate stays recognizable enough
+        to be relaunched on the retained 2D ordered family.
+============================================================================================
+
+ACTION: valley_linear
+  strength  capture    carry      shift   relaunch   width×
+--------------------------------------------------------------------
+     2e-05    0.344    0.911  +0.000394  +0.000205    1.000
+     5e-05    0.344    0.911  +0.000985  +0.000512    1.000
+     1e-04    0.344    0.911  +0.001968  +0.001024    1.000
+
+ACTION: spent_delay
+  strength  capture    carry      shift   relaunch   width×
+--------------------------------------------------------------------
+     2e-05    0.344    0.911  +0.111785  +0.073447    0.996
+     5e-05    0.344    0.911  +0.174422  +0.115193    0.993
+     1e-04    0.344    0.911  +0.242946  +0.161549    0.990
+
+SAFE READ
+  - If capture and carry stay high and width stays near 1, the packet surrogate
+    is family-generic enough to justify a bounded quasi-persistent control.
+  - If capture or carry collapses here, the relaunch idea is fragile and probably
+    should remain a 3D-only bounded surrogate.
+  - This is still a control, not a persistent-mass theorem.
+
+Total runtime: 1.4s
+
+----- stderr -----
+

@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py
+runner_sha256: 3922b27aeb1ec01c8443fc7d7cbc1ca331fff9e8daeb5f4e479a010193418ae6
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.07
+status: nonzero_exit
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE SPATIAL ENVIRONMENT TRANSFER
+==============================================================================
+
+Exact class-sector pieces already fixed
+  source-operator symmetry error        = 0.000e+00
+  spatial transfer symmetry error       = 1.249e-16
+  spatial transfer swap error           = 4.996e-16
+
+Boundary-amplitude realization
+  orthogonal spatial depth              = 3
+  boundary swap error                   = 1.804e-16
+  z_env min / max                       = 0.000000000134, 1.110119914063
+  rho_env min / max                     = 0.000000000121, 1.000000000000
+  coefficient swap error                = 1.166e-15
+
+Spatial Perron witness
+  Perron overlap with boundary amplitude= 0.901087776313
+  Perron <J>                            = 0.447194769467
+
+  [PASS] [THEOREM] the unmarked spatial environment admits a positive self-adjoint conjugation-symmetric transfer operator on the class sector
+         the orthogonal spatial split produces one explicit positive symmetric transfer witness
+  [FAIL] [THEOREM] the marked-rim boundary state is positive and conjugation-symmetric
+         minimum boundary amplitude=-1.276945e-16
+  [PASS] [THEOREM] the environment character coefficients are exact boundary amplitudes of the spatial transfer operator
+         z_(p,q)^env is realized as a matrix-element sequence of one explicit positive spatial transfer operator
+  [PASS] [THEOREM] the normalized boundary character data rho_(p,q)(6) are therefore not a generic free positive sequence
+         once the spatial transfer law is fixed, rho_(p,q)(6) is a normalized boundary-amplitude sequence
+  [PASS] [SUPPORT] the explicit boundary-amplitude sequence remains positivity-compatible on the truncated class sector
+         minimum boundary amplitude=1.338e-10
+  [PASS] [SUPPORT] the same orthogonal spatial transfer law can be reused as an atlas tool distinct from the local mixed-kernel factor
+         the remaining datum lives in the spatial environment transfer amplitudes, not in D_6^loc
+  [PASS] [SUPPORT] once the spatial transfer operator is explicit, the remaining framework-point target is its boundary-state / Perron data
+         Perron overlap=0.901088, Perron <J>=0.447195
+
+==============================================================================
+SUMMARY: THEOREM PASS=3 SUPPORT=3 FAIL=1
+==============================================================================
+
+----- stderr -----
+

@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_phase_removal.py
+runner_sha256: ec528cef5ba826f669272b1876d87ff25d21569d9a52881e50ec04cf3a1b96c9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: ONE-GENERATION PHASE REMOVAL
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+  - docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md
+  - docs/NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md
+  - docs/NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md
+  - docs/NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md
+
+Question:
+  On the current one-generation lane, does the unique local source
+  slot m carry a physical phase, or can it be rephased to one real
+  amplitude?
+
+========================================================================================
+PART 1: THE UNIQUE SLOT LIVES ON A GAUGE SINGLET
+========================================================================================
+  [PASS (C)] The nu_R slot is annihilated by every SU(3)xSU(2)xU(1) generator  (max residual=0.00e+00)
+  [PASS (C)] The nu_R slot has Y = 0 exactly  (Y=0j)
+
+  So local phase rotation on the unique source slot does not disturb
+  the anomaly-fixed gauge representation data.
+
+========================================================================================
+PART 2: THE COMPLEX SLOT PHASE IS REMOVABLE
+========================================================================================
+  [PASS (C)] The charge-2 bilinear picks up the exact double phase under rephasing  (rotation error=0.00e+00)
+  [PASS (C)] Choosing alpha = arg(m)/2 makes the Hermitian deformation real-amplitude  (||X_rot-|m|(cc+h.c.)||=2.64e-16)
+
+  So the one-generation local source slot carries no invariant phase.
+  It is equivalent to one real nonnegative amplitude mu = |m|.
+
+========================================================================================
+PART 3: THE ONE-GENERATION PFAFFIAN BLOCK ALSO SEES ONLY |m|
+========================================================================================
+  [PASS (C)] Complex and real-amplitude 2x2 pairing blocks are both antisymmetric  (errs=(0.00e+00,0.00e+00))
+  [PASS (C)] Pfaffian phase changes but magnitude is |m|  (|Pf_complex|=0.520000, Pf_real=(0.52+0j))
+  [PASS (C)] The CPT-even scalar generator log|Pf| depends only on |m|  (generator error=0.00e+00)
+  [PASS (C)] Canonical local source-block singular values depend only on |m|  (singular-value error=0.00e+00)
+
+  This is the retained observable-side version of the same theorem:
+  on the one-generation local block, the invariant datum is mu = |m|.
+
+========================================================================================
+RESULT
+========================================================================================
+  The one-generation local Majorana source slot has no physical
+  phase. Modulo nu_R rephasing, the invariant datum is one
+  nonnegative real amplitude mu = |m|.
+
+  PASS=8  FAIL=0
+
+----- stderr -----
+

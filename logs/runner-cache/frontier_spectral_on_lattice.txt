@@ -1,0 +1,85 @@
+===== runner cache v1 =====
+runner: scripts/frontier_spectral_on_lattice.py
+runner_sha256: 2fe2e485c32546d2ccf7f02b1f0ee364bdbd6c9bbf56c05b0eb0bba5df9c8847
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 42.63
+status: ok
+----- stdout -----
+======================================================================
+SPECTRAL AVERAGING ON RETAINED 2+1D ORDERED LATTICE
+======================================================================
+
+Does spectral averaging over k produce universal attraction
+on the retained 3D lattice (valley-linear, 1/L^2, h=0.5)?
+
+Lattice: 15,625 nodes, 25 layers, h=0.5
+Mass at z=3, strength=5e-05
+Setup: 0.0s
+
+======================================================================
+PART 1: Single-k gravity on retained 2+1D lattice
+======================================================================
+
+     k |        delta | direction |   det_prob
+--------------------------------------------------
+   0.5 |    -0.000022 |      AWAY |  1.361e+29
+   1.0 |    +0.000040 |    TOWARD |  2.704e+25
+   1.5 |    +0.000414 |    TOWARD |  2.044e+22
+   2.0 |    +0.000381 |    TOWARD |  1.028e+20
+   2.5 |    +0.000269 |    TOWARD |  6.392e+17
+   3.0 |    +0.000319 |    TOWARD |  1.032e+16
+   4.0 |    +0.000499 |    TOWARD |  4.874e+12
+   5.0 |    +0.000422 |    TOWARD |  4.768e+09
+   6.0 |    +0.000572 |    TOWARD |  7.868e+06
+   7.0 |    -0.000415 |      AWAY |  5.724e+10
+   8.0 |    -0.000093 |      AWAY |  3.497e+11
+  10.0 |    -0.000993 |      AWAY |  2.425e+16
+
+TOWARD: 8/12, AWAY: 4/12
+
+======================================================================
+PART 2: Spectral averaging (Gaussian wave packets)
+======================================================================
+
+Pre-computing 47 propagations...
+Done in 34s
+
+  k0 sigma |    delta_coh   dir_coh |    delta_inc   dir_inc | label
+------------------------------------------------------------------------------------------
+ 2.5   0.5 |    -0.000095      AWAY |    -0.000006      AWAY | narrow around k=2.5
+ 2.5   1.0 |    -0.000037      AWAY |    -0.000022      AWAY | medium around k=2.5
+ 2.5   2.0 |    -0.000032      AWAY |    -0.000022      AWAY | broad around k=2.5
+ 2.5   4.0 |    -0.000031      AWAY |    -0.000022      AWAY | very broad around k=2.5
+ 5.0   0.5 |    -0.000027      AWAY |    +0.000484    TOWARD | narrow around k=5.0
+ 5.0   1.0 |    -0.000056      AWAY |    -0.000022      AWAY | medium around k=5.0
+ 5.0   2.0 |    -0.000034      AWAY |    -0.000022      AWAY | broad around k=5.0
+ 5.0   4.0 |    -0.000031      AWAY |    -0.000022      AWAY | very broad around k=5.0
+ 7.0   1.0 |    -0.001102      AWAY |    -0.000832      AWAY | medium around k=7.0
+ 7.0   2.0 |    -0.000036      AWAY |    -0.000022      AWAY | broad around k=7.0
+ 3.5   1.0 |    -0.000043      AWAY |    -0.000022      AWAY | medium around k=3.5
+ 3.5   3.0 |    -0.000031      AWAY |    -0.000022      AWAY | very broad around k=3.5
+
+======================================================================
+PART 3: Flat spectrum (equal weight on all k)
+======================================================================
+
+  Flat spectrum (k=0.5 to 12.0): delta = -0.000030 (AWAY)
+
+======================================================================
+VERDICT
+======================================================================
+
+  All configs: 0 TOWARD, 12 AWAY (coherent)
+  Broad (sigma>=2): 0 TOWARD, 6 AWAY
+  Flat spectrum: AWAY
+
+  Even worse: broad spectra all give AWAY on the retained lattice.
+
+  Coherent vs incoherent: same sign 11x, opposite sign 1x
+  Classical (incoherent) averaging mostly agrees with coherent.
+
+  Total time: 43s
+
+----- stderr -----
+

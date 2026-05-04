@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_selector_relative_action_recovered_projection_support_2026_04_21.py
+runner_sha256: da09a09fab23cb6f7194721c708c4c74a1f2f66ece50840e140de4d52297a77a
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 6.48
+status: nonzero_exit
+----- stdout -----
+========================================================================================
+DM SELECTOR RELATIVE-ACTION / RECOVERED PROJECTION SUPPORT THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE SAME RECOVERED LIFT IS ALREADY SINGLED OUT BY THE THRESHOLD FAMILY
+========================================================================================
+  [PASS] The recovered-bank threshold note still records the canonical breakpoint tau_b,min
+  [PASS] The separation note still records that the internal selector and recovered branch are distinct exact selector objects
+  [PASS] The intrinsic threshold breakpoint tau_b,min already selects recovered lift 0 uniquely  ((tau_b_min,next)=(0.148036252277635,0.160534730480452))
+
+========================================================================================
+PART 2: THE INTERNAL SELECTOR HAS A UNIQUE SHIFT-INDEPENDENT NEAREST RECOVERED POINT
+========================================================================================
+  [PASS] In Frobenius distance on H, the relative-action source is uniquely nearest to recovered lift 0  ((nearest, margin)=(0, 1.307038529269))
+  [PASS] In Euclidean distance on the active target (delta, q_+), the relative-action source is uniquely nearest to recovered lift 0  ((nearest, margin)=(0, 1.051670421508))
+  [PASS] At the anchor positive window, the exact witness-volume threshold profile is also uniquely nearest to recovered lift 0  ((nearest, margin)=(0, 0.478393709107) on [0,0.155851])
+
+========================================================================================
+PART 3: THE SAME PREFERRED LIFT PERSISTS ACROSS THE AUDITED POSITIVE-WINDOW GEOMETRIES
+========================================================================================
+  [PASS] Across all audited common positive shifts, the affine-invariant Riemannian distance picks recovered lift 0 uniquely  (min audited margin = 0.193872045377)
+  [PASS] Across all audited common positive shifts, the forward LogDet divergence D(A_rel || A_i) picks recovered lift 0 uniquely  (min audited margin = 0.094212067543)
+  [PASS] Across all audited common positive shifts, the reverse LogDet divergence D(A_i || A_rel) picks recovered lift 0 uniquely  (min audited margin = 0.076482014359)
+  [PASS] Across all audited common positive shifts, inverse-eigenvalue parameter distance also picks recovered lift 0 uniquely  (min audited margin = 0.033692223987)
+
+========================================================================================
+PART 4: SCIENTIFIC CONSEQUENCE
+========================================================================================
+  [FAIL] The open-import register still names the finer right-sensitive microscopic selector law as the live DM blocker
+  [PASS] The internal selector and recovered threshold branch are no longer disconnected by the current exact branch science  (the same preferred recovered lift is selected by the threshold family and by the audited projection metrics from the internal selector)
+  [PASS] So the remaining selector-side burden narrows to justifying the projection principle, or replacing both selector objects by a finer microscopic law  (support narrowing only)
+
+========================================================================================
+RESULT
+========================================================================================
+  The relative-action source still stays off the recovered selector branch,
+  but it now has a canonical recovered projection packet.
+  Across Frobenius, target, threshold-profile, affine-invariant, dual
+  LogDet, and inverse-eigenvalue metrics, the unique nearest recovered
+  point is always the preferred lift 0.
+  That same lift is already selected by the intrinsic breakpoint tau_b,min.
+
+  So the selector-side burden narrows again:
+    justify the projection from the exact internal selector to that
+    preferred recovered lift, or replace both by a finer microscopic law.
+
+SUMMARY: PASS=12 FAIL=1
+
+----- stderr -----
+

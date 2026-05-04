@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/source_resolved_exact_green_self_consistent.py
+runner_sha256: 3e778f869c7f5dd47827529698722ded866f6227684df97dd3bf103c53108ab7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 55.07
+status: ok
+----- stdout -----
+====================================================================================
+SOURCE-RESOLVED EXACT GREEN SELF-CONSISTENT
+  compact exact h=0.25 refinement family, one self-consistency update
+  comparison: self-consistent field vs instantaneous 1/r field
+====================================================================================
+h=0.25, W=3, L=6, source_cluster=4 nodes
+field kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.5
+source strengths: (0.001, 0.002, 0.004, 0.008)
+target max |f|: 0.02
+
+REDUCTION CHECK
+  zero-source dynamic shift: +0.000000e+00
+  calibration gain: 1.757890e+00
+
+       s         inst        green  green/inst       max|f|
+----------------------------------------------------------------------
+  0.0010 +1.410541e-03 +1.873799e-03       1.328 2.500245e-03
+  0.0020 +2.821591e-03 +3.749686e-03       1.329 5.000223e-03
+  0.0040 +5.645274e-03 +7.507807e-03       1.330 9.999374e-03
+  0.0080 +1.129975e-02 +1.505023e-02       1.332 1.999447e-02
+
+SAFE READ
+  instantaneous F~M exponent: 1.00
+  self-consistent Green F~M exponent: 1.00
+  TOWARD rows: 4/4
+  mean |green/inst| ratio: 1.330
+  this is a refinement-positive pocket, not yet a self-consistent
+  field theory
+
+----- stderr -----
+

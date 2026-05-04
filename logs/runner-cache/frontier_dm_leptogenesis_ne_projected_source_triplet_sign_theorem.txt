@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_ne_projected_source_triplet_sign_theorem.py
+runner_sha256: eb78ed21722a474a2ced8b831b2ba784b47f8f57a185d4e3c3d6deeba33daf10
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.70
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS N_e PROJECTED-SOURCE TRIPLET SIGN THEOREM
+========================================================================================
+
+Question:
+  Can the baryogenesis-side triplet target be written directly at the DM-lane
+  endpoint dW_e^H?
+
+========================================================================================
+PART 1: THE PROJECTED SOURCE PACK RECOVERS THE TRIPLET COORDINATES LINEARLY
+========================================================================================
+  [PASS (C)] The projected Hermitian response pack fixes gamma exactly  (gamma=(0.141952772396,0.141952772396))
+  [PASS (C)] The projected Hermitian response pack fixes delta + rho exactly  (E1=(-0.530125742879,-0.530125742879))
+  [PASS (C)] The projected Hermitian response pack fixes A + b - c - d exactly  (E2=(-0.812574257121,-0.812574257121))
+  [PASS (C)] It also reconstructs the full breaking-triplet coordinates linearly  (linear={'gamma': 0.1419527723962531, 'E1': -0.5301257428790441, 'E2': -0.8125742571209559, 'A': 0.11570000000000001, 'b': 0.08457574287904415, 'c': 0.75365, 'd': 0.2592, 'delta': -0.50435, 'rho': -0.025775742879044154})
+
+  Exact linear projected-source formulas:
+    gamma = A13 / 2
+    E1    = (R22 - R33)/2 + (S12 - S13)/4
+    E2    = R11 + (S12 + S13)/4 - (R22 + R33)/2 - S23/2
+
+========================================================================================
+PART 2: THE CANONICAL dW_e^H COMPARATOR MISSES THE CONSTRUCTIVE SHEET
+========================================================================================
+  [PASS (C)] The canonical projected Hermitian source pack already has gamma > 0  (gamma=0.130472757513)
+  [PASS (C)] But its first interference channel is negative  (E1=-0.678203236088)
+  [PASS (C)] And its second interference channel is also negative  (E2=-0.974296763912)
+
+  canonical dW_e^H triplet read:
+    gamma = 0.130472757513
+    E1    = -0.678203236088
+    E2    = -0.974296763912
+
+========================================================================================
+PART 3: THE LIVE PMNS TARGET IS NOW AN EXPLICIT dW_e^H SIGN SYSTEM
+========================================================================================
+  [PASS (C)] The projected-source gate is no longer a vague full-D request  (the comparator target is explicit on the Hermitian response pack)
+  [PASS (C)] At dW_e^H level the constructive gate is gamma > 0, E1 > 0, E2 > 0  ((gamma,E1,E2)=(0.130472757513,-0.678203236088,-0.974296763912))
+  [PASS (C)] Equivalently on the response pack this is A13 > 0, (R22-R33)/2 + (S12-S13)/4 > 0, and R11 + (S12+S13)/4 - (R22+R33)/2 - S23/2 > 0  (exact projected-source sign system)
+
+========================================================================================
+PART 4: THE THEOREM NOTE RECORDS THE PROJECTED-SOURCE BRIDGE
+========================================================================================
+  [PASS (C)] The new note records the explicit dW_e^H triplet sign formulas
+  [PASS (C)] The note also records the constructive gate directly on the projected source pack
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact projected-source answer:
+    - dW_e^H fixes gamma, E1, and E2 by exact linear formulas
+    - the canonical dW_e^H comparator still lands at gamma > 0, E1 < 0, E2 < 0
+    - so the live PMNS constructive gate can now be stated directly on the
+      projected Hermitian source pack
+
+PASS=12 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,24 @@
+===== runner cache v1 =====
+runner: scripts/universality_classifier.py
+runner_sha256: f917c4466b1bab392d60e7bcc8c260d4d127ecd7602f9feedc15e5c36e4980c7
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+==========================================================================================
+UNIVERSALITY CLASSIFIER (5-condition battery: 4 static + 1 dynamic Lane 6 gap)
+Sweeps grown-graph families and runs the dynamic-augmented weak-field battery.
+PASS = (gravity TOWARD) AND (|F~M-1|<0.10) AND (Born<1e-10) AND (|null|<1e-10)
+       AND (dyn_gap > 0.05)   [Lane 6 retarded vs instantaneous on (2+1)D wave]
+==========================================================================================
+
+[ 1/26] A1_orig_Fam1                     PASS  delta=+0.0270  fm=1.006  born=7.2e-16
+
+[ 2/26] A2_orig_Fam2                     PASS  delta=+0.0269  fm=1.005  born=4.1e-16
+
+[ 3/26] A3_orig_Fam3                     PASS  delta=+0.0281  fm=1.007  born=6.3e-17
+
+[ 4/26] B1_pure_grid                   
+----- stderr -----
+

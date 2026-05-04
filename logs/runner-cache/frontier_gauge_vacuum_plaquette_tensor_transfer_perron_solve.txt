@@ -1,0 +1,175 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py
+runner_sha256: 30e20905339fd994250e0d8a6e6df1205a4a312b0b4377ad508cb7122698de20
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 11.54
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE TENSOR-TRANSFER PERRON SOLVE
+==============================================================================
+
+Inputs:
+  beta                                  = 6.0
+  default NMAX                          = 7
+  default MODE_MAX                      = 200
+
+Explicit Wilson character coefficients at beta = 6
+  c_(0,0)(6)                          = 3.441440354987777
+  a_(0, 0)      = 1.000000000000000   a^4 = 1.000000000000000e+00   d = 1
+  a_(1, 0)      = 0.422531739649983   a^4 = 3.187405744484778e-02   d = 3
+  a_(0, 1)      = 0.422531739649983   a^4 = 3.187405744484778e-02   d = 3
+  a_(1, 1)      = 0.162259799479938   a^4 = 6.931763545747348e-04   d = 8
+  a_(2, 0)      = 0.135961727363391   a^4 = 3.417170859929877e-04   d = 6
+  a_(2, 1)      = 0.048288055567445   a^4 = 5.436994221632786e-06   d = 15
+  a_(2, 2)      = 0.013505078888295   a^4 = 3.326507459318192e-08   d = 27
+
+Conjugation symmetry of Wilson character coefficients
+  swap error                            = 2.776e-17
+  min a, max a                          = 1.366040e-10, 1.000000e+00
+
+Reference solve A (structural choice rho_(p,q) = 1 for every irrep)
+  -> Z_6^env(W) = sum d_(p,q) chi_(p,q)(W) = delta(W, e)
+  -> rho is CHOSEN as input; not derived from any physical 3D solve
+  Perron eigenvalue                     = 3.812630482037
+  P_loc(6) = <psi_loc, J psi_loc>       = 0.452407159045
+  u_0,loc                               = 0.820129374352
+  alpha_s,loc(v) (alpha_bare=1)         = 1.486740820140
+
+Reference solve B (structural choice rho_(p,q) = delta_{(p,q),(0,0)})
+  -> Z_6^env(W) = constant (decoupled environment)
+  -> rho is CHOSEN as input; not derived from any physical 3D solve
+  Perron eigenvalue                     = 3.441440354984
+  P_triv(6) = <psi_triv, J psi_triv>    = 0.422531739647
+  u_0,triv                              = 0.806240916014
+  alpha_s,triv(v) (alpha_bare=1)        = 1.538403754467
+
+One-plaquette block reference
+  P_1plaq(6) = d/d beta log Z_1plaq(6)  (Bessel-determinant FD)
+  P_1plaq(6)                            = 0.999457104600
+
+Input rho_(p,q)(6) values defining each structural reference solve:
+  reference solve A (Dirac-delta-environment, rho = 1):
+    rho_(0, 0)      = 1.000000000000
+    rho_(1, 0)      = 1.000000000000
+    rho_(0, 1)      = 1.000000000000
+    rho_(1, 1)      = 1.000000000000
+    rho_(2, 0)      = 1.000000000000
+    rho_(2, 2)      = 1.000000000000
+  reference solve B (decoupled-environment, rho = delta_{(p,q),(0,0)}):
+    rho_(0, 0)      = 1.000000000000
+    rho_(1, 0)      = 0.000000000000
+    rho_(0, 1)      = 0.000000000000
+    rho_(1, 1)      = 0.000000000000
+    rho_(2, 0)      = 0.000000000000
+    rho_(2, 2)      = 0.000000000000
+  (note: these rho values are the structural input that defines each
+   reference; they are not derived from any 3D Wilson environment solve)
+
+Sensitivity sweep 1: rho_(p,q)(6) = exp(-tau (p+q))
+  (decreasing parametric family; spans rho = 1 down to rho = delta)
+  tau = 0.00  ->  P_tau(6) = 0.452407159045
+  tau = 0.25  ->  P_tau(6) = 0.446076581002
+  tau = 0.50  ->  P_tau(6) = 0.441035733692
+  tau = 1.00  ->  P_tau(6) = 0.433894045700
+  tau = 1.50  ->  P_tau(6) = 0.429473869772
+  tau = 2.00  ->  P_tau(6) = 0.426760788516
+  tau = 3.00  ->  P_tau(6) = 0.424094081003
+  tau = 5.00  ->  P_tau(6) = 0.422743623888
+
+Sensitivity sweep 2: rho^(beta_env)_(p,q) = c_(p,q)(beta_env) / c_(0,0)(beta_env)
+  (one-plaquette environment ansatz; explicit Wilson character sequence)
+  beta_env =  0.00  rho_(1,0)= 0.0000  rho_(2,2)=0.0000e+00  P(6) = 0.422531739647
+  beta_env =  1.00  rho_(1,0)= 0.1804  rho_(2,2)=2.2505e-04  P(6) = 0.428149829396
+  beta_env =  2.00  rho_(1,0)= 0.3859  rho_(2,2)=4.0753e-03  P(6) = 0.434407254010
+  beta_env =  3.00  rho_(1,0)= 0.6092  rho_(2,2)=2.2495e-02  P(6) = 0.441026722933
+  beta_env =  4.00  rho_(1,0)= 0.8389  rho_(2,2)=7.4369e-02  P(6) = 0.447631785471
+  beta_env =  5.00  rho_(1,0)= 1.0619  rho_(2,2)=1.8215e-01  P(6) = 0.453851770307
+  beta_env =  6.00  rho_(1,0)= 1.2676  rho_(2,2)=3.6464e-01  P(6) = 0.459423792895
+  beta_env =  8.00  rho_(1,0)= 1.6073  rho_(2,2)=9.8041e-01  P(6) = 0.468292338313
+  beta_env = 12.00  rho_(1,0)= 2.0330  rho_(2,2)=2.9626e+00  P(6) = 0.478885061555
+  beta_env = 20.00  rho_(1,0)= 2.4096  rho_(2,2)=7.4149e+00  P(6) = 0.487831802907
+
+Sensitivity sweep 3: rho_k = (c_(p,q)(6) / c_(0,0)(6))^k
+  (tube-power ansatz; iterates the one-plaquette environment k times)
+  k =   0   rho_(1,0)=    1.0000  P(6) = 0.452407159045
+  k =   1   rho_(1,0)=    1.2676  P(6) = 0.459423792895
+  k =   2   rho_(1,0)=    1.6068  P(6) = 0.467843080045
+  k =   4   rho_(1,0)=    2.5818  P(6) = 0.489180218722
+  k =   6   rho_(1,0)=    4.1484  P(6) = 0.515759024865
+  k =   8   rho_(1,0)=    6.6657  P(6) = 0.544268634793
+  k =  12   rho_(1,0)=   17.2095  P(6) = 0.588794434271
+  k =  20   rho_(1,0)=  114.7128  P(6) = 0.616256446254
+
+Convergence study (vary NMAX at MODE_MAX = 200):
+  NMAX = 3  ->  P_loc(6) = 0.452052482153
+  NMAX = 4  ->  P_loc(6) = 0.452399177265
+  NMAX = 5  ->  P_loc(6) = 0.452407043968
+  NMAX = 6  ->  P_loc(6) = 0.452407157902
+  NMAX = 7  ->  P_loc(6) = 0.452407159045
+
+Convergence study (vary MODE_MAX at NMAX = 6):
+  MODE_MAX =  40  ->  P_loc(6) = 0.452407159045
+  MODE_MAX =  80  ->  P_loc(6) = 0.452407159045
+  MODE_MAX = 120  ->  P_loc(6) = 0.452407159045
+  MODE_MAX = 160  ->  P_loc(6) = 0.452407159045
+  MODE_MAX = 200  ->  P_loc(6) = 0.452407159045
+  MODE_MAX = 250  ->  P_loc(6) = 0.452407159045
+
+Hostile-review diagnostics:
+  a_(p,q)(6) spread (max/min)            = 7.320e+09 (rep-dependent damping, no constant lift)
+  reference A vs canonical comparator    = |P_loc - CANONICAL_COMPARATOR| = 1.409928e-01
+  reference B vs canonical comparator    = |P_triv - CANONICAL_COMPARATOR| = 1.708683e-01
+  parametric perturbation rho=exp(-0.5(p+q))   = |P_tau=0.5 - P_loc| = 1.137143e-02
+  parametric perturbation rho=exp(-1.0(p+q))   = |P_tau=1.0 - P_loc| = 1.851311e-02
+
+  [PASS] [THEOREM] the Wilson character coefficients c_(p,q)(6) at the audited NMAX are positive, conjugation-symmetric, and converged in MODE_MAX
+         c_(0,0)=3.441440, a_min=1.366040e-10, swap=2.776e-17, |P(MODE=200)-P(MODE=160)|=0.000e+00
+  [PASS] [THEOREM] the explicit source operator J and half-slice multiplier exp(3 J) are self-adjoint, conjugation-symmetric, and positive on the audited dominant-weight box
+         J sym=0.000e+00, J swap=0.000e+00, M sym=2.220e-16, M min eig=2.495048e-01
+  [PASS] [THEOREM] at reference solve A (input rho_(p,q) = 1) the source-sector Perron problem yields an explicit positive conjugation-symmetric solution with a definite numerical P_loc(6)
+         Perron eig=3.812630, psi swap=2.776e-16, P_loc=0.452407159045, u_0,loc=0.820129374352
+  [PASS] [THEOREM] at reference solve B (input rho_(p,q) = delta_{(p,q),(0,0)}) the source-sector Perron problem yields an explicit positive conjugation-symmetric solution with a definite numerical P_triv(6)
+         Perron eig=3.441440, psi swap=1.722e-16, P_triv=0.422531739647, u_0,triv=0.806240916014
+  [PASS] [THEOREM] the NMAX truncation tail is super-polynomially summable: successive drifts decay geometrically and the dominant-weight band sum at the truncation edge is below theorem-grade tolerance
+         |P(NMAX=7)-P(NMAX=6)|=1.142e-09, |P(NMAX=6)-P(NMAX=5)|=1.139e-07, |P(NMAX=5)-P(NMAX=4)|/|P(NMAX=6)-P(NMAX=5)|=69.05, max_(p+q=NMAX) a^4 = 2.540e-16
+  [PASS] [THEOREM] the source-sector Perron value depends nontrivially on rho_(p,q)(6); explicit Wilson character coefficients and SU(3) intertwiners do not, by themselves, fix it (no-go: distinct admissible rho choices give distinct P(6))
+         family-1 spread = 0.029664, family-2 spread = 0.065300, family-3 spread = 0.163849; full admissible spread >= 0.193725; no choice of (tau, beta_env, k) is canonically picked out by local Wilson data
+  [PASS] [SUPPORT] the Wilson character coefficients are not a constant-lift family: a_(1,1) is not equal to a_(1,0)^2
+         a_(1,1) / a_(1,0)^2 = 0.908850 (rep-dependent structure, no scalar lift)
+  [PASS] [SUPPORT] neither structural reference Perron value coincides with the canonical comparator; the runner does not tune any input to that comparator
+         |P_loc - CANONICAL_COMPARATOR| = 1.409928e-01, |P_triv - CANONICAL_COMPARATOR| = 1.708683e-01; the comparator is consumed only by this hostile-review diagnostic
+  [PASS] [SUPPORT] D_6^loc and the trivial-projection C_(Z_0^env) are operator-distinct; the residual environment factor is not a renaming of the local Wilson factor
+         max|D_loc - P_0| = 3.187406e-02, |P_loc - P_triv| = 2.987542e-02
+
+Summary table (structural reference solves only — not the physical answer):
+  reference solve         P(6)            u_0           alpha_s(v)
+  A: rho = 1            0.4524071590    0.8201293744  1.4867408201
+  B: rho = delta_(0,0)  0.4225317396    0.8062409160  1.5384037545
+  one-plaquette ref     0.9994571046    0.9998642485  1.0002715583
+
+No-go: c_lambda(6) and SU(3) intertwiners do not, by themselves, fix
+rho_(p,q)(6) on the source sector. Three distinct admissible parametric
+families (decreasing exp(-tau(p+q)), one-plaquette-environment ansatz
+rho^(beta_env), and tube-power ansatz rho^k) each use only c_lambda(6)
+and SU(3) intertwiners plus a single exogenous parameter (tau, beta_env,
+k), are each strictly admissible, and yet produce DIFFERENT P(6) values.
+The canonical comparator value sits inside the admissible-rho span (it
+can be reached, for example, near k = 12 in the tube-power family), but
+no parameter choice is canonically picked out without further input.
+
+The missing mathematical object is the boundary character measure of
+the unmarked 3D spatial Wilson environment with marked-plaquette
+boundary, equivalently the Perron eigenvector of the explicit positive
+tensor-transfer operator built from c_lambda(6) and SU(3) intertwiners
+on the full 3D environment lattice. That object is non-perturbative on
+a 3D SU(3) lattice gauge network with one boundary plaquette and is
+not derivable in closed form from the local character data above alone.
+
+==============================================================================
+SUMMARY: THEOREM PASS=6 SUPPORT=3 FAIL=0
+==============================================================================
+
+----- stderr -----
+

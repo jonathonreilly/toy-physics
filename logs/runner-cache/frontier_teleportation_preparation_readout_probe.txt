@@ -1,0 +1,89 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_preparation_readout_probe.py
+runner_sha256: 61af00c03179dace36dbe35acc504ed245365a7f3deedfadec3823096eeef2dd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.39
+status: ok
+----- stdout -----
+POISSON TELEPORTATION PREPARATION/READOUT PROBE
+Status: bounded diagnostic; no dynamic cooling or adiabatic prep simulated
+Extraction context: diagonalize H2 offline, keep last KS taste bit per species, trace cells/spectator tastes for the deterministic resource
+Protocol sanity: ideal Phi+ resource mean fidelity=0.9999999999999996, min=0.9999999999999991, max trace error=5.551e-16
+
+Case: 1d_null
+  lattice/params: dim=1 side=8 N=8 envs/logical_qubit=4 mass=0 G=0
+  spectrum: E0=-4, ground multiplicity=1 (tol=1.400e-09), gap to next distinct=5.857864e-01
+    first energies: -4, -3.41421356, -3.41421356, -3.41421356, -3.41421356, -2.82842712, -2.82842712, -2.82842712
+  ground-manifold projection probabilities from simple references: origin-pair=0.015625, uniform-pair=1.000000, best site-pair=0.015625 at (2:(2,), 7:(7,))
+  representative ground-state full CHSH: 2.000000
+  deterministic traced logical resource (trace environment; mathematical success probability=1): best Bell=0.500000 (Phi+), CHSH=2.000000, purity=1.000000, negativity=0.000000
+    logical Bell projection probabilities: Phi+=0.500000, Phi-=5.887847e-17, Psi+=0.500000, Psi-=-1.962616e-17
+    ideal-measurement teleportation with this resource: mean=0.669817, min=0.500038, max=0.987949, max trace error=4.441e-16
+  fixed-env postselection diagnostics:
+    branches=16, total probability=1.000000000000, effective branch count=16.000000
+    best-fidelity branch: Bell=0.500000 (Psi+), probability=0.062500, expected attempts=16, CHSH=2.000000, negativity=0.000000
+      env A=cell=(3,), spectator=()
+      env B=cell=(3,), spectator=()
+    most-likely branch: Bell=0.500000 (Psi+), probability=0.062500, expected attempts=16, CHSH=2.000000, negativity=0.000000
+      env A=cell=(3,), spectator=()
+      env B=cell=(3,), spectator=()
+    aggregate high-fidelity branch mass (Bell >= 0.900): count=0, probability=0, expected attempts=inf
+  verdict:
+    offline extracted traced resource: NO
+    isolated ground state at min-gap 1.0e-08: YES
+    preparation/readout protocol demonstrated: NO (diagnostic only)
+
+Case: 1d_poisson_chsh
+  lattice/params: dim=1 side=8 N=8 envs/logical_qubit=4 mass=0 G=1000
+  spectrum: E0=-343.877771485, ground multiplicity=1 (tol=3.539e-08), gap to next distinct=1.868323e-02
+    first energies: -343.877771, -343.859088, -343.859088, -343.813943, -343.813943, -343.76874, -343.76874, -343.75
+  ground-manifold projection probabilities from simple references: origin-pair=1.645024e-18, uniform-pair=0.141330, best site-pair=0.124745 at (4:(4,), 0:(0,))
+  representative ground-state full CHSH: 2.822668
+  deterministic traced logical resource (trace environment; mathematical success probability=1): best Bell=0.997963 (Phi+), CHSH=2.822668, purity=0.997967, negativity=0.497963
+    logical Bell projection probabilities: Phi+=0.997963, Phi-=3.925231e-17, Psi+=0.001527, Psi-=5.091055e-04
+    ideal-measurement teleportation with this resource: mean=0.998621, min=0.997964, max=0.999470, max trace error=4.441e-16
+  fixed-env postselection diagnostics:
+    branches=16, total probability=1.000000000000, effective branch count=4.008158
+    best-fidelity branch: Bell=0.999984 (Psi+), probability=2.056839e-13, expected attempts=4.86183e+12, CHSH=2.828382, negativity=0.499984
+      env A=cell=(2,), spectator=()
+      env B=cell=(2,), spectator=()
+    most-likely branch: Bell=0.998981 (Phi+), probability=0.249745, expected attempts=4.00408, CHSH=2.825546, negativity=0.498981
+      env A=cell=(2,), spectator=()
+      env B=cell=(0,), spectator=()
+    aggregate high-fidelity branch mass (Bell >= 0.900): count=8, probability=0.998982, expected attempts=1.00102
+  verdict:
+    offline extracted traced resource: YES
+    isolated ground state at min-gap 1.0e-08: YES
+    preparation/readout protocol demonstrated: NO (diagnostic only)
+
+Case: 2d_poisson_chsh
+  lattice/params: dim=2 side=4 N=16 envs/logical_qubit=8 mass=0 G=1000
+  spectrum: E0=-66.100691676, ground multiplicity=1 (tol=7.610e-09), gap to next distinct=2.463780e-01
+    first energies: -66.1006917, -65.8543137, -65.8543137, -65.8543137, -65.8543137, -65.6061352, -65.6061352, -65.6061352
+  ground-manifold projection probabilities from simple references: origin-pair=1.675112e-11, uniform-pair=0.145230, best site-pair=0.058802 at (10:(2, 2), 0:(0, 0))
+  representative ground-state full CHSH: 2.668376
+  deterministic traced logical resource (trace environment; mathematical success probability=1): best Bell=0.970283 (Phi+), CHSH=2.745662, purity=0.971783, negativity=0.470283
+    logical Bell projection probabilities: Phi+=0.970283, Phi-=7.850462e-17, Psi+=0.029717, Psi-=-3.023000e-18
+    ideal-measurement teleportation with this resource: mean=0.979360, min=0.970287, max=0.999810, max trace error=6.661e-16
+  fixed-env postselection diagnostics:
+    branches=64, total probability=1.000000000000, effective branch count=8.757659
+    best-fidelity branch: Bell=0.999428 (Psi+), probability=5.854540e-08, expected attempts=1.70808e+07, CHSH=2.826809, negativity=0.499428
+      env A=cell=(0, 1), spectator=(1,)
+      env B=cell=(0, 1), spectator=(1,)
+    most-likely branch: Bell=0.984720 (Phi+), probability=0.119428, expected attempts=8.37324, CHSH=2.785545, negativity=0.484720
+      env A=cell=(1, 1), spectator=(0,)
+      env B=cell=(0, 0), spectator=(0,)
+    aggregate high-fidelity branch mass (Bell >= 0.900): count=64, probability=1.000000, expected attempts=1
+  verdict:
+    offline extracted traced resource: YES
+    isolated ground state at min-gap 1.0e-08: YES
+    preparation/readout protocol demonstrated: NO (diagnostic only)
+
+Conclusion:
+  Offline traced-resource positives on Poisson cases: 1d_poisson_chsh, 2d_poisson_chsh.
+  Preparation/readout remains unproven: this probe does not construct a cooling schedule, adiabatic path, encoded Bell measurement, physical environment readout, or deterministic branch selection.
+  Fixed-env branches are useful diagnostics only unless their projection measurement, heralding cost, and post-measurement logical operations are specified.
+
+----- stderr -----
+

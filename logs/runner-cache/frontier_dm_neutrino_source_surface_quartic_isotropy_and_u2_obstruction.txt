@@ -1,0 +1,143 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_quartic_isotropy_and_u2_obstruction.py
+runner_sha256: 6203f948a4289b874aa6e6b8b42a609615a6d67f17dce64513bb77ce1110e9ff
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.57
+status: ok
+----- stdout -----
+========================================================================================
+G1 PHYSICIST F: Frobenius uniqueness + Full-W at physically-forced m
+        + Quartic extension of the observable principle
+========================================================================================
+
+========================================================================================
+LINE 1: FROBENIUS UNIQUENESS FROM PD + COERCIVITY + GAUGE-INV + QUADRATIC
+========================================================================================
+ [PASS] ||K_doublet||_F^2 = (Tr K)^2 - 2 det K (Hermitian 2x2 identity) (err = 0.00e+00)
+ [PASS] Hess[(Tr K)^2] = diag(0, 8) (no delta dependence; q^2 coeff = 4) ((hd2, hq2, hdq) = (0.0000, 8.0000, 0.0000))
+ [PASS] Hess[det K] = diag(-6, 2) (delta-concave, q-convex — indefinite) ((hd2, hq2, hdq) = (-6.0000, 2.0000, -0.0000))
+ [PASS] PD cone { A > -B/4, B < 0 } correctly characterises {Hess F = diag(-6B, 8A+2B) PD}
+ [PASS] Line 1 member (A,B)=(1,-2) i.e. F1 reproduces delta_* = sqrt(6)/2 - sqrt(2)/18 (delta = 1.14617745 vs 1.14617745)
+ [PASS] Line 1 obstruction: >=3 DISTINCT chamber-boundary minimizers in the PD cone (3 of 4 non-F1 members give a different delta_*)
+ Line 1 PD-family chamber-boundary minimizers:
+  (A, B)       delta_*
+  (+1.00, -2.00)    1.146177 <-- F1
+  (+1.00, -1.00)    1.203693
+  (+2.00, -3.00)    1.170827
+  (+0.50, -1.00)    1.146177
+  (+3.00, -0.50)    1.292178
+ [PASS] Conditional-uniqueness axiom: U(2) x U(2) independent left-right unitary invariance is NOT satisfied by (Tr K)^2 (Tr K changes) but IS satisfied by ||K||_F^2 (Tr K changed in 20/20 samples; ||K||_F^2 preserved in 20/20)
+
+ Line 1 verdict:
+  - The PD+coercive+U(2)-invariant quadratic class is a 2-parameter family
+   A (Tr K)^2 + B det K with A > -B/4 > 0.
+  - F1 is NOT uniquely pinned by these four properties.
+  - CONDITIONAL closure: IF independent left-right U(2) gauge invariance
+   on the (non-Hermitian) doublet block is axiom-native retained,
+   THEN F1 = ||K||_F^2 is uniquely pinned. NOT currently retained.
+  - Line 1: NEW OBSTRUCTION (unless conditional gauge axiom is promoted).
+
+========================================================================================
+LINE 2: FULL-W EXTREMUM AT PHYSICALLY-FORCED m
+========================================================================================
+ Full-W chamber-boundary extrema by m:
+ m (physically-forced)         m value     argmax δ     argmin δ
+ m=4sqrt(2)/9 (F1)            0.628539     1.272862     0.367656
+ m=sqrt(2)                    1.414214     1.530898     0.080079
+ m=2sqrt(2)/3                 0.942809     1.357833     0.252625
+ m=sqrt(6)/2                  1.224745     1.453998    -0.557678
+ m=2sqrt(6)/3 (CP1)           1.632993     1.632993    -0.000000
+ m=1                          1.000000     1.375692     0.231692
+ m=2                          2.000000     1.836863    -0.134334
+ m=5                          5.000000     0.628944    -1.232410
+ m=1/sqrt(3)                  0.577350     1.260921     0.386392
+ [PASS] Chamber-boundary argmax delta of W_full is m-DEPENDENT (Line-2 obstruction) (std(argmax) = 0.3146)
+ [PASS] Chamber-boundary argmin delta of W_full is m-DEPENDENT (Line-2 obstruction) (std(argmin) = 0.4961)
+ [PASS] No physically-forced m gives a boundary extremum at a ledger candidate (Schur-Q / F1 / the Z_3 parity-split theorem-a/b/c) (matches = 0)
+ [PASS] Chamber-interior joint minima of W_full land on det=0 singular boundary (confirms the cubic variational selection obstruction (B) at fixed m) (9 / 9 candidate m-values give singular min)
+ [PASS] At m=4sqrt(2)/9, boundary argmax delta != F1 delta (expected) (argmax delta = 1.272862 vs F1 = 1.146177)
+
+ Line 2 verdict: NEW OBSTRUCTION. For every physically-forced m tested,
+ the full-W chamber-boundary extremum is m-dependent and lands at NO
+ ledger candidate point. Chamber-interior joint extrema remain at det=0
+ singular boundary, strengthening the cubic variational selection obstruction (B) to the fixed-m restriction.
+
+========================================================================================
+LINE 3: QUARTIC EXTENSION OF THE OBSERVABLE PRINCIPLE
+========================================================================================
+ [PASS] Tr(J_act^2) = 6 (delta^2 + q_+^2) [parity-DEFINITE / isotropic] (max err = 3.55e-15)
+ [PASS] Tr(J_act^3) = 6 (q_+^3 - 3 delta^2 q_+) = 6 Re(w^3) [parity-MIXING cubic] (max err = 1.42e-14)
+ [PASS] Tr(J_act^4) = 18 (delta^2 + q_+^2)^2 [parity-DEFINITE / isotropic AGAIN] (max err = 1.14e-13)
+ [PASS] Tr(J_act^4) = (1/2) [Tr(J_act^2)]^2 (quartic is SQUARE of quadratic)
+ [PASS] Tr(J_act^6) is NOT isotropic under (delta, q_+) swap (higher-order terms DO carry parity information, but not at quartic)
+ Taylor-truncated W (quadratic + cubic + quartic) boundary extrema:
+  m      argmin δ    W_min     argmax δ   W_max
+  0.5000      -1.500000   -10472.8595    0.722176   -158.3641
+  1.0000      -1.500000     -672.0968    0.638074    -13.4340
+  2.0000      -1.500000      -47.5924    0.576641     -1.6451
+  5.0000      -1.500000       -2.3424    0.663188     -0.1852
+  10.0000     -1.500000       -0.4083    0.741131     -0.0427
+ [PASS] Taylor-truncated W boundary argmax is m-dependent (quartic addition does NOT break m-dependence) (std(argmax) = 0.0592)
+
+ Line 3 verdict: NEW QUARTIC-ISOTROPY OBSTRUCTION.
+  At scalar baseline D = m I_3 on the active pair (T_delta, T_q):
+  Tr(J^2) is isotropic 6 r^2, Tr(J^3) is parity-mixing 6 Re(w^3),
+  Tr(J^4) = 18 r^4 = (1/2) Tr(J^2)^2 is ISOTROPIC (no new parity-mixing).
+  Hence the observable-principle Taylor expansion's parity-mixing
+  content is concentrated at cubic order (already the cubic variational selection obstruction obstructed).
+
+========================================================================================
+PART 4: CONSOLIDATED VERDICT
+========================================================================================
+
+LINE 1 (Frobenius uniqueness):
+ - PD + coercive + U(2)-invariant + quadratic = 2-parameter family
+  { A (Tr K)^2 + B det K : A > -B/4, B < 0 }
+ - Different members give DIFFERENT chamber-boundary minimizers
+ - F1 = ||K||_F^2 is NOT uniquely pinned by these four axiom-native
+  properties
+ - Conditional gate: U(2)_L x U(2)_R independent unitary invariance
+  WOULD uniquely pin F1, but is NOT currently retained.
+ -> NEW OBSTRUCTION (parity-mixing-quadratic ambiguity is not
+   closed by PD + coercivity + gauge + quadratic alone)
+
+LINE 2 (Full-W at physically-forced m):
+ - Fixed-m chamber-boundary extrema are m-dependent
+ - No physically-forced m lands at any of the 5 ledger candidates
+ - Chamber-interior joint extrema at fixed m are on det=0 singular
+  surface (strengthening the cubic variational selection obstruction (B))
+ -> NEW OBSTRUCTION (m-dependence survives fixed-m restriction)
+
+LINE 3 (Quartic extension):
+ - Tr(J^2) = 6 (delta^2 + q_+^2) isotropic
+ - Tr(J^3) = 6 Re(w^3)       parity-mixing (the cubic variational selection obstruction obstructed)
+ - Tr(J^4) = 18 (delta^2 + q_+^2)^2 = (1/2) Tr(J^2)^2 isotropic
+ - Quartic is SQUARE of quadratic: no new parity-mixing info
+ -> NEW OBSTRUCTION (quartic-isotropy theorem)
+
+OVERALL: NEW OBSTRUCTION + narrower gap. The the selector gate remains OPEN.
+
+What is strictly NEWLY CLOSED:
+ (a) the parity-mixing quadratic class in (K11, K22, |K12|^2) is a
+   two-parameter family; PD alone is insufficient to pick F1;
+ (b) fixed-m full-W extremum m-dependence is a genuine distinct
+   obstruction from the cubic variational selection obstruction's joint (m, delta) obstruction;
+ (c) Tr(J^4) at scalar baseline is isotropic, so the quartic extension
+   of the observable principle does NOT break the quadratic isotropy.
+
+What is strictly NEWLY OPEN/REFINED:
+ - Whether an axiom-native U(2)_L x U(2)_R independent unitary
+  invariance on the non-Hermitian doublet block can be retrieved
+  from the Cl(3)/Z^3 axiom. If yes, Line-1 conditional closure
+  promotes F1 to the unique parity-mixing quadratic on retained axioms.
+ - Whether higher-order even trace invariants (Tr(J^6), ...) do
+  carry new parity-mixing content (the quartic does NOT, but the
+  sextic CAN, as we verified above).
+
+PASS = 18, FAIL = 0
+
+RESULT: PASS (18 checks, 0 failures)
+
+----- stderr -----
+

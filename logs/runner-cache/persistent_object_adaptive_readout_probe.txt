@@ -1,0 +1,40 @@
+===== runner cache v1 =====
+runner: scripts/persistent_object_adaptive_readout_probe.py
+runner_sha256: 257e59d7dcf95453351fba08922776cab0036309605229c7e36470295a1952f1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 102.29
+status: ok
+----- stdout -----
+====================================================================================================
+PERSISTENT OBJECT ADAPTIVE READOUT PROBE
+  exact h=0.25 lattice, compact repeated-update source object
+  broad readout reference vs entropy-guided diffusion contour
+====================================================================================================
+h=0.25, W=3, L=6, source_z=2.0, source_nodes=[5320, 5345, 5295, 5321, 5319]
+source strengths=[0.001, 0.002, 0.004, 0.008], updates=3, top_keep=3
+adaptive readout: diffuse_steps=2, diffuse_lambda=0.35, target_mass_base=0.32, target_mass_gain=0.26, mask_slope_floor=0.1, blend_with_raw=0.5
+kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.5
+field target max=0.02, fixed gain=1.800031e+00
+
+REDUCTION CHECK
+  zero-source broad shift:    +0.000000e+00
+  zero-source adaptive shift: -4.050010e-16
+  zero-source adaptive target: 0.328818
+  zero-source adaptive tau:    2.739158e-03
+  zero-source adaptive Hnorm:  0.966084
+  fixed dynamic field gain:    1.800031e+00
+
+FROZEN READOUT
+mode                  F~M(step)   TOWARD    det N_eff  support frac    capture    w N_eff   mean delta   target
+----------------------------------------------------------------------------------------------------
+broad            1.00,1.00,1.00    12/12      497.319         1.000      1.000    625.000    8.561e-03      n/a
+adaptive         1.04,1.04,1.04    12/12      120.414         0.264      0.351    132.034    1.972e-02    0.329
+
+COMPARISON
+  adaptive vs broad delta ratio: 2.303
+  adaptive vs broad support frac: 0.264
+  adaptive vs broad capture:      0.351
+
+----- stderr -----
+

@@ -1,0 +1,93 @@
+===== runner cache v1 =====
+runner: scripts/axiom_first_cpt_check.py
+runner_sha256: 54bb3bcc1f16ba069a6ed790d62513361bcdd7d57750fbdf102f9cb200e48dbe
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.06
+status: ok
+----- stdout -----
+========================================================================
+ axiom_first_cpt_check.py
+ Loop: axiom-first-foundations, Cycle 4 / Route R4 (stretch attempt)
+ Verifies CPT operator identities on small staggered Dirac–Wilson
+ blocks; reports load-bearing residuals honestly.
+========================================================================
+
+[block tag: canonical]
+
+--- Block: L=2, dim=3, mass=0.3, r_W=0.0 ---
+  C residual ‖C M C^-1 - M^T‖  = 0.000e+00  (definitional)
+  P residual ‖R_P M R_P^-1 - M‖ = 0.000e+00
+  T residual ‖R_T M^* R_T^-1 - M^*‖ = 0.000e+00  (M is real? max |Im M| = 0.000e+00)
+  CPT residual ‖Θ_CPT M Θ_CPT^-1 - M^*‖ = 0.000e+00
+  ε-Hermiticity ‖ε M ε - M^†‖ = 0.000e+00
+  det(M) = (6.560999999999994e-05+0j)  (Im part = 0.000e+00)
+  involution residual ‖Θ_CPT^2 (M) - M‖ = 0.000e+00
+
+[block tag: canonical]
+
+--- Block: L=2, dim=3, mass=0.5, r_W=0.0 ---
+  C residual ‖C M C^-1 - M^T‖  = 0.000e+00  (definitional)
+  P residual ‖R_P M R_P^-1 - M‖ = 0.000e+00
+  T residual ‖R_T M^* R_T^-1 - M^*‖ = 0.000e+00  (M is real? max |Im M| = 0.000e+00)
+  CPT residual ‖Θ_CPT M Θ_CPT^-1 - M^*‖ = 0.000e+00
+  ε-Hermiticity ‖ε M ε - M^†‖ = 0.000e+00
+  det(M) = (0.003906250000000001+0j)  (Im part = 0.000e+00)
+  involution residual ‖Θ_CPT^2 (M) - M‖ = 0.000e+00
+
+[block tag: 1D-toy]
+
+--- Block: L=4, dim=1, mass=0.3, r_W=0.0 ---
+  C residual ‖C M C^-1 - M^T‖  = 0.000e+00  (definitional)
+  P residual ‖R_P M R_P^-1 - M‖ = 0.000e+00
+  T residual ‖R_T M^* R_T^-1 - M^*‖ = 0.000e+00  (M is real? max |Im M| = 0.000e+00)
+  CPT residual ‖Θ_CPT M Θ_CPT^-1 - M^*‖ = 1.000e+00
+  ε-Hermiticity ‖ε M ε - M^†‖ = 0.000e+00
+  det(M) = (0.09809999999999999+0j)  (Im part = 0.000e+00)
+  involution residual ‖Θ_CPT^2 (M) - M‖ = 0.000e+00
+
+[block tag: +W-fermion]
+
+--- Block: L=2, dim=3, mass=0.3, r_W=1.0 ---
+  C residual ‖C M C^-1 - M^T‖  = 0.000e+00  (definitional)
+  P residual ‖R_P M R_P^-1 - M‖ = 2.000e+00
+  T residual ‖R_T M^* R_T^-1 - M^*‖ = 2.000e+00  (M is real? max |Im M| = 0.000e+00)
+  CPT residual ‖Θ_CPT M Θ_CPT^-1 - M^*‖ = 2.000e+00
+  ε-Hermiticity ‖ε M ε - M^†‖ = 2.000e+00
+  det(M) = (1828.3135544099962+0j)  (Im part = 0.000e+00)
+  involution residual ‖Θ_CPT^2 (M) - M‖ = 0.000e+00
+
+========================================================================
+ SUMMARY (canonical A_min: pure staggered, r_wilson_fermion = 0)
+========================================================================
+   E1 (Θ_CPT^2 = id):                   PASS
+   E2 (Θ_CPT M Θ_CPT^-1 = M^*):         PASS
+   E3 (ε M ε = M^†, γ_5-Hermiticity):   PASS
+   E4 (det(M) ∈ R):                     PASS
+
+   PASSED on canonical A_min: 4/4
+
+   --- Diagnostic: 1D toy (no spatial parity) ---
+   L=4, dim=1, m=0.3: err_CPT=1.000e+00, err_eps=0.000e+00, det∈R=True
+   In 1D there is no spatial parity, so CPT reduces to TC.
+   The TC residual on the time-circle is non-zero because the
+   1-component staggered hop has no chiral structure to absorb the
+   time inversion. This is expected; canonical A_min lives on Z^3.
+
+   --- Wall test: staggered + Wilson FERMION term in 3D ---
+   (this is NOT in A_min; included only to expose the load-bearing
+    wall: adding a Wilson fermion term breaks the naive ε-as-γ_5)
+   L=2, dim=3, m=0.3, r_W=1.0: err_CPT=2.000e+00, err_eps=2.000e+00
+   load-bearing wall: ε(x) = (-1)^Σx_k is the γ_5 analogue for the
+   staggered KS hop, but does NOT play the same role for the
+   Wilson fermion term. Staggered + Wilson fermion is not in A_min;
+   A_min's A3 uses pure staggered. (Wilson plaquette in A4 is a
+   *gauge-sector* term, not a fermion Wilson term.)
+
+ verdict: CPT operator-level identities (CPT1)–(CPT5) exhibited
+ on canonical A_min (pure staggered).
+ Wilson PLAQUETTE (gauge-sector) CPT step is asserted by inspection
+ (deferred to a future loop for full algebraic generality).
+
+----- stderr -----
+

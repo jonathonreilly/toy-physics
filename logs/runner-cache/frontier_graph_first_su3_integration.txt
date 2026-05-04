@@ -1,0 +1,149 @@
+===== runner cache v1 =====
+runner: scripts/frontier_graph_first_su3_integration.py
+runner_sha256: d6a4d0a631b91dca9350689476b8e180b0f8d32033564c4da239ad2b8557ff58
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
+============================================================================
+GRAPH-FIRST SU(3) INTEGRATION THEOREM
+============================================================================
+Selected graph axis -> graph-native weak su(2) -> residual swap -> su(3) ⊕ u(1)
+
+============================================================================
+SELECTED AXIS 1
+============================================================================
+  [PASS] X is Hermitian
+  [PASS] Z is Hermitian
+  [PASS] Y is Hermitian
+  [PASS] X^2 = I
+  [PASS] Y^2 = I
+  [PASS] Z^2 = I
+  [PASS] [X,Y] = 2iZ
+  [PASS] [Y,Z] = 2iX
+  [PASS] [Z,X] = 2iY
+  [PASS] Selected-axis graph basis is unitary
+  [PASS] X = sigma_x on graph fiber
+  [PASS] Y = sigma_y on graph fiber
+  [PASS] Z = sigma_z on graph fiber
+  [PASS] dim Comm(graph weak su(2)) = 16  (got 16)
+  [PASS] [SWAP_rest, T_1] = 0
+  [PASS] [SWAP_rest, T_2] = 0
+  [PASS] [SWAP_rest, T_3] = 0
+  [PASS] Residual swap acts on graph base
+  [PASS] Residual swap spectrum is +1 x 6, -1 x 2
+  [PASS] dim Comm(graph weak su(2), residual swap) = 10  (got 10)
+  [PASS] rank Pi_+ = 6
+  [PASS] rank Pi_- = 2
+  [PASS] Symmetric block rank = 9
+  [PASS] Antisymmetric block rank = 1
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Graph-first su(3) closes under commutation  (max err = 1.57e-16)
+  [PASS] Y_hyp is Hermitian
+  [PASS] Tr Y_hyp = 0
+  [PASS] Y_hyp has +1/3 x 6
+  [PASS] Y_hyp has -1 x 2
+
+============================================================================
+SELECTED AXIS 2
+============================================================================
+  [PASS] X is Hermitian
+  [PASS] Z is Hermitian
+  [PASS] Y is Hermitian
+  [PASS] X^2 = I
+  [PASS] Y^2 = I
+  [PASS] Z^2 = I
+  [PASS] [X,Y] = 2iZ
+  [PASS] [Y,Z] = 2iX
+  [PASS] [Z,X] = 2iY
+  [PASS] Selected-axis graph basis is unitary
+  [PASS] X = sigma_x on graph fiber
+  [PASS] Y = sigma_y on graph fiber
+  [PASS] Z = sigma_z on graph fiber
+  [PASS] dim Comm(graph weak su(2)) = 16  (got 16)
+  [PASS] [SWAP_rest, T_1] = 0
+  [PASS] [SWAP_rest, T_2] = 0
+  [PASS] [SWAP_rest, T_3] = 0
+  [PASS] Residual swap acts on graph base
+  [PASS] Residual swap spectrum is +1 x 6, -1 x 2
+  [PASS] dim Comm(graph weak su(2), residual swap) = 10  (got 10)
+  [PASS] rank Pi_+ = 6
+  [PASS] rank Pi_- = 2
+  [PASS] Symmetric block rank = 9
+  [PASS] Antisymmetric block rank = 1
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Graph-first su(3) closes under commutation  (max err = 1.57e-16)
+  [PASS] Y_hyp is Hermitian
+  [PASS] Tr Y_hyp = 0
+  [PASS] Y_hyp has +1/3 x 6
+  [PASS] Y_hyp has -1 x 2
+
+============================================================================
+SELECTED AXIS 3
+============================================================================
+  [PASS] X is Hermitian
+  [PASS] Z is Hermitian
+  [PASS] Y is Hermitian
+  [PASS] X^2 = I
+  [PASS] Y^2 = I
+  [PASS] Z^2 = I
+  [PASS] [X,Y] = 2iZ
+  [PASS] [Y,Z] = 2iX
+  [PASS] [Z,X] = 2iY
+  [PASS] Selected-axis graph basis is unitary
+  [PASS] X = sigma_x on graph fiber
+  [PASS] Y = sigma_y on graph fiber
+  [PASS] Z = sigma_z on graph fiber
+  [PASS] dim Comm(graph weak su(2)) = 16  (got 16)
+  [PASS] [SWAP_rest, T_1] = 0
+  [PASS] [SWAP_rest, T_2] = 0
+  [PASS] [SWAP_rest, T_3] = 0
+  [PASS] Residual swap acts on graph base
+  [PASS] Residual swap spectrum is +1 x 6, -1 x 2
+  [PASS] dim Comm(graph weak su(2), residual swap) = 10  (got 10)
+  [PASS] rank Pi_+ = 6
+  [PASS] rank Pi_- = 2
+  [PASS] Symmetric block rank = 9
+  [PASS] Antisymmetric block rank = 1
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Embedded lambda_a commutes with graph weak su(2)+swap
+  [PASS] Graph-first su(3) closes under commutation  (max err = 1.57e-16)
+  [PASS] Y_hyp is Hermitian
+  [PASS] Tr Y_hyp = 0
+  [PASS] Y_hyp has +1/3 x 6
+  [PASS] Y_hyp has -1 x 2
+
+SUMMARY
+  Once the graph-first selector chooses an axis, the selected graph
+  projection canonically splits the cube into 2-point fibers over a
+  4-point base. The selected-axis shift/parity pair generates the weak
+  su(2) on the fibers. The residual swap of the other two axes acts on
+  the base and splits it into 3 ⊕ 1. The joint commutant is therefore
+  gl(3) ⊕ gl(1), with compact semisimple part su(3).
+  This closes the structural graph-first route to the color lane.
+
+PASS=111 FAIL=0
+
+----- stderr -----
+

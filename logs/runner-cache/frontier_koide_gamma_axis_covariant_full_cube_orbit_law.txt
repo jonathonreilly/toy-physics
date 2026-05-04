@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_gamma_axis_covariant_full_cube_orbit_law.py
+runner_sha256: 4ba1bac7ade51d8d1ef1e835cc84abf03813dabd14401389996d8918db2ae2e9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: the exact full-cube C_3[111] cycle fixes the slot geometry used by the native Gamma_i family
+========================================================================================
+  [PASS (C)] The full-cube cycle preserves T_1
+  [PASS (C)] The restricted full-cube cycle on T_1 is exactly the species 3-cycle
+  [PASS (C)] Native Gamma_1 has the exact second-order return identity on T_1
+  [PASS (C)] Native Gamma_2 has the exact second-order return identity on T_1
+  [PASS (C)] Native Gamma_3 has the exact second-order return identity on T_1
+
+========================================================================================
+PART 2: one axis-1 local template rotates exactly through the full-cube orbit
+========================================================================================
+  [PASS (C)] The full-cube cycle fixes O_0
+  [PASS (C)] The T_2 slot 110 rotates to 011
+  [PASS (C)] The T_2 slot 101 rotates to 110
+  [PASS (C)] The T_2 slot 011 rotates to 101
+
+========================================================================================
+PART 3: the basis-level full-cube orbit law is exact on each template slot
+========================================================================================
+  [PASS (C)] [NUMERIC] Template slot O_0 produces the exact axis-covariant species family  (axis1:0.00e+00; axis2:0.00e+00; axis3:0.00e+00)
+  [PASS (C)] [NUMERIC] Template slot 110 produces the exact axis-covariant species family  (axis1:0.00e+00; axis2:0.00e+00; axis3:0.00e+00)
+  [PASS (C)] [NUMERIC] Template slot 101 produces the exact axis-covariant species family  (axis1:0.00e+00; axis2:0.00e+00; axis3:0.00e+00)
+  [PASS (C)] [NUMERIC] Template slot 011 produces the exact axis-covariant species family  (axis1:0.00e+00; axis2:0.00e+00; axis3:0.00e+00)
+
+========================================================================================
+PART 4: one full-cube template generates the exact microscopic orbit law for (u,v,w)
+========================================================================================
+  [PASS (C)] [NUMERIC] Axis-1 template return is exactly D1 = diag(u, v, w)  (diag=[1.0, 2.0, 3.0])
+  [PASS (C)] [NUMERIC] Axis-2 rotated return is exactly D2 = diag(w, u, v)  (diag=[3.0, 1.0, 2.0])
+  [PASS (C)] [NUMERIC] Axis-3 rotated return is exactly D3 = diag(v, w, u)  (diag=[2.0, 3.0, 1.0])
+  [PASS (C)] [NUMERIC] So the full Gamma_i orbit is exactly the species-cycle orbit of D1
+  [PASS (C)] [NUMERIC] The fourth template weight z is exactly irrelevant for the axis-matched return family
+
+========================================================================================
+PART 5: the old cross-axis candidate is replaced by an exact full-cube law
+========================================================================================
+  [PASS (C)] A single axis-1 full-cube template plus exact C_3 transport determines the whole Gamma_i orbit family  (no extra axis-oriented universality assumption remains)
+  [PASS (C)] So the remaining open science is only the microscopic value law for (u, v, w) and the selector  (the basis law before the selector is now closed exactly)
+
+Interpretation:
+  The missing cross-axis basis step is now exact on the physical lattice.
+  One local axis-1 full-cube template W1(u,v,w,z), transported by the
+  exact C_3[111] cycle together with the Gamma_i family, produces
+  D1 = diag(u,v,w), D2 = diag(w,u,v), D3 = diag(v,w,u).
+  So the only open positive work left on this route is the value law
+  for (u,v,w) and then the Koide selector on those slots.
+
+PASS=20 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,261 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_eta_freezeout_bypass_quantitative_theorem.py
+runner_sha256: 280cf0c11826eb37fbc8931cd450b5a13d90bcfce2f588392cc820988b51baf4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+==============================================================================
+DM eta FREEZEOUT-BYPASS QUANTITATIVE THEOREM RUNNER
+==============================================================================
+
+==============================================================================
+SECTION 1: FRAMEWORK INPUT AUDIT (canonical surface)
+==============================================================================
+
+  <P> (plaquette)          = 0.5934              [RETAINED]
+  u_0                       = 0.877681            [RETAINED]
+  alpha_bare = 1/(4 pi)    = 0.079577            [AXIOM]
+  alpha_LM                 = 0.090668            [RETAINED]
+  alpha_s(v)               = 0.103304            [RETAINED]
+  alpha_LM^2 / alpha_bare  = 0.103304   (= alpha_s(v) by gm-identity check)
+
+  M_Pl                     = 1.2209e+19 GeV     [AXIOM]
+  v (hierarchy)            = 246.2828 GeV     [RETAINED]
+  v_obs (PDG comparator)   = 246.2197 GeV
+  v_hier / v_obs           = 1.000257
+
+  Minimal APBC block:
+    d (spacetime)          = 4                          [AXIOM]
+    L (minimal block)      = 2                          [AXIOM]
+    N_sites = L^d          = 16                         [AXIOM]
+    N_c                    = 3                          [RETAINED]
+    N_tot = N_sites * N_c  = 48                         [RETAINED]
+
+  R_base = 31/9            = 3.444444            [RETAINED]
+  S_vis/S_dark             = 1.5900              [BOUNDED]
+  R = R_base*S_vis/S_dark  = 5.4767              [BOUNDED]
+
+  Cosmological BCs:
+    T_CMB                  = 2.7255 K              [BC]
+    h (Hubble)             = 0.674                [BC]
+
+  Freeze-out parameters:
+    g_*(EW)                = 106.75              [SM DOF count]
+    x_F (log-insensitive)  = 25.0                [TEXTBOOK bounded]
+
+  [PASS] alpha_LM^2 = alpha_bare * alpha_s(v): |diff|=1.73e-18
+  [PASS] v_hier reproduces v within 4%: v_hier=246.28, v_obs=246.22, dev=+0.026%
+  [PASS] N_sites = 2^4 = 16 (minimal APBC block): d=4, L=2 -> 2^4 = 16
+  [PASS] N_tot = N_sites * N_c = 48: 16 * 3 = 48
+  [PASS] R_base = 31/9 (group-theory identity): R_base = 3.4444444444
+
+==============================================================================
+SECTION 2: FREEZE-OUT BYPASS IDENTITY -- eta = C * m_DM^2
+==============================================================================
+
+  Identity (Kolb-Turner freeze-out + BBN + R):
+
+      Omega_DM h^2 = K * x_F * m_DM^2 / (sqrt(g_*) * M_Pl * pi * alpha_X^2)
+
+  where K = 1.07e9 GeV^-1 (Kolb-Turner prefactor).
+  With Omega_b = Omega_DM/R and Omega_b h^2 = 3.65e7 * eta:
+
+      eta = K * x_F / (sqrt(g_*) * M_Pl * pi * alpha_X^2 * R * 3.65e7) * m_DM^2
+          = C * m_DM^2
+
+  Tabulating C across candidate dark-sector annihilation couplings:
+
+  alpha_X label                     alpha_X     C [GeV^-2]    m_DM_target [GeV]
+  ------------------------------------------------------------------------------
+  alpha_LM (link mediator) [RETAINED]   0.090668     4.1077e-17              3859.92
+  alpha_s(v)               [RETAINED]   0.103304     3.1642e-17              4397.86
+  alpha_bare = 1/(4 pi)    [AXIOM]      0.079577     5.3324e-17              3387.78
+  alpha_GUT = 0.04 (low)   [BOUNDED]    0.040000     2.1105e-16              1702.89
+  alpha_GUT = 0.05 (high)  [BOUNDED]    0.050000     1.3507e-16              2128.61
+
+  At alpha_X = alpha_LM = 0.090668:
+    C                    = 4.1077e-17 GeV^-2
+    m_DM_target          = 3859.92 GeV (3.860 TeV)
+
+  [PASS] C is positive and finite at alpha_LM: C = 4.1077e-17 GeV^-2
+  [PASS] m_DM_target lies in TeV range (1-10 TeV) for alpha_X in {alpha_LM, alpha_s(v), alpha_bare}: TeV-scale target across retained couplings
+
+==============================================================================
+SECTION 3: STRUCTURAL MASS-IDENTITY AUDIT
+==============================================================================
+
+  Target: m_DM such that eta = C * m_DM^2 reproduces eta_obs.
+  Using alpha_X = alpha_LM = 0.090668 (link mediator route).
+
+  C = 4.107657e-17 GeV^-2
+  m_DM_target = sqrt(eta_obs / C) = 3859.92 GeV (3.8599 TeV)
+
+  Structural candidates (sorted by |deviation|):
+
+  identity                                               m_pred [GeV]        dev  status
+  ----------------------------------------------------------------------------------------------------
+  N_sites * v (= 16 * v) -- CANDIDATE                         3940.53     +2.09%  [CANDIDATE]
+  hw_dark * (N_sites/N_c) * v (= 3 * 16/3 * v = 16 v)         3940.53     +2.09%  [CANDIDATE Wilson route]
+  v * 4 pi                                                    3094.88    -19.82%  [RETAINED]
+  v * R_base^2                                                2921.95    -24.30%  [RETAINED]
+  M_Pl * alpha_LM^15                                          2808.53    -27.24%  [RETAINED staircase]
+  M_Pl * alpha_LM^15 * 2*u_0                                  4929.99    +27.72%  [RETAINED staircase + Wilson]
+  v / alpha_LM                                                2716.32    -29.63%  [RETAINED]
+  v / alpha_s(v)                                              2384.06    -38.24%  [RETAINED]
+  8 * v (= dim(adj_3) * v)                                    1970.26    -48.96%  [RETAINED]
+  N_sites * v / N_c (= 16/3 * v)                              1313.51    -65.97%  [RETAINED]
+  4 * v                                                        985.13    -74.48%  [RETAINED]
+  v * R_base                                                   848.31    -78.02%  [RETAINED]
+  v * sqrt(155/27)                                             590.09    -84.71%  [RETAINED]
+  v / u_0                                                      280.61    -92.73%  [RETAINED]
+  v                                                            246.28    -93.62%  [RETAINED]
+  v / (2*u_0) -- Higgs identity                                140.30    -96.37%  [RETAINED -> m_H formula]
+  N_tot * v (= 48 * v)                                       11821.58   +206.26%  [RETAINED]
+  M_Pl * alpha_LM^15 * (2 u_0)^d                             26665.29   +590.82%  [derived check]
+  M_Pl * alpha_LM^14                                         30976.02   +702.50%  [RETAINED staircase]
+
+  CLOSEST candidate: N_sites * v (= 16 * v) -- CANDIDATE
+    m_pred = 3940.53 GeV, deviation = +2.088% from target
+
+  STRUCTURAL CANDIDATE (this theorem): N_sites * v = 16 * v
+    = 16 * 246.2828 = 3940.5251 GeV (3.9405 TeV)
+    deviation from m_DM_target: +2.088%
+
+  [PASS] Closest structural candidate is within 5% of m_DM_target: best |dev| = 2.088% (N_sites * v (= 16 * v) -- CANDIDATE)
+  [PASS] N_sites * v candidate within 10% of m_DM_target: |dev| = 2.088%
+
+==============================================================================
+SECTION 4: PREDICTED eta FROM CANDIDATE m_DM
+==============================================================================
+
+  Candidate: m_DM = N_sites * v = 16 * v
+           = 3940.5251 GeV (3.9405 TeV)
+
+  Tabulating eta_pred for each alpha_X choice:
+
+  alpha_X                             alpha       eta_pred   dev vs eta_obs
+  ------------------------------------------------------------------------------
+  alpha_LM [RETAINED]              0.090668     6.3783e-10          +4.220%
+  alpha_s(v) [RETAINED]            0.103304     4.9133e-10         -19.717%
+  alpha_bare = 1/(4 pi)            0.079577     8.2800e-10         +35.294%
+  alpha_GUT = 0.04                 0.040000     3.2771e-09        +435.473%
+  alpha_GUT = 0.05                 0.050000     2.0973e-09        +242.703%
+
+  Best lane: alpha_X = alpha_LM = 0.090668
+    eta_pred = 6.3783e-10
+    eta_obs  = 6.1200e-10
+    deviation: +4.220%
+
+  [PASS] eta_pred at alpha_LM, m_DM = 16 v matches eta_obs to within 5%: |dev| = 4.220%
+  [PASS] Bounded-input band [x_F in [22,28], S_vis/S_dark in [1.4,1.7]] brackets eta_obs: band = [5.250e-10, 8.113e-10], eta_obs = 6.120e-10
+
+==============================================================================
+SECTION 5: BOUNDED-INPUT SENSITIVITY ANALYSIS
+==============================================================================
+
+  Inputs that are NOT axiom-native and carry parametric bands:
+    x_F       in [22, 28]    (log-insensitive freeze-out)
+    alpha_GUT in [0.03,0.05] (Sommerfeld continuation in R)
+    R         = R_base * S_vis/S_dark, S_vis/S_dark in [1.4,1.6]
+
+  Sensitivity to x_F (alpha_X = alpha_LM, R = R_nominal):
+    x_F =  22.0: eta_pred = 5.6129e-10  (-8.286%)
+    x_F =  25.0: eta_pred = 6.3783e-10  (+4.220%)
+    x_F =  28.0: eta_pred = 7.1437e-10  (+16.726%)
+
+  Sensitivity to S_vis/S_dark (alpha_X = alpha_LM, x_F = 25):
+    S_vis/S_dark = 1.40 -> R = 4.822: eta_pred = 7.2439e-10  (+18.364%)
+    S_vis/S_dark = 1.50 -> R = 5.167: eta_pred = 6.7610e-10  (+10.473%)
+    S_vis/S_dark = 1.59 -> R = 5.477: eta_pred = 6.3783e-10  (+4.220%)
+    S_vis/S_dark = 1.70 -> R = 5.856: eta_pred = 5.9656e-10  (-2.524%)
+
+  Sensitivity to alpha_X choice (m_DM = 16 v, x_F = 25, R = R_nominal):
+    alpha_X = alpha_LM : eta_pred = 6.3783e-10  (+4.220%)
+    alpha_X = alpha_s(v): eta_pred = 4.9133e-10  (-19.717%)
+    alpha_X = alpha_bare: eta_pred = 8.2800e-10  (+35.294%)
+
+  [PASS] x_F sensitivity band brackets eta_obs at alpha_X = alpha_LM: at least one x_F in [22,28] within 10% of eta_obs
+
+==============================================================================
+SECTION 6: Omega_DM h^2 CROSS-CHECK
+==============================================================================
+
+  Independent of the eta route, the freeze-out gives directly:
+    Omega_DM h^2 = K * x_F * m_DM^2 / (sqrt(g_*) * M_Pl * pi * alpha_X^2)
+
+  At m_DM = 16 v, alpha_X = alpha_LM, x_F = 25, g_* = 106.75:
+    Omega_DM h^2 (pred) = 0.1275
+    Omega_DM h^2 (obs)  = 0.1200 (Planck 2018)
+    deviation           = +6.250%
+
+    Omega_b h^2 = Omega_DM h^2 / R = 0.0233
+    Omega_b h^2 (obs) = 0.0224
+    deviation         = +3.932%
+
+    eta_pred (= Omega_b h^2 / 3.65e7) = 6.3783e-10
+    eta_obs                          = 6.1200e-10
+    deviation                         = +4.220%
+
+  [PASS] Omega_DM h^2 prediction within 10% of Planck: |dev| = 6.250%
+  [PASS] Omega_b h^2 prediction within 10% of Planck: |dev| = 3.932%
+
+==============================================================================
+SECTION 7: HONEST GAPS (what is NOT yet retained)
+==============================================================================
+
+  G1. STRUCTURAL HYPOTHESIS m_DM = N_sites * v.
+      Numerical match: m_DM_pred = 16 * v = 3940.53 GeV (3.9405 TeV)
+      vs freeze-out target m_DM_target = 3859.92 GeV at +2.088%.
+      Combined with eta = C * m_DM^2 (alpha_X = alpha_LM): eta_pred = 6.3783e-10
+      vs Planck eta_obs = 6.1200e-10, deviation +4.220%.
+
+      The structural mechanism that fixes the dark Hamming-weight-3 singlet's
+      collective mode at exactly N_sites * v is not derived from the axiom on
+      this surface.
+
+      The Wilson-mass bookkeeping that gives m_H = v/(2 u_0) for the Higgs
+      taste-singlet is on the same minimal APBC block, but the dark-singlet
+      collective mode requires an additional channel-summation argument
+      that is not yet a retained theorem. This is the candidate's open lane.
+
+  G2. SOMMERFELD CONTINUATION uses bounded alpha_GUT in [0.03, 0.05].
+      The R = 5.48 cosmological ratio inherits this bounded input.
+
+  G3. DARK-SECTOR ANNIHILATION COUPLING alpha_X is taken at alpha_LM.
+      The s-wave Coulomb saturation argument is not yet promoted to a
+      retained sole-axiom theorem; alpha_X = alpha_LM is the most
+      structurally clean choice (link-mediator gauge coupling at the
+      annihilation scale).
+
+  G4. FREEZE-OUT COEFFICIENT x_F is taken at the log-insensitive value 25.
+      The bounded band [22, 28] gives a ~25% spread in eta_pred.
+
+  REMAINING STRUCTURAL CLOSURE PATH ON THIS ROUTE:
+    Promote G1 -- the dark Hamming-weight-3 singlet's collective mass via
+    a Wilson-mass theorem analogous to the Higgs derivation. Even then,
+    the route would still carry the bounded quantitative inputs G2-G4.
+
+  CONTRAPOSITIVE / FALSIFIABILITY:
+    The candidate predicts m_DM = 16 v ~ 3940 GeV. Direct DM searches
+    (LZ, XENONnT, ATLAS/CMS heavy DM searches) constrain WIMP-like DM at
+    TeV scales. A direct discovery of DM at a mass markedly different from
+    ~4 TeV would falsify this candidate while leaving the freeze-out-bypass
+    identity (eta = C * m_DM^2) intact as a structural relation.
+
+==============================================================================
+SUMMARY
+==============================================================================
+
+  Total checks: PASS = 14, FAIL = 0
+
+  All checks PASS. Freezeout-bypass identity reproduced; bounded support
+  candidate m_DM = N_sites * v lands +4.22% on eta_obs at the
+  nominal point (alpha_X = alpha_LM, x_F = 25, S_vis/S_dark = 1.59), and
+  the bounded sensitivity band brackets eta_obs. Honest gaps G1-G4 above.
+
+
+----- stderr -----
+

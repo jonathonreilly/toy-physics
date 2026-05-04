@@ -1,0 +1,74 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_delta_linking_relation.py
+runner_sha256: eb7626d008f81bae804518799460b3e8a9ef57ff5db8e5f2cb7f0b7b25b6439b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================
+Koide Q ↔ δ linking relation — partial closure + named residual P
+========================================================================
+
+[T1] d=3 equal-sector-norm identity → Q = 2/3
+  [PASS] a_0^2 = |v_non_sing|^2 (equal sector norm at Brannen Q=2/3 ansatz)  (a_0^2 = 3.0000000000, |v_non_sing|^2 = 3.0000000000)
+  [PASS] Q = |v|^2 / (Σ v)^2 = 2/3 at d = 3  (Q = 0.66666666666667 vs 2/3 = 0.66666666666667)
+
+[T2] d=3 dimensional ratio → δ = 2/9
+  [PASS] (DOF b) / dim(Herm_3) = 2/9  (ratio = 2/9 (postulate P: identify with δ in radians))
+  [PASS] Identification matches observed δ = 2/9 rad  (float(ratio) = 0.222222222222, δ_obs = 0.222222222222)
+
+[T3] d=3 numerical ratio δ/Q = 1/d
+  [PASS] δ / Q = 1/3 at d = 3  (δ/Q = 1/3)
+  [PASS] δ = Q/d at d = 3 (exact Fraction)  (δ = 2/9, Q/d = 2/9)
+
+[T4] General d: sector-norm → Q = 2/d
+    d=2: Q_sector = 1, expected 2/d = 1  OK
+    d=3: Q_sector = 2/3, expected 2/d = 2/3  OK
+    d=4: Q_sector = 1/2, expected 2/d = 1/2  OK
+    d=5: Q_sector = 2/5, expected 2/d = 2/5  OK
+    d=7: Q_sector = 2/7, expected 2/d = 2/7  OK
+    d=11: Q_sector = 2/11, expected 2/d = 2/11  OK
+  [PASS] Q = 2/d holds at all tested d  (d ∈ {2, 3, 4, 5, 7, 11})
+
+[T5] General d: dimensional-ratio → δ = 2/d^2
+    d=2: δ_dim = 1/2, expected 2/d^2 = 1/2  OK
+    d=3: δ_dim = 2/9, expected 2/d^2 = 2/9  OK
+    d=4: δ_dim = 1/8, expected 2/d^2 = 1/8  OK
+    d=5: δ_dim = 2/25, expected 2/d^2 = 2/25  OK
+    d=7: δ_dim = 2/49, expected 2/d^2 = 2/49  OK
+    d=11: δ_dim = 2/121, expected 2/d^2 = 2/121  OK
+  [PASS] δ = 2/d^2 holds at all tested d (under postulate P)  (d ∈ {2, 3, 4, 5, 7, 11})
+
+[T6] General d: δ = Q/d symbolic identity
+    d=2: Q=1, δ=1/2, Q/d=1/2  δ==Q/d: True
+    d=3: Q=2/3, δ=2/9, Q/d=2/9  δ==Q/d: True
+    d=4: Q=1/2, δ=1/8, Q/d=1/8  δ==Q/d: True
+    d=5: Q=2/5, δ=2/25, Q/d=2/25  δ==Q/d: True
+    d=7: Q=2/7, δ=2/49, Q/d=2/49  δ==Q/d: True
+    d=11: Q=2/11, δ=2/121, Q/d=2/121  δ==Q/d: True
+  [PASS] δ = Q/d holds symbolically at all tested d  (linking relation is not a d=3 coincidence)
+
+[T7] Alternative Q=(d-1)/d FAILS δ=Q/d off d=3
+  [PASS] At d=3: (d-1)/d = 2/d (the arithmetic coincidence that could mislead)  ((d-1)/d = 2/3, 2/d = 2/3)
+    d=2: Q_alt=(d-1)/d=1/2, δ=2/d^2=1/2, Q_alt/d=1/4, δ≠Q_alt/d: True
+    d=4: Q_alt=(d-1)/d=3/4, δ=2/d^2=1/8, Q_alt/d=3/16, δ≠Q_alt/d: True
+    d=5: Q_alt=(d-1)/d=4/5, δ=2/d^2=2/25, Q_alt/d=4/25, δ≠Q_alt/d: True
+    d=7: Q_alt=(d-1)/d=6/7, δ=2/d^2=2/49, Q_alt/d=6/49, δ≠Q_alt/d: True
+    d=11: Q_alt=(d-1)/d=10/11, δ=2/d^2=2/121, Q_alt/d=10/121, δ≠Q_alt/d: True
+  [PASS] Alternative Q=(d-1)/d generalization disagrees with δ=Q/d off d=3  (confirms sector-norm reading is the correct structural generalization)
+
+[T8] PDG charged-lepton masses reproduce Q=2/3 and δ=2/9
+  [PASS] PDG Q within 5 × 10^-5 of 2/3  (Q_obs = 0.6666605132, |Q_obs - 2/3| = 6.15e-06)
+  [PASS] PDG-fit δ within 1 × 10^-4 rad of 2/9  (δ_fit = 0.2222704759, |δ - 2/9| = 4.83e-05)
+
+[T9] Residual postulate P characterization
+  [PASS] Postulate P is single-real-valued (1 DOF)  (identifies one dimensionless ratio with one radian)
+  [PASS] Postulate P has no Chern / monopole / ambient-S^2 data  (differentiated from the bundle-obstruction-blocked postulate)
+
+========================================================================
+SUMMARY:  PASS = 15   FAIL = 0
+========================================================================
+
+----- stderr -----
+

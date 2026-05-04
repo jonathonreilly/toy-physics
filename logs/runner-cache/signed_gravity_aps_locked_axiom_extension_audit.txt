@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_aps_locked_axiom_extension_audit.py
+runner_sha256: 08d904f7f34de7d558c637a31ececbb0338de1c7b94781d0dce5340c730593e6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+========================================================================================================
+SIGNED GRAVITY APS-LOCKED AXIOM EXTENSION AUDIT
+  new eta-polarized source axiom; controlled candidate, not a physical claim
+========================================================================================================
+
+AXIOM PACKAGE
+  A1 gapped APS boundary sector: chi_eta(Y)=sign eta_delta(D_Y)
+  A2 hard admissibility: active sources require gap(D_Y)>=g_min and chi_eta!=0
+  A3 eta-polarized scalar source: S_int=-chi_eta M_phys <|psi|^2,Phi>
+  A4 source and response read the same chi_eta; inertial mass remains positive
+  A5 null/zero-mode sectors are controls or defects, not active third signs
+
+[PASS] APS eta supplies two active sectors and one quarantined null sector  (chi=(+1,-1,+0))
+[PASS] gap-preserving boundary perturbations keep chi_eta fixed  (min_gap+= 0.372, min_gap-= 0.370)
+[PASS] hard admissibility blocks continuous chi flip through zero  (chi_path=[1, 1, 1, 1, 0, -1, -1, -1, -1], allowed=[True, True, True, True, False, True, True, True, True], min_gap=0.0e+00)
+[PASS] orientation-preserving refinement and unitary relabeling keep chi_eta portable  (+1x1:eta=+1,chi=+1; +1x2:eta=+2,chi=+1; +1x3:eta=+3,chi=+1; +1x5:eta=+5,chi=+1; -1x1:eta=-1,chi=-1; -1x2:eta=-2,chi=-1; -1x3:eta=-3,chi=-1; -1x5:eta=-5,chi=-1)
+[PASS] eta-polarized action variation gives signed active source and null zero  (active=(+M,-M,0))
+[PASS] same chi_eta locks source and response; source-only/response-only controls fail  (source_only=ATTRACT,UNBALANCED,UNBALANCED,REPEL resid=2.0e+00; response_only=ATTRACT,UNBALANCED,UNBALANCED,REPEL resid=2.0e+00; locked=ATTRACT,REPEL,REPEL,ATTRACT resid=0.0e+00)
+[PASS] positive inertial masses retain two-body momentum balance  (max_balance=0.0e+00, max_net_force=0.0e+00)
+[PASS] opposite-sign channel has no negative-mass runaway; same-sign UV issue remains exposed  (E_opp_min=2.365, E_same_core1=1.000, E_same_core0.2=-4.168)
+[PASS] Born and norm controls remain clean in fixed sectors  (I3+= +5.38e-43, I3-= +5.38e-43, norm=3.33e-15)
+[PASS] weak-field force magnitude remains linear in source mass  (slopes=[1.0, 1.0, 1.0, 1.0])
+[PASS] null-sector and neutral-pair controls stay quarantined  (null_chi=0, null_admissible=False, neutral_active=+0.0, neutral_inertia=4.0)
+[PASS] new axiom is exactly the missing orientation-odd source scalar  (retained_resid=1.414e+00, extended_resid=3.140e-16)
+[PASS] non-claim gate remains closed  (negative_inertial_mass=False, shielding=False, propulsion=False, reactionless_force=False, physical_signed_gravity_prediction=False)
+
+FOUR-PAIR LOCKED TABLE
+  pair   src/resp A   src/resp B     read
+    ++ +1/+1 +1/+1  ATTRACT
+    +- +1/+1 -1/-1    REPEL
+    -+ -1/-1 +1/+1    REPEL
+    -- -1/-1 -1/-1  ATTRACT
+
+INTERPRETATION
+  The extension is internally coherent as a new eta-polarized source
+  axiom with hard APS-gap admissibility.  It is not a retained theorem.
+  Review-critical gaps remain: tensor lift, natural origin of the new
+  source line, continuum proof beyond this sanity check, and ordinary
+  same-sector UV/core stability.
+
+SUMMARY: PASS=13 FAIL=0
+FINAL_TAG: APS_LOCKED_AXIOM_EXTENSION_CONTROLLED_CANDIDATE
+
+----- stderr -----
+

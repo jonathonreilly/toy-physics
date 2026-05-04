@@ -1,0 +1,74 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_pfaffian_axiom_boundary.py
+runner_sha256: 079f662dd5057d6cd87cc43007a6d0cab796fc8a0355ce91257d2b2154736f3a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: CURRENT PFAFFIAN AXIOM BOUNDARY
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+    rows: Framework axiom; Observable principle; Anomaly-forced time;
+          Native weak algebra; Structural SU(3) closure; One-generation matter closure
+  - docs/UNIFIED_AXIOM_BOUNDARY_NOTE.md
+  - docs/NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md
+  - docs/NEUTRINO_MAJORANA_NATIVE_GAUSSIAN_NO_GO_NOTE.md
+  - docs/NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md
+
+Question:
+  Does the current retained Cl(3) on Z^3 stack force a Pfaffian/Nambu
+  sector, or does it only admit one if added?
+
+========================================================================================
+PART 1: THE RETAINED STACK FIXES THE UNIQUE CHANNEL, NOT ITS AMPLITUDE
+========================================================================================
+  [PASS (C)] Unique pairing seed remains confined to the nu_R slot  (internal rows=[np.int64(15)])
+  [PASS (C)] Unique pairing seed remains rank-2  (rank=2)
+  [PASS (C)] Every mu * S_unique stays inside the same antisymmetric channel family  (max ||Delta^T+Delta||=0.00e+00)
+
+  The current exact classifier therefore determines one thing exactly:
+  if a DeltaL=2 sector exists, it must live on one unique channel.
+  It does not determine the amplitude mu of that channel.
+
+========================================================================================
+PART 2: CURRENT DETERMINANT OBSERVABLES CANNOT SEE THE PFAFFIAN AMPLITUDE
+========================================================================================
+  [PASS (C)] Normal determinant observable is identical across the Pfaffian family  (det spread=0.00e+00)
+  [PASS (C)] Pfaffian observable changes across the same family  (pf spread=0.438255)
+
+  So the retained determinant grammar does not select mu. The same
+  current normal data are compatible with mu = 0 and mu != 0.
+
+========================================================================================
+PART 3: MU = 0 AND MU != 0 BOTH FIT THE CURRENT BOUNDARY DATA
+========================================================================================
+  [PASS (C)] mu = 0 extension preserves exactly the current normal signature  (signature=(np.float64(-0.480195381249), np.float64(0.07039922729), np.float64(0.315879189167), np.float64(0.573916964791)))
+  [PASS (C)] mu != 0 extension preserves exactly the same normal signature  (signature=(np.float64(-0.480195381249), np.float64(0.07039922729), np.float64(0.315879189167), np.float64(0.573916964791)))
+  [PASS (C)] mu = 0 and mu != 0 give distinct Pfaffian sectors  (|Pf1-Pf0|=0.800000)
+  [PASS (C)] mu = 0 and mu != 0 share the same unique channel support  (support fixed, amplitude free)
+
+  This is the exact boundary statement: the current retained stack
+  does not distinguish the zero and nonzero Pfaffian amplitudes.
+  Therefore the Pfaffian/Nambu sector is not forced by the current
+  retained derivation stack.
+
+========================================================================================
+RESULT
+========================================================================================
+  On the current retained stack, the Pfaffian/Nambu sector is not
+  forced. The stack fixes the unique allowed DeltaL=2 channel, but not
+  the existence or amplitude of an antisymmetric pairing block.
+
+  So the current honest status is:
+    - unique channel: forced
+    - Pfaffian sector existence: not yet forced
+    - Pfaffian coefficient mu: not yet forced
+
+PASS=9  FAIL=0
+
+----- stderr -----
+

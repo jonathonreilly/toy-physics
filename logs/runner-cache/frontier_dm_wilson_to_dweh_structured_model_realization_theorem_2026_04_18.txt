@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_to_dweh_structured_model_realization_theorem_2026_04_18.py
+runner_sha256: ad5760b0307ef8f4b5d16b19d291118b9d62cc170bbab32bdd3b1f936875560b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.57
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON-TO-dW_e^H STRUCTURED MODEL REALIZATION THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE POSITIVE MODEL TARGET IS EXACTLY THE EXTENSION-CRITERION CLASS
+========================================================================================
+  [PASS] The extension theorem already identifies the structured class algebraically
+  [PASS] The adjacent-chain normal-form theorem already says the local chain is without loss inside that structured class
+
+========================================================================================
+PART 2: EXPLICIT MODEL REALIZATION EXISTS FOR ARBITRARY TEST TARGETS
+========================================================================================
+  [PASS] canonical: D_model^(-1) is invertible for nonzero padding lambda  (|det|=6.724e+00)
+  [PASS] canonical: the image of 1_3 has rank 3  (rank=3)
+  [PASS] canonical: the Hermitian resolvent compression recovers H_e exactly  (err=0.00e+00)
+  [PASS] canonical: the model responses reconstruct the target H_e exactly on the chain basis  (err=0.00e+00)
+  [PASS] rotated: D_model^(-1) is invertible for nonzero padding lambda  (|det|=1.478e+01)
+  [PASS] rotated: the image of 1_3 has rank 3  (rank=3)
+  [PASS] rotated: the Hermitian resolvent compression recovers H_e exactly  (err=8.95e-16)
+  [PASS] rotated: the model responses reconstruct the target H_e exactly on the chain basis  (err=6.24e-16)
+  [PASS] indefinite: D_model^(-1) is invertible for nonzero padding lambda  (|det|=1.806e+00)
+  [PASS] indefinite: the image of 1_3 has rank 3  (rank=3)
+  [PASS] indefinite: the Hermitian resolvent compression recovers H_e exactly  (err=1.13e-15)
+  [PASS] indefinite: the model responses reconstruct the target H_e exactly on the chain basis  (err=1.07e-15)
+
+========================================================================================
+PART 3: THE MODEL FAMILY SATISFIES THE STRUCTURED EXTENSION CRITERION
+========================================================================================
+  [PASS] The model Hermitian family is injective on Herm(3)  (rank=9)
+  [PASS] The model Hermitian family preserves Jordan products on the basis  (defect=4.13e-16)
+  [PASS] The model Hermitian family preserves Lie products on the basis  (defect=3.84e-16)
+
+========================================================================================
+PART 4: THE ADJACENT-CHAIN NORMAL FORM IS POSITIVELY INHABITED
+========================================================================================
+  [PASS] The model class contains explicit adjacent-chain generators  (chain products recover the long corner inside the model family)
+  [PASS] So the local chain attack is not only admissible but explicitly realized inside the model class  (Phi_chain is inhabited whenever the structured model family is realized)
+
+========================================================================================
+PART 5: WHAT STILL REMAINS OPEN
+========================================================================================
+  [PASS] This construction does not derive the model family from the current-bank Wilson parent  (it proves nonempty constructive realization, not the final Wilson-native bridge)
+  [PASS] So the remaining positive problem is Wilson-native realization rather than algebraic existence  (derive a current-bank Wilson parent whose compression matches the model class)
+
+========================================================================================
+SUMMARY: PASS=21 FAIL=0
+========================================================================================
+
+----- stderr -----
+

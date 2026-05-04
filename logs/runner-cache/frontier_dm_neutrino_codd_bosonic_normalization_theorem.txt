@@ -1,0 +1,42 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_codd_bosonic_normalization_theorem.py
+runner_sha256: d0fe213bbb076efda6f6e5e1109ede087712743ee90a5e5140418d0bf23584b0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO C_ODD BOSONIC NORMALIZATION THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE REDUCED SELECTOR AND T_GAMMA HAVE THE SAME EXACT ODD SPECTRUM
+========================================================================================
+  [PASS] The reduced selector generator has eigenvalues {+1,-1,0,0}  (eig=[-1.  0.  0.  1.])
+  [PASS] The triplet odd generator has eigenvalues {+1,-1,0}  (eig=[-1.  0.  1.])
+  [PASS] Both generators therefore carry the same nonzero odd spectrum {+1,-1}  (the only difference is null multiplicity)
+
+========================================================================================
+PART 2: THE BOSONIC SOURCE RESPONSE IS EXACTLY IDENTICAL
+========================================================================================
+  [PASS] The reduced selector response is exactly W = log|1-j^2/m^2|  (max selector error=6.65e-17)
+  [PASS] The triplet odd response is exactly W = log|1-j^2/m^2|  (max triplet error=6.65e-17)
+  [PASS] The two odd generators have identical exact bosonic response on scalar baselines  (max response mismatch=0.00e+00)
+  [PASS] Their small-source bosonic curvatures are identical as well  (max quadratic-curvature error=1.27e-05)
+
+========================================================================================
+PART 3: CANONICAL ODD NORMALIZATION FIXES C_ODD TO UNIT MAGNITUDE
+========================================================================================
+  [PASS] The selector side provides one exact reduced amplitude slot a_sel on S_cls
+  [PASS] The target side provides one exact odd source gamma on T_gamma
+  [PASS] The observable principle fixes the bosonic scalar generator uniquely from the single axiom
+  [PASS] Equal bosonic response fixes the canonical odd normalization to |c_odd| = 1  (|c_odd|=1.000000)
+  [PASS] On the source-oriented branch convention this is recorded as c_odd = +1  (positive selector orientation picks the source-oriented branch)
+
+========================================================================================
+SUMMARY: PASS=12 FAIL=0
+========================================================================================
+
+----- stderr -----
+

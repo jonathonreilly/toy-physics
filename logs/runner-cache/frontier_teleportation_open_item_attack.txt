@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_open_item_attack.py
+runner_sha256: 037be1b1fa2fe791f28e94a4b9ff161311e487fc3035bc76ab1b9b0f451a9247
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 31.59
+status: ok
+----- stdout -----
+TELEPORTATION OPEN-ITEM ATTACK
+Status: planning artifact; bridge principles and finite material models
+Claim boundary: ordinary quantum state teleportation only; no matter, mass, charge, energy, object, or faster-than-light transport
+
+retained-action bridge: windings=0..7, selected=0, angle=1.570796, action_gap=19.739209, bare_orientation_degenerate=True, causal_positive_orientations=1
+no-dwell carrier bridge: candidates=4, selected_center=0.000, neighbor_weight=0.408248, dwell_gap=0.015625, norm_error=0.000e+00, isotropy_error=0.000e+00, global_phase_only=True
+signed sparse 3D scaling rows:
+  side=4, G=-1000, N=64, Hdim=4096, gap=0.0244025, Bell*=0.999702 (Phi+), Fbest=0.999802, CHSH=2.827585, neg=0.499702, purity=0.999702
+  side=6, G=-1000, N=216, Hdim=46656, gap=0.0120619, Bell*=0.999709 (Phi+), Fbest=0.999806, CHSH=2.827604, neg=0.499709, purity=0.999709
+  side=8, G=-1000, N=512, Hdim=262144, gap=0.00704654, Bell*=0.999711 (Phi+), Fbest=0.999807, CHSH=2.827608, neg=0.499711, purity=0.999711
+  side=10, G=-1000, N=1000, Hdim=1000000, gap=0.00459031, Bell*=0.999711 (Phi+), Fbest=0.999807, CHSH=2.827610, neg=0.499711, purity=0.999711
+finite-size preparation fit: rows=4, min_Bell=0.999702, min_Fbest=0.999802, side10_gap=0.00459031, gap_power=1.821867, log_fit_residual=2.073e-02, max_Tadiabatic=3.278e+05, max_beta_cooling=4.515e+03
+correlated pulse/noise decoder: common_sigma=3.000e-03, local_bound=4.000e-03, leakage=1.000e-05, crosstalk=2.000e-05, quadrature=15, mean_word_failure=8.458e-12, worst_branch_failure=1.449e-11, max_slot_error=5.631e-04
+3D Ising-domain detector proxy: domain_side=5, spins/slot=125, slots=8, local_bonds=2400, p_spin=2.006e-03, majority_fail=2.987e-134, word_fail_bound=2.390e-133, max_record_overlap=0.000e+00, log10_overlap_bound=-655.141, arrhenius_wall=1.929e-22
+
+Acceptance gates:
+  retained-action bridge selects the audited transducer: PASS
+  no-dwell carrier bridge selects the amplitude law modulo phase: PASS
+  signed sparse 3D resource survives side 4, 6, 8, and 10: PASS
+  correlated pulse decoder stays below word-failure target: PASS
+  3D Ising-domain detector proxy remains classical: PASS
+  claim boundary stays state-only and not FTL: PASS
+
+Limitations:
+  The retained-action and no-dwell rules are bridge principles; this
+  runner does not derive them from the original sole axiom.
+  The side-10 row and polynomial gap fit are finite-size evidence, not
+  a rigorous asymptotic preparation or cooling theorem.
+  The pulse model includes correlated common-mode drift, leakage, and
+  crosstalk, but not a fabricated controller or measured spectrum.
+  The Ising-domain detector is a local material proxy, not a specified
+  lab material or continuum irreversible detector construction.
+
+----- stderr -----
+

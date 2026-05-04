@@ -1,0 +1,162 @@
+===== runner cache v1 =====
+runner: scripts/frontier_charged_lepton_z3_source_response_crosscheck.py
+runner_sha256: ef1cb2445cf168d935ff49dfd650f33b8e1a42525114bae6837683a3400fb465
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 8.13
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: C[Z_3] GROUP-ALGEBRA PRIMITIVES
+========================================================================================
+
+  [PASS] e_0 e_0 = e_0 (idempotent)
+  [PASS] e_0 e_1 = 0 (orthogonal)
+  [PASS] e_0 e_2 = 0 (orthogonal)
+  [PASS] e_1 e_0 = 0 (orthogonal)
+  [PASS] e_1 e_1 = e_1 (idempotent)
+  [PASS] e_1 e_2 = 0 (orthogonal)
+  [PASS] e_2 e_0 = 0 (orthogonal)
+  [PASS] e_2 e_1 = 0 (orthogonal)
+  [PASS] e_2 e_2 = e_2 (idempotent)
+  [PASS] sum_q e_q = I (completeness)
+  [PASS] Tr(e_0^dag e_0) = delta_00  (val = 1)
+  [PASS] Tr(e_0^dag e_1) = delta_01  (val = 0)
+  [PASS] Tr(e_0^dag e_2) = delta_02  (val = 0)
+  [PASS] Tr(e_1^dag e_0) = delta_10  (val = 0)
+  [PASS] Tr(e_1^dag e_1) = delta_11  (val = 1)
+  [PASS] Tr(e_1^dag e_2) = delta_12  (val = 0)
+  [PASS] Tr(e_2^dag e_0) = delta_20  (val = 0)
+  [PASS] Tr(e_2^dag e_1) = delta_21  (val = 0)
+  [PASS] Tr(e_2^dag e_2) = delta_22  (val = 1)
+
+========================================================================================
+PART 2: LEFT/RIGHT CHARGE ASSIGNMENT AND SOURCE ELEMENTS
+========================================================================================
+
+  q_L (left  Z_3 charges of the hw=1 triplet) = (0, 1, 2)    (from 0, +1, -1 mod 3)
+  q_R (right Z_3 charges of the hw=1 triplet) = (0, 2, 1)    (from 0, -1, +1 mod 3)
+
+  [PASS] left/right charge pairs are pairwise distinct  (pairs = [(0, 0), (1, 2), (2, 1)])
+  [PASS] q_L(i) + q_R(i) = 0 mod 3 for all i  (sums = [0, 0, 0])
+  [PASS] generation 1 source is diagonal-Z_3 invariant
+  [PASS] generation 2 source is diagonal-Z_3 invariant
+  [PASS] generation 3 source is diagonal-Z_3 invariant
+
+========================================================================================
+PART 3: Z_3-INVARIANT SOURCE-RESPONSE KERNEL S
+========================================================================================
+
+  S (symbolic):
+⎡1  0  0⎤
+⎢       ⎥
+⎢0  1  0⎥
+⎢       ⎥
+⎣0  0  1⎦
+
+  S (numeric):
+[[ 1. -0. -0.]
+ [-0.  1. -0.]
+ [-0. -0.  1.]]
+
+  [PASS] Im S[1,1] = 0  (Im = 0)
+  [PASS] Im S[1,2] = 0  (Im = 0)
+  [PASS] Im S[1,3] = 0  (Im = 0)
+  [PASS] Im S[2,1] = 0  (Im = 0)
+  [PASS] Im S[2,2] = 0  (Im = 0)
+  [PASS] Im S[2,3] = 0  (Im = 0)
+  [PASS] Im S[3,1] = 0  (Im = 0)
+  [PASS] Im S[3,2] = 0  (Im = 0)
+  [PASS] Im S[3,3] = 0  (Im = 0)
+  [PASS] S is symmetric (S = S^T)
+  [PASS] S is Z_3 invariant by construction (Part 2)  (each source element is diagonal-Z_3 invariant)
+
+  Best-fit circulant parameters: a = 1, b = 0
+  Deviation from circulant form: residual = 0
+
+  [PASS] S is of circulant (a*I + b*(J-I)) form  (residual = 0)
+
+========================================================================================
+PART 4: SPECTRAL DECOMPOSITION
+========================================================================================
+
+  eigenpairs (symbolic):
+    eigenvalue = 1, multiplicity = 3
+    eigenvector = Matrix([[1, 0, 0]])
+    eigenvalue = 1, multiplicity = 3
+    eigenvector = Matrix([[0, 1, 0]])
+    eigenvalue = 1, multiplicity = 3
+    eigenvector = Matrix([[0, 0, 1]])
+
+  [PASS] S has three real eigenvalues (counted with multiplicity)  (eigs = [1, 1, 1])
+  primary-lane circulant reference eigenvalues:
+    eigenvalue = a - b, multiplicity = 2
+    eigenvalue = a + 2*b, multiplicity = 1
+
+
+========================================================================================
+PART 5: KOIDE CONE TEST (a_0^2 = 2 |z|^2 ?)
+========================================================================================
+
+  top eigenvalue = 1  (geometric multiplicity 3)
+
+  S has a degenerate top eigenspace. Any linear combination of
+  the basis eigenvectors below is also an eigenvector, so Z_3
+  invariance does NOT force a unique ray.
+
+    basis eigenvector : Matrix([[1, 0, 0]])
+      a_0 = sqrt(3)/3, z = sqrt(3)/3, a_0^2 - 2|z|^2 = -1/3
+    basis eigenvector : Matrix([[0, 1, 0]])
+      a_0 = sqrt(3)/3, z = -sqrt(3)/6 - I/2, a_0^2 - 2|z|^2 = -1/3
+    basis eigenvector : Matrix([[0, 0, 1]])
+      a_0 = sqrt(3)/3, z = -sqrt(3)/6 + I/2, a_0^2 - 2|z|^2 = -1/3
+
+  Cone-parameterized test vector v(theta, a_0):
+    a_0^2 - 2|z|^2 = 0  (must be 0 for all theta)
+  [PASS] the Koide cone is realizable inside the top eigenspace of S (parameterized family)  (all v(theta, a_0) with v = a_0 e_+ + (a_0/sqrt(2))(e^{i theta} e_omega + c.c.) satisfy a_0^2 = 2|z|^2 by Plancherel identity)
+  [PASS] S-spectrum-does-not-force-unique-ray (Option-D independence signature)  (top eigenspace has geometric multiplicity 3 > 1, so Z_3 invariance alone is not sufficient to pin a direction)
+
+========================================================================================
+PART 6: UNIQUENESS CLAUSE
+========================================================================================
+
+  [PASS] rescaled kernel 5*S preserves (a,b) ratio  ((a1,b1)=(1,0), (a2,b2)=(5,0))
+  [PASS] S is diagonal in the source basis (Schur on C[Z_3])  (off-diagonal nonzero ? False)
+
+========================================================================================
+PART 7: COMPARISON WITH PRIMARY-LANE CIRCULANT KERNEL
+========================================================================================
+
+  primary-lane K = a*I + b*(J - I):
+⎡a  b  b⎤
+⎢       ⎥
+⎢b  a  b⎥
+⎢       ⎥
+⎣b  b  a⎦
+
+  Option-D kernel (a,b) best fit = (1, 0)
+
+  Option-D kernel circulant?    : True
+  Option-D kernel has b = 0 ?   : True
+
+  Scenario B: Option-D kernel is a scalar multiple of the
+              identity. Its spectrum is triply degenerate,
+              so Z_3 invariance alone is INSUFFICIENT to
+              select a unique ray. Consistent with the
+              primary-lane Koide-cone conclusion but does
+              not reproduce it. The primary lane provides
+              the additional content (Dirac-spectral amplitudes).
+
+========================================================================================
+SUMMARY
+========================================================================================
+
+  PASS = 41
+  FAIL = 0
+
+  Option-D cross-check verdict : INDEPENDENT
+
+Z3_CROSSCHECK_AGREES_WITH_PRIMARY=INDEPENDENT
+
+----- stderr -----
+

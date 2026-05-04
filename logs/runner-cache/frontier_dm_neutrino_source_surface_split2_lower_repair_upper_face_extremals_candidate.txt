@@ -1,0 +1,61 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate.py
+runner_sha256: 13848c50c3416b9ed87a03a17969639601620c3560ed228214a21af69e80a647
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 301.70
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE SPLIT-2 LOWER-REPAIR UPPER-FACE EXTREMALS CANDIDATE
+========================================================================================
+
+Question:
+  On the tested split-2 low-slack lower-repair box, does the residual
+  transport pressure already collapse to explicit upper-face extremals?
+
+========================================================================================
+PART 1: SAMPLED LOWER-REPAIR PRESSURE DRIFTS TO THE UPPER-m FACE
+========================================================================================
+  [PASS] The sampled lower-repair slice-wise best eta values are reproduced stably across the split-2 box  (eta_by_m=[0.87278888 0.87389436 0.87497138 0.87615362 0.87722634 0.87840423
+ 0.87961575 0.88077595 0.88197787 0.88325246 0.88447122])
+  [PASS] The sampled lower-repair slice-wise closest-lane distances are reproduced stably across the split-2 box  (dist_by_m=[0.29962107 0.29156645 0.28369544 0.27677072 0.2692421  0.26261795
+ 0.25684264 0.25047815 0.24492711 0.23881762 0.23348669])
+  [PASS] Sampled lower-repair best-eta values increase monotonically toward the upper-m boundary  (eta_start=0.872788884919, eta_end=0.884471224505)
+  [PASS] Sampled lower-repair closest-lane distances decrease monotonically toward the upper-m boundary  (dist_start=0.299621069662, dist_end=0.233486690453)
+
+========================================================================================
+PART 2: ON THE UPPER-m FACE THE ETA PRESSURE COLLAPSES TO THE CAP PROFILE
+========================================================================================
+  [PASS] On every sampled upper-face slack slice the lower-repair best eta is attained at the repair-cap boundary  (peak_idx=2, peak_s=0.019504173778)
+  [PASS] The sampled upper-face repair-cap delta profile is reproduced stably and decreases with slack  ((delta_start,delta_end)=(1.188955544069,1.106727868612))
+  [PASS] The sampled upper-face cap-eta profile is unimodal with one small-slack peak  ((s_peak,delta_peak,eta_peak)=(0.019504173778,1.188513342509,0.884523189582))
+  [PASS] That sampled best-eta upper-face extremal remains visibly transport-incompatible with closure  (eta_peak=0.884523189582)
+
+========================================================================================
+PART 3: THE CLOSEST SAMPLED UPPER-FACE LANE IS THE SLACK-FLOOR ENDPOINT
+========================================================================================
+  [PASS] On the sampled upper-face feasible region the closest lane occurs at the slack-floor endpoint  ((s,delta,dist,eta)=(0.000000000000,1.188955544069,0.233274467128,0.883631424817))
+  [PASS] That closest sampled upper-face lane still stays far from the preferred transport quotient  ((dist,eta)=(0.233274467128,0.883631424817))
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE TWO-EXTREMAL REDUCTION
+========================================================================================
+  [PASS] The note records the monotone drift of lower-repair transport pressure to the upper-m face
+  [PASS] The note records the sampled cap-eta extremal point
+  [PASS] The note records the closest-lane slack-floor endpoint and keeps the theorem boundary honest
+
+========================================================================================
+RESULT
+========================================================================================
+  Tested positive-path carrier reduction:
+    - lower-repair split-2 transport pressure drifts monotonically to the upper-m face
+    - on that sampled upper face, best eta collapses to one cap-profile peak
+    - the closest sampled lane collapses to the slack-floor endpoint
+  RESULT: the tested broad split-2 pressure is reduced to two explicit
+  upper-face extremals, both still transport-incompatible
+
+SUMMARY: PASS=13 FAIL=0
+
+----- stderr -----
+

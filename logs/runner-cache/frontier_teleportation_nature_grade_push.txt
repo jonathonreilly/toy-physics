@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_nature_grade_push.py
+runner_sha256: 2607e4098ea4ca3ac6918e2685d7c48fd6637814917a502df7395ca61e034299
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 6.59
+status: ok
+----- stdout -----
+TELEPORTATION NATURE-GRADE PUSH
+Status: planning artifact with explicit added principles
+Claim boundary: ordinary quantum state teleportation only; no matter, mass, charge, energy, object, or faster-than-light transport
+
+causal-positive minimal action transducer: windings=0..5, selected=0, angle=1.570796, action_gap=19.739209, negative_orientation_degenerate=True
+least-dwell amplitude law: candidates=4, selected_center=0.000, neighbor_weight=0.408248, dwell_gap=0.062500, norm_error=0.000e+00, isotropy_error=0.000e+00
+signed sparse 3D resource scaling rows:
+  side=4, G=-1000, N=64, Hdim=4096, gap=0.0244025, Bell*=0.999702 (Phi+), Fbest=0.999802, CHSH=2.827585, neg=0.499702, purity=0.999702
+  side=6, G=-1000, N=216, Hdim=46656, gap=0.0120618, Bell*=0.999709 (Phi+), Fbest=0.999806, CHSH=2.827604, neg=0.499709, purity=0.999709
+  side=8, G=-1000, N=512, Hdim=262144, gap=0.00704654, Bell*=0.999711 (Phi+), Fbest=0.999807, CHSH=2.827608, neg=0.499711, purity=0.999711
+noisy pulse decoder: area_slot_error=1.000e-04, leakage=1.000e-05, effective_slot_error=1.100e-04, mean_word_failure=5.055e-11, worst_branch_failure=5.055e-11
+finite-temperature detector robustness: coupling_angle=0.800, thermal_reset_failure=1.000e-02, fragment_loss=5.000e-02, effective_fragments=22/24, effective_fragment_overlap=0.699740, max_record_overlap=8.770e-18, entropy_defect=0.000e+00
+
+Acceptance gates:
+  minimal action selects the causal-positive transducer winding: PASS
+  least-dwell principle selects a unique amplitude carrier law: PASS
+  signed sparse 3D resource window survives sides 4, 6, and 8: PASS
+  noisy calibrated pulse decoder stays below word-failure target: PASS
+  finite-temperature detector model remains classical after losses: PASS
+  claim boundary stays state-only and not FTL: PASS
+
+Limitations:
+  The action and least-dwell rules are added selection principles; they
+  are not derived from the original sole axiom.
+  The signed sparse resource window is finite side=4,6,8 evidence; it is
+  not yet an asymptotic proof or a preparation/cooling theorem.
+  Pulse and detector robustness are independent-error models, not a
+  fabricated controller, material medium, or continuum thermodynamic limit.
+
+----- stderr -----
+

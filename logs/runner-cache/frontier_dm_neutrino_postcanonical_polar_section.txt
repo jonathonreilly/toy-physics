@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_postcanonical_polar_section.py
+runner_sha256: 6c09503cbccf1b3a109332c965041248a79fa025fa36bcb8f755b851efe0c113
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO POST-CANONICAL POSITIVE POLAR SECTION
+========================================================================================
+
+Question:
+  Can the generic full-rank DM right orbit make the post-canonical
+  slot-supported bridge intrinsic from H = Y Y^dag alone?
+
+========================================================================================
+PART 1: THE GENERIC DM RIGHT ORBIT HAS A UNIQUE POSITIVE REPRESENTATIVE
+========================================================================================
+  [PASS] The exact right orbit preserves H = Y Y^dag  (H difference = 5.11e-16)
+  [PASS] The polar representative is positive Hermitian  (Hermitian error = 8.89e-17)
+  [PASS] The polar representative squares exactly to H  (P^2 - H error = 2.53e-15)
+  [PASS] The same right orbit yields the same unique positive representative  (polar difference = 6.99e-16)
+
+  So the raw right-frame obstruction is not a total no-section theorem.
+  The generic full-rank DM right orbit already has Y_+(H) = H^(1/2).
+
+========================================================================================
+PART 2: THE POST-CANONICAL SLOT BRIDGE IS INTRINSIC ON THE POSITIVE SECTION
+========================================================================================
+  [PASS] On the positive section the right kernel is exactly K_+(H) = H  (K_+ - H error = 2.54e-15)
+  [PASS] The Z_3-basis kernel is therefore read directly from H  (K_Z3 difference = 2.58e-15)
+  [PASS] The intrinsic singlet-doublet slot pair is exactly a(H), b(H)  (a(H)=-0.453383+0.179989j, b(H)=-0.139883+0.363009j)
+  [PASS] The mass-basis singlet-doublet entries are the exact linear slot combinations  (K01=-0.221678-0.129415j, K02=-0.419503+0.383958j)
+  [PASS] The physical CP tensor is already nonzero on the branch sample  (cp_pair=(0.05737678107693038, -0.32214257085400927))
+
+  The remaining bridge is no longer tied to an arbitrary orbit
+  representative. On the positive section it is an intrinsic function of H.
+
+========================================================================================
+PART 3: THE GENERIC FULL-RANK H PATCH IS CP-SUPPORTING ON THE POSITIVE SECTION
+========================================================================================
+  [PASS] Random generic canonical samples give nonzero intrinsic CP on the positive section  (nonzero count = 80)
+  [PASS] So the positive polar section is not generically CP-empty  (the raw right-frame blocker was stronger than the true generic endpoint)
+
+  The generic full-rank H patch already carries a constructive intrinsic
+  post-canonical bridge. The next question is which H-law the branch fixes.
+
+========================================================================================
+PART 4: THE BANK RECORDS THE NEW POSITIVE-SECTION ENDPOINT
+========================================================================================
+  [PASS] The new note states Y_+(H) = H^(1/2) and K_+(H) = H
+
+  The branch endpoint is now cleaner: the remaining obstruction is not
+  a generic no-section claim, but whatever H-law the branch actually fixes.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact positive-section answer:
+    - the generic full-rank right orbit has the unique positive representative Y_+(H)=H^(1/2)
+    - on that representative, K_+(H)=H
+    - the post-canonical singlet-doublet slot bridge is read intrinsically from H
+    - the generic full-rank H patch is CP-supporting on that route
+
+  So the raw right-frame obstruction is not the last blocker.
+  The live DM question moves to the Hermitian-data law H itself.
+
+PASS=12 FAIL=0
+
+----- stderr -----
+

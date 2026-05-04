@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_source_ray_theorem.py
+runner_sha256: 173be0a5962ea609e3c0bfb05373c83b7a2799e5ef9c6c468a1613ff1a1c31de
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: SOURCE-RAY THEOREM
+========================================================================================
+
+Authority stack:
+  - docs/NEUTRINO_MAJORANA_PHASE_REMOVAL_NOTE.md
+  - docs/NEUTRINO_MAJORANA_CANONICAL_LOCAL_BLOCK_NOTE.md
+  - docs/NEUTRINO_MAJORANA_NAMBU_SOURCE_PRINCIPLE_NOTE.md
+
+Question:
+  After admitting the exact local Nambu-complete source family, is the
+  genuinely new one-generation Majorana source still an arbitrary
+  pseudospin vector, or is its direction already fixed?
+
+========================================================================================
+PART 1: THE LOCAL NAMBU FAMILY SPLITS EXACTLY INTO RETAINED AND NEW DIRECTIONS
+========================================================================================
+  [PASS (C)] J_z is Frobenius-orthogonal to J_x  (<J_x,J_z>=0.00e+00)
+  [PASS (C)] J_z is Frobenius-orthogonal to J_y  (<J_y,J_z>=0.00e+00)
+  [PASS (C)] J_z remains the exact charge-zero normal direction  (charge error=0.00e+00)
+  [PASS (C)] The transverse pairing seed carries charge -2/+2 through J_-/J_+  (ann error=0.00e+00, cre error=0.00e+00)
+  [PASS (C)] Removing the retained J_z component leaves exactly the transverse pairing part  (projection error=0.00e+00)
+
+  So on the admitted Nambu-complete local grammar, the genuinely new
+  beyond-retained source is the transverse pairing component, not an
+  arbitrary mixture with the already-retained normal J_z direction.
+
+========================================================================================
+PART 2: LOCAL nu_R REPHASING ACTS AS EXACT SO(2) ON THE NEW SOURCE PLANE
+========================================================================================
+  [PASS (C)] Rephasing about J_z rotates J_x inside the transverse plane  (rotation error=1.11e-16)
+  [PASS (C)] Rephasing about J_z rotates J_y inside the transverse plane  (rotation error=1.11e-16)
+
+  This is the local phase-removal theorem in Nambu language: the
+  transverse pairing plane is an exact rephasing orbit under J_z.
+
+========================================================================================
+PART 3: EVERY NONZERO NEW SOURCE IS EQUIVALENT TO THE CANONICAL RAY mu J_x
+========================================================================================
+  [PASS (C)] A transverse source has invariant amplitude mu = sqrt(a^2+b^2)  (mu=0.982344)
+  [PASS (C)] A J_z rephasing aligns any nonzero transverse source to mu J_x  (alignment error=1.62e-16)
+  [PASS (C)] The aligned source has no residual J_y or J_z component  (|c_y|=5.55e-17, |c_z|=0.00e+00)
+
+  So the genuinely new one-generation source is not an arbitrary
+  Nambu vector. Up to the exact local rephasing already allowed on
+  the nu_R singlet, it is the unique pure-pairing ray mu J_x.
+
+========================================================================================
+RESULT
+========================================================================================
+  The genuinely new beyond-retained one-generation Majorana source is
+  already fixed to a unique pure-pairing ray. The retained J_z
+  direction belongs to the old normal grammar, while every nonzero new
+  transverse source is exactly rephasing-equivalent to mu J_x with
+  mu >= 0.
+
+  So the live DM blocker is no longer a local source-vector direction.
+  It is the absolute amplitude / staircase law and its three-generation
+  lift.
+
+PASS=10  FAIL=0
+
+----- stderr -----
+

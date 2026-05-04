@@ -1,0 +1,52 @@
+===== runner cache v1 =====
+runner: scripts/axiom_first_spectrum_condition_check.py
+runner_sha256: 584e8d642799d8f25402780a8673b7668672d1ad1ecc49f3f62504d815ea5944
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.72
+status: ok
+----- stdout -----
+========================================================================
+ axiom_first_spectrum_condition_check.py
+ Loop: axiom-first-foundations-block02, Cycle 1 / R7
+ Spectrum condition: H = -log(T/M_T)/a_τ is self-adjoint, H ≥ 0
+========================================================================
+
+  L_s = 4, mass = 0.3, a_τ = 1.0, dim = 16
+
+--- E1: spectrum of T ---
+  min eigval = 2.607924e-01, max eigval (M_T) = 3.834468e+00
+  all positive? True
+  E1 verdict: PASS
+
+--- E2: spectrum of T_norm = T / M_T ---
+  min eigval = 6.801267e-02, max eigval = 1.000000e+00
+  spectrum in (0, 1]? True
+  E2 verdict: PASS
+
+--- E3: H = -(1/a_τ) log(T_norm) ---
+  Hermiticity err (||H - H†||_max) = 3.724e-16
+  spectrum of H: min = -1.312990e-15, max = 2.688061e+00
+  ground state E_0 = -1.312990e-15 (target: 0)
+  E3 verdict: PASS
+
+--- E4: mass gap m_gap = E_1 - E_0 ---
+  E_0 = -1.312990e-15, E_1 = 3.000000e-01
+  m_gap = 3.000000e-01
+  m_gap > 0? True
+  E4 verdict: PASS
+
+========================================================================
+ SUMMARY
+========================================================================
+   E1 (T spectrum positive): PASS
+   E2 (T/M_T spectrum in (0,1]): PASS
+   E3 (H ≥ 0): PASS
+   E4 (m_gap > 0): PASS
+
+   PASSED: 4/4
+
+ verdict: spectrum condition (SC1)–(SC4) exhibited on Cl(3) on Z^d.
+
+----- stderr -----
+

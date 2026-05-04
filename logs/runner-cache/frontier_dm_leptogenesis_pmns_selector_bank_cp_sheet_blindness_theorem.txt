@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem.py
+runner_sha256: efd2cace1340bcd4e73aa0d503c5c5c51ea736fae135457c09b571d65fb23bd4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 17.26
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS SELECTOR-BANK CP-SHEET BLINDNESS THEOREM
+========================================================================================
+
+Question:
+  Do any of the current PMNS-side selector laws or positive closure
+  candidates on this branch already fix the constructive mainline CP sheet?
+
+========================================================================================
+PART 1: CURRENT EXACT CLOSURE LAWS ARE CP-SHEET BLIND
+========================================================================================
+  [PASS] The minimum-information closure law keeps exact closure and information cost under delta -> -delta  (eta_flip=1.000000000000, ΔI=0.000e+00)
+  [PASS] Its displayed representative therefore has an equally selected opposite-CP partner  (rep=(gamma,E1,E2)=(-2.874e-09,-0.192115,-0.419208))
+  [PASS] The observable-relative-action closure law also keeps exact closure and relative action under delta -> -delta  (eta_flip=1.000000000000, ΔS=0.000e+00)
+  [PASS] Its displayed representative likewise has an equally selected opposite-CP partner  (rep=(gamma,E1,E2)=(-1.435e-07,0.008979,-0.439435))
+
+========================================================================================
+PART 2: TRANSPORT-POSITIVE CANDIDATES ARE STILL CP-SHEET BLIND
+========================================================================================
+  [PASS] The transport-extremal overshooting source has an equally transport-extremal opposite-CP partner  (best eta=1.052220313050, rep=(gamma,E1,E2)=(-0.030689,1.253199,-0.958464))
+  [PASS] Its exact eta > 1 representative is therefore not a constructive mainline CP witness  (cp=(0.025639,0.019609))
+  [PASS] The exact eta = 1 continuity closure point also has an equally selected opposite-CP partner  (best eta=1.000000000000)
+  [PASS] Its displayed eta = 1 representative still lands off the source-oriented mainline CP sheet  (cp=(0.037278,0.028214))
+
+========================================================================================
+PART 3: NO CURRENT PMNS SELECTOR LAW FIXES THE MAINLINE CP SHEET
+========================================================================================
+  [PASS] Current PMNS-side selector laws are already strong enough to construct transport closure or overshoot  (eta = 1 and eta > 1 are already realized on the fixed native seed surface)
+  [PASS] But none of those current laws constructively fixes the source-oriented mainline CP sheet  (their objectives are delta-even and therefore CP-sheet blind)
+  [PASS] So the remaining PMNS-side baryogenesis problem is a D_- / dW_e^H sign-law problem, not a transport-existence problem  (the open gate is constructive CP-sheet selection on the projected source pack)
+
+========================================================================================
+PART 4: THE THEOREM NOTE RECORDS THE SELECTOR-BANK BOUNDARY
+========================================================================================
+  [PASS] The new note records the selector-bank CP-sheet blindness theorem
+  [PASS] The note records that the open gate is constructive CP-sheet selection, not transport existence
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact selector-bank answer:
+    - current PMNS-side selector laws already construct eta closure or overshoot
+    - but every current selector objective is delta-even and hence CP-sheet blind
+    - so none yet gives a constructive mainline baryogenesis witness
+
+PASS=13 FAIL=0
+
+----- stderr -----
+

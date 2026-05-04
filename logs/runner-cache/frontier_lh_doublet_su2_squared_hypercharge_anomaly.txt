@@ -1,0 +1,82 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lh_doublet_su2_squared_hypercharge_anomaly.py
+runner_sha256: ba98a9be76310baddde6d3d22806d9855d8c598d6de0b4268ca783c238be4c73
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+LH-doublet SU(2)² × U(1)_Y anomaly cancellation verification
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: note structure and citations
+----------------------------------------------------------------------------------------
+  [PASS] note exists with correct title
+  [PASS] status is support / structural anomaly-cancellation theorem
+  [PASS] note does NOT use bare 'Status: retained' or 'Status: promoted'
+  [PASS] cites retained upstream: GRAPH_FIRST_SU3_INTEGRATION_NOTE.md
+  [PASS] cites retained upstream: GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md
+  [PASS] cites retained upstream: NATIVE_GAUGE_CLOSURE_NOTE.md
+  [PASS] references parent note (LEFT_HANDED_CHARGE_MATCHING_NOTE.md) but does not import load-bearing content
+  [PASS] note explicitly states it does NOT import load-bearing content from parent LHCM
+
+----------------------------------------------------------------------------------------
+Part 2: retained eigenvalue pattern is the unique trace-free direction
+----------------------------------------------------------------------------------------
+  [PASS] y_Sym = +1/3 is the unique trace-free eigenvalue when y_Anti = -1  (computed y_Sym = 1/3)
+  [PASS] 3 · y_Sym + 1 · y_Anti = 0 (tracelessness)  (trace = 0)
+
+----------------------------------------------------------------------------------------
+Part 3: SU(2) doublet Dynkin index T(2) = 1/2
+----------------------------------------------------------------------------------------
+  [PASS] SU(2) doublet generators satisfy Tr[T_i T_j] = (1/2) δ_{ij}  (verified at machine precision)
+  [PASS] Dynkin index T(2) = 1/2 (matches NATIVE_GAUGE_CLOSURE convention)
+
+----------------------------------------------------------------------------------------
+Part 4: SU(2)² × U(1)_Y anomaly contribution is exactly zero (Fraction)
+----------------------------------------------------------------------------------------
+  A = 3 · 1/2 · 1/3  +  1 · 1/2 · -1
+    = 1/2  +  -1/2
+    = 0
+  [PASS] SU(2)² × U(1)_Y anomaly contribution = 0 exactly (Fraction equality)  (got A = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: cancellation IS the trace-freeness identity
+----------------------------------------------------------------------------------------
+  (y_sym, y_anti) = (1/3, -1):  A = 0  OK
+  (y_sym, y_anti) = (2/3, -2):  A = 0  OK
+  (y_sym, y_anti) = (-1/3, 1):  A = 0  OK
+  (y_sym, y_anti) = (7/3, -7):  A = 0  OK
+  [PASS] Anomaly = 0 for ALL trace-free (y_Sym, y_Anti) — cancellation is the trace condition
+
+----------------------------------------------------------------------------------------
+Part 6: remaining anomaly identities are explicitly named as out-of-scope
+----------------------------------------------------------------------------------------
+  [PASS] out-of-scope item (R-A) is named
+  [PASS] out-of-scope item (R-B) is named
+  [PASS] out-of-scope item (R-C) is named
+  [PASS] note states the right-handed sector is required for the remaining items
+  [PASS] note states ONE_GENERATION_MATTER_CLOSURE is the parent for the remaining items
+
+----------------------------------------------------------------------------------------
+Part 7: Q = T_3 + Y/2 is admitted convention, not used as proof input
+----------------------------------------------------------------------------------------
+  [PASS] Q = T_3 + Y/2 is named
+  [PASS] note explicitly states Q = T_3 + Y/2 is admitted convention NOT proof input
+
+----------------------------------------------------------------------------------------
+Part 8: no new physics inputs beyond standard QFT machinery
+----------------------------------------------------------------------------------------
+  [PASS] note states no new physical claims
+  [PASS] note states no new numerical comparators
+  [PASS] note states no new admitted observations beyond standard QFT machinery
+
+----------------------------------------------------------------------------------------
+PASS=24 FAIL=0
+----------------------------------------------------------------------------------------
+
+----- stderr -----
+

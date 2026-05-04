@@ -1,0 +1,34 @@
+===== runner cache v1 =====
+runner: scripts/central_band_dense_joint_largeN.py
+runner_sha256: 7deb603cfdb817288fb741ce3aba74ec78838d86ad449b2ece11d6c4cff88f81
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 47.14
+status: ok
+----- stdout -----
+========================================================================================================================================
+CENTRAL-BAND DENSE LARGE-N SAME-GRAPH JOINT CARD
+  corrected Born + pur_min/purity + gravity on the same dense central-band graphs
+  seeds=4, realizations=8, npl=60, yz_range=12.0, r=3.0, y_cut=2.0, p=0.2
+========================================================================================================================================
+
+N = 80
+              mode     Born |I3|/P    pur_min/purity         gravity    g/SE   ok
+  --------------------------------------------------------------------------------------------------------
+            LN+|y|     0.000±0.000       1.000±0.000    -0.458±0.137    -3.3    2
+   LN+|y|+collapse     0.000±0.000       0.698±0.206    -0.498±0.072    -6.9    2
+
+N = 100
+              mode     Born |I3|/P    pur_min/purity         gravity    g/SE   ok
+  --------------------------------------------------------------------------------------------------------
+            LN+|y|     0.000±0.000       1.000±0.000    -0.044±0.000    FAIL    1
+   LN+|y|+collapse     0.000±0.000       0.732±0.000    -0.005±0.000    FAIL    1
+
+Thresholds:
+  max |I3|/P < 1e-10 : machine precision
+  max |I3|/P < 1e-2  : practically Born-clean
+  max |I3|/P < 1e-1  : marginal
+  max |I3|/P >= 1e-1 : clear Born violation
+
+----- stderr -----
+

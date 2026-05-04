@@ -1,0 +1,83 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_bridge_single_primitive.py
+runner_sha256: ed966861cbb7b4be268269a2b491c04d1791880cf8d2b33471ad3a9877ee67a0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.78
+status: ok
+----- stdout -----
+
+========================================================================================
+Koide Q-bridge single-primitive collapse
+========================================================================================
+
+This runner does not claim physical closure.
+It proves that the surviving arithmetic/representation-theoretic faces
+of the Q bridge reduce to one scalar primitive P_Q = |b|^2 / a^2 = 1/2.
+
+========================================================================================
+Part A - cyclic block power is exactly the Koide selector
+========================================================================================
+[PASS] A.1 equal cyclic block power is equivalent to 2 r0^2 = r1^2 + r2^2
+       6(E_+ - E_perp) = 2*r0**2 - r1**2 - r2**2
+[PASS] A.2 cyclic equal-block-power law maps exactly to 3 a^2 = 6 |b|^2
+       with a = r0/3 and |b|^2 = (r1^2 + r2^2)/36
+
+========================================================================================
+Part B - democracy collapses to one scalar primitive
+========================================================================================
+[PASS] B.1 real-irrep-block democracy gives |b|^2 / a^2 = 1/2
+       |b|^2 / a^2 = 1/2
+[PASS] B.2 the same democracy law gives kappa = a^2 / |b|^2 = 2
+       kappa = 2
+[PASS] B.3 the primitive ratio forces the Brannen prefactor c = sqrt(2)
+       c = sqrt(2)
+
+========================================================================================
+Part C - Brannen prefactor and Koide ratio
+========================================================================================
+[PASS] C.1 c = sqrt(2) gives Q = 2/3 identically in the phase delta
+       Q(c = sqrt(2)) = 2/3
+
+========================================================================================
+Part D - representation-theoretic faces hit the same scalar
+========================================================================================
+[PASS] D.1 dim(spinor) / dim(Cl^+(3)) = 1/2
+       2 / 4 = 1/2
+[PASS] D.2 charged-lepton Yukawa Casimir difference T(T+1) - Y^2 = 1/2
+       1/2 * 3/2 - (1/2)^2 = 1/2
+
+========================================================================================
+Part E - single surviving primitive
+========================================================================================
+[PASS] E.1 surviving Q-bridge arithmetic faces collapse to P_Q = 1/2
+       |b|^2/a^2 = 1/2
+       dim(spinor)/dim(Cl^+(3)) = 1/2
+       T(T+1)-Y^2 = 1/2
+[PASS] E.2 remaining bridge burden is physical identification, not arithmetic plurality
+       Adopting or deriving this one primitive closes Q = 2/3; the runner does
+       not prove why the physical charged-lepton packet must realize it.
+
+========================================================================================
+SUMMARY
+========================================================================================
+PASSED: 10/10
+  [PASS] A.1 equal cyclic block power is equivalent to 2 r0^2 = r1^2 + r2^2
+  [PASS] A.2 cyclic equal-block-power law maps exactly to 3 a^2 = 6 |b|^2
+  [PASS] B.1 real-irrep-block democracy gives |b|^2 / a^2 = 1/2
+  [PASS] B.2 the same democracy law gives kappa = a^2 / |b|^2 = 2
+  [PASS] B.3 the primitive ratio forces the Brannen prefactor c = sqrt(2)
+  [PASS] C.1 c = sqrt(2) gives Q = 2/3 identically in the phase delta
+  [PASS] D.1 dim(spinor) / dim(Cl^+(3)) = 1/2
+  [PASS] D.2 charged-lepton Yukawa Casimir difference T(T+1) - Y^2 = 1/2
+  [PASS] E.1 surviving Q-bridge arithmetic faces collapse to P_Q = 1/2
+  [PASS] E.2 remaining bridge burden is physical identification, not arithmetic plurality
+
+VERDICT: the Koide Q bridge has one surviving primitive candidate.
+
+What remains open is the physical/source-law identification of that
+primitive on the charged-lepton carrier, not an unresolved arithmetic
+competition among several distinct candidate values.
+
+----- stderr -----
+

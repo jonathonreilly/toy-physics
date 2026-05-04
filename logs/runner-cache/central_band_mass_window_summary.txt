@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/central_band_mass_window_summary.py
+runner_sha256: c4d36914d73db577f81594a90e3529f9a567ce48fdf16aa8ba95ecaa570e1850
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

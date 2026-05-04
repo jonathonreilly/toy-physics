@@ -1,0 +1,40 @@
+===== runner cache v1 =====
+runner: scripts/source_resolved_generated_support_recovery_basin.py
+runner_sha256: 8bdef14d8d6618005feeca4493df7a463a7ea58fd6bb10e70c739d94d84db8b7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.38
+status: ok
+----- stdout -----
+====================================================================================================
+GENERATED SUPPORT RECOVERY BASIN PROBE
+  compact generated DAG family, tiny grid around the retained kNN-floor tweak
+====================================================================================================
+family seeds=4, layers=16, nodes/layer=24, connect_radius=3.2
+Green kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.50, field target max=0.020
+source strength=0.004
+observable: centroid sign count + detector support fraction
+reduction check: zero source should recover free propagation exactly
+
+BASELINE
+  max |zero-source shift| = 0.000e+00
+  baseline delta = -4.357340e-02, TOWARD = 1/4, support_frac = 0.311
+
+ k  m        delta   TOWARD   support       zero
+----------------------------------------------------
+ 2  4 +6.221421e-01        4/4      0.448  0.000e+00
+ 2  5 +3.089781e-01        3/4      0.448  0.000e+00
+ 2  6 +5.032603e-01        4/4      0.427  0.000e+00
+ 3  4 +8.042905e-01        4/4      0.458  0.000e+00
+ 3  5 +3.850909e-01        3/4      0.458  0.000e+00
+ 3  6 +5.025787e-01        4/4      0.438  0.000e+00
+ 4  4 +3.592356e-01        3/4      0.438  0.000e+00
+ 4  5 +9.208924e-02        2/4      0.448  0.000e+00
+ 4  6 +3.692716e-01        3/4      0.438  0.000e+00
+
+SAFE READ
+  The basin is only real if the positive kNN-floor neighborhood broadens detector support while keeping the centroid sign TOWARD.
+  If only one point is positive, this collapses back to a fluke; if a small grid stays positive, the generated-family rescue is a small basin rather than a one-off.
+
+----- stderr -----
+

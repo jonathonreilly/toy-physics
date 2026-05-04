@@ -1,0 +1,36 @@
+===== runner cache v1 =====
+runner: scripts/frontier_alpha_s_direct_wilson_loop.py
+runner_sha256: 0bfcc76b4b64a087157b0644db297c2c1def1d2878c918c338d96b94d0affa0f
+timeout_sec: 900
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+==============================================================================
+Direct Wilson-loop alpha_s(M_Z) strict audit gate
+==============================================================================
+certificate: /private/tmp/gate-fix-worktree/outputs/alpha_s_direct_wilson_loop_certificate_2026-04-30.json
+  [PASS] [RETAINED-GATE] certificate declares Wilson-loop/static-potential authority  (authority='wilson_loop_static_potential')
+  [PASS] [RETAINED-GATE] certificate declares g_bare = 1 Wilson gauge surface  (action='Cl3Z3_SU3_Wilson', g_bare=1.0)
+  [PASS] [RETAINED-GATE] certificate declares no alpha_LM/u0/plaquette-chain authority  (all three flags must be false)
+  [PASS] [RETAINED-GATE] certificate does not expose forbidden authority keys  (no forbidden keys)
+  [PASS] [RETAINED-GATE] certificate contains ensemble list
+  [PASS] [RETAINED-GATE] Wilson configurations cover at least three lattice volumes  (volumes=[41472, 131072, 663552])
+  [PASS] [RETAINED-GATE] scale-control certificate covers at least two lattice spacings  (a_fm=[0.093886, 0.101852, 0.103534])
+  [PASS] [RETAINED-GATE] Wilson-loop expectation values converge with statistics  (qualified loops=72)
+  [PASS] [RETAINED-GATE] static-potential extraction passes plateau tests  (plateau_ok=12, potential_points=12)
+  [PASS] [RETAINED-GATE] running coupling extracted at multiple scales  (alpha_qq points=18)
+  [PASS] [RETAINED-GATE] Sommer scale fit is in the standard beta=6 range  (r0/a=[5.325599527844339, 4.909094990688272, 4.8293276704145915], global_r0/a=5.005676254205751)
+  [PASS] [RETAINED-GATE] alpha_s(M_Z) result is a positive finite number  (alpha_s_MZ=0.11799627326949744)
+  [PASS] [RETAINED-GATE] full uncertainty budget includes all required components  (components=['finite_spacing', 'finite_volume', 'running_bridge', 'scale_setting', 'statistical'])
+  [PASS] [RETAINED-GATE] total uncertainty is finite and nonzero  (total_uncertainty=0.006792368582180872)
+  [PASS] [RETAINED-GATE] final alpha_s(M_Z) is within one PDG sigma  (alpha=0.117996, PDG=0.118000+/-0.000900)
+  [PASS] [RETAINED-GATE] candidate agrees with target 0.1181 within stated uncertainty  (alpha=0.117996, target=0.118100, sigma=0.006792368582180872)
+  [PASS] [RETAINED-GATE] alpha_LM/u0 chain is not used as authority  (used_as_authority=False)
+  [PASS] [CONSISTENCY-ONLY] existing alpha_LM/u0 chain numerically cross-checks the direct result  (direct=0.11799627326949744, existing=0.1181)
+
+SUMMARY: PASS=18  FAIL=0
+Strict gate passed: direct Wilson-loop alpha_s route is ready for audit.
+
+----- stderr -----
+

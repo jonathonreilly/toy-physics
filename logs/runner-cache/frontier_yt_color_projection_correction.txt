@@ -1,0 +1,279 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_color_projection_correction.py
+runner_sha256: d2dff85004b5d217c0fc839f100b6de6fdeffedaae65cff126a061e6c2445b91
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.85
+status: ok
+----- stdout -----
+==============================================================================
+COLOR-SINGLET PROJECTION CORRECTION TO y_t
+y_t(physical) = y_t(Ward) * sqrt(8/9)
+==============================================================================
+
+==============================================================================
+PART 1: THE COLOR PROJECTION FACTOR
+==============================================================================
+
+  The Ward identity on the lattice constrains the FULL Yukawa
+  vertex, summing over all N_c^2 color channels of the q-qbar
+  bilinear. The physical Higgs (color singlet) couples to the
+  SINGLET projection of the condensate.
+
+  The scalar self-energy Sigma_phi involves a fermion loop:
+    Sigma_phi = -Tr[G(x,y) G(y,x)]  (color trace of bilinear)
+
+  This decomposes into color channels:
+    Sigma_phi = Sigma_singlet + Sigma_adjoint
+
+  The wave function renormalization of the physical scalar:
+    Z_phi = Sigma_connected / Sigma_total = R_conn = (N_c^2-1)/N_c^2
+
+  The physical Yukawa coupling includes sqrt(Z_phi):
+    y_t(physical) = y_t(Ward) * sqrt(Z_phi) = y_t(Ward) * sqrt(R_conn)
+
+  N_c = 3
+  R_conn = (N_c^2 - 1) / N_c^2 = 0.8888888889
+  sqrt(R_conn) = sqrt(8/9) = 0.9428090416
+
+  CONSISTENCY CHECK: EW couplings get the OPPOSITE correction.
+  EW vacuum polarization probes the adjoint channel:
+    g_EW(phys) = g_EW(lattice) * sqrt(N_c^2 / (N_c^2-1))
+               = g_EW(lattice) * 1.0606601718
+
+  Yukawa probes the singlet channel:
+    y_t(phys) = y_t(Ward) * sqrt((N_c^2-1) / N_c^2)
+             = y_t(Ward) * 0.9428090416
+
+  Ratio of corrections: sqrt(9/8) / sqrt(8/9) = 9/8 = 1.125
+  Computed: 1.125000
+
+==============================================================================
+PART 2: BACKWARD WARD SCAN + COLOR PROJECTION CORRECTION
+==============================================================================
+
+  Framework inputs at v = 246.28 GeV:
+    g_1(v)     = 0.464376  (taste staircase + color projection)
+    g_2(v)     = 0.648031
+    g_3(v)     = 1.139366  (alpha_s = 0.103304)
+    Ward BC:   y_t(M_Pl) = 0.435769
+
+  Step 2A: Backward Ward scan...
+    y_t(v) [Ward, uncorrected] = 0.973220
+    m_t(naive) = y_t * v / sqrt(2) = 169.48 GeV
+
+  Step 2B: Apply color-singlet projection correction
+    y_t(v) [physical] = 0.973220 * sqrt(8/9)
+                      = 0.973220 * 0.942809
+                      = 0.917561
+
+    m_t(naive, physical) = 0.917561 * 246.28 / sqrt(2)
+                         = 159.79 GeV
+
+  Step 2C: Comparison to SM MSbar y_t
+    y_t(naive) = sqrt(2)*m_t(pole)/v = 0.991879  (NOT MSbar)
+    m_t(MSbar, mu=m_t) = 172.69 / 1.059098 = 163.05 GeV
+    y_t(MSbar, mu=m_t) = sqrt(2) * 163.05 / 246.22 = 0.936532
+    y_t(framework, corrected, at v) = 0.917561
+
+  NOTE: y_t(framework) is at mu=v, y_t(SM MSbar) is at mu=m_t.
+  The proper comparison is m_t(pole), which accounts for running
+  and the MSbar-to-pole conversion.  See Part 3.
+
+  KEY NUMERICAL EVIDENCE:
+    y_t(Ward, v)         = 0.973220
+    y_t(Ward) * sqrt(8/9) = 0.917561
+    sqrt(8/9)            = 0.942809
+    1 - sqrt(8/9)        = 5.72% correction
+
+  [PASS] sqrt(8/9) correction is the right magnitude (~5.7%)
+         1 - sqrt(8/9) = 5.72%
+
+==============================================================================
+PART 3: m_t(pole) WITH MSbar-TO-POLE CONVERSION
+==============================================================================
+
+  3A: UNCORRECTED (Ward y_t only, no color projection)
+    y_t(v)            = 0.973220
+    m_t(MSbar, mu=v)  = 169.48 GeV
+    y_t(m_t)          = 0.988782
+    alpha_s(m_t)      = 0.107135
+    m_t(MSbar, mu=mt) = 172.19 GeV
+    conv(2-loop)      = 1.058193
+    m_t(pole, 2-loop) = 182.22 GeV  (+5.52%)
+    m_t(pole, 3-loop) = 182.76 GeV  (+5.83%)
+
+  3B: CORRECTED (y_t * sqrt(8/9))
+    y_t(v)            = 0.917561
+    m_t(MSbar, mu=v)  = 159.79 GeV
+    y_t(m_t)          = 0.936021
+    alpha_s(m_t)      = 0.107857
+    m_t(MSbar, mu=mt) = 163.01 GeV
+    conv(2-loop)      = 1.058671
+    m_t(pole, 2-loop) = 172.57 GeV  (-0.07%)
+    m_t(pole, 3-loop) = 173.10 GeV  (+0.24%)
+
+  [PASS] m_t(pole, 2-loop) within 2% of observed
+         172.57 GeV (-0.07%)
+  [PASS] m_t(pole, 3-loop) within 2% of observed
+         173.10 GeV (+0.24%)
+
+  3C: SUMMARY
+  Quantity                         Uncorrected     Corrected      Observed
+  ------------------------------  ------------  ------------  ------------
+  y_t(v)                              0.973220      0.917561    (see note)
+  m_t(MSbar, v) [GeV]                   169.48        159.79            --
+  m_t(pole, 2-loop) [GeV]               182.22        172.57        172.69
+  m_t(pole, 3-loop) [GeV]               182.76        173.10        172.69
+
+==============================================================================
+PART 4: m_H FROM lambda(M_Pl) = 0 STABILITY BOUNDARY
+==============================================================================
+
+  4A: UNCORRECTED (y_t = Ward value)
+    y_t(v)     = 0.973220
+    y_t(M_Pl)  = 0.435866
+    lambda(v)  = 0.165368
+    m_H        = 141.64 GeV  (+13.08%)
+
+  4B: CORRECTED (y_t = Ward * sqrt(8/9))
+    y_t(v)     = 0.917561
+    y_t(M_Pl)  = 0.382079
+    lambda(v)  = 0.118250
+    m_H        = 119.77 GeV  (-4.37%)
+
+  [PASS] m_H(corrected) closer to observed than m_H(uncorrected)
+         uncorr: 141.64 (+13.08%), corr: 119.77 (-4.37%)
+
+  4C: m_H SENSITIVITY TO y_t
+
+  Scenario                                    y_t(v)      lam(v)   m_H [GeV]       dev
+  ----------------------------------------  --------  ----------  ----------  --------
+  y_t = 0.973 (Ward, no correction)           0.9730    0.165171      141.55    +13.02%
+  y_t = 0.9176 (Ward * sqrt(8/9))             0.9176    0.118250      119.77     -4.37%
+  y_t = 0.979 (Ward + lattice matching)       0.9790    0.170566      143.85    +14.85%
+  y_t = 0.923 (matched + sqrt(8/9))           0.9230    0.122622      121.96     -2.62%
+  y_t = 0.992 (SM observed)                   0.9920    0.182458      148.78    +18.78%
+
+  NOTE: At 2-loop RGE order, the SM itself gives m_H ~ 144 GeV from
+  lambda(M_Pl) = 0.  The known 3-loop + NNLO corrections reduce this
+  to ~129 GeV.  The framework prediction should be compared at the
+  same perturbative order as the SM benchmark.
+
+==============================================================================
+PART 5: DOUBLE-COUNTING CHECK
+==============================================================================
+
+  The Ward matching correction (WARD_IDENTITY_CORRECTION_NOTE):
+    Delta = (d_1 - c_1) * alpha_s/(4 pi) = +0.0205
+    This modifies the Ward RATIO at M_Pl: (y_t/g_s)^MSbar = (1/sqrt(6))(1 + Delta)
+    Mechanism: 1-loop lattice-to-MSbar matching (BZ sunset integrals)
+    Acts on: the UV boundary condition y_t(M_Pl)
+
+  The color-singlet projection correction (this note):
+    Factor = sqrt(R_conn) = sqrt(8/9)
+    This modifies the physical Yukawa at the EFT crossover scale
+    Mechanism: non-perturbative color decomposition of scalar self-energy
+    Acts on: the mapping from lattice y_t to physical y_t at IR
+
+  These are STRUCTURALLY INDEPENDENT:
+    - Delta is a perturbative 1-loop correction to the UV ratio
+    - sqrt(8/9) is a non-perturbative channel-projection at IR
+    - Delta involves BZ integrals over the staggered fermion action
+    - sqrt(8/9) involves the Fierz decomposition of the color bilinear
+    - Delta is O(alpha_s/(4 pi)) ~ 2%
+    - sqrt(8/9) is O(1/N_c^2) ~ 11%, from group theory
+
+  NO DOUBLE COUNTING.
+
+  Ward BC without matching: y_t(M_Pl) = 0.435769
+  Ward BC with matching:    y_t(M_Pl) = 0.444702
+
+  y_t(v) with Ward matching only:    0.981359
+  y_t(v) with both corrections:      0.925234
+  y_t(v) with color proj only:       0.917561
+
+  m_t(pole, 2-loop) with both:       173.90 GeV  (+0.70%)
+
+  [PASS] Ward matching and color projection are additive (not redundant)
+         both: 0.925234, proj only: 0.917561, diff: 0.007673
+
+==============================================================================
+PART 6: SM CROSS-CHECK (observed couplings)
+==============================================================================
+
+  SM observed couplings -> m_t(pole, 2-loop):
+    y_t(MSbar, v) = 0.936532  (from MSbar extraction)
+    m_t(pole, 2-loop) = 176.64 GeV  (observed: 172.69 GeV)
+    Deviation: +2.29%
+
+  SM observed couplings -> m_H from lambda(M_Pl) = 0:
+    m_H(2-loop) = 122.56 GeV  (observed: 125.25 GeV)
+    Deviation: -2.14%
+
+  The SM 2-loop stability boundary gives m_H ~ 140-145 GeV, which is
+  ~15 GeV above the 3-loop result of ~129 GeV.  This calibrates the
+  perturbative-order systematic of our 2-loop framework computation.
+
+  [PASS] SM self-consistency: m_t(pole) from SM MSbar y_t within 5%
+         176.64 GeV (+2.29%)
+
+==============================================================================
+PART 7: alpha_s(M_Z) CROSS-CHECK
+==============================================================================
+
+  alpha_s(M_Z) from framework with corrected y_t:
+    alpha_s(M_Z) = 0.118066  (observed: 0.1179)
+    Deviation: +0.14%
+
+  Note: alpha_s running is dominated by the QCD beta function
+  and is almost independent of y_t.  The color projection on y_t
+  does not affect alpha_s(M_Z) at the precision shown.
+
+  [PASS] alpha_s(M_Z) within 2% of observed
+         0.118066 (+0.14%)
+
+==============================================================================
+FINAL SUMMARY
+==============================================================================
+
+  CORRECTED FRAMEWORK PREDICTIONS:
+
+  Quantity                                Framework      Observed   Deviation
+  -----------------------------------  ------------  ------------  ----------
+  y_t(v)                                   0.917561        ~0.938     (MSbar)
+  m_t(pole, 2-loop) [GeV]                    172.57        172.69       -0.07%
+  m_t(pole, 3-loop) [GeV]                    173.10        172.69       +0.24%
+  m_H(2-loop, lam(Pl)=0) [GeV]               119.77        125.25       -4.37%
+  alpha_s(M_Z)                             0.118066        0.1179       +0.14%
+
+  IMPROVEMENT FROM COLOR PROJECTION:
+
+  Quantity                                   Before         After   Improvement
+  -----------------------------------  ------------  ------------  ------------
+  m_t(pole, 2-loop) deviation                 +5.52%         -0.07%         +5.45%
+  m_H(2-loop) deviation                      +13.08%         -4.37%         +8.71%
+
+  THE COLOR-SINGLET PROJECTION sqrt(8/9) ON y_t:
+    1. Moves m_t(pole) toward the observed value
+    2. Moves m_H toward the observed value (lower y_t -> lower m_H)
+    3. Is the OPPOSITE correction to the EW sqrt(9/8) -- consistent
+    4. Uses the SAME R_conn = 8/9 already computed from the axiom
+    5. Does NOT double-count with the Ward matching correction
+    6. Has an in-scope Fierz/channel-counting core; the full physical
+       chain still depends on separately reviewed bridge/running/matching rows
+
+==============================================================================
+PASS/FAIL SUMMARY
+==============================================================================
+
+  7/7 PASS, 0/7 FAIL
+
+  Total runtime: 1.3s
+
+==============================================================================
+ALL CHECKS PASSED
+==============================================================================
+
+----- stderr -----
+

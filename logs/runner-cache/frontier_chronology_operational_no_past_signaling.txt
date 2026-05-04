@@ -1,0 +1,112 @@
+===== runner cache v1 =====
+runner: scripts/frontier_chronology_operational_no_past_signaling.py
+runner_sha256: 76341dcc5bb52568aa8708489b97bd3c960ce88466a32443d3f43daad789d88a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================================
+Operational chronology-protection no-past-signaling audit
+See docs/CHRONOLOGY_PROTECTION_OPERATIONAL_NO_PAST_SIGNALING_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Authority and scope surface
+----------------------------------------------------------------------------------------
+  [PASS] authority/reference exists: docs/ANOMALY_FORCES_TIME_THEOREM.md
+  [PASS] authority/reference exists: docs/SINGLE_AXIOM_HILBERT_NOTE.md
+  [PASS] authority/reference exists: docs/SINGLE_AXIOM_INFORMATION_NOTE.md
+  [PASS] authority/reference exists: docs/LIGHT_CONE_FRAMING_NOTE.md
+  [PASS] authority/reference exists: docs/CAUSAL_FIELD_CANONICAL_CHAIN_NOTE.md
+  [PASS] authority/reference exists: docs/CPT_EXACT_NOTE.md
+  [PASS] authority/reference exists: docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md
+  [PASS] note states boundary: does not close it
+  [PASS] note states boundary: does not close the lane
+  [PASS] note states boundary: postselection
+  [PASS] note states boundary: final-boundary
+  [PASS] note states boundary: causal cycle
+  [PASS] note states boundary: no manuscript promotion or lane closure
+  [PASS] note states boundary: no derivation of the retained single-clock surface itself
+  [PASS] note avoids overclaim: closes the chronology-protection lane
+  [PASS] note avoids overclaim: closed chronology-protection lane
+  [PASS] note avoids overclaim: therefore time travel is impossible
+  [PASS] note avoids overclaim: rules out all possible CTC
+
+----------------------------------------------------------------------------------------
+Record instrument at t0
+----------------------------------------------------------------------------------------
+  [PASS] rho is normalized
+  [PASS] rho is positive semidefinite
+  [PASS] record instrument nonselective sum is trace preserving
+  P(a at t0) = [0.7, 0.3]
+  [PASS] record probabilities sum to one
+  [PASS] record branch 0 probability is nonzero
+  [PASS] record branch 1 probability is nonzero
+
+----------------------------------------------------------------------------------------
+Single-clock unitary propagation t0 -> t1
+----------------------------------------------------------------------------------------
+  [PASS] U10 is unitary
+  [PASS] unitary preserves trace of record branch 0
+  [PASS] unitary preserves trace of record branch 1
+
+----------------------------------------------------------------------------------------
+Later nonselective settings at t1 cannot alter earlier marginal
+----------------------------------------------------------------------------------------
+  [PASS] identity is trace preserving
+  [PASS] identity has unital Heisenberg dual
+  identity: P_x(a) = [0.7000000000000001, 0.3]
+  [PASS] identity preserves earlier branch probability a=0
+  [PASS] identity preserves earlier branch probability a=1
+  [PASS] future_unitary_H is trace preserving
+  [PASS] future_unitary_H has unital Heisenberg dual
+  future_unitary_H: P_x(a) = [0.6999999999999998, 0.29999999999999993]
+  [PASS] future_unitary_H preserves earlier branch probability a=0
+  [PASS] future_unitary_H preserves earlier branch probability a=1
+  [PASS] future_dephasing is trace preserving
+  [PASS] future_dephasing has unital Heisenberg dual
+  future_dephasing: P_x(a) = [0.7, 0.3]
+  [PASS] future_dephasing preserves earlier branch probability a=0
+  [PASS] future_dephasing preserves earlier branch probability a=1
+  [PASS] future_reset_memory is trace preserving
+  [PASS] future_reset_memory has unital Heisenberg dual
+  future_reset_memory: P_x(a) = [0.7000000000000001, 0.3]
+  [PASS] future_reset_memory preserves earlier branch probability a=0
+  [PASS] future_reset_memory preserves earlier branch probability a=1
+
+----------------------------------------------------------------------------------------
+Later measurement: unconditioned no signal, postselected conditioning can bias
+----------------------------------------------------------------------------------------
+  [PASS] future outcome family is trace preserving when summed
+  [PASS] summed future outcomes preserve P(a=0)
+  [PASS] summed future outcomes preserve P(a=1)
+  P(a=0) = 0.700000000000
+  P(a=0 | future b=0) = 0.939431685874
+  [PASS] future postselection changes the retrodicted ensemble
+  [PASS] postselection branch has nonzero probability cost
+
+----------------------------------------------------------------------------------------
+Loschmidt echo is a future state, not past-record alteration
+----------------------------------------------------------------------------------------
+  [PASS] inverse unitary can reconstruct branch state as a later echo
+  [PASS] echo trace equals original branch probability
+  [PASS] echo does not change already computed P(a=0)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Certified:
+    ordered single-clock circuit + CPTP later settings imply no change
+    in the unconditioned earlier record marginal P(a).
+
+  Not certified:
+    final-boundary theories, postselected subensembles, directed causal
+    cycles, interacting CPT, or a full chronology-protection lane closure.
+
+========================================================================================
+TOTAL: PASS=51, FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -1,0 +1,160 @@
+===== runner cache v1 =====
+runner: scripts/frontier_abcc_cp_phase_no_go_theorem.py
+runner_sha256: 518d9908d6e47772fe5ee629e1696d753bcfc789f4eff48aa4adf86faa1a47b0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.60
+status: ok
+----- stdout -----
+================================================================================
+A-BCC CP-PHASE NO-GO THEOREM
+
+  Under the physical sigma=(2,1,0) established by the sigma_hier
+  uniqueness theorem, all known C_neg chi^2=0 PMNS solutions give
+  sin(delta_CP) > +0.247, excluded by T2K (NO) at > 3-sigma.
+
+  Only C_base hosts a CP-phase-consistent PMNS solution.
+  This provides observational grounding for the A-BCC axiom.
+================================================================================
+
+================================================================================
+Part 1: Physical sigma context — result of sigma_hier uniqueness theorem
+================================================================================
+
+  The sigma_hier uniqueness theorem (frontier_sigma_hier_uniqueness_theorem.py)
+  established at the C_base pin (m_*, delta_*, q_+*) = (0.657, 0.934, 0.715):
+
+  Step 1: the 9/9 NuFit 3-sigma magnitude filter reduces S_3 from 6 to 2:
+    sigma = (2, 0, 1): sin(delta_CP) = +0.987
+    sigma = (2, 1, 0): sin(delta_CP) = -0.987
+
+  Step 2: T2K/NOvA exclude sin(delta_CP) > 0.247 at > 3-sigma (NO),
+  uniquely selecting sigma = (2, 1, 0) with sin(delta_CP) = -0.987.
+
+  The PHYSICAL sigma is therefore: sigma = (2, 1, 0).
+
+  This runner asks: what does sigma = (2, 1, 0) give at C_neg solutions?
+
+  [PASS] Physical sigma at pinned point: chi^2 < 1e-10  (chi2 = 1.61e-13)
+  [PASS] Physical sigma at pinned point: 9/9 NuFit pass  (n_pass = 9)
+  [PASS] Physical sigma at pinned point: sin(delta_CP) = -0.987 (T2K preferred)  (sin(dCP) = -0.9874)
+  [PASS] Physical sigma at pinned point: det(H) > 0 (C_base)  (det = 0.9592)
+
+================================================================================
+Part 2: Basin 2 — C_neg solution under physical sigma = (2, 1, 0)
+================================================================================
+
+  Searching near (m, delta, q_+) ~ (28, 21, 5) ...
+  Found: (28.0062, 20.7218, 5.0116)
+  det(H) = -70537.2  |  chi^2 = 1.26e-30
+
+  sin(delta_CP) under all 6 sigma assignments at Basin 2:
+    sigma=(0, 1, 2): sin(dCP)=-0.6254  n_pass=4/9
+    sigma=(0, 2, 1): sin(dCP)=+0.6254  n_pass=4/9
+    sigma=(1, 0, 2): sin(dCP)=+0.5154  n_pass=4/9
+    sigma=(1, 2, 0): sin(dCP)=-0.5154  n_pass=4/9
+    sigma=(2, 0, 1): sin(dCP)=-0.5544  n_pass=9/9
+    sigma=(2, 1, 0): sin(dCP)=+0.5544  n_pass=9/9 <-- PHYSICAL
+  [PASS] Basin 2: chi^2 < 1e-8 (chi^2=0 solution in C_neg)  (chi2 = 1.26e-30)
+  [PASS] Basin 2: det(H) < 0 (C_neg component)  (det = -70537.2)
+  [PASS] Basin 2: signature = (1, 0, 2) — flipped from C_base  (eigvals = [-48.379147  37.373635  39.0117  ])
+  [PASS] Basin 2 under sigma=(2,1,0): sin(dCP) > +0.247 — excluded by T2K at >3-sigma  (sin(dCP) = +0.5544 > 0.247)
+
+================================================================================
+Part 3: Basin X — C_neg solution, doubly excluded
+================================================================================
+
+  Basin X is a chi^2=0 C_neg solution under sigma=(2,0,1),
+  located near (m, delta, q_+) ~ (21, 13, 2).
+
+  Searching under native sigma=(2,0,1) ...
+  Found: (21.1283, 12.6800, 2.0892)
+  det(H) = -20296.1  |  chi^2 under sigma=(2,0,1) = 1.19e-31
+
+  sin(delta_CP) under all 6 sigma assignments at Basin X:
+    sigma=(0, 1, 2): sin(dCP)=-0.4976  n_pass=4/9
+    sigma=(0, 2, 1): sin(dCP)=+0.4976  n_pass=4/9
+    sigma=(1, 0, 2): sin(dCP)=+0.3908  n_pass=5/9
+    sigma=(1, 2, 0): sin(dCP)=-0.3908  n_pass=5/9
+    sigma=(2, 0, 1): sin(dCP)=-0.4188  n_pass=9/9 <-- native chi^2=0
+    sigma=(2, 1, 0): sin(dCP)=+0.4188  n_pass=9/9 <-- PHYSICAL
+
+  Exclusion argument (two independent grounds):
+  1. Basin X native sigma=(2,0,1) gives sin(dCP)=-0.364 at C_base pin:
+     sigma_hier uniqueness excluded (2,0,1) at C_base (sin=+0.987 there).
+     No consistent C_base pin exists for sigma=(2,0,1).
+  2. Under physical sigma=(2,1,0), Basin X gives sin(dCP)>+0.247 (T2K excl.).
+  [PASS] Basin X: chi^2 < 1e-8 under native sigma=(2,0,1)  (chi2 = 1.19e-31)
+  [PASS] Basin X: det(H) < 0 (C_neg component)  (det = -20296.1)
+  [PASS] Basin X: signature = (1, 0, 2) — flipped from C_base  (eigvals = [-30.50753   24.685665  26.950129])
+  [PASS] Basin X native sigma=(2,0,1): 9/9 NuFit (it is a C_neg chi^2=0 solution)  (n_pass = 9)
+  [PASS] Basin X under physical sigma=(2,1,0): sin(dCP) > +0.247 — T2K >3-sigma excluded  (sin(dCP) = +0.4188 > 0.247)
+
+================================================================================
+Part 4: A-BCC CP-phase no-go summary
+================================================================================
+
+  chi^2=0 solutions on retained affine chart, physical sigma=(2,1,0):
+
+  Basin     component   det(H)        sin(dCP)    T2K status (> 3sigma excl. sin>+0.247)
+  ------------------------------------------------------------------------------------------
+  Basin 1   C_base        > 0         -0.9874    PREFERRED: sin=-0.987, near T2K best-fit
+  Basin 2   C_neg             -70537  +0.5544    EXCLUDED: sin=+0.554 > +0.247 (T2K >3-sigma)
+  Basin X   C_neg             -20296  +0.4188    EXCLUDED: sin=+0.419 > +0.247 (T2K >3-sigma)
+
+  [PASS] Basin 1 (C_base): sin(dCP) < -0.9 — T2K preferred  (sin(dCP) = -0.9874)
+  [PASS] Basin 2 (C_neg): sin(dCP) > +0.247 under sigma=(2,1,0) — T2K >3-sigma excluded  (sin(dCP) = 0.5544)
+  [PASS] Basin X (C_neg): sin(dCP) > +0.247 under sigma=(2,1,0) — T2K >3-sigma excluded  (sin(dCP) = 0.4188)
+  [PASS] Physical sigma=(2,1,0) maps C_neg solutions to sin(dCP) > 0 in both known basins  (Explanation: C_neg has opposite-sign det, corresponding to Jarlskog sign flip relative to C_base when same sigma is used)
+
+================================================================================
+Part 5: Structural explanation — Jarlskog sign flip at C_neg
+================================================================================
+
+  Jarlskog J at C_base pin (sigma=(2,1,0)):  J = -0.032755  (< 0)
+  Jarlskog J at Basin 2 (sigma=(2,1,0)):     J = +0.018391  (> 0)
+
+  Physical origin: the signature flip (2,0,1) -> (1,0,2) at C_neg
+  corresponds to an inertia reversal of the Hermitian form, which
+  reverses the orientation of the eigenvector frame. Under sigma=(2,1,0),
+  this flips the sign of J (and hence sin(delta_CP)).
+
+  [PASS] Jarlskog J < 0 at C_base pin under sigma=(2,1,0)  (J = -0.032755)
+  [PASS] Jarlskog J > 0 at Basin 2 under same sigma=(2,1,0)  (J = 0.018391)
+  [PASS] Sign flip of J from C_base to C_neg under fixed sigma=(2,1,0)  (J_cbase=-0.0328 < 0 < J_Basin2=0.0184)
+
+  This sign flip is structural: det(H) < 0 at C_neg means the
+  inertia signature differs by one sign flip from C_base, which
+  propagates into a J-sign reversal under fixed sigma. Applying the
+  physical sigma=(2,1,0) globally therefore FORCES sin(dCP) > 0 at
+  all C_neg solutions — directly excluded by T2K at >3-sigma.
+
+================================================================================
+Theorem statement (conditional on sigma_hier uniqueness + T2K):
+
+  Given sigma_hier = (2,1,0) [established by the sigma_hier uniqueness
+  theorem at the C_base chamber pin], every known chi^2=0 solution to
+  the PMNS angle constraint on the retained affine chart with det(H) < 0
+  gives sin(delta_CP) > +0.247. T2K (2021, Normal Ordering) excludes
+  delta_CP in [0.25 rad, pi] at > 3-sigma, ruling out sin(delta_CP) > +0.247.
+
+  Consequence: under sigma=(2,1,0) + T2K, all known C_neg PMNS solutions
+  are observationally excluded. The physical PMNS solution must lie on
+  C_base — providing observational grounding for A-BCC.
+
+  The A-BCC axiom is sharpened from 'physically motivated' to
+  'observationally grounded' by this theorem. It is not yet an
+  axiom-native Cl(3)/Z^3 theorem; closing A-BCC at the framework level
+  (deriving it from the axiom without observational input) remains
+  the last open item.
+
+  Falsifiability: if DUNE/Hyper-K confirm sin(delta_CP) ~ -0.987, the
+  T2K exclusion of sin(dCP)>+0.247 becomes >> 5-sigma, making the
+  C_neg no-go watertight at the observational level.
+================================================================================
+
+PASS = 20
+FAIL = 0
+
+----- stderr -----
+

@@ -1,0 +1,54 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_exact_schur_normal_form_uniqueness.py
+runner_sha256: 6e510b3a2b7faa4599ed0313553f3508ee9bbd7e98029f577b7025694da85df1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 8.98
+status: ok
+----- stdout -----
+==============================================================================
+YT EXACT SCHUR NORMAL-FORM CLASS UNIQUENESS
+==============================================================================
+
+Test whether every admissible exact Schur coarse bridge operator, under
+the intrinsic tested-scale local/nonlocal budgets, remains in the same
+affine normal-form class on the forced UV window.
+
+Forced UV window: x >= 0.95, points = 125
+Admissible local budget    = 0.007123842
+Admissible nonlocal budget = 0.005023669
+Surviving SPD operators    = 300
+min eigenvalue over class  = 3.758369e+01
+
+Worst-case class deviations:
+  max affine residual L2       = 1.134005e-03
+  max response-vs-ref L2       = 5.264992e-03
+  max slope relative drift     = 2.003705e-02
+  max intercept relative drift = 1.417888e-02
+  conservative package budget  = 1.214751e-02
+
+[EXACT] PASS: every admissible Schur coarse bridge operator stays positive definite
+    min eigenvalue across class = 3.758369e+01
+[EXACT] PASS: every admissible Schur coarse bridge operator stays in the affine normal-form class
+    max affine residual L2 = 1.134005e-03
+[EXACT] PASS: the entire admissible class stays inside the conservative package response budget
+    max response-vs-ref L2 = 5.264992e-03, budget = 1.214751e-02
+[BOUNDED] PASS: the affine slope is unique on the current tested scale across the admissible class
+    max slope relative drift = 2.003705e-02
+[BOUNDED] PASS: the affine intercept is unique on the current tested scale across the admissible class
+    max intercept relative drift = 1.417888e-02
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+Within the intrinsic tested-scale local/nonlocal remainder budgets, the exact Schur coarse bridge operator does not wander across multiple normal-form classes.
+Every admissible operator remains inside the same affine response class and inside the current conservative response budget.
+So the remaining gap is no longer normal-form ambiguity of the coarse bridge operator. It is only the microscopic theorem that the exact interacting bridge lies in this admissible Schur class.
+
+==============================================================================
+FINAL TALLY: 5 PASS / 0 FAIL
+Elapsed: 8.43 s
+==============================================================================
+
+----- stderr -----
+

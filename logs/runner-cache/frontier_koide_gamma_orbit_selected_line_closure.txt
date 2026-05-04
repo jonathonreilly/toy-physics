@@ -1,0 +1,50 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_gamma_orbit_selected_line_closure.py
+runner_sha256: 632fa3e1aeb9895f402e3945f1811e14a994b90d586931de59bb7a02b5a0765a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.49
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: the earlier H_* witness carries one route-invariant reachable-slot ratio
+========================================================================================
+  [PASS (C)] [NUMERIC] The earlier H_* semigroup witness is recovered on the small branch  (beta*=0.633571358484)
+  [PASS (C)] [NUMERIC] Its reachable-slot ratio r_* = w/v is positive and scale-free  (r_*=4.100904169383)
+  [PASS (C)] [NUMERIC] On the Koide cone, small-branch normalized direction is determined by r = w/v alone
+
+========================================================================================
+PART 2: continuity from the positivity threshold fixes the physical branch
+========================================================================================
+  [PASS (C)] [NUMERIC] The selected line has one sharp small-branch positivity threshold  (m_pos=-1.295794904067)
+  [PASS (C)] [NUMERIC] At threshold the exact cone forces r_pos = 2 + sqrt(3)  (r_pos=3.732050807569)
+  [PASS (C)] [NUMERIC] The large branch stays finitely positive at the threshold, so only the small branch turns on continuously from zero  (u_+(m_pos)=33.517159)
+
+========================================================================================
+PART 3: the selected line closes at the first continuous hit of the H_* ratio
+========================================================================================
+  [PASS (C)] [NUMERIC] From the positivity threshold up to the turnover window, the reachable-slot ratio r(m) rises strictly  (r-range=(3.732301, 9.377756))
+  [PASS (C)] [NUMERIC] The selected line hits the witness ratio twice, once before and once after the turnover  (m_first=-1.160469470087, m_late=1.823214846343)
+  [PASS (C)] [NUMERIC] Matching the witness ratio reproduces the full small-branch direction exactly at either hit
+  [PASS (C)] [NUMERIC] The first hit is the least-amplified realization and is selected by monotone continuation from threshold  (trace_first=9.490643, trace_late=30.528994)
+
+========================================================================================
+PART 4: no free coordinates remain on the current positive candidate route
+========================================================================================
+  [PASS (C)] [NUMERIC] The coordinate-closed selected-line witness still lands exactly on the Koide cone  (Q=0.666666666666667)
+  [PASS (C)] [NUMERIC] The coordinate-closed witness still matches the charged-lepton sqrt(m) direction essentially perfectly  (cos-sim=0.999999999989)
+  [PASS (C)] [NUMERIC] After one overall scale fit, the coordinate-closed witness stays within 0.03% of PDG sqrt(m)  (scaled_pred=[0.714677406013462, 10.278915391462442, 42.15284698558699])
+  [PASS (C)] [NUMERIC] The large branch is still directionally wrong at the closed point  (u_+=30.882053)
+  [PASS (C)] The current positive candidate route is therefore coordinate-closed: selector slice + one-clock class + continuity branch + first-hit ratio bridge  (remaining work is only promotion from candidate route to retained charged-lepton law)
+
+Interpretation:
+  The current positive Koide route no longer has any free internal
+  coordinates. The selected generator line is fixed by the exact
+  observable-selector slice, the branch is fixed by continuity from the
+  positivity threshold, and m is fixed uniquely by the preserved
+  reachable-slot ratio inherited from the earlier H_* witness.
+
+PASS=15 FAIL=0
+
+----- stderr -----
+

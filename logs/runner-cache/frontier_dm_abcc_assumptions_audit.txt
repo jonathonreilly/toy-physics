@@ -1,0 +1,136 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_abcc_assumptions_audit.py
+runner_sha256: a839d303ef6fcfd9f3eb6bdfc1a5a7e8ee8c9c724d250cec3b4cdc62e54b160e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.10
+status: ok
+----- stdout -----
+============================================================
+A-BCC Assumptions Audit
+============================================================
+
+=== A1: Chamber constraint scan ===
+  Grid: m in [0,5], delta in [0,3], q+ in [max(0, sqrt(8/3)-delta), 5]
+  Scanned 2000 chamber points: 1063 have det < 0 (53.1%)
+  Example neg-det chamber point: (m=0.00, delta=1.67, q+=0.00)
+    ||J||_F=4.082, det=-0.4145
+    ||H_base||_F=3.598
+  [PASS] Chamber constraint does NOT force det > 0 (majority of chamber has det < 0)  (1063/2000 = 53.1% chamber points have det < 0)
+
+=== A2: Sign-symmetry check — H -> -H ===
+  [PASS] det(H_base) > 0  (det = 5.0283)
+  [PASS] det(-H_base) < 0  (sign flip is algebraically admissible)  (det = -5.0283)
+  [PASS] H_base and -H_base have same eigenvalue magnitudes (algebra is sign-symmetric)  (eigenvalue magnitudes match under sign flip)
+
+=== A3: T_M-det negativity for large m ===
+  det(T_M) = -1.0000
+  m=  0.0: det(H_base + m*T_M) = 5.0283  (+)
+  m=  1.0: det(H_base + m*T_M) = -0.3083  (-)
+  m=  5.0: det(H_base + m*T_M) = -103.9423  (-)
+  m= 10.0: det(H_base + m*T_M) = -868.6321  (-)
+  m= 28.0: det(H_base + m*T_M) = -20642.8693  (-)
+  [PASS] det(T_M) < 0 (T_M drives det negative for large m)  (det(T_M) = -1.0000)
+  [PASS] Large-m det is negative (m=28 ~ Basin 2 scale)  (det(H_base + 28*T_M) = -20642.8693)
+  det=0 crossing along T_M direction: m* ≈ 0.9428
+  Basin 1 m=0.657 < m*=0.943 < Basin 2 m=28.0
+  [PASS] Basin 1 source (m=0.657) is below the T_M det-crossing (C_base side)  (m_Basin1=0.657 < m*=0.943)
+
+=== A4: Route 1 — Kramers non-applicability ===
+  H_base eigenvalues: [-1.9846 -0.8834  2.868 ]
+  Eigenvalue gaps: ['1.1011', '3.7514']
+  Min gap = 1.1011 >> 0 (no Kramers degeneracy in 3x3 system)
+  [PASS] H_base (3x3) has no Kramers degeneracy (three distinct eigenvalues)  (min gap = 1.1011)
+  [note] 3x3 odd dimension is arithmetically incompatible with full Kramers pairing (d=2k required for T^2=-1).
+
+=== A5: Route 2 — Quaternionic embedding impossibility ===
+  H is 3x3 complex Hermitian
+  Quaternionic complex representation has even dimension: False
+  3 is ODD: quaternionic embedding impossible
+  [PASS] 3x3 complex Hermitian H cannot be quaternionic complex representation (3 is odd)  (d=3 is odd; quaternionic embedding requires even complex dimension 2n)
+
+=== A6: Route 3 — Z^3 orientation non-applicability ===
+  Found chamber points with det > 0: True
+  Found chamber points with det < 0: True
+  Both signs present in chamber — orientation does not fix det sign
+  [PASS] Both det > 0 and det < 0 exist in the chamber (orientation non-constraining)  (both C_base and C_neg points exist in the physical chamber)
+
+=== A7: Route 4 — Sigma-hier chirality non-propagation ===
+  Basin 1: det(H) = 0.9592 > 0  (C_base)
+  Basin 2: det(H) = -7.05e+04 < 0  (C_neg)
+  Both are chi^2=0 PMNS solutions (mixing angles match) before CP-phase cut
+  Sigma-hier uniqueness selects sigma=(2,1,0) but NOT the det-sign
+  [PASS] Basin 1 in C_base (det > 0), Basin 2 in C_neg (det < 0)  (det(B1)=0.959, det(B2)=-7.05e+04)
+  [note] Sigma-hier selects sigma=(2,1,0) uniquely but does NOT determine C_base vs C_neg alone; two C_neg solutions exist at the same sigma.
+
+=== A8: Route 5 — C_base connectivity ===
+  Basin 2 path crosses det=0 at t ≈ 0.0278
+  (Within first 2.8% of path from J=0 to J*(Basin 2))
+  Basin 2 is NOT C_base-connected to J=0
+  Basin 1: min det on [0,1] = 0.8783 > 0 (C_base-continuous)
+  [PASS] Basin 2 linear path crosses det=0 at small t (not C_base-connected from J=0)  (det < 0 first at t = 0.0278 along Basin 2 path)
+  [PASS] Basin 1 linear path stays in C_base on [0,1] (P3 Sylvester confirmation)  (min det = 0.8783 > 0)
+  [note] C_base-connectivity is a topological fact (Basin 1 path stays det>0) but is not a derivation of A-BCC without an adiabatic-path continuity axiom.
+
+=== A9: P3 Sylvester circularity check ===
+  P3 Sylvester theorem (on main):
+    INPUT: Basin 1 as the physical endpoint
+    OUTPUT: det(H_base + t*J*(Basin 1)) > 0 for all t in [0,1]
+  Implication: P3 does NOT derive A-BCC; it uses A-BCC as its premise.
+  Circular argument structure:
+    A-BCC -> (Basin 1 is physical) -> P3 proves det > 0 on [0,1]
+    NOT: det > 0 on [0,1] -> Basin 1 is physical (that direction requires A-BCC)
+  [PASS] P3 Sylvester confirms det > 0 on [0,1] for Basin 1 (uses A-BCC as input)  (min det = 0.8783 > 0 on [0,1])
+
+=== A10: Observational elimination summary ===
+  Retained A-BCC observational grounding (from frontier_abcc_cp_phase_no_go):
+  T2K bound: sin(delta_CP) > 0.247 excluded at >3-sigma (NO)
+
+  Basin 1 (C_base): det=        0.96, sin(dCP)=-0.9874 -> PREFERRED
+  Basin 2 (C_neg): det=   -70538.60, sin(dCP)=+0.5544 -> EXCLUDED
+  Basin X (C_neg): det=   -20296.11, sin(dCP)=+0.4188 -> EXCLUDED
+  [PASS] All known C_neg chi^2=0 basins are T2K-excluded (>3-sigma)  (2/2 C_neg basins excluded by T2K)
+  [PASS] Basin 1 (C_base) is NOT T2K-excluded  (sin(dCP) = -0.9874 < T2K bound 0.247)
+
+=== A11: Route summary table ===
+
+  Route                                    Status     Reason
+  ---------------------------------------- ---------- ----------------------------------------
+  Kramers (T^2=-1 on Cl+(3) spinors)       FAILS      Applies to 2D spinors; H is 3x3 (vector rep)
+  Quaternionic embedding positivity        FAILS      Requires even dim (2n); H is 3x3 (odd)
+  Z^3 orientation / pseudoscalar           FAILS      Constrains GL(3) transformations, not Herm observables
+  Cl+(3) chirality / sigma-hier            FAILS      Selects pairing, not det-sign; C_neg basins also chi^2=0
+  C_base-connectivity from J=0             MOTIVATES  Topological fact; needs 'J from J=0' axiom not in Cl(3)/Z^3
+  Observable-continuity (DPLE W[J])        FAILS      DPLE log|det| is sign-blind (see DM_DPLE_ABCC_NO_GO)
+  Observational elimination (T2K)          SUPPORTS   All known C_neg basins T2K-excluded (>3-sigma); NOT derivation
+  [note] Route summary table printed above (informational): 6 routes fail or supply only support; A-BCC-from-Cl(3)/Z^3-alone remains open.
+
+=== A12: Final verdict ===
+
+  A-BCC CANNOT be derived from Cl(3)/Z^3 axioms alone.
+
+  Algebraic reason: The Cl(3)/Z^3 structure determines the form
+  of H (via sigma-hier uniqueness + cubic-variational obstruction)
+  but NOT the sign of det(H_base + J_physical).
+  The sign-flip H -> -H is algebraically admissible and maps
+  C_base <-> C_neg. The algebra is sign-symmetric; A-BCC breaks
+  this symmetry as a physical-sheet selection.
+
+  Closest route: C_base-connectivity (Route 5) reduces the gap
+  to a single additional axiom: 'J varies continuously from 0'.
+  This axiom is physically natural but not yet in the retained set.
+
+  Observational status: All known C_neg chi^2=0 basins are T2K-
+  excluded at >3-sigma. A-BCC is observationally grounded.
+
+  Cycle 11+ target: Formalize the C_base-connectivity physical
+  axiom (adiabatic source / Grassmann-additivity of W[J]) and
+  prove A-BCC as its corollary.
+  [note] A-BCC is the single named open input on the DM flagship gate (no derivation found via the five algebraic routes; C_base-connectivity motivates the continuity-axiom target).
+
+============================================================
+RESULT: PASS=16 FAIL=0
+============================================================
+
+----- stderr -----
+

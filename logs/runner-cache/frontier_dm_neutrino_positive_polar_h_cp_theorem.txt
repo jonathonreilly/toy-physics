@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_positive_polar_h_cp_theorem.py
+runner_sha256: 11ee73d73372c30698e05decdeee3cf8d101b4805b44026f34fbd07f145509cd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO POSITIVE-POLAR HERMITIAN CP THEOREM
+========================================================================================
+
+Question:
+  Once the DM bridge is intrinsic from H, can the physical CP tensor
+  be written exactly on the active seven-coordinate Hermitian grammar?
+
+========================================================================================
+PART 1: THE POSITIVE-SECTION CP TENSOR HAS AN EXACT H-SIDE FORMULA
+========================================================================================
+  [PASS (C)] Im[(K_mass)01^2] matches the exact H-side formula  (direct=0.019159, exact=0.019159)
+  [PASS (C)] Im[(K_mass)02^2] matches the exact H-side formula  (direct=0.092819, exact=0.092819)
+
+  The intrinsic positive-section DM tensor is now written directly on
+  the active Hermitian grammar. No raw right-frame variables remain.
+
+========================================================================================
+PART 2: THE ALIGNED-CORE NO-GO IS AN EXACT COROLLARY
+========================================================================================
+  [PASS (C)] The aligned core gives zero by the exact formula  (formula=(-0.0, 0.0))
+  [PASS (C)] The direct transformed tensor agrees and vanishes  (direct=(-2.2062830904209992e-32, 1.8624795141344643e-16))
+
+  So the aligned-core no-go is not separate guesswork. It is an exact
+  specialization of the Hermitian CP formula.
+
+========================================================================================
+PART 3: THE REMAINING DM OBJECT IS THE EXACT BREAKING-SLOT LAW
+========================================================================================
+  [PASS (C)] A nonzero phase phi is mandatory for intrinsic CP support  (the tensor is proportional to sin(phi))
+  [PASS (C)] The two real breaking combinations multiply that phase exactly  (B1 = d2-d3+r12-r31 cos(phi), B2 = 2d1-d2-d3+r12-2r23+r31 cos(phi))
+  [PASS (C)] So the remaining H-side object is no longer vague  (it is the exact law for phi, B1, and B2 on the active Hermitian grammar)
+
+  The live DM blocker is now formula-level precise on H itself.
+
+========================================================================================
+PART 4: THE BANK RECORDS THE EXACT H-SIDE CP FORMULA
+========================================================================================
+  [PASS (C)] The new note states the exact cp1 / cp2 formulas
+  [PASS (C)] The atlas carries the positive-polar Hermitian CP theorem row
+  [PASS (C)] The downstream source-surface note now uses the exact H-side phase and coefficient law
+
+  The branch endpoint is now formula-level precise on the H-side.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact answer:
+    - the intrinsic positive-section CP tensor is an exact function of
+      (d1,d2,d3,r12,r23,r31,phi)
+    - the aligned-core no-go is an exact corollary of that formula
+    - the remaining DM object is the exact law for phi and the two
+      real breaking combinations that multiply sin(phi)
+
+PASS=10 FAIL=0
+
+----- stderr -----
+

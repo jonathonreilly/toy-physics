@@ -1,0 +1,38 @@
+===== runner cache v1 =====
+runner: scripts/asymmetry_persistence_pilot.py
+runner_sha256: fde0bc04e19e6de2a3f0899e88b89a283e5d42854c788731f650b4e3ba73655f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 36.04
+status: ok
+----- stdout -----
+============================================================================================================
+ASYMMETRY PERSISTENCE PILOT
+  3D layer-by-layer generation with low-asymmetry post-barrier nodes rejected on creation
+  npl=30, xyz_range=12.0, r=4.0, seeds=16, k-band=[3.0, 5.0, 7.0]
+============================================================================================================
+
+N = 40  (persistence depth = 7 layers)
+   thr          pur_cl        S_norm         gravity    keep%   ok
+  ----------------------------------------------------------------------
+  0.00     0.990±0.004         0.089    +0.893±0.401   100.0%   16
+  0.10     0.910±0.024         0.345    +1.026±0.511    94.6%   16
+  0.20     0.910±0.024         0.346    +0.994±0.548    94.5%   16
+
+N = 60  (persistence depth = 10 layers)
+   thr          pur_cl        S_norm         gravity    keep%   ok
+  ----------------------------------------------------------------------
+  0.00     0.968±0.012         0.060    -0.025±0.387   100.0%   16
+  0.10     0.939±0.020         0.187    -0.360±0.261    96.0%   16
+  0.20     0.934±0.021         0.187    -0.401±0.272    95.8%   16
+
+N = 80  (persistence depth = 13 layers)
+   thr          pur_cl        S_norm         gravity    keep%   ok
+  ----------------------------------------------------------------------
+  0.00            FAIL          FAIL            FAIL   100.0%    0
+  0.10            FAIL          FAIL            FAIL    96.3%    0
+  0.20            FAIL          FAIL            FAIL    96.2%    0
+
+
+----- stderr -----
+

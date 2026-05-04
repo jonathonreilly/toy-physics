@@ -1,0 +1,77 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_abcc_chamber_dple_closure.py
+runner_sha256: 759beeb2787e7c7a9d3ea34b1bcad9cde722724fd8735d991a30be2c11eac3c5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 33.69
+status: ok
+----- stdout -----
+========================================================================
+A-BCC axiom-level closure via chamber bound and DPLE F_4
+========================================================================
+
+--- T1: chamber bound q_+ + δ ≥ √(8/3) on the four derived basins ---
+    Basin 1     m=+0.6571  δ=+0.9338  q_+=+0.7150  q+δ=+1.6488  margin=+0.0159  [IN]
+    Basin N     m=+0.5020  δ=+0.8535  q_+=+0.4259  q+δ=+1.2795  margin=-0.3535  [OUT]
+    Basin P     m=+1.0379  δ=+1.4330  q_+=-1.3295  q+δ=+0.1035  margin=-1.5295  [OUT]
+    Basin X     m=+21.1283  δ=+12.6800  q_+=+2.0892  q+δ=+14.7693  margin=+13.1363  [IN]
+  [PASS] Basin 1 inside active affine chamber  (q+δ−√(8/3) = +0.0159)
+  [PASS] Basin N strictly outside active affine chamber  (q+δ−√(8/3) = -0.3535)
+  [PASS] Basin P strictly outside active affine chamber  (q+δ−√(8/3) = -1.5295)
+  [PASS] Basin X inside active affine chamber  (q+δ−√(8/3) = +13.1363)
+  [PASS] Chamber bound narrows {1, N, P, X} to exactly {Basin 1, Basin X}  (survivors=['Basin 1', 'Basin X'])
+  [PASS] Basin N exclusion margin |Δ| > 0.1 (strict, not borderline)  (|q+δ − √(8/3)| = 0.3535)
+  [PASS] Basin P exclusion margin |Δ| > 1.0 (strict, far from boundary)  (|q+δ − √(8/3)| = 1.5295)
+
+--- T2: DPLE F_4 by closed-form discriminant ---
+    Basin 1     Δ=+7.8039  t*=0.7756  p*=+0.8783  c0=+5.028
+  [PASS] Basin 1: F_4 closed-form matches DPLE reference (True)  (closed-form=True, reference=True)
+    Basin N     Δ=-10.1066  no interior crit    c0=+5.028
+  [PASS] Basin N: F_4 closed-form matches DPLE reference (False)  (closed-form=False, reference=False)
+    Basin P     Δ=+458.7359  no interior crit    c0=+5.028
+  [PASS] Basin P: F_4 closed-form matches DPLE reference (False)  (closed-form=False, reference=False)
+    Basin X     Δ=-4715189.9663  no interior crit    c0=+5.028
+  [PASS] Basin X: F_4 closed-form matches DPLE reference (False)  (closed-form=False, reference=False)
+
+--- T3: DPLE F_4 by Newton iteration on p'(t) = 0 (independent route) ---
+  [PASS] Basin 1: F_4 (Newton) agrees with DPLE reference  (t=0.7755698013406392)
+  [PASS] Basin N: F_4 (Newton) agrees with DPLE reference  (no interior min)
+  [PASS] Basin P: F_4 (Newton) agrees with DPLE reference  (no interior min)
+  [PASS] Basin X: F_4 (Newton) agrees with DPLE reference  (no interior min)
+
+--- T4: DPLE F_4 by direct sampling of det(H_base + t J) ---
+  [PASS] Basin 1: F_4 (sampling) agrees with DPLE reference  (t≈0.7757757757757757)
+  [PASS] Basin N: F_4 (sampling) agrees with DPLE reference  (no interior min on sampled grid)
+  [PASS] Basin P: F_4 (sampling) agrees with DPLE reference  (no interior min on sampled grid)
+  [PASS] Basin X: F_4 (sampling) agrees with DPLE reference  (no interior min on sampled grid)
+
+--- T5: chamber-wide F_4 uniqueness scan ---
+    discovered 3 chi^2 = 0 (point, σ) pairs in chamber-discovery window
+    5 unique chart points after merging canonical basins
+  [PASS] F_4 passes at least one chart point in the chamber scan  (F_4 passers: ['Basin 1'])
+  [PASS] Basin 1 is among the F_4 passers  (F_4 passers: ['Basin 1'])
+  [PASS] All F_4 passers in the chamber scan are Basin 1  (distinct labels among passers: ['Basin 1'])
+
+--- T6: composition closure (C1) ∩ (C2) and cross-checks ---
+  [PASS] Basin 1: F_4 closed-form == Newton == sampling (three-route audit)  (cf=True, newton=True, sampling=True)
+  [PASS] Basin N: F_4 closed-form == Newton == sampling (three-route audit)  (cf=False, newton=False, sampling=False)
+  [PASS] Basin P: F_4 closed-form == Newton == sampling (three-route audit)  (cf=False, newton=False, sampling=False)
+  [PASS] Basin X: F_4 closed-form == Newton == sampling (three-route audit)  (cf=False, newton=False, sampling=False)
+  [PASS] Composition (C1) ∩ (C2) = {Basin 1}  (chamber=['Basin 1', 'Basin X'], F4=['Basin 1'], ∩=['Basin 1'])
+  [PASS] σ_hier uniqueness pin coincides with Basin 1 chart coordinates  (||pin − Basin 1|| = 0.00e+00)
+  [PASS] P3 Sylvester: signature(H_base + J_*(Basin 1)) = signature(H_base) = (−,−,+)  (sig_H0=(-1, -1, 1), sig_H1=(-1, -1, 1))
+  [PASS] P3 Sylvester: min_t det(H_base + t J_*(Basin 1)) > 0 on [0, 1]  (min_t p(t) = +0.8783 > 0)
+  [PASS] P3 Sylvester: min p value matches retained ≈ +0.878  (min_t p(t) = +0.8783 (expected ≈ +0.878))
+  [PASS] Basin 1: closure runner per-basin F_4 matches DPLE source-side reference  (runner=True, DPLE=True)
+  [PASS] Basin N: closure runner per-basin F_4 matches DPLE source-side reference  (runner=False, DPLE=False)
+  [PASS] Basin P: closure runner per-basin F_4 matches DPLE source-side reference  (runner=False, DPLE=False)
+  [PASS] Basin X: closure runner per-basin F_4 matches DPLE source-side reference  (runner=False, DPLE=False)
+  [PASS] Chamber boundary value √(8/3) computed correctly to 1e−10  (E1 = 1.6329931619)
+  [PASS] Dropping (C2) leaves {Basin 1, Basin X} in the chamber — non-trivial composition  (chamber-only survivors = ['Basin 1', 'Basin X'])
+  [PASS] Dropping (C1) leaves {Basin 1} from F_4 alone — F_4 already discriminates  (F_4-only passers = ['Basin 1'])
+  [PASS] Chamber contains det < 0 points: closure does NOT rely on an intrinsic sign theorem  (sampled det < 0 chamber points: 140 / 200)
+
+TOTAL: PASS=39  FAIL=0
+
+----- stderr -----
+

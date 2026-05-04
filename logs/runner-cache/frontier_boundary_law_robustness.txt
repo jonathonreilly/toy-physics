@@ -1,0 +1,210 @@
+===== runner cache v1 =====
+runner: scripts/frontier_boundary_law_robustness.py
+runner_sha256: 2b557c7e4379822ecbb1ee9945bd3bc529e5da256493367902b021ccc65501cd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 21.98
+status: ok
+----- stdout -----
+================================================================================
+BOUNDED BOUNDARY-LAW ROBUSTNESS ADDENDUM
+Multi-seed, multi-size, multi-partition, multi-G checks
+================================================================================
+
+Parameters: MASS=0.3, MU2=0.22, DT=0.12, N_STEPS=30
+Sides: [6, 8, 10, 12, 14]
+Seeds: [42, 43, 44, 45, 46] (jitter=0.05)
+G values: [0, 5, 10, 20]
+Partition types: BFS-ball, rectangular, random
+
+
+================================================================================
+SECTION 1: BFS-ball S vs |boundary| -- multi-seed stability
+================================================================================
+  side= 6 G= 0 seed=42: alpha=0.203168 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G= 0 seed=43: alpha=0.218291 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G= 0 seed=44: alpha=0.181932 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G= 0 seed=45: alpha=0.198848 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G= 0 seed=46: alpha=0.194956 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G= 5 seed=42: alpha=0.111611 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G= 5 seed=43: alpha=0.123013 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G= 5 seed=44: alpha=0.096787 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G= 5 seed=45: alpha=0.108679 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G= 5 seed=46: alpha=0.106049 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G=10 seed=42: alpha=0.076458 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G=10 seed=43: alpha=0.084256 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G=10 seed=44: alpha=0.066682 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G=10 seed=45: alpha=0.075201 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G=10 seed=46: alpha=0.073112 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G=20 seed=42: alpha=0.038862 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G=20 seed=43: alpha=0.042316 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G=20 seed=44: alpha=0.034020 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G=20 seed=45: alpha=0.038011 R2=1.000000 (n_filled=18, 2 radii)
+  side= 6 G=20 seed=46: alpha=0.037330 R2=1.000000 (n_filled=18, 2 radii)
+  side= 8 G= 0 seed=42: alpha=0.202839 R2=0.999920 (n_filled=32, 3 radii)
+  side= 8 G= 0 seed=43: alpha=0.199603 R2=0.991522 (n_filled=32, 3 radii)
+  side= 8 G= 0 seed=44: alpha=0.203100 R2=0.999660 (n_filled=32, 3 radii)
+  side= 8 G= 0 seed=45: alpha=0.192414 R2=0.990155 (n_filled=32, 3 radii)
+  side= 8 G= 0 seed=46: alpha=0.202967 R2=0.995415 (n_filled=32, 3 radii)
+  side= 8 G= 5 seed=42: alpha=0.152395 R2=0.999380 (n_filled=32, 3 radii)
+  side= 8 G= 5 seed=43: alpha=0.150141 R2=0.996739 (n_filled=32, 3 radii)
+  side= 8 G= 5 seed=44: alpha=0.153400 R2=0.999709 (n_filled=32, 3 radii)
+  side= 8 G= 5 seed=45: alpha=0.143611 R2=0.994932 (n_filled=32, 3 radii)
+  side= 8 G= 5 seed=46: alpha=0.152621 R2=0.988455 (n_filled=32, 3 radii)
+  side= 8 G=10 seed=42: alpha=0.112481 R2=0.999366 (n_filled=32, 3 radii)
+  side= 8 G=10 seed=43: alpha=0.111346 R2=0.997118 (n_filled=32, 3 radii)
+  side= 8 G=10 seed=44: alpha=0.114493 R2=0.999498 (n_filled=32, 3 radii)
+  side= 8 G=10 seed=45: alpha=0.106216 R2=0.995665 (n_filled=32, 3 radii)
+  side= 8 G=10 seed=46: alpha=0.113463 R2=0.987099 (n_filled=32, 3 radii)
+  side= 8 G=20 seed=42: alpha=0.078104 R2=0.994444 (n_filled=32, 3 radii)
+  side= 8 G=20 seed=43: alpha=0.077220 R2=0.999694 (n_filled=32, 3 radii)
+  side= 8 G=20 seed=44: alpha=0.079607 R2=0.994556 (n_filled=32, 3 radii)
+  side= 8 G=20 seed=45: alpha=0.074024 R2=0.999933 (n_filled=32, 3 radii)
+  side= 8 G=20 seed=46: alpha=0.079166 R2=0.977918 (n_filled=32, 3 radii)
+  side=10 G= 0 seed=42: alpha=0.210214 R2=0.999799 (n_filled=50, 4 radii)
+  side=10 G= 0 seed=43: alpha=0.206573 R2=0.998505 (n_filled=50, 4 radii)
+  side=10 G= 0 seed=44: alpha=0.214319 R2=0.999885 (n_filled=50, 4 radii)
+  side=10 G= 0 seed=45: alpha=0.211249 R2=0.999315 (n_filled=50, 4 radii)
+  side=10 G= 0 seed=46: alpha=0.211216 R2=0.999613 (n_filled=50, 4 radii)
+  side=10 G= 5 seed=42: alpha=0.175917 R2=0.999177 (n_filled=50, 4 radii)
+  side=10 G= 5 seed=43: alpha=0.172616 R2=0.999971 (n_filled=50, 4 radii)
+  side=10 G= 5 seed=44: alpha=0.179840 R2=0.998676 (n_filled=50, 4 radii)
+  side=10 G= 5 seed=45: alpha=0.176386 R2=0.997937 (n_filled=50, 4 radii)
+  side=10 G= 5 seed=46: alpha=0.177333 R2=0.999106 (n_filled=50, 4 radii)
+  side=10 G=10 seed=42: alpha=0.145079 R2=0.994799 (n_filled=50, 4 radii)
+  side=10 G=10 seed=43: alpha=0.141588 R2=0.998383 (n_filled=50, 4 radii)
+  side=10 G=10 seed=44: alpha=0.148174 R2=0.993909 (n_filled=50, 4 radii)
+  side=10 G=10 seed=45: alpha=0.146017 R2=0.993883 (n_filled=50, 4 radii)
+  side=10 G=10 seed=46: alpha=0.146045 R2=0.994718 (n_filled=50, 4 radii)
+  side=10 G=20 seed=42: alpha=0.116455 R2=0.984110 (n_filled=50, 4 radii)
+  side=10 G=20 seed=43: alpha=0.113999 R2=0.989493 (n_filled=50, 4 radii)
+  side=10 G=20 seed=44: alpha=0.118809 R2=0.982568 (n_filled=50, 4 radii)
+  side=10 G=20 seed=45: alpha=0.117500 R2=0.982823 (n_filled=50, 4 radii)
+  side=10 G=20 seed=46: alpha=0.117754 R2=0.985092 (n_filled=50, 4 radii)
+  side=12 G= 0 seed=42: alpha=0.208334 R2=0.998941 (n_filled=72, 5 radii)
+  side=12 G= 0 seed=43: alpha=0.208147 R2=0.997987 (n_filled=72, 5 radii)
+  side=12 G= 0 seed=44: alpha=0.210569 R2=0.999699 (n_filled=72, 5 radii)
+  side=12 G= 0 seed=45: alpha=0.209202 R2=0.997713 (n_filled=72, 5 radii)
+  side=12 G= 0 seed=46: alpha=0.211857 R2=0.999095 (n_filled=72, 5 radii)
+  side=12 G= 5 seed=42: alpha=0.186477 R2=0.998765 (n_filled=72, 5 radii)
+  side=12 G= 5 seed=43: alpha=0.186269 R2=0.996515 (n_filled=72, 5 radii)
+  side=12 G= 5 seed=44: alpha=0.188235 R2=0.998284 (n_filled=72, 5 radii)
+  side=12 G= 5 seed=45: alpha=0.187757 R2=0.998293 (n_filled=72, 5 radii)
+  side=12 G= 5 seed=46: alpha=0.190252 R2=0.998864 (n_filled=72, 5 radii)
+  side=12 G=10 seed=42: alpha=0.167775 R2=0.993051 (n_filled=72, 5 radii)
+  side=12 G=10 seed=43: alpha=0.167771 R2=0.988867 (n_filled=72, 5 radii)
+  side=12 G=10 seed=44: alpha=0.169235 R2=0.990459 (n_filled=72, 5 radii)
+  side=12 G=10 seed=45: alpha=0.168975 R2=0.993298 (n_filled=72, 5 radii)
+  side=12 G=10 seed=46: alpha=0.171372 R2=0.992049 (n_filled=72, 5 radii)
+  side=12 G=20 seed=42: alpha=0.145197 R2=0.982604 (n_filled=72, 5 radii)
+  side=12 G=20 seed=43: alpha=0.145634 R2=0.977953 (n_filled=72, 5 radii)
+  side=12 G=20 seed=44: alpha=0.147027 R2=0.979473 (n_filled=72, 5 radii)
+  side=12 G=20 seed=45: alpha=0.146431 R2=0.983218 (n_filled=72, 5 radii)
+  side=12 G=20 seed=46: alpha=0.148334 R2=0.980828 (n_filled=72, 5 radii)
+  side=14 G= 0 seed=42: alpha=0.213031 R2=0.999844 (n_filled=98, 6 radii)
+  side=14 G= 0 seed=43: alpha=0.209524 R2=0.998486 (n_filled=98, 6 radii)
+  side=14 G= 0 seed=44: alpha=0.211723 R2=0.999008 (n_filled=98, 6 radii)
+  side=14 G= 0 seed=45: alpha=0.211233 R2=0.999685 (n_filled=98, 6 radii)
+  side=14 G= 0 seed=46: alpha=0.213484 R2=0.999334 (n_filled=98, 6 radii)
+  side=14 G= 5 seed=42: alpha=0.198907 R2=0.997964 (n_filled=98, 6 radii)
+  side=14 G= 5 seed=43: alpha=0.196208 R2=0.997686 (n_filled=98, 6 radii)
+  side=14 G= 5 seed=44: alpha=0.198060 R2=0.998678 (n_filled=98, 6 radii)
+  side=14 G= 5 seed=45: alpha=0.196807 R2=0.998266 (n_filled=98, 6 radii)
+  side=14 G= 5 seed=46: alpha=0.199438 R2=0.997139 (n_filled=98, 6 radii)
+  side=14 G=10 seed=42: alpha=0.188830 R2=0.989059 (n_filled=98, 6 radii)
+  side=14 G=10 seed=43: alpha=0.186047 R2=0.989663 (n_filled=98, 6 radii)
+  side=14 G=10 seed=44: alpha=0.188237 R2=0.991774 (n_filled=98, 6 radii)
+  side=14 G=10 seed=45: alpha=0.186771 R2=0.990074 (n_filled=98, 6 radii)
+  side=14 G=10 seed=46: alpha=0.189066 R2=0.987552 (n_filled=98, 6 radii)
+  side=14 G=20 seed=42: alpha=0.172278 R2=0.976256 (n_filled=98, 6 radii)
+  side=14 G=20 seed=43: alpha=0.170200 R2=0.978361 (n_filled=98, 6 radii)
+  side=14 G=20 seed=44: alpha=0.171886 R2=0.980468 (n_filled=98, 6 radii)
+  side=14 G=20 seed=45: alpha=0.170429 R2=0.977962 (n_filled=98, 6 radii)
+  side=14 G=20 seed=46: alpha=0.172892 R2=0.974518 (n_filled=98, 6 radii)
+
+----------------------------------------------------------------------
+BFS-ball summary: alpha (mean +/- std) and R^2 (mean +/- std)
+side    G   alpha_mean  alpha_std    R2_mean     R2_std n_seeds
+----------------------------------------------------------------------
+   6    0     0.199439   0.011801   1.000000   0.000000       5
+   6    5     0.109228   0.008496   1.000000   0.000000       5
+   6   10     0.075142   0.005666   1.000000   0.000000       5
+   6   20     0.038108   0.002668   1.000000   0.000000       5
+   8    0     0.200185   0.004099   0.995334   0.004028       5
+   8    5     0.150434   0.003579   0.995843   0.004091       5
+   8   10     0.111600   0.002887   0.995749   0.004557       5
+   8   20     0.077624   0.001983   0.993309   0.008054       5
+  10    0     0.210714   0.002487   0.999423   0.000499       5
+  10    5     0.176418   0.002335   0.998974   0.000666       5
+  10   10     0.145381   0.002151   0.995138   0.001668       5
+  10   20     0.116903   0.001634   0.984817   0.002509       5
+  12    0     0.209622   0.001407   0.998687   0.000734       5
+  12    5     0.187798   0.001435   0.998144   0.000848       5
+  12   10     0.169025   0.001318   0.991545   0.001670       5
+  12   20     0.146525   0.001104   0.980815   0.001948       5
+  14    0     0.211799   0.001404   0.999272   0.000488       5
+  14    5     0.197884   0.001221   0.997946   0.000521       5
+  14   10     0.187790   0.001182   0.989624   0.001374       5
+  14   20     0.171537   0.001051   0.977513   0.002010       5
+
+
+================================================================================
+SECTION 2: Size convergence of alpha (G=10)
+================================================================================
+
+side     n   alpha_mean  alpha_std    R2_mean
+--------------------------------------------------
+   6    36     0.075142   0.005666   1.000000
+   8    64     0.111600   0.002887   0.995749
+  10   100     0.145381   0.002151   0.995138
+  12   144     0.169025   0.001318   0.991545
+  14   196     0.187790   0.001182   0.989624
+
+
+================================================================================
+SECTION 3: Partition geometry comparison (side=10, G=10)
+================================================================================
+
+   partition   alpha_mean  alpha_std    R2_mean     R2_std
+------------------------------------------------------------
+    BFS-ball     0.145381   0.002151   0.995138   0.001668
+ rectangular     0.172038   0.003317   0.994513   0.002123
+      random     0.110986   0.001126   0.995500   0.002903
+
+
+================================================================================
+SECTION 4: G-dependence of boundary-law coefficient
+================================================================================
+
+   G   alpha_mean  alpha_std    R2_mean     R2_std
+--------------------------------------------------
+   0     0.206352   0.007892   0.998543   0.002490
+   5     0.164352   0.032081   0.998181   0.002351
+  10     0.137788   0.040478   0.994411   0.004311
+  20     0.110139   0.047752   0.987291   0.009170
+
+
+================================================================================
+VERDICT
+================================================================================
+
+  Total (side, G, seed) configs tested: 100
+  Configs with R^2 > 0.95: 100 (100.0%)
+  Configs with R^2 > 0.99: 78 (78.0%)
+  R^2 range: [0.974518, 1.000000]
+  R^2 mean +/- std: 0.994607 +/- 0.007004
+  BFS-ball partition: R^2 = 0.995138 +/- 0.001668
+  rectangular partition: R^2 = 0.994513 +/- 0.002123
+  random partition: R^2 = 0.995500 +/- 0.002903
+
+  ==> BOUNDED boundary-law scaling is robust across the audited
+      seeds, sizes, couplings, and partition families.
+
+  Total elapsed: 19.1s
+
+Plot saved to /private/tmp/gate-fix-worktree/scripts/frontier_boundary_law_robustness.png
+
+Done.
+
+----- stderr -----
+

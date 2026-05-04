@@ -1,0 +1,42 @@
+===== runner cache v1 =====
+runner: scripts/source_resolved_propagating_generated_transfer.py
+runner_sha256: 1eb4dbfaaac56033c5813bd68863dd9d5fd95d8ba6d847075774d18a02214c5a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+====================================================================================
+PROPAGATING GENERATED GREEN TRANSFER
+  compact generated DAG family, causal-memory Green candidate
+====================================================================================
+family seeds=4, layers=16, nodes/layer=24, connect_radius=3.2, memory_mix=0.9
+kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.50, gain=3.338465e+01
+source strengths=[0.0001, 0.0002, 0.0004, 0.0008]
+observable: detector centroid y-shift relative to free propagation
+reduction check: source strength 0 should recover free propagation exactly
+
+REDUCTION CHECK
+  seed 0: zero-source shift = +0.000000e+00
+  seed 1: zero-source shift = +0.000000e+00
+  seed 2: zero-source shift = +0.000000e+00
+  seed 3: zero-source shift = +0.000000e+00
+  max |zero-source shift| = 0.000e+00
+
+       s         inst         prop  prop/inst   sign
+--------------------------------------------------------
+  0.0001 -6.835015e-02 -1.558018e-01      2.279  3/4 
+  0.0002 -9.454729e-02 -2.126067e-01      2.249  3/4 
+  0.0004 -1.282711e-01 -2.714591e-01      2.116  4/4 
+  0.0008 -1.673655e-01 -3.066745e-01      1.832  4/4 
+
+SAFE READ
+  exact zero-source reduction: max |delta| = 0.000e+00
+  instantaneous F~M exponent: 0.43
+  propagating Green F~M exponent: 0.33
+  TOWARD rows: 0/4
+  mean |prop/inst| ratio: 2.119
+  this is a generated-family transfer test, not yet a full propagated field sector
+
+----- stderr -----
+

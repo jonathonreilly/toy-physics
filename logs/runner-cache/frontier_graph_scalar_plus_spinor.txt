@@ -1,0 +1,27 @@
+===== runner cache v1 =====
+runner: scripts/frontier_graph_scalar_plus_spinor.py
+runner_sha256: 098d1acd49e0690cd6537be40714ddf364505b8bda4efcb305d96bae16e57166
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.23
+status: ok
+----- stdout -----
+========================================================================
+GRAPH SCALAR + SPINOR
+========================================================================
+  n=17, steps=14, dt=0.25, matter_mass=0.22
+  source_offset=3, sigma=1.7, carrier_k=0.0
+  scalar background norm = 1.000000
+
+[strength=2.0e-04] norm_drift=8.438e-15 delta_cz=+1.0481e-06 g5:+0.000->+0.000 block:+1.000->+0.148
+[strength=5.0e-04] norm_drift=8.327e-15 delta_cz=+2.6201e-06 g5:+0.000->+0.000 block:+1.000->+0.148
+[strength=1.0e-03] norm_drift=8.216e-15 delta_cz=+5.2402e-06 g5:+0.000->+0.000 block:+1.000->+0.148
+
+Summary
+  norm behavior: PASS (matter norm drift <= machine epsilon)
+  scalar gravity signal: PASS (matter centroid shifts toward source)
+  spinor-specific quantity: PASS (gamma5 / block imbalance survives)
+  immediate blocker: one-way scalar background only; no spinor backreaction
+
+----- stderr -----
+

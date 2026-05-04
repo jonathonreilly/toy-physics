@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_transport_decomposition_theorem.py
+runner_sha256: e6a784d623ae1c5fb456fb95b4f8ee2fa034d43ee0106cc24c889b54bef6ae5a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.60
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS TRANSPORT-DECOMPOSITION THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE EXACT UPSTREAM INPUTS ARE FROZEN
+========================================================================================
+  [PASS] The exact source package remains gamma = 1/2, E1 = sqrt(8/3), E2 = sqrt(8)/3
+  [PASS] The exact projection law remains K00 = 2
+  [PASS] The exact coherent kernel remains epsilon_1/epsilon_DI = 0.9276209209197268  (ratio=0.927620920920)
+
+========================================================================================
+PART 2: ETA SPLITS INTO BOOKKEEPING AND A SINGLE TRANSPORT FUNCTIONAL
+========================================================================================
+  [PASS] The late conversion factor is exact once s/n_gamma and d_N are closed  ((Clate,dN)=(7.039433661547,0.003901498367656))
+  [PASS] So eta[H] = C_late * C_sph * d_N * epsilon_1 * kappa_axiom[H]  (bookkeeping prefactor=9.734196079911e-03)
+  [PASS] This demotes kappa_fit(K) from authority path to diagnostic comparator  (the authority path is the direct transport functional kappa_axiom[H])
+
+========================================================================================
+PART 3: THE OLD FIT BENCHMARK IS PRESERVED ONLY AS A COMPARATOR
+========================================================================================
+  [PASS] The legacy physically consistent fit benchmark remains eta/eta_obs = 0.557919848420251  (legacy fit ratio=0.557919848420)
+  [PASS] Using exact bookkeeping with the same fit gives eta/eta_obs = 0.557874966110017  (exact-bookkeeping fit ratio=0.557874966110)
+  [PASS] So the fit may be retained for comparison, but it is not the theorem-native transport law  (the fit remains a diagnostic comparator only)
+
+========================================================================================
+SUMMARY: PASS=9 FAIL=0
+========================================================================================
+
+----- stderr -----
+

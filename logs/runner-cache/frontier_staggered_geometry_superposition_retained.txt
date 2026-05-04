@@ -1,0 +1,30 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_geometry_superposition_retained.py
+runner_sha256: 5d0b476245360a8d8aeaae84925f9f72bd04649a63983a82fcaf27bc53253e8d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.42
+status: ok
+----- stdout -----
+==============================================================================
+RETAINED STAGGERED BRANCH-SUPERPOSITION HARNESS
+==============================================================================
+Fixed adjacency. Flat branch vs screened-field branch.
+
+case               G       TV     dphi      TVq  overlap    PdetA    PdetB            verdict
+------------------------------------------------------------------------------------------------
+1D n=41         10.0   0.0001   0.0019   0.0000   0.9096   0.0000   0.0000       WEAK_OR_NULL
+1D n=61         10.0   0.0000   0.0000   0.0000   0.9992   0.0000   0.0000       WEAK_OR_NULL
+2D side=8       10.0   0.5053   3.2494   0.2585   0.0343   0.4354   0.2327   BOUNDED_POSITIVE
+2D side=10      10.0   0.3109   4.8740   0.0884   0.1295   0.5506   0.2447   BOUNDED_POSITIVE
+2D side=12      10.0   0.1363   0.2652   0.0197   0.2223   0.3822   0.2007   BOUNDED_POSITIVE
+
+Interpretation:
+  TV    = detector distinguishability between flat and curved branches
+  dphi  = detector phase shift between branches
+  TVq   = coherent superposition vs classical mixture at detector
+  overlap < 1 means globally distinguishable branches
+Time: 0.19s
+
+----- stderr -----
+

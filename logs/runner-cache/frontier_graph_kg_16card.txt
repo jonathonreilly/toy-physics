@@ -1,0 +1,36 @@
+===== runner cache v1 =====
+runner: scripts/frontier_graph_kg_16card.py
+runner_sha256: 570ade73831aaf87f920e5a41fac151c81e26a2f8e23f699d03b99db44f176ed
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.69
+status: ok
+----- stdout -----
+======================================================================
+GRAPH LAPLACIAN KG — C1-C16 CORE CARD
+======================================================================
+  n=21, mass=0.3, g=5.0, S=0.0005, dt=0.15, steps=14
+  Local leapfrog. No FFT. No coin.
+
+  [C1]  Born=1.9943 FAIL
+  [C2]  d_TV=0.6934 PASS
+  [C3]  f=0 bias=0.000000 PASS
+  [C4]  F~M R^2=1.000000 PASS
+  [C5]  Gravity: +1.1885e-03 TOWARD PASS
+  [C6]  Decoh: clean=0.9806,noisy=0.0480 PASS
+  [C7]  MI=9.5356e-03 PASS
+  [C8]  Purity CV=0.3679 PASS
+  [C9]  GravGrow: all_tw=True, monotone=True [N=6:+1.655e-04, N=8:+3.115e-04, N=10:+5.234e-04, N=14:+1.189e-03] PASS
+  [C10] Distance: 4/4 TW PASS
+  [C11] KG R^2=0.999809, iso=1.0309 PASS
+  [C12] AB-proxy V=1.0000 PASS
+  [C13] k-achrom: CV=1.078596, same_sign=False [k=0.15:N=20,d=+1.71e-03, k=0.25:N=20,d=+1.08e-03, k=0.35:N=20,d=+2.88e-04, k=0.45:N=20,d=-1.92e-04, k=0.55:N=20,d=-3.30e-04] FAIL
+  [C14] split m/g: rank1_err=3.7331e-04, min_g_R2=0.999999, same_sign=False FAIL
+  [C15] BC: agree=5/5 [N=6:per=+1.66e-04,open=+1.66e-04, N=8:per=+3.11e-04,open=+3.11e-04, N=10:per=+5.23e-04,open=+5.23e-04, N=12:per=+8.18e-04,open=+8.18e-04, N=14:per=+1.19e-03,open=+1.19e-03] PASS
+  [C16] Multi: ctr=T,pk=+4,sh=T,agree=3/3 PASS
+
+  SCORE: 13/16
+  Time: 2.7s
+
+----- stderr -----
+

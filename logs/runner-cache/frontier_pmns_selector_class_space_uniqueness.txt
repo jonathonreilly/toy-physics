@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_selector_class_space_uniqueness.py
+runner_sha256: 899534d06e6899c2671d842e85efe68b127d01bf28f7a9cdef002770ac838b71
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+PMNS SELECTOR: CLASS-SPACE UNIQUENESS
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - PMNS selector sector-odd reduction
+  - PMNS selector non-universal support reduction
+  - Majorana unique source slot (structural framing only)
+
+Question:
+  Once parity and support are fixed, is any reduced class-level
+  selector freedom left?
+
+========================================================================================
+PART 1: THE REDUCED SELECTOR CONSTRAINTS DEFINE A LINEAR SUBSPACE
+========================================================================================
+  [PASS] The universal classes impose two independent vanishing constraints  (constraint rank=3)
+  [PASS] Sector-odd exchange imposes one independent relation on the non-universal orbit  (constraint rank=3)
+  [PASS] So the admissible reduced selector space is one-dimensional  (dim=1)
+
+  The reduced selector problem is therefore linear-algebraically
+  exhausted up to one real direction.
+
+========================================================================================
+PART 2: THE SIGNED NON-UNIVERSALITY INDICATOR SPANS THE SPACE
+========================================================================================
+  [PASS] The signed non-universality indicator vanishes on U1
+  [PASS] The signed non-universality indicator vanishes on U2
+  [PASS] It is sector-odd on the non-universal orbit  (sum=0.00e+00)
+  [PASS] Any admissible sample is proportional to that basis  (sample=[0.0, 0.0, 2.7, -2.7], other=[-0.0, -0.0, -0.4, 0.4])
+
+  So the remaining class-level selector is canonical up to scale:
+  it is just the signed indicator of the non-universal orbit.
+
+========================================================================================
+PART 3: THE CURRENT BANK NOW FIXES THE CLASS-LEVEL SELECTOR SHAPE
+========================================================================================
+  [PASS] The sector-odd reduction note fixes the parity class
+  [PASS] The non-universal-support note fixes the support locus
+  [PASS] The new note states one-dimensional reduced selector space
+  [PASS] The atlas carries the new selector-class uniqueness row
+  [PASS] The Majorana unique-source-slot note records the same one-slot structural pattern
+
+  So the remaining PMNS selector science is no longer a class-level
+  search problem. The reduced class is unique up to normalization;
+  what remains is microscopic realization and amplitude law.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-bank answer:
+    - the reduced PMNS selector constraints define a one-dimensional
+      real vector space
+    - that space is spanned by the signed non-universality indicator
+      chi_N_nu - chi_N_e
+    - so the reduced class-level selector is unique up to scale
+
+  This does not build the microscopic bridge; it removes the last
+  reduced class-level shape freedom.
+
+PASS=12  FAIL=0
+
+----- stderr -----
+

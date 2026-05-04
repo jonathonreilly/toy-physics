@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py
+runner_sha256: 16014dbd75f2d84c242fcb369baf51ae06f7ef3e7cbf382a1ffe7bb46d834412
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE TRANSFER-OPERATOR / CHARACTER-RECURRENCE
+==============================================================================
+
+Sample plaquette-source values on the SU(3) torus
+  sample 1: (theta1, theta2)=(+0.37, -0.91)
+            X(trace)                    = 0.801260592152890
+            X(characters)               = 0.801260592152890-5.99e-16i
+  sample 2: (theta1, theta2)=(+1.11, +0.43)
+            X(trace)                    = 0.461472908499686
+            X(characters)               = 0.461472908499686-9.25e-17i
+  sample 3: (theta1, theta2)=(-0.64, +1.27)
+            X(trace)                    = 0.635468046373921
+            X(characters)               = 0.635468046373914-5.84e-15i
+  sample 4: (theta1, theta2)=(+0.82, -1.44)
+            X(trace)                    = 0.542174457562764
+            X(characters)               = 0.542174457562764+9.25e-18i
+
+Character-recurrence witnesses
+  max chi_(1,0) recurrence error        = 1.358e-13
+  max chi_(0,1) recurrence error        = 1.206e-13
+  max combined X recurrence error       = 3.983e-14
+
+Truncated dominant-weight recurrence operator
+  box size                              = 5 x 5 = 25 states
+  Hermitian symmetry error              = 0.000e+00
+  compressed eigenvalue range           = [-0.419884520091398, 0.834698682485701]
+
+3+1 slice decomposition witness
+  spatial plaquettes per slice          = 24
+  mixed plaquettes per time step        = 24
+  total plaquettes per one-clock step   = 48
+
+  [PASS] [THEOREM] the plaquette source is exactly the real class function (chi_(1,0)+chi_(0,1))/6
+         sample torus evaluations of Re Tr / 3 and the character formula agree
+  [PASS] [THEOREM] multiplication by chi_(1,0) obeys the exact SU(3) dominant-weight recurrence
+         max recurrence error = 1.358e-13
+  [PASS] [THEOREM] multiplication by chi_(0,1) obeys the exact conjugate dominant-weight recurrence
+         max recurrence error = 1.206e-13
+  [PASS] [THEOREM] the plaquette source therefore obeys one exact six-neighbor character recurrence
+         max combined recurrence error = 3.983e-14
+  [PASS] [THEOREM] the character-recurrence operator is self-adjoint
+         Hermitian symmetry error = 0.000e+00
+  [PASS] [THEOREM] the accepted one-clock split is exactly 3 spatial plus 3 mixed plaquette orientations per step
+         spatial=24, mixed=24, total=48
+  [PASS] [THEOREM] the operator-level plaquette generating object is therefore explicit on the accepted 3+1 surface
+         the remaining unknown is the transfer state at beta=6, not the local source operator
+  [PASS] [SUPPORT] the truncated recurrence spectrum stays inside the expected plaquette support window
+         compressed eigenvalues lie in [-0.419885, 0.834699]
+  [PASS] [SUPPORT] the remaining framework-point gap is transfer-state identification rather than source-operator ambiguity
+         the exact source operator is explicit; what remains is the beta=6 transfer/Perron state
+
+==============================================================================
+SUMMARY: THEOREM PASS=7 SUPPORT=2 FAIL=0
+==============================================================================
+
+----- stderr -----
+

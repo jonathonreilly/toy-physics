@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_sector_exchange_nonforcing.py
+runner_sha256: 87c9f1ec27d9f4387aa6fc397d8f911c7589882d7952ad4b2e606c230cc4db64
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+PMNS ONE-SIDED SURFACE: SECTOR-EXCHANGE NONFORCING
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - PMNS minimal-branch nonselection
+  - Lepton shared-Higgs universality underdetermination
+  - PMNS sector-orientation orbit reduction
+
+Question:
+  Can the current support-side bank force the residual one-sided
+  sector-orientation bit?
+
+========================================================================================
+PART 1: THE REDUCED ONE-SIDED SURFACE HAS AN EXACT SECTOR-EXCHANGE INVOLUTION
+========================================================================================
+  [PASS] The neutrino-oriented realization has one non-monomial and one monomial lane  (desc=((3, 1, 0), (6, 0, 1)))
+  [PASS] The charged-lepton-oriented realization has one monomial and one non-monomial lane  (desc=((3, 1, 0), (6, 0, 1)))
+  [PASS] Sector exchange sigma maps the neutrino-oriented realization to the charged-lepton orientation class  (sigma desc=((3, 1, 0), (6, 0, 1)), target desc=((3, 1, 0), (6, 0, 1)))
+  [PASS] Sigma is an involution on the reduced one-sided surface  (swapping sectors twice returns the original orientation)
+
+  So on the reduced one-sided PMNS surface there is an exact Z_2
+  exchange acting by Y_nu <-> Y_e.
+
+========================================================================================
+PART 2: THE CURRENT SUPPORT-SIDE DESCRIPTORS ARE SIGMA-EVEN
+========================================================================================
+  [PASS] The unordered descriptor multiset is identical on both orientations  (desc=((3, 1, 0), (6, 0, 1)))
+  [PASS] That multiset is exactly {(3,1,0),(6,0,1)}  (desc=((3, 1, 0), (6, 0, 1)))
+  [PASS] The current reduced support data therefore see one monomial lane and one active two-Higgs lane only  (the reduced descriptors forget which sector carries which role)
+
+  So the current support-side bank on this surface is sigma-even:
+  it records the unordered role pattern, not the sector label.
+
+========================================================================================
+PART 3: NO CURRENT SUPPORT-SIDE SELECTOR CAN FORCE THE ORIENTATION BIT
+========================================================================================
+  [PASS] The atlas still carries no retained theorem that forces the oriented inter-sector bridge
+  [PASS] The PMNS nonselection theorem still records no branch selector in the current bank
+  [PASS] The universality theorem still records no inter-sector bridge theorem
+  [PASS] The orbit-reduction theorem already identifies the missing object as an oriented inter-sector bridge
+
+  Therefore, on the current support-side bank, any selector built only
+  from the retained reduced descriptors is sigma-even and cannot force
+  tau in Z_2.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-bank answer:
+    - the reduced one-sided PMNS surface has an exact sector-exchange
+      involution sigma
+    - the retained support-side descriptors on that surface are sigma-even
+    - therefore the current support-side bank cannot force the
+      sector-orientation bit tau in Z_2
+
+  So the missing selector must be genuinely sector-sensitive:
+  not another support classifier, but a new inter-sector bridge or
+  some stronger theorem killing the non-universal class entirely.
+
+PASS=11  FAIL=0
+
+----- stderr -----
+

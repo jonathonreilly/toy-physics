@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/DISTANCE_LAW_PRESERVING_THIRD_FAMILY.py
+runner_sha256: 64f5f39d9ad56bf1055d16b539a6f34d7d3f8350927f2b554e87c071e980d2ae
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.03
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

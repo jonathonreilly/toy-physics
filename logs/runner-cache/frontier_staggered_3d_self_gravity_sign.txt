@@ -1,0 +1,33 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_3d_self_gravity_sign.py
+runner_sha256: 2f4ef7390407f408eb36a3413e9bb2953b97be6a1611e8398b05e76a2bb40be8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 6.03
+status: ok
+----- stdout -----
+================================================================================================
+3D STAGGERED SELF-GRAVITY CONTRACTION / SIGN PROBE
+================================================================================================
+MASS=0.3, G_SELF=50.0, MU2=0.001, DT=0.1, N_STEPS=20, SIGMA=1.35
+Open cubic staggered lattice, centered packet, blocked 2x2x2 envelope observables.
+
+side     sign  w_self/w_free   core_excess   grad+     grad_mean     drift_max   drift_final   norm_drift
+------------------------------------------------------------------------------------------------
+   9  attract       0.640444      0.428363  20/20   +9.212495e-01  1.113307e-02  +1.108302e-02    2.220e-16
+   9  repulse       0.640430      0.428364   0/20   -9.212474e-01  1.113461e-02  +1.108143e-02    2.220e-16
+  11  attract       0.634800      0.429278  20/20   +9.400751e-01  1.129134e-02  -1.109208e-02    2.220e-16
+  11  repulse       0.634770      0.429244   0/20   -9.400566e-01  1.128297e-02  -1.101589e-02    2.220e-16
+  13  attract       0.632080      0.428541  20/20   +9.479870e-01  1.196830e-02  +1.039967e-02    4.441e-16
+  13  repulse       0.631604      0.428475   0/20   -9.478437e-01  1.192501e-02  +1.004570e-02    4.441e-16
+
+Aggregate checks
+------------------------------------------------------------------------------------------------
+side=9: contraction both signs=YES; |Δ width ratio|=1.394913e-05; shell-gradient sign split=20/20 vs 0/20
+side=11: contraction both signs=YES; |Δ width ratio|=3.016553e-05; shell-gradient sign split=20/20 vs 0/20
+side=13: contraction both signs=YES; |Δ width ratio|=4.756634e-04; shell-gradient sign split=20/20 vs 0/20
+
+Elapsed: 5.77s
+
+----- stderr -----
+

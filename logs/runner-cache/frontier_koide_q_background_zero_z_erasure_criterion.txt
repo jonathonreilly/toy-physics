@@ -1,0 +1,86 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_background_zero_z_erasure_criterion.py
+runner_sha256: 4e12e3874110c754a9767e68786b7d45993b6a49516b85ccca2545084a43b938
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.64
+status: ok
+----- stdout -----
+========================================================================================
+Koide Q background-zero / Z-erasure criterion theorem
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 1: upstream support notes keep the bridge open
+----------------------------------------------------------------------------------------
+  [PASS] reduced-carrier note is explicitly support, not closure
+  [PASS] reduced-carrier note keeps physical carrier identification open
+  [PASS] no-hidden-source audit is explicitly support, not closure
+  [PASS] no-hidden-source audit keeps physical source-freeness open
+  [PASS] normalized effective-action note keeps selector source-freeness open
+
+----------------------------------------------------------------------------------------
+Part 2: exact reduced source-response algebra
+----------------------------------------------------------------------------------------
+  [PASS] dW_red/dK gives Y = diag(1/(1+k_+), 1/(1+k_perp))
+       Y=diag(1/(k_plus + 1), 1/(k_perp + 1))
+  [PASS] inverting the response gives K = Y^(-1) - I
+       K=diag((1 - y_plus)/y_plus, (1 - y_perp)/y_perp)
+  [PASS] Y_Z(z)=diag(1+z,1-z) has fixed trace 2
+  [PASS] normalized Z expectation equals z
+       <Z>=z
+  [PASS] dual source for Y_Z is K_Z=diag(-z/(1+z), z/(1-z))
+       K_Z=diag(-z/(z + 1), -z/(z - 1))
+  [PASS] K_Z=0 iff z=0
+       solution=[{z: 0}]
+  [PASS] Z-erasure <Z>=0 iff z=0
+       solution=[0]
+
+----------------------------------------------------------------------------------------
+Part 3: exact Q equivalence
+----------------------------------------------------------------------------------------
+  [PASS] Q(z) simplifies to 2/(3(1+z))
+       Q(z)=2/(3*(z + 1))
+  [PASS] Z-erasure gives Q=2/3
+       Q(0)=2/3
+  [PASS] Q=2/3 iff z=0
+       solution=[0]
+  [PASS] the inverse selector map is z(Q)=2/(3Q)-1
+       z(Q)=(2/3 - q)/q
+  [PASS] Q is monotone on the physical open interval -1<z<1
+       dQ/dz=-2/(3*(z + 1)**2)
+  [PASS] nonzero positive and negative Z sources move Q away from 2/3
+       Q(1/4)=8/15, Q(-1/4)=8/9
+
+----------------------------------------------------------------------------------------
+Part 4: nonzero Z is hidden selector data
+----------------------------------------------------------------------------------------
+  [PASS] either reduced source component reconstructs z
+       z(k_+)=-k_plus/(k_plus + 1), z(k_perp)=k_perp/(k_perp + 1)
+  [PASS] a nonzero reduced source reconstructs the chosen Q value
+       Q(k_+)=2*k_plus/3 + 2/3, Q(k_perp)=2*(k_perp + 1)/(3*(2*k_perp + 1))
+  [PASS] explicit nonzero source example changes Q and is not datum-free
+       z=1/5, K=(-1/6, 1/4), Q=5/9
+
+----------------------------------------------------------------------------------------
+Part 5: landed note preserves the open-bridge boundary
+----------------------------------------------------------------------------------------
+  [PASS] note marks the criterion as support, not retained native closure
+  [PASS] note names the remaining Q residual as physical source-free carrier selection
+  [PASS] runner does not print a positive retained-native Koide closeout flag
+  [PASS] note does not claim delta or full dimensionless closure
+
+========================================================================================
+SUMMARY: PASS=25 FAIL=0
+PASSED: 25/25
+========================================================================================
+KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION=TRUE
+KOIDE_Q_SOURCE_FREE_CRITERION_SUPPORT=TRUE
+KOIDE_Q_RETAINED_NATIVE_CLOSURE=FALSE
+KOIDE_DELTA_RETAINED_NATIVE_CLOSURE=FALSE
+KOIDE_FULL_DIMENSIONLESS_CLOSURE=FALSE
+RESIDUAL_Q=derive_physical_source_free_reduced_carrier_selection
+RESIDUAL_DELTA=derive_selected_line_local_boundary_source_and_based_endpoint_plus_Type_B_radian_readout
+
+----- stderr -----
+

@@ -1,0 +1,104 @@
+===== runner cache v1 =====
+runner: scripts/frontier_affine_imaginary_slot_invariance_narrow.py
+runner_sha256: a66aec30f47bdbd2e93f07280b4adf860f5ce60da3a0f93dc3b67efa5b00332c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.64
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: affine imaginary-slot invariance on Herm(3)
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: T_m, T_delta, T_q are real symmetric (Hermitian)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T_m is real symmetric (T = T^T)  ()
+  [PASS (A)] T_m has all real entries (no imaginary part)  ()
+  [PASS (A)] T_delta is real symmetric (T = T^T)  ()
+  [PASS (A)] T_delta has all real entries (no imaginary part)  ()
+  [PASS (A)] T_q is real symmetric (T = T^T)  ()
+  [PASS (A)] T_q has all real entries (no imaginary part)  ()
+
+----------------------------------------------------------------------------------------
+Part 2: T_m, T_delta, T_q are linearly independent over R
+----------------------------------------------------------------------------------------
+  [PASS (A)] rank({T_m, T_delta, T_q}) = 3 (linearly independent)  (rank = 3)
+
+----------------------------------------------------------------------------------------
+Part 3: trace structure - Tr(T_m) = 1, Tr(T_delta) = 0, Tr(T_q) = 0
+----------------------------------------------------------------------------------------
+  [PASS (A)] Tr(T_m) = 1 exact  (Tr(T_m) = 1)
+  [PASS (A)] Tr(T_delta) = 0 exact (0 + 1 + (-1))  (Tr(T_delta) = 0)
+  [PASS (A)] Tr(T_q) = 0 exact (0 + 0 + 0)  (Tr(T_q) = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: Tr(H(m, delta, q_+)) = Tr(H_base) + m (depends only on m)
+----------------------------------------------------------------------------------------
+  [PASS (A)] Tr(H) = Tr(H_base) + m (independent of delta, q_+)  (Tr(H) - Tr(H_base) - m = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: imaginary-slot invariance Im(H_ij) = Im(H_base_ij) for all i, j
+----------------------------------------------------------------------------------------
+  [PASS (A)] Im(H[0,0]) = Im(H_base[0,0]) for all (m, delta, q_+)  ()
+  [PASS (A)] Im(H[0,1]) = Im(H_base[0,1]) for all (m, delta, q_+)  ()
+  [PASS (A)] Im(H[0,2]) = Im(H_base[0,2]) for all (m, delta, q_+)  ()
+  [PASS (A)] Im(H[1,0]) = Im(H_base[1,0]) for all (m, delta, q_+)  ()
+  [PASS (A)] Im(H[1,1]) = Im(H_base[1,1]) for all (m, delta, q_+)  ()
+  [PASS (A)] Im(H[1,2]) = Im(H_base[1,2]) for all (m, delta, q_+)  ()
+  [PASS (A)] Im(H[2,0]) = Im(H_base[2,0]) for all (m, delta, q_+)  ()
+  [PASS (A)] Im(H[2,1]) = Im(H_base[2,1]) for all (m, delta, q_+)  ()
+  [PASS (A)] Im(H[2,2]) = Im(H_base[2,2]) for all (m, delta, q_+)  ()
+
+----------------------------------------------------------------------------------------
+Part 6: framework instance with H_base = parent's specified matrix
+----------------------------------------------------------------------------------------
+  [PASS (A)] framework H_base is Hermitian (H_base = H_base^dagger)  ()
+  [PASS (A)] Im(H[0, 2]) = -gamma = -1/2 exact at framework instance for all (m, delta, q_+)  (Im(H[0, 2]) = -1/2)
+  [PASS (A)] Tr(H) = m exact at framework instance (Tr(H_base) = 0 + m)  (Tr(H) = m)
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let H_base be any Hermitian 3x3 matrix, and let T_m, T_delta, T_q
+    be the three explicit REAL symmetric 3x3 matrices given by:
+        T_m = [[1, 0, 0], [0, 0, 1], [0, 1, 0]]
+        T_delta = [[0, -1, 1], [-1, 1, 0], [1, 0, -1]]
+        T_q = [[0, 1, 1], [1, 0, 1], [1, 1, 0]]
+    Define the affine map
+        H(m, delta, q_+) = H_base + m T_m + delta T_delta + q_+ T_q
+    with real parameters (m, delta, q_+).
+
+  CONCLUSION:
+    (i)   T_m, T_delta, T_q are real symmetric (Hermitian) and linearly
+          independent over R.
+    (ii)  Tr(H) = Tr(H_base) + m (depends only on m).
+    (iii) Im(H_ij) = Im(H_base_ij) for all (i, j) (imaginary off-
+          diagonal entries are independent of (m, delta, q_+) because
+          T_m, T_delta, T_q are real matrices).
+    (iv)  At the framework instance H_base with imaginary slot
+          (-gamma) at position [0, 2] and gamma = 1/2:
+              Im(H[0, 2]) = -1/2 exact for all (m, delta, q_+);
+              Tr(H) = m exact (Tr(H_base) = 0).
+
+  Audit-lane class:
+    (A) — pure Hermitian-matrix algebra. No DM-neutrino source-surface
+    authority. The framework instance is one application case; the
+    algebra closes for any (H_base, m, delta, q_+).
+
+  This narrow theorem drops the parent's five upstream DM-neutrino
+  source-surface deps (active-half-plane, m-spectator, intrinsic-slot,
+  slot-torsion-boundary).
+
+
+========================================================================================
+  TOTAL: PASS=23, FAIL=0
+========================================================================================
+
+----- stderr -----
+

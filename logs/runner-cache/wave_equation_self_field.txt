@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/wave_equation_self_field.py
+runner_sha256: 2d3f22ed06f39d24aad991c2ab26f3b2773d7d0a494e2c2955cb5db5a069acd9
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

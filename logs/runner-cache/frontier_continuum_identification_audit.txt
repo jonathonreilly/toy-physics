@@ -1,0 +1,89 @@
+===== runner cache v1 =====
+runner: scripts/frontier_continuum_identification_audit.py
+runner_sha256: 579127ef95faf10db6b5597751ae43a3432d7b678a020d4e47a584f8c287bef8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================
+Continuum Identification Audit
+========================================================================
+
+=== Gravity continuum chain (19 steps) ===
+
+  [PASS] note: UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE
+  [PASS] runner: frontier_universal_gr_discrete_global_closure
+  [PASS] note: UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE
+  [PASS] runner: frontier_universal_gr_lorentzian_global_atlas_closure
+  [PASS] note: UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE
+  [PASS] runner: frontier_universal_gr_lorentzian_signature_extension
+  [PASS] note: UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE
+  [PASS] runner: frontier_universal_qg_uv_finite_partition
+  [PASS] note: UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE
+  [PASS] runner: frontier_universal_qg_canonical_refinement_net
+  [PASS] note: UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE
+  [PASS] runner: frontier_universal_qg_inverse_limit_closure
+  [PASS] note: UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE
+  [PASS] runner: frontier_universal_qg_abstract_gaussian_completion
+  [PASS] note: UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE
+  [PASS] runner: frontier_universal_qg_pl_field_interface
+  [PASS] note: UNIVERSAL_QG_PL_WEAK_FORM_NOTE
+  [PASS] runner: frontier_universal_qg_pl_weak_form
+  [PASS] note: UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE
+  [PASS] runner: frontier_universal_qg_pl_sobolev_interface
+  [PASS] note: UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE
+  [PASS] runner: frontier_universal_qg_external_fe_smooth_equivalence
+  [PASS] note: UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE
+  [PASS] runner: frontier_universal_qg_canonical_textbook_weak_measure_equivalence
+  [PASS] note: UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE
+  [PASS] runner: frontier_universal_qg_smooth_gravitational_local_identification
+  [PASS] note: UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE
+  [PASS] runner: frontier_universal_qg_smooth_gravitational_global_atlas_identification
+  [PASS] note: UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE
+  [PASS] runner: frontier_universal_qg_smooth_gravitational_global_solution_class
+  [PASS] note: UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE
+  [PASS] runner: frontier_universal_qg_canonical_smooth_gravitational_weak_measure
+  [PASS] note: UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE
+  [PASS] runner: frontier_universal_qg_canonical_smooth_geometric_action
+  [PASS] note: UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE
+  [PASS] runner: frontier_universal_qg_canonical_textbook_geometric_action_equivalence
+  [PASS] note: UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE
+  [PASS] runner: frontier_universal_qg_canonical_textbook_continuum_gr_closure
+
+  Gravity chain: 19/19 notes, 19/19 runners
+  [PASS] All 19 gravity chain notes present  (19/19)
+  [PASS] All 19 gravity chain runners present  (19/19)
+
+=== Gauge continuum chain (8 notes, 5 runners) ===
+
+  [PASS] note: NATIVE_GAUGE_CLOSURE_NOTE
+  [PASS] note: GRAPH_FIRST_SELECTOR_DERIVATION_NOTE
+  [PASS] note: GRAPH_FIRST_SU3_INTEGRATION_NOTE
+  [PASS] note: LEFT_HANDED_CHARGE_MATCHING_NOTE
+  [PASS] note: ONE_GENERATION_MATTER_CLOSURE_NOTE
+  [PASS] note: THREE_GENERATION_STRUCTURE_NOTE
+  [PASS] note: ALPHA_S_DERIVED_NOTE
+  [PASS] note: CPT_EXACT_NOTE
+  [PASS] runner: frontier_non_abelian_gauge
+  [PASS] runner: frontier_graph_first_selector_derivation
+  [PASS] runner: frontier_graph_first_su3_integration
+  [PASS] runner: frontier_yt_zero_import_chain
+  [PASS] runner: frontier_cpt_exact
+  [PASS] All gauge chain notes present  (8/8)
+  [PASS] All gauge chain runners present  (5/5)
+
+=== Capstone: continuum identification positioning note ===
+
+  [PASS] note: CONTINUUM_IDENTIFICATION_NOTE
+
+========================================================================
+SUMMARY: PASS=56  FAIL=0
+========================================================================
+
+All chain notes and runners present.
+Gravity: 19/19 exact steps, no theorem gap.
+Gauge: structural SU(3) + α_s + universality/EFT positioning chain present.
+
+----- stderr -----
+

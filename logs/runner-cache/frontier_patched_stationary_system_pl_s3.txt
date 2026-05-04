@@ -1,0 +1,198 @@
+===== runner cache v1 =====
+runner: scripts/frontier_patched_stationary_system_pl_s3.py
+runner_sha256: dfd007a36d47ccc1a90a346052ab7f70ecef65940a0e8008cc9eb18fbfe9eeae
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+
+======================================================================
+Step 1: Reconstruct cycle 13's PL S^3 atlas (prior-cycle input)
+======================================================================
+  [PASS] 5-chart atlas reconstructed (5 backgrounds + 10 transitions)
+         |D| = 5, |T| = 10
+  [PASS] Cycle 13 cocycles still hold on reconstructed atlas (pre-flight)
+         T_{ij} T_{jk} = T_{ik} on all 10 triangles
+  [PASS] Cycle 13 K_GR transition rules hold on reconstructed atlas (pre-flight)
+         G_j = R(T_{ij})^{-T} G_i R(T_{ij})^{-1} on all 10 edges
+
+======================================================================
+Step 2: Source profiles for the patched stationary system
+======================================================================
+  [PASS] 6 source profiles defined (trace, pure_time, pure_space, shear, random_gaussian, structural)
+         profile names: ['trace', 'pure_time', 'pure_space', 'shear', 'random_gaussian', 'structural']
+  [PASS] Source profile 'trace' is symmetric (in symmetric-tensor space)
+         max |J - J^T| = 0.000e+00
+  [PASS] Source profile 'pure_time' is symmetric (in symmetric-tensor space)
+         max |J - J^T| = 0.000e+00
+  [PASS] Source profile 'pure_space' is symmetric (in symmetric-tensor space)
+         max |J - J^T| = 0.000e+00
+  [PASS] Source profile 'shear' is symmetric (in symmetric-tensor space)
+         max |J - J^T| = 0.000e+00
+  [PASS] Source profile 'random_gaussian' is symmetric (in symmetric-tensor space)
+         max |J - J^T| = 0.000e+00
+  [PASS] Source profile 'structural' is symmetric (in symmetric-tensor space)
+         max |J - J^T| = 0.000e+00
+
+======================================================================
+Step 3: Patched stationary system solve for each source profile
+======================================================================
+  [PASS] [trace] 5 chart-local solves succeeded (max residual < 1e-9)
+         max residual over 5 charts = 2.265e-14
+  [PASS] [pure_time] 5 chart-local solves succeeded (max residual < 1e-9)
+         max residual over 5 charts = 4.707e-14
+  [PASS] [pure_space] 5 chart-local solves succeeded (max residual < 1e-9)
+         max residual over 5 charts = 2.309e-14
+  [PASS] [shear] 5 chart-local solves succeeded (max residual < 1e-9)
+         max residual over 5 charts = 9.492e-15
+  [PASS] [random_gaussian] 5 chart-local solves succeeded (max residual < 1e-9)
+         max residual over 5 charts = 1.279e-13
+  [PASS] [structural] 5 chart-local solves succeeded (max residual < 1e-9)
+         max residual over 5 charts = 3.197e-14
+
+======================================================================
+Step 4: Edge-compatibility h_j = R(T_{ij}) h_i (10 edges)
+======================================================================
+  [PASS] [trace] Edge-compatibility h_j = R(T_{ij}) h_i on all 10 edges
+         max |h_j - R(T_{ij}) h_i| over 10 edges = 5.166e-13
+  [PASS] [trace] Source-pairing J_j = R(T_{ij})^{-T} J_i on all 10 edges
+         max |J_j - R(T_{ij})^{-T} J_i| over 10 edges = 8.171e-14
+  [PASS] [pure_time] Edge-compatibility h_j = R(T_{ij}) h_i on all 10 edges
+         max |h_j - R(T_{ij}) h_i| over 10 edges = 1.116e-12
+  [PASS] [pure_time] Source-pairing J_j = R(T_{ij})^{-T} J_i on all 10 edges
+         max |J_j - R(T_{ij})^{-T} J_i| over 10 edges = 1.652e-13
+  [PASS] [pure_space] Edge-compatibility h_j = R(T_{ij}) h_i on all 10 edges
+         max |h_j - R(T_{ij}) h_i| over 10 edges = 2.063e-13
+  [PASS] [pure_space] Source-pairing J_j = R(T_{ij})^{-T} J_i on all 10 edges
+         max |J_j - R(T_{ij})^{-T} J_i| over 10 edges = 2.753e-14
+  [PASS] [shear] Edge-compatibility h_j = R(T_{ij}) h_i on all 10 edges
+         max |h_j - R(T_{ij}) h_i| over 10 edges = 2.041e-13
+  [PASS] [shear] Source-pairing J_j = R(T_{ij})^{-T} J_i on all 10 edges
+         max |J_j - R(T_{ij})^{-T} J_i| over 10 edges = 1.688e-14
+  [PASS] [random_gaussian] Edge-compatibility h_j = R(T_{ij}) h_i on all 10 edges
+         max |h_j - R(T_{ij}) h_i| over 10 edges = 3.324e-12
+  [PASS] [random_gaussian] Source-pairing J_j = R(T_{ij})^{-T} J_i on all 10 edges
+         max |J_j - R(T_{ij})^{-T} J_i| over 10 edges = 2.913e-13
+  [PASS] [structural] Edge-compatibility h_j = R(T_{ij}) h_i on all 10 edges
+         max |h_j - R(T_{ij}) h_i| over 10 edges = 6.213e-13
+  [PASS] [structural] Source-pairing J_j = R(T_{ij})^{-T} J_i on all 10 edges
+         max |J_j - R(T_{ij})^{-T} J_i| over 10 edges = 8.171e-14
+
+======================================================================
+Step 5: Triangle-compatibility h_k = R(T_{ik}) h_i = R(T_{jk}) R(T_{ij}) h_i
+======================================================================
+  [PASS] [trace] Triangle-compatibility on all 10 triangles (direct vs sequential R(T_{jk}) R(T_{ij}) vs solved)
+         max |...| over 10 triangles = 1.806e-13
+  [PASS] [pure_time] Triangle-compatibility on all 10 triangles (direct vs sequential R(T_{jk}) R(T_{ij}) vs solved)
+         max |...| over 10 triangles = 4.549e-13
+  [PASS] [pure_space] Triangle-compatibility on all 10 triangles (direct vs sequential R(T_{jk}) R(T_{ij}) vs solved)
+         max |...| over 10 triangles = 1.371e-13
+  [PASS] [shear] Triangle-compatibility on all 10 triangles (direct vs sequential R(T_{jk}) R(T_{ij}) vs solved)
+         max |...| over 10 triangles = 2.185e-13
+  [PASS] [random_gaussian] Triangle-compatibility on all 10 triangles (direct vs sequential R(T_{jk}) R(T_{ij}) vs solved)
+         max |...| over 10 triangles = 1.239e-12
+  [PASS] [structural] Triangle-compatibility on all 10 triangles (direct vs sequential R(T_{jk}) R(T_{ij}) vs solved)
+         max |...| over 10 triangles = 1.292e-13
+
+======================================================================
+Step 5b: Tetrahedron-compatibility on 5 quadruple overlaps
+======================================================================
+  [PASS] [structural] Tetrahedron-compatibility on all 5 tetrahedra (6 edges per tetrahedron x 5 = 30 pairwise checks)
+         max diff over 5 tetrahedra = 6.213e-13
+  [PASS] [random_gaussian] Tetrahedron-compatibility on all 5 tetrahedra (6 edges per tetrahedron x 5 = 30 pairwise checks)
+         max diff over 5 tetrahedra = 3.324e-12
+  [PASS] [trace] Tetrahedron-compatibility on all 5 tetrahedra (6 edges per tetrahedron x 5 = 30 pairwise checks)
+         max diff over 5 tetrahedra = 5.166e-13
+
+======================================================================
+Step 5c: 4x4 tensor reconstruction — h_j_mat = T_{ij}^T h_i_mat T_{ij}
+======================================================================
+  [PASS] [structural] 4x4 tensor reconstruction: h_j_mat = T_{ij}^T h_i_mat T_{ij} on 10 edges
+         max diff over 10 edges = 6.408e-13
+
+======================================================================
+Step 6: Global existence + uniqueness on patched atlas
+======================================================================
+  [PASS] Uniqueness: perturbed h_0 does not solve K_GR(D_0) h_0 = J_0
+         residual of perturbed h_0 = 1.000e-02
+  [PASS] Global stationary section: 5 local solves + 10 edges + 10 triangles compatible
+         patched atlas system is uniquely solvable for the source J = J_struct
+
+======================================================================
+Step 7: Counterfactual — non-source-paired sources break compatibility
+======================================================================
+  [PASS] Counterfactual: perturbed J_1 breaks edge-compatibility on (0, 1)
+         |h_1 - R(T_{01}) h_0| = 4.102e+01  (expected nonzero)
+  [PASS] Counterfactual: edges not involving perturbed chart 1 still compatible
+         |h_3 - R(T_{23}) h_2| = 6.213e-13  (expected ~0)
+
+======================================================================
+Step 8: Counterfactual — broken transition cocycle breaks triangles
+======================================================================
+  [PASS] Counterfactual: broken T_{12} breaks edge-compatibility on (1, 2)
+         |h_2 - R(T_{12}_broken) h_1| = 3.860e-01  (expected nonzero)
+  [PASS] Counterfactual restoration: cocycle restored, edge (1, 2) compatible
+         |h_2 - R(T_{12}) h_1| = 8.749e-14
+
+======================================================================
+Step 9: R is an anti-rep — R(T_{jk}) R(T_{ij}) = R(T_{ik})
+======================================================================
+  [PASS] R anti-rep: R(T_{jk}) R(T_{ij}) = R(T_{ik}) on all 10 triangles
+         max |R(T_{jk}) R(T_{ij}) - R(T_{ik})| over 10 triangles = 8.349e-14
+  [PASS] Dual cocycle (sources): R(T_{jk})^{-T} R(T_{ij})^{-T} = R(T_{ik})^{-T}
+         max diff over 10 triangles = 1.714e-13
+
+======================================================================
+Step 10: Linearity — patched solve is linear in source
+======================================================================
+  [PASS] Linearity in source: h(alpha J_a + beta J_b) = alpha h(J_a) + beta h(J_b)
+         max |...| over 5 charts = 3.908e-14
+
+======================================================================
+Step 11: Aggregate verification across all 6 source profiles
+======================================================================
+  [PASS] AGGREGATE: 6 sources x (5 solves + 10 edges + 10 triangles) all consistent
+         Patched stationary system: 30 chart-local solves + 60 edge checks + 60 triangle checks all pass
+
+======================================================================
+Step 12: Sanity — recovers cycle 13's edge-(0,1) spot check
+======================================================================
+  [PASS] Cycle 14 chart-1 solve (trace source) agrees with cycle 13 spot check
+         |h_1_cycle14 - h_1_cycle13_expected| = 8.621e-14
+
+======================================================================
+Step 13: Closes Obstruction 2 of cycle 10
+======================================================================
+  [PASS] Global stationary section EXISTS and UNIQUE for all 6 source profiles
+         Cycle 10's Obstruction 2 is CLOSED
+
+======================================================================
+Step 14: Remaining named obstruction
+======================================================================
+  - Obstruction A (was cycle 10's Obstruction 3): atlas-refinement / continuum limit. Adding more charts preserves cocycle by spoke construction, but a continuum limit (or general PL S^3 refinement) is not addressed. This is the only remaining named obstruction from cycle 10's stretch-attempt note.
+  [PASS] One remaining named obstruction documented (cycle 10 Obstruction 3)
+         Atlas-refinement / continuum limit
+
+======================================================================
+PASS=51  FAIL=0
+======================================================================
+CLOSING-DERIVATION OUTCOME (output type a):
+  Patched stationary system solver on PL S^3 = boundary of 4-simplex.
+  6 source profiles (trace, pure_time, pure_space, shear, gaussian, structural).
+  Per source profile:
+    - 5 chart-local solves K_GR(D_i) h_i = J_i (residual < 1e-9).
+    - 10 edge-compatibilities h_j = R(T_{ij}) h_i (max diff < 1e-7).
+    - 10 triangle-compatibilities via the representation cocycle.
+  Total: 30 chart-local solves + 60 edge-vector checks + 60 triangle checks pass.
+  Plus 5 quadruple-overlap (tetrahedron) consistency checks (3 source profiles).
+  Plus 4x4 tensor reconstruction h_j_mat = T_{ij}^T h_i_mat T_{ij} on 10 edges.
+  Counterfactuals: incompatible source breaks edge compatibility;
+    broken cocycle breaks edge (1,2) and triangles containing it.
+  Linearity in source confirmed.
+  Cycle 13 edge-(0,1) spot check recovered as a special case.
+  Cycle 10 Obstruction 2 (global stationary section) is CLOSED.
+  Remaining: cycle 10 Obstruction 3 (atlas-refinement / continuum limit).
+
+----- stderr -----
+

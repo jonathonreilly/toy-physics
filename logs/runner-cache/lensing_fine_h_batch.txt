@@ -1,0 +1,12 @@
+===== runner cache v1 =====
+runner: scripts/lensing_fine_h_batch.py
+runner_sha256: e2611be70284f36ab62b4462fb13da1d8e95553007101ad53eeb88fb3058de52
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.03
+status: nonzero_exit
+----- stdout -----
+Usage: python3 lensing_fine_h_batch.py <family> <seed>
+
+----- stderr -----
+

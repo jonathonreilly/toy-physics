@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_nambu_radial_observable.py
+runner_sha256: ec389a278cd3c46404d3befeaedf2c298365ca47dd402007b11a836ccca099e6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: NAMBU RADIAL OBSERVABLE THEOREM
+========================================================================================
+
+Authority stack:
+  - docs/NEUTRINO_MAJORANA_NAMBU_SOURCE_PRINCIPLE_NOTE.md
+  - docs/NEUTRINO_MAJORANA_SOURCE_RAY_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md
+
+Question:
+  On the admitted local Nambu-complete source family, what is the
+  minimal canonically invariant local bosonic observable?
+
+========================================================================================
+PART 1: THE LOCAL NAMBU BLOCK IS A RADIAL SPECTRAL FAMILY
+========================================================================================
+  [PASS (C)] Eigenvalues are exactly +/- ||s|| on the local Nambu block  (eig err=2.48e-16)
+  [PASS (C)] The determinant is exactly -||s||^2  (|det+r^2|=2.30e-16)
+
+  So the admitted local Nambu source family is one radial spectral
+  family on the unique two-state pseudospin block.
+
+========================================================================================
+PART 2: CANONICAL BASIS CHANGES PRESERVE THE RADIAL GENERATOR
+========================================================================================
+  [PASS (C)] SU(2) conjugation rotates the local source vector exactly  (conjugation error=3.43e-16)
+  [PASS (C)] The minimal spectral scalar is invariant under canonical rotations  (|W-W_rot|=8.33e-17)
+
+  So any canonically invariant local bosonic observable on this
+  admitted Nambu family can only depend on the radial norm ||s||.
+
+========================================================================================
+PART 3: THE RADIAL OBSERVABLE REDUCES TO THE PAIRING LOG ON mu J_x
+========================================================================================
+  [PASS (C)] On the pure-pairing ray, the radial generator is log(mu)  (|W-log(mu)|=0.00e+00)
+  [PASS (C)] Its pure-pairing derivative is 1/mu  (dW/dmu=1.886792, 1/mu=1.886792)
+
+  So this positive local Nambu observable extends the Pfaffian lane,
+  but it does not itself create a selected nonzero scale.
+
+========================================================================================
+RESULT
+========================================================================================
+  The admitted local Nambu block is a radial spectral family. The
+  minimal canonically invariant local bosonic observable is
+  W_N(s) = 1/2 log|det H(s)| = log ||s|| + const.
+
+  On the pure-pairing ray it reduces to log(mu). Later branch work
+  adds the exact local quadratic comparator and the exact
+  background-normalized response curve, so the live blocker is now
+  finite-point selection on that normalized curve.
+
+PASS=6  FAIL=0
+
+----- stderr -----
+

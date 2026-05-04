@@ -1,0 +1,105 @@
+===== runner cache v1 =====
+runner: scripts/frontier_non_abelian_gauge.py
+runner_sha256: b1572c803625519face9fd84bc62f7cc1177cb2331f8e60dfeca4d20e6970064
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+============================================================================
+NATIVE GRAPH-FIRST GAUGE CLOSURE
+============================================================================
+
+============================================================================
+NATIVE CUBIC Cl(3) / SU(2)
+============================================================================
+
+Clifford algebra
+  [PASS] Gamma_1 is Hermitian
+  [PASS] Gamma_1^2 = I_8
+  [PASS] Gamma_2 is Hermitian
+  [PASS] Gamma_2^2 = I_8
+  [PASS] Gamma_3 is Hermitian
+  [PASS] Gamma_3^2 = I_8
+  [PASS] {Gamma_1, Gamma_1} = 2 delta_ij I_8  (err=0.00e+00)
+  [PASS] {Gamma_1, Gamma_2} = 2 delta_ij I_8  (err=0.00e+00)
+  [PASS] {Gamma_1, Gamma_3} = 2 delta_ij I_8  (err=0.00e+00)
+  [PASS] {Gamma_2, Gamma_2} = 2 delta_ij I_8  (err=0.00e+00)
+  [PASS] {Gamma_2, Gamma_3} = 2 delta_ij I_8  (err=0.00e+00)
+  [PASS] {Gamma_3, Gamma_3} = 2 delta_ij I_8  (err=0.00e+00)
+
+Spin SU(2) from Clifford bivectors
+  [PASS] S_1 is Hermitian
+  [PASS] S_2 is Hermitian
+  [PASS] S_3 is Hermitian
+  [PASS] [S_1, S_2] = i S_3
+  [PASS] [S_2, S_3] = i S_1
+  [PASS] [S_3, S_1] = i S_2
+  [PASS] Spin Casimir S^2 = 3/4 I_8  (err=0.00e+00)
+
+Weak/isospin SU(2) on one cubic taste factor
+  [PASS] [T_1, T_2] = i T_3
+  [PASS] [T_2, T_3] = i T_1
+  [PASS] [T_3, T_1] = i T_2
+  [PASS] Taste/isospin Casimir T^2 = 3/4 I_8  (err=0.00e+00)
+
+============================================================================
+CUBIC PARITY / CHIRAL CHECK
+============================================================================
+  [PASS] Parity P^2 = I on the finite cubic graph
+  [PASS] {H_hop, P} = 0 for nearest-neighbor cubic hopping  (err=0.00e+00)
+
+============================================================================
+RETAINED GRAPH-FIRST DEPENDENCIES
+============================================================================
+  [PASS] Native gauge note cites selector and SU(3) graph-first dependencies  (deps=['graph_first_selector_derivation_note', 'graph_first_su3_integration_note'])
+  [PASS] graph_first_selector_derivation_note effective_status is retained-grade  (retained_bounded)
+  [PASS] graph_first_selector_derivation_note runner path registered  (scripts/frontier_graph_first_selector_derivation.py)
+  [PASS] graph_first_selector_derivation_note runner exists
+  [PASS] graph_first_su3_integration_note effective_status is retained-grade  (retained_bounded)
+  [PASS] graph_first_su3_integration_note runner path registered  (scripts/frontier_graph_first_su3_integration.py)
+  [PASS] graph_first_su3_integration_note runner exists
+
+============================================================================
+BOUNDED LEFT-HANDED ABELIAN SURFACE
+============================================================================
+
+Selected axis 1
+  [PASS] rank Pi_+ = 6
+  [PASS] rank Pi_- = 2
+  [PASS] Y_like is Hermitian
+  [PASS] Tr Y_like = 0
+  [PASS] Y_like eigenvalue +1/3 has multiplicity 6
+  [PASS] Y_like eigenvalue -1 has multiplicity 2
+
+Selected axis 2
+  [PASS] rank Pi_+ = 6
+  [PASS] rank Pi_- = 2
+  [PASS] Y_like is Hermitian
+  [PASS] Tr Y_like = 0
+  [PASS] Y_like eigenvalue +1/3 has multiplicity 6
+  [PASS] Y_like eigenvalue -1 has multiplicity 2
+
+Selected axis 3
+  [PASS] rank Pi_+ = 6
+  [PASS] rank Pi_- = 2
+  [PASS] Y_like is Hermitian
+  [PASS] Tr Y_like = 0
+  [PASS] Y_like eigenvalue +1/3 has multiplicity 6
+  [PASS] Y_like eigenvalue -1 has multiplicity 2
+
+Boundary reminder
+  This runner checks only the left-handed +1/3 / -1 eigenvalue surface.
+  It does not assert anomaly-complete U(1)_Y or downstream phenomenology.
+
+============================================================================
+SUMMARY
+============================================================================
+  Exact native cubic Cl(3) / SU(2): checked directly.
+  Graph-first selector and structural SU(3): checked as retained-grade dependencies.
+  Abelian factor: bounded to the left-handed +1/3 / -1 eigenvalue surface.
+
+PASS=50 FAIL=0
+
+----- stderr -----
+

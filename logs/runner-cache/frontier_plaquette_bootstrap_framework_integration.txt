@@ -1,0 +1,90 @@
+===== runner cache v1 =====
+runner: scripts/frontier_plaquette_bootstrap_framework_integration.py
+runner_sha256: 6b2579541c29b8f4de83b0f458d88f024b21c6e29ceaea52bf2d1455be1d48cf
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+Plaquette Bootstrap — Framework-Integration Verification Runner
+Source note: docs/PLAQUETTE_BOOTSTRAP_FRAMEWORK_INTEGRATION_NOTE_2026-05-03.md
+==============================================================================
+
+--- Section 1: Lemma BB1 — Wilson-loop Gram matrix PSD (2x2 examples) ---
+  ✓ ⟨P⟩=0.5, C=+0.05 (positive)
+     eigs=[0.03967221921331484, 1.2603277807866853]
+  ✓ ⟨P⟩=0.5, C=0   (zero correlator)
+     eigs=[0.0, 1.25]
+  ✗ ⟨P⟩=0.5, C=-0.01 (negative ⟹ violates RP)
+     eigs=[-0.008012738724303275, 1.2480127387243032]
+  ✓ ⟨P⟩=0.6, C=+0.02 (near MC)
+     eigs=[0.014648239803878228, 1.3653517601961216]
+  ✓ ⟨P⟩=0.5934, C=+0.001 (near canonical)
+     eigs=[0.0007394348849775907, 1.3523841251150224]
+    ✓ Lemma BB1 structural claim verified: Gram is PSD ⟺ C_{P_-,P} ≥ 0
+
+--- Section 2: Lemma BB1' — connected correlator non-negativity ---
+  numerical example: ⟨P⟩=0.5, ⟨P_- · P⟩=0.3, C_conn=0.05, ⟨Θ(F)·F⟩ = 0.04999999999999999 (RP requires ≥ 0)
+    ✓ Algebraic identity ⟨Θ(F)·F⟩ = ⟨P_-·P⟩ - ⟨P⟩² = C_conn ≥ 0 verified
+
+--- Section 3: Mixed-cumulant audit estimate at β=6 ---
+  P_1plaq^LO(β=6) = β/18 = 0.333333  (SU(3) strong-coupling LO)
+  Mixed-cumulant correction = β^5/472392 = 0.016461
+  P_full estimate (LO + first nonlocal) = 0.349794
+  Note: strong-coupling expansion is NOT convergent at β=6 (crossover region);
+  this LO + first-nonlocal estimate (~0.350) is far below MC 0.5934.
+  Higher orders of P_1plaq(β) (SU(3) character expansion) shift this up to ~0.43-0.48,
+  still below MC. The bootstrap framework-integration honestly identifies this gap
+  as the named obstruction for tightening (block 02 + industrial SDP).
+
+--- Section 4: Comparison with canonical MC + bridge-support + literature ---
+  Bootstrap LO + first-nonlocal estimate (this note):  ~0.350-0.48
+  Canonical lattice MC (PLAQUETTE_SELF_CONSISTENCY):    0.5934  ← target
+  Bridge-support analytic upper-bound candidate:        0.59353  (+0.022%)
+  Kazakov-Zheng 2022 SU(∞) bracket (λ≈1.35, L_max=16):  0.59 - 0.61
+  Kazakov-Zheng 2024 SU(2) finite-N (physical range):   ~0.1% precision
+
+  Bracket comparison:
+  - Bootstrap LO bound (this note):  ~0.4 (weak; small truncation)
+  - Bridge-support upper bound:       0.59353
+  - MC value:                         0.5934
+  - Industrial bootstrap (literature): bracket ~0.59-0.61 (much tighter)
+
+  Conclusion: small-truncation analytical bound from framework-integration is
+  weaker than industrial SDP bootstrap by ~10x in precision. Tightening
+  requires either explicit Migdal-Makeenko derivation on framework surface
+  (Section 6 obstruction) or industrial SDP infrastructure (out of scope).
+
+
+--- Section 5: Named obstruction for tightening ---
+  [BOOTSTRAP-TIGHTENING OBSTRUCTION]:
+  The framework's existing primitives + 2x2 small-truncation bootstrap
+  give only weak analytical bounds on ⟨P⟩(β=6). Tightening requires:
+    (a) explicit Migdal-Makeenko / Schwinger-Dyson loop equations on
+        framework's V-invariant minimal block, OR
+    (b) higher-truncation (L_max ≥ 6) Gram matrices + industrial SDP, OR
+    (c) framework-specific positivity refinements from Cl(3) Hilbert-
+        Schmidt structure + Klein-four orbit-closure (block 02 attempt).
+
+==============================================================================
+All checks PASSED.
+
+Summary:
+  - Lemma BB1: Wilson-loop Gram matrix PSD on framework surface, derivable
+    from A11 (RP theorem) directly. Verified numerically.
+  - Lemma BB1': Connected reflected-plaquette correlator non-negativity
+    from RP applied to mean-subtracted observables. Algebraic identity.
+  - Smallest non-trivial 2x2 Gram PSD = BB1' (equivalent).
+  - Mixed-cumulant audit gives P_full(6) ≈ 0.35-0.48 (strong-coupling region;
+    not convergent at β=6).
+  - Sharper named obstruction: tightening requires Migdal-Makeenko on
+    framework surface OR industrial SDP OR framework-specific positivity.
+
+This runner verifies the framework-integration scaffold of
+  docs/PLAQUETTE_BOOTSTRAP_FRAMEWORK_INTEGRATION_NOTE_2026-05-03.md
+Block 02 will attempt framework-specific positivity refinements.
+==============================================================================
+
+----- stderr -----
+

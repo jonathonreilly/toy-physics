@@ -1,0 +1,107 @@
+===== runner cache v1 =====
+runner: scripts/frontier_w_mass_prediction.py
+runner_sha256: cbdfa067d53e03a1e9598dbb7c2f998ed2d2f69a86eae0a0c24ef061aa789234
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+==============================================================================
+W-BOSON MASS ON THE RETAINED Cl(3)/Z^3 EW NORMALIZATION SURFACE
+==============================================================================
+
+Package-captured bounded same-surface probe.
+NOT on the retained quantitative / prediction surface.
+The residual against pole measurements tracks the precision already
+present in the retained g_2(v) readout and is NOT absorbed by SM
+2-loop / Delta r_rem corrections, which are at the few-MeV level.
+
+------------------------------------------------------------------------------
+1. Retained framework inputs
+------------------------------------------------------------------------------
+  v (EW scale)        = 246.282818290129 GeV
+  g_2(v)              = 0.6480
+  g_1(v) [GUT norm]   = 0.4644
+  g_Y(v) = g_1*sqrt(3/5) = 0.3597
+  sin^2 theta_W(M_Z)  = 0.2306   (reported, not used in solve)
+
+------------------------------------------------------------------------------
+2. Tree-level readouts
+------------------------------------------------------------------------------
+  M_W^tree = g_2(v) * v / 2
+           = 0.6480 * 246.282818 / 2
+           = 79.7956 GeV
+
+  M_Z^tree = sqrt(g_Y^2 + g_2^2) * v / 2
+           = sqrt(0.129400 + 0.419904) * 246.282818 / 2
+           = 91.2663 GeV
+
+  sin^2(theta_W)^OS(tree) = 1 - (M_W/M_Z)^2 = 0.2356
+  (compare retained MS-bar readout = 0.2306)
+
+  Tree-level consistency against PDG pole masses:
+    M_W^tree vs PDG 80.3692: -0.714%
+    M_Z^tree vs PDG 91.1876: +0.086%
+
+------------------------------------------------------------------------------
+3. One-loop RGE readout (same-surface consistency probe)
+------------------------------------------------------------------------------
+
+  Self-consistent fixed-point solve (NO pole value imported):
+    M_W = g_2(M_W) * v / 2
+    1/alpha_2(M_W) = 1/alpha_2(v) + (b_2/(2 pi)) * ln(M_W / v)
+    b_2 = 19/6     (SM 1-loop SU(2), no active top at W scale)
+
+  alpha_2(v)       = g_2(v)^2/(4 pi) = 0.033415
+  1/alpha_2(v)     = 29.9268
+  b_2 / (2 pi)     = 0.503991
+  iterations to converge (|dM| < 1e-10 GeV) = 6
+  self-consistent g_2(M_W)  = 0.654185
+  self-consistent alpha_2(M_W) = 0.034056
+  ln(M_W / v) at fixed point = -1.117512
+
+  M_W^RGE = g_2(M_W) * v / 2 = 80.5573 GeV
+  delta_RGE relative to tree: +0.954%
+
+  G_F from retained v = 1/(sqrt(2) v^2) = 1.165780e-05 GeV^-2  (not used)
+
+------------------------------------------------------------------------------
+4. Comparison table
+------------------------------------------------------------------------------
+
+  Measurement               value (GeV)    sigma     M_W^tree Delta    M_W^RGE Delta
+  --------------------------------------------------------------------------------
+  PDG 2024 average              80.3692   0.0133    -0.5736 GeV     +0.1881 GeV
+  CDF-II 2022                   80.4335   0.0094    -0.6379 GeV     +0.1238 GeV
+  ATLAS 2024 reanalysis         80.3665   0.0159    -0.5709 GeV     +0.1908 GeV
+  CMS 2024                      80.3602   0.0099    -0.5646 GeV     +0.1971 GeV
+  LHCb 2022                     80.3540   0.0320    -0.5584 GeV     +0.2033 GeV
+
+  Tree gap to PDG:    -0.714%
+  RGE gap to PDG:     +0.234%
+  Tree gap to CDF:    -0.793%
+  RGE gap to CDF:     +0.154%
+
+==============================================================================
+5. Summary
+==============================================================================
+
+  Framework-side tree readout:  M_W^tree = 79.7956 GeV
+  Framework-side RGE readout:   M_W^RGE  = 80.5573 GeV
+  (both are bounded same-surface probes, NOT retained claims)
+
+  Retained g_2(v) lane precision vs observed: +0.265%
+  M_W^RGE gap to PDG:                          +0.234%
+  => the RGE residual is consistent with the retained g_2(v) precision
+     being inherited at the W scale; it is NOT absorbable by SM 2-loop
+     / Delta r_rem corrections (which are O(few MeV)).
+
+
+==============================================================================
+COMPUTATION COMPLETE
+==============================================================================
+
+Log saved to logs/2026-05-04-w-mass-prediction.txt
+
+----- stderr -----
+

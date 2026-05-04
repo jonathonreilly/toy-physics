@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_full_closure_same_surface_thermal_bounding_theorem.py
+runner_sha256: 86f3e4c0dcc5bf7b37a2fa9a87793884337d7efb0b7f1d33547bf32f8b684048
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

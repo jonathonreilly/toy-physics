@@ -1,0 +1,95 @@
+===== runner cache v1 =====
+runner: scripts/frontier_s3_action_taste_cube_decomposition.py
+runner_sha256: 8840bcaf761b6d29a043499f243fcf171b768a0b553db52e55853a6fda674bb3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================
+S_3 TASTE-CUBE DECOMPOSITION
+========================================================================
+
+========================================================================
+PART 1: S_3 unitary representation on C^8
+========================================================================
+  [PASS] U(e) is unitary
+  [PASS] U((12)) is unitary
+  [PASS] U((23)) is unitary
+  [PASS] U((13)) is unitary
+  [PASS] U((123)) is unitary
+  [PASS] U((132)) is unitary
+  [PASS] U(e) = I
+  [PASS] U((12))^2 = I
+  [PASS] U((23))^2 = I
+  [PASS] U((13))^2 = I
+  [PASS] U((123))^3 = I
+  [PASS] U((132))^3 = I
+  [PASS] (12)(23)(12) = (13)
+
+========================================================================
+PART 2: Hamming-weight preservation and orbit structure
+========================================================================
+  [PASS] [U(e), P_hw=0] = 0
+  [PASS] [U(e), P_hw=1] = 0
+  [PASS] [U(e), P_hw=2] = 0
+  [PASS] [U(e), P_hw=3] = 0
+  [PASS] [U((12)), P_hw=0] = 0
+  [PASS] [U((12)), P_hw=1] = 0
+  [PASS] [U((12)), P_hw=2] = 0
+  [PASS] [U((12)), P_hw=3] = 0
+  [PASS] [U((23)), P_hw=0] = 0
+  [PASS] [U((23)), P_hw=1] = 0
+  [PASS] [U((23)), P_hw=2] = 0
+  [PASS] [U((23)), P_hw=3] = 0
+  [PASS] [U((13)), P_hw=0] = 0
+  [PASS] [U((13)), P_hw=1] = 0
+  [PASS] [U((13)), P_hw=2] = 0
+  [PASS] [U((13)), P_hw=3] = 0
+  [PASS] [U((123)), P_hw=0] = 0
+  [PASS] [U((123)), P_hw=1] = 0
+  [PASS] [U((123)), P_hw=2] = 0
+  [PASS] [U((123)), P_hw=3] = 0
+  [PASS] [U((132)), P_hw=0] = 0
+  [PASS] [U((132)), P_hw=1] = 0
+  [PASS] [U((132)), P_hw=2] = 0
+  [PASS] [U((132)), P_hw=3] = 0
+  [PASS] Orbit sizes are {1, 1, 3, 3}  (got [1, 1, 3, 3])
+
+========================================================================
+PART 3: Class characters
+========================================================================
+  [PASS] chi(e) = 8
+  [PASS] all 2-cycles have character 4
+  [PASS] all 3-cycles have character 2
+
+========================================================================
+PART 4: Multiplicity calculation
+========================================================================
+  [PASS] mult(A_1) = 4  (got 4.000000)
+  [PASS] mult(A_2) = 0  (got 0.000000)
+  [PASS] mult(E) = 2  (got 2.000000)
+  [PASS] dimension matches 8  (got 8.000000)
+
+========================================================================
+PART 5: hw-sector decomposition
+========================================================================
+  [PASS] hw=1 character chi(e) = 3  (got 3.000000)
+  [PASS] hw=1 character chi((12)) = 1  (got 1.000000)
+  [PASS] hw=1 character chi((23)) = 1  (got 1.000000)
+  [PASS] hw=1 character chi((13)) = 1  (got 1.000000)
+  [PASS] hw=1 character chi((123)) = 0  (got 0.000000)
+  [PASS] hw=1 character chi((132)) = 0  (got 0.000000)
+  [PASS] hw=2 character chi(e) = 3  (got 3.000000)
+  [PASS] hw=2 character chi((12)) = 1  (got 1.000000)
+  [PASS] hw=2 character chi((23)) = 1  (got 1.000000)
+  [PASS] hw=2 character chi((13)) = 1  (got 1.000000)
+  [PASS] hw=2 character chi((123)) = 0  (got 0.000000)
+  [PASS] hw=2 character chi((132)) = 0  (got 0.000000)
+
+========================================================================
+TOTAL: PASS=57, FAIL=0
+========================================================================
+
+----- stderr -----
+

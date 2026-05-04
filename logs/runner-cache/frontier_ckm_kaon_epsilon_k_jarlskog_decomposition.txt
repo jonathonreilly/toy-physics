@@ -1,0 +1,143 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_kaon_epsilon_k_jarlskog_decomposition.py
+runner_sha256: 30cd892ece9b536c1af6115b00615e2dd4bb65b559faf818fec21055eb7f1b8f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+Kaon epsilon_K Jarlskog decomposition theorem audit
+See docs/CKM_KAON_EPSILON_K_JARLSKOG_DECOMPOSITION_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs
+----------------------------------------------------------------------------------------
+  alpha_s(v)     = 0.103303816122267
+  lambda^2       = 0.051651908061134  (= alpha_s(v)/2)
+  A^2            = 2/3
+  rho            = 1/6
+  eta            = sqrt(5)/6 = 0.372677996249965
+  J_0 atlas      = alpha_s(v)^3 sqrt(5)/72 = 3.423746e-05
+  [PASS (D)] alpha_s(v) > 0
+  [PASS (D)] lambda^2 = alpha_s(v)/2
+  [PASS (D)] A^2 = 2/3 (exact rational)
+  [PASS (D)] rho = 1/6 (exact rational)
+  [PASS (D)] eta = sqrt(5)/6
+  [PASS (D)] J_0 = A^2 lambda^6 eta = alpha_s(v)^3 sqrt(5)/72
+  [PASS (D)] upstream authority present: docs/ALPHA_S_DERIVED_NOTE.md
+  [PASS (D)] upstream authority present: docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+  [PASS (D)] upstream authority present: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+
+----------------------------------------------------------------------------------------
+(K1): Im[(V_cs* V_cd)^2] = 2 J_0
+----------------------------------------------------------------------------------------
+  V_cs real          = 0.9741740460
+  V_cd real          = -0.2271358192
+  V_cd imag          = -1.506463e-04
+  Im(V_cs* V_cd)     = -1.467557e-04
+  Im[(V_cs* V_cd)^2] = 6.494521e-05
+  2 J_0              = 6.847493e-05
+  ratio              = 1.8969048566
+  expected NLO factor (1 - lambda^2/2)^2 = 0.949015
+  prediction at NLO: 2 J_0 x (1 - lambda^2/2)^2 = 6.498374e-05
+  [PASS (D)] (K1) Im[(V_cs* V_cd)^2] = 2 J_0 at leading order (NLO band ~10%)
+  [PASS (D)] (K1) NLO-corrected value matches numerical
+  [PASS (D)] ratio = +2 + O(lambda^2) at atlas-LO precision
+
+----------------------------------------------------------------------------------------
+(K2): Im[V_cs* V_cd  V_ts* V_td] = -J_0
+----------------------------------------------------------------------------------------
+  V_ts real             = -0.0421736063
+  V_td real             = 7.987349e-03
+  V_td imag             = -3.572051e-03
+  Re(V_ts* V_td)        = -3.368553e-04
+  Im(V_ts* V_td)        = 1.506463e-04
+  Im[V_cs* V_cd V_ts* V_td] = -3.328404e-05
+  -J_0                  = -3.423746e-05
+  ratio                  = -0.9721525875
+  expected NLO factor (1 - lambda^2/2) = 0.974174
+  prediction at NLO: -J_0 x (1 - lambda^2/2) = -3.335325e-05
+  [PASS (D)] (K2) Im[product] = -J_0 at leading order (5% NLO band)
+  [PASS (D)] (K2) NLO-corrected value matches numerical
+  [PASS (D)] ratio = -1 + O(lambda^2) at atlas-LO precision
+
+----------------------------------------------------------------------------------------
+(K3): Im[(V_ts* V_td)^2] = -(5 alpha_s^2/18) J_0 = -2 A^2 lambda^4 (1 - rho) J_0
+----------------------------------------------------------------------------------------
+  Re(V_ts* V_td)     = -3.368553e-04
+  Im(V_ts* V_td)     = 1.506463e-04
+  Im[(V_ts* V_td)^2] = -1.014920e-07
+  -(5 alpha_s^2/18) J_0 = -1.014920e-07
+  -2 A^2 lambda^4 (1-rho) = -2.964355e-03
+  -(5 alpha_s^2/18)       = -2.964355e-03
+  match closed forms?    = True
+  [PASS (D)] (K3) coefficient closed form -2 A^2 lambda^4 (1-rho) = -(5 alpha_s^2/18)
+  [PASS (D)] (K3) Im[(V_ts* V_td)^2] = -(5 alpha_s^2/18) J_0 at atlas-LO
+
+----------------------------------------------------------------------------------------
+Combined epsilon_K factorization through J_0
+----------------------------------------------------------------------------------------
+  Inami-Lim inputs (NOT framework-derived):
+    eta_cc = 1.87, eta_tt = 0.5765, eta_ct = 0.4965
+    x_c = 2.4964e-04, x_t = 4.0872
+    S_0(x_c) = 2.4960e-04
+    S_0(x_t) = 2.3001
+    S_0(x_c, x_t) = 2.9451e-03
+
+  CKM bracket coefficients:
+    +2 eta_cc S_0(x_c)             = 9.334967e-04
+    -2 eta_ct S_0(x_c, x_t)        = -2.924441e-03
+    -(5 alpha_s^2/18) eta_tt S_0(x_t) = -3.930816e-03
+    sum                            = -5.921760e-03
+
+  Im(L)_atlas = J_0 x bracket        = -2.027461e-07
+  [PASS (D)] Im(L) factorizes through J_0 at atlas-LO
+  [PASS (D)] J_0 atlas value within 20% of standard Wolfenstein J
+
+  top-loop suppression factor (5 alpha_s^2/18) = 0.002964
+  [PASS (D)] top-loop CKM coefficient is alpha_s^2-suppressed  (value 0.002964)
+  [PASS (D)] (5 alpha_s^2/18) correctly parameterized
+
+----------------------------------------------------------------------------------------
+Cross-check: identities (K1), (K2), (K3) all share the same J_0
+----------------------------------------------------------------------------------------
+  (K1) coefficient: +2 (rational)
+  (K2) coefficient: -1 (rational)
+  (K3) coefficient: -(5 alpha_s^2/18) = -2.964355e-03
+  [PASS (D)] (K1) coefficient is the rational +2
+  [PASS (D)] (K2) coefficient is the rational -1
+  [PASS (D)] (K3) coefficient is alpha_s^2-suppressed
+  [PASS (D)] (K3) coefficient is exactly -(5 alpha_s^2/18)
+
+----------------------------------------------------------------------------------------
+Summary of new content
+----------------------------------------------------------------------------------------
+  KAON CP-VIOLATION JARLSKOG DECOMPOSITION (NEW CKM-STRUCTURAL):
+
+    Im[(V_cs* V_cd)^2]            =  +2 J_0
+    Im[V_cs* V_cd V_ts* V_td]     =  -J_0
+    Im[(V_ts* V_td)^2]            =  -(5 alpha_s(v)^2 / 18) J_0
+
+  EPSILON_K FRAMEWORK FACTORIZATION:
+
+    Im(L) = J_0 x [ 2 eta_cc S_0(x_c)
+                - 2 eta_ct S_0(x_c, x_t)
+                - (5 alpha_s^2/18) eta_tt S_0(x_t) ]
+
+  At canonical alpha_s(v) = 0.103304:
+    J_0 atlas = alpha_s(v)^3 sqrt(5)/72 = 3.423746e-05
+    (5 alpha_s^2/18) suppression          = 0.002964
+
+  The framework controls all three CKM imaginary contributions to
+  epsilon_K through one universal atlas Jarlskog-area factor -- the relative
+  weights collapse to rational coefficients (+2, -1) plus an
+  explicit alpha_s^2-suppressed top-loop coefficient.
+
+========================================================================================
+TOTAL: PASS=25, FAIL=0
+========================================================================================
+
+----- stderr -----
+

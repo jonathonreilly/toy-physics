@@ -1,0 +1,37 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_triplet_normalization_target.py
+runner_sha256: b7fc96561bcd7d62b0d842febb2d7c345af94d9f38220c8f770aab96d0bf1c48
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO TRIPLET NORMALIZATION TARGET
+========================================================================================
+
+========================================================================================
+PART 1: THE MISSING LAW MUST HIT 0.936 OF THE DI CEILING
+========================================================================================
+  [PASS] At fixed M1 and kappa, exact closure requires epsilon/epsilon_DI = eta_obs/eta_DI  (target=0.935780)
+  [PASS] The current reduced kernel is short by a factor 3.37  (enhancement=3.373055)
+  [PASS] So the missing coefficient law is mainly a kernel-normalization problem  (the gap is too large to dismiss as small bookkeeping)
+
+========================================================================================
+PART 2: PHASE-ONLY IMPROVEMENT IS FAR TOO SMALL
+========================================================================================
+  [PASS] The exact source phase is already near-maximal: sin(2pi/3)=sqrt(3)/2  (sin(phi_src)=0.866025)
+  [PASS] Even a maximally tuned phase can improve the kernel by only 1/sin(2pi/3)  (phase ceiling=1.154701)
+  [PASS] The needed 3.37x enhancement is much larger than any phase-only gain  (need=3.373055, phase-only ceiling=1.154701)
+
+========================================================================================
+PART 3: THE TARGET MUST LIVE IN GAMMA AND THE EVEN RESPONSE CHANNELS
+========================================================================================
+  [INFO] Stale-path checks against trimmed DM notes removed; see runner header.
+
+========================================================================================
+SUMMARY: PASS=6 FAIL=0
+========================================================================================
+
+----- stderr -----
+

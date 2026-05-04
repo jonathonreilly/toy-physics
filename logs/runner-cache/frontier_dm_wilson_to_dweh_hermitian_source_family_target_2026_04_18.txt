@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_to_dweh_hermitian_source_family_target_2026_04_18.py
+runner_sha256: d10e7ab11cb42c2df7c65123338c2d740cef994cb0f7e179c6c66b91a2967dbf
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.91
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON-TO-dW_e^H HERMITIAN SOURCE-FAMILY TARGET
+========================================================================================
+
+========================================================================================
+PART 1: CURRENT MAIN ALREADY REDUCES THE DOWNSTREAM CHAIN
+========================================================================================
+  [PASS] Projected-source law note states that dW_e^H alone determines the selected N_e transport column
+  [PASS] Charged source-response reduction note states that dW_e^H is the exact charged-sector Schur pushforward
+  [PASS] Selector reduction note states that the remaining open microscopic object is exactly on dW_e^H = Schur_Ee(D_-)
+
+========================================================================================
+PART 2: NINE REAL HERMITIAN CHANNELS ARE SUFFICIENT
+========================================================================================
+  [PASS] Herm(3) carries exactly nine real basis directions  (basis size=9)
+  [PASS] The standard Hermitian response basis is real-linearly independent  (rank=9)
+  [PASS] Nine real response channels reconstruct H_e exactly  (err=0.00e+00)
+
+  So a Wilson family realizing these nine basis responses would already
+  determine dW_e^H and the full charged Hermitian block H_e.
+
+========================================================================================
+PART 3: FEWER THAN NINE CHANNELS ARE NOT GENERIC
+========================================================================================
+  [PASS] The first eight real channels leave a nonzero Hermitian blind direction  (gap norm=1.41e+00)
+  [PASS] That blind direction has zero responses on all first-eight channels  (blind response norm=0.00e+00)
+  [PASS] So any generic Wilson realization of arbitrary dW_e^H data needs at least nine real channels  (dim_R Herm(3) = 9 and 8 channels leave a nontrivial null direction)
+
+========================================================================================
+PART 4: ONCE H_e IS KNOWN THE REST IS ALGORITHMIC
+========================================================================================
+  [PASS] The reconstructed H_e fixes the charged-lepton-active packet  (col sums=[1. 1. 1.])
+  [PASS] The exact transport selector then fixes the relevant flavored DM column algorithmically  (eta/eta_obs=[0.82075559 0.9895127  0.92061708])
+  [PASS] The selected column reproduces the near-closing PMNS-assisted value  (eta/eta_obs=0.989512704600)
+
+  Therefore the remaining constructive primitive is upstream of H_e:
+  one Wilson-side Hermitian source family whose first variations land on dW_e^H.
+
+========================================================================================
+PART 5: BOTTOM LINE
+========================================================================================
+  [PASS] The weakest honest constructive target is a nine-channel Wilson Hermitian source family for dW_e^H  (sufficient by exact reconstruction and minimal by dimension count)
+  [PASS] This target is strictly upstream of the present imposed source-branch rule  (it changes the information content before the selector is applied)
+
+========================================================================================
+SUMMARY: PASS=14 FAIL=0
+========================================================================================
+
+----- stderr -----
+

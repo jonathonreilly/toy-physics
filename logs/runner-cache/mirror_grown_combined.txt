@@ -1,0 +1,36 @@
+===== runner cache v1 =====
+runner: scripts/mirror_grown_combined.py
+runner_sha256: b296de555272c4ccbc8fce2356c08497a478848415300c82c38d53089e6e8e0c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 84.46
+status: ok
+----- stdout -----
+======================================================================
+MIRROR + GROWN: Z₂ symmetry on geometric DAGs
+  Combining Codex's mirror insight with our grown-graph axiom chain
+======================================================================
+
+  [d_growth=2 (3D), Z₂ y-mirror]
+     N   pur_min     1-pm      grav  n_ok   time
+  --------------------------------------------
+    18    0.9686   0.0314    -0.284    16     9s  (-1.1SE)
+    25    0.9646   0.0354    -0.008    16    13s  (-0.0SE)
+    30    0.9627   0.0373    -0.018    16    14s  (-0.2SE)
+    40    0.9821   0.0179    +1.030    16    18s  (+1.6SE)
+
+  [d_growth=3 (4D), Z₂ y-mirror]
+     N   pur_min     1-pm      grav  n_ok   time
+  --------------------------------------------
+    18    0.9702   0.0298    +0.246    16     6s  (+0.9SE)
+    25    0.9542   0.0458    +0.002    16     7s  (+0.0SE)
+    30    0.9239   0.0761    +0.031    16     8s  (+0.3SE)
+    40    0.9424   0.0576    +0.419    16    10s  (+1.0SE)
+
+Compare:
+  Retained mirror chokepoint: stronger bounded coexistence than this scout
+  Retained Z2xZ2 lane: stronger decoherence-side lead than this scout
+  Grown mirror scout: exploratory only, does not approximate the retained benefit
+
+----- stderr -----
+

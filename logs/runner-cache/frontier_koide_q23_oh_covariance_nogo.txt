@@ -1,0 +1,70 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q23_oh_covariance_nogo.py
+runner_sha256: 4b5354099ec90867b4b0815d9565bcf4b6997f85f5d230eaf652840294a51478
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+================================================================================
+O_h covariance no-go for retained H(m, δ, q_+) chart
+================================================================================
+[PASS] 1.1 O_h has 48 elements (signed permutations of 3 axes)
+       |O_h| = 48
+
+Individual stabilizers |Stab(M)| for each generator:
+  |Stab(H_base)| = 2
+  |Stab(T_m)| = 8
+  |Stab(T_δ)| = 2
+  |Stab(T_q)| = 12
+[PASS] 1.2 Joint pointwise stabilizer has 2 elements (not 48)
+       |Joint Stab| = 2
+       If the chart were fully O_h-invariant pointwise, this would be 48.
+       → pointwise invariance fails.
+[PASS] 2.1 O_h elements with chart-span preservation (covariance): 2
+       |Covariance group| = 2
+       An O_h element g is in the covariance group iff g·B·g^T is in the
+       real span of {H_base, T_m, T_δ, T_q, I} for each basis matrix B.
+       This is the largest subgroup under which the chart is covariant.
+
+The covariant elements (permutation, signs, det):
+  perm=[0, 1, 2], signs=[-1, -1, -1], det=-1
+  perm=[0, 1, 2], signs=[1, 1, 1], det=1
+[PASS] 2.2 Covariance group = {I, -I} = Z_2 (spatial inversion only)
+       Only identity I = diag(+1,+1,+1) and inversion -I = diag(-1,-1,-1)
+       preserve the retained chart's span. Out of 48 O_h elements, only 2.
+       → the retained chart carries at most Z_2 (parity), not SO(3) or O_h.
+[PASS] 2.3 Covariance group = {+I, -I} = spatial parity Z_2 (verified)
+       +I present: True, -I present: True
+[PASS] 3.1 Sub-route (a) FALSIFIED: H_base chart NOT O_h-covariant
+       The 'spin-1 SO(3) identification via O_h cubic invariance of H_base'
+       does NOT hold. The chart is only invariant under spatial inversion Z_2.
+       
+       → sub-route (a) of the spin-1 structural claim is ruled out.
+       → sub-routes (b) and (c) remain untested and open.
+[PASS] 3.2 Remaining sub-routes for spin-1 structural claim (still open):
+       (b) Body-diagonal Z_3 fixed-point structure ⇒ SO(3) isotropy extension.
+       (c) SU(2)_L × 3-generation ⇒ spin-1 on generation factor.
+       
+       Either route, if discharged, would still close Q = 2/3 via
+       Q_Koide = (d-1)/d = 2/3 at d = 3.
+       
+       This no-go SHARPENS the outstanding question: the route cannot go
+       through the explicit affine chart's cubic symmetry. It must go through
+       a DIFFERENT structural mechanism (Z_3-fixed-locus isotropy or SM SU(2)_L
+       × generation structure).
+
+================================================================================
+Summary
+================================================================================
+PASSED: 7/7
+
+NO-GO: retained chart H(m, δ, q_+) is NOT O_h-covariant.
+Covariance group = Z_2 (spatial parity only).
+
+Spin-1 sub-route (a) is ruled out.
+Sub-routes (b) body-diagonal isotropy and (c) SU(2)_L × generation
+remain as candidate closures of Q = 2/3.
+
+----- stderr -----
+

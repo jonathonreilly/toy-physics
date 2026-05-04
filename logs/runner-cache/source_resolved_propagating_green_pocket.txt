@@ -1,0 +1,41 @@
+===== runner cache v1 =====
+runner: scripts/source_resolved_propagating_green_pocket.py
+runner_sha256: e556912e6ed3bbdcce0f025bd3ce5f70da33c6438facf527a68b3bb505526d79
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 6.31
+status: ok
+----- stdout -----
+============================================================================================
+SOURCE-RESOLVED PROPAGATING GREEN POCKET
+  exact 3D lattice, source-resolved Green control, causal memory recurrence
+  comparison: propagating Green vs static Green vs instantaneous 1/r
+============================================================================================
+h=0.5, W=3, L=20, source_cluster=4 nodes, mix=0.9
+field kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.5
+source strengths: (0.001, 0.002, 0.004, 0.008)
+target max |f|: 0.02
+
+REDUCTION CHECK
+  zero-source dynamic shift: +0.000000e+00
+  calibration gain: 2.131774e+00
+
+       s         inst        green         prop   prop/inst  prop/green
+--------------------------------------------------------------------------------
+  0.0010 +1.713544e-03 +2.139974e-03 +2.460113e-03       1.436       1.150
+  0.0020 +3.440703e-03 +4.279368e-03 +4.919670e-03       1.430       1.150
+  0.0040 +6.936763e-03 +8.557987e-03 +9.837774e-03       1.418       1.150
+  0.0080 +1.410179e-02 +1.712572e-02 +1.967434e-02       1.395       1.149
+
+SAFE READ
+  instantaneous F~M exponent: 1.01
+  static Green F~M exponent: 1.00
+  propagating Green F~M exponent: 1.00
+  TOWARD rows: 4/4
+  mean |prop/inst| ratio: 1.420
+  mean |prop/green| ratio: 1.149
+  causal memory observable (prop - green): +1.197212e-03
+  this is a bounded propagating-field pocket, not a full self-consistent GR sector
+
+----- stderr -----
+

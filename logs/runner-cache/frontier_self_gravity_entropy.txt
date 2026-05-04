@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_self_gravity_entropy.py
+runner_sha256: ce057a0148a94a70d02dbb7c5fb7bcbb3c4dc949f6fa797a87472b90376d8eb0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.36
+status: ok
+----- stdout -----
+==============================================================================
+SELF-GRAVITY BIPARTITION ENTROPY PROBE
+==============================================================================
+Retained operating point: MASS=0.3, MU2=0.22, DT=0.12, G_SELF=50.0, N_ITER=20
+Observable: single-particle bipartition entropy S(A) = -p_A log p_A - p_B log p_B
+Goal: test whether simple entropy tracks boundary size or merely occupancy split.
+
+Per-family partitions
+------------------------------------------------------------------------------
+
+random_geometric: n=36
+  cut          |A|/n  boundary   p_free   S_free   p_self   S_self   dS
+  x_half       0.50         6   0.0953   0.3147   0.2527   0.5652  +0.2505
+  depth_half   0.50        10   0.4515   0.6884   0.9985   0.0110  -0.6774
+  random_half  0.50        29   0.4373   0.6853   0.8463   0.4291  -0.2562
+  summary: boundary[6,29] S_self[0.0110,0.5652] corr(boundary,S_self)=+0.122 mean_dS=-0.2277
+  random-half ensemble: samples=32 boundary[26,43] S_self[0.1480,0.6931] corr(boundary,S_self)=+0.285
+
+growing: n=48
+  cut          |A|/n  boundary   p_free   S_free   p_self   S_self   dS
+  x_half       0.50        37   0.3313   0.6351   0.4514   0.6884  +0.0533
+  depth_half   0.50        77   0.4968   0.6931   0.7212   0.5919  -0.1013
+  random_half  0.50        94   0.5988   0.6735   0.6073   0.6699  -0.0035
+  summary: boundary[37,94] S_self[0.5919,0.6884] corr(boundary,S_self)=-0.399 mean_dS=-0.0172
+  random-half ensemble: samples=32 boundary[75,107] S_self[0.3854,0.6931] corr(boundary,S_self)=-0.088
+
+layered_cycle: n=24
+  cut          |A|/n  boundary   p_free   S_free   p_self   S_self   dS
+  x_half       0.50         8   0.3629   0.6551   0.9990   0.0080  -0.6470
+  depth_half   0.50        12   0.5455   0.6890   0.9773   0.1085  -0.5805
+  random_half  0.50        20   0.5531   0.6875   0.6534   0.6453  -0.0421
+  summary: boundary[8,20] S_self[0.0080,0.6453] corr(boundary,S_self)=+0.983 mean_dS=-0.4232
+  random-half ensemble: samples=32 boundary[14,26] S_self[0.1397,0.6930] corr(boundary,S_self)=+0.489
+
+Readout
+------------------------------------------------------------------------------
+  mean entropy shift (self - free): -0.2227
+  max entropy shift  (self - free): +0.2505
+  boundary correlations by family:  +0.122, -0.399, +0.983
+  random-half ensemble corrs:      +0.285, -0.088, +0.489
+  verdict: some boundary sensitivity appears, but inspect ensemble controls before calling it area-law-like
+
+Interpretation:
+  - This observable is bounded by ln(2) and is controlled primarily by subsystem occupancy p_A.
+  - A strong area-law claim would require boundary-driven growth beyond this binary occupancy ceiling.
+  - Any signal here should be treated as exploratory unless it survives many-body or multi-orbital generalization.
+
+Time: 0.12s
+
+----- stderr -----
+

@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/poisson_self_gravity_born_audit.py
+runner_sha256: 3dc5ff96e69326c35ab8200365e2ae74d2eaba5245028b5014ca6365dd240e6f
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

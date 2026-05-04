@@ -1,0 +1,107 @@
+===== runner cache v1 =====
+runner: scripts/frontier_up_sector_partition_revisit.py
+runner_sha256: 4cd9620e4e61a2bcfd883873fb223a99405af00e22e02dface6e1b5e61164c73
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.52
+status: ok
+----- stdout -----
+========================================================================
+  FRONTIER: Up-Sector Partition Revisit on the Newer Quark Package
+========================================================================
+
+========================================================================
+PART 1: Exact Orthogonal-Partition Obstruction
+========================================================================
+
+  retained Phase 1 down ratio      m_d/m_s       = 0.051651908061
+  retained atlas 1-2 magnitude^2   |V_us|^2      = 0.051651908061
+  retained Phase 1 bridge power    (m_s/m_b)^(5/3) = 0.001778613071
+  retained atlas 2-3 magnitude^2   |V_cb|^2      = 0.001778613071
+
+  old CP-orthogonal partition formulas:
+    |V_us|^2 = (m_d/m_s) + (m_u/m_c)
+    |V_cb|^2 = (m_s/m_b)^(5/3) + (m_c/m_t)^(5/3)
+
+  with retained Phase 1 exactness inserted:
+    m_u/m_c forced           = 0.000000000000e+00
+    (m_c/m_t)^(5/3) forced   = 2.168404344971e-19
+  [PASS] retained Phase 1 exactly saturates the 1-2 orthogonal sum  (forced m_u/m_c = 0.000e+00)
+  [PASS] retained Phase 1 exactly saturates the 2-3 orthogonal sum  (forced (m_c/m_t)^(5/3) = 2.168e-19)
+  [PASS] the old interior CP-orthogonal partition cannot coexist with nonzero up-sector closure  (retained Phase 1 forces the orthogonal interior back to the edge f_12 = f_23 = 1)
+
+========================================================================
+PART 2: Orthogonal Back-Projection of the Newer Up-Sector Solves
+========================================================================
+
+  newer quark surfaces re-expressed in the old orthogonal partition language:
+  surface                    J/J_atlas    f_12(orth)   f_23(orth)   m_d/m_s(orth)   m_s/m_b(orth)
+  minimal_schur               0.153162     0.983565     0.919084    0.04996806    0.02023370
+  exact_support_anchor        0.992339     0.983587     0.918274    0.04997025    0.02021230
+  projector_shared_phase      1.002013     0.983407     0.918268    0.04995200    0.02021213
+
+  stable orthogonal back-projection windows:
+    f_12 in [0.983407, 0.983587]
+    f_23 in [0.918268, 0.919084]
+    implied m_d/m_s in [0.04995200, 0.04997025]
+    implied m_s/m_b in [0.02021213, 0.02023370]
+  [PASS] newer solves keep the old 1-2 partition back-projection tightly near 0.984  (range = [0.983407, 0.983587])
+  [PASS] newer solves collapse the old 2-3 partition away from the historical 0.998 comparator  (range = [0.918268, 0.919084])
+  [PASS] orthogonal back-projection would depress the retained 2-3 down ratio by about ten percent  (worst shift = 9.726%)
+  [PASS] observation-facing 1-2 comparator remains close while the retained 2-3 down lane does not  (1-2 survives numerically; 2-3 does not)
+
+========================================================================
+PART 3: Phase-Deformed Edge and J Non-Selector
+========================================================================
+
+  effective relative phases needed to preserve retained Phase 1 down exactness:
+  surface                    cos(psi_12)   psi_12(deg)   cos(psi_23)   psi_23(deg)   J/J_atlas
+  minimal_schur               -0.090277     95.179563    -0.197030    101.363360    0.153162
+  exact_support_anchor        -0.090218     95.176171    -0.197973    101.418429    0.992339
+  projector_shared_phase      -0.090707     95.204263    -0.197980    101.418858    1.002013
+
+  bounded phase windows:
+    psi_12 in [95.176171, 95.204263] deg
+    psi_23 in [101.363360, 101.418858] deg
+    J/J_atlas spans [0.153162, 1.002013]
+  [PASS] the replacement 1-2 phase stays in a narrow near-orthogonal window  (range = [95.176171, 95.204263] deg)
+  [PASS] the replacement 2-3 phase stays in a narrow mildly-destructive window  (range = [101.363360, 101.418858] deg)
+  [PASS] J closure is not what selects the old partition variables  (J/J_atlas spans [0.153162, 1.002013] while psi_23 spread = 0.055497 deg)
+
+========================================================================
+PART 4: Isospin-Cascade Status
+========================================================================
+
+  current repo-state check for the old closure candidate:
+    note path   = /private/tmp/gate-fix-worktree/docs/UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md
+    script path = /private/tmp/gate-fix-worktree/scripts/frontier_mass_ratio_up_sector.py
+  [PASS] the current up-sector authority note still marks the isospin-partner theorem as unconstructed  (no newer exact isospin-partner partition theorem is live in the authority note)
+  [PASS] the legacy Phase 2 runner still treats the isospin-partner route as a future candidate  (the newer quark package has not yet promoted an isospin selector into this lane)
+
+========================================================================
+PART 5: Summary
+========================================================================
+
+  exact endpoint:
+    retained Phase 1 down exactness plus the old CP-orthogonal partition
+    forces m_u/m_c = 0 and m_c/m_t = 0.
+
+  bounded replacement on the newer quark package:
+    - orthogonal back-projection window: f_12 in [0.983407, 0.983587]
+      and f_23 in [0.918268, 0.919084]
+    - effective phase edge: psi_12 in [95.176171, 95.204263] deg
+      and psi_23 in [101.363360, 101.418858] deg
+
+  honest status:
+    there is no retained interior-partition theorem for (f_12, f_23)
+    on the newer quark projector/tensor package.
+    The sharpest live update is a phase-deformed edge obstruction plus
+    a narrow bounded interference window, with no promoted isospin
+    selector yet.
+
+========================================================================
+  TOTAL: PASS=12, FAIL=0
+========================================================================
+
+----- stderr -----
+

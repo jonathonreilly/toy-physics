@@ -1,0 +1,28 @@
+===== runner cache v1 =====
+runner: scripts/frontier_planck_primitive_coframe_boundary_carrier.py
+runner_sha256: fa21a34c7e73dd3cd98f93212df247eccbe94b5d3f5a08aa89bf6be576e0ac0c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+[PASS] theorem note exists: docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md
+[PASS] finite-boundary extension authority exists: docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md
+[PASS] Clifford coframe bridge authority exists: docs/PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md
+[PASS] Boolean event-cell dimension is 16: dim H_cell = 2^4 = 16
+[PASS] Hamming-weight packet ranks match binomial row: packet ranks = {0: 1, 1: 4, 2: 6, 3: 4, 4: 1}
+[PASS] first homogeneous coframe response selects P_A: G_1 monomials = [('t',), ('x',), ('y',), ('z',)]
+[PASS] first-order locality rejects Hodge-dual rank-four P_3: rank(P_1)=4, rank(P_3)=4; support differs
+[PASS] additivity plus unit coframe-slot response gives one projector per slot: carrier terms = [('t',), ('x',), ('y',), ('z',)]
+[PASS] coframe-slot symmetry gives a single common coefficient: coefficients = {'t': 1, 'x': 1, 'y': 1, 'z': 1}
+[PASS] primitive source-free trace gives c_cell=1/4: Tr((I_16/16) P_A) = 4/16 = 1/4
+[PASS] finite-boundary extension compatibility keeps density c_cell: N_A(P)=c_cell*A(P)/a^2 has constant coefficient on sampled finite face counts
+[PASS] note carries non-closure flags: minimal-stack closure remains explicitly false with residual theorem target named
+[PASS] note avoids forbidden retained-closure flags: no forbidden TRUE closure marker present
+[PASS] note states coframe-slot symmetry rather than physical cubic spacetime symmetry: symmetry is scoped to the time-locked Boolean coframe register
+
+TOTAL: PASS=14, FAIL=0
+Verdict: support theorem verified. P_A is the unique first-order coframe-slot carrier under the stated hypotheses, c_cell=1/4 follows, and Planck minimal-stack closure remains open.
+
+----- stderr -----
+

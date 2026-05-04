@@ -1,0 +1,175 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_atlas_axiom_closure.py
+runner_sha256: b5fb725612895666d5bc0da8ad0a8569b347b9ad52d69cc0d32688a5d0fbe71e
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 1.18
+status: ok
+----- stdout -----
+==============================================================================
+CKM ATLAS/AXIOM NO-IMPORT CLOSURE
+==============================================================================
+
+Input surface:
+  - canonical alpha_s(v) from the coupling-map theorem on the plaquette surface
+  - residual color pair size = 2 from the exact EWSB 1+2 split
+  - quark block dimension = 6 from Q_L = (2,3)
+  - Z_3 CP source
+  - exact support-side center-excess weight = 1/6
+  - exact bilinear tensor carrier K_R on A1 x {E_x, T1x}
+  - Schur-complement 1->3 cascade
+
+==============================================================================
+STEP 1: FRAMEWORK COUPLING AT v
+==============================================================================
+
+  u_0 = <P>^(1/4) = 0.877681381199
+  alpha_bare = 1/(4*pi) = 0.079577471546
+  alpha_s(v) canonical (CMT)       = alpha_bare/u_0^2 = 0.103303816122
+  hierarchy-pinned cross-check     = 4*pi*(v/(C*M_Pl))^(1/8) = 0.103303816122
+  current hierarchy-pinned v       = 246.282818290129 GeV
+
+  [PASS] u_0 is the exact fourth root of the plaquette surface
+  [PASS] canonical alpha_s(v) is the CMT plaquette coupling
+  [PASS] canonical alpha_s(v) is positive and perturbative
+  [PASS] current hierarchy-pinned v surface is consistent with the canonical coupling  (relative gap = 1.343e-16)
+
+==============================================================================
+STEP 2: EXACT ATLAS COUNTS
+==============================================================================
+
+  residual color pair size = 2
+  color rank               = 3
+  quark block dimension    = 6
+  center-excess weight     = 0.166666666667
+  support dimension        = 7
+  support arm count        = 6
+
+  [PASS] exact residual pair size = 2
+  [PASS] exact color rank = 3
+  [PASS] exact quark block dimension = 6
+  [PASS] quark block = residual pair x color rank
+  [PASS] exact center-excess weight = 1/6
+  [PASS] exact support dimension = 7
+  [PASS] exact support arm count = 6
+
+==============================================================================
+STEP 3: CKM CONSTANTS FROM PROJECTOR COUNTING
+==============================================================================
+
+  lambda = sqrt(alpha_s(v)/2)     = 0.227270561361
+  A      = sqrt(2/3)              = 0.816496580928
+  r_raw  = sqrt(rho^2+eta^2)      = 1/sqrt(6) = 0.408248290464
+  delta_source = 2*pi/3           = 120.000000 deg
+  delta_raw    = pi/3             = 60.000000 deg
+  delta_std    = arctan(sqrt(5))  = 65.905157 deg
+  support r    = sqrt(6)          = 2.449489742783
+  delta_A1     = 1/42             = 0.023809523810
+  k_cp         = sqrt(6/7)        = 0.925820099773
+  K_R(q_dem) norm                = 1.388172086381e-17
+  E_x bright column at q_dem     = [1.000000000000 0.023809523810]
+  T1x bright column at q_dem     = [1.000000000000 0.023809523810]
+  r_theorem   = 1/sqrt(6)        = 0.408248290464
+  rho_theorem = 1/6              = 0.166666666667
+  eta_theorem = sqrt(5)/6        = 0.372677996250
+  r_scalar    = 1/sqrt(7)        = 0.377964473009
+  rho_scalar  = 1/sqrt(42)       = 0.154303349962
+  eta_scalar  = sqrt(5/42)       = 0.345032779671
+
+  |V_cb| = A*lambda^2             = 0.042173606330
+  |V_ub| theorem = A*lambda^3/sqrt(6) = 0.003912986047
+  |V_ub| scalar  = A*lambda^3/sqrt(7) = 0.003622721132
+
+  [PASS] lambda = sqrt(alpha_s(v)/2)
+  [PASS] A = sqrt(2/3)
+  [PASS] raw CP radius = 1/sqrt(6)
+  [PASS] delta_raw branch = pi/3
+  [PASS] cos^2(delta_std) = 1/6
+  [PASS] sin^2(delta_std) = 5/6
+  [PASS] democratic support projective point is r = sqrt(6)
+  [PASS] delta_A1 at the democratic support point is 1/42
+  [PASS] support-side CP contraction = sqrt(6/7)
+  [PASS] the exact bilinear carrier vanishes on the pure democratic A1 background
+  [PASS] the exact E_x bright column keeps unit leading amplitude at q_dem
+  [PASS] the exact T1x bright column keeps unit leading amplitude at q_dem
+  [PASS] the theorem sqrt(rho^2 + eta^2) = 1/sqrt(6)
+  [PASS] the scalar comparison sqrt(rho^2 + eta^2) = 1/sqrt(7)
+  [PASS] V_cb = alpha_s(v)/sqrt(6)
+  [PASS] V_ub theorem = alpha_s(v)^(3/2)/(6*sqrt(2))
+  [PASS] scalar comparison V_ub = alpha_s(v)^(3/2)/(2*sqrt(21))
+
+==============================================================================
+STEP 4: FULL CKM MATRIX
+==============================================================================
+
+  Theorem CKM matrix:
+[[ 0.9738241994+0.j            0.2272688214+0.j            0.0015974699-0.0035720512j]
+ [-0.2271339663-0.0001467041j  0.9729499231-0.0000342375j  0.0421732835+0.j          ]
+ [ 0.0080305365-0.0034754816j -0.0414327277-0.0008110998j  0.9991026487+0.j          ]]
+
+  |V_us|        = 0.227268821432
+  |V_cb|        = 0.042173283459
+  |V_ub|        = 0.003912986047
+  J             = 3.331135306487e-05
+  J_raw         = 3.160192428811e-05  (undressed pi/3 branch)
+  delta         = 65.905157 deg
+
+  scalar-support comparison |V_ub| = 0.003622721132
+  scalar-support comparison J      = 3.084038767773e-05
+
+  [PASS] theorem CKM matrix is unitary to machine precision  (||VV^dag-I|| = 2.25e-16)
+  [PASS] |V_us| equals c_13*lambda
+  [PASS] |V_cb| equals c_13*A*lambda^2
+  [PASS] |V_ub| equals A*lambda^3/sqrt(6)
+  [PASS] scalar-support comparison |V_ub| equals A*lambda^3/sqrt(7)
+
+==============================================================================
+STEP 5: OBSERVATION-FACING READOUT
+==============================================================================
+
+  Theorem package vs coherent angle-facing comparator package:
+    |V_us| = 0.227269 vs 0.224300  (+1.32%)
+    |V_cb| = 0.042173 vs 0.042200  (-0.06%)
+    |V_ub| = 0.003913 vs 0.003940  (-0.69%)
+    J      = 3.331135e-05 vs J_recon 3.304136e-05  (+0.82%)
+
+  Scalar-support comparison vs standalone scalar J comparator:
+    |V_ub|_scalar = 0.003623 vs 0.003940  (-8.05%)
+    J_scalar      = 3.084039e-05 vs 3.080000e-05  (+0.13%)
+
+  Observation comparator split:
+    J_recon(obs angles, obs delta) = 3.304136e-05
+    J_scalar comparator            = 3.080000e-05
+    split                          = +7.28%
+
+  delta theorem = 65.905 deg vs 65.500 deg
+
+  [PASS] [BOUNDED] |V_us| within 2% of PDG
+  [PASS] [BOUNDED] |V_cb| within 1% of PDG
+  [PASS] [BOUNDED] |V_ub| within 1% of PDG
+  [PASS] [BOUNDED] J within 1% of the angle-reconstructed comparator
+  [PASS] [BOUNDED] scalar-support comparison J within 1% of the standalone scalar comparator
+  [PASS] [BOUNDED] observed angle package reconstructs J more than 5% above the standalone scalar comparator
+  [PASS] [BOUNDED] delta phase-dressed branch within 1% of PDG
+
+==============================================================================
+CLOSURE STATEMENT
+==============================================================================
+
+  The theorem package is fixed by the canonical CMT coupling alpha_s(v),
+  exact atlas counts {2,3,6}, the Z_3 CP source, the exact 1/6 support-
+  side center-excess projector, the exact bilinear tensor carrier K_R,
+  and the exact Schur cascade. No observed quark masses enter.
+
+  The democratic seven-site support point remains an exact scalar
+  comparison surface, but it does not contract the leading bright/tensor
+  1->3 amplitude. That slot is carried by K_R, whose exact bright columns
+  keep unit leading amplitude on the democratic background, so the CKM
+  theorem package keeps the raw quark-block radius 1/sqrt(6).
+
+SUMMARY: PASS=40 FAIL=0
+         EXACT PASS=33 FAIL=0
+         BOUNDED PASS=7 FAIL=0
+
+----- stderr -----
+

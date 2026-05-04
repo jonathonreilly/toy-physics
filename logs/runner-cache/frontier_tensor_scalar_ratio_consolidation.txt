@@ -1,0 +1,73 @@
+===== runner cache v1 =====
+runner: scripts/frontier_tensor_scalar_ratio_consolidation.py
+runner_sha256: 48d984eaa3340ca7eb7315023546347ebfa9564a6692d5be3877045936717fdb
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.26
+status: ok
+----- stdout -----
+================================================================================
+Tensor-to-scalar ratio r consolidation theorem
+================================================================================
+[PASS] 1.1 Retained formula r = d²/N_e² (from graph-growth primordial spectrum)
+       r = d²/N_e²
+       Derivation in PRIMORDIAL_SPECTRUM_NOTE: tensor modes from edge-weight
+       fluctuations, suppressed by gravitational coupling ~ 1/N on lattice.
+[PASS] 1.2 Numerical value at d=3, N_e=60: r = 9/3600 = 1/400 = 0.0025
+       r = 1/400 = 0.0025
+[PASS] 1.3 r = 1/400 exactly (sympy rational)
+       r = 1/400
+[PASS] 2.1 r_pred = 0.0025 well below BICEP/Keck/Planck 2021 bound 0.036
+       r_predicted / r_BICEP_bound = 0.0694 (6.9% of bound)
+       → current observations compatible with framework at 14× margin
+[PASS] 3.1 Graph-growth r_pred at 75% of Starobinsky R²-inflation (0.0033) at N_e=60
+       r_graph / r_Starobinsky = 0.758
+       Graph-growth differs from Starobinsky only in the O(1) prefactor:
+         Starobinsky: r = 12/N_e² (specific R² inflaton)
+         Graph-growth: r = d²/N_e² = 9/N_e² (lattice edge-weight fluctuations)
+       At d=3, the two formulas are within O(1) of each other.
+[PASS] 4.1 Companion n_s = 1 - 2/N_e = 0.9667 predicts Planck central 0.9649 within 0.4σ
+       n_s (graph-growth) = 1 - 2/60 = 0.9667
+       n_s (Planck 2018)  = 0.9649 ± 0.0042
+       deviation          = 0.42σ
+[PASS] 5.1 r_pred = 0.0025 at 2.5× above LiteBIRD/CMB-S4 projected reach (0.001)
+       LiteBIRD / CMB-S4 projected r sensitivity: ~0.001
+       Framework prediction 2.5× above, so DETECTABLE by next-generation CMB experiments.
+       A detection at r ≈ 0.003 would be strong positive evidence.
+       A non-detection at r < 0.001 would rule out graph-growth at d=3, N_e≈60.
+[PASS] 6.1 d = 3 is forced by ANOMALY_FORCES_TIME retained theorem (not a fit)
+       ANOMALY_FORCES_TIME_THEOREM: retained Cl(3)/Z^3 + Grassmann partition
+       + anomaly cancellation forces 3+1 spacetime signature.
+       Therefore d_spatial = 3 in the graph-growth primordial spectrum formula is
+       a retained structural input, not a free parameter.
+       
+       Contrast with generic inflationary models where d=3 is assumed; in the
+       retained framework d=3 is derived, so the spectral indices n_s, r become
+       predictions with one remaining input (N_e).
+[PASS] 7.1 N_e = 60 input status: bounded-observational; not axiom-native
+       N_e = 60 is the standard inflationary e-fold count matched to the
+       observable universe's scale-to-Planck-scale ratio:
+         (R_H_now / l_Planck)^3 ≈ 10^180 cells today;
+         exp(3 N_e) = 10^78 cells at end of inflation with N_e ≈ 60.
+       The pre-inflation seed size (≈ 10^102 Planck volumes) is the remaining
+       bounded input. A retained derivation of this seed size would promote both
+       n_s and r to fully retained predictions.
+       
+       Therefore this theorem consolidates the r = d²/N_e² formula as retained in
+       d (from ANOMALY_FORCES_TIME) but bounded in N_e (inflation seed size).
+
+================================================================================
+Summary
+================================================================================
+PASSED: 9/9
+
+FRAMEWORK PREDICTION: r = d²/N_e² = 9/3600 = 0.0025 at d=3, N_e=60.
+
+Current status:
+  BICEP 2021 bound:       r < 0.036       → framework at 7% of bound
+  LiteBIRD/CMB-S4 target: r ≈ 0.001       → DETECTABLE ABOVE TARGET
+
+Retained d=3 from ANOMALY_FORCES_TIME; N_e=60 remains bounded-observational.
+
+----- stderr -----
+

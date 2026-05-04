@@ -1,0 +1,77 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_pmns_ne_seed_surface_exact_source_manifold_theorem_2026_04_20.py
+runner_sha256: 5734871fca89e98212e1d372e703d0fe08df2386b4781cd64559a7f57d7d9b54
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 8.56
+status: ok
+----- stdout -----
+========================================================================================
+DM PMNS FIXED-N_e-SEED-SURFACE EXACT SOURCE-MANIFOLD THEOREM
+========================================================================================
+
+Question:
+  Does the physical PMNS angle triple already live on the exact fixed
+  native N_e seed surface, and do the current exact nonlocal selector
+  families on that surface pick it?
+
+========================================================================================
+PART 1: EXACT PHYSICAL PMNS POINTS EXIST ON THE FIXED NATIVE N_e SEED SURFACE
+========================================================================================
+  [PASS] The verifier finds at least three distinct exact PMNS points on the fixed native N_e seed surface  (distinct exact points=6)
+  [PASS] Every retained representative reproduces the physical PMNS angle triple to high precision  (chi2 values=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+
+  rep 1: x=[0.060924 0.750231 0.878844], y=[0.498485 0.245185 0.17633 ], delta=-1.533856, obs=[0.307  0.0218 0.545 ]
+
+  rep 2: x=[0.1728   0.702018 0.815182], y=[0.453875 0.263502 0.202623], delta=0.790197, obs=[0.307  0.0218 0.545 ]
+
+  rep 3: x=[0.227683 0.680418 0.781899], y=[0.427562 0.268514 0.223924], delta=0.759340, obs=[0.307  0.0218 0.545 ]
+
+========================================================================================
+PART 2: THE EXACT PREIMAGE IS A REGULAR 2-REAL SOURCE MANIFOLD
+========================================================================================
+  [PASS] At every retained exact PMNS point the angle-map Jacobian has full rank 3  (ranks=[3, 3, 3, 3, 3, 3])
+  [PASS] Therefore each retained exact point lies on a local 2-real regular preimage inside the 5-real seed surface  (dim(seed surface)=5 and rank(dF)=3)
+
+========================================================================================
+PART 3: CURRENT NONLOCAL SEED-SURFACE SELECTOR FAMILIES MISS THE MANIFOLD
+========================================================================================
+  aligned seed             chi^2 = 0.035460351111, obs = [0.2        0.16666667 0.6       ]
+  low-action stationary    chi^2 = 0.945939295876, obs = [0.92138192 0.54642277 0.0034789 ]
+  high-action stationary   chi^2 = 0.593781844616, obs = [0.95075647 0.09476769 0.96217522]
+  constructive eta=1       chi^2 = 1.050753906211, obs = [0.7016142  0.91199492 0.86529135]
+  constructive witness     chi^2 = 1.160744130651, obs = [0.73704809 0.95163911 0.87846964]
+  [PASS] Every current exact nonlocal selector-family point misses the physical PMNS triple by chi^2 > 0.03  (misses=[0.03546, 0.945939, 0.593782, 1.050754, 1.160744])
+
+========================================================================================
+PART 4: CURRENT SELECTOR OBSERVABLES VARY ALONG THE EXACT MANIFOLD
+========================================================================================
+  [PASS] The exact PMNS manifold carries a macroscopic relative-action spread  (S_rel range=(0.905377,6.783804))
+  [PASS] The exact PMNS manifold carries distinct transport outputs on the favored column  (eta_0 range=(0.769933,0.778188))
+  [PASS] The exact PMNS manifold carries both source-cubic orientations  (cubic range=(-2.243511e-03,2.143836e-03))
+
+========================================================================================
+PART 5: THE NOTE RECORDS THE CORRECT I5 REDUCTION
+========================================================================================
+  [PASS] The note records exact PMNS realizability on the fixed native N_e seed surface
+  [PASS] The note records the regular 2-real source-manifold consequence
+  [PASS] The note records the current nonlocal selector-family miss
+  [PASS] The note records the sharpened I5 target as a new 2-real point-selection law
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact reduction answer:
+    - the fixed native N_e seed surface already contains exact physical
+      PMNS points
+    - on the verified regular patch those points form a local 2-real
+      source manifold
+    - current exact nonlocal seed-surface selector families do not pick
+      that manifold
+    - so the remaining I5 object is a new 2-real point-selection law on
+      the exact N_e PMNS source manifold
+
+PASS=12 FAIL=0
+
+----- stderr -----
+

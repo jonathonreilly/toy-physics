@@ -1,0 +1,70 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_scalar_datum_transplant_obstruction.py
+runner_sha256: 2e47afe33b202679302bc48eeda2c91131f42cec2347dbeaf830c3cc2bf1c893
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: SCALAR-DATUM TRANSPLANT OBSTRUCTION
+========================================================================================
+
+Authority stack:
+  - docs/HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md
+  - docs/HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md
+  - docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_SELF_DUAL_STAIRCASE_LIFT_OBSTRUCTION_NOTE.md
+  - docs/NEUTRINO_MAJORANA_ALGEBRAIC_BRIDGE_OBSTRUCTION_NOTE.md
+
+Question:
+  Could one of the exact scalar atlas datums already derived on main
+  serve as the missing absolute-scale datum for the selected local
+  Majorana lane?
+
+========================================================================================
+PART 1: CURRENT EXACT SCALAR ATLAS DATUMS ARE FIXED DIMENSIONLESS NUMBERS
+========================================================================================
+  [PASS] Current hierarchy-side scalar datums are strictly positive  (values={'selector_C4': 0.9671682101338347, 'endpoint_Cinf4D': 0.9646786299603094, 'A4_over_A2': 1.1428571428571428, 'Ainf_over_A2': 1.1547005383792517})
+  [PASS] The tested scalar datums are nontrivial fixed constants  (values={'selector_C4': 0.9671682101338347, 'endpoint_Cinf4D': 0.9646786299603094, 'A4_over_A2': 1.1428571428571428, 'Ainf_over_A2': 1.1547005383792517})
+
+  So the candidate imported atlas constants are real fixed numbers, not
+  new scale variables on the Majorana lane.
+
+========================================================================================
+PART 2: TRANSPLANTED SCALAR DATUMS STILL LEAVE THE GLOBAL SCALE FACTORIZED
+========================================================================================
+  [PASS] Every tested scalar-datum transplant keeps the full bridge block on one normalized ray  (max normalized difference=2.94e-16)
+
+  So a fixed scalar datum can change the shape constants inside the
+  lifted block, but it still leaves the common staircase scale as one
+  exact overall factor.
+
+========================================================================================
+PART 3: SCHUR AND SPECTRAL BRIDGE DATA STILL CARRY THE SAME SCALE WEIGHT
+========================================================================================
+  [PASS] Schur complements remain degree-one in the same staircase scale  (normalized diff=1.53e-16, spread in ||S||/scale=4.44e-16)
+  [PASS] Eigenvalue gaps remain degree-one after scalar-datum transplant  (spread=3.18e-15)
+  [PASS] Singular values remain degree-one after scalar-datum transplant  (spread=8.01e-16)
+
+  So the existing exact scalar atlas datums do not create the missing
+  non-homogeneous scale law. They only change fixed coefficients inside
+  the same homogeneous bridge class.
+
+========================================================================================
+RESULT
+========================================================================================
+  No. On the current exact stack, transplanting the existing scalar
+  atlas datums into the selected Majorana local-to-generation block
+  only changes fixed dimensionless coefficients. The common positive
+  staircase scale still factors out exactly.
+
+  So the missing object is sharper again: it is not one of the current
+  exact scalar atlas datums reused multiplicatively. It must be a
+  genuinely new non-homogeneous bridge or a genuinely new absolute-scale
+  datum beyond that current scalar class.
+
+PASS=6  FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,54 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_full_closure_same_surface_numerator_selector_boundary.py
+runner_sha256: 41e196c2ddee67000ddde931a65c8f9163f4cfc1c636f9e2ce33fd9c1ec26723
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 67.76
+status: ok
+----- stdout -----
+========================================================================================
+DM FULL CLOSURE SAME-SURFACE NUMERATOR SELECTOR BOUNDARY
+========================================================================================
+
+========================================================================================
+PART 1: EXACT CURRENT-BANK DM ENDPOINTS
+========================================================================================
+  [PASS] The lower DM endpoint alpha_lo = alpha_LM is exact on the current same-surface bank  (alpha_lo=0.090667836017286)
+  [PASS] The upper DM endpoint alpha_hi is an exact same-surface plaquette-supported short-distance observable  (alpha_hi=0.092264992618360)
+
+  alpha_lo = 0.090667836017286
+  alpha_hi = 0.092264992618360
+
+========================================================================================
+PART 2: DISTINCT CERTIFIED DM OUTPUTS
+========================================================================================
+  [PASS] The exact current-bank endpoints induce disjoint certified DM ratio intervals  (R_lo=[5.442019867867, 5.442019867931], R_hi=[5.482855571890, 5.482855571936])
+  [PASS] They therefore induce disjoint certified DM density intervals even after eta is fixed  (Omega_DM_lo=[0.267709052538, 0.267709052541], Omega_DM_hi=[0.269717881594, 0.269717881596])
+
+  R_lo       = [5.442019867867, 5.442019867931]
+  R_hi       = [5.482855571890, 5.482855571936]
+  Omega_b    = 0.049192957585
+  Omega_DM_lo= [0.267709052538, 0.267709052541]
+  Omega_DM_hi= [0.269717881594, 0.269717881596]
+  trunc_lo   = (N_att=60, N_rep=600)
+  trunc_hi   = (N_att=60, N_rep=600)
+
+========================================================================================
+PART 3: NO CURRENT-BANK SELECTOR
+========================================================================================
+  [PASS] The current DM lane has no further exact scale-selection datum beyond the two same-surface endpoints  (the lane carries an interval, not a theorem selecting an interior or endpoint value)
+  [PASS] Common annihilation-coefficient cancellation does not select between the exact endpoints  (cancellation reduces the ratio dependence to the selected coupling but does not pick the coupling)
+  [PASS] Therefore theorem-grade current-bank DM numerator selector closure does not exist  (exact endpoints remain distinct: alpha_lo=0.090667836017286, alpha_hi=0.092264992618360)
+
+  CURRENT-BANK DM SELECTOR STATUS:
+    - exact same-surface endpoints: present
+    - distinct DM support outputs: present
+    - exact value-selection law between them: absent
+    - conclusion: current-bank DM selector closure does not exist
+
+========================================================================================
+SUMMARY: PASS=7 FAIL=0
+========================================================================================
+
+----- stderr -----
+

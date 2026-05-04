@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/source_resolved_wavefield_mechanism.py
+runner_sha256: 561db363e5f2654a0931069c76063e5b2e6d0f31db6bb9e9753afdf8302a9afd
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

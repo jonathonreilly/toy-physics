@@ -1,0 +1,50 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_gamma_orbit_observable_selector_generator_line.py
+runner_sha256: d3b0c37effc7c4d4b931fdc763b31e7718d95b47e746e5e41266679d7453e7b4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.48
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: the observable-selector theorem fixes the active pair exactly
+========================================================================================
+  [PASS] The boundary minimizer is delta_* = sqrt(8/3) / 2  (delta_*=0.816496580928)
+  [PASS] The exact minimizer equals sqrt(6)/3  (sqrt(6)/3=0.816496580928)
+  [PASS] The selector theorem fixes q_+* = delta_*  (q_+*=0.816496580928)
+  [PASS] The source constraint then gives rho_* = sqrt(6)/3  (rho_*=0.816496580928)
+  [PASS] [NUMERIC] The exact selected point is better than nearby boundary points
+
+========================================================================================
+PART 2: one-clock normalization collapses the selected semigroup to one real line
+========================================================================================
+  [PASS] [NUMERIC] The selected generators H(m, sqrt(6)/3, sqrt(6)/3) are Hermitian
+  [PASS] [NUMERIC] Their one-clock blocks are positive Hermitian  (min eigs=(0.219644, 0.094854))
+  [PASS] Once X_1 is taken as the physical one-clock block, the generator family is G_m = H(m, s, s)  (s = sqrt(6)/3 = 0.816496580928)
+
+========================================================================================
+PART 3: the selected one-real generator line already contains the charged-lepton witness
+========================================================================================
+  [PASS] [NUMERIC] The small branch becomes positive at one sharp selector-line threshold  (m_pos=-1.295794904067)
+  [PASS] [NUMERIC] The selected one-real generator line contains a near-perfect charged-lepton direction fit  (m*=-1.160467396653, cos-sim=0.999999999989)
+  [PASS] [NUMERIC] The witness lies exactly on the Koide cone  (Q=0.666666666666667)
+  [PASS] [NUMERIC] After one overall scale fit, the selected-line witness is within 0.03% of PDG sqrt(m)  (scaled_pred=[0.7146886041916148, 10.278900833112843, 42.15285034575724])
+  [PASS] [NUMERIC] At the same m*, the large branch is directionally worse than the small branch  (u_+=30.882016)
+
+========================================================================================
+PART 4: what the reduction closes
+========================================================================================
+  [PASS] The exact selector plus one-clock normalization reduces generator search from a multi-parameter chart to one real shape parameter m  (delta and q_+ are fixed exactly; the overall semigroup scale is absorbed into the one-clock block)
+  [PASS] This is still not a retained charged-lepton derivation because the generator chart itself is an extension input  (the remaining positive target is to derive the charged-lepton m-law and branch law)
+
+Interpretation:
+  Combining the exact observable-selector slice with the exact one-clock
+  semigroup reduction collapses the Koide generator search to the one-real
+  line G_m = H(m, sqrt(6)/3, sqrt(6)/3). That line already contains a
+  near-perfect charged-lepton witness on the small branch, so the live
+  problem is now just the m-selection law and the branch selector.
+
+PASS=15 FAIL=0
+
+----- stderr -----
+

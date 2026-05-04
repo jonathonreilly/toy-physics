@@ -1,0 +1,82 @@
+===== runner cache v1 =====
+runner: scripts/frontier_signed_gravity_chi_selector_algebra.py
+runner_sha256: c0653be5c5e987273cce78d258ecd99fe00af6e7392e0166c5d92a21d60e72e6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+==================================================================================================
+SIGNED GRAVITY CHI SELECTOR ALGEBRA SCAN
+  P0 gate: native chi_g operator versus conserved-neutral taste label
+==================================================================================================
+
+CLIFFORD / PARITY-SCALAR SURFACE
+  Gamma1^2 residual: 0.00e+00
+  Gamma2^2 residual: 0.00e+00
+  Gamma3^2 residual: 0.00e+00
+  {Gamma1, Gamma2} residual: 0.00e+00
+  {Gamma1, Gamma3} residual: 0.00e+00
+  {Gamma2, Gamma3} residual: 0.00e+00
+  {epsilon, Gamma1} residual: 0.00e+00
+  {epsilon, Gamma2} residual: 0.00e+00
+  {epsilon, Gamma3} residual: 0.00e+00
+  epsilon^2 residual: 0.00e+00
+  surface check: PASS
+
+NAMED CANDIDATES
+  name           dim   comm_kin   comm_full  eps_offdiag  pin_error   tr+     tr-      C  verdict
+  ---------------------------------------------------------------------------------------------
+  epsilon_ZZZ     4/4    5.66e+00   5.66e+00   0.00e+00   0.00e+00  +1.000  -1.000    odd  EPSILON_PIN_BROKEN
+  iOmega          4/4    0.00e+00   5.66e+00   4.00e+00   4.00e+00  +0.000  +0.000    odd  KINETIC_ONLY
+  C_taste_XXX     4/4    5.66e+00   5.66e+00   4.00e+00   4.00e+00  +0.000  +0.000   even  NO
+  Gamma1_XII      4/4    5.66e+00   5.66e+00   4.00e+00   4.00e+00  +0.000  +0.000   even  NO
+  Gamma2_ZXI      4/4    5.66e+00   5.66e+00   4.00e+00   4.00e+00  +0.000  +0.000    odd  NO
+  Gamma3_ZZX      4/4    5.66e+00   5.66e+00   4.00e+00   4.00e+00  +0.000  +0.000   even  NO
+
+BEST PAULI-STRING CANDIDATES
+  name           dim   comm_kin   comm_full  eps_offdiag  pin_error   tr+     tr-      C  verdict
+  ---------------------------------------------------------------------------------------------
+  IXY             4/4    0.00e+00   0.00e+00   0.00e+00   5.66e+00  +0.000  +0.000    odd  CONSERVED_NEUTRAL
+  XYI             4/4    0.00e+00   0.00e+00   0.00e+00   5.66e+00  +0.000  +0.000    odd  CONSERVED_NEUTRAL
+  XZY             4/4    0.00e+00   0.00e+00   0.00e+00   5.66e+00  +0.000  +0.000   even  CONSERVED_NEUTRAL
+  IIX             4/4    0.00e+00   5.66e+00   4.00e+00   4.00e+00  +0.000  +0.000   even  KINETIC_ONLY
+  IXZ             4/4    0.00e+00   5.66e+00   4.00e+00   4.00e+00  +0.000  +0.000    odd  KINETIC_ONLY
+  XYX             4/4    0.00e+00   5.66e+00   4.00e+00   4.00e+00  +0.000  +0.000    odd  KINETIC_ONLY
+  XZZ             4/4    0.00e+00   5.66e+00   4.00e+00   4.00e+00  +0.000  +0.000   even  KINETIC_ONLY
+  ZZZ             4/4    5.66e+00   5.66e+00   0.00e+00   0.00e+00  +1.000  -1.000    odd  EPSILON_PIN_BROKEN
+
+PROJECTOR LEAKAGE ON SAMPLE H(k) = sum sin(k_i) Gamma_i + (m+Phi) epsilon
+  IXY      leakage=0.00e+00  class=massive
+  XYI      leakage=0.00e+00  class=massive
+  XZY      leakage=0.00e+00  class=massive
+  IIX      leakage=6.80e-01  class=kinetic-only
+  IXZ      leakage=6.80e-01  class=kinetic-only
+  XYX      leakage=6.80e-01  class=kinetic-only
+  XZZ      leakage=6.80e-01  class=kinetic-only
+
+SCAN SUMMARY
+  Pauli-string involutions scanned: 63
+  kinetic-conserved candidates: 7
+  massive parity-scalar conserved candidates: 3
+  scalar-source pinned candidates: 1
+  strict selector candidates: 0
+
+INTERPRETATION
+  NO_GO_STRICT_SELECTOR: this local Pauli-string scan finds no operator
+  that is both conserved on the massive parity-correct scalar surface
+  and branch-pins the scalar source sign.
+
+  What survives: conserved neutral taste-degeneracy labels, e.g. the
+  rows marked CONSERVED_NEUTRAL. They commute with the retained free
+  massive scalar generators, but epsilon has zero branch trace and is
+  not pinned to +/- by those labels.
+
+  What fails: epsilon itself pins scalar sign but is not conserved by
+  kinetic hopping; iOmega is kinetic-conserved but broken by the
+  parity-scalar mass/coupling. Neither is a physical chi_g selector.
+
+FINAL_TAG: NO_GO_STRICT_SELECTOR
+
+----- stderr -----
+

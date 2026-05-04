@@ -1,0 +1,76 @@
+===== runner cache v1 =====
+runner: scripts/frontier_two_field_retarded_probe.py
+runner_sha256: 44d089d3d4f1dd1c6129633f0b9be67999c0b500d924c4fe209931778db0e52d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.23
+status: ok
+----- stdout -----
+======================================================================
+STAGGERED FERMION — RETARDED/HYBRID TWO-FIELD PROBE
+======================================================================
+DT_MATTER=0.12, DT_FIELD=0.03, MASS=0.3, MU2=0.22, FIELD_C=1.0, FIELD_GAMMA=0.1, FIELD_BETA=5.0, FIELD_TAU_MEM=0.6, FIELD_LAG_BLEND=0.6
+Field law: retarded memory channel + damped wave propagation.
+Graph-native only: random geometric, growing, layered cycle.
+
+
+======================================================================
+RETARDED/HYBRID BATTERY: random_geometric (36 nodes)
+======================================================================
+  [R1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [R2] Linearity: R^2=1.000000 PASS
+  [R3] Additivity: residual=1.8035e-16 PASS
+  [R4] Force: +8.1698e-03 TOWARD PASS
+  [R5] Iterative stability: 30/30 TOWARD PASS
+  [R6] Norm: drift=1.2212e-15 PASS
+    gauss     : F=+1.4943e-03 TW
+    color-0   : F=-1.4742e-04 AW
+    color-1   : F=+1.1299e-02 TW
+  [R7] Families: 2/3 FAIL
+  [R8] Gauge: J_range=1.5978e-02, sin_R^2=0.9999 PASS
+  [R9 diagnostic] Gap: G_eff=157.8, shell_grad_ratio=0.005, spectral_ratio(modes1-5)=0.020
+
+  SCORED ROWS: 7/8  (R9 diagnostic only)
+
+======================================================================
+RETARDED/HYBRID BATTERY: growing (48 nodes)
+======================================================================
+  [R1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [R2] Linearity: R^2=1.000000 PASS
+  [R3] Additivity: residual=1.9081e-16 PASS
+  [R4] Force: +2.0823e-03 TOWARD PASS
+  [R5] Iterative stability: 30/30 TOWARD PASS
+  [R6] Norm: drift=2.2204e-16 PASS
+    gauss     : F=+1.4465e-04 TW
+    color-0   : F=+5.3894e-03 TW
+    color-1   : F=+1.6616e-05 TW
+  [R7] Families: 3/3 PASS
+  [R8] Gauge: J_range=3.0799e-03, sin_R^2=0.9500 PASS
+  [R9 diagnostic] Gap: G_eff=230.6, shell_grad_ratio=0.004, spectral_ratio(modes1-5)=0.017
+
+  SCORED ROWS: 8/8  (R9 diagnostic only)
+
+======================================================================
+RETARDED/HYBRID BATTERY: layered_cycle (24 nodes)
+======================================================================
+  [R1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [R2] Linearity: R^2=1.000000 PASS
+  [R3] Additivity: residual=1.6330e-16 PASS
+  [R4] Force: +1.6820e-02 TOWARD PASS
+  [R5] Iterative stability: 30/30 TOWARD PASS
+  [R6] Norm: drift=6.6613e-16 PASS
+    gauss     : F=+2.8419e-03 TW
+    color-0   : F=+1.2035e-02 TW
+    color-1   : F=-1.4471e-03 AW
+  [R7] Families: 2/3 FAIL
+  [R8] Gauge: J_range=4.0020e-02, sin_R^2=0.9736 PASS
+  [R9 diagnostic] Gap: G_eff=100.5, shell_grad_ratio=0.009, spectral_ratio(modes1-5)=0.021
+
+  SCORED ROWS: 7/8  (R9 diagnostic only)
+
+======================================================================
+SUMMARY: 3 families tested, scored-row totals (R1-R8): [np.int64(7), np.int64(8), np.int64(7)]
+Time: 0.7s
+
+----- stderr -----
+

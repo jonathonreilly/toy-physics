@@ -1,0 +1,51 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_schur_stability_gap.py
+runner_sha256: b9688ba88dd8dbb7297241ea3163cbd18caeec6f90e99041063ae6f7d7213662
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 95.32
+status: ok
+----- stdout -----
+==============================================================================
+YT SCHUR STABILITY GAP
+==============================================================================
+
+Measure how far the admissible exact Schur bridge class sits from the
+first normal-form escape, rather than merely checking that current
+operators are still inside the class.
+
+Admissible in-class operators  = 3468
+Out-of-class operators         = 0
+max in-class radius            = 3.535534
+min out-of-class radius        = none found in scan
+stability gap                  = exceeds scanned envelope
+radius separation ratio        = unbounded in current scan
+
+Boundary statistics:
+  worst in-class affine residual = 2.834126e-03
+  worst in-class response gap    = 5.940312e-03
+  best out-class affine residual = none found in scan
+  best out-class response gap    = none found in scan
+
+[EXACT] PASS: the admissible Schur class occupies an open stability basin
+    no out-of-class operator found inside scanned envelope
+[EXACT] PASS: the first escape from the Schur normal-form class occurs beyond the unit branch budget radius
+    no out-of-class operator found inside scanned envelope
+[EXACT] PASS: in-class operators remain well separated from the first normal-form escape
+    radius separation exceeds scanned envelope
+[BOUNDED] PASS: the nearest escape is marked by a real response-class failure rather than numerical noise
+    no out-of-class operator found inside scanned envelope
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+The exact Schur normal-form class is not a knife-edge condition on this branch. It sits in an open stability basin separated from the first normal-form escape by a positive margin.
+So the remaining YT gap is not instability of the current coarse class. It is only the microscopic admissibility theorem that the exact bridge belongs to this stable class.
+
+==============================================================================
+FINAL TALLY: 4 PASS / 0 FAIL
+Elapsed: 94.80 s
+==============================================================================
+
+----- stderr -----
+

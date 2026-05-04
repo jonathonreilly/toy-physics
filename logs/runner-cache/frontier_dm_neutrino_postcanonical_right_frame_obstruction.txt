@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_postcanonical_right_frame_obstruction.py
+runner_sha256: 18972e43e254f14130f8107125a2d9ac6d5955bf9485519c9a1835c94beae63b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO POST-CANONICAL RIGHT-FRAME OBSTRUCTION
+========================================================================================
+
+Question:
+  Can the current axiom/atlas stack derive the post-canonical slot-supported
+  bridge intrinsically, once its extension and support classes are isolated?
+
+========================================================================================
+PART 1: THE RETAINED HERMITIAN DATA STAY FIXED ALONG THE RIGHT ORBIT
+========================================================================================
+  [PASS (C)] A right-unitary transform leaves H = Y Y^dag exactly fixed  (H error = 2.25e-16)
+  [PASS (C)] So the retained left/Hermitian data cannot see the right-orbit motion  (the same H supports multiple right-sensitive kernels K)
+
+  This is the DM-side analogue of the PMNS right-frame obstruction:
+  the retained denominator bank fixes H, not a canonical right frame.
+
+========================================================================================
+PART 2: THE POST-CANONICAL SLOT DATA CHANGE ALONG THE SAME ORBIT
+========================================================================================
+  [PASS (C)] The singlet-doublet slot amplitudes are not fixed by the retained H data alone  ((u,v)_0=(0.082500-0.238157j,-0.137500-0.088046j), (u,v)_1=(0.129349-0.218419j,-0.016487+0.155846j))
+  [PASS (C)] The physical heavy-neutrino-basis CP tensor also varies along that orbit  (CP0=(0.015083275782579014, -0.11193378343913891), CP1=(0.13745215229505714, 0.034720575498981186))
+
+  So the post-canonical slot-supported bridge is not intrinsic on the
+  current retained stack. It moves on an exact right-unitary orbit.
+
+========================================================================================
+PART 3: WHAT THE CURRENT STACK STILL LACKS
+========================================================================================
+  [PASS (C)] The current stack determines a right-orbit bundle, not a canonical right frame  (left/Hermitian data are fixed while K and the slot amplitudes move)
+  [PASS (C)] Therefore the post-canonical slot-supported bridge is still basis-conditional  (it is not derived intrinsically from the current axiom/atlas bank)
+  [PASS (C)] Deriving it needs a new right-frame-fixing theorem or right-sensitive observable principle  (that is the remaining theorem target if DM is to close)
+
+  So the honest answer is no: not from the current stack.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact answer:
+    - the current denominator bank fixes H, not a canonical right frame
+    - the post-canonical slot amplitudes (u,v) vary along the exact right orbit
+    - the physical CP tensor varies along the same orbit
+    - therefore the post-canonical slot-supported bridge is still basis-conditional
+
+  So the current stack does not yet derive that bridge intrinsically.
+  The missing object is a right-frame-fixing theorem or a genuinely
+  right-sensitive observable principle.
+
+PASS=7 FAIL=0
+
+----- stderr -----
+

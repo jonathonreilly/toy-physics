@@ -1,0 +1,46 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_weak_even_swap_reduction_theorem.py
+runner_sha256: a3cb7d203784ac2ac02088c1245e5e59ee741913232a8c73149a2102053a358d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO WEAK EVEN SWAP-REDUCTION THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE EXACT WEAK CARRIER IS CLOSED UNDER SOURCE-COLUMN SWAP
+========================================================================================
+  [PASS] The exact weak carrier is K_R(q) = [[u_E,u_T],[delta_A1 u_E, delta_A1 u_T]]
+  [PASS] Column swap acts internally on the exact carrier family  (swap err=0.00e+00)
+  [PASS] So the current exact source family has a canonical E/T exchange involution  (K_R(delta,u_E,u_T) P_ET = K_R(delta,u_T,u_E))
+
+========================================================================================
+PART 2: SWAP-INVARIANT LINEAR EVEN READOUT FORCES EQUAL COLUMNS
+========================================================================================
+  [PASS] The swap-fixed even-response class has real dimension 2  (dim=2)
+  [PASS] The generic swap-fixed matrix has equal columns  (swap err=0.00e+00)
+  [PASS] So the exact even-response matrix is rank one on the current stack  (rank=1)
+
+========================================================================================
+PART 3: THE EVEN LAW FACTORS THROUGH THE SYMMETRIC SOURCE COMBINATION
+========================================================================================
+  [PASS] The antisymmetric source mode tau_- lies in the kernel of the exact even map  (kernel err=0.00e+00)
+  [PASS] The even response depends only on tau_+ = tau_E + tau_T  (E=(0.140000,-0.044000), tau_+=0.400000)
+  [PASS] So the live even-response coefficient object is only the target vector v_even  (M_even = v_even [1 1])
+
+========================================================================================
+PART 4: THE BOUNDED TWO-CHANNEL PROTOTYPE DOES NOT OVERRULE THE EXACT REDUCTION
+========================================================================================
+  [PASS] The current Theta_R^(0) prototype is explicitly bounded, not exact
+  [PASS] The constructed support tensor primitive is also explicitly bounded, not exact
+  [PASS] So the bounded E/T channel distinction is not yet an exact single-axiom readout law  (the exact reduction applies to the current exact carrier, not to the bounded staging prototype)
+
+========================================================================================
+SUMMARY: PASS=12 FAIL=0
+========================================================================================
+
+----- stderr -----
+

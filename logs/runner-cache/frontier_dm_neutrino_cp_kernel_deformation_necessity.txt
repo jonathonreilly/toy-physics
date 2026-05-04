@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_cp_kernel_deformation_necessity.py
+runner_sha256: 951fc15c148207d9e8e95553c90ed9d658ee35175a155b245d0de3413d99fc0d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+DM / FLAVOR: CP-KERNEL DEFORMATION NECESSITY
+========================================================================================
+
+Authority stack:
+  - docs/DM_LEPTOGENESIS_UNIVERSAL_YUKAWA_NO_GO_NOTE_2026-04-15.md
+  - docs/DM_NEUTRINO_CKM_TEXTURE_TRANSFER_NO_GO_NOTE_2026-04-15.md
+
+Question:
+  What exact kind of new Dirac-side structure is necessary before the
+  standard leptogenesis CP tensor can become nonzero?
+
+Representative kernels:
+  H_unitary =
+[[4.43907801e-05+0.00000000e+00j 3.38813179e-21-1.69406589e-21j
+  0.00000000e+00+0.00000000e+00j]
+ [3.38813179e-21+1.69406589e-21j 4.43907801e-05+0.00000000e+00j
+  0.00000000e+00+0.00000000e+00j]
+ [0.00000000e+00+0.00000000e+00j 0.00000000e+00+0.00000000e+00j
+  4.43907801e-05+0.00000000e+00j]]
+
+  H_diag_split =
+[[4.43907801e-05+0.j 0.00000000e+00+0.j 0.00000000e+00+0.j]
+ [0.00000000e+00+0.j 5.87068067e-05+0.j 0.00000000e+00+0.j]
+ [0.00000000e+00+0.j 0.00000000e+00+0.j 3.05808084e-05+0.j]]
+
+  H_offdiag_break =
+[[4.47503454e-05+0.00000000e+00j 2.66344681e-06+4.61322519e-06j
+  3.01012944e-06+1.73789904e-06j]
+ [2.66344681e-06-4.61322519e-06j 5.43520712e-05+0.00000000e+00j
+  6.21502628e-06+6.21502628e-06j]
+ [3.01012944e-06-1.73789904e-06j 6.21502628e-06-6.21502628e-06j
+  3.50376427e-05+0.00000000e+00j]]
+  [PASS (C)] Pure unitary mismatch leaves H = Y^dag Y proportional to the identity  (basis rotations alone do not change the Hermitian kernel)
+  [PASS (C)] A purely diagonal non-universal split still leaves H diagonal  (singular-value splitting alone does not create CP-kernel entries)
+  [PASS (C)] A nonzero CP tensor requires complex off-diagonal entries in H  (max offdiag(H) = 8.79e-06)
+  [PASS (C)] Therefore the missing texture must be non-unitary and off-diagonal in flavor space  (basis rotations and diagonal rescalings both fail, off-diagonal breaking succeeds)
+
+Result:
+  The branch's missing object is now sharper than 'some non-universal
+  Yukawa texture.' A merely unitary mismatch cannot work, and a purely
+  diagonal singular-value split cannot work either. Any successful exact
+  neutrino Dirac texture must induce genuinely non-diagonal Hermitian
+  kernel entries in H = Y^dag Y, i.e. a non-unitary off-diagonal flavor-
+  breaking deformation beyond the current universal bridge.
+
+PASS=4  FAIL=0
+
+----- stderr -----
+

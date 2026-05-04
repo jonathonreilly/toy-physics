@@ -1,0 +1,61 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_dimensional_compression.py
+runner_sha256: 2ac6e3156e2666134d88558efafad40869f218753008cf62b6eb7227260e7300
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+Hierarchy dimensional-compression diagnostic
+==============================================================================
+
+  Using condensate density ratio at u0 = 0.9, m = 0.01
+  cond(Lt=2)  = 0.0030863245
+  cond(Lt=10) = 0.0035637486
+  ratio       = 1.1546901938
+  observed prefactor needed: C_obs = v_obs / v_pred = 0.9669215187
+
+  Dimension-3 compression:
+    ratio^(1/3)     = 1.0491119305
+    ratio^(-1/3)    = 0.9531871394
+    direct shift        = +4.911%
+    inverse shift       = -4.681%
+    distance to C_obs   = 0.013734
+
+  Dimension-4 compression:
+    ratio^(1/4)     = 1.0366123280
+    ratio^(-1/4)    = 0.9646807905
+    direct shift        = +3.661%
+    inverse shift       = -3.532%
+    distance to C_obs   = 0.002241
+
+  Dimension-8 compression:
+    ratio^(1/8)     = 1.0181416051
+    ratio^(-1/8)    = 0.9821816484
+    direct shift        = +1.814%
+    inverse shift       = -1.782%
+    distance to C_obs   = 0.015260
+
+  Dimension-16 compression:
+    ratio^(1/16)     = 1.0090300318
+    ratio^(-1/16)    = 0.9910507799
+    direct shift        = +0.903%
+    inverse shift       = -0.895%
+    distance to C_obs   = 0.024129
+  [PASS] 16th-root compression is too small to explain the full pre-selector hierarchy shift
+         ratio^(-1/16) = 0.991051, C_obs = 0.966922
+  [PASS] 4th-root inverse compression is in the right magnitude range for the observed gap
+         ratio^(-1/4) = 0.964681, C_obs = 0.966922
+
+Conclusion:
+  If the physical order parameter is dimension-4 (effective potential
+  density), the residual block normalization naturally compresses to
+  the few-percent level. If it is interpreted as a direct scale
+  correction, the 16th-root effect is too small.
+
+==============================================================================
+SCORECARD: 2 pass, 0 fail out of 2
+==============================================================================
+
+----- stderr -----
+

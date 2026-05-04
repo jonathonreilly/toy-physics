@@ -1,0 +1,90 @@
+===== runner cache v1 =====
+runner: scripts/frontier_n_eff_from_three_generations.py
+runner_sha256: 2ea824b792f619eed37c1fb4ebcfabd5f15fdf57b3d7fa13b0fb0dbd1fdf4dd2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+================================================================================
+N_eff from retained three-generation structure audit
+================================================================================
+
+--------------------------------------------------------------------------------
+Retained active-neutrino count
+--------------------------------------------------------------------------------
+  generations              = 3
+  nu_L per generation      = 1
+  retained nu_R slots      = 3
+  active light count        = 3
+  [PASS] three retained generations
+  [PASS] one active nu_L per retained generation
+  [PASS] retained active-neutrino count is 3
+  [PASS] retained neutral nu_R slots are present but singlet slots
+
+--------------------------------------------------------------------------------
+Heavy right-handed-neutrino temperature ratios
+--------------------------------------------------------------------------------
+  M1                    = 5.320e+10 GeV
+  M1 / T_BBN            = 5.320e+13
+  M1 / T_gamma(z_mr)    = 6.617e+19
+  M1 / T_CMB(today)     = 2.266e+23
+  m3_light / T_nu(z_mr) = 8.814e-02
+  [PASS] retained nu_R scale is nonrelativistic at BBN
+  [PASS] retained nu_R scale is nonrelativistic at matter-radiation equality
+  [PASS] retained nu_R scale is nonrelativistic today
+  [PASS] retained active m3 is still light versus neutrino temperature at equality
+
+--------------------------------------------------------------------------------
+N_eff value after standard correction
+--------------------------------------------------------------------------------
+  active count             = 3
+  standard correction      = 0.046
+  N_eff                    = 3.046
+  Planck comparator        = 2.99 +/- 0.17
+  deviation                = +0.056 (0.329 sigma units)
+  [PASS] N_eff = 3.046 after standard correction
+  [PASS] N_eff comparator agreement is within 1 listed sigma
+
+--------------------------------------------------------------------------------
+Omega_r and matter-radiation equality consistency
+--------------------------------------------------------------------------------
+  Omega_gamma,0            = 5.43939353e-05
+  Omega_r,0(N_eff=3.046)   = 9.20219674e-05
+  z_mr readout             = 3422.096
+  z_mr CMB comparator      = 3387
+  z_mr fractional gap      = +1.036%
+  [PASS] Omega_r,0 rounds to the 9.2e-5 radiation input
+  [PASS] z_mr readout remains near 3423
+  [PASS] z_mr comparator agreement is within 2 percent
+
+--------------------------------------------------------------------------------
+Extra light species sensitivity
+--------------------------------------------------------------------------------
+  two active species                         N_eff=2.046 sigma=5.55 z_mr=3952.9
+  [PASS] two active species has expected comparator status
+  retained three active species              N_eff=3.046 sigma=0.33 z_mr=3422.1
+  [PASS] retained three active species has expected comparator status
+  four fully thermalized species             N_eff=4.046 sigma=6.21 z_mr=3017.0
+  [PASS] four fully thermalized species has expected comparator status
+  three active plus Delta N_eff = 0.5        N_eff=3.546 sigma=3.27 z_mr=3206.8
+  [PASS] three active plus Delta N_eff = 0.5 has expected comparator status
+  three active plus heavy decoupled singlet  N_eff=3.046 sigma=0.33 z_mr=3422.1
+  [PASS] three active plus heavy decoupled singlet has expected comparator status
+
+--------------------------------------------------------------------------------
+Scope boundaries
+--------------------------------------------------------------------------------
+  retained count piece       = 3
+  standard correction piece  = 0.046
+  correction fraction        = 1.510%
+  [PASS] retained framework-side count is exactly 3
+  [PASS] standard correction is nonzero and external to the count theorem
+  [PASS] the theorem is not a native T_CMB derivation
+
+================================================================================
+TOTAL: PASS=21, FAIL=0
+================================================================================
+
+----- stderr -----
+

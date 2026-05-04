@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_carrier_normal_form.py
+runner_sha256: 30862b9810bd34a9ba4a0848f03f9207c463a79fcde3b6c8e0a193b8e1a6c2b1
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.54
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE CARRIER NORMAL-FORM THEOREM
+========================================================================================
+
+Question:
+  On the live source-oriented sheet of the exact H-side source surface,
+  what is the smallest carrier-side normal form for the remaining
+  mainline inverse-image problem?
+
+========================================================================================
+PART 1: THE LIVE SOURCE-ORIENTED SHEET FACTORS THROUGH THE SHIFT-QUOTIENTED CARRIER
+========================================================================================
+  [PASS] Source-oriented sheet sample 1 reconstructs exactly from B_H,min  (err=4.34e-15)
+  [PASS] Source-oriented sheet sample 2 reconstructs exactly from B_H,min  (err=4.03e-15)
+  [PASS] Source-oriented sheet sample 3 reconstructs exactly from B_H,min  (err=3.38e-15)
+  [PASS] So the live mainline inverse-image problem already factors through the minimal carrier B_H,min on its source-oriented sheet  (the remaining object is carrier-side and shift-quotiented, not a generic H law)
+
+========================================================================================
+PART 2: THE CORE INTERFERENCE CHANNEL HAS AN EXACT CARRIER FORMULA
+========================================================================================
+  [PASS] The exact carrier functional for A+b-c-d is 3 sqrt(2) sigma sin(2v) / 4  (max err=2.00e-15)
+  [PASS] So the source surface does not need the whole aligned core separately  (its even core channel already factors through sigma = -Lambda_+ + Lambda_odd + u and v)
+
+========================================================================================
+PART 3: THE EXACT SOURCE SURFACE BECOMES A THREE-EQUATION CARRIER NORMAL FORM
+========================================================================================
+  [PASS] On the live source-oriented sheet the carrier normal form is gamma = 1/2, delta+rho = sqrt(8/3), sigma sin(2v) = 8/9  (max err=3.00e-15)
+  [PASS] That normal form still reproduces the exact source-oriented CP pair  ((cp1,cp2)=(-0.544331053952,0.314269680527))
+
+========================================================================================
+PART 4: COMMON SHIFT IS EXACTLY QUOTIENTED OUT ON THE CARRIER SIDE
+========================================================================================
+  [PASS] A common diagonal shift sends Lambda_+ and Lambda_odd to Lambda + lambda  ((Lambda_+,Lambda_odd)=(12.146893869385,6.193790475942))
+  [PASS] The shift leaves u, v, delta, rho, and gamma unchanged  ((u,v,delta,rho,gamma)=(-1.284474821269,-0.061563329120,0.000000000000,1.632993161855,0.500000000000))
+  [PASS] So sigma and the exact source-surface normal form are shift-invariant  (sigma=-7.237578214712)
+
+========================================================================================
+PART 5: THE NOTE RECORDS THE CARRIER NORMAL FORM
+========================================================================================
+  [PASS] The new note records sigma sin(2v) = 8/9 as the carrier normal form
+  [PASS] The new note records the mainline object as a shift-quotiented carrier-side inverse-image law on the source-oriented sheet
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact mainline answer:
+    - on the live source-oriented sheet, the exact source surface reduces
+      after shift quotient to carrier normal form gamma = 1/2,
+      delta+rho = sqrt(8/3), sigma sin(2v) = 8/9
+    - the live mainline object is therefore a 3-real even-response law on
+      the carrier side, not a generic 7-real H law
+
+PASS=13 FAIL=0
+
+----- stderr -----
+

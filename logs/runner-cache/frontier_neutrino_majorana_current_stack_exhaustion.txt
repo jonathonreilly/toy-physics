@@ -1,0 +1,77 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_current_stack_exhaustion.py
+runner_sha256: e19a3178d00401d9dfd8bb6e50228d56f90c17fd642bb3e3fa240f12e527e569
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: CURRENT-STACK EXHAUSTION
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+  - docs/NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md
+  - docs/NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md
+  - docs/NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md
+  - docs/NEUTRINO_MAJORANA_Z3_NONACTIVATION_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_OBSERVABLE_PRINCIPLE_OBSTRUCTION_NOTE.md
+
+Question:
+  Can the current retained stack itself still force a nonzero
+  Majorana activation law?
+
+========================================================================================
+PART 1: IF THE PRIMITIVE EXISTS LOCALLY, ITS ONE-GENERATION LANE IS ALREADY FIXED
+========================================================================================
+  [PASS] Canonical local block has Pf(A_M)=mu  (max |Pf-mu|=0.00e+00)
+  [PASS] Independent local antisymmetric sectors force log|Pf| additivity  (max additivity error=0.00e+00)
+
+  So the local-bilinear realization family is not the open problem anymore.
+
+========================================================================================
+PART 2: CURRENT NORMAL DATA AND SOURCE-RESPONSE JET ARE BLIND TO MU
+========================================================================================
+  [PASS] Retained normal signature is identical across the full mu family  (distinct signatures=1)
+  [PASS] Observable-principle jet is identical across the same family  (distinct jets=1)
+  [PASS] The local pairing amplitudes in that family are genuinely different  (distinct amplitudes=3)
+
+  So the current retained stack has one normal signature and one normal
+  source-response jet across mu=0 and mu>0 alike.
+
+========================================================================================
+PART 3: THE RETAINED THREE-GENERATION / Z3 LIFT STILL CANNOT ACTIVATE THE SLOT
+========================================================================================
+  [PASS] Z3-textured Majorana pairing operator still has charge -2  (charge error=1.17e-15)
+  [PASS] Its expectation vanishes on the retained normal grammar  (<Q_Z3>=-2.25e-18+1.04e-19i)
+  [PASS] It becomes nonzero only after explicit pairing insertion  (<Q_Z3>_active=-0.024347+0.000000i)
+
+  So flavor/Z3 can shape an activated sector, but does not activate it.
+
+========================================================================================
+PART 4: THE CURRENT STACK IS EXHAUSTED ON THE MAJORANA ACTIVATION QUESTION
+========================================================================================
+  [PASS] Current-stack data package has one image across mu=0 and mu>0  (distinct packages=1)
+  [PASS] The corresponding activation family is still nontrivial  (distinct activation amplitudes=3)
+
+  Therefore the present retained stack cannot distinguish or force the
+  Majorana activation amplitude. A new charge-2 primitive or source law
+  is required beyond the current stack.
+
+========================================================================================
+RESULT
+========================================================================================
+  No. On the current retained stack, the Majorana activation problem is
+  exhausted negatively. If a local bilinear primitive exists, its local
+  realization is already fixed; but the current retained data cannot
+  distinguish mu=0 from mu>0, and the retained flavor lift cannot turn
+  it on.
+
+  So full closure now requires a genuinely new charge-2 primitive or
+  source principle beyond the current retained stack.
+
+PASS=10  FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,38 @@
+===== runner cache v1 =====
+runner: scripts/frontier_r_base_group_theory_derivation.py
+runner_sha256: d48763cad77aa606898849acc46e13cd52bc69282bc9e24d3cb1407c9eea3fc5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+R_base = 31/9 group-theory identity verification
+Exact arithmetic; no cosmology observation is used in the identity.
+
+[PASS] C_2(SU(3)_fund) = 4/3 (4/3)
+[PASS] C_2(SU(2)_fund) = 3/4 (3/4)
+[PASS] dim(adj SU(3)) = 8 (8)
+[PASS] dim(adj SU(2)) = 3 (3)
+[PASS] GUT normalization input = 3/5 (3/5)
+[PASS] SU(3) contribution = 32/3 (32/3)
+[PASS] SU(2) denominator contribution = 9/4 (9/4)
+[PASS] numerator = 155/12 (155/12)
+[PASS] denominator = 9/4 (9/4)
+[PASS] Casimir-adjoint ratio = 155/27 (155/27)
+[PASS] R_base = 31/9 exactly (31/9)
+[PASS] decimal value = 3.444444... (3.444444444444)
+[PASS] 465/135 reduction uses gcd 15 (gcd=15)
+[PASS] 465/135 = 31/9 (31/9)
+[PASS] (3/5)*(155/27) form matches (31/9)
+[PASS] (3/5)*(1+128/27) form matches (31/9)
+[PASS] additive form 3/5 + 128/45 matches (31/9)
+[PASS] quark/weak contribution ratio = 128/27 (128/27)
+[PASS] R_base alone is not the observed DM/baryon ratio (R_base=31/9, comparator=5.38)
+[PASS] Sommerfeld factor is not included in this exact identity (full R is bounded elsewhere)
+[PASS] 3/5 remains an admitted normalization input here (not derived by this runner)
+[PASS] no observed cosmology value enters the exact arithmetic (Fraction arithmetic only)
+
+TOTAL: PASS=22 FAIL=0
+
+----- stderr -----
+

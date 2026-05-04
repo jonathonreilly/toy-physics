@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/frontier_baryon_charge_integrality.py
+runner_sha256: 79b2e5a6ab401fb0c152fd036163f8ed403323f6441f7f97bc3999db4b1d2f62
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure
+----------------------------------------------------------------------------------------
+  [PASS (A)] contains: 'Baryon Charge Integrality'  ()
+  [PASS (A)] contains: 'Q_baryon = N_u − 1'  ()
+  [PASS (A)] contains: 'Δ⁺⁺'  ()
+  [PASS (A)] contains: 'Δ⁻'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: integrality theorem
+----------------------------------------------------------------------------------------
+  [PASS (A)] Q_baryon for N_u=0 = N_u - 1 = -1  (computed = -1)
+  [PASS (A)] Q_baryon for N_u=0 is integer  ()
+  [PASS (A)] Q_baryon for N_u=1 = N_u - 1 = 0  (computed = 0)
+  [PASS (A)] Q_baryon for N_u=1 is integer  ()
+  [PASS (A)] Q_baryon for N_u=2 = N_u - 1 = 1  (computed = 1)
+  [PASS (A)] Q_baryon for N_u=2 is integer  ()
+  [PASS (A)] Q_baryon for N_u=3 = N_u - 1 = 2  (computed = 2)
+  [PASS (A)] Q_baryon for N_u=3 is integer  ()
+
+----------------------------------------------------------------------------------------
+Part 3: specific baryons
+----------------------------------------------------------------------------------------
+  [PASS (A)] Δ⁻ (ddd): Q = -1  (computed = -1)
+  [PASS (A)] n (udd): Q = 0  (computed = 0)
+  [PASS (A)] p (uud): Q = 1  (computed = 1)
+  [PASS (A)] Δ⁺⁺ (uuu): Q = 2  (computed = 2)
+
+========================================================================================
+  TOTAL: PASS=16, FAIL=0
+========================================================================================
+
+----- stderr -----
+

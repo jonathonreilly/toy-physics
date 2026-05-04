@@ -1,0 +1,29 @@
+===== runner cache v1 =====
+runner: scripts/frontier_physical_hermitian_hamiltonian_and_sme_bridge.py
+runner_sha256: abebf1f76d9f450ffe153ce8083099c183cf516d7eaf602248ec002535d6b6ed
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+==============================================================================
+PHYSICAL HERMITIAN HAMILTONIAN AND SME CPT BRIDGE
+==============================================================================
+
+[PASS] L=4 D -> H=iD Hermitization: ||D^dag+D||=0.00e+00; ||H^dag-H||=0.00e+00
+[PASS] L=4 D-level staggered C/P/CPT identities: CDC=-D 0.00e+00; PDP=-D 0.00e+00; CPDCP=D 0.00e+00
+[PASS] L=4 naive CP K flips H and exposes the old gap: ||CP K(H) + H||=0.00e+00
+[PASS] L=4 physical Hermitian CPT lift preserves H: Theta_H=P K; ||Theta_H H Theta_H^-1-H||=0.00e+00
+[PASS] L=4 SME CPT-odd Hamiltonian sector vanishes: ||H_odd||=0.00e+00; max ||H_mu_odd||=0.00e+00; max |a_mu|=0.00e+00
+[PASS] L=6 D -> H=iD Hermitization: ||D^dag+D||=0.00e+00; ||H^dag-H||=0.00e+00
+[PASS] L=6 D-level staggered C/P/CPT identities: CDC=-D 0.00e+00; PDP=-D 0.00e+00; CPDCP=D 0.00e+00
+[PASS] L=6 naive CP K flips H and exposes the old gap: ||CP K(H) + H||=0.00e+00
+[PASS] L=6 physical Hermitian CPT lift preserves H: Theta_H=P K; ||Theta_H H Theta_H^-1-H||=0.00e+00
+[PASS] L=6 SME CPT-odd Hamiltonian sector vanishes: ||H_odd||=0.00e+00; max ||H_mu_odd||=0.00e+00; max |a_mu|=0.00e+00
+
+Summary: PASS=10  FAIL=0
+
+Verdict: PASS. The bridge explicitly carries the antiunitary i -> -i step in H=iD. The naive D-level CP K action flips H, while the physical Hermitian CPT representative induced by the staggered spectral-flip algebra preserves H and has zero CPT-odd SME sector.
+
+----- stderr -----
+

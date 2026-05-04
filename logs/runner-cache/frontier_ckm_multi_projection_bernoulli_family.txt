@@ -1,0 +1,127 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_multi_projection_bernoulli_family.py
+runner_sha256: 2b2beb27cbd1d98b8f7426e7cd1b0dce8141a23512dca7749832ff3d111b6cf2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+Multi-projection Bernoulli family at N_pair, N_color, N_quark audit
+See docs/CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs on current main
+----------------------------------------------------------------------------------------
+  N_pair = 2, N_color = 3, N_quark = 6
+  A^2 = N_pair/N_color  = 2/3
+  rho = 1/N_quark       = 1/6
+  eta^2 = (N_q-1)/N_q^2 = 5/36
+  [PASS (A)] N_pair = 2
+  [PASS (A)] N_color = 3
+  [PASS (A)] N_quark = 6
+  [PASS (A)] A^2 = 2/3 (W2)
+  [PASS (A)] rho = 1/6 (CP)
+  [PASS (A)] eta^2 = 5/36 (Thales)
+  [PASS (A)] retained on main: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+  [PASS (A)] retained on main: docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+  [PASS (A)] retained on main: docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+  [PASS (A)] retained on main: docs/CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md
+
+----------------------------------------------------------------------------------------
+Six-element Bernoulli family at three structural N-levels
+----------------------------------------------------------------------------------------
+  Mean form M(N) = (N-1)/N:
+    B1: M(N_pair)  = 1/2  = 1/2  [framework-native]
+    B2: M(N_color) = 2/3  = 2/3  = A^2 [W2 retained]
+    B3: M(N_quark) = 5/6  = 5/6  = 1 - rho = sin^2(gamma_bar)
+
+  Variance form V(N) = (N-1)/N^2:
+    B4: V(N_pair)  = 1/4  = 1/4
+    B5: V(N_color) = 2/9  = 2/9  [from prior branches]
+    B6: V(N_quark) = 5/36 = 5/36  = eta^2 [Thales retained]
+  [PASS (A)] (B1) M(N_pair) = 1/2
+  [PASS (A)] (B2) M(N_color) = A^2 = 2/3
+  [PASS (A)] (B3) M(N_quark) = 1 - rho = 5/6
+  [PASS (A)] (B4) V(N_pair) = 1/4
+  [PASS (A)] (B5) V(N_color) = 2/9
+  [PASS (A)] (B6) V(N_quark) = eta^2 = 5/36
+
+----------------------------------------------------------------------------------------
+(MV1) NEW Universal Bernoulli relation: V(N) = M(N)/N at all three N-levels
+----------------------------------------------------------------------------------------
+  V(N) = M(N) / N for N in {N_pair, N_color, N_quark}:
+    V(N_pair) = M(N_pair)/N_pair: 1/4 = 1/2/2 = 1/4  (OK)
+  [PASS (A)] (MV1) V(N_pair) = M(N_pair)/N_pair EXACTLY
+    V(N_color) = M(N_color)/N_color: 2/9 = 2/3/3 = 2/9  (OK)
+  [PASS (A)] (MV1) V(N_color) = M(N_color)/N_color EXACTLY
+    V(N_quark) = M(N_quark)/N_quark: 5/36 = 5/6/6 = 5/36  (OK)
+  [PASS (A)] (MV1) V(N_quark) = M(N_quark)/N_quark EXACTLY
+
+----------------------------------------------------------------------------------------
+(D1) NEW Cross-level decomposition: rho = V(N_pair) * M(N_color)
+----------------------------------------------------------------------------------------
+  V(N_pair) = (N_pair - 1)/N_pair^2 = 1/4
+  M(N_color) = (N_color - 1)/N_color = 2/3
+  V(N_pair) * M(N_color)              = 1/6
+  rho = 1/N_quark                      = 1/6
+
+  Structurally: V(N_pair) * M(N_color) = (1/N_pair^2)(N_pair/N_color)
+               = N_pair/(N_pair^2 N_color)
+               = 1/(N_pair * N_color)
+               = 1/N_quark = rho
+  [PASS (A)] (D1) rho = V(N_pair) * M(N_color) EXACTLY
+
+----------------------------------------------------------------------------------------
+(D2) NEW Cross-level decomposition: A^2 rho = V(N_color) * M(N_pair)
+----------------------------------------------------------------------------------------
+  V(N_color) = (N_color - 1)/N_color^2 = 2/9
+  M(N_pair)  = (N_pair - 1)/N_pair    = 1/2
+  V(N_color) * M(N_pair)               = 1/9
+  A^2 rho = rho * A^2                    = 1/9
+
+  Structurally: V(N_color) * M(N_pair) = ((N_color-1)/N_color^2)(1/N_pair)
+               (with N_pair = N_color - 1, simplifies to 1/N_color^2 = A^2 rho)
+  [PASS (A)] (D2) A^2 rho = V(N_color) * M(N_pair) EXACTLY
+  [PASS (A)] (D2) Both equal 1/N_color^2 = 1/9
+
+----------------------------------------------------------------------------------------
+D1, D2 duality: pair-color swap symmetry
+----------------------------------------------------------------------------------------
+  D1: rho = V(N_pair) * M(N_color)  [pair-variance × color-mean]
+      = 1/4 * 2/3 = 1/6
+
+  D2: A^2 rho = V(N_color) * M(N_pair)  [color-variance × pair-mean]
+      = 2/9 * 1/2 = 1/9
+
+  Duality: pair↔color and variance↔mean SWAP between D1 and D2
+  [PASS (A)] D1, D2 swap symmetry: pair-variance, color-mean → color-variance, pair-mean
+
+----------------------------------------------------------------------------------------
+Summary of new content
+----------------------------------------------------------------------------------------
+  NEW (B1-B6): 6-element Bernoulli family at three structural N-levels
+              {M(N), V(N) for N in {N_pair, N_color, N_quark}}
+
+  NEW (MV1):  Universal Bernoulli relation V(N) = M(N)/N at all three levels.
+              V(N_pair) = M(N_pair)/N_pair = 1/4
+              V(N_color) = M(N_color)/N_color = 2/9
+              V(N_quark) = M(N_quark)/N_quark = 5/36
+
+  NEW (D1):   rho = V(N_pair) * M(N_color) = (1/4)(2/3) = 1/6
+              [Cross-level decomposition of CP-phase rho]
+
+  NEW (D2):   A^2 rho = V(N_color) * M(N_pair) = (2/9)(1/2) = 1/9
+              [Cross-level decomposition of the retained A^2 rho product]
+
+  Duality: D1 and D2 swap pair↔color and variance↔mean roles.
+
+  All inputs retained on main; no SUPPORT-tier or open inputs are used.
+
+========================================================================================
+TOTAL: PASS=23, FAIL=0
+========================================================================================
+
+----- stderr -----
+

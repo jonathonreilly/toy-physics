@@ -1,0 +1,33 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_circulant_character_bridge.py
+runner_sha256: b5e03d7e646f9991f09b32d3131d0951db72a630c5f1e708872290a2c5c9b703
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 6.94
+status: ok
+----- stdout -----
+========================================================================================
+KOIDE CIRCULANT / CHARACTER BRIDGE
+========================================================================================
+  [PASS] Eigenvalue triple is real for Hermitian circulant H  (lambda=[a + 2*x, (sqrt(3)*a + I*a - sqrt(3)*x - I*x - 3*y - sqrt(3)*I*y)/(sqrt(3) + I), (sqrt(3)*a - I*a - sqrt(3)*x + I*x + 3*y - sqrt(3)*I*y)/(sqrt(3) - I)])
+  [PASS] Trivial-character coefficient is a_0 = sqrt(3) a  (a0=sqrt(3)*a)
+  [PASS] Nontrivial-character coefficient is z = sqrt(3) b  (z=sqrt(3)*(x + I*y))
+  [PASS] a_0^2 - 2|z|^2 = 3 a^2 - 6 |b|^2 exactly
+  [PASS] Koide invariant of the eigenvalue triple matches the character formula  (Q=(a**2 + 2*x**2 + 2*y**2)/(3*a**2))
+  [PASS] Under 3 a^2 = 6 |b|^2, the eigenvalue triple satisfies Q = 2/3 for all delta  (Q_delta=2/3)
+  [PASS] Unweighted block-log-volume is stationary at equal block energy  (crit=[e_tot/2])
+  [PASS] The equal-energy stationary point is a strict maximum  (second=-8/e_tot**2)
+  [PASS] A1 is exactly the equal-block-energy condition E_+ = E_perp with E_+=3a^2, E_perp=6|b|^2
+
+Interpretation:
+  The matrix-space equality 3 a^2 = 6 |b|^2 is exactly the same
+  equal-character-weight condition a_0^2 = 2 |z|^2 on the spectral
+  triple. In block-energy variables E_+ = 3 a^2 and E_perp = 6 |b|^2,
+  it is also exactly the same candidate selection principle as the
+  April 17 real-irrep-block-democracy lane. The bridge is exact; the
+  open science is whether that unweighted block principle is retained.
+
+PASS=9 FAIL=0
+
+----- stderr -----
+

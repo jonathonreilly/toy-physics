@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_veven_bosonic_normalization_theorem.py
+runner_sha256: 0ab37c518ccdd6cac37b749cf8f0b2f36105c39a74320bdd4796fec6950ab77a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO V_EVEN BOSONIC NORMALIZATION THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE EVEN CHANNELS HAVE CANONICAL FROBENIUS-DUAL GENERATORS
+========================================================================================
+  [PASS] The active Hermitian basis entering E1 and E2 is exactly Frobenius-orthogonal  (max offdiag=0.00e+00)
+  [PASS] F1 is the exact Frobenius-dual generator for E1 = delta + rho  (sample values=(0.100000,0.000000))
+  [PASS] F2 is the exact Frobenius-dual generator for E2 = A + b - c - d  (sample values=(0.000000,0.500000))
+
+========================================================================================
+PART 2: THE DUAL TARGET GENERATORS ARE ISOSPECTRAL TO SCALED ROW CONTRAST
+========================================================================================
+  [PASS] F1 has the exact source-row contrast spectrum scaled by sqrt(3/8)  (eig(F1)=[-0.61237244 -0.          0.61237244])
+  [PASS] F2 has the exact source-row contrast spectrum scaled by 3/sqrt(8)  (eig(F2)=[-1.06066017  0.          1.06066017])
+  [PASS] Both even channels therefore live on the unique traceless row generator of the exact 2-row source factor  (a1=0.612372, a2=1.060660)
+
+========================================================================================
+PART 3: THE BOSONIC SOURCE RESPONSE FIXES V_EVEN
+========================================================================================
+  [PASS] F1 and the scaled row-contrast source have identical exact bosonic response  (max diff=4.44e-16)
+  [PASS] F2 and the scaled row-contrast source have identical exact bosonic response  (max diff=8.88e-16)
+  [PASS] Therefore the even coefficient vector is fixed canonically  (v_even=(1.632993161855,0.942809041582))
+
+========================================================================================
+PART 4: THE BRANCH SURFACE RECORDS THE NEW CLOSURE POINT
+========================================================================================
+  [PASS] So this theorem closes the even coefficient vector, not yet the benchmark source amplitudes  (v_even is closed; the benchmark kernel has not yet been rebuilt around the exact transfer law)
+
+========================================================================================
+SUMMARY: PASS=10 FAIL=0
+========================================================================================
+
+----- stderr -----
+

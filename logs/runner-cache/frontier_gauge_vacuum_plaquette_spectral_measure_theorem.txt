@@ -1,0 +1,45 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py
+runner_sha256: 713a15257545b78d8c94326f5768859b323372902a1dc04553164c55bab31b71
+timeout_sec: 900
+exit_code: 0
+elapsed_sec: 0.21
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE SPECTRAL-MEASURE THEOREM
+==============================================================================
+
+Explicit witnesses for nontrivial support
+  local X(identity)                       = 1.000000000000000
+  local X(center)                         = -0.500000000000000
+  finite-surface avg(identity links)      = 1.000000000000000
+  finite-surface avg(deformed links)      = 0.996546700950692
+
+Local exact one-plaquette samples
+  sampled betas                           = [0.1, 1.0, 6.0, 20.0]
+  sampled P_1plaq(betas)                  = [0.00560184644, 0.060126554834, 0.42253173965, 0.803193676744]
+
+  [PASS] [THEOREM] the local plaquette source variable has nontrivial compact support in [-1,1]
+         X(U)=Re Tr U / 3 takes the explicit values 1 and -1/2 on SU(3)
+  [PASS] [THEOREM] the finite Wilson average-plaquette variable is continuous and nonconstant on the compact source surface
+         identity average = 1.000000000000000, deformed average = 0.996546700950692
+  [PASS] [THEOREM] compactness and continuity therefore define an exact pushforward probability measure mu_L on [-1,1]
+         mu_L = (A_L)_* nu_Haar exists uniquely on the compact interval [-1,1]
+  [PASS] [THEOREM] the finite Wilson partition function is exactly the Laplace transform of mu_L
+         Z_L(beta) = Z_L(0) * integral exp(beta N_plaq a) dmu_L(a)
+  [PASS] [THEOREM] the full connected plaquette hierarchy is exactly the tilted cumulant hierarchy of mu_L
+         P_L, chi_L, and higher connected shell sums are the tilted cumulants of one compact measure
+  [PASS] [THEOREM] Hausdorff moment uniqueness makes mu_L the unique exact equivalent generating object
+         compact support on [-1,1] makes the moment problem determinate
+  [PASS] [SUPPORT] the local one-plaquette block is consistent with a nontrivial compact spectral measure
+         sampled local plaquette values increase strictly up to 0.803193676744
+  [PASS] [SUPPORT] the remaining plaquette gap is explicit identification of the generating measure, not existence of one
+         the equivalent exact generating object already exists and is unique on every finite Wilson surface
+
+==============================================================================
+SUMMARY: THEOREM PASS=6 SUPPORT=2 FAIL=0
+==============================================================================
+
+----- stderr -----
+

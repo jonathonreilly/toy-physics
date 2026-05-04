@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_nature_grade_closure_blockers.py
+runner_sha256: 4ee62cdce23c60bf0b089935f2ff7b20f610fb722895877e0452b82ba3400244
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 16.89
+status: ok
+----- stdout -----
+================================================================================================================
+SIGNED GRAVITY NATURE-GRADE CLOSURE BLOCKER MATRIX
+  finite/conditional/blocker audit; not a physical signed-gravity claim
+================================================================================================================
+
+gate                                             status           ok    detail
+----------------------------------------------------------------------------------------------------------------
+continuum determinant-line lift                  CONDITIONAL      True  eta=[1, 2, 4, 8], chi=[1, 1, 1, 1], max_logdet_refinement_err=8.9e-16
+actual retained graph-family APS realization     CONDITIONAL      True  cubic_shell:eta=+1,chi=+1 ; subdivided_cubic_shell:eta=+3,chi=+1 ; rectangular_shell:eta=+2,chi=+1 ; orientation_reversed_shell:eta=-2,chi=-1 ; irregular_shell:eta=+5,chi=+1 | raw_graph_boundary=raw_hodge_eta_neutral=True, orientation_extension_has_eta=True, zero_modes_quarantine=True, actual_extraction_closed=False; raw=['cycle8:eta=+0,zero=2,chi=+0', 'cycle12:eta=+0,zero=2,chi=+0'] | native_containment=native_aps_line_contained=False, raw_hodge_eta_neutral=True, raw_zero_modes=2, kernel_projected=True, added_orientation_line_dim=1, extended=[(1, 1, 0, 1), (-1, -1, 0, -1)], native_basis_residual=1.414e+00, fitted=[-0. -0.], orientation_metadata_residual=0.0e+00, source_term_added=False | staggered_boundary=native_staggered_aps_selector_found=False, retained_eta_neutral=True, odd_quarantine=(open5x5_origin0_m03:eta=+1,chi=+1; open5x5_origin1_m03:eta=-1,chi=-1; open10x10_refined_m03:eta=+0,chi=+0; classification=odd_sublattice_imbalance_control), pfaffian_control=(cycle8_skew_apbc:pf=+1.250e-01-> -1.250e-01,eig_err=3.3e-16,det_err=0.0e+00; torus3x4_skew_apbc:pf=+2.812e-01-> -2.812e-01,eig_err=1.1e-15,det_err=0.0e+00), added_line_control=(raw=(eta=+0,zero=0,gap=1.000), added_line=[(1, 1, 0, 1), (-1, -1, 0, -1)]), source_basis=(native_residual=1.414e+00, odd_control_residual=0.0e+00, odd_control_admissible=False) | hosted_orientation_line=orientation_line_naturally_hosted=True, canonical_section_forced=False, operator_realization_contained=False, source_term_forced=False
+full tensor/Einstein localization beyond A1      CONDITIONAL      True  scalar_invariant_dim_full=2, scalar_complement_dim=0, oriented_tensor_lift=True, retained_carrier=True, projective_transport=True, continuum_transport=True, graded_formal_localization=True, finite_galerkin_small_data=True, global_pde_claim=False
+sector dynamics and preparation                  CONDITIONAL      True  chi_path=[1, 1, 1, 1, 1, 0, -1, -1, -1, -1, -1], allowed=[True, True, True, True, False, False, False, True, True, True, True], components={1: True, -1: True, 0: False}, preparation_boundary=sectors=(chi+=+1,chi-=-1), chi_path=[1, 1, 1, 1, 1, 1, 0, -1, -1, -1, -1, -1, -1], block_leak=0.0e+00, mixing_control=1.9e-02, physical_prep_claim=False
+UV/core stability                                CONDITIONAL      True  E_same_core_min=1.000, E_opp_core_min=2.326, E_same_no_core_min=-62.700, logZ=8.866, global_boundary=fixed_N_core_bound=True, max_bound_violation=0.0e+00, min_same_sector_E_per_particle_N80=-38.0, ruelle_stability_from_softening_alone=False
+
+NEXT REQUIRED
+  - continuum determinant-line lift: replace finite projective/refinement sanity check by inverse-limit determinant-line theorem
+  - actual retained graph-family APS realization: derive a canonical section/source theorem for the naturally hosted orientation line; current raw Hodge and staggered-Dirac operators do not contain it
+  - full tensor/Einstein localization beyond A1: upgrade formal graded local theorem to global nonlinear PDE existence/uniqueness if needed; scalar-only source remains A1-maximal
+  - sector dynamics and preparation: treat opposite-sector preparation as boundary-data/defect preparation unless a physical preparation channel is derived
+  - UV/core stability: add a genuine global stability mechanism; pair softening alone bounds fixed N but fails thermodynamic stability
+
+SUMMARY
+  checks_good=True
+  nature_grade_closed=False
+  conditional=['continuum determinant-line lift', 'actual retained graph-family APS realization', 'full tensor/Einstein localization beyond A1', 'sector dynamics and preparation', 'UV/core stability']
+  blocked=[]
+FINAL_TAG: SIGNED_GRAVITY_NATURE_GRADE_HARD_BLOCKERS_REDUCED_CONDITIONALS_REMAIN
+
+----- stderr -----
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2349: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2349: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2349: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+

@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/persistent_object_blended_readout_outer_transfer_sweep.py
+runner_sha256: 6fc423ad352a6a327ed4f606a69ad4a243c4cc8d4417fa968a626ff101f95082
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

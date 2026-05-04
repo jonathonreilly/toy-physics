@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_exact_interacting_bridge_transport.py
+runner_sha256: 86ceb82f225298c48e1d5b0d552046907d41e0c9d7fc5875acd5a614bb2a769a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.82
+status: ok
+----- stdout -----
+==============================================================================
+y_t EXACT INTERACTING BRIDGE TRANSPORT
+==============================================================================
+
+Package-native UV->IR transport law on the forced UV window.
+
+Forced UV window: x >= 0.95
+  K_exact(x) ~= -6.172071e-02 x + 8.518429e-02
+  affine-fit max relative error = 1.187562e-02
+  residual operator norm ratio = 5.023669e-03
+
+Reference constructive bridge:
+  y_t(v) = 0.917605
+  deviation from accepted target = +0.0005%
+  I2 = 0.025827
+  c2 = 0.981065
+  J_aff = 0.00063618
+  exact transport integral = 0.00063616
+  local transport integral = 0.00063618
+  exact-local residual = -2.18199484e-08
+  exact-local residual / exact = 3.429965e-05
+
+Higher-order local correction probe:
+  c0 = 0.91760483
+  c1 = 0.02750406
+  c2 = 0.00497496
+  c3 = -0.00034980
+  c4 = -0.00004606
+  |cubic+quartic| / quadratic over |delta|<=0.10 = 7.123842e-03
+  RMSE/span = 1.156569e-10
+
+  [PASS] 1a-kernel-is-positive-and-nearly-affine-on-the-forced-uv-window: kernel min/max = [2.318821e-02, 2.625882e-02]
+  [PASS] 1b-moment-transport-reduces-to-the-affine-projection: |T_exact - J_aff|/|T_exact| = 3.429965e-05
+  [PASS] 1c-higher-order-local-corrections-stay-subleading: |cubic+quartic|/quadratic = 7.123842e-03
+  [PASS] 1d-nonlocal-tail-remains-small: residual operator norm ratio = 5.023669e-03
+  [PASS] 1e-reference-transport-law-is-correct-within-the-explicit-budget: reference residual/exact = 3.429965e-05, combined budget = 1.214751e-02
+  [PASS] 1f-remainder-budget-remains-microscopic-but-nonzero: combined higher-order + nonlocal budget = 1.214751e-02
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+The current package now has a package-native UV->IR transport law on the forced UV
+window:
+
+  delta y_t(v) = integral K_loc(x) delta q(x) dx + Delta_higher + Delta_nonlocal
+
+with an affine local kernel on the forced window, an explicit higher-order
+tube correction, and an explicit nonlocal tail correction.
+
+This is the strongest honest statement currently supported:
+the exact interacting bridge is controlled by a positive local affine
+transport kernel on the forced UV window, but the bridge is still not
+fully unbounded because the remainder has not been proven to vanish.
+
+If a future theorem kills or fully enumerates the remainder, the same
+transport law promotes directly to unbounded closure.
+
+==============================================================================
+FINAL TALLY: 6 PASS / 0 FAIL
+Elapsed: 2.33 s
+==============================================================================
+
+----- stderr -----
+

@@ -1,0 +1,227 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_p1_loop_geometric_bound.py
+runner_sha256: b60257546e61ea478667212948c7d6c7560df8229623c2001be6e9a089b5269e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.20
+status: ok
+----- stdout -----
+========================================================================
+P1 loop-expansion framework-native geometric tail bound -- runner
+Date: 2026-04-17
+Authority: YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md
+========================================================================
+
+========================================================================
+PART A: Retained SU(3) Casimirs + retained n_l + retained b_0
+========================================================================
+
+  C_F                         = 4/3  = 1.3333333333
+  T_F                         = 1/2  = 0.5000000000
+  C_A                         = 3  = 3.0000000000
+  n_l (SM light flavors)      = 5
+  b_0 = (11 C_A - 4 T_F n_l)/3 = 23/3  = 7.6666666667
+  alpha_LM                     = 0.0906678400
+  alpha_LM / pi                = 0.0288604698
+  alpha_LM / (4 pi)            = 0.0072151175
+  [PASS (C)] Retained C_F = 4/3 at SU(3)  (value = 4/3)
+  [PASS (C)] Retained T_F = 1/2 at SU(3)  (value = 1/2)
+  [PASS (C)] Retained C_A = 3 at SU(3)  (value = 3)
+  [PASS (C)] Retained n_l = 5 at the M_Pl scale (u,d,s,c,b)  (value = 5)
+  [PASS (C)] Retained b_0 = (11 C_A - 4 T_F n_l) / 3 = 23/3 at n_l = 5  (b_0 = 23/3)
+  [PASS (C)] Retained alpha_LM = 0.09066784 to eight-decimal precision  (alpha_LM = 0.09066784)
+  [PASS (C)] Retained alpha_LM / pi = 0.02886 +- 0.00001  (alpha_LM/pi = 0.02886047)
+
+========================================================================
+PART B: 1-loop matching Delta_1 at packaged and central I_S
+========================================================================
+
+  Delta_1 (I_S = 2, packaged)    = 0.01924031  = 1.9240%
+  Delta_1 (I_S = 4, low-end)     = 0.03848063  = 3.8481%
+  Delta_1 (I_S = 6, central)     = 0.05772094  = 5.7721%
+  Delta_1 (I_S = 8, high-mid)    = 0.07696125  = 7.6961%
+  Delta_1 (I_S = 10, max)        = 0.09620157  = 9.6202%
+  [PASS (C)] Delta_1 at packaged I_S = 2 equals 1.924% to permille  (Delta_1 = 0.019240)
+  [PASS (C)] Delta_1 at central I_S = 6 equals 5.772% to permille  (Delta_1 = 0.057721)
+  [PASS (C)] Delta_1 scales linearly with I_S (central/packaged = 3)  (ratio = 3.000000)
+  [PASS (C)] Equivalent form Delta_1 (I_S=2) = alpha_LM * C_F / (2 pi)  (diff = 0.00e+00)
+
+========================================================================
+PART C: Indicative 2-loop/1-loop ratios from retained color tensors
+========================================================================
+
+  r_CF = 2 C_F (a/pi)                = 2 * 4/3 * 0.028860  = 0.076961
+  r_CA = 2 C_A (a/pi)                = 2 * 3 * 0.028860    = 0.173163
+  r_lp = 2 T_F n_l (a/pi)            = 2 * 5/2 * 0.028860  = 0.144302
+  max(r_CF, r_CA, r_lp)              = 0.173163  (dominated by r_CA)
+  [PASS (C)] Indicative r_CF = 0.0770 +- 0.001  (r_CF = 0.0770)
+  [PASS (C)] Indicative r_CA = 0.1732 +- 0.001  (r_CA = 0.1732)
+  [PASS (C)] Indicative r_lp = 0.1443 +- 0.001  (r_lp = 0.1443)
+  [PASS (C)] All three indicative ratios strictly < 1 (series converging)  (max = 0.1732)
+  [PASS (C)] max indicative ratio is r_CA (non-Abelian dominates)  (max = r_CA = 0.1732)
+
+========================================================================
+PART D: Framework-native ratio bound r_R = (a/pi) * b_0
+========================================================================
+
+  r_R = (a/pi) * b_0           = 0.028860 * 23/3
+                               = 0.22126360
+  max indicative 2-loop ratio  = 0.173163  (r_CA)
+  safety margin                = r_R / r_max = 1.2778
+
+  Candidate envelope comparison (retained quantities only):
+    candidate                          value  envelopes max(r_obs) = 0.1732?
+    --------------------------------------------------------------
+    (a/pi) * C_A                    0.086581  NO 
+    (a/pi) * 2 C_F^2                0.102615  NO 
+    (a/pi) * C_F C_A                0.115442  NO 
+    (a/pi) * (C_F + C_A)            0.125062  NO 
+    (a/pi) * 2 C_A                  0.173163  NO 
+    (a/pi) * b_0 (n_l=5)            0.221264  YES
+    (a/pi) * C_A^2                  0.259744  YES
+    (a/pi) * 4 C_A                  0.346326  YES
+  [PASS (C)] Framework-native bound r_R > max(r_CF, r_CA, r_lp) (envelope property)  (r_R = 0.2213, r_max = 0.1732)
+  [PASS (C)] Framework-native bound r_R > r_CA (non-Abelian tensor envelope)  (r_R = 0.2213, r_CA = 0.1732)
+  [PASS (C)] Safety margin r_R / r_max in [1.2, 1.4] (tight but not saturated)  (margin = 1.2778)
+  [PASS (C)] Geometric-sum convergence r_R < 1  (r_R = 0.2213)
+  [PASS (C)] Tight candidate (a/pi)*2 C_A saturates (justifying b_0 choice)  ((a/pi)*2 C_A = 0.1732 = r_max = 0.1732)
+  [PASS (C)] r_R bounded by analog P3 envelope (a/pi)*C_A^2 from above  (r_R = 0.2213 < (a/pi)*C_A^2 = 0.2597)
+  [PASS (C)] r_R derived from retained SU(3) Casimirs + retained n_l + retained alpha_LM only  (structural retention provenance verified)
+
+========================================================================
+PART E: Tail residual and total bound at truncation N = 1
+========================================================================
+
+  r_R / (1 - r_R) = tail amplification on Delta_1   = 0.284132
+  1 / (1 - r_R) = total amplification on Delta_1    = 1.284132
+
+  Packaged (I_S = 2) reference:
+    Delta_1                                = 0.01924031  = 1.9240%
+    |tail(N=1)| <= Delta_1 * r/(1-r)       = 0.00546678  = 0.5467%
+    |Delta_R^{total}| <= Delta_1 / (1-r)   = 0.02470709  = 2.4707%
+
+  Central cited (I_S = 6) reference:
+    Delta_1                                = 0.05772094  = 5.7721%
+    |tail(N=1)| <= Delta_1 * r/(1-r)       = 0.01640034  = 1.6400%
+    |Delta_R^{total}| <= Delta_1 / (1-r)   = 0.07412128  = 7.4121%
+
+  Sensitivity across cited I_S range:
+      I_S     Delta_1   |tail(N=1)|   |Delta_R^tot|
+    ----------------------------------------------------
+        2     1.9240%       0.5467%         2.4707%    pack
+        4     3.8481%       1.0934%         4.9414%    
+        6     5.7721%       1.6400%         7.4121%    cent
+        8     7.6961%       2.1867%         9.8828%    
+       10     9.6202%       2.7334%        12.3535%    
+  [PASS (C)] Tail factor r_R/(1-r_R) = 0.2841 +- 0.001  (tail_factor = 0.2841)
+  [PASS (C)] Amplification factor 1/(1-r_R) = 1.2841 +- 0.001  (amp_factor = 1.2841)
+  [PASS (C)] |tail(N=1)| at packaged I_S=2 equals 0.547% to permille  (tail = 0.005467 = 0.5467%)
+  [PASS (C)] |Delta_R^{total}| at packaged I_S=2 equals 2.471% to permille  (total = 0.024707 = 2.4707%)
+  [PASS (C)] |tail(N=1)| at central I_S=6 equals 1.640% to permille  (tail = 0.016400 = 1.6400%)
+  [PASS (C)] |Delta_R^{total}| at central I_S=6 equals 7.412% to permille  (total = 0.074121 = 7.4121%)
+  [PASS (C)] At packaged I_S=2: 1-loop carries >= 77% of total bound  (1-loop fraction = 77.87%)
+  [PASS (C)] At central I_S=6: 1-loop carries >= 77% of total bound  (1-loop fraction = 77.87%)
+
+  Retention-tightening table (tail at truncation N), packaged I_S=2:
+      N   |Delta_N| (bound)   |tail(N)| (bound)
+    ------------------------------------------
+      1          0.01924031          0.00546678
+      2          0.00425718          0.00120960
+      3          0.00094196          0.00026764
+
+========================================================================
+PART F: Comparison with analog P3 K-series bound
+========================================================================
+
+  P3 K-series bound (at mu = m_t):
+    alpha_s(m_t)            = 0.107900
+    alpha_s/pi              = 0.034346
+    envelope scale          = C_A^2 = 9.0000
+    r_bound                 = (a_s/pi)*C_A^2 = 0.309111
+    tail factor r/(1-r)     = 0.447410
+
+  P1 loop-expansion bound (at mu = M_Pl, this note):
+    alpha_LM                = 0.090668
+    alpha_LM/pi             = 0.028860
+    envelope scale          = b_0 = 7.6667
+    r_R                     = (a_LM/pi)*b_0 = 0.221264
+    tail factor r/(1-r)     = 0.284132
+
+  Ratios (P1 / P3):
+    coupling factor ratio   = (a_LM/a_s) = 0.8403
+    envelope scale ratio    = b_0 / C_A^2 = 0.8519
+    overall r ratio         = r_R / r_bound = 0.7158
+    tail factor ratio       = 0.6351
+  [PASS (C)] P1 bound tighter in coupling factor: alpha_LM < alpha_s(m_t)  (alpha_LM/pi = 0.028860 < alpha_s/pi = 0.034346)
+  [PASS (C)] P1 bound tighter in envelope scale: b_0 < C_A^2  (b_0 = 7.6667 < C_A^2 = 9.0000)
+  [PASS (C)] P1 r_R strictly tighter than P3 r_bound  (r_R = 0.221264 < r_bound = 0.309111)
+  [PASS (C)] P1 overall ratio r_P1 / r_P3 ~ 0.72 (coupling x envelope tightening)  (overall_ratio = 0.7158)
+  [PASS (C)] P1 tail factor ~ 0.63 x P3 tail factor (compounded tightening)  (tail_factor_ratio = 0.6351)
+
+========================================================================
+PART G: Cross-consistency with single-tensor 2-loop estimate
+========================================================================
+
+  Informal single-tensor 2-loop estimate (UV bridge note):
+    (a_LM/pi)^2 * C_F^2     = 0.00148076  = 0.1481%
+
+  Retained 2-loop bound (this note, packaged I_S=2):
+    Delta_1 * r_R           = 0.00425718  = 0.4257%
+
+  Ratio retained-bound / single-tensor   = 2.8750
+  [PASS (C)] Retained 2-loop bound >= single-tensor C_F^2 estimate  (bound = 0.004257 vs single = 0.001481)
+  [PASS (C)] Ratio retained/single in [2.5, 3.5] (full tensor envelope correction)  (ratio = 2.8750)
+  [PASS (C)] Informal 2-loop (~0.15%) consistent with bound (< 0.5%)  (single_tensor = 0.001481)
+
+  1-loop / total at packaged I_S=2       = 0.7787
+    (= 1 - r_R = 0.7787)
+
+========================================================================
+PART H: Structural retention provenance
+========================================================================
+
+  Retained inputs used by this bound:
+    - SU(3) Casimirs C_F, T_F, C_A  (from YT_EW_COLOR_PROJECTION_THEOREM.md D7)
+    - retained n_l = 5 at M_Pl      (from SM branch of complete-prediction-chain)
+    - derived b_0 = 23/3            (exact rational at SU(3), n_l=5)
+    - alpha_LM = 0.09066784         (from canonical_plaquette_surface.py via UV bridge note)
+    - I_S bracket [2, 4-10]         (from YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md)
+
+  NOT used by this bound as a derivation input:
+    - any literature value of delta_R^{(2)} or higher
+    - any non-retained empirical parameter
+    - any external numerical input beyond the SU(3) Casimir algebra,
+      the retained SM light-flavor count, and the retained alpha_LM anchor.
+
+  Informal cross-check inputs (not derivation inputs):
+    - single-tensor 2-loop estimate ~0.15% from UV bridge note (Sec G)
+  [PASS (C)] Bound input b_0 = 23/3 is a retained rational at SU(3), n_l=5  (b_0 = 23/3 verified)
+  [PASS (C)] Bound input alpha_LM is retained from canonical plaquette surface  (alpha_LM = 0.09066784)
+  [PASS (C)] No literature value of delta_R^{(2)} or higher imported  (runner does not reference any delta_R^{(n)} for n >= 2)
+  [PASS (C)] Prior P1 notes are the sole upstream sources  (retention lineage: Fierz no-go + color-factor + I_S citation + canonical alpha_LM)
+
+========================================================================
+SUMMARY: PASS=43  FAIL=0
+========================================================================
+
+Framework-native ratio r_R = (a_LM/pi) * b_0             = 0.221264
+Max indicative 2-loop/1-loop ratio (r_CA)                = 0.173163
+Safety margin r_R / r_CA                                 = 1.2778
+Tail amplification factor r_R/(1-r_R)                    = 0.2841
+Total amplification factor 1/(1-r_R)                     = 1.2841
+
+At packaged I_S = 2:
+  Delta_1                   = 1.9240%
+  |tail(N=1)| bound         = 0.5467%
+  |Delta_R^total| bound     = 2.4707%
+
+At central cited I_S = 6:
+  Delta_1                   = 5.7721%
+  |tail(N=1)| bound         = 1.6400%
+  |Delta_R^total| bound     = 7.4121%
+
+(Bound depends only on retained SU(3) Casimirs, retained n_l = 5,
+ and retained alpha_LM; no literature value of delta_R^{(2)} or higher imported.)
+
+----- stderr -----
+

@@ -1,0 +1,50 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_microscopic_value_frontier_theorem_2026_04_18.py
+runner_sha256: 1e39ab9c8bf3921411149e0cf326b8f7ff1263983ef631b154261f1610e119da
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.77
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT MICROSCOPIC-VALUE FRONTIER THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: CURRENT-MAIN ALREADY REDUCES THE ROUTE TO MICROSCOPIC VALUES
+========================================================================================
+  [PASS] The full microscopic reduction note already says the remaining object is the actual microscopic charge-preserving operator D
+  [PASS] The charged source-response note already reduces the remaining object further to D_- and its Schur pushforward
+  [PASS] The projected-source note already says once dW_e^H is known the downstream selected transport column is algorithmic
+  [PASS] Current main still does not contain a Wilson-to-dW_e^H descendant theorem or Wilson Hermitian source family
+
+========================================================================================
+PART 2: THE LOCAL SCHUR NOTE IS CONDITIONAL ON SUPPLIED D AND E_e
+========================================================================================
+  [PASS] The local Schur note assumes an invertible charge-preserving microscopic operator D
+  [PASS] The local Schur note also assumes the charged-support split E_- = E_e ⊕ E_r and defines Phi_e from the supplied inclusion
+
+========================================================================================
+PART 3: ONCE L_e IS SUPPLIED, ALL DOWNSTREAM DATA ARE ALREADY ALGORITHMIC
+========================================================================================
+  [PASS] Once L_e is supplied, the 9 Hermitian responses reconstruct H_e exactly  (err=2.37e-16)
+  [PASS] Once H_e is supplied, the N_e packet is fixed algorithmically  (col sums=[1. 1. 1.])
+  [PASS] The downstream transport readout is then fixed algorithmically as well  (eta_vals=[0.82075559 0.9895127  0.92061708])
+
+========================================================================================
+PART 4: AMBIENT COMPLETION FREEDOM DOES NOT CHANGE THE LOCAL FRONTIER
+========================================================================================
+  [PASS] Different ambient completions with the same L_e give the same descended first variation  (err=4.44e-09)
+  [PASS] So once L_e is supplied, changing the unresolved ambient completion does not create a new frontier object  (matrix_diff=7.960)
+
+========================================================================================
+PART 5: FRONTIER CONCLUSION
+========================================================================================
+  [PASS] The honest remaining direct-descendant frontier is microscopic value law for D_- / L_e plus any Wilson-native support provenance for E_e  (conditional local Schur algebra is downstream once D and E_e are supplied)
+
+========================================================================================
+SUMMARY: PASS=12 FAIL=0
+========================================================================================
+
+----- stderr -----
+

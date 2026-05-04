@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_postcanonical_extension_class.py
+runner_sha256: bed7ecad3b95a80c666d7e6886a0450f64d12df398bcf2360832090d0cc6beb5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO POST-CANONICAL EXTENSION CLASS
+========================================================================================
+
+Question:
+  After the full canonical source-phase route fails, what is the
+  smallest honest positive denominator object left?
+
+========================================================================================
+PART 1: THE OLD POSITIVE ROUTE CLASSES ARE NOW EXHAUSTED
+========================================================================================
+  [PASS (C)] The exact universal Dirac bridge is excluded by the universal-Yukawa no-go  (Y = y_0 I leaves Y^dag Y proportional to I and kills the CP tensor)
+  [PASS (C)] The exact Z_3-covariant circulant bridge class is excluded physically  (it stays real symmetric in the heavy-neutrino mass basis)
+  [PASS (C)] The simplest 2<->3-symmetric canonical two-Higgs sublane is excluded  (exact source-phase slot alignment forces its CP tensor to zero)
+  [PASS (C)] The full admitted canonical two-Higgs lane is also excluded on the exact source-phase branch  (source-phase slot alignment forces x3 y3 = 0, while the physical tensor is proportional to x3 y3)
+
+  So the current branch is past every previously-admitted local rescue
+  class on the denominator side.
+
+========================================================================================
+PART 2: THE PHYSICAL CARRIER REQUIREMENTS STILL STAND
+========================================================================================
+  [PASS (C)] Any future positive route must remain right-sensitive  (the physical kernel is Y^dag Y in the heavy-neutrino basis)
+  [PASS (C)] Any future positive route must be non-circulant in the Z_3 basis  (the exact circulant class is already exhausted)
+  [PASS (C)] Any future positive route must still live on the singlet-doublet slot carrier  (the physical CP tensor is exactly proportional to the even/odd slot product u v)
+  [PASS (C)] So one even slot amplitude and one odd slot amplitude remain mandatory  (the physical tensor vanishes if either slot is absent)
+
+  The surviving positive problem is therefore not another generic
+  texture search. The carrier and its slot content are already fixed.
+
+========================================================================================
+PART 3: MINIMAL SURVIVING POSITIVE CLASS
+========================================================================================
+  [PASS (C)] The surviving positive class must lie beyond the admitted canonical lane  (all exact canonical source-phase routes are exhausted)
+  [PASS (C)] It must be a genuinely new mixed bridge rather than a reparameterization of the old bank  (the old bank already sets the relevant canonical realization to zero)
+  [PASS (C)] Its minimal real data are exactly two slot amplitudes (u,v)  (one even carrier slot and one odd activator slot)
+
+  Therefore the minimal surviving positive extension class is:
+    a non-canonical right-sensitive mixed bridge with two real slot
+    amplitudes on the singlet-doublet carrier.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact answer:
+    - the old admitted local classes are exhausted
+    - the physical carrier remains the singlet-doublet slot family
+    - the surviving positive class must be beyond the canonical lane
+    - its minimal data are two real slot amplitudes u and v
+
+  So the remaining last-mile DM object is a non-canonical
+  right-sensitive mixed bridge on the singlet-doublet carrier.
+
+PASS=11 FAIL=0
+
+----- stderr -----
+

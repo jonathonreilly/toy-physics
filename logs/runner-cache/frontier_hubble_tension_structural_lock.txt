@@ -1,0 +1,23 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hubble_tension_structural_lock.py
+runner_sha256: c9c14ef50e70677e3751926099f6457570a7d3dc8bc8cc16e7fde61d4fd6209f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.44
+status: ok
+----- stdout -----
+========================================================================
+Hubble Tension Structural Lock theorem — runner
+Theorem note: docs/HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md
+========================================================================
+[PASS] CONTINUITY: continuity solved exactly for w in {0, 1/3, -1}
+[PASS] FRIEDMANN: (★) verified symbolically
+[PASS] LOCK_COROLLARY: H_0_implied(a) = H_0 for all a > 0
+[PASS] NUMERICAL_LCDM: max |H_0_implied(a) - H_0| = 0.000e+00 kmsMpc; H(z) monotone in z in [0, 1]
+[PASS] MODIFIED_DE_STRESS: spread(delta=0) = 0; spread > 0 for delta != 0 — operational falsifier holds. delta=-0.10: 1.553 km/s/Mpc | delta=-0.05: 0.800 km/s/Mpc | delta=-0.01: 0.164 km/s/Mpc | delta=+0.00: 0.000 km/s/Mpc | delta=+0.01: 0.166 km/s/Mpc | delta=+0.05: 0.852 km/s/Mpc | delta=+0.10: 1.761 km/s/Mpc
+------------------------------------------------------------------------
+summary: PASS=5 FAIL=0
+========================================================================
+
+----- stderr -----
+

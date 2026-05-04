@@ -1,0 +1,76 @@
+===== runner cache v1 =====
+runner: scripts/staggered_chiral_symmetry_check.py
+runner_sha256: 309c29f8dcd2f2d8df75c5c9daad2f69c2ea70c7ffbe6f659e634d051860ea93
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================
+STAGGERED Cl(3) H_phys SPECTRUM IS CHIRAL-SYMMETRIC: σ(H) = -σ(H)
+========================================================================
+
+  Lattice: L = 4 (periodic, bipartite). N = L^3 = 64.
+
+------------------------------------------------------------------------
+TEST 1: Build anti-Hermitian D (staggered hopping) and diagonal C = diag(ε(x))
+------------------------------------------------------------------------
+  ||D + D†|| (anti-Hermitian check on D) = 0.000e+00
+  ||H_phys - H_phys†|| (Hermitian check on H = iD) = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: {C, H_phys} = 0 (chiral anti-commutation, from cpt_exact_note)
+------------------------------------------------------------------------
+  ||{C, H_phys}|| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: σ(H_phys) is symmetric around 0  (σ = -σ as multisets)
+------------------------------------------------------------------------
+  positive eigenvalues (with multiplicity): 28
+  negative eigenvalues (with multiplicity): 28
+  zero eigenvalues:                          8
+  multisets {+E} = {|−E|} (after sign flip):
+    True
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: ∀ E ≠ 0: mult(E) = mult(-E)
+------------------------------------------------------------------------
+  All non-zero eigenvalues have matching ±E multiplicities.
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5: H_phys (C |E⟩) = -E · (C |E⟩) for every eigenstate |E⟩ with E ≠ 0
+------------------------------------------------------------------------
+  Checked 56 non-zero eigenstates.
+  max ||H_phys (C|E⟩) - (-E)(C|E⟩)|| = 2.615e-15
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 6: Tr(H_phys) = Σ E = 0  (sum of eigenvalues vanishes by symmetry)
+------------------------------------------------------------------------
+  Tr(H_phys) = 0.000e+00
+  Σ eigenvalues = -1.554e-15
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 7: Sublattice balance |{x : ε(x) = +1}| = |{x : ε(x) = -1}| = N/2 = 32
+        (necessary for C to define a balanced grading)
+------------------------------------------------------------------------
+  |Λ_+| = 32,  |Λ_-| = 32
+  STATUS: PASS
+
+========================================================================
+  Test 1 (D anti-Hermitian, H = iD Hermitian):     PASS
+  Test 2 ({C, H_phys} = 0 from CPT_EXACT_NOTE):    PASS
+  Test 3 (σ(H_phys) symmetric around 0):            PASS
+  Test 4 (mult(+E) = mult(-E) for E ≠ 0):           PASS
+  Test 5 (C|E⟩ has eigenvalue -E for every |E⟩):    PASS
+  Test 6 (Σ eigenvalues = 0):                       PASS
+  Test 7 (sublattice balance |Λ_+| = |Λ_-| = N/2):  PASS
+  OVERALL: PASS
+
+----- stderr -----
+

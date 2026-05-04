@@ -1,0 +1,81 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_logical_readout_audit.py
+runner_sha256: 6e77955f9efbe8a52040acc8919be95d8bdbd50012c689fdb723064fa7381970
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.46
+status: ok
+----- stdout -----
+TELEPORTATION LOGICAL READOUT/EXTRACTION AUDIT
+Status: planning / first artifact; quantum state teleportation only
+Extraction under audit: keep last KS taste bit per species; trace cells and spectator tastes
+Question: valid reduced logical state versus operationally addressable taste-only readout
+Input probes for Bob no-message audit: 134 (seed=20260425, random=128)
+
+Case: 1d_poisson_chsh
+  lattice/params: dim=1 side=8 N=8 envs/logical_qubit=4 mass=0 G=1000
+  full state: E0=-343.877771485, CHSH=2.822668
+  trace extraction validity: trace error=0.000e+00, hermitian error=0.000e+00, min eig=2.557e-17, branch probability sum=1.000000000000, valid=YES
+  traced logical resource: best Bell=0.997963 (Phi+), CHSH=2.822668, purity=0.997967, negativity=0.497963
+  fixed-env branch variation:
+    branches=16, active=16, active probability=1.000000000000, effective branch count=4.008158
+    branch probability range=2.056839e-13..0.249745
+    best-Bell fidelity range/weighted: 0.499964..0.999984, mean=0.998472, std=0.015917
+    overlap with traced label Phi+: 0.000016..0.998981, weighted mean=0.997963, std=0.031860
+    branch Bob-bias range/weighted mean: 3.999e-03..5.000e-01, mean=3.239e-02
+    branch best-label mass: Phi+=p:0.998982 n:4, Psi+=p:0.001018 n:12
+    high-fidelity postselection mass (best Bell >= 0.900): count=8, p=0.998982, attempts=1.00102
+    high-fidelity mass for traced label (Phi+ >= 0.900): count=4, p=0.998982, attempts=1.00102
+    most-likely fixed-env branch: p=0.249745 (attempts 4.00408), best Bell=0.998981 (Phi+), traced-label overlap=0.998981, CHSH=2.825546, negativity=0.498981, Bob bias=3.191e-02
+      env A=cell=(2,), spectator=()
+      env B=cell=(0,), spectator=()
+    best-fidelity postselected branch: p=2.056839e-13 (attempts 4.86183e+12), best Bell=0.999984 (Psi+), traced-label overlap=0.000016, CHSH=2.828382, negativity=0.499984, Bob bias=3.999e-03
+      env A=cell=(2,), spectator=()
+      env B=cell=(2,), spectator=()
+    worst traced-label branch: p=2.056839e-13 (attempts 4.86183e+12), best Bell=0.999984 (Psi+), traced-label overlap=0.000016, CHSH=2.828382, negativity=0.499984, Bob bias=3.999e-03
+      env A=cell=(2,), spectator=()
+      env B=cell=(2,), spectator=()
+  Bob before classical message under traced resource: probe states=134, marginal bias from I/2=3.189e-02, max no-record to resource marginal=4.441e-16, max pairwise input distance=2.220e-16, max branch probability span=3.189e-02, max corrected trace error=7.773e-16
+  operational readout status:
+    mathematical trace extraction: ESTABLISHED for taste-only statistics
+    native taste-only readout/apparatus: NOT ESTABLISHED by this audit
+    cells/spectators ignorable only under a proved O_logical tensor I_env readout
+
+Case: 2d_poisson_chsh
+  lattice/params: dim=2 side=4 N=16 envs/logical_qubit=8 mass=0 G=1000
+  full state: E0=-66.100691676, CHSH=2.668376
+  trace extraction validity: trace error=0.000e+00, hermitian error=0.000e+00, min eig=-1.087e-17, branch probability sum=1.000000000000, valid=YES
+  traced logical resource: best Bell=0.970283 (Phi+), CHSH=2.745662, purity=0.971783, negativity=0.470283
+  fixed-env branch variation:
+    branches=64, active=64, active probability=1.000000000000, effective branch count=8.757659
+    branch probability range=5.854540e-08..0.119428
+    best-Bell fidelity range/weighted: 0.984720..0.999428, mean=0.985011, std=0.001348
+    overlap with traced label Phi+: 0.000572..0.996406, weighted mean=0.970283, std=0.118622
+    branch Bob-bias range/weighted mean: 2.391e-02..1.227e-01, mean=1.213e-01
+    branch best-label mass: Phi+=p:0.985011 n:32, Psi+=p:0.014989 n:32
+    high-fidelity postselection mass (best Bell >= 0.900): count=64, p=1.000000, attempts=1
+    high-fidelity mass for traced label (Phi+ >= 0.900): count=32, p=0.985011, attempts=1.01522
+    most-likely fixed-env branch: p=0.119428 (attempts 8.37324), best Bell=0.984720 (Phi+), traced-label overlap=0.984720, CHSH=2.785545, negativity=0.484720, Bob bias=1.227e-01
+      env A=cell=(1, 1), spectator=(0,)
+      env B=cell=(0, 0), spectator=(0,)
+    best-fidelity postselected branch: p=5.854540e-08 (attempts 1.70808e+07), best Bell=0.999428 (Psi+), traced-label overlap=0.000572, CHSH=2.826809, negativity=0.499428, Bob bias=2.391e-02
+      env A=cell=(0, 1), spectator=(1,)
+      env B=cell=(0, 1), spectator=(1,)
+    worst traced-label branch: p=5.854540e-08 (attempts 1.70808e+07), best Bell=0.999428 (Psi+), traced-label overlap=0.000572, CHSH=2.826809, negativity=0.499428, Bob bias=2.391e-02
+      env A=cell=(0, 1), spectator=(1,)
+      env B=cell=(0, 1), spectator=(1,)
+  Bob before classical message under traced resource: probe states=134, marginal bias from I/2=1.213e-01, max no-record to resource marginal=4.718e-16, max pairwise input distance=2.220e-16, max branch probability span=1.213e-01, max corrected trace error=8.883e-16
+  operational readout status:
+    mathematical trace extraction: ESTABLISHED for taste-only statistics
+    native taste-only readout/apparatus: NOT ESTABLISHED by this audit
+    cells/spectators ignorable only under a proved O_logical tensor I_env readout
+
+Gatekeeping language:
+  Established: tracing cells and spectator tastes gives a valid logical density matrix and the correct probabilities for measurements that are strictly taste-only, i.e. O_logical tensor I_env.
+  Not established: a native apparatus that measures, prepares, or corrects only the retained taste bit while remaining blind to cell/spectator degrees of freedom.
+  Fixed-env/postselected branches are diagnostics. They become protocol resources only after an environment measurement, heralding rule, and branch-conditioned logical operation are supplied.
+  Bob's pre-message marginal can be biased relative to I/2, but the audited quantity is input independence before the classical Bell record arrives.
+  Claim boundary: quantum state teleportation planning only; no matter, mass, charge, energy, object, or faster-than-light transport.
+
+----- stderr -----
+

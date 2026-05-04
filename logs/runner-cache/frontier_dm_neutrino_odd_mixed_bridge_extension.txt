@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_odd_mixed_bridge_extension.py
+runner_sha256: 93825c149d8bdd0436e8e9ea831ba697fa1b69bce2563fa14a6c3add00e02958
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM ODD-SLOT MINIMAL MIXED-BRIDGE EXTENSION
+========================================================================================
+
+Authority stack:
+  - DM odd-circulant residual-Z2 slot theorem
+  - DM odd-circulant current-stack zero law
+  - DM two-Higgs minimality theorem
+  - DM two-Higgs continuity sheet theorem
+
+Question:
+  What is the smallest honest positive extension class that could
+  activate the unique DM odd slot?
+
+========================================================================================
+PART 1: THE CURRENT BANK ELIMINATES THE EVEN / ADDITIVE ROUTES
+========================================================================================
+  [PASS] The odd-slot theorem identifies one unique residual-Z2-odd local class
+  [PASS] The current-zero-law note records c_odd,current = 0
+  [PASS] The current-zero-law note says the present bank is residual-Z2 even
+
+  So any positive realization must leave the current even local bank.
+
+========================================================================================
+PART 2: THE REMAINING SUPPORT IS THE CANONICAL TWO-HIGGS LOCUS
+========================================================================================
+  [PASS] The two-Higgs minimality theorem says there is no smaller exact local escape
+  [PASS] The continuity theorem says the physical sheet is fixed on the DM circulant lane
+
+  So any positive activator must live on the canonical non-universal
+  two-Higgs branch, not on some other smaller local extension.
+
+========================================================================================
+PART 3: THE REDUCED POSITIVE EXTENSION CLASS HAS ONE REAL AMPLITUDE
+========================================================================================
+  [PASS] The unique odd class is one-dimensional, spanned by i(S-S^2)  (||basis||=2.449490)
+  [PASS] Any reduced positive activator on that class carries one real amplitude slot  (a_odd=0.370000)
+
+  So the minimal surviving positive DM extension class is not a family of
+  unrelated activators. On the reduced local quotient it is one odd class
+  with one real amplitude slot.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact extension-class answer:
+    - the current even/additive bank is ruled out
+    - the remaining support is the canonical non-universal two-Higgs lane
+    - the surviving local class is the unique odd circulant class
+    - the reduced positive extension therefore carries one real amplitude
+      on a residual-Z2-odd non-additive mixed bridge
+
+PASS=7  FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,51 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_backreaction_scale_closure.py
+runner_sha256: 2399818c16a44211aecbe1d16a2e6f7dba696c81342022d8b192df27f08b9800
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.08
+status: ok
+----- stdout -----
+====================================================================================================
+STAGGERED BACKREACTION SCALE-CLOSURE PROBE
+  transport law fixed; source->field map varied; one global gain fitted per map
+  primary question: can a single normalization materially close the external-vs-solved force gap?
+====================================================================================================
+dt=0.12, steps=10, mass=0.3, retained cycle-bearing families=2, holdout DAG families=1
+
+MAP SUMMARY
+mapping               gain    raw_gap    cal_gap   raw_hold   cal_hold    gain_mu    gain_sd
+invheat_b3p00        0.621  4.314e-01  2.053e-01  1.228e+01  7.249e+00      0.762      0.220
+invheat_b2p00        2.843  6.763e-01  2.130e-01  1.333e+00  5.634e+00      3.262      0.750
+lap2_b1p00           7.616  8.728e-01  2.508e-01  3.582e-01  3.935e+00      7.975      0.945
+invheat_b1p50        5.981  8.414e-01  2.855e-01  2.476e-02  5.175e+00      6.492      1.099
+invheat_b1p00       11.129  9.125e-01  4.671e-01  5.276e-01  4.329e+00     11.559      1.210
+invheat_b0p50       18.009  9.451e-01  4.833e-01  7.718e-01  3.228e+00     18.267      0.983
+lap2_b0p25          18.844  9.474e-01  5.016e-01  7.941e-01  2.993e+00     19.068      0.895
+lap1_b0p50          19.435  9.490e-01  5.152e-01  8.075e-01  2.851e+00     19.638      0.837
+gaussian            26.109  9.618e-01  5.407e-01  8.822e-01  2.165e+00     26.188      0.411
+invheat_b0p25       21.938  9.547e-01  5.580e-01  8.374e-01  2.674e+00     22.104      0.738
+lap1_b0p25          22.359  9.555e-01  5.587e-01  8.450e-01  2.568e+00     22.509      0.687
+
+READOUT
+  baseline cycle-bearing mean gap: 9.618e-01
+  best cycle-bearing mean gap: 2.053e-01 (invheat_b3p00, gain=0.621)
+  improvement factor: 4.69x
+  baseline holdout gap: 8.822e-01
+  best holdout gap: 7.249e+00
+  best-map cycle-bearing mean self-gap: 8.045e-01
+  best-map source-response R^2 mean: 0.9945
+  best-map two-body residual max: 5.771e-16
+  best-map minimum TOWARD count: 3/3
+  best-map norm drift max: 7.772e-16
+  runtime: 2.81s
+
+INTERPRETATION
+  - This is a scale-normalization probe, not a transport-law change.
+  - A material closure would mean the calibrated cycle-bearing gap is
+    much smaller than the raw gap while the retained checks remain exact.
+  - If the calibrated gap still sits far from the external-kernel control,
+    the blocker is structural rather than a single missing normalization.
+
+----- stderr -----
+

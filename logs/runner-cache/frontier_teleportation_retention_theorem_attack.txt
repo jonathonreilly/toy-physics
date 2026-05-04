@@ -1,0 +1,41 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_retention_theorem_attack.py
+runner_sha256: 245455bf476c0322e06c43a8fec27706d26f136ae51d06f7b57503bacbc43e1a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+TELEPORTATION RETENTION-THEOREM ATTACK
+Status: planning artifact; retention route and side-12 certificate
+Claim boundary: ordinary quantum state teleportation only; no matter, mass, charge, energy, object, or faster-than-light transport
+
+selector retention theorem: equivalent_pairs=32, selector_entropy_bits=5.000000, completion_clauses=3, bare_derivation_closed_negative=True, minimal_completion_sufficient=True, decision_required=True
+signed sparse side-12 certificate rows:
+  side=4, gap=0.0244025, gap*L^2=0.390440, Bell*=0.999702000000, Fbest=0.999802000000, CHSH=2.827585000000, neg=0.499702000000, purity=0.999702000000
+  side=6, gap=0.0120618, gap*L^2=0.434225, Bell*=0.999709000000, Fbest=0.999806000000, CHSH=2.827604000000, neg=0.499709000000, purity=0.999709000000
+  side=8, gap=0.00704654, gap*L^2=0.450979, Bell*=0.999711000000, Fbest=0.999807000000, CHSH=2.827608000000, neg=0.499711000000, purity=0.999711000000
+  side=10, gap=0.00459031, gap*L^2=0.459031, Bell*=0.999711069000, Fbest=0.999807379000, CHSH=2.827609933000, neg=0.499711069000, purity=0.999711109000
+  side=12, gap=0.00321872568895, gap*L^2=0.463496, Bell*=0.999711313114, Fbest=0.999807542076, CHSH=2.827610624410, neg=0.499711313114, purity=0.999711352726
+side-12 scaling theorem pressure: rows=5, max_side=12, gap_floor=0.390/L^2, min_gap_margin=2.750e-05, min_Bell=0.999702, max_Bell_deficit=2.980e-04, scaled_gap_monotone=True, Bell_monotone=True, side12_Tadiabatic_bound=9.417e+05, side12_beta_bound=8.056e+03, induction_obligation_open=True
+local controller envelope: record_length=8, d_min=5, correctable=2, leakage=1.000e-05, crosstalk=2.000e-05, slot_threshold=2.622e-03, area_budget=0.050937, implemented_area_bound=0.023000, implemented_slot_error=5.589e-04, word_failure_bound=9.757e-09
+material Ising-domain envelope: domain_side=5, spins/slot=125, slots=8, local_bonds=2400, J_over_T=1.000, defect=2.000e-03, p_spin=2.006e-03, majority_bound=9.373e-132, word_failure_bound=7.498e-131, log10_overlap_bound=-655.141, arrhenius_wall=1.929e-22, minimal_odd_domain_side=3
+
+Acceptance gates:
+  bare selector derivation is closed negatively; retention decision is explicit: PASS
+  signed sparse certificate extends through side 12: PASS
+  local controller envelope realizes the pulse threshold: PASS
+  material Ising-domain envelope realizes the detector threshold: PASS
+  claim boundary stays state-only and not FTL: PASS
+
+Limitations:
+  This closes the bare-axiom selector route negatively on the audited
+  invariants; it does not prove the variational completion from the
+  original sole axiom.
+  The side-12 certificate strengthens the L^-2 theorem pressure, but
+  the all-even-side induction proof remains open.
+  The controller and detector are dimensionless local envelopes, not a
+  fabricated device, named material stack, or measured noise spectrum.
+
+----- stderr -----
+

@@ -1,0 +1,46 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_apparatus_dynamics_closure.py
+runner_sha256: df88eb8f5649712dc5791efd3b094b104c084b9fb9dbe53ea84d04805c076668
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.12
+status: ok
+----- stdout -----
+TELEPORTATION DYNAMICAL APPARATUS CLOSURE CANDIDATE
+Status: planning artifact; ordinary quantum state teleportation only
+trials / seed: 64 / 20260426
+lattice shape: (8, 6, 5)
+source -> target: (1, 1, 1)@t=4 -> (5, 3, 2)@t=11
+retarded field front: distance=7, max_arrival_error=0, eikonal_residual=0, outside_cone_violations=0
+finite-strength transducer: theta=0.620, domain=9, max_pointer_overlap=1.053e-22, controlled_unitary_error=0.000e+00
+finite spin bath: phi=0.350, bath_spins/domain_spin=4, max_bath_overlap=1.104e-21, max_combined_overlap=1.163e-43, record_entropy_bits=2.000000000
+Bob before field record delivery: trace_distance_to_I/2=3.053e-16, pairwise_input_distance=2.220e-16
+generated Bell labels: Phi+, Phi-, Psi+, Psi-
+minimum corrected fidelity after delivered record: 0.9999999999999998
+maximum corrected infidelity: 2.220e-16
+max corrected-state trace distance to input: 1.943e-16
+apparatus conservation: energy_spread=0.000e+00, branch_energy=66.170059..66.170059, ledger_commutator=0.000e+00, pulse_count=8..8
+
+Acceptance gates:
+  retarded field front derives eikonal carrier: PASS
+  Bell transducer is finite-strength unitary, not projection: PASS
+  finite pointer domains distinguish all Bell records: PASS
+  finite spin bath decoheres records irreversibly when traced: PASS
+  Bob pre-delivery state is input-independent: PASS
+  delivered record restores Bob state: PASS
+  apparatus energy and ledgers are branch independent: PASS
+  claim boundary stays state-only and not FTL: PASS
+
+Limitations:
+  The retarded field is a nearest-neighbor carrier equation, not yet
+  a unique retained relativistic field equation.
+  The spin bath is finite and explicitly modeled, but not a continuum
+  thermodynamic detector derivation.
+  The stabilizer-controlled unitary is an engineered apparatus model,
+  not yet derived from a microscopic Cl(3)/Z^3 interaction Hamiltonian.
+  Conservation is checked for the full candidate apparatus ledger, not
+  proved for all possible native apparatus implementations.
+  No matter, mass, charge, energy, object, or FTL transport is claimed.
+
+----- stderr -----
+

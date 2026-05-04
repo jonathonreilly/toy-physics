@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_equilibrium_conversion_theorem.py
+runner_sha256: b7b78ee26edaf69b4ed4d2b1de14807ed9037286c0887a748064c9b1ae531d23
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.63
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS EQUILIBRIUM-CONVERSION THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE RELATIVISTIC SPECTRUM COUNT IS EXACT
+========================================================================================
+  [PASS] The exact taste-spectrum count gives g_* = 28 + (7/8)*90  (g_*=106.750000000000)
+  [PASS] Numerically that is g_* = 106.75  (g_*=106.750000000000)
+
+========================================================================================
+PART 2: THE MAJORANA EQUILIBRIUM YIELD IS EXACT
+========================================================================================
+  [PASS] The equilibrium integrals reproduce the exact Bose/Fermi zeta(3) coefficients  ((bose,fermi)=(2.404113806319,1.803085354739))
+  [PASS] A relativistic Majorana N1 has n/T^3 = 3 zeta(3)/(2 pi^2)  (n_N/T^3=0.182690742350360)
+  [PASS] Dividing by the exact entropy density gives d_N = 135 zeta(3)/(4 pi^4 g_*)  (d_N=0.003901498367656)
+
+========================================================================================
+PART 3: THE LATE ENTROPY-TO-PHOTON RATIO IS EXACT
+========================================================================================
+  [PASS] Entropy conservation in the electromagnetic sector gives (T_gamma/T_nu)^3 = 11/4  ((Tg/Tnu)^3=2.750000000000)
+  [PASS] So the exact late relativistic entropy count is g_*S(today) = 43/11  (g_*S(today)=3.909090909091)
+  [PASS] Hence the exact late conversion factor is s/n_gamma = 7.039433661546651  (s/n_gamma=7.039433661547)
+
+========================================================================================
+PART 4: THE ENTIRE EQUILIBRIUM CONVERSION PREFACTOR IS CLOSED
+========================================================================================
+  [PASS] The theorem-native equilibrium conversion product is fixed numerically  ((s/n_gamma)*d_N=0.027464338939749)
+  [INFO] Neither 7.04 nor d_th remains a benchmark ingredient on this authority path.
+
+========================================================================================
+SUMMARY: PASS=9 FAIL=0
+========================================================================================
+
+----- stderr -----
+

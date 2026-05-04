@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_odd_circulant_z2_slot_theorem.py
+runner_sha256: 20d221aa6d616a94b7a9afb03a48e629efd39c7700d3cec3abe6a7130d752042
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO ODD-CIRCULANT RESIDUAL-Z2 SLOT THEOREM
+========================================================================================
+
+Authority stack:
+  - DM minimal Z3 circulant CP tool
+  - DM two-Higgs right-Gram bridge
+  - exact weak-axis 1+2 split
+
+Question:
+  What exact local coefficient slot carries the CP-supporting deformation
+  on the DM Hermitian circulant family?
+
+========================================================================================
+PART 1: THE HERMITIAN CIRCULANT KERNEL HAS ONE UNIQUE RESIDUAL-Z2-ODD SLOT
+========================================================================================
+  [PASS] P23 exchanges the two cyclic generators  (P23 S P23 = S^2 and P23 S^2 P23 = S)
+  [PASS] The even generator S+S^2 is residual-Z2 even while i(S-S^2) is odd  (even part invariant, odd part flips sign)
+  [PASS] The kernel coefficients read off exactly as (d, c_even, c_odd)  ((d,c_even,c_odd)=(1.200000,0.400000,0.300000))
+  [PASS] Reflecting the kernel flips only the odd slot  (reflection error=0.00e+00)
+
+  So the DM local coefficient problem has a unique residual-Z2-odd slot:
+  the odd circulant coefficient c_odd.
+
+========================================================================================
+PART 2: THE LEPTOGENESIS CP KERNEL IS EXACTLY DRIVEN BY THE ODD SLOT
+========================================================================================
+  [PASS] On the Hermitian circulant family Im[(K01)^2] = 2 c_even c_odd  (cp=0.154000, expected=0.154000)
+  [PASS] If the odd slot vanishes, the standard CP tensor vanishes  (cp_even=0.00e+00)
+  [PASS] The odd slot is necessary but needs even support to contribute  (cp_odd_only=0.00e+00, cp_full=0.154000)
+
+  So c_odd is not a cosmetic parameter.
+  It is exactly the CP-supporting slot that must be activated away from zero.
+
+========================================================================================
+PART 3: THE EXACT WEAK-AXIS 1+2 SPLIT FILLS ONLY THE EVEN SLOT
+========================================================================================
+  [PASS] The exact 1+2 split lifts through U_Z3 to the even circulant Dirac slice  (lift error=2.29e-16)
+  [PASS] Its Hermitian kernel has zero odd slot exactly  ((d,c_even,c_odd)=(1.136667,0.456667,2.50e-16))
+  [PASS] Therefore the exact weak-axis bridge is CP-degenerate at the kernel level  (cp_even=2.28e-16)
+
+  So the retained weak-axis 1+2 split already fixes the even slot,
+  but it does not activate the odd one.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact local answer:
+    - the DM Hermitian circulant family has one unique residual-Z2-odd slot
+    - that slot is the odd circulant coefficient c_odd
+    - the exact weak-axis bridge fixes the even slot but leaves c_odd at zero
+
+  So the last denominator coefficient problem is now even sharper:
+  derive the activation law for that one odd slot.
+
+PASS=10  FAIL=0
+
+----- stderr -----
+

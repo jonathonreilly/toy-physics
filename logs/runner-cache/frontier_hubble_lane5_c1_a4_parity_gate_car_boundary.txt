@@ -1,0 +1,30 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hubble_lane5_c1_a4_parity_gate_car_boundary.py
+runner_sha256: 7b4913b565fb9a2afd30cca12a5d80826a1ae1b1bae3e485050aca4915442068
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+==============================================================================
+Lane 5 (C1) A4 parity-gate-to-CAR boundary verifier
+==============================================================================
+[PASS] primitive_gate_data_have_rank_four_host_and_half_split: rank(P_A)=4, c_cell=0.250000000000, rank(Q_+)=2/4
+[PASS] parity_gate_algebra_is_too_small_to_force_clifford_car: dim alg(I,Q_+)=2, dim commutant(Q_+)=8
+[PASS] single_z2_involution_is_not_a_four_axis_coframe_response: ||Z_gate^2-I||=0.000e+00, generated algebra dim=2
+[PASS] 2d_self_dual_half_zone_L32: active_weight=16.0/32
+[PASS] 2d_self_dual_half_zone_L64: active_weight=32.0/64
+[PASS] 2d_self_dual_half_zone_L96: active_weight=48.0/96
+[PASS] 3d_self_dual_half_zone_32x32: active_weight=512.0/1024
+[PASS] 3d_self_dual_half_zone_48x32: active_weight=768.0/1536
+[PASS] conditional_car_plus_parity_gate_gives_one_quarter: Clifford residual=0.000e+00, span=16, c_Widom=0.250000000000
+[PASS] same_gate_data_allow_non_car_two_qubit_response: spin square residual=0.000e+00, Clifford residual=4.000e+00
+[PASS] gate_does_not_define_the_odd_edge_maps: one response can commute with Q_+ while another CAR generator crosses gate sectors; comm_spin=0.000e+00, comm_car=2.000e+00
+[PASS] parity_gate_does_not_pin_dimensional_action_unit: same dimensionless gated action for kappa values gives phase spread=0.000e+00
+[PASS] a4_exposes_statistics_lift_import: Need a Clifford/CAR coframe-response theorem; the parity gate supplies the selector only after that lift.
+------------------------------------------------------------------------------
+TOTAL: PASS=13, FAIL=0
+Conclusion: the primitive parity gate is a valid half-zone selector inside the primitive-CAR carrier, but it does not force the Clifford/CAR coframe response or dimensional action unit on P_A H_cell.
+
+----- stderr -----
+

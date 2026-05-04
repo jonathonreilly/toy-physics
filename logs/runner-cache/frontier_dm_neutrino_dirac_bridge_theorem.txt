@@ -1,0 +1,88 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_dirac_bridge_theorem.py
+runner_sha256: 276c724b2cfb7f97f93911e15011b9d7c9b4209e89aeedb5453e33a3343e4b84
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+==============================================================================
+NEUTRINO DIRAC BRIDGE THEOREM
+==============================================================================
+
+Candidate local post-EWSB family:
+  M(phi) = phi_1 Gamma_1 + phi_2 Gamma_2 + phi_3 Gamma_3
+  with phi on the selector surface V_sel = 32 sum_{i<j} phi_i^2 phi_j^2
+
+Part 1: Local chiral Dirac family on C^16
+  [PASS] {M(phi), gamma_5} = 0 for phi=(1.0, 0.0, 0.0)
+  [PASS] M(phi)^2 = |phi|^2 I for phi=(1.0, 0.0, 0.0)
+  [PASS] M(phi) is purely chiral off-diagonal for phi=(1.0, 0.0, 0.0)  (rank(PR M PL) = 8)
+  [PASS] {M(phi), gamma_5} = 0 for phi=(0.0, 1.0, 0.0)
+  [PASS] M(phi)^2 = |phi|^2 I for phi=(0.0, 1.0, 0.0)
+  [PASS] M(phi) is purely chiral off-diagonal for phi=(0.0, 1.0, 0.0)  (rank(PR M PL) = 8)
+  [PASS] {M(phi), gamma_5} = 0 for phi=(0.0, 0.0, 1.0)
+  [PASS] M(phi)^2 = |phi|^2 I for phi=(0.0, 0.0, 1.0)
+  [PASS] M(phi) is purely chiral off-diagonal for phi=(0.0, 0.0, 1.0)  (rank(PR M PL) = 8)
+  [PASS] {M(phi), gamma_5} = 0 for phi=(1.0, 1.0, 1.0)
+  [PASS] M(phi)^2 = |phi|^2 I for phi=(1.0, 1.0, 1.0)
+  [PASS] M(phi) is purely chiral off-diagonal for phi=(1.0, 1.0, 1.0)  (rank(PR M PL) = 8)
+  [PASS] {M(phi), gamma_5} = 0 for phi=(1.0, 2.0, 3.0)
+  [PASS] M(phi)^2 = |phi|^2 I for phi=(1.0, 2.0, 3.0)
+  [PASS] M(phi) is purely chiral off-diagonal for phi=(1.0, 2.0, 3.0)  (rank(PR M PL) = 8)
+
+Part 2: Exact selector chooses the weak axis
+  [PASS] V_sel(e_1) = 0  (V = 0.0)
+  [PASS] V_sel(e_2) = 0  (V = 0.0)
+  [PASS] V_sel(e_3) = 0  (V = 0.0)
+  [PASS] Normalized selector minima are axis vertices  (3 minima on coarse simplex)
+  [PASS] V_sel(1,1,0) > 0
+  [PASS] V_sel(1,1,1) > 0
+
+Part 3: Post-EWSB operator selection
+  [PASS] M(e_1) = Gamma_1
+  [PASS] M(e_2) = Gamma_2
+  [PASS] M(e_3) = Gamma_3
+  [PASS] Xi_5 is excluded as direct Dirac operator  (Xi_5 commutes with gamma_5 and has zero LR block)
+
+Part 4: Minimal operator order on the generation triplet
+  P_T1 Gamma_1 P_T1 =
+    [  0.0   0.0   0.0   0.0   0.0   0.0 ]
+    [  0.0   0.0   0.0   0.0   0.0   0.0 ]
+    [  0.0   0.0   0.0   0.0   0.0   0.0 ]
+    [  0.0   0.0   0.0   0.0   0.0   0.0 ]
+    [  0.0   0.0   0.0   0.0   0.0   0.0 ]
+    [  0.0   0.0   0.0   0.0   0.0   0.0 ]
+
+  P_T1 Gamma_1 (P_O0 + P_T2) Gamma_1 P_T1 =
+    [  1.0   0.0   0.0   0.0   0.0   0.0 ]
+    [  0.0   1.0   0.0   0.0   0.0   0.0 ]
+    [  0.0   0.0   1.0   0.0   0.0   0.0 ]
+    [  0.0   0.0   0.0   1.0   0.0   0.0 ]
+    [  0.0   0.0   0.0   0.0   1.0   0.0 ]
+    [  0.0   0.0   0.0   0.0   0.0   1.0 ]
+
+  [PASS] No one-hop return on T1
+  [PASS] Second order closes on T1 through O0 + T2
+  [PASS] O3 does not contribute to the first closed T1 return
+
+Honest read:
+  1. On the 3+1 completed lattice, the local spatial Higgs family
+     M(phi) is exactly chiral off-diagonal.
+  2. The exact selector picks axis minima, so after EWSB the local
+     post-EWSB Dirac surface is uniquely Gamma_i up to S_3 / sign.
+  3. In the branch convention with weak axis 1, that operator is Gamma_1.
+  4. Xi_5 is not a direct Dirac Yukawa surface because it is chiral
+     diagonal rather than chiral off-diagonal.
+  5. The effective action on the T_1 generation triplet starts only
+     at second order, which is exactly why the neutrino cascade
+     mechanism remains relevant after operator selection closes.
+  6. What remains open is the neutrino-sector normalization /
+     suppression theorem, not the Gamma_1 versus Xi_5 choice.
+
+==============================================================================
+RESULT: 28 PASS, 0 FAIL
+==============================================================================
+
+----- stderr -----
+

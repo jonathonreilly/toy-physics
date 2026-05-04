@@ -1,0 +1,68 @@
+===== runner cache v1 =====
+runner: scripts/frontier_signed_gravity_response_lane_status.py
+runner_sha256: 08018fe5a17526db8c1267f629ebbde90ee858404ed4c27c7c4601dedb937ead
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================================
+Signed gravitational response lane status audit
+See docs/SIGNED_GRAVITY_RESPONSE_LANE_STATUS_NOTE_2026-04-26.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Authority and note surface
+----------------------------------------------------------------------------------------
+[PASS] status note exists
+[PASS] reference exists: docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md
+[PASS] reference exists: docs/GRAVITY_CLEAN_DERIVATION_NOTE.md
+[PASS] reference exists: docs/GRAVITY_SIGN_AUDIT_2026-04-10.md
+[PASS] reference exists: docs/SIGN_PORTABILITY_INVARIANT_NOTE.md
+
+----------------------------------------------------------------------------------------
+Locked response consequence algebra
+----------------------------------------------------------------------------------------
+[PASS] source_only remains a mixed-pair action-reaction no-go control  (max_mixed_residual=2.0)
+[PASS] response_only remains a mixed-pair action-reaction no-go control  (max_mixed_residual=2.0)
+[PASS] locked source/response sign passes all four two-body pairs  (reads=['ATTRACT', 'REPEL', 'REPEL', 'ATTRACT'])
+[PASS] inertial masses stay positive in the consequence harness
+
+----------------------------------------------------------------------------------------
+Local selector and source no-go boundaries
+----------------------------------------------------------------------------------------
+[PASS] strict local/taste-cell chi selector is absent  (strict=[], conserved_neutral_count=3)
+[PASS] epsilon pins scalar sign but is not conserved by kinetic Clifford generators  (epsilon=ZZZ anticommutes with each retained gamma)
+[PASS] local signed source primitive is blocked  (physical_candidates=[])
+[PASS] inserted chi source is control-only, not a derivation
+
+----------------------------------------------------------------------------------------
+Determinant orientation support boundary
+----------------------------------------------------------------------------------------
+[PASS] eta source-character grammar forces chi_eta uniquely  (solutions=1)
+[PASS] standard control characters remain rejected
+[PASS] raw finite Hodge boundary complex is eta-neutral  (etas=[0, 0, 0], zeros=[2, 2, 2], max_pair_error=2.0e-15)
+[PASS] determinant orientation line is hosted but not canonically selected  (Z2_torsor=True, canonical_section=False, source_term_forced=False)
+
+----------------------------------------------------------------------------------------
+Tensor / continuum and nonclaim boundaries
+----------------------------------------------------------------------------------------
+[PASS] oriented tensor lift and continuum localization remain conditional  (T_g=chi_eta*T_plus only after orientation source is supplied)
+[PASS] non-claim gate states all public boundaries
+[PASS] physical signed gravity remains unretained
+
+FINAL_TAGS:
+  LOCKED_SIGN_RESPONSE_CONSEQUENCE_PASS
+  NO_GO_STRICT_SELECTOR
+  SOURCE_PRIMITIVE_BLOCKED_LOCAL
+  ETA_SOURCE_CHARACTER_UNIQUENESS_THEOREM_A1_MAXIMAL
+  CL3Z3_DETERMINANT_SOURCE_CHARACTER_DERIVED_FINITE
+  SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_APS_LINE_NOT_CONTAINED
+  SIGNED_GRAVITY_ORIENTATION_LINE_NATURALLY_HOSTED_NOT_CANONICALLY_SELECTED
+  SIGNED_GRAVITY_REMAINING_GATES_REDUCED_TO_PRECISE_CONDITIONALS
+  SIGNED_GRAVITY_PHYSICAL_SECTOR_NOT_RETAINED
+
+TOTAL: PASS=20, FAIL=0
+
+----- stderr -----
+

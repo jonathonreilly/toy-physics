@@ -1,0 +1,79 @@
+===== runner cache v1 =====
+runner: scripts/frontier_area_law_primitive_parity_gate_carrier.py
+runner_sha256: e15939581f2ba67de0db9f8feaa8e13210d2260338c77fd01b23f53e56e65a24
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.73
+status: ok
+----- stdout -----
+==============================================================================
+AREA-LAW PRIMITIVE PARITY-GATE CARRIER THEOREM
+==============================================================================
+
+Question: does the primitive residual Z_2 half-zone gate supply the
+multipocket selector needed for c_Widom = 1/4?
+
+[PASS] primitive Planck boundary trace is exactly 1/4: Tr((I_16/16)P_A)=4/16
+[PASS] rank-four active block can host two complex edge orbitals: F(C^2) has local Fock dimension 4 = rank(P_A)
+[PASS] residual Z_2 half-zone has normalized measure 1/2: q -> q + pi*(1,...,1) exchanges the low and high Laplacian sheets
+[PASS] nearest-neighbor transverse Laplacian has self-dual partner: Delta=0.189087110721, Delta(q+pi)=1.810912889279
+[PASS] primitive Laplacian threshold one is self-dual: Delta<1 and Delta>1 are exchanged by the residual Z_2 involution
+[PASS] gated activity is the low transverse-Laplacian sheet: Delta_perp(0,0)=0<1 and Delta_perp(pi,pi)=2>1
+[PASS] baseline channel contributes two crossings for every transverse momentum: epsilon_0=cos(k_x) has one occupied k_x interval
+[PASS] gated channel is active exactly on cos(k_y)>0: in 2D, epsilon_1=cos(k_x)+1-cos(k_y)
+[PASS] gated channel contributes average crossing count one: two crossings on half the transverse Brillouin zone
+[PASS] total average crossing count is three: <N_x>=2+1
+[PASS] Widom coefficient is exactly 1/4: c=<N_x>/12=0.250000000000
+[PASS] entanglement coefficient matches primitive trace coefficient: 3/12 = 4/16 = 1/4
+[PASS] carrier lies outside the simple-fiber no-go class: the direct-sum edge block has average crossing count 3 > 2
+[PASS] baseline channel alone recovers the retained 1/6 value: 2/12=1/6
+[PASS] parity-gated channel adds exactly 1/12: one average crossing divided by 12
+
+Finite APBC crossing grids
+[PASS] 2D grid Ly=32 has exact half-zone active count: active_weight=16.0/32
+[PASS] 2D grid Ly=32 gives c=1/4: avg_crossings=3.000000000000, c=0.250000000000
+[PASS] 2D grid Ly=64 has exact half-zone active count: active_weight=32.0/64
+[PASS] 2D grid Ly=64 gives c=1/4: avg_crossings=3.000000000000, c=0.250000000000
+[PASS] 2D grid Ly=96 has exact half-zone active count: active_weight=48.0/96
+[PASS] 2D grid Ly=96 gives c=1/4: avg_crossings=3.000000000000, c=0.250000000000
+[PASS] 2D grid Ly=128 has exact half-zone active count: active_weight=64.0/128
+[PASS] 2D grid Ly=128 gives c=1/4: avg_crossings=3.000000000000, c=0.250000000000
+[PASS] 2D grid Ly=192 has exact half-zone active count: active_weight=96.0/192
+[PASS] 2D grid Ly=192 gives c=1/4: avg_crossings=3.000000000000, c=0.250000000000
+[PASS] 3D grid 32x32 has exact half-zone active count: active_weight=512.0/1024
+[PASS] 3D grid 32x32 gives c=1/4: avg_crossings=3.000000000000, c=0.250000000000
+[PASS] 3D grid 48x32 has exact half-zone active count: active_weight=768.0/1536
+[PASS] 3D grid 48x32 gives c=1/4: avg_crossings=3.000000000000, c=0.250000000000
+[PASS] 3D grid 64x40 has exact half-zone active count: active_weight=1280.0/2560
+[PASS] 3D grid 64x40 gives c=1/4: avg_crossings=3.000000000000, c=0.250000000000
+[PASS] dispersion representative is finite-range local: cos(k_x)+Delta_perp uses onsite plus nearest-neighbor normal/tangent terms
+[PASS] gate boundary is measure zero: Delta_perp=1 is a codimension-one transverse boundary and does not affect the integral
+[PASS] no fitted continuous parameter enters the coefficient: the only measure is the self-dual Z_2 half-zone measure 1/2
+[PASS] self-dual Laplacian gate is the missing multipocket selector: the selector fixes mu=1/2 before the coefficient is evaluated
+
+Finite cylinder entropy check
+  L= 64 active= 32 S=92.629834 c_eff=S/(L log L)=0.348012
+  L= 80 active= 40 S=120.168691 c_eff=S/(L log L)=0.342789
+  L= 96 active= 48 S=148.984750 c_eff=S/(L log L)=0.340010
+  L=112 active= 56 S=178.048164 c_eff=S/(L log L)=0.336911
+  L=128 active= 64 S=207.860045 c_eff=S/(L log L)=0.334686
+  L=160 active= 80 S=268.818758 c_eff=S/(L log L)=0.331046
+  L=192 active= 96 S=331.655560 c_eff=S/(L log L)=0.328554
+  fit L>=96: c_eff(L)=c_inf+a/log(L), c_inf=0.253119, a=+0.395965, max_resid=1.391e-04
+[PASS] finite entropy tail includes L >= 96: L_max=192
+[PASS] finite entropy c_inf fit is within 3 percent of 1/4: c_inf=0.253119, rel_err=+1.25%
+[PASS] finite entropy c_inf is not compatible with 1/6: c_inf=0.253119, separation=+51.87%
+[PASS] finite c_eff tail decreases toward the Widom value: subleading positive a/log(L) correction is monotone on the tested tail
+[PASS] primitive parity-gate carrier identification remains the explicit bridge premise: Target 3 Clifford bridge gives a sufficient metric-compatible coframe-response route
+
+==============================================================================
+SUMMARY: PASS=40  FAIL=0
+==============================================================================
+
+Verdict: the primitive residual Z_2 parity-gate carrier has
+multipocket Widom coefficient exactly 1/4. This is a conditional
+positive carrier unless the primitive Clifford/CAR coframe response
+is accepted or derived separately.
+
+----- stderr -----
+

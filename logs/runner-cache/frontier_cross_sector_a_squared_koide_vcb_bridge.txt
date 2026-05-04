@@ -1,0 +1,111 @@
+===== runner cache v1 =====
+runner: scripts/frontier_cross_sector_a_squared_koide_vcb_bridge.py
+runner_sha256: 7d1deefed0a2e8910ede91509cf0b8330a0a8e3220f670091a997ac8c6da0cbc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+Conditional cross-sector A^2-Q_l-|V_cb| bridge audit
+See docs/CROSS_SECTOR_A_SQUARED_KOIDE_VCB_BRIDGE_SUPPORT_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Authority and status checks
+----------------------------------------------------------------------------------------
+  [PASS] retained input authority present: docs/ALPHA_S_DERIVED_NOTE.md
+  [PASS] retained input authority present: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+  [PASS] retained input authority present: docs/CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md
+  [PASS] Koide support/open authority present: docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md
+  [PASS] Koide support/open authority present: docs/KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md
+  [PASS] Koide support/open authority present: docs/KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md
+  [PASS] Koide support/open authority present: docs/publication/ci3_z3/PUBLICATION_MATRIX.md
+  [PASS] Koide support/open authority present: docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md
+  [PASS] Koide support/open authority present: docs/publication/ci3_z3/CLAIMS_TABLE.md
+  [PASS] Koide remains marked as open/support in package surfaces
+  [PASS] Koide retained closure is not promoted
+  [PASS] Q=2/3 physical source-domain blocker is still visible
+
+----------------------------------------------------------------------------------------
+Inputs
+----------------------------------------------------------------------------------------
+  retained CKM / gauge-vacuum inputs:
+    A^2 = N_pair/N_color = 2/3
+    lambda^2 = alpha_s(v)/2 = 0.051651908061134
+    alpha_s(v) = 0.103303816122267
+
+  conditional Koide support target:
+    Q_l = 2/3  (open/support, not retained closure)
+  [PASS] A^2 = 2/3
+  [PASS] Q_l target = 2/3
+  [PASS] N_pair = 2
+  [PASS] N_color = 3
+  [PASS] A^2 = N_pair/N_color
+  [PASS] alpha_s(v) > 0
+  [PASS] lambda^2 = alpha_s(v)/2
+
+----------------------------------------------------------------------------------------
+Conditional bridge: Q_l alpha_s(v)^2 = 4 |V_cb|^2
+----------------------------------------------------------------------------------------
+  |V_cb|^2 from A^2 lambda^4       = 0.001778613071
+  |V_cb|^2 from alpha_s(v)^2 / 6  = 0.001778613071
+  |V_cb|^2 from Q_l lambda^4       = 0.001778613071
+  Q_l alpha_s(v)^2                = 0.007114452284
+  4 |V_cb|^2                      = 0.007114452284
+  [PASS] |V_cb|^2 = alpha_s(v)^2/6
+  [PASS] conditional |V_cb|^2 = Q_l lambda^4
+  [PASS] conditional Q_l alpha_s(v)^2 = 4 |V_cb|^2
+  [PASS] bridge ratio is 1
+
+----------------------------------------------------------------------------------------
+Extraction forms
+----------------------------------------------------------------------------------------
+  atlas |V_cb| = 0.042173606330
+  extracted Q_l = 0.666666666667
+  extracted alpha_s(v) = 0.103303816122
+  [PASS] atlas extraction gives Q_l target
+  [PASS] atlas extraction gives canonical alpha_s(v)
+
+  PDG-style comparator:
+    |V_cb| = 0.0410 +/- 0.0014
+    Q_l extracted = 0.6301 +/- 0.0430 (-0.850 sigma)
+    alpha_s extracted = 0.100429 +/- 0.003429 (-0.838 sigma)
+  [PASS] PDG-style Q_l extraction is within 1 sigma of target
+  [PASS] PDG-style alpha_s extraction is within 1 sigma of canonical
+
+----------------------------------------------------------------------------------------
+Status boundaries
+----------------------------------------------------------------------------------------
+  [PASS] note avoids overclaim: Retained derivation theorem
+  [PASS] note avoids overclaim: three independently-retained
+  [PASS] note avoids overclaim: Koide three-gap closure
+  [PASS] note avoids overclaim: Q_l = 2/3` is retained
+  [PASS] note states boundary: conditional cross-sector support corollary
+  [PASS] note states boundary: does **not** promote charged-lepton Koide
+  [PASS] note states boundary: open/support target, not retained closure
+  [PASS] note states boundary: does not close the charged-lepton Koide lane
+
+----------------------------------------------------------------------------------------
+Falsification projection
+----------------------------------------------------------------------------------------
+  PDG-style comparator             sigma(|V_cb|)=0.0014  sigma(Q_l)=0.0430
+  Belle II / LHCb upgrade target   sigma(|V_cb|)=0.0007  sigma(Q_l)=0.0215
+  [PASS] Belle II / LHCb upgrade target: projected Q_l uncertainty tightens
+  HL-LHC scale target              sigma(|V_cb|)=0.0003  sigma(Q_l)=0.0092
+  [PASS] HL-LHC scale target: projected Q_l uncertainty tightens
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verdict: support-corollary audit passes if FAIL=0.
+  Retained part: CKM atlas plus canonical alpha_s(v).
+  Conditional part: Koide Q_l = 2/3 support target.
+  Bridge: Q_l alpha_s(v)^2 = 4 |V_cb|^2.
+
+========================================================================================
+TOTAL: PASS=37, FAIL=0
+========================================================================================
+
+----- stderr -----
+

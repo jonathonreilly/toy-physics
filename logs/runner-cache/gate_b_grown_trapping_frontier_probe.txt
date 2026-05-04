@@ -1,0 +1,47 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_grown_trapping_frontier_probe.py
+runner_sha256: f3f56197b3692fa78abf4fa9e11212b0af9527ea8521e34d187d8686ee1d5f07
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 17.65
+status: ok
+----- stdout -----
+================================================================================================
+GATE B GROWN FRONTIER PROBE
+  retained grown row only: drift=0.2, restore=0.7
+  promoted observable: frontier_bias(eta) = (P_frontier - P_core) / P_det
+  transport control: escape(eta) = P_det(eta) / P_det(0)
+  guardrail: eta=0 must exactly reproduce the retained grown baseline
+================================================================================================
+h=0.5, W=8, NL=25, seeds=[0, 1, 2, 3], trap_layers=[11, 12, 13], trap_radius=2.0, core_z=2.0, frontier_z=5.0
+eta sweep: [0.0, 0.05, 0.1, 0.2, 0.35, 0.5]
+
+eta=0 exact reduction: escape=1.000 and frontier_bias=0.000 by construction on the retained grown baseline
+
+seed       P_det(0)       0.05       0.10       0.20       0.35       0.50
+------------------------------------------------------------------------------------------------
+   0   3.557956e+10      0.924      0.859      0.755      0.650      0.581
+   1   3.961347e+10      0.911      0.836      0.720      0.605      0.535
+   2   4.067656e+10      0.917      0.845      0.733      0.618      0.545
+   3   3.446533e+10      0.923      0.857      0.751      0.641      0.569
+
+AGGREGATE
+  mean P_det(0) = 3.758373e+10
+  eta=0.05  escape= 0.919  trapped= 0.081  frontier_share= 0.317  frontier_bias=+0.0227
+  eta=0.10  escape= 0.849  trapped= 0.151  frontier_share= 0.331  frontier_bias=+0.0440
+  eta=0.20  escape= 0.740  trapped= 0.260  frontier_share= 0.356  frontier_bias=+0.0811
+  eta=0.35  escape= 0.628  trapped= 0.372  frontier_share= 0.386  frontier_bias=+0.1230
+  eta=0.50  escape= 0.557  trapped= 0.443  frontier_share= 0.407  frontier_bias=+0.1509
+
+SAFE READ
+  eta=0 reproduces the retained grown baseline exactly by construction.
+  The promoted observable is the detector frontier bias, not just escape.
+  Escape tells us how much transport survives; frontier bias tells us
+  whether the surviving mass shifts toward the outer detector shell.
+  If frontier_bias moves steadily with eta, the trap is doing more than
+  simple attenuation.
+
+Total time: 18s
+
+----- stderr -----
+

@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/lensing_adjoint_kernel_shape_compare.py
+runner_sha256: fa477e9e91ec17488993bae172852140869e8d91d2f0003009d4d0b14ad30124
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.03
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

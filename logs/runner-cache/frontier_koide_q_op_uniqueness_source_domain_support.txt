@@ -1,0 +1,138 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_op_uniqueness_source_domain_support.py
+runner_sha256: bb2327a3686bfe9bcd0a7e66aba0a33d127b2bdcfeed26bb41387cf1bc03f226
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.46
+status: ok
+----- stdout -----
+
+========================================================================================
+§1. AUDIT: OP retains 'unique additive CPT-even scalar generator' clause
+========================================================================================
+[PASS] 1.1 AUDIT (disk): OP file exists and contains 'unique additive CPT-even' clause
+       file: docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md
+       size: 8747 bytes (raw)
+       'unique additive CPT-even' present (whitespace-normalized): True
+[PASS] 1.2 AUDIT (disk): OP file contains 'local projectors P_x' (Theorem 2 source domain)
+       'local projectors P_x' present: True
+
+========================================================================================
+§2. AUDIT: ONSITE retains 'Z is not an onsite diagonal source function'
+========================================================================================
+[PASS] 2.1 AUDIT (disk): ONSITE file exists and identifies Z as not onsite
+       file: docs/KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md
+       size: 5070 bytes
+       'Z not onsite' clause present: True
+[PASS] 2.2 AUDIT (disk): ONSITE retains 'onsite local functions ∩ End_C3 = span{I}'
+       intersection clause present: True
+
+========================================================================================
+§3. AUDIT: CRIT retains 'K = 0 ⇔ z = 0 ⇔ Q = 2/3' criterion
+========================================================================================
+[PASS] 3.1 AUDIT (disk): CRIT file exists and contains 'Q = 2/3', 'z = 0', 'K = 0'
+       file: docs/KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md
+       size: 4906 bytes
+       'Q = 2/3': True, 'z = 0': True, 'K = 0': True
+
+========================================================================================
+§4. AUDIT: CD retains 'unique trace-preserving onsite descent'
+========================================================================================
+[PASS] 4.1 AUDIT (disk): CD file exists and identifies unique trace-preserving onsite descent
+       file: docs/KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md
+       size: 10611 bytes
+       'unique', 'trace-preserving', 'onsite' all present: True
+[PASS] 4.2 AUDIT (disk): CD retains the E_loc formula
+       E_loc formula present: True
+
+========================================================================================
+§5. Algebraic identities (computed, not asserted)
+========================================================================================
+[PASS] 5.1 COMPUTED: Tr(Z) = -1 (numerical from Z definition)
+       Tr(Z) = -1.0
+[PASS] 5.2 COMPUTED: Z has nonzero off-diagonal entries (Z is NOT site-diagonal)
+       |off-diag(Z)|_F = 1.6330
+[PASS] 5.3 SYMBOLIC: E_loc(sI + zZ) = (s − z/3) I (canonical descent formula)
+       E_loc(K) = (s − z/3) I, verified symbolically
+
+========================================================================================
+§6. CONDITIONAL implication (NOT a closure assertion)
+========================================================================================
+OP-uniqueness Path (a) interpretation (interpretive bridge per V4 note §1):
+
+  IF OP Theorem 1's 'unique additive CPT-even scalar generator'
+     IS ACCEPTED as implying scalar source-domain exclusivity for
+     ALL backgrounds (not just source perturbations),
+  THEN Z is excluded from the framework's scalar observable source domain,
+  THEN physical undeformed scalar background on lepton orbit has z = 0,
+  THEN Q_l = 2/3 by CRIT (retained).
+
+This IS a conditional implication. It is NOT a closure assertion.
+
+Per Codex's V3 review: the strict reading of 'unique' (which gives the
+source-domain exclusivity) is interpretive, not stated verbatim in OP.
+A separate theorem-grade authority would be needed for closure.
+
+The V4 runner does NOT assert this implication's premise.
+It only verifies that the retained authorities (OP, ONSITE, CRIT, CD)
+exist on disk with their cited content.
+[PASS] 6.1 V4 closure status (honest)
+       V4 status: support-grade conditional, not retained closure
+       Reason: the OP-uniqueness Path (a) interpretation is interpretive,
+       not theorem-grade per the V3 review findings integrated into the support note.
+
+========================================================================================
+§7. Codex V3 review findings — explicit response audit
+========================================================================================
+[PASS] 7.1 Codex P1 (interpretive bridge): V4 reframes V3 closure-claim as defended hypothesis
+       V4 note §1: explicitly identifies strict vs loose readings of OP's 'unique';
+       explicitly defers closure to a separate theorem.
+[PASS] 7.2 Codex P1 (runner asserts): V4 runner does NOT assert source-domain exclusion
+       This V4 runner audits retained authorities from disk (§§1-4) and verifies
+       algebraic identities (§5). It does NOT compute Q = 2/3 by hard-coding
+       the disputed source-domain exclusion.
+[PASS] 7.3 Codex P2 (stale branch): V4 rebased on current main; Napoleon + cosmology packages preserved
+       Napoleon package present: True (file: scripts/frontier_ckm_barred_napoleon_triangles_exact_closed_form.py)
+       Cosmology single-ratio package present: True (file: scripts/frontier_cosmology_single_ratio_inverse_reconstruction.py)
+       V4 branch is rebased on current origin/main; no unrelated packages would be deleted.
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 14/14
+  [PASS] 1.1 AUDIT (disk): OP file exists and contains 'unique additive CPT-even' clause
+  [PASS] 1.2 AUDIT (disk): OP file contains 'local projectors P_x' (Theorem 2 source domain)
+  [PASS] 2.1 AUDIT (disk): ONSITE file exists and identifies Z as not onsite
+  [PASS] 2.2 AUDIT (disk): ONSITE retains 'onsite local functions ∩ End_C3 = span{I}'
+  [PASS] 3.1 AUDIT (disk): CRIT file exists and contains 'Q = 2/3', 'z = 0', 'K = 0'
+  [PASS] 4.1 AUDIT (disk): CD file exists and identifies unique trace-preserving onsite descent
+  [PASS] 4.2 AUDIT (disk): CD retains the E_loc formula
+  [PASS] 5.1 COMPUTED: Tr(Z) = -1 (numerical from Z definition)
+  [PASS] 5.2 COMPUTED: Z has nonzero off-diagonal entries (Z is NOT site-diagonal)
+  [PASS] 5.3 SYMBOLIC: E_loc(sI + zZ) = (s − z/3) I (canonical descent formula)
+  [PASS] 6.1 V4 closure status (honest)
+  [PASS] 7.1 Codex P1 (interpretive bridge): V4 reframes V3 closure-claim as defended hypothesis
+  [PASS] 7.2 Codex P1 (runner asserts): V4 runner does NOT assert source-domain exclusion
+  [PASS] 7.3 Codex P2 (stale branch): V4 rebased on current main; Napoleon + cosmology packages preserved
+
+Honest closeout flags:
+  Q_L_EQ_2_OVER_3_RETAINED_FULL_CLOSURE_ON_ORIGIN_MAIN=FALSE
+  PATH_A_INTERPRETATION_DEFENDED_AS_HYPOTHESIS=TRUE
+  PATH_A_INTERPRETATION_THEOREM_GRADE_AUTHORITY=FALSE
+  RUNNER_AUDITS_RETAINED_AUTHORITIES_FROM_DISK=TRUE
+  RUNNER_DOES_NOT_ASSERT_DISPUTED_SOURCE_DOMAIN_EXCLUSION=TRUE
+  BRANCH_REBASED_ON_CURRENT_MAIN=TRUE
+  NO_UNRELATED_PACKAGES_DELETED=TRUE
+  RESIDUAL_FOR_FULL_CLOSURE=theorem_grade_authority_for_op_uniqueness_to_source_domain_exclusivity_for_backgrounds
+
+========================================================================================
+VERDICT: V4 honest support-grade. Audits retained authorities from disk.
+  Does NOT assert disputed source-domain exclusion. Articulates
+  OP-uniqueness Path (a) as defended hypothesis (not closure).
+  Addresses Codex's V3 review findings P1 (×2) + P2 explicitly.
+  The full closure remains conditional on a separate theorem-grade
+  authority (see V4 note §5 for path forward).
+========================================================================================
+
+----- stderr -----
+

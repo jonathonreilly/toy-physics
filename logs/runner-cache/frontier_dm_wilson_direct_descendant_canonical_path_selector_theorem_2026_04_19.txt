@@ -1,0 +1,81 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_canonical_path_selector_theorem_2026_04_19.py
+runner_sha256: e4c3b6f25c5a9494e0362269a93014e51a6857ab7908d9108d18863882aa5d3e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 68.14
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT CANONICAL PATH STATUS AUDIT
+========================================================================================
+
+========================================================================================
+PART 1: THE CURRENT ALIGNED-SEED -> CONSTRUCTIVE-WITNESS PATH REMAINS SUPPORT-LEVEL SCIENCE
+========================================================================================
+  [PASS] The current candidate affine path still reaches a unique exact eta_1 = 1 point  (lambda_*=0.795532193595)
+  [PASS] The current candidate root is still constructive and positive-branch  (pack=[1.         0.177466   0.24792261 1.55208573 0.00658311])
+  [PASS] The current candidate root is still locally visible in the full observable chart  (min singulars=(1.590479e-03,1.591548e-03))
+
+========================================================================================
+PART 2: COMPETING FIXED-SEED AFFINE SELECTOR LAWS ALREADY EXIST
+========================================================================================
+  [PASS] The A+, B+, and C+ multiplicity endpoints are all constructive positive overshooting witnesses  (three retained overshooting witnesses on the same fixed seed surface)
+  [PASS] Each competing seed-fixed affine segment has an exact eta_1 = 1 root in (0,1)  (A+: 0.746363160385, B+: 0.999143075148, C+: 0.999586526822)
+  [PASS] Each competing affine crossing is transverse  (A+: d eta/dlambda=0.545503, B+: d eta/dlambda=0.414780, C+: d eta/dlambda=0.510978)
+  [PASS] Each competing affine root is itself constructive positive and locally complete  (A+, B+, and C+ all land on full-rank constructive positive exact roots)
+  [PASS] Those competing affine-selected roots are distinct from the current candidate root  (A+: dist=0.099644, B+: dist=0.266530, C+: dist=0.733775)
+
+========================================================================================
+PART 3: GEODESIC LANGUAGE DOES NOT MAKE THE CURRENT SEGMENT UNIQUE
+========================================================================================
+  [PASS] The current and competing selector segments are all straight affine geodesics in the natural constant-metric chart  (P: (0.0e+00, 1.1e-16); A+: (0.0e+00, 2.5e-16); B+: (0.0e+00, 1.6e-16); C+: (0.0e+00, 1.6e-16))
+  [PASS] So the standard affine-geodesic class already contains multiple constructive exact candidates  (P together with A+, B+, and C+)
+
+========================================================================================
+PART 4: THE OBVIOUS SEED-BASED ETA_1 GRADIENT FLOW IS METRIC-DEPENDENT
+========================================================================================
+  [PASS] The Euclidean and x1-heavy eta_1 gradient flows both hit exact eta_1 = 1 roots  (euclid: eta_1=1.000000000000, x1-heavy: eta_1=1.000000000000)
+  [PASS] Those gradient-flow roots are distinct, so the flow law depends on the chosen metric  (dist=0.077857)
+  [PASS] Neither obvious eta_1 gradient flow lands on the current constructive path-selected root  (euclid: dist_to_P=1.624077, x1-heavy: dist_to_P=1.649936)
+  [PASS] Neither obvious eta_1 gradient flow root is constructive positive  (euclid: pack=[ 1.          0.         -0.29951777  0.01357591  0.03717621]; x1-heavy: pack=[ 1.          0.         -0.34140476 -0.10393745  0.03631683])
+
+========================================================================================
+PART 5: NATURAL CARRIER PULLBACK GEOMETRIES STILL DO NOT RECOVER THE CURRENT ROOT
+========================================================================================
+  [PASS] The canonical Y- and H-carriers induce positive-definite pullback metrics at the aligned seed  (H-pullback: min eig=5.968896e-02; Y-pullback: min eig=9.404444e-02)
+  [PASS] The H- and Y-pullback eta_1 flows both hit exact eta_1 = 1 roots  (H-pullback: eta_1=1.000000000000, Y-pullback: eta_1=1.000000000000)
+  [PASS] Those pullback-flow roots are distinct, so even natural carrier geometries do not produce one canonical eta_1 flow  (dist=0.021071)
+  [PASS] Neither pullback-flow root lands on the current constructive path-selected point  (H-pullback: dist_to_P=1.594876, Y-pullback: dist_to_P=1.594849)
+  [PASS] Neither pullback-flow root is constructive positive  (H-pullback: pack=[ 1.          0.         -0.23699551  0.22450038  0.03806907]; Y-pullback: pack=[ 1.          0.         -0.24405841  0.20824367  0.03763495])
+
+========================================================================================
+PART 6: THE SOURCE-SURFACE SELECTOR PACKET DOES NOT DESCEND TO THIS LANE
+========================================================================================
+  [PASS] Every current exact direct-descendant root stays uniformly away from the source-surface intrinsic slot pair  (P: 1.005553, A+: 1.011810, B+: 1.136827, C+: 1.139620)
+  [PASS] Every current exact direct-descendant root also stays uniformly away from the source-surface CP pair  (P: 0.514999, A+: 0.519718, B+: 0.541670, C+: 0.538323)
+  [PASS] The constructive transport-plateau witnesses are likewise outside the source-surface sheet  (W0: (slot=1.047552, cp=0.514646); W1: (slot=1.101717, cp=0.536296); W2: (slot=1.111832, cp=0.529698); W3: (slot=0.969967, cp=0.528847))
+  [PASS] Even nearest-source-surface heuristics split on the plateau rather than selecting one witness direction  (slot nearest=W3, cp nearest=W0)
+
+========================================================================================
+PART 7: BOTTOM LINE
+========================================================================================
+  [PASS] The aligned-seed -> constructive-witness affine path is still chosen rather than derived  (competing affine/geodesic candidates exist; natural carrier pullback flows miss P; the source-surface selector packet does not descend)
+  [PASS] A future closure theorem must add either a direct-descendant -> source-surface bridge theorem or a microscopic value law on L_e itself  (a generic metric or borrowed source-surface law is not enough on the present retained packet)
+
+  current path root P   = [1.04926685 0.48315245 0.66630668 0.0841067  1.49766553]
+  competing root A+ = [1.01497656 0.49220909 0.65328256 0.11912803 1.41237208]
+  competing root B+ = [0.86063287 0.32735058 0.71332829 0.10458238 1.590138  ]
+  competing root C+ = [1.00712956 0.30188412 0.79571626 0.02997295 2.19344946]
+  flow root   euclid = [0.58627726 0.41807807 0.26586061 0.20930428 0.        ]
+  flow root x1-heavy = [0.56927863 0.42226656 0.19576487 0.23831692 0.        ]
+  pullback root H-pullback = [0.65110101 0.43193331 0.30713402 0.18639426 0.        ]
+  pullback root Y-pullback = [0.63953158 0.42183722 0.32104885 0.18257746 0.        ]
+
+========================================================================================
+SUMMARY: PASS=25 FAIL=0
+VERDICT: PATH STILL CHOSEN
+========================================================================================
+
+----- stderr -----
+

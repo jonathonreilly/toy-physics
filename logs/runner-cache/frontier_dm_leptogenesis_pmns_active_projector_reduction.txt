@@ -1,0 +1,68 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_active_projector_reduction.py
+runner_sha256: 57493838a406237958d26c74b1cd898fb789153fba5f9ec7df8c64efe06122a5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.33
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS ACTIVE-PROJECTOR REDUCTION
+========================================================================================
+
+========================================================================================
+PART 1: ONE-SIDED PMNS PROJECTORS LOCALIZE TO THE ACTIVE HERMITIAN BLOCK
+========================================================================================
+  [PASS] On N_nu with the passive monomial block already ordered, the PMNS packet equals the active packet exactly  (err=2.03e-16)
+  [PASS] On N_e with the passive monomial block already ordered, the PMNS packet is the transpose of the active packet  (err=5.10e-16)
+  [PASS] So once the passive monomial ordering is fixed, the one-sided PMNS transport packet is determined by the active block alone  (N_nu gives |U_act|^2 and N_e gives |U_act|^2^T)
+
+  So on one-sided minimal PMNS branches, the flavored transport packet is
+  already an active-Hermitian object. The passive monomial side only
+  contributes column ordering.
+
+========================================================================================
+PART 2: THE TRANSPORT LIFT COMES FROM THE ACTIVE BLOCK ALONE
+========================================================================================
+  [PASS] The canonical N_nu active block alone reproduces the known PMNS-interface transport lift  (etas=[0.767519 0.725016 0.694206])
+  [PASS] The canonical N_e active block alone reproduces the near-closing PMNS-interface lift  (etas=[0.820756 0.989513 0.920617])
+  [PASS] So the pair-conditioned near-closure on N_e is already entirely carried by the active charged-lepton Hermitian block  (best eta/eta_obs=0.989512597197)
+
+  canonical N_nu active-only columnwise eta/eta_obs = [0.767519 0.725016 0.694206]
+  canonical N_e active-only columnwise eta/eta_obs = [0.820756 0.989513 0.920617]
+
+========================================================================================
+PART 3: THE REMAINING DM-RELEVANT PMNS OBJECT IS THE ACTIVE FIVE-REAL SOURCE
+========================================================================================
+  [PASS] The PMNS-side native transport laws fix the same seed averages on both active samples  ((xbar,ybar)=(0.973333,0.410000))
+  [PASS] The same native support law reads both operators as active one-sided blocks  (moment-support counts=(2, 2))
+  [PASS] The two active samples still carry different five-real source data  (xi_a=[ 0.176667 -0.153333 -0.023333], xi_b=[ 0.076667 -0.003333 -0.073333]; eta_a=[ 0.   -0.13  0.13], eta_b=[ 0.19 -0.32  0.13])
+  [PASS] Those distinct five-real source data induce different active projector packets  (packet distance=0.442445)
+  [PASS] They also induce different flavored DM transport outputs on the same exact branch  (best etas=(0.789720167247,0.773565941623))
+
+  source A columnwise eta/eta_obs = [0.723965 0.78972  0.701302]
+  source B columnwise eta/eta_obs = [0.773566 0.713467 0.719833]
+
+  Therefore the exact remaining PMNS object relevant for DM flavored
+  transport is not the full pair, not the passive monomial side, and
+  not the already-native seed/orientation data. It is the active
+  five-real source.
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The PMNS lane removes the need to invent a new flavored-projector family on the DM branch  (the transport packet localizes to the active Hermitian block on one-sided PMNS classes)
+  [PASS] The exact remaining PMNS input to DM flavored transport is only the active five-real source  (tau and the seed pair are already native; the passive side is only a permutation)
+  [PASS] So the next exact DM target is a PMNS-side law for that active five-real source, not a new transport ansatz  (derive the active source or the transport-relevant active column)
+
+  Transport-facing read:
+    - one-sided PMNS projectors are active-block objects
+    - the near-closing N_e transport lift already lives on the active H_e block
+    - the open science is the active five-real PMNS source law
+
+========================================================================================
+SUMMARY: PASS=14 FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -1,0 +1,129 @@
+===== runner cache v1 =====
+runner: scripts/frontier_angular_kernel_underdetermination_nogo.py
+runner_sha256: 5a3d77da2b8f36f0ac46e172b2401b1ab8a4ab0edaefa21b59be5a4e2d702c68
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.26
+status: ok
+----- stdout -----
+==============================================================================
+Angular Kernel Underdetermination No-Go (with Phase 4 decoupling)
+==============================================================================
+
+NO-GO: w(theta) is not uniquely determined by retained primitives.
+DECOUPLING: this does not block Phase 4 boost covariance, which
+            lives on the staggered/Laplacian construction.
+
+
+=== Part 1: Multiple kernels satisfy azimuthal symmetry ===
+
+  [PASS] Kernel 'uniform' azimuthally symmetric  (max|w(rotated)| - min|w(rotated)| = 0.00e+00)
+  [PASS] Kernel 'cos(theta)' azimuthally symmetric  (max|w(rotated)| - min|w(rotated)| = 0.00e+00)
+  [PASS] Kernel 'cos^2(theta)' azimuthally symmetric  (max|w(rotated)| - min|w(rotated)| = 0.00e+00)
+  [PASS] Kernel 'exp(-0.4*t^2)' azimuthally symmetric  (max|w(rotated)| - min|w(rotated)| = 0.00e+00)
+  [PASS] Kernel 'exp(-0.8*t^2)' azimuthally symmetric  (max|w(rotated)| - min|w(rotated)| = 0.00e+00)
+  [PASS] Kernel 'exp(-1.6*t^2)' azimuthally symmetric  (max|w(rotated)| - min|w(rotated)| = 0.00e+00)
+  [PASS] Kernel 'linear_falloff' azimuthally symmetric  (max|w(rotated)| - min|w(rotated)| = 0.00e+00)
+
+=== Part 2: Forward-causal restriction satisfied by all kernels ===
+
+  [PASS] Kernel 'uniform' nonnegative on forward cone  (w >= 0 for all theta in [0, pi/2])
+  [PASS] Kernel 'cos(theta)' nonnegative on forward cone  (w >= 0 for all theta in [0, pi/2])
+  [PASS] Kernel 'cos^2(theta)' nonnegative on forward cone  (w >= 0 for all theta in [0, pi/2])
+  [PASS] Kernel 'exp(-0.4*t^2)' nonnegative on forward cone  (w >= 0 for all theta in [0, pi/2])
+  [PASS] Kernel 'exp(-0.8*t^2)' nonnegative on forward cone  (w >= 0 for all theta in [0, pi/2])
+  [PASS] Kernel 'exp(-1.6*t^2)' nonnegative on forward cone  (w >= 0 for all theta in [0, pi/2])
+  [PASS] Kernel 'linear_falloff' nonnegative on forward cone  (w >= 0 for all theta in [0, pi/2])
+
+=== Part 3: Distinct kernels give distinct transverse-step moments ===
+
+  kernel              <r_perp^2>     <r_perp^4>
+  -------------------------------------------------------
+  uniform                  8.0000        88.0000
+  cos(theta)               6.3045        62.8284
+  cos^2(theta)             4.5553        39.8874
+  exp(-0.4*t^2)            7.3003        77.7665
+  exp(-0.8*t^2)            6.5190        66.9448
+  exp(-1.6*t^2)            4.7708        44.7162
+  linear_falloff           6.0286        59.7090
+  [PASS] Seven kernels give >= 6 distinct second moments  (distinct values of <r_perp^2> = 7)
+  [PASS] Seven kernels give >= 6 distinct fourth moments  (distinct values of <r_perp^4> = 7)
+  [PASS] Uniform vs gravity-card kernel: <r_perp^2> differs by >= 20%  (<r_perp^2>_uniform / <r_perp^2>_grav = 1.2272)
+
+=== Part 4: Cl(3) trace structure does not constrain w(theta) ===
+
+  [PASS] Cl(3) trace of 'uniform' edge weight: Tr(w*I) = 2 w(theta)  (Tr = 2.000000, expected = 2.000000)
+  [PASS] Cl(3) trace of 'cos(theta)' edge weight: Tr(w*I) = 2 w(theta)  (Tr = 1.529684, expected = 1.529684)
+  [PASS] Cl(3) trace of 'cos^2(theta)' edge weight: Tr(w*I) = 2 w(theta)  (Tr = 1.169967, expected = 1.169967)
+  [PASS] Cl(3) trace of 'exp(-0.4*t^2)' edge weight: Tr(w*I) = 2 w(theta)  (Tr = 1.644024, expected = 1.644024)
+  [PASS] Cl(3) trace of 'exp(-0.8*t^2)' edge weight: Tr(w*I) = 2 w(theta)  (Tr = 1.351408, expected = 1.351408)
+  [PASS] Cl(3) trace of 'exp(-1.6*t^2)' edge weight: Tr(w*I) = 2 w(theta)  (Tr = 0.913152, expected = 0.913152)
+  [PASS] Cl(3) trace of 'linear_falloff' edge weight: Tr(w*I) = 2 w(theta)  (Tr = 1.108732, expected = 1.108732)
+
+=== Part 5: Action extremization does not constrain w ===
+
+  [PASS] Saddle-point of action: straight line (dy = 0)  (argmin(S) = 0.0000, expected 0)
+  [PASS] Action saddle independent of kernel 'uniform'  (phase stationarity dS/d(dy) = 0 at dy = 0; w is amplitude-only)
+  [PASS] Action saddle independent of kernel 'cos(theta)'  (phase stationarity dS/d(dy) = 0 at dy = 0; w is amplitude-only)
+  [PASS] Action saddle independent of kernel 'cos^2(theta)'  (phase stationarity dS/d(dy) = 0 at dy = 0; w is amplitude-only)
+  [PASS] Action saddle independent of kernel 'exp(-0.4*t^2)'  (phase stationarity dS/d(dy) = 0 at dy = 0; w is amplitude-only)
+  [PASS] Action saddle independent of kernel 'exp(-0.8*t^2)'  (phase stationarity dS/d(dy) = 0 at dy = 0; w is amplitude-only)
+  [PASS] Action saddle independent of kernel 'exp(-1.6*t^2)'  (phase stationarity dS/d(dy) = 0 at dy = 0; w is amplitude-only)
+  [PASS] Action saddle independent of kernel 'linear_falloff'  (phase stationarity dS/d(dy) = 0 at dy = 0; w is amplitude-only)
+
+=== Part 6: Causal-cone restriction only fixes kernel support ===
+
+  [PASS] Kernel 'uniform': bounded on [0, pi/2], w(0) = 1.000, w(pi/2) = 1.000
+  [PASS] Kernel 'cos(theta)': bounded on [0, pi/2], w(0) = 1.000, w(pi/2) = 0.000
+  [PASS] Kernel 'cos^2(theta)': bounded on [0, pi/2], w(0) = 1.000, w(pi/2) = 0.000
+  [PASS] Kernel 'exp(-0.4*t^2)': bounded on [0, pi/2], w(0) = 1.000, w(pi/2) = 0.373
+  [PASS] Kernel 'exp(-0.8*t^2)': bounded on [0, pi/2], w(0) = 1.000, w(pi/2) = 0.139
+  [PASS] Kernel 'exp(-1.6*t^2)': bounded on [0, pi/2], w(0) = 1.000, w(pi/2) = 0.019
+  [PASS] Kernel 'linear_falloff': bounded on [0, pi/2], w(0) = 1.000, w(pi/2) = 0.000
+  [PASS] Cone-kinematics-equivalent kernels can have different shapes  (uniform vs exp(-0.8 t^2): same support, different shape)
+
+=== Part 7: Leading-order continuum SO(3) isotropy ===
+
+  [PASS] Kernel 'uniform': leading transverse isotropy (D_yy = D_zz)  (D_yy = 4.0000, D_zz = 4.0000, D_yz = 0.00e+00)
+  [PASS] Kernel 'cos(theta)': leading transverse isotropy (D_yy = D_zz)  (D_yy = 3.1523, D_zz = 3.1523, D_yz = 0.00e+00)
+  [PASS] Kernel 'cos^2(theta)': leading transverse isotropy (D_yy = D_zz)  (D_yy = 2.2777, D_zz = 2.2777, D_yz = 0.00e+00)
+  [PASS] Kernel 'exp(-0.4*t^2)': leading transverse isotropy (D_yy = D_zz)  (D_yy = 3.6502, D_zz = 3.6502, D_yz = 0.00e+00)
+  [PASS] Kernel 'exp(-0.8*t^2)': leading transverse isotropy (D_yy = D_zz)  (D_yy = 3.2595, D_zz = 3.2595, D_yz = 0.00e+00)
+  [PASS] Kernel 'exp(-1.6*t^2)': leading transverse isotropy (D_yy = D_zz)  (D_yy = 2.3854, D_zz = 2.3854, D_yz = 0.00e+00)
+  [PASS] Kernel 'linear_falloff': leading transverse isotropy (D_yy = D_zz)  (D_yy = 3.0143, D_zz = 3.0143, D_yz = 0.00e+00)
+
+=== Part 8: Staggered/Laplacian propagator has no kernel freedom ===
+
+  [PASS] Staggered H_1d is antisymmetric (no free parameter)  (max|H + H^T| = 0.00e+00)
+  [PASS] Staggered H_1d spectrum is +/- paired (parity exact)  (n+ = 3, n- = 3)
+  [PASS] Staggered fermion dispersion E = |sin(p a)| has no kernel parameter  (E_stag = [0.           0.7071067812 1.           0.7071067812 0.           0.7071067812 1.           0.7071067812])
+  [PASS] Bosonic Laplacian dispersion E = (2/a)|sin(p a / 2)| has no kernel parameter  (E_lap = [0.           0.7653668647 1.4142135624 1.847759065  2.           1.847759065  1.4142135624 0.7653668647])
+  [PASS] Staggered/Laplacian propagator is fully fixed by lattice action  (no angular-kernel parameter; cf. directional-measure walk)
+
+=== Part 9: Decoupling theorem and Phase 4 routing ===
+
+  [PASS] Dispersion theorem (EMERGENT_LORENTZ_INVARIANCE) is on staggered/Laplacian  (37/37 PASS; uses only lattice action, no path-measure kernel)
+  [PASS] Directional path measure is a separate construction (gravity-card lane)  (ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE; w(theta) chosen by gravity observables)
+  [PASS] Two propagator constructions: distinct claim surfaces  (staggered/Laplacian (boost-covariance lane) vs directional-measure (gravity lane))
+  [PASS] Phase 4 (3+1D boost covariance) -> staggered/Laplacian construction  (no angular-kernel involvement; builds on retained dispersion theorem)
+  [PASS] beta = 0.8 empirical does NOT block Phase 4  (directional kernel only enters gravity-card construction; not on Phase 4 path)
+  [PASS] THEOREM (decoupling): Phase 4 boost covariance is independent of w(theta)  (Phase 4 lives entirely on the lattice-action-determined staggered/Laplacian surface)
+
+=== Part 10: Combined no-go statement ===
+
+  [PASS] NO-GO: angular kernel w(theta) is underdetermined by retained primitives  (Cl(3) trace + action + cone + leading isotropy admit > 1 distinct w)
+  [PASS] Specifically: 7 listed kernels all satisfy retained primitives  (uniform, cos, cos^2, exp(-0.4 t^2), exp(-0.8 t^2), exp(-1.6 t^2), linear)
+  [PASS] Different kernels give measurably different transverse-step moments  (<r_perp^2> spans 4.5..8.0; <r_perp^4> spans 40..88)
+  [PASS] MISSING AXIOM: principle that uniquely fixes w(theta)  (candidates: higher-order isotropy, action-Lagrangian principle, observable matching)
+  [PASS] Empirical beta = 0.8 is gravity-card phenomenology, not derived  (ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE 'Next work' item 3 lists this as open)
+  [PASS] POSITIVE COROLLARY: Phase 4 does not need to resolve this no-go  (boost-covariance program decouples from the directional-measure construction)
+
+==============================================================================
+SUMMARY: PASS=64  FAIL=0
+==============================================================================
+
+All checks passed. Angular kernel is structurally underdetermined,
+but boost-covariance Phase 4 program decouples from it.
+
+----- stderr -----
+

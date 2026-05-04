@@ -1,0 +1,36 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_triplet_even_response_theorem.py
+runner_sha256: 51250a2c39bc1d86ccfe9e41f6ff6a39bbeb5a534a654e8e323af79dc5907ea5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO TRIPLET EVEN-RESPONSE THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE CP TENSOR FACTORIZES INTO ODD SOURCE TIMES EVEN RESPONSE
+========================================================================================
+  [PASS] cp1 matches the exact odd-times-even response law  (cp1=-0.030280, E1=0.087150)
+  [PASS] cp2 matches the exact odd-times-even response law  (cp2=0.096122, E2=0.276650)
+  [PASS] So the remaining even response sector is exactly E1=delta+rho and E2=A+b-c-d  (E1=0.087150, E2=0.276650)
+
+========================================================================================
+PART 2: THE EVEN RESPONSE CHANNELS ARE INVARIANT UNDER CHARACTER CONJUGATION
+========================================================================================
+  [PASS] E1 and E2 are even while gamma is odd under phi -> -phi  (E1=0.087150, E2=0.276650, gamma=0.521174)
+  [PASS] The intrinsic CP tensor flips sign with gamma at fixed even response  (cp+=( -0.030280, 0.096122 ))
+
+========================================================================================
+PART 3: THE BRANCH RECORDS THE EVEN RESPONSE FORM CLEANLY
+========================================================================================
+  [PASS] The CP theorem note records E1 and E2 explicitly
+
+========================================================================================
+SUMMARY: PASS=6 FAIL=0
+========================================================================================
+
+----- stderr -----
+

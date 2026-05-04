@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_c3_character_mode_reduction.py
+runner_sha256: eace85d6375f55dceabaa4583d4894273cece91d999dab9b721ec3a5f80ee6d3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+PMNS C3 CHARACTER MODE REDUCTION
+========================================================================================
+
+Question:
+  Once the native C3-character holonomy family is closed, what is the
+  exact remaining sole-axiom PMNS value-selection problem?
+
+========================================================================================
+PART 1: THE REDUCED FAMILY IS EXACTLY w PLUS ONE COMPLEX CHARACTER MODE
+========================================================================================
+  [PASS] The trivial character mode is exactly w  (z0=0.280000+0.000000j, w=0.280000)
+  [PASS] The omega character mode is exactly u - i v  (z1=0.410000-0.320000j)
+  [PASS] The omega^2 character mode is exactly u + i v  (z2=0.410000+0.320000j)
+  [PASS] The three native holonomies are exactly the inverse character transform of (w, u-iv, u+iv)  (hol=[ 1.1       0.424256 -0.684256])
+
+========================================================================================
+PART 2: GRAPH-FIRST REDUCTION FORCES THE NONTRIVIAL CHARACTER PAIR TO BE CONJUGATE
+========================================================================================
+  [PASS] The graph-first reduced channel makes the two nontrivial character modes complex conjugates  (z1=0.290000+0.170000j, z2=0.290000-0.170000j)
+  [PASS] So the remaining value problem is one real trivial mode plus one complex nontrivial mode  ((w, chi)=(0.340000+0.000000j, 0.290000-0.170000j))
+
+========================================================================================
+PART 3: CURRENT SOLE-AXIOM ROUTES ANNIHILATE THE NONTRIVIAL CHARACTER MODE EXACTLY
+========================================================================================
+  [PASS] The free sole-axiom point has zero nontrivial character modes  (modes=[0.+0.j 0.+0.j 0.+0.j])
+  [PASS] The sole-axiom hw=1 source/transfer route still has zero nontrivial character modes  (modes=[0.+0.j 0.+0.j 0.+0.j])
+  [PASS] The retained scalar route has zero nontrivial character modes too  (modes=[0.+0.j 0.+0.j 0.+0.j])
+  [PASS] All three routes therefore give only trivial retained character holonomies  (free=[0. 0. 0.], source=[0. 0. 0.], scalar=[0. 0. 0.])
+
+========================================================================================
+PART 4: THE EXACT MISSING SOURCE IS A NONZERO C3 NONTRIVIAL CHARACTER AMPLITUDE
+========================================================================================
+  [PASS] Distinct realized reduced-channel points correspond to distinct nontrivial character amplitudes  (chi_a=0.410000+0.320000j, chi_b=0.290000-0.170000j)
+  [PASS] Once the nontrivial character amplitude chi is known, u and v are fixed exactly  (chi_a=0.410000+0.320000j, chi_b=0.290000-0.170000j)
+  [PASS] Therefore the current sole-axiom blocker is exactly the production of nonzero C3-nontrivial character amplitude on the retained hw=1 response family
+
+========================================================================================
+PART 5: CIRCULARITY GUARD
+========================================================================================
+  [PASS] The character-mode reduction takes no PMNS target coordinates as inputs  (bad=[])
+  [PASS] The sole-axiom source/transfer pack takes no PMNS target coordinates as inputs  (bad=[])
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact reduced-law theorem:
+    - the retained graph-first PMNS value problem is exactly
+      one real trivial-character mode w plus one complex nontrivial
+      character amplitude chi
+    - the graph-first antiunitary reduction forces the opposite
+      nontrivial mode to be conjugate(chi)
+    - the current sole-axiom free, source/transfer, and scalar routes
+      all annihilate chi exactly
+
+  So the next honest positive target is now completely explicit:
+  derive a sole-axiom law that produces nonzero C3-nontrivial character
+  amplitude on the retained hw=1 response family.
+
+PASS=15 FAIL=0
+
+----- stderr -----
+

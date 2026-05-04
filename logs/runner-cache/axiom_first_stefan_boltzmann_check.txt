@@ -1,0 +1,122 @@
+===== runner cache v1 =====
+runner: scripts/axiom_first_stefan_boltzmann_check.py
+runner_sha256: 828c84434aabbfd493ff37ff3930c479e47b38f8445922ba36e13e02f20b1f22
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.95
+status: ok
+----- stdout -----
+========================================================================
+AXIOM-FIRST STEFAN-BOLTZMANN CHECK
+========================================================================
+
+Setup:
+  Block 01 KMS (Gibbs state on harmonic oscillator → Planck dist)
+  retained framework EW + emergent Lorentz (3D photon dispersion)
+  natural units hbar = c = k_B = 1
+
+Stefan-Boltzmann: u(T) = (pi^2 / 15) T^4 in natural units
+
+------------------------------------------------------------------------
+TEST 1: Planck distribution from KMS Gibbs trace
+        n(omega, T) = 1 / (exp(omega/T) - 1)
+------------------------------------------------------------------------
+   omega       T     <n> (Gibbs)     1/(e^x - 1)      |diff|
+    1.00    0.50      0.15651764      0.15651764  2.78e-17
+    1.00    1.00      0.58197671      0.58197671  0.00e+00
+    1.00    2.00      1.54149408      1.54149408  0.00e+00
+    1.00    5.00      4.51665557      4.51665557  1.78e-15
+    2.00    0.50      0.01865736      0.01865736  3.47e-18
+    2.00    1.00      0.15651764      0.15651764  2.78e-17
+    2.00    2.00      0.58197671      0.58197671  0.00e+00
+    2.00    5.00      2.03324478      2.03324478  4.44e-16
+    5.00    0.50      0.00004540      0.00004540  6.78e-21
+    5.00    1.00      0.00678365      0.00678365  1.73e-18
+    5.00    2.00      0.08942549      0.08942549  1.39e-17
+    5.00    5.00      0.58197671      0.58197671  1.11e-16
+
+  max |Gibbs - Planck formula| = 1.776e-15
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: u(T) = (pi^2/15) T^4 from Planck spectrum integral
+------------------------------------------------------------------------
+  Stefan-Boltzmann coefficient (pi^2/15) = 0.6579736267
+
+       T      u(T) numeric     (pi^2/15) T^4       ratio
+    0.50  4.1123351622e-02  4.1123351671e-02    1.000000
+    1.00  6.5797362595e-01  6.5797362674e-01    1.000000
+    2.00  1.0527578015e+01  1.0527578028e+01    1.000000
+    5.00  4.1123351622e+02  4.1123351671e+02    1.000000
+   10.00  6.5797362595e+03  6.5797362674e+03    1.000000
+
+  max relative residual = 1.202e-09
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: T^4 scaling — u(T) / T^4 is constant
+------------------------------------------------------------------------
+       T            u(T) / T^4       (pi^2/15)      |diff|
+    0.50          0.6579736259    0.6579736267  7.91e-10
+    2.08          0.6579736259    0.6579736267  7.91e-10
+    3.67          0.6579736259    0.6579736267  7.91e-10
+    5.25          0.6579736259    0.6579736267  7.91e-10
+    6.83          0.6579736259    0.6579736267  7.91e-10
+    8.42          0.6579736259    0.6579736267  7.91e-10
+   10.00          0.6579736259    0.6579736267  7.91e-10
+
+  coefficient of variation in u/T^4 = 1.562e-16
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: zeta(4) = pi^4 / 90 from Bose-Einstein integral
+        integral_0^inf x^3 / (e^x - 1) dx = Gamma(4) zeta(4) = 6 * pi^4/90 = pi^4/15
+------------------------------------------------------------------------
+  numeric integral = 6.4939394023
+  pi^4 / 15        = 6.4939394023
+  relative diff    = 6.291e-15
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5: Wien displacement law
+        omega_max / T = x_max where x_max satisfies (3 - x) e^x = 3
+        numerically x_max ≈ 2.82144
+------------------------------------------------------------------------
+  numeric x_max from solver = 2.821439
+  expected Wien constant     = 2.821439
+  |diff| = 1.221e-10
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 6: Stefan-Boltzmann constant sigma_SB in SI units
+        sigma_SB = (pi^2/60) k_B^4 / (hbar^3 c^2)
+------------------------------------------------------------------------
+  computed sigma_SB       = 5.6703744296e-08 W m^-2 K^-4
+  CODATA 2018 sigma_SB    = 5.6703744190e-08 W m^-2 K^-4
+  relative diff           = 1.871e-09
+  STATUS: PASS
+
+========================================================================
+SUMMARY
+========================================================================
+  Test 1 (Planck dist from KMS Gibbs trace):    PASS
+  Test 2 (u(T) = (pi^2/15) T^4 numerical):      PASS
+  Test 3 (T^4 scaling u/T^4 = const):           PASS
+  Test 4 (zeta(4) = pi^4/90):                   PASS
+  Test 5 (Wien displacement law):               PASS
+  Test 6 (sigma_SB in SI = CODATA 2018):        PASS
+
+  OVERALL: PASS
+
+Note: this runner verifies the Stefan-Boltzmann law via
+(a) explicit Gibbs-trace evaluation of the Planck distribution
+    (Test 1, the KMS step from Block 01),
+(b) numerical integration of the Planck energy spectrum (Tests 2-3),
+(c) the Bose-Einstein integral identity (Test 4),
+(d) the Wien displacement law (Test 5), and
+(e) the SI Stefan-Boltzmann constant matching CODATA 2018 (Test 6).
+The proof in the companion theorem note composes Block 01 KMS
+with retained framework EW + emergent Lorentz + 3D mode-counting.
+
+----- stderr -----
+

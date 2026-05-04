@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_grown_trapping_frontier_v3.py
+runner_sha256: be93113f175bc861f8254bb826cfc3425d17990dce715ec12411cde1baad8c42
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

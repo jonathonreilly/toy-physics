@@ -1,0 +1,184 @@
+===== runner cache v1 =====
+runner: scripts/frontier_holographic_probe.py
+runner_sha256: f38a3d58ff422584927ef3780a46dff6c357d15dc173270a831b35a8c1969753
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 4.04
+status: ok
+----- stdout -----
+================================================================================
+HOLOGRAPHIC BOUNDARY-LAW PROBE
+Does Dirac-sea entanglement scale more cleanly with boundary than volume?
+================================================================================
+
+Method: Dirac-sea correlation matrix (Peschel 2003)
+  Fill negative-energy eigenstates of staggered-fermion H
+  S = -sum [nu*ln(nu) + (1-nu)*ln(1-nu)] from C_A eigenvalues
+
+Parameters: MASS=0.3, MU2=0.22, DT=0.12, G=10.0, N_STEPS=30
+Lattice sides: [8, 10, 12, 14]
+
+
+============================================================
+  LATTICE SIDE = 8  (n = 64)
+============================================================
+  Evolving with self-gravity (G=10)...
+  Evolving free (G=0)...
+  Computing Dirac sea correlation matrices...
+  Filled modes: grav=32, free=32
+  Energy range: grav=[-2.2107, 2.2199], free=[-1.8720, 1.8720]
+
+    R   |A| |bnd|     S_grav rank_g     S_free rank_f       dS
+  ------------------------------------------------------------
+    1     5    12     0.9549      5     2.0169      5  -1.0620
+    2    13    20     1.8181     13     3.6775     13  -1.8594
+    3    25    28     2.7498     21     5.2297     21  -2.4799
+    4    39    28     2.8814     21     5.2297     21  -2.3484
+
+  Elapsed: 0.2s
+
+============================================================
+  LATTICE SIDE = 10  (n = 100)
+============================================================
+  Evolving with self-gravity (G=10)...
+  Evolving free (G=0)...
+  Computing Dirac sea correlation matrices...
+  Filled modes: grav=50, free=50
+  Energy range: grav=[-2.1853, 2.1887], free=[-2.0224, 2.0224]
+
+    R   |A| |bnd|     S_grav rank_g     S_free rank_f       dS
+  ------------------------------------------------------------
+    1     5    12     1.0615      5     2.0336      5  -0.9721
+    2    13    20     2.0187     13     3.7253     13  -1.7067
+    3    25    28     3.1793     24     5.4165     25  -2.2372
+    4    41    36     4.5156     36     7.0544     40  -2.5387
+    5    59    36     4.7999     36     7.0544     40  -2.2545
+
+  Elapsed: 0.2s
+
+============================================================
+  LATTICE SIDE = 12  (n = 144)
+============================================================
+  Evolving with self-gravity (G=10)...
+  Evolving free (G=0)...
+  Computing Dirac sea correlation matrices...
+  Filled modes: grav=72, free=72
+  Energy range: grav=[-2.1436, 2.1478], free=[-1.9550, 1.9550]
+
+    R   |A| |bnd|     S_grav rank_g     S_free rank_f       dS
+  ------------------------------------------------------------
+    1     5    12     1.0989      5     2.0440      5  -0.9451
+    2    13    20     2.0979     13     3.7510     13  -1.6531
+    3    25    28     3.3495     24     5.4611     25  -2.1116
+    4    41    36     4.8691     36     7.1503     40  -2.2812
+    5    61    44     6.4826     46     8.7571     52  -2.2745
+    6    83    44     6.7870     48     8.7571     52  -1.9701
+
+  Elapsed: 0.3s
+
+============================================================
+  LATTICE SIDE = 14  (n = 196)
+============================================================
+  Evolving with self-gravity (G=10)...
+  Evolving free (G=0)...
+  Computing Dirac sea correlation matrices...
+  Filled modes: grav=98, free=98
+  Energy range: grav=[-2.1427, 2.1463], free=[-2.0224, 2.0224]
+
+    R   |A| |bnd|     S_grav rank_g     S_free rank_f       dS
+  ------------------------------------------------------------
+    1     5    12     1.1122      5     2.0473      5  -0.9351
+    2    13    20     2.1275     13     3.7587     13  -1.6312
+    3    25    28     3.4149     24     5.4749     25  -2.0600
+    4    41    36     4.9996     36     7.1738     40  -2.1742
+    5    61    44     6.7590     50     8.8576     56  -2.0986
+    6    85    52     8.5042     66    10.4935     72  -1.9893
+    7   111    52     8.7992     66    10.4935     72  -1.6943
+
+  Elapsed: 0.5s
+
+
+================================================================================
+SCALING ANALYSIS: S vs |boundary| (area) and S vs |A| (volume)
+================================================================================
+
+  --- SELF-GRAVITY (G=10) ---
+  S vs |boundary|:  S = 0.186053 * bnd + -1.6446  R^2 = 0.970131
+  S vs |A| (vol):   S = 0.078409 * vol + 1.0056  R^2 = 0.937046
+  ==> AREA LAW preferred (R^2_bnd=0.9701 > R^2_vol=0.9370)
+
+  Schmidt rank vs |boundary|: slope=1.4684, R^2=0.9790
+  Schmidt rank vs |A| (vol):  slope=0.6136, R^2=0.9296
+  ==> Rank scales with BOUNDARY
+
+  Per-lattice-size fits:
+    side= 8: R^2_bnd=0.9951, R^2_vol=0.8685  --> AREA
+    side=10: R^2_bnd=0.9883, R^2_vol=0.9276  --> AREA
+    side=12: R^2_bnd=0.9882, R^2_vol=0.9431  --> AREA
+    side=14: R^2_bnd=0.9893, R^2_vol=0.9501  --> AREA
+
+  --- FREE (G=0) ---
+  S vs |boundary|:  S = 0.211399 * bnd + -0.5149  R^2 = 0.999375
+  S vs |A| (vol):   S = 0.085955 * vol + 2.6095  R^2 = 0.898533
+  ==> AREA LAW preferred (R^2_bnd=0.9994 > R^2_vol=0.8985)
+
+  Schmidt rank vs |boundary|: slope=1.6455, R^2=0.9756
+  Schmidt rank vs |A| (vol):  slope=0.6862, R^2=0.9227
+  ==> Rank scales with BOUNDARY
+
+  Per-lattice-size fits:
+    side= 8: R^2_bnd=0.9997, R^2_vol=0.8119  --> AREA
+    side=10: R^2_bnd=0.9999, R^2_vol=0.8642  --> AREA
+    side=12: R^2_bnd=0.9999, R^2_vol=0.8871  --> AREA
+    side=14: R^2_bnd=0.9999, R^2_vol=0.9035  --> AREA
+
+
+================================================================================
+GRAVITY EFFECT ON AREA-LAW COEFFICIENT
+================================================================================
+  Area-law coefficient (gravity): 0.186053
+  Area-law coefficient (free):    0.211399
+  Ratio (gravity/free): 0.8801
+  Difference: -11.99%
+
+  Delta S (grav - free) across all points:
+    mean = -1.876233
+    std  = 0.489731
+    min  = -2.538747
+    max  = -0.935096
+
+
+================================================================================
+RAW DATA TABLE
+================================================================================
+side   R   |A| |bnd|     S_grav  rk_g     S_free  rk_f         dS
+--------------------------------------------------------------------
+   8   1     5    12     0.9549     5     2.0169     5    -1.0620
+   8   2    13    20     1.8181    13     3.6775    13    -1.8594
+   8   3    25    28     2.7498    21     5.2297    21    -2.4799
+   8   4    39    28     2.8814    21     5.2297    21    -2.3484
+  10   1     5    12     1.0615     5     2.0336     5    -0.9721
+  10   2    13    20     2.0187    13     3.7253    13    -1.7067
+  10   3    25    28     3.1793    24     5.4165    25    -2.2372
+  10   4    41    36     4.5156    36     7.0544    40    -2.5387
+  10   5    59    36     4.7999    36     7.0544    40    -2.2545
+  12   1     5    12     1.0989     5     2.0440     5    -0.9451
+  12   2    13    20     2.0979    13     3.7510    13    -1.6531
+  12   3    25    28     3.3495    24     5.4611    25    -2.1116
+  12   4    41    36     4.8691    36     7.1503    40    -2.2812
+  12   5    61    44     6.4826    46     8.7571    52    -2.2745
+  12   6    83    44     6.7870    48     8.7571    52    -1.9701
+  14   1     5    12     1.1122     5     2.0473     5    -0.9351
+  14   2    13    20     2.1275    13     3.7587    13    -1.6312
+  14   3    25    28     3.4149    24     5.4749    25    -2.0600
+  14   4    41    36     4.9996    36     7.1738    40    -2.1742
+  14   5    61    44     6.7590    50     8.8576    56    -2.0986
+  14   6    85    52     8.5042    66    10.4935    72    -1.9893
+  14   7   111    52     8.7992    66    10.4935    72    -1.6943
+
+Plot saved to /private/tmp/gate-fix-worktree/scripts/frontier_holographic_probe.png
+
+Done.
+
+----- stderr -----
+

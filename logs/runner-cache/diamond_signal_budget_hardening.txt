@@ -1,0 +1,48 @@
+===== runner cache v1 =====
+runner: scripts/diamond_signal_budget_hardening.py
+runner_sha256: 593a2e13976ac6928fe4dcbd67350d24e927e846b1c9133a8b171fa0fca600f2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+====================================================================================================
+DIAMOND SIGNAL BUDGET HARDENING
+  one geometry, one scaling map, one proxy-budget estimate
+====================================================================================================
+
+GEOMETRY ANCHOR
+  family: drift=0.2, restore=0.7
+  seeds: 6
+  source_layer: 8
+  source_anchor_target: (y, z) = (0.0, 3.0)
+  motion law: y_src(layer) = y0 + v * (layer - source_layer) * h
+  h: 0.5
+
+SCALING MAP
+  v    delta_y vs static        phase lag (rad)
+  ---  -----------------------  ----------------
+  -1.00            -1.641405e-06     +4.852935e-05
+  -0.50            -9.233039e-07     +1.309075e-05
+  +0.00            +0.000000e+00     +0.000000e+00
+  +0.50            +8.665715e-07     +1.401315e-05
+  +1.00            +1.472200e-06     +4.334258e-05
+
+PROXY BUDGET
+  weakest nonzero |delta_y vs static| = 8.665715e-07
+  strongest nonzero |delta_y vs static| = 1.641405e-06
+  weakest nonzero |phase lag| = 1.309075e-05 rad
+  strongest nonzero |phase lag| = 4.852935e-05 rad
+  conservative 3-sigma centroid-noise target = 2.888572e-07
+  conservative 3-sigma phase-noise target = 4.363583e-06 rad
+
+DIAGNOSIS
+  the centroid sign flip is the sharper retained observable; the phase lag is a weaker secondary residue
+  a real absolute lab budget is still blocked by the missing transfer coefficient from proxy units to NV readout units
+  until that calibration exists, this remains a proxy-budget card rather than a lab-ready amplitude claim
+
+FINAL VERDICT
+  retained narrow hardening: one explicit source geometry, one signed scaling map, and one proxy budget
+
+----- stderr -----
+

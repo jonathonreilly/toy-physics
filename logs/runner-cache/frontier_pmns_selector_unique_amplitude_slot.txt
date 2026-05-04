@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_selector_unique_amplitude_slot.py
+runner_sha256: fa20b4d098df7d9daa25e2084bc2023988588cf0650647dbb9c2d70bf0605277
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+PMNS SELECTOR: UNIQUE AMPLITUDE SLOT
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - PMNS selector class-space uniqueness
+  - Majorana unique source slot (structural framing only)
+
+Question:
+  Once the reduced selector class is unique, what microscopic datum
+  still remains on the reduced quotient?
+
+========================================================================================
+PART 1: THE UNIQUE REDUCED SELECTOR CLASS IMPLIES ONE REAL SLOT
+========================================================================================
+  [PASS] The reduced selector class space is one-dimensional  (rank=3, dim=1)
+  [PASS] The canonical basis vanishes on the universal locus  (basis[:2]=[0.0, 0.0])
+  [PASS] The canonical basis is sector-odd on the non-universal orbit  (sum=0.00e+00)
+
+  So after quotient reduction there is only one admissible selector
+  class left, up to scale.
+
+========================================================================================
+PART 2: ANY REDUCED REALIZATION IS A_SEL TIMES THE CANONICAL BASIS
+========================================================================================
+  [PASS] A reduced realization is reconstructed from one real coefficient  (reconstruction error=0.00e+00)
+  [PASS] The extracted coefficient is exactly the bridge amplitude a_sel  (a_sel=1.730000, extracted=1.730000)
+  [PASS] No reduced phase data remains once the basis is fixed over R  (the reduced class slot is a real coordinate, not a complex phase-carrying one)
+
+  So the reduced microscopic bridge problem is one real amplitude law:
+  determine a_sel on the unique reduced class.
+
+========================================================================================
+PART 3: THE CURRENT BANK RECORDS THE ONE-SLOT ENDPOINT
+========================================================================================
+  [PASS] The class-space note says the reduced selector class is one-dimensional
+  [PASS] The new note says the reduced bridge is a_sel times the unique class
+  [PASS] The atlas carries the new unique-amplitude-slot row
+  [PASS] The Majorana lane provides the same one-slot structural pattern
+
+  So the current exact endpoint is now explicit: the PMNS selector
+  bridge is a one-slot microscopic problem on the reduced quotient.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-bank answer:
+    - the reduced selector class is unique up to scale
+    - every reduced realization is a_sel times that class
+    - so the remaining reduced microscopic problem is one real
+      amplitude law
+
+PASS=10  FAIL=0
+
+----- stderr -----
+

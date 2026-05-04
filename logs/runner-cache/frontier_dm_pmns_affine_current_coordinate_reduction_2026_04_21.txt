@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_pmns_affine_current_coordinate_reduction_2026_04_21.py
+runner_sha256: 46acfd12a5c5bb968e80aa32d0eec6eb10c0492e85b0208edd04580bca24fb3e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.61
+status: ok
+----- stdout -----
+========================================================================================
+DM PMNS AFFINE CURRENT-COORDINATE REDUCTION THEOREM
+========================================================================================
+
+Question:
+  After graph-first current activation is landed, what exact native object
+  still remains open on the physical affine Hermitian PMNS chart?
+
+========================================================================================
+PART 1: EXACT CURRENT VALUES ON THE AFFINE BASIS
+========================================================================================
+  [PASS] The affine base carries the fixed imaginary offset J_chi(H_base) = -i/4  (J_base=0.000000000000-0.250000000000j)
+  [PASS] The spectator direction T_m is current-blind  (J(T_m)=0.000000000000+0.000000000000j)
+  [PASS] The affine delta direction T_delta is current-blind  (J(T_delta)=0.000000000000+0.000000000000j)
+  [PASS] The affine q_+ direction T_q is read with unit coefficient  (J(T_q)=1.000000000000+0.000000000000j)
+
+========================================================================================
+PART 2: EXACT AFFINE CURRENT FORMULA
+========================================================================================
+  [PASS] On the affine Hermitian chart the exact current law is J_chi(H) = q_+ - i/4  (max err=5.00e-16)
+  [PASS] So current activation fixes q_+ exactly but is blind to m and delta  (J_chi depends only on q_+ on the affine chart)
+
+========================================================================================
+PART 3: THE REMAINING AFFINE SCALAR IS THE SHIFTED IMAGINARY DOUBLET-MIXING
+========================================================================================
+  [PASS] Different affine delta values at fixed q_+ carry the same native current  (J_a=0.820000000000-0.250000000000j, J_b=0.820000000000-0.250000000000j)
+  [PASS] The same two points have different shifted Im(K_Z3[1,2]) readout, i.e. different delta  (delta_a=0.200000000000, delta_b=1.100000000000)
+  [PASS] The Z3 doublet-block theorem still reads q_+ exactly from the centered doublet trace  (q_a=0.820000000000, q_b=0.820000000000)
+
+========================================================================================
+PART 4: SCIENTIFIC CONSEQUENCE
+========================================================================================
+  [PASS] The fixed-N_e theorem still records that the physical PMNS target lives on an exact local 2-real source manifold
+  [PASS] The ordered-chain theorem still lands one exact sole-axiom nonzero-current route on hw=1
+  [PASS] The doublet-block theorem still records delta as the shifted imaginary K12 coordinate
+  [PASS] Therefore current activation is not yet the full physical PMNS last mile at this theorem stage  (equivalently the current-blind shifted Im(K_Z3[1,2]) law on the retained hw=1 family remained to be closed)
+  [PASS] The later ordered-chain graded-current theorem closes that remaining affine scalar exactly  (this affine reduction is a historical precursor, not the final strict/native state)
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact affine-current sharpening:
+    - on H(m, delta, q_+) the native current is J_chi(H) = q_+ - i/4
+    - graph-first current activation therefore closes the q_+ coordinate
+    - the shifted Im(K_Z3[1,2]) / delta coordinate remained open at
+      this theorem stage
+
+  So this theorem isolates the remaining affine scalar exactly, but does
+  not by itself finish the strict/native DM last mile. The later
+  ordered-chain graded-current closure theorem closes that remaining
+  scalar on the retained hw=1 response family.
+
+SUMMARY: PASS=14 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/wave_radiation.py
+runner_sha256: 68e37d47796f9733bdb09b2c91091fa7b2a8bf2a2a3c35fb6181f443da6cc002
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

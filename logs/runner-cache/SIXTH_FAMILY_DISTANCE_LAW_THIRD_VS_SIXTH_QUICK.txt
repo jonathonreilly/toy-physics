@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/SIXTH_FAMILY_DISTANCE_LAW_THIRD_VS_SIXTH_QUICK.py
+runner_sha256: 685f374217b532cbcd6cbbb96c37815ff39915f3402b77414e56e5308dcc8218
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

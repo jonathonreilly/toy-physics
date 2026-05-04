@@ -1,0 +1,107 @@
+===== runner cache v1 =====
+runner: scripts/frontier_unit_singlet_overlap_narrow.py
+runner_sha256: 5724b33be48fd73a5dcbb81130745ae521722c0479012565911e38ae115eac26
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.55
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: unit-singlet overlap = 1/sqrt(N_iso * N_c)
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: framework instance (N_iso, N_c) = (2, 3) -> F = 1/sqrt(6)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (N_iso, N_c) = (2, 3) at (alpha_0, a_0) = (1, 1): F = 1/sqrt(6)  (F = sqrt(6)/6)
+  [PASS (A)] (N_iso, N_c) = (2, 3) at (alpha_0, a_0) = (1, 2): F = 1/sqrt(6)  (F = sqrt(6)/6)
+  [PASS (A)] (N_iso, N_c) = (2, 3) at (alpha_0, a_0) = (1, 3): F = 1/sqrt(6)  (F = sqrt(6)/6)
+  [PASS (A)] (N_iso, N_c) = (2, 3) at (alpha_0, a_0) = (2, 1): F = 1/sqrt(6)  (F = sqrt(6)/6)
+  [PASS (A)] (N_iso, N_c) = (2, 3) at (alpha_0, a_0) = (2, 2): F = 1/sqrt(6)  (F = sqrt(6)/6)
+  [PASS (A)] (N_iso, N_c) = (2, 3) at (alpha_0, a_0) = (2, 3): F = 1/sqrt(6)  (F = sqrt(6)/6)
+
+----------------------------------------------------------------------------------------
+Part 2: alternative instance (N_iso, N_c) = (3, 4) -> F = 1/sqrt(12)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (N_iso, N_c) = (3, 4) at (alpha_0, a_0) = (1, 1): F = 1/sqrt(12)  (F = sqrt(3)/6)
+  [PASS (A)] (N_iso, N_c) = (3, 4) at (alpha_0, a_0) = (1, 4): F = 1/sqrt(12)  (F = sqrt(3)/6)
+  [PASS (A)] (N_iso, N_c) = (3, 4) at (alpha_0, a_0) = (3, 1): F = 1/sqrt(12)  (F = sqrt(3)/6)
+  [PASS (A)] (N_iso, N_c) = (3, 4) at (alpha_0, a_0) = (3, 4): F = 1/sqrt(12)  (F = sqrt(3)/6)
+
+----------------------------------------------------------------------------------------
+Part 3: alternative instance (N_iso, N_c) = (1, 1) -> F = 1
+----------------------------------------------------------------------------------------
+  [PASS (A)] (N_iso, N_c) = (1, 1) at (1, 1): F = 1 (degenerate case)  (F = 1)
+
+----------------------------------------------------------------------------------------
+Part 4: explicit matrix-form verification at (N_iso, N_c) = (2, 3)
+----------------------------------------------------------------------------------------
+
+  H_unit (6x6) = (1/sqrt(6)) * I_6:
+    diagonal entry = sqrt(6)/6
+    off-diagonal entry = 0
+  [PASS (A)] <basis pair 1 | H_unit | basis pair 1> = 1/sqrt(6)  (matrix element = sqrt(6)/6)
+  [PASS (A)] <basis pair 2 | H_unit | basis pair 2> = 1/sqrt(6)  (matrix element = sqrt(6)/6)
+  [PASS (A)] <basis pair 3 | H_unit | basis pair 3> = 1/sqrt(6)  (matrix element = sqrt(6)/6)
+  [PASS (A)] <basis pair 4 | H_unit | basis pair 4> = 1/sqrt(6)  (matrix element = sqrt(6)/6)
+  [PASS (A)] <basis pair 5 | H_unit | basis pair 5> = 1/sqrt(6)  (matrix element = sqrt(6)/6)
+  [PASS (A)] <basis pair 6 | H_unit | basis pair 6> = 1/sqrt(6)  (matrix element = sqrt(6)/6)
+
+----------------------------------------------------------------------------------------
+Part 5: independence of gauge-coupling parameter g_bare
+----------------------------------------------------------------------------------------
+  [PASS (A)] H_unit matrix element contains no g_bare (tree-level g_bare independence)  (free symbols: set())
+
+----------------------------------------------------------------------------------------
+Part 6: parent row context (no ledger modification)
+----------------------------------------------------------------------------------------
+
+  Parent row state on origin/main:
+    claim_type: bounded_theorem
+    transitive_descendants: 68
+    load_bearing_step_class: A
+    deps: ['unit_singlet_overlap_narrow_theorem_note_2026-05-02']
+  [PASS (A)] parent row class-A load-bearing step (combinatorial Wick algebra)  ()
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESES:
+    - N_iso, N_c are positive integers.
+    - H_unit is the operator on the (N_iso * N_c)-dim pair-Hilbert space
+      defined by
+          H_unit = (1 / sqrt(N_iso * N_c)) * I_{N_iso * N_c}
+      in the diagonal Wick-contractor basis
+      {|alpha, a> : 1 <= alpha <= N_iso, 1 <= a <= N_c}.
+
+  CONCLUSION:
+    For any basis pair-state |alpha_0, a_0>,
+        <0 | H_unit | tbar_{alpha_0, a_0} t_{alpha_0, a_0}>_tree
+            = 1 / sqrt(N_iso * N_c).
+
+    In particular, this matrix element is identically independent of any
+    gauge-coupling parameter at tree order, because H_unit has no
+    gauge-field content in its definition.
+
+  Audit-lane class:
+    (A) — pure combinatorial Wick algebra. No external observed/fitted/
+    literature input. The framework instance (N_iso, N_c) = (2, 3) gives
+    F = 1/sqrt(6); the algebra closes for any other positive integer
+    pair.
+
+  This narrow theorem drops the parent's YT_WARD_IDENTITY_DERIVATION_THEOREM
+  upstream by stating H_unit as an explicit operator definition rather than
+  deriving its normalization from the free-theory two-point function
+  residue.
+
+
+========================================================================================
+  TOTAL: PASS=19, FAIL=0
+========================================================================================
+
+----- stderr -----
+

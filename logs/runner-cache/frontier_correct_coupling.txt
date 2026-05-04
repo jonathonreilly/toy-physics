@@ -1,0 +1,108 @@
+===== runner cache v1 =====
+runner: scripts/frontier_correct_coupling.py
+runner_sha256: 91b3877ab23a8bc17cab2b8ae1036957836be306279f38c234488af64993e951
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.87
+status: ok
+----- stdout -----
+==============================================================================
+CORRECT STAGGERED-GRAVITY COUPLING — THREE STRUCTURES
+==============================================================================
+
+Coupling structures:
+  A) IDENTITY:  H_diag = m·ε + V           (current — wrong per literature)
+  B) PARITY:    H_diag = (m + V)·ε          (scalar 1⊗1 coupling)
+  C) LAPSE:     H = (1 + Φ/m) · H_flat      (equivalence principle)
+
+==============================================================================
+PART 1: 1D LATTICE (n=61) — Exact Force F = -<dV/dx>
+==============================================================================
+
+External potential: V = -m*g*S/(r+0.1), g=8.0, mp at 38
+Attractive well: V_min=-24.0000 at mass point
+Repulsive hill:  V_max=24.0000 at mass point
+
+coupling     V_sign        F_exact      |psi|  width_f/w_0  direction
+----------------------------------------------------------------------
+identity     attract    -4.1286e-03   1.000000       0.9849     TOWARD
+identity     repulse    -9.6055e-01   1.000000       0.9947       AWAY
+parity       attract    +1.7485e-01   1.000000       0.9429     TOWARD
+parity       repulse    -7.3119e-02   1.000000       0.9682       AWAY
+lapse        attract    +1.4913e-01   1.000000       0.9478     TOWARD
+lapse        repulse    -1.1005e-01   1.000000       1.0136     TOWARD
+
+--- Effective diagonal potential at selected sites ---
+ site  ε(x)     V(x)   identity     parity
+---------------------------------------------
+   28     1  -0.2376     0.0624     0.0624
+   29    -1  -0.2637    -0.5637    -0.0363
+   30     1  -0.2963     0.0037     0.0037
+   31    -1  -0.3380    -0.6380     0.0380
+   37    -1  -2.1818    -2.4818     1.8818
+   38     1 -24.0000   -23.7000   -23.7000
+   39    -1  -2.1818    -2.4818     1.8818
+
+==============================================================================
+PART 2: SELF-GRAVITY ON RANDOM GEOMETRIC GRAPH (n=64)
+==============================================================================
+
+Self-gravity: (L+μ²)Φ = G·|ψ|², G=50.0
+
+coupling          |psi|    w_f/w_0       F_edge   contract
+------------------------------------------------------------
+identity       1.000000     1.6825  +1.7347e-01     EXPAND
+parity         1.000000     1.0277  +2.5773e+00     EXPAND
+lapse          1.000000     1.7009  +1.1375e+00     EXPAND
+
+==============================================================================
+PART 3: PARITY COUPLING DIAGNOSTIC
+==============================================================================
+
+Key question: under parity coupling H = (m+Φ)·ε, does the
+wavepacket respond DIFFERENTLY to Φ>0 vs Φ<0?
+
+Under identity coupling (H = m·ε + V):
+  V<0 → energy lowered uniformly → attractive well
+  V>0 → energy raised uniformly → repulsive hill
+
+Under parity coupling (H = (m+V)·ε):
+  V<0 → gap NARROWED (|m+V| < |m| where V<0)
+  V>0 → gap WIDENED (|m+V| > |m| where V>0)
+  The potential modulates the MASS GAP, not the energy level.
+
+  g=2.0:
+    identity     gap=+0.3981  centroid_disp=+1.4677
+    parity       gap=+0.1125  centroid_disp=+1.8216
+    lapse        gap=+0.0126  centroid_disp=+1.1710
+  g=8.0:
+    identity     gap=+0.0453  centroid_disp=+1.3786
+    parity       gap=+0.0466  centroid_disp=+1.6364
+    lapse        gap=+0.0068  centroid_disp=+0.4008
+  g=20.0:
+    identity     gap=+0.1213  centroid_disp=+1.3848
+    parity       gap=+0.0980  centroid_disp=+0.7652
+    lapse        gap=+0.0057  centroid_disp=+0.0355
+
+==============================================================================
+PART 4: DOES PARITY COUPLING DISTINGUISH WELL FROM HILL?
+==============================================================================
+
+If parity coupling is correct, V<0 narrows the gap (effective mass
+reduction) while V>0 widens the gap (effective mass increase).
+A narrower gap means faster propagation → wavepacket spreads more
+toward the narrow-gap region. This IS a dynamical prediction.
+
+coupling     V_type       centroid     disp  width_f/w_0               interp
+------------------------------------------------------------------------------
+identity     well V<0      30.6087  +0.6087       1.0829          TOWARD mass
+identity     hill V>0      30.4783  +0.4783       1.0775          TOWARD mass
+parity       well V<0      32.0828  +2.0828       0.9427          TOWARD mass
+parity       hill V>0      29.2210  -0.7790       1.0832       AWAY from mass
+lapse        well V<0      30.6106  +0.6106       0.9344          TOWARD mass
+lapse        hill V>0      28.2177  -1.7823       1.2339       AWAY from mass
+
+Total time: 0.5s
+
+----- stderr -----
+

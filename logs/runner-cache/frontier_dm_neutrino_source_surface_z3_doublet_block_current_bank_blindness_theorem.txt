@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem.py
+runner_sha256: f4290b0a05723e09fad0f5e68a302c7fc3b3261e3384f67aca82929f00bf1111
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.59
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE Z3 DOUBLET-BLOCK CURRENT-BANK BLINDNESS THEOREM
+========================================================================================
+
+Question:
+  After the atlas slot tools identify the physical singlet-doublet
+  carrier, does the current exact bank determine the remaining Z3
+  doublet-block law on the live source-oriented sheet?
+
+========================================================================================
+PART 1: SLOT-SECTOR OBSERVABLES ARE EXACTLY FROZEN ON THE LIVE SHEET
+========================================================================================
+  [PASS] Across the live source-oriented sheet the intrinsic slot pair is already the exact constant pair (a_*, b_*)  ((a_*,b_*)=(0.169932113230+1.192809041582j,0.458607247825-0.692809041582j))
+  [PASS] The intrinsic heavy-basis CP pair is unchanged across those same samples  ((cp1,cp2)=(-0.544331053952,0.314269680527))
+  [PASS] The exact slot torsion is unchanged across those same samples  (torsion=0.429300367240)
+
+========================================================================================
+PART 2: THE Z3 DOUBLET BLOCK STILL MOVES WITH TWO REAL DATA
+========================================================================================
+  [PASS] Changing delta while holding q_+ fixed changes the imaginary doublet mixing Im K12  (ImK12: -1.539208 -> -0.326772)
+  [PASS] Changing q_+ while holding delta fixed changes the centered doublet trace (K11+K22)/2  (q_+: 2.200000 -> 2.500000)
+  [PASS] So the moving datum still has exact real dimension two in the Z3 doublet block  (one real coordinate from the centered doublet trace and one from Im K12)
+
+========================================================================================
+PART 3: THE CURRENT ATLAS SLOT BANK IS BLIND TO THE DOUBLET-BLOCK MOTION
+========================================================================================
+  [PASS] Two live-sheet points with different delta and two with different q_+ still have identical current slot-bank signatures  (same slots, same CP pair, same torsion)
+  [PASS] Those same points have different Z3 doublet blocks  (the remaining datum is invisible to the current slot bank)
+  [PASS] Therefore the current atlas slot/odd-bank does not determine the remaining microscopic datum  (the missing object is exactly a right-sensitive 2-real Z3 doublet-block law)
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE FINAL BOUNDARY
+========================================================================================
+  [PASS] The new note records that the slot sector is frozen while the doublet block still moves
+  [PASS] The new note records the remaining object as a 2-real Z3 doublet-block law
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact answer:
+    - the atlas slot-sector outputs are already frozen on the live sheet
+    - the Z3 doublet block still moves with a 2-real pair
+    - the current exact slot/odd-bank is blind to that motion
+    - so the remaining closure object is exactly the right-sensitive
+      2-real Z3 doublet-block law
+
+PASS=11 FAIL=0
+
+----- stderr -----
+

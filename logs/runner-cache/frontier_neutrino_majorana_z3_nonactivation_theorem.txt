@@ -1,0 +1,74 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_z3_nonactivation_theorem.py
+runner_sha256: 0a583a450053b1bf176fde55bfa53329b6ce54a4f89a5eae18f9e035adac840f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: THREE-GENERATION / Z3 NON-ACTIVATION THEOREM
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+    rows: One-generation matter closure; three-generation matter structure;
+          Majorana charge-two reduction; Majorana unique source slot
+  - docs/NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md
+  - docs/NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md
+  - docs/THREE_GENERATION_STRUCTURE_NOTE.md
+  - docs/DM_LEPTOGENESIS_NOTE.md
+
+Question:
+  Can the retained three-generation / Z3 texture itself turn on the
+  missing Majorana sector on the current finite retained stack?
+
+========================================================================================
+PART 1: THE THREE-GENERATION / Z3 TEXTURE IS STILL A CHARGE-MINUS-TWO PAIRING BLOCK
+========================================================================================
+  [PASS (C)] Generic symmetric generation matrix gives an antisymmetric pairing block  (||Delta+Delta^T||=0.00e+00)
+  [PASS (C)] Z3 A/B/eps texture gives an antisymmetric pairing block  (||Delta+Delta^T||=0.00e+00)
+  [PASS (C)] Generic three-generation pairing operator has charge -2  (charge error=1.55e-15)
+  [PASS (C)] Z3-textured pairing operator has charge -2  (charge error=1.17e-15)
+  [PASS (C)] Z3 texture organizes one singlet and one doublet pair of eigenvalues  (eigenvalue error=2.78e-16)
+
+  So the three-generation / Z3 lift changes the internal texture, not
+  the fermion-number charge sector. It remains a charge-minus-two object.
+
+========================================================================================
+PART 2: THE RETAINED NORMAL GRAMMAR KILLS THE THREE-GENERATION TEXTURE TOO
+========================================================================================
+  [PASS (C)] Finite Gibbs state on the retained six-mode normal grammar is U(1)-invariant  (||[N,rho]||=7.04e-17)
+  [PASS (C)] Generic three-generation pairing expectation vanishes on the retained grammar  (<Q_generic>=+3.24e-18-4.30e-19i)
+  [PASS (C)] Z3-textured pairing expectation vanishes on the retained grammar  (<Q_Z3>=-2.25e-18+1.04e-19i)
+  [PASS (C)] Charge-zero observables remain nontrivial on the same state  (<n0>=0.480021)
+
+  So promoting the one-generation slot to a three-generation texture
+  does not evade the exact finite-grammar U(1) selection rule.
+
+========================================================================================
+PART 3: TEXTURE SHAPES AN ADMITTED PAIRING SECTOR AFTER ACTIVATION
+========================================================================================
+  [PASS (C)] Explicit Z3 pairing insertion breaks the retained U(1)  (||[N,H_z3]||=1.12e+00)
+  [PASS (C)] Explicit generic pairing insertion also breaks the retained U(1)  (||[N,H_generic]||=1.46e+00)
+  [PASS (C)] After explicit activation, the Z3-textured pairing expectation is nonzero  (<Q_Z3>=-0.024347+0.000000i)
+  [PASS (C)] After explicit activation, the generic pairing expectation is nonzero  (<Q_generic>=-0.041438-0.000000i)
+  [PASS (C)] Different generation textures give genuinely different activated responses  (|<Q_Z3>-<Q_generic>|=0.017091)
+
+  This is the exact boundary needed for DM:
+  generation / Z3 structure can organize an activated Majorana sector,
+  but it does not activate that sector on the current stack.
+
+========================================================================================
+RESULT
+========================================================================================
+  No. The three-generation / Z3 lift remains a charge-minus-two pairing
+  object, so the exact U(1) selection rule of the retained normal grammar
+  still kills it. Generation structure and Z3 can shape A/B/epsilon once
+  a pairing sector is admitted, but they cannot activate that sector from
+  the current stack.
+
+  PASS=14  FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,23 @@
+===== runner cache v1 =====
+runner: scripts/frontier_cosmology_open_number_reduction.py
+runner_sha256: 6ec60c33bb6f5b42b035be963392b295686c383619d475f9d0b08cb54d3b8059
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.76
+status: ok
+----- stdout -----
+========================================================================
+Cosmology Open-Number Reduction theorem — runner
+Theorem note: docs/COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md
+========================================================================
+[PASS] CLOSED_FORM_TABLE: all 8 closed-form identities verified symbolically (Omega_Lambda, Omega_m, H_inf, R_Lambda, q_0 forward+inverse, matter-Lambda equality, H(a)^2 ratio)
+[PASS] FORWARD_JACOBIAN: Jacobian det of (H_inf, q_0) w.r.t. (H_0, L) = -3*sqrt(L)/2 (nonzero for L > 0; map is locally invertible).
+[PASS] CROSS_CONSISTENCY: q_0 inversion gives L = (1 + R - 2 q_0)/3; matter-Lambda equality inversion gives L = s_mL^3 (1 - R)/(1 + s_mL^3) — both match the single-ratio inverse reconstruction theorem.
+[PASS] NUMERICAL_PLANCK: L=0.6849 (vs 0.685), M=0.3150 (vs 0.315), H_inf=55.78 km/s/Mpc, R_Lambda=5375 Mpc (~5.4 Gpc), q_0=-0.527, z_mLambda=0.296
+[PASS] ACCELERATION_ONSET: unique a_* in (0, 1) found: a_* = 0.6128, 1 + z_* = 1.6317, z_* = 0.6317 (consistent with ΛCDM textbook result for Omega_m=0.315)
+------------------------------------------------------------------------
+summary: PASS=5 FAIL=0
+========================================================================
+
+----- stderr -----
+

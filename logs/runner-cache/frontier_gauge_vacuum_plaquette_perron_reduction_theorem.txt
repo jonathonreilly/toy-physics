@@ -1,0 +1,62 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py
+runner_sha256: 9a21307e4888c3f8e6002bb90d94f085b0312236542516a1b4418f8326f6ec36
+timeout_sec: 900
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE PERRON-STATE REDUCTION
+==============================================================================
+
+Truncated transfer proxy from the explicit character-recurrence operator
+  box size                              = 6 x 6 = 36 states
+  proxy transfer parameter tau          = 6.0
+  shell deformation coefficients        = (shell=0.15, asym=0.03)
+  transfer symmetry error               = 3.638e-12
+  transfer minimum entry                = 5.380411e-02
+  Perron eigenvalue gap                 = 8.895638e+04
+  Perron positivity floor               = 9.277243e-05
+
+Thermal-to-Perron convergence witness for J
+  Lt= 1: <J>_thermal = 0.584596134830   error = 1.573e-01
+  Lt= 2: <J>_thermal = 0.683727267695   error = 5.818e-02
+  Lt= 4: <J>_thermal = 0.729991532615   error = 1.192e-02
+  Lt= 8: <J>_thermal = 0.741456130158   error = 4.561e-04
+  Lt=16: <J>_thermal = 0.741911635491   error = 6.144e-07
+
+Symmetry reduction witness
+  swap/J commutator error               = 0.000e+00
+  swap/T commutator error               = 3.274e-11
+  Perron swap-invariance error          = 1.251e-15
+
+Jacobi compression witness
+  Jacobi dimension                      = 6
+  max Perron-moment mismatch            = 8.882e-16
+  first Jacobi coefficients             = alpha[:4]=[0.7419122499, 0.4490925275, 0.2767430605, 0.3031525538]
+                                         beta[:4]=[0.1601419597, 0.2893923439, 0.327472693, 0.2713503048]
+
+  [PASS] [THEOREM] the explicit source-operator route admits a positivity-improving self-adjoint transfer proxy
+         symmetry error=3.638e-12, min entry=5.380e-02
+  [PASS] [THEOREM] the transfer proxy has one simple strictly positive Perron mode
+         gap=8.895638e+04, positivity floor=9.277243e-05
+  [PASS] [THEOREM] the thermal trace state is exactly the spectral decomposition state and converges to the Perron expectation
+         spectral/direct error=8.882e-16
+  [PASS] [THEOREM] any commuting positivity-preserving symmetry fixes the Perron state
+         commutator=3.274e-11, invariance=1.251e-15
+  [PASS] [THEOREM] the remaining framework-point object is equivalently Jacobi data of J in the Perron state
+         max Jacobi/Perron moment error=8.882e-16
+  [PASS] [SUPPORT] the explicit plaquette-source operator still obeys the conjugation symmetry on the truncated box
+         swap/J error=0.000e+00, swap/H error=0.000e+00
+  [PASS] [SUPPORT] thermal expectations move monotonically toward the Perron value on the sampled derived-time depths
+         errors=['1.573e-01', '5.818e-02', '1.192e-02', '4.561e-04', '6.144e-07']
+  [PASS] [SUPPORT] the Jacobi compression is nontrivial rather than rank-one
+         jacobi dim=6, max beta=3.275e-01
+
+==============================================================================
+SUMMARY: THEOREM PASS=5 SUPPORT=3 FAIL=0
+==============================================================================
+
+----- stderr -----
+

@@ -1,0 +1,62 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_even_response_sole_axiom_boundary.py
+runner_sha256: 10deb6746dc164769023dc25ea4f465359cd6bccb95e8a509b81da22fd426c38
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.88
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS EVEN-RESPONSE SOLE-AXIOM BOUNDARY
+========================================================================================
+
+Question:
+  After the residual PMNS sheet selector has been reduced to the odd bit
+  sign(sin(delta)) on the fixed native seed surface, does the current
+  sole-axiom bank already force the remaining even-response pair?
+
+========================================================================================
+PART 1: SAME NATIVE SEED SURFACE, SAME POSITIVE ODD BIT
+========================================================================================
+  [PASS] The canonical near-closing sample and the constructive witness lie on the same exact native seed surface  ((xbar,ybar)=(0.563333333333,0.306666666667))
+  [PASS] Both samples already satisfy the same positive odd selector bit sin(delta) > 0  ((sin delta)_samples=(0.891207360061,0.951783096910))
+  [PASS] Equivalently, both samples already sit on the same positive projected-source odd sheet gamma > 0  (gamma_samples=(0.130472757513,0.150147244666))
+
+========================================================================================
+PART 2: THE EVEN-RESPONSE PAIR STILL VARIES ON THAT SAME ODD SHEET
+========================================================================================
+  [PASS] The canonical near-closing sample remains on the negative even-response chamber  ((E1,E2)=(-0.678203236088,-0.974296763912))
+  [PASS] The constructive projected-source witness lies on the positive even-response chamber  ((E1,E2)=(0.296562850784,1.986407435174))
+  [PASS] So fixing the odd selector bit alone does not yet choose the constructive PMNS sheet  (the remaining native object is not the odd bit anymore)
+
+  canonical sample:
+    (E1,E2)=(-0.678203236088,-0.974296763912)
+  constructive witness:
+    (E1,E2)=(0.296562850784,1.986407435174)
+
+========================================================================================
+PART 3: CARRIER-SIDE EQUIVALENT OF THE SAME REMAINING OBJECT
+========================================================================================
+  [PASS] On the active PMNS family the carrier-side delta + rho coordinate equals E1 exactly  (carrier E1=(-0.678203236088,0.296562850784))
+  [PASS] The carrier-side sigma sin(2v) channel is exactly equivalent to E2  (sigma sin(2v)=(-0.918575798200,1.872802890148))
+  [PASS] So after the odd bit is fixed, the remaining PMNS sole-axiom object is the even-response law (E1,E2), equivalently (delta + rho, sigma sin(2v))  (the residual native problem is even-response, not odd-sheet orientation)
+
+========================================================================================
+PART 4: THE THEOREM NOTE RECORDS THE NEW BOUNDARY
+========================================================================================
+  [PASS] The new theorem note records that same-seed positive-phase samples can still carry opposite even-response pairs
+  [PASS] The note identifies the residual native problem as the even-response law (E1,E2)
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact boundary answer:
+    - no, not from the current sole axiom on the PMNS comparator lane
+    - the odd sheet selector sign(sin(delta)) is already closed
+    - the remaining native object is the even-response law for (E1,E2)
+      equivalently the carrier-side pair (delta + rho, sigma sin(2v))
+
+PASS=11 FAIL=0
+
+----- stderr -----
+

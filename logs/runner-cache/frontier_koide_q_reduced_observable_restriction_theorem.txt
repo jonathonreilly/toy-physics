@@ -1,0 +1,69 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_reduced_observable_restriction_theorem.py
+runner_sha256: 284d83c54a077d15f212c8f813833333193f22cf507239d92ac1b29c80d28f03
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.64
+status: ok
+----- stdout -----
+
+========================================================================================
+A. Exact reduced block-source family
+========================================================================================
+[PASS] A.1 the normalized second-order carrier splits exactly into two independent scalar blocks
+       Π_+ = Matrix([[1, 0], [0, 0]]), Π_perp = Matrix([[0, 0], [0, 1]])
+[PASS] A.2 the most general split-preserving source is K = k_+ Π_+ + k_perp Π_perp
+       K = Matrix([[k_plus, 0], [0, k_perp]])
+
+========================================================================================
+B. Exact restriction of the observable principle
+========================================================================================
+[PASS] B.1 restricting W[J] = log|det(D+J)| - log|det D| to the reduced carrier gives W_red = log det(I+K)
+       W_red = log(k_perp*k_plus + k_perp + k_plus + 1)
+[PASS] B.2 direct evaluation gives W_red = log(1+k_+) + log(1+k_perp)
+       W_red = log(k_perp*k_plus + k_perp + k_plus + 1)
+[PASS] B.3 the pure-block restrictions are exactly the one-block observable generators
+[PASS] B.4 there is no residual coefficient freedom once the reduced carrier and pure-block normalization are fixed
+       coefficient solution = {c1: 1, c2: 1}
+
+========================================================================================
+C. Exact dual reduction
+========================================================================================
+[PASS] C.1 the exact reduced dual equation is K_* = Y^(-1) - I blockwise
+       K_* = ((1 - y1)/y1, (1 - y2)/y2)
+[PASS] C.2 the exact reduced effective action is Tr(Y) - log det(Y) - 2
+       S_eff = y1 + y2 - log(y1) - log(y2) - 2
+
+========================================================================================
+D. Contrast with the unreduced vector-slot carrier
+========================================================================================
+[PASS] D.1 the unreduced 1⊕2 vector-slot determinant would count the doublet twice
+       log det vector-slot = log(k_perp**2*k_plus + k_perp**2 + 2*k_perp*k_plus + 2*k_perp + k_plus + 1)
+[PASS] D.2 the reduced generator is the exact restriction to the two-generator block algebra, not the unreduced vector-slot determinant
+       This is the load-bearing reduction inside the admitted second-order route.
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 10/10
+  [PASS] A.1 the normalized second-order carrier splits exactly into two independent scalar blocks
+  [PASS] A.2 the most general split-preserving source is K = k_+ Π_+ + k_perp Π_perp
+  [PASS] B.1 restricting W[J] = log|det(D+J)| - log|det D| to the reduced carrier gives W_red = log det(I+K)
+  [PASS] B.2 direct evaluation gives W_red = log(1+k_+) + log(1+k_perp)
+  [PASS] B.3 the pure-block restrictions are exactly the one-block observable generators
+  [PASS] B.4 there is no residual coefficient freedom once the reduced carrier and pure-block normalization are fixed
+  [PASS] C.1 the exact reduced dual equation is K_* = Y^(-1) - I blockwise
+  [PASS] C.2 the exact reduced effective action is Tr(Y) - log det(Y) - 2
+  [PASS] D.1 the unreduced 1⊕2 vector-slot determinant would count the doublet twice
+  [PASS] D.2 the reduced generator is the exact restriction to the two-generator block algebra, not the unreduced vector-slot determinant
+
+VERDICT: W_red = log det(I+K) is not a post-hoc transplant.
+It is the exact restriction of the observable principle to the
+normalized two-generator second-order block algebra.
+
+This is support for the admitted second-order route.
+It does not by itself prove that this reduced carrier is the physical
+charged-lepton observable carrier.
+
+----- stderr -----
+

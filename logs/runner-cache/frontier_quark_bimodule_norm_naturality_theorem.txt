@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_bimodule_norm_naturality_theorem.py
+runner_sha256: 3e52ee6b088cacdaca2964eea137e0f8ff90539a8117f46db875dc94e0b30722
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================
+  Quark Bimodule NORM-Naturality Theorem
+  Unique normalized affine extension of the LO split law
+========================================================================
+
+  Retained physical point:
+    rho   = 0.154303349962
+    sin_d = 0.912870929175
+
+  Distinguished constant-kappa profiles:
+    support: kappa = sqrt(6/7) = 0.925820099773
+    target : kappa = 48/49     = 0.979591836735
+    BICAC  : kappa = 1         = 1.000000000000
+
+  Theorem checks:
+  [PASS] T1  Canonical family D_a(x)=a x, U_a(x)=(1-a) x satisfies complementarity  (checked on sample ownership values)
+  [PASS] T2  Canonical family satisfies endpoint normalization  (D_0(1)=0.0, D_1(1)=1.0)
+  [PASS] T3  Canonical family satisfies affine naturality on a sample grid  (D_{ta+(1-t)b} = t D_a + (1-t) D_b)
+  [PASS] T4  The affine-normalized axioms force D_a = a Id_I exactly  (D_a = a D_1 + (1-a) D_0 = a Id_I)
+  [PASS] T5  At a = rho the canonical family gives BICAC / STRC-LO  (a_u_LO = 0.772011886721)
+  [PASS] T6  Support profile fails endpoint normalization at a = 1  (D_1^support = 0.925820099773)
+  [PASS] T7  Target profile fails endpoint normalization at a = 1  (D_1^target = 0.979591836735)
+  [PASS] T8  BICAC profile is the unique constant-kappa profile that is normalized  (D_1^BICAC = 1.0)
+
+  Consequence:
+    If the branch accepts affine-normalized NORM naturality on the full
+    ownership interval, BICAC is no longer an arbitrary endpoint choice.
+    It is the unique normalized extension of the bimodule split law.
+
+========================================================================
+PASS=8 FAIL=0
+Quark bimodule NORM-naturality theorem: VERIFIED
+========================================================================
+
+----- stderr -----
+

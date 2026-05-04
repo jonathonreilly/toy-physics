@@ -1,0 +1,160 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_observable_bank_exhaustion_theorem.py
+runner_sha256: 691c457a97efa8247c56fc613bb53a45b96b66dc0bb72d69497c9d2057723f95
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.93
+status: ok
+----- stdout -----
+========================================================================================
+G1 PHYSICIST-E: OBSERVABLE-BANK-EXTENSION ATTEMPT
+Branch:  (off )
+Role:  observable-bank extension beyond the transport/source/slot/CP bank
+Verdict: OBSTRUCTION + NEW-GAP (atlas observable bank exhausted)
+========================================================================================
+
+========================================================================================
+PART 1: ATLAS OBSERVABLE SURVEY (O1..O8)
+========================================================================================
+
+ For each candidate atlas observable, determine:
+  (a) atlas-retained?
+  (b) expressible as f(H(m,delta,q_+)) on the live sheet?
+  (c) varies across the chamber?
+  (d) has a retained observational target value?
+
+ An observable closes selector iff all four hold.
+
+ Summary:
+ Observable                                        ret  f(H)   var   obs  closes 
+ O1 R = Omega_DM / Omega_B (5.48 vs 5.47)           Y     N     N     Y     no   
+ O2 m_DM (DM particle mass)                         Y     N     N     Y     no   
+ O3 Atmospheric Dm^2_31 (via m_3)                   Y     N     N     Y     no   
+ O4 PMNS angles theta_12, theta_13, theta_23        N     Y     Y     N     no   
+ O5 DM direct/indirect-detection sigma              Y     N     N     Y     no   
+ O6 Muon g-2, LFV                                   N     N     N     Y     no   
+ O7 Neutrino mass scale (see-saw)                   Y     N     N     Y     no   
+ O8 eta/eta_obs on PMNS-assisted route              Y     Y     N     Y     no   
+ [PASS (C)] O1 R = Omega_DM / Omega_B (5.48 vs 5.47) fails joint (retained & f(H) & varies & observational)
+ [PASS (C)] O2 m_DM (DM particle mass) fails joint (retained & f(H) & varies & observational)
+ [PASS (C)] O3 Atmospheric Dm^2_31 (via m_3) fails joint (retained & f(H) & varies & observational)
+ [PASS (C)] O4 PMNS angles theta_12, theta_13, theta_23 fails joint (retained & f(H) & varies & observational)
+ [PASS (C)] O5 DM direct/indirect-detection sigma fails joint (retained & f(H) & varies & observational)
+ [PASS (C)] O6 Muon g-2, LFV fails joint (retained & f(H) & varies & observational)
+ [PASS (C)] O7 Neutrino mass scale (see-saw) fails joint (retained & f(H) & varies & observational)
+ [PASS (C)] O8 eta/eta_obs on PMNS-assisted route fails joint (retained & f(H) & varies & observational)
+
+ retained AND varies:            []
+ retained AND varies AND observational:   []
+ retained AND varies AND observational AND f(H):  []
+ [PASS (C)] The joint intersection (retained & varies & observational & f(H)) is EMPTY (if non-empty, report the observable and proceed to Case 1/2)
+
+========================================================================================
+PART 2: CHAMBER-BLINDNESS OF THE CURRENT BANK AT FIVE CANDIDATES
+========================================================================================
+
+ Re-verifies the retained theorem
+  DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_CURRENT_BANK_BLINDNESS_THEOREM
+ at each candidate (A..E), extracting |gamma|, |E1|, |cp1|, |cp2|, |a|, |b| from H(m, delta, q_+).
+
+ Candidate A (Schur-Q chamber-boundary min)  (m, delta, q_+) = (0.5000, 0.8165, 0.8165)
+ [PASS (C)] A: |gamma| = 0.5 (|gamma| = 0.500000000000)
+ [PASS (C)] A: |E1| matches sqrt(8/3) up to known lift branch (|E1| = 1.632993161855 (ref = 1.632993161855))
+ [PASS (C)] A: |cp1| matches retained (|cp1| = 0.544331053952)
+ [PASS (C)] A: |cp2| matches retained (|cp2| = 0.314269680527)
+
+ Candidate B (the Z_3 parity-split theorem-a det(H) interior crit)  (m, delta, q_+) = (0.6134, 0.9644, 1.5524)
+ [PASS (C)] B: |gamma| = 0.5 (|gamma| = 0.500000000000)
+ [PASS (C)] B: |E1| matches sqrt(8/3) up to known lift branch (|E1| = 1.632993161855 (ref = 1.632993161855))
+ [PASS (C)] B: |cp1| matches retained (|cp1| = 0.544331053952)
+ [PASS (C)] B: |cp2| matches retained (|cp2| = 0.314269680527)
+
+ Candidate C (the Z_3 parity-split theorem-b Tr(H^2) boundary min)  (m, delta, q_+) = (0.3851, 1.2679, 0.3651)
+ [PASS (C)] C: |gamma| = 0.5 (|gamma| = 0.500000000000)
+ [PASS (C)] C: |E1| matches sqrt(8/3) up to known lift branch (|E1| = 1.632993000000 (ref = 1.632993161855))
+ [PASS (C)] C: |cp1| matches retained (|cp1| = 0.544331053952)
+ [PASS (C)] C: |cp2| matches retained (|cp2| = 0.314269680527)
+
+ Candidate D (the Z_3 parity-split theorem-c K_12 char-match (curve sample))  (m, delta, q_+) = (0.0000, 0.8000, 1.0000)
+ [PASS (C)] D: |gamma| = 0.5 (|gamma| = 0.500000000000)
+ [PASS (C)] D: |E1| matches sqrt(8/3) up to known lift branch (|E1| = 1.632993161855 (ref = 1.632993161855))
+ [PASS (C)] D: |cp1| matches retained (|cp1| = 0.544331053952)
+ [PASS (C)] D: |cp2| matches retained (|cp2| = 0.314269680527)
+
+ Candidate E (Parity-mixing F1-min)  (m, delta, q_+) = (0.6285, 1.1462, 0.4868)
+ [PASS (C)] E: |gamma| = 0.5 (|gamma| = 0.500000000000)
+ [PASS (C)] E: |E1| matches sqrt(8/3) up to known lift branch (|E1| = 1.632993161855 (ref = 1.632993161855))
+ [PASS (C)] E: |cp1| matches retained (|cp1| = 0.544331053952)
+ [PASS (C)] E: |cp2| matches retained (|cp2| = 0.314269680527)
+
+========================================================================================
+PART 3: eta/eta_obs CONSTANT ACROSS ALL FIVE CHAMBER CANDIDATES
+========================================================================================
+
+ Retained chamber-constant value: eta/eta_obs = 0.188785929502
+ (blind to (delta, q_+) by retained theorem)
+ [PASS (C)] Retained eta/eta_obs matches 0.188785929502 (eta/eta_obs = 0.188785929502)
+ [PASS (C)] eta/eta_obs != 1 (so level set { eta/eta_obs = 1 } is empty on chamber) (eta/eta_obs - 1 = -0.811214)
+
+========================================================================================
+PART 4: PURE H-READER INVARIANTS VARY BUT LACK OBSERVATIONAL TARGETS
+========================================================================================
+
+ We confirm that det(H), Tr(H^2), and ||K_doublet||_F^2 each
+ take DIFFERENT numeric values at the five candidates — so they
+ ARE right-sensitive in (delta, q_+). But no retained-atlas
+ observational experiment reads these as physical observables.
+ This is CASE 3 (new gap): chamber-varying axiom-grade invariants
+ without a retained observational target.
+
+ Cand      det(H)        Tr(H^2)      ||K_dbl||_F^2  
+   A      1.570046       7.695951        1.148620    
+   B      7.076505      17.155960        3.325796    
+   C     -0.274291       5.003988        0.483047    
+   D      2.500592       8.562097        2.397242    
+   E     -0.044456       5.477968        0.246059    
+ [PASS (C)] det(H) is chamber-varying across A..E (spread = 7.350796)
+ [PASS (C)] Tr(H^2) is chamber-varying across A..E (spread = 12.151971)
+ [PASS (C)] ||K_doublet||_F^2 is chamber-varying across A..E (spread = 3.079737)
+ [PASS (C)] No retained atlas observable reads det(H) / Tr(H^2) / ||K_dbl||_F^2 as a physical quantity (these are axiom-grade scalars without an atlas-retained experimental value)
+
+========================================================================================
+PART 5: VERDICT (CASE 3 + CASE 4; selector REMAINS OPEN)
+========================================================================================
+
+ Observable-bank extension attempt outcome:
+
+  CASE 4 (OBSTRUCTION) for the joint criterion
+   (retained & varies & observational & f(H))
+  is EMPTY across the surveyed atlas observables O1..O8.
+
+  CASE 3 (NEW GAP) for the pure H-reader invariants:
+   {det(H), Tr(H^2), ||K_doublet||_F^2, ...} all vary on the
+   chamber but have NO atlas-retained observational target.
+
+ Therefore the selector gate is NOT closed by observable-bank extension on the
+ current retained atlas. Closure requires either
+
+  (P1) promoting a NEW retained H-reader observable with an
+     atlas-grade observational target, OR
+  (P2) promoting a NEW selector principle (axiom) on the
+     existing chamber-varying H-reader invariants, OR
+  (P3) enlarging the atlas to make PMNS theta_ij or Dm^2_21
+     depend on (delta, q_+).
+
+ None of P1/P2/P3 is supplied by this runner. the observable-bank exhaustion theorem's
+ role is to DOCUMENT the observable bank exhaustion and thereby
+ force the next selector attempt onto one of these three explicit
+ follow-up lanes.
+ [PASS (C)] Observable-bank-extension verdict is OBSTRUCTION + NEW-GAP (the selector gate open) (see narrower-gap statement in SELECTOR_PHYSICIST_E_OBSERVABLE_CLOSURE_THEOREM_NOTE)
+
+========================================================================================
+SUMMARY: PASS = 36, FAIL = 0
+========================================================================================
+
+----- stderr -----
+/private/tmp/gate-fix-worktree/scripts/frontier_dm_neutrino_observable_bank_exhaustion_theorem.py:454: ComplexWarning: Casting complex values to real discards the imaginary part
+  det_H = float(np.linalg.det(H))
+/private/tmp/gate-fix-worktree/scripts/frontier_dm_neutrino_observable_bank_exhaustion_theorem.py:455: ComplexWarning: Casting complex values to real discards the imaginary part
+  tr_H2 = float(np.trace(H @ H))
+

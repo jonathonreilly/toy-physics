@@ -1,0 +1,70 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_weighted_character_source_axis_theorem.py
+runner_sha256: 6cfa4854d8ba25abe5107579e4651d0999ccc5ab90d303fd380a2b4bc60af346
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.44
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: CANONICAL Z3 CHARACTER SOURCES
+========================================================================================
+  [PASS] [NUMERIC] e_0 e_0 = delta_pq e_0
+  [PASS] [NUMERIC] e_0 e_1 = delta_pq e_0
+  [PASS] [NUMERIC] e_0 e_2 = delta_pq e_0
+  [PASS] [NUMERIC] e_1 e_0 = delta_pq e_1
+  [PASS] [NUMERIC] e_1 e_1 = delta_pq e_1
+  [PASS] [NUMERIC] e_1 e_2 = delta_pq e_1
+  [PASS] [NUMERIC] e_2 e_0 = delta_pq e_2
+  [PASS] [NUMERIC] e_2 e_1 = delta_pq e_2
+  [PASS] [NUMERIC] e_2 e_2 = delta_pq e_2
+  [PASS] [NUMERIC] Tr(e_0) = 1
+  [PASS] [NUMERIC] Tr(e_1) = 1
+  [PASS] [NUMERIC] Tr(e_2) = 1
+  [PASS] The three canonical charge pairs are distinct  (pairs=((0, 0), (1, 2), (2, 1)))
+  [PASS] [NUMERIC] s_1^dag s_1 = delta_ij s_1
+  [PASS] [NUMERIC] s_1^dag s_2 = delta_ij s_1
+  [PASS] [NUMERIC] s_1^dag s_3 = delta_ij s_1
+  [PASS] [NUMERIC] s_2^dag s_1 = delta_ij s_2
+  [PASS] [NUMERIC] s_2^dag s_2 = delta_ij s_2
+  [PASS] [NUMERIC] s_2^dag s_3 = delta_ij s_2
+  [PASS] [NUMERIC] s_3^dag s_1 = delta_ij s_3
+  [PASS] [NUMERIC] s_3^dag s_2 = delta_ij s_3
+  [PASS] [NUMERIC] s_3^dag s_3 = delta_ij s_3
+
+========================================================================================
+PART 2: EXACT WEIGHTED KERNEL FORMULA
+========================================================================================
+  [PASS] Weighted kernel is exactly diag(mu0*nu0, mu1*nu2, mu2*nu1)  (Matrix([[mu0*nu0, 0, 0], [0, mu1*nu2, 0], [0, 0, mu2*nu1]]))
+  [PASS] All off-diagonal weighted-kernel entries vanish identically
+  [PASS] [NUMERIC] Matrix-level weighted kernel matches the exact diagonal formula  (kernel=[[11.999999999999995, 9.25185853854297e-17, 1.2027416100105864e-16], [2.883495911179226e-16, 17.499999999999996, 1.2212453270876722e-15], [-1.8812112361704039e-16, 4.440892098500626e-16, 7.499999999999999]])
+
+========================================================================================
+PART 3: THE OLD PLANCHEREL CROSS-CHECK IS THE UNIFORM CASE
+========================================================================================
+  [PASS] [NUMERIC] Uniform left/right weights recover the old identity kernel  (kernel=[[1.0, -9.637352644315599e-20, 4.240435163498861e-18], [-2.1780416976153244e-17, 1.0, 4.85722573273506e-17], [-1.3106799596269209e-17, 4.85722573273506e-17, 1.0]])
+
+========================================================================================
+PART 4: UNIQUE TOP EIGENVECTOR CASE
+========================================================================================
+  [PASS] [NUMERIC] A unique top eigenvalue selects a canonical basis axis  (eigs=[1.0, 2.0, 4.999999999999999] aligned=1.000000000000)
+  [PASS] [NUMERIC] That basis axis has Koide Q = 1 rather than 2/3  (Q_axis=1.000000000000)
+  [PASS] [NUMERIC] Equivalently, the basis axis fails a0^2 = 2|z|^2  (a0^2=0.333333333333, 2|z|^2=0.666666666667)
+
+========================================================================================
+PART 5: DEGENERATE TOP CASE
+========================================================================================
+  [PASS] [NUMERIC] Twofold-degenerate tops leave a two-real top eigenspace  (eigs=[0.9999999999999991, 6.999999999999996, 7.0000000000000036])
+  [PASS] [NUMERIC] Threefold-degenerate tops recover the identity kernel and force no ray at all  (eigs=[0.9999999999999996, 1.0, 1.0000000000000004])
+
+Interpretation:
+  Allowing arbitrary left/right central class-function weights on the
+  canonical Z3 character sources does not rescue the charged-lepton
+  source-response route. The kernel always stays diagonal in the source
+  basis. Unique tops pick basis axes, which sit off the Koide cone;
+  degenerate tops leave the ray unfixed.
+
+PASS=31 FAIL=0
+
+----- stderr -----
+

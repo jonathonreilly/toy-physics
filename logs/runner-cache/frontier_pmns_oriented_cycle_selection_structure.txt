@@ -1,0 +1,54 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_oriented_cycle_selection_structure.py
+runner_sha256: b3ba7b5fcf9a1caed22191fd128bf8607dcba31d6fd1644e4e813862413b2307
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+PMNS ORIENTED CYCLE SELECTION STRUCTURE
+========================================================================================
+
+Question:
+  Once the oriented cycle channel has a native observable law, what
+  exact selection structure remains on that channel?
+
+========================================================================================
+PART 1: EXACT C3 COVARIANCE COLLAPSES THE CYCLE CHANNEL TO ONE COMPLEX SLOT
+========================================================================================
+  [PASS] C3 covariance permutes the cycle coefficients cyclically  (coeffs=[ 1. +0.2j -0.3+0.7j  0.5-0.4j], rotated=[-0.3+0.7j  0.5-0.4j  1. +0.2j])
+  [PASS] The exact C3-fixed locus on the cycle channel is sigma*(1,1,1)  (sigma=(0.37+0.11j))
+  [PASS] So the C3-covariant cycle law is exactly one complex slot sigma C
+
+========================================================================================
+PART 2: THE SOLE-AXIOM FREE POINT SELECTS SIGMA = 0
+========================================================================================
+  [PASS] The free active block has zero oriented-cycle coefficients  (coeffs=[0.+0.j 0.+0.j 0.+0.j])
+  [PASS] Therefore the sole-axiom free point has sigma = 0  (sigma=0j)
+  [INFO] Exact sole-axiom C3 covariance selects only the trivial cycle law at the free point
+
+========================================================================================
+PART 3: GRAPH-FIRST SELECTED AXIS REDUCES THE CYCLE CHANNEL TO A 3-REAL SUBFAMILY
+========================================================================================
+  [PASS] The residual swap-conjugation map preserves the cycle channel
+  [PASS] Its fixed locus is c1 = conjugate(c3), c2 real  (coeffs=[0.41+0.32j 0.28+0.j   0.41-0.32j])
+  [PASS] A generic cycle triple is not fixed by that residual antiunitary symmetry  (coeffs=[0.41+0.32j 0.28+0.07j 0.33-0.11j])
+  [INFO] The graph-first selected-axis route reduces the cycle channel to 3 real parameters  ((Re c1, Im c1, c2))
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact selection structure on the oriented cycle channel:
+    - exact C3 covariance collapses it to sigma C
+    - the sole-axiom free point sets sigma = 0
+    - graph-first selected-axis symmetry reduces the channel further to
+      c1 = conjugate(c3), c2 real
+
+  So the cycle carrier and its observable law are closed, and the
+  remaining gap is only a value-selection law for that reduced channel.
+
+PASS=8 FAIL=0
+
+----- stderr -----
+

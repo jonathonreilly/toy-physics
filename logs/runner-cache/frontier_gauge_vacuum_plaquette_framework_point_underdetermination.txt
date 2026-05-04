@@ -1,0 +1,51 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py
+runner_sha256: 80bcb543583d1df6f747db1328fa9c7e72fa2886517318b4ec6020db146b2a41
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.17
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE FRAMEWORK-POINT UNDERDETERMINATION
+==============================================================================
+
+Closed onset data already on main
+  beta_eff(beta) onset coefficient      = 1/26244 = 3.810394756896815e-05
+
+Witness reduction laws on [0,6]
+  beta_eff^-(beta) = beta + a beta^5
+  beta_eff^+(beta) = beta + a beta^5 + c beta^6
+  a                                     = 1/26244
+  c                                     = 1/10000000 = 1.000000000000000e-07
+
+Framework-point values
+  beta_eff^-(6)                         = 6.296296296296296
+  beta_eff^+(6)                         = 6.300961896296296
+  delta beta_eff(6)                     = 0.004665600000000
+  exact delta beta_eff(6)               = 729/156250 = 0.004665600000000
+  P_1plaq(beta_eff^-(6))                = 0.441402699435447
+  P_1plaq(beta_eff^+(6))                = 0.441694136647056
+  delta P_1plaq                         = 0.000291437211609
+
+  [PASS] [THEOREM] both witness laws share the exact closed onset jet through order beta^5
+         beta_eff^+(beta) - beta_eff^-(beta) = c beta^6 exactly, so the two laws agree through O(beta^5)
+  [PASS] [THEOREM] the minus witness is strictly increasing on the full framework interval [0,6]
+         min derivative on grid = 1.000000000000000
+  [PASS] [THEOREM] the plus witness is strictly increasing on the full framework interval [0,6]
+         min derivative on grid = 1.000000000000000
+  [PASS] [THEOREM] the two witness reductions give different framework-point reduction parameters
+         beta_eff^+(6) - beta_eff^-(6) = 0.004665600000000
+  [PASS] [THEOREM] strict monotonicity of the exact one-plaquette block then yields different analytic plaquette values
+         P_1plaq(beta_eff^+(6)) - P_1plaq(beta_eff^-(6)) = 0.000291437211609
+  [PASS] [SUPPORT] finite jet plus monotonicity therefore do not fix analytic P(6)
+         the current exact jet leaves multiple admissible framework-point reductions
+  [PASS] [SUPPORT] explicit spectral identification at beta=6 remains a genuinely new theorem target
+         existence/uniqueness of the generating object does not imply explicit framework-point identification from the current jet
+
+==============================================================================
+SUMMARY: THEOREM PASS=5 SUPPORT=2 FAIL=0
+==============================================================================
+
+----- stderr -----
+

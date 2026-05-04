@@ -1,0 +1,70 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_graph_first_axis_alignment.py
+runner_sha256: 0e79537296115721f7065804d39c5c5903a5526632e4fcc9f45243fd8db943ab
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+PMNS GRAPH-FIRST AXIS ALIGNMENT
+========================================================================================
+
+Question:
+  Can a genuinely graph-native selector on the hw=1 corner triplet
+  derive any positive PMNS law without returning to the old full
+  microscopic decomposition route?
+
+========================================================================================
+PART 1: THE GRAPH-FIRST SELECTOR HAS EXACT AXIS MINIMA
+========================================================================================
+  [PASS] S_1 is Hermitian
+  [PASS] S_1^2 = I
+  [PASS] S_2 is Hermitian
+  [PASS] S_2^2 = I
+  [PASS] S_3 is Hermitian
+  [PASS] S_3^2 = I
+  [PASS] The normalized graph-first selector has exactly three minima  (count=3)
+  [PASS] Those minima are exactly the three coordinate axes
+  [INFO] The graph-first route derives a weak-axis selector on the hw=1 triplet
+
+========================================================================================
+PART 2: EACH SELECTED AXIS HAS EXACT RESIDUAL Z2 STABILIZER
+========================================================================================
+  [PASS] The selected axis e1 is fixed by the 2<->3 swap
+  [PASS] The selected axis is strictly lower than the democratic diagonal under the selector  (F_axis=0.000000, F_diag=0.333333)
+  [INFO] The selected axis leaves an exact residual Z2 stabilizer
+
+========================================================================================
+PART 3: THE RESIDUAL Z2 FORCES THE ACTIVE HERMITIAN CORE LAW
+========================================================================================
+  [PASS] The aligned core is exactly P23-invariant  (residual=0.00e+00)
+  [PASS] Residual Z2 invariance forces d2=d3  (d2-d3=0.00e+00)
+  [PASS] Residual Z2 invariance forces r12=r31  (r12-r31=0.00e+00)
+  [PASS] Residual Z2 invariance forces the triangle phase to vanish on the aligned Hermitian core  (phi=0.00e+00)
+  [INFO] The active aligned Hermitian lane has exact form [[a,b,b],[b,c,d],[b,d,c]]  (r23=0.170000)
+
+========================================================================================
+PART 4: THIS ROUTE DERIVES ALIGNMENT, BUT NOT VALUES OR ACTIVE-SECTOR CHOICE
+========================================================================================
+  [PASS] Two distinct aligned Hermitian cores survive the same graph-first axis law
+  [PASS] Exact sector exchange still flips which lepton sector carries the active aligned block
+  [INFO] The graph-first route fixes alignment but not the aligned-core values
+  [INFO] It does not by itself fix whether the active block sits on E_nu or E_e
+
+========================================================================================
+RESULT
+========================================================================================
+  Positive graph-first result:
+    - the hw=1 cube selector derives a weak-axis choice
+    - the selected axis carries residual Z2
+    - that residual Z2 forces the aligned active Hermitian core
+
+  Boundary:
+    - this route does not fix the aligned-core values
+    - this route does not fix whether the active sector is neutrino or charged-lepton
+
+PASS=16  FAIL=0
+
+----- stderr -----
+

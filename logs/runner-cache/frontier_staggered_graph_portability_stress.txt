@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_graph_portability_stress.py
+runner_sha256: 9565fd84f2b42017f7b2d44d82537f581773346ca2aefbaa5094abaa4b5c795b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.57
+status: ok
+----- stdout -----
+================================================================================================
+STAGGERED GRAPH PORTABILITY STRESS
+  Larger, more irregular bipartite families with the same retained battery
+================================================================================================
+  dt=0.12, steps=10, mass=0.3, G=8.0, source_strength=0.0004
+
+bipartite_random_geometric_stress_s17_n81 |V|=81  |E|=178  avg_deg=4.40 cycle=True
+bipartite_random_geometric_stress_s17_n81 n=81  Born/lin=6.49e-16 norm=0.00e+00 force=+3.412e-03(TOWARD) F~M R2=1.000 achrom CV=1.271e-16 equiv CV=1.078e-16 robust=3/3 gauge=6.193e-04 [PASS]
+  failures: none
+
+bipartite_growing_stress_s23_n82         |V|=82  |E|=191  avg_deg=4.66 cycle=True
+bipartite_growing_stress_s23_n82 n=82  Born/lin=7.71e-16 norm=1.11e-16 force=+3.275e-03(TOWARD) F~M R2=1.000 achrom CV=2.369e-16 equiv CV=1.589e-16 robust=3/3 gauge=1.861e-03 [PASS]
+  failures: none
+
+bipartite_chorded_grid_stress_s31_n144   |V|=144 |E|=407  avg_deg=5.65 cycle=True
+bipartite_chorded_grid_stress_s31_n144 n=144 Born/lin=8.87e-16 norm=0.00e+00 force=+3.707e-03(TOWARD) F~M R2=1.000 achrom CV=0.000e+00 equiv CV=1.719e-16 robust=3/3 gauge=1.176e-04 [PASS]
+  failures: none
+
+layered_bipartite_dag_stress_s47_n66     |V|=66  |E|=65   avg_deg=1.97 cycle=False
+layered_bipartite_dag_stress_s47_n66 n=66  Born/lin=4.38e-16 norm=4.44e-16 force=+4.429e-03(TOWARD) F~M R2=1.000 achrom CV=2.477e-16 equiv CV=1.175e-16 robust=3/3 gauge=N/A [N/A]
+  failures: none
+
+SUMMARY
+  bipartite_random_geometric_stress_s17_n81 8/8 retained rows pass (gauge=PASS; failures=none)
+  bipartite_growing_stress_s23_n82         8/8 retained rows pass (gauge=PASS; failures=none)
+  bipartite_chorded_grid_stress_s31_n144   8/8 retained rows pass (gauge=PASS; failures=none)
+  layered_bipartite_dag_stress_s47_n66     8/8 retained rows pass (gauge=N/A; failures=none)
+
+Interpretation:
+  - This is a stress probe, not a new canonical card.
+  - Gauge is only scored when the graph family has a cycle.
+  - Any failure here is a portability failure, not a retuning prompt.
+
+----- stderr -----
+

@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_off_seed_triplet_sign_boundary.py
+runner_sha256: d0c4f1e9ee3ffa9c1d512b37d2eaf4a8d85e0932edbedf6cba3687b1ff02acdd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 9.30
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS OFF-SEED TRIPLET SIGN BOUNDARY
+========================================================================================
+
+Question:
+  Once the PMNS side has already been reduced to the off-seed five-real
+  source, what exact constructive sign boundary remains?
+
+========================================================================================
+PART 1: THE OFF-SEED FIVE-REAL SOURCE RECONSTRUCTS THE ACTIVE FAMILY
+========================================================================================
+  [PASS] The canonical N_e source sits on the fixed native seed surface  ((xbar,ybar)=(0.563333333333,0.306666666667))
+  [PASS] The off-seed five-real source reconstructs x exactly  (err=0.00e+00)
+  [PASS] The off-seed five-real source reconstructs y exactly  (err=0.00e+00)
+
+  canonical off-seed source = (-0.323333333333, -0.183333333333, -0.216666666667, -0.086666666667, 1.100000000000)
+
+========================================================================================
+PART 2: THE OFF-SEED FIVE-REAL SOURCE FIXES THE TRIPLET CHANNELS
+========================================================================================
+  [PASS] canonical N_e sample gives the same gamma through the off-seed source law  (gamma=(0.130472757513,0.130472757513))
+  [PASS] canonical N_e sample gives the same E1 through the off-seed source law  (E1=(-0.678203236088,-0.678203236088))
+  [PASS] canonical N_e sample gives the same E2 through the off-seed source law  (E2=(-0.974296763912,-0.974296763912))
+  [PASS] current min-info selector gives the same gamma through the off-seed source law  (gamma=(-0.000000002874,-0.000000002874))
+  [PASS] current min-info selector gives the same E1 through the off-seed source law  (E1=(-0.192115045020,-0.192115045020))
+  [PASS] current min-info selector gives the same E2 through the off-seed source law  (E2=(-0.419207950066,-0.419207950066))
+
+========================================================================================
+PART 3: GAMMA SIGN IS EXACTLY THE ORIENTED-PHASE CONDITION
+========================================================================================
+  [PASS] canonical N_e sample stays in the positive interior x1 > 0, y3 > 0 of the fixed seed surface  ((x1,y3)=(0.240000000000,0.610000000000))
+  [PASS] canonical N_e sample obeys gamma = x1 y3 sin(delta) exactly  (gamma=1.304727575130e-01, pref*sin=1.304727575130e-01)
+  [PASS] canonical N_e sample therefore has sign(gamma) = sign(sin(delta)) on the positive seed surface  ((gamma,sin delta)=(1.304727575130e-01,8.912073600614e-01))
+  [PASS] current min-info selector stays in the positive interior x1 > 0, y3 > 0 of the fixed seed surface  ((x1,y3)=(0.479370286955,0.293988842306))
+  [PASS] current min-info selector obeys gamma = x1 y3 sin(delta) exactly  (gamma=-2.873897278013e-09, pref*sin=-2.873897278013e-09)
+  [PASS] current min-info selector therefore has sign(gamma) = sign(sin(delta)) on the positive seed surface  ((gamma,sin delta)=(-2.873897278013e-09,-2.039244415044e-08))
+
+========================================================================================
+PART 4: THE LIVE PMNS TARGET IS AN EXPLICIT FIVE-REAL INEQUALITY SYSTEM
+========================================================================================
+  [PASS] The canonical near-closing PMNS sample already has the oriented phase gamma > 0  ((gamma,sin delta)=(0.130472757513,0.891207360061))
+  [PASS] But that canonical sample still fails the constructive sign conditions because E1 and E2 are both negative  ((E1,E2)=(-0.678203236088,-0.974296763912))
+  [PASS] So the remaining PMNS constructive gate is exactly the five-real inequality system sin(delta) > 0, E1 > 0, E2 > 0  (the open comparator target is now explicit on (xi1, xi2, eta1, eta2, delta))
+
+========================================================================================
+PART 5: THE THEOREM NOTE RECORDS THE FIVE-REAL SIGN BOUNDARY
+========================================================================================
+  [PASS] The new note records the explicit off-seed five-real sign boundary
+  [PASS] The note frames the open comparator target directly on the five off-seed reals
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact off-seed sign-boundary answer:
+    - the off-seed five-real PMNS source fixes gamma, E1, and E2 exactly
+    - on the positive seed surface gamma > 0 is exactly sin(delta) > 0
+    - so the live PMNS constructive target is the explicit inequality system
+      sin(delta) > 0, E1 > 0, E2 > 0
+
+PASS=20 FAIL=0
+
+----- stderr -----
+

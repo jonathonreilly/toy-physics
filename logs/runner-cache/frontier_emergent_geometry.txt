@@ -1,0 +1,106 @@
+===== runner cache v1 =====
+runner: scripts/frontier_emergent_geometry.py
+runner_sha256: 4cb16cbbd93b6616a1659e7aa59c83a9a3f14624fe940d8de8884ecfdc2e254f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.13
+status: ok
+----- stdout -----
+======================================================================
+EMERGENT GEOMETRY FROM MATTER-COUPLED GRAPH GROWTH
+======================================================================
+Growth rule: new nodes connect preferentially to high-|ψ|² regions.
+After growth, analyze: node density, shell volumes, effective dimension.
+
+Grown graph: 120 nodes
+Bipartite: True
+
+--- Node Density Profile ---
+  r=[0.00,0.14): nodes=2, density=34.42
+  r=[0.14,0.27): nodes=12, density=68.84
+  r=[0.27,0.41): nodes=21, density=72.28
+  r=[0.41,0.54): nodes=26, density=63.92
+  r=[0.54,0.68): nodes=14, density=26.77
+  r=[0.68,0.82): nodes=22, density=34.42
+  r=[0.82,0.95): nodes=12, density=15.89
+
+--- BFS Shell Volumes ---
+  shell 0: 1 nodes
+  shell 1: 9 nodes
+  shell 2: 21 nodes
+  shell 3: 45 nodes
+  shell 4: 38 nodes
+  shell 5: 6 nodes
+
+  Effective dimension (V ~ r^d): d_eff = 1.64 (R² = 0.9796)
+
+--- Matter Density Profile ---
+  r=[0.00,0.14): P=0.0111
+  r=[0.14,0.27): P=0.1513
+  r=[0.27,0.41): P=0.1233
+  r=[0.41,0.54): P=0.1986
+  r=[0.54,0.68): P=0.0873
+  r=[0.68,0.82): P=0.2531
+  r=[0.82,0.95): P=0.1066
+
+--- Growth Clustering ---
+  Mean parent rho: 0.064033
+  Uniform rho: 0.008333
+  Clustering ratio: 7.68x
+  (>1 means nodes preferentially grew near matter)
+
+--- Degree vs Distance ---
+  r=[0.00,0.14): mean_degree=7.0
+  r=[0.14,0.27): mean_degree=7.7
+  r=[0.27,0.41): mean_degree=8.6
+  r=[0.41,0.54): mean_degree=8.7
+  r=[0.54,0.68): mean_degree=5.7
+  r=[0.68,0.82): mean_degree=7.9
+  r=[0.82,0.95): mean_degree=6.5
+
+======================================================================
+CONTROL: Uniform Random Growth (no matter coupling)
+======================================================================
+
+--- Node Density Profile ---
+  r=[0.00,0.38): nodes=5, density=11.03
+  r=[0.38,0.76): nodes=4, density=2.94
+  r=[0.76,1.14): nodes=12, density=5.29
+  r=[1.14,1.52): nodes=21, density=6.62
+  r=[1.52,1.90): nodes=12, density=2.94
+  r=[1.90,2.28): nodes=22, density=4.41
+  r=[2.28,2.66): nodes=32, density=5.43
+
+--- BFS Shell Volumes ---
+  shell 0: 1 nodes
+  shell 1: 14 nodes
+  shell 2: 46 nodes
+  shell 3: 46 nodes
+  shell 4: 13 nodes
+
+  Effective dimension (V ~ r^d): d_eff = 1.55 (R² = 0.9585)
+
+--- Matter Density Profile ---
+  r=[0.00,0.38): P=0.0417
+  r=[0.38,0.76): P=0.0333
+  r=[0.76,1.14): P=0.1000
+  r=[1.14,1.52): P=0.1750
+  r=[1.52,1.90): P=0.1000
+  r=[1.90,2.28): P=0.1833
+  r=[2.28,2.66): P=0.2667
+
+--- Growth Clustering ---
+
+--- Degree vs Distance ---
+  r=[0.00,0.38): mean_degree=10.6
+  r=[0.38,0.76): mean_degree=11.0
+  r=[0.76,1.14): mean_degree=8.7
+  r=[1.14,1.52): mean_degree=7.1
+  r=[1.52,1.90): mean_degree=8.8
+  r=[1.90,2.28): mean_degree=7.4
+  r=[2.28,2.66): mean_degree=6.9
+
+Total time: 1.9s
+
+----- stderr -----
+

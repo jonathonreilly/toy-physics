@@ -1,0 +1,143 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_thales_pinned_alpha_s_independent_ratios.py
+runner_sha256: 84ef3ffb27496a2fb7200db607b46a3bcf28a38badc285a1bd4bda4b59ba7507
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+Thales-pinned alpha_s-independent CKM ratios theorem audit
+See docs/CKM_THALES_PINNED_ALPHA_S_INDEPENDENT_RATIOS_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs (for cross-checks only -- ratios don't need alpha_s)
+----------------------------------------------------------------------------------------
+  rho            = 1/6
+  eta^2          = 5/36
+  Thales: eta^2  = rho(1-rho)?  True
+  alpha_s(v)     = 0.103304 (not used in ratios)
+  [PASS] rho = 1/6
+  [PASS] eta^2 = 5/36
+  [PASS] Thales: eta^2 = rho(1 - rho) (exact rational)
+  [PASS] upstream authority present: docs/ALPHA_S_DERIVED_NOTE.md
+  [PASS] upstream authority present: docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+  [PASS] upstream authority present: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+  [PASS] upstream authority present: docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md
+  [PASS] upstream authority present: docs/CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md
+
+----------------------------------------------------------------------------------------
+(R4): R_b^2 = rho exactly (Thales corollary, NEW form)
+----------------------------------------------------------------------------------------
+  R_b^2 = rho^2 + eta^2  = 1/6
+  rho                    = 1/6
+  [PASS] (R4) R_b^2 = rho exactly (rational)
+  [PASS] R_b^2 = 1/6 (canonical)
+  [PASS] Thales mechanism: rho^2 + rho(1-rho) = rho
+
+----------------------------------------------------------------------------------------
+(R5): R_t^2 / R_b^2 = (1 - rho)/rho = 5
+----------------------------------------------------------------------------------------
+  R_b^2          = 1/6
+  R_t^2          = 5/6
+  R_t^2 / R_b^2  = 5
+  (1 - rho)/rho  = 5
+  [PASS] (R5) R_t^2 / R_b^2 = (1 - rho)/rho
+  [PASS] (R5) numerical value = 5
+  [PASS] R_t^2 = 1 - rho (Thales)
+
+----------------------------------------------------------------------------------------
+(R1): |V_ts| / |V_cb| = 1 exactly at atlas-LO (alpha_s-INDEPENDENT)
+----------------------------------------------------------------------------------------
+  |V_ts|^2 / |V_cb|^2 = 1.000000000000000 (numerical)
+  Both magnitudes = A^2 lambda^4 = alpha_s^2/6
+  [PASS] (R1) |V_ts|^2 / |V_cb|^2 = 1 exactly
+  At alpha_s = 0.05: |V_ts|^2/|V_cb|^2 = 1.000000000000000
+  [PASS] (R1) ratio is independent of alpha_s value
+
+----------------------------------------------------------------------------------------
+(R2): |V_td| / |V_ub| = sqrt(5) exactly at atlas-LO (alpha_s-INDEPENDENT)
+----------------------------------------------------------------------------------------
+  |V_td|^2 / |V_ub|^2 (rational, atlas-LO) = 5
+  sqrt(5) numerical = 2.236067977499790
+  [PASS] (R2) |V_td|^2/|V_ub|^2 = 5 (exact rational)
+  [PASS] (R2) |V_td|/|V_ub| = sqrt(5) numerically
+  |V_td|^2/|V_ub|^2 (numerical, canonical alpha_s) = 5.000000000000001
+  [PASS] (R2) numerical match exact = 5
+  At alpha_s = 0.05: |V_td|^2/|V_ub|^2 = 5.000000000000001
+  [PASS] (R2) ratio is independent of alpha_s value
+
+----------------------------------------------------------------------------------------
+(R3) NEW: |V_td V_cb*|^2 / |V_ts V_ub*|^2 = 5 (cross-row)
+----------------------------------------------------------------------------------------
+  |V_td V_cb|^2 = 1.361658e-07
+  |V_ts V_ub|^2 = 2.723316e-08
+  ratio          = 5.000000000000001
+  [PASS] (R3) ratio = 5 exactly
+  [PASS] (R3) ratio = R_t^2/R_b^2 = (1-rho)/rho
+  At alpha_s = 0.20: ratio = 5.000000000000000
+  [PASS] (R3) alpha_s-independent (verified at alpha_s = 0.20)
+  Note: this is the NEW pure-framework cross-row identity.
+
+----------------------------------------------------------------------------------------
+alpha_s-DEPENDENT contrast: ratios that DO depend on canonical coupling
+----------------------------------------------------------------------------------------
+  |V_us|^2 / |V_cb|^2 (numerical) = 29.040554
+  3 / alpha_s (closed form)        = 29.040554
+  [PASS] |V_us|^2 / |V_cb|^2 = 3/alpha_s
+  |V_us|^2 / |V_ub|^2 (numerical) = 3373.414993
+  36 / alpha_s^2 (closed form)     = 3373.414993
+  [PASS] |V_us|^2 / |V_ub|^2 = 36/alpha_s^2
+  |V_td|^2 / |V_cb|^2 (numerical) = 4.304326e-02
+  5 alpha_s/12 (closed form)       = 4.304326e-02
+  [PASS] |V_td|^2 / |V_cb|^2 = 5 alpha_s/12
+  At alpha_s = 0.05: |V_us|^2/|V_cb|^2 = 60.000000 (DIFFERENT from canonical)
+  [PASS] alpha_s-dependent ratios change with alpha_s (verified)
+
+----------------------------------------------------------------------------------------
+PDG comparators for alpha_s-INDEPENDENT ratios
+----------------------------------------------------------------------------------------
+  (R1) |V_ts|/|V_cb| atlas = 1.0,  PDG = 0.9927 +/- 0.0418
+       deviation = -0.175 sigma
+  [PASS] (R1) |V_ts|/|V_cb| within 1 sigma of PDG
+  (R2) |V_td|/|V_ub| atlas = sqrt(5) = 2.2361,  PDG = 2.2461 +/- 0.1267
+       deviation = +0.079 sigma
+  [PASS] (R2) |V_td|/|V_ub| within 1 sigma of PDG
+  (R3) |V_td V_cb|^2/|V_ts V_ub|^2 atlas = 5.0,  PDG = 5.1195 +/- 0.7204
+       deviation = +0.166 sigma
+  [PASS] (R3) cross-row identity within 1 sigma of PDG
+  [PASS] (R3) cross-row identity within 0.5 sigma of PDG
+
+----------------------------------------------------------------------------------------
+Summary: NEW alpha_s-INDEPENDENCE classification
+----------------------------------------------------------------------------------------
+  alpha_s-INDEPENDENT (geometric, Thales-pinned):
+
+    (R1)  |V_ts| / |V_cb|              =  1
+    (R2)  |V_td| / |V_ub|              =  sqrt(5)
+    (R3)  |V_td V_cb|^2 / |V_ts V_ub|^2  =  5  (cross-row, NEW)
+
+    Mechanism: cancellation of A^2 lambda^k factor;
+               ratios depend ONLY on (rho, eta) at the atlas point
+               and the Thales relation eta^2 = rho(1 - rho).
+
+  alpha_s-DEPENDENT (dynamical):
+
+    |V_us|^2 / |V_cb|^2   =  3 / alpha_s(v)
+    |V_us|^2 / |V_ub|^2   =  36 / alpha_s(v)^2
+    |V_td|^2 / |V_cb|^2   =  5 alpha_s(v) / 12
+
+    These probe the canonical coupling itself.
+
+  PDG comparators for the alpha_s-INDEPENDENT class:
+    (R1) PDG: 0.993 +/- 0.042  match: -0.18 sigma
+    (R2) PDG: 2.246 +/- 0.127  match: +0.08 sigma
+    (R3) PDG: 5.12 +/- 0.72   match: +0.17 sigma
+
+========================================================================================
+TOTAL: PASS=31, FAIL=0
+========================================================================================
+
+----- stderr -----
+

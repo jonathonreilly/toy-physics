@@ -1,0 +1,36 @@
+===== runner cache v1 =====
+runner: scripts/lattice_keff_continuum.py
+runner_sha256: 9a42641695997677945c85a6302adf41ed7a033c1f27c618bc55678b3bb8afae
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 5.90
+status: ok
+----- stdout -----
+====================================================================================================
+K_EFF = K*H CONTINUUM LIMIT (Approach 2)
+  Physical extent: W=20.0, L=40.0, mass at y=8.0
+  Kernel: exp(i * (k*h) * act) * w / L * h^2
+  Measurement stack: identical to lattice_continuum_limit.py
+====================================================================================================
+
+       h   n_nodes    npl      gravity         k=0       MI    1-pur     d_TV      t
+  -------------------------------------------------------------------------------------------------
+   2.000       441     21    -1.691017   +0.00e+00   0.3923   0.2804   0.6200     0s
+   1.000      1681     41    +0.137379   +0.00e+00   0.4942   0.4186   0.7588     0s
+   0.500      6561     81    +0.582095   +0.00e+00   0.3814   0.4598   0.6406     1s
+   0.250     25921    161         FAIL           —        —        —        —     2s
+           detector probs: free=0.00e+00  mass=0.00e+00  max|A| free=1.00e+00  max|A| mass=1.00e+00
+
+====================================================================================================
+VERDICT
+====================================================================================================
+  Gravity values: ['-1.6910', '+0.1374', '+0.5821']
+    sign stable (attractive in last two refinements)
+  MI values:  ['0.3923', '0.4942', '0.3814']
+  1-pur values:['0.2804', '0.4186', '0.4598']
+  d_TV values:['0.6200', '0.7588', '0.6406']
+  Gravity step deltas: ['1.8284', '0.4447']
+    -> gravity appears to be CONVERGING
+
+----- stderr -----
+

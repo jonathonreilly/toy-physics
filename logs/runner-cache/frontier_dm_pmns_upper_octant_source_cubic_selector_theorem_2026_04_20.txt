@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_pmns_upper_octant_source_cubic_selector_theorem_2026_04_20.py
+runner_sha256: 9b3931063a84ff2ee2edb6eb9bc20296a1ec1dfbe65af841f96cf445110cf364
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.57
+status: ok
+----- stdout -----
+========================================================================================
+DM PMNS UPPER-OCTANT / SOURCE-CUBIC SELECTOR THEOREM
+========================================================================================
+
+Part 1: the chamber law forces the upper octant
+   central threshold s23^2_min = 0.540969817889
+  [PASS] The central theta_23 threshold lies above maximal mixing  (threshold=0.540969817889)
+  [PASS] The central theta_23 threshold matches 0.540970 to 6 digits
+  [PASS] At fixed H, the mu<->tau partner sends s23^2 to 1 - s23^2  (sum=1.000000000000)
+  [PASS] At fixed H, the mu<->tau partner flips the PMNS CP sign  (sin_dcp=(-0.987360974089,+0.987360974089))
+  [PASS] The lower-octant partner sits below the chamber threshold  ((lower,thr,upper)=(0.455000000000,0.540969817889,0.545000000000))
+
+Part 2: exact chamber-root upper-octant survivors
+   Basin 1, sigma=(2, 1, 0): s23^2=0.545000000000, sin_dcp=-0.987360974089
+   Basin 2, sigma=(2, 1, 0): s23^2=0.545000000000, sin_dcp=+0.554386982886
+   Basin X, sigma=(2, 0, 1): s23^2=0.545000000000, sin_dcp=-0.418782532965
+  [PASS] The exact chamber root set has exactly three upper-octant survivors  (survivors=[('Basin 1', (2, 1, 0)), ('Basin 2', (2, 1, 0)), ('Basin X', (2, 0, 1))])
+  [PASS] Every upper-octant survivor carries the same target s23^2 = 0.545
+
+Part 3: source-cubic orientation selects Basin 1 uniquely
+   Basin 1: I_src=+0.303560489497
+   Basin 2: I_src=-225.763564069262
+   Basin X: I_src=-99.766107123954
+  [PASS] Basin 1 has positive source cubic orientation
+  [PASS] Basin 2 has negative source cubic orientation
+  [PASS] Basin X has negative source cubic orientation
+  [PASS] Among upper-octant chamber roots, I_src > 0 selects Basin 1 uniquely  (selected=[('Basin 1', (2, 1, 0))])
+
+Part 4: physical consequence
+  [PASS] The selected branch is sigma_hier = (2,1,0)
+  [PASS] The selected branch has negative CP sign  (sin_dcp=-0.987360974089)
+  [PASS] The selected branch reproduces the pinned PMNS triple  ((s12,s13,s23)=(0.307000000000,0.021800000000,0.545000000000))
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact selector system on the active chamber:
+    - upper-octant chamber law
+    - source cubic orientation law I_src(H) > 0
+
+  Consequence:
+    - Basin 1 is the unique physical chamber root
+    - sigma_hier = (2,1,0)
+    - sin(delta_CP) < 0
+    - the remaining I5 gap is only the PMNS angle derivation itself
+
+PASS=14  FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_a1_invariant_section.py
+runner_sha256: 6f833a5b4435602b6c3208c43562537b047cefdbd1c9d35fd495f8b5cb9a326a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.31
+status: ok
+----- stdout -----
+UNIVERSAL GR A1 INVARIANT SECTION AUDIT
+==============================================================================
+[PASS] scalar generator is exact
+    observable principle gives the exact scalar generator
+[PASS] 3+1 lift is exact
+    route-2 gives the exact PL S^3 x R scaffold
+[PASS] tensor candidate is exact as a construction
+    candidate note identifies the Hessian on the lifted background
+[PASS] unique symmetric quotient kernel is exact on the prototype
+    quotient-uniqueness note records the nondegenerate prototype kernel
+[PASS] A1 projector is exact and rank-2
+    Pi_A1 rank = 2
+[PASS] A1 projector is frame-invariant across the sampled valid 3+1 frames
+    max Pi_A1 delta across sampled frames = 1.110e-16
+[PASS] complement remains frame-dependent
+    max complement delta across sampled frames = 8.537e-01
+[PASS] invariant coordinates are exactly lapse and spatial trace in the canonical basis
+    invariant coordinates = (0, 4)
+[PASS] frame-dependent complement remains governed by the universal blockers
+    blocker notes keep the A1 section exact while leaving full frame selection open
+[PASS] A1 note records the exact invariant section
+    new note records the exact invariant selector candidate
+
+==============================================================================
+PROJECTOR CANDIDATE
+==============================================================================
+Pi_A1 = diag(1,0,0,0,1,0,0,0,0,0)
+Invariant coordinates = lapse h_00 and spatial trace tr(h_ij)
+projector_rank = 2
+max_a1_delta   = 1.110223024625e-16
+max_perp_delta = 8.537064359217e-01
+coord_max_delta = ['0.000e+00', '8.537e-01', '4.556e-01', '5.225e-01', '1.110e-16', '3.917e-01', '3.606e-01', '3.801e-01', '2.345e-01', '2.064e-01']
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=10 FAIL=0 TOTAL=10
+Direct-universal progress: the current stack already contains an exact rank-2 invariant `A1` projector onto lapse and spatial trace, but the complementary `E \oplus T1` channels still depend on the `3+1` frame. So the strongest exact selector is `Pi_A1`, not a full canonical curvature-localization bundle.
+
+----- stderr -----
+

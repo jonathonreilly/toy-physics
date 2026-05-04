@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_route2_source_domain_bridge_no_go.py
+runner_sha256: 341a7e7169db6b19dce6671ca560f2aa6f80610b1a59d1ec1bae53cbc41482c2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 38.03
+status: ok
+----- stdout -----
+========================================================================================
+LANE 3 ROUTE-2 SOURCE-DOMAIN BRIDGE NO-GO
+========================================================================================
+
+A. Authority surfaces
+------------------------------------------------------------------------
+PASS: QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md exists -- docs/QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md
+PASS: RCONN_DERIVED_NOTE.md exists -- docs/RCONN_DERIVED_NOTE.md
+PASS: QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md exists -- docs/QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md
+PASS: QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md exists -- docs/QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md
+PASS: QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md exists -- docs/QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md
+PASS: S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md exists -- docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md
+PASS: QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md exists -- docs/QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md
+PASS: R_conn surface is color-projection, not Route-2 endpoint syntax
+PASS: Route-2 bilinear carrier surface has no R_conn bridge
+PASS: Route-2 readout map surface has no R_conn bridge
+PASS: Route-2 exact time-coupling surface has no R_conn bridge
+PASS: block02 already classified R_conn as conditional, not derivation
+PASS: new note forbids retained up-mass closure language
+
+B. Conditional algebra if the missing bridge is supplied
+------------------------------------------------------------------------
+PASS: N_c=3 gives R_conn=8/9 exactly -- 8/9
+PASS: adding c_TE=-R_conn gives q_E=15/8 exactly -- 15/8
+PASS: adding c_TE=-R_conn gives rho_E=21/4 exactly -- 21/4
+PASS: using positive R_conn instead of -R_conn gives the wrong signed lift -- -69/4
+
+C. Typed source-domain graph
+------------------------------------------------------------------------
+PASS: current typed bank has no path from R_conn to rho_E=21/4 -- path length=0
+PASS: adding the missing bridge creates the exact path to rho_E=21/4 -- route2_center_TE_minus_8_9 -> route2_q_E_15_8 -> route2_rho_E_21_4
+PASS: the only new edge in the successful path is explicitly missing
+
+D. Endpoint-support non-uniqueness
+------------------------------------------------------------------------
+PASS: rho_E=0 and rho_E=21/4 agree on E-shell
+PASS: rho_E=0 and rho_E=21/4 agree on granted T-shell
+PASS: rho_E=0 and rho_E=21/4 agree on granted T-center
+PASS: rho_E=0 and rho_E=21/4 differ only at E-center
+PASS: live center ratio is close to -R_conn but remains comparator-only -- live=-0.890683778231, target=-0.888888888889
+
+E. Stuck fan-out frames
+------------------------------------------------------------------------
+PASS: support-endpoint frame blocks untyped promotion
+PASS: color-trace frame blocks untyped promotion
+PASS: representation-domain frame blocks untyped promotion
+PASS: endpoint-functor frame blocks untyped promotion
+PASS: low-complexity-scalar frame blocks untyped promotion
+PASS: fan-out has five orthogonal blocking frames
+
+F. Import firewall
+------------------------------------------------------------------------
+PASS: forbidden proof inputs are absent -- ['conditional_t_side_candidates', 'exact_rational_arithmetic', 'retained_su3_rconn_value', 'route2_endpoint_algebra', 'route2_exact_carrier', 'typed_edge_inventory']
+PASS: new note names the missing theorem rather than closing Lane 3
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=33, FAIL=0
+VERDICT: current Route-2 + SU(3) support has no typed R_conn
+source-domain bridge.  Adding that bridge would force rho_E=21/4,
+but without it the up-type scalar law remains open.
+
+----- stderr -----
+

@@ -1,0 +1,68 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py
+runner_sha256: bb4c5b7b23ae156ab1c9f4df7de282a19883e28edcdbc2ad3058b02b06502881
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: stretch-attempt note structure
+----------------------------------------------------------------------------------------
+  [PASS (A)] note contains: 'Gauge-Scalar Temporal Observable Bridge Stretch Attempt'  ()
+  [PASS (A)] note contains: 'named obstruction packet'  ()
+  [PASS (A)] note contains: 'A_min'  ()
+  [PASS (A)] note contains: 'Forbidden imports'  ()
+  [PASS (A)] note contains: 'Wilson gauge action with β = 6'  ()
+  [PASS (A)] note contains: 'K_O(ω) = 3w(3 + sin²ω)'  ()
+  [PASS (A)] note contains: 'A_inf / A_2 = 2/√3'  ()
+  [PASS (A)] note contains: '(O1)'  ()
+  [PASS (A)] note contains: '(O2)'  ()
+  [PASS (A)] note contains: '(O3)'  ()
+  [PASS (A)] note contains: 'Schwinger-Dyson'  ()
+  [PASS (A)] note contains: 'effective-action'  ()
+  [PASS (A)] note contains: 'Renormalization-group'  ()
+  [PASS (A)] note contains: 'non-analytically-derivable'  ()
+  [PASS (A)] note contains: 'proposal_allowed: false'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: 3 obstruction routes documented
+----------------------------------------------------------------------------------------
+  [PASS (A)] obstruction route: (O1) Schwinger-Dyson approach  (present in §3.4)
+  [PASS (A)] obstruction route: (O2) Effective-action approach  (present in §3.4)
+  [PASS (A)] obstruction route: (O3) Renormalization-group approach  (present in §3.4)
+  [PASS (A)] failure mode keyword: non-perturbative input  (failure mode)
+  [PASS (A)] failure mode keyword: analytically  (failure mode)
+  [PASS (A)] failure mode keyword: perturbatively  (failure mode)
+
+----------------------------------------------------------------------------------------
+Part 3: forbidden imports listed
+----------------------------------------------------------------------------------------
+  [PASS (A)] forbidden import: PDG observed  (§2 forbidden imports)
+  [PASS (A)] forbidden import: Lattice MC empirical  (§2 forbidden imports)
+  [PASS (A)] forbidden import: Fitted β_eff(β) from data  (§2 forbidden imports)
+  [PASS (A)] forbidden import: Same-surface family arguments  (§2 forbidden imports)
+
+----------------------------------------------------------------------------------------
+Part 4: explicit non-closure
+----------------------------------------------------------------------------------------
+  [PASS (A)] non-closure: bridge ⟨P⟩_full = R_O(β_eff) is non-analytically-derivable  ()
+  [PASS (A)] non-closure: honest tier  ()
+  [PASS (A)] non-closure: still open  ()
+  [PASS (A)] non-closure: still conditional  ()
+
+----------------------------------------------------------------------------------------
+Part 5: A_min explicitly enumerated
+----------------------------------------------------------------------------------------
+  [PASS (A)] A_min item: Wilson gauge action with β = 6  (§1 A_min table)
+  [PASS (A)] A_min item: K_O(ω) = 3w(3 + sin²ω)  (§1 A_min table)
+  [PASS (A)] A_min item: A_inf / A_2 = 2/√3  (§1 A_min table)
+  [PASS (A)] A_min item: 1/N_c topological expansion  (§1 A_min table)
+
+========================================================================================
+  TOTAL: PASS=33, FAIL=0
+========================================================================================
+
+----- stderr -----
+

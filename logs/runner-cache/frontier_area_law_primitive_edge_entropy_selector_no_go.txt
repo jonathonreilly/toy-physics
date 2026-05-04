@@ -1,0 +1,50 @@
+===== runner cache v1 =====
+runner: scripts/frontier_area_law_primitive_edge_entropy_selector_no_go.py
+runner_sha256: 8d8963ff84b5aabebaf7c8d1a79473a7660512e1d33f1dd5c47d10fb5037fbbe
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+==============================================================================
+AREA-LAW PRIMITIVE-EDGE ENTROPY SELECTOR NO-GO
+==============================================================================
+
+[PASS] primitive Planck trace is exactly 4/16: Tr((I_16/16)P_A) = 4/16 = 0.250000000000
+[PASS] S(I_16/16) is not 1/4: value=2.772588722240, delta=+2.522588722240
+[PASS] S(P_A/rank P_A) is not 1/4: value=1.386294361120, delta=+1.136294361120
+[PASS] -Tr(P rho P log(P rho P)) is not 1/4: value=0.693147180560, delta=+0.443147180560
+[PASS] H_binary(4/16) is not 1/4: value=0.562335144619, delta=+0.312335144619
+[PASS] log(4)/log(16) is not 1/4: value=0.500000000000, delta=+0.250000000000
+[PASS] normalized rank entropy gives 1/2, not 1/4: log 4 / log 16 = 0.500000000000
+[PASS] binary event entropy at p=1/4 is larger than 1/4 nat: H(1/4)=0.562335144619
+[PASS] unnormalized block entropy equals log 2: block entropy=0.693147180560
+[PASS] no binary entropy from an m/16 primitive event probability equals 1/4: closest m=1, H(m/16)=0.233791658706
+[PASS] no flat rank-m Schmidt spectrum on the primitive cell gives 1/4: closest rank=1, log(rank)=0.000000000000
+[PASS] a two-level edge pair can be tuned to entropy 1/4: p_star=0.068599066737, theta_star=0.265005146983
+[PASS] the tuned p_star is not the primitive rank fraction 4/16: p_star=0.068599066737, 4/16=0.250000000000
+[PASS] the tuned p_star is not a primitive 1/16 atom: p_star=0.068599066737
+[PASS] entropy 1/4 is shifted by Schmidt perturbation +0.001: H(p_star+0.001)=0.252600620317
+[PASS] entropy 1/4 is shifted by Schmidt perturbation -0.001: H(p_star-0.001)=0.247383728058
+[PASS] entropy 1/4 is shifted by Schmidt perturbation +0.010: H(p_star+0.010)=0.275334401897
+[PASS] entropy 1/4 is shifted by Schmidt perturbation -0.010: H(p_star-0.010)=0.223095277815
+[PASS] toy gapped edge Hamiltonians keep the same gap for all Schmidt angles: gaps=[1.0, 1.0, 1.0, 1.0]
+[PASS] same-gap edge Hamiltonians have different entanglement coefficients: entropies=0.000000000000, 0.250000000000, 0.416495530700, 0.693147180560
+[PASS] maximally entangled two-level edge gives log 2, not 1/4: S(pi/4)=0.693147180560
+[PASS] product edge gives zero entropy, not 1/4: S(0)=0.000000000000
+[PASS] additivity can extend a selected per-face coefficient: if the per-face value is stipulated as 1/4, finite patches add
+[PASS] additivity does not turn log 4 per-face entropy into 1/4: one-face log4=1.386294361120 versus trace=0.250000000000
+[PASS] primitive trace is not a von Neumann entropy functional: Tr(rho P) is linear in rho; von Neumann entropy is nonlinear in the spectrum
+[PASS] Target 2 gapped route still needs an entropy-spectrum selector: mass gap gives area-law form, not the exact leading coefficient
+
+==============================================================================
+SUMMARY: PASS=26  FAIL=0
+==============================================================================
+
+Verdict: the 4/16 primitive trace is not an entanglement entropy
+coefficient under the canonical finite-cell entropy constructions.
+A positive gapped Target 2 carrier needs an additional Schmidt-spectrum
+or operational entropy selector.
+
+----- stderr -----
+

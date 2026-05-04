@@ -1,0 +1,211 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_barred_circumradius_exact_closed_form.py
+runner_sha256: 612b1470e8f52428bf364e859214d9fc04b8e91bf7cdf0d3cd2f144f5e3b1ce0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+Barred unitarity triangle circumradius EXACT closed-form theorem audit
+See docs/CKM_BARRED_CIRCUMRADIUS_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs on current main
+----------------------------------------------------------------------------------------
+  alpha_s(v)                    = 0.103303816122267
+  N_pair                        = 2  (retained)
+  N_color                       = 3  (retained)
+  N_quark = N_pair x N_color    = 6
+  N_quark - 1                   = 5
+
+  N1: rho_bar = (4-a)/24        = 0.162362340994906
+  N2: eta_bar = sqrt(5)(4-a)/24 = 0.363053231450610
+  N3: R_b_bar^2 = (4-a)^2/96    = 0.158169178640076
+  N4: tan(gamma_bar) = sqrt(5)  = 2.236067977499790  [PROTECTED]
+  N5: tan(beta_bar)              = 0.433425154119535
+  [PASS (A)] alpha_s(v) > 0
+  [PASS (A)] N_pair = 2 (retained)
+  [PASS (A)] N_color = 3 (retained)
+  [PASS (A)] N_quark = 6 (retained)
+  [PASS (A)] N4: tan(gamma_bar) = sqrt(5) (PROTECTED)
+  [PASS (A)] N5: tan(beta_bar) = sqrt(5)(4-a)/(20+a)
+  [PASS (A)] retained on main: docs/ALPHA_S_DERIVED_NOTE.md
+  [PASS (A)] retained on main: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+  [PASS (A)] retained on main: docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+  [PASS (A)] retained on main: docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md
+  [PASS (A)] retained on main: docs/CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md
+  [PASS (A)] retained on main: docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+
+----------------------------------------------------------------------------------------
+(C1)(C2) NEW EXACT: R_bar^2 = 1/4 + alpha_s^2/320 (degree-2 polynomial)
+----------------------------------------------------------------------------------------
+  Step 1: sin^2(alpha_bar) (from N4+N5+N6)  = 0.999866621811796
+  Step 2: 1/(4 sin^2(alpha_bar)) law of sines = 0.250033348995079
+  Step 3: closed form 1/4 + alpha_s^2/320      = 0.250033348995079
+  Equivalent (80+a^2)/320                       = 0.250033348995079
+  Structural 1/N_pair^2 + a^2/(N_pair^6(N_q-1)) = 0.250033348995079
+
+  R_bar = (1/2) sqrt(1 + a^2/80) (C2)            = 0.500033347882998
+  R_bar^2 = above squared                         = 0.250033348995079
+  [PASS (A)] (C1) R_bar^2 from law-of-sines = closed form 1/4 + a^2/320
+  [PASS (A)] (C1) closed form = (80 + alpha_s^2)/320
+  [PASS (A)] (C1) closed form = 1/N_pair^2 + a^2/(N_pair^6 (N_quark - 1))
+  [PASS (A)] (C2) R_bar = (1/2) sqrt(1 + a^2/80) consistent with R_bar^2
+  [PASS (A)] (C1) R_bar^2 - 1/4 - alpha_s^2/320 = 0 (degree-2 polynomial)
+
+----------------------------------------------------------------------------------------
+(C3) NEW EXACT: Circumcenter (x_cc, y_cc) = (1/2, -alpha_s sqrt(5)/40)
+----------------------------------------------------------------------------------------
+  x_cc = 1/N_pair = 1/2                           = 0.500000000000000
+    (alpha_s-INDEPENDENT: midpoint of fixed unit base V_1V_2)
+
+  y_cc direct (R_b^2 - rho_bar)/(2 eta_bar)       = -0.005774858879613
+  y_cc closed -alpha_s sqrt(5)/40                  = -0.005774858879613
+  y_cc structural -a/(N_pair^3 sqrt(N_quark-1))    = -0.005774858879613
+  Linear in alpha_s with constant slope
+  [PASS (A)] (C3) x_cc = 1/N_pair = 1/2 (alpha_s-INDEPENDENT)
+  [PASS (A)] (C3) y_cc derived from equidistance = closed -a sqrt(5)/40
+  [PASS (A)] (C3) y_cc closed = structural -a/(N_pair^3 sqrt(N_quark-1))
+
+----------------------------------------------------------------------------------------
+(C4) NEW: R_bar^2 = x_cc^2 + y_cc^2 (Pythagorean from circumcenter)
+----------------------------------------------------------------------------------------
+  x_cc^2                  = 0.250000000000000
+  y_cc^2                  = 0.000033348995079
+  Sum (Pythagorean)        = 0.250033348995079
+  R_bar^2 closed (C1)      = 0.250033348995079
+  [PASS (A)] (C4) R_bar^2 = x_cc^2 + y_cc^2 (distance from circumcenter to V_1)
+
+  Distance from circumcenter to V_2 (squared) = 0.250033348995079
+  Distance from circumcenter to V_3 (squared) = 0.250033348995079
+  All three equal R_bar^2                       = 0.250033348995079
+  [PASS (A)] (C4) circumcenter equidistant from V_2 (= R_bar^2)
+  [PASS (A)] (C4) circumcenter equidistant from V_3 (= R_bar^2)
+
+----------------------------------------------------------------------------------------
+(C5) NEW: Atlas-LO recovery (alpha_s -> 0)
+----------------------------------------------------------------------------------------
+  At alpha_s -> 0:
+    R_bar -> 1/N_pair = 1/2 (hypotenuse/2)        = 0.5000000000
+    y_cc  -> 0 (circumcenter on hypotenuse)        = 0.0000000000
+    Recovers right-triangle: hypotenuse is diameter of circumscribed circle
+  [PASS (A)] (C5) atlas-LO R_bar -> 1/N_pair = 1/2 (right-angle: hypotenuse/2)
+  [PASS (A)] (C5) atlas-LO y_cc -> 0 (circumcenter on hypotenuse)
+
+----------------------------------------------------------------------------------------
+(C6) NEW Selection Rule: R_bar - 1/2 has ONLY EVEN POWERS of alpha_s
+----------------------------------------------------------------------------------------
+  Scaling test: halve alpha_s, look at (R_bar - 1/2) ratio
+    alpha_s_1 = 0.001: R_bar - 1/2 = 3.125000e-09
+    alpha_s_2 = 0.0005: R_bar - 1/2 = 7.812500e-10
+    actual ratio s1/s2     = 4.000000
+    expected if alpha_s^2  = 4.000000  (selection rule TRUE)
+    expected if alpha_s^1  = 2.000000  (selection rule FALSE)
+  [PASS (A)] (C6) (R_bar - 1/2) scales as alpha_s^2 (not alpha_s^1): ratio ~ 4
+  [PASS (A)] (C6) ratio FAR from alpha_s^1 prediction (2): rules out alpha_s^1 term
+
+  R_bar^2 = 1/4 + alpha_s^2/320 (single-term exact polynomial)
+  Residual at canonical alpha_s: 4.459e-18
+  [PASS (A)] (C6) R_bar^2 is degree-2 polynomial in alpha_s (residual = 0 EXACTLY)
+
+  Extract alpha_s^4 coefficient at alpha_s = 0.1:
+    R_bar - 1/2                       = 3.124902e-05
+    leading alpha_s^2/320             = 3.125000e-05
+    (R - 1/2 - leading)/alpha_s^4     = -9.765015e-06
+    predicted -1/102400                 = -9.765625e-06
+  [PASS (A)] (C6) alpha_s^4 coefficient = -1/(N_pair^6(N_quark-1))^2 = -1/102400
+
+----------------------------------------------------------------------------------------
+(C7) NEW EXACT: R_bar cos(alpha_bar) = y_cc (chord-distance theorem)
+----------------------------------------------------------------------------------------
+  R_bar                          = 0.500033347882998
+  cos(alpha_bar)                 = -0.011548947493327
+  R_bar * cos(alpha_bar)         = -0.005774858879613
+  y_cc                            = -0.005774858879613
+  diff                            = 1.475e-17
+  [PASS (A)] (C7) R_bar cos(alpha_bar) = y_cc EXACTLY (chord-distance from center)
+
+----------------------------------------------------------------------------------------
+(C8) NEW: 2 R_bar sin(alpha_bar) = 1 (unit base from law of sines)
+----------------------------------------------------------------------------------------
+  2 R_bar sin(alpha_bar) = chord V_1V_2 length = 1.000000000000000
+  Unit-base length (rescaled triangle)          = 1.0
+  [PASS (A)] (C8) 2 R_bar sin(alpha_bar) = 1 (unit base = chord = 1, law of sines)
+
+  Cross-check: R_t_bar^2 from circumradius + N4
+    sin(gamma_bar) = sqrt(5/6) (from N4)        = 0.9128709292
+    2 R_bar sin(gamma_bar) (= R_t_bar)          = 0.9129318138
+    R_t_bar^2 from law of sines                  = 0.833444496650265
+    R_t_bar^2 expected (80 + a^2)/96             = 0.833444496650265
+  [PASS (A)] (C8) R_t_bar^2 via law of sines + N4 matches (80 + a^2)/96
+
+----------------------------------------------------------------------------------------
+EXACT-status verification: closed forms hold at multiple alpha_s
+----------------------------------------------------------------------------------------
+  Verifying (C1), (C3), (C4), (C7), (C8) hold EXACTLY at six alpha_s values:
+    alpha_s = 0.050000000: C1=True, C4=True, C7=True, C8=True  (OK)
+    alpha_s = 0.100000000: C1=True, C4=True, C7=True, C8=True  (OK)
+    alpha_s = 0.103303816: C1=True, C4=True, C7=True, C8=True  (OK)
+    alpha_s = 0.150000000: C1=True, C4=True, C7=True, C8=True  (OK)
+    alpha_s = 0.200000000: C1=True, C4=True, C7=True, C8=True  (OK)
+    alpha_s = 0.300000000: C1=True, C4=True, C7=True, C8=True  (OK)
+  [PASS (A)] EXACT closed forms hold at ALL tested alpha_s (no leading-order drift)
+
+----------------------------------------------------------------------------------------
+PDG comparator: circumradius is implicit in joint side+angle measurements
+----------------------------------------------------------------------------------------
+  Framework predictions at canonical alpha_s = 0.1033038161:
+    R_bar                       = 0.5000333479
+    R_bar - 1/2 (deviation)     = 3.334788e-05
+    Predicted alpha_s^2/320     = 3.334900e-05
+    Circumcenter (x_cc, y_cc)   = (0.5, -5.774859e-03)
+
+  Connection to experiment:
+    R_bar deviation ~ 3e-5 currently below precision
+    Joint UTfit/CKMfitter constraints on (rho_bar, eta_bar) implicitly
+    constrain circumcenter; predicted at (1/2, -alpha_s sqrt(5)/40).
+  [PASS (A)] (comparator) R_bar deviation ~ 3e-5 below current sensitivity
+  [PASS (A)] (comparator) y_cc = -alpha_s sqrt(5)/40 testable in joint UT fit
+
+----------------------------------------------------------------------------------------
+Summary of new content
+----------------------------------------------------------------------------------------
+  NEW (C1): R_bar^2 = 1/4 + alpha_s^2/320 [degree-2 polynomial in alpha_s]
+            = 1/N_pair^2 + alpha_s^2/(N_pair^6 (N_quark - 1))  EXACT
+
+  NEW (C2): R_bar = (1/2) sqrt(1 + alpha_s^2/80)  EXACT
+
+  NEW (C3): Circumcenter EXACT closed form
+            x_cc = 1/N_pair = 1/2 (alpha_s-INDEPENDENT)
+            y_cc = -alpha_s/(N_pair^3 sqrt(N_quark-1)) = -alpha_s sqrt(5)/40
+            (LINEAR in alpha_s)
+
+  NEW (C4): R_bar^2 = x_cc^2 + y_cc^2 (Pythagorean check)
+
+  NEW (C5): Atlas-LO recovery R_bar -> 1/2, y_cc -> 0
+
+  NEW (C6): SELECTION RULE - R_bar - 1/2 has only EVEN powers of alpha_s
+            R_bar^2 is degree-2 on this NLO surface - no higher terms there
+
+  NEW (C7): R_bar cos(alpha_bar) = y_cc (chord-distance theorem)
+
+  NEW (C8): 2 R_bar sin(alpha_bar) = 1 (unit base via law of sines)
+
+  At canonical alpha_s = 0.1033038161:
+    R_bar^2     = 0.2500333490
+    R_bar        = 0.5000333479
+    R_bar - 1/2 = 3.3348e-05
+    y_cc         = -5.7749e-03
+
+  All inputs retained on main; no SUPPORT-tier or open inputs used.
+  Scope: exact on the retained NLO protected-gamma surface only;
+         no physical NNLO or all-orders CKM control is claimed.
+
+========================================================================================
+TOTAL: PASS=35, FAIL=0
+========================================================================================
+
+----- stderr -----
+

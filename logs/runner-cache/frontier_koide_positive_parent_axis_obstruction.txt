@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_positive_parent_axis_obstruction.py
+runner_sha256: bd96afacd3e0b96c965278101bedf0fef08fce7d77a16aeec953b91a94e95e1d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.74
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: circulant ∩ axis-diagonal = scalar identity
+========================================================================================
+  [PASS] Generic Hermitian circulant has equal diagonal entries
+  [PASS] Axis-diagonal condition forces b = 0  (off-diagonals are exactly b and b*)
+  [PASS] With b = 0 the circulant collapses to a scalar multiple of I_3
+
+========================================================================================
+PART 2: positive C_3 parent with prescribed spectrum is non-diagonal unless degenerate
+========================================================================================
+  [PASS] Fourier-built parent is Hermitian
+  [PASS] Fourier-built parent commutes with C_3
+  [PASS] Off-diagonals vanish iff the spectrum is fully degenerate  (M01=m1/3 - m2/6 - sqrt(3)*I*m2/6 - m3/6 + sqrt(3)*I*m3/6, M02=m1/3 - m2/6 + sqrt(3)*I*m2/6 - m3/6 - sqrt(3)*I*m3/6)
+  [PASS] When m1 = m2 = m3, the parent reduces to m1 I_3
+
+========================================================================================
+PART 3: observed charged-lepton parent sits in the eigenvalue channel
+========================================================================================
+  [PASS] [NUMERIC] Observed-mass C_3 parent has large nonzero axis-basis off-diagonals  (max|offdiag|=575.392939)
+
+Interpretation:
+  A nontrivial positive C_3-covariant parent automatically lives in the
+  Fourier/eigenvalue channel. On the current retained charged-lepton
+  surface, that channel is not physical because U_e = I_3 fixes the
+  axis-basis diagonal readout. So the positive-parent sqrt(m) route
+  needs a new readout primitive, not just the parent operator.
+
+PASS=8 FAIL=0
+
+----- stderr -----
+

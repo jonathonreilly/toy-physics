@@ -1,0 +1,50 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_selected_slice_spectral_completion_and_minimal_local_spectral_law_no_go.py
+runner_sha256: a2e54572b5a14aa225f2dfb3f5334f4a22c442aeca983e56f22a6acf49fd6500
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.60
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: exact spectral completion of the selected 2x2 doublet block
+========================================================================================
+  [PASS (A)] The canonical selected-slice doublet block is exactly Hermitian with one live real coordinate x = m - 4 sqrt(2)/9  (K2(m) = [[A, x-i sqrt(2)/3], [x+i sqrt(2)/3, B]] with A,B constant)
+  [PASS (A)] The trace of the selected 2x2 block is constant on the full selected slice  (Tr(K2) = -2*sqrt(6)/3 + 4*sqrt(2)/9)
+  [PASS (A)] The determinant, quadratic trace, and eigenvalue-gap square are exact affine functions of x^2  (all canonical spectral scalars collapse to x^2)
+  [PASS (A)] The canonical spectral identities Q = T^2 - 2D and Gap^2 = T^2 - 4D hold exactly
+  [PASS (C)] [NUMERIC] The exact spectral formulas match the computed selected-slice block numerically  (max err=3.55e-15)
+
+========================================================================================
+PART 2: reflection symmetry makes the completed spectral data sign-blind
+========================================================================================
+  [PASS (C)] [NUMERIC] The spectral carrier is exactly invariant under the selected-line reflection m -> 8 sqrt(2)/9 - m  (max reflected-spectral err=5.33e-15)
+  [PASS (C)] [NUMERIC] After subtracting the fixed center values, all completed spectral coordinates are positive multiples of x^2  ((D_c-D, Q-Q_c, Gap^2-Gap_c^2) = (x^2, 2 x^2, 4 x^2))
+  [PASS (C)] [NUMERIC] So the completed selected-slice spectral data identify only one scalar x^2, not an oriented point on the line  (spectral completion is exact but sign-blind)
+
+========================================================================================
+PART 3: minimal local spectral laws cannot select an interior branch point
+========================================================================================
+  [PASS (C)] [NUMERIC] The entire physical first branch sits on one side of the reflection center x = 0  (m_pos=-1.295794904067, m_0=-0.265815998702, center=0.628539361055)
+  [PASS (C)] [NUMERIC] Therefore the canonical raw spectral scalars are strictly monotone on the full physical branch  (D increases; Q and Gap^2 decrease)
+  [PASS (C)] [NUMERIC] No single completed raw spectral scalar selects the current physical point against the natural branch landmarks  (the physical point is interior in every raw spectral ordering)
+  [PASS (A)] Any affine law in the completed raw spectral coordinates is either constant or has derivative proportional to x  (d/dx = -2*x*(alpha - 2*beta - 4*gamma))
+  [PASS (C)] [NUMERIC] So no nonconstant affine spectral law can have an interior critical selector on the physical branch  (x never vanishes on the branch; affine laws are constant or monotone there)
+  [PASS (A)] Shifted positive spectral monomials are powers of x^2 up to a fixed coefficient  (generic degree-d monomial = const * x^(2d))
+  [PASS (C)] [NUMERIC] So coefficient-free monomial spectral laws are also monotone and cannot select an interior branch point  (x^2 decreases strictly from threshold to the unphased endpoint)
+  [PASS (A)] Scale-normalized spectral laws add no new selector content because the selected-slice trace is already fixed  (Gap(K2)^2 / Tr(K2) is still affine in x^2 because Tr(K2) is constant)
+
+========================================================================================
+PART 4: interpretation
+========================================================================================
+  The canonical selected-slice 2x2 spectral carrier is exact, but it is
+  not a hidden Koide selector. After freezing the bank, the intrinsic
+  spectral data collapse to one sign-blind coordinate x^2.
+  On the physical first branch that coordinate is strictly monotone, so
+  natural low-complexity spectral laws only reparameterize the branch.
+  They do not supply the missing microscopic selector for Q = 2/3.
+
+PASS=16 FAIL=0
+
+----- stderr -----
+

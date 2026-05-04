@@ -1,0 +1,55 @@
+===== runner cache v1 =====
+runner: scripts/frontier_sm_one_higgs_yukawa_gauge_selection.py
+runner_sha256: d9cc06742c97f7b2c11b5c6e5a365c92b9adfb0bb5a54be7940d63d451784e24
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.05
+status: nonzero_exit
+----- stdout -----
+PASS: theorem note exists -- docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md
+PASS: retained hypercharge authority exists -- docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md
+PASS: EW Higgs authority exists -- docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md
+PASS: hypercharge authority status is retained -- **Status:** **proposed_retained standalone structural-uniqueness theorem** on `main`. Extracts and packages as its own theorem the uniqueness claim that is *used but not separately proposed_retained* in [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md) Step 2 and implicitly carried by [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md). The proposed_retained anomaly-forces-time theorem explicitly states: *"The time theorem only needs the existence of an SU(2)-singlet opposite-chirality completion; it does not rely on uniqueness from anomaly arithmetic alone."* This note closes the conditional uniqueness statement as a standalone proposed_retained row; it does not rederive the proposed_retained left-handed surface, the singlet right-handed completion requirement, or the neutral-singlet input.
+FAIL: EW Higgs authority status is standalone positive -- **Status:** proposed_retained - explicit strong derivation claim pending audit
+PASS: doubled-hypercharge convention present
+PASS: EW-normalized convention present
+PASS: EW Higgs normalized Y_H maps to doubled Y(H)
+PASS: conjugate Higgs has opposite doubled hypercharge
+PASS: SU(2) pseudoreality identity epsilon U* = U epsilon
+PASS: candidate Q_L H u_R classification -- color=True, Y_sum=2
+PASS: candidate Q_L tilde H u_R classification -- color=True, Y_sum=0
+PASS: candidate Q_L H d_R classification -- color=True, Y_sum=0
+PASS: candidate Q_L tilde H d_R classification -- color=True, Y_sum=-2
+PASS: candidate Q_L H e_R classification -- color=False, Y_sum=-4/3
+PASS: candidate Q_L tilde H e_R classification -- color=False, Y_sum=-10/3
+PASS: candidate Q_L H nu_R classification -- color=False, Y_sum=2/3
+PASS: candidate Q_L tilde H nu_R classification -- color=False, Y_sum=-4/3
+PASS: candidate L_L H u_R classification -- color=False, Y_sum=10/3
+PASS: candidate L_L tilde H u_R classification -- color=False, Y_sum=4/3
+PASS: candidate L_L H d_R classification -- color=False, Y_sum=4/3
+PASS: candidate L_L tilde H d_R classification -- color=False, Y_sum=-2/3
+PASS: candidate L_L H e_R classification -- color=True, Y_sum=0
+PASS: candidate L_L tilde H e_R classification -- color=True, Y_sum=-2
+PASS: candidate L_L H nu_R classification -- color=True, Y_sum=2
+PASS: candidate L_L tilde H nu_R classification -- color=True, Y_sum=0
+PASS: allowed set equals four one-Higgs Dirac Yukawa monomials -- [('L_L', 'e_R', 'H'), ('L_L', 'nu_R', 'tilde H'), ('Q_L', 'd_R', 'H'), ('Q_L', 'u_R', 'tilde H')]
+PASS: there are exactly four selected monomials -- 4
+PASS: all quark-lepton crossed candidates are color rejected -- [('Q_L', 'e_R', 'H'), ('Q_L', 'e_R', 'tilde H'), ('Q_L', 'nu_R', 'H'), ('Q_L', 'nu_R', 'tilde H'), ('L_L', 'u_R', 'H'), ('L_L', 'u_R', 'tilde H'), ('L_L', 'd_R', 'H'), ('L_L', 'd_R', 'tilde H')]
+PASS: wrong Higgs choices fail by exact doubled-hypercharge units -- {('Q_L', 'u_R', 'H'): Fraction(2, 1), ('Q_L', 'd_R', 'tilde H'): Fraction(-2, 1), ('L_L', 'e_R', 'tilde H'): Fraction(-2, 1), ('L_L', 'nu_R', 'H'): Fraction(2, 1)}
+PASS: Dirac Yukawa monomials are dimension four -- 4
+PASS: H lower component is neutral -- 0
+PASS: tilde H upper component is neutral -- 0
+PASS: H upper component has charge +1 -- 1
+PASS: tilde H lower component has charge -1 -- -1
+PASS: each selected monomial couples to a neutral Higgs component
+PASS: mass readout coefficient is v/sqrt(2) for every selected Dirac matrix
+PASS: generation matrices remain gauge-singlet freedom -- 9
+PASS: gauge selection does not diagonalize flavor matrices -- 9 entries vs 3 eigenvalues
+PASS: note records primary runner
+PASS: note states no numerical Yukawa eigenvalue claim
+PASS: note states no CKM or PMNS angle claim
+PASS: note states no top-Yukawa Ward normalization claim
+TOTAL: PASS=42, FAIL=1
+
+----- stderr -----
+

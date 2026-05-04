@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py
+runner_sha256: b7aa72f79cfd12f29f19b29f51ba9974024f9b26ab0271057cda1d0256b567ce
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.17
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE CONSTANT-LIFT OBSTRUCTION
+==============================================================================
+
+Exact coefficients
+  full interacting strong-coupling slope     = 0.055555555555556
+  local one-plaquette strong-coupling slope  = 0.055555555555556
+  local numeric slope check                  = 0.055555601851852
+
+Constant-lift candidate
+  Gamma_cand                                 = 1.554921974442116
+  candidate slope Gamma/18                   = 0.086384554135673
+  slope mismatch                             = +0.030828998580118
+
+  [PASS] [THEOREM] Haar moment gives <(Re Tr U)^2> = 1/2
+         integral (Re Tr U)^2 = (1/4)(2 * integral Tr U Tr U^dagger) = 1/2
+  [PASS] [THEOREM] full interacting Wilson plaquette has exact strong-coupling slope 1/18
+         slope_full = 0.055555555555556
+  [PASS] [THEOREM] local one-plaquette block has the same exact strong-coupling slope 1/18
+         slope_local = 0.055555555555556
+  [PASS] [THEOREM] local exact slope is reproduced numerically by the Bessel one-plaquette block
+         |numeric - exact| = 4.630e-08
+  [PASS] [THEOREM] any exact constant-lift reduction P(beta)=P_1plaq(Gamma beta) forces Gamma=1
+         Gamma_cand = 1.554921974442116 != 1
+  [PASS] [THEOREM] the current bridge candidate is therefore not an exact full-vacuum reduction law
+         delta slope = +0.030829
+  [PASS] [SUPPORT] the remaining open target is a beta-dependent reduction law beta_eff(beta), not a constant lift
+         exact class-level bridge survives; only the constant lift is ruled out
+
+==============================================================================
+SUMMARY: THEOREM PASS=6 SUPPORT=1 FAIL=0
+==============================================================================
+
+----- stderr -----
+

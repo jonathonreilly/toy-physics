@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/source_resolved_transverse_propagating_green.py
+runner_sha256: 3b70fefaf3aa3a3698f2fac741296607fb9c642907c8e39925c3542f1acb870c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 59.04
+status: ok
+----- stdout -----
+================================================================================================
+SOURCE-RESOLVED TRANSVERSE PROPAGATING GREEN
+  exact h=0.25 lattice, same-site memory vs transverse-smoothing control
+  comparison: instantaneous 1/r vs same-site vs transverse transport
+================================================================================================
+h=0.25, W=3, L=6, source_cluster=5 nodes
+source_z=2.0, memory_mix=0.9, transverse_mix=0.25
+field kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.5
+source strengths: [0.001, 0.002, 0.004, 0.008]
+target max |f|: 0.02
+
+REDUCTION CHECK
+  zero-source same-site shift: +0.000000e+00
+  zero-source transverse shift: +0.000000e+00
+
+       s         inst         same        trans  trans/same   trans-same
+--------------------------------------------------------------------------------
+  0.0010 +2.050891e-03 +2.412419e-03 +2.389431e-03       1.165 -2.298764e-05
+  0.0020 +4.105409e-03 +4.824993e-03 +4.778958e-03       1.164 -4.603542e-05
+  0.0040 +8.225500e-03 +9.650581e-03 +9.558260e-03       1.162 -9.232051e-05
+  0.0080 +1.651142e-02 +1.930336e-02 +1.911765e-02       1.158 -1.857153e-04
+
+SUPPORT COMPARISON
+  mean (trans support - same support): +0.000e+00
+  positive means transverse transport broadens detector support relative to same-site memory
+
+SAFE READ
+  instantaneous F~M exponent: 1.00
+  same-site memory F~M exponent: 1.00
+  transverse F~M exponent: 1.00
+  TOWARD rows: 4/4
+  this is a transverse-transport pocket, not a full propagating field theory
+
+----- stderr -----
+

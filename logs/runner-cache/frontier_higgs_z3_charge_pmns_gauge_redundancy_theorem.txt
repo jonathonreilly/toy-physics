@@ -1,0 +1,121 @@
+===== runner cache v1 =====
+runner: scripts/frontier_higgs_z3_charge_pmns_gauge_redundancy_theorem.py
+runner_sha256: a6ceca28c04895ab4436029e5e6c68f64e1408e9392cc3d6c518991f996ad9af
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================
+Higgs Z_3 charge gauge-redundancy theorem for PMNS observables
+========================================================================
+
+Part 1: retained conjugate Z_3 triplets on H_{hw=1}
+========================================================================
+  [PASS] q_L = (0, +1, -1), q_R = (0, -1, +1) (retained)
+  [PASS] q_L(i) + q_R(i) = 0 mod 3 for each axis (got [np.int64(0), np.int64(0), np.int64(0)])
+  [PASS] Σ q_L³ = Σ q_R³ = 0 mod 3 (got 0, 0; anomaly-consistent)
+  [PASS] q_R ≡ -q_L mod 3 (conjugate triplets)
+
+Part 2: Z_3-trichotomy Y_e support patterns
+========================================================================
+  [PASS] q_H = +0: exactly 3 support entries (got 3)
+  [PASS] q_H = +1: exactly 3 support entries (got 3)
+  [PASS] q_H = -1: exactly 3 support entries (got 3)
+  [PASS] supp(q_H=+0) ∩ supp(q_H=+1) = ∅ (overlap 0)
+  [PASS] supp(q_H=+0) ∩ supp(q_H=-1) = ∅ (overlap 0)
+  [PASS] supp(q_H=+1) ∩ supp(q_H=-1) = ∅ (overlap 0)
+  [PASS] ∪_q_H supp = full 3×3 grid (Z_3-trichotomy is a partition)
+  [PASS] q_H = 0 support is diagonal
+  [PASS] q_H = +1 support is forward cyclic (0,1)(1,2)(2,0)
+  [PASS] q_H = -1 support is backward cyclic (0,2)(1,0)(2,1)
+
+Part 3: Y_e Y_e† is diagonal on L_L axes for every branch
+========================================================================
+  [PASS] q_H=+0, couplings[0]: ‖off-diag(Y_e Y_e†)‖ < 1e-12 (got 0.00e+00)
+  [PASS] q_H=+0, couplings[0]: diag(Y_e Y_e†) = {|y_i|²} (multiset match)
+  [PASS] q_H=+0, couplings[1]: ‖off-diag(Y_e Y_e†)‖ < 1e-12 (got 0.00e+00)
+  [PASS] q_H=+0, couplings[1]: diag(Y_e Y_e†) = {|y_i|²} (multiset match)
+  [PASS] q_H=+0, couplings[2]: ‖off-diag(Y_e Y_e†)‖ < 1e-12 (got 0.00e+00)
+  [PASS] q_H=+0, couplings[2]: diag(Y_e Y_e†) = {|y_i|²} (multiset match)
+  [PASS] q_H=+0, couplings[3]: ‖off-diag(Y_e Y_e†)‖ < 1e-12 (got 0.00e+00)
+  [PASS] q_H=+0, couplings[3]: diag(Y_e Y_e†) = {|y_i|²} (multiset match)
+  [PASS] q_H=+1, couplings[0]: ‖off-diag(Y_e Y_e†)‖ < 1e-12 (got 0.00e+00)
+  [PASS] q_H=+1, couplings[0]: diag(Y_e Y_e†) = {|y_i|²} (multiset match)
+  [PASS] q_H=+1, couplings[1]: ‖off-diag(Y_e Y_e†)‖ < 1e-12 (got 0.00e+00)
+  [PASS] q_H=+1, couplings[1]: diag(Y_e Y_e†) = {|y_i|²} (multiset match)
+  [PASS] q_H=+1, couplings[2]: ‖off-diag(Y_e Y_e†)‖ < 1e-12 (got 0.00e+00)
+  [PASS] q_H=+1, couplings[2]: diag(Y_e Y_e†) = {|y_i|²} (multiset match)
+  [PASS] q_H=+1, couplings[3]: ‖off-diag(Y_e Y_e†)‖ < 1e-12 (got 0.00e+00)
+  [PASS] q_H=+1, couplings[3]: diag(Y_e Y_e†) = {|y_i|²} (multiset match)
+  [PASS] q_H=-1, couplings[0]: ‖off-diag(Y_e Y_e†)‖ < 1e-12 (got 0.00e+00)
+  [PASS] q_H=-1, couplings[0]: diag(Y_e Y_e†) = {|y_i|²} (multiset match)
+  [PASS] q_H=-1, couplings[1]: ‖off-diag(Y_e Y_e†)‖ < 1e-12 (got 0.00e+00)
+  [PASS] q_H=-1, couplings[1]: diag(Y_e Y_e†) = {|y_i|²} (multiset match)
+  [PASS] q_H=-1, couplings[2]: ‖off-diag(Y_e Y_e†)‖ < 1e-12 (got 0.00e+00)
+  [PASS] q_H=-1, couplings[2]: diag(Y_e Y_e†) = {|y_i|²} (multiset match)
+  [PASS] q_H=-1, couplings[3]: ‖off-diag(Y_e Y_e†)‖ < 1e-12 (got 0.00e+00)
+  [PASS] q_H=-1, couplings[3]: diag(Y_e Y_e†) = {|y_i|²} (multiset match)
+
+Part 4: Y_e Y_e† eigenvalue assignment is axis-identical across branches
+========================================================================
+  [PASS] couplings[0]: q_H=0 diag(Y_e Y_e†) = (|y_1|², |y_2|², |y_3|²) in order
+  [PASS] couplings[0]: diag[q_H=+1] = diag[q_H=0] axis-by-axis
+  [PASS] couplings[0]: diag[q_H=-1] = diag[q_H=0] axis-by-axis
+  [PASS] couplings[1]: q_H=0 diag(Y_e Y_e†) = (|y_1|², |y_2|², |y_3|²) in order
+  [PASS] couplings[1]: diag[q_H=+1] = diag[q_H=0] axis-by-axis
+  [PASS] couplings[1]: diag[q_H=-1] = diag[q_H=0] axis-by-axis
+  [PASS] couplings[2]: q_H=0 diag(Y_e Y_e†) = (|y_1|², |y_2|², |y_3|²) in order
+  [PASS] couplings[2]: diag[q_H=+1] = diag[q_H=0] axis-by-axis
+  [PASS] couplings[2]: diag[q_H=-1] = diag[q_H=0] axis-by-axis
+
+Part 5: U_e = I on L_L axes; PMNS invariant under q_H
+========================================================================
+  [PASS] couplings[0], q_H=+0: |U_e| is a permutation matrix
+  [PASS] couplings[0], q_H=+1: |U_e| is a permutation matrix
+  [PASS] couplings[0], q_H=-1: |U_e| is a permutation matrix
+  [PASS] couplings[0]: |U_PMNS|[q_H=+1] = |U_PMNS|[q_H=0] up to row perm
+  [PASS] couplings[0]: |U_PMNS|[q_H=-1] = |U_PMNS|[q_H=0] up to row perm
+  [PASS] couplings[1], q_H=+0: |U_e| is a permutation matrix
+  [PASS] couplings[1], q_H=+1: |U_e| is a permutation matrix
+  [PASS] couplings[1], q_H=-1: |U_e| is a permutation matrix
+  [PASS] couplings[1]: |U_PMNS|[q_H=+1] = |U_PMNS|[q_H=0] up to row perm
+  [PASS] couplings[1]: |U_PMNS|[q_H=-1] = |U_PMNS|[q_H=0] up to row perm
+  [PASS] couplings[2], q_H=+0: |U_e| is a permutation matrix
+  [PASS] couplings[2], q_H=+1: |U_e| is a permutation matrix
+  [PASS] couplings[2], q_H=-1: |U_e| is a permutation matrix
+  [PASS] couplings[2]: |U_PMNS|[q_H=+1] = |U_PMNS|[q_H=0] up to row perm
+  [PASS] couplings[2]: |U_PMNS|[q_H=-1] = |U_PMNS|[q_H=0] up to row perm
+
+Part 6: q_H branches related by right-handed e_R basis relabeling
+========================================================================
+  [PASS] Y_e[q_H=+1] = Y_e[q_H=0] · P_fwd (right-handed cycle; ‖Δ‖ = 0.00e+00)
+  [PASS] Y_e[q_H=-1] = Y_e[q_H=0] · P_bwd (right-handed cycle; ‖Δ‖ = 0.00e+00)
+  [PASS] Y_e[+1] Y_e[+1]† = Y_e[0] Y_e[0]† (right-unitary absorption)
+  [PASS] Y_e[-1] Y_e[-1]† = Y_e[0] Y_e[0]† (right-unitary absorption)
+  [PASS] structural: PMNS = U_ν† U_e(Y_e Y_e†); Y_e Y_e† invariant ⇒ PMNS invariant
+
+Part 7: q_H = 0 is a canonical gauge representative (retained status)
+========================================================================
+  [PASS] 3 q_H branches → 1 PMNS equivalence class (Parts 3-6)
+  [PASS] q_H = 0 ⇒ Y_e = diag(y_1, y_2, y_3) is the canonical simplest form
+  [PASS] q_H = 0 status: CONDITIONAL → GAUGE (retained) under this theorem
+  [PASS] theorem uses only retained Z_3 trichotomy + linear algebra (no new input)
+  [PASS] σ_hier hierarchy-pairing remains observational (separate flag)
+  [PASS] closes q_H = 0 conditional in DM-flagship closure (3 → 2 conditionals)
+
+========================================================================
+Summary
+========================================================================
+ Three q_H ∈ {0, ±1} branches give identical Y_e Y_e† on L_L axes,
+ hence identical U_e = I, hence identical |U_PMNS|. The q_H = 0
+ branch is a canonical gauge representative with zero physical
+ content in PMNS observables. This upgrades q_H = 0 from
+ CONDITIONAL to GAUGE (retained) and removes one of the three
+ conditionals in the DM-flagship closure citation chain.
+
+PASS = 73
+FAIL = 0
+
+----- stderr -----
+

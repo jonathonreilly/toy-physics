@@ -1,0 +1,94 @@
+===== runner cache v1 =====
+runner: scripts/frontier_g_bare_rigidity_theorem.py
+runner_sha256: 190446792af723b7514d38d6f0efcefbca4320926d71b62b07ca697075ff5264
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-NORMALIZATION RIGIDITY THEOREM
+==============================================================================
+
+Claim:
+  once SU(3) is derived as a concrete compact subalgebra of End(V),
+  the Hilbert-space trace form fixes the generator normalization up
+  to orthogonal basis rotation.  There is no independent scalar
+  gauge-coupling parameter left.  In canonical coordinates: g_bare = 1.
+
+SECTION 1: Canonical SU(3) generators live in the derived commutant
+------------------------------------------------------------------------------
+  [PASS] T_1 Hermitian
+  [PASS] T_1 traceless
+  [PASS] T_1 commutes with weak su(2)
+  [PASS] T_1 commutes with SWAP23
+  [PASS] T_2 Hermitian
+  [PASS] T_2 traceless
+  [PASS] T_2 commutes with weak su(2)
+  [PASS] T_2 commutes with SWAP23
+  [PASS] T_3 Hermitian
+  [PASS] T_3 traceless
+  [PASS] T_3 commutes with weak su(2)
+  [PASS] T_3 commutes with SWAP23
+  [PASS] T_4 Hermitian
+  [PASS] T_4 traceless
+  [PASS] T_4 commutes with weak su(2)
+  [PASS] T_4 commutes with SWAP23
+  [PASS] T_5 Hermitian
+  [PASS] T_5 traceless
+  [PASS] T_5 commutes with weak su(2)
+  [PASS] T_5 commutes with SWAP23
+  [PASS] T_6 Hermitian
+  [PASS] T_6 traceless
+  [PASS] T_6 commutes with weak su(2)
+  [PASS] T_6 commutes with SWAP23
+  [PASS] T_7 Hermitian
+  [PASS] T_7 traceless
+  [PASS] T_7 commutes with weak su(2)
+  [PASS] T_7 commutes with SWAP23
+  [PASS] T_8 Hermitian
+  [PASS] T_8 traceless
+  [PASS] T_8 commutes with weak su(2)
+  [PASS] T_8 commutes with SWAP23
+
+SECTION 2: Canonical trace normalization on the triplet block
+------------------------------------------------------------------------------
+  [PASS] Tr_3(T_a T_b) = delta_ab / 2  (max dev = 1.11e-16)
+  [PASS] Sum_a T_a T_a = (4/3) I_3  (max dev = 2.22e-16)
+
+SECTION 3: Allowed basis ambiguity is orthogonal rotation, not scalar dilation
+------------------------------------------------------------------------------
+  [PASS] Orthogonal basis rotation preserves trace normalization  (max dev = 2.22e-16)
+  [PASS] Orthogonal basis rotation preserves Casimir  (max dev = 2.22e-16)
+  [PASS] Scalar dilation 0.5 changes trace normalization  (Tr(T_a T_b) -> 0.25 * delta_ab / 2)
+  [PASS] Scalar dilation 0.5 changes Casimir  (C_F -> 0.333333)
+  [PASS] Scalar dilation 1.2 changes trace normalization  (Tr(T_a T_b) -> 1.44 * delta_ab / 2)
+  [PASS] Scalar dilation 1.2 changes Casimir  (C_F -> 1.920000)
+  [PASS] Scalar dilation 2 changes trace normalization  (Tr(T_a T_b) -> 4.00 * delta_ab / 2)
+  [PASS] Scalar dilation 2 changes Casimir  (C_F -> 5.333333)
+
+SECTION 4: g is coordinate redundancy, not a physical parameter
+------------------------------------------------------------------------------
+  [PASS] Operator coefficients absorb scalar g = 0.3  (A_op' = sum (g A^a) T_a = g * A_op)
+  [PASS] Operator coefficients absorb scalar g = 0.8  (A_op' = sum (g A^a) T_a = g * A_op)
+  [PASS] Operator coefficients absorb scalar g = 1.7  (A_op' = sum (g A^a) T_a = g * A_op)
+
+Interpretation:
+  - The physical object is the concrete operator A_op in the derived
+    gauge algebra, not a split into 'g' times coefficients.
+  - Changing basis by an orthogonal rotation is harmless.
+  - Uniform scalar dilation changes the fixed trace form and Casimir,
+    so it is not an admissible ambiguity of the canonical basis.
+  - Once the canonical basis is chosen, the holonomy is
+        U = exp(i A^a T_a a)
+    with no additional scalar coupling.
+
+Conclusion:
+  The standard notation U = exp(i g A^a T_a a) contains no independent
+  physical bare coupling in this framework. In canonical normalization,
+  g_bare = 1.
+
+PASS=45 FAIL=0
+
+----- stderr -----
+

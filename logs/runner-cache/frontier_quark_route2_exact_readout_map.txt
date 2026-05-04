@@ -1,0 +1,69 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_route2_exact_readout_map.py
+runner_sha256: e4356c7079bca9a0ded2259d0f49cf9461bc16ba7e09cf688c78de3a56e2328a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 35.13
+status: ok
+----- stdout -----
+Route-2 exact readout-map theorem attempt
+========================================================================
+
+========================================================================
+PART 1: Exact Carrier and Restricted Readout Setup
+========================================================================
+  delta_A1(e0)        = 0.166666666667
+  delta_A1(s/sqrt(6)) = -1.387778780781e-17
+
+  Theta_R^(0)(e0)        = (-3.772329167975e-04, +3.359952396063e-04)
+  Theta_R^(0)(s/sqrt(6)) = (-2.010572657265e-04, +4.031967723697e-04)
+
+  E-shell carrier column  = [ 1.000000000000e+00  0.000000000000e+00 -4.163336342344e-17
+  0.000000000000e+00]
+  E-center carrier column = [1.000000000000 0.000000000000 0.166666666667 0.000000000000]
+  T-shell carrier column  = [ 8.326672684689e-17  1.000000000000e+00 -3.851859888774e-34
+  0.000000000000e+00]
+  T-center carrier column = [0.000000000000 1.000000000000 0.000000000000 0.166666666667]
+  [PASS] the exact carrier endpoints stay at delta_A1(e0)=1/6 and delta_A1(s/sqrt(6))=0  (delta_center=0.166666666667, delta_shell=-1.388e-17)
+  [PASS] the exact bilinear carrier columns reproduce the endpoint bright basis exactly  (max residual = 2.220e-16)
+  [PASS] the restricted carrier basis splits exactly into disjoint E and T endpoint subspaces  (E uses coordinates {0,2}; T uses {1,3}; endpoint columns have full rank 4)
+  [PASS] the endpoint-fixed restricted readout reproduces the shell and center coefficients exactly  (the restricted map is P_R = [[alpha_E,0,beta_E,0],[0,alpha_T,0,beta_T]])
+
+========================================================================
+PART 2: Endpoint Ratio-Chain Theorem Attempt
+========================================================================
+  q_T := gamma_T(center)/gamma_T(shell)   = 0.833328197623
+  s_TE := gamma_T(shell)/gamma_E(shell)   = -2.005382749600
+  c_TE := gamma_T(center)/gamma_E(center) = -0.890683778231
+
+  rho_T := beta_T/alpha_T = -1.000030814262
+  mu    := alpha_T/alpha_E = -2.005382749600
+  rho_E := beta_E/alpha_E = +5.257476782081
+  [PASS] the endpoint chain algebra remains exact on the restricted readout class  (q_T residual=1.110e-16, q_E residual=2.220e-16, chain residual=0.000e+00)
+  [PASS] the exact endpoint ratio-chain target is equivalent to the readout triple (rho_T, mu, rho_E)=(-1, -2, 21/4)  (q_T=5/6, q_E=15/8, c_TE=-8/9 all follow exactly from the target triple)
+  [PASS] the live readout map does not satisfy the exact endpoint ratio chain on the current surface  (gaps: q_T=0.000616%, s_TE=0.269137%, c_TE=0.201925%)
+
+========================================================================
+PART 3: Exact Obstruction
+========================================================================
+  exact reduced-family readout maps with the T-side candidates granted:
+    P(0)      = [[1,0,0,0],[0,-2,0,2]]
+    P(21/4)   = [[1,0,21/4,0],[0,-2,0,2]]
+
+  P(0)    * E-shell  = [1.000000000000 0.000000000000]
+  P(21/4) * E-shell  = [1.000000000000 0.000000000000]
+  P(0)    * E-center = [1.000000000000 0.000000000000]
+  P(21/4) * E-center = [1.875000000000 0.000000000000]
+  [PASS] the exact restricted readout class remains a non-unique family until its dimensionless map entries are derived  (distinct exact admissible maps agree at shell normalization but differ at the center E lift, so the readout map is not uniquely fixed by carrier structure alone)
+  [PASS] granting the T-side candidates collapses the exact missing readout step to rho_E = beta_E/alpha_E = 21/4  (with rho_T=-1 and mu=-2 fixed, the center E lift is exactly 1 + rho_E / 6)
+  [PASS] the live endpoint-fixed readout still misses the exact E-channel map entry rho_E = 21/4  (live rho_E = +5.257476782081)
+  [PASS] the honest Route-2 readout endpoint is therefore exact reduction plus an exact missing-map obstruction  (exact carrier facts and exact endpoint algebra are closed; the unresolved theorem step is the readout map entry rho_E, with the full triple (rho_T, mu, rho_E) still unproved on the current surface)
+
+========================================================================
+SUMMARY
+========================================================================
+Status: exact readout obstruction established.
+PASS=11 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_sole_axiom_boundary.py
+runner_sha256: 507d96edfd6f17dd5275c0ffcd6abb3772a943454074da36bb2abd20b98d13b0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.54
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS SOLE-AXIOM BOUNDARY
+========================================================================================
+
+Framework convention:
+  "axiom" means only Cl(3) on Z^3.
+
+Question:
+  Does the sole axiom already fix a unique PMNS-assisted flavored-DM
+  repair value once the microscopic route has been reduced to the active
+  D-level last mile?
+
+========================================================================================
+PART 1: THE CURRENT SOLE-AXIOM-NATIVE DATA FIX THE SEED PAIR BUT NOT THE OFF-SEED SOURCE
+========================================================================================
+  [PASS] The exact native seed pair can agree while the off-seed microscopic source differs  ((xbar,ybar)=(0.973333,0.410000))
+  [PASS] So the current sole-axiom-native data do not by themselves determine a unique off-seed active D-level point  (the unresolved object is (xi1,xi2,eta1,eta2,delta))
+
+========================================================================================
+PART 2: DIFFERENT OFF-SEED SOURCES GIVE DIFFERENT PMNS-ASSISTED ETA VALUES
+========================================================================================
+  [PASS] Two exact active D-level points on the same native seed surface can select different transport columns  (indices=(1,0))
+  [PASS] They also give different PMNS-assisted eta values on the same exact DM branch  (etas=(0.789720167247,0.773565941623))
+
+  source A eta/eta_obs = [0.723965 0.78972  0.701302]
+  source B eta/eta_obs = [0.773566 0.713467 0.719833]
+
+========================================================================================
+PART 3: ONCE THE OFF-SEED SOURCE IS GIVEN THE REMAINING PATH IS ALGORITHMIC
+========================================================================================
+  [PASS] Supplying the off-seed 5-real source reconstructs the same near-closing N_e value  (etas=[0.820756 0.989513 0.920617], best column=1)
+  [PASS] So the sole-axiom PMNS-assisted DM route is blocked only on that off-seed microscopic source law  (everything downstream of the source law is already closed)
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The sole axiom fixes the PMNS-assisted DM carrier and seed surface but not a unique near-closing eta value  (distinct off-seed sources remain possible on the same native seed data)
+  [PASS] The exact remaining sole-axiom boundary on this flavored repair route is the active 5-real microscopic source law  ((xi1,xi2,eta1,eta2,delta))
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact boundary answer:
+    - no, not from the sole axiom alone on the current branch
+    - the remaining sole-axiom boundary is only the active 5-real
+      off-seed microscopic source law
+
+PASS=8  FAIL=0
+
+----- stderr -----
+

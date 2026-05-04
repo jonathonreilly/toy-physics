@@ -1,0 +1,48 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_local_observable_coordinate_theorem_2026_04_19.py
+runner_sha256: 15046b0bb9d2ed1c5b8477197f5defc64215dd2bae52226f2da92179241357cb
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.08
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT LOCAL OBSERVABLE-COORDINATE THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE BASE ROOT IS AN EXACT CONSTRUCTIVE POSITIVE CLOSURE POINT
+========================================================================================
+  [PASS] The base point satisfies eta_1 = 1 exactly  (eta_1=1.000000000000)
+  [PASS] The base point satisfies gamma > 0, E1 > 0, E2 > 0, and Delta_src > 0  ((gamma,E1,E2,Delta)=(0.103856487612,0.302714955579,2.003452402509,0.000799312200))
+
+========================================================================================
+PART 2: THE FULL OBSERVABLE PACK IS A LOCAL COORDINATE SYSTEM
+========================================================================================
+  [PASS] The Jacobian of (eta_1, gamma, E1, E2, Delta_src) has full rank 5 at the base point  (min singulars=['3.194504e-03', '3.194504e-03', '3.194504e-03'])
+  [PASS] The Jacobian determinant stays stably nonzero across finite-difference scales  (dets=['-0.009390140494', '-0.009390140500', '-0.009390140722'])
+
+========================================================================================
+PART 3: ON THE EXACT-CLOSURE MANIFOLD, THE FOUR SIGN OBSERVABLES ALREADY GIVE LOCAL COORDINATES
+========================================================================================
+  [PASS] Restricted to eta_1 = 1, the four-pack (gamma, E1, E2, Delta_src) has rank 4 on the closure tangent space  (min restricted singulars=['3.195296e-03', '3.195296e-03', '3.195296e-03'])
+  [PASS] So the current scalar pack is not missing local coordinates; it already coordinatizes the exact-closure manifold  (the remaining gap is semantic strength, not hidden-variable incompleteness)
+
+========================================================================================
+PART 4: CURRENT eta=1 PLUS SIGN SEMANTICS STILL DO NOT ISOLATE A POINT
+========================================================================================
+  [PASS] Nearby distinct exact roots remain inside the current eta=1 plus sign semantics  (max |root_a-root_b|=9.308925e-02)
+  [PASS] Those nearby exact roots already carry different sign-observable values  (max observable difference=5.125363e-03)
+  [PASS] Therefore eta_1 = 1 with gamma > 0, E1 > 0, E2 > 0, Delta_src > 0 is an open semantic region, not a point-selector law  (local observable coordinates exist, but the current semantics do not fix their values)
+
+========================================================================================
+PART 5: BOTTOM LINE
+========================================================================================
+  [PASS] Any future local scalar-equation selector must fix additional observable values beyond eta_1 = 1 and the current sign chamber  (the observed local codimension deficit is 4 real equations on the exact-closure manifold)
+
+========================================================================================
+SUMMARY: PASS=10 FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -1,0 +1,80 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_effective_potential_endpoint.py
+runner_sha256: 8d62ba73358a0cba1d39be7dfee1562e078da470e1de6f97b822bdb58fab1228
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+Hierarchy effective-potential endpoint theorem
+==============================================================================
+
+==============================================================================
+PART 1: SMALL-M EFFECTIVE-POTENTIAL COEFFICIENT
+==============================================================================
+  Lt=2, m=0.0001: A_num=1.543209874162e-01, A_exact=1.543209876543e-01, rel=1.54e-09
+  Lt=2, m=0.0003: A_num=1.543209855110e-01, A_exact=1.543209876543e-01, rel=1.39e-08
+  Lt=2, m=0.001: A_num=1.543209638394e-01, A_exact=1.543209876543e-01, rel=1.54e-07
+  Lt=2, m=0.003: A_num=1.543207733200e-01, A_exact=1.543209876543e-01, rel=1.39e-06
+  Lt=4, m=0.0001: A_num=1.763668427225e-01, A_exact=1.763668430335e-01, rel=1.76e-09
+  Lt=4, m=0.0003: A_num=1.763668402340e-01, A_exact=1.763668430335e-01, rel=1.59e-08
+  Lt=4, m=0.001: A_num=1.763668119283e-01, A_exact=1.763668430335e-01, rel=1.76e-07
+  Lt=4, m=0.003: A_num=1.763665630867e-01, A_exact=1.763668430335e-01, rel=1.59e-06
+  Lt=6, m=0.0001: A_num=1.780626777428e-01, A_exact=1.780626780627e-01, rel=1.80e-09
+  Lt=6, m=0.0003: A_num=1.780626751837e-01, A_exact=1.780626780627e-01, rel=1.62e-08
+  Lt=6, m=0.001: A_num=1.780626460745e-01, A_exact=1.780626780627e-01, rel=1.80e-07
+  Lt=6, m=0.003: A_num=1.780623901699e-01, A_exact=1.780626780627e-01, rel=1.62e-06
+  Lt=8, m=0.0001: A_num=1.781850575894e-01, A_exact=1.781850579101e-01, rel=1.80e-09
+  Lt=8, m=0.0003: A_num=1.781850550235e-01, A_exact=1.781850579101e-01, rel=1.62e-08
+  Lt=8, m=0.001: A_num=1.781850258363e-01, A_exact=1.781850579101e-01, rel=1.80e-07
+  Lt=8, m=0.003: A_num=1.781847692457e-01, A_exact=1.781850579101e-01, rel=1.62e-06
+  Lt=10, m=0.0001: A_num=1.781938473021e-01, A_exact=1.781938476229e-01, rel=1.80e-09
+  Lt=10, m=0.0003: A_num=1.781938447356e-01, A_exact=1.781938476229e-01, rel=1.62e-08
+  Lt=10, m=0.001: A_num=1.781938155413e-01, A_exact=1.781938476229e-01, rel=1.80e-07
+  Lt=10, m=0.003: A_num=1.781935588890e-01, A_exact=1.781938476229e-01, rel=1.62e-06
+  [PASS] quadratic coefficient matches the small-m free-energy density limit
+         max relative error = 1.62e-06
+
+==============================================================================
+PART 2: EXACT ENDPOINT FORMULAS
+==============================================================================
+  A_2 direct   = 1.543209876543e-01
+  A_2 exact    = 1.543209876543e-01
+  A_4 direct   = 1.763668430335e-01
+  A_4 exact    = 1.763668430335e-01
+  A_40 direct  = 1.781945275277e-01
+  A_inf exact  = 1.781945275277e-01
+  [PASS] A_2 = 1 / (8 u0^2)
+         absolute error = 0.00e+00
+  [PASS] A_4 = 1 / (7 u0^2)
+         absolute error = 0.00e+00
+  [PASS] A_Lt approaches A_inf = 1 / (4 sqrt(3) u0^2)
+         absolute error at Lt=40 = 2.78e-17
+
+==============================================================================
+PART 3: EXACT CONDENSATE ENDPOINT RATIO
+==============================================================================
+  m=0.0001: ratio_num=1.154700537785, ratio_exact=1.154700537785, rel=0.00e+00
+  m=0.001: ratio_num=1.154700478981, ratio_exact=1.154700478981, rel=0.00e+00
+  m=0.01: ratio_num=1.154694598791, ratio_exact=1.154694598791, rel=1.92e-16
+  m=0.1: ratio_num=1.154108839371, ratio_exact=1.154108839371, rel=1.92e-16
+  [PASS] cond(Lt->inf) / cond(Lt=2) = sqrt((m^2+4u0^2)/(m^2+3u0^2))
+         max relative error using Lt=80 = 1.92e-16
+
+==============================================================================
+PART 4: DIMENSION-4 ENDPOINT CORRECTION
+==============================================================================
+  C_obs       = 0.966921518734
+  C_none      = 1.000000000000
+  C_inf^(4D)  = 0.964678629960
+  [PASS] observed prefactor lies inside the exact 3+1 endpoint band [C_inf, 1]
+         C_inf=0.964678629960 < C_obs=0.966921518734 < 1
+  [PASS] dimension-4 endpoint factor is within 1% of the observed prefactor
+         |C_inf-C_obs| = 0.002243
+
+==============================================================================
+SCORECARD: 7 pass, 0 fail out of 7
+==============================================================================
+
+----- stderr -----
+

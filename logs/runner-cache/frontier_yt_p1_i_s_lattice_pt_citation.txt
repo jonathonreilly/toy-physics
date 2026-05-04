@@ -1,0 +1,149 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_p1_i_s_lattice_pt_citation.py
+runner_sha256: a56ad1f7afcd49926af060243e7bff9fb253464818df727ec9cf27de1f117cf1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================
+P1 I_S lattice-PT citation-and-bound check -- runner
+Date: 2026-04-17
+Authority: docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md
+========================================================================
+
+========================================================================
+PART A: Retained color tensor C_F at SU(3)
+========================================================================
+
+  N_c                          = 3
+  C_F = (N_c^2 - 1)/(2 N_c)    = 1.3333333333
+  C_A = N_c                    = 3.0000000000
+  T_F                          = 0.5000000000
+  [PASS] C_F = 4/3 exact at SU(3) (retained from D7 + S1)  (C_F = 1.3333333333)
+  [PASS] C_A = 3 exact at SU(3)  (C_A = 3.0000000000)
+  [PASS] T_F = 1/2 exact at SU(3) (fundamental-rep normalization)  (T_F = 0.5000000000)
+  [PASS] Color-tensor retention preserved from prior P1 color-factor note  (Delta_R = C_F * I_1 + C_A * I_2 + T_F n_f * I_3 (unchanged))
+
+========================================================================
+PART B: Retained canonical-surface constants
+========================================================================
+
+  <P>                         = 0.593400
+  u_0 = <P>^(1/4)             = 0.8776813812
+  alpha_bare = 1/(4 pi)       = 0.0795774715
+  alpha_LM = alpha_bare / u_0 = 0.0906678360
+  alpha_LM / (4 pi)           = 0.0072151171
+  alpha_LM / (2 pi)           = 0.0144302343
+  [PASS] alpha_LM matches canonical-surface retention  (alpha_LM = 0.0906678360)
+  [PASS] alpha_LM close to the expected 0.0907 (canonical-surface anchor)  (alpha_LM = 0.0906678360)
+  [PASS] alpha_LM / (4 pi) matches 0.00721 to 5 decimals  (alpha_LM/(4 pi) = 0.0072151171)
+  [PASS] <P> = 0.5934 and u_0 = <P>^(1/4) ~ 0.8777 retained  (<P>=0.5934, u_0=0.877681)
+
+========================================================================
+PART C: Packaged delta_PT under standard-fundamental I_S = 2
+========================================================================
+
+  I_S_standard (standard fundamental)      = 2.0
+  delta_PT (alpha/(4 pi) convention)        = 0.019240 = 1.9240 %
+  delta_PT (alpha/(2 pi) convention)        = 0.019240 = 1.9240 %
+  packaged DELTA_PT_PACKAGED                = 0.019240 = 1.9240 %
+  [PASS] delta_PT(I_S = 2) matches packaged 1.92% to 1e-12  (diff = 0.000e+00)
+  [PASS] Two normalization conventions give the same packaged value  (|alpha/(4pi)·I_S=2 - alpha/(2pi)| = 0.000e+00)
+  [PASS] Packaged delta_PT ~ 1.92% (to 5e-4 absolute)  (packaged = 1.9240 %)
+
+========================================================================
+PART D: Cited I_S range for composite-H_unit on the canonical surface
+========================================================================
+
+  (alpha/(4 pi) convention; tadpole-improved Wilson-plaquette +
+   1-link staggered scalar density at beta ~ 6; citation range,
+   NOT a framework-native derivation.)
+
+  I_S_CITED_LOW       = 4.00
+  I_S_CITED_CENTRAL   = 6.00   (mid-range)
+  I_S_CITED_HIGH      = 10.00
+
+  (Un-improved analogue, NOT retained surface:
+   I_S_UNIMPROVED in [10.0, 20.0] -- documented but not used.)
+  [PASS] Cited range is ordered LOW <= CENTRAL <= HIGH  (4.0 <= 6.0 <= 10.0)
+  [PASS] Central estimate sits inside the bracket and on the low-mid side  (central = 6.0, arithmetic midpoint = 7.00, low = 4.0)
+  [PASS] Central estimate is strictly above the standard-fundamental value 2  (central = 6.0 > standard = 2.0)
+  [PASS] Cited bracket sits materially ABOVE the standard-fundamental I_S = 2  (I_S_CITED_LOW = 4.0 vs 2 * I_S_standard = 4.0)
+  [PASS] Tadpole-improved bracket is BELOW un-improved analogue  (TI_high = 10.0 vs unimpr_low = 10.0)
+  [PASS] Citation confidence is recorded as a range, not a single number  (range width = 6.0)
+
+========================================================================
+PART E: Framework-specific P1 contribution at alpha_LM = 0.0907
+========================================================================
+
+  P1(I_S) = (alpha_LM / (4 pi)) * C_F * I_S = 0.007215 * 1.333333 * I_S
+
+     I_S  |          P1  |    P1 (%)  |  ratio to 1.92%
+  ------------------------------------------------------------
+  standard (2)  |    0.019240  |    1.924%  |         1.000x
+       low (4)  |    0.038481  |    3.848%  |         2.000x
+   central (6)  |    0.057721  |    5.772%  |         3.000x
+  high-mid (8)  |    0.076961  |    7.696%  |         4.000x
+     high (10)  |    0.096202  |    9.620%  |         5.000x
+  [PASS] P1(I_S = 2) = packaged 1.92% (sanity)  (P1(I_S=2) = 0.019240; packaged = 0.019240)
+  [PASS] P1(I_S = 4) ~ 3.85% (low end of cited range)  (P1(I_S=4) = 3.848 %)
+  [PASS] P1(I_S = 6) ~ 5.77% (central cited estimate)  (P1(I_S=6) = 5.772 %)
+  [PASS] P1(I_S = 10) ~ 9.62% (high end of cited range)  (P1(I_S=10) = 9.620 %)
+  [PASS] Full cited P1 range: [3.8%, 9.7%] (absolute bracket)  (P1 in [3.848%, 9.620%])
+
+========================================================================
+PART F: Revision factor vs packaged 1.92% nominal
+========================================================================
+
+  ratio central = P1(I_S=6) / P1(I_S=2)   = 3.0000x
+  I_S_central / I_S_standard              = 3.0000x
+  ratio low     = P1(I_S=4) / P1(I_S=2)   = 2.0000x
+  I_S_low / I_S_standard                  = 2.0000x
+  ratio high    = P1(I_S=10) / P1(I_S=2)  = 5.0000x
+  I_S_high / I_S_standard                 = 5.0000x
+  [PASS] Central revision factor matches I_S ratio (3.00x) exactly  (P1 ratio = 3.0000000000, I_S ratio = 3.0000000000)
+  [PASS] Low-end revision factor matches I_S ratio (2.00x)  (P1 ratio = 2.0000000000)
+  [PASS] High-end revision factor matches I_S ratio (5.00x)  (P1 ratio = 5.0000000000)
+  [PASS] Central revision factor is approximately 3.0x (upward)  (central ratio = 3.0000x)
+  [PASS] Revision is monotone upward: all three P1 values > packaged 1.92%  (packaged = 0.019240)
+
+========================================================================
+PART G: Scope boundary (master obstruction theorem not modified)
+========================================================================
+
+  Scope flags:
+    master obstruction theorem modified       = False
+    publication-surface files modified        = False
+    P1 closed by this note                    = False
+    C_A channel I_2 closed                    = False
+    T_F n_f channel I_3 closed                = False
+    cited I_S is framework-native             = False
+  [PASS] Master obstruction theorem NOT modified by this note
+  [PASS] Publication-surface files NOT modified by this note
+  [PASS] P1 NOT closed by this note (citation-and-bound only)
+  [PASS] C_A channel I_2 remains OPEN (not closed by this note)
+  [PASS] T_F n_f channel I_3 remains OPEN (not closed by this note)
+  [PASS] Cited I_S value explicitly NOT framework-native  (framework-native BZ integration remains the next retention level)
+
+========================================================================
+SUMMARY: PASS=33  FAIL=0
+========================================================================
+
+Adopted I_S value (central cited estimate):
+  I_S  =  6.00   (range [4.0, 10.0], alpha/(4 pi) convention)
+
+Framework-specific P1 contribution at alpha_LM = 0.0907:
+  P1_central  =  5.772 %   (central estimate)
+  P1 range    =  [3.848%, 9.620%]
+
+Comparison to packaged delta_PT = 1.92%:
+  packaged    =  1.9240 %  (I_S_standard = 2 implicit)
+  revision    =  3.00x upward under central cited I_S
+
+Budget revision direction: UPWARD (cited range sits above the
+packaged standard-fundamental assumption). Master obstruction
+theorem not modified -- citation note only.
+
+----- stderr -----
+

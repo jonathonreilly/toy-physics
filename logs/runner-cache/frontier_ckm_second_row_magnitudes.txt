@@ -1,0 +1,86 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_second_row_magnitudes.py
+runner_sha256: dc3197b6d8815c7442c8cf609f37f55d53c4b80c107f08671a1ffbcbbebd4f8e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+================================================================================
+CKM second-row structural-magnitude audit
+================================================================================
+
+--------------------------------------------------------------------------------
+Retained inputs
+--------------------------------------------------------------------------------
+  alpha_s(v)            = 0.103303816122267
+  parent atlas note     = docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md
+  alpha_s authority     = docs/ALPHA_S_DERIVED_NOTE.md
+  [PASS (D)] canonical alpha_s(v) is positive
+  [PASS (D)] parent CKM atlas note exists on main (atlas/axiom closure)
+  [PASS (D)] alpha_s(v) authority note exists on main (ALPHA_S_DERIVED_NOTE)
+
+--------------------------------------------------------------------------------
+M1: |V_cd|^2 = alpha_s(v) / 2
+--------------------------------------------------------------------------------
+  |V_cd|^2 = 0.051651908061134
+  |V_cd|   = 0.227270561360537
+  [PASS (D)] M1 coefficient is rational 1/2
+  [PASS (D)] M1 alpha-power is 1
+  [PASS (D)] |V_cd|^2 reads as alpha_s(v)/2
+  [PASS (D)] framework |V_cd| matches PDG within 5 sigma (PDG 0.225 +/- 0.004)
+
+--------------------------------------------------------------------------------
+M2: |V_cb|^2 = alpha_s(v)^2 / 6
+--------------------------------------------------------------------------------
+  |V_cb|^2 atlas form = A^2 lambda^4         = 1.778613070903863e-03
+  |V_cb|^2 simplified = alpha_s(v)^2 / 6     = 1.778613070903863e-03
+  |V_cb|              = alpha_s(v)/sqrt(6)   = 4.217360633030880e-02
+  [PASS (D)] M2 coefficient is rational 1/6
+  [PASS (D)] M2 alpha-power is 2
+  [PASS (D)] M2 atlas and simplified forms agree
+  [PASS (D)] |V_cb| equals alpha_s(v) / sqrt(6)
+  [PASS (D)] framework |V_cb| matches PDG within 2 sigma (PDG 0.041 +/- 0.0014)
+
+--------------------------------------------------------------------------------
+M3: |V_cs|^2 = 1 - alpha_s(v)/2 - alpha_s(v)^2 / 6
+--------------------------------------------------------------------------------
+  |V_cd|^2 + |V_cb|^2 = 0.053430521132037
+  |V_cs|^2 (residual) = 0.946569478867963
+  |V_cs|              = 0.972918022686373
+  [PASS (D)] M3 second-row unitarity sum is identically 1
+  [PASS (D)] |V_cs|^2 leading approximation matches retained form to alpha_s(v)^2 order (|V_cb|^2 correction = 1.779e-03)
+  [PASS (D)] framework |V_cs| within leading-Wolfenstein truncation band of PDG (PDG 0.997 +/- 0.011, framework 0.97292)
+
+--------------------------------------------------------------------------------
+Cabibbo and third-row equivalences (leading Wolfenstein)
+--------------------------------------------------------------------------------
+  [PASS (D)] |V_cd|^2 = |V_us|^2 at leading Wolfenstein (Cabibbo equivalence)
+  [PASS (D)] |V_cb|^2 = |V_ts|^2 at leading Wolfenstein (third-row equivalence)
+  [PASS (D)] |V_cb|^2 / |V_cd|^2 = alpha_s(v) / 3 (combined identity)
+
+--------------------------------------------------------------------------------
+Full second-row unitarity sum
+--------------------------------------------------------------------------------
+  |V_cd|^2 = 0.051651908061134
+  |V_cs|^2 = 0.946569478867963
+  |V_cb|^2 = 1.778613070903863e-03
+  sum     = 1.000000000000000
+  [PASS (D)] second-row unitarity sum is identically 1
+  [PASS (D)] |V_cs|^2 deficit decomposes as alpha_s/2 + alpha_s^2/6
+
+--------------------------------------------------------------------------------
+Status boundary
+--------------------------------------------------------------------------------
+  [PASS (D)] theorem is leading-Wolfenstein on retained atlas
+  [PASS (D)] theorem does not derive alpha_s(v) (separately retained)
+  [PASS (D)] theorem does not promote higher-order Wolfenstein closure (leading-Wolfenstein truncation is the explicit scope)
+  [PASS (D)] theorem does not introduce hadronic |V_cs| extraction (no semileptonic D-meson form factors are used)
+  [PASS (D)] theorem does not introduce BSM or fourth-generation matter
+
+================================================================================
+TOTAL: PASS=25, FAIL=0
+================================================================================
+
+----- stderr -----
+

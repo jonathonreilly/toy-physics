@@ -1,0 +1,31 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_axiom_closure_checks.py
+runner_sha256: 4028006c314f6761eaf0bb6d3454cfd959f175d947433be3fa78bb138465c8ab
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+Candidate native taste-qubit teleportation axiom checks
+Bell-frame composition examples:
+  measurement Phi+ with Phi+ resource -> I
+  measurement Phi+ with Phi- resource -> Z
+  measurement Phi+ with Psi+ resource -> X
+  measurement Phi+ with Psi- resource -> ZX
+
+PASS  A1 retained-factor selection: 3D raw xi_5 is rejected as traced Z unless spectator branches are explicit records.
+PASS  A2 Bell-frame connection: Known Psi+ resource needs an X frame; fixed Phi+ fails while the tracked frame passes.
+PASS  A3 3D+1 causal record: Delivery tick equals t_A + L1 distance, and Bob is input-blind before record delivery.
+HOLD  A4 native resource genesis: Finite-time 3D ramp is a resource candidate, not a scaling, apparatus, or physical-preparation proof.
+PASS  A5 exhaustive branch accounting: Bell outcomes, Bell frame, record faults, and raw-xi_5 branch dependence are explicit in the current lane artifacts.
+PASS  B0 no-transfer boundary: The theory artifact remains state-only teleportation and does not claim matter, mass, charge, energy, object, or FTL transport.
+
+Planning theory consistency: PASS
+Nature-grade unconditional closure: HOLD
+Open blockers:
+  - terminal selector decision: retain the three-clause completion, derive it from a stronger theorem, or do not promote
+  - terminal scaling decision: prove the all-even signed-branch induction/operator inequality, or keep resource genesis at finite-certificate status
+  - terminal hardware decision: supply fabricated/noise/material evidence, or keep hardware closure as a requirement envelope
+
+----- stderr -----
+

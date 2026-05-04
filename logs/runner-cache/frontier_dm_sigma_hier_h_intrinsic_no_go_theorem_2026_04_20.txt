@@ -1,0 +1,35 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_sigma_hier_h_intrinsic_no_go_theorem_2026_04_20.py
+runner_sha256: 80b8678ae0bdbd199c38d71197bb2fa8aacec4dc93822489a3fc3b95fb1254ea
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+=== Part 1: surviving pair at the pin ===
+[PASS] sigma=(2,0,1) passes all 9 magnitude bands
+[PASS] sigma=(2,1,0) passes all 9 magnitude bands
+[PASS] The two surviving PMNS candidates differ only by the mu<->tau row swap
+
+=== Part 2: H-intrinsic data is permutation-blind ===
+[PASS] trace(H_pin) is fixed independently of sigma_hier
+[PASS] trace(H_pin^2) is fixed independently of sigma_hier
+[PASS] det(H_pin) is fixed independently of sigma_hier
+[PASS] The eigenvalue spectrum is common to both sigma choices
+
+=== Part 3: mu<->tau-even PMNS data is blind, CP sign is not ===
+[PASS] mu<->tau-even magnitude data (unordered row multiset) is identical
+[PASS] The row-labeled magnitude matrices are not identical, so the no-go is not overclaimed
+[PASS] The Jarlskog sign flips across the surviving pair
+[PASS] The two surviving values are numerically +/-0.987  (sin+=+0.9873607592, sin-=-0.9873607592)
+
+Interpretation:
+  The surviving sigma_hier ambiguity is not an ambiguity of H_pin.
+  It is the residual mu<->tau flavor-label ambiguity after
+  diagonalization. Any selector family living only on H_pin, or any
+  mu<->tau-even PMNS scalar family, is blind to it.
+
+PASS=11 FAIL=0
+
+----- stderr -----
+

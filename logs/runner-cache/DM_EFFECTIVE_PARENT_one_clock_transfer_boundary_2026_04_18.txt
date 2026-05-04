@@ -1,0 +1,54 @@
+===== runner cache v1 =====
+runner: scripts/DM_EFFECTIVE_PARENT_one_clock_transfer_boundary_2026_04_18.py
+runner_sha256: b02d8e7ab7143e1f6c271ce13f6c49a5a0c2870c74658279fb92610c50f7c1f0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+DM EFFECTIVE PARENT ONE-CLOCK TRANSFER BOUNDARY
+========================================================================================
+
+========================================================================================
+PART 1: CURRENT-STACK PREMISES
+========================================================================================
+  [PASS] [THEOREM] the pure-gauge plaquette lane already has an exact one-clock transfer law
+  [PASS] [THEOREM] the retained strong-CP note carries the determinant-dressed action formula
+  [PASS] [THEOREM] the same strong-CP note proves positivity / reality of the retained determinant dressing
+  [PASS] [THEOREM] the audit note leaves the effective-parent route open as a genuinely new theorem target
+
+========================================================================================
+PART 2: TOY EXACT ONE-CLOCK TRANSFER ON AN ENLARGED AUXILIARY SPACE
+========================================================================================
+  mass parameter                          = 1.700
+  determinant samples                     = [4.783221, 4.72127, 4.754108, 4.758976]
+  transfer-trace samples                  = [4.783221, 4.72127, 4.754108, 4.758976]
+  max direct-vs-formula error             = 8.882e-16
+  max direct-vs-transfer error            = 8.882e-16
+  [PASS] [THEOREM] the toy cyclic nearest-neighbor determinant obeys the closed polynomial formula
+         max direct-vs-formula error = 8.882e-16
+  [PASS] [THEOREM] the same toy determinant has an exact one-clock transfer trace on a 4-state auxiliary space
+         max direct-vs-transfer error = 8.882e-16
+
+========================================================================================
+PART 3: POSITIVITY DOES NOT FORCE SCALAR EDGE FACTORIZATION
+========================================================================================
+  positive determinant cube min/max       = 4.614645000000, 4.833190000000
+  mixed third difference of log(det)      = 1.376697348365e-03
+  best additive fit residual              = 1.644492210552e-03
+  [PASS] [THEOREM] the toy determinant remains strictly positive on the audited edge cube
+         min determinant = 4.614645
+  [PASS] [THEOREM] a nonzero mixed third edge-difference of log(det) rules out exact edge-additive factorization on that cube
+         mixed third difference = 1.376697e-03
+  [PASS] [SUPPORT] the toy transfer witness is only an auxiliary-space transfer, not a scalar one-step edge product
+         exact one-clock transfer survives while log(det) is still not edge-additive
+  [PASS] [SUPPORT] least-squares fitting also fails to compress the toy log(det) to a constant plus one independent term per edge
+         max additive-fit residual = 1.644492e-03
+
+========================================================================================
+SUMMARY: THEOREM PASS=8 SUPPORT=2 FAIL=0
+========================================================================================
+
+----- stderr -----
+

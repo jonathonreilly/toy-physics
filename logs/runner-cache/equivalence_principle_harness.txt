@@ -1,0 +1,50 @@
+===== runner cache v1 =====
+runner: scripts/equivalence_principle_harness.py
+runner_sha256: 98afae8a4c22ef56e44d5c1e755a3db0f7718888c46b5f3279c3afd1e5a87522
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 19.39
+status: ok
+----- stdout -----
+========================================================================================
+EQUIVALENCE-PRINCIPLE HARNESS
+  Fixed 3D ordered-lattice family
+  h=0.5, W=8, L=12, z_mass=5.0, strength=5e-05
+  Goal: separate amplitude invariance from packet-shape dependence
+========================================================================================
+
+ACTION: valley
+  Amplitude scaling (same point packet, different global amplitude):
+    amp= 0.5  delta=+0.00016872  delta-ref=+0.00e+00
+    amp= 1.0  delta=+0.00016872  delta-ref=+0.00e+00
+    amp= 2.0  delta=+0.00016872  delta-ref=+0.00e+00
+    amp= 5.0  delta=+0.00016872  delta-ref=-3.32e-15
+  Packet-shape dependence (normalized packets, same center):
+    point   delta=+0.00016872
+    gauss3  delta=+0.00012421
+    flat3   delta=+0.00008312
+    gauss5  delta=+0.00008353
+    flat5   delta=+0.00001697
+    spread=1.517e-04, relative_spread=159.21%
+
+ACTION: spent_delay
+  Amplitude scaling (same point packet, different global amplitude):
+    amp= 0.5  delta=+0.03481763  delta-ref=+0.00e+00
+    amp= 1.0  delta=+0.03481763  delta-ref=+0.00e+00
+    amp= 2.0  delta=+0.03481763  delta-ref=+0.00e+00
+    amp= 5.0  delta=+0.03481763  delta-ref=-2.12e-15
+  Packet-shape dependence (normalized packets, same center):
+    point   delta=+0.03481763
+    gauss3  delta=+0.02579524
+    flat3   delta=+0.01756582
+    gauss5  delta=+0.01748646
+    flat5   delta=+0.00390763
+    spread=3.091e-02, relative_spread=155.21%
+
+SAFE READ
+  - Global amplitude scaling cancels exactly in the centroid ratio on this linear family.
+  - Packet shape can still matter because extended packets sample different field regions.
+  - So linearity gives an amplitude-level equivalence statement, not a full persistent-pattern mass law.
+
+----- stderr -----
+

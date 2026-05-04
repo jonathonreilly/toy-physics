@@ -1,0 +1,117 @@
+===== runner cache v1 =====
+runner: scripts/frontier_bminusl_anomaly_freedom.py
+runner_sha256: 7d9f7b18177d5f76bdc6c6536899536ad5a3e4391d07846691e2354a4ae604bb
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.06
+status: ok
+----- stdout -----
+========================================================================================
+B-L anomaly-freedom theorem verification
+See docs/BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: retained one-generation content in LH-conjugate frame
+----------------------------------------------------------------------------------------
+     field  SU3  SU2  mult       Y     B-L
+       Q_L    3    2     6     1/3     1/3
+       L_L    1    2     2      -1      -1
+     u_R^c    3    1     3    -4/3    -1/3
+     d_R^c    3    1     3     2/3    -1/3
+     e_R^c    1    1     1       2       1
+    nu_R^c    1    1     1       0       1
+  [PASS] one generation contains 16 LH-frame Weyl states including nu_R  (count=16)
+  [PASS] Y(Q_L) = 1/3
+  [PASS] B-L(Q_L) = 1/3
+  [PASS] Y(L_L) = -1
+  [PASS] B-L(L_L) = -1
+  [PASS] Y(u_R^c) = -4/3
+  [PASS] B-L(u_R^c) = -1/3
+  [PASS] Y(d_R^c) = 2/3
+  [PASS] B-L(d_R^c) = -1/3
+  [PASS] Y(e_R^c) = 2
+  [PASS] B-L(e_R^c) = 1
+  [PASS] Y(nu_R^c) = 0
+  [PASS] B-L(nu_R^c) = 1
+
+----------------------------------------------------------------------------------------
+Part 1: full B-L anomaly packet
+----------------------------------------------------------------------------------------
+  G1 grav^2 U(1)_{B-L}               = 0
+  [PASS] G1 grav^2 U(1)_{B-L} cancels exactly  (value=0)
+  G2 U(1)_{B-L}^3                    = 0
+  [PASS] G2 U(1)_{B-L}^3 cancels exactly  (value=0)
+  G3 SU(3)^2 U(1)_{B-L}              = 0
+  [PASS] G3 SU(3)^2 U(1)_{B-L} cancels exactly  (value=0)
+  G4 SU(2)^2 U(1)_{B-L}              = 0
+  [PASS] G4 SU(2)^2 U(1)_{B-L} cancels exactly  (value=0)
+  G5 U(1)_Y^2 U(1)_{B-L}             = 0
+  [PASS] G5 U(1)_Y^2 U(1)_{B-L} cancels exactly  (value=0)
+  G6 U(1)_Y U(1)_{B-L}^2             = 0
+  [PASS] G6 U(1)_Y U(1)_{B-L}^2 cancels exactly  (value=0)
+
+----------------------------------------------------------------------------------------
+Part 2: exact rational contribution checks
+----------------------------------------------------------------------------------------
+  G1: Q_L:2 + L_L:-2 + u_R^c:-1 + d_R^c:-1 + e_R^c:1 + nu_R^c:1 = 0
+  [PASS] G1 contribution sum is exactly zero
+  G2: Q_L:2/9 + L_L:-2 + u_R^c:-1/9 + d_R^c:-1/9 + e_R^c:1 + nu_R^c:1 = 0
+  [PASS] G2 contribution sum is exactly zero
+  G3: Q_L:2/3 + u_R^c:-1/3 + d_R^c:-1/3 = 0
+  [PASS] G3 contribution sum is exactly zero
+  G4: Q_L:1 + L_L:-1 = 0
+  [PASS] G4 contribution sum is exactly zero
+  G5: Q_L:2/9 + L_L:-2 + u_R^c:-16/9 + d_R^c:-4/9 + e_R^c:4 + nu_R^c:0 = 0
+  [PASS] G5 contribution sum is exactly zero
+  G6: Q_L:2/9 + L_L:-2 + u_R^c:-4/9 + d_R^c:2/9 + e_R^c:2 + nu_R^c:0 = 0
+  [PASS] G6 contribution sum is exactly zero
+
+----------------------------------------------------------------------------------------
+Part 3: nu_R ablation
+----------------------------------------------------------------------------------------
+  Without nu_R^c:
+    G1_grav_BL         = -1
+    G2_BL_cubic        = -1
+    G3_SU3_SU3_BL      = 0
+    G4_SU2_SU2_BL      = 0
+    G5_Y_Y_BL          = 0
+    G6_Y_BL_BL         = 0
+  [PASS] without nu_R, G1 linear B-L anomaly is -1
+  [PASS] without nu_R, G2 cubic B-L anomaly is -1
+  [PASS] without nu_R, G3 remains zero because nu_R is colour-singlet
+  [PASS] without nu_R, G4 remains zero because nu_R is weak-singlet
+  [PASS] without nu_R, G5 remains zero because Y(nu_R)=0
+  [PASS] without nu_R, G6 remains zero because Y(nu_R)=0
+  [PASS] nu_R^c carries B-L = +1
+  [PASS] nu_R^c carries Y = 0
+  [PASS] nu_R^c is SU(3) x SU(2) singlet
+
+----------------------------------------------------------------------------------------
+Part 4: B-L preserving proton-decay bookkeeping
+----------------------------------------------------------------------------------------
+  [PASS] p -> e+ pi0 preserves B-L
+  [PASS] p -> e- pi+ would violate B-L by -2
+
+----------------------------------------------------------------------------------------
+Part 5: summary
+----------------------------------------------------------------------------------------
+  LANDED STRUCTURAL CONTENT:
+    G1  grav^2 U(1)_{B-L}              = 0
+    G2  U(1)_{B-L}^3                   = 0
+    G3  SU(3)^2 U(1)_{B-L}             = 0
+    G4  SU(2)^2 U(1)_{B-L}             = 0
+    G5  U(1)_Y^2 U(1)_{B-L}            = 0
+    G6  U(1)_Y U(1)_{B-L}^2            = 0
+
+  BOUNDARY:
+    This proves B-L is gaugeable on the retained content.
+    It does not assert that B-L is gauged in the retained framework.
+    It does not predict a Z' mass/coupling or a Majorana mass structure.
+
+========================================================================================
+  TOTAL: PASS=36, FAIL=0
+========================================================================================
+
+----- stderr -----
+

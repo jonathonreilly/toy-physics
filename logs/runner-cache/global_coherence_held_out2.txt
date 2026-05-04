@@ -1,0 +1,23 @@
+===== runner cache v1 =====
+runner: scripts/global_coherence_held_out2.py
+runner_sha256: d179faa57bef6637de06060fd6463a11b46201cc4fd0ead044168bdb6e3b5800
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+====================================================================================================
+GLOBAL COHERENCE — LARGER HELD-OUT BATCH (12 NEW GENERATORS)
+Frozen rule: free_coh >= 7.9597e-04
+Predictions hard-coded BEFORE running. Rule applied WITHOUT refit.
+====================================================================================================
+
+[ 1/12] N1_kreg_k30             FAIL  avg_deg=28.8  free_coh=4.1021e-07  delta=-0.0098
+
+[ 2/12] N2_kreg_k50             FAIL  avg_deg=47.9  free_coh=2.2569e-03  delta=+0.0307
+
+[ 3/12] N3_skip2                PASS  avg_deg=240.3  free_coh=3.6046e-02  delta=+0.0226
+
+[ 4/12] N4_smallworld         
+----- stderr -----
+

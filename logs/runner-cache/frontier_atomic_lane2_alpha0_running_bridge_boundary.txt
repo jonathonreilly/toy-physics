@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_atomic_lane2_alpha0_running_bridge_boundary.py
+runner_sha256: d4210b0eff5ca064c1394bf34f6bcb253d76cfc4b77db7ae5b99e4ebc14407c6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+LANE 2: ALPHA(0) RUNNING BRIDGE BOUNDARY
+========================================================================================
+
+Claim under test:
+  The current alpha_EM(M_Z) value might determine the atomic Coulomb
+  coupling alpha(0) needed by the Rydberg formula.
+
+Boundary result:
+  QED running is the right bridge type, but current repo content lacks
+  the threshold and hadronic inputs needed to close it.
+
+========================================================================================
+PART 1: AUTHORITY TEXT NAMES ALPHA(0) AS A LANE 2 GATE
+========================================================================================
+  [PASS] Lane 2 file marks alpha(0) / QED running as a required bridge
+  [PASS] Rydberg firewall names low-energy Coulomb coupling as load-bearing
+  [PASS] Rydberg firewall records direct alpha(M_Z) substitution failure
+  [PASS] Atomic scaffold imports textbook constants rather than framework inputs
+  [PASS] Usable values surface has alpha_EM(M_Z) but no alpha(0) row
+
+========================================================================================
+PART 2: THE ATOMIC COUPLING GAP IS NUMERICALLY LOAD-BEARING
+========================================================================================
+  1/alpha_EM(M_Z) repo      = 127.670000
+  1/alpha(0) comparator     = 137.035999084
+  inverse-coupling gap      = 9.365999
+  E1 using alpha(M_Z)       = -15.675171 eV
+  E1 using alpha(0)         = -13.605693 eV
+  [PASS] The inverse-coupling gap is order ten units  (gap=9.366)
+  [PASS] Direct alpha(M_Z) substitution shifts Rydberg by more than 10%  (shift=+15.21%)
+  [PASS] The atomic comparator energy is recovered only with alpha(0)
+  [PASS] Therefore alpha(0) is a load-bearing input
+
+========================================================================================
+PART 3: QED RUNNING NEEDS THRESHOLDS AND HADRONIC INPUTS
+========================================================================================
+  one-loop lepton Delta(1/alpha) = 4.836315
+  lepton-only 1/alpha(0) estimate = 132.506315
+  remaining gap to comparator      = 4.529684
+  doubling m_e changes Delta by    = 0.147090
+  [PASS] Lepton thresholds move alpha in the correct direction
+  [PASS] Lepton-threshold contribution is not enough by itself  (missing=4.530)
+  [PASS] Changing a threshold changes the transport result  (sensitivity=0.147)
+  [PASS] Threshold masses are therefore load-bearing
+  [PASS] A hadronic vacuum-polarization or equivalent low-energy treatment remains needed
+
+========================================================================================
+PART 4: CLAIM-STATUS FIREWALL
+========================================================================================
+  [PASS] Actual current-surface status is no-go for alpha(0) closure
+  [PASS] The QED-running route is only conditional support
+  [PASS] Three load-bearing imports remain open
+  [PASS] No stronger branch-local proposal wording is allowed
+
+========================================================================================
+SUMMARY: PASS=18 FAIL=0
+========================================================================================
+Result: no current-surface alpha(0) closure from alpha_EM(M_Z) alone.
+Conditional support remains for a scheme-matched QED-running bridge.
+
+----- stderr -----
+

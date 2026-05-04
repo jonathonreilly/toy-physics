@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_lane4_sr2_premise_audit.py
+runner_sha256: 38a3dca6d0b9a306a0e019a4e61a0ed9fd16c81856beecd6d7593ccacd403e5d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Lane 4 SR-2 premise audit verification
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: referenced retained-surface notes exist
+----------------------------------------------------------------------------------------
+  [PASS] note exists: docs/NEUTRINO_LANE4_SR2_PREMISE_AUDIT_NOTE_2026-04-30.md
+  [PASS] note exists: docs/LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md
+  [PASS] note exists: docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md
+  [PASS] note exists: docs/NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md
+  [PASS] note exists: docs/NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md
+
+----------------------------------------------------------------------------------------
+Part 2: SR-2 audit note structure
+----------------------------------------------------------------------------------------
+  [PASS] audit note title is correct
+  [PASS] audit note status is support / premise-audit
+  [PASS] audit note explicitly does NOT close (C2-X)
+  [PASS] audit note explicitly does NOT prove or falsify SR-2
+  [PASS] audit note does NOT use bare retained/promoted
+
+----------------------------------------------------------------------------------------
+Part 3: structural-gap claim is self-consistent
+----------------------------------------------------------------------------------------
+  [PASS] 1+1D 2-point note does not reference Pfaffian extensions
+  [PASS] 3+1D 2-point note does not reference Pfaffian extensions
+  [PASS] Pfaffian no-forcing note does not load-bear on free-scalar 2-point closure
+
+----------------------------------------------------------------------------------------
+Part 4: 2026-04-28 fan-out claim is faithfully cited
+----------------------------------------------------------------------------------------
+  [PASS] fan-out note contains (SR-2) recommendation
+  [PASS] audit note cites fan-out's 'single-cycle' framing as the audited claim
+
+----------------------------------------------------------------------------------------
+Part 5: three candidate prerequisite primitives named
+----------------------------------------------------------------------------------------
+  [PASS] prerequisite primitive ### 4A. present
+  [PASS] prerequisite primitive ### 4B. present
+  [PASS] prerequisite primitive ### 4C. present
+  [PASS] 4A names direct fermionic 2-point closure
+  [PASS] 4B names admitted scalar-fermion coupling
+
+----------------------------------------------------------------------------------------
+Part 6: block-count revision (1-block -> 2-block program)
+----------------------------------------------------------------------------------------
+  [PASS] audit note re-times SR-2 from 1-block to 2-block program
+  [PASS] audit note explicitly does NOT invalidate SR-2 as a target
+
+----------------------------------------------------------------------------------------
+Part 7: forbidden-import role check
+----------------------------------------------------------------------------------------
+  [PASS] audit note states no new physical claims
+  [PASS] audit note states no new numerical comparators
+  [PASS] audit note states no new admitted observations
+
+----------------------------------------------------------------------------------------
+PASS=25 FAIL=0
+----------------------------------------------------------------------------------------
+
+----- stderr -----
+

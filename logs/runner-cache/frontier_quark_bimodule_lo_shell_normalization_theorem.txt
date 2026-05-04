@@ -1,0 +1,51 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_bimodule_lo_shell_normalization_theorem.py
+runner_sha256: 0dd6e2a569158244292d7eb2145516c497c7330b0a9cbe716fca7924e9abe23f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.90
+status: ok
+----- stdout -----
+========================================================================
+  Quark Bimodule LO Shell-Normalization Theorem
+  Physical-point derivation of BICAC / STRC-LO from exact carrier data
+========================================================================
+
+  Exact carrier columns:
+    E-shell  = [ 1.000000000000e+00  0.000000000000e+00 -4.163336342344e-17
+  0.000000000000e+00]
+    E-center = [1.000000000000 0.000000000000 0.166666666667 0.000000000000]
+    T-shell  = [ 8.326672684689e-17  1.000000000000e+00 -3.851859888774e-34
+  0.000000000000e+00]
+    T-center = [0.000000000000 1.000000000000 0.000000000000 0.166666666667]
+
+  Candidate LO shell coefficients rho*kappa:
+    support = rho*sqrt(6/7) = 0.142857142857
+    target  = 48*rho/49     = 0.151154302004
+    BICAC   = rho           = 0.154303349962
+
+  Theorem checks:
+  [PASS] T1  Exact shell carrier columns are the unit bright basis vectors  (E-shell residual=4.163e-17, T-shell residual=2.220e-16)
+  [PASS] T2  Exact center columns keep the same leading slot with only 1/6 lower-row dressing  (E-center residual=1.388e-16, T-center residual=2.220e-16)
+  [PASS] T3  Distinct admissible readout maps agree on shell normalization but differ on the center E lift  (shell diff=2.220e-16, center E diff=8.750e-01)
+  [PASS] T4  Support and target bridge factors fail the retained shell coefficient a_d = rho  (support gap=0.011446207105, target gap=0.003149047958)
+  [PASS] T5  Exact shell normalization therefore forces kappa = 1 at LO  (only kappa=1 preserves the retained shell coefficient rho=0.154303349962)
+  [PASS] T6  The physical LO down action on Im(p) is rho * sin_d  (D_LO(Im(p)) = 0.140859042455)
+  [PASS] T7  Complementarity on the common unit shell gives a_u = sin_d * (1-rho)  (a_u_LO = 0.772011886721)
+  [PASS] T8  BICAC / STRC-LO follows exactly  (|LHS-RHS| = 0.000e+00)
+  [PASS] T9  The new shell datum is kappa-sensitive and bypasses the older ray/support obstruction  (shell coefficients = [0.142857142857, 0.151154302004, 0.154303349962])
+  [PASS] T10 Adding the retained NLO dressing supp*delta_A1 = 1/49 recovers the full RPSR target  (a_u_full = 0.7748865611)
+
+  Consequence:
+    The exact carrier now fixes the physical LO shell split directly.
+    The old kappa-family ambiguity survives only in the lower-row
+    center dressing, so full-interval NORM naturality is no longer
+    load-bearing for deriving BICAC / STRC-LO at the retained point.
+
+========================================================================
+PASS=10 FAIL=0
+Quark bimodule LO shell-normalization theorem: VERIFIED
+========================================================================
+
+----- stderr -----
+

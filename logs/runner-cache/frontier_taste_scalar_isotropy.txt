@@ -1,0 +1,89 @@
+===== runner cache v1 =====
+runner: scripts/frontier_taste_scalar_isotropy.py
+runner_sha256: 519c1d8d830ea43f8cdcd866565184a4d2d1c8d4c9b0318557fe22df5f35c59b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================
+FRONTIER: Taste-scalar Coleman-Weinberg isotropy
+========================================================================
+
+========================================================================
+THEOREM SECTION 1: Commuting involution taste block
+========================================================================
+  [PASS] S_1^2 = I  (max diff = 0.0e+00)
+  [PASS] S_1 Hermitian  (max diff = 0.0e+00)
+  [PASS] S_2^2 = I  (max diff = 0.0e+00)
+  [PASS] S_2 Hermitian  (max diff = 0.0e+00)
+  [PASS] S_3^2 = I  (max diff = 0.0e+00)
+  [PASS] S_3 Hermitian  (max diff = 0.0e+00)
+  [PASS] [S_1, S_2] = 0  (max diff = 0.0e+00)
+  [PASS] [S_1, S_3] = 0  (max diff = 0.0e+00)
+  [PASS] [S_2, S_3] = 0  (max diff = 0.0e+00)
+
+========================================================================
+THEOREM SECTION 2: Exact taste-block eigenstructure
+========================================================================
+  [PASS] H(1.0, 0.0, 0.0) eigenvalues match exact sign sum  (max diff = 0.0e+00)
+  [PASS] H(0.0, 1.0, 0.0) eigenvalues match exact sign sum  (max diff = 0.0e+00)
+  [PASS] H(0.0, 0.0, 1.0) eigenvalues match exact sign sum  (max diff = 0.0e+00)
+  [PASS] H(1.0, 0.5, 0.3) eigenvalues match exact sign sum  (max diff = 8.3e-16)
+  [PASS] H(246.28281829012906, 0.0, 0.0) eigenvalues match exact sign sum  (max diff = 0.0e+00)
+  [PASS] At phi=(v,0,0) all |lambda_s| = v  (spread = 0.0e+00)
+
+========================================================================
+THEOREM SECTION 3: Binary orthogonality identity
+========================================================================
+  [PASS] sum_s (-1)^s_1 (-1)^s_1 = 8  (computed = 8)
+  [PASS] sum_s (-1)^s_1 (-1)^s_2 = 0  (computed = 0)
+  [PASS] sum_s (-1)^s_1 (-1)^s_3 = 0  (computed = 0)
+  [PASS] sum_s (-1)^s_2 (-1)^s_1 = 0  (computed = 0)
+  [PASS] sum_s (-1)^s_2 (-1)^s_2 = 8  (computed = 8)
+  [PASS] sum_s (-1)^s_2 (-1)^s_3 = 0  (computed = 0)
+  [PASS] sum_s (-1)^s_3 (-1)^s_1 = 0  (computed = 0)
+  [PASS] sum_s (-1)^s_3 (-1)^s_2 = 0  (computed = 0)
+  [PASS] sum_s (-1)^s_3 (-1)^s_3 = 8  (computed = 8)
+
+========================================================================
+THEOREM SECTION 4: CW isotropy at axis-aligned minimum
+========================================================================
+  [PASS] quartic-log: diagonal isotropy  (spread = 0.0e+00)
+  [PASS] quartic-log: off-diagonals vanish  (off/diag = 0.0e+00)
+  [PASS] quadratic-polynomial: diagonal isotropy  (spread = 0.0e+00)
+  [PASS] quadratic-polynomial: off-diagonals vanish  (off/diag = 0.0e+00)
+  [PASS] smooth-log1p: diagonal isotropy  (spread = 1.8e-09)
+  [PASS] smooth-log1p: off-diagonals vanish  (off/diag = 0.0e+00)
+
+========================================================================
+BOUNDED SECTION 1: Gauge-only leading split
+========================================================================
+  v            = 246.282818290129 GeV
+  g_2(v)       = 0.648031
+  g'(v)        = 0.359704
+  m_H          = 125.10 GeV
+  delta_gauge  = 47.13 GeV^2
+  m_taste      = 124.91 GeV
+  split        = 0.19 GeV (0.301%)
+  [PASS] delta_gauge > 0 on the gauge-only split model  (delta = 47.13 GeV^2)
+  [PASS] m_taste^2 remains positive  (m_taste^2 = 15602.88 GeV^2)
+  [PASS] taste scalar is within 1 GeV of Higgs  (|Δm| = 0.19 GeV)
+  [PASS] leading split is sub-percent  (fractional split = 0.301%)
+
+========================================================================
+BOUNDED SECTION 2: Scalar-only thermal-cubic estimate
+========================================================================
+  E_gauge   = 0.009464
+  E_higgs   = 0.003476
+  E_taste   = 0.006922
+  v_c/T_c   = 0.307919
+  [PASS] scalar-only estimate gives a nonzero first-order signal  (v_c/T_c = 0.307919)
+  [PASS] scalar-only estimate stays below sphaleron-protection threshold  (v_c/T_c = 0.307919)
+
+========================================================================
+SUMMARY: THEOREM PASS=30 BOUNDED PASS=6 FAIL=0
+========================================================================
+
+----- stderr -----
+

@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/persistent_object_blended_readout_boundary_probe.py
+runner_sha256: 0741ce1cf94685b2b7b1e4137b87e2943e9dc6fc99df797538ca84c106bb873c
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

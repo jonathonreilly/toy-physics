@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_eigenvalue_q23_surface_theorem.py
+runner_sha256: 491d7c304369a58a9b96e2642e5888b8640e7c191e78be6abfc7ec1cca7aaf65
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.10
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: exact monotonicity identity for the eigenvalue Q surface
+========================================================================================
+  [PASS (A)] For three eigenvalues, dQ_eig/dbeta has the exact pairwise-positive numerator form  (dQ = 2 sum_{i<j} (lambda_j-lambda_i) a_i a_j (a_j-a_i) / Z^3)
+  [PASS (A)] [NUMERIC] So any fixed non-scalar spectrum gives a strictly increasing eigenvalue Q curve in beta > 0  (verified numerically on representative ordered non-scalar spectra)
+
+========================================================================================
+PART 2: on the selected line, Q_eig = 2/3 gives a unique beta surface
+========================================================================================
+  [PASS (C)] [NUMERIC] The selected-line spectrum keeps a simple largest eigenvalue on the whole physical branch  (min top-gap=2.679683e+00)
+  [PASS (C)] [NUMERIC] For every tested selected-line spectrum, dQ_eig/dbeta stays strictly positive on beta in [0.02, 2]  (min derivative=1.162889e-02)
+  [PASS (C)] [NUMERIC] Hence each selected-line point has one unique beta with Q_eig = 2/3  (120 unique roots on 120 tested m values)
+  [PASS (C)] [NUMERIC] The eigenvalue condition is a dense one-real surface beta_q23(m), not a singled-out point  (beta range=[0.545443, 0.673462])
+
+========================================================================================
+PART 3: tested framework-native beta values do not close the surface at m_*
+========================================================================================
+  Candidate                                    beta    m on Q_eig=2/3       |m-m_*|     cos-sim
+  -------------------------------------- ----------  ----------------  ------------  ----------
+  GAMMA = 1/2                              0.500000       no crossing
+  SELECTOR = sqrt(6)/3                     0.816497       no crossing
+  1/E1 = sqrt(3/8)                         0.612372       -0.88130035    2.7917e-01  0.99836285
+  1/sqrt(3)                                0.577350       -1.10394029    5.6529e-02  0.99993122
+  beta_star (gamma-orbit witness)          0.633571       -0.72541970    4.3505e-01  0.99618774
+  2/3                                      0.666667       -0.35615234    8.0432e-01  0.98931515
+  sqrt(2)/3                                0.471405       no crossing
+  [PASS (C)] [NUMERIC] No tested framework-native beta constant lands on m_* along the eigenvalue Q surface  (best gap=5.6529e-02)
+
+  At m_* = -1.160469470087: beta_q23 = 0.5679143989, beta_star = 0.6335713585
+  [PASS (C)] [NUMERIC] The eigenvalue-surface beta at m_* is distinct from the current slot-route beta witness  (|beta_q23-beta_star|=0.065657)
+
+Summary:
+  The M2 eigenvalue escape hatch does not natively close Koide Q=2/3.
+  It yields an exact monotone surface beta = beta_q23(m) on the selected line,
+  and still needs an independent beta-law to isolate m_*.
+  So this route is a support surface, not a retained derivation.
+
+PASS=8 FAIL=0
+
+----- stderr -----
+

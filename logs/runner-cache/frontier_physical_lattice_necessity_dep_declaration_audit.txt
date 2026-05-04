@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_physical_lattice_necessity_dep_declaration_audit.py
+runner_sha256: 9a9341705bcb7c18904975466150547f4257a2d95b8188402d26d59e9d1e87e4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: dep-declaration audit-packet structure
+----------------------------------------------------------------------------------------
+  [PASS (A)] audit packet contains: 'Physical-Lattice Necessity Dependency-Declaration Audit'  (len(note)=6592)
+  [PASS (A)] audit packet contains: 'dependency-declaration repair packet'  (len(note)=6592)
+  [PASS (A)] audit packet contains: 'PHYSICAL_LATTICE_NECESSITY_NOTE.md'  (len(note)=6592)
+  [PASS (A)] audit packet contains: 'frontier_physical_lattice_necessity.py'  (len(note)=6592)
+  [PASS (A)] audit packet contains: 'Recommended ledger row update'  (len(note)=6592)
+  [PASS (A)] audit packet contains: 'deps: []'  (len(note)=6592)
+  [PASS (A)] audit packet contains: 'bounded support theorem'  (len(note)=6592)
+  [PASS (A)] audit packet contains: 'proposal_allowed'  (len(note)=6592)
+
+----------------------------------------------------------------------------------------
+Part 2: enumerated upstream notes match parent runner reads
+----------------------------------------------------------------------------------------
+  [PASS (A)] parent runner reads at least 10 .md files  (found 10 distinct reads)
+  [PASS (A)] audit packet enumerates parent-read note: ANOMALY_FORCES_TIME_THEOREM.md  (present in §1 dep table)
+  [PASS (A)] audit packet enumerates parent-read note: CONTINUUM_IDENTIFICATION_NOTE.md  (present in §1 dep table)
+  [PASS (A)] audit packet enumerates parent-read note: GENERATION_AXIOM_BOUNDARY_NOTE.md  (present in §1 dep table)
+  [PASS (A)] audit packet enumerates parent-read note: MINIMAL_AXIOMS_2026-04-11.md  (present in §1 dep table)
+  [PASS (A)] audit packet enumerates parent-read note: ONE_GENERATION_MATTER_CLOSURE_NOTE.md  (present in §1 dep table)
+  [PASS (A)] audit packet enumerates parent-read note: PLAQUETTE_SELF_CONSISTENCY_NOTE.md  (present in §1 dep table)
+  [PASS (A)] audit packet enumerates parent-read note: SINGLE_AXIOM_HILBERT_NOTE.md  (present in §1 dep table)
+  [PASS (A)] audit packet enumerates parent-read note: SINGLE_AXIOM_INFORMATION_NOTE.md  (present in §1 dep table)
+  [PASS (A)] audit packet enumerates parent-read note: THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md  (present in §1 dep table)
+  [PASS (A)] audit packet enumerates parent-read note: THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md  (present in §1 dep table)
+
+----------------------------------------------------------------------------------------
+Part 3: 7 retained-proposal criteria assessment
+----------------------------------------------------------------------------------------
+  [PASS (A)] audit packet explicitly assesses Criterion 1  (row 1 in criteria table)
+  [PASS (A)] audit packet explicitly assesses Criterion 2  (row 2 in criteria table)
+  [PASS (A)] audit packet explicitly assesses Criterion 3  (row 3 in criteria table)
+  [PASS (A)] audit packet explicitly assesses Criterion 4  (row 4 in criteria table)
+  [PASS (A)] audit packet explicitly assesses Criterion 5  (row 5 in criteria table)
+  [PASS (A)] audit packet explicitly assesses Criterion 6  (row 6 in criteria table)
+  [PASS (A)] audit packet explicitly assesses Criterion 7  (row 7 in criteria table)
+  [PASS (A)] recommended status = 'bounded support theorem'  ()
+
+----------------------------------------------------------------------------------------
+Part 4: dep-declaration recommendation
+----------------------------------------------------------------------------------------
+  [PASS (A)] recommended deps list contains: minimal_axioms_2026-04-11  (present in §2 ledger update YAML)
+  [PASS (A)] recommended deps list contains: plaquette_self_consistency_note  (present in §2 ledger update YAML)
+  [PASS (A)] recommended deps list contains: three_generation_observable_theorem_note  (present in §2 ledger update YAML)
+  [PASS (A)] recommended deps list contains: generation_axiom_boundary_note  (present in §2 ledger update YAML)
+  [PASS (A)] recommended deps list contains: one_generation_matter_closure_note  (present in §2 ledger update YAML)
+  [PASS (A)] recommended deps list contains: anomaly_forces_time_theorem  (present in §2 ledger update YAML)
+  [PASS (A)] demotion path documented (proposed_retained → bounded)  ()
+
+========================================================================================
+  TOTAL: PASS=34, FAIL=0
+========================================================================================
+
+----- stderr -----
+

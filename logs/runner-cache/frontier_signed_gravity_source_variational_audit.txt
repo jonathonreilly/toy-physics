@@ -1,0 +1,78 @@
+===== runner cache v1 =====
+runner: scripts/frontier_signed_gravity_source_variational_audit.py
+runner_sha256: c026294ea043b99cde65b5b44acfbf58bf294e0f50b09f9e22c8a740c0e9ba37
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.10
+status: ok
+----- stdout -----
+====================================================================================================
+SIGNED GRAVITY SOURCE VARIATIONAL AUDIT
+  P0 gate: source primitive, not a negative-mass or propulsion claim
+====================================================================================================
+
+VARIATIONAL SOURCE CHECK
+  H_diag = (m + response_sign * Phi) epsilon
+  max residual dE/dPhi - response_sign*epsilon*|psi|^2, response +: 1.084e-11
+  max residual dE/dPhi - response_sign*epsilon*|psi|^2, response -: 1.132e-11
+  read: the scalar coupling varies to the parity scalar density, not to chi_g|psi|^2
+
+SPATIAL PARITY SCALAR SOURCE STABILITY
+   sigma      Born   Q_scalar even    Q_scalar odd  phase delta
+  ------------------------------------------------------------------
+    0.65  1.000000   +6.841826e-01   -6.841826e-01     0.00e+00
+    1.25  1.000000   +4.233389e-02   -4.233389e-02     5.55e-17
+    2.50  1.000000   +4.014794e-07   -4.014794e-07     1.39e-17
+    5.00  1.000000   +2.775558e-17   -2.775558e-17     6.94e-17
+   10.00  1.000000   +1.963186e-09   +8.612657e-10     1.39e-17
+
+  free evolution scalar charge: +4.233389e-02 -> +5.457125e-02
+  free evolution norm drift: 2.465e-14
+  read: epsilon|psi|^2 is signed, but a one-site translation flips it and kinetic hopping does not conserve it
+
+CONTINUUM / REFINEMENT SANITY FOR PARITY SCALAR SOURCE
+        h     N      Born        Q_scalar
+  --------------------------------------------
+    1.000    96  1.000000   +4.953538e-01
+    0.500    96  1.000000   +7.762077e-03
+    0.250    96  1.000000   +4.537555e-10
+    0.125    96  1.000000   -4.163336e-17
+  read: the parity scalar monopole washes out under refinement for a smooth packet
+
+LOCAL/TASTE BRANCH SOURCE CHECK
+  Q      conserved  pins eps + dim        + eps min/max/mean - dim        - eps min/max/mean
+  ----------------------------------------------------------------------------------------------
+  IXY         PASS      FAIL     4 [-1.0,+1.0,+0.0]              4 [-1.0,+1.0,+0.0]
+  XYI         PASS      FAIL     4 [-1.0,+1.0,+0.0]              4 [-1.0,+1.0,+0.0]
+  XZY         PASS      FAIL     4 [-1.0,+1.0,+0.0]              4 [-1.0,+1.0,+0.0]
+  ZZZ         FAIL      PASS     4 [+1.0,+1.0,+1.0]              4 [-1.0,-1.0,-1.0]
+  read: conserved neutral taste labels do not pin scalar source sign; epsilon pins sign but is not conserved
+
+INSERTED SIGNED SOURCE CONTROL
+  q_bare = 4*pi*chi_g*M_phys gives |q|~M slope, chi=+1: 1.000000
+  q_bare = 4*pi*chi_g*M_phys gives |q|~M slope, chi=-1: 1.000000
+  null source gives null active source: q_bare=+0.000e+00
+  same-point inserted +/- active source cancellation: q_bare=+0.000e+00
+  same-point inserted +/- inertial mass sum: 3.500
+  read: source-unit normalization can carry a sign only after chi_g is supplied elsewhere
+
+SOURCE FORM GATE TABLE
+  form                                var  sign  branch  cons  m_i>0 native candidate
+  --------------------------------------------------------------------------------------------
+  Born rho=|psi|^2                   FAIL  FAIL    FAIL  PASS   PASS   PASS      FAIL
+  scalar rho_s=epsilon|psi|^2        PASS  PASS    FAIL  FAIL   PASS   PASS      FAIL
+  neutral selector rho_Q=<Q>         FAIL  PASS    FAIL  PASS   PASS   PASS      FAIL
+  inserted rho_g=chi_g|psi|^2        FAIL  PASS    PASS  PASS   PASS   FAIL      FAIL
+
+P0 SOURCE-PRIMITIVE VERDICT
+  variational derivative identified: PASS
+  positive Born/inertial density retained: PASS
+  parity scalar translation flip observed: PASS
+  parity scalar nonconservation observed: PASS
+  conserved taste labels scalar-unpinned: PASS
+  native signed source candidate found: FAIL
+
+FINAL_TAG: SOURCE_PRIMITIVE_BLOCKED_LOCAL
+
+----- stderr -----
+

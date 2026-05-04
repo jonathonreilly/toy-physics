@@ -1,0 +1,93 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_parity_compatible_observable_selector_theorem.py
+runner_sha256: 73609704ad7b2e136a76d3b5928c2ec3af798559556c9f15236d0fc36db6ba71
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 1.01
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE PARITY-COMPATIBLE OBSERVABLE SELECTOR THEOREM
+========================================================================================
+
+Question:
+  On the strongest currently native local route selected by the
+  observable-principle scalar generator restricted to the exact
+  parity-compatible diagonal baseline family D = diag(A,B,B), does
+  the active selector law close?
+
+========================================================================================
+PART 1: THE OBSERVABLE SCALAR GENERATOR RESTRICTS TO THE FULL PARITY-COMPATIBLE FAMILY
+========================================================================================
+  [PASS] The observable principle note records the unique additive CPT-even scalar generator
+  [PASS] The parity-compatible theorem records the exact local baseline family D = diag(A,B,B)
+  [PASS] Restricting W_D to J_act on D = diag(A,B,B) gives the exact determinant family  ((A,B)=(1.5,0.7) err=3.33e-16; (A,B)=(2.2,1.4) err=0.00e+00; (A,B)=(3.1,0.9) err=0.00e+00)
+
+========================================================================================
+PART 2: ZERO-SOURCE BOSONIC CURVATURE IS EXACTLY ISOTROPIC ON THAT FAMILY
+========================================================================================
+  [PASS] The active generators remain Frobenius-orthogonal with equal norm on the live active pair  (Gram=(6.000000000000,6.000000000000,0.000000000000))
+  [PASS] For every D = diag(A,B,B), the zero-source Hessian is exactly -2(A+2B)/(AB^2) on both active axes  ((A,B)=(1.0,1.0) pref=6.000000000000, fd-err=3.56e-04; (A,B)=(1.0,2.0) pref=2.500000000000, fd-err=2.22e-04; (A,B)=(3.5,0.6) pref=7.460317460317, fd-err=5.07e-04)
+  [PASS] So the canonical positive quadratic selector law is a positive multiple of delta^2 + q_+^2 on the full parity-compatible family  (the active selector geometry is route-stable across D = diag(A,B,B))
+
+========================================================================================
+PART 3: MINIMIZING THAT NATIVE QUADRATIC ON THE EXACT ACTIVE CHAMBER CLOSES THE LOCAL ROUTE
+========================================================================================
+  [PASS] The selected point lies on the exact active boundary q_+ = sqrt(8/3) - delta  ((delta_*,q_+*)=(0.816496580928,0.816496580928))
+  [PASS] The boundary quadratic has stationary point at delta_* = sqrt(6)/3  (Q'_bdy(delta_*)=-0.000000000000)
+  [PASS] Strict convexity makes that point the unique minimizer on the whole chamber  (Q*=1.333333333333, Q_left=1.413333333333, Q_right=1.413333333333)
+  [PASS] Therefore the strongest currently native local parity-compatible route selects delta_* = q_+* = sqrt(6)/3  ((delta_*,q_+*)=(0.816496580928,0.816496580928))
+
+========================================================================================
+PART 4: THE SELECTED SPLIT IS DERIVED, NOT IMPORTED
+========================================================================================
+  [PASS] The equality rho_* = delta_* is derived from the exact source constraint delta + rho = sqrt(8/3)  ((delta_*,rho_*)=(0.816496580928,0.816496580928))
+  [PASS] The selected point lies on the maximal-phase active boundary r31 = 1/2, phi_+ = pi/2  ((r31,phi)=(0.500000000000,1.570796326795))
+  [PASS] The intrinsic Z3 doublet block reads back exactly the selected point  ((delta,q_+) from K_Z3=(0.816496580928,0.816496580928))
+  [PASS] The selected point is realized directly by the affine H-side chart  (affine err=5.93e-16)
+
+========================================================================================
+PART 5: THE SELECTED ROUTE REMAINS TRANSPORT SUBCRITICAL
+========================================================================================
+  [PASS] At the selected point with m = 0 the exact flavored transport readout is subcritical  (eta/eta_obs=[0.74048784 0.73674381 0.75171499])
+  [PASS] Even optimizing the spectator line m on the selected (delta_*,q_+*) slice stays subcritical  (m_opt=0.893783572465, eta_best=0.860390742058)
+  [PASS] So this theorem closes the local microscopic selector route, but not the full quantitative DM closure lane  (etas_opt=[0.7110082  0.7042118  0.86039074])
+
+  selected-point transport readout at m = 0:
+    eta/eta_obs = [0.74048784 0.73674381 0.75171499]
+  best transport readout on the selected (delta_*,q_+*) slice:
+    m_opt       = 0.893783572465
+    eta/eta_obs = [0.7110082  0.7042118  0.86039074]
+[[0.490368 0.245929 0.263704]
+ [0.124486 0.151528 0.723986]
+ [0.385147 0.602543 0.01231 ]]
+[[0.189813 0.263759 0.546428]
+ [0.331643 0.251361 0.416997]
+ [0.478545 0.48488  0.036575]]
+
+========================================================================================
+PART 6: THE NOTE RECORDS THE HONEST SCOPE
+========================================================================================
+  [PASS] The note records the exact determinant and Hessian formulas on D = diag(A,B,B)
+  [PASS] The note records the exact selected point delta_* = q_+* = sqrt(6)/3 and the derived rho_* split
+  [PASS] The note keeps the claim local-route honest rather than route-independent current-bank or quantitative DM closure
+
+========================================================================================
+RESULT
+========================================================================================
+  Honest route-level closeout:
+    - the unique additive CPT-even scalar generator restricts exactly to
+      the active family on every parity-compatible diagonal baseline D = diag(A,B,B)
+    - its zero-source bosonic curvature is exactly isotropic on the live active pair
+    - minimizing the induced positive quadratic on q_+ >= sqrt(8/3) - delta
+      selects delta_* = q_+* = sqrt(6)/3
+    - the exact source constraint then derives rho_* = sqrt(6)/3
+    - so the strongest currently native local parity-compatible diagonal route closes
+      microscopically
+    - but that selected route remains transport-subcritical even after optimizing m
+    - this is not yet route-independent current-bank closure or full DM closure
+
+PASS=20 FAIL=0
+
+----- stderr -----
+

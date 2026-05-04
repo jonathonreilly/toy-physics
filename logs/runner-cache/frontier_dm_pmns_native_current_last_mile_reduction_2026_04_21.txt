@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_pmns_native_current_last_mile_reduction_2026_04_21.py
+runner_sha256: 393be87682ea8c4650c0ec0e1125bf127c200528b0ab83b2886c9d536c8cf671
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+DM PMNS NATIVE CURRENT LAST-MILE REDUCTION THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE EXACT TARGET SURFACE KILLS THE SEPARATE A-BCC RESIDUE
+========================================================================================
+  [PASS] The target-surface theorem records the exact chamber roots {Basin 1, Basin 2, Basin X}
+  [PASS] On those chamber roots, I_src(H) > 0 selects Basin 1 uniquely  (I_src=(1,2,X)=(0.303560,-225.763564,-99.766107))
+  [PASS] So no separate target-surface A-BCC branch-choice residue remains  (Delta=(1,2,X)=(0.959174,-70537.232755,-20296.105583))
+
+========================================================================================
+PART 2: THE REMAINING PMNS TARGET IS EXACTLY 2-REAL
+========================================================================================
+  [PASS] The exact source-manifold theorem records a local 2-real PMNS source manifold
+  [PASS] The native current boundary note records one complex current J_chi as the exact missing PMNS source object
+  [PASS] One complex current is exactly two real degrees of freedom  (Re J_chi and Im J_chi carry the residual 2-real datum)
+
+========================================================================================
+PART 3: ON THE REDUCED FAMILY J_chi IS EXACTLY THE NONTRIVIAL VALUE DATUM
+========================================================================================
+  [PASS] The native current reproduces the first reduced nontrivial mode exactly  (J_a=0.410000+0.320000j)
+  [PASS] Distinct reduced-channel points carry distinct J_chi currents  (J_a=0.410000+0.320000j, J_b=0.290000-0.170000j)
+  [PASS] So the remaining nontrivial PMNS value datum is exactly J_chi  (w is the trivial character mode; J_chi carries the nontrivial 2-real content)
+
+========================================================================================
+PART 4: THE CURRENT RETAINED BANK STILL SETS J_chi TO ZERO
+========================================================================================
+  [PASS] The free route has J_chi = 0  (J_chi=0.000000+0.000000j)
+  [PASS] The sole-axiom hw=1 source/transfer route has J_chi = 0  (J_chi=0.000000+0.000000j)
+  [PASS] The retained scalar route has J_chi = 0  (J_chi=0.000000+0.000000j)
+  [PASS] So the current strict/native bank still lacked the nonzero current needed for the current-activation subtarget  (the reduced-carrier positive target was activation of nonzero J_chi)
+
+========================================================================================
+PART 5: OPEN-MAP CONSEQUENCE
+========================================================================================
+  [PASS] The reduced graph-first burden is not a separate A-BCC law plus a generic PMNS-angle statement  (the exact target-surface A-BCC residue is gone)
+  [PASS] On the reduced graph-first carrier the remaining constructive subtarget is exactly a sole-axiom law producing nonzero J_chi  (equivalently the nontrivial 2-real reduced-carrier datum)
+  [PASS] The later affine current-coordinate theorem isolates one additional real physical scalar beyond current activation  (the physical affine chart still needed one extra sole-axiom scalar law at that stage)
+  [PASS] The later graded-current closure theorem closes that remaining affine scalar exactly  (the ordered-chain companion current completes the physical affine/source pair)
+  [PASS] So this script is a real reduced-carrier reduction but not full strict/native DM closure  (current activation is a subtarget, not the whole physical last mile)
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact reduced-carrier DM last-mile reduction:
+    - no separate target-surface A-BCC branch-choice residue remains
+    - the remaining reduced-carrier PMNS source datum is exactly 2-real
+    - in native current language that reduced datum is one complex current J_chi
+    - the current retained sole-axiom bank still sets J_chi = 0
+
+  So the reduced current-activation subtarget was exactly:
+  derive a sole-axiom law producing nonzero J_chi on the retained hw=1
+  response family.
+
+  The later affine sharpening theorem isolated one additional real
+  delta / Im(K12) law on the physical affine chart, and the later
+  ordered-chain graded-current closure theorem then closed it exactly.
+
+SUMMARY: PASS=18 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,168 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_bifundamental_invariance_obstruction_theorem.py
+runner_sha256: 762394406d7d7abe8782aa3f8dd99924b17d834fc94e614942ae0b0979303d46
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.56
+status: ok
+----- stdout -----
+========================================================================================
+G1 PHYSICIST I: U(2)_L x U(2)_R BIFUNDAMENTAL INVARIANCE — SOLE-AXIOM TEST
+========================================================================================
+
+Classification target:
+ CASE 1 (closure):   bifundamental derivable => the selector gate closes at F1 point
+ CASE 2 (partial):   one side derivable, other obstructed
+ CASE 3 (obstruction): not derivable; conditional gate unavailable
+
+This runner establishes CASE 3 via five converging sole-axiom derivations.
+
+========================================================================================
+PART 1: K_doublet IS HERMITIAN ON THE ACTIVE SHEET
+========================================================================================
+ Structural fact: H is Hermitian, U_Z3 is unitary, therefore
+ K_Z3 = U_Z3^dag H U_Z3 is Hermitian, and every principal submatrix
+ (including K_doublet) is Hermitian.
+
+ [PASS] Active-sheet H is Hermitian (max ||H - H^dag|| = 0.00e+00)
+ [PASS] K_Z3 = U_Z3^dag H U_Z3 is Hermitian (max ||K_Z3 - K_Z3^dag|| = 1.77e-15)
+ [PASS] K_doublet = K_Z3[1:3,1:3] is Hermitian (principal submatrix of Hermitian) (max ||K_d - K_d^dag|| = 1.60e-15)
+ [PASS] K11 matches retained closed form (err = 4.58e-16)
+ [PASS] K22 matches retained closed form (err = 4.04e-16)
+ [PASS] K12 matches retained closed form (real = m - 4*sqrt(2)/9, imag = sqrt(3) delta - 4*sqrt(2)/3) (err = 2.24e-16)
+
+========================================================================================
+PART 2: SINGLE U(2) ADJOINT vs INDEPENDENT U(2)_L x U(2)_R
+========================================================================================
+ [PASS] Single U(2) adjoint K -> U K U^dag preserves Hermiticity on K_doublet (24/24 trials; max Hermitian error 7.96e-16)
+ [PASS] Independent U_L K U_R^dag BREAKS Hermiticity on K_doublet (generically) (24/24 trials broken; min non-Herm error 6.81e-01)
+ [PASS] Diagonal embedding U(2) -> U(2)_L x U(2)_R, U -> (U, U), is identically the single adjoint action (err = 0.00e+00)
+
+========================================================================================
+PART 3: FROBENIUS IS BIFUNDAMENTAL-INVARIANT ON THE NON-HERMITIAN
+     LINEAR SPACE (the Physicist F Line 1 identity reconfirmed)
+========================================================================================
+ This is the MATHEMATICAL fact that ||U_L K U_R^dag||_F = ||K||_F for
+ any K and unitary U_L, U_R. It is what makes F1 the UNIQUE
+ bifundamental-invariant quadratic. This runner re-verifies it.
+ The OBSTRUCTION is that the retained atlas does NOT make this
+ mathematical invariance a SYMMETRY of the RETAINED SHEET — because
+ the retained sheet forces K_doublet to stay Hermitian.
+
+ [PASS] ||K||_F^2 IS preserved under bifundamental K -> U_L K U_R^dag (24/24)
+ [PASS] Tr(K) is NOT preserved under bifundamental (so (Tr K)^2 is NOT) (24/24 non-preserving)
+ [PASS] (Tr K)^2 changes under generic bifundamental (confirms F1 is unique IF bifundamental were a retained symmetry) (24/24 non-preserving)
+
+========================================================================================
+L1: POLAR-SECTION GAUGE-FIXING — U_R is already SPENT
+========================================================================================
+ Retained theorem (DM_NEUTRINO_POSTCANONICAL_POLAR_SECTION_NOTE):
+ for full-rank H, Y = H^(1/2) U_R, and the positive polar section
+ fixes U_R = I. K_+(H) = Y^dag Y = H on this section.
+ U_R cannot be re-introduced as a retained gauge AFTER this fix.
+
+ [PASS] Positive polar section: Y_+^dag Y_+ = H on the positive representative (||K_+ - H|| = 1.48e-14)
+ [PASS] U_R acts trivially on H via Y -> Y U_R (right U(3) frame is invisible to H) (||H - H_rotated|| = 1.47e-14)
+ [PASS] K_rotated = Y^dag Y is NOT H for Y = Y_+ U_R with U_R != I (so the positive-section representative is NOT U_R-invariant, confirming U_R has been USED to select the representative) (||K - H|| = 1.52e+01 (nonzero: U_R has been gauge-fixed))
+ [PASS] Retained active chart has NO U_R factor to rotate (H is the retained object) (structural (not a numerical check))
+
+========================================================================================
+L2: RETAINED DIRAC OPERATOR IS HERMITIAN — NO L/R SPLIT
+========================================================================================
+ Retained theorem (DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE):
+ the local post-EWSB Dirac operator on C^16 is M = Gamma_1,
+ a Hermitian matrix with M^2 = I. This is NOT a Yukawa matrix;
+ it has a SINGLE index space, not L and R.
+
+ [PASS] Retained M(phi) = Gamma_1 model: M is Hermitian (||M - M^dag|| = 0.00e+00)
+ [PASS] Retained M(phi) = Gamma_1 model: M^2 = I (involutive) (||M^2 - I|| = 5.41e-15)
+ [PASS] Retained Dirac carrier is a SINGLE Hermitian object, not a (Y_L, Y_R) pair with independent indices (structural fact from the retained atlas)
+
+========================================================================================
+L3: SHIFT-QUOTIENT BUNDLE — RETAINED GAUGE ALGEBRA IS 1D
+========================================================================================
+ Retained theorem (DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE):
+ the only tangent gauge direction on the live source-oriented sheet
+ is the common diagonal shift H -> H + lambda I. Dim = 1.
+ Bifundamental u(2)_L + u(2)_R would need 2 * 4 = 8 generators.
+
+ [PASS] Common diagonal shift H -> H + lambda I is a retained gauge direction (diag shift residuals max = 5.55e-17)
+ [PASS] The 6 shift-invariant H coordinates (m, delta, r12, r23, r31, phi) are strictly preserved by H -> H + lambda I (max invariant shift = 5.55e-17)
+ [PASS] Independent LEFT-only infinitesimal rotation (I + eps X) H is NOT a retained tangent direction — it BREAKS Hermiticity (||h_left - h_left^dag|| = 9.44e-02 (nonzero))
+ [PASS] Independent RIGHT-only infinitesimal rotation is NOT a retained tangent direction — it BREAKS Hermiticity (||h_right - h_right^dag|| = 9.78e-02 (nonzero))
+ [PASS] Adjoint infinitesimal rotation H -> (I + eps X) H (I - eps X) with X anti-Hermitian PRESERVES Hermiticity (order eps^2) (||h_adj - h_adj^dag|| = 0.00e+00 (order eps^2))
+
+ Dimension budget:
+  retained sheet tangent (shift): 1
+  bifundamental u(2)_L + u(2)_R on doublet block: 8
+  missing generators: 7
+
+========================================================================================
+L4: Z_3-SUPPORT TRICHOTOMY LOCKS LEFT AND RIGHT
+========================================================================================
+ Retained theorem (NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY):
+ for fixed Higgs Z_3 charge q_H, Y_nu support is one of
+  q_H = 0: diagonal {(1,1),(2,2),(3,3)}
+  q_H = +1: forward cyclic {(1,2),(2,3),(3,1)}
+  q_H = -1: backward cyclic {(1,3),(2,1),(3,2)}
+ Independent U(n)_L x U(n)_R generically breaks the support.
+
+ [PASS] Allowed Z_3-phase combination (P(q_L), P(q_R)) preserves diagonal support (support preserved by the retained Z_3 torus)
+ [PASS] Independent generic U(3)_L x U(3)_R breaks the diagonal Z_3 support (20/20 trials broke support)
+ [PASS] Independent U(2)_L x U(2)_R on the doublet block breaks the Z_3-support diagonal pattern (generically) (20/20 trials broke support)
+
+========================================================================================
+L5: SCHUR COLLAPSE — U_L (m I) U_R^dag = m U_L U_R^dag
+========================================================================================
+ On the Schur-baseline D = m I_3 (retained), the bifundamental orbit
+ U_L D U_R^dag reduces to m times a SINGLE unitary U = U_L U_R^dag.
+ So bifundamental action collapses to a single adjoint on J_act.
+
+ [PASS] Schur collapse: U_L (m I) U_R^dag = m U_L U_R^dag for all unitaries (20/20; max err = 8.24e-16)
+ [PASS] W[J; D=mI] invariant under single adjoint J -> U J U^dag (|delta W| = 4.44e-16)
+ [PASS] W[J; D=mI] is NOT invariant under LEFT-ONLY action J -> U J (bifundamental with U_R = I) (|delta W| = 6.93e-01)
+ => The bifundamental structure of W[J] collapses onto the SINGLE
+   adjoint on the Schur baseline D = m I. No independent U_R remains.
+
+========================================================================================
+PART 9: WEAKER RETAINED INVARIANCES DO NOT PIN F1 UNIQUELY
+========================================================================================
+ Check: each of {single U(2) adjoint, Z_3 cyclic, diagonal shift, CP}
+ admits the full 2-parameter PD cone {A (Tr K)^2 + B det K : B<0, A>-B/4}.
+ So F1 is not uniquely pinned by any weaker retained invariance.
+
+ [PASS] Test PD cone members satisfy B < 0 and A > -B/4 ([(1.0, -2.0), (1.0, -1.0), (2.0, -3.0), (0.5, -1.0), (3.0, -0.5)])
+ [PASS] All five PD cone members evaluate to real positive numbers on K_doublet (values = ['4.229', '2.412', '6.641', '2.115', '2.694'])
+ [PASS] All five PD cone members are single-U(2)-adjoint invariant (max diff = 1.78e-15)
+ [PASS] Different PD cone members produce DIFFERENT chamber-boundary minimizers (at least 3 distinct delta_* values) (minimizers = ['1.146', '1.204', '1.171', '1.146', '1.292']; distinct = 4)
+ [PASS] All five PD cone members are CP-invariant (K -> K*) (max CP diff = 0.00e+00)
+ [PASS] Diagonal shift H -> H + lambda I and Z_3 cyclic do not discriminate within the PD cone (structural: all F_{A,B} are polynomial in Tr K and det K, both of which are individually well-behaved under these retained actions) (structural (not a numerical check))
+
+========================================================================================
+VERDICT: BIFUNDAMENTAL INVARIANCE IS NOT SOLE-AXIOM DERIVABLE
+========================================================================================
+
+ Converging derivations:
+  L1 (polar gauge-fix): U_R has been spent by Y_+ = H^(1/2).
+  L2 (Hermitian Dirac): Gamma_1 is Hermitian, no L/R split.
+  L3 (shift-quotient): retained gauge algebra is 1D (shift).
+             Bifundamental would need 8D.
+  L4 (Z_3 support):   q_L + q_H + q_R = 0 mod 3 locks L and R.
+  L5 (Schur collapse): U_L (m I) U_R^dag = m U_L U_R^dag.
+
+ Conclusion: the antecedent of the Physicist F conditional closure
+       gate is FALSIFIED by the retained atlas.
+       F1 is NOT uniquely pinned by any sole-axiom invariance.
+       The Frobenius-route closure at
+         (sqrt(6)/2 - sqrt(2)/18, sqrt(6)/6 + sqrt(2)/18)
+       is NOT available as a sole-axiom closure of G1.
+
+ the selector gate remains OPEN. Five-candidate ledger unchanged.
+ [PASS] All five attack lines report obstruction; bifundamental invariance is NOT sole-axiom derivable on the retained active doublet block (structural composite verdict)
+
+========================================================================================
+PASS = 37, FAIL = 0
+========================================================================================
+
+----- stderr -----
+

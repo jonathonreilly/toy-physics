@@ -1,0 +1,24 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hubble_lane5_c1_carrier_metrology_axiom_audit.py
+runner_sha256: d866f0b7aed981badc66179b27d2ba26d5623f322891f9ae14d1cdf156ce2515
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+==============================================================================
+Lane 5 (C1) carrier/metrology axiom audit
+==============================================================================
+[PASS] direct_C1_shortcuts_are_blocked: A1_bulk_car_rank_four=blocked, A2_dimensionless_lattice_metrology=blocked, A4_parity_gate_to_car=blocked, A5_full_cell_odd_coframe_restriction=blocked
+[PASS] bilinear_route_is_capacity_positive_selector_open: P_A bilinears generate M4(C), but metric/orientation/phase selector is open
+[PASS] minimal_selector_premise_is_explicit: active Cl4 plus metric/orientation/phase and CAR pairing selector
+[PASS] minimal_metrology_premise_is_explicit: non-rescaling clock/source/action map selecting dimensional kappa
+[PASS] current_stack_does_not_derive_C1_without_new_premises: A1/A2/A4/A5 block direct derivations; A6 supplies capacity only
+[PASS] conditional_C1_route_is_well_formed_if_premises_are_accepted: selector + metrology would feed the existing conditional Target 3/source-unit chain
+[PASS] lane5_C1_now_requires_human_science_judgment_or_new_theorem: accept a minimal carrier/metrology premise or discover a new selector/metrology theorem
+------------------------------------------------------------------------------
+TOTAL: PASS=7, FAIL=0
+Conclusion: C1 is not derived on the current stack. The minimal conditional route is explicit, but accepting it is a human science-judgment decision unless a new theorem supplies selector and metrology.
+
+----- stderr -----
+

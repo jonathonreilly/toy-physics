@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_bosonic_bilinear_selector.py
+runner_sha256: 25a0968e5cc7e12ea78ecb95332231b941361e65cad80ccd162840e3668bad1a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+Hierarchy bosonic-bilinear selector theorem
+==============================================================================
+
+==============================================================================
+PART 1: BILINEAR ORBIT PARTITION ON THE APBC CIRCLE
+==============================================================================
+  Lt= 2: num_orbits=1, sizes=[2]
+  Lt= 4: num_orbits=1, sizes=[4]
+  Lt= 6: num_orbits=2, sizes=[4, 2]
+  Lt= 8: num_orbits=2, sizes=[4, 4]
+  Lt=10: num_orbits=3, sizes=[4, 4, 2]
+  Lt=12: num_orbits=3, sizes=[4, 4, 4]
+  Lt=14: num_orbits=4, sizes=[4, 4, 4, 2]
+  [PASS] the unique minimal resolved bilinear orbit is Lt = 4
+         resolved single-orbit Lt values = [4]
+
+==============================================================================
+PART 2: BOSONIC CPT-EVEN LOCALITY SELECTS THE KLEIN-FOUR ORBIT
+==============================================================================
+  Lt=2 phases  = [(-0.0, -1.0), (0.0, 1.0)]
+  Lt=4 phases  = [(-0.707106781187, -0.707106781187), (-0.707106781187, 0.707106781187), (0.707106781187, -0.707106781187), (0.707106781187, 0.707106781187)]
+  Lt=2 orbits  = [[(-0.0, -1.0), (0.0, 1.0)]]
+  Lt=4 orbits  = [[(-0.707106781187, -0.707106781187), (-0.707106781187, 0.707106781187), (0.707106781187, -0.707106781187), (0.707106781187, 0.707106781187)]]
+  [PASS] Lt=2 gives only the unresolved sign pair {+i,-i}
+         orbit size = 2
+  [PASS] Lt=4 gives one full sign-and-conjugation closed orbit of size 4
+         orbit size = 4
+
+==============================================================================
+PART 3: THE SELECTED BILINEAR ORBIT IS UNIFORMLY WEIGHTED
+==============================================================================
+  Lt=2 orbit weights = [[1.0]]
+  Lt=4 orbit weights = [[0.5]]
+  Lt=6 orbit weights = [[0.25000000000019], [1.0]]
+  [PASS] Lt=4 is the first resolved bilinear orbit with a single temporal weight
+         weights = [[0.5]]
+  [PASS] Lt>4 immediately introduces multiple orbit sectors or unresolved remnants
+         Lt=6 partition = [[(-0.866025403784, -0.5), (-0.866025403784, 0.5), (0.866025403784, -0.5), (0.866025403784, 0.5)], [(-0.0, -1.0), (0.0, 1.0)]]
+
+==============================================================================
+PART 4: SELECTED HIERARCHY VALUE
+==============================================================================
+  C_4 = 0.967168210134
+  baseline = M_Pl * alpha_LM^16 = 254.643210673817 GeV
+  v_4 = 246.282818290129 GeV
+  v_meas = 246.220000000000 GeV
+  delta = 0.062818290129 GeV
+  rel   = 0.025513%
+  [PASS] bosonic-bilinear selector gives the exact Lt=4 correction
+         absolute error = 0.00e+00
+  [PASS] selected hierarchy value is within 0.5% of the measured electroweak scale
+         relative error = 0.025513%
+
+==============================================================================
+SCORECARD: 7 pass, 0 fail out of 7
+==============================================================================
+
+----- stderr -----
+

@@ -1,0 +1,48 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_doublet_block_matching_obstruction.py
+runner_sha256: a96db1f32b5400d75fa78bd90fdabec73accd5853d69544664a1d47ea883f236
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: DOUBLET-BLOCK MATCHING OBSTRUCTION
+========================================================================================
+
+Authority stack:
+  - docs/NEUTRINO_MAJORANA_BACKGROUND_NORMALIZATION_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_AXIS_EXCHANGE_FIXED_POINT_NOTE.md
+  - docs/NEUTRINO_MAJORANA_ADJACENT_SINGLET_PLACEMENT_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_EPS_OVER_B_RESIDUAL_RATIO_OBSTRUCTION_NOTE.md
+
+Question:
+  Could the obvious normalized 2x2 generation-doublet block match the
+  exact local self-dual Majorana block closely enough to fix eps/B?
+
+  Local self-dual targets:  Q_rel = 1.000000, W_rel = 0.346574
+
+  Generation-doublet normalized observables on G(r) = r I + sigma_x:
+    r=0.010:  Q_rel^(dbl)=0.000100,  W_rel^(dbl)=-0.000050
+    r=0.041:  Q_rel^(dbl)=0.001681,  W_rel^(dbl)=-0.000841
+    r=0.080:  Q_rel^(dbl)=0.006400,  W_rel^(dbl)=-0.003210
+    r=0.150:  Q_rel^(dbl)=0.022500,  W_rel^(dbl)=-0.011378
+  [PASS] Quadratic matching to the local self-dual comparator forces r = 1  (r_Q=1.000000000000)
+  [PASS] Log-response matching has no perturbative solution with 0 < r < 1  (W_rel^(dbl)=0.5 log|1-r^2| <= 0 for 0<r<1, but W_local > 0)
+  [PASS] The only positive log-response match is order-1: r = sqrt(3)  (r_W=1.732050807569)
+  [PASS] The fitted perturbative band r ~ 0.01-0.15 is far from the local self-dual comparator target  (max deviation=0.999900)
+  [PASS] The fitted perturbative band gives the wrong sign for the local log-response target  (max W_dbl=-0.000050, W_local=0.346574)
+
+Result:
+  The obvious normalized 2x2 local-to-doublet matching class fails.
+  Its quadratic match forces r = 1, its bosonic log-response match
+  forces r = sqrt(3), and neither admits a perturbative eps/B << 1.
+
+  So the live blocker is narrower again:
+      derive a genuinely new eps/B law beyond the obvious normalized
+      local-to-doublet block matching class.
+
+PASS=5  FAIL=0
+
+----- stderr -----
+

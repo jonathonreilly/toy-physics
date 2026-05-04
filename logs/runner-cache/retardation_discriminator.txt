@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/retardation_discriminator.py
+runner_sha256: d273812c1b90e7919972bf4bea1b751560f221803ffe293db7ec295205c0a82c
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

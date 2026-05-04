@@ -1,0 +1,75 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_right_conjugacy_invariant_nogo.py
+runner_sha256: 6edbe5019ce566ab78d29ec3ffb3d44dd11f74f29d1adf779f637a8d1633e782
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+PMNS RIGHT-CONJUGACY-INVARIANT NO-GO
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - PMNS right-frame orbit obstruction
+  - PMNS right-Gram selector realization
+  - PMNS right-Gram sheet fixing
+  - PMNS scalar bridge nonrealization
+  - observable principle
+
+Question:
+  Can the admitted PMNS right-Gram route be made intrinsic using
+  only right-conjugacy-invariant observables of K = Y^dag Y?
+
+========================================================================================
+PART 1: RIGHT-CONJUGACY INVARIANTS ARE CONSTANT ON THE EXACT RIGHT ORBIT
+========================================================================================
+  [PASS] The right orbit preserves spectral and trace-type invariants of K  (signature error=8.24e-15)
+  [PASS] So every right-conjugacy-invariant observable of K is constant on the orbit
+
+  This exhausts the obvious spectral / trace-style family.
+
+========================================================================================
+PART 2: THE ADMITTED RIGHT-GRAM DATA VARY ON THAT SAME ORBIT
+========================================================================================
+  [PASS] m_R changes along a right orbit with the same K-signature  (scores=(0, 3))
+  [PASS] |K_12| changes along a right orbit with the same K-signature  (values=(0.660000, 0.151678))
+
+  So the admitted selector and sheet data are genuinely finer than
+  every right-conjugacy-invariant summary of K.
+
+========================================================================================
+PART 3: THE CURRENT SCALAR BANK IS ALREADY SEPARATELY RULED OUT
+========================================================================================
+  [PASS] The observable principle fixes the retained scalar bank to the additive log|det| grammar
+  [PASS] The scalar bridge theorem says that retained scalar bank does not realize the PMNS selector bridge
+
+  So there is no hidden scalar-only rescue either.
+
+========================================================================================
+PART 4: THE ATLAS NOW RECORDS THE RIGHT-CONJUGACY-INVARIANT NO-GO
+========================================================================================
+  [PASS] The new note identifies the missing object as non-conjugacy-invariant plus right-frame law
+  [PASS] The atlas carries the PMNS right-conjugacy-invariant no-go row
+
+  So the K-side invariant family is exhausted too.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-bank answer:
+    - right-conjugacy-invariant observables of K are constant on the
+      exact right orbit
+    - but the admitted selector datum and admitted sheet scalar vary on
+      that same orbit
+    - and the retained additive scalar bank is already separately ruled out
+
+  So the missing intrinsic object must be genuinely
+  non-conjugacy-invariant on the right data and must come with a
+  canonical right-frame law or equivalent right-sensitive observable
+  principle.
+
+PASS=8  FAIL=0
+
+----- stderr -----
+

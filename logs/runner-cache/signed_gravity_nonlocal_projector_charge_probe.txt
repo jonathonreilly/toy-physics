@@ -1,0 +1,62 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_nonlocal_projector_charge_probe.py
+runner_sha256: e7bdd30f2ce86a8ab79709a8c04e5cd809aa506d9a02c599175f765fa1307cb3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+============================================================================================
+SIGNED GRAVITY NONLOCAL PROJECTOR-DIFFERENCE CHARGE PROBE
+  Candidate C: Q_chi = P_+ - P_- on an external two-sector extension
+============================================================================================
+
+PROJECTOR ALGEBRA
+  Q Hermitian residual: 0.000e+00
+  Q^2-I residual:       0.000e+00
+  sector dimensions:    +8 / -8
+
+CONSERVATION / SUPERSELECTION
+  [P_+/-, H_retained] residual: 0.000e+00  PASS
+  P_- U_retained P_+ leakage:   0.000e+00  PASS
+  sector-mixing perturbation residual: 1.000e-01  control should fail if allowed
+
+SCALAR-SOURCE PINNING
+  epsilon spectrum in P_+ sector: [-1.0, +1.0]
+  epsilon spectrum in P_- sector: [-1.0, +1.0]
+  scalar pinning status: FAIL
+
+SOURCE / RESPONSE LOCKING
+  inserted projector-source finite-difference residual: 0.000e+00
+  positive Born-source finite-difference residual:       0.000e+00
+  retained scalar source is not changed by the projector unless the Q source action is added
+  same-sector force prefactor:     +1
+  opposite-sector force prefactor: -1
+  action-reaction prefactor residual when source=response sign: 0.000e+00
+
+POSITIVE INERTIAL MASS / NULL CONTROLS
+  pure + active charge:       +1.700000
+  equal +/- active charge:    -3.803094e-17
+  equal +/- inertial mass:    1.700000
+  q_bare pure +:              +21.362830
+  q_bare equal +/-:           -4.779109e-16
+
+BORN / NORM CONTROLS
+  Born I3 residual:           +6.939e-17
+  unitary norm drift:         1.110e-16
+
+BASIS / MIXED-SUPERPOSITION AMBIGUITY
+  weighted superposition <Q>:         +0.600000
+  same state under rotated Q=X:       +0.000000
+  equal +/- state as X-branch <X>:    +1.000000
+  mixed states have expectation-valued active charge unless sectors are superselected
+
+VERDICT
+  The external projector split passes the formal conserved-sector controls.
+  It does not by itself derive a native signed source from the retained scalar action,
+  does not pin the local scalar source, and is basis-dependent without an independent
+  boundary/global constraint that fixes P_+ and P_-.
+FINAL_TAG: NONLOCAL_PROJECTOR_FORMAL_CONTROL_ONLY
+
+----- stderr -----
+

@@ -1,0 +1,50 @@
+===== runner cache v1 =====
+runner: scripts/frontier_omega_lambda_matter_bridge.py
+runner_sha256: 374c00ce0d49f572a70f1f11cd93e3ff5360a624fa8e0acdb2fb6a012dddc621
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.35
+status: ok
+----- stdout -----
+================================================================================
+Omega_Lambda Matter-Bridge Theorem verification
+================================================================================
+[PASS] 1.1 Omega_Lambda = rho_Lambda / rho_crit = (H_inf/H_0)^2 (sympy exact)
+       Omega_Lambda = c**2/(H_0**2*R_Lambda**2)
+       target       = c**2/(H_0**2*R_Lambda**2)
+       residual     = 0
+[PASS] 1.2 rho_Lambda = 3 H_inf^2/(8 pi G) (intermediate identity, sympy)
+       rho_Lambda = 3*c**2/(8*pi*G*R_Lambda**2)
+[PASS] 2.1 Omega_m = 1 - (H_inf/H_0)^2 - Omega_r (flat FRW, sympy)
+       Omega_m = -Omega_r + 1 - c**2/(H_0**2*R_Lambda**2)
+[PASS] 3.1 H_inf / H_0 = sqrt(Omega_Lambda) from (★) applied to Planck 2018
+       sqrt(Omega_Lambda) = 0.827466  (using Omega_Lambda = 0.6847)
+[PASS] 3.2 Planck 2018 flatness: |1 - Omega_Lambda - Omega_m - Omega_r| < 0.01
+       residual = -0.000092
+[PASS] 3.3 (M) applied: Omega_m = 1 - Omega_Lambda - Omega_r matches Planck to ~0.01
+       Omega_m (from M) = 0.315208
+       Omega_m (Planck) = 0.3153
+[PASS] 4.1 R_Lambda / l_Planck ~ 10^61 (cosmological hierarchy)
+       R_Lambda = 1.660e+26 m
+       l_Planck = 1.616e-35 m
+       ratio    = 1.027e+61
+[PASS] 5.1 w = -1 from d(rho_Lambda)/d(a) = 0 for constant Lambda (sympy)
+       d(rho_Lambda)/d(a) = 0
+[PASS] 6.1 Three cosmology rows (Lambda, Omega_Lambda, Omega_m) reduce to ONE open number
+       Before: three independent bounded cosmology items.
+       After:  all three are exact identities in (R_Lambda, H_0).
+               Open: the dimensionless ratio R_Lambda H_0 / c = 1/(H_inf/H_0).
+               Closing that one number closes all three rows simultaneously.
+
+================================================================================
+Summary
+================================================================================
+PASSED: 9/9
+
+THEOREM: Omega_Lambda = (H_inf / H_0)^2 holds exactly on the retained
+spectral-gap / de Sitter vacuum surface. Under flat FRW, Omega_m follows
+algebraically. The three bounded cosmology rows now reduce to ONE open
+dimensionless number, the matter-content bridge.
+
+----- stderr -----
+

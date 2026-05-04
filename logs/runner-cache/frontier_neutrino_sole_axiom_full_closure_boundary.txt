@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_sole_axiom_full_closure_boundary.py
+runner_sha256: d1f0eda0e331b637f1701062005213413c12bc21c48eef9ef3ae85fe651dad5c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO SOLE-AXIOM FULL CLOSURE BOUNDARY
+========================================================================================
+
+Question:
+  Does the retained neutrino lane close top-to-bottom from the sole axiom
+  Cl(3) on Z^3 alone?
+
+========================================================================================
+PART 1: DIRAC/PMNS SOLE-AXIOM ROUTE IS NOT POSITIVELY CLOSED
+========================================================================================
+  [PASS] The sole-axiom free response profiles are rejected by the retained PMNS closure stack  (pair is not on a one-sided minimal PMNS class)
+  [PASS] The sole-axiom free active response profile has only diagonal support
+  [PASS] The retained scalar deformation route stays diagonal on the active triplet
+  [PASS] The retained PMNS closure stack rejects the scalar route too  (response packs do not realize a one-sided minimal PMNS class)
+
+========================================================================================
+PART 2: THE GRAPH-FIRST REDUCED CYCLE CHANNEL IS REALIZED BUT NOT SELECTED
+========================================================================================
+  [PASS] Two distinct reduced-channel points are both realized exactly on the lower-level active response chain  (|A-B|=0.715961)
+  [PASS] Both realized points satisfy the same graph-first residual antiunitary symmetry
+  [PASS] The native oriented-cycle observable law separates the two realized points exactly  (|Δcoords|=0.508035)
+  [INFO] The current exact bank does not select a unique reduced-channel value
+  [PASS] The surviving positive carrier has canonical diagonal-plus-forward-cycle support
+
+========================================================================================
+PART 3: MAJORANA STAYS CLOSED NEGATIVELY ON THE LOWER-LEVEL LANE
+========================================================================================
+  [PASS] The lower-level charge-preserving Nambu response has zero anomalous block in the three-generation channel  (|pair|=0.00e+00)
+  [INFO] The retained Majorana lane does not reopen on the lower-level charge-preserving response layer
+
+========================================================================================
+PART 4: CIRCULARITY GUARDS
+========================================================================================
+  [PASS] The lower-level active response derivation takes no PMNS-side value targets as inputs  (bad=[])
+  [PASS] The native oriented-cycle readout takes no reduced-channel coordinates as inputs  (bad=[])
+  [PASS] The downstream PMNS closure stack takes no target PMNS values as inputs  (bad=[])
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact retained-neutrino sole-axiom boundary:
+    - the sole axiom does not produce PMNS-active lower-level response profiles
+    - retained scalar deformation routes stay too small
+    - the surviving graph-first reduced oriented-cycle channel is realized
+      but not value-selected by the current exact bank
+    - the retained Majorana lane does not reopen on the lower-level
+      charge-preserving response layer
+
+  Therefore full retained-neutrino closure from Cl(3) on Z^3 alone is
+  blocked on the current exact bank. Any further positive closure would
+  require genuinely new dynamics or a further admitted extension.
+
+PASS=12 FAIL=0
+
+----- stderr -----
+

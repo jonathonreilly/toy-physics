@@ -1,0 +1,70 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_sector_odd_bridge_reduction.py
+runner_sha256: 4ed9f90d93ff6e2f1e6006713e61ab9448bc924c5a36beacab7cc01a76af1055
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+PMNS SELECTOR: SECTOR-ODD BRIDGE REDUCTION
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - PMNS sector-exchange nonforcing
+  - PMNS scalar bridge nonrealization
+
+Question:
+  What exact parity class can the missing PMNS selector now be reduced
+  to on the one-sided surface?
+
+========================================================================================
+PART 1: ANY BRANCH-DISTINGUISHING SCALAR REDUCES TO ITS SECTOR-ODD PART
+========================================================================================
+  [PASS] A branch-distinguishing scalar has unequal values on the two orientations  (F_nu=2.700, F_e=-0.400)
+  [PASS] Its sigma-odd part is nonzero on the reduced surface  (F_- values=(1.550,-1.550))
+  [PASS] The sigma-odd part flips sign under sector exchange  (sum=0.00e+00)
+  [PASS] The sigma-even part cannot distinguish the two orientations  (F_+=1.150)
+
+  So any successful one-sided PMNS selector can be reduced to a
+  nonzero sector-odd scalar on the reduced surface.
+
+========================================================================================
+PART 2: THE CURRENT SUPPORT AND SCALAR BANKS SUPPLY ONLY SECTOR-EVEN DATA
+========================================================================================
+  [PASS] The reduced support-bank totals are sector-even  (support antisym=(0.00e+00,0.00e+00))
+  [PASS] The additive scalar observable bank is sector-even under exchange  (scalar antisym=(0.00e+00,0.00e+00))
+  [PASS] So neither current bank supplies a nonzero sector-odd selector part  (their antisymmetrizations vanish on the reduced one-sided surface)
+
+  The present banks therefore stop at sector-even data:
+  unordered support information and additive block-local scalar response.
+
+========================================================================================
+PART 3: THE MINIMAL MISSING OBJECT IS A SECTOR-ODD MIXED BRIDGE
+========================================================================================
+  [PASS] The support-side theorem says the current support bank cannot force tau
+  [PASS] The scalar theorem says the current scalar bank does not realize the selector bridge
+  [PASS] The atlas carries both obstruction rows
+
+  Therefore the smallest future selector can be taken to be:
+    - sector-odd under sigma,
+    - genuinely inter-sector,
+    - and mixed, rather than a sum of independent block data.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-bank answer:
+    - any branch-distinguishing selector reduces to its nonzero
+      sector-odd part under sigma
+    - the current support and additive scalar banks provide only
+      sector-even data on the reduced one-sided surface
+    - so the minimal missing object is a sector-odd mixed bridge
+      functional
+
+  This is the sharpest exact finish-line reduction currently available.
+
+PASS=10  FAIL=0
+
+----- stderr -----
+

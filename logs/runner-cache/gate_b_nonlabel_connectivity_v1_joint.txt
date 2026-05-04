@@ -1,0 +1,28 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_nonlabel_connectivity_v1_joint.py
+runner_sha256: 48460868e0ccd0af02f253095f73aaf1af17971cc02827203130092d299c02a7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 45.02
+status: ok
+----- stdout -----
+==========================================================================
+GATE B NON-LABEL CONNECTIVITY V1 JOINT PACKAGE
+  Born / d_TV / MI / decoherence on exact grid vs geometry-sector stencil
+==========================================================================
+h=0.5, W=10, NL=25, seeds=4, drift=0.2
+growth rule: template previous layer + drift, then geometry-sector connectivity
+
+geometry                       Born     d_TV       MI    Decoh
+exact grid                 0.00e+00    0.458    0.178    17.2%
+geometry-sector stencil    5.13e-16    0.453    0.204    17.5%
+
+SAFE INTERPRETATION
+  This harness freezes one geometry-only joint-package candidate.
+  It should be read as a bounded comparison on the no-restore grown family,
+  not as a full Gate B closure or a universal non-label connectivity theorem.
+
+Total time: 45s
+
+----- stderr -----
+

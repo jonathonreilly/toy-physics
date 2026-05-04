@@ -1,0 +1,42 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_to_dweh_local_chain_path_algebra_current_bank_boundary_2026_04_18.py
+runner_sha256: fe379d62391da70172f8f4ad725a9ffe95cfbe175bea504144fc599cf296b71d
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.75
+status: nonzero_exit
+----- stdout -----
+========================================================================================
+DM WILSON-TO-dW_e^H LOCAL CHAIN PATH-ALGEBRA CURRENT-BANK BOUNDARY
+========================================================================================
+
+========================================================================================
+PART 1: THE GENERIC WILSON-TO-dW_e^H ROUTE IS STILL NOT REALIZED
+========================================================================================
+  [PASS] The generic current-bank boundary note already says there is no theorem-grade Wilson-to-dW_e^H descendant law on the current stack
+  [PASS] The same boundary note already says there is no theorem-grade Wilson Hermitian source family on the current stack
+
+========================================================================================
+PART 2: THE LOCAL PATH ALGEBRA WOULD AUTOMATICALLY INDUCE THAT GENERIC ROUTE
+========================================================================================
+  [PASS] The local chain target note says the Hermitian shadow of Phi_chain gives a canonical 9-channel Wilson Hermitian source family
+  [PASS] The minimal-certificate note says the whole structured route is equivalent to Phi_chain plus the descended identity into dW_e^H
+
+========================================================================================
+PART 3: THERE IS NO HIDDEN PRE-EXISTING LOCAL PATH-ALGEBRA ARTIFACT
+========================================================================================
+  [PASS] No pre-existing doc or script outside the new Wilson/DM stack already combines Phi_chain with dW_e^H under another name  (hits=[])
+  [FAIL] No pre-existing doc or script outside the new Wilson/DM stack already states a path-algebra route into dW_e^H  (hits=['docs/DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md', 'scripts/frontier_perron_frobenius_step2_nilpotent_chain_helper_layer_2026_04_19.py'])
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The current stack does not already realize the sharpest local Wilson certificate for the DM route  (if it did, it would already realize the excluded generic Wilson-to-dW_e^H source family route)
+  [PASS] So the remaining gap is genuinely constructive even at the sharpest local level  (positive construction of Phi_chain plus the descended identity still remains)
+
+========================================================================================
+SUMMARY: PASS=7 FAIL=1
+========================================================================================
+
+----- stderr -----
+

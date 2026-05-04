@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/lattice_nn_rg_alpha_sweep.py
+runner_sha256: 340569f707fbdd84001c0c2bbf6be77eed01688f18dc2b8d43ed1d84b9cbd4e3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 4.36
+status: ok
+----- stdout -----
+========================================================================================================================
+NN LATTICE RG ALPHA SWEEP
+  Geometry: 3 edges/node, deterministic rescale schedule spacing/sqrt(3)
+  Base strength = 0.0005, k=5.0, mass at y=8.0
+  h values = 1, 0.5, 0.25
+  alpha values = 0, 0.5, 1, 1.5
+========================================================================================================================
+
+ALPHA = 0
+       h     nodes    strength     gravity         k=0        MI     1-pur      d_TV        Born   time
+  -------------------------------------------------------------------------------------------------
+   1.000      1681      0.0005   -0.116678   +0.00e+00    0.5022    0.4229    0.7455    6.16e-16     0s
+   0.500      6561      0.0005   +0.138226   +0.00e+00    0.7420    0.4844    0.9072    4.95e-16     0s
+   0.250     25921      0.0005   +0.077415   +0.00e+00    0.9470    0.4989    0.9878    3.95e-16     1s
+  ratio g(0.25)/g(0.5) = 0.560  effective exponent from the pair = 0.836
+
+ALPHA = 0.5
+       h     nodes    strength     gravity         k=0        MI     1-pur      d_TV        Born   time
+  -------------------------------------------------------------------------------------------------
+   1.000      1681      0.0005   -0.116678   +0.00e+00    0.5022    0.4229    0.7455    6.16e-16     0s
+   0.500      6561    0.000707   +0.159796   +0.00e+00    0.7420    0.4844    0.9072    4.95e-16     0s
+   0.250     25921       0.001   +0.104860   +0.00e+00    0.9470    0.4989    0.9878    3.95e-16     1s
+  ratio g(0.25)/g(0.5) = 0.656  effective exponent from the pair = 0.608
+
+ALPHA = 1
+       h     nodes    strength     gravity         k=0        MI     1-pur      d_TV        Born   time
+  -------------------------------------------------------------------------------------------------
+   1.000      1681      0.0005   -0.116678   +0.00e+00    0.5022    0.4229    0.7455    6.16e-16     0s
+   0.500      6561       0.001   +0.183567   +0.00e+00    0.7420    0.4844    0.9072    4.95e-16     0s
+   0.250     25921       0.002   +0.139274   +0.00e+00    0.9470    0.4989    0.9878    3.95e-16     1s
+  ratio g(0.25)/g(0.5) = 0.759  effective exponent from the pair = 0.398
+
+ALPHA = 1.5
+       h     nodes    strength     gravity         k=0        MI     1-pur      d_TV        Born   time
+  -------------------------------------------------------------------------------------------------
+   1.000      1681      0.0005   -0.116678   +0.00e+00    0.5022    0.4229    0.7455    6.16e-16     0s
+   0.500      6561     0.00141   +0.209207   +0.00e+00    0.7420    0.4844    0.9072    4.95e-16     0s
+   0.250     25921       0.004   +0.179561   +0.00e+00    0.9470    0.4989    0.9878    3.95e-16     1s
+  ratio g(0.25)/g(0.5) = 0.858  effective exponent from the pair = 0.220
+
+READ
+- within the scanned grid, the strongest checked alpha for h=0.5 vs h=0.25 stability: 1.5
+- corresponding gravity ratio: 0.858
+- pairwise effective exponent: 0.220
+- the trend improves monotonically across the scanned alpha grid
+- Born refers to the same-family companion audit on the deterministic path
+- this is a fixed-point style probe, not a promoted renormalization theorem
+
+----- stderr -----
+

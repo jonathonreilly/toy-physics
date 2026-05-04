@@ -1,0 +1,79 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_relative_action_stationarity_theorem.py
+runner_sha256: 9bad170fd837c93ca06bd2c58dac4b238d01f20bbdd74b7d6601ac17d1000a2a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 52.91
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS RELATIVE-ACTION STATIONARITY THEOREM
+========================================================================================
+
+Framework convention:
+  "axiom" means only Cl(3) on Z^3.
+
+Question:
+  Is minimizing the seed-relative bosonic action on the fixed N_e seed
+  surface an extra selector postulate, or is it already the native
+  effective-action law attached to the sole-axiom observable principle?
+
+========================================================================================
+PART 1: THE RELATIVE BOSONIC ACTION IS THE EXACT LEGENDRE DUAL
+========================================================================================
+  [PASS] The seed-relative bosonic action equals the exact Legendre dual of the sole-axiom logdet generator  (S_rel=0.240906702296, dual=0.240906702296)
+  [PASS] The dual maximizer is the exact observable-principle source K_* = Y^{-1} - I  (max directional gradient=2.220e-09)
+  [PASS] The dual is strictly concave at K_* so S_rel is the unique effective action on the positive cone  (worst sampled Hessian quadratic=-1.710596e+00)
+
+  Effective-action identity:
+    S_rel(Y) = sup_K [ log det(I+K) - Tr(KY) ]
+  with Y = H_seed^(-1/2) H H_seed^(-1/2), S_rel = 0.240906702296
+
+========================================================================================
+PART 2: THE CURRENT CLOSURE PATCH HAS A UNIQUE LOWEST-ACTION BRANCH
+========================================================================================
+  [PASS] The exact transport-extremal class still fixes the favored closure column on the fixed seed surface  (favored column=0)
+  [PASS] Sampled constrained solves exhibit more than one stationary closure branch  (sampled action levels=[0.240906701, 1.110657539])
+  [PASS] The lowest-action closure branch is unique across all sampled constrained solves  (max low-branch |Δp|=5.017e-06, S_min=0.240906701369)
+  [PASS] The constrained stationary source closes eta exactly on the favored column  (etas=[1.         0.75917896 0.4845884 ])
+
+  x_stat     = [0.471675, 0.553811, 0.664514]
+  y_stat     = [0.208063, 0.464383, 0.247554]
+  delta_stat = -1.228940466232e-06
+  S_rel      = 0.240906701369
+  eta/eta_obs= [1.         0.75917896 0.4845884 ]
+
+========================================================================================
+PART 3: THE SELECTED BRANCH IS A STRICT LOCAL CLOSURE MINIMUM
+========================================================================================
+  [PASS] The exact closure source satisfies the constrained Euler-Lagrange equation for the effective action  (|∇S-λ∇C|=1.263e-05)
+  [PASS] The projected Lagrangian Hessian is positive on the closure tangent space  (min tangent Hessian eigenvalue=4.471934e-01)
+  [PASS] Sampled near-exact closure-preserving perturbations all increase the relative action  (min gap=1.702294e-06, max closure err=8.948e-09)
+
+  Lagrange multiplier λ = 1.928714890785
+  min tangent Hessian eigenvalue = 4.471933597322e-01
+  min sampled closure gap        = 1.702294367689e-06
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The relative bosonic action is now an exact sole-axiom effective action, not an imported information ansatz  (it is the Legendre dual of the exact log|det| observable generator)
+  [PASS] On the current PMNS-assisted N_e closure patch, the selector is the unique lowest-action branch of that effective action  (stationarity alone is not enough; minimization picks the physical branch)
+  [PASS] So the remaining selector gap is no longer the action principle itself but only any future demand for a branch-global analytic uniqueness proof  (the current branch already carries the constrained effective-action selector)
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact reduction:
+    - S_rel is the exact Legendre-dual effective action of the
+      sole-axiom scalar observable generator
+    - the PMNS-assisted N_e closure source is the unique
+      lowest-action constrained branch on the exact closure surface
+
+  So on the current branch, minimal relative bosonic action is no longer
+  an external selector ansatz; it is the native effective-action law.
+
+PASS=13  FAIL=0
+
+----- stderr -----
+

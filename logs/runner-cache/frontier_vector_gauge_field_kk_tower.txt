@@ -1,0 +1,96 @@
+===== runner cache v1 =====
+runner: scripts/frontier_vector_gauge_field_kk_tower.py
+runner_sha256: 8929f193f590aeb96f5fdebe32f9a77d2e716fbeaea6f881c5c50fc5313b9402
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+Vector gauge-field compactness spectral tower verification
+Status boundary: structural tower retained; numerical masses bounded
+
+----------------------------------------------------------------------------------------
+Part A: V1 vector tower numerators
+----------------------------------------------------------------------------------------
+  [PASS] lambda_1^V R^2 = 2 (computed 2)
+  [PASS] lambda_2^V R^2 = 7 (computed 7)
+  [PASS] lambda_3^V R^2 = 14 (computed 14)
+  [PASS] lambda_4^V R^2 = 23 (computed 23)
+  [PASS] lambda_5^V R^2 = 34 (computed 34)
+  [PASS] lambda_6^V R^2 = 47 (computed 47)
+  [PASS] lambda_7^V R^2 = 62 (computed 62)
+  [PASS] lambda_8^V R^2 = 79 (computed 79)
+  [PASS] lambda_9^V R^2 = 98 (computed 98)
+  [PASS] lambda_10^V R^2 = 119 (computed 119)
+
+----------------------------------------------------------------------------------------
+Part B: Lambda coefficient form
+----------------------------------------------------------------------------------------
+  [PASS] m_1^2 coefficient in hbar^2 Lambda/c^2 is 2/3 (3*2/3 = 2)
+  [PASS] m_2^2 coefficient in hbar^2 Lambda/c^2 is 7/3 (3*7/3 = 7)
+  [PASS] m_3^2 coefficient in hbar^2 Lambda/c^2 is 14/3 (3*14/3 = 14)
+  [PASS] m_4^2 coefficient in hbar^2 Lambda/c^2 is 23/3 (3*23/3 = 23)
+
+----------------------------------------------------------------------------------------
+Part C: V2 rational squared-mass ratios
+----------------------------------------------------------------------------------------
+  [PASS] (m_1/m_2)^2 is rational (2/7)
+  [PASS] (m_1/m_3)^2 is rational (1/7)
+  [PASS] (m_1/m_4)^2 is rational (2/23)
+  [PASS] (m_2/m_3)^2 is rational (1/2)
+  [PASS] (m_2/m_5)^2 is rational (7/34)
+  [PASS] (m_3/m_6)^2 is rational (14/47)
+  [PASS] (m_4/m_7)^2 is rational (23/62)
+  [PASS] (m_5/m_10)^2 is rational (2/7)
+  [PASS] (m_2/m_1)^2 = 7/2 (computed 7/2)
+  [PASS] (m_3/m_1)^2 = 7 (computed 7)
+  [PASS] (m_4/m_1)^2 = 23/2 (computed 23/2)
+  [PASS] (m_5/m_1)^2 = 17 (computed 17)
+  [PASS] (m_6/m_1)^2 = 47/2 (computed 47/2)
+
+----------------------------------------------------------------------------------------
+Part D: connection to retained Lambda = 3/R^2
+----------------------------------------------------------------------------------------
+  [PASS] m_1^2 = (2/3) hbar^2 Lambda/c^2 (vector numerator 2)
+  [PASS] m_2^2 = (7/3) hbar^2 Lambda/c^2 (vector numerator 7)
+  [PASS] m_3^2 = (14/3) hbar^2 Lambda/c^2 (vector numerator 14)
+  [PASS] m_4^2 = (23/3) hbar^2 Lambda/c^2 (vector numerator 23)
+  [PASS] m_5^2 = (34/3) hbar^2 Lambda/c^2 (vector numerator 34)
+  [PASS] m_6^2 = (47/3) hbar^2 Lambda/c^2 (vector numerator 47)
+  [PASS] lowest vector mode has m_1^2 = (2/3) hbar^2 Lambda/c^2 (coefficient 2/3)
+
+----------------------------------------------------------------------------------------
+Part E: comparison with retained TT graviton tower
+----------------------------------------------------------------------------------------
+  [PASS] common-level vector/TT squared ratio at l=2 is rational (7/6)
+  [PASS] common-level vector/TT squared ratio at l=3 is rational (14/13)
+  [PASS] common-level vector/TT squared ratio at l=4 is rational (23/22)
+  [PASS] common-level vector/TT squared ratio at l=5 is rational (34/33)
+  [PASS] common-level vector/TT squared ratio at l=6 is rational (47/46)
+  [PASS] common-level vector/TT squared ratio at l=7 is rational (62/61)
+  [PASS] lowest vector / lowest TT squared ratio is 1/3 (computed 1/3)
+
+----------------------------------------------------------------------------------------
+Part F: scalar/vector/TT spin-curvature shift bookkeeping
+----------------------------------------------------------------------------------------
+  [PASS] scalar numerator has zero shift (24)
+  [PASS] vector numerator has -1 shift (23)
+  [PASS] TT numerator has -2 shift (22)
+
+----------------------------------------------------------------------------------------
+Part G: bounded numerical companion checks
+----------------------------------------------------------------------------------------
+  [PASS] lowest vector compactness mass matches graviton-ratio companion value (2.033e-33 eV vs 2.032e-33 eV)
+  [PASS] electroweak W/Z Higgs masses dominate compactness shift (fractional m^2 shift 6.397e-88)
+
+========================================================================================
+TOTAL: PASS=46, FAIL=0
+========================================================================================
+PASSED: 46/46
+VECTOR_GAUGE_FIELD_KK_TOWER=TRUE
+VECTOR_KK_STRUCTURAL_IDENTITY_RETAINED=TRUE
+VECTOR_KK_NUMERICAL_MASSES_BOUNDED=TRUE
+VECTOR_KK_PHYSICAL_PARTICLE_INTERPRETATION_PROMOTED=FALSE
+
+----- stderr -----
+

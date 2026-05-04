@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_abcc_retained_measurement_closure_2026_04_21.py
+runner_sha256: cff7ffc0656747dec9b11b8609dbbe87539bfd2d8602e9b021dc7f040e260d49
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 118.81
+status: ok
+----- stdout -----
+DM A-BCC retained measurement closure theorem
+========================================================================
+
+Part 1: Execute the retained theorem stack
+  [PASS] Dependency runner passes: active-chamber completeness  (rc=0, PASS=11, FAIL=0)
+  [PASS] Dependency runner passes: upper-octant / source-cubic selector  (rc=0, PASS=14, FAIL=0)
+  [PASS] Dependency runner passes: sigma_hier upper-octant selector  (rc=0, PASS=14, FAIL=0)
+  [PASS] Dependency runner passes: P3 Sylvester physical path  (rc=0, PASS=11, FAIL=0)
+  [PASS] Dependency runner passes: PMNS nonsingularity reduction  (rc=0, PASS=33, FAIL=0)
+  [PASS] Dependency runner passes: Sylvester signature forcing  (rc=0, PASS=43, FAIL=0)
+  [PASS] Dependency runner passes: sigma-chain attack cascade  (rc=0, PASS=34, FAIL=0)
+
+Part 2: Direct basin-level endpoint checks
+  [PASS] Basin 1 satisfies the retained chamber bound  (q+delta=1.648848673346, sqrt(8/3)=1.632993161855)
+  [PASS] Basin 1 endpoint lies in C_base  (det=0.959173815867)
+  [PASS] Basin 2 endpoint lies in C_neg  (det=-70536.043217097103)
+  [PASS] Basin X endpoint lies in C_neg  (det=-20296.107088688987)
+
+Part 3: Integration consequences
+  [PASS] sigma-chain runner explicitly derives PNS from the retained measurement framework
+  [PASS] sigma-chain runner explicitly closes the basin-selection gate
+  [PASS] signature-forcing runner records the reduction A-BCC <- PNS + Sylvester inertia
+  [PASS] nonsingularity runner confirms all C_neg basins violate PNS
+
+Part 4: Closure-grade statement
+  [summary] A-BCC is closed on the retained measurement framework.
+  [summary] The stricter axiom-native A-BCC target remains outside this closure grade.
+  [summary] The only live DM blocker on the review surface is the finer right-sensitive microscopic selector law.
+
+========================================================================
+TOTAL: PASS=15 FAIL=0
+STATUS: ALL PASS — retained-measurement A-BCC closure verified
+========================================================================
+
+----- stderr -----
+

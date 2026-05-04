@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/numpy_replay_bootstrap.py
+runner_sha256: 41d6345df67dd5e90a5d8073ad963aafca8083df9e0e0b55d4dce6fa233e09e1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+
+----- stderr -----
+

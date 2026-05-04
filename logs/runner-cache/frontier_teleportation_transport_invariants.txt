@@ -1,0 +1,23 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_transport_invariants.py
+runner_sha256: bdae22731104821ffa11e66b2bedfc6c8e895303f9d4b7f01057aebbfc081d01
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.65
+status: ok
+----- stdout -----
+Native teleportation transport-invariant checks
+PASS  T2 Bell frames form Z2 x Z2 connection group: associative=True, self_inverse=True, frames=4
+PASS  Theorem B multi-hop xor holonomy: chains=69904, max_trace_distance=0.000e+00
+PASS  Theorem A missing-record Pauli twirl: max_trace_distance_to_I/2=2.220e-16
+PASS  T3 3D+1 causal record section: distance=7, earliest_tick=11, t10=False, t11=True
+PASS  Theorem C corrections commute with base ledgers: max_commutator_norm=0.000e+00
+PASS  T4 loop holonomy is flat or recorded: flat=(0, 0), unrecorded_defect=(0, 1)
+PASS  Theorem D hidden branch dephasing: unrecorded_Fplus=0.500000, recorded_Fplus=1.000000
+
+Planning transport theory consistency: PASS
+Nature-grade unconditional closure: HOLD
+Reason: this runner checks formal transport invariants only; it does not derive the Bell resource, durable measurement, record carrier, apparatus, noise model, or conservation ledgers from native dynamics.
+
+----- stderr -----
+

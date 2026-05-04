@@ -1,0 +1,108 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hypercharge_squared_trace_catalog.py
+runner_sha256: d1052ac4ec853b6bea6c15411d1bd1a7a3c5aec53bf2c53ba65427f2ee1f71e3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+Hypercharge squared-trace catalog theorem audit
+See docs/HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs
+----------------------------------------------------------------------------------------
+  N_GEN   = 3
+  N_COLOR = 3
+  N_PAIR  = 2
+  T(fund) = 1/2
+  [PASS] three retained generations
+  [PASS] retained N_color = 3
+  [PASS] retained N_pair (SU(2) doublet) = 2
+  [PASS] Dynkin index of fundamental is 1/2
+  [PASS] upstream authority present: docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md
+  [PASS] upstream authority present: docs/HYPERCHARGE_IDENTIFICATION_NOTE.md
+  [PASS] upstream authority present: docs/ANOMALY_FORCES_TIME_THEOREM.md
+  [PASS] upstream authority present: docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md
+  [PASS] upstream authority present: docs/THREE_GENERATION_STRUCTURE_NOTE.md
+
+----------------------------------------------------------------------------------------
+LH block table
+----------------------------------------------------------------------------------------
+  [PASS] LH block Q_L = (su2=2, su3=3, Y=1/3)  (states=6, Y^2=1/9)
+  [PASS] LH block L_L = (su2=2, su3=1, Y=-1)  (states=2, Y^2=1)
+  [PASS] LH state count is 8  (states = 8)
+
+----------------------------------------------------------------------------------------
+RH block table
+----------------------------------------------------------------------------------------
+  [PASS] RH block u_R = (su2=1, su3=3, Y=4/3)  (states=3, Y^2=16/9)
+  [PASS] RH block d_R = (su2=1, su3=3, Y=-2/3)  (states=3, Y^2=4/9)
+  [PASS] RH block e_R = (su2=1, su3=1, Y=-2)  (states=1, Y^2=4)
+  [PASS] RH block nu_R = (su2=1, su3=1, Y=0)  (states=1, Y^2=0)
+  [PASS] RH state count is 8  (states = 8)
+
+----------------------------------------------------------------------------------------
+Y1: Tr[Y^2]_LH = 8/3
+----------------------------------------------------------------------------------------
+  Tr[Y^2]_LH = 8/3
+  [PASS] Tr[Y^2]_LH equals 8/3  (got 8/3)
+  [PASS] expansion 6*(1/3)^2 + 2*(-1)^2 = 8/3  (expanded = 8/3)
+
+----------------------------------------------------------------------------------------
+Y2: Tr[Y^2]_RH = 32/3
+----------------------------------------------------------------------------------------
+  Tr[Y^2]_RH = 32/3
+  [PASS] Tr[Y^2]_RH equals 32/3  (got 32/3)
+  [PASS] expansion 3*(4/3)^2 + 3*(-2/3)^2 + 4 + 0 = 32/3  (expanded = 32/3)
+
+----------------------------------------------------------------------------------------
+Y3: Tr[Y^2]_one_gen = 40/3
+----------------------------------------------------------------------------------------
+  Tr[Y^2]_one_gen = 40/3
+  [PASS] Tr[Y^2]_one_gen equals 40/3  (got 40/3)
+  [PASS] 8/3 + 32/3 = 40/3
+  [PASS] 16-state count per generation
+
+----------------------------------------------------------------------------------------
+Y4: Tr[Y^2]_three_gen = 40
+----------------------------------------------------------------------------------------
+  Tr[Y^2]_three_gen = 40
+  [PASS] Tr[Y^2]_three_gen equals 40  (got 40)
+  [PASS] 3 * 40/3 = 40
+
+----------------------------------------------------------------------------------------
+Y5: Tr[Y_GUT^2]_three_gen = 6 = Tr[T^2]_SU(2,3)
+----------------------------------------------------------------------------------------
+  Tr[T^2]_SU(2),one_gen   = 2
+  Tr[T^2]_SU(3),one_gen   = 2
+  Tr[T^2]_SU(2),three_gen = 6
+  Tr[T^2]_SU(3),three_gen = 6
+  [PASS] Tr[T^2]_SU(2) per generation = 2
+  [PASS] Tr[T^2]_SU(3) per generation = 2
+  [PASS] Tr[T^2]_SU(2) over three gens = 6
+  [PASS] Tr[T^2]_SU(3) over three gens = 6
+  Y_GUT^2 / Y^2 (doubled)   = 3/20
+  Tr[Y_GUT^2]_three_gen     = 6
+  [PASS] Y_GUT^2 = (3/20) Y^2 in doubled convention
+  [PASS] Tr[Y_GUT^2]_three_gen = 6  (got 6)
+  [PASS] Tr[Y_GUT^2]_three_gen = Tr[T^2]_SU(2),three_gen
+  [PASS] Tr[Y_GUT^2]_three_gen = Tr[T^2]_SU(3),three_gen
+  [PASS] Y_GUT^2 / Y_min^2 = 3/5 with Y_min = Y/2  (3/5 * 1/4 = 3/20)
+
+----------------------------------------------------------------------------------------
+Companion: cross-check against retained linear and cubic traces
+----------------------------------------------------------------------------------------
+  Tr[Y]_one_gen           = 0
+  Tr[Y^3]_LH_only         = -16/9
+  [PASS] Tr[Y]_one_gen = 0 (anomaly cancellation, sign convention LH-RH summed direct)
+  [PASS] Tr[Y^3]_LH_only = -16/9 (matches retained anomaly catalog)  (got -16/9)
+
+========================================================================================
+TOTAL: PASS=37, FAIL=0
+========================================================================================
+
+----- stderr -----
+

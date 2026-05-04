@@ -1,0 +1,38 @@
+===== runner cache v1 =====
+runner: scripts/frontier_axiom_stack_minimality_cl4c_no_go.py
+runner_sha256: f33762f86437f1420ca08781572a38ba17edf27ab2410c7e3581522a9ece49c6
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.09
+status: nonzero_exit
+----- stdout -----
+========================================================================
+Axiom-Stack Minimality / Cl_4(C) No-Go Theorem (Block 4) audit
+========================================================================
+
+Section 1: 9 retained no-go/audit chain authority audits
+------------------------------------------------------------------------
+[PASS] MINIMAL_AXIOMS exists with A_min stack — A_min input stack defined
+[PASS] A1 Grassmann no-go exists with Hamming-weight obstruction — A1 cycle 2 result
+[PASS] A2 action-unit no-go exists — A2 cycle 3 result
+[PASS] A4 parity-gate no-go exists — A4 cycle 4 result
+
+----- stderr -----
+Traceback (most recent call last):
+  File "/private/tmp/gate-fix-worktree/scripts/frontier_axiom_stack_minimality_cl4c_no_go.py", line 317, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/private/tmp/gate-fix-worktree/scripts/frontier_axiom_stack_minimality_cl4c_no_go.py", line 76, in main
+    a5 = read_doc("HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/gate-fix-worktree/scripts/frontier_axiom_stack_minimality_cl4c_no_go.py", line 34, in read_doc
+    return (DOCS_DIR / path_rel).read_text(encoding="utf-8")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/gate-fix-worktree/docs/HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md'
+

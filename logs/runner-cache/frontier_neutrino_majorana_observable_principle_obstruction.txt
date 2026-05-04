@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_observable_principle_obstruction.py
+runner_sha256: aff63a336bd0b9301f0959c92b3444df6033b05b84f0615130192de0efa0c076
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: OBSERVABLE-PRINCIPLE OBSTRUCTION
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+  - docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md
+  - docs/NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md
+  - docs/NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md
+
+Question:
+  Can the current mainline observable-principle toolkit activate or
+  force the unique charge-2 Majorana source slot?
+
+========================================================================================
+PART 1: CURRENT OBSERVABLE-PRINCIPLE SOURCES LIVE IN THE CHARGE-ZERO SECTOR
+========================================================================================
+  [PASS] Local density source n0 commutes with total fermion number  (charge error=0.00e+00)
+  [PASS] Local density source n1 commutes with total fermion number  (charge error=0.00e+00)
+  [PASS] Hermitian hopping source stays in the same charge-zero class  (charge error=0.00e+00)
+  [PASS] Unique local pairing seed carries charge -2  (charge error=0.00e+00)
+
+  So the current observable-principle domain and the Majorana seed live
+  in different exact charge sectors on the retained stack.
+
+========================================================================================
+PART 2: THE FULL NORMAL OBSERVABLE JET IS BLIND TO THE PFAFFIAN AMPLITUDE
+========================================================================================
+  [PASS] Observable-principle value/gradient/Hessian jet is identical for every mu  (distinct jets=1)
+  [PASS] The same family still has inequivalent pairing amplitudes  (distinct pairing amplitudes=3)
+
+  The current scalar source-response toolkit sees one retained normal
+  jet across the whole Delta(mu) family, while the pairing sector
+  changes nontrivially with mu.
+
+========================================================================================
+PART 3: ANY CURRENT ATLAS FUNCTIONAL OF THAT JET IS CONSTANT ON THE FAMILY
+========================================================================================
+  [PASS] Current-atlas signatures have one image on the full mu family  (distinct images=1)
+  [PASS] The mu family itself contains distinct candidate amplitudes  (distinct mu values=3)
+
+  Therefore no current atlas theorem built only from the retained
+  observable-principle jet can activate or force the Majorana slot.
+
+========================================================================================
+RESULT
+========================================================================================
+  No. The current atlas observable-principle toolkit is a scalar
+  charge-zero source-response theory on the retained normal grammar.
+  Its full observable jet is identical across the Delta(mu) family,
+  so it cannot activate or force the unique Majorana pairing slot.
+
+  Exact current status:
+    - unique Majorana channel: forced
+    - local source-slot form: forced if a local bilinear completion exists
+    - current atlas observable-principle activation: obstructed
+    - remaining task: derive a genuinely new charge-2 primitive or source law
+
+PASS=8  FAIL=0
+
+----- stderr -----
+

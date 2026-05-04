@@ -1,0 +1,52 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py
+runner_sha256: dfc52e70a37356aacc0226234765f8697872bb18773f644deea73f36d190d4b7
+timeout_sec: 900
+exit_code: 0
+elapsed_sec: 0.35
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE SUSCEPTIBILITY-FLOW THEOREM
+==============================================================================
+
+Exact onset coefficients
+  nonlocal plaquette beta^5 coefficient      = 1/472392 = 2.116885976053786e-06
+  nonlocal susceptibility beta^4 coefficient = 5/472392 = 1.058442988026893e-05
+  beta_eff beta^5 coefficient                = 1/26244 = 3.810394756896815e-05
+  beta_eff' beta^4 coefficient               = 5/26244 = 1.905197378448407e-04
+  common slope                               = 1/18 = 5.555555555555555e-02
+  slope * beta_eff' correction               = 5/472392 = 1.058442988026893e-05
+
+Sampled local susceptibility profile
+  sampled betas                              = [0.1, 0.5, 1.0, 2.0, 4.0, 6.0, 10.0]
+  sampled chi_1plaq(betas)                   = [0.056481264481, 0.060156768988, 0.064575666344, 0.072018622252, 0.076131361049, 0.064880483364, 0.034763689571]
+
+Canonical implicit support value
+  beta_eff^can                               = 9.326167920875534
+  P_1plaq(beta_eff^can)                      = 0.593400000000001
+  canonical P                                = 0.593400000000000
+
+  [PASS] [THEOREM] differentiating the exact beta^5 plaquette correction gives the exact beta^4 susceptibility correction
+         d/d beta [beta^5/472392] = (5/472392) beta^4
+  [PASS] [THEOREM] differentiating the exact onset law gives beta_eff'(beta)=1 + 5 beta^4 / 26244 + O(beta^5)
+         beta_eff'(beta) correction coefficient = 5/26244
+  [PASS] [THEOREM] the common strong-coupling slope transports the beta_eff' correction into the same exact susceptibility coefficient
+         (1/18) * (5/26244) = 5/472392
+  [PASS] [THEOREM] the exact nonperturbative reduction law is equivalently governed by the connected susceptibility profile
+         P_L(beta)=integral_0^beta chi_L and P_L=P_1plaq(beta_eff) give beta_eff = P_1plaq^{-1}(integral chi_L)
+  [PASS] [THEOREM] the remaining open object is therefore the explicit full susceptibility profile, not reduction-law existence
+         exact existence/uniqueness and exact transport law are both closed
+  [PASS] [SUPPORT] sampled local one-plaquette susceptibility is strictly positive on the tested beta range
+         min sampled chi_1plaq = 0.034763689571
+  [PASS] [SUPPORT] the canonical same-surface plaquette is reconstructed by the exact implicit beta_eff parameter
+         |P_1plaq(beta_eff^can) - P_can| = 6.661e-16
+  [PASS] [SUPPORT] the canonical implicit reduction parameter lies on the positive monotone branch
+         beta_eff^can = 9.326167920875534
+
+==============================================================================
+SUMMARY: THEOREM PASS=5 SUPPORT=3 FAIL=0
+==============================================================================
+
+----- stderr -----
+

@@ -1,0 +1,34 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_remaining_closure_gates.py
+runner_sha256: 0c990defc20c1219f23a6c6f165d29c8af63bbed40b45367374b45de503ea42a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.35
+status: ok
+----- stdout -----
+====================================================================================================================
+SIGNED GRAVITY REMAINING CLOSURE GATES AUDIT
+  global nonlinear, APS extraction, sector preparation, and UV/core boundaries
+====================================================================================================================
+
+[PASS] global nonlinear gate reduces to finite Galerkin small-data contraction  (eps=2.0e-03, radius=7.901e-03, self_bound/r=0.568, lip_bound=0.136, sample_lip=0.003, global_pde_claim=False)
+[PASS] actual graph-family APS extraction boundary is classified  (raw_hodge_eta_neutral=True, orientation_extension_has_eta=True, zero_modes_quarantine=True, actual_extraction_closed=False; raw=['cycle8:eta=+0,zero=2,chi=+0', 'cycle12:eta=+0,zero=2,chi=+0'])
+[PASS] sector dynamics classify preparation as boundary-data/defect, not ordinary mixing  (sectors=(chi+=+1,chi-=-1), chi_path=[1, 1, 1, 1, 1, 1, 0, -1, -1, -1, -1, -1, -1], block_leak=0.0e+00, mixing_control=1.9e-02, physical_prep_claim=False)
+[PASS] UV/core stability boundary separates fixed-N boundedness from thermodynamic failure  (fixed_N_core_bound=True, max_bound_violation=0.0e+00, min_same_sector_E_per_particle_N80=-38.0, ruelle_stability_from_softening_alone=False)
+[PASS] non-claim gate remains closed  (negative_inertial_mass=False, shielding=False, propulsion=False, reactionless_force=False, physical_signed_gravity_prediction=False, global_pde_claim=False, physical_sector_preparation_claim=False, ruelle_stability_claim=False)
+
+INTERPRETATION
+  The remaining gates do not all close as nature-grade claims.  The
+  nonlinear side upgrades to a finite Galerkin small-data theorem, but not
+  a global continuum PDE theorem.  Raw retained graph Hodge boundaries are
+  eta-neutral, so actual APS extraction still needs a retained
+  orientation-line boundary mode with zero modes quarantined.  Fixed sectors
+  are superselected; preparing the opposite sign is boundary-data or defect
+  preparation, not ordinary dynamics.  Softened pair cores bound every
+  fixed-N problem but do not give thermodynamic stability by themselves.
+
+SUMMARY: PASS=5 FAIL=0
+FINAL_TAG: SIGNED_GRAVITY_REMAINING_GATES_REDUCED_TO_PRECISE_CONDITIONALS
+
+----- stderr -----
+

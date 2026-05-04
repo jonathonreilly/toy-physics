@@ -1,0 +1,80 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_split2_interval_certified_dominance_closure_2026_04_21.py
+runner_sha256: d3b97172bb66372369e12701b22d879f56549ece2a878e7f208c4a5409037def
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.11
+status: ok
+----- stdout -----
+========================================================================================
+DM SPLIT-2 INTERVAL-CERTIFIED DOMINANCE CLOSURE
+========================================================================================
+
+========================================================================================
+PART 1: WEYL EIGENVALUE BOXES ON THE TWO RESIDUAL SPLIT-2 NEIGHBORHOODS
+========================================================================================
+  [PASS] The split-2 affine generators have exact operator norms 1, sqrt(3), 2  ((L_m,L_delta,L_slack)=(1.000000000000,1.732050807569,2.000000000000))
+  [PASS] CAP_BOX Weyl control gives three disjoint eigenvalue intervals for H(m,delta,s)  (intervals=[(-1.6095297294418491, -1.5672092213661604), (-0.3472026455414059, -0.30488213746571713), (1.750751612869722, 1.7930721209454108)])
+  [PASS] ENDPOINT_BOX Weyl control gives three disjoint eigenvalue intervals for H(m,delta,s)  (intervals=[(-1.5983455404846443, -1.5745120813660427), (-0.33643276901675373, -0.31259930989815227), (1.756528120823496, 1.7803615799420975)])
+  [PASS] The CAP_BOX Weyl radius is small compared with the spectral gaps at the box center  (radius=0.021160254038, center_evals=[-1.58836948 -0.32604239  1.77191187])
+  [PASS] The ENDPOINT_BOX Weyl radius is even smaller than the CAP_BOX radius  ((r_cap,r_endpoint)=(0.021160254038,0.011916729559))
+
+  CAP_BOX center eigenvalues = [-1.58836948 -0.32604239  1.77191187]
+  CAP_BOX Weyl radius        = 0.021160254038
+  CAP_BOX eigenvalue boxes   = [(-1.6095297294418491, -1.5672092213661604), (-0.3472026455414059, -0.30488213746571713), (1.750751612869722, 1.7930721209454108)]
+
+  ENDPOINT_BOX center eigenvalues = [-1.58642881 -0.32451604  1.76844485]
+  ENDPOINT_BOX Weyl radius        = 0.011916729559
+  ENDPOINT_BOX eigenvalue boxes   = [(-1.5983455404846443, -1.5745120813660427), (-0.33643276901675373, -0.31259930989815227), (1.756528120823496, 1.7803615799420975)]
+
+========================================================================================
+PART 2: EXACT PROJECTOR-ROW INTERVALS FROM COFACTOR FORMULAS
+========================================================================================
+  [PASS] Every CAP_BOX row entry interval stays inside [0,1]  (rows=[[(0.1419130581458463, 0.2023889019050902), (0.5911889103047634, 0.6911044691760553), (0.17012920020139125, 0.21168184260716064)], [(0.06327551905471068, 0.09285059976008961), (0.1374919115375737, 0.17334284807355418), (0.7274066081835655, 0.8119598195873265)], [(0.689146596775759, 0.8203734743829535), (0.17157160952437175, 0.24517107344555564), (0.027572580335862552, 0.05616541797889321)]])
+  [PASS] Every ENDPOINT_BOX row entry interval stays inside [0,1]  (rows=[[(0.1498260689565148, 0.18375089745270767), (0.6186355531823415, 0.6755170105051325), (0.17577827264777762, 0.199175194834462)], [(0.06930434921423251, 0.08593523348284852), (0.14404255929266938, 0.1648013370230969), (0.7447649134834847, 0.793212381281246)], [(0.7199177517466736, 0.7944520289810629), (0.1796237092606197, 0.2205268415410405), (0.036435469783642455, 0.05221508969860557)]])
+  [PASS] The CAP_BOX row-3 packet interval already stays close to the sampled winning row  (row3=[(0.689146596775759, 0.8203734743829535), (0.17157160952437175, 0.24517107344555564), (0.027572580335862552, 0.05616541797889321)])
+  [PASS] The ENDPOINT_BOX row-3 packet interval is even tighter than the CAP_BOX row-3 packet interval  (row3=[(0.7199177517466736, 0.7944520289810629), (0.1796237092606197, 0.2205268415410405), (0.036435469783642455, 0.05221508969860557)])
+
+  CAP_BOX row intervals      = [[(0.1419130581458463, 0.2023889019050902), (0.5911889103047634, 0.6911044691760553), (0.17012920020139125, 0.21168184260716064)], [(0.06327551905471068, 0.09285059976008961), (0.1374919115375737, 0.17334284807355418), (0.7274066081835655, 0.8119598195873265)], [(0.689146596775759, 0.8203734743829535), (0.17157160952437175, 0.24517107344555564), (0.027572580335862552, 0.05616541797889321)]]
+  ENDPOINT_BOX row intervals = [[(0.1498260689565148, 0.18375089745270767), (0.6186355531823415, 0.6755170105051325), (0.17577827264777762, 0.199175194834462)], [(0.06930434921423251, 0.08593523348284852), (0.14404255929266938, 0.1648013370230969), (0.7447649134834847, 0.793212381281246)], [(0.7199177517466736, 0.7944520289810629), (0.1796237092606197, 0.2205268415410405), (0.036435469783642455, 0.05221508969860557)]]
+
+========================================================================================
+PART 3: BOXWISE TRANSPORT UPPER BOUNDS
+========================================================================================
+  [PASS] The one-variable transport kernel still has its small-leakage peak inside [0,0.05]  ((q_star,psi_star)=(0.035493877259706,0.011015495595788))
+  [PASS] All three CAP_BOX rowwise eta upper bounds stay strictly below transport closure  (eta upper bounds=[0.76920972 0.88068906 0.90419742])
+  [PASS] All three ENDPOINT_BOX rowwise eta upper bounds stay strictly below transport closure  (eta upper bounds=[0.75987683 0.86362766 0.89898279])
+  [PASS] The CAP_BOX theorem-grade interval margin is still comfortably above 0.09  (margin=0.095802577203)
+  [PASS] The ENDPOINT_BOX theorem-grade interval margin is still comfortably above 0.10  (margin=0.101017210975)
+
+  q_star <= 0.035493877259706
+  CAP_BOX rowwise eta upper bounds      = [0.76920972 0.88068906 0.90419742]
+  ENDPOINT_BOX rowwise eta upper bounds = [0.75987683 0.86362766 0.89898279]
+
+========================================================================================
+PART 4: CLOSURE ASSEMBLY
+========================================================================================
+  [PASS] The carried branch-local reduction really had already localized the residual pressure to CAP_BOX and ENDPOINT_BOX
+  [PASS] The superseded dense-grid note records the same two boxes now being certified theorem-grade
+  [PASS] So the residual split-2 carrier item now closes on the current review surface  ((cap_max,endpoint_max)=(0.904197422797,0.898982789025))
+
+  Closure read:
+    - prior branch science had already reduced the residual split-2 pressure
+      to CAP_BOX and ENDPOINT_BOX
+    - this runner certifies eta/eta_obs < 1 on both whole boxes
+    - therefore interval-certified exact-carrier dominance/completeness
+      closes on the residual split-2 selector branch
+
+========================================================================================
+RESULT
+========================================================================================
+  The residual split-2 carrier-side item is closed on the current review surface.
+  What remains open on the DM flagship gate is not carrier-side dominance.
+  It is the physical branch-choice / selector side:
+    - A-BCC as an axiom-native branch-choice law
+    - the finer right-sensitive microscopic selector law
+
+SUMMARY: PASS=17 FAIL=0
+
+----- stderr -----
+

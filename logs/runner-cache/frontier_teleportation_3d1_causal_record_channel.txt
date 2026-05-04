@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_3d1_causal_record_channel.py
+runner_sha256: 924db684858ed211cd6fbe564a74392b1d6ab0d6fc18df5c5d6533f4074d1113
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+TELEPORTATION 3D+1 CAUSAL BELL-RECORD CHANNEL
+Status: planning / first 3D+1 local record-propagation artifact
+
+3D+1 discrete light cone:
+  lattice shape: (8, 6, 5)
+  metric / speed: manhattan / 1 site(s)/tick
+  Alice event: site=(1, 1, 1) t=4
+  Bob target site: (5, 3, 2)
+  spatial distance: 7
+  expected light-cone latency: 7 tick(s)
+  earliest delivery tick: 11
+  propagation worldline: t=4:(1, 1, 1) -> t=5:(2, 1, 1) -> t=6:(3, 1, 1) -> t=7:(4, 1, 1) -> t=8:(5, 1, 1) -> t=9:(5, 2, 1) -> t=10:(5, 3, 1) -> t=11:(5, 3, 2)
+  worldline local under metric: True
+  delivery event inside future cone: True
+
+Explicit Bell record:
+  record: Psi- bits(z,x)=(1, 1) id=bell-record-3d1-0001
+  channel derives Bell bits: False
+  Bell branch probability: 0.2499999999999999
+
+Causal delivery checks:
+  earliest tick equals distance/velocity rule: True
+  target event at t=10 outside cone rejected: True
+  receive before cone arrival blocked: True
+  wrong receiver blocked: True
+  wrong 3D site blocked: True
+  duplicate record id rejected: True
+  receive at delivery exactly once: True
+
+Correction and record controls:
+  correct delivered-record fidelity: 1.0000000000000000
+  wrong-record fidelity: 0.3333333333333334
+  dropped/pre-delivery no-correction fidelity: 0.3333333333333333
+  dropped record remains undelivered: True
+  delayed control blocked at base arrival: True (base t=11, actual t=13)
+  delayed control delivered late: True
+  delayed delivered-record fidelity after waiting: 1.0000000000000000
+
+Bob pre-message input-independence:
+  probe states: 5
+  max Bob trace distance to I/2 before Alice measurement: 2.220e-16
+  max Bob trace distance to I/2 after Alice measurement before delivery: 3.331e-16
+  max pairwise pre-delivery Bob-state distance across inputs: 1.388e-16
+  max Bell probability error from 1/4: 1.110e-16
+
+Acceptance gates:
+  3D+1 light-cone locality: PASS
+  distance/velocity earliest arrival: PASS
+  outside-cone attempts fail: PASS
+  no duplicate delivery: PASS
+  correct record restores Bob state: PASS
+  wrong/dropped/delayed controls: PASS
+  Bob pre-delivery input-independence: PASS
+  explicit not derived record channel: PASS
+
+Claim boundary:
+  This models only a causal classical Bell-record channel.
+  It is ordinary quantum state teleportation only.
+  It does not transfer matter, mass, charge, energy, or objects.
+  It does not enable faster-than-light signaling or pre-message control.
+  It does not derive the Bell record, Bell resource, or measurement dynamics.
+
+----- stderr -----
+

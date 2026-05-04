@@ -1,0 +1,80 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_microscopic_selector_reduction_theorem.py
+runner_sha256: 1b75baf840718f74a4c2769d346f72ecee2300b1c456037893e6d6955240ccbc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.53
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS MICROSCOPIC SELECTOR REDUCTION THEOREM
+========================================================================================
+
+Question:
+  Once constructive exact closure exists and the DM thermal layer is
+  already bounded, what exact microscopic object is still missing on the
+  current branch?
+
+========================================================================================
+PART 1: THE CONSTRUCTIVE EXACT ETA=1 POINT ALREADY EXISTS
+========================================================================================
+  [PASS (C)] The constructive chamber contains an exact eta = 1 point on the fixed native seed surface  (lambda_*=0.795532193595)
+  [PASS (C)] That exact closure point is still constructive  ((gamma,E1,E2)=(0.177466004463,0.247922610478,1.552085732579))
+  [PASS (C)] So the remaining blocker is not existence of a constructive eta = 1 point  (delta_*=1.497665531553)
+
+========================================================================================
+PART 2: THE ODD MICROSCOPIC SELECTOR BIT IS ALREADY CLOSED
+========================================================================================
+  [PASS (C)] On the positive seed surface sign(A13) is exactly sign(sin(delta))  ((A13+,A13-)=(0.300294489332,-0.300294489332))
+  [PASS (C)] The constructive witness pair shares all current exact even active data  (eta=[0.929321 1.05222  0.80149 ])
+  [PASS (C)] So the residual odd selector upstream of dW_e^H is already just sign(A13)  (equivalently sign(sin(delta)))
+
+========================================================================================
+PART 3: FIXING THE ODD BIT STILL DOES NOT CHOOSE THE CONSTRUCTIVE POINT
+========================================================================================
+  [PASS (C)] The canonical near-closing sample and the constructive witness already share the positive odd sheet  (gamma=(0.130472757513,0.150147244666))
+  [PASS (C)] But they still carry opposite even-response signs  (canonical=(-0.678203236088,-0.974296763912), constructive=(0.296562850784,1.986407435174))
+  [PASS (C)] Equivalently the remaining PMNS object is the even-response pair (E1,E2) = (delta+rho, const*sigma sin(2v))  ((delta+rho,sigma sin2v)=(-0.678203236088,-0.918575798200) vs (0.296562850784,1.872802890148))
+
+========================================================================================
+PART 4: THE ATLAS SOURCE BANK ALREADY COMPRESSES TO A RIGHT-SENSITIVE 2-REAL TARGET
+========================================================================================
+  [PASS (C)] The current source-facing bank is already collapsed to one sharp tuple  ((gamma,E1,E2)=(0.500000000000,1.632993161855,0.942809041582))
+  [PASS (C)] Distinct live-sheet points still carry the same complete current-bank signature  (same (gamma,E1,E2,cp1,cp2,a_*,b_*,T_slot))
+  [PASS (C)] Those same points still have different active targets  (targets=(0.19999999999999982, 2.2), (0.9, 2.2), (0.19999999999999982, 2.5000000000000004))
+  [PASS (C)] So the remaining source-side object is the intrinsic 2-real point-selection law for (delta,q_+)  (equivalently the right-sensitive Z3 doublet-block law)
+
+========================================================================================
+PART 5: H-ONLY DATA CANNOT SUPPLY THAT SELECTOR
+========================================================================================
+  [PASS (C)] An exact right-unitary orbit leaves H fixed  (H error=2.25e-16)
+  [PASS (C)] The same orbit changes the right-sensitive slot amplitudes  ((u,v)_0=(0.082500-0.238157j,-0.137500-0.088046j), (u,v)_1=(0.129349-0.218419j,-0.016487+0.155846j))
+  [PASS (C)] The same orbit changes the heavy-basis CP tensor  (CP0=(0.015083275782579014, -0.11193378343913891), CP1=(0.13745215229505714, 0.034720575498981186))
+  [PASS (C)] So any positive selector that finishes the microscopic gate must be right-sensitive or right-frame-fixing  (H-only data are insufficient)
+
+========================================================================================
+PART 6: THE NOTES RECORD THE SAME LAST-MILE OBJECT
+========================================================================================
+  [PASS (B)] The charged-source reduction note records dW_e^H as the exact Schur pushforward and remaining transport-facing target
+  [PASS (B)] The selector-bank blindness note records the remaining PMNS problem as a D_- / dW_e^H sign-law problem
+  [PASS (B)] The Z3 full-closure boundary note records the remaining source object as the right-sensitive 2-real doublet-block law
+  [PASS (B)] The new note records the unified last-mile reduction to a right-sensitive microscopic selector on dW_e^H / the Z3 doublet block
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact reduction answer:
+    - the constructive eta = 1 point already exists
+    - the odd microscopic selector bit is already reduced to sign(A13)
+    - fixing that odd bit still leaves the constructive point unchosen
+    - the atlas source bank already compresses the live source object to
+      the intrinsic 2-real Z3 doublet-block point-selection law
+    - H-only data cannot supply that selector
+    - so the remaining blocker is exactly a right-sensitive microscopic
+      selector law on dW_e^H = Schur_Ee(D_-), equivalently the intrinsic
+      Z3 doublet-block point-selection law
+
+PASS=21 FAIL=0
+
+----- stderr -----
+

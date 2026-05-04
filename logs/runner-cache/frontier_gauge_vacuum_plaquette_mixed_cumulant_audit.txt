@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py
+runner_sha256: ee013ee9d87ca89cbda5fd6c7229d4d31cdb9c1eba027aeb7881f31f4d6a4fdc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 45.69
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE MIXED-CUMULANT AUDIT
+==============================================================================
+
+Observed-edge local combinatorics
+  candidates per observed edge             = [5, 5, 5, 5]
+  order-beta^4 leafless supports tested    = 625
+  order-beta^4 leafless survivors          = 0
+
+Order-beta^5 distinct survivor audit
+  order-beta^5 supports tested             = 37176
+  order-beta^5 distinct survivors          = 4
+  survivor signs                           = (1, -1, 1, -1, -1, 1)
+    ((0, 0, -1, 0), (0, 1))
+    ((0, 0, -1, 0), (0, 2))
+    ((0, 0, -1, 0), (1, 2))
+    ((0, 1, -1, 0), (0, 2))
+    ((1, 0, -1, 0), (1, 2))
+  survivor signs                           = (1, -1, 1, -1, -1, 1)
+    ((0, 0, 0, -1), (0, 1))
+    ((0, 0, 0, -1), (0, 3))
+    ((0, 0, 0, -1), (1, 3))
+    ((0, 1, 0, -1), (0, 3))
+    ((1, 0, 0, -1), (1, 3))
+  survivor signs                           = (1, -1, 1, -1, 1, -1)
+    ((0, 0, 0, 0), (0, 2))
+    ((0, 0, 0, 0), (1, 2))
+    ((0, 0, 1, 0), (0, 1))
+    ((0, 1, 0, 0), (0, 2))
+    ((1, 0, 0, 0), (1, 2))
+  survivor signs                           = (1, -1, 1, -1, 1, -1)
+    ((0, 0, 0, 0), (0, 3))
+    ((0, 0, 0, 0), (1, 3))
+    ((0, 0, 0, 1), (0, 1))
+    ((0, 1, 0, 0), (0, 3))
+    ((1, 0, 0, 0), (1, 3))
+
+First nonlinear coefficient
+  per-cube-shell coefficient               = 1/1889568 = 5.292214940134464e-07
+  total nonlocal beta^5 coefficient        = 1/472392 = 2.116885976053786e-06
+  beta_eff beta^5 coefficient              = 1/26244 = 3.810394756896815e-05
+
+  [PASS] [THEOREM] each observed edge has exactly five distinct one-edge-sharing local action plaquettes
+         candidate counts = [5, 5, 5, 5]
+  [PASS] [THEOREM] no leafless nonlocal support survives through order beta^4
+         tested 625 one-per-edge supports and found 0 survivors
+  [PASS] [THEOREM] the only distinct order-beta^5 survivors are the four elementary cube shells through the observed plaquette
+         tested 37176 supports and found 4 survivors
+  [PASS] [THEOREM] each cube shell contributes exactly 1/18^5
+         per-shell coefficient = 1/1889568
+  [PASS] [THEOREM] the first nonlocal numerator correction is exactly 4/18^5 * beta^5
+         total coefficient = 1/472392
+  [PASS] [THEOREM] the full-vacuum reduction law therefore begins beta_eff(beta)=beta + beta^5/26244 + O(beta^6)
+         beta_eff coefficient = 1/26244
+  [PASS] [SUPPORT] tree repeated-plaquette supports are handled analytically by the leaf-factorization lemma in the authority note
+         the finite search above classifies only the leafless residual supports after exact leaf peeling
+
+==============================================================================
+SUMMARY: THEOREM PASS=6 SUPPORT=1 FAIL=0
+==============================================================================
+
+----- stderr -----
+

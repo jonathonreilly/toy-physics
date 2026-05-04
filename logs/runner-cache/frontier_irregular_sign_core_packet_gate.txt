@@ -1,0 +1,183 @@
+===== runner cache v1 =====
+runner: scripts/frontier_irregular_sign_core_packet_gate.py
+runner_sha256: 1c69c515b731ca1d74fdf4676c0f78a1e17619c8cab781b5bb664008de740371
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 5.39
+status: ok
+----- stdout -----
+============================================================================================
+IRREGULAR SIGN CORE-PACKET GATE AT BOTH SCREENING LEVELS
+============================================================================================
+
+Observable: core_packet (exp(-r^2/2sigma^2), NO oscillation)
+Screening levels: mu2=0.1 (original), mu2=0.001 (low)
+Parameters: MASS=0.3, DT=0.12, N_STEPS=15, SIG_DEPTH=1.2
+Window: steps [2, 11)
+G values: (5.0, 10.0)
+Seeds: (42, 43, 44, 45, 46)
+
+--- mu2=0.1 ---
+  mu2=0.1    random_geometric seed=42 center=27 max_depth=8
+  mu2=0.1    random_geometric seed=43 center=27 max_depth=8
+  mu2=0.1    random_geometric seed=44 center=27 max_depth=8
+  mu2=0.1    random_geometric seed=45 center=27 max_depth=8
+  mu2=0.1    random_geometric seed=46 center=27 max_depth=8
+  mu2=0.1    growing          seed=42 center=1 max_depth=3
+  mu2=0.1    growing          seed=43 center=14 max_depth=3
+  mu2=0.1    growing          seed=44 center=2 max_depth=4
+  mu2=0.1    growing          seed=45 center=1 max_depth=3
+  mu2=0.1    growing          seed=46 center=1 max_depth=3
+  mu2=0.1    layered_cycle    seed=42 center=24 max_depth=8
+  mu2=0.1    layered_cycle    seed=43 center=24 max_depth=8
+  mu2=0.1    layered_cycle    seed=44 center=24 max_depth=8
+  mu2=0.1    layered_cycle    seed=45 center=24 max_depth=8
+  mu2=0.1    layered_cycle    seed=46 center=24 max_depth=8
+
+--- mu2=0.001 ---
+  mu2=0.001  random_geometric seed=42 center=27 max_depth=8
+  mu2=0.001  random_geometric seed=43 center=27 max_depth=8
+  mu2=0.001  random_geometric seed=44 center=27 max_depth=8
+  mu2=0.001  random_geometric seed=45 center=27 max_depth=8
+  mu2=0.001  random_geometric seed=46 center=27 max_depth=8
+  mu2=0.001  growing          seed=42 center=1 max_depth=3
+  mu2=0.001  growing          seed=43 center=14 max_depth=3
+  mu2=0.001  growing          seed=44 center=2 max_depth=4
+  mu2=0.001  growing          seed=45 center=1 max_depth=3
+  mu2=0.001  growing          seed=46 center=1 max_depth=3
+  mu2=0.001  layered_cycle    seed=42 center=24 max_depth=8
+  mu2=0.001  layered_cycle    seed=43 center=24 max_depth=8
+  mu2=0.001  layered_cycle    seed=44 center=24 max_depth=8
+  mu2=0.001  layered_cycle    seed=45 center=24 max_depth=8
+  mu2=0.001  layered_cycle    seed=46 center=24 max_depth=8
+
+============================================================================================
+PER-SCREENING DETAIL
+============================================================================================
+
+mu2=0.1 (30 rows)
+--------------------------------------------------------------------------------
+
+  random_geometric
+    G= 5.0 ball1_margin: pos=5/5 mean=+7.5370e-02 min=+7.3938e-02
+    G= 5.0 ball2_margin: pos=5/5 mean=+3.4256e-02 min=+3.3400e-02
+    G= 5.0 depth_margin: pos=5/5 mean=+1.4694e-01 min=+1.4186e-01
+    G=10.0 ball1_margin: pos=5/5 mean=+2.9475e-02 min=+2.9005e-02
+    G=10.0 ball2_margin: pos=5/5 mean=+2.4024e-02 min=+2.3652e-02
+    G=10.0 depth_margin: pos=5/5 mean=+6.7174e-02 min=+6.6561e-02
+
+  growing
+    G= 5.0 ball1_margin: pos=5/5 mean=+1.0591e-01 min=+5.9993e-02
+    G= 5.0 ball2_margin: pos=5/5 mean=+3.6959e-02 min=+1.7286e-02
+    G= 5.0 depth_margin: pos=5/5 mean=+1.6982e-01 min=+9.5306e-02
+    G=10.0 ball1_margin: pos=5/5 mean=+7.4308e-02 min=+3.7417e-02
+    G=10.0 ball2_margin: pos=5/5 mean=+3.1688e-02 min=+1.6226e-02
+    G=10.0 depth_margin: pos=5/5 mean=+1.1562e-01 min=+5.5330e-02
+
+  layered_cycle
+    G= 5.0 ball1_margin: pos=5/5 mean=+6.1660e-02 min=+6.1307e-02
+    G= 5.0 ball2_margin: pos=5/5 mean=+2.6233e-02 min=+2.6050e-02
+    G= 5.0 depth_margin: pos=5/5 mean=+1.1485e-01 min=+1.1447e-01
+    G=10.0 ball1_margin: pos=5/5 mean=+1.2104e-02 min=+1.2059e-02
+    G=10.0 ball2_margin: pos=5/5 mean=+8.9724e-03 min=+8.9461e-03
+    G=10.0 depth_margin: pos=5/5 mean=+2.9203e-02 min=+2.9140e-02
+
+mu2=0.001 (30 rows)
+--------------------------------------------------------------------------------
+
+  random_geometric
+    G= 5.0 ball1_margin: pos=5/5 mean=+9.9650e-07 min=+8.1874e-07
+    G= 5.0 ball2_margin: pos=5/5 mean=+2.6099e-07 min=+2.4900e-07
+    G= 5.0 depth_margin: pos=5/5 mean=+1.8527e-06 min=+1.5053e-06
+    G=10.0 ball1_margin: pos=3/5 mean=+3.1190e-09 min=-1.5487e-07
+    G=10.0 ball2_margin: pos=5/5 mean=+1.9927e-08 min=+9.5935e-09
+    G=10.0 depth_margin: pos=3/5 mean=+7.0221e-08 min=-2.2231e-07
+
+  growing
+    G= 5.0 ball1_margin: pos=5/5 mean=+2.2571e-05 min=+1.7765e-05
+    G= 5.0 ball2_margin: pos=5/5 mean=+1.6524e-06 min=+7.7236e-07
+    G= 5.0 depth_margin: pos=5/5 mean=+3.4844e-05 min=+2.3763e-05
+    G=10.0 ball1_margin: pos=5/5 mean=+1.3288e-05 min=+1.0232e-05
+    G=10.0 ball2_margin: pos=5/5 mean=+7.4609e-07 min=+3.8376e-07
+    G=10.0 depth_margin: pos=5/5 mean=+2.2170e-05 min=+1.3305e-05
+
+  layered_cycle
+    G= 5.0 ball1_margin: pos=5/5 mean=+1.5032e-06 min=+1.4732e-06
+    G= 5.0 ball2_margin: pos=5/5 mean=+2.2518e-07 min=+2.2295e-07
+    G= 5.0 depth_margin: pos=5/5 mean=+3.7274e-06 min=+3.7140e-06
+    G=10.0 ball1_margin: pos=5/5 mean=+1.0626e-06 min=+1.0352e-06
+    G=10.0 ball2_margin: pos=5/5 mean=+7.8331e-08 min=+7.7012e-08
+    G=10.0 depth_margin: pos=5/5 mean=+3.2165e-06 min=+3.2088e-06
+
+
+============================================================================================
+SCREENING-LEVEL SUMMARY
+============================================================================================
+
+mu2=0.1 (30 rows)
+  ball1_margin: pos=30/30 (100.0%) mean=+5.9804e-02 min=+1.2059e-02
+  ball2_margin: pos=30/30 (100.0%) mean=+2.7022e-02 min=+8.9461e-03
+  depth_margin: pos=30/30 (100.0%) mean=+1.0727e-01 min=+2.9140e-02
+  min fraction across all metrics: 100.0%
+
+mu2=0.001 (30 rows)
+  ball1_margin: pos=28/30 (93.3%) mean=+6.5707e-06 min=-1.5487e-07
+  ball2_margin: pos=30/30 (100.0%) mean=+4.9715e-07 min=+9.5935e-09
+  depth_margin: pos=28/30 (93.3%) mean=+1.0980e-05 min=-2.2231e-07
+  min fraction across all metrics: 93.3%
+
+max_norm_drift = 1.110e-15
+
+
+============================================================================================
+PER-GRAPH-FAMILY BREAKDOWN
+============================================================================================
+
+mu2=0.1
+  random_geometric    : ball1 10/10 (100%)  ball2 10/10 (100%)  depth 10/10 (100%)
+  growing             : ball1 10/10 (100%)  ball2 10/10 (100%)  depth 10/10 (100%)
+  layered_cycle       : ball1 10/10 (100%)  ball2 10/10 (100%)  depth 10/10 (100%)
+
+mu2=0.001
+  random_geometric    : ball1 8/10 (80%)  ball2 10/10 (100%)  depth 8/10 (80%)
+  growing             : ball1 10/10 (100%)  ball2 10/10 (100%)  depth 10/10 (100%)
+  layered_cycle       : ball1 10/10 (100%)  ball2 10/10 (100%)  depth 10/10 (100%)
+
+
+============================================================================================
+ACCEPTANCE GATES
+============================================================================================
+
+GATE 1 (screened): core_packet at mu2=0.1, threshold >= 80%
+  min positive fraction: 100.0%
+  --> PASS
+
+GATE 2 (low-screening): core_packet at mu2=0.001, threshold >= 80%
+  min positive fraction: 93.3%
+  --> PASS
+
+GATE 3 (cross-screening): both gates must pass
+  --> PASS
+
+
+============================================================================================
+VERDICT
+============================================================================================
+All three gates PASS.
+core_packet (non-oscillating gaussian) separates +Phi from -Phi
+on the audited irregular bipartite families at BOTH screening levels.
+
+Current-main read: this is a bounded same-surface irregular
+sign separator on the centered core-packet surface. The older
+shell_packet failure at low screening was an artifact of
+oscillation-induced interference, not a failure of the
+underlying sign physics.
+
+Scope: audited families (random_geometric, growing, layered_cycle),
+seeds 42-46, G in {5.0, 10.0}. Broader packet/transport
+portability remains open.
+
+Done in 5.2s
+
+----- stderr -----
+

@@ -1,0 +1,33 @@
+===== runner cache v1 =====
+runner: scripts/mirror_vs_central_head_to_head.py
+runner_sha256: 2723547030f328d6c3276e57295a0314cfdfaed9768b6bfd99a373c90c25885f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+MIRROR VS CENTRAL HEAD-TO-HEAD
+============================================================================================
+1. Dense central-band + layer norm [retained]
+   Born: Corrected Born stays at machine precision on the retained dense pocket
+   Purity metric: pur_min
+   Retained row: Best retained high-N row: N=80, npl=80, Born-clean, pur_min=0.500, gravity +2.799±1.612
+   Range: retained through N=100 in a narrow density window, but thins by N=100
+   Why: Best joint coexistence: stronger decoherence and wider retained range than mirror
+
+2. Mirror chokepoint / Z2-protected transfer [retained bounded pocket]
+   Born: Corrected Born stays at machine precision through N=60 on the strict pocket
+   Purity metric: pur_cl
+   Retained row: Best retained mirror row: N=40, NPL_HALF=50, Born 1.01e-15, pur_cl=0.8764±0.03, gravity +4.6161±0.721
+   Range: retained through N=60, fails at N=80/100 on the strict pocket
+   Why: Strongest small-N gravity and symmetry protection, but not the best joint lane overall
+
+Ranking
+1. Best joint coexistence: Dense central-band + layer norm
+2. Highest-upside but bounded challenger: Mirror chokepoint / Z2-protected transfer
+
+Review-safe bottom line:
+Mirror is now a real retained bounded pocket with stronger small-N gravity, but the dense central-band lane still wins on joint coexistence and retained range. Mirror is the challenger, not the new best joint lane.
+
+----- stderr -----
+

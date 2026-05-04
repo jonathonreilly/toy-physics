@@ -1,0 +1,31 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_graph_portability.py
+runner_sha256: 9d1ba530bc993b5d969f578b767142a54dd8de10d818382c0b6f6be90f084978
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.35
+status: ok
+----- stdout -----
+================================================================================================
+STAGGERED GRAPH PORTABILITY
+  Retained battery: Born/linearity, norm, force sign, F∝M, achromatic force,
+  equivalence, robustness, gauge if cycles exist
+================================================================================================
+  dt=0.12, steps=10, mass=0.3, G=8.0, source_strength=0.0004
+
+bipartite_random_geometric n=36  Born/lin=5.69e-16 norm=4.44e-16 force=+3.645e-03(TOWARD) F~M R2=1.000 achrom CV=1.505e-16 equiv CV=1.748e-16 robust=3/3 gauge=5.142e-03 [PASS]
+bipartite_growing          n=48  Born/lin=5.23e-16 norm=9.99e-16 force=+3.647e-03(TOWARD) F~M R2=1.000 achrom CV=1.764e-16 equiv CV=2.256e-16 robust=3/3 gauge=9.054e-03 [PASS]
+layered_bipartite_dag      n=36  Born/lin=5.67e-16 norm=0.00e+00 force=+3.790e-03(TOWARD) F~M R2=1.000 achrom CV=0.000e+00 equiv CV=6.865e-17 robust=3/3 gauge=N/A [N/A]
+
+SUMMARY
+  bipartite_random_geometric 8/8 retained rows pass (gauge=PASS)
+  bipartite_growing          8/8 retained rows pass (gauge=PASS)
+  layered_bipartite_dag      8/8 retained rows pass (gauge=N/A)
+
+Interpretation:
+  - This is a portability probe, not a new canonical card.
+  - Gauge is only scored when the graph has a cycle.
+  - Force is the primary gravity observable; centroid-based checks are not used here.
+
+----- stderr -----
+

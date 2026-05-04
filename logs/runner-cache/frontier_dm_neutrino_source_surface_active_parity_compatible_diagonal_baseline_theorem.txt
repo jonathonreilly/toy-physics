@@ -1,0 +1,56 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_active_parity_compatible_diagonal_baseline_theorem.py
+runner_sha256: ca5e66514d8ca63c118627d1a49b5f3461b7f6d67525af8b5eaa01dc27e14eb2
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.63
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE ACTIVE-PARITY-COMPATIBLE DIAGONAL BASELINE THEOREM
+========================================================================================
+
+Question:
+  If a positive diagonal baseline is required to respect the exact 23
+  odd/even grading of the live active pair, what family remains?
+
+========================================================================================
+PART 1: THE LIVE ACTIVE PAIR HAS EXACT 23 ODD/EVEN PARITY
+========================================================================================
+  [PASS] T_delta is exactly 23-odd  (err=0.00e+00)
+  [PASS] T_q is exactly 23-even  (err=0.00e+00)
+
+========================================================================================
+PART 2: DIAGONAL BASELINE COMPATIBILITY IS EQUIVALENT TO 23 SYMMETRY
+========================================================================================
+  [PASS] A 23-symmetric diagonal baseline commutes exactly with the 23 exchange involution  (comm norms=(0.00e+00,0.00e+00))
+  [PASS] An asymmetric diagonal baseline fails that compatibility condition  (comm norm=1.414213562373)
+  [PASS] So diagonal active-parity compatibility is equivalent to the exact condition B = C  (sym err=0.00e+00, asym err=1.414213562373)
+
+========================================================================================
+PART 3: EVERY PARITY-COMPATIBLE DIAGONAL BASELINE HAS THE SAME MINIMIZER
+========================================================================================
+  [PASS] Every positive parity-compatible diagonal baseline gives a positive Euclidean prefactor  ((A,B)=(1.0,1.0) pref=6.000000000000; (A,B)=(1.0,2.0) pref=2.500000000000; (A,B)=(3.5,0.6) pref=7.460317460317)
+  [PASS] Therefore every such baseline gives the same chamber minimizer delta_* = q_+* = sqrt(6)/3  ((delta_*,q_+*)=(0.816496580928,0.816496580928))
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE HONEST REDUCTION
+========================================================================================
+  [PASS] The note records the exact 23 odd/even grading of the live active pair
+  [PASS] The note records that active-parity-compatible diagonal baselines are exactly D = diag(A,B,B)
+  [PASS] The note explicitly says this removes baseline ambiguity only inside the parity-compatible class, not the full selector gap
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact answer:
+    - the live active pair already splits into exact 23-odd/even directions
+    - a positive diagonal baseline respects that grading iff it is D = diag(A,B,B)
+    - every such baseline gives the same chamber minimizer delta_* = q_+* = sqrt(6)/3
+    - so baseline ambiguity disappears inside the active-parity-compatible diagonal class
+    - the remaining live gap is still the physical selector principle or the direct Z3 law
+
+PASS=10 FAIL=0
+
+----- stderr -----
+

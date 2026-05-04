@@ -1,0 +1,99 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_cone_completing_root_narrow.py
+runner_sha256: 393a743d5def5d146c9bc2b2694c64e117d7249c0a2a762437b39fb60b074dcf
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.66
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: Koide-cone completing-root identity
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: u_small and u_large are the roots of u^2 - 4(v+w) u + (v^2 - 4vw + w^2) = 0
+----------------------------------------------------------------------------------------
+
+  Roots of u^2 - 4(v+w) u + (v^2 + w^2 - 4 v w) = 0: [2*v + 2*w - sqrt(3*v**2 + 12*v*w + 3*w**2), 2*v + 2*w + sqrt(3*v**2 + 12*v*w + 3*w**2)]
+  [PASS (A)] roots = {u_small, u_large} exact  (roots = {2*v + 2*w - sqrt(3*v**2 + 12*v*w + 3*w**2), 2*v + 2*w + sqrt(3*v**2 + 12*v*w + 3*w**2)})
+
+----------------------------------------------------------------------------------------
+Part 2: u_small satisfies the Koide cone u^2 + v^2 + w^2 = 4(uv + uw + vw)
+----------------------------------------------------------------------------------------
+  [PASS (A)] F_orbit(u_small, v, w) = 0 exact (cone identity for small root)  (F_orbit(u_small, v, w) = 0)
+
+----------------------------------------------------------------------------------------
+Part 3: u_large satisfies the Koide cone too
+----------------------------------------------------------------------------------------
+  [PASS (A)] F_orbit(u_large, v, w) = 0 exact (cone identity for large root)  (F_orbit(u_large, v, w) = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: Vieta identities u_small + u_large = 4(v+w), u_small * u_large = v^2 + w^2 - 4 v w
+----------------------------------------------------------------------------------------
+  [PASS (A)] u_small + u_large = 4 (v + w) exact (Vieta)  (sum = 4*v + 4*w)
+  [PASS (A)] u_small * u_large = v^2 + w^2 - 4 v w exact (Vieta)  (prod = v**2 - 4*v*w + w**2)
+
+----------------------------------------------------------------------------------------
+Part 5: standard Koide ratio Q = 2/3 at (u_small, v, w)
+----------------------------------------------------------------------------------------
+  [PASS (A)] Q(u_small^2, v^2, w^2) = (sum sq)/(sum)^2 = 2/3 exact  (Q = 2/3)
+
+----------------------------------------------------------------------------------------
+Part 6: concrete instance v = 1, w = 1 -- u_small = 4 - sqrt(18) = 4 - 3 sqrt(2)
+----------------------------------------------------------------------------------------
+  [PASS (A)] u_small at (v, w) = (1, 1) = 4 - 3 sqrt(2)  (u_small = 4 - 3*sqrt(2))
+  [PASS (A)] u_large at (v, w) = (1, 1) = 4 + 3 sqrt(2)  (u_large = 4 + 3*sqrt(2))
+
+----------------------------------------------------------------------------------------
+Part 7: u_small > 0 in the regime where the Koide-cone is physical
+----------------------------------------------------------------------------------------
+
+  u_small at (v, w) = (4, 1) = 10 - 3*sqrt(11)
+  [PASS (A)] u_small at (v, w) = (4, 1) is positive (u_small in physical regime)  (u_small = 10 - 3*sqrt(11), numerical = 0.0501256289338005)
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let v, w be any positive real numbers, and define
+        u_small(v, w)  =  2(v + w)  -  sqrt(3 (v^2 + 4 v w + w^2)),
+        u_large(v, w)  =  2(v + w)  +  sqrt(3 (v^2 + 4 v w + w^2)).
+
+  CONCLUSION:
+    (T1) u_small and u_large are the two roots of the quadratic
+            u^2  -  4(v + w) u  +  (v^2 + w^2 - 4 v w)  =  0,
+         i.e. they are the only u-values placing (u, v, w) on the Koide
+         cone for given (v, w).
+    (T2) (u_small, v, w) satisfies the Koide cone exactly:
+            (u_small)^2 + v^2 + w^2  =  4 (u_small v + u_small w + v w);
+         (u_large, v, w) satisfies the same cone exactly.
+    (T3) Vieta:
+            u_small + u_large  =  4 (v + w);
+            u_small * u_large  =  v^2 + w^2 - 4 v w.
+    (T4) Standard Koide ratio at (u_small, v, w):
+            (u_small^2 + v^2 + w^2) / (u_small + v + w)^2  =  2/3.
+    (T5) u_small > 0 iff |v - 2 w| > w sqrt(3); positive in regions
+         like (v, w) = (4, 1) but not (1, 1).
+
+  Audit-lane class:
+    (A) — pure polynomial algebra over R^2. No Koide / charged-lepton /
+    selected-line / sqrt-mass framework input.
+
+  This narrow theorem isolates the Koide-cone completing-root algebra
+  from the parent's selected-line H_sel(m) framework. The parent's
+  reparameterization no-go conclusion still requires the upstream
+  selected-line authority, but the underlying algebraic
+  cone-completing-root identity becomes audit-able as a standalone
+  primitive.
+
+
+========================================================================================
+  TOTAL: PASS=9, FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -1,0 +1,35 @@
+===== runner cache v1 =====
+runner: scripts/complex_action_harness.py
+runner_sha256: 6063923c7c064fbea8e987ee56f981e227e997666be2f26bea655434e1635926
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.08
+status: timeout
+----- stdout -----
+========================================================================================
+COMPLEX ACTION HARNESS
+  S = L(1-f) + i*gamma*L*f on exact 3D lattice
+  Born test uses actual gravitational field (NOT zero field)
+========================================================================================
+h=0.5, W=6, L=30, s=0.1, z_src=3.0
+
+   gamma   deflection  direction     escape
+------------------------------------------------
+   -0.50 +5.378225e-01     TOWARD    43.5943
+   -0.20 +2.896250e-01     TOWARD     7.9427
+    0.00 +9.339748e-02     TOWARD     2.7311
+    0.05 +3.863016e-02     TOWARD     2.0970
+    0.10 -1.791678e-02       AWAY     1.6119
+    0.15 -7.598557e-02       AWAY     1.2405
+    0.20 -1.353356e-01       AWAY     0.9558
+    0.50 -5.075192e-01       AWAY     0.2056
+    1.00 -1.133647e+00       AWAY     0.0177
+    2.00 -2.188520e+00       AWAY     0.0002
+
+BORN TEST (|I3|/P with gravitational field)
+  running gamma=0.0...
+  gamma=0.0: |I3|/P = 2.38e-15
+  running gamma=0.5...
+
+----- stderr -----
+

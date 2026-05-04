@@ -1,0 +1,99 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_cubic_variational_obstruction.py
+runner_sha256: ff7977c932d4bc29c52f8d0149fd9e7f70a22ecae48de849d69c822aaab895b3
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.57
+status: ok
+----- stdout -----
+========================================================================================
+G1 the cubic variational selection obstruction: Z_3 cubic right-sensitive selector — OBSTRUCTION theorem
+========================================================================================
+Branch: 
+Result: the cubic variational selection obstruction route obstructed; the selector gate remains open with the cubic attack vector closed off
+
+========================================================================================
+PART 1: SCHUR-BASELINE UPSTREAM CONSISTENCY
+========================================================================================
+ [PASS (C)] Upstream: det(m I + J_act) agrees with Z_3-circulant closed form (max err = 1.42e-14)
+ [PASS (C)] Upstream: Schur-Q Hessian is isotropic (-6/m^2, -6/m^2, 0) at zero source
+ [PASS (C)] Upstream: Schur-Q chamber-boundary minimizer equals sqrt(6)/3 (sqrt(8/3)/2 = 0.816496580928, sqrt(6)/3 = 0.816496580928)
+
+========================================================================================
+PART 2: BOUNDARY CRITICAL POINTS ARE m-DEPENDENT
+========================================================================================
+ [PASS (C)] Closed form t_+-(m) = m/2 +- sqrt(9 m^2 - 12 sqrt(6) m + 48)/6 are critical points (verified at multiple m)
+ [PASS (C)] Bounded branch t_-(m) approaches sqrt(6)/3 monotonically as m -> infinity (|t_-(m) - sqrt(6)/3| at m=0.3,1,5,100,10000: 1.72e+00, 1.19e+00, 1.88e-01, 6.78e-03, 6.67e-05)
+ [PASS (C)] At any finite m, t_-(m) != sqrt(6)/3 (no finite-m match to Schur-Q minimum)
+ [PASS (C)] Divergent branch t_+(m) scales linearly with m  (escapes chamber to infinity)
+ [PASS (C)] Discriminant 9 m^2 - 12 sqrt(6) m + 48 > 0 for all real m (critical points always real) (real quadratic with negative reduced discriminant)
+ [PASS (C)] Large-m expansion t_-(m) = sqrt(6)/3 - 2/(3m) + O(1/m^2) verified (cubic recovers Schur-Q only as cubic/quadratic -> 0)
+
+========================================================================================
+PART 3: JOINT (m, t) STATIONARY POINTS ARE SINGULAR (det = 0)
+========================================================================================
+ [PASS (C)] Each joint CP is a boundary critical point in t at its m
+ [PASS (C)] Each joint CP satisfies m * df/dm - 3 f = 0 (stationary w.r.t. m of log|f/m^3|)
+ [PASS (C)] Each joint CP lies on the singular locus det(m I + J_act) = 0 (W -> -infinity there (boundary singularity, not proper extremum))
+ [PASS (C)] Joint CPs have arg(w) in {0, 60, 120} degrees (Z_3 orbit of the singular locus) (arg(w) = [0.0, 59.999999999999986, 119.99999999999999])
+ [PASS (C)] Each joint CP has det(Hessian) non-positive on f/m^3 (saddle or degenerate, not a min or max) (consistent with being a singularity of log|f|)
+
+========================================================================================
+PART 4: CUBIC-ONLY FUNCTIONALS COLLAPSE TO A SINGLE FORM
+========================================================================================
+ [PASS (C)] tr(J_act^3) = 6 Re(w^3) and det(J_act) = 2 Re(w^3) (all cubics collapse) (max err = 7.11e-15)
+ [PASS (C)] Boundary extrema of Re(w^3) are at t = +- 2/sqrt(3) (t = 1.154701, -1.154701)
+ [PASS (C)] Re(w^3) boundary extrema are NOT sqrt(6)/3 (cubic extremum != Schur-Q minimum)
+ [PASS (C)] Re(w^3) boundary extrema are NOT at the Z_3 axis (t = 0, q = sqrt(8/3))
+
+========================================================================================
+PART 5: CUBIC-MAX Z_3 ORBIT IS NOT UNIQUE IN THE CHAMBER
+========================================================================================
+ [PASS (C)] Exactly two Z_3 cubic-maximum rays are chamber-accessible (arg(w) = 0 and 2pi/3) (accessible thetas: [0.0, 119.99999999999999])
+ [PASS (C)] arg(w) = 0.0 deg: chamber-boundary hit at r = 1.6330 (w = (1.6330, 0.0000), q_+ + delta = 1.632993)
+ [PASS (C)] arg(w) = 120.0 deg: chamber-boundary hit at r = 4.4614 (w = (-2.2307, 3.8637), q_+ + delta = 1.632993)
+ [PASS (C)] All three Z_3 rays have identical cos(3 arg(w)) = +1 (indistinguishable by cubic value)
+
+========================================================================================
+PART 6: MAX-vs-MIN OF CUBIC IS POST-AXIOM
+========================================================================================
+ [PASS (C)] Re(w^3) at t = +2/sqrt(3) and t = -2/sqrt(3) have opposite signs (values: -1.803754, 10.513051)
+ [PASS (C)] log|det| is insensitive to sign(det), so axiom has no preference for max or min of cubic (log|x| is symmetric under x -> -x)
+
+========================================================================================
+PART 7: OBSTRUCTION STATEMENT
+========================================================================================
+ The the cubic variational selection obstruction cubic right-sensitive attack closes NO sub-objection of G1.
+ Specifically, the following obstructions have been established:
+
+  (A) fixed-m boundary extrema t_+-(m) are m-dependent; t_- -> sqrt(6)/3
+    only in the m -> infinity limit, where the cubic contribution vanishes
+  (B) joint (m, t) stationary points lie on det = 0; they are boundary
+    singularities of log|det|, not proper extrema
+  (C) all cubic-only axiom-native functionals are proportional to Re(w^3);
+    their chamber-boundary extrema are at t = +- 2/sqrt(3)
+  (D) two of the three Z_3 cubic-max rays are chamber-accessible
+  (E) max vs min of cubic is a post-axiom sign convention
+
+ Conclusion: the cubic route cannot pick an m-invariant, finite, unique
+ chamber point without an ADDITIONAL post-axiom principle (choice of m,
+ choice of sign convention, or choice of Z_3-orbit representative).
+
+ the selector gap status after this runner:
+  * baseline sub-objection: CLOSED by Schur (partial closure note upstream)
+  * selector principle:   still OPEN
+  * cubic route obstruction: NAMED and NARROWED
+
+ The surviving open object remains the selector principle. the cubic variational selection obstruction is ruled
+ out as a stand-alone closure vehicle. Future attempts must import an
+ independent axiom-native principle (information-geometric law, holonomy
+ closure, or a canonical Z_3-sector convention with independent justification).
+ [PASS (C)] the cubic variational selection obstruction obstruction theorem established (cubic route cannot close G1) (five-part obstruction verified)
+ [PASS (C)] the selector gate remains OPEN (the selector principle is not promoted by this runner) (claim discipline preserved: no theorem-grade promotion)
+
+========================================================================================
+TOTAL: PASS = 26, FAIL = 0
+========================================================================================
+
+----- stderr -----
+

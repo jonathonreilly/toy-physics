@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_grown_propagating_field_radical.py
+runner_sha256: b2a722a091eaf9cf7db236c10fb633551563721201838660f349ca08603fe874
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 79.58
+status: ok
+----- stdout -----
+============================================================================================================
+GATE B GROWN PROPAGATING FIELD RADICAL
+  retained moderate-drift grown row, beam-sourced self-consistent field
+  comparison: alpha=0 static baseline vs alpha-activated feedback field
+============================================================================================================
+row: drift=0.2, restore=0.7, seeds=[0]
+source z = 3.0, field strength = 5.0e-05, field eps = 0.1
+alpha sweep = [0.0, 0.25, 0.5]
+iterations = 1, layer memory = 0.72, real gain = 1.0, imag gain = 0.7
+
+REDUCTION CHECK
+  alpha=0 field is exactly the retained grown baseline by construction
+
+           seed       esc(0.25)       esc(0.50) phase_slope(0.50) phase_span(0.50)     resid(0.50)        F~M(0.0)        F~M(0.5)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+              0           1.007           1.015          0.0002           0.111       3.420e-04            0.25            0.26
+
+AGGREGATE
+  alpha=0.00 escape=1.000 delta_z=+2.629043e-02 phase_slope=+0.0000 R2=0.000 span=0.000 resid=0.000e+00
+  alpha=0.25 escape=1.007 delta_z=+2.727378e-02 phase_slope=+0.0001 R2=0.002 span=0.055 resid=1.710e-04
+  alpha=0.50 escape=1.015 delta_z=+2.826558e-02 phase_slope=+0.0002 R2=0.001 span=0.111 resid=3.420e-04
+
+WEAK-FIELD SANITY
+  F~M exponent at alpha=0: 0.254
+  F~M exponent at alpha=0.5: 0.256
+
+SAFE READ
+  alpha=0 is an exact reduction to the retained grown baseline
+  the promoted observable is the detector-line phase ramp
+  if the phase ramp and escape stay flat once the feedback field is
+  self-consistent, this is a bounded no-go for the radical attempt
+
+Total time: 79.5s
+
+----- stderr -----
+

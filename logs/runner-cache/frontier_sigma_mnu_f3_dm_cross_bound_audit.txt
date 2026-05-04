@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/frontier_sigma_mnu_f3_dm_cross_bound_audit.py
+runner_sha256: dbe9bf5ab614c46cefe43de7e4013cbc47814672605cd747c96dc46d108a5aa7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+==============================================================================
+LANE 4F (Sigma m_nu) — F3 DM CROSS-BOUND AUDIT RUNNER
+==============================================================================
+
+Question: does the current-bank Omega_DM interval (DM thermal-bounding
+theorem) supply a usable cross-bound for Sigma m_nu via
+(T-4F-alpha-2) at honest observational admissions?
+
+[PASS] (T-4F-alpha-2) is algebraic on the cosmology bounded surface: Sigma m_nu(L=0.6847, Omega_b=0.0493, Omega_DM=0.2687, h=0.6736) = -0.1186 eV
+[PASS] matter-budget split closes: 1 = L + R + Omega_b + Omega_DM + Omega_nu: consistency by construction
+[PASS] at Planck-style admission (L=0.6847, Omega_b=0.0493, h=0.6736) framework Omega_DM bound gives Sigma m_nu in [Sigma_lo, Sigma_hi]: Sigma m_nu in [-0.1610, -0.0761] eV
+[PASS] at Planck-style admission, framework Omega_DM bound predicts Sigma m_nu < 0 (unphysical) at both endpoints: structural tension: framework Omega_DM bound exceeds the observational Omega_DM by ~0.003, leaving no room for positive Omega_nu at Planck (L, Omega_b, h)
+[PASS] admission-grid scan executes over (L, Omega_b, h) range: n_total = 462 = 7 x 6 x 11
+[PASS] Sigma m_nu is sometimes positive across the admission grid: n_positive = 198 (42.9% of grid)
+[PASS] Sigma m_nu compatible with osc lower bound (>= 0.06 eV) on subset: n_above_osc = 178 (38.5% of grid)
+[PASS] Sigma m_nu range over admission grid covers both sign regions: Sigma m_nu in [-1.1946, 0.9011] eV across the admission grid
+[PASS] favorable admission region (where Sigma m_nu > 0) is bounded: L in [0.6700, 0.6850], Omega_b in [0.0450, 0.0550], h in [0.6500, 0.7500]
+[PASS] loosening Omega_DM lower endpoint to 0.265 lifts Sigma m_nu to positive: Sigma m_nu(Omega_DM=0.265) = 0.0384 eV at Planck (L, Omega_b, h)
+[PASS] F3 cross-bound chain is structurally available: (T-4F-alpha-2) + Omega_DM bound supplies a closed-form Sigma m_nu interval conditional on (L, Omega_b, h) admissions
+[PASS] F3 cross-bound has structural tension at Planck admission: framework Omega_DM bound [0.2677, 0.2697] exceeds observational Omega_DM (~0.265) by ~0.003-0.005, leaving no room for positive Sigma m_nu at standard L and Omega_b admissions
+[PASS] F3 cross-bound is honest only as conditional bounded statement: numerical retention of Sigma m_nu requires (i) tightening framework Omega_DM bound by ~0.003-0.005 OR (ii) loosening to admit Planck Omega_DM ~0.265; (iii) admitting (L, Omega_b, h) in a favorable sub-region
+[PASS] F3 cross-bound does not retire any open import: (L, Omega_b, h) remain admitted/open; numerical Sigma m_nu remains open; Lane 5 (C1) gate remains open per Cycle 6 of the parallel hubble-c1 loop
+
+==============================================================================
+SUMMARY: PASS=14  FAIL=0
+==============================================================================
+
+Verdict: F3 DM cross-bound chain is structurally available via
+(T-4F-alpha-2) + current-bank Omega_DM thermal interval, but at standard
+Planck admissions (L=0.6847, Omega_b=0.0493, h=0.6736) the chain
+predicts Sigma m_nu < 0, an unphysical structural tension.
+
+The framework's current-bank Omega_DM interval [0.2677, 0.2697] (conditional
+on same-surface admitted family) exceeds the observationally-derived
+Omega_DM ~0.265 by ~0.003-0.005.  Since Sigma m_nu = (Omega_m,0 -
+Omega_b - Omega_DM) C_nu h^2, any framework Omega_DM that exceeds
+Omega_m,0 - Omega_b leaves negative residual for neutrinos.
+
+Implication: F3 cannot supply a numerical Sigma m_nu retention without
+either (i) tightening the framework Omega_DM bound to admit Planck
+CMB-derived Omega_DM ~0.265, OR (ii) loosening the framework's
+same-surface DM family to a wider admission interval.  Both are
+research-level pivots beyond a single audit cycle.
+
+F3 audit-grade output: structural tension identified; cross-bound
+is conditionally available but in observational tension at standard
+Planck admissions.  Honest stop appropriate.
+
+----- stderr -----
+

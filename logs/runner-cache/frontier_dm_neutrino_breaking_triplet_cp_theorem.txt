@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_breaking_triplet_cp_theorem.py
+runner_sha256: 26be65c14f41b944294a8c6636324cdf865df7ab08580565c4783c589dd7381c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO BREAKING-TRIPLET CP THEOREM
+========================================================================================
+
+Question:
+  Can the intrinsic DM CP tensor be rewritten exactly in the
+  canonical breaking-triplet coordinates (delta,rho,gamma)?
+
+========================================================================================
+PART 1: THE TRIPLET FORMULA MATCHES THE DIRECT INTRINSIC CP TENSOR
+========================================================================================
+  [PASS] Im[(K_mass)01^2] matches the exact triplet formula  (direct=-0.013067, exact=-0.013067)
+  [PASS] Im[(K_mass)02^2] matches the exact triplet formula  (direct=0.149333, exact=0.149333)
+
+========================================================================================
+PART 2: GAMMA IS THE MANDATORY CP-ODD SOURCE
+========================================================================================
+  [PASS] If gamma=0 then both intrinsic CP channels vanish exactly  (the whole tensor is linear in gamma)
+  [PASS] The first channel is breaking-breaking interference through delta+rho  (cp1 = -2 gamma (delta + rho) / 3)
+  [PASS] The second channel is breaking-core interference through A+b-c-d  (cp2 = 2 gamma (A + b - c - d) / 3)
+
+  So the H-side last mile is now split into one CP-odd source gamma
+  and two exact interference channels.
+
+========================================================================================
+PART 3: THE ALIGNED-CORE NO-GO IS THE ZERO-TRIPLET LIMIT
+========================================================================================
+  [PASS] The aligned-core zero-triplet limit gives zero exact CP
+  [PASS] The direct transformed tensor agrees  (direct=(-2.2062830904209992e-32, 1.8624795141344643e-16))
+
+========================================================================================
+PART 4: THE BANK RECORDS THE BREAKING-TRIPLET CP ENDPOINT
+========================================================================================
+  [PASS] The note states the exact triplet formulas
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact answer:
+    - cp1 = -2 gamma (delta + rho) / 3
+    - cp2 =  2 gamma (A + b - c - d) / 3
+    - gamma is the mandatory CP-odd source
+    - the remaining DM object is the triplet-side law for gamma and
+      the two interference channels
+
+PASS=8 FAIL=0
+
+----- stderr -----
+

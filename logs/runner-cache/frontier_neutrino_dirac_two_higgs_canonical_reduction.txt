@@ -1,0 +1,103 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_dirac_two_higgs_canonical_reduction.py
+runner_sha256: 21e3e750cc30f3a10b7b5a8280919e32d6cb3c4d5c961b478da1b04a25dd0c9c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO DIRAC YUKAWA: TWO-HIGGS CANONICAL REDUCTION
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - Neutrino Dirac two-Higgs escape theorem
+  - Lepton single-Higgs PMNS triviality theorem
+  - monomial charged-lepton boundary on the retained lane
+
+Question:
+  On the minimal surviving neutrino-side extension class, how much
+  exact freedom is left before full Dirac-neutrino closure?
+
+========================================================================================
+PART 1: ALL DISTINCT TWO-HIGGS CHARGE PAIRS REDUCE TO ONE SUPPORT CLASS
+========================================================================================
+  [PASS] charges=(0,1): right multiplication makes one Higgs term diagonal  (relative support=
+[[0 1 0]
+ [0 0 1]
+ [1 0 0]])
+  [PASS] charges=(0,1): the relative permutation is a nontrivial 3-cycle  (det=1.0+0.0j)
+  [PASS] charges=(0,1): a generation relabeling maps the pair to the forward-cycle class
+  [PASS] charges=(0,1): the transformed texture has canonical support class A + B C  (canon error=0.00e+00)
+  [PASS] charges=(0,2): right multiplication makes one Higgs term diagonal  (relative support=
+[[0 0 1]
+ [1 0 0]
+ [0 1 0]])
+  [PASS] charges=(0,2): the relative permutation is a nontrivial 3-cycle  (det=1.0+0.0j)
+  [PASS] charges=(0,2): a generation relabeling maps the pair to the forward-cycle class
+  [PASS] charges=(0,2): the transformed texture has canonical support class A + B C  (canon error=0.00e+00)
+  [PASS] charges=(1,2): right multiplication makes one Higgs term diagonal  (relative support=
+[[0 1 0]
+ [0 0 1]
+ [1 0 0]])
+  [PASS] charges=(1,2): the relative permutation is a nontrivial 3-cycle  (det=1.0+0.0j)
+  [PASS] charges=(1,2): a generation relabeling maps the pair to the forward-cycle class
+  [PASS] charges=(1,2): the transformed texture has canonical support class A + B C  (canon error=0.00e+00)
+
+  So the charge-pair label itself is not a remaining physical
+  ambiguity on the minimal two-Higgs lane. Up to relabeling, there
+  is one canonical support class.
+
+========================================================================================
+PART 2: GENERIC TWO-HIGGS TEXTURES REDUCE TO SIX MODULI PLUS ONE PHASE
+========================================================================================
+  [PASS] The diagonal Higgs block can be made strictly positive and real  (a_can=[0.9+0.j 0.7+0.j 1.1-0.j])
+  [PASS] Two of the three off-cycle coefficients can be made strictly positive and real  (b12_can=[0.4+0.j 0.6-0.j])
+  [PASS] Exactly one invariant phase remains on the generic two-Higgs lane  (delta=1.300000, invariant=1.300000)
+  [PASS] The canonical texture keeps the same singular-value spectrum  (svals=[0.529218 0.964352 1.438733])
+
+  So the generic canonical normal form is
+    diag(x1,x2,x3) + diag(y1,y2,y3 e^{i delta}) C
+  with x_i > 0, y_i > 0, and one surviving physical phase delta.
+
+========================================================================================
+PART 3: THE MINIMAL TWO-HIGGS LANE CARRIES EXACTLY SEVEN REAL INVARIANTS
+========================================================================================
+  [PASS] The generic two-Higgs texture starts with 12 real parameters
+  [PASS] The phase-fixing conditions have rank 5  (rank=5)
+  [PASS] One common lepton-number phase remains as the exact null direction  (null dim=1)
+  [PASS] So the physical parameter count is 12 - 5 = 7  (physical count=7)
+  [PASS] The canonical normal form uses exactly 6 positive moduli plus 1 phase  (canonical count=7)
+
+  So the minimal exact surviving neutrino-side extension class is not
+  a generic 9-complex-entry texture problem. It is a seven-real-number
+  problem on one canonical support class.
+
+========================================================================================
+PART 4: THE SEVEN-INVARIANT LANE IS PARAMETER-COUNT COMPLETE FOR DIRAC CLOSURE
+========================================================================================
+  [PASS] Dirac neutrino data on a monomial charged-lepton lane has 3 masses + 3 angles + 1 phase  (observable count=7)
+  [PASS] The canonical two-Higgs lane is neither undercomplete nor overcomplete by count  (canonical=7, observables=7)
+  [PASS] So the exact remaining gap is not an unknown texture class but seven axiom-side numbers  (six moduli and one phase on the canonical two-Higgs lane)
+
+  This does not prove the map onto observables is surjective, and it
+  does not derive the seven numbers. But it does prove the exact
+  closure gap on the minimal surviving lane has been reduced to those
+  seven quantities.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact reduction answer:
+    - all distinct two-Higgs charge pairs reduce to one support class
+    - the generic canonical form is diag(x1,x2,x3)+diag(y1,y2,y3 e^{i delta}) C
+    - the minimal surviving neutrino-side lane carries exactly 7 real invariants
+
+  So the gap between the current exact boundary and full Dirac-neutrino
+  closure on the minimal surviving class is now sharply reduced to
+  seven axiom-side numbers: six moduli and one phase.
+
+PASS=24  FAIL=0
+
+----- stderr -----
+

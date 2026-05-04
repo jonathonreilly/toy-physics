@@ -1,0 +1,74 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_endpoint_exchange_midpoint_theorem.py
+runner_sha256: 9ecd866cc239aef62186c9004c0e09a0935d1e8e620e29bdd2b64fe17e9989cf
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: ENDPOINT-EXCHANGE MIDPOINT THEOREM
+========================================================================================
+
+Authority stack:
+  - docs/NEUTRINO_MAJORANA_AXIS_EXCHANGE_FIXED_POINT_NOTE.md
+  - docs/NEUTRINO_MAJORANA_SELF_DUAL_STAIRCASE_LIFT_OBSTRUCTION_NOTE.md
+  - docs/HIERARCHY_MATSUBARA_DECOMPOSITION_NOTE.md
+  - docs/YT_BOUNDARY_THEOREM.md
+
+Question:
+  Can the exact local self-dual Majorana point rho = 1 be lifted to an
+  absolute staircase anchor on a genuinely new non-homogeneous bridge?
+
+========================================================================================
+PART 1: THE HIERARCHY LANE SUPPLIES AN EXACT FINITE 16-STEP REGISTER
+========================================================================================
+  [PASS (C)] The staircase register has exactly 17 nodes k=0..16
+  [PASS (C)] The UV endpoint is k=0 with lambda_0 = 1  (lambda_0=1.000000000000000)
+  [PASS (C)] The IR endpoint is k=16 with lambda_16 = alpha_LM^16  (lambda_16=2.085701e-17)
+  [PASS (C)] The finite staircase is strictly monotone in k  (lambda_1=0.090668, lambda_16=2.085701e-17)
+
+  The hierarchy lane is therefore not an unbounded scale family here.
+  It is one exact finite register between two exact endpoints.
+
+========================================================================================
+PART 2: ENDPOINT EXCHANGE FORCES THE UNIQUE ORDER-REVERSING INVOLUTION
+========================================================================================
+  [PASS (C)] The finite-register endpoint exchange is an involution  (max |E(E(k))-k|=0)
+  [PASS (C)] The endpoint exchange preserves the two exact endpoints  (endpoint error=0)
+  [PASS (C)] The endpoint exchange is strictly order-reversing  (max forward difference=-1)
+  [PASS (C)] Any endpoint-preserving order-reversing bijection is forced to k -> 16-k  (rank-complement error=0)
+
+  So the missing bridge is no longer an arbitrary non-homogeneous map.
+  On the exact finite register, the UV/IR endpoint exchange is unique.
+
+========================================================================================
+PART 3: THE SELF-DUAL LOCAL POINT LIFTS TO THE MIDPOINT k = 8
+========================================================================================
+  [PASS (C)] The scale-side endpoint exchange is lambda -> alpha_LM^16 / lambda  (max |lambda_k lambda_16-k - alpha^16|=3.08e-33)
+  [PASS (C)] The unique fixed point of k -> 16-k is k = 8  (fixed points=[8])
+  [PASS (C)] The unique scale fixed point is lambda_* = alpha_LM^8  (|sqrt(alpha^16)-alpha^8|=0.00e+00)
+
+  If the exact local axis exchange rho -> 1/rho is lifted to this
+  exact endpoint exchange on the finite staircase, the local self-dual
+  point rho = 1 must land at the unique midpoint k = 8.
+
+========================================================================================
+RESULT
+========================================================================================
+  Yes, on the minimal finite-register bridge. The exact 16-step taste
+  staircase already supplies two exact endpoints, and the unique
+  endpoint-preserving order-reversing involution is k -> 16-k.
+  Lifting the local axis exchange to that endpoint exchange forces the
+  unique midpoint:
+
+      k_B = 8,    lambda_* = alpha_LM^8.
+
+  This closes the absolute staircase anchor on the minimal
+  endpoint-exchange bridge. What remains downstream is the
+  three-generation A/B/epsilon amplitude law.
+
+PASS=11  FAIL=0
+
+----- stderr -----
+

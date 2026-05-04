@@ -1,0 +1,32 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_graph_observables.py
+runner_sha256: 8fd382a8301058f4da84f64a31e8907b6b1c6342dd82ce032933b9be496734dc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.33
+status: ok
+----- stdout -----
+============================================================================================
+STAGGERED GRAPH OBSERVABLES
+  Retained: Born/linearity, norm, force sign, F∝M, achromatic force,
+  equivalence, robustness, gauge/current when cycles exist
+  Secondary: centroid shift, shell bias
+============================================================================================
+  dt=0.12, steps=10, mass=0.3, source=0.0004
+
+bipartite_random_geometric n=36  retained=8/8 centroid_shift=-1.110e-16 shell_bias=-4.345e-01 gauge=5.142e-03 [PASS]
+bipartite_growing          n=48  retained=8/8 centroid_shift=+1.110e-16 shell_bias=-4.398e-01 gauge=9.054e-03 [PASS]
+layered_bipartite_dag      n=36  retained=8/8 centroid_shift=+1.388e-17 shell_bias=-4.826e-01 gauge=N/A
+
+READOUT
+  bipartite_random_geometric RETAINED centroid/shell are secondary; gauge=PASS
+  bipartite_growing          RETAINED centroid/shell are secondary; gauge=PASS
+  layered_bipartite_dag      RETAINED centroid/shell are secondary; gauge=N/A
+
+Interpretation:
+  - Force/current are the retained observables on these graph families.
+  - Centroid and shell diagnostics are informative but recurrence-sensitive.
+  - Gauge/current is only scored on cycle-bearing families.
+
+----- stderr -----
+

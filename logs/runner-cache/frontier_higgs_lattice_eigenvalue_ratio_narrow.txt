@@ -1,0 +1,69 @@
+===== runner cache v1 =====
+runner: scripts/frontier_higgs_lattice_eigenvalue_ratio_narrow.py
+runner_sha256: 7ced0fd61271f54704fea67cae6b4ad9e9d347027940dc22bb4e9012b051215c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.48
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure and scope discipline
+----------------------------------------------------------------------------------------
+  [PASS (A)] contains: 'Higgs Lattice Eigenvalue Ratio (Mean-Field) — Narrow Theorem'  ()
+  [PASS (A)] contains: 'Type:** bounded_theorem'  ()
+  [PASS (A)] contains: 'R_lattice'  ()
+  [PASS (A)] contains: '4 / (u_0² · N_taste)'  ()
+  [PASS (A)] contains: 'N_taste = 16'  ()
+  [PASS (A)] contains: 'NO physical Higgs mass identification'  ()
+  [PASS (A)] contains: 'GRAPH_FIRST_SU3_INTEGRATION_NOTE.md'  ()
+  [PASS (A)] contains: 'G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md'  ()
+  [PASS (A)] contains: 'g_bare = 1'  ()
+  [PASS (A)] contains: 'class (A)'  ()
+  [PASS (A)] contains: 'target_claim_type: bounded_theorem'  ()
+  [PASS (A)] narrow scope avoids forbidden physical-matching claim: 'm_H = v/(2 u_0) is hereby derived'  ()
+  [PASS (A)] narrow scope avoids forbidden physical-matching claim: 'physical Higgs mass is established'  ()
+  [PASS (A)] narrow scope avoids forbidden physical-matching claim: '(m_H/v)² is identified with R_lattice (DERIVATION)'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: structural integers N_c, N_sites, N_taste, N_tot
+----------------------------------------------------------------------------------------
+  [PASS (A)] N_c = 3 (declared graph_first_su3)  ()
+  [PASS (A)] N_sites = 2^4 = 16 (minimal APBC block)  ()
+  [PASS (A)] N_taste = N_sites = 16  ()
+  [PASS (A)] d = 4 (Z^4 spacetime dimension for staggered Cl(3))  ()
+  [PASS (A)] N_tot = N_c × N_sites = 48  ()
+
+----------------------------------------------------------------------------------------
+Part 3: Clifford-identity eigenvalue magnitude
+----------------------------------------------------------------------------------------
+  [PASS (A)] |λ_taste|² = d = 4 from Clifford identity  ()
+  [PASS (A)] |λ_taste| = sqrt(d) = 2 (lattice units)  ()
+
+----------------------------------------------------------------------------------------
+Part 4: mean-field eigenvalue scaling and generating functional curvature
+----------------------------------------------------------------------------------------
+  [PASS (A)] W'' at J=0 = N_tot / (4 u_0²) = 12 / u_0²  (W''|0 = 12/u0**2, expected 12/u0**2)
+
+----------------------------------------------------------------------------------------
+Part 5: R_lattice = 4 / (u_0² N_taste) = 1 / (4 u_0²)
+----------------------------------------------------------------------------------------
+  [PASS (A)] R_lattice = 4 / (u_0² · N_taste) at N_taste=16 = 1/(4 u_0²)  (R_lattice = 1/(4*u0**2), expected 1/(4*u0**2))
+  [PASS (A)] per-taste curvature W''/N_tot = 1/(4 u_0²) matches R_lattice  (W''/N_tot = 1/(4*u0**2))
+
+----------------------------------------------------------------------------------------
+Part 6: declared authorities are graph-visible
+----------------------------------------------------------------------------------------
+  [PASS (A)] g_bare_canonical_convention_narrow_theorem_note_2026-05-02 exists in audit ledger  (effective_status='audited_conditional')
+  [PASS (A)] graph_first_su3_integration_note exists in audit ledger  (effective_status='retained_bounded')
+  [PASS (A)] higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02 seeded by audit pipeline  (run docs/audit/scripts/run_pipeline.sh after editing the note)
+  [PASS (A)] higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02 records g_bare_canonical_convention_narrow_theorem_note_2026-05-02 as declared dependency  (deps=['g_bare_canonical_convention_narrow_theorem_note_2026-05-02', 'graph_first_su3_integration_note'])
+  [PASS (A)] higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02 records graph_first_su3_integration_note as declared dependency  (deps=['g_bare_canonical_convention_narrow_theorem_note_2026-05-02', 'graph_first_su3_integration_note'])
+  [PASS (A)] higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02 remains effective-unaudited before independent audit  (effective_status='unaudited')
+
+========================================================================================
+  TOTAL: PASS=30, FAIL=0
+========================================================================================
+
+----- stderr -----
+

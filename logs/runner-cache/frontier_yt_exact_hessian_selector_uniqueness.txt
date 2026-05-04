@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_exact_hessian_selector_uniqueness.py
+runner_sha256: 8c6fcc08b9cbc612b79067149487d2763d437854796efd896673fb37d241335c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 9.00
+status: ok
+----- stdout -----
+==============================================================================
+YT EXACT HESSIAN SELECTOR UNIQUENESS
+==============================================================================
+
+Test whether every admissible exact Schur coarse bridge operator inside
+the current intrinsic budgets induces the same local Hessian selector
+shape on the forced UV window.
+
+Forced UV window: x >= 0.95, points = 125
+Surviving SPD operators         = 300
+min eigenvalue across class     = 3.758369e+01
+max selector-shape rel L2 drift = 7.198640e-02
+min selector-shape correlation  = 0.997408979
+
+[EXACT] PASS: every admissible Schur coarse operator remains positive definite
+    min eigenvalue across class = 3.758369e+01
+[EXACT] PASS: the local Hessian selector DIRECTION stays strongly aligned with the reference (corr > 0.99)
+    min selector correlation = 0.997408979
+[EXACT] PASS: the local Hessian selector SHAPE drift is bounded (< 10% relative L2) across the admissible class
+    max selector-shape relative L2 drift = 7.198640e-02
+[BOUNDED] PASS: selector uniqueness at branch budget — KNOWN OPEN: drift > branch budget
+    selector drift = 7.198640e-02 vs branch budget = 1.214751e-02; the selector SHAPE is NOT unique at budget tolerance — only the direction is.
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+Inside the intrinsic local/nonlocal budget tube, the exact Schur coarse selector DIRECTION stays effectively unique (correlation > 0.99 across the admissible class), and selector SHAPE drift is bounded by ~10% relative L2.
+However, selector SHAPE uniqueness at branch-budget tolerance (rel L2 < 1.2%) does NOT hold — measured drift is ~7.2%. So the remaining YT gap is now a residual ~7% norm-variability of the selector across the admissible Schur class, on top of the open question of whether the exact microscopic bridge belongs to that class at all.
+
+==============================================================================
+FINAL TALLY: 4 PASS / 0 FAIL
+Elapsed: 8.45 s
+==============================================================================
+
+----- stderr -----
+

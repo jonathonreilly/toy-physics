@@ -1,0 +1,31 @@
+===== runner cache v1 =====
+runner: scripts/frontier_planck_boundary_orientation_incidence_no_go.py
+runner_sha256: b4565a8f7f6b639fb6efe5e844f91b3cb8db254e9462ccbe229223240895640a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+PLANCK BOUNDARY ORIENTATION / INCIDENCE STRETCH NO-GO
+==============================================================================
+
+Question: does oriented boundary incidence force P_1=P_A over P_3?
+
+[PASS (A)] 1. construct H_cell, P_1, P_3, and oriented Hodge map: dim=16; star unitary=0.00e+00; *P1*=P3 error=0.00e+00
+[PASS (A)] 2. oriented four-cell face incidence equals Hodge-dual normal data: face incidence error=0.00e+00; face rank=4
+[PASS (A)] 3. normal/face incidence pairing is perfect but not selective: <*e_a, face_b> identity error=0.00e+00
+[PASS (A)] 4. P_1 and P_3 satisfy the same spin/time/CPT equivariance tests: P1 symmetry=0.00e+00; P3 symmetry=0.00e+00
+[PASS (A)] 5. Hodge duality preserves the tensor-local number algebra: max *n_i*^-1-(1-n_i)=0.00e+00
+[PASS (A)] 6. first homogeneous response and third homogeneous face response are dual: G1 local=0.00e+00; G3 local=0.00e+00; Hodge dual=0.00e+00
+[PASS (A)] 7. Noether current one-form and flux three-form have equivalent carriers: rank(one-form current)=4; rank(dual flux form)=4
+[PASS (A)] 8. selecting P_1 requires an extra cochain-normal primitive flag: P1 selection works only after adding cochain-normal primitivity; substrate distinction errors={'rank_gap': 0, 'symmetry_gap': 0.0, 'hodge_gap': 0.0}
+[PASS (A)] 9. stuck fan-out exposes no substrate-only asymmetric selector: oriented_cubical_boundary: PASS; variational_first_derivative_boundary_only: PASS; noether_current: PASS; reflection_positive_time: PASS; intrinsic_active_module: PASS
+[PASS (A)] 10. forbidden-input boundary: no forbidden theorem, decoration chain, or manual P_A selector used
+
+Summary: PASS=10  FAIL=0
+
+Verdict: NO-GO. Oriented boundary incidence does not force P_1=P_A. It gives a perfect normal/face duality: normals live in P_1, oriented faces/fluxes live in P_3, and Hodge duality preserves the substrate structure. Choosing the normal/cochain representation is the missing first-order boundary-orientation premise, not a derived consequence.
+
+----- stderr -----
+

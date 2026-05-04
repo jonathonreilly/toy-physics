@@ -1,0 +1,56 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_moment_ratio_uniformity_theorem.py
+runner_sha256: 659792071f7462719c579b6277641ee4f5bf8e266bbd0c58242a23ff9da47300
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.05
+status: ok
+----- stdout -----
+
+=== Part 0: d=3 geometry and uniqueness ===
+[A] PASS: ||B_0||^2 = 3
+[A] PASS: ||B_1||^2 = ||B_2||^2 = 6
+[A] PASS: B_0, B_1, B_2 are pairwise orthogonal
+[A] PASS: d=3 has exactly one singlet and one real doublet
+[A] PASS: d=2 is singlet-singlet only, so no singlet-vs-doublet MRU form
+[A] PASS: d>=4 fragments into multiple real isotypes
+
+=== Part 1: internal SO(2) frame redundancy of the real doublet ===
+[A] PASS: The doublet radius is SO(2)-invariant
+[A] PASS: A single Cartesian coordinate is not invariant under the internal frame rotation  (residual=-3*r1**2/4 - sqrt(3)*r1*r2/2 + 3*r2**2/4)
+[A] PASS: |b|^2 is frame-invariant on the non-trivial sector
+[A] PASS: kappa depends only on the doublet radius, not on the chosen frame
+
+=== Part 2: exact two-slot quotient carrier ===
+[A] PASS: E_+ = r_0^2 / 3
+[A] PASS: E_perp = (r_1^2 + r_2^2) / 6
+[A] PASS: E_perp is constant on SO(2) orbits of the doublet plane
+[A] PASS: In circulant variables E_+ = 3 a^2
+[A] PASS: In circulant variables E_perp = 6 |b|^2
+[A] PASS: kappa is exactly a quotient-carrier function: kappa = 2 E_+ / E_perp
+
+=== Part 3: reduced-carrier log-volume extremum ===
+[A] PASS: Reduced log-volume has a unique positive stationary point  (sol=[{lam: 1/e_tot, rho_p: sqrt(2)*sqrt(e_tot)/2, rho_perp: sqrt(2)*sqrt(e_tot)/2}])
+[A] PASS: Stationary point is rho_+ = rho_perp = sqrt(E_tot/2)
+[A] PASS: The stationary point is a strict maximum on the positive branch  (second=-8/e_tot)
+[A] PASS: rho_+ = rho_perp is equivalent to E_+ = E_perp
+[A] PASS: E_+ = E_perp pulls back to a^2 = 2 |b|^2
+[A] PASS: Therefore the reduced-carrier extremum forces kappa = 2
+
+=== Part 4: contrast with the unreduced determinant obstruction ===
+[A] PASS: Unreduced isotypic-scalar carrier has det = alpha beta^2
+[A] PASS: Reduced real-isotype carrier has det = alpha beta
+[A] PASS: Unreduced weights (1,2) land at kappa = 1
+[A] PASS: Reduced two-slot carrier carries equal weights and lands at kappa = 2
+
+Interpretation:
+  The unreduced 3x3 determinant obstruction remains exact.
+  The load-bearing new theorem is the canonical SO(2) quotient of the
+  non-trivial real doublet to a single scalar radius rho_perp.
+  That makes the scalar charged-lepton carrier two-slot, not three-slot,
+  and the reduced-carrier log-volume extremum is exactly MRU.
+
+classified_pass=26 fail=0
+
+----- stderr -----
+

@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_grown_joint_package.py
+runner_sha256: 87f8c52f0a1133f514877b3555d3e6c4444b5a2d737c835be9021821aaab23d6
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

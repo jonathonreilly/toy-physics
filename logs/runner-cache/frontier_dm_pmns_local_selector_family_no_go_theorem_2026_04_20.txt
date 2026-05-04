@@ -1,0 +1,77 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_pmns_local_selector_family_no_go_theorem_2026_04_20.py
+runner_sha256: 80971aa96feced8c1990ef1df363e9e1923f1fe689d36d7a4defd55ab648a7c1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.89
+status: ok
+----- stdout -----
+========================================================================================
+DM PMNS LOCAL-SELECTOR-FAMILY NO-GO THEOREM
+========================================================================================
+
+Question:
+  Can the current exact local selector families close the remaining
+  PMNS angle pin without importing the observational chamber point?
+
+========================================================================================
+PART 1: CURRENT EXACT LOCAL SELECTOR FAMILIES REDUCE TO THE SAME SELECTED LINE
+========================================================================================
+  [PASS] Parity-compatible selector theorem fixes delta_* = q_+* = sqrt(6)/3  ((delta_*,q_+*)=(0.816496580928,0.816496580928))
+  [PASS] 23-symmetric active-curvature theorem fixes the same line for all D = diag(A,B,B)  ((delta_*,q_+*)=(0.816496580928,0.816496580928))
+  [PASS] The two exact local families agree on one selected line delta = q_+ = sqrt(6)/3
+  [PASS] The note records the local-family reduction to the Schur line
+
+========================================================================================
+PART 2: THE SCHUR LINE HAS A HARD SOLAR-ANGLE FLOOR
+========================================================================================
+ stationary roots of s12^2(m, S, S) on [-2000,2000]: [-0.41013790202748496, 4.365005345285525]
+ local min: m = 4.365005345286, s12^2 = 0.331582718643
+ local max: m = -0.410137902027, s12^2 = 0.761269027610
+ endpoint values: s12^2(-2000) = 0.474172699901, s12^2(2000) = 0.344679257552
+  [PASS] s12^2 on the Schur line has exactly two stationary points on the wide scan  (roots=[-0.41013790202748496, 4.365005345285525])
+  [PASS] The lower stationary point sits at positive m ~= 4.365 and is the line minimum on the wide scan  (m_min=4.365005345286, s12^2_min=0.331582718643)
+  [PASS] The Schur-line solar-angle floor stays strictly above the physical target 0.307  (s12^2_min - 0.307 = 0.024582718643)
+  [PASS] Therefore no point on delta = q_+ = sqrt(6)/3 can realize the physical PMNS triple  (s12^2_min=0.331582718643)
+
+========================================================================================
+PART 3: THE BEST FULL THREE-ANGLE FIT ON THE SCHUR LINE STILL MISSES
+========================================================================================
+ stationary roots of chi^2_line on [-200,200]: [1.278322119585464]
+ best root: m = 1.278322119585
+ best chi^2 = 0.011428083951
+ best triple = (0.379202747701, 0.055637456612, 0.473796954383)
+ endpoint chi^2 values: chi^2(-200) = 0.462538811906, chi^2(200) = 0.100836772758
+  [PASS] The Schur-line three-angle distance has a unique stationary point on the wide scan  (roots=[1.278322119585464])
+  [PASS] The unique best-fit point is near m ~= 1.27832212  (m_best=1.278322119585)
+  [PASS] The full three-angle miss stays macroscopically nonzero  (chi^2_min=0.011428083951)
+
+========================================================================================
+PART 4: ALL CURRENT EXPLICIT CANDIDATE POINTS MISS THE PMNS TRIPLE
+========================================================================================
+ A Schur-Q       chi^2 = 0.062796977678  max|angle error| = 0.250570648247
+ B det-crit      chi^2 = 0.031125817754  max|angle error| = 0.155438092882
+ C Tr(H^2)-bdy   chi^2 = 0.086958052830  max|angle error| = 0.218478148954
+ D K12 char      chi^2 = 0.257190397214  max|angle error| = 0.504569682326
+ E par-mix F1    chi^2 = 0.046554013283  max|angle error| = 0.205004015444
+  [PASS] Every current explicit selector candidate has max angle error > 0.05  (rows=[('A Schur-Q', 0.06279697767843943, 0.2505706482474969), ('B det-crit', 0.03112581775423068, 0.15543809288164334), ('C Tr(H^2)-bdy', 0.08695805283008462, 0.21847814895377254), ('D K12 char', 0.257190397213588, 0.5045696823261516), ('E par-mix F1', 0.04655401328321692, 0.20500401544416808)])
+  [PASS] Every current explicit selector candidate has chi^2 > 0.03  (rows=[('A Schur-Q', 0.06279697767843943, 0.2505706482474969), ('B det-crit', 0.03112581775423068, 0.15543809288164334), ('C Tr(H^2)-bdy', 0.08695805283008462, 0.21847814895377254), ('D K12 char', 0.257190397213588, 0.5045696823261516), ('E par-mix F1', 0.04655401328321692, 0.20500401544416808)])
+
+========================================================================================
+PART 5: THE NOTE STATES THE CORRECT I5 CONSEQUENCE
+========================================================================================
+  [PASS] The note records the hard Schur-line solar-angle floor
+  [PASS] The note records that the missing ingredient is nonlocal point selection, not another local family
+
+========================================================================================
+RESULT
+========================================================================================
+  Current exact local selector families do NOT close the PMNS angle pin.
+  The strongest exact local route fixes delta = q_+ = sqrt(6)/3,
+  but the entire selected line misses the physical PMNS triple.
+  Remaining target: a nonlocal point-selection law on the live branch.
+
+PASS=15 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,20 @@
+===== runner cache v1 =====
+runner: scripts/frontier_echo_null_result.py
+runner_sha256: f9af20123e082a8abff27c474d65df13d528fae0e87167fdf00510e6f8f6cc39
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+GW echo null-result companion check
+t_nonspin_ms = 57.48
+t_kerr_ms = 67.45
+log10_tunneling = -2.316e+41
+frozen_star_sigma = 0.41
+abedi_sigma = 1.29
+PASS = 5
+FAIL = 0
+Current accepted result: no detectable echoes from frozen stars.
+
+----- stderr -----
+

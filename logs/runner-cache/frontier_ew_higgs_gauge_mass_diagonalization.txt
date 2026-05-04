@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ew_higgs_gauge_mass_diagonalization.py
+runner_sha256: be2d184fa751b98bfdfcfbbc98627afc74ed60b639bcfcd85d11bec09a084f10
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.70
+status: nonzero_exit
+----- stdout -----
+=== EW Higgs gauge-mass diagonalization verifier ===
+
+=== Authority surface and scope ===
+PASS: theorem note exists :: docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md
+PASS: status extracted :: proposed_retained - explicit strong derivation claim pending audit the exact tree-level gauge-boson mass spectrum and charge normalization f
+FAIL: status is standalone EW/Higgs theorem
+PASS: status limits theorem to tree-level gauge-boson spectrum
+PASS: status does not promote Higgs/top/CKM lanes
+PASS: primary runner is named in note
+PASS: what-this-does-not-claim section present
+PASS: no pole-mass derivation claimed
+PASS: bounded W mass lane not promoted
+PASS: package surface exists: docs/CANONICAL_HARNESS_INDEX.md
+PASS: package surface carries EW Higgs gauge-mass row: docs/CANONICAL_HARNESS_INDEX.md
+PASS: package surface exists: docs/publication/ci3_z3/PUBLICATION_MATRIX.md
+PASS: package surface carries EW Higgs gauge-mass row: docs/publication/ci3_z3/PUBLICATION_MATRIX.md
+PASS: package surface exists: docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md
+PASS: package surface carries EW Higgs gauge-mass row: docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md
+PASS: package surface exists: docs/publication/ci3_z3/DERIVATION_ATLAS.md
+PASS: package surface carries EW Higgs gauge-mass row: docs/publication/ci3_z3/DERIVATION_ATLAS.md
+PASS: package surface exists: docs/publication/ci3_z3/RESULTS_INDEX.md
+PASS: package surface carries EW Higgs gauge-mass row: docs/publication/ci3_z3/RESULTS_INDEX.md
+
+=== Pauli actions and unbroken charge ===
+PASS: T1 H0 action
+PASS: T2 H0 action
+PASS: T3 H0 action
+PASS: Y H0 action
+PASS: T3 H0 = -Y H0
+PASS: Q H0 = 0 for Q=T3+Y
+PASS: unbroken generator condition is alpha=beta
+
+=== Gauge mass matrix diagonalization ===
+PASS: charged vacuum kinetic coefficient :: g**2*v**2*(W1**2 + W2**2)/8
+PASS: charged complex-field identity W+W- = (W1^2+W2^2)/2
+PASS: M_W^2 = g^2 v^2 / 4
+PASS: neutral vacuum kinetic coefficient :: v**2*(B*g_Y - W3*g)**2/8
+PASS: neutral matrix determinant vanishes
+PASS: neutral matrix trace gives M_Z^2
+PASS: photon eigenvector has zero eigenvalue
+PASS: Z eigenvector has M_Z^2 eigenvalue
+PASS: photon and Z eigenvectors are orthogonal
+PASS: Weinberg rotation diagonalizes neutral mass matrix
+PASS: rho_tree = 1
+
+=== Electric coupling and normalization dictionary ===
+PASS: sin^2 + cos^2 = 1
+PASS: e = g sin(theta_W)
+PASS: e = g_Y cos(theta_W)
+PASS: inverse electric coupling sum rule
+PASS: GUT-normalized dictionary g_Y^2 = (3/5) g1^2
+
+=== Scalar Hessian companion ===
+PASS: stationary condition is mu^2 = lambda v^2
+PASS: radial Higgs Hessian m_h^2 = 2 lambda v^2
+PASS: scalar cubic coefficient is lambda v
+PASS: scalar quartic coefficient is lambda/4
+
+TOTAL: PASS=45, FAIL=1
+VERDICT: FAIL
+
+----- stderr -----
+

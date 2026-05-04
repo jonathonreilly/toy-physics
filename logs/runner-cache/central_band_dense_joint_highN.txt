@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/central_band_dense_joint_highN.py
+runner_sha256: 716d5434e2fbdb247956f234c6cafc603561419d036ab8ce44e1324e423b5d3c
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

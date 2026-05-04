@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_oriented_cycle_channel_value_law.py
+runner_sha256: 531e8147f7aa2e6e9c13b9f5ddf6b03ae7862a18e968627d815d5f748b7f79ec
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+PMNS ORIENTED CYCLE CHANNEL VALUE LAW
+========================================================================================
+
+Question:
+  Can the remaining positive carrier on the retained PMNS active class
+  be equipped with an exact axiom-native observable/value law?
+
+========================================================================================
+PART 1: THE EXACT COORDINATE CYCLE PROJECTS TO THE FORWARD CYCLE OPERATOR
+========================================================================================
+  [PASS] The projected coordinate-cycle unitary equals the forward cycle C  (error=0.00e+00)
+  [PASS] Its adjoint is the backward cycle C^2
+
+========================================================================================
+PART 2: PROJECTED SCALAR PROJECTORS SUPPLY THE FORWARD-CYCLE EDGE BASIS
+========================================================================================
+  [PASS] The projected scalar site projectors are exactly E11, E22, E33
+  [PASS] Multiplying by the projected forward cycle gives E12
+  [PASS] Multiplying by the projected forward cycle gives E23
+  [PASS] Multiplying by the projected forward cycle gives E31
+
+========================================================================================
+PART 3: EXACT VALUE LAW FOR ANY CANONICAL ACTIVE BLOCK
+========================================================================================
+  [PASS] The native coefficient law reads the three forward-cycle values exactly  (coeffs=[0.41    +0.j       0.28    +0.j       0.436335+0.318138j])
+  [PASS] The forward-cycle part rebuilds exactly from the native edge basis  (error=0.00e+00)
+  [PASS] The mean oriented-cycle amplitude matches the existing transport odd mode  (sigma=(0.37544495149618734+0.10604605642960852j))
+
+========================================================================================
+PART 4: THE SAME VALUE LAW HOLDS ON THE ACTIVE RESPONSE PROFILE
+========================================================================================
+  [PASS] The lower-level active response profile recovers the same forward-cycle coefficients exactly  (coeffs=[0.41    -0.j       0.28    -0.j       0.436335+0.318138j])
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact native oriented-cycle observable law:
+    - the projected coordinate cycle gives the forward cycle operator C
+    - projected scalar site projectors give the edge basis E12,E23,E31
+    - the forward-cycle values are exactly diag(A C^dagger)
+    - the same values are read from the lower-level active response profile
+
+  This equips the remaining positive carrier with an exact native value law.
+  It still does not select those values from the sole axiom alone.
+
+PASS=10 FAIL=0
+
+----- stderr -----
+

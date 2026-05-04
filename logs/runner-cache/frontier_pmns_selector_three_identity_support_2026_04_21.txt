@@ -1,0 +1,79 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py
+runner_sha256: ce0ff2b2a137179000b030399ebba85aa7e7ab25a7e71dd39613e59645bd4e11
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.13
+status: ok
+----- stdout -----
+========================================================================
+Part A: exact chart-side identities
+========================================================================
+  [PASS] A.1 SELECTOR^2 = Q_Koide = 2/3  (SELECTOR^2 = 0.6666666666666665, Q = 0.6666666666666666)
+  [PASS] A.2 2 * SELECTOR / sqrt(3) = E2 = sqrt(8)/3  (2*SELECTOR/sqrt(3) = 0.9428090415820632, E2 = 0.9428090415820635)
+  [PASS] A.3 Tr(H_base) = 0  (Tr(H_base) = 0.0)
+  [PASS] A.4 Tr(H) = m on the affine chart  (Tr(H) = 1.0*m)
+  [PASS] A.5 H(m, delta, q_+) is Hermitian for real chart coordinates  (checked at a generic interior point)
+
+========================================================================
+Part B: solve the proposed three-identity system
+========================================================================
+
+  Proposed-system solution:
+    m     = 0.666666666666667
+    delta = 0.933051059264820
+    q_+   = 0.714501805712492
+    residuals = (+0.00e+00, +0.00e+00, +0.00e+00)
+  [PASS] B.1 proposed system solves to machine precision  (ier = 1, max |res| = 0.000e+00)
+  [PASS] B.2 recovered m equals 2/3  (|m - 2/3| = 0.000e+00)
+  [PASS] B.3 recovered delta * q_+ equals 2/3  (|delta*q_+ - 2/3| = 0.000e+00)
+  [PASS] B.4 recovered det(H) equals E2  (|det(H) - E2| = 0.000e+00)
+
+========================================================================
+Part C: chamber and PMNS consequences at the recovered point
+========================================================================
+  [PASS] C.1 recovered point preserves the H_base signature  (sig(H_c) = (1, 0, 2), sig(H_base) = (1, 0, 2))
+  [PASS] C.2 recovered point is in the chamber interior  (q_+ + delta - sqrt(8/3) = 0.014560)
+  [PASS] C.3 recovered point has positive determinant  (det(H) = 0.942809)
+
+  PMNS observables at the recovered point:
+    sin^2 theta_12 = 0.306178  1sigma (0.295, 0.318)
+    sin^2 theta_13 = 0.022139  1sigma (0.02063, 0.02297)
+    sin^2 theta_23 = 0.543623  1sigma (0.53, 0.558)
+    sin(delta_CP)  = -0.990477
+    |Jarlskog|     = 0.033084
+  [PASS] C.4 s12sq is within NuFit 1sigma  (value = 0.306178)
+  [PASS] C.5 s13sq is within NuFit 1sigma  (value = 0.022139)
+  [PASS] C.6 s23sq is within NuFit 1sigma  (value = 0.543623)
+  [PASS] C.7 sin(delta_CP) is negative at the recovered point  (sin(delta_CP) = -0.990477)
+  [PASS] C.8 |Jarlskog| is in the current experimental comparison band  (|J| = 0.033084)
+  [PASS] C.9 all three PMNS angles are also within the broader 3sigma bands  (sanity check on the recovered point)
+
+========================================================================
+Part D: heuristic uniqueness evidence in the audited search box
+========================================================================
+
+  audited random starts: 60
+  chamber clusters found: 1
+    (m, delta, q_+) = (0.666667, 0.933051, 0.714502)
+  [PASS] D.1 audited search box returns one chamber cluster  (clusters = 1)
+
+========================================================================
+Summary: PASS = 19, FAIL = 0
+========================================================================
+
+  All checks passed.
+
+  Honest interpretation:
+    - the chart/scalar identities are exact;
+    - the proposed three-equation system has a clean recovered point;
+    - that point gives a strong PMNS numerical fit;
+    - the bounded multi-start audit found one chamber cluster.
+
+  This is support for a candidate selector law, not retained closure.
+
+  PMNS_SELECTOR_THREE_IDENTITY_SUPPORT = TRUE
+
+
+----- stderr -----
+

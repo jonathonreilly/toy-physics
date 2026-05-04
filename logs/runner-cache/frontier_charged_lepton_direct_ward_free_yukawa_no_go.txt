@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py
+runner_sha256: 61098195437fd457719c6b48af7523ed948164d56778a7b3a7961c23ee8b60a5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.06
+status: ok
+----- stdout -----
+PASS: one-Higgs gauge-selection note exists -- docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md
+PASS: top Ward identity note exists -- docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md
+PASS: top color-projection note exists -- docs/YUKAWA_COLOR_PROJECTION_THEOREM.md
+PASS: charged-lepton bounded review note exists -- docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md
+
+A. One-Higgs charged-lepton gauge selection
+------------------------------------------------------------------------
+PASS: bar L_L H e_R is hypercharge neutral -- -Y(L_L)+Y(H)+Y(e_R) = 0
+PASS: bar L_L H e_R is color allowed -- 1 x 1 color singlet
+PASS: bar L_L H e_R is gauge allowed
+PASS: bar L_L tilde H e_R is rejected by hypercharge -- -Y(L_L)+Y(tilde H)+Y(e_R) = -2
+PASS: wrong-Higgs rejection has exact doubled-hypercharge residual -2 -- -2
+
+B. Y_e remains a free generation matrix
+------------------------------------------------------------------------
+PASS: all nine Y_e entries multiply the same gauge-allowed monomial
+PASS: arbitrary diagonal entries remain gauge invariant -- diag(Y_e) = [Fraction(1, 1), Fraction(3, 1), Fraction(6, 1)]
+PASS: arbitrary off-diagonal entries remain gauge invariant -- nonzero off-diagonal entries = [(0, 1), (1, 2), (2, 0)]
+PASS: wrong-Higgs Y_e matrix is rejected entrywise
+PASS: generation-basis rotations change Y_e entries -- Y_e' = ((Fraction(0, 1), Fraction(5, 1), Fraction(6, 1)), (Fraction(2, 1), Fraction(1, 1), Fraction(0, 1)), (Fraction(3, 1), Fraction(0, 1), Fraction(4, 1)))
+PASS: rotated Y_e entries remain gauge invariant
+PASS: gauge selection does not select eigenvalues, rank, hierarchy, or texture
+
+C. Direct top-Ward normalization does not lift
+------------------------------------------------------------------------
+PASS: top Ward singlet normalization square is color times isospin = 6
+PASS: charged-lepton monomial is colorless
+PASS: direct charged-lepton gauge normalizations are 1 or 2, never 6 -- direct options = [1, 2]
+PASS: lepton weak-doublet singlet would give 1/sqrt(2), not 1/sqrt(6)
+PASS: post-EWSB charged component gives coefficient one before Y_e, not 1/sqrt(6)
+PASS: generation times weak dimension 6 would add a new generation primitive -- this is not one-Higgs gauge selection and does not select tau
+PASS: top Ward note states factor 1/sqrt(6)
+PASS: top Ward note ties factor to Q_L block
+
+D. Comparator firewall
+------------------------------------------------------------------------
+Comparator masses, not proof inputs: {'m_e_MeV': 0.51099895, 'm_mu_MeV': 105.6583755, 'm_tau_MeV': 1776.86}
+PASS: observed charged-lepton masses are not proof-input keys -- proof keys = ['basis_rotation_unitarity', 'color_representations', 'direct_normalization_dimensions', 'field_charges', 'generation_blind_gauge_action', 'source_note_scope_strings']
+PASS: bounded review marks charged-lepton masses as observational pin
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=26, FAIL=0
+VERDICT: exact no-go for direct top-Ward lift to charged leptons.
+Y_e remains free under one-Higgs gauge selection; a retained
+charged-lepton mass theorem needs an additional generation,
+loop-normalization, or source-domain primitive.
+
+----- stderr -----
+

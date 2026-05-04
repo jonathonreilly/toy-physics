@@ -1,0 +1,41 @@
+===== runner cache v1 =====
+runner: scripts/diamond_phase_ramp_bridge_card.py
+runner_sha256: 1178d2f701c7fed9fd233f93264b9097ef282044081dce302dc712f15951db86
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+====================================================================================================
+DIAMOND PHASE-RAMP BRIDGE CARD
+  proxy-level bridge card, not an absolute NV claim
+====================================================================================================
+
+Bridge row
+  retained exact-family row: s = 0.004
+  raw proxy phasor: X = -0.966, Y = -0.259, phi = -2.880 rad
+  raw phase-ramp slope: -0.4925 rad / z
+  normalized to the s = 0.001 reference row: X = -1.308, Y = +0.384, phi = +3.892, slope = +4.053
+
+Source-strength sweep
+  s       phi(rad)   ramp_slope(rad/z)   phi/s      slope/s     wave/same
+  ------  ---------  -----------------  -------   ---------   ---------
+  0.0010     -0.740            -0.1215   -740.0      -121.5      60.022
+  0.0020     -1.473            -0.2444   -736.5      -122.2      60.604
+  0.0040     -2.880            -0.4925   -720.0      -123.1      60.707
+  0.0080     +0.337            -1.0274    +42.1      -128.4      55.887
+
+Nearby separation / depth change
+  layer  depth   phase_lag(rad)   ramp_slope(rad/z)   R^2
+  -----  -----   --------------   -----------------   ----
+      1     31           -0.589             -0.2422   0.969
+      2     30           -0.696             -0.2718   0.967
+      3     29           -0.793             -0.2989   0.966
+      4     28           -0.877             -0.3226   0.965
+
+Narrow conclusion
+  the proxy bridge is strong enough to hand to a diamond/NV collaborator, but the absolute NV transfer coefficient is still missing
+  the cleanest tightening handle is the normalized phase-ramp slope, together with the small source-strength and depth sweeps
+
+----- stderr -----
+

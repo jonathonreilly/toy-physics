@@ -1,0 +1,54 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_atmospheric_scale_theorem.py
+runner_sha256: bbb93217f7dd55a1a88c2129533161e8e6d378c058c23bf5869a22e44a9b2499
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+DM / NEUTRINO: ATMOSPHERIC-SCALE THEOREM
+========================================================================================
+
+Authority stack:
+  - docs/DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md
+  - docs/NEUTRINO_MAJORANA_ENDPOINT_EXCHANGE_MIDPOINT_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_ADJACENT_SINGLET_PLACEMENT_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_RESIDUAL_SHARING_SPLIT_THEOREM_NOTE.md
+
+Question:
+  Does the atmospheric neutrino scale still require a fit once the
+  Dirac coefficient, staircase placement, and Majorana split law are all
+  fixed on the minimal bridge?
+
+Exact benchmark chain:
+  y_nu^eff = g_weak^2/64         = 0.006662640625
+  eps/B = alpha_LM/2            = 0.045333918009
+  A = M_Pl * alpha_LM^7         = 6.149685e+11 GeV
+  B = M_Pl * alpha_LM^8         = 5.575786e+10 GeV
+  M_1 = B * (1 - eps/B)         = 5.323014e+10 GeV
+
+Predicted light-neutrino benchmark:
+  m_1 = 4.378327e-03 eV
+  m_2 = 4.619552e-02 eV
+  m_3 = 5.058286e-02 eV
+  Dm^2_31 = 2.539456e-03 eV^2
+  Dm^2_21 = 2.114856e-03 eV^2  (solar still not closed here)
+  [PASS (C)] The retained local Dirac coefficient is exactly y_nu^eff = g_weak^2/64  (y_nu^eff=0.006662640625)
+  [PASS (C)] The fixed bridge gives M_1 = M_Pl * alpha_LM^8 * (1 - alpha_LM/2)  (M1=5.323014e+10 GeV)
+  [PASS (D)] The exact chain predicts the atmospheric mass scale without fitting m_3  (m3=5.058286e-02 eV vs obs 4.952777e-02 eV)
+  [PASS (D)] The diagonal atmospheric gap lands within 5% of observation  (Dm31=2.539456e-03 vs obs 2.453000e-03)
+  [PASS (C)] The solar gap remains a separate full-matrix question  (Dm21=2.114856e-03 eV^2)
+
+Result:
+  On the exact minimal bridge, the branch no longer needs a fitted m_3
+  to hit the atmospheric neutrino scale. The derived Dirac coefficient
+  plus the derived Majorana placement and split law already predict it.
+
+  What remains open is the solar/full-matrix texture, not the
+  atmospheric benchmark scale.
+
+PASS=5  FAIL=0
+
+----- stderr -----
+

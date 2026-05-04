@@ -1,0 +1,92 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_branch_selector.py
+runner_sha256: b6c16e59e7abf9068ac3c1a2fdc5354664db148687cb25ba3e6c6645c89c7fa9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.21
+status: ok
+----- stdout -----
+========================================================================
+Cycle 21 PMNS Branch Selector — CP-Sheet Blindness
+========================================================================
+
+=== Part 1: Branch A — cycle 18 structural decomposition ===
+  [PASS] ABC = (3/4) · (g_S/g_*) · C_sph reduces to 516/53009  -- ABC = 516/53009
+  [PASS] denominator 53009 = 79 * 11 * 61  -- 79*11*61 = 53009
+  [PASS] numerator 516 = 4 * 3 * 43  -- 4*3*43 = 516
+  [PASS] Branch A residual = (Y0^2 · F_CP · κ_axiom)/η_obs ≈ 19.39  -- residual = 19.3941
+
+=== Part 2: Symbolic parity check for four selectors ===
+  [PASS] min-info objective is even under δ → -δ  -- diff = 0
+  [PASS] sin²(δ) = sin²(-δ) (even)
+  [PASS] cos(δ) = cos(-δ) (even)
+  [PASS] S_rel built from (x, y, sin²δ, cos δ) is even under δ → -δ
+  [PASS] |γ| is even under δ → -δ (transport modulus even)
+  [PASS] continuity-closure inherits parity from extremal endpoint (verified by construction)  -- endpoint selectors are even, hence root λ_* is δ-symmetric
+  [PASS] γ_baryogenesis = x_1 y_3 sin(δ) is ODD under δ → -δ  -- γ(δ) + γ(-δ) = 0
+
+=== Part 3: Numerical parity verification ===
+  [PASS] min-info(δ=0.0) == min-info(-δ)  -- diff = 0.00e+00
+  [PASS] min-info(δ=0.1) == min-info(-δ)  -- diff = 0.00e+00
+  [PASS] min-info(δ=0.5) == min-info(-δ)  -- diff = 0.00e+00
+  [PASS] min-info(δ=1.0) == min-info(-δ)  -- diff = 0.00e+00
+  [PASS] min-info(δ=2.0) == min-info(-δ)  -- diff = 0.00e+00
+  [PASS] γ(δ=0.1) = -γ(-δ) (odd)  -- sum = 0.00e+00
+  [PASS] γ(δ=0.5) = -γ(-δ) (odd)  -- sum = 0.00e+00
+  [PASS] γ(δ=1.0) = -γ(-δ) (odd)  -- sum = 0.00e+00
+  [PASS] γ(δ=2.0) = -γ(-δ) (odd)  -- sum = 0.00e+00
+  [PASS] selector pair (δ_*, -δ_*): equal min-info, opposite γ  -- min-info equal, γ_pos=0.090789, γ_neg=-0.090789
+
+=== Part 4: Counterfactual — hypothetical CP-odd selector ===
+  [PASS] hypothetical CP-odd selector O_odd = sin(δ)·S_even is ODD under δ → -δ
+  [PASS] O_odd(δ) ≠ O_odd(-δ): breaks parity  -- O_odd(0.7)=0.6442, O_odd(-0.7)=-0.6442
+  [PASS] no CP-odd selector currently audit-ratified on framework surface — open obstruction  -- named in cycle 09 transport-status as right-sensitive Z_3 doublet-block law
+
+=== Part 5: Counterfactual — alternative chart constants ===
+  [PASS] alternative chart γ=1, E₁=E₂=1 gives cp1/cp2 = -1 (not -√3)  -- cp1/cp2 = -1.000000
+  [PASS] parity exclusion is chart-independent  -- selector evenness is structural, not numerical
+
+=== Part 6: Forbidden-import audit ===
+  [PASS] η_obs used only as comparator, not as derivation input  -- comparator role declared in note
+  [PASS] no m_β consumed
+  [PASS] no Σ m_ν consumed
+  [PASS] no PDG δ_PMNS consumed
+  [PASS] no PDG δ_CKM consumed (cycle 12 inherited)
+  [PASS] no fitted selectors consumed
+  [PASS] no Fukugita-Yanagida 1986 comparators consumed
+  [PASS] no Davidson-Ibarra 2002 comparators consumed
+  [PASS] no same-surface family arguments
+
+  Inherited obstructions (named in prior cycles, not new):
+    - cycle 09 O1 / cycle 12 R2 / cycle 15 R1: Y₀² = (G_weak²/64)²
+    - cycle 09 O3: α_LM mass scale
+    - cycle 09 transport-status: right-sensitive 2-real Z_3 doublet-block selector
+
+=== Part 7: V1-V5 promotion-value-gate verification ===
+  [PASS] V1 answered
+  [PASS] V2 answered
+  [PASS] V3 answered
+  [PASS] V4 answered
+  [PASS] V5 answered
+
+=== Part 8: Obstruction summary ===
+  CLOSED (this cycle):
+    - 'is the current Branch-B selector bank a unique-selection law?' NO.
+    - reason: CP-sheet blindness applies to all four current selectors.
+
+  SHARPENED (this cycle):
+    - Cycle 09 Obstruction 2 → 'right-sensitive 2-real Z_3 doublet-block selector law'
+    - the Branch-B uniqueness obstruction reduces to constructing a CP-odd functional.
+
+  REMAINING OPEN (inherited, not new):
+    - Y₀² phenomenological import (cycle 09 O1 / cycle 12 R2 / cycle 15 R1)
+    - α_LM mass scale (cycle 09 O3)
+    - right-sensitive 2-real Z_3 doublet-block selector (cycle 09 transport-status)
+  [PASS] obstruction summary documented
+
+========================================================================
+PASS=41 FAIL=0
+========================================================================
+
+----- stderr -----
+

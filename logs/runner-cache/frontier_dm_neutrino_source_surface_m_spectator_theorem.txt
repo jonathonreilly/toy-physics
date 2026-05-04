@@ -1,0 +1,63 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_m_spectator_theorem.py
+runner_sha256: a31fba93db8ec1593fe5b70c18ced93e07694ef467645f48ec250874f30f0ab9
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.62
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE m-SPECTATOR THEOREM
+========================================================================================
+
+Question:
+  On the live source-oriented shift-quotient bundle over (m, delta, r31),
+  does every quotient coordinate remain active for the exact
+  leptogenesis-facing mainline data?
+
+========================================================================================
+PART 1: m IS AN EXACT H-SIDE SPECTATOR TANGENT
+========================================================================================
+  [PASS (C)] Changing m moves the quotient bundle only along the exact spectator tangent T_m  (H(m+dm)-H(m)=dm T_m)
+  [PASS (C)] The exact source-surface values are unchanged along that tangent  ((gamma,B1,B2) are m-invariant)
+  [PASS (C)] The intrinsic CP pair is unchanged along that tangent  (the current leptogenesis-facing CP tensor is m-invariant)
+  [PASS (C)] The intrinsic Z_3 slot pair is unchanged along that tangent  (the current singlet-doublet readout is m-invariant)
+
+========================================================================================
+PART 2: THE CURRENT EXACT MAINLINE OUTPUTS FACTOR THROUGH (delta, r31)
+========================================================================================
+  [PASS (C)] Across the live quotient bundle, the current exact source/CP/slot outputs already factor through (delta, r31) rather than the full (m, delta, r31)  ((gamma,E1,E2,cp)=(0.500000000000,1.632993161855,0.942809041582,-0.544331053952,0.314269680527))
+  [PASS (C)] So the live leptogenesis-facing mainline object is already a 2-real active bundle with a spectator m-line  (m is no longer a live active coordinate for the current exact stack)
+
+========================================================================================
+PART 3: THE POSITIVE CARRIER CHART HAS EXACT TWO-REAL ACTIVE FORMULAS
+========================================================================================
+  [PASS (C)] Within the positive carrier chart, changing m does not change the active carrier data (delta, rho, gamma, sigma, v)  (the carrier-side active response is m-invariant on the live chart)
+  [PASS (C)] On that chart the active response is exact: rho = E1-delta, gamma = 1/2, sigma sin(2v) = 8/9, sigma cos(2v) = E2/3 - 3 q_+  (q_+ = E1 - delta + sqrt(r31^2 - 1/4))
+  [PASS (C)] So the live mainline carrier response is already an exact 2-real bundle over (delta, q_+), equivalently over (delta, r31)  (m is only a spectator line on top of that active bundle)
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE m-SPECTATOR REDUCTION
+========================================================================================
+  [PASS (C)] The new note records m as an exact spectator tangent and the live object as a 2-real active bundle
+  [PASS (C)] The new note records that m is spectator and the remaining active object is 2-real
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact mainline answer:
+    - the quotient coordinate m is an exact spectator tangent of the live
+      source-oriented bundle for the current exact source/CP/slot outputs
+    - the live leptogenesis-facing mainline object already reduces to a
+      2-real active bundle over (delta, r31)
+    - on the positive carrier chart this is equivalently the 2-real bundle
+      over (delta, q_+) with q_+ = E1 - delta + sqrt(r31^2 - 1/4)
+
+  So the remaining mainline task is not to populate the spectator m-line.
+  It is to derive the post-canonical law selecting the active two-real
+  bundle itself.
+
+PASS=11 FAIL=0
+
+----- stderr -----
+

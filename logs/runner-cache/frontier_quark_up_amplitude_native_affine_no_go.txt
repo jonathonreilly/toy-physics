@@ -1,0 +1,97 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_up_amplitude_native_affine_no_go.py
+runner_sha256: 5ebc7df2190c370c4d115978f493144f68d20a62eb2ec4dceda6da02903d4d22
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 53.08
+status: ok
+----- stdout -----
+========================================================================
+  FRONTIER: Quark Up-Amplitude Native Affine No-Go
+========================================================================
+
+========================================================================
+PART 1: Native Affine Support Family
+========================================================================
+
+  exact support datum        = delta_A1(q_dem) = 0.023809523810
+  exact projector magnitude  = sqrt(5/6)      = 0.912870929175
+  solved support anchor a_u  = 0.778161628656
+  coefficient grammar size   = 247
+  affine-law family size     = 6624
+
+  family tested             = a_u = sqrt(5/6) * (c0 + c1 delta_A1)
+  support coefficient atoms = {0, 1, rho, supp, 1/6, 1/7, 6, 7} with one-step +/-/*// widening
+
+  external baselines:
+    7/9         : refit_obj = 0.052752, refit_max = 0.908%
+    sqrt(3/5)   : anchor    = 0.720%, anchor_max = 0.677%
+
+  clean structural affine instance:
+    sqrt(5/6) * (6/7) = 0.782460796436  (anchor = 1.106%, refit_obj = 0.055543)
+  [PASS] Native affine family contains the clean support law sqrt(5/6) * (1 - 6 delta_A1)  (value = 0.782460796436)
+  [PASS] Clean structural affine instance stays near quark closure  (refit_max = 0.928%, anchor_max = 0.874%)
+
+========================================================================
+PART 2: Widened Native Affine Scan
+========================================================================
+
+  strongest native affine refit laws:
+  sqrt(5/6)*(supp + ((-1/6)/(1-rho)) delta_A1)         a_u=0.778177341  anchor=0.853%  refit_obj=0.052727
+  sqrt(5/6)*(supp + (1/(1-6)) delta_A1)                a_u=0.778113792  anchor=0.850%  refit_obj=0.052728
+  sqrt(5/6)*(1-rho + (1/7+1/7) delta_A1)               a_u=0.778221893  anchor=0.855%  refit_obj=0.052729
+  sqrt(5/6)*(supp + ((-1/6)/supp) delta_A1)            a_u=0.778234542  anchor=0.856%  refit_obj=0.052729
+  sqrt(5/6)*(supp + ((-rho)/(1-1/6)) delta_A1)         a_u=0.778436252  anchor=0.868%  refit_obj=0.052739
+  sqrt(5/6)*((1-rho)/(1-1/6) + (1/6-7) delta_A1)       a_u=0.777891613  anchor=0.840%  refit_obj=0.052740
+
+  strongest native affine anchored laws:
+  sqrt(5/6)*(1-rho + (rho*supp) delta_A1)              a_u=0.774886561  anchor=0.717%  refit_obj=0.054385
+  sqrt(5/6)*(1-rho + (rho*(1-rho)) delta_A1)           a_u=0.774848173  anchor=0.717%  refit_obj=0.054424
+  sqrt(5/6)*(1-rho + ((1-1/6)/6) delta_A1)             a_u=0.775030640  anchor=0.717%  refit_obj=0.054243
+  sqrt(5/6)*(1-rho + (rho*(1-1/6)) delta_A1)           a_u=0.774806709  anchor=0.718%  refit_obj=0.054467
+  sqrt(5/6)*(rho+supp + (1/6-7) delta_A1)              a_u=0.774797188  anchor=0.718%  refit_obj=0.054476
+  sqrt(5/6)*(1-rho + (supp/7) delta_A1)                a_u=0.774673318  anchor=0.719%  refit_obj=0.054607
+
+  dominance counts:
+    beats 7/9 on refit axis      = 9
+    beats sqrt(3/5) on anchor    = 9
+    beats both at once           = 0
+  [PASS] Widened native affine family beats the 7/9 baseline somewhere on the refit axis  (count = 9)
+  [PASS] Widened native affine family beats the sqrt(3/5) baseline somewhere on the anchored axis  (count = 9)
+  [PASS] No native affine support law beats both the 7/9 refit baseline and the sqrt(3/5) anchored baseline  (the affine family stays split across the two external baselines)
+  [PASS] Best native affine refit law keeps the full package within 1%  (max dev = 0.891%)
+  [PASS] Best native affine anchored law keeps CKM+J deviations within 1%  (max dev = 0.684%)
+
+========================================================================
+PART 3: Summary
+========================================================================
+
+  strongest widened affine outcomes:
+    - best affine refit law    : sqrt(5/6)*(supp + ((-1/6)/(1-rho)) delta_A1)
+      a_u = 0.778177341267
+      refit_obj = 0.052727
+      anchor    = 0.853%
+
+    - best affine anchored law : sqrt(5/6)*(1-rho + (rho*supp) delta_A1)
+      a_u = 0.774886561056
+      anchor    = 0.717%
+      refit_obj = 0.054385
+
+  bounded no-go:
+    - 9 widened affine laws beat the 7/9 refit baseline
+    - 9 widened affine laws beat the sqrt(3/5) anchored baseline
+    - 0 widened affine laws beat both at once
+
+  honest endpoint:
+    the exact projector magnitude plus affine delta_A1 support dressing
+    is strong enough to compete with both external baselines separately,
+    but not strong enough to force one dominant affine law.
+    The reduced quark branch therefore remains bounded on this affine
+    support family.
+
+========================================================================
+  TOTAL: PASS=7, FAIL=0
+========================================================================
+
+----- stderr -----
+

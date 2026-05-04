@@ -1,0 +1,62 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate.py
+runner_sha256: 99737fe8506e1bfc3d2d2722592d1bf13b21b27cb9e5b52d4c910d48c2b52afd
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.54
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE RIVAL-WINDOW EDGE-PROFILE HIERARCHY CANDIDATE
+========================================================================================
+
+Question:
+  On the tested broad bundle, what remains of the other rival windows after
+  split-2 is reduced to a one-dimensional edge profile?
+  [PASS] The preferred recovered floor is unchanged on the compact branch  (preferred=1.586874714730)
+
+========================================================================================
+PART 1: ENDPOINT AND SPLIT-1 START ABOVE THE PREFERRED FLOOR AT ZERO SLACK
+========================================================================================
+  [PASS] The endpoint edge profile at s=0 is reproduced stably  ((delta*,R(0))=(1.145688713671,3.027555846610))
+  [PASS] The endpoint edge profile is already above the preferred recovered floor at s=0  (gap=1.440681131880e+00)
+  [PASS] The split_1 edge profile at s=0 is reproduced stably  ((delta*,R(0))=(1.088402451826,2.308603400914))
+  [PASS] The split_1 edge profile is already above the preferred recovered floor at s=0  (gap=7.217286861841e-01)
+
+========================================================================================
+PART 2: THE THREE EDGE PROFILES FORM A STRICT HIERARCHY ON THE TEST GRID
+========================================================================================
+  [PASS] The endpoint edge profile is strictly increasing on the tested slack grid  (endpoint=[3.027555847, 3.045280544, 3.064314762, 3.084640285, 3.10181653, 3.106236281, 3.129079376, 3.153143745])
+  [PASS] The split-1 edge profile is strictly increasing on the tested slack grid  (split1=[2.308603401, 2.328399628, 2.349705725, 2.372477821, 2.391719731, 2.396669232, 2.422230851, 2.449111557])
+  [PASS] The split-2 edge profile is strictly increasing on the tested slack grid  (split2=[1.500442492, 1.519822893, 1.541184222, 1.564422358, 1.584292567, 1.589430708, 1.616102219, 1.644331051])
+  [PASS] Across the tested slack grid the edge-profile hierarchy stays strict: endpoint > split-1 > split-2  (broad-window pressure orders strictly by window)
+
+========================================================================================
+PART 3: BROAD-BUNDLE PRESSURE COLLAPSES TO THE SPLIT-2 EDGE INTERVAL
+========================================================================================
+  [PASS] Endpoint broad-edge pressure never reaches the preferred floor on the tested slack regime because it already starts well above it  (endpoint_gap=1.440681131880e+00)
+  [PASS] Split-1 broad-edge pressure also never reaches the preferred floor on the tested slack regime because it already starts above it  (split1_gap=7.217286861841e-01)
+  [PASS] Split-2 alone starts below the preferred floor on the broad edge and therefore carries the only tested broad-bundle undercut  (split2_gap=-8.643222307147e-02)
+  [PASS] So on the tested broad bundle the whole rival-window pressure collapses to the split-2 edge interval 0 <= s < s_*  (s_*=0.195041737783)
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE EDGE-PROFILE HIERARCHY
+========================================================================================
+  [PASS] The note records the strict edge-profile hierarchy and the split-2 threshold
+  [PASS] The note records that broad-window pressure collapses to the split-2 edge interval
+  [PASS] The note keeps the boundary honest: this is still not interval-certified exact-carrier closure
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact compact-branch broad-bundle rival-window verdict:
+    - endpoint and split-1 edge profiles are already dominated from s = 0 upward
+    - split-2 alone crosses the preferred floor, at s_* = 0.195041737783
+    - broad-window carrier pressure therefore collapses to the split-2 edge interval
+      0 <= s < s_* on the tested broad bundle
+  RESULT: the tested broad-bundle rival geometry is supported only by split-2 edge data
+
+SUMMARY: PASS=16 FAIL=0
+
+----- stderr -----
+

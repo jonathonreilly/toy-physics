@@ -1,0 +1,296 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_a1_cheeger_simons_rz_probe.py
+runner_sha256: 831aaffee758b608b842107f6face8bb98e639abfb9e8575e3afab9cc3ef39e6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.47
+status: ok
+----- stdout -----
+========================================================================================
+Koide A1 Cheeger-Simons R/Z differential-character probe (O13 candidate)
+Convention: PASS = obstruction-confirmed; FAIL = closure achieved.
+========================================================================================
+
+========================================================================================
+A. Cheeger-Simons differential characters on retained Cl(3)/Z^3
+========================================================================================
+
+    Cheeger-Simons functor: for a smooth manifold M (or simplicial / cubical
+    complex), Hat{H}^k(M; R/Z) is the abelian group of differential
+    characters, fitting into the short exact sequences
+
+        0 -> H^{k-1}(M; R/Z) -> Hat{H}^k(M; R/Z) -> Omega_Z^k(M) -> 0
+        0 -> Omega^{k-1}(M)/Omega_Z^{k-1}(M)
+                          -> Hat{H}^k(M; R/Z) -> H^k(M; Z) -> 0
+
+    where Omega_Z^k denotes closed integral k-forms.
+
+    Specialization to the retained framework:
+      * M = Cl(3)/Z^3 is the spatial sector of the framework's lattice
+        (Z^3 with a^{-1} = M_Pl, modded by the Z_3 family symmetry on the
+        hw=1 charged-lepton sector).
+      * As a CW-/cubical complex, the relevant cohomology is
+        H^*(T^3 / Z_3; Z) (free abelian + Z_3-torsion).
+      * Z_3 acts diagonally on the three lattice axes (cyclic permutation),
+        consistent with the retained body-diagonal action.
+    
+[PASS] A.1 Hat{H}^k functor is well-defined on retained CW lattice geometry
+       Cheeger-Simons (1985); the retained Z^3 lattice is a finite CW complex; the Z_3 action is cellular.
+[PASS] A.2 R/Z is the natural codomain of differential characters
+       R/Z is the additive group; under exp(2 pi i .), R/Z ~ U(1).
+[PASS] A.3 H^0(T^3/Z_3; Z) on retained orbifold = Z
+       Standard equivariant calculation; Z_3 free part of H^1, H^2 is zero.
+[PASS] A.3 H^1(T^3/Z_3; Z) on retained orbifold = Z_3 (torsion only; no free part because diagonal action kills H^1(T^3))
+       Standard equivariant calculation; Z_3 free part of H^1, H^2 is zero.
+[PASS] A.3 H^2(T^3/Z_3; Z) on retained orbifold = Z_3 (torsion only by Poincare/Universal Coefficients on the orbifold)
+       Standard equivariant calculation; Z_3 free part of H^1, H^2 is zero.
+[PASS] A.3 H^3(T^3/Z_3; Z) on retained orbifold = Z (top class)
+       Standard equivariant calculation; Z_3 free part of H^1, H^2 is zero.
+[PASS] A.4 retained Cl(3)/Z_3 admits Cheeger-Simons classes Hat{H}^k for k=1,2,3
+       From the SES with Omega_Z^k and H^k(.; Z); each k=1,2,3 has nontrivial Hat{H}^k.
+
+========================================================================================
+B. Explicit Z_3-equivariant Hat{H}^1 representative with value 2/9
+========================================================================================
+
+    Recipe.  On the orbifold T^3/Z_3, take a cellular 1-cocycle c:
+      c(g) := 2/9 mod 1  for a generator g of the Z_3 boundary cycle.
+    This defines a class in H^1(T^3/Z_3; R/Z).  Under the SES
+      0 -> H^0(M; R/Z) -> Hat{H}^1(M; R/Z) -> Omega_Z^1(M) -> 0,
+    pulling back along the constant 1-form 0 yields a class in
+    Hat{H}^1(M; R/Z) whose holonomy around the Z_3 generator is 2/9 mod 1.
+
+    This class is REAL: it sits in the Z_3-torsion part of H^1, but the
+    R/Z lift is not constrained to torsion (the lift is genuinely fractional).
+    
+[PASS] B.1 ABSS eta(Z_3, weights (1,2)) = 2/9 mod Z (retained from prior probes)
+       eta = 2/9
+[PASS] B.2 explicit 1-cocycle c(g) = 2/9 mod 1 represents a class in H^1(T^3/Z_3; R/Z)
+       c(g) = 2/9 mod 1
+[PASS] B.3 H^1(.; Z_3) torsion: 3 c(g) = 2/3 mod 1, NOT zero -> not a Z_3-torsion class
+       3 c(g) = 2/3 = 2/3 mod 1 (not 0); class is genuinely R/Z-fractional, lifted from R/Z (not Z_3-torsion).
+[PASS] B.4 lift to Hat{H}^1: Hat{c}(g) := 2/9 mod 1 on Z_3-generator is a valid differential character
+       Constant flat connection 0 + R/Z-valued holonomy 2/9 satisfies the SES and cocycle conditions modulo torsion shifts.
+[PASS] B.5 Hat{H}^1 character has well-defined holonomy 2/9 mod 1 around the Z_3 cycle
+       This is the dimensionless side: 2/9 IS naturally captured by the Cheeger-Simons functor.
+
+========================================================================================
+C. R/Z -> U(1) phase convention: 2 pi vs 1-rad period
+========================================================================================
+
+    A differential character Hat{c} in Hat{H}^k(M; R/Z) takes values in R/Z.
+    To extract a *physical phase*, one applies the canonical isomorphism
+
+        chi: R/Z -> U(1),    chi(c) = exp(2 pi i c).
+
+    Under this convention, c = 2/9 mod 1 produces the U(1) phase
+
+        chi(2/9) = exp(2 pi i * 2/9) = exp(4 pi i / 9),
+
+    which is exp(i theta) for theta = 4 pi / 9 rad -- a (rational)*pi
+    radian, NOT 2/9 rad literally.
+
+    To recover delta = 2/9 LITERAL RADIAN from the differential character,
+    one would need an alternate isomorphism
+
+        chi': R/Z -> U(1),   chi'(c) = exp(i c)   (period 2 pi -> period 1 rad)
+
+    i.e., one would have to declare the natural R/Z period to be 1 radian
+    instead of 2 pi radians.  This is NOT the canonical Cheeger-Simons
+    convention; it would have to be installed as an extra structural input.
+    
+[PASS] C.1 standard CS phase chi(c) = exp(2 pi i c) maps c=2/9 to arg = 4 pi / 9
+       arg(chi(2/9)) = 4*pi/9 rad = (4/9) pi rad -- (rational)*pi.
+[PASS] C.2 (rational)*pi != rational by Lindemann-Weierstrass
+       4 pi / 9 - 2/9 != 0; on the Lindemann wall (Q*pi intersect Q = {0}).
+[PASS] C.3 standard CS convention does NOT bridge to literal 2/9 radian
+       Standard exp(2 pi i .) gives (rational)*pi phase, identical to every other retained phase source (O10).
+[PASS] C.4 alternate convention chi'(c) = exp(i c) WOULD give arg = 2/9 rad literally
+       arg(chi'(2/9)) = 2/9 rad LITERAL (no pi factor).
+[PASS] C.5 alternate exp(i c) convention is NOT the canonical CS R/Z -> U(1) map
+       Canonical CS isomorphism is exp(2 pi i .); selecting exp(i .) requires an extra structural input.
+[PASS] C.6 alternate convention requires identifying R/Z period with 1 rad, not 2 pi rad
+       This is exactly the missing primitive: a natural-1-rad lattice period selector.
+
+========================================================================================
+D. Retained-lattice search for natural 1-rad period (instead of 2 pi)
+========================================================================================
+
+    Question: does any retained structure on Cl(3)/Z^3 + Z_3 + APBC + cyclic
+    Wilson + Cl(3) Clifford algebra produce a closed phase observable whose
+    natural period is 1 radian rather than 2 pi radians?
+    
+[PASS] D.1 Z_3 generator U_g satisfies U_g^3 = 1; eigenvalues exp(2 pi i k / 3)
+       Natural period of arg(U_g eigenvalue) is 2 pi (covered exactly by 3 increments of 2 pi / 3).
+[PASS] D.2 Cl(3) bivector rotations exp(theta J_ij) periodic with period 2 pi (vector) / 4 pi (spinor)
+       Both periods are integer multiples of pi; neither is 1.
+[PASS] D.3 retained Wilson plaquette holonomy exp(i Phi) defined mod 2 pi
+       Plaquette phase is naturally R/(2 pi Z), not R/(1 Z) or R/Z directly.
+[PASS] D.4 APBC contributes exp(i pi) = -1 boundary phase; period 2 pi
+       Anti-periodic factor sits on (rational)*pi locus; no literal radian appears.
+[PASS] D.5 cyclic Wilson loop tr(U_a U_b U_c) on Z_3-circulant lattice -- spectrum on unit circle period 2 pi
+       Same 2 pi normalization as ordinary Wilson loops.
+[PASS] D.6 Cheeger-Simons functor's R/Z period is fixed by definition at 2 pi
+       exp(2 pi i .): R/Z -> U(1) is the canonical isomorphism; not subject to lattice 'choice'.
+[PASS] D.7 no retained lattice structure picks period 1 rad over period 2 pi rad
+       Every retained period (Z_3, Cl(3), Wilson, APBC, cyclic) is a rational multiple of pi (2 pi, pi, 4 pi).
+
+========================================================================================
+E. Obstruction analysis: O13 inherits from O10
+========================================================================================
+
+    O10 (Universal Lattice Closure / Lindemann transcendence wall):
+      Every retained lattice phase source on Cl(3)/Z^3 is of the form
+      q*pi for q in Q.  By Lindemann-Weierstrass, Q*pi intersect Q = {0}.
+
+    O13 candidate (Cheeger-Simons R/Z period inheritance):
+      The Cheeger-Simons differential-character functor has natural codomain
+      R/Z.  Its canonical isomorphism to U(1) is exp(2 pi i .).  Therefore
+      the phase angle extracted from a CS class in R/Z is a (rational)*pi.
+      The CS construction does NOT escape the (rational)*pi wall; it is
+      downstream of O10.
+
+    The CS framework provides a natural way to RECORD a value 2/9 mod 1,
+    but it does not provide a natural way to INTERPRET 2/9 mod 1 as a
+    literal radian without supplying an extra non-canonical period choice.
+    
+[PASS] E.1 Cheeger-Simons R/Z period inheritance: phase is exp(2 pi i c), arg = 2 pi c on (rational)*pi locus
+       Subsumed by O10 (Lindemann transcendence wall).
+[PASS] E.2 convention 'exp(2 pi i c)' [canonical]: arg(c=2/9) = 4*pi/9; on Lindemann wall = yes
+       Either lands on (rational)*pi or requires fixing R/Z period to 1 rad (= postulate P).
+[PASS] E.2 convention 'exp(pi i c)' [half-period (sometimes seen for spin lifts)]: arg(c=2/9) = 2*pi/9; on Lindemann wall = yes
+       Either lands on (rational)*pi or requires fixing R/Z period to 1 rad (= postulate P).
+[PASS] E.2 convention 'exp(i c)' [1-rad-period (non-canonical)]: arg(c=2/9) = 2/9; on Lindemann wall = no -- bridges, but is the postulate P itself
+       Either lands on (rational)*pi or requires fixing R/Z period to 1 rad (= postulate P).
+[PASS] E.3 the only convention that bridges to literal 2/9 rad IS postulate P itself
+       exp(i c) with R/Z period 1 rad is a renaming of the radian-bridge primitive; not a derivation.
+[PASS] E.4 Cheeger-Simons R/Z period inheritance is a SHARP no-go (subcase of O10)
+       Differential characters refine integer cohomology to R/Z but inherit the 2 pi normalization of U(1).
+
+========================================================================================
+F. Cross-check: CS character is the 7th dimensionless 2/9 source
+========================================================================================
+
+    Six independent dimensionless 2/9 sources are already retained:
+      (1) ABSS eta(Z_3, weights (1,2)) = 2/9 mod Z
+      (2) Casimir ratio C_2(fund)/C_2(Sym^3) = (4/3)/6 = 2/9
+      (3) R_conn-derived 2(1 - R_conn) = 2/9 at N_c=3
+      (4) Plancherel weight (DOF b)/(dim Herm_3) = 2/9
+      (5) Ratio of two retained radians: (4 pi / 9) / (2 pi) = 2/9
+      (6) Scale-ratio identities: R_conn*Y^2_L = 2/9, Q_lep*Q_d = 2/9, etc.
+
+    The Cheeger-Simons R/Z value 2/9 is a 7th dimensionless source -- and
+    in fact it COINCIDES with (1) ABSS eta because the canonical lift of
+    the lens-space eta-invariant to Hat{H}^*(L(3,1); R/Z) IS the differential
+    character whose holonomy on the Z_3 generator is eta = 2/9 mod 1.
+    
+[PASS] F.1 ABSS eta value = CS Hat{H}^1 character value on Z_3 generator
+       ABSS eta = 2/9, CS value = 2/9.
+[PASS] F.2 Casimir ratio C_2(fund)/C_2(Sym^3) = 2/9 (independent dimensionless source)
+       = 2/9.
+[PASS] F.3 Plancherel weight 2 DOF / 9 dim Herm_3 = 2/9
+       = 2/9.
+[PASS] F.4 ratio of two retained radians (4 pi / 9) / (2 pi) = 2/9 (pi cancels)
+       = 2/9.
+[PASS] F.5 scale ratio R_conn*Y^2_L = 8/9 * 1/4 = 2/9
+       = 2/9.
+[PASS] F.6 CS R/Z value 2/9 is consistent with (and equivalent to) ABSS eta source
+       All seven sources are dimensionless rationals; none gives literal 2/9 radian without postulate P.
+[PASS] F.7 adding a 7th dimensionless 2/9 source does not change the bridge gap
+       Per multiple-rationals-to-radian probe (Round 9): N copies of 2/9 are rank-1 in the over-determined system.
+
+========================================================================================
+G. Numerical sanity: explicit Hat{H}^1 holonomy and phase
+========================================================================================
+    Working on a small Z_3-equivariant lattice of size L=3 (T^3/Z_3).
+[PASS] G.1 numerical: standard CS phase arg = 2 pi * (2/9) = 4 pi / 9
+       arg = 1.3962634016 rad; 4 pi / 9 = 1.3962634016 rad.
+[PASS] G.2 numerical: literal 2/9 rad ~ 0.2222 != 4 pi / 9 ~ 1.396
+       |standard_arg - 2/9| = 1.174041 >> 0.
+[PASS] G.3 the two U(1) elements differ: exp(4 pi i / 9) vs exp(i * 2/9)
+       |exp(4 pi i / 9) - exp(i*2/9)| = 1.107766.
+[PASS] G.4 conclusion: CS R/Z value 2/9 maps to phase 4 pi / 9, not literal 2/9 rad
+       Closure to delta = 2/9 rad fails under standard CS convention.
+
+========================================================================================
+H. Verdict
+========================================================================================
+[PASS] H.1 retained Cheeger-Simons class with R/Z value 2/9 EXISTS (dimensionless side OK)
+       ABSS eta-invariant lifts to Hat{H}^1(L(3,1); R/Z) with holonomy 2/9 mod 1.
+[PASS] H.2 standard CS R/Z -> U(1) convention gives phase exp(4 pi i / 9), NOT exp(i * 2/9)
+       Phase argument is (rational)*pi; on Lindemann wall (O10).
+[PASS] H.3 no retained Cl(3)/Z_3 lattice structure picks 1 rad over 2 pi rad as natural period
+       Z_3, Cl(3), Wilson, APBC, cyclic -- all have period 2 pi (or its rational multiples).
+[PASS] H.4 alternate exp(i c) convention WOULD bridge but IS postulate P itself
+       Renaming R/Z -> U(1) with period 1 rad is a restatement of postulate P, not a derivation.
+[PASS] H.5 O13 candidate confirmed: Cheeger-Simons R/Z period inheritance no-go
+       CS classes inherit 2 pi normalization from the canonical R/Z -> U(1) isomorphism.
+[PASS] H.6 O13 inherits from O10 (Universal Lattice Closure / Lindemann wall)
+       Differential characters do not escape the (rational)*pi wall; they live downstream of it.
+[PASS] H.7 Cheeger-Simons CS probe does NOT close the radian-bridge postulate P
+       47 prior probes + this one all fail by the same mechanism on this side of the wall.
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 49/49
+  [PASS] A.1 Hat{H}^k functor is well-defined on retained CW lattice geometry
+  [PASS] A.2 R/Z is the natural codomain of differential characters
+  [PASS] A.3 H^0(T^3/Z_3; Z) on retained orbifold = Z
+  [PASS] A.3 H^1(T^3/Z_3; Z) on retained orbifold = Z_3 (torsion only; no free part because diagonal action kills H^1(T^3))
+  [PASS] A.3 H^2(T^3/Z_3; Z) on retained orbifold = Z_3 (torsion only by Poincare/Universal Coefficients on the orbifold)
+  [PASS] A.3 H^3(T^3/Z_3; Z) on retained orbifold = Z (top class)
+  [PASS] A.4 retained Cl(3)/Z_3 admits Cheeger-Simons classes Hat{H}^k for k=1,2,3
+  [PASS] B.1 ABSS eta(Z_3, weights (1,2)) = 2/9 mod Z (retained from prior probes)
+  [PASS] B.2 explicit 1-cocycle c(g) = 2/9 mod 1 represents a class in H^1(T^3/Z_3; R/Z)
+  [PASS] B.3 H^1(.; Z_3) torsion: 3 c(g) = 2/3 mod 1, NOT zero -> not a Z_3-torsion class
+  [PASS] B.4 lift to Hat{H}^1: Hat{c}(g) := 2/9 mod 1 on Z_3-generator is a valid differential character
+  [PASS] B.5 Hat{H}^1 character has well-defined holonomy 2/9 mod 1 around the Z_3 cycle
+  [PASS] C.1 standard CS phase chi(c) = exp(2 pi i c) maps c=2/9 to arg = 4 pi / 9
+  [PASS] C.2 (rational)*pi != rational by Lindemann-Weierstrass
+  [PASS] C.3 standard CS convention does NOT bridge to literal 2/9 radian
+  [PASS] C.4 alternate convention chi'(c) = exp(i c) WOULD give arg = 2/9 rad literally
+  [PASS] C.5 alternate exp(i c) convention is NOT the canonical CS R/Z -> U(1) map
+  [PASS] C.6 alternate convention requires identifying R/Z period with 1 rad, not 2 pi rad
+  [PASS] D.1 Z_3 generator U_g satisfies U_g^3 = 1; eigenvalues exp(2 pi i k / 3)
+  [PASS] D.2 Cl(3) bivector rotations exp(theta J_ij) periodic with period 2 pi (vector) / 4 pi (spinor)
+  [PASS] D.3 retained Wilson plaquette holonomy exp(i Phi) defined mod 2 pi
+  [PASS] D.4 APBC contributes exp(i pi) = -1 boundary phase; period 2 pi
+  [PASS] D.5 cyclic Wilson loop tr(U_a U_b U_c) on Z_3-circulant lattice -- spectrum on unit circle period 2 pi
+  [PASS] D.6 Cheeger-Simons functor's R/Z period is fixed by definition at 2 pi
+  [PASS] D.7 no retained lattice structure picks period 1 rad over period 2 pi rad
+  [PASS] E.1 Cheeger-Simons R/Z period inheritance: phase is exp(2 pi i c), arg = 2 pi c on (rational)*pi locus
+  [PASS] E.2 convention 'exp(2 pi i c)' [canonical]: arg(c=2/9) = 4*pi/9; on Lindemann wall = yes
+  [PASS] E.2 convention 'exp(pi i c)' [half-period (sometimes seen for spin lifts)]: arg(c=2/9) = 2*pi/9; on Lindemann wall = yes
+  [PASS] E.2 convention 'exp(i c)' [1-rad-period (non-canonical)]: arg(c=2/9) = 2/9; on Lindemann wall = no -- bridges, but is the postulate P itself
+  [PASS] E.3 the only convention that bridges to literal 2/9 rad IS postulate P itself
+  [PASS] E.4 Cheeger-Simons R/Z period inheritance is a SHARP no-go (subcase of O10)
+  [PASS] F.1 ABSS eta value = CS Hat{H}^1 character value on Z_3 generator
+  [PASS] F.2 Casimir ratio C_2(fund)/C_2(Sym^3) = 2/9 (independent dimensionless source)
+  [PASS] F.3 Plancherel weight 2 DOF / 9 dim Herm_3 = 2/9
+  [PASS] F.4 ratio of two retained radians (4 pi / 9) / (2 pi) = 2/9 (pi cancels)
+  [PASS] F.5 scale ratio R_conn*Y^2_L = 8/9 * 1/4 = 2/9
+  [PASS] F.6 CS R/Z value 2/9 is consistent with (and equivalent to) ABSS eta source
+  [PASS] F.7 adding a 7th dimensionless 2/9 source does not change the bridge gap
+  [PASS] G.1 numerical: standard CS phase arg = 2 pi * (2/9) = 4 pi / 9
+  [PASS] G.2 numerical: literal 2/9 rad ~ 0.2222 != 4 pi / 9 ~ 1.396
+  [PASS] G.3 the two U(1) elements differ: exp(4 pi i / 9) vs exp(i * 2/9)
+  [PASS] G.4 conclusion: CS R/Z value 2/9 maps to phase 4 pi / 9, not literal 2/9 rad
+  [PASS] H.1 retained Cheeger-Simons class with R/Z value 2/9 EXISTS (dimensionless side OK)
+  [PASS] H.2 standard CS R/Z -> U(1) convention gives phase exp(4 pi i / 9), NOT exp(i * 2/9)
+  [PASS] H.3 no retained Cl(3)/Z_3 lattice structure picks 1 rad over 2 pi rad as natural period
+  [PASS] H.4 alternate exp(i c) convention WOULD bridge but IS postulate P itself
+  [PASS] H.5 O13 candidate confirmed: Cheeger-Simons R/Z period inheritance no-go
+  [PASS] H.6 O13 inherits from O10 (Universal Lattice Closure / Lindemann wall)
+  [PASS] H.7 Cheeger-Simons CS probe does NOT close the radian-bridge postulate P
+
+VERDICT: Cheeger-Simons R/Z probe does NOT close the radian-bridge postulate P.
+KOIDE_A1_CHEEGER_SIMONS_RZ_NO_GO=TRUE
+CHEEGER_SIMONS_RZ_CLOSES_A1=FALSE
+OBSTRUCTION_CLASS=O13
+OBSTRUCTION_NAME=Cheeger-Simons R/Z period inheritance
+OBSTRUCTION_PARENT=O10 (Universal Lattice Closure / Lindemann wall)
+RESIDUAL=postulate P (literal 1-rad period of R/Z is a non-canonical structural input)
+
+----- stderr -----
+

@@ -1,0 +1,92 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_up_amplitude_tensor_endpoint_bridge.py
+runner_sha256: 21c7656087cb7ec587c07a7f3ccc670cae483858c140027e68b7c41b42c41e1b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 39.65
+status: ok
+----- stdout -----
+========================================================================
+  FRONTIER: Quark Up-Amplitude Tensor-Endpoint Bridge
+========================================================================
+
+========================================================================
+PART 1: Tensor Endpoint Data and External Baselines
+========================================================================
+
+  exact support datum             = delta_A1(q_dem) = 0.023809523810
+  exact support fraction          = 6/7            = 0.857142857143
+  solved anchored a_u             = 0.778161628656
+
+  delta_A1(e0)                    = 0.166666666667
+  delta_A1(s/sqrt(6))             = -0.000000000000
+  exact endpoint gap              = 0.166666666667
+
+  gamma_E(delta)                  = -2.010572657265e-04 + (-1.057053906426e-03) delta_A1
+  gamma_T(delta)                  = +4.031967723697e-04 + (-4.032091965809e-04) delta_A1
+  bounded slope ratio k_tensor    = |b_E / b_T|    = 2.621601678209
+  bounded shell ratio k_shell     = |a_T / a_E|    = 2.005382749600
+  bounded T-balance               = |b_T / a_T|    = 1.000030814262
+
+  baseline 7/9 refit_obj          = 0.052752
+  baseline 7/9 refit_max          = 0.908%
+  baseline sqrt(3/5) anchor       = 0.720%
+  baseline sqrt(3/5) anchor_max   = 0.677%
+
+========================================================================
+PART 2: Tensor-Endpoint Bridge Family
+========================================================================
+
+  endpoint-derived family:
+    - exact endpoint gap Delta_endpoint = delta_A1(e0) - delta_A1(s/sqrt(6))
+    - bounded readout ratios k_tensor = |b_E / b_T|, k_shell = |a_T / a_E|,
+      and t_balance = |b_T / a_T|
+
+  strongest endpoint-derived refit laws:
+  sin(delta_std) * (6/7 - delta_A1 * Delta_endpoint)   a_u=0.778838293  anchor=0.892%  refit_obj=0.052796  refit_max=0.862%
+  sin(delta_std) * (6/7 - delta_A1 / k_tensor)         a_u=0.774170055  anchor=0.723%  refit_obj=0.055186  refit_max=1.065%
+  sin(delta_std) * (6/7 - delta_A1 / k_shell)          a_u=0.771622455  anchor=0.745%  refit_obj=0.059309  refit_max=1.176%
+  sin(delta_std) * (6/7 - t_balance delta_A1)          a_u=0.760725105  anchor=0.845%  refit_obj=0.099438  refit_max=1.644%
+  sin(delta_std) * (1 - delta_A1 / k_tensor)           a_u=0.904580188  anchor=8.316%  refit_obj=2.486195  refit_max=5.572%
+  sin(delta_std) * (1 - delta_A1 * Delta_endpoint)     a_u=0.909248425  anchor=8.590%  refit_obj=2.668956  refit_max=5.751%
+
+  strongest endpoint-derived anchored laws:
+  sin(delta_std) * (6/7 - delta_A1 / k_tensor)         a_u=0.774170055  anchor=0.723%  refit_obj=0.055186  refit_max=1.065%
+  sin(delta_std) * (6/7 - delta_A1 / k_shell)          a_u=0.771622455  anchor=0.745%  refit_obj=0.059309  refit_max=1.176%
+  sin(delta_std) * (6/7 - t_balance delta_A1)          a_u=0.760725105  anchor=0.845%  refit_obj=0.099438  refit_max=1.644%
+  sin(delta_std) * (6/7 - delta_A1 * Delta_endpoint)   a_u=0.778838293  anchor=0.892%  refit_obj=0.052796  refit_max=0.862%
+  sin(delta_std) * (1 - delta_A1 / k_tensor)           a_u=0.904580188  anchor=8.316%  refit_obj=2.486195  refit_max=5.572%
+  sin(delta_std) * (1 - delta_A1 * Delta_endpoint)     a_u=0.909248425  anchor=8.590%  refit_obj=2.668956  refit_max=5.751%
+
+========================================================================
+PART 3: Bridge Endpoint
+========================================================================
+
+  exact endpoint-gap law          = sin(delta_std) * (6/7 - delta_A1 * Delta_endpoint)
+    a_u                           = 0.778838292749
+    refit objective               = 0.052796
+    refit max deviation           = 0.862%
+    anchored aggregate            = 0.892%
+
+  bounded tensor-ratio law        = sin(delta_std) * (6/7 - delta_A1 / k_tensor)
+    a_u                           = 0.774170054824
+    anchored aggregate            = 0.723%
+    anchored max deviation        = 0.666%
+    refit max deviation           = 1.065%
+    sqrt(7) proxy gap             = 0.010%
+
+  external refit baseline 7/9     = 0.908% max
+  external anchored sqrt(3/5)     = 0.720% aggregate
+  [PASS] The exact support endpoint gap is 1/6  (gap = 0.166666666667)
+  [PASS] The bounded tensor slope ratio stays within 1% of sqrt(7)  (k_tensor/sqrt(7) = 0.990872)
+  [PASS] The exact endpoint-gap law reproduces the strongest current affine refit branch  (refit max = 0.862%, refit obj = 0.052796)
+  [PASS] The bounded tensor-ratio law keeps the anchored CKM+J package below 1%  (anchor max = 0.666%, aggregate = 0.723%)
+  [PASS] The bounded tensor-ratio law lands within 0.2% of the earlier sqrt(7) proxy value  (value gap = 0.010%)
+  [PASS] No tensor-endpoint bridge law beats both external baselines at once  (survivors = 0)
+
+========================================================================
+SUMMARY: PASS=6 FAIL=0
+========================================================================
+
+----- stderr -----
+

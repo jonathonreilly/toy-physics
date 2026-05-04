@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_bridge_uv_class_uniqueness.py
+runner_sha256: 6a68629fdbd29b6997b2f2c65344d55a008f555267c4227ae5a4e1ac4a9f23e5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 116.92
+status: ok
+----- stdout -----
+==============================================================================
+y_t BRIDGE UV CLASS UNIQUENESS
+==============================================================================
+
+Test whether the current support hypotheses force the viable bridge into the same
+UV-localized class and moment band.
+
+Branch-hypothesis support from the current selector stack:
+  exact kernel min/max on forced UV window = [2.318821e-02, 2.625882e-02]
+  affine local-kernel max relative error = 1.187562e-02
+  affine local-kernel operator-norm ratio = 5.023669e-03
+
+  [PASS] 1a-response-kernel-is-positive-on-the-forced-uv-window: kernel min/max = [2.318821e-02, 2.625882e-02]
+  [PASS] 1b-response-kernel-is-nearly-affine-on-the-forced-uv-window: max relative affine-fit error = 1.187562e-02
+  [PASS] 1c-local-hessian-selector-remains-a-small-correction-around-the-affine-model: operator-norm ratio = 5.023669e-03
+Higher-order correction control on the best constructive bridge:
+  best bridge = logistic center=0.975 width=0.020 y_t(v)=0.917605
+  |cubic+quartic| / quadratic on |δ|<=0.10 = 7.123842e-03
+
+  [PASS] 1d-higher-order-corrections-stay-parametrically-small: max |cubic+quartic|/quadratic = 7.123842e-03
+Broad scanned family summary:
+  total candidates scanned = 168
+  preliminary survivors (|dev| < 0.10% and nonlocal frac < 2e-3) = 6
+  higher-order survivors (ratio < 0.10) = 6
+  survivors inside coarse parametric UV box = 2
+  survivors outside coarse parametric UV box = 4
+  survivors inside intrinsic UV-centered class (c2 >= 0.97) = 6
+  survivors outside intrinsic UV-centered class = 0
+
+Intrinsic UV-centered survivor band:
+  center fraction range = [0.963, 0.990]
+  width fraction range  = [0.017, 0.050]
+  J_aff range           = [0.00074102, 0.00077704]
+  c2 range              = [0.973335, 0.980341]
+  dev% range            = [-0.0317, +0.0982]
+
+Best intrinsic-class survivor per shape:
+  shape          center    width       dev%        J_aff     nonloc     higher
+  erf             0.990    0.043    -0.0317   0.00074102 1.339232e-04 6.969244e-03
+  smoothstep      0.963    0.037    +0.0230   0.00074932 2.716505e-04 7.493219e-03
+
+  [PASS] 2a-no-survivor-leaves-the-intrinsic-uv-centered-class: outside intrinsic class survivors = 0
+  [PASS] 2b-intrinsic-class-survivors-share-a-tight-center-band: center band width = 2.714286e-02
+  [PASS] 2c-intrinsic-class-survivors-share-a-tight-centroid-band: c2 band width = 7.005851e-03
+  [PASS] 2d-intrinsic-class-survivors-share-a-tight-jaff-band: J_aff band width = 3.602100e-05
+  [PASS] 2e-each-shape-best-intrinsic-survivor-keeps-higher-order-corrections-small: all best survivors have higher-order ratio below 0.10
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+Within the scanned constructive family, once the current support hypotheses are imposed, every surviving candidate falls into the same intrinsic UV-centered class and the same narrow J_aff band.
+The earlier center/width box was only a coarse parametrization aid. At the intrinsic level, the viable bridge is not just UV-localized; it is forced into the same UV-centered class/band.
+
+Honest boundary:
+This remains a scanned proxy-family certificate, not a proof over the
+full microscopic bridge space.
+==============================================================================
+FINAL TALLY: 9 PASS / 0 FAIL
+Elapsed: 116.47 s
+==============================================================================
+
+----- stderr -----
+

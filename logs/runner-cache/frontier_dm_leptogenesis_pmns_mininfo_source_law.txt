@@ -1,0 +1,75 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_mininfo_source_law.py
+runner_sha256: d9064ed07923d4b153469d27f09b6ea7b6dd6d767c50c2d42e6558f99e25f515
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 5.11
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS MINIMUM-INFORMATION SOURCE LAW
+========================================================================================
+
+Framework convention:
+  "axiom" means only Cl(3) on Z^3.
+
+Invented law:
+  On the fixed native N_e seed surface, choose the off-seed source that
+  minimizes I_seed = D_KL(x||x_seed) + D_KL(y||y_seed) + (1-cos delta)
+  subject to exact closure eta_{i_*}/eta_obs = 1, where i_* is the
+  transport-favored column selected by the exact extremal class.
+
+========================================================================================
+PART 1: TRANSPORT EXTREMALITY FIXES THE FAVORED COLUMN
+========================================================================================
+  [PASS] The transport-extremal class stays on the exact fixed native seed surface  ((xbar,ybar)=(0.563333,0.306667))
+  [PASS] The favored flavor column is fixed exactly by the extremal class  (etas=[1.051004 0.662176 0.61936 ], idx=0)
+  [PASS] On the canonical branch the favored column is column 0  (etas=[1.051004 0.662176 0.61936 ])
+
+  extremal packet:
+[[9.25175e-01 3.45930e-02 4.02320e-02]
+ [3.91410e-02 1.11500e-03 9.59744e-01]
+ [3.56840e-02 9.64293e-01 2.40000e-05]]
+  extremal eta/eta_obs = [1.051004 0.662176 0.61936 ]
+
+========================================================================================
+PART 2: THE MINIMUM-INFORMATION CLOSURE LAW
+========================================================================================
+  [PASS] The minimum-information source stays on the exact fixed seed surface  ((xbar,ybar)=(0.563333,0.306667))
+  [PASS] The law closes eta exactly on the favored column  (etas=[1.         0.50519888 0.7823353 ])
+  [PASS] The minimum-information closure source is much closer to seed than the canonical near-closing sample  (I_seed=0.058549869343)
+  [PASS] The invented law selects a simple near-zero phase closure source  (delta=-2.039244415044e-08)
+  [PASS] The selected closure source is still genuinely off-seed  (xi=[-0.083963, -0.128696,  0.212659], eta=[-0.075524,  0.088202, -0.012678])
+  [PASS] The favored column remains the best column at the closure source  (best idx=0, etas=[1.       0.505199 0.782335])
+
+  x_min     = [0.47937 , 0.434637, 0.775993]
+  y_min     = [0.231143, 0.394868, 0.293989]
+  xi_min    = [-0.083963, -0.128696,  0.212659]
+  eta_min   = [-0.075524,  0.088202, -0.012678]
+  delta_min = -2.039244415044e-08
+  I_seed    = 0.058549869343
+  packet_min:
+[[0.037059 0.756137 0.206804]
+ [0.893609 0.001598 0.104792]
+ [0.069332 0.242265 0.688403]]
+  eta/eta_obs(min-law) = [1.         0.50519888 0.7823353 ]
+
+========================================================================================
+PART 3: BOTTOM LINE
+========================================================================================
+  [PASS] The off-seed source law is now explicit  (minimum information deformation at exact closure on the favored column)
+  [PASS] This law is strictly stronger than the bare extremal candidate  (it picks the least-deformed exact closure source, not just some overshooting source)
+  [PASS] So the full-stack closure route is now an actual invented law, not only a candidate scan  (what remains is whether to adopt this law as authority)
+
+========================================================================================
+RESULT
+========================================================================================
+  Invented closure law:
+    - favored column fixed by exact transport extremality
+    - off-seed source fixed by minimum-information exact closure
+    - exact eta/eta_obs = 1 on the current PMNS-assisted N_e branch
+
+PASS=12  FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_pfaffian_no_forcing_theorem.py
+runner_sha256: 58f2db2a00af9cb512ce36cb8ffc7dc5e63ec24814e29d93dd3c9c5e92985885
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: PFAFFIAN NO-FORCING THEOREM
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+    rows: Framework axiom; Observable principle; Anomaly-forced time;
+          Native weak algebra; Structural SU(3) closure; One-generation matter closure
+  - docs/UNIFIED_AXIOM_BOUNDARY_NOTE.md
+  - docs/NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md
+  - docs/NEUTRINO_MAJORANA_NATIVE_GAUSSIAN_NO_GO_NOTE.md
+  - docs/NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md
+  - docs/NEUTRINO_MAJORANA_PFAFFIAN_AXIOM_BOUNDARY_NOTE.md
+
+Question:
+  Can any exact principle built only from the current retained normal
+  grammar force a Pfaffian/Nambu sector or a nonzero Majorana pairing
+  amplitude?
+
+========================================================================================
+PART 1: A NONTRIVIAL PFAFFIAN FAMILY SHARES ONE RETAINED SIGNATURE
+========================================================================================
+  [PASS (C)] All mu values share the same retained normal signature  (distinct retained signatures=1)
+  [PASS (C)] The same family has distinct Pfaffian signatures  (distinct Pfaffian signatures=3)
+
+  So the current retained grammar identifies one equivalence class
+  containing both mu = 0 and mu != 0 extensions.
+
+========================================================================================
+PART 2: ANY CURRENT-STACK PRINCIPLE IS CONSTANT ON THAT EQUIVALENCE CLASS
+========================================================================================
+  [PASS (C)] Any current-stack functional has one image on the extension family  (distinct current-stack images=1)
+  [PASS (C)] Pfaffian sectors still split into multiple inequivalent cases  (distinct Pfaffian cases=3)
+
+  Therefore no principle whose inputs are restricted to current
+  retained normal data can distinguish or force the Pfaffian amplitude.
+
+========================================================================================
+PART 3: UNIQUE CHANNEL FORCED, PFAFFIAN EXISTENCE NOT FORCED
+========================================================================================
+  [PASS (C)] Current stack still fixes the unique nu_R channel exactly  (internal rows=[np.int64(15)])
+  [PASS (C)] Zero and nonzero extensions share that same unique channel  (support fixed while amplitude changes)
+  [PASS (C)] Zero and nonzero extensions remain distinct cases  (||Delta1-Delta0||=1.131371)
+
+  This isolates the exact no-forcing statement:
+  the current stack forces which channel would matter, but not whether
+  the Pfaffian/Nambu sector exists at all.
+
+========================================================================================
+RESULT
+========================================================================================
+  No. On the current retained stack, no principle whose inputs are
+  restricted to the retained normal grammar can force the Pfaffian/Nambu
+  sector or the pairing amplitude mu.
+
+  Exact current status:
+    - unique DeltaL=2 channel: forced
+    - Pfaffian/Nambu existence: not forceable from current normal data
+    - Pfaffian amplitude mu: not forceable from current normal data
+
+PASS=7  FAIL=0
+
+----- stderr -----
+

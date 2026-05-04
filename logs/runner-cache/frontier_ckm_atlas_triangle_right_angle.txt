@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_atlas_triangle_right_angle.py
+runner_sha256: 2957d409b98408ce30ce495315c8fe10571d496e4710ef2f3aa52c0c0e4bb708
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+CKM atlas triangle right-angle identity verification
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: retained CKM atlas inputs
+----------------------------------------------------------------------------------------
+  [PASS] n_pair = 2
+  [PASS] n_color = 3
+  [PASS] n_quark = 6
+  [PASS] rho = 1/6 (rho = 1/6)
+  [PASS] eta^2 = 5/36 (eta^2 = 5/36)
+  [PASS] rho^2 + eta^2 = 1/6 (1/6)
+
+----------------------------------------------------------------------------------------
+Part 1: exact right angle of the rescaled atlas triangle
+----------------------------------------------------------------------------------------
+  [PASS] tan(beta_0) = 1/sqrt(5) (tan(beta_0) = 0.447213595499958)
+  [PASS] tan(gamma_0) = sqrt(5) (tan(gamma_0) = 2.236067977499790)
+  [PASS] gamma_0 equals retained delta_CKM (gamma_0 = 65.905157447889 deg)
+  [PASS] beta_0 + gamma_0 = 90 degrees (90.000000000000 deg)
+  [PASS] alpha_0 = 90 degrees exactly on the atlas triangle (alpha_0 = 90.000000000000 deg)
+  [PASS] atlas triangle angles sum to 180 degrees
+  [PASS] rescaled atlas triangle area = sqrt(5)/12 (area = 0.186338998124982)
+  [PASS] Thales circle: eta^2 = rho(1-rho) (both = 5/36)
+
+----------------------------------------------------------------------------------------
+Part 2: area reproduces retained atlas-Jarlskog factorisation
+----------------------------------------------------------------------------------------
+  [PASS] lambda^2 = alpha_s(v)/2
+  [PASS] A^2 = 2/3
+  [PASS] 2 A^2 lambda^6 Area_0 = J_0 = alpha_s(v)^3 sqrt(5)/72 (J_0 = 3.423746495302e-05)
+
+----------------------------------------------------------------------------------------
+Part 3: finite-lambda barred unitarity-triangle guardrail
+----------------------------------------------------------------------------------------
+  [PASS] standard CKM matrix is unitary (max error 1.11e-16)
+  [PASS] barred apex differs from atlas rho by finite-lambda correction (rho_bar=0.16263737, rho=0.16666667)
+  [PASS] barred apex differs from atlas eta by finite-lambda correction (eta_bar=0.36303884, eta=0.37267800)
+  [PASS] exact barred alpha is not promoted as exactly 90 degrees (alpha_bar=90.69269025 deg)
+  [PASS] barred angles still sum to 180 degrees (sum=180.000000000000)
+  [PASS] barred alpha finite-lambda correction is small (delta=+0.692690 deg)
+  [PASS] barred beta finite-lambda correction is small (delta=-0.655683 deg)
+  [PASS] barred gamma finite-lambda correction is small (delta=-0.037007 deg)
+  [PASS] boundary flag: exact right angle belongs to atlas triangle, not barred triangle
+
+  atlas angles:  alpha_0=90.000000, beta_0=24.094843, gamma_0=65.905157
+  barred angles: alpha=90.692690, beta=23.439159, gamma=65.868151
+  barred apex:   rho_bar=0.16263737, eta_bar=0.36303884
+
+========================================================================================
+TOTAL: PASS=26, FAIL=0
+========================================================================================
+PASSED: 26/26
+CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_RETAINED=TRUE
+BARRED_UNITARITY_TRIANGLE_EXACT_RIGHT_ANGLE_PROMOTED=FALSE
+
+----- stderr -----
+

@@ -1,0 +1,137 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_microscopic_polynomial_impossibility_theorem.py
+runner_sha256: 875b495f1df8631ff2ae08c1ece2beb1463e639ca54a5daffb11f5a7b28fcfa5
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.52
+status: ok
+----- stdout -----
+========================================================================================
+G1 the microscopic-polynomial impossibility theorem: MICROSCOPIC AXIOM-LEVEL ANALYSIS OF (delta, q_+)
+========================================================================================
+Branch: 
+Verdict: OBSTRUCTION (CASE 3) -- microscopic Cl(3)/Z^3 silence theorem
+
+========================================================================================
+PART 1: Z_3-IRREP DECOMPOSITION OF THE RETAINED HERMITIAN TANGENT SPAN
+========================================================================================
+ [PASS] T_q is exactly C_3-invariant: z3_sym(T_q) = T_q (deviation = 0.00e+00)
+ [PASS] T_q has zero Z_3-doublet component (anti(T_q) = 0) (deviation = 0.00e+00)
+ [PASS] T_delta has zero Z_3-singlet component: z3_sym(T_delta) = 0 (||sym(T_delta)|| = 0.00e+00)
+ [PASS] T_delta is purely Z_3-anti-symmetric: anti(T_delta) = T_delta
+ [PASS] T_delta = singlet + doublet-omega + doublet-omega-bar (exact) (reconstruction error = 5.44e-16)
+ [PASS] T_delta doublet pieces are complex conjugates (Hermitian reality) (Td_w* == Td_wbar)
+ [PASS] Td_w is a C_3-conjugation eigenvector with eigenvalue omega = exp(2 pi i / 3) (||C3 Td_w C3^-1 - omega Td_w|| = 4.11e-16)
+ [PASS] T_m has nonzero Z_3-singlet AND nonzero Z_3-doublet content (||sym(T_m)|| = 1.0000, ||anti(T_m)|| = 1.4142)
+ [PASS] sym(T_m) = J/3 = (I_3 + T_q)/3 (the unique Z_3-singlet real symmetric matrix orthogonal to I_3) (||sym(T_m) - J/3|| = 0.00e+00)
+
+ Structural reading:
+  - T_q   spans the nontrivial Z_3-singlet direction (beyond I_3)
+  - T_delta spans a specific 1-D Z_2-fixed line in the 2-D Z_3-doublet
+  - T_m   is a structural mix and is not on the active (delta, q_+) pair
+ => the active pair (delta, q_+) is a (doublet-component, singlet) pair
+   in a SPECIFIC gauge-fixed Z_3 x Z_2 chart.
+
+========================================================================================
+PART 2: THE ACTIVE AFFINE CHART IS NOT CLOSED UNDER RETAINED SYMMETRIES
+========================================================================================
+ [PASS] C_3 conjugation takes chart points OUT of the chart (non-closure) (projection residual = 3.4675)
+ [PASS] Translation Tx conjugation takes chart point off the chart (projection residual = 2.5483)
+ [PASS] Translation Ty conjugation takes chart point off the chart (projection residual = 2.2276)
+ [PASS] Translation Tz conjugation takes chart point off the chart (projection residual = 0.7172)
+ [PASS] C_3 T_q C_3^-1 = T_q (T_q is Z_3-fixed) (T_q is the singlet direction)
+ [PASS] C_3 T_delta C_3^-1 != T_delta (T_delta rotates within the doublet orbit) (||C3 T_d C3^-1 - T_d|| = 4.2426)
+
+========================================================================================
+PART 3: Z_3-INVARIANT POLYNOMIAL REDUCTION ON THE CHART
+========================================================================================
+ [PASS] Tr(T_m^2) = 3 (value = 3.0)
+ [PASS] Tr(T_delta^2) = 6 (value = 6.0)
+ [PASS] Tr(T_q^2) = 6 (value = 6.0)
+ [PASS] Tr(T_m T_delta) = 0 (no m-delta mixing in quadratic invariant) (value = 0.0)
+ [PASS] Tr(T_m T_q) = 2 (m-q mixing is structural, not an obstruction to Z_3) (value = 2.0)
+ [PASS] Tr(T_delta T_q) = 0 (no delta-q mixing in the quadratic invariant) (value = 0.0)
+ [PASS] Tr(H^2) (source-only) = 3 m^2 + 6 delta^2 + 6 q_+^2 + 4 m q_+ (no odd delta term) (quadratic invariant is EVEN in delta => blind to sign of delta)
+ [PASS] Tr(H^3) is EVEN in delta => delta enters only via delta^2 (microscopic cubic invariant does not distinguish sign of delta)
+ [PASS] det(m I_3 + J_act) is EVEN in delta (source-only part) (source-only determinant is a Z_2-invariant function of |delta|)
+
+ Retained Z_3-invariant polynomial content on the chart (source-only sector):
+  Tr(H^k)_{source-only} depends on (m, delta^2, q_+) only.
+ => any local polynomial microscopic observable is delta^2 + q_+ parametrised.
+
+========================================================================================
+PART 4: HEAT-KERNEL, SPECTRAL-GAP, WARD-IDENTITY SILENCE
+========================================================================================
+ [PASS] Heat-kernel Tr(exp(-t H^2)) is EVEN in delta for source-only Hermitian H (=> heat-kernel coefficients depend only on (m, delta^2, q_+))
+ [PASS] Spectral gap (min |eigval|) is EVEN in delta on the source-only chart (=> spectral-gap selector is delta^2-only, cannot fix sign of delta)
+ [PASS] Z_3 Ward identity W[J] = W[C_3 J C_3^-1] holds on the Schur baseline (=> W descends to a function of the Z_3-invariant combinations (m, delta^2, q_+))
+ [PASS] Translation Ward identity W[J] = W[T_sign J T_sign^-1] holds on Schur baseline (=> lattice-translation invariance gives no independent constraint on (delta, q_+))
+ [PASS] Chiral Ward identity saturates on the delta-even source-response functional (trace moments even in delta => chiral Ward gives no new info)
+
+========================================================================================
+PART 5: RESIDUAL DIMENSION COUNT
+========================================================================================
+ Structural reduction on the retained sheet:
+  Ambient active generators: 3-real (T_m, T_delta, T_q)
+  After Schur-baseline:    m fixed by scalar requirement
+  After Z_3 microsymmetry:  delta -> |delta| (doublet magnitude)
+  After Z_2 parity gauge:   delta >= 0 on the chamber
+ => residual microscopic-invariant datum on the chart: 2-real (delta, q_+)
+ [PASS] Residual microscopic-invariant datum is exactly 2-real (microscopic symmetries saturate at the retained (delta, q_+) pair)
+ [PASS] The retained microscopic symmetries do NOT reduce the residual below 2-real (gauge-fixed (delta, q_+) IS the microscopic-invariant residual)
+
+========================================================================================
+PART 6: IMPOSSIBILITY THEOREM (CASE 3 NEGATIVE)
+========================================================================================
+ [PASS] Every polynomial functional f = a_1 Tr(H) + a_2 Tr(H^2) + a_3 Tr(H^3) + a_4 det(H) is even in delta (for 40 random coefficient samples)
+ [PASS] Retained-atlas microscopic candidates are pairwise distinct (4 candidates, none coinciding)
+
+ IMPOSSIBILITY THEOREM (microscopic Cl(3)/Z^3 silence on (delta, q_+)):
+  Every retained local polynomial functional of H on the active chart
+  depends on (delta, q_+) only through (delta^2, q_+). Distinct
+  retained functionals select distinct points (Schur-Q, Tr(H^2),
+  det(H), F1, K_12) -- all four pass the Z_3 / chirality / translation
+  / heat-kernel / spectral Ward tests but fail to agree.
+
+ MISSING MICROSCOPIC INGREDIENT:
+  None of the retained microscopic structures provides a UNIQUE
+  selection functional. The Cl(3)/Z^3 axiom is genuinely silent
+  on the residual 2-real (delta, q_+) pair.
+
+ CONSEQUENCE:
+  The (delta, q_+) pair is legitimately a 'gauge direction' inside
+  the retained microscopic-invariant sheet. Closing selector requires a
+  nonlocal selector (information-geometric, transport-consistency,
+  or effective-action / matching), NOT a further microscopic local
+  constraint.
+ [PASS] CASE 3 verdict: microscopic-silence impossibility theorem is proven (identified missing ingredient: nonlocal selector principle beyond retained axiom)
+
+========================================================================================
+PART 7: CONNECTION TO THE NEUTRINO DIRAC TRICHOTOMY
+========================================================================================
+ Retained microscopic inputs on the neutrino Dirac lane:
+  (I)  Three-generation observable theorem => M_3(C) on H_hw=1
+  (II) Neutrino-Dirac Z_3 support trichotomy => 3 allowed patterns
+  (III) One-generation matter closure     => RH SM completion
+  (IV) DM source-surface carrier normal form => (gamma, E1, E2) fixed
+  (V)  Active affine chart (m, delta, q_+)  => 3-real minimal datum
+  (VI) Schur baseline D = m I_3        => m fixed by scalar axis
+  (VII) Active half-plane chamber q_+ >= E1 - delta
+
+ After (I)-(VII), the residual retained microscopic datum is the
+ 2-real (delta, q_+) pair.
+
+ The present theorem establishes that (delta, q_+) is the exact
+ microscopic-invariant residual: every retained microscopic
+ polynomial functional is a function of (delta^2, q_+) alone,
+ and distinct functionals select distinct points.
+
+ => 'Gauge direction' status of (delta, q_+) is LEGITIMIZED.
+ [PASS] Trichotomy + one-generation + carrier normal form leave exactly (delta, q_+) residual (microscopic stack saturates at 2-real (delta, q_+))
+
+========================================================================================
+TOTAL: PASS = 35, FAIL = 0
+========================================================================================
+
+----- stderr -----
+

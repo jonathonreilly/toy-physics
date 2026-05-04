@@ -1,0 +1,83 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_five_sixths_scale_selection_boundary.py
+runner_sha256: 0380f599cee1f118358dae43d1b619d8dd486c6ad8303c3004184cb9798022b3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+LANE 3 FIVE-SIXTHS SCALE-SELECTION BOUNDARY
+========================================================================================
+
+A. Authority surfaces
+------------------------------------------------------------------------
+PASS: QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md exists -- docs/QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md
+PASS: CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md exists -- docs/CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md
+PASS: QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md exists -- docs/QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md
+PASS: QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md exists -- docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md
+PASS: CKM_ATLAS_AXIOM_CLOSURE_NOTE.md exists -- docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md
+PASS: new note is a boundary, not a retained mass claim
+PASS: support note classifies 5/6 as bounded support
+PASS: taste-staircase note keeps 5/6 mechanism open
+PASS: Lane 3 firewall keeps down-type retention open
+
+B. Exact SU(3) and CKM inputs
+------------------------------------------------------------------------
+PASS: C_F = 4/3 exactly -- 4/3
+PASS: T_F = 1/2 exactly -- 1/2
+PASS: C_F - T_F = 5/6 exactly -- 5/6
+PASS: inverse exponent is 6/5 exactly -- 6/5
+PASS: |V_cb|_atlas = alpha_s(v)/sqrt(6) is positive -- 0.042173606330
+PASS: |V_cb|_atlas is in the CKM-size range -- 0.042173606330
+
+C. Threshold-local bounded support
+------------------------------------------------------------------------
+  |V_cb|_atlas = 0.042173606330
+  R_pred       = |V_cb|^(6/5) = 0.022389731616
+  R_self       = m_s(2 GeV)/m_b(m_b) = 0.022344497608
+  p_self       = log(|V_cb|)/log(R_self) = 0.832889973722
+  deviation    = +0.202%
+PASS: R_pred is the unique ratio implied by granted 5/6 bridge
+PASS: threshold-local comparator is within 1% of the 5/6 prediction -- +0.202%
+PASS: threshold-local inferred exponent is near 5/6 -- delta=-0.000443
+PASS: the match is not exact and still uses a comparator surface -- +0.202%
+
+D. Common-scale transport boundary
+------------------------------------------------------------------------
+  alpha_s(2 GeV) = 0.301
+  alpha_s(m_b)   = 0.226
+  transport T    = 1.147466108487
+  R_same         = m_s(m_b)/m_b(m_b) = 0.019472904204
+  p_same         = log(|V_cb|)/log(R_same) = 0.803802150662
+  same deviation = +14.979%
+PASS: one-loop transport factor is nontrivial -- T=1.147466108487
+PASS: R_self = R_same * T -- diff=0.00e+00
+PASS: same-scale comparator is materially different from self-scale comparator -- -12.851%
+PASS: same-scale inferred exponent is not near 5/6 -- delta=-0.029531
+PASS: same-scale mismatch is material -- +14.979%
+PASS: self-scale surface is much closer than common-scale surface -- self=+0.202%, same=+14.979%
+
+E. Scale-blind exactness obstruction
+------------------------------------------------------------------------
+PASS: T^(5/6) is not 1 -- T^p=1.121458540271
+PASS: same exponent on transported ratio changes the CKM amplitude -- factor=0.891695915712
+PASS: p_self and p_same are separated by the transport choice -- delta=0.029088
+PASS: 5/6 cannot be exact on both surfaces unless T=1
+PASS: scale-selection theorem remains a separate load-bearing target
+
+F. Import and claim firewall
+------------------------------------------------------------------------
+PASS: forbidden proof inputs are absent -- ['C_F', 'T_F', 'V_cb_atlas', 'alpha_s_v', 'comparator_surface_labels', 'one_loop_transport_context']
+PASS: new note says exact Casimir rational is not scale theorem
+PASS: new note keeps down-type ratios bounded
+PASS: new note states no retained down-type mass closure
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=34, FAIL=0
+VERDICT: 5/6 remains bounded support until a scale-selection or
+RG-covariant transport theorem is supplied.
+
+----- stderr -----
+

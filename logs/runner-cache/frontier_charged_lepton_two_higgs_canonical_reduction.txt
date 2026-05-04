@@ -1,0 +1,91 @@
+===== runner cache v1 =====
+runner: scripts/frontier_charged_lepton_two_higgs_canonical_reduction.py
+runner_sha256: 2cfe8f74c7e99e83eda1ced6e8202b84dff22c9dd349e4aea546611310a4ff42
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+CHARGED-LEPTON YUKAWA: TWO-HIGGS CANONICAL REDUCTION
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - Lepton single-Higgs PMNS triviality theorem
+  - Neutrino Dirac two-Higgs escape theorem
+  - effective charged-lepton Z_3 offset language from the lepton lane
+
+Question:
+  If the charged-lepton sector is the first lepton Yukawa lane to leave
+  the single-Higgs monomial class, how much exact freedom is left on
+  that minimal charged-lepton extension?
+
+========================================================================================
+PART 1: ALL DISTINCT CHARGED-LEPTON TWO-HIGGS OFFSET PAIRS REDUCE TO ONE SUPPORT CLASS
+========================================================================================
+  [PASS] offsets=(0,1): right multiplication makes one Higgs contribution diagonal  (relative support=
+[[0 1 0]
+ [0 0 1]
+ [1 0 0]])
+  [PASS] offsets=(0,1): the relative permutation is a nontrivial 3-cycle  (det=1.0+0.0j)
+  [PASS] offsets=(0,1): a generation relabeling maps the pair to the forward-cycle class
+  [PASS] offsets=(0,1): the transformed texture has canonical support class A_e + B_e C  (canon error=0.00e+00)
+  [PASS] offsets=(0,2): right multiplication makes one Higgs contribution diagonal  (relative support=
+[[0 0 1]
+ [1 0 0]
+ [0 1 0]])
+  [PASS] offsets=(0,2): the relative permutation is a nontrivial 3-cycle  (det=1.0+0.0j)
+  [PASS] offsets=(0,2): a generation relabeling maps the pair to the forward-cycle class
+  [PASS] offsets=(0,2): the transformed texture has canonical support class A_e + B_e C  (canon error=0.00e+00)
+  [PASS] offsets=(1,2): right multiplication makes one Higgs contribution diagonal  (relative support=
+[[0 1 0]
+ [0 0 1]
+ [1 0 0]])
+  [PASS] offsets=(1,2): the relative permutation is a nontrivial 3-cycle  (det=1.0+0.0j)
+  [PASS] offsets=(1,2): a generation relabeling maps the pair to the forward-cycle class
+  [PASS] offsets=(1,2): the transformed texture has canonical support class A_e + B_e C  (canon error=0.00e+00)
+
+  So the charged-lepton offset-pair label is not a remaining
+  physical ambiguity on the minimal two-Higgs lane. Up to relabeling,
+  there is one canonical support class.
+
+========================================================================================
+PART 2: GENERIC CHARGED-LEPTON TWO-HIGGS TEXTURES REDUCE TO SIX MODULI PLUS ONE PHASE
+========================================================================================
+  [PASS] The diagonal charged-lepton Higgs block can be made strictly positive and real  (a_can=[0.18+0.j 0.33+0.j 1.02-0.j])
+  [PASS] Two of the three off-cycle charged-lepton coefficients can be made strictly positive and real  (b12_can=[0.09+0.j 0.21-0.j])
+  [PASS] Exactly one invariant phase remains on the generic charged-lepton two-Higgs lane  (delta_e=1.300000, invariant=1.300000)
+  [PASS] The canonical texture keeps the same singular-value spectrum  (svals=[0.152753 0.354604 1.187317])
+
+  So the generic canonical charged-lepton normal form is
+    diag(xe1,xe2,xe3) + diag(ye1,ye2,ye3 e^{i delta_e}) C
+  with xe_i > 0, ye_i > 0, and one surviving physical phase delta_e.
+
+========================================================================================
+PART 3: THE MINIMAL CHARGED-LEPTON TWO-HIGGS LANE CARRIES EXACTLY SEVEN REAL INVARIANTS
+========================================================================================
+  [PASS] The generic charged-lepton two-Higgs texture starts with 12 real parameters
+  [PASS] The exact phase-fixing conditions again have rank 5  (rank=5)
+  [PASS] One common phase remains as the exact null direction  (null dim=1)
+  [PASS] So the physical parameter count is 12 - 5 = 7  (physical count=7)
+  [PASS] The canonical charged-lepton normal form uses exactly 6 positive moduli plus 1 phase  (canonical count=7)
+
+  So the minimal exact surviving charged-lepton-side extension class
+  is also a seven-real-number problem on one canonical support class.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact reduction answer:
+    - all distinct charged-lepton two-Higgs offset pairs reduce to one support class
+    - the generic canonical form is diag(xe1,xe2,xe3)+diag(ye1,ye2,ye3 e^{i delta_e}) C
+    - the minimal surviving charged-lepton-side lane carries exactly 7 real invariants
+
+  So if the charged-lepton sector, rather than the neutrino sector, is
+  the first non-monomial lane, its exact remaining gap is also seven
+  axiom-side quantities.
+
+PASS=21  FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,110 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py
+runner_sha256: 02ac76a61a6eb3c1595c88abd908214bb1234862edb02d498b04b7f38756cfe5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.48
+status: ok
+----- stdout -----
+
+========================================================================================
+A. C3 orbit and onsite source algebra
+========================================================================================
+[PASS] A.1 cyclic generator has order three
+[PASS] A.2 C3-invariant onsite scalar sources are exactly common scalars
+       C diag(a,b,c) C^(-1)=diag(a,b,c) -> [{a: c, b: c}]
+[PASS] A.3 onsite local source object is the diagonal function algebra C^3
+       Basis is the three site projectors.
+
+========================================================================================
+B. Projected C3-commutant source algebra
+========================================================================================
+[PASS] B.1 P_plus and P_perp are complementary projectors
+[PASS] B.2 Z has the projected-source expansion -I/3 + 2C/3 + 2C^2/3
+       Z=Matrix([[-1/3, 2/3, 2/3], [2/3, -1/3, 2/3], [2/3, 2/3, -1/3]])
+[PASS] B.3 Z commutes with the C3 generator
+[PASS] B.4 Z squares to identity on the projected carrier
+[PASS] B.5 Z is not an onsite diagonal source function
+       Z has offsite matrix entries in the site basis.
+[PASS] B.6 I, C, and C^2 span a C3-commutant source family
+[PASS] B.7 onsite functions intersect the C3 commutant only in scalar I
+       alpha I+beta C+gamma C^2 diagonal -> [{beta: 0, gamma: 0}]
+
+========================================================================================
+C. Conditional Q chain
+========================================================================================
+[PASS] C.1 normalized reduced-carrier readout is Q(z)=2/(3(1+z))
+       Q(z)=2/(3*(z + 1))
+[PASS] C.2 z=0 gives Q=2/3 and K_TL=0
+       z=0 -> Q=2/3, K_TL=0
+[PASS] C.3 Q=2/3 iff z=0 on the admitted carrier
+       solution=[0]
+[PASS] C.4 strict onsite C3 source grammar would erase the Z coordinate
+       If physical undeformed scalar sources are onsite functions, only z=0 remains.
+
+========================================================================================
+D. Retained counterdomain
+========================================================================================
+[PASS] D.1 central/projected grammar admits a nonzero zZ source
+       zZ remains C3-invariant in End_C3(V).
+[PASS] D.2 counterdomain gives Q=1 and K_TL=3/8 at z=-1/3
+       z=-1/3 -> Q=1, K_TL=3/8
+[PASS] D.3 nonzero Z values are one-to-one with non-Koide Q values
+       Q(1/4)=8/15; Q(-1/3)=1
+
+========================================================================================
+E. Documentation guardrails
+========================================================================================
+[PASS] E.1 landed note explicitly rejects retained native Q closure
+[PASS] E.2 landed note keeps the conditional positive source-domain result
+[PASS] E.3 landed note names the exact residual source-domain theorem
+[PASS] E.4 branch-level full-closure labels are not retained
+
+========================================================================================
+F. Verdict
+========================================================================================
+[PASS] F.1 onsite-source algebra is real support but not closure
+       The missing theorem is retention of onsite source domain over the broader commutant/projected domain.
+[PASS] F.2 no PDG masses, Brannen delta, or target Koide value are imported
+       The closing and nonclosing source domains are compared algebraically first.
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 23/23
+  [PASS] A.1 cyclic generator has order three
+  [PASS] A.2 C3-invariant onsite scalar sources are exactly common scalars
+  [PASS] A.3 onsite local source object is the diagonal function algebra C^3
+  [PASS] B.1 P_plus and P_perp are complementary projectors
+  [PASS] B.2 Z has the projected-source expansion -I/3 + 2C/3 + 2C^2/3
+  [PASS] B.3 Z commutes with the C3 generator
+  [PASS] B.4 Z squares to identity on the projected carrier
+  [PASS] B.5 Z is not an onsite diagonal source function
+  [PASS] B.6 I, C, and C^2 span a C3-commutant source family
+  [PASS] B.7 onsite functions intersect the C3 commutant only in scalar I
+  [PASS] C.1 normalized reduced-carrier readout is Q(z)=2/(3(1+z))
+  [PASS] C.2 z=0 gives Q=2/3 and K_TL=0
+  [PASS] C.3 Q=2/3 iff z=0 on the admitted carrier
+  [PASS] C.4 strict onsite C3 source grammar would erase the Z coordinate
+  [PASS] D.1 central/projected grammar admits a nonzero zZ source
+  [PASS] D.2 counterdomain gives Q=1 and K_TL=3/8 at z=-1/3
+  [PASS] D.3 nonzero Z values are one-to-one with non-Koide Q values
+  [PASS] E.1 landed note explicitly rejects retained native Q closure
+  [PASS] E.2 landed note keeps the conditional positive source-domain result
+  [PASS] E.3 landed note names the exact residual source-domain theorem
+  [PASS] E.4 branch-level full-closure labels are not retained
+  [PASS] F.1 onsite-source algebra is real support but not closure
+  [PASS] F.2 no PDG masses, Brannen delta, or target Koide value are imported
+
+VERDICT: onsite source-domain science retained as conditional support/no-go.
+KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS=TRUE
+STRICT_ONSITE_C3_SOURCE_DOMAIN_ERASES_Z=TRUE
+CONDITIONAL_Q_CLOSES_IF_ONSITE_SOURCE_DOMAIN_RETAINED=TRUE
+CURRENT_RETAINED_COMMUTANT_SOURCE_DOMAIN_ADMITS_Z=TRUE
+Q_RETAINED_NATIVE_CLOSURE=FALSE
+DELTA_RETAINED_NATIVE_CLOSURE=FALSE
+FULL_DIMENSIONLESS_KOIDE_CLOSURE=FALSE
+RESIDUAL_Q=derive_retained_source_domain_equals_onsite_function_algebra_not_C3_commutant
+
+----- stderr -----
+

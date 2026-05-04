@@ -1,0 +1,38 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_continuum_graded_einstein_localization.py
+runner_sha256: ce93c0fdeada2a7fd4298ff4ca607af7ddcfc72a44abe115293a38777861e211
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 8.54
+status: ok
+----- stdout -----
+======================================================================================================================
+SIGNED GRAVITY CONTINUUM GRADED EINSTEIN LOCALIZATION AUDIT
+  continuum-family transport plus graded nonlinear formal localization
+======================================================================================================================
+
+TARGET
+  Transport L tensor E_T over the chosen continuum/refinement family and
+  replace the false h -> -h nonlinear rule by a graded odd/even jet theorem.
+
+[PASS] chosen continuum-family GR stack is available for signed tensor transport  (missing=[], retained_carrier=True, dets={'O_h': '1.629e-04', 'finite_rank': '2.014e-04'}, min_svs={'O_h': '4.440e-03', 'finite_rank': '4.049e-03'}, scalar_blind=True, additive=True)
+[PASS] APS orientation line is a flat local system over atlas/refinement transport  (line_cocycle=0.0e+00, tensor_cocycle=4.9e-15, scalar_tensor_comm=0.0e+00, refine_err=0.0e+00)
+[PASS] signed tensor source commutes with continuum Schur/projective transport  (max_K_schur_err=3.2e-16, max_J_schur_err=1.1e-16, max_signed_J_err=1.1e-16, max_stationary_proj_err=9.4e-16)
+[PASS] graded nonlinear Einstein localization solves the formal jets  (order=6, coeff_resid=2.5e-15, odd_norm=3.375e-01, even_backreaction_norm=1.685e-02, naive_flip_err=2.049e-05, eval_resid=6.4e-17, constraint=1.7e-15)
+[PASS] Ward/Bianchi-compatible constraint surface is preserved at every graded jet  (source_constraint=4.1e-16, max_jet_constraint=5.6e-16)
+[PASS] non-claim gate remains closed  (negative_inertial_mass=False, shielding=False, propulsion=False, reactionless_force=False, physical_signed_gravity_prediction=False, global_nonlinear_pde_existence_claim=False)
+
+INTERPRETATION
+  The signed tensor source transports over the chosen canonical continuum
+  family because the APS orientation line is a flat local system and Schur
+  pushforward is linear in the source.  Nonlinearly, the branch flip acts
+  by jet parity: odd perturbative Einstein jets are L-valued and flip,
+  while even backreaction jets are ordinary and do not.  This removes the
+  prior even-jet obstruction without asserting global nonlinear PDE
+  existence or any physical signed-gravity prediction.
+
+SUMMARY: PASS=6 FAIL=0
+FINAL_TAG: SIGNED_GRAVITY_CONTINUUM_GRADED_EINSTEIN_LOCALIZATION_FORMAL_THEOREM
+
+----- stderr -----
+

@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_boundary_coframe_chi_probe.py
+runner_sha256: 711a75b037141bdc3e819607a591f7a05a4dfe790d8508bd704616ece0ade16e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+SIGNED GRAVITY: PRIMITIVE BOUNDARY COFRAME CHI PROBE
+==============================================================================
+candidate: Q_chi = Gamma_t Gamma_n Gamma_tau1 Gamma_tau2
+surface: rank-four primitive boundary block K = P_A H_cell
+
+[PASS] metric-compatible coframe relations: max Clifford residual=0.000e+00
+[PASS] Q_chi is Hermitian: residual=0.000e+00
+[PASS] Q_chi is an involution: residual=0.000e+00
+[PASS] Q_chi has nonempty +/- sectors: dim plus=2, dim minus=2
+[PASS] even boundary Hamiltonian conserves Q_chi: commutator residual=0.000e+00
+[PASS] even boundary evolution has no P_- U P_+ leakage: leakage=2.778e-16
+[PASS] odd coframe term is correctly detected as sector-mixing: odd commutator=1.200e-01, odd leakage=3.797e-02
+[PASS] orientation-preserving coframe relabel keeps Q_chi: residual=0.000e+00
+[PASS] orientation-reversing relabel flips Q_chi: residual=0.000e+00
+[PASS] positive inertial mass is branch independent: M_+=1.000000, M_-=1.000000
+[PASS] inserted Q_chi density has opposite active signs: <Q>_+=+1.000000, <Q>_-=-1.000000
+[PASS] equal +/- branch pair cancels inserted active monopole: active=+1.388e-17, inertial=1.000000
+[PASS] exact unitary evolution preserves norm on a fixed sector: norm drift=4.441e-16
+[PASS] exact unitary evolution preserves the Q_chi expectation: <Q_chi>(t)=+1.000000
+[PASS] Born three-slit identity is unchanged by branch label: I3 plus=1.943e-15, I3 minus=3.109e-15
+[PASS] source-unit control consumes a supplied sign only: q_bare(+)+q_bare(-)=+0.000e+00
+
+SOURCE/RESPONSE LOCKING CLASSIFICATION
+  coframe algebra supplies: conserved oriented Clifford chirality on even
+    boundary dynamics
+  coframe algebra does not supply here: variational identity
+    delta S / delta Phi = M_phys psi^dagger Q_chi psi
+  retained local source notes still identify Born/parity-scalar sources,
+    not a native exterior monopole C_signed = Q_chi C_abs
+
+SUMMARY: PASS=16 FAIL=0
+FINAL_TAG: BOUNDARY_CHI_SOURCE_NOT_LOCKED
+
+----- stderr -----
+

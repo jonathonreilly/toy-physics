@@ -1,0 +1,81 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_3d_initial_ramp_probe.py
+runner_sha256: b61851fea17da2451e2bbc8536dc872b663cc9183652d2a4ef3596c9605a68bf
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.41
+status: ok
+----- stdout -----
+TELEPORTATION 3D INITIAL-STATE AND RAMP PROBE
+Status: planning / first artifact; ordinary quantum state teleportation only
+Claim boundary: no matter, mass, charge, energy, object, or faster-than-light transport
+Geometry: three spatial lattice directions plus one finite ramp-time diagnostic direction
+Defaults: side=2, N=8, H2_dim=64, G_target=1000, grid_points=21, schedule=smoothstep, T=40, steps=320
+Thresholds: Bell*>=0.900, ground_overlap>=0.990, min_ramp_gap>=0.001, localized_PR_fraction<=0.25
+
+3D G=0 initial-state diagnostics
+  setup: dim=3 side=2 N=8 envs/logical_qubit=4 mass=0
+  single-species H1: E0=-3.000000, E1=-1.000000, degeneracy=1, gap_after_ground_space=2.000000
+  two-species H(G=0): E0=-6.000000, E1=-4.000000, degeneracy=1, gap_after_ground_space=2.000000
+  exact-product checks: |<g_G0|g_H1 x g_H1>|^2=1.000000, |<g_G0|uniform x uniform>|^2=1.000000
+  traced logical resource at G=0: Phi+=0.500000, Bell*=0.500000 (Psi+), Favg(Phi frame)=0.666667, Favg(best frame)=0.666667, CHSH=2.000000, neg=0.000000, purity=1.000000
+  separability diagnostics:
+    partition                                  S(bits)     purity  max weight   rank_eff rank_num
+    species A | species B                   6.513504e-28   1.000000    1.000000   1.000000        1
+    logical pair | environment pair         5.867702e-28   1.000000    1.000000   1.000000        1
+    single H1 logical | single H1 environment 8.940889e-29   1.000000    1.000000   1.000000        1
+  native site-basis support:
+    state                                            dim  support         PR     PR/dim   max prob  Hsite(bits)
+    single H1 ground in native sites                   8        8   8.000000   1.000000   0.125000     3.000000
+    two-species G=0 ground in native site pairs       64       64  64.000000   1.000000   0.015625     6.000000
+  local/native-basis preparation status: not localized (threshold PR/dim <= 0.25)
+  initial-state verdict: unresolved gap
+
+Ramp path: 3d_side2_null
+  lattice/params: dim=3 side=2 N=8 envs/logical_qubit=4 mass=0 G_target=0
+  path: H(s)=H(G=0)+s*(H(G_target)-H(G=0)); ||dH/ds||_2=0
+  sampled path rows:
+         s          gap  target|ov|2      Bell* label      Fbest       CHSH        neg         Amax    norm/gap2
+     0.000     2.000000     1.000000   0.500000  Psi+   0.666667   2.000000   0.000000            0            0
+     0.250     2.000000     1.000000   0.500000  Psi+   0.666667   2.000000   0.000000            0            0
+     0.500     2.000000     1.000000   0.500000  Psi+   0.666667   2.000000   0.000000            0            0
+     0.750     2.000000     1.000000   0.500000  Psi+   0.666667   2.000000   0.000000            0            0
+     1.000     2.000000     1.000000   0.500000  Psi+   0.666667   2.000000   0.000000            0            0
+  path summary: min gap=2.000000 at s=0.000; target gap=2.000000; max exact A=0 at s=0.000; max ||dH||/gap^2=0 at s=0.000
+  endpoint resource: Phi+=0.500000, Bell*=0.500000 (Psi+), Favg(Phi frame)=0.666667, Favg(best frame)=0.666667, CHSH=2.000000, neg=0.000000, purity=1.000000
+
+Ramp path: 3d_side2_poisson
+  lattice/params: dim=3 side=2 N=8 envs/logical_qubit=4 mass=0 G_target=1000
+  path: H(s)=H(G=0)+s*(H(G_target)-H(G=0)); ||dH/ds||_2=302.083333
+  sampled path rows:
+         s          gap  target|ov|2      Bell* label      Fbest       CHSH        neg         Amax    norm/gap2
+     0.000     2.000000     0.163630   0.500000  Psi+   0.666667   2.000000   0.000000     3.371941    75.520833
+     0.250     0.355996     0.950303   0.969091  Psi+   0.979394   2.742398   0.469091     0.089555  2383.619244
+     0.500     0.188053     0.993598   0.991220  Psi+   0.994146   2.803703   0.491220     0.014460  8542.169874
+     0.750     0.126801     0.999265   0.995993  Psi+   0.997329   2.817116   0.495993     0.004522 1.878796e+04
+     1.000     0.095490     1.000000   0.997724  Psi+   0.998483   2.821998   0.497724     0.001945 3.312934e+04
+  path summary: min gap=0.095490 at s=1.000; target gap=0.095490; max exact A=3.371941 at s=0.000; max ||dH||/gap^2=3.312934e+04 at s=1.000
+  endpoint resource: Phi+=0.002276, Bell*=0.997724 (Psi+), Favg(Phi frame)=0.334850, Favg(best frame)=0.998483, CHSH=2.821998, neg=0.497724, purity=0.999998
+
+Finite-time ramp: 3d_side2_null
+  evolution: schedule=smoothstep, T=40, steps=320, dt=0.125000, norm_err=2.220e-16
+  target tracking: |<g_target|psi(T)>|^2=1.000000, diabatic_loss=0, final_energy_excess=0
+  final resource: Phi+=0.500000, Bell*=0.500000 (Psi+), Favg(Phi frame)=0.666667, Favg(best frame)=0.666667, CHSH=2.000000, neg=0.000000, purity=1.000000
+  final native support: dim=64, support=64, PR=64.000000, PR/dim=1.000000, max_prob=0.015625, Hsite=6.000000 bits
+
+Finite-time ramp: 3d_side2_poisson
+  evolution: schedule=smoothstep, T=40, steps=320, dt=0.125000, norm_err=4.330e-15
+  target tracking: |<g_target|psi(T)>|^2=0.999954, diabatic_loss=4.578600e-05, final_energy_excess=0.002244
+  final resource: Phi+=0.002556, Bell*=0.997444 (Psi+), Favg(Phi frame)=0.335038, Favg(best frame)=0.998296, CHSH=2.821226, neg=0.497451, purity=0.999996
+  final native support: dim=64, support=64, PR=8.123775, PR/dim=0.126934, max_prob=0.124043, Hsite=3.077086 bits
+
+Conclusion:
+  null control clean: YES
+  3D Poisson endpoint resource: Bell*=0.997724 (Psi+), Favg(best frame)=0.998483, target gap=0.095490
+  finite-time resource: ground_overlap=0.999954, Bell*=0.997444 (Psi+), Favg(best frame)=0.998296
+  resource-candidate checks passed: YES
+  preparation verdict: unresolved gap: side-2 ramp is a resource candidate, but the G=0 state is maximally delocalized in the native basis
+  Interpretation: side=2 exact 3D pressure test only. A favorable Bell-frame resource on this lattice does not prove scalable preparation, robustness, readout, or any non-teleportation transport claim.
+
+----- stderr -----
+

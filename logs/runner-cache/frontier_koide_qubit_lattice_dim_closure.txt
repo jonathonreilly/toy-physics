@@ -1,0 +1,132 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_qubit_lattice_dim_closure.py
+runner_sha256: 750ec18f17f8aefad8aabfadb2020a97982f60e787c0db786e23dadad7a8d58c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.10
+status: ok
+----- stdout -----
+========================================================================
+Koide qubit-lattice-dim algebraic closure
+========================================================================
+
+(A) Cl(d) spinor vs Z_d doublet at d = 3
+------------------------------------------------------------------------
+  [PASS (A)] (A1) dim(Cl(3) spinor) = 2  (dim = 2)
+  [PASS (A)] (A2) dim(Z_3 doublet) = 2  (dim = 2)
+  [PASS (A)] (A3) dim(Cl(3) spinor) = dim(Z_3 doublet) at d=3  (both = 2)
+  [PASS (A)] (A4) d=4 uniqueness: spinor (4) != doublet (2)  (spinor=4, doublet=2)
+  [PASS (A)] (A4) d=5 uniqueness: spinor (4) != doublet (2)  (spinor=4, doublet=2)
+  [PASS (A)] (A4) d=6 uniqueness: spinor (8) != doublet (2)  (spinor=8, doublet=2)
+  [PASS (A)] (A4) d=7 uniqueness: spinor (8) != doublet (2)  (spinor=8, doublet=2)
+  [PASS (A)] (A5) Q_struct = dim(spinor) / dim(lattice) = 2/3  (Q_struct = 0.6666666666666666)
+
+(B) SELECTOR^2 = Q algebraic identity
+------------------------------------------------------------------------
+  [PASS (A)] (B1) SELECTOR = sqrt(6)/3  (SELECTOR = 0.816496580928)
+  [PASS (A)] (B2) SELECTOR^2 = 2/3 (exact algebra)  (SELECTOR^2 = 0.666666666667, 2/3 = 0.666666666667)
+  [PASS (A)] (B3) SELECTOR^2 = Q_struct (qubit-lattice-dim match)  (SELECTOR^2 = Q_struct = 0.666666666667)
+  [PASS (A)] (B4) symbolic SELECTOR^2 = 2/3  (exact sympy)
+
+(C) Frobenius identity on Herm_circ(T_1)
+------------------------------------------------------------------------
+  [PASS (A)] (C1) ||G||_F^2 = 3 a^2 + 6 |b|^2 (Frobenius decomposition)  (exact sympy)
+  [PASS (A)] (C2) Singlet block weight = 3 = 1 * d  (1 * d = 3)
+  [PASS (A)] (C3) Doublet block weight = 6 = 2 * d  (2 * d = 6)
+
+(D) Koide Q from Fourier bridge: Q = (1 + 2/kappa)/d
+------------------------------------------------------------------------
+  [PASS (A)] (D1) Q(kappa=2, d=3) = 2/3  (Q = 0.6666666666666666)
+  [PASS (A)] (D2) kappa = 2 forced by Q = 2/d at d=3  (kappa = 2.0)
+  [PASS (A)] (D3) symbolic: Q = 2/3 at d=3 -> kappa = 2  (solutions = [2])
+
+(E) Frobenius equipartition: 3 a^2 = 6 |b|^2 <=> kappa = 2
+------------------------------------------------------------------------
+  [PASS (A)] (E1) Equipartition 3 a^2 = 6 |b|^2 <=> kappa = 2  (algebraic identity)
+  [PASS (A)] (E2) SELECTOR as cosine: a^2/|b|^2 = cos^2/sin^2 = SELECTOR^2/(1-SELECTOR^2) = 2  (kappa = 1.9999999999999987)
+
+(F) Imaginary Coupling Theorem: Im(b_F) = -E2/2 constant for all m
+------------------------------------------------------------------------
+  [PASS (A)] (F1) Im(b_F(m)) is m-independent (topological protection)  (Im(b_F) = 0.471405 (all m))
+  [PASS (A)] (F2) Im(b_F) = -E2/2 = -sqrt(2)/3 (convention: |Im(b_F)| = sqrt(2)/3)  (|Im(b_F)| = 0.471405, E2/2 = 0.471405)
+  [PASS (A)] (F3) |Im(b_F)|^2 = 2/9 (= Q/d algebraic identity)  (|Im(b_F)|^2 = 0.222222, 2/9 = 0.222222)
+  [PASS (A)] (F4) |Im(b_F)|^2 = SELECTOR^2/d (structural)  (|Im(b_F)|^2 = 0.222222, SELECTOR^2/d = 0.222222)
+
+(G) Re(b_F) varies linearly: Re(b_F(m)) = m - 4sqrt(2)/9
+------------------------------------------------------------------------
+  [PASS (A)] (G) Re(b_F(-1.16)) = m - 4sqrt(2)/9 = -1.7885  (actual = -1.788539)
+  [PASS (A)] (G) Re(b_F(0.0)) = m - 4sqrt(2)/9 = -0.6285  (actual = -0.628539)
+  [PASS (A)] (G) Re(b_F(0.5)) = m - 4sqrt(2)/9 = -0.1285  (actual = -0.128539)
+
+(H) CPC identity: d * delta = Q
+------------------------------------------------------------------------
+  [PASS (A)] (H1) d * delta = 3 * 2/9 = 2/3 = Q  (d * delta = 0.6666666666666666)
+  [PASS (A)] (H2) symbolic: d * delta = Q exact  (symbolic: 2/3)
+
+(I) Phase-Structural Equivalence: delta = |Im(b_F)|^2 <=> d*delta = Q
+------------------------------------------------------------------------
+  [PASS (A)] (I1) delta = SELECTOR^2/d = 2/9 (from equivalence)  (delta = 0.222222222222, 2/9 = 0.222222222222)
+  [PASS (A)] (I2) |Im(b_F)|^2 = delta = 2/9  (|Im(b_F)|^2 = 0.222222 = delta)
+
+(J) Joint closure chain: Cl(3) + A-select => Q and delta
+------------------------------------------------------------------------
+  [PASS (A)] (J1) I1 closed: SELECTOR^2 = 2/3 = Q (A-select -> Koide cone)  (chain: A-select -> SELECTOR^2 = Q)
+  [PASS (A)] (J2) I2/P closed: SELECTOR^2/d = 2/9 = delta (A-select -> Brannen phase)  (chain: A-select -> SELECTOR^2/d = delta)
+
+(K) Uniqueness: the closure works only at d = 3
+------------------------------------------------------------------------
+  [PASS (A)] (K.3) d=3: Q_struct = 2/3 = 2/3 AND dim(Cl(3) spinor) = 2 -> closure WORKS  (Q_struct = 2/3, spinor dim = 2)
+  [PASS (A)] (K.5) d=5: dim(Cl(5) spinor) = 4 != 2 -> closure FAILS (expected)  (spinor dim = 4 (not 2))
+  [PASS (A)] (K.7) d=7: dim(Cl(7) spinor) = 8 != 2 -> closure FAILS (expected)  (spinor dim = 8 (not 2))
+
+(L) Anomaly-Koide exact identities (ANOMALY_FORCES_TIME chain)
+------------------------------------------------------------------------
+  [PASS (A)] (L1) Tr[Y^3]_quark_LH = 6 × (1/3)^3 = 2/9 = delta  (Tr[Y^3]_quark_LH = 2/9)
+  [PASS (A)] (L2) |Tr[Y^3]_LH| / dim(Cl(3)) = 16/9 / 8 = 2/9 = delta  (|Tr[Y^3]_LH| / dim(Cl(3)) = 16/9/8 = 2/9)
+  [PASS (A)] (L3) |Y(d_R)| = 2/3 = Q (from anomaly cancellation)  (|Y(d_R)| = 2/3)
+  [PASS (A)] (L4) Full Y^3 anomaly cancels: Tr[Y^3]_LH + Tr[Y^3]_RH_weyl = 0  (total = 0)
+  [PASS (A)] (L5) Coincidence of structural 2/3's: qubit-lattice-dim = |Y(d_R)| = SELECTOR² = Q  (All four 2/3's coincide: 2/d (lattice), |Y(d_R)| (anomaly), SELECTOR² (A-select), Q (Koide cone))
+
+(M) d=3 uniqueness via anomaly arithmetic
+------------------------------------------------------------------------
+  [PASS (A)] (M.1 d=2) Tr[Y^3]_quark_LH = 2d·(1/d)^3 = 2/d^2 = 1/2  (= 1/2)
+  [PASS (A)] (M.1 d=3) Tr[Y^3]_quark_LH = 2d·(1/d)^3 = 2/d^2 = 2/9  (= 2/9)
+  [PASS (A)] (M.1 d=4) Tr[Y^3]_quark_LH = 2d·(1/d)^3 = 2/d^2 = 1/8  (= 1/8)
+  [PASS (A)] (M.1 d=5) Tr[Y^3]_quark_LH = 2d·(1/d)^3 = 2/d^2 = 2/25  (= 2/25)
+
+  [PASS (A)] (M.2 d=2) d^2 - 1 != 2^d: 3 vs 4  (expected inequality)
+  [PASS (A)] (M.2 d=3) d^2 - 1 = 2^d: 8 = 8  (This uniqueness forces the anomaly identity at d=3)
+  [PASS (A)] (M.2 d=4) d^2 - 1 != 2^d: 15 vs 16  (expected inequality)
+  [PASS (A)] (M.2 d=5) d^2 - 1 != 2^d: 24 vs 32  (expected inequality)
+  [PASS (A)] (M.2 d=6) d^2 - 1 != 2^d: 35 vs 64  (expected inequality)
+  [PASS (A)] (M.3 d=2) |Tr[Y^3]_LH|/dim(Cl(d)) != 2/d^2 (d != 3)  (ratio = 3/8, delta = 1/2)
+  [PASS (A)] (M.3 d=3) |Tr[Y^3]_LH|/dim(Cl(d)) = 2/d^2 = delta  (ratio = 2/9, delta = 2/9)
+  [PASS (A)] (M.3 d=4) |Tr[Y^3]_LH|/dim(Cl(d)) != 2/d^2 (d != 3)  (ratio = 15/128, delta = 1/8)
+  [PASS (A)] (M.3 d=5) |Tr[Y^3]_LH|/dim(Cl(d)) != 2/d^2 (d != 3)  (ratio = 3/50, delta = 2/25)
+  [PASS (A)] (M.4) d=3 is the UNIQUE dimension where BOTH conditions converge  (dim(spinor)=dim(doublet)=2 AND d^2-1=2^d hold ONLY at d=3)
+
+(N) Quark-lepton bridge via U(1) hypercharge commutant
+------------------------------------------------------------------------
+  [PASS (A)] (N1) Total LH multiplicity = 8 = dim(Cl(3))  (n_Q_L + n_L_L = 6+2 = 8 = 2^d = 8)
+  [PASS (A)] (N2) Tracelessness: 6 * Y(Q_L) + 2 * Y(L_L) = 0 forces Y(L_L) = -3 * Y(Q_L)  (Y(L_L) = -3 * (1/3) = -1 (matches SM hypercharge -1))
+  [PASS (A)] (N3) |Y(L_L)/Y(Q_L)| = 3 (unique 1:-3 ratio from tracelessness)  (Ratio = 3)
+  [PASS (A)] (N4) |Y(d_R) / Y(Q_L)| = 2  (|Y(d_R)/Y(Q_L)| = (2/3)/(1/3) = 2)
+  [PASS (A)] (N5) |Y(d_R)| = 2/d = Q_Koide (d=3)  (|Y(d_R)| = 2/3 = 2/3)
+  [PASS (A)] (N6) The factor 2 in |Y(d_R)/Y(Q_L)| matches dim(Cl(3) spinor) = 2  (|Y(d_R)/Y(Q_L)| = 2 = dim(Cl(3) spinor) = 2)
+  [PASS (A)] (N7) Quark-lepton bridge: Q_Koide = |Y(d_R)| = 2/d at d=3  (Unified via Cl(d)/Z^d commutant + tracelessness + spinor dim)
+
+========================================================================
+Summary: PASS=62, FAIL=0
+========================================================================
+
+All 62 identities verified.
+The evening support identities for I1 (Koide Q = 2/3) and
+I2/P (Brannen delta = 2/9) all verify algebraically from
+Cl(3)/Z^3 + A-select, with anomaly identities providing
+independent reviewer-facing structural support:
+  - delta = Tr[Y^3]_quark_LH = 2/9
+  - delta = |Tr[Y^3]_LH| / dim(Cl(3)) = 2/9
+  - Q = |Y(d_R)| = 2/3
+
+----- stderr -----
+

@@ -1,0 +1,61 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_2026_04_19.py
+runner_sha256: c9cfcf4bc0331919b66f837dcb07fdb737e4e5bd58e1ceb0d37ca271d3c30058
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 30.69
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT BOUNDARY-ARREST TRIPLET/Y MAXIMIN THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE TWO NEW COEFFICIENT-FREE CUBICS
+========================================================================================
+  [PASS] The same cubic boundary-vanishing argument kills the p_i^3 and p_i^2 p_j coefficients  (basis(rank1)=[1. 0. 0.], basis(face)=[0.25 0.25 0.  ])
+  [PASS] So the constructive triplet carrier forces J_ctr = 27 gamma E1 E2 / (gamma + E1 + E2)^3  (the normalized positive triplet is p = (gamma,E1,E2)/(gamma+E1+E2))
+  [PASS] The native y-simplex carries the parallel cubic J_y = 27 y1 y2 y3 / (y1 + y2 + y3)^3  (the normalized y-simplex uses q = y/sum(y))
+
+========================================================================================
+PART 2: PURE J_CTR STILL RUNS TO THE SOURCE BOUNDARY
+========================================================================================
+  [PASS] Boundary-drift starts for pure J_ctr maximization collapse to one common certificate  (max pairwise distance=1.308e-07)
+  [PASS] That pure J_ctr certificate stays on the canonical transport column orbit and inside the constructive sign chamber  (pack=[1.05222031 0.12633313 0.0804772  1.05714411 0.02049598])
+  [PASS] But it sits on the native source boundary y2 = 0 while the y-simplex cubic collapses  ((y2,J_y)=(1.000000e-09,5.249375e-09))
+  [PASS] So pure constructive-triplet isotropy arrests the constructive-sign drift but not the remaining source-boundary escape  ((W1,J_ctr*)=(0.113956384538,0.143712259311))
+
+========================================================================================
+PART 3: THE TRIPLET/Y MAXIMIN LAW SELECTS AN INTERIOR BOUNDARY-ARREST CERTIFICATE
+========================================================================================
+  [PASS] The tested boundary-drift and witness start packet collapses to one common maximin interior certificate  (max pairwise distance=1.003e-06, t spread=5.056e-13)
+  [PASS] The selected maximin certificate stays on the canonical column fiber and is source-interior  ((y2,col12)=(0.024990424320,[0.92871139 0.03564429]))
+  [PASS] At that point the active barriers equalize exactly: J_ctr = J_y = t_*  ((t,J_ctr,J_y)=(0.110013443757,0.110013443757,0.110013443757))
+  [PASS] The Schur isotropy cubic then sits strictly above the active floor rather than driving the point to the boundary  ((J_iso,t)=(0.121416735777,0.110013443757))
+  [PASS] The interior certificate is genuinely new but remains W1-local on the canonical fiber  (distance to W1=0.090092068708)
+  [PASS] The maximin selector strictly improves the vanishing common floor of the pure J_ctr source-boundary certificate  ((t_*, J_y[J_ctr*])=(0.110013443757,5.249375e-09))
+  [PASS] The more-isotropic B_major certificate is rejected because its constructive-triplet barrier collapses below the maximin floor  ((J_ctr,J_y)[B_major]=(0.000309820614,0.493481195966))
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The first successful retained drift-arrest law on this lane is the coefficient-free two-law maximin system t = min(J_ctr, J_y)  (J_iso remains part of the certificate, but the active arrest barriers are the constructive triplet and the native y-simplex)
+
+  canonical column first two entries = [0.92871139 0.03564429]
+
+  pure J_ctr source-boundary certificate:
+    source5 = [8.47411482e-01 3.28850079e-01 7.05370229e-01 1.00000000e-09
+ 2.37373298e+00]
+    pack    = [1.05222031 0.12633313 0.0804772  1.05714411 0.02049598]
+    (J_iso, J_ctr, J_y) = (0.126895047503, 0.143712259311, 5.249374586614e-09)
+
+  triplet/y maximin interior certificate:
+    source5 = [0.84637802 0.32460908 0.71824284 0.02499042 2.22347386]
+    pack    = [1.05222031 0.11886042 0.06469214 1.08709333 0.01979377]
+    (J_iso, J_ctr, J_y, t_*) = (0.121416735777, 0.110013443757, 0.110013443757, 0.110013443757)
+
+  best tested interior certificate label = W0
+  PASS=15 FAIL=0
+
+----- stderr -----
+

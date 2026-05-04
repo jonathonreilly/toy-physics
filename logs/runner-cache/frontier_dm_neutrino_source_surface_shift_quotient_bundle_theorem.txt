@@ -1,0 +1,73 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_shift_quotient_bundle_theorem.py
+runner_sha256: 3467693b9aadc4f1a06b41424442a4701a6c02c97603267be4ff0874c437f765
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.52
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE SHIFT-QUOTIENT BUNDLE THEOREM
+========================================================================================
+
+Question:
+  On the live source-oriented H-side sheet, what exact inverse-image
+  object remains after quotienting by the common diagonal shift?
+
+========================================================================================
+PART 1: THE LIVE SOURCE-ORIENTED BUNDLE HAS AN EXACT SHIFT-QUOTIENT GAUGE
+========================================================================================
+  [PASS] Every source-oriented bundle point is exactly shift-equivalent to one quotient-gauge point  (the quotient gauge is d1=m, d2=delta, d3=-delta)
+  [PASS] That quotient gauge still lands exactly on the source-oriented surface  ((gamma,E1,E2)=(0.500000000000,1.632993161855,0.942809041582))
+  [PASS] The intrinsic CP pair is unchanged by passing to the shift-quotient gauge  ((cp1,cp2)=(-0.544331053952,0.314269680527))
+
+========================================================================================
+PART 2: THE QUOTIENT BUNDLE HAS EXPLICIT THREE-REAL COORDINATES
+========================================================================================
+  [PASS] The quotient-gauge formulas reproduce the source-oriented preimage-bundle formulas exactly  (phi_+(r31), r12(m,delta,r31), r23(m,delta,r31))
+  [PASS] In quotient coordinates delta is explicit and rho is fixed by delta + rho = sqrt(8/3)  (gamma=1/2, delta=delta_q, rho=sqrt(8/3)-delta_q)
+  [PASS] So the exact H-side quotient bundle is already explicit over (m, delta, r31)  (the common diagonal shift is the only discarded direction)
+
+  exact live-sheet quotient gauge:
+    m     = d1 - (d2 + d3)/2
+    delta = (d2 - d3)/2
+    d1 = m, d2 = delta, d3 = -delta
+    phi_+(r31) = asin(1 / (2 r31))
+    r12 = 2 sqrt(8/3) - 2 delta + r31 cos(phi_+)
+    r23 = m - delta + sqrt(8/3) - sqrt(8)/3 + r31 cos(phi_+)
+
+========================================================================================
+PART 3: EVERY QUOTIENT POINT HAS A POSITIVE REPRESENTATIVE
+========================================================================================
+  [PASS] Adding a sufficiently large common diagonal shift gives a positive representative for every tested quotient point  (Hermitian eigenvalues translate exactly under H -> H + lambda I)
+  [PASS] That positivity repair leaves the exact source-oriented surface untouched  (the shift is a true tangent direction of the bundle)
+  [PASS] So positivity is not an extra obstruction after passing to the quotient bundle  (each quotient point already represents a positive H-side class)
+
+========================================================================================
+PART 4: THE QUOTIENT BUNDLE FEEDS THE CARRIER NORMAL FORM EXACTLY
+========================================================================================
+  [PASS] The quotient-bundle delta coordinate is exactly the carrier delta coordinate on the live sheet  (delta_q = delta_carrier, delta+rho = sqrt(8/3), sigma sin(2v) = 8/9)
+  [PASS] So the explicit H-side quotient bundle and the carrier normal form are equivalent descriptions of the same live mainline object  (the remaining mainline law may be stated on either side)
+
+========================================================================================
+PART 5: THE NOTE RECORDS THE SHIFT-QUOTIENT BUNDLE
+========================================================================================
+  [PASS] The new note records the quotient coordinates m, delta, and r31 explicitly
+  [PASS] The new note records that the remaining mainline object is the explicit shift-quotient bundle over (m, delta, r31)
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact mainline answer:
+    - the live source-oriented bundle quotiented by common diagonal shift
+      is explicit over three invariants (m, delta, r31)
+    - every quotient point has a positive representative after spectral shift
+    - this quotient bundle is equivalent to the carrier normal-form bundle
+
+  So the remaining mainline object is an explicit 3-real H-side quotient
+  bundle, not an unspecified H-law.
+
+PASS=13 FAIL=0
+
+----- stderr -----
+

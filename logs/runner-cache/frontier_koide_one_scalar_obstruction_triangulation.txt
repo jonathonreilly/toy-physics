@@ -1,0 +1,91 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_one_scalar_obstruction_triangulation.py
+runner_sha256: cd936c44fc913daf2afb5a0273eb33493384b7f752d7d834ea37a285fa8d5fd0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.54
+status: ok
+----- stdout -----
+========================================================================
+Section 1 - C_3[111] cyclic shift and circulant commutant
+========================================================================
+[PASS (A)] C is 3-cycle: C^3 == I
+[PASS (A)] Tr C == 0
+[PASS (A)] Tr C^2 == 0
+[PASS (A)] Tr C^3 == 3
+[PASS (A)] B_0 == I
+[PASS (A)] B_1 Hermitian: B_1^dagger == B_1
+[PASS (A)] B_2 Hermitian: B_2^dagger == B_2
+
+========================================================================
+Section 2 - Circulant commutant: G = g_0 I + g_1 C + g_1* C^2
+========================================================================
+[PASS (A)] G is Hermitian for all (g0, g1_re, g1_im) real
+[PASS (A)] G commutes with C (circulant lemma)
+
+========================================================================
+Section 3 - Cyclic response law r_i on circulant G
+========================================================================
+        r_0 = 3*g0
+        r_1 = 6*g1_re
+        r_2 = 6*g1_im
+[PASS (A)] r_0 = 3 g_0
+[PASS (A)] r_1 = 6 Re(g_1)
+[PASS (A)] r_2 = 6 Im(g_1)
+
+========================================================================
+Section 4 - Master identity (star)
+========================================================================
+        lhs = 18*g0**2 - 36*g1_im**2 - 36*g1_re**2
+        rhs = 18*g0**2 - 36*g1_im**2 - 36*g1_re**2
+        lhs - rhs (simplified) = 0
+[PASS (A)] Master identity: 2 r_0^2 - (r_1^2 + r_2^2) == 18 (g_0^2 - 2|g_1|^2)
+
+========================================================================
+Section 5 - Koide equivalence (dagger): Koide cone <=> g_0^2 = 2|g_1|^2
+========================================================================
+[PASS (A)] Koide cone <=> g_0^2 = 2|g_1|^2 (via master identity, up to factor 18)
+
+========================================================================
+Section 6 - Linear bijection: generic G does not land on Koide cone
+========================================================================
+[PASS (A)] Jacobian det == 108 (linear bijection)
+[PASS (A)] Generic random circulant G is off the Koide cone (codim 1)  (0/50 random draws landed on cone)
+
+========================================================================
+Section 7 - Triangulation of named primitives
+========================================================================
+[PASS (A)] Route 2: a == g_0
+[PASS (A)] Route 2: b == g_1  (using Tr(C^3) = 3)
+[PASS (A)] Route 2's a^2 = 2 |b|^2 IS (dagger) g_0^2 = 2 |g_1|^2
+[PASS (B)] Route 1 target P_m is the same scalar as (dagger)  (established by Route 1's isotypic decomposition (60/60 PASS))
+[PASS (A)] A1 (Frobenius equipartition) IS (dagger)  (3 a^2 = 6 |b|^2 <=> a^2 = 2 |b|^2 <=> g_0^2 = 2 |g_1|^2)
+
+========================================================================
+Section 8 - Schur-equivariant carrier extension preserves circulant form
+========================================================================
+[PASS (A)] Equivariant Schur descent preserves circulant form on T_1  (10/10 trials circulant)
+
+========================================================================
+Section 9 - OBSERVATIONAL CHECK (not part of derivation)
+========================================================================
+[PASS (D)] OBSERVATIONAL: PDG charged-lepton masses give kappa ≈ 2 (sub-percent)  (kappa_observed = 2.000037)
+
+========================================================================
+One-Scalar Obstruction Triangulation — certification summary
+========================================================================
+
+Master identity (star):
+   2 r_0^2 - (r_1^2 + r_2^2) = 18 (g_0^2 - 2 |g_1|^2)
+
+Koide equivalence (dagger):
+   Koide cone on circulant commutant  <=>  g_0^2 = 2 |g_1|^2
+
+Three independent routes (Routes 1, 2, 3) terminate at (dagger).
+Named primitives A1, P1 (slot), m, kappa are algebraically identical
+on the retained Cl(3)/Z^3 + observable-principle surface.
+
+PASS=23 FAIL=0
+
+----- stderr -----
+

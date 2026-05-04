@@ -1,0 +1,48 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py
+runner_sha256: 18e09d760dcfea6c4d2853322eefc2bf54e545870c9bf203081f6be2ac10b6b0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.21
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE CONNECTED-HIERARCHY THEOREM
+==============================================================================
+
+Uniform-source derivative basis check
+  tested monomial basis                    = [(0, 0, 0), (1, 0, 0), (2, 1, 0), (1, 1, 1), (3, 2, 1), (4, 0, 2)]
+  first-level identity exact               = True
+  second-level identity exact              = True
+
+Exact onset hierarchy coefficients
+  nonlocal plaquette beta^5 coefficient    = 1/472392 = 2.116885976053786e-06
+  nonlocal susceptibility beta^4 coeff     = 5/472392 = 1.058442988026893e-05
+  beta_eff beta^5 coefficient              = 1/26244 = 3.810394756896815e-05
+  beta_eff' beta^4 coefficient             = 5/26244 = 1.905197378448407e-04
+  beta_eff'' beta^3 coefficient            = 5/6561 = 7.620789513793629e-04
+  summed connected 3-point beta^3 coeff    = 5/118098 = 4.233771952107571e-05
+
+  [PASS] [SUPPORT] the uniform-source operator identity is illustrated exactly on monomial basis states
+         checked exactly on a spanning monomial sample for the shifted source variables y_r = beta + J_r
+  [PASS] [SUPPORT] the next hierarchy level is illustrated exactly on the same monomial basis
+         checked exactly on the same monomial sample after one fixed source derivative
+  [PASS] [THEOREM] differentiating the exact beta^5 plaquette correction gives the exact beta^4 connected-susceptibility correction
+         d/d beta [beta^5/472392] = (5/472392) beta^4
+  [PASS] [THEOREM] differentiating the exact beta_eff onset law gives beta_eff''(beta)=20 beta^3 / 26244 + O(beta^4)
+         beta_eff'' onset coefficient = 5/6561
+  [PASS] [THEOREM] the common strong-coupling slope transports the beta_eff'' onset into the exact first summed connected 3-point coefficient
+         (1/18) * (5/6561) = 5/118098
+  [PASS] [THEOREM] explicit nonperturbative closure therefore requires the connected plaquette hierarchy, not a single local bridge factor
+         chi_L needs the shell-summed 2-point field and beta_eff'' already needs the shell-summed 3-point field
+  [PASS] [SUPPORT] the hierarchy theorem is consistent with the previously closed transport law for beta_eff'
+         beta_eff' correction coefficient = 5/26244
+  [PASS] [SUPPORT] the first nonlocal hierarchy levels are strictly nonzero beyond the common strong-coupling slope
+         the connected hierarchy is genuinely active beyond onset, not a formal redundancy
+
+==============================================================================
+SUMMARY: THEOREM PASS=4 SUPPORT=4 FAIL=0
+==============================================================================
+
+----- stderr -----
+

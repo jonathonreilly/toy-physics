@@ -1,0 +1,76 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_singlet_doublet_cp_slot_tool.py
+runner_sha256: 1d754bb5c5ef23f1a727e31c41103a3f513efa785201b7abdc4945a68ae81cf1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SINGLET-DOUBLET CP SLOT TOOL
+========================================================================================
+
+Question:
+  After the exact Z_3-covariant circulant class dies in the physical
+  mass basis, what exact Hermitian-kernel carrier is left for leptogenesis?
+
+========================================================================================
+PART 1: THE SINGLET-DOUBLET CARRIER HAS ONE EVEN SLOT AND ONE ODD SLOT
+========================================================================================
+  [PASS (C)] Under doublet-slot exchange, the even amplitude u is invariant  (u -> 0.370000)
+  [PASS (C)] Under doublet-slot exchange, the odd amplitude v flips sign  (v -> -0.140000)
+
+  So the carrier is naturally resolved into one residual-Z_2-even slot
+  amplitude and one residual-Z_2-odd slot amplitude.
+
+========================================================================================
+PART 2: THE PHYSICAL MASS-BASIS ENTRIES DEPEND ONLY ON THE SLOT AMPLITUDES
+========================================================================================
+  [PASS (C)] The real doublet rotation gives the exact singlet-doublet mass-basis entry K01  (K01=-0.134350-0.502145j, expected=-0.134350-0.502145j)
+  [PASS (C)] The same rotation gives the exact singlet-doublet mass-basis entry K02  (K02=-0.289914-0.232702j, expected=-0.289914-0.232702j)
+  [PASS (C)] Spectator diagonal and doublet-block data do not change the physical singlet-doublet entries  (K01=-0.134350-0.502145j, K02=-0.289914-0.232702j)
+
+  The physical leptogenesis carrier therefore sits entirely in the
+  singlet-doublet slot amplitudes. The rest of the Hermitian kernel is
+  spectator data for this tensor component.
+
+========================================================================================
+PART 3: THE STANDARD CP TENSOR IS EXACTLY PROPORTIONAL TO u v sin(2 phi)
+========================================================================================
+  [PASS (C)] Im[(K_mass)_{01}^2] equals the exact slot formula  (direct=-0.125964, expected=-0.125964)
+  [PASS (C)] Im[(K_mass)_{02}^2] equals the same exact slot formula  (direct=-0.125964, expected=-0.125964)
+  [PASS (C)] If either slot amplitude vanishes, the physical CP tensor vanishes  (both the even and odd slot amplitudes are required)
+  [PASS (C)] At the exact Z_3 source phase phi = 2 pi / 3 the tensor becomes sqrt(3) u v  (direct=0.134927, sqrt(3)uv=0.134927)
+
+  So the physical tensor is not controlled by one odd coefficient alone.
+  It is the product of an even carrier slot and an odd activator slot.
+
+========================================================================================
+PART 4: THIS CARRIER IS GENUINELY BEYOND THE EXACT CIRCULANT NO-GO CLASS
+========================================================================================
+  [PASS (C)] Every exact Z_3-covariant circulant kernel has zero singlet-doublet slots in the Z_3 basis  (1: max singlet-doublet slot = 3.46e-16; omega: max singlet-doublet slot = 1.36e-16; omega^2: max singlet-doublet slot = 1.45e-16)
+  [PASS (C)] The singlet-doublet carrier turns on precisely those previously-empty slots  (|K01|=0.600000, |K02|=0.220000)
+
+  This is why the old circulant route is exhausted while the new slot
+  family still survives the physical mass-basis test.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact answer:
+    - the minimal physical carrier is a Z_3-basis singlet-doublet slot family
+    - it carries one residual-Z_2-even amplitude u and one residual-Z_2-odd amplitude v
+    - after the real Majorana doublet rotation, the standard CP tensor is
+      exactly Im[(K_mass)_{0j}^2] = -2 u v sin(2 phi)
+    - at the exact source phase phi = 2 pi / 3 this becomes sqrt(3) u v
+    - the exact circulant class has zero singlet-doublet slots, so this
+      carrier is genuinely beyond the old no-go route
+
+  The live DM denominator target is therefore no longer a vague
+  "non-circulant bridge." It is a singlet-doublet slot bridge with
+  one even carrier amplitude and one odd activator amplitude.
+
+PASS=11 FAIL=0
+
+----- stderr -----
+

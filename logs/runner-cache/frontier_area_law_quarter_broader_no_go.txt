@@ -1,0 +1,52 @@
+===== runner cache v1 =====
+runner: scripts/frontier_area_law_quarter_broader_no_go.py
+runner_sha256: 7eb1bbf87b2b1f2657e5d591d8053351bd492d1740a92cd8fb3a6d5b39660cf4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+==============================================================================
+AREA-LAW QUARTER BROADER WIDOM NO-GO
+==============================================================================
+
+Class: straight-cut free-fermion Widom carriers with at most one
+occupied k_x interval per transverse momentum fiber, plus direct-sum
+Schur/species descendants with consistent boundary-rank normalization.
+
+[PASS] coarea identity reduces I_x to average crossing count: c = (N_avg * transverse_volume)/(12 * transverse_volume) = N_avg/12
+[PASS] Bekenstein-Hawking quarter requires average crossing count 3: 3 / 12 = 1/4
+[PASS] simple-fiber carriers have average crossing count at most 2: 2 / 12 = 1/6 < 1/4
+[PASS] simple-fiber Widom bound in d=2 is exactly 1/6: I_max=12.5663706144, c_bound=0.166666666667
+[PASS] quarter target integral exceeds simple-fiber maximum in d=2: I_quarter/I_max = 1.500
+[PASS] simple-fiber Widom bound in d=3 is exactly 1/6: I_max=78.9568352087, c_bound=0.166666666667
+[PASS] quarter target integral exceeds simple-fiber maximum in d=3: I_quarter/I_max = 1.500
+[PASS] simple-fiber Widom bound in d=4 is exactly 1/6: I_max=496.100426885, c_bound=0.166666666667
+[PASS] quarter target integral exceeds simple-fiber maximum in d=4: I_quarter/I_max = 1.500
+[PASS] 2D half-filled NN diamond has projected integral 4*pi: I_diamond=12.566370614359
+[PASS] 2D half-filled NN diamond saturates the simple-fiber bound: c_diamond=0.166666666667
+[PASS] 2D half-filled NN diamond is not the Bekenstein-Hawking quarter: relative deviation from 1/4 = 0.333
+[PASS] 3D half-filled cubic NN coefficient lies in retained numerical window: midpoint quadrature c_3D=0.105064
+[PASS] 3D half-filled cubic NN is below the simple-fiber upper bound: c_3D=0.105064 < 1/6=0.166667
+[PASS] 3D half-filled cubic NN is not the Bekenstein-Hawking quarter: relative deviation from 1/4 = 0.580
+[PASS] all sampled arbitrary simple-fiber fillings obey c <= 1/6: sample N_avg values in [0,2] map to c=N_avg/12
+[PASS] no sampled arbitrary simple-fiber filling reaches 1/4: largest sampled c=0.166666666667
+[PASS] Schur/direct-sum normalized coefficient is a convex average: c_schur=0.067471264368
+[PASS] Schur/direct-sum descendants of simple-fiber blocks obey c <= 1/6: max block coefficient=0.166666666667
+[PASS] identical species duplication leaves the RT ratio unchanged: three identical simple-fiber species give c=0.166666666667
+[PASS] a quarter Widom coefficient requires leaving the simple-fiber class: average crossing count 3 needs multi-interval or weighted pocket multiplicity
+[PASS] renormalizing species without adding boundary rank is outside the class: consistent primitive-boundary normalization makes direct sums convex, not amplifying
+[PASS] gapped mass-gap area laws are not covered by this Widom no-go: a strict area-law carrier still needs a separate primitive-face entropy theorem
+[PASS] Planck c_cell remains a gravitational-action coefficient here: the no-go blocks simple-fiber entanglement identification, not the Planck trace result
+
+==============================================================================
+SUMMARY: PASS=24  FAIL=0
+==============================================================================
+
+Verdict: the simple-fiber Widom class cannot deliver c_inf = 1/4.
+A positive Target 2 carrier must add multi-pocket/multi-interval Fermi
+geometry selected by a physical law, or a gapped horizon-sector area law
+with a derived primitive-boundary coefficient.
+
+----- stderr -----
+

@@ -1,0 +1,74 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_sole_axiom_hw1_source_transfer_boundary.py
+runner_sha256: fe92f181c97b29fd800fb0092355b8c12b83aab411fa35122e00778a683ae07d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+PMNS SOLE-AXIOM HW=1 SOURCE/TRANSFER BOUNDARY
+========================================================================================
+
+Question:
+  If we derive the canonical hw=1 source/transfer pack itself from the
+  sole axiom Cl(3) on Z^3, do the native source insertions and
+  graph-first transfer frame produce a nontrivial retained PMNS pack?
+
+========================================================================================
+PART 1: NATIVE SOURCES AND GRAPH-FIRST CYCLE FRAME ARE EXACT
+========================================================================================
+  [PASS] The native hw=1 source projectors resolve the identity exactly
+  [PASS] The source projectors are exactly E11,E22,E33
+  [PASS] Forward cycle transport sends the source projectors to the canonical edge frame
+  [PASS] The graph-first frame is exactly E12,E23,E31
+
+========================================================================================
+PART 2: SOLE-AXIOM SOURCE INSERTIONS GIVE ONLY TRIVIAL RESPONSE COLUMNS
+========================================================================================
+  [PASS] The sole-axiom active source columns are exactly the basis columns e1,e2,e3
+  [PASS] The sole-axiom passive source columns are exactly a scalar multiple of the basis columns
+  [PASS] The active source-derived block is exactly I3
+  [PASS] The passive source-derived block is exactly I3
+  [PASS] The active/passive kernels are exactly the free scalar kernels
+
+========================================================================================
+PART 3: GRAPH-FIRST TRANSFER ADDS ONLY FRAME SUPPORT, NOT VALUE DATA
+========================================================================================
+  [PASS] Forward transport of the sole-axiom source columns is exactly the cycle matrix
+  [PASS] The transported source frame matches the graph-first ordered cycle support
+  [PASS] No nontrivial cycle values appear: the transferred columns are fixed entirely by the frame  (transported=[[0.+0.j 1.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 1.+0.j]
+ [1.+0.j 0.+0.j 0.+0.j]])
+
+========================================================================================
+PART 4: THE CANONICAL SOLE-AXIOM PACK IS REJECTED BY THE RETAINED PMNS STACK
+========================================================================================
+  [PASS] The retained PMNS closure stack rejects the canonical sole-axiom hw=1 source/transfer pack  (pair is not on a one-sided minimal PMNS class)
+  [PASS] Reason: the derived pair is not on a one-sided minimal PMNS class  (pair is not on a one-sided minimal PMNS class)
+  [PASS] So native source insertion and graph-first transfer do not evade the sole-axiom free boundary
+
+========================================================================================
+PART 5: CIRCULARITY GUARD
+========================================================================================
+  [PASS] The canonical sole-axiom source/transfer derivation takes no PMNS-side value targets as inputs  (bad=[])
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact sole-axiom source/transfer boundary:
+    - native source insertions give only the basis columns e1,e2,e3
+      up to the passive scalar resolvent weight
+    - graph-first forward transport fixes only the cycle frame
+      E12,E23,E31
+    - the resulting canonical hw=1 source/transfer pack is still the
+      trivial free pack
+    - the retained PMNS closure stack rejects that pack exactly
+
+  So even source insertion plus graph-first transfer do not derive a
+  nontrivial retained PMNS lane from Cl(3) on Z^3 alone.
+
+PASS=16 FAIL=0
+
+----- stderr -----
+

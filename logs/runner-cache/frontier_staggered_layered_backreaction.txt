@@ -1,0 +1,36 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_layered_backreaction.py
+runner_sha256: 833f1a4762d167986c9b93ce79f493c28579d6c9f975400bcd378a6b078eb0bd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.32
+status: ok
+----- stdout -----
+================================================================================================
+STAGGERED LAYERED BACKREACTION BRIDGE
+  zero-source control + source-on response on layered/DAG-compatible graphs
+  primary observable: force F = -<dPhi/dd>
+================================================================================================
+dt=0.12, steps=10, mass=0.3, mu2=0.22, source_sigma=0.85
+
+layered_bipartite_dag_s13_n36    n=36  Phi0=0.00e+00 F0=+0.000e+00 F1=+3.116e-01 R2=0.9999 Phi_res=3.84e-16 norm=3.33e-16 robust=3/3 gauge=N/A
+layered_bipartite_dag_s29_n55    n=55  Phi0=0.00e+00 F0=+0.000e+00 F1=+1.978e-01 R2=0.9987 Phi_res=1.69e-16 norm=2.22e-16 robust=3/3 gauge=FAIL
+
+SUMMARY
+  zero-source control exact: 2/2
+  source-on response TOWARD: 2/2
+  source linearity R^2 > 0.99: 2/2
+  robustness (zero+source+support): 2/2
+  norm drift: mean=2.776e-16, max=3.331e-16
+  runtime: 0.03s
+
+Interpretation:
+  - This is the first layered/DAG-compatible backreaction bridge, not a
+    self-gravity closure.
+  - The retained observable is force, not centroid shift.
+  - If the source-on force survives larger graph families, the next step is
+    to replace the point-source approximation with a graph-solved source
+    sector that is fed by the evolving matter density.
+
+----- stderr -----
+

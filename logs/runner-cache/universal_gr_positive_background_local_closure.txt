@@ -1,0 +1,32 @@
+===== runner cache v1 =====
+runner: scripts/universal_gr_positive_background_local_closure.py
+runner_sha256: 14048709bdef949f5a127900a3f94fa1da47605ac958fab0fb851ddc985c32cd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+==============================================================================
+UNIVERSAL GR POSITIVE-BACKGROUND LOCAL CLOSURE — sign and uniqueness
+==============================================================================
+
+Bilinear form: B_D(h, k) = -Tr(D^-1 h D^-1 k)
+
+CHECK A1/A2: negative-definiteness of H_D on symmetric tangents
+  [PASS] B_D(h,h) <= 0 for all sampled symmetric h on SPD D
+  [PASS] B_D(h,h) = -Tr(H_tilde^2) reformulation matches
+
+CHECK B: dense operator K is symmetric negative-definite; unique F_*; completion identity
+  [PASS] K is symmetric  (||K - K^T|| = 0.000e+00)
+  [PASS] K is negative-definite  (max eig = -1.743e-03, min eig = -3.998e-02)
+  [PASS] F_* = K^-1 J satisfies stationary condition  (||grad|| = 8.990e-16)
+  [PASS] completion identity I(F_*+Δ) - I(F_*) = (1/2)<Δ, K Δ>  holds for 20 random Δ
+
+CHECK C: explicit refutation of the earlier 'positive-definite' framing
+  [PASS] K has NO positive eigenvalues  (max eig = -1.743e-03)
+         The earlier draft's K ≻ 0 claim is explicitly false on this sample.
+
+PASS=7 FAIL=0
+
+----- stderr -----
+

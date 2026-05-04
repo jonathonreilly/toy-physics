@@ -1,0 +1,73 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_ckm_texture_transfer_nogo.py
+runner_sha256: 71268ec9704cd19d654e91e7c686c4c17aac3672b309016cd774b9418a89c2b2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM / FLAVOR: CKM TEXTURE TRANSFER NO-GO
+========================================================================================
+
+Authority stack:
+  - docs/DM_LEPTOGENESIS_UNIVERSAL_YUKAWA_NO_GO_NOTE_2026-04-15.md
+  - docs/CKM_FROM_MASS_HIERARCHY_NOTE.md
+  - docs/CKM_SCHUR_COMPLEMENT_THEOREM.md
+  - docs/CKM_MASS_BASIS_NNI_NOTE.md
+  - docs/JARLSKOG_PHASE_BOUND_NOTE.md
+
+Question:
+  Can the current CKM/NNI atlas toolkit be transplanted directly onto the
+  exact universal neutrino Dirac bridge to derive the non-universal flavor
+  texture needed for leptogenesis?
+
+Representative transformed Yukawa matrix Y':
+[[ 3.84667736e-03+0.00000000e+00j -3.58746839e-20+4.71119837e-03j
+  -2.72001165e-03-4.84130910e-20j]
+ [ 3.84667736e-03+0.00000000e+00j  3.88503181e-19-8.67361738e-19j
+   5.44002329e-03+1.53491312e-18j]
+ [ 3.84667736e-03+0.00000000e+00j  1.60878563e-18-4.71119837e-03j
+  -2.72001165e-03-3.06714687e-19j]]
+
+H' = Y'^dag Y':
+[[ 4.43907801e-05+0.00000000e+00j  7.54492730e-21-3.90105484e-21j
+   4.26902029e-22+4.53825356e-21j]
+ [ 7.54492730e-21+3.90105484e-21j  4.43907801e-05+0.00000000e+00j
+  -9.47959674e-22+2.26008806e-21j]
+ [ 4.26902029e-22-4.53825356e-21j -9.47959674e-22-2.26008806e-21j
+   4.43907801e-05+0.00000000e+00j]]
+
+Singular values of Y':
+[0.00666264 0.00666264 0.00666264]
+
+Derived mass-ratio factors from the universal bridge:
+  sqrt(s1/s2) = 1.000000
+  sqrt(s2/s3) = 1.000000
+  sqrt(s1/s3) = 1.000000
+
+Representative NNI transfer on a degenerate seed:
+  c12^geom = 1.200000  ->  c12^phys = 1.200000
+  c23^geom = 0.700000  ->  c23^phys = 0.700000
+  c13^geom = c12*c23 = 0.840000  ->  c13^phys = 0.840000
+  [PASS (C)] Unitary left/right basis changes preserve Y^dag Y = y_0^2 I  (H' stays proportional to the identity)
+  [PASS (C)] The singular-value spectrum remains exactly triple-degenerate  (max |s_i-y0| = 8.67e-19)
+  [PASS (C)] The GST / hierarchy ratios collapse to unity  (no singular-value hierarchy exists to seed CKM-like suppression)
+  [PASS (C)] Mass-basis NNI normalization becomes the identity map  (all sqrt(m_i/m_j) factors are exactly 1)
+  [PASS (C)] Phase-only Z3 insertions do not rescue the CP kernel  (max offdiag(H_phase) = 8.70e-21)
+
+Result:
+  The current CKM/NNI atlas toolkit does not transfer to the current
+  exact universal neutrino Dirac bridge. The bridge has no singular-value
+  hierarchy, mass-basis normalization is trivial, Schur-complement
+  identities do not create lambda-suppressed structure from a degenerate
+  seed, and phase-only companions leave Y^dag Y proportional to I.
+
+  So the DM leptogenesis blocker is now sharper: a new non-universal
+  neutrino Dirac flavor texture or equivalent exact extra structure is
+  required before the CKM-style flavor atlas can become relevant here.
+
+PASS=5  FAIL=0
+
+----- stderr -----
+

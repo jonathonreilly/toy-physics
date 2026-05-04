@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_second_order_reviewer_stress_test.py
+runner_sha256: 97eeb0898912b2155abd28fd320d997111273f451cbb2bc4c6872c1483b176c2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.74
+status: ok
+----- stdout -----
+========================================================================
+KOIDE Q SECOND-ORDER REVIEWER STRESS TEST
+========================================================================
+=== CAT-A: Observable-principle carrier forcing ===
+  [PASS] A1. retained note stack fixes physical local scalar readouts as bosonic local source-response objects: observable principle + hierarchy precedent + charged-lepton readout are all present
+  [PASS] A2. first order vanishes and second order is the first live bosonic species-resolving returned family: P_T1 Gamma_1 P_T1 = 0, while second order gives the exact diag-slot family and is even in Gamma_1
+
+=== CAT-B: Carrier identification and factorization ===
+  [PASS] B1. first-live second-order readout map has rank 3: rank(L) = 3
+  [PASS] B2. kernel is exactly the unreachable slot: ker(L) basis = [Matrix([
+[0],
+[0],
+[0],
+[1]])]
+  [PASS] B3. the first-live readout quotient is exactly diag(d1,d2,d3): L(d1,d2,d3,z) = Matrix([[d1], [d2], [d3]])
+  [PASS] B4. every C3-covariant quadratic selector on the first-live sector is a scalar on the returned operator: invariant family = Matrix([[q33, q23, q23], [q23, q33, q23], [q23, q23, q33]])
+
+=== CAT-C: Exact reduced observable restriction ===
+  [PASS] C1. reduced source law is exactly W_red = log det(I+K): W_red = log(k_perp*k_plus + k_perp + k_plus + 1)
+  [PASS] C2. exact dual equation is K = Y^(-1) - I: K_* = ((1 - y1)/y1, (1 - y2)/y2)
+  [PASS] C3. zero source forces Y = I_2 directly: K = 0 <=> Y = I_2 on the normalized carrier.
+
+=== CAT-D: Zero-source response and no hidden source ===
+  [PASS] D1. any normalized point Y = diag(y,2-y) corresponds to a unique source K(y): K(y) = ((1 - y)/y, (1 - y)/(y - 2))
+  [PASS] D2. nonzero source is equivalent to y != 1 and therefore to a chosen selector point: K=0 only at y=1
+  [PASS] D3. unreduced determinant carrier still gives kappa = 1, not the Koide leaf: kappa_unreduced = 1
+  [PASS] D4. raw chiral bridge carries zero bosonic logdet response: max |W[jY]| = 0.000e+00
+
+=== CAT-E: No earlier close and exact Koide consequence on the admitted carrier ===
+  [PASS] E1. Y = I_2 is exactly E_+ = E_perp on the normalized carrier: The Koide point is the identity point of the normalized cone.
+  [PASS] E2. equal block power is exactly 2 r0^2 = r1^2 + r2^2: E_+ - E_perp = r0**2/3 - r1**2/6 - r2**2/6
+  [PASS] E3. kappa = 2 gives exact Koide Q = 2/3: Q = 2/3
+
+Total: 16 PASS, 0 FAIL
+
+Verdict:
+  The branch-local second-order Koide Q route survives the core
+  reviewer objections now visible on this branch:
+    - within the admitted first-live second-order class, the
+      quotient/factorization step is exact
+    - the reduced source law is exact on the admitted reduced carrier
+    - zero source is the exact no-added-source point on that carrier
+    - earlier carriers do not already close Q
+    - the admitted route still lands exactly at Q = 2/3
+
+  REVIEWER_STRESS_TEST_PASSED_SECOND_ORDER_Q=TRUE
+
+----- stderr -----
+

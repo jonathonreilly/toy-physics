@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/lattice_total_momentum_conservation_check.py
+runner_sha256: 066cf20c684ba9b78b880818fe8203947594bcd52c2b021b6d1bdbf856800f08
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+========================================================================
+LATTICE TOTAL MOMENTUM CONSERVATION CHECK
+========================================================================
+
+------------------------------------------------------------------------
+TEST 1: P_total^μ(t) independent of t on shell
+------------------------------------------------------------------------
+    mu        P(t=0)        P(t=1)        P(t=2)        P(t=3)
+     0    0.0000e+00    0.0000e+00    0.0000e+00    0.0000e+00
+     1    0.0000e+00    0.0000e+00    0.0000e+00    0.0000e+00
+     2    0.0000e+00    0.0000e+00    0.0000e+00    0.0000e+00
+     3    0.0000e+00    0.0000e+00    0.0000e+00    0.0000e+00
+
+  max variation across time = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: discrete divergence theorem on periodic lattice
+        sum_{x⃗} ∂^L_i V^i_x = 0 by periodic-boundary cancellation
+------------------------------------------------------------------------
+  max |sum_{x⃗} ∂^L_i V^i_x| over time slices = 1.332e-15
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: temporal divergence vanishing on shell
+        P_total^t(t) - P_total^t(t-1) = 0
+------------------------------------------------------------------------
+  On-shell config (constant field) → Test 1 already verified
+  P_total^t = 0 at all t, hence trivially constant.
+  STATUS: PASS (composed from T1)
+
+------------------------------------------------------------------------
+TEST 4: periodic-lattice momentum spectrum {2π n / L_s : n = 0..L_s-1}
+------------------------------------------------------------------------
+  L_s = 4
+  spectrum: [0.0, 1.5708, 3.1416, 4.7124]
+  count: 4 = L_s ✓
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5: [P̂_total, H] = 0 on translation-invariant H
+------------------------------------------------------------------------
+  ||[P̂, H]||_F = 7.941e-15
+  STATUS: PASS
+
+========================================================================
+SUMMARY
+========================================================================
+  Test 1 (P_total constant on shell):           PASS
+  Test 2 (discrete divergence theorem):         PASS
+  Test 3 (temporal divergence on shell):        PASS
+  Test 4 (momentum spectrum count):             PASS
+  Test 5 ([P̂, H] = 0):                          PASS
+
+  OVERALL: PASS
+
+----- stderr -----
+

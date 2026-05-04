@@ -1,0 +1,35 @@
+===== runner cache v1 =====
+runner: scripts/light_cone_staggered_dispersion.py
+runner_sha256: 5f1ec28eb11b1e7a70f6cae3e60a41814fc09c732afcde2f524394625a32da8b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+==============================================================================
+LIGHT CONE FRAMING — staggered Dirac dispersion v_max validation
+==============================================================================
+
+Dispersion: E^2 = m^2 + sin^2(k)
+Group velocity: v_g(k, m) = sin(k) cos(k) / E
+Closed-form max: v_max(m) = sqrt(m^2 + 1) - m
+
+         m      v_max(num)     v_max(pred)      |diff|    k_argmax  status
+------------------------------------------------------------------------------
+   0.00000    1.0000000000    1.0000000000    0.00e+00    0.000000  PASS
+   0.00010    0.9999000049    0.9999000050    7.95e-11    0.010006  PASS
+   0.00100    0.9990004999    0.9990005000    1.22e-10    3.109988  PASS
+   0.01000    0.9900499987    0.9900499988    1.43e-12    3.041926  PASS
+   0.10000    0.9049875621    0.9049875621    2.96e-11    0.305567  PASS
+   0.50000    0.6180339887    0.6180339887    2.50e-11    2.552151  PASS
+   1.00000    0.4142135623    0.4142135624    4.91e-11    0.699193  PASS
+   2.00000    0.2360679775    0.2360679775    4.68e-12    2.384076  PASS
+
+Limit checks:
+  v_max(m=1e-6) = 0.9999990000 -> 1  PASS
+  v_max(m=100) = 4.999875e-03 ~ 1/(2m) = 5.000000e-03  PASS
+
+PASS=26 FAIL=0
+
+----- stderr -----
+

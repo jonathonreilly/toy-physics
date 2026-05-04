@@ -1,0 +1,139 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_p1_delta_r_master_assembly.py
+runner_sha256: 53b82bf057cf4ffbe265d5787c2cc3871fc025f82770a0d548b2637b5f889641
+timeout_sec: 900
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+========================================================================
+YT P1 - Delta_R Master Assembly (Three-Channel Roll-Up)
+========================================================================
+
+Block 1: Retained SU(3) Casimirs, flavor count, canonical surface.
+  [PASS (C)] C_F = 4/3 (retained from D7 + S1)  (C_F = 1.3333333333)
+  [PASS (C)] C_A = 3 (retained from D7)  (C_A = 3.0000000000)
+  [PASS (C)] T_F = 1/2 (retained from D7 + S1)  (T_F = 0.5000000000)
+  [PASS (C)] n_f = 6 (MSbar side at M_Pl)  (n_f = 6)
+  [PASS (C)] alpha_LM / (4 pi) = 0.00721 +/- 1e-5 (canonical surface)  (alpha_LM/(4 pi) = 0.0072151171)
+
+Block 2: Per-channel retained centrals (from three prior BZ sub-theorems).
+  [PASS (C)] Delta_1 central = +2 (from Delta_1 BZ note)  (Delta_1_central = 2.000000)
+  [PASS (C)] Delta_2 central = -10/3 (from Delta_2 BZ note)  (Delta_2_central = -3.333333)
+  [PASS (C)] Delta_3 central = (4/3) * 0.7 ~ 0.933 (from Delta_3 BZ note)  (Delta_3_central = 0.933333)
+  [PASS (C)] Delta_1 range = [0, +8] (retained conserved-current surface)  (Delta_1 range = [0.0, 8.0])
+  [PASS (C)] Delta_2 range = [-5, 0] (retained conservative range)  (Delta_2 range = [-5.0, 0.0])
+  [PASS (C)] Delta_3 range = [+0.667, +2.000] (retained from cited fermion-loop bracket)  (Delta_3 range = [0.6667, 2.0000])
+
+Block 3: Per-channel contributions to Delta_R at central.
+  [PASS (C)] C_F channel contribution ~ +1.924 % (packaged delta_PT recovered)  (C_F * Delta_1 * alpha/(4pi) = +1.9240 %)
+  [PASS (C)] C_A channel contribution ~ -7.215 % (gluon SE dominated)  (C_A * Delta_2 * alpha/(4pi) = -7.2151 %)
+  [PASS (C)] T_F n_f channel contribution ~ +2.020 % (matter screening)  (T_F * n_f * Delta_3 * alpha/(4pi) = +2.0202 %)
+  [PASS (C)] Sign of C_F channel: POSITIVE  (+1.9240 %)
+  [PASS (C)] Sign of C_A channel: NEGATIVE  (-7.2151 %)
+  [PASS (C)] Sign of T_F n_f channel: POSITIVE  (+2.0202 %)
+
+Block 4: Delta_R assembly at central.
+  [PASS (C)] Delta_R central ~ -3.271 % (sub-permille arithmetic)  (Delta_R_central = -3.27085 %)
+  [PASS (C)] Delta_R central equals channel sum (arithmetic consistency)  (sum = -3.27085 %)
+  [PASS (C)] SIGN of Delta_R: NEGATIVE at central  (Delta_R = -3.27085 % (< 0))
+  [PASS (C)] |Delta_R| < |C_A channel| alone (partial cancellation verified)  (|Delta_R| = 3.2709 %  <  |C_A| = 7.2151 %)
+  [PASS (C)] Positive-channel sum (+3.944 %) partially offsets negative C_A (-7.215 %)  (C_F + T_F n_f = +3.9443 %)
+
+Block 5: Uncertainty propagation (uncorrelated worst-case envelope).
+  [PASS (C)] Uncorrelated min of Delta_R ~ -9.38 %  (Delta_R_min = -9.3797 %)
+  [PASS (C)] Uncorrelated max of Delta_R ~ +12.03 %  (Delta_R_max = +12.0252 %)
+  [PASS (C)] |Delta_R| outer envelope covers [~1 %, ~12 %]  (|Delta_R| envelope = [1.203 %, 12.025 %])
+
+Block 6: Uncertainty propagation (covariance-reduced 1sigma band).
+  [PASS (C)] Per-channel 30% uncertainty: sigma_CF ~ 0.58 %  (sigma_CF = 0.5772 %)
+  [PASS (C)] Per-channel 30% uncertainty: sigma_CA ~ 2.16 %  (sigma_CA = 2.1645 %)
+  [PASS (C)] Per-channel 30% uncertainty: sigma_TFnf ~ 0.61 %  (sigma_TFnf = 0.6061 %)
+  [PASS (C)] Quadrature-combined sigma(Delta_R) ~ 2.32 %  (sigma_quad = 2.3207 %)
+  [PASS (C)] Covariance-reduced 1sigma band contains Delta_R_central  (Delta_R in [-5.592 %, -0.950 %])
+  [PASS (C)] Covariance-reduced upper limit of Delta_R is still roughly <= 0 (not sign-flipped)  (Delta_R_1sigma_hi = -0.9501 %)
+
+Block 7: Reinterpretation of packaged 1.92 % as single-channel approximation.
+  [PASS (C)] Packaged delta_PT = alpha_LM * C_F / (2 pi) ~ 1.924 %  (packaged = +1.9240 %)
+  [PASS (C)] Packaged 1.92 % equals C_F channel at Delta_1 = 2 (recovery check)  (packaged = 1.9240 %, C_F channel = 1.9240 %)
+  [PASS (C)] Packaged 1.92 % misses C_A channel (-7.22 %) and T_F n_f (+2.02 %)  (single-channel (C_F only) approximation)
+  [PASS (C)] Retained three-channel |Delta_R| (3.27 %) > packaged single-channel (1.92 %)  (|retained| = 3.271 %, packaged = 1.924 %)
+
+Block 8: Reinterpretation of cited 5.77 % as single-channel approximation.
+  [PASS (C)] Cited 5.77 % = (alpha_LM/(4pi)) * C_F * I_S at I_S = 6  (cited = +5.7721 %)
+  [PASS (C)] Cited 5.77 % equals C_F channel at Delta_1 = 6 (upper-bracket, no Z_psi)  (cited = 5.7721 %, C_F at Delta_1=6 = 5.7721 %)
+  [PASS (C)] Cited 5.77 % misses C_A channel (-7.22 %) and T_F n_f (+2.02 %)  (single-channel (C_F only) approximation, no Z_psi cancellation)
+  [PASS (C)] Retained three-channel |Delta_R| (3.27 %) < cited single-channel (5.77 %)  (|retained| = 3.271 %, cited = 5.772 %)
+  [PASS (C)] Retained is between packaged (1.92 %) and cited (5.77 %)  (1.92 % < 3.271 % < 5.77 %)
+
+Block 9: Operational P1 primitive on the retained ratio.
+  [PASS (C)] P1 = |Delta_R|_central ~ 3.27 %  (P1 = 3.2709 %)
+  [PASS (C)] P1 band (30 % citation uncertainty): [~2.29 %, ~4.25 %]  (P1 in [2.290 %, 4.252 %])
+  [PASS (C)] P1 band above packaged single-channel (1.92 %) even at lower end  (P1_low = 2.290 % > 1.924 %)
+  [PASS (C)] P1 band below cited single-channel (5.77 %) even at upper end  (P1_high = 4.252 % < 5.772 %)
+
+Block 10: m_t(pole) retained lane budget.
+  [PASS (C)] m_t(central, retained) = 172.57 GeV (framework-native)  (m_t^central = 172.570 GeV)
+  [PASS (C)] m_t(PDG) = 172.69 GeV (observed)  (m_t^PDG = 172.690 GeV)
+  [PASS (C)] Retained m_t lane width ~ +/- 5.7 GeV at P1 = 3.27 %  (Delta m_t^P1 = +/- 5.645 GeV)
+  [PASS (C)] Observed m_t(PDG) within retained lane [167, 178] GeV  (m_t(PDG) = 172.690 in [166.925, 178.215] GeV)
+  [PASS (C)] Retained lane (+/- 5.7) is wider than prior packaged lane (+/- 3.3)  (retained 5.64 GeV > packaged 3.32 GeV)
+  [PASS (C)] Retained lane ~1.7x the prior packaged lane (3-channel uncertainty honored)  (ratio = 1.700)
+
+Block 11: Consistency with Rep-A/Rep-B parent theorem.
+  [PASS (C)] Three-channel formula matches parent Rep-A/Rep-B theorem (4.2)  (Delta_R = alpha/(4pi) * (C_F Delta_1 + C_A Delta_2 + T_F n_f Delta_3))
+  [PASS (C)] Delta_1 structural form preserved: 2(I_v_scalar - I_v_gauge) - 6  (from parent theorem (4.3))
+  [PASS (C)] Delta_2 structural form preserved: I_v_gauge - (5/3) I_SE^{gluonic+ghost}  (from parent theorem (4.3))
+  [PASS (C)] Delta_3 structural form preserved: (4/3) I_SE^{fermion-loop}  (from parent theorem (4.3))
+  [PASS (C)] External Z_psi cancellation retained (partial-cancellation verdict)  (from parent theorem (5.3): exact cancellation of 2 C_F I_leg on ratio)
+
+Block 12: Consistency with master obstruction (P1 dominant primitive).
+  [PASS (C)] Master obstruction total residual ~1.95 % (context only)  (master total = 1.950 %)
+  [PASS (C)] P1 primitive retained central 3.27 % recorded (internal reorganization)  (P1_retained = 3.271 %)
+  [PASS (C)] Master obstruction's P1/P2/P3 partition structure NOT modified  (this note reorganizes P1 line only, not the partition)
+  [PASS (C)] Master obstruction total residual ceiling NOT modified  (structural claim unchanged)
+
+Block 13: Structural preservation checks.
+  [PASS (C)] Rep-A/Rep-B cancellation theorem NOT modified  (three-channel structural decomposition inherited)
+  [PASS (C)] Delta_1 BZ-computation sub-theorem NOT modified  (Delta_1 = +2 central with [0, +8] range inherited)
+  [PASS (C)] Delta_2 BZ-computation sub-theorem NOT modified  (Delta_2 = -10/3 central with [-5, 0] range inherited)
+  [PASS (C)] Delta_3 BZ-computation sub-theorem NOT modified  (Delta_3 = 0.933 central with [0.667, 2.000] range inherited)
+  [PASS (C)] Packaged delta_PT support note NOT modified (single-channel role preserved)  (1.92 % still defensible as C_F-only approximation)
+  [PASS (C)] Cited I_S citation note NOT modified (single-channel role preserved)  (5.77 % still defensible as C_F-only, no-Z_psi approximation)
+  [PASS (C)] Ward-identity tree-level theorem NOT modified  (y_t_bare^2 = g_bare^2 / 6 at tree level unchanged)
+  [PASS (C)] Publication-surface files NOT modified  (no propagation to publication tables)
+  [PASS (C)] Framework-native BZ quadratures of I_v_scalar, I_SE^{gg}, I_SE^{fl} remain OPEN  (literature-cited centrals used; sub-percent pinning requires framework-native quadrature)
+
+========================================================================
+SUMMARY: PASS=68  FAIL=0
+========================================================================
+
+DEFINITIVE RESULT (Three-Channel Delta_R Master Assembly):
+
+  Delta_R = alpha_LM/(4 pi) * [C_F * Delta_1 + C_A * Delta_2 + T_F n_f * Delta_3]
+          = alpha_LM/(4 pi) * [(1.3333) * (2.000)
+                              + (3.0000) * (-3.333)
+                              + (0.5000) * (6) * (0.933)]
+
+  C_F   channel: +1.9240 %
+  C_A   channel: -7.2151 %
+  T_Fnf channel: +2.0202 %
+  ------------------------------
+  Delta_R central: -3.2709 %   (NEGATIVE)
+
+  Uncorrelated outer envelope: [-9.380 %, +12.025 %]
+  Covariance-reduced 1sigma band: [-5.592 %, -0.950 %]
+
+  P1 = |Delta_R|_central = 3.271 %
+  P1 30% citation band:    [2.290 %, 4.252 %]
+
+  Prior packaged 1.92 % (C_F only)     : recovered as single-channel approximation
+  Prior cited   5.77 % (C_F only, no Z): recovered as single-channel approximation
+  Retained 3-channel central           : 3.271 %
+
+  m_t(pole) retained lane:  172.57 GeV +/- 5.64 GeV
+  m_t(PDG observed):        172.69 GeV  (within retained lane)
+
+
+----- stderr -----
+

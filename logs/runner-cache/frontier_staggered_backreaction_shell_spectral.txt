@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_backreaction_shell_spectral.py
+runner_sha256: 34e286658d98587c915c6c355fbe985bf3b84cd9bd2c3e55dfc51e2afc3fbccc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.35
+status: ok
+----- stdout -----
+==================================================================================================
+STAGGERED BACKREACTION SHELL / SPECTRAL DIAGNOSTIC
+  compare phi_solved(depth) vs phi_ext(depth) and inspect low-mode flattening
+  primary observable remains force; this is a structural scale-miss diagnosis
+==================================================================================================
+  dt=0.12, steps=10, mass=0.3, mu2=0.22, ext_mu=0.38
+
+bipartite_random_geometric  n=36  cycle=yes
+  depth  count   rho_drop    phi_solved   phi_ext   solve/ext
+      0      1   0.000e+00   0.000e+00   0.000e+00     0.000
+      1      2   1.750e-01   1.319e-01   3.454e+00     0.038
+      2      3   3.204e-01   2.666e-01   3.744e+00     0.071
+      3      4   3.707e-01   3.620e-01   3.869e+00     0.094
+      4      5   3.781e-01   4.157e-01   3.923e+00     0.106
+      5      6   3.789e-01   4.458e-01   3.953e+00     0.113
+      6      5   3.790e-01   4.606e-01   3.965e+00     0.116
+      7      4   3.790e-01   4.722e-01   3.974e+00     0.119
+      8      3   3.790e-01   4.814e-01   3.982e+00     0.121
+      9      2   3.790e-01   4.878e-01   3.987e+00     0.122
+     10      1   3.790e-01   4.914e-01   3.991e+00     0.123
+  summary: F_ext=+1.488e+00 F_solve=+5.593e-02 gap=9.624e-01 norm=2.22e-16
+  shell: slope_solve=+4.355e-02 slope_ext=+2.096e-01 span_ratio=0.123 fit_R2=0.6700
+  spectrum: rho_low=0.751 solve_low=0.958 ext_low=0.453 rho_centroid=7.435e-01 solve_centroid=3.980e-01 ext_centroid=1.574e+00
+
+layered_bipartite_dag  n=36  cycle=no
+  depth  count   rho_drop    phi_solved   phi_ext   solve/ext
+      0      1   0.000e+00   0.000e+00   0.000e+00     0.000
+      1      1   3.912e-01   4.540e-01   3.824e+00     0.119
+      2      1   3.929e-01   6.211e-01   3.828e+00     0.162
+      3      1   4.108e-01   7.806e-01   3.913e+00     0.200
+      4      1   4.116e-01   8.642e-01   3.952e+00     0.219
+      5      1   4.116e-01   8.933e-01   3.977e+00     0.225
+      6      1   4.116e-01   9.051e-01   3.986e+00     0.227
+      7      1   4.116e-01   9.123e-01   3.991e+00     0.229
+  summary: F_ext=+1.852e+00 F_solve=+2.183e-01 gap=8.822e-01 norm=1.11e-16
+  shell: slope_solve=+1.136e-01 slope_ext=+3.480e-01 span_ratio=0.229 fit_R2=0.7799
+  spectrum: rho_low=0.379 solve_low=0.809 ext_low=0.355 rho_centroid=5.457e-01 solve_centroid=1.741e-01 ext_centroid=4.884e-01
+
+READOUT
+  cycle-bearing family: force gap 9.624e-01, shell span ratio 0.123, solve/ext low-mode 0.958/0.453
+  layered family: force gap 8.822e-01, shell span ratio 0.229, solve/ext low-mode 0.809/0.355
+
+Interpretation:
+  - The solved graph field keeps the correct sign and force ordering, but it is flatter in depth than the external-kernel control.
+  - The shell-drop profiles show the same qualitative shape, but the solved field has a smaller span and shallower slope.
+  - The low-mode spectrum is more concentrated in the solved field, consistent with over-smoothing by the screened graph Poisson solve.
+  - The layered family is the closest holdout for one-step endogenous response, but the cycle-bearing family is where the scale miss is structurally visible.
+  - runtime: 0.03s
+
+----- stderr -----
+

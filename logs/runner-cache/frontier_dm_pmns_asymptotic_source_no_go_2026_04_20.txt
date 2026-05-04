@@ -1,0 +1,47 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_pmns_asymptotic_source_no_go_2026_04_20.py
+runner_sha256: 375d0f86502b621276eb1390c3b5391a3be2c0dc9b15947fe949c25189815d22
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 17.54
+status: ok
+----- stdout -----
+=== Part 1: linear-algebra no-go at infinity ===
+[PASS] ((0, 1, 2), delta_CP=0 pi): constraint matrix has full rank  (min singular value=0.395491)
+[PASS] ((0, 1, 2), delta_CP=0 pi): only lambda=0 solves A lambda = 0  (min singular value=0.395491)
+[PASS] ((0, 2, 1), delta_CP=0 pi): constraint matrix has full rank  (min singular value=0.480221)
+[PASS] ((0, 2, 1), delta_CP=0 pi): only lambda=0 solves A lambda = 0  (min singular value=0.480221)
+[PASS] ((1, 0, 2), delta_CP=0 pi): constraint matrix has full rank  (min singular value=0.408403)
+[PASS] ((1, 0, 2), delta_CP=0 pi): only lambda=0 solves A lambda = 0  (min singular value=0.408403)
+[PASS] ((1, 2, 0), delta_CP=0 pi): constraint matrix has full rank  (min singular value=0.612886)
+[PASS] ((1, 2, 0), delta_CP=0 pi): only lambda=0 solves A lambda = 0  (min singular value=0.612886)
+[PASS] ((2, 0, 1), delta_CP=0 pi): constraint matrix has full rank  (min singular value=0.483546)
+[PASS] ((2, 0, 1), delta_CP=0 pi): only lambda=0 solves A lambda = 0  (min singular value=0.483546)
+[PASS] ((2, 1, 0), delta_CP=0 pi): constraint matrix has full rank  (min singular value=0.700880)
+[PASS] ((2, 1, 0), delta_CP=0 pi): only lambda=0 solves A lambda = 0  (min singular value=0.700880)
+[PASS] ((0, 1, 2), delta_CP=1 pi): constraint matrix has full rank  (min singular value=0.586493)
+[PASS] ((0, 1, 2), delta_CP=1 pi): only lambda=0 solves A lambda = 0  (min singular value=0.586493)
+[PASS] ((0, 2, 1), delta_CP=1 pi): constraint matrix has full rank  (min singular value=0.734181)
+[PASS] ((0, 2, 1), delta_CP=1 pi): only lambda=0 solves A lambda = 0  (min singular value=0.734181)
+[PASS] ((1, 0, 2), delta_CP=1 pi): constraint matrix has full rank  (min singular value=0.618725)
+[PASS] ((1, 0, 2), delta_CP=1 pi): only lambda=0 solves A lambda = 0  (min singular value=0.618725)
+[PASS] ((1, 2, 0), delta_CP=1 pi): constraint matrix has full rank  (min singular value=0.802837)
+[PASS] ((1, 2, 0), delta_CP=1 pi): only lambda=0 solves A lambda = 0  (min singular value=0.802837)
+[PASS] ((2, 0, 1), delta_CP=1 pi): constraint matrix has full rank  (min singular value=0.706486)
+[PASS] ((2, 0, 1), delta_CP=1 pi): only lambda=0 solves A lambda = 0  (min singular value=0.706486)
+[PASS] ((2, 1, 0), delta_CP=1 pi): constraint matrix has full rank  (min singular value=0.852543)
+[PASS] ((2, 1, 0), delta_CP=1 pi): only lambda=0 solves A lambda = 0  (min singular value=0.852543)
+
+=== Part 2: numerical asymptotic chamber-sphere floor ===
+[PASS] Pure-source chamber-sphere minimum stays strictly above zero  (best chi^2_inf=0.001079584 at perm=(0, 1, 2), dir=(-0.9956212696923373, 0.0934196004841208, -0.0033264968969123664))
+[PASS] The asymptotic floor is near the observed 1e-3 scale, not numerical zero  (best chi^2_inf=0.001079584)
+
+Interpretation:
+  No exact PMNS-fit basin can escape to infinity, because the
+  pure-source limit admits no nonzero solution with the target angles.
+  The remaining basin-enumeration problem is therefore compact.
+
+PASS=26 FAIL=0
+
+----- stderr -----
+

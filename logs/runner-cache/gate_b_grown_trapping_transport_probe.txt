@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_grown_trapping_transport_probe.py
+runner_sha256: eaa54f0a2bbaec2c5b1e8928e5393ae6af052193578c0fdae30e9639e7983149
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

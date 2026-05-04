@@ -1,0 +1,61 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_bosonic_normalization_theorem.py
+runner_sha256: 17e9473ed23e0b0399d3a25e02cf5e58687e2e944a07612d77ffd4daed94a28b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+NEUTRINO BOSONIC NORMALIZATION THEOREM
+==============================================================================
+
+Part 1: Exact bridge decomposition on C^16
+  [PASS] direct chiral bridge is nilpotent
+  [PASS] Y + Y^dagger = Gamma_1
+  [PASS] i(Y - Y^dagger) = -i gamma_5 Gamma_1
+  [PASS] Gamma_1 is Hermitian
+  [PASS] Gamma_1 is an involution
+  [PASS] pseudoscalar completion is orthogonal to the retained scalar Higgs family span{Gamma_i}  (max overlap = 0.000e+00)
+
+Part 2: Observable-principle source response on a scalar local baseline m I
+  j=0.001: W[Y]=0.000000e+00, W[Gamma_1]=-4.262349e-06, W[pseudo]=-4.262349e-06, quad=-4.262349e+00
+  j=0.01: W[Y]=0.000000e+00, W[Gamma_1]=-4.262461e-04, W[pseudo]=-4.262461e-04, quad=-4.262461e+00
+  j=0.1: W[Y]=0.000000e+00, W[Gamma_1]=-4.273743e-02, W[pseudo]=-4.273743e-02, quad=-4.273743e+00
+  [PASS] raw chiral bridge has identically zero bosonic log|det| response  (max |W[Y]| = 0.000e+00)
+  [PASS] Gamma_1 source response matches the exact involution formula  (max |W - 8 log(1-j^2/m^2)| = 1.272e-15)
+  [PASS] the pseudoscalar companion has the same even determinant response  (max error = 2.160e-15)
+  [PASS] Gamma_1 carries nonzero quadratic bosonic curvature on the small-source surface  (max small-j quadratic-coefficient error = 1.136e-04)
+
+Part 3: Canonical bridge ratio once the bosonic source family is fixed
+  Tr(Gamma_1^dag Gamma_1) / 16 = 1.000000
+  Tr(Y^dag Y) / 16            = 0.500000
+  full-space ratio            = 0.707107
+  active-space ratio          = 1.000000
+
+  [PASS] full-space canonical bridge ratio is 1/sqrt(2)  (ratio = 0.707106781187)
+  [PASS] active-space ratio remains 1 as a rejected non-bosonic comparator  (ratio = 1.000000000000)
+
+Selected benchmark surface:
+  if g_weak = 0.653, observable-principle normalization gives
+    y_nu^(0) = g_weak / sqrt(2) = 0.461741
+  while the active-space comparator would be 0.653000
+
+Honest read:
+  1. The raw chiral bridge Y = P_R Gamma_1 P_L is exact, but by itself it
+     carries no bosonic scalar source-response on a local scalar baseline.
+  2. The retained local Higgs family fixes the physical scalar completion as
+     Gamma_1 = Y + Y^dagger, not the active bridge alone.
+  3. Once the physical source family is assigned on Gamma_1, the branch's
+     canonical trace normalization selects the full-space bridge ratio
+     y_nu^(0) / g_weak = 1/sqrt(2).
+  4. So the base-normalization ambiguity is closed. The downstream
+     retained local Schur theorem now fixes the exact T_1 return,
+     and the live remaining blocker is the Majorana / Z3 activation law.
+
+==============================================================================
+RESULT: 12 PASS, 0 FAIL
+==============================================================================
+
+----- stderr -----
+

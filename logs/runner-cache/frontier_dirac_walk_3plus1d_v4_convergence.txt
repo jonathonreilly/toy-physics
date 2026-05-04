@@ -1,0 +1,76 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dirac_walk_3plus1d_v4_convergence.py
+runner_sha256: a043c07f8e867ea1a39a09df0c5e1f252ddfd76df7c9dd473497aa71400a2b6d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 24.15
+status: ok
+----- stdout -----
+==============================================================================
+FRONTIER: 4-COMPONENT DIRAC WALK v4 - LARGE-LATTICE CONVERGENCE
+==============================================================================
+reversed coupling: m(r) = m0 * (1 + f(r))
+mass0=0.300, strength=5.0e-04
+
+BASELINE PERIODIC CLOSURE MASS CHECK
+  n=17, N=12: score=6/10, gravity_bias=-4.7460e-09
+  rows: PPPPFFPPFF
+
+LARGER-LATTICE PERIODIC CLOSURE SWEEP
+  n=17, N=12: score=6/10, gravity_bias=-4.7460e-09, dist_R2=0.2680
+  n=21, N=12: score=6/10, gravity_bias=-4.0447e-09, dist_R2=0.3106
+  n=25, N=12: score=6/10, gravity_bias=-4.0447e-09, dist_R2=0.3107
+  n=29, N=12: score=6/10, gravity_bias=-4.0447e-09, dist_R2=0.3105
+
+MONOTONICITY OVER N (offset=3)
+
+  [periodic] n=29
+    N= 8: toward=+1.2809e-07, away=+3.3696e-08, bias=+9.4392e-08 -> TOWARD
+    N=10: toward=+3.8520e-08, away=+7.0893e-08, bias=-3.2373e-08 -> AWAY
+    N=12: toward=-1.5132e-08, away=-1.1088e-08, bias=-4.0447e-09 -> AWAY
+    N=14: toward=+2.8077e-08, away=-4.5384e-08, bias=+7.3461e-08 -> TOWARD
+    N=16: toward=-1.6839e-08, away=-7.3838e-09, bias=-9.4549e-09 -> AWAY
+    N=18: toward=+7.8164e-09, away=+2.6625e-09, bias=+5.1538e-09 -> TOWARD
+    N=20: toward=-1.2467e-08, away=-1.2084e-08, bias=-3.8351e-10 -> AWAY
+    N=22: toward=+5.0796e-09, away=+9.0754e-09, bias=-3.9957e-09 -> AWAY
+    N=24: toward=-3.3273e-09, away=-3.7550e-09, bias=+4.2774e-10 -> TOWARD
+    monotone increasing TOWARD bias: NO
+
+  [open] n=29
+    N= 8: toward=+1.2809e-07, away=+3.3696e-08, bias=+9.4392e-08 -> TOWARD
+    N=10: toward=+3.8520e-08, away=+7.0893e-08, bias=-3.2373e-08 -> AWAY
+    N=12: toward=-1.5132e-08, away=-1.1088e-08, bias=-4.0447e-09 -> AWAY
+    N=14: toward=+2.8077e-08, away=-4.5384e-08, bias=+7.3461e-08 -> TOWARD
+    N=16: toward=-1.7810e-08, away=-7.9353e-09, bias=-9.8745e-09 -> AWAY
+    N=18: toward=+8.6894e-09, away=+2.4363e-09, bias=+6.2531e-09 -> TOWARD
+    N=20: toward=-1.9906e-08, away=-1.9312e-08, bias=-5.9345e-10 -> AWAY
+    N=22: toward=+9.0121e-09, away=+1.7169e-08, bias=-8.1573e-09 -> AWAY
+    N=24: toward=-9.5634e-09, away=-1.0702e-08, bias=+1.1386e-09 -> TOWARD
+    monotone increasing TOWARD bias: NO
+
+DISTANCE LAW OVER OFFSET
+
+  [periodic] n=29, N=16
+    off=2: toward=-1.0433e-07, away=-8.6785e-08, bias=-1.7547e-08 -> AWAY
+    off=3: toward=-1.6839e-08, away=-7.3838e-09, bias=-9.4549e-09 -> AWAY
+    off=4: toward=-5.2839e-07, away=+1.2795e-07, bias=-6.5634e-07 -> AWAY
+    off=5: toward=-1.9596e-07, away=-8.1213e-08, bias=-1.1475e-07 -> AWAY
+    off=6: toward=-1.8723e-07, away=-6.9943e-08, bias=-1.1728e-07 -> AWAY
+    TOWARD count: 0/5
+    power-law fit: alpha=2.451, R^2=0.3954
+
+  [open] n=29, N=16
+    off=2: toward=-1.0920e-07, away=-9.0878e-08, bias=-1.8326e-08 -> AWAY
+    off=3: toward=-1.7810e-08, away=-7.9353e-09, bias=-9.8745e-09 -> AWAY
+    off=4: toward=-5.5308e-07, away=+1.3239e-07, bias=-6.8547e-07 -> AWAY
+    off=5: toward=-2.0568e-07, away=-8.5748e-08, bias=-1.1993e-07 -> AWAY
+    off=6: toward=-1.9681e-07, away=-7.4267e-08, bias=-1.2255e-07 -> AWAY
+    TOWARD count: 0/5
+    power-law fit: alpha=2.452, R^2=0.3955
+
+SUMMARY
+  best periodic closure: n=17, N=12, score=6/10, gravity_bias=-4.7460e-09
+  runtime: 22.5s
+
+----- stderr -----
+

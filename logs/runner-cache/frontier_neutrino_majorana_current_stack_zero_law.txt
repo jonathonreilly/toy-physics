@@ -1,0 +1,75 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_current_stack_zero_law.py
+runner_sha256: ffb65109acfff9fbb08cec8998bae18b04c7abbde5d4ca6f8dabdb535e50bf3e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: CURRENT-STACK ZERO LAW FOR MU
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+    rows: Framework axiom; Observable principle; Anomaly-forced time;
+          Native weak algebra; Structural SU(3) closure; One-generation matter closure
+  - docs/NEUTRINO_MAJORANA_CANONICAL_LOCAL_BLOCK_NOTE.md
+  - docs/NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md
+  - docs/NEUTRINO_MAJORANA_CURRENT_ATLAS_NONREALIZATION_NOTE.md
+  - docs/NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md
+
+Question:
+  Once the one-generation local Majorana block is canonicalized as
+  mu J_2, what is the actual activation law for mu on the stack that
+  is currently retained today?
+
+========================================================================================
+PART 1: THE CURRENT MAJORANA ACTIVATION QUESTION IS A SINGLE SCALAR
+========================================================================================
+  [PASS (C)] Canonical one-generation block is antisymmetric  (||A+A^T||=0.00e+00)
+  [PASS (C)] The canonical block is reconstructed from one scalar coordinate mu  (reconstruction error=0.00e+00)
+  [PASS (C)] The coordinate extractor returns mu exactly on mu J_2  (mu_extracted=(0.61+0j))
+
+  So the current activation-law target is not matrix-valued.
+  It is the single scalar mu on the canonical block mu J_2.
+
+========================================================================================
+PART 2: THE RETAINED NORMAL GRAMMAR SETS THE EFFECTIVE MU TO ZERO
+========================================================================================
+  [PASS (C)] Retained normal Hamiltonian commutes exactly with fermion number  (||[H,N]||=0.00e+00)
+  [PASS (C)] Charge-2 pair expectation vanishes exactly on the retained grammar  (<cc>=+0.00e+00+0.00e+00i)
+  [PASS (C)] Charge+2 conjugate expectation also vanishes exactly  (<c^dag c^dag>=+0.00e+00+0.00e+00i)
+  [PASS (C)] Projected effective canonical block is therefore zero  (||mu_eff J_2||=0.00e+00)
+  [PASS (C)] The retained-grammar effective activation coordinate is mu_eff = 0  (mu_eff=0.00e+00)
+
+  Inside the retained number-preserving grammar, the unique Majorana
+  slot is present structurally but its effective amplitude is exactly
+  zero.
+
+========================================================================================
+PART 3: THE CURRENT ATLAS ADDS NO EXTRA SOURCE TERM THAT COULD SHIFT ZERO
+========================================================================================
+  [PASS (C)] Atlas still retains the determinant observable backbone
+  [PASS (C)] Atlas Pfaffian/Nambu rows are scoped as no-forcing or beyond-stack, not current retained source
+  [PASS (C)] Atlas carries the retained Majorana zero-law boundary row
+  [PASS (C)] Observable-principle note stays scalar rather than fermionic-pairing based
+  [PASS (C)] Current right-handed composite route still misses the Y=0 nu_R singlet slot
+
+  So no currently retained atlas object shifts the exact retained
+  answer away from mu = 0.
+
+========================================================================================
+RESULT
+========================================================================================
+  On the current retained atlas / retained microscopic grammar, the
+  effective one-generation Majorana activation law is the zero law
+  mu_current = 0.
+
+  Any future nonzero mu requires a genuinely new axiom-side charge-2
+  primitive outside the current retained stack.
+
+PASS=13  FAIL=0
+
+----- stderr -----
+

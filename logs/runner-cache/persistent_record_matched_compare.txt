@@ -1,0 +1,22 @@
+===== runner cache v1 =====
+runner: scripts/persistent_record_matched_compare.py
+runner_sha256: ebbe13c5336c0d1473f0f0c5adcd8e5efb23650d1cc13793ee071cc79375398a
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+======================================================================================
+PERSISTENT RECORD MATCHED COMPARISON
+  Same generated DAGs, same seeds, same barrier setup, same k band
+  N sweep: [8, 12, 18]  seeds=3  k_band=[3.0, 5.0, 7.0]
+  Persistent kernel gammas: [0.25, 1.0]
+======================================================================================
+
+           N        node        scar         ent    pr_trace    pr_g0.25       pr_g1
+  ------------------------------------------------------------------------------------
+           8      0.7971      0.6413      0.9383      0.8317      0.9556      0.8672
+          12      0.6751      0.7900      0.8700      0.6898      0.8744      0.7398
+
+----- stderr -----
+

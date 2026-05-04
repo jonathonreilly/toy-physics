@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/source_resolved_generated_wavefield_transfer_v2.py
+runner_sha256: 115b63b336f2e87dba22cb2969844d17ad80de479f3e0256d5fedbc8efeba292
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.59
+status: ok
+----- stdout -----
+============================================================================================================
+SOURCE-RESOLVED GENERATED WAVEFIELD TRANSFER V2
+  generated-family z-spread stencil vs retained kNN-floor bridge
+============================================================================================================
+family seeds=0..3, layers=16, nodes/layer=24, connect_radius=3.2
+bridge family: k-nearest floor augmentation (k=3, min_edges=5)
+geometry-rule change: z-spread stencil (buckets=5, floor=7)
+field modes: static Green vs wavefield
+source strengths: [0.001, 0.002, 0.004, 0.008]
+field target max: 0.02
+observables: zero-source reduction, centroid sign counts, F~M exponent, detector N_eff
+diagnostic: geometry-rule delta from bridge to z-stencil
+
+seed=0   bridge/static    zero=0.000e+00 TOWARD=2/4 F~M=-0.100 N_eff=6.78
+seed=0   bridge/wavefield zero=0.000e+00 TOWARD=0/4 F~M=0.896 N_eff=5.91
+seed=0 zstencil/static    zero=0.000e+00 TOWARD=4/4 F~M=0.723 N_eff=4.87
+seed=0 zstencil/wavefield zero=0.000e+00 TOWARD=3/4 F~M=0.390 N_eff=3.99
+seed=1   bridge/static    zero=0.000e+00 TOWARD=2/4 F~M=0.601 N_eff=5.96
+seed=1   bridge/wavefield zero=0.000e+00 TOWARD=2/4 F~M=1.711 N_eff=6.48
+seed=1 zstencil/static    zero=0.000e+00 TOWARD=1/4 F~M=0.412 N_eff=4.75
+seed=1 zstencil/wavefield zero=0.000e+00 TOWARD=0/4 F~M=-1.008 N_eff=4.29
+seed=2   bridge/static    zero=0.000e+00 TOWARD=4/4 F~M=-1.131 N_eff=2.92
+seed=2   bridge/wavefield zero=0.000e+00 TOWARD=4/4 F~M=-0.383 N_eff=2.85
+seed=2 zstencil/static    zero=0.000e+00 TOWARD=4/4 F~M=-0.022 N_eff=3.78
+seed=2 zstencil/wavefield zero=0.000e+00 TOWARD=4/4 F~M=-0.045 N_eff=3.74
+seed=3   bridge/static    zero=0.000e+00 TOWARD=1/4 F~M=-0.636 N_eff=5.59
+seed=3   bridge/wavefield zero=0.000e+00 TOWARD=0/4 F~M=-1.833 N_eff=5.31
+seed=3 zstencil/static    zero=0.000e+00 TOWARD=1/4 F~M=-0.700 N_eff=7.12
+seed=3 zstencil/wavefield zero=0.000e+00 TOWARD=0/4 F~M=-1.082 N_eff=6.70
+
+SUMMARY
+  bridge/static     zero=0.000e+00  TOWARD=9/16  F~M=-0.316  N_eff=5.31
+  bridge/wavefield  zero=0.000e+00  TOWARD=6/16  F~M=0.098  N_eff=5.14
+zstencil/static     zero=0.000e+00  TOWARD=10/16  F~M=0.103  N_eff=5.13
+zstencil/wavefield  zero=0.000e+00  TOWARD=7/16  F~M=-0.436  N_eff=4.68
+
+GEOMETRY DELTA
+     static: delta_TOWARD=+1  delta_N_eff=-0.18  delta_F~M=+0.419
+  wavefield: delta_TOWARD=+1  delta_N_eff=-0.46  delta_F~M=-0.534
+
+SAFE READ
+  - The retained kNN-floor bridge remains the baseline control.
+  - The z-spread stencil is the tested geometry-rule change.
+  - If the stencil improves sign and detector support while keeping F~M near 1,
+    then the wavefield lane is becoming geometry-transfer relevant.
+  - If it only reshuffles support without improving the weak-field law,
+    this is a bounded no-go for this geometry rule.
+
+----- stderr -----
+

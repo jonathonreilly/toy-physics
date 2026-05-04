@@ -1,0 +1,24 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_aps_boundary_index_probe.py
+runner_sha256: bf6cb2a92f272427423476ff9f4b2c167f62ae8f921d501ab70cd81da91c0b41
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================
+Signed-gravity APS boundary-index finite spectrum probe
+========================================================================
+  [PASS] eta sign gives both nonempty candidate sectors  (eta_plus=1, eta_minus=-1)
+  [PASS] paired boundary spectrum is a null/control sector  (eta_null=0, zero_modes=0)
+  [PASS] eta is invariant under arbitrary boundary-basis unitary relabeling  (eta=1, max_eig_err=2.22e-15)
+  [PASS] basis-local sign can flip while eta and the spectrum do not  (artifact=1->-1, eta=1->1)
+  [PASS] eta sign is stable under sampled gap-preserving boundary perturbations  (initial_gap=0.400, min_gap_after=0.372)
+  [PASS] sector change is tied to an explicit boundary zero crossing  (chi_path=[1, 1, 1, 1, 0, -1, -1, -1, -1])
+  [PASS] positive inertial mass is independent of eta sign  (M=2.75, active=2.75, response=+1)
+  [PASS] paired +/- boundary sources are source-unit null controls  (active_sum=0.00, inertial_sum=5.50)
+------------------------------------------------------------------------
+FINAL_TAG: APS_BOUNDARY_INDEX_PROBE_PASS_SOURCE_LOCKING_OPEN
+
+----- stderr -----
+

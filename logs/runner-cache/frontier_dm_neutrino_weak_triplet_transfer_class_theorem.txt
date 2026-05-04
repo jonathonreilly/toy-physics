@@ -1,0 +1,41 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_weak_triplet_transfer_class_theorem.py
+runner_sha256: 08f913c9f0c9e8cb6ac12ab111154dbd3e3db6920bd386e7dce7a72474b45412
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO WEAK-TRIPLET TRANSFER-CLASS THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE CURRENT STACK ALREADY HAS A 1+2 SOURCE BUNDLE AND A 1+2 TARGET BUNDLE
+========================================================================================
+  [PASS] The selector lane contributes one exact real source amplitude slot a_sel
+  [PASS] The weak tensor-slot lane contributes a two-channel tensor carrier
+  [PASS] The DM branch already records the target odd source gamma
+  [PASS] The DM branch already records the target even response pair E1,E2
+  [PASS] The current strong-CP/CKM boundary says the missing object is a transfer law, not a new carrier
+
+========================================================================================
+PART 2: PARITY-COMPATIBLE LINEAR TRANSFER IS FORCED INTO BLOCK FORM
+========================================================================================
+  [PASS] The parity-compatible transfer class has dimension 5 = 1 odd coefficient + 4 even coefficients  (dim=5)
+  [PASS] Every admissible transfer basis vector is block-diagonal between odd and even sectors  (max off-block entry=0.00e+00)
+  [PASS] The canonical 1+2 -> 1+2 block form exactly intertwines the odd/even split  (intertwiner err=0.00e+00)
+
+========================================================================================
+PART 3: THE MISSING TRIPLET LAW REDUCES TO C_ODD AND M_EVEN
+========================================================================================
+  [PASS] The odd target gamma depends only on the selector amplitude slot  (gamma=-1.840000)
+  [PASS] The even target pair depends only on the tensor-slot doublet  (E=(0.320000,0.140000))
+  [PASS] So the remaining coefficient law is one real odd scalar plus one real 2x2 even matrix  (gamma=c_odd*a_sel, [E1,E2]^T=M_even[tau_E,tau_T]^T)
+
+========================================================================================
+SUMMARY: PASS=11 FAIL=0
+========================================================================================
+
+----- stderr -----
+

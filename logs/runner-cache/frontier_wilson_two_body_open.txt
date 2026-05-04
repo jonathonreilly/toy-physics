@@ -1,0 +1,29 @@
+===== runner cache v1 =====
+runner: scripts/frontier_wilson_two_body_open.py
+runner_sha256: 845ab34e4940aeb8d4cb9386046dcc1376d4d4e491700757b76a855cd4157edb
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 23.23
+status: ok
+----- stdout -----
+========================================================================================
+OPEN-BOUNDARY WILSON TWO-BODY TEST
+========================================================================================
+MASS=0.3, WILSON_R=1.0, DT=0.08, REG=0.001, N_STEPS=20
+Test surface: side in {11,13}, G=5, mu2=0.22, d in {3,4,5,6}
+
+side=11 d=3: a_mut=-0.566674 +/- 0.058502 (SNR=9.69) [ATTRACT] [CLEAN] dsep SH=-0.7543 SELF=+0.0237 FREE=-0.0283 (2.1s)
+side=11 d=4: a_mut=-0.247554 +/- 0.029225 (SNR=8.47) [ATTRACT] [CLEAN] dsep SH=-0.3114 SELF=+0.0316 FREE=-0.0298 (2.0s)
+side=11 d=5: a_mut=-0.113243 +/- 0.012980 (SNR=8.72) [ATTRACT] [CLEAN] dsep SH=-0.1412 SELF=+0.0072 FREE=-0.2111 (2.1s)
+side=11 d=6: a_mut=-0.056988 +/- 0.006457 (SNR=8.83) [ATTRACT] [CLEAN] dsep SH=-0.0448 SELF=+0.0303 FREE=-0.2340 (2.0s)
+side=13 d=3: a_mut=-0.567354 +/- 0.058224 (SNR=9.74) [ATTRACT] [CLEAN] dsep SH=-0.7705 SELF=+0.0105 FREE=-0.0025 (3.7s)
+side=13 d=4: a_mut=-0.246222 +/- 0.029087 (SNR=8.46) [ATTRACT] [CLEAN] dsep SH=-0.3298 SELF=+0.0129 FREE=-0.0026 (3.7s)
+side=13 d=5: a_mut=-0.114091 +/- 0.013976 (SNR=8.16) [ATTRACT] [CLEAN] dsep SH=-0.1340 SELF=+0.0235 FREE=-0.0283 (3.6s)
+side=13 d=6: a_mut=-0.056692 +/- 0.006955 (SNR=8.15) [ATTRACT] [CLEAN] dsep SH=-0.0480 SELF=+0.0303 FREE=-0.0298 (3.7s)
+
+Summary
+----------------------------------------------------------------------------------------
+configs=8 attract=8/8 clean=8/8
+
+----- stderr -----
+

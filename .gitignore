@@ -8,6 +8,10 @@ logs/*
 !logs/README.md
 !logs/retained/
 !logs/retained/README.md
+# Audit-lane runner cache: SHA-pinned, version-controlled. See
+# docs/audit/RUNNER_CACHE_POLICY.md.
+!logs/runner-cache/
+!logs/runner-cache/**
 .claude/worktrees/
 
 # Python virtual environments (per-developer, per-worktree).

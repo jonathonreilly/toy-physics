@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_2026_04_20.py
+runner_sha256: e31ac2c93cedab39cadccb90a81ac5b83499d33f03f66ce1d833c992cc5e066f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 25.60
+status: ok
+----- stdout -----
+======================================================================================================================
+GAUGE-VACUUM PLAQUETTE FIRST-SECTOR MINIMAL-BULK COMPLETION 3D+1 RHO1 ORIENTATION
+======================================================================================================================
+
+Question:
+  Does the exact retained-line doublet already split into a preferred
+  `rho1`-anchored orientation and its mirror orientation on the selected
+  Wilson branch?
+
+  boundary-first retained order               = ((1, 0), (0, 0), (0, 1), (1, 1))
+  rho1 member losses on (1,0),(0,1)          = (0.000595330049, 0.687142262947)
+  rho2 member losses on (1,0),(0,1)          = (0.715664033154, 0.003700750155)
+  rho1 member distances to rho1/rho2 slices  = (0.791021791170, 1.413792537787)
+  rho2 member distances to rho1/rho2 slices  = (1.411594311298, 0.754103397215)
+
+  [PASS] The retained ambient order is boundary-first with the preferred (1,0) slot first
+  [PASS] One solved line is the rho1-anchored member of the exact doublet: it loses far less of the preferred (1,0) boundary direction than the mirror member  ((loss10_A,loss10_B)=(0.000595,0.715664))
+  [PASS] The second solved line is the mirror member: it loses far less of the conjugate (0,1) boundary direction than the rho1 member  ((loss01_A,loss01_B)=(0.687142,0.003701))
+  [PASS] The same split appears in Grassmann projector geometry: the rho1 member is closer to the rho1 reference slice while the mirror member is closer to the rho2 slice  ((dA_rho1,dB_rho1,dA_rho2,dB_rho2)=(0.791022,1.411594,1.413793,0.754103))
+  [PASS] So the exact retained-line multiplicity collapses to a rho1/rho2 orientation question rather than arbitrary frame freedom
+
+======================================================================================================================
+RESULT
+======================================================================================================================
+  Rho1-orientation split of the exact line doublet:
+    - the solved retained-line doublet is not structureless
+    - one solved member is sharply `rho1`-anchored in the boundary-first ambient
+    - the other solved member is its mirror `rho2`-anchored partner
+    - so the existing Wilson-side `rho1` preference already collapses the
+      multiplicity to an orientation question rather than arbitrary frame freedom
+
+PASS=5 FAIL=0
+
+----- stderr -----
+

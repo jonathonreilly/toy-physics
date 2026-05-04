@@ -1,0 +1,47 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_bridge_support.py
+runner_sha256: 20ac6a52fddf47b303cb30023aa116674b4835663d087ff1316ca89ec19de5be
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.20
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE SCALAR-BRIDGE SUPPORT
+==============================================================================
+
+Local Wilson source-response
+  P_1plaq(6) from exact derivative     = 0.422531739649983   (mode cutoff m = 8)
+  P_1plaq(6) from source derivative    = 0.422531739596721
+  P_1plaq(6) from Weyl integration     = 0.422531739649986
+  W_tot(j) for two independent blocks  = 0.031356036003298
+
+Scalar 3+1 bridge
+  A_inf / A_2                          = 1.154700538379252
+  Gamma_sc = ratio^(1/4)              = 1.036614649628077
+
+Plaquette four-link coupling map
+  max |P(u0 V)/u0^4 - P(V)|           = 1.110e-16
+  max |P(u0 V)/u0^2 - P(V)|           = 1.652e-01
+
+Support candidate output
+  Gamma_coord                         = 1.500000000000000
+  beta_eff                            = 9.329531846652698
+  P(6)                                = 0.593530679977098   (mode cutoff m = 10)
+  canonical same-surface P            = 0.593400000000000
+  closure minus canonical             = +0.000130679977
+
+Checks
+  PASS: local plaquette equals local Wilson source derivative: value=0.422531739649983 target=0.422531739596721 delta=5.326e-11 tol=1.0e-09
+  PASS: local Wilson generator is additive on independent blocks: |W1+W1-W2| = 1.804e-16
+  PASS: Bessel/Weyl agreement at beta=6: value=0.422531739649983 target=0.422531739649986 delta=3.109e-15 tol=1.0e-12
+  PASS: scalar 3+1 completion ratio: value=1.154700538379252 target=1.154700538379252 delta=0.000e+00 tol=1.0e-15
+  PASS: plaquette four-link coupling map is exact: max scaling deviation = 1.110e-16
+  PASS: 3+1 incidence factor: value=1.500000000000000 target=1.500000000000000 delta=0.000e+00 tol=1.0e-15
+  PASS: no lower link power preserves the plaquette coupling map: max wrong-power deviation = 1.652e-01
+  PASS: candidate plaquette value stays near the historical canonical surface: |P(6) - P_can| = 1.306800e-04 < 2e-4
+
+SUMMARY: EXACT PASS=6 SUPPORT=2 FAIL=0
+
+----- stderr -----
+

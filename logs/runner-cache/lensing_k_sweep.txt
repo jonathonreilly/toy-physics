@@ -1,0 +1,21 @@
+===== runner cache v1 =====
+runner: scripts/lensing_k_sweep.py
+runner_sha256: 319153d8373726bcf42fc2ed6e2df801471c789fca93742f2c2d777d6a1d5779
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+================================================================================
+LENSING SLOPE vs k (PHASE COUPLING) SWEEP
+  H=0.25, Fam1, seeds=[0, 1, 2]
+  k·H sweep: [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 4.0, 5.0]
+  b ∈ [3.0, 4.0, 5.0, 6.0]
+  Reference: k·H=2.5 gives slope ≈ -1.40
+================================================================================
+  Grew seed 0: nodes=144061, 29.3s
+  Grew seed 1: nodes=144061, 32.9s
+  Grew seed 2: nodes=144061, 24.3s
+
+----- stderr -----
+

@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_end_to_end_poisson.py
+runner_sha256: cc5c21d8ee65d303567544ae1273958c6cf99007c6c0ca6fb2e92845676185c7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.54
+status: ok
+----- stdout -----
+POISSON-BACKED END-TO-END TASTE-QUBIT TELEPORTATION AUDIT
+Status: planning / integration artifact; quantum state teleportation only
+Protocol: Poisson ground-state extraction -> traced logical resource -> Bell measurement -> causal two-bit record -> Bob correction
+Input probes: 134 states (seed=20260425)
+High-fidelity threshold: 0.900
+
+End-to-end case table:
+  case                  Sfull    Bell* label     Favg     Fmin     Bmin     noSig record  pass
+  1d_null             2.00000  0.50000  Phi+  0.66667  0.50000  0.00606 2.498e-16    yes      
+  1d_poisson_chsh     2.82267  0.99796  Phi+  0.99864  0.99796  0.99796 2.220e-16    yes   yes
+  2d_poisson_chsh     2.66838  0.97028  Phi+  0.98019  0.97028  0.96983 2.220e-16    yes   yes
+
+Case: 1d_null
+  resource: dim=1 side=8 mass=0 G=0, full CHSH=2.000000, logical CHSH=2.000000, negativity=0.000000, min eig=-1.756e-16
+  Bell overlaps/fidelity: best=0.500000 (Phi+), Phi+=0.500000, exact F_avg=0.666667, sample mean/min/max=0.669676/0.500000/1.000000
+  Bell branches: outcomes=Phi+, Phi-, Psi+, Psi-, probability min/max=2.081668e-17/5.000000e-01, conditional corrected fidelity min/max=0.006062/1.000000
+  Bob before record: distance to resource marginal=4.518e-16, pairwise input distance=2.498e-16, Bob marginal bias from I/2=5.000e-01
+  causal record: label=Phi+, early blocked=True, delivered once=True, delivered-branch fidelity=0.743949
+Case: 1d_poisson_chsh
+  resource: dim=1 side=8 mass=0 G=1000, full CHSH=2.822668, logical CHSH=2.822668, negativity=0.497963, min eig=2.557e-17
+  Bell overlaps/fidelity: best=0.997963 (Phi+), Phi+=0.997963, exact F_avg=0.998642, sample mean/min/max=0.998630/0.997963/0.999491
+  Bell branches: outcomes=Phi+, Phi-, Psi+, Psi-, probability min/max=2.340570e-01/2.659430e-01, conditional corrected fidelity min/max=0.997963/0.999521
+  Bob before record: distance to resource marginal=4.441e-16, pairwise input distance=2.220e-16, Bob marginal bias from I/2=3.189e-02
+  causal record: label=Psi+, early blocked=True, delivered once=True, delivered-branch fidelity=0.998546
+Case: 2d_poisson_chsh
+  resource: dim=2 side=4 mass=0 G=1000, full CHSH=2.668376, logical CHSH=2.745662, negativity=0.470283, min eig=-1.087e-17
+  Bell overlaps/fidelity: best=0.970283 (Phi+), Phi+=0.970283, exact F_avg=0.980189, sample mean/min/max=0.980368/0.970283/1.000000
+  Bell branches: outcomes=Phi+, Phi-, Psi+, Psi-, probability min/max=1.893263e-01/3.106737e-01, conditional corrected fidelity min/max=0.969835/1.000000
+  Bob before record: distance to resource marginal=4.718e-16, pairwise input distance=2.220e-16, Bob marginal bias from I/2=1.213e-01
+  causal record: label=Psi-, early blocked=True, delivered once=True, delivered-branch fidelity=0.989495
+
+Acceptance gates:
+  null controls do not pass high-fidelity protocol: PASS
+  at least one Poisson case passes end-to-end gates: PASS
+  all passing cases keep Bob pre-record input-independence: PASS
+  all passing cases exercise four Bell outcomes: PASS
+  all passing cases have causal record delivery: PASS
+
+Claim boundary:
+  This is Poisson-backed quantum state teleportation on a traced encoded resource.
+  It is not a preparation/readout derivation and not matter, mass, charge,
+  energy, or faster-than-light transport.
+
+----- stderr -----
+

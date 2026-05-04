@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_z3_circulant_mass_basis_nogo.py
+runner_sha256: dc07cc4763174b84e5c0f8f44e4705fd7b0b94179086a230856ca0095e291c01
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO Z3-CIRCULANT MASS-BASIS NO-GO
+========================================================================================
+
+Question:
+  If the mixed bridge is promoted to exact Z3 source transfer, is the
+  resulting exact circulant family already enough for physical leptogenesis?
+
+========================================================================================
+PART 1: THE EXACT Z3-COVARIANT CIRCULANT FAMILY IS REAL-DIAGONAL IN U_Z3
+========================================================================================
+  [PASS] Every exact Z3-covariant circulant bridge diagonalizes in the Z3 basis  (1: offdiag=5.10e-16, imag_diag=2.18e-17; omega: offdiag=4.05e-16, imag_diag=7.43e-17; omega^2: offdiag=4.39e-16, imag_diag=2.79e-17)
+
+  So once the bridge is an exact Z3 character lift, its right-Gram kernel
+  is not merely structured in the Z3 basis. It is real-diagonal there.
+
+========================================================================================
+PART 2: THE CURRENT MAJORANA DOUBLET DIAGONALIZATION IS REAL
+========================================================================================
+  [PASS] The current Z3-basis doublet block diagonalizes by a real orthogonal rotation  (diag block = [[-1.1  0. ]
+ [ 0.   1.5]])
+  [PASS] That rotation carries no new complex CP phase  (purely real orthogonal pi/4 rotation on the doublet block)
+
+  So the heavy-neutrino mass basis is obtained from the Z3 basis by a
+  real change of basis inside the doublet sector.
+
+========================================================================================
+PART 3: THE STANDARD LEPTOGENESIS CP TENSOR STILL VANISHES
+========================================================================================
+  [PASS] After moving to the heavy-neutrino mass basis, the circulant family stays real symmetric  (1: Im(K01^2)=-6.88e-50, Im(K02^2)=3.56e-32, real_sym=True; omega: Im(K01^2)=-1.10e-34, Im(K02^2)=-1.58e-33, real_sym=True; omega^2: Im(K01^2)=-9.96e-34, Im(K02^2)=-1.66e-33, real_sym=True)
+
+  Therefore exact Z3-covariant circulant bridges, including the full
+  source-transfer branch chi=omega, do not generate the physical
+  leptogenesis tensor on the current Majorana stack.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact answer:
+    - the exact Z3-covariant circulant bridge family is real-diagonal in U_Z3
+    - the current Majorana doublet basis change is real
+    - so the heavy-neutrino-basis kernel stays real symmetric
+    - therefore Im[(K_mass)_{1j}^2] = 0 for all j
+
+  The full-source circulant bridge is therefore not the last mile.
+PASS=4  FAIL=0
+
+----- stderr -----
+

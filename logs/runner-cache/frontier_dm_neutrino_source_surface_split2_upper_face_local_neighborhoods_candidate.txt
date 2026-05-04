@@ -1,0 +1,54 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate.py
+runner_sha256: 4b413c5b99dbd172937b2b5e27192496e07a08e22ad1a66f224ddaf01f0d1b72
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 53.45
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE SPLIT-2 UPPER-FACE LOCAL NEIGHBORHOODS
+========================================================================================
+
+Question:
+  After the split-2 broad lower-repair pressure is compressed to the
+  two explicit upper-face extremals, do tested local 3D neighborhoods
+  around those extremals already look transport-compatible?
+
+========================================================================================
+PART 1: THE CAP NEIGHBORHOOD KEEPS THE SAME ETA PEAK
+========================================================================================
+  [PASS] The tested cap neighborhood feasible lower-repair count is stable  (count=3352)
+  [PASS] The tested cap neighborhood keeps the same local lower-repair eta maximizer  ((m,delta,s,eta)=(-0.140000000000,1.188513342509,0.019504173778,0.884523189582))
+  [PASS] Even on that tested cap neighborhood, no lower-repair point reaches transport closure  (best eta=0.884523189582)
+  [PASS] Even on that tested cap neighborhood, the closest lower-repair packet lane still stays far from the preferred quotient  ((m,delta,s,dist)=(-0.140000000000,1.188513342509,0.014500000000,0.242283527374))
+
+========================================================================================
+PART 2: THE ENDPOINT NEIGHBORHOOD KEEPS THE SAME CLOSEST LANE
+========================================================================================
+  [PASS] The tested endpoint neighborhood feasible lower-repair count is stable  (count=6430)
+  [PASS] The tested endpoint neighborhood keeps the same local lower-repair closest-lane point  ((m,delta,s,dist)=(-0.140000000000,1.188955544069,0.000000000000,0.233274467128))
+  [PASS] Even on that tested endpoint neighborhood, the best lower-repair transport value stays well below closure  ((m,delta,s,eta)=(-0.140000000000,1.188830000000,0.005000000000,0.883977578548))
+  [PASS] So even that closest-lane neighborhood still has no lower-repair transport-compatible rival  (closest dist=0.233274467128)
+
+========================================================================================
+PART 3: THE NOTE RECORDS THE LOCAL UPPER-FACE EXHAUSTION
+========================================================================================
+  [PASS] The note records the cap neighborhood and its pinned eta peak
+  [PASS] The note records the endpoint neighborhood and its pinned closest-lane point
+  [PASS] The note records that the carrier-side pressure is exhausted to those two local neighborhoods rather than a diffuse split-2 region
+
+========================================================================================
+RESULT
+========================================================================================
+  Result:
+    - the cap neighborhood keeps the same local eta peak
+    - the endpoint neighborhood keeps the same local closest-lane point
+    - both tested neighborhoods remain transport-incompatible
+  RESULT: split-2 carrier pressure is exhausted to two explicit local
+  upper-face neighborhoods on the current branch
+
+SUMMARY: PASS=11 FAIL=0
+
+----- stderr -----
+

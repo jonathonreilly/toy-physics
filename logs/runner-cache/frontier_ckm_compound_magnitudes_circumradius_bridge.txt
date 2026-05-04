@@ -1,0 +1,138 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_compound_magnitudes_circumradius_bridge.py
+runner_sha256: 8b9887b55d787c3d8b842b18cfe132a46d7ba39675564313dd2f18f2fc776cec
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.77
+status: ok
+----- stdout -----
+========================================================================================
+CKM compound-magnitudes circumradius bridge audit
+See docs/CKM_COMPOUND_MAGNITUDES_CIRCUMRADIUS_BRIDGE_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Ground-up status verification of each cited authority
+----------------------------------------------------------------------------------------
+  RETAINED-TIER (load-bearing for closure):
+
+    [CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md]
+      Status (extracted): 'proposed_retained NLO CKM-structure corollary on the proposed_promoted atlas/axiom'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md
+
+    [CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md]
+      Status (extracted): 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+
+    [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md]
+      Status (extracted): 'proposed_retained standalone structural-identity theorem on `main`.'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+
+    [CKM_BARRED_CIRCUMRADIUS_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md]
+      Status (extracted): 'proposed_retained CKM-structure corollary on the proposed_promoted CKM atlas'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_BARRED_CIRCUMRADIUS_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md
+
+    [WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md]
+      Status (extracted): 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
+      Tier classification: retained
+  [PASS] Retained-tier verified: WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+
+
+----------------------------------------------------------------------------------------
+Extracting retained inputs from authority text
+----------------------------------------------------------------------------------------
+  N_pair extracted:                  n_pair  = 2
+  N_color extracted:                 n_color = 3
+  N_quark = N_pair * N_color:        FOUND
+  [PASS] MAGNITUDES retains N_pair = 2
+  [PASS] MAGNITUDES retains N_color = 3
+  [PASS] MAGNITUDES retains N_quark = N_pair * N_color (=6)
+
+----------------------------------------------------------------------------------------
+C1: NEW three-magnitude circumradius bridge
+----------------------------------------------------------------------------------------
+  |V_td|^2 (computed) = alpha_s**3*(alpha_s**2 + 80)/1152
+  Expected: (N_pair (N_quark - 1)/N_color) |V_us|^2 |V_cb|^2 R_bar^2
+          = (10/3) |V_us|^2 |V_cb|^2 R_bar^2
+          = alpha_s**3*(alpha_s**2 + 80)/1152
+  Difference: 0
+  [PASS] C1: |V_td|^2 = (N_pair (N_quark - 1)/N_color) |V_us|^2 |V_cb|^2 R_bar^2
+  [PASS] C1 alt: N_color |V_td|^2 = N_pair (N_quark - 1) |V_us|^2 |V_cb|^2 R_bar^2
+
+----------------------------------------------------------------------------------------
+C2: NEW four-magnitude circumradius bridge
+----------------------------------------------------------------------------------------
+  (|V_td V_us|/|V_cb V_ub|)^2 (computed) = 3*alpha_s/16 + 15/alpha_s
+  Expected: N_pair^2 N_color (N_quark - 1) R_bar^2 / alpha_s
+          = 60 R_bar^2 / alpha_s
+          = 3*alpha_s/16 + 15/alpha_s
+  Difference: 0
+  [PASS] C2: (|V_td V_us|/|V_cb V_ub|)^2 = N_pair^2 N_color (N_quark - 1) R_bar^2 / alpha_s
+
+  Equivalent form: 30 R_bar^2 / |V_us|^2
+          = N_pair N_color (N_quark - 1) R_bar^2 / |V_us|^2
+  Difference: 0
+  [PASS] C2 alt: (|V_td V_us|/|V_cb V_ub|)^2 = N_pair N_color (N_quark - 1) R_bar^2 / |V_us|^2
+
+----------------------------------------------------------------------------------------
+C3: PDG numerical comparison
+----------------------------------------------------------------------------------------
+  At canonical alpha_s = 0.103:
+    |V_td| = 0.008712, |V_us| = 0.226936
+    |V_cb| = 0.042050, |V_ub| = 0.003896
+    R_bar  = 0.500033, R_bar^2 = 0.250033
+
+  C1 check: 3 |V_td|^2 vs 10 |V_us|^2 |V_cb|^2 R_bar^2:
+    LHS = 3 |V_td|^2                       = 0.0002276816
+    RHS = 10 |V_us|^2 |V_cb|^2 R_bar^2     = 0.0002276816
+  [PASS] C1 numerical: 3 |V_td|^2 = 10 |V_us|^2 |V_cb|^2 R_bar^2 within 1e-10
+
+  C1 PDG check (with framework R_bar):
+    LHS_PDG = 3 |V_td|_PDG^2          = 0.0002223963
+    RHS_PDG = 10 |V_us|_PDG^2 |V_cb|_PDG^2 R_bar^2  =  0.0002114579
+    |Delta/LHS| = 4.92 %
+  [PASS] C1 PDG numerical: 3 |V_td|^2 ~= 10 |V_us|^2 |V_cb|^2 R_bar^2 within 5 % (combined PDG err)
+
+  C2 PDG check: (|V_td V_us|/|V_cb V_ub|)^2:
+    Framework = 145.6504
+    PDG       = 152.0444
+    |Delta/PDG| = 4.21 %
+  [PASS] C2 PDG numerical: (|V_td V_us|/|V_cb V_ub|)^2 framework ~= PDG within 5 %
+
+----------------------------------------------------------------------------------------
+Summary of NEW retained content
+----------------------------------------------------------------------------------------
+  Inputs (retained-tier, ground-up Status verified):
+    CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA  (retained)
+    CKM_MAGNITUDES_STRUCTURAL_COUNTS         (retained)
+    CKM_CP_PHASE_STRUCTURAL_IDENTITY         (retained)
+    CKM_BARRED_CIRCUMRADIUS_EXACT_CLOSED_FORM (retained)
+    WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES (retained)
+
+  NEW retained closed forms:
+
+    (C1) Three-magnitude circumradius bridge:
+         N_color |V_td|^2  =  N_pair (N_quark - 1) |V_us|^2 |V_cb|^2 R_bar^2,
+         i.e., 3 |V_td|^2  =  10 |V_us|^2 |V_cb|^2 R_bar^2.
+
+    (C2) Four-magnitude circumradius bridge:
+         (|V_td V_us|/|V_cb V_ub|)^2  =  N_pair^2 N_color (N_quark - 1) R_bar^2 / alpha_s
+                                       =  60 R_bar^2 / alpha_s.
+
+    (C2 alt) Equivalent form:
+         (|V_td V_us|/|V_cb V_ub|)^2  =  N_pair N_color (N_quark - 1) R_bar^2 / |V_us|^2
+                                       =  30 R_bar^2 / |V_us|^2.
+
+    (C3) PDG validation: framework predictions for both bridges agree
+         with PDG-computed values within 5 % relative deviation.
+
+========================================================================================
+TOTAL: PASS=15, FAIL=0
+========================================================================================
+
+----- stderr -----
+

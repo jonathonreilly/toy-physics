@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_bell_measurement_circuit.py
+runner_sha256: 7aa1cd7c0eb6c884550a48511f0468362fa3eab8017474cc7462e02ff5057ca0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.11
+status: ok
+----- stdout -----
+TELEPORTATION BELL-MEASUREMENT CIRCUIT/DECOMPOSITION
+Status: planning / ideal logical taste-measurement artifact
+
+Native logical taste surface:
+  lattice: 3D side=4
+  encoded site indices |0_L>, |1_L>: (0, 1)
+  site Z == I_cells tensor xi_5: True
+  site X == I_cells tensor xi_last: True
+  restricted Z_L is Pauli Z: True
+  restricted X_L is Pauli X: True
+  restricted anticommutator norm: 0.000e+00
+  computational taste-Z readout projector error: 0.000e+00
+  native ZZ/XX stabilizer projector error vs ideal P_zx: 0.000e+00
+
+Stabilizer Bell projectors:
+  P_zx = 1/4 (I + (-1)^x Z_A Z_R)(I + (-1)^z X_A X_R)
+  resolution error: 0.000e+00
+  orthogonality error: 0.000e+00
+  idempotence error: 0.000e+00
+  Bell-state outer-product error: 1.110e-16
+  Bell-state stabilizer eigenvalue error: 0.000e+00
+
+Logical circuit decomposition:
+  circuit: CNOT(A -> R), H(A), computational Z-basis measurement
+  output bit on A is z (XX phase record); output bit on R is x (ZZ flip record)
+  circuit unitarity error: 2.220e-16
+  pulled-back first output Z observable error vs X_A X_R: 2.220e-16
+  pulled-back second output Z observable error vs Z_A Z_R: 2.220e-16
+  max circuit measurement projector error vs P_zx: 1.110e-16
+  Bell input -> computational record min right probability: 0.9999999999999996
+  Bell input -> computational record max wrong probability: 0.000e+00
+  Phi+ -> bits(z,x)=(0, 0)
+  Phi- -> bits(z,x)=(1, 0)
+  Psi+ -> bits(z,x)=(0, 1)
+  Psi- -> bits(z,x)=(1, 1)
+
+Teleportation trials using circuit-derived Bell measurement:
+  random input states: 64 (seed=20260425)
+  Bell outcomes exercised: Phi+, Phi-, Psi+, Psi-
+  max Bell probability error from 1/4: 2.776e-16
+  minimum corrected fidelity: 0.9999999999999997
+  maximum corrected infidelity: 3.331e-16
+  max corrected-state trace distance to input: 2.618e-16
+  max Bob trace distance to I/2 before Alice measurement: 3.331e-16
+  max Bob trace distance to I/2 after Alice measurement but before message: 5.551e-16
+  max pairwise pre-message Bob-state distance across inputs: 3.331e-16
+
+Acceptance gates:
+  native taste logical Pauli surface: PASS
+  stabilizer Bell projectors: PASS
+  CNOT-H circuit decomposition: PASS
+  all Bell outcomes: PASS
+  random-state correction fidelity: PASS
+  Bob pre-message input-independence: PASS
+
+Physical assumptions left open:
+  ideal encoded Bell resource is supplied
+  ideal logical taste CNOT/H gates or ideal ZZ/XX stabilizer measurements are supplied
+  ideal taste computational-basis readout and classical record handling are supplied
+  no apparatus Hamiltonian, decoherence, or durable-record derivation is supplied
+  no matter, mass, charge, energy, object transport, or FTL signaling is claimed
+
+----- stderr -----
+

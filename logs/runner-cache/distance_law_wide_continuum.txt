@@ -1,0 +1,41 @@
+===== runner cache v1 =====
+runner: scripts/distance_law_wide_continuum.py
+runner_sha256: d006ab75099773e8b04422e6303a413341f18f422838bfcdbd3cfe937796c0da
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+================================================================================
+DISTANCE LAW ON WIDE h^2+T LATTICE — CONTINUUM LIMIT
+  W=20, L=30, s=0.004, far-field b>=8
+================================================================================
+
+h=1.000 (nodes=52,111, T=4.274)
+  b=  5: +1.388222e-03 TOWARD
+  b=  6: -1.359194e-02 AWAY
+  b=  7: -2.476153e-02 AWAY
+  b=  8: -3.100354e-02 AWAY
+  b=  9: -3.252446e-02 AWAY
+  b= 10: -3.142580e-02 AWAY
+  b= 12: -2.710972e-02 AWAY
+  b= 14: -2.312416e-02 AWAY
+  b= 16: -1.986804e-02 AWAY
+  alpha(b>=8) = -0.698, alpha(b>=6) = 0.143  (2s)
+
+h=0.500 (nodes=400,221, T=5.081)
+  b=  5: +1.149782e-02 TOWARD
+  b=  6: +1.571514e-02 TOWARD
+  b=  7: +1.283157e-02 TOWARD
+  b=  8: +1.068056e-02 TOWARD
+  b=  9: +9.965796e-03 TOWARD
+  b= 10: +8.870405e-03 TOWARD
+  b= 12: +7.156214e-03 TOWARD
+  b= 14: +5.956868e-03 TOWARD
+  b= 16: +5.048021e-03 TOWARD
+  alpha(b>=8) = -1.112, alpha(b>=6) = -1.127  (48s)
+
+h=0.250 (nodes=3,136,441, T=5.802)
+
+----- stderr -----
+

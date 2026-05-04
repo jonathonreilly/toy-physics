@@ -1,0 +1,61 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_bridge_moment_closure.py
+runner_sha256: f4a9d163c19c6b44bf54ba5d70c8334ed6a84216eb280a701132f860c17eb94c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 17.65
+status: ok
+----- stdout -----
+==============================================================================
+y_t BRIDGE MOMENT CLOSURE
+==============================================================================
+
+Fit the accepted response kernel on the viable UV-localized window and
+test whether the remaining bridge problem collapses to a two-moment
+closure in I2 and the UV centroid.
+
+Affine kernel fit on the UV-localized window x >= 0.94:
+  K(x) ~= 5.599527e-02 x + -9.615122e-03
+  max relative error = 2.285806e-03
+  rms relative error = 1.016248e-03
+
+Viable profiles retained inside |dev| < 0.5%: 83
+Near-target profiles retained inside |dev| < 0.1%: 22
+
+Best row per family:
+  shape          center    width       dev%         I2         c2        J_aff
+  logistic        0.975    0.020    +0.0005   0.029928   0.974042   0.00134458
+  erf             0.965    0.022    +0.0145   0.030162   0.977950   0.00136169
+  smoothstep      0.965    0.016    +0.0057   0.030116   0.982530   0.00136733
+
+  [PASS] 1a-kernel-is-nearly-affine-on-the-uv-window: max relative error = 2.285806e-03
+  [PASS] 1b-i2-still-controls-endpoint-on-the-viable-class: corr(I2, dev) = +0.999888
+  [PASS] 1c-affine-response-moment-collapses-the-near-target-band: |dev|<0.1% rows have J_aff band width = 8.680154e-05
+  [PASS] 1d-best-family-rows-share-a-common-response-moment: best-family J_aff band width = 2.274863e-05
+  [PASS] 1e-centroid-band-stays-tight-on-near-target-rows: |dev|<0.1% rows have c2 band width = 1.058286e-02
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+On the viable UV-localized window, the accepted response kernel is nearly
+affine. So the remaining bridge selection problem is no longer a full
+functional problem even in proxy form.
+
+It collapses to a two-moment closure:
+  1. the gauge-surplus action I2
+  2. the UV centroid c2
+
+Equivalently, the near-target rows share one narrow response-weighted
+moment band J_aff = I2 * (a c2 + b) induced by the accepted kernel.
+
+That does not yet derive why the exact lattice bridge picks this band.
+But it means the remaining theorem target is a weighted moment-selection
+rule, not a free profile-selection problem.
+
+==============================================================================
+FINAL TALLY: 5 PASS / 0 FAIL
+Elapsed: 17.07 s
+==============================================================================
+
+----- stderr -----
+

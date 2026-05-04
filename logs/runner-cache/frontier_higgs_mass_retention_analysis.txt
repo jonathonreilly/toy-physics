@@ -1,0 +1,144 @@
+===== runner cache v1 =====
+runner: scripts/frontier_higgs_mass_retention_analysis.py
+runner_sha256: c5bc0fa65f0a513dc8a28ab57288b1c4d18ad4677e0433af5e11ba7927bab792
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.82
+status: ok
+----- stdout -----
+========================================================================
+HIGGS MASS RETENTION ANALYSIS -- Delta_R Propagation + m_H Gaps
+========================================================================
+
+Authority note: docs/HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md
+
+Block 1: Retained canonical surface constants.
+  [PASS] alpha_LM / (4 pi) = 0.00721 +/- 1e-5 (canonical surface)  (alpha_LM/(4 pi) = 0.0072151171)
+  [PASS] alpha_s(v) = 0.1033 +/- 5e-4 (canonical surface)  (alpha_s(v) = 0.1033038161)
+  [PASS] u_0 = 0.87768 +/- 1e-4 (canonical surface)  (u_0 = 0.8776813812)
+  [PASS] y_t(v) = 0.9176 (retained central from YT Delta_R master assembly)  (y_t(v) = 0.917600)
+  [PASS] v = 246.28 GeV (retained from hierarchy theorem)  (v = 246.2800 GeV)
+
+Block 2: Retained YT Delta_R bands (inherited from YT retention stack).
+  [PASS] YT Delta_R 1-loop literature sigma = 2.32 % (master assembly)  (sigma = 2.320 %)
+  [PASS] YT Delta_R 1-loop full-staggered-PT sigma = 0.45 % (fsPT quadrature)  (sigma = 0.450 %)
+  [PASS] YT Delta_R through-2-loop sigma = 0.70 % (2-loop extension)  (sigma = 0.700 %)
+
+Block 3: Baseline m_H consistency with authority central.
+  [PASS] Baseline m_H within 0.5 GeV of 3-loop authority central 125.1 GeV  (m_H = 125.0374 GeV (authority 125.1, diff -0.063))
+  [PASS] lambda(v) positive (vacuum stable on canonical surface)  (lambda(v) = 0.128882)
+  [PASS] y_t(M_Pl) within [0.35, 0.50] (expected after RGE transport)  (y_t(M_Pl) = 0.382129)
+
+Block 4: Amplification factor A_MH = (dm_H/m_H) / (dy_t/y_t).
+   dy_t/y_t = -2.000 %  ->  A_MH = 2.686
+   dy_t/y_t = -1.000 %  ->  A_MH = 2.679
+   dy_t/y_t = -0.700 %  ->  A_MH = 2.677
+   dy_t/y_t = -0.450 %  ->  A_MH = 2.675
+   dy_t/y_t = +0.450 %  ->  A_MH = 2.669
+   dy_t/y_t = +0.700 %  ->  A_MH = 2.667
+   dy_t/y_t = +1.000 %  ->  A_MH = 2.665
+   dy_t/y_t = +2.000 %  ->  A_MH = 2.659
+  [PASS] A_MH central ~ 2.67 +/- 0.03 (robust across +/- 2 %)  (A_MH_mean = 2.6721)
+  [PASS] A_MH spread across +/- 2 % < 0.1 (stability)  (spread = 0.0275)
+
+Block 5: Propagated YT-through-2L uncertainty on m_H.
+   sigma_m_H^YT-lit    = A_MH * 2.32 % * m_H = 7.745 GeV
+   sigma_m_H^YT-fsPT   = A_MH * 0.45 % * m_H = 1.502 GeV
+   sigma_m_H^YT-2L     = A_MH * 0.70 % * m_H = 2.337 GeV
+  [PASS] YT-through-2L propagation: sigma_m_H ~= 2.34 GeV  (sigma = 2.3369 GeV)
+  [PASS] YT-fsPT-1L propagation: sigma_m_H ~= 1.50 GeV  (sigma = 1.5023 GeV)
+
+Block 6: Gap 1 -- Loop-order transport systematic (loop-geometric bound).
+   r_RGE = alpha_s(M_Z)/pi * b_0 = 0.2877
+   tail factor r/(1-r)           = 0.4039
+   |m_H^3L - m_H^2L| observed    = 5.300 GeV
+   Gap 1 bound |m_H 4L+ tail|    = 2.141 GeV
+  [PASS] r_RGE = 0.288 +/- 5e-3 from alpha_s(M_Z)/pi * (23/3)  (r_RGE = 0.28772)
+  [PASS] Observed m_H^3L - m_H^2L = 5.3 GeV (framework observable)  (shift = 5.300 GeV)
+  [PASS] Gap 1 bound sigma_m_H^transport ~= 2.14 GeV  (sigma = 2.1409 GeV)
+
+Block 7: Gap 2 -- Classicality BC quantum correction (dim. analysis).
+   dm_H/d(lambda(M_Pl)) probed    = 310.80 GeV per unit
+   |delta lambda(M_Pl)| bound     = g^4/(16 pi^2) = 0.000396
+   Gap 2 bound sigma_m_H^BC       = 0.1230 GeV
+  [PASS] Slope dm_H/d(lambda(M_Pl)) ~ 300-330 GeV/unit  (slope = 310.797)
+  [PASS] Classicality BC correction |delta lambda| ~ 10^-4-10^-3 from g^4/(16 pi^2)  (delta lambda = 0.000396)
+  [PASS] Gap 2 bound sigma_m_H^BC <= 0.5 GeV (sub-GeV)  (sigma = 0.1230 GeV)
+
+Block 8: Gap 3 -- Top-threshold 3-loop matching residual.
+   alpha_s(m_t)/pi (r_match)       = 0.0344
+   |Delta lambda^2-loop match|     ~ 0.000092
+   |Delta lambda^3-loop match|     <= 0.000003
+   Gap 3 bound sigma_m_H^match     = 0.0010 GeV
+  [PASS] r_match = alpha_s(m_t)/pi ~ 0.034  (r_match = 0.03438)
+  [PASS] Gap 3 bound sigma_m_H^match <= 0.2 GeV (negligible)  (sigma = 0.0010 GeV)
+
+Block 9: Assembled retained m_H band (quadrature + linear).
+   sigma_m_H^YT-through-2L     = 2.337 GeV
+   sigma_m_H^loop-transport    = 2.141 GeV
+   sigma_m_H^classicality-BC   = 0.123 GeV
+   sigma_m_H^threshold         = 0.001 GeV
+   ----------------------------------------------
+   sigma_m_H (quadrature)      = 3.172 GeV
+   sigma_m_H (linear-sum)      = 4.602 GeV
+   Retained m_H band (1 sigma) = [121.866, 128.209] GeV
+  [PASS] Quadrature-combined sigma_m_H ~= 3.17 GeV +/- 0.15  (sigma = 3.1717 GeV)
+  [PASS] Linear-sum sigma_m_H ~= 4.60 GeV +/- 0.15 (safety bound)  (sigma = 4.6018 GeV)
+
+Block 10: Consistency with observed m_H = 125.25 GeV.
+   Retained central    = 125.0374 GeV
+   Observed            = 125.2500 GeV
+   Offset              = +0.2126 GeV
+   Offset / sigma_quad = +0.0670 sigma
+  [PASS] Observed m_H within 0.5 sigma of retained central (exceptional agreement)  (offset = +0.0670 sigma)
+  [PASS] Observed m_H inside 1-sigma retained band  (band = [121.87, 128.21] GeV)
+  [PASS] Observed m_H inside even tightest sub-band (YT-fsPT +/- 1.50 GeV)  (YT-fsPT band = [123.54, 126.54])
+
+Block 11: Tightening factor vs packaged bridge-path band.
+   Packaged bridge-path width  = 8.100 GeV
+   Retained quadrature width   = 6.343 GeV
+   Tightening factor           = 21.7 %
+  [PASS] Retention tightens band by >= 20 % vs packaged  (tightening = 21.69 %)
+
+Block 12: YT-only through-2L (sanity, for comparison).
+   YT-only through-2L width    = 4.674 GeV
+   Tightening if YT-only       = 42.3 %
+  [PASS] YT-only through-2L band is tighter than total (as expected)  (4.67 < 6.34)
+
+Block 13: Retention budget dominance -- which gap dominates?
+   YT-through-2L       :  54.29 % of sigma^2
+   Loop-transport      :  45.56 % of sigma^2
+   Classicality-BC     :   0.15 % of sigma^2
+   Threshold           :   0.00 % of sigma^2
+  [PASS] YT-through-2L dominates the budget (>= 50 % of sigma^2)  (YT contribution = 54.29 %)
+  [PASS] Loop-transport is the dominant m_H-native gap  (loop-transport = 2.141 GeV)
+
+Block 14: Loop-geometric construction consistency (m_H analog of YT r_R).
+   YT r_R (at alpha_LM)        = 0.2213
+   m_H r_RGE (at alpha_s(M_Z)) = 0.2877
+   Ratio r_RGE / r_R           = 1.3004
+  [PASS] YT r_R uses same b_0 construction as m_H r_RGE  (r_R = 0.22126)
+  [PASS] r_RGE > r_R (weak scale steeper than UV) but within factor 2  (r_RGE / r_R = 1.3004)
+
+Block 15: Publication surface integrity.
+  [PASS] Retained YT Delta_R through-2-loop sigma unchanged (+/- 0.70 %)  (inherited verbatim)
+  [PASS] Higgs canonical 3-loop authority central unchanged (125.1 GeV)  (inherited verbatim)
+  [PASS] Higgs 2-loop authority central unchanged (119.8 GeV)  (inherited verbatim)
+  [PASS] No modification of publication-surface files  (this note adds a retention analysis layer only)
+
+
+========================================================================
+SUMMARY -- Higgs Mass Retention Analysis
+========================================================================
+  Retained m_H central:        125.0374 GeV
+  Retained sigma (quadrature): 3.172 GeV
+  Retained 1-sigma band:       [121.87, 128.21] GeV
+  Observed m_H:                125.25 GeV (+0.07 sigma)
+  Tightening vs packaged:      21.7 %
+  Elapsed:                     0.26 s
+
+  TOTAL: 38 PASS, 0 FAIL
+========================================================================
+
+----- stderr -----
+

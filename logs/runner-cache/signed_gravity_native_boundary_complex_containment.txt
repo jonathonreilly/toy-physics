@@ -1,0 +1,40 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_native_boundary_complex_containment.py
+runner_sha256: 3c03427944f7f04541980fac2bc24499e95eb4e1e13ce9ae343f92825a5c9aca
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+====================================================================================================================
+SIGNED GRAVITY NATIVE BOUNDARY-COMPLEX CONTAINMENT AUDIT
+  raw retained cochain/Hodge complex versus added orientation-line APS source character
+====================================================================================================================
+
+[PASS] raw retained cochain/Hodge boundary complex is eta-neutral  (cycle8:eta=+0,zero=2,chi=+0,pair=1.8e-15; cycle12:eta=+0,zero=2,chi=+0,pair=2.0e-15; ladder6:eta=+0,zero=2,chi=+0,pair=3.1e-15; grid4x4_disk:eta=+0,zero=1,chi=+0,pair=3.1e-15; annulus7:eta=+0,zero=2,chi=+0,pair=2.2e-15)
+[PASS] orientation reversal is a relabeling/control for raw eta  (eta=[0, 0, 0], chi=[0, 0, 0], edge_reversal_spectral_err=0.0e+00, face_reversal_spectral_err=0.0e+00)
+[PASS] APS sign appears only after orientation-line extension and kernel quarantine  (raw_zero_modes=2, kernel_projected=True, added_orientation_line_dim=1, extended=[(1, 1, 0, 1), (-1, -1, 0, -1)])
+[PASS] native raw boundary source basis cannot contain the signed source character  (native_basis_residual=1.414e+00, fitted=[-0. -0.], orientation_metadata_residual=0.0e+00, source_term_added=False)
+[PASS] non-claim and added-structure classification is explicit  (native_aps_line_contained=False, orientation_line_added=True, kernel_quarantine_added=True, physical_signed_gravity_prediction=False, negative_inertial_mass=False, shielding=False, propulsion=False, reactionless_force=False)
+
+INTERPRETATION
+  On the raw retained finite boundary complex D_Y=d+d^*, cochain parity
+  anticommutes with D_Y.  The spectrum is therefore symmetric and the APS
+  eta sign is zero on the tested graph families.  Reversing edge or face
+  orientation changes basis signs, not the eta invariant.  The previous
+  signed APS carrier is recovered only by adding an oriented one-dimensional
+  line and by quarantining the native Hodge zero modes.
+
+VERDICT
+  The original raw retained boundary complex does not currently contain the
+  orientation-line APS source character as an active spectral source.  The
+  determinant-orientation grammar may be native at the determinant-line
+  functor level, but the actual APS boundary operator used for signed
+  response requires an added orientation-line realization unless a new
+  retained boundary theorem supplies it.
+
+SUMMARY: PASS=5 FAIL=0
+FINAL_TAG: SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_APS_LINE_NOT_CONTAINED
+
+----- stderr -----
+

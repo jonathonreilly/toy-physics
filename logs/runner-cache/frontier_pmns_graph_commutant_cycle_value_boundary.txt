@@ -1,0 +1,88 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_graph_commutant_cycle_value_boundary.py
+runner_sha256: f099ced36fd1c8bac6464d6427d8c5f1055b2817dce2fbc43ea8967b84db7acc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.11
+status: ok
+----- stdout -----
+========================================================================================
+PMNS GRAPH-COMMUTANT CYCLE VALUE BOUNDARY
+========================================================================================
+
+Inputs reused:
+  - graph-first axis alignment
+  - projected commutant eigenoperator selector
+  - oriented-cycle channel value law
+  - reduced-channel nonselection theorem
+
+Question:
+  Can the graph-native projected commutant / generation-boundary
+  route derive a positive value law for the reduced forward-cycle
+  channel A_fwd(u,v,w)?
+
+========================================================================================
+PART 1: GRAPH-FIRST + PROJECTED COMMUTANT FIX THE SELECTOR BUNDLE
+========================================================================================
+  [PASS] S_1 is Hermitian
+  [PASS] S_1^2 = I
+  [PASS] S_2 is Hermitian
+  [PASS] S_2^2 = I
+  [PASS] S_3 is Hermitian
+  [PASS] S_3^2 = I
+  [PASS] The graph-first selector has exactly three minima  (count=3)
+  [PASS] Those minima are exactly the three coordinate axes  (mins=((0.0, 0.0, 1.0), (0.0, 1.0, 0.0), (1.0, 0.0, 0.0)), min=0.00e+00)
+  [PASS] The projected commutant generator has a 4-dimensional projected corner space  (dim=4)
+  [PASS] The C3 transport remains unitary on the projected corner orbit
+  [PASS] The even Fourier mode is the corner average  (v0=0.178575+0.000000j)
+  [PASS] The odd Fourier mode is nonzero  (|v1|=0.044644)
+  [INFO] The projected commutant fixes the selector bundle (tau,q)  (tau=0, q=2)
+
+========================================================================================
+PART 2: TWO DISTINCT REDUCED-CYCLE POINTS SHARE THE SAME ROUTE SIGNATURE
+========================================================================================
+  [PASS] The reduced-cycle family is invariant under the residual swap-conjugate symmetry
+  [PASS] The route returns the same selector bundle on two distinct reduced-cycle points  (sig_a=(tau=0, q=2), sig_b=(tau=0, q=2))
+  [PASS] The two reduced-cycle points are genuinely different  (|A-B|=0.715961)
+  [PASS] Their reduced-cycle coordinates differ  (coords_a=[0.41 0.32 0.28], coords_b=[ 0.29 -0.17  0.34])
+  [PASS] Their oriented-cycle coefficients differ as well  (coeffs_a=[0.41+0.32j 0.28+0.j   0.41-0.32j], coeffs_b=[0.29-0.17j 0.34+0.j   0.29+0.17j])
+
+========================================================================================
+PART 3: THE ROUTE IS VALUE-BLIND EVEN THOUGH THE VALUES ARE REALIZED
+========================================================================================
+  [PASS] The graph-first / projected-commutant route signature is constant  (signature={'axis_count': 3, 'axis_mins': ((0.0, 0.0, 1.0), (0.0, 1.0, 0.0), (1.0, 0.0, 0.0)), 'axis_min_val': 0.0, 'tau': 0, 'q': 2, 'orbit_modes': (np.complex128(0.17857495230225157+0j), np.complex128(0.04464373807556288+1.3877787807814457e-17j), np.complex128(0.04464373807556288+1.3877787807814457e-17j))})
+  [PASS] The native oriented-cycle value law still reads the reduced values exactly on the active block
+  [PASS] The same selector bundle is recovered on both reduced-cycle points
+  [PASS] So the route does not collapse the 3-real reduced family to a unique point  (same route signature, different values)
+
+  This is the exact boundary: the graph-native projected-commutant
+  route fixes the selector bundle, but it is constant on the reduced
+  forward-cycle family and therefore cannot select (u,v,w).
+
+========================================================================================
+PART 4: CURRENT-BANK STATUS
+========================================================================================
+  [PASS] The value-law note confirms the reduced-cycle coefficients are read from the active block
+  [PASS] The reduced-channel no-go note says the current bank does not select a unique point
+  [PASS] The commutant note says the route is only partial
+  [PASS] The graph-first note still only derives alignment, not values
+
+  So the graph-native projected commutant attack is a real selector
+  theorem, but not the missing value law.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact graph-native projected-commutant answer:
+    - the route fixes the weak axis and residual Z2 stabilizer
+    - it fixes the selector bundle (tau,q)
+    - it leaves the reduced forward-cycle values (u,v,w) unfixed
+
+  Therefore this route does not supply the missing value law.
+  It sharpens the boundary and points to the next positive target:
+  a lower-level source/transport law, not more commutant data.
+
+PASS=25 FAIL=0
+
+----- stderr -----
+

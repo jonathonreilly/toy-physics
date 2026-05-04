@@ -1,0 +1,56 @@
+===== runner cache v1 =====
+runner: scripts/frontier_planck_target3_clifford_phase_bridge.py
+runner_sha256: 4eeac86ab185bdf4caa2f7620ae06c5609280ab33772cf6a324ab496705fcf87
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+PLANCK TARGET 3: CLIFFORD PHASE BRIDGE THEOREM
+==============================================================================
+
+Question: under the primitive Clifford/coframe response premise,
+does the rank-four active block force the CAR edge carrier?
+
+[PASS] time-locked primitive event cell has dimension sixteen: H_cell = C^2_t otimes C^2_x otimes C^2_y otimes C^2_z
+[PASS] active primitive boundary packet has rank four: one primitive atom for t,x,y,z
+[PASS] source-free primitive trace is exactly one quarter: Tr((I_16/16) P_A)=4/16=1/4
+[PASS] Hilbert phase has one native full-turn unit: exp(i 2*pi)=1
+[PASS] dimensionless action is phase modulo one full turn: S_phase is defined in R/(2*pi Z)
+[PASS] primitive coframe generators square to the metric norm: max ||Gamma_a^2-I||=0.00e+00
+[PASS] primitive coframe generators are Hermitian responses: max Hermitian error=0.00e+00
+[PASS] metric compatibility polarizes to the Cl_4 anticommutator: max {Gamma_a,Gamma_b}-2delta_ab error=0.00e+00
+[PASS] linear coframe response preserves the primitive quadratic form: max ||D(v)^2-||v||^2 I||=1.84e-16
+[PASS] coframe anticommutator equals the polarized metric: error=3.93e-17
+[PASS] Clifford words span the full active matrix algebra: span rank=16=dim M_4(C)
+[PASS] rank-four Clifford module is irreducible: commutant is only complex scalars
+[PASS] faithful Cl_4 response cannot fit in a smaller active block: dim M_d(C)<16 for d<4, while d=4 saturates Cl_4(C)
+[PASS] Clifford bivectors generate unitary local rotations: ||B^2+I||=0.00e+00
+[PASS] spin lift records the expected central phase under a full vector turn: 2*pi vector turn gives -I on spinors; 4*pi gives I
+[PASS] oriented Majorana pairs give two complex CAR modes: max {c,c}=0.00e+00, max {c,c^dagger} error=0.00e+00
+[PASS] two complex CAR modes have exactly the active-block dimension: dim F(C^2)=4=rank(P_A)
+[PASS] CAR modes reconstruct the primitive Clifford coframe generators: max reconstruction error=0.00e+00
+[PASS] Clifford-CAR parity gives the primitive 2+2 odd/even split: eigenvalues=[-1, -1, 1, 1]; odd error=0.00e+00
+[PASS] commuting two-qubit semantics fail the primitive coframe Clifford law: max metric error=4.00e+00
+[PASS] ququart clock-shift semantics fail Hermitian unit coframe response: ||Z_4^2-I||=2.83e+00; Hermitian error=2.83e+00
+[PASS] rank-four semantics ambiguity is removed by the native Clifford coframe law: non-CAR rank-four readings are not metric-compatible coframe responses
+[PASS] normal Clifford-CAR mode gives the simple primitive crossing channel: 2/12=1/6
+[PASS] oriented tangent Laplacian has the self-dual half-zone gate: Delta=0.189087110721, partner=1.810912889279
+[PASS] tangent Clifford-CAR mode contributes one average crossing: two crossings on half the tangent zone gives 1/12
+[PASS] primitive Clifford-CAR carrier has exact Widom coefficient one quarter: c_Widom=(2+1)/12=3/12=1/4
+[PASS] entanglement coefficient equals the primitive Planck trace: c_Widom=0.250000000000, c_cell=0.250000000000
+[PASS] primitive carrier fixes the physical source-unit scale lambda=1: lambda=4*c_cell=1
+[PASS] source-normalized lattice Newton coefficient is one: G_Newton,lat=1/lambda=1
+[PASS] Planck area coefficient matches the Clifford-CAR carrier: 1/(4G_Newton,lat)=1/4=c_Widom
+[PASS] natural-unit Planck map gives a/l_P=1: l_P^2=G_phys=a^2 in hbar=c=1 units
+[PASS] bridge is conditional on Clifford coframe structure, not bare Hilbert flow: the previous bare-Hilbert boundary theorem remains valid without the coframe-response premise
+[PASS] no fitted entropy coefficient enters the bridge: 1/4 follows from Cl_4 irreducibility, self-dual half-zone measure, and c_cell=4/16
+[PASS] conditional bridge avoids claiming an SI decimal for hbar: the derived unit is the native dimensionless phase/action unit; SI metrology is external
+
+Summary: PASS=34  FAIL=0
+
+Verdict: conditional structural Target 3 bridge. Under the metric-compatible Clifford coframe response premise, the rank-four active block is forced to be the irreducible Cl_4/CAR edge carrier, which gives c_Widom=c_cell=1/4 and, with source-unit normalization, G_lat=1 and a/l_P=1 in natural phase/action units.
+
+----- stderr -----
+

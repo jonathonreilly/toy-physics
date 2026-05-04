@@ -1,0 +1,45 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_brannen_phase_reduction_theorem.py
+runner_sha256: fa812efee03bf0576109c1ad249fa3896323a898cc98b5aba4ba0fa5d5bd5161
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+B1. Doublet conjugate-pair forcing: n_eff = 2
+  PASS  n_eff = |d(arg zeta)/d(theta)| = 2 (numerical)  [n_eff = 1.9999999878]
+  PASS  n_eff = 2 exact (d(-2 theta)/d theta = -2)  [N_EFF = 2]
+  PASS  projective ratio arg = -2*theta (conjugate-pair forcing)  [arg(zeta) = -1.4000000000, -2*theta = -1.4000000000]
+
+B2. Brannen phase formula: delta = n_eff / d^2 = 2/9
+  PASS  delta = n_eff / d^2 is exact rational  [delta = 2/9]
+  PASS  Brannen normalization: delta = |Δ(arg zeta)| / (2pi*d) = 2/9  [delta = 0.222222222222]
+
+B3. Koide ratio identity: Q = n_eff / d
+  PASS  Q = n_eff / d = 2/3 (exact rational)  [Q = 2/3]
+  PASS  Q = n_eff / d matches retained Koide ratio Q = 2/3  [Q_formula = 2/3, Q_retained = 2/3]
+  PASS  delta = Q / d = (2/3) / 3 = 2/9 (exact rational)  [delta = 2/9]
+
+B4. Route 2: flat connection A = d(theta) has zero curvature
+  PASS  Full Z_3 orbit holonomy exp(i*2pi) = 1 (trivial)  [|hol - 1| = 2.45e-16]
+  PASS  Z_3 partial-step holonomy ≠ delta=2/9 phase (no quantization from flat A)  [step phase = 2.094395, delta*2pi = 1.396263]
+
+B5. Route 1: physical Koide base is interval (c_1 = 0)
+  PASS  Ambient S^2 n=2 monopole reproduces delta = 2/9  [delta(S^2, n=2) = 0.222222222222]
+  PASS  But S^2 completion requires c_1 = n_eff = 2, equivalent to Q = n_eff/d = 2/3  [Q = n_eff/d = 2/3]
+
+B6. Conditional closure: delta = Q/d given Q = 2/3
+  PASS  Given Q = 2/3, delta = Q/d = 2/9 (exact rational, uniquely forced)  [delta = 2/9]
+  PASS  Counterfactual: Q' = 3/4 gives delta' = 1/4 != 2/9  [delta' = 1/4]
+  PASS  n_eff = 2 is structural (conjugate-pair, no retained input)  [doublet L_omegabar = conj(L_omega) forces n_eff = 2]
+  PASS  d = 3 is structural (|C_3|, no retained input)  [|C_3| = 3]
+
+============================================================
+PASS=16  FAIL=0
+All checks passed. I2 conditionally closed on I1.
+  n_eff = 2  (structural: conjugate-pair forcing)
+  d     = 3  (structural: |C_3|)
+  delta = n_eff / d^2 = 2/9  (given Q = n_eff/d = 2/3)
+
+----- stderr -----
+

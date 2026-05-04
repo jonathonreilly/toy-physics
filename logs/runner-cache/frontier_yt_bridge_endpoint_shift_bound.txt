@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_bridge_endpoint_shift_bound.py
+runner_sha256: 46a08370982f308ceb723db815c728dfd77a63723dc70141907a54e5a77a3d88
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+==============================================================================
+y_t BRIDGE ENDPOINT SHIFT BOUND
+==============================================================================
+
+Turn the local-Hessian selector, higher-order audit, and nonlocal audit
+into one intrinsic endpoint-shift bound on the exact bridge.
+
+Inputs from the current package stack:
+  local selector y_loc                 = 0.917605
+  package target y_t(v)                = 0.917600
+  higher-order ratio r_ho              = 0.007123842
+  nonlocal ratio r_nl (operator norm)  = 0.005023669
+  nonlocal ratio r_nl,avg (support)    = 0.000426222
+
+Conservative theorem-grade bound:
+  relative budget X_cons = 0.012147511
+  absolute budget        = 0.011146617
+  interval               = [0.906458383, 0.928751617]
+
+Support-tight empirical bound:
+  relative budget X_tight = 0.007550063
+  absolute budget         = 0.006927976
+  interval                = [0.910677024, 0.924532976]
+
+Package target proximity:
+  |target - local selector| = 0.000005000
+  relative gap              = 0.000005449
+
+  [PASS] 1a-conservative-budget-stays-small: X_cons = 0.012147511
+  [PASS] 1b-support-tight-budget-is-smaller-than-conservative: X_tight = 0.007550063
+  [PASS] 1c-target-lies-inside-conservative-interval: target interval check = [0.906458383, 0.928751617]
+  [PASS] 1d-target-lies-inside-support-tight-interval: target interval check = [0.910677024, 0.924532976]
+  [PASS] 1e-target-gap-is-tiny-compared-with-the-conservative-budget: |target-local| / budget = 0.000449
+  [PASS] 1f-higher-order-tail-dominates-the-measured-nonlocal-average-tail: r_ho = 0.007123842, r_nl,avg = 0.000426222
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+Under the forced UV window and the current quasi-local/stability
+hypotheses, the exact interacting bridge can move the endpoint by at
+most the sum of the higher-order and nonlocal correction ratios.
+
+That gives a conservative endpoint shift budget of 0.012147511 (1.2147511%), or an absolute shift budget of 0.011146617 around y_loc = 0.917605.
+The measured family-average support budget is tighter at 0.007550063 (0.75500635%), corresponding to an absolute shift of 0.006927976.
+
+So the current package has a clean intrinsic endpoint-shift bound on the exact
+bridge, but it is still a bounded-support result, not a proof that the
+y_t lane is fully unbounded.
+
+==============================================================================
+FINAL TALLY: 6 PASS / 0 FAIL
+Elapsed: 0.00 s
+==============================================================================
+
+----- stderr -----
+

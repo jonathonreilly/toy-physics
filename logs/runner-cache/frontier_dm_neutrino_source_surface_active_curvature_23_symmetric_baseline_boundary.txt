@@ -1,0 +1,56 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_active_curvature_23_symmetric_baseline_boundary.py
+runner_sha256: 56b657e528fcfb7bd31555b52a4f6885c63c2e874763ae8241c33292ab43cb0e
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.60
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE ACTIVE-CURVATURE 23-SYMMETRIC BASELINE BOUNDARY
+========================================================================================
+
+Question:
+  For positive diagonal baselines D = diag(A,B,C), when does the
+  observable-principle zero-source curvature on the live active pair
+  become Euclidean up to scale?
+
+========================================================================================
+PART 1: THE DIAGONAL-BASELINE CURVATURE HAS EXACT CLOSED FORM
+========================================================================================
+  [PASS] The diagonal-baseline active curvature matches the exact closed formulas  ((1.0,2.0,3.0):err=1.11e-16; (2.5,0.7,0.7):err=8.88e-16; (3.2,1.1,2.4):err=2.22e-16)
+
+========================================================================================
+PART 2: MIXED TERM AND ISOTROPY ARE EQUIVALENT TO 23 SYMMETRY
+========================================================================================
+  [PASS] The mixed term vanishes exactly on the 23-symmetric family B = C  (Kdq(sym)=0.000000000000, Kdq(asym)=-0.333333333333)
+  [PASS] The curvature is isotropic exactly on the same 23-symmetric family  (Kdd-Kqq(asym)=0.027777777778, exact=0.027777777778)
+  [PASS] The reviewer counterexample diag(1,2,3) is genuinely non-Euclidean on the active pair  ((Kdd,Kqq,Kdq)=(2.027777777778,2.000000000000,-0.333333333333))
+
+========================================================================================
+PART 3: THE 23-SYMMETRIC FAMILY HAS THE SAME CHAMBER MINIMIZER
+========================================================================================
+  [PASS] Every 23-symmetric positive diagonal baseline gives a positive Euclidean prefactor  ((A,B)=(1.0,1.0) pref=6.000000000000; (A,B)=(1.0,2.0) pref=2.500000000000; (A,B)=(4.0,0.5) pref=10.000000000000)
+  [PASS] So every 23-symmetric positive diagonal baseline picks the same chamber minimizer delta_* = q_+* = sqrt(6)/3  ((delta_*,q_+*)=(0.816496580928,0.816496580928))
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE HONEST BOUNDARY
+========================================================================================
+  [PASS] The note records the exact diagonal-baseline curvature formulas
+  [PASS] The note records that isotropy holds exactly on the 23-symmetric family, not just the scalar line
+  [PASS] The note explicitly says this does not close the DM selector lane
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact answer:
+    - for D = diag(A,B,C), the active curvature is diagonal/isotropic iff B = C
+    - the scalar baseline is only the special case A = B = C
+    - the full Euclidean diagonal family is D = diag(A,B,B)
+    - every such baseline gives the same chamber minimizer delta_* = q_+* = sqrt(6)/3
+    - this is still a boundary theorem for the diagnostic route, not selector closure
+
+PASS=9 FAIL=0
+
+----- stderr -----
+

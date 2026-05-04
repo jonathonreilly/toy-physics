@@ -1,0 +1,92 @@
+===== runner cache v1 =====
+runner: scripts/frontier_cosmology_single_ratio_inverse_reconstruction.py
+runner_sha256: ddd96589d48c9b7c2c6d44afe4fc7be3aa66bbe522be4576de2f2383786b3511
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.00
+status: ok
+----- stdout -----
+========================================================================================
+Cosmology single-ratio inverse reconstruction audit
+See docs/COSMOLOGY_SINGLE_RATIO_INVERSE_RECONSTRUCTION_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Authority status audit
+----------------------------------------------------------------------------------------
+  COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md: 'proposed_retained/admitted-surface structural identity theorem on `main`.'
+  [PASS] authority status carries retained/admitted, structural: COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md
+  OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md: 'proposed_retained structural-identity theorem on `main`-compatible surface. Reduces the present-day `Ω_Λ` to an exact function of the proposed_retained de Sitter Hubble scale `H_inf` and the observationally-pinned current Hubble rate `H_0`, which then under flat FRW collapses to the matter-content bridge `Ω_m`.'
+  [PASS] authority status carries retained, structural: OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md
+  DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md: '**proposed_retained structural corollary** on `main`, on the proposed_retained'
+  [PASS] authority status carries retained, structural: DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md
+  COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md: '**proposed_retained structural identity theorem** on `main`. Separates the'
+  [PASS] authority status carries retained, structural: COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md
+
+----------------------------------------------------------------------------------------
+Scope boundary audit
+----------------------------------------------------------------------------------------
+  [PASS] note preserves scope phrase: does not derive the numerical value
+  [PASS] note preserves scope phrase: does not promote `Omega_Lambda`
+  [PASS] note preserves scope phrase: does not close the matter-content bridge
+  [PASS] note preserves scope phrase: **Primary runner:** `scripts/frontier_cosmology_single_ratio_inverse_reconstruction.py`
+
+----------------------------------------------------------------------------------------
+Symbolic inverse reconstruction
+----------------------------------------------------------------------------------------
+  L_H(a) after substituting FRW E(a)^2: 0
+  [PASS] H(a) inverse reconstructs L for a != 1
+  E(a)^2 - L = (R + a*(-L - R + 1))/a**4
+  [PASS] Hubble floor: E(a)^2 - L = M a^-3 + R a^-4
+  [PASS] asymptotic floor: lim_{a->infinity} E(a)^2 = L
+  L_q after substituting q_0(L): 0
+  [PASS] q_0 inverse reconstructs L
+  [PASS] q_0 < 0 threshold is L > (1+R)/3 algebraically identified
+  L_mL after substituting s_mL^3 = L/M: 0
+  [PASS] matter-Lambda equality inverse reconstructs L
+  dL_mL/d(s^3) = (1 - R)/(y**2 + 2*y + 1)
+  [PASS] matter-Lambda inverse is increasing for R < 1, y > 0
+  acceleration-onset residual after substituting L_acc: 0
+  [PASS] acceleration-onset inverse solves the exact quartic equation
+  [PASS] R -> 0 gap relation: a_*^3 = 1/(2 s_mL^3) reconciles both inverses
+
+----------------------------------------------------------------------------------------
+Cross-consistency certificate
+----------------------------------------------------------------------------------------
+  sample R=1/10000, L=7/10, M=2999/10000, a=2/3
+  L_H=7/10, L_q=7/10, L_mL=7/10
+  [PASS] sample H/q/matter-Lambda reconstructions agree with L
+  [PASS] sample acceleration inverse defines a compatible FRW packet
+
+----------------------------------------------------------------------------------------
+Package wiring
+----------------------------------------------------------------------------------------
+  docs/CANONICAL_HARNESS_INDEX.md: OK
+  [PASS] package surface wired: docs/CANONICAL_HARNESS_INDEX.md
+  docs/publication/ci3_z3/CLAIMS_TABLE.md: OK
+  [PASS] package surface wired: docs/publication/ci3_z3/CLAIMS_TABLE.md
+  docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md: OK
+  [PASS] package surface wired: docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md
+  docs/publication/ci3_z3/DERIVATION_ATLAS.md: OK
+  [PASS] package surface wired: docs/publication/ci3_z3/DERIVATION_ATLAS.md
+  docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md: OK
+  [PASS] package surface wired: docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md
+  docs/publication/ci3_z3/PUBLICATION_MATRIX.md: OK
+  [PASS] package surface wired: docs/publication/ci3_z3/PUBLICATION_MATRIX.md
+  docs/publication/ci3_z3/RESULTS_INDEX.md: OK
+  [PASS] package surface wired: docs/publication/ci3_z3/RESULTS_INDEX.md
+  docs/publication/ci3_z3/SCIENCE_MAP.md: OK
+  [PASS] package surface wired: docs/publication/ci3_z3/SCIENCE_MAP.md
+  docs/publication/ci3_z3/README.md: OK
+  [PASS] package surface wired: docs/publication/ci3_z3/README.md
+  docs/publication/ci3_z3/REPRODUCE.md: OK
+  [PASS] package surface wired: docs/publication/ci3_z3/REPRODUCE.md
+  docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md: OK
+  [PASS] package surface wired: docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md
+
+========================================================================================
+TOTAL: PASS=30, FAIL=0
+========================================================================================
+
+----- stderr -----
+

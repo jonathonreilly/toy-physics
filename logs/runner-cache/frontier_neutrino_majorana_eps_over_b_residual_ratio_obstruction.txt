@@ -1,0 +1,55 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_eps_over_b_residual_ratio_obstruction.py
+runner_sha256: 824a8dc40e62276f6ad900f93d3c4dd038ef6f2297bda431949881098ee8852f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: EPS/B RESIDUAL-RATIO OBSTRUCTION
+========================================================================================
+
+Authority stack:
+  - docs/NEUTRINO_MAJORANA_ENDPOINT_EXCHANGE_MIDPOINT_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_ADJACENT_SINGLET_PLACEMENT_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_Z3_NONACTIVATION_THEOREM_NOTE.md
+
+Question:
+  After fixing k_A = 7 and k_B = 8, does the current exact stack also
+  fix the residual doublet-splitting ratio eps/B?
+
+  r = eps/B = 0.010
+    eigenvalues = [-0.99      +0.j  1.01      +0.j 11.02900629+0.j]
+    normalized doublet spectrum = [0.70000071 0.71414214]
+
+  r = eps/B = 0.041
+    eigenvalues = [-0.959     +0.j  1.041     +0.j 11.02900629+0.j]
+    normalized doublet spectrum = [0.67754616 0.73548025]
+
+  r = eps/B = 0.080
+    eigenvalues = [-0.92      +0.j  1.08      +0.j 11.02900629+0.j]
+    normalized doublet spectrum = [0.64846646 0.76124323]
+
+  r = eps/B = 0.150
+    eigenvalues = [-0.85      +0.j  1.15      +0.j 11.02900629+0.j]
+    normalized doublet spectrum = [0.59439106 0.80417614]
+  [PASS] The fixed-placement Z3 matrix stays symmetric for every tested eps/B  (max symmetry error=0.00e+00)
+  [PASS] The lifted pairing block stays antisymmetric for every tested eps/B  (max pairing antisymmetry error=0.00e+00)
+  [PASS] The texture always organizes one singlet and one doublet pair of eigenvalues  (max eigenvalue error=4.97e-16)
+  [PASS] The staircase placement ratio A/B is fixed independently of eps/B  (spread in A/B=0.00e+00)
+  [PASS] The normalized doublet spectrum varies across admissible eps/B choices  (spectrum spread=1.388e-01)
+
+Result:
+  Once k_A = 7 and k_B = 8 are fixed, eps/B remains a residual
+  dimensionless deformation of the same exact Z3 texture class.
+  The current exact stack fixes the placement, not the splitting.
+
+  So the live denominator blocker is now exact and narrow:
+      derive eps/B (or prove a no-go), then close the remaining
+      texture amplitudes downstream.
+
+PASS=5  FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,47 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_selected_line_local_radian_bridge_no_go_2026_04_20.py
+runner_sha256: 9bccecb047fc8bfedb744bb8074141f4d142e95fbab13e58525fb1a0575f8b32
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.51
+status: ok
+----- stdout -----
+========================================================================
+Selected-line local radian-bridge no-go
+========================================================================
+
+(A) Canonical local packet on the selected-line CP^1 carrier
+------------------------------------------------------------------------
+  [PASS] (A1) The canonical equator section has Berry connection A = dtheta  (max |A_theta-1| = 2.22e-16)
+  [PASS] (A2) The equator Fubini-Study density is constant  (max |g_FS-1| = 0.00e+00)
+  [PASS] (A3) The selected-line Berry curvature vanishes locally  (max |dA/dtheta| = 6.83e-16)
+
+(B) Physical first branch
+------------------------------------------------------------------------
+  [PASS] (B1) The positivity threshold carries delta = pi/12  (delta_pos = 0.261799387799)
+  [PASS] (B2) The unphased point carries delta = 0  (delta_0 = 0.000000000000)
+  [PASS] (B3) The target 2/9 lies strictly inside the physical first-branch interval  (0 < 2/9 = 0.222222222222 < pi/12 = 0.261799387799)
+  [PASS] (B4) The physical interior point solving delta = 2/9 exists  (m_* = -1.160443440065)
+
+(C) Structural scalar rho_delta = |Im(b_F)|^2
+------------------------------------------------------------------------
+  [PASS] (C1) rho_delta = |Im(b_F)|^2 is constant on the first branch  (max branch variation = 1.11e-16)
+  [PASS] (C2) The constant branch value is exactly 2/d^2 = 2/9  (rho_delta = 0.222222222222)
+
+(D) delta varies while the local packet stays fixed
+------------------------------------------------------------------------
+  [PASS] (D1) delta(m) is strict-monotone on the first branch  (delta' range = [-0.293421, -0.161625])
+  [PASS] (D2) Two distinct branch points have the same local invariant packet  (same (A_theta, g_FS, rho_delta))
+  [PASS] (D3) Those same two points carry different Berry holonomies from m_0  (|delta_a-delta_b| = 0.146620)
+
+========================================================================
+Summary: PASS=12, FAIL=0
+========================================================================
+
+The 1D selected-line local packet is too small to canonically
+select the interior point delta = 2/d^2. Any closure of P must
+therefore be nonlocal on the branch or add extra Wilson/lattice
+transport data.
+
+----- stderr -----
+

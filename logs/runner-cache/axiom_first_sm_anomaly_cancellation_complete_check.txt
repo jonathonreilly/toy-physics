@@ -1,0 +1,117 @@
+===== runner cache v1 =====
+runner: scripts/axiom_first_sm_anomaly_cancellation_complete_check.py
+runner_sha256: 3d1cca8a97f23259ce30f68ad159518b60c90522d1d2a9a2c26940e5756b3320
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.06
+status: ok
+----- stdout -----
+================================================================================
+AXIOM-FIRST SM ANOMALY CANCELLATION COMPLETE CHECK
+================================================================================
+
+Synthesis: four perturbative gauge-anomaly traces (A1)-(A4)
+           plus nonperturbative SU(2) Witten Z_2 parity (A5)
+           plus group-theoretic SU(2)^3 zero (A0)
+           on retained Cl(3)/Z^3 LH-frame SM matter content.
+
+Retained matter content (LH-conjugate frame, doubled-Y convention):
+  Q_L      SU(3)=   3 SU(2)=2 count=6 Y=1/3
+  L_L      SU(3)=   1 SU(2)=2 count=2 Y=-1
+  u_R^c    SU(3)=3bar SU(2)=1 count=3 Y=-4/3
+  d_R^c    SU(3)=3bar SU(2)=1 count=3 Y=2/3
+  e_R^c    SU(3)=   1 SU(2)=1 count=1 Y=2
+  nu_R^c   SU(3)=   1 SU(2)=1 count=1 Y=0
+
+
+--------------------------------------------------------------------------------
+(A0) SU(2)^3 cubic gauge anomaly: group-theoretic zero
+--------------------------------------------------------------------------------
+  [PASS (A0)] A_SU2^3 = 0 identically (no rank-3 symmetric invariant) (d^{abc} norm = 0)
+  [PASS (A0)] SU(2) fundamental has {T^a, T^b} = (1/2) delta^{ab} I, no T^c term (anti-commutator closes on identity matrix)
+
+--------------------------------------------------------------------------------
+(A1) SU(3)^3 cubic gauge anomaly on retained content
+--------------------------------------------------------------------------------
+  Source: SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24
+  [PASS (A1)] Q_L (3, weak_mult=2): contribution = 2 * A(3) = 2 * (+1) = +2
+  [PASS (A1)] u_R^c (3bar, weak_mult=1): contribution = 1 * A(3bar) = 1 * (-1) = -1
+  [PASS (A1)] d_R^c (3bar, weak_mult=1): contribution = 1 * A(3bar) = 1 * (-1) = -1
+  [PASS (A1)] L_L, e_R^c, nu_R^c (SU(3) singlets): contribution = 0
+  [PASS (A1)] A_SU3^3 = +2 - 1 - 1 = 0 (exact Fraction) (value = 0)
+  [PASS (A1)] SU(3)^3 cancellation is a real matter-content condition (d^{abc} != 0 for SU(3)) (anti-fundamental indices A(3bar) = -1 balance fundamentals A(3) = +1)
+
+--------------------------------------------------------------------------------
+(A2) SU(2)^2 U(1)_Y mixed gauge anomaly
+--------------------------------------------------------------------------------
+  Source: LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25 (C4)
+  [PASS (A2)] Q_L doublet (color_mult=3, Y=+1/3): 3 * (1/3) = +1
+  [PASS (A2)] L_L doublet (color_mult=1, Y=-1): 1 * (-1) = -1
+  [PASS (A2)] RH fields are SU(2) singlets and contribute 0
+  [PASS (A2)] Tr[SU(2)^2 Y] = (1/2) * (1 - 1) = 0 (exact Fraction) (value = 0)
+
+--------------------------------------------------------------------------------
+(A3) grav^2 U(1)_Y mixed gauge-gravity anomaly
+--------------------------------------------------------------------------------
+  Reduces to Tr[Y] over full LH+RH content
+  Source: LH catalog (C1) + STANDARD_MODEL_HYPERCHARGE_UNIQUENESS RH solve
+  [PASS (A3)] Tr[Y]_LH = 6*(1/3) + 2*(-1) = 2 - 2 = 0 (value = 0)
+  [PASS (A3)] Tr[Y]_RH (LH-conj) = 3*(-4/3) + 3*(2/3) + 1*(2) + 1*(0) = -4 + 2 + 2 + 0 = 0 (value = 0)
+  [PASS (A3)] Tr[Y]_one-gen = 0 (exact Fraction) (value = 0)
+
+--------------------------------------------------------------------------------
+(A4) U(1)_Y^3 cubic hypercharge anomaly
+--------------------------------------------------------------------------------
+  Source: LH catalog (C2) Tr[Y^3]_LH = -16/9; RH solve cancels with +16/9
+  [PASS (A4)] Tr[Y^3]_LH = 6*(1/27) + 2*(-1) = 2/9 - 2 = -16/9 (value = -16/9)
+  [PASS (A4)] Tr[Y^3]_RH (LH-conj) = 3*(-64/27) + 3*(8/27) + 8 + 0 = +16/9 (value = 16/9)
+  [PASS (A4)] Tr[Y^3]_one-gen = -16/9 + 16/9 = 0 (exact Fraction) (value = 0)
+
+--------------------------------------------------------------------------------
+(A5) SU(2) Witten Z_2 nonperturbative parity
+--------------------------------------------------------------------------------
+  Source: SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24
+  [PASS (A5)] N_D per generation = N_c (Q_L) + 1 (L_L) = 3 + 1 = 4 (value = 4)
+  [PASS (A5)] N_D(three generations) = 3 * 4 = 12 (value = 12)
+  [PASS (A5)] N_D(total) mod 2 = 0 (Witten parity-safe) (parity = 0)
+
+--------------------------------------------------------------------------------
+(cross-check) SU(3)^2 U(1)_Y mixed trace on LH+RH
+--------------------------------------------------------------------------------
+  Source: LH catalog (C3) + RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES
+  [PASS (cross)] Tr[SU(3)^2 Y]_LH = (1/2) * 2 * (1/3) = 1/3 (value = 1/3)
+  [PASS (cross)] Tr[SU(3)^2 Y]_RH = (1/2) * (-4/3 + 2/3) = -1/3 (value = -1/3)
+  [PASS (cross)] Tr[SU(3)^2 Y]_one-gen = 1/3 - 1/3 = 0 (exact Fraction) (value = 0)
+
+--------------------------------------------------------------------------------
+Synthesis closure: all six anomaly slots vanish on the same retained surface
+--------------------------------------------------------------------------------
+  [PASS (closure)] (A0) SU(2)^3 cubic = 0 (value = 0)
+  [PASS (closure)] (A1) SU(3)^3 cubic = 0 (value = 0)
+  [PASS (closure)] (A2) SU(2)^2 Y mixed = 0 (value = 0)
+  [PASS (closure)] (A3) grav^2 Y reduces to Tr[Y] = 0 (value = 0)
+  [PASS (closure)] (A4) Y^3 cubic = 0 (value = 0)
+  [PASS (closure)] (A5) SU(2) Witten parity = 0 mod 2 (parity = 0)
+  [PASS (closure)] All six anomaly slots vanish simultaneously on the same retained Cl(3)/Z^3 LH-frame matter content
+
+--------------------------------------------------------------------------------
+Retained inputs audit (load-bearing source theorems and upstream notes)
+--------------------------------------------------------------------------------
+  [PASS (audit)] Component theorem 1 (A1): SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24 (post-PR-iter1 hygiene applied)
+  [PASS (audit)] Component theorem 2 (A2/A3/A4 LH side): LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25 (post-PR-iter1 hygiene applied)
+  [PASS (audit)] Component theorem 3 (A5): SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24 (post-PR-iter1 hygiene applied)
+  [PASS (audit)] Companion: STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24 (RH solve)
+  [PASS (audit)] Companion: RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02 (LH+RH explicit)
+  [PASS (audit)] Upstream: NATIVE_GAUGE_CLOSURE_NOTE (native cubic SU(2) on Cl(3)/Z^3)
+  [PASS (audit)] Upstream: GRAPH_FIRST_SU3_INTEGRATION_NOTE (N_c = 3 colour count)
+  [PASS (audit)] Upstream: THREE_GENERATION_OBSERVABLE_THEOREM_NOTE (n_gen = 3)
+  [PASS (audit)] Upstream: LEFT_HANDED_CHARGE_MATCHING_NOTE (Q_L, L_L content + Y values)
+  [PASS (audit)] Upstream: ONE_GENERATION_MATTER_CLOSURE_NOTE (RH completion)
+  [PASS (audit)] No observed mass, charge, mixing angle, or cross-section enters synthesis (all arithmetic is exact rational/integer)
+
+================================================================================
+TOTAL: PASS=42 FAIL=0
+================================================================================
+
+----- stderr -----
+

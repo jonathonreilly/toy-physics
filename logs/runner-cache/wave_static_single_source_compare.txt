@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/wave_static_single_source_compare.py
+runner_sha256: 4c118aba18611aa56c34c8ef9203cb5ba737b2218724ab6dcef0ff740ffe8b58
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 30.55
+status: ok
+----- stdout -----
+====================================================================================================================
+WAVE STATIC SINGLE-SOURCE COMPARATOR PROBE
+====================================================================================================================
+Frozen-source test: compare dM, dI, dIeq, dN, and direct static solve
+Physical setup: T_phys=15.0, PW_phys=6.0
+Frozen source positions (physical z): 3.000, 0.000
+
+====================================================================================================================
+SOURCE 1: frozen source z_phys=3.000
+====================================================================================================================
+
+[run 1] H=0.500
+  NL=30  PW=6.000  src_layer=10  source_z_real=3.000
+  dM   = +0.009857
+  dI   = +0.018250
+  dIeq = +0.003038
+  dN   = +0.013402
+  dS   = +0.009507  (direct static solve)
+  rel_MI   = 45.99%
+  rel_MIeq = 69.18%
+  rel_MN   = 26.45%
+  rel_MS   = 3.56%
+  rel_IeqS = 68.05%
+  static residual = 1.998e-10
+
+Interpretation:
+  - dM is the retarded-wave response at a frozen source position.
+  - dI / dIeq test cached static slices at the same frozen source position.
+  - dN is the imposed Newton-style comparator at the same frozen source position.
+  - dS is the exact discrete static solve on the same finite (y, z) grid.
+  - If mismatch appears already here, it is not caused by source motion.
+
+====================================================================================================================
+SOURCE 2: frozen source z_phys=0.000
+====================================================================================================================
+
+[run 1] H=0.500
+  NL=30  PW=6.000  src_layer=10  source_z_real=0.000
+  dM   = +0.001926
+  dI   = +0.001696
+  dIeq = +0.001931
+  dN   = +0.008041
+  dS   = +0.001807  (direct static solve)
+  rel_MI   = 11.93%
+  rel_MIeq = 0.25%
+  rel_MN   = 76.04%
+  rel_MS   = 6.18%
+  rel_IeqS = 6.42%
+  static residual = 1.969e-10
+
+Interpretation:
+  - dM is the retarded-wave response at a frozen source position.
+  - dI / dIeq test cached static slices at the same frozen source position.
+  - dN is the imposed Newton-style comparator at the same frozen source position.
+  - dS is the exact discrete static solve on the same finite (y, z) grid.
+  - If mismatch appears already here, it is not caused by source motion.
+
+----- stderr -----
+

@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_constructive_transport_plateau_schur_spectral_isotropy_selector_2026_04_19.py
+runner_sha256: 0b65cd6ccc9d65d7da1db5fd12d9b7f71ac7d0fe4dad9dbb29df863b07735670
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 5.58
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT CONSTRUCTIVE TRANSPORT PLATEAU SCHUR SPECTRAL-ISOTROPY SELECTOR
+========================================================================================
+
+========================================================================================
+PART 1: THE NORMALIZED SCHUR SPECTRUM IS SOURCE-VISIBLE BUT TRANSPORT-BLIND
+========================================================================================
+  [PASS] All four certified plateau witnesses still realize the same favored transport-column orbit  (max sorted-column spread=2.772e-08)
+  [PASS] Their normalized Schur spectra are nevertheless pairwise distinct  (min normalized-spectrum separation=0.021325625987)
+
+========================================================================================
+PART 2: W1 IS THE MOST ISOTROPIC NORMALIZED SCHUR SPECTRUM
+========================================================================================
+  [PASS] The normalized W1 spectrum is majorized by the normalized spectra of W0, W2, and W3  (W0: partials W1=[0.84665011 0.96562943], other=[0.92897835 0.99883114] | W2: partials W1=[0.84665011 0.96562943], other=[0.9355869  0.98818419] | W3: partials W1=[0.84665011 0.96562943], other=[0.85445549 0.99995224])
+  [PASS] So every strictly Schur-concave symmetric law on the normalized Schur spectrum selects W1 on the certified witness set  (majorization gives a whole coefficient-free selector family, not one fitted score)
+
+========================================================================================
+PART 3: REPRESENTATIVE SCHUR-SPECTRAL ISOTROPY LAWS ALL PICK W1
+========================================================================================
+  [PASS] The Renyi entropy family on the normalized Schur spectrum selects W1 for alpha in {1/2,1,2,4}  (winners={0.5: 'W1', 1.0: 'W1', 2.0: 'W1', 4.0: 'W1'})
+  [PASS] Participation ratio, normalized logdet, and inverse condition number also all select W1  (winners=(PR=W1, logdet=W1, invcond=W1))
+
+========================================================================================
+PART 4: THE ALIGNED-SEED -> W1 SEGMENT GIVES A UNIQUE EXACT CONSTRUCTIVE ROOT
+========================================================================================
+  [PASS] The aligned-seed -> W1 affine segment has a unique eta_1 = 1 crossing on [0,1]  (lambda_iso=0.904931446681)
+  [PASS] That crossing is transverse, constructive, positive-branch, and locally full-rank  (deriv=0.755728, pack=[1.         0.12167821 0.11336367 1.20133568 0.02021764], min singulars=(6.906412e-03,6.909143e-03))
+  [PASS] The isotropy-selected root is distinct from the earlier hand-chosen canonical-path root  (distance=0.584317157499)
+
+========================================================================================
+PART 5: BOTTOM LINE
+========================================================================================
+  [PASS] The first concrete science that closes the current certified plateau issue is a coefficient-free normalized Schur spectral-isotropy law  (it selects the endpoint W1 from source-side data alone)
+  [PASS] Combined with the unique seed -> W1 exact crossing, that law yields a fully specified constructive selector candidate  (endpoint law = spectral isotropy on H_e(L_e); closure law = unique eta_1 = 1 crossing on the aligned-seed -> W1 segment)
+
+  normalized Schur spectra (descending):
+    W0: [0.92897835 0.06985279 0.00116886]
+    W1: [0.84665011 0.11897933 0.03437057]
+    W2: [0.9355869  0.0525973  0.01181581]
+    W3: [8.54455487e-01 1.45496754e-01 4.77588880e-05]
+
+  isotropy-selected endpoint witness = W1
+  aligned-seed -> W1 root lambda = 0.904931446681
+  selected root observable pack       = [1.         0.12167821 0.11336367 1.20133568 0.02021764]
+
+========================================================================================
+SUMMARY: PASS=11 FAIL=0
+========================================================================================
+
+----- stderr -----
+

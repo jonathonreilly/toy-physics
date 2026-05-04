@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_charge_two_primitive_reduction.py
+runner_sha256: 763a5e4f20ff063641d4bd519c1646a37b0506ea2c93223f4e6e8bc5818fc19e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.17
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: CHARGE-TWO PRIMITIVE REDUCTION
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+    rows: Framework axiom; Observable principle; Anomaly-forced time;
+          Native weak algebra; Structural SU(3) closure; One-generation matter closure
+  - docs/NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md
+  - docs/NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md
+  - docs/NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md
+
+Question:
+  What exact microscopic object is still missing on the current
+  Majorana lane after the present no-go chain?
+
+========================================================================================
+PART 1: THE ADMISSIBLE LOCAL CHARGE-TWO CHANNEL IS UNIQUE
+========================================================================================
+  [PASS (C)] Gauge-invariant symmetric internal bilinear space has dimension 1
+  [PASS (C)] The nu_R nu_R slot is gauge invariant  (residual=0.00e+00)
+  [PASS (C)] Competing same-chirality charge-two slots are not gauge invariant  (e_R residual=4.000, mixed residual=2.828)
+  [PASS (C)] Combined unique charge-two seed is supported only on the nu_R slot  (internal rows=[15])
+
+  So the admissible local DeltaL=2 channel space is already collapsed
+  to one direction before any coefficient question is asked.
+
+========================================================================================
+PART 2: ONLY THE CHARGE-MINUS-TWO COMPONENT CAN FEED THE MAJORANA COEFFICIENT
+========================================================================================
+  [PASS (C)] Every microscopic object decomposes exactly into charge sectors  (reconstruction error=0.00e+00)
+  [PASS (C)] The retained normal sector is exactly the charge-zero block  (||[N,X_0]||=0.00e+00)
+  [PASS (C)] The Majorana-relevant block has charge -2  (||[N,X_-2]+2X_-2||=0.00e+00)
+  [PASS (C)] Majorana overlap depends only on the charge-minus-two component  (|full-neg2|=0.00e+00)
+  [PASS (C)] All non-minus-two sectors drop out of the Majorana overlap  (rest overlap=+0.00e+00+0.00e+00i)
+  [PASS (C)] If the charge-minus-two projection vanishes, so does the Majorana overlap  (overlap=+0.00e+00+0.00e+00i)
+
+  This is the exact reduction step: once the retained grammar is
+  known to be charge-zero, the only unresolved microscopic content is
+  whatever new charge-2 block a future extension contributes.
+
+========================================================================================
+PART 3: THE OPEN PROBLEM REDUCES TO A NEW UNIQUE CHARGE-TWO PRIMITIVE
+========================================================================================
+  [PASS (C)] The retained backbone can stay fixed while the charge-two primitive changes
+  [PASS (C)] Zero and nonzero primitive choices are genuinely distinct cases  (||Xi1-Xi0||=0.579828)
+  [PASS (C)] Any admissible local charge-two primitive is proportional to the unique seed on this lane  (projection error=0.00e+00)
+
+  So the next honest theorem target is not another normal-grammar
+  refinement. It is the derivation of a genuinely new charge-two
+  primitive on the unique nu_R channel.
+
+========================================================================================
+RESULT
+========================================================================================
+  The remaining open step reduces exactly to a new charge-2 primitive
+  on the unique anomaly-fixed nu_R channel. More charge-zero
+  interaction complexity cannot help, and the current normal data
+  cannot force pairing.
+
+  PASS=13  FAIL=0
+
+----- stderr -----
+

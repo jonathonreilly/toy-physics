@@ -1,0 +1,90 @@
+===== runner cache v1 =====
+runner: scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py
+runner_sha256: ea8bba0f71b14fffb364754d30546c23e9b595812411d80eda680284d463d940
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+
+========================================================================================
+A. Source surfaces and stronger-premise boundary
+========================================================================================
+PASS: source surface exists: CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md
+PASS: source surface exists: CHARGED_LEPTON_OP_LOCAL_SOURCE_SELECTED_LINE_SELECTOR_NO_GO_NOTE_2026-04-27.md
+PASS: source surface exists: KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md
+PASS: source surface exists: KOIDE_Q_DELTA_READOUT_RETENTION_SPLIT_NO_GO_NOTE_2026-04-24.md
+PASS: source surface exists: KOIDE_Q_DELTA_RESIDUAL_COHOMOLOGY_OBSTRUCTION_NO_GO_NOTE_2026-04-24.md
+PASS: source surface exists: KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM_NOTE_2026-04-24.md
+PASS: source surface exists: KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT_NOTE_2026-04-25.md
+PASS: source surface exists: KOIDE_Q_OP_LOCALITY_C3_FIXED_SOURCE_SUPPORT_NOTE_2026-04-27.md
+PASS: source surface exists: CHARGED_LEPTON_RADIATIVE_TAU_SELECTOR_FIREWALL_NOTE_2026-04-26.md
+PASS: new note exists -- docs/CHARGED_LEPTON_TYPEB_RADIAN_READOUT_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md
+PASS: new note records no retained mass closure and comparator firewall
+PASS: prior selected-line no-go requires based law
+PASS: prior OP-local source cycle still requires based endpoint/source/tau selector
+PASS: Type-B-to-radian law was open before this stronger-premise grant
+PASS: closed APS readout does not by itself remove endpoint split
+PASS: exact-sequence audit leaves canonical section as next theorem
+PASS: unpointed retained data do not force a pointed origin
+PASS: Q erases Brannen phase on the carrier
+PASS: OP-locality source support is conditional, not retained Q closure
+
+========================================================================================
+B. Grant P_RADIAN and P_SOURCE as scalar quotient data
+========================================================================================
+PASS: granted scalar Q value is 2/3
+PASS: granted scalar Brannen readout is delta=2/9
+PASS: granted source coordinate is z=0
+PASS: scalar readout data are fixed by cyclic relabeling
+PASS: unit-law variants remain scalar C3-fixed data
+PASS: scalar readout object carries no label field
+
+========================================================================================
+C. Selected-line carrier check without PDG inputs
+========================================================================================
+PASS: granted selected-line vector is positive on the first branch
+PASS: selected-line vector has Q=2/3 from c^2=2 -- Q=0.666666666666667
+PASS: cyclic relabelings preserve Q -- Q_values=(0.666666666666667, 0.666666666666667, 0.666666666666667)
+PASS: cyclic relabelings preserve unordered normalized ratios -- ratio=(0.79314605721109, 0.19340397338251, 0.0134499694064)
+PASS: cyclic relabelings move the heaviest slot through all labels -- heaviest_slots=(0, 2, 1)
+PASS: scalar Type-B radian readout does not identify the heaviest physical label
+
+========================================================================================
+D. Natural-selector obstruction
+========================================================================================
+PASS: generation labels carry a free C3 action
+PASS: no single label is fixed by C3 -- fixed=[]
+PASS: no natural selector exists from scalar quotient data to one label -- selectors=[]
+PASS: no invariant singleton subset selects e, mu, or tau
+PASS: only nonempty invariant subset is the full generation orbit -- subsets=[frozenset({0, 1, 2})]
+PASS: based equivariant endpoint-to-label maps exist only after a basepoint choice -- maps=[{0: 0, 1: 1, 2: 2}, {0: 1, 1: 2, 2: 0}, {0: 2, 1: 0, 2: 1}]
+PASS: P_RADIAN narrows unit readout but not selected-line basepoint
+
+========================================================================================
+E. Scale and comparator firewall
+========================================================================================
+PASS: radiative scale support still requires a generation selector
+PASS: PDG charged-lepton masses are not proof-input keys -- proof_inputs=['Brannen carrier c^2=2', 'C3 action on generation labels', 'P_RADIAN: scalar Type-B-to-radian readout', 'P_SOURCE: z=0 source support', 'free selected-line orbit', 'prior support/no-go closeout flags']
+PASS: PDG masses are comparator-only and near the Koide value -- Q_PDG=0.666660511477; not used above as a proof input
+
+========================================================================================
+F. Verdict
+========================================================================================
+PASS: Type-B radian readout plus source support is not a generation selector
+PASS: mass retirement remains open
+
+========================================================================================
+Summary
+========================================================================================
+TOTAL: PASS=43, FAIL=0
+VERDICT: Type-B radian readout generation-selector no-go.
+CHARGED_LEPTON_TYPEB_RADIAN_READOUT_GENERATION_SELECTOR_NO_GO=TRUE
+TYPEB_RADIAN_READOUT_PLUS_SOURCE_SUPPORT_SELECTS_GENERATION=FALSE
+TYPEB_RADIAN_READOUT_RETIRES_PDG_MASS_PIN=FALSE
+BASED_ENDPOINT_SOURCE_OR_TAU_SCALE_SELECTOR_REQUIRED=TRUE
+PDG_MASSES_USED_AS_COMPARATORS_ONLY=TRUE
+CHARGED_LEPTON_MASS_RETENTION=FALSE
+
+----- stderr -----
+

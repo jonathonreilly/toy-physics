@@ -1,0 +1,312 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hypercharge_identification.py
+runner_sha256: 170bd619ac42577c62adc2fb1bf76bde61fac469e6b445b85b3ec291ae59873d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================
+HYPERCHARGE U(1)_Y IDENTIFICATION FROM COMMUTANT
+========================================================================
+
+Setup: C^8 = (C^2)^{x3}, SU(2)_weak on factor 1, SWAP_{23} on factors 2,3
+Commutant of {SU(2), SWAP_{23}} = gl(3,C) + gl(1,C)
+  gl(3) acts on Sym^2(C^2) = C^3 [color triplet]
+  gl(1) acts on Anti^2(C^2) = C^1 [singlet]
+
+========================================================================
+PART 1: The U(1) generator from the commutant
+========================================================================
+
+The traceless U(1) generator in the commutant:
+  Y = (1/3)*P_sym - 1*P_anti
+  Tr[Y] on C^8 = -0.000000  (should be 0)
+
+  Eigenvalues of Y on C^8: [np.float64(-1.0), np.float64(0.3333333333)]
+  Multiplicities:
+    Y = -1.0000  multiplicity 2
+    Y = +0.3333  multiplicity 6
+
+  Interpretation:
+    Y = +1/3 on 6 states = (2,3) = quark doublet (3 colors x 2 weak)
+    Y = -1   on 2 states = (2,1) = lepton doublet (1 singlet x 2 weak)
+
+  These match the Standard Model hypercharge assignments on the
+  left-handed doublet surface: Q_L has Y = 1/3, L_L has Y = -1.
+
+========================================================================
+PART 2: Commutation relations
+========================================================================
+
+  [Y, S_i] = 0 for all i (commutes with SU(2)_weak): True
+  [Y, SWAP_23] = 0 (commutes with SWAP): True
+  [Y, T_a] = 0 for all a (commutes with SU(3)_color): True
+
+  Y commutes with BOTH SU(2) and SU(3) -- it is a valid U(1) gauge
+  generator in the Standard Model sense.
+
+========================================================================
+PART 3: Electric charge Q = T_3 + Y/2
+========================================================================
+
+  Q = T_3 + Y/2 as 8x8 matrix
+  Q is Hermitian: True
+
+  Eigenvalues of Q: [np.float64(-1.0), np.float64(-0.3333333333), np.float64(0.0), np.float64(0.6666666667)]
+  Multiplicities:
+    Q = -1.0000  multiplicity 1
+    Q = -0.3333  multiplicity 3
+    Q = +0.0000  multiplicity 1
+    Q = +0.6667  multiplicity 3
+
+  Complete quantum number table (in sym/anti basis):
+  State                     T_3        Y   Q=T3+Y/2      Particle
+  -----------------------------------------------------------------
+  |up, s0            >  +0.5000  +0.3333    +0.6667  u-type quark
+  |up, s1            >  +0.5000  +0.3333    +0.6667  u-type quark
+  |up, s2            >  +0.5000  +0.3333    +0.6667  u-type quark
+  |up, a0            >  +0.5000  -1.0000    -0.0000      neutrino
+  |down, s0          >  -0.5000  +0.3333    -0.3333  d-type quark
+  |down, s1          >  -0.5000  +0.3333    -0.3333  d-type quark
+  |down, s2          >  -0.5000  +0.3333    -0.3333  d-type quark
+  |down, a0          >  -0.5000  -1.0000    -1.0000      electron
+
+  ALL CHARGES CORRECT:
+    u-type quarks: Q = +2/3  (3 colors)
+    d-type quarks: Q = -1/3  (3 colors)
+    neutrino:      Q =  0    (1 singlet)
+    electron:      Q = -1    (1 singlet)
+
+========================================================================
+PART 4: Consistency checks on the left-handed surface
+========================================================================
+
+  Consistency check 1: Tr[Y] = 6*(0.3333) + 2*(-1.0000)
+    = 0.000000
+    Satisfied on this surface: True
+
+  Consistency check 2: Tr[Y^3] = 6*(0.3333)^3 + 2*(-1.0000)^3
+    = 0.222222 + -2.000000
+    = -1.777778
+    Satisfied: False
+    NOTE: For a left-handed-only surface, Tr[Y^3] is expected to be nonzero.
+
+  Consistency check 3: Tr[Y T_a T_b] for SU(3)
+    Tr[Y T_1 T_1] = 0.333333
+    Tr[Y T_2 T_2] = 0.333333
+    Tr[Y T_3 T_3] = 0.333333
+    Tr[Y T_4 T_4] = 0.333333
+    Tr[Y T_5 T_5] = 0.333333
+    Tr[Y T_6 T_6] = 0.333333
+    Tr[Y T_7 T_7] = 0.333333
+    Tr[Y T_8 T_8] = 0.333333
+
+  NOTE: For a single chirality, Tr[Y T_a^2] need not vanish.
+  Full anomaly cancellation requires the right-handed fermions as well.
+  The LEFT-HANDED sector alone is a consistency check, not a full anomaly test.
+
+  Consistency check 4: Tr[Y {T_i, T_j}] for SU(2)
+    Tr[Y {S_1, S_1}] = -0.000000
+    Tr[Y {S_2, S_2}] = -0.000000
+    Tr[Y {S_3, S_3}] = -0.000000
+    Tr[Y * sum_i S_i^2] = 0.000000
+    SU(2)^2-U(1) mixed anomaly vanishes: True
+
+========================================================================
+PART 5: Uniqueness of the traceless U(1) direction
+========================================================================
+
+  The commutant contains a 2-parameter family of U(1) generators:
+    Y(alpha, beta) = alpha * P_sym + beta * P_anti
+
+  Requiring Tr[Y] = 0 (remove the overall phase):
+    6*alpha + 2*beta = 0  =>  beta = -3*alpha
+  This leaves a ONE-parameter family: Y = alpha * (P_sym - 3*P_anti)
+
+  The normalization alpha is fixed by convention. Standard choice: alpha = 1/3
+  gives Y_quark = 1/3, Y_lepton = -1.
+
+  Check Tr[Y^3] for generic alpha:
+    Tr[Y^3] = 6*(alpha)^3 + 2*(-3*alpha)^3 = 6*alpha^3 - 54*alpha^3 = -48*alpha^3
+    This is NOT zero for a single left-handed generation.
+
+  The U(1)^3 anomaly cancels only in the FULL SM when right-handed
+  fermions are included.  For a single left-handed generation, Tr[Y^3] != 0
+  is expected.
+
+  UNIQUENESS THEOREM:
+  Within the commutant of {SU(2), SWAP_23} in End(C^8),
+  there is exactly ONE traceless U(1) generator (up to normalization).
+  Its eigenvalues are in the ratio 1:(-3) on the (2,3) vs (2,1) subspaces.
+  This matches the Standard Model hypercharge on the left-handed
+  doublet surface.
+
+========================================================================
+PART 6: GUT normalization (SU(5) embedding)
+========================================================================
+
+  Tr[Y^2] over 8 states = 2.666667
+    = 6*(1/3)^2 + 2*(-1)^2 = 6/9 + 2 = 2/3 + 2 = 8/3
+    Numerical: 2.666667, Exact: 2.666667
+
+  Tr[sum_i T_i^2] for SU(2) over 8 states = 6.000000
+    = 8 * (3/4)/2 = 8 * 3/8 = 3  [each state contributes 3/4 from T^2 of spin-1/2]
+  Tr[T_1^2] for SU(2) = 2.000000
+
+  Tr[T_1^2] for SU(3) = 1.000000
+
+  Ratio Tr[Y^2] / (2 * Tr[T_i^2]_SU(2)) = 0.666667
+  = (8/3) / (2 * 2) = (8/3) / 4 = 2/3
+
+  The GUT normalization factor is: k^2 = 3/5
+  With GUT normalization: Y_GUT = sqrt(3/5) * Y_SM
+
+  Tr[Y_GUT^2] = (3/5) * (8/3) = 8/5 = 1.600000
+  Tr[T_a^2]_SU(3) = 1.000000
+  Tr[T_i^2]_SU(2) = 2.000000
+
+  sin^2(theta_W) at GUT scale = Tr[T_3^2]/Tr[Q^2]
+    = 2.000000 / 2.666667 = 0.750000
+    Standard GUT prediction: 3/8 = 0.375000
+    Match: False
+
+  NOTE: Our 8 states are only the left-handed doublets (part of one
+  generation).  The GUT prediction sin^2(theta_W) = 3/8 requires the
+  FULL generation (including right-handed singlets).  The ratio we
+  compute here applies only to the doublet sector.
+
+========================================================================
+PART 7: Explicit matrices
+========================================================================
+
+  Y (hypercharge) in original basis |a,b,c>:
+[[ 0.333333  0.        0.        0.        0.        0.        0.        0.      ]
+ [ 0.       -0.333333  0.666667  0.        0.       -0.        0.        0.      ]
+ [ 0.        0.666667 -0.333333  0.        0.        0.       -0.        0.      ]
+ [ 0.        0.        0.        0.333333  0.        0.        0.        0.      ]
+ [ 0.        0.        0.        0.        0.333333  0.        0.        0.      ]
+ [ 0.       -0.        0.        0.        0.       -0.333333  0.666667  0.      ]
+ [ 0.        0.       -0.        0.        0.        0.666667 -0.333333  0.      ]
+ [ 0.        0.        0.        0.        0.        0.        0.        0.333333]]
+
+  Y in sym/anti basis |weak, color>:
+[[ 0.333333  0.        0.        0.        0.        0.        0.        0.      ]
+ [ 0.        0.333333  0.       -0.        0.        0.        0.        0.      ]
+ [ 0.        0.        0.333333  0.        0.        0.        0.        0.      ]
+ [ 0.        0.        0.       -1.        0.        0.        0.        0.      ]
+ [ 0.        0.        0.        0.        0.333333  0.        0.        0.      ]
+ [ 0.        0.        0.        0.        0.        0.333333  0.       -0.      ]
+ [ 0.        0.        0.        0.        0.        0.        0.333333  0.      ]
+ [ 0.        0.        0.        0.        0.        0.        0.       -1.      ]]
+
+  Y is diagonal in the sym/anti basis with entries:
+    Y[0,0] = +0.3333
+    Y[1,1] = +0.3333
+    Y[2,2] = +0.3333
+    Y[3,3] = -1.0000
+    Y[4,4] = +0.3333
+    Y[5,5] = +0.3333
+    Y[6,6] = +0.3333
+    Y[7,7] = -1.0000
+
+  T_3 (weak isospin) in sym/anti basis:
+[[ 0.5  0.   0.   0.   0.   0.   0.   0. ]
+ [ 0.   0.5  0.  -0.   0.   0.   0.   0. ]
+ [ 0.   0.   0.5  0.   0.   0.   0.   0. ]
+ [ 0.  -0.   0.   0.5  0.   0.   0.   0. ]
+ [ 0.   0.   0.   0.  -0.5  0.   0.   0. ]
+ [ 0.   0.   0.   0.   0.  -0.5  0.   0. ]
+ [ 0.   0.   0.   0.   0.   0.  -0.5  0. ]
+ [ 0.   0.   0.   0.   0.   0.   0.  -0.5]]
+
+  Q = T_3 + Y/2 in sym/anti basis:
+[[ 0.666667  0.        0.        0.        0.        0.        0.        0.      ]
+ [ 0.        0.666667  0.       -0.        0.        0.        0.        0.      ]
+ [ 0.        0.        0.666667  0.        0.        0.        0.        0.      ]
+ [ 0.        0.        0.       -0.        0.        0.        0.        0.      ]
+ [ 0.        0.        0.        0.       -0.333333  0.        0.        0.      ]
+ [ 0.        0.        0.        0.        0.       -0.333333  0.        0.      ]
+ [ 0.        0.        0.        0.        0.        0.       -0.333333  0.      ]
+ [ 0.        0.        0.        0.        0.        0.        0.       -1.      ]]
+
+========================================================================
+PART 8: No other traceless U(1) exists on this surface
+========================================================================
+
+  General U(1) in commutant: Y = a*P_sym + b*P_anti
+  Eigenvalues: a (x6 quark states), b (x2 lepton states)
+
+  Constraint Tr[Y] = 0:  6a + 2b = 0  =>  b = -3a
+
+  This is the ONLY constraint needed to fix Y up to normalization!
+  Result: Y_quark : Y_lepton = 1 : (-3)
+
+  With standard normalization a = 1/3:
+    Y_quark = +1/3  (left-handed quark doublet)
+    Y_lepton = -1   (left-handed lepton doublet)
+
+  PROOF OF UNIQUENESS:
+    dim(U(1) space in commutant) = 2  (center of u(3), plus u(1))
+    dim(traceless subspace) = 1       (one linear constraint)
+    => UNIQUE traceless U(1) generator (up to normalization)
+
+  Therefore: the commutant U(1) is uniquely fixed on this surface,
+  and its eigenvalues match U(1)_Y.
+
+========================================================================
+PART 9: Gell-Mann--Nishijima formula verification
+========================================================================
+
+  The Gell-Mann--Nishijima formula states: Q = T_3 + Y/2
+  where Q is electric charge, T_3 is weak isospin, Y is hypercharge.
+
+  From our construction:
+    T_3 = sigma_3/2 on factor 1  [derived from bipartite lattice]
+    Y   = (1/3)*P_sym - P_anti   [unique traceless U(1) in commutant]
+    Q   = T_3 + Y/2
+
+  Resulting charges for one left-handed generation:
+    Particle           T_3      Y      Q
+    ----------------------------------------
+    u_L (3 colors)    +1/2   +1/3   +2/3
+    d_L (3 colors)    -1/2   +1/3   -1/3
+    nu_L              +1/2     -1      0
+    e_L               -1/2     -1     -1
+
+  These match the Standard Model EXACTLY.
+
+
+========================================================================
+FINAL SUMMARY
+========================================================================
+
+  THEOREM: The unique traceless U(1) in the commutant su(3) + u(1)
+  matches hypercharge U(1)_Y on the left-handed doublet surface.
+  This is established by THREE independent arguments:
+
+  1. EIGENVALUE MATCHING
+     The unique traceless U(1) in the commutant has eigenvalues
+     +1/3 (on 6 quark states) and -1 (on 2 lepton states).
+     These are exactly the SM hypercharge values for left-handed fermions.
+
+  2. ELECTRIC CHARGE
+     Q = T_3 + Y/2 produces charges 2/3, -1/3, 0, -1 --
+     the up quark, down quark, neutrino, and electron charges.
+
+  3. UNIQUENESS
+     The commutant u(3)+u(1) contains a 2-dimensional space of U(1)
+     generators.  The tracelessness condition (removing the trivial
+     overall phase) reduces this to a UNIQUE generator (up to
+     normalization).  This unique generator matches hypercharge.
+
+  4. GUT NORMALIZATION
+     The eigenvalue ratio 1:(-3) is consistent with the SU(5) GUT
+     embedding, where Y_GUT = sqrt(3/5) * Y_SM.
+
+  BOTTOM LINE: The commutant U(1) is uniquely fixed on this surface
+  and matches hypercharge on the left-handed sector.
+========================================================================
+
+----- stderr -----
+

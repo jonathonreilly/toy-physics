@@ -1,0 +1,76 @@
+===== runner cache v1 =====
+runner: scripts/translation_covariance_local_op_check.py
+runner_sha256: 577ed60846f34871eaf5606368237a52c9db85bdafa15e30f6be653fe77a5ba0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================
+TRANSLATION COVARIANCE OF LOCAL OPERATORS T_a O(x) T_a† = O(x+a)
+========================================================================
+
+  Toy model: 4×4×4 periodic lattice, dim = 64
+
+------------------------------------------------------------------------
+TEST 1: T_a X̂_axis T_a^† = X̂_axis - a_axis · I  (mod L)
+        (since Σ_x x P_{x+a} = Σ_y (y-a) P_y; site labels shift by +a)
+------------------------------------------------------------------------
+  axis=0, a_axis=1: ||T_a X T_a† - (X-a)_mod L|| = 0.000e+00
+  axis=0, a_axis=2: ||T_a X T_a† - (X-a)_mod L|| = 0.000e+00
+  axis=1, a_axis=1: ||T_a X T_a† - (X-a)_mod L|| = 0.000e+00
+  axis=1, a_axis=2: ||T_a X T_a† - (X-a)_mod L|| = 0.000e+00
+  axis=2, a_axis=1: ||T_a X T_a† - (X-a)_mod L|| = 0.000e+00
+  axis=2, a_axis=2: ||T_a X T_a† - (X-a)_mod L|| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: T_a P_x T_a^† = P_{x+a}  (site projector covariance)
+------------------------------------------------------------------------
+  x=(1, 1, 1), a=(1, 0, 0): ||T_a P_x T_a† - P_{x+a}|| = 0.000e+00
+  x=(0, 0, 0), a=(2, 1, 0): ||T_a P_x T_a† - P_{x+a}|| = 0.000e+00
+  x=(3, 2, 1), a=(1, 1, 1): ||T_a P_x T_a† - P_{x+a}|| = 0.000e+00
+  x=(2, 0, 3), a=(3, 3, 3): ||T_a P_x T_a† - P_{x+a}|| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: P_x covariance for arbitrary x ∈ Λ (full sweep)
+------------------------------------------------------------------------
+  swept over all 64 sites with a=(1,1,0)
+  max ||T_a P_x T_a† - P_{x+a}|| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: T_a (Σ_x P_x) T_a^† = Σ_x P_x  (sum is invariant)
+        ⇒ Σ_x P_x = I (resolution of identity)  ⇒  T_a I T_a† = I
+------------------------------------------------------------------------
+  ||Σ_x P_x - I|| = 0.000e+00
+  ||T_a (Σ_x P_x) T_a† - (Σ_x P_x)|| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5: T_a h_{xy} T_a^† = h_{x+a, y+a}  (hopping is two-site-local)
+------------------------------------------------------------------------
+  x=(1, 1, 1), y=(1, 1, 2), a=(1, 0, 0): ||T_a h_{xy} T_a† - h_{x+a,y+a}|| = 0.000e+00
+  x=(0, 0, 0), y=(1, 0, 0), a=(2, 2, 2): ||T_a h_{xy} T_a† - h_{x+a,y+a}|| = 0.000e+00
+  x=(2, 1, 0), y=(3, 1, 0), a=(1, 1, 1): ||T_a h_{xy} T_a† - h_{x+a,y+a}|| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 6: support(T_a O T_a^†) = support(O) + a
+------------------------------------------------------------------------
+  support of T_a P_x T_a† = [(2, 3, 1)]
+  expected support: [(2, 3, 1)]
+  STATUS: PASS
+
+========================================================================
+  Test 1 (T_a X T_a† = X - a (mod L)):              PASS
+  Test 2 (T_a P_x T_a† = P_{x+a} sample):           PASS
+  Test 3 (P_x covariance full sweep):               PASS
+  Test 4 (sum is invariant; resolution of I):       PASS
+  Test 5 (hopping h_{xy} covariance):               PASS
+  Test 6 (support relocation):                      PASS
+  OVERALL: PASS
+
+----- stderr -----
+

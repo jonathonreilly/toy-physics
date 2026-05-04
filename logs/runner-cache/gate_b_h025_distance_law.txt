@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_h025_distance_law.py
+runner_sha256: 8cb5405d598c6dfa80fc104509e5832be3ca2861724794c3aa0281f92cb34838
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

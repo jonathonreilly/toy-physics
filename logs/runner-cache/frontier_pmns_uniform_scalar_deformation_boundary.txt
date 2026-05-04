@@ -1,0 +1,81 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_uniform_scalar_deformation_boundary.py
+runner_sha256: 85a3244903d20e287a2ed493c58f249a0f6eaa2d43b789a6fa0b1e3e901e0d9f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+PMNS UNIFORM SCALAR DEFORMATION BOUNDARY
+========================================================================================
+
+Question:
+  If we admit the translation-invariant local scalar/Coleman-Weinberg
+  deformation route, does that produce a nontrivial retained PMNS
+  lower-level response profile?
+
+========================================================================================
+PART 1: UNIFORM SCALAR CONDENSATE KEEPS THE hw=1 TRIPLET SCALAR
+========================================================================================
+  [PASS] phi=0: each hw=1 corner still has exact energy sqrt(1+phi^2)  (energies=[1. 1. 1.])
+  [PASS] phi=0: the three hw=1 corners remain exactly degenerate
+  [PASS] phi=0: the corner Hamiltonian squares to -(1+phi^2) I_8  (max residual=0.00e+00)
+  [PASS] phi=0.2: each hw=1 corner still has exact energy sqrt(1+phi^2)  (energies=[1.019804 1.019804 1.019804])
+  [PASS] phi=0.2: the three hw=1 corners remain exactly degenerate
+  [PASS] phi=0.2: the corner Hamiltonian squares to -(1+phi^2) I_8  (max residual=1.80e-34)
+  [PASS] phi=0.7: each hw=1 corner still has exact energy sqrt(1+phi^2)  (energies=[1.220656 1.220656 1.220656])
+  [PASS] phi=0.7: the three hw=1 corners remain exactly degenerate
+  [PASS] phi=0.7: the corner Hamiltonian squares to -(1+phi^2) I_8  (max residual=7.19e-34)
+  [PASS] phi=1.3: each hw=1 corner still has exact energy sqrt(1+phi^2)  (energies=[1.640122 1.640122 1.640122])
+  [PASS] phi=1.3: the three hw=1 corners remain exactly degenerate
+  [PASS] phi=1.3: the corner Hamiltonian squares to -(1+phi^2) I_8  (max residual=1.67e-32)
+
+  So the admitted translation-invariant local scalar condensate does
+  not split or mix the three generation corners. It only renormalizes
+  their common scalar energy.
+
+========================================================================================
+PART 2: THE RETAINED LEPTON PAIR IS SECTOR-SCALAR ON THE UNIFORM SCALAR LANE
+========================================================================================
+  [PASS] The neutral retained triplet block is generation-scalar
+  [PASS] The charge-(-1) retained triplet block is generation-scalar
+  [PASS] A scalar active block has purely diagonal support, not the canonical active support I+C
+  [PASS] The scalar active block has zero four-real orbit-breaking source  (source=[0. 0. 0. 0.])
+
+  So the admitted uniform scalar/CW lane can at most move the retained
+  PMNS pair along sector-scalar directions (u_0 I_3, u_- I_3).
+
+========================================================================================
+PART 3: THE INDUCED LOWER-LEVEL RESPONSE PROFILES STAY SCALAR
+========================================================================================
+  [PASS] The active response profile is exactly a scalar resolvent column set  (scale=1.024464434062)
+  [PASS] The passive response profile is exactly a scalar resolvent column set  (scale=1.570469764186)
+  [PASS] The scalar response profiles recover the same scalar triplet blocks exactly
+  [PASS] The scalar response kernels themselves carry no active-support or corner-breaking data
+
+========================================================================================
+PART 4: THE RETAINED PMNS STACK REJECTS THE UNIFORM SCALAR LANE
+========================================================================================
+  [PASS] The live retained lower-level PMNS closure stack rejects scalar response profiles  (response packs do not realize a one-sided minimal PMNS class)
+  [PASS] Reason: the resulting pair is not on a one-sided minimal PMNS class  (response packs do not realize a one-sided minimal PMNS class)
+
+  So the admitted uniform scalar/CW deformation law still cannot realize
+  the retained PMNS lane. It only rescales the free point.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact admitted-scalar boundary:
+    - a uniform local scalar condensate keeps the hw=1 triplets scalar
+    - the most general retained lepton pair on that lane is (u_0 I_3, u_- I_3)
+    - the induced lower-level response profiles are scalar resolvents
+    - the retained PMNS closure stack rejects those profiles exactly
+
+  So even the admitted uniform scalar / Coleman-Weinberg deformation
+  route does not generate retained PMNS structure by itself.
+
+PASS=22 FAIL=0
+
+----- stderr -----
+

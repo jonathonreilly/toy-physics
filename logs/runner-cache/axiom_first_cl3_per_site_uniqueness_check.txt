@@ -1,0 +1,78 @@
+===== runner cache v1 =====
+runner: scripts/axiom_first_cl3_per_site_uniqueness_check.py
+runner_sha256: 48efa77239a7213c6b8da214784bf28b3facf1cca7f7578c5bd1e28eaa70c4c1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.29
+status: ok
+----- stdout -----
+========================================================================
+ axiom_first_cl3_per_site_uniqueness_check.py
+ Loop: axiom-first-foundations, Cycle 6 / Route R6
+ Stone-von Neumann uniqueness for Cl(3) site representations.
+ 2026-05-03 repair: explicit chirality split via central pseudoscalar.
+========================================================================
+
+--- Exhibit E1: Pauli matrices satisfy Cl(3) defining relations ---
+  max |{σ_i, σ_j} - 2 δ_ij I| = 0.000e+00
+  E1 verdict: PASS
+
+--- Exhibit E2: No 1-dim faithful complex Cl(3) rep ---
+  Algebraic argument: in C, ab + ba = 2ab. {a,b}=0 ⇒ ab=0 ⇒ a=0 or b=0.
+  Hence at most one of γ_1, γ_2, γ_3 can be non-zero in a 1-dim rep,
+  and the remaining two are zero — not faithful.
+  E2 verdict: PASS  (algebraic; no 1-dim faithful rep)
+
+--- Exhibit E3: No 3-dim faithful complex Cl(3) rep ---
+  random 3x3 Hermitian search (200 trials): 0 solutions to all 9 anticommutators.
+  Predicted: 0 (no faithful odd-dim Cl(3) rep by Artin-Wedderburn).
+  E3 verdict: PASS
+
+--- Exhibit E4: 2-dim Cl(3) reps are Pauli within a fixed chirality ---
+  trial 0: max ||V σ_i V^† - ρ_i|| = 1.818e+00  partial
+           [algebraic V = U_true] max diff = 0.000e+00
+  trial 1: max ||V σ_i V^† - ρ_i|| = 1.983e+00  partial
+           [algebraic V = U_true] max diff = 0.000e+00
+  trial 2: max ||V σ_i V^† - ρ_i|| = 1.526e+00  partial
+           [algebraic V = U_true] max diff = 0.000e+00
+  trial 3: max ||V σ_i V^† - ρ_i|| = 1.884e+00  partial
+           [algebraic V = U_true] max diff = 0.000e+00
+  trial 4: max ||V σ_i V^† - ρ_i|| = 1.961e+00  partial
+           [algebraic V = U_true] max diff = 0.000e+00
+  E4 verdict: PASS
+
+--- Exhibit E5: 4-dim same-chirality rep = Pauli ⊕ Pauli decomposes ---
+  Cl(3) relations satisfied?  err = 0.000e+00
+  commutant dim = 4  (expected: 4 for multiplicity-2 irrep)
+  E5 verdict: PASS
+
+--- Exhibit E6: central pseudoscalar omega and chirality split ---
+  omega := sigma_1 sigma_2 sigma_3 = i I  err = 0.000e+00
+  omega^2 = -I  err = 0.000e+00
+  max ||[omega, sigma_i]|| = 0.000e+00  (omega is central)
+  rho_+ chirality: omega -> +i I  err = 0.000e+00
+  rho_- chirality: omega -> -i I  err = 0.000e+00
+  rho_+ Cl(3) defining relations err = 0.000e+00
+  rho_- Cl(3) defining relations err = 0.000e+00
+  closest random unitary distance from rho_+ to rho_-: 9.909e-01
+    (random sanity check found no equivalence; the proof is the
+     omega-eigenvalue obstruction above)
+  E6 verdict: PASS
+
+========================================================================
+ SUMMARY
+========================================================================
+   E1 (Pauli satisfies Cl(3)): PASS
+   E2 (no 1-dim faithful rep): PASS
+   E3 (no 3-dim faithful rep): PASS
+   E4 (2-dim reps Pauli within fixed chirality): PASS
+   E5 (4-dim same-chirality rep decomposes as 2*Pauli): PASS
+   E6 (central pseudoscalar + chirality split rho_+, rho_-): PASS
+
+   PASSED: 6/6
+
+ verdict: per-site uniqueness (U1)-(U4) exhibited on Cl(3) with
+          chirality split rho_+ (canonical) / rho_- (parity-conjugate).
+
+----- stderr -----
+

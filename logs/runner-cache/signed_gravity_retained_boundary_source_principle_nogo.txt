@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_retained_boundary_source_principle_nogo.py
+runner_sha256: 1defd036c793ba90b81d6de160c65d2d82133642968695dd5744df0d2a4b476e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================================
+RETAINED BOUNDARY SOURCE PRINCIPLE NO-GO AUDIT
+  APS/Wald/Gauss retained class versus chi_eta rho Phi cross term
+========================================================================================================
+
+SOURCE-CURRENT BASIS
+  term                       retained    gap       source +/-  note
+  positive_born_gauss             YES     NO [+1.0,+1.0]  retained positive physical source scale
+  aps_eta_spectator               YES     NO [+0.0,+0.0]  topological label, Phi-source neutral on gapped sector
+  positive_wald_area              YES     NO [+0.0,+0.0]  positive area carrier, Phi-source neutral
+  finite_gap_penalty               NO     NO [+0.0,+0.0]  can discourage zero crossing but is not a hard superselection
+  hard_gap_constraint              NO    YES [+0.0,+0.0]  protects sector only by adding a new admissibility constraint
+  chi_rho_phi_cross_term           NO     NO [+1.0,-1.0]  exact proposed source term; new orientation-odd coupling
+
+[PASS] retained APS/Wald/Gauss source basis cannot span signed source  (residual=1.414e+00, fitted=[-0. -0.])
+[PASS] gap penalties/constraints alone do not create a Phi source  (residual=1.414e+00, fitted=[-0. -0.])
+[PASS] signed source appears exactly when the cross term is added  (residual=1.110e-16, fitted=[ 1. -1.])
+[PASS] retained positive source is orientation-even while desired source is orientation-odd
+
+APS GAP-PROTECTION CHECK
+[PASS] continuous path between eta sectors crosses zero  (chi_path=[1, 1, 1, 1, 0, -1, -1, -1, -1])
+[PASS] finite gap penalty is not a topological superselection rule  (V_gap min=6.25e+00, midpoint=1.00e+06, max=1.00e+06)
+[PASS] hard gap protection works only as an added admissibility constraint  (allowed_path=[True, True, True, True, False, True, True, True, True])
+
+INTERPRETATION
+  Retained positive source + APS spectator + positive Wald carrier cannot
+  generate the orientation-odd signed source current.
+  Gap protection is also not derived by eta itself: a finite path reaches
+  the null crossing unless a hard gap constraint is added.
+  Therefore a retained boundary source principle is not in hand.
+
+SUMMARY: PASS=7 FAIL=0
+FINAL_TAG: RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO
+
+----- stderr -----
+

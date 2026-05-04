@@ -1,0 +1,24 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_transport_gap_constant_no_go.py
+runner_sha256: a0353245dfdee4ad5abbb0fd61a46a43e36d1ce0a90a962e6f2f4a78d06ef391
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+========================================================================================
+KOIDE TRANSPORT-GAP CONSTANT NO-GO
+========================================================================================
+  [PASS (B)] [NUMERIC] The transport-gap observation is only a numerical near-match, not an exact identity on the current branch  (1/eta_ratio=5.29700493, 4pi/sqrt(6)=5.13019932, rel_gap=3.2514%)
+  [PASS (A)] [NUMERIC] Both sides of the comparison are branch-level constants rather than functions of the selected-line coordinate m  (sampling arbitrary m values leaves both quantities unchanged)
+  [PASS (A)] [NUMERIC] So even an exact transport-gap identity would be at most a cross-lane support relation, not an m-selection law  (the comparison gap is itself m-independent on the sampled branch points)
+
+Summary:
+  The 4pi/sqrt(6) transport-gap observation is not a live Koide closure route.
+  On the current branch it is a near-match between two constants from two
+  already-reduced lanes, and it carries no selected-line m dependence.
+
+PASS=3 FAIL=0
+
+----- stderr -----
+

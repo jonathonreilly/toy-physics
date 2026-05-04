@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_scalar_baseline_active_quadratic_diagnostic.py
+runner_sha256: 053f771213bb0b1eb9b9ac6017a8d00736800bee550109170df8b93352e03c66
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.53
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE SCALAR-BASELINE ACTIVE QUADRATIC DIAGNOSTIC
+========================================================================================
+
+Question:
+  Is there a useful exact comparison quadratic on the live active pair
+  without promoting it into a false selector-closure theorem?
+
+========================================================================================
+PART 1: SCALAR-BASELINE SOURCE RESPONSE IS EXACT ON THE ACTIVE PAIR
+========================================================================================
+  [PASS (C)] The observable-principle note records the unique additive scalar generator
+  [PASS (C)] The diagnostic note is explicitly framed as a bounded diagnostic tool
+  [PASS (C)] On a scalar baseline, the active determinant family matches the exact closed formula  (max det error=3.05e-15)
+
+========================================================================================
+PART 2: SCALAR-BASELINE CURVATURE IS EXACTLY ISOTROPIC
+========================================================================================
+  [PASS (C)] The active generators are Frobenius-orthogonal with equal norm
+  [PASS (C)] The scalar-baseline curvature gives K(T_delta,T_delta) = 6/m^2  (Kdd=1.662049861496)
+  [PASS (C)] The scalar-baseline curvature gives K(T_q,T_q) = 6/m^2  (Kqq=1.662049861496)
+  [PASS (C)] The scalar-baseline curvature gives K(T_delta,T_q) = 0  (Kdq=0.000000000000)
+
+========================================================================================
+PART 3: GENERIC POSITIVE BASELINES ARE NOT ISOTROPIC ON THE ACTIVE PAIR
+========================================================================================
+  [PASS (C)] A generic positive baseline breaks the scalar-baseline isotropy  ((Kdd,Kqq,Kdq)=(2.027777777778,2.000000000000,-0.333333333333))
+  [PASS (C)] So the recorded quadratic is a scalar-baseline diagnostic, not a baseline-independent selector law  (Kdq=-0.333333333333)
+
+========================================================================================
+PART 4: THE DIAGNOSTIC MINIMIZER IS EXACT ON THE ACTIVE CHAMBER
+========================================================================================
+  [PASS (C)] The chamber minimizer lies on the exact active boundary  ((delta_*,q_+*)=(0.816496580928,0.816496580928))
+  [PASS (C)] The boundary diagnostic is stationary at delta_* = sqrt(6)/3  (Q'_bdy(delta_*)=0.000000000000)
+  [PASS (C)] Strict convexity makes that point the unique chamber minimizer  (Q*=(8.000000000000) left=(8.480000000000) right=(8.480000000000))
+  [PASS (C)] The selected chamber point reads back as r31 = 1/2 and phi_+ = pi/2  ((r31,phi)=(0.500000000000,1.570796326795))
+
+========================================================================================
+PART 5: THE NOTE RECORDS THE DIAGNOSTIC BOUNDARY HONESTLY
+========================================================================================
+  [PASS (C)] The note records the scalar-baseline quadratic and chamber minimizer
+  [PASS (C)] The note explicitly says this does not close the DM selector law
+
+========================================================================================
+RESULT
+========================================================================================
+  Safe landing:
+    - scalar-baseline active quadratic recorded exactly
+    - chamber minimizer recorded exactly
+    - generic baselines do not give the same isotropic law
+    - tool is diagnostic only, not DM selector closure
+
+  PASS=15  FAIL=0
+
+----- stderr -----
+

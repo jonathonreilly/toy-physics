@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_moduli_only_unitarity_jarlskog_area_certificate.py
+runner_sha256: cd7d82887d1c76d42ccbafb2160771b8e8b2e53cf6933f6367dcd3e11dbb8b6b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.60
+status: ok
+----- stdout -----
+========================================================================================
+CKM moduli-only unitarity/Jarlskog area certificate audit
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Status and scope extraction
+----------------------------------------------------------------------------------------
+  Status (extracted): 'proposed_retained - explicit strong derivation claim pending audit model-independent algebraic certificate that converts a 3x3 CKM squared- magnitude table into its unitarity-triangle area and Jarlskog magnitude, using only the moduli. It does not modify, promote, or close any retained CKM atlas, Wolfenstein, alpha_s, Koide, PMNS, dark-sector, or cosmology lane.'
+  [PASS] note is scoped as proposed-retained CKM algebraic certificate
+  [PASS] note explicitly avoids retained-lane promotion
+  [PASS] note declares no new numerical CKM prediction
+
+----------------------------------------------------------------------------------------
+Exact Fourier-unitary certificate
+----------------------------------------------------------------------------------------
+  [PASS] Fourier squared-moduli table is exactly flat bistochastic
+  row certificates: [1/27, 1/27, 1/27]
+  col certificates: [1/27, 1/27, 1/27]
+  4J^2: 1/27
+  [PASS] all six Heron certificates equal 4J^2 exactly
+  [PASS] Fourier area equals |J|/2 exactly
+
+----------------------------------------------------------------------------------------
+Heron side-square identity
+----------------------------------------------------------------------------------------
+  Heron difference: 0
+  [PASS] 16 Area^2 side-square formula is symbolic identity
+
+----------------------------------------------------------------------------------------
+Symbolic constructive converse: third-row moduli
+----------------------------------------------------------------------------------------
+  |t1|^2 - c1 = 0
+  |t2|^2 - c2 = 0
+  |t3|^2 - c3 = 0
+  [PASS] constructed row component 1 has target modulus
+  [PASS] constructed row component 2 has target modulus
+  [PASS] constructed row component 3 has target modulus
+
+----------------------------------------------------------------------------------------
+Numeric nondegenerate bistochastic lift
+----------------------------------------------------------------------------------------
+  max unitarity error: 2.220e-16
+  max modulus-table error: 2.220e-16
+  row certificates: ['0.0279', '0.0279', '0.0279']
+  col certificates: ['0.0279', '0.0279', '0.0279']
+  4J^2: 0.0279
+  [PASS] constructed lift is unitary
+  [PASS] constructed lift has requested squared moduli
+  [PASS] all six certificates match 4J^2 numerically
+  [PASS] positive radicand gives CP-violating interior
+
+========================================================================================
+TOTAL: PASS=14, FAIL=0
+========================================================================================
+
+----- stderr -----
+

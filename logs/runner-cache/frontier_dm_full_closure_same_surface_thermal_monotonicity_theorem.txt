@@ -1,0 +1,41 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_full_closure_same_surface_thermal_monotonicity_theorem.py
+runner_sha256: 0e1040096d25d365bb71e6a9f8deb3e5fb757ceb64982a903253e72f8b7073f4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+DM FULL CLOSURE SAME-SURFACE THERMAL MONOTONICITY THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: EXACT DERIVATIVE IDENTITIES
+========================================================================================
+  [PASS] The attractive and repulsive Sommerfeld derivatives share the same exact shifted numerator h(y)  (f_att'(y)-1/2 = f_rep'(y)+1/2 = h(y)/(2(e^y-1)^2))
+  [PASS] The exact derivative identities are numerically stable on representative y>0 samples
+
+========================================================================================
+PART 2: EXACT SIGN BOUNDS
+========================================================================================
+  [PASS] For every y>0, h(y)>0 because h(0)=0 and h'(y)=2 e^y (e^y-1-y)>0  (so f_att'(y) >= 1/2 and f_rep'(y) >= -1/2)
+
+========================================================================================
+PART 3: EXACT MONOTONICITY OF THE SAME-SURFACE VISUAL THERMAL FACTOR
+========================================================================================
+  [PASS] The exact channel-weighted derivative integrand is pointwise positive by a large margin  (64 f_att'(8y) + f_rep'(y) > 63/2)
+  [PASS] Therefore the exact same-surface thermal DM ratio is strictly increasing in alpha  (and dR/dalpha >= 5.169657065141 on the retained x_f=25 slice)
+
+  Exact consequence:
+    - current-bank no-go remains exact
+    - on any admitted one-scalar alpha-family, there can be at most one closure root
+    - the remaining DM-side problem is no longer monotonicity
+    - it is only exact evaluation / bounding of the thermal integral itself
+
+========================================================================================
+SUMMARY: PASS=5 FAIL=0
+========================================================================================
+
+----- stderr -----
+

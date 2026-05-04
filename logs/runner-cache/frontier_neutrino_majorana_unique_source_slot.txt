@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_unique_source_slot.py
+runner_sha256: b85e5fc1e4ed5c693d1582b5e26c7c8052b062d72f5b0a606154bcc9bd7f6673
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: UNIQUE LOCAL SOURCE SLOT
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+  - docs/NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md
+  - docs/NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md
+  - docs/NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md
+  - docs/NEUTRINO_MAJORANA_CURRENT_ATLAS_NONREALIZATION_NOTE.md
+
+Question:
+  If a future Majorana primitive is admitted as a local bilinear
+  source deformation, how many independent local source coordinates
+  can it carry on the current lane?
+
+========================================================================================
+PART 1: THE LOCAL CHARGE-TWO CHANNEL SPACE IS ONE-DIMENSIONAL
+========================================================================================
+  [PASS (C)] Unique local seed is antisymmetric  (||S^T+S||=0.00e+00)
+  [PASS (C)] Unique local seed has rank 2  (rank=2)
+  [PASS (C)] Unique local seed is supported only on the nu_R slot  (internal rows=[15])
+  [PASS (C)] Any local charge-two deformation on this lane is proportional to one seed  (projection residual=7.85e-17)
+
+  So the local admissible DeltaL=2 channel space is one-dimensional
+  over C before any source-law question is asked.
+
+========================================================================================
+PART 2: HERMITIAN LINEAR DEFORMATIONS CARRY ONE COMPLEX SOURCE SLOT
+========================================================================================
+  [PASS (C)] Hermitian subspace of the pair-annihilation/creation span has dimension 2 over R  (nullity=2, rank=2)
+  [PASS (C)] A complex coefficient m produces a Hermitian source deformation  (||X-X^dag||=0.00e+00)
+  [PASS (C)] The Hermitian deformation is exactly reconstructed from two real coordinates  (rebuild error=0.00e+00)
+
+  Two real Hermitian directions are exactly one complex source slot:
+  m cc + m^* c^dag c^dag.
+
+========================================================================================
+PART 3: THE LOCAL ANTISYMMETRIC SOURCE BLOCK IS ONE COMPLEX SLOT
+========================================================================================
+  [PASS (C)] Antisymmetric 2x2 source-block space has dimension 2 over R = 1 over C  (nullity=2, real-rank=2)
+  [PASS (C)] Any local antisymmetric block has the form m J_2  (antisym err=0.00e+00, residual=0.00e+00)
+
+  So the minimal local source block on the unique channel is not a
+  matrix of free coefficients. It is one complex coordinate m.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exactly one complex source slot m. On the current anomaly-fixed
+  lane, any future local bilinear Majorana source completion is of
+  the form m S_unique + m^* S_unique^dag.
+
+  PASS=9  FAIL=0
+
+----- stderr -----
+

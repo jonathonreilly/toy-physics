@@ -1,0 +1,31 @@
+===== runner cache v1 =====
+runner: scripts/born_compare_modular_central_ln.py
+runner_sha256: c95402c8307b14f2d3da93174cdf91d7a3765a47cb01409eabea6e522c3fccb2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 24.54
+status: ok
+----- stdout -----
+==============================================================================================================
+CORRECTED BORN COMPARISON: MODULAR GAP + LN VS CENTRAL-BAND |y|-REMOVAL + LN
+  Same corrected Sorkin metric with -P(empty), matched seeds, matched N
+  seeds=8, npl=25, y_range=12.0, r=3.0, gap=2.0, y_cut=2.0
+==============================================================================================================
+
+[modular gap=2.0 LN]
+     N     pur_min     Born mean    Born max  n_ok    rem%
+  --------------------------------------------------------
+    25       0.908      4.67e-16    1.44e-15     8     —  
+    40       0.958      2.78e-16    7.77e-16     8     —  
+    60       0.957      1.80e-16    4.44e-16     7     —  
+
+[central-band |y|<2.0 LN]
+     N     pur_min     Born mean    Born max  n_ok    rem%
+  --------------------------------------------------------
+    25       0.942      4.44e-16    8.88e-16     8   15.9%
+    40       0.948      2.41e-16    8.88e-16     8   16.1%
+    60       0.947      3.22e-16    6.66e-16     7   17.3%
+
+
+----- stderr -----
+

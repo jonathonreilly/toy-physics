@@ -1,0 +1,82 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_two_higgs_right_gram_bridge.py
+runner_sha256: c9619f480f1432819884416fd4f5f9bbaf069b3cde3abe930abae4bf561418a4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM / NEUTRINO: TWO-HIGGS RIGHT-GRAM BRIDGE THEOREM
+========================================================================================
+
+Question:
+  Does the local canonical neutrino two-Higgs lane actually contain the
+  exact odd-circulant CP-supporting structure DM leptogenesis now needs?
+
+========================================================================================
+PART 1: THE CANONICAL TWO-HIGGS LANE HAS AN EXACT RIGHT-GRAM FORMULA
+========================================================================================
+  [PASS (C)] The canonical two-Higgs lane gives the exact one-phase right-Gram form  (form error = 1.11e-16)
+  [PASS (C)] The right-Gram matrix is already non-universal and off-diagonal on a generic point  (K01=0.360000+0.000000j, K12=0.420000+0.000000j, K20=0.147124+0.529957j)
+
+  So the local neutrino two-Higgs lane is not a flavor-empty extension.
+  It carries the exact kind of right-Gram data leptogenesis actually uses.
+
+========================================================================================
+PART 2: HERMITIAN CIRCULANT CP TARGETS REPHASE TO THE TWO-HIGGS GAUGE
+========================================================================================
+  [PASS (C)] Any Hermitian circulant target can be put into the canonical one-phase gauge  (gauge error = 3.12e-16)
+  [PASS (C)] The canonical phase is the Z3-invariant triangle phase arg(h^3)  (arg(h^3) = 2.822287, delta = 2.822287)
+
+  So the DM odd-circulant target can be compared directly against the
+  canonical two-Higgs right-Gram family without losing the physical CP phase.
+
+========================================================================================
+PART 3: THE CIRCULANT TARGET IS REALIZED IF AND ONLY IF d >= 2 r
+========================================================================================
+  Write the circulant target in canonical gauge as
+      K_can(d,r,delta) = [[d,r,r e^{-i delta}],[r,d,r],[r e^{i delta},r,d]].
+  On the canonical two-Higgs lane this requires
+      x1 y1 = x2 y2 = x3 y3 = r
+      x1^2 + y3^2 = x2^2 + y1^2 = x3^2 + y2^2 = d.
+  With t_i = x_i^2 and y_i = r/x_i, these become
+      t2 = F(t1),  t3 = F(t2),  t1 = F(t3)
+  for F(t) = d - r^2/t, and F is strictly increasing on t > 0.
+  Ordering t1 <= t2 <= t3 gives t2 <= t3 <= t1, so all t_i are equal.
+  [PASS (C)] The constructive branch solves the target exactly when d^2 - 4 r^2 >= 0  (d=1.220000, r=0.550000, disc=0.278400)
+  [PASS (C)] The no-go branch is exactly d^2 - 4 r^2 < 0  (d=1.340000, r=0.957549, disc=-1.872000)
+  [PASS (C)] Therefore the canonical two-Higgs lane realizes the circulant target iff d >= 2 r  (constructive point exists on the admissible side; no real symmetric root exists on the forbidden side)
+
+  So the two-Higgs lane does not realize the whole odd-circulant family.
+  It realizes the exact admissible subcone d >= 2|h| and excludes the rest.
+
+========================================================================================
+PART 4: THE DM ODD-CIRCULANT FAMILY HITS THE TWO-HIGGS LANE ON AN EXACT SUBCONE
+========================================================================================
+  [PASS (C)] The discriminant matches the exact factorized DM-family expression  (good=0.176000, bad=-1.872000)
+  [PASS (C)] An admissible odd-circulant DM point is realized exactly on the two-Higgs lane  (disc=0.176000, delta=2.822287)
+  [PASS (C)] An inadmissible odd-circulant DM point is excluded exactly by the subcone test  (disc=-1.872000)
+  [PASS (C)] The current DM benchmark sample sits on the exact boundary d = 2 r  (d=1.182800, r=0.591400, disc=4.44e-16)
+
+  So the two-Higgs neutrino lane is a real positive DM bridge:
+  the odd-circulant CP-supporting family is not foreign to it.
+  But the bridge is not automatic on the whole family; it lives on the
+  exact admissible subcone selected by d >= 2|h|.
+
+========================================================================================
+Conclusion
+========================================================================================
+  The canonical neutrino two-Higgs lane is not just a PMNS sidecar.
+  It can realize the exact DM odd-circulant CP-supporting right-Gram
+  family on an exact admissible subcone. So the DM blocker is now
+  narrower:
+    - derive/select the two-Higgs extension,
+    - derive its right-sensitive seven quantities / sheet, and
+    - prove the resulting right-Gram lands in the admissible CP subcone
+      with nonzero odd component.
+
+PASS=11  FAIL=0
+
+----- stderr -----
+

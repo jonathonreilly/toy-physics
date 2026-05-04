@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_scalar_temporal_completion_theorem.py
+runner_sha256: d9dedd6d3b04c2d46c89bf3a86f84fd838ba2371cb91471328539ce62d2d60e3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-SCALAR TEMPORAL-COMPLETION THEOREM
+==============================================================================
+
+Part 1: Exact Wilson nearest-neighbor plaquette grammar
+  plaquette orientations (mu<nu): [(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)]
+  [PASS] the accepted Wilson gauge source uses exactly the six nearest-neighbor plaquette orientations
+         [(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)]
+
+Part 2: Exact directional coefficients induced by the Wilson source
+  accepted directional coefficients = {'x': 3.0, 'y': 3.0, 'z': 3.0, 't': 3.0}
+  [PASS] one common Wilson source coefficient on all six plaquette orientations induces equal weights on all four coordinates
+         coeffs = [3.0, 3.0, 3.0, 3.0]
+  [PASS] the accepted local bosonic scalar gauge-source class is one-dimensional
+         uniform nearest-neighbor plaquette weight is the only free scalar normalization
+
+Part 3: Exact reduction on the minimal APBC spatial cube
+  w=0.25: max |K_O - 3w(3+sin^2 omega)| = 4.441e-16
+  w=0.50: max |K_O - 3w(3+sin^2 omega)| = 8.882e-16
+  w=1.00: max |K_O - 3w(3+sin^2 omega)| = 1.776e-15
+  w=2.00: max |K_O - 3w(3+sin^2 omega)| = 3.553e-15
+  [PASS] every accepted local bosonic scalar gauge source reduces exactly to K_O(omega) = 3w (3 + sin^2 omega)
+
+Part 4: Universal temporal completion law on the accepted source class
+  w=0.25: A_2=0.166666666666667  A_inf=0.192450089729875  ratio=1.154700538379252
+  w=0.50: A_2=0.083333333333333  A_inf=0.096225044864938  ratio=1.154700538379252
+  w=1.00: A_2=0.041666666666667  A_inf=0.048112522432469  ratio=1.154700538379252
+  w=2.00: A_2=0.020833333333333  A_inf=0.024056261216234  ratio=1.154700538379252
+  [PASS] the accepted-class temporal completion ratio is independent of the overall Wilson source normalization
+         ratios = [1.154700538379252, 1.154700538379252, 1.154700538379252, 1.154700538379252]
+  [PASS] the exact accepted-class endpoint ratio is 2/sqrt(3)
+         ratio = 1.154700538379252
+
+Part 5: Load-bearing negative tests
+  anisotropic directional coefficients = [2.7, 3.0, 3.0, 2.7]
+  anisotropic ratio = 1.144702942944678
+  site-term ratio   = 1.150035062579090
+  [PASS] breaking Wilson isotropy changes the temporal completion ratio
+         delta = 0.009998
+  [PASS] adding a forbidden site term changes the temporal completion ratio
+         delta = 0.004665
+
+Conclusion
+  On the accepted Wilson nearest-neighbor plaquette surface, every local
+  bosonic scalar gauge source is induced by one common plaquette weight
+  across the six orientations, so on the exact minimal 3 spatial + 1
+  derived-time block its source kernel is
+      K_O(omega) = 3w (3 + sin^2 omega).
+  Therefore the normalized temporal completion law is universal:
+      A_inf / A_2 = 2 / sqrt(3)
+  independent of the overall source normalization.
+
+==============================================================================
+SUMMARY: PASS=8 FAIL=0
+==============================================================================
+
+----- stderr -----
+

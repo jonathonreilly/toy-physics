@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_g_bare_derivation_status_audit.py
+runner_sha256: 4888fc1bb9223938edad982e0b9b80af2f32d1f34522a459ad7e1408b4569c1a
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.04
+status: nonzero_exit
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: audit-packet structure
+----------------------------------------------------------------------------------------
+  [PASS (A)] audit packet contains: 'g_bare Derivation Note — Status Correction Audit'  ()
+  [PASS (A)] audit packet contains: 'G_BARE_DERIVATION_NOTE.md'  ()
+  [PASS (A)] audit packet contains: 'constraint vs. convention'  ()
+  [PASS (A)] audit packet contains: 'A → A/g rescaling freedom'  ()
+  [PASS (A)] audit packet contains: 'missing primary runner'  ()
+  [PASS (A)] audit packet contains: 'frontier_g_bare_derivation.py'  ()
+  [PASS (A)] audit packet contains: 'bounded normalization proposal'  ()
+  [PASS (A)] audit packet contains: 'proposal_allowed: false'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: confirm missing runner
+----------------------------------------------------------------------------------------
+  [FAIL (A)] claimed missing runner is actually missing  (path = /private/tmp/gate-fix-worktree/scripts/frontier_g_bare_derivation.py)
+
+----------------------------------------------------------------------------------------
+Part 3: constraint vs convention ambiguity discussion
+----------------------------------------------------------------------------------------
+  [PASS (A)] ambiguity point: (a) Structural constraint  (§2 ambiguity discussion)
+  [PASS (A)] ambiguity point: (b) Convention choice  (§2 ambiguity discussion)
+  [PASS (A)] ambiguity point: load-bearing for retention  (§2 ambiguity discussion)
+  [PASS (A)] ambiguity point: admitted convention with narrow non-derivation role  (§2 ambiguity discussion)
+
+----------------------------------------------------------------------------------------
+Part 4: A → A/g rescaling freedom analysis
+----------------------------------------------------------------------------------------
+  [PASS (A)] rescaling analysis: S_gauge[A; g]  (§3 rescaling discussion)
+  [PASS (A)] rescaling analysis: 1/4 g²  (§3 rescaling discussion)
+  [PASS (A)] rescaling analysis: g_bare × |A|  (§3 rescaling discussion)
+  [PASS (A)] rescaling analysis: structural identity in the Cl(3) framework  (§3 rescaling discussion)
+
+----------------------------------------------------------------------------------------
+Part 5: 7 cert criteria assessment
+----------------------------------------------------------------------------------------
+  [PASS (A)] audit packet explicitly assesses Criterion 1  ()
+  [PASS (A)] audit packet explicitly assesses Criterion 2  ()
+  [PASS (A)] audit packet explicitly assesses Criterion 3  ()
+  [PASS (A)] audit packet explicitly assesses Criterion 4  ()
+  [PASS (A)] audit packet explicitly assesses Criterion 5  ()
+  [PASS (A)] audit packet explicitly assesses Criterion 6  ()
+  [PASS (A)] audit packet explicitly assesses Criterion 7  ()
+
+----------------------------------------------------------------------------------------
+Part 6: G_BARE_* sister family enumerated
+----------------------------------------------------------------------------------------
+  [PASS (A)] G_BARE_* family member: G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18  (§8 cross-references)
+  [PASS (A)] G_BARE_* family member: G_BARE_RIGIDITY_THEOREM_NOTE  (§8 cross-references)
+  [PASS (A)] G_BARE_* family member: G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18  (§8 cross-references)
+  [PASS (A)] G_BARE_* family member: G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18  (§8 cross-references)
+
+========================================================================================
+  TOTAL: PASS=27, FAIL=1
+========================================================================================
+
+----- stderr -----
+

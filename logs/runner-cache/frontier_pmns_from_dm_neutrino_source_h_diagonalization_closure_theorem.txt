@@ -1,0 +1,125 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py
+runner_sha256: f653e00082a586886ed501e3c1b2b138a989c537e5e644d34370990530c78903
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.78
+status: ok
+----- stdout -----
+========================================================================================
+G1 PHYSICIST-H — PMNS as f(H(m, delta, q_+))
+========================================================================================
+
+Attack line: L1 (direct diagonalization of H).
+PMNS convention: charged-lepton basis = axis basis by the retained
+Z_3-trichotomy route plus Higgs q_H gauge-redundancy theorem. PMNS is the
+eigenbasis unitary of H, row-permuted by the hierarchy pairing
+(electron <-> largest H-eigenvalue, muon <-> middle, tau <-> lowest).
+
+========================================================================================
+Part 1: retained structural checks on H(m, delta, q_+) and K_Z3
+========================================================================================
+ [PASS (D)] H(A Schur-Q) is Hermitian
+ [PASS (D)] K_Z3(A Schur-Q) is Hermitian
+ [PASS (D)] K[0,1] = a_* frozen at A Schur-Q (a_*=0.16993211+1.19280904j, diff=0.00e+00)
+ [PASS (D)] K[0,2] = b_* frozen at A Schur-Q (b_*=0.45860725-0.69280904j, diff=0.00e+00)
+ [PASS (D)] H(B det-crit) is Hermitian
+ [PASS (D)] K_Z3(B det-crit) is Hermitian
+ [PASS (D)] K[0,1] = a_* frozen at B det-crit (a_*=0.16993211+1.19280904j, diff=3.55e-16)
+ [PASS (D)] K[0,2] = b_* frozen at B det-crit (b_*=0.45860725-0.69280904j, diff=3.33e-16)
+ [PASS (D)] H(C Tr(H^2)-bdy) is Hermitian
+ [PASS (D)] K_Z3(C Tr(H^2)-bdy) is Hermitian
+ [PASS (D)] K[0,1] = a_* frozen at C Tr(H^2)-bdy (a_*=0.16993211+1.19280904j, diff=2.29e-16)
+ [PASS (D)] K[0,2] = b_* frozen at C Tr(H^2)-bdy (b_*=0.45860725-0.69280904j, diff=2.48e-16)
+ [PASS (D)] H(D K12 char) is Hermitian
+ [PASS (D)] K_Z3(D K12 char) is Hermitian
+ [PASS (D)] K[0,1] = a_* frozen at D K12 char (a_*=0.16993211+1.19280904j, diff=0.00e+00)
+ [PASS (D)] K[0,2] = b_* frozen at D K12 char (b_*=0.45860725-0.69280904j, diff=2.29e-16)
+ [PASS (D)] H(E par-mix F1) is Hermitian
+ [PASS (D)] K_Z3(E par-mix F1) is Hermitian
+ [PASS (D)] K[0,1] = a_* frozen at E par-mix F1 (a_*=0.16993211+1.19280904j, diff=2.29e-16)
+ [PASS (D)] K[0,2] = b_* frozen at E par-mix F1 (b_*=0.45860725-0.69280904j, diff=2.48e-16)
+ [PASS (D)] K_doublet varies on chamber (|K_A - K_B| > 0.1)
+
+========================================================================================
+Part 2: PMNS angles as f(H) vary across the chamber
+========================================================================================
+ A Schur-Q       (m,d,q)=(0.5000,0.8165,0.8165) s12^2=0.5576 s13^2=0.0191 s23^2=0.5429 sin(d_CP)=-0.958
+ B det-crit      (m,d,q)=(0.6130,0.9640,1.5520) s12^2=0.4624 s13^2=0.1053 s23^2=0.5459 sin(d_CP)=-0.974
+ C Tr(H^2)-bdy   (m,d,q)=(0.3850,1.2680,0.3650) s12^2=0.0885 s13^2=0.0107 s23^2=0.7427 sin(d_CP)=0.712
+ D K12 char      (m,d,q)=(0.0000,0.8000,1.0000) s12^2=0.8116 s13^2=0.0126 s23^2=0.5952 sin(d_CP)=-0.205
+ E par-mix F1    (m,d,q)=(0.6285,1.1462,0.4868) s12^2=0.1020 s13^2=0.0123 s23^2=0.6116 sin(d_CP)=-0.624
+ [PASS (D)] sin^2 theta_12 varies on chamber (spread > 0.1) (spread=0.7230)
+ [PASS (D)] sin^2 theta_13 varies on chamber (spread > 0.01) (spread=0.0946)
+ [PASS (D)] sin^2 theta_23 varies on chamber (spread > 0.01) (spread=0.1998)
+
+========================================================================================
+Part 3: unique chamber solution (m_*, delta_*, q_+*) via multi-start
+========================================================================================
+ [PASS (D)] random-start multi-start converges to unique chamber solution (1 distinct minima; ~60 accepted)
+ pinned (m_*, delta_*, q_+*) = (0.657061, 0.933806, 0.715042)
+ fsolve-sharpened  = (0.657061342210, 0.933806343759, 0.715042329587)
+ [PASS (D)] pinned s12^2 = 0.307 (machine-precise) (val=0.307000000000)
+ [PASS (D)] pinned s13^2 = 0.0218 (machine-precise) (val=0.021800000000)
+ [PASS (D)] pinned s23^2 = 0.545 (machine-precise) (val=0.545000000000)
+ [PASS (D)] pinned (delta_*, q_+*) lies strictly inside chamber (q_+ + delta > sqrt(8/3)) (dist = q_+ + delta - sqrt(8/3) = 0.015856)
+
+========================================================================================
+Part 4: PDG / NuFit 5.3 range check on |U_PMNS| at pinned chamber point
+========================================================================================
+ |U_PMNS| at pinned point:
+  [0.8233, 0.5480, 0.1476]
+  [0.3704, 0.5742, 0.7301]
+  [0.4300, 0.6083, 0.6671]
+ [PASS (D)] |U_11| in 3-sigma range [0.801,0.845] (val=0.8233)
+ [PASS (D)] |U_12| in 3-sigma range [0.513,0.579] (val=0.5480)
+ [PASS (D)] |U_13| in 3-sigma range [0.143,0.155] (val=0.1476)
+ [PASS (D)] |U_21| in 3-sigma range [0.234,0.500] (val=0.3704)
+ [PASS (D)] |U_22| in 3-sigma range [0.471,0.689] (val=0.5742)
+ [PASS (D)] |U_23| in 3-sigma range [0.637,0.776] (val=0.7301)
+ [PASS (D)] |U_31| in 3-sigma range [0.271,0.525] (val=0.4300)
+ [PASS (D)] |U_32| in 3-sigma range [0.477,0.694] (val=0.6083)
+ [PASS (D)] |U_33| in 3-sigma range [0.613,0.756] (val=0.6671)
+
+========================================================================================
+Part 5: delta_CP prediction and Jarlskog at pinned chamber point
+========================================================================================
+ J (Jarlskog)  = -0.032755
+ sin(delta_CP)  = -0.9874
+ delta_CP (deg) = -80.88 (or complement +260.88 deg)
+ [PASS (D)] |Jarlskog| consistent with observed ~0.03 (|J|=0.0328)
+ [PASS (D)] sin(delta_CP) negative (i.e. delta_CP in (180, 360) deg), matching T2K-preferred octant
+
+========================================================================================
+Part 6: cross-check against prior retained candidate selectors
+========================================================================================
+ A Schur-Q       (d,q)=(0.8165,0.8165)  distance to pinned (d_*,q_*) = 0.1551
+ B det-crit      (d,q)=(0.9640,1.5520)  distance to pinned (d_*,q_*) = 0.8375
+ C Tr(H^2)-bdy   (d,q)=(1.2680,0.3650)  distance to pinned (d_*,q_*) = 0.4840
+ D K12 char      (d,q)=(0.8000,1.0000)  distance to pinned (d_*,q_*) = 0.3148
+ E par-mix F1    (d,q)=(1.1462,0.4868)  distance to pinned (d_*,q_*) = 0.3118
+ [PASS (D)] pinned (delta_*, q_+*) is STRICTLY inequivalent to every prior retained candidate (matches=[])
+
+========================================================================================
+Part 7: closed-form of the frozen singlet-doublet slots a_*, b_*
+========================================================================================
+ a_* = K[0,1] = 0.1699321132 + i 1.1928090416
+ b_* = K[0,2] = 0.4586072478 + i -0.6928090416
+ |a_*| = 1.2048528262
+ |b_*| = 0.8308459399
+ [PASS (D)] a_* is chamber-blind (retained blindness theorem)
+ [PASS (D)] b_* is chamber-blind (retained blindness theorem)
+
+========================================================================================
+ PASS = 43
+ FAIL = 0
+========================================================================================
+
+Summary:
+ Pinned chamber point (m_*, delta_*, q_+*) = (0.657061, 0.933806, 0.715042)
+ Predicted delta_CP = -80.88 deg (sin = -0.9874)
+ Jarlskog J     = -0.032755
+ selector closure status: BOUNDED on chamber, with A-BCC and sigma_hier open.
+
+----- stderr -----
+

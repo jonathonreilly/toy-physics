@@ -1,0 +1,96 @@
+===== runner cache v1 =====
+runner: scripts/frontier_half_plane_chart_equivalence_narrow.py
+runner_sha256: 27770001b4407f8e463ca2715cc89181983c7a163cd986331e1b6ab28bf36a12
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.55
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: half-plane chart equivalence
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: image of f lies in the half-plane H_c = {q >= c - delta}
+----------------------------------------------------------------------------------------
+  [PASS (A)] q - (c - delta) = sqrt(r^2 - 1/4) symbolically  (q - (c - delta) = sqrt(4*r**2 - 1)/2)
+  [PASS (A)] at r = 1/2: q = c - delta exactly (boundary)  (q - (c - delta) at r=1/2 = 0)
+
+----------------------------------------------------------------------------------------
+Part 2: g composed with f recovers r exactly
+----------------------------------------------------------------------------------------
+  [PASS (A)] g(delta, f(delta, r, c), c) = r symbolically (g compose f = id)  (g(f(delta, r, c)) = r)
+
+----------------------------------------------------------------------------------------
+Part 3: f composed with g recovers q exactly on the half-plane
+----------------------------------------------------------------------------------------
+  [PASS (A)] on s = q - c + delta >= 0: f(g) returns q (f compose g = id on H_c)  (forward_recovery = c - delta + s)
+
+----------------------------------------------------------------------------------------
+Part 4: monotonicity / surjectivity
+----------------------------------------------------------------------------------------
+  [PASS (A)] at q = c - delta (s = 0): r = 1/2 (minimal r)  (r at boundary = 1/2)
+  [PASS (A)] dr/ds > 0 for s > 0 (inverse chart is monotonic)  (dr/ds at s=1 = 2*sqrt(5)/5)
+
+----------------------------------------------------------------------------------------
+Part 5: concrete numerical instances
+----------------------------------------------------------------------------------------
+  [PASS (A)] (c, delta) = (1, 1), r = 3/4: g(f(r)) = r  (q = sqrt(5)/4, r_back = 3/4)
+  [PASS (A)] (c, delta) = (1, 1): boundary q = c - delta gives r = 1/2  (r at boundary = 1/2)
+  [PASS (A)] (c, delta) = (2, 0), r = 3/4: g(f(r)) = r  (q = sqrt(5)/4 + 2, r_back = 3/4)
+  [PASS (A)] (c, delta) = (2, 0): boundary q = c - delta gives r = 1/2  (r at boundary = 1/2)
+  [PASS (A)] (c, delta) = (5/3, -1/2), r = 3/4: g(f(r)) = r  (q = sqrt(5)/4 + 13/6, r_back = 3/4)
+  [PASS (A)] (c, delta) = (5/3, -1/2): boundary q = c - delta gives r = 1/2  (r at boundary = 1/2)
+
+----------------------------------------------------------------------------------------
+Part 6: framework instance c = sqrt(8/3)
+----------------------------------------------------------------------------------------
+  [PASS (A)] framework instance c = sqrt(8/3), delta = 0, r = 1: g(f(r)) = r  (q = sqrt(3)/2 + 2*sqrt(6)/3, r_back = 1)
+
+----------------------------------------------------------------------------------------
+Part 7: parent row context (no ledger modification)
+----------------------------------------------------------------------------------------
+
+  Parent row state on origin/main:
+    claim_type: positive_theorem
+    transitive_descendants: 225
+    load_bearing_step_class: A
+    deps: ['dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16', 'dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16', 'dm_neutrino_source_surface_m_spectator_theorem_note_2026-04-16', 'dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16', 'dm_neutrino_source_surface_slot_torsion_boundary_theorem_note_2026-04-16']
+  [PASS (A)] parent row class-A load-bearing step (algebraic identity)  ()
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let c > 0 be any positive constant, and consider the parametric map
+        f : {(delta, r) in R x [1/2, infinity)}  ->  R^2,
+        f(delta, r) = (delta,  c - delta + sqrt(r^2 - 1/4)).
+
+  CONCLUSION:
+    (i)   image(f) = closed half-plane H_c = {(delta, q) : q >= c - delta};
+    (ii)  the inverse chart on H_c is
+              g(delta, q) = (delta,  sqrt((q - c + delta)^2 + 1/4));
+    (iii) f and g are mutual inverses;
+    (iv)  the boundary q = c - delta corresponds to r = 1/2;
+    (v)   the inverse chart is strictly monotonic in s = q - c + delta.
+
+  Audit-lane class:
+    (A) — pure algebra in two real variables. No external observed/fitted/
+    literature input. The framework instance c = sqrt(8/3) is one
+    concrete case; the implication holds for any c > 0.
+
+  This narrow theorem drops the parent's deps on the five upstream
+  DM-neutrino source-surface theorems by parametrizing over the abstract
+  constant c.
+
+
+========================================================================================
+  TOTAL: PASS=14, FAIL=0
+========================================================================================
+
+----- stderr -----
+

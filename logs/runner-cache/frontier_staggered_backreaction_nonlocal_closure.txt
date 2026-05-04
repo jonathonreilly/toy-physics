@@ -1,0 +1,81 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_backreaction_nonlocal_closure.py
+runner_sha256: 0681111036c0a2820c361f961f0d4bedfc255c18fea80a2d5f174207bdfe01f8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 4.04
+status: ok
+----- stdout -----
+==============================================================================================================
+STAGGERED NONLOCAL / FRACTIONAL-GREEN CLOSURE PROBE
+  source sector varies; transport law fixed
+  primary observable: force F = < -dPhi/dd >
+==============================================================================================================
+dt=0.12, steps=10, mass=0.3, mu2=0.22, ext_mu=0.38, source_sigma=0.9
+alphas=(1.0, 0.8, 0.6, 0.4, 0.2, 0.1, 0.0)
+
+baseline alpha=1.00 best gain=16.000 cycle-gap=3.881e-02
+
+== alpha=1.00 gain=16.000 cycle-gap=3.881e-02 ==
+bipartite_random_geometric n=36  F_ext=+1.488e+00 F_raw=+5.593e-02 F_cal=+1.449e+00 raw_gap=9.624e-01 cal_gap=2.597e-02 R2=0.9996 2body=4.856e-16 self_gap=2.362e-01 norm=2.22e-16 TOWARD=3/3
+bipartite_growing          n=48  F_ext=+1.750e+00 F_raw=+6.788e-02 F_cal=+1.659e+00 raw_gap=9.612e-01 cal_gap=5.164e-02 R2=0.9995 2body=2.820e-15 self_gap=2.474e-01 norm=2.22e-16 TOWARD=3/3
+layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_raw=+2.183e-01 F_cal=+3.596e+00 raw_gap=8.822e-01 cal_gap=9.414e-01 R2=1.0000 2body=3.689e-15 self_gap=1.963e-01 norm=1.11e-16 TOWARD=3/3
+
+== alpha=0.80 gain=16.000 cycle-gap=4.652e-02 ==
+bipartite_random_geometric n=36  F_ext=+1.488e+00 F_raw=+5.310e-02 F_cal=+1.460e+00 raw_gap=9.643e-01 cal_gap=1.886e-02 R2=0.9993 2body=1.075e-15 self_gap=2.036e-01 norm=8.88e-16 TOWARD=3/3
+bipartite_growing          n=48  F_ext=+1.750e+00 F_raw=+6.605e-02 F_cal=+1.620e+00 raw_gap=9.622e-01 cal_gap=7.419e-02 R2=0.9999 2body=2.724e-16 self_gap=1.855e-01 norm=4.44e-16 TOWARD=3/3
+layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_raw=+2.046e-01 F_cal=+3.403e+00 raw_gap=8.896e-01 cal_gap=8.369e-01 R2=1.0000 2body=1.596e-15 self_gap=1.894e-01 norm=6.66e-16 TOWARD=3/3
+
+== alpha=0.60 gain=16.000 cycle-gap=4.046e-02 ==
+bipartite_random_geometric n=36  F_ext=+1.488e+00 F_raw=+5.126e-02 F_cal=+1.446e+00 raw_gap=9.655e-01 cal_gap=2.795e-02 R2=0.9983 2body=1.540e-15 self_gap=3.683e-02 norm=2.22e-16 TOWARD=3/3
+bipartite_growing          n=48  F_ext=+1.750e+00 F_raw=+6.541e-02 F_cal=+1.657e+00 raw_gap=9.626e-01 cal_gap=5.298e-02 R2=0.9995 2body=1.363e-16 self_gap=1.654e-01 norm=3.33e-16 TOWARD=3/3
+layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_raw=+1.940e-01 F_cal=+3.259e+00 raw_gap=8.953e-01 cal_gap=7.591e-01 R2=1.0000 2body=1.653e-15 self_gap=2.024e-01 norm=1.11e-16 TOWARD=3/3
+
+== alpha=0.40 gain=16.000 cycle-gap=1.620e-02 ==
+bipartite_random_geometric n=36  F_ext=+1.488e+00 F_raw=+5.031e-02 F_cal=+1.493e+00 raw_gap=9.662e-01 cal_gap=3.534e-03 R2=0.9974 2body=1.498e-16 self_gap=1.034e-01 norm=4.44e-16 TOWARD=3/3
+bipartite_growing          n=48  F_ext=+1.750e+00 F_raw=+6.587e-02 F_cal=+1.800e+00 raw_gap=9.624e-01 cal_gap=2.887e-02 R2=0.9995 2body=1.261e-16 self_gap=2.354e-01 norm=4.44e-16 TOWARD=3/3
+layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_raw=+1.861e-01 F_cal=+3.156e+00 raw_gap=8.995e-01 cal_gap=7.035e-01 R2=1.0000 2body=1.557e-15 self_gap=1.880e-01 norm=4.44e-16 TOWARD=3/3
+
+== alpha=0.20 gain=13.929 cycle-gap=1.815e-02 ==
+bipartite_random_geometric n=36  F_ext=+1.488e+00 F_raw=+5.016e-02 F_cal=+1.447e+00 raw_gap=9.663e-01 cal_gap=2.729e-02 R2=0.9984 2body=1.231e-15 self_gap=6.776e-01 norm=6.66e-16 TOWARD=3/3
+bipartite_growing          n=48  F_ext=+1.750e+00 F_raw=+6.743e-02 F_cal=+1.765e+00 raw_gap=9.615e-01 cal_gap=9.016e-03 R2=0.9975 2body=5.046e-16 self_gap=4.616e-01 norm=4.44e-16 TOWARD=3/3
+layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_raw=+1.806e-01 F_cal=+2.684e+00 raw_gap=9.025e-01 cal_gap=4.489e-01 R2=1.0000 2body=9.943e-16 self_gap=2.114e-01 norm=6.66e-16 TOWARD=3/3
+
+== alpha=0.10 gain=13.929 cycle-gap=2.339e-02 ==
+bipartite_random_geometric n=36  F_ext=+1.488e+00 F_raw=+5.037e-02 F_cal=+1.501e+00 raw_gap=9.661e-01 cal_gap=8.838e-03 R2=0.9981 2body=1.185e-15 self_gap=7.696e-01 norm=7.77e-16 TOWARD=3/3
+bipartite_growing          n=48  F_ext=+1.750e+00 F_raw=+6.862e-02 F_cal=+1.816e+00 raw_gap=9.608e-01 cal_gap=3.794e-02 R2=0.9978 2body=0.000e+00 self_gap=4.874e-01 norm=4.44e-16 TOWARD=3/3
+layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_raw=+1.787e-01 F_cal=+2.651e+00 raw_gap=9.036e-01 cal_gap=4.312e-01 R2=1.0000 2body=4.191e-15 self_gap=2.038e-01 norm=8.88e-16 TOWARD=3/3
+
+== alpha=0.00 gain=13.929 cycle-gap=5.613e-02 ==
+bipartite_random_geometric n=36  F_ext=+1.488e+00 F_raw=+5.078e-02 F_cal=+1.556e+00 raw_gap=9.659e-01 cal_gap=4.585e-02 R2=0.9978 2body=9.990e-16 self_gap=8.375e-01 norm=5.55e-16 TOWARD=3/3
+bipartite_growing          n=48  F_ext=+1.750e+00 F_raw=+7.012e-02 F_cal=+1.866e+00 raw_gap=9.599e-01 cal_gap=6.642e-02 R2=0.9982 2body=1.190e-16 self_gap=5.149e-01 norm=6.66e-16 TOWARD=3/3
+layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_raw=+1.773e-01 F_cal=+2.633e+00 raw_gap=9.043e-01 cal_gap=4.214e-01 R2=1.0000 2body=3.711e-15 self_gap=2.026e-01 norm=5.55e-16 TOWARD=3/3
+
+SUMMARY
+  baseline calibrated linear cycle gap: 3.881e-02 (alpha=1.00, gain=16.000)
+  best calibrated cycle gap: 1.620e-02 (alpha=0.40, gain=16.000)
+  improvement factor vs calibrated linear: 2.40x
+  baseline holdout gap (layered): 9.414e-01
+  best holdout gap (layered): 7.035e-01
+  baseline source-response R2 mean: 0.9997
+  best source-response R2 mean: 0.9990
+  baseline two-body resid max: 3.689e-15
+  best two-body resid max: 1.557e-15
+  baseline norm drift max: 2.220e-16
+  best norm drift max: 4.441e-16
+
+Shell / spectral readout for the best candidate:
+  bipartite_random_geometric: shell_ratio=0.101, shell_fit_R2=0.7857, rho_low=0.751, raw_low=0.869, ext_low=0.453, raw_centroid=5.553e-01, ext_centroid=1.574e+00
+  bipartite_growing: shell_ratio=0.101, shell_fit_R2=0.8291, rho_low=0.501, raw_low=0.683, ext_low=0.331, raw_centroid=5.834e-01, ext_centroid=1.384e+00
+  runtime: 3.78s
+
+Readout:
+  - alpha=1.00 is the local screened-Poisson baseline.
+  - alpha<1.00 is a nonlocal fractional-Green source sector that should
+    reduce low-mode over-smoothing if it helps.
+  - The map counts as a real improvement only if the calibrated cycle-bearing
+    force gap drops materially below the calibrated linear baseline while
+    preserving TOWARD sign, linearity, additivity, and norm stability.
+
+----- stderr -----
+

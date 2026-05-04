@@ -1,0 +1,82 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_five_sixths_bridge_support.py
+runner_sha256: d21d88ea3ed968239d23ca3df3850621eb18858dd2eda2dece0c8ec935989f8b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================
+  FRONTIER: CKM Five-Sixths Bridge Support
+========================================================================
+
+========================================================================
+PART 1: Exact SU(3) and promoted CKM surface
+========================================================================
+
+  C_F = 1.333333
+  T_F = 0.500000
+  C_F - T_F = 0.833333
+  alpha_s(v) = 0.103303816122
+  |V_cb| = alpha_s(v)/sqrt(6) = 0.04217361
+  predicted m_s/m_b = |V_cb|^(6/5) = 0.02238973
+  [PASS] C_F = 4/3  (C_F = 1.333333333333)
+  [PASS] T_F = 1/2  (T_F = 0.500000000000)
+  [PASS] C_F - T_F = 5/6  (p = 0.833333333333)
+  [PASS] |V_cb| = alpha_s(v)/sqrt(6)  (|V_cb| = 0.042173606330)
+  [PASS] m_s/m_b = [alpha_s(v)/sqrt(6)]^(6/5)  (m_s/m_b = 0.022389731616)
+
+========================================================================
+PART 2: Bounded bridge and observation surface
+========================================================================
+
+  threshold-local self-scale comparator m_s(2 GeV)/m_b(m_b) = 0.02234450
+  observed-|V_cb| bridge surface = |V_cb|_obs^(6/5) = 0.02240655
+  framework prediction           = 0.02238973
+
+  bridge-only deviation from comparator = +0.278%
+  atlas |V_cb| deviation                = -0.063%
+  total predicted deviation             = +0.202%
+  [PASS] [BOUNDED] observed |V_cb| mapped through 5/6 lands within 1% of the self-scale comparator  (dev = +0.278%)
+  [PASS] [BOUNDED] framework m_s/m_b prediction lands within 1% of the self-scale comparator  (dev = +0.202%)
+
+========================================================================
+PART 3: Threshold-local self-scale transport
+========================================================================
+
+  alpha_s(2 GeV) = 0.301
+  alpha_s(m_b)   = 0.226
+  gamma_0/(2 beta_0) = 12/25 = 0.480000
+  transport factor [alpha_s(2 GeV)/alpha_s(m_b)]^(12/25) = 1.147466
+  m_s(m_b) = 81.397 MeV
+  same-scale ratio r_same = m_s(m_b)/m_b(m_b) = 0.01947290
+  self-scale ratio r_self = m_s(2 GeV)/m_b(m_b) = 0.02234450
+  predicted deviation vs self-scale = +0.202%
+  predicted deviation vs same-scale = +14.979%
+  [PASS] [BOUNDED] self-scale ratio equals same-scale ratio times the one-loop transport factor  (diff = 3.47e-18)
+  [PASS] [BOUNDED] transport factor from m_b to 2 GeV is material  (transport = 1.147466)
+  [PASS] [BOUNDED] self-scale comparator is numerically closer than the same-scale comparator  (|self| = 0.202%, |same| = 14.979%)
+  [PASS] [BOUNDED] same-scale mismatch remains material  (same-scale dev = +14.979%)
+
+========================================================================
+PART 4: Exact multiplicative deviation decomposition
+========================================================================
+
+  atlas-induced factor       = 0.999249516  (-0.075%)
+  bridge/comparator factor   = 1.002776959  (+0.278%)
+  total predicted factor     = 1.002024391  (+0.202%)
+  [PASS] [BOUNDED] total deviation factors exactly into atlas shift times bridge/comparator shift  (diff = 2.22e-16)
+
+========================================================================
+SUMMARY
+========================================================================
+  EXACT PASS=5
+  BOUNDED PASS=7
+  FAIL=0
+  Status: bounded support tool for the down-type mass-ratio lane
+  Live comparison surface: threshold-local self-scale comparator m_s(2 GeV)/m_b(m_b)
+  Remaining open issue: theorem-grade derivation of the exact bridge and scale choice
+========================================================================
+
+----- stderr -----
+

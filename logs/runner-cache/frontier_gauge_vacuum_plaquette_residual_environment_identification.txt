@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py
+runner_sha256: 4855e17b0a089eea5c4949a1ccb5d3b21d2cff90cec93c49e584c08c46ff6b0a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.30
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE RESIDUAL ENVIRONMENT IDENTIFICATION
+==============================================================================
+
+Exact already-fixed pieces
+  source-operator symmetry error        = 0.000e+00
+  half-slice multiplier min eig         = 0.267545894076
+  local-factor min/max                  = 8.821392463568e-26, 1.000000000000
+
+Residual environment witness
+  environment coeff min/max             = 0.045049202394, 1.000000000000
+  environment swap error                = 0.000e+00
+  local/environment commutator          = 0.000e+00
+
+Resulting factorized transfer witness
+  transfer symmetry error               = 2.220e-16
+  transfer swap error                   = 4.441e-16
+  minimum transfer entry                = 3.125305e-13
+  Perron <J>                            = 0.444159191495
+
+  [PASS] [THEOREM] the explicit plaquette source operator J is self-adjoint and conjugation-symmetric on the source sector
+         the accepted source operator is one exact self-adjoint six-neighbor recurrence
+  [PASS] [THEOREM] the marked half-slice multiplier exp(3 J) is the exact positive self-adjoint source factor at beta = 6
+         min eigenvalue=0.267546
+  [PASS] [THEOREM] the normalized mixed-kernel local factor D_6^loc is explicit, positive, diagonal, and conjugation-symmetric
+         min diagonal entry=8.821392e-26
+  [PASS] [THEOREM] once the marked half-slice and local mixed-kernel factors are stripped, the residual open datum sits in a positive conjugation-symmetric environment operator R_6^env
+         the remaining factor can be isolated as a separate diagonal conjugation-symmetric environment operator beyond D_6^loc
+  [PASS] [SUPPORT] the factorized environment-dressed transfer witness remains positivity-improving on the truncated source sector
+         minimum matrix entry=3.125e-13
+  [PASS] [SUPPORT] the residual environment operator is a genuinely separate reusable plaquette tool rather than a hidden mixed-kernel correction
+         the mixed kernel is already fixed by D_6^loc; the environment operator is now isolated as its own source-sector object
+  [PASS] [SUPPORT] once R_6^env is fixed, the remaining framework-point data reduce again to the Perron moments of the explicit factorized operator
+         Perron <J> = 0.444159
+
+==============================================================================
+SUMMARY: THEOREM PASS=4 SUPPORT=3 FAIL=0
+==============================================================================
+
+----- stderr -----
+

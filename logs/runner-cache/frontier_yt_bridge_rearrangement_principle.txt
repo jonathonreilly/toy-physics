@@ -1,0 +1,63 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_bridge_rearrangement_principle.py
+runner_sha256: cfebd1d199a4044658a5d117a6f4f40fdfa5f3be073283a90966451e86c4a79b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.88
+status: ok
+----- stdout -----
+==============================================================================
+y_t BRIDGE REARRANGEMENT PRINCIPLE
+==============================================================================
+
+Derive the endpoint ordering of bridge surplus under the accepted
+downward flow and test whether UV localization follows as the
+minimal-response rearrangement.
+
+Linearized kernel statistics:
+  K_min = 2.318821e-02
+  K_max = 4.648640e-02
+  IR/UV leverage ratio = 2.004743
+  kernel centroid (0=UV, 1=IR) = 0.545319
+
+Equal-area Gaussian perturbations of q = g_3^2:
+    center       pred_dyt        obs_dyt
+     0.100   5.441651e-06   3.919273e-06
+     0.221   5.740798e-06   4.186995e-06
+     0.343   6.045314e-06   4.511562e-06
+     0.464   6.377270e-06   4.912939e-06
+     0.586   6.753926e-06   5.422841e-06
+     0.707   7.207639e-06   6.095273e-06
+     0.829   7.807254e-06   7.032495e-06
+     0.950   8.672733e-06   8.404748e-06
+
+  [PASS] 1a-linearized-kernel-is-positive: K(tau) > 0 on all 2500 sampled points
+  [PASS] 1b-kernel-is-monotone-toward-ir: monotonicity violations = 0
+  [PASS] 1c-ir-surplus-has-materially-larger-leverage-than-uv-surplus: IR/UV leverage ratio = 2.005
+  [PASS] 1d-finite-perturbations-follow-the-kernel-ordering: observed ordering violations = 0
+  [PASS] 1e-linear-kernel-predicts-the-finite-response-ordering: corr(predicted, observed) = 0.996637
+  [PASS] 1f-uv-placement-is-the-minimal-response-rearrangement: equal-area IR/UV response ratio = 2.144
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+The downward endpoint response to positive bridge surplus is ordered.
+For a fixed nonnegative surplus action, the response kernel is weakest
+near the UV endpoint and strongest near the IR endpoint.
+
+So once the bridge surplus is known to be positive, any viable bridge
+that must preserve the accepted low-energy endpoint is forced into the
+smallest-response rearrangement: push the surplus as far toward the UV
+as the operator content allows.
+
+This does not yet derive the exact selected invariant value. But it does
+explain why the bridge must be UV-localized rather than broadly spread
+across the full interval.
+
+==============================================================================
+FINAL TALLY: 6 PASS / 0 FAIL
+Elapsed: 1.39 s
+==============================================================================
+
+----- stderr -----
+

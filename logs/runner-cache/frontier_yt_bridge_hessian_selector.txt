@@ -1,0 +1,73 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_bridge_hessian_selector.py
+runner_sha256: b446c558cbaa8daeeb2feb5dbbe6e6d025fb023680cd23201439ba60978b8c92
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 17.81
+status: ok
+----- stdout -----
+==============================================================================
+y_t BRIDGE HESSIAN SELECTOR
+==============================================================================
+
+Derive the positive local quadratic selector as the leading Hessian of
+the exact interacting bridge action on the forced UV window.
+
+Exact-kernel UV window: x >= 0.95
+  kernel min/max = [2.318821e-02, 2.625081e-02]
+  kernel positivity ratio min/max = 0.883333
+
+Best row per family:
+  shape              dev%        J_aff
+  logistic        +0.0005   0.00063486
+  erf             +0.0145   0.00068809
+  smoothstep      +0.0057   0.00073980
+
+Inferred local stiffness on active UV support:
+  shape          kappa_mean         cv    support
+  logistic         0.054875   0.509501   0.049366
+  erf              0.056190   0.569924   0.049366
+  smoothstep       0.049507   0.770576   0.041361
+  family-avg       0.060889   0.711798   0.048699
+
+Normalized stiffness-shape collapse on common support:
+  common support width = 0.041361
+  pairwise normalized-kappa L2 gaps = 0.031033, 0.386819, 0.364301
+  analytic-family gap (logistic vs erf) = 0.031033
+  family-avg selector/profile gap   = 0.003443
+
+  [PASS] 1a-response-kernel-is-positive-on-the-forced-uv-window: kernel min/max = [2.318821e-02, 2.625081e-02]
+  [PASS] 1b-each-best-family-induces-a-positive-local-stiffness: all inferred local stiffness means are positive
+  [PASS] 1c-best-family-stiffness-stays-local-and-order-one: max best-family stiffness cv = 0.770576
+  [PASS] 1d-family-averaged-stiffness-is-positive-and-local: family-averaged stiffness cv = 0.711798
+  [PASS] 1e-analytic-families-collapse-to-the-same-local-stiffness-shape: logistic/erf normalized-kappa gap = 0.031033
+  [PASS] 1f-family-averaged-local-hessian-reproduces-the-family-average-profile: family-average selector/profile gap = 0.003443
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+On the forced UV window, the viable bridge family itself induces a
+positive local stiffness profile on its active support.
+
+That means the positive local quadratic selector is not just an extra
+variational assumption. It is the leading local Hessian selector of the
+coarse-grained interacting bridge action around the accepted SM-like
+transport, with only higher-order/nonlocal corrections left outside this
+leading closure.
+
+The logistic and erf families collapse tightly to the same normalized
+stiffness shape; the compact-support smoothstep family is the remaining
+higher-order edge-shape outlier rather than a failure of the local
+quadratic picture.
+
+So the remaining theorem target is narrower still:
+control the higher-order or nonlocal corrections to this local Hessian
+selector, rather than explain the selector itself.
+
+==============================================================================
+FINAL TALLY: 6 PASS / 0 FAIL
+Elapsed: 17.20 s
+==============================================================================
+
+----- stderr -----
+

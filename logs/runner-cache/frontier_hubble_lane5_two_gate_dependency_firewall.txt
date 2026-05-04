@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py
+runner_sha256: b7ad9fb4569c93e62be34ed82bef156a93615446851fbd361fd645a2785a1a68
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.50
+status: ok
+----- stdout -----
+========================================================================================
+LANE 5 HUBBLE TWO-GATE DEPENDENCY FIREWALL
+========================================================================================
+
+Question:
+  Can the current Lane 5 stack promote numerical H_0 from a single
+  closure gate, or from the structural lock alone?
+
+Answer:
+  No. H_0 = H_inf/sqrt(L) keeps both gates load-bearing.
+
+----------------------------------------------------------------------------------------
+Part 1: repo gate-state guardrails
+----------------------------------------------------------------------------------------
+  [PASS] status note states the two-gate closure map
+  [PASS] necessity no-go states no single class is sufficient
+  [PASS] workstream status says no numerical input was retired
+  [PASS] C3 audit records no active direct-L route
+
+----------------------------------------------------------------------------------------
+Part 2: symbolic two-gate identity
+----------------------------------------------------------------------------------------
+  [PASS] matter bridge solves to H_0 = H_inf/sqrt(L)  (solutions=[H_inf/sqrt(L)])
+  [PASS] H_0 remains sensitive to the absolute-scale gate  (dH0/dHinf=1/sqrt(L))
+  [PASS] H_0 remains sensitive to the dimensionless-L gate  (dH0/dL=-H_inf/(2*L**(3/2)))
+
+----------------------------------------------------------------------------------------
+Part 3: one-gate counterexample families
+----------------------------------------------------------------------------------------
+  fixed H_inf comparator = 55.783426 km/s/Mpc
+  C1-only family over L values = 72.016, 67.400, 62.368 km/s/Mpc
+  [PASS] C1 alone leaves a continuum of H_0 values  (spread=9.648 km/s/Mpc)
+  fixed L comparator = 0.685000
+  L-only family over H_inf values = 60.412, 67.400, 78.536 km/s/Mpc
+  [PASS] C2/C3 alone leaves a continuum of H_0 values  (spread=18.124 km/s/Mpc)
+  [PASS] dimensionless late-time q_0 is insensitive to absolute H_inf  (q0=-0.527454)
+
+----------------------------------------------------------------------------------------
+Part 4: structural lock versus numerical H_0
+----------------------------------------------------------------------------------------
+  [PASS] structural lock fixes H(a)/H_0, not the scalar H_0  (dimensionless curves identical under common rescaling)
+  [PASS] different scalar H_0 choices stay distinct under the same lock form  (H(a=1) gap=5.600 km/s/Mpc)
+  [PASS] lock inversion returns whichever scalar was supplied  (late-time lock is a consistency relation)
+
+----------------------------------------------------------------------------------------
+Part 5: gate-inventory specifics
+----------------------------------------------------------------------------------------
+  [PASS] C1 gate is the primitive Clifford/CAR coframe response
+  [PASS] C2 gate is the right-sensitive Z_3 doublet-block selector
+  [PASS] open-number theorem exposes exactly two structural degrees of freedom
+  [PASS] current C3 audit reduces C3 to a hypothetical alternative
+  [PASS] honest Lane 5 status after this firewall is open, not retained closure  (C1 and C2 remain load-bearing; C3 has no active route)
+
+========================================================================================
+PASS=18 FAIL=0
+========================================================================================
+
+----- stderr -----
+

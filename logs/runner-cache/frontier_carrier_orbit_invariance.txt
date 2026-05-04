@@ -1,0 +1,110 @@
+===== runner cache v1 =====
+runner: scripts/frontier_carrier_orbit_invariance.py
+runner_sha256: aa98e4d0bc18b836cedece9257373ab29904e4b62288de835035dbda3512a3c5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================================
+CARRIER ORBIT INVARIANCE — STRETCH ATTEMPT (cycle 22)
+========================================================================================
+
+========================================================================================
+PART 1: CARRIER Z_2 ACTION (the swap is an involution on V = R^4)
+========================================================================================
+  [PASS] tau is a 4x4 real matrix  (shape=(4, 4))
+  [PASS] tau is an involution: tau^2 = I
+  [PASS] tau is orthogonal: tau^T = tau
+  [PASS] tau on V = R^4 matches column swap on the 2x2 carrier  (err=0.00e+00)
+
+========================================================================================
+PART 2: ISOTYPIC DECOMPOSITION V = V^+ + V^- (each dim 2)
+========================================================================================
+  [PASS] tau has eigenvalues exactly {+1, +1, -1, -1}  (eigvals=[-1.0, -1.0, 1.0, 1.0])
+  [PASS] V^+ has dimension 2  (dim(V^+)=2)
+  [PASS] V^- has dimension 2  (dim(V^-)=2)
+  [PASS] V^+ and V^- are orthogonal (tau is orthogonal involution)
+  [PASS] V^+ + V^- = V (full decomposition)
+  [PASS] (1,1,0,0)/sqrt(2) is in V^+ (tau-eigenvalue +1)
+  [PASS] (0,0,1,1)/sqrt(2) is in V^+ (tau-eigenvalue +1)
+  [PASS] (1,-1,0,0)/sqrt(2) is in V^- (tau-eigenvalue -1)
+  [PASS] (0,0,1,-1)/sqrt(2) is in V^- (tau-eigenvalue -1)
+
+========================================================================================
+PART 3: OPERATOR DECOMPOSITION End(V) = End(V)^+ + End(V)^-
+========================================================================================
+  [PASS] End(V) under tau-conjugation is fully diagonalizable with +/-1 eigenvalues  (plus=8, minus=8)
+  [PASS] End(V)^+ has dimension 8  (dim(End(V)^+)=8)
+  [PASS] End(V)^- has dimension 8  (dim(End(V)^-)=8)
+  [PASS] (V*)^+ has dimension 2 (swap-invariant linear functionals)  (dim((V*)^+)=2)
+  [PASS] (V*)^- has dimension 2 (swap-antisymmetric linear functionals)  (dim((V*)^-)=2)
+
+========================================================================================
+PART 4: REGISTRY ENUMERATION (active Hermitian basis)
+========================================================================================
+  [PASS] Symmetric column-action (c_E = c_T) lies in End(V)^+
+  [PASS] Asymmetric column-action (c_E != c_T) does NOT lie in End(V)^+
+  [PASS] Asymmetric column-action decomposes nontrivially as End(V)^+ + End(V)^-  (||op_asym_minus||=0.4000)
+  [PASS] Theta_R^(0) is documented as bounded (not exact) in retained registry
+  [PASS] Xi_R^(0) is documented as bounded (not exact) in retained registry
+  [PASS] Swap-reduction theorem records both staging tools as bounded only
+
+========================================================================================
+PART 5: COUNTERFACTUAL ANTISYMMETRIC CANDIDATE FALSIFICATION
+========================================================================================
+  [PASS] Z_diff_col (top row) = (1,-1,0,0) is swap-antisymmetric
+  [PASS] Z_diff_col (bot row) = (0,0,1,-1) is swap-antisymmetric
+  [PASS] Z_diff_row (E component) is NOT swap-antisymmetric (acts on rows)
+  [PASS] Z_diff_row (T component) is NOT swap-antisymmetric (acts on rows)
+  [PASS] Swap-reduction theorem note explicitly states no exact E/T-distinguishing datum
+  [PASS] Generic functional decomposes as L = L^+ + L^- (isotypic components)
+  [PASS] L^+ component is swap-invariant
+  [PASS] L^- component is swap-antisymmetric
+
+========================================================================================
+PART 6: LOW-DEGREE POLYNOMIAL OPERATOR ENUMERATION (Route E cross-check)
+========================================================================================
+  [PASS] Degree-1 invariant operators include 1, delta, sym(u_E, u_T)  (invariants=['1', 'delta', 'sym(u_E,u_T)'])
+  [PASS] Degree-1 antisymmetric operator: asym(u_E, u_T) is the only one  (antisymmetric=['asym(u_E,u_T)'])
+  [PASS] (u_E - u_T) corresponds to bounded prototype Theta_R^(0), not exact
+  [PASS] Degree-2 invariant operators include u_E*u_T, delta^2, and symmetrizations  (deg2 invariants count = 4)
+  [PASS] Degree-2 antisymmetric operators are exactly 2 (u_E^2 - u_T^2; delta*u_E - delta*u_T)  (antisymmetric=['asym(delta*u_E,delta*u_T)', 'asym(u_E^2,u_T^2)'])
+  [PASS] delta*(u_E - u_T) corresponds to bounded Xi_R^(0), not exact
+
+========================================================================================
+PART 7: CARRIER TRACE CHECK ON RETAINED OPERATOR BASIS
+========================================================================================
+  [PASS] Row-equal kernel matrices yield swap-invariant readouts  (L(K_R) = L(K_R . P_ET) for L(K) = Tr(M K) with M rows equal)
+  [PASS] Antisymmetric readout DOES distinguish E/T orbits (counterfactual)  (diff=3.6540e-01)
+
+========================================================================================
+PART 8: NAMED RESIDUAL OBSTRUCTION (registry closure)
+========================================================================================
+  [PASS] Stretch-attempt note exists  (len=13219)
+  [PASS] Note formulates the Carrier Operator Classification Theorem (partial)
+  [PASS] Note names registry closure as the residual meta-premise
+  [PASS] Note distinguishes audited vs hypothetical-future primitives
+  [PASS] Note rejects Routes C/D as overkill in route portfolio
+
+========================================================================================
+PART 9: INDEPENDENCE FROM V_EVEN VALUES (no cycle 16/17 numeric leakage)
+========================================================================================
+  [PASS] No load-bearing consumption of v_even values (cycle 22 attacks upstream premise)
+  [PASS] Cycle 22 explicitly admits cycle 17 routes A/B/C as prior-cycle inputs only
+
+========================================================================================
+PART 10: V1-V5 PROMOTION VALUE GATE (verified in CLAIM_STATUS_CERTIFICATE)
+========================================================================================
+  [PASS] Certificate exists with V1-V5 PROMOTION VALUE GATE section
+  [PASS] V1 names cycle 17's specific obstruction text
+  [PASS] V2 names new derivation (Z_2-equivariant operator classification)
+  [PASS] V3 explains why audit lane cannot complete derivation
+  [PASS] V5 distinguishes from cycles 16, 17
+
+========================================================================================
+SUMMARY: PASS=52 FAIL=0
+========================================================================================
+
+----- stderr -----
+

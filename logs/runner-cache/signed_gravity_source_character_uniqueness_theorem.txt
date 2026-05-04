@@ -1,0 +1,42 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_source_character_uniqueness_theorem.py
+runner_sha256: 78cd2cd099691ad25b69a3a49e8e9c22f8a119f7f4db47cfbc84737f9d89550d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================================
+SIGNED GRAVITY ETA SOURCE-CHARACTER UNIQUENESS THEOREM AUDIT
+  determinant-line character uniqueness; controlled source-origin target
+========================================================================================================
+
+BREAKTHROUGH TARGET
+  Derive the signed scalar source coefficient as the unique local real
+  character of the APS determinant-orientation line, and prove the tensor
+  lift from this scalar line is maximal at invariant A1.
+
+[PASS] source-character axioms have a unique normalized solution  (solutions=1)
+[PASS] candidate rule classification: chi_eta  (norm=True, null=True, real=True, unit=True, odd=True, refine=True, expected_failure=none)
+[PASS] candidate rule classification: unsigned  (norm=True, null=True, real=True, unit=True, odd=False, refine=True, expected_failure=orientation)
+[PASS] candidate rule classification: raw_eta  (norm=True, null=True, real=True, unit=False, odd=True, refine=False, expected_failure=unit/refinement)
+[PASS] candidate rule classification: parity_eta  (norm=True, null=True, real=True, unit=True, odd=False, refine=False, expected_failure=refinement)
+[PASS] candidate rule classification: complex_phase  (norm=False, null=True, real=False, unit=True, odd=False, refine=False, expected_failure=real_action)
+[PASS] determinant factorization splits magnitude additivity from local orientation source  (log_abs_additive=True, global_product=-1, local_pair_sum=+0, global_spectator_flip=True)
+[PASS] source character separates signed active charge from positive inertia  (active=+2.0, inertial=6.0, null_coeff=+0)
+[PASS] 3+1 covariance allows exactly A1 invariant source lift and no complement vector  (fixed(full,A1,comp)=(2,2,0), max_comm=4.2e-17)
+
+INTERPRETATION
+  Within the determinant-orientation source-character grammar, chi_eta is
+  not optional: it is the only normalized local real character.  The
+  determinant machinery also explains why log|det| gives the positive
+  scalar magnitude while Or(Det_APS) supplies the local sign.  Tensorially,
+  the scalar source line is maximal at A1.  The later tensor route must
+  twist an ordinary retained tensor source bundle, not extract tensor
+  components from this scalar character.
+
+SUMMARY: PASS=9 FAIL=0
+FINAL_TAG: ETA_SOURCE_CHARACTER_UNIQUENESS_THEOREM_A1_MAXIMAL
+
+----- stderr -----
+

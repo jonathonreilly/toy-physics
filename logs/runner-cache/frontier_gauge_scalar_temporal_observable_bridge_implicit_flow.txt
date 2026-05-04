@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_scalar_temporal_observable_bridge_implicit_flow.py
+runner_sha256: 12bbc668ae9bcf36c9d2cec8fc042976c215184f072930e7406606382378d7a7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.34
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-SCALAR TEMPORAL OBSERVABLE BRIDGE IMPLICIT-COORDINATE THEOREM
+==============================================================================
+
+Part 1: local response coordinate
+  X(identity)                         = 1.000000000000000
+  X(center element)                   = -0.500000000000000
+  R_O(sample betas)                   = [0.00560184644, 0.028931672799, 0.060126554834, 0.128627785322, 0.279619149409, 0.535753990214, 0.75537035856]
+  chi_1(sample betas)                 = [0.060156768987, 0.072018622247, 0.064880483371]
+
+Part 2: finite Wilson full observable range witnesses
+  average plaquette(identity config)  = 1.000000000000000
+  average plaquette(deformed config)  = 0.996546700950692
+
+Part 3: inverse-response bridge checks for arbitrary in-range targets
+  target=0.125000000000  beta_eff=1.949518682904  R_O(beta_eff)=0.125000000000
+  target=0.333333333333  beta_eff=4.716469183847  R_O(beta_eff)=0.333333333333
+  target=0.500000000000  beta_eff=7.301687822419  R_O(beta_eff)=0.500000000000
+  target=0.750000000000  beta_eff=15.645405054088  R_O(beta_eff)=0.750000000000
+  target=0.900000000000  beta_eff=39.717403982975  R_O(beta_eff)=0.900000000000
+
+Part 4: susceptibility-flow identity
+  target=0.200 gamma=2.959630506679  dR^-1/dP numeric=13.135930762  1/chi_1(gamma)=13.135930536
+  target=0.600 gamma=9.498457286831  dR^-1/dP numeric=26.481228019  1/chi_1(gamma)=26.481226400
+
+Part 5: note/import firewall checks
+  note phrase present: 'beta_eff,Lambda(beta) := R_O^(-1)(P_Lambda(beta))' -> True
+  note phrase present: 'P_Lambda(beta) = R_O(beta_eff,Lambda(beta))' -> True
+  note phrase present: "beta_eff,Lambda'(beta)" -> True
+  note phrase present: 'parent observable bridge gate' -> True
+  note phrase present: 'does not evaluate the full\nplaquette at `beta = 6`' -> True
+  note phrase present: 'does not fit' -> True
+  note phrase present: 'does not import\nMonte-Carlo, PDG, or perturbative running data' -> True
+
+  [PASS] [THEOREM] the local plaquette source X is nonconstant on SU(3)
+         explicit SU(3) witnesses give X=1 and X=-1/2
+  [PASS] [THEOREM] sampled local response R_O is strictly increasing and remains inside [0,1)
+         R_O(0.1)=0.005601846440, R_O(16)=0.755370358560
+  [PASS] [THEOREM] sampled local susceptibilities are positive
+         min sampled chi_1=6.015677e-02
+  [PASS] [THEOREM] the finite Wilson plaquette observable is not identically one on configuration space
+         identity=1.000000000000000, deformed=0.996546700950692
+  [PASS] [THEOREM] every in-range target has a unique inverse-response beta_eff that reconstructs the target
+         max |target - R_O(R_O^-1(target))|=2.126e-14
+  [PASS] [THEOREM] the exact coordinate identity is the inverse-response corollary, not a data fit
+         the note defines beta_eff as a Wilson partition-function response coordinate
+  [PASS] [THEOREM] the susceptibility-flow derivative matches the inverse-function theorem numerically
+         max derivative mismatch=1.620e-06
+  [PASS] [THEOREM] the parent stretch gate is targeted explicitly and its forbidden imports remain forbidden
+         the new theorem cites the residual while preserving the parent import firewall
+  [PASS] [SUPPORT] the runner does not consume the canonical plaquette comparator or PDG/lattice values
+         all inverse checks use arbitrary in-range targets, not observed plaquette data
+  [PASS] [SUPPORT] the theorem leaves independent beta=6 plaquette and rho_(p,q)(6) evaluation open
+         bounded coordinate identity only, not environment Perron evaluation
+  [PASS] [SUPPORT] the theorem uses exact response flow rather than perturbative RG running
+         the flow equation is beta_eff' = chi_full / chi_1
+
+==============================================================================
+SUMMARY: THEOREM PASS=8 SUPPORT=3 FAIL=0
+==============================================================================
+
+----- stderr -----
+

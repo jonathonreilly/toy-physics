@@ -1,0 +1,56 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_dynamical_resource_generation.py
+runner_sha256: a2fbc0c1fad3fb55609ab32b509db8da2d391b12262bc440af694f0baa2c57de
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.89
+status: ok
+----- stdout -----
+DYNAMIC POISSON TASTE-QUBIT RESOURCE GENERATION
+Status: planning / first artifact; ordinary quantum state teleportation only
+Initial states: simple product site states of two distinguishable species
+Evolution: H = H1 x I + I x H1 + G V_Poisson on a small periodic lattice
+Extraction: trace cells/spectator tastes, keep the last KS taste bit per species
+Input probes for candidate teleportation checks: 70 (6 axis states + 64 random, seed=20260425)
+
+Dynamic resource scan table:
+  case                             G     init  best_t    Bell* label   Fmean*    Slog     neg  use  high    noSig
+  1d_null_site01                   0   (0, 1)   0.000 0.500000  Psi+ 0.666667  2.0000  0.0000    0     0     pass
+  1d_poisson_site01_G50           50   (0, 1)  13.000 0.616298  Psi+ 0.744199  2.0688  0.1822    7     0     pass
+  1d_poisson_site03_G100         100   (0, 3)  19.750 0.631187  Psi- 0.754125  1.9745  0.1383   12     0     pass
+  useful means Bell* > 0.5 (mean fidelity > 0.666667 after fixed Bell-frame alignment)
+  high means Bell* >= 0.900
+
+Case: 1d_null_site01
+  setup: dim=1 side=8 N=8 envs=4, mass=0, G=0, init=(0, 1), t=[0,20], samples=401, dt=0.05, null_control=PASS
+  best candidate: t=0.000000, Bell*=0.500000 (Psi+), framed mean fidelity=0.666667, standard Phi+ mean fidelity=0.333333
+  candidate diagnostics: logical CHSH=2.000000, full-state CHSH=2.000000, purity=1.000000, negativity=0.000000, max negativity over scan=0.000000
+  windows: useful=0 best none; high=0 best none
+  sampled teleportation at best candidate: mean/min/max=0.685810/0.500000/1.000000, trace error=8.883e-16
+  Bob before message: distance to resource marginal=4.441e-16, pairwise input distance=2.220e-16, marginal bias from I/2=5.000e-01
+
+Case: 1d_poisson_site01_G50
+  setup: dim=1 side=8 N=8 envs=4, mass=0, G=50, init=(0, 1), t=[0,20], samples=401, dt=0.05
+  best candidate: t=13.000000, Bell*=0.616298 (Psi+), framed mean fidelity=0.744199, standard Phi+ mean fidelity=0.345224
+  candidate diagnostics: logical CHSH=2.068829, full-state CHSH=2.068829, purity=0.688886, negativity=0.182205, max negativity over scan=0.373335
+  windows: useful=7 best [3.900, 20.000] peak=0.616298 at t=13.000 (323 samples); high=0 best none
+  sampled teleportation at best candidate: mean/min/max=0.757946/0.622398/0.976064, trace error=8.882e-16
+  Bob before message: distance to resource marginal=4.302e-16, pairwise input distance=3.192e-16, marginal bias from I/2=2.612e-01
+
+Case: 1d_poisson_site03_G100
+  setup: dim=1 side=8 N=8 envs=4, mass=0, G=100, init=(0, 3), t=[0,20], samples=401, dt=0.05
+  best candidate: t=19.750000, Bell*=0.631187 (Psi-), framed mean fidelity=0.754125, standard Phi+ mean fidelity=0.348982
+  candidate diagnostics: logical CHSH=1.974538, full-state CHSH=1.974538, purity=0.532903, negativity=0.138343, max negativity over scan=0.172699
+  windows: useful=12 best [16.850, 20.000] peak=0.631187 at t=19.750 (64 samples); high=0 best none
+  sampled teleportation at best candidate: mean/min/max=0.765845/0.640317/0.967398, trace error=8.883e-16
+  Bob before message: distance to resource marginal=4.163e-16, pairwise input distance=2.498e-16, marginal bias from I/2=9.674e-02
+
+Conclusion:
+  No interacting product-state trajectory in this bounded scan reaches the high-fidelity Bell threshold 0.900.
+  Some interacting trajectories cross the useful teleportation threshold after fixed Bell-frame alignment, but this is not a high-fidelity resource.
+  The G=0/null controls stay non-useful in the audited extraction.
+  Bob's pre-message state remains input-independent for every candidate.
+  Scope remains quantum state teleportation only; no transfer of matter or FTL claim.
+
+----- stderr -----
+

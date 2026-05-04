@@ -1,0 +1,109 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_info_geometric_selection_obstruction.py
+runner_sha256: 354851802cf187c638162a273af7cc588670f8d047adbe95191214e6abcfb83d
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.69
+status: ok
+----- stdout -----
+========================================================================================
+G1-the info-geometric selection obstruction: Information-Geometric Selector — OBSTRUCTION + NARROWED-GAP
+========================================================================================
+Branch: 
+Result: leading-quadratic unanimity theorem + cubic splitting obstruction
+
+========================================================================================
+PART A: QUADRATIC-ORDER UNANIMITY OF INFO-GEOMETRIC FUNCTIONALS
+========================================================================================
+ [PASS (C)] Tr(T_delta^2) = Tr(T_q^2) = 6 (Frobenius isotropy at quadratic order) (Tr(T_d^2) = 6.0, Tr(T_q^2) = 6.0)
+ [PASS (C)] Tr(T_delta T_q) = 0 (no off-diagonal Frobenius coupling) (Tr(T_d T_q) = 0.0)
+ [PASS (C)] F1 = -W quadratic Hessian is 6/m^2 * I_2 (isotropic) (dd=6.0000, qq=6.0000, cross=-0.00e+00)
+ [PASS (C)] F2 = 2 KL quadratic Hessian is isotropic (dd == qq, cross == 0) (dd=18.0000, qq=18.0000, cross=1.11e-06)
+ [PASS (C)] F3 = Fisher-metric quadratic coincides with F1 = -Hess(W) (isotropic) (g_F(J_act, J_act) = 6 (delta^2 + q_+^2) / m^2)
+ [PASS (C)] F4 = Tr(J^2)/m^2 is 6(delta^2 + q_+^2)/m^2 (isotropic) (F4(1,0) = 6.0, F4(0,1) = 6.0)
+ [PASS (C)] Common chamber-boundary minimizer: (delta_*, q_+*) = (sqrt(6)/3, sqrt(6)/3) (d_* = 0.8164965809, sqrt(6)/3 = 0.8164965809)
+ [PASS (C)] The common minimum is the foot of perpendicular from origin to chamber boundary (isotropic quadratic + linear boundary => perpendicular-foot argmin)
+
+========================================================================================
+PART B: CUBIC SPLITTING OBSTRUCTION
+========================================================================================
+ [PASS (C)] Tr(T_delta^3) = 0 (cubic vanishes on delta-axis) (Tr(T_d^3) = 0.0)
+ [PASS (C)] Tr(T_q^3) = 6 (cubic is nonzero on q-axis — breaks Frobenius isotropy) (Tr(T_q^3) = 6.0)
+ [PASS (C)] Tr(T_delta^2 T_q) = -6 (asymmetric cross-cubic) (Tr(T_d^2 T_q) = -6.0)
+ [PASS (C)] Tr(T_delta T_q^2) = 0 (asymmetric cross-cubic) (Tr(T_d T_q^2) = 0.0)
+ [PASS (C)] tr(J^3) = 6 q (q^2 - 3 d^2) identity, (d,q)=(0.300,0.700) (tr=0.924000, pred=0.924000)
+ [PASS (C)] tr(J^3) = 6 q (q^2 - 3 d^2) identity, (d,q)=(-0.200,0.400) (tr=0.096000, pred=0.096000)
+ [PASS (C)] tr(J^3) = 6 q (q^2 - 3 d^2) identity, (d,q)=(0.816,0.816) (tr=-6.531973, pred=-6.531973)
+ [PASS (C)] Quadratic Q boundary-min at d = sqrt(6)/3 (leading-order Fisher) (d_Q = 0.816520, sqrt(6)/3 = 0.816497)
+ [PASS (C)] Full -W boundary-min is DIFFERENT from sqrt(6)/3 (cubic splitting) (d_W = 1.375880, sqrt(6)/3 = 0.816497, gap = 0.559)
+ [PASS (C)] Full KL boundary-min is DIFFERENT from sqrt(6)/3 (cubic splitting) (d_KL = 0.231400, sqrt(6)/3 = 0.816497, gap = 0.585)
+ [PASS (C)] Full -W and full KL boundary-mins DISAGREE with each other (no info-geom consensus) (|d_W - d_KL| = 1.144)
+
+ *** Core obstruction recorded: info-geometric functionals SPLIT at cubic order. ***
+ *** No sole-axiom principle in the retained stack selects one over another.  ***
+
+========================================================================================
+PART C: OBSTRUCTION THEOREM
+========================================================================================
+ [PASS (C)] W[J_act] takes distinct values across chamber-boundary points (no canonical J) (W samples: [-1.3437, 1.6443, 2.0097])
+ [PASS (C)] No atlas-native selection rule exists in the retained stack (structural: observable principle is response-generation, not source-selection) (cf. OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE Theorem 2: scalar observables are d^n W / d J^n, not extrema of W)
+ [PASS (C)] Minimum-information selector in DM_LEPTOGENESIS_PMNS_MINIMUM_INFORMATION_SOURCE_LAW is flagged atlas-side as 'invented post-axiom dynamical selector law' — this runner does NOT override that flag (post-axiom selector is not promoted; obstruction discipline preserved)
+
+========================================================================================
+PART D: NARROWED-GAP STATEMENT
+========================================================================================
+ Atlas-retained inputs used (all sole-axiom or theorem-native):
+  - OBSERVABLE_PRINCIPLE_FROM_AXIOM (W is unique generator)
+  - Schur baseline (D = m I forced on H_hw=1)
+  - Active affine chart (T_m, T_delta, T_q)
+  - Chamber q_+ >= sqrt(8/3) - delta
+
+ NEW results (theorem-grade, proved in Parts A–C):
+  - Quadratic Unanimity Theorem (Part A):
+   All natural info-geometric functionals share the same
+   leading-order chamber-boundary minimum: (sqrt(6)/3, sqrt(6)/3).
+  - Cubic Splitting Obstruction (Part B):
+   Beyond quadratic order, the Z_3 circulant cubic 2 Re(w^3)
+   breaks Frobenius isotropy; full -W and full KL select
+   DIFFERENT chamber-boundary minimizers.
+  - Obstruction Theorem (Part C):
+   Retained stack lacks a source-selection axiom; observable
+   principle is response-generation, not source-selection.
+
+ GAP structure after this runner:
+  (G-Var)   : variational axiom fixing the info-geometric functional
+         - leading-quadratic answer known: (sqrt(6)/3, sqrt(6)/3)
+         - full-order answer requires post-axiom truncation rule
+  (G-Non-Var) : non-variational chamber-selection axiom
+         - untouched by this runner
+
+ Route (a) [minimum-coupling / max-ent / min-KL / Fisher-ball] is
+ RULED OUT as a sole-axiom closure by Part B without a further axiom.
+
+ Explicit reduction:
+  The next path-A step would require either:
+   (i) a sole-axiom derivation of a DISTINGUISHED info-geometric
+     functional (e.g. why full -W rather than KL), OR
+   (ii) a sole-axiom derivation of a DISTINGUISHED truncation
+      (e.g. why leading-quadratic is the physical order).
+  Neither is present in the retained stack as of 2026-04-17.
+ [PASS (C)] Gap is SPLIT into (G-Var) and (G-Non-Var); the info-geometric family (lives inside (G-Var); Part B shows full-order is ambiguous)
+ [PASS (C)] Leading-quadratic Frobenius-isotropic argmin is the ONLY unanimous answer ((delta_*, q_+*) = (sqrt(6)/3, sqrt(6)/3))
+ [PASS (C)] Full-order info-geometric closure is RULED OUT absent additional axiom (Part B cubic splitting)
+ [PASS (C)] (G-Non-Var) not narrowed by this runner (discipline: honest obstruction only) (separate attack vector required)
+
+========================================================================================
+TOTAL: PASS = 26, FAIL = 0
+========================================================================================
+
+ Result category: OBSTRUCTION THEOREM + NARROWED-GAP
+ Honest conclusion:
+  - Part A: leading-quadratic unanimity is a theorem
+  - Part B: cubic splitting obstruction is a theorem
+  - Part C: observable-principle obstruction is structural
+  - Part D: gap split into (G-Var) and (G-Non-Var)
+ the selector gate is NOT closed by this runner.
+ DM flagship gate remains OPEN.
+
+----- stderr -----
+

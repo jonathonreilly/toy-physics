@@ -1,0 +1,133 @@
+===== runner cache v1 =====
+runner: scripts/frontier_charged_lepton_observable_curvature.py
+runner_sha256: f1a7c3e6bddb27e124e672473e9bf5e2b3d31190bf6280067c204dff3f4a3a76
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.32
+status: ok
+----- stdout -----
+========================================================================================
+CHARGED-LEPTON hw=1 OBSERVABLE-PRINCIPLE CURVATURE (KOIDE CONE WEAKEST LINK)
+========================================================================================
+
+Question:
+  Does the retained Cl(3)/Z^3 surface FORCE the charged-lepton
+  spectral vector onto the Koide cone a_0^2 = 2|z|^2 (Q = 2/3),
+  or does the minimal block permit it merely as one option among
+  several?
+
+========================================================================================
+PART 1: retained hw=1 primitives (three-generation observable theorem)
+========================================================================================
+  [PASS (D)] translations are diagonal with sector characters (-1,+1,+1), (+1,-1,+1), (+1,+1,-1)
+  [PASS (D)] rank-1 projectors resolve identity
+  [PASS (D)] each P_i is rank-1
+  [PASS (D)] C3 has order 3
+  [PASS (D)] C3 unitary (real orthogonal)
+  [PASS (D)] cycle law C P_1 C^-1 = P_2
+  [PASS (D)] cycle law C P_2 C^-1 = P_3
+  [PASS (D)] cycle law C P_3 C^-1 = P_1
+  [PASS (D)] {P_1,P_2,P_3,C} generate the full 9-dimensional M_3(C)  (dim = 9)
+
+========================================================================================
+PART 2: species curvature K_ii^{(spec)} on L_t=4 APBC
+========================================================================================
+  [PASS (D)] L_t=4 APBC Matsubara closed form: K_ii^(spec) = 16/(m^2 + 7 u_0^2/2)
+  [PASS (D)] L_t=4 APBC kernel yields the same 7/2 constant that drives the (7/8)^(1/4) selector
+  [PASS (D)] Dirac spectral amplitude lambda^2 = m^2 + 7 u_0^2/2
+
+========================================================================================
+PART 3: C_3 invariance forces circulant (a,b) form
+========================================================================================
+  [PASS (D)] C_3-invariance of K: C K C^{-1} = K
+  [PASS (D)] alpha = a+2b is the eigenvalue of K on e_+ = (1,1,1)/sqrt(3)
+  [PASS (D)] beta = a-b is the eigenvalue of K on e_omega = (1,omega,omega^2)/sqrt(3)
+  [PASS (D)] C_3-symmetric real symmetric 3x3 has exactly 2 free parameters (a,b)  (dim_R = 2)
+
+========================================================================================
+PART 4: Plancherel identities and Koide equivalence (Steps 4-5)
+========================================================================================
+  [PASS (D)] Plancherel: |lambda|^2 = a_0^2 + 2|z|^2
+  [PASS (D)] Trace decomposition: (sum lambda_i)^2 = 3 a_0^2
+  [PASS (D)] Koide equivalence 1: 3 sum l^2 - 2 (sum l)^2 = 6|z|^2 - 3 a_0^2
+  [PASS (D)] Koide equivalence 2: a_0^2 = 2|z|^2  <=>  Q = 2/3 exactly
+  [PASS (D)] On a_0^2 = 2|z|^2: Q = 2/3 exactly
+
+========================================================================================
+PART 5A: Candidate A -- spontaneous C_3 breaking at stationary point
+========================================================================================
+  [PASS (D)] Candidate A stationary point with BOTH a_0!=0 AND z!=0 requires alpha=beta  (stationarity forces Eq(b, 0))
+  Candidate A verdict: the C_3-invariant quadratic free energy does not
+  independently force the balance a_0^2 = 2|z|^2 at a breaking minimum.
+  Stationary points are the pure-trivial (z=0) or pure-nontrivial (a_0=0)
+  axes unless an external symmetry forces alpha = beta.
+  Therefore Candidate A does NOT close Step 6 on its own.
+
+========================================================================================
+PART 5B: Candidate B -- observable-principle character symmetry
+========================================================================================
+  [PASS (D)] minimal L_t=4 block: off-diagonal K_{12} = b evaluates to 0
+  [PASS (D)] minimal L_t=4 block: alpha = beta trivially when b=0
+  [PASS (D)] minimal block b=0 forces z=0, which is NOT on the Koide cone (cone requires a_0^2 = 2|z|^2 with |z|>0)  (a_0^2 / (2|z|^2) is ill-defined at |z|=0)
+  Candidate B verdict: on the exact minimal L_t=4 APBC block, the
+  observable-principle character symmetry collapses to b = 0, which
+  places the spectral vector on the trivial-character axis and off
+  the Koide cone. Promoting character symmetry to 'alpha = beta with
+  b != 0' would require a non-minimal block and is NOT implied by
+  the retained additive-CPT-even unique-generator chain on the
+  minimal surface alone.
+  Therefore Candidate B does NOT close Step 6 on the minimal block.
+
+========================================================================================
+PART 5C: Candidate C -- L_t=4 selector / Z_3 orbit arithmetic
+========================================================================================
+  [PASS (D)] Z_3 uniform weights sum to 1: 1/3 + 1/3 + 1/3 = 1
+  [PASS (D)] equal-weight Z_3 orbit balance gives a_0^2 = 2|z|^2 exactly (arithmetic)
+  [PASS (D)] equal-weight assumption REQUIRES nontrivial-character weight != 0 on the kernel  (contingent on Candidate B, which fails on the minimal block)
+  Candidate C verdict: the arithmetic is correct -- uniform 1/3-weight
+  averaging over the three Z_3 characters combined with reality-forced
+  doubling of the nontrivial-character norm gives a_0^2 = 2|z|^2.
+  However, the uniform-weight PREREQUISITE (nonzero b in the circulant
+  kernel) is exactly Candidate B's failing half on the minimal block.
+  Therefore Candidate C closes the arithmetic step but inherits the
+  structural obstruction from Candidate B and does NOT independently
+  close Step 6.
+
+========================================================================================
+STEP 6 CANDIDATE VERDICTS
+========================================================================================
+  [CANDIDATE A]  FAIL : stationary C_3-breaking gives pure-trivial or pure-nontrivial axes unless alpha=beta is imposed separately.
+  [CANDIDATE B]  FAIL : minimal L_t=4 APBC block yields b=0, collapsing the spectral vector onto the trivial axis (|z|=0), not the Koide cone.
+  [CANDIDATE C]  FAIL : arithmetic half (uniform 1/3 weight -> a_0^2=2|z|^2) is correct but inherits Candidate B's structural failure of nontrivial-character weight.
+
+========================================================================================
+SYNTHESIS
+========================================================================================
+
+  Steps 1-5 of the derivation are confirmed symbolically on the
+  retained hw=1 triplet: translations + C3 generate M_3(C),
+  K is C_3-invariant and circulant with 2 parameters (a,b),
+  Plancherel |lambda|^2 = a_0^2 + 2|z|^2 holds, and the Koide
+  equivalence 3 sum l^2 = 2 (sum l)^2  <=>  a_0^2 = 2|z|^2 is
+  exact.
+
+  Step 6 (forcing onto the cone) remains open on the minimal block:
+  none of Candidate A, B, or C independently forces a_0^2 = 2|z|^2
+  without importing an independent equality (alpha = beta with b != 0)
+  that is itself a structural claim beyond the retained additive-
+  CPT-even unique-generator chain on the minimal L_t=4 APBC block.
+
+  Open structural obstructions:
+   - need a non-minimal block where b != 0 such that the observable-
+     principle character symmetry still forces alpha = beta.
+   - need a uniqueness theorem for the equal-weight Z_3 orbit
+     representative on that non-minimal block.
+   - need to rule out the trivial-axis degenerate limit as a physical
+     minimum of the C_3-equivariant free energy at b = 0.
+
+  KOIDE_FORCING_RESOLVED=FALSE
+
+  TOTAL: PASS = 28, FAIL = 0
+
+----- stderr -----
+

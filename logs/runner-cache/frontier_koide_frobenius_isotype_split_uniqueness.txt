@@ -1,0 +1,89 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_frobenius_isotype_split_uniqueness.py
+runner_sha256: 5da9b9ac4ede9e3e6ea949783eb1dd8e80fff620c19192f5cfff0c929e2350ef
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.85
+status: ok
+----- stdout -----
+
+  Forced pieces (each with executable PASS above):
+    (1) Frobenius form Tr(M^2) = canonical trace form (Ad-invariant, PD)
+    (2) P_0 = J/3 = unique rank-1 C_3-singlet Hermitian projector on C^3
+    (3) P_I(M) = (tr M / 3) I = unique matrix-space scalar projector
+    (4) E_+ = (tr M)^2 / 3 = ||P_I M||_F^2
+    (5) E_perp = Tr(M^2) - E_+ = ||(I - P_I) M||_F^2
+    (6) Positivity: E_+, E_perp >= 0 (strict at non-degenerate lepton masses)
+    (7) Additivity (Pythagoras): E_+ + E_perp = Tr(M^2)
+    (8) AM-GM max at E_+ = E_perp ⟹ kappa = 2 ⟹ Q = 2/3
+
+========================================================================
+FROBENIUS ISOTYPE SPLIT UNIQUENESS (I1 strengthening)
+========================================================================
+=== (1) Frobenius form on Herm_circ(3) ===
+  [PASS] 1a. Tr(M^2) = 3a^2 + 6|b|^2 = 3a^2 + 6(x^2+y^2): Tr(M^2) = 3*a**2 + 6*x**2 + 6*y**2
+  [PASS] 1b. For Hermitian M, Tr(M^dagger M) = Tr(M^2) (symbolic identity): M = M^dagger ⟹ Tr(M^dagger M) = Tr(M^2)
+  [PASS] 1c. Frobenius form is Ad-invariant: Tr(U^†AU·U^†BU) = Tr(AB) for U in U(3): Tr(AB) = 16, Tr(conj) = 16
+  [PASS] 1d. Only Tr(AB) is positive-definite on Herm(3) (the non-Tr alternative vanishes on traceless): Tr(X_tr) = 0; alternative form vanishes on non-zero traceless matrix
+
+=== (2) Singlet projector uniqueness ===
+  [PASS] 2a. P_0^2 = P_0 (idempotent): P_0 is a projector
+  [PASS] 2b. P_0 = P_0^dagger (self-adjoint): P_0 is Hermitian
+  [PASS] 2c. rank(P_0) = 1: projects onto 1-dim subspace
+  [PASS] 2d. P_0 * (1,1,1)/sqrt(3) = (1,1,1)/sqrt(3): singlet vector is eigenvector with eigenvalue 1
+  [PASS] 2e. [P_0, C] = 0 (C_3 invariance): projector commutes with cyclic shift
+  [PASS] 2f1. Eigenvalue 1 of C appears with multiplicity 1: eigenvalue-1 multiplicity = 1
+  [PASS] 2f2. Rank-1 C_3-singlet projector v_1 v_1^T (with v_1 normalized) = J/3: constructed from eigenvalue-1 eigenvector of C
+  [PASS] 2f3. Uniqueness: any rank-1 Hermitian projector P with [P, C] = 0 has range = span{(1,1,1)}: C has exactly one real eigenvalue (= 1) ⟹ unique real eigenvector
+
+=== (3) Singlet energy E_+ (matrix-space projection) ===
+  [PASS] 3a. tr(M) = 3a for Hermitian circulant: tr M = 3*a
+  [PASS] 3b. P_I(M) = (tr M / 3) * I = a * I: scalar projection onto I = a * I
+  [PASS] 3c. E_+ = ||P_I(M)||_F^2 = 3a^2 = (tr M)^2 / 3: E_+ = 3*a**2
+  [PASS] 3d. (tr M)^2 / 3 = 3a^2: alternative formula
+
+=== (4) Doublet energy E_perp ===
+  [PASS] 4a. E_perp = Tr(M^2) - (tr M)^2 / 3 = 6|b|^2: E_perp = 6*x**2 + 6*y**2
+  [PASS] 4b. tr(P_I_perp M) = 0 (traceless part): complementary projection is traceless
+  [PASS] 4c. E_perp = ||P_I_perp M||_F^2 = 6|b|^2: traceless Frobenius squared: 6*x**2 + 6*y**2
+
+=== (5) Positivity ===
+  [PASS] 5a. E_+ = 3a^2 >= 0 for all real a (no real solutions of 3a^2 < 0): solutions of 3a^2 < 0 over reals: []
+  [PASS] 5b. E_perp = 6(x^2 + y^2) >= 0 for all real x, y: solutions of 6(x^2+y^2) < 0 over reals: []
+  [PASS] 5c. Physical charged leptons (PDG): E_+ > 0 AND E_perp > 0 (interior case): E_+ = 941.523, E_perp = 941.506
+
+=== (6) Additivity (Pythagoras) ===
+  [PASS] 6a. E_+ + E_perp = Tr(M^2) exactly: isotype decomposition is orthogonal under Frobenius
+  [PASS] 6b. Under Tr(M^2) = N, the relation E_+ + E_perp = N holds symbolically: E_+ + E_perp = Tr(M^2) so constraint reduces to Tr(M^2) = N
+
+=== (7) AM-GM extremum ===
+  [PASS] 7a. max E_+·E_perp under E_+ + E_perp = N equals (N/2)^2 at E_+ = N/2: crit = [N/2], max = N**2/4, d²P/dE² = -2 (< 0 strictly concave)
+  [PASS] 7b. At the AM-GM max, kappa = a^2/|b|^2 = 2: a^2 = 2*x**2 + 2*y**2, kappa = a^2/|b|^2 = 2
+  [PASS] 7c. Q = (1 + 2/kappa)/d = 2/3 at kappa=2, d=3: Q = 2/3
+
+=== (8) Composite forcing consistency ===
+  [PASS] 8. COMPOSITE: AM-GM on log(E_+ · E_perp) forces kappa = 2 and Q = 2/3: chain (1)->(2)->(3)->(4)->(5)->(6)->(7)->(8) is gap-free and executable
+
+Total: 28 PASS, 0 FAIL
+
+Verdict:
+  Each building block of the AM-GM attack is structurally fixed on the
+  admitted matrix-space route:
+    Tr(M^2)    = canonical Frobenius form on matrix algebra
+    P_0 = J/3  = unique C_3-singlet Hermitian projector
+    E_+        = (tr M)^2/3 = ||P_0 M P_0||_F^2  [forced]
+    E_perp     = Tr(M^2) - E_+ = ||P_perp M P_perp||_F^2  [forced]
+    pieces positive and additive (Pythagoras)
+
+  AM-GM then forces the extremum at E_+ = E_perp, giving
+  kappa = a^2/|b|^2 = 2 and Q = 2/3.
+
+  Conclusion: this is the strongest current executable internal support
+  chain for the Koide Q route under {Cl(3), Herm_circ(3), C_3 action}.
+  The physical/source-law bridge from this extremum to the charged-lepton
+  packet remains a separate open item.
+
+  FROBENIUS_ISOTYPE_SPLIT_SUPPORT_CHAIN=TRUE
+
+----- stderr -----
+

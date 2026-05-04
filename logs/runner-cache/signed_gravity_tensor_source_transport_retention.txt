@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_tensor_source_transport_retention.py
+runner_sha256: 8d7378be8f5a0e7bd5f33db058036e4e26e728f7067aa3d3448803472d06366e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 8.66
+status: ok
+----- stdout -----
+================================================================================================================
+SIGNED GRAVITY TENSOR-SOURCE TRANSPORT AND RETENTION AUDIT
+  finite carrier retention plus projective transport; nonlinear closure remains gated
+================================================================================================================
+
+TARGET
+  Prove the ordinary tensor stress carrier is retained on the audited
+  gravity classes, and transport the chi_eta tensor-source twist through
+  finite family/refinement maps without turning it into a physical claim.
+
+[PASS] retained gravity stack has an ordinary rank-two tensor source carrier  (dets={'O_h': '1.629e-04', 'finite_rank': '2.014e-04'}, min_svs={'O_h': '4.440e-03', 'finite_rank': '4.049e-03'}, scalar_blind=True, additive=True)
+[PASS] orientation-line twist commutes with finite family/refinement transport  (max_commute_resid=5.5e-16; +1x1:eta=+1,chi=+1,gap=0.36; +1x2:eta=+2,chi=+1,gap=0.36; +1x3:eta=+3,chi=+1,gap=0.36; +1x5:eta=+5,chi=+1,gap=0.35; -1x1:eta=-1,chi=-1,gap=0.36; -1x2:eta=-2,chi=-1,gap=0.36; -1x3:eta=-3,chi=-1,gap=0.36; -1x5:eta=-5,chi=-1,gap=0.35)
+[PASS] projective cylindrical tensor response is refinement-stable  (max_projected_field_resid=1.1e-15, max_pair_observable_err=1.8e-15)
+[PASS] linear Ward/Bianchi-like constraints transport with the twist  (max_transported_constraint_resid=9.9e-16)
+[PASS] nonlinear gate exposes even-jet obstruction to naive sign-flip closure  (linear_odd_resid=0.0e+00, nonlinear_even_resid=2.797e+01, expected_even=2.797e+01)
+[PASS] non-claim gate remains closed  (negative_inertial_mass=False, shielding=False, propulsion=False, reactionless_force=False, physical_signed_gravity_prediction=False)
+
+INTERPRETATION
+  The ordinary tensor carrier is no longer just an assumption on the
+  audited restricted classes: the retained tensor source-to-channel map is
+  rank two and scalar-blind.  The chi_eta twist commutes with normalized
+  refinement transport, projected responses, and linear constraints.
+  The nonlinear gate is deliberately not closed: even nonlinear jets block
+  the naive h -> -h promotion and require a separate graded Einstein
+  localization theorem.
+
+SUMMARY: PASS=6 FAIL=0
+FINAL_TAG: SIGNED_GRAVITY_TENSOR_SOURCE_TRANSPORT_RETENTION_FINITE_CONDITIONAL
+
+----- stderr -----
+

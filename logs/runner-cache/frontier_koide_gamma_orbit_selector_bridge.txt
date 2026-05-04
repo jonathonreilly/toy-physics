@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_gamma_orbit_selector_bridge.py
+runner_sha256: d00de4fcf6f9e065dd4797fe23c962f19b21ffdf05ae9add5ff9b058d6f976ad
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.49
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: exact orbit-slot variables map to the cyclic Koide responses
+========================================================================================
+  [PASS] The exact orbit-to-cyclic map is r0 = u+v+w  (r0=u + v + w)
+  [PASS] The exact orbit-to-cyclic map is r1 = 2u-v-w  (r1=2*u - v - w)
+  [PASS] The exact orbit-to-cyclic map is r2 = sqrt(3)(v-w)  (r2=sqrt(3)*(v - w))
+
+========================================================================================
+PART 2: the cyclic selector pulls back to a single symmetric orbit-slot cone
+========================================================================================
+  [PASS] The cyclic selector is exactly 2(4Σuv - Σu^2) on the orbit slots  (selector=-2*u**2 + 8*u*v + 8*u*w - 2*v**2 + 8*v*w - 2*w**2)
+  [PASS] So the Koide selector is equivalent to u^2+v^2+w^2 = 4(uv+uw+vw)
+
+========================================================================================
+PART 3: the orbit-slot cone is exactly the standard Koide sqrt(m) cone
+========================================================================================
+  [PASS] Q=2/3 is equivalent to u^2+v^2+w^2 = 4(uv+uw+vw)  (Q=(u**2 + v**2 + w**2)/(u + v + w)**2)
+  [PASS] So if the Gamma-orbit slots are the physical amplitudes, the pulled-back selector is exactly Koide  (no extra nonlinear reparametrization is needed)
+
+========================================================================================
+PART 4: observed charged-lepton amplitudes satisfy the orbit-slot cone to Koide precision
+========================================================================================
+  [PASS] [NUMERIC] Observed sqrt(m) satisfy the orbit-slot cone to Koide precision  (lhs-rhs=-0.0521572916)
+  [PASS] [NUMERIC] Observed sqrt(m) give Q very close to 2/3  (Q=0.6666605115)
+
+Interpretation:
+  Once the microscopic Gamma/orbit law produces the three-slot real
+  object (u, v, w), the Koide selector is no longer a law on an abstract
+  circulant target. It is exactly one symmetric quadratic cone on those
+  physical orbit slots: u^2+v^2+w^2 = 4(uv+uw+vw).
+
+PASS=9 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,79 @@
+===== runner cache v1 =====
+runner: scripts/wave_3plus1d_radiation.py
+runner_sha256: b04495ccee8f10c13ab9fb265ee13fc488c6ee78d92ba9be5da0019eeb5a6a23
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.51
+status: ok
+----- stdout -----
+======================================================================
+(3+1)D WAVE-EQUATION RADIATION HARNESS
+NL=30, transverse grid = 19^3, S0=0.04
+======================================================================
+
+1. LIGHTCONE (delta pulse, eps=1e-6)
+     r   first dt
+     2          2  (OK)
+     3          3  (OK)
+     4          4  (OK)
+     5          5  (OK)
+     6          6  (OK)
+     7          7  (OK)
+     8          8  (OK)
+
+2. RADIATION SLOPE (drive f=0.1)
+     r       peak |f|
+     2   1.739848e-03
+     3   1.145393e-03
+     4   8.761547e-04
+     5   7.024881e-04
+     6   5.772451e-04
+     7   4.621102e-04
+     8   3.189164e-04
+  log-log slope = -1.139
+  (3+1)D textbook: -1.0 = radiation; (2+1)D was -0.5; near-field ~ -2
+  verdict: RADIATING (3+1)D — slope consistent with -1
+
+3. SLOPE vs DRIVE FREQUENCY
+       f      slope
+    0.05     -1.260
+    0.10     -1.139
+    0.15     -0.790
+    0.20     -0.983
+
+4. DFT at detectors (drive f=0.1)
+     r     f=0.05     f=0.10     f=0.15     f=0.20     f=0.30
+     2 9.7966e-04 1.3890e-03 7.7029e-04 1.2257e-04 1.0155e-04
+     3 7.0783e-04 8.2909e-04 4.2779e-04 2.0802e-05 5.2549e-05
+     4 5.0899e-04 6.0762e-04 3.2988e-04 2.9654e-05 4.5978e-05
+     5 3.4269e-04 4.3998e-04 2.9574e-04 9.0345e-05 6.4586e-05
+     6 2.3261e-04 2.9660e-04 2.4142e-04 1.2967e-04 4.7699e-05
+     7 1.7149e-04 2.0232e-04 1.8396e-04 1.3102e-04 5.3975e-05
+     8 9.9701e-05 1.1399e-04 1.1069e-04 9.0725e-05 4.7116e-05
+  (peak should be at f=0.1)
+
+5. STATIC REFERENCE (f=0, no source motion)
+     r       peak |f|
+     2   0.000000e+00
+     3   0.000000e+00
+     4   0.000000e+00
+     5   0.000000e+00
+     6   0.000000e+00
+     7   0.000000e+00
+     8   0.000000e+00
+  (should be exactly 0.0)
+
+6. STATIC SOURCE long-time profile (radial)
+     r    |f| at NL-1
+     2   1.912209e-03
+     3   1.090205e-03
+     4   8.835776e-04
+     5   5.579569e-04
+     6   8.718270e-05
+     7   1.219519e-04
+     8   1.017530e-04
+  static slope = -2.392
+  (Poisson 3D static is ~ -1; near source can be flatter)
+
+----- stderr -----
+

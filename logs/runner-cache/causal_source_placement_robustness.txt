@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/causal_source_placement_robustness.py
+runner_sha256: d7e93b55c33427e6db2665170420f6a2f41be459864cd1a506bcad8ac2b1a9ed
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 6.25
+status: ok
+----- stdout -----
+====================================================================================================
+CAUSAL SOURCE PLACEMENT ROBUSTNESS
+  fixed nominal anchor versus family-aware source registration
+====================================================================================================
+
+Question:
+  Does a family-aware source-placement rule restore the retained causal-field portability more cleanly than the fixed nominal anchor replay?
+
+Family / placement definitions:
+  fixed nominal: target (y, z) = (0, 3)
+  family centroid: source-layer centroid in the local family coordinates
+  family ordinal: median source-layer node after y/z ordering
+
+ZERO CONTROL
+  center grown family  | fixed nominal   | max |delta_y| = 0.000e+00 | max |field| = 0.000e+00
+  center grown family  | family centroid | max |delta_y| = 0.000e+00 | max |field| = 0.000e+00
+  center grown family  | family ordinal  | max |delta_y| = 0.000e+00 | max |field| = 0.000e+00
+  portable family 2    | fixed nominal   | max |delta_y| = 0.000e+00 | max |field| = 0.000e+00
+  portable family 2    | family centroid | max |delta_y| = 0.000e+00 | max |field| = 0.000e+00
+  portable family 2    | family ordinal  | max |delta_y| = 0.000e+00 | max |field| = 0.000e+00
+  portable family 3    | fixed nominal   | max |delta_y| = 0.000e+00 | max |field| = 0.000e+00
+  portable family 3    | family centroid | max |delta_y| = 0.000e+00 | max |field| = 0.000e+00
+  portable family 3    | family ordinal  | max |delta_y| = 0.000e+00 | max |field| = 0.000e+00
+  -> global exact-zero maximum = 0.000e+00
+
+PLACEMENT COMPARISON
+  family                placement        inst delta     forward/inst   dyn(1.0)/inst   dyn(0.5)/inst
+  ------------------------------------------------------------------------------------------
+  center grown family  fixed nominal   +2.921e-07 ± 6.8e-07  0.029 ± 0.441 -0.394 ± 0.726 -0.402 ± 0.735
+  center grown family  family centroid -1.314e-06 ± 2.6e-06  0.406 ± 0.408  0.462 ± 0.429  0.126 ± 0.501
+  center grown family  family ordinal  +1.628e-06 ± 1.7e-06  2.124 ± 0.643  2.670 ± 1.144  2.363 ± 1.109
+  portable family 2    fixed nominal   +4.802e-07 ± 5.3e-07  0.350 ± 0.151  0.529 ± 0.360  0.506 ± 0.420
+  portable family 2    family centroid -2.282e-06 ± 2.3e-06  1.017 ± 0.238  1.399 ± 0.550  1.488 ± 0.720
+  portable family 2    family ordinal  +1.883e-06 ± 1.5e-06  0.938 ± 0.221  1.027 ± 0.541  1.042 ± 0.634
+  portable family 3    fixed nominal   +1.927e-07 ± 5.7e-07  0.060 ± 0.433 -0.255 ± 0.624  0.042 ± 0.327
+  portable family 3    family centroid -7.619e-07 ± 1.9e-06  0.363 ± 1.015 -0.147 ± 1.365  1.237 ± 0.708
+  portable family 3    family ordinal  +1.106e-06 ± 1.1e-06  2.276 ± 0.602  2.891 ± 1.103  1.713 ± 0.768
+
+SAFE READ
+  - exact-zero control survives under every placement rule
+  - family-aware placement changes the causal ratios, but it does not recover the same portable cross-family scale
+  - the fixed nominal anchor remains a low-SNR boundary; the family-aware rules shift the boundary but do not erase it
+  - the ordinal/centroid registrations are useful diagnostics, not a restored portability law
+
+FINAL VERDICT
+  diagnosed deeper boundary: family-aware source placement changes the measured ratios, but it does not restore a clean portable causal-field signal across all three families
+
+----- stderr -----
+

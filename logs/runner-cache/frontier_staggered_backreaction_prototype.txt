@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_backreaction_prototype.py
+runner_sha256: 24df57cb18a192ea901c663d35eec1e327d9b515cbbf67f5bb4539f950e1e975
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.38
+status: ok
+----- stdout -----
+====================================================================================================
+STAGGERED SOURCE-GENERATED BACKREACTION PROTOTYPE
+  source sector solves a screened graph Poisson field Phi on the same graph
+  matter evolves with V = -m * Phi; force remains the primary observable
+====================================================================================================
+dt=0.12, steps=10, mass=0.3, G=8.0, source_sigma=0.9, mu2=0.22, ext_mu=0.38
+
+bipartite_random_geometric n=36  Phi0=0.00e+00 F0=+0.000e+00 F_ext=+1.488e+00 F_solve=+5.593e-02 gap=9.624e-01 R2=0.9830 2body=1.264e-16 Phi_add=1.628e-16 selfF=+3.382e-02 self_gap=3.953e-01 norm=4.44e-16 TOWARD=3/3
+bipartite_growing          n=48  Phi0=0.00e+00 F0=+0.000e+00 F_ext=+1.750e+00 F_solve=+6.788e-02 gap=9.612e-01 R2=0.9864 2body=2.046e-16 Phi_add=1.518e-16 selfF=+4.282e-02 self_gap=3.692e-01 norm=7.77e-16 TOWARD=3/3
+layered_bipartite_dag      n=36  Phi0=0.00e+00 F0=+0.000e+00 F_ext=+1.852e+00 F_solve=+2.183e-01 gap=8.822e-01 R2=0.9998 2body=6.561e-16 Phi_add=1.502e-16 selfF=+2.405e-01 self_gap=1.016e-01 norm=0.00e+00 TOWARD=3/3
+
+SUMMARY
+  zero-source reduction: 3/3 families exact
+  source-response linearity: 1/3 families R^2 > 0.99
+  two-body additivity: 3/3 families residual < 1e-10
+  force sign: 3/3 families TOWARD
+  one-step endogenous backreaction: 3/3 families TOWARD
+  force gap (external vs solved): mean=9.353e-01, max=9.624e-01
+  self-update gap: mean=2.887e-01, max=3.953e-01
+  norm drift: mean=4.071e-16, max=7.772e-16
+  runtime: 0.13s
+
+Interpretation:
+  - This is a source-generated Phi prototype, not a self-gravity closure.
+  - The key blocker, if any, will be whether the solved Phi stays close
+    to the external-kernel control while preserving the TOWARD force.
+  - The next step, if this survives, is to feed the evolved matter density
+    back into the same Poisson solve for one-step endogenous backreaction.
+
+----- stderr -----
+

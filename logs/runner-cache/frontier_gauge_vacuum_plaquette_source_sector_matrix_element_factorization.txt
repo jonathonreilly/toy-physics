@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py
+runner_sha256: 924b8da65cac01a3d25b0fd51e2d1d2e2078a59168456ea906fb9ca6bbf864b8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE SOURCE-SECTOR MATRIX-ELEMENT FACTORIZATION
+==============================================================================
+
+Exact source-sector structural ingredients at beta = 6
+  dominant-weight box size              = 6 x 6 = 36 states
+  half-slice multiplier parameter       = beta/2 = 3.0
+  audited truncation                    = NMAX = 5
+  half-multiplier symmetry error        = 2.220e-16
+  half-multiplier swap error            = 2.887e-15
+  half-multiplier eigenvalue range      = [0.267545894076, 13.890644623940]
+
+Generic positive diagonal witness sequence
+  min/max kappa_(p,q)(6)                = 0.025991128779, 1.000000000000
+  diagonal swap error                   = 0.000e+00
+
+Factorized source-sector transfer witness
+  transfer symmetry error               = 8.882e-16
+  transfer swap error                   = 5.773e-15
+  minimum matrix entry                  = 5.349358e-05
+  explicit matrix-formula error         = 2.665e-15
+
+Perron/Jacobi witness on the explicit factorized operator
+  Perron/power-iteration mismatch       = 4.199e-16
+  Perron expectation of J               = 0.820101408948
+  first Jacobi coefficients             = alpha[:4]=[0.8201014089, 0.6779807502, 0.4485358133, 0.2544489168]
+                                         beta[:4]=[0.0863562608, 0.145670761, 0.2418514902, 0.270206855]
+
+  [PASS] [THEOREM] the exact plaquette source recurrence operator is self-adjoint and conjugation-symmetric
+         J symmetry=0.000e+00, swap=0.000e+00
+  [PASS] [THEOREM] the beta = 6 marked half-slice factor is exactly the positive self-adjoint operator exp(3 J)
+         eigenvalue range=[0.267546, 13.890645]
+  [PASS] [THEOREM] given a conjugation-symmetric positive diagonal coefficient witness, the exact source-sector law yields a factorized transfer operator
+         D swap=0.000e+00, T symmetry=8.882e-16, T swap=5.773e-15
+  [PASS] [THEOREM] for that audited diagonal witness, the source-sector matrix elements obey T_(lambda,mu)=sum_nu M_(lambda,nu) kappa_nu M_(nu,mu)
+         max matrix-formula error = 2.665e-15
+  [PASS] [SUPPORT] the factorized transfer witness is positivity-improving on the truncated source box
+         minimum entry = 5.349e-05
+  [PASS] [SUPPORT] power iteration recovers the Perron state of the explicit factorized source-sector operator
+         ||psi_power - psi_perron|| = 4.199e-16
+  [PASS] [SUPPORT] once a diagonal coefficient sequence is fixed, the remaining framework-point data are just Perron moments / Jacobi coefficients of J
+         Jacobi depth = 6, Perron <J> = 0.820101
+
+==============================================================================
+SUMMARY: THEOREM PASS=4 SUPPORT=3 FAIL=0
+==============================================================================
+
+----- stderr -----
+

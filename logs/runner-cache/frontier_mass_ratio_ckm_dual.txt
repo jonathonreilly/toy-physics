@@ -1,0 +1,121 @@
+===== runner cache v1 =====
+runner: scripts/frontier_mass_ratio_ckm_dual.py
+runner_sha256: 631fa51e583ff084b03610176a994e04c373bdd547db00d088f283729278f588
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================
+  FRONTIER: Bounded Down-Type Mass Ratios from the CKM Dual
+========================================================================
+
+========================================================================
+PART 1: Promoted CKM input surface
+========================================================================
+
+  alpha_s(v) = 0.103303816122
+  alpha_bare = 0.079577471546
+  u_0 = 0.877681381199
+
+  |V_us| = sqrt(alpha_s(v)/2) = 0.227271  (PDG: 0.2243)
+  |V_cb| = alpha_s(v)/sqrt(6) = 0.042174  (PDG: 0.0422)
+  [PASS] CKM input formula for |V_us|  (|V_us| = 0.22727056)
+  [PASS] CKM input formula for |V_cb|  (|V_cb| = 0.04217361)
+  [PASS] |V_us| stays within 2% of PDG  (dev = +1.32%)
+  [PASS] |V_cb| stays within 1% of PDG  (dev = -0.06%)
+
+========================================================================
+PART 2: Exact SU(3) exponent constant
+========================================================================
+
+  C_F = 1.333333
+  T_F = 0.500000
+  C_F - T_F = 0.833333
+  [PASS] C_F - T_F = 5/6 exactly  (C_F - T_F = 0.8333333333)
+  [PASS] SU(3) Casimir identity for C_F  (C_F = 1.333333)
+  [PASS] Fundamental-representation index T_F = 1/2
+
+========================================================================
+PART 3: Down-type mass-ratio dual
+========================================================================
+
+  m_d/m_s = alpha_s(v)/2 = 0.051652  (PDG: 0.050000)
+  m_s/m_b = [alpha_s(v)/sqrt(6)]^(6/5) = 0.022390  (PDG: 0.022344)
+  m_d/m_b = (m_d/m_s)(m_s/m_b) = 0.001156  (PDG: 0.001117)
+  [PASS] GST dual gives m_d/m_s = |V_us|^2  (m_d/m_s = 0.05165191)
+  [PASS] 5/6 bridge gives m_s/m_b = |V_cb|^(6/5)  (m_s/m_b = 0.02238973)
+  [PASS] Chain rule for m_d/m_b  (m_d/m_b = 0.00115647)
+  [PASS] m_d/m_s matches the threshold-local self-scale comparator within 5%  (dev = +3.30%)
+  [PASS] m_s/m_b matches the threshold-local self-scale comparator within 1%  (dev = +0.20%)
+  [PASS] m_d/m_b matches the threshold-local self-scale comparator within 5%  (dev = +3.51%)
+
+========================================================================
+PART 4: Closed forms and provenance
+========================================================================
+
+  m_d/m_s = alpha_s(v) / 2 = 0.051652
+  m_s/m_b = alpha_s(v)^(6/5) / 6^(3/5) = 0.022390
+  m_d/m_b = alpha_s(v)^(11/5) / (2 * 6^(3/5)) = 0.001156
+
+  Input surface:
+    alpha_s(v)       [derived: canonical plaquette chain]
+    C_F, T_F         [exact: SU(3) group theory]
+    GST relation     [standard leading-order texture bridge]
+    5/6 bridge       [bounded mass-ratio bridge]
+    observed masses  [comparison only, not derivation inputs]
+  [PASS] Expanded form for m_s/m_b matches direct evaluation  (diff = 1.73e-17)
+  [PASS] Expanded form for m_d/m_b matches direct evaluation  (diff = 2.17e-19)
+  [PASS] All three down-type ratios stay within 5% of the threshold-local self-scale comparators
+
+========================================================================
+PART 5: Mixed-scale versus same-scale qualifier
+========================================================================
+
+  mixed-scale  m_s(2 GeV)/m_b(m_b) = 0.022344
+  same-scale   m_s(m_b)/m_b(m_b)   = 0.019473
+  transport    [alpha_s(2 GeV)/alpha_s(m_b)]^(12/25) = 1.147466
+  prediction                         = 0.022390
+  observed |V_cb| -> m_s/m_b         = 0.022407
+  mixed-scale deviation              = +0.20%
+  same-scale deviation               = +14.98%
+  bridge-only deviation              = +0.28%
+  [PASS] Mixed-scale comparator is numerically closer than same-scale comparator  (|mixed| = 0.20%, |same| = 14.98%)
+  [PASS] Same-scale mismatch remains material  (same-scale dev = +14.98%)
+  [PASS] Mixed-scale comparator remains within 1%  (mixed-scale dev = +0.20%)
+  [PASS] Mixed-scale ratio equals same-scale ratio times one-loop transport factor  (diff = 3.47e-18)
+  [PASS] Observed |V_cb| mapped through the 5/6 bridge stays within 1% of the self-scale comparator  (bridge-only dev = +0.28%)
+
+========================================================================
+PART 6: alpha_s(v) sensitivity
+========================================================================
+
+  alpha_s(v) -1%: 0.102271
+    m_d/m_s = 0.051135
+    m_s/m_b = 0.022121
+
+  alpha_s(v) central: 0.103304
+    m_d/m_s = 0.051652
+    m_s/m_b = 0.022390
+
+  alpha_s(v) +1%: 0.104337
+    m_d/m_s = 0.052168
+    m_s/m_b = 0.022659
+  [PASS] m_d/m_s elasticity is linear in alpha_s(v)
+  [PASS] m_s/m_b elasticity is 6/5 in alpha_s(v)
+
+========================================================================
+SUMMARY
+========================================================================
+  m_d/m_s = 0.051652  (self-scale comparator: 0.050000)
+  m_s/m_b = 0.022390  (self-scale comparator: 0.022344)
+  m_d/m_b = 0.001156  (self-scale comparator: 0.001117)
+  Status: bounded secondary lane
+  Live qualifier: threshold-local self-scale comparator supported; theorem-grade scale closure remains open
+
+========================================================================
+  TOTAL: PASS=23, FAIL=0
+========================================================================
+
+----- stderr -----
+

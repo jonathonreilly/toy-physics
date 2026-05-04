@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_polar_aligned_core_nogo.py
+runner_sha256: 657e713827aabe1526f4da49ea14e96d734f136a91ebec4169db4120c813d9da
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO POSITIVE-POLAR ALIGNED-CORE NO-GO
+========================================================================================
+
+Question:
+  Does the exact residual-Z2 aligned Hermitian core already give the
+  needed DM CP support once the positive polar section is used?
+
+========================================================================================
+PART 1: THE ALIGNED CORE GIVES EQUAL REAL SINGLET-DOUBLET SLOTS
+========================================================================================
+  [PASS] The Z_3 transform of the aligned core has the exact closed form  (error = 1.08e-15)
+  [PASS] The two singlet-doublet slot entries are equal  (K01=0.200000+0.000000j, K02=0.200000+0.000000j)
+  [PASS] Those slot entries are purely real on the aligned core  (K01=0.200000+0.000000j, K02=0.200000+0.000000j)
+
+  So the intrinsic positive-section slot pair collapses on the aligned
+  core to one real repeated scalar q = (a+b-c-d)/3.
+
+========================================================================================
+PART 2: THE ALIGNED CORE IS INTRINSICALLY CP-EMPTY
+========================================================================================
+  [PASS] One physical singlet-doublet mass-basis entry vanishes exactly  (K01_mass=0.000000-0.000000j)
+  [PASS] The other physical singlet-doublet mass-basis entry is exactly sqrt(2) q and real  (K02_mass=0.282843+0.000000j, sqrt(2)q=0.282843)
+  [PASS] Therefore the exact aligned-core CP tensor vanishes  (cp_pair=(-2.2062830904209992e-32, 1.8624795141344643e-16))
+
+  The positive polar section does not rescue the aligned Hermitian core.
+  On that core the DM carrier remains structurally CP-empty.
+
+========================================================================================
+PART 3: GENERIC POSITIVE-DEFINITE ALIGNED SAMPLES STAY CP-EMPTY
+========================================================================================
+  [PASS] Random positive-definite aligned cores all give zero intrinsic CP  (tested = 80)
+
+  So the CP-emptiness is not a special point. It is the exact aligned-core law.
+
+========================================================================================
+PART 4: THE BANK RECORDS THE NEW H-SIDE BLOCKER
+========================================================================================
+  [PASS] The new note states K01 = K02 = (a+b-c-d)/3 on the aligned core
+
+  The remaining last-mile DM object is now cleaner: not right-frame law,
+  but the H-side symmetry-breaking law beyond the residual-Z2 aligned core.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact aligned-core answer:
+    - the intrinsic positive-section slots collapse to one repeated real scalar
+    - one physical singlet-doublet mass-basis entry vanishes
+    - the other remains real
+    - therefore the aligned core is intrinsically CP-empty
+
+  So the right-frame blocker is gone, but DM still needs the Hermitian
+  symmetry-breaking law away from the aligned core.
+
+PASS=8 FAIL=0
+
+----- stderr -----
+

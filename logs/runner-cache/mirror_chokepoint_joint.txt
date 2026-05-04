@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/mirror_chokepoint_joint.py
+runner_sha256: afff61d204cc8a146c0b15c1c40e2105cdcb71693de7302da791b21efe07d563
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 16.69
+status: ok
+----- stdout -----
+==============================================================================================================
+MIRROR-SYMMETRIC CHOKEPOINT: Born + Gravity + Decoherence
+  NPL_HALF=25 (total 50), k=5.0, 16 seeds
+  Chokepoint barrier (layer-1 only connectivity)
+==============================================================================================================
+
+     N         cfg      d_TV    pur_cl    S_norm     gravity        Born         k=0   ok   time
+  ------------------------------------------------------------------------------------------------
+    15      random    0.8981   0.8927±0.04    1.0009  +0.0725±0.480    1.69e-16   +0.00e+00   13     0s
+    15  mirror p2=0    0.9716   0.5769±0.02    1.0006  +1.2927±0.691    5.75e-16   +0.00e+00   11     1s
+
+    25      random    0.6704   0.8704±0.04    1.0003  +0.0164±0.719    8.19e-16   +0.00e+00   16     1s
+    25  mirror p2=0    0.8014   0.7329±0.05    0.9986  +2.2748±0.525    6.92e-16   +0.00e+00   13     1s
+
+    40      random  FAIL     1s
+    40  mirror p2=0  FAIL     1s
+
+    60      random  FAIL     2s
+    60  mirror p2=0  FAIL     1s
+
+    80      random  FAIL     2s
+    80  mirror p2=0  FAIL     2s
+
+   100      random  FAIL     3s
+   100  mirror p2=0  FAIL     2s
+
+
+VALIDATION CRITERIA:
+  Born: |I3|/P < 1e-10 = machine precision (PASS)
+  k=0: must be 0 (phase-mediated gravity)
+  pur_cl < 0.95 at N=60+: decoherence ceiling broken
+  gravity > 0 with grav_t > 2: significant attraction
+
+----- stderr -----
+

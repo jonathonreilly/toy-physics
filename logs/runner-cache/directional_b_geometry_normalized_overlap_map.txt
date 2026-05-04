@@ -1,0 +1,55 @@
+===== runner cache v1 =====
+runner: scripts/directional_b_geometry_normalized_overlap_map.py
+runner_sha256: 87d9bc6ba599072baca69626853d95cf40363aadebcf598708305c61ace225de
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.41
+status: ok
+----- stdout -----
+====================================================================================================================================
+DIRECTIONAL-MEASURE B GEOMETRY-NORMALIZED OVERLAP MAP
+====================================================================================================================================
+Join the widened-source holdout transfer rows directly to the retained overlap / occupancy diagnostics.
+This keeps the fixed directional-measure propagator, the second dense-family holdout, and
+the widened `mass_nodes = 5` source frozen. The question is whether the center-offset
+`A/b` and `F/b` behavior at `N = 25` is generic, or only an overlap-sector effect.
+
+Grouped holdout summary:
+target_b rows ovlp  fill<=0.4 actual_b   edge_b       A/b       F/b    A/edge    F/edge
+------------------------------------------------------------------------------------------------------------------------------------
+    1.50    5    3          3    1.232   -0.188   -0.3518   -0.4761   +0.1651   +0.1070
+    3.00    5    1          4    2.693    0.845   +0.0590   +0.0485   +0.1664   +0.1395
+    4.50    5    0          3    4.873    2.837   +0.0526   +0.0381   +0.0866   +0.0634
+    6.00    5    0          1    5.950    4.500   +0.0472   +0.0344   +0.0646   +0.0472
+    7.50    5    0          4    7.140    5.680   +0.0416   +0.0294   +0.0524   +0.0382
+
+Overlap rows:
+target_b seed actual_b   edge_b       mu     fill  count       A/b       F/b
+--------------------------------------------------------------------------------------------
+    1.50    0    1.188   -1.092   -0.479    0.200      1   +0.1139   +0.1187
+    1.50    1    0.039   -0.926   -0.959    0.400      2   -2.3240   -2.8457
+    1.50    2    0.726   -1.121   -0.607    0.200      1   +0.2475   +0.1801
+    3.00    1    1.528   -1.691   -0.525    0.000      0   -0.0421   -0.0437
+
+Trend summaries:
+  all rows            : A/b FAIL (-0.3518 -> +0.0416, slope +0.0530)
+                        F/b FAIL (-0.4761 -> +0.0294, slope +0.0680)
+                        A/edge PASS (+0.1651 -> +0.0524, slope -0.0221)
+                        F/edge PASS (+0.1070 -> +0.0382, slope -0.0156)
+  non-overlap rows    : A/b PASS (+0.1017 -> +0.0416, slope -0.0122)
+                        F/b PASS (+0.0833 -> +0.0294, slope -0.0113)
+
+Interpretation:
+  1. Exactly 4/25 widened-source rows are true overlap rows (`mu <= 0`).
+  2. All 4 overlap rows live in the first two target-b buckets and all satisfy the occupancy bridge `target_fill <= 0.4`.
+  3. Low occupancy alone is only a coarse tag here (15/25 rows meet it),
+     but the actual center-offset failure is concentrated in the subset where low occupancy has
+     already become source overlap.
+  4. On the full sample, `A/b` and `F/b` fail; after removing only the overlap rows, both regain
+     a decreasing trend with actual `b`, while `A/edge` and `F/edge` already pass on the full sample.
+  5. So the widened-source `N = 25` holdout failure maps to the existing overlap /
+     occupancy seam, not to a new global breakdown that would justify reopening the denominator
+     search.
+
+----- stderr -----
+

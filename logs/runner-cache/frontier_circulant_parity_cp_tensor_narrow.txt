@@ -1,0 +1,89 @@
+===== runner cache v1 =====
+runner: scripts/frontier_circulant_parity_cp_tensor_narrow.py
+runner_sha256: b41e886bfbd1d523bbb26a721bf95721a367b1542f8801d40eb5393196e05a21
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.70
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: Hermitian circulant parity + CP tensor
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: build S, S^2, P_{23} and verify P_{23} S P_{23} = S^2
+----------------------------------------------------------------------------------------
+  [PASS (C)] S^3 = I exact  ()
+  [PASS (C)] P_{23}^2 = I exact (involution)  ()
+  [PASS (C)] P_{23} S P_{23} = S^2 exact (Z_2 swap)  ()
+  [PASS (C)] P_{23} S^2 P_{23} = S exact (inverse direction)  ()
+
+----------------------------------------------------------------------------------------
+Part 2: I and (S + S^2) are Z_2-even; (S - S^2) is Z_2-odd up to factor i
+----------------------------------------------------------------------------------------
+  [PASS (C)] P_{23} I P_{23} = I exact (I is Z_2-even)  ()
+  [PASS (C)] P_{23} (S + S^2) P_{23} = (S + S^2) exact (Z_2-even)  ()
+  [PASS (C)] P_{23} (S - S^2) P_{23} = -(S - S^2) exact (sign-flip)  ()
+  [PASS (C)] P_{23} [i(S - S^2)] P_{23} = -i(S - S^2) exact (Z_2-odd)  ()
+
+----------------------------------------------------------------------------------------
+Part 3: K(d, c_even, c_odd) parity decomposition
+----------------------------------------------------------------------------------------
+  [PASS (C)] K is Hermitian (K = K^dagger)  ()
+  [PASS (C)] P_{23} K P_{23} = d I + c_even(S+S^2) - i c_odd(S-S^2) (parity sends c_odd -> -c_odd)  ()
+
+----------------------------------------------------------------------------------------
+Part 4: CP-tensor formula Im[(K_01)^2] = 2 c_even c_odd
+----------------------------------------------------------------------------------------
+
+  K[0, 1] = c_even + I*c_odd
+  K[0, 1]^2 = (c_even + I*c_odd)**2
+  [PASS (C)] Im[(K_01)^2] = 2 c_even c_odd exact  (Im[K_01^2] = 2*c_even*c_odd)
+
+----------------------------------------------------------------------------------------
+Part 5: vanishing of Im[(K_01)^2] at c_odd = 0
+----------------------------------------------------------------------------------------
+  [PASS (C)] c_odd = 0 forces Im[(K_01)^2] = 0 exact  (Im[K_01^2] at c_odd = 0 = 0)
+
+----------------------------------------------------------------------------------------
+Part 6: nonzero scalar at concrete instance (d, c_even, c_odd) = (1, 1/3, 1/5)
+----------------------------------------------------------------------------------------
+  [PASS (C)] Im[(K_01)^2] = 2 c_even c_odd = 2/15 at (1, 1/3, 1/5)  (Im[K_01^2] = 2/15, expected = 2/15)
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let S be the 3x3 cyclic permutation matrix and P_{23} the residual-Z_2
+    transposition (swap of indices 2, 3). Consider the Hermitian circulant
+    family
+        K(d, c_even, c_odd) = d I + c_even (S + S^2) + i c_odd (S - S^2),
+    with d, c_even, c_odd ∈ R.
+
+  CONCLUSION:
+    (i)   P_{23} S P_{23} = S^2 (residual-Z_2 swap of S, S^2);
+    (ii)  I and (S + S^2) are residual-Z_2-even; i(S - S^2) is residual-Z_2-odd;
+    (iii) P_{23} K P_{23} sends c_odd -> -c_odd, leaves d, c_even fixed;
+    (iv)  Im[(K_01)^2] = 2 c_even c_odd  (exact CP-tensor formula);
+    (v)   c_odd = 0 forces Im[(K_01)^2] = 0.
+
+  Audit-lane class:
+    pure linear algebra on 3x3 Hermitian circulants and a residual Z_2
+    transposition. No DM-side / Wilson-environment / weak-axis-split / two-Higgs
+    right-Gram / standard CP tensor readout authority consumed.
+
+  This narrow theorem isolates the circulant parity decomposition + CP-tensor
+  formula from any DM-side framework-specific framing, so it can be
+  checked independently of the parent's authority-stack inputs.
+
+
+========================================================================================
+  TOTAL: PASS=13, FAIL=0
+========================================================================================
+
+----- stderr -----
+

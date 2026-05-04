@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_canonical_two_higgs_slot_nogo.py
+runner_sha256: ca51fb656709c148e6dca1a757779801ece4fa371d9df823bcbe3de7512eba95
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.90
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO CANONICAL TWO-HIGGS SLOT NO-GO
+========================================================================================
+
+Question:
+  Can the full canonical two-Higgs right-Gram lane realize the exact
+  source-phase singlet-doublet CP carrier on the current denominator stack?
+
+========================================================================================
+PART 1: EXACT SOURCE-PHASE SLOT ALIGNMENT ON THE FULL CANONICAL LANE
+========================================================================================
+  [PASS (C)] K01 source-phase alignment reduces to one exact polynomial condition on the canonical lane  (cond1 = sqrt(3)*(x1**2 - x2**2 - x2*y2 - 2*x3*y3 - y1**2 + y3**2)/6)
+  [PASS (C)] K02 source-phase alignment reduces to one exact polynomial condition on the canonical lane  (cond2 = sqrt(3)*(-x1**2 + x2**2 + x2*y2 - x3*y3 + y1**2 - y3**2)/6)
+
+  So exact source-phase alignment on the full canonical lane is again
+  not a numerical fit problem. It is an exact polynomial system.
+
+========================================================================================
+PART 2: THE TWO ALIGNMENT CONDITIONS FORCE x3 y3 = 0
+========================================================================================
+  [PASS (C)] Combining the exact alignment conditions gives a pure x3 y3 obstruction  (cond1 + cond2 = -sqrt(3)*x3*y3/2)
+  [PASS (C)] Therefore exact source-phase alignment on the full canonical lane requires x3 y3 = 0  (the distinguished complex corner slot must collapse)
+
+  This is stronger than the restricted symmetric no-go. The obstruction
+  is already present on the full canonical seven-parameter lane.
+
+========================================================================================
+PART 3: THE PHYSICAL HEAVY-NEUTRINO-BASIS CP TENSOR IS PROPORTIONAL TO x3 y3
+========================================================================================
+  [PASS (C)] Im[(K_mass)_{01}^2] factorizes with an explicit x3 y3 prefactor  (Im01 = sqrt(3)*x3*y3*(-2*x1*y1 - 2*x2**2 + 2*x3**2 - x3*y3 - 2*y1**2 + 2*y2**2)/12)
+  [PASS (C)] Im[(K_mass)_{02}^2] factorizes with an explicit x3 y3 prefactor  (Im02 = sqrt(3)*x3*y3*(4*x1**2 + 2*x1*y1 - 2*x2**2 - 4*x2*y2 - 2*x3**2 - x3*y3 - 2*y1**2 - 2*y2**2 + 4*y3**2)/12)
+  [PASS (C)] Once alignment forces x3 y3 = 0, the physical CP tensor collapses to zero  (both forced branches are CP-empty)
+
+  So the canonical lane does not merely fail to explain the last
+  amplitudes. On the exact source-phase aligned branch it is
+  structurally CP-empty.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact answer:
+    - on the full canonical right-Gram lane with delta = 2 pi / 3,
+      exact singlet-doublet slot alignment gives two polynomial conditions
+    - together they force x3 y3 = 0
+    - but the physical heavy-neutrino-basis CP tensor is proportional to x3 y3
+    - therefore the exact aligned branch on the admitted canonical two-Higgs lane
+      is structurally CP-empty
+
+  Full zero-import DM closure therefore cannot come from the admitted
+  canonical two-Higgs lane alone. It needs a genuinely new extension
+  beyond that canonical branch.
+
+PASS=7 FAIL=0
+
+----- stderr -----
+

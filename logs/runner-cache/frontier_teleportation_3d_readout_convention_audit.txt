@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_3d_readout_convention_audit.py
+runner_sha256: 3dd5262c85ba7b7c989f11a8180f03f91ac0e590658730fdc97ec413dd5a04e4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.46
+status: ok
+----- stdout -----
+3D READOUT-CONVENTION AUDIT: RETAINED-AXIS Z_r VERSUS RAW xi_5
+Status: planning / first artifact; quantum state teleportation only
+Convention: traced 3D readout must use Z_r tensor I_spectator; raw xi_5 = Z_x Z_y Z_z is fixed-branch signed Z only
+Audited sides: 2, 4
+Tolerance: 1.0e-12
+
+3D retained-axis operator summary:
+  surface     ret envs   Z_r   X_r   xi5   xi5_rel   xi5_err branch_err  Bell4 rawBell4 rawBellRel
+  3D side=2    x    4  PASS  PASS  FAIL  1.000000  1.000000          0   PASS     FAIL   0.707107
+  3D side=2    y    4  PASS  PASS  FAIL  1.000000  1.000000          0   PASS     FAIL   0.707107
+  3D side=2    z    4  PASS  PASS  FAIL  1.000000  1.000000          0   PASS     FAIL   0.707107
+  3D side=4    x   32  PASS  PASS  FAIL  1.000000  1.000000          0   PASS     FAIL   0.707107
+  3D side=4    y   32  PASS  PASS  FAIL  1.000000  1.000000          0   PASS     FAIL   0.707107
+  3D side=4    z   32  PASS  PASS  FAIL  1.000000  1.000000          0   PASS     FAIL   0.707107
+
+Fixed-branch raw xi_5 restrictions:
+  3D side=2 retained=x spectators=yz: xi_5|branch = sign * Z_x
+    yz=00 sign=+1 envs=1 err=0; yz=01 sign=-1 envs=1 err=0; yz=10 sign=-1 envs=1 err=0; yz=11 sign=+1 envs=1 err=0
+  3D side=2 retained=y spectators=xz: xi_5|branch = sign * Z_y
+    xz=00 sign=+1 envs=1 err=0; xz=01 sign=-1 envs=1 err=0; xz=10 sign=-1 envs=1 err=0; xz=11 sign=+1 envs=1 err=0
+  3D side=2 retained=z spectators=xy: xi_5|branch = sign * Z_z
+    xy=00 sign=+1 envs=1 err=0; xy=01 sign=-1 envs=1 err=0; xy=10 sign=-1 envs=1 err=0; xy=11 sign=+1 envs=1 err=0
+  3D side=4 retained=x spectators=yz: xi_5|branch = sign * Z_x
+    yz=00 sign=+1 envs=8 err=0; yz=01 sign=-1 envs=8 err=0; yz=10 sign=-1 envs=8 err=0; yz=11 sign=+1 envs=8 err=0
+  3D side=4 retained=y spectators=xz: xi_5|branch = sign * Z_y
+    xz=00 sign=+1 envs=8 err=0; xz=01 sign=-1 envs=8 err=0; xz=10 sign=-1 envs=8 err=0; xz=11 sign=+1 envs=8 err=0
+  3D side=4 retained=z spectators=xy: xi_5|branch = sign * Z_z
+    xy=00 sign=+1 envs=8 err=0; xy=01 sign=-1 envs=8 err=0; xy=10 sign=-1 envs=8 err=0; xy=11 sign=+1 envs=8 err=0
+
+Bell projector consequences:
+  3D side=2 retained=x: retained Bell4 PASS max_rel=0 max_expected_err=0; raw xi_5 Bell failures=4/4 max_rel=0.707107 max_expected_err=0.250000
+  3D side=2 retained=y: retained Bell4 PASS max_rel=0 max_expected_err=0; raw xi_5 Bell failures=4/4 max_rel=0.707107 max_expected_err=0.250000
+  3D side=2 retained=z: retained Bell4 PASS max_rel=0 max_expected_err=0; raw xi_5 Bell failures=4/4 max_rel=0.707107 max_expected_err=0.250000
+  3D side=4 retained=x: retained Bell4 PASS max_rel=0 max_expected_err=0; raw xi_5 Bell failures=4/4 max_rel=0.707107 max_expected_err=0.250000
+  3D side=4 retained=y: retained Bell4 PASS max_rel=0 max_expected_err=0; raw xi_5 Bell failures=4/4 max_rel=0.707107 max_expected_err=0.250000
+  3D side=4 retained=z: retained Bell4 PASS max_rel=0 max_expected_err=0; raw xi_5 Bell failures=4/4 max_rel=0.707107 max_expected_err=0.250000
+
+Recommended guard language for scripts:
+  fixed_branch_z: raw xi_5 restricted to an explicit spectator branch; track sign.
+  traced_operator_z: use retained-axis Z_r tensor I_spectator for 3D readout/correction.
+  native_xi5_as_traced_z: reject in 3D unless an environment measurement/heralding
+    workflow and branch-conditioned correction rule are supplied.
+  Bell projectors: build traced Bell measurements from retained-axis Z_r and X_r.
+
+Acceptance gates:
+  3D side=2 and side=4 surfaces audited: PASS
+  all retained-axis Z_r operators factor as O_logical tensor I_env: PASS
+  all retained-axis X_r operators factor as O_logical tensor I_env: PASS
+  raw xi_5 fixed-branch restrictions are signed logical Z: PASS
+  raw xi_5 fails traced retained-axis Z factorization in 3D: PASS
+  retained-axis Bell projectors pass as traced Bell measurements: PASS
+  raw xi_5 Bell projectors fail as traced Bell measurements: PASS
+
+Claim boundary:
+  This is a 3D operator-convention audit for ordinary quantum state teleportation.
+  It is not matter, mass, charge, energy, object, or faster-than-light transport.
+
+Limitations:
+  This is a finite side=2/side=4 operator audit, not a hardware readout design.
+  Raw xi_5 can still be used in explicitly fixed spectator-branch algebra.
+  A traced raw-xi_5 workflow would need extra environment measurement/heralding rules.
+
+----- stderr -----
+

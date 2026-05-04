@@ -1,0 +1,82 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_axis_exchange_fixed_point.py
+runner_sha256: da516c3146840e3efcdc38656b8d52f5ae0b781c61665837e541b7231eb6acb4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: AXIS-EXCHANGE FIXED-POINT THEOREM
+========================================================================================
+
+Authority stack:
+  - docs/NEUTRINO_MAJORANA_NAMBU_SOURCE_PRINCIPLE_NOTE.md
+  - docs/NEUTRINO_MAJORANA_SOURCE_RAY_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_BACKGROUND_NORMALIZATION_THEOREM_NOTE.md
+
+Question:
+  Once the local Majorana response is background-normalized, is there
+  a canonical finite nonzero local point on that curve?
+
+========================================================================================
+PART 1: THE ADMITTED LOCAL BLOCK HAS AN EXACT NORMAL-PAIRING AXIS EXCHANGE
+========================================================================================
+  [PASS (C)] The exchange sends the retained normal axis to the canonical pairing axis  (axis error=3.19e-16)
+  [PASS (C)] The exchange sends the canonical pairing axis back to the normal axis  (axis error=2.68e-16)
+  [PASS (C)] On the normalized family the exchange acts as rho -> 1/rho up to common scale/sign  (kernel error=2.65e-16)
+
+  So the admitted local Majorana block is not just a monotone curve.
+  It also carries an exact canonical exchange between the retained
+  normal axis and the canonical pairing axis.
+
+========================================================================================
+PART 2: THE EXACT EXCHANGE INVERTS THE NORMALIZED LOCAL RATIO
+========================================================================================
+  [PASS (C)] The exact exchanged local comparator is Q_rel(1/rho) = 1/rho^2  (|Q_after-1/Q_before|=2.78e-17)
+  [PASS (C)] The exact exchanged local response is W_rel(1/rho)  (|W_after-formula|=0.00e+00)
+  [PASS (C)] The background-normalized curve itself is not exchange-invariant away from the fixed point  (W_before=0.955511, W_after=0.080043)
+
+  The exchange does not make every point invariant. It makes the
+  normalized local ratio invert. So a unique exchange-covariant
+  finite selector must land on a fixed point of rho -> 1/rho.
+
+========================================================================================
+PART 3: THE UNIQUE POSITIVE EXCHANGE-FIXED LOCAL POINT IS rho = 1
+========================================================================================
+  [PASS (C)] The positive fixed-point equation rho = 1/rho has the exact solution rho = 1  (residual=0.00e+00)
+  [PASS (C)] A dense positive scan has its unique minimum at the self-dual point  (rho_min=1.000263)
+  [PASS (C)] The self-dual local response is W_rel = (1/2) log 2  (W_rel(1)=0.346573590280)
+  [PASS (C)] The self-dual local comparator is Q_rel = 1  (Q_rel(1)=1.000000000000)
+
+  Therefore any intrinsic finite selector on the normalized local
+  Majorana curve that is covariant under the exact axis exchange is
+  forced onto the self-dual point rho = 1.
+
+========================================================================================
+PART 4: THE SELF-DUAL LOCAL POINT IS STILL SCALE-RELATIVE, NOT STAIRCASE-ABSOLUTE
+========================================================================================
+  [PASS (C)] Joint positive rescaling leaves the selected self-dual ratio rho = 1 unchanged  (tested lambdas=[0.3, 1.0, 7.0])
+  [PASS (C)] The self-dual background-normalized response is unchanged under joint rescaling  (spread=0.00e+00)
+  [PASS (C)] The self-dual background-normalized comparator is unchanged under joint rescaling  (spread=0.00e+00)
+
+  So the new theorem closes the local finite-point selector but not
+  the absolute Majorana staircase anchor. The self-dual point fixes a
+  relative local point, while the overall source scale remains free.
+
+========================================================================================
+RESULT
+========================================================================================
+  Yes, on the admitted local block once the finite selector is taken
+  to be covariant under the exact canonical exchange of the retained
+  normal and pairing axes. The exchange acts as rho -> 1/rho, so the
+  unique positive fixed point is the self-dual point rho = 1.
+
+  But this is still only a local relative selector. Joint positive
+  rescaling leaves rho = 1 unchanged, so the absolute Majorana
+  staircase anchor and three-generation lift remain open.
+
+PASS=13  FAIL=0
+
+----- stderr -----
+

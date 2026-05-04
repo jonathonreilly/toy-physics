@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_causal_channel.py
+runner_sha256: 04a8ee2f46f11cede88965e6be8308e78ec6990547ab7c617192fde121fa42da
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+TELEPORTATION BELL-RECORD CAUSAL CHANNEL HARNESS
+Status: planning / first artifact; explicit classical record only
+
+Directed lattice DAG:
+  lattice: 4 x 2
+  route Alice->Bob: ((0, 0), (1, 0), (2, 0), (3, 0), (3, 1))
+  path latency ticks: 4
+
+Explicit Bell record:
+  record: Psi- bits(z,x)=(1, 1) created t=7 deliver t=11
+  channel derives Bell bits: False
+  Bell branch probability: 0.2499999999999999
+
+Causal channel checks:
+  positive latency: True
+  receive at t=10 blocked: True
+  wrong receiver blocked: True
+  duplicate record id rejected: True
+  receive at delivery exactly once: True
+  delayed control blocked at base arrival: True (base t=24, actual t=26)
+  delayed control delivered late: True
+
+Correction controls:
+  correct-record fidelity: 1.0000000000000000
+  wrong-bit control fidelity: 0.3333333333333334
+
+Bob no-signaling before record delivery:
+  probe states: 5
+  max Bob trace distance to I/2 before Alice measurement: 2.220e-16
+  max Bob trace distance to I/2 after Alice measurement before delivery: 3.331e-16
+  max pairwise pre-delivery Bob-state distance across inputs: 1.388e-16
+  max Bell probability error from 1/4: 1.110e-16
+
+Acceptance gates:
+  explicit not derived record channel: PASS
+  positive channel latency: PASS
+  no early delivery: PASS
+  duplicate prevention: PASS
+  wrong/delayed record controls: PASS
+  post-delivery correction: PASS
+  Bob pre-delivery no-signaling: PASS
+
+Claim boundary:
+  This models only a causal classical Bell-record channel.
+  It is not FTL signaling, matter transport, mass transfer, or charge transfer.
+  It does not derive the classical record from the DAG or from a CHSH lane.
+
+----- stderr -----
+

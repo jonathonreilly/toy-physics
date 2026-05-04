@@ -1,0 +1,32 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_layered_gauge_engineering.py
+runner_sha256: d966da041a4c4f8d7a66acbd77fe52c11076b1df8013f5497acf3f2a848087e8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.40
+status: ok
+----- stdout -----
+================================================================================================
+STAGGERED LAYERED GAUGE ENGINEERING
+  Native flux-threaded current on layered cycle geometries
+  Retained force battery reused from the staggered graph lane
+================================================================================================
+  dt=0.12, steps=10, mass=0.3, source_strength=0.0004
+
+layered_bipartite_dag_s13_n36      n=36  cycle=no retained=8/8 force=TOWARD F~M=1.000 achrom=1.699e-16 equiv=1.683e-16 robust=3/3 J_span=N/A J_resid=N/A gauge=N/A
+layered_bipartite_dag_s29_n55      n=55  cycle=yes retained=7/8 force=TOWARD F~M=1.000 achrom=1.126e-16 equiv=0.000e+00 robust=3/3 J_span=3.370e-35 J_resid=6.882e-36 gauge=FAIL
+layered_brickwall_open             n=48  cycle=yes retained=8/8 force=TOWARD F~M=1.000 achrom=2.646e-16 equiv=2.245e-16 robust=3/3 J_span=2.279e-03 J_resid=4.770e-18 gauge=PASS
+layered_brickwall_wrap             n=48  cycle=yes retained=8/8 force=TOWARD F~M=1.000 achrom=2.223e-16 equiv=1.023e-16 robust=3/3 J_span=2.151e-03 J_resid=8.023e-18 gauge=PASS
+
+CLOSURE
+  best geometry: layered_brickwall_open (current span=2.279e-03, residual=4.770e-18)
+  observable: ground-state persistent-current span over phi in [0, 2pi]
+  operator: native staggered Hamiltonian with flux threaded through the detected cycle edge
+
+Interpretation:
+  - Gauge/current is only scored on cycle-bearing layered graphs.
+  - The DAG-compatible holdout remains N/A for gauge/current.
+  - Force remains the primary gravity observable; current is the gauge observable.
+
+----- stderr -----
+

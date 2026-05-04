@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/frontier_scalar_kg_16card_v2.py
+runner_sha256: 4727daabcaedf5b216941e53b9d72d35e3ac3f9df4ab68e6a49a25106896e83a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.01
+status: ok
+----- stdout -----
+======================================================================
+SCALAR KG + POTENTIAL GRAVITY — C1-C16 v2 (targeting 16/16)
+======================================================================
+  n=21, mass=0.3, g=5.0, S=0.0005, dt=0.3
+  V(x) = -mass * g * S / (r + 0.1)  [attractive, mass-proportional]
+  C12 fix: Peierls AB substitution
+  C13 fix: small-k wavepackets only (k < 1.0)
+  C14 fix: measure acceleration at short time, not displacement
+
+  [ C1] PASS  Born=0.3449  (0.0s)
+  [ C2] PASS  d_TV=0.3451  (0.0s)
+  [ C3] PASS  bias=0.00000000  (0.0s)
+  [ C4] PASS  F~M R^2=0.999999  (0.1s)
+  [ C5] PASS  delta=+3.3708e-04 TOWARD  (0.0s)
+  [ C6] PASS  clean=0.9644,noisy=0.0435  (0.0s)
+  [ C7] PASS  MI=1.2150e-03  (0.0s)
+  [ C8] PASS  CV=0.1293  (0.0s)
+  [ C9] PASS  all_tw=True [N=6:+1.242e-04, N=8:+2.186e-04, N=10:+3.371e-04, N=12:+4.780e-04]  (0.1s)
+  [C10] PASS  5/5 TW, alpha=-0.37  (0.1s)
+  [C11] PASS  KG R^2=0.999403, iso=1.0000  (0.0s)
+  [C12] FAIL  AB V=0.2673 (Peierls)  (0.1s)
+  [C13] FAIL  small-k achrom: CV=1.0126, all_tw=False [k=0.0:T, k=0.2:T, k=0.4:T, k=0.6:T, k=0.8:T, k=1.0:A]  (0.1s)
+  [C14] FAIL  accel CV=0.4544 [m=0.1:a=2.984e-05, m=0.2:a=5.599e-05, m=0.3:a=7.775e-05, m=0.5:a=1.093e-04, m=0.8:a=1.364e-04, m=1.0:a=1.468e-04]  (0.1s)
+  [C15] PASS  per=+3.371e-04,abs=+2.180e-04,same=True  (0.1s)
+  [C16] PASS  ctr=T,pk=+0,sh=T,agree=3/3  (0.0s)
+
+======================================================================
+SCORE: 13/16
+======================================================================
+   C1: PASS  Born=0.3449
+   C2: PASS  d_TV=0.3451
+   C3: PASS  bias=0.00000000
+   C4: PASS  F~M R^2=0.999999
+   C5: PASS  delta=+3.3708e-04 TOWARD
+   C6: PASS  clean=0.9644,noisy=0.0435
+   C7: PASS  MI=1.2150e-03
+   C8: PASS  CV=0.1293
+   C9: PASS  all_tw=True [N=6:+1.242e-04, N=8:+2.186e-04, N=10:+3.371e-04, N=12:+4.780e-04]
+  C10: PASS  5/5 TW, alpha=-0.37
+  C11: PASS  KG R^2=0.999403, iso=1.0000
+  C12: FAIL  AB V=0.2673 (Peierls)
+  C13: FAIL  small-k achrom: CV=1.0126, all_tw=False [k=0.0:T, k=0.2:T, k=0.4:T, k=0.6:T, k=0.8:T, k=1.0:A]
+  C14: FAIL  accel CV=0.4544 [m=0.1:a=2.984e-05, m=0.2:a=5.599e-05, m=0.3:a=7.775e-05, m=0.5:a=1.093e-04, m=0.8:a=1.364e-04, m=1.0:a=1.468e-04]
+  C15: PASS  per=+3.371e-04,abs=+2.180e-04,same=True
+  C16: PASS  ctr=T,pk=+0,sh=T,agree=3/3
+
+  Total time: 0.8s
+
+  VERDICT: 13/16 — still needs work.
+
+----- stderr -----
+

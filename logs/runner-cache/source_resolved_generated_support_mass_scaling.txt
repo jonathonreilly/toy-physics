@@ -1,0 +1,47 @@
+===== runner cache v1 =====
+runner: scripts/source_resolved_generated_support_mass_scaling.py
+runner_sha256: b37ebd9375b14677e5fff16aef9580fcd7f6c17b990f54f83e172f197df439be
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.17
+status: ok
+----- stdout -----
+====================================================================================================
+GENERATED SUPPORT + MASS-SCALING PROBE
+  compact generated DAG family, baseline vs retained kNN-floor tweak
+====================================================================================================
+family seeds=4, layers=16, nodes/layer=24, connect_radius=3.2, k_nearest=3, min_edges=5
+self-consistent Green kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.50
+source strengths=[0.001, 0.002, 0.004, 0.008]
+observables: detector sign counts, N_eff support, and centroid-shift exponent
+reduction check: source strength 0 should recover free propagation exactly
+
+ZERO-SOURCE SANITY
+  baseline max |zero-source shift| = 0.000e+00
+  tweak max |zero-source shift| = 0.000e+00
+
+BASELINE GENERATED FAMILY
+       s   delta_mean     sign      N_eff       zero
+--------------------------------------------------------
+  0.0010 -8.435233e-02     AWAY       2.57  0.000e+00
+  0.0020 -8.893522e-02     AWAY       2.60  0.000e+00
+  0.0040 -7.117551e-02     AWAY       2.71  0.000e+00
+  0.0080 -4.548761e-02     AWAY       2.78  0.000e+00
+  sign rows: 0/4 TOWARD; mean N_eff=2.66; F~M exponent=-0.299
+
+BASELINE + kNN FLOOR
+       s   delta_mean     sign      N_eff       zero
+--------------------------------------------------------
+  0.0010 -4.028207e-01     AWAY       4.67  0.000e+00
+  0.0020 -2.911836e-01     AWAY       4.86  0.000e+00
+  0.0040 +9.461983e-02   TOWARD       5.49  0.000e+00
+  0.0080 +4.128727e-01   TOWARD       5.97  0.000e+00
+  sign rows: 2/4 TOWARD; mean N_eff=5.25; F~M exponent=-0.152
+
+SAFE READ
+  The retained connectivity tweak is only interesting if it broadens support
+  without losing the weak-field sign, and if the centroid-shift exponent
+  stays close to linear on the same generated family.
+
+----- stderr -----
+
