@@ -202,15 +202,72 @@ The runner reports the following Perron-value spreads:
 In particular, distinct admissible rho choices, all built from the same
 `c_lambda(6)` and `SU(3)` intertwiner data, produce strictly different
 values of `P(6)`. **Therefore `c_lambda(6)` and `SU(3)` intertwiners
-do not, by themselves, fix `rho_(p,q)(6)`.** Closed-form derivation of
-`rho_(p,q)(6)` from those local inputs alone does not exist.
+do not, by themselves, fix `rho_(p,q)(6)` via 1-parameter local closure.**
 
 The canonical same-surface plaquette value `0.5934` lies inside the
 combined admissible span (reached for example near `k = 12` in family
-3), but no parameter choice is canonically picked out by the local
-input class. The runner does not select a parameter to match `0.5934`;
-instead it sweeps the parameter and reports the resulting `P(6)`
-sequence as evidence of non-uniqueness.
+3), but no parameter choice within these 1-parameter families is
+canonically picked out by the local input class. The runner does not
+select a parameter to match `0.5934`; instead it sweeps the parameter
+and reports the resulting `P(6)` sequence as evidence of non-uniqueness.
+
+### Scope clarification (added 2026-05-04)
+
+**Important narrowing.** The argument above explicitly enumerates THREE
+specific 1-parameter families and shows none of them is canonically
+picked out by `c_lambda(6)` + `SU(3)` intertwiners. The correct
+conclusion that follows logically is:
+
+> **No 1-parameter local family closes `rho_(p,q)(6)`.**
+
+The original phrasing "Closed-form derivation of `rho_(p,q)(6)` from
+those local inputs alone does not exist" is broader than what the
+argument actually proves. It would also rule out **0-parameter
+derivations** (derivations with no free parameter to fit), which the
+3-family argument does NOT rule out.
+
+In particular, the **rigorous Schur cube derivation** is a 0-parameter
+derivation that uses `c_lambda(6)`, `SU(3)` intertwiners, AND the
+explicit cube graph geometry. It computes:
+
+```text
+rho_Schur_(p,q)(6) = (c_(p,q)(6) / c_(0,0)(6))^N_plaq × d_(p,q)^(N_components - N_links)
+```
+
+with `N_components` from the cyclic-index graph of the cube. For
+the L_s=2 PBC cube under the all-forward convention with N_components = 8,
+this gives the value `P_Schur = 0.4291` (per
+`scripts/frontier_su3_cube_index_graph_shortcut_open_gate.py` and
+SU(3) Wigner Engine Block 5 in PR #501).
+
+**Schur's `rho_Schur` is not in any of the 3 enumerated families** (it
+has both `c/c_00` factors and `d^(...)` factors; the 3 families have
+only one or the other). So Theorem 3's scope is **narrower** than its
+title suggests.
+
+**Updated honest scope of Theorem 3:**
+
+- `rho_(p,q)(6)` is NOT fixed by any 1-parameter family of the 3 forms
+  enumerated.
+- `rho_(p,q)(6)` IS computed (0-parameter, geometric) by the Schur
+  cube derivation that uses cube graph topology in addition to
+  `c_lambda` and intertwiners.
+- The Schur derivation gives a SPECIFIC value (P = 0.4291 at L_s=2 PBC
+  cube), which does NOT match the canonical MC value 0.5934. This
+  reflects the framework's actual L_s=2 cube prediction, not a free
+  parameter.
+- For matching MC 0.5934 via L_s=2 cube: requires either an additional
+  framework primitive beyond local data + cube geometry, OR a
+  realization that the L_s=2 cube prediction is genuinely 0.4291 and
+  the MC 0.5934 reflects finite-volume / thermodynamic-limit effects.
+- For L_s ≥ 3 cube: the Schur derivation has not been done in this
+  framework; this is a candidate for matching MC if larger-L cubes
+  give different ρ.
+
+The corrected no-go is therefore: `c_lambda(6)` + `SU(3)` intertwiners
++ ANY 1-parameter family ansatz ≠ canonical ρ. Adding cube graph
+geometry as a primitive (Schur derivation) gives a SPECIFIC ρ but not
+the MC value at L_s=2.
 
 ## Theorem 4: NMAX truncation tail bound
 
