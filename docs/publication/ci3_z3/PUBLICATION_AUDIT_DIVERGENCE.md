@@ -21,7 +21,7 @@ publication tables phrase it.
 | medium | `audited_conditional` | 118 |
 | medium | `unaudited` | 85 |
 | high | `audited_conditional` | 77 |
-| critical | `unaudited` | 39 |
+| critical | `unaudited` | 38 |
 | critical | `audited_conditional` | 28 |
 | medium | `audited_numerical_match` | 15 |
 | high | `audited_renaming` | 9 |
@@ -31,6 +31,7 @@ publication tables phrase it.
 | high | `open_gate` | 2 |
 | high | `retained_pending_chain` | 2 |
 | medium | `audited_decoration` | 2 |
+| critical | `audit_in_progress` | 1 |
 | critical | `audited_failed` | 1 |
 | critical | `open_gate` | 1 |
 | high | `audited_decoration` | 1 |
@@ -52,7 +53,7 @@ publication tables phrase it.
 | critical | `area_law_primitive_parity_gate_carrier_theorem_note_2026-04-25` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `area_law_quarter_broader_no_go_note_2026-04-25` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | `audited_failed` | `audited_failed` | DERIVATION_ATLAS.md |
-| critical | `bh_entropy_derived_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
+| critical | `bh_entropy_derived_note` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `bh_entropy_rt_ratio_widom_no_go_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `ckm_atlas_axiom_closure_note` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |

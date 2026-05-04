@@ -1,6 +1,6 @@
 # Audit Queue
 
-**Generated:** 2026-05-04T00:17:17.325435+00:00
+**Generated:** 2026-05-04T00:19:30.709516+00:00
 **Total pending:** 705
 **Ready (all deps already at retained-grade or metadata tiers):** 23
 
@@ -16,7 +16,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `bh_entropy_derived_note` | bounded_theorem | unaudited | critical | 295 | 12.21 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_bh_entropy_derived.py` |
+| 1 | `bh_entropy_derived_note` | bounded_theorem | audit_in_progress | critical | 295 | 12.21 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_bh_entropy_derived.py` |
 | 2 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | unaudited | critical | 313 | 9.29 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_doublet_traceless_abelian_ratio.py` |
 | 3 | `left_handed_charge_matching_note` | positive_theorem | unaudited | critical | 312 | 23.29 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
 | 4 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 302 | 12.74 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_cl3_per_site_uniqueness_check.py` |
