@@ -161,6 +161,7 @@ def main() -> int:
         "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
         "one_higgs_completeness_orthogonal_null": "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json",
         "delta_perp_tomography_correction_builder": "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json",
+        "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
         "same_source_w_response_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
         "wz_correlator_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
@@ -1118,6 +1119,17 @@ def main() -> int:
         and certificates["delta_perp_tomography_correction_builder"].get("proposal_allowed") is False
         and certificates["delta_perp_tomography_correction_builder"].get(
             "strict_delta_perp_tomography_gate_passed"
+        )
+        is False
+    )
+    same_source_w_response_row_builder_open = (
+        "same-source W-response row builder"
+        in certificates["same_source_w_response_row_builder"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["same_source_w_response_row_builder"].get("proposal_allowed") is False
+        and certificates["same_source_w_response_row_builder"].get(
+            "strict_same_source_w_response_row_builder_passed"
         )
         is False
     )
@@ -2171,6 +2183,11 @@ def main() -> int:
         "delta-perp-tomography-correction-builder-open",
         delta_perp_tomography_correction_builder_open,
         certificates["delta_perp_tomography_correction_builder"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "same-source-w-response-row-builder-open",
+        same_source_w_response_row_builder_open,
+        certificates["same_source_w_response_row_builder"].get("actual_current_surface_status", ""),
     )
     report(
         "wz-correlator-mass-fit-path-gate-blocks",

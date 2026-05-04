@@ -41,6 +41,12 @@ Open imports:
 - lightweight same-source W-response readout is now an executable contract:
   scout rows recover planted `y_h`, but the strict production certificate
   `outputs/yt_same_source_w_response_rows_2026-05-04.json` is absent;
+- same-source W-response row builder is now the strict adapter contract:
+  scout rows pass in a scout-only output namespace, current mode writes no
+  production row file, and strict mode fails until both
+  `outputs/yt_fh_gauge_mass_response_certificate_2026-05-02.json` and
+  `outputs/yt_same_source_w_response_orthogonal_correction_certificate_2026-05-04.json`
+  exist and validate;
 - `delta_perp` tomography correction is now an executable contract:
   scout rows compute the orthogonal correction and reject source-only rank
   deficiency, missing canonical identity, observed selectors, mismatched

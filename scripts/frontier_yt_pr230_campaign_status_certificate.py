@@ -287,6 +287,9 @@ def main() -> int:
         "delta_perp_tomography_correction_builder": load(
             "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json"
         ),
+        "same_source_w_response_row_builder": load(
+            "outputs/yt_same_source_w_response_row_builder_2026-05-04.json"
+        ),
         "same_source_w_response_lightweight_readout": load(
             "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json"
         ),
@@ -1300,6 +1303,17 @@ def main() -> int:
         )
         is False,
         statuses["delta_perp_tomography_correction_builder"],
+    )
+    report(
+        "same-source-w-response-row-builder-open",
+        "same-source W-response row builder"
+        in str(statuses["same_source_w_response_row_builder"])
+        and certificates["same_source_w_response_row_builder"].get("proposal_allowed") is False
+        and certificates["same_source_w_response_row_builder"].get(
+            "strict_same_source_w_response_row_builder_passed"
+        )
+        is False,
+        statuses["same_source_w_response_row_builder"],
     )
     report(
         "wz-correlator-mass-fit-path-gate-blocks",

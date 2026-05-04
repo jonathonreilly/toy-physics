@@ -2033,3 +2033,40 @@ Once those land, rerun the tomography builder with
 `--emit-correction-certificate`, then rerun the W orthogonal-correction gate,
 lightweight W readout harness, matching/running bridge, retained-route
 certificate, and assembly gate.
+
+## 2026-05-04 Same-Source W-Response Row Builder
+
+This continuation adds the missing adapter between future response/correction
+certificates and the lightweight W-response readout rows.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_same_source_w_response_row_builder.py --scout
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_same_source_w_response_row_builder.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_same_source_w_response_row_builder.py --strict \
+  --output outputs/tmp_yt_same_source_w_response_row_builder_strict_probe_2026-05-04.json
+# expected failure until strict W/top response and delta_perp correction inputs exist
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=22 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=171 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=197 FAIL=0
+```
+
+Result: open.  Scout mode writes only
+`outputs/yt_same_source_w_response_row_builder_scout_rows_2026-05-04.json`.
+Current/default mode does not write
+`outputs/yt_same_source_w_response_rows_2026-05-04.json`.  Strict mode remains
+honestly blocked until both strict inputs exist:
+
+- `outputs/yt_fh_gauge_mass_response_certificate_2026-05-02.json`;
+- `outputs/yt_same_source_w_response_orthogonal_correction_certificate_2026-05-04.json`.

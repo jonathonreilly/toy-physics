@@ -63,6 +63,16 @@ outputs/yt_same_source_w_response_rows_2026-05-04.json
 
 and fails honestly while that certificate is absent.
 
+The row file is assembled by
+
+```text
+scripts/frontier_yt_same_source_w_response_row_builder.py
+```
+
+from a strict same-source W/top response certificate plus a strict
+orthogonal-correction certificate.  Scout mode for that builder writes only
+scout-named rows so it cannot satisfy this production harness by accident.
+
 ## Current Result
 
 The scout command passes:
@@ -87,8 +97,11 @@ certificate.
 ## Next Action
 
 The reduced compute target is now explicit: write
-`outputs/yt_same_source_w_response_rows_2026-05-04.json` from a same-source EW/W
-mass-response measurement, or supply a theorem certificate that sets
-`delta_perp=0` through one-Higgs completeness or neutral rank one.  After that,
-rerun the lightweight readout harness, matching/running bridge, retained-route
+`outputs/yt_fh_gauge_mass_response_certificate_2026-05-02.json` from a
+same-source EW/W mass-response measurement and
+`outputs/yt_same_source_w_response_orthogonal_correction_certificate_2026-05-04.json`
+from tomography, Gram purity, one-Higgs completeness, or neutral rank one.
+Then run the row builder to emit
+`outputs/yt_same_source_w_response_rows_2026-05-04.json`, rerun the
+lightweight readout harness, matching/running bridge, retained-route
 certificate, and full PR230 assembly gate.

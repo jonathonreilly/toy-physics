@@ -7,14 +7,19 @@ target_status: retained-positive-closure
 actual_current_surface_status: exact-negative-boundary
 active_residual: "same-source W rows plus strict delta_perp tomography/null/purity authority, or O_sp-O_H identity"
 latest_checkpoint:
-  utc: "2026-05-04T23:10:00Z"
-  block: 45
-  artifact: "lightweight W-response readout plus delta_perp tomography correction builder"
-  status: "open; scout contracts pass, strict production rows absent"
-  result: "W readout scout PASS=12 FAIL=0; delta_perp tomography scout PASS=11 FAIL=0; orthogonal correction PASS=18 FAIL=0; assembly PASS=21 FAIL=0; retained-route PASS=170 FAIL=0; campaign PASS=196 FAIL=0"
-  claim_boundary: "no same-source W production rows; no strict delta_perp tomography rows; no emitted orthogonal-correction certificate; no physical y_t or retained/proposed-retained wording"
+  utc: "2026-05-04T23:45:00Z"
+  block: 46
+  artifact: "same-source W-response row builder"
+  status: "open; scout adapter passes, strict production inputs absent"
+  result: "row-builder scout PASS=9 FAIL=0; row-builder current PASS=9 FAIL=0; strict probe fails honestly until W/top response plus delta_perp correction certificates exist; assembly PASS=22 FAIL=0; retained-route PASS=171 FAIL=0; campaign PASS=197 FAIL=0"
+  claim_boundary: "no production row file; no same-source W/top response certificate; no strict delta_perp correction certificate; no physical y_t or retained/proposed-retained wording"
   live_compute: "chunk work intentionally left to the other CLI worker; this checkpoint does not package chunk artifacts"
   checkpoint_files:
+    - scripts/frontier_yt_same_source_w_response_row_builder.py
+    - docs/YT_SAME_SOURCE_W_RESPONSE_ROW_BUILDER_NOTE_2026-05-04.md
+    - outputs/yt_same_source_w_response_row_builder_2026-05-04.json
+    - outputs/yt_same_source_w_response_row_builder_scout_2026-05-04.json
+    - outputs/yt_same_source_w_response_row_builder_scout_rows_2026-05-04.json
     - scripts/frontier_yt_same_source_w_response_lightweight_readout_harness.py
     - docs/YT_SAME_SOURCE_W_RESPONSE_LIGHTWEIGHT_READOUT_HARNESS_NOTE_2026-05-04.md
     - outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json
@@ -36,7 +41,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 45
+block: 46
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md

@@ -61,3 +61,18 @@ Completed in the lightweight W-response continuation:
 - `outputs/yt_delta_perp_tomography_correction_scout_2026-05-04.json`
 - refreshed W-response orthogonal-correction, full assembly, retained-route,
   and campaign certificates.
+
+Completed in the row-builder continuation:
+
+- `scripts/frontier_yt_same_source_w_response_row_builder.py`
+- `docs/YT_SAME_SOURCE_W_RESPONSE_ROW_BUILDER_NOTE_2026-05-04.md`
+- `outputs/yt_same_source_w_response_row_builder_2026-05-04.json`
+- `outputs/yt_same_source_w_response_row_builder_scout_2026-05-04.json`
+- `outputs/yt_same_source_w_response_row_builder_scout_rows_2026-05-04.json`
+- refreshed lightweight W-response readout, full assembly, retained-route,
+  and campaign certificates.
+
+The W-route now has an explicit strict adapter path: future W/top response
+certificate plus future `delta_perp` correction certificate -> production row
+file -> lightweight W-response readout harness.  No production row file is
+present on the current surface.

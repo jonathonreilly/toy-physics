@@ -111,4 +111,8 @@ bridge.
 Supply `outputs/yt_delta_perp_tomography_rows_2026-05-04.json` from real
 same-surface full-rank neutral-scalar tomography, rerun the builder in strict
 mode with `--emit-correction-certificate`, then rerun the W-response
-orthogonal-correction gate and lightweight W-response readout harness.
+orthogonal-correction gate.  The emitted correction certificate is one of the
+two strict inputs to
+`scripts/frontier_yt_same_source_w_response_row_builder.py`, which then writes
+the production row file consumed by the lightweight W-response readout
+harness.

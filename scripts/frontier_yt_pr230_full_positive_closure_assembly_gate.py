@@ -46,6 +46,7 @@ PARENTS = {
     "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
     "one_higgs_completeness_orthogonal_null": "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json",
     "delta_perp_tomography_builder": "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json",
+    "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
     "same_source_w_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
     "wz_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
@@ -170,6 +171,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "W/Z correlator mass-fit path absent",
                 "orthogonal-neutral top-coupling null or correction absent",
                 "strict delta_perp tomography correction rows absent",
+                "same-source W-response row builder strict inputs absent",
                 "lightweight same-source W readout production rows absent",
                 "sector-overlap identity not derived",
                 "canonical-Higgs identity not derived",
@@ -181,6 +183,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["same_source_w_response_orthogonal_correction"],
                 PARENTS["one_higgs_completeness_orthogonal_null"],
                 PARENTS["delta_perp_tomography_builder"],
+                PARENTS["same_source_w_response_row_builder"],
                 PARENTS["same_source_w_lightweight_readout"],
                 PARENTS["wz_certificate_gate"],
                 PARENTS["wz_mass_fit_path"],
@@ -371,6 +374,16 @@ def main() -> int:
         and certs["delta_perp_tomography_builder"].get("strict_delta_perp_tomography_gate_passed")
         is False,
         statuses["delta_perp_tomography_builder"],
+    )
+    report(
+        "same-source-w-response-row-builder-open",
+        "same-source W-response row builder" in statuses["same_source_w_response_row_builder"]
+        and certs["same_source_w_response_row_builder"].get("proposal_allowed") is False
+        and certs["same_source_w_response_row_builder"].get(
+            "strict_same_source_w_response_row_builder_passed"
+        )
+        is False,
+        statuses["same_source_w_response_row_builder"],
     )
     report(
         "lightweight-w-readout-harness-currently-open",
