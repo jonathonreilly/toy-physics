@@ -6,6 +6,8 @@
 explicit cross-sector SUPPORT commentary. This is not a retained Koide theorem
 and not a retained cross-sector identification.
 
+**Primary runner:** [`scripts/frontier_ckm_n9_structural_family_koide_bridge.py`](../scripts/frontier_ckm_n9_structural_family_koide_bridge.py) (PASS=35/0)
+
 This note packages an explicit nine-member CKM support family
 
 ```text

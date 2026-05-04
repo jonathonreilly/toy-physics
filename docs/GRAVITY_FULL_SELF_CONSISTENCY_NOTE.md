@@ -1,6 +1,8 @@
 # Full Self-Consistency Forces Poisson on the Entire Framework Surface
 
 **Status:** proposed_retained - explicit strong derivation claim pending audit
+**Primary runner:** [`scripts/frontier_gravity_full_self_consistency.py`](../scripts/frontier_gravity_full_self_consistency.py) (all checks PASS)
+
 ## Status
 
 **Closure via the framework's self-consistency condition** of the Poisson-forcing step on the full framework surface.

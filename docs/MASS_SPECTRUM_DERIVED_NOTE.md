@@ -6,6 +6,7 @@ lane on `main`. Mixed closure: two bounded quark phases (Phase 1 down-type
 dual and Phase 2 up sector), one bounded cross-reference (Phase 3 charged
 leptons), one retained seesaw scale + bounded solar/PMNS (Phase 4 neutrino),
 one bounded/conditional cosmology cascade (Phase 5).
+**Primary runner:** [`scripts/frontier_quark_mass_ratio_review.py`](../scripts/frontier_quark_mass_ratio_review.py) (PASS=46/0)
 **Attack plan:** `/Users/jonBridger/.claude/plans/zesty-nibbling-pretzel.md`
 **Framework convention:** "axiom" means only the single framework
 axiom `Cl(3)` on `Z^3`.

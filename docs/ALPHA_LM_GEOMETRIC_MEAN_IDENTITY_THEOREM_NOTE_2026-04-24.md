@@ -4,6 +4,8 @@ Date: 2026-04-24
 
 Status: proposed_retained structural identity on the accepted coupling chain.
 
+**Primary runner:** [`scripts/frontier_alpha_lm_geometric_mean_identity.py`](../scripts/frontier_alpha_lm_geometric_mean_identity.py) (PASS=38/0)
+
 ## Statement
 
 On the retained plaquette/coupling surface,

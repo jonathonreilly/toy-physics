@@ -3,6 +3,8 @@
 **Date:** 2026-04-13
 **Status:** Per-signature honest assessment; some promotions, some kept bounded
 
+**Primary runner:** [`scripts/frontier_broad_gravity.py`](../scripts/frontier_broad_gravity.py)
+
 ---
 
 ## Central Question
