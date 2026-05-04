@@ -26,8 +26,21 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=164 FAIL=0
+# SUMMARY: PASS=166 FAIL=0
 ```
+
+## 2026-05-03 Source-Higgs Gram-Purity Contract Witness Update
+
+The campaign status certificate now consumes
+`outputs/yt_source_higgs_gram_purity_contract_witness_2026-05-03.json`.
+This tests the selected source-Higgs route's future acceptance logic without
+writing production rows.
+
+The witness passes with `PASS=12 FAIL=0`: a fully firewalled pure O_sp-Higgs
+pole-residue candidate passes in memory, while mixed, Ward-import, and
+no-retained-route candidates are rejected.  This is not evidence on the
+current surface.  It only confirms that future certified `O_H/C_sH/C_HH` pole
+rows would have a sharp executable acceptance gate.
 
 ## 2026-05-03 Finite-Source-Linearity Calibration Checkpoint Update
 

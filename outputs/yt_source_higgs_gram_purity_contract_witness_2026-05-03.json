@@ -1,0 +1,146 @@
+{
+  "actual_current_surface_status": "exact-support / source-Higgs Gram-purity contract witness; current rows absent",
+  "contract_witness_passed": true,
+  "evaluations": [
+    {
+      "candidate_missing_or_failed_checks": [],
+      "expect_gate": true,
+      "expectation_met": true,
+      "gram_purity": {
+        "Dprime_ss_at_pole": 0.25,
+        "Res_C_HH": 9.0,
+        "Res_C_sH": 6.0,
+        "Res_C_spH": 3.0,
+        "Res_C_sp_sp": 1.0,
+        "Res_C_ss": 4.0,
+        "delta_acceptance_bound": 1e-09,
+        "delta_error": 0.0,
+        "gram_determinant": 0.0,
+        "normalized_overlap_rho_sH": 1.0,
+        "normalized_overlap_rho_spH": 1.0,
+        "osp_higgs_gram_determinant": 0.0,
+        "osp_higgs_purity_gate_passed": true,
+        "positive_residues": true,
+        "purity_gate_passed": true,
+        "raw_source_higgs_purity_gate_passed": true,
+        "rho_abs_error_from_one": 0.0,
+        "rho_acceptance_bound": 1e-09,
+        "rho_error": 0.0,
+        "rho_spH_abs_error_from_one": 0.0
+      },
+      "name": "pure_firewalled_future_candidate",
+      "postprocessor_would_pass": true
+    },
+    {
+      "candidate_missing_or_failed_checks": [],
+      "expect_gate": false,
+      "expectation_met": true,
+      "gram_purity": {
+        "Dprime_ss_at_pole": 0.25,
+        "Res_C_HH": 9.0,
+        "Res_C_sH": 3.0,
+        "Res_C_spH": 1.5,
+        "Res_C_sp_sp": 1.0,
+        "Res_C_ss": 4.0,
+        "delta_acceptance_bound": 1e-09,
+        "delta_error": 0.0,
+        "gram_determinant": 27.0,
+        "normalized_overlap_rho_sH": 0.5,
+        "normalized_overlap_rho_spH": 0.5,
+        "osp_higgs_gram_determinant": 6.75,
+        "osp_higgs_purity_gate_passed": false,
+        "positive_residues": true,
+        "purity_gate_passed": false,
+        "raw_source_higgs_purity_gate_passed": false,
+        "rho_abs_error_from_one": 0.5,
+        "rho_acceptance_bound": 1e-09,
+        "rho_error": 0.0,
+        "rho_spH_abs_error_from_one": 0.5
+      },
+      "name": "mixed_orthogonal_component_candidate",
+      "postprocessor_would_pass": false
+    },
+    {
+      "candidate_missing_or_failed_checks": [
+        "no_prior_ward_authority"
+      ],
+      "expect_gate": false,
+      "expectation_met": true,
+      "gram_purity": {
+        "Dprime_ss_at_pole": 0.25,
+        "Res_C_HH": 9.0,
+        "Res_C_sH": 6.0,
+        "Res_C_spH": 3.0,
+        "Res_C_sp_sp": 1.0,
+        "Res_C_ss": 4.0,
+        "delta_acceptance_bound": 1e-09,
+        "delta_error": 0.0,
+        "gram_determinant": 0.0,
+        "normalized_overlap_rho_sH": 1.0,
+        "normalized_overlap_rho_spH": 1.0,
+        "osp_higgs_gram_determinant": 0.0,
+        "osp_higgs_purity_gate_passed": true,
+        "positive_residues": true,
+        "purity_gate_passed": true,
+        "raw_source_higgs_purity_gate_passed": true,
+        "rho_abs_error_from_one": 0.0,
+        "rho_acceptance_bound": 1e-09,
+        "rho_error": 0.0,
+        "rho_spH_abs_error_from_one": 0.0
+      },
+      "name": "forbidden_ward_import_candidate",
+      "postprocessor_would_pass": false
+    },
+    {
+      "candidate_missing_or_failed_checks": [
+        "retained_route_gate_passed"
+      ],
+      "expect_gate": false,
+      "expectation_met": true,
+      "gram_purity": {
+        "Dprime_ss_at_pole": 0.25,
+        "Res_C_HH": 9.0,
+        "Res_C_sH": 6.0,
+        "Res_C_spH": 3.0,
+        "Res_C_sp_sp": 1.0,
+        "Res_C_ss": 4.0,
+        "delta_acceptance_bound": 1e-09,
+        "delta_error": 0.0,
+        "gram_determinant": 0.0,
+        "normalized_overlap_rho_sH": 1.0,
+        "normalized_overlap_rho_spH": 1.0,
+        "osp_higgs_gram_determinant": 0.0,
+        "osp_higgs_purity_gate_passed": true,
+        "positive_residues": true,
+        "purity_gate_passed": true,
+        "raw_source_higgs_purity_gate_passed": true,
+        "rho_abs_error_from_one": 0.0,
+        "rho_acceptance_bound": 1e-09,
+        "rho_error": 0.0,
+        "rho_spH_abs_error_from_one": 0.0
+      },
+      "name": "no_retained_route_gate_candidate",
+      "postprocessor_would_pass": false
+    }
+  ],
+  "exact_next_action": "Supply a real same-surface canonical-Higgs operator certificate and production C_sH/C_HH pole residues, then rerun the builder, postprocessor, and retained-route certificate.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "canonical_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "gram_postprocessor": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
+    "rank_repair": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json"
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This is an in-memory contract witness, not production source-Higgs evidence.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not write production source-Higgs rows",
+    "does not define O_H by fiat",
+    "does not treat H_unit, static EW algebra, or observed targets as O_H",
+    "does not use yt_ward_identity, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "The source-Higgs Gram-purity acceptance surface is executable: a fully firewalled future candidate with pure O_sp-Higgs pole residues would pass the postprocessor, while a mixed orthogonal candidate, a forbidden Ward-import candidate, and a candidate without retained-route authorization are rejected.  This is a contract witness only.  The current PR230 surface still lacks the production O_H/C_sH/C_HH pole rows and the retained-route gate."
+}

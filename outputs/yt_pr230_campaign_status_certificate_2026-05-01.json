@@ -180,6 +180,7 @@
     "source_higgs_cross_correlator_harness_extension": "bounded-support / source-Higgs cross-correlator harness extension",
     "source_higgs_cross_correlator_import": "exact negative boundary / source-Higgs cross-correlator import audit",
     "source_higgs_cross_correlator_manifest": "bounded-support / source-Higgs cross-correlator production manifest",
+    "source_higgs_gram_purity_contract_witness": "exact-support / source-Higgs Gram-purity contract witness; current rows absent",
     "source_higgs_gram_purity_gate": "open / source-Higgs Gram purity gate not passed",
     "source_higgs_gram_purity_postprocessor": "open / O_sp-Higgs Gram-purity postprocess awaiting production certificate",
     "source_higgs_harness_absence_guard": "bounded-support / source-Higgs harness default-off guard",
@@ -204,7 +205,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 165,
+  "pass_count": 166,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

@@ -278,6 +278,9 @@ def main() -> int:
         "source_higgs_gram_purity_postprocessor": load(
             "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json"
         ),
+        "source_higgs_gram_purity_contract_witness": load(
+            "outputs/yt_source_higgs_gram_purity_contract_witness_2026-05-03.json"
+        ),
         "canonical_higgs_operator_candidate_stress": load(
             "outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json"
         ),
@@ -1110,6 +1113,13 @@ def main() -> int:
         in str(statuses["source_higgs_gram_purity_postprocessor"])
         and certificates["source_higgs_gram_purity_postprocessor"].get("osp_higgs_gram_purity_gate_passed") is False,
         statuses["source_higgs_gram_purity_postprocessor"],
+    )
+    report(
+        "source-higgs-gram-purity-contract-witness-not-evidence",
+        "source-Higgs Gram-purity contract witness"
+        in str(statuses["source_higgs_gram_purity_contract_witness"])
+        and certificates["source_higgs_gram_purity_contract_witness"].get("contract_witness_passed") is True,
+        statuses["source_higgs_gram_purity_contract_witness"],
     )
     report(
         "canonical-higgs-operator-realization-gate-not-passed",

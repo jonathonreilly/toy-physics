@@ -45,3 +45,18 @@ has not landed.  When it finishes, rerun the calibration checkpoint,
 response-window acceptance gate, retained-route certificate, and campaign
 status certificate.  This remains response-window support only and does not
 authorize retained/proposed-retained closure.
+
+## Source-Higgs Contract Witness
+
+The selected source-Higgs Gram-purity route now has an in-memory contract
+witness:
+
+```bash
+python3 scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+It verifies that a fully firewalled future pure O_sp-Higgs pole-residue
+candidate would pass the postprocessor, while mixed, Ward-import, and
+no-retained-route candidates are rejected.  Current production rows remain
+absent, so this is exact support for the future acceptance surface only.

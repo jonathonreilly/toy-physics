@@ -13,6 +13,9 @@ lock_status:
 cycle: 1
 block: 1
 files_touched:
+  - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
+  - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
+  - outputs/yt_source_higgs_gram_purity_contract_witness_2026-05-03.json
   - scripts/frontier_yt_fh_lsz_finite_source_linearity_calibration_checkpoint.py
   - docs/YT_FH_LSZ_FINITE_SOURCE_LINEARITY_CALIBRATION_CHECKPOINT_NOTE_2026-05-03.md
   - outputs/yt_fh_lsz_finite_source_linearity_calibration_checkpoint_2026-05-03.json
@@ -24,6 +27,8 @@ files_touched:
   - outputs/yt_pr230_source_overlap_route_selection_2026-05-03.json
   - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
 commands_run:
+  - "python3 -m py_compile scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py # pass"
+  - "python3 scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py # PASS=12 FAIL=0"
   - "python3 -m py_compile scripts/frontier_yt_fh_lsz_finite_source_linearity_calibration_checkpoint.py # pass"
   - "python3 scripts/frontier_yt_fh_lsz_finite_source_linearity_calibration_checkpoint.py # PASS=7 FAIL=0 awaiting calibration output"
   - "python3 scripts/frontier_yt_osp_oh_identity_stretch_attempt.py # PASS=21 FAIL=0"
@@ -32,7 +37,9 @@ current_result: >
   O_sp is derived and unit-normalized, but the current PR230 surface does not
   derive O_sp = O_H.  A counterfamily holds Res(C_sp,sp)=1 and same-source top
   readout fixed while changing the canonical-Higgs overlap and a finite
-  orthogonal neutral top coupling.
+  orthogonal neutral top coupling.  The source-Higgs Gram-purity acceptance
+  contract now has an in-memory witness: pure future rows pass, mixed or
+  forbidden candidates fail, and current rows remain absent.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >

@@ -158,6 +158,7 @@ def main() -> int:
         "source_higgs_pole_residue_extractor": "outputs/yt_source_higgs_pole_residue_extractor_2026-05-03.json",
         "source_higgs_cross_correlator_certificate_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
         "source_higgs_gram_purity_postprocessor": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
+        "source_higgs_gram_purity_contract_witness": "outputs/yt_source_higgs_gram_purity_contract_witness_2026-05-03.json",
         "canonical_higgs_operator_candidate_stress": "outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json",
         "canonical_higgs_operator_certificate_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
         "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
@@ -987,6 +988,12 @@ def main() -> int:
         and certificates["source_higgs_gram_purity_postprocessor"].get("proposal_allowed") is False
         and certificates["source_higgs_gram_purity_postprocessor"].get("osp_higgs_gram_purity_gate_passed") is False
     )
+    source_higgs_gram_purity_contract_witness_not_evidence = (
+        "source-Higgs Gram-purity contract witness"
+        in certificates["source_higgs_gram_purity_contract_witness"].get("actual_current_surface_status", "")
+        and certificates["source_higgs_gram_purity_contract_witness"].get("proposal_allowed") is False
+        and certificates["source_higgs_gram_purity_contract_witness"].get("contract_witness_passed") is True
+    )
     canonical_higgs_operator_realization_gate_blocks = (
         "canonical-Higgs operator realization gate not passed"
         in certificates["canonical_higgs_operator_realization_gate"].get("actual_current_surface_status", "")
@@ -1793,6 +1800,11 @@ def main() -> int:
         certificates["source_higgs_gram_purity_postprocessor"].get("actual_current_surface_status", ""),
     )
     report(
+        "source-higgs-gram-purity-contract-witness-not-evidence",
+        source_higgs_gram_purity_contract_witness_not_evidence,
+        certificates["source_higgs_gram_purity_contract_witness"].get("actual_current_surface_status", ""),
+    )
+    report(
         "canonical-higgs-operator-realization-gate-blocks",
         canonical_higgs_operator_realization_gate_blocks,
         certificates["canonical_higgs_operator_realization_gate"].get("actual_current_surface_status", ""),
@@ -2302,7 +2314,9 @@ def main() -> int:
             "emit target-observable autocorrelation/ESS or blocking/bootstrap "
             "certificates.  For the source-Higgs lane, use the O_sp-normalized "
             "builder/postprocessor and supply a certified O_H with production "
-            "C_sH/C_HH pole residues before running retained-route gating."
+            "C_sH/C_HH pole residues before running retained-route gating; "
+            "the current Gram-purity contract witness is schema support, not "
+            "production evidence."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

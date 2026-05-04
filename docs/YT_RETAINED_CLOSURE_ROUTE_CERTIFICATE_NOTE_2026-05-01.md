@@ -18,8 +18,22 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=138 FAIL=0
+# SUMMARY: PASS=140 FAIL=0
 ```
+
+## 2026-05-03 Source-Higgs Gram-Purity Contract Witness Update
+
+The retained-route certificate now consumes
+`outputs/yt_source_higgs_gram_purity_contract_witness_2026-05-03.json`.
+This checks the selected source-Higgs route's executable acceptance surface:
+a fully firewalled future pure O_sp-Higgs pole-residue candidate passes in
+memory, while a mixed orthogonal candidate, a forbidden Ward-import candidate,
+and a candidate without retained-route authorization are rejected.
+
+This is exact support for the future row contract only.  The current surface
+still lacks real production `O_H/C_sH/C_HH` pole rows, a same-surface
+canonical-Higgs operator certificate, and retained-route authorization.  No
+retained or `proposed_retained` closure is authorized.
 
 ## 2026-05-03 Finite-Source-Linearity Calibration Checkpoint Wiring Update
 

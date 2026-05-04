@@ -18,6 +18,8 @@ Open imports:
 - same-surface `O_H` realization or equivalent overlap row;
 - `C_sH/C_HH` pole residues, W/Z response row, or rank-one neutral-scalar
   theorem;
+- source-Higgs Gram-purity contract witness is exact support only; real
+  production rows and `O_H` certificate are still absent;
 - finite-source-linearity calibration output for response-window support
   only; not sufficient for `O_sp = O_H` or physical `y_t`;
 - independent audit after any proposed positive certificate.
