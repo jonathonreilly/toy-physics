@@ -1473,3 +1473,55 @@ combined L12 support file exists, but the pole-fit postprocessor reports
 surface is not a scalar-pole derivative.  Response-window acceptance remains
 open, scalar-LSZ pole/FV/IR/model-class control remains open, and
 canonical-Higgs/source-overlap closure remains open.
+
+## 2026-05-04 Eight-Mode/x8 Pole-Fit Stream Launch
+
+After the four-mode L12 support surface completed, the next scalar-LSZ blocker
+was the missing pole-fit shell structure.  A separate eight-mode/x8 stream was
+added and launched.  This stream must not be combined with the completed
+four-mode/x16 L12 ensemble.
+
+New artifacts:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_chunk_manifest.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_postprocessor.py
+# SUMMARY: PASS=5 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=158 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=184 FAIL=0
+```
+
+The active 12-hour orchestrator is:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py \
+  --start-index 1 \
+  --end-index 63 \
+  --max-concurrent 6 \
+  --global-max-production-jobs 6 \
+  --runtime-minutes 720 \
+  --poll-seconds 60 \
+  --launch \
+  --run-gates
+```
+
+At launch it detected chunks001-006 already running and did not overlaunch.
+Status is written to:
+
+```text
+outputs/yt_fh_lsz_polefit8x8_wave_orchestrator_status_2026-05-04.json
+```
+
+This is support-only.  It does not authorize retained/proposed-retained
+wording, does not set `kappa_s`, `c2`, `Z_match`, or `cos(theta)` to one, and
+does not use `H_unit`, `yt_ward_identity`, observed targets, `alpha_LM`,
+plaquette, or `u0`.

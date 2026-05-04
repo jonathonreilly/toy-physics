@@ -1,0 +1,112 @@
+{
+  "actual_current_surface_status": "open / FH-LSZ eight-mode-x8 pole-fit combiner awaiting chunks",
+  "chunk_summary": {
+    "available_saved_configurations": 0,
+    "expected_chunks": 63,
+    "missing_chunks": 63,
+    "present_chunks": 0,
+    "ready_chunks": 0,
+    "target_saved_configurations": 1000
+  },
+  "combined_output_target": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunked_combined_2026-05-04.json",
+  "combined_summary": {
+    "available": false,
+    "reason": "no ready polefit8x8 chunks"
+  },
+  "fail_count": 0,
+  "first_blocking_issues": [
+    {
+      "chunk_index": 1,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk001_2026-05-04.json"
+    },
+    {
+      "chunk_index": 2,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk002_2026-05-04.json"
+    },
+    {
+      "chunk_index": 3,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk003_2026-05-04.json"
+    },
+    {
+      "chunk_index": 4,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk004_2026-05-04.json"
+    },
+    {
+      "chunk_index": 5,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk005_2026-05-04.json"
+    },
+    {
+      "chunk_index": 6,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk006_2026-05-04.json"
+    },
+    {
+      "chunk_index": 7,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk007_2026-05-04.json"
+    },
+    {
+      "chunk_index": 8,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk008_2026-05-04.json"
+    },
+    {
+      "chunk_index": 9,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk009_2026-05-04.json"
+    },
+    {
+      "chunk_index": 10,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk010_2026-05-04.json"
+    }
+  ],
+  "first_missing_outputs": [
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk001_2026-05-04.json",
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk002_2026-05-04.json",
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk003_2026-05-04.json",
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk004_2026-05-04.json",
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk005_2026-05-04.json",
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk006_2026-05-04.json",
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk007_2026-05-04.json",
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk008_2026-05-04.json",
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk009_2026-05-04.json",
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk010_2026-05-04.json"
+  ],
+  "manifest": "outputs/yt_fh_lsz_polefit8x8_chunk_manifest_2026-05-04.json",
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "L12 polefit8x8 rows do not close FV/IR, model-class, or canonical-Higgs/source-overlap gates.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s, c2, Z_match, or cos(theta) to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not mix eight-mode/x8 and four-mode/x16 chunks as one homogeneous ensemble"
+  ],
+  "verdict": "The separate eight-mode/x8 pole-fit stream has an auditable combiner gate.  Present chunks=0, ready chunks=0, expected chunks=63.  The combiner writes a diagnostic L12 same-source scalar-LSZ support summary when ready chunks exist, but that summary is not physical y_t evidence and cannot be mixed with the four-mode/x16 L12 stream."
+}

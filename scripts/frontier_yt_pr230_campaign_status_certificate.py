@@ -432,6 +432,15 @@ def main() -> int:
         "fh_lsz_paired_variance_calibration_gate": load(
             "outputs/yt_fh_lsz_paired_variance_calibration_gate_2026-05-04.json"
         ),
+        "fh_lsz_polefit8x8_chunk_manifest": load(
+            "outputs/yt_fh_lsz_polefit8x8_chunk_manifest_2026-05-04.json"
+        ),
+        "fh_lsz_polefit8x8_chunk_combiner_gate": load(
+            "outputs/yt_fh_lsz_polefit8x8_chunk_combiner_gate_2026-05-04.json"
+        ),
+        "fh_lsz_polefit8x8_postprocessor": load(
+            "outputs/yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json"
+        ),
         "fh_lsz_invariant_readout": load("outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json"),
         "scalar_pole_determinant_gate": load("outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"),
         "scalar_ladder_eigen_derivative": load("outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"),
@@ -1554,6 +1563,21 @@ def main() -> int:
         "fh-lsz-paired-variance-calibration-gate-not-closure",
         "paired x8/x16 variance calibration" in str(statuses["fh_lsz_paired_variance_calibration_gate"]),
         statuses["fh_lsz_paired_variance_calibration_gate"],
+    )
+    report(
+        "fh-lsz-polefit8x8-manifest-not-evidence",
+        "eight-mode-x8 pole-fit chunk manifest" in str(statuses["fh_lsz_polefit8x8_chunk_manifest"]),
+        statuses["fh_lsz_polefit8x8_chunk_manifest"],
+    )
+    report(
+        "fh-lsz-polefit8x8-combiner-not-closure",
+        "eight-mode-x8 pole-fit" in str(statuses["fh_lsz_polefit8x8_chunk_combiner_gate"]),
+        statuses["fh_lsz_polefit8x8_chunk_combiner_gate"],
+    )
+    report(
+        "fh-lsz-polefit8x8-postprocessor-not-closure",
+        "eight-mode-x8" in str(statuses["fh_lsz_polefit8x8_postprocessor"]),
+        statuses["fh_lsz_polefit8x8_postprocessor"],
     )
     report(
         "fh-lsz-invariant-readout-still-needs-pole-data",

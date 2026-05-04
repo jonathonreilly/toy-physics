@@ -1,0 +1,31 @@
+{
+  "actual_current_surface_status": "open / FH-LSZ eight-mode-x8 pole diagnostic awaiting combined rows",
+  "diagnostic_fit_if_ready": {},
+  "fail_count": 0,
+  "input": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunked_combined_2026-05-04.json",
+  "parent_certificates": {
+    "model_class_gate": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
+    "polefit8x8_combiner": "outputs/yt_fh_lsz_polefit8x8_chunk_combiner_gate_2026-05-04.json"
+  },
+  "pass_count": 5,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Finite-shell diagnostic fits do not provide retained scalar LSZ normalization.",
+  "readiness": {
+    "complete_l12_target": false,
+    "diagnostic_fit_ready": false,
+    "distinct_shells": 0,
+    "has_zero_shell": false,
+    "input_exists": false,
+    "mode_rows": 0,
+    "model_class_blocks_retained_use": true,
+    "positive_shells": 0,
+    "saved_configurations": 0
+  },
+  "strict_non_claims": [
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s, c2, Z_match, or cos(theta) to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not mix eight-mode/x8 and four-mode/x16 chunks as one homogeneous ensemble"
+  ],
+  "verdict": "The eight-mode/x8 postprocessor consumes only the separate polefit8x8 combined support surface.  It can form a finite-shell diagnostic Gamma_ss(p_hat^2) fit when the zero shell and at least three positive shells are present.  This remains support-only because finite-shell identifiability, model-class, FV/IR, and canonical-Higgs/source-overlap authority remain open."
+}

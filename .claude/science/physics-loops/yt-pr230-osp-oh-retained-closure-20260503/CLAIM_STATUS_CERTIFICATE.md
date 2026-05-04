@@ -152,6 +152,11 @@ Open imports:
   shape; it remains non-evidence until production completion, scalar-pole
   FV/IR/model-class control, canonical-Higgs/source-overlap closure, and
   retained-proposal gates pass;
+- the eight-mode/x8 pole-fit stream is now launched as a separate production
+  namespace with its own manifest, combiner, postprocessor, and aggregate
+  retained/campaign certificate hooks; chunks001-006 were started, but this is
+  run-control/support only and not scalar-LSZ normalization or physical `y_t`
+  evidence;
 - FH/LSZ chunks047/048 are now packaged with the ready set as bounded
   production support only; the 48/63 ready L12 state passes target-observable
   ESS with limiting ESS `678.1515635297619` but still fails response-window

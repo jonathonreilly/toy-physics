@@ -616,3 +616,24 @@ Findings:
 - No retained/proposed-retained claim is authorized because scalar LSZ,
   canonical-Higgs/source-overlap, W/Z response, Schur-row, FV/IR/model-class,
   L16/L24 scaling, and retained-route gates remain open.
+
+## 2026-05-04 Eight-Mode/x8 Pole-Fit Launch Self-Review
+
+Disposition: bounded run-control support; continue campaign.
+
+Findings:
+
+- The four-mode L12 stream is complete but cannot provide an isolated
+  scalar-pole derivative because it has only two distinct momentum shells.
+- The new polefit8x8 stream is isolated in a separate namespace and uses eight
+  same-source scalar-LSZ modes with x8 noise, accepted only as launch support
+  by the paired x8/x16 variance gate.
+- The manifest, combiner, diagnostic postprocessor, retained-route
+  certificate, and campaign certificate all pass with zero fails after wiring
+  in the new stream.
+- Chunks001-006 are running under a 12-hour wave orchestrator, which will keep
+  at most six production jobs active and run gates as chunks complete.
+- No retained/proposed-retained claim is authorized because this stream still
+  needs completed homogeneous production chunks, L16/L24, FV/IR/zero-mode
+  control, model-class authority, canonical-Higgs/source-overlap closure, and
+  independent audit.
