@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_yt_bridge_nonlocal_corrections.py
 runner_sha256: d1726e23c80538e597a783228710b76b9763fe7fdf4ba58815060783142fd31f
-timeout_sec: 60
+timeout_sec: 120
 exit_code: 0
-elapsed_sec: 6.99
+elapsed_sec: 7.26
 status: ok
 ----- stdout -----
 ==============================================================================
@@ -49,7 +49,7 @@ not a full unbounded theorem.
 The remaining gap is microscopic rather than structural.
 ==============================================================================
 FINAL TALLY: 5 PASS / 0 FAIL
-Elapsed: 6.75 s
+Elapsed: 6.99 s
 ==============================================================================
 
 ----- stderr -----

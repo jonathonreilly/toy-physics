@@ -12,6 +12,9 @@ logs/*
 # docs/audit/RUNNER_CACHE_POLICY.md.
 !logs/runner-cache/
 !logs/runner-cache/**
+# In-progress live logs are transient (replaced by canonical cache on
+# completion); do NOT commit them.
+logs/runner-cache/.in-progress/
 .claude/worktrees/
 
 # Python virtual environments (per-developer, per-worktree).

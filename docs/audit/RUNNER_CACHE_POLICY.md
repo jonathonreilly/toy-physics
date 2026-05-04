@@ -88,6 +88,61 @@ Three gates enforce that no runner change lands without a fresh cache:
    so the first audit after a missed refresh is slow but
    self-healing.
 
+## Per-runner timeouts
+
+Runners that need more than the default 120s window declare so at the
+top of their module:
+
+```python
+# scripts/my_heavy_runner.py
+AUDIT_TIMEOUT_SEC = 1800   # 30 minutes — basin sweep over 12k seeds
+```
+
+The precompute orchestrator and the audit runner both honor this
+declaration. Resolution priority:
+
+1. `AUDIT_TIMEOUT_SEC = N` declared at module top of the runner
+2. Legacy substring overrides in `runner_cache.TIMEOUT_LEGACY_OVERRIDES`
+   (kept as a fallback while runners are progressively annotated)
+3. Default 120 seconds
+
+When a runner times out, the cache file records `status: timeout` and
+`timeout_sec: <ceiling>` so an auditor reading it can see the timeout
+was hit and either return `COMPUTE_REQUIRED` or accept that the runner
+is genuinely slow and the recorded tail is partial. The remedy when
+that's wrong is either:
+
+- annotate the runner with a higher `AUDIT_TIMEOUT_SEC` and refresh, or
+- speed up the runner (often the right answer for heavy exploration scripts).
+
+## Live monitoring during a precompute pass
+
+While `precompute_audit_runners.py` is executing, each in-flight runner
+streams its merged stdout+stderr to a live log at:
+
+```
+logs/runner-cache/.in-progress/<runner-stem>.txt
+```
+
+You can `tail -F` any of those files to watch a runner make progress
+mid-execution. The live log is replaced by the canonical cache file
+when the runner completes, and the `.in-progress/` directory is
+gitignored.
+
+The orchestrator also prints heartbeats every 30 seconds for runners
+that have been alive longer than 60 seconds:
+
+```
+[heartbeat] 3 runner(s) > 60s in flight:
+   180s    14213b  frontier_alpha_s.py
+   125s     2018b  ALT_CONNECTIVITY_FAMILY_BASIN.py
+    65s        0b  some_stuck_runner.py     # 0 bytes after 65s = suspicious
+```
+
+A runner that emits 0 bytes for a long time is either doing pure CPU
+work (sympy simplify, eigendecomposition, etc.) or stuck. Open the live
+log to tell which.
+
 ## Refresh commands
 
 ```bash
