@@ -28,6 +28,11 @@ Open imports:
   normalization cancels but an orthogonal neutral top-coupling correction
   remains unless nulled or measured; it supplies no W rows, orthogonal-null
   theorem, matching, or retained/proposed-retained claim;
+- same-source W-response orthogonal-correction gate is open: it proves the
+  corrected formula `y_h=g_2 R_t/(sqrt(2) R_W)-delta_perp` with
+  `delta_perp=y_x kappa_x/kappa_h`, but rejects zeroing or backsolving the
+  correction without a real orthogonal-null, tomography, Gram-purity, or
+  neutral-rank certificate;
 - W/Z correlator mass-fit path is absent on the current PR230 surface; static
   EW gauge-mass algebra, aggregate slopes, mismatched source coordinates, and
   observed-W/Z selectors are explicitly rejected as measurement rows;

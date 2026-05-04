@@ -1,0 +1,132 @@
+{
+  "actual_current_surface_status": "open / same-source W-response orthogonal-correction gate not passed",
+  "bare_retained_allowed": false,
+  "current_closure_gate_passed": false,
+  "current_missing_inputs": [
+    "same-source W response rows",
+    "orthogonal top-coupling null theorem or measured delta_perp correction",
+    "source-Higgs Gram-purity correction row",
+    "matching/running bridge with certified physical input",
+    "retained-route gate authorization"
+  ],
+  "exact_next_action": "Produce a same-source W response row plus one correction authority: orthogonal-top null theorem, tomography delta_perp row, source-Higgs Gram-purity row, or neutral rank-one theorem.",
+  "fail_count": 0,
+  "future_correction_certificate": "outputs/yt_same_source_w_response_orthogonal_correction_certificate_2026-05-04.json",
+  "future_correction_validation": {
+    "failed_checks": [
+      "future correction certificate absent"
+    ],
+    "present": false,
+    "valid": false
+  },
+  "orthogonal_correction_gate_passed": false,
+  "orthogonal_correction_theorem_passed": true,
+  "parent_certificates": {
+    "neutral_scalar_top_coupling_tomography": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
+    "no_orthogonal_top_coupling_selection": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
+    "non_source_rank_repair": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
+    "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
+    "same_source_wz_response_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+    "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_higgs_gram_purity_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
+    "wz_response_measurement_row_contract": "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json"
+  },
+  "pass_count": 17,
+  "positive_witness": {
+    "input_parameters": {
+      "g2": 0.648,
+      "kappa_h": 0.73,
+      "kappa_x": 0.21,
+      "orthogonal_top_coupling_y_x": -0.32,
+      "physical_y_h": 0.917
+    },
+    "measured_responses": {
+      "R_W": 0.23652,
+      "R_t": 0.4258267746983508,
+      "absolute_recovery_error": 2.220446049250313e-16,
+      "corrected_y_h": 0.9169999999999998,
+      "orthogonal_correction_delta_perp": -0.09205479452054795,
+      "raw_same_source_w_readout": 0.8249452054794518
+    }
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The exact subtraction formula is derived, but no same-source W response rows or orthogonal-correction/null/purity certificate is present.",
+  "rejection_witnesses": {
+    "mismatched_source": {
+      "checks": {
+        "allowed_correction_method": true,
+        "finite_delta_perp": true,
+        "method_certificate_present": true,
+        "no_alpha_lm_plaquette_or_u0": true,
+        "no_c2_or_zmatch_by_fiat": true,
+        "no_delta_zero_without_certificate": true,
+        "no_hunit_or_ward": true,
+        "no_observed_yt_backsolve": true,
+        "production_or_exact_support_phase": true,
+        "rank_or_null_authority_passed": true,
+        "same_source_coordinate": false
+      },
+      "failed_checks": [
+        "same_source_coordinate"
+      ],
+      "present": true,
+      "valid": false
+    },
+    "observed_backsolve": {
+      "checks": {
+        "allowed_correction_method": true,
+        "finite_delta_perp": true,
+        "method_certificate_present": true,
+        "no_alpha_lm_plaquette_or_u0": true,
+        "no_c2_or_zmatch_by_fiat": true,
+        "no_delta_zero_without_certificate": true,
+        "no_hunit_or_ward": true,
+        "no_observed_yt_backsolve": false,
+        "production_or_exact_support_phase": true,
+        "rank_or_null_authority_passed": true,
+        "same_source_coordinate": true
+      },
+      "failed_checks": [
+        "no_observed_yt_backsolve"
+      ],
+      "present": true,
+      "valid": false
+    },
+    "zero_by_default": {
+      "checks": {
+        "allowed_correction_method": true,
+        "finite_delta_perp": true,
+        "method_certificate_present": false,
+        "no_alpha_lm_plaquette_or_u0": true,
+        "no_c2_or_zmatch_by_fiat": true,
+        "no_delta_zero_without_certificate": false,
+        "no_hunit_or_ward": true,
+        "no_observed_yt_backsolve": true,
+        "production_or_exact_support_phase": true,
+        "rank_or_null_authority_passed": false,
+        "same_source_coordinate": true
+      },
+      "failed_checks": [
+        "method_certificate_present",
+        "rank_or_null_authority_passed",
+        "no_delta_zero_without_certificate"
+      ],
+      "present": true,
+      "valid": false
+    }
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set the orthogonal correction to zero without a certificate",
+    "does not use observed y_t or observed top mass to backsolve the correction",
+    "does not use H_unit, yt_ward_identity, alpha_LM, plaquette, u0, c2=1, or Z_match=1",
+    "does not treat same-source W response alone as physical y_t"
+  ],
+  "symbolic_formula": {
+    "corrected_equals_y_h": true,
+    "corrected_readout": "y_h",
+    "orthogonal_correction": "k_x*y_x/k_h",
+    "raw_w_readout": "y_h + k_x*y_x/k_h",
+    "source_rescaling_residual_zero": true
+  }
+}

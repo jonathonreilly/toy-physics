@@ -1899,3 +1899,46 @@ Result: exact support.  Source normalization cancellation is real; the blocker
 is now the orthogonal correction.  Next exact action: produce W response rows
 plus an orthogonal-top null/tomography row, source-Higgs Gram rows, or a
 scalar-LSZ denominator/pole theorem.
+
+## 2026-05-04 Same-Source W-Response Orthogonal-Correction Gate
+
+This non-chunk block turns the previous W-response decomposition into an
+explicit correction contract.  The exact physical readout is
+
+```text
+y_h = g_2 R_t/(sqrt(2) R_W) - delta_perp
+delta_perp = y_x kappa_x/kappa_h.
+```
+
+The gate proves this corrected formula symbolically and rejects the dangerous
+shortcuts: setting `delta_perp=0` without a certificate, backsolving it from
+observed `y_t`, or using a correction row from a mismatched source coordinate.
+
+Verification:
+
+```bash
+python3 -m py_compile \
+  scripts/frontier_yt_same_source_w_response_orthogonal_correction_gate.py \
+  scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py \
+  scripts/frontier_yt_retained_closure_route_certificate.py \
+  scripts/frontier_yt_pr230_campaign_status_certificate.py
+# pass
+
+python3 scripts/frontier_yt_same_source_w_response_orthogonal_correction_gate.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=18 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=167 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=193 FAIL=0
+```
+
+Result: open gate with exact formula support.  The W route is now precise:
+produce same-source W response rows and one correction authority
+(`delta_perp` tomography, orthogonal-null theorem, source-Higgs Gram purity,
+or neutral rank-one theorem).  No retained/proposed-retained claim is
+authorized.

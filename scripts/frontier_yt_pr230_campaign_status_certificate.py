@@ -278,6 +278,9 @@ def main() -> int:
         "same_source_w_response_decomposition": load(
             "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json"
         ),
+        "same_source_w_response_orthogonal_correction": load(
+            "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json"
+        ),
         "wz_correlator_mass_fit_path_gate": load(
             "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json"
         ),
@@ -1236,6 +1239,21 @@ def main() -> int:
         is True
         and certificates["same_source_w_response_decomposition"].get("current_closure_gate_passed") is False,
         statuses["same_source_w_response_decomposition"],
+    )
+    report(
+        "same-source-w-response-orthogonal-correction-gate-blocks",
+        "same-source W-response orthogonal-correction gate not passed"
+        in str(statuses["same_source_w_response_orthogonal_correction"])
+        and certificates["same_source_w_response_orthogonal_correction"].get("proposal_allowed") is False
+        and certificates["same_source_w_response_orthogonal_correction"].get(
+            "orthogonal_correction_theorem_passed"
+        )
+        is True
+        and certificates["same_source_w_response_orthogonal_correction"].get(
+            "orthogonal_correction_gate_passed"
+        )
+        is False,
+        statuses["same_source_w_response_orthogonal_correction"],
     )
     report(
         "wz-correlator-mass-fit-path-gate-blocks",

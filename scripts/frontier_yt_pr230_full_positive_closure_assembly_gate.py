@@ -43,6 +43,7 @@ PARENTS = {
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_same_source_action_semantic_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
     "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
+    "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
     "wz_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
@@ -171,6 +172,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["wz_same_source_action"],
                 PARENTS["wz_same_source_action_semantic_firewall"],
                 PARENTS["same_source_w_response_decomposition"],
+                PARENTS["same_source_w_response_orthogonal_correction"],
                 PARENTS["wz_certificate_gate"],
                 PARENTS["wz_mass_fit_path"],
                 PARENTS["same_source_sector_overlap"],
@@ -322,6 +324,21 @@ def main() -> int:
         in statuses["wz_same_source_action_semantic_firewall"]
         and certs["wz_same_source_action_semantic_firewall"].get("proposal_allowed") is False,
         statuses["wz_same_source_action_semantic_firewall"],
+    )
+    report(
+        "same-source-w-orthogonal-correction-gate-open",
+        "orthogonal-correction gate not passed"
+        in statuses["same_source_w_response_orthogonal_correction"]
+        and certs["same_source_w_response_orthogonal_correction"].get("proposal_allowed") is False
+        and certs["same_source_w_response_orthogonal_correction"].get(
+            "orthogonal_correction_theorem_passed"
+        )
+        is True
+        and certs["same_source_w_response_orthogonal_correction"].get(
+            "orthogonal_correction_gate_passed"
+        )
+        is False,
+        statuses["same_source_w_response_orthogonal_correction"],
     )
     report("scalar-lsz-model-fv-ir-blocked", scalar_lsz_blocks, "model-class/FV/IR/threshold controls still block retained use")
     report("source-overlap-bridge-absent", source_overlap_blocks, f"route_passes={any_bridge_passes}")

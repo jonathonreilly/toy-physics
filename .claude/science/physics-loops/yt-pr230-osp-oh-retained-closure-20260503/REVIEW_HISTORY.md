@@ -814,3 +814,19 @@ Findings checked:
   changes the readout, proving W response alone is not closure.
 - The artifact uses no `H_unit`, Ward identity, observed selector,
   `alpha_LM`/plaquette, or `kappa/c2/Z_match` shortcut.
+
+# 2026-05-04 Same-Source W-Response Orthogonal-Correction Gate Self-Review
+
+Disposition: pass as open gate with exact formula support, not as closure.
+
+Findings checked:
+
+- The corrected formula
+  `y_h=g_2 R_t/(sqrt(2) R_W)-y_x kappa_x/kappa_h` is symbolically verified.
+- Source-coordinate rescaling still cancels after the correction.
+- The positive witness recovers the canonical Higgs Yukawa only after the
+  orthogonal correction is supplied.
+- The gate rejects `delta_perp=0` without authority, observed-target
+  backsolving, and mismatched-source correction rows.
+- No `H_unit`, Ward, observed selector, `alpha_LM`/plaquette/u0, `c2=1`, or
+  `Z_match=1` shortcut is used.
