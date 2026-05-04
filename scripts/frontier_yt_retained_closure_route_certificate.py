@@ -161,6 +161,7 @@ def main() -> int:
         "source_higgs_cross_correlator_certificate_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
         "source_higgs_gram_purity_postprocessor": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
         "source_higgs_gram_purity_contract_witness": "outputs/yt_source_higgs_gram_purity_contract_witness_2026-05-03.json",
+        "source_higgs_production_readiness_gate": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
         "canonical_higgs_operator_candidate_stress": "outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json",
         "canonical_higgs_operator_certificate_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
         "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
@@ -1019,6 +1020,18 @@ def main() -> int:
         and certificates["source_higgs_gram_purity_contract_witness"].get("proposal_allowed") is False
         and certificates["source_higgs_gram_purity_contract_witness"].get("contract_witness_passed") is True
     )
+    source_higgs_production_readiness_blocks_launch = (
+        "source-Higgs production launch blocked"
+        in certificates["source_higgs_production_readiness_gate"].get("actual_current_surface_status", "")
+        and certificates["source_higgs_production_readiness_gate"].get("proposal_allowed") is False
+        and certificates["source_higgs_production_readiness_gate"].get("source_higgs_launch_ready") is False
+        and certificates["source_higgs_production_readiness_gate"].get("operator_certificate_present") is False
+        and certificates["source_higgs_production_readiness_gate"].get("future_rows_present") is False
+        and certificates["source_higgs_production_readiness_gate"].get(
+            "current_chunk_wave_can_supply_source_higgs_rows"
+        )
+        is False
+    )
     canonical_higgs_operator_realization_gate_blocks = (
         "canonical-Higgs operator realization gate not passed"
         in certificates["canonical_higgs_operator_realization_gate"].get("actual_current_surface_status", "")
@@ -1838,6 +1851,11 @@ def main() -> int:
         "source-higgs-gram-purity-contract-witness-not-evidence",
         source_higgs_gram_purity_contract_witness_not_evidence,
         certificates["source_higgs_gram_purity_contract_witness"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "source-higgs-production-readiness-blocks-launch",
+        source_higgs_production_readiness_blocks_launch,
+        certificates["source_higgs_production_readiness_gate"].get("actual_current_surface_status", ""),
     )
     report(
         "canonical-higgs-operator-realization-gate-blocks",

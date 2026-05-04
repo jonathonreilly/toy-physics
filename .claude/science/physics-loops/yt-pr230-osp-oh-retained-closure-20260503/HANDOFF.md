@@ -140,6 +140,84 @@ Claim boundary: these are production-support chunks only.  They do not
 authorize retained/proposed-retained closure without the downstream scalar
 LSZ, source-Higgs/WZ/rank-one, and retained-route gates.
 
+## 2026-05-04 Source-Higgs Readiness And Chunks029-030 Packaging
+
+The source-Higgs production row path was narrowed to a launch-readiness
+boundary:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_source_higgs_production_readiness_gate.py
+# pass
+
+python3 scripts/frontier_yt_source_higgs_production_readiness_gate.py
+# SUMMARY: PASS=21 FAIL=0
+```
+
+Result: the existing production harness has the default-off
+`--source-higgs-cross-modes`, `--source-higgs-cross-noises`, and
+`--source-higgs-operator-certificate` surface, but no same-surface `O_H`
+certificate exists.  Completed chunks are source-Higgs absent-guarded or
+legacy-absent and do not contain `C_sH/C_HH` rows.  This is open
+launch-readiness bookkeeping only, not evidence.
+
+Chunks029/030 then landed and were packaged:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 29
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 30
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 29
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 30
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=143 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=169 FAIL=0
+```
+
+Current production state: 30/63 L12 chunks ready, 480/1000 saved
+configurations, target-observable ESS passed with limiting ESS
+`415.66719632039644`, response-window acceptance still open, and retained
+closure still unauthorized.
+
+The chunk-wave orchestrator filled the freed slots and launched chunks035/036.
+Currently running: chunks031-036.  Missing in this wave: chunks037-040.
+
+Next exact action: keep monitoring chunks031-036 and the chunk-wave
+orchestrator.  When the next outputs land, rerun chunk-local gates, the
+aggregate FH/LSZ gates, and retained/campaign certificates before packaging.
+For non-MC closure, the next positive route is still a same-surface `O_H`
+certificate, source-Higgs production rows, W/Z identity rows, Schur A/B/C
+rows, or neutral-sector irreducibility.
+
 ## 2026-05-04 Same-Source EW Action Gate
 
 The first W/Z implementation work unit was tested directly:

@@ -287,6 +287,9 @@ def main() -> int:
         "source_higgs_gram_purity_contract_witness": load(
             "outputs/yt_source_higgs_gram_purity_contract_witness_2026-05-03.json"
         ),
+        "source_higgs_production_readiness_gate": load(
+            "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json"
+        ),
         "canonical_higgs_operator_candidate_stress": load(
             "outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json"
         ),
@@ -1144,6 +1147,20 @@ def main() -> int:
         in str(statuses["source_higgs_gram_purity_contract_witness"])
         and certificates["source_higgs_gram_purity_contract_witness"].get("contract_witness_passed") is True,
         statuses["source_higgs_gram_purity_contract_witness"],
+    )
+    report(
+        "source-higgs-production-readiness-blocks-launch",
+        "source-Higgs production launch blocked"
+        in str(statuses["source_higgs_production_readiness_gate"])
+        and certificates["source_higgs_production_readiness_gate"].get("proposal_allowed") is False
+        and certificates["source_higgs_production_readiness_gate"].get("source_higgs_launch_ready") is False
+        and certificates["source_higgs_production_readiness_gate"].get("operator_certificate_present") is False
+        and certificates["source_higgs_production_readiness_gate"].get("future_rows_present") is False
+        and certificates["source_higgs_production_readiness_gate"].get(
+            "current_chunk_wave_can_supply_source_higgs_rows"
+        )
+        is False,
+        statuses["source_higgs_production_readiness_gate"],
     )
     report(
         "canonical-higgs-operator-realization-gate-not-passed",

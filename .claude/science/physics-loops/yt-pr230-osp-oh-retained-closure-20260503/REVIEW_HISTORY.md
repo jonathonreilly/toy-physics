@@ -134,3 +134,24 @@ Findings:
   and still deny retained/proposed_retained authority.
 - No retained/proposed-retained claim is authorized because no W/Z rows,
   sector-overlap identity, or canonical-Higgs identity exist.
+
+## 2026-05-04 Source-Higgs Readiness And Chunks029-030 Self-Review
+
+Disposition: bounded support plus launch-readiness boundary; continue campaign.
+
+Findings:
+
+- The source-Higgs readiness gate verifies the existing harness can measure
+  guarded source-Higgs finite-mode rows, but launch is blocked until a real
+  same-surface `O_H` certificate exists.
+- Completed FH/LSZ chunks001-030 have no `C_sH/C_HH` rows; source-Higgs
+  metadata is either legacy-absent or absent-guarded and is not a physical
+  Yukawa readout.
+- Chunks029/030 pass both generic and v2 multi-tau target-timeseries
+  checkpoints with zero fails, and the ready set advances to 30/63 L12 chunks.
+- Target-observable ESS and autocorrelation ESS pass for the current ready
+  set, but response-window acceptance remains open, so the chunk wave is still
+  production support rather than closure.
+- No retained/proposed-retained claim is authorized because `O_H`,
+  source-Higgs/W/Z/rank-one closure, and the retained-route certificate remain
+  open.

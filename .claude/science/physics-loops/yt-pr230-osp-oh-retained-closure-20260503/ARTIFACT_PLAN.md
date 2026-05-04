@@ -23,9 +23,19 @@ Completed during 2026-05-04 campaign continuation:
 - `scripts/frontier_yt_wz_same_source_ew_action_gate.py`
 - `docs/YT_WZ_SAME_SOURCE_EW_ACTION_GATE_NOTE_2026-05-04.md`
 - `outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json`
+- `scripts/frontier_yt_source_higgs_production_readiness_gate.py`
+- `docs/YT_SOURCE_HIGGS_PRODUCTION_READINESS_GATE_NOTE_2026-05-04.md`
+- `outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json`
+- `docs/YT_FH_LSZ_CHUNKS029_030_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-04.md`
+- chunks029/030 production outputs and local generic/v2 target-timeseries
+  checkpoints
+- refreshed FH/LSZ combiner, ready-set, target ESS, autocorrelation ESS,
+  response-stability, response-window, retained-route, and campaign
+  certificates
 
 Next positive artifact candidates:
 
-- source-Higgs `O_sp/O_H` measurement-row builder;
+- same-surface canonical-Higgs `O_H` certificate, then source-Higgs production
+  rows through the existing default-off harness;
 - actual same-source EW action plus W/Z correlator response harness and production rows;
 - dynamical rank-one theorem stretch attempt from minimal scalar kernel data.
