@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/kubo_eikonal_gap.py
+runner_sha256: 333a01c13b9e4dc6b72caee4095a4128ddb247d6bd1cf030bd725f0c4c2f035c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 4.15
+status: ok
+----- stdout -----
+================================================================================
+KUBO-EIKONAL GAP vs SPACING
+  L=40.0, x_src=13.3, K=5.0, β=0.8
+  Eikonal slope: -1.0603 (R²=0.999889)
+================================================================================
+
+  Eikonal baseline:
+    b=3: I_eik = 0.656447
+    b=4: I_eik = 0.486691
+    b=5: I_eik = 0.383840
+    b=6: I_eik = 0.314589
+
+────────────────────────────────────────────────────────────
+  h = 1.0
+────────────────────────────────────────────────────────────
+  nodes=1681, layers=41, gen=0.0s
+    b=3: kubo=+8.703784  (0.0s)
+    b=4: kubo=+6.564796  (0.0s)
+    b=5: kubo=+2.968147  (0.0s)
+    b=6: kubo=-0.514329  (0.0s)
+
+    Mixed sign kubos: ['+', '+', '+', '-']
+
+────────────────────────────────────────────────────────────
+  h = 0.5
+────────────────────────────────────────────────────────────
+  nodes=6561, layers=81, gen=0.0s
+    b=3: kubo=+4.055593  (0.1s)
+    b=4: kubo=+12.483812  (0.1s)
+    b=5: kubo=+10.482327  (0.2s)
+    b=6: kubo=+2.919002  (0.2s)
+
+    Slope: -0.2620 (R²=0.012153)
+    Eikonal: -1.0603
+    Gap: +0.7984
+
+────────────────────────────────────────────────────────────
+  h = 0.25
+────────────────────────────────────────────────────────────
+  nodes=25921, layers=161, gen=0.2s
+    b=3: kubo=+nan  (0.8s)
+    b=4: kubo=+nan  (0.8s)
+    b=5: kubo=+nan  (0.8s)
+    b=6: kubo=+nan  (0.8s)
+
+    NaN in kubos — measurement failed
+
+================================================================================
+INTERPRETATION
+================================================================================
+  If gap grows: wave correction strengthens under refinement
+  If gap converges: finite wave-mechanical correction to eikonal
+  If gap closes: lattice approaches eikonal at fine h
+
+----- stderr -----
+

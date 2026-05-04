@@ -1,0 +1,36 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_remaining_open_item_attack.py
+runner_sha256: 9e6a5918be7591f06fa68921e9af824bf1369a222177415a1717db0faef170bc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+TELEPORTATION REMAINING-OPEN-ITEM ATTACK
+Status: planning artifact; last blockers reduced to explicit obligations
+Claim boundary: ordinary quantum state teleportation only; no matter, mass, charge, energy, object, or faster-than-light transport
+
+selector completion minimality: bare_equivalent_selectors=64, completion_clauses=3, without_orientation=2, without_action=8, without_no_dwell=4, final_selector_count=1, all_clauses_necessary=True
+side-12 induction target: rows=5, max_side=12, gap_floor=0.390/L^2, min_gap_margin=2.750e-05, scaled_gap_min=0.390440, scaled_gap_max=0.463496, scaled_gap_monotone=True, bell_floor=0.999702, Bell_monotone=True
+side-14 direct solve status: exceeded local turn budget; not counted as evidence
+induction obligation: prove gap(L)*L^2 >= 0.390 and Bell*(L) >= 0.999702 for every even L >= 4 on the signed G=-1000 branch
+controller requirement envelope: record_length=8, d_min=5, correctable=2, target_word_failure=1.000e-06, slot_threshold=2.622e-03, leakage_budget=1.000e-05, crosstalk_budget=2.000e-05, area_budget=0.050937 rad (2.918 deg), implemented_area_bound=0.023000 rad, margin=2.215
+material requirement envelope: domain_side=5, spins/slot=125, slots=8, local_bonds=2400, J_over_T>=1.000, defect<=2.000e-03, word_failure_bound=7.498e-131, log10_overlap_bound=-655.141, arrhenius_wall=1.929e-22, finite_local_envelope=True
+
+Acceptance gates:
+  selector completion is clause-minimal on audited invariants: PASS
+  signed branch has side-12 induction target with positive margins: PASS
+  controller requirements have at least 2x area-error margin: PASS
+  material requirements realize the detector threshold envelope: PASS
+  claim boundary stays state-only and not FTL: PASS
+
+Limitations:
+  Clause minimality supports retaining the selector completion but does
+  not derive it from the original sole axiom.
+  The side-14 direct sparse solve exceeded the local turn budget and is
+  not counted as evidence; the all-even-side induction remains open.
+  Requirement envelopes are target specifications, not fabricated
+  hardware, named material stacks, or measured noise spectra.
+
+----- stderr -----
+

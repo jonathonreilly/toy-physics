@@ -1,0 +1,41 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_brannen_callan_harvey_candidate.py
+runner_sha256: 8ebf4f94f426731f646450cba51ac3279da079aad4f3c64891d345b379b07623
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.17
+status: ok
+----- stdout -----
+========================================================================================
+Koide Brannen Callan-Harvey candidate route
+========================================================================================
+[PASS] 1. Per-generation anomaly coefficient is exactly 2/9
+       (2d)·(1/d)^3 = 2/9
+[PASS] 2. Physical-lattice carrier gives a concrete anomaly-descent candidate
+       Accepted framework statement: Cl(3) on Z^3 is the physical theory.
+       Retained three-generation theorem: body-diagonal fixed sites supply
+       the natural 3-generation carrier.
+       This gives a concrete physical-lattice setting in which a
+       Callan-Harvey-style descent route can be posed.
+[PASS] 3. The candidate anomaly value 2/9 is forward-consistent with charged-lepton ratios
+       Max relative error in √m predictions: 0.0029%
+[PASS] 4. The route still needs the Berry/inflow identification theorem
+       Not yet derived: the selected-line Berry phase on the charged-lepton
+       CP^1 carrier is the descended Callan-Harvey / anomaly object.
+[PASS] 5. The route still needs the descent normalization theorem
+       Not yet derived: the relevant 1D descent factor is exactly 1.
+       That normalization is still the load-bearing missing theorem, not an
+       executably validated map.
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 5/5
+
+VERDICT: the Callan-Harvey route is a concrete physical-bridge
+candidate on the accepted physical-lattice reading.
+It strengthens the Brannen bridge search, but it does not close
+the physical bridge by itself.
+
+----- stderr -----
+

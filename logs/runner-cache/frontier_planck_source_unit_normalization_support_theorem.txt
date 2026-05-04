@@ -1,0 +1,28 @@
+===== runner cache v1 =====
+runner: scripts/frontier_planck_source_unit_normalization_support_theorem.py
+runner_sha256: 1cb2b82577aeee8692ce664af1b40c8ebf5e1160cb51ce3fc9140c412acd88bf
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+[PASS] retained Green-kernel coefficient is 1/(4*pi): G_kernel=0.079577471545948
+[PASS] unit bare delta has unit Gauss flux, not unit Newton monopole: phi~0.079577471545948/r; |flux|=1.000000000000; normalized_charge=0.079577471545948
+[PASS] bare source label is the lambda=4*pi member of the mass family: lambda_bare=12.566370614359; G_bare=0.079577471545948; 1/(4G_bare)=3.141592653590
+[PASS] primitive area carrier uniquely fixes lambda=1: trial area coefficients=0.125000000000, 0.250000000000, 0.500000000000, 3.141592653590
+[PASS] normalized Gauss charge equals the physical monopole mass: q_bare=4*pi*M_phys gives phi~1.000000000000/r; normalized_charge=1.000000000000
+[PASS] unit monopole readout uniquely fixes sigma=4*pi: trial monopoles=0.079577471546, 0.500000000000, 1.000000000000, 2.000000000000
+[PASS] physical lattice Newton coefficient is one after lambda selection: lambda=1.000000000000; G_Newton,lat=1/lambda=1.000000000000
+[PASS] same source unit gives the physical two-body product law: F_coeff=15.000000000000; G*M1*M2=15.000000000000; F(r=7)=0.306122448980
+[PASS] bare-source mislabel gives the legacy 2*sqrt(pi) mismatch: bare a/l_P=3.544907701811; normalized a/l_P=1.000000000000
+[PASS] primitive carrier matches the Planck-area coefficient: 1/(4*G_Newton,lat)=0.250000000000; c_cell=0.250000000000
+[PASS] EH prefactor is c_cell/(4*pi), not c_cell: EH=0.019894367886487; c_cell/(4*pi)=0.019894367886487
+[PASS] Wald/Gauss bridge maps EH prefactor to the area coefficient: 4*pi*EH=0.250000000000
+[PASS] physical unit map closes a/l_P=1: G_phys=a^2*G_Newton,lat=a^2, so l_P=a
+[PASS] no measured constants enter the closure arithmetic: inputs are G_kernel=1/(4*pi), c_cell=4/16, lambda=4*c_cell
+
+Summary: 14/14 checks passed.
+Verdict: positive support-theorem closure on the stated carrier premise. The Target 3 Clifford bridge supplies a sufficient coframe-response route for that premise. The retained 1/(4*pi) is the bare Green-kernel coefficient; the physical source scale is fixed by c_cell=lambda/4, hence lambda=1 and q_bare=4*pi*M_phys. Therefore G_Newton,lat=1, c_cell=1/(4G), EH=c_cell/(4*pi), and a/l_P=1.
+
+----- stderr -----
+

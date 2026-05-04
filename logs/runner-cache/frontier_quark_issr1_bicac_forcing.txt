@@ -1,0 +1,46 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_issr1_bicac_forcing.py
+runner_sha256: 8b0cd1390c7ec03613d1fefc8af9fc324707dc271a8ffb312281cad2f4535cc6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================
+  Quark ISSR1 BICAC Closure — Frontier Runner
+  JTS from affine physical carrier + exact 1(+)5 completeness
+========================================================================
+
+=== SECTION 1 — Schur-rank-1 slice remains valid ===
+  [PASS] S1.1  V_5 SO(2) weight-0 multiplicity is 1  (integral=1.0000000000)
+  [PASS] S1.2  Only the weight-0 slice is invariant under a nontrivial SO(2) rotation  (wt-1 gap=2.352e-01, wt-2 gap=8.300e-01)
+  [PASS] S1.3  The Schur projection on the perturbation cone is Pi(psi)=a_u+a_d sin_d  (checked on the physical endpoint representative)
+
+=== SECTION 2 — JTS from the physical-route affine carrier ===
+  [PASS] S2.1  {p, e5} is a basis of the exact physical carrier H_(1+5)  (det=0.408248290463863)
+  [PASS] S2.2  Every vector on H_(1+5) has unique perturbation-cone coordinates (a_u, a_d)  (max reconstruction error=0.000e+00)
+  [PASS] S2.3  The affine section gamma_psi(eps)=p+eps psi has 1-jet equal to psi  (max finite-difference jet error=5.224e-09)
+  [PASS] S2.4  Therefore Pert(p)=J^1_p(Sect_phys(B;p)) canonically on the physical route  (A_p = p + H_(1+5) inside B, with tangent plane H_(1+5)=Pert(p))
+
+=== SECTION 3 — Exact 1(+)5 completeness closes ISSR1 ===
+  [PASS] S3.1  The canonical transfer operator is T_p = Pi_5|p><e1| = sin_d |e5><e1|  (T_p[1,0]=0.912870929175277)
+  [PASS] S3.2  Exact 1(+)5 completeness gives a_u_phys = sin_d (1-rho)  (a_u_phys=0.772011886720524)
+  [PASS] S3.3  The physical perturbation satisfies Pi(psi_phys)=Pi(p)  (Pi(psi_phys)=0.912870929175277, Pi(p)=0.912870929175277)
+  [PASS] S3.4  The support bridge point fails the ISSR1 closure equation  (support residual=1.045e-02)
+  [PASS] S3.5  The retained target bridge point fails the ISSR1 closure equation  (target residual=2.875e-03)
+  [PASS] S3.6  kappa=1 is the unique bridge point satisfying Pi(psi)=Pi(p)  (bicac residual=0.000e+00)
+
+========================================================================
+  PASS=13  FAIL=0
+
+  VERDICT: JTS DERIVED; ISSR1 CLOSED.
+  Exact reason:
+    - Pert(p) is the exact physical carrier plane H_(1+5), so it is
+      canonically the 1-jet space of the physical-route carrier
+      A_p = p + H_(1+5) inside B;
+    - exact 1(+)5 channel completeness then supplies the independent
+      physical identity a_u + a_d sin_d = sin_d.
+========================================================================
+
+----- stderr -----
+

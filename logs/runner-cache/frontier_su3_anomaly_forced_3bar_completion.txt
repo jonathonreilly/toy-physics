@@ -1,0 +1,140 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_anomaly_forced_3bar_completion.py
+runner_sha256: db149ea53d89b78c32646ddb59138cb4e3dd642123545084c12827eeb2b1c57b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+SU(3) Anomaly-Forced 3̄ Singlet Completion — Closing Derivation
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: SU(3) cubic-anomaly coefficient A(R) catalogue
+----------------------------------------------------------------------------------------
+
+  Standard SU(3) cubic-anomaly coefficient catalogue:
+    A(10bar ) = -27
+    A(15bar ) = -14
+    A(6bar  ) = -7
+    A(3bar  ) = -1
+    A(1     ) = +0
+    A(8     ) = +0
+    A(27    ) = +0
+    A(3     ) = +1
+    A(6     ) = +7
+    A(15    ) = +14
+    A(10    ) = +27
+  [PASS] A(3bar) = -A(3) (conjugation symmetry)  (A(3) + A(3bar) = 0)
+  [PASS] A(6bar) = -A(6) (conjugation symmetry)  (A(6) + A(6bar) = 0)
+  [PASS] A(10bar) = -A(10) (conjugation symmetry)  (A(10) + A(10bar) = 0)
+  [PASS] A(15bar) = -A(15) (conjugation symmetry)  (A(15) + A(15bar) = 0)
+  [PASS] A(8) = 0 (adjoint is self-conjugate, anomaly vanishes)
+  [PASS] A(27) = 0 (self-conjugate)
+
+----------------------------------------------------------------------------------------
+Part 2: P1 — Q_L : (3, 2)_{1/3} contributes +2 to SU(3)^3 anomaly
+----------------------------------------------------------------------------------------
+  [PASS] Q_L : (3, 2) contributes 2 × A(3) = +2 to SU(3)^3 anomaly  (contribution = 2)
+
+----------------------------------------------------------------------------------------
+Part 3: P2 — anomaly cancellation requires RH content with A_total = -2
+----------------------------------------------------------------------------------------
+
+  Required RH-content total anomaly contribution: -2
+  [PASS] RH content must contribute -2 to cancel Q_L's +2
+
+----------------------------------------------------------------------------------------
+Part 4: P3 — enumerate minimal-field-count completions cancelling +2
+----------------------------------------------------------------------------------------
+
+  Set A = ['1', '3', '3bar']: minimal-count solutions cancelling -2:
+    field-count 2: {'3bar': 2}
+  [PASS] Set A minimal field count = 2 (smallest anomaly-cancelling RH completion)  (min count = 2)
+  [PASS] Canonical minimal solution: 2 LH 3̄ singlets (and no 3 fields)  (2 × 3bar = u_R^c + d_R^c form)
+
+----------------------------------------------------------------------------------------
+Part 5: rule out alternative low-count completions in extended set
+----------------------------------------------------------------------------------------
+
+  Set B = ['1', '3', '3bar', '6', '6bar', '8']: minimum field count = 2
+  [PASS] Set B minimal field count = 2 (extended candidate set doesn't help)  (min count = 2)
+
+  Set B 2-field solutions:
+    {'3bar': 2}
+  [PASS] With 2 fields, ONLY {3bar: 2} is anomaly-cancelling (no exotic alternatives)  (non-canonical 2-field solutions: 0)
+
+----------------------------------------------------------------------------------------
+Part 6: 1-field completion is impossible (no rep has A = -2)
+----------------------------------------------------------------------------------------
+  [PASS] No irrep R has A(R) = -2 (1-field completion impossible)  (reps with A(R) = -2: [])
+
+----------------------------------------------------------------------------------------
+Part 7: identification — 2 LH 3̄ fields = u_R^c, d_R^c
+----------------------------------------------------------------------------------------
+
+  Identification:
+    The 2 LH 3̄ singlets forced by SU(3)^3 anomaly cancellation
+    (with Q_L : (3, 2)) are identified as
+        u_R^c, d_R^c : (3̄, 1)
+    in the standard SM bookkeeping. The distinguishing labels (u vs d)
+    and the hypercharge values are NOT determined by SU(3) anomaly
+    cancellation alone — they require:
+      (a) SU(2)_L × U(1)_Y embedding (separate authority row),
+      (b) U(1)_Y^2 SU(2), U(1)_Y SU(3)^2, gravitational anomalies
+          and lepton-sector content.
+
+    The SU(3) REPRESENTATION CONTENT (3̄) is, however, fully derived
+    from P1+P2+P3, addressing the missing derivation on the parent row.
+
+  [PASS] SU(3) representation 3̄ for two RH-conjugate quark fields is forced by P1+P2+P3  (minimal anomaly-cancelling completion is exactly {3bar: 2})
+
+----------------------------------------------------------------------------------------
+Closing-derivation summary
+----------------------------------------------------------------------------------------
+
+  This runner addresses the missing derivation in
+  su3_cubic_anomaly_cancellation_theorem_note_2026-04-24 by deriving
+  (rather than hand-entering) the SU(3) representation content of u_R^c,
+  d_R^c from:
+
+    P1:             Q_L : (3, 2)_{1/3}
+                    [LEFT_HANDED_CHARGE_MATCHING_NOTE]
+    P2 (admitted):  SU(3)^3 anomaly cancellation requirement
+                    [ANOMALY_FORCES_TIME_THEOREM]
+    P3 (admitted):  minimal field-count completion among LH-Weyl
+                    SU(2)-singlets in irreducible SU(3) reps.
+
+  Derivation steps (all verified by this runner):
+    1. SU(3) cubic anomaly catalogue: A(3) = +1, A(3̄) = -1, A(8) = 0,
+       higher-dim reps |A| ∈ {7, 14, 27, ...}.
+    2. Q_L : (3, 2) contributes 2 × A(3) = +2 to the SU(3)^3 anomaly.
+    3. RH content must contribute -2 for cancellation.
+    4. No 1-field completion exists (no irrep has A = -2).
+    5. Minimal 2-field completion is uniquely {3̄ : 2} in any candidate
+       rep set including {1, 3, 3̄}; extending to {6, 6̄, 8, ...} adds
+       no 2-field alternatives.
+    6. The 2 LH 3̄ singlets ARE the SU(3) representation content of
+       u_R^c, d_R^c.
+
+  What this closes:
+    - The parent's hand-coded u_R^c, d_R^c rep content (3̄) is now
+      DERIVED from P1+P2+P3 rather than stipulated.
+  What remains separate (out-of-scope for this row, handled separately):
+    - Hypercharges Y(u_R^c), Y(d_R^c) — STANDARD_MODEL_HYPERCHARGE_UNIQUENESS.
+    - Generation count (3 generations) — THREE_GENERATION_STRUCTURE.
+    - SU(2)_L singlet labelling — implicit in the SM bookkeeping.
+    - Anomaly-cancellation principle itself — ANOMALY_FORCES_TIME_THEOREM.
+
+  Status: this is a candidate closing derivation. Independent audit must
+  ratify the row before the repository treats it as accepted authority.
+
+
+========================================================================================
+  TOTAL: PASS=14, FAIL=0
+========================================================================================
+
+----- stderr -----
+

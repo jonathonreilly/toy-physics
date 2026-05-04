@@ -1,0 +1,79 @@
+===== runner cache v1 =====
+runner: scripts/mirror_2d_validation.py
+runner_sha256: 7e7f84252a8356e88c3ebb0c4b2b86b4e87a8a5f0c794ac2c41e2e5e4de825b5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 45.61
+status: ok
+----- stdout -----
+====================================================================================================
+EXACT 2D MIRROR VALIDATION: Born + MI + decoherence + gravity
+  npl_half=12 (total 24), yr=10.0, r=2.5
+  seeds=8, k-band=[3.0, 5.0, 7.0]
+====================================================================================================
+
+  [mirror]
+     N   MI(bits)     1-pur      d_TV     gravity        Born         k=0  n_ok
+  ----------------------------------------------------------------------------------
+    15   0.088086    0.0863    0.1873     +1.9565    3.95e-16   +0.00e+00     7
+    25   0.502150    0.3029    0.6002     +2.7134    6.23e-16   +0.00e+00     8
+    40   0.536689    0.3012    0.6217     +3.8891    9.16e-16   +0.00e+00     8
+    60   0.756118    0.4420    0.8572     +2.5687    1.26e-15   +0.00e+00     8
+    80   0.565264    0.3465    0.6740     +3.4065    1.97e-15   +0.00e+00     7
+   100   0.346218    0.2865    0.5459     +1.8627    2.18e-15   +0.00e+00     5
+
+  MI scaling: MI = 0.0307 * N^+0.672  R^2=0.398
+  decoh scaling: 1-pur_min = 0.0301 * N^+0.575  R^2=0.529
+  gravity scaling: gravity = 2.19 * N^+0.049  R^2=0.015
+  Born audit: max |I3|/P = 2.18e-15
+
+  [random]
+     N   MI(bits)     1-pur      d_TV     gravity        Born         k=0  n_ok
+  ----------------------------------------------------------------------------------
+    15   0.133850    0.1185    0.2333     +1.6197    5.33e-16   +0.00e+00     8
+    25   0.160186    0.1482    0.2855     +0.8812    7.37e-16   +0.00e+00     8
+    40   0.034396    0.0405    0.1079     +1.8570    1.09e-15   +0.00e+00     8
+    60   0.050745    0.0596    0.1090     +0.7867    2.26e-15   +0.00e+00     8
+    80   0.058922    0.0721    0.1295     +0.3018    1.93e-15   +0.00e+00     8
+   100   0.037705    0.0517    0.0933     +0.3346    1.79e-15   +0.00e+00     8
+
+  MI scaling: MI = 0.905 * N^-0.692  R^2=0.594
+  decoh scaling: 1-pur_min = 0.429 * N^-0.466  R^2=0.457
+  gravity scaling: gravity = 18.6 * N^-0.841  R^2=0.633
+  Born audit: max |I3|/P = 2.26e-15
+
+====================================================================================================
+MIRROR GRAVITY FOLLOW-UP: fixed-anchor mass window + distance sweep
+====================================================================================================
+
+  Fixed-anchor mass window:
+     M       delta
+  ------------------
+     1     +0.9786
+     2     +0.7504
+     3     +0.9378
+     5     +1.5311
+     8     +0.9833
+    12        FAIL
+    16        FAIL
+  Fit: delta ~= 0.8720 * M^0.132  R^2=0.167
+
+  Distance sweep:
+   y_min       delta
+  --------------------
+     1.0     +0.3721
+     2.0     +0.3668
+     3.0     +0.9734
+     4.0     +0.2463
+     5.0     +0.2463
+     6.0     +1.6287
+  Tail fit: delta ~= 0.3418 * b^0.320  R^2=0.075
+
+Interpretation:
+  - exact 2D mirror uses the linear propagator only
+  - Born safety is judged by the corrected three-slit Sorkin audit
+  - MI / d_TV / purity / gravity are reported on the same family
+  - mass or distance fits are retained only if the window is clean
+
+----- stderr -----
+

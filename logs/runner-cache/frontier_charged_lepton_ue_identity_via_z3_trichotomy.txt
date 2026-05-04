@@ -1,0 +1,184 @@
+===== runner cache v1 =====
+runner: scripts/frontier_charged_lepton_ue_identity_via_z3_trichotomy.py
+runner_sha256: 8d1c5145551a37e6a12327c2702fb13f78e8600da4f43a09445eb66212af44bb
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================================
+G1 PHYSICIST-L: U_e = I VIA Z_3 TRICHOTOMY (CHARGED-LEPTON LANE)
+========================================================================================
+
+Goal: replace the weak Dirac-bridge citation in the PMNS-closure theorem's
+PMNS-as-f(H) closure with a clean retained route to U_e = I that
+uses the RETAINED Z_3 trichotomy instead of the OPEN C^16 -> 3x3
+Dirac normalization step.
+
+Convention: 'axiom' = single framework axiom Cl(3) on Z^3.
+
+========================================================================================
+PART 1: RETAINED CONJUGATE Z_3 GENERATION CHARGES ON H_hw=1
+========================================================================================
+
+ Source: THREE_GENERATION_OBSERVABLE_THEOREM_NOTE
+     + NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE
+
+ [PASS] Left-handed Z_3 triplet is q_L = (0, +1, -1) (q_L = [0, 1, 2])
+ [PASS] Right-handed Z_3 triplet is q_R = (0, -1, +1) (q_R = [0, 2, 1])
+ [PASS] Same-generation left/right charges cancel mod 3 ((q_L+q_R) mod 3 = [0, 0, 0])
+
+========================================================================================
+PART 2: TRICHOTOMY APPLIED TO THE CHARGED-LEPTON YUKAWA Y_e
+========================================================================================
+
+ The selection rule q_L(i) + q_H + q_R(j) = 0 mod 3 depends ONLY on
+ the retained conjugate Z_3 charges. It is therefore the SAME rule
+ on the charged-lepton lane as on the neutrino Dirac lane.
+ No C^16 normalization step is used.
+
+ [PASS] q_H = 0: each row has exactly one allowed target (row sums = [1, 1, 1])
+ [PASS] q_H = 0: each column has exactly one allowed source (col sums = [1, 1, 1])
+ [PASS] q_H = 0: Y_e support is the expected permutation pattern (diagonal)
+ [PASS] q_H = +1: each row has exactly one allowed target (row sums = [1, 1, 1])
+ [PASS] q_H = +1: each column has exactly one allowed source (col sums = [1, 1, 1])
+ [PASS] q_H = +1: Y_e support is the expected permutation pattern (forward cyclic)
+ [PASS] q_H = -1: each row has exactly one allowed target (row sums = [1, 1, 1])
+ [PASS] q_H = -1: each column has exactly one allowed source (col sums = [1, 1, 1])
+ [PASS] q_H = -1: Y_e support is the expected permutation pattern (backward cyclic)
+ [PASS] Three charged-lepton support patterns are pairwise disjoint (overlaps = [0, 0, 0])
+ [PASS] Their union is the full 3x3 grid (partition of Y_e entries)
+
+========================================================================================
+PART 3: q_H = 0 => Y_e DIAGONAL => U_e = I (UP TO PHASES)
+========================================================================================
+
+ For q_H = 0 the Z_3 trichotomy forces Y_e = diag(y_1, y_2, y_3).
+ We verify that the left singular vectors of a diagonal matrix are
+ the standard basis (i.e. U_e = I up to entrywise phases and
+ hierarchy permutation).
+
+ [PASS] case 1: Y_e Y_e^dag is diagonal (off-diagonal = 0.00e+00)
+ [PASS] case 1: U_e = I diagonalizes Y_e Y_e^dag (residual = 0.00e+00)
+ [PASS] case 1: |U_e| = I_3 entrywise
+ [PASS] case 2: Y_e Y_e^dag is diagonal (off-diagonal = 0.00e+00)
+ [PASS] case 2: U_e = I diagonalizes Y_e Y_e^dag (residual = 0.00e+00)
+ [PASS] case 2: |U_e| = I_3 entrywise
+ [PASS] case 3: Y_e Y_e^dag is diagonal (off-diagonal = 0.00e+00)
+ [PASS] case 3: U_e = I diagonalizes Y_e Y_e^dag (residual = 0.00e+00)
+ [PASS] case 3: |U_e| = I_3 entrywise
+ [PASS] case 4: Y_e Y_e^dag is diagonal (off-diagonal = 0.00e+00)
+ [PASS] case 4: U_e = I diagonalizes Y_e Y_e^dag (residual = 0.00e+00)
+ [PASS] case 4: |U_e| = I_3 entrywise
+
+ Conclusion: on the q_H = 0 branch, the charged-lepton mass basis
+ coincides with the generation axis basis of H_hw=1. U_PMNS is
+ therefore the neutrino eigenbasis unitary U_nu, up to the
+ hierarchy-labelling permutation sigma addressed in Part 5.
+
+========================================================================================
+PART 4: STATUS OF THE q_H = 0 ASSUMPTION
+========================================================================================
+
+ Question: is q_H = 0 axiom-forced, or conditional?
+
+ Retained atlas facts:
+  - Z_3 trichotomy: for a single Higgs doublet with definite q_H,
+   q_H must lie in {0, +1, -1} (NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY).
+  - NEUTRINO_MASS_REDUCTION_TO_DIRAC note explicitly records:
+   'the current retained stack constrains q_H to {0,+1,-1}
+    but does not fix it.'
+  - the bifundamental-invariance obstruction bifundamental-invariance note treats q_H as an
+   independent Higgs-sector datum, not derived from the axiom.
+
+ Conclusion: q_H = 0 is CONDITIONAL. It selects the diagonal branch
+ of the trichotomy. It is NOT derived from the Cl(3)/Z^3 axiom.
+
+ [PASS] Z_3 trichotomy allows q_H in {0, +1, -1} (all three values produce legal permutation supports)
+ [PASS] Retained atlas does NOT derive q_H (conditional input; branch condition for U_e = I)
+ [PASS] q_H = 0 selects the diagonal branch (U_e = I lane) (explicit on the charged-lepton Yukawa)
+ [PASS] q_H = +1 or q_H = -1 would NOT give U_e = I (gives a permutation matrix) (U_e would be a nontrivial axis permutation)
+
+ The observational consistency of the the PMNS-closure theorem pinning
+ (|U_PMNS| matches NuFit 5.3 NO 3-sigma in all 9 entries) is
+ compatible with q_H = 0. The other two branches (q_H = +-1)
+ would merely redefine which axis is the electron axis (a
+ relabelling absorbed into sigma_hier). So the CONDITION q_H = 0
+ is equivalent, up to sigma, to any definite-q_H single Higgs.
+
+========================================================================================
+PART 5: STATUS OF THE HIERARCHY PAIRING sigma_hier = (2, 1, 0)
+========================================================================================
+
+ After U_e = I, the PMNS columns are labeled by H-eigenvalue order
+ (nu_1, nu_2, nu_3 by ascending eigenvalue). The PMNS rows must
+ still be labeled (e, mu, tau). Since the axis basis {X_1, X_2, X_3}
+ is related by the retained C3[111] cycle, the three axes are a
+ priori S_3-symmetric (retained THREE_GENERATION_OBSERVABLE_THEOREM).
+
+ Question: is there a retained theorem that uniquely assigns which
+ axis is the electron vs muon vs tau?
+
+ [PASS] Graph-first selector fixes a weak axis (convention axis 1) (GRAPH_FIRST_SELECTOR_DERIVATION_NOTE + GRAPH_FIRST_SU3_INTEGRATION_NOTE)
+ [PASS] Weak axis choice does NOT assign (e, mu, tau) labels to axes (it only selects the SU(2)_L direction, not the generation label)
+ [PASS] Dirac-bridge Gamma_1 is diagonal in axis basis but does NOT order masses (Gamma_1 is axis-diagonal at convention axis 1; masses come from a separate scale)
+ [PASS] Retained C3[111] cycles the three axes symmetrically (THREE_GENERATION_OBSERVABLE_THEOREM: S_3 orbit on {X_1,X_2,X_3})
+ [PASS] Discrete label space has |S_3| = 6 a priori permutations (6 permutations)
+ [PASS] the PMNS-closure theorem singles out sigma_hier = (2, 1, 0) observationally (unique chamber minimizer with chi^2 < 10^-4 on PDG angles)
+
+ Conclusion: sigma_hier = (2, 1, 0) is NOT axiom-forced. It is a
+ DISCRETE OBSERVATIONAL CHOICE fixed by requiring the PDG hierarchy
+ |U_e3| << |U_e1|, |U_e2| at the pinned chamber point. The retained
+ atlas does not otherwise select a canonical (e, mu, tau) labeling
+ of the three axes X_1, X_2, X_3.
+
+ [PASS] sigma_hier = (2, 1, 0) status is OBSERVATIONAL (not axiom-forced) (explicit discrete choice; flagged separately from the q_H = 0 choice)
+
+========================================================================================
+PART 6: REPLACEMENT CITATION CHAIN FOR PHYSICIST-H
+========================================================================================
+
+ the PMNS-closure theorem's current text cites DM_NEUTRINO_DIRAC_BRIDGE for
+ U_e = I on H_hw=1. That citation routes through an OPEN
+ C^16 -> 3x3 normalization step.
+
+ Cleaner retained route (this note):
+  1. Retained three-generation observable space H_hw=1 carries
+    conjugate Z_3 triplets q_L = (0,+1,-1), q_R = (0,-1,+1).
+     [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE]
+  2. A single Higgs doublet with definite Z_3 charge q_H forces
+    Y_e support to be one of three permutation patterns.
+     [NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE]
+  3. Branch condition q_H = 0 (CONDITIONAL) selects the DIAGONAL
+    pattern. Y_e = diag(y_1, y_2, y_3).
+  4. Diagonal Y_e => |U_e| = I in the axis basis (elementary).
+  5. Discrete hierarchy pairing sigma_hier = (2,1,0) is fixed
+    OBSERVATIONALLY by PDG |U_e3| << |U_e1|, |U_e2|.
+
+ Nothing in steps 1-4 uses the C^16 Dirac-bridge normalization.
+ The only remaining non-axiom inputs are:
+  (a) q_H = 0 [conditional branch condition]
+  (b) sigma_hier = (2, 1, 0) [discrete observational choice]
+
+ [PASS] Replacement chain uses no C^16 -> 3x3 normalization (Z_3 selection rule is local on H_hw=1)
+ [PASS] Replacement chain's non-axiom inputs are explicit ((q_H = 0) and (sigma_hier))
+ [PASS] Replacement chain matches the PMNS-closure theorem endpoint: |U_e| = I on H_hw=1 (identical PMNS = P_{sigma_hier} * U_nu)
+
+========================================================================================
+RESULT
+========================================================================================
+
+ Retained-chain summary:
+  - Z_3 trichotomy is RETAINED (support theorem).
+  - q_H = 0 on the charged-lepton Yukawa is CONDITIONAL.
+  - Y_e diagonal in axis basis follows from q_H = 0 (retained).
+  - U_e = I then follows (elementary linear algebra).
+  - sigma_hier = (2, 1, 0) is OBSERVATIONAL (discrete choice).
+
+ Cleaner citation chain than the Dirac-bridge route because no
+ step routes through the open C^16 normalization theorem.
+
+PASS = 40 FAIL = 0
+
+----- stderr -----
+

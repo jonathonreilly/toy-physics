@@ -1,0 +1,76 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_z3_phase_lift_bridge.py
+runner_sha256: bb0a006f32056d593c5e18ebb52eab3e24793751488932b86ec024f101d2a786
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO Z3 PHASE-LIFT MIXED BRIDGE
+========================================================================================
+
+Status:
+  Invented candidate bridge family beyond the retained local bank.
+  The algebra below is exact. The later character-transfer theorem fixes
+  the source-faithful branches to lambda in {-1,0,+1}, with lambda=+1
+  the source-oriented branch.
+
+Question:
+  Is there a smallest axiom-native candidate family that can transfer the
+  exact weak-sector Z3 CP source into the unique DM odd slot?
+
+========================================================================================
+PART 1: THE CANDIDATE FAMILY IS AXIOM-NATIVE IN ITS INPUTS
+========================================================================================
+  [PASS (C)] lambda=0 reproduces the current even local bank  ((d,c_even,c_odd)=(1.136667,0.456667,0.00e+00))
+  [PASS (C)] lambda=1 uses the exact weak-only Z3 source phase delta_src = 2pi/3  ((c_even,c_odd)=(-0.228333,0.395485))
+
+  So the candidate family uses only:
+    - the exact even local kernel data (d,r)
+    - the exact weak-sector Z3 source phase 2pi/3
+    - one new bridge amplitude lambda
+
+========================================================================================
+PART 2: THE CANDIDATE FAMILY PRESERVES THE TWO-HIGGS ADMISSIBLE SUBCONE
+========================================================================================
+  [PASS (C)] The exact base even kernel is already in the admissible subcone  (d=1.136667, 2r=0.913333)
+  [PASS (C)] The phase-lift family preserves d and the off-diagonal norm r for all lambda  (lam=0.0: |h|=0.456667, c_even=0.456667, c_odd=0.000000; lam=0.5: |h|=0.456667, c_even=0.228333, c_odd=0.395485; lam=1.0: |h|=0.456667, c_even=-0.228333, c_odd=0.395485)
+  [PASS (C)] Therefore the same physical two-Higgs moduli (x,y) survive across the family  (x=0.952182, y=0.479600)
+
+  So the invented bridge does not change the local two-Higgs support
+  or push the kernel out of the admissible subcone. It only rotates the
+  fixed off-diagonal norm into the odd slot.
+
+========================================================================================
+PART 3: THE CANDIDATE FAMILY IS RESIDUAL-Z2 ODD AND TURNS ON CP
+========================================================================================
+  [PASS (C)] Residual-Z2 reflection sends lambda -> -lambda on the phase-lift family  (P23 K_lambda P23 = K_-lambda)
+  [PASS (C)] Any nonzero lambda turns on the odd slot away from the current zero law  (c_odd(1/2)=0.395485, c_odd(1)=0.395485)
+  [PASS (C)] The standard CP tensor is nonzero for the full-source candidate lambda=1  (cp=-0.180605)
+
+  So this is a real positive candidate activator, not just a naming move.
+  It is the smallest axiom-native family we currently have that actually
+  turns on the exact missing odd slot.
+
+========================================================================================
+RESULT
+========================================================================================
+  Candidate family:
+    K_lambda = d I + r (e^{i lambda delta_src} S + e^{-i lambda delta_src} S^2)
+    with delta_src = 2pi/3
+
+  Safe read:
+    - lambda=0 is the exact current stack
+    - lambda=1 is full weak-source transfer
+    - the family preserves the admissible two-Higgs local data
+    - any nonzero lambda turns on the unique odd slot
+
+  This is the strongest axiom-native candidate bridge currently on hand,
+  but the later mass-basis no-go shows the whole exact Z3-covariant
+  circulant family is still not the final physical leptogenesis texture.
+
+PASS=8  FAIL=0
+
+----- stderr -----
+

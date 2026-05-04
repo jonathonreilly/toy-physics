@@ -1,0 +1,75 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_hw1_source_transfer_boundary.py
+runner_sha256: 30afb985cd653e4f593ee16a83bb7ce31b928a707aecab6ed0516b409e4a876e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================================
+PMNS HW1 SOURCE-TRANSFER BOUNDARY
+========================================================================================
+
+Question:
+  Can a genuinely axiom-first hw=1 source/transfer law do better than
+  the current sole-axiom free-profile boundary?
+
+========================================================================================
+PART 1: TRANSFER SUMMARIES FIX THE SEED PAIR AND BRANCH BIT
+========================================================================================
+  [PASS] The direct corner-transport profile recovers the weak-axis seed pair  ((xbar,ybar)=(0.973333,0.410000))
+  [PASS] The transfer dominant-mode law recovers the same seed pair  ((rxbar,rybar)=(0.973333,0.410000))
+  [PASS] The branch bit is fixed by the C3-odd transport asymmetry  (bit=0)
+
+========================================================================================
+PART 2: ACTIVE SOURCE-RESPONSE COLUMNS FIX THE ACTIVE KERNEL
+========================================================================================
+  [PASS] The lower-level active response profile recovers the active block exactly  (error=8.99e-16)
+  [PASS] The active kernel is uniquely recovered from the response columns
+  [PASS] The active block decomposes into the seed pair plus the 5-real corner source  ((xi,eta)=([ 0.176667 -0.153333 -0.023333], [-0.   -0.13  0.13]))
+
+========================================================================================
+PART 3: PASSIVE SOURCE-RESPONSE COLUMNS FIX q AND a_i
+========================================================================================
+  [PASS] The lower-level passive response profile recovers the passive block exactly  (error=7.21e-20)
+  [PASS] The passive offset q is fixed by the derived passive block  (q=2)
+  [PASS] The passive coefficients a_i are fixed by the derived passive block  (a=[0.07+0.j 0.11+0.j 0.23+0.j])
+
+========================================================================================
+PART 4: THE COMBINED PACK RECOVERS THE RETAINED PAIR AND DOWNSTREAM CLOSURE
+========================================================================================
+  [PASS] The source-transfer pack derives tau and q without PMNS-side inputs  (tau=0, q=2)
+  [PASS] The combined pack reconstructs the retained pair exactly
+  [PASS] The combined pack recovers the downstream Hermitian data exactly
+
+========================================================================================
+PART 5: TRANSFER-ONLY DATA ARE BLIND TO THE FIVE-REAL CORNER SOURCE
+========================================================================================
+  [PASS] Two distinct active blocks have the same transfer summary  (transfer diff=0.00e+00)
+  [PASS] Those two active blocks have different corner sources  (|Δxi|=0.070711, |Δeta|=0.070711)
+  [INFO] Transfer-only data do not select the 5-real source  (the source-response columns are the thing that repairs this blindness)
+
+========================================================================================
+PART 6: CIRCULARITY GUARD
+========================================================================================
+  [PASS] The new hw=1 source-transfer pack does not take PMNS-side value targets as inputs  (bad=[])
+
+========================================================================================
+RESULT
+========================================================================================
+  The hw=1 source/transfer pack is strong enough to close the retained
+  PMNS lane once it is supplied:
+    - transfer summaries fix the seed pair and branch bit
+    - active source-response columns fix the active kernel
+    - passive source-response columns fix q and a_i
+    - the combined pack reconstructs the retained pair and downstream data
+
+  Boundary:
+    - transfer-only summaries are blind to the 5-real active corner source
+    - the current exact bank still does not derive the source/transfer
+      pack itself from Cl(3) on Z^3 alone
+
+PASS=15 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,86 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_up_amplitude_two_step_native_scan.py
+runner_sha256: c5aa134dd749eed6b041dd01196ec94dd1723209475797bddb9f345a60e40472
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 21.09
+status: ok
+----- stdout -----
+========================================================================
+  FRONTIER: Quark Up-Amplitude Two-Step Native Scan
+========================================================================
+
+========================================================================
+PART 1: Controlled Two-Step Native Grammar
+========================================================================
+
+  solved support-anchored a_u = 0.778161628656
+  one-step native candidates  = 104
+  two-step native candidates  = 2712
+  added step                  = one more operation against one native primitive
+
+  strongest native two-step refit candidates:
+  sqrt((((sqrt(5)/6 + (1 - sqrt(1/6)))) * ((1 - sqrt(5)/6))))    a_u=0.777822586  c=8  anchor=0.837%  refit_obj=0.052747  refit_max=0.906%
+  sqrt(((sqrt(((1 - 1/sqrt(42))) * ((1 - sqrt(1/6))))) * (6/7))) a_u=0.778690969  c=9  anchor=0.883%  refit_obj=0.052769  refit_max=0.869%
+  sqrt(((sqrt((sqrt(5/6)) * (atan(sqrt(5))))) * ((1 - sqrt(1/6))))) a_u=0.778702013  c=8  anchor=0.883%  refit_obj=0.052771  refit_max=0.868%
+  (atan(sqrt(5)) - sqrt(5)/6)                                    a_u=0.777583995  c=3  anchor=0.827%  refit_obj=0.052782  refit_max=0.917%
+  ((((1 - sqrt(1/6)) / 6/7)) + ((1 - sqrt(5/6))))                a_u=0.777506065  c=7  anchor=0.824%  refit_obj=0.052797  refit_max=0.920%
+  ((atan(sqrt(5))) - (((1 - sqrt(5)/6) * (1 - sqrt(1/6)))))      a_u=0.779043123  c=7  anchor=0.904%  refit_obj=0.052844  refit_max=0.853%
+  ((sqrt((6/7) * ((1 - 1/sqrt(42))))) * (sqrt(5/6)))             a_u=0.777218782  c=7  anchor=0.811%  refit_obj=0.052868  refit_max=0.933%
+  (((sqrt(1/6) / (1 - sqrt(1/6)))) + ((1 - sqrt(5/6))))          a_u=0.777027019  c=7  anchor=0.803%  refit_obj=0.052930  refit_max=0.941%
+
+  strongest native two-step anchored candidates:
+  ((sqrt(((1 - 1/sqrt(42))) * ((1 - sqrt(1/6))))) / (sqrt(5/6))) a_u=0.774939305  c=8  anchor=0.717%  refit_obj=0.054332  refit_max=1.032%
+  sqrt((((6/7 / (1 - 1/sqrt(42)))) * ((1 - sqrt(1/6)))))         a_u=0.774442290  c=8  anchor=0.721%  refit_obj=0.054863  refit_max=1.054%
+  ((((1 - sqrt(5)/6) / sqrt(5/6))) + ((1 - sqrt(5/6))))          a_u=0.774325895  c=7  anchor=0.722%  refit_obj=0.054998  refit_max=1.059%
+  ((sqrt((atan(sqrt(5))) * (sqrt(5)/6))) / ((1 - 1/sqrt(42))))   a_u=0.774195514  c=7  anchor=0.723%  refit_obj=0.055155  refit_max=1.064%
+  sqrt(((sqrt(((1 - 1/sqrt(42))) * ((1 - sqrt(1/6))))) * ((1 - 1/sqrt(42))))) a_u=0.773474211  c=10  anchor=0.729%  refit_obj=0.056114  refit_max=1.096%
+  sqrt(((sqrt((atan(sqrt(5))) * (sqrt(5)/6))) * (sqrt(5/6))))    a_u=0.773102929  c=7  anchor=0.733%  refit_obj=0.056671  refit_max=1.112%
+  ((sqrt((atan(sqrt(5))) * ((1 - sqrt(5)/6)))) * (sqrt(5/6)))    a_u=0.775448611  c=7  anchor=0.735%  refit_obj=0.053867  refit_max=1.010%
+  (((sqrt(5)/6 / (1 - sqrt(1/6)))) + ((1 - 6/7)))                a_u=0.772644924  c=7  anchor=0.736%  refit_obj=0.057415  refit_max=1.132%
+
+  one-step and external baselines:
+    one-step best refit   : obj = 0.052782, anchor = 0.827%
+    one-step best anchor  : anchor = 0.742%, refit_max = 1.159%
+    7/9                   : obj = 0.052752, refit_max = 0.908%
+    sqrt(3/5)             : anchor = 0.720%, anchor_max = 0.677%
+  [PASS] Best native two-step refit law improves both the one-step refit law and the 7/9 baseline  (best = 0.052747)
+  [PASS] Best native two-step refit law keeps the full package within 1%  (max dev = 0.906%)
+  [PASS] Best native two-step anchored law improves both the one-step anchored law and the sqrt(3/5) baseline  (best = 0.717%)
+  [PASS] Best native two-step anchored law keeps CKM+J deviations within 1%  (max dev = 0.686%)
+
+========================================================================
+PART 2: Persistence No-Go
+========================================================================
+
+  dominance test: native two-step candidate with refit_obj < 0.052752 and anchor < 0.720%
+  surviving candidates = 0
+  best refit formula   = sqrt((((sqrt(5)/6 + (1 - sqrt(1/6)))) * ((1 - sqrt(5)/6))))
+  best anchor formula  = ((sqrt(((1 - 1/sqrt(42))) * ((1 - sqrt(1/6))))) / (sqrt(5/6)))
+  [PASS] No native two-step expression beats both the 7/9 refit baseline and the sqrt(3/5) anchored baseline  (two-step native grammar still splits by axis)
+
+========================================================================
+PART 3: Summary
+========================================================================
+
+  strongest native two-step outcomes:
+    - best native refit law     : sqrt((((sqrt(5)/6 + (1 - sqrt(1/6)))) * ((1 - sqrt(5)/6)))) = 0.777822586140
+      refit_obj = 0.052747, refit_max = 0.906%
+    - best native anchored law  : ((sqrt(((1 - 1/sqrt(42))) * ((1 - sqrt(1/6))))) / (sqrt(5/6))) = 0.774939304779
+      anchor = 0.717%, anchor_max = 0.686%
+
+  relation to the one-step native scan:
+    - two-step refit improves 0.052782 -> 0.052747
+    - two-step anchor improves 0.742% -> 0.717%
+
+  honest endpoint:
+    one more semantically native step strengthens both axes,
+    but it still does not collapse them to one dominant law.
+    The reduced up-amplitude lane remains bounded.
+
+========================================================================
+  TOTAL: PASS=5, FAIL=0
+========================================================================
+
+----- stderr -----
+

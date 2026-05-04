@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/matter_self_focusing.py
+runner_sha256: ddb7fd2be040dbb741bab64d045dccba58029fa9b7266b6efb879930e66b89dd
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

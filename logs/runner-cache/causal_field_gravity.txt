@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/causal_field_gravity.py
+runner_sha256: bb0e4137da2988d1abd7f14cd0c4cc745fc6c3c09a50e13c16435ff8876bd48f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 27.33
+status: ok
+----- stdout -----
+======================================================================
+CAUSAL FIELD GRAVITY: does retarded propagation restore 1/b?
+======================================================================
+
+  [Laplacian (baseline — bidirectional)]
+      b     shift      SE   shift*b  scaling
+  ------------------------------------------
+      1   +0.3197  0.3743    +0.320
+      2   +0.4101  0.3063    +0.820
+      3   +0.4353  0.3279    +1.306
+      4   +0.5305  0.2878    +2.122
+      6   +0.3806  0.2728    +2.284
+      8   +0.5495  0.2782    +4.396
+     10   +0.3010  0.2327    +3.010
+  → noisy (CV flat=0.59, CV 1/b=2.00)
+
+  [Causal diffusion (forward max, decay=0.7)]
+      b     shift      SE   shift*b  scaling
+  ------------------------------------------
+      1   +0.1519  0.3256    +0.152
+      2   +0.5487  0.2692    +1.097
+      3   +0.4555  0.2829    +1.366
+      4   +0.4778  0.3268    +1.911
+      6   +0.2855  0.2663    +1.713
+      8   +0.3607  0.1944    +2.885
+     10   +0.3435  0.2074    +3.435
+  → noisy (CV flat=1.06, CV 1/b=1.83)
+
+  [Causal sum (forward additive, decay=0.8)]
+      b     shift      SE   shift*b  scaling
+  ------------------------------------------
+      1   +0.2208  0.1743    +0.221
+      2   +0.3032  0.2155    +0.606
+      3   +0.3147  0.2085    +0.944
+      4   +0.3360  0.2037    +1.344
+      6   +0.2938  0.2185    +1.763
+      8   -0.0043  0.2401    -0.034
+     10   +0.0113  0.1453    +0.113
+  → shift DECREASES with b (decaying, not 1/b)
+
+  [Causal 1/r (downstream only)]
+      b     shift      SE   shift*b  scaling
+  ------------------------------------------
+      1   +0.0568  0.2741    +0.057
+      2   +0.0971  0.3306    +0.194
+      3   -0.0050  0.3392    -0.015
+      4   -0.0002  0.3650    -0.001
+      6   +0.2209  0.3860    +1.325
+      8   +0.1622  0.2949    +1.298
+     10   +0.0433  0.2735    +0.433
+  → noisy (CV flat=1.53, CV 1/b=1.92)
+
+======================================================================
+INTERPRETATION:
+  Laplacian: field spreads everywhere → b-independent (known)
+  Causal: field stays near/downstream → b-dependent?
+
+  If causal gives 1/b: the FIELD PROPAGATION is the key
+  If causal gives flat: b-independence survives even without
+    global field spreading
+======================================================================
+
+----- stderr -----
+

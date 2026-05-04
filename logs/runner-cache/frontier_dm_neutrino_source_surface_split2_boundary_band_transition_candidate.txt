@@ -1,0 +1,82 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_split2_boundary_band_transition_candidate.py
+runner_sha256: 47258f08cd2902c56ce0107e43354a1b0bc31cb0dd341b4a982cf434dcb78807
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 3.06
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE SPLIT-2 BOUNDARY-BAND TRANSITION CANDIDATE
+========================================================================================
+
+Question:
+  On the compact branch, is the broad-bundle split-2 failure spread across
+  the whole split-2 window, or is it concentrated in a narrow active
+  boundary band?
+
+========================================================================================
+PART 1: SAMPLED SLACK FLOORS REPRODUCE THE SPLIT-2 TRANSITION PICTURE
+========================================================================================
+  [PASS] The preferred recovered floor is unchanged on the compact branch  (preferred=1.586874714730)
+  [PASS] The split-2 slack-floor minimum is reproduced stably at s_min=0.000  ((point,value)=([-0.14        0.99704984  0.        ],1.500442491658))
+  [PASS] The split-2 slack-floor minimum is reproduced stably at s_min=0.050  ((point,value)=([-0.14        1.01534057  0.05      ],1.519822893168))
+  [PASS] The split-2 slack-floor minimum is reproduced stably at s_min=0.100  ((point,value)=([-0.14        1.03289549  0.1       ],1.541184222341))
+  [PASS] The split-2 slack-floor minimum is reproduced stably at s_min=0.150  ((point,value)=([-0.14        1.04971896  0.15      ],1.564422362358))
+  [PASS] The split-2 slack-floor minimum is reproduced stably at s_min=0.190  ((point,value)=([-0.14        1.06262822  0.19      ],1.584292566963))
+  [PASS] The split-2 slack-floor minimum is reproduced stably at s_min=0.200  ((point,value)=([-0.14        1.06578397  0.2       ],1.589430707582))
+  [PASS] The split-2 slack-floor minimum is reproduced stably at s_min=0.250  ((point,value)=([-0.14       1.0811204  0.25     ],1.616102220815))
+  [PASS] The split-2 slack-floor minimum is reproduced stably at s_min=0.300  ((point,value)=([-0.14        1.09573433  0.3       ],1.644331050529))
+
+========================================================================================
+PART 2: THE SPLIT-2 BROAD MINIMUM IS MONOTONE AND BOUNDARY-PINNED
+========================================================================================
+  [PASS] Increasing the active slack floor raises the tested split-2 broad-box minimum monotonically  (repairs=[1.500442492, 1.519822893, 1.541184222, 1.564422362, 1.584292567, 1.589430708, 1.616102221, 1.644331051])
+  [PASS] Every tested split-2 minimum stays on the upper-m boundary of the broad box  (m=[np.float64(-0.14), np.float64(-0.14), np.float64(-0.14), np.float64(-0.140000004), np.float64(-0.14), np.float64(-0.14), np.float64(-0.140000001), np.float64(-0.14)])
+  [PASS] Every tested split-2 minimum also stays on the lower active-slack boundary s = s_min  (s=[np.float64(0.0), np.float64(0.05), np.float64(0.1), np.float64(0.150000003), np.float64(0.19), np.float64(0.2), np.float64(0.250000001), np.float64(0.3)])
+
+========================================================================================
+PART 3: THE UNDERCUT CROSSES THE PREFERRED FLOOR INSIDE A NARROW LOW-SLACK BAND
+========================================================================================
+  [PASS] The transition sample at s_min=0.1950 is reproduced stably  ((point,value)=([-0.14        1.06420978  0.195     ],1.586853268538))
+  [PASS] The transition sample at s_min=0.1975 is reproduced stably  ((point,value)=([-0.14        1.06499779  0.1975    ],1.588139902559))
+  [PASS] At s_min=0.1950 the tested split-2 broad minimum is still below the preferred recovered floor  (gap=-2.144619155353e-05)
+  [PASS] At s_min=0.1975 the tested split-2 broad minimum is already above the preferred recovered floor  (gap=1.265187829766e-03)
+  [PASS] So the broad-bundle split-2 undercut is confined to a narrow low-slack band rather than the whole split-2 window  (0.1950 <= s_* <= 0.1975)
+  [PASS] In particular the tested split-2 broad box is already locally dominated once s >= 0.2  (gap@0.2=2.555992852762e-03)
+
+========================================================================================
+PART 4: THE ACTIVE HALF-PLANE INTERPRETATION IS EXACT
+========================================================================================
+  [PASS] The split-2 sample minimum at s_min=0.000 lies exactly on q_+ - q_floor(delta) = s_min  ((delta,q_+,gap)=(0.997049844,0.635943318,0.000000000))
+  [PASS] The split-2 sample minimum at s_min=0.050 lies exactly on q_+ - q_floor(delta) = s_min  ((delta,q_+,gap)=(1.015340574,0.667652588,0.050000000))
+  [PASS] The split-2 sample minimum at s_min=0.100 lies exactly on q_+ - q_floor(delta) = s_min  ((delta,q_+,gap)=(1.032895490,0.700097672,0.100000000))
+  [PASS] The split-2 sample minimum at s_min=0.150 lies exactly on q_+ - q_floor(delta) = s_min  ((delta,q_+,gap)=(1.049718956,0.733274208,0.150000003))
+  [PASS] The split-2 sample minimum at s_min=0.190 lies exactly on q_+ - q_floor(delta) = s_min  ((delta,q_+,gap)=(1.062628222,0.760364940,0.190000000))
+  [PASS] The split-2 sample minimum at s_min=0.200 lies exactly on q_+ - q_floor(delta) = s_min  ((delta,q_+,gap)=(1.065783966,0.767209196,0.200000000))
+  [PASS] The split-2 sample minimum at s_min=0.250 lies exactly on q_+ - q_floor(delta) = s_min  ((delta,q_+,gap)=(1.081120402,0.801872761,0.250000001))
+  [PASS] The split-2 sample minimum at s_min=0.300 lies exactly on q_+ - q_floor(delta) = s_min  ((delta,q_+,gap)=(1.095734325,0.837258837,0.300000000))
+  [PASS] So the broad-bundle split-2 undercut is exactly an active-boundary low-slack phenomenon  (the dangerous region is q_+ - q_floor(delta) near zero)
+
+========================================================================================
+PART 5: THE NOTE RECORDS THE LOW-SLACK BOUNDARY-BAND CONCLUSION
+========================================================================================
+  [PASS] The note records the two transition samples and the preferred recovered floor
+  [PASS] The note records that the split-2 undercut is confined to a narrow low-slack boundary band
+  [PASS] The note keeps the boundary honest: this is a candidate on broad exact-bundle boxes, not theorem closure
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact compact-branch split-2 broad-bundle verdict:
+    - the broad-box split-2 minimum is pinned to the upper-m / lower-slack boundary
+    - that minimum rises monotonically with the active slack floor
+    - the undercut of the preferred recovered floor is confined to a narrow low-slack band
+      0.195 <= q_+ - q_floor(delta) <= 0.1975 on the tested split-2 broad box
+    - once q_+ - q_floor(delta) >= 0.2, the tested split-2 broad box is already above the preferred floor
+  RESULT: the split-2 broad-bundle obstruction localizes to a narrow low-slack boundary band
+
+SUMMARY: PASS=30 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,45 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_layered_loop_threshold.py
+runner_sha256: d90ba0064e5e7126a50482eb372b8ca934e6dd03258c8a39f3107cbfca8a465f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.47
+status: ok
+----- stdout -----
+========================================================================================================================
+STAGGERED LAYERED LOOP THRESHOLD
+  Minimal layered-loop geometry for native gauge/current closure
+  Retained force battery: Born/linearity, norm, force sign, F∝M, achromatic force,
+  equivalence, robustness, and strict native gauge closure
+========================================================================================================================
+  dt=0.12, steps=10, mass=0.3, G=8.0, source_strength=0.0004
+  strict gauge thresholds: J_span>1.0e-04, |J(0)-J(2pi)|<1.0e-08
+
+REFERENCE CONTROLS
+control_dag            n=36  reach=8  srcdeg=1 plaq=0  loop@=na cycle=no cyc_len=na struct=sc0/ld0.45/deg2  retained=8/8 force=+3.787e-03 F~M=1.000 ach=1.70e-16 eq=1.68e-16 rob=3/3 J_span=N/A J_resid=N/A gauge=N/A
+control_sparse_cycle   n=55  reach=28 srcdeg=2 plaq=na loop@=na cycle=yes cyc_len=4  struct=sc0/ld0.59/deg4  retained=7/8 force=+3.851e-03 F~M=1.000 ach=1.13e-16 eq=0.00e+00 rob=3/3 J_span=3.370e-35 J_resid=6.882e-36 gauge=FAIL
+two_rail_no_loop       n=36  reach=15 srcdeg=2 plaq=0  loop@=na cycle=no cyc_len=na struct=sc0/ld0.00/deg2  retained=8/8 force=+3.965e-03 F~M=1.000 ach=1.69e-16 eq=1.31e-16 rob=3/3 J_span=N/A J_resid=N/A gauge=N/A
+
+THRESHOLD MAP
+single_loop_l1         n=36  reach=15 srcdeg=2 plaq=1  loop@=1  cycle=yes cyc_len=4  struct=sc0/ld0.00/deg3  retained=8/8 force=+3.965e-03 F~M=1.000 ach=1.69e-16 eq=1.31e-16 rob=3/3 J_span=4.939e-02 J_resid=2.073e-18 gauge=PASS
+single_loop_l2         n=36  reach=15 srcdeg=2 plaq=1  loop@=2  cycle=yes cyc_len=6  struct=sc0/ld0.00/deg3  retained=8/8 force=+3.965e-03 F~M=1.000 ach=1.69e-16 eq=1.31e-16 rob=3/3 J_span=1.403e-02 J_resid=1.626e-19 gauge=PASS
+single_loop_l3         n=36  reach=15 srcdeg=2 plaq=1  loop@=3  cycle=yes cyc_len=8  struct=sc0/ld0.00/deg3  retained=8/8 force=+3.965e-03 F~M=1.000 ach=1.69e-16 eq=1.31e-16 rob=3/3 J_span=4.354e-03 J_resid=5.762e-20 gauge=PASS
+single_loop_l4         n=36  reach=15 srcdeg=2 plaq=1  loop@=4  cycle=yes cyc_len=10 struct=sc0/ld0.00/deg3  retained=8/8 force=+3.965e-03 F~M=1.000 ach=1.69e-16 eq=1.31e-16 rob=3/3 J_span=1.610e-03 J_resid=1.804e-19 gauge=PASS
+single_loop_l5         n=36  reach=15 srcdeg=2 plaq=1  loop@=5  cycle=yes cyc_len=12 struct=sc0/ld0.00/deg3  retained=8/8 force=+3.965e-03 F~M=1.000 ach=1.69e-16 eq=1.31e-16 rob=3/3 J_span=7.630e-04 J_resid=4.036e-19 gauge=PASS
+single_loop_l6         n=36  reach=15 srcdeg=2 plaq=1  loop@=6  cycle=yes cyc_len=14 struct=sc0/ld0.00/deg3  retained=8/8 force=+3.965e-03 F~M=1.000 ach=1.69e-16 eq=1.31e-16 rob=3/3 J_span=1.302e-03 J_resid=6.391e-19 gauge=PASS
+
+DECISION
+  freeze negative control: control_dag / layered_bipartite_dag_s13_n36
+  cycle existence alone is not enough: control_sparse_cycle keeps a cycle but stays gauge=FAIL
+  minimal nearby closure: two source-connected rails plus one local K2,2 plaquette on any tested layer window
+  weakest passing one-plaquette case: single_loop_l5 (cycle length=12, J_span=7.630e-04)
+  sparse irregular cycle holdout span: 3.370e-35 (100000000000000004764729344.0x below threshold)
+
+Interpretation:
+  - The sparse DAG holdout stays the correct negative control for gauge/current.
+  - A single local even plaquette is sufficient to recover native closure without losing the force battery.
+  - The passing threshold families remain bipartite/local: same-color defects stay at 0 and long-edge
+    fraction stays at 0.00.
+
+----- stderr -----
+

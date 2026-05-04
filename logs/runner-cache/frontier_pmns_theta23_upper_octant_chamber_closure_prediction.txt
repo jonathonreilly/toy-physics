@@ -1,0 +1,176 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_theta23_upper_octant_chamber_closure_prediction.py
+runner_sha256: 33d21b7393da80aad6813e31cde4802c6b96ede06779bdfca87a86d4367ed7e7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.53
+status: ok
+----- stdout -----
+========================================================================================
+G1 PHYSICIST-K — θ_23 chamber-closure threshold prediction
+========================================================================================
+
+Sharpens the adversarial input-sensitivity of the PMNS chamber pin
+into a falsifiable conditional/support prediction of the selector closure:
+given PDG-central (s12^2, s13^2), the selector chamber closure admits
+an interior solution only if s23^2 >= threshold. The threshold
+surface lies entirely in the upper octant (> 0.5), yielding a
+concrete θ_23 upper-octant conditional/support prediction testable at JUNO,
+DUNE, and Hyper-K.
+
+========================================================================================
+Part 1: reproduce adversarial s23^2 sweep at central (s12^2, s13^2)
+========================================================================================
+ fixed s12^2 = 0.307, s13^2 = 0.0218
+     s23^2        m    delta      q_+  chamber dist status
+    0.5730   0.5031   0.9783   0.7876     +0.132986 INTERIOR (+1σ)
+ [PASS (D)] adversarial row s23^2=0.573: expect interior=True (dist=+0.1330)
+    0.5680   0.5302   0.9693   0.7749     +0.111246 INTERIOR (NuFit UO)
+ [PASS (D)] adversarial row s23^2=0.568: expect interior=True (dist=+0.1112)
+    0.5450   0.6571   0.9338   0.7150     +0.015856 INTERIOR (central)
+ [PASS (D)] adversarial row s23^2=0.545: expect interior=True (dist=+0.0159)
+    0.5200   0.7930   0.9043   0.6505     -0.078158 OUTSIDE (-1σ)
+ [PASS (D)] adversarial row s23^2=0.52: expect interior=False (dist=-0.0782)
+    0.4450   1.1588   0.8486   0.4795     -0.304936 OUTSIDE (NuFit LO)
+ [PASS (D)] adversarial row s23^2=0.445: expect interior=False (dist=-0.3049)
+
+========================================================================================
+Part 2: exact s23^2 threshold at central (s12^2, s13^2) = (0.307, 0.0218)
+========================================================================================
+ bracket: dist(0.520) = -0.078158, dist(0.545) = +0.015856
+ [PASS (D)] bracket has opposite signs
+ brentq threshold: s23^2_min = 0.54096981788906
+ pinned point at threshold: (m, δ, q_+) = (0.6792663758, 0.9284955271, 0.7044976347)
+ q_+ + δ - sqrt(8/3) at threshold = -2.66e-15 (should be 0)
+ [PASS (D)] threshold saturates chamber boundary q_+ + δ = sqrt(8/3) (|saturation|=2.66e-15)
+ [PASS (D)] threshold lies strictly above maximal mixing s23^2 = 0.5 (s23^2_min = 0.540970 > 0.500)
+ [PASS (D)] threshold numerically matches 0.540970 to 6 digits (val=0.54096982)
+ [PASS (D)] threshold lies below NuFit 5.3 upper-octant best-fit 0.568 (0.568 - threshold = +0.0270)
+ [PASS (D)] threshold lies above NuFit 5.3 lower-octant alternative 0.445 (threshold - 0.445 = +0.0960)
+
+========================================================================================
+Part 3: threshold surface s23^2_min(s12^2, s13^2) over 3-sigma rectangle
+========================================================================================
+ NuFit 5.3 NO 3-sigma rectangle: s12^2 in (0.27, 0.341), s13^2 in (0.02029, 0.02391)
+    s12^2      s13^2    s23^2_min     (m_t    delta_t       q_t)      q+d    |d-q|
+   0.2700    0.02029   0.54760099 ( 0.6675     0.9547     0.6783)   1.6330   0.2764
+   0.2700    0.02210   0.54144962 ( 0.7087     0.9512     0.6818)   1.6330   0.2695
+   0.2700    0.02391   0.53581235 ( 0.7484     0.9483     0.6847)   1.6330   0.2636
+   0.3055    0.02029   0.54609901 ( 0.6461     0.9330     0.7000)   1.6330   0.2330
+   0.3055    0.02210   0.54006263 ( 0.6868     0.9287     0.7043)   1.6330   0.2245
+   0.3055    0.02391   0.53454002 ( 0.7259     0.9250     0.7080)   1.6330   0.2170
+   0.3410    0.02029   0.54481488 ( 0.6267     0.9133     0.7197)   1.6330   0.1935
+   0.3410    0.02210   0.53887948 ( 0.6668     0.9083     0.7247)   1.6330   0.1836
+   0.3410    0.02391   0.53345752 ( 0.7054     0.9038     0.7292)   1.6330   0.1746
+ threshold range over rectangle: [0.533458, 0.547601]
+ [PASS (D)] threshold surface range lies entirely above maximal mixing (0.5) (min threshold = 0.533458 > 0.500)
+ [PASS (D)] threshold surface range lies entirely above NuFit lower-octant 3σ (~0.473) (min threshold = 0.533458 > 0.473)
+ [PASS (D)] threshold surface range lies below NuFit upper-octant best-fit 0.568 (max threshold = 0.547601 < 0.568)
+ [PASS (D)] threshold at PDG central (0.307, 0.0218) is the grid center
+
+========================================================================================
+Part 4: current NuFit 5.3 / PDG central values give valid chamber closure
+========================================================================================
+ PDG 2024 central (0.307, 0.0218, 0.545): (m,δ,q) = (0.65706,0.93381,0.71504), dist = +0.01586
+ [PASS (D)] PDG 2024 central triple lies inside chamber (the PMNS-closure theorem pin) (dist = +0.0159)
+ [PASS (D)] the PMNS-closure theorem pin (m,δ,q) reproduced
+ NuFit 5.3 UO  (0.307, 0.0218, 0.568): (m,δ,q) = (0.53024,0.96930,0.77494), dist = +0.11125
+ [PASS (D)] NuFit 5.3 NO upper-octant best-fit lies deep inside chamber (dist = +0.1112)
+ NuFit 5.3 LO  (0.307, 0.0218, 0.445): (m,δ,q) = (1.15880,0.84857,0.47949), dist = -0.30494
+ [PASS (D)] NuFit 5.3 NO lower-octant alternative lies OUTSIDE chamber (dist = -0.3049 (OUTSIDE chamber))
+
+========================================================================================
+Part 5: chamber-boundary-saturation vs Schur-Q locus
+========================================================================================
+ sqrt(8/3) = 1.63299316185545
+ 2 * sqrt(6)/3 = 1.63299316185545
+ [PASS (D)] Schur-Q point (δ=q=sqrt(6)/3) lies exactly on chamber boundary q+δ = sqrt(8/3) (diff = -2.22e-16)
+ Threshold point at central: (δ_t, q_t) = (0.928496, 0.704498)
+ Schur-Q point:       (δ_S, q_S) = (0.816497, 0.816497)
+ [PASS (D)] Threshold point saturates boundary (q_+ + δ = sqrt(8/3)) (saturation = -2.66e-15)
+ |Schur-Q − threshold| along boundary = 0.158390
+ [PASS (D)] Threshold point is DIFFERENT from Schur-Q point (distance = 0.1584 > 0.1)
+ [PASS (D)] Chamber-boundary coincidence: both PMNS-threshold and Schur-Q lie on the SAME line q_+ + δ = sqrt(8/3) (|boundary sums agree| = 2.44e-15)
+
+ Schur-Q ray (δ=q=sqrt(6)/3) observational triples vs m:
+        m    s12^2    s13^2    s23^2   sin δ_CP
+   0.3000   0.6437   0.0133   0.5675    -0.6227
+   0.3500   0.6227   0.0144   0.5610    -0.7469
+   0.4000   0.6009   0.0158   0.5548    -0.8426
+   0.4500   0.5790   0.0174   0.5488    -0.9120
+   0.5000   0.5576   0.0191   0.5429    -0.9585
+   0.5500   0.5370   0.0210   0.5373    -0.9860
+   0.6000   0.5175   0.0230   0.5318    -0.9984
+   0.6500   0.4995   0.0252   0.5266    -0.9990
+   0.7000   0.4830   0.0274   0.5215    -0.9909
+   0.7500   0.4680   0.0297   0.5165    -0.9764
+   0.8000   0.4545   0.0320   0.5118    -0.9574
+   0.8500   0.4424   0.0344   0.5072    -0.9354
+   0.9000   0.4315   0.0369   0.5027    -0.9115
+ Schur-Q best-match-to-s13 at m≈0.550: s12^2=0.5370, s13^2=0.0210, s23^2=0.5373
+ [PASS (D)] Schur-Q ray DOES NOT reproduce PDG central s12^2 = 0.307 simultaneously (|s12^2_SchurQ - 0.307| = 0.230)
+
+========================================================================================
+Part 6: formalized theta_23 upper-octant conditional/support prediction
+========================================================================================
+ Prediction statement:
+
+  Given the retained PMNS-as-f(H) map and the same imposed branch-choice
+  rule used by the chamber pin, the H-diagonalization admits a
+  chamber-interior inverse image of the observed PMNS angles ONLY IF
+
+    s23^2 >= s23^2_min(s12^2, s13^2)
+
+  With s12^2, s13^2 in the current NuFit 5.3 NO 3-sigma
+  rectangle [0.27,0.341] × [0.02029,0.02391],
+  the threshold surface has range [0.5335, 0.5476].
+
+  At central (s12^2, s13^2) = (0.307, 0.0218),
+    s23^2_min = 0.540970
+
+  Since s23^2_min > 0.5 across the entire 3-sigma rectangle, the
+  selector chamber closure REQUIRES s23^2 in the UPPER octant, and in
+  fact s23^2 >= 0.5410 at PDG central.
+ [PASS (D)] threshold surface is entirely in the upper octant (s23^2 > 0.5) (min=0.533458 > 0.500)
+ [PASS (D)] threshold surface is entirely below NuFit 5.3 NO upper-octant best-fit 0.568 (max=0.547601 < 0.568)
+ [PASS (D)] lower-octant alternative (0.445) lies below minimum threshold (0.5335)
+ [PASS (D)] upper-octant best-fit (0.568) lies above maximum threshold (0.5476)
+
+ Falsifiability timeline:
+  JUNO  (2026 first data, ~2030 precision): Δ(s23^2) ~ 0.02 octant
+      resolution via medium-baseline reactor + atmospheric combo.
+  T2K/NOvA combined (ongoing): current ~1.3σ UO preference.
+  DUNE  (2030+): direct s23^2 measurement via atmospheric neutrinos
+      and appearance; expected ~0.01 (stat) on s23^2.
+  Hyper-K (2027+): large mass atmospheric + accelerator; octant at >3σ.
+
+  FALSIFICATION CRITERIA (conditional/support):
+   • Global fit moving s23^2 below 0.5335 at 3σ FALSIFIES the selector closure
+    at PDG central (s12^2, s13^2). (Current NuFit LO 3σ edge ~ 0.445.)
+   • Octant determination settling to lower octant at >3σ FALSIFIES
+    the selector closure unconditionally (since threshold surface > 0.5).
+ [PASS (D)] prediction yields a concrete falsifiable octant claim (lower octant would falsify the selector closure)
+
+========================================================================================
+Part 7: convergence diagnostics on threshold
+========================================================================================
+ bracket [0.530, 0.550]: s23^2_min = 0.54096981788906
+ bracket [0.525, 0.545]: s23^2_min = 0.54096981788906
+ bracket [0.535, 0.546]: s23^2_min = 0.54096981788906
+ [PASS (D)] threshold stable across bracket choices to 10 digits (max diff = 3.33e-16)
+ [PASS (D)] threshold matches Part 2 value
+
+========================================================================================
+ PASS = 31
+ FAIL = 0
+========================================================================================
+
+Summary:
+ Threshold s23^2_min at PDG central (0.307, 0.0218) = 0.540970
+ Threshold surface over NuFit 3σ rectangle lies in upper octant (>0.5).
+ NuFit 5.3 NO best-fit 0.568 ADMITS closure; 0.445 (LO) DOES NOT.
+ the selector closure conditionally predicts θ_23 upper octant —
+ falsifiable at JUNO/DUNE/Hyper-K under the same branch-choice rule.
+
+----- stderr -----
+

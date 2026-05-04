@@ -1,0 +1,55 @@
+===== runner cache v1 =====
+runner: scripts/DM_WILSON_DIRECT_DESCENDANT_LOCAL_SCHUR_SOURCE_FAMILY_THEOREM_2026_04_18.py
+runner_sha256: 002c5b1286f616f66bf7509f6229be0ba3a084f21df3af06b2a0753e8205691a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT DESCENDANT LOCAL SCHUR SOURCE-FAMILY REDUCTION
+========================================================================================
+
+========================================================================================
+PART 1: THE CHARGED SUPPORT EMBEDDING IS ALREADY A STRUCTURED RANK-3 MAP
+========================================================================================
+  [PASS] Phi_e is multiplicative on arbitrary complex matrices  (defect=0.00e+00)
+  [PASS] Phi_e is *-preserving  (defect=0.00e+00)
+  [PASS] The unit image is the rank-3 charged support projector  (rank=3)
+  [PASS] The Hermitian restriction preserves Jordan products  (defect=0.00e+00)
+  [PASS] The Hermitian restriction preserves Lie products  (defect=0.00e+00)
+
+========================================================================================
+PART 2: THE NORMALIZED DETERMINANT RESPONSE REDUCES EXACTLY TO THE SCHUR BLOCK
+========================================================================================
+  [PASS] Both ambient completions realize the prescribed charged Schur complement  (errs=(7.76e-18,6.22e-17))
+  [PASS] The full determinant ratio matches the reduced Schur determinant ratio for completion 1  (err=1.35e-15)
+  [PASS] The full determinant ratio matches the reduced Schur determinant ratio for completion 2  (err=2.86e-16)
+  [PASS] The normalized observable response equals the local Schur response for completion 1  (err=1.78e-15)
+  [PASS] The normalized observable response equals the local Schur response for completion 2  (err=0.00e+00)
+
+========================================================================================
+PART 3: THE FIRST VARIATION IS EXACTLY Re Tr(L_e^{-1} X)
+========================================================================================
+  [PASS] The derivative of the full observable response matches Re Tr(L_e^{-1} X)  (fd=0.93501143, analytic=0.93501144)
+  [PASS] For Hermitian probes the same derivative equals Tr(H_e X)  (err=0.00e+00)
+
+========================================================================================
+PART 4: NINE HERMITIAN PROBES RECONSTRUCT THE DESCENDED H_e EXACTLY
+========================================================================================
+  [PASS] The standard 9-channel Hermitian probe family reconstructs H_e exactly  (err=0.00e+00)
+  [PASS] The reconstructed H_e is Hermitian  (err=0.00e+00)
+
+========================================================================================
+PART 5: AMBIENT COMPLETION UNCERTAINTY DOES NOT CHANGE THE LOCAL DESCENDANT LAW
+========================================================================================
+  [PASS] Different ambient completions with the same L_e give the same first variation on X  (err=1.78e-15)
+  [PASS] Different ambient completions with the same L_e give the same first variation on Y  (err=0.00e+00)
+  [PASS] The two ambient completions are genuinely different matrices  (matrix_diff=8.078)
+
+========================================================================================
+SUMMARY: PASS=17 FAIL=0
+========================================================================================
+
+----- stderr -----
+

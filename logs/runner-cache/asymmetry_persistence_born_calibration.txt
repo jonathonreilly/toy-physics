@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/asymmetry_persistence_born_calibration.py
+runner_sha256: a27aed9650dc7346531bf64f444cc0b17334e73cf6c45079714dc34c1b042867
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

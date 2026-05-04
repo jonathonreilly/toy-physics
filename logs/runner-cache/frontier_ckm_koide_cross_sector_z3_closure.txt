@@ -1,0 +1,104 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_koide_cross_sector_z3_closure.py
+runner_sha256: 9afcffb342f1e3b87736917b6941685516fe6d5346d404752dadf6c92c967e4c
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.05
+status: nonzero_exit
+----- stdout -----
+========================================================================================
+Cross-sector closure N_gen = N_color = 3 via retained-tier authorities
+See docs/CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+R1: Read N_gen from THREE_GENERATION_STRUCTURE_NOTE (retained authority)
+----------------------------------------------------------------------------------------
+  [PASS] THREE_GENERATION_STRUCTURE_NOTE.md exists on retained surface
+  Extracted Status: ''
+  Tier classification (parsed): unknown
+  [FAIL] THREE_GENERATION_STRUCTURE_NOTE has Status text containing 'retained' (no 'support')
+  [PASS] Authority establishes 'three-generation' matter structure
+  N_gen (read from retained authority): 3
+  [PASS] R1: N_gen = 3 read from retained authority
+
+----------------------------------------------------------------------------------------
+R2: Read N_color from CKM_MAGNITUDES_STRUCTURAL_COUNTS (retained authority)
+----------------------------------------------------------------------------------------
+  [PASS] CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM exists on main
+  Extracted Status: 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
+  [PASS] CKM_MAGNITUDES_STRUCTURAL_COUNTS Status text contains 'retained' (no 'support')
+  Pattern 'n_color = N' search: n_color = 3
+  N_color (read from retained authority): 3
+  [PASS] R2: N_color = 3 read from retained authority
+
+----------------------------------------------------------------------------------------
+R3: Cross-sector closure N_gen = N_color = 3 by direct retained equality
+----------------------------------------------------------------------------------------
+  N_gen   (R1, retained from THREE_GENERATION_STRUCTURE) = 3
+  N_color (R2, retained from CKM_MAGNITUDES)             = 3
+  Both retained values are 3, so N_gen = N_color = 3.
+  [PASS] R3: N_gen = 3 (read from retained authority)
+  [PASS] R3: N_color = 3 (read from retained authority)
+  [PASS] R3: N_gen = N_color (direct retained equality)
+  [PASS] R3: N_gen = N_color = 3 (closure)
+
+----------------------------------------------------------------------------------------
+Framework primitive: Z^3 spatial substrate (retained axiom)
+----------------------------------------------------------------------------------------
+  [PASS] MINIMAL_AXIOMS_2026-04-11.md exists on retained surface
+  [PASS] MINIMAL_AXIOMS retains Z^3 spatial substrate (axiom 2)
+
+----------------------------------------------------------------------------------------
+Auxiliary support-tier reading (NOT load-bearing for closure)
+----------------------------------------------------------------------------------------
+  CL3_COLOR_AUTOMORPHISM_THEOREM Status: 'reviewed exact algebraic support theorem on current `main`; numerically verified'
+  CL3_COLOR_AUTOMORPHISM_THEOREM tier:   support
+
+  CL3_TASTE_GENERATION_THEOREM Status:   'reviewed exact algebraic support theorem on current `main`; numerically verified'
+  CL3_TASTE_GENERATION_THEOREM tier:     support
+
+  These are SUPPORT-tier on main and are NOT load-bearing for the closure R3.
+  The closure stands on the retained-tier R1 (THREE_GENERATION) + R2 (CKM_MAGNITUDES) only.
+  The CL3 support-tier theorems are auxiliary structural reading: shared Z^3 provenance motif.
+  [PASS] CL3_COLOR_AUTOMORPHISM is support-tier (not retained closure authority)
+  [PASS] CL3_TASTE_GENERATION is support-tier (not retained closure authority)
+  [PASS] CL3 support theorems exist on main (auxiliary reading available)
+
+----------------------------------------------------------------------------------------
+This closure does NOT promote any support-tier branches to retained
+----------------------------------------------------------------------------------------
+  The closure R3 is established by direct retained equality of two retained values.
+  It does NOT promote:
+    - CL3_COLOR_AUTOMORPHISM_THEOREM (remains support-tier)
+    - CL3_TASTE_GENERATION_THEOREM (remains support-tier)
+    - Eight prior Koide-bridge SUPPORT-tier branches (they remain support)
+    - Cross-sector A²-Koide_VCB bridge SUPPORT_NOTE (remains support)
+
+  The closure is STRUCTURALLY MINIMAL: it equates two independently-retained values.
+  [PASS] No promotion claim: closure is direct retained equality only
+
+----------------------------------------------------------------------------------------
+Summary of CLOSURE
+----------------------------------------------------------------------------------------
+  CLOSURE THEOREM (positive, retained-tier authorities only):
+
+    R1: N_gen = 3                                    [retained THREE_GENERATION_STRUCTURE]
+    R2: N_color = 3                                  [retained CKM_MAGNITUDES_STRUCTURAL_COUNTS]
+    R3: N_gen = N_color = 3                          [direct retained equality]
+
+  This is structurally minimal: closure by trivial arithmetic on two retained values.
+
+  Auxiliary support-tier reading (NOT load-bearing): shared Z^3 provenance motif via
+  CL3_COLOR_AUTOMORPHISM and CL3_TASTE_GENERATION (both support-tier on main).
+
+  This note does NOT promote any support-tier branch to retained closure.
+  Specifically: Koide-bridge SUPPORT branches remain support-tier.
+
+========================================================================================
+TOTAL: PASS=16, FAIL=1
+PASSED: 16/17
+========================================================================================
+
+----- stderr -----
+

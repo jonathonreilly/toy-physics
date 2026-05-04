@@ -1,0 +1,69 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_split1_window_bundle_dominance_candidate.py
+runner_sha256: 5a5412acbbfa3aff2d0e0e830302a4b38f51725f33af8c901e44b0c2d1cd6bc9
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 16.48
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE SPLIT-1 WINDOW BUNDLE-DOMINANCE CANDIDATE
+========================================================================================
+
+Question:
+  Can the split-1 m-window already be pushed toward local dominance directly
+  on the exact shift-quotient bundle of the compact branch?
+
+========================================================================================
+PART 1: THE SPLIT-1 WINDOW ON THE EXACT BUNDLE HAS A BROAD TEST DOMAIN
+========================================================================================
+  [PASS] The preferred recovered repair floor is unchanged on the compact branch  (preferred=1.586874714730)
+  [PASS] The split-1 dominance test is posed directly on the exact shift-quotient bundle over (m,delta,r31)  (m in [-1.16,-1.10], delta in [-2.5,2.5], r31 in [0.5,4.0])
+  [PASS] The split-1 window lies entirely on the rival-side m-range identified by the obstruction note  (window=(-1.16, -1.1))
+
+========================================================================================
+PART 2: A BROAD CORE GRID AND GLOBAL REFINEMENT STAY ABOVE THE PREFERRED FLOOR
+========================================================================================
+  [PASS] The coarse broad-box split-1 grid never undercuts the preferred recovered floor  ((best_grid,gap)=(2.308862090722,7.219873759926e-01))
+  [PASS] The global differential-evolution refinement on the same split-1 box also stays above the preferred floor  ((best_de,gap)=(2.308603400914,7.217286861842e-01))
+  [PASS] The compact-box split-1 minimum is reproduced stably by grid and global refinement  ((grid,de)=(2.308862090722,2.308603400914))
+  [PASS] The refined split-1 minimizer sits on the lower-r31 boundary rather than drifting into a new interior low basin  (best_de_point=[-1.1         1.08840241  0.5       ])
+
+  best grid point = [-1.1  1.1  0.5]
+  best grid repair= 2.308862090722
+  best DE point   = [-1.1         1.08840241  0.5       ]
+  best DE repair  = 2.308603400914
+
+========================================================================================
+PART 3: HIGH-R31 AND HIGH-DELTA TAILS ARE FAR HIGHER THAN THE PREFERRED FLOOR
+========================================================================================
+  [PASS] The high-r31 split-1 tail challenge stays far above the preferred floor  ((best_high_r31,gap)=(6.201953117824,4.615078403094e+00))
+  [PASS] The high-|delta| split-1 tail challenge also stays far above the preferred floor  ((best_high_delta,gap)=(3.988395902207,2.401521187478e+00))
+  [PASS] Both split-1 tail challenges are much higher than the broad core minimum  ((high_r31,high_delta)=(6.201953117824,3.988395902207))
+
+  best high-r31 point   = [-1.1   1.75  4.5 ]
+  best high-r31 repair  = 6.201953117824
+  best high-|delta| point = [-1.1  3.   1.2]
+  best high-|delta| repair= 3.988395902207
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE SPLIT-1 BUNDLE-DOMINANCE CANDIDATE
+========================================================================================
+  [PASS] The note records the broad split-1 compact-box minimum above the preferred floor
+  [PASS] The note records the high-r31 and high-|delta| tail challenges
+  [PASS] The note keeps the boundary honest: broad exact-bundle dominance candidate, not theorem closure
+
+========================================================================================
+RESULT
+========================================================================================
+  Split-1 exact-bundle dominance candidate:
+    - on a broad exact-bundle box the split-1 m-window stays strictly above
+      the preferred recovered repair floor
+    - the refined minimum sits on the lower-r31 boundary
+    - high-r31 and high-|delta| tail challenges are much higher still
+  RESULT: strong local split-1 bundle-dominance candidate; not theorem closure
+
+SUMMARY: PASS=13 FAIL=0
+
+----- stderr -----
+

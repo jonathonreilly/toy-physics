@@ -18,8 +18,25 @@ set -euo pipefail
 REPO_ROOT="$(git rev-parse --show-toplevel)"
 cd "${REPO_ROOT}"
 
-# Quick path: skip if no docs/ files are staged.
-if ! git diff --cached --name-only | grep -qE '^docs/.*\.md$'; then
+STAGED="$(git diff --cached --name-only)"
+
+# Runner cache staleness: if any staged file is a primary runner under
+# scripts/, its cache MUST reflect the new SHA-256. Otherwise the
+# auditor would read stale evidence — exactly what the cache exists to
+# prevent.
+if echo "$STAGED" | grep -qE '^scripts/.*\.py$'; then
+    if ! python3 scripts/precompute_audit_runners.py --staged-only --check-only; then
+        echo "[pre-commit] runner cache STALE for one or more staged runners."
+        echo "  Refresh with:"
+        echo "    python3 scripts/precompute_audit_runners.py --staged-only"
+        echo "  then 'git add logs/runner-cache/' and commit again."
+        echo "  (Pass --no-verify only if you understand the audit-evidence cost.)"
+        exit 1
+    fi
+fi
+
+# Quick path: skip ledger checks if no docs/ files are staged.
+if ! echo "$STAGED" | grep -qE '^docs/.*\.md$'; then
     exit 0
 fi
 

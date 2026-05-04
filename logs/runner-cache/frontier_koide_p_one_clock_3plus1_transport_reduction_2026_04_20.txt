@@ -1,0 +1,48 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_p_one_clock_3plus1_transport_reduction_2026_04_20.py
+runner_sha256: f6157568fe109ef0d41108e1b47d6a371f52d96e566de3a82a700e98f670c986
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.50
+status: ok
+----- stdout -----
+========================================================================
+Koide P one-clock 3+1 transport reduction
+========================================================================
+
+(A) Retained anomaly-forced-time ambient
+------------------------------------------------------------------------
+  [PASS] (A1) The retained theorem fixes d_t = 1 uniquely
+  [PASS] (A2) The retained theorem fixes spacetime as 3+1 dimensional
+  [PASS] (A3) The retained theorem uses single-clock codimension-1 evolution
+
+(B) The physical first branch and its unique target point
+------------------------------------------------------------------------
+  [PASS] (B1) The positivity threshold carries delta = pi/12  (delta_pos = 0.261799387799)
+  [PASS] (B2) The unphased point carries delta = 0  (delta_0 = 0.000000000000)
+  [PASS] (B3) The target 2/d^2 = 2/9 lies strictly inside the physical first branch  (0 < 2/9 = 0.222222222222 < pi/12 = 0.261799387799)
+  [PASS] (B4) There is a unique interior first-branch point m_* with delta = 2/d^2  (m_* = -1.160443440065)
+
+(C) The local selected-line packet is too small
+------------------------------------------------------------------------
+  [PASS] (C1) The intrinsic Berry packet is locally fixed: A = dtheta, F = 0
+  [PASS] (C2) The equator Fubini-Study density is constant
+  [PASS] (C3) The structural scalar rho_delta = |Im(b_F)|^2 is branch-constant  (rho_delta = 0.222222222222)
+  [PASS] (C4) Yet delta(m) varies strictly along the first branch  (delta' range = [-0.293421, -0.161625])
+  [PASS] (C5) Two interior points share the same local packet  (same (A_theta, g_FS, rho_delta))
+  [PASS] (C6) Those same points carry different Berry holonomies  (|delta_a-delta_b| = 0.146620)
+
+(D) Reduction consequence
+------------------------------------------------------------------------
+  [PASS] (D1) The target point exists uniquely but is not locally distinguished
+  [PASS] (D2) So any native closure of P must use branch-global or ambient data  (not an intrinsic local selected-line scalar law)
+
+========================================================================
+Summary: PASS=15, FAIL=0
+========================================================================
+
+The retained inputs reduce P to a one-clock ambient 3+1
+continuation/transport or extra Wilson/lattice phase law.
+
+----- stderr -----
+

@@ -1,0 +1,29 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_kappa_spectrum_operator_bridge_theorem.py
+runner_sha256: 25c5f07181b1d9900d11dd50fce674f9eabfb6cadb245088952381d7fb455b12
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.88
+status: ok
+----- stdout -----
+Section A — symbolic Hermitian circulant and Fourier bridge
+  [PASS] T1 Hermitian circulant: H = H^H symbolically
+  [PASS] T2 Fourier eigenvalues lam_k are real  (lam_k = [a + 2*b1, a - b1 - sqrt(3)*b2, a - b1 + sqrt(3)*b2])
+  [PASS] T3 bridge a_0 = sqrt(3) * a  (symbolic)  (a_0 = sqrt(3)*a)
+  [PASS] T4 bridge |z|^2 = 3 |b|^2  (symbolic)  (|z|^2 = 3*b1**2 + 3*b2**2)
+  [PASS] T5 bridge identity a_0^2 - 2|z|^2 = 3 (a^2 - 2 |b|^2)
+
+Section B — PDG charged-lepton numerical realization
+  [PASS] T6 PDG Koide Q ~ 2/3  (Q = 0.66666051)
+  [PASS] T7 PDG operator-side kappa = a^2/|b|^2 ~ 2  (kappa = 2.00003693)
+
+Section C — random Herm_circ(3) sample scan
+  [PASS] T8 bridge identity holds on 200 random samples (max residual < 1e-10)  (max residual = 2.842e-14)
+
+Section D — closure equivalence under bridge
+  [PASS] T9 operator kappa = 2 implies spectrum a_0^2 = 2|z|^2 (zero residual on sample set)  (|spectrum residual| = 0.000e+00)
+
+TOTAL: PASS=9 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_split2_edge_profile_transition_candidate.py
+runner_sha256: 93bc2903518f24d467659f4fbd469656c370ff18feac25656a20ce43136d09fc
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.61
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE SPLIT-2 EDGE-PROFILE TRANSITION CANDIDATE
+========================================================================================
+
+Question:
+  Can the compact-branch split-2 broad-bundle failure be reduced to a
+  one-dimensional active-slack edge profile?
+
+========================================================================================
+PART 1: THE SPLIT-2 BROAD FAILURE REDUCES TO A ONE-DIMENSIONAL EDGE PROFILE
+========================================================================================
+  [PASS] The preferred recovered floor is unchanged on the compact branch  (preferred=1.586874714730)
+  [PASS] The preferred recovered active slack is unchanged on the compact branch  (slack_pref=0.215677476525)
+  [PASS] So the tested split-2 broad-bundle danger can be studied on the upper-m edge m = -0.14  (previous broad-box minima are already pinned to the upper-m / lower-slack corner)
+
+========================================================================================
+PART 2: THE EDGE PROFILE IS REPRODUCED STABLY ON THE TEST GRID
+========================================================================================
+  [PASS] The split-2 edge-profile sample at s=0.0000 is reproduced stably  ((delta*,R)=(0.997049893395,1.500442491658))
+  [PASS] The split-2 edge-profile sample at s=0.0500 is reproduced stably  ((delta*,R)=(1.015340586826,1.519822893168))
+  [PASS] The split-2 edge-profile sample at s=0.1000 is reproduced stably  ((delta*,R)=(1.032895484591,1.541184222341))
+  [PASS] The split-2 edge-profile sample at s=0.1500 is reproduced stably  ((delta*,R)=(1.049709935161,1.564422358252))
+  [PASS] The split-2 edge-profile sample at s=0.1900 is reproduced stably  ((delta*,R)=(1.062628221090,1.584292566963))
+  [PASS] The split-2 edge-profile sample at s=0.1950 is reproduced stably  ((delta*,R)=(1.064209774218,1.586853268538))
+  [PASS] The split-2 edge-profile sample at s=0.1975 is reproduced stably  ((delta*,R)=(1.064997803629,1.588139902559))
+  [PASS] The split-2 edge-profile sample at s=0.2000 is reproduced stably  ((delta*,R)=(1.065783976339,1.589430707582))
+  [PASS] The split-2 edge-profile sample at s=0.2500 is reproduced stably  ((delta*,R)=(1.081122381400,1.616102219251))
+  [PASS] The split-2 edge-profile sample at s=0.3000 is reproduced stably  ((delta*,R)=(1.095734331659,1.644331050529))
+  [PASS] The tested split-2 edge profile is strictly increasing in the active slack coordinate  (R=[1.500442492, 1.519822893, 1.541184222, 1.564422358, 1.584292567, 1.586853269, 1.588139903, 1.589430708, 1.616102219, 1.644331051])
+
+========================================================================================
+PART 3: THE TRANSITION OCCURS AT ONE EXPLICIT EDGE THRESHOLD
+========================================================================================
+  [PASS] The edge-profile threshold s_* is reproduced stably by one-dimensional root finding  ((s_*,R(s_*))=(0.195041737783,1.586874714730))
+  [PASS] The minimizing delta at the threshold is reproduced stably  (delta_*(s_*)=1.064222961126)
+  [PASS] The preferred recovered point lies outside the tested split-2 danger interval by a positive slack margin  (margin=0.020635738742)
+  [PASS] So on the tested broad split-2 edge the only undercut region is the one-dimensional interval 0 <= s < s_*  (s_*=0.195041737783)
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE ONE-DIMENSIONAL EDGE REDUCTION
+========================================================================================
+  [PASS] The note records the edge-profile threshold, preferred slack, and positive margin
+  [PASS] The note records that the split-2 broad failure reduces to a one-dimensional edge interval
+  [PASS] The note keeps the boundary honest: this is still not interval-certified exact-carrier closure
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact compact-branch split-2 broad-bundle verdict:
+    - the tested broad-bundle danger reduces to the 1D edge profile R_split2(s)
+    - R_split2(s) crosses the preferred recovered floor at s_* = 0.195041737783
+    - the preferred recovered slack is s_pref = 0.215677476525
+    - the resulting broad-bundle margin is s_pref - s_* = 0.020635738742
+  RESULT: the broad split-2 obstruction is now a one-dimensional low-slack edge interval
+
+SUMMARY: PASS=21 FAIL=0
+
+----- stderr -----
+

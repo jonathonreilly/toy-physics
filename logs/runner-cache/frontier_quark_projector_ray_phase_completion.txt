@@ -1,0 +1,92 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_projector_ray_phase_completion.py
+runner_sha256: b9e1f0bab15938ba566d832e4d5b8c55e0b4a8bd811c9d2314ba12e9a0125449
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.34
+status: ok
+----- stdout -----
+========================================================================
+  FRONTIER: Reduced Quark Closure on a Fixed Projector Ray
+========================================================================
+
+========================================================================
+PART 1: Minimal-Surface Anchor
+========================================================================
+
+  anchor m_u/m_c      = 1.683852e-03
+  anchor m_c/m_t      = 7.323604e-03
+  anchor |V_us|       = 0.227244
+  anchor |V_cb|       = 0.042236
+  anchor |V_ub|       = 0.003760
+  anchor J            = 5.102024e-06
+  anchor J/J_atlas    = 0.153162
+  [PASS] The minimal surface still undershoots J by more than 5x  (factor = 6.53)
+
+========================================================================
+PART 2: Reduced Projector-Ray Completions
+========================================================================
+
+  fixed projector ray = +0.408248 +0.912871 i
+  ansatz A            = base + amp_u/d * projector_ray
+  ansatz B            = base + amp_u/d * projector_ray * exp(i phi_shared)
+
+  Phase-free projector amplitudes:
+    m_u/m_c = 1.687804e-03  (dev: -0.529%)
+    m_c/m_t = 7.363291e-03  (dev: -0.182%)
+    amp_u   = +0.785299
+    amp_d   = +0.152232
+    c13_u(total) = +0.323988 +0.716877 i
+    c13_d(total) = +0.082264 +0.138968 i
+    |V_us| = 0.227270899
+    |V_cb| = 0.042170396
+    |V_ub| = 0.003931298
+    J      = 3.275627538e-05
+    arg det(M_u M_d) = 2.665e-15 rad
+    objective score  = 0.137685
+
+  Projector amplitudes + shared phase:
+    m_u/m_c = 1.699906e-03  (dev: +0.184%)
+    m_c/m_t = 7.365977e-03  (dev: -0.146%)
+    amp_u   = -0.814317
+    amp_d   = -0.158082
+    phase   = 177.720825 deg
+    c13_u(total) = +0.365147 +0.729558 i
+    c13_d(total) = +0.090340 +0.141627 i
+    |V_us| = 0.227270765
+    |V_cb| = 0.042170750
+    |V_ub| = 0.003911754
+    J      = 3.337841904e-05
+    arg det(M_u M_d) = 8.882e-16 rad
+    objective score  = 0.014607
+  [PASS] The phase-free projector ansatz already lands within 2% of the atlas J  (ratio = 0.983337)
+  [PASS] The shared-phase projector ansatz matches J within 1%  (ratio = 1.002013)
+  [PASS] The shared-phase projector ansatz keeps both quark ratios within 1%  (dev = (+0.184%, -0.146%))
+  [PASS] The shared-phase projector ansatz matches all CKM magnitudes within 0.1%  (ratios = (1.000001, 0.999932, 0.999685))
+  [PASS] The projector completions keep determinant phase closure  (det phases = (2.665e-15, 8.882e-16))
+  [PASS] One shared phase materially improves the reduced projector fit  (objective ratio = 0.106)
+  [PASS] The shared-phase projector fit lifts J by more than 6x over the minimal anchor  (lift = 6.542x)
+
+========================================================================
+PART 3: Summary
+========================================================================
+
+  Strongest current bounded closure on this branch:
+    one fixed projector ray, two sector amplitudes, and one shared phase
+    are already enough to close the full quark package numerically
+
+  Honest status:
+    this is stronger than the free complex-carrier completion because the
+    added carrier is now compressed to a common ray with minimal extra freedom
+    but it is still bounded because the amplitudes and shared phase are solved,
+    not retained-derived
+
+  Solved shared phase:
+    phi_shared = 177.720825 deg
+
+========================================================================
+  TOTAL: PASS=8, FAIL=0
+========================================================================
+
+----- stderr -----
+

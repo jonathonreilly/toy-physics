@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_resource_fidelity.py
+runner_sha256: d9ca0c36744f9aa71687c58e8fcd1437471a39eefac4857d920096d3a60e10e9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.87
+status: ok
+----- stdout -----
+BOUNDED NON-IDEAL BELL-RESOURCE TELEPORTATION-FIDELITY HARNESS
+Status: planning / first artifact; quantum state teleportation only
+Random input states: 128 plus 6 Pauli-axis probes (seed=20260425)
+Random arbitrary resource matrices: 4
+
+Resource diagnostics:
+  resource                                       F_avg     F_min    p_Phi+   p_Bell*       neg   S_CHSH   BobBias     noSig branchSpan    verdict
+  ideal Phi+ resource                         1.000000  1.000000  1.000000  1.000000 5.000e-01  2.82843 1.110e-16 3.053e-16  2.498e-16  beats 2/3
+  isotropic v=0.90                            0.950000  0.950000  0.925000  0.925000 4.250e-01  2.54558 1.110e-16 2.776e-16  2.498e-16  beats 2/3
+  isotropic v=1/sqrt(2)                       0.853553  0.853553  0.780330  0.780330 2.803e-01  2.00000 5.551e-17 2.220e-16  2.220e-16  beats 2/3
+  isotropic v=1/3 boundary                    0.666667  0.666667  0.500000  0.500000 0.000e+00  0.94281 0.000e+00 2.776e-16  2.220e-16     at 2/3
+  isotropic v=0.30                            0.650000  0.650000  0.475000  0.475000 0.000e+00  0.84853 5.551e-17 2.498e-16  2.220e-16  below 2/3
+  Bell phase-flip p=0.25                      0.833333  0.750000  0.750000  0.750000 2.500e-01  2.23607 1.110e-16 3.053e-16  2.498e-16  beats 2/3
+  Bell phase-flip p=0.50 boundary             0.666667  0.500000  0.500000  0.500000 0.000e+00  2.00000 1.110e-16 3.053e-16  2.498e-16     at 2/3
+  coherent Bell-axis theta=pi/8               0.902369  0.853553  0.853553  0.853553 3.536e-01  2.44949 3.536e-01 2.498e-16  3.536e-01  beats 2/3
+  coherent Bell-axis theta=pi/4 boundary      0.666667  0.500000  0.500000  0.500000 1.110e-16  2.00000 5.000e-01 2.220e-16  5.000e-01     at 2/3
+  amplitude damping both gamma=0.20           0.880000  0.840000  0.820000  0.820000 3.200e-01  2.26274 1.000e-01 3.053e-16  1.000e-01  beats 2/3
+  amplitude damping both gamma=0.50           0.750000  0.750000  0.625000  0.625000 1.250e-01  1.41421 2.500e-01 2.220e-16  2.500e-01  beats 2/3
+  amplitude damping Bob gamma=0.50            0.819036  0.750000  0.728553  0.728553 2.500e-01  2.00000 2.500e-01 2.359e-16  2.498e-16  beats 2/3
+  random two-qubit rho #1                     0.400771  0.291382  0.101157  0.365088 4.948e-02  1.15905 1.510e-01 2.498e-16  3.291e-01  below 2/3
+  random two-qubit rho #2                     0.466959  0.290300  0.200439  0.461101 0.000e+00  1.36362 1.593e-01 2.220e-16  1.446e-01  below 2/3
+  random two-qubit rho #3                     0.438622  0.339431  0.157934  0.380461 0.000e+00  1.06626 2.283e-01 3.053e-16  9.439e-02  below 2/3
+  random two-qubit rho #4                     0.461390  0.385902  0.192085  0.377404 0.000e+00  1.08115 4.667e-02 2.498e-16  1.735e-01  below 2/3
+
+  p_Bell* is only the best overlap among the four Bell labels, not a full
+  local-unitary optimization. noSig is sampled pairwise Bob-state distance
+  before the classical Bell record is available.
+
+Thresholds and limitations:
+  classical qubit average-fidelity benchmark: 0.6666666667
+  fixed Bell-basis protocol uses F_avg = (1 + 2 * <Phi+|rho|Phi+>) / 3
+  fixed-protocol quantum-useful threshold: <Phi+|rho|Phi+> > 0.5
+  isotropic rho(v)=v|Phi+><Phi+|+(1-v)I/4 threshold: v > 1/3
+  isotropic CHSH Horodecki threshold: v > 0.7071067812
+  amplitude damping on both halves numeric fixed-protocol threshold: gamma < 0.9999999851
+  amplitude damping on Bob half numeric fixed-protocol threshold: gamma < 0.8284271247
+  max exact-vs-Bell-overlap formula error in this run: 4.441e-16
+  random arbitrary resources beating 2/3 in this seed: 0/4
+  Bell relabeling may rescue a resource whose largest Bell overlap is not Phi+;
+  this first harness reports that limitation but does not optimize measurements.
+
+No-signaling diagnostics:
+  max trace distance between Bob no-record state and resource Bob marginal: 5.274e-16
+  max pairwise Bob no-record distance across sampled inputs: 3.053e-16
+  max Bob marginal bias from I/2 across resources: 5.000e-01
+  max Bell-outcome probability span across sampled inputs: 5.000e-01
+  A biased Bob marginal or input-dependent Alice outcome distribution is
+  not a pre-message signaling channel; Bob lacks Alice's two-bit record.
+
+Acceptance gates:
+  all resource matrices physical: PASS
+  ideal resource fidelity: PASS
+  fixed Bell-overlap formula: PASS
+  isotropic threshold bracket: PASS
+  Bob pre-message input-independence: PASS
+  corrected channel trace preservation: PASS
+
+Claim boundary:
+  This is quantum state teleportation on a two-qubit resource only.
+  It is not matter teleportation, mass transfer, charge transfer, or FTL transport.
+
+----- stderr -----
+

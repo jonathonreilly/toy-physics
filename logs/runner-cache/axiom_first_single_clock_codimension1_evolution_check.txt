@@ -1,0 +1,77 @@
+===== runner cache v1 =====
+runner: scripts/axiom_first_single_clock_codimension1_evolution_check.py
+runner_sha256: e3780e5367eb58a9170a081f1d4573ab78829dd7bf29fd9478655f30065e7ec4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.22
+status: ok
+----- stdout -----
+========================================================================
+AXIOM-FIRST SINGLE-CLOCK CODIMENSION-1 UNITARY EVOLUTION CHECK
+========================================================================
+
+Verifies the structural content of the single-clock codimension-1
+evolution theorem (Block 12, 2026-05-03):
+  (S1) Stone's theorem: H_phys carries a unique strongly-continuous
+       one-parameter unitary group U(t) = exp(-itH).
+  (S2) Each lattice slice Sigma_t is a codimension-1 Cauchy
+       hypersurface with mutually-commuting equal-time local
+       algebra and finite Lieb-Robinson propagation.
+  (S3) The staggered-Dirac action admits only the temporal
+       direction as an RP-admissible reflection axis (no
+       spatial RP), so the framework has exactly one clock.
+
+Setup:
+  Toy A_min: L-site qubit chain (each site: 2-dim per (R-CL3))
+  H = sum_z h_z, range r = 1, ||h_z|| = J
+  T = exp(-a_tau H), positive Hermitian (per (R-RP))
+
+  L = 6 sites, dim H_phys = 64
+  J = 1.0, a_tau = 0.5
+  ||H||_op = 3.9189
+
+
+------------------------------------------------------------------------
+(S1) STONE'S THEOREM ON H_phys (single-clock unitary evolution)
+------------------------------------------------------------------------
+  [PASS] T1: T = exp(-a_tau H) is Hermitian (||T - T^dag||_op = 1.165e-16)
+  [PASS] T1: T eigenvalues non-negative (positive Hermitian) (min eigval = 0.036227)
+  [PASS] T1: T <= I in operator norm (canonical surface bound) (max eigval = 1.000000)
+  [PASS] T2: H = -(1/a_tau) log(T) self-adjoint (||H - H^dag||_op = 1.256e-15)
+  [PASS] T2: H bounded below (spectrum condition) (min E = 0.000000)
+  [PASS] T3: U(0) = I (||U(0) - I|| = 4.035e-15)
+  [PASS] T3: U(s) U(t) = U(s+t) (group composition) (||U(s)U(t) - U(s+t)|| = 4.070e-15)
+  [PASS] T3: U(t)^dag U(t) = I (unitarity) (||U^dag U - I|| = 7.325e-15)
+  [PASS] T3: strong continuity ||U(t) - I|| -> 0 as t -> 0 (||U(0.0001) - I|| = 6.636e-04, bound = 9.954e-04)
+  [PASS] T3: unique generator H = i d/dt U(t)|_{t=0} (Stone's theorem) (||H_fd - H|| = 4.870e-07, bound = 4.404e-03)
+
+------------------------------------------------------------------------
+(S2) CODIMENSION-1 CAUCHY HYPERSURFACE
+------------------------------------------------------------------------
+  [PASS] T4: equal-time [O_x, O_y] = 0 strictly for x != y (max ||[O_x, O_y]|| = 0.000e+00)
+  [PASS] T5: equal-time local algebra factorises as tensor product (R-CL3 + M1) (||O_x O_y - tensor product|| = 0.000e+00)
+  [PASS] T6: lattice slice is codimension-1 (toy 1+1d: dim_Sigma = 1, dim_Lambda = 2) (codim = 1)
+  [PASS] T6: framework block 1+3d: dim_Sigma = 3, dim_Lambda = 4, codim = 1 (codim = 1)
+  [PASS] T7: finite-speed propagation under T (Lieb-Robinson cone) (v_LR = 5.437, tau = 1.0, cone = 5.437)
+
+------------------------------------------------------------------------
+(S3) UNIQUENESS OF THE REFLECTION AXIS (no second clock)
+------------------------------------------------------------------------
+  [PASS] T8: temporal staggered phase eta_t(theta x) = -eta_t(x) (Sharatchandra) (sample size = 135 sites checked)
+  [PASS] T9: spatial reflection theta_1 fails the temporal-hop sign rule (eta_t(theta_1 x) = +eta_t(x), but (R-RP) requires -eta_t(x))
+  [PASS] T10: staggered-Dirac action does NOT factorise under spatial reflection (||M_reflected_temp + M_temp||_F = 5.6569 (would be 0 if spatial RP held))
+
+========================================================================
+SUMMARY
+========================================================================
+
+  PASS=18 FAIL=0
+
+  All structural checks pass. The lattice form (S1)-(S3) of the
+  single-clock codimension-1 unitary evolution theorem is verified
+  on the toy A_min block. The proof in the companion theorem note
+  is dimension-independent in the spatial direction and applies
+  equally to the framework's Cl(3) on Z^3.
+
+----- stderr -----
+

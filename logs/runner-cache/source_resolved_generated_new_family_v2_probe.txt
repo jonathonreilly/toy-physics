@@ -1,0 +1,69 @@
+===== runner cache v1 =====
+runner: scripts/source_resolved_generated_new_family_v2_probe.py
+runner_sha256: a6eb69c01019f8e0e80d2ddc1c20b295ed5f5f128de4a71638642dc6cac1e41b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.46
+status: ok
+----- stdout -----
+============================================================================================================
+SOURCE-RESOLVED GENERATED NEW FAMILY V2 PROBE
+  split-shell support family, fixed-weight wavefield law test
+============================================================================================================
+family seeds=0..3
+baseline family: retained compact kNN-floor bridge
+new family: three-band split-shell geometry (bands=(-7.5, 0.0, 7.5), floor=7)
+source strengths: [0.001, 0.002, 0.004, 0.008]
+field target max: 0.02
+modes: static Green vs self-consistent wavefield vs fixed-weight wavefield
+observables: zero-source reduction, centroid sign counts, F~M exponent, detector N_eff
+law-first check: compare the fixed-weight wavefield against the self-consistent one
+
+seed=0  bridge/static    zero=0.000e+00 TOWARD=2/4 F~M=0.822 N_eff=6.60
+seed=0  bridge/wavefield zero=0.000e+00 TOWARD=0/4 F~M=0.896 N_eff=5.91
+seed=0  bridge/fixedwave zero=0.000e+00 TOWARD=0/4 F~M=0.916 N_eff=5.87
+seed=0   split/static    zero=0.000e+00 TOWARD=4/4 F~M=0.464 N_eff=8.01
+seed=0   split/wavefield zero=0.000e+00 TOWARD=4/4 F~M=0.531 N_eff=8.16
+seed=0   split/fixedwave zero=0.000e+00 TOWARD=4/4 F~M=0.519 N_eff=8.16
+seed=1  bridge/static    zero=0.000e+00 TOWARD=1/4 F~M=-0.224 N_eff=4.46
+seed=1  bridge/wavefield zero=0.000e+00 TOWARD=2/4 F~M=1.711 N_eff=6.48
+seed=1  bridge/fixedwave zero=0.000e+00 TOWARD=1/4 F~M=0.012 N_eff=5.11
+seed=1   split/static    zero=0.000e+00 TOWARD=0/4 F~M=0.146 N_eff=3.53
+seed=1   split/wavefield zero=0.000e+00 TOWARD=0/4 F~M=-0.085 N_eff=3.53
+seed=1   split/fixedwave zero=0.000e+00 TOWARD=0/4 F~M=0.355 N_eff=3.52
+seed=2  bridge/static    zero=0.000e+00 TOWARD=4/4 F~M=-0.612 N_eff=2.93
+seed=2  bridge/wavefield zero=0.000e+00 TOWARD=4/4 F~M=-0.383 N_eff=2.85
+seed=2  bridge/fixedwave zero=0.000e+00 TOWARD=4/4 F~M=-0.406 N_eff=2.82
+seed=2   split/static    zero=0.000e+00 TOWARD=4/4 F~M=0.494 N_eff=10.38
+seed=2   split/wavefield zero=0.000e+00 TOWARD=4/4 F~M=0.487 N_eff=10.50
+seed=2   split/fixedwave zero=0.000e+00 TOWARD=4/4 F~M=0.454 N_eff=10.25
+seed=3  bridge/static    zero=0.000e+00 TOWARD=0/4 F~M=0.246 N_eff=6.25
+seed=3  bridge/wavefield zero=0.000e+00 TOWARD=0/4 F~M=-1.833 N_eff=5.31
+seed=3  bridge/fixedwave zero=0.000e+00 TOWARD=0/4 F~M=0.398 N_eff=5.95
+seed=3   split/static    zero=0.000e+00 TOWARD=0/4 F~M=0.590 N_eff=11.32
+seed=3   split/wavefield zero=0.000e+00 TOWARD=0/4 F~M=0.590 N_eff=11.03
+seed=3   split/fixedwave zero=0.000e+00 TOWARD=0/4 F~M=0.672 N_eff=11.10
+
+SUMMARY
+ bridge/static     zero=0.000e+00  TOWARD=7/16  F~M=0.058  N_eff=5.06
+ bridge/wavefield  zero=0.000e+00  TOWARD=6/16  F~M=0.098  N_eff=5.14
+ bridge/fixedwave  zero=0.000e+00  TOWARD=5/16  F~M=0.230  N_eff=4.94
+  split/static     zero=0.000e+00  TOWARD=8/16  F~M=0.424  N_eff=8.31
+  split/wavefield  zero=0.000e+00  TOWARD=8/16  F~M=0.381  N_eff=8.30
+  split/fixedwave  zero=0.000e+00  TOWARD=8/16  F~M=0.500  N_eff=8.26
+
+LAW COMPARISON
+  bridge/wavefield  F~M=0.098  N_eff=5.14
+  split/wavefield   F~M=0.381  N_eff=8.30
+  split/fixedwave   F~M=0.500  N_eff=8.26
+
+SAFE READ
+  - The compact generated-family bridge remains closed as before.
+  - The split-shell family still widens support by construction.
+  - The new fixed-weight wavefield is the law-first test: if it improves F~M materially,
+    the broader-support family is helping the weak-field law rather than just detector support.
+  - If the fixed-weight wavefield does not materially beat the current wavefield, this is
+    a bounded bridge/no-go for the law-improvement question on this family.
+
+----- stderr -----
+

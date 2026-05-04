@@ -1,0 +1,54 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_cube_index_graph_shortcut_open_gate.py
+runner_sha256: 91de4e919eda47e8a409d5cfc90915bc9a44610948097f3754c9ba8d92984ba7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.97
+status: ok
+----- stdout -----
+==============================================================================
+SU(3) L_s=2 Cube Index-Graph Shortcut Open Gate
+==============================================================================
+
+--- Geometry ---
+  unique plaquettes: 12
+  PASS: 12 plaquettes constructed
+
+--- Candidate index graph ---
+  nodes: 48
+  identifications: 48
+  connected components: 8
+  PASS: candidate graph count matches expected L_s=2 shortcut
+
+--- Candidate topological factor ---
+  T_lambda(candidate) = d_lambda^(-16)
+  PASS: shortcut exponent is -16
+
+--- Conditional rho and Perron value ---
+  rho_candidate_(0, 0)(6) = 1.000000e+00
+  rho_candidate_(0, 1)(6) = 2.124624e-01
+  rho_candidate_(1, 0)(6) = 2.124624e-01
+  rho_candidate_(1, 1)(6) = 5.587932e-03
+  rho_candidate_(0, 2)(6) = 6.702087e-05
+  rho_candidate_(2, 0)(6) = 6.702087e-05
+  SUPPORT: rho values are conditional on the uniform-pairing trace ansatz
+  Perron eigenvalue: 3.5169423991
+  P_candidate(6): 0.4291049969
+  SUPPORT: candidate Perron value is finite and normalized
+
+--- Bridge comparison ---
+  bridge-support target: 0.5935306800
+  distance: 0.164426
+  epsilon_witness: 3.030e-04
+  SUPPORT: candidate shortcut would not close the bridge witness
+
+Open gate:
+  Prove the actual SU(3) Wigner/intertwiner traces equal d_lambda^(-16),
+  or compute the traces and replace this shortcut candidate.
+
+==============================================================================
+SUMMARY: OPEN PASS=3 SUPPORT=3 FAIL=0
+==============================================================================
+
+----- stderr -----
+

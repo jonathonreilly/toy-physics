@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_split2_dense_grid_lipschitz_dominance_support_2026_04_21.py
+runner_sha256: 4539236051800e94ebb9928f7c252ed6a543125197e6dd6191295c101f07e5df
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

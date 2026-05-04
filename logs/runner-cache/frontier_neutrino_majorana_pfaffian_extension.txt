@@ -1,0 +1,77 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_pfaffian_extension.py
+runner_sha256: 7efa2cc5fec2d37a8e468e3f4e3f69169a971297994b17e131f88eebaa1a15ee
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: MINIMAL PFAFFIAN DELTAL=2 EXTENSION
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+    rows: Framework axiom; Observable principle; Anomaly-forced time;
+          Native weak algebra; Structural SU(3) closure; One-generation matter closure
+  - docs/NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md
+  - docs/NEUTRINO_MAJORANA_NATIVE_GAUSSIAN_NO_GO_NOTE.md
+
+Question:
+  What is the smallest exact microscopic extension beyond the current
+  determinant toolbox that can carry the unique DeltaL=2 Majorana
+  coefficient?
+
+========================================================================================
+PART 1: THE EXISTING CLASSIFIER PICKS ONE ANTISYMMETRIC DELTAL=2 CHANNEL
+========================================================================================
+  [PASS (C)] Spinor x internal seed is antisymmetric  (||S^T+S||=0.00e+00)
+  [PASS (C)] Unique Majorana seed has rank 2 (one canonical pairing channel)  (rank=2)
+  [PASS (C)] Internal support is only on the nu_R slot  (rows=[np.int64(15)], cols=[np.int64(15)])
+  [PASS (C)] Antisymmetric seed has one nonzero symplectic pair  (nonzero eigenvalues=[np.float64(-1.0), np.float64(0.9999999999999998)])
+
+  The existing operator-classification theorem therefore contributes
+  exactly one microscopic pairing direction. Any honest DeltaL=2
+  extension must source this channel, not a family of unrelated ones.
+
+========================================================================================
+PART 2: ADMITTING AN ANTISYMMETRIC GAUSSIAN FORCES A PFAFFIAN GENERATOR
+========================================================================================
+  [PASS (C)] Pf(A)^2 = det(A) on the antisymmetric Gaussian  (|Pf^2-det|=2.84e-14)
+  [PASS (C)] Pfaffian factorizes on block-diagonal independent sectors  (|Pf_tot-Pf1Pf2|=0.00e+00)
+  [PASS (C)] log|Pf| is additive on independent sectors  (additivity error=0.00e+00)
+
+  This is the exact beyond-determinant analogue of the observable
+  principle: once the microscopic Gaussian is antisymmetric, the
+  partition amplitude is Pf(A), not det(D+J), and the unique additive
+  CPT-even scalar generator is log|Pf|.
+
+========================================================================================
+PART 3: MINIMAL UNIQUE-CHANNEL EXTENSION CARRIES A GENUINE COEFFICIENT
+========================================================================================
+  [PASS (C)] Unique-channel Pfaffian factorizes with spectators  (|Pf_tot-Pf_specPf_bg|=4.44e-16)
+  [PASS (C)] Microscopic source coefficient shifts the unique Pfaffian block directly  (Pf(unique block)=(2.6999999999999997+0j))
+  [PASS (C)] Total Pfaffian responds nontrivially to the unique DeltaL=2 source  (|Pf_mu-Pf_bg|=4.59e-01)
+  [PASS (C)] log|Pf| response matches the exact unique-block formula  (|W-W_exact|=1.11e-16)
+  [PASS (C)] Generator derivative at zero source equals 1/m0 on the unique channel  (dW/dmu=0.416667, 1/m0=0.416667)
+
+  On this minimal extension, the Majorana coefficient is no longer
+  excluded by the microscopic surface. It is the explicit amplitude
+  of the unique antisymmetric pairing block.
+
+========================================================================================
+RESULT
+========================================================================================
+  The minimal honest extension is an antisymmetric Grassmann Gaussian.
+  Its partition amplitude is a Pfaffian, the unique additive CPT-even
+  scalar generator is log|Pf|, and the unique anomaly-fixed Majorana
+  coefficient is the amplitude of the unique antisymmetric pairing block.
+
+  What remains open is not the mathematical form of the extension, but
+  whether the underlying Cl(3) on Z^3 axiom forces this Pfaffian/Nambu
+  sector and fixes its coefficient.
+
+PASS=12  FAIL=0
+
+----- stderr -----
+

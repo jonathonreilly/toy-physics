@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_flavor_column_functional_theorem.py
+runner_sha256: 6e0f03f36a7d0c6db0a0c6e5d15389bc2c140a42f373963713475f9e36c7af22
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.35
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS FLAVOR-COLUMN FUNCTIONAL THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: SINGLE-SOURCE FLAVORED TRANSPORT IS AN EXACT COLUMN FUNCTIONAL
+========================================================================================
+  [C] PASS: The exact flavored asymmetry for one source equals the sum of three one-variable channel functionals  ((Δ_a,Δ_b)=(2.75e-09,3.23e-09))
+  [C] PASS: So the transport-relevant PMNS column is selected by a scalar functional of its entries, not by a new transport ansatz  (F_K(P) = Σ_alpha Psi_K(P_alpha))
+  [C] PASS: The exact functional depends only on the exact one-flavor source profile and washout tail  (source_min=7.225e-14, tail_max=55.648577)
+
+  direct functional check on canonical near-closing column: 0.025313835316 vs 0.025313838064
+  direct functional check on democratic column:            0.017734139120 vs 0.017734142347
+
+========================================================================================
+PART 2: THE CHANNEL KERNEL HAS A UNIQUE SMALL-LEAKAGE OPTIMUM
+========================================================================================
+  [C] PASS: The one-channel flavored kernel Psi_K(q) has a unique interior maximizer on [0,1]  (q_star=0.035000)
+  [C] PASS: The exact current branch prefers small but nonzero flavor leakage rather than a perfectly democratic or perfectly single-flavor split  (Psi(0.04)=0.010965)
+  [C] PASS: This explains why a near-diagonal PMNS column with two small leakage entries can beat a more extreme almost-basis-vector column  (q_star=0.035000)
+
+  unique channel optimum q_star = 0.035000
+  Psi(q_star) = 0.011014791185
+
+========================================================================================
+PART 3: THE CANONICAL N_e ACTIVE BLOCK SELECTS THE MIDDLE COLUMN
+========================================================================================
+  [C] PASS: The exact column functional reproduces the direct transport ordering on the canonical N_e packet  ((argmax_direct,argmax_func)=(1,1))
+  [C] PASS: On the canonical N_e active block, the transport-relevant column is exactly the middle column  (func_vals=[0.02099667 0.02531384 0.02355134])
+  [D] PASS: That exact middle-column selection is the same near-closing column previously seen in the pair-interface diagnostic  (eta/eta_obs=0.989512597197)
+
+  canonical N_e active packet:
+[[0.915868 0.071267 0.012865]
+ [0.074689 0.900307 0.025004]
+ [0.009443 0.028427 0.962131]]
+  direct columnwise transport factors = [0.02099667 0.02531384 0.02355134]
+  exact functional column values      = [0.02099667 0.02531384 0.02355134]
+  direct columnwise eta/eta_obs       = [0.8207555  0.9895126  0.92061701]
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [C] PASS: The DM flavored-column problem is now reduced from a transport ODE search to an exact scalar functional on active PMNS columns  (F_K(P) = Σ_alpha Psi_K(P_alpha))
+  [C] PASS: On the canonical charged-lepton-active sample, that exact functional selects the near-closing middle column  (best column index = 1)
+  [C] PASS: So the remaining open science is no longer which column transport wants; it is the PMNS-side law for the active source that generates that column  (derive the active five-real source or an equivalent active-column law)
+
+  Transport-facing read:
+    - one-source flavored transport is an exact column functional
+    - the canonical N_e active packet already contains the right near-closing column
+    - the open problem is now only the PMNS-side value law for that active column/source
+
+========================================================================================
+SUMMARY: classified_pass=12 fail=0
+========================================================================================
+
+----- stderr -----
+

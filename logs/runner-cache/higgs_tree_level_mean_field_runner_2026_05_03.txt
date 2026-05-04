@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/higgs_tree_level_mean_field_runner_2026_05_03.py
+runner_sha256: 462e1c185071d57d787469694887537bc251289200f8cb1648eb19ec2b160db5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+================================================================================
+ higgs_tree_level_mean_field_runner_2026_05_03.py
+ Review-loop repair runner for HIGGS_MASS_FROM_AXIOM_NOTE.md
+ Reproduces the note's tree-level mean-field formula m_H_tree = v/(2 u_0).
+================================================================================
+
+--- T1: V_taste curvature at m=0 (Step 3) ---
+  d^2 V_taste/dm^2 |_{m=0} = -N_taste/(4 u_0^2) = -5.1936
+  Expected -4/u_0^2 (note's [3]) = -5.1936
+  [PASS] Step 3 V_taste tachyonic curvature reproduced  (err = 0.00e+00)
+
+--- T2: Per-channel curvature (Step 4) ---
+  |d^2 V/dm^2|_Higgs = (4/u_0^2)/N_taste = 0.3246
+  Expected 1/(4 u_0^2) (note's [4]) = 0.3246
+  [PASS] Step 4 per-channel curvature reproduced  (err = 0.00e+00)
+
+--- T3: m_H_tree = v/(2 u_0) at canonical surface ---
+  m_H_tree = v/(2 u_0) = 246.22 / 1.7552 = 140.28 GeV
+  Note's headline value: 140.30 GeV
+  Observed physical m_H = 125.10 GeV  (deviation = +12.1%)
+  [PASS] m_H_tree = 140.3 GeV reproduced from v/(2 u_0)  (computed = 140.28, headline = 140.3, err = 0.020)
+
+--- T4: N_c-independence of m_H_tree (load-bearing claim of Step 2) ---
+  N_c = 2: m_H_tree = 140.2803 GeV  (delta from N_c=3: 0.00e+00)
+  N_c = 3: m_H_tree = 140.2803 GeV  (delta from N_c=3: 0.00e+00)
+  N_c = 4: m_H_tree = 140.2803 GeV  (delta from N_c=3: 0.00e+00)
+  [PASS] m_H_tree is N_c-independent (Step 2 N_c cancellation)  (formula m_H_tree = v/(2 u_0) has no N_c dependence)
+
+--- T5: Distinguish from corrected-y_t / Buttazzo runners ---
+  This runner computes: m_H_tree = v/(2 u_0) = 140.28 GeV (tree-level mean-field)
+  frontier_higgs_mass_corrected_yt.py computes: 119.93 GeV
+    -> different observable: corrected-y_t RGE route at 3L+NNLO
+  frontier_higgs_buttazzo_calibration.py computes: ~125.1 GeV (current)
+    -> different observable: full-3-loop Buttazzo parametric calibration
+  All three are valid auxiliary computations. They are NOT verifiers
+  for this note's tree-level formula. Each addresses a different
+  Higgs-mass observable along a different chain.
+  [PASS] Tree-level formula clearly distinguished from RGE/Buttazzo observables  (primary runner reports the tree-level value; other runners report different observables)
+
+================================================================================
+ SUMMARY: PASS=5, FAIL=0
+================================================================================
+
+----- stderr -----
+

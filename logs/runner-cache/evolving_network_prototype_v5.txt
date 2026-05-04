@@ -1,0 +1,40 @@
+===== runner cache v1 =====
+runner: scripts/evolving_network_prototype_v5.py
+runner_sha256: 472ff8fcfeca2941b7aec27896f5da158fca437d32b6a7b03de7e13aab659db2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.24
+status: ok
+----- stdout -----
+============================================================================================
+EVOLVING NETWORK PROTOTYPE V5
+  Gate B: cross-templated growth vs KNN on the same positions
+  Rule: local drift + narrow cross-shaped backbone, fixed-offset connectivity
+  Control: KNN connectivity recomputed from the same grown positions
+============================================================================================
+
+Setup: layers=13, half-width=5, drift=0.22, mass strengths=(0.75, 1.0, 1.25), mass y targets=(2, 3, 4)
+Action: S = L(1-f), 3D forward propagation, valley-linear phase valley
+
+Architecture comparison
+        architecture    toward   mean_delta     F~M
+  ----------------------------------------------------
+  ordered lattice        66.7%    +0.000010    0.66
+  cross growth           77.8%    +0.000011    0.76
+  KNN control            66.7%    +0.000012    0.66
+
+PAIRWISE READ
+  cross vs knn: Δtoward=+0.11, Δmean_delta=-0.000001, ΔF~M=+0.09
+
+SAFE INTERPRETATION
+  - The fixed-offset cross rule is explicit and reviewable.
+  - The control is fair: KNN on the same grown positions.
+  - If the structured row beats KNN on toward and slope, that is a real gain.
+  - If it only matches or trails KNN, the result still tightens the
+    Gate B bottleneck to connectivity construction rather than raw noise.
+
+Total time: 2.2s
+============================================================================================
+
+----- stderr -----
+

@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_exact_h_source_surface_theorem.py
+runner_sha256: 973dfa1e6cb6fbb8190c8fb453b432969d2757bda84bf5effe0ca75337b0f430
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.52
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO EXACT H-SIDE SOURCE-SURFACE THEOREM
+========================================================================================
+
+Question:
+  Once the exact source-oriented package is fixed and the intrinsic
+  positive-polar CP tensor is exact on H, what mainline object
+  actually remains?
+
+========================================================================================
+PART 1: THE EXACT SOURCE PACKAGE PULLS BACK TO AN H-SIDE SURFACE
+========================================================================================
+  [PASS] The exact source-oriented branch already fixes gamma, E1, and E2 numerically  ((gamma,E1,E2)=(0.500000000000,1.632993161855,0.942809041582))
+  [PASS] On the exact H-side CP formulas those values become an exact source surface  (r31 sin(phi)=1/2, B1=2sqrt(8/3), B2=2sqrt(8)/3)
+  [PASS] The exact package CP pair is already the H-side CP pair induced by that surface  ((cp1,cp2)=(-0.544331053952,0.314269680527))
+
+  exact H-side source surface:
+    r31 sin(phi) = 1/2
+    d2 - d3 + r12 - r31 cos(phi) = 2 sqrt(8/3)
+    2 d1 - d2 - d3 + r12 - 2 r23 + r31 cos(phi) = 2 sqrt(8)/3
+
+========================================================================================
+PART 2: THE H-SIDE SOURCE SURFACE IS NONEMPTY
+========================================================================================
+  [PASS] An explicit positive Hermitian witness exists on the exact source surface  (eig=[0.77390461 4.44839063 9.77770477])
+  [PASS] That witness satisfies the exact H-side source-surface equations  ((gamma,B1,B2)=(0.500000000000,3.265986323711,1.885618083164))
+  [PASS] Its direct CP tensor matches the exact package CP pair  (cp=(-0.544331053952,0.314269680527))
+
+  explicit positive H-side witness:
+    (d1,d2,d3) = (5.000000000000, 5.000000000000, 5.000000000000)
+    (r12,r23,r31,phi) = (4.132011727495, 1.556209524058, 1.000000000000, 0.523598775598)
+
+========================================================================================
+PART 3: COMMON DIAGONAL SHIFT IS AN EXACT SOURCE-SURFACE TANGENT
+========================================================================================
+  [PASS] Adding a common diagonal shift preserves the exact H-side source surface  ((gamma,B1,B2)=(0.500000000000,3.265986323711,1.885618083164))
+  [PASS] The intrinsic CP pair is unchanged under that common shift  (cp=(-0.544331053952,0.314269680527))
+  [PASS] So the exact mainline object is a nonempty source surface rather than a missing triplet value  (the remaining law must land on this surface, not re-derive gamma/E1/E2)
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE H-SIDE SOURCE SURFACE
+========================================================================================
+  [PASS] The new note records the exact H-side source-surface equations
+  [PASS] The new note records that the remaining mainline object is the H-side inverse-image law rather than unfixed triplet values
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact mainline answer:
+    - the exact source-oriented branch already fixes gamma, E1, and E2
+    - those values pull back to an exact nonempty H-side source surface
+    - the remaining mainline object is the post-canonical law whose image
+      lands on that surface, not the triplet values themselves
+
+PASS=11 FAIL=0
+
+----- stderr -----
+

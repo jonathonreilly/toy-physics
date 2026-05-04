@@ -1,0 +1,70 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_3d_operator_consistent_end_to_end.py
+runner_sha256: 20a2c4edf5e2a19ff10f1e5ba0aff682d3f4fceebca29cd77049a8779baf81b4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.61
+status: ok
+----- stdout -----
+3D OPERATOR-CONSISTENT POISSON END-TO-END TELEPORTATION AUDIT
+Status: planning / first artifact; quantum state teleportation only
+Geometry: 3 spatial dimensions with one directed classical/causal record; retained logical bit is the last KS taste axis
+Input probes: 134 states (six Pauli-axis probes + 128 random, seed=20260425)
+Thresholds: fidelity>=0.900, protocol tol=1.0e-10, operator tol=1.0e-12
+
+3D operator-consistency guards:
+  surface=3D side=2, retained_axis=2, sites=8, envs=4
+  retained-axis Z=PASS rel=0 expected_err=0
+  retained-axis X=PASS rel=0 expected_err=0
+  retained-axis Bell projectors=PASS
+  raw xi_5 as retained-bit Z=FAIL rel=1.000000 expected_err=1.000000
+  raw-Z/fixed-X Bell projectors=FAIL max_rel=0.707107 max_expected_err=0.250000
+
+3D retained-axis end-to-end rows:
+  case                     frame            raw*   raw    Bell* label     Phi+     Favg     Fmin     Bmin     noSig  out  pass
+  3d_side2_null            fixed Phi+    0.50000  Psi+  0.50000  Psi+  0.50000  0.66667  0.50000  0.00606 2.776e-16    4    no
+  3d_side2_poisson_G1000_m fixed Phi+    0.99772  Psi+  0.99772  Psi+  0.00228  0.33485  0.00228  0.00002 2.220e-16    4    no
+  3d_side2_poisson_G1000_m Psi+->Phi+    0.99772  Psi+  0.99772  Phi+  0.99772  0.99848  0.99772  0.99772 2.220e-16    4   yes
+
+Case row: 3d_side2_null [fixed Phi+]
+  resource: dim=3 side=2 N=8 envs=4 mass=0 G=0, ground=-6, full CHSH=2.000000, logical CHSH=2.000000, negativity=0.000000
+  Bell/fidelity: raw best=0.500000 (Psi+), frame_bits=(0,0), framed best=0.500000 (Psi+), Phi+=0.500000, exact F_avg=0.666667, sample mean/min/max=0.669676/0.500000/1.000000
+  Bell branches: outcomes=Phi+, Phi-, Psi+, Psi-, probability min/max=3.469447e-17/5.000000e-01, conditional corrected fidelity min/max=0.006062/1.000000
+  Bob before record: distance to resource marginal=4.475e-16, pairwise input distance=2.776e-16, marginal bias from I/2=5.000e-01
+  causal record: label=Psi+, early blocked=True, delivered once=True, delivered-branch fidelity=0.743949
+Case row: 3d_side2_poisson_G1000_m0 [fixed Phi+]
+  resource: dim=3 side=2 N=8 envs=4 mass=0 G=1000, ground=-114.870237352, full CHSH=2.809224, logical CHSH=2.821998, negativity=0.497724
+  Bell/fidelity: raw best=0.997724 (Psi+), frame_bits=(0,0), framed best=0.997724 (Psi+), Phi+=0.002276, exact F_avg=0.334850, sample mean/min/max=0.340855/0.002276/1.000000
+  Bell branches: outcomes=Phi+, Phi-, Psi+, Psi-, probability min/max=2.261818e-01/2.738182e-01, conditional corrected fidelity min/max=0.000017/1.000000
+  Bob before record: distance to resource marginal=4.441e-16, pairwise input distance=2.220e-16, marginal bias from I/2=4.764e-02
+  causal record: label=Phi+, early blocked=True, delivered once=True, delivered-branch fidelity=0.110419
+Case row: 3d_side2_poisson_G1000_m0 [Psi+->Phi+]
+  resource: dim=3 side=2 N=8 envs=4 mass=0 G=1000, ground=-114.870237352, full CHSH=2.809224, logical CHSH=2.821998, negativity=0.497724
+  Bell/fidelity: raw best=0.997724 (Psi+), frame_bits=(0,1), framed best=0.997724 (Phi+), Phi+=0.997724, exact F_avg=0.998483, sample mean/min/max=0.998497/0.997724/1.000000
+  Bell branches: outcomes=Phi+, Phi-, Psi+, Psi-, probability min/max=2.261818e-01/2.738182e-01, conditional corrected fidelity min/max=0.997719/1.000000
+  Bob before record: distance to resource marginal=4.441e-16, pairwise input distance=2.220e-16, marginal bias from I/2=4.764e-02
+  causal record: label=Psi+, early blocked=True, delivered once=True, delivered-branch fidelity=0.998841
+
+Acceptance gates:
+  3D retained-axis operator guard passes: PASS
+  3D raw xi_5 as traced retained-bit Z rejects: PASS
+  3D raw xi_5 Bell controls reject: PASS
+  3D null rows do not pass high-fidelity protocol: PASS
+  3D non-null retained-axis resource has a passing row: PASS
+  fixed Phi+ frame failures are reported when the resource lands elsewhere: PASS
+  Bob pre-message input-independence is clean for runnable rows: PASS
+  all four Bell outcomes are represented for runnable rows: PASS
+  causal two-bit record remains clean for passing rows: PASS
+
+3D resource status: high-fidelity retained-axis row found for 3d_side2_poisson_G1000_m0 with frame Psi+->Phi+ (Bell*=0.997724, F_avg=0.998483).
+Frame note: Bell-frame rows apply a known Bob-side retained-axis Pauli before the standard Z^z X^x feed-forward correction.
+Claim boundary:
+  Ordinary quantum state teleportation only; no matter, mass, charge, energy,
+  object transport, or faster-than-light signaling is claimed.
+Limitations:
+  Default 3D resource is the dense-diagonalized side=2 case (N=8 sites).
+  The measurement, feed-forward, and correction remain ideal logical operations.
+  Raw xi_5 rejection is an operator-factorization control, not detector hardware.
+
+----- stderr -----
+

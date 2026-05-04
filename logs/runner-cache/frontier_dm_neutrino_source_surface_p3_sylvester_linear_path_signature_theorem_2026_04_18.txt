@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_2026_04_18.py
+runner_sha256: 00cfebc323c5756e34da1ae0d42b0a3d491dfc9f57bd1f21966d7021403f00c8
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.93
+status: ok
+----- stdout -----
+[PASS] H(t) is 3x3 matrix  (shape=(3, 3))
+[PASS] H(t) is Hermitian for all t  (H(t) = H(t)^H)
+[PASS] det(H(t)) is cubic in t (degree <= 3)  (degree = 3)
+[PASS] A0 = det(H_base) = 32*sqrt(2)/9  [atlas cross-check]  (A0 = 32*sqrt(2)/9)
+[PASS] p(1) from cubic == det(H_base + J_*) directly  (p(1) = 0.959174)
+[PASS] p(1) ~ 0.959 (matches retained Basin 1 value)  (p(1) = 0.959174)
+[PASS] p'(t) = 0 solved exactly (quadratic in t)  (2 critical points total)
+        critical points (all): [1.1273656614863956, 0.7755698013406396]
+        critical points in [0,1]: [0.7755698013406396]
+        p(0.000000) = 5.028315
+        p(1.000000) = 0.959174
+        p(0.775570) = 0.878309
+[PASS] min_{t in [0,1]} p(t) > 0  [certifies det(H(t)) > 0]  (min = 0.878309)
+[PASS] min p = 0.878309... (matches theorem note)  (min = 0.878309)
+[PASS] signature(H_base) = (2, 0, 1)  [convention (n_-, n_0, n_+)]  (eigs = [-1.984569687716825, -0.8834375738166761, 2.868007261533502])
+[PASS] signature(H_base + J_*) = (2, 0, 1)  [direct independent check]  (eigs = [-1.3090941538119647, -0.320433739261981, 2.286588893073945])
+
+========================================================================
+Sylvester Linear-Path Theorem — certification summary
+========================================================================
+
+det(H(t)) is the exact cubic
+  p(t) = A3 t^3 + A2 t^2 + A1 t + A0
+  A0 = 32*sqrt(2)/9
+  A1 ~ -13.886142
+  A2 ~ 15.110887
+  A3 ~ -5.293887
+
+Critical points of p(t) come from the quadratic p'(t) = 0, solved
+exactly.  The extremum of p on the closed interval [0, 1] is taken
+from the finite set {0, 1} union {critical points in (0, 1)}.
+
+min_{t in [0,1]} p(t) = 0.878309  >  0
+
+By Sylvester's law of inertia, signature(H(t)) is constant on [0, 1],
+so signature(H_base + J_*) = signature(H_base) = (2, 0, 1).
+
+Scope:
+  - Unconditional: H_pin lies on the same connected component of
+    {det(H) != 0} as H_base (the baseline-connected component), and
+    hence has signature (2, 0, 1).
+  - Still imposed: the identification of the baseline-connected
+    component as the physical live sheet.  Basin-2/X exclusion
+    remains conditional on this identification.
+
+PASS=11 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,177 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_bs_mixing_phase_derivation.py
+runner_sha256: 21a8718d0c063af4b04d155aadeb3a20f7272aa2854cbdc58c9e8cb293093de0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+CKM B_s mixing phase derivation theorem audit
+See docs/CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs
+----------------------------------------------------------------------------------------
+  alpha_s(v)         = 0.103303816122267
+  lambda^2           = 0.051651908061134 (= alpha_s(v)/2)
+  A^2                = 2/3
+  rho                = 1/6
+  eta^2              = 5/36
+  eta                = 0.372677996249965 (= sqrt(5)/6)
+  [PASS] alpha_s(v) positive
+  [PASS] lambda^2 = alpha_s(v)/2
+  [PASS] A^2 exact rational is 2/3
+  [PASS] rho exact rational is 1/6
+  [PASS] eta^2 exact rational is 5/36
+  [PASS] eta = sqrt(5)/6
+  [PASS] rho^2 + eta^2 = 1/6
+  [PASS] upstream authority present: docs/ALPHA_S_DERIVED_NOTE.md
+  [PASS] upstream authority present: docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md
+  [PASS] upstream authority present: docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+  [PASS] upstream authority present: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+  [PASS] upstream authority present: docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md
+
+----------------------------------------------------------------------------------------
+Atlas-triangle base angles
+----------------------------------------------------------------------------------------
+  tan(beta_0)   = 0.447213595499958 (= 1/sqrt(5))
+  tan(gamma_0)  = 2.236067977499790 (= sqrt(5))
+  beta_0        = 24.094843 deg
+  gamma_0       = 65.905157 deg
+  alpha_0       = 90.000000 deg
+  [PASS] tan(beta_0) tan(gamma_0) = 1
+  [PASS] alpha_0 = pi/2 (atlas-leading right angle)
+
+----------------------------------------------------------------------------------------
+Doubled-angle CP catalog (T1) - (T4)
+----------------------------------------------------------------------------------------
+  sin(2 beta_0)   = 0.745355992499930
+  sqrt(5)/3       = 0.745355992499930
+  [PASS] sin(2 beta_0) = sqrt(5)/3
+  [PASS] cos(2 beta_0) = 2/3 (exact rational)
+  [PASS] sin^2(2 beta_0) + cos^2(2 beta_0) = 1
+  [PASS] direct sin(2 beta_0) matches sqrt(5)/3
+  [PASS] direct cos(2 beta_0) matches 2/3
+  sin(2 gamma_0)  = 0.745355992499930
+  cos(2 gamma_0)  = -0.666666666666667
+  [PASS] sin(2 gamma_0) = sqrt(5)/3
+  [PASS] cos(2 gamma_0) = -2/3 (exact rational)
+  [PASS] direct sin(2 gamma_0) matches sqrt(5)/3
+  [PASS] direct cos(2 gamma_0) matches -2/3
+  [PASS] sin(2 beta_0) = sin(2 gamma_0) (forced by alpha_0 = pi/2)
+  [PASS] cos(2 beta_0) = -cos(2 gamma_0) (forced by alpha_0 = pi/2)
+  sin(2 alpha_0)  = 0.000000000000000
+  cos(2 alpha_0)  = -1.000000000000000
+  [PASS] sin(2 alpha_0) = 0
+  [PASS] cos(2 alpha_0) = -1
+
+----------------------------------------------------------------------------------------
+Triangle side-length catalog (S1) - (S4)
+----------------------------------------------------------------------------------------
+  |R_b|^2 = rho^2 + eta^2     = 1/6
+  |R_t|^2 = (1-rho)^2 + eta^2 = 5/6
+  [PASS] |R_b|^2 = 1/6
+  [PASS] |R_t|^2 = 5/6
+  [PASS] |R_b|^2 + |R_t|^2 = 1 (Pythagoras forced by alpha_0 = pi/2)
+  |R_b|     = 0.408248290463863 (= 1/sqrt(6))
+  |R_t|     = 0.912870929175277 (= sqrt(5/6))
+  R_t/R_b   = 2.236067977499790 (= sqrt(5))
+  [PASS] |R_b| = 1/sqrt(6)
+  [PASS] |R_t| = sqrt(5/6)
+  [PASS] |R_t|/|R_b| = sqrt(5)
+  [PASS] |R_t|^2 / |R_b|^2 = 5
+
+----------------------------------------------------------------------------------------
+B_s mixing phase derivation (B1) - (B3)
+----------------------------------------------------------------------------------------
+  lambda^2 eta             = 1.924952959871067e-02 rad
+  alpha_s(v) sqrt(5)/12    = 1.924952959871067e-02 rad
+  beta_s (full Wolfenstein) = 1.958425660146181e-02 rad
+  beta_s in degrees        = 1.102917 deg
+  [PASS] beta_s = lambda^2 eta (leading order)
+  [PASS] beta_s = alpha_s(v) sqrt(5)/12
+  full-Wolfenstein vs leading relative residual = 1.7389%
+  [PASS] full Wolfenstein beta_s within 5% of leading order (NLO size)
+  [PASS] residual is dominated by lambda^2 (~ alpha_s(v)/2 ~ 5%) corrections
+  phi_s                     = -3.849905919742134e-02 rad
+  -alpha_s(v) sqrt(5)/6     = -3.849905919742134e-02 rad
+  phi_s in degrees          = -2.205834 deg
+  [PASS] phi_s = -2 beta_s = -alpha_s(v) sqrt(5)/6
+  sin(2 beta_s) exact       = 0.038489549495271
+  2 beta_s leading          = 0.038499059197421
+  [PASS] sin(2 beta_s) ~= alpha_s(v) sqrt(5)/6 (small-angle leading)
+
+----------------------------------------------------------------------------------------
+Finite-lambda exact standard-matrix guardrail
+----------------------------------------------------------------------------------------
+  beta_s,0 leading identity = 1.924952959871067e-02 rad
+  beta_s exact CKM readout  = 1.960899630464986e-02 rad
+  phi_s,0 leading identity  = -3.849905919742134e-02 rad
+  phi_s exact CKM readout   = -3.921799260929973e-02 rad
+  finite-lambda beta residual = 1.8674%
+  [PASS] exact standard-matrix beta_s is positive
+  [PASS] exact standard-matrix phi_s is negative
+  [PASS] exact CKM beta_s differs from leading identity by O(lambda^2)  (rel=1.8674%, lambda^2=5.1652%)
+  [PASS] exact CKM phi_s differs from leading identity by same relative amount
+  [PASS] finite-lambda guardrail is not collapsed into the leading identity
+  exact phi_s vs LHCb stat sigma  = -0.010
+  exact phi_s vs LHCb total sigma = -0.010
+  [PASS] exact CKM phi_s agrees with LHCb within 1 sigma
+
+----------------------------------------------------------------------------------------
+Post-derivation comparators (PDG / LHCb)
+----------------------------------------------------------------------------------------
+  sin(2 beta_0) atlas       = 0.745356
+  sin(2 beta_0) PDG         = 0.706 +/- 0.011
+  deviation                 = +3.578 sigma
+  [PASS] atlas-leading sin(2 beta_0) > PDG (known atlas-vs-physical residual)
+  R_t/R_b atlas             = 2.236068 (= sqrt(5))
+  R_t/R_b PDG               = 2.270 +/- 0.070
+  deviation                 = -0.485 sigma
+  [PASS] atlas R_t/R_b agrees with PDG within 1 sigma
+  R_b atlas                 = 0.408248
+  R_b PDG                   = 0.435 +/- 0.014
+  R_b deviation             = -1.911 sigma
+  R_t atlas                 = 0.912871
+  R_t PDG                   = 0.920 +/- 0.020
+  R_t deviation             = -0.356 sigma
+  [PASS] atlas R_t agrees with PDG within 1 sigma
+  [PASS] atlas R_b agrees with PDG within 2 sigma
+  beta_s atlas              = 1.924953e-02 rad (1.1029 deg)
+  beta_s LHCb               = 0.0188 +/- 0.0030 rad
+  deviation                 = +0.150 sigma
+  [PASS] atlas beta_s agrees with LHCb within 1 sigma
+  phi_s atlas               = -3.849906e-02 rad (-2.2058 deg)
+  phi_s LHCb                = -0.039 +/- 0.022 rad
+  deviation                 = +0.023 sigma
+  [PASS] atlas phi_s agrees with LHCb within 1 sigma
+  [PASS] atlas phi_s agrees with LHCb within 0.1 sigma (sharp prediction)
+
+----------------------------------------------------------------------------------------
+Summary of new content carried by this theorem
+----------------------------------------------------------------------------------------
+  STRUCTURAL IDENTITIES (new named rows):
+    sin(2 alpha_0) = 0,         cos(2 alpha_0) = -1
+    sin(2 beta_0)  = sqrt(5)/3, cos(2 beta_0)  =  2/3
+    sin(2 gamma_0) = sqrt(5)/3, cos(2 gamma_0) = -2/3
+    sin(2 beta_0)  = sin(2 gamma_0) (forced by alpha_0 = pi/2)
+    |R_t|^2 = 5/6,  |R_b|^2 + |R_t|^2 = 1,  R_t/R_b = sqrt(5)
+
+  DERIVED PREDICTION (new numerical result):
+    beta_s,0 = alpha_s(v) sqrt(5) / 12
+    phi_s,0  = -alpha_s(v) sqrt(5) / 6
+    sin(2 beta_s,0) ~= alpha_s(v) sqrt(5) / 6
+
+  At canonical alpha_s(v) = 0.1033038...:
+    beta_s = 1.924953e-02 rad = 1.1029 deg
+    phi_s  = -3.849906e-02 rad = -2.2058 deg
+    exact CKM phi_s guardrail = -3.921799e-02 rad = -2.2470 deg
+
+========================================================================================
+TOTAL: PASS=53, FAIL=0
+========================================================================================
+
+----- stderr -----
+

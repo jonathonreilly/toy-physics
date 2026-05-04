@@ -1,0 +1,38 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_expansion_axiom_boundary.py
+runner_sha256: 1590d0bf88fb054ec3a97afa5bb6e6801179310815db3eac795b9c7033b46c0b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.62
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS EXPANSION AXIOM BOUNDARY
+========================================================================================
+
+========================================================================================
+PART 1: EVERYTHING EXCEPT EXPANSION IS NOW CLOSED
+========================================================================================
+  [PASS] The exact source package remains closed
+  [PASS] The exact projection law remains closed
+  [PASS] The exact coherent kernel remains closed  (epsilon_1/epsilon_DI=0.927620920920)
+
+========================================================================================
+PART 2: THE CURRENT BRANCH STILL MARKS RADIATION EXPANSION AS NON-AUTHORITATIVE
+========================================================================================
+  [PASS] The cleaned DM derivation still records H(T) with a bounded k = 0 sub-assumption
+  [PASS] So the refreshed branch still lacks a strict theorem-grade radiation expansion law from Cl(3) on Z^3 alone  (the remaining gap is not the transport integral but the background expansion law)
+
+========================================================================================
+PART 3: THE BOUNDARY COLLAPSES TO ONE OBJECT H_RAD(T)
+========================================================================================
+  [PASS] Given H_rad(T), the exact source, projection, equilibrium, and transport equations fix eta uniquely  (all remaining transport quantities are functionals of H_rad(T))
+  [PASS] Without H_rad(T), full theorem closure still fails  (the exact remaining non-axiom object is the radiation-era expansion law)
+  [PASS] So the old vague T_rad(K) boundary sharpens to one concrete datum H_rad(T)  (equivalently: the normalized expansion profile E_H(z) with its z=1 normalization)
+
+========================================================================================
+SUMMARY: PASS=8 FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -1,0 +1,29 @@
+===== runner cache v1 =====
+runner: scripts/frontier_critical_exponents.py
+runner_sha256: 998e9f7f0e6e6e99caef7f6afe78d63653ba4016e098a9a8d0bf397a4981405b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 18.86
+status: ok
+----- stdout -----
+======================================================================
+CRITICAL EXPONENTS vs GRAPH TOPOLOGY
+======================================================================
+
+Family                    base                   n   G_crit     beta      R^2  phi_sat       status
+----------------------------------------------------------------------
+random_geometric_s8       random_geometric      64      1.0      nan      nan   0.4128   degenerate
+random_geometric_s10      random_geometric     100      2.0   0.7328   0.9656   0.3894          fit
+growing_n64               growing               64     14.0   0.3675   0.9451   0.4977          fit
+layered_cycle_8x8         layered_cycle         64      5.0   0.3348   0.9162   0.4928          fit
+causal_dag_10x6           causal_dag            55      1.0      nan      nan   0.5438   degenerate
+causal_dag_8x8            causal_dag            57      1.0      nan      nan   0.6235   degenerate
+
+Time: 18.2s
+
+Interpretation:
+  - differing fitted beta across admissible families is evidence for topology-dependent finite-size onset behavior
+  - rows marked 'degenerate' should not be used as positive universality evidence without a stronger fit
+
+----- stderr -----
+

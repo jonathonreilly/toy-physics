@@ -1,0 +1,170 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_bernoulli_two_ninths_koide_bridge.py
+runner_sha256: 9dddae2a5e4c8c07a455085d56c0aaf91f0c62e19cea86eaa6fed3de1089708d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+Bernoulli-variance 2/9 identities and Koide-bridge support audit
+See docs/CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs on current main
+----------------------------------------------------------------------------------------
+  N_pair                     = 2  (retained)
+  N_color                    = 3  (retained)
+  N_quark = N_pair × N_color = 6
+  N_pair = N_color - 1?       True  (retained-count consequence)
+
+  W2: A^2 = N_pair/N_color    = 2/3
+  CP: rho = 1/N_quark         = 1/6
+  CP: eta^2 = (N_q-1)/N_q^2   = 5/36  [same form as K6 but with N=N_quark]
+  [PASS] N_pair = 2 (retained)
+  [PASS] N_color = 3 (retained)
+  [PASS] N_quark = N_pair × N_color = 6
+  [PASS] N_pair = N_color - 1 (retained-count consequence)
+  [PASS] W2: A^2 = N_pair/N_color = 2/3
+  [PASS] CP: rho = 1/N_quark = 1/6
+  [PASS] CP: eta^2 = (N_q-1)/N_q^2 = 5/36 [SAME FORM as K6 with N=N_quark]
+  [PASS] retained on main: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+  [PASS] retained on main: docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+  [PASS] retained on main: docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+
+----------------------------------------------------------------------------------------
+(K1) NEW: A^2 (1 - A^2) = N_pair (N_color - N_pair)/N_color^2 = 2/9
+----------------------------------------------------------------------------------------
+  A^2 = 2/3, 1 - A^2 = 1/3
+  A^2 (1 - A^2) (direct)             = 2/9
+  N_pair(N_color - N_pair)/N_color^2 = 2/9
+  Collapsed (N_color-1)/N_color^2    = 2/9  [valid when N_pair = N_color - 1]
+  [PASS] (K1) A^2 (1 - A^2) = 2/9 EXACTLY (Fraction)
+  [PASS] (K1) Structural form N_pair (N_color - N_pair)/N_color^2
+  [PASS] (K1) Collapse to (N_color - 1)/N_color^2 (uses N_pair = N_color - 1)
+
+----------------------------------------------------------------------------------------
+(K2) NEW: 2 rho A^2 = 2 N_pair/(N_quark N_color) = 2/N_color^2 = 2/9
+----------------------------------------------------------------------------------------
+  2 rho A^2 (direct)               = 2/9
+  2 N_pair/(N_quark × N_color)     = 2/9
+  Simplified 2/N_color^2            = 2/9  [valid since N_quark = N_pair × N_color]
+  [PASS] (K2) 2 rho A^2 = 2/9 EXACTLY (Fraction)
+  [PASS] (K2) Structural form 2 N_pair/(N_quark × N_color)
+  [PASS] (K2) Simplifies to 2/N_color^2 (uses N_quark = N_pair × N_color)
+
+----------------------------------------------------------------------------------------
+(K3) NEW: K1 = K2 = K5 = K6 = 2/9 <==> N_pair = 2, N_color = 3
+----------------------------------------------------------------------------------------
+  K1 = A^2 (1 - A^2)           = 2/9
+  K2 = 2 rho A^2                = 2/9
+  K5 = A^2 / N_color            = 2/9
+  K6 = (1/N_c)(1 - 1/N_c)       = 2/9
+
+  All four equal?  True
+  All four = 2/9?  True
+
+  Positive-integer converse proof:
+    From K6 = 2/9:
+      (N_color - 1)/N_color^2 = 2/9
+      2 N_color^2 - 9 N_color + 9 = 0
+      discriminant = 9; roots = 3/2, 3
+      only positive integer root is N_color = 3
+    From K5 = 2/9 with N_color = 3:
+      N_pair/9 = 2/9 => N_pair = 2
+
+  Therefore over positive integer pair/color counts:
+    K1 = K2 = K5 = K6 = 2/9 iff N_pair = 2 and N_color = 3
+  [PASS] (K3) K1 = K2 (algebraic equality)
+  [PASS] (K3) K2 = K5 (algebraic equality)
+  [PASS] (K3) K5 = K6 (algebraic equality)
+  [PASS] (K3) All four readouts converge to 2/9
+  [PASS] (K3) K6=2/9 integer equation has N_color=3 as only positive integer root
+  [PASS] (K3) K5=2/9 then forces N_pair=2 once N_color=3
+  [PASS] (K3) Converse: retained N_pair=2, N_color=3 gives all four readouts
+
+----------------------------------------------------------------------------------------
+(K5) NEW: A^2 / N_color = N_pair / N_color^2 = 2/9
+----------------------------------------------------------------------------------------
+  A^2 / N_color (direct)        = 2/9
+  N_pair / N_color^2            = 2/9
+  [PASS] (K5) A^2 / N_color = 2/9 EXACTLY (Fraction)
+  [PASS] (K5) Equivalent to N_pair / N_color^2
+
+----------------------------------------------------------------------------------------
+(K6) NEW: (1/N_color)(1 - 1/N_color) = (N_color - 1)/N_color^2 = 2/9
+----------------------------------------------------------------------------------------
+  rho_color = 1/N_color                  = 1/3
+  rho_color (1 - rho_color) (direct)     = 2/9
+  (N_color - 1)/N_color^2                = 2/9
+  [PASS] (K6) (1/N_color)(1 - 1/N_color) = 2/9 EXACTLY (Fraction)
+  [PASS] (K6) = (N_color - 1)/N_color^2 (color-projected Bernoulli)
+
+----------------------------------------------------------------------------------------
+Cross-sector reading (SUPPORT, NOT closure): Koide 2/9 shares K6 form
+----------------------------------------------------------------------------------------
+  CKM K6 color form: (N_color - 1)/N_color^2 = 2/9
+  Koide target form : (N_gen - 1)/N_gen^2     = 2/9  [target-class with N_gen = 3]
+
+  Both equal 2/9?   True
+
+  CROSS-SECTOR READING (SUPPORT, not closure):
+    With the separately retained numeric equality N_gen = N_color = 3,
+    the generation target ratio and CKM color-Bernoulli form K6 both equal 2/9.
+    This SUPPORTS but does NOT CLOSE Koide 2/9.
+
+  This note does NOT derive or use the retained N_gen = N_color equality.
+  Closing Koide 2/9 still requires a separate charged-lepton source/readout theorem.
+  [PASS] CKM K6 = Koide variance form (BOTH equal 2/9, SAME structural form)
+  [PASS] Retained numeric equality N_gen = N_color is NOT used as a CKM input here
+
+----------------------------------------------------------------------------------------
+eta^2_LO has SAME functional form (N-1)/N^2 but with N=N_quark, not N=N_color
+----------------------------------------------------------------------------------------
+  eta^2_LO  = (N_quark - 1)/N_quark^2 = 5/36  [N = N_quark = 6]
+  K6 (and K1 collapsed) = (N_color - 1)/N_color^2 = 2/9  [N = N_color = 3]
+
+  Both have form (N - 1)/N^2 but with different N:
+    eta^2 uses N = N_quark = N_pair × N_color (CKM full quark count)
+    K6   uses N = N_color (color count alone)
+
+  Replacing N_quark -> N_color in eta^2 form gives K6 = 2/9.
+  This is the 'color-projection' of CKM CP-phase variance to Koide-like 2/9.
+  [PASS] eta^2_LO has form (N_quark - 1)/N_quark^2 = 5/36
+  [PASS] Color-projection N_quark -> N_color gives K6 = (N_color-1)/N_color^2 = 2/9
+
+----------------------------------------------------------------------------------------
+Summary of new content
+----------------------------------------------------------------------------------------
+  NEW (K1): A^2 (1 - A^2) = N_pair (N_color - N_pair)/N_color^2 = 2/9
+            Bernoulli variance of Wolfenstein A^2 parameter.
+
+  NEW (K2): 2 rho A^2 = 2 N_pair/(N_quark × N_color) = 2/N_color^2 = 2/9
+            Apex coupling: 2 × CP-phase rho × Wolfenstein A^2.
+
+  NEW (K3): K1 = K2 = K5 = K6 = 2/9 <==> N_pair = 2, N_color = 3
+            Structural consistency corollary over positive integer counts.
+
+  NEW (K5): A^2 / N_color = N_pair / N_color^2 = 2/9
+
+  NEW (K6): (1/N_color)(1 - 1/N_color) = (N_color - 1)/N_color^2 = 2/9
+            Color-projected Bernoulli variance.
+
+  Cross-sector reading (SUPPORT, NOT closure): K6 form matches the
+  generation target-class ratio (N_gen - 1)/N_gen^2 = 2/9 at
+  the separately retained numeric equality N_gen = N_color = 3.
+
+  All four CKM readouts of 2/9 derived from retained inputs only.
+  Does NOT close A^2 (already retained at W2) or Koide 2/9 (cross-sector).
+
+  Push to science: 2/9 is multiply-determined in CKM by retained structure;
+  closing Koide 2/9 still requires a charged-lepton source/readout theorem
+  beyond the separately retained numeric equality N_gen = N_color = 3.
+
+========================================================================================
+TOTAL: PASS=31, FAIL=0
+========================================================================================
+
+----- stderr -----
+

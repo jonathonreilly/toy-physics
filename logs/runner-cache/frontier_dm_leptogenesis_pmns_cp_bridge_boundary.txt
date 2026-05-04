@@ -1,0 +1,69 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_cp_bridge_boundary.py
+runner_sha256: b24c8fc3c1dc0e0ff84f03cb512391c1b0d2bfc16a51760bb94d231d131764e7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.62
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS/MAINLINE CP BRIDGE BOUNDARY
+========================================================================================
+
+Question:
+  Does the canonical near-closing PMNS-assisted N_e sample already
+  realize the same source-oriented CP package as the mainline exact
+  leptogenesis branch?
+
+========================================================================================
+PART 1: THE CANONICAL N_e SAMPLE LIVES ON THE SAME BREAKING-TRIPLET GRAMMAR
+========================================================================================
+  [PASS] The canonical off-seed N_e Hermitian sample is exactly of the breaking-triplet form  (err=8.38e-17)
+  [PASS] Its gamma slot is nonzero  (gamma=0.130472757513)
+  [PASS] Both real interference channels are definite on that sample  ((delta+rho, A+b-c-d)=(-0.678203236088, -0.974296763912))
+
+  Breaking-triplet coordinates on the canonical near-closing N_e sample:
+    gamma         = 0.130472757513
+    delta + rho   = -0.678203236088
+    A + b - c - d = -0.974296763912
+
+========================================================================================
+PART 2: THE PMNS SAMPLE HAS THE OPPOSITE CP ORIENTATION
+========================================================================================
+  [PASS] The direct intrinsic CP tensor matches the exact breaking-triplet formula on the canonical N_e sample  (direct=(0.0589913642444558, -0.08474612361569306), exact=(0.05899136424445567, -0.08474612361569289))
+  [PASS] The canonical N_e sample has cp1 > 0 and cp2 < 0  ((cp1,cp2)=(0.058991364244,-0.084746123616))
+  [PASS] So its two CP channels already sit on one definite orientation sheet  ((+, -) on the canonical PMNS near-closing sample)
+
+  canonical N_e CP pair = (0.058991364244, -0.084746123616)
+
+========================================================================================
+PART 3: THE SOURCE-ORIENTED MAINLINE PACKAGE IS ON THE OPPOSITE SHEET
+========================================================================================
+  [PASS] The exact source-oriented branch has cp1 < 0 and cp2 > 0  ((cp1,cp2)=(-0.544331053952,0.314269680527))
+  [PASS] The PMNS canonical sample and the exact mainline package therefore have opposite CP sign patterns  (pmns=(0.05899136424445567, -0.08474612361569289), mainline=(-0.544331053952,0.314269680527))
+  [PASS] The PMNS canonical sample does not reproduce the exact mainline source package values  (pmns=(gamma,E1,E2)=(0.130472757513,-0.678203236088,-0.974296763912))
+
+  exact mainline CP pair = (-0.544331053952, 0.314269680527)
+  exact mainline source package = (0.500000000000, 1.632993161855, 0.942809041582)
+
+========================================================================================
+PART 4: THE THEOREM NOTE RECORDS THE BRIDGE BOUNDARY
+========================================================================================
+  [PASS] The new note records the opposite CP sign pattern between the PMNS sample and the mainline branch
+  [PASS] The note records the concrete CP orientation split (+,-) versus (-,+)
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact boundary answer:
+    - the canonical near-closing N_e sample is exactly on the same
+      breaking-triplet grammar
+    - but it carries the opposite CP sign pattern from the exact
+      source-oriented mainline package
+    - so the PMNS near-closing route remains a transport/comparator
+      witness, not yet the constructive mainline CP witness
+
+PASS=11 FAIL=0
+
+----- stderr -----
+

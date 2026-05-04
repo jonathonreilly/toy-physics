@@ -1,0 +1,61 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_adjacent_singlet_placement_theorem.py
+runner_sha256: 0673405159449b8ef9522c882d173ea6284595f6215eb1cc22579bfad0543e56
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.06
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: ADJACENT SINGLET-PLACEMENT THEOREM
+========================================================================================
+
+Authority stack:
+  - docs/DM_NEUTRINO_CASCADE_GEOMETRY_NOTE_2026-04-14.md
+  - docs/NEUTRINO_MAJORANA_ENDPOINT_EXCHANGE_MIDPOINT_THEOREM_NOTE.md
+  - docs/THREE_GENERATION_STRUCTURE_NOTE.md
+
+Question:
+  After the exact midpoint theorem fixes the doublet anchor k_B = 8,
+  can the singlet placement be fixed on the exact weak-axis 1+2
+  cascade geometry?
+
+Exact weak-axis images of the T_1 basis:
+  (1, 0, 0) -> (0, 0, 0)  (hw 1 -> 0)
+  (0, 1, 0) -> (1, 1, 0)  (hw 1 -> 2)
+  (0, 0, 1) -> (1, 0, 1)  (hw 1 -> 2)
+
+Exact return split on T_1:
+  via O_0 =
+[[1.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]]
+
+  via T_2 =
+[[0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 1.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 1.+0.j]]
+  [PASS (C)] The weak-axis one-hop map has one UV-directed image and two IR-directed images  (uv=[(0, 0, 0)], ir=[(1, 1, 0), (1, 0, 1)])
+  [PASS (C)] The unique UV-directed image is the exact singlet O_0  (uv images=[(0, 0, 0)])
+  [PASS (C)] The singled-out return channel is rank-1 and isolates one state  (via O_0 = diag(1,0,0))
+  [PASS (C)] The residual return channel is rank-2 and keeps the remaining pair degenerate  (via T_2 = diag(0,1,1))
+  [PASS (C)] The exact midpoint theorem anchors the doublet at k_B = 8  (k_B=8)
+  [PASS (C)] On the minimal adjacent lift, the unique UV singled-out channel sits one step above the doublet anchor  (k_A=7, k_B=8)
+
+Minimal adjacent-lift consequence:
+  doublet anchor: k_B = 8,  B = M_Pl * alpha_LM^8 = 5.5758e+10 GeV
+  singlet place:  k_A = 7,  A = M_Pl * alpha_LM^7 = 6.1497e+11 GeV
+
+Result:
+  The exact midpoint theorem plus the exact 1+2 cascade geometry fix
+  the singlet/doublet placement on the minimal adjacent lift:
+
+      k_A = 7,   k_B = 8.
+
+  What remains is not the staircase placement anymore. It is the
+  doublet splitting and texture amplitudes, especially eps/B.
+
+PASS=6  FAIL=0
+
+----- stderr -----
+

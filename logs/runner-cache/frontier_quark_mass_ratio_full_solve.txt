@@ -1,0 +1,113 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_mass_ratio_full_solve.py
+runner_sha256: 2b7fbdd80a1e5a28f5fe01b931f39d61329bd1854b230fe98304e8b07a0bc540
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 6.85
+status: ok
+----- stdout -----
+========================================================================
+  FRONTIER: Quark Mass-Ratio Full Solve on the Minimal Schur-NNI Surface
+========================================================================
+
+========================================================================
+PART 1: Phase 1 Down-Type Anchor + CKM Atlas Targets
+========================================================================
+
+  alpha_s(v)            = 0.103303816122
+  m_d/m_s               = 0.051652
+  m_s/m_b               = 0.022390
+  m_d/m_b               = 0.001156
+
+  |V_us|_atlas          = 0.227271
+  |V_cb|_atlas          = 0.042174
+  |V_ub|_atlas          = 0.003913
+  delta_std             = 65.905157 deg
+  J_atlas               = 3.331135e-05
+  [PASS] Phase 1 down-type ratio reproduces the atlas Cabibbo magnitude  (sqrt(m_d/m_s) = 0.22727056)
+  [PASS] Phase 1 down-type ratio reproduces the atlas 2-3 CKM magnitude  ((m_s/m_b)^(5/6) = 0.04217361)
+  [PASS] The atlas 1-3 entry obeys |V_ub| = |V_us||V_cb|/sqrt(6)  (ratio = 0.40824829)
+  [PASS] The atlas Jarlskog follows from the atlas magnitudes and delta_std  (J_atlas = 3.33113531e-05)
+
+========================================================================
+PART 2: Minimal Schur-NNI Magnitude Solve
+========================================================================
+
+  Surface assumptions:
+    - down-type ratios fixed by Phase 1
+    - minimal Schur-NNI coefficients fixed to the historical surface
+    - common phase delta_u = delta_d = delta_std
+    - solve only for (m_u/m_c, m_c/m_t) from CKM magnitudes
+
+  solved m_u/m_c        = 1.683852e-03  (obs: 1.696779e-03)
+  solved m_c/m_t        = 7.323604e-03  (obs: 7.376717e-03)
+  |V_us|                = 0.227244
+  |V_cb|                = 0.042236
+  |V_ub|                = 0.003760
+  intrinsic J           = 5.102024e-06
+  optimizer score       = 0.098687
+  [PASS] Magnitude inversion converges to an interior up-sector solve  (m_u/m_c = 1.684e-03, m_c/m_t = 7.324e-03)
+  [PASS] |V_us| matches the atlas target within 0.1%  (ratio = 0.999883)
+  [PASS] |V_cb| matches the atlas target within 0.3%  (ratio = 1.001479)
+  [PASS] |V_ub| matches the atlas target within 5%  (ratio = 0.960806)
+  [PASS] Solved m_u/m_c lands within 5% of the observation comparator  (dev = -0.76%)
+  [PASS] Solved m_c/m_t lands within 5% of the observation comparator  (dev = -0.72%)
+
+========================================================================
+PART 3: Intrinsic CP Gap on the Magnitude-Solved Surface
+========================================================================
+
+  J_intrinsic / J_atlas = 0.153162
+  J_intrinsic           = 5.102024e-06
+  J_atlas               = 3.331135e-05
+  underprediction       = 6.53x
+  [PASS] The minimal Schur-NNI magnitude solve under-produces J strongly  (J_intrinsic/J_atlas = 0.1532)
+  [PASS] The CP-area deficit is larger than a factor of 5  (factor = 6.53)
+
+========================================================================
+PART 4: Phase-Relaxed J Ceiling at Fixed CKM Magnitude Corridor
+========================================================================
+
+  Corridor:
+    |V_us - target| <= 0.0020
+    |V_cb - target| <= 0.0020
+    |V_ub - target| <= 0.0010
+
+  best relaxed m_u/m_c  = 1.776950e-03
+  best relaxed m_c/m_t  = 4.559336e-02
+  delta_u               = 62.394 deg
+  delta_d               = 91.462 deg
+  |V_us|                = 0.225348
+  |V_cb|                = 0.043048
+  |V_ub|                = 0.004688
+  J_ceiling             = 6.459890e-06
+  [PASS] Phase relaxation keeps the CKM magnitudes inside the declared corridor  (dv = (-1.9224e-03, +8.7421e-04, +7.7540e-04))
+  [PASS] The phase-relaxed J ceiling still stays below 25% of the atlas J  (J_ceiling/J_atlas = 0.1939)
+  [PASS] Even the relaxed surface still misses the atlas J by more than 4x  (factor = 5.16)
+
+========================================================================
+PART 5: Summary
+========================================================================
+
+  Strong result on the current branch:
+    the minimal Schur-NNI inversion closes the quark magnitudes well
+    m_u/m_c = 1.683852e-03
+    m_c/m_t = 7.323604e-03
+
+  Honest remaining blocker:
+    the same surface does not close the CP area
+    intrinsic J = 5.102024e-06
+    relaxed J ceiling = 6.459890e-06
+    atlas J = 3.331135e-05
+
+  Interpretation:
+    the current quark lane is materially stronger than the lepton lane
+    because the magnitudes invert cleanly on this surface
+    but one extra CP-area primitive is still missing for full closure
+
+========================================================================
+  TOTAL: PASS=15, FAIL=0
+========================================================================
+
+----- stderr -----
+

@@ -1,0 +1,165 @@
+===== runner cache v1 =====
+runner: scripts/frontier_born_rule_derived.py
+runner_sha256: 657f96951a89917d8b05583aa00f5bdab1d770451ef5cd6ebdd178c5a3c86b49
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.54
+status: ok
+----- stdout -----
+========================================================================
+EXACT I_3 = 0 / PAIRWISE INTERFERENCE THEOREM
+========================================================================
+
+EXACT CHECK 1: Algebraic identity I_3 = 0
+--------------------------------------------------
+  For ANY complex amplitudes A, B, C:
+  I_3 = |A+B+C|^2 - |A+B|^2 - |A+C|^2 - |B+C|^2
+        + |A|^2 + |B|^2 + |C|^2
+      = 0  (algebraic identity)
+
+  10000 random trials: max |I_3| = 1.78e-14
+  Result: PASS (threshold 1e-12)
+
+ASSERTION BLOCK 2: Symbolic expansion
+--------------------------------------------------
+  Writing A = a + ib, B = c + id, C = e + if (all real)
+
+  |A+B+C|^2 = (a+c+e)^2 + (b+d+f)^2
+  Expanding: a^2+c^2+e^2+b^2+d^2+f^2 + 2(ac+ae+ce+bd+bf+df)
+
+  |A+B|^2   = a^2+c^2+b^2+d^2 + 2(ac+bd)
+  |A+C|^2   = a^2+e^2+b^2+f^2 + 2(ae+bf)
+  |B+C|^2   = c^2+e^2+d^2+f^2 + 2(ce+df)
+
+  |A|^2 = a^2+b^2,  |B|^2 = c^2+d^2,  |C|^2 = e^2+f^2
+
+  I_3 = [a^2+c^2+e^2+b^2+d^2+f^2 + 2(ac+ae+ce+bd+bf+df)]
+      - [a^2+c^2+b^2+d^2 + 2(ac+bd)]
+      - [a^2+e^2+b^2+f^2 + 2(ae+bf)]
+      - [c^2+e^2+d^2+f^2 + 2(ce+df)]
+      + [a^2+b^2] + [c^2+d^2] + [e^2+f^2]
+
+  Coefficient of a^2: 1 - 1 - 1 - 0 + 1 = 0
+  Coefficient of c^2: 1 - 1 - 0 - 1 + 1 = 0
+  Coefficient of e^2: 1 - 0 - 1 - 1 + 1 = 0
+  (same for b^2, d^2, f^2)
+  Coefficient of ac:  2 - 2 - 0 - 0 + 0 = 0
+  Coefficient of ae:  2 - 0 - 2 - 0 + 0 = 0
+  Coefficient of ce:  2 - 0 - 0 - 2 + 0 = 0
+  (same for bd, bf, df)
+
+  ALL coefficients vanish. I_3 = 0 is an algebraic identity.
+  Result: ASSERTION (proof block, not a numerical check)
+
+EXACT CHECK 3: I_4 also vanishes for quadratic probabilities
+--------------------------------------------------
+  I_4 uses 4 slits with inclusion-exclusion depth 4.
+  For Born rule (P = |A|^2), I_n = 0 for all n >= 3.
+
+  10000 random trials: max |I_4| = 4.26e-14
+  I_4 = 0 for Born rule: PASS
+
+EXACT CHECK 4: I_n = 0 for n = 3, 4, 5, 6, 7 (Born rule)
+--------------------------------------------------
+  n=3: max |I_n| = 1.42e-14  PASS
+  n=4: max |I_n| = 2.84e-14  PASS
+  n=5: max |I_n| = 4.26e-14  PASS
+  n=6: max |I_n| = 2.13e-13  PASS
+  n=7: max |I_n| = 5.26e-13  PASS
+
+EXACT CHECK 5: Non-Born probability rules give I_3 != 0
+--------------------------------------------------
+  If P = |A|^p with p != 2, then I_3 != 0 generically.
+
+  p=1.0: I_3 = +5.57034522e-01
+  p=1.5: I_3 = +2.94275794e-01
+  p=2.0: I_3 = -4.44089210e-16  <-- Born rule (p=2)
+  p=2.5: I_3 = -3.27316287e-01
+  p=3.0: I_3 = -6.86861235e-01
+  p=4.0: I_3 = -1.47800000e+00
+
+  Born (p=2) gives I_3=0: True
+  Non-Born (p=4) gives I_3!=0: True
+  Result: PASS
+
+EXACT CHECK 6: Lattice propagator on Z^1 (toy 1D chain)
+--------------------------------------------------
+  Verify I_3 = 0 for a concrete lattice Hamiltonian.
+
+  Amplitudes: A = -0.000000-0.000000j
+              B = 0.000000-0.000000j
+              C = -0.000000-0.000000j
+  I_3 = 8.72e-35
+  Result: PASS
+
+EXACT CHECK 7: Lattice propagator on Z^3 (small 6x6x6)
+--------------------------------------------------
+  Verify I_3 = 0 for the actual 3D cubic lattice Hamiltonian.
+
+  3D lattice (staggered phases), 216 sites
+  I_3 = 2.67e-51
+  Result: PASS
+
+ASSERTION BLOCK 8: Theorem statement
+--------------------------------------------------
+
+  THEOREM (Born rule from Hilbert space).
+  Let H be a finite-dimensional Hilbert space (axiom I1).
+  Let U = exp(-iHt) be the unitary propagator.
+  Let A_S denote the amplitude through slit set S,
+  satisfying linearity: A_{S1 union S2} = A_{S1} + A_{S2}
+  for disjoint S1, S2.
+  Let P_S = |A_S|^2 (Born rule).
+
+  Then the Sorkin parameter I_n = 0 for all n >= 3.
+
+  PROOF. For n = 3:
+    I_3 = |A+B+C|^2 - |A+B|^2 - |A+C|^2 - |B+C|^2
+          + |A|^2 + |B|^2 + |C|^2
+    Expand |X+Y|^2 = |X|^2 + |Y|^2 + 2 Re(X conj(Y)):
+    Every |X|^2 term has net coefficient 0.
+    Every cross-term 2 Re(X conj(Y)) has net coefficient 0.
+    Hence I_3 = 0 identically.
+
+    For general n >= 3: by inclusion-exclusion and the
+    binomial identity sum_{k=0}^{n} (-1)^k C(n,k) = 0,
+    all terms of degree 1 (|X|^2) and degree 2 (cross-terms)
+    cancel. Since |sum A_i|^2 contains ONLY degree-1 and
+    degree-2 terms (no triple products), I_n = 0. QED.
+
+  KEY POINT: The lattice provides the specific propagator
+  K(x,y), but I_3 = 0 is INDEPENDENT of K. It follows from
+  the Hilbert space structure alone: linearity of amplitudes
+  plus the Born rule P = |A|^2. The lattice Z^3 structure,
+  staggered phases, and Cl(3) algebra are irrelevant to this
+  result -- they determine WHAT the amplitudes are, not that
+  interference is pairwise.
+
+  CONVERSE: If probabilities were P = |A|^p with p != 2,
+  then |X+Y|^p introduces terms of order > 2 in the real
+  and imaginary parts, and I_3 != 0 generically.
+
+  STATUS: This is an exact theorem. No lattice-specific
+  details, finite-size effects, or model assumptions enter.
+  It is a consequence of axiom I1 alone.
+
+========================================================================
+SUMMARY: COMPUTED_PASS=6 ASSERTION=2 FAIL=0
+========================================================================
+
+  Exact checks:
+    1. Algebraic identity I_3 = 0 for random amplitudes: PASS
+    2. Symbolic expansion proof: ASSERTION
+    3. I_4 = 0 for Born rule: PASS
+    4. I_n = 0 for n = 3..7: PASS
+    5. Non-Born rules give I_3 != 0: PASS
+    6. 1D lattice propagator I_3 = 0: PASS
+    7. 3D staggered lattice propagator I_3 = 0: PASS
+    8. Theorem statement: ASSERTION
+
+  Six checks are computed exactly; two blocks restate the proof.
+  Historical filename retained, but the safe claim is exact I_3 = 0,
+  not a freestanding derivation of the Born rule from nothing.
+
+----- stderr -----
+

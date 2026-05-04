@@ -1,0 +1,74 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_sigma_hier_upper_octant_selector_theorem_2026_04_20.py
+runner_sha256: 2b59edc7c48841dafbd06b3449a49d3f8b43cbee8f7adcab7b76e4ab1cd3b1cb
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.53
+status: ok
+----- stdout -----
+========================================================================================
+DM SIGMA_HIER UPPER-OCTANT SELECTOR THEOREM
+========================================================================================
+
+Question:
+  Can sigma_hier be selected at the pinned PMNS chamber point without
+  importing the T2K/NOvA CP-phase-sign preference?
+
+========================================================================================
+PART 1: ONLY TWO PERMUTATIONS PASS THE 9/9 MAGNITUDE FILTER AT H_PIN
+========================================================================================
+ sigma=(0, 1, 2)  4/9 pass  s23^2=0.960715  sin(dCP)=+0.9661
+ sigma=(0, 2, 1)  4/9 pass  s23^2=0.039285  sin(dCP)=-0.9661
+ sigma=(1, 0, 2)  5/9 pass  s23^2=0.953307  sin(dCP)=-0.9998
+ sigma=(1, 2, 0)  5/9 pass  s23^2=0.046693  sin(dCP)=+0.9998
+ sigma=(2, 0, 1)  9/9 pass  s23^2=0.455000  sin(dCP)=+0.9874
+ sigma=(2, 1, 0)  9/9 pass  s23^2=0.545000  sin(dCP)=-0.9874
+  [PASS] Exactly two permutations pass all 9 NuFit magnitudes  (passing=[(2, 0, 1), (2, 1, 0)])
+  [PASS] The four excluded permutations each fail at least four entries
+
+========================================================================================
+PART 2: THE TWO SURVIVORS ARE EXACT mu<->tau PARTNERS
+========================================================================================
+ sigma=(2,0,1): s12^2=0.307000397724, s13^2=0.021799951452, s23^2=0.455000028664, sin(dCP)=+0.987360759210
+ sigma=(2,1,0): s12^2=0.307000397724, s13^2=0.021799951452, s23^2=0.544999971336, sin(dCP)=-0.987360759210
+  [PASS] The mu<->tau swap preserves s12^2 exactly at H_pin  (diff=0.00e+00)
+  [PASS] The mu<->tau swap preserves s13^2 exactly at H_pin  (diff=0.00e+00)
+  [PASS] The mu<->tau swap sends s23^2 to 1 - s23^2  (sum=1.000000000000)
+  [PASS] The mu<->tau swap flips the sign of sin(delta_CP)  (sum=0.00e+00)
+
+========================================================================================
+PART 3: THE CHAMBER THRESHOLD IS STRICTLY IN THE UPPER OCTANT
+========================================================================================
+ s23^2_min(0.307, 0.0218) = 0.540969817889065
+  [PASS] The exact threshold agrees with the chamber theorem value 0.540969817889...  (threshold=0.540969817889065)
+  [PASS] The chamber threshold lies strictly above maximal mixing  (s23^2_min - 0.5 = 0.040969817889)
+
+========================================================================================
+PART 4: THE UPPER-OCTANT LAW SELECTS sigma = (2,1,0)
+========================================================================================
+ sigma=(2,0,1): s23^2 - threshold = -0.085969789225
+ sigma=(2,1,0): s23^2 - threshold = +0.004030153447
+  [PASS] sigma=(2,0,1) lies below the chamber upper-octant threshold  (gap=-0.085969789225)
+  [PASS] sigma=(2,1,0) lies above the chamber upper-octant threshold  (gap=+0.004030153447)
+  [PASS] So exactly one 9/9-magnitude-passing permutation is chamber-compatible
+  [PASS] The unique chamber-compatible hierarchy pairing is sigma=(2,1,0)  (s23^2=0.544999971336)
+
+========================================================================================
+PART 5: CP SIGN IS NOW A CONSEQUENCE, NOT AN IMPORT
+========================================================================================
+  [PASS] Once sigma=(2,1,0) is selected, the predicted CP sign is automatically negative  (sin(dCP)=-0.987360759210)
+  [PASS] The note records that upper-octant selection replaces the external CP-sign discriminator
+
+========================================================================================
+RESULT
+========================================================================================
+  sigma_hier = (2,1,0) is uniquely selected on the pinned chamber
+  package by the system:
+    - 9/9 NuFit magnitude pass
+    - exact chamber upper-octant law
+  The external CP-sign discriminator is no longer needed for I12 here.
+
+PASS=14 FAIL=0
+
+----- stderr -----
+

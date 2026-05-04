@@ -1,0 +1,98 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_adiabatic_prep_probe.py
+runner_sha256: 4bfb8c77de9afd3311fc523f85664520673722b875d0265890ef0c7875afa972
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 4.93
+status: ok
+----- stdout -----
+POISSON TELEPORTATION ADIABATIC PREP PROBE
+Status: planning / first artifact; quantum state teleportation resource only
+Claim boundary: no matter, mass, charge, energy, or faster-than-light transport; no preparation proof from this diagnostic
+Path family: native uncoupled two-species Hamiltonian at G=0 ramped linearly in s to the Poisson target
+Diagnostics: sampled spectral gap, target-ground overlap, Phi+ resource overlap, exact eigenbasis adiabatic ratio, and conservative norm bound
+Grid/thresholds: grid_points=41, resource>=0.900, min_gap>=0.001, exact_A<=1000, norm_bound<=100000
+
+Case: 1d_null
+  lattice/params: dim=1 side=8 N=8 envs/logical_qubit=4 mass=0 G_target=0
+  path: H(s)=H(G=0)+s*(H(G_target)-H(G=0)); ||dH/ds||_2=0
+  sampled path rows:
+         s          gap  target|ov|2       Phi+      Bell* label         Amax         Arss    norm/gap2
+     0.000     0.585786     1.000000   0.500000   0.500000  Phi+            0            0            0
+     0.250     0.585786     1.000000   0.500000   0.500000  Phi+            0            0            0
+     0.500     0.585786     1.000000   0.500000   0.500000  Phi+            0            0            0
+     0.750     0.585786     1.000000   0.500000   0.500000  Phi+            0            0            0
+     1.000     0.585786     1.000000   0.500000   0.500000  Phi+            0            0            0
+  path summary: min gap=0.585786 at s=0.000; final gap=0.585786; initial target-ground overlap=1.000000; final target-ground overlap=1.000000
+  final resource: Phi+ overlap=0.500000, best Bell=0.500000 (Phi+), logical CHSH=2.000000, negativity=0.000000
+  adiabatic diagnostic: max_k |<k|dH/ds|0>|/gap_k^2=0 at s=0.000, level=1, level_gap=0.585786, coupling=0
+    max RSS exact diagnostic=0 at s=0.000; max conservative ||dH||/gap_1^2=0 at s=0.000
+  verdict: null/control path clean: YES
+
+Case: 1d_poisson_chsh
+  lattice/params: dim=1 side=8 N=8 envs/logical_qubit=4 mass=0 G_target=1000
+  path: H(s)=H(G=0)+s*(H(G_target)-H(G=0)); ||dH/ds||_2=656.250000
+  sampled path rows:
+         s          gap  target|ov|2       Phi+      Bell* label         Amax         Arss    norm/gap2
+     0.000     0.585786     0.141330   0.500000   0.500000  Phi+   154.971143   219.933171  1912.452650
+     0.250     0.071302     0.983377   0.969916   0.969916  Phi+     0.039222     0.039223 1.290818e+05
+     0.500     0.037002     0.998021   0.991988   0.991988  Phi+     0.005546     0.005546 4.793010e+05
+     0.750     0.024847     0.999777   0.996395   0.996395  Phi+     0.001683     0.001683 1.062943e+06
+     1.000     0.018683     1.000000   0.997963   0.997963  Phi+ 7.161405e-04 7.161411e-04 1.880033e+06
+  path summary: min gap=0.018683 at s=1.000; final gap=0.018683; initial target-ground overlap=0.141330; final target-ground overlap=1.000000
+  final resource: Phi+ overlap=0.997963, best Bell=0.997963 (Phi+), logical CHSH=2.822668, negativity=0.497963
+  adiabatic diagnostic: max_k |<k|dH/ds|0>|/gap_k^2=154.971143 at s=0.000, level=8, level_gap=1.171573, coupling=212.710757
+    max RSS exact diagnostic=219.933171 at s=0.000; max conservative ||dH||/gap_1^2=1.880033e+06 at s=1.000
+  verdict:
+    high Phi+ endpoint (>= 0.900): YES
+    sampled gap floor (>= 0.001): YES
+    clean-path exact adiabatic diagnostic (<= 1000): YES
+    conservative norm-bound diagnostic (<= 100000): NO
+    preparation proof demonstrated: NO (plausible diagnostic path)
+
+Case: 2d_null
+  lattice/params: dim=2 side=4 N=16 envs/logical_qubit=8 mass=0 G_target=0
+  path: H(s)=H(G=0)+s*(H(G_target)-H(G=0)); ||dH/ds||_2=0
+  sampled path rows:
+         s          gap  target|ov|2       Phi+      Bell* label         Amax         Arss    norm/gap2
+     0.000     2.000000     1.000000   0.500000   0.500000  Phi+            0            0            0
+     0.250     2.000000     1.000000   0.500000   0.500000  Phi+            0            0            0
+     0.500     2.000000     1.000000   0.500000   0.500000  Phi+            0            0            0
+     0.750     2.000000     1.000000   0.500000   0.500000  Phi+            0            0            0
+     1.000     2.000000     1.000000   0.500000   0.500000  Phi+            0            0            0
+  path summary: min gap=2.000000 at s=0.000; final gap=2.000000; initial target-ground overlap=1.000000; final target-ground overlap=1.000000
+  final resource: Phi+ overlap=0.500000, best Bell=0.500000 (Phi+), logical CHSH=2.000000, negativity=0.000000
+  adiabatic diagnostic: max_k |<k|dH/ds|0>|/gap_k^2=0 at s=0.000, level=1, level_gap=2.000000, coupling=0
+    max RSS exact diagnostic=0 at s=0.000; max conservative ||dH||/gap_1^2=0 at s=0.000
+  verdict: null/control path clean: YES
+
+Case: 2d_poisson_chsh
+  lattice/params: dim=2 side=4 N=16 envs/logical_qubit=8 mass=0 G_target=1000
+  path: H(s)=H(G=0)+s*(H(G_target)-H(G=0)); ||dH/ds||_2=268.229167
+  sampled path rows:
+         s          gap  target|ov|2       Phi+      Bell* label         Amax         Arss    norm/gap2
+     0.000     2.000000     0.145230   0.500000   0.500000  Phi+     1.958641     3.954526    67.057292
+     0.250     0.722825     0.800135   0.784931   0.784931  Phi+     0.229804     0.230293   513.380655
+     0.500     0.449531     0.959790   0.905991   0.905991  Phi+     0.071795     0.071842  1327.355180
+     0.750     0.319860     0.994636   0.950647   0.950647  Phi+     0.028585     0.028593  2621.722607
+     1.000     0.246378     1.000000   0.970283   0.970283  Phi+     0.013655     0.013657  4418.777061
+  path summary: min gap=0.246378 at s=1.000; final gap=0.246378; initial target-ground overlap=0.145230; final target-ground overlap=1.000000
+  final resource: Phi+ overlap=0.970283, best Bell=0.970283 (Phi+), logical CHSH=2.745662, negativity=0.470283
+  adiabatic diagnostic: max_k |<k|dH/ds|0>|/gap_k^2=1.958641 at s=0.000, level=29, level_gap=4.000000, coupling=31.338251
+    max RSS exact diagnostic=3.954526 at s=0.000; max conservative ||dH||/gap_1^2=4418.777061 at s=1.000
+  verdict:
+    high Phi+ endpoint (>= 0.900): YES
+    sampled gap floor (>= 0.001): YES
+    clean-path exact adiabatic diagnostic (<= 1000): YES
+    conservative norm-bound diagnostic (<= 100000): YES
+    preparation proof demonstrated: NO (plausible diagnostic path)
+
+Conclusion:
+  null/control paths clean: 2/2
+  Poisson paths with high endpoint resource, finite sampled gap, and exact diagnostic within threshold: 2/2
+  clean-path plausible diagnostics: 1d_poisson_chsh, 2d_poisson_chsh
+  also below conservative norm-bound threshold: 2d_poisson_chsh
+  Interpretation: this is a bounded adiabatic/gap planning artifact. Finite sampled gaps and favorable endpoint overlaps make the path worth probing further, but they do not prove preparation without a schedule, runtime/error bound, control-noise model, and encoded readout operations.
+
+----- stderr -----
+

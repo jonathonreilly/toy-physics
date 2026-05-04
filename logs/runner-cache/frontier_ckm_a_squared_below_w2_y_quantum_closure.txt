@@ -1,0 +1,86 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_a_squared_below_w2_y_quantum_closure.py
+runner_sha256: aa366044540e54f499a1757d392647367d26faef03a55ab41583ef0a74d17884
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.04
+status: nonzero_exit
+----- stdout -----
+========================================================================================
+A^2 closure below W2 via Identification Source Theorem (S1)
+See docs/CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Ground-up verification of cited authorities (Status lines from disk)
+----------------------------------------------------------------------------------------
+  Reading each cited authority file from disk and extracting Status: line.
+  Verification is by direct text extraction, NOT assumption.
+
+  S1 LOAD-BEARING retained-tier authorities:
+
+    [LEFT_HANDED_CHARGE_MATCHING_NOTE.md]
+      Role:               S1 P2: Q_L : (2,3) source
+      Status (extracted): ''
+      Verified retained?  False
+  [FAIL] Retained-tier verified for LEFT_HANDED_CHARGE_MATCHING_NOTE.md
+
+    [ONE_GENERATION_MATTER_CLOSURE_NOTE.md]
+      Role:               S1 P3: u_R, d_R : (1,3) cross-check on N_color
+      Status (extracted): 'proposed_retained'
+      Verified retained?  True
+  [PASS] Retained-tier verified for ONE_GENERATION_MATTER_CLOSURE_NOTE.md
+
+    [MINIMAL_AXIOMS_2026-04-11.md]
+      Role:               S1 P1: gauge-structure context
+      Status (extracted): '**SUPERSEDED** by `MINIMAL_AXIOMS_2026-05-03.md` — see that note for the current axiom set.'
+      Verified retained?  False
+  [FAIL] Retained-tier verified for MINIMAL_AXIOMS_2026-04-11.md
+
+  Consistency / S5 retained-tier authorities (not load-bearing for S1+S2):
+
+    [WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md]
+      Role:               S3: W2 retained A^2 consistency check
+      Status (extracted): 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
+      Verified retained?  True
+  [PASS] Retained-tier verified for WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+
+    [YT_EW_COLOR_PROJECTION_THEOREM.md]
+      Role:               S5: g_2^2, g_Y^2 EW lattice couplings
+      Status (extracted): 'audited_conditional / bounded EW normalization lane. The exact'
+      Verified retained?  False
+  [FAIL] Retained-tier verified for YT_EW_COLOR_PROJECTION_THEOREM.md
+
+    [CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md]
+      Role:               structural-counts package (consistency reference)
+      Status (extracted): 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
+      Verified retained?  True
+  [PASS] Retained-tier verified for CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+
+
+----------------------------------------------------------------------------------------
+S1 P1: MINIMAL_AXIOMS gauge-structure context (verified by text)
+----------------------------------------------------------------------------------------
+  Searching MINIMAL_AXIOMS_2026-04-11.md for retained current consequences:
+    'exact native SU(2)':                  FOUND
+    'structural SU(3)':                    FOUND
+    'one-generation matter closure':       FOUND
+    'Z^3' substrate:                       FOUND
+  [PASS] S1 P1: MINIMAL_AXIOMS retains 'exact native SU(2)'
+  [PASS] S1 P1: MINIMAL_AXIOMS retains 'graph-first structural SU(3)'
+  [PASS] S1 P1: MINIMAL_AXIOMS retains one-generation matter closure
+  [PASS] S1 P1: MINIMAL_AXIOMS retains Z^3 substrate
+
+----------------------------------------------------------------------------------------
+S1 P2: Extract retained Q_L representation literal (NOT hard-coded)
+----------------------------------------------------------------------------------------
+  Reading docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md
+  Searching for retained literal: Q_L : (a,b)_{Y}
+  Extracted (dim_SU2, dim_SU3) for Q_L: None
+  [FAIL] S1 P2: Q_L representation literal extracted from retained doc
+
+FATAL: Q_L : (a,b) representation literal not extractable from
+       docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md.
+
+----- stderr -----
+

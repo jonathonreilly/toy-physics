@@ -1,0 +1,63 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_global_dominance_completeness_obstruction.py
+runner_sha256: 81bdf0676630bfdc3c3671713cc99855356b5258b4c2eb202db7d1093d7b7071
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.63
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE GLOBAL DOMINANCE COMPLETENESS OBSTRUCTION
+========================================================================================
+
+Question:
+  After representation compression, can the preferred recovered point already
+  be promoted to a full exact-carrier winner?
+
+========================================================================================
+PART 1: THE PREFERRED RECOVERED POINT IS A REAL RECOVERED-CARRIER WINNER
+========================================================================================
+  [PASS] The recovered carrier still consists of the same five clustered exact lifts  (repairs=[1.58687471 2.52224944 2.69898576 3.81245795 5.52618588])
+  [PASS] The preferred recovered lift is still the unique least-repair point on that recovered carrier  ((winner,gap)=(0,9.353747250847e-01))
+  [PASS] That preferred recovered lift is still the named target point on the active sheet  (preferred=[1.02103884 1.38079143 0.21567748])
+  [PASS] The preferred recovered target in (delta,q_+) is unchanged on the branch  (target=(1.380791428982,0.467879209399))
+
+========================================================================================
+PART 2: THE UNRESOLVED RIVAL GEOMETRY IS LOCALIZED TO THREE WINDOWS
+========================================================================================
+  [PASS] The branch still localizes the rival-side uncertainty to exactly three exposed windows  (windows=[('endpoint', (-1.899713, -1.87)), ('split_1', (-1.16, -1.1)), ('split_2', (-0.19, -0.14))])
+  [PASS] Those windows are ordered and disjoint across the rival side  (ordered=[(-1.899713, -1.87), (-1.16, -1.1), (-0.19, -0.14)])
+  [PASS] The obstruction note records that the rival-side uncertainty is localized rather than diffuse
+  [PASS] The obstruction note records the still-underresolved split-2 slice rather than claiming interval certification
+  [PASS] The obstruction note sharpens split-2 further to a low-slack boundary-band issue rather than a whole-window broad failure
+  [PASS] The obstruction note now records the one-dimensional split-2 edge interval on the tested broad bundle
+  [PASS] The obstruction note records that endpoint and split-1 broad-window pressure are already absent on the tested edge-profile hierarchy
+  [PASS] The obstruction note records that the tested split-2 edge undercut is transport-incompatible with the preferred recovered lane
+  [PASS] The obstruction note records that no lower-repair transport-compatible lane is currently visible on the tested broad split-2 low-slack box
+  [PASS] The obstruction note records that the tested residual transport pressure already collapses toward the upper-m low-slack ridge
+  [PASS] The obstruction note records that the sampled split-2 upper-face pressure sharpens to two explicit extremals
+  [PASS] The obstruction note records that those split-2 extremals stay pinned on tested local neighborhoods
+
+========================================================================================
+PART 3: EXACT-CARRIER COMPLETENESS AND GLOBAL DOMINANCE REMAIN UNPROVED
+========================================================================================
+  [PASS] The obstruction note explicitly says the recovered carrier has not yet been promoted to the full exact carrier
+  [PASS] The obstruction note names interval-certified completeness or dominance as the missing theorem
+  [PASS] The obstruction note sharpens the missing carrier theorem to transport-compatible neighborhoods of the two split-2 upper-face extremals
+  [PASS] The obstruction note now sharpens the missing carrier theorem further to interval-certified control on the two explicit local upper-face neighborhoods
+  [PASS] The branch conclusion note keeps the overall branch verdict at obstruction
+  [PASS] The branch conclusion note names exact-carrier completeness / global dominance as one of the two exact blockers
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact carrier-side branch verdict:
+    - the preferred recovered point is a real recovered-carrier winner
+    - the unresolved rival geometry is localized to three exposed windows
+    - exact-carrier completeness / global dominance is still unproved
+  RESULT: obstruction at exact-carrier completeness / global dominance
+
+SUMMARY: PASS=22 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,38 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_microscopic_closure.py
+runner_sha256: 4f7ea89da94f0ae29a3cc12f29a5818c2a452ee5cdb4863f218daf0954889abe
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 5.33
+status: ok
+----- stdout -----
+TELEPORTATION MICROSCOPIC CLOSURE CANDIDATE
+Status: planning artifact; ordinary quantum state teleportation only
+native surface: dim=3, side=2, retained_axis=2
+native retained-axis stabilizers: Z_residual=0.000e+00, X_residual=0.000e+00, site_commutator=0.000e+00, logical_commutator=0.000e+00
+Hamiltonian transducer algebra: H_hermitian=0.000e+00, [Hz,Hx]=0.000e+00, [Hz,Hp]=0.000e+00, [Hx,Hp]=0.000e+00
+finite-time Hamiltonian write: all_codewords=True, max_hamming_error=0, max_pointer_state_error=0.000e+00
+thermodynamic detector theorem: d_min=5, pointer_base=0.324796, bath_base=0.764842, kappa=10.984501, bound_N9=1.163e-43, entropy_defect_N21=0.000e+00
+native ledger theorem class: support_basis_commutator=0.000e+00, random_native_generator_commutator=0.000e+00, transducer_class_commutator=0.000e+00, branch_energy_spread=0
+
+Acceptance gates:
+  native retained-axis Cl(3)/Z^3 stabilizers close: PASS
+  stabilizer-controlled transducer Hamiltonian terms commute: PASS
+  finite-time Hamiltonian evolution writes Bell codewords: PASS
+  thermodynamic bath bound drives record overlap to zero: PASS
+  native taste-apparatus ledger theorem covers controlled generators: PASS
+  claim boundary stays state-only and not FTL: PASS
+
+Limitations:
+  The transducer Hamiltonian is constructed from retained-axis native
+  stabilizers; it is not a uniqueness derivation from the sole axiom.
+  The thermodynamic theorem is an exponential overlap bound for this
+  pointer+bath family, not a full detector engineering theorem.
+  The ledger theorem covers the native taste-apparatus generator class;
+  direct support/species couplings are outside the teleportation lane.
+  Resource preparation and retained readout/correction scaling remain
+  bounded-lane inputs. No matter, mass, charge, energy, object, or FTL
+  transport is claimed.
+
+----- stderr -----
+

@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/frontier_em_coupling_from_ewsb.py
+runner_sha256: c8f03f98101b56cdf31761b287dd1fbe583cfd329667bf79e49dc2b42ef12ee2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure
+----------------------------------------------------------------------------------------
+  [PASS (A)] contains: "Electromagnetic Coupling e = g sin(θ_W) = g' cos(θ_W)"  ()
+  [PASS (A)] contains: 'EWSB Pattern'  ()
+  [PASS (A)] contains: "tan(θ_W) = g'/g"  ()
+  [PASS (A)] contains: 'Z_μ coupling'  ()
+  [PASS (A)] contains: 'T_3 − Q sin²(θ_W)'  ()
+  [PASS (A)] contains: 'proposal_allowed: false'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: structural identity g sin(θ_W) = g' cos(θ_W)
+----------------------------------------------------------------------------------------
+  [PASS (A)] e² = g² sin²θ_W = g'² cos²θ_W (structural identity at exact Fraction)  (tested 3 (g²,g'²) cases)
+
+----------------------------------------------------------------------------------------
+Part 3: tan(θ_W) = g'/g consistency
+----------------------------------------------------------------------------------------
+  [PASS (A)] tan²θ_W = g'²/g² = sin²/cos² for g²=1, g'²=2  (tan²=2)
+  [PASS (A)] tan²θ_W = g'²/g² = sin²/cos² for g²=3, g'²=5  (tan²=5/3)
+  [PASS (A)] tan²θ_W = g'²/g² = sin²/cos² for g²=2, g'²=1  (tan²=1/2)
+
+----------------------------------------------------------------------------------------
+Part 4: cycle 19 + cycle 21 cross-check
+----------------------------------------------------------------------------------------
+  [PASS (A)] tan²θ_W^GUT = sin²/cos² = 3/5 (cycle 19 cross-check)  (tan²_GUT = 3/5)
+  [PASS (A)] M_W²/M_Z²^GUT = cos²θ_W^GUT = 5/8 (cycle 21 + cycle 19)  (M_W²/M_Z² at GUT = 5/8)
+
+========================================================================================
+  TOTAL: PASS=12, FAIL=0
+========================================================================================
+
+----- stderr -----
+

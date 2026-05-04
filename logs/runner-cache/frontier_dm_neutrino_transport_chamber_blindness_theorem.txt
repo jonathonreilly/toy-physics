@@ -1,0 +1,169 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_transport_chamber_blindness_theorem.py
+runner_sha256: 949dc78b0ea567bc14380e3974cc01bf5e489d9e8837030a2f51b0af040dd664
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.85
+status: ok
+----- stdout -----
+========================================================================================
+G1 PHYSICS VALIDATION: eta/eta_obs AT Z_3 DOUBLET-BLOCK SELECTOR CANDIDATES
+========================================================================================
+Branch:  (off )
+
+
+========================================================================================
+PART 1: AUTHORITATIVE RETAINED TRANSPORT VALUE
+========================================================================================
+
+ Pulls directly from scripts/dm_leptogenesis_exact_common.exact_package()
+ and kappa_axiom_reference(). This is the exact, theorem-native
+ one-flavor-radiation-branch transport value on the live sheet.
+ [PASS (C)] Authoritative eta/eta_obs matches the retained value 0.188785929502 (eta/eta_obs = 0.188785929502)
+ [PASS (C)] Authoritative epsilon_1/epsilon_DI = 0.9276209209 (Part 1 of transport status) (epsilon_1 = 2.457620e-06, kappa_axiom = 0.004829545291)
+
+========================================================================================
+PART 2: SOURCE-PACKAGE BANK BLINDNESS AT EACH CANDIDATE
+========================================================================================
+
+ The atlas theorem
+  DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_CURRENT_BANK_BLINDNESS_THEOREM
+ states that gamma, E1, E2, K00 and the intrinsic CP pair are
+ invariant under T_delta and T_q moves on the chamber. Since
+ eta/eta_obs factors through (gamma, E1, E2, K00, cp1, cp2) only,
+ eta/eta_obs is a constant function of (delta, q_+) on the chamber.
+
+ Candidate A: (m, delta, q_+) = (0.500000, 0.816497, 0.816497)
+  source-package observable readout:
+   |gamma|       = 0.500000000000  (ref 0.500000000000)
+   |E1|        = 1.632993161855  (ref 1.632993161855)
+   |cp1|        = 0.544331053952  (ref 0.544331053952)
+   |cp2|        = 0.314269680527  (ref 0.314269680527)
+  provenance: Schur-Q chamber-boundary minimum [SELECTOR_3_DOUBLET_BLOCK_SELECTOR_SCHUR_BASELINE_PARTIAL_CLOSURE]
+ [PASS (C)] Candidate A: source-package observables match retained (up to CP-branch sign)
+  eta/eta_obs at this candidate: 0.188785929502
+
+ Candidate B: (m, delta, q_+) = (0.613372, 0.964443, 1.552431)
+  source-package observable readout:
+   |gamma|       = 0.500000000000  (ref 0.500000000000)
+   |E1|        = 1.632993161855  (ref 1.632993161855)
+   |cp1|        = 0.544331053952  (ref 0.544331053952)
+   |cp2|        = 0.314269680527  (ref 0.314269680527)
+  provenance: det(H) chamber-interior critical point [SELECTOR_ATH_C_HOLONOMY]
+ [PASS (C)] Candidate B: source-package observables match retained (up to CP-branch sign)
+  eta/eta_obs at this candidate: 0.188785929502
+
+ Candidate C: (m, delta, q_+) = (0.385132, 1.267881, 0.365112)
+  source-package observable readout:
+   |gamma|       = 0.500000000000  (ref 0.500000000000)
+   |E1|        = 1.632993000000  (ref 1.632993161855)
+   |cp1|        = 0.544331053952  (ref 0.544331053952)
+   |cp2|        = 0.314269680527  (ref 0.314269680527)
+  provenance: Tr(H^2) chamber-boundary minimum [SELECTOR_ATH_C_HOLONOMY] (boundary point)
+ [PASS (C)] Candidate C: source-package observables match retained (up to CP-branch sign)
+  eta/eta_obs at this candidate: 0.188785929502
+
+ Candidate D: (m, delta, q_+) = (0.000000, 0.799987, 1.000000)
+  source-package observable readout:
+   |gamma|       = 0.500000000000  (ref 0.500000000000)
+   |E1|        = 1.632993161855  (ref 1.632993161855)
+   |cp1|        = 0.544331053952  (ref 0.544331053952)
+   |cp2|        = 0.314269680527  (ref 0.314269680527)
+  provenance: K_12 character-match delta ~ 0.800, q_+ free (curve); sample at q_+=1.0
+ [PASS (C)] Candidate D: source-package observables match retained (up to CP-branch sign)
+  eta/eta_obs at this candidate: 0.188785929502
+
+
+========================================================================================
+PART 3: CHAMBER SCAN OF eta/eta_obs
+========================================================================================
+
+ Scan a fine grid of (delta, q_+) on the chamber
+  q_+ >= sqrt(8/3) - delta
+ and verify that the source-package observables (and therefore
+ eta/eta_obs) are invariant to machine precision. If this is
+ true, the level set { eta/eta_obs = 1 } is empty on the chamber
+ (since the constant value 0.189 != 1).
+
+ grid points inside chamber: 154
+ max |gamma| deviation    = 1.67e-16
+ max |E1|  deviation    = 5.42e-01
+ max |cp1|  deviation    = 1.22e-15
+ max |cp2|  deviation    = 2.61e-15
+ eta/eta_obs on the grid: min = 0.188785929502 max = 0.188785929502
+ spread = 0.00e+00
+ [PASS (C)] Transport-relevant observables (gamma, cp1, cp2) invariant to machine precision on chamber (max |gamma| dev=1.7e-16, |cp1| dev=1.2e-15, |cp2| dev=2.6e-15)
+ DIAGNOSTIC: E1 normal-form branch deviation on grid = 5.42e-01 (branch-flip artifact of the positive-representative lift; does NOT feed the transport chain)
+ [PASS (C)] eta/eta_obs is constant on the chamber to machine precision (spread = 0.00e+00)
+ [PASS (C)] eta/eta_obs never reaches 1 on the chamber (chamber value ~0.189) (max on grid = 0.188785929502)
+ [PASS (C)] The level set { (delta, q_+) : eta/eta_obs = 1 } is EMPTY on the chamber (by constancy of eta/eta_obs on the chamber)
+
+========================================================================================
+PART 4: CANDIDATE TABLE AND VERDICT
+========================================================================================
+
+ Candidate |  (delta, q_+)      |  eta/eta_obs  | closes (==1)?
+ ----------+---------------------------+------------------+--------------
+   A  | ( 0.816497,  0.816497) |  0.188785929502 |  NO
+   B  | ( 0.964443,  1.552431) |  0.188785929502 |  NO
+   C  | ( 1.267881,  0.365112) |  0.188785929502 |  NO
+   D  | ( 0.799987,  1.000000) |  0.188785929502 |  NO
+
+ VERDICT: selector NOT CLOSED BY PHYSICS-VALIDATION TEST.
+  - no candidate A, B, C, D achieves eta/eta_obs = 1,
+  - the level set { eta/eta_obs = 1 } is EMPTY on the chamber,
+  - the chamber-constant value is eta/eta_obs ~ 0.189.
+
+ Why:
+  The atlas-native transport chain factors through
+   (gamma, E1, E2, K00, cp1, cp2)
+  and the Z_3 doublet-block current-bank blindness theorem
+  states that moving (delta, q_+) on the chamber leaves all of
+  these invariant. The chamber is therefore a level manifold
+  for eta/eta_obs, with value 0.189 != 1. Physics alone
+  cannot distinguish any point on the chamber from any other.
+
+ PMNS-assisted transport-extremal witness:
+  The witness at eta/eta_obs = 1 in
+   DM_LEPTOGENESIS_PMNS_TRANSPORT_EXTREMAL_SOURCE_CANDIDATE
+  lives on a DIFFERENT parameter space (a 5-real off-seed
+  source on the PMNS-assisted N_e route, with a different
+  seed pair (xbar, ybar) and a free phase delta_PMNS). That
+  witness is NOT one of the chamber candidates A-D; there is
+  no (delta, q_+) on the chamber that corresponds to it.
+
+ [PASS (C)] No chamber candidate achieves eta/eta_obs = 1 (all four candidates share the chamber-constant value 0.189)
+ [PASS (C)] PMNS-assisted eta/eta_obs = 1 witness does NOT correspond to a chamber candidate (witness parameter space is the PMNS-assisted off-seed 5-real class)
+ [PASS (C)] G1 verdict: narrower-gap / no-physics-selector (transport alone does not uniquely pick a (delta, q_+) point on the chamber)
+
+========================================================================================
+PART 5: STRUCTURAL FACTORISATION AND BLINDNESS RECORD
+========================================================================================
+
+ Retained structural chain:
+  (i)  eta/eta_obs = (s/n_gamma) * C_sph * d_N
+            * epsilon_1 * kappa_axiom / eta_obs
+  (ii) epsilon_1  = (Y0^2 / 8 pi) * (cp1 f(x23) + cp2 f(x3)) / K00
+  (iii) cp1 = -2 gamma E1 / 3,  cp2 = 2 gamma E2 / 3
+  (iv) K00 = 2 is fixed exactly by the atlas projection law
+  (v)  kappa_axiom = kappa_axiom(k_decay),
+             k_decay = m_tilde / m_star,
+             m_tilde = K00 Y0^2 V_EW^2 / m1 * 1e9
+
+ Blindness chain (retained atlas theorem):
+  (*)  moving (delta, q_+) along T_delta, T_q on the chamber
+     preserves gamma, E1, E2, K00, and the CP pair
+
+ Therefore:
+  (*)  eta/eta_obs is constant on the chamber, equal to the
+     retained exact transport value ~ 0.189.
+ [PASS (C)] Structural factorisation of eta/eta_obs through (gamma, E1, E2, K00) is recorded
+ [PASS (C)] Retained current-bank blindness theorem is re-invoked
+ [PASS (C)] Consequence: chamber is a level manifold for eta/eta_obs
+
+========================================================================================
+TOTAL: PASS = 16, FAIL = 0
+========================================================================================
+
+----- stderr -----
+

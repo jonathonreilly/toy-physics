@@ -1,0 +1,69 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_observable_grammar_exhaustion_obstruction.py
+runner_sha256: 9074f5c393d09c3e6ca9c7e3cbf67aabc92386cacaf305f486d8f662494e07e3
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.56
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE OBSERVABLE-GRAMMAR EXHAUSTION OBSTRUCTION
+========================================================================================
+
+Question:
+  After representation compression, is the true last-mile selector already
+  proved to be exhausted by the exact atomic positive-probe grammar?
+
+========================================================================================
+PART 1: ATOMIC THRESHOLD EVENTS RECOVER THE SINGLETON RESPONSE FIELD EXACTLY
+========================================================================================
+  [PASS] The recovered carrier bank still contains the same five exact clustered lifts  (targets=[(np.float64(1.380791), np.float64(0.467879)), (np.float64(0.487118), np.float64(1.488689)), (np.float64(0.52296), np.float64(1.592949)), (np.float64(0.366049), np.float64(2.048997)), (np.float64(0.053097), np.float64(2.712905))])
+  [PASS] On the recovered bank the atomic singleton threshold grammar recovers the sampled singleton response field exactly  (max recovery error=0.000000000000e+00)
+  [PASS] Family witness events on the sampled finite family are existential unions of atomic singleton threshold events  (threshold count=25)
+  [PASS] The sampled finite-family upper envelope is already recovered exactly from the atomic threshold grammar  (max envelope error=0.000000000000e+00)
+
+========================================================================================
+PART 2: THE INTRINSIC FAMILY QUOTIENT ALREADY LIVES AT THE ATOMIC LEVEL
+========================================================================================
+  [PASS] Relabeling an extensional probe family leaves the exact atomic singleton-response field unchanged  (support size=5)
+  [PASS] Duplicating already-available probes is also invisible after passing to the intrinsic extensional family  ((list, support)=(6,5))
+  [PASS] The induced atomic threshold signatures are unchanged under relabeling and duplication of the same extensional family  (signature count=5)
+  [PASS] A genuine change in available positive-probe support is still visible to the exact atomic grammar  (changed support size=5)
+  [PASS] So the exact atomic quotient stops at intrinsic family support; it does not quotient away real support changes  (base_vs_changed_support=2)
+
+========================================================================================
+PART 3: HIGHER-LEVEL SELECTOR DATA ARE ATOMIC FUNCTIONALS
+========================================================================================
+  [PASS] Strict positive-probe dominance and the anchor-fiber Pareto frontier are functions of the recovered atomic singleton field  (frontier=[0, 1])
+  [PASS] The exact canonical extremal score is already determined by the atomic singleton response field via the full-family endpoint  ((formula err, min gap)=(7.771561172376e-15,1.980270195235e+00))
+  [PASS] On the recovered bank that canonical atomic endpoint has the same strict ordering as Lambda_+  (order=[0, 1, 2, 3, 4])
+
+========================================================================================
+PART 4: THE CURRENT BANK STILL DOES NOT FIX AN INTRINSIC THRESHOLD LAW
+========================================================================================
+  [PASS] The branch now carries the exact canonical witness-volume selector family on the full rank-one probe family
+  [PASS] That exact intrinsic threshold-volume family already flips the recovered winner between tau=0.13 and tau=0.14
+  [PASS] So the unresolved selector datum is now sharper than generic family choice: it is an intrinsic threshold law  (current exact bank nonrealization persists even on the canonical full-family threshold-volume selector)
+
+========================================================================================
+PART 5: THE NOTE RECORDS THE OBSTRUCTION HONESTLY
+========================================================================================
+  [PASS] The representation note already records that selector-family choice has been compressed to the canonical extremal law
+  [PASS] The obstruction note names the exact missing selector-side theorem as observable-grammar exhaustion / intrinsic-family descent
+  [PASS] The obstruction note keeps the boundary honest: representation is compressed, but selector closure is still not proved
+  [PASS] The obstruction note records the sharper current-bank nonrealization as a missing intrinsic threshold law
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact selector-side branch verdict:
+    - atomic singleton thresholds already recover the tested singleton field
+    - the intrinsic extensional family quotient is already fixed at the atomic level
+    - every tested higher positive-probe functional is atomic-field data
+    - what is still missing is the theorem that the true last-mile selector is exhausted by that grammar
+  RESULT: obstruction at observable-grammar exhaustion / intrinsic-family descent
+
+SUMMARY: PASS=19 FAIL=0
+
+----- stderr -----
+

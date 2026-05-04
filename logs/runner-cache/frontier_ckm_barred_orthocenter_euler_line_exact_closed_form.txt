@@ -1,0 +1,182 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_barred_orthocenter_euler_line_exact_closed_form.py
+runner_sha256: 18ae68f277e8cfd436dd0321857142a1a8520e51d78063c8e63b3418518b3bec
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+Barred unitarity triangle orthocenter and Euler line EXACT closed-form audit
+See docs/CKM_BARRED_ORTHOCENTER_EULER_LINE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs on current main
+----------------------------------------------------------------------------------------
+  alpha_s(v)                   = 0.103303816122267
+  N_pair                       = 2  (retained)
+  N_color                      = 3  (retained)
+  N_quark = N_pair x N_color    = 6
+
+  N1: rho_bar                  = 0.162362340994906
+  N2: eta_bar                  = 0.363053231450610
+  N3: R_b_bar^2                = 0.158169178640076
+  N7 slope = sqrt(5)/20         = 0.111803398874989
+  [PASS (A)] alpha_s(v) > 0
+  [PASS (A)] N_pair = 2 (retained)
+  [PASS (A)] N_color = 3 (retained)
+  [PASS (A)] N_quark = 6 (retained)
+  [PASS (A)] N1: rho_bar = (4-a)/24 (retained)
+  [PASS (A)] N2: eta_bar = sqrt(5)(4-a)/24 (retained)
+  [PASS (A)] N3: R_b_bar^2 = (4-a)^2/96 (retained)
+  [PASS (A)] N7 slope = sqrt(5)/20 (retained)
+  [PASS (A)] retained on main: docs/ALPHA_S_DERIVED_NOTE.md
+  [PASS (A)] retained on main: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+  [PASS (A)] retained on main: docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+  [PASS (A)] retained on main: docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md
+  [PASS (A)] retained on main: docs/CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md
+  [PASS (A)] retained on main: docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+
+----------------------------------------------------------------------------------------
+(O1) NEW EXACT: Orthocenter H = (rho_bar, (20+alpha_s)/(24 sqrt(5)))
+----------------------------------------------------------------------------------------
+  Vertices: V_1=(0.0, 0.0), V_2=(1.0, 0.0), V_3=(0.16236234099490554, 0.36305323145060964)
+
+  H_x (direct, from altitude) = 0.162362340994906
+  H_x closed form (= rho_bar) = 0.162362340994906
+
+  H_y (direct, from altitude) = 0.374602949209836
+  H_y closed (20+a)/(24 sqrt5) = 0.374602949209836
+  diff                          = 0.000e+00
+  [PASS (A)] (O1) H_x = rho_bar (altitude from apex is vertical, hypotenuse on x-axis)
+  [PASS (A)] (O1) H_y from altitude = (20+alpha_s)/(24 sqrt(5)) closed form
+
+----------------------------------------------------------------------------------------
+(O2) NEW EXACT: H - V_3 = (0, alpha_s sqrt(5)/20)
+----------------------------------------------------------------------------------------
+  H - V_3 (direct)                  = (0.000000e+00, 1.154972e-02)
+  Closed (0, alpha_s sqrt(5)/20)    = (0.000000e+00, 1.154972e-02)
+  Structural alpha_s/(N_pair^2 sqrt(N_quark-1)) = 1.154972e-02
+  [PASS (A)] (O2) H_x = V_3_x (zero x-offset, altitude is vertical)
+  [PASS (A)] (O2) H_y - V_3_y = alpha_s sqrt(5)/20 (LINEAR in alpha_s)
+  [PASS (A)] (O2) Structural form: alpha_s / (N_pair^2 sqrt(N_quark - 1))
+
+----------------------------------------------------------------------------------------
+(O3) NEW EXACT: Centroid G = ((28-alpha_s)/72, sqrt(5)(4-alpha_s)/72)
+----------------------------------------------------------------------------------------
+  G direct (V_1+V_2+V_3)/3       = (0.387454113664969, 0.121017743816870)
+  G closed ((28-a)/72, sqrt5(4-a)/72) = (0.387454113664969, 0.121017743816870)
+  [PASS (A)] (O3) G_x = (28-alpha_s)/72 (LINEAR in alpha_s)
+  [PASS (A)] (O3) G_y = sqrt(5)(4-alpha_s)/72 (LINEAR in alpha_s)
+
+----------------------------------------------------------------------------------------
+(O4) NEW EXACT: Circumcenter O = (1/2, -alpha_s sqrt(5)/40) [re-derived]
+----------------------------------------------------------------------------------------
+  O_x = 1/2 (perp. bisector of hypotenuse)        = 0.500000000000000
+  O_y direct (R_b^2 - rho)/(2 eta)                = -0.005774858879613
+  O_y closed -alpha_s sqrt(5)/40                   = -0.005774858879613
+  O_y structural -a/(N_pair^3 sqrt(N_quark-1))     = -0.005774858879613
+  [PASS (A)] (O4) O_x = 1/2 (alpha_s-INDEPENDENT)
+  [PASS (A)] (O4) O_y direct = -alpha_s sqrt(5)/40 closed
+  [PASS (A)] (O4) O_y structural form -a/(N_pair^3 sqrt(N_quark-1))
+
+----------------------------------------------------------------------------------------
+(O5) NEW EXACT: Euler line H = 3G - 2O
+----------------------------------------------------------------------------------------
+  H direct                = (0.162362340994906, 0.374602949209836)
+  3 G - 2 O                = (0.162362340994906, 0.374602949209836)
+  diff                      = (0.000e+00, 5.551e-17)
+  [PASS (A)] (O5) Euler line: H = 3G - 2O (x-component)
+  [PASS (A)] (O5) Euler line: H = 3G - 2O (y-component)
+
+  H - G                    = (-0.22509177267006297, 0.25358520539296614)
+  2 (G - O)                = (-0.22509177267006297, 0.25358520539296614)
+  [PASS (A)] (O5) Euler line ratio: HG = 2 GO (x-component)
+  [PASS (A)] (O5) Euler line ratio: HG = 2 GO (y-component)
+
+----------------------------------------------------------------------------------------
+(O6) NEW EXACT: H - V_3 = -2 (O - M) where M = (1/2, 0) is hypotenuse midpoint
+----------------------------------------------------------------------------------------
+  H - V_3        = (0.000000e+00, 1.154972e-02)
+  O - M           = (0.000000e+00, -5.774859e-03)
+  -2 (O - M)      = (-0.000000e+00, 1.154972e-02)
+  [PASS (A)] (O6) H_x - V_3_x = -2(O_x - M_x) (both = 0)
+  [PASS (A)] (O6) H_y - V_3_y = -2(O_y - M_y) = -2 y_cc (apex lift = 2x circumcenter depression)
+
+----------------------------------------------------------------------------------------
+(O7) NEW: (H_y - V_3_y)/alpha_s = sqrt(5)/20 = retained N7 slope
+----------------------------------------------------------------------------------------
+  (H_y - V_3_y) / alpha_s             = 0.111803398874989
+  Retained N7 slope sqrt(5)/20        = 0.111803398874989
+  Structural 1/(N_pair^2 sqrt(N_quark - 1)) = 0.111803398874989
+  [PASS (A)] (O7) apex-orthocenter slope = retained N7 slope = sqrt(5)/20
+  [PASS (A)] (O7) slope = 1/(N_pair^2 sqrt(N_quark - 1))
+
+----------------------------------------------------------------------------------------
+(O8) NEW Selection Rule: H, G are degree-1 polynomials in alpha_s
+----------------------------------------------------------------------------------------
+  2nd derivatives (should be 0 if linear):
+    d^2 H_x / d alpha_s^2 = 0.000e+00
+    d^2 H_y / d alpha_s^2 = 0.000e+00
+    d^2 G_x / d alpha_s^2 = 0.000e+00
+    d^2 G_y / d alpha_s^2 = 2.776e-07
+    d^2 O_y / d alpha_s^2 = 0.000e+00
+  [PASS (A)] (O8) H_x is degree-1 polynomial (2nd deriv ~ 0)
+  [PASS (A)] (O8) H_y is degree-1 polynomial (2nd deriv ~ 0)
+  [PASS (A)] (O8) G_x is degree-1 polynomial (2nd deriv ~ 0)
+  [PASS (A)] (O8) G_y is degree-1 polynomial (2nd deriv ~ 0)
+  [PASS (A)] (O8) O_y is degree-1 polynomial (2nd deriv ~ 0)
+
+----------------------------------------------------------------------------------------
+(O9) Atlas-LO recovery: H_0 = V_3_0 (orthocenter coincides with apex)
+----------------------------------------------------------------------------------------
+  At alpha_s = 0:
+    H_0 = (4/24, 20/(24 sqrt5))         = (0.1666666667, 0.3726779962)
+    V_3_0 = (1/N_quark, sqrt(N_q-1)/N_q) = (0.1666666667, 0.3726779962)
+    G_0 = (7/18, sqrt5/18)              = (0.3888888889, 0.1242259987)
+    O_0 = (1/N_pair, 0)                  = (0.5000000000, 0.0000000000)
+  [PASS (A)] (O9) atlas-LO H_0_x = V_3_0_x (= 1/N_quark = 1/6)
+  [PASS (A)] (O9) atlas-LO H_0_y = V_3_0_y (= sqrt(N_quark-1)/N_quark = sqrt(5)/6)
+  [PASS (A)] (O9) atlas-LO O_0 = (1/N_pair, 0) = midpoint of hypotenuse
+
+----------------------------------------------------------------------------------------
+EXACT-status verification: closed forms hold at multiple alpha_s
+----------------------------------------------------------------------------------------
+  Verifying (O1)-(O6) hold EXACTLY at six alpha_s values:
+    alpha_s = 0.050000000: O1=True, O3=True, O4=True, O5=True, O6=True  (OK)
+    alpha_s = 0.100000000: O1=True, O3=True, O4=True, O5=True, O6=True  (OK)
+    alpha_s = 0.103303816: O1=True, O3=True, O4=True, O5=True, O6=True  (OK)
+    alpha_s = 0.150000000: O1=True, O3=True, O4=True, O5=True, O6=True  (OK)
+    alpha_s = 0.200000000: O1=True, O3=True, O4=True, O5=True, O6=True  (OK)
+    alpha_s = 0.300000000: O1=True, O3=True, O4=True, O5=True, O6=True  (OK)
+  [PASS (A)] EXACT closed forms hold at ALL tested alpha_s (no leading-order drift)
+
+----------------------------------------------------------------------------------------
+Summary of new content
+----------------------------------------------------------------------------------------
+  NEW (O1): H = (rho_bar, (20+alpha_s)/(24 sqrt(5)))     EXACT linear in alpha_s
+  NEW (O2): H - V_3 = (0, alpha_s sqrt(5)/20)             EXACT, pure y, linear
+  NEW (O3): G = ((28-a)/72, sqrt(5)(4-a)/72)             EXACT linear in alpha_s
+  NEW (O4): O = (1/2, -alpha_s sqrt(5)/40)                EXACT (re-derived)
+  NEW (O5): Euler line H = 3G - 2O                        EXACT identity
+  NEW (O6): H - V_3 = -2 (O - M)                          EXACT anti-relation
+  NEW (O7): apex-orthocenter slope = sqrt(5)/20 = N7 slope
+  NEW (O8): H, G degree-1 polys in alpha_s; O has linear y, alpha_s-indep x
+  NEW (O9): atlas-LO H_0 = V_3_0 (orthocenter at right-angle vertex)
+
+  At canonical alpha_s = 0.1033038161:
+    H = (0.162362, 0.374603)
+    G = (0.387454, 0.121018)
+    O = (0.500000, -0.005775)
+    V_3 = (0.162362, 0.363053)
+    H - V_3 = (0, 0.011550)
+
+  All inputs retained on main; no SUPPORT-tier or open inputs used.
+
+========================================================================================
+TOTAL: PASS=41, FAIL=0
+========================================================================================
+
+----- stderr -----
+

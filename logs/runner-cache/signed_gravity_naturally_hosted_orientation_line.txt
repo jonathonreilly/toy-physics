@@ -1,0 +1,40 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_naturally_hosted_orientation_line.py
+runner_sha256: b3ce49ce8afb6ef666cf2660923f4c1372a9d0abdfa65ed84142e4bbc26221e1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+======================================================================================================================
+SIGNED GRAVITY NATURALLY HOSTED ORIENTATION-LINE AUDIT
+  determinant-line host versus canonical signed selector
+======================================================================================================================
+
+[PASS] finite Grassmann determinant functor naturally hosts a real orientation line  (det_mult_err=3.6e-16, log_add_err=4.4e-16, orientation_product=+1, orientation_total=+1)
+[PASS] orientation line is a Z2 torsor, not a canonical signed section  (|det|=1.701844e-01, |det_rebased|=1.701844e-01, operator_det_same=True, line_basis_orientation=+1->-1, canonical_section_forced=False)
+[PASS] chosen orientation line transports as a flat local system  (cocycle=[1, 1, 1], refinement_pullback=True, gauge_changed_sections=True, flat_host=True, canonical_section=False)
+[PASS] audited raw boundary operators do not contain the hosted APS line  (raw_hodge_contains_line=False, staggered_contains_line=False, raw_hodge_eta_neutral=True, staggered_eta_neutral=True)
+[PASS] hosted orientation torsor does not force chi_eta rho Phi source term  (residual_without_section=1.414e+00, residual_with_chosen_section=3.1e-16, flipped_section_equally_coherent=0.0e+00, source_term_forced=False)
+[PASS] non-claim gate remains closed  (orientation_line_naturally_hosted=True, canonical_chi_section_forced=False, operator_realization_contained=False, chi_rho_phi_source_forced=False, physical_signed_gravity_prediction=False, negative_inertial_mass=False, shielding=False, propulsion=False, reactionless_force=False)
+
+INTERPRETATION
+  The finite Grassmann determinant-line functor really does host an
+  orientation line: determinant lines sew multiplicatively, the magnitude
+  functor gives log|det|, and a chosen orientation line transports as a
+  flat Z2 local system under refinement.  But this is a torsor.  The
+  determinant functor alone does not choose a canonical section, does not
+  place an unpaired APS mode inside the raw Hodge or staggered boundary
+  operator, and does not force the chi_eta rho Phi source term.
+
+VERDICT
+  The orientation line is naturally hosted by the retained determinant-line
+  package, but the signed selector remains unforced.  Promoting it to an
+  active chi_eta source still requires an added source-line/section
+  principle or a new retained theorem that canonically fixes the section.
+
+SUMMARY: PASS=6 FAIL=0
+FINAL_TAG: SIGNED_GRAVITY_ORIENTATION_LINE_NATURALLY_HOSTED_NOT_CANONICALLY_SELECTED
+
+----- stderr -----
+

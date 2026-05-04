@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/wave_static_matrixfree_moving_source_fixed_beam_boundary.py
+runner_sha256: c63e9352d162af9b79c6164170be8a49f853e0a9ccddcfddbedcbfab2998da14
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 85.20
+status: ok
+----- stdout -----
+================================================================================================================
+WAVE STATIC MATRIX-FREE MOVING-SOURCE FIXED-BEAM BOUNDARY PROBE
+================================================================================================================
+Shared H = 0.350
+Fixed beam PW = 6.000
+Field PW values = 6.000, 9.000
+
+[run 1] field_PW_phys=6.000 -> field_PW=5.950
+  beam_PW=5.950  NL=43  src_layer=14  iz_start=9  iz_end=0  v/layer=-0.3103
+  cached static solves = 10
+  dM      = +0.007942
+  dS      = +0.006111
+  rel_MS  = 23.05%
+  matrix-free residual = 2.292e-10
+  matrix-free iters    = 87
+
+[run 2] field_PW_phys=9.000 -> field_PW=9.100
+  beam_PW=5.950  NL=43  src_layer=14  iz_start=9  iz_end=0  v/layer=-0.3103
+  cached static solves = 10
+  dM      = +0.007973
+  dS      = +0.007720
+  rel_MS  = 3.18%
+  matrix-free residual = 1.984e-10
+  matrix-free iters    = 128
+
+----------------------------------------------------------------------------------------------------------------
+FIELD-BOX MOVE
+----------------------------------------------------------------------------------------------------------------
+  dS move      = 20.84%
+  rel_MS move  = 86.21%
+  dM move      = 0.39%
+  Verdict: moving-source exact static comparator is still materially boundary-sensitive at this H.
+
+----- stderr -----
+

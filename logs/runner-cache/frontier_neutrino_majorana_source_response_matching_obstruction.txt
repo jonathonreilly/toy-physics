@@ -1,0 +1,74 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_source_response_matching_obstruction.py
+runner_sha256: 781ceb0df706a004255785e71e07d680cf23bb9f9e6b0eda0e400aa3bf0d66cd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: SOURCE-RESPONSE MATCHING OBSTRUCTION
+========================================================================================
+
+Authority stack:
+  - docs/NEUTRINO_MAJORANA_AXIS_EXCHANGE_FIXED_POINT_NOTE.md
+  - docs/NEUTRINO_MAJORANA_STAIRCASE_BLINDNESS_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_ALGEBRAIC_BRIDGE_OBSTRUCTION_NOTE.md
+  - docs/NEUTRINO_MAJORANA_BACKGROUND_NORMALIZATION_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md
+
+Question:
+  Could one directly match the exact local self-dual Majorana response
+  values to current generation-side source-response observables and
+  thereby fix the absolute staircase anchor?
+
+========================================================================================
+PART 1: ABSOLUTE MATCHES DEPEND ON THE REPRESENTATIVE NORMALIZATION
+========================================================================================
+  [PASS] Absolute log-response matching selects different staircase scales for different representative normalizations  (lambda spread=1.365e+00, max error=2.22e-16)
+  [PASS] Absolute quadratic-response matching also selects different staircase scales for different representative normalizations  (lambda spread=4.286e-01, max error=2.22e-16)
+
+  So absolute matching to the exact local self-dual values can only fix
+  the product of staircase scale and representative normalization, not
+  the absolute staircase scale by itself.
+
+========================================================================================
+PART 2: RELATIVE MATCHES REMOVE THE REPRESENTATIVE NORMALIZATION BUT ALSO
+        REMOVE THE ABSOLUTE ANCHOR
+========================================================================================
+  [PASS] Relative log-response matching fixes only the ratio to the chosen reference scale  (max error=1.11e-16, ratio spread=0.00e+00, lambda spread=4.209e+00)
+  [PASS] Relative quadratic-response matching also fixes only the ratio to the chosen reference scale  (max error=0.00e+00, ratio spread=0.00e+00, lambda spread=3.750e+00)
+
+  So normalized/relative response matching removes the arbitrary
+  representative normalization, but it leaves the staircase anchor tied
+  to an arbitrary reference scale instead of fixing it absolutely.
+
+========================================================================================
+PART 3: THE CURRENT GENERATION PAIRING OBSERVABLES ARE HOMOGENEOUS
+========================================================================================
+  [PASS] Absolute Pfaffian/logdet response is affine in log(scale)  (max residual=4.44e-16)
+  [PASS] Absolute quadratic comparator is degree-two in scale  (max residual=0.00e+00)
+
+  So the current generation-side source-response observables themselves
+  already live on the same homogeneous scale family. Matching against
+  the local self-dual constants cannot change that on the present stack.
+
+========================================================================================
+RESULT
+========================================================================================
+  No. On the current exact stack, the obvious source-response matching
+  class does not fix the absolute staircase anchor.
+
+  Absolute matches depend on the arbitrary normalization of the
+  homogeneous generation representative. Relative matches remove that
+  arbitrariness but then fix only ratios to an arbitrary reference
+  scale, not the absolute staircase anchor.
+
+  So the missing object is sharper again: it must go beyond the current
+  source-response matching class, or introduce a genuinely new
+  non-homogeneous bridge or absolute-scale datum.
+
+PASS=6  FAIL=0
+
+----- stderr -----
+

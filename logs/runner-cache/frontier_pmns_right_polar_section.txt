@@ -1,0 +1,91 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_right_polar_section.py
+runner_sha256: 9af47f27c698e0aa360e412d1f624242453802d0b64f0e0534fa6deac0020125
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================================
+PMNS RIGHT POLAR SECTION
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - neutrino and charged-lepton two-Higgs observable inverse problems
+  - PMNS branch-conditioned quadratic-sheet closure
+  - PMNS branch sheet nonforcing
+  - PMNS right-frame orbit obstruction
+  - PMNS right-conjugacy-invariant no-go
+
+Question:
+  Does the generic selected-branch right orbit already admit a
+  canonical intrinsic representative from Hermitian data alone?
+
+========================================================================================
+PART 1: THE GENERIC RIGHT ORBIT HAS A UNIQUE POSITIVE POLAR REPRESENTATIVE
+========================================================================================
+  [PASS] The right orbit preserves H  (H difference=2.86e-16)
+  [PASS] The polar representative is Hermitian  (Hermitian error=2.08e-16)
+  [PASS] The polar representative squares to H  (P^2-H error=4.30e-15)
+  [PASS] The same right orbit yields the same positive polar representative  (polar difference=8.54e-16)
+  [PASS] The original Yukawa factorizes as Y = H^(1/2) U_R with U_R unitary  (factorization error=2.88e-16, unitarity error=3.15e-15)
+
+  So the generic full-rank right orbit is not sectionless. It already
+  has the canonical positive representative Y_+(H) = H^(1/2).
+
+========================================================================================
+PART 2: THE POSITIVE SECTION REALIZES THE REDUCED SELECTOR FROM H
+========================================================================================
+  [PASS] On a monomial branch the positive polar section stays diagonal
+  [PASS] On generic canonical two-Higgs branches the positive polar section has full upper off-diagonal support
+  [PASS] The intrinsic polar-section selector vanishes on the universal one-offset class  (a_pol(U1)=0)
+  [PASS] The intrinsic polar-section selector vanishes on the universal two-offset class  (a_pol(U2)=0)
+  [PASS] The intrinsic polar-section selector is positive on the neutrino-side one-sided class  (a_pol(N_nu)=3)
+  [PASS] The intrinsic polar-section selector is negative on the charged-lepton-side one-sided class  (a_pol(N_e)=-3)
+
+  So once H_nu and H_e are available, the one-sided branch is already
+  intrinsically readable from the positive polar section.
+
+========================================================================================
+PART 3: THE POSITIVE SECTION IS SHEET-EVEN AND CANNOT FIX THE RESIDUAL SHEET
+========================================================================================
+  [PASS] The two reconstructed coefficient sheets are distinct  (sheet distance=1.057084)
+  [PASS] They share the same Hermitian matrix H  (H difference=2.24e-15)
+  [PASS] The positive polar section is identical on both sheets  (polar difference=2.91e-15)
+  [PASS] So every positive-section scalar depending only on H is sheet-even  (values=(0.780000, 0.780000))
+
+  So the polar section removes the generic right-orbit ambiguity, but
+  it does not close the residual canonical-sheet bit.
+
+========================================================================================
+PART 4: THE BANK RECORDS THE NEW POLAR-SECTION ENDPOINT
+========================================================================================
+  [PASS] The new note identifies Y_+(H) = H^(1/2) as the canonical positive section
+  [PASS] The atlas carries the PMNS right polar section row
+  [PASS] The reviewer packet records that the positive polar section makes the branch intrinsically readable from H
+  [PASS] The archived intrinsic-boundary note records the remaining gap as Hermitian-data law plus sheet-fixing datum
+
+  So the exact endpoint is sharper than before: on the generic
+  Hermitian patch, branch readability is no longer the missing object.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact generic conditional answer:
+    - the full-rank PMNS right orbit already has a unique positive
+      representative Y_+(H) = H^(1/2)
+    - on the one-sided minimal PMNS branches, comparing the positive
+      off-diagonal support of H_nu^(1/2) and H_e^(1/2) realizes the
+      reduced branch selector intrinsically from Hermitian data
+    - but because the positive section factors only through H, it is
+      sheet-even and cannot fix the residual selected-branch Z2 sheet
+
+  So the remaining exact PMNS gap is sharper than 'find any right
+  frame law'. Once branch Hermitian data are derived, the branch side
+  is intrinsically readable. The truly remaining post-Hermitian datum
+  is the residual non-Hermitian/right-sensitive sheet-fixing input.
+
+PASS=19  FAIL=0
+
+----- stderr -----
+

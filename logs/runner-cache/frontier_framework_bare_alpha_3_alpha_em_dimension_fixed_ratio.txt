@@ -1,0 +1,37 @@
+===== runner cache v1 =====
+runner: scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py
+runner_sha256: 884057fa3ab51cc376d36eed6ac744c5cd0dd0d7671440c62bbdd818e9628815
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.05
+status: nonzero_exit
+----- stdout -----
+=== Bare alpha_3 / alpha_em dimension-ratio support audit ===
+FAIL: authority file exists: docs/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md
+PASS: authority file exists: docs/CL3_SM_EMBEDDING_THEOREM.md
+PASS: authority file exists: docs/YT_EW_COLOR_PROJECTION_THEOREM.md
+PASS: authority file exists: docs/publication/ci3_z3/PUBLICATION_MATRIX.md
+PASS: authority file exists: docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md
+PASS: authority file exists: docs/publication/ci3_z3/DERIVATION_ATLAS.md
+
+----- stderr -----
+Traceback (most recent call last):
+  File "/private/tmp/gate-fix-worktree/scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py", line 203, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/private/tmp/gate-fix-worktree/scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py", line 191, in main
+    audit_authority_surfaces(audit)
+  File "/private/tmp/gate-fix-worktree/scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py", line 61, in audit_authority_surfaces
+    note = read(note_path)
+           ^^^^^^^^^^^^^^^
+  File "/private/tmp/gate-fix-worktree/scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py", line 38, in read
+    return (ROOT / path).read_text(encoding="utf-8")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/gate-fix-worktree/docs/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md'
+

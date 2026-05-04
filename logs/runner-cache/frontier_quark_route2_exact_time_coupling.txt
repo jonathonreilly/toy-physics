@@ -1,0 +1,55 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_route2_exact_time_coupling.py
+runner_sha256: 16aed53409b9b27572bda2eebba7f4f0314bd5db8e608458ef3d7c046e9e30d7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 118.60
+status: ok
+----- stdout -----
+Route-2 exact time-coupling theorem attempt
+========================================================================
+
+========================================================================
+PART 1: Exact Slice Backbone
+========================================================================
+  Lambda_R symmetry error = 3.331e-16
+  Lambda_R eigenvalue range = [1.148587e+00, 9.879422e+00]
+  T_R symmetry error = 9.957e-16
+  T_R eigenvalue range = [5.121790e-05, 3.170846e-01]
+  [PASS] the Route-2 slice generator remains exact symmetric positive definite  (symmetry error=3.331e-16, min eig=1.148587e+00)
+  [PASS] the one-step transfer law T_R = exp(-Lambda_R) remains exact, self-adjoint, and contractive  (transfer symmetry error=9.957e-16, eig range=[5.121790e-05, 3.170846e-01])
+  [PASS] the slice seed V_R(t) = exp(-t Lambda_R) u_* satisfies the exact semigroup composition law  (composition residual=1.041e-17)
+
+========================================================================
+PART 2: Exact Conditional Coupling Family
+========================================================================
+  exact conditional family:
+    Xi_P(t ; c) = (P_R c) ⊗ exp(-t Lambda_R) u_*
+  ||Xi_P(0.0; E-center)|| = 1.875000000000e+00
+  ||Xi_P(0.5; E-center)|| = 1.035651731038e+00
+  ||Xi_P(1.0; E-center)|| = 5.806561217096e-01
+  ||Xi_P(2.0; E-center)|| = 1.836211602919e-01
+  [PASS] once an admissible readout map is supplied, the carrier-to-slice spacetime family is exact on the current route  (family semigroup residual=2.082e-17)
+  [PASS] without an exact readout theorem, the exact slice backbone still yields only a conditional tensor-carrying family  (the exact route is Xi_P(t ; c), parameterized by the unresolved readout map P_R)
+
+========================================================================
+PART 3: Induced Time-Coupling Obstruction
+========================================================================
+  shell E coupling norms:
+    ||Xi_P(1.0; E-shell)|| at rho_E=0    = 3.096832649118e-01
+    ||Xi_P(1.0; E-shell)|| at rho_E=21/4 = 3.096832649118e-01
+  center E coupling norms:
+    ||Xi_P(1.0; E-center)|| at rho_E=0    = 3.096832649118e-01
+    ||Xi_P(1.0; E-center)|| at rho_E=21/4 = 5.806561217096e-01
+  [PASS] distinct exact admissible readout maps produce identical shell coupling but different center coupling on the same carrier class  (the unresolved E-channel readout entry changes the time-coupled tensor while leaving shell normalization fixed)
+  [PASS] the unresolved readout exactness therefore blocks a unique Theta_R -> Lambda_R time-coupling theorem on the current carrier  (the slice factor is exact and nonzero, so the ambiguity is source-side rather than dynamical)
+  [PASS] the honest Route-2 endpoint is an exact readout obstruction inducing an exact time-coupling obstruction  (exact Lambda_R/T_R and exact K_R coexist with a non-unique readout-dependent spacetime source factor)
+
+========================================================================
+SUMMARY
+========================================================================
+Status: exact time-coupling obstruction established.
+PASS=8 FAIL=0
+
+----- stderr -----
+

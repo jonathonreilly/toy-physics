@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_2026_04_19.py
+runner_sha256: af432bed3c7c881561eb4fc6e7ea0be77fa632eeb0b1e954f9c45cad3708148d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.39
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT TRANSPORT-FIBER MINIMAL LOCAL SPECTRAL-LAW NO-GO
+========================================================================================
+
+========================================================================================
+PART 1: NO SINGLE COMPLETED SPECTRAL SCALAR PICKS W1
+========================================================================================
+  [PASS] No single raw completed scalar in (T, Q, Delta) selects W1 on the explicit competitor set  (max T=W0, max Q=W0, max Delta=eps=0.005)
+  [PASS] The canonical normalized determinant ratio q3 = Delta / T^3 still prefers a boundary-drifting competitor to W1  (max q3=eps=0.001, (W1,max)=(0.003462280040,0.006078771708))
+
+========================================================================================
+PART 2: SCALE-FREE LOCAL SPECTRAL LAWS ARE UNDER-COMPLETE
+========================================================================================
+  [PASS] Restricted to the 3-real transport fiber, the raw spectral completion (T, Q, Delta) remains a full local coordinate chart  (min restricted raw singular value=1.687867506457e-04)
+  [PASS] After canonical scale normalization, only the 2-scalar pair (Q/T^2, Delta/T^3) survives locally on that fiber  (min restricted normalized singular value=5.206276117033e-04)
+  [PASS] So every scale-free local spectral law leaves a 1-real local degeneracy and cannot exactly isolate an interior source  (rank(T,Q,Delta)|fiber = 3, rank(Q/T^2,Delta/T^3)|fiber = 2)
+  [PASS] Positive normalized monomials in (Q/T^2, Delta/T^3) of total degree <= 4 do not even beat the explicit boundary competitors  (W1-winning normalized monomials=[])
+
+========================================================================================
+PART 3: THE MINIMAL COEFFICIENT-FREE PACKET-SEPARATING MONOMIAL IS Q Delta
+========================================================================================
+  [PASS] No positive coefficient-free monomial of total degree 1 in (T, Q, Delta) selects W1  (degree-1 winners=[((0, 0, 1), 'eps=0.005'), ((0, 1, 0), 'W0'), ((1, 0, 0), 'W0')])
+  [PASS] The unique positive coefficient-free degree-2 monomial that selects W1 on the explicit competitor set is Q Delta  (degree-2 W1 winners=[((0, 1, 1), 'W1', 0.0038760179958942445)])
+  [PASS] That minimal monomial beats B_major and the whole explicit boundary-drift packet  (top gap=0.003876017996, W1 QDelta=0.042079558293)
+  [PASS] Along the explicit boundary-evacuation packet, Q Delta decreases as the sign floor shrinks  (eps=0.05:0.031132750078, eps=0.02:0.029152973017, eps=0.01:0.028636229585, eps=0.005:0.028398971271, eps=0.001:0.028218293911)
+
+========================================================================================
+PART 4: COEFFICIENT FREEDOM CAN EXPOSE WHICHEVER POINT ONE ASKS FOR
+========================================================================================
+  [PASS] An affine law in the raw spectral invariants can be tuned to select W1 on the finite competitor set  (weights=[ 59.49702  -12.124073 211.559217])
+  [PASS] The same affine family can also be tuned to select a different explicit competitor, so its coefficients are extra selector input  (weights=[  0.        3.30728 930.9973 ])
+  [PASS] Because (T, Q, Delta) are local transport-fiber coordinates, no nonconstant affine law can have an interior exact maximum there  (grad(a T + b Q + c Delta + r) = (a,b,c) and vanishes only for the constant law)
+
+========================================================================================
+PART 5: THE MINIMAL MONOMIAL CANDIDATE IS STILL NOT AN EXACT SELECTOR
+========================================================================================
+  [PASS] The minimal monomial Q Delta has nonzero projected gradient on the exact transport fiber through W1  (||P_fiber grad(QDelta)||=0.080118232647)
+  [PASS] A small transport-fiber ascent step increases Q Delta while preserving eta_1 and the favored column to first order and staying constructive  (delta(QDelta)=0.000080028238, delta_col=2.239e-06, delta_eta=2.715e-10)
+  [PASS] So no nontrivial raw monomial law can be an exact interior selector on the completed spectral fiber  (grad(T^a Q^b Delta^c) = law * (a/T, b/Q, c/Delta), hence it never vanishes at a positive interior point unless the law is constant)
+
+========================================================================================
+PART 6: BOTTOM LINE
+========================================================================================
+  [PASS] The completed spectral data identify the live local selector coordinates but not a natural exact low-complexity selector law  (minimal packet-separator = Q Delta; exact low-complexity normalized/affine/monomial selector = no-go)
+
+  W1 invariants                 = [1.75396664 2.25239726 0.01868212]
+  W1 normalized pair            = [0.73215382 0.00346228]
+  W1 minimal candidate QDelta   = 0.042079558293
+  best explicit rival QDelta    = 0.038203540297
+  affine W1 weights             = [ 59.49701988 -12.12407251 211.55921679]
+  affine B_major weights        = [  0.           3.30727979 930.99729963]
+  ||P_fiber grad(QDelta)||      = 0.080118232647
+  nearby ascent pack            = [1.05222031 0.09877824 0.12267472 1.34816137 0.01866948]
+  PASS=17 FAIL=0
+
+----- stderr -----
+

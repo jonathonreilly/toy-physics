@@ -1,0 +1,46 @@
+===== runner cache v1 =====
+runner: scripts/frontier_finite_rank_source_to_metric_theorem.py
+runner_sha256: 4b5ed4655be16854dc6d62bea05b5e23857f662c63a007a765b7be83ac2d3b9a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.58
+status: ok
+----- stdout -----
+FINITE-RANK SOURCE-TO-METRIC THEOREM PATH
+==============================================================================
+[EXACT] PASS: finite-rank column identity
+    max column error=3.886e-16, support size=7
+[EXACT] PASS: finite-rank compressed source
+    max field error=9.992e-16
+[EXACT] PASS: finite-rank exterior harmonicity outside support
+    max exterior residual=1.277e-15
+support size=7, q_eff_sum=9.53220124
+
+exact finite-rank family:
+  R_match=3.0  a=0.357088  shell_rms=0.126  shell_max_rel=0.841  direct=9.851e-02  coarse=7.393e-05
+  R_match=3.5  a=0.315750  shell_rms=0.125  shell_max_rel=0.628  direct=9.650e-02  coarse=3.848e-05
+  R_match=4.0  a=0.297284  shell_rms=0.125  shell_max_rel=0.533  direct=9.638e-03  coarse=2.125e-05
+  R_match=4.5  a=0.259967  shell_rms=0.111  shell_max_rel=0.340  direct=2.793e-02  coarse=1.188e-05
+  R_match=5.0  a=0.239107  shell_rms=0.094  shell_max_rel=0.233  direct=1.039e-02  coarse=7.028e-06
+[EXACT] PASS: the exact finite-rank source field is recovered by the Woodbury-compressed exterior solve
+    boundary reconstruction error=6.939e-17
+[EXACT] PASS: the exact finite-rank shell trace is stationary for the microscopic Schur boundary action
+    flux_err=4.163e-16, stationary_grad=4.163e-16
+[BOUNDED] PASS: the finite-rank family admits a vacuum-close coarse-grained isotropic exterior metric
+    R_match=5.0, a=0.239107, shell_rms=0.094, direct=1.039e-02, coarse=7.028e-06
+[BOUNDED] PASS: the coarse-grained isotropic candidate strongly improves the finite-rank `3+1` residual
+    direct=1.039e-02, coarse=7.028e-06, improvement=1477.6x
+
+==============================================================================
+BLOCKER
+==============================================================================
+The finite-rank family still does not supply an exact tensorial `3+1` matching map. The direct common-source metric remains nonzero, so this route closes the scalar exterior architecture but not full nonlinear GR.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=4 FAIL=0 TOTAL=4
+All checks passed.
+
+----- stderr -----
+

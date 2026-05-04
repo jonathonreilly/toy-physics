@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/lattice_weak_field_mass_scaling.py
+runner_sha256: 3810af48534b6fb2faa250f28d7dea021ed23615351aa10518347597b5d0880f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.63
+status: ok
+----- stdout -----
+================================================================================================================
+LATTICE WEAK-FIELD MASS SCALING
+  ordered 2D lattice + explicit Z2 symmetry, standard linear propagator only
+  mass proxy = field strength on a fixed mass node; node count held fixed
+  canonical family = max_dy=5, slit=wide_center
+================================================================================================================
+
+MASS-PROXY SWEEP
+   strength       MI     d_TV    1-pur       grav  sign          k=0        Born                   fit  retain
+  --------------------------------------------------------------------------------------------------------
+    0.00001    0.564    0.805    0.445    +0.0428  toward    +0.00e+00    8.37e-16  peak@5,a=-1.53,R2=0.93     yes
+    0.00002    0.568    0.808    0.446    +0.0588  toward    +0.00e+00    8.37e-16  peak@5,a=-1.49,R2=0.93     yes
+    0.00005    0.576    0.813    0.450    +0.0874  toward    +0.00e+00    8.37e-16  peak@5,a=-1.43,R2=0.92     yes
+    0.00010    0.584    0.819    0.453    +0.1144  toward    +0.00e+00    8.37e-16  peak@5,a=-1.35,R2=0.92     yes
+    0.00020    0.596    0.827    0.458    +0.1428  toward    +0.00e+00    8.37e-16  peak@6,a=-1.31,R2=0.92     yes
+    0.00050    0.617    0.839    0.465    +0.1627  toward    +0.00e+00    8.37e-16  peak@6,a=-1.00,R2=0.93     yes
+
+CANONICAL ROW
+  max_dy=5 slit=wide_center strength=0.0005 mass proxy=field strength
+  MI=0.617 d_TV=0.839 1-pur=0.465 grav=+0.1627 Born=8.37e-16 k=0=+0.00e+00
+  positive_b=11/11 tail=peak@6,a=-1.00,R2=0.93
+
+POWER-LAW FIT
+  gravity = 2.6960 * strength^0.353
+  R^2 = 0.971
+  read = positive but sub-linear mass response; do not claim F∝M
+
+DECISION
+  Born-clean rows: 6/6
+  Positive-gravity rows: 6/6
+  Retained rows: 6/6
+  conclusion=BOUND_SUBLINEAR_RESPONSE
+
+----- stderr -----
+

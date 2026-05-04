@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_hard_blocker_attack.py
+runner_sha256: 03e06f01bb07e8f6a581b569ca9005ae64502fd67b7a7e7db0dbac7922e6364b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 11.34
+status: ok
+----- stdout -----
+TELEPORTATION HARD BLOCKER ATTACK
+Status: planning artifact; ordinary quantum state teleportation only
+Claim boundary: no matter, mass, charge, energy, object, or faster-than-light transport
+
+sole-axiom apparatus obstruction: inequivalent_hamiltonians=2, same_record_map=True, max_pointer_error=0.000e+00, spectral_norm_difference=18.849556
+amplitude-level field obstruction: amplitude_laws=2, arrival_error=0, support_mismatch=0, final_l2_difference=0.380510, center_amplitude_difference=0.203711
+sparse 3D scaling control rows:
+  side=4, G=5000, N=64, Hdim=4096, gap=0.290255, Bell*=0.959247 (Phi+), Fbest=0.972831, CHSH=2.715608, neg=0.459247
+  side=6, G=5000, N=216, Hdim=46656, gap=0.315905, Bell*=0.434463 (Psi+), Fbest=0.622976, CHSH=1.290888, neg=0.027383
+  side=6, G=10000, N=216, Hdim=46656, gap=0.214013, Bell*=0.468888 (Psi+), Fbest=0.645925, CHSH=1.642606, neg=0.021486
+  side=6, G=20000, N=216, Hdim=46656, gap=0.12235, Bell*=0.489775 (Psi+), Fbest=0.659850, CHSH=1.880897, neg=0.009066
+scaling verdict: side4_best=0.959247, side6_best=0.489775, high_threshold=0.900
+calibrated pulse schedule: slots=8, duration=1.000, rabi_frequency=1.570796, ideal_bit_error=3.749e-33, area_error=1.000e-02, jitter_bit_error=1.000e-04, slot_spread=0
+material spin-bath detector model: local_terms=192, fragments/component=24, coupling_angle=0.800, fragment_overlap=0.696707, max_record_overlap=1.466e-19, entropy_defect=0.000e+00, term_commutator=0.000e+00
+
+Acceptance gates:
+  sole-axiom apparatus selection obstruction is explicit: PASS
+  amplitude field equation uniqueness obstruction is explicit: PASS
+  3D sparse scaling obstruction is recorded by side-6 controls: PASS
+  calibrated retained-axis pulse schedule writes equal-slot records: PASS
+  material spin-bath detector model gives classical records: PASS
+  claim boundary stays state-only and not FTL: PASS
+
+Limitations:
+  The first two gates are obstruction results: current axioms do not
+  uniquely select the apparatus or amplitude law without extra principles.
+  The side-6 sparse control is negative for the tested couplings; it
+  blocks asymptotic promotion rather than closing scaling.
+  The pulse schedule is an ideal square-pulse calibration, not a hardware
+  controller with noise, leakage, bandwidth, or fabrication limits.
+  The material detector is a local spin-bath Hamiltonian model, not an
+  experimentally specified detector medium.
+
+----- stderr -----
+

@@ -1,0 +1,41 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_strong_cp_gamma_transfer_nogo.py
+runner_sha256: 8796b31b8348dd3965645eb6d780eecdbc313ed03ecda1481e3c29e46f00dff3
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.07
+status: nonzero_exit
+----- stdout -----
+========================================================================================
+DM STRONG-CP / CKM GAMMA-TRANSFER BOUNDARY
+========================================================================================
+
+========================================================================================
+PART 1: THE CURRENT STRONG-CP SURFACE IS WEAK-ONLY AND QUARK-SPECIFIC
+========================================================================================
+  [PASS] The current strong-CP theorem keeps CP source data weak-sector only  (theta=0 note states the CKM CP source stays weak-sector only)
+  [FAIL] The current strong-CP theorem keeps the color sector blind to the weak phase  (current strong-CP closure is factorized across color and weak)
+  [PASS] The current CKM closure uses a quark-block-specific tensor carrier K_R  (current tensor-slot theorem is tied to the six-state quark block)
+  [PASS] The exact transferred source orientation is the discrete Z_3 phase delta=2pi/3  (delta_src=2.094395)
+
+========================================================================================
+PART 2: FIXING THE SOURCE PHASE DOES NOT FIX THE BREAKING TRIPLET
+========================================================================================
+  [PASS] Both comparison points carry the exact same strong-CP / weak Z_3 source phase  (phi is fixed at 2pi/3 on both samples)
+  [PASS] The same source phase still permits different breaking-triplet values  (triplet1=[-0.21685   0.304     0.521174], triplet2=[-0.0726    0.3664    0.654022])
+  [PASS] The same source phase still permits different DM CP tensors  (cp1=[-0.03028   0.096122], cp2=[-0.128101  0.12675 ])
+  [PASS] So the weak-only source orientation does not determine gamma or the interference channels  (gamma and delta+rho remain underdetermined at fixed phase)
+
+========================================================================================
+PART 3: THE CURRENT STACK STILL NEEDS A CROSS-SECTOR TRANSFER LAW
+========================================================================================
+  [PASS] The neutrino target space is an exact 3-real breaking-triplet carrier  (rank=3)
+  [PASS] The current strong-CP input contributes only source orientation, not a 3-real coefficient law  (delta_src is one fixed discrete orientation, not the full triplet law)
+  [PASS] Therefore current strong-CP/CKM closure does not yet populate B_H,min  (a new cross-sector transfer / coefficient law is still required)
+
+========================================================================================
+SUMMARY: PASS=10 FAIL=1
+========================================================================================
+
+----- stderr -----
+

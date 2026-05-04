@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_corner_transport_active_block.py
+runner_sha256: b285f189225028a46848a80aa078856d8426f3659ecee572dc83bd267ff2018c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+PMNS CORNER TRANSPORT ACTIVE BLOCK
+========================================================================================
+
+Question:
+  What does direct hw=1 corner-to-corner transport on the active
+  microscopic block determine?
+
+========================================================================================
+PART 1: DIRECT CORNER TRANSPORT RECOVERS THE SEED PAIR
+========================================================================================
+  [INFO] The direct corner transport profile has exactly three orbit moments  (even=0.900000+0.000000j, odd_fwd=0.400000+0.000000j, odd_bwd=0.000000+0.000000j)
+  [PASS] The orbit-average even mode recovers xbar  (recovered=0.900000, true=0.900000)
+  [PASS] The orbit-average forward odd mode recovers ybar  (recovered=0.400000, true=0.400000)
+  [PASS] The recovered seed pair is exactly the weak-axis seed pair  (aligned transport profile matches the seed matrix exactly)
+
+  So the direct corner transport route gives a native seed-law output:
+    - xbar from the C3-even transport moment
+    - ybar from the C3-forward odd transport moment
+
+========================================================================================
+PART 2: THE BRANCH BIT IS THE TRANSPORT ASYMMETRY
+========================================================================================
+  [PASS] The transport branch bit is a Z2 quantity  (bit=0)
+  [PASS] The branch bit flips under phase reversal on the corner transport orbit  (bit=0, swapped=1)
+  [INFO] The branch bit is read from the C3-odd transport asymmetry  (forward vs backward cycle amplitude)
+
+  The direct transport profile therefore gives a native branch selector.
+
+========================================================================================
+PART 3: THE TRANSPORT KERNEL IS BLIND TO THE 5-REAL CORNER SOURCE
+========================================================================================
+  [PASS] The two transport profiles have the same orbit-averaged even mode  (even_a=0.973333+0.000000j, even_b=0.973333+0.000000j)
+  [PASS] The two transport profiles have the same orbit-averaged odd mode  (odd_a=0.375445+0.106046j/0.000000+0.000000j, odd_b=0.375445+0.106046j/0.000000+0.000000j)
+  [PASS] The two corner-breaking sources are distinct  (|source_a-source_b|=0.166)
+  [PASS] The two transport profiles share the same seed pair but have different 5-real breaking sources  (seed_a=(0.973333,0.410000), seed_b=(0.973333,0.410000))
+
+  Therefore the transport kernel is exact on the seed pair and branch bit,
+  but it has a nontrivial kernel on the 5-real corner source.
+
+========================================================================================
+RESULT
+========================================================================================
+  Positive native law:
+    - direct hw=1 corner transport fixes the weak-axis seed pair
+    - the C3-odd transport asymmetry fixes the branch bit
+
+  Boundary:
+    - the 5-real corner-breaking source is not fixed by orbit-averaged
+      transport amplitudes alone
+
+  So this is a genuine dynamical native transport law on the active
+  microscopic block, but not a full microscopic closure theorem.
+
+PASS=9  FAIL=0
+
+----- stderr -----
+

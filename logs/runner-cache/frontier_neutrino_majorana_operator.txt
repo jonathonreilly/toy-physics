@@ -1,0 +1,75 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_operator.py
+runner_sha256: ec79d7da9d5d7b1e85f8425763b84bbed84d8bfd181f6bdee8d06d8f6b7ab329
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.17
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA OPERATOR: AXIOM-FIRST CLASSIFICATION
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+    rows: Framework axiom; Anomaly-forced time; Native weak algebra;
+          Structural SU(3) closure; One-generation matter closure
+  - MINIMAL_AXIOM_INVENTORY.md
+  - UNIFIED_AXIOM_BOUNDARY_NOTE.md
+  - ANOMALY_FORCES_TIME_THEOREM.md
+  - frontier_right_handed_sector.py
+
+========================================================================================
+PART 1: LORENTZ-INVARIANT SAME-CHIRALITY SPINOR FORMS
+========================================================================================
+  [PASS] Lorentz-invariant psi^T B psi space has dimension 2
+  [PASS] C is Lorentz invariant  (residual=0.00e+00)
+  [PASS] C gamma_5 is Lorentz invariant  (residual=0.00e+00)
+  [PASS] C is antisymmetric
+  [PASS] C gamma_5 is antisymmetric
+  [PASS] C P_R is a nonzero Lorentz-invariant same-chirality form  (norm=1.414, residual=0.00e+00)
+  [PASS] C P_L is a nonzero Lorentz-invariant same-chirality form  (norm=1.414, residual=0.00e+00)
+  [PASS] C P_R is antisymmetric
+  [PASS] C P_L is antisymmetric
+
+  The spinor classification leaves two invariant bilinear seeds: C and C gamma_5.
+  After chirality projection, C P_R and C P_L give the same-chirality
+  Majorana spinor structures. The internal gauge solve decides which
+  field can actually use them.
+
+========================================================================================
+PART 2: INTERNAL GAUGE-INVARIANT SYMMETRIC BILINEARS
+========================================================================================
+  [PASS] Gauge-invariant symmetric internal bilinear space has dimension 1
+  [PASS] Invariant support is only on the nu_R nu_R slot  (off-slot norm=7.36e-17)
+  [PASS] Direct nu_R nu_R slot is gauge invariant  (residual=0.00e+00)
+  [PASS] nu_L nu_L is not gauge invariant at quadratic order  (residual=2.000)
+  [PASS] e_R e_R is not gauge invariant at quadratic order  (residual=4.000)
+  [PASS] u_R u_R is not gauge invariant at quadratic order  (residual=2.667)
+  [PASS] d_R d_R is not gauge invariant at quadratic order  (residual=1.333)
+
+  Unique invariant internal bilinear:
+    (nu_R, nu_R)
+
+========================================================================================
+PART 3: COMBINED OPERATOR
+========================================================================================
+  [PASS] Spinor factor is nonzero
+  [PASS] Internal factor is nonzero
+  [PASS] Combined quadratic Majorana candidate therefore exists  (nu_R^T C P_R nu_R)
+
+RESULT
+----------------------------------------------------------------------------------------
+  Up to normalization, the unique local quadratic same-chirality
+  Lorentz- and gauge-invariant Majorana operator on the anomaly-fixed
+  one-generation surface is:
+
+      nu_R^T C P_R nu_R
+
+  This classifies the operator. It does NOT derive its coefficient,
+  its scale, or the full 3x3 neutrino texture.
+
+PASS=19  FAIL=0
+
+----- stderr -----
+

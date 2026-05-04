@@ -1,0 +1,30 @@
+===== runner cache v1 =====
+runner: scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py
+runner_sha256: dc9d5ef86f1e61306cebe8fe0a38c60bbe5653967176ffa2ea059e4b86e6233d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+==============================================================================
+PLANCK PRIMITIVE CLIFFORD-MAJORANA EDGE DERIVATION
+==============================================================================
+
+Question: do the retained Cl(3) bivectors plus anomaly-forced
+time axis construct the primitive Cl_4(C) / two-mode CAR edge?
+
+[PASS (C)] 1. explicit Hermitian Cl_4 generators on C^4: Hermitian=0.00e+00, square=0.00e+00, Clifford=0.00e+00
+[PASS (C)] 2. generated algebra is faithful and irreducible: span rank=16=dim M_4(C), commutant dimension=1
+[PASS (C)] 3. retained Cl(3) bivectors lift as the spatial SU(2) subset: Cl_3 rank=8, su2 error=0.00e+00, bivector/vector duality=0.00e+00
+[PASS (C)] 4. anomaly-forced time axis extends Cl_3 to Cl_4: Cl_3 rank=8 -> Cl_4 rank=16; time/spatial anticommutator=0.00e+00
+[PASS (C)] 5. oriented Majorana pairs realize two-mode CAR: CAR errors {c,c}=0.00e+00, {c,c^dagger}=0.00e+00; orientation flip also CAR
+[PASS (C)] 6. primitive packet rank equals F(C^2) dimension: rank(P_A)=C(4,1)=4; dim F(C^2)=4; c_cell=0.25
+[PASS (C)] 7. rank-four Cl_4 module is unique up to automorphism: faithful dims<=8 [(4, 1), (8, 4)]; direct-sum commutant=4; irreducible commutant classes=1
+[PASS (C)] 8. Widom coefficient cross-validates the primitive coefficient: c_Widom=(2+1)/12=0.25; c_cell=4/16=0.25; G_Newton,lat=1.0
+
+Summary: PASS=8  FAIL=0
+
+Verdict: PASS. The explicit retained-content construction gives the primitive Cl_4(C) module on P_A H_cell, realizes F(C^2) by oriented Majorana pairing, and cross-checks c_Widom=c_cell=1/4 in natural lattice units. Audit ratification remains separate.
+
+----- stderr -----
+

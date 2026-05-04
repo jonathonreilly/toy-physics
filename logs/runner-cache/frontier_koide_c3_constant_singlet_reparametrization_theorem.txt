@@ -1,0 +1,52 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_c3_constant_singlet_reparametrization_theorem.py
+runner_sha256: 680630e85fba6d0bf5a056b2b4a10e93362faa707376aa4ad8c9c5242122f9ed
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.13
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: exact stationary lambda roots on the selected line
+========================================================================================
+  [PASS] The fixed-coupling stationary condition is an exact quadratic in lambda  (dV/dm = 9*lam**2/2 - 3*lam*m - 3*lam + m**2/2 + 3*m - 4*sqrt(2)/3 + 35/24 + 2*sqrt(6)/3)
+  [PASS] Its exact roots are lambda_-(m), lambda_+(m) with one linear discriminant  (Delta(m) = -144*m - 48*sqrt(6) - 69 + 96*sqrt(2))
+  [PASS] The real-root endpoint is the exact discriminant zero m_disc  (m_disc=-0.352854206012)
+  [PASS] The lower root hits zero exactly at the zero-coupling selected-slice minimum m_V  (m_V=-0.433176442380)
+
+========================================================================================
+PART 2: physical-branch interval structure
+========================================================================================
+  [PASS] [NUMERIC] The physical delta=2/9 point lies strictly inside the constant-lambda real-root interval  (m_pos=-1.295794904067, m_*=-1.160443440065, m_disc=-0.352854206012, m_0=-0.265815998702)
+  [PASS] [NUMERIC] Below m_V there is exactly one positive constant-coupling root  (lambda_- < 0 < lambda_+ on (m_pos, m_V))
+  [PASS] [NUMERIC] Above m_V and below m_disc there are two positive constant-coupling roots  (0 < lambda_- < lambda_+ on (m_V, m_disc))
+
+========================================================================================
+PART 3: the constant-coupling family reparameterizes a continuum
+========================================================================================
+  [PASS] [NUMERIC] The positive lambda_+(m) branch is strictly decreasing across the whole admissible interval  (lambda_+ range=(0.222348597996, 0.548768261657))
+  [PASS] [NUMERIC] The second branch lambda_-(m) is strictly increasing once it becomes positive  (lambda_- range=(0.000150984459, 0.209015264663))
+  [PASS] [NUMERIC] For every lambda_+(m), the companion stationary point stays below the positivity threshold  (max companion root=-1.411695525993)
+  [PASS] [NUMERIC] For every positive lambda_-(m), the companion stationary point also stays below threshold  (max companion root=-4.392954206012)
+
+========================================================================================
+PART 4: the physical point is one interior member of the family
+========================================================================================
+  [PASS] [NUMERIC] The branch-local physical point still solves the exact delta=2/9 condition  (m_*=-1.160443440065)
+  [PASS] [NUMERIC] Its singlet value is exactly the previously found positive root lambda_*  (lambda_*=0.545625311688)
+  [PASS] [NUMERIC] lambda_* is an interior value of the decreasing lambda_+(m) family, not an endpoint fixed by branch geometry alone  (lambda_+(m_pos)=0.548769256289, lambda_+(m_V)=0.377882371746, lambda_+(m_disc)=0.215715274029)
+
+========================================================================================
+PART 5: scientific interpretation
+========================================================================================
+  The fixed-coupling singlet route does not select the Koide point by itself.
+  It gives an exact reparameterization of a whole interval of first-branch
+  stationary points by one or two positive lambda values.
+  So the remaining object on this route is still a microscopic law fixing
+  lambda (equivalently m), not the mere existence of a constant singlet
+  Schur correction.
+
+PASS=14 FAIL=0
+
+----- stderr -----
+

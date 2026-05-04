@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/poisson_3d_self_field.py
+runner_sha256: af4d08d012db99103bb1dca3c17b447ab455a69c5560cff20c8b4cafab2084a6
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

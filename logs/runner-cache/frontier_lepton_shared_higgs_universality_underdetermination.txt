@@ -1,0 +1,80 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lepton_shared_higgs_universality_underdetermination.py
+runner_sha256: 93e451afe60248a3fe069b5f4fdeed1a84bc3d01d2c472187df0c93595f1ce20
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+LEPTON SHARED-HIGGS UNIVERSALITY: CURRENT-STACK UNDERDETERMINATION
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - Neutrino Higgs Z_3 underdetermination
+  - Lepton single-Higgs PMNS triviality theorem
+  - Neutrino Dirac two-Higgs escape theorem
+  - Lepton shared-Higgs universality collapse theorem
+
+Question:
+  Does the present retained stack force shared-Higgs universality, or
+  force its failure, on the lepton Yukawa lanes?
+
+========================================================================================
+PART 1: THE CURRENT SUPPORT GRAMMAR ADMITS BOTH UNIVERSAL AND NON-UNIVERSAL ASSIGNMENTS
+========================================================================================
+  [PASS] universal_single: neutrino-side support is exact and admissible  (support size=3)
+  [PASS] universal_single: charged-lepton-side support is exact and admissible  (support size=3)
+  [PASS] universal_pair: neutrino-side support is exact and admissible  (support size=6)
+  [PASS] universal_pair: charged-lepton-side support is exact and admissible  (support size=6)
+  [PASS] nonuniversal_nu_side: neutrino-side support is exact and admissible  (support size=6)
+  [PASS] nonuniversal_nu_side: charged-lepton-side support is exact and admissible  (support size=3)
+  [PASS] nonuniversal_e_side: neutrino-side support is exact and admissible  (support size=3)
+  [PASS] nonuniversal_e_side: charged-lepton-side support is exact and admissible  (support size=6)
+
+  So the current support grammar itself does not force universality or
+  force its failure. Both kinds of assignment exist exactly.
+
+========================================================================================
+PART 2: THE CURRENT STACK ALLOWS BOTH UNIVERSAL AND NON-UNIVERSAL PMNS PATTERNS
+========================================================================================
+  [PASS] Universal single-offset assignment keeps both sectors monomial
+  [PASS] Universal single-offset assignment gives diagonal left Gram matrices  (offdiag_nu=0.00e+00, offdiag_e=0.00e+00)
+  [PASS] Universal two-offset assignment moves both sectors off the monomial lane
+  [PASS] Universal two-offset assignment gives non-diagonal left Gram matrices on both sectors  (offdiag_nu=0.008820, offdiag_e=0.070712)
+  [PASS] A non-universal neutrino-side-only assignment is also exactly admissible
+  [PASS] That non-universal assignment reproduces the one-sided branch pattern  (offdiag_nu=0.008820, offdiag_e=0.00e+00)
+
+  So the current exact stack does not even force the qualitative
+  universality pattern of the lepton PMNS-producing assignment.
+
+========================================================================================
+PART 3: THE CURRENT ATLAS CARRIES NO SHARED-HIGGS UNIVERSALITY BRIDGE
+========================================================================================
+  [PASS] Atlas carries this note's underdetermination row
+  [PASS] Atlas carries the PMNS nonselection row
+  [PASS] Atlas carries the universality-collapse conditional row
+  [PASS] Atlas still does not carry a retained universality bridge theorem
+  [PASS] Live gates note still records shared-Higgs universality as a high-value open lane
+
+  So the current atlas state matches the constructive examples:
+    - universality can be discussed conditionally,
+    - but it is not forced or rejected by any retained bridge theorem.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-stack answer:
+    - shared-Higgs universality is not forced
+    - universality failure is not forced
+    - both universal and non-universal lepton assignments remain
+      exact admissible extension classes
+
+  So the remaining selector science is now explicit: derive an
+  inter-sector universality bridge theorem, or derive a theorem of
+  universality failure. The current stack does neither.
+
+PASS=19  FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_selector_current_stack_zero_law.py
+runner_sha256: 2e33e6acfd3c9b4a25b4bd135f62c03cb55cca253681df819db2b10acefa7aa5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+PMNS SELECTOR: CURRENT-STACK ZERO LAW
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - PMNS selector unique amplitude slot
+  - PMNS sector-exchange nonforcing
+  - PMNS scalar bridge nonrealization
+  - PMNS selector class-space uniqueness
+
+Question:
+  Once the reduced selector bridge has one real amplitude slot, what
+  is the actual activation law on the current retained bank?
+
+========================================================================================
+PART 1: THE CURRENT SELECTOR ACTIVATION QUESTION IS ONE REAL SCALAR
+========================================================================================
+  [PASS] The reduced class basis is fixed
+  [PASS] The reduced selector coordinate is extracted from one real scalar a_sel  (reconstruction error=0.00e+00)
+  [PASS] The extracted reduced amplitude matches a_sel exactly  (a_sel=0.420000, extracted=0.420000)
+
+  So the current activation-law question is scalar:
+  what value does the retained bank assign to a_sel?
+
+========================================================================================
+PART 2: THE CURRENT SUPPORT AND SCALAR BANKS PROJECT TO ZERO
+========================================================================================
+  [PASS] A sigma-even support-side current vector has zero reduced amplitude  (a_support=0.00e+00)
+  [PASS] A sigma-even block-local scalar vector has zero reduced amplitude  (a_scalar=0.00e+00)
+  [PASS] Their retained-bank combination still has zero reduced amplitude  (a_combined=0.00e+00)
+
+  So on the bank actually retained today, the unique reduced selector
+  slot is present structurally but its effective amplitude is zero.
+
+========================================================================================
+PART 3: THE CURRENT ATLAS ADDS NO EXTRA PMNS BRIDGE THAT SHIFTS ZERO
+========================================================================================
+  [PASS] The support-side note says the current support bank cannot force tau
+  [PASS] The scalar note says the current scalar bank does not realize the bridge
+  [PASS] The unique-amplitude note fixes one real amplitude slot a_sel
+  [PASS] The current-zero-law note records a_sel,current = 0
+  [PASS] The atlas carries the current-zero-law row
+
+  So no currently retained PMNS object shifts the reduced selector
+  answer away from a_sel,current = 0.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-bank answer:
+    - the reduced PMNS selector bridge carries one real amplitude a_sel
+    - the current support and scalar banks project to zero on that slot
+    - so the current-stack law is a_sel,current = 0
+
+PASS=11  FAIL=0
+
+----- stderr -----
+

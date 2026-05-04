@@ -1,0 +1,70 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_transport_status.py
+runner_sha256: ad30a24d58eca699eb12444465011291166354db46fa02e0e441b67e36d75661
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.88
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS TRANSPORT STATUS
+========================================================================================
+
+========================================================================================
+PART 1: THE EXACT SOURCE PACKAGE AND PROJECTION LAW
+========================================================================================
+  [PASS] The exact source package is gamma = 1/2, E1 = sqrt(8/3), E2 = sqrt(8)/3
+  [PASS] The exact projection theorem fixes the physical denominator as K00 = 2
+  [PASS] The exact coherent kernel gives epsilon_1/epsilon_DI = 0.9276209209197268  (ratio=0.927620920920)
+
+  gamma = 0.500000000000
+  E1 = 1.632993161855
+  E2 = 0.942809041582
+  K00 = 2.000000000000
+  epsilon_1 = 2.457619879584e-06
+  epsilon_DI = 2.649379530107e-06
+  epsilon_1 / epsilon_DI = 0.927620920920
+
+========================================================================================
+PART 2: EXACT EQUILIBRIUM BOOKKEEPING AND H_rad(T)
+========================================================================================
+  [PASS] The exact late entropy-to-photon factor is s/n_gamma = 7.039433661546651  (s/n_gamma=7.039433661547)
+  [PASS] The exact relativistic Majorana abundance factor is d_N = 0.003901498367656259  (d_N=0.003901498367656)
+  [PASS] The exact radiation expansion law is H_rad(T) = sqrt(4*pi^3*g_*/45) * T^2 / M_Pl  (H/T^2=1.4049225908908326e-18)
+  [PASS] The exact radiation branch has normalized profile E_H(z) = 1  (same T^2 law implies the normalized branch is exactly unity)
+
+  s/n_gamma = 7.039433661547
+  d_N = 0.003901498367656
+  (s/n_gamma) * C_sph * d_N = 9.734196079911e-03
+  H_rad(T)/T^2 = 1.4049225908908326e-18
+  eta[H] uses the exact prefactor above on the theorem-native radiation branch.
+
+========================================================================================
+PART 3: DIRECT TRANSPORT INTEGRAL ON THE EXACT RADIATION BRANCH
+========================================================================================
+  [PASS] The direct theorem-native transport integral on the exact radiation branch gives kappa_axiom = 0.004829545290766509  (kappa_axiom=0.004829545290767)
+  [PASS] The exact formal transport integral reproduces the same value  (kappa_formal=0.004829546210191)
+  [PASS] On the exact radiation branch this gives eta/eta_obs = 0.18878592785084122  (eta/eta_obs=0.188785929502)
+
+  K_exact = 47.235979629898
+  kappa_axiom = 0.004829545290767
+  eta/eta_obs = 0.188785929502
+  legacy fit comparator eta/eta_obs = 0.557919848420
+
+========================================================================================
+PART 4: FINAL END STATE
+========================================================================================
+  [SUPPORT] The exact transport chain is now internal on the one-flavor radiation branch  (eta/eta_obs=0.188785929502)
+  [SUPPORT] The live DM gate stays open because the theorem-native branch undershoots observation by 5.297005x
+
+  END STATE: EXACT TRANSPORT CHAIN CLOSED; DM GATE OPEN
+  Exact theorem-native prediction on the one-flavor branch:
+    eta/eta_obs = 0.188785929502
+  This closes the transport law but numerically undershoots observation.
+
+========================================================================================
+SUMMARY: THEOREM PASS=10 SUPPORT=2 FAIL=0
+========================================================================================
+
+----- stderr -----
+

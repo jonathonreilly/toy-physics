@@ -1,0 +1,42 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_sqrtm_amplitude_principle.py
+runner_sha256: 6642c32e0f51fed70bd432b521e382048e9854d7022ccb40f927866a8e6a55aa
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.06
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: square-root dictionary already present in the repo
+========================================================================================
+  [PASS] LSZ ratio leaves one sqrt(Z_phi) factor per scalar external leg  (ratio=sqrt(Z_phi)/sqrt(Z_A))
+  [PASS] A one-leg amplitude factor squares back to the quadratic residue
+  [PASS] Convention-B square root of the quadratic weights recovers the linear masses  (sqrt((m_e^2,m_mu^2,m_tau^2)) = (m_e,m_mu,m_tau))
+
+========================================================================================
+PART 2: positive C_3 parent -> positive C_3 square root
+========================================================================================
+  [PASS] Positive amplitude operator Y is Hermitian
+  [PASS] Quadratic parent M = Y^2 exactly
+  [PASS] Parent M commutes with the retained C_3 shift
+  [PASS] Principal square root Y also commutes with the retained C_3 shift
+  [PASS] Fourier basis diagonalizes Y with eigenvalues (sqrt masses)
+  [PASS] Fourier basis diagonalizes M with eigenvalues (masses)
+
+========================================================================================
+PART 3: observed charged-lepton parent -> sqrt(m) amplitude vector
+========================================================================================
+  [PASS] [NUMERIC] Observed charged-lepton Koide Q is 2/3 to PDG precision  (Q=0.6666605115)
+  [PASS] [NUMERIC] Observed sqrt(m) amplitude vector satisfies a_0^2 = 2|z|^2 to 1e-4  (ratio=1.0000184659)
+
+Interpretation:
+  The repo already uses square roots to pass from positive quadratic
+  parents to linear one-leg amplitudes. On the Koide lane, this means
+  the sharp P1 blocker is not 'why sqrt(m)?' in the abstract, but
+  'which positive C_3-covariant parent M has principal square root
+  carrying the charged-lepton spectral amplitudes?'
+
+PASS=11 FAIL=0
+
+----- stderr -----
+

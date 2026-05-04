@@ -1,0 +1,215 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_barred_napoleon_triangles_exact_closed_form.py
+runner_sha256: e9f9006ed78c138fb9e465cd6330a2625c715201b1fca121ae36e67053c39913
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.94
+status: ok
+----- stdout -----
+========================================================================================
+Barred unitarity-triangle Napoleon triangles EXACT closed form audit
+See docs/CKM_BARRED_NAPOLEON_TRIANGLES_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Ground-up status verification of each cited authority
+----------------------------------------------------------------------------------------
+  RETAINED-TIER (load-bearing for closure):
+
+    [CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md]
+      Status (extracted): 'proposed_retained NLO CKM-structure corollary on the proposed_promoted atlas/axiom'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md
+
+    [CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md]
+      Status (extracted): 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+
+    [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md]
+      Status (extracted): 'proposed_retained standalone structural-identity theorem on `main`.'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+
+
+----------------------------------------------------------------------------------------
+Extracting retained inputs from authority text
+----------------------------------------------------------------------------------------
+  rho_bar = (4 - alpha_s)/24:        FOUND
+  eta_bar = sqrt(5)(4 - alpha_s)/24: FOUND
+  N_pair extracted:                  n_pair  = 2
+  N_color extracted:                 n_color = 3
+  N_quark = N_pair * N_color:        FOUND
+  [PASS] NLO retains rho_bar = (4 - alpha_s)/24
+  [PASS] NLO retains eta_bar = sqrt(5)(4 - alpha_s)/24
+  [PASS] MAGNITUDES retains N_pair = 2
+  [PASS] MAGNITUDES retains N_color = 3
+  [PASS] MAGNITUDES retains N_quark = N_pair * N_color (=6)
+
+----------------------------------------------------------------------------------------
+N2: Outer/inner Napoleon side^2 closed forms
+----------------------------------------------------------------------------------------
+  N_outer^2 = perim_sq/6 + 2 Area/sqrt(3)
+            = alpha_s**2/288 - alpha_s/72 + sqrt(15)*(4 - alpha_s)/72 + 1/3
+  Expected: ((alpha_s^2 - 4 alpha_s + 96) + 4 sqrt(15)(4 - alpha_s))/288
+           = alpha_s**2/288 - alpha_s/72 + sqrt(15)*(4 - alpha_s)/72 + 1/3
+  Difference: 0
+  [PASS] N2: N_outer^2 = ((alpha_s^2 - 4 alpha_s + 96) + 4 sqrt(15)(4 - alpha_s))/288
+
+  N_inner^2 = perim_sq/6 - 2 Area/sqrt(3)
+            = alpha_s**2/288 - alpha_s/72 + sqrt(15)*(alpha_s - 4)/72 + 1/3
+  Expected: ((alpha_s^2 - 4 alpha_s + 96) - 4 sqrt(15)(4 - alpha_s))/288
+           = alpha_s**2/288 - alpha_s/72 + sqrt(15)*(alpha_s - 4)/72 + 1/3
+  Difference: 0
+  [PASS] N2: N_inner^2 = ((alpha_s^2 - 4 alpha_s + 96) - 4 sqrt(15)(4 - alpha_s))/288
+
+  Verifying N_outer^2 = W_+/6 (Weitzenbock connection):
+    Difference: 0
+  [PASS] N2: N_outer^2 = W_+/6 (where W_+ is the Weitzenbock sum)
+  Verifying N_inner^2 = W_-/6 (Weitzenbock connection):
+    Difference: 0
+  [PASS] N2: N_inner^2 = W_-/6 (where W_- is the Weitzenbock gap)
+
+----------------------------------------------------------------------------------------
+N3: Universal triangle identity -- N_outer^2 + N_inner^2 = perim_sq/3
+----------------------------------------------------------------------------------------
+  N_outer^2 + N_inner^2 (computed) = alpha_s**2/144 - alpha_s/36 + 2/3
+  Expected: perim_sq/3 = (a^2 + b^2 + c^2)/3 = alpha_s**2/144 - alpha_s/36 + 2/3
+  Difference: 0
+  [PASS] N3: N_outer^2 + N_inner^2 = perim_sq/3 (universal triangle identity)
+
+  LO: N_outer^2 + N_inner^2 |LO = 2/3
+  Expected: N_pair/N_color = 2/3 = 2/3
+  [PASS] N3 LO: N_outer^2 + N_inner^2 |LO = N_pair/N_color = 2/3
+
+----------------------------------------------------------------------------------------
+N4: NEW Product N_outer^2 * N_inner^2 = P(alpha_s)/82944
+----------------------------------------------------------------------------------------
+  N_outer^2 * N_inner^2 (computed) = alpha_s**4/82944 - alpha_s**3/10368 - alpha_s**2/2592 + alpha_s/72 + 7/108
+  Expected: P(alpha_s)/82944 = alpha_s**4/82944 - alpha_s**3/10368 - alpha_s**2/2592 + alpha_s/72 + 7/108
+  Difference: 0
+  [PASS] N4: N_outer^2 * N_inner^2 = P(alpha_s)/82944
+
+  Structural: 82944 = N_pair^10 N_color^4 = 1024 * 81 = 82944
+  [PASS] N4 structural: 82944 = N_pair^10 N_color^4
+
+----------------------------------------------------------------------------------------
+N5 / N6: Napoleon triangle areas
+----------------------------------------------------------------------------------------
+  Area_outer_Nap = sqrt(3) N_outer^2 / 4
+  Area_inner_Nap = sqrt(3) N_inner^2 / 4
+
+  Area_outer_Nap * Area_inner_Nap (computed) = alpha_s**4/442368 - alpha_s**3/55296 - alpha_s**2/13824 + alpha_s/384 + 7/576
+  Expected: 3 P(alpha_s)/(16 * 82944) = P(alpha_s)/442368 = alpha_s**4/442368 - alpha_s**3/55296 - alpha_s**2/13824 + alpha_s/384 + 7/576
+  Difference: 0
+  [PASS] N6: Area_outer_Nap * Area_inner_Nap = 3 P(alpha_s)/(16 * 82944)
+
+  Area_outer_Nap - Area_inner_Nap (computed) = sqrt(5)*(4 - alpha_s)/48
+  Area_triangle (retained) = sqrt(5)*(4 - alpha_s)/48
+  Difference: 0
+  [PASS] N7 classical: Area_outer_Nap - Area_inner_Nap = Area_triangle
+
+----------------------------------------------------------------------------------------
+N8: LO recovery in pure structural integers
+----------------------------------------------------------------------------------------
+  Sum at LO: N_outer^2 + N_inner^2 |LO = 2/3
+  Expected: N_pair/N_color = 2/3
+  [PASS] N8: N_outer^2 + N_inner^2 |LO = N_pair/N_color = 2/3
+
+  Product at LO: N_outer^2 * N_inner^2 |LO = 7/108
+  Expected: (N_quark + 1)/(N_pair^2 N_color^3) = 7/108
+  [PASS] N8: N_outer^2 * N_inner^2 |LO = (N_quark + 1)/(N_pair^2 N_color^3) = 7/108
+
+----------------------------------------------------------------------------------------
+N9: NEW Napoleon discriminant tied to (4 - alpha_s)^2
+----------------------------------------------------------------------------------------
+  (N_outer^2 - N_inner^2)^2 (computed) = 5*(alpha_s - 4)**2/432
+  Expected: 5 (4 - alpha_s)^2/432 = 5*(alpha_s - 4)**2/432
+  Difference: 0
+  [PASS] N9: (N_outer^2 - N_inner^2)^2 = 5 (4 - alpha_s)^2/432
+
+  Equivalent form: (N_outer^2 - N_inner^2)^2 = (16/3) Area^2 = 5*(alpha_s - 4)**2/432
+  Difference: 0
+  [PASS] N9 alt: (N_outer^2 - N_inner^2)^2 = (16/3) Area^2 = (N_pair^4/N_color) Area^2
+
+----------------------------------------------------------------------------------------
+Napoleon centroid construction (object-level verification)
+----------------------------------------------------------------------------------------
+  Centroid of original triangle: G_orig = (7/18 - alpha_s/72, sqrt(5)*(4 - alpha_s)/72)
+  Outer Napoleon side^2 values from explicit centroids:
+    alpha_s**2/288 - sqrt(15)*alpha_s/72 - alpha_s/72 + sqrt(15)/18 + 1/3
+    alpha_s**2/288 - sqrt(15)*alpha_s/72 - alpha_s/72 + sqrt(15)/18 + 1/3
+    alpha_s**2/288 - sqrt(15)*alpha_s/72 - alpha_s/72 + sqrt(15)/18 + 1/3
+  [PASS] explicit outer centroids form an equilateral triangle
+  [PASS] explicit outer side^2 equals N_outer^2 closed form
+  Inner Napoleon side^2 values from explicit centroids:
+    alpha_s**2/288 - alpha_s/72 + sqrt(15)*alpha_s/72 - sqrt(15)/18 + 1/3
+    (alpha_s + 8)**2/1728 + (sqrt(15)*(alpha_s - 4) + 36)**2/5184
+    alpha_s**2/288 - alpha_s/72 + sqrt(15)*alpha_s/72 - sqrt(15)/18 + 1/3
+  [PASS] explicit inner centroids form an equilateral triangle
+  [PASS] explicit inner side^2 equals N_inner^2 closed form
+  Centroid of outer Napoleon: G_outer = (7/18 - alpha_s/72, sqrt(5)*(4 - alpha_s)/72)
+  Centroid of inner Napoleon: G_inner = (7/18 - alpha_s/72, sqrt(5)*(4 - alpha_s)/72)
+  [PASS] outer Napoleon centroid equals original centroid exactly
+  [PASS] inner Napoleon centroid equals original centroid exactly
+
+----------------------------------------------------------------------------------------
+Package-surface wiring
+----------------------------------------------------------------------------------------
+  [PASS] package surface wired: docs/CANONICAL_HARNESS_INDEX.md  (required tokens present)
+  [PASS] package surface wired: docs/publication/ci3_z3/CLAIMS_TABLE.md  (required tokens present)
+  [PASS] package surface wired: docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md  (required tokens present)
+  [PASS] package surface wired: docs/publication/ci3_z3/DERIVATION_ATLAS.md  (required tokens present)
+  [PASS] package surface wired: docs/publication/ci3_z3/PUBLICATION_MATRIX.md  (required tokens present)
+  [PASS] package surface wired: docs/publication/ci3_z3/RESULTS_INDEX.md  (required tokens present)
+  [PASS] package surface wired: docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md  (required tokens present)
+  [PASS] package surface wired: docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md  (required tokens present)
+  [PASS] package surface wired: docs/publication/ci3_z3/USABLE_DERIVED_VALUES_INDEX.md  (required tokens present)
+  [PASS] package surface wired: docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md  (required tokens present)
+  [PASS] package surface wired: docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md  (required tokens present)
+  [PASS] package surface wired: docs/publication/ci3_z3/SCIENCE_MAP.md  (required tokens present)
+  [PASS] package surface wired: docs/publication/ci3_z3/README.md  (required tokens present)
+  [PASS] package surface wired: docs/publication/ci3_z3/REPRODUCE.md  (required tokens present)
+
+----------------------------------------------------------------------------------------
+Summary of NEW retained content
+----------------------------------------------------------------------------------------
+  Inputs (retained-tier, ground-up Status verified):
+    CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA  (retained)
+    CKM_MAGNITUDES_STRUCTURAL_COUNTS         (retained)
+    CKM_CP_PHASE_STRUCTURAL_IDENTITY         (retained)
+
+  NEW retained closed forms:
+
+    (N2) Outer/inner Napoleon side^2:
+           N_outer^2 = ((alpha_s^2 - 4 alpha_s + 96) + 4 sqrt(15)(4 - alpha_s))/288
+                     = W_+ / 6   (Weitzenbock connection),
+           N_inner^2 = ((alpha_s^2 - 4 alpha_s + 96) - 4 sqrt(15)(4 - alpha_s))/288
+                     = W_- / 6.
+
+    (N3) Sum (universal): N_outer^2 + N_inner^2 = perim_sq/3.
+         At LO: N_pair/N_color = 2/3.
+
+    (N4) NEW Brocard polynomial connection:
+           N_outer^2 * N_inner^2 = P(alpha_s)/82944
+                                 = P(alpha_s)/(N_pair^10 N_color^4).
+
+    (N5/N6) Areas of Napoleon triangles: Area_Nap = sqrt(3) N^2/4.
+           Area_outer_Nap * Area_inner_Nap = 3 P(alpha_s)/(16 * 82944).
+
+    (N7) Classical: Area_outer_Nap - Area_inner_Nap = Area_triangle.
+
+    (N8) LO structural-integer recovery:
+           N_outer^2 + N_inner^2 |LO = N_pair/N_color = 2/3,
+           N_outer^2 * N_inner^2 |LO = (N_quark + 1)/(N_pair^2 N_color^3) = 7/108.
+
+    (N9) Napoleon discriminant:
+           (N_outer^2 - N_inner^2)^2 = 5 (4 - alpha_s)^2/432
+                                     = (16/3) Area^2.
+
+========================================================================================
+TOTAL: PASS=42, FAIL=0
+========================================================================================
+
+----- stderr -----
+

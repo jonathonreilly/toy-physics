@@ -1,0 +1,37 @@
+===== runner cache v1 =====
+runner: scripts/frontier_scalar_3plus1_temporal_ratio.py
+runner_sha256: dba67f913ce7daa6ddfd894860d9429fd6fa26e6a6abac9bc6312c30cbaf04e2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+SCALAR 3+1 TEMPORAL RATIO
+==============================================================================
+
+Exact theorem surface
+  K_sc(omega) = 3 + sin^2(omega)
+  A(L_t)      = (1 / (2 L_t)) sum_omega 1 / (3 + sin^2 omega)
+
+  A_2 direct                 = 0.125000000000000
+  A_2 exact                  = 0.125000000000000
+  A_8 direct                 = 0.144329896907216
+  A_4096 direct              = 0.144337567297406
+  A_inf exact                = 0.144337567297406
+  A_inf / A_2                = 1.154700538379252
+
+Support corollary
+  Gamma_sc,cand = ratio^(1/4)= 1.036614649628077
+
+Checks
+  PASS: A_2 direct: value=0.125000000000000 target=0.125000000000000 delta=0.000e+00 tol=1.0e-15
+  PASS: A_8 lies strictly between the UV endpoint and the temporal average
+  PASS: A_4096 approaches A_inf: value=0.144337567297406 target=0.144337567297406 delta=2.776e-17 tol=1.0e-12
+  PASS: A_inf / A_2: value=1.154700538379252 target=1.154700538379252 delta=0.000e+00 tol=1.0e-15
+  PASS: dimension-4 scalar-density factor candidate: value=1.036614649628077 target=1.036614649628077 delta=0.000e+00 tol=1.0e-15
+
+SUMMARY: EXACT PASS=4 SUPPORT=1 FAIL=0
+
+----- stderr -----
+

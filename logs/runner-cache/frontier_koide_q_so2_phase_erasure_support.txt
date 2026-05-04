@@ -1,0 +1,83 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_so2_phase_erasure_support.py
+runner_sha256: edfa54deb98978c4227b0d18af90510956fcef3ae88f60531c72106784bb69d8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.98
+status: ok
+----- stdout -----
+========================================================================================
+Koide Q SO(2) phase-erasure support theorem
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 1: upstream package boundary remains open
+----------------------------------------------------------------------------------------
+  [PASS] background-zero criterion is support, not retained closure
+  [PASS] onsite source-domain synthesis keeps the source-domain law open
+  [PASS] canonical descent note keeps physical source-domain selection open
+
+----------------------------------------------------------------------------------------
+Part 2: exact C3 trigonometry
+----------------------------------------------------------------------------------------
+  [PASS] sum_k cos(delta+2pi k/3)=0
+       sum_cos=0
+  [PASS] sum_k cos(delta+2pi k/3)^2=3/2
+       sum_cos_sq=3/2
+  [PASS] SO(2) phase rotation preserves the C3 first and second moments
+       shifted_sum=0, shifted_sq=3/2
+
+----------------------------------------------------------------------------------------
+Part 3: Brannen carrier Q formula
+----------------------------------------------------------------------------------------
+  [PASS] sum sqrt(m_k)=3 V0
+       sum_sqrt=3*V0
+  [PASS] sum m_k=(3 V0^2/2)(2+c^2)
+       sum_mass=3*V0**2*(c**2/2 + 1)
+  [PASS] Q=(c^2+2)/6 exactly
+       Q=c**2/6 + 1/3
+  [PASS] Q is independent of Brannen phase delta
+  [PASS] Q is independent of scale V0
+
+----------------------------------------------------------------------------------------
+Part 4: conditional Koide point and support-only AM-GM reading
+----------------------------------------------------------------------------------------
+  [PASS] Q=2/3 iff c^2=2 on the Brannen carrier
+       solution=[2]
+  [PASS] equal-energy reduced-carrier premise gives c^2=6/3=2
+       c^2=2
+  [PASS] under that conditional premise Q=2/3
+       Q=2/3
+  [PASS] generic carrier amplitude does not force Q=2/3
+       Q(1/2)=5/12, Q(3)=5/6
+
+----------------------------------------------------------------------------------------
+Part 5: Q erases delta, so the Brannen phase lane stays separate
+----------------------------------------------------------------------------------------
+  [PASS] Q(delta+phi)=Q(delta)
+  [PASS] delta cannot be reconstructed from Q on this carrier
+       free_symbols=['c']
+  [PASS] setting Q=2/3 leaves delta unconstrained
+
+----------------------------------------------------------------------------------------
+Part 6: landed scope is support-grade only
+----------------------------------------------------------------------------------------
+  [PASS] note lands the phase-erasure support flag
+  [PASS] note explicitly denies retained Q and delta closure
+  [PASS] note leaves the source-domain primitive open
+  [PASS] runner does not print retained closure as true
+  [PASS] support theorem is woven through package control surfaces
+
+========================================================================================
+SUMMARY: PASS=23 FAIL=0
+PASSED: 23/23
+========================================================================================
+KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT=TRUE
+KOIDE_Q_INDEPENDENT_OF_BRANNEN_PHASE_AND_SCALE=TRUE
+KOIDE_Q_CONDITIONAL_C2_EQ_2_IMPLIES_Q_2_OVER_3=TRUE
+KOIDE_Q_RETAINED_NATIVE_CLOSURE=FALSE
+KOIDE_DELTA_2_OVER_9_RAD_RETAINED_CLOSURE=FALSE
+SOURCE_DOMAIN_RETENTION_PRIMITIVE_RESOLVED=FALSE
+
+----- stderr -----
+

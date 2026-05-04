@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_scalar_bridge_nonrealization.py
+runner_sha256: b5484680c6d9498f8698c99fdde75232ddea08fe14b9b794c5fe9b86610451d4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+PMNS SCALAR BRIDGE: CURRENT NONREALIZATION
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - Observable principle from axiom
+  - PMNS sector-exchange nonforcing
+
+Question:
+  Could the current additive scalar observable principle still
+  generate the missing PMNS sector-selector bridge?
+
+========================================================================================
+PART 1: THE CURRENT SCALAR GENERATOR IS EXACTLY ADDITIVE ON LEPTON BLOCKS
+========================================================================================
+  [PASS (A)] The scalar observable generator is exactly additive on block-diagonal lepton sectors  (|Δ|=4.44e-16)
+  [PASS (A)] The same generator is therefore blind to sector ordering at the purely additive level  (W[D_nu ⊕ D_e] = W[D_e ⊕ D_nu])
+
+  So the present scalar observable grammar starts from exact block
+  additivity, not from a sector-sensitive coupling.
+
+========================================================================================
+PART 2: MIXED SCALAR CURVATURE VANISHES ACROSS INDEPENDENT LEPTON BLOCKS
+========================================================================================
+  [PASS (A)] Mixed scalar source curvature vanishes across the independent lepton blocks  (|K_nu,e|=0.00e+00)
+  [PASS (A)] Each block still carries its own nonzero self-curvature  (K_nu,nu=-0.824146, K_e,e=-0.681305)
+
+  So the current scalar observable principle distinguishes each block
+  internally, but it does not create a mixed lepton scalar bridge.
+
+========================================================================================
+PART 3: THE CURRENT SCALAR OBSERVABLE BANK DOES NOT REALIZE THE PMNS ORIENTATION SELECTOR
+========================================================================================
+  [PASS (A)] The observable-principle note explicitly records additivity on independent subsystems
+  [PASS (A)] The observable-principle note explicitly records vanishing mixed derivatives on independent blocks
+  [PASS (A)] The PMNS exchange theorem already says the support-side bank cannot force the bit
+  [PASS (A)] The current atlas still has no retained scalar theorem selecting the active sector
+
+  Therefore the current retained scalar observable bank is still
+  block-local on the lepton surface and cannot by itself realize the
+  missing PMNS sector selector.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-bank answer:
+    - the retained scalar generator is exactly additive on independent
+      lepton blocks
+    - mixed scalar source curvature vanishes across those blocks
+    - so the present scalar observable grammar cannot realize the
+      missing PMNS sector-selector bridge
+
+  The remaining selector science is therefore outside both the current
+  support-side bank and the current scalar observable bank.
+
+PASS=8  FAIL=0
+
+----- stderr -----
+

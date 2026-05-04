@@ -1,0 +1,109 @@
+===== runner cache v1 =====
+runner: scripts/axiom_first_bekenstein_bound_check.py
+runner_sha256: f38424c2522136003283fd4aad23618a715d98f8567fb2c5cc0ea0f49c777555
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================
+AXIOM-FIRST BEKENSTEIN BOUND CHECK
+========================================================================
+
+Setup:
+  retained framework GR action surface (UNIVERSAL_GR_*)
+  retained BH 1/4 carrier composition (Wald-Noether admitted)
+  retained spectrum condition (E >= 0)
+
+Bekenstein bound: S(R, E) <= 2 pi R E in natural units (hbar = c = k_B = 1)
+
+------------------------------------------------------------------------
+TEST 1: sub-Schwarzschild geometric inequality
+        A_BH(M=E) = 16 pi G^2 E^2 <= 8 pi G R E
+------------------------------------------------------------------------
+Sweeping (R, E) over a grid with 2 G E <= R (sub-Schwarzschild).
+
+  pairs tested = 25, pairs satisfying inequality = 25
+  max violation (should be 0) = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: Bekenstein bound chain  S_BH(M=E) <= 2 pi R E
+------------------------------------------------------------------------
+(matter entropy <= S_BH(M=E) is the GSL step; here we just verify
+ the geometric chain S_BH(M=E) <= 2 pi R E for sub-Schw systems.)
+
+  pairs tested = 25, pairs satisfying bound = 25
+  max violation (should be 0) = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: saturation at 2 G E = R
+------------------------------------------------------------------------
+At the Schwarzschild boundary (2 G E = R), the bound is tight:
+S_BH(M=E) = pi R^2 / G = 2 pi R E exactly.
+
+  R =   0.50, E_sat = 0.2500: S_BH = 7.853982e-01, 2 pi R E = 7.853982e-01, |diff| = 0.00e+00
+  R =   1.00, E_sat = 0.5000: S_BH = 3.141593e+00, 2 pi R E = 3.141593e+00, |diff| = 0.00e+00
+  R =   2.00, E_sat = 1.0000: S_BH = 1.256637e+01, 2 pi R E = 1.256637e+01, |diff| = 0.00e+00
+  R =   5.00, E_sat = 2.5000: S_BH = 7.853982e+01, 2 pi R E = 7.853982e+01, |diff| = 0.00e+00
+  R =  10.00, E_sat = 5.0000: S_BH = 3.141593e+02, 2 pi R E = 3.141593e+02, |diff| = 0.00e+00
+
+  max | S_BH - 2 pi R E | at saturation = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: bound is non-trivial in the interior (S_BH < 2 pi R E)
+------------------------------------------------------------------------
+For 2 G E < R (strict), S_BH(M=E) < 2 pi R E with strict inequality.
+
+  R =  1.00, 2 G E / R = 0.10: S_BH/2 pi R E = 0.1000, gap = 2.827433e-01
+  R =  1.00, 2 G E / R = 0.50: S_BH/2 pi R E = 0.5000, gap = 7.853982e-01
+  R =  1.00, 2 G E / R = 0.90: S_BH/2 pi R E = 0.9000, gap = 2.827433e-01
+  R =  5.00, 2 G E / R = 0.10: S_BH/2 pi R E = 0.1000, gap = 7.068583e+00
+  R =  5.00, 2 G E / R = 0.50: S_BH/2 pi R E = 0.5000, gap = 1.963495e+01
+  R =  5.00, 2 G E / R = 0.90: S_BH/2 pi R E = 0.9000, gap = 7.068583e+00
+  R = 10.00, 2 G E / R = 0.10: S_BH/2 pi R E = 0.1000, gap = 2.827433e+01
+  R = 10.00, 2 G E / R = 0.50: S_BH/2 pi R E = 0.5000, gap = 7.853982e+01
+  R = 10.00, 2 G E / R = 0.90: S_BH/2 pi R E = 0.9000, gap = 2.827433e+01
+
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5: continuous sweep over (R, E) verifying full Bekenstein chain
+------------------------------------------------------------------------
+  total pairs = 900, violations = 0, max resid = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 6: GSL consistency — collapsing matter to BH preserves second law
+------------------------------------------------------------------------
+If matter has S_matter > S_BH(M=E), collapsing it to a BH would
+violate ΔS_total >= 0 (second law). Hence S_matter <= S_BH(M=E).
+
+  R = 5.0, E = 1.2500, S_BH = 19.6350
+  S_matter_allowed = 9.8175, ΔS_collapse = +9.8175 (>= 0, OK)
+  S_matter_forbidden = 29.4524, ΔS_collapse = -9.8175 (< 0, GSL violation)
+  STATUS: PASS
+
+========================================================================
+SUMMARY
+========================================================================
+  Test 1 (sub-Schw geometric inequality):     PASS
+  Test 2 (Bekenstein chain S_BH <= 2 pi R E): PASS
+  Test 3 (saturation at 2 G E = R):           PASS
+  Test 4 (non-trivial interior gap):          PASS
+  Test 5 (dense sweep over (R, E)):           PASS
+  Test 6 (GSL consistency check):             PASS
+
+  OVERALL: PASS
+
+Note: this runner verifies the algebraic Bekenstein chain on a
+range of (R, E) parameters and confirms saturation at the
+Schwarzschild boundary. The proof in the companion theorem note
+is geometric (Step 1 + 3) plus a one-step GSL invocation (Step 2)
+on the framework's retained GR action surface plus retained
+BH 1/4 carrier composition.
+
+----- stderr -----
+

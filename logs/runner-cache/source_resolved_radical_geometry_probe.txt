@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/source_resolved_radical_geometry_probe.py
+runner_sha256: d38a24fe61e6694b1419c39dbecf8eb265a823fe1d266157983c08796ea26f3d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.77
+status: ok
+----- stdout -----
+============================================================================================================
+SOURCE-RESOLVED RADICAL GEOMETRY PROBE
+  generated-family downstream-reach fan vs retained kNN-floor bridge
+============================================================================================================
+family seeds=0..3, layers=16, nodes/layer=24, connect_radius=3.2
+baseline bridge: k-nearest floor augmentation (k=3, min_edges=5)
+radical geometry: downstream-reach fan (bins=5, floor=10)
+field modes: static Green vs wavefield
+source strengths: [0.001, 0.002, 0.004, 0.008]
+field target max: 0.02
+observables: zero-source reduction, centroid sign counts, F~M exponent, detector N_eff
+diagnostic: geometry-rule delta from bridge to reach-fan
+
+seed=0   bridge/static    zero=0.000e+00 TOWARD=2/4 F~M=-0.100 N_eff=6.78
+seed=0   bridge/wavefield zero=0.000e+00 TOWARD=0/4 F~M=0.896 N_eff=5.91
+seed=0  radical/static    zero=0.000e+00 TOWARD=0/4 F~M=-0.210 N_eff=5.03
+seed=0  radical/wavefield zero=0.000e+00 TOWARD=0/4 F~M=0.576 N_eff=3.96
+seed=1   bridge/static    zero=0.000e+00 TOWARD=2/4 F~M=0.601 N_eff=5.96
+seed=1   bridge/wavefield zero=0.000e+00 TOWARD=2/4 F~M=1.711 N_eff=6.48
+seed=1  radical/static    zero=0.000e+00 TOWARD=1/4 F~M=0.507 N_eff=6.76
+seed=1  radical/wavefield zero=0.000e+00 TOWARD=0/4 F~M=-0.149 N_eff=5.84
+seed=2   bridge/static    zero=0.000e+00 TOWARD=4/4 F~M=-1.131 N_eff=2.92
+seed=2   bridge/wavefield zero=0.000e+00 TOWARD=4/4 F~M=-0.383 N_eff=2.85
+seed=2  radical/static    zero=0.000e+00 TOWARD=4/4 F~M=0.516 N_eff=3.44
+seed=2  radical/wavefield zero=0.000e+00 TOWARD=0/4 F~M=0.293 N_eff=3.25
+seed=3   bridge/static    zero=0.000e+00 TOWARD=1/4 F~M=-0.636 N_eff=5.59
+seed=3   bridge/wavefield zero=0.000e+00 TOWARD=0/4 F~M=-1.833 N_eff=5.31
+seed=3  radical/static    zero=0.000e+00 TOWARD=2/4 F~M=-0.452 N_eff=7.48
+seed=3  radical/wavefield zero=0.000e+00 TOWARD=0/4 F~M=-1.170 N_eff=7.15
+
+SUMMARY
+  bridge/static     zero=0.000e+00  TOWARD=9/16  F~M=-0.316  N_eff=5.31
+  bridge/wavefield  zero=0.000e+00  TOWARD=6/16  F~M=0.098  N_eff=5.14
+ radical/static     zero=0.000e+00  TOWARD=7/16  F~M=0.090  N_eff=5.68
+ radical/wavefield  zero=0.000e+00  TOWARD=0/16  F~M=-0.113  N_eff=5.05
+
+GEOMETRY DELTA
+     static: delta_TOWARD=-2  delta_N_eff=+0.36  delta_F~M=+0.407
+  wavefield: delta_TOWARD=-6  delta_N_eff=-0.09  delta_F~M=-0.210
+
+SAFE READ
+  - The retained kNN-floor bridge remains the baseline control.
+  - The downstream-reach fan is the new geometry rule, designed to
+    target support width rather than local support repairs.
+  - If the fan improves sign and detector support while keeping F~M near 1,
+    then the wavefield lane is becoming geometry-transfer relevant.
+  - If it only reshuffles support without improving the weak-field law,
+    this is a bounded no-go for this radical geometry rule.
+
+----- stderr -----
+

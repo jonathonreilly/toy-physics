@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/valley_linear_same_harness_compare.py
+runner_sha256: 69000c618c0231dbd7103afcd466e313298a03e00f1df5164dee56053eff4893
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

@@ -1,0 +1,185 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_brocard_q_polynomial_perfect_square_decomposition.py
+runner_sha256: 768dd7b9c41d74234363822dfc270b26279cc5d4bee1c3ba3af5b823d9a7076b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.97
+status: ok
+----- stdout -----
+========================================================================================
+Brocard / Q polynomial scalar-multiple square decomposition audit
+See docs/CKM_BROCARD_Q_POLYNOMIAL_PERFECT_SQUARE_DECOMPOSITION_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Ground-up status verification of each cited authority
+----------------------------------------------------------------------------------------
+  RETAINED-TIER (load-bearing for closure):
+
+    [CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md]
+      Status (extracted): 'proposed_retained NLO CKM-structure corollary on the proposed_promoted atlas/axiom'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md
+
+    [CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md]
+      Status (extracted): 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+
+    [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md]
+      Status (extracted): 'proposed_retained standalone structural-identity theorem on `main`.'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+
+
+----------------------------------------------------------------------------------------
+Extracting retained inputs from authority text
+----------------------------------------------------------------------------------------
+  N_pair extracted:                  n_pair  = 2
+  N_color extracted:                 n_color = 3
+  N_quark = N_pair * N_color:        FOUND
+  [PASS] MAGNITUDES retains N_pair = 2
+  [PASS] MAGNITUDES retains N_color = 3
+  [PASS] MAGNITUDES retains N_quark = N_pair * N_color (=6)
+
+----------------------------------------------------------------------------------------
+D2: Q - P scalar-multiple square in (N_pair^2 - alpha_s)
+----------------------------------------------------------------------------------------
+  Q(alpha_s) - P(alpha_s) (computed) = 320*alpha_s**2 - 2560*alpha_s + 5120
+  Expected: 320 (4 - alpha_s)^2 = 320*(alpha_s - 4)**2
+  Difference: 0
+  [PASS] D2: Q(alpha_s) - P(alpha_s) = 320 (4 - alpha_s)^2
+
+  Structural: 320 = N_pair^6 (N_quark - 1) = 64 * 5 = 320
+  [PASS] D2 structural: 320 = N_pair^6 (N_quark - 1) = 64 * 5
+  [PASS] D2 structural form: Q - P = N_pair^6 (N_quark - 1) (N_pair^2 - alpha_s)^2
+
+----------------------------------------------------------------------------------------
+D3: P + 3Q scalar-multiple square in (alpha_s^2 - 4 alpha_s + 96)
+----------------------------------------------------------------------------------------
+  P(alpha_s) + 3 Q(alpha_s) (computed) = 4*alpha_s**4 - 32*alpha_s**3 + 832*alpha_s**2 - 3072*alpha_s + 36864
+  Expected: 4 (alpha_s^2 - 4 alpha_s + 96)^2 = 4*alpha_s**4 - 32*alpha_s**3 + 832*alpha_s**2 - 3072*alpha_s + 36864
+  Difference: 0
+  [PASS] D3: P + 3 Q = 4 (alpha_s^2 - 4 alpha_s + 96)^2
+  [PASS] D3 structural: P + 3 Q = N_pair^2 (alpha_s^2 - 4 alpha_s + 96)^2
+
+----------------------------------------------------------------------------------------
+D4: Two scalar-multiple square subspaces of the (P, Q) module
+----------------------------------------------------------------------------------------
+  alpha P + beta Q = (alpha + beta)(alpha_s^2 - 4 alpha_s + 96)^2
+                   + (-240 alpha + 80 beta)(4 - alpha_s)^2.
+
+  Scalar-multiple square iff either:
+    Line A: beta = 3 alpha   =>   alpha P + beta Q proportional to (alpha_s^2 - 4 alpha_s + 96)^2,
+    Line B: beta = -alpha    =>   alpha P + beta Q proportional to (4 - alpha_s)^2.
+  [PASS] D4 Line A: P + 3Q = 4 (alpha_s^2 - 4 alpha_s + 96)^2
+  [PASS] D4 Line B: -P + Q = Q - P = 320 (4 - alpha_s)^2
+  [PASS] D4 generic square classification: quartic-square case forces B=0
+  [PASS] D4 B=0 translates to beta=3 alpha
+  [PASS] D4 A=0 translates to beta=-alpha
+
+  Off-line example: P + 2 Q = 3*alpha_s**4 - 24*alpha_s**3 + 544*alpha_s**2 - 1664*alpha_s + 26368
+    Coefficient of (alpha_s^2 - 4 alpha_s + 96)^2: 3
+    Coefficient of (4 - alpha_s)^2:                -80
+    Both nonzero  =>  NOT a single-square channel.
+  [PASS] D4: P + 2Q has BOTH square components, not a single-square channel
+
+----------------------------------------------------------------------------------------
+D5: Physical interpretation
+----------------------------------------------------------------------------------------
+  [PASS] D5: perim_sq = (alpha_s^2 - 4 alpha_s + 96)/48
+  [PASS] D5: eta_bar^2 = 5 (4 - alpha_s)^2 / 576
+
+  Q - P (in eta_bar^2 form):
+    Q - P = 320*alpha_s**2 - 2560*alpha_s + 5120
+    Expected: 36864 eta_bar^2 = 320*(alpha_s - 4)**2
+    Difference: 0
+  [PASS] D5 Jarlskog channel: Q - P = 36864 eta_bar^2
+
+  Structural: 36864 = N_pair^10 N_quark^2 = 1024 * 36 = 36864
+  [PASS] D5: Q - P = N_pair^10 N_quark^2 eta_bar^2 (Jarlskog channel)
+  [PASS] D5 Perimeter channel: P + 3 Q = 9216 perim_sq^2
+  [PASS] D5: P + 3 Q = N_pair^8 N_quark^2 perim_sq^2 = (N_pair^4 N_quark perim_sq)^2
+
+----------------------------------------------------------------------------------------
+D6: Cross-channel identity -- (P + 3Q)(Q - P) is a structured product
+----------------------------------------------------------------------------------------
+  (P + 3Q)(Q - P) (computed) = 1280*alpha_s**6 - 20480*alpha_s**5 + 368640*alpha_s**4 - 3276800*alpha_s**3 + 23920640*alpha_s**2 - 110100480*alpha_s + 188743680
+  Expected: 1280 (alpha_s^2 - 4 alpha_s + 96)^2 (4 - alpha_s)^2
+  Difference: 0
+  [PASS] D6: (P + 3Q)(Q - P) = 1280 (alpha_s^2 - 4 alpha_s + 96)^2 (4 - alpha_s)^2
+
+  Structural: 1280 = N_pair^8 (N_quark - 1) = 256 * 5 = 1280
+  [PASS] D6 structural: 1280 = N_pair^8 (N_quark - 1) = 256 * 5
+  [PASS] D6: sqrt((P + 3Q)(Q - P)) = N_pair^4 sqrt(N_quark - 1) (alpha_s^2 - 4 alpha_s + 96)(4 - alpha_s)
+
+----------------------------------------------------------------------------------------
+D7: (P, Q) algebraic system - scalar-multiple square decomposition
+----------------------------------------------------------------------------------------
+  The (P, Q) module on the retained surface has the structure:
+    {alpha P + beta Q : alpha, beta in Q}
+    = (alpha + beta)(alpha_s^2 - 4 alpha_s + 96)^2 + (-240 alpha + 80 beta)(4 - alpha_s)^2.
+
+  The scalar-multiple-square subset is the union of two 1-D lines:
+    Line A: {(alpha, 3 alpha) : alpha in Q}, generated by P + 3Q,
+    Line B: {(alpha, -alpha) : alpha in Q}, generated by Q - P.
+
+  Other linear combinations (off the two lines) have BOTH
+  (alpha_s^2 - 4 alpha_s + 96)^2 and (4 - alpha_s)^2 components,
+  and are therefore not scalar multiples of one square polynomial.
+
+  The two scalar-multiple square forms encode:
+    P + 3Q proportional to perim_sq^2  (Perimeter channel),
+    Q - P proportional to eta_bar^2     (Jarlskog channel).
+
+  Together they span the (P, Q) module under linear combination:
+    P  =  ((P + 3Q) - 3(Q - P))/4  =  (perim^2-channel - 3 * Jarlskog-channel)/4,
+    Q  =  ((P + 3Q) + (Q - P))/4   =  (perim^2-channel + Jarlskog-channel)/4.
+  [PASS] D7: P = ((P + 3Q) - 3(Q - P))/4 (inverse relation)
+  [PASS] D7: Q = ((P + 3Q) + (Q - P))/4 (inverse relation)
+
+----------------------------------------------------------------------------------------
+Summary of NEW retained content
+----------------------------------------------------------------------------------------
+  Inputs (retained-tier, ground-up Status verified):
+    CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA  (retained)
+    CKM_MAGNITUDES_STRUCTURAL_COUNTS         (retained)
+    CKM_CP_PHASE_STRUCTURAL_IDENTITY         (retained)
+
+  NEW retained closed forms:
+
+    (D2) Q(alpha_s) - P(alpha_s)  =  N_pair^6 (N_quark - 1) (N_pair^2 - alpha_s)^2,
+         a scalar-multiple square in (4 - alpha_s) with structural-integer scaling.
+
+    (D3) P(alpha_s) + 3 Q(alpha_s)  =  N_pair^2 (alpha_s^2 - 4 alpha_s + 96)^2,
+         a scalar-multiple square in (alpha_s^2 - 4 alpha_s + 96) = 48 perim_sq.
+
+    (D4) Two scalar-multiple square SUBSPACES of the (P, Q) module:
+         Line A (beta = 3 alpha):   alpha P + 3 alpha Q  =  4 alpha (alpha_s^2 - 4 alpha_s + 96)^2,
+         Line B (beta = -alpha):    alpha P - alpha Q    =  -320 alpha (4 - alpha_s)^2.
+         Generic coefficient comparison shows all other (alpha, beta) give
+         mixed channels rather than scalar multiples of one square (both
+         (alpha_s^2 - 4 alpha_s + 96)^2 and
+         (4 - alpha_s)^2 components).
+
+    (D5) Physical interpretation:
+         Q - P  =  N_pair^10 N_quark^2 eta_bar^2     [Jarlskog channel],
+         P + 3Q  =  N_pair^8 N_quark^2 perim_sq^2    [Perimeter channel].
+
+    (D6) Cross-channel identity (NEW):
+         (P + 3Q)(Q - P)  =  N_pair^8 (N_quark - 1) (alpha_s^2 - 4 alpha_s + 96)^2 (4 - alpha_s)^2.
+         sqrt((P + 3Q)(Q - P))  =  N_pair^4 sqrt(N_quark - 1) (alpha_s^2 - 4 alpha_s + 96)(4 - alpha_s).
+
+    (D7) The (P, Q) algebraic module is scalar-multiple-square-decomposable on
+         the retained surface. The two scalar-multiple square forms span the module:
+           P  =  ((P + 3Q) - 3(Q - P))/4,
+           Q  =  ((P + 3Q) + (Q - P))/4.
+
+  All identities exact via sympy; closure on retained-tier authorities only.
+
+========================================================================================
+TOTAL: PASS=28, FAIL=0
+========================================================================================
+
+----- stderr -----
+

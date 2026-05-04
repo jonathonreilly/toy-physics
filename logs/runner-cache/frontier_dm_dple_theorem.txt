@@ -1,0 +1,52 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_dple_theorem.py
+runner_sha256: 80da104bddfab4ba1b2821550580b661aa970aea231c827f783ac6ff5585ffc2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.35
+status: ok
+----- stdout -----
+========================================================================
+  DPLE (Dim-Parametric log|det| Extremum) Theorem
+========================================================================
+
+=== T1: det H(t) is deg-d in t (d = 2, 3, 4, 5) ===
+  [PASS] d=2: |coeff(t^3)| ~ 0 (max 1.73e-14)
+  [PASS] d=3: |coeff(t^4)| ~ 0 (max 1.71e-14)
+  [PASS] d=4: |coeff(t^5)| ~ 0 (max 2.83e-13)
+  [PASS] d=5: |coeff(t^6)| ~ 0 (max 8.41e-13)
+
+=== T2: interior Morse-idx-0 CP count <= floor(d/2) ===
+  [PASS] d=2: max interior Morse-idx-0 CP observed <= floor(d/2)=1  (max_obs = 1)
+  [PASS] d=3: max interior Morse-idx-0 CP observed <= floor(d/2)=1  (max_obs = 1)
+  [PASS] d=4: max interior Morse-idx-0 CP observed <= floor(d/2)=2  (max_obs = 1)
+  [PASS] d=5: max interior Morse-idx-0 CP observed <= floor(d/2)=2  (max_obs = 1)
+
+=== T3: F_3 = F4 on DM A-BCC basins ===
+  [PASS] Basin 1: F_3 = True  (F_3 actual=True)
+  [PASS] Basin N: F_3 = False  (F_3 actual=False)
+  [PASS] Basin P: F_3 = False  (F_3 actual=False)
+  [PASS] Basin X: F_3 = False  (F_3 actual=False)
+
+=== T4: d = 4 fragmentation (2 interior Morse-idx-0 CPs) ===
+  [PASS] d = 4: found pair with 2+ interior Morse-idx-0 CPs (fragmentation)  (search result: found)
+    CPs: cnt = 2, roots_in = [np.float64(0.779334594781689), np.float64(0.3094843803184843)]
+
+=== T5: d = 2 degeneracy (F_2 vacuous) ===
+  [PASS] d = 2: both c_2 > 0 and c_2 < 0 cases appear (vacuous signature)  (c_2>0: 82, c_2<0: 318)
+
+=== T6: d = 3 retained F4 discriminant = F_3 ===
+  [PASS] Basin 1: F_3 = F4_ret  (Delta_ret = +7.804)  (F_3=True, F4_ret=True)
+  [PASS] Basin N: F_3 = F4_ret  (Delta_ret = -10.107)  (F_3=False, F4_ret=False)
+  [PASS] Basin P: F_3 = F4_ret  (Delta_ret = +458.736)  (F_3=False, F4_ret=False)
+  [PASS] Basin X: F_3 = F4_ret  (Delta_ret = -4715189.966)  (F_3=False, F4_ret=False)
+
+=== T7: d = 3 binary-selector uniqueness (CP histogram) ===
+  [PASS] d = 3: CP count in {0, 1} dominates (>= 95%)  (CP=0: 788, CP=1: 212, CP>=2: 0)
+
+========================================================================
+PASS=19 FAIL=0
+========================================================================
+
+----- stderr -----
+

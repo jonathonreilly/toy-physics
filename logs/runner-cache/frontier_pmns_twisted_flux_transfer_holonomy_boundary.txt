@@ -1,0 +1,69 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_twisted_flux_transfer_holonomy_boundary.py
+runner_sha256: 3d3b48a5974cfe452e92a60e6a66c25f7a852e8cff301d9f494a671959a7f47b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+PMNS TWISTED FLUX TRANSFER HOLOMONY BOUNDARY
+========================================================================================
+
+Question:
+  Can a twisted transfer / flux insertion / cycle-holonomy law on the
+  graph-first oriented-cycle frame select the remaining values of the
+  retained PMNS cycle channel?
+
+========================================================================================
+PART 1: THE TWISTED FLUX TRANSFER KERNEL HAS EXACT HOLONOMY MODES
+========================================================================================
+  [PASS] The fluxed transfer kernel is Hermitian  (hermitian_error=0.00e+00)
+  [PASS] The Fourier basis diagonalizes the twisted flux transfer kernel  (offdiag_error=5.72e-16)
+  [PASS] The twisted spectrum has the exact three flux-shifted eigenvalues  (vals=[0.335213 0.846118 1.608669])
+
+========================================================================================
+PART 2: THE FLUX HOLONOMY RECOVERS xbar, ybar, AND phi EXACTLY
+========================================================================================
+  [PASS] The backward holonomy is the complex conjugate of the forward one  (hol_fwd=0.339335+0.147485j, hol_bwd=0.339335-0.147485j)
+  [PASS] The transfer trace recovers xbar exactly  (recovered=0.930000000000)
+  [PASS] The forward cycle holonomy recovers ybar exactly  (recovered=0.370000000000)
+  [PASS] The holonomy phase recovers phi exactly  (recovered=0.410000000000)
+  [PASS] So the twisted transfer carrier has an exact value law  ((xbar,ybar,phi)=(0.930000,0.370000,0.410000))
+
+========================================================================================
+PART 3: ONE FLUX HOLOMONY DOES NOT SELECT THE FULL REDUCED PMNS FAMILY
+========================================================================================
+  [PASS] The reduced carrier is exactly the graph-first oriented-cycle family
+  [PASS] A one-angle flux holonomy sees only one real linear combination on the reduced carrier  (h(b1)=1.834242, h(b2)=0.797219, h(b3)=1.000000)
+  [PASS] The reduced carrier has at least a 2-real kernel for that holonomy probe  (|k1|=2.828427, |k2|=2.316127)
+  [PASS] The holonomy probe annihilates two independent reduced-carrier directions  (h(k1)=0.000000, h(k2)=0.000000)
+  [PASS] Two distinct reduced-channel points share the same one-angle holonomy  (h(a)=1.834242, h(b)=1.834242)
+  [PASS] But the two reduced-channel points are genuinely different  (|a-b|=2.381427)
+
+========================================================================================
+PART 4: CIRCULARITY GUARD
+========================================================================================
+  [PASS] The twisted flux transfer kernel takes no PMNS-side target coordinates as inputs  (bad=[])
+  [PASS] The flux holonomy probe takes no PMNS-side target coordinates as inputs  (bad=[])
+
+========================================================================================
+RESULT
+========================================================================================
+  Positive native flux result:
+    - the twisted transfer kernel has an exact fluxed holonomy law
+    - the holonomy recovers (xbar, ybar, phi) exactly
+
+  Boundary on the retained PMNS reduced carrier:
+    - one flux holonomy sees only one real linear combination on the
+      3-real reduced oriented-cycle family
+    - the probe has a 2-real kernel there, so it does not select a
+      unique reduced PMNS point
+
+  So this is a genuine twisted/flux transfer value law, but it is
+  still only a boundary on the full reduced PMNS channel.
+
+PASS=16 FAIL=0
+
+----- stderr -----
+

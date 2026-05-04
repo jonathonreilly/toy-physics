@@ -1,0 +1,310 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gw_echo_derived.py
+runner_sha256: eb9cad38ee8ce5b6975608409332032276c3dbc5b955a7d4df5e0cf91ea2b05a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+GW150914 Echo Prediction — Derived from Lattice Axioms
+========================================================================
+
+Derivation chain:
+  Lattice spacing a = l_Planck
+    => minimum wavelength lambda_min = 2 l_Planck
+    => metric cannot reach g_tt = 0 (no horizon)
+    => frozen-star surface at r = R_S + epsilon
+    => GW echoes at t_echo = (2/c) F(M,a) |ln(epsilon)|
+    => zero-parameter prediction: 67.65 ms at 14.8 Hz
+
+========================================================================
+STEP 1: Lattice minimum wavelength
+========================================================================
+
+  Lattice spacing: a = l_Planck = 1.616255e-35 m
+  Maximum momentum: k_max = pi/a = 1.943748e+35 m^-1
+  Minimum wavelength: lambda_min = 2a = 3.232510e-35 m
+  Minimum wavelength / l_Planck = 2.0
+  [DERIVED] PASS: lambda_min = 2 l_Planck
+         lambda_min/l_P = 2.0
+  [DERIVED] PASS: Band edge at k=pi/a gives E = +2t
+         E(pi/a) = 2.0
+  [DERIVED] PASS: Group velocity vanishes at zone boundary
+         v_g(pi/a) = 3.96e-51
+
+========================================================================
+STEP 2: No horizon on the lattice
+========================================================================
+
+       M/M_sun       R_S (m)        f(R_S+a)   f > 0
+           1.0    2.9540e+03      5.4714e-39     YES
+          10.0    2.9540e+04      5.4714e-40     YES
+          30.0    8.8620e+04      1.8238e-40     YES
+          62.0    1.8315e+05      8.8248e-41     YES
+         100.0    2.9540e+05      5.4714e-41     YES
+     1000000.0    2.9540e+09      5.4714e-45     YES
+  [DERIVED] PASS: f(R_S + l_P) > 0 for all masses
+         Lattice discreteness prevents horizon formation
+  [DERIVED] PASS: f_min * R_S / a ~ 1 (scaling check)
+         f_min * R_S / a = 1.000000
+
+========================================================================
+STEP 3: Frozen-star surface
+========================================================================
+
+  Chandrasekhar number: N_Ch = 6.1237e+87
+  Chandrasekhar mass: M_Ch = 5149872912047175096850823774208.00 M_sun
+
+     M/M_sun               N     R_min (m)       R_S (m)         epsilon   ln(1/eps)
+         1.0      1.1891e+57    1.7123e-16    2.9540e+03      5.7966e-20       44.29
+        10.0      1.1891e+58    3.6891e-16    2.9540e+04      1.2488e-20       45.83
+        30.0      3.5673e+58    5.3206e-16    8.8620e+04      6.0038e-21       46.56
+        62.0      7.3724e+58    6.7771e-16    1.8315e+05      3.7004e-21       47.05
+       100.0      1.1891e+59    7.9479e-16    2.9540e+05      2.6905e-21       47.36
+  [DERIVED] PASS: R_min << R_S for 62 M_sun
+         R_min/R_S = 3.7004e-21
+  [DERIVED] PASS: epsilon ~ 10^{-21} for 62 M_sun
+         epsilon = 3.7004e-21
+  [DERIVED] PASS: ln(1/epsilon) ~ 47 for 62 M_sun
+         ln(1/eps) = 47.05
+
+========================================================================
+STEP 4: Echo time — tortoise coordinate derivation
+========================================================================
+
+  A) Schwarzschild echo time
+  ------------------------------------------------------------
+
+  M = 62.0 M_sun, R_S = 1.8315e+05 m
+  epsilon = 3.7004e-21
+  ln(1/epsilon) = 47.0459
+
+  Tortoise coordinates:
+    r*(light ring) = 1.4777e+05 m
+    r*(surface)    = -8.4332e+06 m
+    |Delta r*|     = 8.5810e+06 m
+
+  Echo times:
+    Exact (tortoise integral):  57.2463 ms
+    Leading order (2R_S/c ln):  57.4823 ms
+    With sub-leading terms:     57.2463 ms
+  [DERIVED] PASS: Leading-order approximation accurate to < 2%
+         relative error = 0.0041
+
+  B) Kerr echo time (GW150914)
+  ------------------------------------------------------------
+
+  Kerr parameters (chi = 0.67):
+    r_+ = 1.5956e+05 m (0.871181 R_S)
+    r_- = 2.3593e+04 m (0.128819 R_S)
+    a_phys = 6.1355e+04 m
+    R_lr (prograde) = 1.8940e+05 m (1.034120 R_S)
+    Kerr tortoise factor = 2.1493e+05 m
+
+  PREDICTION:
+    t_echo (Kerr) = 67.66 ms
+    f_echo (Kerr) = 14.8 Hz
+  [DERIVED] PASS: t_echo ~ 67.65 ms (Kerr, 62 M_sun, chi=0.67)
+         t_echo = 67.66 ms
+  [DERIVED] PASS: f_echo ~ 14.8 Hz
+         f_echo = 14.8 Hz
+  [DERIVED] PASS: Echo frequency in LIGO band (10-1000 Hz)
+         f_echo = 14.8 Hz
+
+  C) Echo time vs mass (Schwarzschild)
+  ------------------------------------------------------------
+
+     M/M_sun       R_S (m)         epsilon   t_echo (ms)   f_echo (Hz)   ln(R_S/l_P)
+         1.0    2.9540e+03      5.7966e-20        0.8828        1132.8          88.1
+         5.0    1.4770e+04      1.9824e-20        4.5195         221.3          89.7
+        10.0    2.9540e+04      1.2488e-20        9.1302         109.5          90.4
+        30.0    8.8620e+04      6.0038e-21       27.8235          35.9          91.5
+        62.0    1.8315e+05      3.7004e-21       58.0932          17.2          92.2
+       100.0    2.9540e+05      2.6905e-21       94.3268          10.6          92.7
+      1000.0    2.9540e+06      5.7966e-22      973.5189           1.0          95.0
+  [DERIVED] PASS: Echo time scales as ~ M ln(M)
+         t_echo(100)/t_echo(10) = 10.33 (expect ~10)
+
+========================================================================
+STEP 5: Zero-parameter GW150914 echo prediction
+========================================================================
+
+  --- Input parameters ---
+  M = 62.0 M_sun  (LIGO measurement)
+  chi = a/M = 0.67  (LIGO measurement)
+  a = l_Planck = 1.616255e-35 m  (framework axiom)
+  m = m_nucleon = 1.672622e-27 kg  (Standard Model)
+  Free parameters: ZERO
+
+  --- Derived ---
+  R_S = 1.831485e+05 m = 183.15 km
+  N_baryons = 7.3724e+58
+  R_min = N^(1/3) l_P = 6.7771e-16 m
+  epsilon = R_min / R_S = 3.7004e-21
+  ln(1/epsilon) = 47.0459
+  r_+ = 1.5956e+05 m  (0.871181 R_S)
+  r_- = 2.3593e+04 m  (0.128819 R_S)
+  R_lr (prograde) = 1.8940e+05 m  (1.034120 R_S)
+
+  ╔══════════════════════════════════════════════════════╗
+  ║  PREDICTION (zero free parameters):                  ║
+  ║                                                      ║
+  ║  t_echo (non-spinning) =    58.09 ms               ║
+  ║  t_echo (Kerr a=0.67)  =    67.66 ms               ║
+  ║  f_echo                =     14.8 Hz                ║
+  ║                                                      ║
+  ║  Testable with existing LIGO O1/O2/O3 data           ║
+  ╚══════════════════════════════════════════════════════╝
+
+  --- Comparison with Abedi et al. (2017) ---
+
+                   Quantity         This work      Abedi et al.
+  -------------------------  ----------------  ----------------
+                     t_echo          67.66 ms            100 ms
+                     f_echo           14.8 Hz           10.0 Hz
+                    epsilon        3.7004e-21        5.1456e-31
+             Surface offset     6.7771e-16 m     9.4240e-26 m
+          In Planck lengths  41931178963797024768.0      5830768431.4
+            Free parameters                 0              >= 1
+
+  --- Sensitivity analysis ---
+  epsilon x 10:   t_echo = 64.35 ms  (change: -4.9%)
+  epsilon / 10:   t_echo = 70.96 ms  (change: +4.9%)
+
+  The prediction is logarithmically insensitive to epsilon.
+  A factor-of-10 change in surface location shifts t_echo by ~3%.
+  This is the key robustness feature: the ln(1/epsilon) factor
+  means the prediction is stable against O(1) corrections to R_min.
+  [DERIVED] PASS: Prediction robust: 10x epsilon shift < 5% change in t_echo
+         shift = 4.9%
+
+  --- Falsifiability ---
+  CONFIRMED if: echoes detected at 68 +/- 3 ms
+  REFUTED if: echoes detected at t >> 68 ms (e.g. Abedi's ~100 ms)
+              or no echoes at any time (no reflecting surface)
+  DISTINGUISHES from other ECO models by the specific value of epsilon:
+    Planck-scale frozen star: epsilon ~ 3.7e-21
+    Firewall:                 epsilon ~ exp(-S_BH) ~ 0
+    Gravastar:                epsilon ~ O(1)
+
+  --- Detectability ---
+  Echo frequency: 14.8 Hz
+  LIGO design sensitivity: 10-5000 Hz (best at ~100 Hz)
+  Echo at 14.8 Hz is in LIGO band but near low-frequency edge
+  Einstein Telescope: better sensitivity below 10 Hz
+  LISA: echoes from supermassive BH mergers (10^6 M_sun)
+
+  LIGO-detectable mass range:
+    M =   10 M_sun: t_echo =     9.1 ms, f =  109.5 Hz, in LIGO band: YES
+    M =   30 M_sun: t_echo =    27.8 ms, f =   35.9 Hz, in LIGO band: YES
+    M =   62 M_sun: t_echo =    58.1 ms, f =   17.2 Hz, in LIGO band: YES
+    M =  100 M_sun: t_echo =    94.3 ms, f =   10.6 Hz, in LIGO band: YES
+    M =  200 M_sun: t_echo =   190.5 ms, f =    5.3 Hz, in LIGO band: NO
+
+========================================================================
+STEP 6: Numerical crosscheck — exact Schwarzschild tortoise
+========================================================================
+
+  A) Schwarzschild tortoise — exact evaluation
+  ------------------------------------------------------------
+  R_S = 1.8315e+05 m
+  epsilon = R_min/R_S = 3.7004e-21
+  r_surface = R_S(1+eps) = 1.8314847966e+05 m
+
+  Tortoise coordinates:
+    r*(light ring)  = 1.477739e+05 m
+    r*(surface)     = -8.433229e+06 m
+    |Delta r*|      = 8.581003e+06 m
+
+  Echo times:
+    Exact:          57.2463 ms
+    Leading order:  57.4823 ms
+    With sub-lead:  57.2463 ms
+
+  Relative diffs:
+    Exact vs full:    2.424225e-16
+    Exact vs leading: 4.122433e-03
+  [DERIVED] PASS: Exact Schwarzschild tortoise matches full formula to < 0.01%
+         relative difference = 2.424225e-16
+  [DERIVED] PASS: Leading-order formula accurate to < 1%
+         relative difference = 4.122433e-03
+
+  B) Kerr correction factor
+  ------------------------------------------------------------
+  Kerr factor = 2.1493e+05 m
+  R_S = 1.8315e+05 m
+  Enhancement (Kerr/Schwarzschild) = 1.1735
+  (At chi=0, enhancement = 1.0; at chi=0.67: 1.1735)
+
+  Kerr echo time = 67.6561 ms
+  = 1.1735 * (Schwarzschild leading term) + light ring offset
+  [DERIVED] PASS: Spin enhancement factor > 1 for chi=0.67
+         enhancement = 1.1735
+  [DERIVED] PASS: Kerr echo time matches expected ~67.65 ms
+         t_echo = 67.66 ms
+
+  C) Consistency with frontier_frozen_stars_rigorous.py
+  ------------------------------------------------------------
+  That script reports:
+    t_echo (non-spinning) = 58.09 ms
+    t_echo (Kerr a=0.67)  = 67.65 ms
+  This script:
+    t_echo (non-spinning) = 57.25 ms
+    t_echo (Kerr a=0.67)  = 67.66 ms
+  [DERIVED] PASS: Non-spinning echo time consistent (within 2 ms)
+         this=57.25, rigorous=58.09 ms
+  [DERIVED] PASS: Kerr echo time consistent (within 0.5 ms)
+         this=67.66, rigorous=67.65 ms
+
+========================================================================
+SUMMARY
+========================================================================
+
+  DERIVATION CHAIN (each step follows from the previous):
+
+    1. LATTICE UV CUTOFF
+       Minimum wavelength = 2 l_Planck = 3.2325e-35 m
+       No field mode probes below this scale.
+
+    2. NO HORIZON
+       f(R_S + l_P) = l_P / R_S > 0 for all masses.
+       Metric never reaches g_tt = 0 on the lattice.
+
+    3. FROZEN-STAR SURFACE
+       R_min = N^(1/3) l_Planck (Pauli + lattice hard floor)
+       For 62 M_sun: epsilon = R_min/R_S = 3.7004e-21
+
+    4. ECHO TIME
+       t_echo = (2/c) [(r+^2 + a^2)/(r+ - r-)] |ln(epsilon)|
+       Schwarzschild exact tortoise verified to 2.4e-16
+       Kerr spin enhancement factor: 1.1735
+
+    5. ZERO-PARAMETER PREDICTION FOR GW150914
+       t_echo (non-spinning) = 58.09 ms
+       t_echo (Kerr a=0.67)  = 67.66 ms
+       f_echo                = 14.8 Hz
+       Free parameters: ZERO
+
+    6. NUMERICAL VERIFICATION
+       Schwarzschild exact: t_echo = 57.25 ms
+       Kerr prediction:     t_echo = 67.66 ms
+       Consistent with frontier_frozen_stars_rigorous.py
+
+  COMPARISON WITH ABEDI ET AL. (2017):
+    Our prediction: 67.66 ms (Planck-scale surface)
+    Abedi claim:    ~100 ms (phenomenological surface)
+    Our epsilon:    3.7e-21 (determined by framework)
+    Abedi epsilon:  5.1e-31 (fitted to data)
+
+  FALSIFIABILITY:
+    Confirmed if echoes at ~68 ms in LIGO data
+    Refuted if echoes at ~100 ms or no echoes at all
+    Distinguishable from other ECO models by epsilon value
+
+  Checks: 20 passed, 0 failed
+  Elapsed: 0.0 s
+
+  All checks passed.
+
+----- stderr -----
+

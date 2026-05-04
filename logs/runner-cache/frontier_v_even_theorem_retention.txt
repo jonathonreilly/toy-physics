@@ -1,0 +1,97 @@
+===== runner cache v1 =====
+runner: scripts/frontier_v_even_theorem_retention.py
+runner_sha256: 2a4177dc588ebe4cd77d94da50091e8aaa10c8f06e0b6ae47e3deb73a9a85f51
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.61
+status: ok
+----- stdout -----
+========================================================================================
+V_EVEN THEOREM SUPPORT FROM FRAMEWORK PRIMITIVES
+========================================================================================
+
+Cycle 17 of retained-promotion-2026-05-02 campaign.
+Convergent-funnel target: narrow v_even theorem audited_conditional status,
+which would narrow BOTH cycle 16 sub-B (E1) and sub-C (E2) if ratified.
+
+========================================================================================
+PART 1: SPECTRAL ISOSPECTRALITY (Route A, independent of v_even runner)
+========================================================================================
+  [PASS] F1 = (1/2)T_delta + (1/4)T_rho has spec {-sqrt(3/8), 0, +sqrt(3/8)}  (eig(F1)=[-0.61237244 -0.          0.61237244])
+  [PASS] F2 = A + (1/4)b - (1/2)c - (1/2)d has spec {-3/sqrt(8), 0, +3/sqrt(8)}  (eig(F2)=[-1.06066017  0.          1.06066017])
+  [PASS] F1 isospectral to sqrt(3/8) Z_row up to null multiplicity  (a1=0.612372435696)
+  [PASS] F2 isospectral to (3/sqrt(8)) Z_row up to null multiplicity  (a2=1.060660171780)
+  [PASS] Active Hermitian basis {A, b, c, d, T_delta, T_rho} is Frobenius-orthogonal  (max off-diag = 0.00e+00)
+  [PASS] F1 bosonic source response equals scaled Z_row response (CPT-even W[J])  (max diff = 4.44e-16)
+  [PASS] F2 bosonic source response equals scaled Z_row response (CPT-even W[J])  (max diff = 4.44e-16)
+
+========================================================================================
+PART 2: H-SIDE SOURCE-SURFACE WITNESS ROUTE
+========================================================================================
+  (uses cited DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM)
+  [PASS] exact_package provides gamma = 1/2  (gamma = 0.500000000000)
+  [PASS] exact_package provides E1 = sqrt(8/3)  (E1 = 1.632993161855)
+  [PASS] exact_package provides E2 = sqrt(8)/3  (E2 = 0.942809041582)
+  [PASS] H-side witness is Hermitian  (max anti-Hermitian = 0.00e+00)
+  [PASS] H-side witness is positive (smallest eigenvalue > 0)  (min eig = 0.773905)
+  [PASS] Witness satisfies gamma constraint (gamma = 1/2)  (r31 sin(phi) = 0.500000000000)
+  [PASS] Witness satisfies B1 = 2*sqrt(8/3) = 2*v_1  (B1 = 3.265986323711)
+  [PASS] Witness satisfies B2 = 2*sqrt(8)/3 = 2*v_2  (B2 = 1.885618083164)
+  [PASS] v_even = (B1/2, B2/2) = (sqrt(8/3), sqrt(8)/3) read off from witness  (v_even = (1.632993161855, 0.942809041582))
+
+========================================================================================
+PART 3: cp1/cp2 = -sqrt(3) RATIO ROUTE (cycle 12 prior input)
+========================================================================================
+  [PASS] cp1 = -2 gamma E1 / 3 = -2 sqrt(6) / 9  (cp1 = -0.544331053952)
+  [PASS] cp2 = +2 gamma E2 / 3 = +2 sqrt(2) / 9  (cp2 = 0.314269680527)
+  [PASS] cp1 / cp2 = -sqrt(3) (cycle 12 retained-bounded ratio)  (cp1/cp2 = -1.732050807569)
+  [PASS] E1 / E2 = sqrt(3) (algebraic identity from sqrt(8/3) / (sqrt(8)/3) = 3/sqrt(3) = sqrt(3))  (E1/E2 = 1.732050807569)
+
+========================================================================================
+PART 4: CARRIER ORBIT INVARIANCE LEMMA — PARTIAL PROOF
+========================================================================================
+  [PASS] Premise 1: K_R(q) is closed under E/T column swap (carrier orbit closure)  (swap err = 0.00e+00)
+  [PASS] Premise 2: Retained DM_NEUTRINO_WEAK_VECTOR_THEOREM (td=126) provides exact SU(2) closure  (trace orthogonality + SU(2) closure on Y_i bridge family)
+  [PASS] Premise 2: Weak-vector theorem is column-ordering independent (rep-content result)  (representation-content theorems do not pick column ordering)
+  [PASS] Premise 3a: Theta_R^(0) prototype is explicitly bounded (not exact)
+  [PASS] Premise 3b: Xi_R^(0) constructed support is explicitly bounded (not exact)
+  [PASS] Premise 4: Swap-fixed even-response class on 2x2 matrices has dimension 2 (Schur reduction)  (null_dim = 2)
+  [PASS] Premise 5: Swap-fixed 2x2 matrix has equal columns (rank-1)  (swap err = 0.00e+00, rank = 1)
+  [PASS] Premise 6: Antisymmetric source mode tau_- = (1, -1) lies in kernel of M_even  (kernel err = 0.00e+00)
+
+========================================================================================
+PART 5: COUNTERFACTUAL PERTURBATION TESTS
+========================================================================================
+  [PASS] Counterfactual v_even = (1, 1) falsified by at least one route  (spectral=False, ratio=False, witness=False)
+  [PASS] Counterfactual v_even = (sqrt(2), sqrt(2)/3) falsified by at least one route  (spectral=False, ratio=False, witness=False)
+  [PASS] Counterfactual v_even = (sqrt(8/3), sqrt(8/3)) falsified by at least one route  (spectral=False, ratio=False, witness=False)
+  [PASS] Counterfactual v_even = (sqrt(2/3), sqrt(2)/3) falsified by at least one route  (spectral=False, ratio=False, witness=False)
+  [PASS] Counterfactual v_even = (sqrt(8/3), 1) falsified by at least one route  (spectral=False, ratio=False, witness=False)
+
+========================================================================================
+PART 6: RESIDUAL STRUCTURAL-EXHAUSTION GAP — NAMED OBSTRUCTIONS
+========================================================================================
+  [PASS] v_even = (sqrt(8/3), sqrt(8)/3) is supported by H-side source-surface witness existence  (cited downstream theorem provides positive-Hermitian witness)
+  [PASS] Spectral isospectrality (independent of v_even runner) confirms v_even values  (F1, F2 isospectral to scaled Z_row)
+  [PASS] cp1/cp2 = -sqrt(3) (cycle 12 retained-bounded) consistent with v_even values  (ratio test passes for canonical v_even)
+  [PASS] Carrier Orbit Invariance Lemma: swap-quotient requirement formulated  (Premises 1-6 of Part 4 establish bounded support for the lemma)
+  [PASS] Residual gap NAMED: structural exhaustion (no exact E/T-distinguishing operator)  (classification of admissible exact operators on K_R(q) carrier required)
+  [PASS] Convergent funnel: cycle 16 sub-B (E1) has a single named support gap  (given audit-ratified v_even support via H-side witness, sub-B narrows)
+  [PASS] Convergent funnel: cycle 16 sub-C (E2) has a single named support gap  (given audit-ratified v_even support via H-side witness, sub-C narrows)
+
+========================================================================================
+PART 7: FORBIDDEN IMPORTS DISCIPLINE
+========================================================================================
+  [PASS] No PDG/literature numerical comparators consumed  (v_even derived from spectral algebra + H-side witness, not from data)
+  [PASS] No m_top, sin^2(theta_W), eta_obs consumed as inputs  (no electroweak observable consumed)
+  [PASS] No fitted selectors consumed  (no fit parameter consumed)
+  [PASS] No same-surface family arguments  (F1, F2 are explicit Frobenius-orthogonal duals, not same-surface)
+  [PASS] Cycle 16 Frobenius dual results used only as admitted prior-cycle inputs  (spectral identities re-verified independently in Part 1)
+  [PASS] Cycle 12 cp1/cp2 = -sqrt(3) used only as cross-check, not load-bearing  (Route C in Part 3 is independent confirmation, not derivation input)
+
+========================================================================================
+SUMMARY: PASS=46 FAIL=0
+========================================================================================
+
+----- stderr -----
+

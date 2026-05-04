@@ -1,0 +1,63 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_jts_physical_point_closure_theorem.py
+runner_sha256: bc49f74e677859a8279965e265e3ce4bbe6456824f5e82249327f579803df861
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================
+  Quark JTS Physical-Point Closure Theorem
+  Shell-norm selects the unique psi_phys satisfying Pi(psi) = Pi(p)
+========================================================================
+
+  Retained constants:
+    cos_d   = 0.408248290463863
+    sin_d   = 0.912870929175277
+    rho     = 0.154303349962092
+    a_d     = 0.154303349962092
+
+  Bridge-factor kappa candidates:
+    kappa_support = sqrt(6/7)    = 0.925820099772551
+    kappa_target  = 48/49        = 0.979591836734694
+    kappa_BICAC   = 1            = 1.000000000000000
+
+  Physical amplitudes a_u(kappa):
+    a_u(kappa_support) = 0.782460796435952
+    a_u(kappa_target)  = 0.774886561056335
+    a_u(kappa_BICAC)   = 0.772011886720524   [physical point]
+
+  Pi projections Pi(psi(kappa)) = a_u(kappa) + rho*sin_d:
+    Pi(p)              = 0.912870929175277   [target]
+    Pi(psi_support)    = 0.923319838890704
+    Pi(psi_target)     = 0.915745603511088
+    Pi(psi_phys)       = 0.912870929175277
+
+  Theorem checks:
+  [PASS] P1  Physical amplitude a_u_phys = sin_d*(1-rho) from shell-norm theorem  (a_u_phys = 0.772011886720524)
+  [PASS] P2  Pi(p) = sin_d  (unit ray baseline)  (Pi(p) = 0.912870929175277)
+  [PASS] P3  Pi(psi_phys) computed = sin_d exactly  (Pi(psi_phys) = 0.912870929175277, residual = 0.000e+00)
+  [PASS] P4  JTS condition Pi(psi_phys) = Pi(p) holds at the physical point  (|Pi(psi_phys) - Pi(p)| = 0.000e+00)
+  [PASS] P5  kappa = 1 is the unique bridge factor satisfying the JTS condition  (kappa=1 gap=0.000e+00, kappa_supp gap=0.010449)
+  [PASS] P6  kappa_support fails JTS: Pi(psi_support) != Pi(p)  (|Pi(psi_support) - Pi(p)| = 0.0104489097)
+  [PASS] P7  kappa_target fails JTS: Pi(psi_target) != Pi(p)  (|Pi(psi_target) - Pi(p)| = 0.0028746743)
+  [PASS] P8  BICAC-LO: a_u_phys + rho*sin_d = sin_d  (LHS = 0.912870929175277, RHS = 0.912870929175277, gap = 0.000e+00)
+  [PASS] P9  Route 1 (exact 1(+)5 carrier) gives the same a_u_phys  (Route1 = 0.772011886720524, BICAC = 0.772011886720524)
+  [PASS] P10 Route 2 (shell-norm) gives the same a_u_phys  (shell-norm = 0.772011886720524, BICAC = 0.772011886720524)
+  [PASS] P11 All three routes agree on a_u_phys  (max spread = 0.000e+00)
+  [PASS] P12 Full RPSR target: a_u_full = sin_d*(1 - 48*rho/49) = 0.7748865611  (a_u_full = 0.7748865611)
+
+  Physical-point JTS summary:
+    The exact shell-normalized carrier forces a_u_phys = sin_d*(1-rho).
+    The physical perturbation psi_phys satisfies Pi(psi_phys) = Pi(p).
+    This is the JTS condition; kappa = 1 is the unique solution.
+    Physical-point JTS + ISSR1 Schur uniqueness => BICAC-LO.
+    General JTS (full cone) remains a named open residue.
+
+========================================================================
+PASS=12 FAIL=0
+Quark JTS physical-point closure theorem: VERIFIED
+========================================================================
+
+----- stderr -----
+

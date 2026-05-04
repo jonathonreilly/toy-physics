@@ -1,0 +1,56 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_bridge_nonlocal_corrections.py
+runner_sha256: d1726e23c80538e597a783228710b76b9763fe7fdf4ba58815060783142fd31f
+timeout_sec: 60
+exit_code: 0
+elapsed_sec: 6.99
+status: ok
+----- stdout -----
+==============================================================================
+y_t BRIDGE NONLOCAL CORRECTIONS
+==============================================================================
+
+Quantify the residual nonlocal correction after extracting the affine
+local-Hessian model on the forced UV window.
+
+Forced UV window: x >= 0.95
+  K_loc(x) = -6.172071e-02 x + 8.518429e-02
+  pointwise affine-fit max relative error = 1.187562e-02
+  residual operator norm ratio = 5.023669e-03
+
+Best row per family:
+  shape              dev%    nonlocal/full   nonlocal/local
+  logistic        +0.0005     3.428195e-05     3.428077e-05
+  erf             +0.0145     2.052752e-04     2.053174e-04
+  smoothstep      +0.0057     1.027543e-03     1.028600e-03
+
+Family-average integrated effect:
+  avg profile nonlocal/local = 4.262215e-04
+  avg profile L2 norm = 1.377377e-01
+
+  [PASS] 1a-kernel-remains-nearly-affine-on-the-forced-uv-window: max relative affine-fit error = 1.187562e-02
+  [PASS] 1b-nonlocal-residual-has-small-operator-norm: residual operator norm ratio = 5.023669e-03
+  [PASS] 1c-best-family-integrated-nonlocal-effect-is-tiny: max best-family |nonlocal|/|full| = 1.027543e-03
+  [PASS] 1d-best-family-nonlocal-piece-is-negligible-vs-local-piece: max best-family |nonlocal|/|local| = 1.028600e-03
+  [PASS] 1e-family-average-nonlocal-piece-remains-negligible: family-average |nonlocal|/|local| = 4.262215e-04
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+The local-Hessian selector already captures the leading forced-UV-window
+behavior. After subtracting its affine local model, the residual
+nonlocal correction is half-percent-level in operator norm and remains
+small when integrated against the viable bridge families.
+
+So the nonlocal tail is bounded and numerically small on the branch
+families, but the result is still a bounded-support control statement,
+not a full unbounded theorem.
+
+The remaining gap is microscopic rather than structural.
+==============================================================================
+FINAL TALLY: 5 PASS / 0 FAIL
+Elapsed: 6.75 s
+==============================================================================
+
+----- stderr -----
+

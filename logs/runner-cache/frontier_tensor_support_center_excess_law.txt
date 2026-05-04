@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/frontier_tensor_support_center_excess_law.py
+runner_sha256: 135aa32072f80f2c64d42fc60d71007455f17fd30a7b02f02526dc85dfc5279d
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.03
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

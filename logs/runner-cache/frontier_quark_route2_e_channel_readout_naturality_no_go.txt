@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_route2_e_channel_readout_naturality_no_go.py
+runner_sha256: 19c184260f71acb7fed8ad4e6b57cee92f5efddf77b020177e3120ebb901132f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 35.33
+status: ok
+----- stdout -----
+========================================================================================
+LANE 3 ROUTE-2 E-CHANNEL READOUT NATURALITY NO-GO
+========================================================================================
+
+A. Authority surfaces
+------------------------------------------------------------------------
+PASS: QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md exists -- docs/QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md
+PASS: QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md exists -- docs/QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md
+PASS: QUARK_ENDPOINT_RATIO_CHAIN_LAW_NOTE_2026-04-19.md exists -- docs/QUARK_ENDPOINT_RATIO_CHAIN_LAW_NOTE_2026-04-19.md
+PASS: QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md exists -- docs/QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md
+PASS: readout note identifies beta_E/alpha_E as missing map entry
+PASS: ratio-chain note identifies {-8/9} as endpoint-chain target
+PASS: new note states no retained up-mass claim
+
+B. Reduced exact family
+------------------------------------------------------------------------
+PASS: E-shell carrier column is exact -- [ 1.00000000e+00  0.00000000e+00 -4.16333634e-17  0.00000000e+00]
+PASS: E-center carrier column is exact -- [1.         0.         0.16666667 0.        ]
+PASS: rho_E=0 and rho_E=21/4 agree on E-shell normalization -- [1. 0.] vs [1. 0.]
+PASS: rho_E=0 and rho_E=21/4 differ on E-center lift -- 1.000000 vs 1.875000
+PASS: rho_E=21/4 gives E-center lift 15/8 exactly -- 15/8
+PASS: rho_E=0 gives E-center lift 1 exactly -- 1
+
+C. Equivalence to the endpoint ratio chain
+------------------------------------------------------------------------
+PASS: rho_E=21/4 is equivalent to center T/E ratio -8/9 under granted T-side data -- -8/9
+PASS: rho_E=0 does not give center T/E ratio -8/9 -- -5/3
+PASS: q_E=15/8 solves back to rho_E=21/4 -- 21/4
+PASS: ratio chain {5/6,-2,-8/9} solves q_E=15/8 -- 15/8
+
+D. Naturality frames
+------------------------------------------------------------------------
+  same-as-T : rho_E=-1, q_E=5/6, c_TE=-2
+  no-lift   : rho_E=0, q_E=1, c_TE=-5/3
+  unit-lift : rho_E=1, q_E=7/6, c_TE=-10/7
+  target    : rho_E=21/4, q_E=15/8, c_TE=-8/9
+PASS: same-as-T naturality is exact admissible but not target
+PASS: no-lift naturality is exact admissible but not target
+PASS: unit-lift naturality is exact admissible but not target
+PASS: low-rational grammar has many admissible rho_E values -- count=430
+PASS: low-rational grammar includes target 21/4 but does not make it unique
+PASS: 21/4 is selected only after using live E-endpoint distance -- nearest=21/4, live_rho=5.257476782081
+PASS: live endpoint rho_E is bounded comparator, not exact target -- live=5.257476782081, target=5.250000000000
+
+E. Comparator firewall
+------------------------------------------------------------------------
+PASS: forbidden proof inputs are absent from proof-input set -- ['carrier_columns', 'endpoint_algebra', 'granted_t_side_candidates', 'rational_arithmetic']
+PASS: note says nearest-rational selection is bounded evidence
+PASS: note names the next exact target as -8/9 or 15/8
+PASS: note preserves future primitive routes
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=28, FAIL=0
+VERDICT: minimal Route-2 naturality does not derive rho_E = 21/4.
+A new E-center source/readout primitive is still required.
+
+----- stderr -----
+

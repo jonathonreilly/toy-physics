@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_irregular_directional_observable.py
+runner_sha256: 2d675d4f28c3ed5feedf9d6e5065042e9b6a35b4d06e86fff9453ae8cdd45ae8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.67
+status: ok
+----- stdout -----
+========================================================================================
+IRREGULAR-GRAPH DIRECTIONAL OBSERVABLE PROBE
+========================================================================================
+Endogenous lane: |psi|^2 -> Phi -> H
+Observable candidates: short-time depth shift, signed cut flux, frontier current bias
+Coupling comparison: identity (retired control) vs parity (correct staggered scalar)
+
+
+FAMILY: random_geometric  n=36  src=18
+family               G cpl          dDepth       dFlux       dBias      norm
+--------------------------------------------------------------------------
+random_geometric  10.0 identity +3.1757e-02 +3.7952e-02 -7.9923e-11  1.000000
+random_geometric  10.0 parity   +4.1092e-01 +9.2284e-01 +8.6234e-10  1.000000
+random_geometric  50.0 identity +3.4720e-01 +8.2696e-01 -3.0641e-10  1.000000
+random_geometric  50.0 parity   +4.1305e-01 +7.4130e-01 +2.1792e-09  1.000000
+random_geometric 100.0 identity +4.1271e-01 +8.3669e-01 +1.1554e-09  1.000000
+random_geometric 100.0 parity   +4.1348e-01 +8.0366e-01 +2.1803e-09  1.000000
+
+FAMILY: growing  n=48  src=0
+family               G cpl          dDepth       dFlux       dBias      norm
+--------------------------------------------------------------------------
+growing           10.0 identity +2.0061e-02 -3.9477e-02 +1.9880e-04  1.000000
+growing           10.0 parity   +2.6190e-01 -1.7285e+00 +3.1505e-03  1.000000
+growing           50.0 identity +1.2072e-01 -3.7360e-01 +2.0907e-03  1.000000
+growing           50.0 parity   +3.1469e-01 -6.6840e-02 +2.8763e-03  1.000000
+growing          100.0 identity +2.3648e-01 -4.5014e-01 +2.9683e-03  1.000000
+growing          100.0 parity   +3.2486e-01 -1.5848e+00 +2.9859e-03  1.000000
+
+FAMILY: layered_cycle  n=24  src=0
+family               G cpl          dDepth       dFlux       dBias      norm
+--------------------------------------------------------------------------
+layered_cycle     10.0 identity +6.0965e-02 +1.4921e-01 +8.7490e-07  1.000000
+layered_cycle     10.0 parity   +8.8505e-02 +7.0671e-01 -3.3315e-06  1.000000
+layered_cycle     50.0 identity +8.2831e-02 +3.2365e-01 -7.3397e-07  1.000000
+layered_cycle     50.0 parity   +1.2829e-01 +7.0802e-01 +1.1554e-06  1.000000
+layered_cycle    100.0 identity +9.7108e-02 +5.5269e-01 +4.9908e-07  1.000000
+layered_cycle    100.0 parity   +1.2719e-01 +2.6279e-01 +1.1552e-06  1.000000
+
+SIGN-SELECTION CHECK
+----------------------------------------------------------------------------------------
+depth_shift     : 0/9 sign-separated parity-vs-identity cases
+cut_flux        : 0/9 sign-separated parity-vs-identity cases
+frontier_bias   : 4/9 sign-separated parity-vs-identity cases
+
+INTERPRETATION
+- If a metric has high sign-separation count, it is a candidate directional observable.
+- If counts stay near zero or flip by family/G, the endogenous lane does not yet have a frozen sign-selective observable.
+Time: 0.4s
+
+----- stderr -----
+

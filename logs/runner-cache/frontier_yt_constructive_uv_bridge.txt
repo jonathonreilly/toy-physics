@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_constructive_uv_bridge.py
+runner_sha256: eab5b805fccd692246ee4a2a3eb2dec0998781c0272d3b2cb71679c9ef7b1967
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 40.12
+status: ok
+----- stdout -----
+==============================================================================
+CONSTRUCTIVE UV-LOCALIZED BRIDGE CLASS FOR y_t
+==============================================================================
+
+Build explicit UV-localized bridge profiles across independent shape
+families and test whether the accepted low-energy endpoint is stable.
+
+Reference data:
+  target y_t(v, physical) = 0.9176
+  g_3(v) = 1.139366
+  g_3(M_Pl) = 1.067411
+  g_1(v) = 0.463986, g_2(v) = 0.646288
+
+Best constructive profile per shape family:
+  shape          center    width       y_t(v)       dev%    m_t proxy
+  logistic        0.975    0.020     0.917605    +0.0005       172.57
+  erf             0.965    0.020     0.917368    -0.0252       172.53
+  smoothstep      0.965    0.017     0.917561    -0.0043       172.56
+
+Class summary:
+  max |dev| across best families = 0.0252%
+  area spread across best families = 9.65%
+  peak spread across best families = 0.00%
+  center window used by best fits = [0.965, 0.975]
+  width window used by best fits  = [0.017, 0.020]
+
+  [PASS] 1a-all-shape-families-land-near-target: best-fit family deviations = +0.0005%, -0.0252%, -0.0043%
+  [PASS] 1b-uv-window-is-consistent-across-families: best-fit centers in [0.965, 0.975], widths in [0.017, 0.020]
+  [PASS] 1c-bridge-class-area-is-stable: normalized bridge-area spread across shape families = 9.65%
+  [PASS] 1d-bridge-class-peak-is-stable: peak correction spread across shape families = 0.000000%
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+This does not prove the final interacting bridge theorem.
+It does construct a concrete UV-localized bridge class:
+
+  once the bridge is confined to the narrow UV window already required by
+  the locality scan, independent shape families all reproduce the accepted
+  low-energy y_t endpoint with negligible spread.
+
+So the remaining gap is no longer endpoint fitting. It is the derivation of
+why the exact interacting lattice bridge must live in this UV-localized
+class.
+
+==============================================================================
+FINAL TALLY: 4 PASS / 0 FAIL
+Elapsed: 39.63 s
+==============================================================================
+
+----- stderr -----
+

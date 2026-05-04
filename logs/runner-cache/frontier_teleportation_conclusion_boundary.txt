@@ -1,0 +1,31 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_conclusion_boundary.py
+runner_sha256: 46943c0af801a47cec3cc1198d31400d0d38130ad3536c73ab10ab3263febebe
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+TELEPORTATION CONCLUSION BOUNDARY
+Status: planning closure with explicit nature-grade HOLD
+Claim boundary: ordinary quantum state teleportation only; no matter, mass, charge, energy, object, or faster-than-light transport
+
+selector conclusion: without_orientation=2, without_action=8, without_no_dwell=4, final_selector_count=1, bare_derivation_status=negative on audited invariants, terminal_decision=retain the three-clause completion as an added lane principle, derive it from a stronger theorem, or do not promote
+scaling conclusion: certified_sides=4,6,8,10,12, gap_floor=0.390/L^2, bell_floor=0.999702, min_margin=2.750e-05, direct_solve_frontier=12, next_side_status=side 14 direct sparse solve exceeded local turn budget, terminal_decision=prove the all-even-side induction/operator inequality or keep resource genesis at finite-certificate status
+hardware conclusion: slot_threshold=2.622e-03, area_budget=0.050937, controller_margin=2.215, detector_word_bound=7.498e-131, detector_log10_overlap=-655.141, evidence_status=threshold requirements only; no measured device/material data, terminal_decision=supply fabricated/noise/material evidence or keep hardware closure as a requirement envelope
+lane conclusion: planning_closed=True, unconditional_closed=False, promote_to_nature_grade=False, retained_status=planning closed as conditional theory; nature-grade closure HOLD
+
+Acceptance gates:
+  selector issue has a terminal retain/derive/reject boundary: PASS
+  scaling issue has a side-12 certificate and side-14 blocker: PASS
+  hardware issue has thresholds but no measured implementation: PASS
+  planning closes while nature-grade closure remains HOLD: PASS
+  claim boundary stays state-only and not FTL: PASS
+
+Limitations:
+  This is a terminal planning-boundary artifact, not a nature-grade
+  proof. It deliberately prevents promotion until the three external
+  obligations are actually supplied.
+
+----- stderr -----
+

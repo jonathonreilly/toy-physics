@@ -1,0 +1,89 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_up_amplitude_candidate_scan.py
+runner_sha256: 4765c6bdcf5038051724593a923aa6e85da8123a5060b2feeb7cbfb9a4bfd955
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.10
+status: ok
+----- stdout -----
+========================================================================
+  FRONTIER: Quark Up-Amplitude Exact-Candidate Scan
+========================================================================
+
+========================================================================
+PART 1: Exact-Support Anchor
+========================================================================
+
+  exact down amplitude = 1/sqrt(42) = 0.154303349962
+  exact support angle  = -1/42 rad  = -1.364185 deg
+  solved up amplitude  = 0.778161628656
+
+========================================================================
+PART 2: Curated Exact-Candidate Laws
+========================================================================
+
+  curated exact candidates on the exact-support anchor:
+  sqrt(3/5)                    a_u=0.774596669  anchor=0.720%  refit_obj=0.054690  refit_max=1.047%
+  sqrt(5/6)*(1-1/sqrt(42))     a_u=0.772011887  anchor=0.742%  refit_obj=0.058550  refit_max=1.159%
+  sqrt(6/7)-1/sqrt(42)         a_u=0.771516750  anchor=0.746%  refit_obj=0.059523  refit_max=1.180%
+  atan(sqrt(5))-sqrt(5)/6      a_u=0.777583995  anchor=0.827%  refit_obj=0.052782  refit_max=0.917%
+  7/9                          a_u=0.777777778  anchor=0.835%  refit_obj=0.052752  refit_max=0.908%
+  sqrt(5/6)*(6/7)              a_u=0.782460796  anchor=1.106%  refit_obj=0.055543  refit_max=0.928%
+  pi/4                         a_u=0.785398163  anchor=1.281%  refit_obj=0.060720  refit_max=1.038%
+
+  best anchored-observable candidate = sqrt(3/5)
+    anchor aggregate = 0.720%
+    anchor devs      = (-0.029%, -0.003%, +0.010%, -0.677%)
+
+  best two-ratio-refit candidate     = 7/9
+    refit objective  = 0.052752
+    refit devs       = (-0.908%, -0.150%, -0.000%, -0.004%, -0.074%, -0.751%)
+  [PASS] Curated scan beats the old pi/4 baseline on the anchored observable package  (best = 0.720%, pi/4 = 1.281%)
+  [PASS] Curated best candidate keeps anchored CKM+J deviations below 1%  (max dev = 0.677%)
+  [PASS] Curated best refit candidate keeps the full package within 1%  (max dev = 0.908%)
+
+========================================================================
+PART 3: Small Rational / Radical Grammar Scan
+========================================================================
+
+  best small-rational candidates:
+  7/9                          a_u=0.777777778  anchor=0.835%  refit_obj=0.052752  refit_max=0.908%
+  4/5                          a_u=0.800000000  anchor=2.146%  refit_obj=0.125620  refit_max=1.589%
+  8/10                         a_u=0.800000000  anchor=2.146%  refit_obj=0.125620  refit_max=1.589%
+  3/4                          a_u=0.750000000  anchor=0.947%  refit_obj=0.174591  refit_max=2.100%
+  6/8                          a_u=0.750000000  anchor=0.947%  refit_obj=0.174591  refit_max=2.100%
+
+  best small-radical candidates:
+  sqrt(3/5)                    a_u=0.774596669  anchor=0.720%  refit_obj=0.054690  refit_max=1.047%
+  sqrt(6/10)                   a_u=0.774596669  anchor=0.720%  refit_obj=0.054690  refit_max=1.047%
+  sqrt(5/8)                    a_u=0.790569415  anchor=1.587%  refit_obj=0.076251  refit_max=1.233%
+  sqrt(7/12)                   a_u=0.763762616  anchor=0.816%  refit_obj=0.084585  refit_max=1.514%
+  sqrt(7/11)                   a_u=0.797724035  anchor=2.011%  refit_obj=0.111218  refit_max=1.503%
+  [PASS] Best small-rational candidate is 7/9  (best = 7/9)
+  [PASS] Best small-rational candidate keeps the full package within 1%  (max dev = 0.908%)
+  [PASS] Best small-radical candidate is sqrt(3/5)  (best = sqrt(3/5))
+  [PASS] Best small-radical candidate keeps the anchored CKM+J package within 1%  (max dev = 0.677%)
+
+========================================================================
+PART 4: Summary
+========================================================================
+
+  solved support-anchored a_u = 0.778161628656
+
+  strongest exact-candidate shortlist:
+    - best small-rational refit candidate: 7/9 = 0.777777777778
+    - best small-radical anchored candidate: sqrt(3/5) = 0.774596669241
+    - best projector/support-native candidate: sqrt(5/6)*(1-1/sqrt(42)) = 0.772011886721
+    - best anchored observable package overall: sqrt(3/5) (aggregate CKM+J dev = 0.720%)
+
+  honest endpoint:
+    the remaining quark gap is no longer an unconstrained scalar.
+    it is now a short bounded exact-candidate shortlist.
+    none of those candidates is yet a retained derivation.
+
+========================================================================
+  TOTAL: PASS=7, FAIL=0
+========================================================================
+
+----- stderr -----
+

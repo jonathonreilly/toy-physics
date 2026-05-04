@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_three_flux_holonomy_closure.py
+runner_sha256: 7799f1478490913678be00c4e04ecd0374c7e087d4cafdca831d6dcbc1c940b4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+PMNS THREE-FLUX HOLOMONY CLOSURE
+========================================================================================
+
+Question:
+  Can a finite native family of twisted flux holonomies close the
+  reduced graph-first PMNS oriented-cycle family exactly?
+
+========================================================================================
+PART 1: A GENERIC THREE-FLUX FAMILY HAS FULL RANK
+========================================================================================
+  [PASS] The three-flux design matrix has the exact rows [2 cos(phi_i), 2 sin(phi_i), 1]
+  [PASS] The determinant matches the exact trigonometric formula  (det_numeric=-1.464101615138, det_exact=-1.464101615138)
+  [PASS] A generic three-flux family has full rank  (det=-1.464101615138)
+
+========================================================================================
+PART 2: THREE FLUX HOLOMONIES RECONSTRUCT (u,v,w) EXACTLY
+========================================================================================
+  [PASS] The three-flux holonomy vector is the exact linear image of (u,v,w)  (hol=[1.1      0.92     1.244256])
+  [PASS] The reduced coordinates are reconstructed exactly from the three holonomies  (recovered=[0.41 0.32 0.28])
+  [PASS] So the reduced graph-first PMNS cycle values close exactly on the three-flux route
+
+========================================================================================
+PART 3: THREE FLUX VALUES SEPARATE DISTINCT REDUCED-CHANNEL POINTS
+========================================================================================
+  [PASS] Two distinct reduced-channel points give distinct three-flux holonomy vectors  (|Δhol|=1.305582)
+  [PASS] Each holonomy vector reconstructs its own reduced point exactly  (rec_a=[0.41 0.32 0.28], rec_b=[ 0.29 -0.17  0.34])
+  [PASS] Therefore the three-flux route removes the 2-real kernel left by the one-angle probe
+
+========================================================================================
+PART 4: CIRCULARITY GUARD
+========================================================================================
+  [PASS] The three-flux holonomy map takes no PMNS-side target coordinates as inputs  (bad=[])
+  [PASS] The three-flux reconstruction takes no PMNS-side target coordinates as inputs  (bad=[])
+
+========================================================================================
+RESULT
+========================================================================================
+  Positive closure on the twisted-flux route:
+    - one-angle holonomy leaves a 2-real kernel on the reduced family
+    - a generic three-flux family gives an invertible 3 x 3 system
+    - the reduced graph-first cycle values (u,v,w) are reconstructed
+      exactly from the three holonomies
+
+  So the twisted-flux route now closes the reduced PMNS cycle values
+  exactly, once a generic three-flux family is admitted.
+
+PASS=11 FAIL=0
+
+----- stderr -----
+

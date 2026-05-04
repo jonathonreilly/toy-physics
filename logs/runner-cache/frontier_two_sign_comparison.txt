@@ -1,0 +1,94 @@
+===== runner cache v1 =====
+runner: scripts/frontier_two_sign_comparison.py
+runner_sha256: 0c6e68eaf4dc1068caaf0b293daa3bcb29ecb927deee46c654722b1974aa35cb
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.76
+status: ok
+----- stdout -----
+==============================================================================
+TWO-SIGN COMPARISON: Does Consistency Select the Coupling Sign?
+==============================================================================
+
+Sign convention:
+  ATTRACTIVE: H_diag = mass·parity − mass·Φ  (standard Newtonian)
+  REPULSIVE:  H_diag = mass·parity + mass·Φ  (anti-gravitational)
+
+Parameters: MASS=0.3, MU2=0.22, DT=0.12, G_SELF=50.0, N_ITER=20
+
+------------------------------------------------------------------------------
+family               sign            n norm_drift  w_ratio    f_shell     f_prob     f_edge  Φ_stab  E_bnd  spec_rng
+------------------------------------------------------------------------------
+random_geometric     attractive     64   5.55e-16   1.6825 +1.992e-02 +2.094e-01 +1.735e-01      OK     OK      5.14
+random_geometric     repulsive      64   5.55e-16   1.7103 +3.961e-02 +2.779e-01 +3.192e-01      OK     OK      5.05
+growing              attractive     64   0.00e+00   1.7139 +4.873e-02 +1.727e-01 +3.445e-01      OK     OK      5.75
+growing              repulsive      64   5.55e-16   1.7270 +2.881e-02 +1.399e-01 +2.359e-01      OK     OK      5.76
+layered_cycle        attractive     64   0.00e+00   1.6590 +1.052e-01 +9.473e-01 -7.268e-01      OK     OK      5.40
+layered_cycle        repulsive      64   0.00e+00   1.8381 +7.255e-02 +8.298e-01 -9.116e-01      OK     OK      5.31
+
+==============================================================================
+DETAILED COMPARISON
+==============================================================================
+
+--- random_geometric (n=64) ---
+  T1 Norm drift:     attractive=5.55e-16  repulsive=5.55e-16
+     → comparable
+  T2 Width ratio:    attractive=1.6825  repulsive=1.7103
+     → both expand
+  T3 Forces:
+     shell_mean:     attractive=+1.992e-02  repulsive=+3.961e-02
+     prob_weighted:  attractive=+2.094e-01  repulsive=+2.779e-01
+     edge_radial:    attractive=+1.735e-01  repulsive=+3.192e-01
+     → Both TOWARD — force sign does NOT distinguish coupling sign
+  T4 Φ stable:       attractive=OK  repulsive=OK
+  T5 Energy bounded: attractive=OK  repulsive=OK
+     E_final:        attractive=-2.2239  repulsive=+2.1815
+     |ΔE|:           attractive=0.1003  repulsive=0.1363
+  T6 Spectral range: attractive=5.14  repulsive=5.05
+     → comparable
+
+--- growing (n=64) ---
+  T1 Norm drift:     attractive=0.00e+00  repulsive=5.55e-16
+     → comparable
+  T2 Width ratio:    attractive=1.7139  repulsive=1.7270
+     → both expand
+  T3 Forces:
+     shell_mean:     attractive=+4.873e-02  repulsive=+2.881e-02
+     prob_weighted:  attractive=+1.727e-01  repulsive=+1.399e-01
+     edge_radial:    attractive=+3.445e-01  repulsive=+2.359e-01
+     → Both TOWARD — force sign does NOT distinguish coupling sign
+  T4 Φ stable:       attractive=OK  repulsive=OK
+  T5 Energy bounded: attractive=OK  repulsive=OK
+     E_final:        attractive=-1.2971  repulsive=+1.2314
+     |ΔE|:           attractive=0.0034  repulsive=0.0007
+  T6 Spectral range: attractive=5.75  repulsive=5.76
+     → comparable
+
+--- layered_cycle (n=64) ---
+  T1 Norm drift:     attractive=0.00e+00  repulsive=0.00e+00
+     → comparable
+  T2 Width ratio:    attractive=1.6590  repulsive=1.8381
+     → both expand
+  T3 Forces:
+     shell_mean:     attractive=+1.052e-01  repulsive=+7.255e-02
+     prob_weighted:  attractive=+9.473e-01  repulsive=+8.298e-01
+     edge_radial:    attractive=-7.268e-01  repulsive=-9.116e-01
+     → Mixed: attractive=2/3 TOWARD, repulsive=2/3 TOWARD
+  T4 Φ stable:       attractive=OK  repulsive=OK
+  T5 Energy bounded: attractive=OK  repulsive=OK
+     E_final:        attractive=-2.5322  repulsive=+2.5199
+     |ΔE|:           attractive=0.0603  repulsive=0.0462
+  T6 Spectral range: attractive=5.40  repulsive=5.31
+     → comparable
+
+==============================================================================
+VERDICT
+==============================================================================
+BOTH SIGNS ARE STABLE — no consistency-based selection
+  The coupling sign remains a free parameter at these parameters.
+  The attractive coupling is a Newtonian-convention INPUT, not a prediction.
+
+Total time: 0.5s
+
+----- stderr -----
+

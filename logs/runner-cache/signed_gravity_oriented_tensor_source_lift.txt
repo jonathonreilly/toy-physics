@@ -1,0 +1,38 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_oriented_tensor_source_lift.py
+runner_sha256: 33c2bf0df699da181eed1414ee828c3633fec2be51ac1646659ffce714d2ab31
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+================================================================================================================
+SIGNED GRAVITY ORIENTED TENSOR-SOURCE LIFT AUDIT
+  determinant-orientation line twist of retained tensor source bundle
+================================================================================================================
+
+LIFT TARGET
+  T_g(Y) = chi_eta(Y) * T_plus
+  chi_eta signs the whole already-existing tensor source bundle; it does
+  not manufacture shift/shear components from a scalar source.
+
+[PASS] canonical lapse/shift/trace/shear projectors are exact  (ranks={'lapse': 1, 'shift': 3, 'trace': 1, 'shear': 5})
+[PASS] orientation-line twist flips every occupied tensor block coherently  (block_norms={'lapse': 0.956, 'shift': 0.687, 'trace': 0.804, 'shear': 1.198}, flip_resid=0.0e+00)
+[PASS] orientation-line twist preserves linear Ward/conservation constraints  (residuals(+,-,0)=['6.1e-16', '6.1e-16', '0.0e+00'])
+[PASS] block-diagonal GR operator gives locked tensor response signs  (field_flip=0.0e+00, null=0.0e+00, pair_signs={(1, 1): 1.0, (1, -1): -1.0, (-1, 1): -1.0, (-1, -1): 1.0})
+[PASS] scalar-only determinant character remains A1-only  (complement_norm=0.0e+00)
+[PASS] non-A1 signed tensor response requires an ordinary tensor source carrier  (tensor_source_blocks={'lapse': 0.956, 'shift': 0.687, 'trace': 0.804, 'shear': 1.198}, chi_only_blocks={'lapse': 1.0, 'shift': 0.0, 'trace': 0.5, 'shear': 0.0})
+[PASS] non-claim gate remains closed  (negative_inertial_mass=False, shielding=False, propulsion=False, reactionless_force=False, physical_signed_gravity_prediction=False)
+
+INTERPRETATION
+  The tensor blocker reduces: chi_eta alone is A1-maximal, but the
+  determinant-orientation line can twist the retained tensor source bundle.
+  If an ordinary tensor stress source is present, every canonical block can
+  carry the same derived sign while constraints and response locking are
+  preserved.  Without that tensor carrier, the signed lane remains scalar.
+
+SUMMARY: PASS=7 FAIL=0
+FINAL_TAG: SIGNED_GRAVITY_ORIENTED_TENSOR_SOURCE_LIFT_FINITE_CONDITIONAL
+
+----- stderr -----
+

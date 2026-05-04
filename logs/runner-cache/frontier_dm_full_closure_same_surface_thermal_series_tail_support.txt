@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_full_closure_same_surface_thermal_series_tail_support.py
+runner_sha256: 841ece80f8f33d54276bf4e170d62c9fe97f55360ded1777c338b77ac161c13c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 116.87
+status: ok
+----- stdout -----
+========================================================================================
+DM FULL CLOSURE SAME-SURFACE THERMAL SERIES/TAIL SUPPORT
+========================================================================================
+
+========================================================================================
+PART 1: EXACT POSITIVE-SERIES STRUCTURE
+========================================================================================
+  [PASS] The attractive Coulomb factor has an exact positive-series decomposition  (y/(1-e^{-y}) = sum_{n>=0} y e^{-n y})
+  [PASS] The repulsive Coulomb factor has an exact positive-series decomposition  (y/(e^{y}-1) = sum_{n>=1} y e^{-n y})
+  [PASS] Each term integral is an exact special-function object  (∫ v e^{-a v^2 - c/v} = J1(c),  ∫ v^2 e^{-a v^2 - c/v} = J2(c))
+  [PASS] The term integrals are represented exactly by Meijer-G functions in the current helper layer  (J1(c), J2(c) > 0 for c>0)
+
+========================================================================================
+PART 2: EXACT TAIL INEQUALITIES
+========================================================================================
+  [PASS] The attractive-series tail is controlled by the exact bound y/(1-e^{-y}) <= 1+y  (tail_att(N) <= (1+y)e^{-N y})
+  [PASS] The repulsive-series tail is controlled by the same exact bound after the shifted start index  (tail_rep(N) <= (1+y)e^{-(N+1) y})
+  [PASS] Those tail bounds reduce the thermal remainder to the exact J1/J2 integrals  (upper tail = J2 + b J1 at the corresponding cutoff)
+
+========================================================================================
+PART 3: LIVE DM-SLICE SERIES/TAIL SUPPORT
+========================================================================================
+  [PASS] alpha_lo lies inside the exact series/tail support interval  (R=[5.442019867867, 5.442019867931], eval=5.442019867924)
+  [PASS] alpha_lo support interval is extremely narrow  (width=6.358735760159e-11)
+  [PASS] alpha_conv lies inside the exact series/tail support interval  (R=[5.447934280692, 5.447934280753], eval=5.447934280746)
+  [PASS] alpha_conv support interval is extremely narrow  (width=6.074962755065e-11)
+  [PASS] alpha_hi lies inside the exact series/tail support interval  (R=[5.482855571890, 5.482855571936], eval=5.482855571931)
+  [PASS] alpha_hi support interval is extremely narrow  (width=4.645972495609e-11)
+
+  alpha_lo   = 0.090667836017286
+  alpha_conv = 0.090899546858439
+  alpha_hi   = 0.092264992618360
+  sigma_conv = 0.145077095756643
+  R_conv     = 5.447934280745940
+
+========================================================================================
+BOTTOM LINE
+========================================================================================
+  Honest status:
+    - the coarse thermal selector story is gone
+    - the corrected continuum evaluator agrees with an exact positive-series
+      decomposition plus exact tail control on the live DM interval
+    - this hardens the DM thermal layer substantially
+    - but it is still support, not theorem-grade current-bank selector closure
+
+========================================================================================
+SUMMARY: PASS=13 FAIL=0
+========================================================================================
+
+----- stderr -----
+

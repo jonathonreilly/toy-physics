@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/frontier_complete_prediction_chain.py
+runner_sha256: e5abb0dd1735111a5ed5cd8ac3069ba66a3c6c59715ec59b4565b1c7ef87f446
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+==============================================================================
+COMPLETE PREDICTION CHAIN: CANONICAL PACKAGE SYNTHESIS
+==============================================================================
+
+Framework inputs
+  <P>             = 0.5934
+  u_0             = 0.877681
+  alpha_LM        = 0.090668
+  alpha_s(v)      = 0.103304
+  alpha_LM^2      = 0.008221 (= alpha_bare * alpha_s(v))
+  v               = 246.28 GeV
+  R_conn          = 0.888889
+  taste_weight    = 0.388889 (= 7/18)
+
+Support inventory quantitative package
+  v [GeV]                        246.2828   obs   246.2200   dev  +0.026%
+  alpha_s(M_Z)                     0.1181   obs     0.1179   dev  +0.141%
+  sin^2(theta_W)(M_Z)              0.2306   obs     0.2312   dev  -0.264%
+  1/alpha_EM(M_Z)                127.6650   obs   127.9510   dev  -0.224%
+  g_1(v)                           0.4644   obs     0.4640   dev  +0.084%
+  g_2(v)                           0.6480   obs     0.6463   dev  +0.270%
+  y_t(v)                           0.9176   obs     0.9170   dev  +0.065%
+  m_t(pole, 2-loop) [GeV]        172.5700   obs   172.6900   dev  -0.069%
+  m_t(pole, 3-loop) [GeV]        173.1000   obs   172.6900   dev  +0.237%
+  m_H(2-loop) [GeV]              119.7700   obs   125.2500   dev  -4.375%
+  m_H(full 3-loop) [GeV]         125.1000   obs   125.2500   dev  -0.120%
+  Vacuum stability          Qualitatively favorable   comparator SM metastability
+
+Primary support stack
+  COMPLETE_PREDICTION_CHAIN_2026_04_15.md
+  ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md
+  RCONN_DERIVED_NOTE.md
+  YT_EW_COLOR_PROJECTION_THEOREM.md
+  YT_COLOR_PROJECTION_CORRECTION_NOTE.md
+  YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md
+  HIGGS_MASS_FROM_AXIOM_NOTE.md
+
+Status: support inventory; audit status is pipeline-derived
+
+----- stderr -----
+

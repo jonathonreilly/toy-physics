@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_g_bare_two_ward_closure.py
+runner_sha256: 306472fc90e3117c16f7a04ce0c822990e138d778de19b82cbb133f9d90d5534
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================
+BLOCK 1: Rep-B ingredients are g_bare-independent
+========================================================================
+  [PASS] Free-theory contraction count gives Z^2 = N_c N_iso = 6  --  sum = 6, Z^2 = 6
+  [PASS] Canonical fermion-state normalization gives Wick amplitude 1  --  tree-level bilinear contraction
+  [PASS] Top-channel singlet Clebsch-Gordan weight = 1/sqrt(6)  --  CG = 0.4082482905
+
+========================================================================
+BLOCK 2: Rep-B tree-level form factor
+========================================================================
+  [PASS] Tree-level H_unit form factor y_t_bare = 1/sqrt(6)  --  y_t_bare = 0.4082482905
+  [PASS] Rep-B theorem: y_t_bare is unchanged at g_bare = 0.0  --  no tree-level gauge insertion enters the H_unit matrix element
+  [PASS] Rep-B theorem: y_t_bare is unchanged at g_bare = 1.0  --  no tree-level gauge insertion enters the H_unit matrix element
+  [PASS] Rep-B theorem: y_t_bare is unchanged at g_bare = 2.0  --  no tree-level gauge insertion enters the H_unit matrix element
+  [PASS] Rep-B theorem: y_t_bare is unchanged at g_bare = 3.0  --  no tree-level gauge insertion enters the H_unit matrix element
+
+========================================================================
+BLOCK 3: D17 scalar-singlet uniqueness on Q_L
+========================================================================
+  [PASS] (1,1) scalar has unique Z^2 = 6 among candidate Q_L irreps  --  (1,1)=6.0, (1,8)=8.0, (3,1)=4.5, (8,3)=24.0
+
+========================================================================
+BLOCK 4: Rep-A stays symbolic in g_bare
+========================================================================
+  [PASS] Explicit Clifford trace gives c_S = +1  --  c_S = 1.0000000000
+  [PASS] Rep A coefficient at g_bare = 1 is 1/6  --  coeff = 0.1666666667
+  [PASS] Rep A coefficient scales as g_bare^2  --  g=1 -> 0.1666666667, g=2 -> 0.6666666667
+
+========================================================================
+BLOCK 5: Off-surface same-Gamma^(4) pinning theorem
+========================================================================
+  [PASS] Ward theorem states the two representations are evaluations of the same Green's function in the same retained theory  --  Step 3 same-theory identity in YT_WARD theorem
+  [PASS] Pinning theorem states the coefficient identity for arbitrary g_bare  --  off-surface same-Gamma^(4) coefficient identity
+  [PASS] The coefficient identity singles out g_bare = 1 on the positive branch  --  Rep-B coefficient = 1/6 matches Rep A only at g_bare = 1
+
+========================================================================
+BLOCK 6: Solve the matching identity
+========================================================================
+  [PASS] Solve g_bare^2 = 2 N_c y_t_bare^2 = 1  --  g_bare^2 = 1.0000000000
+  [PASS] Unique positive solution g_bare = 1  --  g_bare = 1.0000000000
+  [PASS] Recovered ratio y_t_bare / g_bare = 1/sqrt(6)  --  ratio = 0.4082482905
+
+========================================================================
+SUMMARY
+========================================================================
+  PASS = 18
+  FAIL = 0
+
+  Two-Ward closure chain:
+    Rep B independence theorem  ->  y_t_bare = 1/sqrt(6)
+    Same-1PI pinning theorem    ->  y_t_bare^2 = g_bare^2 / (2 N_c)
+    Therefore                  ->  g_bare = 1
+
+  VERDICT: CLOSED
+
+----- stderr -----
+

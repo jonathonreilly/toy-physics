@@ -1,0 +1,153 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_mass_derived.py
+runner_sha256: f67dbcb6676ae0011cc63dd314c2d57671c0556c60daa19105b90bac323b602c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+========================================================================================
+PHASE 4: NEUTRINO SECTOR CLOSURE FROM RETAINED STAIRCASE THEOREMS
+========================================================================================
+
+Authorities consumed:
+  - DM_NEUTRINO_ATMOSPHERIC_SCALE_THEOREM_NOTE_2026-04-15.md
+  - NEUTRINO_MAJORANA_ADJACENT_SINGLET_PLACEMENT_THEOREM_NOTE.md
+  - NEUTRINO_MAJORANA_RESIDUAL_SHARING_SPLIT_THEOREM_NOTE.md
+  - PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md
+  - DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md      (Phase 1)
+  - UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md   (Phase 2)
+  - CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md (Phase 3)
+
+----------------------------------------------------------------------------------------
+Part 1: retained staircase + Dirac inputs
+----------------------------------------------------------------------------------------
+  alpha_bare = 1/(4 pi)       = 0.079577471546
+  u_0 = P_MC^(1/4)           = 0.877681381199
+  alpha_LM = alpha_bare/u_0  = 0.090667836017
+  alpha_s(v) = alpha_bare/u_0^2 = 0.103303816122
+  M_Pl                       = 1.220900e+19 GeV
+  C_APBC = (7/8)^(1/4)       = 0.967168210134
+  v_EW = M_Pl * C * alpha_LM^16 = 2.462828e+02 GeV
+  g_weak                     = 0.653000
+  y_nu^eff = g_weak^2 / 64   = 0.006662640625
+  k_A                        = 7
+  k_B                        = 8
+  eps/B = alpha_LM/2         = 0.045333918009
+  [PASS] alpha_LM is the plaquette-surface long-mode coupling  (alpha_LM=0.090667836017)
+  [PASS] k_B = k_A + 1 (adjacent-placement theorem)  (k_B-k_A=1)
+  [PASS] eps/B = alpha_LM/2 (residual-sharing split theorem)  (eps/B=0.045333918009)
+  [PASS] y_nu^eff = g_weak^2/64 (retained local Dirac theorem)  (y_nu^eff=0.006662640625)
+
+----------------------------------------------------------------------------------------
+Part 2: Z_3 breaking parameters rho, eta_break from the staircase
+----------------------------------------------------------------------------------------
+  A  = M_Pl * alpha_LM^7         = 6.149685e+11 GeV
+  B  = M_Pl * alpha_LM^8         = 5.575786e+10 GeV
+  rho = B/A                     = 0.090667836017
+  eta_break = eps/B            = 0.045333918009
+
+  Plan-level statement:
+    'Once rho and eta_break are determined, the mass-squared
+     splittings are predictions.'
+  Both are determined here from retained framework quantities.
+  [PASS] rho = B/A equals alpha_LM (one staircase step)  (rho=0.090667836017 vs alpha_LM=0.090667836017)
+  [PASS] eta_break = eps/B equals alpha_LM/2 (residual sharing)  (eta_break=0.045333918009)
+  [PASS] k_B = 8 is an integer derived from adjacent-placement theorem, not a fit  (k_B=8)
+
+----------------------------------------------------------------------------------------
+Part 3: Majorana eigenvalues + seesaw light-neutrino masses
+----------------------------------------------------------------------------------------
+  M_1 = B (1 - eps/B)        = 5.323014e+10 GeV
+  M_2 = B (1 + eps/B)        = 5.828558e+10 GeV
+  M_3 = A                    = 6.149685e+11 GeV
+
+  m_1 = y^2 v^2 / M_3        = 4.378327e-03 eV
+  m_2 = y^2 v^2 / M_2        = 4.619552e-02 eV
+  m_3 = y^2 v^2 / M_1        = 5.058286e-02 eV
+
+  Dm^2_31 (predicted)        = 2.539456e-03 eV^2
+  Dm^2_31 (NuFit 5.3 NO)     = 2.453000e-03 eV^2
+  deviation                  = +3.52%
+
+  Dm^2_21 (predicted, diagonal) = 2.114856e-03 eV^2
+  Dm^2_21 (NuFit 5.3 NO)        = 7.420000e-05 eV^2
+  [PASS] atmospheric mass-scale m_3 within 5% of observation (no fit)  (m_3=5.058286e-02 eV vs obs 4.952777e-02 eV)
+  [PASS] Dm^2_31 within 5% of NuFit 5.3 NO central (no fit)  (Dm31=2.539456e-03 vs obs 2.453000e-03)
+  [PASS] normal ordering is structural (m_3 > m_2 > m_1)  (m_3=5.058e-02, m_2=4.620e-02, m_1=4.378e-03 eV)
+  [PASS] solar gap Dm^2_21 NOT closed by diagonal benchmark (open lane)  (Dm21_diag=2.115e-03 eV^2 vs obs 7.420e-05 eV^2)
+
+----------------------------------------------------------------------------------------
+Part 4: PMNS angle landmarks from conditional/support closure
+----------------------------------------------------------------------------------------
+  theta_23 upper-octant chamber-threshold consequence (conditional/support):
+    s_23^2 >= s_23^2_min ~ 0.5410 at PDG central
+    (see PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE)
+
+  theta_12, theta_13 status: bounded chamber, no sharp point
+    pinning; the conditional/support closure is consistent with observation
+    on a 1-parameter chamber-boundary ridge q+ + delta = sqrt(8/3).
+  [PASS] theta_23 upper-octant prediction is above maximal mixing  (s_23^2_min=0.5410 > 0.5)
+  [PASS] theta_23 prediction is falsifiable by JUNO/DUNE/HK  (conditional/support prediction lies in physical octant range)
+
+----------------------------------------------------------------------------------------
+Part 5: k_B closure (taste-staircase level for lightest RH neutrino)
+----------------------------------------------------------------------------------------
+  k_B = 8  (adjacent-placement theorem)
+  B = M_Pl * alpha_LM^8 = 5.575786e+10 GeV
+  M_1 = B(1 - alpha_LM/2) = 5.323014e+10 GeV
+
+  Leptogenesis consequence:
+    With k_B = 8 derived (not fitted), the leptogenesis decay
+    temperature T_L ~ M_1 / (some O(1) factor) inherits the
+    alpha_LM^8 suppression from the staircase. This is the
+    Phase 5 cosmology-cascade input.
+  [PASS] k_B resolves the lightest RH-neutrino scale without fitting  (k_B=8)
+  [PASS] M_1 derives cleanly from M_Pl, alpha_LM, and eps/B with no free parameter  (M_1=5.323e+10 GeV)
+  [PASS] B / M_Pl = alpha_LM^8 (structural, no fit)  (B/M_Pl=4.566947e-09, alpha_LM^8=4.566947e-09)
+
+----------------------------------------------------------------------------------------
+Part 6: cross-link to Phase 1-2 quark sector (alpha_LM factor)
+----------------------------------------------------------------------------------------
+  Phase 1 quark 2-3: m_s/m_b = (alpha_s(v)/sqrt(6))^(6/5) = 0.022390
+  Phase 4 neutrino 2-3: eps/B = alpha_LM/2                 = 0.045334
+
+  Ratio-of-ratios check:
+    (m_s/m_b) / (eps/B) = 0.493885
+    This is the structural hierarchy-asymmetry factor between
+    the quark 2-3 splitting (5/6 bridge) and the neutrino 2-3
+    splitting (residual sharing, 1/2 factor).
+  [PASS] Phase 1 m_s/m_b > 0 and sub-unity (structural)  (m_s/m_b=0.022390)
+  [PASS] Phase 4 eps/B > 0 and sub-unity (structural)  (eps/B=0.045334)
+  [PASS] quark and neutrino 2-3 splittings carry the SAME alpha_LM chain  (structural shared-building-block comparator)
+
+----------------------------------------------------------------------------------------
+Part 7: Phase 4 summary
+----------------------------------------------------------------------------------------
+  What Phase 4 RETAINS as zero-free-parameter output:
+    - k_A = 7, k_B = 8 (adjacent-placement theorem)
+    - rho = B/A = alpha_LM
+    - eta_break = eps/B = alpha_LM/2 (residual-sharing theorem)
+    - y_nu^eff = g_weak^2/64 (retained local Dirac theorem)
+    - m_3 ~ 5.06e-2 eV (atmospheric-scale theorem)
+    - Dm^2_31 within a few percent of NuFit 5.3 NO central
+    - normal ordering as structural prediction
+    - theta_23 upper-octant conditional/support chamber consequence
+
+  What Phase 4 BOUNDS but does NOT retain:
+    - the solar gap Dm^2_21 (diagonal benchmark over-predicts;
+      needs full-matrix flavor closure)
+    - sharp point predictions for theta_12, theta_13, delta_CP
+      (currently bounded to chamber-boundary ridge)
+
+  What Phase 4 DELIVERS to Phase 5:
+    - a closed k_B = 8 with derived M_1 = B(1 - alpha_LM/2)
+    - these feed the leptogenesis temperature / lepton-asymmetry
+      yield used in the cosmology cascade runner.
+
+========================================================================================
+  TOTAL: PASS=19, FAIL=0
+========================================================================================
+
+----- stderr -----
+

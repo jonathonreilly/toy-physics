@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/frontier_tensor_block_closure_test.py
+runner_sha256: e55ca5b008537f95d376e34ed3edc892f71f0d05e1037b1badc4b28eed84fb1a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 10.14
+status: ok
+----- stdout -----
+Minimal rank-two tensor block closure test
+==============================================================================
+exact local O_h:
+  scalar_action=-9.649741e-02, base_eta=[0.000e+00, 3.449e-04], eta_coeff=3.573797e-03
+  K_tensor=[[4.442009e-03, 5.020745e-04], [5.020745e-04, 3.666789e-02]]
+  a_star=[-1.064685e-03, 9.419596e-03]
+  mixed additivity error=[dG_0i=3.059e-08, dG_TF=7.806e-18]
+finite-rank:
+  scalar_action=-1.373264e+00, base_eta=[0.000e+00, 4.555e-03], eta_coeff=3.317194e-03
+  K_tensor=[[4.049376e-03, 1.232683e-04], [1.232683e-04, 4.973095e-02]]
+  a_star=[-2.788652e-03, 9.160748e-02]
+  mixed additivity error=[dG_0i=6.850e-08, dG_TF=6.191e-11]
+
+Cross-family comparison:
+  kernel relative difference = 2.621449e-01
+  eta_coeff relative difference = 7.180115e-02
+  a_star relative difference = 8.969562e-01
+
+Verdict:
+The rank-two block is locally sufficient on each family, but not universal across the audited restricted class. The tensor source-map and kernel remain family-sensitive, so the minimal completion does not yet close the branch as a single universal theorem.
+
+Classified checks:
+  [BOUNDED] PASS: rank-two block locally sufficient on exact local O_h (mixed additivity error <1e-6)
+  [BOUNDED] PASS: rank-two block locally sufficient on finite-rank (mixed additivity error <1e-6)
+  [BOUNDED] PASS: cross-family kernel mismatch confirms non-universality (k_rel=2.621e-01 >= 0.05)
+  [BOUNDED] PASS: cross-family eta_coeff mismatch confirms non-universality (eta_rel=7.180e-02 >= 0.05)
+  [BOUNDED] PASS: cross-family a_star mismatch confirms non-universality (a_rel=8.970e-01 >= 0.05)
+  [BOUNDED] PASS: non-universality across audited restricted class (at least one of kernel/eta/a_star differs by >=5%)
+
+----- stderr -----
+

@@ -1,0 +1,88 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_commutant_eigenoperator_selector.py
+runner_sha256: b4908c9336b4b2680fc119fdce00e712ccb482a79862383159a927751790a533
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================================
+PMNS COMMUTANT EIGENOPERATOR SELECTOR
+========================================================================================
+
+Inputs reused:
+  - Cl(3) on Z^3 generation boundary
+  - projected commutant / corner-distinguishing generator geometry
+  - hw=1 corner orbit and C3[111] transport
+
+Question:
+  Can a non-Cl(3) projected commutant eigenoperator on the hw=1
+  triplet produce a native value law for the unresolved PMNS data?
+
+========================================================================================
+PART 1: PROJECTED COMMUTANT GENERATORS PROVIDE CORNER SPECTRA
+========================================================================================
+  [PASS (A)] The projected commutant at X1 has dimension 4
+  [PASS (A)] The projected commutant at X2 has dimension 4
+  [PASS (A)] The projected commutant at X3 has dimension 4
+  [PASS (A)] A projected commutant generator outside the projected Cl(3) span exists  (corner-distinguishing projected non-Cl(3) generator found)
+  [PASS (A)] The projected non-Cl(3) generator has a real projected trace at X1  (trace=0.267862)
+  [PASS (A)] The projected non-Cl(3) generator has a real projected trace at X2  (trace=0.133931)
+  [PASS (A)] The projected non-Cl(3) generator has a real projected trace at X3  (trace=0.133931)
+  [PASS (A)] The projected non-Cl(3) generator distinguishes the three corners  (traces=[np.float64(0.2678624284533773), np.float64(0.1339312142266887), np.float64(0.1339312142266887)])
+  [PASS (A)] The C3 unitary maps X1 into X2 with unit singular values  (svs=[1. 1. 1. 1.])
+
+========================================================================================
+PART 2: FOURIER DECOMPOSITION OF THE CORNER SPECTRUM
+========================================================================================
+  [PASS (A)] The C3-even Fourier mode is the corner average  (v0=0.178575+0.000000j, mean=0.178575+0.000000j)
+  [PASS (A)] The two C3-odd Fourier modes are exchanged by conjugation on a real profile  (v1=0.044644+0.000000j, v2=0.044644+0.000000j)
+  [PASS (A)] The odd mode is nonzero because the projected commutant generator distinguishes corners  (|v1|=0.044644)
+  [INFO] The even mode is invariant under cyclic relabeling of the corners  (orbit average is sector-even)
+
+  This is the exact projected-commutant eigenoperator selector law:
+    - even Fourier mode = passive offset class
+    - odd Fourier mode  = sector-orientation selector
+    - corner-distinguishing data enter only through the C3 orbit
+
+========================================================================================
+PART 3: THE SELECTOR LAW FIXES THE BRANCH AND PASSIVE OFFSET CLASS
+========================================================================================
+  [PASS (A)] The sector-orientation selector is a one-bit quantity  (tau=0)
+  [PASS (A)] The passive offset selector is a Z_3-valued class label  (q=2)
+  [INFO] The selector law is supported on the non-Cl(3) projected commutant generator  (the odd Fourier mode is sourced by the non-Cl(3) part)
+  [INFO] The selector law does not encode a 5-real active source  (selector output is only a one-bit / Z_3 class)
+
+  Therefore the projected commutant eigenoperator route fixes the
+  branch bit and passive offset class, but not the active 5-real
+  corner-breaking source.
+
+========================================================================================
+PART 4: THE ROUTE IS TOO SMALL TO FIX THE FULL ACTIVE VALUE LAW
+========================================================================================
+  [PASS (A)] The active corner-breaking source has five real coordinates  (xi1, xi2, eta1, eta2, delta)
+  [PASS (A)] The projected commutant eigenoperator route supplies only the 3-corner orbit data  (one even mode + two odd modes)
+  [PASS (A)] A 3-corner selector cannot uniquely determine a 5-real active source  (5 > 3)
+
+  So this route is a genuine native selector law, but it is not the
+  full microscopic value law for the active PMNS deformation.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact theorem status:
+    - positive native selector law: YES
+    - full microscopic closure from this route: NO
+
+  What the route fixes:
+    - sector-orientation selector (one bit)
+    - passive offset class (Z_3 class label)
+
+  What it does not fix:
+    - the active seed pair
+    - the active 5-real corner-breaking source
+
+PASS=17  FAIL=0
+
+----- stderr -----
+

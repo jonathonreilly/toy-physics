@@ -1,0 +1,151 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_su3_gauge_loop_derivation_attempt.py
+runner_sha256: 7e1a09a308aa1c7ab615c78a17e151361f8bb7b4863c7d53c27402fe3aa1d175
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+==============================================================================
+SU(3) GAUGE-LOOP DERIVATION ATTEMPT for the 8/3 Enhancement
+==============================================================================
+
+  Target: derive the bridging factor 8/3 = dim(adj_3)/N_c that links
+  the bare chiral Wilson mass (m_S3_bare = 6 v) to the audit candidate
+  (m_DM = 16 v) via SU(3) gauge dynamics.
+
+Step 0: SU(3) Casimir constants (textbook)
+
+  N_c              = 3
+  dim(fund) = N_c  = 3
+  dim(adj) = N_c^2 - 1 = 8
+  C_2(fund)        = (N_c^2 - 1)/(2 N_c) = 4/3 = 1.333333
+  T(fund) = T_F    = 1/2 = 0.500000
+  C_2(adj)         = 3 = 3.000000
+  C_2(singlet)     = 0 (no color charge)
+
+==============================================================================
+Step 1: standard one-loop gauge boson contribution to scalar mass
+==============================================================================
+
+  The standard Coleman-Weinberg one-loop self-energy for a scalar
+  in representation R of an SU(N) gauge group:
+
+      delta m^2 = (3 g^2 / (16 pi^2)) * C_2(R) * m^2 * log(Lambda^2/m^2)
+
+  For the dark singlet (color-singlet, R = trivial):
+      C_2(R = singlet) = 0
+      => delta m^2 = 0 at one loop.
+
+  RESULT: the standard one-loop CW gauge route gives EXACTLY ZERO
+  enhancement for a color-singlet scalar. The 8/3 factor cannot
+  emerge from this route.
+
+  [PASS] C_2(singlet) = 0 (color-singlet has no gauge Casimir): trivially: a singlet under SU(3) couples to no SU(3) generators
+  [PASS] Standard one-loop gauge correction to color-singlet vanishes: delta m^2 ~ C_2(singlet) = 0
+
+==============================================================================
+Step 2: alternative route candidates for the 8/3 enhancement
+==============================================================================
+
+  Target enhancement: 8/3 = 2.666667
+
+  Candidate (a): 2 * C_2(F) = 8/3 [Doubled-Wilson + Casimir]
+    2 * C_2(F) = 2 * 4/3 = 8/3 = 2.666667
+    matches 8/3: True
+    Comment: numerical match, but the factor of 2 has no clean
+    derivation; Wilson r-doubling typically produces 4 (= 2^2 for
+    Wilson + naive doubling), not 2.
+  [PASS] 2 * C_F equals target 8/3 (numerical match only): 8/3 = 8/3
+
+  Candidate (b): dim(adj)/N_c = 8/3 [Casimir-sum identity]
+    dim(adj)/N_c = 8/3 = 8/3 = 2.666667
+    matches 8/3: True
+    Comment: this ratio appears as 'gauge-multiplicity over color-
+    trace normalization' in textbook SU(3) calculations (e.g.,
+    Polyakov loop expansions, gluon condensate normalization). But
+    it does NOT enter the standard one-loop self-energy of a
+    color-singlet scalar at order alpha_s.
+  [PASS] dim(adj)/N_c equals target 8/3 (numerical match only): 8/3 = 8/3
+
+  Candidate (c): color-singlet bilinear sum rule
+    Sum_a Tr_F(T^a T^a) / N_c^2 = C_2(F) * dim(F) / N_c^2
+      = 4/3 * 3 / 9 = 4/9 = 0.444444
+    Does NOT match 8/3.
+  [PASS] Bilinear sum-rule (c) does NOT match 8/3 (rules out this route): 4/9 != 8/3
+
+  Candidate (d): two-loop gauge correction with adjoint propagator
+    delta m^2 ~ (g^2)^2 * dim(adj) * C_2(F) / (16 pi^2)^2
+    The dim(adj) * C_2(F) = 8 * 4/3 = 32/3 != 8/3.
+    Even normalizing by N_c: 32/9 != 8/3.
+    dim(adj) * C_F = 32/3 = 10.666667 (no match)
+    dim(adj) * C_F / N_c = 32/9 = 3.555556 (no match)
+  [PASS] Two-loop adjoint route (d) does NOT match 8/3 (rules out this route): 32/3 = 10.6667, 32/9 = 3.5556
+
+==============================================================================
+Step 3: HONEST OBSTRUCTION SUMMARY
+==============================================================================
+
+  Standard one-loop CW: ZERO for color-singlet (no gauge coupling).
+  Two-loop adjoint:     32/3 or 32/9, neither matches 8/3.
+  Bilinear sum-rule:    4/9, does not match 8/3.
+
+  Routes that NUMERICALLY match 8/3 but lack derivation:
+    (a) 2 * C_F: factor of 2 unexplained.
+    (b) dim(adj)/N_c: structural ratio without derived dynamical role
+        in the dark-singlet mass.
+
+  CONCLUSION: the standard perturbative gauge-loop route does NOT
+  produce the 8/3 enhancement. To derive 8/3, one of the following
+  alternative mechanisms would have to be invoked (each itself
+  requires a separate theorem):
+
+    R1. Wilson-r doubling structural identity. The lattice Wilson
+        action with r=1 doubles the fermion content; this could
+        produce a factor 2 if the dark singlet sits in the doubled
+        sector. Combined with C_2(F) = 4/3, this would give 8/3.
+        Status: NOT YET DERIVED; this would require a careful
+        accounting of the staggered-Dirac doubler structure on the
+        gauge-singlet block.
+
+    R2. Non-perturbative gluon condensate. The QCD vacuum has a
+        non-zero <Tr(F^2)>/N_c condensate. The dark singlet may
+        acquire mass via this condensate proportional to dim(adj)/N_c.
+        Status: speculative; non-perturbative gluon condensate is
+        bounded but not derived in this framework.
+
+    R3. Cl(3) / SU(3) embedding structural identity. The Cl(3)
+        chiral algebra C^8 has dimension 8 = dim(adj_3); the dark
+        singlet's mass might pick up the ratio 8/3 from a specific
+        algebraic embedding identity.
+        Status: this is the most structurally promising route, but
+        requires explicit calculation on the Cl(3) -> SU(3) bridge.
+
+  [PASS] Obstruction documented: standard one-loop CW gives 0 for color-singlet: the simple gauge-loop derivation route is OBSTRUCTED
+  [PASS] Alternative routes R1-R3 named for follow-up: Wilson-r doubling, non-perturbative condensate, Cl(3)/SU(3) embedding
+
+==============================================================================
+SUMMARY
+==============================================================================
+
+  Total checks: PASS = 8, FAIL = 0
+
+  RESULT: This runner attempted the SU(3) gauge-loop derivation of
+  the 8/3 = dim(adj_3)/N_c enhancement and reports an HONEST OBSTRUCTION.
+
+  Standard one-loop CW gauge corrections vanish for color-singlet
+  scalars (C_2(singlet) = 0). The 8/3 cannot emerge from this route.
+
+  Three alternative mechanisms (R1 Wilson-doubling; R2 non-perturbative
+  condensate; R3 Cl(3)/SU(3) embedding) are named as candidate paths,
+  with R3 (Cl(3) chiral cube has dim 8 = dim(adj_3); the SU(3) embedding
+  ratio is 8/3) flagged as the most structurally promising. Each is itself
+  an open theorem.
+
+  This SHARPENS the closure target further: the open lane is no longer
+  'derive 8/3 from gauge-loop'; it is 'derive 8/3 from R3 Cl(3)/SU(3)
+  embedding identity', a more specific and tractable theorem.
+
+
+----- stderr -----
+

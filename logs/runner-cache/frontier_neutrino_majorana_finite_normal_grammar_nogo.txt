@@ -1,0 +1,79 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py
+runner_sha256: 70c7448cc49f7affe38d2aaea2894b4b2fcfa147988024c552b87fb57d5c6832
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: FINITE NORMAL-GRAMMAR NO-GO
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+    rows: Framework axiom; Observable principle; Anomaly-forced time;
+          Native weak algebra; Structural SU(3) closure; One-generation matter closure
+  - docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md
+  - docs/NEUTRINO_MAJORANA_NATIVE_GAUSSIAN_NO_GO_NOTE.md
+  - docs/NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md
+
+Question:
+  Does enlarging the current lane from the native quadratic Gaussian
+  to arbitrary finite number-preserving interactions inside the
+  retained normal grammar generate a Majorana coefficient?
+
+========================================================================================
+PART 1: THE RETAINED NORMAL GRAMMAR HAS EXACT FERMION-NUMBER U(1)
+========================================================================================
+  [PASS (C)] Quadratic hopping monomial has charge 0  (||[N,hop]||=0.00e+00)
+  [PASS (C)] Quartic density monomial has charge 0  (||[N,density]||=0.00e+00)
+  [PASS (C)] Quartic scattering monomial has charge 0  (||[N,scatter]||=0.00e+00)
+  [PASS (C)] Higher normal-grammar monomial still has charge 0  (||[N,triple]||=0.00e+00)
+  [PASS (C)] Majorana pair-annihilation carries charge -2  (||[N,cc]+2cc||=0.00e+00)
+  [PASS (C)] Majorana pair-creation carries charge +2  (||[N,c^dag c^dag]-2c^dag c^dag||=0.00e+00)
+  [PASS (C)] Charge-zero monomials are exactly U(1)-invariant  (max rotation error=0.00e+00)
+  [PASS (C)] Majorana pair rotates with the exact e^(-2 i theta) phase  (rotation error=0.00e+00)
+  [PASS (C)] Any finite sum of admitted charge-zero monomials still commutes with N  (||[N,H_sourced]||=0.00e+00)
+
+  Conclusion: the retained normal grammar is the charge-zero sector.
+  Adding more number-preserving interaction complexity does not leave
+  that symmetry class.
+
+========================================================================================
+PART 2: THE FINITE U(1) SELECTION RULE FORCES THE MAJORANA EXPECTATION TO ZERO
+========================================================================================
+  [PASS (C)] Finite Gibbs state of the retained grammar is U(1)-invariant  (||[N,rho]||=8.44e-18)
+  [PASS (C)] Charge-2 Majorana bilinear expectation vanishes exactly on the finite grammar  (<cc>=+0.00e+00+0.00e+00i)
+  [PASS (C)] Charge-zero observables remain nontrivial  (<density>=0.158729, <n0>=0.410328)
+  [PASS (C)] Symmetry rotation leaves the Majorana expectation unchanged as a state expectation  (rotation identity error=0.00e+00)
+  [PASS (C)] The same expectation obeys the charge-phase relation simultaneously  (phase identity error=0.00e+00)
+  [PASS (C)] Neutral pair-density observables can still be nonzero  (<c^dag c^dag c c>=0.158729)
+
+  So the exact finite-state selection rule is the real obstruction:
+  charge-zero observables survive, but the charge-2 Majorana bilinear
+  cannot acquire an expectation anywhere inside the retained grammar.
+
+========================================================================================
+PART 3: AN EXPLICIT DELTAL=2 INSERTION IS WHAT CHANGES THE RESULT
+========================================================================================
+  [PASS (C)] A pairing insertion breaks the retained U(1) symmetry  (||[N,H_pair]||=1.53e+00)
+  [PASS (C)] Once DeltaL=2 is inserted, the Majorana expectation becomes nonzero  (<cc>=-0.060846+0.000000i)
+
+  This is the exact lane boundary in one line:
+  more charge-zero interaction complexity does nothing, but a genuine
+  DeltaL=2 microscopic insertion changes the symmetry class.
+
+========================================================================================
+RESULT
+========================================================================================
+  No. The entire current finite retained normal grammar has exact
+  fermion-number U(1), so the charge-2 Majorana bilinear vanishes
+  exactly there. The next honest microscopic step is not another
+  charge-zero interaction, but a genuinely new DeltaL=2 object.
+
+  PASS=17  FAIL=0
+
+----- stderr -----
+

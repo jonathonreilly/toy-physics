@@ -1,0 +1,61 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_scalar_temporal_observable_bridge_no_go.py
+runner_sha256: ae342d1744c06a72013336e999185d1f11b84597b24ede0a14d1bcd1ee532be4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.44
+status: ok
+----- stdout -----
+========================================================================================
+GAUGE-SCALAR TEMPORAL OBSERVABLE BRIDGE NO-GO
+========================================================================================
+
+Current Wilson packet
+  beta                                  = 6
+  g_bare                                = 1
+  kernel shape                          = K_O(omega)=3w(3+sin^2 omega)
+  A_inf/A_2                             = 1.154700538379252
+  beta^5 onset coefficient              = 1/26244
+  current-packet fingerprint            = 9252bdaa2dd0287c7ca9f89989112172aee0256e0db756f431c97444c54ec93d
+
+Completion witnesses at beta=6
+  beta_eff^-(6)                         = 6.296296296296297
+  beta_eff^+(6)                         = 6.300961896296296
+  exact delta beta_eff(6)               = 729/156250 = 0.004665600000000
+  R_O(beta_eff^-(6))                    = 0.441402699435447
+  R_O(beta_eff^+(6))                    = 0.441694136647056
+  delta R_O                             = 2.914372116089026e-04
+
+  [PASS] [THEOREM] the theorem note declares no_go claim type
+         audit seeding can classify the new note as a no-go
+  [PASS] [THEOREM] the stretch note's A_min is preserved as the starting packet
+         beta=6, local source shape, and temporal ratio are present
+  [PASS] [THEOREM] the scalar temporal completion ratio remains exactly 2/sqrt(3)
+         A_inf/A_2=1.154700538379252
+  [PASS] [THEOREM] the beta^5 onset coefficient is exactly 1/26244
+         beta5=1/26244
+  [PASS] [THEOREM] both witnesses have the same cited primitive fingerprint
+         9252bdaa2dd0287c7ca9f89989112172aee0256e0db756f431c97444c54ec93d
+  [PASS] [THEOREM] the witnesses agree through the beta^5 onset and differ first by c beta^6
+         delta=729/156250
+  [PASS] [THEOREM] the local one-plaquette response is strictly increasing on the witness interval
+         P interval=[0.441402699435447, 0.441694136647056]
+  [PASS] [THEOREM] equal current packet but distinct completion witnesses give distinct BRIDGE readouts
+         delta R_O=2.914372116089026e-04
+  [PASS] [THEOREM] a current-packet derivation would assign one value, contradicting the two readouts
+         logical non-entailment by two-model witness
+  [PASS] [SUPPORT] defining beta_eff by R_O inverse recovers the witness coupling and is therefore tautological
+         inverses=(6.296296296296296, 6.300961896296291)
+  [PASS] [SUPPORT] the note names the exact objects that would escape the no-go
+         escape hatches are explicit nonperturbative primitives, not fits
+  [PASS] [SUPPORT] the note preserves the forbidden-import firewall
+         forbidden inputs appear only as exclusions
+  [PASS] [SUPPORT] the audit consequence proposes no_go while leaving audit authority independent
+         negative proposal, not positive bridge promotion or audit verdict
+
+========================================================================================
+SUMMARY: THEOREM PASS=9 SUPPORT=4 FAIL=0
+========================================================================================
+
+----- stderr -----
+

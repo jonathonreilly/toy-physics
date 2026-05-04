@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_up_amplitude_rpsr_conditional.py
+runner_sha256: 4784f7fd22edfe69182f6944716727b1d57e26def4a50b1a338a12c5437c880a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+========================================================================
+  RPSR theorem
+========================================================================
+
+  Retained inputs (CKM_ATLAS, QUARK_PROJECTOR_PARAMETER_AUDIT):
+    |p|^2 = cos_d^2 + sin_d^2 = 1.000000000000
+    rho       = 1/sqrt(42)    = 0.154303349962
+    eta       = sqrt(5/42)    = 0.345032779671
+    supp      = 6/7           = 0.857142857143
+    delta_A1  = 1/42          = 0.023809523810
+    sin_d     = sqrt(5/6)     = 0.912870929175
+    a_d       = rho           = 0.154303349962
+    a_u       = target RPSR   = 0.774886561056
+
+  RPSR:
+    LHS = a_u/sin_d + a_d = 1.003149047958
+    RHS = 1 + rho/49      = 1.003149047958
+    |LHS - RHS|           = 0.000e+00
+
+  [PASS] T1  |p|^2 = 1  (|p|^2 = 1.000000000000)
+  [PASS] T2  a_d = rho = 1/sqrt(42)
+  [PASS] T3  supp * delta_A1 = 1/49  (supp*delta_A1 = 0.020408163265)
+  [PASS] T4  rho * supp * delta_A1 = rho/49 (minimal 3-atom contraction)
+  [PASS] T5  Target a_u = 0.7748865611 (10 decimals)  (a_u = 0.7748865611)
+  [PASS] T6  RPSR identity: a_u/sin_d + a_d = 1 + rho/49 exactly  (diff = 0.000e+00)
+
+  STRC-closed LO identity:
+    a_u_LO  +  rho * sin_d  =  0.912870929175
+    sin_d                    =  0.912870929175
+    |LHS - RHS|              =  0.000e+00
+
+  RPSR scan over 8 Pareto-incomparable candidates:
+    D1  a_u=0.7746377775  LHS=1.002876519218  margin=-2.725e-04
+    D2  a_u=0.7746733180  LHS=1.002915451895  margin=-2.336e-04
+    D3  a_u=0.7748278942  LHS=1.003084781674  margin=-6.427e-05
+    D4  a_u=0.7748481729  LHS=1.003106995861  margin=-4.205e-05
+    T   a_u=0.7748865611  LHS=1.003149047958  margin=+0.000e+00
+    D5  a_u=0.7749181104  LHS=1.003183608483  margin=+3.456e-05
+    D6  a_u=0.7749930305  LHS=1.003265679364  margin=+1.166e-04
+    D7  a_u=0.7750754260  LHS=1.003355939087  margin=+2.069e-04
+  [PASS] T7  Only the target satisfies RPSR exactly  (min non-target |margin| = 3.456e-05)
+  [PASS] T8  Scalar (rho, eta) ray magnitude squared = 1/7  (|(rho, eta)|^2 = 0.142857142857)
+  [PASS] T9  Scalar/tensor ray magnitude-squared ratio = 6/7 = supp  (scalar^2/tensor^2 = 0.857142857143)
+
+  Cross-sector (meta-principle):
+    Quarks:          RPSR  a_u/sin_d + a_d = 1 + rho/49
+                     LO balance discharged by exact 1(+)5 channel completeness
+    Charged leptons: kappa = 2 (Koide-cone Casimir gap; MRU theorem)
+                     Koide sum rule (scalar amplitude retention)
+    Neutrinos:       a_nu = 0 (sigma = 0 no-go)
+
+  STRC is the exact LO carrier identity used in the quark RPSR theorem.
+
+========================================================================
+PASS=9 FAIL=0
+========================================================================
+
+----- stderr -----
+

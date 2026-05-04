@@ -1,0 +1,149 @@
+===== runner cache v1 =====
+runner: scripts/frontier_cosmology_frw_kinematic_reduction.py
+runner_sha256: 82df63e82125ddebf2e16aaeaa605566f9460f67c8d052f6ae5dba7ac25bc417
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+FRW late-time kinematic reduction theorem verification
+See docs/COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+  Retained/admitted surface:
+    Lambda = 3 / R_Lambda^2                 (spectral-gap identity)
+    w_Lambda = -1                           (retained corollary)
+    Omega_Lambda_0 = (H_inf / H_0)^2        (matter-bridge theorem)
+    Omega_total = 1                         (flatness)
+    w_matter = 0, w_radiation = 1/3         (standard)
+
+  [PASS] spectral-gap Lambda identity authority exists on main  (COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
+  [PASS] dark-energy EOS w = -1 authority exists on main  (DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md)
+  [PASS] Omega_Lambda matter-bridge authority exists on main  (OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md)
+
+----------------------------------------------------------------------------------------
+  [PASS] K1 matter-only limit: q = 1/2 (decelerating matter-dominated)  (q(Omega_L=0, Omega_r=0) = 0.5)
+  [PASS] K1 radiation-only limit: q = 1 (strongly decelerating)  (q(Omega_r=1) = 1.0)
+  [PASS] K1 Lambda-only limit: q = -1 (de Sitter)  (q(Omega_L=1) = -1.0)
+  [PASS] K1 q = 0 at Omega_L = 1/3 exactly (no Omega_r)  (q(Omega_L=1/3) = 0.0)
+  [PASS] K1 q = 0 shifts to Omega_L = (1+Omega_r)/3 at nonzero radiation  (Omega_L_qzero = 0.333364 vs 1/3 = 0.333333)
+
+  q_0 (framework on listed Omega_L,Omega_r): -0.5270
+  q_0 (listed Type Ia SN comparator):        -0.5500 +/- 0.05
+
+  [PASS] q_0 framework value matches listed SN Ia comparator within 1 sigma  (framework -0.5270 vs SN -0.5500 +/- 0.05)
+
+----------------------------------------------------------------------------------------
+  [PASS] K2 late-time symmetric point Omega_L = Omega_m gives 1 + z_* = 2^(1/3) ~ 1.26  (z_* = 0.2599, 2^(1/3) - 1 = 0.2599)
+  [PASS] K2 late-time Omega_L -> 0 limit: no acceleration, 1 + z_* -> 0 formally  (z_* formally = -0.9987 (near -1, no physical transition))
+
+  z_* exact (with radiation):        0.6310
+  z_* late-time (Omega_r -> 0):      0.6316
+  z_* listed SN Ia comparator:       0.6700 +/- 0.10
+
+  [PASS] radiation correction to late-time z_* is negligible at listed precision  (exact=0.631039, late=0.631556)
+  [PASS] z_* exact framework value matches listed SN Ia comparator within 1 sigma  (framework 0.6310 vs SN 0.6700 +/- 0.10)
+  [PASS] z_* > 0 under listed Omega_L > 1/3 (accelerating today)  (z_* = 0.6310 > 0)
+
+----------------------------------------------------------------------------------------
+  [PASS] K3 Omega_L = Omega_m gives z_mL = 0 (equality today)  (z_mL = 0.0)
+
+  z_mL (framework on listed Omegas): 0.2950
+  z_mL (listed Planck-derived):      0.2960
+
+  [PASS] z_mL framework matches listed Planck-derived value  (framework 0.2950 vs Planck-derived 0.2960)
+  [PASS] z_mL > 0 under listed Omega_L > Omega_m (Lambda dominates today)  (z_mL = 0.2950 > 0)
+
+----------------------------------------------------------------------------------------
+  [PASS] late-time K2/K3 ratio (1+z_*) / (1+z_mL) = 2^(1/3) at listed comparator (Omega_L=0.685)  (ratio=1.259921 vs 2^(1/3)=1.259921)
+  [PASS] late-time K2/K3 ratio (1+z_*) / (1+z_mL) = 2^(1/3) at symmetric (Omega_L=0.5)  (ratio=1.259921 vs 2^(1/3)=1.259921)
+  [PASS] late-time K2/K3 ratio (1+z_*) / (1+z_mL) = 2^(1/3) at Lambda-heavy (Omega_L=0.9)  (ratio=1.259921 vs 2^(1/3)=1.259921)
+  [PASS] late-time K2/K3 ratio (1+z_*) / (1+z_mL) = 2^(1/3) at just past acceleration threshold (Omega_L=0.35)  (ratio=1.259921 vs 2^(1/3)=1.259921)
+  [PASS] late-time K2-K3 gap formula z_* - z_mL = (2^(1/3) - 1)(1 + z_mL)  (formula=0.3366 vs direct=0.3366)
+
+  Listed-Omega late-time gap z_* - z_mL = 0.3366
+  (acceleration precedes Lambda-dominance by ~0.34 in z)
+
+----------------------------------------------------------------------------------------
+  H_inf / H_0 = sqrt(Omega_L) = 0.827466
+
+  [PASS] K4 H(a)/H_0 monotonically decreasing in a (late-time)  (H/H_0 at a = 1: 1.0000, a = 1e6: 0.827466)
+  [PASS] K4 H(a=100) / H_0 approaches sqrt(Omega_L) (asymptote)  (H(a=100)/H_0=0.827466 vs sqrt(Omega_L)=0.827466)
+  [PASS] K4 H^2(a -> inf) / H_0^2 = Omega_L exactly  (H^2/H_0^2 at a=1e20 = 0.684700000 vs Omega_L = 0.6847)
+
+----------------------------------------------------------------------------------------
+  [PASS] K5 H^2(a) >= H_inf^2 for all tested a > 0  (tested a in [0.01, 0.1, 0.5, 1.0, 2.0, 10.0, 100.0, 1000000.0, 1e+20], all H^2/H_0^2 >= Omega_L=0.6847)
+  [PASS] K5 at a = 1: H_0 >= H_inf, i.e. Omega_L <= 1  (H^2/H_0^2 at a=1 = 1.000092 vs H_inf^2/H_0^2 = 0.6847)
+  [PASS] K5 equality H = H_inf requires Omega_m = Omega_r = 0 (not physical today)  (Omega_m = 0.3153, Omega_r = 9.2e-05; both > 0 today)
+
+----------------------------------------------------------------------------------------
+  x = H_inf/H_0 = 0.827466  (sqrt of listed Omega_L = 0.6847)
+
+  Derived from x plus listed Omega_r comparator:
+    omega_L          = +0.684700
+    omega_m          = +0.315208
+    q0               = -0.527004
+    z_star           = +0.631198
+    z_mL             = +0.295093
+    H_inf_over_H0    = +0.827466
+
+  [PASS] Omega_L from x = (H_inf/H_0)^2 matches listed comparator  (Omega_L = 0.684700 vs obs 0.6847)
+  [PASS] Omega_m from flatness matches listed comparator  (Omega_m = 0.315208 vs obs 0.3153)
+  [PASS] q_0 derived from x plus Omega_r matches SN Ia comparator within 1 sigma  (q_0 = -0.5270 vs SN -0.55)
+  [PASS] z_* derived from x plus Omega_r matches SN Ia comparator within 1 sigma  (z_* = 0.6312 vs SN 0.67)
+  [PASS] z_mL derived from x plus Omega_r matches listed Planck-derived comparator  (z_mL = 0.2951 vs Planck 0.296)
+
+  SIX cosmology observables derived structurally from the single
+  open number x = H_inf/H_0:
+    1. Omega_Lambda,0 = x^2               (retained matter-bridge)
+    2. Omega_m,0     = 1 - x^2 - Omega_r  (flatness)
+    3. q_0           = (1 + Omega_r - 3x^2) / 2   (new K1)
+    4. z_*           = positive root of K2 quartic (new K2)
+    5. z_mL          = (x^2 / Omega_m)^(1/3) - 1  (new K3)
+    6. H_inf         = x * H_0                    (K4 attractor)
+  [PASS] reduction package extends matter-bridge from 3 observables to 6  (Omega_L, Omega_m, q_0, z_*, z_mL, H_inf all functions of x alone)
+
+----------------------------------------------------------------------------------------
+  The K-identities are JOINT identities. Any inconsistent measurement
+  pair (e.g. q_0 inconsistent with z_* under the same Omega_L) falsifies
+  the retained w = -1 + flat FRW surface.
+
+  Falsification channels:
+    - DESI/Euclid joint (Omega_L, q_0) > 3 sigma off K1 => falsifies
+    - SNIa precision at z ~ 0.6 with confident K2 violation => falsifies
+    - Any w != -1 at high significance => falsifies K1-K5 via w=-1 input
+    - Any |Omega_k| > 0.002 => falsifies flatness input
+
+  [PASS] framework (q_0, z_*) pair within 1 sigma of joint comparator  (q_0: -0.5270 vs -0.5500+/-0.05; z_*: 0.6312 vs 0.6700+/-0.10)
+
+----------------------------------------------------------------------------------------
+  FIVE STRUCTURAL IDENTITIES LANDED (K1-K5) on retained w = -1 + flat FRW:
+
+    K1: q_0       = (1/2)(1 + Omega_r - 3 Omega_L)              [exact]
+    K2: q(a_*)=0 gives a positive quartic root                  [exact]
+        1+z_* = (2 Omega_L / Omega_m)^(1/3)                     [Omega_r -> 0]
+    K3: 1 + z_mL  = (Omega_L / Omega_m)^(1/3)                   [exact]
+    K4: a(t) ~ exp(H_inf t) as t -> inf                         [asymptotic]
+    K5: H(t) >= H_inf for all t >= 0                            [Hubble lower bound]
+
+  REDUCTION: six late-time cosmology observables (Omega_L, Omega_m, q_0, z_*,
+    z_mL, H_inf) reduce to the SAME single open number H_inf/H_0.
+
+  COMPARATOR CHECKS (after inserting listed Omega_L = 0.685):
+    q_0    framework -0.528  vs SN Ia -0.55 +/- 0.05  [1-sigma match]
+    z_*    framework  0.632  vs SN Ia  0.67 +/- 0.10  [1-sigma match]
+    z_mL   framework  0.296  vs Planck 0.30  +/- 0.05 [1-sigma match]
+
+  DOES NOT CLOSE:
+    - H_inf/H_0 point prediction (matter-bridge open number unchanged)
+    - Omega_L or Omega_m numerical values
+    - matter composition (eta, Omega_b, R, alpha_GUT)
+
+========================================================================================
+  TOTAL: PASS=35, FAIL=0
+========================================================================================
+
+----- stderr -----
+

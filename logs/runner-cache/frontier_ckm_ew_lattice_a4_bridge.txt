@@ -1,0 +1,91 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_ew_lattice_a4_bridge.py
+runner_sha256: 5e583cc27b925507a57229a4cde0b74968bd05e5f45b55dc6d767f9eb2aafcc1
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.04
+status: nonzero_exit
+----- stdout -----
+========================================================================================
+CKM-EW lattice A^4 retained bridge audit
+See docs/CKM_EW_LATTICE_A4_BRIDGE_RETAINED_IDENTITY_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Authority and status boundary
+----------------------------------------------------------------------------------------
+  [PASS] authority exists: docs/MINIMAL_AXIOMS_2026-04-11.md
+    extracted Status: '**SUPERSEDED** by `MINIMAL_AXIOMS_2026-05-03.md` — see that note for the current axiom set.'
+  [PASS] authority exists: docs/YT_EW_COLOR_PROJECTION_THEOREM.md
+    extracted Status: 'audited_conditional / bounded EW normalization lane. The exact'
+  [PASS] authority exists: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+    extracted Status: 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
+  [PASS] authority exists: docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+    extracted Status: 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
+  [PASS] authority exists: docs/CL3_TASTE_GENERATION_THEOREM.md
+    extracted Status: 'reviewed exact algebraic support theorem on current `main`; numerically verified'
+  [FAIL] YT_EW authority is retained/derived
+  [PASS] Wolfenstein authority is retained
+  [PASS] CKM counts authority is retained
+  [PASS] CL3 taste remains support-tier
+  [PASS] companion below-W2 source theorem exists
+  [PASS] companion theorem states A^2 = N_pair / N_color = 2/3
+  [PASS] note states boundary: companion corollary to the retained below-`W2` `A^2` source theorem
+  [PASS] note states boundary: A2_BELOW_W2_DERIVATION_CLOSED=TRUE
+  [PASS] note states boundary: SUPPORT_TIER_PROMOTION=FALSE
+  [PASS] note states boundary: KOIDE_CLOSURE=FALSE
+  [PASS] note states boundary: Support-tier CL3 taste-generation readings are not used.
+  [PASS] note avoids promotion: SUPPORT_TIER_PROMOTION=TRUE
+  [PASS] note avoids promotion: KOIDE_CLOSURE=TRUE
+  [PASS] note avoids promotion: therefore closes Koide
+
+----------------------------------------------------------------------------------------
+Retained EW lattice angle
+----------------------------------------------------------------------------------------
+  [PASS] YT_EW contains g_2^2 = 1/(d+1)
+  [PASS] YT_EW contains g_Y^2 = 1/(d+2)
+  [PASS] YT_EW contains retained 1/4 value
+  [PASS] YT_EW contains retained 1/5 value
+  [PASS] g_2^2 = 1/4 at d=3
+  [PASS] g_Y^2 = 1/5 at d=3
+  [PASS] sin^2(theta_W)|_lattice = 4/9
+
+----------------------------------------------------------------------------------------
+Retained CKM A^4 side
+----------------------------------------------------------------------------------------
+  [PASS] W2 authority contains A^2 = 2/3
+  [PASS] CKM counts authority contains n_pair = 2
+  [PASS] CKM counts authority contains n_color = 3
+  [PASS] A^2 = n_pair/n_color = 2/3
+  [PASS] A^4 = 4/9
+  [PASS] retained EW-CKM identity sin^2(theta_W)|_lattice = A^4
+
+----------------------------------------------------------------------------------------
+Gauge-dimension consistency, not below-W2 derivation
+----------------------------------------------------------------------------------------
+  [PASS] minimal axioms retain exact native SU(2)
+  [PASS] minimal axioms retain structural SU(3)
+  [PASS] dim_fund(SU(2)) / dim_fund(SU(3)) = 2/3
+  [PASS] gauge-dimension ratio equals retained A^2 at values
+  [PASS] note keeps the gauge-dimension equality as a consistency corollary
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Certified:
+    sin^2(theta_W)|_lattice = A^4 = 4/9
+    A^2 = dim_fund(SU(2))/dim_fund(SU(3)) = 2/3 as retained consistency
+    companion source theorem closes A^2 below W2 on current main
+
+  Not certified:
+    an independent below-W2 derivation inside this bridge note alone,
+    support-tier promotion,
+    physical M_Z weak-angle prediction, or Koide closure.
+
+========================================================================================
+TOTAL: PASS=36, FAIL=1
+PASSED: 36/37
+========================================================================================
+
+----- stderr -----
+

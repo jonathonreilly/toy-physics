@@ -1,0 +1,83 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_native_zero_section_nature_review.py
+runner_sha256: 62df282e619cf0ae10d5921742dcba47fdc849d49873c768ba74f95c776dca2a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.00
+status: ok
+----- stdout -----
+
+========================================================================================
+A. Route packet
+========================================================================================
+[PASS] A.1 native zero-section route artifacts exist
+       scripts/frontier_koide_native_zero_section_closure_route.py
+       docs/KOIDE_NATIVE_ZERO_SECTION_CLOSURE_ROUTE_NOTE_2026-04-24.md
+[PASS] A.2 native route runner passes
+       runner closeout verified.
+[PASS] A.3 route does not claim retained-only closure
+       Conditional route is not promoted beyond its proof boundary.
+
+========================================================================================
+B. Positive content
+========================================================================================
+[PASS] B.1 Q is implied under native zero-source source-response
+       The source-label zero section gives K_TL=0 and Q=2/3.
+[PASS] B.2 delta is implied under real primitive plus unit endpoint
+       Real Z3 primitive removes spectator; unit endpoint removes c.
+[PASS] B.3 the route is not numerological
+       Load-bearing checks are representation idempotents and unit preservation.
+
+========================================================================================
+C. Compatibility with retained Brannen support
+========================================================================================
+[PASS] C.1 retained Brannen geometry supports a real-doublet primitive reading
+       Existing notes describe the Brannen phase as real-plane rotation / conjugate-pair winding.
+[PASS] C.2 retained Brannen corpus also contains rank-one/CP1 language
+       This is the exact interpretive conflict the native route must resolve.
+
+========================================================================================
+D. Remaining objections
+========================================================================================
+[PASS] D.1 all remaining objections are identification theorems, not arithmetic gaps
+       Does the physical Brannen endpoint mean the whole real primitive or a rank-one CP1 line?
+       Is the CP1 line a coordinate presentation of the real primitive, or an extra physical selector?
+       Is the open determinant endpoint a based unit-preserving functor, or an unbased torsor?
+       Is zero-source source-response already the charged-lepton scalar readout?
+[PASS] D.2 retained-only closure is not yet reviewer-proof
+       A hostile reviewer can reject the real-primitive reinterpretation until it is derived from the Brannen construction itself.
+
+========================================================================================
+E. Verdict
+========================================================================================
+[PASS] E.1 passes as the next native route to pursue
+       It is the first route that kills the delta spectator by retained real-representation irreducibility.
+[PASS] E.2 fails as completed retained/native closure today
+       It still needs the real-primitive Brannen identification and determinant-line unit theorem.
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 12/12
+  [PASS] A.1 native zero-section route artifacts exist
+  [PASS] A.2 native route runner passes
+  [PASS] A.3 route does not claim retained-only closure
+  [PASS] B.1 Q is implied under native zero-source source-response
+  [PASS] B.2 delta is implied under real primitive plus unit endpoint
+  [PASS] B.3 the route is not numerological
+  [PASS] C.1 retained Brannen geometry supports a real-doublet primitive reading
+  [PASS] C.2 retained Brannen corpus also contains rank-one/CP1 language
+  [PASS] D.1 all remaining objections are identification theorems, not arithmetic gaps
+  [PASS] D.2 retained-only closure is not yet reviewer-proof
+  [PASS] E.1 passes as the next native route to pursue
+  [PASS] E.2 fails as completed retained/native closure today
+
+KOIDE_NATIVE_ZERO_SECTION_NATURE_REVIEW=PASS_AS_ROUTE
+KOIDE_NATIVE_ZERO_SECTION_RETAINED_CLOSURE=FALSE
+NATIVE_ROUTE_IMPLIES_VALUES_CONDITIONALLY=TRUE
+NEXT_NATIVE_THEOREM=derive_Brannen_endpoint_as_real_Z3_primitive_and_unit_determinant_readout
+RESIDUAL_IDENTIFICATION_DELTA=rank_one_CP1_language_vs_real_primitive_endpoint
+RESIDUAL_TRIVIALIZATION=unit_preserving_open_determinant_line_readout
+
+----- stderr -----
+

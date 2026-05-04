@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_bridge_operator_closure.py
+runner_sha256: 5c885aa011f060201aa659126a898bddcb9eb1777129e15295ac053f808b7c44
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 6.41
+status: ok
+----- stdout -----
+==============================================================================
+y_t BRIDGE OPERATOR CLOSURE PROXY
+==============================================================================
+
+Test whether wide EW-side deformations can rescue a diffuse bridge once
+the exact endpoint data are fixed.
+
+Derived reference boundary:
+  g_1(v) = 0.463986
+  g_2(v) = 0.646288
+  target y_t(v, physical) = 0.9176
+
+EW scan window:
+  g_1(v) in [0.30, 0.60]
+  g_2(v) in [0.40, 0.90]
+
+Diffuse bridge (center=0.75, width=0.05):
+  best  : g1(v)=0.3000, g2(v)=0.4000, y_t(v)=0.969797, dev=+5.69%, m_t~182.39 GeV
+  worst : g1(v)=0.6000, g2(v)=0.9000, y_t(v)=1.131858, dev=+23.35%
+
+UV-localized bridge (center=0.97, width=0.02):
+  best  : g1(v)=0.3500, g2(v)=0.7000, y_t(v)=0.918235, dev=+0.07%, m_t~172.69 GeV
+  worst : g1(v)=0.6000, g2(v)=0.9000, y_t(v)=1.020926, dev=+11.26%
+
+  [PASS] 1a-diffuse-not-rescued: best diffuse profile still misses target by +5.69%
+  [PASS] 1b-localized-stays-close: best localized profile lands at +0.07%
+  [PASS] 1c-ew-cannot-mimic-localization: even after EW scan, diffuse best=+5.69% while localized best=+0.07%
+  [PASS] 1d-localization-dominates-subleading-operators: best diffuse vs localized gap in |dev| = 5.62 percentage points
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+Within this proxy, wide EW-side deformations do not rescue a diffuse bridge.
+The dominant control parameter is still where the lattice correction enters
+the gauge/Yukawa transport. That supports an operator-closure reading:
+
+  the missing bridge is not being hidden in broad electroweak-side
+  operator freedom; the theorem target really is the dominant
+  gauge/Yukawa bridge structure plus UV localization.
+
+This is still bounded support, not full closure.
+
+==============================================================================
+FINAL TALLY: 4 PASS / 0 FAIL
+Elapsed: 5.87 s
+==============================================================================
+
+----- stderr -----
+

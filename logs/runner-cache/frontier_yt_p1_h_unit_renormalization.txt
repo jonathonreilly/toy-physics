@@ -1,0 +1,105 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_p1_h_unit_renormalization.py
+runner_sha256: c4129d33cb43ea6ab332b27e0c2934ae779526e97de4331dcc1d58931d51e8bc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================
+YT P1 - H_unit 1-loop renormalization framework-native reduction
+========================================================================
+
+Block 1: retained Cl(3) x Z^3 canonical action structure.
+  [PASS (C)] Retained staggered eta-phase form eta_mu(x) = (-1)^{Sum_{nu<mu} x_nu}  (etas = [1, -1, -1, 1] at x = (3, 2, 5, 7))
+  [PASS (C)] Retained Wilson plaquette coupling beta = 2 N_c / g^2 = 6 at g = 1  (beta = 6.0)
+  [PASS (C)] Retained H_unit Z^2 = N_c * N_iso = 6 on Q_L block (D17)  (Z^2 = 6)
+  [PASS (C)] Retained tree-level anchor <0|H_unit|tt-bar> = 1/sqrt(6) (WT)  (tree anchor = 0.4082482905)
+
+Block 2: retained tadpole factor u_0 = <P>^{1/4}.
+  [PASS (C)] Retained <P> = 0.5934  (<P> = 0.5934)
+  [PASS (C)] Retained u_0 = <P>^{1/4} = 0.87768...  (u_0 = 0.87768138)
+  [PASS (C)] Retained 1/u_0 = <P>^{-1/4} = 1.13937...  (1/u_0 = 1.13936563)
+  [PASS (C)] Retained u_0^{-4} = 1/<P> = 1.68520...  (u_0^(-4) = 1.68520391)
+  [PASS (C)] Retained alpha_LM = alpha_bare / u_0 = 0.09066784  (alpha_LM = 0.0906678360)
+
+Block 3: retained 1-loop diagram enumeration (C_F channel).
+  [PASS (C)] Retained 3 topologies for <0|H_unit|tt-bar>  (diagrams = ('D_S1_gluon_sandwich', 'D_S2_left_leg_SE', 'D_S3_right_leg_SE'))
+  [PASS (C)] D_S1 = gluon sandwich retained  (D_S1 = D_S1_gluon_sandwich)
+  [PASS (C)] D_S2, D_S3 = left/right external-leg self-energies  (D_S2, D_S3 = D_S2_left_leg_SE, D_S3_right_leg_SE)
+  [PASS (C)] External-leg D_S2 + D_S3 absorbed into Z_q (retained structure)  (Z_S^{lat->MSbar} = 1 + (alpha_LM C_F / 4pi) * I_S^{D_S1} after amputation)
+  [PASS (C)] Exactly ONE non-trivial BZ integral after Z_q absorption (C_F channel)  (I_S^{D_S1} is the sole I_S of the prior P1 chain)
+
+Block 4: retained Feynman-rule structural form.
+  [PASS (C)] D_psi(k) = Sum sin^2(k_mu a) / a^2 (FR1)  (D_psi = 1.3360686827)
+  [PASS (C)] D_g(k) = (4 / a^2) Sum sin^2(k_rho a/2) (FR2)  (D_g = 1.6923172486)
+  [PASS (C)] N_S(k) = Sum cos^2(k_mu a/2) / a^2 (retained scalar-bilinear vertex)  (N_S = 3.5769206878)
+  [PASS (C)] D_psi -> k^2 in continuum limit  (ratio = 0.999999)
+  [PASS (C)] D_g -> k^2 in continuum limit  (ratio = 1.000000)
+  [PASS (C)] N_S -> 4 (= 1 per flavor * 4 spacetime) in continuum limit (Sum_mu 1 = 4)  (N_S at small k = 3.999998)
+
+Block 5: retained color-tensor structure (C_F channel).
+  [PASS (C)] N_c = 3  (N_c = 3)
+  [PASS (C)] C_F = (N_c^2 - 1) / (2 N_c) = 4/3 (retained S1 + D7 + D12)  (C_F = 1.3333333333)
+  [PASS (C)] Color trace Tr[T^A T^A] / N_c = C_F (retained Fierz)  (trace ratio = 1.3333333333)
+
+Block 6: three-piece structural decomposition of I_S^{framework}.
+  [PASS (C)] I_S^{framework} = I_S^{tadpole} + I_S^{log} + I_S^{fin} (R10)  (pieces = ('I_S^{tadpole}', 'I_S^{log}', 'I_S^{fin}'))
+  [PASS (C)] I_S^{log} coefficient exactly 1 in MSbar convention at mu = 1/a  (retained framework-native structural identity)
+  [PASS (C)] I_S^{tadpole} absorbed by u_0 via retained D14 identity  (change-of-variables U = u_0 V with n_link = 1 (D15))
+  [PASS (C)] I_S^{fin} = I_S^{taste} + I_S^{Wilson} + I_S^{mix} (R11)  (sub-pieces = ('I_S^{taste}', 'I_S^{Wilson}', 'I_S^{mix}'))
+  [PASS (C)] Continuum-limit cross-check: I_S^{framework} -> 2 as a -> 0 (CL)  (I_S^{continuum} = 2.0)
+
+Block 7: retained envelope bound |I_S^{framework}| <= 16 * |1 - 1/<P>|^{-1}.
+  [PASS (C)] Retained envelope closed form |I_S^{max-retained}| = 16 * |1 - 1/<P>|^{-1}  (|I_S^{max-retained}| = 23.3507)
+  [PASS (C)] Numerical cross-check: |I_S^{max-retained}| ~ 23.35  (|I_S^{max-retained}| = 23.3507 vs expected ~ 23.35)
+  [PASS (C)] Retained envelope strictly exceeds continuum baseline I_S^{CL} = 2  (|I_S^{max-retained}| = 23.3507 > I_S^{CL} = 2.0)
+  [PASS (C)] Retained envelope strictly exceeds cited high-end 10  (|I_S^{max-retained}| = 23.3507 > cited high = 10.0)
+  [PASS (C)] Retained lower-bound floor I_S^{min-retained} = 2 * (1 - u_0) ~ 0.245 (B2)  (I_S^{min-retained} = 0.24464)
+
+Block 8: cited-range consistency check.
+  [PASS (C)] Cited low-end 4 > retained lower floor 0.245  (cited low = 4.0 > floor = 0.24464)
+  [PASS (C)] Cited high-end 10 < retained envelope 23.35  (cited high = 10.0 < envelope = 23.3507)
+  [PASS (C)] Cited central 6 strictly inside retained envelope  (0.2446 < 6.0 < 23.3507)
+  [PASS (C)] Cited central fraction (6 - 2) / (|I_S^{max-retained}| - 2) ~ 0.19  (fraction = 0.1873)
+  [PASS (C)] Fraction within expected [0.1, 0.3] band for retained 4D BZ integrals  (fraction = 0.1873 in [0.1, 0.3])
+  [PASS (C)] Continuum-limit recovery I_S = 2 (exact, retained CL)  (I_S^{CL} = 2.0)
+  [PASS (C)] Retained mechanism for I_S > 2: I_S^{taste} (D2-D4) + I_S^{Wilson} (D13)  (structural explanation of the cited range without requiring its value)
+
+Block 9: authority preservation check.
+  [PASS (C)] Master obstruction theorem not modified  (YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md preserved)
+  [PASS (C)] Ward-identity theorem not modified  (YT_WARD_IDENTITY_DERIVATION_THEOREM.md preserved)
+  [PASS (C)] Packaged delta_PT = 1.92% support note not modified  (UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md preserved)
+  [PASS (C)] Prior P1 citation note not modified  (YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md preserved)
+  [PASS (C)] Prior P1 verification note not modified  (YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md preserved)
+  [PASS (C)] Prior P1 geometric-tail bound not modified  (YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md preserved)
+  [PASS (C)] Prior P1 symbolic reduction runner not modified  (frontier_yt_p1_i1_lattice_pt_symbolic.py 21/21 PASS preserved)
+  [PASS (C)] This note is ADDITIVE: retained envelope layer, not replacement  (cited range remains the recommended numerical input; envelope confirms consistency)
+
+========================================================================
+SUMMARY: PASS=48  FAIL=0
+========================================================================
+
+Retained framework-native symbolic reduction:
+  <0|H_unit|tt-bar>^{(1)} = (1/sqrt(6)) * (alpha_LM C_F / 4 pi) * I_S^{framework}
+  I_S^{framework} = I_S^{tadpole}(u_0) + I_S^{log} + I_S^{fin}
+    I_S^{tadpole}  absorbed by u_0 = 0.87768
+    I_S^{log}      coefficient = 1 (MSbar convention, exact)
+    I_S^{fin}      = I_S^{taste} + I_S^{Wilson} + I_S^{mix}  [BZ quadrature not performed]
+
+Retained envelope bound:
+  |I_S^{max-retained}|  =  16 * |1 - 1/<P>|^{-1}  =  23.3507
+  I_S^{CL}  =  2.0  (continuum fundamental-Yukawa)
+  Retained envelope fraction above baseline: (6.0-2)/(23.35-2) = 0.187
+
+Cited range compatibility:   [4.0, 10.0]  ⊂  [0.245, 23.351]
+Cited range compatibility:   CONFIRMED (cited strictly inside retained envelope).
+
+What remains external:
+  - 4D BZ quadrature of I_S^{taste}, I_S^{Wilson}, I_S^{mix}
+    (sole residual reduction step to pin specific numerical I_S^{framework})
+  - C_A channel I_2 and T_F n_f channel I_3 of Delta_R (OPEN; unchanged)
+  - Rep-A / Rep-B 1-loop Ward cancellation (OPEN; unchanged)
+
+----- stderr -----
+

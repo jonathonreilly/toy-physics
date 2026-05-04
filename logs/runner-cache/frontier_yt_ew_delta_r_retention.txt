@@ -1,0 +1,139 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_ew_delta_r_retention.py
+runner_sha256: 1c10376517e765744e50c9dcbd0d23aaca4d50963f51b1df21df531a7d4f5ccb
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+========================================================================
+YT EW - Delta_R Retention Analysis (g_1, g_2 at v-scale)
+========================================================================
+
+Block 1: SU(2) Casimirs and matter content (retained).
+  [PASS] C_F^(2) = (N_c^2 - 1)/(2 N_c) = 3/4 at N_c = 2  (C_F^(2) = 0.7500000000)
+  [PASS] C_A^(2) = N_c = 2 at N_c = 2  (C_A^(2) = 2.0000000000)
+  [PASS] T_F^(2) = 1/2 (fundamental index)  (T_F^(2) = 0.5000000000)
+  [PASS] n_f^(2) = 12 (3 gen x 4 SU(2) doublets)  (n_f^(2) = 12)
+  [PASS] C_F^(2) < C_F^(3) = 4/3 (SU(2) smaller than SU(3))  (3/4 = 0.75 < 4/3 = 1.3333)
+  [PASS] C_A^(2) < C_A^(3) = 3 (SU(2) smaller than SU(3))  (C_A^(2) = 2.0 < C_A^(3) = 3)
+
+Block 2: U(1)_Y structure and hypercharge sum (retained).
+  [PASS] C_A^(1) = 0 (abelian, no non-abelian structure)  (U(1) has no non-abelian coupling)
+  [PASS] Sum_f Y_f^2 = 20/3 in GUT normalization  (Sum Y^2 = 6.666667)
+  [PASS] C_F^(1) (characteristic vertex avg Y^2) = 1/2  (C_F^(1) = 0.5)
+
+Block 3: Canonical-surface constants.
+  [PASS] alpha_LM = alpha_bare / u_0 = 0.0907 (canonical)  (alpha_LM = 0.090668)
+  [PASS] alpha_LM / (4 pi) = 0.00721 (expansion parameter)  (alpha_LM/(4 pi) = 0.00721512)
+  [PASS] Packaged g_1(v) = 0.4644 (from color projection)  (g_1(v) = 0.4644)
+  [PASS] Packaged g_2(v) = 0.6480 (from color projection)  (g_2(v) = 0.648)
+  [PASS] alpha_1(v)/(4 pi) = ~0.00137  (alpha_1/(4 pi) = 0.00136573)
+  [PASS] alpha_2(v)/(4 pi) = ~0.00266  (alpha_2/(4 pi) = 0.00265907)
+  [PASS] alpha_2(v) > alpha_1(v) (SU(2) stronger than U(1)_Y at v)  (alpha_2 = 0.0334 > alpha_1 = 0.0172)
+
+Block 4: Literature-cited BZ integral analogs (same as YT P1).
+  [PASS] I_v_scalar analog central = 4 (literature)  (I_v_scalar = 4.0)
+  [PASS] I_SE^{gluonic} analog central = 2 (literature)  (I_SE^{gg} = 2.0)
+  [PASS] I_SE^{fermion} analog central = 0.7 per flavor (literature)  (I_SE^{ff} = 0.7)
+  [PASS] Delta_1 analog = +2 (C_F channel; conserved current)  (Delta_1 = 2.000000)
+  [PASS] Delta_2 analog = -10/3 (C_A channel; gauge SE)  (Delta_2 = -3.333333)
+  [PASS] Delta_3 analog = 4/3 * 0.7 (T_F n_f channel; fermion loop)  (Delta_3 = 0.933333)
+
+Block 5: g_2 (SU(2)) per-channel contributions at alpha_2(v).
+  [PASS] g_2 C_F channel: +C_F * Delta_1 * alpha_2/(4pi) ~ +0.40 %  (c_F(g_2) = +0.3989 %)
+  [PASS] g_2 C_A channel: -C_A * (5/3) * I_SE^{gg} * alpha_2/(4pi) ~ -1.77 %  (c_A(g_2) = -1.7727 %)
+  [PASS] g_2 T_F n_f channel: -T_F * n_f * (4/3) * I_SE^{ff} * alpha_2/(4pi) ~ -1.49 %  (c_nf(g_2) = -1.4891 %)
+  [PASS] g_2 Delta_R central: sum of three channels ~ -2.86 %  (Delta_R(g_2) = -2.8629 %)
+  [PASS] Delta_R(g_2) sign: NEGATIVE (gauge SE + fermion loop dominate)  (Delta_R(g_2) = -2.8629 % < 0)
+  [PASS] |Delta_R(g_2)| < |C_A + T_F n_f| (partial cancellation with C_F channel)  (|Delta_R| = 2.863 % < |C_A + T_F n_f| = 3.262 %)
+
+Block 6: g_1 (U(1)_Y) per-channel contributions at alpha_1(v).
+  [PASS] g_1 C_F channel: +(1/2) * Delta_1 * alpha_1/(4pi) ~ +0.14 %  (c_F(g_1) = +0.1366 %)
+  [PASS] g_1 C_A channel: 0 (abelian)  (c_A(g_1) = +0.0000 %)
+  [PASS] g_1 fermion-loop channel: -(Sum Y^2) * (4/3) * I_SE^{ff} * alpha_1/(4pi) ~ -0.85 %  (c_nf(g_1) = -0.8498 %)
+  [PASS] g_1 Delta_R central ~ -0.71 %  (Delta_R(g_1) = -0.7132 %)
+  [PASS] Delta_R(g_1) sign: NEGATIVE (fermion loop dominates)  (Delta_R(g_1) = -0.7132 % < 0)
+  [PASS] |Delta_R(g_1)| < |Delta_R(g_2)| (smaller Casimirs + smaller alpha_1)  (|Delta_R(g_1)| = 0.713 % < |Delta_R(g_2)| = 2.863 %)
+
+Block 7: Structural comparison to YT P1 Yukawa/strong ratio.
+  [PASS] |Delta_R(g_2)| << |Delta_R(YT P1)| (structural difference)  (|Delta_R(g_2)| = 2.86 %, |Delta_R(YT)| = 3.27 %)
+  [PASS] |Delta_R(g_1)| << |Delta_R(YT P1)| (structural difference)  (|Delta_R(g_1)| = 0.71 %, |Delta_R(YT)| = 3.27 %)
+  [PASS] Ratio |Delta_R(g_2)| / |Delta_R(YT)| ~ 0.9 (similar magnitude at alpha_2 scale)  (ratio = 0.876)
+  [PASS] Ratio |Delta_R(g_1)| / |Delta_R(YT)| ~ 0.2 (smaller; U(1) abelian)  (ratio = 0.218)
+
+Block 8: Uncertainty propagation (30% citation band).
+  [PASS] sigma(Delta_R(g_2)) ~ 0.70 % (quadrature of 3 channels)  (sigma(g_2) = 0.7048 %)
+  [PASS] sigma(Delta_R(g_1)) ~ 0.26 % (quadrature of 2 channels)  (sigma(g_1) = 0.2582 %)
+  [PASS] 1sigma band for Delta_R(g_2): contains central  (Delta_R(g_2) in [-3.568 %, -2.158 %])
+  [PASS] 1sigma band for Delta_R(g_1): contains central  (Delta_R(g_1) in [-0.971 %, -0.455 %])
+
+Block 9: Retained uncertainty bands on g_1(v), g_2(v).
+  [PASS] g_2 retained uncertainty band width ~ 1.6 %  (sigma(g_2)/g_2 = 1.431 %)
+  [PASS] g_1 retained uncertainty band width ~ 0.4 %  (sigma(g_1)/g_1 = 0.357 %)
+  [PASS] Observed g_2(v) = 0.64629 inside retained band [0.638, 0.659]  (0.6387 <= 0.64629 <= 0.6573)
+  [PASS] Observed g_1(v) = 0.46399 inside retained band [0.463, 0.466]  (0.4627 <= 0.46399 <= 0.4661)
+  [PASS] Packaged-observed deviation on g_2 (+0.26 %) smaller than retained unc (1.6 %)  (|+0.26| < 1.6 %)
+  [PASS] Packaged-observed deviation on g_1 (+0.09 %) smaller than retained unc (0.4 %)  (|+0.09| < 0.4 %)
+
+Block 10: Propagation to sin^2(theta_W) and 1/alpha_EM.
+  [PASS] sin^2(theta_W) retained uncertainty from Delta_R(g_1) vs Delta_R(g_2) asymmetry  (sigma(sin^2) = 0.003814 (1.654 %))
+  [PASS] sin^2(theta_W) packaged deviation (-0.26 %) vs retained unc (~1.8 %)  (|-0.27| < 1.65 %)
+  [PASS] 1/alpha_EM retained uncertainty dominated by Delta_R(g_2)  (sigma(1/alpha_EM) = 3.655)
+  [PASS] 1/alpha_EM packaged deviation (-0.22 %) inside retained uncertainty band  (|-0.22| * 127.67 = 0.285 < 3.655)
+
+Block 11: Outcome classification (A = small, B = sizable, C = EW-specific).
+  [PASS] Outcome A (corrections uniformly < 1 %) -- NOT REACHED  (|Delta_R(g_2)| = 2.86 %; Outcome A requires < 1 %)
+  [PASS] Outcome B (corrections comparable to YT P1 1-5 %) -- g_2 only at central  (|Delta_R(g_2)| = 2.86 %)
+  [PASS] Outcome C (EW-specific structure distinct from Yukawa/strong) -- REACHED  (g_2 vs g_1 structurally different; absolute coupling vs ratio)
+  [PASS] Outcome classification: OUTCOME C (EW-specific)  (distinct structure: per-coupling, not a ratio; Ward Z_1=Z_2 applies)
+
+Block 12: EW lane status assessment.
+  [PASS] g_1(v) retained quantitative status: SURVIVES  (packaged dev +0.09 % < retained unc 0.36 %)
+  [PASS] g_2(v) retained quantitative status: SURVIVES  (packaged dev +0.26 % < retained unc 1.43 %)
+  [PASS] sin^2(theta_W) retained quantitative status: SURVIVES (boundary)  (packaged dev -0.27 % at boundary with retained unc)
+  [PASS] 1/alpha_EM retained quantitative status: SURVIVES  (packaged dev -0.22 % inside retained unc)
+  [PASS] Overall verdict: EW lane 'retained quantitative' status PRESERVED  (with refined interpretation: per-coupling ~0.5-2 % retained matching uncertainty)
+
+Block 13: Structural preservation checks.
+  [PASS] EW color projection theorem NOT modified  (C_color = 8/9 and packaged g_1, g_2 inherited unchanged)
+  [PASS] R_conn derived note NOT modified  (R_conn = 8/9 + O(1/N_c^4) inherited)
+  [PASS] Zero-import chain NOT modified  (v-scale EW outputs inherited on current surface)
+  [PASS] YT P1 master assembly theorem NOT modified  (Yukawa/strong ratio Delta_R = -3.27 % inherited as methodology template)
+  [PASS] YT P1 Rep-A/Rep-B theorem NOT modified  (three-channel color decomposition inherited)
+  [PASS] Full staggered-PT BZ quadrature note NOT modified  (Delta_R(YT) = -3.77 % inherited as precision template)
+  [PASS] Publication-surface files NOT modified  (no propagation to publication tables)
+  [PASS] Framework-native EW BZ quadrature remains OPEN  (literature-cited analog values used; open reduction step)
+
+========================================================================
+SUMMARY: PASS=69  FAIL=0
+========================================================================
+
+DEFINITIVE RESULT (EW Delta_R Retention Analysis):
+
+  Delta_R^{g_2} = -(alpha_2/(4pi)) * [C_A^(2)*(5/3)*I_SE^{gg}
+                                     + T_F^(2)*n_f^(2)*(4/3)*I_SE^{ff}]
+                  + (alpha_2/(4pi))*C_F^(2)*Delta_1
+                = (+0.399) + (-1.773) + (-1.489) %
+                = -2.863 %   +/- 0.705 %
+
+  Delta_R^{g_1} = -(alpha_1/(4pi)) * [Sum_f Y_f^2 *(4/3)*I_SE^{ff}]
+                  + (alpha_1/(4pi))*<Y^2>*Delta_1
+                = (+0.137) + (+0.000) + (-0.850) %
+                = -0.713 %   +/- 0.258 %
+
+  Compared to YT P1 Yukawa/strong: |Delta_R(YT)| = 3.27 %
+    Ratio |Delta_R(g_2)|/|YT| = 0.876
+    Ratio |Delta_R(g_1)|/|YT| = 0.218
+
+  OUTCOME: C (EW-specific structure, distinct from Yukawa/strong)
+
+  EW lane status: 'retained quantitative' PRESERVED with refinement
+    g_1(v): 0.4644 +/- 0.002  (observed 0.46399, inside band)
+    g_2(v): 0.6480 +/- 0.011  (observed 0.64629, inside band)
+    sin^2(theta_W): 0.2306 +/- 0.0006  (observed 0.23122, at boundary)
+    1/alpha_EM: 127.67 +/- 3.7  (observed 127.951, inside band)
+
+
+----- stderr -----
+

@@ -1,0 +1,113 @@
+===== runner cache v1 =====
+runner: scripts/axiom_first_gsl_check.py
+runner_sha256: c93f8dd4801a8d212090fb240f873d098c4f789f102be39662062eae1ea50422
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================
+AXIOM-FIRST GSL CHECK
+========================================================================
+
+Setup:
+  retained framework GR + retained BH 1/4 carrier
+  Blocks 01 KMS + 02 Hawking + 05 first law
+  Bekenstein bound (Block 03) used as cross-check
+
+GSL: delta(S_BH + S_matter) >= 0
+
+------------------------------------------------------------------------
+TEST 1: Hawking area theorem
+        Accretion delta_M > 0 implies delta_A > 0
+------------------------------------------------------------------------
+       M     delta_M         delta_A
+    1.00        0.10    1.055575e+01
+    1.00        0.50    6.283185e+01
+    1.00        1.00    1.507964e+02
+    2.00        0.10    2.060885e+01
+    2.00        0.50    1.130973e+02
+    2.00        1.00    2.513274e+02
+    5.00        0.10    5.076814e+01
+    5.00        0.50    2.638938e+02
+    5.00        1.00    5.529203e+02
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: Matter entropy positivity (Gibbs H-theorem)
+------------------------------------------------------------------------
+  By Block 01 KMS K2+K4, Gibbs evolution is H-theorem:
+  S_matter(t_2) >= S_matter(t_1) for any physical process.
+  Verified: take delta_S_matter > 0 in collapse scenarios.
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: GSL combined  delta_S_total = delta_S_BH + delta_S_matter >= 0
+------------------------------------------------------------------------
+       M      dM           dS_BH     dS_matter        dS_total   >=0?
+    1.00    0.10    2.638938e+00  -1.256637e+00    1.382301e+00      ✓
+    1.00    0.50    1.570796e+01  -6.283185e+00    9.424778e+00      ✓
+    1.00    1.00    3.769911e+01  -1.256637e+01    2.513274e+01      ✓
+    2.00    0.10    5.152212e+00  -2.513274e+00    2.638938e+00      ✓
+    2.00    0.50    2.827433e+01  -1.256637e+01    1.570796e+01      ✓
+    2.00    1.00    6.283185e+01  -2.513274e+01    3.769911e+01      ✓
+    5.00    0.10    1.269203e+01  -6.283185e+00    6.408849e+00      ✓
+    5.00    0.50    6.597345e+01  -3.141593e+01    3.455752e+01      ✓
+    5.00    1.00    1.382301e+02  -6.283185e+01    7.539822e+01      ✓
+
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: Bekenstein saturation - S_matter = 2 pi R E saturates GSL
+------------------------------------------------------------------------
+  At Bekenstein saturation, matter entropy equals the BH entropy
+  it would have at the same energy: S_matter = 2 pi R E = S_BH(M=E)
+  for R = r_s = 2GE.
+
+  M = 1.0: S_Bekenstein = 1.256637e+01, S_BH(M=E) = 1.256637e+01, |diff| = 0.00e+00
+  M = 2.0: S_Bekenstein = 5.026548e+01, S_BH(M=E) = 5.026548e+01, |diff| = 0.00e+00
+  M = 5.0: S_Bekenstein = 3.141593e+02, S_BH(M=E) = 3.141593e+02, |diff| = 0.00e+00
+
+  max |S_Bek - S_BH(M=E)| at saturation = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5: Hawking evaporation respects GSL
+------------------------------------------------------------------------
+  BH shrinks (dA < 0). Hawking radiation has entropy at least
+  |dA|/(4G) by GSL3 → δS_radiation >= -dS_BH = |dS_BH|.
+
+  M = 5.0 -> M - dM = 4.9
+  S_BH = 3.1416e+02 -> 3.0172e+02
+  dS_BH = -1.2441e+01 (negative)
+  required S_radiation >= 1.2441e+01
+  Hawking 1975 S_radiation ≈ 1.6588e+01 (> required ✓)
+  GSL respected: dS_total = 4.1469e+00 >= 0  ✓
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 6: 100 random (M, dM, S_matter) parameter sweep
+------------------------------------------------------------------------
+  trials = 100, GSL violations = 0
+  STATUS: PASS
+
+========================================================================
+SUMMARY
+========================================================================
+  Test 1 (Hawking area theorem dA >= 0):              PASS
+  Test 2 (Matter Gibbs H-theorem dS_matter >= 0):     PASS
+  Test 3 (GSL combined dS_total >= 0):                PASS
+  Test 4 (Bekenstein saturation):                     PASS
+  Test 5 (Hawking evaporation respects GSL):          PASS
+  Test 6 (100-sample random sweep):                   PASS
+
+  OVERALL: PASS
+
+Note: this runner verifies GSL on Schwarzschild collapse and
+Hawking evaporation scenarios. The proof in the companion theorem
+note composes Block 01 KMS H-theorem + Block 02 Hawking T_H +
+Block 05 first law + Hawking 1971 area theorem on the framework's
+retained GR action surface.
+
+----- stderr -----
+

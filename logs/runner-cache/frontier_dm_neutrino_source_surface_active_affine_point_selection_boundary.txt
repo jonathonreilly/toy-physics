@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_active_affine_point_selection_boundary.py
+runner_sha256: c2ea3881cf9b33005f04e80961690c61b1da915a36b479f268c79deebe878f16
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.57
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE ACTIVE AFFINE POINT-SELECTION BOUNDARY
+========================================================================================
+
+Question:
+  After reducing the live source-oriented sheet to the exact active
+  half-plane in (delta, q_+), can the current exact bank reduce point
+  selection any further?
+
+========================================================================================
+PART 1: THE ACTIVE CHART IS EXACTLY AFFINE ON H
+========================================================================================
+  [PASS] On the live source-oriented sheet the (delta, q_+) chart is exactly affine on H  (max err=6.76e-16)
+  [PASS] The exact active generators are T_m, T_delta, and T_q  (the spectator and active generators are linearly independent over R)
+
+========================================================================================
+PART 2: T_DELTA AND T_Q ARE THE EXACT BLIND ACTIVE GENERATORS
+========================================================================================
+  [PASS] Changing delta at fixed q_+ is exactly the affine H-step H -> H + ddelta T_delta  (err=1.57e-16)
+  [PASS] Changing q_+ at fixed delta is exactly the affine H-step H -> H + dq T_q  (err=2.22e-16)
+  [PASS] T_delta redistributes the fixed source channel E1 by changing delta and rho oppositely while keeping delta+rho = sqrt(8/3)  ((delta,rho): (0.250000,1.382993) -> (0.650000,0.982993))
+  [PASS] T_q changes only the even carrier channel sigma cos(2v) = sqrt(8)/9 - 3 q_+ while keeping delta fixed  (chi: -5.934710 -> -8.634710)
+  [PASS] Both active generators keep gamma = 1/2 and sigma sin(2v) = 8/9 fixed  (the source package stays fixed along both active directions)
+
+========================================================================================
+PART 3: THE CURRENT EXACT BANK IS BLIND TO BOTH ACTIVE GENERATORS
+========================================================================================
+  [PASS] The current exact source-facing bank is unchanged along the T_delta direction  (same source package, CP pair, slot pair, and slot torsion)
+  [PASS] The current exact source-facing bank is unchanged along the T_q direction  (same source package, CP pair, slot pair, and slot torsion)
+  [PASS] So the minimal remaining mainline datum is exactly the 2-real affine point-selection pair (delta, q_+)  (no smaller current-bank object remains on the live source-oriented sheet)
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE ACTIVE AFFINE BOUNDARY
+========================================================================================
+  [PASS] The new note records the affine active chart H = H_base + m T_m + delta T_delta + q_+ T_q
+  [PASS] The new note records the remaining object as the affine point-selection pair (delta, q_+)
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact mainline answer:
+    - the live active chart is already affine on H
+    - the two active generators are T_delta and T_q
+    - the current exact source-facing bank is blind to both
+    - so the minimal remaining datum is exactly the affine
+      point-selection pair (delta, q_+)
+
+PASS=12 FAIL=0
+
+----- stderr -----
+

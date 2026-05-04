@@ -1,0 +1,97 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_encoding_portability.py
+runner_sha256: cef4805a9c2020db277472d5acaab22b701b45e9e632eefaf70639f5829db61f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 6.66
+status: ok
+----- stdout -----
+TASTE-QUBIT ENCODING PORTABILITY AUDIT
+Status: numerical planning audit; quantum state teleportation only
+
+Requested dimensions: (1, 2, 3)
+Requested side lengths: (2, 4, 6, 8)
+Valid KS geometries surveyed: 12
+Skipped invalid/out-of-scope geometries: 0
+Random teleportation trials per accepted encoding: 8 (seed=20260425)
+Tolerance: 1.0e-12
+
+Geometry totals:
+  cell sets across geometries: 140
+  encoding cases surveyed: 1330
+  case = one geometry, cell, spectator assignment, and logical axis
+
+Pass counts by dimension and logical axis:
+  dim axis current_pass/total adapted_pass/total
+    1    0     10/10         10/10    
+    2    0      0/60         60/60    
+    2    1     60/60         60/60    
+    3    0      0/400       400/400   
+    3    1      0/400       400/400   
+    3    2    400/400       400/400   
+
+current_fixed_x:
+  logical Pauli pass: 470/1330
+  Bell-projector gate pass: 470/1330
+  teleportation/no-signaling pass: 470/470 run (860 skipped before teleportation)
+  Z sign counts: -1=660, 1=670
+  X sign counts: 1=470
+  failure causes: current_pair_hop_x_flips_last_axis_not_logical_axis=860
+  zero X-restriction failures: 860
+  max Z leakage: 0.000e+00
+  max X leakage: 1.414e+00
+  max failed-case X leakage: 1.414e+00
+  max Z^2-I error: 0.000e+00
+  max X^2-I error: 1.000e+00
+  max anticommutator norm: 0.000e+00
+  max Bell-projector resolution error: 0.000e+00
+  max Bell-projector idempotence error: 2.500e-01
+  max Bell-projector orthogonality error: 2.500e-01
+  minimum corrected-state fidelity: 0.9999999999999996
+  maximum infidelity: 8.882e-16
+  max branch probability error from 1/4: 1.943e-16
+  max total probability error from 1: 7.772e-16
+  max Bob trace distance to I/2 before Alice measurement: 3.886e-16
+  max Bob trace distance to I/2 after Alice measurement before message: 3.608e-16
+  max pairwise pre-message Bob-state distance across inputs: 4.441e-16
+  Bell outcomes seen: [(0, 0), (0, 1), (1, 0), (1, 1)]
+
+axis_adapted_x:
+  logical Pauli pass: 1330/1330
+  Bell-projector gate pass: 1330/1330
+  teleportation/no-signaling pass: 1330/1330 run (0 skipped before teleportation)
+  Z sign counts: -1=660, 1=670
+  X sign counts: 1=1330
+  failure causes: none
+  zero X-restriction failures: 0
+  max Z leakage: 0.000e+00
+  max X leakage: 0.000e+00
+  max failed-case X leakage: 0.000e+00
+  max Z^2-I error: 0.000e+00
+  max X^2-I error: 0.000e+00
+  max anticommutator norm: 0.000e+00
+  max Bell-projector resolution error: 0.000e+00
+  max Bell-projector idempotence error: 0.000e+00
+  max Bell-projector orthogonality error: 0.000e+00
+  minimum corrected-state fidelity: 0.9999999999999996
+  maximum infidelity: 8.882e-16
+  max branch probability error from 1/4: 1.943e-16
+  max total probability error from 1: 7.772e-16
+  max Bob trace distance to I/2 before Alice measurement: 3.886e-16
+  max Bob trace distance to I/2 after Alice measurement before message: 4.163e-16
+  max pairwise pre-message Bob-state distance across inputs: 4.996e-16
+  Bell outcomes seen: [(0, 0), (0, 1), (1, 0), (1, 1)]
+
+Interpretation:
+  The current fixed pair-hop X generalizes across all surveyed cells and spectator tastes only when the logical taste axis is the last axis.
+  Non-last logical axes fail because the current pair-hop X flips the last taste bit, leaks out of the encoded subspace, and has zero 2x2 restriction on those encodings.
+  Retargeting X to the selected logical taste axis restores the algebraic logical-Pauli, Bell-projector, teleportation, and no-signaling gates on all surveyed encodings.
+
+Claim boundary:
+  This is a finite algebraic audit on ideal encoded taste qubits.
+  It does not derive a physical measurement apparatus, durable record,
+  resource-preparation channel, noise model, matter transfer, charge
+  transfer, mass transfer, or faster-than-light signaling.
+
+----- stderr -----
+

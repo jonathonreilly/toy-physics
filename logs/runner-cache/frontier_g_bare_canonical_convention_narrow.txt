@@ -1,0 +1,62 @@
+===== runner cache v1 =====
+runner: scripts/frontier_g_bare_canonical_convention_narrow.py
+runner_sha256: 7154df77d942c29449cddd752d244b725d919a66e0137facc9504ded49f6602c
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.07
+status: nonzero_exit
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure and convention discipline
+----------------------------------------------------------------------------------------
+  [PASS (A)] contains: 'g_bare Canonical Wilson Normalization (Convention)'  ()
+  [PASS (A)] contains: 'Type:** bounded_theorem'  ()
+  [PASS (A)] contains: 'g_bare = 1'  ()
+  [PASS (A)] contains: 'an admitted convention'  ()
+  [PASS (A)] contains: 'NOT a derivation'  ()
+  [PASS (A)] contains: 'β  =  2 N_c / g_bare²  =  2 · 3 / 1  =  6'  ()
+  [PASS (A)] contains: 'GRAPH_FIRST_SU3_INTEGRATION_NOTE.md'  ()
+  [PASS (A)] contains: 'class (A)'  ()
+  [PASS (A)] contains: 'convention-vs-derivation'  ()
+  [PASS (A)] contains: 'target_claim_type: bounded_theorem'  ()
+  [PASS (A)] narrow scope avoids forbidden derivation claim: 'g_bare = 1 is uniquely derived'  ()
+  [PASS (A)] narrow scope avoids forbidden derivation claim: 'g_bare = 1 is forced by'  ()
+  [PASS (A)] narrow scope avoids forbidden derivation claim: 'Cl(3) axioms uniquely determine g_bare'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: β = 2 N_c / g_bare² for (N_c=3, g_bare=1) gives β = 6
+----------------------------------------------------------------------------------------
+  [PASS (A)] β(N_c=3, g_bare=1) = 6 exactly  (β = 2·3/1² = 6)
+
+----------------------------------------------------------------------------------------
+Part 3: β formula consistency for various (N_c, g_bare)
+----------------------------------------------------------------------------------------
+  [PASS (A)] β(N_c=2, g_bare=1) = 4  (β = 4)
+  [PASS (A)] β(N_c=3, g_bare=1) = 6  (β = 6)
+  [PASS (A)] β(N_c=4, g_bare=1) = 8  (β = 8)
+  [PASS (A)] β(N_c=3, g_bare=2) = 3/2  (β = 3/2)
+  [PASS (A)] β(N_c=3, g_bare=1/2) = 24  (β = 24)
+
+----------------------------------------------------------------------------------------
+Part 4: at g_bare = 1, F^lattice = Ω^Cl(3) without rescaling
+----------------------------------------------------------------------------------------
+  [PASS (A)] rescaling factor at g_bare = 1 is 1 (no rescaling)  (1/g_bare = 1)
+  [PASS (A)] at g_bare = 2, rescaling factor = 1/2 ≠ 1 (convention dependent)  (shows g_bare = 1 is the rescaling-free point)
+  [PASS (A)] at g_bare = 1/3, rescaling factor = 3 ≠ 1 (convention dependent)  (shows g_bare = 1 is the rescaling-free point)
+  [PASS (A)] at g_bare = 7/11, rescaling factor = 11/7 ≠ 1 (convention dependent)  (shows g_bare = 1 is the rescaling-free point)
+
+----------------------------------------------------------------------------------------
+Part 5: declared authority is graph-visible
+----------------------------------------------------------------------------------------
+  [PASS (A)] graph_first_su3_integration_note exists in audit ledger  (effective_status='retained_bounded')
+  [PASS (A)] g_bare_canonical_convention_narrow_theorem_note_2026-05-02 seeded by audit pipeline  (run docs/audit/scripts/run_pipeline.sh after editing the note)
+  [PASS (A)] g_bare_canonical_convention_narrow_theorem_note_2026-05-02 records graph_first_su3 as declared dependency  (deps=['graph_first_su3_integration_note'])
+  [FAIL (A)] g_bare_canonical_convention_narrow_theorem_note_2026-05-02 remains effective-unaudited before independent audit  (effective_status='audited_conditional')
+
+========================================================================================
+  TOTAL: PASS=26, FAIL=1
+========================================================================================
+
+----- stderr -----
+

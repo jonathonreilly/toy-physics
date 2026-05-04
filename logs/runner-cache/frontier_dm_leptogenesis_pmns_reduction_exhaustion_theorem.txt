@@ -1,0 +1,117 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_reduction_exhaustion_theorem.py
+runner_sha256: 980b05ccd3991d3228a46970ae3050d52aaa48890a9fa619813c70abd6c4584d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 66.20
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS REDUCTION-EXHAUSTION THEOREM
+========================================================================================
+
+Framework convention:
+  "axiom" means only Cl(3) on Z^3.
+
+Question:
+  Do we still need a stronger theorem about 'all possible components'
+  beyond the exact closure surface already used on the PMNS-assisted N_e
+  route, or is that larger domain already eliminated by the exact
+  reduction chain?
+
+========================================================================================
+PART 1: THE FIXED N_e SEED SURFACE HAS AN EXACT GLOBAL CHART
+========================================================================================
+  [PASS] The active source chart preserves the exact native seed sums  ((xbar,ybar)=(0.563333,0.306667))
+  [PASS] The soft3 chart is exactly invertible on the positive fixed-sum surface  (err=3.93e-17)
+  [PASS] So the active parameter chart is surjective onto the interior of the fixed native N_e seed surface  (max sampled inverse-chart error=3.07e-16)
+
+  exemplar x = [0.471675, 0.55381 , 0.664515]
+  exemplar y = [0.208063, 0.464382, 0.247555]
+  inverse-chart params = [-0.342767, -0.182236, -0.173792,  0.629075,  0.      ]
+  recovered x = [0.471675, 0.55381 , 0.664515]
+  recovered y = [0.208063, 0.464382, 0.247555]
+  recovered delta = 0.000000
+
+========================================================================================
+PART 2: THE ETA MAP FACTORS EXACTLY THROUGH THE REDUCED SURFACE
+========================================================================================
+
+========================================================================================
+PART 1: SINGLE-SOURCE FLAVORED TRANSPORT IS AN EXACT COLUMN FUNCTIONAL
+========================================================================================
+  [C] PASS: The exact flavored asymmetry for one source equals the sum of three one-variable channel functionals  ((Δ_a,Δ_b)=(2.75e-09,3.23e-09))
+  [C] PASS: So the transport-relevant PMNS column is selected by a scalar functional of its entries, not by a new transport ansatz  (F_K(P) = Σ_alpha Psi_K(P_alpha))
+  [C] PASS: The exact functional depends only on the exact one-flavor source profile and washout tail  (source_min=7.225e-14, tail_max=55.648577)
+
+  direct functional check on canonical near-closing column: 0.025313835316 vs 0.025313838064
+  direct functional check on democratic column:            0.017734139120 vs 0.017734142347
+  [PASS] On the one-sided N_e lane, the PMNS packet equals the active packet transpose exactly  (err=4.52e-16)
+  [PASS] The flavored transport output is then an exact scalar functional of active packet columns  (F(P)=[0.02558212 0.0194215  0.01239726])
+  [PASS] So the PMNS-assisted eta map already factors through H_e and its active packet, with no extra passive or transport state  (favored column=0)
+
+  active packet:
+[[0.035657 0.417923 0.54642 ]
+ [0.8949   0.103521 0.001578]
+ [0.069443 0.478556 0.452002]]
+  exact column functionals = [0.02558212 0.0194215  0.01239726]
+
+========================================================================================
+PART 3: THE FULL-CLOSURE BRANCHES ALREADY LIVE ON THAT EXACT DOMAIN
+========================================================================================
+
+========================================================================================
+PART 1: ENUMERATE THE CLOSURE STATIONARY BRANCHES
+========================================================================================
+  [PASS] The current fixed-seed closure surface yields two dominant stationary branches under broad multistart enumeration  (branch count=2, sampled solves=7)
+  [PASS] The lowest branch closes the favored column exactly  (etas=[1.         0.75917895 0.48458972])
+  [PASS] The broad-multistart dominant pair is separated by a finite action gap  (ΔS_pair=0.869750837948)
+
+  branch 0:
+    count      = 6
+    S_rel      = 0.240906701390
+    x          = [0.471675, 0.55381 , 0.664515]
+    y          = [0.208063, 0.464382, 0.247555]
+    delta      = -1.856375564645e-07
+    eta/eta_obs= [1.         0.75917895 0.48458972]
+  branch 1:
+    count      = 1
+    S_rel      = 1.110657539338
+    x          = [0.790189, 0.406763, 0.493048]
+    y          = [0.586185, 0.167566, 0.166248]
+    delta      = -3.189531894172e-07
+    eta/eta_obs= [1.         0.94763537 0.95875999]
+  [PASS] The low-action closure branch lies on the exact fixed native seed surface  ((xbar,ybar)=(0.563333,0.306667))
+  [PASS] The higher stationary closure branch lies on the same exact fixed native seed surface  ((xbar,ybar)=(0.563333,0.306667))
+  [PASS] So even the full-closure selector competition is already an internal problem on one exact reduced domain  ((delta_lo,delta_hi)=(-1.856e-07,-3.190e-07))
+
+  low branch x = [0.471675, 0.55381 , 0.664515]
+  low branch y = [0.208063, 0.464382, 0.247555]
+  high branch x = [0.790189, 0.406763, 0.493048]
+  high branch y = [0.586185, 0.167566, 0.166248]
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  Nature-review read:
+    - the phrase 'beyond the exact closure surface we reduced to' is no
+      longer a live loophole on the PMNS-assisted N_e route
+    - the exact reduction chain already proves that surface is the whole
+      admissible domain for this closure problem
+    - so the selector theorem only has to classify branches on that
+      surface, not on some larger external domain
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact reduction answer:
+    - the fixed native N_e seed surface is the full admissible domain of
+      the PMNS-assisted closure problem on this branch
+    - the eta map factors exactly through that domain
+    - so a theorem about components 'beyond' that surface is not
+      separately required for the N_e closure claim
+
+PASS=9  FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,74 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py
+runner_sha256: 72b40b547f2930e25e47500bc559ad6ea6f9255d32b1aac25d0940c4b696cf7e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+LANE 3 QUARK BOUNDED-COMPANION RETENTION FIREWALL
+========================================================================================
+
+Question:
+  Can the current CKM/quark-mass support packet be promoted to
+  retained m_u, m_d, m_s, m_c, and m_b closure?
+
+Answer:
+  No. The packet is strong bounded support, not five-mass retention.
+
+----------------------------------------------------------------------------------------
+Part 1: repo claim-state guardrails
+----------------------------------------------------------------------------------------
+  [PASS] Lane 3 stub says only top is retained
+  [PASS] review packet says no retained-spectrum promotion
+  [PASS] down-type note is bounded, not retained
+  [PASS] up-amplitude scan says no retained derivation of a_u
+  [PASS] b-Yukawa note closes species-uniform Ward reuse negatively
+
+----------------------------------------------------------------------------------------
+Part 2: down-type ratio support is not absolute mass retention
+----------------------------------------------------------------------------------------
+  alpha_s(v) = 0.103303816122
+  m_d/m_s = 0.05165191; comparator deviation = +3.30%
+  m_s/m_b = 0.02238973; comparator deviation = +0.20%
+  m_d/m_b = 0.00115647
+  [PASS] down-type formulas reproduce the bounded support values
+  [PASS] down-type ratios match threshold-local comparators but remain bounded  (dev_ds=+3.30%, dev_sb=+0.20%)
+  [PASS] ratio formulas leave an arbitrary absolute bottom anchor  (m_b anchors 4.18 GeV and 8.36 GeV preserve ratios)
+
+----------------------------------------------------------------------------------------
+Part 3: up-type branch remains partition/scalar-law bounded
+----------------------------------------------------------------------------------------
+  f_12 comparator partition = 0.983879
+  f_23 comparator partition = 0.998316
+  m_u/m_c from comparator partition = 1.651908061e-03 (-2.64%)
+  m_c/m_t from comparator partition = 7.349068057e-04 (-90.04%)
+  [PASS] up-type comparator partition is close to the down-dominant edge  (f12=0.983879, f23=0.998316)
+  [PASS] m_u/m_c is near comparator but still partition-selected  (dev_uc=-2.64%)
+  [PASS] current CP-orthogonal m_c/m_t remains about an order low  (dev_ct=-90.04%)
+
+----------------------------------------------------------------------------------------
+Part 4: top Ward identity does not species-uniformly retain m_b
+----------------------------------------------------------------------------------------
+  y_t/g_s Ward ratio = 1/sqrt(6) = 0.4082482905
+  species-uniform b prediction from existing analysis = 145.07 GeV
+  observed comparator m_b(m_b) = 4.18 GeV
+  overshoot = 34.7x
+  [PASS] top Ward ratio is exact but top-channel scoped
+  [PASS] species-uniform physical reuse overshoots m_b by > 30x  (ratio=34.7x)
+  [PASS] absolute non-top Yukawas require species differentiation  (species-uniform reading closed negatively; new primitive required)
+
+----------------------------------------------------------------------------------------
+Part 5: safe endpoint
+----------------------------------------------------------------------------------------
+  [PASS] CKM closure is not a five-mass closure theorem  (mixing package needs mass-ratio bridges and selectors before retention)
+  [PASS] Lane 3 honest status is open, not retained closure  (open gates: 5/6 NP proof, up scalar/partition law, generation-stratified Ward)
+  [PASS] firewall does not use observed masses as derivation inputs  (PDG values are comparator/sensitivity only)
+
+========================================================================================
+PASS=17 FAIL=0
+========================================================================================
+
+----- stderr -----
+

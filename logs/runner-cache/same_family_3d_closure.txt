@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/same_family_3d_closure.py
+runner_sha256: d20677929af9d9264c054564a225c24b93d8b637072e08beec82275cc3eeaa6e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.06
+status: ok
+----- stdout -----
+==============================================================================
+SAME-FAMILY 3D CLOSURE: VALLEY-LINEAR
+  Action: S = L(1-f)
+  Kernel: 1/L^2 with h^2 measure
+  Core family: h=0.25, W=10, L=12, max_d=12
+  Nodes: 321,489, layers: 49
+  Honest status:
+    - properties 1-7 are the fixed core card at h=0.25, W=10, L=12
+    - properties 8-9 are same-h multi-L rows at h=0.25, W=10
+    - property 10 is core W=10 plus a W=12 width companion for the far tail
+==============================================================================
+
+  Frozen core card:
+    1. Born = 4.20e-15
+    2. d_TV = 0.8341
+    3. k=0 = 0.000000
+    4. F~M alpha = 1.00
+    5. Gravity = +0.000224 (TOWARD)
+    6. Decoherence = 49.9%
+    7. MI = 0.64 bits
+    10. Distance = W=10 core tail b^(-0.93) / W=12 companion tail b^(-1.07)
+
+  8-9. Same-family multi-L rows at the same h=0.25 and W=10:
+    (L=8 and L=10 were replayed separately on 2026-04-04; L=12 is the frozen core row)
+    L=8: grav=+0.000157, 1-pur=0.4997
+    L=10: grav=+0.000199, 1-pur=0.4994
+    L=12: grav=+0.000224, 1-pur=0.4990 (frozen core)
+    Purity stable: 49.9% across L=8,10,12
+    Gravity grows: YES (+0.000157 -> +0.000199 -> +0.000224)
+
+==============================================================================
+SUMMARY
+  Core card: h=0.25, W=10, L=12
+  Core rows 1-7: frozen from retained notes/logs
+  Rows 8-9: same-h multi-L rows at h=0.25, W=10
+  Row 10: frozen core W=10 tail + W=12 width companion from retained logs
+  Total time:  0s
+==============================================================================
+
+----- stderr -----
+

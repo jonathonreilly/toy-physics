@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/gap_ln_born_check.py
+runner_sha256: 36cf952006dc9b8f8199e8f75dabdc701d22f37d1dc517cddd5ab8dbe29f57ae
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 18.88
+status: ok
+----- stdout -----
+==========================================================================================
+BORN RULE CHECK: LN + |y|-REMOVAL ON CHOKEPOINT 3D DAGs
+  NPL=50, 16 seeds, chokepoint barrier (layer-1 only)
+==========================================================================================
+
+  N_LAYERS = 15
+          mode        |I3|/P         max   ok   time
+  --------------------------------------------------
+        linear      2.31e-16±4.7e-17    1.51e-15   48     0s  PASS
+    linear+|y|      1.01e-17±2.7e-18    6.14e-17   48     0s  PASS
+            LN      5.07e-01±7.4e-02    1.11e+00   48     1s  FAIL
+        LN+|y|      3.77e-01±7.1e-02    1.08e+00   48     1s  FAIL
+
+  N_LAYERS = 25
+          mode        |I3|/P         max   ok   time
+  --------------------------------------------------
+        linear      8.02e-16±9.1e-17    3.36e-15   48     2s  PASS
+    linear+|y|      1.52e-17±4.5e-18    1.86e-16   48     1s  PASS
+            LN      8.79e-01±4.8e-02    1.09e+00   48     2s  FAIL
+        LN+|y|      3.79e-01±7.1e-02    1.12e+00   48     1s  FAIL
+
+  N_LAYERS = 40
+          mode        |I3|/P         max   ok   time
+  --------------------------------------------------
+        linear      8.36e-16±5.0e-16    1.76e-15    3     3s  PASS
+    linear+|y|  NO DATA     2s
+            LN      8.30e-01±5.9e-02    1.28e+00   48     3s  FAIL
+        LN+|y|      4.45e-01±7.4e-02    1.31e+00   48     2s  FAIL
+
+BORN COMPLIANCE:
+  |I3|/P < 1e-10: machine precision (PASS)
+  |I3|/P < 0.01: Born-compliant (PASS)
+  |I3|/P < 0.1: marginal
+  |I3|/P >= 0.1: Born violated (FAIL)
+
+NOTE: chokepoint barrier (layer-1 only connectivity) ensures
+all paths pass through the barrier. Without this, I3/P~1 on
+random DAGs due to bypass paths, not Born violation.
+
+----- stderr -----
+

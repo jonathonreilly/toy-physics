@@ -1,0 +1,101 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_native_zero_section_closure_route.py
+runner_sha256: f4c238630ae7a2c4e43f60ced2fe0a4bf0068916dc3fec1b5ad0e44e22c0c3ab
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.87
+status: ok
+----- stdout -----
+
+========================================================================================
+A. Q native zero-source section
+========================================================================================
+[PASS] A.1 source-label zero section gives the unique source-free midpoint
+       z=<Z>=0 -> w_plus=w_perp=1/2.
+[PASS] A.2 midpoint gives K_TL=0 and Q=2/3
+       K_TL(z=0)=0, Q(z=0)=2/3
+[PASS] A.3 nonzero source label remains the falsifier
+       z=-1/3 -> w_plus=1/3 -> Q=1.
+
+========================================================================================
+B. Real Z3 primitive has no equivariant spectator split
+========================================================================================
+[PASS] B.1 real nontrivial Z3 pair is represented by a 120-degree rotation
+       R=Matrix([[-1/2, -sqrt(3)/2], [sqrt(3)/2, -1/2]])
+[PASS] B.2 real equivariant endomorphisms are exactly complex scalars aI+bJ
+       generic commutant=Matrix([[x3, -x2], [x2, x3]])
+[PASS] B.3 equivariant idempotents on the real primitive are only 0 and I
+       idempotents=[{a: 0, b: 0}, {a: 1, b: 0}]
+[PASS] B.4 therefore a native real-primitive endpoint has no spectator channel
+       There is no retained Z3-equivariant projector splitting selected versus spectator inside the real primitive.
+
+========================================================================================
+C. Why rank-one selected-line readout is not native
+========================================================================================
+[PASS] C.1 no real rank-one line projector commutes with the retained Z3 rotation
+       A rank-one Brannen line inside the real primitive is extra non-equivariant boundary data.
+[PASS] C.2 native delta implication must read the whole real primitive, not a CP1 line
+       This converts the old selected/spectator obstruction into a precise identification theorem.
+
+========================================================================================
+D. Determinant-line unit removes the endpoint-exact offset if retained
+========================================================================================
+[PASS] D.1 independent APS value remains eta_APS=2/9
+       eta_APS=2/9
+[PASS] D.2 unit-preserving endpoint functor forces c=0
+       F(phi)=phi+c, F(0)=0 -> c=[0]
+[PASS] D.3 unbased torsor coordinate is the exact falsifier
+       If c=1/9, the same closed eta gives delta_open=1/3.
+
+========================================================================================
+E. Full conditional native chain
+========================================================================================
+[PASS] E.1 real primitive plus unit endpoint gives delta_open=eta_APS
+       delta_open=2/9
+[PASS] E.2 Q and delta are implied under the native zero-section route
+       Q=2/3 and delta=2/9 follow without numerical fitting once the native zero sections are retained.
+
+========================================================================================
+F. Hostile review boundary
+========================================================================================
+[PASS] F.1 the route is not the old rank-one selected-line bridge
+       It implies delta only by replacing rank-one selection with the whole real Z3 primitive endpoint.
+[PASS] F.2 retained-only closure still requires two identification theorems
+       Need native proof of real-primitive Brannen endpoint and unit-preserving determinant-line readout.
+[PASS] F.3 no hidden target import is used
+       The value 2/9 is computed by APS; Q follows from zero source.  The tested assumptions are representation/unit laws.
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 17/17
+  [PASS] A.1 source-label zero section gives the unique source-free midpoint
+  [PASS] A.2 midpoint gives K_TL=0 and Q=2/3
+  [PASS] A.3 nonzero source label remains the falsifier
+  [PASS] B.1 real nontrivial Z3 pair is represented by a 120-degree rotation
+  [PASS] B.2 real equivariant endomorphisms are exactly complex scalars aI+bJ
+  [PASS] B.3 equivariant idempotents on the real primitive are only 0 and I
+  [PASS] B.4 therefore a native real-primitive endpoint has no spectator channel
+  [PASS] C.1 no real rank-one line projector commutes with the retained Z3 rotation
+  [PASS] C.2 native delta implication must read the whole real primitive, not a CP1 line
+  [PASS] D.1 independent APS value remains eta_APS=2/9
+  [PASS] D.2 unit-preserving endpoint functor forces c=0
+  [PASS] D.3 unbased torsor coordinate is the exact falsifier
+  [PASS] E.1 real primitive plus unit endpoint gives delta_open=eta_APS
+  [PASS] E.2 Q and delta are implied under the native zero-section route
+  [PASS] F.1 the route is not the old rank-one selected-line bridge
+  [PASS] F.2 retained-only closure still requires two identification theorems
+  [PASS] F.3 no hidden target import is used
+
+KOIDE_NATIVE_ZERO_SECTION_CLOSURE_ROUTE=CONDITIONAL
+CONDITIONAL_NATIVE_ZERO_SECTION_IMPLIES_Q=TRUE
+CONDITIONAL_NATIVE_ZERO_SECTION_IMPLIES_DELTA=TRUE
+CONDITIONAL_NATIVE_ZERO_SECTION_IMPLIES_NATIVE_VALUES=TRUE
+RETAINED_ONLY_NATIVE_CLOSURE_CLAIMED=FALSE
+RESIDUAL_IDENTIFICATION_Q=native_zero_source_charged_lepton_scalar_readout
+RESIDUAL_IDENTIFICATION_DELTA=Brannen_endpoint_is_real_Z3_primitive_not_rank_one_line
+RESIDUAL_TRIVIALIZATION=unit_preserving_determinant_line_endpoint_readout
+NEXT_NATIVE_CLOSURE_STEP=derive_the_two_delta_identifications_from_retained_boundary_physics
+
+----- stderr -----
+

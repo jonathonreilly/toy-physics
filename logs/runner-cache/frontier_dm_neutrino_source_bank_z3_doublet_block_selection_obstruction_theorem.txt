@@ -1,0 +1,68 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_bank_z3_doublet_block_selection_obstruction_theorem.py
+runner_sha256: 5cebbdabc9124b614fdf343746476b8cb2ff04d32c98118b5a3bc670a97bc913
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.57
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-BANK Z3 DOUBLET-BLOCK SELECTION OBSTRUCTION THEOREM
+========================================================================================
+
+Question:
+  After checking the reusable atlas tools, does the current exact
+  source bank determine the remaining right-sensitive Z3 doublet-block
+  point (delta, q_+) on the live source-oriented sheet?
+
+========================================================================================
+PART 1: THE ATLAS-SUPPORTED UPSTREAM SOURCE BANK IS ALREADY A FIXED POINT
+========================================================================================
+  [PASS] The source-amplitude theorem records the sharp source point a_sel = 1/2 and tau_+ = 1
+  [PASS] The coefficient-closure theorem records gamma = a_sel, E1 = sqrt(8/3) tau_+, E2 = (sqrt(8)/3) tau_+
+  [PASS] So the atlas-supported upstream source bank already collapses to one exact sharp tuple  ((a_sel,tau_+,gamma,E1,E2)=(0.500000,1.000000,0.500000,1.632993161855,0.942809041582))
+
+========================================================================================
+PART 2: DISTINCT ACTIVE POINTS SHARE THE SAME CURRENT-BANK SIGNATURE
+========================================================================================
+  [PASS] Changing delta at fixed q_+ and changing q_+ at fixed delta still leaves the whole current-bank signature unchanged  (same (gamma,E1,E2,cp1,cp2,a_*,b_*,T_slot))
+  [PASS] That unchanged signature is exactly the closed sharp source tuple and its downstream invariant readouts  ((gamma,E1,E2,cp)=(0.500000000000,1.632993161855,0.942809041582,-0.544331053952,0.314269680527))
+
+========================================================================================
+PART 3: THE REMAINING TARGET STILL MOVES IN TWO INDEPENDENT REAL DIRECTIONS
+========================================================================================
+  [PASS] At fixed q_+, the shifted imaginary doublet mixing Im K12 changes with delta  (delta: 0.200000 -> 0.900000)
+  [PASS] At fixed delta, the centered doublet trace changes with q_+  (q_+: 2.200000 -> 2.500000)
+  [PASS] So the unresolved active target is genuinely 2-real, equivalently the Z3 doublet-block pair (delta, q_+)  (one real direction from Im K12 and one from the centered doublet trace)
+
+========================================================================================
+PART 4: NO DETERMINISTIC SELECTOR FACTORING THROUGH THE CURRENT BANK CAN CHOOSE THE POINT
+========================================================================================
+  [PASS] Distinct live active points can have identical exact current-bank signatures  (the current exact atlas-supported bank is constant on those samples)
+  [PASS] Those same points have different active targets (delta, q_+)  (targets=(0.19999999999999982, 2.2), (0.9, 2.2), (0.19999999999999982, 2.5000000000000004))
+  [PASS] Therefore no deterministic selector that factors only through the current exact source bank can determine the active point  (a new right-sensitive 2-real datum is required)
+
+========================================================================================
+PART 5: THE NOTE RECORDS THE OBSTRUCTION CLEANLY
+========================================================================================
+  [PASS] The new note records the fixed upstream source tuple and the moving doublet-block target
+  [PASS] The new note records that a new right-sensitive 2-real datum is required
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact answer:
+    - the atlas-supported upstream source bank already closes to the
+      fixed sharp tuple a_sel = 1/2, tau_+ = 1, gamma = 1/2,
+      E1 = sqrt(8/3), E2 = sqrt(8)/3
+    - the live active target still moves in two real directions
+      (delta, q_+), equivalently in the Z3 doublet block
+    - distinct active points share the same exact current-bank signature
+    - so the current exact source bank cannot select the point
+    - the minimal missing object is a new right-sensitive 2-real datum,
+      equivalently the Z3 doublet-block law itself
+
+PASS=13 FAIL=0
+
+----- stderr -----
+

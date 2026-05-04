@@ -1,0 +1,63 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_pmns_chamber_spectral_completeness_theorem_2026_04_20.py
+runner_sha256: e1017a24ad7a09dfb3a15c1224db65e30c7e0fdd27cec3ef5daa1380fdb392d0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.86
+status: ok
+----- stdout -----
+========================================================================================
+DM PMNS CHAMBER SPECTRAL COMPLETENESS THEOREM
+========================================================================================
+
+Part 1: reduced spectral solve on the sigma=(2,1,0) branch
+
+  sigma=(2,1,0):
+   #1: lams=(-48.379146605424, 37.373635183476, 39.011699711507)  (m,delta,q)=(+28.006188289559, +20.721831213923, +5.011599458302)  margin=+24.100437510370  (s12^2,s13^2,s23^2)=(0.307000000000, 0.021800000000, 0.545000000000)
+   #2: lams=(-2.827622143356, 1.434567109663, 2.430938084643)  (m,delta,q)=(+1.037883050950, +1.433018557503, -1.329548075477)  margin=-1.529522679829  (s12^2,s13^2,s23^2)=(0.307000000000, 0.021800000000, 0.545000000000)
+   #3: lams=(-1.309094366245, -0.320433692692, 2.286589401147)  (m,delta,q)=(+0.657061342210, +0.933806343759, +0.715042329587)  margin=+0.015855511491  (s12^2,s13^2,s23^2)=(0.307000000000, 0.021800000000, 0.545000000000)
+   #4: lams=(-1.216531251276, -0.238161477101, 1.95668997585)  (m,delta,q)=(+0.501997247472, +0.853543345404, +0.425916455114)  margin=-0.353533361338  (s12^2,s13^2,s23^2)=(0.307000000000, 0.021800000000, 0.545000000000)
+  [PASS] sigma=(2,1,0) reduced system has exactly four real ordered roots  (count=4)
+  [PASS] sigma=(2,1,0) roots reproduce the expected Basin 1 / Basin 2 / Basin N / Basin P chart points
+
+Part 2: reduced spectral solve on the sigma=(2,0,1) branch
+
+  sigma=(2,0,1):
+   #1: lams=(-30.507529756135, 24.685664889634, 26.950128535195)  (m,delta,q)=(+21.128263668694, +12.680028023619, +2.089234805861)  margin=+13.136269667624  (s12^2,s13^2,s23^2)=(0.307000000000, 0.021800000000, 0.545000000000)
+   #2: lams=(-2.915683830512, 1.369234079896, 2.850858092486)  (m,delta,q)=(+1.304408341870, +1.503180659702, -1.507440741416)  margin=-1.637253243569  (s12^2,s13^2,s23^2)=(0.307000000000, 0.021800000000, 0.545000000000)
+   #3: lams=(-1.425145987058, 0.203227905965, 2.336100178688)  (m,delta,q)=(+1.114182097596, +0.854138090603, +0.500187951473)  margin=-0.278667119779  (s12^2,s13^2,s23^2)=(0.307000000000, 0.021800000000, 0.545000000000)
+   #4: lams=(-1.274403429705, 0.067862789142, 2.056423562608)  (m,delta,q)=(+0.849882922045, +0.798698922983, +0.337500308359)  margin=-0.496793930514  (s12^2,s13^2,s23^2)=(0.307000000000, 0.021800000000, 0.545000000000)
+  [PASS] sigma=(2,0,1) reduced system has exactly four real ordered roots  (count=4)
+  [PASS] sigma=(2,0,1) reduced system contains the known Basin X chamber root
+
+Part 3: chamber cut on the reduced spectral roots
+  [PASS] sigma=(2,1,0) contributes exactly two chamber roots  (count=2)
+  [PASS] sigma=(2,0,1) contributes exactly one chamber root  (count=1)
+  [PASS] the chamber survivors are exactly Basin 1, Basin 2, and Basin X
+
+Part 4: independent direct chamber solve over all six row permutations
+   sigma=(2, 0, 1)  (m,delta,q)=(+21.128263668694, +12.680028023619, +2.089234805861)  margin=+13.136269667625  (s12^2,s13^2,s23^2)=(0.307000000000, 0.021800000000, 0.545000000000)
+   sigma=(2, 1, 0)  (m,delta,q)=(+0.657061342210, +0.933806343759, +0.715042329587)  margin=+0.015855511491  (s12^2,s13^2,s23^2)=(0.307000000000, 0.021800000000, 0.545000000000)
+   sigma=(2, 1, 0)  (m,delta,q)=(+28.006188289565, +20.721831213931, +5.011599458305)  margin=+24.100437510381  (s12^2,s13^2,s23^2)=(0.307000000000, 0.021800000000, 0.545000000000)
+  [PASS] independent direct chamber solve finds exactly three (point, sigma) roots  (count=3)
+  [PASS] the direct chamber roots match Basin 1, Basin 2, and Basin X with the expected sigmas
+  [PASS] the other four row permutations carry no chamber chi^2 = 0 roots in the direct solve  (perms=[(2, 0, 1), (2, 1, 0)])
+
+Part 5: chamber completeness verdict
+  [PASS] compact chamber completeness closes on this branch: chamber chi^2 = 0 set = {Basin 1, Basin 2, Basin X}  (reduced spectral solve + independent all-permutation chamber solve agree)
+
+========================================================================================
+RESULT
+========================================================================================
+  The compact chamber chi^2 = 0 PMNS set is exactly:
+    - Basin 1 on sigma=(2,1,0)
+    - Basin 2 on sigma=(2,1,0)
+    - Basin X on sigma=(2,0,1)
+
+  Off-chamber real roots still exist on both parity branches, but they are
+  not part of the active chamber completeness problem.
+
+PASS=11  FAIL=0
+
+----- stderr -----
+

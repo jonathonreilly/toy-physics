@@ -1,0 +1,68 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_bundle_window_trichotomy_candidate.py
+runner_sha256: e567856b083af032c0a351987103d55766e462b9cd378537c6d96768d1dc5984
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 1.55
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE BUNDLE-WINDOW TRICHOTOMY CANDIDATE
+========================================================================================
+
+Question:
+  What is the sharpest shared statement about endpoint, split-1, and split-2
+  when they are viewed directly on the broad exact shift-quotient bundle?
+
+========================================================================================
+PART 1: THE THREE BROAD-BUNDLE MINIMA ARE BOUNDARY-CONTROLLED
+========================================================================================
+  [PASS] The preferred recovered floor is unchanged on the compact branch  (preferred=1.586874714730)
+  [PASS] The endpoint broad-box minimizer is reproduced stably by global refinement  ((point,value)=([-1.87        1.14568951  0.5       ],3.027555919409))
+  [PASS] The endpoint broad-box minimizer sits on the upper-m / lower-r31 boundary corner of its box  (point=[-1.87        1.14568951  0.5       ])
+  [PASS] The split_1 broad-box minimizer is reproduced stably by global refinement  ((point,value)=([-1.1         1.08840241  0.5       ],2.308603400914))
+  [PASS] The split_1 broad-box minimizer sits on the upper-m / lower-r31 boundary corner of its box  (point=[-1.1         1.08840241  0.5       ])
+  [PASS] The split_2 broad-box minimizer is reproduced stably by global refinement  ((point,value)=([-0.14        0.99704993  0.5       ],1.500442491658))
+  [PASS] The split_2 broad-box minimizer sits on the upper-m / lower-r31 boundary corner of its box  (point=[-0.14        0.99704993  0.5       ])
+
+========================================================================================
+PART 2: ENDPOINT AND SPLIT-1 ARE DOMINATED, BUT SPLIT-2 IS NOT
+========================================================================================
+  [PASS] The endpoint broad-box minimum stays safely above the preferred recovered floor  (endpoint_gap=1.440681204679e+00)
+  [PASS] The split-1 broad-box minimum also stays safely above the preferred recovered floor  (split1_gap=7.217286861842e-01)
+  [PASS] The split-2 broad-box minimum falls below the preferred recovered floor on the same exact bundle domain  (split2_gap=-8.643222307147e-02)
+  [PASS] So broad exact-bundle dominance cannot be the right global carrier-side theorem target  (gaps={'endpoint': 1.440681205, 'split_1': 0.721728686, 'split_2': -0.086432223})
+
+  endpoint: repair=3.027555919409  gap=1.440681204679e+00
+  split_1 : repair=2.308603400914  gap=7.217286861842e-01
+  split_2 : repair=1.500442491658  gap=-8.643222307147e-02
+
+========================================================================================
+PART 3: ALL THREE BROAD-BOX MINIMA ARE LOCALLY BOUNDARY-CONTROLLED
+========================================================================================
+  [PASS] The endpoint broad-box minimizer increases when moved inward in m and r31, with positive delta curvature  ((dm,dr,sec_delta)=(9.484791910177e-04,1.175404982317e-02,3.329220736425e-06))
+  [PASS] The split_1 broad-box minimizer increases when moved inward in m and r31, with positive delta curvature  ((dm,dr,sec_delta)=(9.135986519206e-04,1.291968357904e-02,3.856354194198e-06))
+  [PASS] The split_2 broad-box minimizer increases when moved inward in m and r31, with positive delta curvature  ((dm,dr,sec_delta)=(6.950527159764e-04,1.242858432788e-02,6.002987183340e-06))
+  [PASS] So the broad-bundle split between endpoint/split-1 and split-2 is about floor level, not about missing local control  (signatures={'endpoint': (0.000948479, 0.01175405, 3.329e-06), 'split_1': (0.000913599, 0.012919684, 3.856e-06), 'split_2': (0.000695053, 0.012428584, 6.003e-06)})
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE WINDOW TRICHOTOMY
+========================================================================================
+  [PASS] The note records the three broad-box minima and their comparison to the preferred floor
+  [PASS] The note records the key conclusion that broad exact-bundle dominance fails already on split-2
+  [PASS] The note keeps the boundary honest: this is a candidate, not theorem closure
+
+========================================================================================
+RESULT
+========================================================================================
+  Broad exact-bundle window trichotomy:
+    - endpoint: boundary-controlled and above the preferred floor
+    - split-1: boundary-controlled and above the preferred floor
+    - split-2: boundary-controlled but below the preferred floor
+  RESULT: broad exact-bundle dominance is insufficient; the finer exact
+  carrier restriction is doing real work on the carrier side.
+
+SUMMARY: PASS=18 FAIL=0
+
+----- stderr -----
+

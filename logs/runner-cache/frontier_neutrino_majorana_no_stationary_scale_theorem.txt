@@ -1,0 +1,73 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_no_stationary_scale_theorem.py
+runner_sha256: f139732c69a1ee0a31fd541e180b5c6a621a79b8f5bd03c7f8d5d7df45336d83
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: NO-STATIONARY-SCALE THEOREM
+========================================================================================
+
+Authority stack:
+  - docs/NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md
+  - docs/NEUTRINO_MAJORANA_SOURCE_RAY_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_STAIRCASE_BLINDNESS_THEOREM_NOTE.md
+
+Question:
+  Could the admitted Majorana Pfaffian/Nambu family already contain an
+  intrinsic stationary or endpoint selector for the absolute staircase
+  scale?
+
+========================================================================================
+PART 1: THE ONE-GENERATION LOCAL PFAFFIAN GENERATOR HAS NO STATIONARY SCALE
+========================================================================================
+  [PASS] The local generator step is exactly log(mu1)-log(mu0)  (|DeltaW-DeltaLog|=0.00e+00)
+  [PASS] The exact local source derivative is 1/mu  (dW/dmu=2.702703, 1/mu=2.702703)
+  [PASS] The local derivative never vanishes on positive scales  (min |dW/dmu|=0.826446)
+
+  On the admitted one-generation Pfaffian lane, the bosonic generator
+  is monotone in log(mu). So there is no intrinsic stationary local
+  scale anywhere on mu > 0.
+
+========================================================================================
+PART 2: THE FIXED Z3 LIFT IS AFFINE IN LOG(SCALE), NOT STATIONARY
+========================================================================================
+  [PASS] The three-generation Pfaffian scales exactly as lambda^3 on the fixed texture class  (scale-ratio error=2.69e-17)
+  [PASS] The lifted generator step is exactly 3[log(lambda1)-log(lambda0)]  (|DeltaW-3DeltaLog|=4.44e-16)
+  [PASS] The lifted source derivative is exactly 3/lambda  (dW/dlambda=7.317073, 3/lambda=7.317073)
+  [PASS] The lifted derivative never vanishes on positive scales  (min |dW/dlambda|=2.189781)
+
+  So the fixed three-generation source class still carries only
+  logarithmic scale dependence. It has no internal staircase anchor.
+
+========================================================================================
+PART 3: THE REMAINING EXACT CLASS INVARIANTS ARE SCALE-INVARIANT
+========================================================================================
+  [PASS] Normalized singlet/doublet spectrum is identical across overall rescaling  (max normalized spectrum difference=5.55e-17)
+  [PASS] Normalized pairing block is identical across overall rescaling  (max normalized Delta difference=1.93e-16)
+
+  So the exact class invariants organize the source class but cannot
+  pick its absolute amplitude.
+
+========================================================================================
+RESULT
+========================================================================================
+  No. On the current admitted source class, the scale-sensitive exact
+  bosonic generator is affine in log(scale), and the remaining exact
+  class invariants are scale-invariant. So the current Pfaffian/Nambu
+  family has no intrinsic stationary scale and no internal staircase
+  anchor.
+
+  On that earlier logarithmic family, any full Majorana scale-selection
+  law had to introduce some genuinely new non-homogeneous ingredient.
+  Later branch work first narrows the blocker to local point
+  selection on the background-normalized curve, and then closes that
+  local step at the self-dual point rho = 1; what remains is the
+  absolute staircase embedding beyond that local point.
+
+PASS=9  FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,203 @@
+===== runner cache v1 =====
+runner: scripts/frontier_wave_equation_gravity.py
+runner_sha256: 3f59ec4bf699703c614553c01b6854d0b32194fc0cca0776de97fc10e2838fb7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 19.97
+status: ok
+----- stdout -----
+Wave Equation Gravity: box f = -rho on 3D lattice
+Promoting Poisson (elliptic) to d'Alembertian (hyperbolic)
+Leapfrog integrator, dt=0.5, Dirichlet + absorbing BC
+
+========================================================================
+TEST 1: Wave propagation from sudden source
+========================================================================
+  Lattice: 31^3, dt=0.5, steps=40, time=0.0s
+
+  Wavefront position vs time:
+    step        t    r_front      c_eff
+       1      0.5        0.0      0.000
+       2      1.0        1.0      1.000
+       3      1.5        2.0      1.333
+       4      2.0        3.0      1.500
+       5      2.5        4.0      1.600
+      10      5.0        6.0      1.200
+      15      7.5        9.0      1.200
+      20     10.0       11.0      1.100
+      25     12.5       13.0      1.040
+      30     15.0       13.0      0.867
+      35     17.5       12.0      0.686
+      40     20.0       12.0      0.600
+
+  Measured wavefront speed: c_grav = 1.049
+  Expected (lattice units):  c = 1.0
+  Ratio c_grav/c_expected:  1.049
+
+  Late-time radial profile: f(r) ~ r^-1.33
+  Expected (Poisson steady state): r^-1.0
+
+  Status: PASS
+
+========================================================================
+TEST 2: Newton recovered at low frequency (static source)
+========================================================================
+  Lattice: 31^3, dt=0.5, steps=200, time=0.1s
+
+  Radial profiles (wave steady state vs Poisson):
+     r       f_wave    f_poisson      ratio
+     1     0.079721     0.081424     0.9791
+     2     0.037116     0.038249     0.9704
+     3     0.022840     0.022904     0.9972
+     4     0.016584     0.015646     1.0599
+     5     0.013707     0.011454     1.1967
+     6     0.011652     0.008710     1.3378
+     7     0.010483     0.006762     1.5502
+     8     0.008679     0.005299     1.6377
+     9     0.007097     0.004151     1.7096
+    10     0.004743     0.003217     1.4746
+    11     0.002405     0.002429     0.9900
+
+  Force law exponent (wave steady state):  alpha = -1.040
+  Force law exponent (Poisson):             alpha = -1.459
+  Wave/Poisson ratio: 1.2639 +/- 0.2746
+  Expected: alpha = -1.0 (potential), force ~ 1/r^2
+
+  Status: PASS
+
+========================================================================
+TEST 3: Moving source produces retarded field
+========================================================================
+  Lattice: 41^3, v_source=0.4, dt=0.5, steps=80
+  Time: 0.1s
+
+  Field asymmetry (behind vs ahead of moving source):
+    step      t  x_src    d     f_behind      f_ahead    ratio
+      20   10.0     24    3     0.030871     0.031493    0.980
+      20   10.0     24    5     0.000784     0.016255    0.048
+      20   10.0     24    7     0.021222     0.002133    9.948
+      40   20.0     28    3     0.028301     0.028980    0.977
+      40   20.0     28    5     0.002507     0.015820    0.158
+      40   20.0     28    7     0.021106     0.003982    5.300
+      60   30.0     32    3     0.019320     0.015220    1.269
+      60   30.0     32    5     0.011567     0.002509    4.611
+      60   30.0     32    7     0.014987     0.000088  170.735
+      80   40.0     36    3     0.003767     0.000854    4.411
+
+  Mean asymmetry ratio (behind/ahead): 19.006 +/- 45.588
+  Expected for retarded field: > 1.0 (field stronger behind)
+  Expected for instantaneous:  = 1.0 (symmetric)
+
+  Status: PASS
+
+========================================================================
+TEST 4: Gravitational wave energy (oscillating source)
+========================================================================
+  Lattice: 51^3, omega=0.3, dt=0.5, steps=120
+  Time: 0.2s
+
+  Radiation amplitude vs distance:
+     r      amp_max   expected_1/r  expected_1/r2
+     3     0.028046       0.028046       0.028046
+     4     0.021832       0.021035       0.015776
+     5     0.018845       0.016828       0.010097
+     6     0.016770       0.014023       0.007012
+     7     0.015475       0.012020       0.005151
+     8     0.015986       0.010517       0.003944
+     9     0.016333       0.009349       0.003116
+    10     0.016287       0.008414       0.002524
+    11     0.015908       0.007649       0.002086
+    12     0.015291       0.007012       0.001753
+    13     0.014555       0.006472       0.001494
+    14     0.013637       0.006010       0.001288
+    15     0.012527       0.005609       0.001122
+    16     0.011416       0.005259       0.000986
+    17     0.009914       0.004949       0.000873
+    18     0.007981       0.004674       0.000779
+    19     0.005607       0.004428       0.000699
+
+  Radiation decay exponent: amplitude ~ r^-0.583
+  Expected for radiation: r^-1.0 (1/r decay)
+  Expected for static:    r^-2.0 (1/r^2 decay)
+
+  Frequency dependence of radiated amplitude:
+  omega=0.15  amp(r=10)=0.010971
+  omega=0.30  amp(r=10)=0.016287
+  omega=0.60  amp(r=10)=0.010356
+
+  Amplitude ~ omega^-0.04
+  (Monopole radiation predicts omega^1-2)
+
+  [FAIL strict] gamma = -0.583 NOT in [-1.2, -0.8] -> does NOT establish 1/r radiation in this box
+  [PASS loose] gamma in [-1.8, -0.2] -> non-static far-field present
+
+========================================================================
+TEST 5: Propagator coupling (wave field vs Poisson)
+========================================================================
+  Wave field:    0.1s (150 steps)
+  Poisson field: 0.2s
+  Field correlation (wave vs Poisson interior): 0.951477
+
+  A. Mass law (deflection vs source strength):
+       s    defl_wave   defl_poisson
+    0.05     0.003621       0.004555
+    0.10     0.007740       0.009674
+    0.20     0.017648       0.021837
+    0.40     0.045025       0.055156
+
+  Mass law beta (wave):    1.210
+  Mass law beta (Poisson): 1.197
+  Expected: beta ~ 1.0
+
+  B. Distance law (deflection vs impact parameter):
+       b    defl_wave   defl_poisson
+       2     0.070689       0.075737
+       3     0.017648       0.021837
+       4     0.003170       0.004781
+       5    -0.002365      -0.003654
+       6    -0.002903      -0.006714
+       7    -0.003402      -0.006596
+       8    -0.005178      -0.004655
+
+  Distance law alpha (wave):    -2.069
+  Distance law alpha (Poisson): -1.863
+  Expected: alpha ~ -1.0
+
+  Wave-Poisson beta difference:  0.013
+  Wave-Poisson alpha difference: 0.206
+
+  [PASS] mass-linearity (|beta - 1.0| < 0.3): beta = 1.210
+  [FAIL] Newton-like distance:  alpha = -2.069  (NOT 1/r-like)
+  [PASS] wave/Poisson agreement: dbeta = 0.013, dalpha = 0.206
+
+========================================================================
+SUMMARY: Wave Equation Gravity
+========================================================================
+  Tests passed: 6/8
+  Total time: 19.6s
+
+  Test 1 - Wavefront speed:           c = 1.049  (expect 1.0)  PASS
+  Test 2 - Newton recovery (steady):  alpha = -1.040  (expect -1.0)  PASS
+  Test 3 - Retardation asymmetry:     ratio = 19.006  (expect > 1)  PASS
+  Test 4a- 1/r radiation (strict):    gamma = -0.583  (expect ~-1.0, |.| < 0.2) FAIL
+  Test 4b- non-static far-field:      gamma = -0.583  (expect != -2)  PASS
+  Test 5a- propagator mass linearity: beta = 1.210  (expect ~1.0)  PASS
+  Test 5b- Newton-like distance law:  alpha = -2.069  (expect ~-1.0)  FAIL
+  Test 5c- wave/Poisson agreement:    |dbeta|, |dalpha| small  PASS
+
+  CONCLUSION:
+  - Finite-speed wavefront propagation: ESTABLISHED.
+  - Static-limit Newton recovery (alpha ~ -1.0): ESTABLISHED.
+  - Qualitative retardation from a moving source: ESTABLISHED.
+  - 1/r gravitational radiation: NOT cleanly established by this runner;
+    measured radiation exponent gamma = -0.583
+    is closer to a near-field / boundary-mixed regime than to pure 1/r.
+  - Propagator distance law alpha ~ -1.0 (Newton-like): NOT established;
+    measured alpha = -2.069 is closer to -2 (force-like).
+  - Wave/Poisson agreement on the propagator scaling: ESTABLISHED.
+
+  PASS=6 FAIL=2  (strict, claim-by-claim)
+
+
+----- stderr -----
+

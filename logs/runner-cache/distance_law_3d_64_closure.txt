@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/distance_law_3d_64_closure.py
+runner_sha256: 791930922d56cd833a881675a48ee1525ec8197e8505c8122fd0d6106e4e429c
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

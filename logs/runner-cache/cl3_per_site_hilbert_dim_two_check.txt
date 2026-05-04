@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/cl3_per_site_hilbert_dim_two_check.py
+runner_sha256: 943572bed145e5b0e514c1c2f6ed5ce17e5c48635334c79e3782bd7f79947d6a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.12
+status: ok
+----- stdout -----
+========================================================================
+PER-SITE HILBERT DIM = 2 CHECK
+========================================================================
+
+------------------------------------------------------------------------
+TEST 1: σ_i satisfy {σ_i, σ_j} = 2 δ_ij I (Cl(3) algebra)
+------------------------------------------------------------------------
+  max ||{σ_i, σ_j} - 2δ_ij I|| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: representation acts on dim-2 complex space
+------------------------------------------------------------------------
+  σ_i shape: (2, 2)
+  representation is on C^2: dim = 2
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: Pauli commutant is scalar, hence the site module is irreducible
+------------------------------------------------------------------------
+  commutant constraint rank = 3; nullity = 1
+  singular values: ['2.828e+00', '2.828e+00', '2.828e+00', '0.000e+00']
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: total Hilbert dim on cube of side L is 2^(L^3)
+------------------------------------------------------------------------
+  L = 1: |Λ| = 1, dim = 2^1 = 2
+  L = 2: |Λ| = 8, dim = 2^8 = 256
+  L = 3: |Λ| = 27, dim = 2^27 = 134,217,728
+  L = 4: |Λ| = 64, dim = 2^64 ≈ 1.8 × 10^19
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5: unitary-equivalent Pauli representatives preserve Cl(3)
+------------------------------------------------------------------------
+  alternative rep (unitary conjugate) max ||{σ', σ'} - 2δI|| = 2.013e-15
+  STATUS: PASS
+
+========================================================================
+  Test 1 (Cl(3) anticommutation):              PASS
+  Test 2 (dim = 2):                             PASS
+  Test 3 (scalar commutant / irreducible):      PASS
+  Test 4 (total dim 2^|Λ| formula):             PASS
+  Test 5 (unitary-equivalent representatives): PASS
+  OVERALL: PASS
+
+----- stderr -----
+

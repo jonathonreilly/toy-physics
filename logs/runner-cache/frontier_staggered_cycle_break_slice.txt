@@ -1,0 +1,147 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_cycle_break_slice.py
+runner_sha256: b7878110ad8dacc2f848931e7dba3f9f6d90e5587a59b60c5c36f2fc6c9f6cec
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 14.23
+status: ok
+----- stdout -----
+========================================================================================================
+STAGGERED FERMION - MATCHED CYCLE BREAK SLICE
+========================================================================================================
+Base family: random_geometric, side=18
+Sweep: extra=4,5,6
+Control: same edge-count scale, but local / degree-balanced cross-color additions
+Rows unchanged: retained cycle battery remains the canonical retained battery
+
+
+======================================================================
+CYCLE BATTERY: random_geometric_dense4 (324 nodes)
+======================================================================
+  [B1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [B2] Linearity: R^2=0.994389 PASS
+  [B3] Additivity: residual=1.9601e-16 PASS
+  [B4] Force: +1.9255e-02 TOWARD PASS
+  [B5] Iter stability: 15/15 TOWARD PASS
+  [B6] Norm: drift=2.2204e-16 PASS
+    gauss     : F=+1.9255e-02 TW
+    color-0   : F=+1.9575e-02 TW
+    color-1   : F=+3.3841e-02 TW
+  [B7] Families: 3/3 PASS
+  [B8] Gauge: J_range=2.1718e-05, sin_R^2=0.9972 PASS
+  [B9] Gap: G_eff=60.1, shell_grad_ratio=0.020
+       spectral_ratio(modes1-5)=0.367
+
+  SCORE: 9/9
+
+======================================================================
+CYCLE BATTERY: random_geometric_control4 (324 nodes)
+======================================================================
+  [B1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [B2] Linearity: R^2=0.994395 PASS
+  [B3] Additivity: residual=1.3508e-16 PASS
+  [B4] Force: +1.9256e-02 TOWARD PASS
+  [B5] Iter stability: 15/15 TOWARD PASS
+  [B6] Norm: drift=1.1102e-16 PASS
+    gauss     : F=+1.9256e-02 TW
+    color-0   : F=+1.9577e-02 TW
+    color-1   : F=+3.3843e-02 TW
+  [B7] Families: 3/3 PASS
+  [B8] Gauge: J_range=2.6189e-05, sin_R^2=0.9970 PASS
+  [B9] Gap: G_eff=60.1, shell_grad_ratio=0.020
+       spectral_ratio(modes1-5)=0.362
+
+  SCORE: 9/9
+
+======================================================================
+CYCLE BATTERY: random_geometric_dense5 (324 nodes)
+======================================================================
+  [B1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [B2] Linearity: R^2=0.994389 PASS
+  [B3] Additivity: residual=1.8000e-16 PASS
+  [B4] Force: +1.9255e-02 TOWARD PASS
+  [B5] Iter stability: 15/15 TOWARD PASS
+  [B6] Norm: drift=4.4409e-16 PASS
+    gauss     : F=+1.9255e-02 TW
+    color-0   : F=+1.9575e-02 TW
+    color-1   : F=+3.3841e-02 TW
+  [B7] Families: 3/3 PASS
+  [B8] Gauge: J_range=6.6346e-07, sin_R^2=1.0000 FAIL
+  [B9] Gap: G_eff=60.1, shell_grad_ratio=0.020
+       spectral_ratio(modes1-5)=0.367
+
+  SCORE: 8/9
+
+======================================================================
+CYCLE BATTERY: random_geometric_control5 (324 nodes)
+======================================================================
+  [B1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [B2] Linearity: R^2=0.994395 PASS
+  [B3] Additivity: residual=1.6230e-16 PASS
+  [B4] Force: +1.9257e-02 TOWARD PASS
+  [B5] Iter stability: 15/15 TOWARD PASS
+  [B6] Norm: drift=3.3307e-16 PASS
+    gauss     : F=+1.9257e-02 TW
+    color-0   : F=+1.9578e-02 TW
+    color-1   : F=+3.3844e-02 TW
+  [B7] Families: 3/3 PASS
+  [B8] Gauge: J_range=3.3930e-05, sin_R^2=0.9970 PASS
+  [B9] Gap: G_eff=60.1, shell_grad_ratio=0.020
+       spectral_ratio(modes1-5)=0.362
+
+  SCORE: 9/9
+
+======================================================================
+CYCLE BATTERY: random_geometric_dense6 (324 nodes)
+======================================================================
+  [B1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [B2] Linearity: R^2=0.994389 PASS
+  [B3] Additivity: residual=1.4953e-16 PASS
+  [B4] Force: +1.9255e-02 TOWARD PASS
+  [B5] Iter stability: 15/15 TOWARD PASS
+  [B6] Norm: drift=5.5511e-16 PASS
+    gauss     : F=+1.9255e-02 TW
+    color-0   : F=+1.9575e-02 TW
+    color-1   : F=+3.3841e-02 TW
+  [B7] Families: 3/3 PASS
+  [B8] Gauge: J_range=6.6343e-07, sin_R^2=1.0000 FAIL
+  [B9] Gap: G_eff=60.1, shell_grad_ratio=0.020
+       spectral_ratio(modes1-5)=0.366
+
+  SCORE: 8/9
+
+======================================================================
+CYCLE BATTERY: random_geometric_control6 (324 nodes)
+======================================================================
+  [B1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [B2] Linearity: R^2=0.994379 PASS
+  [B3] Additivity: residual=1.9871e-16 PASS
+  [B4] Force: +1.9143e-02 TOWARD PASS
+  [B5] Iter stability: 15/15 TOWARD PASS
+  [B6] Norm: drift=4.4409e-16 PASS
+    gauss     : F=+1.9143e-02 TW
+    color-0   : F=+1.9568e-02 TW
+    color-1   : F=+3.3822e-02 TW
+  [B7] Families: 3/3 PASS
+  [B8] Gauge: J_range=3.2547e-05, sin_R^2=0.9970 PASS
+  [B9] Gap: G_eff=60.5, shell_grad_ratio=0.020
+       spectral_ratio(modes1-5)=0.386
+
+  SCORE: 9/9
+FRONTIER
+frontier   frontier_extra=4         score=9/9 gauge=PASS J_span=2.172e-05 gap=0.983 G_eff=60.1 shell=0.020 spec=0.367
+frontier   frontier_extra=5         score=8/9 gauge=FAIL J_span=6.635e-07 gap=0.983 G_eff=60.1 shell=0.020 spec=0.367
+frontier   frontier_extra=6         score=8/9 gauge=FAIL J_span=6.634e-07 gap=0.983 G_eff=60.1 shell=0.020 spec=0.366
+
+CONTROL
+control    control_extra=4          score=9/9 gauge=PASS J_span=2.619e-05 gap=0.983 G_eff=60.1 shell=0.020 spec=0.362
+control    control_extra=5          score=9/9 gauge=PASS J_span=3.393e-05 gap=0.983 G_eff=60.1 shell=0.020 spec=0.362
+control    control_extra=6          score=9/9 gauge=PASS J_span=3.255e-05 gap=0.983 G_eff=60.5 shell=0.020 spec=0.386
+
+SUMMARY
+Frontier slice first failure: extra=5 -> 8/9, gauge=FAIL, J_span=6.635e-07.
+Control slice: no failure found at extra=4,5,6.
+Time: 13.6s
+
+----- stderr -----
+

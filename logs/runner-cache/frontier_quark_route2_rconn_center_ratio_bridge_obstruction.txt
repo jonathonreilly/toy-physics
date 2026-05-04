@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_route2_rconn_center_ratio_bridge_obstruction.py
+runner_sha256: 3adfd5c604ab42870dddfad7908e4a7d9f2bdcea006f0d58c7a0ee59f6ae80cc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 35.88
+status: ok
+----- stdout -----
+========================================================================================
+LANE 3 ROUTE-2 R_CONN CENTER-RATIO BRIDGE OBSTRUCTION
+========================================================================================
+
+A. Authority surfaces
+------------------------------------------------------------------------
+PASS: QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md exists -- docs/QUARK_ROUTE2_RCONN_CENTER_RATIO_BRIDGE_OBSTRUCTION_NOTE_2026-04-28.md
+PASS: RCONN_DERIVED_NOTE.md exists -- docs/RCONN_DERIVED_NOTE.md
+PASS: QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md exists -- docs/QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md
+PASS: QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md exists -- docs/QUARK_ROUTE2_E_CHANNEL_READOUT_NATURALITY_NO_GO_NOTE_2026-04-28.md
+PASS: S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md exists -- docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md
+PASS: R_conn note carries the SU(3) 8/9 value
+PASS: readout note names -8/9 as the missing center ratio
+PASS: naturality note keeps -8/9 as an open E-center target
+PASS: new note does not claim retained non-top quark masses
+
+B. Conditional exact bridge algebra
+------------------------------------------------------------------------
+PASS: N_c=3 gives R_conn=8/9 exactly -- 8/9
+PASS: imposing c_TE=-R_conn gives q_E=15/8 exactly -- 15/8
+PASS: imposing c_TE=-R_conn gives rho_E=21/4 exactly -- 21/4
+PASS: rho_E=21/4 maps back to c_TE=-8/9 under granted T-side data
+PASS: general N_c=2 conditional rho_E is exact -- rho_E=22/3
+PASS: general N_c=3 conditional rho_E is exact -- rho_E=21/4
+PASS: general N_c=4 conditional rho_E is exact -- rho_E=14/3
+
+C. Live bounded comparator
+------------------------------------------------------------------------
+PASS: live center T/E ratio is close to -R_conn but not exact -- live=-0.890683778231, target=-0.888888888889, gap=0.201925%
+PASS: live rho_E is close to 21/4 but not exact -- live=5.257476782081, target=5.250000000000, gap=0.142415%
+
+D. Import-boundary witness
+------------------------------------------------------------------------
+PASS: rho_E=0 and rho_E=21/4 agree on E-shell
+PASS: rho_E=0 and rho_E=21/4 agree on the granted T-side shell
+PASS: rho_E=0 and rho_E=21/4 agree on the granted T-side center
+PASS: rho_E=0 and rho_E=21/4 differ only at E-center -- 1.000000 vs 1.875000
+PASS: current Route-2 readout surfaces do not type the R_conn bridge
+PASS: R_conn surface does not identify a Route-2 E/T endpoint ratio
+PASS: forbidden proof inputs are absent -- ['endpoint_algebra', 'exact_rational_arithmetic', 'granted_t_side_candidates', 'restricted_route2_carrier', 'retained_rconn_value']
+PASS: new note states the load-bearing missing bridge
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=26, FAIL=0
+VERDICT: -R_conn is a sharp conditional bridge to rho_E=21/4,
+but the source-domain identification is still missing.
+
+----- stderr -----
+

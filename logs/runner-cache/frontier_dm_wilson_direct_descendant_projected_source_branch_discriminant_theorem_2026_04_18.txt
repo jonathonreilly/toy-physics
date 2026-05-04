@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_projected_source_branch_discriminant_theorem_2026_04_18.py
+runner_sha256: 8a1a9ec84159c97ddb9a73cbce44288bdf61e5fe5cf72689c9e47e24cc689d49
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT PROJECTED-SOURCE BRANCH DISCRIMINANT THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE CURRENT CONDITIONAL CAN BE MOVED TO PROJECTED-SOURCE LANGUAGE
+========================================================================================
+  [PASS] The projected-source law note says dW_e^H reconstructs H_e exactly
+  [PASS] The projected-source triplet note gives exact linear formulas for gamma, E1, and E2 on the response pack
+  [PASS] The perturbative uniqueness note records the imposed positive-det branch discriminator
+  [PASS] The flagship frontier-collapse note says the remaining blocker lives on dW_e^H / L_e
+
+========================================================================================
+PART 2: THE EXPLICIT PROJECTED-SOURCE DISCRIMINANT IS EXACTLY det(H_e)
+========================================================================================
+  [PASS] The projected-source pack reconstructs H exactly on representative active-family samples  (max err=0.00e+00)
+  [PASS] The explicit cubic Delta_src equals det(H) on the same samples  (max err=2.91e-11)
+
+========================================================================================
+PART 3: DELTA_src DISTINGUISHES THE PMNS CLOSURE BASINS WHILE THE TRIPLET STAYS FROZEN
+========================================================================================
+  [PASS] Basin 1 has positive Delta_src while Basin 2 and Basin X have negative Delta_src  (deltas={Basin 1: 0.959174, Basin 2: -70377.185680, Basin X: -20061.597712})
+  [PASS] All three rival basins carry the same exact projected-source triplet  (triplet=(0.5, 1.632993161855, 0.942809041582))
+
+========================================================================================
+PART 4: THE DISCRIMINANT REALLY USES FINER DATA THAN (gamma, E1, E2)
+========================================================================================
+  [PASS] Two points can share the exact triplet but still differ sharply in the remaining projected-source entries  (max nontriplet change=63.255794)
+  [PASS] On the active affine family the odd side slots A12 and A23 stay zero while A13 stays fixed at one  (active-family CP support sits entirely in A13)
+
+========================================================================================
+PART 5: BOTTOM LINE
+========================================================================================
+  [PASS] The current imposed branch-choice rule has an exact projected-source scalar representative Delta_src(dW_e^H)  (future positive selector work can now target Delta_src > 0 directly rather than only the abstract branch label)
+
+========================================================================================
+SUMMARY: PASS=11 FAIL=0
+========================================================================================
+
+----- stderr -----
+

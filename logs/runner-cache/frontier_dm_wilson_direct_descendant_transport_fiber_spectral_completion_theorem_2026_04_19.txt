@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_2026_04_19.py
+runner_sha256: e42e2da6fd1e8046980696c5e7581f8268e42f23f30bfb7a99211f26d7f8ea7f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.83
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT TRANSPORT-FIBER SPECTRAL COMPLETION THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE TRANSPORT PLATEAU STILL SITS OVER ONE CANONICAL COLUMN ORBIT
+========================================================================================
+  [PASS] The known constructive plateau witnesses remain pairwise distinct in source coordinates  (min source separation=0.417121011663)
+  [PASS] Their favored transport columns still agree up to the canonical orbit  (min sorted-column separation=9.519e-09)
+  [PASS] The projected Hermitian spectra stay simple on the whole plateau sample  (min eigen-gap=0.087044708821)
+  [PASS] Those same-column witnesses already have pairwise separated spectral invariants  (min spectral separation=0.170468624218)
+
+========================================================================================
+PART 2: THE THREE SPECTRAL INVARIANTS SPAN THE LOCAL COLUMN FIBER
+========================================================================================
+  [PASS] The reduced favored-column map has rank 2 with a 3-real local kernel at every plateau witness  (labels=['W0', 'W1', 'W2', 'W3'])
+  [PASS] Restricted to that transport kernel, (Tr(H_e), Tr(H_e^2), det(H_e)) has rank 3  (labels=['W0', 'W1', 'W2', 'W3'])
+  [PASS] The restricted spectral Jacobian stays uniformly nondegenerate across finite-difference scales  (min restricted singular value=1.687867441661e-04)
+
+========================================================================================
+PART 3: COLUMN DATA PLUS SPECTRAL DATA ALREADY FIX THE LOCAL SOURCE
+========================================================================================
+  [PASS] The augmented map (col_1, col_2, Tr(H_e), Tr(H_e^2), det(H_e)) has full rank 5 on the plateau sample  (labels=['W0', 'W1', 'W2', 'W3'])
+  [PASS] Its smallest singular value stays bounded away from 0 across witnesses and finite-difference scales  (min combined singular value=9.891601919150e-05)
+  [PASS] Its Jacobian determinant stays stably nonzero on the plateau sample  (min |det J|=1.649625258474e-05)
+  [PASS] So transport plus three local spectral scalars of H_e locally picks a unique source point  (the canonical 3-real transport fiber is locally a spectral-invariant fiber)
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The remaining DM selector problem is therefore an explicit 3-scalar microscopic spectral law on H_e, hence on L_e  (the open object is no longer an unspecified 3-real source family)
+
+  W0:
+    source5                = [1.17416156 0.46254435 0.75874142 0.0269043  1.88259576]
+    sorted favored column  = [0.0356443  0.03564431 0.92871139]
+    spectral invariants    = [2.18990636e+00 4.16209076e+00 7.96578990e-04]
+    spectrum               = [0.0025597  0.15297107 2.03437559]
+  W1:
+    source5                = [0.90533908 0.34108481 0.77562148 0.00429993 2.248936  ]
+    sorted favored column  = [0.03564429 0.03564432 0.92871139]
+    spectral invariants    = [1.75396664 2.25239726 0.01868212]
+    spectrum               = [0.06028483 0.20868577 1.48499604]
+  W2:
+    source5                = [1.10861499 0.41991159 0.83443268 0.00372167 1.480589  ]
+    sorted favored column  = [0.0356443 0.0356443 0.9287114]
+    spectral invariants    = [2.13441706 4.00097932 0.00565391]
+    spectrum               = [0.02521986 0.11226457 1.99693263]
+  W3:
+    source5                = [1.13210268 0.52825826 0.48423456 0.1855012  2.930589  ]
+    sorted favored column  = [0.03564429 0.0356443  0.92871141]
+    spectral invariants    = [1.89311773e+00 2.69244925e+00 4.02837430e-05]
+    spectrum               = [9.04131970e-05 2.75442484e-01 1.61758483e+00]
+
+========================================================================================
+SUMMARY: PASS=12 FAIL=0
+========================================================================================
+
+----- stderr -----
+

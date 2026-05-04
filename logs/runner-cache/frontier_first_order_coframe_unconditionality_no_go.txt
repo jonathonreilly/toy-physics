@@ -1,0 +1,29 @@
+===== runner cache v1 =====
+runner: scripts/frontier_first_order_coframe_unconditionality_no_go.py
+runner_sha256: 015ea2b5eb1a133d467895245ad0c504fcfffc91a3804623e11c0f09ac1b6666
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+FIRST-ORDER COFRAME UNCONDITIONALITY NO-GO
+==============================================================================
+
+Question: do retained substrate symmetries force first-order P_1 over its Hodge-dual P_3?
+
+[PASS (A)] 1. construct oriented Hodge-complement map on H_cell: unitarity=0.00e+00; star^2 law=0.00e+00
+[PASS (A)] 2. Hodge complement exchanges P_1 and P_3: ||*P1*-P3||=0.00e+00; ||*P3*-P1||=0.00e+00
+[PASS (A)] 3. Hodge complement preserves spatial Cl(3) spin-lift equivariance: max [*,J_i]=0.00e+00
+[PASS (A)] 4. Hodge complement normalizes time parity and CPT grading: *T*^-1=-T error=0.00e+00; *CPT*^-1=CPT error=0.00e+00
+[PASS (A)] 5. Hodge complement preserves tensor-local number algebra: max *n_i*^-1-(1-n_i)=0.00e+00
+[PASS (A)] 6. one-form and dual three-form boundary carriers are isomorphic: rank(P1)=4; rank(P3)=4; Hodge isomorphism exact
+[PASS (A)] 7. first-order selection is extra data, not symmetry data: ||P1-P3||=2.83e+00; P1 symmetry=0.00e+00; P3 symmetry=0.00e+00
+[PASS (A)] 8. forbidden-input boundary: no observable-principle, YT Ward, or alpha_LM decoration input used
+
+Summary: PASS=8  FAIL=0
+
+Verdict: NO-GO. First-order coframe selection is not forced by the listed substrate symmetries. Hodge complement exchanges P_1 and P_3 while preserving the relevant spin/time/CPT/local structure, so an extra first-order boundary-orientation law is required.
+
+----- stderr -----
+

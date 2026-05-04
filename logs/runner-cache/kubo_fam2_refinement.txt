@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/kubo_fam2_refinement.py
+runner_sha256: 94af36a9fe340713b021b0b7b4d1b4ff4bade4b6a0b7f67b314b58398bd6184f
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.09
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

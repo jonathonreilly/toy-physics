@@ -1,0 +1,85 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_up_amplitude_affine_support_scan.py
+runner_sha256: c9ecf0865e231dbf3610760be0b6c5582c17d503aeefb683e2fbe7be86317e27
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.02
+status: ok
+----- stdout -----
+
+========================================================================
+PART 1: Exact-Support Anchor and External Baselines
+========================================================================
+
+  delta_A1(q_dem)                = 0.023809523810
+  sin(delta_std)                 = 0.912870929175
+  solved anchored a_u            = 0.778161628656
+  baseline 7/9 refit_obj         = 0.052752
+  baseline 7/9 refit_max         = 0.908%
+  baseline sqrt(3/5) anchor      = 0.720%
+  baseline sqrt(3/5) anchor_max  = 0.677%
+
+========================================================================
+PART 2: Bounded Affine-Support Laws
+========================================================================
+
+  bounded family: sin(delta_std) * (1 - 6 delta_A1), sin(delta_std) * (1 - sqrt(42) delta_A1), and sin(delta_std) * (6/7 +/- k delta_A1)
+
+  strongest affine-support refit laws:
+  sin(delta_std) * (6/7 - delta_A1 / 6)            a_u=0.778838293  anchor=0.892%  refit_obj=0.052796  refit_max=0.862%
+  sin(delta_std) * (6/7 - delta_A1 / sqrt(42))     a_u=0.779107010  anchor=0.908%  refit_obj=0.052861  refit_max=0.850%
+  sin(delta_std) * (6/7 - delta_A1 / 7)            a_u=0.779355793  anchor=0.922%  refit_obj=0.052942  refit_max=0.840%
+  sin(delta_std) * (6/7 - delta_A1 / sqrt(7))      a_u=0.774245730  anchor=0.723%  refit_obj=0.055094  refit_max=1.062%
+  sin(delta_std) * (1 - 6 delta_A1)                a_u=0.782460796  anchor=1.106%  refit_obj=0.055543  refit_max=0.928%
+  sin(delta_std) * (6/7 - delta_A1 / sqrt(6))      a_u=0.773587511  anchor=0.728%  refit_obj=0.055953  refit_max=1.091%
+  sin(delta_std) * (1 - sqrt(42) delta_A1)         a_u=0.772011887  anchor=0.742%  refit_obj=0.058550  refit_max=1.159%
+  sin(delta_std) * (6/7 + delta_A1 / 7)            a_u=0.785565800  anchor=1.291%  refit_obj=0.061095  refit_max=1.045%
+
+  strongest affine-support anchored laws:
+  sin(delta_std) * (6/7 - delta_A1 / sqrt(7))      a_u=0.774245730  anchor=0.723%  refit_obj=0.055094  refit_max=1.062%
+  sin(delta_std) * (6/7 - delta_A1 / sqrt(6))      a_u=0.773587511  anchor=0.728%  refit_obj=0.055953  refit_max=1.091%
+  sin(delta_std) * (1 - sqrt(42) delta_A1)         a_u=0.772011887  anchor=0.742%  refit_obj=0.058550  refit_max=1.159%
+  sin(delta_std) * (6/7 - (6/7) delta_A1)          a_u=0.763830777  anchor=0.816%  refit_obj=0.084284  refit_max=1.511%
+  sin(delta_std) * (6/7 - delta_A1)                a_u=0.760725774  anchor=0.845%  refit_obj=0.099434  refit_max=1.644%
+  sin(delta_std) * (6/7 - delta_A1 / 6)            a_u=0.778838293  anchor=0.892%  refit_obj=0.052796  refit_max=0.862%
+  sin(delta_std) * (6/7 - delta_A1 / sqrt(42))     a_u=0.779107010  anchor=0.908%  refit_obj=0.052861  refit_max=0.850%
+  sin(delta_std) * (6/7 - delta_A1 / 7)            a_u=0.779355793  anchor=0.922%  refit_obj=0.052942  refit_max=0.840%
+
+========================================================================
+PART 3: Affine Endpoint
+========================================================================
+
+  best affine refit law   = sin(delta_std) * (6/7 - delta_A1 / 6)
+    a_u                   = 0.778838292749
+    refit objective       = 0.052796
+    refit max deviation   = 0.862%
+    anchored aggregate    = 0.892%
+
+  best affine anchor law  = sin(delta_std) * (6/7 - delta_A1 / sqrt(7))
+    a_u                   = 0.774245730253
+    anchor aggregate      = 0.723%
+    anchor max deviation  = 0.668%
+    refit max deviation   = 1.062%
+
+  clean support law       = sin(delta_std) * (1 - 6 delta_A1)
+    refit objective       = 0.055543
+    refit max deviation   = 0.928%
+    anchor aggregate      = 1.106%
+
+  scalar variant          = sin(delta_std) * (1 - sqrt(42) delta_A1)
+    anchor aggregate      = 0.742%
+    anchor max deviation  = 0.612%
+  [PASS] Best affine refit law is sin(delta_std) * (6/7 - delta_A1/6)  (best = sin(delta_std) * (6/7 - delta_A1 / 6))
+  [PASS] Best affine refit law keeps the full package within 1%  (max dev = 0.862%)
+  [PASS] Best affine anchor law is sin(delta_std) * (6/7 - delta_A1/sqrt(7))  (best = sin(delta_std) * (6/7 - delta_A1 / sqrt(7)))
+  [PASS] Best affine anchor law keeps the anchored CKM+J package within 1%  (max dev = 0.668%)
+  [PASS] Clean support law sin(delta_std) * (1 - 6 delta_A1) keeps the full refit package within 1%  (max dev = 0.928%)
+  [PASS] Scalar-comparison affine variant stays within 1% on the anchored package  (max dev = 0.612%)
+  [PASS] No bounded affine-support law beats both 7/9 and sqrt(3/5) at once  (survivors = 0)
+
+========================================================================
+SUMMARY: PASS=7 FAIL=0
+========================================================================
+
+----- stderr -----
+

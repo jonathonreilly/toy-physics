@@ -1,0 +1,73 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem.py
+runner_sha256: ace13435235d1acb814d0c2026a75eacee1530d0f63a0fdf671317ecdcb38dc9
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.59
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE MICROSCOPIC POSITIVE-PROBE REPRESENTATION THEOREM
+========================================================================================
+
+Question:
+  Can the positive-probe candidate stack be compressed into one selector-class
+  representation theorem before any more carrier archaeology?
+
+========================================================================================
+PART 1: EXACT FAMILY THRESHOLD SEMANTICS FORCE THE POINTWISE MAX
+========================================================================================
+  [PASS] For every tested threshold the family witness event agrees exactly with the pointwise-maximum event  ((tau_min,tau_max,count)=(0.111882608955,3.810826871223,121))
+  [PASS] So any exact threshold-preserving family scalarization is forced pointwise to equal max_P w_P  (max scores=[0.21076724 0.20188945 0.21404424 0.3048632  1.40021141])
+  [PASS] The arithmetic mean fails the exact family threshold semantics by losing genuine witnesses  ((idx,tau,max,mean)=(4,1.081188290988,1.400211407731,0.762165174245))
+  [PASS] The sum also fails the exact family threshold semantics by creating spurious witnesses  ((idx,tau,max,sum)=(4,2.605518639477,1.400211407731,3.810825871223))
+
+  anchor mu   = 5.726185878913
+  max scores  = [0.21076724 0.20188945 0.21404424 0.3048632  1.40021141]
+
+========================================================================================
+PART 2: THE CANONICAL RANK-ONE FAMILY COLLAPSES TO THE SOFT-MODE EXTREMAL SCORE
+========================================================================================
+  [PASS] For every tested rank-one positive probe the exact source response matches the determinant-lemma / Rayleigh formula  (max formula error=9.159339953158e-16)
+  [PASS] Within the canonical spectral family the soft projector is the unique maximizing probe on the sample window  ((evals,responses)=([4.33931116 6.46743396 7.99285135],[0.20738103 0.143772   0.11788241]))
+  [PASS] The canonical extremal score is exactly log(1 + 1 / lambda_min(H + mu I))  (|soft-exact|=3.330669073875e-16)
+  [PASS] That soft-mode extremal score is basis-free under simultaneous unitary conjugation  (|score_u-score|=8.881784197001e-16)
+
+  generic mu          = 5.926185878913
+  generic eigenvalues = [4.33931116 6.46743396 7.99285135]
+  spectral responses  = [0.20738103 0.143772   0.11788241]
+
+========================================================================================
+PART 3: ON THE RECOVERED CARRIER THE EXTREMAL SCORE IS A STRICT MONOTONE OF LEAST REPAIR
+========================================================================================
+  [PASS] Every recovered lift still has one negative soft mode, so lambda_min(H + mu I) = mu - Lambda_+(H) on the current bank  (min eigs=[-1.58687471 -2.52224944 -2.69898576 -3.81245795 -5.52618588])
+  [PASS] On the recovered bank the general soft-mode formula specializes exactly to log(1 + 1 / (mu - Lambda_+(H)))  (max score error=1.310063169058e-14)
+  [PASS] The canonical extremal score has the same strict ordering on the recovered bank as least repair  (order=[0, 1, 2, 3, 4])
+  [PASS] The weaker finite-family Pareto rule leaves a two-point frontier, but the canonical extremal score already picks one preferred point on that frontier  ((frontier,scores)=([0, 1],[0.21638967 0.27164114]))
+
+  recovered repairs = [1.58687471 2.52224944 2.69898576 3.81245795 5.52618588]
+  recovered scores  = [0.21638967 0.27164114 0.28543324 0.4203802  1.79175947]
+
+========================================================================================
+PART 4: AFTER MONOTONE RECALIBRATION NO SCALAR FREEDOM REMAINS ON THE RECOVERED BANK
+========================================================================================
+  [PASS] Every tested strictly increasing recalibration keeps the same recovered-bank ordering  (order=[0, 1, 2, 3, 4])
+  [PASS] Every tested strictly increasing recalibration keeps the same unique preferred recovered winner  ((winner,gap)=(0,5.525147552120e-02))
+  [PASS] So after monotone threshold recalibration the recovered-bank selector class has no residual scalar freedom  (laws=['id', 'square', 'log1p', 'expm1'])
+
+  recovered base scores = [0.21638967 0.27164114 0.28543324 0.4203802  1.79175947]
+
+========================================================================================
+RESULT
+========================================================================================
+  Strongest honest selector-class statement now available:
+    - exact family-threshold semantics force family scalarization through max_P w_P
+    - monotone threshold recalibration leaves only strict monotone reparameterization freedom
+    - the full canonical rank-one family collapses exactly to the soft-mode extremal score
+    - on the current recovered carrier that score is exactly a strict monotone of Lambda_+
+    - what remains open is observable-grammar exhaustion and exact-carrier completeness
+
+SUMMARY: PASS=15 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,51 @@
+===== runner cache v1 =====
+runner: scripts/frontier_meson_charges_from_quark_y.py
+runner_sha256: cc7f06d90496a90bd2ff05a2ab4310c79d27c4d299030593da23002b5b6a5d80
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure
+----------------------------------------------------------------------------------------
+  [PASS (A)] contains: 'Meson Electric Charge'  ()
+  [PASS (A)] contains: "Q_meson = Q_q − Q_q'"  ()
+  [PASS (A)] contains: 'π⁺'  ()
+  [PASS (A)] contains: 'K⁰'  ()
+  [PASS (A)] contains: 'D⁺'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: meson charge integrality
+----------------------------------------------------------------------------------------
+  [PASS (A)] Q(π⁺ (ud̄)) = 1  (= 2/3 - -1/3 = 1)
+  [PASS (A)] Q(π⁺ (ud̄)) is integer  ()
+  [PASS (A)] Q(π⁻ (dū)) = -1  (= -1/3 - 2/3 = -1)
+  [PASS (A)] Q(π⁻ (dū)) is integer  ()
+  [PASS (A)] Q(K⁺ (us̄)) = 1  (= 2/3 - -1/3 = 1)
+  [PASS (A)] Q(K⁺ (us̄)) is integer  ()
+  [PASS (A)] Q(K⁰ (ds̄)) = 0  (= -1/3 - -1/3 = 0)
+  [PASS (A)] Q(K⁰ (ds̄)) is integer  ()
+  [PASS (A)] Q(K̄⁰ (sd̄)) = 0  (= -1/3 - -1/3 = 0)
+  [PASS (A)] Q(K̄⁰ (sd̄)) is integer  ()
+  [PASS (A)] Q(D⁺ (cd̄)) = 1  (= 2/3 - -1/3 = 1)
+  [PASS (A)] Q(D⁺ (cd̄)) is integer  ()
+  [PASS (A)] Q(D⁰ (cū)) = 0  (= 2/3 - 2/3 = 0)
+  [PASS (A)] Q(D⁰ (cū)) is integer  ()
+  [PASS (A)] Q(B⁰ (db̄)) = 0  (= -1/3 - -1/3 = 0)
+  [PASS (A)] Q(B⁰ (db̄)) is integer  ()
+  [PASS (A)] Q(B⁺ (ub̄)) = 1  (= 2/3 - -1/3 = 1)
+  [PASS (A)] Q(B⁺ (ub̄)) is integer  ()
+
+----------------------------------------------------------------------------------------
+Part 3: charge spectrum is {-1, 0, +1}
+----------------------------------------------------------------------------------------
+  [PASS (A)] meson charge spectrum = {-1, 0, +1}  (computed = [Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1)])
+
+========================================================================================
+  TOTAL: PASS=24, FAIL=0
+========================================================================================
+
+----- stderr -----
+

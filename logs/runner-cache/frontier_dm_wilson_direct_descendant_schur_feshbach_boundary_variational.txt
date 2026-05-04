@@ -1,0 +1,100 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_schur_feshbach_boundary_variational.py
+runner_sha256: 9ea107e7d2d1815f968450c618477349f529e830dfb54474e76614e18e9c8ea6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.69
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT SCHUR-FESHBACH BOUNDARY VARIATIONAL THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: NOTE SCOPE AND AUTHORITY HYGIENE
+========================================================================================
+  [PASS] The theorem note exists on the package surface  (DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md)
+  [PASS] The theorem note points to this object-level verifier  (frontier_dm_wilson_direct_descendant_schur_feshbach_boundary_variational.py)
+  [PASS] Scope phrase present: does not evaluate `D_-`
+  [PASS] Scope phrase present: does not by itself select the final DM source point
+  [PASS] Scope phrase present: The positive variational assumption is explicit
+  [PASS] Scope phrase present: does not claim Wilson-native parent closure
+  [PASS] Scope phrase present: does not independently close the DM flagship lane
+
+========================================================================================
+PART 2: SCHUR FACTORIZATION, INVERTIBILITY, AND BOUNDARY GREEN COMPRESSION
+========================================================================================
+  [PASS] Interior block F is invertible  (det(F)=11)
+  [PASS] Schur block L_e is invertible  (det(L_e)=3005/11)
+  [PASS] Block determinant identity det(D_-) = det(F) det(L_e)  (det(D_-)=3005)
+  [PASS] Exact Schur factorization reconstructs D_-
+  [PASS] Exact block inverse formula matches D_-^{-1}
+  [PASS] Boundary Green compression equals L_e^{-1}
+  [PASS] Equivalent inverse-compression law recovers L_e
+
+========================================================================================
+PART 3: DETERMINANT RESPONSE AND DESCENDED HERMITIAN LAW
+========================================================================================
+  [PASS] Normalized determinant response reduces exactly to the Schur block
+  [PASS] First variation is Tr(L_e^{-1} X)
+  [PASS] Green-compression response equals the Schur response
+
+========================================================================================
+PART 4: FESHBACH ELIMINATION
+========================================================================================
+  [PASS] The eliminated interior field is v_*(u) = -F^{-1} C u
+  [PASS] D_- [u; v_*(u)] = [L_e u; 0] exactly
+
+========================================================================================
+PART 5: POSITIVE DIRICHLET VARIATIONAL PRINCIPLE
+========================================================================================
+  [PASS] Sample D_- is Hermitian positive definite  (leading minors=[8, 55, 322, 1190, 3005])
+  [PASS] Interior F is positive definite  (leading minors=[4, 11])
+  [PASS] Schur block L_e is positive definite  (leading minors=[85/11, 551/11, 3005/11])
+  [PASS] Quadratic form completes the square exactly
+  [PASS] The Feshbach field is the stationary point of Q_u(v)
+  [PASS] The Hessian in interior variables is 2F > 0
+  [PASS] The minimum value is u^T L_e u
+
+========================================================================================
+PART 6: TRIAL-INTERIOR UPPER CERTIFICATES
+========================================================================================
+  [PASS] Zero trial map gives a Loewner upper certificate  (principal minors=[3/11, 4/11, 5/11, 1/11, 1/11, 1/11, 0])
+  [PASS] Trial gap equals the completed-square matrix
+  [PASS] Sharp Feshbach trial map has zero gap
+
+========================================================================================
+PART 7: MICROSCOPIC LOEWNER MONOTONICITY DESCENDS TO BOUNDARY LAW
+========================================================================================
+  [PASS] The microscopic perturbation D_high - D_low is positive definite
+  [PASS] The high microscopic block remains positive definite
+  [PASS] The descended Schur law is monotone: L_high - L_low >= 0  (principal minors=[794/693, 1550/693, 320/99, 1772/693, 233/63, 1664/231, 74/9])
+
+========================================================================================
+PART 8: PACKAGE WIRING AND NEGATIVE-CLOSURE FLAGS
+========================================================================================
+  [PASS] docs/CANONICAL_HARNESS_INDEX.md links the boundary theorem note
+  [PASS] docs/publication/ci3_z3/PUBLICATION_MATRIX.md links the boundary theorem note
+  [PASS] docs/publication/ci3_z3/CLAIMS_TABLE.md links the boundary theorem note
+  [PASS] docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md links the boundary theorem note
+  [PASS] docs/publication/ci3_z3/DERIVATION_ATLAS.md links the boundary theorem note
+  [PASS] docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md links the boundary theorem note
+  [PASS] docs/publication/ci3_z3/RESULTS_INDEX.md links the boundary theorem note
+  [PASS] docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md links the boundary theorem note
+  [PASS] docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md links the boundary theorem note
+  [PASS] No forbidden final-closure flag is asserted by this packet
+
+========================================================================================
+SUMMARY
+========================================================================================
+PASSED: 42/42
+FAILED: 0/42
+DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL=TRUE
+DM_BOUNDARY_RESOLVENT_CERTIFICATE=TRUE
+DM_POSITIVE_DIRICHLET_CERTIFICATE=TRUE
+DM_MICROSCOPIC_D_MINUS_EVALUATED_BY_THIS_THEOREM=FALSE
+DM_FINAL_SELECTOR_CLOSED_BY_THIS_THEOREM=FALSE
+DM_FLAGSHIP_LANE_CLOSED_BY_THIS_THEOREM=FALSE
+
+----- stderr -----
+

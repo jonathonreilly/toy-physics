@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py
+runner_sha256: 8e0afad9e7ac5e548edb6d935fd6667e55dd6cb57d72e05402d3b1ceb7cb339a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.25
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE SPATIAL ENVIRONMENT CHARACTER MEASURE
+==============================================================================
+
+Exact already-fixed pieces
+  source-operator symmetry error        = 0.000e+00
+  half-slice multiplier min eig         = 0.267545894076
+  local-factor min/max                  = 8.821392463568e-26, 1.000000000000
+
+Boundary environment character data
+  rho_env min/max                       = 0.040762203978, 1.000000000000
+  z_(0,0)^env                           = 1.000000000000
+  environment swap error                = 0.000e+00
+  normalized coefficient consistency    = 0.000e+00
+
+Resulting factorized transfer witness
+  transfer symmetry error               = 2.220e-16
+  transfer swap error                   = 4.441e-16
+  Perron <J>                            = 0.444585706524
+
+  [PASS] [THEOREM] the explicit plaquette source operator J is self-adjoint and conjugation-symmetric on the source sector
+         the accepted source operator is one exact self-adjoint six-neighbor recurrence
+  [PASS] [THEOREM] after stripping the marked half-slice multipliers and the exact local factor, the residual environment data can be packaged as one conjugation-symmetric coefficient sequence rho_(p,q)(6)
+         min rho coefficient=0.040762
+  [PASS] [THEOREM] the residual operator is exactly realizable as one normalized central boundary character measure Z_6^env
+         Z_6^env(W) = z_(0,0)^env sum d_(p,q) rho_(p,q)(6) chi_(p,q)(W)
+  [PASS] [THEOREM] the explicit framework-point factorized source-sector law reduces to exp(3 J) D_6^loc C_(Z_6^env) exp(3 J)
+         once rho_(p,q)(6) is fixed, the remaining operator is a concrete central boundary class function, not an abstract diagonal freedom
+  [PASS] [SUPPORT] the environment character measure remains positivity-compatible on the truncated source sector
+         minimum normalized boundary coefficient=4.076e-02
+  [PASS] [SUPPORT] the boundary character measure is a reusable plaquette tool distinct from the already-fixed local mixed-kernel factor
+         the remaining datum now sits in Z_6^env rather than D_6^loc
+  [PASS] [SUPPORT] once Z_6^env is explicit, the remaining framework-point data reduce again to the Perron moments of one explicit factorized operator
+         Perron <J> = 0.444586
+
+==============================================================================
+SUMMARY: THEOREM PASS=4 SUPPORT=3 FAIL=0
+==============================================================================
+
+----- stderr -----
+

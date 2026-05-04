@@ -1,0 +1,128 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_rpsr_c3_joint_readout_rank_boundary.py
+runner_sha256: 44b2015666fee8d277876116aba9d52f1abd8396ad1c1695d92ec57ae3ef871e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+LANE 3 RPSR-C3 JOINT READOUT RANK BOUNDARY
+========================================================================================
+
+A. Authority surfaces
+------------------------------------------------------------------------
+PASS: QUARK_RPSR_C3_JOINT_READOUT_RANK_BOUNDARY_NOTE_2026-04-28.md exists -- docs/QUARK_RPSR_C3_JOINT_READOUT_RANK_BOUNDARY_NOTE_2026-04-28.md
+PASS: QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md exists -- docs/QUARK_RPSR_SINGLE_SCALAR_READOUT_UNDERDETERMINATION_NOTE_2026-04-28.md
+PASS: QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md exists -- docs/QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md
+PASS: QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md exists -- docs/QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md
+PASS: QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md exists -- docs/QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md
+PASS: SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md exists -- docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md
+PASS: QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md exists -- docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md
+PASS: new note states joint rank boundary
+PASS: block11 states single-scalar underdetermination
+PASS: block10 states exact RPSR scalar
+PASS: C3 note states exact normal form
+PASS: C3 note leaves coefficients free
+PASS: circulant note says carrier can fit arbitrary triples
+PASS: one-Higgs note leaves generation matrices free
+PASS: firewall blocks mass retention shortcut
+
+B. Exact RPSR scalar and C3 inverse map
+------------------------------------------------------------------------
+PASS: RPSR scalar lies in (0,1) -- a_u=0.774886561056
+PASS: RPSR identity closes -- lhs=1.003149047958, rhs=1.003149047958
+PASS: C3 cycle is unitary
+PASS: C3 cycle has order 3
+PASS: C3 sample is Hermitian
+PASS: C3 sample commutes with C3 cycle
+PASS: lambda->coefficient inverse recovers sample
+PASS: sample matrix eigenvalues match closed form
+PASS: arbitrary triple 1 is ordered positive -- (0.12, 0.42, 1.0)
+PASS: arbitrary triple 1 has exact C3 coefficients
+PASS: arbitrary triple 2 is ordered positive -- (0.25, 0.5, 1.0)
+PASS: arbitrary triple 2 has exact C3 coefficients
+PASS: arbitrary triple 3 is ordered positive -- (0.7, 0.88, 1.0)
+PASS: arbitrary triple 3 has exact C3 coefficients
+
+C. Two-ratio surface rank
+------------------------------------------------------------------------
+PASS: ratio triple reconstruction preserves pair A
+PASS: changing r_uc changes y_u/y_t at fixed r_ct
+PASS: changing r_ct changes both y_u/y_t and y_c/y_t
+PASS: two-ratio surface has two log coordinates
+PASS: C3 carrier represents pair A
+PASS: C3 carrier represents pair B
+PASS: C3 carrier represents pair C
+PASS: new note names two independent ratios
+
+D. One-scalar RPSR constraints leave families
+------------------------------------------------------------------------
+PASS: product-family 1 fixes y_u/y_t=a_u
+PASS: product-family 1 is ordered positive -- (0.7748865610563355, 0.8, 1.0)
+PASS: product-family 1 has exact C3 coefficients
+PASS: product-family 1 preserves ratios
+PASS: product-family 2 fixes y_u/y_t=a_u
+PASS: product-family 2 is ordered positive -- (0.7748865610563355, 0.9, 1.0)
+PASS: product-family 2 has exact C3 coefficients
+PASS: product-family 2 preserves ratios
+PASS: product-family 3 fixes y_u/y_t=a_u
+PASS: product-family 3 is ordered positive -- (0.7748865610563355, 0.98, 1.0)
+PASS: product-family 3 has exact C3 coefficients
+PASS: product-family 3 preserves ratios
+PASS: middle-family 1 fixes y_c/y_t=a_u
+PASS: middle-family 1 is ordered positive -- (0.1549773122112671, 0.7748865610563355, 1.0)
+PASS: middle-family 1 has exact C3 coefficients
+PASS: middle-family 1 preserves ratios
+PASS: middle-family 2 fixes y_c/y_t=a_u
+PASS: middle-family 2 is ordered positive -- (0.38744328052816773, 0.7748865610563355, 1.0)
+PASS: middle-family 2 has exact C3 coefficients
+PASS: middle-family 2 preserves ratios
+PASS: middle-family 3 fixes y_c/y_t=a_u
+PASS: middle-family 3 is ordered positive -- (0.697397904950702, 0.7748865610563355, 1.0)
+PASS: middle-family 3 has exact C3 coefficients
+PASS: middle-family 3 preserves ratios
+PASS: product one-scalar constraint leaves multiple ratio pairs
+PASS: middle-gap one-scalar constraint leaves multiple ratio pairs
+PASS: new note states one scalar fixes at most one relation
+PASS: new note says C3 carrier does not remove missing readout law
+
+E. Typed-edge boundary
+------------------------------------------------------------------------
+PASS: RPSR reaches amplitude support
+PASS: C3 reaches carrier representation
+PASS: RPSR alone does not reach ratio pair
+PASS: C3 carrier alone does not reach ratio pair
+PASS: top scale alone does not reach ratio pair
+PASS: adding source law and assignment creates ratio path
+PASS: missing source law is named as retained content
+
+F. Import firewall
+------------------------------------------------------------------------
+PASS: allowed and forbidden input sets are disjoint
+PASS: new note forbids observed quark masses
+PASS: new note forbids fitted Yukawa entries
+PASS: new note forbids CKM singular values
+PASS: new note forbids hidden C3 source law
+PASS: new note forbids hidden generation-gap assignment
+PASS: runner contains no named mass-table import
+PASS: runner contains no observed mass constants
+
+G. Boundary classification
+------------------------------------------------------------------------
+PASS: new note retires joint shortcut
+PASS: new note keeps both support surfaces
+PASS: new note requires C3 coefficient law
+PASS: new note requires physical channel assignment
+PASS: new note requires top-compatible bridge
+PASS: new note keeps Lane 3 open
+PASS: new note does not claim retained up masses
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=87, FAIL=0
+VERDICT: exact RPSR plus exact C3 is carrier support, not retained
+up-type two-ratio readout closure without a new source/readout theorem.
+
+----- stderr -----
+

@@ -1,0 +1,52 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization.py
+runner_sha256: 4a268259e0ac9d18a202e35e7b6409f355e017bf21c35932c5d4b57b3ddbdd27
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.60
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE ATOMIC WITNESS-VOLUME SELECTOR NONREALIZATION
+========================================================================================
+
+Question:
+  After full-family descent to the canonical rank-one positive-probe family,
+  does the current exact bank already force a unique threshold-volume selector?
+
+========================================================================================
+PART 1: THE FULL-FAMILY THRESHOLD VOLUME IS AN EXACT ATOMIC FIELD FUNCTIONAL
+========================================================================================
+  [PASS] On the recovered bank one common positive window still exists for the full canonical rank-one family  (mu=5.726185878913)
+  [PASS] The canonical threshold-volume field is reproduced stably from the inverse eigenvalues at tau=0.13  (V_0.13=[0.96880006 0.96276347 0.96650387 0.97643465 0.99693225])
+  [PASS] The canonical threshold-volume field is reproduced stably from the inverse eigenvalues at tau=0.14  (V_0.14=[0.8637868  0.91863328 0.9267353  0.95212095 0.99431895])
+  [PASS] So the full-family witness-volume selector is already an exact basis-free functional of the atomic singleton field  (the full-family Haar witness set is a simplex half-plane cut in the eigenbasis of A_mu(H))
+
+========================================================================================
+PART 2: THE THRESHOLD-VOLUME SELECTOR FLIPS THE RECOVERED WINNER
+========================================================================================
+  [PASS] At tau=0.13 the unique minimum witness-volume point is recovered lift 1 rather than the preferred lift 0  ((winner, gap)=(1,6.036587117573e-03))
+  [PASS] At tau=0.14 the unique minimum witness-volume point returns to the preferred lift 0  ((winner, gap)=(0,5.484647297937e-02))
+  [PASS] Therefore the current exact bank does not force a unique threshold-volume selector winner without an intrinsic threshold law  ((low_winner,high_winner)=(1,0))
+
+========================================================================================
+PART 3: THE NOTE RECORDS THE CURRENT-BANK NONREALIZATION HONESTLY
+========================================================================================
+  [PASS] The note records the exact piecewise witness-volume selector family on the full canonical rank-one family
+  [PASS] The note records the recovered-winner flip between tau=0.13 and tau=0.14
+  [PASS] The note keeps the boundary honest: the missing selector datum is now an intrinsic threshold law, not generic family choice
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact selector-side current-bank answer:
+    - the full-family threshold-volume field is already exact and intrinsic
+    - but different exact thresholds choose different recovered winners
+    - so the current exact bank still does not force a unique selector value
+  RESULT: current-bank nonrealization of the selector without an intrinsic
+  threshold law
+
+SUMMARY: PASS=10 FAIL=0
+
+----- stderr -----
+

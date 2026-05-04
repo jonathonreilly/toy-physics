@@ -1,0 +1,27 @@
+===== runner cache v1 =====
+runner: scripts/structured_chokepoint_bridge_extension.py
+runner_sha256: f77c0c33e6397ccad112d337b2af41f7c24ff34ee423ee0a8f33ef7e5e4f7f72
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 24.94
+status: ok
+----- stdout -----
+==============================================================================================================
+STRUCTURED CHOKEPOINT BRIDGE EXTENSION
+  canonical mirror readout fixed; only layer count is widened
+  NPL_HALF=25, seeds=16, grid_spacing=1.0, connect_radius=3.5, layer_jitter=0.25
+==============================================================================================================
+
+     N      d_TV        pur_cl    S_norm       gravity          Born           k=0   ok   time
+  --------------------------------------------------------------------------------------------------
+    60    0.6440   0.8030±0.04    1.0043   +5.7613±0.892   0.0000±0.00  +0.00e+00   16     6s
+    80    0.6925   0.7712±0.03    0.9910   +4.3840±0.666   0.0000±0.00  +0.00e+00   16     9s
+   100    0.6947   0.8056±0.03    1.0158   +2.9007±1.054   0.0000±0.00  +0.00e+00   16    10s
+
+READ:
+  The structured bridge widens beyond the current narrow slice on the
+  tested larger-N rows while keeping the canonical mirror readout fixed.
+  This is still a bounded bridge pocket, not a new generator family.
+
+----- stderr -----
+

@@ -1,0 +1,42 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_higgs_dressed_resolvent_root_theorem.py
+runner_sha256: 26d5b15932d7eda14ef9515ce7655f5af9bdafa6bd0fff220185c0f279552c35
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 7.88
+status: ok
+----- stdout -----
+========================================================================================
+Koide Higgs-dressed resolvent root theorem
+========================================================================================
+  [PASS] The missing-axis lift W_4(0) is Hermitian with poles given by one O_0 zero plus the three lifted H_* eigenvalues  (poles=[-1.309094, -0.320434, 0.0, 2.286589])
+  [PASS] The small positive chamber-slack scalar lies strictly between the O_0 pole and the positive lifted H_* pole  (lambda_slack=0.015855511490548)
+  [PASS] At h_0 = 0 the missing-axis resolvent family has exactly eight Q=2/3 roots on [-5,5]  (roots=[-1.326020639423, -1.292710779017, -0.326378516821, -0.314593274527, -0.01457609276, 0.015808703285, 2.264965155526, 2.308854636216])
+  [PASS] There is a unique small positive Q=2/3 root below 0.1  (lambda_*=0.015808703285395)
+  [PASS] At the small positive root the induced species spectrum lies on Koide Q=2/3  (Q=0.666666666666668)
+  [PASS] That root also gives a strong charged-lepton direction match  (cos=0.996266551503)
+  [PASS] The exact Koide root is close to chamber slack but not equal to it  (lambda_* - lambda_slack = -4.680820515276e-05)
+  [PASS] At h_0 = 0, chamber slack is only a near-hit rather than an exact Koide root  (Q_slack=0.666357802376, cos_slack=0.996277051043)
+  [PASS] At fixed chamber slack there are exactly two h_0 corrections restoring Q=2/3 on the tested window  (h0_roots=[4.4898983e-05, 0.031666123998])
+  [PASS] One of those h_0 corrections is microscopic and positive  (h0_small=4.489898313255e-05)
+  [PASS] With that microscopic h_0 correction, chamber slack hits exact Koide Q=2/3  (Q=0.666666666666667, cos=0.996266420179)
+
+Interpretation:
+  The missing-axis Higgs-dressed resolvent avenue is not a generic transport
+  search anymore. Once the natural O_0 baseline h_0=0 is fixed, Koide lives
+  on isolated scalar lambda-roots of the resolvent family.
+  The best-supported root is the unique small positive one near chamber slack.
+  So this avenue now reduces to one scalar lambda-law (or the equivalent
+  two-parameter near-surface law on (lambda, h_0)), not a broad functional-class
+  ambiguity.
+
+  small positive lambda_* = 0.015808703285395
+  chamber slack           = 0.015855511490548
+  sigma eigs(lambda_*)    = [0.331328983204, 1.913189398782, 63.256295089291]
+  sigma diag(lambda_*)    = [63.256295089291, 1.395181970859, 0.849336411127]
+  tiny h_0 at slack       = 4.489898313255e-05
+
+PASS=11 FAIL=0
+
+----- stderr -----
+

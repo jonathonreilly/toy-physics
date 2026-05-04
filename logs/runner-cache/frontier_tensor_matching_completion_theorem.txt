@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/frontier_tensor_matching_completion_theorem.py
+runner_sha256: fd570da367ed3fb79ae7e6091323408eed27a75d2729d9b27f4e73dd08b98f0e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 10.60
+status: ok
+----- stdout -----
+Minimal tensor matching/completion theorem
+============================================================================
+Channel deltas relative to the scalar bridge:
+  exact local O_h: vec=(dG_0i=8.884e-05, dG_TF=0.000e+00), ten=(dG_0i=2.008e-05, dG_TF=7.334e-04), mix=(dG_0i=1.089e-04, dG_TF=7.334e-04)
+    additive errors: dG_0i=3.059e-08, dG_TF=7.806e-18
+  finite-rank: vec=(dG_0i=8.099e-05, dG_TF=5.088e-12), ten=(dG_0i=4.931e-06, dG_TF=9.946e-04), mix=(dG_0i=8.585e-05, dG_TF=9.946e-04)
+    additive errors: dG_0i=6.850e-08, dG_TF=6.191e-11
+[EXACT] PASS: the scalar Schur boundary action is unchanged across the scalar, vector, tensor, and mixed probes on the exact local O_h class
+    base=-9.649741e-02, vec=-9.649741e-02, ten=-9.649741e-02, mix=-9.649741e-02
+[EXACT] PASS: the same scalar-action invariance persists on the finite-rank class
+    base=-1.373264e+00, vec=-1.373264e+00, ten=-1.373264e+00, mix=-1.373264e+00
+[EXACT] PASS: one independent shift-like tensor coordinate is required beyond the scalar trace
+    O_h dG_0i=8.884e-05, finite-rank dG_0i=8.099e-05
+[EXACT] PASS: one independent traceless-shear coordinate is required beyond the scalar trace
+    O_h dG_TF=7.334e-04, finite-rank dG_TF=9.946e-04
+[BOUNDED] PASS: the mixed probe is locally additive in those two tensor coordinates on the exact local O_h class
+    dG_0i err=3.059e-08, dG_TF err=7.806e-18
+[BOUNDED] PASS: the same two-channel local additivity persists on the finite-rank class
+    dG_0i err=6.850e-08, dG_TF err=6.191e-11
+[EXACT] PASS: the smallest tensor completion compatible with the tested family is scalar Schur data plus one shift-like and one traceless-shear boundary coordinate
+    tested family closes locally with two extra tensor channels; the missing theorem is the microscopic source-to-channel map and its tensor boundary kernel
+
+Minimal tensor boundary action template:
+  I_tensor(f, a_vec, a_tf ; j, eta) = I_scalar(f ; j)
+      + 1/2 [a_vec, a_tf] K_tensor [a_vec, a_tf]^T - eta^T [a_vec, a_tf]
+  with K_tensor symmetric positive definite.
+  The current branch does not yet derive K_tensor or eta from microscopic source data.
+
+============================================================================
+SUMMARY
+============================================================================
+PASS=7 FAIL=0 TOTAL=7
+All checks passed.
+
+----- stderr -----
+

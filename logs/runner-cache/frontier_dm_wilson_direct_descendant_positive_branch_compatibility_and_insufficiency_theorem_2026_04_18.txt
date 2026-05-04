@@ -1,0 +1,38 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_positive_branch_compatibility_and_insufficiency_theorem_2026_04_18.py
+runner_sha256: 16ed3f14adccde303ef00fe3004a81c388509cc6c6dc6568b112d47dd724d48a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.83
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT POSITIVE-BRANCH COMPATIBILITY AND INSUFFICIENCY
+========================================================================================
+
+========================================================================================
+PART 1: EXACT CONSTRUCTIVE CLOSURE AND PROJECTED-SOURCE BRANCH LANGUAGE ARE COMPATIBLE
+========================================================================================
+  [PASS] The constructive continuity note already gives an exact eta = 1 point with positive gamma, E1, and E2
+  [PASS] The projected-source discriminant note already identifies Delta_src as det(H_e)
+  [PASS] The exact continuity root really satisfies eta = 1 and stays inside the constructive sign chamber  (lambda_*=0.795532193595, triplet=(0.177466004463,0.247922610478,1.552085732579))
+  [PASS] The exact continuity root also lies on the positive projected-source branch  (Delta_src(lambda_*)=0.006583113927)
+
+========================================================================================
+PART 2: POSITIVE BRANCH PLUS CONSTRUCTIVE SIGNS IS NOT A POINT SELECTOR
+========================================================================================
+  [PASS] A nearby point lambda_* + 10^-3 still has positive Delta_src and positive constructive triplet data  (Delta_src=0.006542388769, triplet=(0.177413043908,0.248205299068,1.554144863803))
+  [PASS] But that nearby point already has eta > 1, so the branch data do not select the exact closure point  (eta(lambda_*+10^-3)=1.000445222279)
+  [PASS] The overshooting witness at lambda = 1 remains on the same positive constructive branch  (eta(1)=1.052220313052, Delta_src(1)=0.000796578990)
+
+========================================================================================
+PART 3: THE POSITIVE-BRANCH-ONLY DIRECTION IS EXHAUSTED
+========================================================================================
+  [PASS] Delta_src > 0 plus gamma > 0, E1 > 0, E2 > 0 is only a branch condition, not a point-selection law  (exact eta = 1 root and nearby eta > 1 points satisfy the same microscopic branch inequalities)
+
+========================================================================================
+SUMMARY: PASS=8 FAIL=0
+========================================================================================
+
+----- stderr -----
+

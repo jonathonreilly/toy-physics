@@ -1,0 +1,81 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_theta_induced_edm_vanishing.py
+runner_sha256: 6682cca8ec0381b6f5e1ecb00c7a97da72a4d499d139010192b82a7ddeb9e3e9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.06
+status: ok
+----- stdout -----
+========================================================================================
+Universal theta-induced EDM response vanishing theorem
+========================================================================================
+Status: retained structural corollary; source-scoped to QCD theta
+
+----------------------------------------------------------------------------------------
+Part 1: retained theta source
+----------------------------------------------------------------------------------------
+  [PASS] retained strong-CP surface sets theta_eff to zero  (theta_eff=0)
+  [PASS] linear theta response formula has zero source factor  (theta_eff*K_theta=0 for finite K_theta)
+
+----------------------------------------------------------------------------------------
+Part 2: theta-induced EDM components
+----------------------------------------------------------------------------------------
+  [PASS] E1 neutron EDM theta component vanishes  (family=hadron)
+  [PASS] E2 proton EDM theta component vanishes  (family=hadron)
+  [PASS] E3 deuteron EDM theta component vanishes  (family=nucleus)
+  [PASS] E4 helium-3 EDM theta component vanishes  (family=nucleus)
+  [PASS] E5 helium-4 EDM theta component vanishes  (family=nucleus)
+  [PASS] E6 mercury Schiff theta component vanishes  (family=schiff)
+  [PASS] E7 xenon Schiff theta component vanishes  (family=schiff)
+  [PASS] E8 radium Schiff theta component vanishes  (family=schiff)
+  [PASS] E9 atomic EDM theta response vanishes  (family=atom)
+  [PASS] E10 molecular EDM theta response vanishes  (family=molecule)
+  [PASS] E11 electron QCD-theta-mediated response vanishes  (family=lepton)
+  [PASS] E12 muon QCD-theta-mediated response vanishes  (family=lepton)
+  [PASS] response list spans hadronic, nuclear, Schiff, atomic, molecular, and lepton-mediated channels  (families=['atom', 'hadron', 'lepton', 'molecule', 'nucleus', 'schiff'])
+
+----------------------------------------------------------------------------------------
+Part 3: operator-level source scoping
+----------------------------------------------------------------------------------------
+  [PASS] O1 theta G Gtilde source coefficient vanishes as a theta-sourced component
+  [PASS] O2 theta-sourced pion-nucleon CP-odd coupling vanishes as a theta-sourced component
+  [PASS] O3 theta-sourced nucleon EDM counterterm vanishes as a theta-sourced component
+  [PASS] O4 theta-sourced Schiff response coefficient vanishes as a theta-sourced component
+  [PASS] O5 theta-sourced atomic EDM response coefficient vanishes as a theta-sourced component
+  [PASS] quark chromo-EDM is not killed by theta_eff=0 alone  (independent EFT coefficient)
+  [PASS] Weinberg three-gluon operator is not killed by theta_eff=0 alone  (independent EFT coefficient)
+  [PASS] CP-odd four-fermion operator is not killed by theta_eff=0 alone  (independent EFT coefficient)
+  [PASS] BSM lepton EDM operator is not killed by theta_eff=0 alone  (independent BSM coefficient)
+  [PASS] operator theorem distinguishes theta-sourced matching from independent CP-odd EFT sources
+
+----------------------------------------------------------------------------------------
+Part 4: surviving CKM weak-CP scale
+----------------------------------------------------------------------------------------
+  [PASS] neutron CKM EDM bounded continuation remains nonzero in the bookkeeping surface  (8.0e-33 e cm)
+  [PASS] electron CKM EDM reference scale remains nonzero in the bookkeeping surface  (1.0e-38 e cm)
+  [PASS] atomic CKM EDM reference scale remains nonzero in the bookkeeping surface  (1.0e-34 e cm)
+  [PASS] neutron CKM EDM bounded continuation is below current bound  (margin=2.2e+06)
+  [PASS] electron CKM EDM reference scale is below current bound  (margin=4.1e+08)
+  [PASS] atomic CKM EDM reference scale is below current bound  (margin=7.4e+04)
+  [PASS] neutron CKM bounded continuation lies near the retained note scale  (8.0e-33 e cm)
+
+----------------------------------------------------------------------------------------
+Part 5: falsification boundary
+----------------------------------------------------------------------------------------
+  [PASS] theta-attributable EDM signal above CKM reference has correct theorem status  (source=theta, value=1.0e-28, falsifies=True)
+  [PASS] BSM-attributable EDM signal above CKM reference has correct theorem status  (source=bsm, value=1.0e-28, falsifies=False)
+  [PASS] CKM-attributable EDM signal at CKM reference has correct theorem status  (source=ckm, value=8.0e-33, falsifies=False)
+  [PASS] theta-attributable signal below CKM reference has correct theorem status  (source=theta, value=1.0e-34, falsifies=False)
+
+========================================================================================
+SUMMARY: PASS=36  FAIL=0
+========================================================================================
+
+Retained result:
+  all theta-induced EDM response components vanish on theta_eff=0
+Boundary:
+  independent CKM, qCEDM, Weinberg, four-fermion, and BSM sources are not
+  set to zero by this theorem
+
+----- stderr -----
+

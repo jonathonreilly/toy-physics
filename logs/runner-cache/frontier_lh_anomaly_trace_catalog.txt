@@ -1,0 +1,93 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lh_anomaly_trace_catalog.py
+runner_sha256: 382bbc090f5df45c940968c7567cc9b4517ee295387a22b1f84d69ad0006ba44
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+================================================================================
+LH-content anomaly trace catalog audit
+================================================================================
+
+--------------------------------------------------------------------------------
+Retained LH content
+--------------------------------------------------------------------------------
+  field  SU3  SU2  color  weak  count      Y
+    Q_L    3    2      3     2      6    1/3
+    L_L    1    2      1     2      2     -1
+  [PASS (A)] LH content total state count is 8 (count=8)
+  [PASS (A)] Q_L retained quantum numbers
+  [PASS (A)] L_L retained quantum numbers
+
+--------------------------------------------------------------------------------
+Upstream authority verification
+--------------------------------------------------------------------------------
+  [PASS (B)] ANOMALY_FORCES_TIME parent note exists on main (parent theorem)
+  [PASS (B)] LH-content -16/9 cubic-trace value is referenced upstream (parent inline value)
+  [PASS (B)] LEFT_HANDED_CHARGE_MATCHING note exists on main (LH content authority)
+  [PASS (B)] HYPERCHARGE_IDENTIFICATION note exists on main (Y assignment authority)
+
+--------------------------------------------------------------------------------
+C1: Tr[Y]_LH = 0
+--------------------------------------------------------------------------------
+  Tr[Y]_LH = 6 * (1/3) + 2 * (-1) = 0
+  [PASS (A)] (C1) Tr[Y]_LH equals 0 exactly
+  [PASS (A)] (C1) decomposes as 6*(1/3) + 2*(-1)
+
+--------------------------------------------------------------------------------
+C2: Tr[Y^3]_LH = -16/9
+--------------------------------------------------------------------------------
+  Tr[Y^3]_LH = 6 * (1/3)^3 + 2 * (-1)^3 = -16/9
+  [PASS (A)] (C2) Tr[Y^3]_LH equals -16/9 exactly
+  [PASS (A)] (C2) decomposes as 6*(1/27) + 2*(-1) = 2/9 - 2
+
+--------------------------------------------------------------------------------
+C3: Tr[SU(3)^2 Y]_LH = 1/3
+--------------------------------------------------------------------------------
+  Tr[SU(3)^2 Y]_LH = T(3) * 2 * (1/3) = (1/2) * 2 * (1/3) = 1/3
+  [PASS (A)] (C3) Tr[SU(3)^2 Y]_LH equals 1/3 exactly
+  [PASS (A)] (C3) only SU(3)-charged Q_L contributes
+
+--------------------------------------------------------------------------------
+C4: Tr[SU(2)^2 Y]_LH = 0
+--------------------------------------------------------------------------------
+  Tr[SU(2)^2 Y]_LH = T(2) * [3 * (1/3) + 1 * (-1)] = (1/2) * (1 - 1) = 0
+  [PASS (A)] (C4) Tr[SU(2)^2 Y]_LH equals 0 exactly
+  [PASS (A)] (C4) the bracket [3*(1/3) + 1*(-1)] = 0
+
+--------------------------------------------------------------------------------
+C5: Witten LH doublet count = 4
+--------------------------------------------------------------------------------
+  N_D(Witten, LH) = 3 (Q_L color copies) + 1 (L_L) = 4
+  [PASS (A)] (C5) Witten count equals 4
+  [PASS (A)] (C5) Witten count is even (per-generation Z_2 cancellation locally)
+
+--------------------------------------------------------------------------------
+Role in the SM hypercharge uniqueness solve
+--------------------------------------------------------------------------------
+  LH contributions used by the RH solve:
+    Tr[Y]_LH         = 0
+    Tr[Y^3]_LH       = -16/9
+    Tr[SU(3)^2 Y]_LH = 1/3
+    Tr[SU(2)^2 Y]_LH = 0
+  [PASS (A)] LH-side Tr[Y] is the rhs zero target for RH solve
+  [PASS (A)] LH-side Tr[Y^3] is -16/9, the rhs target for RH cubic solve
+  [PASS (A)] LH-side Tr[SU(3)^2 Y] is 1/3, the rhs target for RH SU(3)^2 solve
+  [PASS (A)] LH-side Tr[SU(2)^2 Y] is zero (no RH constraint from this row)
+
+--------------------------------------------------------------------------------
+Status boundary
+--------------------------------------------------------------------------------
+  [PASS (B)] catalog records LH-only arithmetic identities
+  [PASS (B)] catalog does not solve for RH hypercharges (handled in companion theorem)
+  [PASS (B)] catalog does not assert full anomaly cancellation (handled in companions)
+  [PASS (B)] catalog does not introduce BSM matter content
+  [PASS (B)] catalog does not derive the LH content itself
+
+================================================================================
+TOTAL: PASS=26, FAIL=0
+================================================================================
+
+----- stderr -----
+

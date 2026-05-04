@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_bmv_entanglement.py
+runner_sha256: 10f0a216ee17efc4adbe87e9343fef36a3bfb0c3e849939b6177d1f3bb0b1029
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.99
+status: ok
+----- stdout -----
+==============================================================================
+BRANCH-MEDIATED ENTANGLEMENT ON AN EXTERNALLY IMPOSED TWO-BRANCH PROTOCOL
+==============================================================================
+
+Lattice: 2D staggered, side=10, n=100
+Particle 1 at (2,5), Particle 2 at (8,5), Source at (5,5)
+MASS=0.3, MU2=0.22, DT=0.12, N_STEPS=30, sigma=1.5
+
+Protocol: Source in superposition |A> + |B> where A=present, B=absent.
+Joint state: |Psi> = (|psi_1A>|psi_2A> + |psi_1B>|psi_2B>) / sqrt(2)
+
+    G    ovlp_1   ovlp_2  ovlp_12   S_quant    S_mix       dS     n1A    n1B    n2A    n2B
+------------------------------------------------------------------------------------------
+    1    0.9805   0.9933   0.9740   0.06946  0.05476  0.01470  1.0000 1.0000 1.0000 1.0000
+    2    0.9274   0.9730   0.9023   0.19510  0.15605  0.03905  1.0000 1.0000 1.0000 1.0000
+    5    0.6722   0.8422   0.5662   0.52296  0.44604  0.07692  1.0000 1.0000 1.0000 1.0000
+   10    0.2369   0.5079   0.1203   0.68589  0.66482  0.02107  1.0000 1.0000 1.0000 1.0000
+   20    0.2111   0.1189   0.0251   0.69283  0.67069  0.02214  1.0000 1.0000 1.0000 1.0000
+   50    0.1258   0.0904   0.0114   0.69308  0.68521  0.00787  1.0000 1.0000 1.0000 1.0000
+
+==============================================================================
+ANALYSIS
+==============================================================================
+
+Key quantities:
+  ovlp_1  = |<psi_1A|psi_1B>|  (particle 1 branch overlap)
+  ovlp_2  = |<psi_2A|psi_2B>|  (particle 2 branch overlap)
+  ovlp_12 = ovlp_1 * ovlp_2    (combined overlap)
+  S_quant = S(rho_1) for quantum joint state  [entanglement entropy]
+  S_mix   = S(rho_1) for classical mixture    [classical ignorance]
+  dS      = S_quant - S_mix                   [branch-mediated entanglement]
+
+BRANCH-ENTANGLEMENT SIGNAL: POSITIVE
+  The fixed geometry-branch protocol generates entanglement
+  beyond the corresponding classical branch mixture.
+  This is a bounded externally imposed two-branch result,
+  not a standalone gravity-is-quantum witness.
+
+Entanglement scaling with G:
+  G=    1: S=0.06946 nats  ######
+  G=    2: S=0.19510 nats  ################
+  G=    5: S=0.52296 nats  #############################################
+  G=   10: S=0.68589 nats  ###########################################################
+  G=   20: S=0.69283 nats  ###########################################################
+  G=   50: S=0.69308 nats  ###########################################################
+
+  Maximum entanglement: 0.69308 nats = 0.99991 bits
+  (Maximum possible for 2-branch system: ln(2) = 0.69315 nats = 1 bit)
+  Fraction of max: 0.9999
+
+==============================================================================
+VERDICT
+==============================================================================
+
+CONFIRMED: branch-mediated entanglement grows monotonically with source strength.
+  Entanglement range: 0.06946 to 0.69308 nats
+  In this imposed-branch model, the shared geometry branch
+  coherently entangles the two separated particles.
+
+Time: 0.68s
+
+----- stderr -----
+

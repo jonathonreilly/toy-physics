@@ -1,0 +1,54 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_selector_first_shoulder_exit_threshold_support_2026_04_21.py
+runner_sha256: 08c7ae1063e4b211cf34086b6c94614358c4dd7ce9b5b0e4bc0155b474f18b86
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.65
+status: ok
+----- stdout -----
+========================================================================================
+DM SELECTOR FIRST-SHOULDER-EXIT THRESHOLD SUPPORT THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE EARLIEST MIDDLE-BRANCH BREAKPOINT IS UNIQUE
+========================================================================================
+  [PASS] The preferred recovered lift is still lift 0 on the current selector branch  (preferred lift = [1.02103884 1.38079143 0.21567748])
+  [PASS] Each recovered lift has an intrinsic middle-branch threshold tau_b = log(1+b)  (tau_b = [0.14803625 0.17638191 0.17737644 0.1712048  0.16053473])
+  [PASS] The earliest middle-branch threshold is unique and belongs to the preferred recovered lift  ((tau_b_min, next) = (0.148036252277635, 0.160534730480452))
+
+========================================================================================
+PART 2: THE EARLIEST BREAKPOINT LIES INSIDE THE STABILIZATION WINDOW
+========================================================================================
+  [PASS] The threshold-stabilization theorem already records the high-threshold onset tau_star
+  [PASS] The earliest middle-branch threshold lies strictly above tau_star  ((tau_b_min - tau_star) = 0.016398674056082)
+  [PASS] The earliest middle-branch threshold also lies strictly below the next zero-volume tie  ((tau_b_min, tau_zero_next)=(0.148036252277635,0.271641142726493))
+
+========================================================================================
+PART 3: THAT BREAKPOINT ALREADY SELECTS THE PREFERRED LIFT
+========================================================================================
+  [PASS] At tau_b,min the preferred recovered lift is already the unique minimizer of the exact threshold-volume family  (vals(tau_b,min) = [0.72425153 0.8703428  0.88320396 0.92614267 0.99161327])
+  [PASS] So the exact intrinsic family already carries one canonical breakpoint candidate selecting the preferred lift  (tau_b,min = 0.148036252277635)
+
+========================================================================================
+PART 4: SCIENTIFIC CONSEQUENCE
+========================================================================================
+  [PASS] The older nonrealization note still honestly states that no intrinsic threshold law is yet derived
+  [PASS] This theorem narrows the positive selector burden further without promoting closure  (a natural breakpoint candidate now exists: the earliest middle-branch threshold tau_b,min)
+  [PASS] What remains is to derive why the physical threshold law should equal that earliest intrinsic breakpoint, or else derive a stronger microscopic law  (support narrowing only)
+
+========================================================================================
+RESULT
+========================================================================================
+  The exact intrinsic threshold-volume family now contains a canonical
+  breakpoint candidate, tau_b,min = min_i log(1+b_i).
+  On the recovered bank that breakpoint belongs uniquely to the preferred
+  lift and already selects it.
+  The remaining selector-side burden is therefore narrower again:
+    derive why the physical threshold law is the earliest middle-branch
+    breakpoint, or derive a stronger microscopic selector law.
+
+SUMMARY: PASS=11 FAIL=0
+
+----- stderr -----
+

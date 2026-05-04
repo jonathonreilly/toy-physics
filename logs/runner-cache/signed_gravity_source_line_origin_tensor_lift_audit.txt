@@ -1,0 +1,45 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_source_line_origin_tensor_lift_audit.py
+runner_sha256: b69c12dcd3382b016920dcf6fda48d349234c19aacce5b5170991920f17b3e7d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================================
+SIGNED GRAVITY SOURCE-LINE ORIGIN / PARTIAL TENSOR-LIFT AUDIT
+  determinant-orientation source line; no physical signed-gravity claim
+========================================================================================================
+
+CANDIDATE ORIGIN PRINCIPLE
+  compact active sources are local sections of the real APS determinant
+  orientation line; positive inertia is the line norm, while active
+  scalar charge is the oriented section paired with Phi.
+
+COEFFICIENT RULES
+  rule                           + sector     - sector         null  read
+  eta_orientation_line           1.0+0.0j    -1.0+0.0j     0.0+0.0j  local APS determinant-orientation line
+  unsigned_born_source                1.0          1.0          0.0  positive source ignores boundary orientation
+  raw_eta_magnitude              1.0+0.0j    -1.0+0.0j     0.0+0.0j  uses eta magnitude, so refinement changes source strength
+  complex_eta_phase              0.0+1.0j     0.0-1.0j          0.0  keeps eta as a phase rather than a real orientation
+
+[PASS] origin constraints classify eta_orientation_line  (coeff(+,-,0)=(1.0+0.0j,-1.0+0.0j,0.0+0.0j), refined=[(1+0j), (1+0j), (1+0j), (1+0j)])
+[PASS] origin constraints classify unsigned_born_source  (coeff(+,-,0)=(1.0,1.0,0.0), refined=[(1+0j), (1+0j), (1+0j), (1+0j)])
+[PASS] origin constraints classify raw_eta_magnitude  (coeff(+,-,0)=(1.0+0.0j,-1.0+0.0j,0.0+0.0j), refined=[(1+0j), (2+0j), (3+0j), (5+0j)])
+[PASS] origin constraints classify complex_eta_phase  (coeff(+,-,0)=(0.0+1.0j,0.0-1.0j,0.0), refined=[1j, (-1+0j), (-0-1j), 1j])
+[PASS] local source-line sewing beats global determinant-product sign  (local_sum=+0.0e+00, global_sum=-4.0, spectator_flip=-4.0)
+[PASS] real source variation selects orientation sign over complex eta phase  (variation_residual=7.32e-13, complex_coeff=0.0+1.0j)
+[PASS] eta source line has invariant A1 tensor lift but not full tensor closure  (max_comm=6.7e-17, max_motion=1.1e-16, source_rank=1, complement_rank=0)
+
+INTERPRETATION
+  Under the source-line principle, the coefficient is forced to chi_eta.
+  The controls fail for precise reasons: unsigned loses orientation, raw
+  eta fails refinement, global product loses locality, and complex phase
+  leaves the real scalar action.  The tensor lift is only A1/lapse-trace;
+  full Einstein/Regge localization remains blocked.
+
+SUMMARY: PASS=7 FAIL=0
+FINAL_TAG: ETA_SOURCE_LINE_ORIGIN_CONDITIONAL_A1_TENSOR_LIFT
+
+----- stderr -----
+

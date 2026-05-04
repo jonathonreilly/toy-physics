@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_cyclic_projector_block_democracy.py
+runner_sha256: df18b27e52cb02f00504329b38e30f59de9d4eceadfc44021c965e6149af4fc2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.13
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: the cyclic image has a canonical scalar ⊕ traceless-cyclic split
+========================================================================================
+  [PASS] [NUMERIC] B0 spans the scalar line inside the cyclic Hermitian image
+  [PASS] [NUMERIC] B1 and B2 span the traceless cyclic plane
+  [PASS] [NUMERIC] The scalar line is orthogonal to the traceless cyclic plane
+  [PASS] So the cyclic Hermitian sector splits canonically as R B0 ⊕ span{B1,B2}  (1D scalar line plus 2D traceless cyclic plane)
+
+========================================================================================
+PART 2: canonical trace norms of the two blocks
+========================================================================================
+  [PASS] [NUMERIC] The cyclic basis is orthogonal in the real-trace metric  (gram=[[3.0, 0.0, 0.0], [0.0, 6.0, 0.0], [0.0, 0.0, 6.0]])
+  [PASS] [NUMERIC] The scalar-line norm is ||B0||^2 = 3
+  [PASS] [NUMERIC] The cyclic-plane norms are ||B1||^2 = ||B2||^2 = 6
+
+========================================================================================
+PART 3: equal block power is exactly the Koide selector equation
+========================================================================================
+  [PASS] The scalar-line block power is r0^2 / 3  (E_plus=r0**2/3)
+  [PASS] The cyclic-plane block power is (r1^2 + r2^2) / 6  (E_perp=r1**2/6 + r2**2/6)
+  [PASS] Equal block power is exactly 2 r0^2 = r1^2 + r2^2
+
+========================================================================================
+PART 4: the block-democracy law matches both response-space and operator-space Koide
+========================================================================================
+  [PASS] Response-space block democracy reduces to a^2 = 2(x^2 + y^2)
+  [PASS] So the same law is 3 a^2 = 6 |b|^2 on the circulant coordinates
+
+========================================================================================
+PART 5: observed charged leptons satisfy cyclic-projector block democracy
+========================================================================================
+  [PASS] [NUMERIC] Observed charged leptons satisfy equal cyclic block power to Koide precision  (E_plus/E_perp=1.0000184659)
+  [PASS] [NUMERIC] So the observed target lies on the cyclic-projector block-democracy cone  (selector=0.1043145831)
+
+Interpretation:
+  The simplest fresh selector candidate is now explicit: on the exact
+  cyclic projector image, demand equal block power between the scalar
+  line and the traceless cyclic plane. That is already
+  enough to produce the Koide selector equation 2 r0^2 = r1^2 + r2^2,
+  with no need to start from later entropy language.
+
+PASS=14 FAIL=0
+
+----- stderr -----
+

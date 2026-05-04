@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_no_restore_joint_package.py
+runner_sha256: f89b726b66e5fa5f1f7e3396105d005dffbbaf3dbb4f2e2ac30bd1ec98489a7e
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

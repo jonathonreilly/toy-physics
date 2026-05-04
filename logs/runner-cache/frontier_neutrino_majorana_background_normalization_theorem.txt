@@ -1,0 +1,85 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_background_normalization_theorem.py
+runner_sha256: e08d32f907ef1a37eaa3b07721daacfcd7ba738ca6a4379bd1c7de5d016c699f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: BACKGROUND-NORMALIZED LOCAL RESPONSE THEOREM
+========================================================================================
+
+Authority stack:
+  - docs/NEUTRINO_MAJORANA_NAMBU_SOURCE_PRINCIPLE_NOTE.md
+  - docs/NEUTRINO_MAJORANA_SOURCE_RAY_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_NAMBU_RADIAL_OBSERVABLE_NOTE.md
+  - docs/NEUTRINO_MAJORANA_NAMBU_QUADRATIC_COMPARATOR_NOTE.md
+
+Question:
+  Once the local quadratic comparator Q_2 is exact, does the retained
+  normal slice provide the missing canonical background normalization
+  for the local Majorana response?
+
+========================================================================================
+PART 1: THE RETAINED NORMAL SLICE PROVIDES AN EXACT RELATIVE RESPONSE
+========================================================================================
+  [PASS (C)] The active block determinant is exactly z^2 + x^2 + y^2  (det error=1.11e-16)
+  [PASS (C)] The background-normalized quadratic comparator is exactly rho^2  (|Q_rel-rho^2|=5.55e-17)
+  [PASS (C)] The background-normalized bosonic response is exactly 1/2 log(1+rho^2)  (|W_rel-formula|=8.33e-17)
+
+  So the retained normal slice is not just a bookkeeping direction.
+  It gives an exact additive-constant-free background normalization
+  for the admitted local Majorana response.
+
+========================================================================================
+PART 2: THE RELATIVE RESPONSE DEPENDS ONLY ON THE TRANSVERSE RADIUS
+========================================================================================
+  [PASS (C)] The relative quadratic comparator is invariant under pairing-plane rephasing  (|Q_rel-Q_rel_rot|=0.00e+00)
+  [PASS (C)] The relative bosonic response is invariant under pairing-plane rephasing  (|W_rel-W_rel_rot|=0.00e+00)
+
+  So the background-normalized local response depends only on the
+  invariant transverse radius rho = sqrt(x^2+y^2)/|z|, not on the
+  arbitrary phase inside the pairing plane.
+
+========================================================================================
+PART 3: DIVIDING BY THE RETAINED BACKGROUND GIVES A CANONICAL CURVE
+========================================================================================
+  [PASS (C)] The canonical dimensionless variable is rho = ||pairing||/|background|  (|rho-sqrt(Q_rel)|=1.11e-16)
+  [PASS (C)] The canonical response curve is W_rel(rho)=1/2 log(1+rho^2)  (|W_rel-canonical|=8.33e-17)
+  [PASS (C)] The canonical non-homogeneous comparator is Q_rel(rho)=rho^2  (|Q_rel-rho^2|=1.11e-16)
+
+  This removes the old additive ambiguity cleanly: once the retained
+  normal baseline is divided out, the local Majorana response lives on
+  one exact dimensionless curve.
+
+========================================================================================
+PART 4: THE BACKGROUND-NORMALIZED RESPONSE STILL DOES NOT PICK A FINITE SCALE
+========================================================================================
+  [PASS (C)] dW_rel/drho is strictly positive for every rho > 0  (min dW/drho=0.049875)
+  [PASS (C)] dQ_rel/drho is strictly positive for every rho > 0  (min dQ/drho=0.100000)
+  [PASS (C)] The only stationary point on the local response curve is rho = 0  (nonzero branch is monotone)
+
+  So at the level of this theorem alone the old blocker is narrowed
+  but not gone. The branch now has the exact background-normalized
+  local response curve; later branch work adds the self-dual
+  rho = 1 point on this same curve.
+
+========================================================================================
+RESULT
+========================================================================================
+  Yes. The retained normal slice supplies an exact background
+  normalization on the admitted local Nambu family:
+    W_rel(rho) = 1/2 log(1+rho^2)
+    Q_rel(rho) = rho^2
+
+  So the old 'need comparator or background normalization' wording is
+  no longer the real blocker. Later branch work closes the local
+  finite-point selector on this curve at the self-dual point rho = 1;
+  the remaining gap is the absolute staircase embedding of that local
+  point, and then the three-generation lift.
+
+PASS=11  FAIL=0
+
+----- stderr -----
+

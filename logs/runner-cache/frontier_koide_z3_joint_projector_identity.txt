@@ -1,0 +1,107 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_z3_joint_projector_identity.py
+runner_sha256: e98159d7fcd2db4578a9e36d801544171de87ef47a68671ad7dfa398b5eb07f9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================
+Section 1 - C_3 isotypic decomposition on C^3
+========================================================================
+[PASS] C^3 == I on C^3
+[PASS] Tr(C) == 0
+[PASS] Tr(C^2) == 0
+[PASS] C v_triv  = 1   * v_triv
+[PASS] C v_om    = omega * v_om
+[PASS] C v_ombar = omega^* v_ombar
+   Pi_triv  : ||P-P^dag||=0.00e+00, ||P^2-P||=3.33e-16, Tr=1.000000, rank=1
+[PASS] Pi_triv Hermitian
+[PASS] Pi_triv idempotent
+[PASS] Pi_triv rank 1
+   Pi_om    : ||P-P^dag||=1.21e-17, ||P^2-P||=2.96e-16, Tr=1.000000, rank=1
+[PASS] Pi_om Hermitian
+[PASS] Pi_om idempotent
+[PASS] Pi_om rank 1
+   Pi_ombar : ||P-P^dag||=1.21e-17, ||P^2-P||=2.96e-16, Tr=1.000000, rank=1
+[PASS] Pi_ombar Hermitian
+[PASS] Pi_ombar idempotent
+[PASS] Pi_ombar rank 1
+[PASS] Pi_triv + Pi_om + Pi_ombar == I  (||.||=5.44e-16)
+[PASS] Orthogonality Pi_triv * Pi_om == 0  (||.||=1.21e-16)
+[PASS] Orthogonality Pi_triv * Pi_ombar == 0  (||.||=1.21e-16)
+[PASS] Orthogonality Pi_om * Pi_triv == 0  (||.||=1.24e-16)
+[PASS] Orthogonality Pi_om * Pi_ombar == 0  (||.||=2.44e-16)
+[PASS] Orthogonality Pi_ombar * Pi_triv == 0  (||.||=1.24e-16)
+[PASS] Orthogonality Pi_ombar * Pi_om == 0  (||.||=2.44e-16)
+[PASS] Pi_triv == (I + C + C^2)/3
+[PASS] Pi_om == (I + omega^* C + omega C^2)/3
+[PASS] Pi_ombar == (I + omega C + omega^* C^2)/3
+
+========================================================================
+Section 2 - Z_3 basis U_Z3 (DFT_3) and diagonal-block projectors
+========================================================================
+[PASS] U_Z3 is unitary  (||U^dag U - I||=3.63e-16)
+[PASS] column 0 of U_Z3 is C-eigenvector (lambda=1)  (res=0.00e+00)
+[PASS] column 1 of U_Z3 is C-eigenvector (lambda=omega^*)  (res=3.39e-16)
+[PASS] column 2 of U_Z3 is C-eigenvector (lambda=omega)  (res=3.30e-16)
+   Pi_Z3_singlet: ||P-P^dag||=0.00e+00, ||P^2-P||=3.33e-16, Tr=1.000000, rank=1
+[PASS] Pi_Z3_singlet Hermitian
+[PASS] Pi_Z3_singlet idempotent
+[PASS] Pi_Z3_singlet rank 1
+   Pi_Z3_doublet: ||P-P^dag||=0.00e+00, ||P^2-P||=3.24e-16, Tr=2.000000, rank=2
+[PASS] Pi_Z3_doublet Hermitian
+[PASS] Pi_Z3_doublet idempotent
+[PASS] Pi_Z3_doublet rank 2
+
+========================================================================
+Section 3 - Matrix identities Pi_Z3_* == Pi_Koide_*
+========================================================================
+[PASS] Pi_Z3_singlet == Pi_triv  (||.||=0.00e+00)
+[PASS] Pi_Z3_doublet == Pi_om + Pi_ombar  (||.||=6.58e-16)
+[PASS] Pi_Z3_doublet == I - Pi_triv  (||.||=5.68e-16)
+
+========================================================================
+Section 4 - CKM ray rank-1 projector on C^3 (no C_3 alignment)
+========================================================================
+[PASS] |ckm_ray| == 1  (|ckm_ray|=1.000000000000)
+[PASS] Pi_CKM rank 1
+[PASS] Pi_CKM Hermitian
+[PASS] Pi_CKM idempotent
+   |<v_triv|u_CKM>|^2 = 0.469416
+   |<v_om|u_CKM>|^2 = 0.528815
+   |<v_ombar|u_CKM>|^2 = 0.001769
+[PASS] Pi_CKM sums to 1 over C_3 basis  (sum=1.000000)
+[PASS] No overlap is pinned to exactly 0 or 1 (ckm_ray is not a C_3 eigenvector)  (overlaps=[np.float64(0.469416), np.float64(0.528815), np.float64(0.001769)])
+[PASS] Pi_CKM is NOT equal to Pi_triv  (||Pi_CKM - Pi_triv||=1.0301)
+[PASS] Pi_CKM is NOT equal to Pi_Z3_singlet
+
+========================================================================
+Section 5 - sign(H_framework) at retained DM points
+========================================================================
+   (m, delta, q)=(0.0, 0.2, 1.0): rank(Pi_+)=2, ||Pi_+ - Pi_triv||=1.3873, ||Pi_+ - Pi_Z3_doublet||=1.0370
+[PASS] Pi_+ at (0.0, 0.2, 1.0) is NOT Pi_triv  (||.||=1.3873)
+[PASS] Pi_+ at (0.0, 0.2, 1.0) is NOT Pi_Z3_doublet  (||.||=1.0370)
+[PASS] Pi_+ at (0.0, 0.2, 1.0) is NOT Pi_Z3_singlet  (||.||=1.3873)
+   (m, delta, q)=(0.0, 0.9, 2.0): rank(Pi_+)=1, ||Pi_+ - Pi_triv||=1.1379, ||Pi_+ - Pi_Z3_doublet||=1.3058
+[PASS] Pi_+ at (0.0, 0.9, 2.0) is NOT Pi_triv  (||.||=1.1379)
+[PASS] Pi_+ at (0.0, 0.9, 2.0) is NOT Pi_Z3_doublet  (||.||=1.3058)
+[PASS] Pi_+ at (0.0, 0.9, 2.0) is NOT Pi_Z3_singlet  (||.||=1.1379)
+   (m, delta, q)=(1.2, 0.2, 2.5): rank(Pi_+)=1, ||Pi_+ - Pi_triv||=1.1377, ||Pi_+ - Pi_Z3_doublet||=1.3060
+[PASS] Pi_+ at (1.2, 0.2, 2.5) is NOT Pi_triv  (||.||=1.1377)
+[PASS] Pi_+ at (1.2, 0.2, 2.5) is NOT Pi_Z3_doublet  (||.||=1.3060)
+[PASS] Pi_+ at (1.2, 0.2, 2.5) is NOT Pi_Z3_singlet  (||.||=1.1377)
+
+========================================================================
+Joint projector identity certification summary
+========================================================================
+
+Pi_Z3_singlet == Pi_triv          and
+Pi_Z3_doublet == Pi_om + Pi_ombar == I - Pi_triv
+as exact 3x3 matrix identities. Koide and DM lanes share one C_3
+isotypic decomposition. CKM ray is a separate rank-1 direction.
+
+PASS=55 FAIL=0
+
+----- stderr -----
+

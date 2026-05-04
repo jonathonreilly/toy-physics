@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/central_band_dense_boundary_sweep.py
+runner_sha256: 3c292fcd66a8ce6fdded9bd7f8ef8a32edbdb65aa1027b05a879ba56b6856d37
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

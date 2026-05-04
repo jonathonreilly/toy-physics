@@ -1,0 +1,165 @@
+===== runner cache v1 =====
+runner: scripts/frontier_physical_lattice_necessity.py
+runner_sha256: 63b767ef5955b4028e451dca49ef7fcc03590a4abc14d5b98b06db2407615239
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+PHYSICAL-LATTICE NECESSITY / NO-SAME-STACK REGULATOR BOUNDARY
+========================================================================================
+
+Question:
+  Has the physical-lattice boundary been strengthened beyond a pure
+  audit after the retained three-generation observable theorem?
+
+========================================================================================
+PART 1: THE ACCEPTED STACK IS A FIXED THEORY SURFACE
+========================================================================================
+
+  [PASS] [SUPPORT] minimal_input_1_present  (1. **Local algebra:** the physical local algebra is `Cl(3)`.)
+  [PASS] [SUPPORT] minimal_input_2_present  (2. **Spatial substrate:** the physical spatial substrate is the cubic lattice)
+  [PASS] [SUPPORT] minimal_input_3_present  (3. **Microscopic dynamics:** the package works with the finite local)
+  [PASS] [SUPPORT] physical_lattice_reading_not_separate_live_input  (the live minimal stack no longer carries physical-lattice reading as a separate input item)
+  [PASS] [SUPPORT] canonical_normalization_surface_is_explicit  (support diagnostic only: the accepted stack also exposes canonical normalization/evaluation rather than a tunable family)
+  [PASS] fixed_gauge_surface_beta6  (Wilson gauge surface is fixed at g_bare^2 = 1, beta = 6)
+  [PASS] [SUPPORT] continuum_limit_family_absent_from_accepted_stack  (the accepted stack does not define a tunable continuum family)
+  [PASS] [SUPPORT] rooting_machinery_absent_from_accepted_stack  (the accepted stack does not include rooting / continuum-removal machinery)
+  [PASS] [SUPPORT] renormalization_layer_absent_from_accepted_stack  (the accepted stack does not contain an external RG / renormalization interpretation layer)
+
+========================================================================================
+PART 2: THE RETAINED GENERATION SURFACE IS ALREADY CLOSED
+========================================================================================
+
+  [PASS] [SUPPORT] no_proper_exact_quotient_on_retained_hw1_surface  (the retained hw=1 triplet is already exact and irreducible)
+  [PASS] [SUPPORT] boundary_note_marks_regulator_escape_as_global_not_retained_surface  (the remaining issue is substrate-level ontology, not a hidden retained-surface loophole)
+  [PASS] [SUPPORT] chirality_boundary_records_no_rooting_and_one_axiom_substrate_closure  (review-safe boundary distinguishes retained no-rooting from the stronger one-axiom substrate-closure result)
+
+========================================================================================
+PART 3: REGULATOR REINTERPRETATION REQUIRES EXTRA STRUCTURE
+========================================================================================
+
+  [PASS] [SUPPORT] regulator_reading_uses_continuum_limit_family  (the regulator reading uses a continuum-limit family / universality layer)
+  [PASS] [SUPPORT] regulator_reading_uses_external_eft_or_universality_bridge  (the gauge continuum reading is carried by an external universality/EFT bridge)
+  [PASS] [SUPPORT] regulator_reading_uses_rg_or_renormalization_interpretation  (the regulator reading imports RG / renormalization structure)
+  [PASS] [LOGICAL] regulator_escape_uses_path_integral_rooting_machinery  (the escape route requires a path-integral/rooting construction absent from the accepted stack)
+
+========================================================================================
+PART 4: FIXED QUANTITATIVE SURFACE RIGIDITY
+========================================================================================
+
+  [PASS] [SUPPORT] accepted_stack_names_canonical_normalization_surface  (the accepted stack fixes one canonical normalization/evaluation surface)
+  [PASS] canonical_gbare_implies_beta6_exactly  (g_bare = 1.0 gives beta = 6.0 and alpha_bare = 0.079577471546)
+  [PASS] [SUPPORT] accepted_plaquette_theorem_is_beta6_specific  (the accepted plaquette theorem is pinned to the beta = 6 surface)
+  [PASS] [LOGICAL] canonical_quantitative_chain_is_publicly_fixed  (the live package exposes a fixed canonical plaquette/hierarchy chain)
+  [PASS] [COMPUTE] beta_family_moves_off_canonical_normalization_surface  (beta=5.8: g_bare=1.017095, alpha_bare=0.082321522289; beta=6.0: g_bare=1.000000, alpha_bare=0.079577471546; beta=6.2: g_bare=0.983739, alpha_bare=0.077010456335)
+  [PASS] alpha_bare_varies_nontrivially_with_beta  (alpha_bare(beta) = 3/(2 pi beta), so any beta-family deformation changes the bare-coupling surface)
+
+========================================================================================
+PART 5: CROSS-LANE INVARIANT RIGIDITY
+========================================================================================
+
+  [PASS] canonical_alpha_s_formula_matches_live_surface  (alpha_s(v; beta=6, u0_can) = 0.103303816122)
+  [PASS] canonical_hierarchy_ratio_normalized_at_beta6  (v(beta=6) / v(beta=6) = 1 exactly on the accepted canonical surface)
+  [PASS] [COMPUTE] sample_compensating_families_cannot_preserve_both_alpha_s_and_v  (beta=5.8: preserve alpha_s -> u0=0.892685568597, alpha_s/alpha_s_can=1.000000, v/v_can=1.311554; preserve v -> u0=0.907946256412, alpha_s/alpha_s_can=0.966667; beta=6.2: preserve alpha_s -> u0=0.863409188065, alpha_s/alpha_s_can=1.000000, v/v_can=0.769266; preserve v -> u0=0.849369078579, alpha_s/alpha_s_can=1.033333)
+  [PASS] [LOGICAL] preserving_alpha_s_and_v_forces_canonical_beta_and_u0  (If alpha_s/alpha_s_can = x/y^2 = 1 and v/v_can = (x/y)^16 = 1, then x=y and x=y^2, hence y=1 and x=1; therefore u0=u0_can and beta=6)
+  [PASS] canonical_u0_surface_recovers_trivial_beta_family  (on the canonical u0 surface, alpha_s(v; beta)/alpha_s(v; 6) = 6/beta and v(beta)/v(6) = (6/beta)^16)
+
+========================================================================================
+PART 6: SAME-STACK NONEQUIVALENCE AND SUPPORT DIAGNOSTICS
+========================================================================================
+
+  [PASS] [SUPPORT] no_same_stack_regulator_reinterpretation  (regulator reinterpretation requires extra continuum/rooting/RG structure absent from the accepted stack; fixed-surface diagnostics are support-only)
+  [PASS] [SUPPORT] fixed_surface_support_diagnostic_passed  (optional diagnostic: the fixed-surface and invariant-collapse checks still pass, but they are not load-bearing for no-same-stack closure)
+  [PASS] [LOGICAL] live_minimal_stack_has_no_separate_physical_lattice_input  (the live minimal stack no longer lists physical-lattice reading as a separate input item)
+
+  CLOSED RESULT:
+    the accepted framework stack cannot be re-read as an ordinary
+    regulator theory without adjoining extra structure.
+
+  LIVE INPUT RESULT:
+    the live minimal stack no longer carries the
+    physical-lattice reading as a separate input item.
+
+========================================================================================
+PART 7: OBSERVABLE-SECTOR SPECIES SEMANTICS
+========================================================================================
+
+  [PASS] retained_triplet_has_three_distinct_exact_character_labels  (X1:(-1, 1, 1); X2:(1, -1, 1); X3:(1, 1, -1))
+  [PASS] [COMPUTE] exact_translation_observables_separate_each_hw1_pair  (X1/X2: separated by Tx,Ty; X1/X3: separated by Tx,Tz; X2/X3: separated by Ty,Tz)
+  [PASS] [LOGICAL] induced_c3_forms_single_exact_triplet_orbit  (X1 -> X2 -> X3 -> X1, so the retained sectors form one exact triplet orbit rather than three accidental labels)
+  [PASS] [LOGICAL] accepted_hilbert_surface_carries_measurement_semantics  (the accepted Hilbert/information surface already treats exact observable distinctions as physical distinctions)
+  [PASS] [LOGICAL] anomaly_forced_time_places_triplet_inside_single_clock_physical_framework  (the retained sectors sit inside the accepted single-clock physical state surface rather than a Euclidean regulator-only bookkeeping layer)
+  [PASS] [LOGICAL] no_exact_identification_of_triplet_preserves_observable_algebra  (the retained observable theorem already removes every proper exact quotient/rooting that would identify the sectors)
+  [PASS] [LOGICAL] triplet_species_semantics_forced_on_accepted_hilbert_surface  (exact observables distinguish the sectors, the accepted Hilbert surface gives those distinctions physical meaning, and no exact quotient can identify them)
+
+  CLOSED RESULT:
+    the retained hw=1 triplet is already physically distinct on the
+    accepted Hilbert surface; the remaining explicit premise is the
+    substrate-level physical-lattice reading, not triplet species
+    semantics itself.
+
+========================================================================================
+PART 8: RETAINED-PACKAGE SUPPORT DIAGNOSTIC
+========================================================================================
+
+  [PASS] [LOGICAL] retained_package_contract_named  (contract = physical triplet species structure + no proper exact quotient/rooting on hw=1 + accepted alpha_s(v) + accepted v)
+  [PASS] [LOGICAL] regulator_reading_breaks_retained_package_contract  (the regulator reading cannot preserve the retained matter closure and live quantitative package simultaneously)
+  [PASS] [LOGICAL] physical_lattice_reading_is_unique_package_survivor  (support diagnostic: once the retained quantitative package contract is imposed, only the physical-lattice reading survives as an admissible interpretation)
+
+  CONDITIONAL NECESSITY RESULT:
+    on the retained package contract, the physical-lattice
+    reading is forced as the unique surviving interpretation.
+    This is not used as the no-g_bare load-bearing route.
+
+========================================================================================
+PART 9: ONE-AXIOM SUBSTRATE NECESSITY
+========================================================================================
+
+  [PASS] [LOGICAL] single_axiom_hilbert_graph_emerges_from_hamiltonian_support  (on the accepted Hilbert/locality surface, the graph is an internal part of the physical state-space structure rather than an auxiliary mesh)
+  [PASS] [LOGICAL] single_axiom_hilbert_locality_is_tensor_factorization  (spatial structure is carried by the accepted tensor-product Hilbert structure itself)
+  [PASS] [LOGICAL] single_axiom_information_graph_unitary_pair_is_irreducible  (the accepted information-flow surface already treats substrate and dynamics as one irreducible physical object)
+  [PASS] [LOGICAL] accepted_framework_specializes_physical_graph_to_z3  (the accepted framework specialization picks out Cl(3) on Z^3 as the actual local graph geometry)
+  [PASS] [LOGICAL] substrate_physicality_forced_on_accepted_one_axiom_surface  (once the graph/locality object is already physical on the accepted one-axiom surface, and no same-theory regulator reinterpretation survives, Z^3 is forced as physical substrate rather than a separate live premise)
+
+  CLOSED RESULT:
+    on the accepted one-axiom Hilbert/locality/information
+    surface, substrate physicality is derived rather than
+    carried as an additional live premise.
+
+========================================================================================
+SYNTHESIS (narrowed 2026-05-02)
+========================================================================================
+
+  Narrowed load-bearing result (the no-go theorem):
+    - on the retained Wilson SU(3) action with one tunable plaquette
+      parameter u_0, the only (beta, u_0) family preserving both
+      alpha_s(v) and v is the trivial canonical point (beta=6,
+      u_0=u_0_can). This is a finite real-algebra two-invariant
+      rigidity statement, fully verified by Parts 4 and 5.
+
+  Architectural commentary (informational, not load-bearing):
+    - the accepted minimal stack is fixed and does not contain a
+      continuum-limit/rooting/RG layer
+    - exact observable-sector semantics on the Hilbert surface
+    - one-axiom substrate-physicality narrative
+    All such checks are tagged [LOGICAL] / [SUPPORT] / [INFO] in the
+    output and depend on the (currently unaudited) sibling notes; they
+    are commentary on package architecture, not part of the narrowed
+    load-bearing no-go theorem.
+
+  THEOREM/COMPUTE PASS = 10, SUPPORT = 35, COMMENTARY_NEUTRAL = 0, FAIL = 0
+
+  Narrowed-scope load-bearing status:
+    TWO-INVARIANT RIGIDITY (Parts 4+5): CLOSED
+
+  Architectural commentary status (informational, not load-bearing):
+    NO SAME-STACK REGULATOR REINTERPRETATION (commentary): supported
+    HILBERT-SEMANTICS commentary: supported
+    PACKAGE-DIAGNOSTIC commentary: supported
+    ONE-AXIOM SUBSTRATE commentary: supported
+    LIVE INPUT STATUS: NO SEPARATE PHYSICAL-LATTICE INPUT ITEM
+
+----- stderr -----
+

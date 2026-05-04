@@ -1,0 +1,97 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_delta_residual_cohomology_obstruction_no_go.py
+runner_sha256: c75c02ef66e9e200f7743b1c855898298817a1d8dee8d3065a3bde9200c2257c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.60
+status: ok
+----- stdout -----
+
+========================================================================================
+A. Q retained source exact sequence
+========================================================================================
+[PASS] A.1 trace/source-total projection has a one-dimensional kernel
+       ker(pi_Q)=[Matrix([
+       [0],
+       [1]])]
+[PASS] A.2 kernel translations preserve the retained Q total observable
+       (t,z) -> [t, a + z] preserves pi_Q=t
+[PASS] A.3 zero kernel representative is exactly the Q closing midpoint
+       z=0 -> w_plus=1/2 -> K_TL=0 and Q=2/3.
+[PASS] A.4 nonzero kernel representative preserves total but does not close Q
+       z=-1/3, w_plus=1/3, K_TL=3/8, Q=1
+
+========================================================================================
+B. Delta retained boundary exact sequence
+========================================================================================
+[PASS] B.1 closed boundary projection has a two-dimensional kernel
+       ker(pi_delta)=[Matrix([
+       [-1],
+       [ 1],
+       [ 0]]), Matrix([
+       [0],
+       [0],
+       [1]])]
+[PASS] B.2 kernel translations preserve selected+spectator closed total
+       (selected,spectator,c) -> [selected - u, spectator + u, c + v] preserves the closed total.
+[PASS] B.3 open endpoint residual is the nontrivial functional on the kernel
+       delta_open/eta_APS - 1 = 9*c/2 - spectator
+[PASS] B.4 zero kernel representative is exactly the delta closing section
+       spectator=0,c=0 -> delta_open=2/9
+[PASS] B.5 nonzero kernel representatives preserve retained totals but do not close delta
+       spectator kernel: {spectator: 1, c: 0}, closed_total=1, delta_open=0, residual=-1
+       half spectator kernel: {spectator: 1/2, c: 0}, closed_total=1, delta_open=1/9, residual=-1/2
+       endpoint exact kernel: {spectator: 0, c: 1/9}, closed_total=1, delta_open=1/3, residual=1/2
+
+========================================================================================
+C. Exactness does not canonically split the fibres
+========================================================================================
+[PASS] C.1 Q sections of the same exact sequence form a non-unique family
+       s_a(t)=[t, section_parameter*t]; zero section requires a=0.
+[PASS] C.2 delta sections of the same exact sequence also form a non-unique family
+       s_(b1,b2)=[1 - b1, b1, b2]; closing section requires b1=b2=0.
+[PASS] C.3 exactness names the obstruction class but does not choose its zero representative
+       A canonical section/basepoint is additional physical structure.
+
+========================================================================================
+D. Hostile review
+========================================================================================
+[PASS] D.1 cohomology obstruction is value-independent
+       The kernel argument precedes the numerical APS evaluation; eta is inserted only to display exact residuals.
+[PASS] D.2 the theorem does not promote no-go data as closure
+       It proves that retained exactness alone lacks the section/basepoint needed for closure.
+[PASS] D.3 positive closure is reduced to a section theorem
+       Need a retained theorem selecting z=0, spectator=0, and c=0 as the canonical section.
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 15/15
+  [PASS] A.1 trace/source-total projection has a one-dimensional kernel
+  [PASS] A.2 kernel translations preserve the retained Q total observable
+  [PASS] A.3 zero kernel representative is exactly the Q closing midpoint
+  [PASS] A.4 nonzero kernel representative preserves total but does not close Q
+  [PASS] B.1 closed boundary projection has a two-dimensional kernel
+  [PASS] B.2 kernel translations preserve selected+spectator closed total
+  [PASS] B.3 open endpoint residual is the nontrivial functional on the kernel
+  [PASS] B.4 zero kernel representative is exactly the delta closing section
+  [PASS] B.5 nonzero kernel representatives preserve retained totals but do not close delta
+  [PASS] C.1 Q sections of the same exact sequence form a non-unique family
+  [PASS] C.2 delta sections of the same exact sequence also form a non-unique family
+  [PASS] C.3 exactness names the obstruction class but does not choose its zero representative
+  [PASS] D.1 cohomology obstruction is value-independent
+  [PASS] D.2 the theorem does not promote no-go data as closure
+  [PASS] D.3 positive closure is reduced to a section theorem
+
+VERDICT: retained exact-sequence/cohomology data do not close the Koide lane.
+KOIDE_Q_DELTA_RESIDUAL_COHOMOLOGY_OBSTRUCTION_NO_GO=TRUE
+Q_DELTA_RESIDUAL_COHOMOLOGY_CLOSES_Q=FALSE
+Q_DELTA_RESIDUAL_COHOMOLOGY_CLOSES_DELTA=FALSE
+Q_DELTA_RESIDUAL_COHOMOLOGY_CLOSES_FULL_LANE=FALSE
+RESIDUAL_SCALAR=canonical_zero_section_for_source_label_spectator_and_endpoint_kernel
+RESIDUAL_Q=nontrivial_trace_kernel_span_Z
+RESIDUAL_DELTA=nontrivial_closed_boundary_kernel_span_spectator_and_endpoint_exact
+NEXT_THEOREM=retained_canonical_section_or_new_primitive_based_readout_law
+
+----- stderr -----
+

@@ -1,0 +1,114 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_a1_radian_bridge_irreducibility_audit.py
+runner_sha256: 9d211a925ff48ecd4ab6149a7932298ba167781a8ca24ad0d0a17a07541146e9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+Koide A1 radian-bridge irreducibility audit
+========================================================================================
+Purpose: retain the bounded no-go science without promoting Koide closure.
+
+========================================================================================
+A. Retained periodic phase sources are rational multiples of pi
+========================================================================================
+  [PASS] A source is Type-A: APBC L_t=4 Matsubara
+       origin=(2n+1)pi/L_t; all phases are q*pi with q in Q
+  [PASS] A source is Type-A: BZ side L=3
+       origin=2pi n/L; all phases are q*pi with q in Q
+  [PASS] A source is Type-A: BZ side L=4
+       origin=2pi n/L; all phases are q*pi with q in Q
+  [PASS] A source is Type-A: Z3 characters
+       origin=exp(2pi i k/3); all phases are q*pi with q in Q
+  [PASS] A source is Type-A: C9 extension
+       origin=exp(2pi i k/9); all phases are q*pi with q in Q
+  [PASS] A source is Type-A: Wilson/staggered signs
+       origin={+1,-1}; all phases are q*pi with q in Q
+  [PASS] A source is Type-A: closed finite Berry orbit, order 6
+       origin=closed finite orbit; all phases are q*pi with q in Q
+  [PASS] A source is Type-A: closed finite Berry orbit, order 12
+       origin=closed finite orbit; all phases are q*pi with q in Q
+  [PASS] A.9 nonzero q*pi cannot equal pure rational 2/9
+       uses irrationality/transcendence of pi; q*pi in Q implies q=0
+  [PASS] A.10 zero phase also cannot equal target 2/9
+       target=2/9
+
+========================================================================================
+B. Exact Type-B rational 2/9 witnesses
+========================================================================================
+  [PASS] B.1 doubled one-cell over Herm_3 dimension
+       2/N^2 at N=3 = 2/9
+  [PASS] B.2 Plancherel b-weight
+       dim_R(C)/dim_R(Herm_3) = 2/9
+  [PASS] B.3 R_conn complement
+       2*(1-(1-1/N_c^2)) at N_c=3 = 2/9
+  [PASS] B.4 SU(3) Casimir ratio
+       C2(fund)/C2(Sym^3 fund) = 2/9
+  [PASS] B.5 hypercharge-square difference
+       Y_L^2-Y_Q^2 = 2/9
+  [PASS] B.6 charge product
+       Q_up*|Q_down| = 2/9
+  [PASS] B.7 retained ABSS/APS fractional value
+       eta_APS(Z3;1,2) = 2/9
+  [PASS] B.8 ratio of two radians is dimensionless
+       (4*pi/9)/(2*pi) = 2/9
+  [PASS] B.9 all listed witnesses collapse to the same rational
+       this is support/coincidence inventory, not a unit map
+
+========================================================================================
+C. Finite Wilson and d^2-power escape routes reduce to q*pi
+========================================================================================
+  [PASS] C finite order 3: ninth powers remain q*pi phases
+       W^9 has phase (18k/order)*pi
+  [PASS] C finite order 6: ninth powers remain q*pi phases
+       W^9 has phase (18k/order)*pi
+  [PASS] C finite order 9: ninth powers remain q*pi phases
+       W^9 has phase (18k/order)*pi
+  [PASS] C finite order 12: ninth powers remain q*pi phases
+       W^9 has phase (18k/order)*pi
+  [PASS] C finite order 18: ninth powers remain q*pi phases
+       W^9 has phase (18k/order)*pi
+  [PASS] C finite order 27: ninth powers remain q*pi phases
+       W^9 has phase (18k/order)*pi
+  [PASS] C.7 exp(2i) is not a finite root of unity
+       would require 1/pi rational; pi is transcendental
+  [PASS] C.8 tensor/direct/symmetric/exterior powers preserve finite order
+       integer combinations of rational-pi phases remain rational-pi
+  [PASS] C.9 C3-singlet extensions add finite-order/direct-sum data, not a literal 2/9 radian primitive
+       extra scalar/singlet data can change readout assumptions but not root-of-unity arithmetic
+
+========================================================================================
+D. A1-side route eliminations retained from the branch
+========================================================================================
+  [PASS] D.1 equivariant representation content is unchanged by continuous A1 ratio
+       r=0 and r=1/2 can carry same C3 isotype labels
+  [PASS] D.2 an index invariant cannot force |b|^2/a^2 = 1/2 without a measure/readout law
+       the target is a continuous modulus value, not an index value
+  [PASS] D.3 Koide-Nishiura quartic contains multi-trace terms
+       terms=[('TrPhi', 'TrPhi', 'TrPhi', 'TrPhi'), ('TrPhi', 'TrPhi', 'TrPhi2'), ('TrPhi2', 'TrPhi2')]
+  [PASS] D.4 minimal single-trace heat-kernel basis cannot span the multi-trace quartic
+       requires a nonminimal multi-trace/source law
+
+========================================================================================
+E. Closeout flags
+========================================================================================
+  [PASS] E flag KOIDE_A1_RADIAN_BRIDGE_AUDIT_CLOSES_Q=FALSE
+  [PASS] E flag KOIDE_A1_RADIAN_BRIDGE_AUDIT_CLOSES_DELTA=FALSE
+  [PASS] E flag POSTULATE_P_A1_RETAINED_FRAMEWORK_AXIOM=FALSE
+  [PASS] E flag TYPE_B_TO_RADIAN_IDENTIFICATION_REMAINS_PRIMITIVE=TRUE
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 36/36
+
+KOIDE_A1_RADIAN_BRIDGE_AUDIT_CLOSES_Q=FALSE
+KOIDE_A1_RADIAN_BRIDGE_AUDIT_CLOSES_DELTA=FALSE
+POSTULATE_P_A1_RETAINED_FRAMEWORK_AXIOM=FALSE
+TYPE_B_TO_RADIAN_IDENTIFICATION_REMAINS_PRIMITIVE=TRUE
+RESIDUAL_PRIMITIVE=type_b_rational_to_radian_observable_law
+
+----- stderr -----
+

@@ -1,0 +1,183 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pl_s3_atlas_refinement_compatibility.py
+runner_sha256: d6a7a353d65b4432cb8365537c8578a56345c56af185a53ede0d99cb4ae4f3cf
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.81
+status: ok
+----- stdout -----
+
+======================================================================
+Step 1: Reconstruct cycle 13's parent 5-chart PL S^3 atlas
+======================================================================
+  [PASS] Parent 5-chart atlas: 10 cocycle conditions T_{ij} T_{jk} = T_{ik} hold
+         Cycle 13 prior-cycle input verified by reconstruction
+  [PASS] Parent atlas: 10 K_GR transition rules G_j = R^{-T} G_i R^{-1} hold
+         Cycle 13 prior-cycle input verified by reconstruction
+
+======================================================================
+Step 2: Refinement A — edge-midpoint charts (10 new -> 15 total)
+======================================================================
+  [PASS] Refinement A: 10 new edge-midpoint charts added (5 + 10 = 15 total)
+         |D_A| = 15, new charts: [100, 101, 102, 103, 104, 105, 106, 107, 108, 109]
+  [PASS] Refinement A: all 10 new D_c are invertible Lorentzian (signature 1)
+         Each new chart's local background passes signature + invertibility test
+  [PASS] Refinement A: cocycles hold on all new triangles (445 new triangles)
+         max |T_ij T_jk - T_ik| over 445 new triangles = 6.928e-14
+  [PASS] Refinement A: K_GR transition holds on all new edges (95 new edges)
+         max |G_j - R^{-T} G_i R^{-1}| over 95 new edges = 2.381e-07
+  [PASS] Refinement A: cocycle T_{0, ca} T_{ca, cb} = T_{0, cb} on sample new-new triangles
+         max diff over 9 sample triangles = 1.360e-14
+
+======================================================================
+Step 3: Refinement B — triangle-barycenter charts (10 new -> 15 total)
+======================================================================
+  [PASS] Refinement B: 10 new triangle-barycenter charts added (5 + 10 = 15 total)
+         |D_B| = 15, new charts: [200, 201, 202, 203, 204, 205, 206, 207, 208, 209]
+  [PASS] Refinement B: all 10 new D_c are invertible Lorentzian (signature 1)
+         Each new chart's local background passes signature + invertibility test
+  [PASS] Refinement B: cocycles hold on all new triangles (445 new triangles)
+         max |T_ij T_jk - T_ik| over 445 new triangles = 7.550e-15
+  [PASS] Refinement B: K_GR transition holds on all new edges (95 new edges)
+         max |G_j - R^{-T} G_i R^{-1}| over 95 new edges = 1.384e-11
+
+======================================================================
+Step 4: Refinement C — combined refinement (20 new -> 25 total)
+======================================================================
+  [PASS] Refinement C: 20 new charts added (5 + 10 + 10 = 25 total)
+         |D_C| = 25, total new = 20
+  [PASS] Refinement C: all 20 new D_c are invertible Lorentzian (signature 1)
+         Each new chart's local background passes signature + invertibility test
+  [PASS] Refinement C: cocycles hold on all new triangles (2290 new triangles)
+         max |T_ij T_jk - T_ik| over 2290 new triangles = 2.833e-13
+  [PASS] Refinement C: K_GR transition holds on all new edges (290 new edges)
+         max |G_j - R^{-T} G_i R^{-1}| over 290 new edges = 9.748e-06
+
+======================================================================
+Step 5: Pairwise overlap-invariance on new edges (refinement A)
+======================================================================
+  [PASS] Refinement A: B_{D_100}(T^T h T, T^T k T) = B_{D_0}(h, k) on new edge (0, 100)
+         max |diff| over 5 random pairs = 7.939e-12
+  [PASS] Refinement A: B_{D_101}(T^T h T, T^T k T) = B_{D_0}(h, k) on new edge (0, 101)
+         max |diff| over 5 random pairs = 9.770e-15
+  [PASS] Refinement A: B_{D_102}(T^T h T, T^T k T) = B_{D_0}(h, k) on new edge (0, 102)
+         max |diff| over 5 random pairs = 3.997e-15
+  [PASS] Refinement A: B_{D_103}(T^T h T, T^T k T) = B_{D_0}(h, k) on new edge (0, 103)
+         max |diff| over 5 random pairs = 1.776e-14
+  [PASS] Refinement A: B_{D_100}(T^T h T, T^T k T) = B_{D_2}(h, k) on new edge (2, 100)
+         max |diff| over 5 random pairs = 2.438e-10
+  [PASS] Refinement A: B_{D_101}(T^T h T, T^T k T) = B_{D_2}(h, k) on new edge (2, 101)
+         max |diff| over 5 random pairs = 2.160e-12
+
+======================================================================
+Step 6: Refinement-invariance of cycle 14 global stationary section
+======================================================================
+  [PASS] Parent atlas: chart-0 solve K_GR(D_0) h_0 = J_0 succeeds (residual < 1e-10)
+         residual_chart0 = 0.000e+00
+  [PASS] Refinement A: refinement-invariance h_c = R(T_{0c}) h_0 on all 10 new charts
+         max |h_c_solved - h_c_expected| over 10 new charts = 5.811e-10
+  [PASS] Refinement B: refinement-invariance h_c = R(T_{0c}) h_0 on all 10 new charts
+         max |h_c_solved - h_c_expected| over 10 new charts = 1.915e-13
+  [PASS] Refinement C: refinement-invariance h_c = R(T_{0c}) h_0 on all 20 new charts
+         max |h_c_solved - h_c_expected| over 20 new charts = 7.245e-10
+
+======================================================================
+Step 7: Edge-compatibility h_j = R(T_{ij}) h_i on new edges
+======================================================================
+  [PASS] Refinement A: edge-compatibility h_b = R(T_{ab}) h_a on all 95 new edges
+         max |h_b - R(T_{ab}) h_a| over 95 new edges = 8.120e-10
+  [PASS] Refinement C: edge-compatibility on all 290 new edges (25-chart atlas)
+         max |h_b - R(T_{ab}) h_a| over 290 new edges = 7.575e-10
+
+======================================================================
+Step 8: Triangle anti-rep cocycle R(T_{jk}) R(T_{ij}) = R(T_{ik}) on new triangles
+======================================================================
+  [PASS] Refinement A: anti-rep cocycle R(T_{jk}) R(T_{ij}) = R(T_{ik}) on 445 new triangles
+         max diff over 445 new triangles = 2.782e-11
+
+======================================================================
+Step 9: 4x4 tensor reconstruction on new charts (refinement A)
+======================================================================
+  [PASS] Refinement A: 4x4 tensor reconstruction h_c_mat = T_{0c}^T h_0_mat T_{0c} on 10 new charts
+         max diff over 10 new charts = 8.882e-16
+
+======================================================================
+Step 10: Counterfactual — incompatible new chart breaks compatibility
+======================================================================
+  [PASS] Counterfactual: broken T_{1, c=100} breaks triangle (0, 1, 100) cocycle
+         |T_{01} T_{1, 100} - T_{0, 100}| = 3.175e-01  (expected nonzero)
+  [PASS] Counterfactual: triangle (0, 2, 100) NOT involving broken edge still holds
+         |T_{02} T_{2, 100} - T_{0, 100}| = 2.442e-15  (expected ~0)
+
+======================================================================
+Step 11: Counterfactual — non-source-paired source on new chart
+======================================================================
+  [PASS] Counterfactual: perturbed J_c on chart 101 breaks h_c = R(T_{0,c}) h_0
+         |h_c_perturbed - R(T_{0,c}) h_0| = 2.608e+01  (expected nonzero)
+
+======================================================================
+Step 12: Aggregate refinement-invariance across all three refinements
+======================================================================
+  [PASS] AGGREGATE: refinement-invariance holds on all 40 new charts (A + B + C)
+         max diff over 40 new charts = 7.245e-10; global stationary section is REFINEMENT-INVARIANT
+
+======================================================================
+Step 13: Aggregate cocycle preservation across all three refinements
+======================================================================
+  [PASS] AGGREGATE: cocycle T_{ij} T_{jk} = T_{ik} holds on all 3180 new triangles (A + B + C combined)
+         Atlas-refinement preserves cocycle structure on every refinement scheme
+
+======================================================================
+Step 14: Closes Obstruction 3 of cycle 10
+======================================================================
+  [PASS] Obstruction 3 (atlas-refinement / continuum limit) is CLOSED for PL refinements
+         All three refinements preserve cocycle + global stationary section
+
+======================================================================
+Step 15: Cycle 10 closure tripod (Obstructions 1, 2, 3 all closed)
+======================================================================
+  - Obstruction 1 (multi-chart cocycle conditions)
+    -> CLOSED by cycle 13 (5-chart atlas, 10 cocycles).
+  - Obstruction 2 (global stationary section)
+    -> CLOSED by cycle 14 (patched system solver, 6 sources).
+  - Obstruction 3 (atlas-refinement / continuum limit)
+    -> CLOSED by cycle 19 (THIS PR).
+       Three refinements: 15-chart edge-midpoint, 15-chart triangle-
+       barycenter, 25-chart combined. Cocycle structure + refinement-
+       invariance of global section verified on every new chart.
+  [PASS] Cycle 10 closure tripod: all three obstructions closed at closing-derivation level
+         Cycles 13 + 14 + 19 jointly close cycle 10's full obstruction inventory
+
+======================================================================
+Step 16: Residual stretch target — smooth-manifold continuum limit
+======================================================================
+  - Residual stretch (NOT a named obstruction): a genuine smooth-manifold continuum limit (sequence of PL refinements with convergence theorem) is not constructed here. The three explicit PL refinements (A, B, C) demonstrate refinement-INVARIANCE for representative cases, but not convergence to a smooth limit. This is a future stretch target if the smooth-manifold lift becomes load-bearing for any retained tier.
+  [PASS] Residual stretch documented (smooth-manifold limit; not load-bearing for cycle 10 closure)
+         Smooth-manifold continuum limit is a separate stretch target
+
+======================================================================
+PASS=37  FAIL=0
+======================================================================
+CLOSING-DERIVATION OUTCOME (output type a):
+  Atlas-refinement compatibility on PL S^3 = boundary of 4-simplex.
+  Three refinements:
+    A: 5 + 10 = 15 charts (edge midpoints).
+    B: 5 + 10 = 15 charts (triangle barycenters).
+    C: 5 + 20 = 25 charts (combined).
+  Per refinement:
+    - All new D_c are invertible Lorentzian (signature 1).
+    - All new pairwise overlaps T_{i,c} satisfy K_GR transition rule.
+    - All new triangle cocycles T_{ij} T_{jk} = T_{ik} hold.
+    - Refinement-invariance: h_c = R(T_{0c}) h_0 on every new chart.
+    - Edge-compatibility on new edges (refinement A & C): all pass.
+    - Anti-rep cocycle (cycle 14 convention) on new triangles: all pass.
+  Counterfactuals: broken T_{i,c} breaks chart-c compatibility;
+    perturbed source J_c on new chart breaks new-edge compatibility.
+  Closes Obstruction 3 of cycle 10 (atlas-refinement / continuum limit).
+  Together with cycles 13 (Obstruction 1) and 14 (Obstruction 2):
+    All three obstructions of cycle 10 are now closed at the
+    closing-derivation level.
+  Residual stretch (not a named obstruction): smooth-manifold limit.
+
+----- stderr -----
+

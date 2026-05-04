@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_minimal_branch_nonselection.py
+runner_sha256: 03e6deda347f163f789dc0f5e6193a3a66b998f40b965d57a70822b1e1f06451
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+PMNS MINIMAL BRANCHES: CURRENT-ATLAS NONSELECTION
+========================================================================================
+
+Atlas / package inputs reused:
+  - Neutrino Dirac two-Higgs canonical reduction
+  - Charged-lepton two-Higgs canonical reduction
+  - PMNS boundary packet
+  - flavor publication controls and live gate notes
+
+Question:
+  Does the current exact bank already select the surviving minimal
+  PMNS-producing branch, or constrain its seven canonical quantities?
+
+========================================================================================
+PART 1: THE CURRENT ATLAS DOES ISOLATE THE MINIMAL BRANCHES
+========================================================================================
+  [PASS] Atlas carries the minimal neutrino-side canonical branch
+  [PASS] Atlas carries the minimal charged-lepton-side canonical branch
+  [PASS] Atlas carries this note's nonselection row
+
+========================================================================================
+PART 2: THE CURRENT PACKAGE STILL HAS NO EXACT BRANCH SELECTOR
+========================================================================================
+  [PASS] Atlas does not contain a retained Higgs-multiplicity or shared-Higgs selector theorem
+  [PASS] Live gates note still records shared-Higgs universality as a high-value open lane
+  [PASS] Atlas carries the universality-collapse conditional row (forced-universality consequence)
+  [PASS] Atlas carries the universality-underdetermination row (no current-stack force)
+
+========================================================================================
+PART 3: THE PACKAGE TREATS BRANCH SELECTION AS UNDERDETERMINED
+========================================================================================
+  [PASS] Atlas keeps both minimal branches and their nonselection theorem co-listed
+
+  So the current exact bank has reached the honest endpoint:
+    - minimal PMNS-producing branches are isolated,
+    - their canonical sizes are known,
+    - but no exact selector or invariant-deriving bridge exists yet.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-atlas answer:
+    - the minimal neutrino-side and charged-lepton-side branches are isolated
+    - the current atlas/package does not select among them
+    - the current exact bank does not yet derive their seven canonical quantities
+
+  So the remaining finish-line work is not more branch hunting.
+  It is either:
+    - derive a selector theorem, or
+    - derive the seven canonical quantities on a chosen branch.
+
+PASS=8  FAIL=0
+
+----- stderr -----
+

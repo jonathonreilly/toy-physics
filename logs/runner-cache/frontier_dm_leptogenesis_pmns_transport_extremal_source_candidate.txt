@@ -1,0 +1,92 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_transport_extremal_source_candidate.py
+runner_sha256: 42d59c7c229167b10f0f19135ee6459cb25ca5e11541f1a21e3f4c282b152516
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 6.96
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS TRANSPORT-EXTREMAL SOURCE CANDIDATE
+========================================================================================
+
+Framework convention:
+  "axiom" means only Cl(3) on Z^3.
+
+Question:
+  If the sole axiom does not itself fix the off-seed 5-real source on the
+  PMNS-assisted N_e route, what is the strongest positive derived selector
+  candidate for full-stack closure?
+
+========================================================================================
+PART 1: THE TRANSPORT OBJECTIVE IS EXACT ON THE FIXED NATIVE SEED SURFACE
+========================================================================================
+  [PASS] The aligned seed point lies on the exact fixed-seed surface  ((xbar,ybar)=(0.563333,0.306667))
+  [PASS] The exact flavored transport functional is evaluable directly on that surface  (etas=[0.433077 0.719083 0.719083])
+  [PASS] The aligned seed benchmark on the canonical N_e seed pair is the exact 0.719082536061 lift  (packet=[[0.666667 0.166667 0.166667]
+ [0.       0.5      0.5     ]
+ [0.333333 0.333333 0.333333]])
+
+  aligned seed packet:
+[[0.666667 0.166667 0.166667]
+ [0.       0.5      0.5     ]
+ [0.333333 0.333333 0.333333]]
+  aligned seed eta/eta_obs = [0.433077 0.719083 0.719083]
+
+========================================================================================
+PART 2: TRANSPORT EXTREMALITY SELECTS A POSITIVE OFF-SEED CANDIDATE
+========================================================================================
+  [PASS] The transport-extremal candidate stays on the exact fixed native seed surface  ((xbar,ybar)=(0.563333,0.306667))
+  [PASS] Transport extremality produces a genuinely off-seed active source  (xi=[-0.475675,  0.928114, -0.452439], eta=[-0.016497, -0.120682,  0.137179], delta=-2.232784)
+  [PASS] The extremal candidate beats the canonical near-closing N_e sample  (etas=[1.05222  0.663861 0.622758], best column=0)
+
+  x_opt     = [0.087659, 1.491447, 0.110894]
+  y_opt     = [0.29017 , 0.185985, 0.443845]
+  delta_opt = -2.232783910770
+  eta/eta_obs(opt) = [1.05222  0.663861 0.622758]
+  packet_opt:
+[[9.28711e-01 3.45440e-02 3.67440e-02]
+ [3.56440e-02 1.16200e-03 9.63194e-01]
+ [3.56440e-02 9.64294e-01 6.20000e-05]]
+
+========================================================================================
+PART 3: CONTINUITY GIVES AN EXACT FULL-CLOSURE POINT
+========================================================================================
+  [PASS] The exact best-eta map is continuous on the interpolating seed-preserving family  ((seed,opt)=(0.719082664368,1.052220313050))
+  [PASS] Therefore there exists an exact closure point with eta/eta_obs = 1 on the same native seed surface  (etas=[1.         0.71842553 0.57229394], best column=0)
+  [PASS] That closure point is still genuinely off-seed  (x=[0.128516, 1.411729, 0.149755], y=[0.291587, 0.196351, 0.432063], delta=-2.041003068182)
+
+  lambda_*  = 0.914106850348
+  x_close   = [0.128516, 1.411729, 0.149755]
+  y_close   = [0.291587, 0.196351, 0.432063]
+  delta_*   = -2.041003068182
+  eta/eta_obs(close) = [1.         0.71842553 0.57229394]
+  packet_close:
+[[8.91492e-01 3.74600e-02 7.10480e-02]
+ [6.84440e-02 2.78600e-03 9.28770e-01]
+ [4.00640e-02 9.59753e-01 1.83000e-04]]
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] A minimal positive full-stack route now exists beyond the sole-axiom boundary  (use exact transport extremality on the fixed off-seed source class)
+  [PASS] Once that selector law is admitted, the 5-real off-seed source is no longer a free placeholder  (it is fixed by a concrete exact objective on the DM branch)
+  [PASS] So the remaining issue is no longer existence but whether this transport selector is the right derived dynamical law inside the framework  (closure point exists on the exact fixed-seed surface)
+
+========================================================================================
+RESULT
+========================================================================================
+  Positive construction:
+    - transport extremality on the fixed native seed surface selects a
+      concrete off-seed source candidate
+    - that candidate beats the canonical near-closing N_e sample
+    - by continuity, an exact eta/eta_obs = 1 closure point exists on the
+      same fixed-seed source class
+
+  So full-stack closure is now constructive once the off-seed source is
+  selected by an exact transport-side dynamical law.
+
+PASS=12  FAIL=0
+
+----- stderr -----
+

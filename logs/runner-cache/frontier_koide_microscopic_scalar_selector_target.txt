@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_microscopic_scalar_selector_target.py
+runner_sha256: bfa6a21be78587450381adebc53a966883aeca885ccb82e48b952a1bc70861d3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.13
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: kappa is exactly one ratio of the compressed dW_e^H coordinates
+========================================================================================
+  [PASS (C)] The cyclic-response bridge is exactly a ratio of two linear dW_e^H cyclic sums  (kappa=sqrt(3)*(y12 - y13 + y23)/(d1 + d2 + d3 - x12 - x13 - x23))
+  [PASS (C)] So the charged-lepton bridge does not need a generic matrix witness anymore  (numerator = signed Y-sum, denominator = diagonal sum minus X-sum)
+
+========================================================================================
+PART 2: the selected line is one scalar on the exact Z3 doublet block
+========================================================================================
+  [PASS (C)] [NUMERIC] The Koide selected generator line is exactly the same affine source-surface slice H(m, sqrt(6)/3, sqrt(6)/3)
+  [PASS (C)] [NUMERIC] On that slice the Z3 doublet-block diagonal and imaginary entries are fixed exactly  ((K11,K22,ImK12)=(-0.790902034995,-0.213551765806,-0.471404520791))
+  [PASS (C)] [NUMERIC] So the remaining microscopic datum on the selected slice is one scalar m = Re K12 + 4 sqrt(2)/9 = Tr K_Z3
+
+========================================================================================
+PART 3: current exact invariants are blind to the remaining scalar
+========================================================================================
+  [PASS (C)] [NUMERIC] The intrinsic Z3 slot pair stays exactly constant along the selected m-line  ((a_*,b_*)=((0.1699321132299485+1.1928090415820636j),(0.458607247824761-0.6928090415820636j)))
+  [PASS (C)] [NUMERIC] The intrinsic CP pair stays exactly constant along the same line  (cp=(-0.5443310539518166, 0.3142696805273547))
+  [PASS (C)] [NUMERIC] So current exact source/slot/CP invariants do not choose the charged-lepton selected-line point  (a genuinely microscopic selector is still required)
+
+========================================================================================
+PART 4: on the first branch kappa is a monotone function of that scalar
+========================================================================================
+  [PASS (C)] [NUMERIC] The selected line has one sharp small-branch positivity threshold  (m_pos=-1.295794904067)
+  [PASS (C)] [NUMERIC] At that threshold the microscopic scalar bridge starts at the exact value kappa_pos = -1/sqrt(3)  (kappa_pos=-0.577350269190)
+  [PASS (C)] [NUMERIC] On the full positive first branch kappa(m) is strictly monotone  (kappa(0)=-0.807280102071)
+  [PASS (C)] [NUMERIC] Therefore one microscopic scalar selector law for m (equivalently Re K12) already fixes the charged-lepton selected point  (m <-> kappa is one-to-one on the first branch)
+
+Interpretation:
+  The charged-lepton Koide lane is now sharpened to one microscopic
+  scalar selector law. On the selected slice delta = q_+ = sqrt(6)/3,
+  the remaining datum is m = Re K12 + 4 sqrt(2)/9 = Tr K_Z3. The Koide
+  bridge kappa is exactly a ratio of the compressed dW_e^H cyclic sums,
+  and on the positive first branch kappa is a monotone function of m.
+  So deriving one right-sensitive microscopic scalar law is enough to
+  finish the charged-lepton selection step on the current route.
+
+PASS=12 FAIL=0
+
+----- stderr -----
+

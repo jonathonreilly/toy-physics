@@ -1,0 +1,32 @@
+===== runner cache v1 =====
+runner: scripts/electrostatics_superposition_proxy.py
+runner_sha256: 0513518d5931461ba99d0671ecac9038321eec4cfca961382cc2a11bf67f4285
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.13
+status: ok
+----- stdout -----
+====================================================================================
+ELECTROSTATICS SUPERPOSITION PROXY
+  Same propagator, multi-source linear field superposition
+====================================================================================
+h=0.5, W=8, L=12, source_z=5.0, offset=1.0, strength=5e-05
+free centroid baseline: -0.00000000
+
+                        case     centroid        delta       read
+--------------------------------------------------------------------
+                   single +1  -0.00016872  -0.00016872   baseline
+    neutral same-point +1/-1  -0.00000000  +0.00000000       null
+   symmetric like-pair +1/+1  -0.00030115  -0.00030115  reinforce
+                dipole +1/-1  -0.00003323  -0.00003323 partial-cancel
+            double source +2  -0.00033744  -0.00033744     linear
+
+SAFE READ
+  - The same propagator supports linear source superposition.
+  - Opposite charges cancel at the same point to printed precision.
+  - Like-charge pairs reinforce the shift approximately linearly.
+  - A dipole produces a reduced but still signed response.
+  - This is an electrostatics proxy, not a full Maxwell or radiation claim.
+
+----- stderr -----
+

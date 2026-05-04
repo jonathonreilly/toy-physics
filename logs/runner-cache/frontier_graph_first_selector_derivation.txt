@@ -1,0 +1,101 @@
+===== runner cache v1 =====
+runner: scripts/frontier_graph_first_selector_derivation.py
+runner_sha256: 81437e80194eecc2aedac1cf541a29c464dc0edfc4c2452fda5b86cad313fc98
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+============================================================================
+GRAPH-FIRST WEAK-AXIS SELECTOR DERIVATION
+============================================================================
+
+Canonical cube shifts
+  [PASS] S_1 is Hermitian
+  [PASS] S_1^2 = I
+  [PASS] S_2 is Hermitian
+  [PASS] S_2^2 = I
+  [PASS] S_3 is Hermitian
+  [PASS] S_3^2 = I
+  [PASS] [S_1, S_2] = 0
+  [PASS] {S_1, S_2} = 2 S_1 S_2
+  [PASS] [S_1, S_3] = 0
+  [PASS] {S_1, S_3} = 2 S_1 S_3
+  [PASS] [S_2, S_3] = 0
+  [PASS] {S_2, S_3} = 2 S_2 S_3
+
+Triplet covariance under axis permutations
+  [PASS] S_i transforms as triplet under (0, 1, 2)
+  [PASS] S_i transforms as triplet under (0, 1, 2)
+  [PASS] S_i transforms as triplet under (0, 1, 2)
+  [PASS] S_i transforms as triplet under (0, 2, 1)
+  [PASS] S_i transforms as triplet under (0, 2, 1)
+  [PASS] S_i transforms as triplet under (0, 2, 1)
+  [PASS] S_i transforms as triplet under (1, 0, 2)
+  [PASS] S_i transforms as triplet under (1, 0, 2)
+  [PASS] S_i transforms as triplet under (1, 0, 2)
+  [PASS] S_i transforms as triplet under (1, 2, 0)
+  [PASS] S_i transforms as triplet under (1, 2, 0)
+  [PASS] S_i transforms as triplet under (1, 2, 0)
+  [PASS] S_i transforms as triplet under (2, 0, 1)
+  [PASS] S_i transforms as triplet under (2, 0, 1)
+  [PASS] S_i transforms as triplet under (2, 0, 1)
+  [PASS] S_i transforms as triplet under (2, 1, 0)
+  [PASS] S_i transforms as triplet under (2, 1, 0)
+  [PASS] S_i transforms as triplet under (2, 1, 0)
+
+Exact quadratic and quartic formulas
+  [PASS] Tr H((1, 0, 0))^2 = 8 |phi|^2  (value = 8.000000)
+  [PASS] Tr H((1, 0, 0))^4 = 8 (|phi|^4 + 4 pair)  (value = 8.000000)
+  [PASS] Selector V_sel((1, 0, 0)) = 32 sum phi_i^2 phi_j^2  (value = 0.000000)
+  [PASS] Tr H((1, 1, 0))^2 = 8 |phi|^2  (value = 16.000000)
+  [PASS] Tr H((1, 1, 0))^4 = 8 (|phi|^4 + 4 pair)  (value = 64.000000)
+  [PASS] Selector V_sel((1, 1, 0)) = 32 sum phi_i^2 phi_j^2  (value = 32.000000)
+  [PASS] Tr H((1, 1, 1))^2 = 8 |phi|^2  (value = 24.000000)
+  [PASS] Tr H((1, 1, 1))^4 = 8 (|phi|^4 + 4 pair)  (value = 168.000000)
+  [PASS] Selector V_sel((1, 1, 1)) = 32 sum phi_i^2 phi_j^2  (value = 96.000000)
+  [PASS] Tr H((2, 1, 0))^2 = 8 |phi|^2  (value = 40.000000)
+  [PASS] Tr H((2, 1, 0))^4 = 8 (|phi|^4 + 4 pair)  (value = 328.000000)
+  [PASS] Selector V_sel((2, 1, 0)) = 32 sum phi_i^2 phi_j^2  (value = 128.000000)
+  [PASS] Tr H((2, 1, 1))^2 = 8 |phi|^2  (value = 48.000000)
+  [PASS] Tr H((2, 1, 1))^4 = 8 (|phi|^4 + 4 pair)  (value = 576.000000)
+  [PASS] Selector V_sel((2, 1, 1)) = 32 sum phi_i^2 phi_j^2  (value = 288.000000)
+
+Normalized selector and axis simplex
+  [PASS] Normalized selector matches pairwise overlap for (1, 0, 0)  (F = 0.000000)
+  [PASS] p(phi) lies on simplex for (1, 0, 0)
+  [PASS] Normalized selector matches pairwise overlap for (1, 1, 0)  (F = 0.250000)
+  [PASS] p(phi) lies on simplex for (1, 1, 0)
+  [PASS] Normalized selector matches pairwise overlap for (1, 1, 1)  (F = 0.333333)
+  [PASS] p(phi) lies on simplex for (1, 1, 1)
+  [PASS] Normalized selector matches pairwise overlap for (2, 1, 0)  (F = 0.160000)
+  [PASS] p(phi) lies on simplex for (2, 1, 0)
+  [PASS] Normalized selector matches pairwise overlap for (2, 1, 1)  (F = 0.250000)
+  [PASS] p(phi) lies on simplex for (2, 1, 1)
+
+Axis minima and residual Z2
+  [PASS] Axis e1 has zero selector  (F = 0.000000)
+  [PASS] Axis e1 has Z2 stabilizer  (swap = (0, 2, 1))
+  [PASS] Axis e2 has zero selector  (F = 0.000000)
+  [PASS] Axis e2 has Z2 stabilizer  (swap = (2, 1, 0))
+  [PASS] Axis e3 has zero selector  (F = 0.000000)
+  [PASS] Axis e3 has Z2 stabilizer  (swap = (1, 0, 2))
+  [PASS] Simplex minima are exactly the three axis vertices  (count = 3)
+  [PASS] Axis < planar < diagonal  (0.000000 < 0.250000 < 0.333333)
+
+SUMMARY
+  The canonical one-step cube shifts S_i provide a graph-first triplet.
+  Their first nontrivial even invariant is the quartic selector
+      V_sel(phi) = Tr H(phi)^4 - (Tr H(phi)^2)^2 / 8
+                 = 32 sum_{i<j} phi_i^2 phi_j^2.
+  After normalization p_i = phi_i^2 / sum phi_j^2, this becomes
+      F(p) = sum_{i<j} p_i p_j = 1/2 (1 - sum_i p_i^2),
+  with exactly three axis minima and residual Z2 stabilizer.
+  This derives the weak-axis selector on a graph-native surface.
+  The remaining step is to integrate this selected axis into the
+  bounded commutant theorem without reintroducing the old bridge hole.
+
+PASS=63 FAIL=0
+
+----- stderr -----
+

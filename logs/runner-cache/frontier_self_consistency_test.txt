@@ -1,0 +1,145 @@
+===== runner cache v1 =====
+runner: scripts/frontier_self_consistency_test.py
+runner_sha256: 54aa2f36af37d4689108a88e8c32c56d1d4af8da964a004c74fc9ebc9fcca0c4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 15.90
+status: ok
+----- stdout -----
+==============================================================================
+SELF-CONSISTENCY TEST
+Does backreaction matter, or just having a positive potential?
+==============================================================================
+
+Lattice: 10x10 periodic staggered (n=100)
+MASS=0.3, MU2=0.22, DT=0.12
+G_sign=5.0, G_width=50.0, G_boundary=10.0
+SIGN_ITER=40, WIDTH_STEPS=40, N_STEPS=40
+Seeds per type: 5
+
+Computing matched static-field statistics...
+  Static-field Phi: mean=0.454545, std=0.304911, min=0.179300, max=1.431170
+  All positive: True
+
+==============================================================================
+TYPE: 1-SelfConsist
+==============================================================================
+  seed=0: sign_margin=+30  w_ratio=0.3554  alpha=0.145434  R2=0.9982
+  seed=1: sign_margin=+30  w_ratio=0.3554  alpha=0.145434  R2=0.9982
+  seed=2: sign_margin=+30  w_ratio=0.3554  alpha=0.145434  R2=0.9982
+  seed=3: sign_margin=+30  w_ratio=0.3554  alpha=0.145434  R2=0.9982
+  seed=4: sign_margin=+30  w_ratio=0.3554  alpha=0.145434  R2=0.9982
+
+  Summary: sign_margin=+30.0+/-0.0  w_ratio=0.3554+/-0.0000  alpha=0.145434+/-0.000000
+  Sign consistency: 5/5 positive margins
+  Time: 3.4s
+
+==============================================================================
+TYPE: 2-StaticInit
+==============================================================================
+  seed=0: sign_margin=+40  w_ratio=0.3563  alpha=0.159548  R2=0.9918
+  seed=1: sign_margin=+40  w_ratio=0.3563  alpha=0.159548  R2=0.9918
+  seed=2: sign_margin=+40  w_ratio=0.3563  alpha=0.159548  R2=0.9918
+  seed=3: sign_margin=+40  w_ratio=0.3563  alpha=0.159548  R2=0.9918
+  seed=4: sign_margin=+40  w_ratio=0.3563  alpha=0.159548  R2=0.9918
+
+  Summary: sign_margin=+40.0+/-0.0  w_ratio=0.3563+/-0.0000  alpha=0.159548+/-0.000000
+  Sign consistency: 5/5 positive margins
+  Time: 3.4s
+
+==============================================================================
+TYPE: 3-ShiftedNull
+==============================================================================
+  seed=0: sign_margin=+11  w_ratio=0.4847  alpha=0.134795  R2=0.9993
+  seed=1: sign_margin=+11  w_ratio=0.4847  alpha=0.134795  R2=0.9993
+  seed=2: sign_margin=+11  w_ratio=0.4847  alpha=0.134795  R2=0.9993
+  seed=3: sign_margin=+11  w_ratio=0.4847  alpha=0.134795  R2=0.9993
+  seed=4: sign_margin=+11  w_ratio=0.4847  alpha=0.134795  R2=0.9993
+
+  Summary: sign_margin=+11.0+/-0.0  w_ratio=0.4847+/-0.0000  alpha=0.134795+/-0.000000
+  Sign consistency: 5/5 positive margins
+  Time: 3.4s
+
+==============================================================================
+TYPE: 4-PhaseNull
+==============================================================================
+  seed=0: sign_margin=+40  w_ratio=0.4073  alpha=0.140756  R2=0.9952
+  seed=1: sign_margin=+27  w_ratio=0.4068  alpha=0.116547  R2=0.9994
+  seed=2: sign_margin=+40  w_ratio=0.3799  alpha=0.136115  R2=1.0000
+  seed=3: sign_margin=+40  w_ratio=0.4302  alpha=0.146473  R2=0.9998
+  seed=4: sign_margin=-40  w_ratio=0.3819  alpha=0.118748  R2=0.9962
+
+  Summary: sign_margin=+21.4+/-31.1  w_ratio=0.4012+/-0.0186  alpha=0.131728+/-0.011976
+  Sign consistency: 4/5 positive margins
+  Time: 3.4s
+
+
+==============================================================================
+COMPARISON TABLE  (mean +/- std over 5 seeds)
+==============================================================================
+
+Type                  Sign margin Sign +/N  w_grav/w_free      Bnd alpha    Bnd R^2
+-----------------------------------------------------------------------------------
+1-SelfConsist       +30.0+/-0.0     5/5   0.3554+/-0.0000 0.145434+/-0.000000 0.9982
+2-StaticInit        +40.0+/-0.0     5/5   0.3563+/-0.0000 0.159548+/-0.000000 0.9918
+3-ShiftedNull       +11.0+/-0.0     5/5   0.4847+/-0.0000 0.134795+/-0.000000 0.9993
+4-PhaseNull         +21.4+/-31.1    4/5   0.4012+/-0.0186 0.131728+/-0.011976 0.9981
+
+==============================================================================
+PAIRWISE COMPARISONS (key discriminators)
+==============================================================================
+
+  Self-consistent vs Static-from-initial (does backreaction matter?)
+    Sign margin:    +30.0 vs  +40.0  (deterministic split)
+    Width ratio:   0.3554 vs 0.3563  (deterministic split)
+    Bnd alpha:     0.145434 vs 0.159548  (deterministic split)
+    Sign consist:  5/5 vs 5/5 positive
+
+  Static-from-initial vs Shifted structured null (does packet-field alignment matter?)
+    Sign margin:    +40.0 vs  +11.0  (deterministic split)
+    Width ratio:   0.3563 vs 0.4847  (deterministic split)
+    Bnd alpha:     0.159548 vs 0.134795  (deterministic split)
+    Sign consist:  5/5 vs 5/5 positive
+
+  Static-from-initial vs Phase-scrambled null (does exact spatial structure matter?)
+    Sign margin:    +40.0 vs  +21.4  (0.8 sigma)
+    Width ratio:   0.3563 vs 0.4012  (3.4 sigma)
+    Bnd alpha:     0.159548 vs 0.131728  (3.3 sigma)
+    Sign consist:  5/5 vs 4/5 positive
+
+  Self-consistent vs Phase-scrambled null (full backreaction vs structured null)
+    Sign margin:    +30.0 vs  +21.4  (0.4 sigma)
+    Width ratio:   0.3554 vs 0.4012  (3.5 sigma)
+    Bnd alpha:     0.145434 vs 0.131728  (1.6 sigma)
+    Sign consist:  5/5 vs 4/5 positive
+
+==============================================================================
+VERDICT
+==============================================================================
+
+  Q1: BACKREACTION MATTERS (deterministic separation on this fixed surface)
+      Self-consistent differs from static-from-initial.
+      The iterative update of Phi from evolving |psi|^2 is
+      doing real dynamical work beyond the initial conditions.
+
+  Q2: PACKET-FIELD ALIGNMENT MATTERS (deterministic separation on this fixed surface)
+      Static-from-initial differs from the shifted structured null.
+      Exact alignment between the field peak and the packet matters
+      beyond preserving moments and smoothness.
+
+  Q3: STRUCTURED NULL CHOICE MATTERS (6.3 sigma)
+      Shifted and phase-scrambled matched nulls are not equivalent.
+      The fixed-surface claim depends on which structured null is used.
+
+  OVERALL: Self-consistent vs Phase-scrambled null = 3.5 sigma
+  Self-consistency provides information BEYOND a matched smooth
+  structured null. The iterative backreaction remains real.
+
+  Total time: 13.7s
+
+Plot saved to /private/tmp/gate-fix-worktree/scripts/frontier_self_consistency_test.png
+
+Done.
+
+----- stderr -----
+

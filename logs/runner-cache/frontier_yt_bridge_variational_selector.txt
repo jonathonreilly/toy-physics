@@ -1,0 +1,62 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_bridge_variational_selector.py
+runner_sha256: 4771ab6a175fc35c8ac3f95cca06cd050d9662084d61344cb58d6e2a5adc91a4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 17.99
+status: ok
+----- stdout -----
+==============================================================================
+y_t BRIDGE VARIATIONAL SELECTOR
+==============================================================================
+
+Assume the microscopic selector on the forced UV window is a positive
+local quadratic bridge action. Derive the constrained minimizer and test
+whether it lands inside the observed best-family moment band.
+
+Affine UV window: x >= 0.95
+  K(x) ~= 5.763478e-02 x + -1.122492e-02
+  affine-fit max relative error = 1.646602e-03
+
+Best row per family:
+  shape              dev%         I2         c2        J_aff         E2
+  logistic        +0.0005   0.029928   0.974042   0.00134420   0.016120
+  erf             +0.0145   0.030162   0.977950   0.00136149   0.018542
+  smoothstep      +0.0057   0.030116   0.982530   0.00136736   0.023842
+
+Quadratic-action selector at fixed target J_aff:
+  target J_aff = 0.00135768
+  selector I2  = 0.030174
+  selector c2  = 0.975453
+  selector E2  = 0.018355
+
+  [PASS] 1a-affine-kernel-holds-on-the-forced-uv-window: max relative error = 1.646602e-03
+  [PASS] 1b-variational-selector-shares-the-best-family-j-band: target J_aff = 0.00135768, best-family J range = [0.00134420, 0.00136736]
+  [PASS] 1c-variational-selector-sits-adjacent-to-the-best-family-i2-band: selector I2 = 0.030174, best-family I2 range = [0.029928, 0.030162]
+  [PASS] 1d-variational-selector-lands-inside-the-best-family-c2-band: selector c2 = 0.975453, best-family c2 range = [0.974042, 0.982530]
+  [PASS] 1e-quadratic-selector-is-a-strict-local-minimizer-at-fixed-moment: min sampled action gap = 3.296785e-06
+  [PASS] 1f-variational-selector-has-near-minimal-family-scale-action: selector E2 = 0.018355, best-family E2 range = [0.016120, 0.023842]
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+On the forced UV window, a positive local quadratic selector at fixed
+endpoint moment has a unique minimizer proportional to the affine
+response kernel.
+
+That selector shares the observed best-family J band, sits inside the
+best-family c2 band, stays adjacent to the best-family I2 band, and is
+a strict local minimizer under sampled constraint-preserving
+perturbations.
+
+So the remaining theorem target is narrower again:
+not merely a weighted moment band, but the microscopic origin of the
+positive local quadratic selector on the forced UV window.
+
+==============================================================================
+FINAL TALLY: 6 PASS / 0 FAIL
+Elapsed: 17.52 s
+==============================================================================
+
+----- stderr -----
+

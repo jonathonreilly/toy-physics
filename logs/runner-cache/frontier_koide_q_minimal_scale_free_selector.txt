@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_minimal_scale_free_selector.py
+runner_sha256: 61ac75f73c64ef5c306242b5704fa13de356405237039b23294a309713902937
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.65
+status: ok
+----- stdout -----
+
+========================================================================================
+A. Linear invariant scalars on the returned carrier
+========================================================================================
+[PASS] A.1 C3 invariance forces the linear coefficients to coincide
+       solution = {a: c, b: c}
+[PASS] A.2 the only invariant linear scalar is proportional to r0 = u+v+w
+       r0 = u + v + w
+[PASS] A.3 invariant linear scalars are not scale-free
+
+========================================================================================
+B. Quadratic invariant scalars on the returned carrier
+========================================================================================
+[PASS] B.1 C3-invariant quadratic scalars form a two-parameter family
+       invariant family = Matrix([[q33, q23, q23], [q23, q33, q23], [q23, q23, q33]])
+[PASS] B.2 every invariant quadratic scalar is A r0^2 + C (r1^2 + r2^2)
+       representation = {A: alpha/3 + 2*beta/3, Ccoef: alpha/6 - beta/6}
+
+========================================================================================
+C. Unique minimal scale-free selector variable
+========================================================================================
+[PASS] C.1 after quotienting by scale, the quadratic invariant sector has exactly one nontrivial ratio
+       rho_Q = (3*(v - w)**2 + (-2*u + v + w)**2)/(2*(u + v + w)**2); rho_Fourier = (3*(v - w)**2 + (-2*u + v + w)**2)/(u + v + w)**2
+[PASS] C.2 rho_Fourier = 2 rho_Q with rho_Q = E_perp / E_+
+[PASS] C.3 rho_Q = 2 / kappa and Q = (1 + rho_Q) / 3
+       Q = (3*(v - w)**2 + (-2*u + v + w)**2 + 2*(u + v + w)**2)/(6*(u + v + w)**2)
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 8/8
+  [PASS] A.1 C3 invariance forces the linear coefficients to coincide
+  [PASS] A.2 the only invariant linear scalar is proportional to r0 = u+v+w
+  [PASS] A.3 invariant linear scalars are not scale-free
+  [PASS] B.1 C3-invariant quadratic scalars form a two-parameter family
+  [PASS] B.2 every invariant quadratic scalar is A r0^2 + C (r1^2 + r2^2)
+  [PASS] C.1 after quotienting by scale, the quadratic invariant sector has exactly one nontrivial ratio
+  [PASS] C.2 rho_Fourier = 2 rho_Q with rho_Q = E_perp / E_+
+  [PASS] C.3 rho_Q = 2 / kappa and Q = (1 + rho_Q) / 3
+
+VERDICT: on the exact second-order returned carrier, there is no
+nontrivial scale-free C3-invariant at linear order, and at quadratic
+order there is exactly one nontrivial ratio after removing overall
+scale. So the selector variable is unique up to reparametrization:
+E_perp/E_+, 2/kappa, and Q all encode the same one-dimensional data.
+
+This is an exact support result on the admitted second-order carrier.
+
+----- stderr -----
+

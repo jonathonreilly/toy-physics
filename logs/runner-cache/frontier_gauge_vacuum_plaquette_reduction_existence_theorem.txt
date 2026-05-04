@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py
+runner_sha256: a7dfaa3835fbe2e6166bbe4a776d63c6e1a0aa6dd94af6911c3954d34e78238a
+timeout_sec: 900
+exit_code: 0
+elapsed_sec: 0.46
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE REDUCTION EXISTENCE THEOREM
+==============================================================================
+
+Local one-plaquette block
+  X(identity)                           = 1.000000000000000
+  X(center)                             = -0.500000000000000
+  sampled P_1plaq(betas)                = [0.00560184644, 0.028931672799, 0.060126554834, 0.128627785322, 0.279619149409, 0.42253173965, 0.618175738968, 0.803193676744]
+
+Finite Wilson evaluation surface witness
+  average plaquette on identity config  = 1.000000000000000
+  average plaquette on deformed config  = 0.996546700950692
+
+Implicit reduction parameters
+  canonical implicit beta_eff(0.5934)   = 9.326167920875534
+  candidate support beta_eff            = 9.329531846652703
+  delta(beta_eff)                       = +0.003363925777169
+
+Onset data
+  full-vacuum slope                     = 0.055555555555556
+  beta_eff beta^5 coefficient           = 3.810394756896815e-05
+
+  [PASS] [THEOREM] the local one-plaquette observable is nonconstant on SU(3)
+         X(U)=Re Tr U / 3 takes the values 1 and -1/2 on explicit SU(3) elements
+  [PASS] [THEOREM] the finite periodic Wilson plaquette observable is nonconstant on the evaluation surface
+         identity average = 1.000000000000000, deformed average = 0.996546700950692
+  [PASS] [SUPPORT] sampled local one-plaquette values are consistent with the strict-monotonicity theorem
+         sampled local plaquette values increase strictly from beta=0.1 to beta=20 and stay in (0,1)
+  [PASS] [SUPPORT] explicit witnesses and range bounds are consistent with the exact implicit reduction-law theorem
+         strict monotonicity of P_1plaq plus 0 <= P_L(beta) < 1 gives uniqueness on the finite Wilson surface
+  [PASS] [THEOREM] the reduction law onset is exact with beta_eff'(0)=1
+         P_full'(0)=P_1plaq'(0)=0.055555555555556
+  [PASS] [THEOREM] the first nonlinear coefficient of the exact onset law is beta^5/26244
+         beta_eff(beta)=beta + (1/26244) beta^5 + O(beta^6)
+  [PASS] [SUPPORT] the canonical same-surface plaquette therefore has a unique implicit nonperturbative reduction parameter
+         beta_eff^can = 9.326167920875534
+  [PASS] [SUPPORT] the old constant-lift candidate remains numerically close to the exact implicit canonical beta_eff
+         |candidate - implicit| = 3.363926e-03
+
+==============================================================================
+SUMMARY: THEOREM PASS=4 SUPPORT=4 FAIL=0
+==============================================================================
+
+----- stderr -----
+

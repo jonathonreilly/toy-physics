@@ -1,0 +1,61 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_abcc_exact_target_surface_source_cubic_closure_2026_04_21.py
+runner_sha256: 8e0911e109cbf442063339faaa6e1b906f28d0a7793987396403ca91a29887ff
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.10
+status: ok
+----- stdout -----
+========================================================================================
+DM A-BCC EXACT TARGET-SURFACE SOURCE-CUBIC CLOSURE THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE SOURCE-SIDE CHAMBER IS EXACT, AND IT CUTS THE FIVE-BASIN TARGET CHART TO THREE ROOTS
+========================================================================================
+  [PASS] The active-half-plane note records the exact native chamber q_+ >= sqrt(8/3) - delta
+  [PASS] The basin-completeness note records the full five-basin target chart
+  [PASS] Basin N and Basin P lie strictly outside the exact source-side chamber  ((N,P) margins=(-0.353534161855,-1.529522161855))
+  [PASS] Basin 1, Basin 2, and Basin X lie strictly inside the exact source-side chamber  ((1,2,X) margins=(0.015855511491,24.100437510381,13.136269667625))
+  [PASS] So the exact target-surface chamber root set is {Basin 1, Basin 2, Basin X}  (the chamber cut is exact source geometry, not extra branch bookkeeping)
+
+========================================================================================
+PART 2: ON THAT EXACT CHAMBER ROOT SET, THE SOURCE CUBIC SELECTS BASIN 1 UNIQUELY
+========================================================================================
+  [PASS] The source-cubic selector note records the coefficient-free law I_src(H) = Im(H_12 H_23 H_31)
+  [PASS] On the exact chamber roots, Basin 1 has positive source cubic while Basin 2 and Basin X are negative  (I_src=(1,2,X)=(0.303560489497,-225.763564069262,-99.766107123954))
+  [PASS] Therefore I_src(H) > 0 picks Basin 1 uniquely on the exact target-surface chamber root set  (unique chamber survivor = Basin 1)
+
+========================================================================================
+PART 3: THIS ALREADY IMPLIES A-BCC ON THE TARGET SURFACE
+========================================================================================
+  [PASS] On the same chamber roots, Basin 1 has positive Delta_src = det(H) while Basin 2 and Basin X are negative  (Delta=(1,2,X)=(0.959173815868,-70537.232755019257,-20296.105583477321))
+  [PASS] So on the exact target surface, A-BCC is already downstream of the native chamber plus I_src(H) > 0  (no extra target-surface branch-choice residue remains)
+
+========================================================================================
+PART 4: THIS DOES NOT UPGRADE TO A GLOBAL PURE-SIGN THEOREM
+========================================================================================
+  [PASS] Basin N is a counterexample to any global implication I_src(H) > 0 <=> det(H) > 0  ((I_src,Delta)_N=(-0.008977592234,0.566913519123))
+  [PASS] Basin P is the opposite counterexample  ((I_src,Delta)_P=(0.697214790620,-9.860888662399))
+  [PASS] So the old sign-blindness audit remains correct globally: the new theorem is target-surface restricted  (global pure-sign closure is still false outside the exact chamber root set)
+
+========================================================================================
+PART 5: OPEN-MAP CONSEQUENCE
+========================================================================================
+  [PASS] Once the exact PMNS target surface is granted, the remaining strict/native DM burden is the PMNS angle triple itself, not a separate A-BCC branch-choice law  (A-BCC becomes downstream of the target surface)
+  [PASS] So this is a real narrowing but not full sole-axiom DM closure  (the PMNS angle triple still needs a native point-selection law)
+
+========================================================================================
+RESULT
+========================================================================================
+  On the exact PMNS target chamber root set, the native chamber law and
+  the coefficient-free source cubic already select Basin 1 uniquely.
+  So the separate strict/native A-BCC residue collapses into the PMNS
+  angle triple itself. This does not give a global Cl(3)/Z^3 sign law:
+  Basin N and Basin P remain explicit counterexamples outside the target
+  chamber root set.
+
+SUMMARY: PASS=15 FAIL=0
+
+----- stderr -----
+

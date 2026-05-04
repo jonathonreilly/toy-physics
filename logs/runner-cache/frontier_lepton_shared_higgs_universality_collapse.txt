@@ -1,0 +1,102 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lepton_shared_higgs_universality_collapse.py
+runner_sha256: 9d4760ae0c7177ff00162fd0d6cecd20219f4843fbf2a425377deba31005a744
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+LEPTON PMNS BRANCHES: SHARED-HIGGS UNIVERSALITY COLLAPSE
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - Lepton single-Higgs PMNS triviality theorem
+  - Neutrino Dirac two-Higgs escape theorem
+  - Charged-lepton two-Higgs canonical reduction theorem
+
+Question:
+  If the same effective Higgs-offset set contributes to both lepton
+  Yukawa sectors, can the one-sided PMNS branch split survive?
+
+========================================================================================
+PART 1: SHARED-HIGGS UNIVERSALITY GIVES THE SAME SUPPORT FAMILY ON BOTH LEPTON LANES
+========================================================================================
+  [PASS] offset set (0,): shared support family is well-defined  (support size=3)
+  [PASS] offset set (1,): shared support family is well-defined  (support size=3)
+  [PASS] offset set (2,): shared support family is well-defined  (support size=3)
+  [PASS] offset set (0, 1): shared support family is well-defined  (support size=6)
+  [PASS] offset set (0, 2): shared support family is well-defined  (support size=6)
+  [PASS] offset set (1, 2): shared support family is well-defined  (support size=6)
+
+  So under shared-Higgs universality, the neutrino and charged-lepton
+  sectors do not get independent support families. They inherit the
+  same active offset set.
+
+========================================================================================
+PART 2: ONE ACTIVE OFFSET KEEPS BOTH LEPTON SECTORS MONOMIAL
+========================================================================================
+  [PASS] offset=0: Y_nu is monomial under shared single-offset universality
+  [PASS] offset=0: Y_e is monomial under shared single-offset universality
+  [PASS] offset=0: Y_nu Y_nu^dag is diagonal  (offdiag=0.00e+00)
+  [PASS] offset=0: Y_e Y_e^dag is diagonal  (offdiag=0.00e+00)
+  [PASS] offset=1: Y_nu is monomial under shared single-offset universality
+  [PASS] offset=1: Y_e is monomial under shared single-offset universality
+  [PASS] offset=1: Y_nu Y_nu^dag is diagonal  (offdiag=0.00e+00)
+  [PASS] offset=1: Y_e Y_e^dag is diagonal  (offdiag=0.00e+00)
+  [PASS] offset=2: Y_nu is monomial under shared single-offset universality
+  [PASS] offset=2: Y_e is monomial under shared single-offset universality
+  [PASS] offset=2: Y_nu Y_nu^dag is diagonal  (offdiag=0.00e+00)
+  [PASS] offset=2: Y_e Y_e^dag is diagonal  (offdiag=0.00e+00)
+
+  So if shared-Higgs universality activates only one effective offset,
+  both sectors stay on the same monomial lane.
+
+========================================================================================
+PART 3: TWO ACTIVE DISTINCT OFFSETS FORCE BOTH SECTORS OFF THE MONOMIAL LANE
+========================================================================================
+  [PASS] offsets=(0, 1): Y_nu is not monomial  (support size=6)
+  [PASS] offsets=(0, 1): Y_e is not monomial  (support size=6)
+  [PASS] offsets=(0, 1): neutrino and charged-lepton sectors share the same support union  (shared support size=6)
+  [PASS] offsets=(0, 1): Y_nu Y_nu^dag is non-diagonal  (offdiag=0.008820)
+  [PASS] offsets=(0, 1): Y_e Y_e^dag is non-diagonal  (offdiag=0.070712)
+  [PASS] offsets=(0, 2): Y_nu is not monomial  (support size=6)
+  [PASS] offsets=(0, 2): Y_e is not monomial  (support size=6)
+  [PASS] offsets=(0, 2): neutrino and charged-lepton sectors share the same support union  (shared support size=6)
+  [PASS] offsets=(0, 2): Y_nu Y_nu^dag is non-diagonal  (offdiag=0.013073)
+  [PASS] offsets=(0, 2): Y_e Y_e^dag is non-diagonal  (offdiag=0.059398)
+  [PASS] offsets=(1, 2): Y_nu is not monomial  (support size=6)
+  [PASS] offsets=(1, 2): Y_e is not monomial  (support size=6)
+  [PASS] offsets=(1, 2): neutrino and charged-lepton sectors share the same support union  (shared support size=6)
+  [PASS] offsets=(1, 2): Y_nu Y_nu^dag is non-diagonal  (offdiag=0.009275)
+  [PASS] offsets=(1, 2): Y_e Y_e^dag is non-diagonal  (offdiag=0.046675)
+
+  So shared activation of two distinct offsets does not let one sector
+  stay monomial while the other leaves. Both sectors exit together.
+
+========================================================================================
+PART 4: ONE-SIDED MINIMAL BRANCHES REQUIRE FAILURE OF SHARED-HIGGS UNIVERSALITY
+========================================================================================
+  [PASS] A neutrino-side-only minimal branch is incompatible with shared one-set universality  (if offsets are shared, |S|=1 keeps both monomial and |S|=2 moves both off the monomial lane)
+  [PASS] A charged-lepton-side-only minimal branch is incompatible with shared one-set universality  (the same dichotomy applies with the sectors exchanged)
+  [PASS] Under shared-Higgs universality, the branch bit collapses to a common lepton support class  (the remaining question becomes whether universality is exact and, if so, how the shared class is parameterized)
+
+  So the current neutrino-side-only versus charged-lepton-side-only
+  split is only available if shared-Higgs universality fails.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact universality-collapse answer:
+    - shared one-offset universality keeps both sectors monomial
+    - shared two-offset universality moves both sectors onto the same
+      two-Higgs support family
+    - one-sided minimal PMNS branches therefore require universality failure
+
+  So a future shared-Higgs universality theorem would collapse the
+  current sector-choice branch bit rather than select one side.
+
+PASS=36  FAIL=0
+
+----- stderr -----
+

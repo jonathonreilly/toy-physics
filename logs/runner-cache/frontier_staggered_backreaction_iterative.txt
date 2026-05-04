@@ -1,0 +1,93 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_backreaction_iterative.py
+runner_sha256: 2ac39d606949af29d6171fbd17018a9321dea4b1abf2e70ba434bcca928b3497
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.62
+status: ok
+----- stdout -----
+====================================================================================================
+STAGGERED BACKREACTION ITERATIVE SOURCE-MAPPING PROBE
+  transport law fixed; only the source->field map is varied
+  primary observable: force F = < -dPhi/dd >
+====================================================================================================
+dt=0.12, steps=10, mass=0.3, mu2=0.22, ext_mu=0.38, source_sigma=0.9
+
+== mapping: gaussian ==
+gaussian           bipartite_random_geometric n=36  F_ext=+1.488e+00 F_solve=+5.593e-02 gap=9.624e-01 R2=0.9830 2body=1.264e-16 selfF=+3.382e-02 self_gap=3.953e-01 norm=4.44e-16 TOWARD=3/3
+gaussian           bipartite_growing          n=48  F_ext=+1.750e+00 F_solve=+6.788e-02 gap=9.612e-01 R2=0.9864 2body=2.046e-16 selfF=+4.282e-02 self_gap=3.692e-01 norm=7.77e-16 TOWARD=3/3
+gaussian           layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_solve=+2.183e-01 gap=8.822e-01 R2=0.9998 2body=6.561e-16 selfF=+2.405e-01 self_gap=1.016e-01 norm=0.00e+00 TOWARD=3/3
+
+== mapping: lap1_b0p25 ==
+lap1_b0p25         bipartite_random_geometric n=36  F_ext=+1.488e+00 F_solve=+6.414e-02 gap=9.569e-01 R2=0.9813 2body=0.000e+00 selfF=+4.322e-02 self_gap=3.262e-01 norm=4.44e-16 TOWARD=3/3
+lap1_b0p25         bipartite_growing          n=48  F_ext=+1.750e+00 F_solve=+8.018e-02 gap=9.542e-01 R2=0.9848 2body=5.157e-16 selfF=+5.483e-02 self_gap=3.161e-01 norm=7.77e-16 TOWARD=3/3
+lap1_b0p25         layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_solve=+2.871e-01 gap=8.450e-01 R2=0.9998 2body=1.977e-16 selfF=+3.390e-01 self_gap=1.807e-01 norm=0.00e+00 TOWARD=3/3
+
+== mapping: lap2_b0p25 ==
+lap2_b0p25         bipartite_random_geometric n=36  F_ext=+1.488e+00 F_solve=+7.452e-02 gap=9.499e-01 R2=0.9796 2body=1.867e-16 selfF=+5.739e-02 self_gap=2.299e-01 norm=4.44e-16 TOWARD=3/3
+lap2_b0p25         bipartite_growing          n=48  F_ext=+1.750e+00 F_solve=+9.628e-02 gap=9.450e-01 R2=0.9834 2body=1.421e-16 selfF=+7.387e-02 self_gap=2.328e-01 norm=7.77e-16 TOWARD=3/3
+lap2_b0p25         layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_solve=+3.814e-01 gap=7.941e-01 R2=0.9998 2body=3.254e-15 selfF=+4.927e-01 self_gap=2.920e-01 norm=0.00e+00 TOWARD=3/3
+
+== mapping: lap1_b0p50 ==
+lap1_b0p50         bipartite_random_geometric n=36  F_ext=+1.488e+00 F_solve=+7.266e-02 gap=9.512e-01 R2=0.9800 2body=7.669e-16 selfF=+5.398e-02 self_gap=2.571e-01 norm=4.44e-16 TOWARD=3/3
+lap1_b0p50         bipartite_growing          n=48  F_ext=+1.750e+00 F_solve=+9.306e-02 gap=9.468e-01 R2=0.9837 2body=2.945e-16 selfF=+6.947e-02 self_gap=2.535e-01 norm=7.77e-16 TOWARD=3/3
+lap1_b0p50         layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_solve=+3.566e-01 gap=8.075e-01 R2=0.9998 2body=4.751e-16 selfF=+4.496e-01 self_gap=2.611e-01 norm=0.00e+00 TOWARD=3/3
+
+== mapping: lap2_b1p00 ==
+lap2_b1p00         bipartite_random_geometric n=36  F_ext=+1.488e+00 F_solve=+1.668e-01 gap=8.879e-01 R2=0.9800 2body=1.634e-16 selfF=+2.519e-01 self_gap=5.103e-01 norm=4.44e-16 TOWARD=3/3
+lap2_b1p00         bipartite_growing          n=48  F_ext=+1.750e+00 F_solve=+2.489e-01 gap=8.578e-01 R2=0.9869 2body=2.162e-16 selfF=+4.274e-01 self_gap=7.176e-01 norm=7.77e-16 TOWARD=3/3
+lap2_b1p00         layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_solve=+1.189e+00 gap=3.582e-01 R2=0.9999 2body=3.752e-16 selfF=+2.628e+00 self_gap=1.210e+00 norm=0.00e+00 TOWARD=3/3
+
+== mapping: invheat_b0p25 ==
+invheat_b0p25      bipartite_random_geometric n=36  F_ext=+1.488e+00 F_solve=+6.513e-02 gap=9.562e-01 R2=0.9810 2body=2.150e-16 selfF=+4.497e-02 self_gap=3.096e-01 norm=4.44e-16 TOWARD=3/3
+invheat_b0p25      bipartite_growing          n=48  F_ext=+1.750e+00 F_solve=+8.189e-02 gap=9.532e-01 R2=0.9845 2body=1.681e-16 selfF=+5.688e-02 self_gap=3.054e-01 norm=7.77e-16 TOWARD=3/3
+invheat_b0p25      layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_solve=+3.012e-01 gap=8.374e-01 R2=0.9998 2body=0.000e+00 selfF=+3.610e-01 self_gap=1.983e-01 norm=0.00e+00 TOWARD=3/3
+
+== mapping: invheat_b0p50 ==
+invheat_b0p50      bipartite_random_geometric n=36  F_ext=+1.488e+00 F_solve=+7.729e-02 gap=9.481e-01 R2=0.9790 2body=3.593e-16 selfF=+6.311e-02 self_gap=1.834e-01 norm=4.44e-16 TOWARD=3/3
+invheat_b0p50      bipartite_growing          n=48  F_ext=+1.750e+00 F_solve=+1.012e-01 gap=9.421e-01 R2=0.9828 2body=4.046e-16 selfF=+8.128e-02 self_gap=1.970e-01 norm=7.77e-16 TOWARD=3/3
+invheat_b0p50      layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_solve=+4.227e-01 gap=7.718e-01 R2=0.9998 2body=1.332e-16 selfF=+5.687e-01 self_gap=3.453e-01 norm=0.00e+00 TOWARD=3/3
+
+== mapping: invheat_b1p00 ==
+invheat_b1p00      bipartite_random_geometric n=36  F_ext=+1.488e+00 F_solve=+1.165e-01 gap=9.217e-01 R2=0.9766 2body=0.000e+00 selfF=+1.456e-01 self_gap=2.495e-01 norm=4.44e-16 TOWARD=3/3
+invheat_b1p00      bipartite_growing          n=48  F_ext=+1.750e+00 F_solve=+1.691e-01 gap=9.034e-01 R2=0.9817 2body=7.956e-16 selfF=+2.150e-01 self_gap=2.719e-01 norm=7.77e-16 TOWARD=3/3
+invheat_b1p00      layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_solve=+8.752e-01 gap=5.276e-01 R2=0.9999 2body=2.553e-16 selfF=+1.670e+00 self_gap=9.081e-01 norm=0.00e+00 TOWARD=3/3
+
+== mapping: invheat_b1p50 ==
+invheat_b1p50      bipartite_random_geometric n=36  F_ext=+1.488e+00 F_solve=+1.960e-01 gap=8.683e-01 R2=0.9790 2body=5.533e-16 selfF=+4.029e-01 self_gap=1.056e+00 norm=4.44e-16 TOWARD=3/3
+invheat_b1p50      bipartite_growing          n=48  F_ext=+1.750e+00 F_solve=+3.244e-01 gap=8.146e-01 R2=0.9883 2body=3.290e-16 selfF=+8.087e-01 self_gap=1.493e+00 norm=7.77e-16 TOWARD=3/3
+invheat_b1p50      layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_solve=+1.898e+00 gap=2.476e-02 R2=0.9999 2body=1.174e-16 selfF=+5.861e+00 self_gap=2.088e+00 norm=0.00e+00 TOWARD=3/3
+
+== mapping: invheat_b2p00 ==
+invheat_b2p00      bipartite_random_geometric n=36  F_ext=+1.488e+00 F_solve=+3.708e-01 gap=7.508e-01 R2=0.9883 2body=0.000e+00 selfF=+1.267e+00 self_gap=2.417e+00 norm=4.44e-16 TOWARD=3/3
+invheat_b2p00      bipartite_growing          n=48  F_ext=+1.750e+00 F_solve=+6.967e-01 gap=6.018e-01 R2=0.9932 2body=1.560e-16 selfF=+3.709e+00 self_gap=4.324e+00 norm=7.77e-16 TOWARD=3/3
+invheat_b2p00      layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_solve=+4.322e+00 gap=1.333e+00 R2=1.0000 2body=3.496e-15 selfF=+2.582e+01 self_gap=4.974e+00 norm=0.00e+00 TOWARD=3/3
+
+== mapping: invheat_b3p00 ==
+invheat_b3p00      bipartite_random_geometric n=36  F_ext=+1.488e+00 F_solve=+1.514e+00 gap=1.757e-02 R2=0.9840 2body=1.472e-16 selfF=+8.151e+00 self_gap=4.384e+00 norm=4.44e-16 TOWARD=3/3
+invheat_b3p00      bipartite_growing          n=48  F_ext=+1.750e+00 F_solve=+3.229e+00 gap=8.453e-01 R2=0.9993 2body=2.609e-16 selfF=+4.526e+01 self_gap=1.302e+01 norm=7.77e-16 TOWARD=3/3
+invheat_b3p00      layered_bipartite_dag      n=36  F_ext=+1.852e+00 F_solve=+2.459e+01 gap=1.228e+01 R2=1.0000 2body=5.771e-16 selfF=+7.633e+02 self_gap=3.004e+01 norm=0.00e+00 TOWARD=3/3
+
+SUMMARY
+  baseline cycle-bearing mean gap: 9.618e-01
+  best cycle-bearing mean gap: 4.314e-01 (invheat_b3p00)
+  gap improvement factor: 2.23x
+  baseline source-response R^2 mean: 0.9847
+  best-map source-response R^2 mean: 0.9945
+  baseline self-gap mean: 3.822e-01
+  best-map self-gap mean: 1.581e+01
+  baseline norm drift mean: 6.106e-16
+  best-map norm drift mean: 4.071e-16
+  runtime: 1.30s
+
+Readout:
+  - This is a linear source-mapping probe, not a transport-law change.
+  - A mapping counts as materially improved only if it reduces the
+    cycle-bearing mean force gap substantially without losing TOWARD,
+    linearity, additivity, or norm stability.
+  - The next step is to keep the best retained map only if it beats the
+    external-kernel control on the cycle-bearing families by more than a
+    small calibration margin.
+
+----- stderr -----
+

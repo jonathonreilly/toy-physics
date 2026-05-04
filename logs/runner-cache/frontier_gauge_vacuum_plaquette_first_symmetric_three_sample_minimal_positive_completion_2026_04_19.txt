@@ -1,0 +1,70 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py
+runner_sha256: a48d33ae347b8d41003099301bb36c6704ea4dfd82cadb0d8c90ef8a4a8ddc22
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 22.21
+status: ok
+----- stdout -----
+======================================================================================================================
+GAUGE-VACUUM PLAQUETTE FIRST-SYMMETRIC THREE-SAMPLE MINIMAL POSITIVE COMPLETION
+======================================================================================================================
+
+Question:
+  Beyond the local-Wilson positive-cone no-go, is there an exact
+  constructive minimal positive completion of (W_A, W_B, W_C)?
+
+Reconstructed first-symmetric retained coordinates a^loc = F^(-1) Z^loc
+  a^loc_(0,0)                 = 0.349606952458405063
+  a^loc_(1,0)                 = 0.093393849310837954
+  a^loc_(1,1)                 = -0.031909612770024437
+  r_min = -a^loc_(1,1)        = 0.031909612770024437
+
+Completed sample triple Z^min = F a^min on the named seam
+  Z^min(W_A)                  = 0.135165279562048407
+  Z^min(W_B)                  = 0.374012880009138515
+  Z^min(W_C)                  = 0.543843858544197256
+
+Local-vs-completed comparison
+  Z^loc(W_A) - Z^min(W_A)     =  0.000e+00  (must be 0; F[0,2]=0.0)
+  Z^min(W_B) - Z^loc(W_B)     =  0.056990384508597  (must be > 0)
+  Z^loc(W_C) - Z^min(W_C)     =  0.037370088130437  (must be > 0)
+
+Note-vs-runner deviations
+  max |a^loc - a^loc_ref|     = 0.000e+00
+  |r_min - r_min_ref|         = 0.000e+00
+  max |Z^min - Z^min_ref|     = 0.000e+00
+
+Theorem 1 half-line scan along a(t) = (a^loc_(0,0), a^loc_(1,0), a^loc_(1,1) + t)
+  threshold t* = -a^loc_(1,1) = 0.031909612770024437
+  delta=-1e-03  t=0.030909612770024436  a3=-1.000e-03  out-of-cone
+  delta=-1e-09  t=0.031909611770024437  a3=-1.000e-09  out-of-cone
+  delta=+0e+00  t=0.031909612770024437  a3=+0.000e+00  in-cone
+  delta=+1e-09  t=0.031909613770024436  a3=+1.000e-09  in-cone
+  delta=+1e-03  t=0.032909612770024438  a3=+1.000e-03  in-cone
+
+  [PASS] The completion note already states the explicit minimal-positive-completion claim with stated values for a^loc, r_min, a^min, Z^min
+  [PASS] Reconstructed a^loc matches the note's stated values to 1e-12 (algebraic identity check)  (max gap = 0.000e+00)
+  [PASS] Only the adjoint retained coordinate a^loc_(1,1) fails positivity; the (0,0) and (1,0) coordinates are strictly positive  (a^loc=(0.349607, 0.093394, -0.031910))
+  [PASS] Minimal adjoint repair r_min = -a^loc_(1,1) matches the note value to 1e-12  (|r_min - r_min_ref| = 0.000e+00)
+  [PASS] a^min = (a^loc_(0,0), a^loc_(1,0), 0) lies on the cone boundary (third coordinate exactly zero, first two strictly positive)  (a^min has its third coordinate set to 0 by construction)
+  [PASS] Completed triple Z^min = F a^min matches the note's stated values to 1e-12  (max gap = 0.000e+00)
+  [PASS] Z^min preserves W_A exactly because the adjoint orbit vanishes there (F[0,2] = 0)  (|F[0,2]|=0.000e+00, |Z^min(W_A)-Z^loc(W_A)|=0.000e+00)
+  [PASS] Z^min raises W_B and lowers W_C relative to the local triple, matching the note's directional statement  (dZ_B=5.699e-02, dZ_C=3.737e-02)
+  [PASS] Theorem 1: along the adjoint-only family a(t), cone membership is equivalent to t >= -a^loc_(1,1) (out-of-cone for t < t*, in-cone for t >= t*)  (threshold t*=0.031909612770)
+  [PASS] Therefore t = r_min is the unique minimum on the cone-membership half-line, so a^min is the unique adjoint-only minimal positive completion  (r_min=0.031909612770)
+
+======================================================================================================================
+RESULT
+======================================================================================================================
+  Exact constructive upgrade beyond the local-Wilson positive-cone no-go:
+    - a^loc reconstructed; only adjoint coordinate fails positivity
+    - minimal adjoint repair r_min = 0.031909612770024
+    - a^min = (0.349606952458405, 0.093393849310838, 0)
+    - Z^min = (0.135165279562048, 0.374012880009139, 0.543843858544197)
+    - Theorem 1 verified on the adjoint-only half-line: r_min is unique minimum
+
+PASS=10 FAIL=0
+
+----- stderr -----
+

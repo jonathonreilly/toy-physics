@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_selector_shifted_doublet_imag_sign_support_2026_04_21.py
+runner_sha256: 6319740b6d7ca200623315cd2bc10a008bf47a6d3981804df554bcbb7ee392e5
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 6.64
+status: nonzero_exit
+----- stdout -----
+========================================================================================
+DM SELECTOR SHIFTED-DOUBLET-IMAGINARY-SIGN SUPPORT THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE ACTIVE Z3 DOUBLET THEOREM FIXES ONE CANONICAL SIGN BOUNDARY
+========================================================================================
+  [PASS] The doublet-block theorem note records delta = (Im K12 + 4 sqrt(2)/3) / sqrt(3)
+  [PASS] So the exact sign boundary is delta = 4 sqrt(2) / (3 sqrt(3))  (delta_cut = 1.088662107903635)
+
+========================================================================================
+PART 2: THE INTERNAL SELECTOR LIES ON THE POSITIVE SIDE OF THAT BOUNDARY
+========================================================================================
+  [PASS] The separation note still records the exact internal observable-relative-action selector
+  [PASS] The internal selector target has delta_rel > delta_cut  ((delta_rel, delta_cut)=(1.092424021170, 1.088662107904))
+  [PASS] Equivalently, the internal selector has positive shifted imaginary doublet mixing Im(K12) > 0  (Im(K12)_rel = 6.515824910692e-03)
+
+========================================================================================
+PART 3: ON THE RECOVERED BANK, ONLY THE PREFERRED LIFT SHARES THAT POSITIVE SIDE
+========================================================================================
+  [PASS] Exactly one recovered lift has positive shifted imaginary doublet mixing  (positive indices = [0])
+  [PASS] That unique positive recovered lift is the preferred lift 0  (Im(K12)_bank = [ 0.50598283 -1.04190431 -0.97982431 -1.25160188 -1.7936515 ])
+  [PASS] Every competing recovered lift lies strictly on the negative side Im(K12) < 0  (competitor imag parts = [-1.04190431 -0.97982431 -1.25160188 -1.7936515 ])
+
+========================================================================================
+PART 4: THE CONSTRUCTIVE TRIPLET CHAMBER STILL DOES NOT DISTINGUISH THE RECOVERED PACKET
+========================================================================================
+  [PASS] All recovered lifts already share the same exact constructive triplet tuple  ((gamma,E1,E2)=(0.500000000000,1.632993161855,0.942809041582))
+  [PASS] So the constructive triplet chamber gamma > 0, E1 > 0, E2 > 0 is shared across the recovered packet  (triplet chamber does not break the recovered degeneracy)
+  [PASS] Every recovered lift also stays on the positive oriented-phase side sin(delta) > 0  (sin(delta)_bank = [0.98200331 0.46808138 0.49944694 0.35792939 0.05307199])
+
+========================================================================================
+PART 5: THE POSITIVE SHIFTED-IMAGINARY SIDE IS THE FIRST RIGHT-SENSITIVE REFINEMENT
+========================================================================================
+  [PASS] The projection note still records that the preferred recovered lift is the canonical recovered image of the internal selector
+  [PASS] The intrinsic threshold candidate tau_b,min still selects the same preferred recovered lift uniquely  ((winner, margin)=(0, 0.146091270049))
+  [PASS] So on the current selector packet the internal selector, the recovered projection, the threshold selector, and the shifted-imaginary sign all agree on the same preferred recovered lift  (same preferred lift 0)
+
+========================================================================================
+PART 6: SCIENTIFIC CONSEQUENCE
+========================================================================================
+  [FAIL] The review register still names the finer right-sensitive microscopic selector law as open
+  [PASS] On the current selector packet, the shifted-imaginary sign is the first right-sensitive datum that refines the sharp source tuple and constructive triplet chamber  (first right-sensitive refinement)
+  [PASS] So the remaining selector burden now narrows to the positive activation law for the shifted imaginary doublet mixing, or a finer replacement law  (support narrowing only)
+
+========================================================================================
+RESULT
+========================================================================================
+  The internal selector target already lies on the positive side of the
+  canonical doublet-block boundary Im(K12)=0.
+  On the recovered bank, the preferred lift 0 is the unique point on that
+  same positive side, and it is already the recovered threshold selector
+  chosen by tau_b,min.
+
+  So the remaining selector burden narrows again:
+    derive the positive activation law for the shifted imaginary
+    doublet mixing on the current selector packet, or replace it
+    with a finer microscopic law.
+
+SUMMARY: PASS=16 FAIL=1
+
+----- stderr -----
+

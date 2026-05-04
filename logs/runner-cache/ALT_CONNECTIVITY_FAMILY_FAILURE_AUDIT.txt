@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/ALT_CONNECTIVITY_FAMILY_FAILURE_AUDIT.py
+runner_sha256: 514a8cc26b9095402abf04ba4402bbf7ff773e4c64e7ca214f6232d8d08e0608
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.03
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

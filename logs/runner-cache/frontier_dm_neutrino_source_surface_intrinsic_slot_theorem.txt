@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_intrinsic_slot_theorem.py
+runner_sha256: 4694e84fb6e82dc704f2c39e4a7e70016850feb2becfd9a89128672da5445c70
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.58
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE INTRINSIC SLOT THEOREM
+========================================================================================
+
+Question:
+  Once the live source-oriented H-side bundle is reduced to the explicit
+  shift-quotient bundle, what intrinsic Z_3 singlet-doublet slot pair
+  does the canonical positive section read from that bundle?
+
+========================================================================================
+PART 1: THE INTRINSIC SLOT PAIR IS SHIFT-INVARIANT
+========================================================================================
+  [PASS] The intrinsic Z_3 slot pair is unchanged by a common diagonal shift  ((a,b)=(0.169932113230+1.192809041582j,0.458607247825-0.692809041582j))
+  [PASS] So the slot readout descends to the shift-quotient bundle itself  (only diagonal data move under H -> H + lambda I)
+
+========================================================================================
+PART 2: THE LIVE SOURCE-ORIENTED BUNDLE CARRIES ONE EXACT SLOT PAIR
+========================================================================================
+  [PASS] Across the explicit source-oriented quotient bundle, the intrinsic slot pair equals one exact constant pair  (max err=9.16e-16)
+  [PASS] That exact pair is a_* = E2/3 - sqrt(3)gamma/6 + i(E2 + gamma/2), b_* = E2/3 + sqrt(3)gamma/6 + i(gamma/2 - E2)  ((a_*,b_*)=(0.169932113230+1.192809041582j,0.458607247825-0.692809041582j))
+
+  exact intrinsic slot pair on the live source-oriented sheet:
+    a_* = 0.169932113230+1.192809041582j
+    b_* = 0.458607247825-0.692809041582j
+
+========================================================================================
+PART 3: POSITIVE REPRESENTATIVES AND CP READOUT ARE ALREADY FIXED
+========================================================================================
+  [PASS] Every positive representative of the quotient bundle carries the same intrinsic slot pair  (spectral shift does not change the off-diagonal Z_3 slot readout)
+  [PASS] The exact source-oriented CP pair is already encoded by that one constant intrinsic slot pair  ((cp1,cp2)=(-0.544331053952,0.314269680527))
+  [PASS] So the live mainline object no longer includes any open intrinsic slot/readout law on the source-oriented sheet  (what remains is only the H-side law selecting a quotient-bundle point)
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE INTRINSIC SLOT THEOREM
+========================================================================================
+  [PASS] The new note records that the intrinsic slot pair is exact and constant on the live source-oriented bundle
+  [PASS] The new note records that the source-oriented bundle no longer carries an open intrinsic slot/readout law
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact mainline answer:
+    - the intrinsic Z_3 singlet-doublet slot pair is already constant on
+      the whole live source-oriented bundle
+    - positive representatives carry the same pair and the same exact CP data
+    - so the remaining mainline object is not an intrinsic slot/readout law
+      but only the H-side law selecting a quotient-bundle point
+
+PASS=9 FAIL=0
+
+----- stderr -----
+

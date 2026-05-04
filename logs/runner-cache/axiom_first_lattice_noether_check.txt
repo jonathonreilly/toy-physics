@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/axiom_first_lattice_noether_check.py
+runner_sha256: 791053d1688ee9e1618f13eb731ec5d81227f8cf04973c9eb9af003442ddeae4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================
+ axiom_first_lattice_noether_check.py
+ Loop: axiom-first-foundations, Cycle 5 / Route R5
+ Exhibits the lattice Noether theorem (U(1) phase + (2Z)^d sublattice
+ translation) on the canonical pure-staggered Cl(3) (x) Z^d action.
+ 2026-05-03 review-loop re-pass: + E5 algebraic closure (5) -> (4) check
+========================================================================
+
+--- Exhibit E1: U(1) phase symmetry condition [T_U1, M] = 0 ---
+  L=2, dim=3, mass=0.3, N=8
+  ||[T_U1, M]||_max = 0.000e+00
+  E1 verdict: PASS
+
+--- Exhibit E2: (2Z)^d sublattice translation symmetry of M ---
+  shift by 2 in direction μ=0: ||S M S^T - M||_max = 0.000e+00  PASS
+  shift by 2 in direction μ=1: ||S M S^T - M||_max = 0.000e+00  PASS
+  shift by 2 in direction μ=2: ||S M S^T - M||_max = 0.000e+00  PASS
+  E2 verdict: PASS
+
+--- Exhibit E3, E4: fermion-number current divergence on shell ---
+  L=4, dim=3, mass=0.3, N=64
+  max |∂^L · J|  = 6.384e-16    (target: 0 to machine precision)
+  mean |∂^L · J| = 1.709e-16
+  E3 verdict: PASS
+  charge per time slice: ['+9.3735', '+9.3735', '+9.3735', '+9.3735']
+  std(Re Q_t) = 1.986e-15
+  E4 verdict: PASS
+
+--- Exhibit E5: bilateral (5) -> (4) closure on small lattice ---
+  L=4, dim=3, mass=0.3, sites checked=192
+  max |J5_real - J4| = 7.216e-16  (target: 0 to machine precision)
+  Bilateral (5) under T = i I closes algebraically to (4):
+  E5 verdict: PASS
+
+========================================================================
+ SUMMARY
+========================================================================
+   E1 (U(1) sym condition): PASS
+   E2 ((2Z)^d sublattice translation sym): PASS
+   E3 (current divergence-free on shell): PASS
+   E4 (global charge conservation): PASS
+   E5 (bilateral (5) -> (4) algebraic closure): PASS
+
+   PASSED: 5/5
+
+ verdict: lattice Noether theorem (N1)-(N3) exhibited on Cl(3) ⊗ Z^d
+          with the (2Z)^d sublattice scope from the 2026-05-03 repair.
+
+----- stderr -----
+

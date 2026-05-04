@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/FOURTH_FAMILY_QUADRANT_SWEEP.py
+runner_sha256: 6a3cf2b3bdcce31f1fb4090448a00dfd660e7cf8cc982ce8c54ee5b59768cb7d
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.04
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

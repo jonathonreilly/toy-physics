@@ -1,0 +1,26 @@
+===== runner cache v1 =====
+runner: scripts/mirror_born_audit.py
+runner_sha256: ccbbc2f10c2187338017a1b7020815e452240f96245718fab15ea12d86a04270
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 7.80
+status: ok
+----- stdout -----
+================================================================================
+BORN AUDIT: ALL MIRROR GENERATORS (LINEAR PROPAGATOR ONLY)
+  8 seeds per generator
+================================================================================
+
+   3D chokepoint N=15 npl=25 r=4  mean=1.74e-16  max=4.84e-16  ok=3  PERFECT
+   3D chokepoint N=25 npl=25 r=4  mean=1.32e-15  max=1.93e-15  ok=4  PERFECT
+       3D hybrid N=25 npl=40 r=5  mean=1.67e-15  max=4.05e-15  ok=8  PERFECT
+       3D hybrid N=40 npl=40 r=5  mean=1.44e-15  max=2.05e-15  ok=8  PERFECT
+     2D mirror N=25 npl=12 r=2.5  mean=5.21e-16  max=7.79e-16  ok=8  PERFECT
+     2D mirror N=40 npl=12 r=2.5  mean=6.53e-16  max=9.89e-16  ok=8  PERFECT
+
+VERIFICATION: This script uses propagate_LINEAR which has
+NO normalization of any kind. If Born passes here, the
+linear propagator on these graph families is Born-clean.
+
+----- stderr -----
+

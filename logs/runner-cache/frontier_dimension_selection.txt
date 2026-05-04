@@ -1,0 +1,161 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dimension_selection.py
+runner_sha256: f555ebd969e566912710426a4e436ff15137db95301501993499b31fc47f24da
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.56
+status: ok
+----- stdout -----
+============================================================================
+DIMENSION SELECTION: DOES SELF-CONSISTENCY REQUIRE d_s = 3?
+============================================================================
+
+Question: Do attractive gravity, beta=1 mass law, and I_3=0 Born rule
+coexist ONLY at d_s = 3?
+
+For each d = 1..5: build lattice, solve Poisson, run self-consistent
+iteration, measure gravity observables, check Born rule.
+
+----------------------------------------------------------------------------
+PART 1: BORN RULE I_3 (dimension-independent, tested in 2D)
+----------------------------------------------------------------------------
+  I_3/P = <1e-10  (linear propagator)
+  Born rule holds at ALL dimensions (linearity is dimension-free)
+  (0.0s)
+
+----------------------------------------------------------------------------
+PART 2: SELF-CONSISTENCY + GRAVITY PER DIMENSION
+----------------------------------------------------------------------------
+
+  d = 1  [1D chain N=100]
+  ............................................................
+    Self-consistent iteration (k=6.0, G=0.5)... converged (15 iters, max_iter_reached_but_stable)
+    Gravity measurement (2D prop, d-dim potential)... beta=0.177, alpha=0.419, REPULSIVE
+    mass sweep: M=0.002->d=-3.896248 M=0.004->d=-4.013926 M=0.008->d=-2.431008 
+    (0.1s)
+
+  d = 2  [2D square 20x20]
+  ............................................................
+    Self-consistent iteration (k=6.0, G=0.5)... converged (10 iters, converged)
+    Gravity measurement (2D prop, d-dim potential)... beta=0.270, alpha=-0.167, REPULSIVE
+    mass sweep: M=0.002->d=-1.225868 M=0.004->d=-1.960234 M=0.008->d=-2.333028 
+    (0.1s)
+
+  d = 3  [3D cubic 12^3]
+  ............................................................
+    Self-consistent iteration (k=6.0, G=0.5)... converged (4 iters, converged)
+    Gravity measurement (2D prop, d-dim potential)... beta=1.013, alpha=1.321, attractive
+    mass sweep: M=0.002->d=+0.282588 M=0.004->d=+0.577128 M=0.008->d=+1.180574 
+    (0.1s)
+
+  d = 4  [4D hypercubic 6^4]
+  ............................................................
+    Self-consistent iteration (k=6.0, G=0.5)... converged (2 iters, converged)
+    Gravity measurement (2D prop, d-dim potential)... beta=1.049, alpha=3.303, attractive
+    mass sweep: M=0.002->d=+0.250589 M=0.004->d=+0.519887 M=0.008->d=+1.090363 
+    (0.0s)
+
+  d = 5  [5D hypercubic 4^5]
+  ............................................................
+    Self-consistent iteration (k=6.0, G=0.5)... converged (2 iters, converged)
+    Gravity measurement (2D prop, d-dim potential)... beta=1.028, alpha=5.014, attractive
+    mass sweep: M=0.002->d=+0.311084 M=0.004->d=+0.653136 M=0.008->d=+1.368340 
+    (0.1s)
+
+============================================================================
+SUMMARY TABLE
+============================================================================
+
+  d | Converges | Stable | Attract |    beta |   alpha | alpha_pred |      I_3 | All 3?
+---------------------------------------------------------------------------------------
+  1 |       Yes |    Yes |      NO |    0.18 |    0.42 |  -1 (grow) |   <1e-10 |     no
+  2 |       Yes |    Yes |      NO |    0.27 |   -0.17 |    0 (log) |   <1e-10 |     no
+  3 |       Yes |    Yes |     Yes |    1.01 |    1.32 |  1 (1/r^1) |   <1e-10 |    YES
+  4 |       Yes |    Yes |     Yes |    1.05 |    3.30 |  2 (1/r^2) |   <1e-10 |    YES
+  5 |       Yes |    Yes |     Yes |    1.03 |    5.01 |  3 (1/r^3) |   <1e-10 |    YES
+
+============================================================================
+ANALYSIS
+============================================================================
+
+  Dimensions passing all criteria: [3, 4, 5]
+
+  Born rule (I_3=0): UNIVERSAL — holds at all d (linearity-based)
+  This does NOT select dimension.
+
+  Mass law (beta=1):
+    d=2: beta = 0.270  (FAIL)
+    d=3: beta = 1.013  (OK)
+    d=4: beta = 1.049  (OK)
+    d=5: beta = 1.028  (OK)
+
+  Force sign (attractive):
+    d=2: REPULSIVE
+    d=3: attractive
+    d=4: attractive
+    d=5: attractive
+
+  Self-consistency convergence:
+    d=1: converged (stable, 15 iters)
+    d=2: converged (stable, 10 iters)
+    d=3: converged (stable, 4 iters)
+    d=4: converged (stable, 2 iters)
+    d=5: converged (stable, 2 iters)
+
+  Distance law (alpha):
+    d=2: alpha = -0.167  (predicted 0, diff = 0.167)
+    d=3: alpha = 1.321  (predicted 1, diff = 0.321)
+    d=4: alpha = 3.303  (predicted 2, diff = 1.303)
+    d=5: alpha = 5.014  (predicted 3, diff = 2.014)
+
+  Stable orbits (Bertrand's theorem, analytical):
+    d=1: N/A (no orbits)
+    d=2: Marginal (log potential, no inverse-square)
+    d=3: STABLE closed orbits (Bertrand's theorem)
+    d=4: UNSTABLE (perturbations grow, orbits spiral)
+    d=5: UNSTABLE (perturbations grow faster)
+    Only d=3 has stable closed orbits under 1/r^(d-1) force.
+
+  CRITICAL TRANSITION at d=2/d=3:
+    d <= 2: gravity is REPULSIVE
+    d >= 3: gravity is attractive
+    The propagator phase coupling exp(i*k*S) with S = L*(1-phi)
+    produces attractive deflection only when phi decays with distance
+    (d >= 3: phi ~ 1/r^(d-2)). For d <= 2, the potential grows or
+    is logarithmic, and the phase accumulation reverses the sign.
+
+============================================================================
+VERDICT
+============================================================================
+
+  [PARTIAL SELECTION] Three observables (attractive + beta~1 + I_3=0)
+  coexist at d = [3, 4, 5].
+
+  d=3 vs d=4:
+    alpha: 1.32 vs 3.30 (predicted: 1 vs 2)
+  d=3 vs d=5:
+    alpha: 1.32 vs 5.01 (predicted: 1 vs 3)
+
+  WHAT THE NUMERICS SHOW:
+    1. d <= 2: EXCLUDED — gravity is repulsive and beta != 1
+    2. d >= 3: attractive gravity with beta ~ 1 and I_3 = 0
+    3. The three observables do NOT uniquely select d=3
+
+  WHAT SELECTS d=3 (from known physics, not tested here):
+    - Stable orbits: only d=3 has closed stable orbits
+      (Bertrand's theorem: 1/r^(d-1) force with d >= 4 is unstable)
+    - Stable atoms: hydrogen-like atoms unstable for d >= 5
+    - Graph growth: local growth rules may prefer d_s ~ 3
+
+  HONEST CONCLUSION:
+  Self-consistency provides a LOWER BOUND: d >= 3 is required
+  for attractive gravity with correct mass law. The UPPER BOUND
+  (d <= 3) comes from orbital/atomic stability, which is a
+  separate physical requirement not tested in this script.
+  Together: d >= 3 (from self-consistency) AND d <= 3 (from
+  stability) uniquely gives d = 3.
+
+Total runtime: 0.3s
+
+----- stderr -----
+

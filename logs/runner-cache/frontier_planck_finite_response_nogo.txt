@@ -1,0 +1,21 @@
+===== runner cache v1 =====
+runner: scripts/frontier_planck_finite_response_nogo.py
+runner_sha256: cd7d1ed5609864f30ed7d767e5df4b1547d5c8d8d30d7441c5db59949d49983c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+[PASS] primitive finite frame automorphism group has order 384: |B_4| = 2^4 * 4! = 384
+[PASS] finite frame has a positive identity gap: min ||g-I||_F over nonidentity signed permutations = 2.000000000000
+[PASS] finite frame has no nontrivial infinitesimal neighborhood: the open Frobenius ball ||g-I||_F < 1 contains only I
+[PASS] finite automorphisms cannot supply local metric response directions: finite tangent dim = 0; Sym^2(R^4) dim = 10
+[PASS] an arbitrarily small symmetric metric perturbation is outside the finite orbit: I + eps*h with eps=0.01 is not a signed-permutation frame automorphism
+[PASS] finite matrices cannot realize [X,P] = i*hbar*I with hbar != 0: Tr([X,P]) = 0, while Tr(I_4) = 4
+[PASS] finite-response blocker closes negatively: finite automorphisms can support discrete symmetry bookkeeping, but not the infinitesimal metric/coframe response needed for the Planck carrier derivation
+
+Summary: 7/7 checks passed.
+Verdict: the finite-automorphism-only Planck route is a no-go; the Planck lane still needs the realified response surface and the gravitational boundary/action carrier identification.
+
+----- stderr -----
+

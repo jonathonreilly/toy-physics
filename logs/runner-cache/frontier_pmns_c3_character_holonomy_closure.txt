@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_c3_character_holonomy_closure.py
+runner_sha256: 245441221e4fa9c50a05aed618dd1dbcc32e14e92dadaf8a9fcf383af545e633
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+PMNS C3 CHARACTER HOLOMONY CLOSURE
+========================================================================================
+
+Question:
+  Does the exact coordinate-cycle symmetry already furnish a native
+  three-mode holonomy family that closes the reduced PMNS cycle values?
+
+========================================================================================
+PART 1: THE EXACT COORDINATE CYCLE HAS THE CANONICAL C3 CHARACTER TRIPLE
+========================================================================================
+  [PASS] The projected coordinate-cycle operator is exactly C3-periodic
+  [PASS] Its eigencharacters are exactly 1, omega, omega^2  (evals=[-0.5-0.866025j  1. -0.j       -0.5+0.866025j])
+  [PASS] Therefore the exact native character phases are 0, 2pi/3, 4pi/3
+
+========================================================================================
+PART 2: THE NATIVE CHARACTER TRIPLE HAS FULL RANK ON THE REDUCED CYCLE FAMILY
+========================================================================================
+  [PASS] The character-triple design matrix is the canonical C3 matrix
+  [PASS] The exact C3 character triple has nonzero determinant  (det=10.392304845413)
+  [PASS] So the exact native character triple already removes the one-angle 2-real kernel
+
+========================================================================================
+PART 3: THE REDUCED CYCLE COORDINATES RECONSTRUCT EXACTLY FROM THE NATIVE CHARACTER HOLOMONIES
+========================================================================================
+  [PASS] The native character holonomy vector is the exact image of (u,v,w)  (hol=[ 1.1       0.424256 -0.684256])
+  [PASS] The reduced coordinates are reconstructed exactly from the native character holonomies  (recovered=[0.41 0.32 0.28])
+  [PASS] So the reduced PMNS cycle values close exactly on the exact C3 character route
+
+========================================================================================
+PART 4: CIRCULARITY GUARD
+========================================================================================
+  [PASS] The exact C3 character phases take no PMNS-side target values as inputs  (bad=[])
+  [PASS] The native character holonomy map takes no PMNS-side target coordinates as inputs  (bad=[])
+  [PASS] The character-holonomy reconstruction takes no PMNS-side target coordinates as inputs  (bad=[])
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact native closure of the reduced-cycle readout family:
+    - the projected coordinate cycle has the exact C3 character phases
+      0, 2pi/3, 4pi/3
+    - those three native holonomies already give an invertible 3 x 3
+      system on the reduced graph-first PMNS cycle family
+    - therefore (u,v,w) are reconstructed exactly from the exact C3
+      character triple itself
+
+  So the earlier three-flux closure route can now be read as a native
+  C3-character closure theorem, not merely an admitted generic family.
+  What still remains blocked is the sole-axiom production of nontrivial
+  values on that native family.
+
+PASS=12 FAIL=0
+
+----- stderr -----
+

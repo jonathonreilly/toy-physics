@@ -1,0 +1,84 @@
+===== runner cache v1 =====
+runner: scripts/gluon_tree_level_massless_check.py
+runner_sha256: 941a654bb1d50ef0efd8cb91a07bc95293c2efc7836b71301563a8366ea7d826
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================
+GLUON TREE-LEVEL MASSLESSNESS CHECK
+========================================================================
+
+Setup:
+  SU(3) gauge group, 8 Gell-Mann generators
+  A_mu^a (a = 1..8): SU(3) connection
+  f^{abc}: structure constants from [T_a, T_b] = 2i f^{abc} T_c
+
+  f^{abc} antisymmetry residual (a <-> b): 0.000e+00
+  ||f|| = 2.4495  (nonzero confirms SU(3) is non-abelian)
+
+------------------------------------------------------------------------
+TEST 1 (G1): L_mass = (1/2) m^2 A^a A^a gauge variation under
+             δA_mu^a = (1/g) ∂_mu ω^a + f^{abc} A_mu^b ω^c
+             is NONZERO for generic A, ω at any m != 0.
+------------------------------------------------------------------------
+
+  Sum over (a, mu, x) of m^2 A_mu^a δA^a_mu = 1.560184e+00
+  This MUST be nonzero for generic A, ω (gauge non-invariance of mass term).
+  STATUS: PASS
+
+  Cross-check: sum_{abc, mu} f^{abc} A_mu^a A^{b mu} = 1.388e-15
+  (should be ~0 by f^{abc} antisymmetry over symmetric a<->b pairing)
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2 (G2): F^a F^a IS gauge invariant; A^a A^a and (∂A)^2 are NOT.
+------------------------------------------------------------------------
+This is verified by the symbolic structure:
+  F^a transforms covariantly: δF^a = f^{abc} F^b ω^c
+  → δ(F^a F^a) = 2 f^{abc} F^a F^b ω^c = 0 by antisymmetry pairing.
+
+  sum_{abc, μν, x} f^{abc} F^a_μν F^{b μν} = 6.217e-15
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3 (G3): kinetic operator inverse propagator pole at p^2 = 0
+------------------------------------------------------------------------
+In Lorenz gauge ξ:
+  Γ^(2)_{μν} = -p^2 g_μν + (1 - 1/ξ) p_μ p_ν
+  ⇒ propagator (transverse part) ∝ 1/p^2 → pole at p^2 = 0.
+
+  max |propagator * p^2 + 1| over 20 random p = 1.110e-16
+  STATUS: PASS
+
+  Sanity (G3 contrapositive): IF a mass term m^2 g_μν were added,
+  the pole would shift to p^2 = -m^2. But (G1) forbids such a term.
+
+------------------------------------------------------------------------
+TEST 4: SU(3) is genuinely non-abelian (f^{abc} ≠ 0 for some triple)
+------------------------------------------------------------------------
+  number of nonzero f^{abc} entries: 54
+  ||f||_F = 2.4495
+
+  STATUS: PASS
+
+========================================================================
+SUMMARY
+========================================================================
+  Test 1 (G1: mass-term gauge variation nonzero):      PASS
+  Test 2 (G2: f^{abc} F^a F^b = 0 confirms F^2 inv):    PASS
+  Test 3 (G3: propagator pole at p^2 = 0):             PASS
+  Test 4 (SU(3) genuinely non-abelian):                PASS
+
+  OVERALL: PASS
+
+Note: this runner verifies the structural content of (G1)-(G3) at
+the algebraic / symbolic level. The proof in the companion theorem
+note is geometric (gauge-transformation law) plus algebraic (Lie
+algebra antisymmetry) and is dimension-independent. Test 1 uses a
+toy 1D 'spacetime' for the finite-difference; the gauge-non-
+invariance is structural and does not depend on the toy geometry.
+
+----- stderr -----
+

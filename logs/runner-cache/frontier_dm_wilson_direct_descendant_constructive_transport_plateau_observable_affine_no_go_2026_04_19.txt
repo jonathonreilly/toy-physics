@@ -1,0 +1,62 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_constructive_transport_plateau_observable_affine_no_go_2026_04_19.py
+runner_sha256: f60ffde54f2ffcb05dac368fe1194d24b3f3018d8cec9ab31d3baa983cd9e6cd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.72
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT CONSTRUCTIVE TRANSPORT PLATEAU OBSERVABLE-AFFINE NO-GO
+========================================================================================
+
+========================================================================================
+PART 1: THE EXACT SOURCE-SIDE OBSERVABLE CHANNELS ALREADY SPLIT THE PLATEAU
+========================================================================================
+  [PASS] The plateau witnesses are pairwise distinct in the exact observable 4-pack (gamma, E1, E2, Delta_src)  (min observable-4 separation=0.081532895857)
+  [PASS] Single-channel extremization already splits across all four witnesses  (winners={'gamma': 'W0', 'E1': 'W3', 'E2': 'W2', 'Delta_src': 'W1'})
+
+========================================================================================
+PART 2: THE OBSERVABLE 4-PACK IS AFFINELY INDEPENDENT ON THE KNOWN PLATEAU
+========================================================================================
+  [PASS] The four witness images form an affine 3-simplex in (gamma, E1, E2, Delta_src)  (affine rank=3)
+  [PASS] So no coefficient-free affine observable law is forced by witness degeneracy or hidden collinearity  (Gram determinant=1.498523728342e-04)
+
+========================================================================================
+PART 3: EVERY WITNESS IS THE UNIQUE MAXIMIZER OF SOME EXACT AFFINE OBSERVABLE LAW
+========================================================================================
+  [PASS] W0 is uniquely exposed by an exact affine law on (gamma, E1, E2, Delta_src)  (gap=1.000000000000)
+  [PASS] W1 is uniquely exposed by an exact affine law on (gamma, E1, E2, Delta_src)  (gap=1.000000000000)
+  [PASS] W2 is uniquely exposed by an exact affine law on (gamma, E1, E2, Delta_src)  (gap=1.000000000000)
+  [PASS] W3 is uniquely exposed by an exact affine law on (gamma, E1, E2, Delta_src)  (gap=1.000000000000)
+
+========================================================================================
+PART 4: SIMPLE SCHUR-SPECTRAL AND CURVATURE INVARIANTS ALSO FAIL TO CONSENSE
+========================================================================================
+  [PASS] Simple Schur-side spectral laws already disagree on which plateau witness to select  (winners={'max Tr(H_e)': 'W0', 'max lambda_min(H_e)': 'W1'})
+  [PASS] Simple local Hessian/curvature invariants also disagree on which plateau witness to select  (winners={'max tr(Hess eta_1)': 'W0', 'max ||Hess eta_1||_F': 'W1'})
+
+========================================================================================
+PART 5: BOTTOM LINE
+========================================================================================
+  [PASS] The named family of exact affine observable plateau-breakers therefore has no canonical witness on the current branch  (changing coefficients can make W0, W1, W2, or W3 the unique affine-law maximizer)
+  [PASS] So any retained selector from this family must derive its coefficients from extra source-side physics not contained in the family itself  (the coefficients are missing selector content, not a consequence of transport or of the plateau geometry alone)
+
+  witness observable 4-pack:
+    W0: (gamma, E1, E2, Delta_src) = (0.150147244666, 0.296562850784, 1.986407435174, 0.000796578990)
+    W1: (gamma, E1, E2, Delta_src) = (0.098758874797, 0.122043673033, 1.345447439635, 0.018682121056)
+    W2: (gamma, E1, E2, Delta_src) = (0.090366396107, 0.242890637537, 1.999429075982, 0.005653908340)
+    W3: (gamma, E1, E2, Delta_src) = (0.059339947995, 0.391399371840, 1.311532356132, 0.000040283743)
+
+  affine selector coefficients c = (c_gamma, c_E1, c_E2, c_Delta):
+    W0: c = [14.75895719  2.10535862 -0.20781031 -0.4100458 ], unique gap = 1.000000000000
+    W1: c = [ 2.86965086 -3.38723572 -0.86233928  0.20150952], unique gap = 1.000000000000
+    W2: c = [-14.62122691  -1.89921165   1.70003327   0.38262441], unique gap = 1.000000000000
+    W3: c = [-3.00738113  3.18108875 -0.62988368 -0.17408812], unique gap = 1.000000000000
+
+========================================================================================
+SUMMARY: PASS=12 FAIL=0
+========================================================================================
+
+----- stderr -----
+

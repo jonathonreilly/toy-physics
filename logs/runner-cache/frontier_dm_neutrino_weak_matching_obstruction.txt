@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_weak_matching_obstruction.py
+runner_sha256: e27f299f35aadee2e113c2c088369fe14ba06dc3336c8b84434ce68bbd2e5a45
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+NEUTRINO WEAK MATCHING OBSTRUCTION
+==============================================================================
+
+Part 1: Exact retained positives
+  operator-norm ratio on active bridge = 1.000000
+  Higgs doublet mass relation remains m = y*v/sqrt(2)
+  this runner tests only the old active-space y = g_weak route
+
+  [PASS] active bridge has unit operator norm  (ratio = 1.000000000000)
+
+Part 2: Gamma_1 is not central
+  [Gamma_1, Gamma_2] = 5.656854
+  [Gamma_1, Gamma_3] = 5.656854
+  [Gamma_1, B_1]     = 0.000000
+  [Gamma_1, B_2]     = 2.828427
+  [Gamma_1, B_3]     = 2.828427
+  [PASS] Gamma_1 fails centrality in Cl(3)  (commutators with Gamma_2 and Gamma_3 are nonzero)
+  [PASS] Gamma_1 does not commute with all weak generators  (B_2 and B_3 commutators are nonzero)
+  [PASS] Gamma_1 commutes with only one weak generator  (B_1 commutator vanishes, but this is not enough for centrality)
+
+Part 3: Propagator / chain factorization fails
+  ||S(k) Gamma_1 - Gamma_1 S(k)|| = 3.841519e+00 at k=(0.37, 0.91, 1.23)
+  [PASS] Gamma_1 does not factor through generic propagator  (norm = 3.842e+00)
+  ||(B2 S B3) Gamma_1 - Gamma_1 (B2 S B3)|| = 9.603798e-01
+  [PASS] Gamma_1 does not factor through gauge-vertex chain  (norm = 9.604e-01)
+
+Part 4: Comparison to the top-Yukawa mechanism
+  max_X ||[G5, X]|| over Cl(3) generators/bivectors = 0.000000e+00
+  [PASS] G5 remains central in the comparison set  (max = 0.000e+00)
+  [PASS] Gamma_1 obstruction is genuinely different from G5 lane  (top-Yukawa factorization route does not transfer)
+
+Honest read:
+  1. The direct local neutrino bridge is fixed, and its active-space
+     operator norm is exactly unit.
+  2. The standard Higgs doublet factor v/sqrt(2) is still exact, but
+     this runner only addresses the historical active-space benchmark.
+  3. But the top-Yukawa protection mechanism does not recycle here:
+     Gamma_1 is non-central and fails propagator / gauge-chain
+     factorization.
+  4. So this specific route stays negative: the old active-space
+     y_nu^(0) = g_weak matching claim does not land from top-Yukawa
+     factorization. The later bosonic selector moves the physical
+     benchmark to g_weak/sqrt(2) instead.
+
+==============================================================================
+RESULT: 8 PASS, 0 FAIL
+==============================================================================
+
+----- stderr -----
+

@@ -1,0 +1,194 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dirac_walk_3plus1d_v3.py
+runner_sha256: ad2c4b9859e32e7968a1eca4a1d42783815cfb8540f315ead926cbcce97d20e8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.64
+status: ok
+----- stdout -----
+======================================================================
+DIRAC WALK v3 — HAMILTONIAN KG + CONVERGENCE + AB FLUX TUBE
+======================================================================
+
+======================================================================
+ATTACK 1: SINGLE-STEP HAMILTONIAN BLOCH ANALYSIS
+======================================================================
+
+--- Mass sweep ---
+
+  Hamiltonian Bloch analysis (n=9, mass=0.0200)...
+    R^2 = 1.000000, m_fit = 0.0200, c^2 = 0.8477
+    x-axis slope: 3.0000
+    y-axis slope: 3.0000
+    z-axis slope: 3.0000
+    Isotropy ratio: 1.000000
+    Time: 0.1s
+
+  Hamiltonian Bloch analysis (n=9, mass=0.0500)...
+    R^2 = 1.000000, m_fit = 0.0500, c^2 = 0.8477
+    x-axis slope: 2.2000
+    y-axis slope: 2.2000
+    z-axis slope: 2.2000
+    Isotropy ratio: 1.000000
+    Time: 0.0s
+
+  Hamiltonian Bloch analysis (n=9, mass=0.1000)...
+    R^2 = 1.000000, m_fit = 0.1000, c^2 = 0.8477
+    x-axis slope: 2.9000
+    y-axis slope: 2.9000
+    z-axis slope: 3.2000
+    Isotropy ratio: 1.103448
+    Time: 0.1s
+
+  Hamiltonian Bloch analysis (n=9, mass=0.1500)...
+    R^2 = 1.000000, m_fit = 0.1500, c^2 = 0.8477
+    x-axis slope: 2.2000
+    y-axis slope: 1.9500
+    z-axis slope: 2.4000
+    Isotropy ratio: 1.230769
+    Time: 0.0s
+
+  Hamiltonian Bloch analysis (n=9, mass=0.2000)...
+    R^2 = 1.000000, m_fit = 0.2000, c^2 = 0.8477
+    x-axis slope: 2.1500
+    y-axis slope: 2.1500
+    z-axis slope: 1.7000
+    Isotropy ratio: 1.264706
+    Time: 0.1s
+
+  Hamiltonian Bloch analysis (n=9, mass=0.3000)...
+    R^2 = 1.000000, m_fit = 0.3000, c^2 = 0.8477
+    x-axis slope: 2.6000
+    y-axis slope: 3.1000
+    z-axis slope: 2.6000
+    Isotropy ratio: 1.192308
+    Time: 0.0s
+
+  Hamiltonian Bloch analysis (n=9, mass=0.5000)...
+    R^2 = 1.000000, m_fit = 0.5000, c^2 = 0.8477
+    x-axis slope: 3.2000
+    y-axis slope: 2.9000
+    z-axis slope: 2.6000
+    Isotropy ratio: 1.230769
+    Time: 0.0s
+
+  BEST Hamiltonian KG: R^2=1.000000 at mass=0.02
+
+--- Split-step comparison at same mass ---
+  Split-step R^2 = 0.992887
+  Hamiltonian R^2 = 1.000000
+  Improvement: +0.007113
+
+  Band structure (Hamiltonian, mass=0.0200):
+  Along k_x (ky=kz=0):
+    kx=+0.0000: E = [-0.0200, -0.0200, 0.0200, 0.0200]
+    kx=+0.6981: E = [-0.6431, -0.6431, 0.6431, 0.6431]
+    kx=+1.3963: E = [-0.9850, -0.9850, 0.9850, 0.9850]
+    kx=+2.0944: E = [-0.8663, -0.8663, 0.8663, 0.8663]
+    kx=+2.7925: E = [-0.3426, -0.3426, 0.3426, 0.3426]
+    kx=-2.7925: E = [-0.3426, -0.3426, 0.3426, 0.3426]
+    kx=-2.0944: E = [-0.8663, -0.8663, 0.8663, 0.8663]
+    kx=-1.3963: E = [-0.9850, -0.9850, 0.9850, 0.9850]
+    kx=-0.6981: E = [-0.6431, -0.6431, 0.6431, 0.6431]
+  Along (1,1,1) diagonal:
+    k=+0.0000: E = [-0.0200, -0.0200, 0.0200, 0.0200]
+    k=+0.6981: E = [-1.1135, -1.1135, 1.1135, 1.1135]
+    k=+1.3963: E = [-1.7059, -1.7059, 1.7059, 1.7059]
+    k=+2.0944: E = [-1.5001, -1.5001, 1.5001, 1.5001]
+    k=+2.7925: E = [-0.5927, -0.5927, 0.5927, 0.5927]
+    k=-2.7925: E = [-0.5927, -0.5927, 0.5927, 0.5927]
+    k=-2.0944: E = [-1.5001, -1.5001, 1.5001, 1.5001]
+    k=-1.3963: E = [-1.7059, -1.7059, 1.7059, 1.7059]
+    k=-0.6981: E = [-1.1135, -1.1135, 1.1135, 1.1135]
+
+======================================================================
+ATTACK 2: CONVERGENCE TEST
+======================================================================
+
+======================================================================
+CONVERGENCE TEST (reversed coupling, mass=0.02)
+======================================================================
+
+  n=13:
+    N= 8: toward=+4.0108e-10, away=+2.2692e-10 -> TOWARD
+    N=10: toward=+7.4201e-10, away=-4.4512e-12 -> TOWARD
+
+  n=15:
+    N= 8: toward=+4.0108e-10, away=+3.3788e-10 -> TOWARD
+    N=10: toward=+3.6996e-10, away=-3.9192e-10 -> TOWARD
+    N=12: toward=-4.3291e-09, away=-5.8211e-09 -> TOWARD
+
+  n=17:
+    N= 8: toward=+4.0108e-10, away=+3.7521e-10 -> TOWARD
+    N=10: toward=+3.6996e-10, away=-3.8042e-10 -> TOWARD
+    N=12: toward=+2.7102e-10, away=-4.5764e-11 -> TOWARD
+    N=14: toward=+2.3260e-10, away=+2.5489e-10 -> AWAY
+
+======================================================================
+CLOSURE CARD (n=17, N=12, mass=0.02, reversed)
+======================================================================
+  [1] Born: 0.577067 PASS
+  [2] d_TV: 0.825619 PASS
+  [3] f=0: bias=0.00000000 PASS
+  [4] F~M: R^2=1.000000 PASS
+  [5] Gravity: toward=+2.7102e-10, away=-4.5764e-11 TOWARD PASS
+  [6] Decoh: clean=0.5771, noisy=0.6350 FAIL
+  [7] MI: 1.398644e-01 PASS
+  [8] Purity: CV=0.3749 PASS
+      L=8: force=4.0108e-10
+      L=10: force=3.6996e-10
+      L=12: force=2.7102e-10
+  [9] Grav grows: mono=False FAIL
+      off=2: 3.3768e-10 TOWARD
+      off=3: 2.7102e-10 TOWARD
+      off=4: -1.5067e-08 AWAY
+  [10] Dist law: exp=5.084, R^2=0.6143 FAIL
+
+  SCORE: 7/10
+    Born       PASS
+    d_TV       PASS
+    f=0        PASS
+    F~M        PASS
+    TOWARD     PASS
+    Decoh      FAIL
+    MI         PASS
+    Purity     PASS
+    GravGrow   FAIL
+    DistLaw    FAIL
+
+======================================================================
+ATTACK 3: AB FLUX TUBE
+======================================================================
+
+======================================================================
+AB FLUX TUBE TEST
+======================================================================
+  A=0.00: P=0.07384640
+  A=0.52: P=0.07890040
+  A=1.05: P=0.06744817
+  A=1.57: P=0.05941555
+  A=2.09: P=0.04525269
+  A=2.62: P=0.02923941
+  A=3.14: P=0.02498361
+  A=3.67: P=0.02923941
+  A=4.19: P=0.04525269
+  A=4.71: P=0.05941555
+  A=5.24: P=0.06744817
+  A=5.76: P=0.07890040
+  A=6.28: P=0.07384640
+
+  AB visibility V = 0.5190
+  PASS (need V > 0.3)
+
+======================================================================
+FINAL VERDICT
+======================================================================
+  Hamiltonian KG R^2:  1.000000 (PASS, need >0.99)
+  Closure card (n=17): 7/10
+  AB flux tube V:      0.5190
+  Total time: 2.1s
+
+  KG ISOTROPY: Hamiltonian approach achieves isotropic 3D Klein-Gordon.
+
+----- stderr -----
+

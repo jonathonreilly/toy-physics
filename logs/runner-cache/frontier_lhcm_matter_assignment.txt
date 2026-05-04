@@ -1,0 +1,107 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lhcm_matter_assignment.py
+runner_sha256: adbc3f8b4481a9198702717fa991caf95bddfea51166dfb7ee6f2b08d1e21b98
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure and citations
+----------------------------------------------------------------------------------------
+  [PASS (A)] note contains required substring: 'LHCM Matter Assignment from SU(3) Representation Content'  (len(note)=9708)
+  [PASS (A)] note contains required substring: 'exact algebraic identity / support theorem'  (len(note)=9708)
+  [PASS (A)] note contains required substring: 'GRAPH_FIRST_SU3_INTEGRATION_NOTE.md'  (len(note)=9708)
+  [PASS (A)] note contains required substring: 'GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md'  (len(note)=9708)
+  [PASS (A)] note contains required substring: 'LEFT_HANDED_CHARGE_MATCHING_NOTE.md'  (len(note)=9708)
+  [PASS (A)] note contains required substring: 'HYPERCHARGE_IDENTIFICATION_NOTE.md'  (len(note)=9708)
+  [PASS (A)] note contains required substring: 'proposal_allowed: false'  (len(note)=9708)
+  [PASS (A)] note contains required substring: 'Sym'  (len(note)=9708)
+  [PASS (A)] note contains required substring: 'Anti'  (len(note)=9708)
+  [PASS (A)] note contains required substring: 'fundamental representation'  (len(note)=9708)
+  [PASS (A)] note contains required substring: 'trivial representation'  (len(note)=9708)
+  [PASS (A)] note contains required substring: '(2,3)'  (len(note)=9708)
+  [PASS (A)] note contains required substring: '(2,1)'  (len(note)=9708)
+  [PASS (A)] note contains required substring: 'SM-definition convention'  (len(note)=9708)
+  [PASS (A)] note avoids forbidden substring: '\nStatus: retained\n'  ()
+  [PASS (A)] note avoids forbidden substring: '\nStatus: promoted\n'  ()
+  [PASS (A)] note avoids forbidden substring: 'would become retained'  ()
+  [PASS (A)] note avoids forbidden substring: 'promoted to retained'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: canonical Sym²/Anti² decomposition of C⁴ under SWAP_{ν,ρ}
+----------------------------------------------------------------------------------------
+  [PASS (A)] tau^2 = I (SWAP is involution)  (||tau^2 - I||=0.00e+00)
+  [PASS (A)] Sym² block dim = 3 (3 eigenvalues +1)  (# eigenvalues +1: 3)
+  [PASS (A)] Anti² block dim = 1 (1 eigenvalue −1)  (# eigenvalues −1: 1)
+  [PASS (A)] dim(C⁴) = dim(Sym²) + dim(Anti²) = 3+1  (3+1 = 4)
+  [PASS (A)] Sym² projector rank = 3  ()
+  [PASS (A)] Anti² projector rank = 1  ()
+  [PASS (A)] Sym² + Anti² = I  ()
+  [PASS (A)] Sym² · Anti² = 0 (orthogonal projectors)  ()
+
+----------------------------------------------------------------------------------------
+Part 3: SU(3) on Sym² is the fundamental representation
+----------------------------------------------------------------------------------------
+  [PASS (A)] basis vector v_sym[0] is tau-invariant  (||tau v - v|| = 0.00e+00)
+  [PASS (A)] basis vector v_sym[1] is tau-invariant  (||tau v - v|| = 0.00e+00)
+  [PASS (A)] basis vector v_sym[2] is tau-invariant  (||tau v - v|| = 0.00e+00)
+  [PASS (A)] [T_1, T_2] = i T_3 (su(3) closure check)  (||[T1,T2] - i T3||=0.00e+00)
+  [PASS (A)] [T_4, T_5] = i (T_3/2 + sqrt(3) T_8/2)  (||[T4,T5] - expected||=0.00e+00)
+  [PASS (A)] T_1 is hermitian  (||T - T†||=0.00e+00)
+  [PASS (A)] T_2 is hermitian  (||T - T†||=0.00e+00)
+  [PASS (A)] T_3 is hermitian  (||T - T†||=0.00e+00)
+  [PASS (A)] T_4 is hermitian  (||T - T†||=0.00e+00)
+  [PASS (A)] T_5 is hermitian  (||T - T†||=0.00e+00)
+  [PASS (A)] T_6 is hermitian  (||T - T†||=0.00e+00)
+  [PASS (A)] T_7 is hermitian  (||T - T†||=0.00e+00)
+  [PASS (A)] T_8 is hermitian  (||T - T†||=0.00e+00)
+  [PASS (A)] Tr[T_1] = 0 (fundamental rep tracelessness)  (|Tr[T_1]|=0.00e+00)
+  [PASS (A)] Tr[T_2] = 0 (fundamental rep tracelessness)  (|Tr[T_2]|=0.00e+00)
+  [PASS (A)] Tr[T_3] = 0 (fundamental rep tracelessness)  (|Tr[T_3]|=0.00e+00)
+  [PASS (A)] Tr[T_4] = 0 (fundamental rep tracelessness)  (|Tr[T_4]|=0.00e+00)
+  [PASS (A)] Tr[T_5] = 0 (fundamental rep tracelessness)  (|Tr[T_5]|=0.00e+00)
+  [PASS (A)] Tr[T_6] = 0 (fundamental rep tracelessness)  (|Tr[T_6]|=0.00e+00)
+  [PASS (A)] Tr[T_7] = 0 (fundamental rep tracelessness)  (|Tr[T_7]|=0.00e+00)
+  [PASS (A)] Tr[T_8] = 0 (fundamental rep tracelessness)  (|Tr[T_8]|=0.00e+00)
+  [PASS (A)] Tr[T^a T^b] = (1/2) δ^{ab} for fundamental rep (T(3) = 1/2)  (all 64 trace identities satisfied)
+
+----------------------------------------------------------------------------------------
+Part 4: SU(3) on Anti² is the trivial (1-dim) representation
+----------------------------------------------------------------------------------------
+  [PASS (A)] Anti² basis vector is tau eigenvector with eigenvalue −1  (||tau v + v||=0.00e+00)
+  [PASS (A)] dim Anti² = 1 forces SU(3) action to be trivial (1-dim irreps of SU(N) are trivial)  (SU(3) is perfect → all 1-dim characters trivial → Anti² is the singlet rep)
+
+----------------------------------------------------------------------------------------
+Part 5: LH-doublet sector decomposition (2,3) ⊕ (2,1)
+----------------------------------------------------------------------------------------
+  [PASS (A)] dim Q_L = (2,3) sector = 6 (3 colors × 2 isospin)  (2×3 = 6)
+  [PASS (A)] dim L_L = (2,1) sector = 2 (1 color singlet × 2 isospin)  (2×1 = 2)
+  [PASS (A)] total LH-doublet sector dim = 8  (6+2 = 8)
+  [PASS (A)] total LH-doublet matches SM 8 LH-doublet states per generation  (SM: 6 quark states + 2 lepton states per gen)
+
+----------------------------------------------------------------------------------------
+Part 6: SM-definition matter assignment is forced by SU(3) representation
+----------------------------------------------------------------------------------------
+  [PASS (A)] Sym² (3-dim, fund rep) → quark color content → SM identifies as Q_L = (2,3) sector  (SM-definition convention forces this identification)
+  [PASS (A)] Anti² (1-dim, trivial rep) → lepton (no color) → SM identifies as L_L = (2,1) sector  (SM-definition convention forces this identification)
+  [PASS (A)] structural: SU(3) cannot act non-trivially on a 1-dim space (smallest non-trivial irrep is 3)  (dim_Anti = 1 < 3 → SU(3) action is trivial)
+  [PASS (A)] structural: 3-dim irreps of SU(3) are exactly {3, 3̄}; Sym² carries one of these  (3-dim irrep choice is fundamental (or its conjugate))
+
+----------------------------------------------------------------------------------------
+Part 7: explicit non-closure of LHCM repair item (2) and upstream retention
+----------------------------------------------------------------------------------------
+  [PASS (A)] explicit non-closure: LHCM repair item (2) U(1)_Y normalization is NOT closed  (documented in note section 5/6)
+  [PASS (A)] explicit non-closure: lepton-doublet eigenvalue normalization to −1 is admitted convention  (documented in note section 5/6)
+  [PASS (A)] explicit non-closure: SM photon Q = T_3 + Y/2 is NOT derived  (documented in note section 5/6)
+  [PASS (A)] explicit non-closure: LHCM is NOT promoted to retained by this block  (documented in note section 5/6)
+  [PASS (A)] explicit non-closure: HYPERCHARGE_IDENTIFICATION_NOTE remains audited_renaming  (documented in note section 5/6)
+  [PASS (A)] explicit non-closure: STANDARD_MODEL_HYPERCHARGE_UNIQUENESS remains proposed_retained, unaudited  (documented in note section 5/6)
+
+========================================================================================
+  TOTAL: PASS=64, FAIL=0
+========================================================================================
+
+----- stderr -----
+

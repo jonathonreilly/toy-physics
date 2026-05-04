@@ -1,0 +1,91 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_cp_phase_structural_identity.py
+runner_sha256: 94610edb0623536c7783c930369ea14b1941c27928c195867709050eba8184ca
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+CKM CP-phase structural identity theorem verification
+See docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: retained quark-block counts
+----------------------------------------------------------------------------------------
+  [PASS] quark block dimension is 2 x 3 = 6  (N = 6)
+  [PASS] A1 channel dimension is 1  (dim_A1 = 1)
+  [PASS] orthogonal channel dimension is 5  (dim_perp = 5)
+  [PASS] 1 + 5 decomposition closes the six-state block
+
+----------------------------------------------------------------------------------------
+Part 1: CP-plane radius and coordinates
+----------------------------------------------------------------------------------------
+  [PASS] A1 angular weight w_A1 = 1/6  (w_A1 = 1/6)
+  [PASS] orthogonal angular weight w_perp = 5/6  (w_perp = 5/6)
+  [PASS] angular weights sum to one  (1/6 + 5/6)
+  [PASS] retained CKM CP radius squared r^2 = 1/6
+  [PASS] rho^2 = r^2 w_A1 = 1/36  (rho^2 = 1/36)
+  [PASS] eta^2 = r^2 w_perp = 5/36  (eta^2 = 5/36)
+  [PASS] rho = 1/6  (rho = 1/6)
+  [PASS] eta = sqrt(5)/6  (eta = 0.372677996249965)
+  [PASS] rho^2 + eta^2 = 1/6
+
+----------------------------------------------------------------------------------------
+Part 2: CKM phase identities
+----------------------------------------------------------------------------------------
+  [PASS] cos^2(delta_CKM) = 1/6  (cos^2 = 1/6)
+  [PASS] sin^2(delta_CKM) = 5/6  (sin^2 = 5/6)
+  [PASS] cos^2 + sin^2 = 1
+  [PASS] tan^2(delta_CKM) = 5  (tan^2 = 5)
+  [PASS] tan(delta_CKM) = sqrt(5)
+  [PASS] delta = arccos(1/sqrt(6))
+  [PASS] delta = arctan(sqrt(5))
+  [PASS] delta numerical value is 65.905157... degrees  (delta = 65.905157447889 deg)
+
+----------------------------------------------------------------------------------------
+Part 3: atlas-Jarlskog factorisation
+----------------------------------------------------------------------------------------
+  [PASS] lambda^2 = alpha_s(v)/2
+  [PASS] A^2 = 2/3  (A^2 = 2/3)
+  [PASS] J_0 = lambda^6 A^2 eta = alpha_s(v)^3 sqrt(5)/72  (J_0 = 3.423746e-05)
+  alpha_s(v) from canonical plaquette surface = 0.103303816122
+  J_0 structural factorisation                = 3.423746e-05
+
+----------------------------------------------------------------------------------------
+Part 4: post-derivation observation comparators
+----------------------------------------------------------------------------------------
+  framework delta = 65.905157 deg
+  comparator delta = 65.500 +/- 1.000 deg
+  framework atlas J_0 = 3.423746e-05
+  angle-reconstructed comparator J = 3.304000e-05
+  PDG-style scalar comparator J    = 3.300000e-05
+  [PASS] framework delta lies inside the quoted 1-degree comparator band  (deviation = +0.405157 deg)
+  [PASS] framework atlas J_0 lies within 5% of the angle-reconstructed comparator
+  [PASS] framework atlas J_0 lies within 5% of the scalar PDG-style comparator
+
+----------------------------------------------------------------------------------------
+Part 5: summary
+----------------------------------------------------------------------------------------
+  STRUCTURAL IDENTITIES PACKAGED:
+    rho = 1/6
+    eta = sqrt(5)/6
+    rho^2 + eta^2 = 1/6
+    cos^2(delta_CKM) = 1/6
+    sin^2(delta_CKM) = 5/6
+    tan(delta_CKM) = sqrt(5)
+    delta_CKM = arccos(1/sqrt(6)) = arctan(sqrt(5))
+    J_0 = alpha_s(v)^3 sqrt(5) / 72
+
+  BOUNDARIES:
+    no new alpha_s(v) derivation
+    no new individual CKM-magnitude theorem beyond the parent atlas
+    no BSM, PMNS, or Majorana CP-phase claim
+
+========================================================================================
+  TOTAL: PASS=27, FAIL=0
+========================================================================================
+
+----- stderr -----
+

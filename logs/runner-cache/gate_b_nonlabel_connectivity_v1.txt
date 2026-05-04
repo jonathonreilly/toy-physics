@@ -1,0 +1,28 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_nonlabel_connectivity_v1.py
+runner_sha256: 3b4279cc1e3c8121c3cfb60663e276d509f292d06420a2eeb6014bfcd5d70e5f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 48.25
+status: ok
+----- stdout -----
+========================================================================
+GATE B NON-LABEL CONNECTIVITY V1
+  exact grid vs geometry-sector forward stencil vs KNN+floor
+========================================================================
+h=0.5, W=10, NL=25, seeds=4, z=[3, 4, 5], drift=0.2
+growth rule: template previous layer + drift, then geometry-only connectivity
+
+exact grid                  : 3/3 TOWARD (100%), F~M=1.00
+no-restore KNN+floor        : 0/12 TOWARD (0%), F~M=n/a
+geometry-sector stencil     : 12/12 TOWARD (100%), F~M=1.00
+
+Total time: 48s
+
+SAFE INTERPRETATION
+  This harness freezes one geometry-only forward-connectivity candidate.
+  It should be read as a bounded comparison on the no-restore grown family,
+  not as a full Gate B closure or a universal non-label connectivity theorem.
+
+----- stderr -----
+

@@ -1,0 +1,42 @@
+===== runner cache v1 =====
+runner: scripts/frontier_tensor_source_map_eta.py
+runner_sha256: 15b48cf33e30ff372e28c24e981ff77a0e488bc689a171d89b4d04839961ae9c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 10.19
+status: ok
+----- stdout -----
+Tensor source-to-channel map eta
+============================================================================
+source amplitude = 0.020
+
+Restricted source-to-channel matrices:
+  exact local O_h:
+[[4.442009e-03, 1.004149e-03],
+ [0.000000e+00, 3.666789e-02]]
+  finite-rank:
+[[4.049376e-03, 2.465364e-04],
+ [2.544101e-10, 4.973095e-02]]
+  mean:
+[[4.245693e-03, 6.253428e-04],
+ [1.272051e-10, 4.319942e-02]]
+  dominant-entry relative family spread: 1.212e+00
+
+Derived diagnostics:
+  O_h: det=1.628791e-04, singular_values=(3.668184e-02, 4.440320e-03), scalar_blind=True, additivity=(dG_0i=3.059e-08, dG_TF=7.806e-18)
+    channel entries: vec->G_0i=4.442009e-03, tensor->G_0i=1.004149e-03, vec->G_TF=0.000000e+00, tensor->G_TF=3.666789e-02
+  finite-rank: det=2.013793e-04, singular_values=(4.973157e-02, 4.049326e-03), scalar_blind=True, additivity=(dG_0i=6.850e-08, dG_TF=6.191e-11)
+    channel entries: vec->G_0i=4.049376e-03, tensor->G_0i=2.465364e-04, vec->G_TF=2.544101e-10, tensor->G_TF=4.973095e-02
+
+Checks:
+  [PASS] scalar Schur boundary action is unchanged under vector, tensor, and mixed probes
+  [PASS] the restricted tensor source map has rank two on the exact local O_h class
+  [PASS] the restricted tensor source map has rank two on the finite-rank class
+  [PASS] mixed tensor probes are locally additive on the exact local O_h class
+  [PASS] mixed tensor probes are locally additive on the finite-rank class
+  [PASS] the tensor source map is sharply constrained rather than scalar-degenerate
+
+SUMMARY: PASS=6 FAIL=0 TOTAL=6
+
+----- stderr -----
+

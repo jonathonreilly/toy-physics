@@ -1,0 +1,239 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_barred_pedoe_similarity_deficit_closed_form.py
+runner_sha256: 5d8e653b40c5700b2a69740b603dbb4f9e399bba341f3c8282135b44b15d0a0f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.01
+status: ok
+----- stdout -----
+========================================================================================
+Barred unitarity-triangle Pedoe similarity-deficit EXACT closed form audit
+See docs/CKM_BARRED_PEDOE_SIMILARITY_DEFICIT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Ground-up status verification of each cited authority
+----------------------------------------------------------------------------------------
+  RETAINED-TIER (load-bearing for closure):
+
+    [CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md]
+      Status (extracted): 'proposed_retained NLO CKM-structure corollary on the proposed_promoted atlas/axiom'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md
+
+    [CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md]
+      Status (extracted): 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+
+    [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md]
+      Status (extracted): 'proposed_retained standalone structural-identity theorem on `main`.'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+
+    [CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md]
+      Status (extracted): 'proposed_retained structural-identity subtheorem of the proposed_promoted CKM'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md
+
+
+----------------------------------------------------------------------------------------
+Extracting retained inputs from authority text
+----------------------------------------------------------------------------------------
+  rho_bar = (4 - alpha_s)/24:        FOUND
+  eta_bar = sqrt(5)(4 - alpha_s)/24: FOUND
+  N_pair extracted:                  n_pair  = 2
+  N_color extracted:                 n_color = 3
+  N_quark = N_pair * N_color:        FOUND
+  [PASS] NLO retains rho_bar = (4 - alpha_s)/24
+  [PASS] NLO retains eta_bar = sqrt(5)(4 - alpha_s)/24
+  [PASS] MAGNITUDES retains N_pair = 2
+  [PASS] MAGNITUDES retains N_color = 3
+  [PASS] MAGNITUDES retains N_quark = N_pair * N_color (=6)
+
+----------------------------------------------------------------------------------------
+P1: Pedoe's inequality (classical) on retained surface
+----------------------------------------------------------------------------------------
+  Pedoe LHS = a^2 (e^2 + f^2 - d^2) + b^2 (f^2 + d^2 - e^2) + c^2 (d^2 + e^2 - f^2)
+           = alpha_s**2/48 - alpha_s*alpha_s_prime/144 - 5*alpha_s/36 + alpha_s_prime**2/48 - 5*alpha_s_prime/36 + 5/9
+
+  Pedoe RHS = 16 K(alpha_s) K(alpha_s')
+           = 5*(alpha_s - 4)*(alpha_s_prime - 4)/144
+
+  Numerical Pedoe inequality verification:
+  alpha_s   alpha_s'   LHS         RHS         LHS - RHS
+   0.000     0.000    0.555556    0.555556    +0.0000000000   OK
+   0.100     0.000    0.541875    0.541667    +0.0002083333   OK
+   0.118     0.050    0.532523    0.532427    +0.0000963333   OK
+   0.200     0.118    0.512348    0.512208    +0.0001400833   OK
+  [PASS] P1: Pedoe inequality holds on the retained surface (LHS >= RHS)
+
+----------------------------------------------------------------------------------------
+P3: NEW closed form -- Pedoe similarity deficit = (alpha_s - alpha_s')^2 / 48
+----------------------------------------------------------------------------------------
+  Pedoe deficit = LHS - RHS
+               = alpha_s**2/48 - alpha_s*alpha_s_prime/24 + alpha_s_prime**2/48
+  Expected: (alpha_s - alpha_s')^2 / 48 = (alpha_s - alpha_s_prime)**2/48
+  Difference: 0
+  [PASS] P3: Pedoe deficit = (alpha_s - alpha_s')^2 / 48
+
+  Structural form: (alpha_s - alpha_s')^2 / (N_pair^4 N_color)
+                  = (alpha_s - alpha_s')^2 / 48
+  [PASS] P3 structural: Pedoe deficit = (alpha_s - alpha_s')^2 / (N_pair^4 N_color)
+  [PASS] P3 structural: 48 = N_pair^4 N_color = 16 * 3
+  Nonnegativity certificate: 48 * deficit - (alpha_s - alpha_s')^2 = 0
+  [PASS] P3 nonnegativity: 48*deficit is exactly the square (alpha_s - alpha_s')^2
+
+----------------------------------------------------------------------------------------
+P4: Special case -- alpha_s' = 0 (LO triangle)
+----------------------------------------------------------------------------------------
+  PedoeDeficit(alpha_s, 0) = alpha_s**2/48
+  Expected: alpha_s^2 / 48 = alpha_s**2/48
+  Difference: 0
+  [PASS] P4: PedoeDeficit(alpha_s, 0) = alpha_s^2 / 48
+
+  Numerical: PedoeDeficit at canonical alpha_s ~ 0.118:
+    alpha_s = 0.000:  deficit = 0.0000000000
+    alpha_s = 0.118:  deficit = 0.0002900833
+    alpha_s = 0.300:  deficit = 0.0018750000
+    alpha_s = 0.500:  deficit = 0.0052083333
+    alpha_s = 1.000:  deficit = 0.0208333333
+  [PASS] P4 LO sanity: deficit at alpha_s = 0.118 ~ 2.9e-4
+
+----------------------------------------------------------------------------------------
+P5: Selection rule -- Pedoe deficit depends ONLY on (alpha_s - alpha_s')^2
+----------------------------------------------------------------------------------------
+  Substitute u = alpha_s - alpha_s', v = alpha_s + alpha_s':
+  Pedoe deficit = u**2/48
+  (Should be u^2/48 with NO v-dependence.)
+
+  d(deficit)/dv = 0
+  deficit - u^2/48 = 0
+  [PASS] P5: Pedoe deficit independent of (alpha_s + alpha_s')
+  [PASS] P5: Pedoe deficit = (alpha_s - alpha_s')^2 / 48 EXACTLY (no higher orders)
+
+  Expanded deficit = alpha_s**2/48 - alpha_s*alpha_s_prime/24 + alpha_s_prime**2/48
+  coefficient(alpha_s * alpha_s') = -1/24
+  higher-degree monomials = []
+  [PASS] P5: only mixed quadratic coefficient is the fixed square coefficient -1/24
+  [PASS] P5: no higher-degree monomials occur in alpha_s or alpha_s'
+
+----------------------------------------------------------------------------------------
+P6: Metric interpretation -- d_Pedoe(alpha_s, alpha_s') = |alpha_s - alpha_s'| / (4 sqrt(3))
+----------------------------------------------------------------------------------------
+  d_Pedoe (definition: sqrt(deficit)):
+  alpha_s   alpha_s'   d_Pedoe        |delta|/sqrt(48)   match?
+   0.000     0.000    0.0000000000    0.0000000000   OK
+   0.100     0.000    0.0144337567    0.0144337567   OK
+   0.118     0.050    0.0098149546    0.0098149546   OK
+   0.300     0.050    0.0360843918    0.0360843918   OK
+  [PASS] P6: d_Pedoe(alpha_s, alpha_s') = |alpha_s - alpha_s'| / (4 sqrt(3))
+
+  Metric axioms:
+  [PASS] P6 metric (i): d_Pedoe(x, x) = 0 (reflexivity)
+  [PASS] P6 metric (ii): d_Pedoe(x, y) = d_Pedoe(y, x) (symmetry)
+  d_xz = 0.072169, d_xy + d_yz = 0.072169
+  [PASS] P6 metric (iii): triangle inequality d_Pedoe(x, z) <= d_Pedoe(x, y) + d_Pedoe(y, z)
+
+----------------------------------------------------------------------------------------
+P7: Pedoe LHS factorization -- Pedoe LHS = 16 K K' + (alpha_s - alpha_s')^2/48
+----------------------------------------------------------------------------------------
+  Pedoe LHS (computed) = alpha_s**2/48 - alpha_s*alpha_s_prime/144 - 5*alpha_s/36 + alpha_s_prime**2/48 - 5*alpha_s_prime/36 + 5/9
+  Expected: 16 K K' + (alpha_s - alpha_s')^2/48 = 5*(alpha_s - 4)*(alpha_s_prime - 4)/144 + (alpha_s - alpha_s_prime)**2/48
+  Difference: 0
+  [PASS] P7: Pedoe LHS = 16 K K' + (alpha_s - alpha_s')^2 / 48
+
+  => On the retained surface, Pedoe LHS factors as the SUM of:
+       (i) the 'similarity term' 16 K(alpha_s) K(alpha_s'),
+      (ii) the 'similarity gap' (alpha_s - alpha_s')^2 / 48.
+
+----------------------------------------------------------------------------------------
+P8: Symmetry, reflexivity, and metric structure
+----------------------------------------------------------------------------------------
+  [PASS] P8: PedoeDeficit symmetric under alpha_s <-> alpha_s'
+  [PASS] P8: PedoeDeficit(alpha_s, alpha_s) = 0
+
+  PedoeDeficit symbolically: (alpha_s - alpha_s')^2 / 48
+  At alpha_s = alpha_s': deficit = 0 (reflexivity).
+  At alpha_s != alpha_s': deficit > 0 strictly (Pedoe strict).
+  [PASS] P8: PedoeDeficit > 0 strictly when alpha_s != alpha_s' (no two distinct retained NLO triangles are similar)
+
+----------------------------------------------------------------------------------------
+P9: LO triangle is similar to itself only -- Pedoe deficit = 0 iff alpha_s = 0
+----------------------------------------------------------------------------------------
+  PedoeDeficit(0, 0) = 0
+  [PASS] P9: PedoeDeficit(LO, LO) = 0 (LO similar to itself)
+  PedoeDeficit(0.1, 0.2) = 1/4800 = 0.0002083333
+  [PASS] P9: PedoeDeficit(0.1, 0.2) > 0 (distinct NLO not similar)
+
+----------------------------------------------------------------------------------------
+Package wiring: Pedoe theorem is captured by repo truth surfaces
+----------------------------------------------------------------------------------------
+  docs/CANONICAL_HARNESS_INDEX.md: OK
+  [PASS] Package surface wired: docs/CANONICAL_HARNESS_INDEX.md
+  docs/publication/ci3_z3/CLAIMS_TABLE.md: OK
+  [PASS] Package surface wired: docs/publication/ci3_z3/CLAIMS_TABLE.md
+  docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md: OK
+  [PASS] Package surface wired: docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md
+  docs/publication/ci3_z3/DERIVATION_ATLAS.md: OK
+  [PASS] Package surface wired: docs/publication/ci3_z3/DERIVATION_ATLAS.md
+  docs/publication/ci3_z3/RESULTS_INDEX.md: OK
+  [PASS] Package surface wired: docs/publication/ci3_z3/RESULTS_INDEX.md
+  docs/publication/ci3_z3/PUBLICATION_MATRIX.md: OK
+  [PASS] Package surface wired: docs/publication/ci3_z3/PUBLICATION_MATRIX.md
+  docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md: OK
+  [PASS] Package surface wired: docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md
+  docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md: OK
+  [PASS] Package surface wired: docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md
+  docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md: OK
+  [PASS] Package surface wired: docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md
+
+----------------------------------------------------------------------------------------
+Summary of NEW retained content
+----------------------------------------------------------------------------------------
+  Inputs (retained-tier, ground-up Status verified):
+    CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA  (retained)
+    CKM_MAGNITUDES_STRUCTURAL_COUNTS         (retained)
+    CKM_CP_PHASE_STRUCTURAL_IDENTITY         (retained)
+    CKM_ATLAS_TRIANGLE_RIGHT_ANGLE           (retained)
+
+  NEW retained closed forms:
+
+    (P1) Pedoe inequality holds on the retained surface (numerical sweep).
+
+    (P3) NEW headline closed form for Pedoe similarity deficit:
+
+           PedoeDeficit(alpha_s, alpha_s')
+              =  (alpha_s - alpha_s')^2 / 48
+              =  (alpha_s - alpha_s')^2 / (N_pair^4 N_color).
+
+    (P4) Special case (LO triangle): PedoeDeficit(alpha_s, 0) = alpha_s^2 / 48.
+
+    (P5) Selection rule: deficit depends ONLY on (alpha_s - alpha_s')^2.
+         - NO residual dependence on alpha_s + alpha_s'.
+         - The only alpha_s * alpha_s' term is the fixed -1/24 square coefficient.
+         - NO higher-order corrections in alpha_s or alpha_s'.
+         - The (alpha_s - alpha_s')^2 form is EXACT, not a Taylor truncation.
+
+    (P6) Metric interpretation:
+         d_Pedoe(alpha_s, alpha_s')  =  |alpha_s - alpha_s'| / (4 sqrt(3))
+                                     =  |alpha_s - alpha_s'| / (N_pair^2 sqrt(N_color)).
+         The retained alpha_s parameter space carries a EUCLIDEAN
+         similarity-deficit metric, scaled by 1/(N_pair^2 sqrt(N_color)).
+
+    (P7) Pedoe LHS factorisation:
+         Pedoe LHS  =  16 K(alpha_s) K(alpha_s') + (alpha_s - alpha_s')^2 / 48.
+
+    (P8) Metric properties: symmetric, reflexive, strictly positive for
+         distinct alpha_s.
+
+    (P9) Two retained NLO triangles are similar iff alpha_s = alpha_s'.
+         The retained protected-gamma_bar surface is a one-parameter
+         family of triangles, no two distinct members of which are similar.
+
+========================================================================================
+TOTAL: PASS=39, FAIL=0
+========================================================================================
+
+----- stderr -----
+

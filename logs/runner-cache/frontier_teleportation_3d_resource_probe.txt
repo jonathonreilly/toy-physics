@@ -1,0 +1,62 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_3d_resource_probe.py
+runner_sha256: 56ef11fb3a3cf5b24670316075dab19e184ef39bde47a97386b6e8b96b3d54a2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.31
+status: ok
+----- stdout -----
+3D POISSON TASTE-QUBIT TELEPORTATION RESOURCE PROBE
+Status: planning / first artifact; ordinary quantum state teleportation only
+Geometry: 3D side=2 dense two-species Hamiltonian; retained last taste axis
+Claim boundary: no matter, mass, charge, energy, object, or faster-than-light transport
+Input probes: 70 states (six axis states + 64 random, seed=20260425)
+3D side-2 retained-axis resource table:
+  case                                G    Sfull    Bell* label     Phi+    F_phi   F_best     Slog      neg     noSig  hi
+  3d_side2_null                       0  2.00000 0.500000  Psi+ 0.500000 0.666667 0.666667  2.00000 0.000000 2.776e-16  no
+  3d_side2_G100                     100  2.16713 0.887978  Psi+ 0.112022 0.408015 0.925319  2.53149 0.387978 2.498e-16  no
+  3d_side2_G500                     500  2.75551 0.991220  Psi+ 0.008780 0.339187 0.994146  2.80370 0.491220 2.220e-16 yes
+  3d_side2_G1000                  1e+03  2.80922 0.997724  Psi+ 0.002276 0.334850 0.998483  2.82200 0.497724 2.220e-16 yes
+
+Case: 3d_side2_null
+  setup: dim=3 side=2 N=8 H2_dim=64 envs/logical_qubit=4 mass=0 G=0
+  resource: E0=-6, full CHSH=2.000000, logical CHSH=2.000000, purity=1.000000, negativity=0.000000
+  Bell frame: best=0.500000 (Psi+), frame bits(z,x)=(0, 1), Phi+ overlap before frame=0.500000
+  fidelities: fixed-Phi+ F_avg=0.666667, best-frame F_avg=0.666667, sample mean/min/max=0.675489/0.500000/1.000000
+  Bob before message: distance to framed resource marginal=4.475e-16, pairwise input distance=2.776e-16, marginal bias from I/2=5.000e-01
+
+Case: 3d_side2_G100
+  setup: dim=3 side=2 N=8 H2_dim=64 envs/logical_qubit=4 mass=0 G=100
+  resource: E0=-13.714694874, full CHSH=2.167134, logical CHSH=2.531487, purity=0.996702, negativity=0.387978
+  Bell frame: best=0.887978 (Psi+), frame bits(z,x)=(0, 1), Phi+ overlap before frame=0.112022
+  fidelities: fixed-Phi+ F_avg=0.408015, best-frame F_avg=0.925319, sample mean/min/max=0.927295/0.887978/1.000000
+  Bob before message: distance to framed resource marginal=4.441e-16, pairwise input distance=2.498e-16, marginal bias from I/2=3.128e-01
+
+Case: 3d_side2_G500
+  setup: dim=3 side=2 N=8 H2_dim=64 envs/logical_qubit=4 mass=0 G=500
+  resource: E0=-57.8591266543, full CHSH=2.755511, logical CHSH=2.803703, purity=0.999967, negativity=0.491220
+  Bell frame: best=0.991220 (Psi+), frame bits(z,x)=(0, 1), Phi+ overlap before frame=0.008780
+  fidelities: fixed-Phi+ F_avg=0.339187, best-frame F_avg=0.994146, sample mean/min/max=0.994301/0.991220/1.000000
+  Bob before message: distance to framed resource marginal=4.441e-16, pairwise input distance=2.220e-16, marginal bias from I/2=9.320e-02
+
+Case: 3d_side2_G1000
+  setup: dim=3 side=2 N=8 H2_dim=64 envs/logical_qubit=4 mass=0 G=1000
+  resource: E0=-114.870237352, full CHSH=2.809224, logical CHSH=2.821998, purity=0.999998, negativity=0.497724
+  Bell frame: best=0.997724 (Psi+), frame bits(z,x)=(0, 1), Phi+ overlap before frame=0.002276
+  fidelities: fixed-Phi+ F_avg=0.334850, best-frame F_avg=0.998483, sample mean/min/max=0.998523/0.997724/1.000000
+  Bob before message: distance to framed resource marginal=4.441e-16, pairwise input distance=2.220e-16, marginal bias from I/2=4.764e-02
+
+Acceptance gates:
+  3D side-2 null control stays non-resource: PASS
+  at least one non-null 3D side-2 high Bell-frame resource: PASS
+  Bob pre-message input-independence is clean: PASS
+  retained-axis extraction used; raw xi_5 is not used as traced Z: PASS
+  side>2 scaling not claimed: PASS
+
+Verdict:
+  best row 3d_side2_G1000: Bell*=0.997724 (Psi+), best-frame F_avg=0.998483, fixed-Phi+ F_avg=0.334850
+  The smallest 3D side-2 dense probe has a high-fidelity Bell-frame logical resource, but the Bell frame must be tracked explicitly.
+  Larger 3D surfaces are not audited here; side=4 dense two-species diagonalization is outside this first bounded artifact.
+
+----- stderr -----
+

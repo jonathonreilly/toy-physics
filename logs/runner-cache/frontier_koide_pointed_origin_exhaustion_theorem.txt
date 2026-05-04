@@ -1,0 +1,89 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_pointed_origin_exhaustion_theorem.py
+runner_sha256: 88aa07c2002621c759e34d47c597c5c6882cf3049f5c389bb20f18620b5ac55b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.61
+status: ok
+----- stdout -----
+
+========================================================================================
+A. Q source-origin exhaustion
+========================================================================================
+[PASS] A.1 normalized Q response closes only at the pointed source origin
+       Y=(1+a,1-a), Q=2/(3*(a + 1)), Q=2/3 -> a=[0]
+[PASS] A.2 finite polynomial invariants of the source-translation fibre are constant
+       P(a+r)=P(a) -> [{p1_a: 0, p2_a: 0, p3_a: 0, p4_a: 0}]
+[PASS] A.3 source translations give retained-equivalent non-Koide countermodels
+       a=1/3 -> K_TL=-3/8, Q=1/2
+
+========================================================================================
+B. Brannen CP1 selector exhaustion
+========================================================================================
+[PASS] B.1 the only equivariant trace-one mark is scalar, not rank-one
+       commuting trace-one mark=[{x: 1/2, y: 0}]; (I/2)^2-I/2=Matrix([[-1/4, 0], [0, -1/4]])
+[PASS] B.2 scalar retained marks are CP1-line blind
+       <line(alpha)|mu I|line(alpha)>=mu
+[PASS] B.3 CP1 line choice changes the open spectator while preserving scalar data
+       alpha=0 gives spectator=0; alpha=pi/4 gives spectator=1/2.
+
+========================================================================================
+C. Endpoint torsor exhaustion
+========================================================================================
+[PASS] C.1 finite polynomial invariants of the endpoint torsor are constant
+       P(c+r)=P(c) -> [{p1_c: 0, p2_c: 0, p3_c: 0, p4_c: 0}]
+[PASS] C.2 endpoint differences and affine gluing are torsor-translation invariant
+       Absolute c changes, differences and affine gluing do not.
+[PASS] C.3 endpoint unit basepoint is exactly the missing pointed condition
+       Unit endpoint requires c=0; unpointed torsor data allow all c.
+
+========================================================================================
+D. Combined residual atlas
+========================================================================================
+[PASS] D.1 a pointed origin law would imply both dimensionless values
+       Q=2/3, delta=2/9
+[PASS] D.2 retained-equivalent unpointed countermodels change both readouts
+       a=1/3, alpha=pi/4, c=1/7 -> Q=1/2, delta=16/63
+[PASS] D.3 value-only delta closure can be faked by target cancellation
+       alpha=pi/4 plus c=eta*sin(alpha)^2 gives delta=eta while retaining a spectator.
+
+========================================================================================
+E. Boundary
+========================================================================================
+[PASS] E.1 no origin-free retained invariant selects the closing representative in this atlas
+       The residual fibres are translation/line torsors under the unpointed tests.
+[PASS] E.2 the next positive theorem is a retained physical source/boundary-origin law
+       It must derive background-zero/Z-erasure, selected-line boundary source, and endpoint basepoint.
+[PASS] E.3 this theorem does not claim retained Koide closure
+       It proves exhaustion/necessity in the residual atlas, not the positive physical law.
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 15/15
+  [PASS] A.1 normalized Q response closes only at the pointed source origin
+  [PASS] A.2 finite polynomial invariants of the source-translation fibre are constant
+  [PASS] A.3 source translations give retained-equivalent non-Koide countermodels
+  [PASS] B.1 the only equivariant trace-one mark is scalar, not rank-one
+  [PASS] B.2 scalar retained marks are CP1-line blind
+  [PASS] B.3 CP1 line choice changes the open spectator while preserving scalar data
+  [PASS] C.1 finite polynomial invariants of the endpoint torsor are constant
+  [PASS] C.2 endpoint differences and affine gluing are torsor-translation invariant
+  [PASS] C.3 endpoint unit basepoint is exactly the missing pointed condition
+  [PASS] D.1 a pointed origin law would imply both dimensionless values
+  [PASS] D.2 retained-equivalent unpointed countermodels change both readouts
+  [PASS] D.3 value-only delta closure can be faked by target cancellation
+  [PASS] E.1 no origin-free retained invariant selects the closing representative in this atlas
+  [PASS] E.2 the next positive theorem is a retained physical source/boundary-origin law
+  [PASS] E.3 this theorem does not claim retained Koide closure
+
+KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM=TRUE
+RETAINED_UNPOINTED_DATA_FORCE_POINTED_ORIGIN=FALSE
+POINTED_ORIGIN_LAW_WOULD_CLOSE_DIMENSIONLESS_LANE_WITHIN_RESIDUAL_ATLAS=TRUE
+POINTED_ORIGIN_LAW_IS_NECESSARY_WITHIN_RESIDUAL_ATLAS=TRUE
+KOIDE_DIMENSIONLESS_LANE_CLOSED_BY_THIS_RUNNER=FALSE
+RESIDUAL_PRIMITIVE=retained_physical_source_boundary_origin_laws
+NEXT_THEOREM=derive_physical_source_boundary_origin_laws_from_retained_charged_lepton_physics
+
+----- stderr -----
+

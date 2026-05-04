@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_full_lattice_schur_inheritance.py
+runner_sha256: 6b4ef9cdac0271c70660a6bb58f4a1edc2720af81eaff68d12a5a5e5aaa7d334
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.68
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: full taste-cube C_3 action preserves the retained T_1 lane
+========================================================================================
+  [PASS] The full C^8 corner carrier splits into O_0, T_1, T_2, O_3 under the spatial C_3 cycle  (basis ordered as 000 | 100,010,001 | 110,011,101 | 111)
+  [PASS] T_1 is invariant under the full taste-cube C_3 action  (images=[(0, 1, 0), (0, 0, 1), (1, 0, 0)])
+  [PASS] T_2 is invariant under the full taste-cube C_3 action  (images=[(0, 1, 1), (1, 0, 1), (1, 1, 0)])
+  [PASS] O_0 and O_3 are fixed singlets
+  [PASS] [NUMERIC] The restricted action on T_1 is exactly the retained 3-cycle matrix  (C_T1=[[0, 0, 1], [1, 0, 0], [0, 1, 0]])
+  [PASS] [NUMERIC] The restricted action on T_2 is the same regular C_3 representation
+
+========================================================================================
+PART 2: exact T_1 <-> T_2 Schur reduction stays circulant
+========================================================================================
+  [PASS] A bare scalar T_1 block plus C_3-covariant T_1<->T_2 couplings yields an exact Schur operator  (S = A - B D^{-1} B^T with A = a I_3, D = d I_3, B circulant)
+  [PASS] The exact Schur operator commutes with the retained 3-cycle
+  [PASS] Full-carrier couplings can generate a nontrivial off-diagonal effective operator on T_1  (S01=(-p*q - p*r - q*r)/d)
+  [PASS] [NUMERIC] The induced off-diagonal term is genuinely nonzero for generic couplings  (sample=-1.57142857142857)
+
+========================================================================================
+PART 3: random positive full-C^8 parents reduce to circulant T_1 Schur blocks
+========================================================================================
+  [PASS] [NUMERIC] Every tested positive C_3-covariant full-C^8 parent yields a T_1 Schur block commuting with C_3  (seed0: commute=5.87e-16, offdiag=0.727; seed1: commute=5.40e-15, offdiag=2.948; seed2: commute=3.35e-15, offdiag=4.992; seed3: commute=5.16e-15, offdiag=2.689; seed4: commute=1.43e-15, offdiag=0.465)
+  [PASS] [NUMERIC] The reduced T_1 Schur blocks remain Hermitian
+  [PASS] [NUMERIC] Coupling to the rest of the taste cube changes the effective T_1 operator without breaking its circulant class
+
+========================================================================================
+PART 4: an extra spectator/internal factor still inherits the same T_1 symmetry
+========================================================================================
+  [PASS] [NUMERIC] Adding a spectator/internal doubling does not by itself break the inherited C_3 symmetry on the target T_1 block  (seed0: commute=1.40e-15; seed1: commute=4.43e-15; seed2: commute=1.04e-14)
+
+========================================================================================
+PART 5: axis-diagonal circulant Schur blocks collapse to scalar identity
+========================================================================================
+  [PASS] A general Hermitian circulant effective block has equal diagonal entries
+  [PASS] If the effective T_1 block is axis-diagonal, its off-diagonal parameter must vanish  (diagonality forces x = y = 0)
+  [PASS] Therefore any axis-diagonal circulant Schur block is a scalar multiple of I_3
+
+Interpretation:
+  The positive-parent obstruction is not merely a bare-hw=1 artifact.
+  Enlarging the carrier to the full taste cube, or even adding extra
+  spectator/internal factors, still leaves the induced T_1 effective
+  operator circulant whenever the reduction is the usual C_3-equivariant
+  Schur/effective-operator map. So a physically larger carrier alone does
+  not rescue the Koide lane. The genuine escape hatches are different:
+  change the readout, change the reduction map, mix the physical carrier
+  beyond an isolated T_1 target, or break the strict charged-lepton C_3
+  covariance in a controlled retained way.
+
+PASS=17 FAIL=0
+
+----- stderr -----
+

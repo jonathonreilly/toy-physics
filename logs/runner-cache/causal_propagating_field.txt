@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/causal_propagating_field.py
+runner_sha256: c429d9946c38ec8d1e959a8107a971f1974366c8449e24fb715dd785fed3bbfd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+
+----- stderr -----
+

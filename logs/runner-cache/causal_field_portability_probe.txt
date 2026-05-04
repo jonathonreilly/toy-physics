@@ -1,0 +1,45 @@
+===== runner cache v1 =====
+runner: scripts/causal_field_portability_probe.py
+runner_sha256: 4135d1d7ad94de64f5d1e6c0d5525a02dc110e9dec70c298d4fc46eba6eb6d48
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.49
+status: ok
+----- stdout -----
+==================================================================================================
+CAUSAL FIELD PORTABILITY PROBE
+  exact-null controls first, then cross-family forward-only and dynamic-cone ratios
+==================================================================================================
+Question:
+Does the causal propagating-field observable from the center grown family survive onto the second and third portable families?
+
+families=3, seeds=6, source_layer=8, K=5.0
+source anchor target: (y, z)=(0.0, 3.0)
+field strength = 5.0e-05, field eps = 0.1
+dynamic cone values = [1.0, 0.5]
+
+ZERO-NUL CONTROL
+  max |delta_y| across families = 0.000e+00
+  max |field| across families = 0.000e+00
+  -> exact-null control survives on the cross-family replay
+
+CROSS-FAMILY OBSERVABLE
+                family     inst delta  forward delta   fwd/inst  dyn(1.0)/inst  dyn(0.5)/inst
+--------------------------------------------------------------------------------------------------
+   center grown family +2.921e-07±6.8e-07 +1.951e-07±1.8e-07      0.668          1.456          0.938
+                                                     (c=1 delta +4.253e-07±1.6e-07, c=0.5 delta +2.741e-07±2.1e-07)
+     portable family 2 +4.802e-07±5.3e-07 +1.758e-07±1.3e-07      0.366          0.732          0.728
+                                                     (c=1 delta +3.517e-07±1.5e-07, c=0.5 delta +3.496e-07±1.9e-07)
+     portable family 3 +1.927e-07±5.7e-07 +1.522e-07±1.7e-07      0.790          1.623          1.080
+                                                     (c=1 delta +3.128e-07±1.6e-07, c=0.5 delta +2.081e-07±1.5e-07)
+
+SAFE READ
+  forward-only ratio spread across the three families = 0.423
+  dynamic(c=0.5)/instantaneous ratio spread = 0.352
+  - The exact-null control stays exact on all three families.
+  - The center family stays near the retained forward-only ratio, but the second and third families peel away instead of tracking it cleanly.
+  - The finite-cone ratio also shifts by family, so this probe freezes a diagnosed family boundary rather than a cross-family portability claim.
+  - This is a bounded portability probe, not a field-theory derivation.
+
+----- stderr -----
+

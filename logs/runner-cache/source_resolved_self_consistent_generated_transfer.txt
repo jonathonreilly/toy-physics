@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/source_resolved_self_consistent_generated_transfer.py
+runner_sha256: 9ebe338a166658ba60715c131e624f2ab9002692ccb8111cff9b09eb8739a391
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+====================================================================================
+SOURCE-RESOLVED SELF-CONSISTENT GENERATED TRANSFER
+  compact generated DAG family, one self-consistency update
+====================================================================================
+family seeds=4, layers=16, nodes/layer=24, connect_radius=3.2
+kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.50, field gain=1.335386e+02
+source strengths=[0.0001, 0.0002, 0.0004, 0.0008]
+observable: detector centroid y-shift relative to free propagation
+reduction check: source strength 0 should recover free propagation exactly
+
+REDUCTION CHECK
+  seed 0: zero-source shift = +0.000000e+00
+  seed 1: zero-source shift = +0.000000e+00
+  seed 2: zero-source shift = +0.000000e+00
+  seed 3: zero-source shift = +0.000000e+00
+  max |zero-source shift| = 0.000e+00
+
+       s         inst    self-cons   self/inst   sign
+----------------------------------------------------------
+  0.0001 -6.835015e-02 -8.435233e-02       1.234  3/4 
+  0.0002 -9.454729e-02 -8.893522e-02       0.941  3/4 
+  0.0004 -1.282711e-01 -7.117551e-02       0.555  3/4 
+  0.0008 -1.673655e-01 -4.548761e-02       0.272  3/4 
+
+SAFE READ
+  exact zero-source reduction: max |delta| = 0.000e+00
+  instantaneous F~M exponent: 0.43
+  self-consistent Green F~M exponent: -0.30
+  TOWARD rows: 0/4
+  mean |self/inst| ratio: 0.750
+  this is a generated-family transfer test, not yet a full self-consistent
+  field sector
+
+----- stderr -----
+

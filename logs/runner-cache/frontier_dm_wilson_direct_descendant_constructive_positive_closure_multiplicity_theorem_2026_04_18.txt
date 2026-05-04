@@ -1,0 +1,51 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_2026_04_18.py
+runner_sha256: 770fa16a829d2f3c3769a515860d7538b4399386e5fcfc1a40acbf30ca845e05
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.76
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT CONSTRUCTIVE POSITIVE CLOSURE MULTIPLICITY
+========================================================================================
+
+========================================================================================
+PART 1: THE REPO ALREADY HAS THE NEEDED CONSTRUCTIVE AND POSITIVE-BRANCH INPUTS
+========================================================================================
+  [PASS] The constructive continuity note states that the constructive chamber contains an exact eta = 1 point
+  [PASS] The positive-branch insufficiency note already says positive branch plus constructive signs is not enough
+
+========================================================================================
+PART 2: THREE DISTINCT CONSTRUCTIVE POSITIVE FAMILIES EACH CROSS EXACT CLOSURE
+========================================================================================
+  [PASS] Family A stays on the fixed native seed surface  ((xbar,ybar)=(0.563333333333,0.306666666667))
+  [PASS] Family A endpoints both stay inside the constructive positive branch  (Delta_src endpoints=(0.000800423892,0.000798202133))
+  [PASS] Family A endpoints lie on opposite sides of exact closure  ((eta_lo,eta_hi)=(0.999827290444,1.000172032332))
+  [PASS] Family A therefore contains an exact constructive positive eta = 1 root  (delta_root=1.887338511710)
+  [PASS] Family B stays on the fixed native seed surface  ((xbar,ybar)=(0.563333333333,0.306666666667))
+  [PASS] Family B endpoints both stay inside the constructive positive branch  (Delta_src endpoints=(0.019999278520,0.019977813982))
+  [PASS] Family B endpoints lie on opposite sides of exact closure  ((eta_lo,eta_hi)=(1.000355171609,0.999645825117))
+  [PASS] Family B therefore contains an exact constructive positive eta = 1 root  (delta_root=1.596501696083)
+  [PASS] Family C stays on the fixed native seed surface  ((xbar,ybar)=(0.563333333333,0.306666666667))
+  [PASS] Family C endpoints both stay inside the constructive positive branch  (Delta_src endpoints=(0.013109630346,0.013105435893))
+  [PASS] Family C endpoints lie on opposite sides of exact closure  ((eta_lo,eta_hi)=(1.000210552142,0.999789986336))
+  [PASS] Family C therefore contains an exact constructive positive eta = 1 root  (delta_root=2.199356725683)
+
+========================================================================================
+PART 3: THE THREE EXACT ROOTS ARE DISTINCT
+========================================================================================
+  [PASS] The three witness delta-intervals are pairwise disjoint  (intervals=[(1.88233895, 1.89233895), (1.5915018, 1.6015018), (2.19435677, 2.20435677)])
+  [PASS] The resulting exact roots are pairwise distinct in parameter space  (min separation=0.390174)
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] Exact closure plus positive branch plus constructive signs is still non-unique  (the branch already contains at least three distinct exact eta = 1 points)
+
+========================================================================================
+SUMMARY: PASS=17 FAIL=0
+========================================================================================
+
+----- stderr -----
+

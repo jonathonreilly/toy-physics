@@ -1,0 +1,76 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_selector_nonuniversal_support_reduction.py
+runner_sha256: 4b763b50081d322acab4cfafbd406e3993fd4d67c617c8d3ed6041ecff97b414
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+PMNS SELECTOR: NON-UNIVERSAL SUPPORT REDUCTION
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - Lepton shared-Higgs universality collapse
+  - Lepton shared-Higgs universality underdetermination
+  - PMNS selector sector-odd reduction
+  - Universal GR A1 invariant section (structural framing only)
+
+Question:
+  Once the missing PMNS selector is known to be sector-odd, can the
+  current bank sharpen where it may be nonzero?
+
+========================================================================================
+PART 1: THE UNIVERSAL CLASSES ARE SIGMA-FIXED
+========================================================================================
+  [PASS] The universal single-offset class U1 is fixed by sector exchange
+  [PASS] The universal two-offset class U2 is fixed by sector exchange
+  [PASS] The non-universal neutrino-oriented class and charged-lepton-oriented class are exchanged
+  [PASS] So the reduced class surface splits into a sigma-fixed universal locus plus a non-universal orbit  (fixed locus={U1,U2}, moving orbit={N_nu,N_e})
+
+  The exact exchange geometry is therefore already rigid enough to
+  separate a fixed universal locus from the moving non-universal pair.
+
+========================================================================================
+PART 2: ANY SECTOR-ODD SELECTOR VANISHES ON THE FIXED UNIVERSAL LOCUS
+========================================================================================
+  [PASS] Antisymmetrization forces the odd part on U1 to vanish  (F_-(U1)=0.00e+00)
+  [PASS] Antisymmetrization forces the odd part on U2 to vanish  (F_-(U2)=0.00e+00)
+  [PASS] The non-universal orbit can carry a nonzero odd selector  (F_-(N_nu)=1.500, F_-(N_e)=-1.500)
+  [PASS] The odd selector flips sign across the non-universal orbit  (sum=0.00e+00)
+
+  So once the selector is reduced to its sector-odd part, it is
+  automatically blind to the universal fixed locus.
+
+========================================================================================
+PART 3: THE MISSING OBJECT IS SUPPORTED ONLY ON UNIVERSALITY FAILURE
+========================================================================================
+  [PASS] The collapse theorem says one-sided minimal branches require universality failure
+  [PASS] The underdetermination theorem says both universal and non-universal classes remain admissible
+  [PASS] The sector-odd reduction theorem identifies the missing object as sector-odd
+  [PASS] The atlas carries all three selector-side inputs
+  [PASS] The GR A1 note records the structural pattern of an exact invariant locus plus moving complement
+  [PASS] The note concludes that the missing selector is supported only on the non-universal locus
+
+  Therefore the remaining selector is now sharpened one step further:
+    - it must be sector-odd,
+    - it must be mixed/inter-sector,
+    - and it can be nonzero only on the non-universal locus.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-bank answer:
+    - the universal one-offset and two-offset classes are sigma-fixed
+    - any sector-odd selector vanishes on sigma-fixed points
+    - so the missing PMNS selector can be nonzero only on the
+      non-universal locus
+    - equivalently, the minimal missing object must detect
+      universality failure and orient it
+
+  This is a reduction theorem only; it does not construct the bridge.
+
+PASS=14  FAIL=0
+
+----- stderr -----
+

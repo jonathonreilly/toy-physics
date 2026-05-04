@@ -1,0 +1,38 @@
+===== runner cache v1 =====
+runner: scripts/electric_sign_law_harness.py
+runner_sha256: 3d3241d5823bb46d8d16c8240ac6767a26beed7bdce41b94097b13ec140af098
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.60
+status: ok
+----- stdout -----
+========================================================================================
+ELECTRIC-SIGN-LAW HARNESS
+  Fixed 3D ordered-lattice family
+  h=0.5, W=8, L=12, source_z=5.0, strength=5e-05
+  Goal: test whether a sign-flipped phase valley gives like-charge repulsion and unlike-charge attraction
+========================================================================================
+Free centroid baseline: -0.00000000
+
+SOURCE CHARGE: -1
+  test_q     centroid        delta   expected  verdict
+  ----------------------------------------------------
+      -1  -0.00016872  -0.00016872      repel     PASS
+       0  -0.00000000  +0.00000000       zero     PASS
+       1  +0.00016872  +0.00016872    attract     PASS
+
+SOURCE CHARGE: +1
+  test_q     centroid        delta   expected  verdict
+  ----------------------------------------------------
+      -1  +0.00016872  +0.00016872    attract     PASS
+       0  -0.00000000  +0.00000000       zero     PASS
+       1  -0.00016872  -0.00016872      repel     PASS
+
+SAFE READ
+  - Like signs produce a phase hill and repel on this retained ordered family.
+  - Unlike signs produce a phase valley and attract.
+  - Neutral charge gives no measurable shift to printed resolution.
+  - This is an electric-like sign law on the lattice, not a derivation of full electromagnetism.
+
+----- stderr -----
+

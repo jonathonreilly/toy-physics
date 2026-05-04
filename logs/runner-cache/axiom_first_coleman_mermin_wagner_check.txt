@@ -1,0 +1,63 @@
+===== runner cache v1 =====
+runner: scripts/axiom_first_coleman_mermin_wagner_check.py
+runner_sha256: 7f10102009669e04a1b6a0d5469a1f6d32310d00e139c41b061da0e39606bbcf
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.90
+status: ok
+----- stdout -----
+========================================================================
+ axiom_first_coleman_mermin_wagner_check.py
+ Loop: axiom-first-foundations-block02, Cycle 2 / R10
+ IR integral I_d(L) = (1/V) Σ_{k ≠ 0} 1/E_k vs lattice size L,
+ exhibiting Mermin–Wagner: divergence for d ≤ 2, finite for d ≥ 3.
+========================================================================
+
+  Table: I_d(L)
+    d \ L  |           8          16          32          64
+      1     |      0.6562      1.3281      2.6641      5.3320
+      2     |      0.3793      0.4899      0.6003      0.7107
+      3     |      0.2246      0.2386      0.2457      0.2492
+      4     |      0.1528      0.1544      (skip)      (skip)
+
+--- E1: IR integral computed for d ∈ {1, 2, 3, 4}, L ∈ {8, 16, 32, 64} ---
+  All values finite and non-negative? True
+  E1 verdict: PASS
+
+--- E2: scaling of I_d(L) with L ---
+  expected: d=1 linear, d=2 logarithmic, d=3,4 → finite constant
+  d = 1: I_d(L=64)/I_d(L=8) = 8.125,  L_ratio = 8.0,  power-law slope = 1.007  (expected ≈ 1 for linear divergence)
+           PASS
+  d = 2: I_d ratio = 1.874,  log slope = 0.159  (expected: positive but small; log divergence)
+           PASS
+  d = 3: I_d ratio (last/first) = 1.1095  (expected ≈ 1; convergent)
+           PASS
+  d = 4: I_d ratio (last/first) = 1.0105  (expected ≈ 1; convergent)
+           PASS
+  E2 verdict (overall): PASS
+
+--- E3: d = 3 is the minimal integer with finite I_d ---
+  minimal d with finite I_d (data) = 3
+  E3 verdict: PASS
+
+--- E4: combined with D9 (kernel stability requires d ≥ 2, d = 2 only marginal) ---
+  Long-range-force requirement: d ≥ 2 (non-divergent kernel),
+                                 d ≥ 3 for genuine 1/r^(d-1) power-law
+                                 (d = 2 gives only logarithmic potential).
+  Continuous-SSB requirement (this theorem): d ≥ 3.
+  Intersection: d ≥ 3.  Minimal integer = 3.  Matches A_min's Z^3? PASS
+
+========================================================================
+ SUMMARY
+========================================================================
+   E1 (IR integral well-defined): PASS
+   E2 (scaling: d≤2 div, d≥3 finite): PASS
+   E3 (minimal converging d = 3): PASS
+   E4 (combined → A_min substrate): PASS
+
+   PASSED: 4/4
+
+ verdict: Mermin–Wagner (MW1)–(MW4) exhibited; d = 3 confirmed minimal.
+
+----- stderr -----
+

@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_2026_04_19.py
+runner_sha256: fb09af2093f2b4a92e4c0b00003d4f7d0d121346d6b50cfbc90c4a2b3660b03e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.18
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT CANONICAL TRANSPORT-COLUMN FIBER THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: EXACT TRANSPORT FIXES A UNIQUE CURRENT-BRANCH COLUMN ORBIT
+========================================================================================
+  [PASS] The constructive favored column is an interior probability column  (col*=[0.0356443  0.03564431 0.92871139])
+  [PASS] Its ordered representative has the symmetric two-leakage form q_small, q_small, 1 - 2 q_small  (col*=[0.0356443  0.03564431 0.92871139])
+  [PASS] Deterministic global transport search returns the same simplex maximizer orbit  (DE sorted col=[0.0356443  0.03564431 0.92871139])
+  [PASS] Independent local maximizations from separated starts all collapse to that same ordered orbit  (orbit spread=1.485e-08)
+  [PASS] The ordered column satisfies the interior simplex stationarity equations  (grad=[-0.03326839 -0.03326921 -0.03326948])
+  [PASS] The restricted Hessian on the simplex tangent space is negative definite there  (eig=[-219.73261906 -219.63282775])
+
+========================================================================================
+PART 2: THE CONSTRUCTIVE TRANSPORT PLATEAU REALIZES THAT SAME COLUMN ORBIT
+========================================================================================
+  [PASS] All four constructive plateau witnesses have the same favored-column orbit up to row permutation  (max orbit err=2.473e-08)
+  [PASS] At least one constructive plateau witness reaches that same orbit by a nontrivial row permutation  (perms=[(0, 1, 2), (1, 0, 2), (0, 1, 2), (0, 1, 2)])
+  [PASS] The plateau witnesses all share the same ordered favored-column multiset to current-branch precision  (max sorted-col sep=2.772e-08)
+  [PASS] Therefore their common extremal eta_1 value is exactly the transport-maximal column value  (eta_1=1.052220313052)
+
+========================================================================================
+PART 3: THE DIRECT-DESCENDANT SOURCE FIBER ABOVE THAT COLUMN IS NONTRIVIAL
+========================================================================================
+  [PASS] The source -> favored-column Jacobian has rank 2 on the 5-real fixed-seed source surface  (singular values=[9.18476272e-01 2.33269283e-01 2.36000000e-10])
+  [PASS] The column-sum constraint is exact at Jacobian level, so only two column directions are independent  (max row-sum drift=4.649e-10)
+  [PASS] So transport leaves a local 3-real source fiber unresolved above the canonical favored column orbit  (5 source reals - 2 independent column reals = 3 residual local fiber dimensions)
+  [PASS] The current constructive plateau already intersects that fiber in multiple macroscopically separated sources  (min source separation=0.417121011663)
+
+========================================================================================
+PART 4: ON THE CANONICAL COLUMN FIBER, THE DIRECT-DESCENDANT TRIPLET VALUES ARE LOCALLY COMPLETE
+========================================================================================
+  [PASS] At every known canonical-column witness, the source -> (favored column, gamma, E1, E2) map has full local rank 5  (min combined singulars=['2.807473e-02', '3.554436e-02', '1.380404e-02', '1.517614e-01'])
+  [PASS] Restricted to the 3-real canonical-column fiber, the direct-descendant triplet values (gamma, E1, E2) have full rank 3  (min fiber-triplet singulars=['9.714311e-02', '8.356455e-02', '4.639128e-02', '2.617518e-01'])
+  [PASS] So a genuine exact triplet-value law on the direct-descendant side would locally pick a unique source on that fiber  (the remaining local object is the direct-descendant triplet-value law on the canonical fiber)
+
+========================================================================================
+PART 5: THE CURRENT SOURCE-ORIENTED EXACT TRIPLET PACKAGE DOES NOT LAND ON THE DIRECT-DESCENDANT SURFACE
+========================================================================================
+  [PASS] Deterministic global search leaves a definite nonzero gap to the exact source-oriented target (1/2, sqrt(8/3), sqrt(8)/3)  (closest norm=0.568319328542)
+  [PASS] The best direct-descendant approximation still misses every target component materially  (error=[-0.49988114 -0.1826354  -0.19937406])
+  [PASS] Therefore the current exact source-oriented triplet package cannot be the microscopic law selecting the canonical direct-descendant source fiber  (closest direct triplet=[1.18860967e-04 1.45035776e+00 7.43434981e-01])
+
+========================================================================================
+PART 6: BOTTOM LINE
+========================================================================================
+  [PASS] Exact transport now canonically fixes a favored direct-descendant column orbit  (col*=[0.0356443  0.03564431 0.92871139], eta_1=1.052220313052)
+  [PASS] The remaining DM object is now the compatible direct-descendant triplet-value law on the canonical source fiber, not a missing transport law  (the current source-oriented exact triplet package misses the direct-descendant source surface)
+
+  canonical ordered favored column = [0.0356443  0.03564431 0.92871139]
+  canonical eta_1 / eta_obs        = 1.052220313052
+  favored-column Jacobian singulars= [9.18476272e-01 2.33269283e-01 2.36000000e-10]
+  min constructive source sep      = 0.417121011663
+  plateau triplets                = [(0.150147245, 0.296562851, 1.986407435), (0.098758875, 0.122043673, 1.34544744), (0.090366396, 0.242890638, 1.999429076), (0.059339948, 0.391399372, 1.311532356)]
+  source-triplet target           = [0.5        1.63299316 0.94280904]
+  closest direct triplet          = [1.18860967e-04 1.45035776e+00 7.43434981e-01]
+
+========================================================================================
+SUMMARY: PASS=22 FAIL=0
+========================================================================================
+
+----- stderr -----
+

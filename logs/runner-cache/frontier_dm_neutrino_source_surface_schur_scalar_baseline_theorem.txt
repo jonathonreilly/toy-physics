@@ -1,0 +1,89 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_schur_scalar_baseline_theorem.py
+runner_sha256: 0c0c2c3c23ba12bfe27dbba484caeed81b532b219674706bf6b9e681defbf478
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.55
+status: ok
+----- stdout -----
+========================================================================================
+G1: Z_3 doublet-block Schur SCALAR-BASELINE COMMUTANT-CLASS LEMMA
+  (conditional only; NOT a live-sheet promotion)
+========================================================================================
+Branch: Option-A honest-label revision after reviewer pass 5c70c15d
+Scope: retained-grade commutant-class structural lemma + explicit
+    live-sheet non-commutation witness
+
+========================================================================================
+PART 1: EXACT Z_3-CIRCULANT NORM FORM FOR det(m I + J_act)
+========================================================================================
+ [PASS (C)] det(m I + delta T_delta + q_+ T_q) = m^3 - 3m(delta^2 + q_+^2) + 2 q_+ (q_+^2 - 3 delta^2) (max err = 7.11e-15)
+ [PASS (C)] Same form in w = q_+ + i delta: m^3 - 3m|w|^2 + 2 Re(w^3) (max err = 7.11e-15)
+ [PASS (C)] The norm form equals det of the explicit Z_3 circulant matrix with generator w (circulant(m, w, w*) has determinant m^3 + w^3 + (w*)^3 - 3m|w|^2)
+ [PASS (C)] Norm form is invariant under w -> exp(2 pi i k / 3) w  (exact Z_3 rotation symmetry)
+
+========================================================================================
+PART 2: THE RETAINED GENERATION ALGEBRA ACTS IRREDUCIBLY ON H_hw=1
+========================================================================================
+ [PASS (C)] P_1 + P_2 + P_3 = I_3 (exact)
+ [PASS (C)] P_i are rank-1 orthogonal projectors
+ [PASS (C)] C_3 P_1 C_3^(-1) = P_2, C_3 P_2 C_3^(-1) = P_3, C_3 P_3 C_3^(-1) = P_1
+ [PASS (C)] R-span of the retained (all-real) generators equals 9 = dim_R M_3(R) (rank = 9, |basis| = 9)
+ [PASS (C)] Commutant of the retained generators is 1-complex-dimensional (Schur: only scalars commute) (nullspace dim = 1 (C-dim))
+
+========================================================================================
+PART 3: SCHUR COMMUTANT-CLASS LEMMA (CONDITIONAL) ON H_hw=1
+========================================================================================
+ [PASS (C)] Nullspace of the commutator operator has dimension 1 over C (found 1 basis vectors)
+ [PASS (C)] The unique commutant basis element is proportional to I_3 (Schur) (deviation from I: 4.97e-16)
+ [PASS (C)] Hermiticity of D restricts c to R, giving D = m I with real m (physical baseline)
+
+========================================================================================
+PART 4: SCALAR-COMMUTANT-CLASS CURVATURE (conditional reference)
+========================================================================================
+ [PASS (C)] Tr(T_delta^2) = 6 (value = 6.0)
+ [PASS (C)] Tr(T_q^2) = 6 (value = 6.0)
+ [PASS (C)] Tr(T_delta T_q) = 0  (isotropic mixing on the Schur baseline) (value = 0.0)
+ [PASS (C)] Numerical second derivatives of W[m*I; delta, q_+] match -6/m^2 (isotropic) on the commutant-class reference (multiple m)
+ [PASS (C)] Chamber-boundary minimum of the scalar-commutant-class Q gives delta_* = q_+* = sqrt(6)/3 (reference identity, not a live-sheet statement) (delta_* = 0.8164965809, sqrt(6)/3 = 0.8164965809)
+
+========================================================================================
+PART 5: HONEST GAP STATEMENT (NOT narrowed on the live sheet)
+========================================================================================
+ What Parts 1-4 establish (retained-grade, conditional only):
+  (1) Z_3-circulant norm form for det(m I + J_act)
+  (2) Retained algebra is absolutely irreducible on H_hw=1
+  (3) Commutant of retained algebra on H_hw=1 is 1-dim over C (Schur)
+  (4) Scalar-commutant-class reference D = m I has curvature Q
+
+ What this runner does NOT establish:
+  * that the live source-sheet zero-source baseline satisfies the
+   Schur commutation premise
+  * that Q is live-sheet curvature
+  * that the baseline-choice sub-objection is closed on the live sheet
+
+ Option B open item (required for a retained live-sheet promotion):
+  Derive, on the actual source-oriented sheet, why the relevant
+  zero-source baseline must commute with the retained three-
+  generation algebra. Without this, Schur stays a commutant-class
+  conditional lemma only.
+ [PASS (C)] Runner scope honestly labelled: retained-grade conditional commutant-class lemma only (no live-sheet promotion claimed)
+ [PASS (C)] Option B live-sheet Schur commutation premise explicitly NOT closed by this runner (discipline preserved)
+
+========================================================================================
+PART 6: LIVE-SHEET NON-COMMUTATION WITNESS (Schur premise fails)
+========================================================================================
+ [PASS (C)] Live-sheet H at the closure pin has retained signature (2, 0, 1) (signature = (2, 0, 1), eigvals = [-1.67538044  1.55941844  2.087145  ])
+ [PASS (C)] Live-sheet H at the closure pin is NOT proportional to I_3 (||H_live - m_nearest * I||_F = 2.8809e+00)
+ [PASS (C)] [H_live, C_3] != 0 (Schur commutation premise fails with the cyclic generator) (||[H_live, C_3]||_F = 3.9618e+00)
+ [PASS (C)] [H_live, P_1] != 0 (Schur commutation premise fails with sector projector P_1) (||[H_live, P_1]||_F = 2.3523e+00)
+ [PASS (C)] [H_live, P_2] != 0 (Schur commutation premise fails with sector projector P_2) (||[H_live, P_2]||_F = 1.0575e+00)
+ [PASS (C)] [H_live, P_3] != 0 (Schur commutation premise fails with sector projector P_3) (||[H_live, P_3]||_F = 2.5416e+00)
+ [PASS (C)] Schur conditional does NOT fire on the live-sheet H at the closure pin (scalar-commutant-class curvature Q is the reference curvature at m*I, NOT live-sheet curvature at the closure pin)
+
+========================================================================================
+TOTAL: PASS = 26, FAIL = 0
+========================================================================================
+
+----- stderr -----
+

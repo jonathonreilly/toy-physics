@@ -1,0 +1,145 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_cp_product_alpha_s_cross_sector_extraction.py
+runner_sha256: 9d8c15adba5fd1a94fa51e0a5ab78247461a20faa52f8a2e6f6570f74ab3e764
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+CP-asymmetry product cross-sector alpha_s(v) estimator theorem audit
+See docs/CKM_CP_PRODUCT_ALPHA_S_CROSS_SECTOR_EXTRACTION_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs
+----------------------------------------------------------------------------------------
+  alpha_s(v) (canonical CMT/plaquette) = 0.103303816122267
+  lambda^2 = alpha_s(v)/2              = 0.051651908061134
+  rho      = 1/6
+  eta^2    = 5/36
+  eta      = sqrt(5)/6                 = 0.372677996249965
+  J = alpha_s^3 sqrt(5)/72             = 3.423746e-05
+  [PASS] alpha_s(v) > 0
+  [PASS] lambda^2 = alpha_s(v)/2
+  [PASS] eta^2 = 5/36
+  [PASS] eta = sqrt(5)/6
+  [PASS] upstream authority present: docs/ALPHA_S_DERIVED_NOTE.md
+  [PASS] upstream authority present: docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md
+  [PASS] upstream authority present: docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+  [PASS] upstream authority present: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+
+----------------------------------------------------------------------------------------
+Atlas-LO predictions (retained)
+----------------------------------------------------------------------------------------
+  sin(2 beta_d,0) = 2 eta        = 0.745355992499930
+  sqrt(5)/3                      = 0.745355992499930
+  sin(2 beta_s,0) = 2 lambda^2 eta = 0.038499059197421
+  alpha_s(v) sqrt(5)/6           = 0.038499059197421
+  [PASS] sin(2 beta_d,0) = sqrt(5)/3 (Thales-mediated)
+  [PASS] sin(2 beta_s,0) = alpha_s(v) sqrt(5)/6 (B_s mixing)
+
+----------------------------------------------------------------------------------------
+(P1): sin(2 beta_d,0) * sin(2 beta_s,0) = 5 alpha_s(v) / 18
+----------------------------------------------------------------------------------------
+  sin(2 beta_d) * sin(2 beta_s) = 0.028695504478408
+  5 alpha_s(v) / 18              = 0.028695504478408
+  ratio                          = 1.000000000000000
+  [PASS] (P1) atlas-LO product = 5 alpha_s(v)/18
+  [PASS] (P1) ratio of product to closed form is exactly 1
+  4 lambda^2 eta^2               = 0.028695504478408
+  [PASS] (P1) expansion 4 lambda^2 eta^2 = 5 alpha_s(v)/18
+
+----------------------------------------------------------------------------------------
+(P2): alpha_s(v) = (18/5) * sin(2 beta_d,0) * sin(2 beta_s,0)
+----------------------------------------------------------------------------------------
+  Estimated alpha_s(v) (atlas-LO) = 0.103303816122267
+  Canonical alpha_s(v)            = 0.103303816122267
+  ratio                            = 1.000000000000000
+  [PASS] (P2) estimator recovers canonical alpha_s(v) exactly
+  [PASS] (P2) factor 18/5 = 3.6 in inverse
+
+----------------------------------------------------------------------------------------
+(P3): sin^2(2 beta_d,0) + sin^2(2 beta_s,0) = 5(4 + alpha_s^2)/36
+----------------------------------------------------------------------------------------
+  sin^2(2 beta_d,0)              = 0.555555555555556 (= 5/9)
+  sin^2(2 beta_s,0)              = 1.482178e-03
+  5 alpha_s^2 / 36               = 1.482178e-03
+  sum                            = 0.557037733114642
+  5(4 + alpha_s^2)/36            = 0.557037733114642
+  [PASS] (P3) sin^2(2 beta_d) = 5/9
+  [PASS] (P3) sin^2(2 beta_s) = 5 alpha_s^2/36
+  [PASS] (P3) sum = 5(4 + alpha_s^2)/36
+  [PASS] (P3) expansion (5/9)(1 + alpha_s^2/4) = closed form
+
+----------------------------------------------------------------------------------------
+(P4): sin(2 beta_d,0) * sin(2 beta_s,0) = 4 sqrt(5) J / alpha_s(v)^2
+----------------------------------------------------------------------------------------
+  product                          = 0.028695504478408
+  4 sqrt(5) J / alpha_s^2          = 0.028695504478408
+  J                                = 3.423746e-05
+  [PASS] (P4) product = 4 sqrt(5) J / alpha_s^2
+  5 alpha_s/18                     = 0.028695504478408
+  [PASS] (P1) and (P4) are equivalent
+
+----------------------------------------------------------------------------------------
+PDG/LHCb 2024 cross-sector estimator comparator
+----------------------------------------------------------------------------------------
+  PDG sin(2 beta_d)         = 0.7060 +/- 0.011
+  LHCb phi_s                = -0.0386 +/- 0.022 rad
+  LHCb sin(2 beta_s) = -phi_s = 0.0386 +/- 0.0220
+  PDG product               = 0.027252 +/- 0.015538
+  alpha_s_CP (estimator)    = 0.098106 +/- 0.055936
+  alpha_s_canonical (CMT)   = 0.103304
+  cross-sector deviation    = -0.093 sigma
+  [PASS] CP-estimated alpha_s within 1 sigma of canonical
+  [PASS] CP-estimated alpha_s within 0.5 sigma under loose comparator
+  [PASS] CP-estimated alpha_s within 0.2 sigma under loose comparator
+
+----------------------------------------------------------------------------------------
+Consistency with Thales cross-system ratio theorem
+----------------------------------------------------------------------------------------
+  ratio sin(2 beta_s)/sin(2 beta_d) = 0.051651908061134
+  lambda^2 = alpha_s/2              = 0.051651908061134
+  [PASS] Thales ratio: sin(2 beta_s)/sin(2 beta_d) = lambda^2
+  sin^2(2 beta_d) = product/ratio   = 0.555555555555556 (= 5/9)
+  sin^2(2 beta_s) = product*ratio   = 1.482178e-03
+  [PASS] ratio + product determine sin^2(2 beta_d) = 5/9
+  [PASS] ratio + product determine sin^2(2 beta_s) = 5 alpha_s^2/36
+
+----------------------------------------------------------------------------------------
+Falsification: future LHCb / HL-LHC precision
+----------------------------------------------------------------------------------------
+  alpha_s_canonical = 0.1033
+
+  PDG/LHCb 2024 baseline          sigma(phi_s) = 0.0220  sigma(alpha_s_CP) = 0.0589
+  LHCb Run 4 (~2027)              sigma(phi_s) = 0.0050  sigma(alpha_s_CP) = 0.0134
+  HL-LHC end-of-program           sigma(phi_s) = 0.0020  sigma(alpha_s_CP) = 0.0054
+  [PASS] future precision tightens cross-sector consistency
+
+----------------------------------------------------------------------------------------
+Summary: pure-framework cross-sector alpha_s estimator route
+----------------------------------------------------------------------------------------
+  IDENTITIES:
+
+    (P1)  sin(2 beta_d,0) * sin(2 beta_s,0) = 5 alpha_s(v) / 18
+    (P2)  alpha_s(v) = (18/5) * sin(2 beta_d,0) * sin(2 beta_s,0)
+    (P3)  sin^2(2 beta_d) + sin^2(2 beta_s) = 5(4 + alpha_s^2)/36
+    (P4)  product = 4 sqrt(5) J / alpha_s^2
+
+  CROSS-SECTOR alpha_s(v) COMPARISON:
+
+    Sector 1: gauge-vacuum (CMT/plaquette)
+              alpha_s(v) = 0.103304
+
+    Sector 2: B-meson CP-violation
+              alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s) = 0.098106
+
+    Cross-sector deviation: 0.09 sigma under the PDG/LHCb 2024 baseline
+
+========================================================================================
+TOTAL: PASS=28, FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -1,0 +1,126 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_a1_quartic_potential_derivation.py
+runner_sha256: e55a3036d0a3c8c82ab637d7679335229614b690c7cb1cbd9b3e3db47583f3b5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.46
+status: ok
+----- stdout -----
+
+========================================================================================
+A1 derivation via Koide's quartic U(3)-invariant potential
+========================================================================================
+
+Shows that the quartic potential V(Φ) = [2(trΦ)² − 3tr(Φ²)]²
+on circulant C_3-invariant Hermitian Φ on V_3 has its UNIQUE
+minimum at A1 (|b|/a = 1/√2).
+
+========================================================================================
+Part A — V(Φ) = [2(trΦ)² − 3tr(Φ²)]² on circulant V_3 operators
+========================================================================================
+  tr(Φ)       = 3a
+  tr(Φ²)      = 3a² + 6|b|²
+  V₀(Φ) = 2(trΦ)² − 3tr(Φ²) = 9*a**2 - 18*|b|**2
+  V(Φ) = V₀²                 = 81*(a**2 - 2*|b|**2)**2
+
+  V(Φ) = 0 ⟺ V₀(Φ) = 0 ⟺ a² = 2|b|² ⟺ |b|/a = 1/√2
+  Solutions for |b|: [sqrt(2)*a/2]
+  Ratio |b|/a at V=0: sqrt(2)/2
+[PASS] A.1 V(Φ) vanishes exactly at |b|/a = 1/√2 (A1)
+       V(Φ) = 81(a² - 2|b|²)²; V=0 ⟺ |b|/a = 1/√2 = A1 (symbolic exact).
+
+========================================================================================
+Part B — V(Φ) ≥ 0 everywhere; A1 is the UNIQUE global minimum
+========================================================================================
+  V(Φ) = [2(trΦ)² − 3tr(Φ²)]² = 81·(a² − 2|b|²)²
+
+  V is a SQUARE, hence V ≥ 0 always.
+  V = 0 iff a² = 2|b|² (A1 condition).
+  The global minimum of V is thus at A1 (V_min = 0).
+
+  Numerical scan of V on (a, |b|) grid:
+    Min V at (a, |b|) = (1.1724, 0.8276)
+    V_min = 0.001832
+    |b|/a at min = 0.705882
+    Target 1/√2 = 0.707107
+[PASS] B.1 Numerical minimum of V lies on A1 line |b|/a = 1/√2
+       Grid minimum at |b|/a = 0.7059 vs target 0.7071
+
+========================================================================================
+Part C — Derivation chain: quartic potential ⟹ A1 ⟹ Koide Q = 2/3
+========================================================================================
+  GIVEN the U(3)-invariant quartic potential
+      V(Φ) = [2(trΦ)² − 3tr(Φ²)]²
+
+  ON the circulant C_3-invariant Hermitian operator Φ = aI + bC + b̄C²
+  (which is forced by retained three-generation observable theorem),
+
+  THE MINIMUM of V (V = 0) is at a² = 2|b|², i.e., A1.
+
+  THEREFORE the Brannen prefactor c = 2|b|/a = √2, and
+  Koide Q = 1/3 + c²/6 = 1/3 + 2/6 = 2/3.
+
+  This IS a derivation of A1 from a SINGLE variational principle,
+  provided V(Φ) is accepted as the effective charged-lepton potential.
+
+  Verification at A1 (|b|/a = 1/√2):
+    Brannen c = 2|b|/a = 1.414214
+    √2       = 1.414214
+    Koide Q   = 1/3 + c²/6 = 0.6666666667
+    2/3      = 0.6666666667
+[PASS] C.1 At A1, Brannen c = √2 and Koide Q = 2/3 exactly
+       c = 1.4142135624 = √2, Q = 0.6666666667 = 2/3.
+
+========================================================================================
+Part D — Remaining task: derive V(Φ) from Cl(3)/Z³ effective action
+========================================================================================
+  THIS RUNNER establishes: IF the effective charged-lepton action
+  contains V(Φ) = [2(trΦ)² − 3tr(Φ²)]² as a quartic potential,
+  THEN A1 is forced as the ground state.
+
+  REMAINING TASK: derive V(Φ) from the retained Cl(3)/Z³ framework.
+
+  Candidate routes:
+    1. Expand the retained observable principle W[J] = log|det(D+J)|
+       to quartic order in J and identify V(Φ) as the resulting term.
+    2. Show that the retained 4th-order mixed-Γ cancellation theorem
+       (HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE Theorem 6) forces the
+       effective potential to take Koide-quartic form on the hw=1 triplet.
+    3. Identify V(Φ) as the discriminant of a specific characteristic
+       polynomial associated with the retained charged-lepton Dirac.
+    4. Derive V(Φ) from Koide-Nishiura's U(3) flavor Higgs potential
+       by matching the retained electroweak-scalar lane to their S_3
+       flavor structure.
+
+  Once V(Φ) is derived from retained Cl(3)/Z³ structure, A1 becomes
+  axiom-native. Without this last step, A1 is DERIVED CONDITIONALLY
+  on the presence of V(Φ) in the effective action.
+[PASS] D.1 A1 derived conditional on V(Φ) in effective action
+       Given V(Φ) = [2(trΦ)² − 3tr(Φ²)]², A1 is the minimum.
+       Remaining task: derive V(Φ) from retained Cl(3)/Z³.
+[PASS] D.2 Four candidate routes identified for deriving V(Φ) from Cl(3)/Z³
+       Observable principle expansion, 4th-order mixed-Γ cancellation,
+       discriminant of characteristic polynomial, or Koide-Nishiura matching.
+
+========================================================================================
+SUMMARY
+========================================================================================
+PASSED: 5/5
+  [PASS] A.1 V(Φ) vanishes exactly at |b|/a = 1/√2 (A1)
+  [PASS] B.1 Numerical minimum of V lies on A1 line |b|/a = 1/√2
+  [PASS] C.1 At A1, Brannen c = √2 and Koide Q = 2/3 exactly
+  [PASS] D.1 A1 derived conditional on V(Φ) in effective action
+  [PASS] D.2 Four candidate routes identified for deriving V(Φ) from Cl(3)/Z³
+
+VERDICT: quartic-potential candidate route to A1 documented.
+
+Koide's U(3)-invariant quartic V(Φ) = [2(trΦ)² − 3tr(Φ²)]² has its
+unique minimum at A1 (|b|/a = 1/√2 ⟺ Brannen c = √2 ⟺ Koide Q = 2/3).
+
+This upgrades A1 from 'free retained assumption' to 'minimum of a
+specific U(3)-invariant quartic potential'. The remaining task is
+deriving this specific quartic from the retained Cl(3)/Z³ effective
+action — four candidate routes identified.
+
+----- stderr -----
+

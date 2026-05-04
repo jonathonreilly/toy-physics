@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/persistent_object_top4_multistage_outer_transfer_sweep.py
+runner_sha256: 6d91d4de283c90e465acb85d20c88de1f13f2a2b4408eb728004b7248b6ddedc
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

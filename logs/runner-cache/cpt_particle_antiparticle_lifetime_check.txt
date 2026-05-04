@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/cpt_particle_antiparticle_lifetime_check.py
+runner_sha256: 8b42590d89a93d11e0a554e6d2d00e6944a18a135769175dc123d657925a9f61
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================
+CPT PARTICLE/ANTIPARTICLE LIFETIME EQUALITY CHECK
+========================================================================
+
+Setup:
+  4-mode block-diag H_eff on (particle) ⊕ (antiparticle)
+  H_eff = H_Herm - i Γ/2 (resonance pole)
+  CPT = swap(p ↔ a) ∘ complex conjugation
+
+------------------------------------------------------------------------
+TEST 1: particle and antiparticle blocks have CPT-conjugate
+        spectra with equal energies and width magnitudes
+------------------------------------------------------------------------
+  particle eigs:     [np.complex128(-0.5509-0.1379j), np.complex128(1.421-0.1718j)]
+  antiparticle eigs: [np.complex128(-0.5509+0.1379j), np.complex128(1.421+0.1718j)]
+  ||Re(eigs_p) - Re(eigs_a)||  = 0.000e+00  (energies should match)
+  |||Im(eigs_p)| - |Im(eigs_a)||| = 5.551e-17  (|widths| should match)
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: decay widths Γ = -2 Im(E_pole) are identical
+------------------------------------------------------------------------
+  Γ_particle:     [np.float64(0.2758595761859133), np.float64(0.3436984787206256)]
+  Γ_antiparticle: [np.float64(0.2758595761859133), np.float64(0.3436984787206257)]
+  max |Γ_p - Γ_a| = 1.110e-16
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: 5 random CPT-symmetric H_eff all show identical widths
+------------------------------------------------------------------------
+  trial 0: Γ_p = [np.float64(0.1235), np.float64(0.209)], Γ_a = [np.float64(0.1235), np.float64(0.209)], |diff| = 0.00e+00
+  trial 1: Γ_p = [np.float64(0.2097), np.float64(0.2576)], Γ_a = [np.float64(0.2097), np.float64(0.2576)], |diff| = 0.00e+00
+  trial 2: Γ_p = [np.float64(0.1948), np.float64(0.424)], Γ_a = [np.float64(0.1948), np.float64(0.424)], |diff| = 1.11e-16
+  trial 3: Γ_p = [np.float64(0.2052), np.float64(0.3307)], Γ_a = [np.float64(0.2052), np.float64(0.3307)], |diff| = 5.55e-17
+  trial 4: Γ_p = [np.float64(0.0852), np.float64(0.2925)], Γ_a = [np.float64(0.0852), np.float64(0.2925)], |diff| = 0.00e+00
+
+  max |Γ_p - Γ_a| over 5 trials = 1.110e-16
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: negative control — non-CPT-symmetric H_eff has DIFFERENT widths
+------------------------------------------------------------------------
+  Γ_p (no-CPT): [np.float64(0.2004), np.float64(0.3276)]
+  Γ_a (no-CPT): [np.float64(0.1536), np.float64(0.1733)]
+  |Γ_p - Γ_a| = 1.543e-01  (should be substantial; CPT broken)
+  STATUS: PASS
+
+========================================================================
+SUMMARY
+========================================================================
+  Test 1 (CPT-conjugate spectra):               PASS
+  Test 2 (width equality Γ_p = Γ_a):            PASS
+  Test 3 (5-trial universality):                PASS
+  Test 4 (negative control without CPT):        PASS
+
+  OVERALL: PASS
+
+----- stderr -----
+

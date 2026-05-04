@@ -1,0 +1,36 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_triplet_character_source_theorem.py
+runner_sha256: 8a47bee22222fb5ac96b39cee3254a0fc78afdf67e5a1063d1259124e2022272
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO TRIPLET CHARACTER-SOURCE THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE CHARACTER-ODD HERMITIAN INCREMENT IS EXACTLY GAMMA*T_GAMMA
+========================================================================================
+  [PASS] The odd increment under phi -> -phi is exactly gamma*T_gamma  (odd err=1.57e-16)
+  [PASS] The exact weak Z3 source phase gives a nonzero gamma on a generic branch point  (gamma=0.521174)
+
+========================================================================================
+PART 2: THE REMAINING TRIPLET AND CORE DATA ARE CHARACTER-EVEN
+========================================================================================
+  [PASS] The aligned Hermitian core is invariant under character conjugation  (core diff=0.00e+00)
+  [PASS] Delta and rho are even while gamma is odd under phi -> -phi  ((delta,rho,gamma)+=(-0.216850,0.304000,0.521174))
+  [PASS] The even increment is exactly delta*T_delta + rho*T_rho  (even err=1.36e-16)
+
+========================================================================================
+PART 3: THE BRANCH RECORDS GAMMA AS THE UNIQUE CHARACTER-ODD SLOT
+========================================================================================
+  [PASS] The triplet CP note records gamma as the mandatory CP-odd source
+
+========================================================================================
+SUMMARY: PASS=6 FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_transport_integral_theorem.py
+runner_sha256: d6ff37bb03b91d10f7da803ee7da5dc48303da2f5a2714036a8caef3b1bb9900
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.89
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS TRANSPORT-INTEGRAL THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE DIRECT TRANSPORT EQUATIONS ARE THE AUTHORITY OBJECT
+========================================================================================
+  [PASS] The exact radiation branch uses the exact transport input K_H = 47.23597962989828  (K_H=47.235979629898)
+  [PASS] The old fit comparator remains kappa_fit = 0.01427162724743994  (kappa_fit=0.01427162724744)
+  [PASS] The transport authority path is now the direct Boltzmann solve rather than the fit  (kappa_axiom[H] is defined by the transport equations themselves)
+
+========================================================================================
+PART 2: THE FORMAL INTEGRAL MATCHES THE DIRECT TRANSPORT SOLVE
+========================================================================================
+  [PASS] The direct exact-radiation transport solve gives kappa_axiom = 0.004829545290766509  (kappa_axiom=0.004829545290767)
+  [PASS] The exact formal transport integral reproduces the same value  ((direct,formal)=(0.004829545290767,0.004829546210191))
+  [PASS] So the fit is no longer needed on the exact radiation branch  (the transport solve and formal integral agree without any kappa-fit input)
+
+========================================================================================
+PART 3: THE FIT OVERSTATES TRANSPORT ON THE EXACT RADIATION BRANCH
+========================================================================================
+  [PASS] The exact radiation transport branch gives eta/eta_obs = 0.18878592785084122  (eta/eta_obs=0.188785929502)
+  [PASS] The old fit overstates transport by a factor 2.955066473761705  (fit/direct=2.955066447917)
+  [PASS] Therefore kappa_fit(K) is only a diagnostic comparator, not the authority transport result  ((fit,direct)=(0.014271627247,0.004829545291))
+
+========================================================================================
+SUMMARY: PASS=9 FAIL=0
+========================================================================================
+
+----- stderr -----
+

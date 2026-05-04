@@ -1,0 +1,33 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_carrier_side_conclusion.py
+runner_sha256: 0852987b5283ae6f10fb548c646273cf1d3e9b995b8ad41447bb8aff5d93aaa8
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 53.19
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE CARRIER-SIDE CONCLUSION
+========================================================================================
+
+Replaying carrier-side authority spine:
+  [PASS] The global dominance obstruction runner exits successfully  (returncode=0)
+  [PASS] The global dominance obstruction runner emits its expected authority result  (RESULT: obstruction at exact-carrier completeness / global dominance)
+  [PASS] The split-2 local neighborhoods runner exits successfully  (returncode=0)
+  [PASS] The split-2 local neighborhoods runner emits its expected authority result  (RESULT: split-2 carrier pressure is exhausted to two explicit local)
+  [PASS] The carrier-side conclusion note records the verdict as obstruction rather than closure
+  [PASS] The carrier-side conclusion note records that the live pressure is exhausted to two explicit split-2 upper-face neighborhoods
+  [PASS] The carrier-side conclusion note records that endpoint and split-1 are no longer live carrier pressure
+  [PASS] The carrier-side conclusion note records that interval-certified exclusion or dominance is still the remaining theorem gap
+
+========================================================================================
+CARRIER-SIDE RESULT
+========================================================================================
+  Carrier-side verdict: obstruction
+  The carrier side is exhausted on the present branch to interval-style
+  exclusion or dominance on two explicit split-2 upper-face neighborhoods.
+
+SUMMARY: PASS=8 FAIL=0
+
+----- stderr -----
+

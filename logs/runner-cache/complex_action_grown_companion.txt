@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/complex_action_grown_companion.py
+runner_sha256: 83cb887c58ccd33005fcd2db0a7d1166e2ba89aa3acc03eba622684278a5f035
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/poisson_self_gravity_loop_v3.py
+runner_sha256: a621f455ba7b7192d459b6d87c13693e43d3dbd1497b83fe5b6abd91a07e5ec3
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

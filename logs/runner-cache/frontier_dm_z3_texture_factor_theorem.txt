@@ -1,0 +1,46 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_z3_texture_factor_theorem.py
+runner_sha256: 9db929c33c435dfcd86a214fb48f17ca4098acb609da597958893d2c88b64afc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM / NEUTRINO: EXACT Z3 TEXTURE-FACTOR THEOREM
+========================================================================================
+
+Authority stack:
+  - docs/THREE_GENERATION_STRUCTURE_NOTE.md
+  - docs/NEUTRINO_MAJORANA_Z3_NONACTIVATION_THEOREM_NOTE.md
+
+Question:
+  Is the 1/3 texture factor in the reduced leptogenesis estimate exact on
+  the retained Z_3 basis bridge?
+
+Canonical Z_3 basis bridge U_Z3:
+[[ 0.57735027+0.j   0.57735027+0.j   0.57735027+0.j ]
+ [ 0.57735027+0.j  -0.28867513+0.5j -0.28867513-0.5j]
+ [ 0.57735027+0.j  -0.28867513-0.5j -0.28867513+0.5j]]
+
+Entrywise overlap squares |U_Z3|^2:
+[[0.33333333 0.33333333 0.33333333]
+ [0.33333333 0.33333333 0.33333333]
+ [0.33333333 0.33333333 0.33333333]]
+  [PASS (C)] U_Z3 is exactly unitary  (max err=2.22e-16)
+  [PASS (C)] Every overlap square on the Z_3 bridge is exactly 1/3  (all entries = 1/3)
+  [PASS (C)] Every flavor/site basis vector sees the singlet and both doublet modes democratically  (row sums = 1)
+  [PASS (C)] Every Z_3 mode projects democratically onto the flavor/site basis  (column sums = 1)
+
+Result:
+  The retained Z_3 basis bridge is exactly democratic. So the reduced
+  leptogenesis texture factor is not heuristic on that bridge:
+
+      texture factor = 1/3.
+
+  What remains open is the full CP-asymmetry kernel, not this overlap.
+
+PASS=4  FAIL=0
+
+----- stderr -----
+

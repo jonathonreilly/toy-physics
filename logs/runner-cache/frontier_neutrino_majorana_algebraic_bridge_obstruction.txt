@@ -1,0 +1,68 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_algebraic_bridge_obstruction.py
+runner_sha256: 628d5a6335a7d7410444fd266dc40bda112a9411ccc041be3fd2778fcf37ea30
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: ALGEBRAIC BRIDGE OBSTRUCTION
+========================================================================================
+
+Authority stack:
+  - docs/NEUTRINO_MAJORANA_AXIS_EXCHANGE_FIXED_POINT_NOTE.md
+  - docs/NEUTRINO_MAJORANA_SELF_DUAL_STAIRCASE_LIFT_OBSTRUCTION_NOTE.md
+  - docs/NEUTRINO_MAJORANA_STAIRCASE_BLINDNESS_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_Z3_NONACTIVATION_THEOREM_NOTE.md
+
+Question:
+  Could an obvious finite algebraic/spectral bridge from the selected
+  local Majorana ray to the current generation texture select the
+  absolute staircase anchor?
+
+========================================================================================
+PART 1: THE FULL LOCAL-TO-GENERATION BRIDGE BLOCK IS HOMOGENEOUS
+========================================================================================
+  [PASS] Normalized full bridge blocks are identical across staircase rescalings  (max normalized difference=2.12e-16)
+
+  So any bridge block built from the selected local ray, the current
+  generation texture, and scale-independent structural couplings still
+  collapses to one matrix ray under the current common scaling.
+
+========================================================================================
+PART 2: SCHUR-COMPLEMENT BRIDGES REMAIN DEGREE-ONE IN THE SAME SCALE
+========================================================================================
+  [PASS] Normalized Schur-complement bridge blocks are identical across staircase rescalings  (max normalized difference=3.12e-16)
+  [PASS] Schur-complement bridge norms scale linearly with the same free parameter  (spread in ||S||/scale=4.44e-16)
+
+  So even when the obvious local-to-generation bridge is dressed by a
+  Schur complement, it still carries the same overall scale weight.
+
+========================================================================================
+PART 3: THE OBVIOUS SPECTRAL BRIDGE DATA ARE HOMOGENEOUS OR SCALE-FREE
+========================================================================================
+  [PASS] Characteristic-polynomial coefficients carry fixed homogeneous degrees  (spread=1.49e-14)
+  [PASS] Eigenvalue gaps scale linearly with the same free parameter  (spread=5.03e-15)
+  [PASS] Singular values scale linearly with the same free parameter  (spread=1.02e-15)
+  [PASS] Normalized eigenvalue ratios are scale-invariant  (spread=8.92e-16)
+
+  So the obvious spectral candidates split into two classes only:
+  homogeneous scale carriers and scale-free normalized ratios. Neither
+  class can pick a finite absolute staircase anchor by itself.
+
+========================================================================================
+RESULT
+========================================================================================
+  No. On the present exact stack, the obvious algebraic/spectral
+  local-to-generation bridge class remains homogeneous in the same
+  positive scale or collapses to scale-free normalized ratios.
+
+  So the live missing object is sharper again: it must go beyond the
+  current algebraic/spectral bridge class, or introduce a genuinely
+  new absolute-scale datum.
+
+PASS=7  FAIL=0
+
+----- stderr -----
+

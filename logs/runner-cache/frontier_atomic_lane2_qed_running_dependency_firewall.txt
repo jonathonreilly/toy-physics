@@ -1,0 +1,77 @@
+===== runner cache v1 =====
+runner: scripts/frontier_atomic_lane2_qed_running_dependency_firewall.py
+runner_sha256: 70a1ad5c02fa2cedcf0a91110a3523c41253401dd13020aeb55514f29bd82615
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Lane 2 QED running dependency firewall verification
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: firewall note structure
+----------------------------------------------------------------------------------------
+  [PASS] note exists with correct title
+  [PASS] note status is support / exact reduction theorem (not bare retained)
+  [PASS] note does NOT use bare 'Status: retained' or 'Status: promoted'
+  [PASS] note references 2026-04-27 predecessor firewall
+  [PASS] note names three sub-residuals R-Lep, R-Q-Heavy, R-Had-NP
+  [PASS] note names Lane 1 + Lane 3 + Lane 6 dependency chain
+  [PASS] note states forbidden imports section
+
+----------------------------------------------------------------------------------------
+Part 2: textbook-input QED running arithmetic
+----------------------------------------------------------------------------------------
+  Delta alpha_lep (e, mu, tau): 0.01743 + 0.00918 + 0.00481 = 0.03142
+  [PASS] Delta alpha_lep matches PDG comparator within 1.5%  (computed 0.03142 vs comparator 0.0314772)
+  Delta alpha_quark perturbative (c, b only): 0.00710 + 0.00116 = 0.00826
+  [PASS] perturbative c+b pieces individually positive (correct sign)
+  [PASS] perturbative c+b sum is bounded above by full Delta alpha_had^(5)  (perturbative 0.00826 vs full hadronic 0.02766)
+  Delta alpha_total LO (computed): 0.05908
+  Delta alpha_total LO (PDG-2024 reference sum): 0.05914
+  [PASS] Delta alpha LO decomposition matches PDG leading-order sum to <1%
+
+----------------------------------------------------------------------------------------
+Part 3: substitution failure size (consistent with 2026-04-27 firewall)
+----------------------------------------------------------------------------------------
+  alpha^{-1}(M_Z) repo 127.67 vs alpha^{-1}(0) comparator 137.035999084: shift = 6.83%
+  [PASS] inverse-alpha shift between alpha(M_Z) and alpha(0) is ~7%
+  Rydberg energy E ~ alpha^2 shift: 15.21%
+  [PASS] Rydberg energy shift ~14-15% (consistent with 2026-04-27 firewall's ~15%)
+
+----------------------------------------------------------------------------------------
+Part 4: dependency-chain firewall structure
+----------------------------------------------------------------------------------------
+  Sub-residual coverage on Lane 6 closure alone:
+    R-Lep:     True
+    R-Q-Heavy: False
+    R-Had-NP:  False
+  [PASS] Lane 6 alone does NOT close Lane 2
+  Sub-residual coverage on Lane 6 + Lane 3:
+    R-Lep:     True
+    R-Q-Heavy: True
+    R-Had-NP:  False
+  [PASS] Lane 6 + Lane 3 alone does NOT close Lane 2 (R-Had-NP blocked)
+  Sub-residual coverage on Lane 6 + Lane 3 + Lane 1:
+    R-Lep:     True
+    R-Q-Heavy: True
+    R-Had-NP:  True
+  [PASS] Lane 6 + Lane 3 + Lane 1 closes the running primitive at structural level
+  [PASS] QED loop primitive on framework substrate remains an open primitive even after Lanes 1+3+6 close
+
+----------------------------------------------------------------------------------------
+Part 5: forbidden-import role check
+----------------------------------------------------------------------------------------
+  [PASS] note marks PDG R-ratio comparator role explicitly
+  [PASS] note marks Rydberg comparator role explicitly
+  [PASS] note states no atomic observable is used to tune a framework parameter
+
+----------------------------------------------------------------------------------------
+PASS=20 FAIL=0
+----------------------------------------------------------------------------------------
+
+----- stderr -----
+

@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_cascade_geometry.py
+runner_sha256: be4f4c20588f9583f82986780ea592fb27197cfcafc1bf9c5ddae71dfffcf4f9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+NEUTRINO CASCADE GEOMETRY ON THE WEAK AXIS
+==============================================================================
+
+Taste-sector basis:
+  O_0 = [(0, 0, 0)]
+  T_1 = [(1, 0, 0), (0, 1, 0), (0, 0, 1)]
+  T_2 = [(1, 1, 0), (1, 0, 1), (0, 1, 1)]
+
+One-hop weak-axis action:
+  P_T1 Gamma_1 P_T1 =
+    [  0.0   0.0   0.0 ]
+    [  0.0   0.0   0.0 ]
+    [  0.0   0.0   0.0 ]
+
+  P_O0 Gamma_1 P_T1 =
+    [  1.0   0.0   0.0 ]
+
+  P_T2 Gamma_1 P_T1 =
+    [  0.0   1.0   0.0 ]
+    [  0.0   0.0   1.0 ]
+    [  0.0   0.0   0.0 ]
+
+  [PASS] no one-hop T1 -> T1 matrix element  (Gamma_1 maps T_1 out of T_1)
+  [PASS] one-hop T1 -> O0 is rank 1  (rank = 1)
+  [PASS] one-hop T1 -> T2 is rank 2  (rank = 2)
+
+Second-order return operators on T_1:
+  via O_0:
+    [  1.0   0.0   0.0 ]
+    [  0.0   0.0   0.0 ]
+    [  0.0   0.0   0.0 ]
+
+  via T_2:
+    [  0.0   0.0   0.0 ]
+    [  0.0   1.0   0.0 ]
+    [  0.0   0.0   1.0 ]
+
+  total:
+    [  1.0   0.0   0.0 ]
+    [  0.0   1.0   0.0 ]
+    [  0.0   0.0   1.0 ]
+
+  [PASS] singlet channel isolates one mode  (via O_0 = diag(1,0,0))
+  [PASS] T2 channel isolates residual pair  (via T_2 = diag(0,1,1))
+  [PASS] second-order channels close back to identity on T1  (via O_0 + via T_2 = I_3)
+
+Honest read:
+  1. The weak-axis Yukawa insertion does NOT act inside T_1 at one hop.
+  2. It splits exactly into one singlet path and a residual two-state
+     T_2 path.
+  3. That makes a second-order cascade the first exact operator surface
+     where the 1+2 structure is visible without model inputs.
+  4. The physics step from this exact geometry to a neutrino Dirac Yukawa
+     theorem is still open: chirality, sector normalization, and the
+     full 4D operator matching are not closed here.
+
+==============================================================================
+RESULT: 6 PASS, 0 FAIL
+==============================================================================
+
+----- stderr -----
+

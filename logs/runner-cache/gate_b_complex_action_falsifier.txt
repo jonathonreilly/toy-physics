@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_complex_action_falsifier.py
+runner_sha256: 3c49055ec922510b7a90609e698c4cac910f6f94946c10ed617da746b54abbef
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 17.91
+status: ok
+----- stdout -----
+================================================================================================
+GATE B COMPLEX-ACTION FALSIFIER
+  retained grown row only: drift=0.2, restore=0.7
+  observable: escape(gamma) = P_det(gamma) / P_det(0)
+  guardrail: gamma=0 must exactly reproduce the baseline on the same row
+================================================================================================
+h=0.5, W=8, NL=25, seeds=[0, 1, 2, 3], source_strength=5e-05, source_z=3.0
+gamma sweep: [0.0, 0.05, 0.1, 0.2, 0.5]
+
+seed       P_det(0)       0.05       0.10       0.20       0.50
+------------------------------------------------------------------------------------------------
+   0   2.590134e+10      0.215      0.046      0.002      0.000
+   1   2.980291e+10      0.215      0.046      0.002      0.000
+   2   3.035528e+10      0.215      0.047      0.002      0.000
+   3   2.620850e+10      0.216      0.047      0.002      0.000
+
+AGGREGATE
+  mean P_det(0) = 2.806701e+10
+  gamma=0.05  mean P_det=6.034337e+09  escape=0.215  delta_z=-4.893570e-03 (AWAY)
+  gamma=0.10  mean P_det=1.308286e+09  escape=0.047  delta_z=-9.898846e-03 (AWAY)
+  gamma=0.20  mean P_det=6.302017e+07  escape=0.002  delta_z=-2.003892e-02 (AWAY)
+  gamma=0.50  mean P_det=8.460719e+03  escape=0.000  delta_z=-4.816680e-02 (AWAY)
+
+SAFE READ
+  gamma=0 is exactly the retained Gate B baseline by construction.
+  The probe only asks whether a minimal absorptive/complex-action term
+  changes the detector escape on the retained grown row.
+  Any stronger interpretation would need a separate retained note.
+
+----- stderr -----
+

@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/frontier_schur_covariance_inheritance_narrow.py
+runner_sha256: 3204258bb7b9d8f55cc03b5dc49ef8dcdec01885ddc593d99ecfe54462d2cfba
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.30
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure and scope discipline
+----------------------------------------------------------------------------------------
+  [PASS (A)] contains: 'Schur Complement Covariance Inheritance — Narrow Theorem'  ()
+  [PASS (A)] contains: 'Type:** positive_theorem'  ()
+  [PASS (A)] contains: 'U M U† = M'  ()
+  [PASS (A)] contains: 'S = A − B D⁻¹ B†'  ()
+  [PASS (A)] contains: 'U_1 S U_1† = S'  ()
+  [PASS (A)] contains: 'not** claim'  ()
+  [PASS (A)] contains: 'SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md'  ()
+  [PASS (A)] contains: 'class (A)'  ()
+  [PASS (A)] contains: 'target_claim_type: positive_theorem'  ()
+  [PASS (A)] narrow scope avoids forbidden claim: 'applies to physical charged leptons unconditionally'  ()
+  [PASS (A)] narrow scope avoids forbidden claim: 'the Schur reduction IS the physical reduction map'  ()
+  [PASS (A)] narrow scope avoids forbidden claim: 'D is invertible for the physical effective operator'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: lemma on 3+1 split with V_1 = C³, W = C¹
+----------------------------------------------------------------------------------------
+  [PASS (A)] C₃³ = I (group order 3)  (canonical cyclic shift on V_1)
+  [PASS (A)] U M U† = M (full M is C₃-covariant)  (block-diagonal U preserves the assumed covariance)
+  [PASS (A)] U_1 S U_1† = S (Schur complement covariance inheritance)  (this is the narrow theorem's claim)
+  [PASS (A)] S commutes with C_3 (equivalently circulant on V_1 = C³)  ()
+
+----------------------------------------------------------------------------------------
+Part 3: lemma on 3+3 split with V_1 = V_W = C³
+----------------------------------------------------------------------------------------
+  [PASS (A)] 3+3 split: U_2 M_2 U_2† = M_2  ()
+  [PASS (A)] 3+3 split: D₂ is invertible  (det(D₂) = 112)
+  [PASS (A)] 3+3 split: U_1 S_2 U_1† = S_2 (covariance inheritance)  ()
+
+----------------------------------------------------------------------------------------
+Part 4: control negative tests
+----------------------------------------------------------------------------------------
+  [PASS (A)] control: non-block-diagonal U does not satisfy U M U† = M (premise fails)  (premise of theorem requires block-diagonal U)
+  [PASS (A)] control: non-covariant M does not satisfy U M U† = M (premise fails)  (premise of theorem requires U M U† = M)
+
+----------------------------------------------------------------------------------------
+Part 5: cited authority is retained-grade
+----------------------------------------------------------------------------------------
+  [PASS (A)] site_phase_cube_shift_intertwiner_note effective_status is retained-grade  (observed = 'retained')
+
+========================================================================================
+  TOTAL: PASS=22, FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_nambu_quadratic_comparator.py
+runner_sha256: 41c08276facc5183d4758ce13b0a4e89f7a55f1d4f60f42d12e22e3066354a88
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: NAMBU QUADRATIC COMPARATOR THEOREM
+========================================================================================
+
+Authority stack:
+  - docs/NEUTRINO_MAJORANA_NAMBU_SOURCE_PRINCIPLE_NOTE.md
+  - docs/NEUTRINO_MAJORANA_NAMBU_RADIAL_OBSERVABLE_NOTE.md
+  - docs/NEUTRINO_MAJORANA_SOURCE_RAY_THEOREM_NOTE.md
+
+Question:
+  Beyond the logarithmic radial observable, does the admitted local
+  Nambu family carry any exact non-homogeneous bosonic comparator?
+
+========================================================================================
+PART 1: THE UNIQUE MINIMAL POLYNOMIAL INVARIANT IS ||s||^2
+========================================================================================
+  [PASS (C)] The local kernel squares exactly to ||s||^2 I  (H^2 error=3.96e-18)
+  [PASS (C)] Q_2(s)=1/2 Tr H^2 equals ||s||^2 exactly  (|Q2-r^2|=0.00e+00)
+
+  So the active local Nambu block already carries one exact
+  non-homogeneous quadratic comparator: the radial norm squared.
+
+========================================================================================
+PART 2: Q_2 IS INVARIANT UNDER CANONICAL BASIS CHANGES
+========================================================================================
+  [PASS (C)] SU(2) conjugation rotates the source vector but preserves Q_2  (|Q2-Q2_rot|=0.00e+00)
+  [PASS (C)] Q_2 is exactly the same trace invariant after conjugation  (trace error=3.33e-16)
+
+  So Q_2 is a bona fide canonically invariant local comparator on the
+  admitted Nambu family, not a basis artifact.
+
+========================================================================================
+PART 3: HIGHER POLYNOMIAL SPECTRAL INVARIANTS REDUCE TO Q_2
+========================================================================================
+  [PASS (C)] The linear trace vanishes on the traceless pseudospin block  (|Tr H|=0.00e+00)
+  [PASS (C)] All odd spectral traces vanish  (|Tr H^3|=0.00e+00)
+  [PASS (C)] The quartic invariant is just Q_2^2  (|1/2 Tr H^4 - Q2^2|=0.00e+00)
+
+  So Q_2 is the unique minimal nontrivial polynomial spectral
+  invariant on the local Nambu block; higher polynomial invariants
+  are just powers of it.
+
+========================================================================================
+PART 4: ON THE PURE-PAIRING RAY THE COMPARATOR IS mu^2
+========================================================================================
+  [PASS (C)] On the pure-pairing ray, Q_2 = mu^2  (|Q2-mu^2|=0.00e+00)
+
+  This is the missing local non-homogeneous comparator object on the
+  admitted pairing ray: it scales quadratically, not logarithmically.
+
+========================================================================================
+RESULT
+========================================================================================
+  Yes. The admitted local Nambu block carries the exact non-homogeneous
+  quadratic comparator Q_2(s) = 1/2 Tr H(s)^2 = ||s||^2.
+
+  This supplies the missing local comparator object. What remains open
+  is the physical pairing-sector insertion / endpoint principle for
+  this comparator and its lift to the three-generation texture.
+
+PASS=8  FAIL=0
+
+----- stderr -----
+

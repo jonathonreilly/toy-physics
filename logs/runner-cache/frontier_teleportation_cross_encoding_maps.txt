@@ -1,0 +1,151 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_cross_encoding_maps.py
+runner_sha256: 5a282655baffaaa06538af63394e2d95685b79289a76c3a25497fb7472dab87d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 88.47
+status: ok
+----- stdout -----
+CROSS-ENCODING TASTE-QUBIT TELEPORTATION MAP AUDIT
+Status: numerical planning audit; quantum state teleportation only
+
+Requested dimensions: (1, 2, 3)
+Requested side lengths: (2, 4)
+Valid KS geometries surveyed: 6
+Skipped invalid/out-of-scope geometries: 0
+Random teleportation trials per cross map: 8 (seed=20260425)
+Tolerance: 1.0e-12
+
+Geometry totals:
+  encoding supports: 131
+  dim=1 side=2: 1 encodings, 1 Alice/Bob maps
+  dim=1 side=4: 2 encodings, 4 Alice/Bob maps
+  dim=2 side=2: 4 encodings, 16 Alice/Bob maps
+  dim=2 side=4: 16 encodings, 256 Alice/Bob maps
+  dim=3 side=2: 12 encodings, 144 Alice/Bob maps
+  dim=3 side=4: 96 encodings, 9216 Alice/Bob maps
+  cross-encoding maps surveyed: 9637
+  map = same geometry, one Alice encoding, one Bob encoding
+
+Explicit conversion-map classification:
+  logical coefficient conversion C_B<-A: identity for intended maps
+  site partial isometry: |0_B><0_A| + |1_B><1_A|
+  no site conversion needed (same support): 131
+  explicit nonidentity site maps needed: 9506
+  relocation only, same taste pair: 722
+  in-cell retaste only: 1248
+  relocation plus retaste: 7536
+  pairs with different cells: 8258
+  pairs with different taste supports: 8784
+  max partial-isometry error C^dag C=P_A, C C^dag=P_B: 0.000e+00
+
+axis_adapted_cross_encoding:
+  expected pass cases: 9637/9637
+  teleportation/no-signaling pass: 9637/9637 run (0 skipped before teleportation)
+  unexpected result count: 0
+  failure causes: none
+  by geometry: dim side pass/total expected_pass
+      1    2      1/1           1
+      1    4      4/4           4
+      2    2     16/16         16
+      2    4    256/256       256
+      3    2    144/144       144
+      3    4   9216/9216     9216
+  minimum corrected-state fidelity: 0.9999999999999996
+  maximum infidelity: 6.661e-16
+  max branch probability error from 1/4: 2.220e-16
+  max total probability error from 1: 8.882e-16
+  max Bob trace distance to I/2 before Alice measurement: 4.441e-16
+  max Bob trace distance to I/2 after Alice measurement before message: 4.163e-16
+  max pairwise pre-message Bob-state distance across inputs: 5.551e-16
+  max corrected-state trace error: 4.441e-16
+  Bell outcomes seen: Phi+, Phi-, Psi+, Psi-
+
+current_fixed_pairhop_cross_encoding:
+  expected pass cases: 1113/9637
+  teleportation/no-signaling pass: 1113/1113 run (8524 skipped before teleportation)
+  unexpected result count: 0
+  failure causes: alice_bell_x_and_bob_correction_x_not_axis_adapted=4228, alice_bell_x_not_axis_adapted=2148, bob_correction_x_not_axis_adapted=2148
+  by geometry: dim side pass/total expected_pass
+      1    2      1/1           1
+      1    4      4/4           4
+      2    2      4/16          4
+      2    4     64/256        64
+      3    2     16/144        16
+      3    4   1024/9216     1024
+  minimum corrected-state fidelity: 0.9999999999999996
+  maximum infidelity: 6.661e-16
+  max branch probability error from 1/4: 1.943e-16
+  max total probability error from 1: 7.772e-16
+  max Bob trace distance to I/2 before Alice measurement: 3.886e-16
+  max Bob trace distance to I/2 after Alice measurement before message: 4.163e-16
+  max pairwise pre-message Bob-state distance across inputs: 4.718e-16
+  max corrected-state trace error: 4.441e-16
+  Bell outcomes seen: Phi+, Phi-, Psi+, Psi-
+
+axis_bell_bob_fixed_correction_control:
+  expected pass cases: 3261/9637
+  teleportation/no-signaling pass: 3261/9637 run (0 skipped before teleportation)
+  unexpected result count: 0
+  failure causes: bob_fixed_pairhop_not_logical_x=6376
+  by geometry: dim side pass/total expected_pass
+      1    2      1/1           1
+      1    4      4/4           4
+      2    2      8/16          8
+      2    4    128/256       128
+      3    2     48/144        48
+      3    4   3072/9216     3072
+  minimum corrected-state fidelity: 0.0000000000000000
+  maximum infidelity: 1.000e+00
+  max branch probability error from 1/4: 2.220e-16
+  max total probability error from 1: 8.882e-16
+  max Bob trace distance to I/2 before Alice measurement: 4.441e-16
+  max Bob trace distance to I/2 after Alice measurement before message: 4.163e-16
+  max pairwise pre-message Bob-state distance across inputs: 5.551e-16
+  max corrected-state trace error: 1.000e+00
+  Bell outcomes seen: Phi+, Phi-, Psi+, Psi-
+
+wrong_bit_swap_resource_control:
+  expected pass cases: 0/9637
+  teleportation/no-signaling pass: 0/9637 run (0 skipped before teleportation)
+  unexpected result count: 0
+  failure causes: resource_conversion_map_not_identity_target=9637
+  by geometry: dim side pass/total expected_pass
+      1    2      0/1           0
+      1    4      0/4           0
+      2    2      0/16          0
+      2    4      0/256         0
+      3    2      0/144         0
+      3    4      0/9216        0
+  minimum corrected-state fidelity: 0.0000000003471099
+  maximum infidelity: 1.000e+00
+  max branch probability error from 1/4: 2.220e-16
+  max total probability error from 1: 8.882e-16
+  max Bob trace distance to I/2 before Alice measurement: 4.441e-16
+  max Bob trace distance to I/2 after Alice measurement before message: 4.163e-16
+  max pairwise pre-message Bob-state distance across inputs: 5.551e-16
+  max corrected-state trace error: 4.441e-16
+  Bell outcomes seen: Phi+, Phi-, Psi+, Psi-
+
+Interpretation:
+  Axis-adapted Bell measurements and Bob corrections pass for every surveyed cross map, including different cells, spectator tastes, and logical taste axes.
+  The current fixed pair-hop map passes only when both Alice's Bell measurement axis and Bob's correction axis are the last taste axis.
+  A valid axis-adapted Alice Bell measurement still fails if Bob keeps the fixed pair-hop correction on a non-last logical axis.
+  Nonidentity site conversion maps are needed to specify resource pairing/readout whenever Alice and Bob supports differ; the intended logical coefficient map is identity in this first artifact.
+
+Claim boundary:
+  This is a finite algebraic audit on ideal encoded taste qubits.
+  It does not derive apparatus dynamics, durable records, resource
+  preparation, Hamiltonian transport, noise tolerance, matter transfer,
+  charge transfer, mass transfer, energy transfer, or FTL signaling.
+
+Acceptance gates:
+  axis-adapted cross maps: PASS
+  axis-adapted all Bell outcomes: PASS
+  axis-adapted Bob pre-message input-independence: PASS
+  current fixed boundary: PASS
+  non-adapted Bob correction control: PASS
+  wrong conversion control fails: PASS
+
+----- stderr -----
+

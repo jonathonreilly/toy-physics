@@ -1,0 +1,104 @@
+===== runner cache v1 =====
+runner: scripts/lattice_dispersion_relation.py
+runner_sha256: 6ebb64cbcfedf82ee566726a1a43eb998e239aa462a4bd2fec0721b11ac45f19
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.80
+status: ok
+----- stdout -----
+==========================================================================================
+DISPERSION RELATION: omega(p) ON THE FREE LATTICE PROPAGATOR
+  Physical extent: W=20.0, L=40.0
+  K=5.0, beta=0.8
+  Kernel: exp(i·K·L) · exp(-beta·theta²) / L · h²
+==========================================================================================
+
+
+======================================================================
+  SPACING h=1.0, Nyquist p_max = pi/h = 3.14
+======================================================================
+
+       p       omega        R²      |mode|
+  ---------------------------------------------
+    0.00     +0.6040   0.59691    5.08e+03  ← noisy
+    0.05     +0.6055   0.59863    5.09e+03  ← noisy
+    0.10     +0.6096   0.60360    5.13e+03  ← noisy
+    0.20     +0.1473   0.07288    5.25e+03  ← noisy
+    0.30     +0.6185   0.73125    5.45e+03  ← noisy
+    0.50     +0.2501   0.18244    5.94e+03  ← noisy
+    0.70     +0.2457   0.17676    6.30e+03  ← noisy
+    1.00     +1.0671   0.87292    6.76e+03  ← noisy
+    1.50     +1.4783   1.00000    1.15e+04
+
+  Time: 0.1s
+
+======================================================================
+  SPACING h=0.5, Nyquist p_max = pi/h = 6.28
+======================================================================
+
+       p       omega        R²      |mode|
+  ---------------------------------------------
+    0.00     -0.2365   1.00000    5.52e-03
+    0.05     -0.2369   1.00000    5.56e-03
+    0.10     -0.2380   1.00000    5.68e-03
+    0.20     -0.2423   1.00000    6.16e-03
+    0.30     -0.2489   1.00000    6.86e-03
+    0.50     -0.2661   1.00000    8.17e-03
+    0.70     -0.2861   1.00000    7.84e-03
+    1.00     -0.3219   1.00000    5.21e-03
+    1.50     -0.4349   1.00000    4.94e-03
+    2.00     -0.5940   1.00000    4.17e-03
+    2.50     -0.8049   1.00000    1.99e-03
+    3.00     -1.0735   1.00000    2.53e-03
+
+  Time: 1.6s
+
+  FITTING omega(p) to candidate dispersion relations:
+  ------------------------------------------------------------
+    omega=a·p²+b               R²=0.999466 [GOOD]  a=-0.091859, b=-0.236349
+    power_law_alpha            R²=0.998282 [OK]  alpha=1.820886, omega0=-0.236539
+    omega²=a·p²+m²             R²=0.961554 [POOR]  a=0.111494, m²=0.023412
+    omega=c·|p|+d              R²=0.920453 [POOR]  c=-0.253870, d=-0.164642
+
+  RAW DATA for omega² vs p²:
+        p²        omega²       omega
+    0.0000        0.0560     -0.2365
+    0.0025        0.0561     -0.2369
+    0.0100        0.0567     -0.2380
+    0.0400        0.0587     -0.2423
+    0.0900        0.0619     -0.2489
+    0.2500        0.0708     -0.2661
+    0.4900        0.0819     -0.2861
+    1.0000        0.1036     -0.3219
+    2.2500        0.1891     -0.4349
+    4.0000        0.3528     -0.5940
+    6.2500        0.6478     -0.8049
+    9.0000        1.1525     -1.0735
+
+==========================================================================================
+INTERPRETATION GUIDE
+==========================================================================================
+
+  If omega²=a·p²+m² fits with R²>0.999 and a≈1:
+    → RELATIVISTIC (Klein-Gordon) dispersion.
+    → The propagator encodes a massive relativistic particle.
+    → m² gives the effective mass.
+    → This would be a MAJOR structural result.
+
+  If omega=a·p²+b fits with R²>0.999:
+    → NON-RELATIVISTIC (Schrödinger) dispersion.
+    → The propagator encodes a non-relativistic particle.
+    → a = 1/(2m_eff) gives effective mass.
+    → Still interesting but less surprising for a lattice model.
+
+  If omega=c·|p|+d fits with R²>0.999:
+    → MASSLESS RELATIVISTIC (light cone) dispersion.
+    → c is the effective speed of light.
+
+  If power_law_alpha ≈ 2: non-relativistic.
+  If power_law_alpha ≈ 1: linear/massless.
+  If it's something else: novel.
+
+
+----- stderr -----
+

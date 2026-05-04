@@ -1,0 +1,77 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_pmns_graph_first_ordered_chain_nonzero_current_closure_2026_04_21.py
+runner_sha256: f67bb82016ab682a96b04d91152f40fccea85cb63ac51741a6512a68a5199aa0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.53
+status: ok
+----- stdout -----
+========================================================================================
+DM PMNS GRAPH-FIRST ORDERED-CHAIN NONZERO-CURRENT ACTIVATION
+========================================================================================
+
+Question:
+  Can one derive an explicit sole-axiom nonzero-current law on the
+  retained hw=1 response family?
+
+========================================================================================
+PART 1: GRAPH-FIRST AND CHAIN ALGEBRA FIX THE ORDERED CARRIER
+========================================================================================
+  [PASS] The graph-first cycle-frame note records the canonical ordered frame E12,E23,E31
+  [PASS] The canonical edge basis is exactly the ordered frame E12,E23,E31
+  [PASS] The adjacent-chain target note records the local chain generators E12 and E23
+  [PASS] The chain products recover the ordered diagonal projectors exactly
+
+========================================================================================
+PART 2: THE UNIQUE NORMALIZED CHAIN GRADING IS diag(1,2,3)
+========================================================================================
+  [PASS] A diagonal chain grading with [N,E12]=-E12 forces n2-n1=1  (diag=[1.+0.j 2.+0.j 3.+0.j])
+  [PASS] The same law on E23 forces n3-n2=1  (diag=[1.+0.j 2.+0.j 3.+0.j])
+  [PASS] With the minimal positive normalization min spec(N)=1 the grading is exactly diag(1,2,3)
+
+========================================================================================
+PART 3: THE ORDERED-CHAIN LAW ACTIVATES THE NATIVE CURRENT
+========================================================================================
+  [PASS] The canonical sole-axiom active law is N + C on the ordered chain
+  [PASS] The ordered-chain law lies on the canonical diagonal-plus-forward-cycle support  (A_ord=[[1.+0.j 1.+0.j 0.+0.j]
+ [0.+0.j 2.+0.j 1.+0.j]
+ [1.+0.j 0.+0.j 3.+0.j]])
+  [PASS] The ordered-chain law produces nonzero native current  (J_chi=1.000000000000+0.000000000000j)
+  [PASS] In the canonical unit normalization that current is exactly J_chi = 1  (J_chi=1.000000000000+0.000000000000j)
+
+========================================================================================
+PART 4: THE NONZERO CURRENT SURVIVES ON THE RESPONSE FAMILY
+========================================================================================
+  [PASS] The response-column reconstruction recovers the ordered-chain active law exactly  (err=2.05e-16)
+  [PASS] The reconstructed response-family current stays exactly nonzero  (J_chi=1.000000000000+0.000000000000j)
+  [PASS] The ordered-chain active law already sits on a one-sided minimal PMNS class with a canonical monomial passive companion  (branch=neutrino-active, sheet=1)
+
+========================================================================================
+PART 5: REDUCTION CONSEQUENCE
+========================================================================================
+  [PASS] The prior last-mile reduction note records nonzero J_chi production as the exact remaining strict/native burden
+  [PASS] The ordered-chain theorem supplies one explicit sole-axiom nonzero-current law  (J_chi(A_ord)=1.000000000000+0.000000000000j)
+  [PASS] So the reduced constructive target is met on the retained hw=1 response family  (reduction target + exact current activation)
+
+========================================================================================
+PART 6: CIRCULARITY GUARD
+========================================================================================
+  [PASS] The chain grading takes no PMNS-side target values as inputs  (bad=[])
+  [PASS] The ordered-chain active law takes no PMNS-side target values as inputs  (bad=[])
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact same-branch current-activation theorem on the retained hw=1 response family:
+    - graph-first selection and cycle-frame support fix the ordered carrier
+    - the adjacent chain has a unique normalized grading N = diag(1,2,3)
+    - the canonical ordered-chain law A_ord = N + C produces J_chi = 1
+    - that current survives exactly on the retained response family
+
+  Therefore one explicit sole-axiom nonzero-current law is derived on
+  the retained hw=1 response family, meeting the reduced constructive target.
+
+SUMMARY: PASS=19 FAIL=0
+
+----- stderr -----
+

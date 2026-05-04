@@ -1,0 +1,102 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_first_row_magnitudes.py
+runner_sha256: 613f3be0ec796c47219d68de3335dd2ca1a5f25ac3af081149bc69b13129bc32
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+CKM first-row atlas-leading magnitude identities
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: retained CKM atlas inputs
+----------------------------------------------------------------------------------------
+  [PASS (D)] n_pair = 2
+  [PASS (D)] n_color = 3
+  [PASS (D)] n_quark = 6
+  [PASS (D)] alpha_s(v) is positive (0.103303816122267)
+  [PASS (D)] rho = 1/6
+  [PASS (D)] eta^2 = 5/36
+  [PASS (D)] rho^2 + eta^2 = 1/6
+  [PASS (D)] parent CKM atlas note exists
+  [PASS (D)] Wolfenstein lambda/A note carries lambda^2 = alpha_s(v)/2
+  [PASS (D)] CP-phase note carries rho^2 + eta^2 = 1/6
+
+----------------------------------------------------------------------------------------
+Part 1: exact rational coefficient derivation
+----------------------------------------------------------------------------------------
+  [PASS (D)] |V_us|_0^2 coefficient = 1/2 (1/2)
+  [PASS (D)] A^2 lambda^6 CP-radius coefficient = 1/72 (1/72)
+  [PASS (D)] |V_ub|_0^2 alpha-power is cubic
+  [PASS (D)] |V_ud|_0^2 is a row-completion residual
+
+----------------------------------------------------------------------------------------
+Part 2: atlas-leading first-row identities
+----------------------------------------------------------------------------------------
+  |V_ud|_0 = 0.973823793342
+  |V_us|_0 = 0.227270561361
+  |V_ub|_0 = 0.003912986047
+  [PASS (D)] (F1) |V_us|_0^2 = alpha_s(v)/2
+  [PASS (D)] (F2) |V_ub|_0^2 = alpha_s(v)^3/72
+  [PASS (D)] (F3) atlas-leading first row sums to one (sum=1.0000000000000000)
+  [PASS (D)] |V_us|_0 is linear-order in alpha_s at squared level
+  [PASS (D)] |V_ub|_0 is cubic-order in alpha_s at squared level
+
+----------------------------------------------------------------------------------------
+Part 3: finite-lambda standard-matrix guardrail
+----------------------------------------------------------------------------------------
+  exact standard |V_ud| = 0.973824199404
+  exact standard |V_us| = 0.227268821432
+  exact standard |V_ub| = 0.003912986047
+  exact first-row sum   = 1.0000000000000000
+  [PASS (D)] standard-matrix first row is unitary
+  [PASS (D)] finite-lambda |V_ud| stays within 1e-6 relative of atlas-leading row completion (rel=4.170e-07)
+  [PASS (D)] finite-lambda |V_us| c13 correction stays below 1e-5 relative (rel=7.656e-06)
+  [PASS (D)] |V_ub| equals the exact standard s13 input
+  [PASS (D)] guardrail: exact all-orders monomial promotion is false
+
+----------------------------------------------------------------------------------------
+Part 4: named leading CKM-magnitude surface
+----------------------------------------------------------------------------------------
+  leading named rows:
+    |V_ud|_0^2 = 1 - alpha_s/2 - alpha_s^3/72 = 9.483327804791e-01
+    |V_us|_0^2 = alpha_s/2                    = 5.165190806113e-02
+    |V_ub|_0^2 = alpha_s^3/72                 = 1.531145980244e-05
+    |V_cb|_0^2 = alpha_s^2/6                  = 1.778613070904e-03
+    |V_td|_0^2 = 5 alpha_s^3/72               = 7.655729901221e-05
+    |V_ts|_0^2 = alpha_s^2/6                  = 1.778613070904e-03
+  [PASS (D)] |V_us|_0^2 is the Cabibbo first-row deficit at leading order
+  [PASS (D)] |V_td|_0^2 / |V_ub|_0^2 = 5
+  [PASS (D)] |V_ts|_0^2 equals |V_cb|_0^2
+  [PASS (D)] all first-row atlas-leading magnitudes are positive
+  [PASS (D)] no fitted CKM observable enters these coefficient identities
+
+----------------------------------------------------------------------------------------
+Part 5: post-derivation PDG comparators
+----------------------------------------------------------------------------------------
+  atlas-leading |V_ud| = 9.738238e-01; exact standard = 9.738242e-01; PDG = 9.737300e-01 +/- 3.1e-04
+  atlas-leading |V_us| = 2.272706e-01; exact standard = 2.272688e-01; PDG = 2.253400e-01 +/- 6.0e-04
+  atlas-leading |V_ub| = 3.912986e-03; exact standard = 3.912986e-03; PDG = 3.700000e-03 +/- 1.0e-04
+  [PASS (D)] atlas-leading |V_ud| is within 1 sigma of PDG comparator
+  [PASS (D)] exact standard |V_ud| is within 1 sigma of PDG comparator
+  [PASS (D)] atlas-leading |V_us| is within 5 sigma of PDG comparator
+  [PASS (D)] exact standard |V_us| is within 5 sigma of PDG comparator
+  [PASS (D)] exact standard |V_ub| is within 3 sigma of PDG comparator
+
+----------------------------------------------------------------------------------------
+Part 6: closeout flags
+----------------------------------------------------------------------------------------
+  [PASS (D)] CKM_FIRST_ROW_ATLAS_IDENTITIES_RETAINED=TRUE
+  [PASS (D)] CKM_FIRST_ROW_EXACT_ALL_ORDERS_MONOMIAL_CLAIM=FALSE
+  [PASS (D)] RESIDUAL_BOUNDARY=finite_lambda_standard_matrix_readout_guarded
+
+========================================================================================
+TOTAL: PASS=37, FAIL=0
+========================================================================================
+CKM_FIRST_ROW_ATLAS_IDENTITIES_RETAINED=TRUE
+CKM_FIRST_ROW_EXACT_ALL_ORDERS_MONOMIAL_CLAIM=FALSE
+
+----- stderr -----
+

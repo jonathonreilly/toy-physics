@@ -1,0 +1,73 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dirac_walk_3plus1d_core_card.py
+runner_sha256: 654a2a8c000e65b37b157069d941c37df2f895304968d32445b179be31c017ab
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 34.80
+status: ok
+----- stdout -----
+==============================================================================
+DIRAC WALK 3+1D CORE CARD
+==============================================================================
+operating point: n=17, N=12, m0=0.100, strength=5.0e-04, offset=3
+stability point: n=29, N sweep=[8, 10, 12, 14, 16, 18, 20, 22, 24], offsets=[2, 3, 4, 5, 6]
+
+  Hamiltonian Bloch analysis (n=9, mass=0.1000)...
+    R^2 = 1.000000, m_fit = 0.1000, c^2 = 0.8477
+    x-axis slope: 2.9000
+    y-axis slope: 2.9000
+    z-axis slope: 3.2000
+    Isotropy ratio: 1.103448
+    Time: 0.0s
+
+======================================================================
+AB FLUX TUBE TEST
+======================================================================
+  A=0.00: P=0.07359780
+  A=0.52: P=0.07793478
+  A=1.05: P=0.06667321
+  A=1.57: P=0.05832619
+  A=2.09: P=0.04447915
+  A=2.62: P=0.02946316
+  A=3.14: P=0.02558870
+  A=3.67: P=0.02946316
+  A=4.19: P=0.04447915
+  A=4.71: P=0.05832619
+  A=5.24: P=0.06667321
+  A=5.76: P=0.07793478
+  A=6.28: P=0.07359780
+
+  AB visibility V = 0.5056
+  PASS (need V > 0.3)
+
+Row                          Value                                                                                    Status
+--------------------------------------------------------------------------------------------------------------------------------
+C1 Born I3/P                 3.978227e-16                                                                             [C] PASS
+C2 d_TV                      0.789775                                                                                 [C] PASS
+C3 f=0 control               bias=0.000000e+00                                                                        [C] PASS
+C4 F~M                       R^2=1.000000                                                                             [C] PASS
+C5 gravity sign              bias=+4.076026e-09                                                                       [C] PASS
+C6 record purity             (17,16): pur=0.5002, L1=0.9854; (21,20): pur=0.5001, L1=0.9950                           [C] PASS
+C7 mutual information        MI=1.159926e-01                                                                          [C] PASS
+C8 purity stability          CV=0.3801                                                                                [C] PASS
+C9 gravity growth            biases=[(8, -6.5974474147689754e-12), (10, 1.4238201495695314e-08), (12, 3.764768313414856e-09), (14, -1.237963290942105e-09), (16, 1.2905021037115097e-10), (18, 2.4723631874977214e-10), (20, -2.9140785653377813e-10), (22, 1.8103596254064784e-10), (24, 1.8716361244816113e-10)] [C] FAIL
+C10 distance law             toward=3/5, R^2=0.0000                                                                   [C] FAIL
+C11 KG isotropy              R^2=1.000000, iso=1.1034, m=0.1000, c^2=0.8477                                           [C] FAIL
+C12 AB visibility            V=0.5056                                                                                 [C] PASS
+C13 fixed-theta k-achrom     CV=0.3606; k=0.25:L=11,dx=3.93,dz=-1.49e-05, k=0.45:L=10,dx=4.02,dz=-1.19e-05, k=0.65:L=9,dx=4.14,dz=-8.71e-06, k=0.85:L=8,dx=4.16,dz=-5.05e-06 [C] FAIL
+C14 split mass/gravity       best_g=0.030, R^2=1.0000, bias=+1.223e-09                                                [C] PASS
+C15 boundary robustness      N agree=9/9, offset agree=5/5                                                            [C] PASS
+C16 multi-observable gravity centroid/shell=5/6, centroid/current=3/6, centroid/peak=0/6, stable_first=True           [C] PASS
+--------------------------------------------------------------------------------------------------------------------------------
+Retained periodic closure score (legacy v4 rows): 7/10
+Integrated core-card score shown here: 12/16
+
+Interpretation:
+  - KG and AB are now first-class retained 3+1D positives on the Dirac lane.
+  - Record purity is judged with an explicit which-path mixture, not the old detector proxy.
+  - Split mass vs gravity susceptibility is viable, but fixed-theta carrier-k achromaticity still fails.
+  - Gravity stability is still the main blocker: non-monotone N-growth and mixed-sign distance law remain.
+  - Centroid and shell are the primary gravity readouts; peak is not a promotion gate.
+
+----- stderr -----
+

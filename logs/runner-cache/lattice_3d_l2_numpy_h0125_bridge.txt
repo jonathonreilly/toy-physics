@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/lattice_3d_l2_numpy_h0125_bridge.py
+runner_sha256: 2600ca0d3bf9fd8b006823c58e057a90d489a23a579b684d8a9e1d0dbd4c8e48
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.38
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

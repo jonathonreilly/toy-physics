@@ -1,0 +1,46 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_full_closure_same_surface_converged_thermal_selector_support.py
+runner_sha256: 85798dbfa301bec14df01e565b0157e1d16fc498313c057fb55c1e1a057449cd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 20.23
+status: ok
+----- stdout -----
+========================================================================================
+DM FULL CLOSURE SAME-SURFACE CONVERGED THERMAL SELECTOR SUPPORT
+========================================================================================
+
+========================================================================================
+PART 1: THE ADMITTED DM FAMILY STILL HAS A UNIQUE CLOSURE CROSSING
+========================================================================================
+  [D] PASS: The converged same-surface kernel still gives a unique interior selector on the one-scalar DM family  (sigma_conv=0.145077095756643, alpha_conv=0.090899546858439)
+
+========================================================================================
+PART 2: THE COARSE THERMAL ROOT IS NOT STABLE
+========================================================================================
+  [C] PASS: The converged selector differs materially from the coarse retained runner  (sigma_base=0.145161097420491, sigma_conv=0.145077095756643)
+  [C] PASS: The converged selector also differs materially from the coarse 9/62 clue  (sigma_conv=0.145077095756643, sigma_9/62=0.145161290322581)
+
+  sigma_base   = 0.145161097420491
+  sigma_conv   = 0.145077095756643
+  sigma_9/62   = 0.145161290322581
+  alpha_conv   = 0.090899546858439
+  R_conv       = 5.447934280746
+  Omega_DM     = 0.268000000000
+
+========================================================================================
+BOTTOM LINE
+========================================================================================
+  Honest status:
+    - the one-scalar same-surface DM family still closes positively
+    - but the selector value must be read from a converged thermal evaluator,
+      not from the coarse retained grid
+    - the previous 9/62 clue does not survive as a stable selector law
+    - current-bank selector closure is still open
+
+========================================================================================
+SUMMARY: classified_pass=3 fail=0
+========================================================================================
+
+----- stderr -----
+

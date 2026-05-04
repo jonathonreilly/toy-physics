@@ -1,0 +1,136 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_analytic_stationary_classification_theorem.py
+runner_sha256: ce1b63f344290b1a90aa9367cbefa3d7e71cb4dfb62ee1708ed45b914f245756
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 64.69
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS ANALYTIC STATIONARY CLASSIFICATION THEOREM
+========================================================================================
+
+Framework convention:
+  "axiom" means only Cl(3) on Z^3.
+
+Goal:
+  Derive as much closed-form analytic stationary classification as honestly
+  possible for the PMNS-assisted selector problem on the exact fixed native
+  N_e seed surface.
+
+========================================================================================
+PART 1: ENUMERATE THE CLOSURE STATIONARY BRANCHES
+========================================================================================
+  [PASS] The current fixed-seed closure surface yields two dominant stationary branches under broad multistart enumeration  (branch count=2, sampled solves=7)
+  [PASS] The lowest branch closes the favored column exactly  (etas=[1.         0.75917895 0.48458972])
+  [PASS] The broad-multistart dominant pair is separated by a finite action gap  (ΔS_pair=0.869750837948)
+
+  branch 0:
+    count      = 6
+    S_rel      = 0.240906701390
+    x          = [0.471675, 0.55381 , 0.664515]
+    y          = [0.208063, 0.464382, 0.247555]
+    delta      = -1.856375564645e-07
+    eta/eta_obs= [1.         0.75917895 0.48458972]
+  branch 1:
+    count      = 1
+    S_rel      = 1.110657539338
+    x          = [0.790189, 0.406763, 0.493048]
+    y          = [0.586185, 0.167566, 0.166248]
+    delta      = -3.189531894172e-07
+    eta/eta_obs= [1.         0.94763537 0.95875999]
+
+========================================================================================
+PART 1: CLOSED-FORM REDUCTION OF THE N_e SOURCE BLOCK
+========================================================================================
+  [PASS] The explicit closed-form Y Y^dagger formula matches the branch-native canonical_h exactly  (err=0.00e+00)
+  [PASS] The Hermitian block is conjugation-even under delta -> -delta  (err=0.00e+00)
+
+  Closed-form H_e on the fixed native N_e chart:
+  H11 = x1^2 + y1^2
+  H22 = x2^2 + y2^2
+  H33 = x3^2 + y3^2
+  H12 = x2 y1
+  H23 = x3 y2
+  H13 = x1 y3 e^{-i delta}
+
+  Therefore H_e(delta) and H_e(-delta) are conjugate, so the action and
+  PMNS packet are even in delta on the physical real slice.
+
+========================================================================================
+PART 2: THE STATIONARY PROBLEM REDUCES TO A REAL KKT SYSTEM
+========================================================================================
+The exact selector problem on the reduced N_e surface is the KKT system for the seed-relative effective action with the exact closure constraint.
+On the physical branch the delta-even symmetry allows us to work on delta = 0.
+
+  [PASS] Branch 0 is exactly closure-compatible on the reduced chart  (eta=1.000000000000)
+  [PASS] Branch 0 obeys the delta-parity reduction to the real slice  (|ΔS|=0.00e+00, |Δeta|=0.00e+00)
+  [PASS] Branch 0 satisfies the reduced KKT equations to numerical precision  (|∇S-λ∇C|=8.937e-06, λ=1.928725, dC/dδ=7.216e-10)
+
+  branch 0:
+    x      = [0.471675, 0.55381 , 0.664515]
+    y      = [0.208063, 0.464382, 0.247555]
+    delta  = -1.856375564645e-07
+    logits = [-0.342766, -0.182235, -0.173793,  0.629076]
+    S_rel  = 0.240906701390
+    eta    = [1.         0.75917895 0.48458972]
+    KKT λ  = 1.928724672850
+  [PASS] Branch 1 is exactly closure-compatible on the reduced chart  (eta=1.000000000000)
+  [PASS] Branch 1 obeys the delta-parity reduction to the real slice  (|ΔS|=0.00e+00, |Δeta|=0.00e+00)
+  [PASS] Branch 1 satisfies the reduced KKT equations to numerical precision  (|∇S-λ∇C|=3.277e-07, λ=5.277345, dC/dδ=-1.543e-08)
+
+  branch 1:
+    x      = [0.790189, 0.406763, 0.493048]
+    y      = [0.586185, 0.167566, 0.166248]
+    delta  = -3.189531894172e-07
+    logits = [ 0.471664, -0.192377,  1.260154,  0.007897]
+    S_rel  = 1.110657539338
+    eta    = [1.         0.94763537 0.95875999]
+    KKT λ  = 5.277344617960
+
+========================================================================================
+PART 3: ANALYTIC BRANCH CLASSIFICATION ON THE REDUCED DOMAIN
+========================================================================================
+  [PASS] The broad multistart reduced-domain classification resolves two dominant stationary components  (branch count=2)
+  [PASS] The low-action component is the exact closure branch selected by the sole-axiom effective action  (eta/eta_obs=1.000000000000)
+  [PASS] The second component is separated by a finite analytic action gap  (ΔS=0.869750837948)
+
+  dominant stationary components resolved by broad multistart on the exact reduced surface:
+  component 0:
+    action     = 0.240906701390
+    x          = [0.471675, 0.55381 , 0.664515]
+    y          = [0.208063, 0.464382, 0.247555]
+    delta      = -1.856375564645e-07
+    eta/eta_obs= [1.         0.75917895 0.48458972]
+  component 1:
+    action     = 1.110657539338
+    x          = [0.790189, 0.406763, 0.493048]
+    y          = [0.586185, 0.167566, 0.166248]
+    delta      = -3.189531894172e-07
+    eta/eta_obs= [1.         0.94763537 0.95875999]
+
+  analytic classification:
+    - the stationary system is reduced exactly to the real slice by delta-evenness
+    - broad multistart on the exact reduced surface resolves two dominant real stationary components
+    - the lower-action component is the unique physical selector branch within that dominant pair
+    - the later certified-global theorem sharpens the total reduced-surface branch count to three
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The reduced-surface selector problem now has an exact closed-form symmetry reduction  (H_e(delta) is explicit and delta-even)
+  [PASS] The remaining classification is a real KKT problem on the exact reduced domain  (no passive-sector or transport state lives outside that domain)
+  [PASS] The exact current branch still has a closed-form symmetry reduction and a physically selected low-action closure branch  (the later certified-global theorem sharpens the exact branch count on the same reduced surface)
+
+  Honest scope:
+    - closed-form structural reduction: yes
+    - exact broad-multistart dominant-branch classification on the reduced surface: yes
+    - separate global analytic elimination of every conceivable stationary
+      component in the abstract: not claimed here
+
+========================================================================================
+SUMMARY: PASS=14 FAIL=0
+========================================================================================
+
+----- stderr -----
+

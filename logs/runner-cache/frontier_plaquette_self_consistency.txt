@@ -1,0 +1,70 @@
+===== runner cache v1 =====
+runner: scripts/frontier_plaquette_self_consistency.py
+runner_sha256: de9d49c8c4b2691a696fda2d137679840e7724dcf3d4ff033ba5684cf0afb4fc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 102.68
+status: ok
+----- stdout -----
+========================================================================
+Plaquette Self-Consistency: <P> as a Derived Same-Surface Constant
+========================================================================
+
+THEOREM: <P>(beta=6, SU(3), 4D) ~= 0.5934 is a uniquely determined
+         observable of the retained partition function, not a free parameter.
+
+=== Part 1: self-consistency logic ===
+
+  [PASS] partition function on the retained SU(3) Wilson surface is well-defined  (compact Haar measure + finite Wilson action on a finite periodic lattice)
+  [PASS] plaquette is a unique partition-function observable  (<P> = (1/N_plaq) d(ln Z)/d beta has no independent freedom)
+  [PASS] no bulk phase ambiguity at beta = 6 on symmetric L^4 lattices  (finite-temperature deconfinement is not a symmetric-L^4 bulk transition)
+  [PASS] Monte Carlo evaluates the observable rather than parameterizing it  (same-surface non-perturbative evaluation of a uniquely defined quantity)
+
+=== Part 2: multi-volume MC at beta = 6 ===
+
+  Running L = 4 (4^4 sites)...
+    <P> = 0.621085 +/- 0.001231  (acc = 0.38, 11.5s)
+  [PASS] [BOUNDED] L=4 plaquette consistent with canonical reference  (<P> = 0.6211, ref = 0.5934, rel = +4.67%)
+  Running L = 6 (6^4 sites)...
+    <P> = 0.611159 +/- 0.000875  (acc = 0.38, 48.5s)
+  [PASS] [BOUNDED] L=6 plaquette consistent with canonical reference  (<P> = 0.6112, ref = 0.5934, rel = +2.99%)
+  [PASS] [BOUNDED] larger symmetric volume moves toward the canonical plaquette value  (|Delta|_L4 = 0.0277, |Delta|_L6 = 0.0178)
+
+=== Part 3: beta-scan smoothness at L = 4 ===
+
+   beta         <P>      stderr
+  ------------------------------
+    4.0    0.399005    0.006304
+    5.0    0.539612    0.002405
+    5.5    0.587515    0.001524
+    6.0    0.635758    0.002356
+    7.0    0.693727    0.001164
+    8.0    0.737347    0.002043
+  [PASS] [BOUNDED] <P>(beta) is monotonically increasing on the audited symmetric surface  (smooth crossover from strong to weak coupling on symmetric L^4)
+  [PASS] <P>(beta) stays in the physical window 0 < <P> < 1  (range = [0.3990, 0.7373])
+
+=== Part 4: perturbative-window sanity checks ===
+
+  [PASS] one-loop plaquette estimate is an upper sanity bound at beta = 6  (<P>_1loop = 0.8889)
+  [PASS] canonical plaquette lies between strong-coupling zero and one-loop window  (0 < 0.5934 < 0.8889)
+
+=== Part 5: downstream consistency ===
+
+  <P>         = 0.611159 +/- 0.000875
+  u_0         = 0.884176
+  alpha_s(v)  = 0.101792
+  [PASS] u_0 = <P>^(1/4) is downstream-derived from the evaluated plaquette  (u_0 = 0.884176)
+  [PASS] alpha_s(v) = alpha_bare / u_0^2 is downstream-derived from the same plaquette surface  (alpha_s(v) = 0.101792)
+  [PASS] [BOUNDED] MC-evaluated plaquette gives alpha_s(v) consistent with canonical chain  (alpha_s(v)_MC = 0.101792, alpha_s(v)_ref = 0.103304, rel = 1.46%)
+
+=== Part 6: combined conclusion ===
+
+  [PASS] plaquette is a same-surface evaluated constant rather than a free parameter  (the theory fixes the partition function; MC only evaluates the resulting observable)
+  [PASS] the canonical downstream chain may reuse <P>, u_0, and alpha_s(v)  (same-surface evaluation supports hierarchy, EW, CKM, confinement, Yukawa, and Higgs reuse)
+
+========================================================================
+SUMMARY: PASS=16  FAIL=0
+========================================================================
+
+----- stderr -----
+

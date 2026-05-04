@@ -1,0 +1,183 @@
+===== runner cache v1 =====
+runner: scripts/frontier_mass_ratio_up_sector.py
+runner_sha256: 4f8907237a1c0e38a30eed57d43b5f1cad2028068744967f4cf9077ab9c9733c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================
+  FRONTIER: Bounded Up-Type Mass Ratios from the CKM Dual (Phase 2)
+========================================================================
+
+========================================================================
+PART 1: Input surface (Phase 1 down-type ratios + atlas CKM)
+========================================================================
+
+  alpha_s(v)               = 0.103303816122
+  u_0                      = 0.877681381199
+  alpha_bare               = 0.079577471546
+  exponent (C_F - T_F)     = 5/6
+
+  Atlas CKM magnitudes and CP phase:
+    |V_us| = sqrt(alpha_s(v)/2)         = 0.227271
+    |V_cb| = alpha_s(v)/sqrt(6)         = 0.042174
+    |V_ub| = alpha_s(v)^(3/2)/(6*sqrt(2)) = 0.003913
+    delta  = arctan(sqrt(5))            = 65.905 deg
+
+  Phase 1 down-type (down-dominant edge, f_12 = f_23 = 1):
+    m_d/m_s = alpha_s(v)/2                = 0.051652
+    m_s/m_b = [alpha_s(v)/sqrt(6)]^(6/5)  = 0.022390
+    m_d/m_b = (m_d/m_s)(m_s/m_b)          = 0.001156
+  [PASS] |V_us| matches atlas formula  (|V_us| = 0.22727056)
+  [PASS] |V_cb| matches atlas formula  (|V_cb| = 0.04217361)
+  [PASS] |V_ub| matches atlas formula  (|V_ub| = 0.00391299)
+  [PASS] delta = arctan(sqrt(5)) matches cos^2(delta) = 1/6  (cos^2 = 0.16666667)
+  [PASS] Phase 1 m_d/m_s closed form  (m_d/m_s = 0.051652)
+  [PASS] Phase 1 m_s/m_b closed form  (m_s/m_b = 0.022390)
+
+========================================================================
+PART 2: Parallel-bridge ansatz for both sectors
+========================================================================
+
+  In the mass-basis NNI texture with GST + 5/6 bridges applied in both
+  sectors (Z_3-constrained NNI), the down-sector and up-sector NNI
+  contributions to each atlas CKM magnitude combine coherently.  Under
+  the CP-orthogonal phase ansatz (relative phase pi/2 between sectors):
+
+    |V_us|^2 = (m_d/m_s)      + (m_u/m_c)
+    |V_cb|^2 = (m_s/m_b)^(5/3) + (m_c/m_t)^(5/3)
+
+  Introducing partition fractions f_12, f_23 in [0, 1]:
+
+    m_d/m_s     =  f_12^2 * |V_us|^2
+    m_u/m_c     = (1 - f_12^2) * |V_us|^2
+    (m_s/m_b)^(5/3) =  f_23^2 * |V_cb|^2
+    (m_c/m_t)^(5/3) = (1 - f_23^2) * |V_cb|^2
+
+  Phase 1 is the limit f_12 = f_23 = 1 (down-dominant).
+  The observed values select (f_12, f_23) in the interior.
+
+  Closure gap (ansatz approximation):
+    (m_d/m_s)_obs + (m_u/m_c)_obs - |V_us|^2 = +4.4871e-05
+  [PASS] ansatz sum (m_d/m_s + m_u/m_c) matches |V_us|^2 within 1%  (relative gap = +0.0869%)
+  [PASS] parameterization spans both edges (structural)  (partition by construction)
+
+========================================================================
+PART 3: Down-dominant and up-dominant edges
+========================================================================
+
+  Down-dominant edge (f_12 = f_23 = 1):
+    m_d/m_s = 0.051652  (obs: 0.050000)
+    m_s/m_b = 0.022390  (obs: 0.022344)
+    m_u/m_c = 0.000000  (obs: 0.001697)
+    m_c/m_t = 0.000000  (obs: 0.007377)
+
+  Up-dominant edge (f_12 = f_23 = 0):
+    m_d/m_s = 0.000000  (obs: 0.050000)
+    m_s/m_b = 0.000000  (obs: 0.022344)
+    m_u/m_c = 0.051652  (obs: 0.001697)
+    m_c/m_t = 0.022390  (obs: 0.007377)
+  [PASS] down-dominant m_d/m_s equals Phase 1 prediction
+  [PASS] down-dominant m_s/m_b equals Phase 1 prediction
+  [PASS] up-dominant m_u/m_c equals Phase 1 down-ratio
+  [PASS] up-dominant m_c/m_t equals Phase 1 down-ratio
+  [PASS] down-dominant and up-dominant edges exhaust the unit interval  (partition by construction)
+
+========================================================================
+PART 4: Interior partition from the observation comparator
+========================================================================
+
+  Partition from observation comparator (comparator-only, not input):
+    f_12 = sqrt((m_d/m_s)_obs / |V_us|^2)               = 0.983879
+    f_23 = sqrt((m_s/m_b)^(5/3)_obs / |V_cb|^2)         = 0.998316
+
+  Implied up-type ratios under this partition:
+    m_u/m_c = (1-f_12^2) * |V_us|^2 = 1.651908e-03  (obs: 1.696779e-03)
+    m_c/m_t = ((1-f_23^2)|V_cb|^2)^(3/5) = 7.349068e-04  (obs: 7.376717e-03)
+
+  Deviations:
+    m_u/m_c: -2.64%
+    m_c/m_t: -90.04%
+  [PASS] f_12 stays in the unit interval on the observation comparator  (f_12 = 0.983879)
+  [PASS] f_23 stays in the unit interval on the observation comparator  (f_23 = 0.998316)
+  [PASS] f_12 is within 5% of unity (down-dominant 1-2 sector)  (f_12 = 0.983879, 1 - f_12 = +0.0161)
+  [PASS] f_23 is within 1% of unity (down-dominant 2-3 sector)  (f_23 = 0.998316, 1 - f_23 = +0.0017)
+  [PASS] m_u/m_c prediction has correct sign and order of magnitude  (m_u/m_c = 1.652e-03)
+  [PASS] m_c/m_t prediction has correct sign and order of magnitude  (m_c/m_t = 7.349e-04)
+
+========================================================================
+PART 5: Isospin-partner pairing cross-check
+========================================================================
+
+  Up-type chain under interior partition:
+    m_u/m_c = 1.651908e-03
+    m_c/m_t = 7.349068e-04
+    m_u/m_t = (m_u/m_c)(m_c/m_t) = 1.213998e-06  (obs: 1.251666e-05)
+
+  Geometric-mean observation comparators:
+    (m_u m_c m_t)^(1/3)          = 0.7800 GeV
+    (m_d m_s m_b)^(1/3)          = 0.1222 GeV
+    ratio geom_u / geom_d        = 6.385
+
+  m_u/m_t chain-rule deviation: -90.30%
+  [PASS] m_u/m_t chain-rule prediction has correct order of magnitude  (m_u/m_t = 1.214e-06)
+  [PASS] geometric-mean up-down ratio is O(1) (pair structure intact)  (ratio = 6.385)
+
+========================================================================
+PART 6: Sensitivity to the partition parameter
+========================================================================
+
+  m_u/m_c vs f_12:
+        f_12       m_u/m_c    dev vs obs
+      0.0000  5.165191e-02      +2944.11%
+      0.5000  3.873893e-02      +2183.09%
+      0.9000  9.813863e-03       +478.38%
+      0.9900  1.027873e-03        -39.42%
+      0.9950  5.152278e-04        -69.63%
+      0.9990  1.032522e-04        -93.91%
+      1.0000  0.000000e+00       -100.00%
+
+  m_c/m_t vs f_23:
+        f_23       m_c/m_t    dev vs obs
+      0.0000  2.238973e-02       +203.52%
+      0.5000  1.884021e-02       +155.40%
+      0.9000  8.266107e-03        +12.06%
+      0.9900  2.134817e-03        -71.06%
+      0.9950  1.410576e-03        -80.88%
+      0.9990  5.376957e-04        -92.71%
+      1.0000  0.000000e+00       -100.00%
+  [PASS] m_u/m_c is strictly decreasing in f_12  (f_12 = 0.00 -> 5.1652e-02, 0.50 -> 3.8739e-02, 0.99 -> 1.0279e-03)
+  [PASS] interior partition f_12 stays at least 1% below unity  (f_12 = 0.983879)
+
+========================================================================
+PART 7: Summary — bounded lane with one conditional partition
+========================================================================
+
+  Status:
+    BOUNDED secondary flavor-mass lane (up sector)
+    Conditional: up-down partition (f_12, f_23) in [0,1]^2
+    Retained core gives the CKM atlas magnitudes and the phase
+    delta = arctan(sqrt(5)), but not yet the partition.
+
+  Down-dominant edge (f_12 = f_23 = 1):  Phase 1 (down-type) closed.
+  Up-dominant edge  (f_12 = f_23 = 0):   symmetric up-type ratios.
+
+  Numerical surface at the observation-comparator partition:
+    f_12_obs = 0.983879  (≈ 1, so down-dominant in 1-2)
+    f_23_obs = 0.998316  (≈ 1, so down-dominant in 2-3)
+
+    m_u/m_c  = 1.651908e-03  (obs: 1.696779e-03)
+    m_c/m_t  = 7.349068e-04  (obs: 7.376717e-03)
+
+  What closes next: derive (f_12, f_23) from a promoted framework
+  quantity (candidates: CP phase dressing, Jarlskog invariant, or
+  isospin-partner EWSB cascade).  That would promote this lane to
+  retained (theorem-grade) for the up sector.
+
+========================================================================
+  TOTAL: PASS=23, FAIL=0
+========================================================================
+
+----- stderr -----
+

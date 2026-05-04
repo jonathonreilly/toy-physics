@@ -1,0 +1,37 @@
+===== runner cache v1 =====
+runner: scripts/central_band_born_largeN.py
+runner_sha256: 29248e224d148ebc2a2e2a8f82d2ed702bc5bb2515a599c06dbc84ad790eaf80
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 35.69
+status: ok
+----- stdout -----
+==============================================================================================================================
+CENTRAL-BAND LARGE-N CORRECTED BORN SWEEP
+  dense large-N extension of the central-band hard-geometry lane
+  seeds=4, realizations=8, npl=[60], yz_range=12.0, r=3.0, p=0.2, y_cut=2.0
+==============================================================================================================================
+
+N = 80
+   npl              mode                        |I3|/P   ok  verdict
+  ------------------------------------------------------------------------
+    60            linear                          FAIL    0  FAIL
+    60                LN  1.11e-16±2.9e-17 (max 7.77e-16)    3  PASS
+    60          collapse                          FAIL    0  FAIL
+    60            LN+|y|  1.11e-16±2.9e-17 (max 7.77e-16)    3  PASS
+    60   LN+|y|+collapse  8.79e-17±2.3e-17 (max 1.11e-15)    3  PASS
+
+
+N = 100
+   npl              mode                        |I3|/P   ok  verdict
+  ------------------------------------------------------------------------
+    60            linear                          FAIL    0  FAIL
+    60                LN  0.00e+00±0.0e+00 (max 0.00e+00)    1  PASS
+    60          collapse                          FAIL    0  FAIL
+    60            LN+|y|  0.00e+00±0.0e+00 (max 0.00e+00)    1  PASS
+    60   LN+|y|+collapse  0.00e+00±0.0e+00 (max 0.00e+00)    1  PASS
+
+
+
+----- stderr -----
+

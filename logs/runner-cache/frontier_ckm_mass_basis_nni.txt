@@ -1,0 +1,220 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_mass_basis_nni.py
+runner_sha256: b1588dc14d0b3d846b9ea652ccad2b5b112656d9718d782dc1d71534431be8f0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.75
+status: ok
+----- stdout -----
+========================================================================
+CKM Mass-Basis NNI: V_ub from Schur Complement + Mass-Ratio Suppression
+========================================================================
+  Closing the factor-6 gap in V_ub via mass-eigenvalue NNI normalization
+
+
+========================================================================
+PART 1: Mass-Ratio Suppression Factors
+========================================================================
+
+  Up-sector mass ratios:
+    sqrt(m_u/m_c) = sqrt(0.0022/1.27) = 0.04124
+    sqrt(m_c/m_t) = sqrt(1.27/172.76) = 0.08574
+    sqrt(m_u/m_t) = sqrt(0.0022/172.76) = 0.003536
+
+  Down-sector mass ratios:
+    sqrt(m_d/m_s) = sqrt(0.0047/0.0934) = 0.22361
+    sqrt(m_s/m_b) = sqrt(0.0934/4.18) = 0.14948
+    sqrt(m_d/m_b) = sqrt(0.0047/4.18) = 0.033425
+
+  Chain rule verification:
+    Up:   sqrt(m_u/m_c) * sqrt(m_c/m_t) = 0.003536
+          sqrt(m_u/m_t)                  = 0.003536
+  [PASS] Chain rule: sqrt(m_u/m_t) = sqrt(m_u/m_c) * sqrt(m_c/m_t)  (difference = 4.34e-19)
+    Down: sqrt(m_d/m_s) * sqrt(m_s/m_b) = 0.033425
+          sqrt(m_d/m_b)                  = 0.033425
+  [PASS] Chain rule: sqrt(m_d/m_b) = sqrt(m_d/m_s) * sqrt(m_s/m_b)  (difference = 6.94e-18)
+
+  EWSB cascade interpretation:
+    The mass hierarchy m_t >> m_c >> m_u comes from loop suppressions:
+    m_c/m_t ~ g^2/(16pi^2) ~ 1/300  (1-loop)
+    m_u/m_c ~ g^2/(16pi^2) ~ 1/300  (2-loop)
+    alpha_s * C_F / (4pi) = 0.00212
+    Actual m_c/m_t = 0.00735 = 1/136
+    Actual m_u/m_c = 0.00170 = 1/588
+
+========================================================================
+PART 2: Mass-Eigenvalue NNI Coefficients
+========================================================================
+
+  Up sector (geometric-mean -> mass-eigenvalue):
+    c_12^geom = 1.480
+    c_12^phys = 1.480 * sqrt(m_u/m_c) = 1.480 * 0.04124 = 0.06104
+    c_23^geom = 0.650
+    c_23^phys = 0.650 * sqrt(m_c/m_t) = 0.650 * 0.08574 = 0.05573
+    c_13^geom = c_12 * c_23 = 0.9620  [Schur complement]
+    c_13^phys = 0.9620 * sqrt(m_u/m_t) = 0.9620 * 0.003536 = 0.003402
+
+  Down sector (geometric-mean -> mass-eigenvalue):
+    c_12^geom = 0.910
+    c_12^phys = 0.910 * sqrt(m_d/m_s) = 0.910 * 0.22361 = 0.20348
+    c_23^geom = 0.650
+    c_23^phys = 0.650 * sqrt(m_s/m_b) = 0.650 * 0.14948 = 0.09716
+    c_13^geom = c_12 * c_23 = 0.5915  [Schur complement]
+    c_13^phys = 0.5915 * sqrt(m_d/m_b) = 0.5915 * 0.033425 = 0.019771
+
+  Factorization check (c_13^phys = c_12^phys * c_23^phys):
+    Up:   c_12^phys * c_23^phys = 0.06104 * 0.05573 = 0.003402
+          c_13^phys             = 0.003402
+  [PASS] c_13^phys = c_12^phys * c_23^phys (up)  (ratio = 1.0000000000)
+    Down: c_12^phys * c_23^phys = 0.20348 * 0.09716 = 0.019771
+          c_13^phys             = 0.019771
+  [PASS] c_13^phys = c_12^phys * c_23^phys (down)  (ratio = 1.0000000000)
+
+========================================================================
+PART 3: Full CKM from Mass-Basis NNI Coefficients
+========================================================================
+
+  Analytic estimates (mass-basis NNI):
+
+  |V_us|:
+    Down sector: c_12^phys = 0.20348
+    Up sector:   c_12^phys = 0.06104
+    |V_us| ~ |c_12^d - c_12^u| = 0.14245
+    PDG:  0.2243
+
+  |V_cb|:
+    Down sector: c_23^phys = 0.09716
+    Up sector:   c_23^phys = 0.05573
+    |V_cb| ~ |c_23^d - c_23^u| = 0.04143
+    PDG:  0.0422
+
+  |V_ub|:
+    Down sector: c_13^phys = 0.019771
+    Up sector:   c_13^phys = 0.003402
+    |V_ub| ~ |c_13^d - c_13^u| = 0.016369
+    PDG:  0.00382
+
+  Gap closure:
+    |V_ub| (geometric-mean NNI, naive) ~ c_13^geom ~ 0.9620
+    |V_ub| (mass-basis NNI)            ~ 0.016369
+    PDG                                 = 0.00382
+    Suppression factor: 58.8x
+
+========================================================================
+PART 4: Numerical CKM with Mass-Basis c_13
+========================================================================
+
+  Building NNI matrices:
+    Up sector:   c_12=1.480, c_23=0.650, c_13=0.003402
+    Down sector: c_12=0.910, c_23=0.650, c_13=0.019771
+    CP phase (Berry): delta = 120.0 deg
+
+  CKM matrix (magnitudes):
+    | 0.974322  0.225117  0.004348 |
+    | 0.224744  0.973514  0.041962 |
+    | 0.013661  0.039914  0.999110 |
+
+  Key elements:
+    |V_us| = 0.22512  (PDG: 0.2243)  ratio: 1.004
+    |V_cb| = 0.04196  (PDG: 0.0422)  ratio: 0.994
+    |V_ub| = 0.004348  (PDG: 0.00382)  ratio: 1.138
+    J      = 4.513e-06  (PDG: 3.080e-05)  ratio: 0.147
+
+  Wolfenstein parameters:
+    lambda  = 0.22512  (PDG: 0.2243)
+    A       = 0.8280  (PDG: 0.79)
+    rho_bar = 0.4589  (PDG: 0.141)
+    eta_bar = 0.0359  (PDG: 0.357)
+  [PASS] [BOUNDED] |V_us| within 50% of PDG  (|V_us| = 0.22512, ratio = 1.004)
+  [PASS] [BOUNDED] |V_cb| within 50% of PDG  (|V_cb| = 0.04196, ratio = 0.994)
+  [PASS] [BOUNDED] |V_ub| within factor 3 of PDG (mass-basis corrected)  (|V_ub| = 0.004348, ratio = 1.138)
+  [PASS] [BOUNDED] J within order of magnitude of PDG  (J = 4.513e-06, ratio = 0.147)
+
+========================================================================
+PART 5: Gap Closure -- Geometric-Mean to Mass-Basis
+========================================================================
+
+  Suppression factors:
+    Up sector:   sqrt(m_u/m_t) = 0.003536
+    Down sector: sqrt(m_d/m_b) = 0.033425
+    Geometric-mean overshoot factor (up):   282.8x
+    Geometric-mean overshoot factor (down): 29.9x
+
+  Scan: c_13 suppression from 1.0 to sqrt(m_1/m_3)
+   suppression       c13_u       c13_d      |V_ub|  V_ub/PDG
+  ------------  ----------  ----------  ----------  --------
+      1.000000    0.962000    0.591500    0.020073     5.255 <-- geometric
+      0.500000    0.481000    0.295750    0.011446     2.996
+      0.100000    0.096200    0.059150    0.005122     1.341
+      0.050000    0.048100    0.029575    0.004504     1.179
+      0.010000    0.009620    0.005915    0.004083     1.069
+      0.003536    0.003402    0.002092    0.004023     1.053 <-- mass basis
+      0.001000    0.000962    0.000592    0.004000     1.047
+
+  Summary:
+    |V_ub| (geometric-mean NNI):  0.02007  (ratio to PDG: 5.25)
+    |V_ub| (mass-basis NNI):      0.004348  (ratio to PDG: 1.14)
+    |V_ub| (PDG):                 0.00382
+    Gap closure: 5.3x -> 1.14x
+  [PASS] Mass-basis NNI closes the geometric-mean gap in V_ub  (geometric: 5.3x, mass-basis: 1.14x)
+
+  Finding optimal suppression to match PDG |V_ub|...
+    Brentq failed -- V_ub does not cross PDG in range
+
+========================================================================
+PART 6: Wolfenstein Identification
+========================================================================
+
+  Wolfenstein from mass-basis NNI:
+    lambda  ~ c_12^phys (down) = 0.20348  (PDG: 0.2243)
+    A       ~ c_23^phys / lambda^2 = 2.3466  (PDG: 0.79)
+    A*lambda^3 = 0.019771  (PDG V_ub: 0.00382)
+
+  Schur complement chain in mass basis:
+    c_13^phys = c_12^phys * c_23^phys  [chain rule for sqrt(m_i/m_j)]
+    = 0.20348 * 0.09716 = 0.019771
+    = lambda * (A * lambda^2) = A * lambda^3
+    This IS the Wolfenstein hierarchy for V_ub.
+  [PASS] [BOUNDED] Wolfenstein identification: c_13^phys = A * lambda^3  (c_13^phys = 0.019771, A*lambda^3 = 0.019771)
+
+  Mass-ratio origin of each Wolfenstein power:
+    lambda   ~ sqrt(m_d/m_s) = 0.22361 * c_12^geom
+    lambda^2 ~ (m_d/m_s)     = 0.05000 * (c_12^geom)^2
+    lambda^3 ~ (m_d/m_s)^1.5 = 0.011180 * (c_12^geom)^3
+    A*lambda^3 includes extra sqrt(m_s/m_b) from c_23
+  [PASS] Wolfenstein lambda ~ sqrt(m_d/m_s) * c_12^geom  (lambda/(r_ds*c12) = 1.0000)
+
+========================================================================
+SCORECARD: Mass-Basis NNI vs PDG
+========================================================================
+
+   Element      Mass-NNI           PDG     Ratio   sigma    Status
+  --------  ------------  ------------  --------  ------  --------
+    |V_us|   2.25117e-01   2.24300e-01     1.004     1.0      GOOD
+    |V_cb|   4.19625e-02   4.22000e-02     0.994     0.2      GOOD
+    |V_ub|   4.34792e-03   3.82000e-03     1.138     2.2      GOOD
+         J   4.51337e-06   3.08000e-05     0.147    21.9   BOUNDED
+
+  Wolfenstein parameters:
+      lambda  =   0.2251  (PDG: 0.2243)  ratio: 1.004
+           A  =   0.8280  (PDG: 0.79)  ratio: 1.048
+     rho_bar  =   0.4589  (PDG: 0.141)  ratio: 3.254
+     eta_bar  =   0.0359  (PDG: 0.357)  ratio: 0.101
+
+  V_ub Gap Closure Summary:
+    Geometric-mean NNI |V_ub|: 0.02007 (5.3x PDG)
+    Mass-basis NNI |V_ub|:     0.004348 (1.14x PDG)
+    PDG |V_ub|:                0.00382
+  [PASS] Mass-basis NNI reduces V_ub overshoot by > 2x  (geometric: 5.3x, mass-basis: 1.14x, improvement: 4.6x)
+
+========================================================================
+FINAL SUMMARY
+========================================================================
+  Total checks: 12
+  Passed: 12 (7 exact, 5 bounded)
+  Failed: 0 (0 exact, 0 bounded)
+
+  All checks passed.
+
+----- stderr -----
+

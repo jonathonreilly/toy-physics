@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_pmns_cp_orientation_parity_reduction_2026_04_20.py
+runner_sha256: 77d513ed2af88104b265c9d2f19c4f2c87241747a97bfec67f38b82ea6f52dbd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM PMNS CP ORIENTATION PARITY REDUCTION
+========================================================================================
+
+Part 1: source cubic equals the ascending-basis Jarlskog bridge
+   Basin 1: I_src=+0.303560489497  Delta=+9.267735426413  J_basis=+0.032754548499  I_src/Delta=+0.032754548499
+  [PASS] Basin 1: ascending-basis Jarlskog equals I_src / Delta
+   Basin 2: I_src=-225.763564069262  Delta=+12275.668963542641  J_basis=-0.018391141431  I_src/Delta=-0.018391141431
+  [PASS] Basin 2: ascending-basis Jarlskog equals I_src / Delta
+   Basin X: I_src=-99.766107123954  Delta=+7181.229515524768  J_basis=-0.013892621996  I_src/Delta=-0.013892621996
+  [PASS] Basin X: ascending-basis Jarlskog equals I_src / Delta
+
+Part 2: row-permutation parity is the only extra sign
+   Basin 1, sigma=(2, 1, 0): parity=-1  J_sigma=-0.032754548499  expected=-0.032754548499
+  [PASS] Basin 1, sigma=(2, 1, 0): J_sigma = parity(sigma) * I_src / Delta
+   Basin 1, sigma=(2, 0, 1): parity=+1  J_sigma=+0.032754548499  expected=+0.032754548499
+  [PASS] Basin 1, sigma=(2, 0, 1): J_sigma = parity(sigma) * I_src / Delta
+   Basin 2, sigma=(2, 1, 0): parity=-1  J_sigma=+0.018391141431  expected=+0.018391141431
+  [PASS] Basin 2, sigma=(2, 1, 0): J_sigma = parity(sigma) * I_src / Delta
+   Basin 2, sigma=(2, 0, 1): parity=+1  J_sigma=-0.018391141431  expected=-0.018391141431
+  [PASS] Basin 2, sigma=(2, 0, 1): J_sigma = parity(sigma) * I_src / Delta
+   Basin X, sigma=(2, 1, 0): parity=-1  J_sigma=+0.013892621996  expected=+0.013892621996
+  [PASS] Basin X, sigma=(2, 1, 0): J_sigma = parity(sigma) * I_src / Delta
+   Basin X, sigma=(2, 0, 1): parity=+1  J_sigma=-0.013892621996  expected=-0.013892621996
+  [PASS] Basin X, sigma=(2, 0, 1): J_sigma = parity(sigma) * I_src / Delta
+
+Part 3: chamber-sign structure
+  [PASS] Basin 1 has positive source cubic orientation
+  [PASS] Basin 2 has negative source cubic orientation
+  [PASS] Basin X has negative source cubic orientation
+  [PASS] At the same H_pin, sigma=(2,1,0) and sigma=(2,0,1) give opposite PMNS CP signs
+  [PASS] Yet the source cubic at H_pin is single-valued and sigma-blind
+
+Part 4: conditional source law after the parity bit
+  [PASS] On the odd sigma branch, the coefficient-free source law I_src > 0 selects Basin 1 uniquely  (odd-positive=['Basin 1'])
+  [PASS] So once a parity / charged-doublet label law fixes sigma=(2,1,0), the source cubic sign also forces sin(delta_CP) < 0
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact reduction:
+    - the source family already carries a CP-oriented cubic scalar I_src
+    - the ascending-eigenbasis Jarlskog is exactly I_src / Delta
+    - physical PMNS CP sign differs from that only by parity(sigma_hier)
+
+  Consequence:
+    - source-side CP-odd data do not close sigma_hier by themselves
+    - the remaining gap for I12, and for the sign half of I5, is exactly
+      the parity / charged-doublet label law on sigma_hier
+    - once that parity bit is fixed to sigma=(2,1,0), the simple source law
+      I_src > 0 selects Basin 1 and yields sin(delta_CP) < 0 immediately
+
+PASS=16  FAIL=0
+
+----- stderr -----
+

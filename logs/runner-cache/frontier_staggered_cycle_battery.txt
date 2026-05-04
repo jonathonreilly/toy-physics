@@ -1,0 +1,78 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_cycle_battery.py
+runner_sha256: d139bef6390002c66cbebdb6c16e7443b05006b65b58870ab65124a241c5ec48
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.02
+status: ok
+----- stdout -----
+======================================================================
+STAGGERED FERMION — CYCLE-BEARING GRAPH BATTERY
+======================================================================
+DT=0.12, MASS=0.3, G=8.0, mu2=0.22, N_ITER=15
+Force is the primary gravity observable. No centroid. No 1D ring.
+
+
+======================================================================
+CYCLE BATTERY: random_geometric (36 nodes)
+======================================================================
+  [B1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [B2] Linearity: R^2=0.991138 PASS
+  [B3] Additivity: residual=1.9777e-16 PASS
+  [B4] Force: +1.8746e-02 TOWARD PASS
+  [B5] Iter stability: 15/15 TOWARD PASS
+  [B6] Norm: drift=6.6613e-16 PASS
+    gauss     : F=+1.8746e-02 TW
+    color-0   : F=+1.9205e-02 TW
+    color-1   : F=+3.2145e-02 TW
+  [B7] Families: 3/3 PASS
+  [B8] Gauge: J_range=1.5978e-02, sin_R^2=0.9999 PASS
+  [B9] Gap: G_eff=58.7, shell_grad_ratio=0.019
+       spectral_ratio(modes1-5)=0.189
+
+  SCORE: 9/9
+
+======================================================================
+CYCLE BATTERY: growing (48 nodes)
+======================================================================
+  [B1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [B2] Linearity: R^2=0.999882 PASS
+  [B3] Additivity: residual=1.4415e-16 PASS
+  [B4] Force: +1.2269e-02 TOWARD PASS
+  [B5] Iter stability: 15/15 TOWARD PASS
+  [B6] Norm: drift=2.2204e-16 PASS
+    gauss     : F=+1.2269e-02 TW
+    color-0   : F=+7.9398e-03 TW
+    color-1   : F=+7.3927e-03 TW
+  [B7] Families: 3/3 PASS
+  [B8] Gauge: J_range=3.0799e-03, sin_R^2=0.9500 PASS
+  [B9] Gap: G_eff=57.6, shell_grad_ratio=0.012
+       spectral_ratio(modes1-5)=0.059
+
+  SCORE: 9/9
+
+======================================================================
+CYCLE BATTERY: layered_cycle (24 nodes)
+======================================================================
+  [B1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [B2] Linearity: R^2=0.991249 PASS
+  [B3] Additivity: residual=1.7359e-16 PASS
+  [B4] Force: +1.8857e-02 TOWARD PASS
+  [B5] Iter stability: 15/15 TOWARD PASS
+  [B6] Norm: drift=2.2204e-16 PASS
+    gauss     : F=+1.8857e-02 TW
+    color-0   : F=+1.6203e-02 TW
+    color-1   : F=+3.3568e-02 TW
+  [B7] Families: 3/3 PASS
+  [B8] Gauge: J_range=4.0020e-02, sin_R^2=0.9736 PASS
+  [B9] Gap: G_eff=70.5, shell_grad_ratio=0.024
+       spectral_ratio(modes1-5)=0.275
+
+  SCORE: 9/9
+
+======================================================================
+SUMMARY: 3 families tested, scores: [np.int64(9), np.int64(9), np.int64(9)]
+Time: 0.3s
+
+----- stderr -----
+

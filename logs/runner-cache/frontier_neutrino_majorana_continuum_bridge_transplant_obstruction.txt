@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_continuum_bridge_transplant_obstruction.py
+runner_sha256: 252799315150b9788a67fb2091638fb3ad5558b7597bec459b38cad90d4cca57
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.07
+status: nonzero_exit
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: CONTINUUM-BRIDGE TRANSPLANT OBSTRUCTION
+========================================================================================
+
+Question:
+  Can the inverse-limit / continuum-interpretation layer itself act as
+  the missing absolute Majorana staircase selector on the current
+  self-dual source ray?
+
+========================================================================================
+PART 1: THE CURRENT ATLAS REDUCES THE QG FRONTIER TO INTERPRETATION
+========================================================================================
+  [PASS] Atlas retains the universal continuum-bridge reduction row
+  [FAIL] The continuum-bridge note explicitly reduces the live issue to inverse-limit / continuum interpretation
+  [PASS] The refinement-net note already gives the exact canonical discrete net
+  [PASS] The current Majorana partition/projective blocker note already closes the discrete measure/projective route
+
+========================================================================================
+PART 2: EVERY COMPATIBLE FINITE STAGE KEEPS THE SAME QUADRATIC SOURCE LAW
+========================================================================================
+  [PASS] Finite stage 0 keeps Delta log rho_n quadratic in lambda  (spread=0.00e+00)
+  [PASS] Finite stage 0 has positive coefficient c_n  (c_n=1.138111e+05)
+  [PASS] Finite stage 1 keeps Delta log rho_n quadratic in lambda  (spread=3.64e-12)
+  [PASS] Finite stage 1 has positive coefficient c_n  (c_n=2.466586e+04)
+  [PASS] Finite stage 2 keeps Delta log rho_n quadratic in lambda  (spread=0.00e+00)
+  [PASS] Finite stage 2 has positive coefficient c_n  (c_n=5.073486e+03)
+
+  Stage coefficients c_n = ['1.138e+05', '2.467e+04', '5.073e+03']
+
+========================================================================================
+PART 3: PROJECTIVE COMPATIBILITY PRESERVES THE SAME SOURCE SCALING
+========================================================================================
+  [PASS] Projective pushforward preserves the mid-level source ray exactly  (max mid-level deviation=3.55e-15)
+  [PASS] Projective pushforward preserves the coarse-level source ray exactly  (max coarse-level deviation=1.78e-15)
+  [PASS] So the exact projective family never leaves the same one-parameter source class  (all finite stages remain on compatible homogeneous rays)
+
+========================================================================================
+PART 4: BARE INVERSE-LIMIT REINTERPRETATION DOES NOT ADD A SELECTOR
+========================================================================================
+  [PASS] Every finite-stage cylinder density is still monotone in lambda on lambda>0  (coefficients=[113811.14859094792, 24665.860375747226, 5073.485723911547])
+  [PASS] So a bare inverse-limit reinterpretation of the same cylinder family adds no finite selector  (a new non-homogeneous limiting datum would still be required)
+
+========================================================================================
+RESULT
+========================================================================================
+  No. On the current exact stack, the continuum bridge is only an
+  interpretation frontier for the same compatible discrete projective
+  family. Every finite-stage cylinder density remains quadratic and
+  monotone in the same source scale, and projective/refinement
+  compatibility preserves that law exactly.
+
+  So a bare inverse-limit reinterpretation of the current family is
+  not the missing non-homogeneous Majorana selector.
+
+  PASS=14  FAIL=1
+
+----- stderr -----
+

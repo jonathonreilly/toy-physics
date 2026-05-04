@@ -1,0 +1,96 @@
+===== runner cache v1 =====
+runner: scripts/frontier_nonlinear_born_gravity.py
+runner_sha256: 69cf00c7af2c6cd8cf806c2978699a664393be9d638b6cd0fb56a40f3171af9f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.73
+status: ok
+----- stdout -----
+========================================================================
+NONLINEAR PROPAGATOR BREAKS BORN RULE AND GRAVITY SIMULTANEOUSLY
+========================================================================
+
+Claim: I_3 = 0 (Born rule) and beta = 1 (mass law) both follow
+from linear amplitude superposition. Breaking linearity breaks both.
+
+------------------------------------------------------------------------
+PART 1: BORN RULE (Sorkin I_3 parameter)
+------------------------------------------------------------------------
+
+  LINEAR     psi_out = sum K * psi_in
+    |I_3|/P = 1.6199e-16   [I_3 = 0]   (0.0s)
+
+  QUADRATIC  psi_out = sum K * |psi_in| * psi_in
+    |I_3|/P = 1.9433e-01   [I_3/P = 1.9433e-01]   (0.0s)
+
+  CUBIC      psi_out = sum K * psi_in^3
+    |I_3|/P = 2.3525e-01   [I_3/P = 2.3525e-01]   (0.0s)
+
+------------------------------------------------------------------------
+PART 2: GRAVITATIONAL PHYSICS (mass law + distance law + sign)
+------------------------------------------------------------------------
+
+  2D lattice: 40 x 60,  k = 6.0
+  Field: analytic 1/r potential (clean scaling)
+
+  LINEAR     psi_out = sum K * psi_in
+    beta  = 1.014   (mass exponent, Newtonian = 1.0)
+    alpha = 1.272   (distance exponent, Newtonian ~ 1.0)
+    sign  = attractive   (raw delta = +0.685913)
+    mass sweep: M=0.00->delta=+0.266995  M=0.00->delta=+0.544582  M=0.01->delta=+1.113188  M=0.02->delta=+2.189208  
+    (0.2s)
+
+  QUADRATIC  psi_out = sum K * |psi_in| * psi_in
+    beta  = 0.997   (mass exponent, Newtonian = 1.0)
+    alpha = 1.628   (distance exponent, Newtonian ~ 1.0)
+    sign  = REPULSIVE   (raw delta = -0.001838)
+    mass sweep: M=0.00->delta=-0.000736  M=0.00->delta=-0.001471  M=0.01->delta=-0.002937  M=0.02->delta=-0.005851  
+    (0.1s)
+
+  CUBIC      psi_out = sum K * psi_in^3
+    beta  = 0.992   (mass exponent, Newtonian = 1.0)
+    alpha = 1.324   (distance exponent, Newtonian ~ 1.0)
+    sign  = REPULSIVE   (raw delta = -0.008309)
+    mass sweep: M=0.00->delta=-0.003335  M=0.00->delta=-0.006655  M=0.01->delta=-0.013247  M=0.02->delta=-0.026232  
+    (0.1s)
+
+========================================================================
+SUMMARY TABLE
+========================================================================
+
+Propagator          |I_3|/P     beta    alpha         Sign
+----------------------------------------------------------
+linear               <1e-10    1.014    1.272   attractive
+quadratic        1.9433e-01    0.997    1.628    REPULSIVE
+cubic            2.3525e-01    0.992    1.324    REPULSIVE
+
+========================================================================
+CORRELATION ANALYSIS
+========================================================================
+
+  Linear:    Born OK = True   Attractive = True   beta ~ 1 = True
+  Quadratic   Born broken = True   Attractive = False   alpha = 1.63
+  Cubic       Born broken = True   Attractive = False   alpha = 1.32
+
+  [PASS] Perfect correlation:
+    - Linear propagator: I_3 = 0, attractive gravity, beta = 1
+    - Nonlinear propagators: I_3 != 0, REPULSIVE gravity
+
+  CONCLUSION:
+  The Born rule and attractive Newtonian gravity are both
+  consequences of linear amplitude superposition. Nonlinear
+  modifications that violate I_3 = 0 simultaneously flip the
+  gravitational force sign (attractive -> repulsive) and distort
+  the distance law. Conversely, measuring I_3 = 0 in a
+  gravitational field confirms both the quantum and gravitational
+  sectors of the framework.
+
+  EXPERIMENTAL IMPLICATION:
+  The diamond NV Born-rule experiment (Sorkin test near a mass)
+  is framework-specific: it tests BOTH the Born rule AND gravity
+  at once. A single measurement constrains both sectors.
+
+Total runtime: 0.5s
+
+----- stderr -----
+

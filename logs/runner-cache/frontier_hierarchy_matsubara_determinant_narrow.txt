@@ -1,0 +1,55 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_matsubara_determinant_narrow.py
+runner_sha256: be523c470186719b5a33b3afef1e4bfee91b9f68ace85547e34b95370848b01e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.59
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure and scope discipline
+----------------------------------------------------------------------------------------
+  [PASS (A)] contains: 'Hierarchy Matsubara Determinant'  ()
+  [PASS (A)] contains: 'Type:** positive_theorem'  ()
+  [PASS (A)] contains: 'L_s = 2'  ()
+  [PASS (A)] contains: 'sin²(k_i) = 1'  ()
+  [PASS (A)] contains: '[m² + u_0² (3 + sin²ω)]⁴'  ()
+  [PASS (A)] contains: 'EWSB'  ()
+  [PASS (A)] contains: 'Physical EWSB order-parameter'  ()
+  [PASS (A)] contains: 'class (A)'  ()
+  [PASS (A)] contains: 'proposed_claim_type: positive_theorem'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: spatial pinning at L_s = 2 (sin²(k_i) = 1)
+----------------------------------------------------------------------------------------
+  [PASS (A)] sin²(π/2) = 1 (spatial momentum pinning at L_s = 2 APBC)  (sin²(π/2) = 1)
+  [PASS (A)] Σ_i sin²(k_i) = 3 at L_s = 2 (3 spatial directions)  ()
+
+----------------------------------------------------------------------------------------
+Part 3: per-Matsubara-mode determinant magnitude
+----------------------------------------------------------------------------------------
+  [PASS (A)] |det(D+m) per ω at L_s=2| = (m² + u_0²(3+sin²ω))^4  (4-fold taste degeneracy)
+
+----------------------------------------------------------------------------------------
+Part 4: total APBC determinant for small L_t
+----------------------------------------------------------------------------------------
+  [PASS (A)] L_t = 2: total determinant has no residual ω dependency  (free symbols: {m, u_0})
+  [PASS (A)] L_t = 2: |det| at m = u_0 = 1 evaluates to a positive number  (value = 3.9062e+05)
+  [PASS (A)] L_t = 3: total determinant has no residual ω dependency  (free symbols: {m, u_0})
+  [PASS (A)] L_t = 3: |det| at m = u_0 = 1 evaluates to a positive number  (value = 6.6342e+07)
+  [PASS (A)] L_t = 4: total determinant has no residual ω dependency  (free symbols: {m, u_0})
+  [PASS (A)] L_t = 4: |det| at m = u_0 = 1 evaluates to a positive number  (value = 2.8275e+10)
+
+----------------------------------------------------------------------------------------
+Part 5: closed form matches direct evaluation at L_t = 2
+----------------------------------------------------------------------------------------
+  [PASS (A)] at L_t = 2: both Matsubara modes have sin²(ω) = 1  (sin²(ω) values: [1, 1])
+  [PASS (A)] L_t = 2: |det(D+m)| = (m² + 4 u_0²)^8 from closed form  (matches closed form)
+
+========================================================================================
+  TOTAL: PASS=20, FAIL=0
+========================================================================================
+
+----- stderr -----
+

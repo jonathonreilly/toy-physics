@@ -1,0 +1,45 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_k00_bosonic_normalization_theorem.py
+runner_sha256: 8b8b98dba24c272ca88174ccece3e643bb97bd78d5f8518ce384c8e7b91eb8f3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO K00 BOSONIC NORMALIZATION THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: K00 HAS AN EXACT UNIFORM PROJECTOR GENERATOR
+========================================================================================
+  [PASS] The exact heavy-basis diagonal K00 agrees with the transformed kernel entry  (K00=1.966666666667)
+  [PASS] The same K00 is the Frobenius pairing against F00 = J3/3  (trace(F00 H)=1.966666666667)
+  [PASS] K00 is independent of the odd/even breaking triplet (delta,rho,gamma)  (varied K00=1.966666666667)
+
+========================================================================================
+PART 2: F00 IS ISOSPECTRAL TO THE SCALED SOURCE ROW-SUM GENERATOR
+========================================================================================
+  [PASS] The target K00 generator is a rank-one projector with spectrum {1,0,0}  (eig(F00)=[0. 0. 1.])
+  [PASS] The scaled source row-sum generator (1/2)J2 is a rank-one projector with spectrum {1,0}  (eig(FROW)=[0. 1.])
+  [PASS] So the target diagonal channel and the scaled source row-sum mode are exactly isospectral  (both have one nonzero eigenvalue +1 and otherwise zero spectrum)
+
+========================================================================================
+PART 3: THE BOSONIC OBSERVABLE PRINCIPLE FIXES K00 = 2 TAU_PLUS
+========================================================================================
+  [PASS] The target K00 generator and the scaled source row-sum mode have identical exact bosonic response  (max response diff=6.66e-16)
+  [PASS] Because the physical source amplitude multiplies J2 rather than (1/2)J2, the exact coefficient law is K00 = 2 tau_+  (K00/tau_+ = 2.000000000000)
+
+========================================================================================
+PART 4: THE SHARP SOURCE-ORIENTED BRANCH GIVES K00 = 2
+========================================================================================
+  [PASS] The exact source package already fixes tau_E = tau_T = 1/2  ((tau_E,tau_T)=(0.500000,0.500000))
+  [PASS] Therefore tau_+ = 1 on the sharp source-oriented branch  (tau_+=1.000000000000)
+  [PASS] So the exact diagonal normalization is K00 = 2  (K00=2.000000000000)
+
+========================================================================================
+SUMMARY: PASS=11 FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -1,0 +1,76 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_scale_selector_necessity.py
+runner_sha256: c5f5c24a39ca8ddbc7c05bce00ae89a77d1529e9722436d339bbdce4ad781d1f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: HISTORICAL SCALE-SELECTOR NECESSITY
+========================================================================================
+
+Authority stack:
+  - docs/NEUTRINO_MAJORANA_NAMBU_RADIAL_OBSERVABLE_NOTE.md
+  - docs/NEUTRINO_MAJORANA_NO_STATIONARY_SCALE_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_SOURCE_RAY_THEOREM_NOTE.md
+  - later partly superseded by:
+    docs/NEUTRINO_MAJORANA_NAMBU_QUADRATIC_COMPARATOR_NOTE.md
+    docs/NEUTRINO_MAJORANA_BACKGROUND_NORMALIZATION_THEOREM_NOTE.md
+
+Question:
+  Could the earlier logarithmic Majorana observables alone define a
+  canonically meaningful finite scale selector on the admitted source
+  class?
+
+========================================================================================
+PART 1: CURRENT EXACT OBSERVABLES ARE AFFINE IN log(scale) OR CONSTANT
+========================================================================================
+  [PASS] Local Pfaffian generator is affine in log scale  (max second deriv=2.22e-16)
+  [PASS] Local Nambu radial generator is affine in log scale  (max second deriv=2.89e-16)
+  [PASS] Three-generation lifted generator is affine in log scale  (max second deriv=8.86e-16)
+  [PASS] Scale-invariant class data carry zero scale derivative  (max deriv=4.44e-16)
+
+  So the current exact observable family has only two scale behaviors:
+  affine in log(scale), or exactly scale-invariant.
+
+========================================================================================
+PART 2: VALUE-BASED SELECTORS DEPEND ON UNFIXED ADDITIVE CONSTANTS
+========================================================================================
+  [PASS] Equating two current logarithmic generators can shift the selected scale arbitrarily by additive renormalization  (selection spread=5.460e+01)
+
+  Raw value comparisons between the current log-type generators do not
+  give a canonical scale. The result changes when the unfixed additive
+  constants are shifted.
+
+========================================================================================
+PART 3: SHIFT-INVARIANT DIFFERENTIAL DATA CANNOT PICK A FINITE SCALE
+========================================================================================
+  [PASS] Derivative of local pair generator is scale-independent in log coordinates  (spread=0.00e+00)
+  [PASS] Derivative ratio between current scale-sensitive generators is constant  (ratio spreads=4.44e-16,0.00e+00)
+  [PASS] Current logarithmic generators have zero curvature in log coordinates  (curvatures=2.22e-16,8.86e-16)
+
+  So every additive-shift-invariant differential datum available on the
+  current source class is itself scale-independent. No finite critical
+  point can come from these data alone.
+
+========================================================================================
+RESULT
+========================================================================================
+  No. On the earlier logarithmic observable family, the scale-sensitive
+  observables were only affine in log(scale), and the remaining exact
+  data were scale-invariant.
+
+  At that stage, any successful Majorana scale selector had to add:
+    1. a genuinely new non-homogeneous pairing-sector comparator, or
+    2. a canonically fixed endpoint/background normalization tying the
+       additive constants to a physical reference surface.
+
+  Later branch work closed both of those local needs positively. The
+  live blocker is now narrower: finite-point selection on the already-
+  normalized local response curve.
+
+PASS=8  FAIL=0
+
+----- stderr -----
+

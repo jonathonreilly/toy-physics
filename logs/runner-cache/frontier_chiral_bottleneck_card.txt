@@ -1,0 +1,93 @@
+===== runner cache v1 =====
+runner: scripts/frontier_chiral_bottleneck_card.py
+runner_sha256: 2718b0b7859d1403dedfb29f23f74d7d9f03a5e41d95fd11773978080df2fd7f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+Chiral Expanded Core Card (N=16)
+====================================
+C1 [operating-point] | Born barrier / slit |I3|/P
+  target: existing chiral closure-card harness
+  readout: three-slit |I3|/P with absorptive blocking
+  why: Still the non-negotiable linearity/interference gate.
+
+C2 [operating-point] | d_TV / slit distinguishability
+  target: existing chiral closure-card harness
+  readout: total variation distance between slit-resolved branches
+  why: Checks that the slit harness is informative rather than degenerate.
+
+C3 [operating-point] | Null control (k=0 or f=0)
+  target: existing chiral closure-card harness
+  readout: no-field / no-phase baseline drift
+  why: Protects against built-in drift being mistaken for gravity.
+
+C4 [operating-point] | F∝M scaling
+  target: existing chiral closure-card harness
+  readout: weak-field log-log exponent and linear fit quality
+  why: Keeps the gravity claim honest at first order.
+
+C5 [operating-point] | Gravity sign at retained operating point
+  target: existing chiral closure-card harness
+  readout: TOWARD/AWAY sign and magnitude
+  why: Still the minimal gravity gate.
+
+C6 [operating-point] | Decoherence / record proxy
+  target: existing chiral closure-card harness
+  readout: purity drop / branch-environment coupling proxy
+  why: Retains the measurement-side pressure in the core card.
+
+C7 [operating-point] | Mutual information
+  target: existing chiral closure-card harness
+  readout: branch correlation strength
+  why: Useful companion to decoherence and purity.
+
+C8 [operating-point] | Purity stability
+  target: existing chiral closure-card harness
+  readout: purity variability across the scanned window
+  why: Guards against one lucky purity operating point.
+
+C9 [operating-point] | Gravity growth with propagation
+  target: existing chiral closure-card harness
+  readout: sign and magnitude trend over propagation depth
+  why: Checks that the signal is a real trend rather than one layer count.
+
+C10 [operating-point] | Distance law
+  target: existing chiral closure-card harness
+  readout: offset exponent and fit quality
+  why: Still needed, but no longer overread as the whole gravity story.
+
+C11 [structural] | 3D KG isotropy / coupled-coin dispersion
+  target: 3+1D coupled coin scan
+  readout: E^2 vs k^2 R^2, axis/diagonal slope spread, isotropy ratio
+  why: Fails immediately if the coin remains factorized across axes.
+
+C12 [structural] | 3D gauge-loop / AB visibility
+  target: 3+1D closed-loop flux harness
+  readout: Wilson loop visibility, pure-gauge invariance, detector contrast
+  why: Detects whether 3D gauge response really exists or only a lower-D proxy.
+
+C13 [structural] | Fixed-theta k-achromaticity
+  target: 1D or 2D corrected carrier-k sweep
+  readout: deflection CV across k at fixed theta and matched travel distance
+  why: Separates structural gravity from wave-window chromaticity.
+
+C14 [structural] | Theta vs gravity-susceptibility split
+  target: separated mass and gravity couplings
+  readout: deflection vs theta_m and vs g_f in the same harness
+  why: Tests whether theta is overloaded as mass plus gravity response.
+
+C15 [structural] | Boundary-condition robustness
+  target: periodic / reflecting / open sweep at fixed delta and lambda
+  readout: sign-map stability, TOWARD fraction, recurrence windows
+  why: Exposes wrap and recurrence artifacts before they are mistaken for physics.
+
+C16 [structural] | Multi-observable gravity consistency
+  target: single-run observable panel
+  readout: first-arrival, peak, current, centroid, torus-aware centroid
+  why: Shows whether gravity is real or only one readout is drifting.
+
+
+----- stderr -----
+

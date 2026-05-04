@@ -1,0 +1,42 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_2026_04_20.py
+runner_sha256: c87369f25c8378c72dd4ffa910ab286df3edc0e087036f7640d686400f3fb390
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 25.86
+status: ok
+----- stdout -----
+======================================================================================================================
+GAUGE-VACUUM PLAQUETTE FIRST-SECTOR MINIMAL-BULK COMPLETION 3D+1 FULL-PACKET NO-GO
+======================================================================================================================
+
+Question:
+  After the stronger reduced-packet closure, can the selected retained
+  `3d+1` ambient also reproduce the full sparse-face projected-source
+  Hermitian packet exactly?
+
+  eig(retained 4x4 block)                      = [-0.0, 0.00421394801, 0.023920003547, 3.364735298807]
+  eig(selected real slice)                     = [6.111469e-06, 0.02283651109, 1.156774232916]
+  eig(full sparse-face target)                 = [0.087543572606, 0.235016887886, 1.243477653447]
+  target full packet odd channels              = (0.000000000000, 0.042247097248, 0.000000000000)
+
+  [PASS] The full sparse-face target Hermitian block is the exact matrix behind the target projected-source packet  ((S12,A13,S13)=(1.041425,0.042247,-0.239881))
+  [PASS] Its eigenvalues violate Cauchy interlacing for any 3d compression of the selected retained 4x4 Wilson block  ((mu1,lam2,mu2,lam3)=(0.087544,0.004214,0.235017,0.023920))
+  [PASS] Therefore no orthonormal real or complex 3d slice of the retained 3d+1 ambient can reproduce the full sparse-face target packet exactly  (full-packet equality would force forbidden compression eigenvalues)
+  [PASS] In particular the selected real slice cannot reach the full sparse-face target even after arbitrary internal U(3) basis dressing, because unitary similarity preserves its slice spectrum  (slice_target_eig_gap=0.245359)
+
+======================================================================================================================
+RESULT
+======================================================================================================================
+  Strong full-packet answer:
+    - exact full sparse-face packet matching is impossible on the retained
+      `3d+1` ambient of the selected Wilson branch
+    - the obstruction is structural, not a failed search: the target block
+      violates compression interlacing against the selected retained 4x4 block
+    - so the strongest attainable exact commutation on this ambient is the
+      reduced projected-source packet, not the full 9-channel packet
+
+PASS=4 FAIL=0
+
+----- stderr -----
+

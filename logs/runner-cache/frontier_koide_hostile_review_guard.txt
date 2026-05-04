@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_hostile_review_guard.py
+runner_sha256: f6f782ed565c51a41faed479b0fac0355b4271ef0b150bd9263e0059a38f011b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.06
+status: ok
+----- stdout -----
+========================================================================================
+Koide hostile-review guard
+========================================================================================
+Purpose: mechanically reject no-go packet drift where a failed route is accidentally promoted as closure or lacks a named residual scalar.
+
+========================================================================================
+A. No-go notes retain residuals and do not promote closure
+========================================================================================
+  [PASS] A.1 no-go note set is non-empty
+       notes=6
+  [PASS] A.2 every no-go note names a residual scalar or residual primitive
+  [PASS] A.3 no no-go note promotes closure with a TRUE closeout flag
+  [PASS] A.4 no no-go note states a forbidden target as an assumption
+
+========================================================================================
+B. No-go scripts expose negative closeout flags
+========================================================================================
+  [PASS] B.1 no-go script set is non-empty
+       scripts=6
+  [PASS] B.2 every no-go script prints an explicit negative CLOSES flag
+  [PASS] B.3 every no-go script prints an explicit residual label
+  [PASS] B.4 no no-go script promotes closure with a TRUE closeout flag
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 8/8
+
+KOIDE_HOSTILE_REVIEW_GUARD_PASSED=TRUE
+HOSTILE_REVIEW_GUARD_CLOSES_Q=FALSE
+HOSTILE_REVIEW_GUARD_CLOSES_DELTA=FALSE
+RESIDUAL_SCALAR=not_applicable_review_guard
+
+----- stderr -----
+

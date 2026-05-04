@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_exact_h_source_surface_preimage_bundle_theorem.py
+runner_sha256: 10061fd219064353a68bef3c0c348bf84e9a83ead67c9783da9f4ad2de5d646e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.51
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO EXACT H-SIDE SOURCE-SURFACE PREIMAGE-BUNDLE THEOREM
+========================================================================================
+
+Question:
+  Once the exact mainline source package is fixed, how small is the
+  remaining H-side inverse-image problem?
+
+========================================================================================
+PART 1: THE SOURCE SURFACE HAS AN EXPLICIT TWO-SHEET PREIMAGE BUNDLE
+========================================================================================
+  [PASS] The explicit bundle formulas land exactly on the source surface on both sheets  (free data are (d1,d2,d3,r31) with branch +/-)
+  [PASS] Every bundled point reproduces the exact source-oriented CP pair  ((cp1,cp2)=(-0.544331053952,0.314269680527))
+  [PASS] So the source surface is an exact codimension-three bundle rather than an unstructured H search  (three exact source constraints leave four continuous preimage coordinates plus a sheet bit)
+
+========================================================================================
+PART 2: EACH SHEET HAS A NONEMPTY POSITIVE REGION
+========================================================================================
+  [PASS] The + sheet has an explicit positive witness on the exact source surface  (lambda_min=0.773904606721)
+  [PASS] The - sheet also has an explicit positive witness on the exact source surface  (lambda_min=7.954713370295)
+  [PASS] A whole local box around the + witness stays positive while remaining on the exact bundle  (min lambda in box=0.168703268797)
+  [PASS] A whole local box around the - witness also stays positive on the exact bundle  (min lambda in box=6.856071781057)
+
+  explicit + sheet witness:
+    (d1,d2,d3,r31) = (5.0, 5.0, 5.0, 1.0)
+    (phi,r12,r23) = (0.523598775598, 4.132011727495, 1.556209524058)
+  explicit - sheet witness:
+    (d1,d2,d3,r31) = (10.0, 10.0, 10.0, 2.0)
+    (phi,r12,r23) = (2.888912398448, 1.329494650607, -1.24630755283)
+
+========================================================================================
+PART 3: THE NOTE RECORDS THE PREIMAGE BUNDLE
+========================================================================================
+  [PASS] The new note records the explicit two-sheet preimage-bundle formulas
+  [PASS] The new note records that the mainline object is the positive preimage bundle rather than a generic H-law
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact mainline answer:
+    - the source surface is an explicit two-sheet codimension-three
+      preimage bundle over free data (d1,d2,d3,r31)
+    - both sheets have nonempty positive regions
+    - so the remaining mainline object is the post-canonical mixed-bridge
+      law that selects a point on this bundle, not a generic H-law
+
+PASS=9 FAIL=0
+
+----- stderr -----
+

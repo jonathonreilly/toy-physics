@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_full_closure_same_surface_thermal_integral_representation_theorem.py
+runner_sha256: 825b7ea0959379d317e1f52b1a4d9b0bf079cef805a6eca8e447bb1c99b5ae9b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+DM FULL CLOSURE SAME-SURFACE THERMAL INTEGRAL REPRESENTATION THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: EXACT NORMALIZED CONTINUUM FORM
+========================================================================================
+  [PASS] The Maxwell-Boltzmann denominator is exact  (norm=0.028359261614488)
+  [PASS] After t = a v^2, the normalized thermal average has exact prefactor 2/sqrt(pi)  (prefactor=1.128379167095513)
+
+  Exact representation:
+    <S> = (2/sqrt(pi)) * ∫_0^∞ S(alpha_eff*sqrt(a)/sqrt(t)) * sqrt(t) * e^{-t} dt
+    with a = x_f/4 = 6.250000000000
+    so alpha_eff enters as alpha_eff*sqrt(a) = alpha_eff*2.500000000000
+
+========================================================================================
+PART 2: EXACT LOW-ORDER MOMENTS ON x_f = 25
+========================================================================================
+  [PASS] The first inverse-velocity moment is exact: <1/v> = 2 sqrt(a)/sqrt(pi) = 5/sqrt(pi)  (<1/v>=2.820947917738782)
+  [PASS] The second inverse-velocity moment is exact: <1/v^2> = 2a = 25/2  (<1/v^2>=12.500000000000000)
+
+  <1/v>   = 2.820947917738782 = 5/sqrt(pi)
+  <1/v^2> = 12.500000000000000 = 25/2
+
+========================================================================================
+PART 3: CONSEQUENCE FOR THE DM SELECTOR PROBLEM
+========================================================================================
+  [PASS] The thermal object is no longer an opaque grid average but one exact continuum integral target  (selector closure reduces to evaluating or bounding one exact integral family)
+
+  Honest status:
+    - current-bank DM selector closure: still open
+    - the thermal layer is now reduced to one exact integral representation
+    - any future DM selector theorem must close this exact thermal object,
+      not the old coarse 2000-point grid
+
+========================================================================================
+SUMMARY: PASS=5 FAIL=0
+========================================================================================
+
+----- stderr -----
+

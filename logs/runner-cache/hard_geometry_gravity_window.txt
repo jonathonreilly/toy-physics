@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/hard_geometry_gravity_window.py
+runner_sha256: d0e37b25ab64b02aeb9713508297081ea91f873e2a4e7a3c0ba4f1751c31f74e
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

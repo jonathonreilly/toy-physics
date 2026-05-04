@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/CONNECTIVITY_FAMILY_V2_ELLIPTICAL_SWEEP.py
+runner_sha256: f49cff02d2ac3497767708697700126f645206f1014adad9d1a2239d600d3e7b
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.07
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

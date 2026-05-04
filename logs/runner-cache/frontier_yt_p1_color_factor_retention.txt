@@ -1,0 +1,51 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_p1_color_factor_retention.py
+runner_sha256: bd37fbe5f4be727da902fdfaf2ac7d77f36e76233c4420b6c14abdbcbae4209b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.30
+status: ok
+----- stdout -----
+========================================================================
+P1 color-factor retention -- runner
+Date: 2026-04-17
+Authority: YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md
+========================================================================
+
+========================================================================
+PART A: Retained SU(3) Casimir prefactors at n_f = 6
+========================================================================
+
+  C_F           = 4/3  = 1.3333333333
+  C_A           = 3  = 3.0000000000
+  T_F           = 1/2  = 0.5000000000
+  n_f           = 6
+  T_F * n_f     = 3  = 3.0000000000
+  [PASS] C_F = 4/3 exactly at SU(3)  (value = 4/3)
+  [PASS] C_A = 3 exactly at SU(3)  (value = 3)
+  [PASS] T_F * n_f = 3 exactly at SU(3), n_f = 6  (value = 3)
+
+========================================================================
+PART B: Three-channel decomposition identity
+========================================================================
+
+  Delta_R (from Rep-A - Rep-B):
+    4*I_SE_f - 5*I_SE_g + I_v_gauge/3 + 8*I_v_scalar/3 - 8
+
+  Delta_R (three-channel assembly C_F*D1 + C_A*D2 + T_F n_f*D3):
+    4*I_SE_f - 5*I_SE_g + I_v_gauge/3 + 8*I_v_scalar/3 - 8
+  [PASS] Three-channel decomposition matches Rep-A - Rep-B subtraction exactly  (residual = 0)
+  [PASS] External quark Z_psi (I_leg) cancels exactly on the ratio  (coeff of I_leg in Delta_R = 0)
+
+========================================================================
+SUMMARY: PASS=5  FAIL=0
+========================================================================
+
+(C_F, C_A, T_F*n_f prefactors retained framework-native at SU(3).
+ Three-channel decomposition structurally exact from Rep-A vs Rep-B.
+ Per-channel integrals Delta_1, Delta_2, Delta_3 live outside this
+ note's scope; they are cited / computed in the three dedicated BZ
+ sub-theorems.)
+
+----- stderr -----
+

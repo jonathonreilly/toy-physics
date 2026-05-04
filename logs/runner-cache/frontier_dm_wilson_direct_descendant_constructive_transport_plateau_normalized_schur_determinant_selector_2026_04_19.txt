@@ -1,0 +1,52 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_constructive_transport_plateau_normalized_schur_determinant_selector_2026_04_19.py
+runner_sha256: 97743b048a22ea22b58e0facdfacf45e5b83061fa55cafb67c5e568b957af38c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 5.40
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT CONSTRUCTIVE TRANSPORT PLATEAU NORMALIZED SCHUR-DETERMINANT SELECTOR
+========================================================================================
+
+========================================================================================
+PART 1: J_iso IS AN EXACT LOCAL SCHUR-SIDE ISOTROPY SCALAR
+========================================================================================
+  [PASS] J_iso = 27 det(H_e) / Tr(H_e)^3 is exactly the same scalar as 27 Delta_src / (R11+R22+R33)^3  (Delta_src = det(H_e) and R11+R22+R33 = Tr(H_e))
+  [PASS] The certified plateau witnesses all satisfy the AM-GM isotropy bounds 0 < J_iso < 1  (W0: 0.002047934111, W1: 0.093481561087, W2: 0.015699097176, W3: 0.000160310038)
+
+========================================================================================
+PART 2: J_iso UNIQUELY SELECTS W1 ON THE CERTIFIED PLATEAU SET
+========================================================================================
+  [PASS] J_iso has a unique plateau maximizer  (winner=W1, gap=0.077782463911)
+  [PASS] That scalar winner agrees with the whole normalized Schur spectral-isotropy family on the certified plateau set  (entropy winner=W1)
+
+========================================================================================
+PART 3: THE J_iso WINNER GIVES A UNIQUE EXACT CONSTRUCTIVE ROOT
+========================================================================================
+  [PASS] The aligned-seed -> J_iso-winner segment has a unique eta_1 = 1 crossing  (lambda=0.904931446681)
+  [PASS] That root is transverse, constructive, positive-branch, and locally full-rank  (deriv=0.755728, pack=[1.         0.12167821 0.11336367 1.20133568 0.02021764], min singulars=(6.906412e-03,6.909143e-03))
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The plateau-breaking spectral-isotropy family therefore has a concrete exact local scalar representative  (use J_iso = 27 Delta_src / (R11+R22+R33)^3)
+  [PASS] That scalar yields the cleanest current retained-closeout candidate on the certified plateau set  (endpoint law = maximize J_iso on the constructive plateau; closure law = unique eta_1 = 1 crossing on the aligned-seed -> W1 segment)
+
+  certified plateau J_iso values:
+    W0: J_iso=0.002047934111, spectrum=[0.92897835 0.06985279 0.00116886]
+    W1: J_iso=0.093481561087, spectrum=[0.84665011 0.11897933 0.03437057]
+    W2: J_iso=0.015699097176, spectrum=[0.9355869  0.0525973  0.01181581]
+    W3: J_iso=0.000160310038, spectrum=[8.54455487e-01 1.45496754e-01 4.77588880e-05]
+
+  J_iso-selected endpoint witness = W1
+  aligned-seed -> W1 root lambda = 0.904931446681
+  selected root observable pack   = [1.         0.12167821 0.11336367 1.20133568 0.02021764]
+
+========================================================================================
+SUMMARY: PASS=8 FAIL=0
+========================================================================================
+
+----- stderr -----
+

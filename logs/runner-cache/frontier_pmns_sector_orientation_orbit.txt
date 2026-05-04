@@ -1,0 +1,82 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_sector_orientation_orbit.py
+runner_sha256: d052a0415118de682e2fa10a1504305bf6aad1f2af7881753152b694fd386c3e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================================
+PMNS ONE-SIDED SURFACE: SECTOR-ORIENTATION ORBIT REDUCTION
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - PMNS minimal-branch nonselection
+  - Lepton shared-Higgs universality underdetermination
+  - PMNS selector-bank nonrealization
+  - Universal GR A1 invariant section
+  - Universal GR polarization-frame bundle blocker
+
+Question:
+  On the non-universal one-sided PMNS surface, what exact discrete
+  freedom is still left after the current atlas reductions?
+
+========================================================================================
+PART 1: THE CANONICAL ONE-SIDED SURFACE HAS EXACTLY TWO SECTOR ORIENTATIONS
+========================================================================================
+  [PASS] Neutrino-oriented branch puts Y_nu on the two-offset lane  (support=6, offdiag=0.008820)
+  [PASS] Neutrino-oriented branch keeps Y_e on the monomial lane  (support=3, offdiag=0.00e+00)
+  [PASS] Charged-lepton-oriented branch keeps Y_nu on the monomial lane  (support=3, offdiag=0.00e+00)
+  [PASS] Charged-lepton-oriented branch puts Y_e on the two-offset lane  (support=6, offdiag=0.070712)
+
+  Once the local offset families are fixed to one singleton lane and one
+  two-offset lane, there are only two oriented realizations: active
+  neutrino sector or active charged-lepton sector.
+
+========================================================================================
+PART 2: THE CURRENT BANK FIXES ONLY THE UNORDERED SUPPORT CORE
+========================================================================================
+  [PASS] The unordered support core is the same on both one-sided branches  (core=(3, 6))
+  [PASS] A one-sided minimal branch always consists of one monomial lane and one two-offset lane  (support sizes 3 and 6)
+  [PASS] The residual difference between the two one-sided branches is sector orientation only  (choose which lepton sector carries the six-support non-monomial lane)
+
+  So the current exact bank already kills all extra local branch
+  hunting. The non-universal residue is one orientation bit, not a
+  new texture family.
+
+========================================================================================
+PART 3: ATLAS-FIRST, THE MISSING OBJECT IS AN ORIENTED INTER-SECTOR BRIDGE
+========================================================================================
+  [PASS] Atlas carries the PMNS nonselection row
+  [PASS] Atlas carries the universality-underdetermination row
+  [PASS] Atlas carries the selector-bank nonrealization row
+  [PASS] The PMNS nonselection theorem still says the bank does not select a branch
+  [PASS] The universality theorem still says no inter-sector bridge theorem is present
+  [PASS] The selector-bank theorem still says no current selector realizes the PMNS branch bit
+  [PASS] The GR atlas already isolates an invariant core without a full canonical complement
+  [PASS] The GR blocker explicitly identifies the missing object as a canonical bundle/section problem
+
+  Atlas-first, this is now the cleanest statement:
+    - the lepton lane already has the exact unordered one-sided core,
+    - but the bank still lacks the oriented inter-sector bridge
+      choosing whether that core is realized on Y_nu or on Y_e.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-bank answer:
+    - the one-sided PMNS surface already reduces to the unordered core
+      {single-offset monomial lane, two-offset canonical lane}
+    - the residual non-universal discrete freedom is one
+      sector-orientation bit tau in Z_2
+    - the missing selector is therefore an oriented inter-sector
+      bridge, not another local support classifier
+
+  So the remaining exact last mile is now even sharper than before:
+  derive universality, derive universality failure plus a sector
+  orientation bridge, or derive a stronger impossibility theorem.
+
+PASS=15  FAIL=0
+
+----- stderr -----
+

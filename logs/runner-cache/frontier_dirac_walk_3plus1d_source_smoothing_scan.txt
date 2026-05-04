@@ -1,0 +1,105 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dirac_walk_3plus1d_source_smoothing_scan.py
+runner_sha256: 8830604ae0845bf0a256ab3fcc9edcaa09bfcd5aa2167dc422a597123f6149d1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.94
+status: ok
+----- stdout -----
+========================================================================
+DIRAC 3+1D SOURCE SMOOTHING SCAN
+========================================================================
+fixed mass point m0=0.10
+strength=5.0e-04
+N-growth sweep layers=(6, 8, 10, 12, 14), offset=3
+distance-law layers=10, offsets=(2, 3, 4, 5)
+source widths=point, gaussian_0.75, gaussian_1.25, gaussian_2.00
+
+========================================================================
+SOURCE CASE: point (sigma=0.00)
+========================================================================
+N-growth sweep
+  N     toward         away           net        sign
+   6  -2.320689e-08  +2.677428e-08  -4.998117e-08  AWAY
+   8  +1.041752e-08  +1.042411e-08  -6.597447e-12  AWAY
+  10  +4.325115e-09  -9.907933e-09  +1.423305e-08  TOWARD
+  12  +2.663360e-09  -1.412665e-09  +4.076026e-09  TOWARD
+  14  +4.050245e-09  +5.149108e-09  -1.098863e-09  AWAY
+  summary: 2/5 TOWARD, |net| monotone=NO, power-law=n/a
+Distance-law offset sweep
+  off    toward         away           net        sign
+    2  -1.098311e-09  -7.279498e-09  +6.181186e-09  TOWARD
+    3  +4.325115e-09  -9.913086e-09  +1.423820e-08  TOWARD
+    4  +3.450231e-07  +1.243089e-07  +2.207141e-07  TOWARD
+    5  +2.078603e-07  +1.107445e-07  +9.711581e-08  TOWARD
+  summary: 4/4 TOWARD, power-law=3.688 (R^2=0.7756)
+
+========================================================================
+SOURCE CASE: gaussian_0.75 (sigma=0.75)
+========================================================================
+N-growth sweep
+  N     toward         away           net        sign
+   6  -4.450177e-08  -5.560328e-09  -3.894144e-08  AWAY
+   8  +1.113415e-07  +4.039194e-08  +7.094952e-08  TOWARD
+  10  +1.941800e-08  +1.142316e-08  +7.994847e-09  TOWARD
+  12  -4.850123e-09  +1.456718e-08  -1.941730e-08  AWAY
+  14  -2.379969e-09  -9.822087e-10  -1.397760e-09  AWAY
+  summary: 2/5 TOWARD, |net| monotone=NO, power-law=n/a
+Distance-law offset sweep
+  off    toward         away           net        sign
+    2  -1.070425e-08  -2.938572e-09  -7.765673e-09  AWAY
+    3  +1.941799e-08  +1.138259e-08  +8.035397e-09  TOWARD
+    4  +1.496628e-07  +5.392749e-08  +9.573527e-08  TOWARD
+    5  +1.281037e-07  +5.129338e-08  +7.681030e-08  TOWARD
+  summary: 3/4 TOWARD, power-law=n/a
+
+========================================================================
+SOURCE CASE: gaussian_1.25 (sigma=1.25)
+========================================================================
+N-growth sweep
+  N     toward         away           net        sign
+   6  +1.716190e-08  +2.328907e-09  +1.483299e-08  TOWARD
+   8  +5.748003e-08  +1.652778e-08  +4.095225e-08  TOWARD
+  10  +1.183019e-08  +4.170719e-09  +7.659475e-09  TOWARD
+  12  -2.714675e-09  +9.247447e-10  -3.639420e-09  AWAY
+  14  -1.223300e-08  -1.224706e-08  +1.406360e-11  TOWARD
+  summary: 4/5 TOWARD, |net| monotone=NO, power-law=n/a
+Distance-law offset sweep
+  off    toward         away           net        sign
+    2  +3.140844e-10  +4.386745e-09  -4.072661e-09  AWAY
+    3  +1.170142e-08  +4.357280e-09  +7.344138e-09  TOWARD
+    4  +2.203354e-08  +1.171867e-09  +2.086168e-08  TOWARD
+    5  +3.510768e-08  +2.998462e-09  +3.210921e-08  TOWARD
+  summary: 3/4 TOWARD, power-law=n/a
+
+========================================================================
+SOURCE CASE: gaussian_2.00 (sigma=2.00)
+========================================================================
+N-growth sweep
+  N     toward         away           net        sign
+   6  +1.226761e-08  +2.792596e-08  -1.565835e-08  AWAY
+   8  +2.971400e-08  +8.348917e-09  +2.136509e-08  TOWARD
+  10  +9.074969e-09  +5.435154e-09  +3.639815e-09  TOWARD
+  12  -1.022072e-08  -4.456451e-09  -5.764271e-09  AWAY
+  14  -5.029551e-08  -4.008080e-08  -1.021471e-08  AWAY
+  summary: 2/5 TOWARD, |net| monotone=NO, power-law=n/a
+Distance-law offset sweep
+  off    toward         away           net        sign
+    2  +7.448155e-09  +4.592252e-09  +2.855904e-09  TOWARD
+    3  +5.635327e-09  +6.854730e-09  -1.219403e-09  AWAY
+    4  +1.144949e-08  +3.180932e-09  +8.268559e-09  TOWARD
+    5  +3.065739e-08  +5.168420e-09  +2.548897e-08  TOWARD
+  summary: 3/4 TOWARD, power-law=n/a
+
+========================================================================
+COMPARISON
+========================================================================
+label           sigma   N TOWARD   N mono   off TOWARD   off power-law
+------------------------------------------------------------------------
+point            0.00    2/5      NO        4/4       n/a/+3.688
+gaussian_0.75    0.75    2/5      NO        3/4       n/a/n/a
+gaussian_1.25    1.25    4/5      NO        3/4       n/a/n/a
+gaussian_2.00    2.00    2/5      NO        3/4       n/a/n/a
+
+----- stderr -----
+

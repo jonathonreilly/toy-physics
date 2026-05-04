@@ -1,0 +1,86 @@
+===== runner cache v1 =====
+runner: scripts/frontier_audit_backlog_campaign_synthesis.py
+runner_sha256: 047e3f3ea029e4fe3063dfe7c07812479c515c30bc529cf0d6b46f3322729b25
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: synthesis structure
+----------------------------------------------------------------------------------------
+  [PASS (A)] contains: 'Audit-Backlog Retained Campaign — Progress Synthesis'  ()
+  [PASS (A)] contains: 'Cycles 1-19'  ()
+  [PASS (A)] contains: 'audit-backlog-campaign-20260502'  ()
+  [PASS (A)] contains: 'LHCM closure chain'  ()
+  [PASS (A)] contains: 'Lattice → physical matching cluster'  ()
+  [PASS (A)] contains: 'SM-definition conventions reclassification'  ()
+  [PASS (A)] contains: 'G_BARE_* family closure'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: all 19 cycle PRs cited
+----------------------------------------------------------------------------------------
+  [PASS (A)] cycle PR #254 cited  (PR 254)
+  [PASS (A)] cycle PR #255 cited  (PR 255)
+  [PASS (A)] cycle PR #256 cited  (PR 256)
+  [PASS (A)] cycle PR #258 cited  (PR 258)
+  [PASS (A)] cycle PR #260 cited  (PR 260)
+  [PASS (A)] cycle PR #262 cited  (PR 262)
+  [PASS (A)] cycle PR #264 cited  (PR 264)
+  [PASS (A)] cycle PR #267 cited  (PR 267)
+  [PASS (A)] cycle PR #268 cited  (PR 268)
+  [PASS (A)] cycle PR #270 cited  (PR 270)
+  [PASS (A)] cycle PR #271 cited  (PR 271)
+  [PASS (A)] cycle PR #273 cited  (PR 273)
+  [PASS (A)] cycle PR #274 cited  (PR 274)
+  [PASS (A)] cycle PR #276 cited  (PR 276)
+  [PASS (A)] cycle PR #278 cited  (PR 278)
+  [PASS (A)] cycle PR #279 cited  (PR 279)
+  [PASS (A)] cycle PR #280 cited  (PR 280)
+  [PASS (A)] cycle PR #281 cited  (PR 281)
+  [PASS (A)] cycle PR #282 cited  (PR 282)
+  [PASS (A)] 19 PR numbers total cited  ()
+
+----------------------------------------------------------------------------------------
+Part 3: 4 cluster instances enumerated
+----------------------------------------------------------------------------------------
+  [PASS (A)] cluster lane: yt_ew matching M  ()
+  [PASS (A)] cluster lane: gauge-scalar observable bridge  ()
+  [PASS (A)] cluster lane: Higgs mass scalar normalization  ()
+  [PASS (A)] cluster lane: Koide-Brannen-phase bridge  ()
+
+----------------------------------------------------------------------------------------
+Part 4: 6 LHCM repair items + closure cycles
+----------------------------------------------------------------------------------------
+  [PASS (A)] LHCM item: (1) matter assignment  ()
+  [PASS (A)] LHCM item: (2) U(1)_Y normalization  ()
+  [PASS (A)] LHCM item: (3) anomaly LH SU(2)²×Y  ()
+  [PASS (A)] LHCM item: (3) anomaly R-A SU(3)²×Y  ()
+  [PASS (A)] LHCM item: (3) anomaly R-B Y³  ()
+  [PASS (A)] LHCM item: (3) anomaly R-C grav²×Y  ()
+
+----------------------------------------------------------------------------------------
+Part 5: open Nature-grade targets enumerated
+----------------------------------------------------------------------------------------
+  [PASS (A)] Nature-grade target: SM-definition conventions reclassification  ()
+  [PASS (A)] Nature-grade target: Lattice → physical matching cluster  ()
+  [PASS (A)] Nature-grade target: G_BARE_* family closure  ()
+  [PASS (A)] Nature-grade target: SU(5) GUT embedding  ()
+  [PASS (A)] Nature-grade target: Sommer-scale  ()
+  [PASS (A)] Nature-grade target: Brannen-phase bridge  ()
+
+----------------------------------------------------------------------------------------
+Part 6: forbidden imports compliance
+----------------------------------------------------------------------------------------
+  [PASS (A)] compliance: No PDG observed values  ()
+  [PASS (A)] compliance: No literature numerical comparators  ()
+  [PASS (A)] compliance: No fitted selectors  ()
+  [PASS (A)] compliance: No same-surface family arguments  ()
+
+========================================================================================
+  TOTAL: PASS=47, FAIL=0
+========================================================================================
+
+----- stderr -----
+

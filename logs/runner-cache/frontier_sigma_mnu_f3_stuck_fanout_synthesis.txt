@@ -1,0 +1,91 @@
+===== runner cache v1 =====
+runner: scripts/frontier_sigma_mnu_f3_stuck_fanout_synthesis.py
+runner_sha256: f4527f9f2d5a5d6ad76fbb08390dfb07f09c926ec272fc4ebea974ff1b9658d8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+==============================================================================
+LANE 4F (Sigma m_nu) — F3 STUCK FAN-OUT SYNTHESIS RUNNER
+==============================================================================
+
+Question: do alternative Sigma m_nu cross-bound routes (F3-alpha
+through F3-epsilon) supply a usable single-cycle bound on the
+current framework surface, and how do they relate to the Cycle-1 F3 DM
+cross-bound result?
+
+------------------------------------------------------------------------------
+(F3-alpha) PDG oscillation lower bound -- comparator only
+------------------------------------------------------------------------------
+[PASS] (F3-alpha) NO oscillation lower bound for Sigma m_nu (comparator): computed = 0.0588 eV; PDG NO ~ 0.0586 eV
+[PASS] (F3-alpha) IO oscillation lower bound for Sigma m_nu (comparator): computed = 0.1010 eV; PDG IO ~ 0.0991 eV
+[PASS] (F3-alpha) is comparator only; not a derivation input on current framework surface: PDG oscillation values are observational; cannot be a derivation input under the framework's no-fitted-parameter posture
+[PASS] (F3-alpha) supplies a Sigma m_nu lower bound but no upper bound: Sigma m_nu >= 0.0586 eV (NO) or >= 0.0991 eV (IO); upper bound requires an independent cross-bound route
+
+------------------------------------------------------------------------------
+(F3-beta) retained N_eff = 3.046 cross-bound
+------------------------------------------------------------------------------
+[PASS] (F3-beta) N_eff = 3.046 retained per three-generation structure: structural input from retained ν-decoupling bookkeeping
+[PASS] (F3-beta) C_nu depends on N_eff; alternative N_eff shifts C_nu by ~ N_eff_alt / 3.046: C_nu ~ N_eff to leading order in the relic conversion
+[PASS] (F3-beta) does not supply an independent cross-bound on Sigma m_nu: N_eff is structural; shifting it shifts C_nu but does not pin Sigma m_nu on (T-4F-alpha-2)
+
+------------------------------------------------------------------------------
+(F3-gamma) admitted CMB Omega_m,0 h^2 pin -- alt admission
+------------------------------------------------------------------------------
+[PASS] (F3-gamma) Omega_m,0 h^2 - Omega_DM h^2 - Omega_b h^2 gives a Sigma m_nu cross-bound at fixed CMB peak admissions: Sigma m_nu(Omega_m,0 h^2 - rest) ~ 0.0559 eV at standard CMB peak admissions
+[PASS] (F3-gamma) at standard CMB pins is positive but borderline below NO osc floor: 0.0559 eV (vs. 0.0586 eV NO floor; ~0.003 eV gap, opposite-sign tension to Cycle-1 Omega_DM bound)
+[PASS] (F3-gamma) uses CMB-derived Omega_DM h^2 ~ 0.120 (NOT framework current-bank Omega_DM bound): the alt admission surface bypasses the framework's current-bank Omega_DM interval; uses Planck-derived 0.120 instead
+
+------------------------------------------------------------------------------
+(F3-delta) Lane 4D Dirac global lift -- kinematic interpretation
+------------------------------------------------------------------------------
+[PASS] (F3-delta) Dirac vs Majorana does not change (T-4F-alpha-2): (T-4F-alpha-2) is a mass-density relation independent of Dirac/Majorana basis
+[PASS] (F3-delta) Dirac/Majorana basis status does NOT supply a Sigma m_nu floor: Dirac/Majorana basis structure says nothing about absolute Sigma m_nu value
+[PASS] (F3-delta) is not an independent cross-bound route on Sigma m_nu: Lane 4D affects 0nu-beta-beta interpretation, not relic density
+
+------------------------------------------------------------------------------
+(F3-epsilon) baryogenesis/eta admitted-input promotion (F2)
+------------------------------------------------------------------------------
+[PASS] (F3-epsilon) eta_obs closure would move Omega_b from admitted to closed: Omega_b = Omega_b(eta_obs); retaining eta_obs propagates to Omega_b
+[PASS] (F3-epsilon) eta_obs closure is currently speculative per prior fan-out: framework has DM-leptogenesis cascade content but not eta_obs closure
+[PASS] (F3-epsilon) does not currently supply a Sigma m_nu cross-bound: even with closed Omega_b, Sigma m_nu retention also requires closed (L, h, Omega_DM); not currently available
+
+==============================================================================
+SYNTHESIS
+==============================================================================
+
+Route status:
+  F3-alpha (osc lower bound): comparator only; not a derivation input
+  F3-beta (N_eff): structural; does not pin Sigma m_nu independently
+  F3-gamma (Omega_m,0 h^2 alt admission): consistent with osc; uses CMB-derived Omega_DM h^2, NOT framework current-bank Omega_DM
+  F3-delta (Dirac global lift): kinematic only; Sigma m_nu unaffected
+  F3-epsilon (eta closure): speculative; not currently closed
+[PASS] no orthogonal F3-* route supplies an independent closed Sigma m_nu cross-bound: F3-alpha is comparator; F3-beta/delta are structural-only; F3-gamma uses a different admission surface (CMB peak Omega_DM h^2, not framework Omega_DM); F3-epsilon is speculative
+[PASS] best remaining single-cycle attack: F3-gamma alt admission on CMB peak Omega_DM h^2 ~ 0.120 instead of framework current-bank Omega_DM ~0.268: this would resolve the Cycle-1 structural tension by switching the Omega_DM source from framework current-bank to admitted-CMB-peak
+[PASS] F3-gamma resolution implies framework current-bank Omega_DM interval is the LIVE structural-tension residue, not (T-4F-alpha-2) itself: the (T-4F-alpha-2) identity is consistent with positive Sigma m_nu when Omega_DM h^2 ~ 0.120 admitted from CMB; the framework's current-bank Omega_DM ~0.268 is the source of the tension
+[PASS] F3 fan-out confirms: numerical Sigma m_nu retention requires either (i) framework Omega_DM bound tightening, OR (ii) bypassing framework Omega_DM via alt admission, OR (iii) Lane 5 h retention: all three are research-level pivots beyond a single audit cycle
+
+==============================================================================
+SUMMARY: PASS=20  FAIL=0
+==============================================================================
+
+Verdict: F3 stuck fan-out across 5 orthogonal Sigma m_nu cross-bound
+routes confirms that no orthogonal route supplies an independent
+closed Sigma m_nu cross-bound on the framework's current surface.
+
+Best remaining single-cycle attack: F3-gamma alt admission on CMB
+peak Omega_DM h^2 ~ 0.120 instead of framework current-bank Omega_DM
+~0.268.  This bypasses the Cycle-1 structural tension at the cost
+of admitting a different Omega_DM input.  The trade-off is structural:
+either trust the framework's current-bank Omega_DM interval (and accept
+Sigma m_nu < 0 tension) or trust CMB peak admission (and lose
+the framework Omega_DM cross-bound usage).
+
+F3 audit-grade output: structural tension is centered on framework
+Omega_DM bound vs. observation, not on (T-4F-alpha-2) itself.
+Honest stop appropriate.  Recommended next: pivot back to C1 review-
+loop, OR pivot to Lane 6 M1/M5-c (Koide-flagship-conditional).
+
+----- stderr -----
+

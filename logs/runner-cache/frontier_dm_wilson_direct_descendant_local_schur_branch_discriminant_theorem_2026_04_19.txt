@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_2026_04_19.py
+runner_sha256: 3d0cda2ef268cca11321744c25935d00540a5cee011ccdeed803bb914fca477f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT LOCAL SCHUR BRANCH-DISCRIMINANT THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE BRANCH DISCRIMINANT IS LOCAL TO THE SCHUR BLOCK L_e
+========================================================================================
+  [PASS] The descended 9-channel Hermitian responses reconstruct H_e exactly for ambient completion 1  (err=1.58e-08)
+  [PASS] The descended 9-channel Hermitian responses reconstruct H_e exactly for ambient completion 2  (err=1.51e-08)
+  [PASS] Changing the ambient completion while keeping L_e fixed does not change the reconstructed H_e  (err=2.66e-08)
+
+========================================================================================
+PART 2: THE EXPLICIT PROJECTED-SOURCE SCALAR IS EXACTLY det(H_e)
+========================================================================================
+  [PASS] The explicit cubic Delta_src equals det(H_e) on completion 1  (err=2.29e-09)
+  [PASS] The explicit cubic Delta_src equals det(H_e) on completion 2  (err=1.43e-09)
+  [PASS] The local branch-discriminant sign is ambient-completion invariant once L_e is fixed  (delta_1=+0.02731431, delta_2=+0.02731431)
+
+========================================================================================
+PART 3: THE FROZEN TRIPLET STILL DOES NOT DETERMINE THE BRANCH SIGN
+========================================================================================
+  [PASS] All three live basins carry the same exact triplet (gamma, E1, E2)  (triplet=(0.5, 1.632993161855, 0.942809041582))
+  [PASS] The exact branch-discriminant sign distinguishes Basin 1 from Basin 2 and Basin X  (deltas={Basin 1: +0.959174, Basin 2: -70377.185680, Basin X: -20061.597712})
+  [PASS] So the live positive-branch rule cannot factor only through the frozen triplet channels  (same triplet, opposite Delta_src signs)
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The current source-branch discriminator is exactly a local sign law on L_e  (positive branch = Delta_src(dW_e^H) = det(H_e(L_e)) > 0; ambient completion cannot change it once L_e is fixed)
+
+========================================================================================
+SUMMARY: PASS=10 FAIL=0
+========================================================================================
+
+----- stderr -----
+

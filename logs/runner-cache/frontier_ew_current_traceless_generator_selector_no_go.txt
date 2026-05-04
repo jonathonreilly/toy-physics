@@ -1,0 +1,47 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ew_current_traceless_generator_selector_no_go.py
+runner_sha256: 4753905e6fb3ef2deaaa08aef639a804b62ea8473aa2bc8cc3ccde68ea5cc27f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+====================================================================================
+EW CURRENT TRACELESS-GENERATOR SELECTOR NO-GO
+====================================================================================
+[PASS] authority note exists: docs/EW_CURRENT_TRACELESS_GENERATOR_SELECTOR_NO_GO_NOTE_2026-05-03.md
+[PASS] gate note exists: docs/EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md
+[PASS] Fierz note exists: docs/EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md
+[PASS] lattice Noether/current note exists: docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md
+[PASS] note declares route-specific no-go
+[PASS] note does not claim positive closure
+[PASS] gate keeps kappa_EW explicit
+[PASS] Fierz note defines singlet channel S
+[PASS] Noether note provides bounded current-form context
+[PASS] traceless EW generator has Tr(T3)=0: Tr(T3)=0
+[PASS] same generator has nonzero quadratic trace: Tr(T3^2)=1/2
+[PASS] tracelessness kills ordinary Wick-disconnected one-current loops: (Tr T3)^2=0
+[PASS] color identity matrix has total channel N_c: T=3
+[PASS] color identity matrix is purely Fierz-singlet: S=3
+[PASS] color identity matrix has zero adjoint channel: C=0
+[PASS] connected two-current contraction is nonzero for M=I_color: Tr_color(I) * Tr(T3^2) = 3/2
+[PASS] that nonzero contraction is entirely the color Fierz singlet S: S_EW=3/2, C_EW=0
+[PASS] therefore Tr(Q_EW)=0 does not imply kappa_EW=0: zero Wick-disconnected loop coexists with nonzero color-singlet channel
+[PASS] color-traceless matrix has zero Fierz singlet: S=0
+[PASS] color-traceless matrix has nonzero adjoint channel: C=1/2
+[PASS] connected selector would give K_EW(0)=9/8: K=9/8
+[PASS] full-trace readout remains algebraically admissible at K_EW(1)=1: K=1
+[PASS] traceless-generator route cannot distinguish kappa=0 from kappa=1: additional color-channel selector still required
+[PASS] note records phrase 'Wick-disconnected'
+[PASS] note records phrase 'color Fierz singlet'
+[PASS] note records phrase 'Tr_internal(Q_EW)^2'
+[PASS] note records phrase 'Tr_internal(Q_EW^2)'
+[PASS] note records phrase 'kappa_EW'
+[PASS] note records phrase 'not a positive closure'
+
+====================================================================================
+RESULT: PASS=29 FAIL=0
+====================================================================================
+
+----- stderr -----
+

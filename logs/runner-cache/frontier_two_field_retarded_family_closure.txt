@@ -1,0 +1,118 @@
+===== runner cache v1 =====
+runner: scripts/frontier_two_field_retarded_family_closure.py
+runner_sha256: d98e1e18d529a1aa837bce49dcf2fd04450a6ec389ffd98c9328cdef9c1198c1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.04
+status: ok
+----- stdout -----
+======================================================================
+STAGGERED FERMION — RETARDED/HYBRID FAMILY CLOSURE
+======================================================================
+DT_MATTER=0.12, DT_FIELD=0.03, MASS=0.3, MU2=0.22, FIELD_C=1.0, FIELD_GAMMA=0.1, FIELD_BETA=5.0, FIELD_TAU_MEM=0.6, FIELD_LAG_BLEND=0.6
+family closure: iters=8, seed_mix=0.35, sharpen=0.75, relax=0.50, capture_exp=1.50
+Graph-native: random geometric, growing, layered cycle, layered DAG-derived control.
+
+
+======================================================================
+RETARDED/HYBRID FAMILY CLOSURE: random_geometric (36 nodes)
+======================================================================
+  [R1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [R2] Linearity: R^2=1.000000 PASS
+  [R3] Additivity: residual=1.8035e-16 PASS
+  [R4] Force: +2.9779e+00 TOWARD PASS
+  [R5] Iterative stability: 30/30 TOWARD PASS
+  [R6] Norm: drift=2.2204e-16 PASS
+  [R7-base] Shared-kernel diagnostic:
+    gauss     : F=+2.9779e+00 TW
+    color-0   : F=+1.9399e+00 TW
+    color-1   : F=+3.9947e+00 TW
+    shared-kernel families: 3/3
+  [R7] Family-closure diagnostic:
+    gauss     : baseline=+1.4943e-03, closed=+2.5997e+00 TW
+    color-0   : baseline=-1.4742e-04, closed=+2.3343e+00 TW
+    color-1   : baseline=+1.1299e-02, closed=+2.8743e+00 TW
+  [R7] Families after closure: 3/3 PASS
+  [R8] Gauge: J_range=1.5978e-02, sin_R^2=0.9999 PASS
+  [R9] Gap: G_eff=0.4, shell_grad_ratio=1.716, spectral_ratio(modes1-5)=12.738
+
+  SCORE: 9/9
+
+======================================================================
+RETARDED/HYBRID FAMILY CLOSURE: growing (48 nodes)
+======================================================================
+  [R1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [R2] Linearity: R^2=1.000000 PASS
+  [R3] Additivity: residual=1.8225e-16 PASS
+  [R4] Force: +1.9251e+00 TOWARD PASS
+  [R5] Iterative stability: 30/30 TOWARD PASS
+  [R6] Norm: drift=0.0000e+00 PASS
+  [R7-base] Shared-kernel diagnostic:
+    gauss     : F=+1.9251e+00 TW
+    color-0   : F=+9.3718e-01 TW
+    color-1   : F=+2.6206e+00 TW
+    shared-kernel families: 3/3
+  [R7] Family-closure diagnostic:
+    gauss     : baseline=+2.2340e-04, closed=+1.2725e+00 TW
+    color-0   : baseline=-2.7816e-04, closed=+9.8312e-01 TW
+    color-1   : baseline=+1.1491e-03, closed=+2.2436e+00 TW
+  [R7] Families after closure: 3/3 PASS
+  [R8] Gauge: J_range=3.0799e-03, sin_R^2=0.9500 PASS
+  [R9] Gap: G_eff=0.3, shell_grad_ratio=2.208, spectral_ratio(modes1-5)=10.606
+
+  SCORE: 9/9
+
+======================================================================
+RETARDED/HYBRID FAMILY CLOSURE: layered_cycle (24 nodes)
+======================================================================
+  [R1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [R2] Linearity: R^2=1.000000 PASS
+  [R3] Additivity: residual=1.6330e-16 PASS
+  [R4] Force: +4.0592e+00 TOWARD PASS
+  [R5] Iterative stability: 30/30 TOWARD PASS
+  [R6] Norm: drift=6.6613e-16 PASS
+  [R7-base] Shared-kernel diagnostic:
+    gauss     : F=+4.0592e+00 TW
+    color-0   : F=+4.6750e+00 TW
+    color-1   : F=+2.9042e+00 TW
+    shared-kernel families: 3/3
+  [R7] Family-closure diagnostic:
+    gauss     : baseline=+2.8419e-03, closed=+3.7629e+00 TW
+    color-0   : baseline=+1.2035e-02, closed=+3.2424e+00 TW
+    color-1   : baseline=-1.4471e-03, closed=+4.6407e+00 TW
+  [R7] Families after closure: 3/3 PASS
+  [R8] Gauge: J_range=4.0020e-02, sin_R^2=0.9736 PASS
+  [R9] Gap: G_eff=0.4, shell_grad_ratio=2.019, spectral_ratio(modes1-5)=7.072
+
+  SCORE: 9/9
+
+======================================================================
+RETARDED/HYBRID FAMILY CLOSURE: layered_dag_derived (36 nodes)
+======================================================================
+  [R1] Zero-source: F=0.0000e+00, |Phi|=0.0000e+00 PASS
+  [R2] Linearity: R^2=1.000000 PASS
+  [R3] Additivity: residual=1.3932e-16 PASS
+  [R4] Force: +3.5515e+00 TOWARD PASS
+  [R5] Iterative stability: 30/30 TOWARD PASS
+  [R6] Norm: drift=1.1102e-16 PASS
+  [R7-base] Shared-kernel diagnostic:
+    gauss     : F=+3.5515e+00 TW
+    color-0   : F=+3.6638e+00 TW
+    color-1   : F=+3.3883e+00 TW
+    shared-kernel families: 3/3
+  [R7] Family-closure diagnostic:
+    gauss     : baseline=+6.4011e-03, closed=+4.1142e+00 TW
+    color-0   : baseline=+2.9104e-02, closed=+1.9738e+00 TW
+    color-1   : baseline=-8.7929e-04, closed=+6.2920e+00 TW
+  [R7] Families after closure: 3/3 PASS
+  [R8] Gauge: no cycle found, SKIP
+  [R9] Gap: G_eff=0.7, shell_grad_ratio=1.107, spectral_ratio(modes1-5)=3.566
+
+  SCORE: 8/9
+
+======================================================================
+SUMMARY: 4 families tested, scores: [9, 9, 9, 8]
+Time: 1.6s
+
+----- stderr -----
+

@@ -1,0 +1,110 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_candidate_mass_window_theorem.py
+runner_sha256: 81938b69f28aeac6536c998e20711eb98e7fa116f65f094c4525ff8d0853d114
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 4.66
+status: ok
+----- stdout -----
+================================================================================
+DM CANDIDATE MASS WINDOW THEOREM
+
+  Framework derives M_N via ALPHA_LM power laws.
+  Characterises the leptogenesis mass window and transport gap.
+================================================================================
+
+================================================================================
+Part 1: Framework mass spectrum from ALPHA_LM power laws
+================================================================================
+
+  ALPHA_LM = 0.090667836017
+  M_PL     = 1.220900e+19 GeV
+
+  k_A = 7,  k_B = 8,  eps/B = 0.045333918
+
+  a_mr = M_PL * ALPHA_LM^7
+  b_mr = M_PL * ALPHA_LM^8
+
+  M1 = b_mr * (1 - eps/B) = 5.323014e+10 GeV  (lightest RHN)
+  M2 = b_mr * (1 + eps/B) = 5.828558e+10 GeV
+  M3 = a_mr               = 6.149685e+11 GeV  (heaviest RHN)
+
+  [PASS (C)] M1 from ALPHA_LM power law k_B=8 (lightest RHN)  (M1 = 5.323014e+10 GeV)
+  [PASS (C)] M2 from ALPHA_LM power law k_B=8 (quasi-degenerate with M1)  (M2 = 5.828558e+10 GeV)
+  [PASS (C)] M3 from ALPHA_LM power law k_A=7 (heaviest RHN)  (M3 = 6.149685e+11 GeV)
+  [PASS (C)] Hierarchy M1 < M2 < M3 (required for one-flavor dominance)  (M1/M2 = 0.913264, M2/M3 = 0.094778)
+
+================================================================================
+Part 2: Davidson-Ibarra viability check
+================================================================================
+
+  Davidson-Ibarra lower bound M_DI ~ 2.40e+08 GeV
+  Framework M1 = 5.3230e+10 GeV
+  M1 / M_DI = 221.79
+
+  [PASS (C)] M1 > Davidson-Ibarra bound M_DI ~ 2.4e8 GeV  (M1/M_DI = 221.8)
+  [PASS (C)] M1 >> M_DI by factor > 100 (strongly above washout threshold)  (M1/M_DI = 221.8 >> 100)
+  [PASS (C)] M3 > M1 > M_DI (entire spectrum above viability bound)  (M3 = 6.1497e+11, M1 = 5.3230e+10, M_DI = 2.40e+08 GeV)
+
+================================================================================
+Part 3: Transport-implied target mass M_N_target
+================================================================================
+
+  eta/eta_obs at framework M_N = M1 = 0.188785929502
+  k_decay at M1 = 47.235979630
+  kappa_axiom at M1 = 0.004829545291
+
+  Prefactor A = eta_ratio / kappa_fw = 39.089793787
+
+  kappa needed for eta/eta_obs = 1: 0.025582125233
+  kappa at M1 (framework):          0.004829545291
+  ratio kappa_needed / kappa_fw = 5.297005
+
+  k_target = 11.803405797
+  kappa at k_target = 0.025582125233
+  M_N_target = M1 * (k_fw / k_target) = 2.130214e+11 GeV
+  M_N_target / M1_framework = 4.001894
+
+  [PASS (C)] eta/eta_obs = 0.189 at framework M1 (reproduced from transport runner)  (eta/eta_obs = 0.188785929502)
+  [PASS (C)] kappa at k_target matches kappa_needed (solving eta/eta_obs = 1)  (kappa = 0.025582125, target = 0.025582125)
+  [PASS (C)] M_N_target > M1_framework (target mass is larger than framework mass)  (M_N_target = 2.1302e+11, M1 = 5.3230e+10)
+  [PASS (C)] M_N_target also above Davidson-Ibarra bound  (M_N_target / M_DI = 887.6)
+
+================================================================================
+Part 4: Power-law position of M_N_target
+================================================================================
+
+  M_PL * ALPHA_LM^7 = 6.149685e+11 GeV  (= M3 ~ heaviest RHN)
+  M_PL * ALPHA_LM^8 = 5.575786e+10 GeV  (~ M1 framework scale)
+  M_N_target         = 2.130214e+11 GeV  (non-integer position)
+
+  Equivalent ALPHA_LM power: k_target = 7.441639
+  Not an integer: floor=7, ceil=8
+
+  Mass ratio M_N_target / M1_framework = 4.001894
+  (Factor-4 mass shift, not a single ALPHA_LM step)
+
+  [PASS (C)] M_N_target lies between k=7 and k=8 ALPHA_LM nodes  (M_k8=5.58e+10 < M_N_t=2.13e+11 < M_k7=6.15e+11)
+  [PASS (C)] k_target is not an integer (gap not closeable by integer power step alone)  (k_target = 7.441639, nearest integer = 7)
+  [PASS (C)] k=7 step would overshoot (M_k7 > M_N_target by factor > 2)  (M_k7 / M_N_target = 2.8869 > 2)
+  [PASS (C)] k=8 step undershoots (M_k8 < M_N_target by factor < 0.5)  (M_k8 / M_N_target = 0.2617 < 0.5)
+
+================================================================================
+Theorem statement:
+
+  Framework M_N = M1 = M_PL * ALPHA_LM^k_B = 5.3230e+10 GeV (k_B=8)
+  (a) M_N / M_DI = 221.8 >> 1: leptogenesis viable (D-I check passed)
+  (b) eta/eta_obs = 0.188786 at M_N: undershoots by factor 5.2970
+  (c) M_N_target for eta/eta_obs=1: 2.1302e+11 GeV = 4.0019 * M_N
+  (d) k_target ~ 7.44: non-integer, between k=7 (M3) and k=8 (M1)
+
+  The transport gap corresponds to a factor-4 mass shift NOT reachable
+  by a single integer ALPHA_LM power-law step. This is a structural gap,
+  not a failure of viability. The framework M_N is above Davidson-Ibarra.
+================================================================================
+
+PASS = 15
+FAIL = 0
+
+----- stderr -----
+

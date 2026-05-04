@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_exact_coarse_grained_bridge_operator.py
+runner_sha256: ebbe619188a32d469746e457f1c22cf367bf033bdfd59534021b85da176c4022
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.80
+status: ok
+----- stdout -----
+==============================================================================
+YT EXACT COARSE-GRAINED BRIDGE OPERATOR
+==============================================================================
+
+Promote the theorem object from a proxy-family scan to an exact Schur
+coarse operator on the forced UV window, then identify the current
+proxy family as its normal-form chart.
+
+Forced UV window: x >= 0.95
+  samples on window                = 125
+  local affine kernel             = -6.172071e-02 x + 8.518429e-02
+  min local kernel value          = 2.346358e-02
+  affine residual L2 ratio        = 5.023669e-03
+
+Normal-form coarse operator:
+  min eigenvalue(K_eff)           = 3.775337e+01
+  ||R_nonlocal|| / ||H_loc||      = 4.721908e-03
+  response vs local selector L2   = 1.603894e-04
+  response vs accepted kernel L2  = 5.056695e-03
+
+Exact Schur realization checks:
+  Schur operator error            = 6.939e-18
+  Schur source error              = 0.000e+00
+  stationary projection error     = 4.857e-17
+  covariance projection error     = 3.816e-17
+  associativity operator error    = 7.105e-15
+  associativity source error      = 0.000e+00
+
+[PASS (A)] [EXACT] finite local marginalization gives an exact Schur coarse bridge operator
+    Schur operator error=6.939e-18, source error=0.000e+00
+[PASS (A)] [EXACT] the exact coarse bridge operator is symmetric positive definite on the forced UV window
+    min eig(K_eff)=3.775337e+01, min local kernel=2.346358e-02
+[PASS (A)] [EXACT] the coarse stationary field is exactly the projected full stationary field
+    stationary error=4.857e-17, covariance error=3.816e-17
+[PASS (A)] [EXACT] sequential coarse-graining is associative for the bridge operator
+    assoc operator err=7.105e-15, assoc source err=0.000e+00
+[PASS (C)] [BOUNDED] the exact coarse bridge admits the same local affine normal form seen in the package transport kernel
+    affine residual L2 ratio=5.023669e-03
+[PASS (C)] [BOUNDED] the nonlocal tail of the exact coarse normal form stays at the measured package scale
+    normal-form nonlocal ratio=4.721908e-03, package ratio=5.023669e-03
+[PASS (C)] [BOUNDED] the normal-form response stays inside the current conservative endpoint budget
+    response/accepted-kernel L2=5.056695e-03, budget=1.214751e-02
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+The theorem object can now be taken to be the exact Schur coarse bridge operator on the forced UV window, not the scanned proxy family.
+On the current package data, that exact coarse operator admits the same positive local affine normal form plus small nonlocal remainder that the bridge stack already inferred from the family scans.
+So the proxy family can be demoted to a coordinate chart / emulator of the exact coarse operator rather than treated as the ontology.
+What remains open is not the existence of an exact coarse bridge object, but uniqueness of the full microscopic bridge beyond the current normal-form class.
+
+==============================================================================
+FINAL TALLY: 7 PASS / 0 FAIL
+Elapsed: 0.27 s
+==============================================================================
+
+----- stderr -----
+

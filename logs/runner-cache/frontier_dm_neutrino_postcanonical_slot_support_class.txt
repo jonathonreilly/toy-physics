@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_postcanonical_slot_support_class.py
+runner_sha256: d043c7ad9bbb39abcdbb2fc3d25754a409fafb8b0ec89b95b43beec1023720c9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO POST-CANONICAL SLOT-SUPPORTED SUPPORT CLASS
+========================================================================================
+
+Question:
+  After the admitted canonical routes fail, what is the smallest honest
+  support class for a future positive post-canonical bridge?
+
+========================================================================================
+PART 1: THE SPECTATOR DATA ARE CP-INERT
+========================================================================================
+  [PASS (C)] Im[(K_mass)_{01}^2] is unchanged after removing all spectator data  (full=0.089720, slot=0.089720)
+  [PASS (C)] Im[(K_mass)_{02}^2] is unchanged after removing all spectator data  (full=0.089720, slot=0.089720)
+
+  So the diagonal and doublet-block spectator entries are not part of
+  the minimal physical CP support class.
+
+========================================================================================
+PART 2: THE SLOT-SUPPORTED FAMILY IS THE MINIMAL SURVIVING SUPPORT CLASS
+========================================================================================
+  [PASS (C)] The minimal surviving family is supported only on the singlet-doublet slots  (support=[(0, 1), (0, 2), (1, 0), (2, 0)])
+  [PASS (C)] Both slot amplitudes remain visible on that minimal support  (K01=-0.255000-0.441673j, K02=-0.115000+0.199186j)
+
+  So once the carrier is isolated, the smallest honest future bridge
+  class is not a full 3x3 Hermitian family. It is the slot-supported
+  singlet-doublet family itself.
+
+========================================================================================
+PART 3: WHAT THIS MEANS FOR THE REMAINING DM BRIDGE
+========================================================================================
+  [PASS (C)] Any future positive post-canonical route can be quotiented by spectator data  (those entries do not affect the physical CP tensor)
+  [PASS (C)] So the minimal surviving support class is slot-supported and right-sensitive  (the only live support sits on the singlet-doublet carrier slots)
+
+  This is the post-canonical analogue of a support-class theorem:
+  the remaining bridge is not generic, and its minimal support is now fixed.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact answer:
+    - the spectator diagonal and doublet-block data are CP-inert
+    - the minimal surviving support is exactly the singlet-doublet slot support
+    - any future positive bridge can therefore be reduced to that slot-supported class
+
+  So the remaining DM bridge problem is now support-resolved as well:
+  a post-canonical right-sensitive slot-supported mixed bridge with two
+  real slot amplitudes u and v.
+
+PASS=6 FAIL=0
+
+----- stderr -----
+

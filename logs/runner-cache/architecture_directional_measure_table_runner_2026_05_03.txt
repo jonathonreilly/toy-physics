@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/architecture_directional_measure_table_runner_2026_05_03.py
+runner_sha256: 4f45869c60fd07fd1b2b927e8ec9c8d6b33bccaaf9f511489361d113bdfb2cae
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.50
+status: ok
+----- stdout -----
+================================================================================
+ architecture_directional_measure_table_runner_2026_05_03.py
+ Review-loop repair runner for ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE
+================================================================================
+
+--- T1: Born rule (I3) on 2D fixture ---
+  [PASS] Born rule additivity over disjoint detector groups  (deviation=0.000e+00)
+
+--- T2: Interference visibility V on 2D 2-slit fixture ---
+  [PASS] Interference visibility V > 0.95 on 2-slit fixture  (V=0.975648)
+
+--- T3: k = 0 -> amplitude is real (no oscillating phase) ---
+  [PASS] All detector amplitudes are real at k = 0  (max|Im(amp)|=0.000e+00)
+
+--- T4: Gravity sign over 8 fixed seeds (3D) ---
+  [PASS] Gravity sign: at least 5/8 seeds attract with beta=0.8  (attract=6/8)
+
+--- T5: Gravity scaling R_angle(N) increases with N (3D, canonical protocol) ---
+  [PASS] Gravity R_angle(N) positive across N=8..20 with R(20),R(16) > R(8)  (R(8)=+0.291, R(12)=+0.290, R(16)=+0.620, R(20)=+0.566)
+
+--- T6: Beta-sweep monotonicity (sharper kernel = smaller <theta^2>) ---
+  [PASS] Weighted <theta^2> is monotone-decreasing in beta  (b=0.1:<t^2>=0.8154  b=0.4:<t^2>=0.7517  b=0.8:<t^2>=0.6691  b=1.6:<t^2>=0.5233  b=3.2:<t^2>=0.3295)
+
+--- Beta provenance summary ---
+  beta_gravity_card = 0.8 (empirical, observable-matched)
+
+  Per ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE_2026-04-25:
+    The angular kernel w(theta) of the directional path-measure walk
+    is NOT uniquely determined by the current A1+A2 primitive core
+    plus the named directional-measure constraints:
+      (1) Cl(3) trace structure
+      (2) action extremization on Z^3
+      (3) causal-cone kinematics
+      (4) leading-order continuum-limit SO(3) isotropy
+    Closing the no-go positively requires one of three additional
+    premises or closure routes: higher-order isotropy, action-Lagrangian
+    principle, or direct observable matching. The current beta = 0.8 is route (3),
+    pinned against the gravitational-deflection eikonal slope per
+    BORN_SCATTERING_COMPARISON_NOTE_2026-04-08.
+
+  Empirical <theta^2> for the canonical DAG (xyz_range=8, R=3):
+    sampled <theta^2>     ~ 0.84 rad^2
+    Gaussian moment-match ~ beta = 1/(2 <theta^2>) ~ 0.595
+    Eikonal observable-match (this gravity-card)   ~ beta = 0.8
+    Two values differ; beta = 0.8 is observable-matched, not Gaussian-fit.
+
+================================================================================
+ SUMMARY: PASS=6, FAIL=0
+================================================================================
+
+----- stderr -----
+

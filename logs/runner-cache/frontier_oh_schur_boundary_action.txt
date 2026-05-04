@@ -1,0 +1,35 @@
+===== runner cache v1 =====
+runner: scripts/frontier_oh_schur_boundary_action.py
+runner_sha256: e8e375a14f750162e6bbed56c51bf91473538b428dd333f5d491a16f9753c891
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.35
+status: ok
+----- stdout -----
+Exact Schur-complement boundary action for the O_h shell law
+========================================================================
+trace count=1052, bulk count=888, symmetry error=3.331e-16, min eigenvalue=1.148587e+00
+exact local O_h: rebuild_err=2.255e-17, flux_err=9.021e-17, stationary_grad=9.021e-17
+finite-rank: rebuild_err=6.939e-17, flux_err=2.776e-16, stationary_grad=2.776e-16
+sample boundary-action gains: O_h 3.000e-08, 2.604e-08, 3.000e-08 ; finite-rank 3.000e-08, 2.604e-08, 3.000e-08
+[EXACT] PASS: the exact exterior shell boundary action is the symmetric Schur complement of the lattice Laplacian
+    symmetry error=3.331e-16, min eigenvalue=1.148587e+00
+[EXACT] PASS: for the exact local O_h class the trace flux equals the gradient of the Schur boundary action exactly
+    rebuild_err=2.255e-17, flux_err=9.021e-17
+[EXACT] PASS: for the exact local O_h class the microscopic sourced boundary action is stationary at the exact shell trace
+    max stationary gradient=9.021e-17, action=-9.649741e-02
+[BOUNDED] PASS: the exact local O_h shell trace is the unique local minimum of the microscopic sourced boundary action
+    all sampled perturbation gains are strictly positive
+[EXACT] PASS: for the broader finite-rank class the same Schur boundary action reproduces the exact shell trace law
+    rebuild_err=6.939e-17, flux_err=2.776e-16, max stationary gradient=2.776e-16
+[BOUNDED] PASS: the current strong-field shell action is derived from microscopic lattice dynamics rather than inserted on the reduced surface
+    exact Schur-complement boundary energy generates the shell trace law
+
+========================================================================
+SUMMARY
+========================================================================
+PASS=6 FAIL=0 TOTAL=6
+All checks passed.
+
+----- stderr -----
+

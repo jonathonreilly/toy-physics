@@ -1,0 +1,22 @@
+===== runner cache v1 =====
+runner: scripts/frontier_planck_boundary_density_extension.py
+runner_sha256: e5656cb75259dbad39e09a226a9a5ffe9836f7fa5f5ccddbb139994b548b9b8c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+[PASS] primitive coefficient is retained as 1/4: c_cell = 4/16 = 0.250000000000
+[PASS] local additive extension has constant boundary density: densities = 0.250000000000, 0.250000000000, 0.250000000000, 0.250000000000
+[PASS] subdivision does not change the boundary count: whole=35.750000000000, tiled=35.750000000000
+[PASS] non-rectangular finite face unions have the same local density: L-patch density=0.250000000000; zigzag density=0.250000000000
+[PASS] cubic-frame orientation symmetry preserves the density: xy=8.750000000000, yz=8.750000000000, zx=8.750000000000
+[PASS] unit-cell normalization uniquely fixes finite face-union patches: sampled rectangles and non-rectangular unions equal the sum of their unit-face tiles
+[PASS] extended density still gives conditional a/l_P = 1: sqrt(4*c_cell) = 1.000000000000
+[PASS] positive closure is the extension, not carrier identification: given the gravitational carrier premise, the finite-boundary density extension is unique and additive; the carrier premise remains explicit
+
+Summary: 8/8 checks passed.
+Verdict: positive closure of the finite-boundary density extension; c_cell=1/4 extends uniquely to additive boundary patches and retains the conditional a/l_P=1 normalization.
+
+----- stderr -----
+

@@ -1,0 +1,46 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_full_closure_same_surface_thermal_selector_sensitivity_boundary.py
+runner_sha256: 57a9267997331a3c86b32edf139725724a88a576372e2f3e126749d2b0f4e491
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.23
+status: ok
+----- stdout -----
+========================================================================================
+DM FULL CLOSURE SAME-SURFACE THERMAL SELECTOR SENSITIVITY BOUNDARY
+========================================================================================
+
+========================================================================================
+PART 1: BASELINE APPARENT MATCH
+========================================================================================
+  [C] PASS: The coarse retained runner gives an apparent near-match to 9/62  (sigma_base=0.145161097420491, sigma_struct=0.145161290322581)
+
+========================================================================================
+PART 2: QUADRATURE REFINEMENT DESTROYS THE APPARENT MATCH
+========================================================================================
+  [C] PASS: Refining the thermal quadrature shifts the selector root by far more than the apparent 9/62 residual  (sigma_2000=0.145161097420491, sigma_4000=0.145600347860581, sigma_8000=0.145584750712540)
+  [C] PASS: The refined roots also move materially away from 9/62  (sigma_8000=0.145584750712540, sigma_16000=0.145580852564623, sigma_struct=0.145161290322581)
+
+  sigma_2000  = 0.145161097420491
+  sigma_4000  = 0.145600347860581
+  sigma_8000  = 0.145584750712540
+  sigma_16000 = 0.145580852564623
+  sigma_9/62  = 0.145161290322581
+
+========================================================================================
+BOTTOM LINE
+========================================================================================
+  Honest status:
+    - the apparent 9/62 match in the coarse retained thermal runner is not stable
+    - the retained same-surface thermal kernel is not yet numerically converged enough
+      to support a structural selector claim
+    - so 9/62 must not be promoted as a DM selector law on the current branch
+    - the correct next step is to replace the retained thermal average with a
+      converged or exact thermal theorem before attempting further selector collapse
+
+========================================================================================
+SUMMARY: classified_pass=3 fail=0
+========================================================================================
+
+----- stderr -----
+

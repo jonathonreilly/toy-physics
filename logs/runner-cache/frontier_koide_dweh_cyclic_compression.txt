@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_dweh_cyclic_compression.py
+runner_sha256: 849eb7807dc5c08e3161ee635d53c8462ca9a93cd71532bc166d21cac2684de9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.52
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: the cyclic projector compresses the 9 Hermitian directions to 3
+========================================================================================
+  [PASS (A)] [NUMERIC] Each Hermitian matrix-unit direction projects to one of the three cyclic channels  (D1:0.00e+00; D2:0.00e+00; D3:0.00e+00; X12:0.00e+00; X23:0.00e+00; X13:0.00e+00; Y12:0.00e+00; Y23:0.00e+00; Y13:0.00e+00)
+  [PASS (A)] So the exact 9-real Hermitian basis compresses to the cyclic basis {B0, B1, B2}  (3 diagonal slots -> B0, 3 X slots -> B1, signed Y orbit -> B2)
+
+========================================================================================
+PART 2: exact generic Hermitian data compresses to three cyclic sums
+========================================================================================
+  [PASS (A)] The cyclic projector keeps only the diagonal sum, X-sum, and signed Y-sum
+  [PASS (A)] So Koide only sees three exact linear combinations of the generic 9-real Hermitian law  (d_sum=d1+d2+d3, x_sum=x12+x23+x13, y_sum=y12+y23-y13)
+
+========================================================================================
+PART 3: the Koide responses are exact linear functionals of the 9-channel law
+========================================================================================
+  [PASS (A)] r0 is exactly the total diagonal response  (r0=1.0*d1 + 1.0*d2 + 1.0*d3)
+  [PASS (A)] r1 is exactly twice the cyclic X-sum  (r1=2.0*x12 + 2.0*x13 + 2.0*x23)
+  [PASS (A)] r2 is exactly twice the signed cyclic Y-sum  (r2=2.0*y12 - 2.0*y13 + 2.0*y23)
+
+========================================================================================
+PART 4: the cyclic compression is reconstructed exactly from three responses
+========================================================================================
+  [PASS (A)] [NUMERIC] The three cyclic responses against the full Hermitian target reconstruct its cyclic compression  (err=3.68e-16)
+  [PASS (A)] [NUMERIC] Responses on B0, B1, B2 are unchanged by replacing H_e with P_cyc(H_e)
+
+========================================================================================
+PART 5: the observed charged-lepton amplitude target already lives in the compressed sector
+========================================================================================
+  [PASS (D)] [NUMERIC] The observed charged-lepton amplitude operator is already cyclic  (err=9.09e-15)
+  [PASS (D)] [NUMERIC] Its Koide selector lives entirely on the compressed response triple  (selector=0.1043145831)
+
+Interpretation:
+  The exact charged projected Hermitian law dW_e^H is generically 9-real,
+  but its Koide-relevant content compresses canonically to three cyclic
+  channels. The live microscopic target is therefore the source law for
+  those three cyclic sums, not the entire generic Hermitian packet.
+
+PASS=11 FAIL=0
+
+----- stderr -----
+

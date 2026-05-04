@@ -1,0 +1,92 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lhcm_y_normalization.py
+runner_sha256: e8b22a9940bb8aef02b06761476a8cd8dbe0777ec4668cb971e3618e3b6ff368
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure and citations
+----------------------------------------------------------------------------------------
+  [PASS (A)] note contains required substring: 'LHCM Y Normalization from Anomaly Cancellation and Electric-Charge Convention'  (len(note)=9750)
+  [PASS (A)] note contains required substring: 'exact algebraic identity / support theorem'  (len(note)=9750)
+  [PASS (A)] note contains required substring: 'GRAPH_FIRST_SU3_INTEGRATION_NOTE.md'  (len(note)=9750)
+  [PASS (A)] note contains required substring: 'LEFT_HANDED_CHARGE_MATCHING_NOTE.md'  (len(note)=9750)
+  [PASS (A)] note contains required substring: 'RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md'  (len(note)=9750)
+  [PASS (A)] note contains required substring: 'LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md'  (len(note)=9750)
+  [PASS (A)] note contains required substring: 'Q_e'  (len(note)=9750)
+  [PASS (A)] note contains required substring: 'α = +1'  (len(note)=9750)
+  [PASS (A)] note contains required substring: 'proposal_allowed: false'  (len(note)=9750)
+  [PASS (A)] note avoids forbidden substring: '\nStatus: retained\n'  ()
+  [PASS (A)] note avoids forbidden substring: '\nStatus: promoted\n'  ()
+  [PASS (A)] note avoids forbidden substring: 'would become retained'  ()
+  [PASS (A)] note avoids forbidden substring: 'promoted to retained'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: LH eigenvalue ratio with free overall scale alpha
+----------------------------------------------------------------------------------------
+  [PASS (A)] LH tracelessness 6*(alpha/3)+2*(-alpha)=0 for alpha=1  (alpha=1: trace = 0)
+  [PASS (A)] LH tracelessness 6*(alpha/3)+2*(-alpha)=0 for alpha=2  (alpha=2: trace = 0)
+  [PASS (A)] LH tracelessness 6*(alpha/3)+2*(-alpha)=0 for alpha=-3/5  (alpha=-3/5: trace = 0)
+  [PASS (A)] LH tracelessness 6*(alpha/3)+2*(-alpha)=0 for alpha=7/11  (alpha=7/11: trace = 0)
+  [PASS (A)] LH eigenvalue ratio is 1:(-3) on Sym^2:Anti^2 (independent of alpha)  (ratio Y_QL/Y_LL = -1/3 = -1/3 ↔ 1:(-3))
+
+----------------------------------------------------------------------------------------
+Part 3: anomaly cancellation determines RH hypercharges as fn of alpha
+----------------------------------------------------------------------------------------
+  [PASS (A)] (A1) Tr[Y] = 0 for alpha=1  (A1(alpha=1) = 0)
+  [PASS (A)] (A2) Tr[SU(3)^2 Y] vanishes for alpha=1  (A2(alpha=1) = 0)
+  [PASS (A)] (A3) Tr[Y^3] cubic identity for alpha=1  (A3 residual = 0)
+  [PASS (A)] (A1) Tr[Y] = 0 for alpha=2  (A1(alpha=2) = 0)
+  [PASS (A)] (A2) Tr[SU(3)^2 Y] vanishes for alpha=2  (A2(alpha=2) = 0)
+  [PASS (A)] (A3) Tr[Y^3] cubic identity for alpha=2  (A3 residual = 0)
+  [PASS (A)] (A1) Tr[Y] = 0 for alpha=-3/5  (A1(alpha=-3/5) = 0)
+  [PASS (A)] (A2) Tr[SU(3)^2 Y] vanishes for alpha=-3/5  (A2(alpha=-3/5) = 0)
+  [PASS (A)] (A3) Tr[Y^3] cubic identity for alpha=-3/5  (A3 residual = 0)
+  [PASS (A)] (A1) Tr[Y] = 0 for alpha=7/11  (A1(alpha=7/11) = 0)
+  [PASS (A)] (A2) Tr[SU(3)^2 Y] vanishes for alpha=7/11  (A2(alpha=7/11) = 0)
+  [PASS (A)] (A3) Tr[Y^3] cubic identity for alpha=7/11  (A3 residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: SM-definition convention Q_e = -1 fixes alpha = +1
+----------------------------------------------------------------------------------------
+  [PASS (A)] Q(e_R) = -alpha for alpha=1  (Q(e_R)=-1, -alpha=-1)
+  [PASS (A)] Q(e_R) = -alpha for alpha=2  (Q(e_R)=-2, -alpha=-2)
+  [PASS (A)] Q(e_R) = -alpha for alpha=-3/5  (Q(e_R)=3/5, -alpha=3/5)
+  [PASS (A)] Q(e_R) = -alpha for alpha=7/11  (Q(e_R)=-7/11, -alpha=-7/11)
+  [PASS (A)] alpha solution from Q_e = -1: alpha = +1  (alpha = +1 gives Q(e_R) = -1 (matches SM Q_e = -1))
+
+----------------------------------------------------------------------------------------
+Part 5: alpha = +1 reproduces SM hypercharge assignments
+----------------------------------------------------------------------------------------
+  [PASS (A)] derived Y(Q_L) = SM Y(Q_L) = 1/3  (derived = 1/3, SM = 1/3)
+  [PASS (A)] derived Y(L_L) = SM Y(L_L) = -1  (derived = -1, SM = -1)
+  [PASS (A)] derived Y(u_R) = SM Y(u_R) = 4/3  (derived = 4/3, SM = 4/3)
+  [PASS (A)] derived Y(d_R) = SM Y(d_R) = -2/3  (derived = -2/3, SM = -2/3)
+  [PASS (A)] derived Y(e_R) = SM Y(e_R) = -2  (derived = -2, SM = -2)
+  [PASS (A)] derived Y(nu_R) = SM Y(nu_R) = 0  (derived = 0, SM = 0)
+
+----------------------------------------------------------------------------------------
+Part 6: cubic system reduces to 9x^2 - 6x - 8 = 0
+----------------------------------------------------------------------------------------
+  [PASS (A)] x = 4/3 satisfies 9x^2 - 6x - 8 = 0  (9*(4/3)^2 - 6*4/3 - 8 = 0)
+  [PASS (A)] x = -2/3 satisfies 9x^2 - 6x - 8 = 0  (9*(-2/3)^2 - 6*-2/3 - 8 = 0)
+  [PASS (A)] u_R has Q > 0: (4/3)/2 = 2/3 > 0 (with alpha = +1)  (Q(u_R)/alpha = 2/3)
+  [PASS (A)] d_R has Q < 0: (-2/3)/2 = -1/3 < 0 (with alpha = +1)  (Q(d_R)/alpha = -1/3)
+
+----------------------------------------------------------------------------------------
+Part 7: explicit non-closure of SM-photon derivation
+----------------------------------------------------------------------------------------
+  [PASS (A)] explicit non-closure: SM-definition convention Q_e = -1 itself is NOT derived (is naming convention)  (documented in §4 / §6)
+  [PASS (A)] explicit non-closure: SM photon Q = T_3 + Y/2 derivation from graph-first surface NOT closed  (documented in §4 / §6)
+  [PASS (A)] explicit non-closure: LHCM is NOT promoted to retained by this block  (documented in §4 / §6)
+  [PASS (A)] explicit non-closure: Criterion 3 fails: admitted SM-definition convention is load-bearing  (documented in §4 / §6)
+
+========================================================================================
+  TOTAL: PASS=49, FAIL=0
+========================================================================================
+
+----- stderr -----
+

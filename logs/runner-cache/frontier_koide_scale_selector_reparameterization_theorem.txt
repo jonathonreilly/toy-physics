@@ -1,0 +1,50 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_scale_selector_reparameterization_theorem.py
+runner_sha256: 259c72342248409d7675190246583cc9ab737352d97c39e33e3ca5b46d520c72
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.27
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: the scale condition uses a Koide-completed slot, not native diagonal data
+========================================================================================
+  [PASS (A)] The small slot u_small(v,w) is exactly the Koide-completing root  (Q(u_small^2,v^2,w^2) = 2/3 identically)
+  [PASS (A)] The completed slot u_small is an explicit nontrivial function of the retained pair (v,w)  (u_small depends on v and w, so it is not an independent native slot)
+  [PASS (C)] [NUMERIC] At the current physical point the native diagonal triple does NOT satisfy Koide  (Q_native=0.490021427531)
+  [PASS (A)] [NUMERIC] The completed triple does satisfy Koide because u_small is defined that way  (Q_completed=0.666666666667)
+  [PASS (C)] [NUMERIC] The native diagonal x00 and the Koide-completed u_small are genuinely different numbers at m_*  (x00=1.743731242408, u_small=0.105595212600)
+
+========================================================================================
+PART 2: u*v*w = 1 gives one physical-branch near-miss, not the current selector
+========================================================================================
+  m_prod = -1.16025665668721
+  m_*    = -1.16046947008700
+  |m_prod - m_*| = 2.1281e-04
+  cos-sim at m_prod = 0.999999999021
+  [PASS (C)] [NUMERIC] The product condition u*v*w = 1 has one and only one physical-branch crossing  (sign changes=1)
+  [PASS (C)] [NUMERIC] The scale crossing is close to but distinct from the current physical point  (gap=2.1281e-04)
+  [PASS (D)] [NUMERIC] The near-miss point still tracks the observed sqrt-mass direction extremely well  (cos-sim=0.999999999021)
+
+========================================================================================
+PART 3: simple trace targets are weaker than the scale near-miss
+========================================================================================
+  [PASS (C)] [NUMERIC] Among the tested simple trace targets, none is as sharp as the product near-miss  (best trace gap=2.2006e-03 (k=2.0, target=N_c^4) vs product gap=2.1281e-04)
+  [PASS (C)] [NUMERIC] But even the product near-miss still does not equal the current selector point  (product gap=2.1281e-04)
+
+========================================================================================
+PART 4: product normalization is near the kappa witness but not identical to it
+========================================================================================
+  [PASS (C)] [NUMERIC] The scale crossing lands very near the current kappa witness  (|kappa_prod-kappa_*|=4.8403e-05)
+  [PASS (C)] [NUMERIC] But the scale crossing is not exactly the same condition as kappa = kappa_*  (kappa gap=4.8403e-05)
+
+Summary:
+  The u*v*w = 1 near-miss is not an independent derivation of Koide Q=2/3.
+  It uses the Koide-completed slot u_small(v,w), so it is a reparameterization
+  on the already-imposed cone. Numerically it remains an impressive support
+  near-miss, but it does not close the charged-lepton lane natively.
+
+PASS=12 FAIL=0
+
+----- stderr -----
+

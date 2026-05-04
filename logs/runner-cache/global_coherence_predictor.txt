@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/global_coherence_predictor.py
+runner_sha256: a0c1706e4319f810df7d20255553a5ff2e21d3da2302733c33c2e857fd713afa
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

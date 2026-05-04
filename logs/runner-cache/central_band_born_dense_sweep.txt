@@ -1,0 +1,83 @@
+===== runner cache v1 =====
+runner: scripts/central_band_born_dense_sweep.py
+runner_sha256: adeddbcc734d633244d518b3bfd62011616a3bd967a55c5883ebe3bb71854097
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 64.25
+status: ok
+----- stdout -----
+============================================================================================================================
+CENTRAL-BAND DENSE CORRECTED BORN SWEEP
+  corrected three-slit I3 with -P(empty), density sweep on the same lane
+  seeds=6, realizations=8, npl=[35, 45, 60], yz_range=12.0, r=3.0, p=0.2, y_cut=2.0
+============================================================================================================================
+
+N = 25
+   npl              mode                        |I3|/P   ok  verdict
+  ------------------------------------------------------------------------
+    35            linear                          FAIL    0  FAIL
+    35                LN                          FAIL    0  FAIL
+    35          collapse                          FAIL    0  FAIL
+    35            LN+|y|                          FAIL    0  FAIL
+    35   LN+|y|+collapse                          FAIL    0  FAIL
+
+    45            linear  0.00e+00±0.0e+00 (max 0.00e+00)    2  PASS
+    45                LN  0.00e+00±0.0e+00 (max 0.00e+00)    2  PASS
+    45          collapse  0.00e+00±0.0e+00 (max 0.00e+00)    2  PASS
+    45            LN+|y|  0.00e+00±0.0e+00 (max 0.00e+00)    2  PASS
+    45   LN+|y|+collapse  0.00e+00±0.0e+00 (max 0.00e+00)    2  PASS
+
+    60            linear  1.71e-17±3.4e-18 (max 9.18e-17)    4  PASS
+    60                LN  1.02e-16±1.9e-17 (max 6.66e-16)    4  PASS
+    60          collapse  1.71e-17±3.4e-18 (max 9.18e-17)    4  PASS
+    60            LN+|y|  1.02e-16±1.9e-17 (max 6.66e-16)    4  PASS
+    60   LN+|y|+collapse  9.95e-17±1.9e-17 (max 6.66e-16)    4  PASS
+
+
+N = 40
+   npl              mode                        |I3|/P   ok  verdict
+  ------------------------------------------------------------------------
+    35            linear                          FAIL    0  FAIL
+    35                LN                          FAIL    0  FAIL
+    35          collapse                          FAIL    0  FAIL
+    35            LN+|y|                          FAIL    0  FAIL
+    35   LN+|y|+collapse                          FAIL    0  FAIL
+
+    45            linear                          FAIL    0  FAIL
+    45                LN                          FAIL    0  FAIL
+    45          collapse                          FAIL    0  FAIL
+    45            LN+|y|                          FAIL    0  FAIL
+    45   LN+|y|+collapse                          FAIL    0  FAIL
+
+    60            linear                          FAIL    0  FAIL
+    60                LN  1.02e-16±1.9e-17 (max 5.55e-16)    4  PASS
+    60          collapse                          FAIL    0  FAIL
+    60            LN+|y|  1.02e-16±1.9e-17 (max 5.55e-16)    4  PASS
+    60   LN+|y|+collapse  1.01e-16±1.6e-17 (max 8.88e-16)    4  PASS
+
+
+N = 60
+   npl              mode                        |I3|/P   ok  verdict
+  ------------------------------------------------------------------------
+    35            linear                          FAIL    0  FAIL
+    35                LN                          FAIL    0  FAIL
+    35          collapse                          FAIL    0  FAIL
+    35            LN+|y|                          FAIL    0  FAIL
+    35   LN+|y|+collapse                          FAIL    0  FAIL
+
+    45            linear                          FAIL    0  FAIL
+    45                LN  3.70e-17±1.2e-17 (max 2.22e-16)    2  PASS
+    45          collapse                          FAIL    0  FAIL
+    45            LN+|y|  3.70e-17±1.2e-17 (max 2.22e-16)    2  PASS
+    45   LN+|y|+collapse  5.32e-17±1.6e-17 (max 4.44e-16)    2  PASS
+
+    60            linear                          FAIL    0  FAIL
+    60                LN  1.85e-16±1.7e-17 (max 7.77e-16)    6  PASS
+    60          collapse                          FAIL    0  FAIL
+    60            LN+|y|  1.85e-16±1.7e-17 (max 7.77e-16)    6  PASS
+    60   LN+|y|+collapse  1.73e-16±1.6e-17 (max 7.77e-16)    6  PASS
+
+
+
+----- stderr -----
+

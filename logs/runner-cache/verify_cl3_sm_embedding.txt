@@ -1,0 +1,174 @@
+===== runner cache v1 =====
+runner: scripts/verify_cl3_sm_embedding.py
+runner_sha256: 136a875283bac7d12c588df8ddd0524dba1482781444e1c97ab986934c1347f5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+
+==============================================================
+  A: Cl(3) Clifford algebra on 8D taste space
+==============================================================
+  [PASS]   G1^2 = I8  (max err 0.0e+00)
+  [PASS]   G2^2 = I8  (max err 0.0e+00)
+  [PASS]   G3^2 = I8  (max err 0.0e+00)
+  [PASS]   {G1, G)} = 0  (max err 0.0e+00)
+  [PASS]   {G1, G)} = 0  (max err 0.0e+00)
+  [PASS]   {G2, G)} = 0  (max err 0.0e+00)
+  [PASS] Section A
+
+==============================================================
+  B: Cl+(3) = span{I,e12,e13,e23} ≅ H (quaternions) → abstract SU(2)
+==============================================================
+  [PASS]   (e12)^2 = -I8  (max err 0.0e+00)
+  [PASS]   (e13)^2 = -I8  (max err 0.0e+00)
+  [PASS]   (e23)^2 = -I8  (max err 0.0e+00)
+  [PASS]   e23 * e13 = +e12  (quaternion i*j = k structure)  (max err 0.0e+00)
+  [PASS]   [J1,J2] = i J3  (max err 0.0e+00)
+  [PASS]   [J2,J3] = i J1  (max err 0.0e+00)
+  [PASS]   [J3,J1] = i J2  (max err 0.0e+00)
+  [PASS]   J1^2+J2^2+J3^2 = (3/4)I8  (spin-1/2 Casimir)  (max err 0.0e+00)
+  [PASS]   J1 is Hermitian
+  [PASS]   J2 is Hermitian
+  [PASS]   J3 is Hermitian
+  [PASS]   dim(Cl+(3)) = 4 = d+1 for d=3  (basis: {{I,e12,e13,e23}})
+  [PASS] Section B
+
+==============================================================
+  C: Pseudoscalar omega = G1*G2*G3 generates U(1)_Y center
+==============================================================
+  [PASS]   omega^2 = -I8  (imaginary unit)  (max err 0.0e+00)
+  [PASS]   [omega, G1] = 0  (central in Cl(3))  (max err 0.0e+00)
+  [PASS]   [omega, G2] = 0  (central in Cl(3))  (max err 0.0e+00)
+  [PASS]   [omega, G3] = 0  (central in Cl(3))  (max err 0.0e+00)
+  [PASS]   exp(theta*omega) is unitary
+  [PASS]   dim(Cl+(3) + span{omega}) = 5 = d+2 = 5  (extends even subalgebra by 1 central direction)
+  [PASS]   {I,e12,e13,e23,omega} are linearly independent (rank 5)  (rank = 5)
+  [PASS] Section C
+
+==============================================================
+  D: Bare couplings: g2^2 = 1/dim(Cl+(3)) = 1/4; g_Y^2 = 1/5
+==============================================================
+  [PASS]   g2^2 = 1/4 = 1/(d+1)
+  [PASS]   g_Y^2 = 1/5 = 1/(d+2)
+  [PASS]   sin^2(theta_W)(bare) = g_Y^2/(g2^2+g_Y^2) = 0.4444 = 4/9
+  [PASS]   # basis elements of Cl+(3) = 4 = d+1 (algebraic origin of 1/(d+1))  (basis: I, e12=G1G2, e13=G1G3, e23=G2G3)
+  [PASS]   Adding central omega gives 5 = d+2 elements (origin of 1/(d+2))  (omega not in Cl+(3) but commutes with it)
+  [PASS] Section D
+
+==============================================================
+  E: Physical SU(2)_weak = fiber; isomorphic to Clifford su(2)
+==============================================================
+  [PASS]   [Y, Jf1] = 0  (fiber SU(2) commutes with Y)  (max err 0.0e+00)
+  [PASS]   [Y, Jf2] = 0  (fiber SU(2) commutes with Y)  (max err 0.0e+00)
+  [PASS]   [Y, Jf3] = 0  (fiber SU(2) commutes with Y)  (max err 0.0e+00)
+  [PASS]   [Jf1,Jf2] = i Jf3  (fiber su(2) algebra)
+  [PASS]   Casimir Jf^2 = (3/4)I8
+  [PASS]   Clifford SU(2) ~ Fiber SU(2): same abstract su(2) algebra  (same Casimir 3/4, same structure constants)
+  [PASS]   Clifford J_i and fiber Jf_i are DIFFERENT 8x8 matrices  (but both isomorphic to su(2))
+  [PASS] Section E
+
+==============================================================
+  F: Hypercharge Y: eigenvalues +1/3 (6D quark) and -1 (2D lepton)
+==============================================================
+  [PASS]   P_symm is a projector
+  [PASS]   P_antisymm is a projector
+  [PASS]   P_symm + P_antisymm = I8
+  [PASS]   rank(P_symm) = 6  (3D base sym x 2D fiber)  (got 6)
+  [PASS]   rank(P_antisymm) = 2  (1D base antisym x 2D fiber)  (got 2)
+  [PASS]   Tr(Y) = 0  (Tr(Y) = -2.22e-16)
+  [PASS]   Y eigenvalue +1/3 has multiplicity 6  (got 6)
+  [PASS]   Y eigenvalue -1 has multiplicity 2  (got 2)
+  [PASS]   SM interpretation: Y=+1/3 matches quark L doublet (3c x 2 iso = 6D)  (3 color x 2 weak-doublet states)
+  [PASS]   SM interpretation: Y=-1 matches lepton L doublet (1 x 2 iso = 2D)  (1 antisym-base x 2 weak-doublet states)
+  [PASS] Section F
+
+==============================================================
+  G: S3 action on taste cube: C^8 = 4A1+2E; hw=1 triplet = 3 generations
+==============================================================
+  [PASS]   T12^2 = I8
+  [PASS]   T23^2 = I8
+  [PASS]   Z3^3 = I8
+  [PASS]   (T12*T23)^3 = I8
+  [PASS]   Z3: (1,0,0) -> (0,1,0)
+  [PASS]   Z3: (0,1,0) -> (0,0,1)
+  [PASS]   Z3: (0,0,1) -> (1,0,0)
+  [PASS]   chi(e)=8
+  [PASS]   chi(2-cycle)=4  (got 4.0)
+  [PASS]   chi(3-cycle)=2  (got 2.0)
+  [PASS]   C^8 = 4*A1 + 0*A2 + 2*E  (n_A1=4.0, n_A2=0.0, n_E=2.0)
+  [PASS]   hw=1 triplet: chi(2c)=1, chi(3c)=0  (  -> A1+E (permutation rep of 3-orbit))
+  [PASS]   hw=1 Y spectrum: {-1, +1/3, +1/3}  (quark-like x2, lepton-like x1)  (got [-1.      0.3333  0.3333])
+  [PASS]   hw=1 T3 eigenvalues: {-1/2, +1/2, +1/2}  (one down-type, two up-type)  (got [-0.5  0.5  0.5])
+  [PASS] Section G
+
+==============================================================
+  H: SU(3)_c on symmetric base: T_F=1/2, [SU(3),SU(2)_weak]=0
+==============================================================
+  [PASS]   U_base is unitary
+  [PASS]   Tr[T^a T^b] = (1/2)*delta^ab  (T_F = 1/2)  (Gell-Mann generators on 3D sym subspace)
+  [PASS]   SU(3) Jacobi identity  (max err 0.0e+00)
+  [PASS]   [T^a,T^b] = i f^{abc} T^c holds in 8D embedding  (max err 1.1e-16)
+  [PASS]   [SU(3)_c, SU(2)_weak] = 0  (tensor product structure)  (max err 0.0e+00)
+  [PASS]   [SU(3)_c, Y] = 0  (max err 1.4e-17)
+  [PASS] Section H
+
+==============================================================
+  I: N_c=3 from dim(Z^3); R_conn=(N_c^2-1)/N_c^2=8/9; sqrt(9/8)
+==============================================================
+  [PASS]   N_c = 3 = number of spatial axes in Z^3 = dim(Z^3 spatial)
+  [PASS]   hw=1 triplet has |hw1| = N_c = 3
+  [PASS]   SU(3) adjoint dim = N_c^2-1 = 8
+  [PASS]   R_conn = (N_c^2-1)/N_c^2 = 0.888889 = 8/9
+  [PASS]   Fierz: sum_a T^a_ij T^a_kl = delta/2 - delta/(2N_c)  (max err 5.6e-17)
+  [PASS]   R_conn from Fierz = 0.888889 = (N_c^2-1)/N_c^2
+  [PASS]   EW correction sqrt(1/R_conn) = sqrt(9/8) = 1.060660
+  [PASS] Section I
+
+==============================================================
+  J: L-sector determinant support from Kramers degeneracy of Cl+(3) on chiral sector
+==============================================================
+  [PASS]   L-sector indices (even parity): [0, 3, 5, 6]
+  [PASS]   rank(P_L) = 4
+  [PASS]   [J1_L, J2_L] = i J3_L  (su(2) closes on L-sector)
+  [PASS]   Casimir on L: J_L^2 = (3/4)I4
+  [PASS]   T^2 = J2_L * conj(J2_L) = -(1/4)I4  (Kramers T^2 < 0)  (T^2 eigenvalues: [-0.25 -0.25 -0.25 -0.25])
+  [PASS]   Trial 0: eigenvalues in degenerate pairs  (evals=[-0.3337 -0.3337  1.3271  1.3271])
+  [PASS]   Trial 0: det(H_L) = 0.196102 >= 0  (det = 0.196102)
+  [PASS]   Trial 1: eigenvalues in degenerate pairs  (evals=[-1.1198 -1.1198  0.6515  0.6515])
+  [PASS]   Trial 1: det(H_L) = 0.532308 >= 0  (det = 0.532308)
+  [PASS]   Trial 2: eigenvalues in degenerate pairs  (evals=[-0.8955 -0.8955 -0.0434 -0.0434])
+  [PASS]   Trial 2: det(H_L) = 0.001513 >= 0  (det = 0.001513)
+  [PASS] Section J
+
+==============================================================
+  SUMMARY  [PASS=95, FAIL=0]
+==============================================================
+
+Cl(3)/Z^3 -> SM Embedding Theorem — algebraic checks complete.
+
+  A. Cl(3) generators {Gamma_i} on 8D taste space: anticommutation exact.
+  B. Cl+(3) ≅ H: bivectors square to -I, quaternion products correct, su(2) closes.
+     dim(Cl+(3)) = 4 = d+1.
+  C. Pseudoscalar omega: central in Cl(3,0), omega^2=-I, generates U(1)_Y.
+     dim(Cl+(3)+{omega}) = 5 = d+2.
+  D. g2^2 = 1/4 = 1/(d+1) and g_Y^2 = 1/5 = 1/(d+2) from sub-algebra dimensions.
+     sin^2(theta_W)(bare) = 4/9.
+  E. Physical SU(2)_weak = fiber ops {I4 x sigma_i/2} commute with Y.
+     Isomorphic to Cl+(3) bivector SU(2) as abstract Lie algebra.
+  F. Hypercharge Y: +1/3 on 6D quark block, -1 on 2D lepton block. Traceless.
+  G. S3 on C^8 = 4A1+2E; hw=1 triplet = 3 generation candidates, Z3-related.
+  H. SU(3)_c on symmetric base: T_F=1/2; [SU(3),SU(2)]=0; [SU(3),Y]=0.
+  I. N_c=3 from Z^3; R_conn=8/9; sqrt(9/8) EW correction; Fierz verified.
+  J. L-sector determinant support: det(H_L)>=0 forced by Kramers degeneracy T^2<0 on L-sector.
+
+Support targets sharpened by this packet:
+  1. g2^2=1/(d+1): algebraic — dim(Cl+(3)) = d+1, not direction counting.
+  2. g_Y^2=1/(d+2): algebraic — omega extends Cl+(3) by exactly 1 central element.
+  3. R_conn=8/9: N_c=3 forced by Z^3 + SU(3) Fierz identity.
+  4. L-sector determinant support: Kramers degeneracy from Cl+(3) quaternionic structure on chiral sector.
+
+
+----- stderr -----
+

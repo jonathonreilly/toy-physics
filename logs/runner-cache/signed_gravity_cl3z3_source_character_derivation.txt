@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_cl3z3_source_character_derivation.py
+runner_sha256: afe3db58ec868f6849eb63380c2fff44f93e382218aa99c4dcafb8f30b4bc096
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+================================================================================================================
+SIGNED GRAVITY CL(3)/Z^3 SOURCE-CHARACTER DERIVATION AUDIT
+  original-stack determinant-orientation grammar; not a physical signed-gravity claim
+================================================================================================================
+
+DERIVATION TARGET
+  Cl(3)/Z^3 + finite Grassmann/staggered-Dirac dynamics force a local
+  determinant line for compact source regions.  Its magnitude gives the
+  retained log|det| scalar norm; its real APS boundary orientation gives
+  the unique local source character chi_eta.
+
+[PASS] Cl(3) supplies an orientation-reversing normal operation  (omega=iI=True, reflected_omega=-omega=True)
+[PASS] finite Grassmann determinant line is functorial under disjoint sewing  (det_mult=3.6e-16, log_add=8.9e-16, orient_product=+1)
+[PASS] APS boundary determinant orientation gives sign(eta) with null/refinement controls  (eta(+,-,0)=(+1,-1,+0), refined_eta=[1, 2, 3, 5], refined_chi=[1, 1, 1, 1])
+[PASS] local source derivative splits positive magnitude from local orientation character  (mag=(+5.03,+5.03), mixed=0.0e+00, signed_sum=+0.0e+00, global_plus=-5.03)
+[PASS] source-character grammar has unique chi_eta solution  (solutions=1)
+[PASS] dependency audit uses original-stack structures and no free sign  (Cl(3)_orientation_reversal=True, Z3_local_compact_regions=True, finite_Grassmann_Gaussian=True, staggered_Dirac_boundary_functor=True, determinant_factorization=True, logabsdet_positive_magnitude=True, APS_gapped_boundary_eta=True, extra_free_sign=False, negative_inertial_mass=False, physical_signed_gravity_claim=False)
+
+INTERPRETATION
+  The finite derivation closes the previous grammar premise at the
+  source-character level: compact source regions inherit a determinant
+  line from the Cl(3)/Z^3 Grassmann operator; log|det| gives the positive
+  scalar magnitude, and Or(Det_APS) gives the local real sign character.
+  This still stops before physical signed-gravity phenomenology and before
+  retained tensor-source transport.
+
+SUMMARY: PASS=6 FAIL=0
+FINAL_TAG: CL3Z3_DETERMINANT_SOURCE_CHARACTER_DERIVED_FINITE
+
+----- stderr -----
+

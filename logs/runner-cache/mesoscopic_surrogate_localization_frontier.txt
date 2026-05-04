@@ -1,0 +1,40 @@
+===== runner cache v1 =====
+runner: scripts/mesoscopic_surrogate_localization_frontier.py
+runner_sha256: cca8094c4dcef67192a97b71fe4d9616284121000d1a7c136b15c3b20c8c9b1e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 13.68
+status: ok
+----- stdout -----
+====================================================================================================
+MESOSCOPIC SURROGATE LOCALIZATION FRONTIER
+  Retained 3D ordered-lattice valley-linear family
+  h=0.5, W=8, segment_L=6, source_z=3.0, strength=5e-05
+  Goal: map the tradeoff between source compactness and two-stage
+        sourced-response stability
+====================================================================================================
+
+ topN   cap1   cap2      delta1      delta2  ratio shift   score   w2/w1
+    9  0.188  0.189 +0.00003623 +0.00003570  0.985     0  1.0000  0.9963
+   16  0.367  0.375 +0.00002603 +0.00001677  0.644     0  0.9990  0.9420
+   25  0.513  0.563 +0.00003457 +0.00002078  0.601     0  0.9983  0.9072
+   36  0.576  0.710 +0.00004678 +0.00001811  0.387     0  0.9903  0.8147
+   49  0.559  0.777 +0.00006542 +0.00002411  0.369     0  0.9800  0.7510
+   64  0.600  0.770 +0.00007983 +0.00004461  0.559     0  0.9796  0.8089
+   81  0.629  0.668 +0.00009236 +0.00007001  0.758     0  0.9867  0.8792
+  100  0.644  0.693 +0.00010317 +0.00008932  0.866     0  0.9953  0.8988
+  121  0.673  0.790 +0.00010565 +0.00008912  0.843     0  0.9905  0.8440
+  144  0.662  0.787 +0.00011176 +0.00009847  0.881     0  0.9892  0.8595
+  169  0.675  0.807 +0.00011161 +0.00010340  0.926     0  0.9908  0.8685
+  196  0.691  0.825 +0.00011066 +0.00010015  0.905     0  0.9901  0.8756
+  225  0.725  0.849 +0.00010952 +0.00010142  0.926     0  0.9844  0.9034
+  256  0.753  0.847 +0.00010668 +0.00010609  0.994     0  0.9901  0.9250
+
+SAFE READ
+  - There need not be a single collapse threshold.
+  - Small sources can remain self-similar across two stages while becoming weak.
+  - Larger sources can carry stronger response while remaining mesoscopic.
+  - This probe is about the localization/strength frontier, not persistent mass.
+
+----- stderr -----
+

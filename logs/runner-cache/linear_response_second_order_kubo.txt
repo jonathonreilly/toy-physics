@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/linear_response_second_order_kubo.py
+runner_sha256: 6fa481bbc3ca85b62a391cf4629d7eb3f7e0dbe961bad47324686e6096803417
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

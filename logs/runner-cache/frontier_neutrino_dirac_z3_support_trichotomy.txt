@@ -1,0 +1,106 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_dirac_z3_support_trichotomy.py
+runner_sha256: 7cc82578c80608ca8e4e4115f4237bcbc8b428e0aa6d827191475ed7e12935ad
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO DIRAC YUKAWA: Z_3 SUPPORT TRICHOTOMY
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - One-generation matter closure
+  - Three-generation matter structure
+  - Neutrino mass reduction to Dirac lane
+  - single admitted Higgs doublet with definite Z_3 charge q_H
+
+Question:
+  What does the retained Z_3 generation structure force for the
+  support of Y_nu once a single Higgs doublet with definite q_H is admitted?
+
+========================================================================================
+PART 1: RETAINED LEFT/RIGHT GENERATION CHARGES ARE CONJUGATE
+========================================================================================
+  [PASS] Left-handed generation charges are 0,+1,-1 mod 3  (q_L=[0, 1, 2])
+  [PASS] Right-handed generation charges are the conjugate pattern  (q_R=[0, 2, 1])
+  [PASS] Same-generation left/right charges cancel mod 3  ((q_L+q_R) mod 3=[0, 0, 0])
+
+  The retained Dirac Yukawa lane therefore depends on one additional
+  discrete datum beyond the generation charges: the Higgs Z_3 charge q_H.
+
+========================================================================================
+PART 2: A FIXED HIGGS Z_3 CHARGE SELECTS ONE OF THREE SUPPORT PATTERNS
+========================================================================================
+  [PASS] q_H=0: each row has exactly one allowed target  (row sums=[1, 1, 1])
+  [PASS] q_H=0: each column has exactly one allowed source  (col sums=[1, 1, 1])
+  [PASS] q_H=0: exact support matches the canonical permutation pattern  (support=
+[[1 0 0]
+ [0 1 0]
+ [0 0 1]])
+  [PASS] q_H=1: each row has exactly one allowed target  (row sums=[1, 1, 1])
+  [PASS] q_H=1: each column has exactly one allowed source  (col sums=[1, 1, 1])
+  [PASS] q_H=1: exact support matches the canonical permutation pattern  (support=
+[[0 1 0]
+ [0 0 1]
+ [1 0 0]])
+  [PASS] q_H=2: each row has exactly one allowed target  (row sums=[1, 1, 1])
+  [PASS] q_H=2: each column has exactly one allowed source  (col sums=[1, 1, 1])
+  [PASS] q_H=2: exact support matches the canonical permutation pattern  (support=
+[[0 0 1]
+ [1 0 0]
+ [0 1 0]])
+  [PASS] The three Higgs-charge support patterns are pairwise disjoint  (overlaps={(0, 1): 0, (0, 2): 0, (1, 2): 0})
+  [PASS] Their union is the full 3x3 support grid  (union=
+[[1 1 1]
+ [1 1 1]
+ [1 1 1]])
+
+  So a single Higgs doublet with fixed q_H does not allow an arbitrary
+  Y_nu support. It chooses exactly one of three permutation patterns.
+
+========================================================================================
+PART 3: EACH FIXED SUPPORT PATTERN CARRIES EXACTLY THREE COEFFICIENTS
+========================================================================================
+  [PASS] q_H=0: support carries exactly 3 free coefficient slots  (nonzero entries=3)
+  [PASS] q_H=0: a generic allowed texture is full rank  (rank=3)
+  [PASS] q_H=0: physical masses depend only on the 3 allowed coefficients  (svals=[0.03 0.07 0.11], |coeffs|=[0.03 0.07 0.11])
+  [PASS] q_H=1: support carries exactly 3 free coefficient slots  (nonzero entries=3)
+  [PASS] q_H=1: a generic allowed texture is full rank  (rank=3)
+  [PASS] q_H=1: physical masses depend only on the 3 allowed coefficients  (svals=[0.04 0.09 0.12], |coeffs|=[0.04 0.09 0.12])
+  [PASS] q_H=2: support carries exactly 3 free coefficient slots  (nonzero entries=3)
+  [PASS] q_H=2: a generic allowed texture is full rank  (rank=3)
+  [PASS] q_H=2: physical masses depend only on the 3 allowed coefficients  (svals=[0.05 0.08 0.1 ], |coeffs|=[0.05 0.08 0.1 ])
+
+  So once q_H is fixed, the Dirac neutrino lane is no longer a 9-entry
+  generic texture problem. It is a 3-coefficient problem on one exact
+  permutation support pattern.
+
+========================================================================================
+PART 4: THE REMAINING UNKNOWN IS THE HIGGS Z_3 OFFSET PLUS 3 COEFFICIENTS
+========================================================================================
+  [PASS] A fixed Higgs Z_3 charge reduces support dimension from 9 to 3  (9 -> 3)
+  [PASS] The only discrete support ambiguity is q_H in Z_3  (choices=3)
+  [PASS] Current closure is therefore reduced below a generic Mat_3(C) search  (fix q_H, then derive 3 coefficients on the selected support)
+
+  The exact retained Y_nu lane is now sharper:
+    - not a generic 3 x 3 search,
+    - but a Higgs-Z_3-charge blocker plus 3 coefficient activations.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact retained-stack answer:
+    - q_H = 0   -> diagonal Y_nu support
+    - q_H = +1  -> forward cyclic support
+    - q_H = -1  -> backward cyclic support
+
+  So the remaining Dirac neutrino closure problem is not a generic
+  9-entry texture search. It is to determine the Higgs Z_3 charge
+  and the 3 coefficients on the selected support pattern.
+
+PASS=26  FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_selector_bank_nonrealization.py
+runner_sha256: b19b2bd7296a118762a1f756a13523e58d36020ef2f70e285e898993fa748b2b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+PMNS SELECTOR BANK: CURRENT NONREALIZATION
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - Graph-first weak-axis selector derivation
+  - Hierarchy bosonic-bilinear selector
+  - EWSB quartic selector inside the hierarchy/CKM lane
+  - Neutrino Higgs Z_3 underdetermination
+  - PMNS minimal-branch nonselection
+
+Question:
+  Do the exact selector tools already in the current bank realize the
+  missing PMNS branch selector?
+
+========================================================================================
+PART 1: THE CURRENT BANK DOES CONTAIN EXACT SELECTOR TOOLS
+========================================================================================
+  [PASS] Atlas carries the graph-first weak-axis selector tool
+  [PASS] The graph-first selector acts on the cube-shift source H(phi)=sum phi_i S_i
+  [PASS] The bosonic-bilinear selector acts on APBC temporal-orbit support
+  [PASS] The CKM/hierarchy lane carries an exact quartic selector on scalar-axis space
+
+========================================================================================
+PART 2: THE PMNS SELECTOR QUESTION LIVES ON A DIFFERENT EXACT DATA SET
+========================================================================================
+  [PASS] The Higgs-side theorem treats q_H in {0,+1,-1} as a definite-Z_3 class (gauge-redundant for PMNS)
+  [PASS] The PMNS boundary theorem still isolates but does not select the minimal branches
+  [PASS] The current atlas has no retained Higgs-multiplicity or shared-Higgs selector row
+
+========================================================================================
+PART 3: EXISTING SELECTORS DO NOT REALIZE THE PMNS BRANCH BIT
+========================================================================================
+  [PASS] The graph-first selector note does not supply a lepton Higgs-Z_3 bridge
+  [PASS] The bosonic-bilinear selector note does not supply a lepton branch-selection bridge
+  [PASS] The quartic selector statement in the CKM/hierarchy lane does not upgrade to a retained PMNS selector theorem
+
+  So the current exact selector bank has real selector tools, but they
+  act on graph-axis, temporal-orbit, and scalar-axis domains rather
+  than on the lepton Higgs-Z_3 / PMNS branch datum.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-bank answer:
+    - the current bank does contain exact selector tools
+    - but none of them realizes the missing PMNS branch selector
+    - a genuinely new bridge selector is still required to choose the
+      minimal neutrino-side or charged-lepton-side closure branch
+
+  So the remaining selector gap is not hidden elsewhere in the current
+  atlas bank under another exact selector name.
+
+PASS=10  FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/persistent_object_readout_taper_probe.py
+runner_sha256: 9205d5e7d5b627212d41d79269341e22c4dfb6d97ebd219000071dbfb61d60a5
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_matter_radiation_equality_structural_identity.py
+runner_sha256: 58011dd6902b9741c9e22ca52fa7b7bba103d715c7b1e2e859907eb9b89913d6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+================================================================================
+Matter-radiation equality structural identity audit
+================================================================================
+
+--------------------------------------------------------------------------------
+Matter-radiation equality identity
+--------------------------------------------------------------------------------
+  [PASS] matter scales as a^-3
+  [PASS] radiation scales as a^-4
+  a_mr       = 2.920634920634921e-04
+  1 + z_mr   = 3423.913043478261
+  z_mr       = 3422.913043
+  [PASS] a_mr = Omega_r0/Omega_m0 solves rho_m = rho_r
+  [PASS] 1 + z_mr = Omega_m0/Omega_r0
+
+--------------------------------------------------------------------------------
+Independence checks
+--------------------------------------------------------------------------------
+  [PASS] common E(a)^2 factor cancels in Omega_m(a)/Omega_r(a)
+  [PASS] matter-radiation ratio is Lambda-independent
+  [PASS] z_mr readout is H0-independent once density fractions are supplied
+
+--------------------------------------------------------------------------------
+Numerical readout after supplying density fractions
+--------------------------------------------------------------------------------
+  z_mr framework readout = 3422.913
+  z_mr CMB comparator    = 3387 +/- 21
+  fractional deviation   = +1.060%
+  sigma deviation        = 1.710
+  [PASS] z_mr readout rounds to 3423
+  [PASS] z_mr comparator agreement is within 2 percent
+  [PASS] z_mr comparator agreement is within 2 sigma
+
+--------------------------------------------------------------------------------
+Radiation-density and generation-count consistency
+--------------------------------------------------------------------------------
+  Omega_r0 from T_CMB, h, N_eff=3.046 = 9.20219674e-05
+  used Omega_r0                         = 9.20000000e-05
+  z_mr from computed Omega_r0           = 3422.096
+  illustrative N_eff=4 z_mr             = 3033.478
+  [PASS] thermal-history Omega_r0 matches the used value within 1 percent
+  [PASS] N_eff=3.046 readout remains close to the direct Omega_r0 readout
+  [PASS] changing to N_eff=4 shifts z_mr by more than 8 percent
+
+--------------------------------------------------------------------------------
+Cosmic-history ordering
+--------------------------------------------------------------------------------
+  z_mr      = 3422.913
+  z_rec     = 1090.000
+  z_star    = 0.632313
+  z_mLambda = 0.295567
+  [PASS] z_mr > z_rec > z_star > z_mLambda > 0
+
+================================================================================
+TOTAL: PASS=14, FAIL=0
+================================================================================
+
+----- stderr -----
+

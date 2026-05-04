@@ -1,0 +1,98 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_p3_msbar_to_pole_k3.py
+runner_sha256: 2ad131793fbeab97aee1565d26370f8b1c7d1791757cf0bc3438876d1fb0e30b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.41
+status: ok
+----- stdout -----
+========================================================================
+P3 MSbar-to-pole K_3 color-tensor retention -- runner
+Date: 2026-04-17
+Authority: YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md
+========================================================================
+
+========================================================================
+PART A: Retained ten-tensor color decomposition at SU(3)
+========================================================================
+
+  Tensor                      | Exact value at SU(3)
+  --------------------------------------------------------------
+  C_F^3                       | 64/27  = 2.3703703704
+  C_F^2 C_A                   | 16/3  = 5.3333333333
+  C_F C_A^2                   | 12  = 12.0000000000
+  C_F^2 T_F                   | 8/9  = 0.8888888889
+  C_F C_A T_F                 | 2  = 2.0000000000
+  C_F T_F^2                   | 1/3  = 0.3333333333
+  C_F T_F^2 (lh)              | 1/3  = 0.3333333333
+  C_F^2 T_F (hh)              | 8/9  = 0.8888888889
+  C_F C_A T_F (hh)            | 2  = 2.0000000000
+  C_F T_F^2 (hh)              | 1/3  = 0.3333333333
+  [PASS] C_F^3 = 64/27 exact at SU(3)  (value = 64/27)
+  [PASS] C_F^2 C_A = 16/3 exact at SU(3)  (value = 16/3)
+  [PASS] C_F C_A^2 = 12 exact at SU(3)  (value = 12)
+  [PASS] C_F^2 T_F = 8/9 exact at SU(3)  (value = 8/9)
+  [PASS] C_F C_A T_F = 2 exact at SU(3)  (value = 2)
+  [PASS] C_F T_F^2 = 1/3 exact at SU(3)  (value = 1/3)
+  [PASS] Three pure-gauge tensors are linearly independent over Q[C_F, C_A]
+
+========================================================================
+PART B: Retained light-fermion count n_l at the top-mass scale
+========================================================================
+
+  n_l (at mu = m_t)               = 5
+  n_h (heavy, decoupled at m_t)   = 1
+  [PASS] n_l = 5 at the top-quark MSbar scale
+  [PASS] n_h = 1 at the top-quark MSbar scale
+  [PASS] Light-flavor count is positive and bounded by SM content
+
+========================================================================
+PART C: 10-tensor decomposition accommodates literature K_3(n_l=5)
+========================================================================
+
+  Coefficient vector c_i at n_l = 5:
+    K_FFF (C_F^3)             = 64/27  = 2.3703703704
+    K_FFA (C_F^2 C_A)         = 16/3  = 5.3333333333
+    K_FAA (C_F C_A^2)         = 12  = 12.0000000000
+    K_FFl (C_F^2 T_F n_l)     = 40/9  = 4.4444444444
+    K_FAl (C_F C_A T_F n_l)   = 10  = 10.0000000000
+    K_Fll (C_F T_F^2 n_l^2)   = 25/3  = 8.3333333333
+    K_Flh (C_F T_F^2 n_l)     = 5/3  = 1.6666666667
+    K_FFh (C_F^2 T_F)         = 8/9  = 0.8888888889
+    K_FAh (C_F C_A T_F)       = 2  = 2.0000000000
+    K_Fhh (C_F T_F^2)         = 1/3  = 0.3333333333
+  [PASS] All ten color-tensor coefficients at n_l = 5 are non-zero rationals
+  [PASS] K_Fll coefficient C_F T_F^2 n_l^2 evaluates to 25/3 at n_l = 5  (value = 25/3)
+  [PASS] K_Flh coefficient C_F T_F^2 n_l evaluates to 5/3 at n_l = 5  (value = 5/3)
+  [PASS] Structural witness: 10-tensor decomposition can produce K_3(5) = 80.405  (witness sum = 80.405000, target = 80.405000)
+
+========================================================================
+PART D: Cumulative structural retention through third order
+========================================================================
+
+  alpha_s(m_t)             = 0.107900
+  alpha_s/pi               = 0.034346
+  delta_1 = K_1 (a/pi)     = 0.045794
+  delta_2 = K_2 (a/pi)^2   = 0.012906
+  delta_3 = K_3 (a/pi)^3   = 0.003258
+  retained sum (1+2+3)     = 0.061957
+  observed ratio r = d3/d2 = 0.252416
+  next-term bound d3 * r   = 8.222715e-04
+  retained fraction        = 0.986902
+  [PASS] delta_1 dominates: delta_1 > delta_2 > delta_3 (series convergence)
+  [PASS] Ratio test satisfied at three loops: delta_3 / delta_2 < 1  (r = 0.2524)
+  [PASS] Cumulative structural retention fraction >= 0.98 through K_3 (next-term bound)  (fraction = 0.986902)
+  [PASS] Cumulative retained numerical shift matches expected ~0.062  (retained = 0.061957)
+
+========================================================================
+SUMMARY: PASS=18  FAIL=0
+========================================================================
+
+Cumulative structural retention fraction through K_3: 0.986902
+Single-next-term bound on delta_4: 8.222715e-04
+(K_1 + K_2 color-tensor + K_3 color-tensor all retained;
+ per-integral primitives K_FFF, ..., K_Fhh remain outside
+ the retention scope by design.)
+
+----- stderr -----
+

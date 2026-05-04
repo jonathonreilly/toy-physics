@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/frontier_charged_lepton_radiative_tau_selector_firewall.py
+runner_sha256: fe6105f9724c6122391aa3d603dd81e7b94f824fb80869d54b686b7954752362
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.61
+status: ok
+----- stdout -----
+Source surface
+------------------------------------------------------------------------
+PASS: scripts/frontier_charged_lepton_radiative_yukawa_theorem.py exists
+PASS: scripts/frontier_charged_lepton_yukawa_diagrammatic_enumeration.py exists
+PASS: scripts/frontier_charged_lepton_yukawa_bz_quadrature_explicit.py exists
+PASS: docs/CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md exists
+PASS: original radiative runner frames itself as support, not closure
+PASS: radiative runner uses PDG tau as observational benchmark
+PASS: diagrammatic runner still cites an external loop integral surface
+PASS: BZ runner states the support lane does not close Koide bridges
+
+A. Generation-blind radiative Casimir
+------------------------------------------------------------------------
+PASS: charged-lepton Casimir is exactly one
+PASS: same Casimir is assigned to e, mu, tau -- {'e': Fraction(1, 1), 'mu': Fraction(1, 1), 'tau': Fraction(1, 1)}
+PASS: generation relabeling leaves the radiative Casimir vector invariant -- C vector = (Fraction(1, 1), Fraction(1, 1), Fraction(1, 1))
+PASS: radiative y value is identical for all charged-lepton generations -- {'e': 0.007215117140798251, 'mu': 0.007215117140798251, 'tau': 0.007215117140798251}
+
+B. Universal application is not the charged-lepton hierarchy
+------------------------------------------------------------------------
+Universal radiative mass comparator: 1776.959384 MeV
+Comparator ratios predicted/PDG: {'e': 3477.4227691254773, 'mu': 16.817969946255808, 'tau': 1.0000559322226912}
+PASS: universal radiative mass is close only to tau comparator -- observed masses are comparators, not proof inputs
+PASS: same radiative rule cannot also fit electron and muon masses
+
+C. Selector firewall
+------------------------------------------------------------------------
+PASS: PDG masses and heaviest-generation labels are not proof-input keys -- proof inputs = ['ALPHA_LM', 'charged_lepton_electroweak_charges', 'generation_blind_casimir', 'one_loop_factor_4pi', 'retained_v_EW']
+PASS: no tau selector is present in the generation-blind Casimir data
+PASS: direct Ward no-go already requires a new generation/source primitive
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=17, FAIL=0
+VERDICT: radiative alpha_LM/(4pi) remains support, not a
+standalone retained tau selector.  It can supply a candidate
+charged-lepton scale only after a separate generation/ratio
+primitive identifies the tau eigenvalue without PDG input.
+
+----- stderr -----
+

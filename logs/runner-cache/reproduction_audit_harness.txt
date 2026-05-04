@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/reproduction_audit_harness.py
+runner_sha256: b5e9d0f0a963429b0e9e3fff884ece74ed82ee8a2f0b0eee3018a0f30b38394e
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 57.25
+status: nonzero_exit
+----- stdout -----
+========================================================================================
+REPRODUCTION INVENTORY
+  canonical harnesses vs exploratory drivers
+========================================================================================
+Canonical entry points:
+  - scripts/canonical_regression_gate.py
+  - scripts/reproduction_audit_harness.py
+  - docs/CANONICAL_HARNESS_INDEX.md
+  - docs/START_HERE.md
+  - docs/REVIEW_HARDENING_BACKLOG.md
+Exploratory drivers kept separate:
+  - scripts/cross_family_robustness.py
+  - scripts/lattice_4d_kernel_test.py
+  - scripts/transfer_norm_and_born.py
+  - scripts/valley_linear_same_harness_compare.py
+  - scripts/evolving_network_prototype.py
+  - scripts/evolving_network_prototype_v2.py
+  - scripts/self_regulating_gap_3d.py
+
+========================================================================================
+CANONICAL GATE
+  skipped by default; use --include-gate for the full retained-frontier replay
+========================================================================================
+
+========================================================================================
+CROSS-FAMILY RETAINED COMPARISON
+  exact 2D mirror vs structured chokepoint bridge
+========================================================================================
+
+----- stderr -----
+Traceback (most recent call last):
+  File "/private/tmp/gate-fix-worktree/scripts/reproduction_audit_harness.py", line 232, in <module>
+    main()
+  File "/private/tmp/gate-fix-worktree/scripts/reproduction_audit_harness.py", line 221, in main
+    run_cross_family_retained_comparison()
+  File "/private/tmp/gate-fix-worktree/scripts/reproduction_audit_harness.py", line 126, in run_cross_family_retained_comparison
+    require(mirror_row is not None, "mirror 2D retained row changed")
+  File "/private/tmp/gate-fix-worktree/scripts/reproduction_audit_harness.py", line 84, in require
+    raise AuditFailure(message)
+AuditFailure: mirror 2D retained row changed
+

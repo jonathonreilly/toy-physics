@@ -1,0 +1,69 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_readout_factorization_theorem.py
+runner_sha256: a119871505d5f268fa4e9081b9ccadea4e63960ffd6cc479c740f0f8795d515c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.38
+status: ok
+----- stdout -----
+
+========================================================================================
+A. Exact first-live second-order readout map
+========================================================================================
+[PASS] A.1 the four single-slot second-order images are e1, e2, e3, and 0
+       The unreachable T_2(0,1,1) slot drops out identically.
+[PASS] A.2 the first-live readout map has exact matrix L = [[1,0,0,0],[0,1,0,0],[0,0,1,0]]
+       L = Matrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0]])
+[PASS] A.3 the map has rank 3 and image equal to the full diagonal species space
+       rank(L) = 3
+[PASS] A.4 the kernel is one-dimensional and carried entirely by the unreachable slot
+       ker(L) basis = [Matrix([
+       [0],
+       [0],
+       [0],
+       [1]])]
+
+========================================================================================
+B. Exact quotient/fiber statement
+========================================================================================
+[PASS] B.1 fixing the returned operator determines u,v,w uniquely and leaves only z free
+       general fiber = {u: d1, v: d2, w: d3}
+[PASS] B.2 two weight packages have the same returned operator iff they differ by an unreachable-slot shift
+       difference = Matrix([[0], [0], [0], [z1 - z2]])
+[PASS] B.3 the first-live readout realizes the exact quotient R^4 / span(e_unreach) ≅ Diag_3
+       All first-live species data are classified exactly by diag(u,v,w).
+
+========================================================================================
+C. C3 covariance and selector factorization
+========================================================================================
+[PASS] C.1 the readout map intertwines the species 3-cycle with the reachable-slot 3-cycle
+       P_species L = Matrix([[0, 0, 1, 0], [1, 0, 0, 0], [0, 1, 0, 0]])
+[PASS] C.2 every C3-covariant quadratic scalar on the first-live sector is already a scalar on diag(u,v,w)
+       invariant quadratic family = Matrix([[q33, q23, q23], [q23, q33, q23], [q23, q23, q33]])
+[PASS] C.3 every admissible first-live bosonic species-resolving selector factors uniquely through the returned operator
+       Within the retained Γ_1/T_1 grammar, there is no extra first-live species datum beyond R_{Γ1}(W).
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 10/10
+  [PASS] A.1 the four single-slot second-order images are e1, e2, e3, and 0
+  [PASS] A.2 the first-live readout map has exact matrix L = [[1,0,0,0],[0,1,0,0],[0,0,1,0]]
+  [PASS] A.3 the map has rank 3 and image equal to the full diagonal species space
+  [PASS] A.4 the kernel is one-dimensional and carried entirely by the unreachable slot
+  [PASS] B.1 fixing the returned operator determines u,v,w uniquely and leaves only z free
+  [PASS] B.2 two weight packages have the same returned operator iff they differ by an unreachable-slot shift
+  [PASS] B.3 the first-live readout realizes the exact quotient R^4 / span(e_unreach) ≅ Diag_3
+  [PASS] C.1 the readout map intertwines the species 3-cycle with the reachable-slot 3-cycle
+  [PASS] C.2 every C3-covariant quadratic scalar on the first-live sector is already a scalar on diag(u,v,w)
+  [PASS] C.3 every admissible first-live bosonic species-resolving selector factors uniquely through the returned operator
+
+VERDICT: on the retained Γ_1 / T_1 grammar, the first-live second-order
+readout is the exact quotient of intermediate weights by the unreachable
+slot, with image equal to diag(u,v,w). So every admissible first-live
+bosonic selector factors uniquely through the returned operator.
+
+This is science-only and does not modify the repo's authority surfaces.
+
+----- stderr -----
+

@@ -1,0 +1,45 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_2026_04_20.py
+runner_sha256: 2f736f609f227752f8f30b0c22f28f2b6ba833ee6733ef0268ffbb7c2448f0cc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 25.97
+status: ok
+----- stdout -----
+======================================================================================================================
+GAUGE-VACUUM PLAQUETTE FIRST-SECTOR MINIMAL-BULK COMPLETION 3D+1 RHO1 LEAST-DISTORTION SELECTOR
+======================================================================================================================
+
+Question:
+  Once the exact retained-line solve has reduced to the rho1/rho2 orientation
+  doublet, is there a canonical branch-side selector that picks the right
+  member without reopening generic frame freedom?
+
+  selector key(solution[0])               = (0.791021791170, 0.000595330049)
+  selector key(solution[1])               = (1.411594311298, 0.715664033154)
+  chosen line index                           = 0
+  chosen live point                           = (0.657061000000, 0.933806000000, 0.715042000000)
+  chosen ordered-even split                   = (1.098655234032, -0.297110595087)
+
+  [PASS] The retained-line problem has reduced to a rho1/rho2 orientation doublet with two solved exact target-hitting lines  ((sep,max_err)=(1.143665,1.605e-15))
+  [PASS] Projection-Frobenius distortion to the rho1 reference slice has a unique strict minimizer on the solved set  (distances=[0.791022, 1.411594])
+  [PASS] Preferred boundary-anchor loss breaks the solved-set tie in the same direction  (anchor_losses=[0.000595, 0.715664])
+  [PASS] So the rho1-anchored least-distortion selector chooses one solved line uniquely from the full exact-solve set  (chosen_key=(0.791022,0.000595))
+  [PASS] The selected rho1-anchored least-distortion line reproduces the observed live DM target  (dist=1.605e-15)
+
+======================================================================================================================
+RESULT
+======================================================================================================================
+  New complement-line law:
+    - solve the retained `3d+1` complement-line problem on the selected
+      Wilson branch
+    - the full bounded exact-solve set is a rho1/rho2 orientation doublet
+    - choose the member with least Grassmann projection-distortion to the
+      rho1 reference slice, breaking any tie by smallest loss of the
+      preferred boundary anchor `(1,0)`
+    - this selects one canonical solved line and lands exactly on the live DM target
+
+PASS=5 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,38 @@
+===== runner cache v1 =====
+runner: scripts/frontier_scalar_trace_tensor_nogo.py
+runner_sha256: 5ce8dce53260e73bdaf23731c97381ef219d62319484ed0953224e0ce72427f9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 9.81
+status: ok
+----- stdout -----
+Scalar-trace-only tensor completion no-go
+========================================================================
+O_h scalar-action invariance:
+  scalar=-9.649741e-02, vector=-9.649741e-02, tensor=-9.649741e-02, mixed=-9.649741e-02
+Finite-rank scalar-action invariance:
+  scalar=-1.373264e+00, vector=-1.373264e+00, tensor=-1.373264e+00, mixed=-1.373264e+00
+Tensorial residual channels:
+  O_h vector |G_0i|=8.884e-05, tensor |G_ij^TF|=1.078e-03, mixed (|G_0i|,|G_ij^TF|)=(1.089e-04,1.078e-03)
+  finite-rank vector |G_0i|=8.099e-05, tensor |G_ij^TF|=5.550e-03, mixed (|G_0i|,|G_ij^TF|)=(8.585e-05,5.550e-03)
+[EXACT] PASS: the current microscopic scalar boundary functional is invariant across vector/tensor perturbations with the same scalar shell data on the exact O_h class
+    scalar=-9.649741e-02, vector=-9.649741e-02, tensor=-9.649741e-02, mixed=-9.649741e-02
+[EXACT] PASS: the same scalar-data invariance persists on the finite-rank class
+    scalar=-1.373264e+00, vector=-1.373264e+00, tensor=-1.373264e+00, mixed=-1.373264e+00
+[BOUNDED] PASS: vector perturbations with unchanged scalar boundary data activate independent G_0i residuals
+    O_h=8.884e-05, finite-rank=8.099e-05
+[BOUNDED] PASS: traceless shear perturbations with unchanged scalar boundary data activate independent traceless spatial residuals
+    O_h=1.078e-03, finite-rank=5.550e-03
+[BOUNDED] PASS: mixed vector+tensor perturbations simultaneously activate both tensor channels while leaving scalar boundary data unchanged
+    O_h=(|G_0i| 1.089e-04, |G_ij^TF| 1.078e-03), finite-rank=(|G_0i| 8.585e-05, |G_ij^TF| 5.550e-03)
+[EXACT] PASS: no completion principle that factors only through the current scalar shell trace / Schur data can determine the full `3+1` metric on this branch
+    same scalar data, different tensorial Einstein channels -> genuinely tensor-valued matching law required
+
+========================================================================
+SUMMARY
+========================================================================
+PASS=6 FAIL=0 TOTAL=6
+All checks passed.
+
+----- stderr -----
+

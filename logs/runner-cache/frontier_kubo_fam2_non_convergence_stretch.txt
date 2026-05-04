@@ -1,0 +1,52 @@
+===== runner cache v1 =====
+runner: scripts/frontier_kubo_fam2_non_convergence_stretch.py
+runner_sha256: a2b0e2a40860ac6b405582af0dfd98f596773551cc3f6f5b2abb5b509c477e71
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: stretch note structure
+----------------------------------------------------------------------------------------
+  [PASS (A)] contains: 'Kubo Fam2 Non-Convergence Stretch Attempt'  ()
+  [PASS (A)] contains: 'named obstruction packet'  ()
+  [PASS (A)] contains: 'A_min'  ()
+  [PASS (A)] contains: 'Forbidden imports'  ()
+  [PASS (A)] contains: 'Fam2'  ()
+  [PASS (A)] contains: 'Fam1'  ()
+  [PASS (A)] contains: 'Fam3'  ()
+  [PASS (A)] contains: '(O1)'  ()
+  [PASS (A)] contains: '(O2)'  ()
+  [PASS (A)] contains: '(O3)'  ()
+  [PASS (A)] contains: 'non-perturbative'  ()
+  [PASS (A)] contains: 'proposal_allowed: false'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: 3 obstruction routes documented
+----------------------------------------------------------------------------------------
+  [PASS (A)] obstruction: Microscopic dynamics depend on (drift, restore) no  ()
+  [PASS (A)] obstruction: Phase transition or critical regime  ()
+  [PASS (A)] obstruction: Discretization artifact  ()
+
+----------------------------------------------------------------------------------------
+Part 3: Fam parameters enumerated
+----------------------------------------------------------------------------------------
+  [PASS (A)] family parameter: drift=0.20, restore=0.70  ()
+  [PASS (A)] family parameter: drift=0.05, restore=0.30  ()
+  [PASS (A)] family parameter: drift=0.50, restore=0.90  ()
+
+----------------------------------------------------------------------------------------
+Part 4: explicit non-closure
+----------------------------------------------------------------------------------------
+  [PASS (A)] non-closure: Fam2 non-convergence itself  ()
+  [PASS (A)] non-closure: kubo_continuum_limit_families_note  ()
+  [PASS (A)] non-closure: honest tier  ()
+
+========================================================================================
+  TOTAL: PASS=21, FAIL=0
+========================================================================================
+
+----- stderr -----
+

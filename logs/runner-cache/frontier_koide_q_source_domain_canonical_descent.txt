@@ -1,0 +1,115 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_source_domain_canonical_descent.py
+runner_sha256: c686224417bef9b36533031380a8a553bc939bd07e1c2ce11d31e5d40c46fe28
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+Koide Q source-domain canonical descent support audit
+See docs/KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Authority and status boundary
+----------------------------------------------------------------------------------------
+  [PASS] authority/reference exists: docs/KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md
+  [PASS] authority/reference exists: docs/KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md
+  [PASS] authority/reference exists: docs/KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md
+  [PASS] authority/reference exists: docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md
+  [PASS] note states boundary: not retained Koide closure
+  [PASS] note states boundary: This note does not prove that physical law.
+  [PASS] note states boundary: Q_RETAINED_NATIVE_CLOSURE=FALSE
+  [PASS] note states boundary: DELTA_RETAINED_NATIVE_CLOSURE=FALSE
+  [PASS] note states boundary: FULL_DIMENSIONLESS_KOIDE_CLOSURE=FALSE
+  [PASS] note states boundary: RESIDUAL_Q=derive_physical_source_domain_uses_strict_onsite_descent_or_excludes_Z_as_undeformed_background
+  [PASS] note avoids overclaim: Q_RETAINED_NATIVE_CLOSURE=TRUE
+  [PASS] note avoids overclaim: FULL_DIMENSIONLESS_KOIDE_CLOSURE=TRUE
+  [PASS] note avoids overclaim: therefore retained native Koide closure
+  [PASS] note avoids overclaim: therefore proves charged-lepton Koide
+
+----------------------------------------------------------------------------------------
+C3 projector algebra
+----------------------------------------------------------------------------------------
+  [PASS] R^3 = I
+  [PASS] P_plus is idempotent
+  [PASS] P_perp is idempotent
+  [PASS] P_plus + P_perp = I
+  [PASS] P_plus P_perp = 0
+  [PASS] Z = P_plus - P_perp
+  [PASS] Tr(P_plus) = 1
+  [PASS] Tr(P_perp) = 2
+  [PASS] Tr(Z) = -1
+
+----------------------------------------------------------------------------------------
+Site-local diagonal compression
+----------------------------------------------------------------------------------------
+  [PASS] Diag(P_plus) = I/3
+  [PASS] Diag(P_perp) = 2I/3
+  [PASS] Diag(Z) = -I/3
+  [PASS] Diag(P_plus) lands in D^C3
+  [PASS] Diag(P_perp) lands in D^C3
+  [PASS] Diag(Z) lands in D^C3
+
+----------------------------------------------------------------------------------------
+Theorem 1: unique trace-preserving descent A -> D^C3
+----------------------------------------------------------------------------------------
+  [PASS] E_loc(I) is scalar onsite
+  [PASS] E_loc(I) preserves trace
+  [PASS] E_loc(P_plus) is scalar onsite
+  [PASS] E_loc(P_plus) preserves trace
+  [PASS] E_loc(P_perp) is scalar onsite
+  [PASS] E_loc(P_perp) preserves trace
+  [PASS] E_loc(Z) is scalar onsite
+  [PASS] E_loc(Z) preserves trace
+  [PASS] E_loc(I) = I
+  [PASS] E_loc(P_plus) = I/3
+  [PASS] E_loc(P_perp) = 2I/3
+  [PASS] E_loc(Z) = -I/3
+  [PASS] E_loc(alpha P_plus + beta P_perp) = (alpha+2 beta) I / 3
+  [PASS] trace preservation fixes lambda uniquely
+
+----------------------------------------------------------------------------------------
+Theorem 2: Diag restricted to A equals E_loc
+----------------------------------------------------------------------------------------
+  [PASS] Diag(P_plus) = E_loc(P_plus)
+  [PASS] Diag(P_perp) = E_loc(P_perp)
+  [PASS] Diag(Z) = E_loc(Z)
+  [PASS] Diag(generic alpha/beta) = E_loc(generic alpha/beta)
+
+----------------------------------------------------------------------------------------
+Reduced Z-coordinate erasure modulo common scalar
+----------------------------------------------------------------------------------------
+  [PASS] E_loc(sI+zZ) is common scalar
+  [PASS] E_loc(sI+zZ) = (s-z/3)I
+  [PASS] reduced traceless quotient after descent is zero
+  [PASS] nonzero projected Z existed before descent
+
+----------------------------------------------------------------------------------------
+Conditional Q implication remains conditional
+----------------------------------------------------------------------------------------
+  [PASS] criterion Q(z=0) = 2/3
+  [PASS] nonzero z changes Q in the admitted reduced route
+  [PASS] conditional closeout flag is true in note
+  [PASS] physical source-domain law remains named residual
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Certified:
+    exact unique trace-preserving local descent A -> D^C3,
+    exact identification with diagonal compression, and exact
+    erasure of the reduced Z coordinate modulo common scalar.
+
+  Not certified:
+    physical selection of onsite descent, retained Koide Q closure,
+    delta=2/9 closure, or full dimensionless charged-lepton closure.
+
+========================================================================================
+TOTAL: PASS=55, FAIL=0
+PASSED: 55/55
+========================================================================================
+
+----- stderr -----
+

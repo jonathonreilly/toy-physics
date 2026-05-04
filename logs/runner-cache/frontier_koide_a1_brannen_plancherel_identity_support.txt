@@ -1,0 +1,106 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_a1_brannen_plancherel_identity_support.py
+runner_sha256: 405637acfd8c5d2255630d2e3c3976d3f5bbe55de3e82ee60311193e43c0fe40
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.53
+status: ok
+----- stdout -----
+
+========================================================================================
+§1. Symbolic identity inside the Brannen parameterization: arg(b) = δ
+========================================================================================
+[PASS] 1.1 Symbolic: a_0 = √3 · V_0 (singlet Plancherel component)
+       a_0   = sqrt(3)*V_0
+       target = sqrt(3)*V_0
+[PASS] 1.2 Symbolic: b = (√3/2) · V_0 · c · exp(iδ), so arg(b) = δ (mod 2π)
+       b      = (-1)**(1/3)*sqrt(3)*V_0*(c*sin(delta + pi/6) + (-1)**(2/3)*(-c*cos(delta) + (-1)**(2/3)*(c*cos(delta + pi/3) - 1) - 1) - 1)/3
+       target = sqrt(3)*V_0*c*exp(I*delta)/2
+       |Re(diff)| = 0, |Im(diff)| = 0
+[PASS] 1.3 Symbolic eval at V_0=1, c=√2, δ=2/9: arg(b) = 2/9 exactly
+       arg(b) = 2/9
+       target  = 2/9
+
+========================================================================================
+§2. PDG numerical signature: arg(b_PDG) ≈ 2/9 rad in first Z_3 sector
+========================================================================================
+[PASS] 2.1 PDG-derived c ≈ √2 (carrier consistency)
+       c_PDG = 1.414201, √2 = 1.414214
+[PASS] 2.2 PDG-derived |arg(b)| (1st Z_3 sector) ≈ 2/9 rad, not 4π/9 rad
+       |arg(b)|        = 0.222230 rad
+       2/9             = 0.222222 rad   (matches data)
+       4π/9 (χ-lift)   = 1.396263 rad   (does not match)
+[PASS] 2.3 Brannen reconstruction with δ = 2/9 rad reproduces PDG <0.1%
+       max rel err = 0.01907%
+       recon: [np.float64(0.022609596880093924), np.float64(0.32504573678617965), np.float64(1.3329904157855186)]
+       PDG:   [0.022605285886270053, 0.3250513413293352, 1.332989122236187]
+[PASS] 2.4 Counterfactual: δ = 4π/9 rad (canonical χ-lift) fails PDG (negative √m)
+       χ-lift recon: [np.float64(0.6977891803380555), np.float64(-0.1842625158570977), np.float64(1.1671190849708344)]  [negative ⇒ unphysical]
+
+========================================================================================
+§3. Cross-check vs geometry runner: α(m_*) − α(m_0) = −2/9 at 1e-12
+========================================================================================
+[PASS] 3.1 Geometry-runner numerical witness: α(m_*) − α(m_0) = −2/9 (1e-12)
+       α(m_*) − α(m_0) = -0.222222222222406
+       target          = -0.222222222222222
+       |diff|          = 1.833e-13
+       NOTE: hard-coded m_*; this is a numerical witness on retained data,
+             not an analytic derivation of the value 2/9 from H_sel dynamics.
+
+========================================================================================
+§4. Plancherel arg(b) ↔ perp rotation α basis-change consistency
+========================================================================================
+[PASS] 4.1 arg(b)-difference equals perp-rotation-difference up to sign
+       perp Δα   = -0.222222222222406
+       arg(b) Δα = 0.222222222222405
+       sum  = -2.220e-16, diff = -4.444e-01
+[PASS] 4.2 |arg(b)(m_*) − arg(b)(m_0)| = 2/9 rad (Plancherel-side numerical witness)
+       |arg(b)-difference| = 0.222222222222405
+       target               = 0.222222222222222 rad
+
+========================================================================================
+§5. Support-grade scope statement (no closure flags)
+========================================================================================
+This runner verifies algebraic identities inside the Brannen
+parameterization plus numerical witnesses on retained data. It does
+NOT close the audit's P_A1 radian-bridge residual on the live
+authority surface, which requires:
+
+  (1) promoting KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md from
+      'actual-route' to retained-main authority;
+  (2) deriving the value 2/9 analytically (either as an H_sel(m)
+      selection theorem or via a Callan-Harvey-style ambient bridge).
+
+Neither (1) nor (2) is supplied here; see the support note's integrated review findings.
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 10/10
+  [PASS] 1.1 Symbolic: a_0 = √3 · V_0 (singlet Plancherel component)
+  [PASS] 1.2 Symbolic: b = (√3/2) · V_0 · c · exp(iδ), so arg(b) = δ (mod 2π)
+  [PASS] 1.3 Symbolic eval at V_0=1, c=√2, δ=2/9: arg(b) = 2/9 exactly
+  [PASS] 2.1 PDG-derived c ≈ √2 (carrier consistency)
+  [PASS] 2.2 PDG-derived |arg(b)| (1st Z_3 sector) ≈ 2/9 rad, not 4π/9 rad
+  [PASS] 2.3 Brannen reconstruction with δ = 2/9 rad reproduces PDG <0.1%
+  [PASS] 2.4 Counterfactual: δ = 4π/9 rad (canonical χ-lift) fails PDG (negative √m)
+  [PASS] 3.1 Geometry-runner numerical witness: α(m_*) − α(m_0) = −2/9 (1e-12)
+  [PASS] 4.1 arg(b)-difference equals perp-rotation-difference up to sign
+  [PASS] 4.2 |arg(b)(m_*) − arg(b)(m_0)| = 2/9 rad (Plancherel-side numerical witness)
+
+Honest closeout flags:
+  KOIDE_A1_RADIAN_BRIDGE_AUDIT_CLOSES_DELTA=FALSE
+  TYPE_B_TO_RADIAN_IDENTIFICATION_REMAINS_PRIMITIVE_ON_LIVE_SURFACE=TRUE
+  P_A1_STATUS=OPEN_ON_CURRENT_MAIN
+  THIS_RUNNER_PROVES=ALGEBRAIC_IDENTITY_INSIDE_BRANNEN_PARAMETERIZATION
+  THIS_RUNNER_DOES_NOT_PROVE=PHYSICAL_OBSERVABLE_IDENTIFICATION_ON_RETAINED_MAIN
+  SUPPORT_NUMERICAL_WITNESS_ON_RETAINED_SELECTED_LINE=2/9_RAD_AT_1E-12
+
+VERDICT: support-grade algebraic identity + numerical witness verified.
+  arg(b) = δ inside the Brannen parameterization (sympy-exact).
+  PDG signature picks 2/9 rad over 4π/9 rad inside the parameterization.
+  Numerical 2/9 on retained selected line (geometry-runner cross-check).
+  Closure of P_A1 on the live surface is NOT claimed (see §5 + support note §6).
+
+----- stderr -----
+

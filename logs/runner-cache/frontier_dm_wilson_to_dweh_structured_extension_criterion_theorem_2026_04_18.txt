@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_to_dweh_structured_extension_criterion_theorem_2026_04_18.py
+runner_sha256: 0bc13512bbf0b0f5e8b0a173001c0ae0d5bc32c963b9d561f8bf1615c7aa47cf
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.08
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON-TO-dW_e^H STRUCTURED EXTENSION CRITERION THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE EXTENSION QUESTION IS REALLY THE MISSING FORCING STEP
+========================================================================================
+  [PASS] The generic target note only fixes a 9-channel Hermitian family, not a structured embedding
+  [PASS] The adjacent-chain normal-form note explicitly says universal forcing into the structured class remains open
+
+========================================================================================
+PART 2: EVERY Herm(3) FAMILY HAS A UNIQUE COMPLEX *-PRESERVING EXTENSION
+========================================================================================
+  [PASS] Every complex matrix splits uniquely into Hermitian parts X + iY  (err=2.94e-16)
+  [PASS] The induced extension is *-preserving  (err=7.22e-16)
+  [PASS] The extension restricts back to the original Hermitian source family  (err=0.00e+00)
+
+========================================================================================
+PART 3: JORDAN-LIE PRESERVATION IS EXACTLY WHAT MAKES THE EXTENSION STRUCTURED
+========================================================================================
+  [PASS] A structured family preserves the Jordan products on the Hermitian basis  (defect=7.66e-16)
+  [PASS] A structured family preserves the Lie products on the Hermitian basis  (defect=7.41e-16)
+  [PASS] Those identities make the complex extension multiplicative on arbitrary complex matrices  (defect=1.02e-14)
+  [PASS] The image of 1_3 has rank 3 for the structured model family  (rank=3)
+
+========================================================================================
+PART 4: AN INJECTIVE HERMITIAN FAMILY CAN STILL FAIL TO EXTEND STRUCTURALLY
+========================================================================================
+  [PASS] A perturbed Hermitian family can remain injective on the 9-dimensional real source space  (rank=9)
+  [PASS] But failing the Jordan criterion already obstructs structured extension  (defect=2.42e-01)
+  [PASS] Failing the Lie criterion also obstructs structured extension  (defect=1.20e-01)
+  [PASS] Accordingly the unique complex *-preserving extension is no longer multiplicative  (defect=8.34e-01)
+
+========================================================================================
+PART 5: FINITE BASIS CHECKING IS ENOUGH
+========================================================================================
+  [PASS] Once the basis-pair Jordan identities hold, random linear combinations satisfy them too  (err=3.34e-16)
+  [PASS] Once the basis-pair Lie identities hold, random linear combinations satisfy them too  (err=4.74e-16)
+
+========================================================================================
+SUMMARY: PASS=15 FAIL=0
+========================================================================================
+
+----- stderr -----
+

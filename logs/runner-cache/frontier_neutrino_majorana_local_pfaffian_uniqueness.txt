@@ -1,0 +1,76 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_local_pfaffian_uniqueness.py
+runner_sha256: 757609b80c34548b07bc15de91261e48a1b295db34daa88c683bcc5140e105e8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: LOCAL PFAFFIAN UNIQUENESS
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+  - docs/NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md
+  - docs/NEUTRINO_MAJORANA_PHASE_REMOVAL_NOTE.md
+  - docs/NEUTRINO_MAJORANA_CANONICAL_LOCAL_BLOCK_NOTE.md
+  - docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md
+
+Question:
+  If the missing Majorana primitive is realized locally at bilinear
+  level, is the Pfaffian realization optional or forced?
+
+========================================================================================
+PART 1: EVERY LOCAL BILINEAR COMPLETION COLLAPSES TO THE CANONICAL BLOCK
+========================================================================================
+  [PASS (C)] Every local antisymmetric 2x2 block is exactly m J_2  (max reconstruction error=0.00e+00)
+  [PASS (C)] Local rephasing sends every block to the canonical real form mu J_2  (max canonicalization error=1.76e-16)
+
+  So under the retained local bilinear assumption, there is no local
+  realization family left to choose. Only the real amplitude mu remains.
+
+========================================================================================
+PART 2: THE FINITE LOCAL GRASSMANN AMPLITUDE IS EXACTLY THE PFAFFIAN
+========================================================================================
+  [PASS (C)] Local Berezin integral equals A_12 on the canonical block  (integral=(-0.61+0.44j))
+  [PASS (C)] That local amplitude is exactly the Pfaffian  (|integral-Pf|=0.00e+00)
+  [PASS (C)] Determinant is only the square of the physical local amplitude  (|det-Pf^2|=5.55e-17)
+
+  So on the local bilinear Majorana lane, the microscopic amplitude is
+  Pf(A), not det(A). The determinant loses the sign/phase slot by squaring.
+
+========================================================================================
+PART 3: INDEPENDENT LOCAL PAIRING SECTORS FORCE THE SAME LOG-ADDITIVE GENERATOR
+========================================================================================
+  [PASS (C)] Pfaffian factorizes on independent antisymmetric sectors  (|Pf_tot-Pf1Pf2|=0.00e+00)
+  [PASS (C)] The corresponding CPT-even scalar generator is additive as log|Pf|  (additivity error=2.78e-17)
+
+  This is the same multiplicative-to-additive logic as the determinant
+  lane, but now on the local antisymmetric pairing sector.
+
+========================================================================================
+PART 4: THE CANONICAL ONE-GENERATION GENERATOR IS EXACTLY LOG(MU)
+========================================================================================
+  [PASS (C)] Canonical local source response is log(mu1)-log(mu0)  (|W-W_exact|=0.00e+00)
+  [PASS (C)] The exact local response derivative is 1/mu  (dW/dmu=1.428571, 1/mu=1.428571)
+
+  So once the local bilinear primitive exists, the one-generation
+  pairing-side observable principle is fixed completely: it is log(mu).
+
+========================================================================================
+RESULT
+========================================================================================
+  On the retained local bilinear lane, the Pfaffian realization is
+  forced, not optional. Every local completion reduces to mu J_2, its
+  exact Grassmann amplitude is Pf(A)=mu, and the unique additive
+  CPT-even scalar generator is log|Pf| = log(mu).
+
+  What remains open is not the local realization family or the local
+  bosonic generator. It is whether the axiom actually turns that
+  charge-2 primitive on in the first place.
+
+PASS=9  FAIL=0
+
+----- stderr -----
+

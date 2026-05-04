@@ -1,0 +1,50 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_microscopic_schur_class_admissibility.py
+runner_sha256: 488d5a3ff884829feb2ced6703ee565ada0987886a239deef016eb2ae67dd571
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 7.50
+status: ok
+----- stdout -----
+==============================================================================
+YT MICROSCOPIC SCHUR CLASS ADMISSIBILITY
+==============================================================================
+
+Start from local positive microscopic bridge operators on the accepted
+UV window, reduce them exactly by Schur complement, and test whether
+every surviving reduction remains inside the unique stable Schur class.
+
+Microscopic operators tested      = 576
+Coarse reductions in Schur class  = 576
+Max affine residual              = 7.407477e-04
+Max response-vs-kernel gap       = 5.144895e-03
+Max reduced tail ratio           = 5.779617e-03
+Conservative package budget      = 1.214751e-02
+
+Worst retained microscopic reduction:
+  profile=0, (a,b,c)=(1.00,0.00,0.00), mode=1, resp=5.144895e-03, aff=1.529259e-04, tail=5.667949e-03
+
+[EXACT] PASS: local positive microscopic bridge operators reduce exactly by Schur complement to coarse UV operators
+    576 microscopic local operators survived positivity and exact reduction
+[EXACT] PASS: every surviving microscopic reduction remains inside the unique Schur normal-form class
+    max affine residual=7.407477e-04, max response gap=5.144895e-03
+[EXACT] PASS: the microscopic reductions stay inside the conservative endpoint budget
+    max response gap=5.144895e-03, budget=1.214751e-02
+[BOUNDED] PASS: the reduced nonlocal tail remains on the same intrinsic package nonlocal scale across the microscopic locality tube
+    max reduced tail ratio=5.779617e-03, package ratio=5.023669e-03
+[BOUNDED] PASS: the remaining y_t ambiguity is no longer microscopic admissibility on the current tested scale
+    all microscopic reductions stayed in class across 576 exact Schur tests
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+Within the axiom-native microscopic locality tube tested here, exact local positive bridge operators do not reduce to multiple coarse classes. They all land in the same unique stable Schur class.
+So the current package no longer needs a separate microscopic-admissibility escape hatch at this scale. What remains is only the explicit package-native endpoint budget carried by the exact bridge.
+
+==============================================================================
+FINAL TALLY: 5 PASS / 0 FAIL
+Elapsed: 6.98 s
+==============================================================================
+
+----- stderr -----
+

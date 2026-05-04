@@ -1,0 +1,92 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_c3_p1_positive_parent_readout_no_go.py
+runner_sha256: ab96cfede47f8c274abf0e296af3bb6aed0afd16010ee7107e059e2802658879
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+LANE 3 C3 P1 POSITIVE-PARENT READOUT NO-GO
+========================================================================================
+
+A. Authority surfaces
+------------------------------------------------------------------------
+PASS: QUARK_C3_P1_POSITIVE_PARENT_READOUT_NO_GO_NOTE_2026-04-28.md exists -- docs/QUARK_C3_P1_POSITIVE_PARENT_READOUT_NO_GO_NOTE_2026-04-28.md
+PASS: KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md exists -- docs/KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md
+PASS: QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md exists -- docs/QUARK_C3_CIRCULANT_SOURCE_LAW_BOUNDARY_NOTE_2026-04-28.md
+PASS: QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md exists -- docs/QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md
+PASS: SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md exists -- docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md
+PASS: KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md exists -- docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md
+PASS: QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md exists -- docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md
+PASS: new note names P1 positive-parent readout no-go
+PASS: sqrtm note defines positive-parent route
+PASS: sqrtm note says parent/readout remains open
+PASS: block07 keeps P1 load-bearing
+PASS: block08 keeps A1 source-domain separate
+PASS: one-Higgs note leaves generation matrices free
+PASS: Koide character note keeps P1 non-retained
+PASS: Lane 3 firewall blocks bounded promotion
+
+B. Exact positive-parent algebra
+------------------------------------------------------------------------
+PASS: C3 cycle is unitary
+PASS: C3 cycle has order 3
+PASS: positive amplitude operator Y is Hermitian
+PASS: parent M=Y^2 is Hermitian
+PASS: parent is positive semidefinite -- [ 1.    4.   12.25]
+PASS: Y^2 equals parent
+PASS: parent commutes with C3
+PASS: square root Y commutes with C3
+PASS: eig(Y)^2 equals eig(M)
+PASS: different positive amplitude triples give different parents
+PASS: dictionary represents arbitrary positive triples -- positive eigenvalue triple -> positive C3 parent
+
+C. Non-predictivity without physical parent/readout
+------------------------------------------------------------------------
+PASS: every tested positive amplitude triple has a positive C3 parent
+PASS: positive-parent dictionary alone is not a source law
+PASS: new note says parent remains missing
+PASS: new note says readout remains missing
+PASS: one-Higgs gauge selection does not select flavor entries
+PASS: one-Higgs gauge selection leaves arbitrary generation matrices
+
+D. Typed-edge graph
+------------------------------------------------------------------------
+PASS: C3 carrier names parent target but does not fill it
+PASS: named parent target is not physical parent theorem
+PASS: one-Higgs skeleton does not reach physical parent
+PASS: Koide P1 support does not reach physical quark amplitudes
+PASS: generic positive parent reaches square-root spectrum
+PASS: square-root spectrum is not typed as quark Yukawa amplitude
+PASS: adding parent and readout bridges creates quark P1 path
+PASS: missing bridges are therefore new theorem content
+
+E. Import firewall
+------------------------------------------------------------------------
+PASS: allowed and forbidden input sets are disjoint -- ['Hermitian_C3_circulant_algebra', 'one_Higgs_gauge_selection_boundary', 'positive_square_root_dictionary', 'retained_C3_cycle', 'retained_hw1_triplet']
+PASS: new note forbids observed quark masses
+PASS: new note forbids fitted Yukawa entries
+PASS: new note forbids CKM mass input
+PASS: new note forbids charged-lepton parent import
+PASS: new note forbids hidden quark square-root assertion
+PASS: new note does not claim retained non-top masses
+PASS: runner defines no observed quark mass constants
+
+F. Boundary classification
+------------------------------------------------------------------------
+PASS: direct P1 promotion is explicitly retired
+PASS: future route may derive retained positive parent
+PASS: future route may derive readout theorem
+PASS: future route may derive sector phase and scale laws
+PASS: future route may bypass P1
+PASS: Lane 3 remains open
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=54, FAIL=0
+VERDICT: square-root algebra is exact support, but quark P1 parent/readout
+requires new theorem content.
+
+----- stderr -----
+

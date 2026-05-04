@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/causal_escape_window.py
+runner_sha256: a974b566f104bfb513d3fbee65e12e4b54cc35ea66049ddcb4f476a56b1f6fa9
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

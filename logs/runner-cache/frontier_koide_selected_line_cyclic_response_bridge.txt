@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_selected_line_cyclic_response_bridge.py
+runner_sha256: 12b3a0c8d3bd3c85aa659aae61dbb2a0975b022b78deaeec33f435015338ef82
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.32
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: the selected-line point is controlled by one scalar cyclic-response ratio
+========================================================================================
+  [PASS] The cyclic map inverts exactly back to (u,v,w)
+  [PASS] The scalar bridge kappa is exactly sqrt(3) r2 / (2 r0 - r1)
+  [PASS] Once kappa is fixed, the reachable-slot ratio is fixed by w/v = (1-kappa)/(1+kappa)
+
+========================================================================================
+PART 2: the selected line carries an exact scalar-phase bridge
+========================================================================================
+  [PASS] [NUMERIC] The selected line has one sharp small-branch positivity threshold  (m_pos=-1.295794904067)
+  [PASS] [NUMERIC] The selected line has one unique unphased first-branch point  (m_0=-0.265815998702)
+  [PASS] [NUMERIC] At threshold the scalar bridge takes the exact value kappa_pos = -1/sqrt(3)  (kappa_pos=-0.577350269190)
+  [PASS] [NUMERIC] At threshold the Berry offset is exactly pi/12 on the first branch  (delta_pos=0.261799387799)
+  [PASS] On the exact selected line the scalar is an explicit function of the Berry offset  (kappa_sel(delta) = -sqrt(3) cos(delta+pi/6)/(sqrt(2)+sin(delta+pi/6)))
+
+========================================================================================
+PART 3: on the physical first branch, delta and kappa are one-to-one
+========================================================================================
+  [PASS] [NUMERIC] The scalar bridge kappa(m) is strictly monotone on the first selected-line branch  (kappa-range=(-0.577373, -0.783599))
+  [PASS] [NUMERIC] The Berry offset delta(m) is strictly monotone on the same branch  (delta-range=(0.261770, 0.000015))
+  [PASS] [NUMERIC] Therefore delta and kappa are equivalent one-real coordinates on the physical first branch  (both inverses exist on [m_pos, m_0])
+
+========================================================================================
+PART 4: AXIOM E plus the exact bridge fixes kappa_sel,* and m_*
+========================================================================================
+  [PASS] The actual-route phase theorem supplies the exact scalar target delta = 2/9  (delta_target=0.222222222222)
+  [PASS] That phase target fixes an exact selected-line scalar kappa_sel,*  (kappa_sel,*=-0.607918569997)
+  [PASS] [NUMERIC] Solving delta(m)=2/9 on the first branch gives one unique selected-line point  (m_Berry=-1.160443440065)
+  [PASS] [NUMERIC] The exact scalar bridge agrees with that Berry-selected point  (kappa(m_Berry)=-0.607918569997)
+  [PASS] [NUMERIC] The resulting selected-line ratio is fixed exactly by kappa_sel,*  (w/v=4.100981191542)
+  [PASS] [NUMERIC] The Berry-selected point lands exactly on the Koide cone and charged-lepton direction  (Q=0.666666666666667, cos-sim=0.999999999976)
+
+========================================================================================
+PART 5: the old H_* scalar is now a compatibility check only
+========================================================================================
+  [PASS] [NUMERIC] The legacy H_* route lands very near the Berry-selected scalar target  (kappa_legacy=-0.607912649682, diff=-5.92e-06)
+  [PASS] [NUMERIC] The legacy H_* route lands very near the Berry-selected point  (m_legacy=-1.160469470086, diff=+2.60e-05)
+  [PASS] [NUMERIC] So the old imported scalar is branch-precision-compatible with the Berry-derived selected point  (beta*=0.633571358484)
+
+========================================================================================
+PART 6: what is and is not still open
+========================================================================================
+  The selected-line scalar/point law is no longer an independent
+  open problem once AXIOM E is closed on the actual route:
+      delta = 2/9 -> kappa_sel,* -> unique first-branch m_*.
+  What may still remain for the broader charged-lepton package is
+  downstream of the selected-line point, not another free scalar
+  selector on this branch-local route.
+
+Interpretation:
+  The selected-line cyclic bridge is no longer an open scalar import.
+  On the actual physical first branch, the exact Berry closure
+      delta = 2/9
+  combines with the exact scalar-phase bridge
+      kappa_sel(delta) = -sqrt(3) cos(delta+pi/6)/(sqrt(2)+sin(delta+pi/6))
+  to fix the unique selected-line scalar and the unique first-branch
+  point. The old H_* witness survives only as a near-coincident
+  compatibility check.
+
+PASS=20 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_tensor_quotient_uniqueness.py
+runner_sha256: a68d39c4c3aa3896d851228c28304c72c556397e3a186d781c4d8210ece6ac52
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+UNIVERSAL GR TENSOR QUOTIENT UNIQUENESS AUDIT
+==============================================================================
+[PASS] scalar generator is exact
+    observable principle gives the exact scalar generator
+[PASS] route-2 background and slice generator are exact
+    route-2 tensor primitive gives the exact background and slice generator
+[PASS] variational note states the exact tensor candidate
+    candidate note identifies the Hessian on the lifted background
+[PASS] uniqueness note states symmetric quotient kernel
+    uniqueness note promotes the quotient-kernel statement
+[PASS] prototype Gram matrix is symmetric
+    max symmetry error = 0.000e+00
+[PASS] prototype symmetric quotient basis is nondegenerate
+    rank = 10 / 10
+[PASS] scalar-line restriction matches the same Hessian
+    direct = -4.215193e-01, expected = -4.215193e-01
+[PASS] blocker now names the localization primitive
+    blocker is sharpened to the localization primitive
+
+==============================================================================
+PROTOTYPE RESULTS
+==============================================================================
+scalar_direct   = -4.215192743764e-01
+scalar_expected = -4.215192743764e-01
+gram_rank       = 10
+gram_size       = 10
+symmetry_error  = 0.000000000000e+00
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=8 FAIL=0 TOTAL=8
+Direct-universal progress: the tensor Hessian is now unique on the symmetric 3+1 quotient at quadratic order, and the remaining gap is the curvature-localization map to Einstein/Regge dynamics.
+
+----- stderr -----
+

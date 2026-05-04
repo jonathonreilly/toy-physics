@@ -1,0 +1,55 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_2026_04_19.py
+runner_sha256: f3cdbb318246d87e05e950352982ebd7038fcfa921c38f0319748fc1b8402a6c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 41.07
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT CANONICAL-FIBER MIXED SPECTRAL/BRANCH-WEIGHT NO-GO
+========================================================================================
+
+========================================================================================
+PART 1: THE MIXED FAMILY LIVES ON THE SAME EXACT POSITIVE CANONICAL FIBER
+========================================================================================
+  [PASS] Both sampled mixed-law points are exact positive sources on the canonical favored-column fiber  (alpha=0 pack=[0.39432401 0.00143109 0.00184739 0.0266158 ], alpha=1 pack=[0.39490679 0.0004979  0.00192101 0.02671075])
+  [PASS] So the mixed family F_alpha = Shannon(normalized spectrum) + alpha log Delta_src is a same-carrier law family on L_e / H_e  (the branch-discriminant and normalized-spectrum factors coexist on the exact local source fiber)
+
+========================================================================================
+PART 2: THE WEIGHT ALPHA IS LOAD-BEARING
+========================================================================================
+  [PASS] Alpha = 0 and alpha = 1 select distinct exact positive-fiber sources  ((source sep, pack sep)=(0.016159109627, 0.001106759834))
+  [PASS] Each sampled law prefers its own selected point over the point chosen by the other law  (F0(S0,S1)=(0.797755102040,0.797625131681), F1(S0,S1)=(-2.828495236161,-2.825063939073))
+
+========================================================================================
+PART 3: THE FAMILY TRADES NORMALIZED SPECTRAL ISOTROPY AGAINST RAW BRANCH MARGIN
+========================================================================================
+  [PASS] Turning on alpha raises the raw branch-discriminant margin Delta_src  (Delta(S0,S1)=(0.026615797774,0.026710752728))
+  [PASS] The same turn simultaneously lowers the normalized spectral-isotropy score  (H(S0,S1)=(0.797755102040,0.797625131681))
+  [PASS] The right-sensitive even-response channels move materially under the alpha reweighting  ((E1,E2)_alpha=0=[0.00143109 0.00184739], (E1,E2)_alpha=1=[0.0004979  0.00192101])
+
+========================================================================================
+PART 4: THIS NATURAL MIXED FAMILY STILL DOES NOT RECOVER THE CONSTRUCTIVE ROOT
+========================================================================================
+  [PASS] For both sampled alphas, the aligned-seed exact eta_1 = 1 crossing remains unique but leaves the constructive chamber because E1 < 0  (alpha=0: lambda=0.857349816848, root pack=[ 1.          0.34109294 -0.01679389  0.03008909  0.02972   ] | alpha=1: lambda=0.856566183642, root pack=[ 1.          0.34126105 -0.01771997  0.03145404  0.02981986])
+
+========================================================================================
+PART 5: BOTTOM LINE
+========================================================================================
+  [PASS] The current branch therefore does not yet fix the weighting between normalized spectral isotropy and raw branch margin on the canonical source fiber  (alpha remains a real free selector coefficient in a natural same-carrier law family)
+  [PASS] So the sharp remaining DM source-fiber object is no longer a vague microscopic law, but the unique mixed spectral/right-sensitive weighting theorem, or a deeper bridge that replaces it  (pure Shannon and the alpha-weighted branch-margin family are now both explicit and runner-tested)
+
+  alpha=0 source5 = [0.68897954 0.63297204 0.11110204 0.23146031 1.43769822]
+  alpha=0 pack4   = [0.39432401 0.00143109 0.00184739 0.0266158 ]
+  alpha=0 spec    = [0.6324459  0.32076736 0.04678674]
+  alpha=1 source5 = [0.68429724 0.63699771 0.11889667 0.21877002 1.43660864]
+  alpha=1 pack4   = [0.39490679 0.0004979  0.00192101 0.02671075]
+  alpha=1 spec    = [0.63302239 0.32005445 0.04692317]
+
+========================================================================================
+SUMMARY: PASS=10 FAIL=0
+========================================================================================
+
+----- stderr -----
+

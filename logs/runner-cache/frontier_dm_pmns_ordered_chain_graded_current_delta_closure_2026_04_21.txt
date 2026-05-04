@@ -1,0 +1,77 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_pmns_ordered_chain_graded_current_delta_closure_2026_04_21.py
+runner_sha256: ec96b7d89f3d5d52c7788a82638dc85c898c0440792281e91f3fc60ebeb1f410
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.59
+status: ok
+----- stdout -----
+========================================================================================
+DM PMNS ORDERED-CHAIN GRADED-CURRENT DELTA CLOSURE
+========================================================================================
+
+Question:
+  After native graph-first current activation closes q_+ on the physical
+  affine Hermitian chart, is there an exact same-branch sole-axiom law
+  for the remaining delta / Im(K_Z3[1,2]) direction on the retained
+  hw=1 response family?
+
+========================================================================================
+PART 1: THE ORDERED-CHAIN GRADING IS ALREADY CANONICAL
+========================================================================================
+  [PASS] The ordered-chain activation theorem records the canonical grading N = diag(1,2,3)
+  [PASS] The graded-current route uses exactly that canonical ordered-chain grading
+
+========================================================================================
+PART 2: BASIS VALUES CLOSE THE EXACT GRADED-CURRENT FORMULA
+========================================================================================
+  [PASS] On the affine base H_base the graded current is -1/2 + i E1/2  (J_N(H_base)=-0.500000000000+0.816496580928j)
+  [PASS] The spectator generator T_m is graded-current blind  (J_N(T_m)=0.000000000000+0.000000000000j)
+  [PASS] The delta generator contributes exactly -i/2  (J_N(T_delta)=-0.000000000000-0.500000000000j)
+  [PASS] The q_+ generator contributes exactly -3 i / 2  (J_N(T_q)=-0.000000000000-1.500000000000j)
+  [PASS] Affine linearity gives J_N(H) = -1/2 + i(E1/2 - delta/2 - 3 q_+/2)  (max err=1.35e-15)
+
+========================================================================================
+PART 3: THE PAIR OF CURRENTS RECOVERS THE FULL AFFINE ACTIVE PAIR
+========================================================================================
+  [PASS] Two affine points with the same q_+ have the same native current J_chi  (J0=1.000000000000-0.250000000000j, J1=1.000000000000-0.250000000000j)
+  [PASS] The graded current separates those same-q_+ points by their different delta values  (J_N0=-0.500000000000-0.733503419072j, J_N1=-0.500000000000-1.283503419072j)
+  [PASS] The affine current theorem still recovers q_+ exactly as Re J_chi(H)  (max err=1.11e-16)
+  [PASS] The graded-current law recovers delta exactly as E1 - 2 Im J_N(H) - 3 Re J_chi(H)  (max err=1.42e-14)
+
+========================================================================================
+PART 4: THE CURRENT PAIR SURVIVES EXACTLY ON THE RETAINED HW=1 RESPONSE FAMILY
+========================================================================================
+  [PASS] Active response-column reconstruction recovers the affine Hermitian block exactly  (max err=1.46e-15)
+  [PASS] On reconstructed hw=1 response blocks the native current still recovers q_+ exactly  (max err=6.66e-16)
+  [PASS] On reconstructed hw=1 response blocks the graded current still recovers delta exactly  (max err=1.44e-15)
+
+========================================================================================
+PART 5: STRICT/NATIVE CLOSEOUT
+========================================================================================
+  [PASS] The prior reduction note records the remaining strict/native object as one additional real delta-law beyond current activation
+  [PASS] The same reduction note still records that q_+ was already closed by the native current
+  [PASS] The ordered-chain graded current closes that remaining real affine coordinate on the physical chamber point  (delta_phys=0.933806343759)
+  [PASS] So the strict/native DM last mile now closes on the physical affine/source family  (q_+ and delta both recovered natively)
+
+========================================================================================
+PART 6: CIRCULARITY GUARD
+========================================================================================
+  [PASS] The graded current takes no PMNS-side target values as inputs  (bad=[])
+  [PASS] The delta recovery law takes no PMNS-side target values as inputs  (bad=[])
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact ordered-chain graded-current closure:
+    - graph-first structure already fixes the canonical grading N = diag(1,2,3)
+    - the graded current J_N(H) = J_chi(i[N,H]) reads the current-blind affine direction
+    - together with J_chi(H) = q_+ - i/4, it recovers q_+ and delta exactly
+    - the same two-current law survives exactly on the retained hw=1 response family
+
+  So the stricter/native DM last mile is closed on the physical affine/source family.
+
+SUMMARY: PASS=20 FAIL=0
+
+----- stderr -----
+

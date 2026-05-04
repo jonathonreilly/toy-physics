@@ -1,0 +1,75 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_operator_selection_obstruction.py
+runner_sha256: b2966b6df7b245750bf365d26caf6f27d16a3717df530c92d738b6c094e24f9a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+DM NEUTRINO OPERATOR SELECTION OBSTRUCTION
+==============================================================================
+
+Operators under audit:
+  Xi_5    = G1 G2 G3 G4   (staggered mass / taste-chirality surface)
+  Gamma_1 = G1            (weak-axis EWSB insertion)
+
+  [PASS] Gamma_1 is Hermitian involution
+  [PASS] Xi_5 is Hermitian involution
+
+3+1 chirality behavior:
+  ||[Gamma_1, gamma_5]|| = 8.0
+  ||{Gamma_1, gamma_5}|| = 0.0
+  ||[Xi_5, gamma_5]|| = 0.0
+  ||{Xi_5, gamma_5}|| = 8.0
+
+  [PASS] Gamma_1 anticommutes with 4D gamma_5
+  [PASS] Xi_5 commutes with 4D gamma_5
+Chiral block ranks:
+  rank(P_R Gamma_1 P_L) = 8
+  rank(P_L Gamma_1 P_L) = 0
+  rank(P_R Xi_5 P_L)    = 0
+  rank(P_L Xi_5 P_L)    = 8
+  rank(P_R Xi_5 P_R)    = 8
+
+  [PASS] Gamma_1 is chiral off-diagonal
+  [PASS] Xi_5 is chiral diagonal
+Hop order on the 4-bit cube:
+  Gamma_1 image distances = [1]
+  Xi_5 image distances    = [4]
+
+  [PASS] Gamma_1 is single-hop on every basis state
+  [PASS] Xi_5 is four-hop on every basis state
+Spatial-orbit action:
+  Gamma_1:
+    O0 <- T1   rank = 2
+    T1 <- O0   rank = 2
+    T2 <- T1   rank = 4
+    T1 <- T2   rank = 4
+    O3 <- T2   rank = 2
+    T2 <- O3   rank = 2
+  Xi_5:
+    O0 <- O3   rank = 2
+    O3 <- O0   rank = 2
+    T1 <- T2   rank = 6
+    T2 <- T1   rank = 6
+
+  [PASS] Gamma_1 follows the adjacent-hamming cascade
+  [PASS] Xi_5 follows the opposite-corner pairing
+
+Honest read:
+  1. Gamma_1 and Xi_5 are both exact framework-native operators, but
+     they live on different operator classes.
+  2. Gamma_1 is a weak-axis single-hop, chiral off-diagonal insertion.
+  3. Xi_5 is a four-hop, chiral diagonal staggered mass surface.
+  4. The 3+1 completion adds chirality and RH singlets, but it does
+     not derive a bridge from Xi_5 to Gamma_1.
+  5. That bridge is the current theorem-grade blocker behind the
+     neutrino Dirac Yukawa story.
+
+==============================================================================
+RESULT: 10 PASS, 0 FAIL
+==============================================================================
+
+----- stderr -----
+

@@ -1,0 +1,29 @@
+===== runner cache v1 =====
+runner: scripts/frontier_planck_link_local_first_variation_p_a_forcing.py
+runner_sha256: c8849171891eed963841e3ba1ad1181088cdd7e88745a2eda0c30b3e9775b8e5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+PLANCK LINK-LOCAL FIRST-VARIATION P_A FORCING
+==============================================================================
+
+Question: does the retained link-local action response force P_A?
+
+[PASS] 1. retained local action terms are one-link / one-axis source terms: terms=[('t', 1, (1, 0, 0, 0)), ('x', 1, (0, 1, 0, 0)), ('y', 1, (0, 0, 1, 0)), ('z', 1, (0, 0, 0, 1))]
+[PASS] 2. first variation support is exactly the Hamming-weight-one packet: dS images=[(0, 0, 0, 1), (0, 0, 1, 0), (0, 1, 0, 0), (1, 0, 0, 0)]; rank=4
+[PASS] 3. Hodge-dual P_3 is a third-composite/flux support, not a first variation: P3 support=[(0, 1, 1, 1), (1, 0, 1, 1), (1, 1, 0, 1), (1, 1, 1, 0)]; P1/P3 overlap=0.00e+00
+[PASS] 4. Hodge duality is not an automorphism of the fundamental link-source domain: *P1*=P3 error=0.00e+00; source degree 1 maps to weights=[3]
+[PASS] 5. link-first-variation support selects a unique rank-four equivariant projector: rank-four candidates=17; selected=('Et_scalar_time_odd_w1', 'EV_vector_time_even_w1')
+[PASS] 6. selected projector remains spin/time/CPT equivariant and tensor-local: P1 symmetry error=0.00e+00; local polynomial error=0.00e+00
+[PASS] 7. selected rank-four packet supports the unique irreducible Cl_4(C) / CAR carrier: rank(P_A)=4; Clifford=0.00e+00; span=16; CAR=0.00e+00
+[PASS] 8. forbidden-input boundary: uses A_min link-local action support, anomaly time axis, and finite exterior algebra only
+
+Summary: PASS=8  FAIL=0
+
+Verdict: PASS. The primitive action response is link-local and first variational, so its support is uniquely P_1=P_A among the local rank-four equivariant projector classes. The Hodge-dual P_3 remains a valid flux/face representation, but it is not a fundamental one-link action variation. On the selected rank-four packet the standard Cl_4(C) module/CAR carrier is unique up to automorphism.
+
+----- stderr -----
+

@@ -1,0 +1,89 @@
+===== runner cache v1 =====
+runner: scripts/frontier_radial_scaling_protected_angle_narrow.py
+runner_sha256: 687ec3aaf8105a0c3cbf043568af831cb43b9af9a34ccbe5f3ce3cd40d42a5bd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.49
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: radial-scaling protected angle
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: ratio eta_bar / rho_bar = eta / rho symbolically
+----------------------------------------------------------------------------------------
+  [PASS (A)] eta_bar / rho_bar = eta / rho exact (radial-scaling preserves slope at origin)  (ratio_bar = eta/rho)
+
+----------------------------------------------------------------------------------------
+Part 2: arctan(eta_bar / rho_bar) = arctan(eta / rho)
+----------------------------------------------------------------------------------------
+  [PASS (A)] arctan(eta_bar / rho_bar) = arctan(eta / rho) exact  (gamma_bar - gamma = 0)
+
+----------------------------------------------------------------------------------------
+Part 3: doubled-angle preservation sin(2 gamma) and cos(2 gamma)
+----------------------------------------------------------------------------------------
+  [PASS (A)] sin(2 gamma_bar) = sin(2 gamma) exact (doubled-angle preserved)  (sin(2 gamma_bar) = 2*eta*rho/(eta**2 + rho**2))
+  [PASS (A)] cos(2 gamma_bar) = cos(2 gamma) exact (doubled-angle preserved)  (cos(2 gamma_bar) = (-eta**2 + rho**2)/(eta**2 + rho**2))
+
+----------------------------------------------------------------------------------------
+Part 4: radial distance scales as mu
+----------------------------------------------------------------------------------------
+  [PASS (A)] sqrt(rho_bar^2 + eta_bar^2) = mu * sqrt(rho^2 + eta^2)  (r_bar = mu*sqrt(eta**2 + rho**2))
+
+----------------------------------------------------------------------------------------
+Part 5: angle at (1, 0) is NOT preserved (counter-illustrates non-protection)
+----------------------------------------------------------------------------------------
+  [PASS (A)] tan(beta_bar) != tan(beta) at (rho, eta) = (1/6, sqrt(5)/6), mu = 99/100 (NOT protected)  (diff = -2*sqrt(5)/835)
+
+----------------------------------------------------------------------------------------
+Part 6: framework instance (rho, eta) = (1/6, sqrt(5)/6), mu in NLO band
+----------------------------------------------------------------------------------------
+  [PASS (A)] framework instance (rho, eta) = (1/6, sqrt(5)/6) under mu = 1 - x: eta_bar/rho_bar = sqrt(5)  (eta_bar/rho_bar = sqrt(5))
+  [PASS (A)] framework instance sin(2 gamma) = sqrt(5)/3 exact  (sin = sqrt(5)/3)
+  [PASS (A)] framework instance cos(2 gamma) = -2/3 exact  (cos = -2/3)
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let (rho, eta) be any point in the open first quadrant (rho > 0,
+    eta > 0) and mu > 0 a positive scaling factor. Define the radial
+    scaling
+        (rho_bar, eta_bar)  =  (mu * rho, mu * eta).
+
+  CONCLUSION:
+    (i)   eta_bar / rho_bar = eta / rho exact (slope preserved);
+    (ii)  arctan(eta_bar / rho_bar) = arctan(eta / rho) exact
+          (origin-angle protected);
+    (iii) sin(2 gamma_bar) = sin(2 gamma), cos(2 gamma_bar) = cos(2 gamma)
+          exact (doubled-angle preserved);
+    (iv)  sqrt(rho_bar^2 + eta_bar^2) = mu * sqrt(rho^2 + eta^2)
+          (radial distance scales as mu);
+    (v)   the angle at (1, 0), tan(beta_bar) = eta_bar / (1 - rho_bar),
+          is NOT in general equal to tan(beta) = eta / (1 - rho)
+          (counter-illustrates non-protection: only the origin-angle
+          and radial distance behave canonically).
+
+  Audit-lane class:
+    (A) — pure plane geometry / similar-triangles identity. No CKM-
+    specific input, no Wolfenstein / atlas-triangle / alpha_s / CP-phase
+    authority. The framework instance (rho, eta) = (1/6, sqrt(5)/6) at
+    NLO scaling mu = 1 - alpha_s/4 is one application; the algebra
+    closes for any (rho, eta, mu) in the stated domain.
+
+  This narrow theorem drops the parent's deps on Wolfenstein lambda^2/A^2,
+  CP-phase rho/eta, atlas-triangle right-angle, and alpha_s(v) by stating
+  (rho, eta, mu) as abstract symbols.
+
+
+========================================================================================
+  TOTAL: PASS=9, FAIL=0
+========================================================================================
+
+----- stderr -----
+

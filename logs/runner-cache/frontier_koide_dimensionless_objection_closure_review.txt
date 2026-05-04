@@ -1,0 +1,69 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_dimensionless_objection_closure_review.py
+runner_sha256: 1bcd148670de0acc9cf3d4858fd3a70c34f11341da5d221b376f04f34e6cf129
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+Koide dimensionless objection-closure review packet
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 1: Q zero-background support and traceless-background residual
+----------------------------------------------------------------------------------------
+  [PASS] zero-background source-response gives Q=2/3  (Q=2/3)
+  [PASS] common source background cancels from dimensionless Q  (Q(s=1/5,z=0)=2/3)
+  [PASS] traceless source-label background changes Q  (Q(s=0,z=1/4)=8/9)
+  [PASS] opposite traceless background changes Q in the opposite direction  (Q(z=-1/4)=8/15)
+
+----------------------------------------------------------------------------------------
+Part 2: retained Z label survives observable completeness
+----------------------------------------------------------------------------------------
+  [PASS] Z^2=I on the two-channel source label  (Z^2=(1, 1))
+  [PASS] Z expectation distinguishes non-midpoint source states  (<Z>=[Fraction(0, 1), Fraction(-1, 3), Fraction(1, 2)])
+  [PASS] midpoint is the only listed state with <Z>=0
+
+----------------------------------------------------------------------------------------
+Part 3: delta selected-line local endpoint support
+----------------------------------------------------------------------------------------
+  [PASS] selected-line local source algebra End(L_chi) is one-dimensional
+  [PASS] ambient End(V) has extra endpoint-source directions
+  [PASS] selected-line projector gives selected_channel=1
+  [PASS] selected-line projector kills spectator_channel
+  [PASS] selected-line local support conditionally transfers eta_APS to delta
+  [PASS] normal endpoint source is pullback-kernel data for selected-line readout
+
+----------------------------------------------------------------------------------------
+Part 4: delta ambient-source and endpoint-torsor countermodels
+----------------------------------------------------------------------------------------
+  [PASS] closing endpoint countermodel has expected delta  (delta=2/9)
+  [PASS] spectator endpoint countermodel has expected delta  (delta=0)
+  [PASS] mixed endpoint countermodel has expected delta  (delta=1/9)
+  [PASS] shifted endpoint countermodel has expected delta  (delta=1/3)
+  [PASS] ambient rank-two source leaves a free selected/spectator mixture  (p=1/2 gives delta=1/9)
+
+----------------------------------------------------------------------------------------
+Part 5: retained closure verdict
+----------------------------------------------------------------------------------------
+  [PASS] Q retained-only closure is blocked by traceless Z background
+  [PASS] delta retained-only closure is blocked by ambient spectator source
+  [PASS] full dimensionless retained closure is not established
+
+========================================================================================
+SUMMARY: PASS=21 FAIL=0
+PASSED: 21/21
+========================================================================================
+KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW=TRUE
+KOIDE_DIMENSIONLESS_RETAINED_CLOSURE=FALSE
+Q_DIMENSIONLESS_OBJECTION_CLOSES_Q=FALSE
+DELTA_DIMENSIONLESS_OBJECTION_CLOSES_DELTA=FALSE
+FULL_DIMENSIONLESS_OBJECTION_CLOSES_LANE=FALSE
+CONDITIONAL_Q_CLOSES_IF_BACKGROUND_Z_ZERO=TRUE
+CONDITIONAL_DELTA_CLOSES_IF_SELECTED_LINE_LOCAL_AND_BASED=TRUE
+RESIDUAL_Q=derive_physical_background_source_zero_equiv_Z_erasure
+RESIDUAL_DELTA=derive_selected_line_local_boundary_source_and_based_endpoint
+
+----- stderr -----
+

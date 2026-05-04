@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_backreaction_green_closure.py
+runner_sha256: eee3b3adb0ee477f2df71e27988dfb0a051a7b68fbb725060ac53491d5e943f8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.02
+status: ok
+----- stdout -----
+====================================================================================================
+STAGGERED BACKREACTION GRAPH-GREEN CLOSURE
+  transport law fixed; compare direct nonlocal Green maps against screened graph Poisson
+  holdout-aware target: close the cycle-bearing force gap without breaking the retained battery
+====================================================================================================
+dt=0.12, steps=10, mass=0.3, retained cycle-bearing families=2, layered holdout families=1
+frozen nonlocal kernels: geodesic_yukawa(mu=1.50, eps=0.10), resistance_yukawa(mu=1.50, eps=0.10)
+
+MAP SUMMARY
+mapping                gain  raw_cycle  cal_cycle   raw_hold   cal_hold    balance
+resistance_yukawa     1.517  3.425e-01  1.059e-01  1.534e-02  5.371e-01  3.744e-01
+geodesic_yukawa       1.502  3.366e-01  1.281e-01  2.140e-02  5.309e-01  3.936e-01
+screened_poisson     26.109  9.618e-01  5.407e-01  8.822e-01  2.165e+00  1.623e+00
+
+PER-FAMILY CALIBRATED READOUT
+resistance_yukawa  bipartite_random_geometric F_ext=+1.488e+00 F_solve=+1.599e+00 gap=7.491e-02 R2=0.9986 2body=1.418e-16 self_gap=5.958e-01 norm=4.44e-16 TOWARD=3/3
+resistance_yukawa  bipartite_growing          F_ext=+1.750e+00 F_solve=+1.989e+00 gap=1.369e-01 R2=0.9980 2body=3.402e-16 self_gap=5.260e-01 norm=7.77e-16 TOWARD=3/3
+resistance_yukawa  layered_bipartite_dag      F_ext=+1.852e+00 F_solve=+2.847e+00 gap=5.371e-01 R2=1.0000 2body=2.497e-15 self_gap=2.048e-01 norm=0.00e+00 TOWARD=3/3
+
+READOUT
+  baseline cycle-bearing mean gap: 9.618e-01 (screened graph Poisson)
+  promoted cycle-bearing mean gap: 3.425e-01 (resistance_yukawa, raw)
+  raw improvement factor: 2.81x
+  baseline holdout gap: 8.822e-01
+  promoted holdout gap: 1.534e-02
+  fitted gain on cycle-bearing only: 1.517
+  promoted source-response R^2 min/mean: 0.9980 / 0.9989
+  promoted two-body residual max: 2.497e-15
+  promoted minimum TOWARD count: 3/3
+  promoted norm drift max: 7.772e-16
+  promoted cycle-bearing mean self-gap: 1.339e-01
+  runtime: 0.65s
+
+INTERPRETATION
+  - The scale blocker is not limited to local Poisson normalization.
+  - A direct graph-native Green map materially closes the cycle-bearing gap and transfers to the layered holdout.
+  - The resistance-distance Yukawa kernel is the best holdout-aware map in this frozen comparison.
+  - The remaining open seam is one-step endogenous refresh: the self-gap stays O(1) even after the raw source-to-field scale closes.
+
+----- stderr -----
+

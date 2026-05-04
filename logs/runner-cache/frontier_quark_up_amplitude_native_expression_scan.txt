@@ -1,0 +1,80 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_up_amplitude_native_expression_scan.py
+runner_sha256: 3f05d4b784cdcab25478ef436ba38d3eb9c079f18ccfad8f8f8eddcedfee0ff1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.59
+status: ok
+----- stdout -----
+========================================================================
+  FRONTIER: Quark Up-Amplitude Native-Expression Scan
+========================================================================
+
+========================================================================
+PART 1: Restricted Native One-Step Grammar
+========================================================================
+
+  solved support-anchored a_u = 0.778161628656
+  native atoms               = {rho, supp, pmag, pphase, eta, pr}
+  allowed one-step forms     = x, 1-x, x+y, x-y, x*y, x/y, sqrt(x*y)
+
+  strongest native one-step refit candidates:
+  atan(sqrt(5)) - sqrt(5)/6    a_u=0.777583995  c=3  anchor=0.827%  refit_obj=0.052782  refit_max=0.917%
+  eta+pr                       a_u=0.780926287  c=3  anchor=1.015%  refit_obj=0.053888  refit_max=0.870%
+  sqrt(5/6) * (6/7)            a_u=0.782460796  c=3  anchor=1.106%  refit_obj=0.055543  refit_max=0.928%
+  sqrt(5/6) * (1 - 1/sqrt(42)) a_u=0.772011887  c=4  anchor=0.742%  refit_obj=0.058550  refit_max=1.159%
+  pmag/pphase                  a_u=0.793620006  c=3  anchor=1.768%  refit_obj=0.089247  refit_max=1.348%
+  sqrt(pmag*1-eta)             a_u=0.756745678  c=5  anchor=0.883%  refit_obj=0.123191  refit_max=1.814%
+  supp/pphase                  a_u=0.745171851  c=3  anchor=1.109%  refit_obj=0.219991  refit_max=2.303%
+  pphase-pr                    a_u=0.742013701  c=3  anchor=1.296%  refit_obj=0.253578  refit_max=2.435%
+
+  strongest native one-step anchored candidates:
+  sqrt(5/6) * (1 - 1/sqrt(42)) a_u=0.772011887  c=4  anchor=0.742%  refit_obj=0.058550  refit_max=1.159%
+  atan(sqrt(5)) - sqrt(5)/6    a_u=0.777583995  c=3  anchor=0.827%  refit_obj=0.052782  refit_max=0.917%
+  sqrt(pmag*1-eta)             a_u=0.756745678  c=5  anchor=0.883%  refit_obj=0.123191  refit_max=1.814%
+  eta+pr                       a_u=0.780926287  c=3  anchor=1.015%  refit_obj=0.053888  refit_max=0.870%
+  sqrt(5/6) * (6/7)            a_u=0.782460796  c=3  anchor=1.106%  refit_obj=0.055543  refit_max=0.928%
+  supp/pphase                  a_u=0.745171851  c=3  anchor=1.109%  refit_obj=0.219991  refit_max=2.303%
+  pphase-pr                    a_u=0.742013701  c=3  anchor=1.296%  refit_obj=0.253578  refit_max=2.435%
+  1-eta/1-rho                  a_u=0.741781351  c=5  anchor=1.310%  refit_obj=0.256170  refit_max=2.445%
+
+  external shortlist baselines:
+    7/9         : refit_obj = 0.052752, refit_max = 0.908%
+    sqrt(3/5)   : anchor = 0.720%, anchor_max = 0.677%
+  [PASS] Best native one-step refit candidate is atan(sqrt(5)) - sqrt(5)/6  (best = atan(sqrt(5)) - sqrt(5)/6)
+  [PASS] Best native one-step refit candidate keeps the full package within 1%  (max dev = 0.917%)
+  [PASS] Best native one-step anchored candidate is sqrt(5/6) * (1 - 1/sqrt(42))  (best = sqrt(5/6) * (1 - 1/sqrt(42)))
+  [PASS] Best native one-step anchored candidate keeps CKM+J deviations within 1%  (max dev = 0.612%)
+
+========================================================================
+PART 2: Restricted No-Go
+========================================================================
+
+  dominance test: native one-step candidate with refit_obj < 0.052752 and anchor < 0.720%
+  surviving candidates = 0
+  [PASS] No native one-step expression beats both the 7/9 refit baseline and the sqrt(3/5) anchored baseline  (restricted one-step native grammar remains split)
+
+========================================================================
+PART 3: Summary
+========================================================================
+
+  strongest native one-step outcomes:
+    - best native refit law     : atan(sqrt(5)) - sqrt(5)/6 = 0.777583995261
+    - best native anchored law  : sqrt(5/6) * (1 - 1/sqrt(42)) = 0.772011886721
+
+  external bounded baselines still stronger on one axis each:
+    - 7/9 keeps the strongest current refit score   (0.052752)
+    - sqrt(3/5) keeps the strongest anchored score  (0.720%)
+
+  honest endpoint:
+    the current exact projector/support constants do not yet force
+    one dominant native one-step amplitude law.
+    the native family still splits between a best refit law and a
+    best anchored law, so the branch remains bounded.
+
+========================================================================
+  TOTAL: PASS=5, FAIL=0
+========================================================================
+
+----- stderr -----
+

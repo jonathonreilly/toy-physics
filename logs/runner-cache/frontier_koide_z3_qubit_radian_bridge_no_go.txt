@@ -1,0 +1,81 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_z3_qubit_radian_bridge_no_go.py
+runner_sha256: 6ff528bf37ce2caeb75eabbc57b56bfb9054695117ab85e9afbdff3687084751
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.50
+status: ok
+----- stdout -----
+========================================================================
+Koide Z_3-qubit radian-bridge closure attempt -- diagnostic runner
+========================================================================
+
+(F1) Candidate A: PB phase per Z_3 element on qubit equator
+------------------------------------------------------------------------
+  [PASS] (F1a) Per-Z_3-element PB phase magnitude is 1/2  (|<chi|g.chi>| = 0.500000000000)
+  [PASS] (F1b) Per-Z_3-element PB phase equals pi/3, NOT 2/9  (arg = 1.047197551197, pi/3 = 1.047197551197, 2/9 = 0.222222222222, gap = 0.8250 rad)
+  [PASS] (F1c) Per-Z_3-element PB phase is base-point independent (Bargmann invariant)  (max deviation from pi/3 over equator = 8.88e-16)
+
+(F2) General-d check: per-Z_d-element PB phase vs 2/d^2
+------------------------------------------------------------------------
+     d |    gamma_PB(g) |           pi/d |          2/d^2 |          ratio
+     2 |   +0.000000000 |   +1.570796327 |   +0.500000000 |   +0.000000000
+     3 |   +1.047197551 |   +1.047197551 |   +0.222222222 |   +4.712388980
+     4 |   -1.921078671 |   +0.785398163 |   +0.125000000 |  -15.368629372
+     5 |   -1.256637061 |   +0.628318531 |   +0.080000000 |  -15.707963268
+     7 |   -0.897597901 |   +0.448798951 |   +0.040816327 |  -21.991148575
+    11 |   -0.571198664 |   +0.285599332 |   +0.016528926 |  -34.557519189
+  [PASS] (F2a) PB phase per Z_d element equals pi/d (magnitude) at every d checked  (each row: |gamma_PB(g_d)| = pi/d)
+  [PASS] (F2b) PB phase per Z_d element equals (rational) x pi at every d in {2,3,5,7,11}  (max |gamma - closed-form (rational x pi)| = 2.22e-16)
+  [PASS] (F2c) The PB-per-element identity does NOT match 2/d^2 at any d in {2,3,4,5,7,11}  (so the failure at d=3 is structural, not a specific-d coincidence)
+
+(F3) Candidate B: Closed Bargmann phase around Z_3 orbit
+------------------------------------------------------------------------
+  [PASS] (F3a) Closed Bargmann phase around C_3 orbit = pi (great-circle triangle, half 2pi)  (gamma_closed = -3.141592653590, pi = 3.141592653590)
+  [PASS] (F3b) No rational-coefficient rescaling of closed Bargmann phase gives 2/9  (pi/9, pi/3, pi all differ from 2/9 by >0.1)
+
+(F4) Candidate D: Interior-point Pancharatnam midpoint selector
+------------------------------------------------------------------------
+  [PASS] (F4a) Pancharatnam midpoint on selected line gives delta = pi/24, not 2/9  (delta_midpoint = 0.130900, 2/9 = 0.222222)
+  [PASS] (F4b) Pancharatnam midpoint is structurally a midpoint (equal magnitudes)  (|<0|mid>| = 0.99144486, |<mid|pos>| = 0.99144486)
+
+(F5) Fractional position of m_* in (0, pi/12) is not a retained rational
+------------------------------------------------------------------------
+  [PASS] (F5a) delta_*/delta_pos = 8/(3 pi) (irrational multiple, not a retained Cl(3)/Z_3 rational)  (ratio = 0.84882636 = 8/(3pi) = 0.84882636)
+  [PASS] (F5b) delta_*/delta_pos is NOT any retained pure rational up to precision 1e-3  (closest rational gap = 0.015493)
+
+(F6) Every retained radian on Cl(3)/Z_3 is (rational) x pi
+------------------------------------------------------------------------
+  [PASS] (F6a) Every retained radian is (rational) x pi (verified against standard rational set)  (all retained radians are commensurate with pi)
+  [PASS] (F6b) The target delta = 2/9 is NOT a rational multiple of pi  (2/9 / pi = 0.070735530263 is not in {k/n : k,n small})
+  [PASS] (F6c) No retained radian in Cl(3)/Z_3 equals 2/9 within 1e-3  (min gap of retained radians to 2/9 = 0.039577)
+
+(F7) Plancherel weight 2/d^2 is dimensionless, with no retained radian map
+------------------------------------------------------------------------
+  [PASS] (F7a) Plancherel ratio (2 / dim Herm_d) = 2/d^2 (dimensionless, checked)  (ratio = 2/9 at d=3 as a pure dimensionless count)
+  [PASS] (F7b) No retained Cl(3)/Z_3 radian equals 1 exactly (pi is transcendental, all retained radians are rational multiples of pi)  (closest retained angle to 1 rad = 0.047198 (but no rational multiple of pi can equal 1 exactly))
+
+(F8) Selected-slice eigenline Berry selector reconfirmed to miss m_*
+------------------------------------------------------------------------
+  [PASS] (F8a) Lower-eigenline geometric phase at m_* is NOT 2/9 (R1 §6 reconfirmed)  (gamma_lower(m_0 -> m_*) = 0.178148, 2/9 = 0.222222)
+  [PASS] (F8b) Upper-eigenline geometric phase at m_* is NOT 2/9  (gamma_upper(m_0 -> m_*) = 0.276339, 2/9 = 0.222222)
+
+(F9) Summary: all four retained closure candidates fail
+------------------------------------------------------------------------
+  Candidate                          | value       | matches 2/9?
+  --------------------------------------------------------------
+  A: per-Z_3 PB on qubit              |   1.047198 | yes
+  B: closed-orbit Bargmann            |   3.141593 | yes
+  C: Plancherel weight (dimensionless) |   0.222222 | yes
+  D: Pancharatnam midpoint            |   0.130900 | yes
+  [PASS] (F9a) Candidate A (per-Z_3 PB) does not equal 2/9 in radians  (gap = 0.8250 rad)
+  [PASS] (F9b) Candidate B (closed Bargmann) does not equal 2/9 in radians  (gap = 2.9194 rad)
+  [PASS] (F9c) Candidate C (Plancherel weight) matches numerically but is dimensionless -- its identification with radians IS postulate P, not a derivation  (the Plancherel identification is a tautology for P, not a proof)
+  [PASS] (F9d) Candidate D (Pancharatnam midpoint) does not equal 2/9  (gap = 0.0913 rad)
+
+========================================================================
+PASS=23 FAIL=0
+========================================================================
+
+----- stderr -----
+

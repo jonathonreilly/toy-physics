@@ -1,0 +1,34 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_neutron_edm_bound.py
+runner_sha256: a9d0edd4061e0375cf390d991c77ec8ee5d170056509924e2b42f11418c52e26
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================
+CKM neutron-EDM corollary and bounded prediction
+========================================================================
+
+  [PASS (D)] QCD theta contribution vanishes on the retained surface  (θ_eff = 0 → d_n(QCD) = 0)
+  [PASS (D)] Framework Jarlskog matches promoted CKM package  (J = 3.3311e-05)
+  Short-distance estimate: 4.95e-33 e·cm
+  Long-distance estimate:  7.71e-33 e·cm
+  [PASS (D)] Surviving neutron EDM is CKM-only on the retained surface  (strong-sector piece vanishes, nonzero CKM estimate survives)
+  [PASS (D)] CKM-only neutron EDM lies on the expected EFT scale  (d_n(CKM) ≈ 7.71e-33 e·cm)
+  [PASS (D)] CKM-only estimate is well below the current bound  (prediction/bound ≈ 4.28e-07)
+
+========================================================================
+SUMMARY: PASS=5  FAIL=0
+========================================================================
+
+Retained structural corollary:
+  d_n(QCD) = 0 exactly on the retained θ_eff = 0 surface
+  the surviving neutron EDM is CKM-only
+
+Bounded quantitative continuation:
+  d_n(CKM) ≈ 7.7e-33 e·cm
+  import class: promoted CKM atlas/axiom package + standard EFT bridge
+
+----- stderr -----
+

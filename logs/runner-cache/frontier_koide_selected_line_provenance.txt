@@ -1,0 +1,76 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_selected_line_provenance.py
+runner_sha256: 31ba0b0d2722ed3759489d0a7308969bdd6dc0049f831eaae3fac9d75f6df686
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.60
+status: ok
+----- stdout -----
+========================================================================================
+KOIDE SELECTED-LINE PROVENANCE RUNNER
+========================================================================================
+
+Question:
+  Are the numeric slot values (delta, q_+) = (sqrt(6)/3, sqrt(6)/3) in the
+  physical charged-lepton selected line  H_sel(m) = H(m, sqrt(6)/3, sqrt(6)/3)
+  forced by retained-on-main ingredients alone?
+
+========================================================================================
+PART 1: THE RETAINED AFFINE CHART H(m, delta, q_+) IS CONSISTENT WITH MAIN
+========================================================================================
+  [PASS] The retained affine chart has Hermitian base and Hermitian active/spectator generators  (max ||X - X^dag|| = 0.00e+00)
+  [PASS] H(m, delta, q_+) is affine in (m, delta, q_+) around H_base  (linearity residual = 3.14e-16)
+
+========================================================================================
+PART 2: PARITY-COMPATIBLE DIAGONAL BASELINE IS D = diag(A, B, B)
+========================================================================================
+  [PASS] T_delta is exactly 23-odd and T_q is exactly 23-even under the 23 exchange  (odd err = 0.00e+00, even err = 0.00e+00)
+  [PASS] [D, P23] = 0 iff D = diag(A, B, B); asymmetric diagonal fails, parity-compatible succeeds  (||[D_asym, P23]|| = 8.49e-01, ||[D_sym, P23]|| = 0.00e+00)
+
+========================================================================================
+PART 3: DETERMINANT AND ZERO-SOURCE HESSIAN ON D = diag(A, B, B)
+========================================================================================
+  [PASS] Symbolic det(D + J_act) matches the retained formula A B^2 - (A + 2B)(d^2 + q^2) - 6 d^2 q + 2 q^3  (det diff = 0)
+  [PASS] Zero-source Hessian is isotropic: W_dd = W_qq = -2(A+2B)/(AB^2) and W_dq = 0  (W_dd=-2/B**2 - 4/(A*B), W_qq=-2/B**2 - 4/(A*B), W_dq=0)
+  [PASS] Finite-difference Hessians confirm the isotropic zero-source curvature numerically  (max fd err over 4 (A,B) samples = 4.27e-06)
+
+========================================================================================
+PART 4: UNIQUE CHAMBER-BOUNDARY MINIMIZER IS (sqrt(6)/3, sqrt(6)/3)
+========================================================================================
+  [PASS] Symbolic minimizer on the boundary is delta_* = sqrt(6)/3  (symbolic delta_* = sqrt(6)/3)
+  [PASS] The boundary quadratic is strictly convex (d^2 Q / d delta^2 = 4 > 0)  (d^2 Q / d delta^2 = 4)
+  [PASS] q_+* at the boundary minimizer equals sqrt(6)/3  (symbolic q_+* = sqrt(6)/3)
+  [PASS] Numeric scan: every neighboring boundary point has strictly larger |(delta, q_+)|^2  (val_at=1.33333333, bdy_vals=[1.51333333, 1.35333333, 1.35333333, 1.51333333])
+
+========================================================================================
+PART 5: INTRINSIC-CP CROSS-CHECK  q_+* = -3 cp1 / 2 = sqrt(6)/3
+========================================================================================
+  [PASS] q_+* reconstructed from intrinsic cp1 matches sqrt(6)/3 (independent of the observable-principle minimization)  (q_+*(cp1) = 0.8164965809277260 vs sqrt(6)/3 = 0.8164965809277259, err=1.11e-16)
+
+========================================================================================
+PART 6: END-TO-END SELECTED LINE H_sel(m) = H(m, sqrt(6)/3, sqrt(6)/3)
+========================================================================================
+  [PASS] H_sel(m) agrees with H_base + m T_m + (sqrt(6)/3)(T_delta + T_q) for all tested m  (max reconstruction residual = 0.00e+00)
+  [PASS] H_sel(m) is Hermitian for every m on the selected line  (max ||H_sel - H_sel^dag|| = 0.00e+00)
+
+========================================================================================
+PART 7: CITED PROVENANCE FILES EXIST ON DISK
+========================================================================================
+  [PASS] All cited retained provenance files are present in this worktree  (all present)
+
+========================================================================================
+RESULT
+========================================================================================
+  The slot values (sqrt(6)/3, sqrt(6)/3) are derived end-to-end from:
+    - the retained affine chart H(m, delta, q_+)
+    - the retained 23 odd/even parity grading (forcing D = diag(A, B, B))
+    - the retained observable-principle scalar generator
+      W_D[J] = log|det(D + J)| - log|det D|
+    - the retained active half-plane q_+ >= sqrt(8/3) - delta
+    - strict convexity of delta^2 + q_+^2
+  Independent frozen-intrinsic-CP check confirms q_+* = -3 cp1 / 2 = sqrt(6)/3.
+
+PASS=15 FAIL=0
+
+----- stderr -----
+

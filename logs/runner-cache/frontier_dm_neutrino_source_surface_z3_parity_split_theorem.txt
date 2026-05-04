@@ -1,0 +1,103 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_z3_parity_split_theorem.py
+runner_sha256: e90e63041822838b26715d445364347b823dff48a79061cb5b68c5ce61379f66
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.56
+status: ok
+----- stdout -----
+========================================================================================
+G1 PATH-C: MICROSCOPIC HOLONOMY / Z_3-PARITY SELECTOR ATTEMPT
+========================================================================================
+Branch: (off )
+Result: OBSTRUCTION + CROSS-CHECK-CANDIDATE (the selector gate stays open)
+
+========================================================================================
+PART 1: Z_3-PARITY DECOMPOSITION OF (T_m, T_delta, T_q)
+========================================================================================
+ [PASS (C)] sym(T_q) = T_q  (T_q is Z_3-circulant) (||sym(T_q) - T_q|| = 0.00e+00)
+ [PASS (C)] anti(T_q) = 0  (T_q carries no Z_3-anti component) (||anti(T_q)|| = 0.00e+00)
+ [PASS (C)] sym(T_delta) = 0  (T_delta carries no Z_3-circulant component) (||sym(T_delta)|| = 0.00e+00)
+ [PASS (C)] anti(T_delta) = T_delta  (T_delta is pure Z_3-anti) (||anti(T_delta) - T_delta|| = 0.00e+00)
+ [PASS (C)] T_m has NONZERO components in both parity sectors (spectator is mixed) (||sym(T_m)|| = 1.0000, ||anti(T_m)|| = 1.4142)
+ [PASS (C)] Trace inner product orthogonality: <sym(X), anti(Y)> = 0 for all pairs of generators (max |<sym, anti>| = 4.44e-16)
+
+========================================================================================
+PART 2: SINGLE-PARITY SELECTOR OBSTRUCTION THEOREM
+========================================================================================
+ [PASS (C)] sym(H) is INDEPENDENT of delta at fixed (m, q_+) (max ||sym(H)[delta] - sym(H)[0]|| = 6.28e-16)
+ [PASS (C)] anti(H) is INDEPENDENT of q_+ at fixed (m, delta) (max ||anti(H)[q] - anti(H)[0]|| = 7.69e-16)
+ [PASS (C)] Tr(sym(H)^2) is independent of delta (parity-definite -> only q_+ sensitivity) (values = ['5.238068', '5.238068', '5.238068', '5.238068'])
+ [PASS (C)] Tr(anti(H)^2) is independent of q_+ (parity-definite -> only delta sensitivity) (values = ['6.921797', '6.921797', '6.921797', '6.921797'])
+
+ Structural corollary:
+  Any sole-axiom-native scalar f built purely from sym(H)
+  cannot fix delta. Any such f built purely from anti(H)
+  cannot fix q_+. the Z_3 parity-split theorem must therefore use a MIXED invariant,
+  which we analyze in Part 3.
+ [PASS (C)] Single-parity obstruction is CONFIRMED by direct generator computation
+
+========================================================================================
+PART 3: MIXED-INVARIANT CROSS-CHECKS vs SCHUR-Q CANDIDATE
+========================================================================================
+ [PASS (C)] det(H) has exactly ONE chamber-interior critical point (found 2 total root(s), 1 in-chamber)
+ [PASS (C)] det(H) chamber-interior critical point matches (0.613372, 0.964443, 1.552431) ((m, δ, q_+) = (0.613372, 0.964443, 1.552431))
+ [PASS (C)] det(H) critical point STRICTLY DISAGREES with Schur-Q minimum (sqrt(6)/3, sqrt(6)/3) (|δ_det - sqrt(6)/3| = 0.1479, |q_det - sqrt(6)/3| = 0.7359)
+ [PASS (C)] det(H) critical point is STRICTLY INTERIOR to chamber (q_+ > sqrt(8/3) - δ) (q_+ - (sqrt(8/3) - δ) = 0.883880)
+ [PASS (C)] Tr(H^2) global minimum is OUTSIDE the chamber (q_+ < sqrt(8/3) - delta) ((m, δ, q_+) = (0.538748, 1.088662, 0.134687); q_floor = 0.544331)
+ [PASS (C)] Tr(H^2) on chamber boundary gives delta ≈ 1.268, q_+ ≈ 0.365 (DISAGREES with sqrt(6)/3) ((m, δ, q_+) = (0.385132, 1.267881, 0.365112))
+ [PASS (C)] Character-matching K12 = -(a_* + b_*) (Im part) forces delta ≈ 0.800 (delta_char = 0.7999869733)
+ [PASS (C)] Character-matching delta_char DISAGREES with Schur-Q minimum sqrt(6)/3 (|delta_char - sqrt(6)/3| = 0.016510)
+ [PASS (C)] Character-matching does NOT constrain q_+ (K12 is q_+-independent) (K12 = (m - 4√2/9) + i(√3 δ - 4√2/3): no q_+ dependence)
+
+ Summary of mixed-invariant predictions:
+  Schur-Q variational (the cubic variational selection obstruction): (δ, q_+) = (sqrt(6)/3, sqrt(6)/3)
+                  ≈ (0.816497, 0.816497)
+  det(H) stationary (the Z_3 parity-split theorem-a): (δ, q_+) ≈ (0.964443, 1.552431)
+  Tr(H^2) on chamber (the Z_3 parity-split theorem-b): (δ, q_+) ≈ (1.267881, 0.365112)
+  K12 char-match  (the Z_3 parity-split theorem-c): δ ≈ 0.799987, q_+ unconstrained
+
+ All three the Z_3 parity-split theorem candidates DISAGREE with the Schur-Q variational candidate.
+ None reproduces (sqrt(6)/3, sqrt(6)/3).
+
+========================================================================================
+PART 4: NARROWED GAP STATEMENT AND CLAIM-BOUNDARY DISCIPLINE
+========================================================================================
+ RETAINED-ATLAS THEOREMS established by this runner:
+  (T1) Z_3-parity decomposition of (T_m, T_delta, T_q):
+     T_q is pure Z_3-symmetric; T_delta is pure Z_3-anti.
+  (T2) Single-parity selector obstruction:
+     any Z_3-parity-definite scalar fixes at most one of (δ, q_+).
+
+ CROSS-CHECK RESULT (obstruction-style, not a new theorem):
+  All natural mixed-invariant microscopic selectors tested
+   (a) det(H) stationary,
+   (b) Tr(H^2) chamber-boundary minimum,
+   (c) K12 character-matching,
+  disagree with the Schur-Q variational candidate sqrt(6)/3.
+
+ WHAT THIS DOES NOT CLOSE:
+  * the Z_3 parity-split theorem does NOT supply a sole-axiom selector law.
+  * It does NOT promote det-stationarity to theorem-grade.
+  * It does NOT close the DM flagship gate.
+  * It does NOT override the Schur-baseline partial closure.
+
+ WHAT THIS SHARPENS:
+  * The the selector gap now has a structural obstruction along all
+   Z_3-parity-definite microscopic scalars (cannot work, period).
+  * Among natural mixed invariants, none reproduces sqrt(6)/3.
+  * If a future candidate selector is proposed, it MUST be
+   checked against this cross-check: does it agree with
+   the Schur-Q variational minimum or with one of (a)/(b)/(c)?
+  * Any claim that (delta_*, q_+*) = (sqrt(6)/3, sqrt(6)/3)
+   on physical grounds must justify why the microscopic
+   the Z_3 parity-split theorem candidates miss it. This is a new discipline test.
+ [PASS (C)] the Z_3 parity-split theorem obstructs single-parity selectors and records mixed-invariant disagreements (narrower-gap + cross-check-candidate, NOT theorem-grade closure)
+ [PASS (C)] the selector gate remains OPEN (no sole-axiom selector closure achieved) (claim discipline preserved)
+
+========================================================================================
+TOTAL: PASS = 22, FAIL = 0
+========================================================================================
+
+----- stderr -----
+

@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_two_higgs_23_symmetric_slot_nogo.py
+runner_sha256: 34d9f3d263c3cd1075991ba1e1955667143f77e5787ab1bb2a05ccb7c8abf1af
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.20
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO TWO-HIGGS 2<->3-SYMMETRIC SLOT NO-GO
+========================================================================================
+
+Question:
+  Can the simplest 2<->3-symmetric canonical two-Higgs sublane already
+  realize the exact source-phase singlet-doublet CP carrier?
+
+========================================================================================
+PART 1: SOURCE-PHASE SLOT ALIGNMENT ON THE SIMPLEST 2<->3-SYMMETRIC SUBLANE
+========================================================================================
+  [PASS (C)] K01 source-phase alignment reduces to one exact polynomial condition  (cond1 = sqrt(3)*(a**2 - b**2 - 3*b*d - c**2 + d**2)/6)
+  [PASS (C)] K02 source-phase alignment reduces to one exact polynomial condition  (cond2 = sqrt(3)*(-a**2 + b**2 + c**2 - d**2)/6)
+
+  So exact source-phase alignment on this restricted sublane is not a
+  vague numerical tuning problem. It is two explicit polynomial equations.
+
+========================================================================================
+PART 2: THE TWO ALIGNMENT CONDITIONS FORCE b d = 0
+========================================================================================
+  [PASS (C)] Combining the exact alignment conditions gives a pure b d obstruction  (cond1 + cond2 = -sqrt(3)*b*d/2)
+  [PASS (C)] Therefore exact source-phase alignment on this sublane requires b d = 0  (either the doublet x-amplitude or the doublet y-amplitude collapses)
+
+  This is the key obstruction: the simplest 2<->3-symmetric two-Higgs
+  sublane cannot keep both relevant doublet amplitudes active while also
+  aligning to the exact source-phase singlet-doublet carrier.
+
+========================================================================================
+PART 3: ON THIS SUBLANE THE PHYSICAL CP TENSOR IS PROPORTIONAL TO b d
+========================================================================================
+  [PASS (C)] Im[(K_mass)_{01}^2] factorizes with an explicit b d prefactor  (Im01 = sqrt(3)*b*d*(-2*a*c - b*d - 2*c**2 + 2*d**2)/12)
+  [PASS (C)] Im[(K_mass)_{02}^2] factorizes with an explicit b d prefactor  (Im02 = sqrt(3)*b*d*(4*a**2 + 2*a*c - 4*b**2 - 5*b*d - 2*c**2 + 2*d**2)/12)
+  [PASS (C)] Once the alignment obstruction forces b d = 0, the physical CP tensor collapses to zero  (both forced branches are CP-empty)
+
+  So this restricted sublane does not merely fail to derive the needed
+  singlet-doublet carrier. Its exact source-phase aligned branch is
+  structurally CP-empty.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact answer:
+    - on the restricted sublane x=(a,b,b), y=(c,d,d), delta=2 pi / 3,
+      source-phase singlet-doublet alignment gives two exact polynomial
+      conditions
+    - together they force b d = 0
+    - but the physical CP tensor on that sublane is proportional to b d
+    - therefore the exact aligned branch is CP-empty
+
+  The simplest 2<->3-symmetric two-Higgs sublane is therefore exhausted.
+  Full DM closure now needs a more asymmetric / right-sensitive
+  realization on the admitted two-Higgs lane.
+
+PASS=7 FAIL=0
+
+----- stderr -----
+

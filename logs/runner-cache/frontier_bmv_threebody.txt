@@ -1,0 +1,116 @@
+===== runner cache v1 =====
+runner: scripts/frontier_bmv_threebody.py
+runner_sha256: 7a7d966af4784d456a3d10e99c5808b9e9f9d69e1482457feb44d1265f6580f3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.39
+status: ok
+----- stdout -----
+==========================================================================================
+HISTORICAL HEURISTIC THREE-BODY BRANCH-ENTANGLEMENT DIAGNOSTIC
+==========================================================================================
+
+Lattice: 2D staggered, side=12, n=144
+Particle 1 at (2.0, 6.0), Particle 2 at (6.0, 2.0), Particle 3 at (10.0, 6.0)
+Source at (6, 6)
+MASS=0.3, MU2=0.22, DT=0.12, N_STEPS=30, sigma=1.5
+
+Protocol: externally imposed source superposition |A> + |B>,
+          where A=present and B=absent.
+|Psi> = (|psi_1A>|psi_2A>|psi_3A> + |psi_1B>|psi_2B>|psi_3B>) / sqrt(2)
+
+Guardrail: this is the historical heuristic runner only.
+Use frontier_branch_entanglement_robustness.py for the canonical
+3-body interpretation surface on current main.
+
+--- Branch Overlaps ---
+    G       o_1      o_2      o_3
+------------------------------------
+    1   0.99230  0.99230  0.99791
+    5   0.84849  0.84849  0.94698
+   10   0.57665  0.57665  0.80608
+   20   0.12698  0.12698  0.41617
+   50   0.20407  0.20407  0.34672
+
+--- Bipartite Entropies (nats) ---
+    G     S(1|23)    S(2|13)    S(3|12)                  type
+------------------------------------------------------------
+    1    0.030877   0.030877   0.045004                W-type
+    5    0.321217   0.321217   0.405019  GHZ-type (symmetric)
+   10    0.580844   0.580844   0.636793  GHZ-type (symmetric)
+   20    0.691750   0.691750   0.693017  GHZ-type (symmetric)
+   50    0.690642   0.690642   0.692280  GHZ-type (symmetric)
+
+--- Pairwise Concurrences & 3-Tangle ---
+    G      C_12     C_13     C_23    C_1|23      tau_3    CKW_res
+----------------------------------------------------------------------
+    1   0.00772  0.00400  0.00400   0.13946   0.000000   0.019375
+    5   0.15770  0.08579  0.08579   0.59530   0.002863   0.322154
+   10   0.42431  0.21988  0.21988   0.88540   0.097046   0.555553
+   20   0.40695  0.11383  0.11383   0.99860   0.790608   0.818639
+   50   0.33699  0.19004  0.19004   0.99749   0.831131   0.845314
+
+--- Pairwise Mutual Information (nats) ---
+    G      I(1:2)     I(1:3)     I(2:3)
+----------------------------------------
+    1    0.016750   0.045004   0.045004
+    5    0.237415   0.405019   0.405019
+   10    0.524896   0.636793   0.636793
+   20    0.690483   0.693017   0.693017
+   50    0.689004   0.692280   0.692280
+
+--- Unitarity Check (norms) ---
+Worst norm deviation from 1.0: 2.11e-15
+PASS: Unitarity preserved.
+
+==========================================================================================
+HEURISTIC ANALYSIS
+==========================================================================================
+
+Classification summary across G = [1, 5, 10, 20, 50]:
+  G=    1: W-type
+  G=    5: GHZ-type (symmetric)
+  G=   10: GHZ-type (symmetric)
+  G=   20: GHZ-type (symmetric)
+  G=   50: GHZ-type (symmetric)
+
+DOMINANT CLASS (heuristic): GHZ-type
+  This is the standalone runner's internal classifier only.
+  Use frontier_branch_entanglement_robustness.py for the
+  canonical 3-body interpretation.
+
+3-Tangle range: 0.000000 to 0.831131
+Max bipartite entropy: 0.69302 nats = 0.99981 bits
+  (Max possible for 2-branch: ln(2) = 0.69315 nats)
+
+Symmetry of bipartite entropies:
+  G=    1: mean=0.03559, std=0.00666, CV=0.187 [asymmetric]
+  G=    5: mean=0.34915, std=0.03950, CV=0.113 [symmetric]
+  G=   10: mean=0.59949, std=0.02637, CV=0.044 [symmetric]
+  G=   20: mean=0.69217, std=0.00060, CV=0.001 [symmetric]
+  G=   50: mean=0.69119, std=0.00077, CV=0.001 [symmetric]
+
+==========================================================================================
+HEURISTIC VERDICT
+==========================================================================================
+
+STRUCTURAL NOTE:
+  This standalone runner uses a heuristic non-orthogonal-state
+  tangle construction. The later robustness harness is the
+  canonical interpretation surface for the 3-body protocol.
+
+HEURISTIC RESULT: positive 3-tangle on this runner.
+  Maximum 3-tangle: 0.831131
+  Do not treat this as the canonical tripartite classification.
+
+CKW monogamy check (C_{1|23}^2 >= C_{12}^2 + C_{13}^2):
+  G=    1: 0.019450 >= 0.000076? SATISFIED
+  G=    5: 0.354382 >= 0.032228? SATISFIED
+  G=   10: 0.783938 >= 0.228385? SATISFIED
+  G=   20: 0.997207 >= 0.178568? SATISFIED
+  G=   50: 0.994994 >= 0.149680? SATISFIED
+
+Time: 1.07s
+
+----- stderr -----
+

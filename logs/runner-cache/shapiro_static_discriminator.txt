@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/shapiro_static_discriminator.py
+runner_sha256: 7d1d1a0d18b658f8678062de7a51505ebcf303ac635f466fc01ced15d868a168
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

@@ -1,0 +1,62 @@
+===== runner cache v1 =====
+runner: scripts/symmetry_generated_paired_chokepoint.py
+runner_sha256: 8d4f4cbe80197f16501888bb68e82a87c82881954b1c85d79fad2d3b4ff8ca02
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 34.99
+status: ok
+----- stdout -----
+========================================================================================================================
+SYMMETRY-GENERATED PAIRED CHOKEPOINT PILOT
+  approximate symmetry vs exact mirror chokepoint vs random chokepoint
+  npl_half=25 (paired total 50), n_layers=[40, 60, 80, 100], seeds=16, connect_radius=4.0
+========================================================================================================================
+
+FAMILY: random chokepoint
+     N      d_TV        pur_cl        Born         gravity          k0   ok
+  ------------------------------------------------------------------------
+    40      FAIL          FAIL        FAIL            FAIL        FAIL    0
+    60      FAIL          FAIL        FAIL            FAIL        FAIL    0
+    80      FAIL          FAIL        FAIL            FAIL        FAIL    0
+   100      FAIL          FAIL        FAIL            FAIL        FAIL    0
+
+FAMILY: exact mirror chokepoint
+     N      d_TV        pur_cl        Born         gravity          k0   ok
+  ------------------------------------------------------------------------
+    40      FAIL          FAIL        FAIL            FAIL        FAIL    0
+    60      FAIL          FAIL        FAIL            FAIL        FAIL    0
+    80      FAIL          FAIL        FAIL            FAIL        FAIL    0
+   100      FAIL          FAIL        FAIL            FAIL        FAIL    0
+
+FAMILY: paired-generated noise=0.0
+     N      d_TV        pur_cl        Born         gravity          k0   ok
+  ------------------------------------------------------------------------
+    40      FAIL          FAIL        FAIL            FAIL        FAIL    0
+    60      FAIL          FAIL        FAIL            FAIL        FAIL    0
+    80      FAIL          FAIL        FAIL            FAIL        FAIL    0
+   100      FAIL          FAIL        FAIL            FAIL        FAIL    0
+
+FAMILY: paired-generated noise=0.15
+     N      d_TV        pur_cl        Born         gravity          k0   ok
+  ------------------------------------------------------------------------
+    40      FAIL          FAIL        FAIL            FAIL        FAIL    0
+    60      FAIL          FAIL        FAIL            FAIL        FAIL    0
+    80      FAIL          FAIL        FAIL            FAIL        FAIL    0
+   100      FAIL          FAIL        FAIL            FAIL        FAIL    0
+
+FAMILY: paired-generated noise=0.35
+     N      d_TV        pur_cl        Born         gravity          k0   ok
+  ------------------------------------------------------------------------
+    40      FAIL          FAIL        FAIL            FAIL        FAIL    0
+    60      FAIL          FAIL        FAIL            FAIL        FAIL    0
+    80      FAIL          FAIL        FAIL            FAIL        FAIL    0
+   100      FAIL          FAIL        FAIL            FAIL        FAIL    0
+
+Interpretation:
+  - If the paired-generated family keeps most of the mirror gap over random
+    and stays Born-clean, the symmetry idea is a live axiom-friendly lane.
+  - If it collapses quickly toward random as pair_noise grows, mirror is
+    likely a hard-coded symmetry effect rather than a generative one.
+
+----- stderr -----
+

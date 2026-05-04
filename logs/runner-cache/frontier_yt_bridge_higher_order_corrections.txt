@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_bridge_higher_order_corrections.py
+runner_sha256: f8958da100e616e85f8050d48ae5b9023d124cd6ad50958442e7bf1513be74cb
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 26.38
+status: ok
+----- stdout -----
+==============================================================================
+y_t BRIDGE HIGHER-ORDER CORRECTIONS
+==============================================================================
+
+Probe whether cubic and quartic local corrections stay parametrically small around the current UV-localized selector.
+
+Best constructive UV bridge: logistic center=0.975 width=0.020
+  y_t(v) = 0.917605
+  deviation = +0.0005%
+
+Amplitude expansion around the selector point a = 1:
+  y_t(a) = c0 + c1*δ + c2*δ^2 + c3*δ^3 + c4*δ^4, with δ = a - 1
+  c0 = 0.91760483
+  c1 = 0.02750406
+  c2 = 0.00497496
+  c3 = -0.00034980
+  c4 = -0.00004606
+
+Local correction sizes at |δ| = 0.10:
+  quadratic magnitude = 4.974959e-05
+  cubic magnitude     = 3.498024e-07
+  quartic magnitude   = 4.605867e-09
+  |cubic+quartic| / quadratic = 7.123842e-03
+
+Fit quality:
+  RMSE = 6.360240e-13
+  RMSE / span = 1.156384e-10
+
+  [PASS] 1a-best-constructive-bridge-still-close-to-the-accepted-endpoint: best deviation = +0.0005%
+  [PASS] 1b-quadratic-leading-piece-remains-the-dominant-local-term: max |cubic+quartic|/quadratic over |δ|<=0.10 = 7.123842e-03
+  [PASS] 1c-cubic-term-is-parametrically-small-at-10-percent-amplitude: |cubic|/quadratic at |δ|=0.10 = 7.031261e-03
+  [PASS] 1d-quartic-term-is-parametrically-smaller-still-at-10-percent-amplitude: |quartic|/quadratic at |δ|=0.10 = 9.258100e-05
+  [PASS] 1e-fourth-order-fit-reconstructs-the-amplitude-scan-well: RMSE/span = 1.156384e-10
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+On the viable UV-localized bridge family, the quadratic selector still dominates. The cubic correction is small and the quartic correction is smaller still on a 10% amplitude tube around the selector.
+So the higher-order local corrections are parametrically subleading at the level probed here, and the local-Hessian picture remains the right leading description.
+
+This is a bounded-support result: it quantifies higher-order corrections
+around the current selector, but it does not prove the exact microscopic
+origin of the selector or remove the residual y_t bound.
+
+==============================================================================
+FINAL TALLY: 5 PASS / 0 FAIL
+Elapsed: 25.80 s
+==============================================================================
+
+----- stderr -----
+

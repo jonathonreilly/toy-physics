@@ -1,0 +1,152 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_taste_readout_operator_model.py
+runner_sha256: 64b4db7e402e4ea7c4a556a611922d17fba370dd4a71e9a1750bc6dd9e68499d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.15
+status: ok
+----- stdout -----
+TELEPORTATION TASTE READOUT/OPERATOR MODEL
+Status: planning / first artifact; quantum state teleportation only
+Criterion: native operator must factor as O_logical tensor I_env for the retained last KS taste bit
+Audit grid: dims=1,2,3 sides=2,4 tolerance=1.0e-12
+
+Case: dim=1 side=2
+  factorization: N=2, envs=1, retained taste axis=0
+  fixed pair-hop X versus axis-adapted retained-bit X: max difference=0
+  single-register O_logical tensor I_env tests:
+    PASS native sublattice Z          role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=Z, expected err=0
+    PASS axis logical Z               role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=Z, expected err=0
+    PASS axis-adapted X               role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=X, expected err=0
+    PASS fixed pair-hop X             role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=X, expected err=0
+    PASS native Z then fixed X        role=correction        max=0 rel=0 offdiag=0 diag-var=0 candidate=ZX, expected err=0
+    PASS axis Z then axis X           role=correction        max=0 rel=0 offdiag=0 diag-var=0 candidate=ZX, expected err=0
+    PASS native Z+ projector          role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=Pz+, expected err=0
+    PASS axis Z+ projector            role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=Pz+, expected err=0
+    PASS axis X+ projector            role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=Px+, expected err=0
+    PASS fixed site projector         role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=Pz+, expected err=0
+    PASS fixed env projector          role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=I, expected err=0
+  two-register representative measurement tests:
+    PASS axis Bell Phi+ projector           role=Bell measurement fro=0 rel=0 candidate=Bell Phi+, expected err=0
+    PASS native-Z/fixed-X Bell Phi+ projector role=Bell measurement fro=0 rel=0 candidate=Bell Phi+, expected err=0
+    PASS native ZZ stabilizer               role=joint measurement fro=0 rel=0 candidate=ZZ, expected err=0
+    PASS fixed XX stabilizer                role=joint measurement fro=0 rel=0 candidate=XX, expected err=0
+
+Case: dim=1 side=4
+  factorization: N=4, envs=2, retained taste axis=0
+  fixed pair-hop X versus axis-adapted retained-bit X: max difference=0
+  single-register O_logical tensor I_env tests:
+    PASS native sublattice Z          role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=Z, expected err=0
+    PASS axis logical Z               role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=Z, expected err=0
+    PASS axis-adapted X               role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=X, expected err=0
+    PASS fixed pair-hop X             role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=X, expected err=0
+    PASS native Z then fixed X        role=correction        max=0 rel=0 offdiag=0 diag-var=0 candidate=ZX, expected err=0
+    PASS axis Z then axis X           role=correction        max=0 rel=0 offdiag=0 diag-var=0 candidate=ZX, expected err=0
+    PASS native Z+ projector          role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=Pz+, expected err=0
+    PASS axis Z+ projector            role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=Pz+, expected err=0
+    PASS axis X+ projector            role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=Px+, expected err=0
+    FAIL fixed site projector         role=measurement       max=0.500000 rel=0.707107 offdiag=0 diag-var=0.707107 candidate=mixed
+    FAIL fixed env projector          role=measurement       max=0.500000 rel=0.707107 offdiag=0 diag-var=1.000000 candidate=mixed
+  two-register representative measurement tests:
+    PASS axis Bell Phi+ projector           role=Bell measurement fro=0 rel=0 candidate=Bell Phi+, expected err=0
+    PASS native-Z/fixed-X Bell Phi+ projector role=Bell measurement fro=0 rel=0 candidate=Bell Phi+, expected err=0
+    PASS native ZZ stabilizer               role=joint measurement fro=0 rel=0 candidate=ZZ, expected err=0
+    PASS fixed XX stabilizer                role=joint measurement fro=0 rel=0 candidate=XX, expected err=0
+
+Case: dim=2 side=2
+  factorization: N=4, envs=2, retained taste axis=1
+  fixed pair-hop X versus axis-adapted retained-bit X: max difference=0
+  single-register O_logical tensor I_env tests:
+    FAIL native sublattice Z          role=readout/correction max=1.000000 rel=1.000000 offdiag=0 diag-var=2.000000 candidate=0
+    PASS axis logical Z               role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=Z, expected err=0
+    PASS axis-adapted X               role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=X, expected err=0
+    PASS fixed pair-hop X             role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=X, expected err=0
+    FAIL native Z then fixed X        role=correction        max=1.000000 rel=1.000000 offdiag=0 diag-var=2.000000 candidate=0
+    PASS axis Z then axis X           role=correction        max=0 rel=0 offdiag=0 diag-var=0 candidate=ZX, expected err=0
+    FAIL native Z+ projector          role=measurement       max=0.500000 rel=0.707107 offdiag=0 diag-var=1.000000 candidate=mixed
+    PASS axis Z+ projector            role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=Pz+, expected err=0
+    PASS axis X+ projector            role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=Px+, expected err=0
+    FAIL fixed site projector         role=measurement       max=0.500000 rel=0.707107 offdiag=0 diag-var=0.707107 candidate=mixed
+    FAIL fixed env projector          role=measurement       max=0.500000 rel=0.707107 offdiag=0 diag-var=1.000000 candidate=mixed
+  two-register representative measurement tests:
+    PASS axis Bell Phi+ projector           role=Bell measurement fro=0 rel=0 candidate=Bell Phi+, expected err=0
+    FAIL native-Z/fixed-X Bell Phi+ projector role=Bell measurement fro=1.414214 rel=0.707107 candidate=mixed
+    FAIL native ZZ stabilizer               role=joint measurement fro=4.000000 rel=1.000000 candidate=mixed
+    PASS fixed XX stabilizer                role=joint measurement fro=0 rel=0 candidate=XX, expected err=0
+
+Case: dim=2 side=4
+  factorization: N=16, envs=8, retained taste axis=1
+  fixed pair-hop X versus axis-adapted retained-bit X: max difference=0
+  single-register O_logical tensor I_env tests:
+    FAIL native sublattice Z          role=readout/correction max=1.000000 rel=1.000000 offdiag=0 diag-var=4.000000 candidate=0
+    PASS axis logical Z               role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=Z, expected err=0
+    PASS axis-adapted X               role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=X, expected err=0
+    PASS fixed pair-hop X             role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=X, expected err=0
+    FAIL native Z then fixed X        role=correction        max=1.000000 rel=1.000000 offdiag=0 diag-var=4.000000 candidate=0
+    PASS axis Z then axis X           role=correction        max=0 rel=0 offdiag=0 diag-var=0 candidate=ZX, expected err=0
+    FAIL native Z+ projector          role=measurement       max=0.500000 rel=0.707107 offdiag=0 diag-var=2.000000 candidate=mixed
+    PASS axis Z+ projector            role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=Pz+, expected err=0
+    PASS axis X+ projector            role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=Px+, expected err=0
+    FAIL fixed site projector         role=measurement       max=0.875000 rel=0.935414 offdiag=0 diag-var=0.935414 candidate=mixed
+    FAIL fixed env projector          role=measurement       max=0.875000 rel=0.935414 offdiag=0 diag-var=1.322876 candidate=mixed
+  two-register representative measurement tests:
+    PASS axis Bell Phi+ projector           role=Bell measurement fro=0 rel=0 candidate=Bell Phi+, expected err=0
+    FAIL native-Z/fixed-X Bell Phi+ projector role=Bell measurement fro=5.656854 rel=0.707107 candidate=mixed
+    FAIL native ZZ stabilizer               role=joint measurement fro=16.000000 rel=1.000000 candidate=mixed
+    PASS fixed XX stabilizer                role=joint measurement fro=0 rel=0 candidate=XX, expected err=0
+
+Case: dim=3 side=2
+  factorization: N=8, envs=4, retained taste axis=2
+  fixed pair-hop X versus axis-adapted retained-bit X: max difference=0
+  single-register O_logical tensor I_env tests:
+    FAIL native sublattice Z          role=readout/correction max=1.000000 rel=1.000000 offdiag=0 diag-var=2.828427 candidate=0
+    PASS axis logical Z               role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=Z, expected err=0
+    PASS axis-adapted X               role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=X, expected err=0
+    PASS fixed pair-hop X             role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=X, expected err=0
+    FAIL native Z then fixed X        role=correction        max=1.000000 rel=1.000000 offdiag=0 diag-var=2.828427 candidate=0
+    PASS axis Z then axis X           role=correction        max=0 rel=0 offdiag=0 diag-var=0 candidate=ZX, expected err=0
+    FAIL native Z+ projector          role=measurement       max=0.500000 rel=0.707107 offdiag=0 diag-var=1.414214 candidate=mixed
+    PASS axis Z+ projector            role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=Pz+, expected err=0
+    PASS axis X+ projector            role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=Px+, expected err=0
+    FAIL fixed site projector         role=measurement       max=0.750000 rel=0.866025 offdiag=0 diag-var=0.866025 candidate=mixed
+    FAIL fixed env projector          role=measurement       max=0.750000 rel=0.866025 offdiag=0 diag-var=1.224745 candidate=mixed
+  two-register representative measurement tests:
+    PASS axis Bell Phi+ projector           role=Bell measurement fro=0 rel=0 candidate=Bell Phi+, expected err=0
+    FAIL native-Z/fixed-X Bell Phi+ projector role=Bell measurement fro=2.828427 rel=0.707107 candidate=mixed
+    FAIL native ZZ stabilizer               role=joint measurement fro=8.000000 rel=1.000000 candidate=mixed
+    PASS fixed XX stabilizer                role=joint measurement fro=0 rel=0 candidate=XX, expected err=0
+
+Case: dim=3 side=4
+  factorization: N=64, envs=32, retained taste axis=2
+  fixed pair-hop X versus axis-adapted retained-bit X: max difference=0
+  single-register O_logical tensor I_env tests:
+    FAIL native sublattice Z          role=readout/correction max=1.000000 rel=1.000000 offdiag=0 diag-var=8.000000 candidate=0
+    PASS axis logical Z               role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=Z, expected err=0
+    PASS axis-adapted X               role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=X, expected err=0
+    PASS fixed pair-hop X             role=readout/correction max=0 rel=0 offdiag=0 diag-var=0 candidate=X, expected err=0
+    FAIL native Z then fixed X        role=correction        max=1.000000 rel=1.000000 offdiag=0 diag-var=8.000000 candidate=0
+    PASS axis Z then axis X           role=correction        max=0 rel=0 offdiag=0 diag-var=0 candidate=ZX, expected err=0
+    FAIL native Z+ projector          role=measurement       max=0.500000 rel=0.707107 offdiag=0 diag-var=4.000000 candidate=mixed
+    PASS axis Z+ projector            role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=Pz+, expected err=0
+    PASS axis X+ projector            role=measurement       max=0 rel=0 offdiag=0 diag-var=0 candidate=Px+, expected err=0
+    FAIL fixed site projector         role=measurement       max=0.968750 rel=0.984251 offdiag=0 diag-var=0.984251 candidate=mixed
+    FAIL fixed env projector          role=measurement       max=0.968750 rel=0.984251 offdiag=0 diag-var=1.391941 candidate=mixed
+  two-register representative measurement tests:
+    PASS axis Bell Phi+ projector           role=Bell measurement fro=0 rel=0 candidate=Bell Phi+, expected err=0
+    FAIL native-Z/fixed-X Bell Phi+ projector role=Bell measurement fro=22.627417 rel=0.707107 candidate=mixed
+    FAIL native ZZ stabilizer               role=joint measurement fro=64.000000 rel=1.000000 candidate=mixed
+    PASS fixed XX stabilizer                role=joint measurement fro=0 rel=0 candidate=XX, expected err=0
+
+Bob pre-message separation check:
+  probes=22, Bob marginal bias from I/2=0.500000, max no-record to Bob marginal=2.220e-16, max pairwise no-record input distance=1.110e-16, max branch probability span=0.500000
+  note: Input independence holds here even though Bob's marginal is maximally biased from I/2 for a qubit and the resource is not a useful teleportation channel.
+
+Operational conditions for ignoring cells/spectators:
+  Cells/spectators can be ignored only for preparation, readout, Bell measurement, and correction operators proved to be O_logical tensor I_env, or for an apparatus proven blind to env labels within the target tolerance.
+  A fixed-cell/fixed-spectator restriction is not enough for the traced logical protocol; it is an environment-selected branch unless a heralding workflow and branch-conditioned operations are supplied.
+  In dim > 1, sublattice parity Z is xi_5 and contains spectator taste signs, so it is not a retained-bit-only logical Z. Use an axis logical Z for taste-only readout/correction.
+  Bob pre-message input-independence is a separate no-signaling check. It does not imply Bob's marginal is I/2 and does not establish native readout operationality.
+  Claim boundary: ordinary quantum state teleportation planning only; no matter, mass, charge, energy, object, or faster-than-light transport.
+
+----- stderr -----
+

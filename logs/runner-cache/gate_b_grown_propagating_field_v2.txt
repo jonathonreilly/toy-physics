@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_grown_propagating_field_v2.py
+runner_sha256: 6ae78cca3915ef13f1eb5346d2dccc5ee639ebe4a04127970115d08d4e77ed2d
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

@@ -1,0 +1,48 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_abcc_chamber_bound_derivation.py
+runner_sha256: e42c9bbb69866aeb50a4fc2b6a481471672e73f7672e256ef970584fbc59fd11
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.11
+status: ok
+----- stdout -----
+========================================================================
+frontier_dm_abcc_chamber_bound_derivation
+Inline derivation of the active affine chamber bound
+  q_+ + δ  ≥  √(8/3)
+Companion: docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md
+========================================================================
+
+T1  Retained constants and baseline
+  [PASS] E_1 = √(8/3)  (E_1 = 1.632993161855)
+  [PASS] γ² = 1/4  (γ² = 0.250000000000)
+
+T2  Chamber bound on the retained four-basin chart
+  [PASS] Basin 1: chamber inside = True  (q+δ = 1.648848, margin = +0.015855)
+  [PASS] Basin N: chamber inside = False  (q+δ = 1.279459, margin = -0.353534)
+  [PASS] Basin P: chamber inside = False  (q+δ = 0.103471, margin = -1.529522)
+  [PASS] Basin X: chamber inside = True  (q+δ = 14.769263, margin = +13.136270)
+
+T3  Carrier identity r_{31}² = s² + 1/4 on the retained chart
+  [PASS] Basin 1: r_{31}² − s² − γ² = 0  (residual = +0.000e+00)
+  [PASS] Basin N: r_{31}² − s² − γ² = 0  (residual = -2.776e-17)
+  [PASS] Basin P: r_{31}² − s² − γ² = 0  (residual = +0.000e+00)
+  [PASS] Basin X: r_{31}² − s² − γ² = 0  (residual = +0.000e+00)
+
+T4  Chamber-boundary saturation on the s = 0 locus
+  [PASS] All boundary samples satisfy s=0, r_{31}²=1/4, q+δ=E_1  (6 samples)
+
+T5  Half-plane converse: s ≥ 0 ⇒ q_+ + δ ≥ E_1
+  [PASS] All 200 s≥0 samples satisfy q+δ ≥ E_1  (min margin = +1.203e-01)
+  [PASS] Reconstructed margin matches sampled s  (max |margin − s| = 1.776e-15)
+  [PASS] All 100 forbidden-side samples give s < 0 (excluded branch)  (max s on forbidden side = -1.130e-01)
+
+T6  H(m, δ, q_+) is Hermitian on each retained basin (R1)
+  [PASS] H is Hermitian across all four retained basins  (max |H − H†| = 0.000e+00)
+
+========================================================================
+PASS=15 FAIL=0
+========================================================================
+
+----- stderr -----
+

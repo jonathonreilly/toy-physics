@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_yukawa_candidate.py
+runner_sha256: a602060f007a2d5dbac555a1a4eebfa7e6b1d605c337630b23b22120cf21344f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+==============================================================================
+NEUTRINO YUKAWA CASCADE CANDIDATE
+==============================================================================
+
+Framework inputs:
+  alpha_LM               = 0.090668
+  v_EW                   = 246.283 GeV
+  epsilon_weak           = 2.700267e-03
+  log(M_Pl / v)          = 38.442
+  1-step cascade factor  = 1.038043e-01
+  2-step cascade factor  = 1.077532e-02
+
+Seesaw targets from the staircase:
+  y_nu(k_B=7)            = 2.194452e-02
+  y_nu(k_B=8)            = 6.607735e-03
+  alpha_LM^2             = 8.220656e-03
+
+  [PASS] k8 target near alpha_LM^2  (y_k8 / alpha_LM^2 = 0.804)
+
+One-step EWSB candidates:
+  top-like base x step     y_nu = 4.556573e-02, k_eff = 6.409, y/y_k8 = 6.896
+  weak full x step         y_nu = 4.793065e-02, k_eff = 6.367, y/y_k8 = 7.254
+  weak active x step       y_nu = 6.778418e-02, k_eff = 6.078, y/y_k8 = 10.258
+  unit base x step         y_nu = 1.038043e-01, k_eff = 5.723, y/y_k8 = 15.710
+
+Two-step EWSB candidates:
+  top-like base x step^2   y_nu = 4.729917e-03, k_eff = 8.296, y/y_k8 = 0.716
+  weak full x step^2       y_nu = 4.975405e-03, k_eff = 8.254, y/y_k8 = 0.753
+  weak active x step^2     y_nu = 7.036286e-03, k_eff = 7.965, y/y_k8 = 1.065
+  unit base x step^2       y_nu = 1.077532e-02, k_eff = 7.610, y/y_k8 = 1.631
+
+  [PASS] two-step closer than one-step (top-like)  (|k_2 - 8| = 0.296, |k_1 - 8| = 1.591)
+  [PASS] two-step closer than one-step (weak-like)  (|k_2 - 8| = 0.254, |k_1 - 8| = 1.633)
+  [PASS] two-step closer than one-step (weak-active)  (|k_2 - 8| = 0.035, |k_1 - 8| = 1.922)
+  [PASS] two-step top-like lands near k_B=8  (k_eff = 8.296)
+  [PASS] two-step weak-full lands near k_B=8  (k_eff = 8.254)
+  [PASS] two-step weak-active lands near k_B=8  (k_eff = 7.965)
+  [PASS] two-step top-like gives y in k8 ballpark  (y / y_k8 = 0.716)
+  [PASS] two-step weak-full gives y in k8 ballpark  (y / y_k8 = 0.753)
+  [PASS] two-step weak-active gives y in k8 ballpark  (y / y_k8 = 1.065)
+
+Honest read:
+  1. The staircase target for k_B=8 is a few x 10^-3 Dirac Yukawa.
+  2. A second-order EWSB cascade naturally produces that scale from
+     an O(0.5-0.65) sector base Yukawa already present as a bounded
+     benchmark surface on branch.
+  3. The retained observable-principle normalization now selects
+     g_weak/sqrt(2) as the physical base surface; that selected
+     benchmark lands near k_B=8, and even the rejected active-space
+     comparator stays in the same ballpark.
+  4. A one-step cascade points too low in k_B; the attraction to k_B=8
+     is specifically a two-step effect.
+  5. This script is no longer the live blocker surface: the exact
+     retained local second-order coefficient is now fixed by the
+     downstream Schur theorem. The live unresolved object is the
+     Majorana / Z3 activation law.
+
+==============================================================================
+RESULT: 10 PASS, 0 FAIL
+==============================================================================
+
+----- stderr -----
+

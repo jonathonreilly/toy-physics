@@ -1,0 +1,52 @@
+===== runner cache v1 =====
+runner: scripts/wave_retardation_continuum_limit.py
+runner_sha256: 41511730d4491243ff8d9fd2b8be6e1f30a8124b0ff87adab534d34a88978e30
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+====================================================================================================
+WAVE-RETARDATION CONTINUUM-LIMIT REFINEMENT
+Physical parameters held APPROXIMATELY constant:
+  T_phys (total propagation 'time' = NL*H) = 15.0
+  iz_start_phys = 3.0, iz_end_phys = 0.0
+  D_phys (source displacement) = 3.0
+  PW_phys (transverse half-width) = 6.0
+  k*H (phase per edge step) = 2.5
+  S_phys (field source strength) = 0.004
+  v/c target = -0.3000  (realized v/c drifts due to
+                                 integer rounding of NL / src_layer /
+                                 iz_range; see per-run values below)
+====================================================================================================
+
+[coarse] H = 0.5
+  NL = 30, iz_range = 6, k_phase = 5.000
+  src_layer = 10, n_active = 20, v_per_layer = -0.3000
+  n_nodes = 18126
+  dM = +0.008362
+  dI (cached static, NL_dyn)   = +0.011747
+  dIeq (equilibrated static, 3*NL) = +0.002165
+  dN (imposed Newton)          = +0.011240
+  rel_MI   = 28.81%  (M vs cached static)
+  rel_MIeq = 74.11%  (M vs equilibrated static)
+  rel_MN   = 25.60%  (M vs imposed Newton)
+  rel_IeqN = 80.74%  (equilibrated vs imposed Newton)
+
+[medium] H = 0.35
+  NL = 43, iz_range = 9, k_phase = 7.143
+  src_layer = 14, n_active = 29, v_per_layer = -0.3103
+  n_nodes = 51451
+  dM = +0.007942
+  dI (cached static, NL_dyn)   = +0.008778
+  dIeq (equilibrated static, 3*NL) = +0.011256
+  dN (imposed Newton)          = +0.007842
+  rel_MI   = 9.53%  (M vs cached static)
+  rel_MIeq = 29.44%  (M vs equilibrated static)
+  rel_MN   = 1.26%  (M vs imposed Newton)
+  rel_IeqN = 30.33%  (equilibrated vs imposed Newton)
+
+[fine] H = 0.25
+
+----- stderr -----
+

@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/channel_count_guarded_prune.py
+runner_sha256: 254816a4e30601e35a90a711f5e13cbefd041928efcd751ddda6d7b4d1a6dafa
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

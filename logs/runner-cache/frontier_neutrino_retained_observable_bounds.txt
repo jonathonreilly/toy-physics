@@ -1,0 +1,179 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_retained_observable_bounds.py
+runner_sha256: 84fdbee712d25a9888008bc10e2507c61536242d0bc6f9cf4edcf51a6083cc52
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+Retained-package neutrino observable bounds theorem verification
+See docs/NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: retained package inputs (R1, R2, R3, R4)
+----------------------------------------------------------------------------------------
+  alpha_LM          = 9.066784e-02
+  v_EW              = 2.462828e+02 GeV
+  y_nu^eff          = 6.662641e-03
+  A = M_Pl alpha_LM^7 = 6.149685e+11 GeV
+  B = M_Pl alpha_LM^8 = 5.575786e+10 GeV
+  M_1 (heavy)       = 5.323014e+10 GeV
+
+  R1: m_3 (retained)         = 5.058286e-02 eV
+  R2: Dm^2_31 (retained)     = 2.539456e-03 eV^2
+  R3: structural normal ordering m_1 < m_2 < m_3
+  R4: PMNS unitarity Sum |U_ei|^2 = 1, m_i >= 0
+
+  [PASS] R1: retained m_3 matches atmospheric-scale theorem to 1 ppm  (m_3=5.058286e-02 eV vs note-cited 5.058e-2 eV)
+  [PASS] R2: retained Dm^2_31 matches atmospheric-scale theorem  (Dm31=2.539456e-03 vs note-cited 2.539e-3 eV^2)
+  [PASS] R1 matches NuFit 5.3 NO observed m_3 within 5% (honest comparator)  (m_3=5.058e-02 eV vs observed sqrt(Dm31)=4.953e-02 eV)
+
+----------------------------------------------------------------------------------------
+Part 1: Theorem 1 - Sigma m_nu strict floor (> m_3)
+----------------------------------------------------------------------------------------
+  Theorem 1 floor:   Sigma m_nu > 50.58 meV (strict, from R1, R3)
+  Trivial ceiling:   Sigma m_nu < 151.75 meV (from R1, R3)
+
+  [PASS] floor witness implements R3 + R4 with m_2 > 0 strict  (R3 gives m_2 > m_1 >= 0, so m_2 is strictly positive)
+  [PASS] Sigma m_nu floor equals retained m_3  (floor=50.583 meV)
+  [PASS] floor survives Planck 2018 bound Sigma < 120 meV  (floor=50.58 meV vs Planck<120 meV)
+  [PASS] floor survives DESI 2024 bound Sigma < 72 meV  (floor=50.58 meV vs DESI<72 meV)
+  [PASS] floor WOULD FALSIFY against projected CMB-S4 Sigma < 40 meV  (floor=50.58 meV > CMB-S4 target 40 meV)
+  [PASS] upper ceiling satisfies Planck 2018  (framework ceiling=151.7 meV vs Planck<120 meV (Planck tightens))
+
+----------------------------------------------------------------------------------------
+Part 2: Theorem 2 - m_beta tritium-endpoint ceiling (<= m_3)
+----------------------------------------------------------------------------------------
+  Theorem 2 ceiling: m_beta <= 50.58 meV (from R1, R3, R4)
+
+  Derivation: m_beta^2 = Sum |U_ei|^2 m_i^2
+              |U_ei|^2 is a probability distribution (R4)
+              m_i^2 <= m_3^2 (R3 + R1)
+              convex combination <= max
+              => m_beta^2 <= m_3^2 * 1 = m_3^2
+
+  [PASS] m_beta ceiling equals retained m_3  (ceiling=50.583 meV)
+  [PASS] survives KATRIN 2022 bound m_beta < 800 meV  (ceiling=50.58 meV vs KATRIN 2022 800 meV)
+  [PASS] survives KATRIN final target 200 meV  (ceiling=50.58 meV vs KATRIN final 200 meV)
+  [PASS] Project 8 target 40 meV is a direct test for this ceiling  (ceiling=50.58 meV > Project 8 target 40 meV)
+  [PASS] PDG-like |U_e3|^2=0.022 with m_1=m_2=0 gives m_beta^2 = |U_e3|^2 m_3^2 <= m_3^2  (constructive = 7.503 meV <= ceiling 50.58 meV)
+
+----------------------------------------------------------------------------------------
+Part 3: Theorem 3 - m_bb Majorana-phase-free ceiling (<= m_3)
+----------------------------------------------------------------------------------------
+  Theorem 3 ceiling: m_bb <= 50.58 meV (from R1, R3, R4)
+  Lower bound (trivial): m_bb >= 0 (phase cancellation possible)
+
+  Derivation: m_bb = |Sum_i U_ei^2 m_i|
+              triangle inequality: m_bb <= Sum_i |U_ei|^2 m_i
+              m_i <= m_3 (R3 + R1)
+              => m_bb <= m_3 * Sum_i |U_ei|^2 = m_3 * 1 = m_3
+
+  [PASS] m_bb ceiling equals retained m_3  (ceiling=50.583 meV)
+  [PASS] survives KamLAND-Zen 2022 upper bound 122 meV  (ceiling=50.58 meV vs KamLAND-Zen upper 122 meV)
+  [PASS] ceiling partially within KamLAND-Zen 2022 lower edge 28 meV (test region)  (ceiling=50.58 meV > KamLAND-Zen lower 28 meV)
+  [PASS] Legend-1000 target 17 meV is a direct test  (ceiling=50.58 meV > Legend-1000 target 17 meV)
+  [PASS] nEXO midpoint target 10 meV is a direct test  (ceiling=50.58 meV > nEXO target 10 meV)
+  [PASS] lower bound m_bb >= 0 follows from modulus witness  (m_bb = |Sum...| is a modulus, with zero allowed by cancellation)
+
+----------------------------------------------------------------------------------------
+Part 4: Theorem 4 - Dm^2_21 structural ceiling (< Dm^2_31)
+----------------------------------------------------------------------------------------
+  Theorem 4 ceiling: Dm^2_21 < Dm^2_31 = 2.539e-03 eV^2 (R1+R2+R3)
+  Lower bound:       Dm^2_21 > 0 (R3 structural)
+
+  Derivation: R3 gives m_1 < m_2 < m_3
+              => m_2^2 - m_1^2 > 0 (lower)
+              => m_2^2 - m_1^2 < m_3^2 - m_1^2 = Dm^2_31 (upper)
+
+  [PASS] observed Dm^2_21 lies in the retained-package range (0, Dm^2_31)  (observed 7.420e-05 inside (0, 2.539e-03))
+  [PASS] observed Dm^2_31 consistent with R2 to 5%  (obs=2.453e-03 vs R2=2.539e-03)
+  [PASS] diagonal benchmark Dm^2_21 lies within retained-package range  (diag_benchmark=2.115e-03 in (0, 2.539e-03))
+  [PASS] diagonal benchmark Dm^2_21 over-predicts observed by > 10x (open lane confirmed)  (ratio = 28.5x)
+  [PASS] lower bound Dm^2_21 > 0 follows on a normal-ordering witness  (R3 gives m_2 > m_1 >= 0)
+
+----------------------------------------------------------------------------------------
+Part 5: benchmark corollary - m_1 = sqrt(m_3^2 - Dm^2_31)
+----------------------------------------------------------------------------------------
+  m_1 = sqrt(m_3^2 - Dm^2_31) = sqrt(2.5586e-03 - 2.5395e-03)
+      = sqrt(1.9170e-05) eV = 4.3783e-03 eV = 4.378 meV
+
+  Caveat: both R1 and R2 are used on the diagonal-M_R benchmark.
+          Off-diagonal M_R corrections required to fix Dm^2_21
+          perturb m_1 at the same order as m_1 itself.
+          Thus m_1 ~ 4 meV is benchmark-level, not a robust exact closure.
+
+  [PASS] benchmark m_1 is real (m_3^2 > Dm^2_31 on retained bridge)  (m_3^2 - Dm^2_31 = 1.9170e-05 > 0)
+  [PASS] benchmark m_1 is near 4.35 meV as expected  (m_1 = 4.378 meV)
+  [PASS] benchmark m_1 is well below m_3 (R3 consistent)  (m_1=4.378 meV vs m_3=50.58 meV)
+
+----------------------------------------------------------------------------------------
+Part 6: sharpened Sigma m_nu floor using benchmark m_1 (conditional)
+----------------------------------------------------------------------------------------
+  Sharpened floor (uses benchmark corollary 5):
+    Sigma > 2 m_1 + m_3 = 2(4.38) + 50.58
+                        = 59.34 meV
+
+  This floor is CONDITIONAL on the diagonal benchmark corollary.
+  Theorem 1's floor (50.58 meV) remains the UNCONDITIONAL statement.
+
+  [PASS] sharpened floor exceeds Theorem 1's unconditional floor  (sharp=59.34 meV > uncond=50.58 meV)
+  [PASS] sharpened floor survives DESI 2024 < 72 meV (narrow margin)  (sharp=59.34 meV vs DESI<72 meV)
+  [PASS] sharpened floor WOULD FALSIFY at CMB-S4 projected < 40 meV  (sharp=59.34 meV > CMB-S4 40 meV)
+
+----------------------------------------------------------------------------------------
+Part 7: relationship to prior feature-branch candidates
+----------------------------------------------------------------------------------------
+  Branch neutrino-mass-sum-prediction (0bf1405b):
+    Predicted Sigma = 100.7 meV (diagonal) or 64.5 meV (obs-patched)
+    This note: UNCONDITIONAL Sigma > 50.58 meV (no observational patch)
+
+  Branch neutrino-solar-gap-alpha-lm-squared (7dc55449):
+    Candidate eps/B = alpha_LM^2 matches observed Dm^2_21 to 2%
+    Self-flagged: structural closure requires three sub-theorems R1-R3
+    THIS NOTE does NOT close the solar gap (open lane preserved)
+
+  Branch neutrino-three-level-staircase-proposal (d413f696):
+    Proposed extension to k_C = 9 for residual-sharing to produce alpha_LM^2
+    Self-flagged: structural proposal; retained weak-axis 1+2 split
+    does not admit a third level adjacency at native axiom
+    THIS NOTE does NOT supersede - structural block confirmed open
+
+  [PASS] pure-diagonal Sigma (0bf1405b) exceeds unconditional floor of this note  (pure-diag=101.16 > floor=50.58)
+  [PASS] pure-diagonal Sigma ~ 100 meV as reported in 0bf1405b  (pure-diag=101.16 meV vs 0bf1405b 100.7 meV)
+  [PASS] unconditional floor is strictly weaker than the prior diagonal Sigma candidate  (floor=50.58 meV < pure-diag=101.16 meV)
+
+----------------------------------------------------------------------------------------
+Part 8: summary - retained-package inequality closures on main
+----------------------------------------------------------------------------------------
+  RETAINED-PACKAGE BOUNDS (positive inequality closures on main):
+
+  [Theorem 1]  Sigma m_nu > m_3 = 50.58 meV (STRICT FLOOR)
+  [Theorem 1b] Sigma m_nu < 3 m_3 = 151.75 meV (trivial ceiling)
+  [Theorem 2]  m_beta <= m_3 = 50.58 meV (PMNS-free ceiling)
+  [Theorem 3]  m_bb   <= m_3 = 50.58 meV (phase-free ceiling)
+  [Theorem 3b] m_bb   >= 0 (phase cancellation possible)
+  [Theorem 4]  0 < Dm^2_21 < Dm^2_31 = 2.54 x 10^-3 eV^2
+  [Corollary 5] m_1 = sqrt(m_3^2 - Dm^2_31) = 4.38 meV (diagonal benchmark)
+
+  FALSIFIABILITY (sharpest targets):
+  - Sigma m_nu < 50 meV (e.g. CMB-S4)         -> FALSIFIES R1 or R3
+  - m_beta > 51 meV (e.g. Project 8)          -> FALSIFIES R1 or R3
+  - m_bb > 51 meV (e.g. Legend+nEXO future)   -> FALSIFIES R1 or R3
+  - inverted ordering confirmed               -> FALSIFIES R3
+
+  LANES STILL OPEN:
+  - Dm^2_21 as a point prediction (solar gap, off-diagonal M_R)
+  - PMNS angles as point predictions (chamber-ridge bounded)
+  - Majorana phases (entirely free)
+  - Majorana lane retained-closure status unchanged (mu_current = 0)
+  [PASS] all retained-package bounds are consistent with listed comparator data  (Sigma floor < DESI comparator; m_beta ceiling < KATRIN comparator; m_bb ceiling < KLZ upper comparator)
+
+========================================================================================
+  TOTAL: PASS=35, FAIL=0
+========================================================================================
+
+----- stderr -----
+

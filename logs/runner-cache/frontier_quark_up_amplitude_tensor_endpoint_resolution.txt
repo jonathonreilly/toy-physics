@@ -1,0 +1,103 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_up_amplitude_tensor_endpoint_resolution.py
+runner_sha256: 0b422ddbe6f6019cb8d15a20b5e212fd6a6f8bca27b6b8e9605f7bb12e48c677
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 40.69
+status: ok
+----- stdout -----
+========================================================================
+  FRONTIER: Quark Up-Amplitude Tensor-Endpoint Resolution
+========================================================================
+
+========================================================================
+STAGE A: Exact Algebra Pass
+========================================================================
+
+  exact endpoint data:
+    delta_A1(q_dem)   = 0.023809523810
+    6/7               = 0.857142857143
+    1/6               = 0.166666666667
+    1/sqrt(42)        = 0.154303349962
+    1/sqrt(7)         = 0.377964473009
+    sqrt(6/7)         = 0.925820099773
+    sqrt(5/6)         = 0.912870929175
+
+  endpoint readout ratios:
+    |b_E/b_T|         = 2.621601678209
+    |a_T/a_E|         = 2.005382749600
+    |b_T/a_T|         = 1.000030814262
+
+  direct anchored-law denominators:
+  6              d=6.000000000000  a_u=0.778838293  anchor=0.892%  refit_max=0.862%
+  sqrt(42)       d=6.480740698408  a_u=0.779107010  anchor=0.908%  refit_max=0.850%
+  sqrt(7)        d=2.645751311065  a_u=0.774245730  anchor=0.723%  refit_max=1.062%
+  sqrt(7/6)      d=1.080123449735  a_u=0.762338076  anchor=0.830%  refit_max=1.575%
+  |b_E/b_T|      d=2.621601678209  a_u=0.774170055  anchor=0.723%  refit_max=1.065%
+  [PASS] |b_E/b_T| has no exact direct-denominator hit  (hits = none)
+  [PASS] |a_T/a_E| has no exact direct-denominator hit  (hits = none)
+  [PASS] |b_T/a_T| has no exact direct-denominator hit  (hits = none)
+  [PASS] Exact endpoint gap remains 1/6  (gap = 0.166666666667)
+  [PASS] The bounded slope ratio is not exactly sqrt(7)  (relative gap = 0.912770%)
+  [PASS] The exact scalar denominator sqrt(7) still keeps the anchored package below 1%  (anchor = 0.723%, max = 0.668%)
+
+========================================================================
+STAGE B: Restricted Endpoint Grammar
+========================================================================
+
+  one-step denominator grammar size = 465
+  two-step denominator grammar size = 20934
+
+  nearest exact-grammar denominator to |b_E/b_T|: sqrt(7)-delta_A1
+    denominator      = 2.621941787255
+    relative gap     = 0.012973%
+    complexity       = 6
+
+  explicit exact two-step counterexample to unique sqrt(7) selection:
+  sqrt(42/5)               d=2.898275349238  a_u=0.774961501  anchor=0.716%  amax=0.686%
+
+  best anchored two-step exact denominator:
+  2+sqrt(5/6)              d=2.912870929175  a_u=0.774999078  anchor=0.716%  amax=0.687%
+
+  exact two-step denominators beating the direct sqrt(7) law on anchored aggregate = 212
+  [PASS] No restricted endpoint denominator lands exactly on |b_E/b_T|  (hits = 0)
+  [PASS] Restricted endpoint grammar contains the exact counterexample sqrt(42/5)  (counterexample = sqrt(42/5))
+  [PASS] Controlled two-step exact grammar produces denominators that beat sqrt(7)  (beaters = 212)
+  [PASS] The explicit sqrt(42/5) counterexample already beats sqrt(7)  (sqrt(42/5) anchor = 0.716%, sqrt(7) anchor = 0.723%)
+  [PASS] Best two-step exact anchored denominator is not sqrt(7)  (best = 2+sqrt(5/6))
+
+========================================================================
+STAGE C: Endpoint Verdict
+========================================================================
+
+  exact refit branch from the support endpoint gap:
+  d = 6          d=6.000000000000  a_u=0.778838293  anchor=0.892%  refit_max=0.862%
+
+  scalar-comparison anchored branch:
+  d = sqrt(7)    d=2.645751311065  a_u=0.774245730  anchor=0.723%  refit_max=1.062%
+
+  bounded endpoint-data anchored branch:
+  d = |b_E/b_T|  d=2.621601678209  a_u=0.774170055  anchor=0.723%  refit_max=1.065%
+
+  explicit exact counterexample to unique sqrt(7) selection:
+  d = sqrt(42/5) d=2.898275349238  a_u=0.774961501  anchor=0.716%  refit_max=1.031%
+
+  strongest controlled two-step exact anchored branch:
+  d = 2+sqrt(5/6) d=2.912870929175  a_u=0.774999078  anchor=0.716%  refit_max=1.029%
+
+  honest resolution:
+    exact endpoint data fix the refit branch through 1/6, but the anchored denominator does not collapse exactly to sqrt(7).
+    the restricted exact endpoint grammar already contains sqrt(7), yet it also contains 212 exact two-step denominators with better anchored aggregate.
+    so current endpoint data stop at the split between the exact 1/6 refit branch and the bounded slope-ratio anchored branch.
+  [PASS] The exact endpoint-gap law still fixes the strongest current refit branch  (refit max = 0.862%, refit obj = 0.052796)
+  [PASS] The bounded slope-ratio law still keeps the anchored package below 1%  (anchor = 0.723%, max = 0.666%)
+  [PASS] sqrt(7) is not uniquely selected by the restricted exact endpoint grammar  (counterexample anchor = 0.716%, sqrt(7) anchor = 0.723%)
+  [PASS] The nearest exact denominator to |b_E/b_T| still misses machine-precision identity  (relative gap = 0.012973%)
+  [PASS] The cycle resolves to the bounded no-go endpoint, not a positive sqrt(7) theorem  (k_tensor gap = 0.912770%, beaters = 212)
+
+========================================================================
+SUMMARY: PASS=16 FAIL=0
+========================================================================
+
+----- stderr -----
+

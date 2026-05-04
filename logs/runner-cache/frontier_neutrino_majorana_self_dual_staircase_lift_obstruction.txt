@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_self_dual_staircase_lift_obstruction.py
+runner_sha256: f15e4e666b85f092f269d7ca1c5176de700c0db480a997c26c2fb4d1adb2f5d9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: SELF-DUAL STAIRCASE-LIFT OBSTRUCTION
+========================================================================================
+
+Authority stack:
+  - docs/NEUTRINO_MAJORANA_SOURCE_RAY_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_BACKGROUND_NORMALIZATION_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_AXIS_EXCHANGE_FIXED_POINT_NOTE.md
+  - docs/NEUTRINO_MAJORANA_STAIRCASE_BLINDNESS_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_Z3_NONACTIVATION_THEOREM_NOTE.md
+
+Question:
+  Once the exact local Majorana point rho = 1 is selected, does the
+  current exact stack lift that point to an absolute staircase anchor?
+
+========================================================================================
+PART 1: THE SELECTED LOCAL SELF-DUAL POINT COLLAPSES TO ONE POSITIVE RAY
+========================================================================================
+  [PASS (C)] Normalized local self-dual kernels are identical across staircase rescalings  (max normalized difference=1.11e-16)
+  [PASS (C)] The selected local ratio stays exactly rho = 1 across that ray  (rhos=[1.0, 1.0, 1.0])
+  [PASS (C)] The exact selected local response W_rel = (1/2) log 2 is constant across the ray  (spread=0.00e+00)
+  [PASS (C)] The exact selected local comparator Q_rel = 1 is constant across the ray  (spread=0.00e+00)
+
+  So the local axis-exchange theorem fixes a projective point on the
+  admitted block, not an absolute source scale. Different staircase
+  rescalings lie on the same exact selected local ray.
+
+========================================================================================
+PART 2: THE CURRENT Z3 LIFT STAYS HOMOGENEOUS AFTER THE LOCAL SELF-DUAL SELECTION
+========================================================================================
+  [PASS (C)] Normalized three-generation pairing blocks are identical across rescalings of the selected local ray  (max normalized block difference=1.94e-16)
+  [PASS (C)] The singlet/doublet texture ratios are unchanged by those rescalings  (max normalized eigenvalue difference=3.33e-16)
+
+  So the current Z3 texture lift does not convert the selected local
+  self-dual point into an absolute scale. It still organizes a class
+  up to overall rescaling only.
+
+========================================================================================
+PART 3: THE CHARGE SECTOR STILL DOES NOT DISTINGUISH THE SELECTED LEVELS
+========================================================================================
+  [PASS (C)] Each lifted self-dual family member remains a charge-minus-two pairing operator  (max charge error=1.23e-23)
+  [PASS (C)] The operator norm still scales linearly with the free rescaling parameter  (spread in ||Q||/scale=5.33e-15)
+
+  So the current charge classification still sees one pairing family
+  with a free overall scale, even after the local self-dual point has
+  already been selected exactly.
+
+========================================================================================
+RESULT
+========================================================================================
+  No. The selected local self-dual point collapses to one positive ray
+  K_sd(lambda) = lambda (sigma_z + sigma_x), and the current Z3 lift
+  remains homogeneous under the same positive rescaling.
+
+  So the exact local selector does not itself lift to an absolute
+  Majorana staircase anchor on the present stack. Full closure now
+  requires a genuinely new non-homogeneous local-to-generation bridge
+  or a new absolute-scale datum beyond the current exact stack.
+
+PASS=8  FAIL=0
+
+----- stderr -----
+

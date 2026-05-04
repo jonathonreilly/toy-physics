@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_operator_consistent_end_to_end.py
+runner_sha256: c9bcc5c5a38a6cff578650dc7db536216d18daa5a3b86f7d24dc9d1ee9193184
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.69
+status: ok
+----- stdout -----
+OPERATOR-CONSISTENT POISSON END-TO-END TELEPORTATION AUDIT
+Status: planning / first artifact; quantum state teleportation only
+Convention: trace cells/spectator tastes and use retained-axis logical Z/X for readout, Bell measurement, and correction
+Input probes: 134 states (six Pauli-axis probes + 128 random, seed=20260425)
+Thresholds: fidelity>=0.900, protocol tol=1.0e-10, operator tol=1.0e-12
+
+Operator-consistency guards:
+  surface     envs  axis Z  axis X axis Bell4   raw Z  raw Bell4  raw expected
+  1D side=8      4    PASS    PASS       PASS    PASS       PASS   valid in 1D
+  2D side=4      8    PASS    PASS       PASS    FAIL       FAIL      rejected
+  3D side=2      4    PASS    PASS       PASS    FAIL       FAIL      rejected
+
+Raw xi_5 controls:
+  1D side=8: raw Z PASS rel=0 expected_err=0; raw Bell4 PASS max_rel=0 max_expected_err=0
+  2D side=4: raw Z FAIL rel=1.000000 expected_err=1.000000; raw Bell4 FAIL max_rel=0.707107 max_expected_err=0.250000
+  3D side=2: raw Z FAIL rel=1.000000 expected_err=1.000000; raw Bell4 FAIL max_rel=0.707107 max_expected_err=0.250000
+
+End-to-end retained-axis case table:
+  case                  Sfull    Bell* label     Favg     Fmin     Bmin     noSig  axisOp  pass
+  1d_null             2.00000  0.50000  Phi+  0.66667  0.50000  0.00606 2.498e-16    PASS    no
+  1d_poisson_chsh     2.82267  0.99796  Phi+  0.99864  0.99796  0.99796 2.220e-16    PASS   yes
+  2d_poisson_chsh     2.66838  0.97028  Phi+  0.98019  0.97028  0.96983 2.220e-16    PASS   yes
+
+Case: 1d_null
+  resource: dim=1 side=8 G=0, full CHSH=2.000000, logical CHSH=2.000000, Bell*=0.500000 (Phi+), negativity=0.000000
+  fidelity: exact F_avg=0.666667, sample mean/min/max=0.669676/0.500000/1.000000, conditional branch min/max=0.006062/1.000000
+  Bell branches: outcomes=Phi+, Phi-, Psi+, Psi-, probability min/max=2.081668e-17/5.000000e-01
+  Bob before record: distance to resource marginal=4.518e-16, pairwise input distance=2.498e-16, marginal bias from I/2=5.000e-01
+  causal record: label=Phi+, early blocked=True, delivered once=True, delivered-branch fidelity=0.743949
+Case: 1d_poisson_chsh
+  resource: dim=1 side=8 G=1000, full CHSH=2.822668, logical CHSH=2.822668, Bell*=0.997963 (Phi+), negativity=0.497963
+  fidelity: exact F_avg=0.998642, sample mean/min/max=0.998630/0.997963/0.999491, conditional branch min/max=0.997963/0.999521
+  Bell branches: outcomes=Phi+, Phi-, Psi+, Psi-, probability min/max=2.340570e-01/2.659430e-01
+  Bob before record: distance to resource marginal=4.441e-16, pairwise input distance=2.220e-16, marginal bias from I/2=3.189e-02
+  causal record: label=Psi+, early blocked=True, delivered once=True, delivered-branch fidelity=0.998546
+Case: 2d_poisson_chsh
+  resource: dim=2 side=4 G=1000, full CHSH=2.668376, logical CHSH=2.745662, Bell*=0.970283 (Phi+), negativity=0.470283
+  fidelity: exact F_avg=0.980189, sample mean/min/max=0.980368/0.970283/1.000000, conditional branch min/max=0.969835/1.000000
+  Bell branches: outcomes=Phi+, Phi-, Psi+, Psi-, probability min/max=1.893263e-01/3.106737e-01
+  Bob before record: distance to resource marginal=4.718e-16, pairwise input distance=2.220e-16, marginal bias from I/2=1.213e-01
+  causal record: label=Psi-, early blocked=True, delivered once=True, delivered-branch fidelity=0.989495
+
+Acceptance gates:
+  selected non-null Poisson cases pass retained-axis end-to-end: PASS
+  null controls do not pass high-fidelity protocol: PASS
+  retained-axis operator guard passes for all selected cases: PASS
+  2D and 3D raw xi_5 controls are rejected: PASS
+  Bob pre-message input-independence is clean for passing cases: PASS
+  all four Bell outcomes are represented for passing cases: PASS
+  random input-state fidelity is represented for passing cases: PASS
+  causal two-bit record remains clean for passing cases: PASS
+
+Claim boundary:
+  This is an operator-consistent audit of ordinary quantum state teleportation.
+  It uses retained-axis logical Z/X operators for the traced taste qubit.
+  It is not matter, mass, charge, energy, object, or faster-than-light transport.
+
+Limitations:
+  Poisson resources are still obtained by offline diagonalization and tracing.
+  Bell measurement, readout, feed-forward, and correction are ideal logical operators.
+  Raw xi_5 rejection is an operator-factorization control, not a hardware model.
+
+----- stderr -----
+

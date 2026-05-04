@@ -1,0 +1,114 @@
+===== runner cache v1 =====
+runner: scripts/frontier_sm_hypercharge_uniqueness.py
+runner_sha256: e3701faec483f436e154a4e91ca04ecd3082d1559e69b85d7f88705ae4ccc6ab
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+Standard Model hypercharge uniqueness theorem verification
+See docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: LH-only anomaly traces (retained from ANOMALY_FORCES_TIME)
+----------------------------------------------------------------------------------------
+  [PASS (A)] Tr[Y]_LH = 0 (consistent with retained)  (= 6*(1/3) + 2*(-1) = 0)
+  [PASS (A)] Tr[Y^3]_LH = -16/9 (matches retained ANOMALY_FORCES_TIME Step 1)  (= 6*(1/3)^3 + 2*(-1)^3 = -16/9)
+  [PASS (A)] Tr[SU(3)^2 Y]_LH contribution coefficient on (y_1+y_2): 2/3  (2*(1/3) = 2/3)
+  [PASS (A)] Tr[SU(2)^2 Y]_LH = 0, so it adds no SU(2)-singlet RH constraint  (3*(1/3) + (-1) = 0)
+
+----------------------------------------------------------------------------------------
+Part 1: exact rational solve of full anomaly system (y_4 = 0 imposed)
+----------------------------------------------------------------------------------------
+  (A1) 3(y_1 + y_2) + y_3 + y_4 = 0
+  (A2) y_1 + y_2 = 2/3
+  (A3) 3(y_1^3 + y_2^3) + y_3^3 + y_4^3 = -16/9
+
+  Imposing y_4 = 0 (neutral singlet identification)...
+
+  Found 2 exact rational solution(s):
+    Solution 1: y_1 = 4/3, y_2 = -2/3, y_3 = -2, y_4 = 0
+    Solution 2: y_1 = -2/3, y_2 = 4/3, y_3 = -2, y_4 = 0
+
+  [PASS (A)] exactly two rational solutions under y_4 = 0  (found 2 solutions)
+  [PASS (A)] both rational solutions solve (A1), (A2), and (A3) exactly  (residuals = [(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))])
+  [PASS (A)] SM solution (y_1=4/3, y_2=-2/3, y_3=-2, y_4=0) is one of the two solutions  (SM tuple (Fraction(4, 3), Fraction(-2, 3), Fraction(-2, 1), Fraction(0, 1)) present)
+  [PASS (A)] swap-pair solution (y_1=-2/3, y_2=4/3, y_3=-2, y_4=0) is the other solution  (swap tuple present)
+  [PASS (A)] exactly the u_R <-> d_R pair exhausts the rational solutions  (uniqueness up to u_R <-> d_R established)
+
+----------------------------------------------------------------------------------------
+Part 2: closed-form quadratic (sympy-free)
+----------------------------------------------------------------------------------------
+  [PASS (A)] y_3 = -2 forced by (A1) + (A2) under y_4 = 0  (y_3 = -2)
+  [PASS (A)] reduced cubic sum: y_1^3 + y_2^3 = 56/27  (= 56/27)
+  [PASS (A)] quadratic root y_1 = 4/3 satisfies 9y^2 - 6y - 8 = 0  (9*(16/9) - 6*(4/3) - 8 = 16 - 8 - 8 = 0)
+  [PASS (A)] quadratic root y_1 = -2/3 satisfies 9y^2 - 6y - 8 = 0  (9*(4/9) - 6*(-2/3) - 8 = 4 + 4 - 8 = 0)
+  [PASS (A)] discriminant 324 is a perfect square (18^2) → rational roots  (disc = 324 = 18^2)
+
+----------------------------------------------------------------------------------------
+Part 3: the two rational roots are a u_R ↔ d_R swap pair
+----------------------------------------------------------------------------------------
+  [PASS (A)] (y_1, y_2) = (4/3, -2/3) is the SM assignment (up-type positive)  (y_1 = 4/3, y_2 = -2/3)
+  [PASS (A)] (y_1, y_2) = (-2/3, 4/3) is the u_R ↔ d_R swap  (y_1 = -2/3, y_2 = 4/3)
+  [PASS (A)] the two root pairs are related by a simple swap (y_1 ↔ y_2)  ((4/3, -2/3) = swap(-2/3, 4/3))
+
+----------------------------------------------------------------------------------------
+Part 4: electric-charge convention fixes SM branch
+----------------------------------------------------------------------------------------
+  [PASS (A)] convention Q(u_R) > 0 selects y_1 = 4/3 over y_1 = -2/3  (y_1 = 4/3 > 0)
+  [PASS (A)] consequent y_2 = -2/3 < 0 (d_R has negative charge)  (y_2 = -2/3 < 0)
+
+----------------------------------------------------------------------------------------
+Part 5: electric-charge spectrum {0, ±1/3, ±2/3, ±1}
+----------------------------------------------------------------------------------------
+  [PASS (A)] Q(u_L) = 2/3 (SM electric charge, Y/2 convention)  (Q = 2/3)
+  [PASS (A)] Q(d_L) = -1/3 (SM electric charge, Y/2 convention)  (Q = -1/3)
+  [PASS (A)] Q(nu_L) = 0 (SM electric charge, Y/2 convention)  (Q = 0)
+  [PASS (A)] Q(e_L) = -1 (SM electric charge, Y/2 convention)  (Q = -1)
+  [PASS (A)] Q(u_R) = 2/3 (SM electric charge, Y/2 convention)  (Q = 2/3)
+  [PASS (A)] Q(d_R) = -1/3 (SM electric charge, Y/2 convention)  (Q = -1/3)
+  [PASS (A)] Q(e_R) = -1 (SM electric charge, Y/2 convention)  (Q = -1)
+  [PASS (A)] Q(nu_R) = 0 (SM electric charge, Y/2 convention)  (Q = 0)
+  [PASS (A)] fermion electric-charge spectrum = {0, +2/3, -1/3, -1}  (distinct = [Fraction(-1, 1), Fraction(-1, 3), Fraction(0, 1), Fraction(2, 3)])
+  [PASS (A)] with antifermions: full electric-charge spectrum = {0, ±1/3, ±2/3, ±1}  (full = [Fraction(-1, 1), Fraction(-2, 3), Fraction(-1, 3), Fraction(0, 1), Fraction(1, 3), Fraction(2, 3), Fraction(1, 1)])
+  [PASS (A)] denominators of all non-zero fermion charges are in {1, 3}  (denominators = [1, 3])
+
+----------------------------------------------------------------------------------------
+Part 6: summary - SM hypercharge uniqueness retained
+----------------------------------------------------------------------------------------
+  STRUCTURAL CLOSURE:
+
+    Given retained inputs:
+      - LH content Q_L (Y=1/3) + L_L (Y=-1)
+      - SU(2)-singlet RH completion (anomaly-cancelling)
+      - Tr[Y] = 0, Tr[Y^3] = 0, Tr[SU(3)^2 Y] = 0
+      - neutral-singlet identification Y(nu_R) = 0
+      - electric-charge convention Q(u_R) > 0
+
+    UNIQUE RH hypercharges:
+      y_1 = Y(u_R) = +4/3
+      y_2 = Y(d_R) = -2/3
+      y_3 = Y(e_R) = -2
+      y_4 = Y(nu_R) = 0
+
+    Electric-charge spectrum forced to: Q ∈ {0, ±1/3, ±2/3, ±1}
+    Denominators forced to: {1, 3}
+
+  WHAT THIS CLOSES:
+    - RH hypercharge uniqueness packaged as standalone retained theorem
+    - Electric-charge quantization of one SM generation
+    - Structural reason for fractional 1/3 (from Y_QL = 1/3 via quark color)
+
+  WHAT THIS DOES NOT CLAIM:
+    - Cross-generation uniqueness
+    - Native-axiom derivation of Y(nu_R) = 0 (treated as input)
+    - Alternative gauge groups
+
+========================================================================================
+  TOTAL: PASS=30, FAIL=0
+========================================================================================
+
+----- stderr -----
+

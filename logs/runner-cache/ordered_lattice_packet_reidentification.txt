@@ -1,0 +1,73 @@
+===== runner cache v1 =====
+runner: scripts/ordered_lattice_packet_reidentification.py
+runner_sha256: 48cd00e878a289b86d868d23e6a8e0d533f9173eb56fe76dc8798597c427c0d0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 3.24
+status: ok
+----- stdout -----
+============================================================================================
+ORDERED-LATTICE PACKET RE-IDENTIFICATION CONTROL
+  Localized packet vs free baseline on the retained 3D ordered family
+  h=0.5, W=8, L=12, sigma=1.25, source_z=5.0
+  Goal: can we re-identify the packet well enough to support any inertial-response claim?
+============================================================================================
+
+ACTION: valley
+  strength  layer       dcy       dcz   width×  best_score   best_shift
+------------------------------------------------------------------------
+     2e-05      4   -0.0000   +0.0000    1.000       1.000       (0, 0)
+     2e-05      8   +0.0000   +0.0000    1.000       1.000       (0, 0)
+     2e-05     12   +0.0000   +0.0000    1.000       1.000       (0, 0)
+     2e-05     16   +0.0000   +0.0000    1.000       1.000       (0, 0)
+     2e-05     20   +0.0000   +0.0000    1.000       1.000       (0, 0)
+     2e-05     24   +0.0000   +0.0000    1.000       1.000       (0, 0)
+  summary: mean best-score=1.000, mean width ratio=1.000
+     5e-05      4   -0.0000   +0.0000    1.000       1.000       (0, 0)
+     5e-05      8   +0.0000   +0.0000    1.000       1.000       (0, 0)
+     5e-05     12   -0.0000   +0.0000    1.000       1.000       (0, 0)
+     5e-05     16   -0.0000   +0.0000    1.000       1.000       (0, 0)
+     5e-05     20   -0.0000   +0.0000    1.000       1.000       (0, 0)
+     5e-05     24   -0.0000   +0.0000    1.000       1.000       (0, 0)
+  summary: mean best-score=1.000, mean width ratio=1.000
+     1e-04      4   -0.0000   +0.0000    1.000       1.000       (0, 0)
+     1e-04      8   +0.0000   +0.0000    1.000       1.000       (0, 0)
+     1e-04     12   -0.0000   +0.0000    1.000       1.000       (0, 0)
+     1e-04     16   +0.0000   +0.0000    1.000       1.000       (0, 0)
+     1e-04     20   +0.0000   +0.0000    1.000       1.000       (0, 0)
+     1e-04     24   -0.0000   +0.0000    1.000       1.000       (0, 0)
+  summary: mean best-score=1.000, mean width ratio=1.000
+
+ACTION: spent_delay
+  strength  layer       dcy       dcz   width×  best_score   best_shift
+------------------------------------------------------------------------
+     2e-05      4   -0.0000   +0.0002    0.999       1.000       (0, 0)
+     2e-05      8   -0.0000   +0.0004    0.999       1.000       (0, 0)
+     2e-05     12   -0.0000   +0.0009    0.998       1.000       (0, 0)
+     2e-05     16   -0.0000   +0.0018    0.997       1.000       (0, 0)
+     2e-05     20   -0.0000   +0.0026    0.996       1.000       (0, 0)
+     2e-05     24   -0.0000   +0.0028    0.996       1.000       (0, 0)
+  summary: mean best-score=1.000, mean width ratio=0.997
+     5e-05      4   -0.0000   +0.0003    0.999       1.000       (0, 0)
+     5e-05      8   +0.0000   +0.0007    0.998       1.000       (0, 0)
+     5e-05     12   -0.0000   +0.0014    0.997       1.000       (0, 0)
+     5e-05     16   +0.0000   +0.0028    0.995       1.000       (0, 0)
+     5e-05     20   +0.0000   +0.0041    0.994       1.000       (0, 0)
+     5e-05     24   +0.0000   +0.0044    0.993       1.000       (0, 0)
+  summary: mean best-score=1.000, mean width ratio=0.996
+     1e-04      4   -0.0000   +0.0005    0.999       1.000       (0, 0)
+     1e-04      8   +0.0000   +0.0010    0.997       1.000       (0, 0)
+     1e-04     12   -0.0000   +0.0020    0.995       1.000       (0, 0)
+     1e-04     16   -0.0000   +0.0039    0.993       1.000       (0, 0)
+     1e-04     20   -0.0000   +0.0057    0.992       1.000       (0, 0)
+     1e-04     24   -0.0000   +0.0062    0.990       1.000       (0, 0)
+  summary: mean best-score=1.000, mean width ratio=0.994
+
+SAFE READ
+  - If the best-shift score stays high while width ratio stays near 1,
+    the packet is re-identifiable enough to support a bounded inertial-response control.
+  - If the score is low or width blows up, the codebase still lacks a usable persistent-pattern probe.
+  - This is a diagnostic only; it does not create a persistent-mass theorem.
+
+----- stderr -----
+

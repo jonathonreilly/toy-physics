@@ -1,0 +1,33 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_graph_gauge_closure.py
+runner_sha256: 0afdcaa48ec18cb8f34958e3aa1e8703768f11767b59552bea6758f8c6274ba8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.81
+status: ok
+----- stdout -----
+================================================================================================
+STAGGERED GRAPH GAUGE CLOSURE
+  Native flux-threaded current on cycle-bearing layered/stress graphs
+  Retained force battery reused from the staggered graph lane
+================================================================================================
+  dt=0.12, steps=10, mass=0.3, source_strength=0.0004
+
+bipartite_random_geometric_stress_s17_n81 n=81  cycle=yes retained=8/8 force=TOWARD F~M=1.000 achrom=1.271e-16 equiv=1.078e-16 robust=3/3 J_span=6.933e-04 J_resid=1.328e-19 gauge=PASS
+bipartite_growing_stress_s23_n82       n=82  cycle=yes retained=8/8 force=TOWARD F~M=1.000 achrom=2.369e-16 equiv=1.589e-16 robust=3/3 J_span=2.042e-03 J_resid=6.373e-18 gauge=PASS
+bipartite_chorded_grid_stress_s31_n144 n=144 cycle=yes retained=8/8 force=TOWARD F~M=1.000 achrom=0.000e+00 equiv=1.719e-16 robust=3/3 J_span=1.343e-04 J_resid=1.563e-19 gauge=PASS
+layered_bipartite_dag_s13_n36          n=36  cycle=no retained=8/8 force=TOWARD F~M=1.000 achrom=1.699e-16 equiv=1.683e-16 robust=3/3 J_span=N/A J_resid=N/A gauge=N/A
+layered_bipartite_dag_s29_n55          n=55  cycle=yes retained=7/8 force=TOWARD F~M=1.000 achrom=1.126e-16 equiv=0.000e+00 robust=3/3 J_span=3.370e-35 J_resid=6.882e-36 gauge=FAIL
+
+CLOSURE
+  best geometry: bipartite_growing_stress_s23_n82 (current span=2.042e-03, residual=6.373e-18)
+  operator: native staggered Hamiltonian with flux threaded through the detected cycle edge
+  observable: ground-state persistent-current span over phi in [0, 2pi]
+
+Interpretation:
+  - Gauge/current is retained only on cycle-bearing families.
+  - DAG-compatible families correctly report gauge=N/A.
+  - Force remains the primary gravity observable; current is the gauge observable.
+
+----- stderr -----
+

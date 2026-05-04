@@ -1,0 +1,157 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_17card.py
+runner_sha256: a8e24820b59d208ad9e7bd8daf6e594259cb5c0dedb3fe2580bae2dde19bfeda
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 87.07
+status: ok
+----- stdout -----
+1D CARD:
+======================================================================
+STAGGERED 1D CANONICAL 17-CARD (n=61, 61 sites)
+======================================================================
+  mass=0.3, g=50.0, S=0.0005, dt=0.15, N_steps=15, mass_off=4
+  Gravity rows use FORCE F=-<dV/dz>, not centroid shift.
+
+  [C1]  Sorkin I3/P = 1.2804e-15 PASS
+  [C2]  d_TV = 0.9196 PASS
+  [C3]  f=0 F = -0.0000e+00 PASS
+  [C4]  F~M R^2 = 0.917492 PASS
+  [C5]  Force = +5.7496e-05 TOWARD PASS
+  [C6]  Decoh: 0.2296->0.1766 PASS
+  [C7]  MI = 1.6457e-01 PASS
+  [C8]  Purity CV = 0.0113 PASS
+  [C9]  ForceGrow: all_tw=True [N=5:+6.212e-04, N=7:+5.491e-04, N=10:+3.975e-04, N=15:+5.750e-05] PASS
+  [C10] Distance: 5/5 TW PASS
+  [C11] KG R^2 = 0.996551 PASS
+  [C12] Gauge (1D ring) J_range = 2.1413e-03 PASS
+  [C13] Force achrom CV = 0.000000 PASS
+  [C14] Equiv CV = 0.000000 PASS
+  [C15] BC: +6.212e-04, +5.491e-04, +5.750e-05 PASS
+  [C16] Multi: F=T, sh=A 1/2 PASS
+
+  --- C17: State-Family Robustness (FORCE) ---
+    gauss       : F=+5.7496e-05 TOWARD
+    even        : F=+1.1061e-04 TOWARD
+    odd         : F=+1.0410e-03 TOWARD
+    anti        : F=+1.0941e-03 TOWARD [Nyquist]
+    positive-E  : F=+1.0323e-04 TOWARD
+    negative-E  : F=+9.2854e-04 TOWARD
+    6/6 TOWARD PASS (anti=TOWARD)
+
+  Norm: 5.5511e-16
+  SCORE: 17/17 (0.1s)
+  PERFECT — no qualifiers.
+
+######################################################################
+
+3D CARD (n=9):
+======================================================================
+STAGGERED 3D CANONICAL 17-CARD (n=9, 729 sites)
+======================================================================
+  mass=0.3, g=50.0, S=0.0005, dt=0.15, N_steps=7, mass_off=2
+  Gravity rows use FORCE F=-<dV/dz>, not centroid shift.
+
+  [C1]  Sorkin I3/P = 2.5921e-15 PASS
+  [C2]  d_TV = 0.9998 PASS
+  [C3]  f=0 F = -0.0000e+00 PASS
+  [C4]  F~M R^2 = 0.999980 PASS
+  [C5]  Force = +1.2862e-03 TOWARD PASS
+  [C6]  Decoh: 0.7541->0.1644 PASS
+  [C7]  MI = 6.1721e-01 PASS
+  [C8]  Purity CV = 0.0979 PASS
+  [C9]  ForceGrow: all_tw=True [N=2:+2.107e-03, N=3:+2.055e-03, N=4:+1.937e-03, N=7:+1.286e-03] PASS
+  [C10] Distance: 1/1 TW PASS
+  [C11] KG R^2 = 0.996551 PASS
+  [C12] Gauge (3D torus) J_range = 3.6900e-03 PASS
+  [C13] Force achrom CV = 0.000000 PASS
+  [C14] Equiv CV = 0.000000 PASS
+  [C15] BC: +2.107e-03, +2.055e-03, +1.286e-03 PASS
+  [C16] Multi: F=T, sh=A 1/2 PASS
+
+  --- C17: State-Family Robustness (FORCE) ---
+    gauss       : F=+1.2862e-03 TOWARD
+    even        : F=+6.6640e-04 TOWARD
+    odd         : F=+1.3404e-03 TOWARD
+    anti        : F=+7.2061e-04 TOWARD [Nyquist]
+    positive-E  : F=+7.8729e-04 TOWARD
+    negative-E  : F=+1.6565e-03 TOWARD
+    6/6 TOWARD PASS (anti=TOWARD)
+
+  Norm: 1.1102e-15
+  SCORE: 17/17 (10.7s)
+  PERFECT — no qualifiers.
+
+3D CARD (n=11):
+======================================================================
+STAGGERED 3D CANONICAL 17-CARD (n=11, 1331 sites)
+======================================================================
+  mass=0.3, g=50.0, S=0.0005, dt=0.15, N_steps=9, mass_off=2
+  Gravity rows use FORCE F=-<dV/dz>, not centroid shift.
+
+  [C1]  Sorkin I3/P = 2.8164e-15 PASS
+  [C2]  d_TV = 0.9976 PASS
+  [C3]  f=0 F = -0.0000e+00 PASS
+  [C4]  F~M R^2 = 0.999606 PASS
+  [C5]  Force = +5.4396e-04 TOWARD PASS
+  [C6]  Decoh: 0.6987->0.0683 PASS
+  [C7]  MI = 5.1457e-02 PASS
+  [C8]  Purity CV = 0.1355 PASS
+  [C9]  ForceGrow: all_tw=True [N=3:+1.303e-03, N=4:+1.222e-03, N=6:+9.838e-04, N=9:+5.440e-04] PASS
+  [C10] Distance: 1/1 TW PASS
+  [C11] KG R^2 = 0.996551 PASS
+  [C12] Gauge (3D torus) J_range = 2.2686e-03 PASS
+  [C13] Force achrom CV = 0.000000 PASS
+  [C14] Equiv CV = 0.000000 PASS
+  [C15] BC: +1.303e-03, +1.222e-03, +5.440e-04 PASS
+  [C16] Multi: F=T, sh=A 1/2 PASS
+
+  --- C17: State-Family Robustness (FORCE) ---
+    gauss       : F=+5.4396e-04 TOWARD
+    even        : F=+6.6439e-04 TOWARD
+    odd         : F=+3.2771e-04 TOWARD
+    anti        : F=+4.4814e-04 TOWARD [Nyquist]
+    4/4 TOWARD PASS (anti=TOWARD) (4/6 families tested)
+
+  Norm: 6.6613e-16
+  SCORE: 17/17 (19.0s)
+  17/17 — C17 tested 4/6 families (energy projections run only for N_sites<=1000; the 3D n=11 and n=13 cards are above that gate).
+
+3D CARD (n=13):
+======================================================================
+STAGGERED 3D CANONICAL 17-CARD (n=13, 2197 sites)
+======================================================================
+  mass=0.3, g=50.0, S=0.0005, dt=0.15, N_steps=10, mass_off=2
+  Gravity rows use FORCE F=-<dV/dz>, not centroid shift.
+
+  [C1]  Sorkin I3/P = 3.1209e-15 PASS
+  [C2]  d_TV = 0.9943 PASS
+  [C3]  f=0 F = -0.0000e+00 PASS
+  [C4]  F~M R^2 = 0.998550 PASS
+  [C5]  Force = +3.1762e-04 TOWARD PASS
+  [C6]  Decoh: 0.6572->0.0847 PASS
+  [C7]  MI = 3.5455e-01 PASS
+  [C8]  Purity CV = 0.1261 PASS
+  [C9]  ForceGrow: all_tw=True [N=3:+8.569e-04, N=5:+7.384e-04, N=6:+6.606e-04, N=10:+3.176e-04] PASS
+  [C10] Distance: 2/2 TW PASS
+  [C11] KG R^2 = 0.996551 PASS
+  [C12] Gauge (3D torus) J_range = 1.4896e-03 PASS
+  [C13] Force achrom CV = 0.000000 PASS
+  [C14] Equiv CV = 0.000000 PASS
+  [C15] BC: +8.569e-04, +7.384e-04, +3.176e-04 PASS
+  [C16] Multi: F=T, sh=A 1/2 PASS
+
+  --- C17: State-Family Robustness (FORCE) ---
+    gauss       : F=+3.1762e-04 TOWARD
+    even        : F=+2.0823e-04 TOWARD
+    odd         : F=+4.4336e-04 TOWARD
+    anti        : F=+3.3397e-04 TOWARD [Nyquist]
+    4/4 TOWARD PASS (anti=TOWARD) (4/6 families tested)
+
+  Norm: 2.2204e-16
+  SCORE: 17/17 (56.2s)
+  17/17 — C17 tested 4/6 families (energy projections run only for N_sites<=1000; the 3D n=11 and n=13 cards are above that gate).
+
+
+----- stderr -----
+

@@ -1,0 +1,35 @@
+===== runner cache v1 =====
+runner: scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py
+runner_sha256: 11cb3148f13fe54a344bb9d12905527e0c64dc3278eba04804e60e025c231d87
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================
+Parity-Operator Basis: Dim-5 LV No-Go Runner
+========================================================================
+
+[1] epsilon H_0 epsilon + H_0 = 0  on L = 4, 6, 8
+    L = 4:  || epsilon H epsilon + H || / || H || = 0.000e+00   [PASS]
+    L = 6:  || epsilon H epsilon + H || / || H || = 0.000e+00   [PASS]
+    L = 8:  || epsilon H epsilon + H || / || H || = 0.000e+00   [PASS]
+
+[2] dim-5 SME-style LV bilinear parity weights (expect all -1)
+    (a) gamma^i partial_j partial_j (i spatial):  P-weight = -1  [PASS]
+    (b) 1 * partial_i partial_0 (i spatial, derivative LV):  P-weight = -1  [PASS]
+    (c) gamma_5 gamma^i partial_j (i, j spatial):  P-weight = -1  [PASS]
+    (d) sigma^{ij} partial_k (i, j, k spatial):  P-weight = -1  [PASS]
+
+[3] P-symmetric projection of each candidate dim-5 LV op (expect 0)
+    (a):  || (O + P O P^-1) / 2 || = 0.000e+00  [PASS]
+    (b):  || (O + P O P^-1) / 2 || = 0.000e+00  [PASS]
+    (c):  || (O + P O P^-1) / 2 || = 0.000e+00  [PASS]
+    (d):  || (O + P O P^-1) / 2 || = 0.000e+00  [PASS]
+
+========================================================================
+PASS=11  FAIL=0
+========================================================================
+
+----- stderr -----
+

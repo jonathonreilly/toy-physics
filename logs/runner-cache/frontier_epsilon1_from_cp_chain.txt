@@ -1,0 +1,135 @@
+===== runner cache v1 =====
+runner: scripts/frontier_epsilon1_from_cp_chain.py
+runner_sha256: cc54e61494f29adaca4e59de21ebd4a5181bb41f93c49fc03b06e230c4653c89
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+========================================================================
+Step 1: cp1, cp2 from chart constants (γ=1/2, E₁=√(8/3), E₂=√8/3)
+========================================================================
+  [PASS] cp1 = -2γE₁/3 = -2√6/9 (exact algebraic form)
+         cp1 = -0.544331053951817, -2√6/9 = -0.544331053951817
+  [PASS] cp2 = +2γE₂/3 = +2√2/9 (exact algebraic form)
+         cp2 = 0.314269680527354, 2√2/9 = 0.314269680527354
+  [PASS] cp1 matches framework exact_package value (-0.5443310539518...)
+         cp1 = -0.5443310539518174
+  [PASS] cp2 matches framework exact_package value (+0.3142696805274...)
+         cp2 = 0.3142696805273545
+  [PASS] Structural ratio cp1/cp2 = -√3 (KEY EXACT IDENTITY)
+         cp1/cp2 = -1.732050807568877, -√3 = -1.732050807568877
+
+========================================================================
+Step 1b: Counterfactual — alternative chart constants
+========================================================================
+  [PASS] Counterfactual (γ=1, E₁=E₂=1) gives cp1/cp2 = -1, NOT -√3
+         counterfactual ratio = -1.0 (vs -√3 = -1.732051)
+  [PASS] So -√3 ratio is a structural fingerprint of (γ=1/2, E₁=√(8/3), E₂=√8/3)
+         |ratio - ratio_cf| = 0.732051 (≠ 0)
+
+========================================================================
+Step 2: Path A — CKM CP-phase chain (retained) → PMNS analog (NOT retained)
+========================================================================
+  [PASS] Retained CKM ρ = 1/6 (from 1+5 projector w_A1=1/6 + r²=1/6)
+         ρ_CKM = 0.166666666666667
+  [PASS] Retained CKM η = √5/6 (from 1+5 projector w_perp=5/6 + r²=1/6)
+         η_CKM = 0.372677996249965
+  [PASS] Retained CKM identity: ρ² + η² = 1/6 (CP-radius)
+         ρ² + η² = 0.166666666666667
+  [PASS] Retained CKM identity: cos²(δ_CKM) = 1/6
+         cos²(δ_CKM) = 0.166666666666667
+  [PASS] Retained CKM identity: sin²(δ_CKM) = 5/6
+         sin²(δ_CKM) = 0.833333333333333
+  [PASS] Path A hypothesis: PMNS analog w_A1=1/6, w_perp=5/6, r²=1/6 (NOT retained)
+         Hypothetical: lepton-block dimension 6 = 1+5 analog. NOT retained in framework. Status of analog: would need lepton-block projector split + CP-radius theorem.
+  [PASS] Path A blocker: PMNS_SELECTOR_THREE_IDENTITY_SUPPORT remains support
+         PMNS chart selectors (delta · q_+ = Q_Koide; det(H) = E_2) explicitly flagged as 'live candidate selector laws' (support, not retained) in PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21
+
+========================================================================
+Step 3: Path B — cycle 06 + exact source package → ε_1 formula
+========================================================================
+  [PASS] Retained K_00 = 2 (from DM_NEUTRINO_K00_BOSONIC_NORMALIZATION)
+         K_00 = 2.0
+  [PASS] Loop function f_total(x=1.21) finite (admitted-context)
+         f_total(1.21) = 4.873729
+  [PASS] M_3 >> M_1 limit: f_total(x_3) decouples (→ 0)
+         f_total(10^4) = 0.005001 (small, decoupled)
+  [PASS] Structural prefactor (1/(8π·K_00)) · |cp1| = (1/(8π·K_00)) · (2√6/9)
+         prefactor = 1.0829122239e-02
+  [PASS] Structural decomposition: |cp1·f23 + cp2·f3| = |cp1| · |f23 - (1/√3) f3|
+         |cp2/cp1| = 1/√3 = 0.577350269189626
+  [PASS] Path B numerical reproduction: ε_1 ≈ 2.4576e-6 (matches framework, IF Obstructions O2 and O3 are accepted)
+         ε_1 = 2.457620e-06, framework value = 2.4576e-6
+  [PASS] Path B: ε_1/ε_DI ≈ 0.928 (framework's prediction, NOT derived without O2/O3)
+         ε_1/ε_DI = 0.9276209209
+
+========================================================================
+Step 4: Synthesis — neither path closes; cp1/cp2 = -√3 is the retained core
+========================================================================
+  [PASS] Path A blocked: PMNS chart constants are support-grade (Obstruction O1)
+         PMNS_SELECTOR_THREE_IDENTITY_SUPPORT remains 'live candidate selector laws', NOT retained.
+  [PASS] Path B partial: structural ratio cp1/cp2 = -√3 exact, but absolute scale of ε_1 inherits boundedness from O2 (y_0²) and O3 (α_LM)
+         Structural prefactor (1/(8π·K_00)) · (2√6/9) is exact and forbidden-import-clean; absolute ε_1 is conditional on G_weak and α_LM imports.
+  [PASS] Retained-bounded core that survives both paths: cp1/cp2 = -√3
+         This identity is exact, dimensionless, and forbidden-import-clean.
+
+========================================================================
+Step 5: Three named obstructions (specific repair targets)
+========================================================================
+  [PASS] Obstruction O1: PMNS chart constants γ, E₁, E₂ are support-grade
+         Repair: produce closing derivation that γ=1/2, E₁=√(8/3), E₂=√8/3 are forced by retained PMNS-sector structure (Koide character + ?). Source: PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21
+  [PASS] Obstruction O2: Yukawa scale y_0² imports G_weak = 0.653
+         Repair: derive y_0² from cycle 04 hypercharge + cycle 02 SU(2) + EW coupling at EWSB scale. Source: dm_leptogenesis_exact_common.py G_WEAK
+  [PASS] Obstruction O3: Mass scales M_1, M_2, M_3 import α_LM via plaquette MC
+         Repair: derive M_2/M_1 ≈ 1+α_LM and M_3/M_1 ≈ 1/α_LM from primitives without admitting plaquette-MC. Source: dm_leptogenesis_exact_common.py PLAQ_MC = 0.5934
+
+========================================================================
+Step 6: Forbidden-import audit
+========================================================================
+  [PASS] η_obs (Planck observed value) NOT consumed as derivation input
+         Confirmed: no PDG η used in derivation (only Path B numerical reproduction uses framework's exact_package values, not PDG).
+  [PASS] m_top, sin²θ_W NOT consumed
+         Confirmed: no top-mass or weak-mixing-angle inputs.
+  [PASS] Davidson-Ibarra 1996 ceiling formula is admitted-context external
+         Cited only for ε_DI cross-check (role: literature comparator), NOT consumed as derivation input.
+  [PASS] Fukugita-Yanagida 1986 ε_1 formula structure is admitted-context external
+         Cited only for ε_1 = |(1/8π) y_0² (cp1 f23 + cp2 f3)/K_00| formula structure (role: standard QFT formula), not consumed as derivation input.
+  [PASS] Peskin-Schroeder 1995 loop functions f_g, f_v are admitted-context external
+         Cited for f_g(x) = √x/(x-1), f_v(x) = √x[1-(1+x)ln((1+x)/x)] (role: standard QFT function), not consumed as derivation input.
+  [PASS] y_0 (G_weak) flagged as Obstruction O2, NOT used in retained derivation
+         Path B numerical reproduction uses Y0_admitted only to demonstrate consistency with framework's exact_package — explicitly flagged as O2.
+  [PASS] α_LM (plaquette MC) flagged as Obstruction O3, NOT used in retained derivation
+         Path B numerical reproduction uses ALPHA_LM_admitted only to demonstrate consistency — explicitly flagged as O3.
+  [PASS] No fitted selectors consumed
+         Confirmed: all chart constants taken from existing framework support infrastructure, not fitted to any observed value.
+  [PASS] No same-surface family arguments
+         Confirmed: cp1/cp2 = -√3 derivation is purely algebraic from chart constants; no family-argument self-reference.
+
+========================================================================
+Summary
+========================================================================
+
+TOTAL: PASS=36, FAIL=0
+
+Outcome: stretch attempt (output type c) — NOT a closing derivation.
+
+Partial progress:
+  - Structural ratio cp1/cp2 = -√3 is exact and forbidden-import-clean.
+  - Path A (CKM → PMNS analog) blocked by no retained PMNS analog.
+  - Path B (cycle 06 + exact source package → ε_1) partial:
+    - structural prefactor (1/(8π·K_00))·(2√6/9) exact;
+    - absolute scale conditional on Obstructions O2 (y_0²) and O3 (α_LM).
+
+Three named obstructions (specific repair targets):
+  O1: PMNS chart constants γ, E₁, E₂ are support-grade.
+  O2: Yukawa scale y_0² imports G_weak = 0.653.
+  O3: Mass scales M_1, M_2, M_3 import α_LM via plaquette MC.
+
+Cycle 09's Obstruction 1a (derive ε_1 from CP-violation structure)
+is sharpened from one diffuse obstruction into three specific
+forbidden-import obstructions with concrete repair targets.
+
+----- stderr -----
+

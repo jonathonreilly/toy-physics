@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_explicit_systematic_budget.py
+runner_sha256: 8c4021bca08791153ab1aec502dcdf3fc9e6bdfbcca18a1853497220f789a923
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.03
+status: ok
+----- stdout -----
+==============================================================================
+y_t BRIDGE-PATH RESIDUAL BUDGET CROSS-CHECK
+==============================================================================
+
+Decompose the exact Schur-bridge endpoint budget into named residual
+pieces now that structural bridge ambiguity is closed on the tested bridge path.
+
+Named bridge-path residual pieces (relative):
+  higher-order local tail          = 0.007123842 (0.712384%)
+  nonlocal tail (conservative)     = 0.005023669 (0.502367%)
+  nonlocal tail (support-tight)    = 0.000426222 (0.042622%)
+  selector-anchor mismatch         = 0.000005449 (0.000545%)
+  structural class residual        = 0.000000000
+
+Bridge-path endpoint budgets:
+  y_t conservative budget          = 0.012147511 (1.214751%)
+  y_t support-tight budget         = 0.007550063 (0.755006%)
+  y_t abs budget (cons)            = 0.011146556
+  y_t abs budget (tight)           = 0.006927938
+
+Propagated bridge-path top-mass budgets:
+  m_t 2-loop abs budget (cons)     = 2.096296 GeV
+  m_t 2-loop abs budget (tight)    = 1.302914 GeV
+  m_t 3-loop abs budget (cons)     = 2.102734 GeV
+  m_t 3-loop abs budget (tight)    = 1.306916 GeV
+
+  [PASS] named bridge-path residual pieces are explicit and nonnegative: all bridge-path residual components are explicit nonnegative route quantities
+  [PASS] structural bridge ambiguity is closed on the current tested bridge scale: exact Schur class, stability gap, and microscopic admissibility are closed on the tested bridge path
+  [PASS] support-tight bridge budget is strictly smaller than conservative bridge budget: tight=0.007550063, conservative=0.012147511
+  [PASS] the bridge budget is dominated by named exact-bridge tails rather than selector anchoring: anchor/budget = 4.485666e-04
+  [PASS] the bridge-path endpoint budget remains explicitly quantified as an independent cross-check: budget = 1.214751% conservative, 0.755006% support-tight
+
+------------------------------------------------------------------------------
+Interpretation
+------------------------------------------------------------------------------
+On the tested Schur-bridge route, the remaining uncertainty is no longer a structural bridge loophole. It is an explicit route-specific residual made of two named exact-bridge tails: a higher-order local tail and a nonlocal tail.
+The selector-anchor mismatch is negligible, and structural class ambiguity is closed on the current tested bridge scale.
+
+So the bridge-path cross-check read is: y_t(v) = 0.9176 with route-specific residual (±1.214751% conservative, ±0.755006% support-tight).
+The same bridge-path residual propagates to m_t(pole): 2-loop ±2.096 GeV conservative (±1.303 GeV support-tight), 3-loop ±2.103 GeV conservative (±1.307 GeV support-tight).
+The primary YT authority lane is carried elsewhere by the retained Ward theorem together with standard lattice matching and SM running.
+
+==============================================================================
+FINAL TALLY: 5 PASS / 0 FAIL
+Elapsed: 0.00 s
+==============================================================================
+
+----- stderr -----
+

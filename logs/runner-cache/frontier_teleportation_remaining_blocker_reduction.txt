@@ -1,0 +1,45 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_remaining_blocker_reduction.py
+runner_sha256: e0e19575e472bf5bf8985244dd580747d5c0ed22db8ef625770be46da8ea359c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.96
+status: ok
+----- stdout -----
+TELEPORTATION REMAINING BLOCKER REDUCTION
+Status: planning artifact; ordinary quantum state teleportation only
+Claim boundary: no matter, mass, charge, energy, object, or faster-than-light transport
+
+conditional transducer uniqueness: commutant_dim=4, noncommuting_paulis=12, branch_rank=4, write_nullity=0, projector_error=0.000e+00
+3D+1 causal support carrier: support_stencils=1, shapes=3, points=260, arrival_error=0, eikonal_residual=0, outside_cone=0
+sparse 3D side-4 resource rows:
+  G=0, N=64, Hdim=4096, E0=-12, gap=2, Bell*=0.500000 (Phi+), Fbest=0.666667, CHSH=2.000000, neg=0.000000, purity=1.000000
+  G=1000, N=64, Hdim=4096, E0=-25.005254, gap=0.881606, Bell*=0.716094 (Phi+), Fbest=0.810729, CHSH=2.178794, neg=0.216094, purity=0.865426
+  G=2000, N=64, Hdim=4096, E0=-42.1038699, gap=0.599112, Bell*=0.844599 (Phi+), Fbest=0.896399, CHSH=2.428986, neg=0.344599, purity=0.888581
+  G=5000, N=64, Hdim=4096, E0=-97.4741973, gap=0.290255, Bell*=0.959247 (Phi+), Fbest=0.972831, CHSH=2.715608, neg=0.459247, purity=0.962220
+retained-axis readout/correction apparatus: surfaces=6, retained_residual=0.000e+00, projector_residual=0.000e+00, correction_residual=0.000e+00, raw_xi5_min_rejection=2.000e+00
+independent-fragment detector theorem: d_min=5, q=0.700, fragments/component=24, max_record_overlap=2.581e-19, entropy_defect=0.000e+00, fragment_gram_min_eig=3.000e-01
+
+Acceptance gates:
+  transducer unique inside stabilizer-diagonal native write class: PASS
+  3D+1 causal support carrier has unique eikonal front: PASS
+  sparse 3D side-4 Poisson resource has a high-fidelity window: PASS
+  retained-axis readout/correction apparatus factors through I_env: PASS
+  independent-fragment detector theorem drives records classical: PASS
+  claim boundary stays state-only and not FTL: PASS
+
+Limitations:
+  The transducer uniqueness is conditional on the stabilizer-diagonal
+  native write class and Bell-record desiderata; it is not sole-axiom
+  uniqueness across every conceivable apparatus.
+  The 3D+1 carrier result is a support-front/eikonal theorem, not a
+  unique amplitude-normalized relativistic wave equation.
+  The side-4 resource probe is sparse ground-state evidence, not an
+  asymptotic scaling theorem or a physical preparation proof.
+  The readout/correction apparatus is an algebraic retained-axis class,
+  not a calibrated hardware pulse schedule.
+  The detector theorem covers independent fragment baths; it is not a
+  material detector construction from microscopic hardware couplings.
+
+----- stderr -----
+

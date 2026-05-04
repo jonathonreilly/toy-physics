@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py
+runner_sha256: e2aeacb0b0715e6bc9e8ebdd46d9f8e3c80e893d2d56fefaedf74415e6bfd3e2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 23.41
+status: ok
+----- stdout -----
+====================================================================================================================
+GAUGE-VACUUM PLAQUETTE FIRST-SECTOR COMPLETED TRIPLE CURRENT TRANSFER-FAMILY BOUNDARY
+====================================================================================================================
+
+Question:
+  On the audited current explicit `beta = 6` `spatial_pair` witness
+  family, does the best one-parameter scaled fit realize the
+  completed first-sector triple Z_min exactly?
+
+Reproduced completed first-sector triple from rank-one transfer realisation:
+  Z_min                        = [0.135165279562 0.374012880009 0.543843858544]
+  ||Z_min - note Z_min||       = 2.459e-13
+
+Best one-parameter scaled fit on the audited parameter-box corner:
+  tau_transfer (lower edge)    = 1e-04
+  tau_boundary (upper edge)    = 4.0
+  asym_decay   (lower edge)    = 1e-08
+  best linear_decay (interior) = 0.323966116165
+  Zhat_best                    = [0.280527832739 0.789850310149 1.120725633448]
+  c_best                       = 0.481383963249
+  c_best * Zhat_best           = [0.135041599926 0.380221272673 0.539499347144]
+  gap (c*Zhat - Z_min)         = [-0.000123679637  0.006208392664 -0.0043445114  ]
+  ||gap||_2                    = 0.007578536496
+
+Local-edge sanity (gap when each boundary edge is relaxed inward):
+  base (corner)                = 0.007578536496
+  tau_transfer  -> 5e-4        = 0.007595174438  (should rise)
+  tau_boundary  -> 3.6         = 0.028885953423  (should rise)
+  asym_decay    -> 1e-6        = 0.007580871489  (should rise)
+
+  [PASS] the parent note records the published numerical bottom-line (Z_min triple, Zhat_best vector, c_best, gap norm)  (all explicit numbers found verbatim in the note text)
+  [PASS] the upstream completion theorem (2026-04-19) supplies the explicit completed first-sector triple Z_min consumed by this boundary check
+  [PASS] the spatial-environment transfer theorem note pins the abstract object the `spatial_pair` family realises (positive conjugation-symmetric boundary state hit by powers of S_beta^env)
+  [PASS] reproduced Z_min from the rank-one transfer realisation matches the note's published completed triple to 1e-9  (||Z_min reproduced - Z_min note||=2.459e-13)
+  [PASS] the best scaled-fit `Zhat_best` reproduces the note's published vector to 1e-6  (Zhat_best=[0.2805278327 0.7898503101 1.1207256334])
+  [PASS] the optimal overall scale `c_best` reproduces the note's published value to 1e-6  (c_best=0.481383963249)
+  [PASS] the Euclidean gap `||c_best Zhat_best - Z_min||_2` reproduces the note's published value to 1e-9  (||c*Zhat - Z_min||=0.007578536496)
+  [PASS] the audited corner is a strict local minimum: relaxing any of the three active edges into the interior strictly increases the gap  ((rel_tau_t,rel_tau_b,rel_ad)=(7.595174e-03,2.888595e-02,7.580871e-03))
+  [PASS] the best audited scaled fit therefore does NOT realise Z_min exactly: the gap norm is strictly bounded away from zero (>= 1e-3)  (||c*Zhat - Z_min|| = 0.007578536496 > 1e-3)
+  [PASS] the note's prose conclusion `still not realized exactly inside the audited current explicit witness family` is therefore numerically supported
+
+====================================================================================================================
+RESULT
+====================================================================================================================
+  Boundary refinement (current explicit `spatial_pair` family is only an ansatz):
+    - the audited parameter box's best one-parameter scaled fit lands on
+      three of four edges (lower tau_transfer, upper tau_boundary, lower
+      asym_decay) with one interior optimum at linear_decay ~= 0.323966;
+    - the residual gap ||c_best Zhat_best - Z_min||_2 = 7.578536496483e-03
+      is strictly positive, so this witness family does NOT realise the
+      completed first-sector triple Z_min exactly;
+    - the family therefore remains a boundary ansatz; the missing exact
+      realisation is the actual framework-point Wilson environment packet.
+
+PASS=10 FAIL=0
+SUMMARY: PASS=10 FAIL=0
+
+----- stderr -----
+

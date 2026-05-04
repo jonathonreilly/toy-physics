@@ -1,0 +1,62 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_transfer_operator_dominant_mode.py
+runner_sha256: 96f93384bf180700dbacbdade4856b5bf61231d7b242ce4264d9dbfe4c6e3f57
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.06
+status: ok
+----- stdout -----
+========================================================================================
+PMNS TRANSFER OPERATOR DOMINANT MODE
+========================================================================================
+
+Question:
+  Can a genuinely dynamical native law on the hw=1 triplet recover any
+  of the active microscopic PMNS data from corner-to-corner transport?
+
+========================================================================================
+PART 1: THE ALIGNED HW=1 TRANSFER KERNEL HAS EXACT DOMINANT AND SUBDOMINANT MODES
+========================================================================================
+  [PASS (A)] The transfer kernel is Hermitian  (Hermitian error=0.00e+00)
+  [PASS (A)] The transfer kernel is positive on the chosen aligned patch  (eigenvalues=[1.7, 0.5, 0.5])
+  [PASS (A)] The dominant eigenvector is the symmetric hw=1 mode  (|<u0,v0>|=1.000000000000)
+  [PASS (A)] The two orthogonal modes are exactly degenerate  (lambda_- split=2.78e-16)
+  [PASS (A)] The dominant and subdominant eigenvalues match the exact seed formulas  (vals=[1.7, 0.5, 0.5])
+
+========================================================================================
+PART 2: THE SEED PAIR IS RECONSTRUCTED EXACTLY FROM THE TRANSFER MODES
+========================================================================================
+  [PASS (A)] The transfer kernel reconstructs xbar exactly  (reconstructed=0.900000000000)
+  [PASS (A)] The transfer kernel reconstructs ybar exactly  (reconstructed=0.400000000000)
+  [INFO] The dominant-mode law fixes the aligned active seed pair  ((xbar,ybar)=(0.900000,0.400000))
+
+========================================================================================
+PART 3: THIS ROUTE IS BLIND TO THE ZERO-SUM CORNER-BREAKING CARRIER
+========================================================================================
+  [PASS (A)] The two off-seed microscopic samples are genuinely different  (operator distance=0.198494)
+  [PASS (A)] Their dominant-mode transfer projections collapse to the same aligned seed kernel  (projection errors=(1.36e-16, 1.36e-16))
+  [INFO] The transfer-operator route fixes the aligned seed pair but not the breaking carrier  (zero-sum off-seed carrier is outside the transfer image)
+
+========================================================================================
+PART 4: THE WEAK-AXIS SEED PATCH IS RECOVERED EXACTLY
+========================================================================================
+  [PASS (A)] The aligned active block gives the exact transfer kernel on the seed patch  (transfer error=0.00e+00)
+  [INFO] The transfer kernel reproduces the existing weak-axis seed law structurally  (dominant and subdominant modes reconstruct the seed pair)
+
+========================================================================================
+RESULT
+========================================================================================
+  Positive native transfer-operator law:
+    - on the aligned hw=1 active patch, the transfer kernel has an
+      exact dominant symmetric mode and one degenerate orthogonal mode
+    - those two modes reconstruct the active seed pair (xbar, ybar)
+    - the aligned weak-axis seed patch is recovered exactly
+
+  Boundary:
+    - the route does not determine the 5-real off-seed corner-breaking
+      source
+
+PASS=10  FAIL=0
+
+----- stderr -----
+

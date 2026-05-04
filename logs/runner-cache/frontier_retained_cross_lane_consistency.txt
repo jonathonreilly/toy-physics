@@ -1,0 +1,111 @@
+===== runner cache v1 =====
+runner: scripts/frontier_retained_cross_lane_consistency.py
+runner_sha256: 294f9a6045f8d099c75d04e6decf41c054377012a249328b7546a53508a70441
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.20
+status: ok
+----- stdout -----
+================================================================================
+Retained cross-lane numerical consistency
+================================================================================
+
+Block A. Plaquette / coupling lane
+--------------------------------------------------------------------------------
+[PASS] A.1 u_0 = <P>^(1/4) (retained mean-field definition)
+       <P> = 0.5934,  u_0 = 0.877681
+[PASS] A.2 α_bare := α_s(v) · u_0^2 is consistent with retained vertex-power theorem
+       α_bare = α_s(v) · u_0^2 = 0.07957747
+         α_s(v) = 0.103303816122, u_0^2 = 0.770325
+[PASS] A.3 α_LM = α_bare / u_0 (retained hierarchy theorem)
+       α_LM (retained): 0.0906905627716
+       α_bare / u_0:    0.0906678360
+[PASS] A.4 α_s(v) / α_LM = 1/u_0 (direct cross-lane identity)
+       α_s(v)/α_LM = 1.13908011
+       1/u_0       = 1.13936563
+
+Block B. CKM atlas lane
+--------------------------------------------------------------------------------
+[PASS] B.1 |V_us|^2 = α_s(v)/2 (retained CKM atlas)
+       |V_us|^2 = 0.0516519081,  α_s(v)/2 = 0.051651908061
+[PASS] B.2 |V_cb| = α_s(v)/√6 (retained CKM atlas)
+       |V_cb| = 0.0421736063
+[PASS] B.3 C_F − T_F = 5/6 (exact SU(3) Casimir)
+       C_F - T_F = 5/6
+
+Block C. Koide chart lane
+--------------------------------------------------------------------------------
+[PASS] C.1 SELECTOR = √6/3 (retained selected-line slot)
+       SELECTOR = 0.816496580927726
+[PASS] C.2 SELECTOR^2 = Q_Koide = 2/3 (exact scalar-chart identity)
+       SELECTOR^2 = 0.666666666666667
+       Q_Koide    = 0.6666666666666666
+[PASS] C.3 E2 = 2·SELECTOR/√3 (retained scalar-chart identity)
+       E2 (retained) = 0.9428090415820635
+       2·SELECTOR/√3 = 0.9428090415820632
+[PASS] C.4 (E2/2)^2 = SELECTOR^2/3 = Q_Koide/3 = δ_Brannen = 2/9 (CROSS-LANE identity)
+       (E2/2)^2     = 0.222222222222222
+       SELECTOR^2/3 = 0.222222222222222
+       Q_Koide/3    = 0.222222222222222
+       δ_Brannen    = 0.2222222222222222
+[PASS] C.5 E1 = 2·SELECTOR (retained scalar-chart identity)
+       E1 (retained) = 1.6329931619
+       2·SELECTOR    = 1.6329931619
+[PASS] C.6 E1/E2 = √3 (exact Koide chart ratio)
+       E1/E2 = 1.732050807568877,  √3 = 1.732050807568877
+
+Block D. Hierarchy / V_EW lane
+--------------------------------------------------------------------------------
+[PASS] D.1 v_EW = M_Pl · (7/8)^(1/4) · α_LM^16 (retained hierarchy theorem, ~2% cross-check)
+       v_predicted = 247.090128 GeV
+       v_EW (retained) = 246.282818290129 GeV
+       relative diff = +0.328%
+
+Block E. Anomaly arithmetic
+--------------------------------------------------------------------------------
+[PASS] E.1 Tr[Y] = 0 in retained (quark+lepton LH) SM content
+       Tr[Y] = N_q·Y_q + N_L·Y_L = 6·(1/3) + 2·(-1) = 2 − 2 = 0
+[PASS] E.2 Tr[Y^3] = −16/9 per one generation (ANOMALY_FORCES_TIME)
+       Tr[Y^3] = 6·(1/3)^3 + 2·(−1)^3 = 6/27 − 2 = 2/9 − 2 = −16/9
+[PASS] E.3 Witten SU(2) anomaly: 4 doublets even (ANOMALY_FORCES_TIME)
+       total LH SU(2) doublets = 4 (even)
+
+Block F. Koide Q = 3·δ identity via three independent routes
+--------------------------------------------------------------------------------
+[PASS] F.1 Route 1 (Frobenius-isotype/AM-GM): Q_Koide = 2/3
+       Q_Koide = 2/3 = 2/d at d=3 (isolated by retained AM-GM support)
+[PASS] F.2 Route 2 (ABSS fixed-point): η_ABSS = 2/9
+       η_ABSS = 2/9 = 2/d^2 at d=3 (retained ABSS G-signature)
+[PASS] F.3 Route 3 (doublet magnitude): (E2/2)^2 = SELECTOR^2/3 = Q/3 = 2/9
+       (E2/2)^2 = 0.222222222222222,  Q/3 = 0.222222222222222
+[PASS] F.4 All three routes: Q_Koide = 3 · δ_Brannen (arithmetic identity)
+       Q_Koide = 0.6666666666666666,  3·δ_Brannen = 0.6666666666666666
+
+Block G. Cosmological-constant / dark-energy retained identity
+--------------------------------------------------------------------------------
+[PASS] G.1 Λ·c^2 = 3·H_inf^2 (retained spectral-gap / de Sitter identity, sympy)
+       Λ·c^2 − 3·H_inf^2 = 0
+[PASS] G.2 w = −1 from d ln ρ_Λ / d ln a = 0 (retained corollary)
+       If Λ is constant in a (fixed-gap vacuum scale), ρ_Λ is constant in a,
+       so w_DE = −1 exactly.  (Retained DARK_ENERGY_EOS_RETAINED_COROLLARY.)
+
+Block H. Neutrino mass staircase
+--------------------------------------------------------------------------------
+[PASS] H.1 k_B − k_A = 1 (retained adjacent-singlet-placement theorem)
+       k_A = 7, k_B = 8
+[PASS] H.2 ρ = B/A = α_LM (staircase theorem)
+       B/A = α_LM^(k_B - k_A) = α_LM^1 = 0.0906905627716
+[PASS] H.3 η_break = ε/B = α_LM/2 (retained residual-sharing theorem)
+       η_break = 0.0453452814
+
+================================================================================
+Summary
+================================================================================
+PASSED: 26/26
+
+All retained lanes are numerically cross-consistent at the algebraic
+identities they share.  This runner provides a single executable
+harness for reviewers to verify cross-lane coherence.
+
+----- stderr -----
+

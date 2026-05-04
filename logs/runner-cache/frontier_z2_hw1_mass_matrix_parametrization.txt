@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/frontier_z2_hw1_mass_matrix_parametrization.py
+runner_sha256: 20641b0797e794f5231e5dd38eb4694b94ec6b46b0ad667588eeb857767cb0c5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================
+Z_2 hw=1 MASS-MATRIX PARAMETRIZATION
+========================================================================
+
+========================================================================
+PART 1: Completeness of the five-parameter family
+========================================================================
+  [PASS] all random samples are Hermitian and Z_2-invariant
+  [PASS] the explicit family has real dimension 5  (rank = 5)
+  [PASS] the full Z_2-invariant Hermitian space has real dimension 5  (rank = 5)
+
+========================================================================
+PART 2: Exact sign eigenvector
+========================================================================
+  [PASS] the sign vector is a Z_2 eigenvector with eigenvalue -1
+  [PASS] M v_sign = (b-c) v_sign for random samples
+
+========================================================================
+PART 3: Trivial block and closed-form spectrum
+========================================================================
+  [PASS] the trivial block has the expected form
+  [PASS] the closed-form spectrum matches the numerical spectrum
+
+========================================================================
+PART 4: Genericity and the exact S_3 locus
+========================================================================
+  [PASS] generic random samples have three distinct eigenvalues  (fraction = 1.000)
+  [PASS] degenerate samples are rare in random sampling  (fraction = 0.000)
+  [PASS] the exact S_3 locus d = 0, a = b + c collapses to two values  (distinct = 2)
+
+========================================================================
+TOTAL: PASS=10, FAIL=0
+========================================================================
+
+----- stderr -----
+

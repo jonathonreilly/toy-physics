@@ -1,0 +1,40 @@
+===== runner cache v1 =====
+runner: scripts/persistent_object_adaptive_readout_v2_probe.py
+runner_sha256: e098652fba158ffa7da9a5a0341b5f633f7a90afcb36ab1081331ece078a7c4a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 102.52
+status: ok
+----- stdout -----
+============================================================================================================
+PERSISTENT OBJECT ADAPTIVE READOUT V2
+  exact h=0.25 lattice, compact repeated-update source object
+  broad readout reference vs frontier-shell adaptive readout
+============================================================================================================
+h=0.25, W=3, L=6, source_z=2.0, source_nodes=[5320, 5345, 5295, 5321, 5319]
+source strengths=[0.001, 0.002, 0.004, 0.008], updates=3, top_keep=3
+frontier readout: diffuse_steps=2, diffuse_lambda=0.3, target_mass_base=0.24, target_mass_gain=0.2, mask_slope_floor=0.07, frontier_blend=0.55, frontier_sharpness=1.35
+kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.5
+field target max=0.02, fixed gain=1.800031e+00
+
+REDUCTION CHECK
+  zero-source broad shift:     +0.000000e+00
+  zero-source frontier shift:  -4.193325e-16
+  zero-source frontier target:  0.246575
+  zero-source frontier tau:     3.204892e-03
+  zero-source frontier bias:    0.000662
+  fixed dynamic field gain:     1.800031e+00
+
+FROZEN READOUT
+mode                  F~M(step)   TOWARD    det N_eff  support frac    capture    w N_eff   mean delta   frontier
+----------------------------------------------------------------------------------------------------------------
+broad            1.00,1.00,1.00    12/12      497.319         1.000      1.000    625.000    8.561e-03        n/a
+frontier         0.74,1.78,1.78     2/12       54.118         0.241      0.003     73.763   -8.877e-04      0.001
+
+COMPARISON
+  frontier vs broad delta ratio:    -0.104
+  frontier vs broad support frac:    0.241
+  frontier vs broad capture:         0.003
+
+----- stderr -----
+

@@ -1,0 +1,82 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_canonical_local_block.py
+runner_sha256: 5ac5d22b44633d96230653eea300743b3322d61d2dbdec75439329a79ad1facc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: CANONICAL ONE-GENERATION LOCAL BLOCK
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+    rows: Framework axiom; Observable principle; Anomaly-forced time;
+          Native weak algebra; Structural SU(3) closure; One-generation matter closure
+  - docs/NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md
+  - docs/NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md
+  - docs/NEUTRINO_MAJORANA_PHASE_REMOVAL_NOTE.md
+  - docs/NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md
+
+Question:
+  After reducing the local one-generation Majorana lane to one real
+  amplitude mu, is there any residual local antisymmetric block
+  freedom, or is the microscopic 2x2 pairing block already canonical?
+
+========================================================================================
+PART 1: THE LOCAL ANTISYMMETRIC 2x2 SPACE IS ONE-DIMENSIONAL
+========================================================================================
+  [PASS (C)] The complex antisymmetric 2x2 matrix space has dimension 1  (dim=1)
+  [PASS (C)] The unique basis direction is J_2 up to normalization  (basis=[[ 0.      -0.j -0.707107-0.j]
+ [ 0.707107-0.j  0.      -0.j]])
+  [PASS (C)] Every antisymmetric 2x2 matrix is exactly m J_2  (reconstruction error=0.00e+00)
+  [PASS (C)] Antisymmetry forces zero diagonal and opposite off-diagonal entries  (diag_err=0.00e+00, offdiag_err=0.00e+00)
+
+  So the one-generation local pairing block is not a matrix family.
+  It is already a single complex coordinate on J_2.
+
+========================================================================================
+PART 2: PHASE REMOVAL FIXES THE UNIQUE REAL NORMAL FORM
+========================================================================================
+  [PASS (C)] Local rephasing acts by unitary congruence on the antisymmetric block  (||U^dag U-I||=0.00e+00)
+  [PASS (C)] Choosing alpha = arg(m)/2 sends m J_2 to |m| J_2  (canonicalization error=1.18e-16)
+  [PASS (C)] The canonical block is real and antisymmetric  (imag_err=0.00e+00, antisym_err=0.00e+00)
+
+  Modulo the existing one-generation nu_R rephasing freedom, every
+  local block is equivalent to the unique normal form mu J_2.
+
+========================================================================================
+PART 3: RETAINED LOCAL BLOCK INVARIANTS DEPEND ONLY ON MU
+========================================================================================
+  [PASS (C)] Pfaffian magnitude is exactly mu on every phase representative  (max | |Pf|-mu |=0.00e+00)
+  [PASS (C)] Both singular values are exactly mu on every phase representative  (max singular-value error=1.11e-16)
+  [PASS (C)] A^dag A has trace 2 mu^2 on every phase representative  (max trace error=2.22e-16)
+  [PASS (C)] Determinant magnitude is mu^2 on every phase representative  (max | |det|-mu^2 |=1.11e-16)
+
+  So all retained one-generation local block invariants collapse to
+  the single real amplitude mu. There is no extra local matrix data.
+
+========================================================================================
+PART 4: GENERIC LOCAL 2x2 DATA PROJECTS ONTO ONE ANTISYMMETRIC SLOT
+========================================================================================
+  [PASS (C)] Antisymmetric projection of generic local data lies on one slot  (projection reconstruction error=0.00e+00)
+  [PASS (C)] Projected block is exactly antisymmetric  (||A+A^T||=0.00e+00)
+
+  Even before any activation law is specified, the local antisymmetric
+  channel has only one coefficient to turn on.
+
+========================================================================================
+RESULT
+========================================================================================
+  The one-generation local antisymmetric Majorana block is already
+  canonical: every realization is equivalent to mu J_2 with mu >= 0.
+  No residual local matrix or basis freedom remains beyond mu.
+
+  The next honest open question is therefore only the axiom-side
+  activation law for mu.
+
+PASS=13  FAIL=0
+
+----- stderr -----
+

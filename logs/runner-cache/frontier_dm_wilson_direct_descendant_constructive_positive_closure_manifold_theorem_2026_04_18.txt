@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_2026_04_18.py
+runner_sha256: d65ba1bc896bf170f7d83fb3df9f8cc656a6f45988418a20aa20028a571ec305
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.14
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON DIRECT-DESCENDANT CONSTRUCTIVE POSITIVE CLOSURE MANIFOLD
+========================================================================================
+
+========================================================================================
+PART 1: A REGULAR EXACT CONSTRUCTIVE POSITIVE ROOT EXISTS
+========================================================================================
+  [PASS] The base point is an exact closure root  (F(base)=-7.994e-15)
+  [PASS] The base point lies in the constructive positive branch  ((gamma,E1,E2,Delta)=(0.103856487612,0.302714955579,2.003452402509,0.000799312200))
+  [PASS] The closure equation is regular in the phase direction at the base point  (dF/de=0.034474247845)
+
+========================================================================================
+PART 2: FOUR INDEPENDENT COORDINATE PERTURBATIONS SOLVE BACK TO NEARBY EXACT ROOTS
+========================================================================================
+  [PASS] Perturbing a by -1e-03 still admits an exact nearby eta=1 root  (root e=1.866728098187)
+  [PASS] That nearby root stays in the constructive positive branch after perturbing a by -1e-03  (Delta=0.000833473889)
+  [PASS] Perturbing a by +1e-03 still admits an exact nearby eta=1 root  (root e=1.908765113928)
+  [PASS] That nearby root stays in the constructive positive branch after perturbing a by +1e-03  (Delta=0.000765660105)
+  [PASS] Perturbing b by -1e-03 still admits an exact nearby eta=1 root  (root e=1.851944795347)
+  [PASS] That nearby root stays in the constructive positive branch after perturbing b by -1e-03  (Delta=0.000834658574)
+  [PASS] Perturbing b by +1e-03 still admits an exact nearby eta=1 root  (root e=1.924709298468)
+  [PASS] That nearby root stays in the constructive positive branch after perturbing b by +1e-03  (Delta=0.000764229028)
+  [PASS] Perturbing c by -1e-03 still admits an exact nearby eta=1 root  (root e=1.815675865933)
+  [PASS] That nearby root stays in the constructive positive branch after perturbing c by -1e-03  (Delta=0.000815176295)
+  [PASS] Perturbing c by +1e-03 still admits an exact nearby eta=1 root  (root e=1.961572593249)
+  [PASS] That nearby root stays in the constructive positive branch after perturbing c by +1e-03  (Delta=0.000783573619)
+  [PASS] Perturbing d by -1e-03 still admits an exact nearby eta=1 root  (root e=1.807148679340)
+  [PASS] That nearby root stays in the constructive positive branch after perturbing d by -1e-03  (Delta=0.000817516583)
+  [PASS] Perturbing d by +1e-03 still admits an exact nearby eta=1 root  (root e=1.967799508545)
+  [PASS] That nearby root stays in the constructive positive branch after perturbing d by +1e-03  (Delta=0.000781272094)
+
+========================================================================================
+PART 3: CURRENT PROJECTED-SOURCE SCALARS VARY ON THE LOCAL EXACT-CLOSURE SET
+========================================================================================
+  [PASS] Delta_src is not locally constant on the exact constructive positive closure set  (span=7.042955e-05)
+  [PASS] gamma is not locally constant on the exact constructive positive closure set  (span=7.675094e-03)
+  [PASS] E1 is not locally constant on the exact constructive positive closure set  (span=8.268133e-03)
+  [PASS] E2 is not locally constant on the exact constructive positive closure set  (span=8.001017e-03)
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The exact constructive positive closure set is locally non-isolated and needs a new independent selector condition  (regular eta=1 equation + open inequalities => local positive-dimensional exact-closure family)
+
+========================================================================================
+SUMMARY: PASS=24 FAIL=0
+========================================================================================
+
+----- stderr -----
+

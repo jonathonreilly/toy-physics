@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_slot_torsion_boundary_theorem.py
+runner_sha256: 3fda0f3e12098152b880546e6deacd021620412b658d33cc2e0aa520b631ad36
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.56
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE SLOT-TORSION BOUNDARY THEOREM
+========================================================================================
+
+Question:
+  Can the current exact one-phase real-slot atlas family populate the
+  live source-oriented intrinsic slot pair on the post-canonical H-side sheet?
+
+========================================================================================
+PART 1: ONE-PHASE REAL-SLOT FAMILIES HAVE ZERO SLOT TORSION
+========================================================================================
+  [PASS (C)] For any one-phase real-slot family, a b = u^2 - v^2 is exactly real  (max err=2.22e-16)
+  [PASS (C)] So the exact slot torsion invariant T_slot(a,b) = Im(a b) vanishes on the whole one-phase real-slot family  (T_slot = 0 is a necessary condition for one-phase real-slot realizability)
+
+========================================================================================
+PART 2: THE LIVE SOURCE-ORIENTED SLOT PAIR HAS NONZERO TORSION
+========================================================================================
+  [PASS (C)] Across the live source-oriented bundle, the intrinsic slot pair is the exact constant pair (a_*, b_*)  ((a_*,b_*)=(0.169932113230+1.192809041582j,0.458607247825-0.692809041582j))
+  [PASS (C)] That exact slot pair carries nonzero slot torsion T_slot(a_*,b_*) = (sqrt(2)+sqrt(6))/9  (T_slot=0.429300367240)
+  [PASS (C)] So the live source-oriented intrinsic slot pair cannot lie on the one-phase real-slot family  (the necessary one-phase condition T_slot = 0 fails exactly)
+
+========================================================================================
+PART 3: THE EXACT SOURCE-FAITHFUL CHARACTER BRANCHES FAIL AS WELL
+========================================================================================
+  [PASS (C)] On the exact source-faithful branches lambda in {-1,0,+1}, the live slot pair does not decompose with real u and v  (lam=-1: |Im u|+|Im v|=0.743570; lam=0: |Im u|+|Im v|=1.192809; lam=1: |Im u|+|Im v|=0.449239)
+  [PASS (C)] So the old source-faithful one-phase slot family is comparator/support only, not a constructive selector for the live source-oriented sheet  (max imaginary defect=1.192809)
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE SLOT-TORSION BOUNDARY
+========================================================================================
+  [PASS (C)] The new note records the nonzero slot torsion and the one-phase-family incompatibility
+  [PASS (C)] The new note records that the old one-phase source-faithful slot family cannot populate the live source-oriented sheet
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact mainline answer:
+    - the old one-phase real-slot family has exact slot torsion T_slot = 0
+    - the live source-oriented intrinsic slot pair has exact nonzero torsion
+      T_slot = (sqrt(2) + sqrt(6)) / 9
+    - therefore the current source-faithful one-phase slot family cannot
+      populate the live source-oriented sheet
+
+  So the remaining mainline law must go beyond that atlas subfamily and
+  carry nonzero slot torsion, or work directly on the active carrier-side
+  bundle rather than on the old one-phase slot route.
+
+PASS=9 FAIL=0
+
+----- stderr -----
+

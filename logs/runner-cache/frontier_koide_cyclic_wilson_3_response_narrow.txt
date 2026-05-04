@@ -1,0 +1,73 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_cyclic_wilson_3_response_narrow.py
+runner_sha256: c639132039983f18896ef48aebcf611b222c9244cb98d095980625d9ed347875
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.06
+status: nonzero_exit
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure and scope discipline
+----------------------------------------------------------------------------------------
+  [PASS (A)] contains: 'Koide Cyclic Wilson 3-Response Law — Narrow Conditional Theorem'  ()
+  [PASS (A)] contains: 'Type:** bounded_theorem'  ()
+  [PASS (A)] contains: '**Given**'  ()
+  [PASS (A)] contains: '(I, C+C², i(C−C²))'  ()
+  [PASS (A)] contains: '(r₀/3) B₀ + (r₁/6) B₁ + (r₂/6) B₂'  ()
+  [PASS (A)] contains: '2 r₀² = r₁² + r₂²'  ()
+  [PASS (A)] contains: 'out of scope'  ()
+  [PASS (A)] contains: 'KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md'  ()
+  [PASS (A)] contains: 'class (A)'  ()
+  [PASS (A)] contains: 'target_claim_type: bounded_theorem'  ()
+  [PASS (A)] narrow scope avoids forbidden claim: 'applies to physical charged leptons unconditionally'  (conditional premise stays explicit)
+  [PASS (A)] narrow scope avoids forbidden claim: 'Koide relation is hereby derived'  (conditional premise stays explicit)
+  [PASS (A)] narrow scope avoids forbidden claim: 'the local Wilson first-variation exists for'  (conditional premise stays explicit)
+
+----------------------------------------------------------------------------------------
+Part 2: cyclic Hermitian basis (B0, B1, B2) on 3x3 cyclic representation
+----------------------------------------------------------------------------------------
+  [PASS (A)] C^3 = I (cyclic group order 3)  (C is order-3 on regular rep)
+  [PASS (A)] B0 = I is Hermitian (symmetric)  ()
+  [PASS (A)] B1 = C + C^2 is symmetric (and so Hermitian)  ()
+  [PASS (A)] (C - C^2) is antisymmetric (so i (C - C^2) is Hermitian)  ()
+  [PASS (A)] [C, B0] = 0 (B0 commutes with C)  ()
+  [PASS (A)] [C, B1] = 0 (B1 commutes with C)  ()
+  [PASS (A)] [C, B2_kernel] = 0 (B2_kernel commutes with C)  ()
+
+----------------------------------------------------------------------------------------
+Part 3: response triple (r0, r1, r2) uniquely determines H_cyc
+----------------------------------------------------------------------------------------
+  [PASS (A)] <B0, B0>_F = Tr(I) = 3  (= 3)
+  [PASS (A)] <B1, B1>_F = 6  (= 6)
+  [PASS (A)] <B2_kernel, B2_kernel>_F = 6 (and <B2, B2>_F = 6 since |i|² = 1)  (= 6; reconstruction coefficient 1/6 matches inverse)
+  [PASS (A)] <B0, B1>_F = 0  (= 0)
+  [PASS (A)] <B0, B2_kernel>_F = 0  (= 0)
+  [PASS (A)] <B1, B2_kernel>_F = 0  (= 0)
+  [PASS (A)] Frobenius-dual reconstruction recovers responses (Fraction(5, 1), Fraction(1, 1), Fraction(7, 1))  (got=(Fraction(5, 1), Fraction(1, 1), Fraction(7, 1)))
+  [PASS (A)] Frobenius-dual reconstruction recovers responses (Fraction(-2, 1), Fraction(3, 1), Fraction(-4, 1))  (got=(Fraction(-2, 1), Fraction(3, 1), Fraction(-4, 1)))
+  [PASS (A)] Frobenius-dual reconstruction recovers responses (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))  (got=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)))
+
+----------------------------------------------------------------------------------------
+Part 4: 3-response law has Koide scalar form 2 r0² = r1² + r2²
+----------------------------------------------------------------------------------------
+  [PASS (A)] Koide locus example: (5,1,7) satisfies 2 r0² = r1² + r2²  (2*25 - 1 - 49 = 0)
+  [PASS (A)] Koide locus example: (5,7,1) satisfies 2 r0² = r1² + r2² (swap symmetry)  ()
+  [PASS (A)] (2,1,1) NOT on Koide locus  ()
+  [PASS (A)] (0,1,1) NOT on Koide locus  ()
+  [PASS (A)] note flags: scalar equation NOT claimed to hold for physical charged leptons  ()
+
+----------------------------------------------------------------------------------------
+Part 5: declared dependency is graph-visible
+----------------------------------------------------------------------------------------
+  [PASS (A)] koide_dweh_cyclic_compression_note_2026-04-18 exists in audit ledger  (effective_status='retained')
+  [PASS (A)] koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02 seeded by audit pipeline  (run docs/audit/scripts/run_pipeline.sh after editing the note)
+  [PASS (A)] koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02 records Koide DWEH as declared dependency  (deps=['koide_dweh_cyclic_compression_note_2026-04-18'])
+  [FAIL (A)] koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02 remains effective-unaudited before independent audit  (effective_status='decoration_under_koide_dweh_cyclic_compression_note_2026-04-18')
+
+========================================================================================
+  TOTAL: PASS=37, FAIL=1
+========================================================================================
+
+----- stderr -----
+

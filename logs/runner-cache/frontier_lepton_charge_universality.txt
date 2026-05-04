@@ -1,0 +1,30 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lepton_charge_universality.py
+runner_sha256: 1a2bebf3a494bf97e6075d6c25082f42ce6647c8af7960d85659bc36a1e892de
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure
+----------------------------------------------------------------------------------------
+  [PASS (A)] contains: 'Charged-Lepton Charge Universality'  ()
+  [PASS (A)] contains: 'Q_e = Q_μ = Q_τ = −1'  ()
+  [PASS (A)] contains: 'Cross-generation universality'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: charge universality
+----------------------------------------------------------------------------------------
+  [PASS (A)] Q(e_R) = Y(e_R)/2 = -1  (Q = -1)
+  [PASS (A)] Q(μ_R) = -1 by cross-generation universality  (Y = -2, Q = -1)
+  [PASS (A)] Q(τ_R) = -1 by cross-generation universality  (Y = -2, Q = -1)
+  [PASS (A)] Q(e_L) = T_3 + Y/2 = -1/2 + (-1/2) = -1  (Q = -1)
+
+========================================================================================
+  TOTAL: PASS=7, FAIL=0
+========================================================================================
+
+----- stderr -----
+

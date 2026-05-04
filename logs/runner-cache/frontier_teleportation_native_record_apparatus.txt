@@ -1,0 +1,51 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_native_record_apparatus.py
+runner_sha256: c7e92351c44aa2f602ccecd2ecd48601b9d52633698b46a7555c93cd17a3244d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
+NATIVE BELL-RECORD APPARATUS / 3D+1 CARRIER CANDIDATE
+Status: planning artifact; ordinary quantum state teleportation only
+trials / seed: 64 / 20260426
+source -> target: (1, 1, 1)@t=4 -> (5, 3, 2)@t=11
+spatial Manhattan distance: 7
+record code: length=8, min_hamming=5, one_bit_corrected=True, two_bit_corrected=True
+generated Bell labels: Phi+, Phi-, Psi+, Psi-
+max Bell-transducer norm error: 4.441e-16
+max record probability error from 1/4: 1.110e-16
+max pairwise record-distribution distance across inputs: 1.110e-16
+max Bob trace distance to I/2 before carrier delivery: 3.053e-16
+max pairwise pre-delivery Bob-state distance across inputs: 2.220e-16
+carrier payloads derived from apparatus: True
+carrier pulse worldlines local: True
+carrier pulse count conserved: True
+early delivery blocked: True
+delivery at light-cone tick available: True
+minimum delivered-record corrected fidelity: 0.9999999999999998
+maximum delivered-record infidelity: 2.220e-16
+max corrected-state trace distance to input: 1.943e-16
+wrong-record mean fidelity control: 0.333333
+wrong-record max fidelity control: 0.999624
+
+Acceptance gates:
+  native Bell-stabilizer transducer writes all four records: PASS
+  redundant record code is durable through two bit flips: PASS
+  carrier payload is derived from apparatus pointer: PASS
+  3D+1 record-field pulses propagate locally: PASS
+  Bob pre-delivery state is input-independent: PASS
+  delivered native carrier restores Bob state: PASS
+  wrong-record control remains non-teleporting: PASS
+  claim boundary stays state-only and not FTL: PASS
+
+Limitations:
+  This is a native apparatus/carrier model, not a full detector derivation.
+  The Bell-stabilizer transducer is ideal and projective.
+  The record-field carrier is discrete and local but not field-theoretic.
+  Decoherence, thermodynamic irreversibility, hardware readout, and
+  conservation-ledger derivations remain open.
+  No matter, mass, charge, energy, object, or FTL transport is claimed.
+
+----- stderr -----
+

@@ -1,0 +1,56 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_protocol.py
+runner_sha256: f6d05d806623e945df61dda4e2ce342ea844a13ccaa1dbb689499dc329dfa308
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.12
+status: ok
+----- stdout -----
+NATIVE TASTE-QUBIT TELEPORTATION FIRST ARTIFACT
+Status: planning / first artifact; quantum state teleportation only
+
+Native KS taste encoding:
+  lattice: 3D side=4
+  encoded site indices |0_L>, |1_L>: (0, 1)
+  site Z == I_cells tensor xi_5: True
+  site X == I_cells tensor xi_last: True
+  restricted Z is Pauli Z: True
+  restricted X is Pauli X: True
+  restricted anticommutator norm: 0.000e+00
+
+Bell projectors from taste Pauli stabilizers:
+  resolution error: 0.000e+00
+  orthogonality error: 0.000e+00
+  idempotence error: 0.000e+00
+  state-projector error: 1.110e-16
+
+Teleportation trials:
+  random trials: 64 (seed=20260425)
+  Bell outcomes exercised: Phi+, Phi-, Psi+, Psi-
+  minimum corrected-state fidelity: 0.9999999999999993
+  maximum infidelity: 6.661e-16
+  max Bell probability error from 1/4: 2.220e-16
+  max Bob trace distance to I/2 before Alice measurement: 3.331e-16
+  max Bob trace distance to I/2 after Alice measurement but before message: 4.163e-16
+  max pairwise pre-message Bob-state distance across inputs: 3.886e-16
+
+Causal two-bit record channel:
+  record: Psi- bits(z,x)=(1, 1) created t=10 deliver t=13
+  receive at t=12 blocked: True
+  receive at delivery tick exactly once: True
+  post-delivery correction fidelity: 1.0000000000000000
+
+Acceptance gates:
+  native taste encoding: PASS
+  Bell projectors: PASS
+  random-state fidelity: PASS
+  all Bell outcomes: PASS
+  Bob pre-message input-independence: PASS
+  causal record channel: PASS
+
+Claim boundary:
+  This is quantum state teleportation on encoded taste qubits only.
+  It is not matter teleportation, mass transfer, charge transfer, or FTL transport.
+
+----- stderr -----
+

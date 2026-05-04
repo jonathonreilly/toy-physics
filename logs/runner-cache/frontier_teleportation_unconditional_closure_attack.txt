@@ -1,0 +1,42 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_unconditional_closure_attack.py
+runner_sha256: 497d550c8fd81405a8d23413a396ac0f692be31274f5e6532c69d01bc2f7726c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+TELEPORTATION UNCONDITIONAL-CLOSURE ATTACK
+Status: planning artifact; theorem premises sharpened, closure not promoted
+Claim boundary: ordinary quantum state teleportation only; no matter, mass, charge, energy, object, or faster-than-light transport
+
+bare one-axiom underdetermination witness: transducers=8, carriers=4, equivalent_pairs=32, selection_entropy_bits=5.000000, local_hermitian=True, same_protocol_observables=True
+minimal variational completion: selected_winding=0, angle=1.570796, action_gap=19.739209, selected_center=0.000, neighbor_weight=0.408248, dwell_gap=0.015625, extra_completion_required=True
+signed sparse 3D theorem certificate rows:
+  side=4, gap=0.0244025, gap*L^2=0.390440, Bell*=0.999702, Fbest=0.999802, CHSH=2.827585, neg=0.499702
+  side=6, gap=0.0120618, gap*L^2=0.434225, Bell*=0.999709, Fbest=0.999806, CHSH=2.827604, neg=0.499709
+  side=8, gap=0.00704654, gap*L^2=0.450979, Bell*=0.999711, Fbest=0.999807, CHSH=2.827608, neg=0.499711
+  side=10, gap=0.00459031, gap*L^2=0.459031, Bell*=0.999711, Fbest=0.999807, CHSH=2.827610, neg=0.499711
+conditional sparse-resource theorem schema: gap_floor=0.380/L^2, min_gap_margin=6.525e-04, min_Bell=0.999702, max_Bell_deficit=2.980e-04, scaled_gap_monotone=True, Bell_monotone=True, side10_Tadiabatic_bound=4.784e+05, side10_beta_bound=5.453e+03, asymptotic_premise_proved=False
+pulse threshold theorem: record_length=8, d_min=5, correctable_flips=2, max_slot_error=5.631e-04, union_word_failure_bound=9.978e-09, exact_worst_observed=1.449e-11, target=1.000e-06, slot_threshold=2.622e-03
+thermodynamic Ising detector theorem: domain_side=5, spins/slot=125, slots=8, p_spin=2.006e-03, KL_majority_bound=9.373e-132, word_failure_bound=7.498e-131, log10_overlap_bound=-655.141, arrhenius_wall=1.929e-22, decay=word~exp(-Theta(L^3)), wall~exp(-Theta(L^2))
+
+Acceptance gates:
+  bare one-axiom surface remains underdetermined: PASS
+  minimal variational completion selects bridge principles: PASS
+  finite rows satisfy the conditional L^-2 resource theorem premises: PASS
+  pulse threshold theorem covers the correlated-noise slot bound: PASS
+  thermodynamic Ising detector theorem gives continuum decay: PASS
+  claim boundary stays state-only and not FTL: PASS
+
+Limitations:
+  This runner does not derive the variational completion from the bare
+  one-axiom Hilbert/local-Hermitian-flow surface; it proves that the
+  missing selector is still real unless that completion is retained.
+  The sparse-resource theorem is conditional on extending the audited
+  gap floor and Bell-overlap floor beyond sides 4,6,8,10.
+  The pulse and detector theorems define threshold/continuum classes,
+  not a fabricated controller, lab material, or measured spectrum.
+
+----- stderr -----
+

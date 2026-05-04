@@ -1,0 +1,38 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_graph_failure_map.py
+runner_sha256: 7d4da2851753cb298dc5a94864332e2117c4358dfc7348041ee43e492100ed22
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.38
+status: ok
+----- stdout -----
+==============================================================================================================
+STAGGERED GRAPH FAILURE MAP
+  Adversarial boundaries: odd-cycle defects, parity ambiguity, dense shortcuts,
+  wrap/parity inconsistencies, and high-degree contamination
+  Retained battery: Born/linearity, norm, force sign, F∝M, achromatic force,
+  equivalence, robustness, gauge if cycles exist
+==============================================================================================================
+  dt=0.12, steps=10, mass=0.3, G=8.0, source=0.0004
+
+control_random_geometric     kind=control                      n=36  same-color-edges=0  long-edge-frac=0.00 maxdeg=4  retained=8/8 force=TOWARD  F~M=1.000 achrom=1.50e-16 equiv=1.75e-16 gauge=PASS classification=baseline
+odd_cycle_defect             kind=odd_cycle_defect             n=48  same-color-edges=1  long-edge-frac=0.00 maxdeg=5  retained=8/8 force=TOWARD  F~M=1.000 achrom=1.95e-16 equiv=1.56e-16 gauge=PASS classification=structural_break
+parity_wrap_inconsistency    kind=parity_wrap_inconsistency    n=36  same-color-edges=1  long-edge-frac=0.47 maxdeg=3  retained=8/8 force=TOWARD  F~M=1.000 achrom=1.13e-16 equiv=6.81e-17 gauge=N/A  classification=structural_break
+dense_shortcuts              kind=dense_shortcuts              n=36  same-color-edges=0  long-edge-frac=0.06 maxdeg=4  retained=8/8 force=TOWARD  F~M=1.000 achrom=1.60e-16 equiv=7.14e-17 gauge=PASS classification=graceful_degradation
+high_degree_contamination    kind=high_degree_contamination    n=49  same-color-edges=0  long-edge-frac=0.08 maxdeg=12 retained=8/8 force=TOWARD  F~M=1.000 achrom=1.19e-16 equiv=1.43e-16 gauge=PASS classification=graceful_degradation
+
+SUMMARY
+  control_random_geometric     BASELINE           retained=8/8 gauge=PASS
+  odd_cycle_defect             STRUCTURAL_BREAK   retained=8/8 gauge=PASS
+  parity_wrap_inconsistency    STRUCTURAL_BREAK   retained=8/8 gauge=N/A
+  dense_shortcuts              GRACEFUL_DEGRADATION retained=8/8 gauge=PASS
+  high_degree_contamination    GRACEFUL_DEGRADATION retained=8/8 gauge=PASS
+
+Interpretation:
+  - Same-color edges indicate a structural bipartite/parity defect.
+  - Dense shortcuts and hub contamination are only graceful if the retained
+    force battery still survives without reintroducing centroid-style pathologies.
+  - Gauge/current is only meaningful on cycle-bearing families.
+
+----- stderr -----
+

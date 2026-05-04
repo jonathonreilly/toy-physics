@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/mesoscopic_surrogate_backreaction_harness.py
+runner_sha256: 7fed1f903b0ac009c69e9cde78b08c772f16db66ada4c4b5f95653d6fd4585d3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 16.74
+status: ok
+----- stdout -----
+================================================================================================
+MESOSCOPIC SURROGATE BACKREACTION HARNESS
+  Retained 3D ordered-lattice valley-linear family
+  h=0.5, W=8, segment_L=6, surrogate=topN=196
+  Goal: can the broad relaunch surrogate act as an additive source and
+        support bounded one-step two-body symmetry?
+================================================================================================
+
+SAME-SHAPE SOURCE ADDITIVITY
+      s1       s2   delta(s1+s2)  delta1+delta2    rel_err
+   1e-05    2e-05 +3.61374110e-05 +3.61374940e-05    0.0002%
+   1e-05    5e-05 +7.22744483e-05 +7.22746559e-05    0.0003%
+   2e-05    5e-05 +8.43200445e-05 +8.43204595e-05    0.0005%
+
+DISJOINT BROAD-SOURCE ADDITIVITY
+       zA,zB        s     delta(A+B)  deltaA+deltaB    rel_err
+(-2.0,2.0)    2e-05 +2.81941055e-08 +2.81946556e-08    0.0020%
+(-3.0,3.0)    2e-05 +8.99827335e-09 +8.99879656e-09    0.0058%
+(-2.0,2.0)    5e-05 +7.04838993e-08 +7.04873345e-08    0.0049%
+(-3.0,3.0)    5e-05 +2.24951016e-08 +2.24983720e-08    0.0145%
+
+ONE-STEP TWO-BODY SYMMETRY
+      sA       sB        zA,zB           pA           pB       viol
+   1e-04    1e-04 (-2.0,2.0) +2.32512e-08 -2.31867e-08    0.2773%
+   1e-04    1e-04 (-3.0,3.0) +1.88152e-08 -1.87585e-08    0.3015%
+   1e-04    3e-04 (-2.0,2.0) +6.97590e-08 -6.95601e-08    0.2851%
+   1e-04    3e-04 (-3.0,3.0) +5.64520e-08 -5.62755e-08    0.3128%
+   1e-04    5e-04 (-2.0,2.0) +1.16274e-07 -1.15933e-07    0.2929%
+   1e-04    5e-04 (-3.0,3.0) +9.40973e-08 -9.37925e-08    0.3240%
+   3e-04    1e-04 (-2.0,2.0) +6.97535e-08 -6.95655e-08    0.2695%
+   3e-04    1e-04 (-3.0,3.0) +5.64457e-08 -5.62818e-08    0.2903%
+
+SUMMARY
+  same-site additivity mean/max: 0.0003% / 0.0005%
+  disjoint-source additivity mean/max: 0.0068% / 0.0145%
+  one-step two-body symmetry mean/max: 0.2942% / 0.3240%
+
+SAFE READ
+  - The broad relaunch surrogate can source a weak additive field on the retained family.
+  - One-step two-body symmetry stays at the sub-percent level on the tested rows.
+  - This strengthens the mesoscopic-surrogate lane, but it still does not produce
+    a self-maintaining localized inertial object.
+
+----- stderr -----
+

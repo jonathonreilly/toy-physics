@@ -1,0 +1,48 @@
+===== runner cache v1 =====
+runner: scripts/frontier_planck_target3_phase_unit_edge_statistics.py
+runner_sha256: eeb8e07a85605ee5bf5a9e4fc1d5a3ae06d19cc50caffcd127a7faa9784c2b9b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.06
+status: ok
+----- stdout -----
+==============================================================================
+PLANCK TARGET 3: PHASE UNIT / EDGE-STATISTICS BOUNDARY
+==============================================================================
+
+Question: does the current one-axiom information/action bridge derive
+the absolute action unit and the primitive CAR horizon-edge semantics?
+
+[PASS] primitive active projector has rank four inside the 16-state cell: rank(P_A)=4, dim(H_cell)=16
+[PASS] primitive structural coefficient is one quarter: Tr((I_16/16) P_A)=4/16=1/4
+[PASS] Hilbert amplitudes carry a native U(1) phase: phase is periodic modulo one turn
+[PASS] phase depends only on the dimensionless ratio S/kappa: amplitude=exp(i S/kappa)
+[PASS] common rescaling of action and action quantum is unobservable: (S,kappa)->(lambda S, lambda kappa) leaves exp(iS/kappa) fixed
+[PASS] different dimensional action units can encode the same phase history: kappa=1 and kappa=3 are equivalent after rescaling S
+[PASS] Hermitian information-flow generator exponentiates to a unitary: ||U^dagger U-I||=3.80e-15
+[PASS] inverse scaling of generator and time leaves the same unitary: H->lambda H and t->t/lambda is an internal unit change
+[PASS] constant action-density shifts are only global phase shifts: H->H+aI multiplies U by exp(-iat)
+[PASS] finite matrices cannot realize a nonzero exact canonical action unit: Tr([X,P])=0 but Tr(i I_4)=4i
+[PASS] rank-four block supports two complex CAR modes: max {c,c}=0.00e+00, max {c,c^dagger} error=0.00e+00
+[PASS] two complex CAR modes have the active-block dimension: dim F(C^2)=4=rank(P_A)
+[PASS] CAR modes define a Clifford-Majorana edge algebra: max Clifford anticommutator error=0.00e+00
+[PASS] four Majoranas generate the full active matrix algebra: complex span rank of Clifford words is 16=dim M_4(C)
+[PASS] CAR semantics include an odd/even edge-statistics grading: fermion parity anticommutes with odd Majorana generators
+[PASS] same rank-four Hilbert space supports commuting two-qubit factors: ||[X otimes I, I otimes X]||=0.00e+00
+[PASS] commuting two-qubit factors are not CAR annihilation generators: ||{X otimes I, I otimes X}||=4.00e+00
+[PASS] non-CAR two-qubit semantics generate the same matrix algebra size: two-qubit Pauli products also span M_4(C)
+[PASS] same rank-four Hilbert space also supports ququart clock-shift semantics: ZX=omega XZ with omega=i
+[PASS] ququart clock-shift semantics are not CAR semantics: ||{Z_4,X_4}||=2.83e+00
+[PASS] one-axiom Hilbert flow accepts the same Hamiltonian matrix under CAR semantics: the matrix flow is unitary on F(C^2)
+[PASS] one-axiom Hilbert flow accepts the same Hamiltonian matrix under non-CAR semantics: the identical matrix flow is unitary on C^2 otimes C^2 or C^4
+[PASS] Hilbert-flow data alone cannot distinguish these semantics: CAR and non-CAR generators both present the same M_4(C) as a matrix algebra
+[PASS] Target 3 does derive a dimensionless phase unit: the native invariant is U(1) phase modulo 2*pi
+[PASS] Target 3 does not derive an absolute SI action unit on this surface: the action scale kappa remains rescalable unless a physical unit map is added
+[PASS] Target 3 does not remove the Target 2 native-CAR premise on this surface: rank four plus Hilbert flow underdetermines CAR versus non-CAR edge statistics
+[PASS] positive route needs the stronger Clifford coframe principle: the separate Clifford bridge supplies a sufficient conditional coframe-response premise
+
+Summary: 27/27 checks passed.
+Verdict: the current one-axiom bridge yields a dimensionless phase unit but not an absolute action scale or the primitive CAR edge statistics. This is the Hilbert-only boundary; the separate Clifford bridge records a conditional coframe-response route.
+
+----- stderr -----
+

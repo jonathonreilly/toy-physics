@@ -1,0 +1,173 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hw1_second_order_return_shape_theorem.py
+runner_sha256: e3e9151abfa7429b30ad67195cbb3cc7a673d70af6b17246674f1f36eda609df
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.73
+status: ok
+----- stdout -----
+==============================================================================
+G5 / GAMMA_1 SECOND-ORDER RETURN — HIERARCHY-BREAKING CORRECTION SURVEY
+==============================================================================
+
+==============================================================================
+PHASE 1: second-order-return consistency check
+==============================================================================
+  [PASS (C)] Gamma_1 Hermitian
+  [PASS (C)] Gamma_1^2 = I
+  [PASS (C)] {Gamma_1, gamma_5} = 0
+  [PASS (C)] P_L Gamma_1 P_L = 0
+  [PASS (C)] P_R Gamma_1 P_R = 0
+  [PASS (C)] First-order vanishing P_T1 Gamma_1 P_T1 = 0
+  [PASS (C)] Second-order return on full T_1 = I_6
+  [PASS (C)] Second-order species block = I_3
+  [PASS (C)] O_3 adds no contribution to second-order return
+  diag(Sigma species block) = [ 1.000000,  1.000000,  1.000000]
+
+==============================================================================
+PHASE 2A: Correction-A — Higgs fluctuations phi = e_1 + eps
+==============================================================================
+  Perturbed Sigma species-block diagonals (subtracting leading I_3):
+    eps=(0.0, 0.1, 0.0): diag=[ 1.010000,  1.010000,  1.010000]
+    eps=(0.0, 0.0, 0.1): diag=[ 1.010000,  1.010000,  1.010000]
+    eps=(0.0, 0.1, 0.1): diag=[ 1.020000,  1.020000,  1.020000]
+    eps=(0.1, 0.0, 0.0): diag=[ 1.210000,  1.210000,  1.210000]
+    eps=(0.0, 0.05, -0.05): diag=[ 1.005000,  1.005000,  1.005000]
+  [PASS (C)] Correction-A: O(eps) mix Gamma_1 + eps Gamma_2 produces species-DEMOCRATIC diagonal  (std(diag) = 0.000e+00)
+  O(eps^2) Gamma_2-dressing: (Sigma(eps) - I_3) diag vs eps:
+    eps=0.001: diag correction = [ 0.000002,  0.000002,  0.000002]
+    eps=0.01: diag correction = [ 0.000200,  0.000200,  0.000200]
+    eps=0.1: diag correction = [ 0.020000,  0.020000,  0.020000]
+  [PASS (C)] Correction-A: higher-order (Gamma_2 + Gamma_3) dressings remain species-democratic  (max std(diag) = 1.047e-16)
+  -> Correction-A verdict: REJECT — Higgs fluctuations produce species-democratic corrections at every tested order
+
+==============================================================================
+PHASE 2B: Correction-B — iterated returns P_T1 [Gamma_1 P_not Gamma_1]^n P_T1
+==============================================================================
+  n=1: diag (canonical O0+T2) = [ 1.000000,  1.000000,  1.000000]
+  n=1: diag (all non-T1)    = [ 1.000000,  1.000000,  1.000000]
+  [PASS (C)] Iterated return n=1: canonical intermediate remains species-democratic  (std=0.000e+00)
+  n=2: diag (canonical O0+T2) = [ 1.000000,  1.000000,  1.000000]
+  n=2: diag (all non-T1)    = [ 1.000000,  1.000000,  1.000000]
+  [PASS (C)] Iterated return n=2: canonical intermediate remains species-democratic  (std=0.000e+00)
+  n=3: diag (canonical O0+T2) = [ 1.000000,  1.000000,  1.000000]
+  n=3: diag (all non-T1)    = [ 1.000000,  1.000000,  1.000000]
+  [PASS (C)] Iterated return n=3: canonical intermediate remains species-democratic  (std=0.000e+00)
+  n=4: diag (canonical O0+T2) = [ 1.000000,  1.000000,  1.000000]
+  n=4: diag (all non-T1)    = [ 1.000000,  1.000000,  1.000000]
+  [PASS (C)] Iterated return n=4: canonical intermediate remains species-democratic  (std=0.000e+00)
+  -> Correction-B verdict: REJECT — iterated returns remain proportional to I_3 to all orders tested (n=1..4) on canonical retained intermediate, and remain species-democratic on the all-non-T1 intermediate. Gamma_1 itself carries no species-resolved diagonal information.
+
+==============================================================================
+PHASE 2C: Correction-C — retained weighted intermediate propagator
+==============================================================================
+  [PASS (C)] Correction-C: unit weights reproduce I_3
+  Hopping structure (Gamma_1 = SX (x) I (x) I (x) I):
+    T_1 species 1 spatial (1, 0, 0) -> targets [(0, 0, 0, 0)]
+    T_1 species 2 spatial (0, 1, 0) -> targets [(1, 1, 0, 0)]
+    T_1 species 3 spatial (0, 0, 1) -> targets [(1, 0, 1, 0)]
+  [PASS (C)] Correction-C: species-diagonal formula diag = (w_O0, w_T2_a, w_T2_b)  (d=[ 0.370000,  1.190000,  2.310000]  expected=[ 0.370000,  1.190000,  2.310000])
+
+  hw-staggered scheme: diag = (w0, w2, w2) sweep:
+  Scanning (w0, w2) to test whether Koide Q=2/3 + observed direction is achievable
+    Best (hw-staggered) cos_sim to PDG direction: 0.854539
+      at (w0, w2) = (0.0001, 0.1509), Q = 0.487533
+      masses = [ 0.000100,  0.150852,  0.150852]
+      PDG direction = [ 0.016473,  0.236877,  0.971400]
+  [PASS (C)] Correction-C (hw-staggered) structurally cannot match observed direction (2+1 degenerate)  (best cos=0.854539 < 0.99 confirms the 2+1 degenerate obstruction)
+
+  Unconstrained Correction-C: diag = (w_O0, w_T2_a, w_T2_b) can match any target,
+  but nothing in the retained framework fixes the per-T_2-state weights.
+  -> Correction-C verdict: UNDERDETERMINED — species-resolved weights of O_0 and individual T_2 states WOULD lift I_3 into diag(w_O0, w_T2_a, w_T2_b), matching arbitrary targets. hw-staggered retained weights give diag = (w_0, w_2, w_2) and cannot match observed direction (best cos_sim = 0.8545). No retained primitive on main assigns distinct weights to individual T_2 states.
+
+==============================================================================
+PHASE 2D: Correction-D — retained mass insertion on T_1
+==============================================================================
+  M_insert = gamma_5: diag = [ 0.000000,  0.000000,  0.000000], max |off-diag| = 0.000e+00
+  M_insert = Xi_5: diag = [ 0.000000,  0.000000,  0.000000], max |off-diag| = 0.000e+00
+  M_insert = Gamma_1 Gamma_2 Gamma_3: diag = [ 0.000000,  0.000000,  0.000000], max |off-diag| = 0.000e+00
+  M_insert = Gamma_2 Gamma_3: diag = [ 0.000000,  0.000000,  0.000000], max |off-diag| = 0.000e+00
+
+  Retained-operator species blocks on T_1:
+    Gamma_1                 : diag = [ 0.000000,  0.000000,  0.000000], max |off| = 0.000e+00
+    Gamma_2                 : diag = [ 0.000000,  0.000000,  0.000000], max |off| = 0.000e+00
+    Gamma_3                 : diag = [ 0.000000,  0.000000,  0.000000], max |off| = 0.000e+00
+    gamma_5                 : diag = [ 0.000000,  0.000000,  0.000000], max |off| = 0.000e+00
+    Xi_5                    : diag = [ 0.000000,  0.000000,  0.000000], max |off| = 0.000e+00
+    Gamma_1 Gamma_2         : diag = [ 0.000000,  0.000000,  0.000000], max |off| = 1.000e+00
+    Gamma_1 Gamma_2 Gamma_3 : diag = [ 0.000000,  0.000000,  0.000000], max |off| = 0.000e+00
+  [PASS (C)] Correction-D: Xi_5 species-block is diagonal scalar on T_1  (verified above)
+  -> Correction-D verdict: REJECT — no single retained Cl(3) generator or bilinear insertion on T_1 carries a species-resolved non-identity diagonal. The retained spatial Clifford carries the SPECIES label via the HW-basis PROJECTORS, not via an algebraic operator.
+
+==============================================================================
+PHASE 3: Koide / direction / ratio checks on the candidates
+==============================================================================
+  I_3 degenerate: Q = 0.333333 (expected 1/3)
+  [PASS (C)] I_3 degenerate Koide = 1/3
+  Observed Koide: Q_obs = 0.666661
+  Observed sqrt-direction: [ 0.016473,  0.236877,  0.971400]
+
+  Correction-C (hw-staggered, retained): diag = (w0, w2, w2)
+  Two-fold degenerate -> cannot match observed (0.0165, 0.2369, 0.9713).
+
+  Correction-C (per-T_2 weights, no retained source): can match any target,
+  but the weights would themselves BE the charged-lepton masses by
+  construction. This is the UNDERDETERMINED outcome.
+
+  Summary table:
+  Correction            Diag                                   Q   cos_sim  Verdict
+  A (Higgs fluct)       [ 1.000000,  1.000000,  1.000000]    0.3333    0.7071
+  B (iter returns)      [ 1.000000,  1.000000,  1.000000]    0.3333    0.7071
+  C (hw-stag best)      [ 0.000100,  0.150852,  0.150852]    0.4875    0.8545
+  D (mass insert)       [ 1.000000,  1.000000,  1.000000]    0.3333    0.7071
+
+  Target Koide: Q = 0.666667
+  Target cos_sim: 1.0000 (exact match to observed direction)
+==============================================================================
+PHASE 4: FOUR-OUTCOME VERDICT
+==============================================================================
+
+  Verdict: HW1_SECOND_ORDER_RETURN_UNDERDETERMINED
+
+  Justification:
+  - Phase 1 (consistency check): PASS — second-order return on T_1
+    is exactly I_3 (reproduces the Dirac-bridge theorem).
+  - Correction-A: REJECT — Higgs fluctuations produce species-democratic corrections at every tested order
+  - Correction-B: REJECT — iterated returns remain proportional to I_3 to all orders tested (n=1..4) on canonical retained intermediate, and remain species-democratic on the all-non-T1 intermediate. Gamma_1 itself carries no species-resolved diagonal information.
+  - Correction-C: UNDERDETERMINED — species-resolved weights of O_0 and individual T_2 states WOULD lift I_3 into diag(w_O0, w_T2_a, w_T2_b), matching arbitrary targets. hw-staggered retained weights give diag = (w_0, w_2, w_2) and cannot match observed direction (best cos_sim = 0.8545). No retained primitive on main assigns distinct weights to individual T_2 states.
+  - Correction-D: REJECT — no single retained Cl(3) generator or bilinear insertion on T_1 carries a species-resolved non-identity diagonal. The retained spatial Clifford carries the SPECIES label via the HW-basis PROJECTORS, not via an algebraic operator.
+
+  Architectural summary:
+  * Higgs fluctuations (A) produce corrections but they are
+    species-democratic at every order tested.
+  * Iterated higher-order returns (B) stay proportional to I_3
+    on the retained canonical intermediate.
+  * Weighted intermediate propagator (C) is the ONLY mechanism
+    that structurally lifts I_3 into a species-resolved diagonal,
+    but the retained framework does not currently supply the
+    per-T_2-state weighting primitive. Under the closest retained
+    scheme (hw-staggered propagator), the T_2 states receive a
+    common weight, leaving a 2+1 degenerate diagonal (w_0, w_2, w_2)
+    that CANNOT match observed (m_e, m_mu, m_tau).
+  * Direct Cl(3) mass insertion (D) produces no species-resolved
+    diagonal: every retained Cl(3) generator acts on T_1 as a
+    scalar multiple of I_3 or zero.
+
+  Missing retained primitive needed to close G5:
+  A retained operator on C^16 that distinguishes the three
+  individual T_2 states (1,1,0), (1,0,1), (0,1,1) with three
+  distinct scalar weights such that the resulting
+  diag(w_O0, w_T2_a, w_T2_b) satisfies Koide Q=2/3 on the
+  observed (m_e, m_mu, m_tau) direction. This is the same
+  missing object flagged by Agents 4-8: within-hw=1 species
+  resolution requires either a Higgs/Yukawa cross-species
+  primitive (dead by A above) or an inter-hw propagator
+  structure that treats the three T_2 states distinctly.
+
+==============================================================================
+RESULT: 20 PASS, 0 FAIL
+VERDICT: HW1_SECOND_ORDER_RETURN_UNDERDETERMINED
+==============================================================================
+
+----- stderr -----
+

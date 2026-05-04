@@ -1,0 +1,51 @@
+===== runner cache v1 =====
+runner: scripts/frontier_area_law_native_car_semantics_tightening.py
+runner_sha256: 0681ceb6bd12e0cc0a533b43a53889ad943f991ca8e5787eebcd41fcda13ccc6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+==============================================================================
+AREA-LAW NATIVE CAR SEMANTICS TIGHTENING
+==============================================================================
+
+Question: is the remaining Target 2 premise exactly a
+Clifford-Majorana/CAR edge-statistics principle?
+
+[PASS] primitive active block has rank four: rank(P_A)=4
+[PASS] rank-four primitive trace is one quarter: 4/16=1/4
+[PASS] two complex CAR modes have Fock dimension four: dim F(C^2)=4
+[PASS] two annihilation operators obey {c_i,c_j}=0: max error=0.00e+00
+[PASS] two annihilation operators obey {c_i,c_j^dagger}=delta_ij: max error=0.00e+00
+[PASS] CAR modes define four Hermitian Majorana generators: max Hermitian error=0.00e+00
+[PASS] Majorana generators obey complex Clifford Cl_4 relations: max Clifford error=0.00e+00
+[PASS] four Majoranas generate the full active matrix algebra M_4(C): complex span rank=16
+[PASS] complex Cl_4 dimension matches M_4(C) complex dimension: dim_C Cl_4 = 16 = dim_C M_4(C)
+[PASS] Majorana pairs recover the original CAR annihilators: c_a=(gamma_2a+i gamma_2a+1)/2
+[PASS] fermion parity squares to identity: ||P^2-I||=0.00e+00
+[PASS] fermion parity has a 2+2 split on the rank-four block: eigenvalues=[-1, -1, 1, 1]
+[PASS] Majorana generators are odd under fermion parity: max anticommutator=0.00e+00
+[PASS] quadratic Majorana bilinears are even under fermion parity: max commutator=0.00e+00
+[PASS] the same rank-four space admits commuting two-qubit spin factors: ||[X otimes I, I otimes X]||=0.00e+00
+[PASS] commuting two-qubit spin factors are not CAR generators: ||{X otimes I, I otimes X}||=4.00e+00
+[PASS] rank four alone cannot distinguish CAR from spin/ququart semantics: extra Clifford-Majorana statistics principle is the exact residual premise
+[PASS] CAR bridge feeds the primitive normal channel: one normal mode gives 2/12
+[PASS] CAR bridge feeds the self-dual tangent channel: one tangent mode gated on half-zone gives 1/12
+[PASS] native-CAR Target 2 chain gives one quarter: 2/12 + 1/12 = 3/12 = 1/4
+[PASS] native-CAR coefficient equals primitive Planck trace: c_Widom=c_cell
+[PASS] remaining Target 2 review decision is statistics, not coefficient: the Target 3 Clifford bridge reduces this to the metric-compatible coframe-response premise
+[PASS] Target 3 bridge supplies the sharper conditional coframe-response object: metric-compatible Clifford coframe response would force the edge-statistics principle
+
+==============================================================================
+SUMMARY: PASS=23  FAIL=0
+==============================================================================
+
+Verdict: the residual Target 2 premise is exactly the
+Clifford-Majorana/CAR edge-statistics principle. The Target 3
+Clifford phase bridge gives a sufficient coframe-response route;
+without that coframe law, rank four alone is
+underdetermined.
+
+----- stderr -----
+

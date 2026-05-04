@@ -1,0 +1,34 @@
+===== runner cache v1 =====
+runner: scripts/kubo_continuum_limit.py
+runner_sha256: c9a2c4d968c921710a113d5e9c294fbf7c9d55b7c867e3912fea60877c615e3e
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.04
+status: timeout
+----- stdout -----
+====================================================================================================
+CONTINUUM LIMIT OF THE TRUE FIRST-ORDER KUBO COEFFICIENT
+Physical: T=15.0, PW=6.0, k*H=2.5, S=0.004, z_src=3.0
+Refinement: H ∈ {0.5, 0.35, 0.25}
+Measured: kubo_true = d(cz)/ds at s=0 via parallel perturbation propagator
+          dM_fd = finite-difference d(cz)/ds at s=S_PHYS for cross-check
+====================================================================================================
+
+[coarse] H = 0.5
+  NL = 30,  k_phase = 5.000,  x_src = 5.000,  z_src = 3.000
+  n_nodes = 18126,  T0 = 1.609e+12,  cz_free = +0.506268
+  kubo_true (parallel prop) = +7.061910
+  dM_fd (finite diff at s=0.004) = +8.660407
+  kubo_true vs dM_fd agreement: 22.64%  (should be small)
+
+[medium] H = 0.35
+  NL = 43,  k_phase = 7.143,  x_src = 4.900,  z_src = 3.000
+  n_nodes = 51451,  T0 = 1.231e+18,  cz_free = -0.302652
+  kubo_true (parallel prop) = +5.972756
+  dM_fd (finite diff at s=0.004) = +6.042263
+  kubo_true vs dM_fd agreement: 1.16%  (should be small)
+
+[fine] H = 0.25
+
+----- stderr -----
+

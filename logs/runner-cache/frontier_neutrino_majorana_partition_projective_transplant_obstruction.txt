@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_partition_projective_transplant_obstruction.py
+runner_sha256: 7dab4f43a9f7bba6efba6bba12ba87396816d14befef36fb920b1bdba8dde7f9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: PARTITION / PROJECTIVE TRANSPLANT OBSTRUCTION
+========================================================================================
+
+Question:
+  Can the universal UV-finite partition density, exact projective Schur
+  closure, or canonical refinement-net pullback act as the missing
+  absolute Majorana staircase selector on the current self-dual ray?
+
+========================================================================================
+PART 1: THE ATLAS ALREADY CONTAINS THE PARTITION / PROJECTIVE FAMILY
+========================================================================================
+  [PASS] Atlas retains the universal UV-finite partition-density row
+  [PASS] Atlas retains the universal projective-Schur closure row
+  [PASS] Atlas retains the universal canonical refinement-net row
+  [PASS] The UV-finite partition note defines an exact partition-density family
+  [PASS] The projective-Schur note gives exact Schur coarse-graining closure
+  [PASS] The refinement note gives exact density pullback / invariance on the net
+  [PASS] The current Majorana blocker note already fixes the self-dual source family to one positive ray
+
+========================================================================================
+PART 2: THE UV-FINITE PARTITION DENSITY HAS NO FINITE SELECTOR ON THE RAY
+========================================================================================
+  [PASS] The partition-density response on the ray is exactly quadratic in lambda  (spread in Delta log rho / lambda^2=7.28e-12)
+  [PASS] The partition-density coefficient is positive  (<J_0,K^-1 J_0>=1.138111e+05)
+  [PASS] d log rho / d lambda = lambda <J_0,K^-1 J_0> stays strictly positive on lambda > 0  (derivatives=[0.00573363597512657, 0.0005198687738647261, 4.7136501726314714e-05])
+  [PASS] So the local partition density has no intrinsic finite positive stationary selector  (only the trivial lambda=0 boundary is stationary)
+
+========================================================================================
+PART 3: EXACT SCHUR / PROJECTIVE CLOSURE PRESERVES THE SAME SCALE LAW
+========================================================================================
+  [PASS] Schur-reduced source stays linear in lambda at scale 5.038e-08  (max reduced-source deviation=0.00e+00)
+  [PASS] Schur-reduced source stays linear in lambda at scale 4.568e-09  (max reduced-source deviation=0.00e+00)
+  [PASS] Schur-reduced source stays linear in lambda at scale 4.142e-10  (max reduced-source deviation=1.78e-15)
+  [PASS] The coarse partition-density response is still exactly quadratic in lambda  (spread in coarse Delta log rho / lambda^2=0.00e+00)
+
+========================================================================================
+PART 4: THE DENSITY COCYCLE / REFINEMENT PULLBACK ADDS NO NEW SCALE LAW
+========================================================================================
+  [PASS] The measure-compensated partition density is exactly chart/refinement invariant across the source ray  (max compensated-density mismatch=0.00e+00)
+  [PASS] So the refinement/overlap cocycle introduces no new lambda dependence  (the density cocycle is lambda-blind after compensation)
+
+========================================================================================
+RESULT
+========================================================================================
+  No. The universal partition / projective family still does not
+  break the current source-scale homogeneity: the local density changes
+  only by a monotone quadratic-in-lambda exponent, exact Schur coarse-
+  graining preserves that same law, and the refinement/atlas density
+  cocycle adds no new lambda dependence.
+
+  So this QG/measure route is not the missing non-homogeneous
+  local-to-generation bridge on the present stack.
+
+  PASS=17  FAIL=0
+
+----- stderr -----
+

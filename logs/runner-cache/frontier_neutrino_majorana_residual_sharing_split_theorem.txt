@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_residual_sharing_split_theorem.py
+runner_sha256: fdf956b7f8538b1a6c82c135097754a0aef4c8d32cda81f635fbd03ec7abc177
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: RESIDUAL-SHARING SPLIT THEOREM
+========================================================================================
+
+Authority stack:
+  - docs/NEUTRINO_MAJORANA_AXIS_EXCHANGE_FIXED_POINT_NOTE.md
+  - docs/NEUTRINO_MAJORANA_ADJACENT_SINGLET_PLACEMENT_THEOREM_NOTE.md
+  - docs/DM_NEUTRINO_CASCADE_GEOMETRY_NOTE_2026-04-14.md
+
+Question:
+  On the already-fixed k_A=7, k_B=8 bridge, is eps/B still free, or does
+  the exact 1+2 geometry plus the local self-dual point fix it?
+
+Exact return split on T_1:
+  via O_0 =
+[[1.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]]
+
+  via T_2 =
+[[0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 1.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 1.+0.j]]
+
+Minimal symmetric residual-sharing lift:
+  local self-dual weight ratio        = 1.000000
+  one-step UV-to-doublet suppression  = B/A = alpha_LM = 0.090667836017
+  exact residual-doublet sharing      = 1/2 = 0.500000
+  predicted eps/B                     = alpha_LM/2 = 0.045333918009
+  [PASS (C)] The local Majorana selector is self-dual, so normal/pairing weights are equal  (rho=1.000000000000)
+  [PASS (C)] The fixed adjacent placement gives one exact staircase-step suppression from singlet to doublet  (B/A=0.090667836017, k_A=7, k_B=8)
+  [PASS (C)] The residual doublet return is exactly rank-2 and equally weighted  (via T_2 = diag(0,1,1))
+  [PASS (C)] The minimal symmetric lift therefore fixes eps/B = alpha_LM/2  (eps/B=0.045333918009)
+  [PASS (C)] The resulting split remains perturbative on the fixed bridge  (eps/B=0.045334)
+
+Result:
+  On the minimal symmetric residual-sharing lift, the fixed local
+  self-dual background increment is carried down one staircase step and
+  shared equally over the exact residual doublet. Therefore:
+
+      eps / B = alpha_LM / 2.
+
+  This closes the old fitted eps/B benchmark on that bridge. What
+  remains is the exact leptogenesis CP-asymmetry kernel, not the split law.
+
+PASS=5  FAIL=0
+
+----- stderr -----
+

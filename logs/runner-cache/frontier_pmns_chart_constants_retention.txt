@@ -1,0 +1,182 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_chart_constants_retention.py
+runner_sha256: 275dfacd84c4020108467737edb6bc91fba660d79522aabffec2fa434428a065
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+
+========================================================================
+Section 1: Chart-constant numerical baseline
+========================================================================
+  [PASS] γ = 1/2 (numerical baseline)
+         γ = 0.5000000000000000
+  [PASS] E₁ = √(8/3) ≈ 1.6329931618... (numerical baseline)
+         E₁ = 1.6329931618554521, target = 1.6329931618554521
+  [PASS] E₂ = √(8)/3 = 2√2/3 ≈ 0.9428090416... (numerical baseline)
+         E₂ = 0.9428090415820635, target = 0.9428090415820634
+  [PASS] E₁ ≠ E₂ (different magnitudes — prompt arithmetic check)
+         |E₁ - E₂| = 0.690184 ≈ 0.690
+  [PASS] E₁² = 8/3 (exact)
+         E₁² = 2.6666666666666665, 8/3 = 2.6666666666666665
+  [PASS] E₂² = 8/9 (exact, NOT 0 as a naive E₂² = E₁² check would yield)
+         E₂² = 0.8888888888888891, 8/9 = 0.8888888888888888
+
+========================================================================
+Section 2: Sub-A — γ = 1/2 trivial-origin candidates
+========================================================================
+  [PASS] Cand A1: SU(2) Dynkin index for fundamental = 1/2 (numerical match)
+         SU(2) Dynkin = 0.5, γ = 0.5: numerical coincidence; structurally γ is NOT SU(2) Dynkin (γ enters via c_odd · a_sel in neutrino sector, not gauge sector)
+  [PASS] Cand A2: Cl(3) chirality projection (1-γ₅)/2 trace = 1/2 (numerical match)
+         Generic projector trace coincidence; γ is NOT specifically the chirality projection (cycle 06 Majorana null-space uses chirality, not source-amplitude decomposition)
+  [PASS] Cand A3: SU(2) fundamental Casimir = 3/4 ≠ 1/2 (FALSIFIED)
+         Casimir = 0.75, γ = 0.5: clear mismatch
+
+========================================================================
+Section 3: Sub-A — γ = c_odd · a_sel from sharp selector projector
+========================================================================
+  [PASS] spec(S_cls) nonzero = {+1, -1}
+         S_cls nonzero spectrum = [-1.0, 1.0]
+  [PASS] spec(T_gamma) nonzero = {+1, -1} (Hermitian eigenvalues)
+         T_gamma nonzero spectrum = [-1.0, 1.0]
+  [PASS] |c_odd| = 1 from spectral isospectrality of S_cls and T_gamma
+         c_odd = 1.0 (source-oriented branch convention)
+  [PASS] P_centered = P_nu - (1/2)(P_nu + P_e) = (1/2) S_cls (matrix identity)
+         P_centered = [[0.5, 0.0], [0.0, -0.5]], (1/2) S_cls = [[0.5, 0.0], [0.0, -0.5]]
+  [PASS] a_sel = 1/2 from sharp selector centering amplitude
+         a_sel = 0.5
+  [PASS] Sub-A genuine structural origin: γ = c_odd · a_sel = (+1)(1/2) = 1/2
+         derived γ = 0.5, target γ = 0.5
+  [PASS] Counterfactual: a_sel = 1 (full projector) → γ = 1, NOT 1/2
+         counterfactual γ = 1.0 (vs target 1/2): falsifies alternative full-projector choice
+  [PASS] Counterfactual: a_sel = 1/3 → γ = 1/3, NOT 1/2
+         counterfactual γ = 0.3333333333333333
+  [PASS] Counterfactual: c_odd = -1 (alternative branch) → γ = -1/2
+         counterfactual γ = -0.5 (sign flip; ratio cp1/cp2 preserved at -√3)
+
+========================================================================
+Section 4: Sub-B — E₁ = √(8/3) trivial-origin candidates
+========================================================================
+  [PASS] Cand B1: SU(2) fundamental Casimir = 3/4 ≠ 8/3 (FALSIFIED)
+         3/4 = 0.75, 8/3 = 2.6667: clear mismatch for E₁²
+  [PASS] Cand B2: SU(3) fundamental Casimir = 4/3 ≠ 8/3 (FALSIFIED for E₁²)
+         4/3 = 1.3333, 8/3 = 2.6667
+  [PASS] Cand B3: 2 × SU(3) fundamental Casimir = 8/3 (numerical match, structurally INAPPROPRIATE — neutrino sector has no SU(3) color)
+         2 × 4/3 = 8/3 numerical coincidence; neutrino sector is Cl(3), not SU(3) color
+
+========================================================================
+Section 5: Sub-B — E₁ from Frobenius dual + spectral match
+========================================================================
+  [PASS] spec(F₁) = {-√(3/8), 0, +√(3/8)}
+         spec(F₁) = ['-0.612372', '0.000000', '0.612372']
+  [PASS] spec(Z_row) = {-1, +1}
+         spec(Z_row) = [-1.0, 1.0]
+  [PASS] F₁ isospectral to √(3/8) Z_row (matching nonzero eigenvalues)
+         F₁ nonzero = ±0.612372, √(3/8) Z_row = ±0.612372
+  [PASS] Sub-B genuine structural origin: E₁ = √(8/3) τ_+ = √(8/3) (with τ_+ = 1)
+         derived E₁ = 1.6329931618554521, target E₁ = 1.6329931618554521
+  [PASS] Bosonic normalization: √(3/8) · E₁ = τ_+ = 1
+         √(3/8) · E₁ = 0.9999999999999999 = τ_+
+  [PASS] Counterfactual: τ_+ = 1/2 → E₁ = √(8/3)/2 ≠ √(8/3)
+         counterfactual E₁ = 0.816497 (vs target 1.632993): falsifies alternative τ_+ value
+  [PASS] Counterfactual: spec(F₁) = ±√(1/2) → E₁ = √2 ≠ √(8/3)
+         counterfactual E₁ = 1.414214 (vs target 1.632993)
+
+========================================================================
+Section 6: Sub-C — E₂ = √(8)/3 = 2√2/3 trivial-origin candidates
+========================================================================
+  [PASS] Cand C1: 1 - 1/9 = 8/9 = E₂² (numerical match, no retained 1/9 origin)
+         1 - 1/9 = 0.8888888888888888 = E₂² = 0.8888888888888891, but 1/9 has no structural origin in retained framework
+  [PASS] Cand C2: 4/9 (SU(2) fund dim² / 9) ≠ 8/9 (FALSIFIED)
+         4/9 = 0.4444, 8/9 = 0.8889: clear mismatch
+
+========================================================================
+Section 7: Sub-C — E₂ from Frobenius dual + spectral match
+========================================================================
+  [PASS] spec(F₂) = {-3/√8, 0, +3/√8}
+         spec(F₂) = ['-1.060660', '0.000000', '1.060660']
+  [PASS] F₂ isospectral to (3/√8) Z_row (matching nonzero eigenvalues)
+         F₂ nonzero = ±1.060660, (3/√8) Z_row = ±1.060660
+  [PASS] Sub-C genuine structural origin: E₂ = √8/3 τ_+ = √8/3 (with τ_+ = 1)
+         derived E₂ = 0.9428090415820635, target E₂ = 0.9428090415820635
+  [PASS] Bosonic normalization: (3/√8) · E₂ = τ_+ = 1
+         (3/√8) · E₂ = 1.0000000000000000 = τ_+
+  [PASS] E₂ = √8/3 = 2√2/3 (equivalent forms)
+         √8/3 = 0.9428090415820635 = 2√2/3 = 0.9428090415820635
+
+========================================================================
+Section 8: Cross-constraint cp1/cp2 = -√3 (cycle 12 retained-bounded)
+========================================================================
+  [PASS] cp1 = -2γE₁/3 = -2√6/9
+         cp1 = -0.5443310539518174, -2√6/9 = -0.5443310539518174
+  [PASS] cp2 = +2γE₂/3 = +2√2/9
+         cp2 = 0.3142696805273545, 2√2/9 = 0.3142696805273545
+  [PASS] cp1/cp2 = -E₁/E₂ = -√3 (CYCLE 12 RETAINED-BOUNDED RATIO)
+         cp1/cp2 = -1.7320508075688772, -√3 = -1.7320508075688772
+  [PASS] γ factors out of cp1/cp2 ratio
+         cp1/cp2 = -E₁/E₂ = -1.7320508075688772 (γ-independent)
+  [PASS] Counterfactual: E₁ = E₂ = 1 → cp1/cp2 = -1, NOT -√3 (BREAKS RATIO)
+         counterfactual ratio = -1.0 (vs -√3 = -1.732051)
+  [PASS] Counterfactual: E₁ = √(8/3), E₂ = 1 → cp1/cp2 = -√(8/3), NOT -√3 (BREAKS)
+         counterfactual ratio = -1.632993 (vs -√3)
+  [PASS] Counterfactual: E₁ = 1, E₂ = √8/3 → cp1/cp2 = -3/√8, NOT -√3 (BREAKS)
+         counterfactual ratio = -1.060660 (vs -√3)
+  [PASS] Uniform scaling (k·E₁, k·E₂) preserves cp1/cp2 = -√3
+         k = 2.0: ratio = -1.7320508075688772 (preserved)
+
+========================================================================
+Section 9: Three named obstructions for absolute retention
+========================================================================
+  [PASS] Obstruction A: c_odd theorem (DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION) is audited_conditional, not retained — γ closure inherits this
+         Repair target: derive sharp resolved branch projector from minimal Cl(3) on Z³ axiom + bosonic-bilinear selector principle
+  [PASS] Obstruction B: v_even theorem (DM_NEUTRINO_VEVEN_BOSONIC_NORMALIZATION) is audited_conditional, not retained — E₁ closure inherits this
+         Repair target: derive Frobenius orthogonality of {A_op, b_op, c_op, d_op, T_δ, T_ρ} basis from minimal primitives; promote v_even to retained
+  [PASS] Obstruction C: same upstream theorems as B (shared v_even + swap-reduction)
+         Single upstream repair (v_even → retained) closes both B and C
+  [PASS] Obstruction-shared: τ_+ = 1 inherits from swap-reduction theorem (audited_conditional)
+         Repair target: promote DM_NEUTRINO_WEAK_EVEN_SWAP_REDUCTION_THEOREM from audited_conditional to retained
+
+========================================================================
+Section 10: Forbidden-import audit
+========================================================================
+  [PASS] No PDG observed values consumed (neutrino masses, PMNS angles, etc.)
+         Chart constants γ, E₁, E₂ are framework-internal structural amplitudes
+  [PASS] No literature numerical comparators consumed (Lie-algebra facts are admitted-context structural)
+         SU(2) Dynkin = 1/2, Casimir = 3/4, SU(3) Casimir = 4/3: admitted as Lie-algebra structural facts, role-labeled, NOT consumed as derivation inputs
+  [PASS] No fitted selectors consumed
+         All structural identifications are algebraic, not numerical fits
+  [PASS] Cycle 12's cp1/cp2 = -√3 ratio: ADMITTED AS PRIOR-CYCLE INPUT
+         Used as cross-constraint, retained-bounded from cycle 12
+  [PASS] PMNS support-grade infrastructure: ADMITTED AS BOUNDED INPUT
+         PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21 is admitted context, not consumed as derivation
+  [PASS] y_0 (G_weak) NOT consumed (cycle 12 O2)
+         Yukawa scale not used in chart-constant derivation
+  [PASS] α_LM (plaquette) NOT consumed (cycle 12 O3)
+         Plaquette/CMT scale not used in chart-constant derivation
+
+========================================================================
+Section 11: Per-sub-constant outcome classification
+========================================================================
+  [PASS] Sub-A (γ = 1/2): PARTIAL closing derivation via sharp selector + c_odd
+         γ = c_odd · a_sel = (+1)(1/2) = 1/2; load-bearing premise: sharp resolved branch projector (audited_conditional via c_odd theorem)
+  [PASS] Sub-B (E₁ = √(8/3)): STRETCH ATTEMPT with partial via Frobenius dual
+         E₁ = √(8/3) τ_+ = √(8/3); load-bearing: Frobenius orthogonality (audited_conditional v_even) + τ_+ = 1 (audited_conditional swap-reduction)
+  [PASS] Sub-C (E₂ = √(8)/3): STRETCH ATTEMPT with partial via Frobenius dual
+         E₂ = √(8)/3 τ_+ = √(8)/3; same load-bearing premises as Sub-B
+
+========================================================================
+Summary
+========================================================================
+
+Total: PASS=57, FAIL=0
+
+All checks passed. PMNS chart-constant retention stretch attempt:
+  - Sub-A (γ = 1/2): PARTIAL closing derivation.
+  - Sub-B (E₁ = √(8/3)): stretch attempt with partial.
+  - Sub-C (E₂ = √(8)/3): stretch attempt with partial.
+Three named obstructions recorded with concrete repair targets.
+Cross-constraint cp1/cp2 = -√3 (cycle 12) verified.
+
+----- stderr -----
+

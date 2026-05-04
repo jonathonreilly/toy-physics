@@ -1,0 +1,78 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hubble_lane5_c2_ckm_pmns_right_sensitive_selector_stretch.py
+runner_sha256: c1b8c8fbe968699a3e52265d2ba1fa27f2979a02c46cf8171e40d778134a7565
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+LANE 5 C2: CKM/PMNS RIGHT-SENSITIVE SELECTOR STRETCH
+========================================================================================
+
+Claim under test:
+  CKM CP orientation might provide the missing PMNS A13 sign selector
+  for the Lane 5 eta-retirement C2 gate.
+
+Boundary result:
+  The sign rule is algebraically coherent but only conditional.
+  Current authority has no typed CKM->PMNS right-sensitive coupling law.
+
+========================================================================================
+PART 1: AUTHORITY TEXT NAMES THE C2 SELECTOR TARGET
+========================================================================================
+  [PASS] Lane 5 eta audit names the right-sensitive Z3 doublet-block law
+  [PASS] Lane 5 eta audit lists CKM atlas structure as an unexplored coupling source
+  [PASS] PMNS A13 theorem reduces the residual selector to sign(A13)
+  [PASS] PMNS selector-bank theorem records CP-sheet blindness
+  [PASS] CKM CP theorem supplies a positive eta_CKM orientation
+  [PASS] Right-conjugacy note says the missing object must break right-orbit blindness
+
+========================================================================================
+PART 2: PMNS EVEN DATA CANNOT SELECT THE A13 SIGN
+========================================================================================
+  even(+sheet) = (1.333333333333, 0.444444444444, 1.632993161855)
+  even(-sheet) = (1.333333333333, 0.444444444444, 1.632993161855)
+  odd(+sheet)  = sign,A13 = (1, 1.6329931618554518)
+  odd(-sheet)  = sign,A13 = (-1, -1.6329931618554518)
+  [PASS] The two sheets have identical even PMNS data
+  [PASS] The same two sheets have opposite A13 sign
+  [PASS] A selector using only the even data is sheet-blind
+
+========================================================================================
+PART 3: CKM ORIENTATION GIVES A COHERENT BUT CONDITIONAL SELECTOR
+========================================================================================
+  rho_CKM=0.166666666667
+  eta_CKM=0.372677996250
+  delta_CKM=1.150261991511
+  candidate selected A13=1.632993161855
+  [PASS] CKM CP coordinates obey rho=1/6
+  [PASS] CKM CP coordinates obey eta=sqrt(5)/6
+  [PASS] CKM orientation is positive on the named branch
+  [PASS] The candidate sign(A13)=sign(eta_CKM) selects A13>0
+
+========================================================================================
+PART 4: CURRENT SURFACE HAS NO TYPED CKM->PMNS COUPLING
+========================================================================================
+  [PASS] Two witnesses share CKM orientation and PMNS even data
+  [PASS] The witnesses differ only in the PMNS A13 sign
+  [PASS] A cross-sector sign law would select the constructive witness
+  [PASS] That cross-sector sign law is not present on the current surface
+  [PASS] Therefore the current surface cannot prove the selector
+
+========================================================================================
+PART 5: CLAIM-STATUS FIREWALL
+========================================================================================
+  [PASS] Actual current-surface status is no-go for unconditional C2 closure
+  [PASS] The candidate is only conditional support under a new coupling law
+  [PASS] The typed cross-sector coupling remains open
+  [PASS] No stronger branch-local proposal wording is allowed
+
+========================================================================================
+SUMMARY: PASS=22 FAIL=0
+========================================================================================
+Result: no unconditional C2 selector closure on the current surface.
+Conditional support exists only if a typed CKM->PMNS coupling law is added.
+
+----- stderr -----
+

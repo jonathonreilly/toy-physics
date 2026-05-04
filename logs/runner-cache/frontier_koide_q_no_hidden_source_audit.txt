@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_no_hidden_source_audit.py
+runner_sha256: 5800a878f9adc428cbeb4c520028ef1bc7d540563b4d3dc848838d951487c107
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.71
+status: ok
+----- stdout -----
+
+========================================================================================
+A. Earlier/alternative carriers do not close Q
+========================================================================================
+[PASS] A.1 the raw chiral bridge has identically zero bosonic observable response
+       max |W[jY]| = 0.000e+00
+[PASS] A.2 the unreduced determinant carrier still lands at kappa = 1 rather than 2
+       (x*, y*) = (n_tot/3, 2*n_tot/3), kappa = 1
+[PASS] A.3 on the second-order returned carrier there is only one nontrivial scale-free selector variable
+       Any alternative post-second-order scalar law would only reparameterize the same one-dimensional data.
+
+========================================================================================
+B. Exact hidden-source audit on the normalized carrier
+========================================================================================
+[PASS] B.1 every normalized point Y = diag(y,2-y) determines a unique reduced source K = Y^(-1) - I
+       K(y) = diag((1 - y)/y, (1 - y)/(y - 2))
+[PASS] B.2 zero source occurs if and only if y = 1, i.e. Y = I_2
+       K=0 solution = [{y: 1}]
+[PASS] B.3 imposing Tr(Y)=2 leaves a one-parameter source family, not a forced nonzero source
+       k_perp(k_+) = -k1/(2*k1 + 1)
+[PASS] B.4 the nonzero normalized source family is exactly the selector variable in disguise
+       Y(k_+) = diag(1/(k1 + 1), (2*k1 + 1)/(k1 + 1))
+[PASS] B.5 therefore any hidden nonzero source would simply import the Q value rather than derive it
+       The only datum-free source choice on the normalized carrier is K = 0.
+
+========================================================================================
+C. Exact consequence on the admitted carrier
+========================================================================================
+[PASS] C.1 the datum-free reduced source choice K = 0 gives Y = I_2 on the admitted carrier
+       This is the unique source-free point of the normalized positive cone.
+[PASS] C.2 Y = I_2 is exactly E_+ = E_perp and therefore kappa = 2, Q = 2/3
+       Nonzero K would reinsert an arbitrary one-parameter selector input.
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 10/10
+  [PASS] A.1 the raw chiral bridge has identically zero bosonic observable response
+  [PASS] A.2 the unreduced determinant carrier still lands at kappa = 1 rather than 2
+  [PASS] A.3 on the second-order returned carrier there is only one nontrivial scale-free selector variable
+  [PASS] B.1 every normalized point Y = diag(y,2-y) determines a unique reduced source K = Y^(-1) - I
+  [PASS] B.2 zero source occurs if and only if y = 1, i.e. Y = I_2
+  [PASS] B.3 imposing Tr(Y)=2 leaves a one-parameter source family, not a forced nonzero source
+  [PASS] B.4 the nonzero normalized source family is exactly the selector variable in disguise
+  [PASS] B.5 therefore any hidden nonzero source would simply import the Q value rather than derive it
+  [PASS] C.1 the datum-free reduced source choice K = 0 gives Y = I_2 on the admitted carrier
+  [PASS] C.2 Y = I_2 is exactly E_+ = E_perp and therefore kappa = 2, Q = 2/3
+
+VERDICT: the second-order normalized carrier has no hidden source freedom
+available to explain Q nontrivially. Any nonzero reduced source simply
+re-parameterizes an arbitrary selector point, while K = 0 is the
+unique datum-free point on the admitted carrier.
+
+This narrows the remaining primitive; it does not itself prove the
+physical charged-lepton lane must be source-free there.
+
+----- stderr -----
+

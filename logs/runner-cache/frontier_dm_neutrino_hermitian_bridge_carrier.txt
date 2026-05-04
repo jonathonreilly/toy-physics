@@ -1,0 +1,42 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_hermitian_bridge_carrier.py
+runner_sha256: 83d978eacf3c919b0153a8268e3881f5cc266619e8afa26da61cba533c2d09d0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO HERMITIAN BRIDGE CARRIER
+========================================================================================
+
+========================================================================================
+PART 1: THE DM-SIDE HERMITEAN BRIDGE IS EXACTLY B_H,MIN
+========================================================================================
+  [PASS] The DM active Hermitian law reconstructs exactly from B_H,min  (recon err=5.50e-16)
+  [PASS] The aligned leg reconstructs exactly from (A,B,u,v)  (core err=5.82e-16)
+  [PASS] The breaking leg reconstructs exactly from (delta,rho,gamma)  (break err=7.85e-17)
+  [PASS] The minimal DM bridge package is exactly B_H,min=(A,B,u,v,delta,rho,gamma)  (B_H,min=(1.970334,0.706450,0.052266,-0.274740,-0.221650,-0.082793,0.365859))
+
+========================================================================================
+PART 2: THE DM BRIDGE IS EXACTLY A 4+3 PACKAGE
+========================================================================================
+  [PASS] The aligned Hermitian core has exact real rank 4  (rank=4)
+  [PASS] The breaking-source sector has exact real rank 3  (rank=3)
+  [PASS] The full active Hermitian grammar has exact real rank 7  (rank=7)
+  [PASS] The minimal DM bridge is exactly the 4+3 package rather than a hidden smaller law  (4+3=7)
+
+========================================================================================
+PART 3: THE UNIFIED DM CARRIER IS EXACTLY U_MIN
+========================================================================================
+  [PASS] The selector primitive is exactly one amplitude slot on the reduced class  (a_sel=1.750000)
+  [PASS] The optional edge bit is exactly the two-branch seed selector  (edge bit=1)
+  [PASS] The unified DM carrier is exactly U_min=(A,B,u,v,delta,rho,gamma,a_sel,e)  (U_min=(1.970333884886059, 0.7064499999999998, 0.05226611511394075, -0.2747396771184062, -0.22165, -0.08279254133092318, 0.3658588946821494, 1.75, 1))
+  [PASS] U_min extends B_H,min rather than replacing it with a different carrier  (first seven slots are the Hermitian bridge)
+
+========================================================================================
+SUMMARY: PASS=12 FAIL=0
+========================================================================================
+
+----- stderr -----
+

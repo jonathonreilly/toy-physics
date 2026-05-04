@@ -1,0 +1,168 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_brannen_route3_geometry_support.py
+runner_sha256: 5945a6f50d6390cf1d39b86d2eb46bae03d53422d120b3c7fe14f6219d97a849
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.17
+status: ok
+----- stdout -----
+
+========================================================================================
+§1. Structural derivation of W_{Z_3}^{d²} = exp(2i)·𝟙
+========================================================================================
+[PASS] 1.1 δ_per_step = n_eff/d² = 2/9 (from conjugate-pair + C_3)
+       δ_per_step = 0.222222222222222, target 2/9 = 0.222222222222222
+[PASS] 1.2 Total phase over d² steps = d²·(2/d²) = 2 (pure rational)
+       d² · δ_per_step = 2.000000000000000, target 2
+[PASS] 1.3 W^{d²} = exp(2i)·𝟙 (Route 3 conditional support)
+       W^9 = (-0.4161468365471422+0.9092974268256818j)
+       exp(2i) = (-0.4161468365471424+0.9092974268256817j)
+       |diff| = 2.483e-16
+
+========================================================================================
+§2. n_eff = 2 from Z_3 conjugate-pair structure (retained)
+========================================================================================
+[PASS] 2.1 Projective doublet coord ζ = e^{-2iθ} has d(arg ζ)/dθ = -2
+       d(arg ζ)/dθ = -2.000000, target -2
+[PASS] 2.2 n_eff := |d(arg ζ)/dθ| = 2 (conjugate-pair winding)
+       |d(arg ζ)/dθ| = 2.000000, n_eff = 2
+
+========================================================================================
+§3. One-clock natural time-scale identifies Brannen-unit with radian
+========================================================================================
+[PASS] 3.1 δ in natural Berry radians = 2/9 (one-clock identification)
+       δ_rad = 0.222222222222222
+
+========================================================================================
+§4. Cross-validation against ABSS η and anomaly Tr[Y³]
+========================================================================================
+[PASS] 4.1 ABSS η(Z_3, weights (1,2)) = 2/d² = 2/9 (equivariant fixed-point)
+       η_ABSS = (0.2222222222222222-4.259549029800286e-18j), target 2/9
+[PASS] 4.1a G-signature operator (not pure Dirac) gives 2/9; pure Dirac gives 0
+       η_G-sign = 0.222222222 (target 2/9)
+       η_pure_Dirac = 0.000000000 (should be 0)
+       → The framework's natural operator is G-signature, not pure Dirac.
+[PASS] 4.1b Z_3 spinor rotation on Cl(3) cycles σ_x → σ_y → σ_z (retained cubic kinematics)
+       U_Z3 = cos(π/3)·I - i·sin(π/3)·(σ·n̂) with n̂ = (1,1,1)/√3
+       U_Z3 σ_x U_Z3† = σ_y ✓
+       U_Z3 σ_y U_Z3† = σ_z ✓
+       U_Z3 σ_z U_Z3† = σ_x ✓
+[PASS] 4.1c U_Z3^3 = -I (spin-1/2 double cover, |Z_3 lift to Spin| = 6)
+       Rotation by 2π (three C_3 steps) acts as -1 on spinors, not +1.
+[PASS] 4.1d Body-diagonal σ_diag is Z_3-invariant (spans fixed subalgebra with I)
+       U_Z3 · σ_diag · U_Z3^† = σ_diag ✓
+       Fixed subalgebra = span{I, σ_diag} = 2-dim, Normal = 2-dim complex
+[PASS] 4.1e **2/9 is STRUCTURAL**: G-sig η on Cl(3)/Z_3 = 2/9 from A0 + cubic kinematics alone
+       Derivation: Cl(3) = M_2(C) → Z_3 cyclic on σ_i → 2-complex-dim normal → weights (1,2) mod 3
+       → η = (1/3)[1/((1-ω)(1-ω²)) + 1/((1-ω²)(1-ω))] = (1/3)(2/3) = 2/9
+       Uses only: (a) Cl(3)=M_2(C) via A0, (b) cyclic Z_3 on σ_i via cubic kinematics.
+       NO convention, NO new axiom. Pure G-signature structural invariant.
+[PASS] 4.2 Anomaly Tr[Y³]_quark_LH = (2d)·(1/d)³ = 2/d² = 2/9
+       Tr[Y³]_q_L = 0.22222222222222215, target 2/9
+[PASS] 4.3 Triple convergence: 2/d² = ABSS η = anomaly Tr[Y³] = Brannen δ_per_step
+       All three retained routes converge to exact rational 2/9.
+
+========================================================================================
+§5. PDG verification: δ = 2/9 rad matches charged-lepton masses
+========================================================================================
+[PASS] 5.1 δ = 2/9 rad reproduces PDG √m ratios at <0.1% precision
+       Max relative error: 0.0029%
+       Brannen triple: [0.022604633913126927, 0.3250435657924067, 1.332997549746258]
+       PDG √m:        [0.022605285886270053, 0.3250513413293352, 1.332989122236187]
+[PASS] 5.2 Standard Berry convention δ_rad = 2π·η FAILS PDG (negative eigenvalue)
+       Standard: [0.6977904503672469, -0.18426938858720857, 1.1671246876717536]  [negative ⇒ unphysical]
+
+========================================================================================
+§6. Selected-line Berry holonomy δ(m_*) = 2/9 (numerical)
+========================================================================================
+[PASS] 6.1 Framework's selected-line δ(m_*) = 2/9 (via Koide amplitude chain)
+       δ(m_*) = 0.222222222222340, target 2/9 = 0.222222222222222
+[PASS] 6.2.m_0 |Im(b_F(m_0))|² = 2/9 (topologically protected)
+       |Im(b_F)|² = 0.222222222222223
+[PASS] 6.2.m_* |Im(b_F(m_*))|² = 2/9 (topologically protected)
+       |Im(b_F)|² = 0.222222222222223
+[PASS] 6.2.m_pos |Im(b_F(m_pos))|² = 2/9 (topologically protected)
+       |Im(b_F)|² = 0.222222222222223
+
+========================================================================================
+§7. Rigid-Triangle Rotation Theorem: δ(m) = rotation angle in plane ⟂ singlet
+========================================================================================
+[PASS] 7.1 Radius |s_⊥(m)| = √(1/2) constant on first branch (Koide cone)
+       r(m_0) = 0.707106781186547, r(m_*) = 0.707106781186548, r(m_pos) = 0.707106781186548, target √(1/2) = 0.707106781186548
+[PASS] 7.2 Unphased point: α(m_0) = -π/2 exactly (u(m_0)=v(m_0))
+       α(m_0) = -1.570796326794830, target -π/2 = -1.570796326794897
+[PASS] 7.3 Endpoint rotation: α(m_pos) - α(m_0) = -π/12 exactly (u(m_pos)=0)
+       α(m_pos) - α(m_0) = -0.261799387799156, target -π/12 = -0.261799387799149
+[PASS] 7.4 Physical rotation: α(m_*) - α(m_0) = -2/9 exactly
+       α(m_*) - α(m_0) = -0.222222222222406, target -2/9 = -0.222222222222222
+[PASS] 7.5 Rotation-angle δ matches framework's Fourier-doublet-phase δ to 10⁻¹²
+       Framework δ: 0.222222222222340
+       Rotation δ:  0.222222222222406
+       |diff|: 6.550e-14
+[PASS] 7.6 |O| = 24 (octahedral rotation group, signed-perms det=+1)
+       Enumerated |O| = 24
+[PASS] 7.7 First-branch span equals 2π/|O| EXACTLY
+       α(m_pos) - α(m_0) = -0.261799387799156
+       -2π/|O| = -π/12 = -0.261799387799149
+[PASS] 7.8 sin(π/12) = (√6-√2)/4 (positivity endpoint structural identity)
+       sin(π/12) = 0.258819045102521, (√6-√2)/4 = 0.258819045102521
+[PASS] 7.9 cos(π/12) = (√6+√2)/4 (positivity endpoint structural identity)
+       cos(π/12) = 0.965925826289068, (√6+√2)/4 = 0.965925826289068
+[PASS] 7.10 Octahedral-Domain: first branch = 1 fundamental domain of O
+       Span = 2π/24 = π/12 EXACT. First branch corresponds to one octahedral sector.
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 30/30
+  [PASS] 1.1 δ_per_step = n_eff/d² = 2/9 (from conjugate-pair + C_3)
+  [PASS] 1.2 Total phase over d² steps = d²·(2/d²) = 2 (pure rational)
+  [PASS] 1.3 W^{d²} = exp(2i)·𝟙 (Route 3 conditional support)
+  [PASS] 2.1 Projective doublet coord ζ = e^{-2iθ} has d(arg ζ)/dθ = -2
+  [PASS] 2.2 n_eff := |d(arg ζ)/dθ| = 2 (conjugate-pair winding)
+  [PASS] 3.1 δ in natural Berry radians = 2/9 (one-clock identification)
+  [PASS] 4.1 ABSS η(Z_3, weights (1,2)) = 2/d² = 2/9 (equivariant fixed-point)
+  [PASS] 4.1a G-signature operator (not pure Dirac) gives 2/9; pure Dirac gives 0
+  [PASS] 4.1b Z_3 spinor rotation on Cl(3) cycles σ_x → σ_y → σ_z (retained cubic kinematics)
+  [PASS] 4.1c U_Z3^3 = -I (spin-1/2 double cover, |Z_3 lift to Spin| = 6)
+  [PASS] 4.1d Body-diagonal σ_diag is Z_3-invariant (spans fixed subalgebra with I)
+  [PASS] 4.1e **2/9 is STRUCTURAL**: G-sig η on Cl(3)/Z_3 = 2/9 from A0 + cubic kinematics alone
+  [PASS] 4.2 Anomaly Tr[Y³]_quark_LH = (2d)·(1/d)³ = 2/d² = 2/9
+  [PASS] 4.3 Triple convergence: 2/d² = ABSS η = anomaly Tr[Y³] = Brannen δ_per_step
+  [PASS] 5.1 δ = 2/9 rad reproduces PDG √m ratios at <0.1% precision
+  [PASS] 5.2 Standard Berry convention δ_rad = 2π·η FAILS PDG (negative eigenvalue)
+  [PASS] 6.1 Framework's selected-line δ(m_*) = 2/9 (via Koide amplitude chain)
+  [PASS] 6.2.m_0 |Im(b_F(m_0))|² = 2/9 (topologically protected)
+  [PASS] 6.2.m_* |Im(b_F(m_*))|² = 2/9 (topologically protected)
+  [PASS] 6.2.m_pos |Im(b_F(m_pos))|² = 2/9 (topologically protected)
+  [PASS] 7.1 Radius |s_⊥(m)| = √(1/2) constant on first branch (Koide cone)
+  [PASS] 7.2 Unphased point: α(m_0) = -π/2 exactly (u(m_0)=v(m_0))
+  [PASS] 7.3 Endpoint rotation: α(m_pos) - α(m_0) = -π/12 exactly (u(m_pos)=0)
+  [PASS] 7.4 Physical rotation: α(m_*) - α(m_0) = -2/9 exactly
+  [PASS] 7.5 Rotation-angle δ matches framework's Fourier-doublet-phase δ to 10⁻¹²
+  [PASS] 7.6 |O| = 24 (octahedral rotation group, signed-perms det=+1)
+  [PASS] 7.7 First-branch span equals 2π/|O| EXACTLY
+  [PASS] 7.8 sin(π/12) = (√6-√2)/4 (positivity endpoint structural identity)
+  [PASS] 7.9 cos(π/12) = (√6+√2)/4 (positivity endpoint structural identity)
+  [PASS] 7.10 Octahedral-Domain: first branch = 1 fundamental domain of O
+
+VERDICT: the selected-line geometry is strongly supported and the
+Route-3 Wilson-line law is numerically consistent as a conditional
+one-clock natural-time support route.
+
+What this runner supports:
+  - δ(m) is exactly the Euclidean rotation angle of the real
+    Koide amplitude in the plane orthogonal to the singlet axis.
+  - The first-branch span is exactly π/12 = 2π/|O| on the
+    retained cubic/octahedral carrier.
+  - The same rational 2/9 reappears on the conditional Route-3
+    one-clock Wilson-line law.
+
+What this runner does not prove:
+  - that the physical Brannen phase on the selected-line carrier
+    is forced by the Route-3 natural-time identification;
+  - or that the ambient 2/9 value is already the physical
+    charged-lepton observable without an extra bridge theorem.
+
+----- stderr -----
+

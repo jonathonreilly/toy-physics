@@ -1,0 +1,21 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_mechanism_separator.py
+runner_sha256: da83648561358b60ab26e712c3091d0f839812512541a057ea6e2676bc4e6796
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+SIGNED GRAVITY MECHANISM SEPARATOR
+not negative mass, shielding, propulsion, or physical antigravity
+
+mechanism                    class                  tag
+----------------------------------------------------------------------------------
+locked_chi_response          requires all gates     CLAIM_SURFACE_BLOCKED unless all gates pass
+lensing_phase_flip           interference           LENSING_PHASE_ONLY
+complex_absorptive_away      absorptive             COMPLEX_ABSORPTIVE_ONLY
+boundary/proxy               boundary_or_proxy      BOUNDARY_PROXY_ONLY
+inserted_control_no_go       inserted_control       CONTROL_NO_GO
+
+----- stderr -----
+

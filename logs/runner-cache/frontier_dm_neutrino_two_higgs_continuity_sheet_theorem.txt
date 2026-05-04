@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_two_higgs_continuity_sheet_theorem.py
+runner_sha256: e307e6726cf259054cca7da7f2ed0ebd32908f602c851fa12a5a2205bd8b68e0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO TWO-HIGGS CONTINUITY SHEET THEOREM
+========================================================================================
+
+Authority stack:
+  - DM neutrino two-Higgs right-Gram bridge
+  - DM leptogenesis universal-Yukawa no-go
+  - retained universal Dirac bridge Y = y_0 I
+
+Question:
+  Once the DM circulant target lands on the canonical two-Higgs lane,
+  does the residual x <-> y sheet remain physically open?
+
+========================================================================================
+PART 1: THE DM CIRCULANT SUBCONE HAS EXACTLY TWO SYMMETRIC SHEETS
+========================================================================================
+  [PASS] Both quadratic sheets solve the same circulant right-Gram target  (errors=(3.35e-16, 1.18e-16))
+  [PASS] The two sheets differ only by x <-> y  (plus=(1.042756,0.335649), minus=(0.335649,1.042756))
+
+  So on the DM circulant subcone the residual ambiguity is no longer a
+  generic seven-quantity mess. It is exactly one swap x <-> y.
+
+========================================================================================
+PART 2: CONTINUITY TO THE RETAINED UNIVERSAL BRIDGE PICKS THE PHYSICAL SHEET
+========================================================================================
+  [PASS] The plus sheet tends to the retained universal bridge Y = sqrt(d) I  (r=1e-01: plus(id=1.7233,cyc=0.1741) minus(id=0.1741,cyc=1.7233); r=1e-02: plus(id=1.7320,cyc=0.0173) minus(id=0.0173,cyc=1.7320); r=1e-04: plus(id=1.7321,cyc=0.0002) minus(id=0.0002,cyc=1.7321))
+  [PASS] The swapped sheet tends instead to a pure cycle-supported monomial class  (r=1e-01: plus(id=1.7233,cyc=0.1741) minus(id=0.1741,cyc=1.7233); r=1e-02: plus(id=1.7320,cyc=0.0173) minus(id=0.0173,cyc=1.7320); r=1e-04: plus(id=1.7321,cyc=0.0002) minus(id=0.0002,cyc=1.7321))
+
+  So the retained universal bridge is not just a background limit.
+  It anchors the physical two-Higgs sheet on the DM lane.
+
+========================================================================================
+PART 3: THE SELECTED DM SHEET IS EXPLICIT AND MERGES ONLY AT d = 2 r
+========================================================================================
+  [PASS] On the physical DM sheet, x >= y with explicit closed form roots  (plus=(1.005474,0.298367) minus=(0.298367,1.005474))
+  [PASS] The two sheets merge only on the exact boundary d = 2 r  (edge=(0.707107,0.707107))
+
+  The physical sheet is therefore explicit:
+      x^2 = (d + sqrt(d^2 - 4 r^2))/2
+      y^2 = (d - sqrt(d^2 - 4 r^2))/2
+  with the swap discarded by continuity to the universal bridge.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact DM-side sheet answer:
+    - the residual ambiguity on the circulant subcone is only x <-> y
+    - continuity to the retained universal bridge picks the x >= y sheet
+    - the physical sheet is explicit in closed form
+
+  So the DM branch no longer needs an extra admitted right-sensitive
+  scalar just to fix the two-Higgs sheet on this circulant lane.
+
+PASS=6  FAIL=0
+
+----- stderr -----
+

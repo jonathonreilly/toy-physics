@@ -1,0 +1,144 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gravity_cosmology_tower_lambda_spectral_bridge.py
+runner_sha256: 498c8acdd3a0b5443aeeb7fa8787f49069df39aa1bb6f5be64d325f81d1b6370
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+Gravity-cosmology spectral tower Lambda-bridge theorem audit
+See docs/GRAVITY_COSMOLOGY_TOWER_LAMBDA_SPECTRAL_BRIDGE_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs (gravity tower + cosmological constant)
+----------------------------------------------------------------------------------------
+  hbar              = 1.054572e-34 J s
+  c                 = 2.997925e+08 m/s
+  Lambda benchmark  = 1.105000e-52 m^-2
+  R_dS = sqrt(3/Lambda) = 1.647705e+26 m
+  [PASS] hbar > 0
+  [PASS] c > 0
+  [PASS] Lambda benchmark > 0
+  [PASS] Lambda = 3/R^2 (retained)
+  [PASS] upstream authority present: docs/GRAVITON_SPECTRAL_TOWER_THEOREM_NOTE_2026-04-24.md
+  [PASS] upstream authority present: docs/VECTOR_GAUGE_FIELD_KK_TOWER_THEOREM_NOTE_2026-04-24.md
+  [PASS] upstream authority present: docs/SCALAR_HARMONIC_TOWER_THEOREM_NOTE_2026-04-24.md
+  [PASS] upstream authority present: docs/COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md
+
+----------------------------------------------------------------------------------------
+(L1)-(L3): Pure-Lambda form of the spectral tower
+----------------------------------------------------------------------------------------
+  [PASS] (L1) at l=2: TT in pure-Lambda form matches R-form
+  [PASS] (L2) at l=2: vector in pure-Lambda form matches
+  [PASS] (L3) at l=2: scalar in pure-Lambda form matches
+  [PASS] (L1) at l=3: TT in pure-Lambda form matches R-form
+  [PASS] (L2) at l=3: vector in pure-Lambda form matches
+  [PASS] (L3) at l=3: scalar in pure-Lambda form matches
+  [PASS] (L1) at l=4: TT in pure-Lambda form matches R-form
+  [PASS] (L2) at l=4: vector in pure-Lambda form matches
+  [PASS] (L3) at l=4: scalar in pure-Lambda form matches
+  [PASS] (L1) at l=5: TT in pure-Lambda form matches R-form
+  [PASS] (L2) at l=5: vector in pure-Lambda form matches
+  [PASS] (L3) at l=5: scalar in pure-Lambda form matches
+
+----------------------------------------------------------------------------------------
+(L4)-(L6): Lowest-mode closed forms
+----------------------------------------------------------------------------------------
+  TT lowest l=2: l(l+2) - 2 = 6
+  (l(l+2) - 2)/3              = 2
+  [PASS] (L4) m^2_TT(2) coefficient = 2
+  vec lowest l=1: l(l+2) - 1 = 2
+  (l(l+2) - 1)/3             = 2/3
+  [PASS] (L5) m^2_vec(1) coefficient = 2/3
+  scalar lowest l=0: l(l+2) = 0
+  [PASS] (L6) m_scalar(0) = 0 (zero mode)
+  m_TT(2)  = sqrt(2)   * hbar sqrt(Lambda)/c = 2.9335e-33 eV/c^2
+  m_vec(1) = sqrt(2/3) * hbar sqrt(Lambda)/c = 1.6936e-33 eV/c^2
+  [PASS] m_TT(2) numerical = 2.93e-33 eV/c^2
+  [PASS] m_vec(1) numerical = 1.69e-33 eV/c^2
+
+----------------------------------------------------------------------------------------
+(L7) NEW: Lambda-INDEPENDENT ratio m_TT(2)/m_vec(1) = sqrt(3)
+----------------------------------------------------------------------------------------
+  m^2_TT(2) / m^2_vec(1) = (2)/(2/3) = 3
+  m_TT(2) / m_vec(1) = sqrt(3) = 1.7320508076
+  sqrt(3)                                   = 1.7320508076
+  [PASS] (L7) m^2_TT(2)/m^2_vec(1) = 3 (exact rational)
+  [PASS] (L7) m_TT(2)/m_vec(1) = sqrt(3)
+  [PASS] (L7) ratio = sqrt(3) at Lambda = 1e-52 (Lambda-independent)
+  [PASS] (L7) ratio = sqrt(3) at Lambda = 1e-50 (Lambda-independent)
+  [PASS] (L7) ratio = sqrt(3) at Lambda = 1e-30 (Lambda-independent)
+
+----------------------------------------------------------------------------------------
+(L8)-(L10): Universal spin-curvature gaps (independent of l)
+----------------------------------------------------------------------------------------
+  [PASS] (L10) at l=2: scalar - TT gap = 2/3
+  [PASS] (L8) at l=2: scalar - vector gap = 1/3
+  [PASS] (L9) at l=2: vector - TT gap = 1/3
+  [PASS] (L10) at l=3: scalar - TT gap = 2/3
+  [PASS] (L8) at l=3: scalar - vector gap = 1/3
+  [PASS] (L9) at l=3: vector - TT gap = 1/3
+  [PASS] (L10) at l=4: scalar - TT gap = 2/3
+  [PASS] (L8) at l=4: scalar - vector gap = 1/3
+  [PASS] (L9) at l=4: vector - TT gap = 1/3
+  [PASS] (L10) at l=5: scalar - TT gap = 2/3
+  [PASS] (L8) at l=5: scalar - vector gap = 1/3
+  [PASS] (L9) at l=5: vector - TT gap = 1/3
+  [PASS] (L10) at l=10: scalar - TT gap = 2/3
+  [PASS] (L8) at l=10: scalar - vector gap = 1/3
+  [PASS] (L9) at l=10: vector - TT gap = 1/3
+  Universal scalar-TT gap: m^2 = (2/3) hbar^2 Lambda/c^2
+    Numerical: m^2 = 9.1155e-138 kg^2
+    sqrt(gap)  = 1.6936e-33 eV/c^2
+
+----------------------------------------------------------------------------------------
+GW mass-bound comparator (conditional; particle interpretation bounded)
+----------------------------------------------------------------------------------------
+  Framework structural eigenvalue m_TT(2) = 2.9335e-33 eV/c^2
+  Benchmark GW graviton-mass bound        < 6e-32 eV/c^2
+  Comparator margin                       = 20x
+  [PASS] structural m_TT(2) below benchmark GW bound
+  [PASS] framework m_TT(2) order of magnitude (~1e-33 eV)
+  Illustrative future sensitivity         ~ 1e-33 eV/c^2
+  [PASS] conditional comparator reaches same decade under illustrative future sensitivity
+
+----------------------------------------------------------------------------------------
+Summary: NEW gravity-cosmology spectral bridge
+----------------------------------------------------------------------------------------
+  PURE-LAMBDA SPECTRAL TOWER (NEW closed forms):
+
+    m^2_TT(l)     = ((l(l+2) - 2)/3) hbar^2 Lambda/c^2,  l >= 2
+    m^2_vec(l)    = ((l(l+2) - 1)/3) hbar^2 Lambda/c^2,  l >= 1
+    m^2_scalar(l) = (l(l+2)/3)       hbar^2 Lambda/c^2,  l >= 0
+
+  LOWEST-MODE CLOSED FORMS (NEW):
+
+    m_TT(2)  = sqrt(2)   hbar sqrt(Lambda)/c = 2.93e-33 eV/c^2
+    m_vec(1) = sqrt(2/3) hbar sqrt(Lambda)/c = 1.69e-33 eV/c^2
+    m_scalar(0) = 0
+
+  LAMBDA-INDEPENDENT STRUCTURAL RATIO (NEW):
+
+    m_TT(2) / m_vec(1) = sqrt(3)  (ratio independent of Lambda)
+
+  UNIVERSAL SPIN-CURVATURE GAP (NEW):
+
+    m^2_scalar(l) - m^2_TT(l) = (2/3) hbar^2 Lambda/c^2  (constant for l>=2)
+
+  CROSS-SECTOR BRIDGE:
+    Gravity spectral tower (geometric) <-> cosmological constant Lambda
+
+  CONDITIONAL COMPARATOR:
+    Benchmark GW mass bound:     m_g < 6e-32 eV/c^2
+    Framework structural scale:  m_TT(2) = 2.93e-33 eV/c^2
+    This is not a direct particle-mass prediction unless the parent
+    gravity-tower particle interpretation is separately promoted.
+
+========================================================================================
+TOTAL: PASS=48, FAIL=0
+========================================================================================
+
+----- stderr -----
+

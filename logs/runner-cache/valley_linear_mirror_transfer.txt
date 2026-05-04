@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/valley_linear_mirror_transfer.py
+runner_sha256: 6fecdfa323f71b94a39a0d945d1acd2b5e15f3d935b256a3e8359c8abe2f1d8e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.85
+status: ok
+----- stdout -----
+========================================================================
+VALLEY-LINEAR MIRROR / RANDOM-DAG TRANSFER
+  spent-delay vs valley-linear on canonical 3D DAG families
+  bounded branch replay, not a unification theorem
+========================================================================
+  seeds=12, layers=20, random_npl=30, mirror_half=15
+  connect_radius=5.0, strength=0.1, z_masses=[2, 4, 6]
+
+random
+------------------------------------------------------------------------
+        action        toward       rate    mean delta
+  ------------------------------------------------------------
+   spent_delay  11/36  (  30.6%)     -0.770064
+ valley_linear  18/36  (  50.0%)     +0.000155
+
+mirror
+------------------------------------------------------------------------
+        action        toward       rate    mean delta
+  ------------------------------------------------------------
+   spent_delay  24/36  (  66.7%)     +0.545083
+ valley_linear  23/36  (  63.9%)     +0.036664
+
+Safe read:
+  - compare the valley-linear row against spent-delay within each family
+  - treat the mirror family as the regularized comparison, not a proof of transfer
+  - if the two actions differ by family, that is a branch-specific split, not a theorem
+========================================================================
+VALLEY-LINEAR MIRROR TRANSFER: PASS
+
+----- stderr -----
+

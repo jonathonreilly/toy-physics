@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/frontier_observable_principle_audit.py
+runner_sha256: 57d7bf012963dc92051350bee04f59b686c7ca45c5cbe6de6af77a1665b3d56d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: audit-packet structure
+----------------------------------------------------------------------------------------
+  [PASS (A)] audit packet contains: 'Observable-Principle From-Axiom Note — Status Correction Audit'  ()
+  [PASS (A)] audit packet contains: 'demotion / status correction packet'  ()
+  [PASS (A)] audit packet contains: 'OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md'  ()
+  [PASS (A)] audit packet contains: 'scalar additivity'  ()
+  [PASS (A)] audit packet contains: 'CPT-even phase blindness'  ()
+  [PASS (A)] audit packet contains: 'continuity'  ()
+  [PASS (A)] audit packet contains: 'normalization'  ()
+  [PASS (A)] audit packet contains: 'hierarchy baseline'  ()
+  [PASS (A)] audit packet contains: 'bounded support theorem'  ()
+  [PASS (A)] audit packet contains: 'proposal_allowed: false'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: 4+1 admitted assumptions enumerated
+----------------------------------------------------------------------------------------
+  [PASS (A)] admitted assumption: scalar additivity  (present in §1 table)
+  [PASS (A)] admitted assumption: CPT-even phase blindness  (present in §1 table)
+  [PASS (A)] admitted assumption: continuity  (present in §1 table)
+  [PASS (A)] admitted assumption: normalization  (present in §1 table)
+  [PASS (A)] admitted assumption: hierarchy baseline  (present in §1 table)
+
+----------------------------------------------------------------------------------------
+Part 3: 7-criteria assessment
+----------------------------------------------------------------------------------------
+  [PASS (A)] audit packet explicitly assesses Criterion 1  ()
+  [PASS (A)] audit packet explicitly assesses Criterion 2  ()
+  [PASS (A)] audit packet explicitly assesses Criterion 3  ()
+  [PASS (A)] audit packet explicitly assesses Criterion 4  ()
+  [PASS (A)] audit packet explicitly assesses Criterion 5  ()
+  [PASS (A)] audit packet explicitly assesses Criterion 6  ()
+  [PASS (A)] audit packet explicitly assesses Criterion 7  ()
+
+----------------------------------------------------------------------------------------
+Part 4: retention path documented
+----------------------------------------------------------------------------------------
+  [PASS (A)] retention path: physical-principle of independent-subsystem locality  (§4 retention table)
+  [PASS (A)] retention path: scalar bosonic insensitivity to phase  (§4 retention table)
+  [PASS (A)] retention path: mathematical regularity  (§4 retention table)
+  [PASS (A)] retention path: convention reclassification  (§4 retention table)
+  [PASS (A)] retention path: hierarchy lane retention  (§4 retention table)
+
+========================================================================================
+  TOTAL: PASS=27, FAIL=0
+========================================================================================
+
+----- stderr -----
+

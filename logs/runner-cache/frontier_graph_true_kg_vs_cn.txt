@@ -1,0 +1,54 @@
+===== runner cache v1 =====
+runner: scripts/frontier_graph_true_kg_vs_cn.py
+runner_sha256: 58368525dbc13f776107bf521dbaabad806fcff4553fefc4590ae4537f67f73e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 13.27
+status: ok
+----- stdout -----
+==============================================================================
+GRAPH TRUE KG VS CN SCALAR COMPARISON
+==============================================================================
+A: CN lane      i dpsi/dt = (L + m^2 + V) psi
+B: True KG lane dphi/dt = pi, dpi/dt = -(L + m^2 + V) phi
+
+
+Cubic Free-Mode Comparison
+--------------------------
+  CN lane     : R^2=0.963374, slope_axis=0.7055, intercept=-0.0263
+  True KG lane: R^2=0.999809, slope_axis=0.9520, intercept=0.0932
+  Isotropy    : CN iso=1.1728 (axis=11, diag=7), KG iso=1.0309
+  KG target   : omega^2 = m^2 + lambda, m^2=0.0900
+
+Cubic Dynamics Comparison
+-------------------------
+  Gravity     : CN +1.2086e-05, KG +2.0048e-05
+  F~M         : CN R^2=1.000000, KG R^2=1.000000
+  N-growth    : CN toward=True, mono=True; KG toward=True, mono=True
+  Carrier-k   : CN same_sign=True, CV=0.0009; KG same_sign=True, CV=0.0840
+  Invariant   : CN expectation drift=5.9623e-15; KG energy drift=4.4763e-05
+
+Random-Graph Low-Mode Comparison
+--------------------------------
+  CN lane     : R^2=0.955707, slope_axis=2.3094, intercept=-0.6494
+  True KG lane: R^2=1.000000, slope_axis=1.0000, intercept=0.0900
+  KG target   : omega^2 = m^2 + lambda, m^2=0.0900
+
+Random-Graph Dynamics Comparison
+--------------------------------
+  Gravity     : CN +1.7245e-06, KG +7.7800e-07
+  F~M         : CN R^2=1.000000, KG R^2=0.999999
+  N-growth    : CN toward=True, mono=True; KG toward=True, mono=False
+  Carrier-k   : CN same_sign=True, CV=0.0031; KG same_sign=True, CV=0.0490
+  Invariant   : CN expectation drift=2.2557e-15; KG energy drift=1.2292e-07
+
+Verdict
+-------
+  Modal law agreement : False
+  Gravity sign agreement (cubic) : True
+  Growth-pattern agreement (cubic) : True
+  Interpretation: if the modal laws diverge strongly while only some gravity rows agree,
+  the CN scalar lane is a useful low-energy control, not a faithful stand-in for true local KG.
+
+----- stderr -----
+

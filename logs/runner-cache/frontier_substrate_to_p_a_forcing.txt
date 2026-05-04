@@ -1,0 +1,29 @@
+===== runner cache v1 =====
+runner: scripts/frontier_substrate_to_p_a_forcing.py
+runner_sha256: 2c6081e92eb632863014e509cddf12a0e83d0430354012a897306274c839f1f3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.10
+status: ok
+----- stdout -----
+==============================================================================
+SUBSTRATE-TO-P_A FORCING ENUMERATOR
+==============================================================================
+
+Question: do the stated substrate symmetries uniquely force P_A?
+
+[PASS (A)] 1. construct H_cell = (C^2)^4 explicitly: dim=16; weight ranks=[1, 4, 6, 4, 1]
+[PASS (A)] 2. construct substrate spin/time/CPT actions: spin anti-Hermitian error=0.00e+00; finite unitarity=0.00e+00
+[PASS (A)] 3. decompose H_cell into local spin/time irreducible blocks: E0_scalar_time_even_w0:1; Et_scalar_time_odd_w1:1; EV_vector_time_even_w1:3; EtV_vector_time_odd_w2:3; EVV_vector_time_even_w2:3; EtVV_vector_time_odd_w3:3; EVVV_scalar_time_even_w3:1; EtVVV_scalar_time_odd_w4:1
+[PASS (A)] 4. enumerate rank-four local equivariant projector classes: rank-four candidates=17
+[PASS (A)] 5. verify P_A is one candidate: P_A blocks=('Et_scalar_time_odd_w1', 'EV_vector_time_even_w1'); local polynomial error=0.00e+00
+[PASS (A)] 6. exhibit non-P_A rank-four candidate satisfying the same constraints: P_3 blocks=('EtVV_vector_time_odd_w3', 'EVVV_scalar_time_even_w3'); equivariance=0.00e+00; local polynomial=0.00e+00
+[PASS (A)] 7. pure hamming-rank-four sectors are not unique: rank-four hamming sectors=[(1, 4, 0.0), (3, 4, 0.0)]
+[PASS (A)] 8. retained-input boundary check: runner uses only local Cl(3) spin-lift action, forced time-axis grading, CPT grading, complex Hilbert structure, and tensor-local number operators
+
+Summary: PASS=8  FAIL=0
+
+Verdict: NO-GO. P_A exists, but it is not uniquely forced by the stated substrate symmetries. P_3 and other rank-four local equivariant sums satisfy the same checks, so an additional orientation/first-order boundary law is required.
+
+----- stderr -----
+

@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/frontier_color_projection_mc.py
+runner_sha256: 19518f3981d13df383ab2517aab607ca3e807d4ac4ef84d15b26189a16275ade
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

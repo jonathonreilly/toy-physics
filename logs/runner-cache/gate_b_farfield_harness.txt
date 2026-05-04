@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_farfield_harness.py
+runner_sha256: b21c5294ab930db49ed5fe7ebc1bd68791c901ed9af93cc78cbfb485fa7339cc
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_atomic_lane2_physical_unit_limit_boundary.py
+runner_sha256: f6c1812b1c237b10be82449b1e026092e8a53e1566bf4dc64a14cfbd847f0ff0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+LANE 2: PHYSICAL-UNIT NONRELATIVISTIC LIMIT BOUNDARY
+========================================================================================
+
+Claim under test:
+  Current dimensionless/scaffold hydrogen machinery might already fix
+  the physical eV Rydberg scale.
+
+Boundary result:
+  It fixes the 1/n^2 shape only. The eV scale remains the Hartree
+  factor m_e alpha(0)^2, and those inputs are still open.
+
+========================================================================================
+PART 1: AUTHORITY TEXT NAMES THE PHYSICAL-UNIT LIMIT GATE
+========================================================================================
+  [PASS] Lane 2 file names the physical-unit Schrodinger/Coulomb limit
+  [PASS] Rydberg firewall requires the nonrelativistic physical-unit limit
+  [PASS] Atomic scaffold says textbook inputs provide the physical units
+  [PASS] Atomic scaffold says no framework input is used
+  [PASS] Bound-state selection is dimensionless, not an eV-scale spectrum
+
+========================================================================================
+PART 2: DIMENSIONLESS HYDROGEN FIXES RATIOS, NOT THE EV SCALE
+========================================================================================
+  Hartree scale=20.000000 eV -> E1,E2,E3=[-10.0, -2.5, -1.1111111111111112]; ratios=[1.0, 0.25, 0.11111111111111112]
+  Hartree scale=27.211386 eV -> E1,E2,E3=[-13.605693122994, -3.4014232807485, -1.5117436803326665]; ratios=[1.0, 0.25, 0.1111111111111111]
+  Hartree scale=40.000000 eV -> E1,E2,E3=[-20.0, -5.0, -2.2222222222222223]; ratios=[1.0, 0.25, 0.11111111111111112]
+  [PASS] All scale choices preserve the 1/n^2 ratios
+  [PASS] Different Hartree scales give different E1 values
+  [PASS] Therefore the dimensionless solver does not fix the eV scale
+
+========================================================================================
+PART 3: THE HARTREE SCALE IS EXACTLY THE MISSING INPUT COMBINATION
+========================================================================================
+  Hartree = m_e alpha(0)^2 = 27.211386246019 eV
+  Rydberg = Hartree / 2    = 13.605693123009 eV
+  [PASS] Hartree scale equals m_e alpha(0)^2 in natural units
+  [PASS] Rydberg scale is half the Hartree scale
+  [PASS] Missing m_e or alpha(0) leaves the physical scale undetermined
+  [PASS] Block 04 already showed alpha(0) is not current-surface closed
+
+========================================================================================
+PART 4: CLAIM-STATUS FIREWALL
+========================================================================================
+  [PASS] Actual current-surface status is no-go for Rydberg closure
+  [PASS] The dimensionless solver is conditional support only
+  [PASS] Three physical-unit imports remain open
+  [PASS] No stronger branch-local proposal wording is allowed
+
+========================================================================================
+SUMMARY: PASS=16 FAIL=0
+========================================================================================
+Result: no current-surface physical-unit Rydberg closure.
+The dimensionless solver is useful only after m_e and alpha(0) land.
+
+----- stderr -----
+

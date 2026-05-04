@@ -1,0 +1,61 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_scalar_bridge_3plus1_native_tube_staging.py
+runner_sha256: 91b04b4a9b5b1b13f27d49048c0099f64fe63f8b6fe7444d309da94abff6b071
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.36
+status: ok
+----- stdout -----
+==============================================================================
+Native 3+1 tube staging gate for <P>(beta=6)
+  V-invariant minimal block; NMAX=7, MODE_MAX=200
+==============================================================================
+
+--- A. Existing reference Perron solves ---
+  Reference A (rho = 1):     P(6) = 0.4524071590  eig = 3.812630
+  Reference B (rho = delta): P(6) = 0.4225317396  eig = 3.441440
+  PASS: reference solves reproduce the frozen values.
+
+--- B. K-plaquette tube Perron probe ---
+  k = 0  ->  P(6) = 0.4524071590  eig = 3.812630
+  k = 1  ->  P(6) = 0.4594237929  eig = 3.915306
+  k = 2  ->  P(6) = 0.4678430800  eig = 4.047790
+  k = 3  ->  P(6) = 0.4777615094  eig = 4.219099
+  k = 4  ->  P(6) = 0.4891802187  eig = 4.441077
+  k = 5  ->  P(6) = 0.5019552672  eig = 4.729211
+  k = 6  ->  P(6) = 0.5157590249  eig = 5.103608
+  PASS: tube values are positive, finite, and monotone over k=0..6.
+
+--- C. Lower-bound guard ---
+  Existing strict reference floor: P_delta = 0.4225317396
+  Tube range over k=0..6: [0.4524071590, 0.5157590249]
+  Tube span: 0.0633518658
+  The tube minimum is staging data, not a physical-cube lower bound.
+  PASS: strict floor remains the delta reference below the tube range.
+
+--- D. Witness-scale comparison ---
+  Support envelope width from existing floor: 0.170999
+  Tube-min-to-upper gap, for orientation only: 0.141124
+  epsilon_witness from the no-go: 3.030e-04
+  SUPPORT: staging data do not close the witness-scale bridge.
+
+--- E. NMAX convergence check at k=1 ---
+  NMAX = 3  ->  P(k=1, beta=6) = 0.459032827025
+  NMAX = 4  ->  P(k=1, beta=6) = 0.459414804723
+  NMAX = 5  ->  P(k=1, beta=6) = 0.459423660967
+  NMAX = 6  ->  P(k=1, beta=6) = 0.459423791566
+  NMAX = 7  ->  P(k=1, beta=6) = 0.459423792895
+  Truncation drift |P(NMAX=7) - P(NMAX=6)| = 1.329e-09
+  PASS: NMAX convergence verified for the staging probe.
+
+==============================================================================
+SUMMARY: STAGING PASS=4 SUPPORT=1 FAIL=0
+==============================================================================
+
+Headline:
+  Tube data: P(6) in [0.452407, 0.515759] for k=0..6.
+  Strict floor unchanged: P_delta = 0.422532.
+  Closure target unchanged: compute the actual L_s=2 APBC cube rho_(p,q)(6).
+
+----- stderr -----
+

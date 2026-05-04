@@ -1,0 +1,185 @@
+===== runner cache v1 =====
+runner: scripts/frontier_s3_boundary_link_theorem.py
+runner_sha256: 9b6af8afaef7662f64a3cc6c48b354512c6df0905f76f7f6452b61283939dc0f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.75
+status: ok
+----- stdout -----
+======================================================================
+  S^3 BOUNDARY-LINK DISK THEOREM: VERIFICATION + MECHANISM TESTS
+======================================================================
+
+  Theorem: For all R >= 2, every boundary vertex v of B_R has
+           link(v, B_R) = PL 2-disk.
+
+  This script tests BOTH the conclusion AND the proof mechanism.
+
+  TOPOLOGICAL CHECKS (conclusion):
+    P1: nonempty proper subcomplex
+    P2: connected
+    P3: H_1 = 0
+    P4: chi = 1
+    => PL 2-disk
+
+  MECHANISM CHECKS (proof structure):
+    Phi(s) = sum f_i(s_i) decomposes by coordinate
+    Present set = downset in preference order
+    Absent set = upset in preference order
+    Meet-path connects all present pairs
+    Join-path connects all absent pairs
+    Both sets connected in Q_3
+
+
+======================================================================
+  R = 2:  |B_R| = 27 vertices, 1 interior, 26 boundary
+======================================================================
+  Link type: disk  (count=26)
+  [PASS] [EXACT] R=2 P1: all boundary links nonempty proper subcomplexes  (26 boundary vertices)
+  [PASS] [EXACT] R=2 P2-P4: all boundary links are PL 2-disks  (26/26)
+  [PASS] [EXACT] R=2 MECHANISM: Phi decomposes as sum of per-coord terms  (26/26)
+  [PASS] [EXACT] R=2 MECHANISM: present set is downset  (26/26)
+  [PASS] [EXACT] R=2 MECHANISM: absent set is upset  (26/26)
+  [PASS] [EXACT] R=2 MECHANISM: meet-path connects all present pairs  (26/26)
+  [PASS] [EXACT] R=2 MECHANISM: join-path connects all absent pairs  (26/26)
+  [PASS] [EXACT] R=2 MECHANISM: present set connected in Q_3  (26/26)
+  [PASS] [EXACT] R=2 MECHANISM: absent set connected in Q_3  (26/26)
+
+======================================================================
+  R = 3:  |B_R| = 117 vertices, 19 interior, 98 boundary
+======================================================================
+  Link type: disk  (count=98)
+  [PASS] [EXACT] R=3 P1: all boundary links nonempty proper subcomplexes  (98 boundary vertices)
+  [PASS] [EXACT] R=3 P2-P4: all boundary links are PL 2-disks  (98/98)
+  [PASS] [EXACT] R=3 MECHANISM: Phi decomposes as sum of per-coord terms  (98/98)
+  [PASS] [EXACT] R=3 MECHANISM: present set is downset  (98/98)
+  [PASS] [EXACT] R=3 MECHANISM: absent set is upset  (98/98)
+  [PASS] [EXACT] R=3 MECHANISM: meet-path connects all present pairs  (98/98)
+  [PASS] [EXACT] R=3 MECHANISM: join-path connects all absent pairs  (98/98)
+  [PASS] [EXACT] R=3 MECHANISM: present set connected in Q_3  (98/98)
+  [PASS] [EXACT] R=3 MECHANISM: absent set connected in Q_3  (98/98)
+
+======================================================================
+  R = 4:  |B_R| = 251 vertices, 57 interior, 194 boundary
+======================================================================
+  Link type: disk  (count=194)
+  [PASS] [EXACT] R=4 P1: all boundary links nonempty proper subcomplexes  (194 boundary vertices)
+  [PASS] [EXACT] R=4 P2-P4: all boundary links are PL 2-disks  (194/194)
+  [PASS] [EXACT] R=4 MECHANISM: Phi decomposes as sum of per-coord terms  (194/194)
+  [PASS] [EXACT] R=4 MECHANISM: present set is downset  (194/194)
+  [PASS] [EXACT] R=4 MECHANISM: absent set is upset  (194/194)
+  [PASS] [EXACT] R=4 MECHANISM: meet-path connects all present pairs  (194/194)
+  [PASS] [EXACT] R=4 MECHANISM: join-path connects all absent pairs  (194/194)
+  [PASS] [EXACT] R=4 MECHANISM: present set connected in Q_3  (194/194)
+  [PASS] [EXACT] R=4 MECHANISM: absent set connected in Q_3  (194/194)
+
+======================================================================
+  R = 5:  |B_R| = 485 vertices, 171 interior, 314 boundary
+======================================================================
+  Link type: disk  (count=314)
+  [PASS] [EXACT] R=5 P1: all boundary links nonempty proper subcomplexes  (314 boundary vertices)
+  [PASS] [EXACT] R=5 P2-P4: all boundary links are PL 2-disks  (314/314)
+  [PASS] [EXACT] R=5 MECHANISM: Phi decomposes as sum of per-coord terms  (314/314)
+  [PASS] [EXACT] R=5 MECHANISM: present set is downset  (314/314)
+  [PASS] [EXACT] R=5 MECHANISM: absent set is upset  (314/314)
+  [PASS] [EXACT] R=5 MECHANISM: meet-path connects all present pairs  (314/314)
+  [PASS] [EXACT] R=5 MECHANISM: join-path connects all absent pairs  (314/314)
+  [PASS] [EXACT] R=5 MECHANISM: present set connected in Q_3  (314/314)
+  [PASS] [EXACT] R=5 MECHANISM: absent set connected in Q_3  (314/314)
+
+======================================================================
+  R = 6:  |B_R| = 919 vertices, 389 interior, 530 boundary
+======================================================================
+  Link type: disk  (count=530)
+  [PASS] [EXACT] R=6 P1: all boundary links nonempty proper subcomplexes  (530 boundary vertices)
+  [PASS] [EXACT] R=6 P2-P4: all boundary links are PL 2-disks  (530/530)
+  [PASS] [EXACT] R=6 MECHANISM: Phi decomposes as sum of per-coord terms  (530/530)
+  [PASS] [EXACT] R=6 MECHANISM: present set is downset  (530/530)
+  [PASS] [EXACT] R=6 MECHANISM: absent set is upset  (530/530)
+  [PASS] [EXACT] R=6 MECHANISM: meet-path connects all present pairs  (530/530)
+  [PASS] [EXACT] R=6 MECHANISM: join-path connects all absent pairs  (530/530)
+  [PASS] [EXACT] R=6 MECHANISM: present set connected in Q_3  (530/530)
+  [PASS] [EXACT] R=6 MECHANISM: absent set connected in Q_3  (530/530)
+
+======================================================================
+  R = 7:  |B_R| = 1413 vertices, 691 interior, 722 boundary
+======================================================================
+  Link type: disk  (count=722)
+  [PASS] [EXACT] R=7 P1: all boundary links nonempty proper subcomplexes  (722 boundary vertices)
+  [PASS] [EXACT] R=7 P2-P4: all boundary links are PL 2-disks  (722/722)
+  [PASS] [EXACT] R=7 MECHANISM: Phi decomposes as sum of per-coord terms  (722/722)
+  [PASS] [EXACT] R=7 MECHANISM: present set is downset  (722/722)
+  [PASS] [EXACT] R=7 MECHANISM: absent set is upset  (722/722)
+  [PASS] [EXACT] R=7 MECHANISM: meet-path connects all present pairs  (722/722)
+  [PASS] [EXACT] R=7 MECHANISM: join-path connects all absent pairs  (722/722)
+  [PASS] [EXACT] R=7 MECHANISM: present set connected in Q_3  (722/722)
+  [PASS] [EXACT] R=7 MECHANISM: absent set connected in Q_3  (722/722)
+
+======================================================================
+  R = 8:  |B_R| = 2103 vertices, 1117 interior, 986 boundary
+======================================================================
+  Link type: disk  (count=986)
+  [PASS] [EXACT] R=8 P1: all boundary links nonempty proper subcomplexes  (986 boundary vertices)
+  [PASS] [EXACT] R=8 P2-P4: all boundary links are PL 2-disks  (986/986)
+  [PASS] [EXACT] R=8 MECHANISM: Phi decomposes as sum of per-coord terms  (986/986)
+  [PASS] [EXACT] R=8 MECHANISM: present set is downset  (986/986)
+  [PASS] [EXACT] R=8 MECHANISM: absent set is upset  (986/986)
+  [PASS] [EXACT] R=8 MECHANISM: meet-path connects all present pairs  (986/986)
+  [PASS] [EXACT] R=8 MECHANISM: join-path connects all absent pairs  (986/986)
+  [PASS] [EXACT] R=8 MECHANISM: present set connected in Q_3  (986/986)
+  [PASS] [EXACT] R=8 MECHANISM: absent set connected in Q_3  (986/986)
+
+======================================================================
+  R = 9:  |B_R| = 3065 vertices, 1767 interior, 1298 boundary
+======================================================================
+  Link type: disk  (count=1298)
+  [PASS] [EXACT] R=9 P1: all boundary links nonempty proper subcomplexes  (1298 boundary vertices)
+  [PASS] [EXACT] R=9 P2-P4: all boundary links are PL 2-disks  (1298/1298)
+  [PASS] [EXACT] R=9 MECHANISM: Phi decomposes as sum of per-coord terms  (1298/1298)
+  [PASS] [EXACT] R=9 MECHANISM: present set is downset  (1298/1298)
+  [PASS] [EXACT] R=9 MECHANISM: absent set is upset  (1298/1298)
+  [PASS] [EXACT] R=9 MECHANISM: meet-path connects all present pairs  (1298/1298)
+  [PASS] [EXACT] R=9 MECHANISM: join-path connects all absent pairs  (1298/1298)
+  [PASS] [EXACT] R=9 MECHANISM: present set connected in Q_3  (1298/1298)
+  [PASS] [EXACT] R=9 MECHANISM: absent set connected in Q_3  (1298/1298)
+
+======================================================================
+  R = 10:  |B_R| = 4139 vertices, 2529 interior, 1610 boundary
+======================================================================
+  Link type: disk  (count=1610)
+  [PASS] [EXACT] R=10 P1: all boundary links nonempty proper subcomplexes  (1610 boundary vertices)
+  [PASS] [EXACT] R=10 P2-P4: all boundary links are PL 2-disks  (1610/1610)
+  [PASS] [EXACT] R=10 MECHANISM: Phi decomposes as sum of per-coord terms  (1610/1610)
+  [PASS] [EXACT] R=10 MECHANISM: present set is downset  (1610/1610)
+  [PASS] [EXACT] R=10 MECHANISM: absent set is upset  (1610/1610)
+  [PASS] [EXACT] R=10 MECHANISM: meet-path connects all present pairs  (1610/1610)
+  [PASS] [EXACT] R=10 MECHANISM: join-path connects all absent pairs  (1610/1610)
+  [PASS] [EXACT] R=10 MECHANISM: present set connected in Q_3  (1610/1610)
+  [PASS] [EXACT] R=10 MECHANISM: absent set connected in Q_3  (1610/1610)
+
+======================================================================
+  SUMMARY
+======================================================================
+  R range:           2..10
+  Total boundary:    5778 vertices
+  All disk:          5778/5778
+  Failures:          0
+
+  PASS: 81   FAIL: 0
+  EXACT: 81   BOUNDED: 0
+  Time: 2.7s
+
+  RESULT: ALL CHECKS PASS
+
+  Topological conclusion verified: every boundary link is a
+  PL 2-disk (R=2..10).
+
+  Theorem mechanism verified: the coordinate-separability
+  argument (Phi = sum f_i, downset/upset structure, meet/join
+  path construction) produces the correct connectivity for
+  all tested R values.  This confirms that the general-R
+  proof structure in S3_BOUNDARY_LINK_THEOREM_NOTE.md is
+  consistent with the computational data.
+
+----- stderr -----
+

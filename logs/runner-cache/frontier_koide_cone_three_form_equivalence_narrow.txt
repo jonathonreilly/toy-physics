@@ -1,0 +1,90 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_cone_three_form_equivalence_narrow.py
+runner_sha256: ce9684c5cec0651648e272b523cf89ded0c5693a7ce3ad8350177a661bb485be
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.60
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: Koide-cone three-form algebraic equivalence
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: identity 2 r0^2 - r1^2 - r2^2 = 2 [4(uv + uw + vw) - (u^2 + v^2 + w^2)]
+----------------------------------------------------------------------------------------
+  [PASS (A)] 2 r0^2 - r1^2 - r2^2 = 2 [4(uv + uw + vw) - (u^2 + v^2 + w^2)] symbolically  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 2: equivalence Form 1 (orbit) <=> Form 2 (cyclic)
+----------------------------------------------------------------------------------------
+  [PASS (A)] F_cyclic = 0  iff  F_orbit = 0 (proportional, ratio = 2)  (F_cyclic / F_orbit = 2)
+
+----------------------------------------------------------------------------------------
+Part 3: equivalence Form 1 (orbit) <=> Form 3 (ratio)
+----------------------------------------------------------------------------------------
+  [PASS (A)] F_ratio = -F_orbit symbolically (3(u^2+v^2+w^2) - 2(u+v+w)^2 = -F_orbit)  (F_ratio + F_orbit = 0)
+  [PASS (A)] F_ratio = 0  iff  F_orbit = 0  (follows from F_ratio = -F_orbit)
+
+----------------------------------------------------------------------------------------
+Part 4: ratio form when u + v + w != 0
+----------------------------------------------------------------------------------------
+
+  Solving F_orbit = 0 at u = v = 1: w = [4 - 3*sqrt(2), 4 + 3*sqrt(2)]
+  [PASS (A)] at (u, v, w) = (1, 1, 4 - 3*sqrt(2)): (sum sq) / (sum)^2 = 2/3  (ratio = 2/3)
+  [PASS (A)] at (u, v, w) = (1, 1, 4 + 3*sqrt(2)): (sum sq) / (sum)^2 = 2/3  (ratio = 2/3)
+
+----------------------------------------------------------------------------------------
+Part 5: F_orbit = 0 has nontrivial solutions (Koide cone is non-empty)
+----------------------------------------------------------------------------------------
+  [PASS (A)] F_orbit(1, 1, 4 + 3 sqrt(2)) = 0 exact  ()
+  [PASS (A)] F_orbit(1, 1, 4 - 3 sqrt(2)) = 0 exact  ()
+
+----------------------------------------------------------------------------------------
+Part 6: (u, v, w) = (1, 1, 1) is OFF the cone (shows non-trivial constraint)
+----------------------------------------------------------------------------------------
+  [PASS (A)] F_orbit(1, 1, 1) = 9 != 0 (uniform triple is OFF the Koide cone)  (F_orbit(1,1,1) = 9)
+  [PASS (A)] (u^2+v^2+w^2)/(u+v+w)^2 = 1/3 at (1,1,1) (NOT 2/3)  (ratio at (1,1,1) = 1/3)
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let (u, v, w) be any abstract real triple, and define
+        r0 = u + v + w,
+        r1 = 2u - v - w,
+        r2 = sqrt(3) (v - w).
+
+  CONCLUSION:
+    (i)   2 r0^2 - r1^2 - r2^2 = 2 [4(uv + uw + vw) - (u^2 + v^2 + w^2)]
+          symbolic identity (holds for ALL (u, v, w) ∈ R^3).
+
+    (ii)  Three-form equivalence on the cone:
+              4(uv + uw + vw) - (u^2 + v^2 + w^2) = 0
+              <=>  2 r0^2 = r1^2 + r2^2
+              <=>  3(u^2 + v^2 + w^2) = 2(u + v + w)^2
+              <=>  (u^2 + v^2 + w^2) / (u + v + w)^2 = 2/3
+                   (when u + v + w != 0).
+
+    (iii) The Koide cone is nontrivial: e.g., (u, v, w) = (1, 1, 4 + 3 sqrt(2))
+          satisfies the cone exactly; (u, v, w) = (1, 1, 1) does NOT.
+
+  Audit-lane class:
+    (A) — pure polynomial algebra over R^3. No Koide / charged-lepton /
+    Gamma-orbit-return / sqrt(m_i) physical identification.
+
+  This narrow theorem isolates the algebraic three-form equivalence from
+  any physical Koide / charged-lepton / Gamma-orbit-return upstream
+  framing.
+
+
+========================================================================================
+  TOTAL: PASS=10, FAIL=0
+========================================================================================
+
+----- stderr -----
+

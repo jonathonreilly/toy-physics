@@ -1,0 +1,56 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py
+runner_sha256: f136ebb829b1241ae891a26b1b8061cbbdb297669d110925f303d38085c4aa5f
+timeout_sec: 900
+exit_code: 0
+elapsed_sec: 0.23
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE PERRON/JACOBI UNDERDETERMINATION
+==============================================================================
+
+Two admissible residual source-sector environment operators on top of the exact mixed-kernel local Wilson factor
+  box size                              = 6 x 6 = 36 states
+  tau                                   = 6.0
+  local-factor symmetry error           = 2.711e-19
+  R_A symmetry error                    = 0.000e+00
+  R_B symmetry error                    = 0.000e+00
+  T_A min entry / Perron floor          = 2.841569e-13 / 1.112664e-07
+  T_B min entry / Perron floor          = 3.102387e-13 / 1.125147e-07
+
+Perron moment comparison for the same explicit source operator J
+  m1^A, m1^B                            = 0.443326492096, 0.443768383622
+  m2^A, m2^B                            = 0.258685788469, 0.259020852623
+  |m1^A - m1^B|                         = 4.418915e-04
+  |m2^A - m2^B|                         = 3.350642e-04
+
+Jacobi coefficient comparison
+  alpha0^A, alpha0^B                    = 0.443326492096, 0.443768383622
+  beta1^A,  beta1^B                     = 0.249293822375, 0.249179602536
+  |alpha0^A - alpha0^B|                 = 4.418915e-04
+  |beta1^A  - beta1^B|                  = 1.142198e-04
+
+  [PASS] [THEOREM] the exact local Wilson marked-link factor is explicit and conjugation-symmetric
+         min local eigenvalue=5.450e-07
+  [PASS] [THEOREM] the sharpened class still admits multiple positive conjugation-symmetric residual source-sector environment operators
+         min entries=(2.842e-13, 3.102e-13)
+  [PASS] [THEOREM] each admissible environment-dressed generator has its own unique strictly positive Perron state
+         Perron floors=(1.113e-07, 1.125e-07)
+  [PASS] [THEOREM] distinct admissible residual source-sector environment operators can induce different Perron moments for the same explicit source operator
+         moment gaps=(m1:4.419e-04, m2:3.351e-04)
+  [PASS] [THEOREM] the symmetry-reduced Jacobi coefficients are therefore not yet forced even after the local factor is stripped off
+         Jacobi gaps=(alpha0:4.419e-04, beta1:1.142e-04)
+  [PASS] [SUPPORT] both Perron states remain fixed by the conjugation symmetry
+         invariance errors=(3.356e-16, 3.436e-16)
+  [PASS] [SUPPORT] the same explicit plaquette-source operator J is used in both witnesses
+         same self-adjoint conjugation-symmetric J in both cases
+  [PASS] [SUPPORT] the obstruction is not infinitesimal on the sampled factorized source sector
+         representative gaps=(m1:4.419e-04, alpha0:4.419e-04)
+
+==============================================================================
+SUMMARY: THEOREM PASS=5 SUPPORT=3 FAIL=0
+==============================================================================
+
+----- stderr -----
+

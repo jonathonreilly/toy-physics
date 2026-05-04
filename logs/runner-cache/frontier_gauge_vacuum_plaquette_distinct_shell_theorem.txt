@@ -1,0 +1,50 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py
+runner_sha256: c7761e6e37d741b2f04523b626ded4d42d352228803b9b74f6a5936e801d1b12
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE DISTINCT-SHELL THEOREM
+==============================================================================
+
+Observed plaquette
+  face                                 = ((0, 0, 0, 0), (0, 1))
+  boundary edges                       = (((0, 0, 0, 0), 0), ((1, 0, 0, 0), 1), ((0, 1, 0, 0), 0), ((0, 0, 0, 0), 1))
+
+Distinct neighboring action plaquettes
+  candidates per observed edge         = [5, 5, 5, 5]
+  closed four-action shells found      = 0
+
+Explicit minimal cube shell
+  ((0, 0, 0, 0), (0, 1))
+  ((0, 0, 0, 0), (0, 2))
+  ((0, 1, 0, 0), (0, 2))
+  ((0, 0, 0, 0), (1, 2))
+  ((1, 0, 0, 0), (1, 2))
+  ((0, 0, 1, 0), (0, 1))
+  shell boundary size                  = 0
+
+  [PASS] [THEOREM] every distinct plaquette sharing the observed boundary shares exactly one observed edge
+         each observed edge has five distinct neighboring plaquettes and none covers two observed edges
+  [PASS] [THEOREM] a distinct connected shell needs at least four action plaquettes just to cover the four observed edges
+         one distinct plaquette covers only one observed edge, so four edges require at least four distinct action plaquettes
+  [PASS] [THEOREM] no four-action distinct shell closes the observed plaquette boundary
+         all 625 one-per-edge four-action candidates leave a nonempty outer boundary
+  [PASS] [THEOREM] an explicit five-action cube shell closes the observed boundary
+         the marked plaquette plus the other five faces of an elementary cube has empty mod-2 edge boundary
+  [PASS] [THEOREM] the first distinct connected nonlocal numerator shell is order beta^5
+         five distinct action plaquettes are necessary and sufficient around the marked face
+  [PASS] [THEOREM] the first connected vacuum shell is order beta^6
+         any connected closed vacuum shell contains a seed plaquette plus at least five others, and the cube boundary realizes size six
+  [PASS] [SUPPORT] this exact distinct-shell result is the geometric input rather than the full beta_eff law
+         the later mixed-cumulant audit closes the onset coefficient, but the full nonperturbative reduction remains open
+
+==============================================================================
+SUMMARY: THEOREM PASS=6 SUPPORT=1 FAIL=0
+==============================================================================
+
+----- stderr -----
+

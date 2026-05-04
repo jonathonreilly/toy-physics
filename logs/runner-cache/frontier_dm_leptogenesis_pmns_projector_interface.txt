@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_projector_interface.py
+runner_sha256: 2e33fdd4ec4ef3fb5700931b9187f7b2c5d8e8a02f510dbc66caa9ee932a6a29
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.87
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS PROJECTOR INTERFACE
+========================================================================================
+
+========================================================================================
+PART 1: THE HERMITIAN PAIR ALREADY DETERMINES THE PMNS PROJECTOR PACKET
+========================================================================================
+  [PASS] The PMNS projector packet is a column-stochastic matrix readable from the pair  (col sums=[1. 1. 1.])
+  [PASS] The packet is invariant under independent left-eigenvector rephasings  (err=1.67e-16)
+  [PASS] So the flavored transport packet is pair-readable without any extra support-selection step  (P_i(alpha) = |U_PMNS(alpha,i)|^2)
+
+  Pair-conditioned PMNS projector packet on the canonical N_nu sample:
+[[0.502364 0.158615 0.339021]
+ [0.096835 0.536381 0.366784]
+ [0.400801 0.305004 0.294195]]
+
+========================================================================================
+PART 2: THE N_nu PAIR SAMPLE GIVES A REAL TRANSPORT LIFT
+========================================================================================
+  [PASS] The N_nu pair packet is non-democratic on every column  (packet=[[0.502364 0.158615 0.339021]
+ [0.096835 0.536381 0.366784]
+ [0.400801 0.305004 0.294195]])
+  [PASS] Its best column lifts the exact DM branch to eta/eta_obs = 0.767519440713  (etas=[0.767519 0.725016 0.694206])
+  [PASS] So the PMNS-pair transplant already gives a material improvement over the one-flavor authority path  (enhancement=4.065554)
+
+  columnwise eta/eta_obs on the canonical N_nu sample = [0.767519 0.725016 0.694206]
+
+========================================================================================
+PART 3: THE N_e PAIR SAMPLE CAN NEARLY CLOSE THE EXACT MISS
+========================================================================================
+  [PASS] The canonical N_e pair sample gives a strongly hierarchical PMNS projector column  (best column=[0.071267 0.900307 0.028427])
+  [PASS] Its best column lifts the exact DM branch to eta/eta_obs = 0.989512597197  (etas=[0.820756 0.989513 0.920617])
+  [PASS] So the PMNS pair transplant can in principle erase almost the whole transport miss without a new N2 source  (best eta/eta_obs=0.989512597197)
+
+  pair-conditioned PMNS projector packet on the canonical N_e sample:
+[[0.915868 0.071267 0.012865]
+ [0.074689 0.900307 0.025004]
+ [0.009443 0.028427 0.962131]]
+  columnwise eta/eta_obs on the canonical N_e sample = [0.820756 0.989513 0.920617]
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The neutrino lane already supplies the right carrier for flavored transport  (the remaining object is the Hermitian pair ((H_nu,H_e), s), not a new ad hoc projector family)
+  [PASS] What is still missing is the positive pair law, not the projector interface  (once the pair is supplied, the PMNS projector packet is automatic)
+  [PASS] So the DM flavored-transport problem can be reduced to the active neutrino pair law rather than restarted from scratch  (borrow the PMNS lane; derive the pair law or its transport-relevant column)
+
+  Transport-facing read:
+    - the PMNS lane already fixes the correct pair-level interface
+    - pair-conditioned PMNS projectors can materially lift eta
+    - the next exact target is a theorem for the relevant PMNS pair law / projector column
+
+========================================================================================
+SUMMARY: PASS=12 FAIL=0
+========================================================================================
+
+----- stderr -----
+

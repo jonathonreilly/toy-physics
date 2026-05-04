@@ -1,0 +1,50 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_parent_correctness_audit_2026_04_18.py
+runner_sha256: 9dabb5545cf180987f16226198ed9238b311aea963c1cbeaa18517658bed7c13
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON PARENT CORRECTNESS AUDIT
+========================================================================================
+
+========================================================================================
+PART 1: THE CURRENT REPO USES DIFFERENT PARENT-LEVEL FORMULAS
+========================================================================================
+  [PASS] The plaquette transfer note uses a gauge-side transfer parent
+  [PASS] The strong-CP note uses the determinant-dressed retained partition
+  [PASS] So the current notes do not yet present one theorem-grade identical parent formula across those two sectors  (gauge transfer parent and retained fermion-weighted partition are still written as different objects)
+
+========================================================================================
+PART 2: THE GAUGE-SIDE FRAMEWORK-POINT DATA ARE STILL UNDERDETERMINED
+========================================================================================
+  [PASS] The transfer-operator note explicitly leaves framework-point transfer-state identification open
+  [PASS] The source-sector factorization note and script explicitly use a generic witness rather than the Wilson D_6 data
+  [PASS] The Perron/Jacobi note says even the sharpened factorized class still does not force unique framework-point data
+
+========================================================================================
+PART 3: POSITIVE REALIZATION EXISTS, BUT ONLY AT MODEL/WITNESS LEVEL
+========================================================================================
+  [PASS] The structured DM note explicitly separates positive model realization from Wilson-native derivation
+  [PASS] The structured model script itself says it proves constructive realization rather than the final Wilson-native bridge
+
+========================================================================================
+PART 4: THE LOAD-BEARING MISSING MAP IS STILL WILSON TO CHARGED HERMITIAN DATA
+========================================================================================
+  [PASS] The observable principle remains scalar and requires microscopic D plus a source path
+  [PASS] The support intertwiner is explicitly support-only rather than a parent-to-charged descendant theorem
+  [PASS] The current-bank boundary note still says there is no Wilson-to-dW_e^H descendant law on current main
+
+========================================================================================
+PART 5: A WITNESS COMPLETION IS NOT A CANONICAL PARENT IDENTIFICATION
+========================================================================================
+  [PASS] Two different positive parent completions can share the same compressed source block  (compression_err=0.00e+00, parent_diff=2.00e-01, min_eigs=(1.658,1.658))
+
+========================================================================================
+SUMMARY: PASS=12 FAIL=0
+========================================================================================
+
+----- stderr -----
+

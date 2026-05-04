@@ -1,0 +1,90 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_up_amplitude_scalar_comparison_bridge.py
+runner_sha256: a2dabf77c6dbe7e5695d2fa468bdfc407cd92d389e9a3ccf705deb1fa3512d70
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.88
+status: ok
+----- stdout -----
+========================================================================
+  FRONTIER: Quark Up-Amplitude Scalar-Comparison Bridge
+========================================================================
+
+========================================================================
+PART 1: Exact Scalar-Comparison Bridge Data
+========================================================================
+
+  sin(delta_std)          = sqrt(5/6)   = 0.912870929175
+  rho_scalar              = 1/sqrt(42)  = 0.154303349962
+  eta_scalar              = sqrt(5/42)  = 0.345032779671
+  radial scalar surface   = 1/sqrt(7)   = 0.377964473009
+  kappa_cp                = sqrt(6/7)   = 0.925820099773
+  scalar lower bracket    = 1-rho_s     = 0.845696650038
+  scalar upper bracket    = 1-rho_s*kcp = 0.857142857143
+  support fraction        = 6/7         = 0.857142857143
+  [PASS] Scalar-comparison radius is exactly sqrt(rho_scalar^2 + eta_scalar^2) = 1/sqrt(7)  (radius = 0.377964473009)
+  [PASS] The CKM scalar contraction factor is exactly kappa_cp = sqrt(6/7)  (ratio = 0.925820099773)
+  [PASS] The support endpoint rewrites exactly in scalar-package language as 1 - rho_scalar * kappa_cp = 6/7  (value = 0.857142857143)
+
+========================================================================
+PART 2: Theorem Obstruction and Exact Bridge Band
+========================================================================
+
+  anchored a_u            = 0.778161628656
+  anchored kappa          = 0.956341163278
+  bridge lower endpoint   = 0.772011886721
+  bridge upper endpoint   = 0.782460796436
+  amplitude band width    = 0.010448909715
+  relative band width     = 1.343%
+  refit baseline (7/9)    = 0.052752344050
+  anchor baseline sqrt(3/5)= 0.719543607543%
+  [PASS] Atlas note still classifies 1/sqrt(7) as scalar comparison only, not the bright/tensor theorem value  (checked CKM atlas obstruction wording)
+  [PASS] Bilinear carrier note still keeps unit leading bright columns with only lower-row delta_A1 dressing  (checked exact carrier-column theorem wording)
+  [PASS] Anchored reduced solve lies inside the exact scalar-comparison bridge band  (a_u = 0.778161628656 in [0.772011886721, 0.782460796436])
+  [PASS] Exact scalar-comparison bridge band is narrower than 1.5% of the anchored amplitude  (relative width = 1.343%)
+
+========================================================================
+PART 3: Continuous Scalar-Comparison Bridge
+========================================================================
+
+  best refit kappa        = 0.956351495950
+  best refit a_u          = 0.778160173206
+  best refit objective    = 0.052726636368
+  best refit anchor score = 0.851778972074%
+
+  best anchor kappa       = 0.978801550649
+  best anchor a_u         = 0.774997879998
+  best anchor score       = 0.716062228229%
+  best anchor refit obj   = 0.054274764615
+
+  refit-better kappa window  = [0.953432293478, 0.959066224231]
+  anchor-better kappa window = [0.978225881627, 0.981649866377]
+  anchored kappa             = 0.956341163278
+  [PASS] Continuous scalar bridge beats the 7/9 baseline on the refit axis  (0.052726636368 < 0.052752344050)
+  [PASS] Continuous scalar bridge beats the sqrt(3/5) baseline on the anchored axis  (0.716062228229% < 0.719543607543%)
+  [PASS] Anchored reduced solve lands essentially on the refit-optimal scalar bridge  (|delta kappa| = 1.033267e-05)
+  [PASS] Refit-better and anchor-better scalar-bridge windows are disjoint  (refit window = [0.953432293478, 0.959066224231], anchor window = [0.978225881627, 0.981649866377])
+
+========================================================================
+PART 4: Summary
+========================================================================
+
+  honest scalar-bridge endpoint:
+    - the scalar-comparison CKM package does not derive the bright/tensor
+      1->3 amplitude, because the atlas and bilinear-carrier notes
+      explicitly classify 1/sqrt(7) as comparison-only and keep unit
+      leading bright columns on the exact carrier;
+    - but that same scalar package does define a natural exact bridge
+      interval and a one-parameter bridge family on the reduced quark
+      anchor;
+    - the anchored branch sits tightly inside that interval and almost
+      exactly on the refit-optimal scalar bridge;
+    - the scalar bridge still splits into a refit-better window and an
+      anchor-better window with no overlap.
+
+========================================================================
+  TOTAL: PASS=11, FAIL=0
+========================================================================
+
+----- stderr -----
+

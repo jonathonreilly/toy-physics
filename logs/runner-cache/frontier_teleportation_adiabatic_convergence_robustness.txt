@@ -1,0 +1,70 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_adiabatic_convergence_robustness.py
+runner_sha256: 8424847aa8d9c26f3602d49373f7a4c792093037d4cf51a550a36f24cf427e49
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 27.98
+status: ok
+----- stdout -----
+FINITE-TIME ADIABATIC CONVERGENCE/ROBUSTNESS AUDIT
+Status: planning / first artifact; ordinary quantum state teleportation only
+Claim boundary: no matter, mass, charge, energy, object, or faster-than-light transport
+Default candidate: 2d_poisson_chsh, dim=2, side=4, mass=0, G=1000, schedule=smoothstep, T=40, steps=320, method=expm_multiply
+Target ground: gap=0.246378, Phi+=0.970283, Favg=0.980189, Bell*=0.970283 (Phi+), CHSH=2.745662, neg=0.470283
+Initial state: E0=-8.000000, gap=2.000000, degeneracy=1, mode=unique G=0 ground state
+
+Step-count convergence, smoothstep T=40:
+   steps        dt     ground    d_ground        loss      d_loss      Phi+      d_Phi+      Favg      d_Favg
+      80  0.500000   0.995309   -0.004676    0.004691   +0.004676  0.960840   -0.009598  0.973893   -0.006399
+     160  0.250000   0.999917  -6.840e-05 8.327871e-05  +6.840e-05  0.970423  -1.496e-05  0.980282  -9.972e-06
+     320  0.125000   0.999985  -5.861e-07 1.546251e-05  +5.861e-07  0.970437  -1.122e-06  0.980291  -7.478e-07
+     640  0.062500   0.999985          +0 1.487643e-05          +0  0.970438          +0  0.980292          +0
+
+Propagator/method comparison at steps=160:
+         method     ground        loss      Phi+      Favg      d_Favg   norm_err
+  expm_multiply   0.999917 8.327871e-05  0.970423  0.980282          +0  2.687e-14
+           eigh   0.999917 8.327871e-05  0.970423  0.980282  +4.108e-15  3.508e-14
+
+Schedule comparison at same runtime/step budget:
+      schedule     ground        loss      Phi+     Bell* label      Favg       neg
+        linear   0.992742    0.007258  0.951895  0.951895  Phi+  0.967930  0.452665
+    smoothstep   0.999985 1.546251e-05  0.970437  0.970437  Phi+  0.980291  0.470440
+          sine   0.999990 1.048574e-05  0.970666  0.970666  Phi+  0.980444  0.470668
+
+Runtime/timing sensitivity, smoothstep fixed steps:
+           control targetPhi     ground        loss      Phi+      Favg       neg        status
+              T=36  0.970283   0.999976 2.351617e-05  0.969916  0.979944  0.469922          PASS
+              T=40  0.970283   0.999985 1.546251e-05  0.970437  0.980291  0.470440          PASS
+              T=44  0.970283   0.999989 1.118256e-05  0.970255  0.980170  0.470257          PASS
+
+G-amplitude target sensitivity:
+           control targetPhi     ground        loss      Phi+      Favg       neg        status
+            Gx0.98  0.969174   0.999985 1.476462e-05  0.969937  0.979958  0.469938          PASS
+               Gx1  0.970283   0.999985 1.546251e-05  0.970437  0.980291  0.470440          PASS
+            Gx1.02  0.971335   0.999984 1.611161e-05  0.970773  0.980515  0.470776          PASS
+
+Mass perturbation sensitivity:
+           control targetPhi     ground        loss      Phi+      Favg       neg        status
+               m=0  0.970283   0.999985 1.546251e-05  0.970437  0.980291  0.470440          PASS
+            m=0.02  0.968824   0.999985 1.542586e-05  0.969009  0.979339  0.469012          PASS
+
+Deterministic schedule-control noise sensitivity:
+           control targetPhi     ground        loss      Phi+      Favg       neg        status
+           sigma=0  0.970283   0.999985 1.546251e-05  0.970437  0.980291  0.470440          PASS
+        sigma=0.01  0.970283   0.954788    0.045212  0.996659  0.997773  0.497746 FIDELITY_ONLY
+
+G=0/null control:
+  ground=1.000000, loss=0, Phi+=0.500000, Bell*=0.500000 (Phi+), Favg=0.666667, neg=0.000000, non-resource=PASS
+
+Bob pre-message input-independence audit:
+  candidate: 2d_poisson_chsh, smoothstep, T=40, steps=320, method=expm_multiply
+  teleportation sample: 70 inputs (seed=20260425), mean/min/max fidelity=0.980813/0.970437/1.000000, trace_error=7.773e-16
+  Bob before message: distance_to_resource_marginal=4.996e-16, pairwise_input_distance=2.776e-16, marginal_bias_from_I/2=1.210e-01, input-independence=PASS
+
+Conclusion:
+  The default 2D 4x4 smoothstep T=40 row remains a strong finite-time resource diagnostic after the bounded convergence and small-control checks above.
+  This is still not a preparation proof: the model is small, closed, idealized, and assumes the initial G=0 ground state and ideal taste-qubit readout.
+  Scope remains ordinary quantum state teleportation only; no matter, mass, charge, energy, object, or faster-than-light transport.
+
+----- stderr -----
+

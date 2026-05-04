@@ -1,0 +1,21 @@
+===== runner cache v1 =====
+runner: scripts/dm_continuum_limit_velocity.py
+runner_sha256: bc1d98ac1ce79378dc0f27cd03116793d024c3b10adc95b5bd01544dd1cbbf1e
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+====================================================================================================
+LANE δ: dM continuum limit across multiple v/c
+No comparators (no dI, dIeq, or dN) — only the retarded wave field
+====================================================================================================
+Physical: T=15.0, PW=6.0, k*H=2.5, S=0.004
+Source trajectory: iz_start from IZ_START_PHYS=3.0,
+                   iz_end follows from velocity target
+
+
+--- v_target = -0.150 ---
+
+----- stderr -----
+

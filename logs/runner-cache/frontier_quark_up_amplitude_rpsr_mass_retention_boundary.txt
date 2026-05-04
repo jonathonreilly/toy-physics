@@ -1,0 +1,88 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_up_amplitude_rpsr_mass_retention_boundary.py
+runner_sha256: 46154d5290e1b29811d7d0bc73fa50193763bcc4ea45e14f8bc3edc70e677df5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+LANE 3 UP-AMPLITUDE RPSR MASS-RETENTION BOUNDARY
+========================================================================================
+
+A. Authority surfaces
+------------------------------------------------------------------------
+PASS: QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md exists -- docs/QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md
+PASS: STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md exists -- docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md
+PASS: QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md exists -- docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md
+PASS: QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md exists -- docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md
+PASS: QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md exists -- docs/QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md
+PASS: QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md exists -- docs/QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md
+PASS: QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md exists -- docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md
+PASS: new note names mass-retention boundary
+PASS: STRC note states derived theorem
+PASS: STRC note derives LO identity
+PASS: RPSR note records old LO gap discharged
+PASS: RPSR note records exact target formula
+PASS: projector audit exists as retained parameter surface
+PASS: endpoint obstruction records kappa interval history
+PASS: NORM naturality note isolates extra structure
+PASS: Lane 3 firewall blocks bounded mass promotion
+
+B. Exact RPSR algebra
+------------------------------------------------------------------------
+PASS: unit projector ray has |p|^2 = 1
+PASS: scalar ray rho is 1/sqrt(42)
+PASS: support bridge times delta_A1 equals 1/49 -- 1/49
+PASS: LO STRC identity closes exactly -- lhs=0.912870929175, rhs=0.912870929175
+PASS: RPSR identity closes exactly -- lhs=1.003149047958, rhs=1.003149047958
+PASS: RPSR amplitude matches closed form
+PASS: RPSR amplitude is dimensionless reduced amplitude -- a_u=0.7748865611
+PASS: RPSR NLO correction is rho/49
+
+C. Boundary to mass retention
+------------------------------------------------------------------------
+PASS: amplitude theorem symbols are disjoint from mass-ratio claims
+PASS: new note says a_u is not m_u/m_c
+PASS: new note says a_u is not m_c/m_t
+PASS: new note requires amplitude-to-Yukawa readout
+PASS: new note requires top-compatible sector/scale bridge
+PASS: firewall keeps top Ward species-scoped
+
+D. Typed-edge graph
+------------------------------------------------------------------------
+PASS: RPSR reaches up-amplitude support
+PASS: RPSR does not reach physical up Yukawa ratios
+PASS: RPSR does not reach retained non-top masses
+PASS: CKM atlas alone does not reach mass ratios
+PASS: top Ward anchor alone does not reach non-top masses
+PASS: adding readout and scale edges would create mass path
+PASS: missing readout edge is new theorem content
+
+E. Import firewall
+------------------------------------------------------------------------
+PASS: allowed and forbidden input sets are disjoint -- ['STRC_RPSR_theorems', 'delta_A1', 'rho', 'scalar_ray', 'supp', 'unit_projector_ray']
+PASS: new note forbids observed quark masses
+PASS: new note forbids fitted Yukawa entries
+PASS: new note forbids CKM mass input
+PASS: new note forbids amplitude-as-mass shortcut
+PASS: new note forbids top species-uniform closure
+PASS: runner defines no observed quark mass constants
+
+F. Boundary classification
+------------------------------------------------------------------------
+PASS: direct RPSR-to-mass promotion is retired
+PASS: future route may supply readout theorem
+PASS: future route may supply sector-scale bridge
+PASS: future route must be CKM and 3C compatible
+PASS: future no-go route is named
+PASS: Lane 3 remains open
+
+Summary
+------------------------------------------------------------------------
+TOTAL: PASS=50, FAIL=0
+VERDICT: RPSR is exact up-amplitude support, not retained up-quark mass
+closure without a new readout theorem.
+
+----- stderr -----
+

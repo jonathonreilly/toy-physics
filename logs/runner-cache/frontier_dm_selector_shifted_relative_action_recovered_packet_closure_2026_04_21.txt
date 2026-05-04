@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_selector_shifted_relative_action_recovered_packet_closure_2026_04_21.py
+runner_sha256: d8f18a06012342399da86d5e30a47b01bddc5d242a080fdaae81bc21fc90ad48
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.76
+status: ok
+----- stdout -----
+========================================================================================
+DM SELECTOR SHIFTED-RELATIVE-ACTION RECOVERED-PACKET CLOSURE THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: THE SAME EXACT SCALAR LAW EXTENDS TO THE COMMON POSITIVE WINDOWS
+========================================================================================
+  [PASS] The original selector note still records the exact scalar observable-relative-action grammar
+  [PASS] One common positivity threshold mu_floor exists on the recovered bank  (mu_floor = 5.526185878913282)
+  [PASS] So the same scalar law can be transported to the common positive windows A_mu(H) = H + mu I  (shifted LogDet / Bregman continuation of the exact seed-relative action)
+
+========================================================================================
+PART 2: EVERY AUDITED COMMON POSITIVE SHIFT PICKS THE SAME PREFERRED LIFT
+========================================================================================
+  [PASS] Across the full audited shift family, the shifted relative action uniquely minimizes at recovered lift 0  (worst audited margin = 0.074652125521)
+  [PASS] At the first audited shift above positivity, lift 0 is already unique  ((mu, margin)=(5.546185878913281, 0.147674586632))
+  [PASS] At the largest audited shift, lift 0 is still unique  ((mu, margin)=(7.526185878913282, 0.074652125521))
+
+========================================================================================
+PART 3: THE SAME MINIMIZER PERSISTS ON A DENSE ADMISSIBLE STRESS RANGE
+========================================================================================
+  [PASS] On the dense admissible stress range from the positivity edge to large shifts, the same unique minimizer persists  (worst dense margin = 0.006112488798 at mu = 25.526185878913282)
+  [PASS] Even in the far-shift asymptotic regime, lift 0 remains the unique minimizer  ((large_mu, margin)=(1000005.5, 3.999023334700e-12))
+
+========================================================================================
+PART 4: THE SAME EXACT SCALAR LAW ACTIVATES THE POSITIVE ODD DOUBLET SIDE
+========================================================================================
+  [PASS] The earlier packet note still records that only recovered lift 0 lies on the positive side of Im(K_Z3[1,2]) = 0
+  [PASS] Exactly one recovered lift has positive shifted-imaginary doublet mixing  (Im(K12)_bank = [ 0.50598283 -1.04190431 -0.97982431 -1.25160188 -1.7936515 ])
+  [PASS] So the same shifted relative-action law and the odd doublet-sign packet select the same preferred lift  (same recovered lift 0)
+
+========================================================================================
+PART 5: SCIENTIFIC CONSEQUENCE
+========================================================================================
+  [PASS] The projection note still records that the exact internal selector already has the same preferred recovered image
+  [PASS] So on the current recovered selector packet, the remaining review-surface selector residue is closed by the same exact scalar law  (packet-local closure only)
+  [PASS] The companion exact-target theorem removes any separate native A-BCC residue once the PMNS target surface is granted  (pure target-free global sign/source-chart derivation remains outside this theorem alone)
+
+========================================================================================
+RESULT
+========================================================================================
+  On the current recovered selector packet, the same exact scalar
+  observable-principle law already closes point selection.
+  After transporting the seed-relative LogDet/Bregman law to the common
+  positive windows A_mu(H)=H+mu I, the preferred recovered lift 0 is the
+  unique minimizer across the full audited shift family and on a dense
+  admissible stress range, and it is exactly the unique recovered point
+  with Im(K_Z3[1,2]) > 0.
+  So the review-surface DM selector residue is closed on the current
+  recovered packet. By itself this theorem is not a pure target-free
+  global sign/source-chart theorem, but the companion exact-target
+  source-cubic theorem removes any separate native A-BCC residue once
+  the PMNS target surface is granted.
+
+SUMMARY: PASS=14 FAIL=0
+
+----- stderr -----
+

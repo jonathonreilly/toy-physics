@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_to_dweh_hermitian_source_family_current_bank_boundary_2026_04_18.py
+runner_sha256: 2d3f8034434bd99ec480b0bd53c411cc3cb3b6cb7cb39be0fd5cb296ae0ec916
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.94
+status: nonzero_exit
+----- stdout -----
+========================================================================================
+DM WILSON-TO-dW_e^H HERMITIAN SOURCE-FAMILY CURRENT-BANK BOUNDARY
+========================================================================================
+
+========================================================================================
+PART 1: CURRENT MAIN STILL STATES dW_e^H ITSELF AS THE LIVE TARGET
+========================================================================================
+  [PASS] Projected-source law note still says the live remaining gap is to derive dW_e^H on E_e from Cl(3) on Z^3
+  [PASS] Charged source-response reduction note still says the right target is to evaluate dW_e^H from Cl(3) on Z^3
+  [PASS] Selector reduction note still states that the remaining blocker is exactly a right-sensitive microscopic selector law on dW_e^H
+
+========================================================================================
+PART 2: THE CURRENT BANK REMAINS BLIND TO THE LIVE 2-REAL TARGET
+========================================================================================
+  [PASS] Observable-bank exhaustion note says every retained observable with target value factors through the frozen chamber bank
+  [PASS] Observable-bank exhaustion note says no retained observable on the current atlas uniquely pins (delta,q_+)
+  [PASS] Source-bank obstruction note says the minimal missing object is a new right-sensitive 2-real datum, equivalently the Z3 doublet-block law itself
+
+========================================================================================
+PART 3: CURRENT MAIN HAS NO HIDDEN WILSON-TO-dW_e^H ARTIFACT
+========================================================================================
+  [FAIL] No pre-existing current-main doc or script combines Wilson-side structure with dW_e^H under another name  (hits=['docs/DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md', 'docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_CLOSURE_ENDPOINT_NOTE_2026-04-20.md', 'docs/HUBBLE_LANE5_C1_CL4C_CONDITIONAL_DERIVATION_CHAIN_CONSTRUCTION_NOTE_2026-04-30.md', 'docs/HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md', 'docs/HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md', 'docs/KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md', 'docs/KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md', 'docs/KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md', 'docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md', 'docs/SCALAR_SELECTOR_SYNTHESIS_NOTE_2026-04-19.md', 'docs/SCIENCE_3PLUS1_LINE_LAW_KNOWN_LIMITS_NOTE_2026-04-20.md', 'scripts/frontier_dm_leptogenesis_dweh_even_split_positive_exact_law_search.py', 'scripts/frontier_perron_frobenius_step2_nilpotent_chain_helper_layer_2026_04_19.py'])
+  [FAIL] No pre-existing current-main doc or script already names a Wilson Hermitian source family target  (hits=['docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md'])
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The current exact bank does not already realize the Wilson-side Hermitian source family needed upstream of the selector  (current main still names dW_e^H itself as live target and has no Wilson-to-dW_e^H artifact)
+  [PASS] So the Wilson Hermitian source family is a genuinely new constructive primitive on current main  (not a hidden current-bank object under another label)
+
+========================================================================================
+SUMMARY: PASS=8 FAIL=2
+========================================================================================
+
+----- stderr -----
+

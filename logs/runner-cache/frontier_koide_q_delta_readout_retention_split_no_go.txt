@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_delta_readout_retention_split_no_go.py
+runner_sha256: e7cb586c726ccc70b6e7c71f75a73ed77f0b1ab0299c322dbcdfd90fad8ed0e6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.49
+status: ok
+----- stdout -----
+
+========================================================================================
+A. Retained source-response readout support
+========================================================================================
+[PASS] A.1 retained notes support local scalar source-response readout
+       observable principle + hierarchy selector notes identify physical scalar readout with source-expansion coefficients.
+
+========================================================================================
+B. Q consequence of zero-background source-response
+========================================================================================
+[PASS] B.1 exact reduced generator gives Y=(1,1) at zero background source
+       W_red=log(k_perp + 1) + log(k_plus + 1); dW/dK|0=(1, 1)
+[PASS] B.2 zero-background readout gives K_TL=0 and Q=2/3
+       K_TL=0, Q=2/3
+[PASS] B.3 zero-background source is the extra Q condition, not a readout consequence
+       K(y)=((1 - y)/y, (1 - y)/(y - 2)); zero background only at y=1.
+
+========================================================================================
+C. Delta does not follow from closed readout alone
+========================================================================================
+[PASS] C.1 retained APS readout fixes only the closed value eta_APS=2/9
+       eta_APS=2/9
+[PASS] C.2 closed readout leaves the selected open endpoint split free
+       eta_APS=delta_open+tau -> tau=2/9 - delta_open
+[PASS] C.3 setting physical delta equal to closed eta is a readout bridge, not derived by APS alone
+       The Brannen mass formula uses a selected-line endpoint coordinate; closed APS support still needs a functor to that coordinate.
+
+========================================================================================
+D. Full-lane verdict
+========================================================================================
+[PASS] D.1 strict source-response readout conditionally closes the Q residual
+       Q residual is removed only if the charged-lepton scalar selector is proven to have zero physical background source.
+[PASS] D.2 strict readout does not close the delta residual
+       Delta still needs the closed-APS-to-open-selected-line endpoint functor or descent law.
+[PASS] D.3 full operational-quotient descent condition is not removed
+       The Q background-zero part and delta endpoint part both remain as retention questions.
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 10/10
+  [PASS] A.1 retained notes support local scalar source-response readout
+  [PASS] B.1 exact reduced generator gives Y=(1,1) at zero background source
+  [PASS] B.2 zero-background readout gives K_TL=0 and Q=2/3
+  [PASS] B.3 zero-background source is the extra Q condition, not a readout consequence
+  [PASS] C.1 retained APS readout fixes only the closed value eta_APS=2/9
+  [PASS] C.2 closed readout leaves the selected open endpoint split free
+  [PASS] C.3 setting physical delta equal to closed eta is a readout bridge, not derived by APS alone
+  [PASS] D.1 strict source-response readout conditionally closes the Q residual
+  [PASS] D.2 strict readout does not close the delta residual
+  [PASS] D.3 full operational-quotient descent condition is not removed
+
+VERDICT: strict readout is conditional support, not retained closure.
+KOIDE_Q_DELTA_READOUT_RETENTION_SPLIT_NO_GO=TRUE
+Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_Q=FALSE
+Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_DELTA=FALSE
+Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_FULL_LANE=FALSE
+CONDITIONAL_Q_CLOSES_IF_PHYSICAL_BACKGROUND_SOURCE_IS_ZERO=TRUE
+RESIDUAL_Q=derive_physical_background_source_zero_equiv_Z_erasure
+RESIDUAL_SCALAR=derive_Q_background_zero_and_closed_APS_to_open_endpoint_functor
+RESIDUAL_DELTA=selected_line_endpoint_transition_tau_not_removed_by_closed_readout
+
+----- stderr -----
+

@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/central_band_born_collapse_strength_sweep.py
+runner_sha256: cec5ceff6dbe6ba3bf660a5bb28757a62983ea42e299b07d8b66ecc28ef75d9e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 107.71
+status: ok
+----- stdout -----
+============================================================================================================================
+CENTRAL-BAND COLLAPSE-STRENGTH SWEEP
+  corrected three-slit I3 with -P(empty), varying stochastic-collapse p
+  seeds=6, realizations=8, npl=60, yz_range=12.0, r=3.0, y_cut=2.0, p=[0.05, 0.1, 0.2]
+============================================================================================================================
+
+N = 40
+      p              mode                        |I3|/P   ok  verdict
+  ------------------------------------------------------------------------
+   0.05            linear                          FAIL    0  FAIL
+   0.05                LN  1.02e-16±1.9e-17 (max 5.55e-16)    4  PASS
+   0.05            LN+|y|  1.02e-16±1.9e-17 (max 5.55e-16)    4  PASS
+   0.05   LN+|y|+collapse  8.56e-17±1.6e-17 (max 5.55e-16)    4  PASS
+
+   0.10            linear                          FAIL    0  FAIL
+   0.10                LN  1.02e-16±1.9e-17 (max 5.55e-16)    4  PASS
+   0.10            LN+|y|  1.02e-16±1.9e-17 (max 5.55e-16)    4  PASS
+   0.10   LN+|y|+collapse  8.33e-17±1.5e-17 (max 5.55e-16)    4  PASS
+
+   0.20            linear                          FAIL    0  FAIL
+   0.20                LN  1.02e-16±1.9e-17 (max 5.55e-16)    4  PASS
+   0.20            LN+|y|  1.02e-16±1.9e-17 (max 5.55e-16)    4  PASS
+   0.20   LN+|y|+collapse  1.01e-16±1.6e-17 (max 8.88e-16)    4  PASS
+
+
+N = 60
+      p              mode                        |I3|/P   ok  verdict
+  ------------------------------------------------------------------------
+   0.05            linear                          FAIL    0  FAIL
+   0.05                LN  1.85e-16±1.7e-17 (max 7.77e-16)    6  PASS
+   0.05            LN+|y|  1.85e-16±1.7e-17 (max 7.77e-16)    6  PASS
+   0.05   LN+|y|+collapse  1.90e-16±1.8e-17 (max 1.11e-15)    6  PASS
+
+   0.10            linear                          FAIL    0  FAIL
+   0.10                LN  1.85e-16±1.7e-17 (max 7.77e-16)    6  PASS
+   0.10            LN+|y|  1.85e-16±1.7e-17 (max 7.77e-16)    6  PASS
+   0.10   LN+|y|+collapse  1.80e-16±1.8e-17 (max 1.44e-15)    6  PASS
+
+   0.20            linear                          FAIL    0  FAIL
+   0.20                LN  1.85e-16±1.7e-17 (max 7.77e-16)    6  PASS
+   0.20            LN+|y|  1.85e-16±1.7e-17 (max 7.77e-16)    6  PASS
+   0.20   LN+|y|+collapse  1.73e-16±1.6e-17 (max 7.77e-16)    6  PASS
+
+
+Thresholds:
+  max |I3|/P < 1e-10 : machine precision
+  max |I3|/P < 1e-2  : practically Born-clean
+  max |I3|/P < 1e-1  : marginal
+  max |I3|/P >= 1e-1 : clear Born violation
+
+----- stderr -----
+

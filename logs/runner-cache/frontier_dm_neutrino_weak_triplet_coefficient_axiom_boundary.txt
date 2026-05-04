@@ -1,0 +1,48 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_weak_triplet_coefficient_axiom_boundary.py
+runner_sha256: 79c0743ad10d1531332efa5ac5270fe7253376ec79168b40ed3835be1b6a029f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO WEAK-TRIPLET COEFFICIENT AXIOM BOUNDARY
+========================================================================================
+
+========================================================================================
+PART 1: FRAMEWORK AXIOM MEANS ONLY Cl(3) ON Z^3
+========================================================================================
+  [PASS (B)] The framework sentence states the single physical theory is Cl(3) on Z^3
+  [PASS (B)] The transfer-class theorem is a derived structural theorem on top of that single axiom
+
+========================================================================================
+PART 2: C_ODD IS NOW FIXED BY BOSONIC MATCHING
+========================================================================================
+  [PASS (B)] The source side gives exactly one real selector amplitude slot a_sel
+  [PASS (B)] The target side gives exactly one odd triplet slot gamma
+  [PASS (B)] The bosonic matching theorem fixes the canonical odd normalization to |c_odd| = 1
+  [PASS (B)] The source-oriented sign convention records c_odd = +1  (positive selector orientation picks the source-oriented branch)
+
+========================================================================================
+PART 3: THE EXACT SOURCE CARRIER CLOSES THE EVEN LEG
+========================================================================================
+  [PASS (B)] The exact source carrier treats the two bright columns symmetrically as u_E and u_T
+  [PASS (B)] The swap-reduction theorem records the exact common-column form M_even = v_even [1,1]
+  [PASS (A)] The antisymmetric source mode lies in the kernel of the swap-fixed exact class  (kernel err=0.00e+00)
+  [PASS (B)] The even bosonic-normalization theorem fixes v_even exactly
+  [PASS (B)] So the exact even transfer law is [E1,E2]^T = v_even (tau_E + tau_T)
+  [PASS (B)] The source-side carrier still factors through the symmetric row mode only
+
+========================================================================================
+PART 4: THE CURRENT SINGLE-AXIOM BOUNDARY IS EXACT
+========================================================================================
+  [PASS (B)] The boundary note records that the live gap is now source amplitudes rather than transfer coefficients
+  [PASS (B)] The boundary note records that the benchmark remains bounded because the source amplitudes are still open
+
+========================================================================================
+SUMMARY: PASS=14 FAIL=0
+========================================================================================
+
+----- stderr -----
+

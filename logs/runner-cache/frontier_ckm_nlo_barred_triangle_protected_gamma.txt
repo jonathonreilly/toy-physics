@@ -1,0 +1,173 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_nlo_barred_triangle_protected_gamma.py
+runner_sha256: 0f8f1cdd8e5f76873ad1e91a055ff0d8d3973beea1b6d502e904176197a461e3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+CKM NLO barred-triangle and protected-gamma theorem audit
+See docs/CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs
+----------------------------------------------------------------------------------------
+  alpha_s(v)       = 0.103303816122267
+  lambda^2         = 0.051651908061134
+  rho              = 1/6  (= 0.166666666666667)
+  eta              = sqrt(5)/6 (= 0.372677996249965)
+  gamma_0          = arctan(sqrt(5)) = 65.905157 deg
+  beta_0           = arctan(1/sqrt(5)) = 24.094843 deg
+  [PASS] alpha_s(v) positive
+  [PASS] alpha_s(v) ~ 0.103 (canonical)
+  [PASS] lambda^2 = alpha_s(v)/2
+  [PASS] rho = 1/6
+  [PASS] eta^2 = 5/36
+  [PASS] gamma_0 + beta_0 = pi/2 (atlas right angle)
+  [PASS] upstream authority present: docs/ALPHA_S_DERIVED_NOTE.md
+  [PASS] upstream authority present: docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+  [PASS] upstream authority present: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+  [PASS] upstream authority present: docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md
+
+----------------------------------------------------------------------------------------
+(N1), (N2): closed forms for rho_bar, eta_bar
+----------------------------------------------------------------------------------------
+  (1 - alpha_s/4)         = 0.974174045969
+  rho_bar (direct)        = 0.162362340995
+  rho_bar = (4-alpha_s)/24 = 0.162362340995
+  eta_bar (direct)        = 0.363053231451
+  eta_bar = sqrt(5)(4-a)/24 = 0.363053231451
+  [PASS] rho_bar closed form matches direct computation
+  [PASS] eta_bar closed form matches direct computation
+  [PASS] rho_bar > 0 (apex inside upper half plane)
+  [PASS] eta_bar > 0 (CP-violating apex)
+
+----------------------------------------------------------------------------------------
+(N3): rho_bar^2 + eta_bar^2 = (4 - alpha_s)^2 / 96
+----------------------------------------------------------------------------------------
+  rho_bar^2 + eta_bar^2     = 0.158169178640076
+  (4 - alpha_s)^2 / 96      = 0.158169178640076
+  [PASS] (N3) holds at canonical alpha_s
+  [PASS] NLO radius < atlas-leading 1/6  (NLO 0.158169 < LO 0.166667)
+
+----------------------------------------------------------------------------------------
+(N4) PROTECTED INVARIANT: gamma_bar = gamma_0 = arctan(sqrt(5))
+----------------------------------------------------------------------------------------
+  tan(gamma_bar) = eta_bar/rho_bar = 2.236067977499790
+  sqrt(5)                          = 2.236067977499790
+  gamma_bar                        = 65.9051574479 deg
+  gamma_0                          = 65.9051574479 deg
+  [PASS] (N4) tan(gamma_bar) = sqrt(5) [protected]
+  [PASS] (N4) gamma_bar = gamma_0 [protected]
+  [PASS] the (4 - alpha_s)/24 factor cancels in eta_bar/rho_bar
+
+----------------------------------------------------------------------------------------
+(N5): closed form for tan(beta_bar)
+----------------------------------------------------------------------------------------
+  tan(beta_bar) direct        = 0.433425154119535
+  sqrt(5)(4-alpha_s)/(20+alpha_s) = 0.433425154119535
+  beta_bar                    = 23.433122 deg
+  [PASS] (N5) closed form matches direct eta_bar/(1-rho_bar)
+  [PASS] beta_bar < beta_0 (NLO reduces beta from atlas-leading)
+  [PASS] beta_bar within 2 deg of atlas-leading beta_0
+
+----------------------------------------------------------------------------------------
+(N6), (N7): alpha_bar and linear deviation theorem
+----------------------------------------------------------------------------------------
+  alpha_bar                   = 90.6617206596 deg
+  alpha_bar - pi/2 (rad)      = 0.011549204238352
+  alpha_bar - pi/2 (deg)      = 0.6617206596
+  (sqrt(5)/20) alpha_s        = 0.011549717759226
+  (sqrt(5)/20) alpha_s (deg)  = 0.6617500822
+  relative error              = 4.446177e-05
+  [PASS] (N6) alpha_bar = pi - gamma_0 - beta_bar (positive)
+  [PASS] (N7) linear deviation matches exact within 1e-3 (NLO accuracy)
+  [PASS] alpha_bar > pi/2 (apex angle increases with alpha_s)
+  [PASS] alpha_bar within 1 deg of pi/2 at canonical alpha_s
+
+----------------------------------------------------------------------------------------
+(N8) PROTECTED: sin/cos(2 gamma_bar) = sqrt(5)/3, -2/3
+----------------------------------------------------------------------------------------
+  sin(2 gamma_bar)   = 0.745355992499930
+  sqrt(5)/3          = 0.745355992499930
+  cos(2 gamma_bar)   = -0.666666666666667
+  -2/3               = -0.666666666666667
+  [PASS] (N8) sin(2 gamma_bar) = sqrt(5)/3 [protected]
+  [PASS] (N8) cos(2 gamma_bar) = -2/3 [protected]
+  [PASS] sin^2 + cos^2 = 1
+
+----------------------------------------------------------------------------------------
+(N9): closed forms for sin(2 beta_bar), cos(2 beta_bar)
+----------------------------------------------------------------------------------------
+  sin(2 beta_bar) closed = 0.729759594331174
+  sin(2 beta_bar) direct = 0.729759594331174
+  cos(2 beta_bar) closed = 0.683703835356801
+  cos(2 beta_bar) direct = 0.683703835356802
+  [PASS] (N9) sin(2 beta_bar) closed matches direct
+  [PASS] (N9) cos(2 beta_bar) closed matches direct
+  [PASS] sin^2 + cos^2 = 1
+  [PASS] sin(2 beta_bar) < sin(2 beta_0) (NLO reduces sin(2 beta))
+
+----------------------------------------------------------------------------------------
+Cross-check: alpha_s -> 0 recovers atlas-leading triangle
+----------------------------------------------------------------------------------------
+  rho_bar(0)        = 0.166666666666667 (= 1/6 = 0.166666666666667)
+  eta_bar(0)        = 0.372677996249965 (= sqrt(5)/6 = 0.372677996249965)
+  tan(beta_bar)(0)  = 0.447213595499958 (= 1/sqrt(5) = 0.447213595499958)
+  alpha_bar(0)      = 90.0000000000 deg (= 90.0)
+  [PASS] rho_bar(0) = 1/6 (atlas-leading)
+  [PASS] eta_bar(0) = sqrt(5)/6 (atlas-leading)
+  [PASS] tan(beta_bar)(0) = 1/sqrt(5) (atlas-leading)
+  [PASS] alpha_bar(0) = pi/2 (atlas right angle recovered)
+
+----------------------------------------------------------------------------------------
+Post-derivation comparators (PDG)
+----------------------------------------------------------------------------------------
+  gamma_bar atlas-NLO = 65.9052 deg [protected]
+    PDG               = 65.4 +/- 3.8 deg
+    deviation         = +0.133 sigma
+  beta_bar  atlas-NLO = 23.4331 deg
+    PDG               = 22.2 +/- 0.7 deg
+    deviation         = +1.762 sigma
+  alpha_bar atlas-NLO = 90.6617 deg
+    PDG               = 85.2 +/- 4.8 deg
+    deviation         = +1.138 sigma
+  sin(2 beta_bar)     = 0.729760
+    PDG               = 0.706 +/- 0.011
+    deviation         = +2.160 sigma
+  [PASS] gamma_bar within 1 sigma of PDG
+  [PASS] beta_bar within 2 sigma of PDG
+  [PASS] alpha_bar within 2 sigma of PDG
+  [PASS] sin(2 beta_bar) reduces atlas-LO 3.6 sigma to NLO 2.2 sigma
+  [PASS] NLO sin(2 beta) is closer to PDG than LO  (NLO +2.16 sigma vs LO +3.58 sigma)
+
+----------------------------------------------------------------------------------------
+Summary of new content
+----------------------------------------------------------------------------------------
+  PROTECTED INVARIANTS (new structural content at NLO):
+    gamma_bar = gamma_0 = arctan(sqrt(5))
+    sin(2 gamma_bar) = sqrt(5)/3
+    cos(2 gamma_bar) = -2/3
+
+  CLOSED-FORM NLO PREDICTIONS (new explicit content):
+    rho_bar          = (4 - alpha_s) / 24
+    eta_bar          = sqrt(5)(4 - alpha_s) / 24
+    tan(beta_bar)    = sqrt(5)(4 - alpha_s) / (20 + alpha_s)
+    alpha_bar - pi/2 = (sqrt(5)/20) alpha_s + O(alpha_s^2)
+
+  At canonical alpha_s(v) = 0.103304:
+    rho_bar          = 0.162362
+    eta_bar          = 0.363053
+    gamma_bar        = 65.9052 deg [PROTECTED]
+    beta_bar         = 23.4331 deg
+    alpha_bar        = 90.6617 deg
+    sin(2 beta_bar)  = 0.729760
+
+========================================================================================
+TOTAL: PASS=42, FAIL=0
+========================================================================================
+
+----- stderr -----
+

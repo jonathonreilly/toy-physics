@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_noise_fault_controls.py
+runner_sha256: 21e8f698dbe8daf8f2ebe0bb9da0cf0294962e12ac35dc3a407aed34a681b27e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 10.11
+status: ok
+----- stdout -----
+NOISY/FAULTY TELEPORTATION CONTROLS HARNESS
+Status: planning / first artifact; quantum state teleportation only
+Random input states: 128 plus 6 Pauli-axis probes (seed=20260425)
+Classical readout deadline: base latency tick; delayed records arrive later
+
+Fault-profile diagnostics:
+  profile                                  v   D_now   D_evt     F_now     F_evt  Fmin_now  Fmin_evt     noSig  verdict_now
+  ideal reference                      1.000   1.000   1.000  1.000000  1.000000  1.000000  1.000000 3.053e-16    beats 2/3
+  resource depolarization v=0.90       0.900   1.000   1.000  0.950000  0.950000  0.950000  0.950000 2.776e-16    beats 2/3
+  resource boundary v=1/3              0.333   1.000   1.000  0.666667  0.666667  0.666667  0.666667 2.776e-16       at 2/3
+  Bell readout flips p=0.05            1.000   1.000   1.000  0.935000  0.935000  0.905000  0.905000 3.053e-16    beats 2/3
+  classical flips/drop/delay           1.000   0.720   0.900  0.813200  0.891500  0.791600  0.864500 3.053e-16    beats 2/3
+  Bob correction errors p=0.03         1.000   1.000   1.000  0.960600  0.960600  0.941800  0.941800 3.053e-16    beats 2/3
+  combined moderate controls           0.850   0.855   0.950  0.784603  0.816225  0.750455  0.778283 2.498e-16    beats 2/3
+  stress below deadline threshold      0.600   0.525   0.750  0.557577  0.582253  0.531611  0.545158 3.053e-16    below 2/3
+
+  D_now is the total probability that the record has arrived by the
+  readout deadline. D_evt is the eventual non-dropped delivery
+  probability. Delays affect F_now, not F_evt, once the record arrives.
+
+Thresholds and controls:
+  classical qubit average-fidelity benchmark: 0.6666666667
+  resource depolarization only, rho(v)=v|Phi+><Phi+|+(1-v)I/4: v > 0.3333333333
+  symmetric Bell-measurement record bit-flip error only: p < 0.2928932188
+  symmetric classical-record bit-flip error only: p < 0.2928932188
+  symmetric Bob correction-control bit error only: p < 0.2928932188
+  record drop probability only, identity fallback: p_drop < 0.6666666667
+  record delay past readout deadline only: p_delay < 0.6666666667
+  pure delay has no eventual fidelity penalty after the delayed record arrives.
+  combined moderate non-resource faults require visibility by deadline: v > 0.4977698836
+  combined moderate non-resource faults require visibility eventually: v > 0.4479928952
+
+No-signaling and normalization diagnostics:
+  max Bob no-record trace distance to I/2: 6.384e-16
+  max pairwise Bob no-record distance across sampled inputs: 3.053e-16
+  max Bell-branch probability span across sampled inputs: 2.776e-16
+  record drop/delay availability is input-independent by construction.
+  max output trace error by deadline: 2.887e-15
+  max output trace error eventually: 2.887e-15
+  Input-dependent fidelity appears only after causal record delivery.
+
+Acceptance gates:
+  ideal reference fidelity: PASS
+  resource boundary lands at 2/3: PASS
+  thresholds found: PASS
+  combined moderate still beats deadline benchmark: PASS
+  stress control falls below deadline benchmark: PASS
+  Bob pre-record input-independence: PASS
+  trace preservation: PASS
+
+Claim boundary:
+  This is a planning / first artifact for noisy qubit-state teleportation controls.
+  Faults are independent classical controls around a supplied Bell resource.
+  It is not FTL signaling, matter transport, mass transfer, charge transfer, or energy transport.
+
+----- stderr -----
+

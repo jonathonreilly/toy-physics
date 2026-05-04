@@ -1,0 +1,74 @@
+===== runner cache v1 =====
+runner: scripts/gravity_signed_sector_harness.py
+runner_sha256: aaa602f6f02af0a5d43602ff287d42a0e4874f64c19aefc967a43fe81cf993a6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+============================================================================================
+SIGNED GRAVITATIONAL RESPONSE SECTOR HARNESS
+  bounded first pass; not a negative-mass, shielding, or propulsion claim
+============================================================================================
+
+candidate origin: hosted candidate: a conserved Z2 orientation of the staggered scalar density / taste-parity mass branch, i.e. the sign of the scalar source bilinear relative to the parity-correct response channel
+candidate status: admissible-host check only; conservation and sector preparation are not derived in this pass
+
+FOUR-PAIR SIGN TABLE
+  A is left, B is right. F_A>0 and F_B<0 means attraction.
+
+  mode=source_only
+    pair  src/resp A  src/resp B        F_A        F_B    balance  read
+      ++       +1/+1       +1/+1  +2.500e-01  -2.500e-01    0.0e+00  ATTRACT
+      +-       +1/+1       -1/+1  -2.500e-01  -2.500e-01    2.0e+00  UNBALANCED
+      -+       -1/+1       +1/+1  +2.500e-01  +2.500e-01    2.0e+00  UNBALANCED
+      --       -1/+1       -1/+1  -2.500e-01  +2.500e-01    0.0e+00  REPEL
+
+  mode=response_only
+    pair  src/resp A  src/resp B        F_A        F_B    balance  read
+      ++       +1/+1       +1/+1  +2.500e-01  -2.500e-01    0.0e+00  ATTRACT
+      +-       +1/+1       +1/-1  +2.500e-01  +2.500e-01    2.0e+00  UNBALANCED
+      -+       +1/-1       +1/+1  -2.500e-01  -2.500e-01    2.0e+00  UNBALANCED
+      --       +1/-1       +1/-1  -2.500e-01  +2.500e-01    0.0e+00  REPEL
+
+  mode=locked
+    pair  src/resp A  src/resp B        F_A        F_B    balance  read
+      ++       +1/+1       +1/+1  +2.500e-01  -2.500e-01    0.0e+00  ATTRACT
+      +-       +1/+1       -1/-1  -2.500e-01  +2.500e-01    0.0e+00  REPEL
+      -+       -1/-1       +1/+1  -2.500e-01  +2.500e-01    0.0e+00  REPEL
+      --       -1/-1       -1/-1  +2.500e-01  -2.500e-01    0.0e+00  ATTRACT
+
+TWO-BODY MOMENTUM BALANCE CONTROL
+  source_only    max |F_A+F_B|/max|F| = 2.000e+00  PASS
+  response_only  max |F_A+F_B|/max|F| = 2.000e+00  PASS
+  locked         max |F_A+F_B|/max|F| = 0.000e+00  PASS
+
+BORN / NORM / NULL-FIELD / F~M CONTROLS
+  positive inertial masses only: PASS  min m=1.000
+  Born |I3|/P on fixed branch Hamiltonian: 1.050e-15
+  Crank-Nicolson norm drift: 2.665e-15
+  null-field branch delta: 0.000e+00
+  F~M slope, locked same-sector attraction: 1.000000
+  F~M slope, locked opposite-sector repulsion: 1.000000
+
+CONTINUUM / FAMILY-PORTABILITY SANITY
+  inverse_square         PASS  reads=ATTRACT,REPEL,REPEL,ATTRACT
+  screened_mu_0p25       PASS  reads=ATTRACT,REPEL,REPEL,ATTRACT
+  soft_lattice_h_0p50    PASS  reads=ATTRACT,REPEL,REPEL,ATTRACT
+  soft_lattice_h_0p25    PASS  reads=ATTRACT,REPEL,REPEL,ATTRACT
+  soft_lattice_h_0p125   PASS  reads=ATTRACT,REPEL,REPEL,ATTRACT
+  soft-lattice force approaches inverse-square under refinement:
+    h=1.000: rel_error=1.462e-01
+    h=0.500: rel_error=4.027e-02
+    h=0.250: rel_error=1.033e-02
+    h=0.125: rel_error=2.599e-03
+  refinement monotone: PASS
+
+FIRST-PASS VERDICT
+  locked source/response sign algebra: PASS
+  source-only and response-only are controls: PASS if mixed pairs fail balance
+  candidate sector harness gates: PASS
+  status: consequence harness passed; native chi_g derivation remains open
+
+----- stderr -----
+

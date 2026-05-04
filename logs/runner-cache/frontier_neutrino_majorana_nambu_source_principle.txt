@@ -1,0 +1,85 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_nambu_source_principle.py
+runner_sha256: 0658daacf7224a0b9fbe96203d08a90fb5951b8ffc7360f7026118d70d7ed3ae
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: NAMBU SOURCE PRINCIPLE
+========================================================================================
+
+Authority stack:
+  - main:docs/publication/ci3_z3/DERIVATION_ATLAS.md
+  - docs/NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md
+  - docs/NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md
+  - docs/NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md
+  - docs/NEUTRINO_MAJORANA_CURRENT_STACK_EXHAUSTION_NOTE.md
+
+Question:
+  Is there a smallest exact beyond-retained-stack source principle
+  that forces the unique charge-2 Majorana direction into the local
+  quadratic grammar on the anomaly-fixed nu_R block?
+
+========================================================================================
+PART 1: THE UNIQUE LOCAL NORMAL AND PAIRING DIRECTIONS FORM ONE SU(2)
+========================================================================================
+  [PASS (C)] Local generators J_x, J_y, J_z are Hermitian  (max Hermiticity error=0.00e+00)
+  [PASS (C)] The local quadratic block closes as [J_x, J_y] = i J_z  (error=0.00e+00)
+  [PASS (C)] The local quadratic block closes as [J_y, J_z] = i J_x  (error=0.00e+00)
+  [PASS (C)] The local quadratic block closes as [J_z, J_x] = i J_y  (error=0.00e+00)
+  [PASS (C)] The pairing annihilation direction carries charge -2  (error=0.00e+00)
+  [PASS (C)] The pairing creation direction carries charge +2  (error=0.00e+00)
+  [PASS (C)] The normal direction J_z is charge zero  (error=0.00e+00)
+
+  So the local anomaly-fixed nu_R block is not naturally split into
+  unrelated normal and pairing sectors. They are one exact pseudospin
+  su(2) quadratic algebra.
+
+========================================================================================
+PART 2: THE CHARGE-TWO SOURCE IS EXACTLY ONE COMPLEX TRANSVERSE SLOT
+========================================================================================
+  [PASS (C)] The transverse J_x/J_y plane is exactly the unique complex pairing slot  (rebuild error=0.00e+00)
+  [PASS (C)] The reconstructed Hermitian source carries one complex coefficient m  (coeff_ann=(0.37-0.22j), coeff_cre=(0.37+0.22j))
+
+  This matches the unique-source-slot theorem in a basis-closed form:
+  the two real pairing directions are the transverse pseudospin plane.
+
+========================================================================================
+PART 3: THE RETAINED NORMAL SLICE IS NOT CLOSED UNDER LOCAL CANONICAL ROTATIONS
+========================================================================================
+  [PASS (C)] A local Bogoliubov rotation of J_z leaves the normal slice  (residual outside span{J_z}=0.707107)
+  [PASS (C)] At theta = pi/2, J_z rotates exactly into a pairing direction  (target error=2.48e-16)
+
+  So restricting the local quadratic grammar to charge-zero J_z only
+  is a basis choice, not a canonically closed local source principle.
+
+========================================================================================
+PART 4: THE MINIMAL CANONICALLY CLOSED LOCAL SOURCE GRAMMAR IS NAMBU-COMPLETE
+========================================================================================
+  [PASS (C)] The full span{J_x, J_y, J_z} is closed under local canonical rotations  (max outside error=3.68e-17)
+  [PASS (C)] Those rotations act as norm-preserving SO(3) adjoint motions on the source vector  (max norm error=5.55e-16)
+
+  So the minimal canonically closed local quadratic source family is
+  the full pseudospin triplet, not the retained charge-zero slice.
+
+========================================================================================
+RESULT
+========================================================================================
+  Yes. Once the local quadratic source grammar is required to be
+  closed under CAR-preserving canonical basis changes, the minimal
+  admissible source family on the unique nu_R block is the Nambu-
+  complete pseudospin span{J_x, J_y, J_z}. The current normal slice
+  span{J_z} is not closed under those rotations, while the transverse
+  J_x/J_y plane is exactly the unique complex charge-2 source slot.
+
+  This forces the existence of the charge-2 source direction as part
+  of the admissible local source grammar beyond the retained stack.
+  What remains open is the absolute amplitude / staircase embedding,
+  not the existence of the local Nambu source family.
+
+PASS=13  FAIL=0
+
+----- stderr -----
+

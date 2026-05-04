@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_staggered_dirac_boundary_eta_realization.py
+runner_sha256: ff3f8df1cd1d0327eec1eb2577d5f9800d9558a49344da57cc69fdd74caacd20
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================================================
+SIGNED GRAVITY STAGGERED-DIRAC BOUNDARY APS REALIZATION AUDIT
+  retained staggered boundary eta/Pfaffian controls; not a physical signed-gravity claim
+========================================================================================================================
+
+[PASS] retained-compatible staggered boundary operators are eta-neutral  (cycle8_apbc_m0:eta=+0,zero=0,chi=+0,gap=0.383,pair=2.2e-16; cycle10_apbc_m03:eta=+0,zero=0,chi=+0,gap=0.431,pair=5.0e-16; torus4x4_apbc_m0:eta=+0,zero=0,chi=+0,gap=1.000,pair=8.9e-16; torus4x6_apbc_m03:eta=+0,zero=0,chi=+0,gap=0.917,pair=1.1e-15; open4x4_m03:eta=+0,zero=0,chi=+0,gap=0.530,pair=6.7e-16; open4x5_m03:eta=+0,zero=0,chi=+0,gap=0.431,pair=8.9e-16)
+[PASS] staggered boundary orientation/relabel controls do not create eta sign  (eta=[0, 0, 0], chi=[0, 0, 0], orientation_reversal_err=0.0e+00, relabel_spectral_err=2.2e-15)
+[PASS] odd-open-face unpaired eta is quarantined as sublattice imbalance  (open5x5_origin0_m03:eta=+1,chi=+1; open5x5_origin1_m03:eta=-1,chi=-1; open10x10_refined_m03:eta=+0,chi=+0; classification=odd_sublattice_imbalance_control)
+[PASS] Pfaffian sign is determinant-line orientation metadata, not invariant branch  (cycle8_skew_apbc:pf=+1.250e-01-> -1.250e-01,eig_err=3.3e-16,det_err=0.0e+00; torus3x4_skew_apbc:pf=+2.812e-01-> -2.812e-01,eig_err=1.1e-15,det_err=0.0e+00)
+[PASS] orientation-line insertion creates the APS sign only as a control  (raw=(eta=+0,zero=0,gap=1.000), added_line=[(1, 1, 0, 1), (-1, -1, 0, -1)])
+[PASS] native staggered boundary source basis cannot span signed source  (native_residual=1.414e+00, odd_control_residual=0.0e+00, odd_control_admissible=False)
+[PASS] non-claim gate remains closed  (native_staggered_aps_selector_found=False, odd_open_face_as_selector=False, pfaffian_sign_as_gauge_invariant_selector=False, orientation_line_inserted_for_control=True, physical_signed_gravity_prediction=False, negative_inertial_mass=False, shielding=False, propulsion=False, reactionless_force=False)
+
+INTERPRETATION
+  The retained staggered-Dirac boundary operators tested here are gapped
+  but eta-neutral on taste-compatible cycles, tori, and even open faces.
+  Odd open faces can create an unpaired eta, but that sign flips under a
+  one-site staggering-origin shift and disappears under even refinement,
+  so it is a sublattice-imbalance control, not a retained APS selector.
+  Pfaffian signs exist only after choosing a determinant-line orientation:
+  an odd basis relabel flips the Pfaffian while preserving spectrum and
+  determinant.  The signed APS branch appears cleanly only after adding a
+  rank-one orientation line.
+
+VERDICT
+  The retained staggered-Dirac / Grassmann boundary operator does not
+  currently realize a native gapped unpaired APS eta/Pfaffian selector.
+  This closes the most natural escape from the raw Hodge-boundary no-go
+  unless a sharper retained boundary theorem identifies a non-added
+  determinant-line mode on actual graph/refinement families.
+
+SUMMARY: PASS=7 FAIL=0
+FINAL_TAG: SIGNED_GRAVITY_STAGGERED_DIRAC_APS_REALIZATION_NOT_CONTAINED
+
+----- stderr -----
+

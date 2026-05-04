@@ -1,0 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/dispersion_high_p_tiebreaker.py
+runner_sha256: 1e34a4f32500e7396d01142ae64cf3dc8f20c9076e3946d6f7ce54f53b4b5b53
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+
+----- stderr -----
+

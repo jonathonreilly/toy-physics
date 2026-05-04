@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_constructive_projected_source_selector_theorem.py
+runner_sha256: eb414eed1c3f58d9436e0558613623aa83aaa74083a48fa9a172b077e941945a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 7.11
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS CONSTRUCTIVE PROJECTED-SOURCE SELECTOR THEOREM
+========================================================================================
+
+Question:
+  Is the constructive projected-source sign chamber on the current PMNS
+  branch empty or transport-incompatible, or does there already exist an
+  exact D_- / dW_e^H witness with gamma > 0, E1 > 0, and E2 > 0?
+
+========================================================================================
+PART 1: THE CONSTRUCTIVE SIGN CHAMBER IS NONEMPTY
+========================================================================================
+  [PASS (C)] The constructive witness stays on the exact fixed native seed surface  ((xbar,ybar)=(0.563333333333,0.306666666667))
+  [PASS (C)] The constructive witness is genuinely off-seed  (xi=[ 0.610828 -0.100789 -0.510039], eta=[ 0.452075 -0.279762 -0.172312], delta=1.882595756164)
+  [PASS (C)] Its projected-source triplet channels satisfy gamma > 0, E1 > 0, E2 > 0  ((gamma,E1,E2)=(0.150147244666,0.296562850784,1.986407435174))
+  [PASS (C)] Its CP pair is therefore already on the source-oriented mainline sheet  ((cp1,cp2)=(-0.029685396610,0.198835735450))
+  [PASS (C)] At dW_e^H level the same witness satisfies the exact projected-source sign inequalities  (responses=[ 1.954344  0.214671  0.020891  0.701903  0.       -0.096789  0.300294
+  0.002868  0.      ])
+
+  constructive witness:
+    x      = [1.17416156 0.46254435 0.05329409]
+    y      = [0.75874142 0.0269043  0.13435428]
+    delta  = 1.882595756164
+    eta    = [0.92932093 1.05222031 0.80149003]
+    dW_e^H = [ 1.95434391  0.21467112  0.02089133  0.70190311  0.         -0.09678873
+  0.30029449  0.00286768  0.        ]
+
+========================================================================================
+PART 2: THE CONSTRUCTIVE SIGN CHAMBER ALREADY REACHES THE EXTREMAL VALUE
+========================================================================================
+  [PASS (C)] The constructive witness itself already gives eta / eta_obs > 1  (eta_best=1.052220313052)
+  [PASS (C)] Its best transport value matches the unconstrained transport-extremal value exactly  ((constructive,extremal)=(1.052220313052,1.052220313050))
+  [PASS (C)] So maximizing exact transport over the constructive sign chamber already saturates the global extremal value  (the sign-constrained selector is not transport-inferior on the current branch)
+  [PASS (C)] The old displayed transport-extremal representative and the constructive witness have different CP sign patterns at the same eta value  (old extremal cp=(0.025639344329,0.019609326070))
+
+========================================================================================
+PART 3: THE CONSTRUCTIVE WITNESS LIFTS TO D_- AND FULL D
+========================================================================================
+  [PASS (C)] The explicit microscopic witness preserves charge exactly  (commutator=0.00e+00)
+  [PASS (C)] Its charge -1 block D_- reconstructs the constructive Hermitian source block by the exact Schur map  (err=1.15e-16)
+  [PASS (C)] So the constructive sign system is already exact on dW_e^H itself  (response err=8.49e-17)
+  [PASS (C)] And the same D_- witness reproduces the constructive triplet package exactly  ((gamma,E1,E2)=(0.150147244666,0.296562850784,1.986407435174))
+
+========================================================================================
+PART 4: THE THEOREM NOTE RECORDS THE NEW GATE
+========================================================================================
+  [PASS (C)] The new note records that the constructive projected-source sign chamber already reaches the extremal transport value
+  [PASS (C)] The note also records that the remaining issue is only the microscopic selector law
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact constructive answer:
+    - the projected-source sign chamber is nonempty on the current PMNS branch
+    - it already contains a witness with gamma > 0, E1 > 0, E2 > 0 and eta / eta_obs > 1
+    - that witness saturates the current transport-extremal value
+    - so the remaining issue is only the microscopic selector law that
+      chooses this constructive sheet uniquely
+
+PASS=15 FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,97 @@
+===== runner cache v1 =====
+runner: scripts/frontier_block_gaussian_schur_narrow.py
+runner_sha256: c2a70df90de2ca41611dc3edc77934ff08b1d92cb7dd73ec5638175a1a6a36f8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.89
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: block-Gaussian Schur marginalization
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: explicit 2+1 block instance verifies Schur complement formula
+----------------------------------------------------------------------------------------
+  [PASS (A)] K_eff = A - B C^{-1} B^T at concrete (2+1)-block instance  (K_eff = Matrix([[14/5, 3/5], [3/5, 6/5]]))
+
+----------------------------------------------------------------------------------------
+Part 2: K_eff is symmetric
+----------------------------------------------------------------------------------------
+  [PASS (A)] K_eff = K_eff^T (symmetric)  ()
+
+----------------------------------------------------------------------------------------
+Part 3: K_eff positive definite at concrete instance (det > 0, trace > 0)
+----------------------------------------------------------------------------------------
+  [PASS (A)] det(K_eff) > 0 (positive definite)  (det(K_eff) = 3)
+  [PASS (A)] Tr(K_eff) > 0 (positive definite)  (Tr(K_eff) = 4)
+
+----------------------------------------------------------------------------------------
+Part 4: K is positive definite (consistency)
+----------------------------------------------------------------------------------------
+  [PASS (A)] det(K) > 0 (whole block PD)  (det(K) = 15)
+
+----------------------------------------------------------------------------------------
+Part 5: block-determinant identity det(K) = det(C) * det(K_eff)
+----------------------------------------------------------------------------------------
+  [PASS (A)] det(K) = det(C) * det(K_eff) exact  (det(K) = 15, det(C)*det(K_eff) = 15)
+
+----------------------------------------------------------------------------------------
+Part 6: J_eff = eta - B C^{-1} xi at concrete instance
+----------------------------------------------------------------------------------------
+  [PASS (A)] J_eff = eta - B C^{-1} xi at concrete instance  (J_eff = Matrix([[2/5], [4/5]]))
+
+----------------------------------------------------------------------------------------
+Part 7: marginalization-via-completing-the-square identity
+----------------------------------------------------------------------------------------
+  [PASS (A)] Q_full at q_F^* matches Q_eff(q_U) up to a q_U-independent constant  (q_U-dependent residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 8: parametric verification with abstract A, B, C
+----------------------------------------------------------------------------------------
+  [PASS (A)] symbolic K_eff = A - B C^{-1} B^T matches expected closed form  (abstract a_ij, b_i, c)
+  [PASS (A)] symbolic det(K) = det(C) * det(K_eff)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let K = [[A, B], [B^T, C]] be real symmetric positive-definite block
+    matrix with C invertible (and positive-definite by PD-ness of K).
+    Let J = (eta, xi).
+
+  CONCLUSION:
+    (T1) Schur-complement marginalization formula:
+            K_eff  =  A - B C^{-1} B^T,
+            J_eff  =  eta - B C^{-1} xi.
+    (T2) K_eff symmetric and positive-definite.
+    (T3) Block-determinant identity:
+            det(K)  =  det(C) * det(K_eff).
+    (T4) Completing-the-square identity:
+            Q(q_U, q_F)|_{q_F = q_F^*}  =  Q_eff(q_U) + const,
+         where q_F^* = C^{-1}(xi - B^T q_U) and Q_eff has Hessian K_eff,
+         linear part J_eff.
+
+  Audit-lane class:
+    (A) — pure linear algebra on real symmetric block matrices. No YT
+    / Cl(3) / Grassmann / forced UV-window / coarse-graining
+    framework-specific input.
+
+  This narrow theorem isolates the abstract block-Gaussian Schur
+  marginalization from the parent's YT bridge framework. The parent's
+  bounded-theorem-grade bridge claim still requires the upstream UV
+  class / local affine selector / nonlocal budget / endpoint-shift
+  budget, but the abstract Schur-marginalization formula itself
+  becomes audit-able as a standalone primitive.
+
+
+========================================================================================
+  TOTAL: PASS=10, FAIL=0
+========================================================================================
+
+----- stderr -----
+

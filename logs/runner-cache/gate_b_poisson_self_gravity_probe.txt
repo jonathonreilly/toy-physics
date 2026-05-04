@@ -1,0 +1,22 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_poisson_self_gravity_probe.py
+runner_sha256: 90f756d5bc8d9b0b60027be1ed6e0b2040cef481ff8f5a37c8524d2f19a928d1
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+========================================================================================================
+GATE B POISSON SELF-GRAVITY PROBE
+  retained grown row only: drift=0.2, restore=0.7
+  promoted observable: detector centroid shift and escape after one backreaction loop
+  guardrail: eps=0 must exactly recover the frozen grown baseline
+========================================================================================================
+h=0.5, W=8, NL=25, seeds=[0], source_z=3.0, source strengths=[1e-06, 2e-06, 5e-06, 1e-05], eps sweep=[0.0, 0.05, 0.1, 0.2, 0.5]
+backreaction kernel: exp(-mu r)/(r+eps), mu=0.06, eps0=0.25
+
+  seed 0: building grown row and running one-loop backreaction...
+  seed 0: done
+
+----- stderr -----
+

@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_washout_axiom_boundary.py
+runner_sha256: 1a102ddca168b4402492da6710df4cb234dc94654f10f10a9f49e92851dd3d07
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS WASHOUT / THERMAL AXIOM BOUNDARY
+========================================================================================
+
+========================================================================================
+PART 1: PROJECTION CONSISTENCY FORCES K00 INTO M_TILDE
+========================================================================================
+  [PASS] The exact projection theorem fixes the physical denominator as K00 = 2  (K00=2.000000000000)
+  [PASS] So the physically consistent effective mass is m_tilde = K00 * y0^2 * v^2 / M1  (m_tilde=0.101165728136 eV)
+  [PASS] This doubles the old benchmark m_tilde and strengthens washout accordingly  ((old,new)=(0.050582864068,0.101165728136) eV)
+
+========================================================================================
+PART 2: THE RETAINED TRANSPORT BENCHMARK NOW UNDERPRODUCES
+========================================================================================
+  [PASS] The consistent retained benchmark remains in the strong-washout regime  (K=47.235979629898)
+  [PASS] The consistent retained benchmark gives eta/eta_obs = 0.5579198484...  (eta/eta_obs=0.557919848420)
+  [PASS] Even the DI ceiling on the same retained transport map is only 0.6014524207... of observation  (eta_DI/eta_obs=0.601452420744)
+
+  epsilon_1 = 2.457619879584e-06
+  epsilon_DI = 2.649379530107e-06
+  m_tilde = 1.011657281358e-01 eV
+  m_star_bench = 2.141709115137e-03 eV
+  K = m_tilde/m_star_bench = 47.235979629898
+  kappa_fit(K) = 1.427162724744e-02
+  T_rad,bench = 1.389339946627e-04
+  eta/eta_obs = 0.557919848420
+
+========================================================================================
+PART 3: THE OLD 0.99 BENCHMARK IS AN INTERMEDIATE, NOT THE FINAL AUTHORITY
+========================================================================================
+  [PASS] The earlier exact-kernel runner already divided epsilon_1 by K00
+
+========================================================================================
+PART 4: THE REMAINING NON-AXIOM OBJECT IS ONE EXPLICIT TRANSPORT MAP
+========================================================================================
+  [PASS] All remaining benchmark dependence can be named explicitly as T_rad(K) = 7.04 * C_sph * d_th * kappa_fit(K)  (T_rad,bench=1.389339946627e-04)
+  [PASS] Observation would require a transport enhancement of 1.7923721532... over the retained benchmark map  (needed factor=1.792372153153)
+  [PASS] So the remaining gap is transport, not source/kernel normalization  (exact epsilon_1/DI = 0.927620920920 while eta/eta_obs stays 0.557919848420 on T_rad,bench)
+
+========================================================================================
+SUMMARY: PASS=10 FAIL=0
+========================================================================================
+
+----- stderr -----
+

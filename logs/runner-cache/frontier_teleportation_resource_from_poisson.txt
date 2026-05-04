@@ -1,0 +1,50 @@
+===== runner cache v1 =====
+runner: scripts/frontier_teleportation_resource_from_poisson.py
+runner_sha256: 58372e79a50eaaa488f03eb81365bddab6e0b54c03c4808720aff2d825af5ace
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.34
+status: ok
+----- stdout -----
+POISSON/CHSH TELEPORTATION RESOURCE AUDIT
+Status: planning / first artifact; quantum state teleportation resource only
+Extraction: trace cells/spectator tastes, keep the last KS taste bit per species
+Protocol sanity: ideal Phi+ resource mean fidelity=0.9999999999999996, min=0.9999999999999991, max trace error=5.551e-16
+
+Case: 1d_null
+  lattice/params: dim=1 side=8 N=8 envs/logical_qubit=4 mass=0 G=0
+  ground energy: -4
+  full-state CHSH |S| from existing lane: 2.000000
+  traced logical taste-qubit resource: best Bell overlap=0.500000 (Phi+), CHSH=2.000000, purity=1.000000, negativity=0.000000
+  standard teleportation with traced resource: mean fidelity=0.669817, min=0.500038, max=0.987949, max trace error=4.441e-16
+  best fixed-env postselected branch: Bell overlap=0.500000 (Psi+), probability=6.250000e-02, CHSH=2.000000, negativity=0.000000
+    env A=((3,), ()) env B=((3,), ())
+  deterministic high-fidelity Bell resource (threshold 0.900): NO
+
+Case: 1d_poisson_chsh
+  lattice/params: dim=1 side=8 N=8 envs/logical_qubit=4 mass=0 G=1000
+  ground energy: -343.877771485
+  full-state CHSH |S| from existing lane: 2.822668
+  traced logical taste-qubit resource: best Bell overlap=0.997963 (Phi+), CHSH=2.822668, purity=0.997967, negativity=0.497963
+  standard teleportation with traced resource: mean fidelity=0.998621, min=0.997964, max=0.999470, max trace error=4.441e-16
+  best fixed-env postselected branch: Bell overlap=0.998981 (Phi+), probability=2.497454e-01, CHSH=2.825546, negativity=0.498981
+    env A=((1,), ()) env B=((3,), ())
+  deterministic high-fidelity Bell resource (threshold 0.900): YES
+
+Case: 2d_poisson_chsh
+  lattice/params: dim=2 side=4 N=16 envs/logical_qubit=8 mass=0 G=1000
+  ground energy: -66.100691676
+  full-state CHSH |S| from existing lane: 2.668376
+  traced logical taste-qubit resource: best Bell overlap=0.970283 (Phi+), CHSH=2.745662, purity=0.971783, negativity=0.470283
+  standard teleportation with traced resource: mean fidelity=0.979360, min=0.970287, max=0.999810, max trace error=6.661e-16
+  best fixed-env postselected branch: Bell overlap=0.999428 (Psi+), probability=5.854540e-08, CHSH=2.826809, negativity=0.499428
+    env A=((0, 1), (1,)) env B=((0, 1), (1,))
+  deterministic high-fidelity Bell resource (threshold 0.900): YES
+
+Conclusion:
+  A traced deterministic high-fidelity Bell resource was found on at least one Poisson case. This would need independent hardening before promotion.
+  CHSH violation in the full C^N x C^N state is not by itself a teleportation resource derivation.
+  Postselected branches, when present, are diagnostics only in this artifact.
+
+----- stderr -----
+

@@ -1,0 +1,38 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_self_gravity_scaling.py
+runner_sha256: fef9b64d5181e11e196cc90064e62ed54567fb0d8769aed448b1f569bdbcb5c6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.01
+status: ok
+----- stdout -----
+========================================================================
+STAGGERED SELF-GRAVITY SCALING PROBE
+========================================================================
+G_SELF=50.0, mu2=0.22, dt=0.12, iterations=20
+No external source. |psi|^2 generates its own Phi.
+
+random_geometric side=4             n= 16 width_ratio=0.8800 contraction=0.1200 force=20/20 TW flips= 0 norm=5.55e-16 score=3/3
+random_geometric side=6             n= 36 width_ratio=0.6396 contraction=0.3604 force=20/20 TW flips= 0 norm=8.88e-16 score=3/3
+random_geometric side=8             n= 64 width_ratio=0.6184 contraction=0.3816 force=20/20 TW flips= 0 norm=6.66e-16 score=3/3
+random_geometric side=10            n=100 width_ratio=0.6026 contraction=0.3974 force=20/20 TW flips= 0 norm=2.22e-16 score=3/3
+growing          n=16               n= 16 width_ratio=0.6848 contraction=0.3152 force=20/20 TW flips= 0 norm=2.22e-16 score=3/3
+growing          n=36               n= 36 width_ratio=0.6806 contraction=0.3194 force=20/20 TW flips= 0 norm=6.66e-16 score=3/3
+growing          n=64               n= 64 width_ratio=0.6711 contraction=0.3289 force=20/20 TW flips= 0 norm=4.44e-16 score=3/3
+growing          n=100              n=100 width_ratio=0.6760 contraction=0.3240 force=20/20 TW flips= 0 norm=4.44e-16 score=3/3
+layered_cycle    layers=6,width=3   n= 18 width_ratio=0.4487 contraction=0.5513 force=20/20 TW flips= 0 norm=4.44e-16 score=3/3
+layered_cycle    layers=6,width=4   n= 24 width_ratio=0.4356 contraction=0.5644 force=20/20 TW flips= 0 norm=2.22e-16 score=3/3
+layered_cycle    layers=6,width=5   n= 30 width_ratio=0.4284 contraction=0.5716 force=20/20 TW flips= 0 norm=2.22e-16 score=3/3
+layered_cycle    layers=6,width=6   n= 36 width_ratio=0.4216 contraction=0.5784 force=20/20 TW flips= 0 norm=2.22e-16 score=3/3
+
+========================================================================
+SUMMARY BY FAMILY
+========================================================================
+random_geometric mean_ratio=0.6852 range=[0.6026,0.8800] slope=-2.773e-03 corr=-0.773 force_all_TW=True no_flips=True max_norm_drift=8.88e-16
+growing          mean_ratio=0.6781 range=[0.6711,0.6848] slope=-1.172e-04 corr=-0.723 force_all_TW=True no_flips=True max_norm_drift=6.66e-16
+layered_cycle    mean_ratio=0.4336 range=[0.4216,0.4487] slope=-1.472e-03 corr=-0.986 force_all_TW=True no_flips=True max_norm_drift=4.44e-16
+
+Retained question: does width_ratio stay below 1 and remain stable as graph size grows?
+
+----- stderr -----
+

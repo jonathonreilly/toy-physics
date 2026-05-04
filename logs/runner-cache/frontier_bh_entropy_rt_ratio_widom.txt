@@ -1,0 +1,81 @@
+===== runner cache v1 =====
+runner: scripts/frontier_bh_entropy_rt_ratio_widom.py
+runner_sha256: bf4644c44874d597c9e90745bf36827f2e4cc841651f130d2b66f49654cf2a16
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 52.23
+status: ok
+----- stdout -----
+========================================================================
+BH Entropy RT-Ratio Widom No-Go Theorem
+========================================================================
+
+Question: does r(L) = S_ent / (L * ln chi_eff) approach 1/4 on
+the OBC L x L free-fermion half-filled square-lattice ground state?
+
+Answer: no.  Widom-Gioev-Klich pins r_inf = 1/6 exactly; 1/4 is a
+finite-L artifact.
+
+------------------------------------------------------------------------
+Part 1.  Widom-Gioev-Klich analytic coefficients
+------------------------------------------------------------------------
+  c_Widom(2D, diamond, straight cut) = 0.1666666667
+  [PASS] c_Widom(2D) = 1/6 exactly  (value = 0.1666666667)
+  [PASS] c_Widom(2D) != 1/4  (|1/6 - 1/4| = 0.083333)
+  c_Widom(3D, half-filled cube, straight cut) = 0.105100  (Monte Carlo, N = 4e5)
+  [PASS] c_Widom(3D) is stable and bounded  (value = 0.105100)
+  [PASS] c_Widom(3D) != 1/4  (|c_3D - 1/4| = 0.144900)
+
+------------------------------------------------------------------------
+Part 2.  Numerical r(L) on OBC L x L lattice, half filling
+------------------------------------------------------------------------
+     L  chi_eff      S_ent       r(L)  dev_1/6%  dev_1/4%
+  ----------------------------------------------------------
+     8        8     4.0099     0.2410    +44.6%     -3.6%
+    12       12     7.3013     0.2449    +46.9%     -2.1%
+    16       16    10.4610     0.2358    +41.5%     -5.7%
+    20       20    14.1132     0.2356    +41.3%     -5.8%
+    24       24    17.6503     0.2314    +38.8%     -7.4%
+    28       28    21.1082     0.2262    +35.7%     -9.5%
+    32       32    24.3791     0.2198    +31.9%    -12.1%
+    40       40    32.1177     0.2177    +30.6%    -12.9%
+    48       48    40.1066     0.2158    +29.5%    -13.7%
+    56       56    47.8652     0.2123    +27.4%    -15.1%
+    64       64    55.8880     0.2100    +26.0%    -16.0%
+
+------------------------------------------------------------------------
+Part 3.  Asymptotic c_inf from r(L) = c_inf + a / ln(L)
+------------------------------------------------------------------------
+  [L >= 24]  c_inf = 0.145173  a = +0.2691    dev(1/6) = -12.90%  dev(1/4) = -41.93%
+  [L >= 32]  c_inf = 0.162027  a = +0.2032    dev(1/6) = -2.78%  dev(1/4) = -35.19%
+  [L >= 40]  c_inf = 0.148598  a = +0.2567    dev(1/6) = -10.84%  dev(1/4) = -40.56%
+  [L >= 48]  c_inf = 0.130698  a = +0.3293    dev(1/6) = -21.58%  dev(1/4) = -47.72%
+
+Verdict fit:  c_inf (L>=32) = 0.162027
+              |c_inf - 1/6| / (1/6)  = 2.78%
+              |c_inf - 1/4| / (1/4)  = 35.19%
+
+------------------------------------------------------------------------
+Part 4.  Theorem verification
+------------------------------------------------------------------------
+  [PASS] r(L) is monotone decreasing for L >= 28  (r(28)=0.2262 down to r(64)=0.2100)
+  [PASS] r(L=64) < r(L=8)  (r(64) = 0.2100 < r(8) = 0.2410)
+  [PASS] c_inf (L>=32 fit) within 10% of 1/6  (c_inf = 0.1620, |dev| = 2.78%)
+  [PASS] c_inf (L>=32 fit) is NOT within 20% of 1/4  (|dev from 1/4| = 35.19%)
+  [PASS] r(L=64) is at least 15% below 1/4  (r(64) = 0.2100, below-by = 16.0%)
+  [PASS] THEOREM: lim_L r(L) = c_Widom = 1/6, NOT 1/4  (Widom-Gioev-Klich asymptote confirmed numerically; 1/4 rejected by >20% margin)
+  [PASS] COROLLARY: existing BH entropy lane stays bounded  (the 1/4 in S_BH = A/(4 l_P^2) is not derived from free-fermion lattice entanglement on this carrier)
+
+========================================================================
+SUMMARY: PASS=11  FAIL=0
+========================================================================
+
+Runtime: 52.1 s
+
+All checks passed. RT-ratio asymptote is c_Widom = 1/6, not 1/4.
+The free-fermion lattice-entanglement route does NOT derive the
+coefficient 1/4 in S_BH = A / (4 l_P^2).  The BH entropy lane
+remains a bounded companion for this retained reason.
+
+----- stderr -----
+

@@ -1,0 +1,52 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_taste_cube_cyclic_source_descent.py
+runner_sha256: 86276c4e56ed7bda73cb8b91866c6a9583d2bf76eff9cb050e1baf73c24ec008
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.60
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: full-cube C_3 averaging descends exactly to the same T_1 projector
+========================================================================================
+  [PASS] The one-hot T_1 projector commutes with the full taste-cube C_3[111] cycle
+  [PASS] The restricted action on T_1 is exactly the retained 3-cycle
+  [PASS] For every basis source, compress(full average) = T_1 cyclic average(compress)  (tested all 64 matrix units exactly)
+
+========================================================================================
+PART 2: exact full-cube orbit channels descend to B0, B1, B2
+========================================================================================
+  [PASS] The diagonal one-hot orbit source descends to B0
+  [PASS] The forward oriented one-hot orbit source descends to C
+  [PASS] The backward oriented one-hot orbit source descends to C^2
+  [PASS] Hermitian full-cube orbit combinations descend to B1 and B2
+  [PASS] Q0, Q1, Q2 are already C_3-averaged Hermitian full-cube source channels
+
+========================================================================================
+PART 3: positive full-cube parents reduce to the same 3-response cyclic bundle
+========================================================================================
+  [PASS] [NUMERIC] Every tested averaged full-cube parent and its T_1 Schur block stay positive  (seed0: eigM=4.214e+00, eigS=1.041e+01, comm=5.9e-16, rec=3.7e-16; seed1: eigM=2.415e+00, eigS=3.430e+00, comm=5.4e-15, rec=3.5e-15; seed2: eigM=2.349e+00, eigS=9.452e+00, comm=3.3e-15, rec=2.6e-15; seed3: eigM=8.197e+00, eigS=1.010e+01, comm=5.2e-15, rec=3.2e-15; seed4: eigM=5.546e+00, eigS=1.110e+01, comm=1.4e-15, rec=1.1e-15)
+  [PASS] [NUMERIC] Every tested T_1 Schur block commutes with the retained 3-cycle
+  [PASS] [NUMERIC] Every tested T_1 Schur block is reconstructed exactly from r0, r1, r2
+  [PASS] [NUMERIC] Full-cube couplings still generate nontrivial reduced operators without leaving the 3-response bundle
+
+========================================================================================
+PART 4: any Schur-compatible full-cube response factors through r0, r1, r2
+========================================================================================
+  [PASS] [NUMERIC] The canonical full-cube orbit channels read the same three responses as B0, B1, B2  (seed0: (7.1e-15, 0.0e+00, 0.0e+00); seed1: (0.0e+00, 0.0e+00, 0.0e+00); seed2: (0.0e+00, 0.0e+00, 0.0e+00))
+  [PASS] [NUMERIC] Every averaged full-cube Hermitian source compresses to the B0, B1, B2 bundle  (M0/X0: coord=0.0e+00, fact=3.6e-15; M0/X1: coord=0.0e+00, fact=0.0e+00; M0/X2: coord=1.1e-16, fact=7.1e-15; M0/X3: coord=1.1e-16, fact=3.6e-15; ...)
+  [PASS] [NUMERIC] The response law ReTr(S(M) P1 A8(X) P1) factors exactly through r0, r1, r2  (M0/X0: coord=0.0e+00, fact=3.6e-15; M0/X1: coord=0.0e+00, fact=0.0e+00; M0/X2: coord=1.1e-16, fact=7.1e-15; M0/X3: coord=1.1e-16, fact=3.6e-15; ...)
+
+Interpretation:
+  The physical taste cube does not force us back to a vague large-source
+  target. Exact C_3[111] averaging and a Schur-compatible charged-sector
+  reduction collapse the full 8-corner source bank to the same three
+  cyclic response channels already identified on T_1. So the honest
+  remaining job is not to rediscover the carrier size. It is to derive
+  the microscopic full-cube source law for those channels, and then the
+  selector law that would put them on the Koide cone.
+
+PASS=15 FAIL=0
+
+----- stderr -----
+

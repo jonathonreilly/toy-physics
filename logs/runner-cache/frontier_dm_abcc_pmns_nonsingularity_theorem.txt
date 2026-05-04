@@ -1,0 +1,108 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_abcc_pmns_nonsingularity_theorem.py
+runner_sha256: 3d2d94c0a9ea5e4bff6bb9ccca8d38b461f0d1518ed6042f113b4b445c82c782
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.96
+status: ok
+----- stdout -----
+A-BCC PMNS Non-Singularity Theorem Runner
+==================================================
+Physical constants: E1=1.632993=sqrt(8/3), E2=0.942809=sqrt(8)/3, Gamma=0.5
+
+=== T1: det(H_base) > 0 ===
+  det(H_base) = 5.028315
+  [PASS] det(H_base) > 0  (det = 5.0283)
+  [PASS] det(H_base) matches known value  (det = 5.0283 ~= 5.028)
+
+=== T2: E2-threshold exact theorem ===
+  E2 = sqrt(8)/3 = 0.942809
+  E1 = sqrt(8/3) = 1.632993
+  Discriminant of Q(m)=m^2-m*E2+2*E1^2: -20.444444 (must be < 0)
+  [PASS] Q discriminant < 0 (Q has no real roots)  (disc = -20.4444)
+  [PASS] Q(m) > 0 for m in [-10, 30]  (min Q = 5.1120)
+  [PASS] Algebraic formula det = -(m-E2)*Q(m) matches numeric (max err < 1e-10)  (max err = 1.46e-11)
+  [PASS] det sign correct at m=0 (< E2)  (det = 5.0283, expected sign=1)
+  [PASS] det sign correct at m=0.65 (Basin1 m, < E2)  (det = 1.4703, expected sign=1)
+  [PASS] det sign correct at m=E2 (threshold)  (det = -0.0000, expected sign=0)
+  [PASS] det sign correct at m=1.5 (> E2)  (det = -3.4374, expected sign=-1)
+  [PASS] det sign correct at m=28 (Basin2 m)  (det = -20656.3881, expected sign=-1)
+
+=== T3: Basin 2 path crosses det=0 ===
+  Basin 2 (m=28.006, d=20.722, q=5.012)
+  det endpoint = -70538.6
+  Crossing found: True, t_cross ~ 0.02770
+  [PASS] Basin 2 endpoint is in C_neg  (det = -70538.6)
+  [PASS] Basin 2 path crosses det=0  (t_cross = 0.0277025)
+  [PASS] Basin 2 crossing is early (t < 0.1)  (t_cross = 0.02770)
+  [PASS] Basin 2 crossing is consistent with t~0.0277  (t_cross = 0.02770)
+
+=== T4: Basin 2 middle eigenvalue zero-crossing (PMNS singularity) ===
+  t=0.0270: evals=(-1.3550,-0.021781,2.1329)  det=0.062952
+  t=0.0275: evals=(-1.3497,-0.006233,2.1261)  det=0.017888
+  t=0.0277: evals=(-1.3477,-0.000013,2.1235)  det=0.000037
+  t=0.0278: evals=(-1.3467,0.003097,2.1222)  det=-0.008852
+  t=0.0280: evals=(-1.3447,0.009319,2.1196)  det=-0.026562
+  t=0.0285: evals=(-1.3401,0.024877,2.1134)  det=-0.070454
+  [PASS] Middle eigenvalue changes sign near t=0.0277 (PMNS singularity)  (sign changes = 1)
+  [PASS] Middle eigenvalue |val| < 1e-3 at t=0.0277  (|eval| = 1.30e-05)
+  [PASS] Min |eigenvalue| along Basin 2 path (t in [0,0.05]) < 0.01  (min |eval| = 1.30e-05)
+
+=== T5: Basin X path crosses det=0 ===
+  Basin X (m=21.128, d=12.680, q=2.089)
+  det endpoint = -20296.1
+  Crossing found: True, t_cross ~ 0.03836
+  [PASS] Basin X endpoint is in C_neg  (det = -20296.1)
+  [PASS] Basin X path crosses det=0  (t_cross = 0.0383575)
+  [PASS] Basin X crossing is early (t < 0.1)  (t_cross = 0.03836)
+
+=== T6: Basin 1 path det > 0 throughout (P3 Sylvester) ===
+  min det = 0.878309
+  min |eigenvalue| = 0.313117
+  [PASS] Basin 1 path does NOT cross det=0
+  [PASS] Basin 1 min det > 0.5 (comfortably in C_base)  (min det = 0.8783)
+  [PASS] Basin 1 min |eigenvalue| > 0.1 (no near-zero mass)  (min |eval| = 0.3131)
+  [PASS] Basin 1 endpoint det > 0  (det = 0.9592)
+
+=== T7: IVT closure — PNS => det sign preserved ===
+  [PASS] Basin 1: all intermediate dets > 0 (PNS holds)  (min = 0.8784)
+  [PASS] Basin 1: endpoint det > 0 (A-BCC holds)  (det = 0.9592)
+  [PASS] IVT: all small-perturbation PNS paths land in C_base  (20/20 PNS paths ended in C_base)
+  [PASS] IVT failure example: Basin 2 path starts C_base, ends C_neg  (det(0)=5.03, det(1)=-70538.6)
+
+=== T8: PNS conditional theorem — structural assessment ===
+  PMNS Non-Singularity axiom (PNS):
+    det(H_base + t*J_phys) != 0 for all t in [0,1]
+  Theorem: PNS + IVT + det(H_base)>0 => A-BCC
+
+  Evidence summary:
+    det(H_base) = 5.0283 > 0  [J=0 in C_base]
+    Basin 2 path crosses det=0 at t~0.0277  [PNS violated]
+    Basin X path crosses det=0 at t~0.0384  [PNS violated]
+    Basin 1 path: min det = 0.879 > 0  [PNS satisfied, P3 Sylvester]
+
+  Honest gap:
+    PNS is the single remaining input. It is observationally grounded
+    (measured neutrino masses non-zero) but not derived from Cl(3)/Z^3.
+    Axiom cost: PNS (path-continuity in {det!=0}) vs. A-BCC (sign assumption).
+    Reduction: A-BCC <- PNS + IVT + det(H_base)>0.
+  [note] Conditional-theorem reduction: A-BCC <- PNS + IVT + det(H_base)>0.
+  [note] PNS (path-continuity in {det != 0}) is a weaker structural gap than the bare A-BCC endpoint assumption.
+  [note] PNS is observationally grounded via measured Delta_m^2_21, Delta_m^2_31 != 0 (oscillation data).
+  [note] Among the four-basin chi^2=0 enumeration, only Basin 1 satisfies PNS on [0,1]: min det = 0.879 > 0; Basin 2 crosses det=0 at t ~ 0.028, Basin X at t ~ 0.038.
+
+=== T9: Basin 1 uniqueness under PNS ===
+  Basin 1: C_base, PNS=OK
+  Basin 2: C_neg, PNS=VIOLATED
+  Basin X: C_neg, PNS=VIOLATED
+  [PASS] Basin 1 satisfies PNS
+  [PASS] Basin 2 violates PNS
+  [PASS] Basin X violates PNS
+  [PASS] Unique chi^2=0 basin satisfying PNS is C_base (Basin 1)  (1 C_base PNS-consistent basin(s))
+  [PASS] All C_neg basins violate PNS  (2 C_neg basins violate PNS)
+
+==================================================
+FINAL: PASS=33 FAIL=0
+
+----- stderr -----
+

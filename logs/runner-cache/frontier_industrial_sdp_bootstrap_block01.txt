@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_industrial_sdp_bootstrap_block01.py
+runner_sha256: d81544345adc4d7a4e9c2b423780897bb12de63ae7f9309f0685dcac8e87da5d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.59
+status: ok
+----- stdout -----
+==============================================================================
+Industrial SDP Bootstrap — Block 01: CVXPY moment-bootstrap
+Unblocked by infra PR #430 (cvxpy 1.8.2 + CLARABEL/SCS via venv)
+==============================================================================
+
+CVXPY version: 1.8.2
+Available solvers: ['CLARABEL', 'HIGHS', 'OSQP', 'SCIPY', 'SCS']
+=== β = 6.0 ===
+
+--- SU(2) single-plaquette reference (Bessel + numerical Haar integration) ---
+  ⟨P^0⟩_SU(2)_single = 1.00000000
+  ⟨P^1⟩_SU(2)_single = 0.76736480
+  ⟨P^2⟩_SU(2)_single = 0.62153293
+  ⟨P^3⟩_SU(2)_single = 0.51967618
+  ⟨P^4⟩_SU(2)_single = 0.44425771
+
+--- SU(3) single-plaquette reference (numerical Haar on Cartan torus, N=80²) ---
+  ⟨P^0⟩_SU(3)_single = 1.00000000
+  ⟨P^1⟩_SU(3)_single = 0.42253174
+  ⟨P^2⟩_SU(3)_single = 0.24341355
+  ⟨P^3⟩_SU(3)_single = 0.14974607
+  ⟨P^4⟩_SU(3)_single = 0.09939457
+
+--- CVXPY bootstrap brackets (Hankel + Hausdorff PSD only) ---
+
+  Bracket via PSD only (SU(2)/single (P ∈ [-1, 1])):
+    N = 2 (Hankel size, 3 moments): m_1 ∈ [-1.000003, 1.000003]  (status: optimal/optimal)
+    N = 3 (Hankel size, 5 moments): m_1 ∈ [-1.000009, 1.000009]  (status: optimal/optimal)
+    N = 4 (Hankel size, 7 moments): m_1 ∈ [-1.000000, 1.000000]  (status: optimal/optimal)
+
+  Bracket via PSD only (SU(3)/single (P ∈ [-1/3, 1])):
+    N = 2 (Hankel size, 3 moments): m_1 ∈ [-0.333341, 0.999998]  (status: optimal/optimal)
+    N = 3 (Hankel size, 5 moments): m_1 ∈ [-0.333336, 1.000000]  (status: optimal/optimal)
+    N = 4 (Hankel size, 7 moments): m_1 ∈ [-0.333335, 1.000005]  (status: optimal/optimal)
+
+--- CVXPY bootstrap with single-plaquette moments fixed ---
+  Fix m_2, m_3, m_4 to single-plaquette reference values; bracket m_1.
+  Tests: does CVXPY correctly recover m_1 = ref value?
+  SU(2): fixed m_2,3,4 from Bessel ref. Bracket m_1 ∈ [0.684871, 0.769227]
+    Reference m_1_SU(2) = 0.767365; CVXPY recovered? False
+  SU(3): fixed m_2,3,4 from Haar ref. Bracket m_1 ∈ [0.281915, 0.451550]
+    Reference m_1_SU(3) = 0.422532; CVXPY recovered? False
+
+==============================================================================
+Block 01 SDP infrastructure validation complete.
+
+Comparators:
+  Canonical MC SU(3) ⟨P⟩(β=6) = 0.5934 (PLAQUETTE_SELF_CONSISTENCY)
+  Bridge-support analytic upper-bound = 0.59353
+  SU(2) lattice MC at β=6 ≈ 0.7706 (Creutz 1980 reference)
+
+Observation: pure PSD brackets without loop equations are wide.
+Adding single-plaquette moment constraints shows CVXPY workflow is
+functional. Block 02 will apply real loop equations / multi-Wilson-loop
+bootstrap to attempt a tighter bracket on SU(3) ⟨P⟩(β=6).
+==============================================================================
+
+----- stderr -----
+

@@ -1,0 +1,96 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_branch_conditioned_quadratic_sheet_closure.py
+runner_sha256: b5bcceeb3626eff2a0ad2b0cb699c13087925965592ef6ce18e6f18d279140b7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+PMNS BRANCH-CONDITIONED QUADRATIC-SHEET CLOSURE
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - PMNS selector sign-to-branch reduction
+  - neutrino two-Higgs canonical reduction
+  - charged-lepton two-Higgs canonical reduction
+  - neutrino two-amplitude last-mile boundary
+
+Question:
+  Once a future selector sign chooses the active minimal PMNS branch,
+  is the remaining coefficient problem still an open-ended seven-
+  parameter search, or is it already algebraically explicit?
+
+========================================================================================
+PART 1: THE NEUTRINO-SIDE TWO-HIGGS BRANCH HAS AN EXPLICIT QUADRATIC SHEET RECONSTRUCTION
+========================================================================================
+  [PASS] neutrino-side sample: the true first squared modulus satisfies the exact quadratic  (Q(x1^2)=4.44e-16)
+  [PASS] neutrino-side sample: the quadratic discriminant is positive on the generic physical patch  (disc=1.282185)
+  [PASS] neutrino-side sample: the quadratic gives two positive roots on the physical interval  (roots=[0.862828 1.21    ])
+  [PASS] neutrino-side sample: one root reconstructs the original canonical sheet  (H error=2.33e-15)
+  [PASS] neutrino-side sample: the second root reconstructs a distinct dual sheet with the same Hermitian data  (H dual error=5.93e-16, sheet distance=1.971e+00)
+  [PASS] neutrino-side sample: both reconstructed sheets stay on the positive canonical patch  (min true=3.600e-01, min dual=2.376e-01)
+  [PASS] neutrino-side sample: the triangle phase is preserved on both sheets  (phi_true=1.100000, phi_dual=1.100000, delta=1.100000)
+  [PASS] neutrino-side generic samples all respect the same two-sheet reconstruction pattern
+
+  So on the selected neutrino-side branch, the coefficient problem is
+  already algebraic: one quadratic root, rational back-substitution,
+  and one residual sheet bit.
+
+========================================================================================
+PART 2: THE CHARGED-LEPTON-SIDE TWO-HIGGS BRANCH HAS THE SAME QUADRATIC SHEET STRUCTURE
+========================================================================================
+  [PASS] charged-lepton-side sample: the true first squared modulus satisfies the exact quadratic  (Q(x1^2)=-5.42e-20)
+  [PASS] charged-lepton-side sample: the quadratic discriminant is positive on the generic physical patch  (disc=0.000088)
+  [PASS] charged-lepton-side sample: the quadratic gives two positive roots on the physical interval  (roots=[0.018046 0.0576  ])
+  [PASS] charged-lepton-side sample: one root reconstructs the original canonical sheet  (H error=6.54e-16)
+  [PASS] charged-lepton-side sample: the second root reconstructs a distinct dual sheet with the same Hermitian data  (H dual error=2.28e-16, sheet distance=1.651e+00)
+  [PASS] charged-lepton-side sample: both reconstructed sheets stay on the positive canonical patch  (min true=8.100e-03, min dual=1.805e-02)
+  [PASS] charged-lepton-side sample: the triangle phase is preserved on both sheets  (phi_true=1.100000, phi_dual=1.100000, delta=1.100000)
+
+  So the charged-lepton-side canonical branch is not merely locally
+  identifiable. Its coefficients also reconstruct by the same exact
+  quadratic-sheet logic.
+
+========================================================================================
+PART 3: ON THE CHARGED-LEPTON-SIDE BRANCH, THE NEUTRINO MONOMIAL MASSES STAY DIRECT
+========================================================================================
+  [PASS] A monomial neutrino Dirac lane gives a diagonal Hermitian matrix  (offdiag norm=0.00e+00)
+  [PASS] Its three positive Dirac masses are exactly the monomial singular values  (svd=[0.021 0.034 0.055])
+  [PASS] Those same masses are read directly from the diagonal Hermitian data  (diag masses=[0.021 0.034 0.055])
+
+  So if the selector chooses the charged-lepton-side PMNS branch, the
+  extra neutrino-side data are not another texture problem. They are
+  the direct monomial Dirac mass moduli.
+
+========================================================================================
+PART 4: THE CURRENT BANK NOW RECORDS THE POST-SELECTOR ENDPOINT
+========================================================================================
+  [PASS] The new note states explicit quadratic reconstruction on the selected branch
+  [PASS] The atlas carries the branch-conditioned quadratic-sheet closure row
+  [PASS] The two-amplitude last-mile note keeps sole-axiom closure separate
+  [PASS] The reviewer packet records the residual selected-branch sheet boundary
+
+  So the coefficient side is now closed as far as the current bank
+  honestly allows: after selector realization, only an explicit sheet
+  bit remains on the selected two-Higgs branch.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-bank answer:
+    - once sign(a_sel) chooses the active minimal PMNS branch, the
+      selected two-Higgs coefficients reconstruct from Hermitian data
+      by one explicit quadratic equation plus rational back-substitution
+    - on the selected two-Higgs branch the residual global ambiguity is
+      generically one Z_2 sheet, not a continuous family
+    - on the charged-lepton-side branch the extra neutrino-side data
+      remain the direct monomial Dirac mass moduli
+
+  So the post-selector coefficient problem is algebraically explicit
+  up to one residual sheet bit on the selected two-Higgs branch.
+
+PASS=22  FAIL=0
+
+----- stderr -----
+

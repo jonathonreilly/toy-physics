@@ -1,0 +1,128 @@
+===== runner cache v1 =====
+runner: scripts/frontier_beyond_lattice_qcd.py
+runner_sha256: e747d61be70e5d09589deb86ef50e43ccb8b367e2496264b05e7df690a94ad89
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 13.00
+status: ok
+----- stdout -----
+========================================================================
+BEYOND LATTICE GAUGE THEORY: TWO CONCRETE RESULTS
+========================================================================
+
+Honest overlap: both frameworks use graphs, Laplacians, path
+integrals, and gauge phases. The distinction is not framing --
+it is these concrete, testable differences.
+
+========================================================================
+RESULT 1: GRAVITY-QM INSEPARABILITY
+========================================================================
+
+Lattice QCD: lattice is a fixed scaffold. Quantum fields live ON it.
+This framework: the graph IS gravity. Removing f changes QM correlations.
+
+Grid: 32^3,  k=6.0,  mass_strength=8.0
+Source: (1, 16, 16),  Mass: (16, 20, 16)
+
+  Case A (free, f=0):        0.5s
+  Case C (with gravity):     5.5s
+  Case D (self-consistent):  6.6s
+
+  Measure 1: Y-centroid at detector plane (deflection)
+    Free:            15.9925
+    With gravity:    19.9475  (shift = +3.9550)
+    Self-consistent: 20.0509  (shift = +4.0584)
+
+  Measure 2: Profile shape difference (centroid-aligned)
+    |profile_grav - profile_free|_2 = 0.352322
+    |profile_sc   - profile_free|_2 = 0.326312
+    -> Gravity changes the SHAPE, not just the position.
+    -> The gravitational field modifies quantum coherence.
+
+  Measure 3: Y-spread (RMS width) at detector
+    Free:            4.5161
+    With gravity:    2.8464  (change = -1.6697)
+    Self-consistent: 3.3970  (change = -1.1191)
+
+  Measure 4: Fringe visibility (central region)
+    Free:            0.290439
+    With gravity:    0.979052  (change = +0.688613)
+    Self-consistent: 0.954936  (change = +0.664497)
+
+  SUMMARY:
+  [PASS] Gravity modifies the propagator's quantum structure.
+         The gravitational field is NOT an external add-on --
+         it changes deflection, coherence, and spread.
+         Lattice QCD has no analog: its lattice is inert.
+
+========================================================================
+RESULT 2: STRUCTURAL BORN RULE (Sorkin I_3 = 0)
+========================================================================
+
+Lattice QCD: Born rule (p = |amplitude|^2) is an axiom of QM.
+This framework: Born rule follows from linearity of path-sum.
+Test: Sorkin three-slit parameter I_3 must vanish identically.
+
+  Three-slit geometry: 20 x 21 lattice, k = 4.0
+  Slits at y = 7, 10, 13
+  Barrier at x = 10
+
+  |I_3|_max       = 7.19e-09
+  |I_3|_rms       = 1.66e-09
+  |I_3|/P_total   = 1.62e-16
+
+  Wavenumber sweep:
+    k=  2.0: |I_3|_max/P = 5.80e-17  [PASS]
+    k=  4.0: |I_3|_max/P = 1.62e-16  [PASS]
+    k=  6.0: |I_3|_max/P = 1.40e-16  [PASS]
+    k=  8.0: |I_3|_max/P = 8.41e-17  [PASS]
+    k= 10.0: |I_3|_max/P = 6.38e-17  [PASS]
+    k= 15.0: |I_3|_max/P = 1.56e-16  [PASS]
+    k= 20.0: |I_3|_max/P = 9.76e-17  [PASS]
+
+  Slit spacing sweep (k=6.0):
+    spacing=2: |I_3|_max/P = 1.83e-16  [PASS]
+    spacing=3: |I_3|_max/P = 1.40e-16  [PASS]
+    spacing=4: |I_3|_max/P = 1.36e-16  [PASS]
+    spacing=5: |I_3|_max/P = 1.27e-16  [PASS]
+
+  CONTROL: Nonlinear (cubic) propagator => I_3 != 0
+    Nonlinear: |I_3|_max/P = 1.61e-01  (should be >> 0)
+
+  SUMMARY:
+  [PASS] I_3 = 0 to machine precision at all k and spacings.
+         The Born rule is a THEOREM of the linear path-sum,
+         not an additional axiom.
+         Lattice QCD assumes this; we derive it.
+         Control: nonlinear propagator gives I_3/P = 1.61e-01,
+         confirming the test has discriminating power.
+
+========================================================================
+FINAL ASSESSMENT
+========================================================================
+
+Result 1 (Gravity-QM inseparability):
+  The gravitational field changes quantum propagation:
+    - Centroid shift:     +3.9550
+    - Shape difference:   0.352322
+    - Spread change:      -1.6697
+    - Visibility change:  +0.688613
+  In lattice QCD, the lattice is inert. There is no analog
+  for the lattice itself lensing quantum matter.
+
+Result 2 (Structural Born rule):
+  I_3/P < 1e-12 at all k and slit spacings tested.
+  Nonlinear control: I_3/P = 1.61e-01 (>>0, test has power).
+  The Born rule is derived, not assumed.
+  Lattice QCD postulates the Born rule; this framework proves it.
+
+Concrete answer to 'how is this different from lattice QCD?':
+  1. The graph IS gravity -- removing it changes quantum correlations.
+     Lattice QCD's lattice is a regulator, not a gravitational field.
+  2. The Born rule is a theorem of the linear path-sum structure.
+     Lattice QCD assumes it as an axiom of quantum mechanics.
+
+Total runtime: 12.7s
+
+----- stderr -----
+

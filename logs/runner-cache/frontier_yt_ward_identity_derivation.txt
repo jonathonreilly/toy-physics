@@ -1,0 +1,315 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_ward_identity_derivation.py
+runner_sha256: c43270c1e514c779c357bdb53d6f7f07b12c41ef161d7da117eb0694924c570b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 5.74
+status: ok
+----- stdout -----
+========================================================================
+BLOCK 1: Q_L = (2,3) rep dimension (cited framework input)
+========================================================================
+  [PASS (C)] N_c = 3 (SU(3) color fundamental)  --  LEFT_HANDED_CHARGE_MATCHING:13
+  [PASS (C)] N_iso = 2 (SU(2)_L doublet)  --  CKM_ATLAS:56 n_pair = 2
+  [PASS (C)] dim(Q_L) = N_c * N_iso = 6  --  3 * 2 = 6, exact group theory
+
+========================================================================
+BLOCK 2: Canonical kinetic normalization forces Z^2 = N_c * N_iso
+========================================================================
+
+  For phi(x) = (1/Z) * sum_{alpha,a} psi-bar_{alpha,a}(x) psi_{alpha,a}(x),
+  the free-theory connected 2-point function is
+    <phi(x) phi(y)>_conn,free
+      = (1/Z^2) * sum_{alpha,a,beta,b} delta_{alpha,beta} * delta_{a,b}
+                                     * G_0(x,y) * G_0(y,x)
+      = (N_iso * N_c / Z^2) * G_0(x,y)^2.
+
+  [PASS (C)] Sum of index contractions = N_c * N_iso  --  computed sum = 6, expected = 6
+  [PASS (C)] Canonical Z^2 = N_c * N_iso = 6 from unit-residue requirement  --  Z = sqrt(6) = 2.4494897428
+
+========================================================================
+BLOCK 3: Cross-check vs YUKAWA_COLOR_PROJECTION_THEOREM.md:112
+========================================================================
+
+  YCP:112 free-theory singlet channel: Tr[M M^dag]_singlet = N_c * |G_0|^2
+  With YCP:36 projector-normalized phi = (1/N_c) psi-bar_a psi_a,
+  the composite propagator residue is <phi phi>_free = N_c|G_0|^2 / N_c^2 = |G_0|^2/N_c.
+  Our formula on the color-only subblock with Z = N_c gives:
+    N_c / Z^2 = N_c / N_c^2 = 1/N_c.  Match.
+
+  [PASS (C)] Color-only projector-form residue matches YCP:112 (= 1/N_c)  --  computed = 0.3333333333333333, YCP = 0.3333333333
+
+========================================================================
+BLOCK 4: SU(N_c) Fierz identity (YCP_EW:169-172), verified explicitly
+========================================================================
+  [PASS (C)] SU(3) generator normalization: Tr(T^A T^B) = (1/2) delta_{AB}  --  verified for all 8 x 8 pairs
+  [PASS (C)] SU(3) Fierz identity verified at machine precision  --  max |LHS - RHS| = 5.55e-17 over all 81 index tuples
+  [PASS (C)] Color-singlet Fierz coefficient = 1/(2 N_c) = 1/6 for N_c=3  --  computed magnitude = 0.1666666667
+
+========================================================================
+BLOCK 5: Composite Higgs is uniquely the (1,1) singlet
+========================================================================
+  [PASS (C)] Hypothetical (1,8) adjoint Higgs: Z^2 = sum_A Tr(T^A T^A) * N_iso = 8, Z = sqrt(8)  --  Z_adj = sqrt(8.0) = 2.828427, distinct from sqrt(6)
+  [PASS (C)] Hypothetical (3,1) weak-triplet Higgs: Z^2 = 9/2, Z = sqrt(4.5)  --  Z_weak = sqrt(4.5) = 2.121320, distinct from sqrt(6)
+  [PASS (C)] The (1,1) singlet direction gives Z = sqrt(6), other irreps give other Z  --  Higgs direction is forced by (1,1) rep, giving unique Z = sqrt(6)
+
+========================================================================
+BLOCK 6: Clebsch-Gordan overlap = 1/sqrt(6) on all 6 basis components
+========================================================================
+  [PASS (C)] Singlet state unit norm: <S|S> = 1  --  <S|S> = 1.0000000000000002
+  [PASS (C)] All 6 basis Clebsch-Gordan overlaps equal 1/sqrt(6) (singlet uniformity)  --  overlaps = ['0.4082', '0.4082', '0.4082', '0.4082', '0.4082', '0.4082']
+
+========================================================================
+BLOCK 7: One-gluon-exchange 4-fermion coefficient (perturbative)
+========================================================================
+
+  From Fierz (Block 4): color-singlet channel coefficient = 1/(2 N_c)
+  Multiplying by the one-gluon-exchange -g_s^2/M^2 gives the
+  scalar-singlet coefficient used by the support note:
+    L_exchange|_{color-singlet} = (g_s^2 / (2 N_c M^2)) * j^mu j_mu
+  [PASS (C)] C_pert = 1/(2 N_c) = 1/6 for N_c = 3  --  C_pert = 0.1666666667
+
+========================================================================
+BLOCK 7a: Strong-coupling one-link integral (cross-check)
+========================================================================
+
+  Exact SU(N_c) one-link integral: dU U_{ab} U^dag_{cd} = (1/N_c) delta_{ad} delta_{bc}
+  Verify numerically by Haar-sampling SU(3).
+
+  [PASS (C)] Haar-sample dU U U^dag = (1/N_c) delta delta, MC error < 2% (N=100000)  --  max MC error = 0.0023
+  [PASS (C)] C_strong (strong-coupling leading) = 1/N_c^2 = 1/9  --  C_strong = 0.1111111111, differs from C_pert = 0.1666666667
+  [PASS (C)] C_pert and C_strong are distinct (different expansions)  --  |C_pert - C_strong| = 0.0556; tadpole-improved surface selects C_pert
+
+========================================================================
+BLOCK 8: Dirac Fierz c_S, c_P, c_V, c_A, c_T computed from 4x4 gammas
+========================================================================
+  [PASS (C)] Clifford algebra {gamma^mu, gamma^nu} = 2 g^{munu} I_4 verified  --  4x4 gamma matrices verified
+  Computed Fierz coefficients for (gamma^mu)(gamma_mu) decomposition:
+    c_S (scalar,           I   otimes I   )   = +1.000000
+    c_P (pseudoscalar, i γ_5 otimes i γ_5)   = -1.000000
+    c_V (vector,       γ^μ  otimes γ_μ  )   = -1.000000
+    c_A (axial,        γ^μγ_5 otimes γ_μγ_5) = -1.000000
+    c_T (tensor,      σ^{μν} otimes σ_{μν}) = +0.000000
+
+  [PASS (C)] c_S has magnitude close to 1 (scalar channel nonzero)  --  c_S = +1.0000, consistent with textbook scalar Fierz
+  [PASS (C)] c_P has magnitude close to 1 (pseudoscalar channel nonzero)  --  c_P = -1.0000, consistent with textbook pseudoscalar Fierz
+  [PASS (C)] c_T = 0 (tensor channel vanishes for vector-vector Fierz)  --  c_T = 0.000000e+00, verified zero at machine precision
+
+========================================================================
+BLOCK 9: Perturbative 1-loop vertex correction (SUPPORT-ONLY)
+This block documents the perturbative 1-loop vertex correction
+magnitude; it is NOT part of the core identification surface.
+The support note makes no precision claim; see bridge note.
+========================================================================
+  alpha_LM = alpha_bare / u_0 = 0.090668
+  C_F = (N_c^2 - 1)/(2 N_c) = 1.333333
+  [PASS (C)] Asymptotic series optimal truncation n_opt >> 1  --  n_opt = pi/alpha_LM = 34.6 loops (convergent at 1-loop and 2-loop)
+  NLO correction to y_t/g_s: alpha_LM * C_F / (2 pi) = 1.924%
+  NNLO: (alpha_LM/pi)^2 * C_F^2 = 0.1481%
+  [PASS (C)] NLO correction within existing Yukawa-lane systematic (~3%)  --  NLO 1.92% < 3% (lane budget)
+  [PASS (C)] NNLO correction is negligible (< 0.5%)  --  NNLO = 0.1481%
+
+========================================================================
+BLOCK 10: y_t(M_Pl)/g_s(M_Pl) = 1/sqrt(6) via framework-native chain
+========================================================================
+
+  The source note checks the exact tree-level algebraic identity via a
+  same-1PI-function residue calculation in the same cited framework surface
+  (no UV-vs-EFT matching, no second theory).
+
+  Step 3 (same-1PI-function residue identity, scalar-singlet only):
+    Define Gamma^(4)(q^2) := P_{S,(1,1)} <psi-bar psi(q) psi-bar psi(-q)>_1PI,amp
+
+    Representation A (direct OGE in bare action):
+      D16: only OGE diagram contributes at tree (Wilson plaq + staggered)
+      D12: color singlet Fierz coefficient -1/(2 N_c) (Block 4)
+      S2:  Lorentz scalar projection |c_S| = 1 (Block 8)
+      => Gamma^(4)|_OGE = -c_S * g_bare^2 / (2 N_c * q^2) * O_S
+
+    Representation B (composite operator H_unit):
+      D9:  H_unit is composite operator, not independent field
+      D17: H_unit is UNIQUE scalar (1,1) composite on Q_L (Block 5)
+      => Gamma^(4)|_H_unit-rep = -y_t_bare^2 / q^2 * O_S
+
+    Same Green's function in same theory => coefficients agree:
+      y_t_bare^2 = g_bare^2 / (2 N_c) = 1/6  (Block 11)
+
+  Step 4: tadpole 1/sqrt(u_0) inherited by both (D15, n_link=1)
+  Ratio:  y_t(M_Pl)/g_s(M_Pl) = 1/sqrt(2 N_c) = 1/sqrt(6)
+
+  [PASS (C)] C_pert from D12 (Block 4/7): SU(N_c) color-singlet Fierz = 1/(2 N_c) = 1/6  --  C_pert = 0.1666666667
+  [PASS (C)] |c_S| from S2 (Block 8): Lorentz scalar projection coefficient = 1  --  |c_S| = 1.0000000000
+  Representation A side (OGE-only, from D12 + S2):
+    q^2 |Gamma^(4)|_OGE = |c_S| * g_bare^2 * C_pert
+                       = 1.000000 * 1.000000 * 0.166667
+                       = 0.1666666667  (= 1/6 at canonical g_bare = 1)
+  [PASS (C)] Representation A: q^2 |Gamma^(4)|_OGE = g_bare^2/(2 N_c) from D12 + S2  --  OGE-side coefficient = 0.1666666667, target 1/(2 N_c) = 0.1666666667
+
+  y_t_bare value used downstream (derived independently in Block 11):
+    y_t_bare = 1/sqrt(2 N_c) = 0.4082482905    (from H_unit matrix element)
+    y_t_bare^2              = 0.1666666667
+  Block 11 confirms y_t_bare^2 = q^2 |Gamma^(4)|_OGE = 0.1666666667
+  [PASS (C)] Cross-check: Block 6 Clebsch-Gordan overlap = y_t_bare from H_unit (Block 11)  --  overlap = 0.4082482905, y_t_bare from Rep B = 0.4082482905 (same 1/sqrt(6))
+
+  Bare level (g_bare = 1.0):
+    y_t(bare) = 0.408248 = 1/sqrt(6)  (from H_unit matrix element, Block 11)
+    g_s(bare) = g_bare = 1.000000
+    ratio = 1/sqrt(6) = 0.4082482905
+
+  Canonical surface (D15: n_link = 1 per vertex, common tadpole):
+    tadpole factor = 1/sqrt(u_0) = 1.067411
+    g_s(M_Pl)  = g_bare * tadpole = 1.067411
+    y_t(M_Pl)  = y_t(bare) * tadpole = 0.435769
+  [PASS (C)] g_s(M_Pl) = 1/sqrt(u_0) = sqrt(4 pi alpha_LM) (two routes agree)  --  both = 1.0674107130
+  [PASS (C)] y_t(M_Pl) / g_s(M_Pl) = 1/sqrt(6) [tadpole cancels in ratio]  --  ratio = 0.4082482905
+  [PASS (C)] y_t(M_Pl) = 0.4358 matches downstream-chain value  --  y_t(M_Pl) = 0.435769
+  [PASS (C)] Non-tautology: y_t(M_Pl) tracks Clebsch-Gordan overlap (Block 6)  --  counterfactual (10% shift in overlap): y_t -> 0.479345, differs from derived 0.435769
+
+  === Support chain (same-1PI-function residue identity) ===
+
+  The support note makes NO quantitative precision claim.
+  It states only the exact same-1PI-function residue identity
+  on the scalar-singlet channel:
+
+    AX1 (Cl(3)) + AX2 (Z^3) + D1-D17 + S1 + S2 ->
+
+    [Representation A — OGE-side computation, this Block 10]
+       Color singlet Fierz: -1/(2 N_c) [D12, Block 4]
+       Lorentz scalar projection: |c_S| = 1 [S2, Block 8]
+       D16: only OGE at tree on scalar-singlet channel
+       => q^2 |Gamma^(4)|_OGE = |c_S| * g_bare^2 / (2 N_c) = 1/6
+
+    [Representation B — H_unit operator-side computation, Block 11]
+       y_t_bare := <0 | H_unit | t-bar t> = (1/sqrt(N_c N_iso)) * 1
+       D9 + D17 + Steps 1-2 fix the H_unit content; Wick contraction
+       gives y_t_bare = 1/sqrt(6) INDEPENDENTLY (no OGE input)
+       => q^2 |Gamma^(4)|_H = y_t_bare^2 = 1/6
+
+    Both A and B independently give 1/6; consistency confirmed in Block 11.
+    Canonical tadpole [D15]: y_t(M_Pl)/g_s(M_Pl) = 1/sqrt(6) (exact)
+
+  Quantitative NLO / precision / systematic discussion is SUPPORT-ONLY
+  (see Block 9 and docs/UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md).
+  It is NOT part of the core support chain.
+
+========================================================================
+BLOCK 11: Scalar-singlet 1PI residue identity audit
+========================================================================
+
+  This block audits ONLY the load-bearing scalar-singlet channel.
+
+  The support runner evaluates y_t_bare = 1/sqrt(6) by TWO
+  computations within the same cited framework surface:
+
+    Representation A (OGE in bare action, Block 7 + 4 + 8):
+        Gamma^(4)(q^2) = -c_S * g_bare^2 / (2 N_c * q^2) * O_S
+        At canonical g_bare = 1, |c_S| = 1:  q^2 |Gamma^(4)| = 1/6
+
+    Representation B (H_unit operator matrix element, D9 + Steps 1-2):
+        y_t_bare := <0 | H_unit | t-bar_top t_top>
+                  = (1/sqrt(N_c N_iso)) * 1   [Clebsch-Gordan + canon norm]
+                  = 1/sqrt(6)
+        => Gamma^(4)|_H = -y_t_bare^2 / q^2 = -1/(6 q^2) at canon
+
+  Both computations are made INDEPENDENTLY (B does not reference A).
+  The two values then agree, confirming framework internal consistency.
+
+  [PASS (C)] Color-singlet Fierz coefficient -1/(2 N_c) computed from D12 (Block 4)  --  -1/(2 N_c) = -0.1666666667 (exact SU(N_c) algebra)
+  [PASS (C)] Lorentz scalar projection coefficient |c_S| = 1 (S2, Block 8)  --  |c_S| = 1.0000000000 (exact Clifford-algebra identity)
+  Representation A: q^2 |Gamma^(4)|_OGE = |c_S| * g_bare^2 / (2 N_c)
+                                     = 1.0000 * 1.0000 / 6.0000
+                                     = 0.1666666667
+  [PASS (C)] Representation A: q^2 |Gamma^(4)|_OGE computed from gauge dynamics ONLY  --  value = 0.1666666667 = 1/6 (independent of any composite-side input)
+
+  Representation B: y_t_bare = <0|H_unit|t-bar t> from H_unit content ONLY
+     Clebsch-Gordan factor 1/sqrt(N_c * N_iso) = 1/sqrt(6) = 0.4082482905
+     fermion Wick amplitude (canonical normalization) = 1.0000
+     y_t_bare = 0.4082482905
+     q^2 |Gamma^(4)|_H = y_t_bare^2 = 0.1666666667
+  [PASS (C)] Representation B: y_t_bare = 1/sqrt(6) computed from H_unit operator ONLY  --  y_t_bare = 0.4082482905 from D9+Steps1-2 (no OGE input)
+  [PASS (C)] Representation B: q^2 |Gamma^(4)|_H = y_t_bare^2 = 1/6 (from H_unit ONLY)  --  value = 0.1666666667 (independent of any OGE / gauge input)
+
+  Consistency: A and B are computed independently, then compared:
+     A (OGE):     0.1666666667
+     B (H_unit):  0.1666666667
+     Difference:  5.551e-17
+  [PASS (C)] Independent A and B agree -> framework internal consistency verified  --  |A - B| = 5.551e-17 after both independently = 1/6
+  [PASS (C)] Cross-check: Block 6 Clebsch-Gordan overlap = y_t_bare from Rep B  --  Block 6 CG = 0.4082482905, Rep B y_t_bare = 0.4082482905
+
+========================================================================
+BLOCK 12: Two-gluon color-trace algebra (SUPPORT-ONLY)
+This block explicitly computes SU(3) color traces for 2-gluon
+topologies.  It is SUPPORT-ONLY and is NOT part of the core
+identification surface; it documents SU(N_c) algebraic facts.
+========================================================================
+
+  Sum over a,b of Tr(T^a T^b)^2  [planar]     = +2.000000
+  Sum over a,b of Tr(T^a T^b T^a T^b) [non-pl] = -0.666667
+  [PASS (C)] Planar 2-gluon color trace = (N_c^2 - 1)/4 = 2.0000  --  computed = 2.000000, SU(3) exact
+  [PASS (C)] Non-planar 2-gluon color trace = -(N_c^2 - 1)/(4 N_c) = -0.6667  --  computed = -0.666667, SU(3) exact
+
+  |non-planar / planar| = 1/N_c = 0.333333 (computed: 0.333333)
+  [PASS (C)] Non-planar suppression from color: ratio = 1/N_c = 1/3 for SU(3)  --  |NP/P| = 0.333333, expected 1/N_c = 0.333333
+
+  KEY RESULT: at O(alpha_LM) (NLO), there is only ONE 1-loop topology
+  contributing to the y_t/g_s ratio: the planar vertex correction.
+  Non-planar topologies require >= 2 gluons in a loop with crossed
+  propagators, which first appear at O(alpha_LM^2) = NNLO.
+
+  Therefore at NLO, non-planar corrections are IDENTICALLY ZERO.
+  The 1.92% vertex-correction bound (Block 9) is the COMPLETE NLO.
+
+  The trace computation below shows the magnitude of non-planar
+  suppression IF it were to appear at NLO (it doesn't, but the
+  ratio 1/N_c = 1/3 is a rigorous SU(3) algebraic fact).
+
+  [PASS (C)] NLO topology counting: non-planar contributions are IDENTICALLY ZERO at O(alpha_LM)  --  non-planar 1-loop diagrams at NLO = 0; planar 1-loop diagrams = 7 (all counted in Block 9's delta_PT)
+
+  NNLO non-planar magnitude (for the record, where 1/N_c^2 enters):
+    delta_NNLO_NP = (alpha_LM * C_F / pi)^2 * 1/N_c^2
+                  = 0.001481 * 0.111111
+                  = 0.0165%  (negligible)
+  [PASS (C)] NNLO non-planar correction is negligible (< 0.05%)  --  delta_NNLO_NP = 0.0165% (genuinely negligible)
+
+========================================================================
+SUMMARY
+========================================================================
+  PASS: 45
+  FAIL: 0
+
+  Every load-bearing coefficient in YT_WARD_IDENTITY_DERIVATION_THEOREM
+  is computed independently from inputs:
+  - Block 2: Z^2 = N_c N_iso from explicit index-contraction sum
+  - Block 4: Fierz identity verified against Gell-Mann-matrix computation
+  - Block 6: Clebsch-Gordan overlap computed from unit-norm singlet state
+  - Block 7: C_pert = 1/(2 N_c) extracted from Fierz (Block 4)
+  - Block 7a: C_strong = 1/N_c^2 from Haar-sampled one-link integral
+  - Block 8: Dirac Fierz c_S, c_P, ... computed from 4x4 Clifford matrices
+  - Block 9: SUPPORT-ONLY — perturbative 1-loop vertex correction
+             magnitude from alpha_LM, C_F inputs.  Not part of the
+             core support chain.
+  - Block 10: computes the OGE-side coefficient (Representation A) of
+             the same-1PI-function identity using D12 + S2; uses the
+             y_t_bare value derived independently in Block 11 to drive
+             the canonical-surface tadpole continuum;
+             gives y_t(M_Pl)/g_s(M_Pl) = 1/sqrt(6).  Block 10 does NOT
+             derive y_t_bare itself (that lives in Block 11).
+  - Block 11: evaluates y_t_bare = 1/sqrt(6) INDEPENDENTLY from the
+             H_unit operator matrix element (Clebsch-Gordan + canonical
+             normalization, no OGE input); then verifies the value
+             agrees with Block 10's OGE-side coefficient as a
+             same-1PI-function consistency check.
+  - Block 9, Block 12: SUPPORT-ONLY (perturbative NLO discussion
+             and 2-gluon color-trace algebra). Not part of the
+             core support chain. Documented in the bridge note.
+
+  Support result (exact tree-level algebraic identity on the stated surface):
+    y_t_bare = g_bare / sqrt(6)
+    y_t(M_Pl) / g_s(M_Pl) = 1/sqrt(6) on canonical surface
+
+  No precision bound is attached to this support note.
+  Quantitative corrections are out of scope (support note).
+  See docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md for the source note.
+
+----- stderr -----
+

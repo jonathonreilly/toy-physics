@@ -1,0 +1,46 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_2026_04_19.py
+runner_sha256: cd6ef7445d6b1fb7c473764c366db9e56c52edaec8a228c9545b25b256f077a2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 22.18
+status: ok
+----- stdout -----
+================================================================================================================
+GAUGE-VACUUM PLAQUETTE FIRST-SECTOR ZERO-EXTENSION FACTORIZED-CLASS THEOREM
+================================================================================================================
+
+Question:
+  Once the retained first-sector packet is known, does there already exist
+  one explicit full extension inside the canonical Wilson factorized class?
+
+  z00_min                                     = 0.349606952458
+  rho_ret                                     = [1.0, 0.267139565315, 0.267139565315, 0.0]
+  nonzero rho_ext entries                     = [((0, 0), 1.0), ((0, 1), 0.267139565315), ((1, 0), 0.267139565315)]
+  factorized operator symmetry / swap errors  = 2.220e-16 / 4.441e-16
+  min eigenvalue(T_ext)                       = -1.693e-16
+  retained reconstruction gap                 = 1.777e-16
+
+  [PASS] The character-measure note already permits nonnegative conjugation-symmetric normalized coefficient data rho_(p,q)(6) as the canonical boundary-class description
+  [PASS] The earlier retained theorem already fixes one exact truncated packet (z00_min, rho_ret) from the completed first-sector triple
+  [PASS] Extending rho_ret by zero outside the retained first-symmetric weights gives one explicit full nonnegative conjugation-symmetric coefficient sequence on the truncated dominant-weight box  (nonzero count=3)
+  [PASS] That zero-extension yields one explicit self-adjoint conjugation-symmetric positive-semidefinite factorized operator exp(3 J) D_6^loc diag(rho_ext) exp(3 J)  ((sym,swap,eig_min)=(2.220e-16,4.441e-16,-1.693e-16))
+  [PASS] The extended packet still reproduces the retained completed three-sample triple exactly on the retained first-symmetric sector  (||z_recon-Z_min||=1.777e-16)
+  [PASS] Therefore existence of a factorized-class extension consistent with the retained first-sector packet is no longer open; the remaining seam is the actual framework-point Wilson environment packet, not class existence  (z00_min=0.349607)
+
+================================================================================================================
+RESULT
+================================================================================================================
+  Exact constructive upgrade:
+    - the retained first-sector packet already has one explicit full
+      extension inside the canonical Wilson factorized class
+    - namely the minimal-support zero extension of rho_ret
+    - therefore factorized-class existence is no longer open either
+    - the remaining honest seam is now the actual framework-point Wilson
+      environment packet / Perron-Jacobi realization and downstream DM
+      packet matching, not existence of some factorized-class extension
+
+PASS=6 FAIL=0
+
+----- stderr -----
+

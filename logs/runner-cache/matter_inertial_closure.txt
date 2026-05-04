@@ -1,0 +1,83 @@
+===== runner cache v1 =====
+runner: scripts/matter_inertial_closure.py
+runner_sha256: 16ab16b7b65dd50c21bcd2d7780c827b5b68c690a37fad21ab6ff99bde65b656
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 109.20
+status: ok
+----- stdout -----
+====================================================================================================
+MATTER / INERTIAL CLOSURE HARNESS
+NL=30, PW=6, K=5.0
+Persistent objects = Gaussian packets of width sigma
+Force = uniform linear field f(y,z) = -g*z
+====================================================================================================
+
+1. PERSISTENCE (free propagation, no force)
+  family   packet  sigma_0  sigma_det    ratio
+    Fam1   narrow    0.500      2.342     4.68
+    Fam1   medium    1.000      1.630     1.63
+    Fam1     wide    1.500      1.615     1.08
+  persistence verdict: PACKETS SPREAD TOO MUCH
+
+2. NEWTON'S LAW (delta_z vs g, fixed packet)
+
+  narrow (sigma=0.5):
+    baseline cz at g=0: +0.186724
+    g=0.0000  cz=+0.186724  delta_z=+0.000000
+    g=0.0010  cz=+0.114337  delta_z=-0.072387
+    g=0.0020  cz=+0.041600  delta_z=-0.145124
+    g=0.0040  cz=-0.104828  delta_z=-0.291551
+    g=0.0080  cz=-0.400557  delta_z=-0.587281
+    linear fit: delta_z = -73.4515 * g + +0.001086  (R²=1.0000)
+
+  medium (sigma=1.0):
+    baseline cz at g=0: +0.060014
+    g=0.0000  cz=+0.060014  delta_z=+0.000000
+    g=0.0010  cz=+0.049301  delta_z=-0.010713
+    g=0.0020  cz=+0.039115  delta_z=-0.020900
+    g=0.0040  cz=+0.021397  delta_z=-0.038617
+    g=0.0080  cz=+0.002865  delta_z=-0.057150
+    linear fit: delta_z = -7.0509 * g + -0.004323  (R²=0.9636)
+
+  wide (sigma=1.5):
+    baseline cz at g=0: +0.034656
+    g=0.0000  cz=+0.034656  delta_z=+0.000000
+    g=0.0010  cz=+0.010649  delta_z=-0.024007
+    g=0.0020  cz=-0.012770  delta_z=-0.047427
+    g=0.0040  cz=-0.055757  delta_z=-0.090413
+    g=0.0080  cz=-0.112587  delta_z=-0.147243
+    linear fit: delta_z = -18.2797 * g + -0.006979  (R²=0.9847)
+
+3. EQUIVALENCE PRINCIPLE (slope across packets)
+  slopes: ['-73.451', '-7.051', '-18.280']
+  mean slope: -32.9274
+  max relative deviation: 123.07%
+  equivalence principle: VIOLATED
+
+4. NULL (g=0 must give delta_z = 0)
+  narrow: delta_z(g=0) = +0.00e+00  OK
+  medium: delta_z(g=0) = +0.00e+00  OK
+  wide: delta_z(g=0) = +0.00e+00  OK
+
+5. FAMILY PORTABILITY (medium packet, across Fam1/2/3)
+  Fam1: slope=-7.0509  R²=0.9636  deltas=['+0.0000', '-0.0107', '-0.0209', '-0.0386', '-0.0571']
+  Fam2: slope=-5.9370  R²=0.9430  deltas=['+0.0000', '-0.0099', '-0.0192', '-0.0348', '-0.0483']
+  Fam3: slope=-6.0720  R²=0.9493  deltas=['+0.0000', '-0.0097', '-0.0190', '-0.0349', '-0.0493']
+  family slope rel dev: 10.98%
+  family portability: VARIES
+
+====================================================================================================
+SUMMARY VERDICT
+====================================================================================================
+  persistence        : FAIL
+  Newton linear (R²) : FAIL  (min R² = 0.9636)
+  equivalence (slopes within 10%) : FAIL  (rel dev = 123.07%)
+  null (g=0 delta)   : OK
+  family portability : FAIL  (rel dev = 10.98%)
+
+  MATTER / INERTIAL CLOSURE: PARTIAL / FAIL
+  see failing criteria above.
+
+----- stderr -----
+

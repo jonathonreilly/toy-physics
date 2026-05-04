@@ -1,0 +1,28 @@
+===== runner cache v1 =====
+runner: scripts/gravity_distance_fixed_geometry.py
+runner_sha256: caebed0844eda3827a918d70657dd54d2bf29f581412a2ea0335e15c56a90821
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 43.93
+status: ok
+----- stdout -----
+============================================================================================
+FIXED-GEOMETRY GRAVITY DISTANCE SWEEP
+  One fixed graph per seed; only the mass-anchor position moves.
+  N=30, npl=60, y_range=18.0, r=3.5, mass_count=4, seeds=24
+============================================================================================
+
+      b       delta        SE        t   ok
+  -----------------------------------------
+    2.0     -0.0914    0.4295    -0.21   24
+    4.0     +0.0733    0.4450    +0.16   24
+    6.0     -0.0048    0.3427    -0.01   24
+    8.0     +0.3077    0.4454    +0.69   24
+   10.0     +0.8103    0.3990    +2.03   24
+   12.0     +1.0209    0.4173    +2.45   24
+
+  Peak mean deflection at b = 12.0 (delta = 1.0209)
+  Not enough falling-tail points for a review-safe power-law fit.
+
+----- stderr -----
+

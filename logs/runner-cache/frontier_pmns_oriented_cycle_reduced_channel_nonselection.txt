@@ -1,0 +1,55 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py
+runner_sha256: 4ea3e8ef72c4bc114276467d43c39b530bc6c6572ae6aadfa862375ab82cc8ee
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+PMNS ORIENTED CYCLE REDUCED-CHANNEL NONSELECTION
+========================================================================================
+
+Question:
+  Once the oriented cycle carrier is reduced by the graph-first selected-axis
+  symmetry, does the current exact bank select its remaining values?
+
+========================================================================================
+PART 1: THE GRAPH-FIRST REDUCED CHANNEL IS EXACTLY 3-REAL DIMENSIONAL
+========================================================================================
+  [PASS] The reduced graph-first cycle block is fixed by the residual antiunitary symmetry  (error=0.00e+00)
+  [PASS] Its exact oriented-cycle coefficients are (u+iv, w, u-iv)  (coeffs=[0.41+0.32j 0.28+0.j   0.41-0.32j])
+  [PASS] The native observable law recovers the reduced real coordinates exactly  (coords=[0.41 0.32 0.28])
+
+========================================================================================
+PART 2: EVERY REDUCED-CHANNEL POINT IS REALIZED ON THE ACTIVE RESPONSE CHAIN
+========================================================================================
+  [PASS] The lower-level active response chain recovers the exact reduced-channel block  (error=6.74e-16)
+  [PASS] The realized active support stays on the retained canonical diagonal-plus-forward-cycle support
+  [PASS] The native cycle observable reads the realized reduced values exactly from the response profile  (coeffs=[0.37-0.19j 0.24-0.j   0.37+0.19j])
+
+========================================================================================
+PART 3: THE CURRENT EXACT BANK DOES NOT SELECT A UNIQUE REDUCED-CHANNEL POINT
+========================================================================================
+  [PASS] Two distinct reduced-channel points satisfy the same residual antiunitary symmetry  (|A-B|=0.715961)
+  [PASS] They are separated by the native observable law rather than collapsed by it  (|Δcoords|=0.508035)
+  [INFO] The current exact bank closes the reduced carrier and its observable law, but not the values
+  [INFO] No value-selection law on that reduced channel has yet been derived from the current exact bank
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact closeout on the retained oriented-cycle lane:
+    - the reduced graph-first channel is exactly 3-real dimensional
+    - every point of that reduced family is read exactly by the native cycle observable law
+    - every point of that reduced family is realized exactly on the lower-level active response chain
+    - the current exact bank therefore does not select a unique reduced-channel value
+
+  So the last remaining value-selection problem closes negatively for the
+  current exact bank. Any further positive selection law would have to come
+  from genuinely new dynamics or a further admitted extension.
+
+PASS=8 FAIL=0
+
+----- stderr -----
+

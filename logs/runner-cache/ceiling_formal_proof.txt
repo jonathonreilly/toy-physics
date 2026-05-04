@@ -1,0 +1,79 @@
+===== runner cache v1 =====
+runner: scripts/ceiling_formal_proof.py
+runner_sha256: 51a2080cdec6f925b1b8bfc330a52efa2ee58062c34b40ed4b9d56504e8db42a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 8.15
+status: ok
+----- stdout -----
+====================================================================================================
+FORMAL CLT CEILING ANALYSIS
+  2D DAGs, npl=25, connect_radius=2.5, k=5.0
+  16 seeds, N = [12, 15, 18, 22, 25, 30, 40, 60, 80]
+====================================================================================================
+
+     N        d_TV     overlap   1-pur_min    lyap_gap   lindeberg   ok   time
+  ---------------------------------------------------------------------------
+    12      0.1642      0.8289      0.0655         inf      0.1193   16     0s
+    15      0.1974      0.8416      0.0521         inf      0.0922   16     0s
+    18      0.1396      0.8656      0.0490         inf      0.0755   16     0s
+    22      0.1757      0.8589      0.0498         inf      0.0607   16     1s
+    25      0.1905      0.8452      0.0597         inf      0.0533   16     1s
+    30      0.1679      0.8616      0.0611         inf      0.0446   16     1s
+    40      0.2209      0.7652      0.0765         inf      0.0334   16     1s
+    60      0.1480      0.8949      0.0387         inf      0.0223   16     2s
+    80      0.0399      0.9830      0.0050         inf      0.0168   16     2s
+
+POWER LAW FITS: quantity = A × N^alpha
+      quantity         A     alpha      R²
+  --------------------------------------
+          d_TV     0.734     -0.48   0.355
+     1-overlap     1.604     -0.78   0.423
+     1-pur_min     0.725     -0.85   0.424
+
+LYAPUNOV SPECTRAL GAP (λ₁ - λ₂)
+     N         gap                            interpretation
+  ----------------------------------------------------------
+    12         inf                        rank-1 convergence
+    15         inf                        rank-1 convergence
+    18         inf                        rank-1 convergence
+    22         inf                        rank-1 convergence
+    25         inf                        rank-1 convergence
+    30         inf                        rank-1 convergence
+    40         inf                        rank-1 convergence
+    60         inf                        rank-1 convergence
+    80         inf                        rank-1 convergence
+
+LINDEBERG CONDITION (max ||T_l||² / Σ||T_l||²)
+     N   max_ratio                  interpretation
+  ------------------------------------------------
+    12      0.1193                       CLT valid
+    15      0.0922                       CLT valid
+    18      0.0755                       CLT valid
+    22      0.0607                       CLT valid
+    25      0.0533                       CLT valid
+    30      0.0446                       CLT valid
+    40      0.0334                       CLT valid
+    60      0.0223                       CLT valid
+    80      0.0168                       CLT valid
+
+THEOREM STRUCTURE:
+  IF spectral gap is large AND Lindeberg holds:
+    → Product T_N...T_1 drives ANY two initial vectors
+      toward the same dominant direction
+    → Single-slit distributions ψ_A and ψ_B converge
+    → d_TV → 0, overlap → 1, pur_min → 1
+    → Decoherence ceiling is a SPECTRAL PROPERTY
+      of the transfer matrix product
+
+  IF shared exponent across d_TV, overlap, 1-pur_min:
+    → All three decay at the same rate
+    → The CLT mechanism is the SOLE driver
+    → No mechanism operating on the bath or propagator
+      can change the exponent without changing the
+      spectral gap of T_N...T_1
+
+----- stderr -----
+/private/tmp/gate-fix-worktree/scripts/ceiling_formal_proof.py:262: RuntimeWarning: invalid value encountered in scalar subtract
+  var = sum((v - m) ** 2 for v in vals) / (len(vals) - 1)
+

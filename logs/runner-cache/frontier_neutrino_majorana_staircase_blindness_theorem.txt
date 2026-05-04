@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_staircase_blindness_theorem.py
+runner_sha256: f42bfdf76f2afcb37a675c1347ddbd21b11160803ebc08a4c81ca745529825c6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA: STAIRCASE-BLINDNESS THEOREM
+========================================================================================
+
+Authority stack:
+  - docs/NEUTRINO_MAJORANA_SOURCE_RAY_THEOREM_NOTE.md
+  - docs/NEUTRINO_MAJORANA_CANONICAL_LOCAL_BLOCK_NOTE.md
+  - docs/NEUTRINO_MAJORANA_Z3_NONACTIVATION_THEOREM_NOTE.md
+
+Question:
+  Once the one-generation source ray and the Z3 texture class are fixed,
+  does the current exact Majorana source stack also fix the absolute
+  staircase level?
+
+========================================================================================
+PART 1: THE ONE-GENERATION SOURCE RAY FIXES DIRECTION, NOT ABSOLUTE SCALE
+========================================================================================
+  [PASS (C)] Normalized local canonical blocks are identical across staircase rescalings  (max normalized difference=1.57e-16)
+  [PASS (C)] The local Pfaffian generator shifts only by an additive log-scale constant  (log step=-2.400529, log(alpha)=-2.400529)
+
+  The one-generation local source-ray theorem therefore fixes only a
+  ray mu J_x, not an absolute mu. Rescaling moves along the same ray.
+
+========================================================================================
+PART 2: THE THREE-GENERATION Z3 TEXTURE CLASS IS HOMOGENEOUS UNDER RESCALING
+========================================================================================
+  [PASS (C)] Normalized Z3 pairing blocks are identical across staircase rescalings  (max normalized block difference=5.76e-17)
+  [PASS (C)] The singlet/doublet texture ratios are unchanged by overall rescaling  (max normalized eigenvalue difference=3.56e-16)
+
+  So the exact current Z3 texture machinery fixes a class of matrices
+  up to overall scale, not an absolute staircase anchor.
+
+========================================================================================
+PART 3: THE PAIRING CHARGE SECTOR DOES NOT DISTINGUISH STAIRCASE LEVELS
+========================================================================================
+  [PASS (C)] Every staircase-rescaled Z3 block remains a charge-minus-two pairing operator  (max charge error=9.99e-20)
+  [PASS (C)] Operator norm scales linearly with the rescaling parameter  (spread in ||Q||/scale=1.78e-15)
+
+  Nothing in the current charge classification separates k=7 from k=8.
+  The current exact source stack sees one texture ray with a free scale.
+
+========================================================================================
+RESULT
+========================================================================================
+  No. The current exact Majorana source stack is homogeneous under
+  positive rescaling. It fixes the one-generation source ray and the
+  three-generation Z3 texture class, but not the absolute staircase
+  anchor.
+
+  So the live DM blocker is now even narrower: an exact scale-setting
+  / staircase-selection principle for the already-fixed Majorana source
+  class.
+
+PASS=6  FAIL=0
+
+----- stderr -----
+

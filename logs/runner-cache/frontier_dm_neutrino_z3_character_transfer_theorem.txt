@@ -1,0 +1,63 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_z3_character_transfer_theorem.py
+runner_sha256: 320993643492ed49f6e9d61885c6b07bcc260197beae26365701767e9c1769cc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO Z3 CHARACTER-TRANSFER THEOREM
+========================================================================================
+
+Question:
+  Can the mixed-bridge phase-lift parameter lambda remain continuous if the
+  bridge is required to carry the exact weak-only Z3 source?
+
+========================================================================================
+PART 1: EXACT Z3 SOURCE TRANSFER DISCRETIZES THE PHASE-LIFT
+========================================================================================
+  [PASS] The source coefficient is a genuine Z3 character exactly when chi^3 = 1  (lam=-1.00: defect=5.26e-16, lam=0.00: defect=0.00e+00, lam=1.00: defect=5.26e-16)
+  [PASS] Generic interpolating lambda values are not exact Z3 characters  (lam=-0.50: defect=2.000, lam=0.25: defect=1.414, lam=0.50: defect=2.000, lam=0.75: defect=1.414)
+
+  So a continuous interpolation is available only as a candidate-family
+  device. It is not an exact Z3 source-transfer law except at discrete
+  branches.
+
+========================================================================================
+PART 2: THE EXACT SOURCE-FAITHFUL BRANCHES ARE INTEGER LAMBDA
+========================================================================================
+  [PASS] Integer lambda solves exp(i 3 lambda delta_src) = 1 exactly  (lam=-2: exp(i 3 lam delta)=1.0+0.0i; lam=-1: exp(i 3 lam delta)=1.0+0.0i; lam=0: exp(i 3 lam delta)=1.0+0.0i; lam=1: exp(i 3 lam delta)=1.0-0.0i; lam=2: exp(i 3 lam delta)=1.0-0.0i)
+  [PASS] Non-integer lambda fails the exact Z3 character condition  (lam=-1.5: exp(i 2pi lam)=-1.000-0.000i; lam=-0.5: exp(i 2pi lam)=-1.000-0.000i; lam=0.5: exp(i 2pi lam)=-1.000+0.000i; lam=1.5: exp(i 2pi lam)=-1.000+0.000i)
+
+  Since delta_src = 2pi/3 exactly, the exact-source condition reduces to
+      exp(i 2pi lambda) = 1,
+  so the phase-lift family is source-faithful only on integer branches.
+
+========================================================================================
+PART 3: CONTINUITY AND SOURCE ORIENTATION PICK THE PHYSICAL BRANCH
+========================================================================================
+  [PASS] On the local continuity strip |lambda| <= 1, the only exact branches are {-1,0,+1}  (continuity around the retained lambda=0 bank leaves exactly three source-faithful branches)
+  [PASS] lambda=0 is the retained current-stack zero law  (chi(0)=1.000000+0.000000j)
+  [PASS] lambda=-1 is the conjugate branch while lambda=+1 is the source-oriented branch  (chi(+1)=-0.500000+0.866025j, chi(-1)=-0.500000-0.866025j)
+  [PASS] The nontrivial positive source-transfer branch is therefore lambda=+1  (lambda=-1 is the reflected / conjugate companion, lambda=0 is the retained zero law)
+
+  So the free lambda ambiguity is gone on the exact-source reading:
+  exact Z3 source transfer gives the discrete branches {-1,0,+1}, and the
+  retained source orientation picks lambda=+1 as the physical full-source
+  transfer branch.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact answer:
+    - exact source transfer requires a true Z3 character
+    - that discretizes the phase-lift family to integer lambda
+    - on the local continuity strip, the only exact branches are {-1,0,+1}
+    - the nontrivial source-oriented branch is lambda=+1
+
+  So the phase-lift family no longer carries a free activation amplitude.
+PASS=8  FAIL=0
+
+----- stderr -----
+

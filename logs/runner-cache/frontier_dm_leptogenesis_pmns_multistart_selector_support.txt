@@ -1,0 +1,68 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_multistart_selector_support.py
+runner_sha256: 77b1d5788a7ea55cb0d6aa053878e817bea6fb313fdb4dcc3a8af87b2fc24741
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 64.65
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS MULTISTART SELECTOR SUPPORT
+========================================================================================
+
+Framework convention:
+  "axiom" means only Cl(3) on Z^3.
+
+Question:
+  Does the current broad multistart constrained scan recover a stable
+  low-action selector branch on the fixed native N_e seed surface?
+
+========================================================================================
+PART 1: ENUMERATE THE CLOSURE STATIONARY BRANCHES
+========================================================================================
+  [PASS] The current fixed-seed closure surface yields two dominant stationary branches under broad multistart enumeration  (branch count=2, sampled solves=7)
+  [PASS] The lowest branch closes the favored column exactly  (etas=[1.         0.75917895 0.48458972])
+  [PASS] The broad-multistart dominant pair is separated by a finite action gap  (ΔS_pair=0.869750837948)
+
+  branch 0:
+    count      = 6
+    S_rel      = 0.240906701390
+    x          = [0.471675, 0.55381 , 0.664515]
+    y          = [0.208063, 0.464382, 0.247555]
+    delta      = -1.856375564645e-07
+    eta/eta_obs= [1.         0.75917895 0.48458972]
+  branch 1:
+    count      = 1
+    S_rel      = 1.110657539338
+    x          = [0.790189, 0.406763, 0.493048]
+    y          = [0.586185, 0.167566, 0.166248]
+    delta      = -3.189531894172e-07
+    eta/eta_obs= [1.         0.94763537 0.95875999]
+
+========================================================================================
+PART 2: SUPPORT READOUT
+========================================================================================
+  [PASS] The lowest-action branch gives exact PMNS-assisted closure on the favored column  (eta/eta_obs=1.000000000000)
+  [PASS] The old one-flavor 5.297x miss is gone on the full-closure selector branch  (miss factor=1.000000000000)
+  [INFO] This runner is broad multistart support for the selector structure.
+
+========================================================================================
+RESULT
+========================================================================================
+  Broad multistart support result:
+    - the current broad multistart constrained scan resolves two dominant
+      stationary closure branches on the fixed native N_e seed surface
+    - the low branch is separated from the higher dominant branch by a
+      finite action gap
+    - that branch gives exact eta/eta_obs = 1 on the favored column
+    - the later certified-global theorem sharpens the exact reduced-surface
+      stationary set to three branches and proves the same low branch is
+      the lower branch seen in the stronger reduced-surface support pass
+
+  This is support for the reduced-surface selector story, not a live
+  theorem-grade closure statement by itself.
+
+PASS=5  FAIL=0
+
+----- stderr -----
+

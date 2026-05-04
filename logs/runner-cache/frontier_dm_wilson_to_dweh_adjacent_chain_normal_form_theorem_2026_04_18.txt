@@ -1,0 +1,46 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_wilson_to_dweh_adjacent_chain_normal_form_theorem_2026_04_18.py
+runner_sha256: 93d99ed320921728e5bd707c078cb1cb3983c2667fcad7ccbf9597de850afe82
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.56
+status: ok
+----- stdout -----
+========================================================================================
+DM WILSON-TO-dW_e^H ADJACENT-CHAIN NORMAL-FORM THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: SCOPE OF THE NORMAL-FORM CLAIM
+========================================================================================
+  [PASS] The generic current-stack target is only a 9-channel Hermitian source family
+  [PASS] The structured sharpening is explicitly the local path-algebra embedding Phi_chain
+  [PASS] So the chain route is a stronger structured class than the bare generic 9-channel target  (normal form is claimed only inside the structured embedding class)
+
+========================================================================================
+PART 2: ANY STRUCTURED RANK-3 EMBEDDING REDUCES TO THE ADJACENT CHAIN
+========================================================================================
+  [PASS] Seed 7: the chain images satisfy the exact adjacent-edge reconstruction identities  (chain products recover the full matrix-unit system)
+  [PASS] Seed 7: the two chain generators and their products determine the full 9-dimensional image algebra  (rank=9)
+  [PASS] Seed 19: the chain images satisfy the exact adjacent-edge reconstruction identities  (chain products recover the full matrix-unit system)
+  [PASS] Seed 19: the two chain generators and their products determine the full 9-dimensional image algebra  (rank=9)
+
+========================================================================================
+PART 3: THE DESCENDED LAW IS EQUIVALENT TO A CHAIN-GENERATED BASIS CHECK
+========================================================================================
+  [PASS] The chain-generated Hermitian basis already spans all 9 real directions of Herm(3)  (rank=9)
+  [PASS] So matching the descended law on that chain basis already reconstructs the full Hermitian target exactly  (err=0.00e+00)
+
+========================================================================================
+PART 4: THE MINIMAL-CERTIFICATE ROUTE IS THEREFORE A NORMAL FORM, NOT AN EXTRA GUESS
+========================================================================================
+  [PASS] The minimal-certificate note already packages the structured route as Phi_chain plus the descended identity into dW_e^H
+  [PASS] Therefore the adjacent-chain attack is without loss inside the structured embedding class  (any rank-3 embedding is determined by its adjacent-chain restriction and basis responses)
+  [PASS] But the script has not proved that every generic 9-channel Wilson family extends to such an embedding  (universal forcing beyond the structured class remains open)
+
+========================================================================================
+SUMMARY: PASS=12 FAIL=0
+========================================================================================
+
+----- stderr -----
+

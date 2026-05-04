@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_pmns_observable_relative_action_law.py
+runner_sha256: f285e02f8ccab16f458add391a4998798cd9cae5579be7dd1854718d84eb5d63
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 6.90
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS PMNS OBSERVABLE-RELATIVE-ACTION LAW
+========================================================================================
+
+Framework convention:
+  "axiom" means only Cl(3) on Z^3.
+
+Law:
+  On the fixed native N_e seed surface, minimize
+    S_rel(H_e||H_seed) = Tr(H_seed^{-1} H_e) - log det(H_seed^{-1} H_e) - 3
+  subject to exact closure on the transport-favored column.
+
+========================================================================================
+PART 1: TRANSPORT EXTREMALITY FIXES THE FAVORED COLUMN
+========================================================================================
+  [PASS] The transport-extremal class stays on the exact fixed native seed surface  ((xbar,ybar)=(0.563333,0.306667))
+  [PASS] The favored closure column is fixed by the exact extremal class  (etas=[1.051004 0.662176 0.61936 ])
+
+  extremal packet:
+[[9.25175e-01 3.45930e-02 4.02320e-02]
+ [3.91410e-02 1.11500e-03 9.59744e-01]
+ [3.56840e-02 9.64293e-01 2.40000e-05]]
+  extremal eta/eta_obs = [1.051004 0.662176 0.61936 ]
+
+========================================================================================
+PART 2: THE OBSERVABLE-RELATIVE-ACTION LAW
+========================================================================================
+  [PASS] The relative-action source stays on the exact fixed seed surface  ((xbar,ybar)=(0.563333,0.306667))
+  [PASS] The law closes eta exactly on the favored column  (etas=[1.         0.75917896 0.4845884 ])
+  [PASS] The observable-relative-action selector remains genuinely off-seed  (xi=[-0.091658, -0.009523,  0.101181], eta=[-0.098604,  0.157716, -0.059112])
+  [PASS] The selected source is simpler than the earlier canonical near-closing sample  (delta=-1.228940466232e-06)
+  [PASS] The favored column remains the best column at the selected source  (best idx=0, etas=[1.       0.759179 0.484588])
+
+  x_rel     = [0.471675, 0.553811, 0.664514]
+  y_rel     = [0.208063, 0.464383, 0.247554]
+  xi_rel    = [-0.091658, -0.009523,  0.101181]
+  eta_rel   = [-0.098604,  0.157716, -0.059112]
+  delta_rel = -1.228940466232e-06
+  S_rel     = 0.240906701369
+  packet_rel:
+[[0.035659 0.417918 0.546423]
+ [0.894898 0.103524 0.001578]
+ [0.069443 0.478558 0.451999]]
+  eta/eta_obs(rel-law) = [1.         0.75917896 0.4845884 ]
+
+========================================================================================
+PART 3: BOTTOM LINE
+========================================================================================
+  [PASS] The off-seed selector can be written using the exact scalar observable-principle grammar  (minimize relative bosonic action on the fixed seed surface at exact closure)
+  [PASS] This is a stronger framework-internal law than the earlier information ansatz  (the objective is built directly from the exact log|det| observable principle)
+  [PASS] What still remains is only whether stationary/minimal relative action is itself forced by the sole axiom  (the selector objective is now internal; the final leap is making it unique)
+
+========================================================================================
+RESULT
+========================================================================================
+  Observable-principle selector:
+    - favored column fixed by exact transport extremality
+    - off-seed source fixed by minimum relative bosonic action
+    - exact eta/eta_obs = 1 on the current PMNS-assisted N_e branch
+
+PASS=10  FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_c3_singlet_extension_reduction_theorem.py
+runner_sha256: 3d2dbb51e876ff15c611c2110f56f8c96424b76363749f24721561f7b82785fc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.48
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: any C3-equivariant singlet coupling is forced to the trivial mode
+========================================================================================
+  [PASS] C3-equivariance on a singlet-to-triplet coupling means C c = c  (Cc-c=[-c1 + c3, c1 - c2, c2 - c3])
+  [PASS] The fixed subspace is one-dimensional: c1 = c2 = c3  (every equivariant coupling vector is beta·(1,1,1))
+  [PASS] The all-ones matrix J = 11^T is the trivial-mode projector up to scale  (J^2 = 3J so P_+ = J/3)
+  [PASS] J commutes with the retained 3-cycle and acts only on the trivial Fourier mode  (CJ = JC = J)
+
+========================================================================================
+PART 2: the 4x4 singlet route reduces exactly to one scalar Schur law
+========================================================================================
+  [PASS] [NUMERIC] After singlet Schur reduction the only new datum is one scalar lambda multiplying J  (lambda=|beta|^2/eps=0.230434782609)
+  [PASS] The selected-slice m-variation is unchanged: K_eff(m2)-K_eff(m1) = (m2-m1) T_m  (the singlet correction renormalizes the frozen bank only)
+  [PASS] So any C3-equivariant 4x4 route collapses to one scalar law lambda(m)  (fixed couplings => lambda constant; varying couplings => one scalar function)
+
+========================================================================================
+PART 3: fixed singlet couplings give an exact one-parameter cubic potential
+========================================================================================
+  [PASS] The constant-coupling singlet extension keeps the selected-slice potential cubic in m  (coeffs=[1/6, 3/2 - 3*lam/2, 9*lam**2/2 - 3*lam - 4*sqrt(2)/3 + 35/24 + 2*sqrt(6)/3, -9*lam**3/2 + 9*lam**2/2 - 35*lam/8 - 8*sqrt(3)/9 + 29*sqrt(6)/72 + 185/36])
+  [PASS] The cubic coefficient stays Clifford-fixed at 1/6
+  [PASS] The quadratic coefficient shifts only by the singlet Schur parameter  (quadratic coeff = 3(1-lambda)/2)
+  [PASS] The linear coefficient is an exact quadratic polynomial in lambda  (linear coeff = 9 lambda^2 / 2 - 3 lambda + retained constant)
+  [PASS] The derivative dV_lambda/dm has the exact closed form used below
+
+========================================================================================
+PART 4: the branch-local physical point fixes one unique positive lambda
+========================================================================================
+  [PASS] [NUMERIC] The branch-local selected-line target is the exact delta=2/9 point on the first branch  (m_*=-1.160443440065)
+  [PASS] Solving dV_lambda/dm at a symbolic target point gives an exact closed-form lambda pair
+  [PASS] [NUMERIC] At the physical selected point there is one negative and one positive lambda root  (lambda_-=-0.652587605064, lambda_+=0.545625311688)
+  [PASS] [NUMERIC] A positive singlet energy extension therefore fixes one unique positive constant lambda_*  (lambda_*=0.545625311688)
+  [PASS] [NUMERIC] For lambda_* the selected point is a local minimum, not a maximum  (d²V/dm²|_{m_*}=0.202680624872)
+  [PASS] [NUMERIC] The companion critical point for lambda_* lies below the positivity threshold, so m_* is the only physical-branch stationary point  (other_root=-1.565804689809, m_pos=-1.295794904067)
+
+========================================================================================
+PART 5: what this does and does not close
+========================================================================================
+  The open 4x4 singlet/baryon route is no longer a free search over
+  generic non-uniform microscopic corrections. C3-equivariance reduces it
+  to one scalar Schur law lambda(m) on the trivial Fourier mode J.
+  In the fixed-coupling subclass, the branch-local physical point m_*
+  requires one unique positive constant lambda_* ~= 0.5456253117.
+  So the remaining science burden on this route is to derive that scalar
+  law from the retained microscopic lattice action, not to hunt for an
+  arbitrary new matrix-valued selector.
+
+PASS=18 FAIL=0
+
+----- stderr -----
+

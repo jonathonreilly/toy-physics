@@ -1,0 +1,83 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_spatial_bc_and_u0_scaling.py
+runner_sha256: bd0e174fb8743a08b1a620ed6bdb944e2f65e2c2451cae03ef96b258565a0700
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+Hierarchy spatial-BC selection and native u0 scaling
+==============================================================================
+
+==============================================================================
+PART 1: EXACT DET FORMULAS FOR BOTH SPATIAL BC CHOICES
+==============================================================================
+  PBC, Lt=2, m=0.0: direct=1.85302019e-01, exact=1.85302019e-01, rel=8.99e-16
+  PBC, Lt=2, m=0.1: direct=2.04414086e-01, exact=2.04414086e-01, rel=4.07e-16
+  APBC, Lt=2, m=0.0: direct=1.21439531e+04, exact=1.21439531e+04, rel=1.35e-15
+  APBC, Lt=2, m=0.1: direct=1.24470630e+04, exact=1.24470630e+04, rel=4.38e-16
+  [PASS] exact determinant formulas match direct matrices for both spatial BC choices
+         max relative error = 2.62e-14
+
+==============================================================================
+PART 2: EXACT u0 POWER IS 8 Lt FOR BOTH SPATIAL BC CHOICES
+==============================================================================
+  PBC, Lt=2: det/u0^(8Lt) = [np.float64(1.0000000000000018), np.float64(0.9999999999999992), np.float64(0.9999999999999997)]
+  PBC, Lt=4: det/u0^(8Lt) = [np.float64(1.5258789062499815e-05), np.float64(1.5258789062499895e-05), np.float64(1.5258789062500034e-05)]
+  PBC, Lt=6: det/u0^(8Lt) = [np.float64(2.328306436538698e-10), np.float64(2.328306436538691e-10), np.float64(2.328306436538716e-10)]
+  APBC, Lt=2: det/u0^(8Lt) = [np.float64(65535.99999999998), np.float64(65535.99999999992), np.float64(65536.00000000006)]
+  APBC, Lt=4: det/u0^(8Lt) = [np.float64(507094277.4902505), np.float64(507094277.490251), np.float64(507094277.49025154)]
+  APBC, Lt=6: det/u0^(8Lt) = [np.float64(10153451678210.146), np.float64(10153451678210.17), np.float64(10153451678209.918)]
+  [PASS] zero-mass determinant carries exact power u0^(8 Lt) regardless of spatial BC
+         max relative spread = 2.48e-14
+
+==============================================================================
+PART 3: EXACT INTENSIVE u0 HOMOGENEITY
+==============================================================================
+  PBC, Lt=2: max |f(u0,m)-f(1,m/u0)| <= 2.78e-17
+  PBC, Lt=4: max |f(u0,m)-f(1,m/u0)| <= 4.81e-17
+  PBC, Lt=6: max |f(u0,m)-f(1,m/u0)| <= 4.81e-17
+  APBC, Lt=2: max |f(u0,m)-f(1,m/u0)| <= 4.81e-17
+  APBC, Lt=4: max |f(u0,m)-f(1,m/u0)| <= 4.81e-17
+  APBC, Lt=6: max |f(u0,m)-f(1,m/u0)| <= 4.81e-17
+  [PASS] free-energy density depends on u0 only through m/u0
+         max absolute error = 4.81e-17
+
+==============================================================================
+PART 4: SPATIAL APBC IS SELECTED BY FINITENESS OF THE 3+1 LIMIT
+==============================================================================
+  PBC, Lt=2: A=6.172839506173e-01, exact=6.172839506173e-01
+  PBC, Lt=4: A=1.234567901235e+00, exact=1.234567901235e+00
+  PBC, Lt=6: A=1.851851851852e+00, exact=1.851851851852e+00
+  PBC, Lt=8: A=2.469135802469e+00, exact=2.469135802469e+00
+  PBC, Lt=10: A=3.086419753086e+00, exact=3.086419753086e+00
+  APBC, Lt=40: A=1.781945275277e-01, A_inf=1.781945275277e-01
+  [PASS] spatial PBC coefficient diverges exactly as Lt / (4 u0^2)
+         max relative error = 7.19e-16
+  [PASS] spatial APBC coefficient converges to a finite 3+1 limit
+         absolute error = 2.78e-17
+  [PASS] only spatial APBC yields a finite intensive temporal average
+         A_pbc(10)/A_apbc(inf) = 17.32
+
+==============================================================================
+PART 5: NATIVE u0 SCALING SELECTS ONE POWER PER LINK
+==============================================================================
+  A_2(u0) * u0^2 = [0.12499999999999999, 0.125, 0.12499999999999999]
+  A_2(u0) * u0^4 = [0.045, 0.10124999999999999, 0.18]
+  [PASS] exact local coefficient scales as u0^(-2), i.e. one power of u0 per field insertion pair
+         max spread = 1.39e-17
+  [PASS] a quadratic tadpole power would oversubtract the exact local scaling
+         max spread = 0.135000
+
+==============================================================================
+SCORECARD: 8 pass, 0 fail out of 8
+==============================================================================
+
+----- stderr -----
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2406: RuntimeWarning: divide by zero encountered in det
+  r = _umath_linalg.det(a, signature=signature)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2406: RuntimeWarning: overflow encountered in det
+  r = _umath_linalg.det(a, signature=signature)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2406: RuntimeWarning: invalid value encountered in det
+  r = _umath_linalg.det(a, signature=signature)
+

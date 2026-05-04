@@ -1,0 +1,51 @@
+===== runner cache v1 =====
+runner: scripts/action_power_canonical_harness.py
+runner_sha256: 42edf509eacb80fa08deeffbb58b2d601089e3396dd368783b53f63ae6d4150d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.65
+status: ok
+----- stdout -----
+==========================================================================================
+CANONICAL ACTION-POWER HARNESS
+Same fixed harness, same scorer, two action families.
+NOTE: Changed action = axiom fork. No inherited claims.
+==========================================================================================
+
+2D SPENT-DELAY BASELINE (h=1.0, strength=0.001):
+  Action: spent_delay, 2D, h=1.0, nodes=1681
+  Born=4.43e-16  k=0=+0.00e+00  MI=0.5666  d_TV=0.7889  1-pur=0.4413
+  gravity=-0.290798  dist=-1.33(R²=0.995)  F∝M=0.64
+
+2D POWER ACTION p=0.5 (h=1.0, strength=0.001):
+  Action: power, 2D, h=1.0, nodes=1681
+  Born=2.23e-16  k=0=+0.00e+00  MI=0.6231  d_TV=0.8336  1-pur=0.4305
+  gravity=-0.072638  dist=-2.90(R²=0.986)  F∝M=0.95
+
+2D SPENT-DELAY ULTRA-WEAK (h=1.0, strength=0.0001):
+  Action: spent_delay, 2D, h=1.0, nodes=1681
+  Born=4.43e-16  k=0=+0.00e+00  MI=0.5666  d_TV=0.7889  1-pur=0.4413
+  gravity=-0.065552  dist=-1.15(R²=0.973)  F∝M=0.63
+
+2D POWER p=0.5 ULTRA-WEAK (h=1.0, strength=0.0001):
+  Action: power, 2D, h=1.0, nodes=1681
+  Born=2.23e-16  k=0=+0.00e+00  MI=0.6231  d_TV=0.8336  1-pur=0.4305
+  gravity=-0.007436  dist=-2.92(R²=0.985)  F∝M=0.99
+
+3D SPENT-DELAY CLOSE-SLIT BARRIER CARD (L=12, W=6, strength=0.0001):
+  Action: spent_delay, 3D, h=1.0, nodes=2197
+  Born=4.67e-16  k=0=+0.00e+00  MI=0.4457  d_TV=0.6762  1-pur=0.4495
+  gravity=-0.011329  dist=0.74(R²=0.733)  F∝M=0.46
+  NOTE: distance and F∝M above are the no-barrier companion on the same 3D family.
+  close-slit barrier: slits=((2, 0), (-2, 0), (0, 1))  slit_signals=(4.814e+04, 4.814e+04)  Born_signal=1.720e+05
+
+3D POWER ACTION p=0.5 CLOSE-SLIT BARRIER CARD (L=12, W=6, strength=0.0001):
+  Action: power, 3D, h=1.0, nodes=2197
+  Born=2.63e-16  k=0=+0.00e+00  MI=0.6712  d_TV=0.8116  1-pur=0.4254
+  gravity=-0.000076  dist=-1.84(R²=0.880)  F∝M=1.00
+  NOTE: distance and F∝M above are the no-barrier companion on the same 3D family.
+  close-slit barrier: slits=((2, 0), (-2, 0), (0, 1))  slit_signals=(1.762e+09, 1.762e+09)  Born_signal=2.214e+10
+
+
+----- stderr -----
+

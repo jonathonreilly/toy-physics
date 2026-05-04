@@ -1,0 +1,55 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem.py
+runner_sha256: 9f8a4b93731a23370861ec9f07f06ea8fc4f5cdcd926cdd24cdf8e382beb3695
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.54
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-SURFACE Z3 DOUBLET-BLOCK POINT-SELECTION THEOREM
+========================================================================================
+
+Question:
+  Once the live source-oriented sheet is pushed through the intrinsic Z3
+  carrier readout, where does the remaining microscopic datum actually live?
+
+========================================================================================
+PART 1: THE LIVE Z3 IMAGE HAS FROZEN SLOTS AND AN AFFINE DOUBLET BLOCK
+========================================================================================
+  [PASS] On the live source-oriented sheet K_Z3(H) has exact frozen slots and affine doublet-block formulas  (max err=1.78e-15)
+  [PASS] The exact singlet-doublet slots are K01 = a_* and K02 = b_* everywhere on the live sheet  (the slot pair is constant while the doublet block moves)
+
+========================================================================================
+PART 2: THE REMAINING ACTIVE PAIR IS EXACTLY THE DOUBLET-BLOCK LAW
+========================================================================================
+  [PASS] The active coordinate q_+ is exactly the centered trace law of the Z3 doublet block  (q_+ = 2 sqrt(2)/9 - (K11+K22)/2)
+  [PASS] The active coordinate delta is exactly the shifted imaginary doublet-mixing law  (delta = (Im K12 + 4 sqrt(2)/3) / sqrt(3))
+  [PASS] The spectator coordinate m is exactly the real doublet-mixing / trace line  (m = Re K12 + 4 sqrt(2)/9 = Tr K_Z3)
+
+========================================================================================
+PART 3: THE ATLAS SLOT TOOLS SHOW THE SLOTS ARE NOT THE MISSING OBJECT
+========================================================================================
+  [PASS] The singlet-doublet slot tool remains correct on the live sheet: the slots are exact and constant  ((a_*,b_*)=(0.169932113230+1.192809041582j,0.458607247825-0.692809041582j))
+  [PASS] But varying the active pair changes only the Z3 doublet block, not the slots  (the missing microscopic law lives in the doublet block)
+  [PASS] So the remaining mainline object is not another slot-amplitude law but the 2-real Z3 doublet-block law  (atlas slot tools help by ruling that route out as the missing datum)
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE Z3 DOUBLET-BLOCK THEOREM
+========================================================================================
+  [PASS] The new note records the frozen slots and affine moving doublet block
+  [PASS] The new note records the remaining microscopic object as the 2-real Z3 doublet-block law
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact mainline answer:
+    - the live Z3 image already has frozen singlet-doublet slots
+    - the remaining active data live entirely in the moving doublet block
+    - after quotienting spectator m, the missing microscopic object is
+      exactly the 2-real Z3 doublet-block law for (delta, q_+)
+
+PASS=10 FAIL=0
+
+----- stderr -----
+

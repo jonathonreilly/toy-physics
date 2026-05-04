@@ -1,0 +1,65 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_leptogenesis_ne_charged_source_response_reduction.py
+runner_sha256: a6724e01799495d2cc42cb94964ba9a8ac4997d062bc99947e2e838fdb799fed
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.01
+status: ok
+----- stdout -----
+========================================================================================
+DM LEPTOGENESIS N_e CHARGED SOURCE-RESPONSE REDUCTION
+========================================================================================
+
+========================================================================================
+PART 1: THE CHARGED HERMITIAN SOURCE LAW IS EXACT SCHUR PUSHPFORWARD
+========================================================================================
+  [PASS] The full microscopic operator preserves charge exactly  (commutator=0.00e+00)
+  [PASS] A charged-lepton-supported microscopic source pushes forward exactly through the charge -1 sector  (|Δ|=6.66e-16)
+  [PASS] The charged projected source law then factors exactly through L_e = Schur_{E_e}(D_-)  (|Δ|=9.55e-15)
+  [PASS] The canonical charged-lepton Hermitian block is therefore an exact charged-sector Schur target  (err=2.57e-16)
+
+  So dW_e^H is not an ad hoc PMNS object.
+  It is the exact charged-sector Schur pushforward of the microscopic
+  charge -1 source-response law.
+
+========================================================================================
+PART 2: dW_e^H RECONSTRUCTS H_e AND THE N_e PACKET
+========================================================================================
+  [PASS] Nine charged Hermitian responses reconstruct H_e exactly  (err=1.96e-17)
+  [PASS] On N_e, H_e alone determines the PMNS transport packet  (col sums=[1. 1. 1.])
+
+  recovered N_e packet from dW_e^H:
+[[0.915868 0.071267 0.012865]
+ [0.074689 0.900307 0.025004]
+ [0.009443 0.028427 0.962131]]
+
+========================================================================================
+PART 3: THE PMNS-ASSISTED MISS COLLAPSES FROM 5.3x TO 1.01x
+========================================================================================
+  [PASS] The charged-Hermitian PMNS-assisted route selects the same near-closing middle column  (eta_vals=[0.82075559 0.9895127  0.92061708])
+  [PASS] The PMNS-assisted value is within about 1.05% of observation  (eta/eta_obs=0.989512704600)
+  [PASS] So the old exact one-flavor 5.3x miss collapses to about 1.01x once dW_e^H is supplied  (miss factors=(5.297004933778,1.010598444417))
+
+  one-flavor exact miss factor = 5.297004933778
+  PMNS-assisted dW_e^H miss factor = 1.010598444417
+  improvement factor = 5.241453678303
+  residual percent low = 1.048729539988%
+
+========================================================================================
+PART 4: BOTTOM LINE
+========================================================================================
+  [PASS] The PMNS-assisted flavored DM problem is now reduced to dW_e^H, not the raw PMNS five-real source  (dW_e^H -> H_e -> packet -> selected column -> eta)
+  [PASS] What still remains is to evaluate the microscopic charge -1 operator D_- from Cl(3) on Z^3 and thus evaluate dW_e^H on the exact branch  (the remaining object is charged-sector microscopic evaluation, not transport or PMNS bookkeeping)
+  [PASS] So compared to the old 5.3x miss, the live residual gap on this PMNS-assisted route is only about 1.01x  (about 1.05% low)
+
+  Updated read:
+    - old exact one-flavor miss: 5.297x
+    - PMNS-assisted dW_e^H-conditioned miss: 1.0106x
+    - remaining exact target: evaluate dW_e^H from the sole axiom
+
+========================================================================================
+SUMMARY: PASS=12 FAIL=0
+========================================================================================
+
+----- stderr -----
+

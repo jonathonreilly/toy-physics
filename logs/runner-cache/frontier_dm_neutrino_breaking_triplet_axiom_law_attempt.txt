@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_breaking_triplet_axiom_law_attempt.py
+runner_sha256: 90164d519eb75faa9dbecf58a38c7ed4ff97c41fda875549d2365653bda1a0bf
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO BREAKING-TRIPLET AXIOM-LAW ATTEMPT
+========================================================================================
+
+Question:
+  Can the current exact DM stack derive a positive axiom-side law for
+  the breaking triplet (delta, rho, gamma)?
+
+========================================================================================
+PART 1: THE TRIPLET IS THE EXACT ZERO-LOCUS / SOURCE-COMPLEMENT DATA
+========================================================================================
+  [PASS] H = H_core + B(delta,rho,gamma) exactly  (recon err=7.85e-17)
+  [PASS] The aligned-core locus is exactly the zero locus of the breaking triplet  (B=0 <=> aligned residual-Z2 core)
+  [PASS] The intrinsic DM CP tensor matches the exact triplet formula  (cp=(0.074255,0.163696))
+  [PASS] Gamma is the mandatory CP-odd source  (both channels are linear in gamma)
+
+========================================================================================
+PART 2: THE BREAKING SOURCE SECTOR HAS EXACT MINIMAL DIMENSION THREE
+========================================================================================
+  [PASS] The breaking-source generators are linearly independent over R  (rank=3)
+  [PASS] No one- or two-parameter current-stack source law can span generic breaking data  (the minimal exact breaking source is 3-real-dimensional)
+
+========================================================================================
+PART 3: THE CURRENT BANK DOES NOT FIX THE BREAKING-TRIPLET VALUES
+========================================================================================
+  [PASS] Aligned and generic samples lie on the same canonical active support class  (same canonical two-Higgs support mask)
+  [PASS] The aligned sample has zero triplet while the generic sample has nonzero triplet  (aligned=[0. 0. 0.], generic=[-0.22165  -0.082793  0.365859])
+  [PASS] So the current stack does not derive a positive axiom-side triplet value law  (same exact branch supports distinct triplet values)
+
+========================================================================================
+PART 4: THE 0.30 BENCHMARK SHORTFALL IS MAINLY CP-KERNEL SUPPRESSION
+========================================================================================
+  [PASS] The benchmark eta matches the current reduced kernel  (eta=1.813372e-10)
+  [PASS] The same-kappa DI ceiling would already be near the observed eta  (eta_DI/eta_obs=1.068034)
+  [PASS] The benchmark reaches only about 27.7% of the DI CP ceiling  (eps/eps_DI=0.277428)
+
+========================================================================================
+PART 5: THE BANK RECORDS THE CURRENT BOUNDARY CLEANLY
+========================================================================================
+  [PASS] The new note states that no positive axiom-side triplet value law is currently derivable
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact current-stack answer:
+    - the strongest axiom-native law is the zero-locus / minimal-source
+      law for the breaking triplet
+    - no positive coefficient law for (delta,rho,gamma) is currently
+      derivable on this stack
+    - the benchmark eta ~= 0.30 eta_obs is mainly CP-kernel suppression,
+      not washout failure
+
+PASS=13 FAIL=0
+
+----- stderr -----
+

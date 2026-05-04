@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_cyclic_wilson_descendant_law.py
+runner_sha256: 0831a337ea3524a4fa59e27c38c4197a177c406974786eeb7f1998904282e36a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.11
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: the adjacent-chain algebra already contains the cyclic basis
+========================================================================================
+  [PASS (A)] The adjacent-chain algebra contains the forward cycle C  (err=0.00e+00)
+  [PASS (A)] The adjacent-chain algebra contains the backward cycle C^2 = C^dagger  (err=0.00e+00)
+  [PASS (A)] B0 = I lies in the chain algebra
+  [PASS (A)] B1 = C + C^2 lies in the chain algebra
+  [PASS (A)] B2 = i(C - C^2) lies in the chain algebra
+
+========================================================================================
+PART 2: the canonical C_3 projector lands exactly on the 3-response cyclic sector
+========================================================================================
+  [PASS (A)] The cyclic projector fixes B0
+  [PASS (A)] The cyclic projector fixes B1
+  [PASS (A)] The cyclic projector fixes B2
+  [PASS (A)] [NUMERIC] Projected outputs are always reconstructed exactly from the 3 cyclic responses  (E11:0.00e+00; X12:0.00e+00; Y12:0.00e+00; X13:0.00e+00)
+  [PASS (A)] [NUMERIC] The cyclic basis is orthogonal for the real trace pairing  (gram=[[3.0, 0.0, 0.0], [0.0, 6.0, 0.0], [0.0, 0.0, 6.0]])
+
+========================================================================================
+PART 3: three Wilson responses reconstruct the unique cyclic Hermitian target
+========================================================================================
+  [PASS (A)] [NUMERIC] Any cyclic Hermitian target is reconstructed exactly from (r0, r1, r2)  (err=4.84e-16)
+  [PASS (A)] The reconstruction coefficients are exactly a = r0/3, x = r1/6, y = r2/6
+  [PASS (A)] [NUMERIC] So the actual cyclic Wilson descendant law has exactly three real channels  (responses=(-2.517143, -7.871260, 1.309826))
+
+========================================================================================
+PART 4: Koide becomes one scalar equation on the cyclic Wilson responses
+========================================================================================
+  [PASS (A)] The response-space Koide selector is exactly 2 r0^2 = r1^2 + r2^2  (because a = r0/3, x = r1/6, y = r2/6)
+  [PASS (A)] On the Koide cone, the response pair (r1, r2) is a circle of radius sqrt(2) r0  (r1 = sqrt(2) r0 cos(delta), r2 = sqrt(2) r0 sin(delta))
+
+========================================================================================
+PART 5: observed charged leptons satisfy the cyclic descendant law
+========================================================================================
+  [PASS (D)] [NUMERIC] The observed amplitude operator is exactly cyclic and reconstructed from the 3 responses  (err=9.61e-15)
+  [PASS (D)] [NUMERIC] The cyclic descendant spectrum reproduces the observed sqrt(m) triple  (evals=[ 0.71484191 10.279026   42.15281722])
+  [PASS (D)] [NUMERIC] Observed charged leptons satisfy the response-space Koide equation to PDG precision  ((r1^2+r2^2)/(2 r0^2)=0.9999815344)
+  [PASS (D)] [NUMERIC] So the observed target is one scale r0 and one phase arg(r1 + i r2) inside the cyclic Wilson law  (r0=53.146685, phase=-2.316625 rad)
+
+Interpretation:
+  The actual cyclic Wilson descendant law is now explicit. One local
+  adjacent-chain embedding supplies the basis B0 = I, B1 = C + C^2,
+  B2 = i(C - C^2). Any Wilson first variation on that image descends
+  canonically to three real cyclic responses (r0, r1, r2), which
+  reconstruct the unique circulant Hermitian target.
+  Koide is then not a large reconstruction problem. It is one scalar
+  selector equation on those three responses: 2 r0^2 = r1^2 + r2^2.
+
+PASS=19 FAIL=0
+
+----- stderr -----
+

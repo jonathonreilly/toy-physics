@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_higgs_y_from_lhcm_yukawa.py
+runner_sha256: 6606576cc0c1a544aedd854262858f5f5c30f215b9ab7a669c22eaa887f0b19e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure
+----------------------------------------------------------------------------------------
+  [PASS (A)] contains: 'Higgs Y_H from LHCM-Derived Hypercharges and Yukawa Structure'  ()
+  [PASS (A)] contains: 'Y_H  =  +1'  ()
+  [PASS (A)] contains: 'Y(H)  =  Y(u_R) − Y(Q_L)'  ()
+  [PASS (A)] contains: 'Y(H) = Y(Q_L) − Y(d_R)'  ()
+  [PASS (A)] contains: 'Y(H)  =  Y(L_L) − Y(e_R)'  ()
+  [PASS (A)] contains: 'Q̄_L · H̃ · u_R'  ()
+  [PASS (A)] contains: 'Q̄_L · H · d_R'  ()
+  [PASS (A)] contains: 'L̄_L · H · e_R'  ()
+  [PASS (A)] contains: 'proposal_allowed: false'  ()
+
+----------------------------------------------------------------------------------------
+Part 2: Y_H derivation from up-quark Yukawa
+----------------------------------------------------------------------------------------
+  [PASS (A)] up-quark Yukawa: Y(H) = Y(u_R) − Y(Q_L) = +1  (Y(H) = 4/3 − 1/3 = 1)
+
+----------------------------------------------------------------------------------------
+Part 3: Y_H derivation from down-quark Yukawa
+----------------------------------------------------------------------------------------
+  [PASS (A)] down-quark Yukawa: Y(H) = Y(Q_L) − Y(d_R) = +1  (Y(H) = 1/3 − (-2/3) = 1)
+
+----------------------------------------------------------------------------------------
+Part 4: Y_H derivation from charged-lepton Yukawa
+----------------------------------------------------------------------------------------
+  [PASS (A)] charged-lepton Yukawa: Y(H) = Y(L_L) − Y(e_R) = +1  (Y(H) = -1 − (-2) = 1)
+
+----------------------------------------------------------------------------------------
+Part 5: Y_H derivation from neutral-lepton Yukawa (ν_R)
+----------------------------------------------------------------------------------------
+  [PASS (A)] neutral-lepton Yukawa: Y(H) = Y(ν_R) − Y(L_L) = +1  (Y(H) = 0 − (-1) = 1)
+
+----------------------------------------------------------------------------------------
+Part 6: cross-check consistency across all four Yukawa couplings
+----------------------------------------------------------------------------------------
+  [PASS (A)] all four Yukawa couplings give Y_H = +1 consistently  (values = [Fraction(1, 1), Fraction(1, 1), Fraction(1, 1), Fraction(1, 1)])
+
+----------------------------------------------------------------------------------------
+Part 7: electric charge of Higgs
+----------------------------------------------------------------------------------------
+  [PASS (A)] Q(H+) = T_3(H+) + Y(H)/2 = +1 (charged Higgs)  (+1/2 + 1/2 = 1)
+  [PASS (A)] Q(H0) = T_3(H0) + Y(H)/2 = 0 (neutral Higgs)  (-1/2 + 1/2 = 0)
+
+----------------------------------------------------------------------------------------
+Part 8: explicit non-closure
+----------------------------------------------------------------------------------------
+  [PASS (A)] non-closure: SM Yukawa coupling form itself  ()
+  [PASS (A)] non-closure: LHCM  ()
+  [PASS (A)] non-closure: STANDARD_MODEL_HYPERCHARGE_UNIQUENESS  ()
+  [PASS (A)] non-closure: Higgs VEV  ()
+
+========================================================================================
+  TOTAL: PASS=20, FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/lattice_nn_mass_response.py
+runner_sha256: b96c68f5d9e00d87c92fef4b6a77a644ef77e53226277fb28bd9a57ffa912056
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 21.59
+status: ok
+----- stdout -----
+====================================================================================================
+NN LATTICE MASS-RESPONSE UNDER REFINEMENT
+Mass encoding = fixed-node field-strength multiplier; node count and mass placement are fixed.
+Standard linear propagator only.
+====================================================================================================
+
+Deterministic Born-safe refinement path
+  h       gravity      MI     1-pur      d_TV         Born
+  ---------------------------------------------------------
+       1   -0.116678  0.5022   0.4229   0.7455    6.16e-16
+     0.5   +0.138226  0.7420   0.4844   0.9072    4.95e-16
+    0.25   +0.077415  0.9470   0.4989   0.9878    3.95e-16
+   0.125   +0.034466  0.9972   0.5000   0.9996    5.63e-16
+  0.0625   +0.014810  1.0000   0.5000   1.0000    5.04e-16
+
+Narrow alpha-scaled strength law probe
+  alpha   g(h=0.5)   g(h=0.25)  ratio  read
+  --------------------------------------------
+    0.0      +0.138       +0.077   0.56  decaying
+    0.5      +0.160       +0.105   0.66  decaying
+    1.0      +0.184       +0.139   0.76  nearly h-independent
+    1.5      +0.209       +0.180   0.86  nearly h-independent
+
+Born spot-check
+  alpha=1.0 and alpha=1.5 stayed at machine precision on the checked rows
+  (4.0e-16 to 4.9e-16)
+
+Safe conclusion
+- the NN mass response stays positive on the Born-safe deterministic path
+- the response becomes cleaner under refinement, but gravity fades toward zero
+- a narrow alpha-scaled law near alpha ~ 1.5 makes gravity nearly h-stable
+- the response is not promoted as F∝M; the checked behavior is positive but
+  bounded/sub-linear and still refinement-sensitive
+
+----- stderr -----
+

@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_pmns_z3_doublet_block_center_positive_sheet_no_go_2026_04_20.py
+runner_sha256: b5cd728c61f97fd456bbff9e4d3be504c49891eae9cabc59f1b294d7b0019178
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.01
+status: ok
+----- stdout -----
+========================================================================================
+DM PMNS Z3 DOUBLET-BLOCK CENTER POSITIVE-SHEET NO-GO THEOREM
+========================================================================================
+
+Question:
+  Does the coefficient-free center law delta_db = 1, q_+ = 0, together
+  with the already-closed I12 sign law I_src > 0, close the remaining
+  PMNS angle-pin I5 on the fixed native N_e seed surface?
+
+========================================================================================
+PART 1: THE POSITIVE-SHEET CENTER LAW IS NOT A POINT SELECTOR
+========================================================================================
+  [PASS] The verifier finds many distinct positive-sheet center solutions  (count=11)
+  [PASS] Every retained representative satisfies the exact center law delta_db = 1, q_+ = 0
+  [PASS] Every retained representative lies on the positive I_src sheet  (cubic values=[0.000233447, 0.001078299, 0.001554303, 0.000902109, 0.001296607, 0.002050621])
+  [PASS] The PMNS angle triple varies macroscopically across the positive-sheet center locus  (ranges=(0.243800,0.953576) × (0.030502,0.597343) × (0.093999,0.997611))
+  rep 1: obs=[0.2438   0.075946 0.808903], I_src=0.000233447
+  rep 2: obs=[0.251506 0.097954 0.804629], I_src=0.001078299
+  rep 3: obs=[0.943631 0.030502 0.124926], I_src=0.001554303
+  rep 4: obs=[0.475654 0.495846 0.997611], I_src=0.000902109
+
+========================================================================================
+PART 2: THE CENTER CONSTRAINTS HAVE RANK 2 ON THE VERIFIED PATCH
+========================================================================================
+  [PASS] At retained representative points, rank d(delta_db, q_+) = 2  (ranks=[2, 2, 2, 2, 2, 2, 2, 2])
+  [PASS] So on the verified patch the center law cuts the 5-real seed surface to a local 3-real locus  (dim(seed surface)=5 and dim(center pair)=2)
+
+========================================================================================
+PART 3: CONDITIONAL VALUE — CENTER LAW CUTS THE EXACT TARGET TO A TWO-SHEET PAIR
+========================================================================================
+  [PASS] If the exact PMNS target is imposed as well, the center law yields exactly two source solutions  (count=2)
+  [PASS] The two conditional solutions have the same x and y data
+  [PASS] They differ only by the sheet flip delta_src -> -delta_src and I_src -> -I_src  (delta_src=(-0.728938949196,0.728938949196))
+
+========================================================================================
+PART 4: THE NOTE RECORDS THE CORRECT NO-GO STATUS
+========================================================================================
+  [PASS] The new note states that center law + I12 does not close I5
+  [PASS] The note records the local 3-real positive-sheet center locus
+  [PASS] The current authoritative I5 status note still treats I5 as open
+
+========================================================================================
+RESULT
+========================================================================================
+  Honest status:
+    - center law + I12 leaves a positive-sheet 3-real locus and does not
+      derive the PMNS target by itself
+    - the center law is still useful conditionally: once the exact PMNS
+      target manifold is imposed, it cuts that manifold to a two-sheet pair
+    - so I5 remains open, but the live missing object is now sharper than
+      before
+
+PASS=12 FAIL=0
+
+----- stderr -----
+

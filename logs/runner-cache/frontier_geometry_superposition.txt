@@ -1,0 +1,165 @@
+===== runner cache v1 =====
+runner: scripts/frontier_geometry_superposition.py
+runner_sha256: 682e5a4cddcedb35ac9ad499f1bf6258caae098c9478552e63cb5a0b1676288a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.43
+status: ok
+----- stdout -----
+======================================================================
+GEOMETRY SUPERPOSITION: Coherent Sum Over DAG Ensemble
+======================================================================
+
+Grid: 20x8, source=(0, 0), detector at x=20
+Postulates: k=4.0, p=1.0
+
+Geometry           Nodes   Edges  Det bins   Tot prob
+-------------------------------------------------------
+rectangular          357    1300        17 1.7981e+26
+deleted-10%          357    1173        17 8.6366e+22
+added-10%            357    1430        17 3.7753e+26
+tapered              317    1138        17 7.8674e+25
+expanded             397    1452        17 2.7066e+26
+
+Detector y range: [-8, 8], 17 bins
+
+Weights (1/n_edges, normalized):
+  rectangular     : w=7.692308e-04,  w^2/sum(w^2) = 0.1938
+  deleted-10%     : w=8.525149e-04,  w^2/sum(w^2) = 0.2380
+  added-10%       : w=6.993007e-04,  w^2/sum(w^2) = 0.1601
+  tapered         : w=8.787346e-04,  w^2/sum(w^2) = 0.2528
+  expanded        : w=6.887052e-04,  w^2/sum(w^2) = 0.1553
+
+======================================================================
+DETECTOR DISTRIBUTIONS
+======================================================================
+   y    P_coherent    P_incoherent        |diff|     ratio
+----------------------------------------------------------
+  -8  6.344470e-02    6.633503e-02  2.890333e-03    0.9564
+  -7  2.044996e-01    2.104141e-01  5.914509e-03    0.9719
+  -6  1.214886e-01    1.228990e-01  1.410405e-03    0.9885
+  -5  4.079395e-02    4.253632e-02  1.742369e-03    0.9590
+  -4  1.333069e-02    1.383525e-02  5.045606e-04    0.9635
+  -3  3.485963e-03    3.636000e-03  1.500373e-04    0.9587
+  -2  7.937926e-04    8.320500e-04  3.825736e-05    0.9540
+  -1  1.779504e-04    1.905275e-04  1.257713e-05    0.9340
+   0  1.002722e-04    1.066280e-04  6.355805e-06    0.9404
+   1  2.145205e-04    2.297897e-04  1.526918e-05    0.9336
+   2  9.089801e-04    9.852033e-04  7.622324e-05    0.9226
+   3  5.459873e-03    6.441919e-03  9.820467e-04    0.8476
+   4  2.101215e-02    2.470520e-02  3.693047e-03    0.8505
+   5  6.496691e-02    7.279811e-02  7.831204e-03    0.8924
+   6  1.508407e-01    1.569674e-01  6.126640e-03    0.9610
+   7  1.929981e-01    2.012618e-01  8.263794e-03    0.9589
+   8  7.524636e-02    7.582558e-02  5.792176e-04    0.9924
+
+======================================================================
+PER-GEOMETRY DETECTOR PROBABILITIES
+======================================================================
+   y     rectangular     deleted-10%       added-10%         tapered        expanded
+--------------------------------------------------------------------------------------
+  -8    1.304694e+25    3.715347e+21    2.737573e+25    5.069998e+24    2.142027e+25
+  -7    4.276504e+25    9.932652e+21    8.676314e+25    1.669479e+25    6.961624e+25
+  -6    2.296107e+25    7.618520e+21    5.624487e+25    1.042997e+25    3.167626e+25
+  -5    8.059175e+24    2.188992e+21    1.763502e+25    4.814187e+24    9.368150e+24
+  -4    2.314323e+24    6.833473e+20    6.712635e+24    1.689311e+24    2.473928e+24
+  -3    5.864739e+23    2.651003e+20    1.315722e+24    4.830511e+23    6.019109e+23
+  -2    1.351923e+23    5.342025e+19    2.836863e+23    1.207401e+23    1.363406e+23
+  -1    2.867370e+22    1.582792e+19    6.057359e+22    2.700762e+22    2.873643e+22
+   0    1.615986e+22    8.289857e+18    3.347229e+22    1.564733e+22    1.616722e+22
+   1    2.867370e+22    3.374959e+19    5.634603e+22    2.700762e+22    2.873643e+22
+   2    1.351923e+23    1.242697e+20    2.630825e+23    1.207401e+23    1.363406e+23
+   3    5.864739e+23    1.521028e+21    1.122293e+24    4.830511e+23    6.019109e+23
+   4    2.314323e+24    5.897912e+21    4.436913e+24    1.689311e+24    2.473928e+24
+   5    8.059175e+24    1.566175e+22    1.586537e+25    4.814187e+24    9.368150e+24
+   6    2.296107e+25    2.483934e+22    4.527675e+25    1.042997e+25    3.167626e+25
+   7    4.276504e+25    6.581083e+21    8.413747e+25    1.669479e+25    6.961624e+25
+   8    1.304694e+25    7.225189e+21    2.994803e+25    5.069998e+24    2.142027e+25
+
+======================================================================
+SUMMARY STATISTICS
+======================================================================
+  Coherent   centroid: +0.362375,  RMS width: 6.5608
+  Incoherent centroid: +0.419820,  RMS width: 6.5397
+  Centroid shift:      0.057445
+  Width change:        0.021137
+
+  max |P_coh - P_inc|:           8.263794e-03
+  max P_incoherent:              2.104141e-01
+  Interference CONTRAST:         0.0393 (3.93%)
+
+  L1 distance:                   4.023685e-02
+  L1 / total_P_inc:              0.0402 (4.02%)
+
+======================================================================
+PHASE COHERENCE DIAGNOSTIC
+======================================================================
+Do different geometries produce different phases at the detector?
+
+At peak y=-7:
+  rectangular     : |psi|=6.539498e+12, phase=-2.5402 rad (-145.5 deg)
+  deleted-10%     : |psi|=9.966269e+10, phase=-2.8414 rad (-162.8 deg)
+  added-10%       : |psi|=9.314673e+12, phase=-2.6667 rad (-152.8 deg)
+  tapered         : |psi|=4.085926e+12, phase=-2.6232 rad (-150.3 deg)
+  expanded        : |psi|=8.343635e+12, phase=-2.5188 rad (-144.3 deg)
+
+Pairwise phase differences at y=-7:
+  rectangular  vs deleted-10% : delta_phase = +0.3012 rad (+17.3 deg)
+  rectangular  vs added-10%   : delta_phase = +0.1266 rad (+7.3 deg)
+  rectangular  vs tapered     : delta_phase = +0.0830 rad (+4.8 deg)
+  rectangular  vs expanded    : delta_phase = -0.0214 rad (-1.2 deg)
+  deleted-10%  vs added-10%   : delta_phase = -0.1746 rad (-10.0 deg)
+  deleted-10%  vs tapered     : delta_phase = -0.2182 rad (-12.5 deg)
+  deleted-10%  vs expanded    : delta_phase = -0.3225 rad (-18.5 deg)
+  added-10%    vs tapered     : delta_phase = -0.0436 rad (-2.5 deg)
+  added-10%    vs expanded    : delta_phase = -0.1479 rad (-8.5 deg)
+  tapered      vs expanded    : delta_phase = -0.1044 rad (-6.0 deg)
+
+======================================================================
+NORMALIZED-PSI ANALYSIS (pure phase interference)
+======================================================================
+   y   P_coh(norm)     P_inc(norm)     ratio
+--------------------------------------------
+  -8  6.344470e-02    6.633503e-02    0.9564
+  -7  2.044996e-01    2.104141e-01    0.9719
+  -6  1.214886e-01    1.228990e-01    0.9885
+  -5  4.079395e-02    4.253632e-02    0.9590
+  -4  1.333069e-02    1.383525e-02    0.9635
+  -3  3.485963e-03    3.636000e-03    0.9587
+  -2  7.937926e-04    8.320500e-04    0.9540
+  -1  1.779504e-04    1.905275e-04    0.9340
+   0  1.002722e-04    1.066280e-04    0.9404
+   1  2.145205e-04    2.297897e-04    0.9336
+   2  9.089801e-04    9.852033e-04    0.9226
+   3  5.459873e-03    6.441919e-03    0.8476
+   4  2.101215e-02    2.470520e-02    0.8505
+   5  6.496691e-02    7.279811e-02    0.8924
+   6  1.508407e-01    1.569674e-01    0.9610
+   7  1.929981e-01    2.012618e-01    0.9589
+   8  7.524636e-02    7.582558e-02    0.9924
+
+  Normalized contrast:  0.0393 (3.93%)
+  Normalized L1 rel:    0.0402 (4.02%)
+
+  (This isolates PHASE interference from amplitude differences.)
+  If contrast > 1% here, different geometries produce genuinely
+  different quantum phases, not just different intensities.
+
+======================================================================
+VERDICT
+======================================================================
+
+  CONFIRMED: Geometry superposition produces observable interference.
+  Raw contrast:        3.9% (includes amplitude + phase effects)
+  Normalized contrast: 3.93% (pure phase interference)
+  Coherent sum over DAG geometries is DISTINGUISHABLE from
+  the incoherent (classical) mixture.
+
+  The centroid shifts by 0.0574,
+  meaning geometry interference has a directional effect.
+
+  The distribution width changes by 0.0211,
+  meaning geometry interference affects spreading/focusing.
+
+----- stderr -----
+

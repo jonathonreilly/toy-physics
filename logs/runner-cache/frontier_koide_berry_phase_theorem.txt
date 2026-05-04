@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_berry_phase_theorem.py
+runner_sha256: c899a40aa93ba8dd01cbad43d9bc8142aa298b9fcebcac63471296bda8193281
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.24
+status: ok
+----- stdout -----
+========================================================================
+Cycle 10B revised again -- actual-route Berry audit
+========================================================================
+
+(A) Actual scale-free Koide geometry
+------------------------------------------------------------------------
+  [PASS] (A1) Normalized Brannen family stays on the Koide cone  (max |K(delta)-2/3| = 6.66e-16)
+  [PASS] (A2) The unit Koide locus has fixed singlet amplitude  (singlet = 0.707106781187)
+  [PASS] (A3) The unit Koide locus has fixed doublet radius  (doublet radius = 0.707106781187)
+  [PASS] (A4) The positive charged-lepton sector is a proper sub-arc, not the full circle  (positive fraction of sampled deltas = 0.2497)
+
+(B) Ambient-S^2 monopole support only
+------------------------------------------------------------------------
+  [PASS] (B1) The auxiliary ambient-S^2 wedge arithmetic reproduces 2/9  (delta_aux = 0.222222222222)
+  [PASS] (B2) The same monopole connection restricted to the actual Koide latitude does not give 2/9  (delta_lat = 0.032543690979)
+
+(C) Actual selected-line projective doublet ray
+------------------------------------------------------------------------
+  [PASS] (C1) The selected first branch stays exactly on the Koide cone  (max |Q_sel-2/3| = 5.55e-16)
+  [PASS] (C2) The selected-line Fourier coefficients have fixed moduli and conjugate phases  (coeffs = (1/sqrt(2), 1/2 e^{i theta}, 1/2 e^{-i theta}))
+  [PASS] (C3) The projective C_3 doublet coordinate has the forced doubled phase e^{-2 i theta}  (ell(theta) = [1 : e^{-2 i theta}])
+  [PASS] (C4) There is a unique unphased first-branch point with theta = 2 pi / 3  (m_0 = -0.265815998702)
+  [PASS] (C5) The positivity threshold carries the exact offset pi / 12  (m_pos = -1.295794904067)
+  [PASS] (C6) The selected-line scalar and Berry offset satisfy one exact branch relation  (kappa_sel(delta) = -sqrt(3) cos(delta+pi/6)/(sqrt(2)+sin(delta+pi/6)))
+  [PASS] (C7) On the first branch the selected-line scalar and Berry offset are one-to-one  (delta in (0.000015, 0.261770))
+  [PASS] (C8) The tautological equator connection is A = dtheta  (A(theta_2/9) = 0.999999998311)
+  [PASS] (C9) Solving delta(m)=2/9 on the first branch gives one unique selected point  (m_Berry = -1.160443440065)
+  [PASS] (C10) Berry holonomy from the unphased point to that point is exactly 2/9  (hol = 0.222222222222)
+  [PASS] (C11) The old H_* witness is only a near-coincident compatibility check  (dm = +2.60e-05, dkappa = -5.92e-06)
+
+(D) Natural selected-slice Berry selector no-go
+------------------------------------------------------------------------
+  [PASS] (D1) Lower-eigenline geometric phase from the unphased point is not 2/9 at the Berry-selected point  (gamma = 0.178148199333)
+  [PASS] (D2) Lower-eigenline geometric phase from threshold is not 2/9 at the Berry-selected point  (gamma = -0.014800760782)
+  [PASS] (D3) Upper-eigenline geometric phase from the unphased point is not 2/9 at the Berry-selected point  (gamma = 0.276339441619)
+  [PASS] (D4) Solving gamma_lower(m_0 -> m) = delta(m) selects a different point than the Berry-selected point  (m_sel = -0.876776930055, m_Berry = -1.160443440065)
+
+(E) Retained circulant moduli carry zero Berry phase
+------------------------------------------------------------------------
+  [PASS] (E1) A fixed Fourier basis diagonalizes the whole circulant delta-family  (max offdiag = 4.62e-16)
+  [PASS] (E2) Berry connection of the circulant eigenvectors is zero  (max |A_k| = 0.00e+00)
+  [PASS] (E3) The symmetric-gauge Koide state has zero connection on delta-moduli  (max |A_state| = 2.52e-08)
+
+========================================================================
+PASS=24 FAIL=0
+========================================================================
+
+----- stderr -----
+

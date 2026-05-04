@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/wigner_mode_low_d_sublattice_check.py
+runner_sha256: e0d5c64040e1116068b17d2863ac64c9d2d853d9c67293f00b876fa50568155a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================
+WIGNER MODE ON 1D/2D SUBLATTICES CHECK
+========================================================================
+
+------------------------------------------------------------------------
+TEST 1: construct a symmetric Hamiltonian with [Q, H] = 0
+------------------------------------------------------------------------
+  example Q sector labels: [0, 1, 2, 3, 4]
+  ||[Q, H]||_F = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: Gibbs state of symmetric H commutes with Q
+------------------------------------------------------------------------
+  ||[Q, ρ_β]||_F = 8.267e-17
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: CMW IR-integral grows in d <= 2
+------------------------------------------------------------------------
+  I_1(L=16) = 1.3281; I_1(L=32) = 2.6641
+  I_2(L=16) = 0.4899; I_2(L=32) = 0.6003
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: Noether current conservation is compatible with no SSB
+------------------------------------------------------------------------
+  Noether's theorem holds whenever there's a continuous symmetry of the action,
+  Noether supplies current conservation for an action symmetry;
+  CMW supplies no finite-temperature SSB in d <= 2 under its hypotheses.
+  STATUS: PASS
+
+========================================================================
+  Test 1 ([Q, H] = 0 in symmetric H):            PASS
+  Test 2 ([Q, rho_beta] = 0):                    PASS
+  Test 3 (CMW IR growth in d<=2):                PASS
+  Test 4 (Noether/CMW compatibility):            PASS
+  OVERALL: PASS
+
+----- stderr -----
+

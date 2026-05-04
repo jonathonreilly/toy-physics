@@ -1,0 +1,111 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_magnitudes_structural_counts.py
+runner_sha256: 8b5ecfdb334a3338dfb458689e807fb25012405527e3ea87832f28a4c47ba4af
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================================
+CKM structural-counts off-diagonal magnitude audit
+See docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Authority checks
+----------------------------------------------------------------------------------------
+  [PASS] authority present: docs/ALPHA_S_DERIVED_NOTE.md
+  [PASS] authority present: docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md
+  [PASS] authority present: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+  [PASS] authority present: docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+  [PASS] authority present: docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md
+  [PASS] authority present: docs/CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md
+  [PASS] authority present: docs/CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md
+  [PASS] authority present: docs/CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md
+  [PASS] scope guard present: This note does **not** claim:
+  [PASS] scope guard present: - dimension uniqueness from `|V_ub|`;
+  [PASS] scope guard present: - any reliance on `2d + 3 = n_color^2`;
+  [PASS] scope guard present: - any Koide, three-sector, or cross-lane closure;
+
+----------------------------------------------------------------------------------------
+Retained CKM structural counts
+----------------------------------------------------------------------------------------
+  N_pair   = 2
+  N_color  = 3
+  N_quark  = 6
+  alpha_s(v) = 0.103303816122267
+  rho      = 0.166666666666667
+  eta^2    = 0.138888888888889
+  [PASS] N_pair = 2
+  [PASS] N_color = 3
+  [PASS] N_quark = N_pair N_color = 6
+  [PASS] rho = 1/N_quark = 1/6
+  [PASS] eta^2 = (N_quark-1)/N_quark^2 = 5/36
+  [PASS] rho^2 + eta^2 = 1/N_quark = 1/6
+
+----------------------------------------------------------------------------------------
+(M1)-(M3): V_us, V_cb, V_ts
+----------------------------------------------------------------------------------------
+  |V_us|_0^2 = alpha_s(v)/N_pair             = 0.051651908061
+  |V_cb|_0^2 = alpha_s(v)^2/(N_pair N_color) = 0.001778613071
+  |V_ts|_0^2 = alpha_s(v)^2/(N_pair N_color) = 0.001778613071
+  [PASS] (M1) |V_us|_0^2 = alpha_s(v)/2
+  [PASS] (M2) |V_cb|_0^2 = alpha_s(v)^2/6
+  [PASS] (M3) |V_ts|_0^2 = |V_cb|_0^2
+
+----------------------------------------------------------------------------------------
+(M4): compact V_ub structural-counts form
+----------------------------------------------------------------------------------------
+  Wolfenstein form A^2 lambda^6 (rho^2+eta^2) = 1.531145980244e-05
+  compact form alpha_s(v)^3/(8 N_color^2)     = 1.531145980244e-05
+  [PASS] (M4) Wolfenstein and compact V_ub forms agree
+  [PASS] (M4) |V_ub|_0^2 = alpha_s(v)^3/72
+
+----------------------------------------------------------------------------------------
+Critical cancellation: N_pair drops out of V_ub
+----------------------------------------------------------------------------------------
+  expanded structural-counts form = 1.531145980244e-05
+  compact no-N_pair form          = 1.531145980244e-05
+  [PASS] N_pair cancels exactly in |V_ub|_0^2
+
+----------------------------------------------------------------------------------------
+(M5): V_td structural-counts form
+----------------------------------------------------------------------------------------
+  Wolfenstein form A^2 lambda^6 ((1-rho)^2+eta^2) = 7.655729901221e-05
+  structural-counts form                          = 7.655729901221e-05
+  [PASS] R_t^2 = (1-rho)^2 + eta^2 = 1-rho = 5/6
+  [PASS] (M5) Wolfenstein and structural V_td forms agree
+  [PASS] (M5) |V_td|_0^2 = 5 alpha_s(v)^3/72
+
+----------------------------------------------------------------------------------------
+Observation-side comparators
+----------------------------------------------------------------------------------------
+  |V_us|^2 : theory = 5.1652e-02, PDG = 5.0310e-02, ratio = 1.0267
+  [PASS] |V_us|^2 within 10% of PDG
+  |V_cb|^2 : theory = 1.7786e-03, PDG = 1.6810e-03, ratio = 1.0581
+  [PASS] |V_cb|^2 within 10% of PDG
+  |V_ts|^2 : theory = 1.7786e-03, PDG = 1.6565e-03, ratio = 1.0737
+  [PASS] |V_ts|^2 within 10% of PDG
+  |V_ub|^2 : theory = 1.5311e-05, PDG = 1.4592e-05, ratio = 1.0493
+  [PASS] |V_ub|^2 within 10% of PDG
+  |V_td|^2 : theory = 7.6557e-05, PDG = 7.3616e-05, ratio = 1.0399
+  [PASS] |V_td|^2 within 10% of PDG
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Retained CKM structural-counts surface:
+    |V_us|_0^2 = alpha_s(v)/N_pair
+    |V_cb|_0^2 = alpha_s(v)^2/(N_pair N_color)
+    |V_ts|_0^2 = alpha_s(v)^2/(N_pair N_color)
+    |V_ub|_0^2 = alpha_s(v)^3/(8 N_color^2)
+    |V_td|_0^2 = (N_quark-1) alpha_s(v)^3/(8 N_color^2)
+
+  New packaging result: the N_pair factor cancels exactly in |V_ub|_0^2.
+
+========================================================================================
+TOTAL: PASS=32, FAIL=0
+========================================================================================
+
+----- stderr -----
+

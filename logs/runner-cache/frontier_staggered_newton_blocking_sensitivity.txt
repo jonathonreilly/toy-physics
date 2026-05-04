@@ -1,0 +1,103 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_newton_blocking_sensitivity.py
+runner_sha256: d3f45450a7fcfcdbad7eb95fbd73dadc58354665f14e390ffaddb70d5de8df74
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 20.68
+status: ok
+----- stdout -----
+================================================================================================
+STAGGERED NEWTON BLOCKING SENSITIVITY: OPEN 3D EXTERNAL-SOURCE SURFACE
+================================================================================================
+MASS=0.3, G=50.0, SOURCE_STRENGTH=0.0005, DT=0.1, N_STEPS=12, SIGMA=1.3
+sides=(12, 14, 16), distances=(3, 4, 5, 6)
+schemes: raw, z2, cube2, cube4
+
+raw block=(1, 1, 1)
+------------------------------------------------------------------------------------------------
+side=12 d=3 accel=+1.191603e-04 delta_final=+1.704574e-04 fitR2=0.9932
+side=12 d=4 accel=+6.980232e-05 delta_final=+1.009860e-04 fitR2=0.9932
+side=12 d=5 accel=+4.496819e-05 delta_final=+6.483019e-05 fitR2=0.9932
+side=12 d=6 accel=+3.172216e-05 delta_final=+4.545003e-05 fitR2=0.9932
+side=14 d=3 accel=+7.848318e-05 delta_final=+1.206499e-04 fitR2=0.9929
+side=14 d=4 accel=+4.572290e-05 delta_final=+7.204850e-05 fitR2=0.9928
+side=14 d=5 accel=+2.785351e-05 delta_final=+4.453654e-05 fitR2=0.9927
+side=14 d=6 accel=+1.826761e-05 delta_final=+2.958592e-05 fitR2=0.9926
+side=16 d=3 accel=+1.191603e-04 delta_final=+1.704581e-04 fitR2=0.9932
+side=16 d=4 accel=+6.980234e-05 delta_final=+1.009867e-04 fitR2=0.9932
+side=16 d=5 accel=+4.496822e-05 delta_final=+6.483089e-05 fitR2=0.9932
+side=16 d=6 accel=+3.172219e-05 delta_final=+4.545081e-05 fitR2=0.9932
+  side=12: |a| ~ d^-1.914  R^2=0.9999
+  side=14: |a| ~ d^-2.104  R^2=0.9975
+  side=16: |a| ~ d^-1.914  R^2=0.9999
+  global: |a| ~ d^-1.977  R^2=0.8411  all_toward=True  side_span=0.190
+
+z2 block=(1, 1, 2)
+------------------------------------------------------------------------------------------------
+side=12 d=3 accel=+1.157447e-04 delta_final=+1.675985e-04 fitR2=0.9932
+side=12 d=4 accel=+6.548020e-05 delta_final=+9.590743e-05 fitR2=0.9931
+side=12 d=5 accel=+4.194932e-05 delta_final=+6.139493e-05 fitR2=0.9931
+side=12 d=6 accel=+2.951493e-05 delta_final=+4.292154e-05 fitR2=0.9932
+side=14 d=3 accel=+8.278396e-05 delta_final=+1.248097e-04 fitR2=0.9929
+side=14 d=4 accel=+5.038097e-05 delta_final=+7.740249e-05 fitR2=0.9929
+side=14 d=5 accel=+3.119722e-05 delta_final=+4.827338e-05 fitR2=0.9929
+side=14 d=6 accel=+2.077349e-05 delta_final=+3.239099e-05 fitR2=0.9928
+side=16 d=3 accel=+1.157448e-04 delta_final=+1.676006e-04 fitR2=0.9932
+side=16 d=4 accel=+6.548030e-05 delta_final=+9.591005e-05 fitR2=0.9931
+side=16 d=5 accel=+4.194943e-05 delta_final=+6.139755e-05 fitR2=0.9931
+side=16 d=6 accel=+2.951503e-05 delta_final=+4.292393e-05 fitR2=0.9932
+  side=12: |a| ~ d^-1.975  R^2=1.0000
+  side=14: |a| ~ d^-1.997  R^2=0.9961
+  side=16: |a| ~ d^-1.975  R^2=1.0000
+  global: |a| ~ d^-1.982  R^2=0.9232  all_toward=True  side_span=0.022
+
+cube2 block=(2, 2, 2)
+------------------------------------------------------------------------------------------------
+side=12 d=3 accel=+1.157447e-04 delta_final=+1.675985e-04 fitR2=0.9932
+side=12 d=4 accel=+6.548021e-05 delta_final=+9.590743e-05 fitR2=0.9931
+side=12 d=5 accel=+4.194932e-05 delta_final=+6.139493e-05 fitR2=0.9931
+side=12 d=6 accel=+2.951493e-05 delta_final=+4.292154e-05 fitR2=0.9932
+side=14 d=3 accel=+8.278396e-05 delta_final=+1.248097e-04 fitR2=0.9929
+side=14 d=4 accel=+5.038097e-05 delta_final=+7.740249e-05 fitR2=0.9929
+side=14 d=5 accel=+3.119722e-05 delta_final=+4.827338e-05 fitR2=0.9929
+side=14 d=6 accel=+2.077349e-05 delta_final=+3.239099e-05 fitR2=0.9928
+side=16 d=3 accel=+1.157448e-04 delta_final=+1.676006e-04 fitR2=0.9932
+side=16 d=4 accel=+6.548030e-05 delta_final=+9.591005e-05 fitR2=0.9931
+side=16 d=5 accel=+4.194943e-05 delta_final=+6.139755e-05 fitR2=0.9931
+side=16 d=6 accel=+2.951503e-05 delta_final=+4.292393e-05 fitR2=0.9932
+  side=12: |a| ~ d^-1.975  R^2=1.0000
+  side=14: |a| ~ d^-1.997  R^2=0.9961
+  side=16: |a| ~ d^-1.975  R^2=1.0000
+  global: |a| ~ d^-1.982  R^2=0.9232  all_toward=True  side_span=0.022
+
+cube4 block=(4, 4, 4)
+------------------------------------------------------------------------------------------------
+side=12 d=3 accel=+1.679796e-04 delta_final=+2.415244e-04 fitR2=0.9933
+side=12 d=4 accel=+9.092458e-05 delta_final=+1.328685e-04 fitR2=0.9932
+side=12 d=5 accel=+5.579341e-05 delta_final=+8.199794e-05 fitR2=0.9932
+side=12 d=6 accel=+3.796145e-05 delta_final=+5.591779e-05 fitR2=0.9932
+side=14 d=3 accel=+2.924898e-04 delta_final=+3.970663e-04 fitR2=0.9935
+side=14 d=4 accel=+2.051700e-04 delta_final=+2.774978e-04 fitR2=0.9935
+side=14 d=5 accel=+1.556565e-04 delta_final=+2.095462e-04 fitR2=0.9935
+side=14 d=6 accel=+1.246862e-04 delta_final=+1.672459e-04 fitR2=0.9935
+side=16 d=3 accel=+6.350984e-05 delta_final=+9.367432e-05 fitR2=0.9929
+side=16 d=4 accel=+4.003588e-05 delta_final=+5.894810e-05 fitR2=0.9929
+side=16 d=5 accel=+2.810528e-05 delta_final=+4.079324e-05 fitR2=0.9930
+side=16 d=6 accel=+2.106843e-05 delta_final=+2.992631e-05 fitR2=0.9931
+  side=12: |a| ~ d^-2.150  R^2=1.0000
+  side=14: |a| ~ d^-1.231  R^2=1.0000
+  side=16: |a| ~ d^-1.592  R^2=1.0000
+  global: |a| ~ d^-1.658  R^2=0.2808  all_toward=True  side_span=0.919
+
+================================================================================================
+SUMMARY
+================================================================================================
+  raw: exponent=-1.977  R^2=0.8411  all_toward=True  side_span=0.190
+   z2: exponent=-1.982  R^2=0.9232  all_toward=True  side_span=0.022
+cube2: exponent=-1.982  R^2=0.9232  all_toward=True  side_span=0.022
+cube4: exponent=-1.658  R^2=0.2808  all_toward=True  side_span=0.919
+
+runtime=20.5s
+
+----- stderr -----
+

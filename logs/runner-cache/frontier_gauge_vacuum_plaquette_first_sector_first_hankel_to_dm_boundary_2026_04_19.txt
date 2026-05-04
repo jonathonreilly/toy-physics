@@ -1,0 +1,48 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_2026_04_19.py
+runner_sha256: 53e4d3bde47e9caf48706201d1ba8411788c2f2b51830e38cdf590f23a5207cb
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 23.62
+status: ok
+----- stdout -----
+======================================================================================================================
+GAUGE-VACUUM PLAQUETTE FIRST-SECTOR FIRST-HANKEL TO DM BOUNDARY
+======================================================================================================================
+
+Question:
+  Where exactly does the live-route seam between the Wilson side and the
+  already-closed nilpotent-chain packet-to-DM boundary now sit?
+
+  selected (m1, m2)                           = (0.430754683575, 0.249382329102)
+  selected (alpha0, beta1)                    = (0.430754683575, 0.252651403480)
+  beta1 from moments sqrt(m2 - m1^2)           = 0.252651403480
+  Perron eigenvalue                           = 3.536529177387
+  transfer symmetry / Perron-swap errors      = (2.220e-16, 4.441e-16)
+  min eigenvalue(T_sel)                       = -1.693321e-16
+
+  [PASS] The DM-boundary note records that the nilpotent-chain packet-to-DM boundary already closes the downstream local interface once the actual Wilson/PF packet is supplied
+  [PASS] The DM-boundary note names the earliest Wilson-side scalar packet feeding that boundary as the first Hankel packet (m1,m2), and a canonical realization (m1,m2) is finite and well-defined  ((m1,m2)=(0.430755,0.249382))
+  [PASS] Equivalently (note records first Jacobi layer (alpha0,beta1)), the canonical realization satisfies alpha0 = m1 and beta1^2 = m2 - m1^2 to machine precision  ((|alpha0-m1|,|beta1-sqrt(m2-m1^2)|)=(2.220e-16,1.665e-16))
+  [PASS] The selected first-layer packet comes from a well-defined positive conjugation-symmetric factorized transfer operator with a strictly positive Perron eigenvalue  ((eig,sym,psi_swap,eig_min)=(3.537e+00,2.220e-16,4.441e-16,-1.693e-16))
+  [PASS] The DM-boundary note locates the quantitative DM seam exactly at the first-Hankel layer of K_6^env after identity-rim reduction, and records that the current stack still leaves that packet open on the live route
+
+======================================================================================================================
+RESULT
+======================================================================================================================
+  Seam localization (structural):
+    - downstream packet-to-DM boundary already closes once a Wilson/PF
+      packet is supplied (architectural fact recorded in the parent note)
+    - upstream open object is the first Hankel packet (m1,m2),
+      equivalently the first Jacobi layer (alpha0,beta1)
+    - one canonical realization on the minimal-bulk completion branch:
+        (m1, m2)         = (0.430754683575, 0.249382329102)
+        (alpha0, beta1)  = (0.430754683575, 0.252651403480)
+    - the live-route seam therefore starts exactly at the first-Hankel
+      layer of K_6^env after identity-rim reduction
+
+PASS=5 FAIL=0
+SUMMARY: PASS=5 FAIL=0
+
+----- stderr -----
+

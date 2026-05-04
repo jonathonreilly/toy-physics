@@ -1,0 +1,93 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_q_normalized_second_order_effective_action.py
+runner_sha256: 65243494b35d26953f5386343ba346a2282a33905e1ee61623cb080d35c20ea7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.76
+status: ok
+----- stdout -----
+
+========================================================================================
+A. Exact normalized second-order block carrier
+========================================================================================
+[PASS] A.1 trace normalization sends the positive block carrier to Tr(Y) = 2
+       Y = diag(2*e_plus/(e_perp + e_plus), 2*e_perp/(e_perp + e_plus))
+[PASS] A.2 the normalized carrier is exactly scale-free under common positive rescaling
+[PASS] A.3 equality on the normalized carrier is equivalent to equality of the original block powers
+       So Y = I_2 is exactly E_+ = E_perp.
+
+========================================================================================
+B. Exact reduced observable generator on the two-slot carrier
+========================================================================================
+[PASS] B.1 block additivity gives W_red(K1,K2) = log(1+K1) + log(1+K2)
+       W_red = log(k1 + 1) + log(k2 + 1)
+[PASS] B.2 pure-block normalization recovers the one-block generator exactly
+[PASS] B.3 therefore W_red is exactly log det(I + K) on the normalized 2x2 positive carrier
+       No quartic potential, primitive adoption, or unreduced multiplicity weighting is used.
+
+========================================================================================
+C. Exact Legendre-dual effective action
+========================================================================================
+[PASS] C.1 the unique dual maximizer is K_* = Y^(-1) - I on each block
+       K_* = ((1 - y1_sym)/y1_sym, (1 - y2_sym)/y2_sym)
+[PASS] C.2 the source-side dual is strictly concave at the maximizer
+       Hessian at K_* = Matrix([[-y1_sym**2, 0], [0, -y2_sym**2]])
+[PASS] C.3 the exact Legendre dual is S_eff(Y) = Tr(Y) - log det(Y) - 2
+       S_eff = y1_sym + y2_sym - log(y1_sym*y2_sym) - 2
+
+========================================================================================
+D. Direct source-free candidate point on the normalized carrier
+========================================================================================
+[PASS] D.1 on the admitted reduced carrier, zero external source gives Y = I_2 directly through K = Y^(-1) - I
+       Source-free closure is Y = (I + K)^(-1)|_(K=0) = I_2.
+[PASS] D.2 on Tr(Y)=2 the effective action reduces to -log(y(2-y))
+       S_eff|_Tr=2 = -log(-y*(y - 2))
+[PASS] D.3 the normalized carrier has a unique interior stationary point at Y = I_2
+       critical y-values = [1]
+[PASS] D.4 the stationary point is a strict minimum
+       d^2 S / dy^2 at y=1 = 2
+[PASS] D.5 on the admitted carrier, the minimum statement is consistent with the source-free point
+       The source-free dual equation already fixes Y = I_2 before appealing to convexity.
+
+========================================================================================
+E. Exact Koide consequence
+========================================================================================
+[PASS] E.1 Y = I_2 pulls back exactly to E_+ = E_perp
+       Equivalent up to multiplication by the positive denominator E_+ + E_perp.
+[PASS] E.2 equal block power is exactly 2 r0^2 = r1^2 + r2^2
+[PASS] E.3 in circulant variables this is exactly a^2 = 2|b|^2, i.e. kappa = 2
+[PASS] E.4 therefore the normalized effective-action minimum gives exact Koide Q = 2/3
+       Q = 2/3
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 18/18
+  [PASS] A.1 trace normalization sends the positive block carrier to Tr(Y) = 2
+  [PASS] A.2 the normalized carrier is exactly scale-free under common positive rescaling
+  [PASS] A.3 equality on the normalized carrier is equivalent to equality of the original block powers
+  [PASS] B.1 block additivity gives W_red(K1,K2) = log(1+K1) + log(1+K2)
+  [PASS] B.2 pure-block normalization recovers the one-block generator exactly
+  [PASS] B.3 therefore W_red is exactly log det(I + K) on the normalized 2x2 positive carrier
+  [PASS] C.1 the unique dual maximizer is K_* = Y^(-1) - I on each block
+  [PASS] C.2 the source-side dual is strictly concave at the maximizer
+  [PASS] C.3 the exact Legendre dual is S_eff(Y) = Tr(Y) - log det(Y) - 2
+  [PASS] D.1 on the admitted reduced carrier, zero external source gives Y = I_2 directly through K = Y^(-1) - I
+  [PASS] D.2 on Tr(Y)=2 the effective action reduces to -log(y(2-y))
+  [PASS] D.3 the normalized carrier has a unique interior stationary point at Y = I_2
+  [PASS] D.4 the stationary point is a strict minimum
+  [PASS] D.5 on the admitted carrier, the minimum statement is consistent with the source-free point
+  [PASS] E.1 Y = I_2 pulls back exactly to E_+ = E_perp
+  [PASS] E.2 equal block power is exactly 2 r0^2 = r1^2 + r2^2
+  [PASS] E.3 in circulant variables this is exactly a^2 = 2|b|^2, i.e. kappa = 2
+  [PASS] E.4 therefore the normalized effective-action minimum gives exact Koide Q = 2/3
+
+VERDICT: on the exact first-live second-order carrier, the
+source-free normalized effective-action route lands at Y = I_2.
+That is exactly E_+ = E_perp, hence kappa = 2 and Q = 2/3.
+
+This validates the internal algebra of the admitted second-order route.
+It does not by itself prove the physical source-free law.
+
+----- stderr -----
+

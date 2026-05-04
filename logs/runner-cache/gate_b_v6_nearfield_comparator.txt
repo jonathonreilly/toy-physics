@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_v6_nearfield_comparator.py
+runner_sha256: 906d07309d79c53579b1b5daa85ac6e1c0595d89ed5ca190f97bc6332eaf3d4b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.31
+status: ok
+----- stdout -----
+============================================================================================
+GATE B V6 NEAR-FIELD COMPARATOR
+  Compare the retained structured-growth row against the ordered-lattice control
+============================================================================================
+
+Setup: h=0.5, layers=13, half-width=5, drift=0.3, restore=0.5, seeds=(5, 18, 31, 44)
+Near-field grid: y targets=(1.0, 1.5, 2.0), strengths=(0.75, 1.0, 1.25), field scale=5e-05
+Coverage: exact control 9 cases; grown row 4 seeds x 9 cases = 36 cases
+
+OVERALL
+  exact grid: 6/9 TOWARD, mean_delta=+0.000007
+  grown row:  33/36 TOWARD, mean_delta=+0.000021
+
+BY Y TARGET
+y_mass exact_toward   exact_mean  grown_toward   grown_mean
+-------------------------------------------------------------
+   1.0          0/3    -0.000019          9/12    +0.000006
+   1.5          3/3    +0.000011         12/12    +0.000023
+   2.0          3/3    +0.000030         12/12    +0.000035
+
+CLOSEST BUCKET DETAIL (y=1.0)
+  exact grid: 0/3 TOWARD, deltas=[-0.000014, -0.000019, -0.000023]
+  grown seed  5: 3/3 TOWARD, deltas=[+0.000019, +0.000025, +0.000032]
+  grown seed 18: 3/3 TOWARD, deltas=[+0.000000, +0.000000, +0.000000]
+  grown seed 31: 3/3 TOWARD, deltas=[+0.000002, +0.000002, +0.000003]
+  grown seed 44: 0/3 TOWARD, deltas=[-0.000004, -0.000005, -0.000006]
+
+SAFE INTERPRETATION
+  - The mixed v6 signal is confined to the closest near-field bucket.
+  - On that bucket, the ordered-lattice control is already AWAY across all
+    three tested strengths.
+  - The retained grown row is better than the exact control there: three of
+    four seeds stay TOWARD at y=1.0, and only one seed flips all three cases.
+  - So the frozen v6 mixed result is a bounded near-field optics issue, not
+    evidence that the structured-growth rule collapses relative to the exact grid.
+
+Total time: 0.3s
+============================================================================================
+
+----- stderr -----
+

@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/structureless_dag_gravity_harness.py
+runner_sha256: 7815fe103e0571c093fc1b13cf8b5aa8b52ad0dad875819c2f7006444f494332
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.21
+status: ok
+----- stdout -----
+==============================================================================
+STRUCTURELESS RANDOM CAUSAL DAG GRAVITY HARNESS
+==============================================================================
+Setup: random 3D points sorted by x; edges i->j when x_j>x_i and distance <= 0.35; phase k=1.0; kernel 1/L^2
+Source slab: x<=0.05; detector slab: x>=0.95; mass node: highest-z node in the mid-x slab
+Seed sweep: 8 seeds per size, strengths=[0.001, 0.002, 0.005, 0.01], controls: no-field
+Retained claim: on this bounded pocket, gravity is noisy in sign but the positive-shift rows remain close to linear in source strength.
+
+SIZE n=200
+------------------------------------------------------------------------------
+seed  toward valid    mean_delta      F~M      R^2     no-field
+   0       4     4 +2.874367e-07     1.00    1.000     +0.0e+00
+   1       4     4 +8.972455e-09     1.00    1.000     +0.0e+00
+   2       4     4 +5.586709e-06     1.00    1.000     +0.0e+00
+   3       4     4 +2.558630e-11     1.00    1.000     +0.0e+00
+   4       0     4 -5.275225e-13      n/a      n/a     +0.0e+00
+   5       4     4 +1.632028e-04     1.01    1.000     +0.0e+00
+   6       4     4 +3.204390e-10     1.00    1.000     +0.0e+00
+   7       4     4 +1.356563e-10     1.00    1.000     +0.0e+00
+summary: TOWARD=28/32 (87.5%), seed-local F~M median=1.00, mean=1.00 (R^2 median=1.000), no-field=+0.0e+00
+
+SIZE n=500
+------------------------------------------------------------------------------
+seed  toward valid    mean_delta      F~M      R^2     no-field
+   0       4     4 +9.107120e-08     1.00    1.000     +0.0e+00
+   1       4     4 +6.960327e-05     1.00    1.000     +0.0e+00
+   2       4     4 +1.727067e-07     1.00    1.000     +0.0e+00
+   3       0     4 -1.751091e-11      n/a      n/a     +0.0e+00
+   4       4     4 +2.364713e-06     1.00    1.000     +0.0e+00
+   5       0     4 -1.886307e-09      n/a      n/a     +0.0e+00
+   6       4     4 +1.252699e-03     1.00    1.000     +0.0e+00
+   7       3     4 +4.163336e-17     0.00    1.000     +0.0e+00
+summary: TOWARD=23/32 (71.9%), seed-local F~M median=1.00, mean=0.83 (R^2 median=1.000), no-field=+0.0e+00
+
+Interpretation:
+- This is a bounded random-DAG probe, not a graph-universality theorem.
+- The safe read is: structureless causal DAGs can show TOWARD rows, and when they do, the source-strength response is close to linear in this pocket.
+- The sign remains seed-sensitive, so the claim stays narrow and review-safe.
+
+----- stderr -----
+

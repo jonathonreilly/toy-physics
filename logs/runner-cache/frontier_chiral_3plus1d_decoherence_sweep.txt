@@ -1,0 +1,62 @@
+===== runner cache v1 =====
+runner: scripts/frontier_chiral_3plus1d_decoherence_sweep.py
+runner_sha256: d0f2e1d8eca5ff5a6b6880271a47c5ec111a40311a65236944455679b74f42ad
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 8.89
+status: ok
+----- stdout -----
+==============================================================================
+FRONTIER: 3+1D CHIRAL DECOHERENCE SWEEP
+==============================================================================
+Same periodic 3+1D architecture for coherent, classical, and phase-kill modes.
+theta0=0.3, strength=0.0005, mass offset=3
+
+   n    L     coherent     dir    classical     dir   phase_kill     dir
+---- ---- ------------ ------- ------------ ------- ------------ -------
+  15   12 +2.630200e-04  TOWARD +1.012126e-04  TOWARD +1.012126e-04  TOWARD
+  15   14 +4.079291e-04  TOWARD -5.656477e-04    AWAY -5.656477e-04    AWAY
+  15   16 -2.548923e-05    AWAY -5.317709e-04    AWAY -5.317709e-04    AWAY
+  15   18 -4.029600e-04    AWAY -3.099542e-05    AWAY -3.099542e-05    AWAY
+  15   20 -4.457980e-04    AWAY +1.223106e-04  TOWARD +1.223106e-04  TOWARD
+  15   28 +1.303046e-04  TOWARD +8.634204e-05  TOWARD +8.634204e-05  TOWARD
+
+  21   12 -6.466338e-04    AWAY -6.869156e-05    AWAY -6.869156e-05    AWAY
+  21   14 +7.899738e-04  TOWARD +1.422026e-04  TOWARD +1.422026e-04  TOWARD
+  21   16 +2.869701e-04  TOWARD +2.638387e-04  TOWARD +2.638387e-04  TOWARD
+  21   18 +8.397128e-04  TOWARD -2.742992e-04    AWAY -2.742992e-04    AWAY
+  21   20 +6.085079e-04  TOWARD -3.004878e-04    AWAY -3.004878e-04    AWAY
+  21   28 -3.588288e-04    AWAY +2.091302e-04  TOWARD +2.091302e-04  TOWARD
+
+  23   12 -7.969081e-04    AWAY -2.179192e-04    AWAY -2.179192e-04    AWAY
+  23   14 +7.634360e-04  TOWARD +1.051775e-06  TOWARD +1.051775e-06  TOWARD
+  23   16 +1.986046e-04  TOWARD +1.269388e-04  TOWARD +1.269388e-04  TOWARD
+  23   18 +8.038236e-04  TOWARD -4.609444e-04    AWAY -4.609444e-04    AWAY
+  23   20 +5.684307e-04  TOWARD -3.735065e-04    AWAY -3.735065e-04    AWAY
+  23   28 -3.360774e-04    AWAY -2.713962e-04    AWAY -2.713962e-04    AWAY
+
+  25   12 +8.279451e-04  TOWARD +1.407277e-03  TOWARD +1.407277e-03  TOWARD
+  25   14 -4.040553e-04    AWAY +5.287171e-05  TOWARD +5.287171e-05  TOWARD
+  25   16 +8.136712e-04  TOWARD +2.107350e-04  TOWARD +2.107350e-04  TOWARD
+  25   18 +1.351151e-04  TOWARD +2.946761e-04  TOWARD +2.946761e-04  TOWARD
+  25   20 +1.079346e-03  TOWARD -2.607912e-04    AWAY -2.607912e-04    AWAY
+  25   28 -3.953912e-06    AWAY -2.288848e-04    AWAY -2.288848e-04    AWAY
+
+  31   12 +8.282434e-04  TOWARD +1.407637e-03  TOWARD +1.407637e-03  TOWARD
+  31   14 +1.072669e-03  TOWARD +1.530553e-03  TOWARD +1.530553e-03  TOWARD
+  31   16 -3.310049e-04    AWAY +8.183851e-05  TOWARD +8.183851e-05  TOWARD
+  31   18 +6.366130e-04  TOWARD +1.963655e-04  TOWARD +1.963655e-04  TOWARD
+  31   20 -1.796970e-06    AWAY +2.469713e-04  TOWARD +2.469713e-04  TOWARD
+  31   28 +3.126663e-04  TOWARD -2.404094e-04    AWAY -2.404094e-04    AWAY
+
+==============================================================================
+SUMMARY
+==============================================================================
+coherent AWAY windows: [(15, 16), (15, 18), (15, 20), (21, 12), (21, 28), (23, 12), (23, 28), (25, 14), (25, 28), (31, 16), (31, 20)]
+classical AWAY windows: [(15, 14), (15, 16), (15, 18), (21, 12), (21, 18), (21, 20), (23, 12), (23, 18), (23, 20), (23, 28), (25, 20), (25, 28), (31, 28)]
+phase-kill AWAY windows: [(15, 14), (15, 16), (15, 18), (21, 12), (21, 18), (21, 20), (23, 12), (23, 18), (23, 20), (23, 28), (25, 20), (25, 28), (31, 28)]
+
+Interpretation: if AWAY windows remain in the classical and phase-kill columns, decoherence does not remove the 3+1D sign problem on this periodic architecture.
+
+----- stderr -----
+

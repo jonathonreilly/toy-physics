@@ -1,0 +1,41 @@
+===== runner cache v1 =====
+runner: scripts/persistent_object_compact_update_probe.py
+runner_sha256: 62c5c7c74ddfd2ae78c65b0201d58f5d87f574b8e65baa0f8e89bb73d58983eb
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 102.29
+status: ok
+----- stdout -----
+====================================================================================================
+PERSISTENT OBJECT COMPACT UPDATE PROBE
+  exact h=0.25 lattice, broad control vs compact top-3 update
+====================================================================================================
+h=0.25, W=3, L=6, source_z=2.0, source_nodes=[5320, 5345, 5295, 5321, 5319]
+source strengths=[0.001, 0.002, 0.004, 0.008], updates=3, top_keep=3
+kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.5
+field target max=0.02, fixed gain=1.800031e+00
+
+REDUCTION CHECK
+  zero-source shift: +0.000000e+00
+
+    mode  step      F~M   TOWARD   obj_eff  obj_sup  resp_eff
+------------------------------------------------------------------------------------
+   broad     0     1.00        4/4     4.859    5.000    497.34
+   broad     1     1.00        4/4     4.859    5.000    497.34
+   broad     2     1.00        4/4     4.859    5.000    497.34
+ compact     0     1.00        4/4     3.593    3.667    497.32
+ compact     1     1.00        4/4     3.593    3.667    497.32
+ compact     2     1.00        4/4     3.593    3.667    497.32
+
+SUMMARY
+  broad obj_eff=4.859, obj_sup=5.000, resp_eff=4.789, resp_sup=5.000, det_eff=497.34, overlap=0.971, pass=True
+  compact obj_eff=3.593, obj_sup=3.667, resp_eff=4.788, resp_sup=5.000, det_eff=497.32, overlap=0.929, pass=True
+  result: compact update is a smaller retained object on this family.
+
+FASTEST FALSIFIER
+  If the compact update loses TOWARD, drifts away from F~M≈1, or fails to
+  reduce source effective support below the broad control, then the broad
+  quasi-persistent object remains the smallest retained object on this family.
+
+----- stderr -----
+

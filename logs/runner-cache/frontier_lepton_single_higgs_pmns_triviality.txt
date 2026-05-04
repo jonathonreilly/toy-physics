@@ -1,0 +1,109 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lepton_single_higgs_pmns_triviality.py
+runner_sha256: c6d18aeff78a9bc96bfce0f5f504aa0b71a7418181e989ce9967c11b3da016d1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+========================================================================================
+LEPTON YUKAWA SECTOR: SINGLE-HIGGS PMNS TRIVIALITY THEOREM
+========================================================================================
+
+Atlas / axiom inputs reused:
+  - One-generation matter closure
+  - Three-generation matter structure
+  - Neutrino Dirac monomial no-mixing theorem
+  - single-Higgs fixed-offset lepton Yukawa lanes
+
+Question:
+  Can charged-lepton misalignment rescue PMNS if both lepton Yukawa
+  sectors remain on single-Higgs fixed-offset Z_3 support surfaces?
+
+========================================================================================
+PART 1: ANY SINGLE-OFFSET LEPTON YUKAWA LANE IS EXACTLY PERMUTATIONAL
+========================================================================================
+  [PASS] Retained left-handed generation charges are 0,+1,-1 mod 3  (q_L=[0, 1, 2])
+  [PASS] Retained right-handed generation charges are the conjugate pattern  (q_R=[0, 2, 1])
+  [PASS] Same-generation left/right charges cancel mod 3  ((q_L+q_R) mod 3=[0, 0, 0])
+  [PASS] offset=0: each row has exactly one allowed target  (row sums=[1, 1, 1])
+  [PASS] offset=0: each column has exactly one allowed source  (col sums=[1, 1, 1])
+  [PASS] offset=0: support matches a permutation matrix  (support=
+[[1 0 0]
+ [0 1 0]
+ [0 0 1]])
+  [PASS] offset=1: each row has exactly one allowed target  (row sums=[1, 1, 1])
+  [PASS] offset=1: each column has exactly one allowed source  (col sums=[1, 1, 1])
+  [PASS] offset=1: support matches a permutation matrix  (support=
+[[0 1 0]
+ [0 0 1]
+ [1 0 0]])
+  [PASS] offset=2: each row has exactly one allowed target  (row sums=[1, 1, 1])
+  [PASS] offset=2: each column has exactly one allowed source  (col sums=[1, 1, 1])
+  [PASS] offset=2: support matches a permutation matrix  (support=
+[[0 0 1]
+ [1 0 0]
+ [0 1 0]])
+
+  So any single-Higgs lepton Yukawa lane with one definite effective
+  Z_3 offset lands on the same exact 3-pattern permutation class.
+
+========================================================================================
+PART 2: THE SINGLE-HIGGS CHARGED-LEPTON LANE IS ALSO MONOMIAL
+========================================================================================
+  [PASS] offset=0: Y_e is monomial  (nonzero entries=3)
+  [PASS] offset=0: Y_e factorizes as D_e P  (factorization error=0.00e+00)
+  [PASS] offset=0: Y_e Y_e^dag is diagonal  (offdiag norm=0.00e+00)
+  [PASS] offset=0: charged-lepton singular values are just |coefficients|  (svals=[0.0003 0.06   0.9   ])
+  [PASS] offset=1: Y_e is monomial  (nonzero entries=3)
+  [PASS] offset=1: Y_e factorizes as D_e P  (factorization error=0.00e+00)
+  [PASS] offset=1: Y_e Y_e^dag is diagonal  (offdiag norm=0.00e+00)
+  [PASS] offset=1: charged-lepton singular values are just |coefficients|  (svals=[0.0004 0.07   1.1   ])
+  [PASS] offset=2: Y_e is monomial  (nonzero entries=3)
+  [PASS] offset=2: Y_e factorizes as D_e P  (factorization error=0.00e+00)
+  [PASS] offset=2: Y_e Y_e^dag is diagonal  (offdiag norm=0.00e+00)
+  [PASS] offset=2: charged-lepton singular values are just |coefficients|  (svals=[0.0005 0.05   1.    ])
+
+  So the charged-lepton sector does not provide a hidden single-Higgs
+  left-misalignment route either: it stays on the same monomial class.
+
+========================================================================================
+PART 3: IF BOTH LEPTON LANES STAY SINGLE-HIGGS, PMNS IS TRIVIAL
+========================================================================================
+  [PASS] All single-Higgs neutrino choices keep Y_nu Y_nu^dag diagonal  (max offdiag norm=0.00e+00)
+  [PASS] All single-Higgs charged-lepton choices keep Y_e Y_e^dag diagonal  (max offdiag norm=0.00e+00)
+  [PASS] Any product of lepton left phases/permutations has permutation magnitudes  (permutation row support=1)
+  [PASS] Observed PMNS magnitudes are not compatible with any permutation matrix  (min Frobenius distance=1.300)
+  [PASS] Observed PMNS has more than one large entry in every row  (min entries > 0.2 per row=2)
+
+  Therefore if both lepton Yukawa sectors stay on single-Higgs
+  fixed-offset monomial lanes, the PMNS matrix is trivial up to
+  phases and basis reorderings. That cannot reproduce observation.
+
+========================================================================================
+PART 4: AT LEAST ONE LEPTON SECTOR MUST EXIT THE SINGLE-HIGGS LANE
+========================================================================================
+  [PASS] The exact obstruction leaves a nonempty escape set  (neutrino-side multi-Higgs, charged-lepton extra structure, or other non-monomial breaking)
+  [PASS] The neutrino-side two-Higgs escape is an exact surviving extension class  (see the two-Higgs escape theorem on the neutrino lane)
+  [PASS] The current single-Higgs full-lepton PMNS problem is therefore closed negatively  (single-Higgs monomial lepton sectors cannot explain PMNS)
+
+  This closes the full single-Higgs lepton-sector rescue route.
+  The next honest science question is not whether that route can still
+  work. It cannot. The question is which non-monomial extension is
+  actually derived or selected by the framework.
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact retained-stack answer:
+    - any single-Higgs fixed-offset lepton Yukawa texture is monomial
+    - therefore both Y_nu Y_nu^dag and Y_e Y_e^dag are diagonal
+    - the full single-Higgs lepton sector yields only trivial PMNS
+
+  So charged-lepton misalignment does not rescue the single-Higgs
+  lane. At least one lepton sector must exit the monomial class.
+
+PASS=32  FAIL=0
+
+----- stderr -----
+

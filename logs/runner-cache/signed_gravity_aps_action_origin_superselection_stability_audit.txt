@@ -1,0 +1,46 @@
+===== runner cache v1 =====
+runner: scripts/signed_gravity_aps_action_origin_superselection_stability_audit.py
+runner_sha256: d477309d27b0fc358b27186401ba2ea441a1be90ac60ff9f203ac6e29623a8ae
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+====================================================================================================
+APS-LOCKED ACTION: ORIGIN / SUPERSELECTION / STABILITY AUDIT
+  no physical signed-gravity claim
+====================================================================================================
+
+ORIGIN AUDIT
+[PASS] retained separable APS/Wald/Gauss terms cannot produce signed source  (least-squares residual=1.414e+00, coeffs=[-0.  0.  0.])
+[PASS] adding the chi*rho*Phi cross term exactly produces signed source  (residual=1.110e-16, coeffs=[0. 0. 0. 1.])
+  read: the proposed action is a genuine new cross term, not a consequence
+        of positive Born source + APS spectator + positive Wald area.
+
+ETA SUPERSELECTION AUDIT
+[PASS] eta sign is stable under sampled gap-preserving perturbations  (min_gap_after=0.367)
+[PASS] eta sign changes through explicit zero-crossing defect if gap is not protected  (chi_path=[1, 1, 1, 1, 0, -1, -1, -1, -1])
+  read: superselection is conditional on a protected APS boundary gap.
+        The retained stack has not yet derived that protection.
+
+ACTION-REACTION / RUNAWAY CONTROLS
+[PASS] locked signs have exact two-body force balance
+[PASS] source-only control fails mixed-pair balance
+[PASS] response-only control fails mixed-pair balance
+[PASS] opposite locked signs do not produce negative-mass runaway acceleration  (F_A=-1, F_B=+1)
+[PASS] opposite-sign pair creation has positive rest-energy infimum  (E_opp,min(core=1)=2.100)
+[PASS] ordinary same-sector Newtonian collapse remains a UV/core issue  (E_same,min(core=1)=1.001, E_same,min(core=0.25)=-1.922)
+  read: the locked positive-inertial-mass sign law avoids the classic
+        negative-mass runaway control. Full boundedness still requires
+        the same kind of UV/core or constraint input ordinary gravity needs.
+
+VERDICT
+  Origin: no-go within retained separable APS/Wald/Gauss terms.
+  Superselection: conditional on a protected boundary spectral gap.
+  Stability: no negative-inertial-mass runaway in the locked table;
+    ordinary attractive collapse/UV boundedness remains open.
+SUMMARY: PASS=10 FAIL=0
+FINAL_TAG: APS_LOCKED_ACTION_CONDITIONAL_NOT_RETAINED
+
+----- stderr -----
+

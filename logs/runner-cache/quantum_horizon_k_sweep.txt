@@ -1,0 +1,23 @@
+===== runner cache v1 =====
+runner: scripts/quantum_horizon_k_sweep.py
+runner_sha256: f7dc5e7ef17ee80d46fd605740871450978949af95f229638a8cf12520bf842b
+timeout_sec: 120
+exit_code: None
+elapsed_sec: 120.01
+status: timeout
+----- stdout -----
+====================================================================================
+QUANTUM HORIZON k-SWEEP
+  retained generated-geometry absorbing proxy on the sector-stencil family
+====================================================================================
+family rows=12, h=0.5, Nyquist k=6.283
+observable: alpha_crit where escape(alpha) falls to 50% of free propagation
+
+     k   escape@0   alpha_crit           regime
+--------------------------------------------------
+  running k=1.0...
+   1.0      1.000         0.08      sub-Nyquist
+  running k=2.0...
+
+----- stderr -----
+

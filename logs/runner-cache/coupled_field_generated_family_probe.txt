@@ -1,0 +1,41 @@
+===== runner cache v1 =====
+runner: scripts/coupled_field_generated_family_probe.py
+runner_sha256: 35c3061893fb99d5b72e98f59a35b25ecfc30deba89d3d04837587345f3937b9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+====================================================================================
+COUPLED FIELD GENERATED FAMILY PROBE
+  compact generated DAG family, source-driven coupled field candidate
+====================================================================================
+family seeds=4, layers=16, nodes/layer=24, connect_radius=3.2, field_decay=0.7
+source strengths=[0.0001, 0.0002, 0.0004, 0.0008], field gain=5.952381e+01
+observable: detector centroid y-shift relative to free propagation
+reduction check: source strength 0 should recover free propagation exactly
+
+REDUCTION CHECK
+  seed 0: zero-source shift = +0.000000e+00
+  seed 1: zero-source shift = +0.000000e+00
+  seed 2: zero-source shift = +0.000000e+00
+  seed 3: zero-source shift = +0.000000e+00
+  max |zero-source shift| = 0.000e+00
+
+       s         inst         cpld  cpld/inst   sign
+------------------------------------------------------
+  0.0001 -6.968870e-02 -2.862755e-01      4.108  4/4 
+  0.0002 -9.661772e-02 -3.103999e-01      3.213  4/4 
+  0.0004 -1.314999e-01 -2.328980e-01      1.771  4/4 
+  0.0008 -1.724723e-01 -1.838923e-01      1.066  4/4 
+
+SAFE READ
+  exact zero-source reduction: max |delta| = 0.000e+00
+  instantaneous |F~M| exponent: 0.44
+  coupled-field |F~M| exponent: -0.23
+  the coupled field preserves the sign of the instantaneous comparator
+  on all sampled rows, but the strength dependence is not a clean linear
+  mass-scaling law on this retained family.
+
+----- stderr -----
+

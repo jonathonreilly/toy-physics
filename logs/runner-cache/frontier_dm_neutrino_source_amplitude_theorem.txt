@@ -1,0 +1,45 @@
+===== runner cache v1 =====
+runner: scripts/frontier_dm_neutrino_source_amplitude_theorem.py
+runner_sha256: e69845697fe62c81659eb4ab3029f6ada57f9fc340adbcab6952455b542e7da3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+DM NEUTRINO SOURCE-AMPLITUDE THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: SHARP SELECTOR PROJECTION FIXES A_SEL
+========================================================================================
+  [PASS] The bosonic-bilinear selector theorem records sharp resolved-orbit selection
+  [PASS] The reduced selector bridge still lives on one exact class S_cls with one real amplitude
+  [PASS] The centered sharp neutrino-side projector is exactly S_cls/2  (err=0.00e+00)
+  [PASS] So the sharp source-oriented selector amplitude is canonically a_sel = 1/2  (a_sel=0.500000)
+  [PASS] Its sign is the source-oriented neutrino branch sign  (positive selector orientation selects the neutrino-side branch)
+
+========================================================================================
+PART 2: SHARP SYMMETRIC SOURCE PROJECTION FIXES TAU_PLUS
+========================================================================================
+  [PASS] The exact weak carrier is the two-column bright bundle K_R(q) = [[u_E,u_T],[delta_A1 u_E,delta_A1 u_T]]
+  [PASS] The hierarchy selector theorem again supplies sharp bosonic-even projection rather than soft weighting
+  [PASS] The weak even reduction note fixes that only the swap-even source mode survives
+  [PASS] The canonical sharp swap-even projector is P_+ = (I + P_swap)/2  (idempotence err=0.00e+00)
+  [PASS] Its source-oriented coordinate vector is exactly (tau_E,tau_T) = (1/2,1/2)  (vec=[0.5, 0.5])
+  [PASS] Therefore the symmetric source amplitude is canonically tau_+ = 1  (tau_+=1.000000)
+
+========================================================================================
+PART 3: THE EXACT TRIPLET SOURCE DATA FOLLOW IMMEDIATELY
+========================================================================================
+  [PASS] The odd transfer coefficient is already fixed as c_odd = +1
+  [PASS] The even transfer coefficients are already fixed as v_even = (sqrt(8/3), sqrt(8)/3)
+  [PASS] So the exact odd triplet source is gamma = a_sel = 1/2  (gamma=0.500000)
+  [PASS] The exact even triplet responses are E1 = sqrt(8/3) and E2 = sqrt(8)/3  ((E1,E2)=(1.632993161855,0.942809041582))
+
+========================================================================================
+SUMMARY: PASS=15 FAIL=0
+========================================================================================
+
+----- stderr -----
+
