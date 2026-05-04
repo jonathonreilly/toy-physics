@@ -20,9 +20,12 @@ Completed during 2026-05-04 campaign continuation:
 - `scripts/frontier_yt_wz_response_harness_implementation_plan.py`
 - `docs/YT_WZ_RESPONSE_HARNESS_IMPLEMENTATION_PLAN_NOTE_2026-05-04.md`
 - `outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json`
+- `scripts/frontier_yt_wz_same_source_ew_action_gate.py`
+- `docs/YT_WZ_SAME_SOURCE_EW_ACTION_GATE_NOTE_2026-05-04.md`
+- `outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json`
 
 Next positive artifact candidates:
 
 - source-Higgs `O_sp/O_H` measurement-row builder;
-- actual W/Z correlator response harness and production rows;
+- actual same-source EW action plus W/Z correlator response harness and production rows;
 - dynamical rank-one theorem stretch attempt from minimal scalar kernel data.

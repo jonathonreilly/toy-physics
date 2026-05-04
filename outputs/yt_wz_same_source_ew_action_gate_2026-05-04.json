@@ -1,0 +1,92 @@
+{
+  "action_block_written": false,
+  "action_contract": [
+    {
+      "current_surface": "native gauge notes give structural SU(2)/hypercharge support, not a same-source EW production action",
+      "id": "dynamical_ew_fields",
+      "required": "lattice SU(2)_L and U(1)_Y gauge fields with update or ensemble semantics"
+    },
+    {
+      "current_surface": "current top harness source is an additive staggered mass/source coordinate; canonical O_H certificate is absent",
+      "id": "canonical_higgs_radial_source",
+      "required": "scalar source s coupled to the canonical Higgs radial direction"
+    },
+    {
+      "current_surface": "sector-overlap and canonical-Higgs identity gates remain open",
+      "id": "matched_top_wz_source_coordinate",
+      "required": "certificate that the top dE/ds source and W/Z dM/ds source are the same coordinate"
+    },
+    {
+      "current_surface": "production harness has a W/Z absent guard and no W/Z correlator CLI path",
+      "id": "wz_correlator_observables",
+      "required": "W/Z two-point correlators and mass fits under source shifts"
+    },
+    {
+      "current_surface": "existing W/Z gates enforce this firewall; this gate keeps it active",
+      "id": "firewall",
+      "required": "explicit exclusion of H_unit, yt_ward, observed masses/couplings, alpha_LM, plaquette/u0, and static EW algebra"
+    }
+  ],
+  "actual_current_surface_status": "exact negative boundary / same-source EW action not defined on PR230 surface",
+  "bare_retained_allowed": false,
+  "current_surface_findings": {
+    "current_harness_has_real_wz_path": false,
+    "current_harness_is_qcd_top": true,
+    "current_harness_wz_absent_guard": true,
+    "ew_tree_dictionary_surface": "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md",
+    "minimal_axioms_surface": "docs/MINIMAL_AXIOMS_2026-04-11.md",
+    "native_gauge_surface": "docs/NATIVE_GAUGE_CLOSURE_NOTE.md",
+    "qcd_top_harness": "scripts/yt_direct_lattice_correlator_production.py",
+    "sm_one_higgs_surface": "docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md",
+    "su2_beta_surface": "docs/SU2_WEAK_BETA_COEFFICIENT_STRUCTURAL_CLOSED_FORM_THEOREM_NOTE_2026-04-26.md"
+  },
+  "exact_next_action": "Either implement a genuine same-source EW gauge/Higgs production action and W/Z correlator mass-fit harness, or pivot back to source-Higgs C_sH/C_HH pole rows, Schur A/B/C kernel rows, neutral-sector irreducibility, or FH/LSZ production evidence.",
+  "fail_count": 0,
+  "future_action_certificate": "outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json",
+  "future_rows_path": "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
+  "parent_certificates": {
+    "canonical_higgs_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_wz_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+    "sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "wz_builder": "outputs/yt_fh_gauge_mass_response_certificate_builder_2026-05-03.json",
+    "wz_implementation_plan": "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json",
+    "wz_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
+    "wz_repo_import_audit": "outputs/yt_wz_response_repo_harness_import_audit_2026-05-03.json",
+    "wz_row_production_attempt": "outputs/yt_wz_response_row_production_attempt_2026-05-03.json"
+  },
+  "pass_count": 22,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No same-source EW action certificate, W/Z correlator rows, sector-overlap identity, or canonical-Higgs identity exists.",
+  "same_source_ew_action_ready": false,
+  "shortcut_rejections": [
+    {
+      "candidate": "EW Higgs gauge-mass diagonalization theorem",
+      "classification": "tree-level dictionary after canonical H is supplied",
+      "why_not_action": "It proves M_W(g,v) and M_Z(g,gY,v), not a lattice EW action or dM_W/ds measurement."
+    },
+    {
+      "candidate": "native gauge closure / SU(2) structural notes",
+      "classification": "structural gauge support",
+      "why_not_action": "They do not provide a same-source SU(2)xU(1) production action with W/Z correlator rows."
+    },
+    {
+      "candidate": "SM one-Higgs Yukawa/gauge selection",
+      "classification": "operator-pattern support after H is supplied",
+      "why_not_action": "It does not identify the PR230 source with canonical O_H or define W/Z source shifts."
+    },
+    {
+      "candidate": "top FH/LSZ production harness",
+      "classification": "QCD top and scalar-source response harness",
+      "why_not_action": "It has no raw W/Z correlator mass-fit path and explicitly guards W/Z response as absent."
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not write or synthesize W/Z measurement rows",
+    "does not treat static EW gauge-mass algebra as dM_W/ds",
+    "does not treat structural SU(2) or beta-function notes as a production EW action",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "The first W/Z implementation work unit is not satisfied on the current PR230 surface.  Existing EW/Higgs notes supply static tree-level dictionaries after canonical H is supplied, and native gauge notes supply structural SU(2)/hypercharge support, but no same-source SU(2)xU(1)/Higgs production action, W/Z correlator mass-fit path, top/WZ source-coordinate identity, or canonical Higgs pole identity is present.  Static EW algebra and the QCD top harness absent guard remain rejected as W/Z measurement data."
+}

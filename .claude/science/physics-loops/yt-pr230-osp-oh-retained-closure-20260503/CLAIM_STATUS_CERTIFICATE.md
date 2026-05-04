@@ -21,7 +21,8 @@ Open imports:
 - source-Higgs Gram-purity contract witness is exact support only; real
   production rows and `O_H` certificate are still absent;
 - same-source W/Z route is contract/gate support only; no W/Z mass-response
-  rows, sector-overlap identity, or canonical-Higgs identity pass;
+  rows, same-source EW production action certificate, sector-overlap identity,
+  or canonical-Higgs identity pass;
 - positivity-improving/rank-one route is conditional support only; the direct
   neutral-sector irreducibility theorem is blocked on the current surface;
 - scalar denominator / K-prime route is exact support only; same-surface Schur

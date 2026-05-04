@@ -248,6 +248,9 @@ def main() -> int:
         "wz_response_harness_implementation_plan": load(
             "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json"
         ),
+        "wz_same_source_ew_action_gate": load(
+            "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json"
+        ),
         "same_source_sector_overlap_identity": load(
             "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json"
         ),
@@ -1052,6 +1055,15 @@ def main() -> int:
         and certificates["wz_response_harness_implementation_plan"].get("future_rows_written") is False
         and len(certificates["wz_response_harness_implementation_plan"].get("implementation_work_units", [])) == 5,
         statuses["wz_response_harness_implementation_plan"],
+    )
+    report(
+        "wz-same-source-ew-action-gate-blocks",
+        "same-source EW action not defined"
+        in str(statuses["wz_same_source_ew_action_gate"])
+        and certificates["wz_same_source_ew_action_gate"].get("proposal_allowed") is False
+        and certificates["wz_same_source_ew_action_gate"].get("same_source_ew_action_ready") is False
+        and certificates["wz_same_source_ew_action_gate"].get("action_block_written") is False,
+        statuses["wz_same_source_ew_action_gate"],
     )
     report(
         "same-source-sector-overlap-identity-blocks",

@@ -140,6 +140,37 @@ Claim boundary: these are production-support chunks only.  They do not
 authorize retained/proposed-retained closure without the downstream scalar
 LSZ, source-Higgs/WZ/rank-one, and retained-route gates.
 
+## 2026-05-04 Same-Source EW Action Gate
+
+The first W/Z implementation work unit was tested directly:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_wz_same_source_ew_action_gate.py
+# pass
+
+python3 scripts/frontier_yt_wz_same_source_ew_action_gate.py
+# SUMMARY: PASS=22 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=142 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=168 FAIL=0
+```
+
+Result: exact negative boundary, not closure.  Current PR230 has structural
+SU(2)/hypercharge support and static EW gauge-mass algebra after canonical H is
+supplied, but it has no same-source `SU(2)xU(1)`/Higgs production action, no
+W/Z correlator mass-fit path, no top/WZ source-coordinate identity, and no
+canonical-Higgs pole identity.  The QCD top harness W/Z absent guard remains a
+guard only.
+
+Next exact action: monitor chunks029-034 and the chunk-wave orchestrator.  For
+non-MC closure, the viable W/Z route now starts with a real same-source EW
+action certificate before any W/Z row builder can be evidence; otherwise pivot
+to certified `O_H/C_sH/C_HH` rows, Schur A/B/C rows, or neutral-sector
+irreducibility.
+
 ## 2026-05-04 W/Z Implementation Plan Gate
 
 The W/Z fallback route has been converted from "missing harness" into a
