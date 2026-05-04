@@ -1152,14 +1152,110 @@
       },
       "slope_dE_ds_lat": 1.4228990092905442,
       "slope_dE_ds_lat_err": 24.225602434057432
+    },
+    {
+      "artifact": "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk049/L12xT24/ensemble_measurement.json",
+      "chunk_index": 49,
+      "issues": [],
+      "mode_keys": [
+        "0,0,0",
+        "0,0,1",
+        "0,1,0",
+        "1,0,0"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk049_2026-05-01.json",
+      "ready": true,
+      "seed": 2026051049,
+      "seed_control": {
+        "base_seed": 2026051049,
+        "gauge_rng_seed": 2038271309,
+        "numba_gauge_seeded_before_thermalization": true,
+        "scalar_rng_seed": 2038271309,
+        "seed_control_version": "numba_gauge_seed_v1",
+        "volume_rng_seed": 2038271309
+      },
+      "slope_dE_ds_lat": 1.420574471095689,
+      "slope_dE_ds_lat_err": 24.73403983356421
+    },
+    {
+      "artifact": "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk050/L12xT24/ensemble_measurement.json",
+      "chunk_index": 50,
+      "issues": [],
+      "mode_keys": [
+        "0,0,0",
+        "0,0,1",
+        "0,1,0",
+        "1,0,0"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk050_2026-05-01.json",
+      "ready": true,
+      "seed": 2026051050,
+      "seed_control": {
+        "base_seed": 2026051050,
+        "gauge_rng_seed": 2038271310,
+        "numba_gauge_seeded_before_thermalization": true,
+        "scalar_rng_seed": 2038271310,
+        "seed_control_version": "numba_gauge_seed_v1",
+        "volume_rng_seed": 2038271310
+      },
+      "slope_dE_ds_lat": 1.42810978733373,
+      "slope_dE_ds_lat_err": 24.285457660450124
+    },
+    {
+      "artifact": "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk051/L12xT24/ensemble_measurement.json",
+      "chunk_index": 51,
+      "issues": [],
+      "mode_keys": [
+        "0,0,0",
+        "0,0,1",
+        "0,1,0",
+        "1,0,0"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk051_2026-05-01.json",
+      "ready": true,
+      "seed": 2026051051,
+      "seed_control": {
+        "base_seed": 2026051051,
+        "gauge_rng_seed": 2038271311,
+        "numba_gauge_seeded_before_thermalization": true,
+        "scalar_rng_seed": 2038271311,
+        "seed_control_version": "numba_gauge_seed_v1",
+        "volume_rng_seed": 2038271311
+      },
+      "slope_dE_ds_lat": 1.4196706505806211,
+      "slope_dE_ds_lat_err": 24.131274703979344
+    },
+    {
+      "artifact": "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk052/L12xT24/ensemble_measurement.json",
+      "chunk_index": 52,
+      "issues": [],
+      "mode_keys": [
+        "0,0,0",
+        "0,0,1",
+        "0,1,0",
+        "1,0,0"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk052_2026-05-01.json",
+      "ready": true,
+      "seed": 2026051052,
+      "seed_control": {
+        "base_seed": 2026051052,
+        "gauge_rng_seed": 2038271312,
+        "numba_gauge_seeded_before_thermalization": true,
+        "scalar_rng_seed": 2038271312,
+        "seed_control_version": "numba_gauge_seed_v1",
+        "volume_rng_seed": 2038271312
+      },
+      "slope_dE_ds_lat": 1.4267349938298886,
+      "slope_dE_ds_lat_err": 24.10608519497453
     }
   ],
   "chunk_summary": {
-    "available_saved_configurations": 768,
+    "available_saved_configurations": 832,
     "expected_chunks": 63,
-    "missing_chunks": 15,
-    "present_chunks": 48,
-    "ready_chunks": 48,
+    "missing_chunks": 11,
+    "present_chunks": 52,
+    "ready_chunks": 52,
     "target_saved_configurations": 1000
   },
   "combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
@@ -1222,7 +1318,11 @@
     45,
     46,
     47,
-    48
+    48,
+    49,
+    50,
+    51,
+    52
   ],
   "seed_independence_gate": {
     "expected_seed_control_version": "numba_gauge_seed_v1",
@@ -1755,9 +1855,53 @@
           "source_slope_dE_ds_lat": 1.422899009290544
         },
         "seed_related_issues": []
+      },
+      {
+        "chunk_index": 49,
+        "seed": 2026051049,
+        "seed_independence_signature": {
+          "complete": true,
+          "mass_fit_m_lat": 1.853138319050231,
+          "plaquette_mean": 0.002080949874815,
+          "source_slope_dE_ds_lat": 1.420574471095689
+        },
+        "seed_related_issues": []
+      },
+      {
+        "chunk_index": 50,
+        "seed": 2026051050,
+        "seed_independence_signature": {
+          "complete": true,
+          "mass_fit_m_lat": 1.846151713114523,
+          "plaquette_mean": 0.002039407476293,
+          "source_slope_dE_ds_lat": 1.42810978733373
+        },
+        "seed_related_issues": []
+      },
+      {
+        "chunk_index": 51,
+        "seed": 2026051051,
+        "seed_independence_signature": {
+          "complete": true,
+          "mass_fit_m_lat": 1.855640417407812,
+          "plaquette_mean": 0.002072116446393,
+          "source_slope_dE_ds_lat": 1.419670650580621
+        },
+        "seed_related_issues": []
+      },
+      {
+        "chunk_index": 52,
+        "seed": 2026051052,
+        "seed_independence_signature": {
+          "complete": true,
+          "mass_fit_m_lat": 1.84503936346664,
+          "plaquette_mean": 0.002040969387314,
+          "source_slope_dE_ds_lat": 1.426734993829889
+        },
+        "seed_related_issues": []
       }
     ],
-    "ready_chunks_after_seed_gate": 48
+    "ready_chunks_after_seed_gate": 52
   },
   "strict_non_claims": [
     "does not use partial L12 chunks as retained evidence",
@@ -1766,5 +1910,5 @@
     "does not treat source response as a physical Higgs readout",
     "does not bypass pole derivative, model-class, FV/IR, or canonical-Higgs identity gates"
   ],
-  "verdict": "Seed-controlled L12_T24 chunks[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48] are present and combiner-ready. They supply production-format same-source dE/ds and C_ss(q) support, but only 48 of 63 required L12 chunks are ready, no combined L12 output exists, and the scalar-pole derivative/model-class/FV/IR/canonical-Higgs identity gates remain open."
+  "verdict": "Seed-controlled L12_T24 chunks[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52] are present and combiner-ready. They supply production-format same-source dE/ds and C_ss(q) support, but only 52 of 63 required L12 chunks are ready, no combined L12 output exists, and the scalar-pole derivative/model-class/FV/IR/canonical-Higgs identity gates remain open."
 }
