@@ -38,6 +38,14 @@ Open imports:
   the neutral top-coupled scalar sector, then `delta_perp=0`; the current
   surface lacks that completeness certificate and SM one-Higgs notation alone
   remains blocked as an `O_sp = O_H` import;
+- lightweight same-source W-response readout is now an executable contract:
+  scout rows recover planted `y_h`, but the strict production certificate
+  `outputs/yt_same_source_w_response_rows_2026-05-04.json` is absent;
+- `delta_perp` tomography correction is now an executable contract:
+  scout rows compute the orthogonal correction and reject source-only rank
+  deficiency, missing canonical identity, observed selectors, mismatched
+  sources, and zero `kappa_h`, but the strict production certificate
+  `outputs/yt_delta_perp_tomography_rows_2026-05-04.json` is absent;
 - W/Z correlator mass-fit path is absent on the current PR230 surface; static
   EW gauge-mass algebra, aggregate slopes, mismatched source coordinates, and
   observed-W/Z selectors are explicitly rejected as measurement rows;

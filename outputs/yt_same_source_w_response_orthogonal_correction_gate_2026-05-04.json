@@ -5,6 +5,7 @@
   "current_missing_inputs": [
     "same-source W response rows",
     "orthogonal top-coupling null theorem or measured delta_perp correction",
+    "strict delta_perp tomography correction rows",
     "source-Higgs Gram-purity correction row",
     "matching/running bridge with certified physical input",
     "retained-route gate authorization"
@@ -22,6 +23,7 @@
   "orthogonal_correction_gate_passed": false,
   "orthogonal_correction_theorem_passed": true,
   "parent_certificates": {
+    "delta_perp_tomography_builder": "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json",
     "neutral_scalar_top_coupling_tomography": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
     "no_orthogonal_top_coupling_selection": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
     "non_source_rank_repair": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
@@ -31,7 +33,7 @@
     "source_higgs_gram_purity_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
     "wz_response_measurement_row_contract": "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json"
   },
-  "pass_count": 17,
+  "pass_count": 18,
   "positive_witness": {
     "input_parameters": {
       "g2": 0.648,

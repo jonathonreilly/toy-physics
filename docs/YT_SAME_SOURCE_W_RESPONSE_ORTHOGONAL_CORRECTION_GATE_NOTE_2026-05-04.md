@@ -26,6 +26,12 @@ orthogonal correction `delta_perp`.  It must come from one of:
   pole;
 - a neutral rank-one theorem removing the orthogonal neutral sector.
 
+The tomography option is now made executable by
+`scripts/frontier_yt_delta_perp_tomography_correction_builder.py`.  That builder
+validates the future full-rank neutral-scalar tomography row file and can emit
+`outputs/yt_same_source_w_response_orthogonal_correction_certificate_2026-05-04.json`
+only after strict production validation passes.
+
 ## Current Result
 
 The formula is exact support, but the current PR230 surface does not pass the
@@ -48,5 +54,5 @@ plaquette/u0, `c2=1`, or `Z_match=1`.
 ## Next Action
 
 Produce a same-source W response row plus one valid correction authority:
-orthogonal-top null theorem, tomography `delta_perp` row, source-Higgs
+orthogonal-top null theorem, strict tomography `delta_perp` row, source-Higgs
 Gram-purity row, or neutral rank-one theorem.

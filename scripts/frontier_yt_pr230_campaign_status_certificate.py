@@ -284,6 +284,9 @@ def main() -> int:
         "one_higgs_completeness_orthogonal_null": load(
             "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json"
         ),
+        "delta_perp_tomography_correction_builder": load(
+            "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json"
+        ),
         "same_source_w_response_lightweight_readout": load(
             "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json"
         ),
@@ -1286,6 +1289,17 @@ def main() -> int:
         )
         is False,
         statuses["same_source_w_response_lightweight_readout"],
+    )
+    report(
+        "delta-perp-tomography-correction-builder-open",
+        "delta_perp tomography correction"
+        in str(statuses["delta_perp_tomography_correction_builder"])
+        and certificates["delta_perp_tomography_correction_builder"].get("proposal_allowed") is False
+        and certificates["delta_perp_tomography_correction_builder"].get(
+            "strict_delta_perp_tomography_gate_passed"
+        )
+        is False,
+        statuses["delta_perp_tomography_correction_builder"],
     )
     report(
         "wz-correlator-mass-fit-path-gate-blocks",

@@ -31,6 +31,7 @@ PARENTS = {
     "no_orthogonal_top_coupling_selection": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
     "same_source_wz_response_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
     "wz_response_measurement_row_contract": "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json",
+    "delta_perp_tomography_builder": "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json",
 }
 
 PASS_COUNT = 0
@@ -248,6 +249,12 @@ def main() -> int:
         and "WZ response measurement-row contract gate"
         in status(parents["wz_response_measurement_row_contract"])
     )
+    delta_perp_tomography_open = (
+        "delta_perp tomography correction" in status(parents["delta_perp_tomography_builder"])
+        and parents["delta_perp_tomography_builder"].get("proposal_allowed") is False
+        and parents["delta_perp_tomography_builder"].get("strict_delta_perp_tomography_gate_passed")
+        is False
+    )
     corrected_witness_ok = witness["measured_responses"]["absolute_recovery_error"] < 1.0e-14
     rejection_checks = {
         name: validation["valid"] is False and validation["present"] is True
@@ -275,6 +282,7 @@ def main() -> int:
     report("gram-purity-correction-absent", gram_absent, "source-Higgs Gram purity rows absent")
     report("orthogonal-null-theorem-absent", orthogonal_null_absent, status(parents["no_orthogonal_top_coupling_selection"]))
     report("wz-response-rows-still-absent", wz_rows_absent, status(parents["same_source_wz_response_gate"]))
+    report("delta-perp-tomography-builder-open", delta_perp_tomography_open, status(parents["delta_perp_tomography_builder"]))
     report("future-correction-certificate-absent", not future_validation["present"], str(FUTURE_CORRECTION.relative_to(ROOT)))
     report("zero-delta-without-certificate-rejected", rejection_checks["zero_by_default"], str(rejections["zero_by_default"]["failed_checks"]))
     report("observed-backsolve-rejected", rejection_checks["observed_backsolve"], str(rejections["observed_backsolve"]["failed_checks"]))
@@ -301,6 +309,7 @@ def main() -> int:
         "current_missing_inputs": [
             "same-source W response rows",
             "orthogonal top-coupling null theorem or measured delta_perp correction",
+            "strict delta_perp tomography correction rows",
             "source-Higgs Gram-purity correction row",
             "matching/running bridge with certified physical input",
             "retained-route gate authorization",

@@ -48,3 +48,16 @@ Next positive artifact candidates:
   rows through the existing default-off harness;
 - actual same-source EW action plus W/Z correlator response harness and production rows;
 - dynamical rank-one theorem stretch attempt from minimal scalar kernel data.
+
+Completed in the lightweight W-response continuation:
+
+- `scripts/frontier_yt_same_source_w_response_lightweight_readout_harness.py`
+- `docs/YT_SAME_SOURCE_W_RESPONSE_LIGHTWEIGHT_READOUT_HARNESS_NOTE_2026-05-04.md`
+- `outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json`
+- `outputs/yt_same_source_w_response_lightweight_readout_scout_2026-05-04.json`
+- `scripts/frontier_yt_delta_perp_tomography_correction_builder.py`
+- `docs/YT_DELTA_PERP_TOMOGRAPHY_CORRECTION_BUILDER_NOTE_2026-05-04.md`
+- `outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json`
+- `outputs/yt_delta_perp_tomography_correction_scout_2026-05-04.json`
+- refreshed W-response orthogonal-correction, full assembly, retained-route,
+  and campaign certificates.

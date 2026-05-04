@@ -1,0 +1,375 @@
+{
+  "actual_current_surface_status": "scout-pass / delta_perp tomography correction builder",
+  "bare_retained_allowed": false,
+  "correction_certificate_candidate": {
+    "correction_method": "tomography_correction_row",
+    "firewall": {
+      "used_H_unit_or_Ward_authority": false,
+      "used_alpha_lm_plaquette_or_u0": false,
+      "used_c2_or_zmatch_equal_one": false,
+      "used_delta_perp_zero_without_certificate": false,
+      "used_observed_y_t_to_backsolve_delta": false
+    },
+    "orthogonal_correction_delta_perp": -0.054444444444444455,
+    "phase": "scout",
+    "provenance": {
+      "basis_dimension": 3,
+      "method_certificate": "outputs/yt_delta_perp_tomography_rows_2026-05-04.json",
+      "rank_or_null_authority_passed": true,
+      "response_matrix_rank": 3
+    },
+    "same_source_coordinate": true,
+    "sigma_delta_perp": 0.004355429588352997
+  },
+  "delta_perp_tomography_builder_passed": true,
+  "exact_next_action": "Supply outputs/yt_delta_perp_tomography_rows_2026-05-04.json with full-rank neutral-scalar tomography rows, then rerun this builder in strict mode and emit outputs/yt_same_source_w_response_orthogonal_correction_certificate_2026-05-04.json for the W-response correction gate.",
+  "fail_count": 0,
+  "future_orthogonal_correction_certificate": "outputs/yt_same_source_w_response_orthogonal_correction_certificate_2026-05-04.json",
+  "input_certificate": "outputs/yt_delta_perp_tomography_rows_2026-05-04.json",
+  "mode": "scout",
+  "parent_certificates": {
+    "neutral_scalar_top_coupling_tomography": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
+    "non_source_response_rank_repair": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
+    "same_source_w_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
+    "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
+    "same_source_wz_response_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+    "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json"
+  },
+  "parent_statuses": {
+    "neutral_scalar_top_coupling_tomography": "open / neutral scalar top-coupling tomography gate not passed",
+    "non_source_response_rank_repair": "exact-support / non-source response rank-repair sufficiency theorem; current rows absent",
+    "same_source_w_lightweight_readout": "open / lightweight same-source W-response readout production rows absent",
+    "same_source_w_response_orthogonal_correction": "open / same-source W-response orthogonal-correction gate not passed",
+    "same_source_wz_response_gate": "open / same-source WZ response certificate gate not passed",
+    "source_higgs_gram_purity": "open / source-Higgs Gram purity gate not passed"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This builder supplies a correction-row contract only.  Production proposal still requires real same-surface tomography rows, W rows, matching/running, and retained-route authorization.",
+  "rejection_witnesses": {
+    "canonical-identity-absent": {
+      "basis_dimension": 3,
+      "checks": {
+        "basis_dimension_at_least_two": true,
+        "canonical_higgs_identity_passed": false,
+        "certificate_kind": true,
+        "delta_computable": true,
+        "no_observed_selector_or_forbidden_import": true,
+        "orthogonal_basis_identity_passed": true,
+        "phase_allowed": true,
+        "production_phase_if_required": true,
+        "proposal_not_authorized_by_input": true,
+        "response_matrix_full_rank": true,
+        "same_source_coordinate": true,
+        "same_source_sector_overlap_passed": true,
+        "same_surface_cl3_z3": true,
+        "vectors_match_basis": true
+      },
+      "delta_perp": {
+        "canonical_higgs_index": 0,
+        "kappa_h": 0.72,
+        "orthogonal_correction_delta_perp": -0.054444444444444455,
+        "orthogonal_indices": [
+          1,
+          2
+        ],
+        "orthogonal_numerator": -0.039200000000000006,
+        "sigma_delta_perp": 0.004355429588352997,
+        "valid": true
+      },
+      "failed_checks": [
+        "canonical_higgs_identity_passed"
+      ],
+      "firewall_validation": {
+        "checks": {
+          "set_c2_equal_one": true,
+          "set_cos_theta_equal_one": true,
+          "set_delta_perp_zero_without_certificate": true,
+          "set_kappa_s_equal_one": true,
+          "set_z_match_equal_one": true,
+          "used_H_unit_or_Ward_authority": true,
+          "used_alpha_lm_plaquette_or_u0": true,
+          "used_observed_WZ_masses_as_selector": true,
+          "used_observed_y_t_or_m_t_as_selector": true,
+          "used_y_t_bare": true,
+          "used_yt_ward_identity": true
+        },
+        "failed_checks": [],
+        "valid": true
+      },
+      "present": true,
+      "response_matrix_rank": 3,
+      "valid": false
+    },
+    "mismatched-source": {
+      "basis_dimension": 3,
+      "checks": {
+        "basis_dimension_at_least_two": true,
+        "canonical_higgs_identity_passed": true,
+        "certificate_kind": true,
+        "delta_computable": true,
+        "no_observed_selector_or_forbidden_import": true,
+        "orthogonal_basis_identity_passed": true,
+        "phase_allowed": true,
+        "production_phase_if_required": true,
+        "proposal_not_authorized_by_input": true,
+        "response_matrix_full_rank": true,
+        "same_source_coordinate": false,
+        "same_source_sector_overlap_passed": true,
+        "same_surface_cl3_z3": true,
+        "vectors_match_basis": true
+      },
+      "delta_perp": {
+        "canonical_higgs_index": 0,
+        "kappa_h": 0.72,
+        "orthogonal_correction_delta_perp": -0.054444444444444455,
+        "orthogonal_indices": [
+          1,
+          2
+        ],
+        "orthogonal_numerator": -0.039200000000000006,
+        "sigma_delta_perp": 0.004355429588352997,
+        "valid": true
+      },
+      "failed_checks": [
+        "same_source_coordinate"
+      ],
+      "firewall_validation": {
+        "checks": {
+          "set_c2_equal_one": true,
+          "set_cos_theta_equal_one": true,
+          "set_delta_perp_zero_without_certificate": true,
+          "set_kappa_s_equal_one": true,
+          "set_z_match_equal_one": true,
+          "used_H_unit_or_Ward_authority": true,
+          "used_alpha_lm_plaquette_or_u0": true,
+          "used_observed_WZ_masses_as_selector": true,
+          "used_observed_y_t_or_m_t_as_selector": true,
+          "used_y_t_bare": true,
+          "used_yt_ward_identity": true
+        },
+        "failed_checks": [],
+        "valid": true
+      },
+      "present": true,
+      "response_matrix_rank": 3,
+      "valid": false
+    },
+    "observed-selector": {
+      "basis_dimension": 3,
+      "checks": {
+        "basis_dimension_at_least_two": true,
+        "canonical_higgs_identity_passed": true,
+        "certificate_kind": true,
+        "delta_computable": true,
+        "no_observed_selector_or_forbidden_import": false,
+        "orthogonal_basis_identity_passed": true,
+        "phase_allowed": true,
+        "production_phase_if_required": true,
+        "proposal_not_authorized_by_input": true,
+        "response_matrix_full_rank": true,
+        "same_source_coordinate": true,
+        "same_source_sector_overlap_passed": true,
+        "same_surface_cl3_z3": true,
+        "vectors_match_basis": true
+      },
+      "delta_perp": {
+        "canonical_higgs_index": 0,
+        "kappa_h": 0.72,
+        "orthogonal_correction_delta_perp": -0.054444444444444455,
+        "orthogonal_indices": [
+          1,
+          2
+        ],
+        "orthogonal_numerator": -0.039200000000000006,
+        "sigma_delta_perp": 0.004355429588352997,
+        "valid": true
+      },
+      "failed_checks": [
+        "no_observed_selector_or_forbidden_import"
+      ],
+      "firewall_validation": {
+        "checks": {
+          "set_c2_equal_one": true,
+          "set_cos_theta_equal_one": true,
+          "set_delta_perp_zero_without_certificate": true,
+          "set_kappa_s_equal_one": true,
+          "set_z_match_equal_one": true,
+          "used_H_unit_or_Ward_authority": true,
+          "used_alpha_lm_plaquette_or_u0": true,
+          "used_observed_WZ_masses_as_selector": true,
+          "used_observed_y_t_or_m_t_as_selector": false,
+          "used_y_t_bare": true,
+          "used_yt_ward_identity": true
+        },
+        "failed_checks": [
+          "used_observed_y_t_or_m_t_as_selector"
+        ],
+        "valid": false
+      },
+      "present": true,
+      "response_matrix_rank": 3,
+      "valid": false
+    },
+    "source-only-rank-deficient": {
+      "basis_dimension": 3,
+      "checks": {
+        "basis_dimension_at_least_two": true,
+        "canonical_higgs_identity_passed": true,
+        "certificate_kind": true,
+        "delta_computable": true,
+        "no_observed_selector_or_forbidden_import": true,
+        "orthogonal_basis_identity_passed": true,
+        "phase_allowed": true,
+        "production_phase_if_required": true,
+        "proposal_not_authorized_by_input": true,
+        "response_matrix_full_rank": false,
+        "same_source_coordinate": true,
+        "same_source_sector_overlap_passed": true,
+        "same_surface_cl3_z3": true,
+        "vectors_match_basis": true
+      },
+      "delta_perp": {
+        "canonical_higgs_index": 0,
+        "kappa_h": 0.72,
+        "orthogonal_correction_delta_perp": -0.054444444444444455,
+        "orthogonal_indices": [
+          1,
+          2
+        ],
+        "orthogonal_numerator": -0.039200000000000006,
+        "sigma_delta_perp": 0.004355429588352997,
+        "valid": true
+      },
+      "failed_checks": [
+        "response_matrix_full_rank"
+      ],
+      "firewall_validation": {
+        "checks": {
+          "set_c2_equal_one": true,
+          "set_cos_theta_equal_one": true,
+          "set_delta_perp_zero_without_certificate": true,
+          "set_kappa_s_equal_one": true,
+          "set_z_match_equal_one": true,
+          "used_H_unit_or_Ward_authority": true,
+          "used_alpha_lm_plaquette_or_u0": true,
+          "used_observed_WZ_masses_as_selector": true,
+          "used_observed_y_t_or_m_t_as_selector": true,
+          "used_y_t_bare": true,
+          "used_yt_ward_identity": true
+        },
+        "failed_checks": [],
+        "valid": true
+      },
+      "present": true,
+      "response_matrix_rank": 1,
+      "valid": false
+    },
+    "zero-kappa-h": {
+      "basis_dimension": 3,
+      "checks": {
+        "basis_dimension_at_least_two": true,
+        "canonical_higgs_identity_passed": true,
+        "certificate_kind": true,
+        "delta_computable": false,
+        "no_observed_selector_or_forbidden_import": true,
+        "orthogonal_basis_identity_passed": true,
+        "phase_allowed": true,
+        "production_phase_if_required": true,
+        "proposal_not_authorized_by_input": true,
+        "response_matrix_full_rank": true,
+        "same_source_coordinate": true,
+        "same_source_sector_overlap_passed": true,
+        "same_surface_cl3_z3": true,
+        "vectors_match_basis": true
+      },
+      "delta_perp": {
+        "reason": "canonical kappa_h is zero",
+        "valid": false
+      },
+      "failed_checks": [
+        "delta_computable"
+      ],
+      "firewall_validation": {
+        "checks": {
+          "set_c2_equal_one": true,
+          "set_cos_theta_equal_one": true,
+          "set_delta_perp_zero_without_certificate": true,
+          "set_kappa_s_equal_one": true,
+          "set_z_match_equal_one": true,
+          "used_H_unit_or_Ward_authority": true,
+          "used_alpha_lm_plaquette_or_u0": true,
+          "used_observed_WZ_masses_as_selector": true,
+          "used_observed_y_t_or_m_t_as_selector": true,
+          "used_y_t_bare": true,
+          "used_yt_ward_identity": true
+        },
+        "failed_checks": [],
+        "valid": true
+      },
+      "present": true,
+      "response_matrix_rank": 3,
+      "valid": false
+    }
+  },
+  "strict_delta_perp_tomography_gate_passed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not create production tomography rows in scout/current mode",
+    "does not set delta_perp to zero",
+    "does not backsolve delta_perp from observed y_t or m_t",
+    "does not use H_unit, yt_ward_identity, y_t_bare, alpha_LM, plaquette/u0, kappa_s=1, c2=1, Z_match=1, or cos(theta)=1"
+  ],
+  "validation": {
+    "basis_dimension": 3,
+    "checks": {
+      "basis_dimension_at_least_two": true,
+      "canonical_higgs_identity_passed": true,
+      "certificate_kind": true,
+      "delta_computable": true,
+      "no_observed_selector_or_forbidden_import": true,
+      "orthogonal_basis_identity_passed": true,
+      "phase_allowed": true,
+      "production_phase_if_required": true,
+      "proposal_not_authorized_by_input": true,
+      "response_matrix_full_rank": true,
+      "same_source_coordinate": true,
+      "same_source_sector_overlap_passed": true,
+      "same_surface_cl3_z3": true,
+      "vectors_match_basis": true
+    },
+    "delta_perp": {
+      "canonical_higgs_index": 0,
+      "kappa_h": 0.72,
+      "orthogonal_correction_delta_perp": -0.054444444444444455,
+      "orthogonal_indices": [
+        1,
+        2
+      ],
+      "orthogonal_numerator": -0.039200000000000006,
+      "sigma_delta_perp": 0.004355429588352997,
+      "valid": true
+    },
+    "failed_checks": [],
+    "firewall_validation": {
+      "checks": {
+        "set_c2_equal_one": true,
+        "set_cos_theta_equal_one": true,
+        "set_delta_perp_zero_without_certificate": true,
+        "set_kappa_s_equal_one": true,
+        "set_z_match_equal_one": true,
+        "used_H_unit_or_Ward_authority": true,
+        "used_alpha_lm_plaquette_or_u0": true,
+        "used_observed_WZ_masses_as_selector": true,
+        "used_observed_y_t_or_m_t_as_selector": true,
+        "used_y_t_bare": true,
+        "used_yt_ward_identity": true
+      },
+      "failed_checks": [],
+      "valid": true
+    },
+    "present": true,
+    "response_matrix_rank": 3,
+    "valid": true
+  }
+}

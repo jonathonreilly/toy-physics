@@ -1985,3 +1985,51 @@ Result: conditional support only.  The premise is absent: no same-source EW
 action certificate and no one-Higgs completeness certificate are present.  The
 older SM one-Higgs import boundary still blocks using one-Higgs gauge
 selection alone as an `O_sp/O_H` proof.
+
+## 2026-05-04 Lightweight W-Response / Delta-Perp Contracts
+
+This non-chunk block turns the W-response shortcut into two small executable
+production-row targets:
+
+```text
+y_h = g_2 R_t/(sqrt(2) R_W) - delta_perp
+delta_perp = sum_i y_i kappa_i/kappa_h
+```
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_same_source_w_response_lightweight_readout_harness.py --scout \
+  --output outputs/yt_same_source_w_response_lightweight_readout_scout_2026-05-04.json
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_delta_perp_tomography_correction_builder.py --scout \
+  --output outputs/yt_delta_perp_tomography_correction_scout_2026-05-04.json
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_delta_perp_tomography_correction_builder.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_same_source_w_response_orthogonal_correction_gate.py
+# SUMMARY: PASS=18 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=21 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=170 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=196 FAIL=0
+```
+
+Result: open, but sharper.  The scout contracts pass and reject the relevant
+shortcut families.  Strict production still needs:
+
+- `outputs/yt_same_source_w_response_rows_2026-05-04.json`;
+- `outputs/yt_delta_perp_tomography_rows_2026-05-04.json`.
+
+Once those land, rerun the tomography builder with
+`--emit-correction-certificate`, then rerun the W orthogonal-correction gate,
+lightweight W readout harness, matching/running bridge, retained-route
+certificate, and assembly gate.

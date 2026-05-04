@@ -56,6 +56,25 @@ Findings:
 - Aggregate retained/campaign certificates still pass as honest open-state
   blockers, not as closure.
 
+## 2026-05-04 Lightweight W-Response / Delta-Perp Self-Review
+
+Disposition: exact support / scout contract; strict production rows absent.
+
+Findings:
+
+- The lightweight W-response readout harness correctly combines
+  `g_2 R_t/(sqrt(2) R_W) - delta_perp`, propagates uncertainty, and rejects
+  missing correction authority, mismatched sources, observed selectors, and
+  static EW algebra.
+- The `delta_perp` tomography builder correctly computes
+  `sum_i y_i kappa_i/kappa_h` on synthetic full-rank rows and rejects
+  source-only rank deficiency, missing canonical identity, observed selectors,
+  mismatched sources, and zero `kappa_h`.
+- Neither runner creates production rows in scout/current mode.  Strict
+  production remains blocked until `yt_same_source_w_response_rows` and
+  `yt_delta_perp_tomography_rows` certificates exist.
+- No retained/proposed-retained wording is authorized.
+
 ## 2026-05-04 Chunk027-028 Packaging Self-Review
 
 Disposition: bounded production support; continue campaign.

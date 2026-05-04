@@ -19,6 +19,7 @@
     "complete_source_spectrum_identity_no_go": "exact negative boundary / complete source spectrum not canonical-Higgs closure",
     "confinement_gap_threshold_import": "exact negative boundary / confinement gap not scalar LSZ threshold",
     "d17_source_pole_identity_closure": "open / D17 source-pole identity closure attempt blocked",
+    "delta_perp_tomography_correction_builder": "open / delta_perp tomography correction production rows absent",
     "direct_scale": "scale requirement / direct measurement route open",
     "effective_mass_plateau_residue_no_go": "exact negative boundary / effective-mass plateau not scalar LSZ residue closure",
     "effective_potential_hessian_source_overlap": "exact negative boundary / effective-potential Hessian not source-overlap identity",
@@ -308,7 +309,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 195,
+  "pass_count": 196,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [
