@@ -39,6 +39,9 @@ state, up to normalization/sign.
 This is the best first route because it directly attacks the missing
 source-pole/canonical-Higgs overlap, uses `O_sp` as the normalized source side,
 and reuses the existing same-source `C_ss` and `dE_top/ds` production stream.
+After `YT_FMS_OH_CERTIFICATE_CONSTRUCTION_ATTEMPT_NOTE_2026-05-04.md`, this
+selection is explicitly blocked on the current PR230 surface until a
+same-surface EW gauge-Higgs/`O_H` certificate exists.
 
 ## Fallback
 
@@ -49,15 +52,16 @@ route:
 y_t = (g2 / sqrt(2)) * (dE_top/ds) / (dM_W/ds)
 ```
 
-That route is attractive, but it currently requires a new electroweak
-gauge-response harness plus sector-overlap and canonical-Higgs identity
-certificates.
+That route is attractive, but it currently requires a new same-source
+electroweak action, W/Z correlator mass-fit path, matched top/W/Z covariance
+rows, plus sector-overlap and canonical-Higgs identity certificates.
 
 ## Current Boundary
 
 This route selection is not closure.  The current surface still lacks:
 
 - a same-surface canonical-Higgs radial operator `O_H`;
+- a same-surface EW gauge-Higgs production action for that `O_H`;
 - the identity or measured pole overlap `O_sp = O_H`;
 - `C_sH` and `C_HH` pole-residue rows;
 - a passing Gram-purity gate;
@@ -73,6 +77,8 @@ does not treat `H_unit` as `O_H`, does not set `kappa_s = 1`, does not set
 
 ## Next Action
 
-Implement or audit the `O_sp/O_H` identity on the PR #230 surface, then add
-same-ensemble `C_sH` and `C_HH` pole-residue rows and run the Gram-purity gate.
-Keep same-source W/Z response as the fallback physical-observable route.
+Do not cycle back to source-only `O_sp/O_H`.  The next positive source-Higgs
+action is a same-surface EW gauge-Higgs/`O_H` certificate plus same-ensemble
+`C_sH` and `C_HH` pole-residue rows.  If that new surface is not in scope,
+continue FH/LSZ production and pursue W/Z, Schur, or rank-one alternatives
+only where they add real rows or theorems.

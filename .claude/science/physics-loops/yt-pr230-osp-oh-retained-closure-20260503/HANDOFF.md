@@ -273,6 +273,26 @@ with a dynamic Higgs doublet.  The FMS route therefore needs a new EW
 gauge-Higgs/O_H certificate before it can generate production `C_sH/C_HH`
 rows.
 
+## 2026-05-04 Source-Overlap Route Selector Refresh
+
+The source-overlap selector was refreshed against the FMS boundary:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_source_overlap_route_selection.py
+# pass
+
+python3 scripts/frontier_yt_pr230_source_overlap_route_selection.py
+# SUMMARY: PASS=20 FAIL=0
+
+python3 scripts/frontier_yt_source_higgs_cross_correlator_harness_extension.py
+# SUMMARY: PASS=17 FAIL=0
+```
+
+Result: source-Higgs Gram purity remains the sharpest positive route only if a
+new same-surface EW/O_H certificate is in scope.  On the current PR230 surface
+it is blocked by the missing EW gauge-Higgs/O_H surface, so the selector now
+explicitly says not to loop back to source-only `O_sp/O_H`.
+
 ## 2026-05-04 O_sp/O_H Assumption-Route Audit
 
 The current O_sp/O_H loop now has an executable assumption audit:

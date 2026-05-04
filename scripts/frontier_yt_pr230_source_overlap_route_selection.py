@@ -27,11 +27,16 @@ PARENTS = {
     "same_source_pole_sufficiency": "outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json",
     "source_higgs_manifest": "outputs/yt_source_higgs_cross_correlator_manifest_2026-05-02.json",
     "source_higgs_gram_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+    "fms_oh_construction_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
     "hunit_operator_gate": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
     "source_higgs_import_audit": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
     "same_source_wz_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
     "wz_harness_absence": "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json",
+    "wz_implementation_plan": "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json",
+    "wz_same_source_ew_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "wz_correlator_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "gauge_mass_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
     "neutral_scalar_rank_one": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
@@ -80,9 +85,10 @@ def route_rows(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 "the source side now has a clean O_sp Legendre/LSZ normalization certificate",
                 "reuses the existing same-source C_ss and dE_top/ds production stream",
                 "has an existing algebraic acceptance gate: Res(C_sH)^2 = Res(C_ss) Res(C_HH)",
-                "does not require introducing an electroweak gauge-sector MC harness before the first useful test",
+                "remains the sharpest positive route if a same-surface EW/O_H certificate is supplied",
             ],
             "current_blockers": [
+                "FMS construction attempt shows the current PR230 harness lacks a same-surface EW gauge-Higgs/O_H surface",
                 "same-surface canonical-Higgs operator O_H is absent",
                 "O_sp is not yet proved equal to O_H",
                 "C_sH and C_HH pole rows are absent",
@@ -90,8 +96,9 @@ def route_rows(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 "source-Higgs Gram gate is open, not passed",
             ],
             "first_engineering_step": (
-                "derive or measure the O_sp/O_H overlap with a same-surface "
-                "O_H/C_sH/C_HH path, then feed it into the Gram-purity gate"
+                "derive or supply a same-surface EW gauge-Higgs/O_H certificate, "
+                "measure O_H/C_sH/C_HH pole rows, then feed them into the "
+                "Gram-purity gate"
             ),
             "audit_boundary": "support only until O_H/C_sH/C_HH production rows and retained-route gates pass",
         },
@@ -103,13 +110,16 @@ def route_rows(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 "physical observable route can cancel source normalization through dE_top/ds over dM_W/ds",
                 "has a clear acceptance certificate schema",
                 "good fallback if O_H construction remains blocked",
+                "implementation-plan, EW-action, and W/Z mass-fit gates now name the missing work units",
             ],
             "current_blockers": [
                 "current PR230 harness is QCD top-correlator only",
+                "same-source EW gauge-Higgs action is absent",
+                "W/Z correlator mass-fit path is absent",
                 "no W/Z mass-response rows or dM_W/ds certificate exist",
                 "sector-overlap identity and canonical-Higgs identity are still required",
             ],
-            "first_engineering_step": "design a genuine same-source W/Z correlator response harness",
+            "first_engineering_step": "implement a genuine same-source EW action plus W/Z correlator response harness",
             "audit_boundary": "support only until production W/Z mass fits and identity certificates pass",
         },
         {
@@ -189,9 +199,31 @@ def main() -> int:
         certs["source_higgs_import_audit"],
         "source_higgs_cross_correlator_authority_found",
     )
+    source_higgs_launch_blocked = (
+        "source-Higgs production launch blocked" in status(certs["source_higgs_readiness"])
+        and certs["source_higgs_readiness"].get("source_higgs_launch_ready") is False
+    )
+    fms_oh_surface_blocked = (
+        "FMS O_H certificate construction blocked"
+        in status(certs["fms_oh_construction_attempt"])
+        and certs["fms_oh_construction_attempt"].get("fms_oh_certificate_available") is False
+        and certs["fms_oh_construction_attempt"].get("proposal_allowed") is False
+    )
     wz_absent = (
         has_false(certs["same_source_wz_gate"], "same_source_wz_response_certificate_gate_passed")
         and "absent" in str(certs["wz_harness_absence"].get("verdict", "")).lower()
+    )
+    wz_plan_loaded = (
+        "WZ response harness implementation plan" in status(certs["wz_implementation_plan"])
+        and certs["wz_implementation_plan"].get("proposal_allowed") is False
+    )
+    wz_ew_action_absent = (
+        "same-source EW action not defined" in status(certs["wz_same_source_ew_action"])
+        and certs["wz_same_source_ew_action"].get("same_source_ew_action_ready") is False
+    )
+    wz_massfit_absent = (
+        "WZ correlator mass-fit path absent" in status(certs["wz_correlator_mass_fit_path"])
+        and certs["wz_correlator_mass_fit_path"].get("wz_correlator_mass_fit_path_ready") is False
     )
     rank_one_blocked = has_false(certs["neutral_scalar_rank_one"], "neutral_scalar_rank_one_purity_gate_passed")
     tomography_rank_deficient = "null direction" in str(
@@ -213,30 +245,44 @@ def main() -> int:
     report("canonical-operator-open", canonical_operator_open, status(certs["canonical_higgs_operator_gate"]))
     report("hunit-substitute-blocked", hunit_blocked, status(certs["hunit_operator_gate"]))
     report("csh-data-missing", csh_missing, status(certs["source_higgs_import_audit"]))
+    report("source-higgs-launch-blocked", source_higgs_launch_blocked, status(certs["source_higgs_readiness"]))
+    report("fms-oh-current-surface-blocked", fms_oh_surface_blocked, status(certs["fms_oh_construction_attempt"]))
     report("wz-route-absent", wz_absent, status(certs["wz_harness_absence"]))
+    report("wz-implementation-plan-loaded", wz_plan_loaded, status(certs["wz_implementation_plan"]))
+    report("wz-ew-action-absent", wz_ew_action_absent, status(certs["wz_same_source_ew_action"]))
+    report("wz-massfit-path-absent", wz_massfit_absent, status(certs["wz_correlator_mass_fit_path"]))
     report("rank-one-route-blocked", rank_one_blocked and tomography_rank_deficient, "rank-one theorem not available")
-    report("selected-route-is-gram-purity", selected["route"] == "same_surface_source_higgs_gram_purity", selected["route"])
+    report(
+        "selected-route-is-gram-purity-with-fms-blocker",
+        selected["route"] == "same_surface_source_higgs_gram_purity" and fms_oh_surface_blocked,
+        selected["route"],
+    )
 
     result = {
         "actual_current_surface_status": "bounded-support / PR230 source-overlap route selected",
         "verdict": (
             "The best next PR #230 overlap lane is the same-surface "
-            "source-Higgs Gram-purity route.  It directly targets the missing "
+            "source-Higgs Gram-purity route, but the FMS construction attempt "
+            "now makes its immediate current-surface blocker explicit.  It directly targets the missing "
             "source-pole/canonical-Higgs overlap.  The source pole now has a "
             "Legendre/LSZ normalized operator O_sp, so the remaining object is "
             "the O_sp/O_H overlap.  A first-principles stretch attempt did not "
             "derive that identity from current source-only, taste, EW, or "
-            "rank-one surfaces.  The route reuses the existing same-source "
-            "C_ss and dE_top/ds production stream and has a sharp acceptance "
-            "condition.  The W/Z response lane remains the fallback physical "
-            "observable route, but it requires a new electroweak gauge-response "
-            "harness plus sector-overlap certificates.  Source-only FH/LSZ and "
+            "rank-one surfaces, and the current PR230 harness lacks a "
+            "same-surface EW gauge-Higgs/O_H certificate.  The route reuses the "
+            "existing same-source C_ss and dE_top/ds production stream only "
+            "after that O_H surface exists.  The W/Z response lane remains the "
+            "fallback physical observable route, but it also requires a new "
+            "same-source EW action, W/Z correlator mass fits, covariance rows, "
+            "and sector-overlap certificates.  Source-only FH/LSZ and "
             "symmetry-only rank-one routes are not closure routes on the current "
             "surface."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "This is a route-selection certificate; no O_H/C_sH/C_HH or W/Z production evidence has been supplied.",
         "selected_primary_route": selected["route"],
+        "selected_primary_current_surface_blocked": fms_oh_surface_blocked,
+        "selected_primary_requires_new_ew_oh_surface": True,
         "selected_primary_reason": selected["why"],
         "route_rows": rows,
         "parent_certificates": PARENTS,
@@ -244,7 +290,7 @@ def main() -> int:
             "do_now": [
                 "keep FH/LSZ chunk reruns running in parallel as source-pole support",
                 "use O_sp as the normalized source side",
-                "start same-surface O_H/C_sH/C_HH implementation or O_sp/O_H identity audit",
+                "start a new same-surface EW gauge-Higgs/O_H certificate if that surface is in scope",
                 "feed any resulting pole residues through the existing Gram-purity gate",
             ],
             "do_not_do": [
@@ -253,7 +299,7 @@ def main() -> int:
                 "do not use static EW W/Z algebra as dM_W/ds",
                 "do not claim retained or proposed_retained closure",
             ],
-            "fallback": "if O_H remains absent after candidate audit, implement same-source W/Z mass-response harness",
+            "fallback": "if O_H remains absent on the current surface, continue FH/LSZ chunks and implement same-source W/Z mass-response only after the EW action surface exists",
         },
         "strict_non_claims": [
             "not retained y_t closure",
@@ -263,10 +309,11 @@ def main() -> int:
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
         ],
         "exact_next_action": (
-            "Work the same-surface source-Higgs Gram-purity lane first: implement "
-            "or audit the O_sp/O_H identity on the PR230 surface, then add "
-            "C_sH/C_HH pole-residue rows and run the Gram-purity gate.  Keep W/Z "
-            "response as the fallback physical-observable route."
+            "Do not cycle back to source-only O_sp/O_H.  The next positive "
+            "source-Higgs action is a new same-surface EW gauge-Higgs/O_H "
+            "certificate plus C_sH/C_HH pole rows.  If that new surface is not "
+            "in scope, keep FH/LSZ production running and pursue W/Z, Schur, or "
+            "rank-one alternatives only where they add real rows or theorems."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

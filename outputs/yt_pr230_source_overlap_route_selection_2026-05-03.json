@@ -1,6 +1,6 @@
 {
   "actual_current_surface_status": "bounded-support / PR230 source-overlap route selected",
-  "exact_next_action": "Work the same-surface source-Higgs Gram-purity lane first: implement or audit the O_sp/O_H identity on the PR230 surface, then add C_sH/C_HH pole-residue rows and run the Gram-purity gate.  Keep W/Z response as the fallback physical-observable route.",
+  "exact_next_action": "Do not cycle back to source-only O_sp/O_H.  The next positive source-Higgs action is a new same-surface EW gauge-Higgs/O_H certificate plus C_sH/C_HH pole rows.  If that new surface is not in scope, keep FH/LSZ production running and pursue W/Z, Schur, or rank-one alternatives only where they add real rows or theorems.",
   "fail_count": 0,
   "implementation_packet": {
     "do_not_do": [
@@ -12,14 +12,15 @@
     "do_now": [
       "keep FH/LSZ chunk reruns running in parallel as source-pole support",
       "use O_sp as the normalized source side",
-      "start same-surface O_H/C_sH/C_HH implementation or O_sp/O_H identity audit",
+      "start a new same-surface EW gauge-Higgs/O_H certificate if that surface is in scope",
       "feed any resulting pole residues through the existing Gram-purity gate"
     ],
-    "fallback": "if O_H remains absent after candidate audit, implement same-source W/Z mass-response harness"
+    "fallback": "if O_H remains absent on the current surface, continue FH/LSZ chunks and implement same-source W/Z mass-response only after the EW action surface exists"
   },
   "parent_certificates": {
     "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
+    "fms_oh_construction_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
     "gauge_mass_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
     "hunit_operator_gate": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
     "legendre_source_pole_operator": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
@@ -34,22 +35,27 @@
     "source_higgs_gram_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "source_higgs_import_audit": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
     "source_higgs_manifest": "outputs/yt_source_higgs_cross_correlator_manifest_2026-05-02.json",
-    "wz_harness_absence": "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json"
+    "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+    "wz_correlator_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
+    "wz_harness_absence": "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json",
+    "wz_implementation_plan": "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json",
+    "wz_same_source_ew_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json"
   },
-  "pass_count": 15,
+  "pass_count": 20,
   "proposal_allowed": false,
   "proposal_allowed_reason": "This is a route-selection certificate; no O_H/C_sH/C_HH or W/Z production evidence has been supplied.",
   "route_rows": [
     {
       "audit_boundary": "support only until O_H/C_sH/C_HH production rows and retained-route gates pass",
       "current_blockers": [
+        "FMS construction attempt shows the current PR230 harness lacks a same-surface EW gauge-Higgs/O_H surface",
         "same-surface canonical-Higgs operator O_H is absent",
         "O_sp is not yet proved equal to O_H",
         "C_sH and C_HH pole rows are absent",
         "H_unit is explicitly not accepted as O_H without pole-purity and canonical-normalization certificates",
         "source-Higgs Gram gate is open, not passed"
       ],
-      "first_engineering_step": "derive or measure the O_sp/O_H overlap with a same-surface O_H/C_sH/C_HH path, then feed it into the Gram-purity gate",
+      "first_engineering_step": "derive or supply a same-surface EW gauge-Higgs/O_H certificate, measure O_H/C_sH/C_HH pole rows, then feed them into the Gram-purity gate",
       "priority_score": 91,
       "route": "same_surface_source_higgs_gram_purity",
       "selected_primary": true,
@@ -58,24 +64,27 @@
         "the source side now has a clean O_sp Legendre/LSZ normalization certificate",
         "reuses the existing same-source C_ss and dE_top/ds production stream",
         "has an existing algebraic acceptance gate: Res(C_sH)^2 = Res(C_ss) Res(C_HH)",
-        "does not require introducing an electroweak gauge-sector MC harness before the first useful test"
+        "remains the sharpest positive route if a same-surface EW/O_H certificate is supplied"
       ]
     },
     {
       "audit_boundary": "support only until production W/Z mass fits and identity certificates pass",
       "current_blockers": [
         "current PR230 harness is QCD top-correlator only",
+        "same-source EW gauge-Higgs action is absent",
+        "W/Z correlator mass-fit path is absent",
         "no W/Z mass-response rows or dM_W/ds certificate exist",
         "sector-overlap identity and canonical-Higgs identity are still required"
       ],
-      "first_engineering_step": "design a genuine same-source W/Z correlator response harness",
+      "first_engineering_step": "implement a genuine same-source EW action plus W/Z correlator response harness",
       "priority_score": 76,
       "route": "same_source_wz_mass_response",
       "selected_primary": false,
       "why": [
         "physical observable route can cancel source normalization through dE_top/ds over dM_W/ds",
         "has a clear acceptance certificate schema",
-        "good fallback if O_H construction remains blocked"
+        "good fallback if O_H construction remains blocked",
+        "implementation-plan, EW-action, and W/Z mass-fit gates now name the missing work units"
       ]
     },
     {
@@ -110,13 +119,15 @@
       ]
     }
   ],
+  "selected_primary_current_surface_blocked": true,
   "selected_primary_reason": [
     "directly targets the missing source-pole/canonical-Higgs overlap",
     "the source side now has a clean O_sp Legendre/LSZ normalization certificate",
     "reuses the existing same-source C_ss and dE_top/ds production stream",
     "has an existing algebraic acceptance gate: Res(C_sH)^2 = Res(C_ss) Res(C_HH)",
-    "does not require introducing an electroweak gauge-sector MC harness before the first useful test"
+    "remains the sharpest positive route if a same-surface EW/O_H certificate is supplied"
   ],
+  "selected_primary_requires_new_ew_oh_surface": true,
   "selected_primary_route": "same_surface_source_higgs_gram_purity",
   "strict_non_claims": [
     "not retained y_t closure",
@@ -125,5 +136,5 @@
     "does not set cos(theta) = 1",
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
   ],
-  "verdict": "The best next PR #230 overlap lane is the same-surface source-Higgs Gram-purity route.  It directly targets the missing source-pole/canonical-Higgs overlap.  The source pole now has a Legendre/LSZ normalized operator O_sp, so the remaining object is the O_sp/O_H overlap.  A first-principles stretch attempt did not derive that identity from current source-only, taste, EW, or rank-one surfaces.  The route reuses the existing same-source C_ss and dE_top/ds production stream and has a sharp acceptance condition.  The W/Z response lane remains the fallback physical observable route, but it requires a new electroweak gauge-response harness plus sector-overlap certificates.  Source-only FH/LSZ and symmetry-only rank-one routes are not closure routes on the current surface."
+  "verdict": "The best next PR #230 overlap lane is the same-surface source-Higgs Gram-purity route, but the FMS construction attempt now makes its immediate current-surface blocker explicit.  It directly targets the missing source-pole/canonical-Higgs overlap.  The source pole now has a Legendre/LSZ normalized operator O_sp, so the remaining object is the O_sp/O_H overlap.  A first-principles stretch attempt did not derive that identity from current source-only, taste, EW, or rank-one surfaces, and the current PR230 harness lacks a same-surface EW gauge-Higgs/O_H certificate.  The route reuses the existing same-source C_ss and dE_top/ds production stream only after that O_H surface exists.  The W/Z response lane remains the fallback physical observable route, but it also requires a new same-source EW action, W/Z correlator mass fits, covariance rows, and sector-overlap certificates.  Source-only FH/LSZ and symmetry-only rank-one routes are not closure routes on the current surface."
 }

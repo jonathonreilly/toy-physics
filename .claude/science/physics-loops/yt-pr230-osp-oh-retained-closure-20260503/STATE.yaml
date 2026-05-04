@@ -11,7 +11,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 13
+block: 14
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -100,6 +100,9 @@ files_touched:
   - scripts/frontier_yt_fms_oh_certificate_construction_attempt.py
   - docs/YT_FMS_OH_CERTIFICATE_CONSTRUCTION_ATTEMPT_NOTE_2026-05-04.md
   - outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json
+  - scripts/frontier_yt_pr230_source_overlap_route_selection.py
+  - docs/YT_PR230_SOURCE_OVERLAP_ROUTE_SELECTION_NOTE_2026-05-03.md
+  - outputs/yt_pr230_source_overlap_route_selection_2026-05-03.json
   - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
 commands_run:
   - "python3 -m py_compile scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py # pass"
@@ -201,6 +204,9 @@ commands_run:
   - "python3 scripts/frontier_yt_fms_oh_certificate_construction_attempt.py # PASS=19 FAIL=0"
   - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=147 FAIL=0"
   - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=173 FAIL=0"
+  - "python3 -m py_compile scripts/frontier_yt_pr230_source_overlap_route_selection.py # pass"
+  - "python3 scripts/frontier_yt_pr230_source_overlap_route_selection.py # PASS=20 FAIL=0"
+  - "python3 scripts/frontier_yt_source_higgs_cross_correlator_harness_extension.py # PASS=17 FAIL=0"
 current_result: >
   O_sp is derived and unit-normalized, but the current PR230 surface does not
   derive O_sp = O_H.  A counterfamily holds Res(C_sp,sp)=1 and same-source top
@@ -299,7 +305,13 @@ current_result: >
   CL3/SM embedding do not supply that production action; static EW tree
   algebra and SM one-Higgs selection assume canonical H after it is supplied.
   Aggregate retained/campaign certificates include this FMS blocker and still
-  deny proposal authority with PASS=147 and PASS=173.
+  deny proposal authority with PASS=147 and PASS=173.  The source-overlap
+  route selector was refreshed against that blocker and now passes with
+  PASS=20 FAIL=0.  It still identifies source-Higgs Gram purity as the
+  sharpest positive route if a new same-surface EW/O_H surface is allowed, but
+  it marks that primary route as blocked on the current surface and prevents
+  another source-only O_sp/O_H loop.  The source-Higgs harness extension still
+  passes with PASS=17 FAIL=0 against the refreshed selector.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >

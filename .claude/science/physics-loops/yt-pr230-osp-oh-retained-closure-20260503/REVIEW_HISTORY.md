@@ -234,3 +234,19 @@ Findings:
 - No retained/proposed-retained claim is authorized; the FMS route now requires
   a new EW gauge-Higgs/O_H certificate before any `C_sH/C_HH` production rows
   can become evidence.
+
+## 2026-05-04 Source-Overlap Selector Refresh Self-Review
+
+Disposition: route-selection support; continue campaign.
+
+Findings:
+
+- The selector now consumes the FMS boundary and source-Higgs readiness gate.
+- Source-Higgs Gram purity remains the highest-leverage positive route only if
+  a new same-surface EW/O_H certificate is allowed.
+- On the current PR230 surface, the selected source-Higgs route is explicitly
+  blocked by the missing EW gauge-Higgs/O_H surface.
+- The W/Z fallback now records the already-open EW-action and W/Z mass-fit
+  blockers rather than presenting W/Z as a ready measurement route.
+- The harness extension still passes against the refreshed selector, so no
+  existing source-Higgs instrumentation contract was broken.

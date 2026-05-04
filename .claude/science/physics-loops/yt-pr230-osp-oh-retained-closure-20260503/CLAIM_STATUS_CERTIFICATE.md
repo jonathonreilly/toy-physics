@@ -59,4 +59,7 @@ Open imports:
   the current surface: it confirms that the present harness has a guarded
   source-Higgs shell, but no same-surface EW gauge-Higgs action, dynamic Higgs
   doublet, `O_H` identity/normalization certificate, or `C_sH/C_HH` pole rows;
+- the refreshed source-overlap selector keeps Gram purity as the sharpest
+  positive route only conditional on a new same-surface EW/O_H surface; it does
+  not authorize another source-only identity attempt as closure;
 - independent audit after any proposed positive certificate.
