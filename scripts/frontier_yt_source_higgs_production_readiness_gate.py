@@ -101,6 +101,9 @@ def source_higgs_rows_present(ensemble: dict[str, Any]) -> bool:
 def scan_completed_chunks() -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for path in sorted((ROOT / "outputs").glob(CHUNK_PATTERN), key=chunk_index):
+        idx = chunk_index(path)
+        if idx < 0:
+            continue
         data = load_json(path)
         metadata = data.get("metadata", {}) if isinstance(data.get("metadata", {}), dict) else {}
         source_meta = metadata.get("source_higgs_cross_correlator", {})
@@ -111,7 +114,7 @@ def scan_completed_chunks() -> list[dict[str, Any]]:
         ensemble = ensembles[0] if isinstance(ensembles, list) and ensembles and isinstance(ensembles[0], dict) else {}
         rows.append(
             {
-                "chunk_index": chunk_index(path),
+                "chunk_index": idx,
                 "path": display(path),
                 "phase": metadata.get("phase"),
                 "source_higgs_metadata_present": source_higgs_metadata_present,

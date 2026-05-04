@@ -163,6 +163,10 @@ Open imports:
   complete L12 production, L16/L24 scaling, FV/IR/zero-mode control,
   model-class authority, and canonical-Higgs/source-overlap closure remain
   absent, so retained/proposed-retained wording is still unauthorized;
+- the source-Higgs production readiness gate now filters for numeric FH/LSZ
+  chunk indices, excluding the combined L12 summary from the completed-chunk
+  scan; it reports 63 numeric chunks and still blocks launch because the
+  same-surface `O_H` certificate and `C_sH/C_HH` production rows are absent;
 - FH/LSZ chunks047/048 are now packaged with the ready set as bounded
   production support only; the 48/63 ready L12 state passes target-observable
   ESS with limiting ESS `678.1515635297619` but still fails response-window

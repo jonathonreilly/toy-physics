@@ -657,3 +657,20 @@ Findings:
   closure are absent.
 - No retained/proposed-retained claim is authorized; retained-route and
   campaign-status certificates remain pass-clean only as overclaim guards.
+
+## 2026-05-04 Source-Higgs Readiness Scan Fix Self-Review
+
+Disposition: gate hygiene; continue campaign.
+
+Findings:
+
+- Refreshing the source-Higgs readiness gate after the complete L12 support
+  file landed showed `completed-chunks-scanned: count=64`, because
+  `chunked_combined` matched the chunk glob.
+- The gate now skips paths with no numeric chunk index and reports 63 numeric
+  FH/LSZ chunks.
+- The source-Higgs conclusion is unchanged: all numeric chunks are
+  source-Higgs absent-guarded, and no same-surface `O_H` certificate or
+  `C_sH/C_HH` production rows exist.
+- Retained-route and campaign-status certificates remain `PASS=158 FAIL=0`
+  and `PASS=184 FAIL=0`; no proposal wording is authorized.

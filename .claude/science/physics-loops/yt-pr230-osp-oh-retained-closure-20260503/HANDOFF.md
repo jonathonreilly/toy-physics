@@ -1557,3 +1557,27 @@ Next exact action: continue monitoring session `34560`.  When the next
 polefit8x8 chunks land, rerun the combiner, postprocessor, retained-route, and
 campaign-status certificates, package the new coherent slice, and keep PR #230
 draft/open unless the retained-proposal certificate genuinely changes.
+
+## 2026-05-04 Source-Higgs Readiness Scan Fix
+
+While refreshing the top non-overlapping closure route, the source-Higgs
+readiness gate was counting the complete L12 combined summary as a chunk
+because the glob matched `chunked_combined`.  The gate now skips paths without
+a numeric chunk index.
+
+```bash
+python3 -m py_compile scripts/frontier_yt_source_higgs_production_readiness_gate.py
+# pass
+
+python3 scripts/frontier_yt_source_higgs_production_readiness_gate.py
+# SUMMARY: PASS=21 FAIL=0, completed-chunks-scanned: count=63
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=158 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=184 FAIL=0
+```
+
+This is gate hygiene only.  The source-Higgs route still has no same-surface
+`O_H` certificate and no `C_sH/C_HH` production rows.

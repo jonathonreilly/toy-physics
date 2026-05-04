@@ -30,9 +30,11 @@ production harness, write source-Higgs rows, or treat current FH/LSZ chunks as
 
 ## Result
 
-The completed chunk scan shows the landed FH/LSZ chunks have source-Higgs
-metadata marked `absent_guarded`, with no canonical-Higgs operator certificate,
-no source-Higgs modes/noises, and no `C_sH/C_HH` rows.  Therefore the current
+The completed chunk scan now filters for numeric chunk indices only, so the
+combined L12 summary is not counted as an extra production chunk.  It scans
+the `63` landed FH/LSZ chunks and shows their source-Higgs metadata is marked
+`absent_guarded`, with no canonical-Higgs operator certificate, no
+source-Higgs modes/noises, and no `C_sH/C_HH` rows.  Therefore the current
 chunk wave cannot by itself close the `O_sp/O_H` blocker.
 
 The gate also records the future launch surface: after a valid same-surface
