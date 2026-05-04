@@ -11,7 +11,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 12
+block: 13
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -97,6 +97,9 @@ files_touched:
   - scripts/frontier_yt_osp_oh_literature_bridge.py
   - docs/YT_OSP_OH_LITERATURE_BRIDGE_NOTE_2026-05-04.md
   - outputs/yt_osp_oh_literature_bridge_2026-05-04.json
+  - scripts/frontier_yt_fms_oh_certificate_construction_attempt.py
+  - docs/YT_FMS_OH_CERTIFICATE_CONSTRUCTION_ATTEMPT_NOTE_2026-05-04.md
+  - outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json
   - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
 commands_run:
   - "python3 -m py_compile scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py # pass"
@@ -194,6 +197,10 @@ commands_run:
   - "python3 scripts/frontier_yt_osp_oh_literature_bridge.py # PASS=13 FAIL=0"
   - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=146 FAIL=0"
   - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=172 FAIL=0"
+  - "python3 -m py_compile scripts/frontier_yt_fms_oh_certificate_construction_attempt.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py # pass"
+  - "python3 scripts/frontier_yt_fms_oh_certificate_construction_attempt.py # PASS=19 FAIL=0"
+  - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=147 FAIL=0"
+  - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=173 FAIL=0"
 current_result: >
   O_sp is derived and unit-normalized, but the current PR230 surface does not
   derive O_sp = O_H.  A counterfamily holds Res(C_sp,sp)=1 and same-source top
@@ -284,13 +291,22 @@ current_result: >
   material is only a pole/gauge guardrail.  No external source is imported as
   current-surface proof.  Aggregate retained/campaign certificates now include
   this bridge and still deny proposal authority with PASS=146 and PASS=172.
+  The FMS-style O_H construction attempt was then run against the actual PR230
+  surface.  It passed as an exact negative boundary with PASS=19 FAIL=0:
+  the current harness is still SU(3)/staggered top production with a
+  default-off source-Higgs diagonal-vertex shell, not a same-surface EW
+  gauge-Higgs action with a dynamic Higgs doublet.  Minimal axioms and
+  CL3/SM embedding do not supply that production action; static EW tree
+  algebra and SM one-Higgs selection assume canonical H after it is supplied.
+  Aggregate retained/campaign certificates include this FMS blocker and still
+  deny proposal authority with PASS=147 and PASS=173.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
   Monitor chunks035, 036, 037, 038, 039, and 040.
   When outputs land, rerun their chunk gates plus aggregate retained and
   campaign certificates.  While waiting, only take routes that can add a
-  real new same-surface row/theorem: certified O_H/C_sH/C_HH pole residues, a
-  genuine same-source EW action plus W/Z correlator mass-fit rows and response
-  rows, Schur A/B/C kernel rows, or a direct proof of the missing
-  neutral-sector irreducibility premise.
+  real new same-surface row/theorem: a new EW gauge-Higgs/O_H certificate plus
+  C_sH/C_HH pole residues, a genuine same-source EW action plus W/Z correlator
+  mass-fit rows and response rows, Schur A/B/C kernel rows, or a direct proof
+  of the missing neutral-sector irreducibility premise.

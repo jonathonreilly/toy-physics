@@ -125,6 +125,7 @@
     "fitted_kernel_residue_selector": "exact negative boundary / fitted scalar-kernel residue selector no-go",
     "flat_toron_denominator": "exact negative boundary / flat toron scalar-denominator obstruction",
     "flat_toron_washout": "exact-support / flat toron thermodynamic washout",
+    "fms_oh_certificate_construction_attempt": "exact negative boundary / FMS O_H certificate construction blocked on current PR230 surface",
     "free_bubble": "exact negative boundary / free source pole absence",
     "free_kinetic": "exact support / free staggered kinetic coefficient",
     "gauge_perron_neutral_scalar_rank_one_import": "exact negative boundary / gauge-vacuum Perron theorem does not certify neutral-scalar rank-one purity",
@@ -227,7 +228,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 172,
+  "pass_count": 173,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

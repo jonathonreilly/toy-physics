@@ -214,3 +214,23 @@ Findings:
 - No retained/proposed-retained claim is authorized because scalar LSZ,
   canonical-Higgs/source-overlap, W/Z response, Schur-row, and retained-route
   gates remain open.
+
+## 2026-05-04 FMS O_H Construction Attempt Self-Review
+
+Disposition: exact negative boundary for this current-surface construction
+attempt; continue campaign.
+
+Findings:
+
+- The runner uses the literature bridge only as route shape, not proof
+  authority.
+- The current production harness has a guarded source-Higgs diagonal-vertex
+  shell, but no same-surface `SU(2)xU(1)` gauge-Higgs production action or
+  dynamic Higgs doublet.
+- Minimal axioms and CL3/SM embedding provide structural substrate/gauge
+  support, not a production `O_H` certificate.
+- Static EW gauge-mass algebra and SM one-Higgs selection assume canonical
+  `H` after it is supplied and cannot identify `O_sp` with `O_H`.
+- No retained/proposed-retained claim is authorized; the FMS route now requires
+  a new EW gauge-Higgs/O_H certificate before any `C_sH/C_HH` production rows
+  can become evidence.

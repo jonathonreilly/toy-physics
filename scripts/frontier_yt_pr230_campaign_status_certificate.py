@@ -184,6 +184,9 @@ def main() -> int:
         "osp_oh_literature_bridge": load(
             "outputs/yt_osp_oh_literature_bridge_2026-05-04.json"
         ),
+        "fms_oh_certificate_construction_attempt": load(
+            "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json"
+        ),
         "complete_source_spectrum_identity_no_go": load(
             "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json"
         ),
@@ -845,6 +848,21 @@ def main() -> int:
         and certificates["osp_oh_literature_bridge"].get("literature_bridge_passed") is True
         and certificates["osp_oh_literature_bridge"].get("proposal_allowed") is False,
         statuses["osp_oh_literature_bridge"],
+    )
+    report(
+        "fms-oh-certificate-construction-attempt-blocks-current-surface",
+        "FMS O_H certificate construction blocked"
+        in str(statuses["fms_oh_certificate_construction_attempt"])
+        and certificates["fms_oh_certificate_construction_attempt"].get("proposal_allowed") is False
+        and certificates["fms_oh_certificate_construction_attempt"].get(
+            "fms_oh_certificate_available"
+        )
+        is False
+        and certificates["fms_oh_certificate_construction_attempt"].get(
+            "fms_construction_attempt_passed_as_boundary"
+        )
+        is True,
+        statuses["fms_oh_certificate_construction_attempt"],
     )
     report(
         "complete-source-spectrum-identity-no-go-blocks",

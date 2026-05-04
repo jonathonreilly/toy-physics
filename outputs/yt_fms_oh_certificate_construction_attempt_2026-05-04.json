@@ -1,0 +1,51 @@
+{
+  "actual_current_surface_status": "exact negative boundary / FMS O_H certificate construction blocked on current PR230 surface",
+  "bare_retained_allowed": false,
+  "current_surface_classification": {
+    "cl3_sm_embedding": "structural SU(2)/hypercharge support, not a production O_H certificate",
+    "ew_higgs_gauge_mass_note": "tree-level dictionary after canonical H is supplied",
+    "minimal_axioms": "Cl(3)/Z3 + g_bare=1 + staggered-Dirac substrate, not an EW gauge-Higgs action",
+    "production_harness": "SU(3) Wilson/staggered top harness with default-off source-Higgs diagonal-vertex shell"
+  },
+  "exact_next_action": "A positive FMS route needs a new same-surface EW gauge-Higgs action/certificate for a gauge-invariant O_H operator, followed by production C_ss/C_sH/C_HH rows and GEVP or isolated-pole Gram residue extraction.  Without that new surface, continue the current production chunks or pursue W/Z/Schur/rank-one alternatives.",
+  "fail_count": 0,
+  "fms_construction_attempt_passed_as_boundary": true,
+  "fms_oh_certificate_available": false,
+  "missing_requirements": [
+    "same_surface_ew_gauge_higgs_action",
+    "dynamic_higgs_doublet_in_current_harness",
+    "gauge_invariant_composite_oh_definition",
+    "canonical_identity_and_normalization_certificate",
+    "production_csh_chh_rows",
+    "sm_one_higgs_allowed_as_identity_import"
+  ],
+  "parent_certificates": {
+    "canonical_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "canonical_operator_realization": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
+    "canonical_repo_authority": "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json",
+    "literature_bridge": "outputs/yt_osp_oh_literature_bridge_2026-05-04.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_ew_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "sm_one_higgs_boundary": "outputs/yt_sm_one_higgs_oh_import_boundary_2026-05-03.json",
+    "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json"
+  },
+  "pass_count": 19,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current surface has a default-off source-Higgs measurement shell and FMS/GEVP methodology context, but it lacks a same-surface EW gauge-Higgs production action, a dynamic Higgs doublet field, a gauge-invariant O_H identity/normalization certificate, and production C_sH/C_HH pole rows.",
+  "requirements": {
+    "canonical_identity_and_normalization_certificate": false,
+    "dynamic_higgs_doublet_in_current_harness": false,
+    "gauge_invariant_composite_oh_definition": false,
+    "production_csh_chh_rows": false,
+    "same_surface_ew_gauge_higgs_action": false,
+    "sm_one_higgs_allowed_as_identity_import": false
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not import FMS literature as proof of O_sp = O_H",
+    "does not define O_H by one-Higgs notation, H_unit, or a diagonal vertex shell",
+    "does not treat static EW gauge-mass algebra as a same-surface Higgs operator",
+    "does not use yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not set kappa_s = 1, cos(theta) = 1, c2 = 1, or Z_match = 1"
+  ]
+}

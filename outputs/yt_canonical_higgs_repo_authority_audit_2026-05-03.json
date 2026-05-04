@@ -589,7 +589,7 @@
   "proposal_allowed_reason": "No existing repo surface satisfies the canonical-Higgs O_H certificate schema.",
   "repo_authority_audit_passed": true,
   "repo_authority_found": false,
-  "repo_keyword_hit_count": 473,
+  "repo_keyword_hit_count": 508,
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",
     "does not promote Higgs/taste support to O_H authority",
@@ -856,6 +856,7 @@
         "canonical-Higgs",
         "C_sH",
         "C_HH",
+        "source-Higgs",
         "H_unit"
       ],
       "path": "docs/YT_COMPLETE_SOURCE_SPECTRUM_IDENTITY_NO_GO_NOTE_2026-05-02.md"

@@ -55,4 +55,8 @@ Open imports:
 - the literature bridge is bounded support only; FMS/GEVP/FH/Nielsen sources
   suggest a future operator-certificate and extraction shape but are not
   current-surface authority for `O_sp = O_H`;
+- the FMS-style `O_H` construction attempt is an exact negative boundary on
+  the current surface: it confirms that the present harness has a guarded
+  source-Higgs shell, but no same-surface EW gauge-Higgs action, dynamic Higgs
+  doublet, `O_H` identity/normalization certificate, or `C_sH/C_HH` pole rows;
 - independent audit after any proposed positive certificate.

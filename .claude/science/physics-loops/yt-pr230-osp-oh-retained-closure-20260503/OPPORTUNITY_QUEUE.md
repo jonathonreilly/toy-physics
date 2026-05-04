@@ -2,7 +2,7 @@
 
 | Rank | Opportunity | Retained-positive probability | Why next | First action |
 |---:|---|---|---|---|
-| 1 | Source-Higgs Gram purity with `O_sp` source side | medium | Directly measures the missing overlap and reuses current source-pole normalization | contract/readiness gates pass as blockers; next derive/supply real same-surface `O_H`, then production `C_sH/C_HH` rows and pole residues |
+| 1 | Source-Higgs Gram purity with `O_sp` source side | medium if a new EW/O_H surface is allowed, low on current PR230 surface | Directly measures the missing overlap and reuses current source-pole normalization | FMS construction attempt shows current harness lacks same-surface EW gauge-Higgs/O_H; next requires new EW gauge-Higgs/O_H certificate, then production `C_sH/C_HH` rows and pole residues |
 | 2 | Same-source W/Z response | medium-low | Physical response ratio can bypass source normalization | implementation-plan, same-source EW action, and W/Z correlator mass-fit path gates now pass as blockers; next requires a real EW action certificate plus W/Z correlator mass-fit harness, rows, and response builder integration |
 | 3 | Dynamical rank-one neutral scalar theorem | low but high leverage | Would retire the overlap without new MC rows | direct positivity-improvement attempt is blocked; only continue if a new neutral-sector irreducibility premise appears |
 | 4 | Finish finite-source-linearity calibration | low for closure, high for support | Awaiting-output blocker is retired; response-window acceptance still open | packaged PASS=13 support checkpoint; next requires parent finite-source-linearity/response-window acceptance changes or non-source closure |

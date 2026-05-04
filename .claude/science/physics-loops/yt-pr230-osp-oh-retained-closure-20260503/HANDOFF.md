@@ -246,6 +246,33 @@ shape, but no literature source is current-surface authority for
 the same-surface `O_H` certificate and real `C_ss/C_sH/C_HH` rows, then run
 the existing source-Higgs builder and postprocessor.
 
+## 2026-05-04 FMS O_H Certificate Construction Attempt
+
+I then tried to instantiate the literature route on the actual PR230 surface.
+
+Verification:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fms_oh_certificate_construction_attempt.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# pass
+
+python3 scripts/frontier_yt_fms_oh_certificate_construction_attempt.py
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=147 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=173 FAIL=0
+```
+
+Result: exact negative boundary on the current surface.  PR230 has a
+SU(3)/staggered top harness and a default-off source-Higgs diagonal-vertex
+measurement shell, but not a same-surface EW gauge-Higgs production action
+with a dynamic Higgs doublet.  The FMS route therefore needs a new EW
+gauge-Higgs/O_H certificate before it can generate production `C_sH/C_HH`
+rows.
+
 ## 2026-05-04 O_sp/O_H Assumption-Route Audit
 
 The current O_sp/O_H loop now has an executable assumption audit:
