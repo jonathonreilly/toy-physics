@@ -16,6 +16,7 @@ import numpy as np
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DOCS_DIR = REPO_ROOT / "docs"
+ARCHIVE_DIR = REPO_ROOT / "archive_unlanded"
 
 AUDIT_FAILS: list[str] = []
 
@@ -31,7 +32,17 @@ def audit(name: str, condition: bool, detail: str = "") -> None:
 
 
 def read_doc(path_rel: str) -> str:
-    return (DOCS_DIR / path_rel).read_text(encoding="utf-8")
+    """Read a note from docs/, falling back to archive_unlanded/ for
+    notes archived after audited_failed (retained_no_go) verdicts."""
+    primary = DOCS_DIR / path_rel
+    if primary.exists():
+        return primary.read_text(encoding="utf-8")
+    # Fall back: scan archive_unlanded/ for the same filename
+    for archived in ARCHIVE_DIR.rglob(path_rel):
+        return archived.read_text(encoding="utf-8")
+    raise FileNotFoundError(
+        f"{path_rel} not found in docs/ or archive_unlanded/"
+    )
 
 
 def main() -> int:

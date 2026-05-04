@@ -1,0 +1,262 @@
+{
+  "probe": "frontier_koide_a1_eta_to_radian_lift_probe",
+  "verdict": "no-go",
+  "hypothesis": "eta_2_over_9_mod_Z_lifts_to_arg_b_literal_radian_via_APS",
+  "passes": 47,
+  "fails": 0,
+  "total": 47,
+  "records": [
+    {
+      "label": "T1.1  Hermitian circulant M(a, b) = a I + b C + bbar C^2 is Hermitian",
+      "status": "PASS",
+      "detail": "M.H - M = 0 symbolically."
+    },
+    {
+      "label": "T1.2  Spectrum (a + 2 b_re, a - b_re - sqrt(3) b_im, a - b_re + sqrt(3) b_im)",
+      "status": "PASS",
+      "detail": "Computed spectrum = {sqrt(3)/4 + 1/2, 1/2 - sqrt(3)/4, 2} matches eigenvals = {sqrt(3)/4 + 1/2, 1/2 - sqrt(3)/4, 2}."
+    },
+    {
+      "label": "T1.3  Path origin (t=0): spectrum = (1 + sqrt(2), 1 - 1/sqrt(2), 1 - 1/sqrt(2))",
+      "status": "PASS",
+      "detail": "spec(0) = [1 + sqrt(2), 1 - sqrt(2)/2, 1 - sqrt(2)/2]"
+    },
+    {
+      "label": "T1.4  Path endpoint (t=1): all eigenvalues stay positive",
+      "status": "PASS",
+      "detail": "min eigenvalue at t=1 ~ 0.040350"
+    },
+    {
+      "label": "T1.5  Finite-dim eta(M(a, b)) at t=1 = 3 (sum of signs of eigenvalues)",
+      "status": "PASS",
+      "detail": "All three eigenvalues positive => eta_finite = +3 (mod 1 = 0)."
+    },
+    {
+      "label": "T2.1  eta(D(a, b)) is constant in t (no spectral flow on physical path)",
+      "status": "PASS",
+      "detail": "eta_grid: min = 3.0, max = 3.0, constant value = 3"
+    },
+    {
+      "label": "T2.2  eta(D_phys) - eta(D_0) = 0 (no continuous content on the path)",
+      "status": "PASS",
+      "detail": "Delta eta = 0.000000; the moduli path generates ZERO eta change."
+    },
+    {
+      "label": "T2.3  arg(b)(1) - arg(b)(0) = 2/9, but eta change = 0",
+      "status": "PASS",
+      "detail": "arg(b) varies by 2/9 while eta stays at 3; clear unit/structure mismatch."
+    },
+    {
+      "label": "T2.4  Finite-dim eta is integer; cannot supply a fractional radian in t",
+      "status": "PASS",
+      "detail": "eta(M) = 3 throughout the path; arg(b) varies in (0, 2/9). Mismatch."
+    },
+    {
+      "label": "T2.5  Retained eta = 2/9 is equivariant fixed-point eta, not family eta",
+      "status": "PASS",
+      "detail": "eta(Z_3, (1,2)) = 2/9 from APS at fixed point; the FAMILY eta is the integer +3 everywhere on the moduli path."
+    },
+    {
+      "label": "T3.1  Spectral flow on physical moduli path = 0",
+      "status": "PASS",
+      "detail": "All three eigenvalues stay positive on the (a, |b|) = (1, 1/sqrt(2)) path."
+    },
+    {
+      "label": "T3.2  Path with a varying produces non-zero spectral flow (a -> 0 sweep)",
+      "status": "PASS",
+      "detail": "Found 1 zero crossings on s in [0, 1.5] at arg(b) = 2/9."
+    },
+    {
+      "label": "T3.3  Spectral-flow integer is +/- 1 (or higher integer), not 2/9",
+      "status": "PASS",
+      "detail": "SF = 1 (integer). To get fractional 2/9, would need SF + (continuous-part) = 2/9 with integer SF \u2014 impossible without rational continuous part."
+    },
+    {
+      "label": "T3.4  Continuous-part endpoint integral does not equal 2/9 in radians",
+      "status": "PASS",
+      "detail": "|cts_part - 2/9| = 3.366141 >> 0."
+    },
+    {
+      "label": "T3.5  Closed-path eta change = SF (integer); pure rational 2/9 not reachable",
+      "status": "PASS",
+      "detail": "On a closed family path, eta jumps are integers. 2/9 requires open-path data."
+    },
+    {
+      "label": "T4.1  Convention (a) eta_diff = arg(b) literal: 0 =? 2/9",
+      "status": "PASS",
+      "detail": "observed = 0, target = 2/9. Mismatch by 2/9."
+    },
+    {
+      "label": "T4.2  Convention (b) eta_diff = arg(b) / (2 pi): 0 =? 1/(9 pi)",
+      "status": "PASS",
+      "detail": "target = 1/(9*pi); mismatch."
+    },
+    {
+      "label": "T4.3  Convention (c) eta_diff = arg(b) * (2 pi): 0 =? 4 pi / 9",
+      "status": "PASS",
+      "detail": "target = 4*pi/9; mismatch."
+    },
+    {
+      "label": "T4.4  Retained eta = 2/9 is NOT a family-eta difference (category error)",
+      "status": "PASS",
+      "detail": "eta(Z_3, (1, 2)) lives at a single fixed point; arg(b) is a moduli coordinate."
+    },
+    {
+      "label": "T4.5  Bridging mod-Z to mod-2pi requires same postulate P (no progress)",
+      "status": "PASS",
+      "detail": "eta lives mod Z (unit = 1); arg(b) lives mod 2 pi. Bridging the two units\nis exactly the unit conversion that postulate P names."
+    },
+    {
+      "label": "T4.6  Naive identification (mod Z = mod 2pi) circular; via-2pi gives 4 pi / 9",
+      "status": "PASS",
+      "detail": "Either we postulate 'mod Z = mod 2 pi' (= postulate P), or use 2 pi factor\nand get 4 pi / 9 != 2/9 (back to the radian-bridge no-go)."
+    },
+    {
+      "label": "T5.1  CS integral mod Z = eta = 2/9 (Bismut-Cheeger)",
+      "status": "PASS",
+      "detail": "CS = 2/9 (mod Z, dimensionless rational)."
+    },
+    {
+      "label": "T5.2  Phase from CS integral: exp(2 pi i * 2/9) has arg = 4 pi / 9",
+      "status": "PASS",
+      "detail": "phase arg = 4*pi/9; rational * pi as in radian-bridge no-go."
+    },
+    {
+      "label": "T5.3  Identifying phase arg with arg(b) requires pi = 1/2 (impossible)",
+      "status": "PASS",
+      "detail": "pi is not 1/2 in any retained framework. CS phase != literal arg(b)."
+    },
+    {
+      "label": "T5.4  Wess-Zumino term WZ = 2 pi * eta = 4 pi / 9 (rational * pi)",
+      "status": "PASS",
+      "detail": "WZ = 4*pi/9; rational * pi structure."
+    },
+    {
+      "label": "T5.5  Bismut-Cheeger formula does NOT strip the 2 pi unit factor",
+      "status": "PASS",
+      "detail": "BC: eta = CS - integer (mod Z). exp(2 pi i CS) = phase. The 2 pi is\nintrinsic to the phase exponentiation. Stripping = postulate P."
+    },
+    {
+      "label": "T6.1  R1 (Free Dirac, M = 0): eta_diff = +3, target 2/9: NO match",
+      "status": "PASS",
+      "detail": "eta_phys - eta(M=0) = 3; target arg(b) = 2/9; mismatch."
+    },
+    {
+      "label": "T6.2  R2 (Uniform-spectrum, b = 0): eta_diff = 0, target 2/9: NO match",
+      "status": "PASS",
+      "detail": "eta_phys - eta_uniform = 0; target = 2/9; mismatch."
+    },
+    {
+      "label": "T6.3  R3 (Trivial cone-point): eta_diff = 0; same as R2",
+      "status": "PASS",
+      "detail": "Same value as R2; mismatch with target 2/9."
+    },
+    {
+      "label": "T6.4  R4 (kappa = 1 boundary): eta_diff = 1; target 2/9: NO match",
+      "status": "PASS",
+      "detail": "eta_phys - eta_kappa1 = 1; target = 2/9; mismatch."
+    },
+    {
+      "label": "T6.5  R5 (Berry m_0, delta = 0): eta_diff = 0; target 2/9: NO match",
+      "status": "PASS",
+      "detail": "eta_phys - eta_m0 = 0; target = 2/9; mismatch."
+    },
+    {
+      "label": "T6.6  All five reference points give INTEGER eta differences (not 2/9)",
+      "status": "PASS",
+      "detail": "Differences = [0, 1, 3]; 2/9 is not an integer."
+    },
+    {
+      "label": "T6.7  Retained eta = 2/9 is orbifold eta, not finite-dim signature",
+      "status": "PASS",
+      "detail": "eta(Z_3, (1, 2)) at the orbifold fixed point is the equivariant index,\ncomputed via Lefschetz / character data. It is NOT a signature of a\nconcrete Hermitian matrix."
+    },
+    {
+      "label": "T7.F1  eta lives mod Z; arg(b) lives mod 2 pi; unit mismatch unbridged",
+      "status": "PASS",
+      "detail": "Bridging requires explicit conversion; same as postulate P."
+    },
+    {
+      "label": "T7.F2  'mod Z to radian' lift = restated postulate P (no derivation)",
+      "status": "PASS",
+      "detail": "Saying 'eta = 2/9 in radians' instead of 'eta = 2/9 mod Z' is a relabel."
+    },
+    {
+      "label": "T7.F3  Spectral flow contributes only integer jumps to eta",
+      "status": "PASS",
+      "detail": "SF in Z; cannot supply 2/9 as a continuous fractional content."
+    },
+    {
+      "label": "T7.F4  All natural D_0 choices give INTEGER eta differences",
+      "status": "PASS",
+      "detail": "Five reference points tested; differences in {0, 1, 3}; never 2/9."
+    },
+    {
+      "label": "T7.F5  eta -> phase requires exp(2 pi i eta), which restores 2 pi factor",
+      "status": "PASS",
+      "detail": "phase = exp(2 pi i * 2/9) has arg = 4 pi / 9 != 2/9."
+    },
+    {
+      "label": "T7.F6  Retained eta = 2/9 is DIMENSIONLESS (mod Z), not radian",
+      "status": "PASS",
+      "detail": "Computed via 8 routes (HZ signature, APS Dirac, Dedekind, ABSS, ...);\nall give a pure rational, not a radian."
+    },
+    {
+      "label": "T7.F7  Family-index pushforward is K-theoretic, hence in K-group",
+      "status": "PASS",
+      "detail": "Pushforward of eta class lives in K^*(moduli, Z) or rational tensor;\nno radian unit emerges."
+    },
+    {
+      "label": "T7.F8  No 'hidden radian unit' inside spectral-flow / family-index machinery",
+      "status": "PASS",
+      "detail": "All inputs are topological / K-theoretic; outputs inherit the same\nstructure. Radian unit is not generated by the machinery itself."
+    },
+    {
+      "label": "T8.1  eta-to-radian lift hypothesis closes radian-bridge P: NO",
+      "status": "PASS",
+      "detail": "All natural reference points and normalizations fail to convert\neta = 2/9 (mod Z) to arg(b) = 2/9 (rad) without the postulate P bridge."
+    },
+    {
+      "label": "T8.2  Obstruction: spectral-flow content is integer; finite-dim eta is integer",
+      "status": "PASS",
+      "detail": "Family-eta diff is integer; cannot supply fractional 2/9 content."
+    },
+    {
+      "label": "T8.3  Restating eta = 2/9 (mod Z) as 'eta = 2/9 in radians' is a relabel",
+      "status": "PASS",
+      "detail": "It is the same number with a different unit label; no bridge derived."
+    },
+    {
+      "label": "T8.4  Bismut-Cheeger / WZ phase = 4 pi / 9 (rational * pi), not 2/9",
+      "status": "PASS",
+      "detail": "exp(2 pi i * eta) restores the 2 pi factor; same as no-go note."
+    },
+    {
+      "label": "T8.5  All natural reference operators give integer eta differences",
+      "status": "PASS",
+      "detail": "{0, 1, 3} on five candidates; never matches 2/9."
+    },
+    {
+      "label": "T8.6  Lift requires a structural new input not retained on present stack",
+      "status": "PASS",
+      "detail": "Same as candidates (a),(b),(c) of KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE:\nlattice radian quantum, 4x4 Wilson, or Z_3 d^2-power quantization."
+    }
+  ],
+  "tasks_tested": [
+    "Family of effective Dirac operators D(a, b) on Yukawa moduli",
+    "eta(D(a, b)) along the natural moduli path",
+    "Spectral flow content (physical and a-varying paths)",
+    "Identification with arg(b) under three normalizations",
+    "Bismut-Cheeger / Wess-Zumino Chern-Simons phase",
+    "Five natural reference operators D_0",
+    "Skepticism / failure-mode enumeration"
+  ],
+  "obstruction_class": "category-error: orbifold fixed-point eta vs family-eta + unit mismatch (mod Z vs mod 2 pi)",
+  "key_failure": "All natural references give INTEGER eta differences {0, 1, 3}; Bismut-Cheeger phase has arg 4 pi / 9 (rational * pi), not 2/9 (pure rational).",
+  "minimal_extra_inputs_required": [
+    "lattice radian quantum (no-go note candidate (a))",
+    "4x4 hw=1+baryon Wilson holonomy (no-go note candidate (b))",
+    "Z_3-orbit Wilson-line d^2-power quantization (no-go note candidate (c))",
+    "field-redefinition convention 'turns' instead of 'radians' for delta"
+  ]
+}

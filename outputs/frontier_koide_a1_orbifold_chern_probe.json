@@ -1,0 +1,307 @@
+{
+  "probe": "frontier_koide_a1_orbifold_chern_probe",
+  "verdict": "no-go",
+  "hypothesis": "orbifold_discrete_chern_forces_2_over_9_on_yukawa_phase",
+  "passes": 54,
+  "fails": 0,
+  "total": 54,
+  "records": [
+    {
+      "label": "T1.1  Z_3 / S^2 orbifold c_1 takes values in {0, 1/3, 2/3, 1, 4/3} (i.e. in (1/3).Z)",
+      "status": "PASS",
+      "detail": "values = [0, 1/3, 2/3, 2/3, 1, 4/3]"
+    },
+    {
+      "label": "T1.2  2/9 is NOT in (1/3).Z (denominator mismatch with single Z_3 quotient)",
+      "status": "PASS",
+      "detail": "Z_3 single-orbifold Chern denominator is 3, not 9."
+    },
+    {
+      "label": "T1.3  T^2 / Z_3 orbifold c_1 also in (1/3).Z (3 fixed points, ABSS)",
+      "status": "PASS",
+      "detail": "Standard Kawasaki orbifold index: any single Z_p quotient gives (1/p).Z denominator."
+    },
+    {
+      "label": "T1.4  Single Z_3 quotient cannot host 2/9 as orbifold Chern",
+      "status": "PASS",
+      "detail": "Need cover order 9, not 3, to obtain denominator 9."
+    },
+    {
+      "label": "T1.5  ABSS eta(Z_3, weights (1,2)) = 2/9 \u2014 this IS in (1/9).Z but is a mod-Z fractional invariant",
+      "status": "PASS",
+      "detail": "eta_ABSS = 2/9; this is the *spectral* invariant 'eta', not a literal radian."
+    },
+    {
+      "label": "T1.6  Radian PHASE from ABSS eta = 2 pi * (2/9) = 4 pi / 9 (rational * pi, NOT 2/9 rad)",
+      "status": "PASS",
+      "detail": "phase = 4*pi/9; differs from 2/9 by factor of 2 pi."
+    },
+    {
+      "label": "T1.7  Orbifold c_1 enters phases as exp(2 pi i c_1), giving rational * pi",
+      "status": "PASS",
+      "detail": "Phase = 2 pi * (orbifold Chern). Cannot strip the 2 pi without un-natural pi-stripping."
+    },
+    {
+      "label": "T2.1  Pure Z_3 character bundle on 3x3 discrete BZ has discrete Chern integer = 0",
+      "status": "PASS",
+      "detail": "discrete Chern = 0.000000000000"
+    },
+    {
+      "label": "T2.2.1  Discrete-FHS uniform-flux Chern (flux = 2 pi n/L^2 per plaq, total = 2 pi n) = 1",
+      "status": "PASS",
+      "detail": "discrete Chern = 1.000000"
+    },
+    {
+      "label": "T2.2.2  Discrete-FHS uniform-flux Chern (flux = 2 pi n/L^2 per plaq, total = 2 pi n) = 2",
+      "status": "PASS",
+      "detail": "discrete Chern = 2.000000"
+    },
+    {
+      "label": "T2.2.3  Discrete-FHS uniform-flux Chern (flux = 2 pi n/L^2 per plaq, total = 2 pi n) = 3",
+      "status": "PASS",
+      "detail": "discrete Chern = 3.000000"
+    },
+    {
+      "label": "T2.3  Z_3-equivariant discrete TKNN on closed Z^2/Z^3 BZ remains INTEGER-valued",
+      "status": "PASS",
+      "detail": "Equivariance reduces moduli space; closed BZ gives integer Chern by FHS theorem."
+    },
+    {
+      "label": "T2.4  Orbifold Chern on Z^3 / Z_3 with isolated Z_3 fixed points lives in (1/3).Z, not (1/9).Z",
+      "status": "PASS",
+      "detail": "Single Z_3 stabilizer denominators are 3."
+    },
+    {
+      "label": "T2.5  Discrete TKNN on the framework's lattice cannot directly give 2/9",
+      "status": "PASS",
+      "detail": "Either integer (closed BZ) or in (1/3).Z (Z_3 orbifold contribution)."
+    },
+    {
+      "label": "T3.1  Band-resolved discrete Chern of circulant Y on twist-torus T^2 is integer (band 0)",
+      "status": "PASS",
+      "detail": "band 0 Chern = -0.000000"
+    },
+    {
+      "label": "T3.2  Generic (a,b) gives band 0 Chern = 0 (no nontrivial twist Berry phase on flat C_3 family)",
+      "status": "PASS",
+      "detail": "band 0 Chern = -0.000000 (rounds to 0)"
+    },
+    {
+      "label": "T3.3  Y has 3 non-degenerate eigenvalues generically (q-fold degeneracy q = 1)",
+      "status": "PASS",
+      "detail": "NTW fractional p/q requires q-fold degenerate ground state; here q = 1."
+    },
+    {
+      "label": "T3.4  Twisted-boundary Chern p/q with q | 3 cannot give 2/9 (denominator 9)",
+      "status": "PASS",
+      "detail": "Z_3 ground-state degeneracy is at most 3; gives p/q with q | 3; 2/9 has q=9 -> mismatch."
+    },
+    {
+      "label": "T4.1  Z_3 x Z_3 orbifold c_1 takes values in {0, 1/9, ..., 8/9, 1} = (1/9).Z",
+      "status": "PASS",
+      "detail": "2/9 IS in (1/9).Z: ['0', '1/9', '2/9', '1/3', '4/9', '5/9', '2/3', '7/9', '8/9']"
+    },
+    {
+      "label": "T4.2  Framework retains ONE Z_3 (generation cyclic), not two independent Z_3 factors",
+      "status": "PASS",
+      "detail": "C_3 acting on V_3 induces C_3 on End(V_3) by conjugation, not a Z_3 x Z_3."
+    },
+    {
+      "label": "T4.3  Z_3-center-of-SU(3) acts trivially on charged leptons (color singlets)",
+      "status": "PASS",
+      "detail": "Leptons are color singlets; Z_3 center of SU(3) acts trivially."
+    },
+    {
+      "label": "T4.4  APBC time circle gives Matsubara Z_{2 L_t}, not a Z_3 factor",
+      "status": "PASS",
+      "detail": "Matsubara phases (2n+1)pi/L_t are integer/2L_t multiples of pi."
+    },
+    {
+      "label": "T4.5  Spin/SO double cover is Z_2, not Z_3; no natural Z_3 x Z_3 doubling",
+      "status": "PASS",
+      "detail": "Cl(3) -> SO(3) double cover is Z_2."
+    },
+    {
+      "label": "T4.6  Even with hypothetical Z_3xZ_3, orbifold c_1 = 2/9 yields phase 4 pi / 9 (rational * pi)",
+      "status": "PASS",
+      "detail": "Orbifold Chern enters phase via exp(2 pi i c_1); 2 pi factor unavoidable."
+    },
+    {
+      "label": "T5.1  R(Z_3) = Z[xi] / (xi^3 - 1), rank 3 over Z",
+      "status": "PASS",
+      "detail": "Basis: chi_0 = 1, chi_1 = xi, chi_2 = xi^2."
+    },
+    {
+      "label": "T5.2  [V_3] = chi_0 + chi_1 + chi_2 (regular rep)",
+      "status": "PASS",
+      "detail": "Standard."
+    },
+    {
+      "label": "T5.3  Equivariant ch([V]) lands in Z[1/|Z_3|] = Z[1/3], not Z[1/9]",
+      "status": "PASS",
+      "detail": "Single Z_3 quotient: localization at Z_3 fixed points gives Z[1/3] coefficients."
+    },
+    {
+      "label": "T5.4.01  ch_zeta^1([chi_0]) has Re = {1, -1/2}; never in 2/9-bearing set",
+      "status": "PASS",
+      "detail": "Re(zeta^0) = 1"
+    },
+    {
+      "label": "T5.4.02  ch_zeta^2([chi_0]) has Re = {1, -1/2}; never in 2/9-bearing set",
+      "status": "PASS",
+      "detail": "Re(zeta^0) = 1"
+    },
+    {
+      "label": "T5.4.11  ch_zeta^1([chi_1]) has Re = {1, -1/2}; never in 2/9-bearing set",
+      "status": "PASS",
+      "detail": "Re(zeta^1) = -1/2"
+    },
+    {
+      "label": "T5.4.12  ch_zeta^2([chi_1]) has Re = {1, -1/2}; never in 2/9-bearing set",
+      "status": "PASS",
+      "detail": "Re(zeta^2) = -1/2"
+    },
+    {
+      "label": "T5.4.21  ch_zeta^1([chi_2]) has Re = {1, -1/2}; never in 2/9-bearing set",
+      "status": "PASS",
+      "detail": "Re(zeta^2) = -1/2"
+    },
+    {
+      "label": "T5.4.22  ch_zeta^2([chi_2]) has Re = {1, -1/2}; never in 2/9-bearing set",
+      "status": "PASS",
+      "detail": "Re(zeta^4) = -1/2"
+    },
+    {
+      "label": "T5.5  ABSS eta = 2/9 is in (1/9).Z but is a SPECTRAL fractional invariant (mod-Z), not a ch class",
+      "status": "PASS",
+      "detail": "Eta is the boundary correction, not the bulk Chern character."
+    },
+    {
+      "label": "T5.6  Physical phase from ch = 2/9 is exp(2 pi i * 2/9), yielding angle 4 pi / 9 (rational * pi)",
+      "status": "PASS",
+      "detail": "Cannot strip the 2 pi factor from a Chern-class-derived radian."
+    },
+    {
+      "label": "T6.1.1  Physical Koide base K_norm^+ / C_3 = open interval (Theorem 1, R2)",
+      "status": "PASS",
+      "detail": "From KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md."
+    },
+    {
+      "label": "T6.1.2  Orbifold-equivariant line bundles on contractible base are trivial",
+      "status": "PASS",
+      "detail": "Open interval is contractible; all complex (and orbifold) line bundles trivial."
+    },
+    {
+      "label": "T6.1.3  Orbifold c_1 = 0 on the physical Koide base, regardless of (1/9).Z structure on auxiliary spaces",
+      "status": "PASS",
+      "detail": "R2 extends: Berry-bundle obstruction kills orbifold Chern on the actual physical base."
+    },
+    {
+      "label": "T6.2.1  Orbifold Chern 2/9 enters phase as exp(2 pi i * 2/9) = exp(4 pi i / 9)",
+      "status": "PASS",
+      "detail": "Phase angle = 4*pi/9 = 4 pi / 9 (rational * pi)."
+    },
+    {
+      "label": "T6.2.2  Phase 4 pi / 9 != 2/9 rad (Lindemann: rational * pi cap pure rational = {0})",
+      "status": "PASS",
+      "detail": "4 pi / 9 ~ 1.396 rad; 2/9 rad = 0.222.  Different by factor 2 pi."
+    },
+    {
+      "label": "T6.3.1  Yukawa amplitude phase delta = arg(b) is a continuous spectral modulus on (a, b1, b2)",
+      "status": "PASS",
+      "detail": "delta sweeps the (b1, b2)-half-plane; no Chern-index can equal it generically."
+    },
+    {
+      "label": "T6.3.2  Discrete topological invariants cannot pin a continuous modulus (equivariant index no-go)",
+      "status": "PASS",
+      "detail": "From KOIDE_EQUIVARIANT_INDEX_NO_GO_NOTE_2026-04-24.md."
+    },
+    {
+      "label": "T6.4  Orbifold/discrete Chern does not close postulate P (radian-bridge identification)",
+      "status": "PASS",
+      "detail": "Four converging obstructions: R2 triviality, single-Z_3 (1/3).Z mismatch, 2 pi prefactor, continuous modulus."
+    },
+    {
+      "label": "T7.F1  R2 (Berry-bundle obstruction) extends to orbifold Chern on physical base",
+      "status": "PASS",
+      "detail": "Contractible base => trivial bundle => orbifold c_1 = 0."
+    },
+    {
+      "label": "T7.F2  Equivariant Chern in R(G) is integer; fractional values are eta-type spectral invariants",
+      "status": "PASS",
+      "detail": "Bulk K-theory: integer; fractional only via boundary / orbifold corrections."
+    },
+    {
+      "label": "T7.F3  All Chern phases are 2 pi * (rational) = rational * pi (Type A in lattice-quantization-set)",
+      "status": "PASS",
+      "detail": "Every Chern-derived radian is rational * pi by construction."
+    },
+    {
+      "label": "T7.F4  Chern indices bundles, not phase parameters; bundle-vs-phase mismatch",
+      "status": "PASS",
+      "detail": "Yukawa phase delta = arg(b) is a continuous modulus, not a discrete index."
+    },
+    {
+      "label": "T7.F5  Framework retains one Z_3, not Z_3 x Z_3; (1/9).Z denominator unavailable",
+      "status": "PASS",
+      "detail": "Single C_3 cyclic; no second independent Z_3 in retained structure."
+    },
+    {
+      "label": "T7.G  ABSS eta = 2/9 is genuinely (1/9).Z but is Type B (combinatorial) not Type A (radian)",
+      "status": "PASS",
+      "detail": "Single Z_3 + (zeta-1)(zeta^2-1) = 3 algebraic identity gives denominator 9 in eta, but no radian unit."
+    },
+    {
+      "label": "T8.1  TKNN base is closed T^2; framework base is open interval (R2)",
+      "status": "PASS",
+      "detail": "TKNN: closed manifold supports nontrivial bundle topology. Framework: contractible."
+    },
+    {
+      "label": "T8.2  TKNN Chern is integer; orbifold extensions give (1/p).Z; 2/9 needs (1/9).Z denominator",
+      "status": "PASS",
+      "detail": "Single Z_3 orbifold gives (1/3).Z, not (1/9).Z. Need additional structure (e.g. ABSS / Z_3 x Z_3)."
+    },
+    {
+      "label": "T8.3  TKNN target = quantized conductance; framework target = continuous Yukawa-phase modulus",
+      "status": "PASS",
+      "detail": "Discrete observable vs continuous modulus \u2014 fundamental type difference."
+    },
+    {
+      "label": "T8.4  TKNN: 2 pi absorbed in unit (h vs hbar); framework: 2 pi unabsorbed in retained structure",
+      "status": "PASS",
+      "detail": "Cl(3)/Z^3 + APBC has no canonical 'h' that absorbs 2 pi; phases stay as rational * pi."
+    },
+    {
+      "label": "T8.5  Orbifold-TKNN analog cannot produce literal 2/9 rad without postulate P",
+      "status": "PASS",
+      "detail": "Type-A (Chern phase) and Type-B (orbifold rational) coincide numerically only if P is added."
+    }
+  ],
+  "constructions_tested": [
+    "T1: Z_3 orbifold of S^2 / T^2 (single quotient)",
+    "T2: Discrete TKNN on Z^3 with Z_3 equivariance (FHS plaquette)",
+    "T3: Niu-Thouless-Wu twisted boundary Chern on V_3",
+    "T4: Z_3 x Z_3 doubled orbifold (|G|^2 = 9 lift)",
+    "T5: Z_3-equivariant K-theory R(Z_3) and Chern character",
+    "T6: Application to Yukawa amplitude phase delta = arg(b)"
+  ],
+  "obstructions_named": [
+    "F1: R2 Berry-bundle obstruction extends to orbifold Chern (open-interval base)",
+    "F2: Bulk equivariant Chern is integer; fractional only via eta/boundary",
+    "F3: All Chern phases are 2 pi * rational = rational * pi",
+    "F4: Chern indices bundles, not Yukawa phase parameters",
+    "F5: Single Z_3 vs Z_3 x Z_3 \u2014 framework retains one, not two"
+  ],
+  "comparison_TKNN": {
+    "TKNN_base": "closed T^2",
+    "framework_base": "open interval (K_norm^+ / C_3)",
+    "TKNN_target": "integer-quantized sigma_xy",
+    "framework_target": "continuous Yukawa-phase modulus delta",
+    "TKNN_2pi_absorbed_in_h": true,
+    "framework_2pi_unabsorbed": true
+  },
+  "strongest_2_over_9_coincidence": "ABSS eta(Z_3, weights (1,2)) = 2/9 mod Z (single Z_3)",
+  "is_strongest_a_radian": false,
+  "physical_phase_from_strongest": "exp(2 pi i * 2/9) = exp(4 pi i / 9) \u2014 rational * pi, not 2/9 rad",
+  "closes_postulate_P": false
+}

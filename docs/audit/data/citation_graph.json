@@ -6265,6 +6265,22 @@
       "to": "gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19"
     },
     {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17"
+    },
+    {
       "from": "gauge_vacuum_plaquette_reduction_existence_theorem_note",
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
@@ -30847,6 +30863,17 @@
       "runner_path": null,
       "title": "DM Chamber Signature Structure -- F4 Closed by DPLE Theorem"
     },
+    "dm_clean_derivation_note": {
+      "claim_id": "dm_clean_derivation_note",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "8a34224043a52fee083c3c60123cda33f418d83ff01b9f06d06c86fe80c00fba",
+      "path": "docs/DM_CLEAN_DERIVATION_NOTE.md",
+      "runner_path": null,
+      "title": null
+    },
     "dm_continuum_limit_velocity_note": {
       "claim_id": "dm_continuum_limit_velocity_note",
       "claim_type_author_hint": null,
@@ -35055,6 +35082,17 @@
       "runner_path": "scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py",
       "title": "Gauge-Scalar Temporal Observable Bridge Stretch Attempt"
     },
+    "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "0e81d200e28105610814d2d3f80365c6e1275ad0ead89a53a28e29a033f481dd",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_BETA6_EVALUATION_SEAM_REDUCTION_SCIENCE_ONLY_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette Beta=6 Evaluation-Seam Reduction"
+    },
     "gauge_vacuum_plaquette_bridge_support_note": {
       "claim_id": "gauge_vacuum_plaquette_bridge_support_note",
       "claim_type_author_hint": "positive_theorem",
@@ -35070,6 +35108,17 @@
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py",
       "title": "Gauge-Vacuum Plaquette Scalar-Bridge Support"
+    },
+    "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "27794c9b3751e0e3b3c620508438726d5fd04f9b5fc2686635f5d2b954aee2db",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_COMPRESSED_RIM_EVALUATION_THEOREM_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_compressed_rim_evaluation_theorem.py",
+      "title": "Gauge-Vacuum Plaquette Compressed Rim-Evaluation Theorem"
     },
     "gauge_vacuum_plaquette_connected_hierarchy_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
@@ -35241,6 +35290,19 @@
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Zero-Extension Factorized-Class Theorem"
     },
+    "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17"
+      ],
+      "note_hash": "2099715deb8def306129e403d30874afe8c6bf81d0a538683e4d57c7ad6baf11",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_EXACT_RADICAL_RECONSTRUCTION_MAP_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette First Symmetric Three-Sample Exact Radical Reconstruction Map"
+    },
     "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19": {
       "claim_id": "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19",
       "claim_type_author_hint": null,
@@ -35251,6 +35313,21 @@
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First Symmetric Three-Sample Minimal Positive Completion"
+    },
+    "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
+        "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17",
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17"
+      ],
+      "note_hash": "be0b64476b42c1aa607482aae4f7bf4a39a5382b9b08289e4158e609b42fefe4",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_THREE_SAMPLE_ENVIRONMENT_EVALUATOR_ROUTE_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette First Three-Sample Environment Evaluator Route"
     },
     "gauge_vacuum_plaquette_framework_point_underdetermination_note": {
       "claim_id": "gauge_vacuum_plaquette_framework_point_underdetermination_note",
@@ -53645,6 +53722,7 @@
     "dm_abcc_retained_measurement_closure_theorem_note_2026-04-21",
     "dm_candidate_mass_window_theorem_note_2026-04-19",
     "dm_chamber_signature_structure_note_2026-04-19",
+    "dm_clean_derivation_note",
     "dm_current_bank_quantitative_mapping_note_2026-04-21",
     "dm_dple_abcc_no_go_note_2026-04-19",
     "dm_dple_dimension_parametric_extremum_theorem_note_2026-04-19",
@@ -53806,6 +53884,8 @@
     "gate_b_v6_nearfield_comparator_note",
     "gauge_scalar_temporal_completion_theorem_note",
     "gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03",
+    "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17",
+    "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17",
     "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
     "gauge_vacuum_plaquette_constant_lift_obstruction_note",
     "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19",
@@ -54349,22 +54429,22 @@
       "bounded_theorem": 57,
       "meta": 8,
       "no_go": 7,
-      "none": 1726,
+      "none": 1731,
       "open_gate": 7,
       "positive_theorem": 74
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 555,
       "meta": 8,
-      "no_go": 112,
-      "none": 464,
+      "no_go": 113,
+      "none": 467,
       "open_gate": 114,
-      "positive_theorem": 626
+      "positive_theorem": 627
     },
-    "edge_count": 6358,
-    "leaf_count": 557,
-    "node_count": 1879,
-    "root_count": 905,
-    "runners_with_path": 1513
+    "edge_count": 6362,
+    "leaf_count": 560,
+    "node_count": 1884,
+    "root_count": 908,
+    "runners_with_path": 1517
   }
 }

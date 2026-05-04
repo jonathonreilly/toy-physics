@@ -4,15 +4,12 @@ YT retention landing readiness runner — 2026-04-18
 --- Section 1: cross-reference integrity sweep ---
 
 Scanning 38 session-dated YT notes for Markdown link integrity.
-Total repo-internal links resolved: 482
-[PASS] cross-reference integrity: 0 UNEXPECTED broken links across 38 notes (8 expected broken links: intentionally EMBEDDED-only P1.4 and out-of-repo Koide cross-references)
+Total repo-internal links resolved: 716
+[PASS] cross-reference integrity: 0 UNEXPECTED broken links across 38 notes (5 expected broken links: intentionally EMBEDDED-only P1.4 and out-of-repo Koide cross-references)
    [tolerated] note=docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md -> docs/YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md
    [tolerated] note=docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md -> docs/YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md
-   [tolerated] note=docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md -> docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md
-   [tolerated] note=docs/YT_CLASS_6_C3_BREAKING_OPERATOR_NOTE_2026-04-18.md -> docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md
-   [tolerated] note=docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md -> docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md
+   [tolerated] note=docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md -> YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md
    [tolerated] note=docs/YT_RETENTION_LANDING_READINESS_2026-04-18.md -> docs/YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md
-   [tolerated] note=docs/YT_RETENTION_LANDING_READINESS_2026-04-18.md -> docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md
    [tolerated] note=docs/YT_RETENTION_MASTER_MANIFEST_2026-04-18.md -> docs/YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md
 
 --- Section 2: runner PASS / FAIL tally ---

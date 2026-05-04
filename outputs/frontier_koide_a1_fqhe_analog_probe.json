@@ -1,0 +1,339 @@
+{
+  "probe": "frontier_koide_a1_fqhe_analog_probe",
+  "verdict": "no-go",
+  "hypothesis": "fqhe_many_body_chern_yields_delta_2_over_9_radians",
+  "passes": 59,
+  "fails": 0,
+  "total": 59,
+  "records": [
+    {
+      "label": "T1.1  Hall fraction 2/9 = p/q with p = 2, q = 9 (target identity)",
+      "status": "PASS",
+      "detail": "nu = 2/9; p = 2, q = 9; gcd(2, 9) = 1 (coprime)."
+    },
+    {
+      "label": "T1.2  gcd(p, q) = gcd(2, 9) = 1 (lowest-terms requirement)",
+      "status": "PASS",
+      "detail": "FQHE Laughlin / Jain forms require coprime p, q."
+    },
+    {
+      "label": "T1.3  q = 9 is ODD (compatible with fermionic FQHE q-odd rule)",
+      "status": "PASS",
+      "detail": "Fermionic Laughlin: q odd. q = 9 = 2*4 + 1 with n = 4."
+    },
+    {
+      "label": "T1.4  nu = 2/9 = 2/(2*2*n + 1) at n = 2 (Jain hierarchy IS realized)",
+      "status": "PASS",
+      "detail": "Jain composite-fermion solution: n = 2 flux pairs attached."
+    },
+    {
+      "label": "T1.5  Cl(3)/Z^3 framework has NO continuous T^2 TBC moduli",
+      "status": "PASS",
+      "detail": "Z_3 is discrete (3 elements); no 2-parameter family of phases."
+    },
+    {
+      "label": "T1.6  Physical base K_norm^+ / C_3 = open interval (R2 obstruction)",
+      "status": "PASS",
+      "detail": "Cannot host 2-cycle T^2 needed for NTW integral."
+    },
+    {
+      "label": "T1.7  Cl(3)/Z^3 cyclic generation = abelian Z_3 (no Heisenberg cocycle)",
+      "status": "PASS",
+      "detail": "Z_3 is commutative; FQHE needs the non-commutative magnetic translation\nalgebra (Heisenberg-Weyl with phi-flux cocycle)."
+    },
+    {
+      "label": "T1.8  Framework supplies degeneracy (3 gens) but NOT T^2 base or noncommuting TBC",
+      "status": "PASS",
+      "detail": "Two of three NTW prerequisites are absent."
+    },
+    {
+      "label": "T2.1  Jain hierarchy: nu = p/(2pn + 1) = 2/9 at p = 2, n = 2",
+      "status": "PASS",
+      "detail": "nu = 2/9; standard Jain construction with 4 flux quanta attached."
+    },
+    {
+      "label": "T2.2  Flux attachment number 2n = 4 (n = 2 in Jain hierarchy)",
+      "status": "PASS",
+      "detail": "CF construction: 4 flux quanta attached per electron."
+    },
+    {
+      "label": "T2.3  CF effective filling p = 2 (integer; composite-fermion IQHE)",
+      "status": "PASS",
+      "detail": "Composite fermions fill p = 2 Landau levels integrally."
+    },
+    {
+      "label": "T2.4  Cl(3)/Z^3 retained content has NO magnetic field B",
+      "status": "PASS",
+      "detail": "No retained spatial gauge background; U(1)_Y is gauge-natural\nbut does not specify a flux density."
+    },
+    {
+      "label": "T2.5  Cl(3)/Z^3 retained action has NO Chern-Simons term",
+      "status": "PASS",
+      "detail": "Retained action lanes (Hilbert-Einstein, gauge kinetic, Yukawa,\nHiggs, CP-conjugate) -- no Chern-Simons term retained."
+    },
+    {
+      "label": "T2.6  Cl(3)/Z^3 has NO continuous Landau-level spectrum",
+      "status": "PASS",
+      "detail": "Generation-space spectrum is 3 discrete eigenvalues (lepton masses);\nno continuous LL ladder."
+    },
+    {
+      "label": "T2.7  Arithmetic Jain identity p/(2pn+1) = 2/9 holds at (p,n)=(2,2)",
+      "status": "PASS",
+      "detail": "Pure arithmetic; no retained physical CF mechanism on Cl(3)/Z^3."
+    },
+    {
+      "label": "T2.8  Arithmetic CF match does NOT yield a structural framework derivation",
+      "status": "PASS",
+      "detail": "Three physical CF ingredients (B, CS, LL) all absent; arithmetic alone\nis no different from the Plancherel-tautology obstruction (no-go C)."
+    },
+    {
+      "label": "T3.1  Laughlin nu = 1/3: anyon statistics theta = pi/3 (rational * pi)",
+      "status": "PASS",
+      "detail": "theta = pi/3; rational multiple of pi."
+    },
+    {
+      "label": "T3.2  Z_3 anyon charge q = 1/3 (pure rational)",
+      "status": "PASS",
+      "detail": "Standard parafermion Z_3 anyon charge = 1/3."
+    },
+    {
+      "label": "T3.3  Arithmetic 2 * (1/9) = 2/9 (pure rationals)",
+      "status": "PASS",
+      "detail": "2 * 1/9 = 2/9; same arithmetic as character / Plancherel."
+    },
+    {
+      "label": "T3.4  Cl(3)/Z^3 framework has NO retained Z_9 hierarchical anyon",
+      "status": "PASS",
+      "detail": "Generation Z_3 is single Z_3; no second retained Z_3 to combine to Z_9."
+    },
+    {
+      "label": "T3.5  Z_9 anyon statistics theta = pi/9 (rational * pi), not 2/9",
+      "status": "PASS",
+      "detail": "theta = pi/9 != 2/9 = 2/9."
+    },
+    {
+      "label": "T3.6  Z_3 generation symmetry acts on flavor (not 2D space); no spatial braiding",
+      "status": "PASS",
+      "detail": "Generation index is 0-D (label, not coordinate); FQHE braiding\nrequires 2D spatial worldlines."
+    },
+    {
+      "label": "T3.7  Anyon charge OR statistics route fails to yield 2/9 as pure-rational radian",
+      "status": "PASS",
+      "detail": "Charge: pure rational 1/3 (not radian). Statistics: rational * pi (not pure rational)."
+    },
+    {
+      "label": "T4.1  Circulant Yukawa moduli (a real, b complex) has real dim = 3, not 2",
+      "status": "PASS",
+      "detail": "a in R (1 dof), b in C (2 dof); total 3 dof."
+    },
+    {
+      "label": "T4.2  After Z_3 phase quotient on b, moduli is R^2, not T^2",
+      "status": "PASS",
+      "detail": "(a, |b|) lives in R x R+ -- not compact; not a 2-torus."
+    },
+    {
+      "label": "T4.3  Physical base K_norm^+ / C_3 is open interval (NOT T^2)",
+      "status": "PASS",
+      "detail": "Verified in KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md."
+    },
+    {
+      "label": "T4.4  No retained compactification (a, |b|) -> T^2",
+      "status": "PASS",
+      "detail": "(a, |b|) is the natural retained moduli; no retained T^2 wrapping."
+    },
+    {
+      "label": "T4.5  Even on a constructed T^2 of phases, NO Heisenberg cocycle is retained",
+      "status": "PASS",
+      "detail": "FQHE NTW integrand requires non-commuting magnetic translations.\nCl(3)/Z^3 has only abelian flavor / generation Z_3."
+    },
+    {
+      "label": "T4.6  Trivial phase-torus state has zero Berry curvature -> Chern = 0",
+      "status": "PASS",
+      "detail": "A_+ = 1/3, F = 0, integral = Chern = 0.\nSingle-particle state on (theta_+, theta_-) torus has flat connection."
+    },
+    {
+      "label": "T4.7  Numerical NTW integration on trivial state: Chern = 0",
+      "status": "PASS",
+      "detail": "Numerical integral = 0.000000e+00; trivial connection -> 0."
+    },
+    {
+      "label": "T4.8  No retained interaction Hamiltonian on generation moduli forces Chern = 2",
+      "status": "PASS",
+      "detail": "Yukawa generation-space dynamics is single-particle (lepton bilinear);\nFQHE Chern = 2 needs explicit two-body interaction."
+    },
+    {
+      "label": "T5.1  Cl(3)/Z^3 has 3-fold generation degeneracy (analog GSD = 3)",
+      "status": "PASS",
+      "detail": "Three generations on the Z_3 cyclic structure."
+    },
+    {
+      "label": "T5.2  FQHE GSD on T^2 for nu = 2/9 would be q = 9 (mismatch with framework's 3)",
+      "status": "PASS",
+      "detail": "FQHE GSD = 9; framework natural degeneracy = 3."
+    },
+    {
+      "label": "T5.3  Cl(3)/Z^3 has only one Z_3, no retained Z_3 x Z_3 = Z_9",
+      "status": "PASS",
+      "detail": "Generation Z_3 is single; no second cyclic factor retained."
+    },
+    {
+      "label": "T5.4  Cl(3)/Z^3 has NO retained modular SL(2, Z) action on moduli",
+      "status": "PASS",
+      "detail": "FQHE T-matrix and S-matrix are modular invariants; no analog retained."
+    },
+    {
+      "label": "T5.5  No retained topological entanglement entropy on generation moduli",
+      "status": "PASS",
+      "detail": "TEE gamma = log(sqrt(sum d_i^2)) requires anyon spectrum;\nframework has only abelian generation labels."
+    },
+    {
+      "label": "T5.6  Generation index is 0-D label; anyon braiding requires 2D spatial",
+      "status": "PASS",
+      "detail": "Generations are flavor labels; no spatial worldline support."
+    },
+    {
+      "label": "T6.1  Symmetric ground state |Psi> has unit norm",
+      "status": "PASS",
+      "detail": "<Psi|Psi> = 1."
+    },
+    {
+      "label": "T6.2  Symmetric state Berry connections A_k = 1/3 (flat)",
+      "status": "PASS",
+      "detail": "A_1 = A_2 = A_3 = 1/3; flat (constant)."
+    },
+    {
+      "label": "T6.3  Berry curvature F_ij = 0 (flat connection)",
+      "status": "PASS",
+      "detail": "F_12 = F_13 = F_23 = 0; symmetric state has zero curvature."
+    },
+    {
+      "label": "T6.4  NTW integral over phase torus = 0 (NOT 2)",
+      "status": "PASS",
+      "detail": "Symmetric / Z_3-invariant state cannot host Chern = 2."
+    },
+    {
+      "label": "T6.5  Z_3-equivariant linear-phase state still has Chern = 0",
+      "status": "PASS",
+      "detail": "Linear phases preserve flat connection; NON-LINEAR phases\nrequire explicit interaction not retained on Cl(3)/Z^3."
+    },
+    {
+      "label": "T6.6  Numerical Chern integral on (theta_+, theta_-) torus: 0",
+      "status": "PASS",
+      "detail": "Numerical integral = 0.000000e+00; symmetric flat state has Chern = 0."
+    },
+    {
+      "label": "T6.7  Natural NTW Chern number = 0, target = 2: MISMATCH",
+      "status": "PASS",
+      "detail": "Natural = 0; required for nu = 2/9 with q = 9 GSD: 2."
+    },
+    {
+      "label": "T7  ABSENT on Cl(3)/Z^3: (i)   2D spatial system",
+      "status": "PASS",
+      "detail": "Required for FQHE; not retained on framework."
+    },
+    {
+      "label": "T7  ABSENT on Cl(3)/Z^3: (ii)  Magnetic field B",
+      "status": "PASS",
+      "detail": "Required for FQHE; not retained on framework."
+    },
+    {
+      "label": "T7  ABSENT on Cl(3)/Z^3: (iii) Landau-level spectrum",
+      "status": "PASS",
+      "detail": "Required for FQHE; not retained on framework."
+    },
+    {
+      "label": "T7  ABSENT on Cl(3)/Z^3: (iv)  Strong e-e interactions",
+      "status": "PASS",
+      "detail": "Required for FQHE; not retained on framework."
+    },
+    {
+      "label": "T7  ABSENT on Cl(3)/Z^3: (v)   Non-commuting magnetic translations",
+      "status": "PASS",
+      "detail": "Required for FQHE; not retained on framework."
+    },
+    {
+      "label": "T7  ABSENT on Cl(3)/Z^3: (vi)  Continuous T^2 of TBC",
+      "status": "PASS",
+      "detail": "Required for FQHE; not retained on framework."
+    },
+    {
+      "label": "T7  ABSENT on Cl(3)/Z^3: (viii) Composite-fermion / flux attachment",
+      "status": "PASS",
+      "detail": "Required for FQHE; not retained on framework."
+    },
+    {
+      "label": "T7  ABSENT on Cl(3)/Z^3: (ix)  Anyonic quasiparticle statistics",
+      "status": "PASS",
+      "detail": "Required for FQHE; not retained on framework."
+    },
+    {
+      "label": "T7  ABSENT on Cl(3)/Z^3: (x)   Topological entanglement entropy",
+      "status": "PASS",
+      "detail": "Required for FQHE; not retained on framework."
+    },
+    {
+      "label": "T7  PARTIAL on Cl(3)/Z^3: (vii) many-body GSD = 3 (not 9 = q)",
+      "status": "PASS",
+      "detail": "Three generations give 3-fold candidate; FQHE nu = 2/9 needs q = 9."
+    },
+    {
+      "label": "T7  ARITHMETIC-ONLY: Jain pattern p=2, q=9, n=2 holds without retained mechanism",
+      "status": "PASS",
+      "detail": "Integer arithmetic only; no retained flux attachment / Chern-Simons."
+    },
+    {
+      "label": "T8.1  FQHE-analog hypothesis closes radian-bridge P: NO",
+      "status": "PASS",
+      "detail": "All FQHE-style routes hit either pure-rational (charge / character) or\nrational * pi (anyon statistics / monodromies). Pure-rational radian\nwithout retained pi-bridge remains absent."
+    },
+    {
+      "label": "T8.2  7 of 10 FQHE ingredients absent; 1 partial; 2 arithmetic-only",
+      "status": "PASS",
+      "detail": "Absent: 7; partial: 1; arithmetic: 2."
+    },
+    {
+      "label": "T8.3  Jain arithmetic match (p,n)=(2,2) holds but lacks retained mechanism",
+      "status": "PASS",
+      "detail": "Integer identity 2/(2*2*2 + 1) = 2/9; no retained CF / CS / LL ingredients."
+    },
+    {
+      "label": "T8.4  No new structural input delivered beyond no-go-note (a),(b),(c)",
+      "status": "PASS",
+      "detail": "FQHE-analog reduces to the same Plancherel / character tautology obstruction."
+    }
+  ],
+  "fqhe_routes_tested": [
+    "Niu-Thouless-Wu many-body Chern number",
+    "Jain composite-fermion / flux attachment",
+    "Z_3 / Z_9 anyon charge and statistics",
+    "(theta_+, theta_-) candidate Yukawa torus",
+    "Topological-order analog (GSD, modular S/T, TEE)",
+    "Direct symbolic NTW integration on framework"
+  ],
+  "structural_ingredients_status": {
+    "2D_spatial_system": "absent",
+    "magnetic_field_B": "absent",
+    "Landau_level_spectrum": "absent",
+    "strong_e_e_interactions": "absent",
+    "non_commuting_magnetic_translations": "absent",
+    "continuous_T2_TBC": "absent",
+    "many_body_GSD_q": "partial (3, not 9)",
+    "composite_fermion_flux_attachment": "absent",
+    "anyon_quasiparticle_statistics": "absent",
+    "topological_entanglement_entropy": "absent"
+  },
+  "arithmetic_only_matches": [
+    "Jain (p,n)=(2,2): nu = 2/(2*2*2+1) = 2/9",
+    "GSD candidate from 3 generations (3, not q=9)"
+  ],
+  "obstruction_extends_from_no_go_note": true,
+  "obstruction_class": "Plancherel-tautology (no-go candidate C); Jain arithmetic does not promote to retained mechanism",
+  "minimal_missing_inputs": [
+    "magnetic field on generation moduli",
+    "non-commuting translation pair on moduli (Heisenberg cocycle)",
+    "Chern-Simons / flux-attachment in retained action",
+    "explicit interaction Hamiltonian on three generations",
+    "retained Z_9 = Z_3 x Z_3 refinement"
+  ],
+  "no_new_structural_input_beyond_no_go_note": true
+}
