@@ -248,6 +248,45 @@ The campaign's "closure" was an empirical parameter fit, not a derivation. The f
 
 **Next genuine step**: tackle L_s ≥ 3 with rigorous Schur (or accept import). The L_s=3 APBC version of the cube derivation hasn't been done.
 
+## 10b. NEW FINDING: V-invariant L_s=2 APBC Schur computation (this iteration)
+
+Per the framework's roadmap spec, the V-invariant minimal block has **6 plaquettes / 12 directed link uses** (NOT the 12/24 PBC structure used by the existing runner). Computed the V-invariant Schur derivation explicitly (`scripts/frontier_su3_v_invariant_apbc_schur_2026_05_04.py`).
+
+**Results:**
+
+```
+V-invariant L_s=2 APBC cube (per framework roadmap spec):
+  6 plaquettes (faces of cube)
+  12 unique edges (links)
+  24 cyclic-index nodes
+  24 cyclic-index edges
+  N_components = 2
+
+Schur formula: ρ_(p,q) = (c/c_00)^6 × d^(2 - 12) = (c/c_00)^6 × d^(-10)
+
+P_(V-invariant APBC, β=6) = 0.422534
+```
+
+**Comparison with all L_s=2 derivations:**
+
+| Geometry | Plaq | Links | N_comp | ρ formula | P |
+|---|---:|---:|---:|---|---:|
+| **V-invariant APBC** (this iteration) | **6** | **12** | **2** | (c/c_00)^6 × d^(-10) | **0.4225** |
+| PBC ([PR #501](https://github.com/jonathonreilly/cl3-lattice-framework/pull/501) candidate) | 12 | 24 | 8 | (c/c_00)^12 × d^(-16) | 0.4291 |
+| P_triv reference | — | — | — | δ_(0,0) | 0.4225 |
+| P_loc reference | — | — | — | 1 | 0.4524 |
+| MC reference | — | — | — | — | 0.5934 |
+
+**Critical finding**: ALL L_s=2 cube derivations cluster around 0.42-0.43. None reaches MC 0.5934. **The framework's L_s=2 cube — in ANY of its geometric realizations — cannot natively derive 0.5934.**
+
+This rules out interpretations where "we used the wrong L_s=2 geometry": all L_s=2 geometries give the same ~0.42 native value.
+
+**The genuine open work confirmed:** L_s ≥ 3 Schur derivation. L_s=2 in any form is insufficient.
+
+For L_s ≥ 3: even at the simpler PBC geometry, treewidth analysis (PR #510) showed naive contraction is infeasible. The L_s=3 APBC Schur would face similar treewidth issues if its geometry is comparable to L_s=3 PBC.
+
+If L_s=3 APBC has REDUCED geometry (analogous to L_s=2 APBC having 6/12 instead of 12/24), the calculation might be tractable. But this isn't documented in the framework.
+
 ## 10. Historical PRs (consolidated into this doc going forward)
 
 This consolidated doc supersedes the per-iteration PRs. Future updates go HERE, not new PRs.
