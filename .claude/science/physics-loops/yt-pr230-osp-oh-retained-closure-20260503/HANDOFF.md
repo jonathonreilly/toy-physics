@@ -482,6 +482,42 @@ correlator mass-fit rows, certified `O_H/C_sH/C_HH` pole residues, Schur
 A/B/C rows, or a neutral-sector irreducibility theorem can move the claim
 state.
 
+## 2026-05-04 Full Positive Closure Assembly Gate
+
+The non-chunk campaign now has an executable integration gate for the exact
+question "what must be true for chunk work to combine into positive retained
+closure?"
+
+```bash
+python3 -m py_compile \
+  scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py \
+  scripts/frontier_yt_retained_closure_route_certificate.py \
+  scripts/frontier_yt_pr230_campaign_status_certificate.py
+# pass
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=161 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=187 FAIL=0
+```
+
+Result: still open, but the closure target is now machine-checkable.  The gate
+rejects the current surface and also rejects a hypothetical chunk-only
+completion.  Chunk output can supply the production-response leg only; it must
+still be paired with scalar-LSZ model-class/FV/IR control, one accepted
+`O_sp/O_H` or physical-response bridge, matching/running authority, and
+retained-route approval.
+
+The four non-chunk bridge routes allowed by the gate are: production
+`O_H/C_sH/C_HH` Gram purity, same-source W/Z response with sector-overlap
+identity, same-surface Schur `A/B/C` rows plus the scalar-denominator bridge,
+or a neutral-sector irreducibility theorem.  The next non-chunk target should
+therefore be one of those routes, not more source-only shortcut tests.
+
 ## 2026-05-04 Chunks032 and 034 Packaging
 
 Chunks032 and 034 landed and were packaged as bounded FH/LSZ production

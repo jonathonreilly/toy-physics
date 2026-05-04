@@ -216,6 +216,7 @@ def main() -> int:
         "fh_lsz_polefit8x8_chunk_combiner_gate": "outputs/yt_fh_lsz_polefit8x8_chunk_combiner_gate_2026-05-04.json",
         "fh_lsz_polefit8x8_postprocessor": "outputs/yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
+        "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
     }
     for path in sorted((ROOT / "outputs").glob(GENERIC_CHUNK_TARGET_PATTERN)):
         required_certificates[generic_chunk_target_key(path)] = str(path.relative_to(ROOT))
@@ -1547,6 +1548,15 @@ def main() -> int:
         float(certificates["joint_resource_projection"].get("projection", {}).get("joint_mass_scaled_hours", 0.0)) > 1000.0
         and certificates["joint_resource_projection"].get("proposal_allowed") is False
     )
+    full_positive_assembly_gate_open = (
+        "full positive PR230 closure assembly gate not passed"
+        in certificates["full_positive_closure_assembly_gate"].get("actual_current_surface_status", "")
+        and certificates["full_positive_closure_assembly_gate"].get("proposal_allowed") is False
+        and certificates["full_positive_closure_assembly_gate"].get("chunk_only_evaluation", {}).get(
+            "assembly_passed"
+        )
+        is False
+    )
     interacting_kinetic_still_open = (
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status")
         == "bounded-support / interacting kinetic background sensitivity"
@@ -2342,6 +2352,11 @@ def main() -> int:
         f"hours={certificates['joint_resource_projection'].get('projection', {}).get('joint_mass_scaled_hours')}",
     )
     report(
+        "full-positive-closure-assembly-gate-open",
+        full_positive_assembly_gate_open,
+        certificates["full_positive_closure_assembly_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
         "interacting-kinetic-route-still-needs-ensemble-or-theorem",
         interacting_kinetic_still_open,
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status", ""),
@@ -2666,7 +2681,10 @@ def main() -> int:
             "builder/postprocessor and supply a certified O_H with production "
             "C_sH/C_HH pole residues before running retained-route gating; "
             "the current Gram-purity contract witness is schema support, not "
-            "production evidence."
+            "production evidence.  Before any retained/proposed-retained "
+            "wording, rerun the full positive closure assembly gate; it "
+            "currently rejects both the current surface and a hypothetical "
+            "chunk-only completion."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

@@ -731,3 +731,17 @@ Findings:
   closure are absent.
 - No retained/proposed-retained claim is authorized; retained-route and
   campaign-status certificates remain pass-clean only as overclaim guards.
+# 2026-05-04 Full Closure Assembly Gate Self-Review
+
+Disposition: pass as open gate, not as closure.
+
+Findings checked:
+
+- The artifact does not claim retained or proposed_retained status.
+- The gate rejects the current PR230 surface and a hypothetical chunk-only
+  completion.
+- The positive witness is explicitly synthetic schema validation, not evidence.
+- Forbidden imports remain in the non-claim firewall only; none are used as
+  load-bearing proof inputs.
+- Aggregate retained-route and campaign certificates consume the gate and still
+  report `proposal_allowed: false`.

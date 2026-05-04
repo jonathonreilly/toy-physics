@@ -308,6 +308,9 @@ def main() -> int:
         "source_higgs_production_readiness_gate": load(
             "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json"
         ),
+        "full_positive_closure_assembly_gate": load(
+            "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json"
+        ),
         "canonical_higgs_operator_candidate_stress": load(
             "outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json"
         ),
@@ -1780,6 +1783,17 @@ def main() -> int:
         "retained closure not yet reached" in str(statuses["retained_closure_route"]),
         statuses["retained_closure_route"],
     )
+    report(
+        "full-positive-closure-assembly-gate-still-open",
+        "full positive PR230 closure assembly gate not passed"
+        in str(statuses["full_positive_closure_assembly_gate"])
+        and certificates["full_positive_closure_assembly_gate"].get("proposal_allowed") is False
+        and certificates["full_positive_closure_assembly_gate"].get("chunk_only_evaluation", {}).get(
+            "assembly_passed"
+        )
+        is False,
+        statuses["full_positive_closure_assembly_gate"],
+    )
 
     remaining_routes = [
         {
@@ -1801,6 +1815,10 @@ def main() -> int:
         {
             "route": "non-source response rank repair",
             "needed": "certified O_H with C_sH/C_HH pole Gram purity, or same-source W/Z response rows with sector-overlap and canonical-Higgs identity",
+        },
+        {
+            "route": "full positive closure assembly",
+            "needed": "production response plus scalar-LSZ model/FV/IR control plus one accepted O_H/WZ/Schur/rank-one bridge and retained-route approval",
         },
     ]
 
@@ -2064,6 +2082,7 @@ def main() -> int:
             "does not count non-independent historical chunks as production evidence",
             "does not use observed top mass or y_t as proof input",
             "does not allow H_unit matrix-element definition as y_t readout",
+            "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

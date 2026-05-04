@@ -184,4 +184,9 @@ Open imports:
 - the same-source EW action certificate builder is bounded support only; it
   records that no same-source EW action certificate is present and does not
   synthesize W/Z rows, define `O_H`, or authorize a W/Z/source-Higgs bypass;
+- the full positive PR230 closure assembly gate is open and now executable:
+  it rejects the current surface and also rejects a hypothetical chunk-only
+  completion, because production response still must be combined with
+  scalar-LSZ model-class/FV/IR control, one accepted `O_sp/O_H` or physical
+  response bridge, matching/running authority, and retained-route approval;
 - independent audit after any proposed positive certificate.

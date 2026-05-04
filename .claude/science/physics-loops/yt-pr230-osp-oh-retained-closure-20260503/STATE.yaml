@@ -7,19 +7,17 @@ target_status: retained-positive-closure
 actual_current_surface_status: exact-negative-boundary
 active_residual: "scalar-LSZ pole/FV/IR/model-class control / O_sp-O_H identity"
 latest_checkpoint:
-  utc: "2026-05-04T12:43:52Z"
-  block: 37
-  artifact: "same-source EW action certificate builder"
-  status: "bounded support/open; non-chunk W/Z and source-Higgs bypass prerequisite now executable"
-  result: "added a same-source EW action certificate builder and wired it into the W/Z action gate plus retained/campaign aggregates; builder PASS=10 FAIL=0, W/Z action gate PASS=24 FAIL=0, retained-route PASS=159 FAIL=0, campaign PASS=185 FAIL=0"
-  claim_boundary: "no physical y_t readout; no retained/proposed-retained wording; current surface still lacks same-source EW action certificate, W/Z rows, canonical-Higgs identity, sector-overlap identity, source-Higgs C_sH/C_HH rows, Schur rows, and scalar-LSZ model-class/FV/IR closure"
-  live_compute: "chunk work intentionally left to the other CLI worker; this checkpoint does not package polefit8x8 chunks013-018"
+  utc: "2026-05-04T12:56:42Z"
+  block: 38
+  artifact: "full positive PR230 closure assembly gate"
+  status: "open; assembly gate rejects current surface and hypothetical chunk-only completion"
+  result: "added an executable assembly gate for combining chunk output with non-chunk closure bridges; assembly PASS=13 FAIL=0, retained-route PASS=161 FAIL=0, campaign PASS=187 FAIL=0"
+  claim_boundary: "no physical y_t readout; no retained/proposed-retained wording; chunks alone are insufficient; positive closure still needs scalar-LSZ model-class/FV/IR control plus one O_H/C_sH/C_HH, W/Z, Schur/K-prime, or neutral-rank-one bridge"
+  live_compute: "chunk work intentionally left to the other CLI worker; this checkpoint does not package polefit8x8 chunks013-018 or any other chunk artifacts"
   checkpoint_files:
-    - scripts/frontier_yt_wz_same_source_ew_action_certificate_builder.py
-    - docs/YT_WZ_SAME_SOURCE_EW_ACTION_CERTIFICATE_BUILDER_NOTE_2026-05-04.md
-    - outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json
-    - scripts/frontier_yt_wz_same_source_ew_action_gate.py
-    - outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json
+    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+    - docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md
+    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
     - scripts/frontier_yt_retained_closure_route_certificate.py
     - scripts/frontier_yt_pr230_campaign_status_certificate.py
     - outputs/yt_retained_closure_route_certificate_2026-05-01.json
@@ -52,7 +50,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 37
+block: 38
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
