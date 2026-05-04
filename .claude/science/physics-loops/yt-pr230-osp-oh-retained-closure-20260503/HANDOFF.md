@@ -1581,3 +1581,35 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 
 This is gate hygiene only.  The source-Higgs route still has no same-surface
 `O_H` certificate and no `C_sH/C_HH` production rows.
+
+## 2026-05-04 Polefit8x8 Chunks007-012 Packaging
+
+The second homogeneous eight-mode/x8 pole-fit slice landed and was packaged as
+bounded finite-shell diagnostic support:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_postprocessor.py
+# SUMMARY: PASS=5 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=158 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=184 FAIL=0
+```
+
+Current polefit8x8 state: chunks001-012 ready, 192 saved configurations,
+8 mode rows, 8 distinct momentum shells, and diagnostic fit-ready finite-shell
+support.  Complete L12 production remains false, and the model-class gate still
+blocks retained use.
+
+The live 12-hour wave orchestrator is still running as session `34560`, with
+the next chunk slots backfilled.
+
+Next exact action: continue monitoring session `34560`.  If runtime remains
+and chunks013+ land, rerun the combiner, postprocessor, retained-route, and
+campaign-status certificates, package the new coherent slice, and keep PR #230
+draft/open unless the retained-proposal certificate genuinely changes.

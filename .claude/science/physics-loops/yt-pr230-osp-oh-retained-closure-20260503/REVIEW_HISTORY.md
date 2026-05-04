@@ -674,3 +674,22 @@ Findings:
   `C_sH/C_HH` production rows exist.
 - Retained-route and campaign-status certificates remain `PASS=158 FAIL=0`
   and `PASS=184 FAIL=0`; no proposal wording is authorized.
+
+## 2026-05-04 Polefit8x8 Chunks007-012 Self-Review
+
+Disposition: bounded finite-shell diagnostic support; continue campaign.
+
+Findings:
+
+- Chunks007 through 012 completed in the separate homogeneous eight-mode/x8
+  pole-fit namespace and were not mixed with the completed four-mode/x16 L12
+  stream.
+- The combiner passes with 12/63 ready chunks and 192 saved configurations.
+- The postprocessor sees 8 mode rows and 8 distinct momentum shells; the
+  finite-shell diagnostic fit remains numerically formed.
+- The diagnostic fit is still not physical scalar-pole evidence because
+  complete L12 production, L16/L24 finite-volume scaling, FV/IR/zero-mode
+  control, pole-fit model-class authority, and canonical-Higgs/source-overlap
+  closure are absent.
+- No retained/proposed-retained claim is authorized; retained-route and
+  campaign-status certificates remain pass-clean only as overclaim guards.

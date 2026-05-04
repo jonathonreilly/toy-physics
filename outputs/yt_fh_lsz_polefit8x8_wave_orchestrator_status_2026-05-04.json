@@ -8,7 +8,13 @@
     3,
     4,
     5,
-    6
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
   ],
   "gate_runs": [
     {
@@ -105,6 +111,134 @@
         "scripts/frontier_yt_pr230_campaign_status_certificate.py"
       ],
       "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T100614Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111419Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_fh_lsz_polefit8x8_postprocessor.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111419Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_retained_closure_route_certificate.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111419Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111419Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111520Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_fh_lsz_polefit8x8_postprocessor.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111520Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_retained_closure_route_certificate.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111520Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111520Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111620Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_fh_lsz_polefit8x8_postprocessor.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111620Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_retained_closure_route_certificate.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111620Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111620Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111720Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_fh_lsz_polefit8x8_postprocessor.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111720Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_retained_closure_route_certificate.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111720Z.log",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/polefit8x8_gates_20260504T111720Z.log",
       "returncode": 0
     }
   ],
@@ -331,16 +465,232 @@
       "pid": 48503,
       "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk012",
       "seed": 2026051912
+    },
+    {
+      "chunk_index": 13,
+      "command": [
+        "python3",
+        "scripts/yt_direct_lattice_correlator_production.py",
+        "--volumes",
+        "12x24",
+        "--masses",
+        "0.75",
+        "--therm",
+        "1000",
+        "--measurements",
+        "16",
+        "--separation",
+        "20",
+        "--engine",
+        "numba",
+        "--production-targets",
+        "--scalar-source-shifts=-0.01,0.0,0.01",
+        "--scalar-two-point-modes",
+        "0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0",
+        "--scalar-two-point-noises",
+        "8",
+        "--production-output-dir",
+        "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk013",
+        "--resume",
+        "--seed",
+        "2026051913",
+        "--output",
+        "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk013_2026-05-04.json"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/L12_T24_chunk013_20260504T111420Z.log",
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk013_2026-05-04.json",
+      "pid": 63148,
+      "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk013",
+      "seed": 2026051913
+    },
+    {
+      "chunk_index": 14,
+      "command": [
+        "python3",
+        "scripts/yt_direct_lattice_correlator_production.py",
+        "--volumes",
+        "12x24",
+        "--masses",
+        "0.75",
+        "--therm",
+        "1000",
+        "--measurements",
+        "16",
+        "--separation",
+        "20",
+        "--engine",
+        "numba",
+        "--production-targets",
+        "--scalar-source-shifts=-0.01,0.0,0.01",
+        "--scalar-two-point-modes",
+        "0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0",
+        "--scalar-two-point-noises",
+        "8",
+        "--production-output-dir",
+        "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk014",
+        "--resume",
+        "--seed",
+        "2026051914",
+        "--output",
+        "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk014_2026-05-04.json"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/L12_T24_chunk014_20260504T111420Z.log",
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk014_2026-05-04.json",
+      "pid": 63149,
+      "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk014",
+      "seed": 2026051914
+    },
+    {
+      "chunk_index": 15,
+      "command": [
+        "python3",
+        "scripts/yt_direct_lattice_correlator_production.py",
+        "--volumes",
+        "12x24",
+        "--masses",
+        "0.75",
+        "--therm",
+        "1000",
+        "--measurements",
+        "16",
+        "--separation",
+        "20",
+        "--engine",
+        "numba",
+        "--production-targets",
+        "--scalar-source-shifts=-0.01,0.0,0.01",
+        "--scalar-two-point-modes",
+        "0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0",
+        "--scalar-two-point-noises",
+        "8",
+        "--production-output-dir",
+        "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk015",
+        "--resume",
+        "--seed",
+        "2026051915",
+        "--output",
+        "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk015_2026-05-04.json"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/L12_T24_chunk015_20260504T111420Z.log",
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk015_2026-05-04.json",
+      "pid": 63156,
+      "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk015",
+      "seed": 2026051915
+    },
+    {
+      "chunk_index": 16,
+      "command": [
+        "python3",
+        "scripts/yt_direct_lattice_correlator_production.py",
+        "--volumes",
+        "12x24",
+        "--masses",
+        "0.75",
+        "--therm",
+        "1000",
+        "--measurements",
+        "16",
+        "--separation",
+        "20",
+        "--engine",
+        "numba",
+        "--production-targets",
+        "--scalar-source-shifts=-0.01,0.0,0.01",
+        "--scalar-two-point-modes",
+        "0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0",
+        "--scalar-two-point-noises",
+        "8",
+        "--production-output-dir",
+        "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk016",
+        "--resume",
+        "--seed",
+        "2026051916",
+        "--output",
+        "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk016_2026-05-04.json"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/L12_T24_chunk016_20260504T111520Z.log",
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk016_2026-05-04.json",
+      "pid": 65660,
+      "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk016",
+      "seed": 2026051916
+    },
+    {
+      "chunk_index": 17,
+      "command": [
+        "python3",
+        "scripts/yt_direct_lattice_correlator_production.py",
+        "--volumes",
+        "12x24",
+        "--masses",
+        "0.75",
+        "--therm",
+        "1000",
+        "--measurements",
+        "16",
+        "--separation",
+        "20",
+        "--engine",
+        "numba",
+        "--production-targets",
+        "--scalar-source-shifts=-0.01,0.0,0.01",
+        "--scalar-two-point-modes",
+        "0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0",
+        "--scalar-two-point-noises",
+        "8",
+        "--production-output-dir",
+        "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk017",
+        "--resume",
+        "--seed",
+        "2026051917",
+        "--output",
+        "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk017_2026-05-04.json"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/L12_T24_chunk017_20260504T111620Z.log",
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk017_2026-05-04.json",
+      "pid": 68899,
+      "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk017",
+      "seed": 2026051917
+    },
+    {
+      "chunk_index": 18,
+      "command": [
+        "python3",
+        "scripts/yt_direct_lattice_correlator_production.py",
+        "--volumes",
+        "12x24",
+        "--masses",
+        "0.75",
+        "--therm",
+        "1000",
+        "--measurements",
+        "16",
+        "--separation",
+        "20",
+        "--engine",
+        "numba",
+        "--production-targets",
+        "--scalar-source-shifts=-0.01,0.0,0.01",
+        "--scalar-two-point-modes",
+        "0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0",
+        "--scalar-two-point-noises",
+        "8",
+        "--production-output-dir",
+        "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk018",
+        "--resume",
+        "--seed",
+        "2026051918",
+        "--output",
+        "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk018_2026-05-04.json"
+      ],
+      "log": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/logs/L12_T24_chunk018_20260504T111721Z.log",
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk018_2026-05-04.json",
+      "pid": 70147,
+      "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk018",
+      "seed": 2026051918
     }
   ],
   "manifest": "outputs/yt_fh_lsz_polefit8x8_chunk_manifest_2026-05-04.json",
   "missing_chunks": [
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
     19,
     20,
     21,
@@ -388,7 +738,7 @@
     63
   ],
   "newly_completed_chunks": [],
-  "poll_count": 72,
+  "poll_count": 137,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Wave orchestration is run control only; pole-fit and retained gates decide evidence status.",
   "range": {
@@ -396,12 +746,12 @@
     "start_index": 1
   },
   "running_chunks": [
-    7,
-    8,
-    9,
-    10,
-    11,
-    12
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
   ],
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",
