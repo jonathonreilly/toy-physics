@@ -20,6 +20,12 @@ Open imports:
   theorem;
 - source-Higgs Gram-purity contract witness is exact support only; real
   production rows and `O_H` certificate are still absent;
+- same-source W/Z route is contract/gate support only; no W/Z mass-response
+  rows, sector-overlap identity, or canonical-Higgs identity pass;
+- positivity-improving/rank-one route is conditional support only; the direct
+  neutral-sector irreducibility theorem is blocked on the current surface;
+- scalar denominator / K-prime route is exact support only; same-surface Schur
+  A/B/C kernel rows and FV/IR pole-control certificates are absent;
 - finite-source-linearity calibration output for response-window support
   only; not sufficient for `O_sp = O_H` or physical `y_t`;
 - independent audit after any proposed positive certificate.

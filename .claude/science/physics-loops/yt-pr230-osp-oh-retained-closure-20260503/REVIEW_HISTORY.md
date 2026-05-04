@@ -37,3 +37,21 @@ Findings:
   no-retained-route candidates fail.
 - This verifies the future acceptance surface only and does not change current
   claim status.
+
+## 2026-05-04 Route Sweep Self-Review
+
+Disposition: continue campaign; no retained/proposed-retained closure.
+
+Findings:
+
+- The W/Z response route is hardened by contract/gate artifacts, but no
+  same-source W/Z correlator mass-response rows or harness exist on the
+  current surface.
+- The dynamical rank-one route remains blocked: current certificates permit a
+  finite orthogonal neutral scalar direction, and direct positivity improvement
+  is not proved.
+- The scalar denominator / K-prime route has exact support and Schur row
+  contracts, but no same-surface A/B/C Schur kernel rows or FV/IR pole-control
+  certificate exist.
+- Aggregate retained/campaign certificates still pass as honest open-state
+  blockers, not as closure.

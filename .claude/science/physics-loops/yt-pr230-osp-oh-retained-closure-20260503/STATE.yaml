@@ -11,7 +11,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 1
+block: 2
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -39,12 +39,18 @@ current_result: >
   readout fixed while changing the canonical-Higgs overlap and a finite
   orthogonal neutral top coupling.  The source-Higgs Gram-purity acceptance
   contract now has an in-memory witness: pure future rows pass, mixed or
-  forbidden candidates fail, and current rows remain absent.
+  forbidden candidates fail, and current rows remain absent.  A 2026-05-04
+  checkpoint refreshed the W/Z response row contract, same-source W/Z gate,
+  repo-wide W/Z harness audit, neutral-scalar dynamical rank-one attempt,
+  source-overlap route selector, K-prime/scalar-denominator status, retained
+  route certificate, and campaign status certificate.  They remain PASSing
+  as blockers/support boundaries, not closure.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
   Monitor chunks027/028 and the finite-source-linearity calibration job.  When
   outputs land, rerun the chunk gates or calibration checkpoint plus aggregate
-  retained/campaign certificates.  In parallel, continue the next positive
-  O_sp/O_H route: certified source-Higgs C_sH/C_HH pole residues, same-source
-  W/Z response, or a genuine rank-one neutral scalar theorem.
+  retained/campaign certificates.  While waiting, only take routes that can
+  add a real new same-surface row/theorem: certified O_H/C_sH/C_HH pole
+  residues, genuine same-source W/Z response rows, Schur A/B/C kernel rows,
+  or a direct proof of the missing neutral-sector irreducibility premise.
