@@ -23,22 +23,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 173 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 15 |
-| unaudited | 1159 |
+| unaudited | 1157 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 6 |
-| ~~audited_conditional~~ | 229 |
+| ~~audited_conditional~~ | 231 |
 | `decoration_under_wide_lattice_h2t_distance_law_note` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 276 |
-| `audited_conditional` | 229 |
+| `audited_conditional` | 231 |
 | `audited_decoration` | 1 |
 | `audited_failed` | 44 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 6 |
-| `unaudited` | 1205 |
+| `unaudited` | 1203 |
 
 | claim_type | count |
 |---|---:|
@@ -399,6 +399,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_change_proposal_2026-04-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `beyond_lattice_qcd_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `bh_entropy_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | B | - |
@@ -520,6 +521,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `global_coherence_predictor_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `gluon_tree_level_masslessness_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | F | - |
 | `gravitational_wave_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `gravity_clean_derivation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `gravity_observable_hierarchy_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `growing_graph_expansion_card_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `grown_wavefield_companion_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -1135,6 +1137,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the fermion-sector identities close on the bounded runner surface, but the full-action CPT theorem imports a deferred SU(3) Wilson-plaquette operator lift and prior physical-Hilbert/partition-function consequences. Why this blocks: the ledger cannot retain the broader canonical action invariance or CPT-even Observable Principle discharge from a runner that explicitly excludes the gauge-sector algebraic lift. Repair target: construct the CPT action on SU(3) Wilson links/plaquettes and tie it to S_G, Z, H_phys, and CP-odd observables. Claim boundary until fixed: pure-staggered finite-block fermion-sector CPT identities are runner-backed, while full canonical action CPT remains conditional.
 - **open / conditional deps cited:**
   - `AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`
+- **auditor confidence:** high
+
+### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Reflection positivity (R1)-(R4) for the canonical action as stated, with special attention to the determinant-positivity bridge for the full staggered+Wilson sector.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260504-214608-704bb450-axiom_first_reflection_p-001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The combined-sector proof requires det(M) >= 0 on the canonical staggered+Wilson surface; the note derives this only for staggered-only M_KS+mI and uses finite runner support E6 for M_KS+M_W+mI.  _(class `C`)_
+- **chain closes:** False — The staggered-only sector has an internal algebraic determinant-positivity argument, but the full staggered+Wilson claim does not close: the Wilson term breaks the epsilon anticommutation and E6 is only finite, simplified, well-conditioned numerical evidence, not a proof for all canonical configurations.
+- **rationale:** The source note itself records that the full staggered+Wilson determinant-positivity input is runner-supported rather than derived. The runner performs real computations, but on reduced/free/U(1) or small finite representatives, and E6 filters to selected well-conditioned cases; it does not establish configuration-by-configuration det(M) >= 0 for the full canonical SU(3) staggered+Wilson action. The proof also cites OS/STW/MP factorisation identities, but no cited authority text is supplied in the restricted packet, so those imports cannot be independently checked here.
 - **auditor confidence:** high
 
 ### `b_independence_mechanism_note`
@@ -4386,6 +4401,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — No. The runner exits zero, but the audit classifier records no A/B/C/D PASS checks for a load-bearing audit surface.
 - **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a bounded note with executable but unratified support.
 - **auditor confidence:** medium
+
+### `gravity_clean_derivation_note`
+
+- **Note:** [`GRAVITY_CLEAN_DERIVATION_NOTE.md`](../../docs/GRAVITY_CLEAN_DERIVATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the stated conditional weak-field chain from Cl(3) on Z^3 plus imposed closure/source/response maps to a lattice Poisson equation and Newtonian inverse-square force in lattice units.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260504-214608-704bb450-gravity_clean_derivation-002`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Self-consistency requires L^{-1} = G_0, so with G_0 = (-Delta_lat)^{-1} one obtains L = -Delta_lat.  _(class `F`)_
+- **chain closes:** False — The algebra L = G_0^{-1} closes only after the physical bridge L^{-1} = G_0 is imposed. The packet also does not close the source map rho = |psi|^2, the test-mass response S = L(1 - phi), or the lattice Green-function normalization/asymptotic as retained dependencies.
+- **rationale:** No runner output or source is available, so the runner cannot supply first-principles support. From the note text alone, the decisive step is an imposed identification between the propagator Green function and the gravitational field Green function, not a derivation from the axiom. The note itself acknowledges that the closure condition, Born/mass-density source map, weak-field response map, and Green-function theorem are not registered audit-clean dependencies. The safe audited result is therefore only the conditional chain granted those premises.
+- **open / conditional deps cited:**
+  - `GRAVITY_CLEAN_DERIVATION_NOTE.md`
+- **auditor confidence:** high
 
 ### `gravity_law_cleanup_note`
 

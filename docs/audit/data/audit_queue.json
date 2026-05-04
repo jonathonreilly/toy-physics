@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 823,
+    "critical": 821,
     "high": 24,
     "leaf": 201,
     "medium": 130
@@ -4030,48 +4030,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 9,
-      "effective_status": "unaudited",
-      "load_bearing_score": 13.197,
-      "note_path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
-      "transitive_descendants": 414
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "gravity_clean_derivation_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 12,
-      "effective_status": "unaudited",
-      "load_bearing_score": 14.679,
-      "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 409
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -33446,6 +33404,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 319,
-  "total_pending": 1178
+  "ready_count": 317,
+  "total_pending": 1176
 }
