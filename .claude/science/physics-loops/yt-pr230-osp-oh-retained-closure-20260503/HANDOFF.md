@@ -218,6 +218,40 @@ For non-MC closure, the next positive route is still a same-surface `O_H`
 certificate, source-Higgs production rows, W/Z identity rows, Schur A/B/C
 rows, or neutral-sector irreducibility.
 
+## 2026-05-04 W/Z Correlator Mass-Fit Path Gate
+
+The second W/Z implementation work unit was tested directly:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py
+# pass
+
+python3 scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py
+# SUMMARY: PASS=16 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=144 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=170 FAIL=0
+```
+
+Result: exact negative boundary, not closure.  The current PR230 top/QCD
+harness has a W/Z absent guard but no W/Z two-point correlator mass-fit
+CLI/path.  The new gate defines the future row contract and rejects static EW
+gauge-mass algebra, aggregate slope-only rows, mismatched source coordinates,
+observed-W/Z selectors, `H_unit`/Ward imports, and
+`alpha_LM`/plaquette/`u0` imports.
+
+No W/Z mass-fit rows or response rows were written.  Retained/proposed-retained
+wording remains unauthorized.
+
+Next exact action: keep monitoring chunks031-036 and the chunk-wave
+orchestrator.  For non-MC closure, only a real same-source EW action plus W/Z
+correlator mass-fit rows, certified `O_H/C_sH/C_HH` pole residues, Schur
+A/B/C rows, or a neutral-sector irreducibility theorem can move the claim
+state.
+
 ## 2026-05-04 Same-Source EW Action Gate
 
 The first W/Z implementation work unit was tested directly:

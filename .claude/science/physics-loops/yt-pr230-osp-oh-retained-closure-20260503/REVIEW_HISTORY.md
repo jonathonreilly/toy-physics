@@ -155,3 +155,22 @@ Findings:
 - No retained/proposed-retained claim is authorized because `O_H`,
   source-Higgs/W/Z/rank-one closure, and the retained-route certificate remain
   open.
+
+## 2026-05-04 W/Z Correlator Mass-Fit Path Gate Self-Review
+
+Disposition: exact negative boundary for current W/Z mass-fit work unit;
+continue campaign.
+
+Findings:
+
+- The runner verifies a future W/Z mass-fit row must contain same-source
+  negative/zero/positive shifts, per-shift W or Z two-point correlators,
+  effective-mass plateaus or fit windows, and jackknife/bootstrap errors.
+- The current top/QCD production harness has only a W/Z absent guard and no
+  W/Z correlator mass-fit CLI/path.
+- Static EW gauge-mass algebra, aggregate slope-only rows, mismatched source
+  coordinates, observed W/Z selectors, `H_unit`/Ward shortcuts, and
+  `alpha_LM`/plaquette/`u0` imports are rejected.
+- No retained/proposed-retained claim is authorized because no W/Z mass-fit
+  rows, response rows, same-source EW action certificate, sector-overlap
+  identity, or canonical-Higgs identity exist.

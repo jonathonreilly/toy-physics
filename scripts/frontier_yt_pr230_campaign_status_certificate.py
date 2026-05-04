@@ -251,6 +251,9 @@ def main() -> int:
         "wz_same_source_ew_action_gate": load(
             "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json"
         ),
+        "wz_correlator_mass_fit_path_gate": load(
+            "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json"
+        ),
         "same_source_sector_overlap_identity": load(
             "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json"
         ),
@@ -1067,6 +1070,16 @@ def main() -> int:
         and certificates["wz_same_source_ew_action_gate"].get("same_source_ew_action_ready") is False
         and certificates["wz_same_source_ew_action_gate"].get("action_block_written") is False,
         statuses["wz_same_source_ew_action_gate"],
+    )
+    report(
+        "wz-correlator-mass-fit-path-gate-blocks",
+        "WZ correlator mass-fit path absent"
+        in str(statuses["wz_correlator_mass_fit_path_gate"])
+        and certificates["wz_correlator_mass_fit_path_gate"].get("proposal_allowed") is False
+        and certificates["wz_correlator_mass_fit_path_gate"].get("wz_correlator_mass_fit_path_ready") is False
+        and certificates["wz_correlator_mass_fit_path_gate"].get("future_mass_fit_rows_present") is False
+        and certificates["wz_correlator_mass_fit_path_gate"].get("future_response_rows_present") is False,
+        statuses["wz_correlator_mass_fit_path_gate"],
     )
     report(
         "same-source-sector-overlap-identity-blocks",

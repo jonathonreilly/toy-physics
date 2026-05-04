@@ -1,0 +1,153 @@
+{
+  "actual_current_surface_status": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
+  "bare_retained_allowed": false,
+  "current_surface_findings": {
+    "ew_note_is_static_dictionary": true,
+    "qcd_harness_has_real_wz_mass_fit_path": false,
+    "qcd_harness_has_wz_absent_guard": true
+  },
+  "exact_next_action": "Implement a genuine same-source EW action plus W/Z two-point correlator mass-fit harness, or pivot to source-Higgs C_sH/C_HH pole rows, Schur A/B/C rows, neutral-sector irreducibility, or FH/LSZ production evidence.",
+  "fail_count": 0,
+  "future_mass_fit_rows": "outputs/yt_wz_correlator_mass_fit_rows_2026-05-04.json",
+  "future_mass_fit_rows_present": false,
+  "future_response_rows": "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
+  "future_response_rows_present": false,
+  "mass_fit_row_contract": {
+    "required": [
+      "production phase",
+      "same source coordinate as top FH response",
+      "negative, zero, and positive source shifts",
+      "per-shift W or Z correlator time series",
+      "effective-mass plateau or fit window with single-state dominance",
+      "mass_lat and mass_lat_err from the correlator",
+      "jackknife/bootstrap block count",
+      "firewall excluding static EW algebra, observed W/Z selectors, H_unit/Ward, alpha_LM/plaquette/u0"
+    ]
+  },
+  "parent_certificates": {
+    "implementation_plan": "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_ew_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "same_source_wz_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+    "wz_builder": "outputs/yt_fh_gauge_mass_response_certificate_builder_2026-05-03.json",
+    "wz_row_contract": "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json",
+    "wz_row_production_attempt": "outputs/yt_wz_response_row_production_attempt_2026-05-03.json"
+  },
+  "pass_count": 16,
+  "positive_witness_validation": {
+    "checks": {
+      "mass_fit_rows_are_correlator_fits": true,
+      "mass_fit_rows_present": true,
+      "no_alpha_lm_plaquette_or_u0": true,
+      "no_hunit_or_ward": true,
+      "no_observed_wz_selector": true,
+      "no_static_ew_mass_algebra": true,
+      "not_yukawa_readout": true,
+      "production_phase": true,
+      "same_boson_across_rows": true,
+      "same_source_coordinate": true,
+      "source_coordinate_named": true,
+      "source_shifts_neg_zero_pos": true
+    },
+    "missing_or_failed": [],
+    "valid": true
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No W/Z correlator mass-fit rows, same-source EW action, sector identity, or retained-route gate pass.",
+  "rejection_validations": {
+    "aggregate_slope_only": {
+      "checks": {
+        "mass_fit_rows_are_correlator_fits": true,
+        "mass_fit_rows_present": false,
+        "no_alpha_lm_plaquette_or_u0": true,
+        "no_hunit_or_ward": true,
+        "no_observed_wz_selector": true,
+        "no_static_ew_mass_algebra": true,
+        "not_yukawa_readout": true,
+        "production_phase": true,
+        "same_boson_across_rows": false,
+        "same_source_coordinate": true,
+        "source_coordinate_named": true,
+        "source_shifts_neg_zero_pos": true
+      },
+      "missing_or_failed": [
+        "mass_fit_rows_present",
+        "same_boson_across_rows"
+      ],
+      "valid": false
+    },
+    "mismatched_source_coordinate": {
+      "checks": {
+        "mass_fit_rows_are_correlator_fits": true,
+        "mass_fit_rows_present": true,
+        "no_alpha_lm_plaquette_or_u0": true,
+        "no_hunit_or_ward": true,
+        "no_observed_wz_selector": true,
+        "no_static_ew_mass_algebra": true,
+        "not_yukawa_readout": true,
+        "production_phase": true,
+        "same_boson_across_rows": true,
+        "same_source_coordinate": false,
+        "source_coordinate_named": true,
+        "source_shifts_neg_zero_pos": true
+      },
+      "missing_or_failed": [
+        "same_source_coordinate"
+      ],
+      "valid": false
+    },
+    "observed_wz_selector": {
+      "checks": {
+        "mass_fit_rows_are_correlator_fits": true,
+        "mass_fit_rows_present": true,
+        "no_alpha_lm_plaquette_or_u0": true,
+        "no_hunit_or_ward": true,
+        "no_observed_wz_selector": false,
+        "no_static_ew_mass_algebra": true,
+        "not_yukawa_readout": true,
+        "production_phase": true,
+        "same_boson_across_rows": true,
+        "same_source_coordinate": true,
+        "source_coordinate_named": true,
+        "source_shifts_neg_zero_pos": true
+      },
+      "missing_or_failed": [
+        "no_observed_wz_selector"
+      ],
+      "valid": false
+    },
+    "static_ew_algebra": {
+      "checks": {
+        "mass_fit_rows_are_correlator_fits": true,
+        "mass_fit_rows_present": false,
+        "no_alpha_lm_plaquette_or_u0": true,
+        "no_hunit_or_ward": true,
+        "no_observed_wz_selector": true,
+        "no_static_ew_mass_algebra": false,
+        "not_yukawa_readout": true,
+        "production_phase": false,
+        "same_boson_across_rows": false,
+        "same_source_coordinate": false,
+        "source_coordinate_named": true,
+        "source_shifts_neg_zero_pos": false
+      },
+      "missing_or_failed": [
+        "production_phase",
+        "same_source_coordinate",
+        "source_shifts_neg_zero_pos",
+        "mass_fit_rows_present",
+        "same_boson_across_rows",
+        "no_static_ew_mass_algebra"
+      ],
+      "valid": false
+    }
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not write W/Z mass-fit or response rows",
+    "does not treat static EW gauge-mass algebra as a measured W/Z correlator mass fit",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "The second W/Z implementation work unit is not satisfied on the current PR230 surface.  A future row must contain actual W/Z two-point correlators, effective-mass plateaus or fit windows, jackknife/bootstrap errors, and negative/zero/positive source shifts under the same source coordinate.  The current QCD top harness has only a W/Z absent guard and no W/Z mass-fit CLI/path; static EW gauge-mass algebra is rejected as measurement evidence.",
+  "wz_correlator_mass_fit_path_ready": false
+}

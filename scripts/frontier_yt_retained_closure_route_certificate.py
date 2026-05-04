@@ -149,6 +149,7 @@ def main() -> int:
         "wz_response_row_production_attempt": "outputs/yt_wz_response_row_production_attempt_2026-05-03.json",
         "wz_response_harness_implementation_plan": "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json",
         "wz_same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+        "wz_correlator_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
         "osp_oh_identity_stretch": "outputs/yt_osp_oh_identity_stretch_attempt_2026-05-03.json",
@@ -940,6 +941,21 @@ def main() -> int:
         and certificates["wz_same_source_ew_action_gate"].get("proposal_allowed") is False
         and certificates["wz_same_source_ew_action_gate"].get("same_source_ew_action_ready") is False
         and certificates["wz_same_source_ew_action_gate"].get("action_block_written") is False
+    )
+    wz_correlator_mass_fit_path_gate_blocks = (
+        "WZ correlator mass-fit path absent"
+        in certificates["wz_correlator_mass_fit_path_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["wz_correlator_mass_fit_path_gate"].get("proposal_allowed") is False
+        and certificates["wz_correlator_mass_fit_path_gate"].get(
+            "wz_correlator_mass_fit_path_ready"
+        )
+        is False
+        and certificates["wz_correlator_mass_fit_path_gate"].get("future_mass_fit_rows_present")
+        is False
+        and certificates["wz_correlator_mass_fit_path_gate"].get("future_response_rows_present")
+        is False
     )
     same_source_sector_overlap_identity_blocks = (
         "same-source sector-overlap identity obstruction"
@@ -1791,6 +1807,11 @@ def main() -> int:
         "wz-same-source-ew-action-gate-blocks",
         wz_same_source_ew_action_gate_blocks,
         certificates["wz_same_source_ew_action_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "wz-correlator-mass-fit-path-gate-blocks",
+        wz_correlator_mass_fit_path_gate_blocks,
+        certificates["wz_correlator_mass_fit_path_gate"].get("actual_current_surface_status", ""),
     )
     report(
         "same-source-sector-overlap-identity-blocks",

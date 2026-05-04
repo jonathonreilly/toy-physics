@@ -11,7 +11,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 7
+block: 8
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -59,6 +59,9 @@ files_touched:
   - scripts/frontier_yt_source_higgs_production_readiness_gate.py
   - docs/YT_SOURCE_HIGGS_PRODUCTION_READINESS_GATE_NOTE_2026-05-04.md
   - outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json
+  - scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py
+  - docs/YT_WZ_CORRELATOR_MASS_FIT_PATH_GATE_NOTE_2026-05-04.md
+  - outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json
   - docs/YT_FH_LSZ_CHUNKS029_030_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-04.md
   - outputs/yt_pr230_fh_lsz_production_L12_T24_chunk029_2026-05-01.json
   - outputs/yt_pr230_fh_lsz_production_L12_T24_chunk030_2026-05-01.json
@@ -127,6 +130,11 @@ commands_run:
   - "python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py # PASS=12 FAIL=0, gate still open"
   - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=143 FAIL=0"
   - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=169 FAIL=0"
+  - "python3 -m py_compile scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py # pass"
+  - "python3 scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py # PASS=16 FAIL=0"
+  - "python3 -m py_compile scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py # pass"
+  - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=144 FAIL=0"
+  - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=170 FAIL=0"
 current_result: >
   O_sp is derived and unit-normalized, but the current PR230 surface does not
   derive O_sp = O_H.  A counterfamily holds Res(C_sp,sp)=1 and same-source top
@@ -179,7 +187,15 @@ current_result: >
   open, and retained/campaign aggregate certificates pass with PASS=143 and
   PASS=169 respectively.  The chunk-wave orchestrator filled the freed slots
   and launched chunks035/036, leaving chunks031-036 running and chunks037-040
-  missing in the current wave.
+  missing in the current wave.  The second W/Z work unit now has a direct
+  mass-fit path gate.  It passes with PASS=16 FAIL=0 as an exact negative
+  boundary: the current PR230 top/QCD harness has only a W/Z absent guard and
+  no W/Z two-point correlator mass-fit CLI/path.  The gate defines the future
+  row contract and rejects static EW gauge-mass algebra, aggregate slope-only
+  rows, mismatched source coordinates, observed W/Z selectors, H_unit/Ward
+  imports, and alpha_LM/plaquette/u0 imports.  No W/Z rows were written.
+  Aggregate retained and campaign certificates include this blocker and still
+  deny proposal authority with PASS=144 and PASS=170 respectively.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
@@ -188,5 +204,6 @@ next_exact_action: >
   campaign certificates, then let the chunk-wave orchestrator launch
   chunks037-040 as slots open.  While waiting, only take routes that can add a
   real new same-surface row/theorem: certified O_H/C_sH/C_HH pole residues, a
-  genuine same-source EW action plus W/Z response rows, Schur A/B/C kernel rows,
-  or a direct proof of the missing neutral-sector irreducibility premise.
+  genuine same-source EW action plus W/Z correlator mass-fit rows and response
+  rows, Schur A/B/C kernel rows, or a direct proof of the missing
+  neutral-sector irreducibility premise.

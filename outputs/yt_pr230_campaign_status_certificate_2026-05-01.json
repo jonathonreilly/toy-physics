@@ -207,6 +207,7 @@
     "taste_corner_ladder_pole_obstruction": "exact negative boundary / finite-ladder taste-corner pole-witness obstruction",
     "taste_singlet_ladder_normalization": "exact negative boundary / taste-singlet normalization removes finite ladder crossings",
     "unit_projector_pole_threshold": "exact negative boundary / unit-projector finite-ladder pole-threshold obstruction",
+    "wz_correlator_mass_fit_path_gate": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
     "wz_response_harness_absence_guard": "bounded-support / WZ response harness absence guard",
     "wz_response_harness_implementation_plan": "bounded-support / WZ response harness implementation plan",
     "wz_response_measurement_row_contract_gate": "bounded-support / WZ response measurement-row contract gate",
@@ -216,7 +217,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 169,
+  "pass_count": 170,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

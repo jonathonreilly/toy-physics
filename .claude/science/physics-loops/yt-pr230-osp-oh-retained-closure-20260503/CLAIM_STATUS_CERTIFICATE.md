@@ -23,6 +23,9 @@ Open imports:
 - same-source W/Z route is contract/gate support only; no W/Z mass-response
   rows, same-source EW production action certificate, sector-overlap identity,
   or canonical-Higgs identity pass;
+- W/Z correlator mass-fit path is absent on the current PR230 surface; static
+  EW gauge-mass algebra, aggregate slopes, mismatched source coordinates, and
+  observed-W/Z selectors are explicitly rejected as measurement rows;
 - positivity-improving/rank-one route is conditional support only; the direct
   neutral-sector irreducibility theorem is blocked on the current surface;
 - scalar denominator / K-prime route is exact support only; same-surface Schur

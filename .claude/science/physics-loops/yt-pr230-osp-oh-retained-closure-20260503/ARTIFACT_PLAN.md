@@ -26,6 +26,9 @@ Completed during 2026-05-04 campaign continuation:
 - `scripts/frontier_yt_source_higgs_production_readiness_gate.py`
 - `docs/YT_SOURCE_HIGGS_PRODUCTION_READINESS_GATE_NOTE_2026-05-04.md`
 - `outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json`
+- `scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py`
+- `docs/YT_WZ_CORRELATOR_MASS_FIT_PATH_GATE_NOTE_2026-05-04.md`
+- `outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json`
 - `docs/YT_FH_LSZ_CHUNKS029_030_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-04.md`
 - chunks029/030 production outputs and local generic/v2 target-timeseries
   checkpoints
