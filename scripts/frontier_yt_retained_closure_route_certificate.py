@@ -159,6 +159,7 @@ def main() -> int:
         "wz_same_source_ew_action_semantic_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
         "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
         "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
+        "one_higgs_completeness_orthogonal_null": "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json",
         "wz_correlator_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
@@ -1078,6 +1079,21 @@ def main() -> int:
         is True
         and certificates["same_source_w_response_orthogonal_correction"].get(
             "orthogonal_correction_gate_passed"
+        )
+        is False
+    )
+    one_higgs_completeness_orthogonal_null_premise_absent = (
+        "one-Higgs completeness orthogonal-null theorem"
+        in certificates["one_higgs_completeness_orthogonal_null"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["one_higgs_completeness_orthogonal_null"].get("proposal_allowed") is False
+        and certificates["one_higgs_completeness_orthogonal_null"].get(
+            "one_higgs_completeness_orthogonal_null_theorem_passed"
+        )
+        is True
+        and certificates["one_higgs_completeness_orthogonal_null"].get(
+            "one_higgs_completeness_gate_passed"
         )
         is False
     )
@@ -2116,6 +2132,11 @@ def main() -> int:
         "same-source-w-response-orthogonal-correction-gate-blocks",
         same_source_w_response_orthogonal_correction_gate_blocks,
         certificates["same_source_w_response_orthogonal_correction"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "one-higgs-completeness-orthogonal-null-premise-absent",
+        one_higgs_completeness_orthogonal_null_premise_absent,
+        certificates["one_higgs_completeness_orthogonal_null"].get("actual_current_surface_status", ""),
     )
     report(
         "wz-correlator-mass-fit-path-gate-blocks",

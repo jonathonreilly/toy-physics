@@ -33,6 +33,11 @@ Open imports:
   `delta_perp=y_x kappa_x/kappa_h`, but rejects zeroing or backsolving the
   correction without a real orthogonal-null, tomography, Gram-purity, or
   neutral-rank certificate;
+- one-Higgs completeness orthogonal-null theorem is conditional support only:
+  if a future same-source EW action proves one-Higgs field completeness for
+  the neutral top-coupled scalar sector, then `delta_perp=0`; the current
+  surface lacks that completeness certificate and SM one-Higgs notation alone
+  remains blocked as an `O_sp = O_H` import;
 - W/Z correlator mass-fit path is absent on the current PR230 surface; static
   EW gauge-mass algebra, aggregate slopes, mismatched source coordinates, and
   observed-W/Z selectors are explicitly rejected as measurement rows;

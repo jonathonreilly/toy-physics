@@ -1942,3 +1942,46 @@ produce same-source W response rows and one correction authority
 (`delta_perp` tomography, orthogonal-null theorem, source-Higgs Gram purity,
 or neutral rank-one theorem).  No retained/proposed-retained claim is
 authorized.
+
+## 2026-05-04 One-Higgs Completeness Orthogonal-Null Gate
+
+This non-chunk block tests the proof route for the W-response correction.  It
+does not reuse the invalid shortcut "SM one-Higgs notation equals PR230
+`O_sp = O_H`."  Instead it proves the narrower conditional statement: if a
+future same-source PR230 EW action certificate proves one-Higgs field
+completeness for the neutral top-coupled scalar sector, then the orthogonal
+correction vanishes:
+
+```text
+delta_perp = y_x kappa_x/kappa_h = 0
+g_2 R_t/(sqrt(2) R_W) = y_h.
+```
+
+Verification:
+
+```bash
+python3 -m py_compile \
+  scripts/frontier_yt_one_higgs_completeness_orthogonal_null_gate.py \
+  scripts/frontier_yt_same_source_w_response_orthogonal_correction_gate.py \
+  scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py \
+  scripts/frontier_yt_retained_closure_route_certificate.py \
+  scripts/frontier_yt_pr230_campaign_status_certificate.py
+# pass
+
+python3 scripts/frontier_yt_one_higgs_completeness_orthogonal_null_gate.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=168 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=194 FAIL=0
+```
+
+Result: conditional support only.  The premise is absent: no same-source EW
+action certificate and no one-Higgs completeness certificate are present.  The
+older SM one-Higgs import boundary still blocks using one-Higgs gauge
+selection alone as an `O_sp/O_H` proof.

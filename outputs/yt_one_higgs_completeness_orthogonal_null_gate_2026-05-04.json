@@ -1,0 +1,65 @@
+{
+  "actual_current_surface_status": "conditional-support / one-Higgs completeness orthogonal-null theorem; premise absent",
+  "bare_retained_allowed": false,
+  "counterexample_without_completeness": {
+    "completeness_needed": true,
+    "delta_span": 0.13999999999999999,
+    "rows": [
+      {
+        "delta_perp": -0.06999999999999999,
+        "kappa_h": 1.0,
+        "kappa_x": 0.35,
+        "orthogonal_top_coupling_y_x": -0.2
+      },
+      {
+        "delta_perp": 0.0,
+        "kappa_h": 1.0,
+        "kappa_x": 0.35,
+        "orthogonal_top_coupling_y_x": 0.0
+      },
+      {
+        "delta_perp": 0.06999999999999999,
+        "kappa_h": 1.0,
+        "kappa_x": 0.35,
+        "orthogonal_top_coupling_y_x": 0.2
+      }
+    ]
+  },
+  "current_closure_gate_passed": false,
+  "exact_next_action": "Supply a same-source EW action certificate with one-Higgs field completeness, or measure delta_perp by tomography/Gram rows.",
+  "fail_count": 0,
+  "future_completeness_certificate": "outputs/yt_one_higgs_completeness_certificate_2026-05-04.json",
+  "future_completeness_validation": {
+    "failed_checks": [
+      "future one-Higgs completeness certificate absent"
+    ],
+    "present": false,
+    "valid": false
+  },
+  "one_higgs_completeness_gate_passed": false,
+  "one_higgs_completeness_orthogonal_null_theorem_passed": true,
+  "parent_certificates": {
+    "no_orthogonal_top_coupling_selection": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
+    "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
+    "sm_one_higgs_oh_import_boundary": "outputs/yt_sm_one_higgs_oh_import_boundary_2026-05-03.json",
+    "wz_same_source_ew_action_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
+    "wz_same_source_ew_action_semantic_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json"
+  },
+  "pass_count": 13,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The conditional null theorem is exact, but the current PR230 surface does not supply a same-source one-Higgs field-completeness certificate.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat SM one-Higgs gauge selection alone as O_sp=O_H",
+    "does not set orthogonal top coupling or delta_perp to zero on the current surface",
+    "does not use H_unit, yt_ward_identity, observed selectors, alpha_LM, plaquette/u0, c2=1, Z_match=1, or cos(theta)=1"
+  ],
+  "symbolic_formula": {
+    "delta_null": true,
+    "delta_perp": "k_x*y_x/k_h",
+    "delta_perp_under_one_higgs_completeness": "0",
+    "raw_readout": "y_h + k_x*y_x/k_h",
+    "readout_equals_y_h": true,
+    "readout_under_one_higgs_completeness": "y_h"
+  }
+}

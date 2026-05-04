@@ -830,3 +830,20 @@ Findings checked:
   backsolving, and mismatched-source correction rows.
 - No `H_unit`, Ward, observed selector, `alpha_LM`/plaquette/u0, `c2=1`, or
   `Z_match=1` shortcut is used.
+
+# 2026-05-04 One-Higgs Completeness Orthogonal-Null Gate Self-Review
+
+Disposition: pass as conditional support, premise absent.
+
+Findings checked:
+
+- SM one-Higgs gauge selection alone remains blocked as a PR230 `O_sp = O_H`
+  import.
+- Under the stronger future premise of same-source one-Higgs field
+  completeness, the symbolic orthogonal correction becomes zero and the W
+  readout equals `y_h`.
+- A two-scalar counterexample shows the correction varies without the
+  completeness premise.
+- The current surface has no same-source EW action certificate and no
+  one-Higgs completeness certificate.
+- No retained/proposed-retained wording or forbidden shortcut is authorized.

@@ -281,6 +281,9 @@ def main() -> int:
         "same_source_w_response_orthogonal_correction": load(
             "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json"
         ),
+        "one_higgs_completeness_orthogonal_null": load(
+            "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json"
+        ),
         "wz_correlator_mass_fit_path_gate": load(
             "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json"
         ),
@@ -1254,6 +1257,21 @@ def main() -> int:
         )
         is False,
         statuses["same_source_w_response_orthogonal_correction"],
+    )
+    report(
+        "one-higgs-completeness-orthogonal-null-premise-absent",
+        "one-Higgs completeness orthogonal-null theorem"
+        in str(statuses["one_higgs_completeness_orthogonal_null"])
+        and certificates["one_higgs_completeness_orthogonal_null"].get("proposal_allowed") is False
+        and certificates["one_higgs_completeness_orthogonal_null"].get(
+            "one_higgs_completeness_orthogonal_null_theorem_passed"
+        )
+        is True
+        and certificates["one_higgs_completeness_orthogonal_null"].get(
+            "one_higgs_completeness_gate_passed"
+        )
+        is False,
+        statuses["one_higgs_completeness_orthogonal_null"],
     )
     report(
         "wz-correlator-mass-fit-path-gate-blocks",

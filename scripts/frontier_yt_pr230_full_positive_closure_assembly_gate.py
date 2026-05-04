@@ -44,6 +44,7 @@ PARENTS = {
     "wz_same_source_action_semantic_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
     "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
     "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
+    "one_higgs_completeness_orthogonal_null": "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json",
     "wz_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
@@ -173,6 +174,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["wz_same_source_action_semantic_firewall"],
                 PARENTS["same_source_w_response_decomposition"],
                 PARENTS["same_source_w_response_orthogonal_correction"],
+                PARENTS["one_higgs_completeness_orthogonal_null"],
                 PARENTS["wz_certificate_gate"],
                 PARENTS["wz_mass_fit_path"],
                 PARENTS["same_source_sector_overlap"],
@@ -339,6 +341,21 @@ def main() -> int:
         )
         is False,
         statuses["same_source_w_response_orthogonal_correction"],
+    )
+    report(
+        "one-higgs-completeness-orthogonal-null-premise-absent",
+        "one-Higgs completeness orthogonal-null theorem"
+        in statuses["one_higgs_completeness_orthogonal_null"]
+        and certs["one_higgs_completeness_orthogonal_null"].get("proposal_allowed") is False
+        and certs["one_higgs_completeness_orthogonal_null"].get(
+            "one_higgs_completeness_orthogonal_null_theorem_passed"
+        )
+        is True
+        and certs["one_higgs_completeness_orthogonal_null"].get(
+            "one_higgs_completeness_gate_passed"
+        )
+        is False,
+        statuses["one_higgs_completeness_orthogonal_null"],
     )
     report("scalar-lsz-model-fv-ir-blocked", scalar_lsz_blocks, "model-class/FV/IR/threshold controls still block retained use")
     report("source-overlap-bridge-absent", source_overlap_blocks, f"route_passes={any_bridge_passes}")
