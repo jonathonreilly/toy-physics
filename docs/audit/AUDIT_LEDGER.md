@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-04T10:57:43.720738+00:00
+**Generated:** 2026-05-04T11:15:47.888144+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -25,12 +25,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
 | unaudited | 666 |
-| audit_in_progress | 1 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 31 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 556 |
+| ~~audited_conditional~~ | 557 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -38,9 +37,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
 | `audited_clean` | 382 |
-| `audited_conditional` | 556 |
+| `audited_conditional` | 557 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 31 |
@@ -110,7 +108,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `bh_entropy_derived_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
@@ -522,6 +519,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_reduction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `beyond_lattice_qcd_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `bh_entropy_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | B | - |
 | `bmv_bounded_negative_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `born_lane_comparison_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `born_rule_analysis_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1862,6 +1860,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Beyond Lattice Gauge Theory: Two Concrete Results: Demonstrated numerically  _(class `C`)_
 - **chain closes:** False — No. The numerical comparisons demonstrate a distinction, but the physical interpretation still imports the framework source/readout bridge rather than deriving it here, so the conclusion cannot be ratified from the source note alone.
 - **rationale:** Issue: the numerical comparisons demonstrate a distinction, but the physical interpretation still imports the framework source/readout bridge rather than deriving it here. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **auditor confidence:** high
+
+### `bh_entropy_derived_note`
+
+- **Note:** [`BH_ENTROPY_DERIVED_NOTE.md`](../../docs/BH_ENTROPY_DERIVED_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded finite-L free-fermion lattice entropy companion: the primary runner verifies finite-L area-law-like scaling, finite-L RT-ratio observations, gravity modulation, and species universality, while the asymptotic Widom/no-BH-derivation conclusion is conditional on explicit retained no-go authority absent from the direct dependencies.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-judicial-third-auditor-bh-entropy-2026-05-04-a`  (codex-gpt-5; independence=judicial_review)
+- **load-bearing step:** The retained Widom no-go (`BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`) is the load-bearing authority for the asymptotic statement that the free-fermion carrier tends to c_Widom = 1/6 rather than deriving the Bekenstein-Hawking 1/4 coefficient.  _(class `B`)_
+- **chain closes:** False — The restricted source note itself says the asymptotic/no-BH conclusion depends on `BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`, but queue metadata supplies no direct dependencies and that authority is not in the restricted packet. The primary runner completed and supports the bounded finite-L observations, including 5/5 repaired checks, but it does not independently prove the Widom asymptote or certify the missing retained no-go theorem. Issue: the asymptotic carrier-value/no-BH-derivation statement is imported from an unsupplied authority. Why this blocks: a clean bounded theorem cannot rest on a hidden cross-note theorem. Repair target: add the Widom no-go proof/note or a retained-grade asymptotic certificate as an explicit audited dependency. Claim boundary until fixed: cite only the finite-L numerical companion observations from `scripts/frontier_bh_entropy_derived.py`; the asymptotic Widom/no-BH conclusion remains conditional.
+- **rationale:** The restricted source note itself says the asymptotic/no-BH conclusion depends on `BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`, but queue metadata supplies no direct dependencies and that authority is not in the restricted packet. The primary runner completed and supports the bounded finite-L observations, including 5/5 repaired checks, but it does not independently prove the Widom asymptote or certify the missing retained no-go theorem. Issue: the asymptotic carrier-value/no-BH-derivation statement is imported from an unsupplied authority. Why this blocks: a clean bounded theorem cannot rest on a hidden cross-note theorem. Repair target: add the Widom no-go proof/note or a retained-grade asymptotic certificate as an explicit audited dependency. Claim boundary until fixed: cite only the finite-L numerical companion observations from `scripts/frontier_bh_entropy_derived.py`; the asymptotic Widom/no-BH conclusion remains conditional.
 - **auditor confidence:** high
 
 ### `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02`
