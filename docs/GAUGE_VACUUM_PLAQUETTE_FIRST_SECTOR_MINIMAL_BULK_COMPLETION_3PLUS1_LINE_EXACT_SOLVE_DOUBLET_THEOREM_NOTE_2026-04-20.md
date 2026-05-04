@@ -3,6 +3,8 @@
 **Status:** bounded - bounded or caveated result note
 **Claim type:** bounded_theorem
 **Date:** 2026-04-20 (originally); 2026-05-03 (review-loop repair)
+**Primary runner:** [`scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.py`](../scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.py) (PASS=6/0)
+**Companion runner:** [`scripts/gauge_vacuum_plaquette_doublet_dense_root_count_certificate_2026_05_03.py`](../scripts/gauge_vacuum_plaquette_doublet_dense_root_count_certificate_2026_05_03.py) — dense Monte-Carlo + structured-grid root-count certificate (3660 seeds, no additional roots)
 
 ## Review-loop repair (2026-05-03)
 

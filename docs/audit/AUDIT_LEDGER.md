@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-04T00:43:53.509926+00:00
+**Generated:** 2026-05-04T00:57:54.423748+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 209 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 681 |
+| unaudited | 682 |
 | audit_in_progress | 1 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 31 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 553 |
+| ~~audited_conditional~~ | 552 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -38,12 +38,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 378 |
-| `audited_conditional` | 553 |
+| `audited_conditional` | 552 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 44 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 728 |
+| `unaudited` | 729 |
 
 | claim_type | count |
 |---|---:|
@@ -765,7 +765,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `inverse_problem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `k_dependence_review_safe_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_a1_derivation_status_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
-| `koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_a1_loop_investigation_summary` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -8021,24 +8020,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md`
   - `CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`
   - `HW1_SECOND_ORDER_RETURN_SHAPE_THEOREM_NOTE.md`
-- **auditor confidence:** high
-
-### `koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24`
-
-- **Note:** [`KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md`](../../docs/KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md)
-- **claim_type:** `no_go`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** Across the five tested fractional-topology probes, every canonical dimensionless-to-phase map uses exp(2*pi*i*c), so c=2/9 yields a rational*pi phase and the only literal 2/9-radian bridge is the non-canonical exp(i*c) convention, which restates P_A1.  _(class `B`)_
-- **chain closes:** False — The five listed probes all reproduce the no-go status, but the synthesis relies on external math-literature scope claims and upstream radian-bridge audit notes, and it does not prove an exhaustive theorem over every possible future topology mechanism.
-- **rationale:** Issue: the row is a support synthesis over five probe families, not a retained derivation of a universal obstruction theorem. Why this blocks: the probe runners confirm O13-O17 for the tested canonical mechanisms, but the ledger records no dependencies and the note leans on parent radian-bridge/no-go framing plus external math conventions to sharpen P_A1. Repair target: record and audit the parent radian-bridge irreducibility note and each standalone no-go probe as dependencies, then state the result as a five-family obstruction theorem rather than an all-paths theorem. Claim boundary until fixed: support-level confirmation that the five audited fractional-topology mechanisms do not derive the literal-radian bridge; P_A1 remains a convention primitive on this tested stack.
-- **open / conditional deps cited:**
-  - `KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md`
-  - `KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md`
-  - `KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`
-  - `KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `koide_a1_loop_final_status_2026-04-22`

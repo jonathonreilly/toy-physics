@@ -1,7 +1,8 @@
 # Shapiro QA Retest Note
 
-**Date:** 2026-04-06  
+**Date:** 2026-04-06
 **Status:** bounded - bounded or caveated result note
+**Primary runner:** [`scripts/shapiro_phase_lag_probe.py`](../scripts/shapiro_phase_lag_probe.py) (positive: portable, seed-stable discrete Shapiro-delay observable with exact zero control and family spread <2e-4 rad)
 
 ## Cited authorities (one hop)
 

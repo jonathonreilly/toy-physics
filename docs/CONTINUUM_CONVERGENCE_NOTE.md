@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-04  
 **Status:** bounded - bounded or caveated result note
+**Primary runner:** [`scripts/lattice_3d_l2_canonical_card.py`](/Users/jonreilly/Projects/Physics/scripts/lattice_3d_l2_canonical_card.py) (canonical 3D card on the `1/L^2` ordered lattice)
 
 This note collects the current dimension-dependent-kernel results on the
 ordered-lattice family. It is intentionally narrower than the branch-history

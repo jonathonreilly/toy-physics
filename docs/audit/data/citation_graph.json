@@ -23269,7 +23269,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-04T00:43:13.658278+00:00",
+  "generated_at": "2026-05-04T00:57:48.013286+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -27717,9 +27717,9 @@
         "lattice_3d_l2_tail_stats_note",
         "lattice_kernel_transfer_norm_note"
       ],
-      "note_hash": "03cf03048f339f8432ec3af8f120cd5575c53294dcfe6914898c0e4c715900df",
+      "note_hash": "3b35f8dd2f455222e763ee04ccfcd24d0e7c52e18388ef8ba43b5568dadc4473",
       "path": "docs/CONTINUUM_CONVERGENCE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_3d_l2_canonical_card.py",
       "title": "Continuum Convergence Note"
     },
     "continuum_identification_note": {
@@ -27902,9 +27902,9 @@
       "deps": [
         "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
       ],
-      "note_hash": "3afa404d43a363c2dde5dd7c210c3aaa95d92fa696759bab6ceac344f83b7826",
+      "note_hash": "679ee3d6c794d007f0a438b14a4f56441ad81ae2d0a95ee79b093e21538e00b6",
       "path": "docs/CPT_EXACT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_cpt_exact.py",
       "title": "CPT Exact Preservation in the Cl(3) Staggered Framework"
     },
     "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02": {
@@ -28265,9 +28265,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "9171468e0053a556900ce1f994bef0a5f8afcf512e5ab91e00fb888b7f06fb32",
+      "note_hash": "0fc369c4bff0e39a01f62a8ba794d2a2c6d79dc89b50ada728755b8e88de11d7",
       "path": "docs/DIMENSIONAL_GRAVITY_TABLE.md",
-      "runner_path": null,
+      "runner_path": "scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py",
       "title": "Dimensional Gravity Table"
     },
     "dirac_core_card_note": {
@@ -31688,9 +31688,9 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "67e43414f6fbf665a8da002e3e15891f0ce16c226d46bcc3dda8ea2ec59e9881",
+      "note_hash": "316ca506d7c5e76c2f5822d433f37a4bf429406bc134e50612096a77c2bf3668",
       "path": "docs/EW_COUPLING_DERIVATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/ew_coupling_bounded_status_runner_2026_05_03.py",
       "title": "Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)"
     },
     "ew_current_fierz_channel_decomposition_note_2026-05-01": {
@@ -32891,9 +32891,9 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "d3f1ac27aca3ec69e276e2de1415565b2fcf371ddb927d7105179934e0799121",
+      "note_hash": "72b741afac5689f00bd3047179f6f2c860080d35100da93f9cc2b6a1c0978137",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion `3d+1` Exact-Solve Doublet Theorem"
     },
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20": {
@@ -34260,9 +34260,9 @@
       "deps": [
         "mirror_chokepoint_note"
       ],
-      "note_hash": "8116f03b56bad99a4fdbc2246d221f4d5a67b1df2ba3caa2301deb5a07b4fd75",
+      "note_hash": "2ec8fc48aa2d82bc55bfcf562218803f6c57f90f99ea2815b94ff31333470712",
       "path": "docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/higher_symmetry_joint_validation.py",
       "title": "Higher-Symmetry Joint Validation Note"
     },
     "holographic_probe_note_2026-04-11": {
@@ -34796,9 +34796,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "9b20be774fb478aaaca9e0241ae2485417d89703fa5dbc3e39660db8ef195dfd",
+      "note_hash": "3e60d6eab9fb7aabe96ee512093f6dddb921d04872489865c7b9585e01299b11",
       "path": "docs/KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_a1_orbifold_chern_probe.py",
       "title": "Koide A1 \u2014 Fractional-Topology / Math-Literature No-Go Synthesis"
     },
     "koide_a1_loop_final_status_2026-04-22": {
@@ -34876,9 +34876,9 @@
         "koide_brannen_geometry_dirac_support_note_2026-04-22",
         "koide_q_second_order_support_batch_note_2026-04-22"
       ],
-      "note_hash": "43d4061139c8e2657362bed5d637068626a69b906b006eaa26c4a8bc220ec698",
+      "note_hash": "fa323e71c607cb55e630146a0fa80ddec81918abef003dac814e79ed4bda9e1a",
       "path": "docs/KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_lane_regression.py",
       "title": "Koide April 22 Axiom-Native Support Batch"
     },
     "koide_berry_bundle_obstruction_theorem_note_2026-04-19": {
@@ -38083,9 +38083,9 @@
         "pmns_branch_conditioned_quadratic_sheet_closure_note",
         "pmns_right_polar_section_note"
       ],
-      "note_hash": "331fd6e4095e9288384ab3d26477e4f1aed126ffbe8f81e3929e90f0f1c42ae1",
+      "note_hash": "7a7f9e74220a5299d5fed2e2e9b31cb80f08b636d68709d1dfdaeb50e6bce8c3",
       "path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_lepton_single_higgs_pmns_triviality.py",
       "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)"
     },
     "neutrino_dirac_two_higgs_canonical_reduction_note": {
@@ -38682,9 +38682,9 @@
         "neutrino_majorana_nur_character_boundary_note",
         "neutrino_majorana_nur_charge2_primitive_reduction_note"
       ],
-      "note_hash": "844c8a5505b55a2e126911d96b4c5731801fa7fcaeacc4b228f95ca3c042ec4a",
+      "note_hash": "0692aca2add9929012c1e8a191bd105f4d632525a9ea5854d65d67904e82a6ce",
       "path": "docs/NEUTRINO_MAJORANA_RETAINED_LANE_PACKET_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_neutrino_majorana_current_stack_zero_law.py",
       "title": "Neutrino Majorana Retained Lane Packet (2026-04-16)"
     },
     "neutrino_majorana_scalar_datum_transplant_obstruction_note": {
@@ -38956,9 +38956,9 @@
         "neutrino_sole_axiom_full_closure_boundary_note",
         "neutrino_retained_observable_bounds_theorem_note_2026-04-24"
       ],
-      "note_hash": "a0088ca657f3503bacc105a1fc8151044445839dfea780204503b4598eccaefa",
+      "note_hash": "0e028296488357d8328ae881add0e9dda81fa1bba417bc0f9447f393bff4148a",
       "path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_lower_level_end_to_end_closure.py",
       "title": "Neutrino Retained Status Note (2026-04-16)"
     },
     "neutrino_sole_axiom_full_closure_boundary_note": {
@@ -39168,9 +39168,9 @@
       "deps": [
         "r_base_group_theory_derivation_theorem_note_2026-04-24"
       ],
-      "note_hash": "37a6a9ee9ce4bfdd042c3173c547b75247a181ed9a772bbe57d5738d91f33a79",
+      "note_hash": "8c0c80f00a86f41f7a849d54ec086695a016a3813171c92a73256dd247790257",
       "path": "docs/OMEGA_LAMBDA_DERIVATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_omega_lambda_derivation.py",
       "title": "Omega_Lambda Derivation: The Cosmological Pie Chart"
     },
     "omega_lambda_matter_bridge_theorem_note_2026-04-22": {
@@ -40581,9 +40581,9 @@
       "deps": [
         "bminusl_anomaly_freedom_theorem_note_2026-04-24"
       ],
-      "note_hash": "416fe64000b4b60c505e7dede9f0df5c4f7b099feab0f218bad536500cd9f271",
+      "note_hash": "71bc3c30674b66e3f1b933ea022674b4fcc29c25357539739fdca55d37c20070",
       "path": "docs/PROTON_LIFETIME_DERIVED_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_proton_lifetime_derived.py",
       "title": "Proton Lifetime Derived from Cl(3) on Z^3"
     },
     "publication.ci3_z3.arxiv_draft": {
@@ -43494,9 +43494,9 @@
         "ckm_from_mass_hierarchy_note",
         "ckm_five_sixths_bridge_support_note"
       ],
-      "note_hash": "f1b7e70c2bc9a8c184d71cd8dd84d88210050b055936945e3b7f2f68ec4a45e1",
+      "note_hash": "d323ac699bdf3684cb67b74864ed535244f527aa7baea807befcc82b6ac20a40",
       "path": "docs/QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_quark_mass_ratio_review.py",
       "title": "Quark Mass-Ratio Support Packet (2026-04-18)"
     },
     "quark_mass_ratios_taste_staircase_support_note_2026-04-25": {
@@ -44763,9 +44763,9 @@
         "shapiro_static_discriminator_note",
         "shapiro_family_portability_note"
       ],
-      "note_hash": "fd6ecfa6b496196c87d78dc1d5e9efc2ae77ffcd4c396b1f8cc571647c0e2cdc",
+      "note_hash": "1c9825e6911a2d43f5850529fe97f0426488bf700f0a169f962a412b36fb18b0",
       "path": "docs/SHAPIRO_QA_RETEST_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/shapiro_phase_lag_probe.py",
       "title": "Shapiro QA Retest Note"
     },
     "shapiro_static_discriminator_note": {
@@ -46168,9 +46168,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "0d249d389ee95242a1f64e539cc5942370ab918ea88bd6016867b35da39c6b7a",
+      "note_hash": "987f6fc5ef6edcbdc39f544558ac853bfeb41c0758e13dcc2b099108d5b07df6",
       "path": "docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py",
       "title": "Structured Mirror Born-Safe Scan Note"
     },
     "structured_mirror_reconciliation_note": {
@@ -46237,9 +46237,9 @@
         "graph_first_su3_integration_note",
         "three_generation_structure_note"
       ],
-      "note_hash": "12fd7ef6374d06440447bcab675a44b6736448e402a8e00dee78cf29bf24b429",
+      "note_hash": "30603ba8b2f45b513147e63c5d1adfd2f7c5db300e615954cabbff7b371660a1",
       "path": "docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_su2_witten_z2_anomaly.py",
       "title": "SU(2) Witten Z_2 Global Anomaly Cancellation Theorem"
     },
     "su3_adjoint_casimir_theorem_note_2026-05-02": {
@@ -46323,9 +46323,9 @@
         "graph_first_su3_integration_note",
         "left_handed_charge_matching_note"
       ],
-      "note_hash": "89085dde243dd69e8cd4adb9ce663291652c1283152e79d3a4e9450c34286478",
+      "note_hash": "77f4d469cbbd1b90e51b84612c4fbd3c0890cb807874f24346c891a284690c88",
       "path": "docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_su3_cubic_anomaly_cancellation.py",
       "title": "SU(3)^3 Cubic Gauge Anomaly Cancellation Theorem"
     },
     "su3_dabc_symmetric_theorem_note_2026-05-02": {
@@ -48787,9 +48787,9 @@
         "staggered_newton_reproduction_note_2026-04-11",
         "staggered_newton_blocking_sensitivity_note_2026-04-11"
       ],
-      "note_hash": "81613dbe5e030ba4120383ffd9c62efd6ab73abfbfd07b38a44fe21d628f76b3",
+      "note_hash": "e4005a08bcc1bc690235fff6e1835c10d8ac839de3f0ae911c8b5a333997d107",
       "path": "docs/WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_test_mass_limit.py",
       "title": "Wilson Test-Mass / Continuum Companion"
     },
     "wilson_two_body_open_note_2026-04-11": {
@@ -49408,9 +49408,9 @@
         "yt_exact_interacting_bridge_transport_note",
         "yt_bridge_uv_class_uniqueness_note"
       ],
-      "note_hash": "09e8c3e9ec00280dc48f76ae29f0e9d4acc53f9287c7c99a624ca68dd091d472",
+      "note_hash": "e3417a0f4c37534790db968cb6efa93078eefb05924cdb993ecd877a2e06afd7",
       "path": "docs/YT_AXIOM_FIRST_MICROSCOPIC_BRIDGE_THEOREM.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_yt_constructive_uv_bridge.py",
       "title": "Axiom-First Microscopic Bridge Theorem"
     },
     "yt_bottom_yukawa_retention_analysis_note_2026-04-18": {
@@ -51577,6 +51577,6 @@
     "leaf_count": 600,
     "node_count": 1872,
     "root_count": 1057,
-    "runners_with_path": 1429
+    "runners_with_path": 1449
   }
 }

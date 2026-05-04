@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-24
 **Type:** positive_theorem
+**Primary runner:** [`scripts/frontier_su3_cubic_anomaly_cancellation.py`](../scripts/frontier_su3_cubic_anomaly_cancellation.py) (PASS=33/0)
 **Claim type:** structural-anomaly cancellation theorem (exact rational arithmetic on retained colour-charged content)
 **Claim scope:** for the retained one-generation colour-charged content in the left-handed conjugate frame `Q_L : 3` (with weak multiplicity 2), `u_R^c : 3bar`, `d_R^c : 3bar`, the SU(3)^3 cubic gauge-anomaly trace evaluates to `sum_i m_i A(R_i) = +2 - 1 - 1 = 0` exactly via standard SU(3) cubic anomaly indices `A(3) = +1`, `A(3bar) = -1`. Conditional on retained graph-first SU(3) gauge sector, retained left-handed Q_L content, and retained one-generation right-handed completion as upstream inputs.
 **Status:** awaiting independent audit. Under the scope-aware classification framework, ratified status is computed by the audit pipeline from audit-lane data; no author-side retained tier is asserted in source.

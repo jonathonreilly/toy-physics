@@ -3,6 +3,7 @@
 **Date:** 2026-04-03  
 **Status:** bounded positive for `Z2 x Z2`, proposed_retained through `N = 120` on a
 denser narrow probe
+**Primary runner:** [`scripts/higher_symmetry_joint_validation.py`](/Users/jonreilly/Projects/Physics/scripts/higher_symmetry_joint_validation.py) (joint Born + gravity + decoherence validator)
 
 This note records the first joint Born + gravity + decoherence validation for
 the higher-symmetry families introduced in:

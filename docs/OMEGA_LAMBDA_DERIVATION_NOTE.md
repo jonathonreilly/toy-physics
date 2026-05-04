@@ -1,5 +1,7 @@
 # Omega_Lambda Derivation: The Cosmological Pie Chart
 
+**Primary runner:** [`scripts/frontier_omega_lambda_derivation.py`](../scripts/frontier_omega_lambda_derivation.py) (PASS=6/0, INFO=4)
+
 ## Status
 
 **BOUNDED** -- Omega_Lambda = 0.686 is a conditional cascade value given

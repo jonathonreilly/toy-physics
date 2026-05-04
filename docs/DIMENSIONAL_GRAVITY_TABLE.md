@@ -10,13 +10,9 @@ across all dimensions, all h values, or all parameter variations. The bolded
 **Action:** Valley-linear S = L(1-f)
 **Kernel:** 1/L^(d-1) with h^(d-1) measure
 
-**Primary runner (structural certificate):**
-[`scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py`](/Users/jonreilly/Projects/Physics/scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py)
+**Primary runner:** [`scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py`](/Users/jonreilly/Projects/Physics/scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py) (structural certificate, PASS=5/0)
 
-**Companion runner (slow lattice card):**
-[`scripts/dimensional_gravity_card.py`](/Users/jonreilly/Projects/Physics/scripts/dimensional_gravity_card.py)
-(invoke with `--dim 3` or `--dim 4` to reproduce individual table rows;
-unsuitable as the audit-lane runner because of runtime).
+**Companion runner:** [`scripts/dimensional_gravity_card.py`](/Users/jonreilly/Projects/Physics/scripts/dimensional_gravity_card.py) — slow lattice card, invoke with `--dim 3` or `--dim 4` to reproduce individual table rows; unsuitable as the audit-lane runner because of runtime.
 
 ## Review-loop runner attachment (2026-05-03)
 

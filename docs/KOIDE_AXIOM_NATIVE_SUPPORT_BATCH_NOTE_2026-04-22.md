@@ -5,6 +5,7 @@
 review package.  
 **Status:** Bounded support batch. This note does **not** promote charged-lepton
 Koide closure.
+**Primary runner:** [`scripts/frontier_koide_lane_regression.py`](../scripts/frontier_koide_lane_regression.py) (integrated regression covering all 16 sub-runners listed below)
 
 ## Cited authorities (one hop)
 

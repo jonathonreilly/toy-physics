@@ -7,7 +7,10 @@ focused math-literature audit on fractional-rational topological invariants.
 **Status:** **5 probes, all NO-GO.** The audit note's residual primitive
 `P_A1` is sharpened from "Type-B rational-to-radian observable law" to a
 one-line statement of a single convention choice.
-**Runners (all PASS = obstruction-confirmed):**
+**Primary runner:** `scripts/frontier_koide_a1_orbifold_chern_probe.py` (54/54; first of the 5 obstruction-confirming probes below)
+
+**Runners** (all PASS = obstruction-confirmed):
+
 - `scripts/frontier_koide_a1_orbifold_chern_probe.py` (54/54)
 - `scripts/frontier_koide_a1_eta_to_radian_lift_probe.py` (47/47)
 - `scripts/frontier_koide_a1_fqhe_analog_probe.py` (59/59)

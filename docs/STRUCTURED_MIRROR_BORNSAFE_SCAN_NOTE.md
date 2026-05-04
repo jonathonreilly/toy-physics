@@ -6,15 +6,13 @@
 This note freezes the bounded search for a review-safe structured-mirror
 variant using the strictly linear propagator.
 
-**Primary runner (registered certificate):**
-[`scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py`](/Users/jonreilly/Projects/Physics/scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py)
-— PASS=3/3 confirms the documented best near-Born readout (`8.79e-03`)
+**Primary runner:** [`scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py`](/Users/jonreilly/Projects/Physics/scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py)
+— registered certificate; PASS=3/3 confirms the documented best near-Born readout (`8.79e-03`)
 is well above the machine-precision Born-safety threshold (`1e-14`),
 so the bounded null-result claim is consistent with the scan evidence.
 
-**Companion runner (slow scan):**
-[`scripts/structured_mirror_bornsafe_scan.py`](/Users/jonreilly/Projects/Physics/scripts/structured_mirror_bornsafe_scan.py)
-— the original parameter-grid scan (540 configurations, 2 seeds per
+**Companion runner:** [`scripts/structured_mirror_bornsafe_scan.py`](/Users/jonreilly/Projects/Physics/scripts/structured_mirror_bornsafe_scan.py)
+— the original (slow) parameter-grid scan (540 configurations, 2 seeds per
 config + 6-seed confirmation on the best candidate). Reproducible but
 too slow to be the audit-lane runner.
 
