@@ -23269,7 +23269,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-04T01:26:19.746951+00:00",
+  "generated_at": "2026-05-04T11:17:56.276488+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -32843,9 +32843,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "a9a2131bb127333da4b3f655cec12086805dd29b574aac77fdc009237c2ed345",
+      "note_hash": "63ad4d6caa6f424379233985b1118a20939537d66089e8cb5feefba87bdabc8c",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/gauge_vacuum_completed_triple_dense_box_certificate_2026_05_03.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Completed Triple Current Transfer-Family Boundary"
     },
     "gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19": {
@@ -51577,6 +51577,6 @@
     "leaf_count": 600,
     "node_count": 1872,
     "root_count": 1057,
-    "runners_with_path": 1483
+    "runners_with_path": 1484
   }
 }

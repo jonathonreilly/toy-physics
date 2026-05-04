@@ -2,8 +2,8 @@
 
 **Date:** 2026-04-19 (originally); 2026-05-03 (dense-grid global certificate added)
 **Status:** support — on the audited current explicit `beta = 6` `spatial_pair` witness family, dense-grid global search confirms even the best scaled fit does not realize the completed triple `Z^min` exactly
-**Original runner:** `scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py`
-**Dense-grid global certificate (2026-05-03 audit repair):** `scripts/gauge_vacuum_completed_triple_dense_box_certificate_2026_05_03.py`
+**Primary runner:** `scripts/gauge_vacuum_completed_triple_dense_box_certificate_2026_05_03.py` (dense-grid global certificate, 2026-05-03 audit repair, PASS=3/0)
+**Companion runner:** `scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py` (original local-perturbation check)
 
 ## Audit-driven repair (2026-05-03)
 
