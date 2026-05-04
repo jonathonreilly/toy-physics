@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-04T10:49:44.962249+00:00
+**Generated:** 2026-05-04T10:55:09.151240+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 86 |
 | **retained_no_go** | 109 |
-| **retained_bounded** | 212 |
+| **retained_bounded** | 213 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 668 |
+| unaudited | 667 |
 | audit_in_progress | 1 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 381 |
+| `audited_clean` | 382 |
 | `audited_conditional` | 556 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 715 |
+| `unaudited` | 714 |
 
 | claim_type | count |
 |---|---:|
@@ -325,6 +325,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `newton_derivation_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-current | A | - |
 | `newtonian_distance_law_confirmed` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | B | - |
 | `nonlabel_grown_basin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `nonlabel_grown_drift_basin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `ollivier_einstein_proxy_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `packet_memory_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | C | - |
 | `persistent_inertial_object_probe_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -10526,6 +10527,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The geometry-sector / non-label architecture survives the nearest restore neighborhood at fixed drift = 0.2, with zero-source and neutral controls exactly zero, sign orientation preserved, and charge response linear within the checked exponent.  _(class `C`)_
 - **chain closes:** True — The completed allowed log matches the note's frozen table and reports YES for all three restore rows, with passed rows 3/3. Within the scoped finite basin claim, the runner computes the controls and responses rather than merely restating the note's table.
 - **rationale:** The scoped claim is narrow and bounded to one seed, one drift value, and three restore values. The allowed completed log closes those finite checks: zero and neutral controls are exactly zero in the reported output, the +1 and -1 responses have opposite signs at each restore value, and the +2 response gives exponent approximately 1.000 for each row. This does not establish a broad non-label theorem beyond the tested basin, but it does close the current bounded basin claim.
+- **auditor confidence:** high
+
+### `nonlabel_grown_drift_basin_note`
+
+- **Note:** [`NONLABEL_GROWN_DRIFT_BASIN_NOTE.md`](../../docs/NONLABEL_GROWN_DRIFT_BASIN_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded frozen-log drift-basin result that the retained grown-row non-label signed-source transfer survives drifts 0.15, 0.20, and 0.25 across seeds 0, 1, and 2 at restore = 0.7.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-04`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** All checked rows across drifts 0.15, 0.20, 0.25 and seeds 0, 1, 2 pass the zero-source, neutral-cancellation, sign-orientation, and charge-linearity controls at fixed restore = 0.7.  _(class `C`)_
+- **chain closes:** True — The one listed dependency, nonlabel_grown_basin_note, is retained-bounded, and the completed frozen log reports 9/9 passing drift/seed rows with exact zero baseline, exact neutral cancellation, opposite single-source signs, and charge exponent near 1. The clean verdict is limited to this local drift-basin replay.
+- **rationale:** The claim is explicitly scoped to a tiny drift neighborhood around the retained grown row at fixed restore = 0.7. The frozen log named by the note reproduces every reported row and shows all 9 drift/seed cases passing the bounded controls, while the upstream grown-basin anchor is already retained-bounded. Residual risk is the note's own boundary: this does not establish a family-wide transfer theorem or robustness outside the tested drift/seed grid.
 - **auditor confidence:** high
 
 ### `nonlinear_born_gravity_note`

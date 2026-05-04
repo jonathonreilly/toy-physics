@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 66,
     "high": 215,
-    "leaf": 177,
+    "leaf": 176,
     "medium": 240
   },
-  "generated_at": "2026-05-04T10:49:44.597036+00:00",
+  "generated_at": "2026-05-04T10:55:08.752992+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -14017,29 +14017,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "nonlabel_grown_drift_basin_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "nonlabel_grown_basin_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/NONLABEL_GROWN_DRIFT_BASIN_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/NONLABEL_GROWN_DRIFT_BASIN_SWEEP.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "wide_lattice_h2t_skeptic_audit_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -18585,6 +18562,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 16,
-  "total_pending": 698
+  "ready_count": 15,
+  "total_pending": 697
 }
