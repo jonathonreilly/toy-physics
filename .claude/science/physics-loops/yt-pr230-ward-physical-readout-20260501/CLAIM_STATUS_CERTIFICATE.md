@@ -1,5 +1,35 @@
 # Claim Status Certificate
 
+FH/LSZ polefit8x8 chunks013-018 completion:
+
+```text
+actual_current_surface_status: bounded-support / polefit8x8 chunks013-018 packaged
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_postprocessor.py
+# SUMMARY: PASS=5 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=23 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=172 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=198 FAIL=0
+```
+
+Chunks013-018 add six ready chunks to the separate homogeneous eight-mode/x8
+polefit stream.  The current stream has `18/63` chunks and `288/1008` saved
+configurations.  It is finite-shell support only: complete L12 statistics,
+L16/L24 scaling, FV/IR/zero-mode control, model-class authority, and
+canonical-Higgs/source-overlap closure remain open.  No retained or
+`proposed_retained` wording is authorized.
+
 W/Z same-source EW action semantic firewall:
 
 ```text
@@ -1681,7 +1711,7 @@ python3 scripts/frontier_yt_large_nc_pole_dominance_boundary.py
 # SUMMARY: PASS=6 FAIL=0
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=22 FAIL=0
+# SUMMARY: PASS=23 FAIL=0
 
 python3 scripts/frontier_yt_production_resource_projection.py
 # SUMMARY: PASS=7 FAIL=0
@@ -1893,7 +1923,7 @@ python3 scripts/frontier_yt_flat_toron_scalar_denominator_obstruction.py
 # SUMMARY: PASS=7 FAIL=0
 
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=22 FAIL=0
+# SUMMARY: PASS=23 FAIL=0
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=48 FAIL=0

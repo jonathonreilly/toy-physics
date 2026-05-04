@@ -1,5 +1,27 @@
 # Handoff
 
+Latest checkpoint, 2026-05-04 polefit8x8 chunks013-018 completion:
+
+- Packaged completed homogeneous eight-mode/x8 chunks013-018 with fixed seeds
+  2026051913-2026051918 and isolated production output directories.
+- Added
+  `docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS013_018_CHECKPOINT_NOTE_2026-05-04.md`.
+- Reran the polefit8x8 combiner and postprocessor.  The stream now has
+  `18/63` ready chunks, `288/1008` saved configurations, eight mode rows,
+  seven positive shells, and a finite-shell diagnostic fit.
+- Verification: combiner `PASS=6 FAIL=0`; postprocessor `PASS=5 FAIL=0`;
+  full positive assembly gate `PASS=23 FAIL=0`; retained-route
+  `PASS=172 FAIL=0`; campaign status `PASS=198 FAIL=0`.
+- Claim boundary: finite-shell polefit8x8 diagnostics are support only.  The
+  current surface still lacks complete L12 statistics, L16/L24 scaling,
+  FV/IR/zero-mode control, pole-saturation/model-class authority, and
+  canonical-Higgs/source-overlap closure.  No retained or proposed-retained
+  closure is authorized.
+
+Next exact action: run the global guard and, only if capacity is available,
+launch polefit8x8 chunks019-024 from the repo cwd with fixed seeds
+2026051919-2026051924.  Otherwise continue a non-chunk closure route.
+
 Latest checkpoint, 2026-05-04 W/Z same-source EW action semantic firewall:
 
 - Hardened `scripts/frontier_yt_wz_same_source_ew_action_certificate_builder.py`

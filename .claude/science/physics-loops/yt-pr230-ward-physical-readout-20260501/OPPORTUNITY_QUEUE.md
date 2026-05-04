@@ -1,5 +1,16 @@
 # Opportunity Queue
 
+2026-05-04 update: polefit8x8 chunks013-018 are now packaged and pass the
+homogeneous eight-mode/x8 combiner.  The separate polefit8x8 stream has
+`18/63` ready chunks and `288/1008` saved configurations; the postprocessor
+forms a finite-shell diagnostic but still blocks retained use on model-class,
+FV/IR, and canonical-Higgs/source-overlap authority.  Next production action:
+run the global guard and launch chunks019-024 only if capacity is available.
+The closure ranking is unchanged: certified `O_H/C_sH/C_HH` pole rows,
+same-source W/Z response rows with identity certificates, genuine Schur
+`A/B/C` rows, a rank-one neutral-scalar theorem, or honest production
+evidence.
+
 2026-05-04 update: the W/Z same-source EW action semantic firewall is now
 landed and wired into retained-route, campaign-status, and full-positive
 assembly gates.  A future W/Z bypass certificate cannot pass by importing

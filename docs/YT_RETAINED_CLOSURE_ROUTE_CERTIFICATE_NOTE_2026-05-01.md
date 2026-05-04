@@ -18,8 +18,25 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=165 FAIL=0
+# SUMMARY: PASS=172 FAIL=0
 ```
+
+## 2026-05-04 FH/LSZ Polefit8x8 Chunks013-018 Completion Update
+
+The retained-route surface now sees the completed homogeneous eight-mode/x8
+polefit stream through chunk018.  The polefit8x8 combiner reports `18/63`
+ready chunks, `288/1008` saved configurations, and writes
+`outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunked_combined_2026-05-04.json`.
+The postprocessor remains finite-shell diagnostic support only.
+
+Validation: polefit8x8 combiner `PASS=6 FAIL=0`; polefit8x8 postprocessor
+`PASS=5 FAIL=0`; retained-route `PASS=172 FAIL=0`; campaign status
+`PASS=198 FAIL=0`; full positive closure assembly gate `PASS=23 FAIL=0`.
+
+This is not closure.  The stream still lacks complete L12 statistics, L16/L24
+finite-volume scaling, FV/IR/zero-mode control, pole-saturation/model-class
+authority, and canonical-Higgs/source-overlap identity.  No retained or
+`proposed_retained` closure is authorized.
 
 ## 2026-05-04 W/Z Same-Source EW Action Semantic Firewall Update
 
