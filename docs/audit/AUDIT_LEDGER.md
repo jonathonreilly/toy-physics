@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-04T10:34:05.658211+00:00
+**Generated:** 2026-05-04T10:38:03.933357+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 210 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 672 |
+| unaudited | 671 |
 | audit_in_progress | 1 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 31 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 554 |
+| ~~audited_conditional~~ | 555 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 379 |
-| `audited_conditional` | 554 |
+| `audited_conditional` | 555 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 719 |
+| `unaudited` | 718 |
 
 | claim_type | count |
 |---|---:|
@@ -690,6 +690,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `equivalence_principle_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `evolving_network_prototype_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `evolving_network_prototype_v2_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `ew_coupling_derivation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `field_equation_derivation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `fine_h_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `flagship_paper_contribution_statement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -5859,6 +5860,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The frozen replay result table reports the four drift/restore rows with toward counts 33/36, 24/36, 24/36, and 24/36, matching the conservative bounded interpretation.  _(class `C`)_
 - **chain closes:** True — The runner completed and reproduced the note's table exactly: 33/36, 24/36, 24/36, 24/36 with the same rounded mean deltas and F~M values. The note's own boundary language excludes the broader 100% TOWARD and Gate B closure claims.
 - **rationale:** The load-bearing claim is a bounded finite replay result, not a broad physics theorem. Current execution of scripts/evolving_network_prototype_v6.py completed successfully and reproduced the note's table values exactly, including the mixed best row and conservative interpretation. No cited dependencies are required, and the note explicitly avoids claiming Gate B closure, universality across seeds, or the prior 100% TOWARD branch narrative.
+- **auditor confidence:** high
+
+### `ew_coupling_derivation_note`
+
+- **Note:** [`EW_COUPLING_DERIVATION_NOTE.md`](../../docs/EW_COUPLING_DERIVATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded electroweak-coupling status scan showing that, conditional on alpha_GUT = alpha_LM = 0.0907 at M_Pl and the stated one-loop beta coefficients, U(1) running gives g_1_GUT(v) = 0.590 while SU(2) and lambda remain bounded rather than derived.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-04`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The framework's coupling strength is taken to set the SU(5) GUT boundary condition at M_Pl: alpha_GUT = alpha_LM = alpha_bare / u_0 = 0.0907.  _(class `B`)_
+- **chain closes:** False — The runner reproduces the note's arithmetic and status table, but the load-bearing boundary condition alpha_GUT = alpha_LM at M_Pl is asserted rather than supplied by a retained one-hop authority. The clean claim therefore remains conditional on a retained electroweak matching theorem.
+- **rationale:** Issue: the note's electroweak scan imports alpha_GUT = alpha_LM = 0.0907 at M_Pl as the boundary condition for U(1), SU(2), and SU(3), but no retained one-hop authority in the restricted packet derives that physical matching or electroweak normalization. Why this blocks: a hostile referee can accept the reproduced one-loop arithmetic while rejecting clean retained-bounded status because the runner hard-codes the contested boundary condition rather than deriving it from retained inputs. Repair target: add and audit a theorem deriving the SU(5)/EW boundary condition, normalization, and scale map from retained framework inputs, then make the runner consume that theorem's outputs. Claim boundary until fixed: conditional on the asserted boundary condition and beta coefficients, the note correctly reports g_1_GUT(v) = 0.590, a perturbative SU(2) barrier, and bounded-not-derived lambda.
 - **auditor confidence:** high
 
 ### `ew_current_fierz_channel_decomposition_note_2026-05-01`
