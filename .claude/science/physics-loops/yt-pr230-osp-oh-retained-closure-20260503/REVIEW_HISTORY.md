@@ -762,3 +762,22 @@ Findings checked:
   proposed_retained claim.
 - Aggregate retained-route, campaign, and full assembly gates remain open and
   proposal-forbidden.
+
+# 2026-05-04 FH/LSZ Model-Class Semantic Firewall Self-Review
+
+Disposition: pass as gate hardening, not as closure.
+
+Findings checked:
+
+- The hardened model-class gate requires an accepted non-shortcut proof kind,
+  finite-shell deformation exclusion, isolated scalar pole, the correct
+  derivative identifier, FV/IR/zero-mode control, and threshold or
+  scalar-denominator control.
+- The semantic firewall rejects static EW algebra, Ward / `H_unit` imports,
+  self-declared model classes, missing FV/IR/threshold controls, observed
+  selectors, `alpha_LM`/plaquette authority, and `kappa/c2/Z_match`
+  shortcuts.
+- The artifact supplies no scalar LSZ normalization, no scalar denominator
+  theorem, no pole saturation, and no physical `y_t` readout.
+- Aggregate assembly, retained-route, and campaign certificates remain open
+  and proposal-forbidden.

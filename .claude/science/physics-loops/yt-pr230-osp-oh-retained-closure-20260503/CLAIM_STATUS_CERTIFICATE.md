@@ -193,4 +193,10 @@ Open imports:
   hardens the future `O_H` certificate gate against static EW algebra,
   `H_unit`, Ward, observed-selector, and self-declared identity spoofs, but it
   does not provide `O_H` or `C_sH/C_HH` rows;
+- the FH/LSZ model-class semantic firewall is bounded support only: it hardens
+  the future scalar-LSZ model-class gate against static EW algebra, Ward /
+  `H_unit` imports, self-declared model classes, missing FV/IR/threshold
+  control, observed selectors, and `kappa/c2/Z_match` shortcuts, but it
+  supplies no scalar LSZ normalization, denominator theorem, or pole
+  saturation;
 - independent audit after any proposed positive certificate.

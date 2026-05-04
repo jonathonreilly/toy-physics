@@ -108,6 +108,7 @@ def main() -> int:
         "fh_lsz_pole_fit_postprocessor": "outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json",
         "fh_lsz_finite_shell_identifiability": "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json",
         "fh_lsz_pole_fit_model_class_gate": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
+        "fh_lsz_model_class_semantic_firewall": "outputs/yt_fh_lsz_model_class_semantic_firewall_2026-05-04.json",
         "fh_lsz_stieltjes_model_class": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json",
         "fh_lsz_pole_saturation_threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
         "fh_lsz_threshold_authority_audit": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json",
@@ -555,6 +556,11 @@ def main() -> int:
         in certificates["fh_lsz_pole_fit_model_class_gate"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_pole_fit_model_class_gate"].get("proposal_allowed") is False
         and certificates["fh_lsz_pole_fit_model_class_gate"].get("model_class_gate_passed") is False
+    )
+    model_class_semantic_firewall_not_closure = (
+        "model-class semantic firewall passed"
+        in certificates["fh_lsz_model_class_semantic_firewall"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_model_class_semantic_firewall"].get("proposal_allowed") is False
     )
     stieltjes_model_class_not_enough = (
         "Stieltjes model-class obstruction"
@@ -1807,6 +1813,11 @@ def main() -> int:
         "fh-lsz-pole-fit-model-class-gate-blocks",
         pole_fit_model_class_gate_blocks,
         certificates["fh_lsz_pole_fit_model_class_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "fh-lsz-model-class-semantic-firewall-not-closure",
+        model_class_semantic_firewall_not_closure,
+        certificates["fh_lsz_model_class_semantic_firewall"].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-stieltjes-model-class-not-enough",

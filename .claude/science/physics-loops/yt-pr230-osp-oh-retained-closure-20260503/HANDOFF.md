@@ -1781,3 +1781,45 @@ no retained/proposed-retained wording is authorized.  This narrows the W/Z
 bypass and source-Higgs route to a concrete next artifact: supply a valid
 same-source EW action certificate, then produce W/Z mass-response rows or
 source-Higgs `C_sH/C_HH` rows.
+
+## 2026-05-04 FH/LSZ Model-Class Semantic Firewall
+
+The chunk stream remains delegated to the other CLI worker.  This block
+advances the non-chunk scalar-LSZ prerequisite by hardening the model-class
+gate that future finite-shell pole fits must satisfy before they can become
+physical evidence.
+
+Verification:
+
+```bash
+python3 -m py_compile \
+  scripts/frontier_yt_fh_lsz_pole_fit_model_class_gate.py \
+  scripts/frontier_yt_fh_lsz_model_class_semantic_firewall.py \
+  scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py \
+  scripts/frontier_yt_retained_closure_route_certificate.py \
+  scripts/frontier_yt_pr230_campaign_status_certificate.py
+# pass
+
+python3 scripts/frontier_yt_fh_lsz_pole_fit_model_class_gate.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_model_class_semantic_firewall.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=163 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=189 FAIL=0
+```
+
+Result: overclaim protection improved, closure unchanged.  Future finite-shell
+chunk pole fits now need a non-shortcut model-class proof kind, FV/IR/zero-mode
+control, threshold or scalar-denominator control, and the shortcut firewall.
+
+Next exact action: attempt a positive scalar-denominator / pole-saturation
+certificate from repo primitives, or pivot to same-source W/Z, source-Higgs
+Gram rows, Schur/K-prime rows, or neutral-rank proof if that attempt fails.

@@ -33,6 +33,7 @@ PARENTS = {
     "fh_lsz_polefit8x8_combiner": "outputs/yt_fh_lsz_polefit8x8_chunk_combiner_gate_2026-05-04.json",
     "fh_lsz_polefit8x8_postprocessor": "outputs/yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json",
     "fh_lsz_model_class": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
+    "fh_lsz_model_class_semantic_firewall": "outputs/yt_fh_lsz_model_class_semantic_firewall_2026-05-04.json",
     "fh_lsz_pole_saturation": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
     "fh_lsz_finite_volume": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
     "fh_lsz_soft_continuum": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
@@ -241,6 +242,7 @@ def main() -> int:
     )
     scalar_lsz_blocks = (
         certs["fh_lsz_model_class"].get("proposal_allowed") is False
+        and certs["fh_lsz_model_class_semantic_firewall"].get("proposal_allowed") is False
         and certs["fh_lsz_pole_saturation"].get("proposal_allowed") is False
         and certs["fh_lsz_finite_volume"].get("proposal_allowed") is False
         and certs["fh_lsz_soft_continuum"].get("proposal_allowed") is False
@@ -296,6 +298,12 @@ def main() -> int:
         "semantic firewall passed" in statuses["canonical_higgs_semantic_firewall"]
         and certs["canonical_higgs_semantic_firewall"].get("proposal_allowed") is False,
         statuses["canonical_higgs_semantic_firewall"],
+    )
+    report(
+        "model-class-semantic-firewall-support-only",
+        "model-class semantic firewall passed" in statuses["fh_lsz_model_class_semantic_firewall"]
+        and certs["fh_lsz_model_class_semantic_firewall"].get("proposal_allowed") is False,
+        statuses["fh_lsz_model_class_semantic_firewall"],
     )
     report("scalar-lsz-model-fv-ir-blocked", scalar_lsz_blocks, "model-class/FV/IR/threshold controls still block retained use")
     report("source-overlap-bridge-absent", source_overlap_blocks, f"route_passes={any_bridge_passes}")

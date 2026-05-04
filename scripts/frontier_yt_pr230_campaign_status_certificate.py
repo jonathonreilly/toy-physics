@@ -130,6 +130,9 @@ def main() -> int:
         "fh_lsz_pole_fit_model_class_gate": load(
             "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json"
         ),
+        "fh_lsz_model_class_semantic_firewall": load(
+            "outputs/yt_fh_lsz_model_class_semantic_firewall_2026-05-04.json"
+        ),
         "fh_lsz_stieltjes_model_class": load(
             "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json"
         ),
@@ -794,6 +797,13 @@ def main() -> int:
         "model-class gate blocks finite-shell fit"
         in str(statuses["fh_lsz_pole_fit_model_class_gate"]),
         statuses["fh_lsz_pole_fit_model_class_gate"],
+    )
+    report(
+        "fh-lsz-model-class-semantic-firewall-not-closure",
+        "model-class semantic firewall passed"
+        in str(statuses["fh_lsz_model_class_semantic_firewall"])
+        and certificates["fh_lsz_model_class_semantic_firewall"].get("proposal_allowed") is False,
+        statuses["fh_lsz_model_class_semantic_firewall"],
     )
     report(
         "fh-lsz-stieltjes-model-class-not-enough",

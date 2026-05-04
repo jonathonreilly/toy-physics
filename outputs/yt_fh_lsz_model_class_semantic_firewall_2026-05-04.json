@@ -1,0 +1,78 @@
+{
+  "actual_current_surface_status": "bounded-support / FH-LSZ model-class semantic firewall passed",
+  "bare_retained_allowed": false,
+  "exact_next_action": "A future model-class certificate must provide a non-shortcut analytic-continuation, pole-saturation, continuum-threshold, or microscopic scalar-denominator theorem plus FV/IR/zero-mode control before chunk pole fits can be load-bearing.",
+  "fail_count": 0,
+  "gate_open": true,
+  "gate_output": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The firewall hardens a future scalar-LSZ model-class gate; it does not provide the missing scalar denominator or pole-saturation theorem.",
+  "spoof_cases": [
+    {
+      "case": "reject-static-ew-reference",
+      "failed_checks": [
+        "model_class_reference_not_shortcut"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-ward-model-class-import",
+      "failed_checks": [
+        "model_class_reference_not_shortcut",
+        "no_hunit_or_ward_authority"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-self-declared-model-class",
+      "failed_checks": [
+        "certificate_kind_allowed",
+        "model_class_reference_not_shortcut",
+        "finite_shell_deformations_excluded"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-no-fv-ir-threshold-control",
+      "failed_checks": [
+        "model_class_reference_not_shortcut",
+        "fv_ir_zero_mode_control_passed",
+        "threshold_or_denominator_control_passed"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-observed-target-selector",
+      "failed_checks": [
+        "model_class_reference_not_shortcut",
+        "no_observed_target_selector"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-kappa-c2-zmatch-shortcut",
+      "failed_checks": [
+        "model_class_reference_not_shortcut",
+        "no_kappa_or_matching_shortcut"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-candidate-authorized-proposal",
+      "failed_checks": [
+        "model_class_reference_not_shortcut",
+        "proposal_not_authorized_by_candidate"
+      ],
+      "rejected": true
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not provide scalar LSZ normalization",
+    "does not accept finite-shell fits as physical pole residues",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette/u0, kappa_s=1, c2=1, or Z_match=1"
+  ],
+  "stronger_schema": true,
+  "verdict": "The FH/LSZ model-class gate now rejects semantic spoof candidates that try to promote finite-shell pole fits with static EW algebra, Ward/H_unit authority, self-declared model-class booleans, missing FV/IR/threshold control, observed selectors, or kappa/c2/Z_match shortcuts.  This is overclaim protection only; no scalar LSZ model-class certificate is supplied."
+}

@@ -81,6 +81,7 @@
     "fh_lsz_finite_source_linearity": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
     "fh_lsz_finite_volume": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
     "fh_lsz_model_class": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
+    "fh_lsz_model_class_semantic_firewall": "outputs/yt_fh_lsz_model_class_semantic_firewall_2026-05-04.json",
     "fh_lsz_pole_saturation": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
     "fh_lsz_polefit8x8_combiner": "outputs/yt_fh_lsz_polefit8x8_chunk_combiner_gate_2026-05-04.json",
     "fh_lsz_polefit8x8_postprocessor": "outputs/yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json",
@@ -110,6 +111,7 @@
     "fh_lsz_finite_source_linearity": "bounded-support / FH-LSZ finite-source-linearity gate passed as response support",
     "fh_lsz_finite_volume": "exact negative boundary / FH-LSZ finite-volume pole-saturation obstruction",
     "fh_lsz_model_class": "open / FH-LSZ pole-fit model-class gate blocks finite-shell fit as evidence",
+    "fh_lsz_model_class_semantic_firewall": "bounded-support / FH-LSZ model-class semantic firewall passed",
     "fh_lsz_pole_saturation": "open / FH-LSZ pole-saturation threshold gate blocks current finite-shell fit",
     "fh_lsz_polefit8x8_combiner": "bounded-support / FH-LSZ partial eight-mode-x8 pole-fit stream",
     "fh_lsz_polefit8x8_postprocessor": "bounded-support / FH-LSZ eight-mode-x8 finite-shell pole diagnostic",
@@ -130,7 +132,7 @@
     "wz_mass_fit_path": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
     "wz_same_source_action": "exact negative boundary / same-source EW action not defined on PR230 surface"
   },
-  "pass_count": 14,
+  "pass_count": 15,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",
   "route_statuses": {
