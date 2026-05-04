@@ -21,6 +21,19 @@ PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificat
 # SUMMARY: PASS=138 FAIL=0
 ```
 
+## 2026-05-03 Finite-Source-Linearity Calibration Checkpoint Wiring Update
+
+The retained-route certificate now consumes
+`outputs/yt_fh_lsz_finite_source_linearity_calibration_checkpoint_2026-05-03.json`.
+This records the active multi-radius source-shift calibration as an aggregate
+response-window gate instead of leaving it as a sidecar run.
+
+The current certificate is intentionally open because the calibration output
+has not landed yet.  It verifies the parent firewalls and records that finite
+source-shift slopes remain support only: even a passing zero-source intercept
+fit would not supply scalar LSZ pole control, `O_sp = O_H`, `kappa_s`, or
+retained/proposed-retained top-Yukawa closure.
+
 ## 2026-05-03 Canonical-Higgs Operator Certificate Gate Wiring Update
 
 The retained-route certificate now consumes

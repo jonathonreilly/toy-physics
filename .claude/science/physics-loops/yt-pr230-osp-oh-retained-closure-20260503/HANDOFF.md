@@ -25,3 +25,23 @@ python3 scripts/frontier_yt_pr230_source_overlap_route_selection.py
 
 Next exact action: pursue the highest-ranked positive route, source-Higgs Gram
 purity with `O_sp` as the normalized source side.
+
+## Finite-Source Calibration Checkpoint
+
+The active multi-radius finite-source-linearity production job is now tracked
+by `scripts/frontier_yt_fh_lsz_finite_source_linearity_calibration_checkpoint.py`
+and `outputs/yt_fh_lsz_finite_source_linearity_calibration_checkpoint_2026-05-03.json`.
+
+Current result:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_finite_source_linearity_calibration_checkpoint.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+The checkpoint is still open because
+`outputs/yt_pr230_fh_lsz_finite_source_linearity_L12_T24_calib001_2026-05-02.json`
+has not landed.  When it finishes, rerun the calibration checkpoint,
+response-window acceptance gate, retained-route certificate, and campaign
+status certificate.  This remains response-window support only and does not
+authorize retained/proposed-retained closure.

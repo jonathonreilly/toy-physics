@@ -1,0 +1,26 @@
+{
+  "actual_current_surface_status": "open / FH-LSZ finite-source-linearity calibration awaiting output",
+  "calibration_gate_passed": false,
+  "calibration_output": "outputs/yt_pr230_fh_lsz_finite_source_linearity_L12_T24_calib001_2026-05-02.json",
+  "calibration_output_present": false,
+  "exact_next_action": "When the calibration output completes, rerun this checkpoint and then rerun the response-window acceptance, retained-route, and campaign-status certificates.  Even a passing calibration must be followed by scalar-pole and canonical-Higgs identity gates.",
+  "fail_count": 0,
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Finite-source-linearity is response support only and does not close scalar LSZ or canonical-Higgs identity.",
+  "source_radii": [],
+  "source_shifts": [],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat source-coordinate dE/ds as physical dE/dh",
+    "does not set kappa_s = 1",
+    "does not supply scalar LSZ pole derivative, FV/IR, model-class, or canonical-Higgs identity",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "symmetric_slope_rows": [],
+  "verdict": "The multi-radius finite-source-linearity calibration is not complete on the current surface.  The current source-only chunks still use one nonzero source radius and cannot certify the zero-source Feynman-Hellmann derivative.",
+  "zero_source_fit": {
+    "available": false,
+    "reason": "fewer than three nonzero source radii"
+  }
+}

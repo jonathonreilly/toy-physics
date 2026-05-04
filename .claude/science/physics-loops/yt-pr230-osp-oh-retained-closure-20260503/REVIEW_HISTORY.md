@@ -12,3 +12,15 @@ Findings:
 - The artifact correctly forbids retained/proposed-retained wording.
 - The exact next action is narrower than before: add an independent
   source-Higgs/WZ/rank-one row or theorem.
+
+## Finite-Source Calibration Checkpoint Self-Review
+
+Disposition: support-only awaiting-output checkpoint.
+
+Findings:
+
+- The checkpoint runner records the active multi-radius calibration job and
+  passes in the honest awaiting-output state.
+- It does not convert finite source-shift slopes into physical Yukawa evidence.
+- Even a future passing intercept fit is only response-window support until
+  scalar LSZ, canonical-Higgs identity, and retained-route gates pass.

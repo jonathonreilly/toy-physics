@@ -179,6 +179,7 @@ def main() -> int:
         "effective_mass_plateau_residue_no_go": "outputs/yt_effective_mass_plateau_residue_no_go_2026-05-02.json",
         "finite_source_shift_derivative_no_go": "outputs/yt_finite_source_shift_derivative_no_go_2026-05-02.json",
         "fh_lsz_finite_source_linearity_gate": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
+        "fh_lsz_finite_source_linearity_calibration": "outputs/yt_fh_lsz_finite_source_linearity_calibration_checkpoint_2026-05-03.json",
         "fh_lsz_target_observable_ess": "outputs/yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json",
         "fh_lsz_autocorrelation_ess_gate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
         "fh_lsz_response_window_forensics": "outputs/yt_fh_lsz_response_window_forensics_2026-05-03.json",
@@ -1194,6 +1195,11 @@ def main() -> int:
         )
         is False
     )
+    finite_source_linearity_calibration_not_closure = (
+        "finite-source-linearity calibration"
+        in certificates["fh_lsz_finite_source_linearity_calibration"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_finite_source_linearity_calibration"].get("proposal_allowed") is False
+    )
     target_observable_ess_not_closure = (
         "target-observable ESS certificate"
         in certificates["fh_lsz_target_observable_ess"].get("actual_current_surface_status", "")
@@ -1892,6 +1898,11 @@ def main() -> int:
         certificates["fh_lsz_finite_source_linearity_gate"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-finite-source-linearity-calibration-not-closure",
+        finite_source_linearity_calibration_not_closure,
+        certificates["fh_lsz_finite_source_linearity_calibration"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-target-observable-ess-certificate-not-closure",
         target_observable_ess_not_closure,
         certificates["fh_lsz_target_observable_ess"].get("actual_current_surface_status", ""),
@@ -2285,7 +2296,8 @@ def main() -> int:
             "noise-subsample diagnostics.  Before using finite source-shift "
             "slopes as FH derivatives, add multiple source radii or a retained "
             "analytic response-bound theorem; the current finite-source-"
-            "linearity gate is not passed."
+            "linearity gate is not passed, and the multi-radius calibration "
+            "checkpoint is response-window support only."
             " Before treating chunked FH/LSZ as production evidence, also "
             "emit target-observable autocorrelation/ESS or blocking/bootstrap "
             "certificates.  For the source-Higgs lane, use the O_sp-normalized "

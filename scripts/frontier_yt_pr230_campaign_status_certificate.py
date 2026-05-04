@@ -341,6 +341,9 @@ def main() -> int:
         "fh_lsz_finite_source_linearity_gate": load(
             "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json"
         ),
+        "fh_lsz_finite_source_linearity_calibration": load(
+            "outputs/yt_fh_lsz_finite_source_linearity_calibration_checkpoint_2026-05-03.json"
+        ),
         "fh_lsz_target_observable_ess": load(
             "outputs/yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json"
         ),
@@ -1273,6 +1276,12 @@ def main() -> int:
         "finite-source-linearity gate not passed"
         in str(statuses["fh_lsz_finite_source_linearity_gate"]),
         statuses["fh_lsz_finite_source_linearity_gate"],
+    )
+    report(
+        "fh-lsz-finite-source-linearity-calibration-not-closure",
+        "finite-source-linearity calibration"
+        in str(statuses["fh_lsz_finite_source_linearity_calibration"]),
+        statuses["fh_lsz_finite_source_linearity_calibration"],
     )
     report(
         "fh-lsz-target-observable-ess-certificate-not-closure",

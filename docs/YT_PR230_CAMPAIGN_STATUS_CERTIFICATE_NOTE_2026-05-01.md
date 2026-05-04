@@ -29,6 +29,20 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=164 FAIL=0
 ```
 
+## 2026-05-03 Finite-Source-Linearity Calibration Checkpoint Update
+
+The campaign status certificate now consumes
+`outputs/yt_fh_lsz_finite_source_linearity_calibration_checkpoint_2026-05-03.json`.
+This wires the active multi-radius source-shift calibration into the campaign
+surface.
+
+The current checkpoint passes as an open state: the calibration output is not
+present yet.  The intended postprocess is a symmetric-slope fit
+`S(delta) = intercept + curvature * delta^2` across
+`|delta| = 0.005, 0.010, 0.015`.  This can support response-window acceptance
+after the data land, but it cannot identify the source pole with canonical
+`O_H` and cannot authorize retained/proposed-retained `y_t` closure.
+
 ## 2026-05-03 Canonical-Higgs Operator Certificate Gate Wiring Update
 
 The campaign status certificate now consumes the canonical-Higgs operator

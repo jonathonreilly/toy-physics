@@ -13,6 +13,9 @@ lock_status:
 cycle: 1
 block: 1
 files_touched:
+  - scripts/frontier_yt_fh_lsz_finite_source_linearity_calibration_checkpoint.py
+  - docs/YT_FH_LSZ_FINITE_SOURCE_LINEARITY_CALIBRATION_CHECKPOINT_NOTE_2026-05-03.md
+  - outputs/yt_fh_lsz_finite_source_linearity_calibration_checkpoint_2026-05-03.json
   - scripts/frontier_yt_osp_oh_identity_stretch_attempt.py
   - docs/YT_OSP_OH_IDENTITY_STRETCH_ATTEMPT_NOTE_2026-05-03.md
   - outputs/yt_osp_oh_identity_stretch_attempt_2026-05-03.json
@@ -21,6 +24,8 @@ files_touched:
   - outputs/yt_pr230_source_overlap_route_selection_2026-05-03.json
   - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
 commands_run:
+  - "python3 -m py_compile scripts/frontier_yt_fh_lsz_finite_source_linearity_calibration_checkpoint.py # pass"
+  - "python3 scripts/frontier_yt_fh_lsz_finite_source_linearity_calibration_checkpoint.py # PASS=7 FAIL=0 awaiting calibration output"
   - "python3 scripts/frontier_yt_osp_oh_identity_stretch_attempt.py # PASS=21 FAIL=0"
   - "python3 scripts/frontier_yt_pr230_source_overlap_route_selection.py # PASS=15 FAIL=0"
 current_result: >
@@ -31,6 +36,8 @@ current_result: >
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
-  Build the next positive route: either implement source-Higgs C_sH/C_HH pole
-  residue rows using O_sp as the normalized source side, implement same-source
-  W/Z response, or find a genuine dynamical rank-one neutral scalar theorem.
+  Monitor chunks027/028 and the finite-source-linearity calibration job.  When
+  outputs land, rerun the chunk gates or calibration checkpoint plus aggregate
+  retained/campaign certificates.  In parallel, continue the next positive
+  O_sp/O_H route: certified source-Higgs C_sH/C_HH pole residues, same-source
+  W/Z response, or a genuine rank-one neutral scalar theorem.
