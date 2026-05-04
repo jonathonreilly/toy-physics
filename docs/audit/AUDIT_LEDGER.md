@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-04T10:42:45.825529+00:00
+**Generated:** 2026-05-04T10:49:44.962249+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 86 |
 | **retained_no_go** | 109 |
-| **retained_bounded** | 211 |
+| **retained_bounded** | 212 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 669 |
+| unaudited | 668 |
 | audit_in_progress | 1 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 380 |
+| `audited_clean` | 381 |
 | `audited_conditional` | 556 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 716 |
+| `unaudited` | 715 |
 
 | claim_type | count |
 |---|---:|
@@ -470,6 +470,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `valley_linear_asymptotic_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `valley_linear_mirror_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `valley_linear_repro_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `valley_linear_robustness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `valley_linear_wide_tail_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `wave_amplification_near_horizon_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `wave_equation_gravity_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
@@ -15640,6 +15641,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** This note exists so a skeptical reader can replay the valley-linear lane without mistaking it for a flagship theorem or for the broader 3D kernel story.  _(class `C`)_
 - **chain closes:** True — The registered reproduction harness runs successfully with --valley-linear, prints the canonical retained comparison, and then runs the bounded same-family valley-linear replay. The note is an entry-point/replay note and explicitly does not certify derivation, convergence, or replacement of the spent-delay flagship.
 - **rationale:** The current harness passed and produced the expected bounded replay: spent-delay Born 4.20e-15, k=0 zero, F~M 0.50, gravity +0.045346, TOWARD 8/8, tail -0.52; valley-linear Born 4.20e-15, k=0 zero, F~M 1.00, gravity +0.000224, TOWARD 8/8, tail -0.93. The note's claim is not a physics theorem; it is that this is the reproducible skeptical-reader entry point for the valley-linear fork, with limits stated. Residual risk is only the long runtime of the optional valley-linear replay.
+- **auditor confidence:** high
+
+### `valley_linear_robustness_note`
+
+- **Note:** [`VALLEY_LINEAR_ROBUSTNESS_NOTE.md`](../../docs/VALLEY_LINEAR_ROBUSTNESS_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded frozen-replay result that the valley-linear action stays Born-clean, F~M-linear, and TOWARD on the tested h=0.5 ordered-lattice width/connectivity/length slices, with non-universal tail exponents.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-04`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The frozen robustness sweep shows Born remains machine-clean, F~M stays at 1.00, and gravity remains TOWARD across the tested width, connectivity, and length rows on the 3D ordered-lattice family.  _(class `C`)_
+- **chain closes:** True — The source note's two listed dependencies are already retained-bounded, and the completed frozen log named by the note reproduces the width, connectivity, and length sweep tables. The live runner was longer than the current audit budget, so the clean verdict rests on the completed cached replay artifact rather than on timeout behavior.
+- **rationale:** The load-bearing claim is explicitly bounded to the tested 3D ordered-lattice slices, and the on-disk completed log matches the note's reported tables: machine-scale Born, F~M = 1.00, and TOWARD gravity across the width, connectivity, and length sweeps. The dependency chain is retained-bounded through valley_linear_action_note and action_crossover_note, so the bounded replay claim closes at the stated scope. Residual risk is exactly the note's caveat: this does not prove robustness across all architectures, universal tail exponents, or continuum behavior.
 - **auditor confidence:** high
 
 ### `valley_linear_wide_tail_note`

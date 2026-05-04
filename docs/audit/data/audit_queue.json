@@ -3,9 +3,9 @@
     "critical": 66,
     "high": 215,
     "leaf": 177,
-    "medium": 241
+    "medium": 240
   },
-  "generated_at": "2026-05-04T10:42:45.458406+00:00",
+  "generated_at": "2026-05-04T10:49:44.597036+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7807,30 +7807,6 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/poisson_self_gravity_loop.py",
-      "transitive_descendants": 5
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "valley_linear_robustness_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "valley_linear_action_note",
-        "action_crossover_note"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 3.585,
-      "note_path": "docs/VALLEY_LINEAR_ROBUSTNESS_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/valley_linear_robustness_sweep.py",
       "transitive_descendants": 5
     },
     {
@@ -18609,6 +18585,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 17,
-  "total_pending": 699
+  "ready_count": 16,
+  "total_pending": 698
 }
