@@ -139,3 +139,91 @@ campaign-status gates when both files land.
 Claim boundary: these are production-support chunks only.  They do not
 authorize retained/proposed-retained closure without the downstream scalar
 LSZ, source-Higgs/WZ/rank-one, and retained-route gates.
+
+## 2026-05-04 Chunk027-028 Packaging
+
+Chunks027/028 landed and were repackaged after rerunning the stale generic
+checkpoints against the updated 28-chunk combiner state.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 27
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 28
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 27
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 28
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=140 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=166 FAIL=0
+```
+
+Current production state: 28/63 L12 chunks ready, 448/1000 saved
+configurations, target-observable ESS passed with limiting ESS
+`387.5962268377635`, response-window acceptance still open, and retained
+closure still unauthorized.
+
+Next exact action: keep monitoring chunks029/030 and the finite-source
+calibration job. When either lands, rerun the appropriate local gates and the
+aggregate retained/campaign certificates before packaging the next checkpoint.
+
+## 2026-05-04 Finite-Source Calibration Packaging
+
+The multi-radius finite-source-linearity calibration output landed and was
+processed:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_finite_source_linearity_calibration_checkpoint.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=140 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=166 FAIL=0
+```
+
+The calibration uses source shifts
+`[-0.015, -0.01, -0.005, 0.0, 0.005, 0.01, 0.015]` and source radii
+`[0.005, 0.01, 0.015]`.  The zero-source intercept fit is
+`1.4328344029594695 +/- 35.72880463605988`, with maximum fractional deviation
+from the intercept `4.94991790248229e-05`.
+
+This retires the calibration awaiting-output state only.  The response-window
+acceptance gate remains open, and retained closure is still unauthorized.
+
+Next exact action: keep monitoring chunks029/030 and package them when their
+outputs land.

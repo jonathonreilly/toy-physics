@@ -1,15 +1,27 @@
 {
-  "actual_current_surface_status": "open / FH-LSZ finite-source-linearity calibration awaiting output",
-  "calibration_gate_passed": false,
+  "actual_current_surface_status": "bounded-support / FH-LSZ finite-source-linearity calibration checkpoint",
+  "calibration_gate_passed": true,
   "calibration_output": "outputs/yt_pr230_fh_lsz_finite_source_linearity_L12_T24_calib001_2026-05-02.json",
-  "calibration_output_present": false,
+  "calibration_output_present": true,
   "exact_next_action": "When the calibration output completes, rerun this checkpoint and then rerun the response-window acceptance, retained-route, and campaign-status certificates.  Even a passing calibration must be followed by scalar-pole and canonical-Higgs identity gates.",
   "fail_count": 0,
-  "pass_count": 7,
+  "pass_count": 13,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Finite-source-linearity is response support only and does not close scalar LSZ or canonical-Higgs identity.",
-  "source_radii": [],
-  "source_shifts": [],
+  "source_radii": [
+    0.005,
+    0.01,
+    0.015
+  ],
+  "source_shifts": [
+    -0.015,
+    -0.01,
+    -0.005,
+    0.0,
+    0.005,
+    0.01,
+    0.015
+  ],
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",
     "does not treat source-coordinate dE/ds as physical dE/dh",
@@ -17,10 +29,37 @@
     "does not supply scalar LSZ pole derivative, FV/IR, model-class, or canonical-Higgs identity",
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
   ],
-  "symmetric_slope_rows": [],
-  "verdict": "The multi-radius finite-source-linearity calibration is not complete on the current surface.  The current source-only chunks still use one nonzero source radius and cannot certify the zero-source Feynman-Hellmann derivative.",
+  "symmetric_slope_rows": [
+    {
+      "radius_sq": 2.5e-05,
+      "source_radius": 0.005,
+      "symmetric_slope": 1.4328455864415446,
+      "symmetric_slope_error": 48.74105900530836
+    },
+    {
+      "radius_sq": 0.0001,
+      "source_radius": 0.01,
+      "symmetric_slope": 1.4328644399029145,
+      "symmetric_slope_error": 24.780904478045105
+    },
+    {
+      "radius_sq": 0.000225,
+      "source_radius": 0.015,
+      "symmetric_slope": 1.4329053270860945,
+      "symmetric_slope_error": 16.972844049142754
+    }
+  ],
+  "verdict": "The multi-radius calibration output is present and supports a finite zero-source intercept fit for the source-coordinate FH response.  This is bounded response-window support only: it does not supply scalar LSZ pole control, FV/IR/model-class closure, or canonical-Higgs/source-overlap identity.",
   "zero_source_fit": {
-    "available": false,
-    "reason": "fewer than three nonzero source radii"
+    "available": true,
+    "chi2": 7.95989160784193e-15,
+    "chi2_dof": 7.95989160784193e-15,
+    "curvature": 0.31414156585863684,
+    "curvature_error": 191445.24456861272,
+    "dof": 1,
+    "fit_model": "S(delta) = intercept + curvature * delta^2",
+    "intercept_dE_ds_zero_source": 1.4328344029594695,
+    "intercept_error": 35.72880463605988,
+    "max_fractional_deviation_from_intercept": 4.94991790248229e-05
   }
 }

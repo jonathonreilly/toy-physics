@@ -11,7 +11,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 2
+block: 3
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -25,6 +25,24 @@ files_touched:
   - scripts/frontier_yt_pr230_source_overlap_route_selection.py
   - docs/YT_PR230_SOURCE_OVERLAP_ROUTE_SELECTION_NOTE_2026-05-03.md
   - outputs/yt_pr230_source_overlap_route_selection_2026-05-03.json
+  - docs/YT_FH_LSZ_CHUNKS027_028_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-04.md
+  - outputs/yt_pr230_fh_lsz_production_L12_T24_chunk027_2026-05-01.json
+  - outputs/yt_pr230_fh_lsz_production_L12_T24_chunk028_2026-05-01.json
+  - outputs/yt_fh_lsz_chunk027_target_timeseries_generic_checkpoint_2026-05-02.json
+  - outputs/yt_fh_lsz_chunk028_target_timeseries_generic_checkpoint_2026-05-02.json
+  - outputs/yt_fh_lsz_chunk027_multitau_target_timeseries_checkpoint_2026-05-03.json
+  - outputs/yt_fh_lsz_chunk028_multitau_target_timeseries_checkpoint_2026-05-03.json
+  - outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json
+  - outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json
+  - outputs/yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json
+  - outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json
+  - outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json
+  - outputs/yt_fh_lsz_response_window_forensics_2026-05-03.json
+  - outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json
+  - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+  - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
+  - outputs/yt_pr230_fh_lsz_finite_source_linearity_L12_T24_calib001_2026-05-02.json
+  - outputs/yt_direct_lattice_correlator_production_fh_lsz_linearity/L12_T24_calib001/
   - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
 commands_run:
   - "python3 -m py_compile scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py # pass"
@@ -33,6 +51,23 @@ commands_run:
   - "python3 scripts/frontier_yt_fh_lsz_finite_source_linearity_calibration_checkpoint.py # PASS=7 FAIL=0 awaiting calibration output"
   - "python3 scripts/frontier_yt_osp_oh_identity_stretch_attempt.py # PASS=21 FAIL=0"
   - "python3 scripts/frontier_yt_pr230_source_overlap_route_selection.py # PASS=15 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 27 # PASS=14 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 28 # PASS=14 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 27 # PASS=19 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 28 # PASS=19 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py # PASS=9 FAIL=0, 28/63 ready"
+  - "python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py # PASS=8 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py # PASS=8 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py # PASS=11 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py # PASS=6 FAIL=0, stability still open"
+  - "python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py # PASS=10 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py # PASS=12 FAIL=0, gate still open"
+  - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=140 FAIL=0"
+  - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=166 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_finite_source_linearity_calibration_checkpoint.py # PASS=13 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py # PASS=12 FAIL=0 after calibration, gate still open"
+  - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=140 FAIL=0 after calibration"
+  - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=166 FAIL=0 after calibration"
 current_result: >
   O_sp is derived and unit-normalized, but the current PR230 surface does not
   derive O_sp = O_H.  A counterfamily holds Res(C_sp,sp)=1 and same-source top
@@ -47,14 +82,21 @@ current_result: >
   as blockers/support boundaries, not closure.  Chunks029/030 were launched
   on 2026-05-04 with fixed seeds 2026051029/2026051030 and isolated output
   directories, with a monitor loop prepared to run their gates on completion.
+  Chunks027/028 landed and were packaged as bounded production support:
+  28/63 L12 chunks are now ready, target-observable ESS passes with limiting
+  ESS 387.5962268377635, response-window acceptance remains open, retained
+  closure remains unauthorized, and campaign status passes with PASS=166
+  FAIL=0.  The finite-source-linearity calibration output also landed and
+  passed its checkpoint with three symmetric source radii and zero-source
+  intercept 1.4328344029594695 +/- 35.72880463605988.  This retires the
+  awaiting-output state for that support checkpoint, but does not pass the
+  response-window acceptance gate or authorize retained closure.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
-  Monitor chunks027/028 and the finite-source-linearity calibration job.  When
-  outputs land, rerun the chunk gates or calibration checkpoint plus aggregate
-  retained/campaign certificates.  While waiting, only take routes that can
-  add a real new same-surface row/theorem: certified O_H/C_sH/C_HH pole
-  residues, genuine same-source W/Z response rows, Schur A/B/C kernel rows,
-  or a direct proof of the missing neutral-sector irreducibility premise.
-  Also monitor the newly launched chunks029/030 and postprocess them when
-  their output files land.
+  Monitor chunks029/030.  When outputs land, rerun their chunk gates plus
+  aggregate retained and campaign certificates.  While waiting, only take
+  routes that can add a real new same-surface row/theorem: certified
+  O_H/C_sH/C_HH pole residues, genuine same-source W/Z response rows, Schur
+  A/B/C kernel rows, or a direct proof of the missing neutral-sector
+  irreducibility premise.

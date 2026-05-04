@@ -55,3 +55,34 @@ Findings:
   certificate exist.
 - Aggregate retained/campaign certificates still pass as honest open-state
   blockers, not as closure.
+
+## 2026-05-04 Chunk027-028 Packaging Self-Review
+
+Disposition: bounded production support; continue campaign.
+
+Findings:
+
+- The stale combiner/autocorrelation checkpoint mismatch was resolved by
+  rerunning chunk027/028 generic checkpoints after the aggregate ready set
+  advanced to 28 chunks.
+- Chunk-local generic and v2 multi-tau certificates all pass with zero fails.
+- Aggregate target-observable ESS and autocorrelation ESS pass for the current
+  ready set, but response-window acceptance remains open.
+- No retained/proposed-retained claim is authorized because scalar LSZ,
+  canonical-Higgs/source-overlap, W/Z response, and retained-route gates are
+  still open.
+
+## 2026-05-04 Finite-Source Calibration Packaging Self-Review
+
+Disposition: bounded support; continue campaign.
+
+Findings:
+
+- The calibration output is real production-targeted output with three
+  symmetric nonzero source radii and a zero-source intercept fit.
+- The checkpoint passes with zero fails and forbids readout shortcuts.
+- The response-window acceptance gate still does not pass after calibration,
+  so this only retires the awaiting-output support blocker.
+- No retained/proposed-retained claim is authorized because finite source
+  linearity does not identify the scalar source with canonical `O_H` and does
+  not supply scalar LSZ pole control.

@@ -26,6 +26,10 @@ Open imports:
   neutral-sector irreducibility theorem is blocked on the current surface;
 - scalar denominator / K-prime route is exact support only; same-surface Schur
   A/B/C kernel rows and FV/IR pole-control certificates are absent;
-- finite-source-linearity calibration output for response-window support
-  only; not sufficient for `O_sp = O_H` or physical `y_t`;
+- finite-source-linearity calibration output is now present and passes the
+  support checkpoint, but remains insufficient for `O_sp = O_H` or physical
+  `y_t`;
+- FH/LSZ chunks027/028 are bounded production support only; the 28/63 ready
+  L12 state passes target-observable ESS but still fails response-window
+  acceptance and does not provide canonical-Higgs/source-overlap closure;
 - independent audit after any proposed positive certificate.
