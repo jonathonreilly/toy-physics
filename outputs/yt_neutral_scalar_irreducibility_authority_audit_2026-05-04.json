@@ -1,0 +1,90 @@
+{
+  "actual_current_surface_status": "exact negative boundary / neutral-scalar irreducibility authority absent on current PR230 surface",
+  "authority_audit_passed": true,
+  "bare_retained_allowed": false,
+  "current_closure_gate_passed": false,
+  "exact_next_action": "Do not continue source-only rank-one loops.  Positive closure now requires one real missing input: a same-surface neutral scalar irreducibility theorem, certified O_H with C_sH/C_HH pole rows, same-source W/Z response rows with identity certificates, or Schur A/B/C kernel rows.",
+  "exact_positive_authority_hits": [],
+  "fail_count": 0,
+  "minimal_premise_contract": {
+    "current_substitutes_rejected": [
+      "H_unit matrix-element readout",
+      "yt_ward_identity readout",
+      "observed m_t or y_t selector",
+      "alpha_LM / plaquette / u0 normalization import",
+      "static EW algebra as an O_H certificate",
+      "reflection positivity alone",
+      "gauge-vacuum Perron uniqueness imported into the neutral scalar sector",
+      "finite source-only C_ss rows as Schur A/B/C rows"
+    ],
+    "must_prove": [
+      "the neutral scalar transfer sector is a single primitive cone after gauge, fermion, scalar-source, and O_H construction",
+      "the source pole and certified canonical-Higgs radial operator overlap the unique lowest isolated neutral scalar pole",
+      "no finite orthogonal neutral top-coupled direction survives with the same source-only rows",
+      "the theorem is stated on the PR230 Cl(3)/Z3 Wilson-staggered surface, not imported from a gauge-only Perron theorem"
+    ],
+    "needed_certificate": "same-surface neutral scalar irreducibility / primitive-cone positivity improvement"
+  },
+  "neutral_scalar_irreducibility_certificate_present": false,
+  "neutral_scalar_irreducibility_theorem_passed": false,
+  "parent_certificates": {
+    "gauge_perron_neutral_scalar_rank_one_import": "outputs/yt_gauge_perron_to_neutral_scalar_rank_one_import_audit_2026-05-03.json",
+    "neutral_scalar_commutant_rank_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
+    "neutral_scalar_dynamical_rank_one_closure": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
+    "neutral_scalar_positivity_improving_direct_closure": "outputs/yt_neutral_scalar_positivity_improving_direct_closure_attempt_2026-05-03.json",
+    "neutral_scalar_rank_one_purity_gate": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
+    "neutral_scalar_top_coupling_tomography_gate": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
+    "non_source_response_rank_repair_sufficiency": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
+    "osp_oh_assumption_route_audit": "outputs/yt_osp_oh_assumption_route_audit_2026-05-04.json",
+    "positivity_improving_neutral_scalar_rank_one": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json",
+    "reflection_positivity_lsz_shortcut": "outputs/yt_reflection_positivity_lsz_shortcut_no_go_2026-05-02.json"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No exact positive authority key or parent certificate proves neutral scalar irreducibility on the current PR230 surface.",
+  "route_table": [
+    {
+      "blocker": "conditional theorem has no positivity-improving neutral-sector certificate",
+      "candidate": "Perron-Frobenius rank-one support",
+      "status": "conditional-support / positivity-improving neutral-scalar rank-one theorem; premise absent"
+    },
+    {
+      "blocker": "reducible positive neutral transfer witness remains admissible",
+      "candidate": "direct positivity-improving theorem",
+      "status": "exact negative boundary / neutral-scalar positivity-improving direct theorem not derived"
+    },
+    {
+      "blocker": "gauge-vacuum uniqueness does not control the neutral scalar response block",
+      "candidate": "gauge Perron import",
+      "status": "exact negative boundary / gauge-vacuum Perron theorem does not certify neutral-scalar rank-one purity"
+    },
+    {
+      "blocker": "positive spectral weights do not force primitive-cone irreducibility",
+      "candidate": "reflection positivity / OS positivity",
+      "status": "exact negative boundary / reflection positivity not scalar LSZ closure"
+    },
+    {
+      "blocker": "rank-two neutral response families preserve the labels",
+      "candidate": "commutant / symmetry labels",
+      "status": "exact negative boundary / neutral scalar commutant does not force rank-one purity"
+    },
+    {
+      "blocker": "current response matrix has rank one and leaves a null direction",
+      "candidate": "source-only tomography",
+      "status": "open / neutral scalar top-coupling tomography gate not passed"
+    },
+    {
+      "blocker": "sufficiency is exact support; O_H/C_sH/C_HH or W/Z rows remain absent",
+      "candidate": "non-source rank repair",
+      "status": "exact-support / non-source response rank-repair sufficiency theorem; current rows absent"
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not prove a new irreducibility theorem",
+    "does not infer positivity improvement from reflection positivity, gauge Perron, symmetry labels, or source-only data",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not manufacture O_H, C_sH/C_HH rows, W/Z rows, or Schur A/B/C rows"
+  ],
+  "verdict": "The repo does not currently contain a same-surface neutral scalar irreducibility or primitive-cone positivity-improvement certificate. The rank-one/Perron route remains conditional support only; the direct positivity-improvement attempt, gauge-Perron import, reflection-positivity shortcut, commutant route, and source-only tomography route all leave an admissible orthogonal neutral sector."
+}

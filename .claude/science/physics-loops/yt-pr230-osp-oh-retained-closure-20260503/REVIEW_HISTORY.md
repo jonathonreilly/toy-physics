@@ -250,3 +250,40 @@ Findings:
   blockers rather than presenting W/Z as a ready measurement route.
 - The harness extension still passes against the refreshed selector, so no
   existing source-Higgs instrumentation contract was broken.
+
+## 2026-05-04 Neutral-Scalar Irreducibility Authority Audit Self-Review
+
+Disposition: exact negative boundary for the current authority surface;
+continue campaign.
+
+Findings:
+
+- The runner checks for exact positive authority keys rather than prose
+  similarity, so it cannot promote a nearby support note into closure.
+- Parent certificates stay firewalled: conditional Perron/rank-one support,
+  direct positivity-improvement no-go, gauge-Perron import no-go, source-only
+  tomography, and the O_sp/O_H assumption audit all remain non-proposal.
+- The result does not claim a new theorem.  It records that no same-surface
+  neutral scalar irreducibility / primitive-cone positivity-improvement
+  certificate is already present.
+- No retained/proposed-retained claim is authorized; the positive routes still
+  require certified `O_H/C_sH/C_HH` rows, W/Z rows with identity certificates,
+  Schur `A/B/C` rows, or a genuine neutral-sector irreducibility theorem.
+
+## 2026-05-04 Chunks035-036 Packaging Self-Review
+
+Disposition: bounded production support; continue campaign.
+
+Findings:
+
+- Chunks035 and 036 pass both generic and v2 multi-tau target-timeseries
+  checkpoints with zero fails after aggregate gates are refreshed.
+- The ready L12 set advances to 36/63 chunks and 576/1000 saved
+  configurations; target-observable ESS passes with limiting ESS
+  `505.20155779504177`.
+- Response-window acceptance remains open because response stability is not
+  production-grade, chunks001-016 still lack v2 rows, and finite-source
+  linearity is not passed.
+- No retained/proposed-retained claim is authorized because scalar LSZ,
+  canonical-Higgs/source-overlap, W/Z response, Schur-row, and retained-route
+  gates remain open.

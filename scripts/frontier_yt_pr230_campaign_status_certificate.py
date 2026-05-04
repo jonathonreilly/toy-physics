@@ -205,6 +205,9 @@ def main() -> int:
         "neutral_scalar_positivity_improving_direct_closure": load(
             "outputs/yt_neutral_scalar_positivity_improving_direct_closure_attempt_2026-05-03.json"
         ),
+        "neutral_scalar_irreducibility_authority_audit": load(
+            "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json"
+        ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
@@ -931,6 +934,24 @@ def main() -> int:
         )
         is True,
         statuses["neutral_scalar_positivity_improving_direct_closure"],
+    )
+    report(
+        "neutral-scalar-irreducibility-authority-absent",
+        "neutral-scalar irreducibility authority absent"
+        in str(statuses["neutral_scalar_irreducibility_authority_audit"])
+        and certificates["neutral_scalar_irreducibility_authority_audit"].get(
+            "authority_audit_passed"
+        )
+        is True
+        and certificates["neutral_scalar_irreducibility_authority_audit"].get(
+            "neutral_scalar_irreducibility_certificate_present"
+        )
+        is False
+        and certificates["neutral_scalar_irreducibility_authority_audit"].get(
+            "current_closure_gate_passed"
+        )
+        is False,
+        statuses["neutral_scalar_irreducibility_authority_audit"],
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",

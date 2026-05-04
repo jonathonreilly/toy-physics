@@ -84,6 +84,10 @@
     "fh_lsz_chunk033_target_timeseries_generic": "bounded-support / FH-LSZ chunk033 generic target-timeseries checkpoint",
     "fh_lsz_chunk034_multitau_target_timeseries": "bounded-support / FH-LSZ chunk034 v2 multi-tau target-timeseries checkpoint",
     "fh_lsz_chunk034_target_timeseries_generic": "bounded-support / FH-LSZ chunk034 generic target-timeseries checkpoint",
+    "fh_lsz_chunk035_multitau_target_timeseries": "bounded-support / FH-LSZ chunk035 v2 multi-tau target-timeseries checkpoint",
+    "fh_lsz_chunk035_target_timeseries_generic": "bounded-support / FH-LSZ chunk035 generic target-timeseries checkpoint",
+    "fh_lsz_chunk036_multitau_target_timeseries": "bounded-support / FH-LSZ chunk036 v2 multi-tau target-timeseries checkpoint",
+    "fh_lsz_chunk036_target_timeseries_generic": "bounded-support / FH-LSZ chunk036 generic target-timeseries checkpoint",
     "fh_lsz_chunk_combiner_gate": "open / FH-LSZ chunk combiner gate blocks partial or non-independent evidence",
     "fh_lsz_chunked_production_manifest": "bounded-support / FH-LSZ chunked production manifest",
     "fh_lsz_eight_mode_noise_variance": "open / FH-LSZ eight-mode noise variance gate not passed",
@@ -152,6 +156,7 @@
     "momentum_pilot": "bounded-support / momentum pilot scaling",
     "neutral_scalar_commutant_rank_no_go": "exact negative boundary / neutral scalar commutant does not force rank-one purity",
     "neutral_scalar_dynamical_rank_one_closure": "exact negative boundary / dynamical rank-one neutral scalar theorem not derived",
+    "neutral_scalar_irreducibility_authority_audit": "exact negative boundary / neutral-scalar irreducibility authority absent on current PR230 surface",
     "neutral_scalar_positivity_improving_direct_closure": "exact negative boundary / neutral-scalar positivity-improving direct theorem not derived",
     "neutral_scalar_rank_one_purity_gate": "open / neutral scalar rank-one purity gate not passed",
     "neutral_scalar_top_coupling_tomography_gate": "open / neutral scalar top-coupling tomography gate not passed",
@@ -228,7 +233,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 173,
+  "pass_count": 174,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

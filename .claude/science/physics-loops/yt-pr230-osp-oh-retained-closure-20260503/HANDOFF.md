@@ -293,6 +293,93 @@ new same-surface EW/O_H certificate is in scope.  On the current PR230 surface
 it is blocked by the missing EW gauge-Higgs/O_H surface, so the selector now
 explicitly says not to loop back to source-only `O_sp/O_H`.
 
+## 2026-05-04 Neutral-Scalar Irreducibility Authority Audit
+
+The neutral-rank route was checked for hidden current authority:
+
+```bash
+python3 -m py_compile \
+  scripts/frontier_yt_neutral_scalar_irreducibility_authority_audit.py \
+  scripts/frontier_yt_retained_closure_route_certificate.py \
+  scripts/frontier_yt_pr230_campaign_status_certificate.py
+# pass
+
+python3 scripts/frontier_yt_neutral_scalar_irreducibility_authority_audit.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=148 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=174 FAIL=0
+```
+
+Result: exact negative boundary on the current surface.  The repo does not
+already contain a same-surface neutral scalar irreducibility or primitive-cone
+positivity-improvement certificate.  The rank-one/Perron route remains
+conditional support only; reflection positivity, gauge Perron, symmetry
+labels, source-only tomography, and the direct positivity-improvement attempt
+all leave an admissible orthogonal neutral sector.
+
+Next exact action remains: monitor chunks037-040 and package any landed
+outputs.  For non-MC closure, do not continue source-only neutral-rank loops
+without a new authority candidate; pursue only a real same-surface
+irreducibility theorem, certified `O_H/C_sH/C_HH` rows, W/Z rows with identity
+certificates, or Schur `A/B/C` rows.
+
+## 2026-05-04 Chunks035-036 Packaging
+
+Chunks036 and 035 landed and were packaged as bounded FH/LSZ production
+support:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 35
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 36
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 35
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 36
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=148 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=174 FAIL=0
+```
+
+Current production state: 36/63 L12 chunks ready, 576/1000 saved
+configurations, target-observable ESS passed with limiting ESS
+`505.20155779504177`, response-window acceptance still open, and retained
+closure still unauthorized.
+
+Currently running: chunks037, 038, 039, and 040.
+
 ## 2026-05-04 O_sp/O_H Assumption-Route Audit
 
 The current O_sp/O_H loop now has an executable assumption audit:

@@ -46,6 +46,10 @@ Open imports:
   the ready set as bounded production support only; the 34/63 ready L12 state
   passes target-observable ESS but still fails response-window acceptance and
   does not provide canonical-Higgs/source-overlap closure;
+- FH/LSZ chunks035/036 are now packaged with the ready set as bounded
+  production support only; the 36/63 ready L12 state passes target-observable ESS but
+  still fails response-window acceptance and does not provide canonical-Higgs/
+  source-overlap closure;
 - source-Higgs production readiness is blocked by the missing same-surface
   `O_H` certificate; current chunks were source-Higgs absent-guarded and have
   no `C_sH/C_HH` rows;
@@ -62,4 +66,8 @@ Open imports:
 - the refreshed source-overlap selector keeps Gram purity as the sharpest
   positive route only conditional on a new same-surface EW/O_H surface; it does
   not authorize another source-only identity attempt as closure;
+- the neutral-scalar irreducibility authority audit is an exact negative
+  boundary on the current surface: no same-surface primitive-cone /
+  positivity-improving neutral-sector certificate is already present, so the
+  rank-one route remains conditional support only;
 - independent audit after any proposed positive certificate.
