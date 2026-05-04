@@ -84,10 +84,14 @@ REQUIRED_VERDICT_FIELDS = {
 def add_auditor_metadata(verdict_blob: dict, auditor_name: str,
                          independence: str) -> dict:
     blob = dict(verdict_blob)
-    blob.setdefault("auditor", auditor_name)
-    blob.setdefault("auditor_family", AUDITOR_FAMILY)
-    blob.setdefault("independence", independence)
-    blob.setdefault("audit_date", datetime.now(timezone.utc).isoformat())
+    # Runner-side fields are authoritative — overwrite anything the model
+    # may have placed in the JSON for these. The prompt schema does not
+    # ask codex to return these, but a hallucination should not leak
+    # through.
+    blob["auditor"] = auditor_name
+    blob["auditor_family"] = AUDITOR_FAMILY
+    blob["independence"] = independence
+    blob["audit_date"] = datetime.now(timezone.utc).isoformat()
     # Some downstream callers want runner_check_breakdown even when missing.
     blob.setdefault("runner_check_breakdown", {"A": 0, "B": 0, "C": 0, "D": 0, "total_pass": 0})
     return blob
@@ -206,6 +210,10 @@ def runner_timeout_for(runner_path: str, default_sec: int) -> int:
 def find_cached_runner_output(runner_path: str) -> str | None:
     """Look for a recent log file from this runner. Returns its tail content
     if found, else None. Most runners in this repo emit logs/<name>-*.txt.
+
+    The match requires the runner stem to be followed by '-', '.', or end
+    of name, so a runner stem `frontier_alpha_s` does NOT incorrectly pick
+    up logs for `frontier_alpha_s_extension`.
     """
     if not runner_path:
         return None
@@ -213,13 +221,18 @@ def find_cached_runner_output(runner_path: str) -> str | None:
     logs_dir = REPO_ROOT / "logs"
     if not logs_dir.is_dir():
         return None
-    # Look for any file whose name contains the runner stem
+    # Match `<bn>-...`, `<bn>.txt`, or exactly `<bn>` (no false hits on
+    # `<bn>_extension` etc.).
     candidates = []
     try:
         for p in logs_dir.iterdir():
             if not p.is_file():
                 continue
-            if bn in p.name:
+            name = p.name
+            if name == bn:
+                candidates.append(p)
+                continue
+            if name.startswith(bn + "-") or name.startswith(bn + "."):
                 candidates.append(p)
     except OSError:
         return None
@@ -272,8 +285,15 @@ def get_runner_stdout(runner_path: str | None, default_timeout_sec: int,
 
 def render_prompt(row: dict, ledger_rows: dict[str, dict],
                   template: str, runner_timeout_sec: int,
-                  use_cache: bool = True) -> str:
-    """Substitute the prompt template's variables for one queue row."""
+                  use_cache: bool = True,
+                  skip_runner_stdout: bool = False) -> str:
+    """Substitute the prompt template's variables for one queue row.
+
+    If ``skip_runner_stdout`` is True, do NOT invoke the runner subprocess
+    or read a cached log; instead substitute a placeholder. Section 3a
+    (runner source code) is still rendered so the auditor retains code
+    visibility — only the live stdout block is suppressed.
+    """
     cid = row["claim_id"]
     note_path = row.get("note_path") or ledger_rows.get(cid, {}).get("note_path") or ""
     runner_path = row.get("runner_path") or ledger_rows.get(cid, {}).get("runner_path") or ""
@@ -304,7 +324,13 @@ def render_prompt(row: dict, ledger_rows: dict[str, dict],
         )
     cited_str = "\n\n".join(cited_blocks) if cited_blocks else "(no cited authorities — load-bearing step must derive from axiom)"
 
-    runner_stdout = get_runner_stdout(runner_path, runner_timeout_sec, use_cache=use_cache)
+    if skip_runner_stdout:
+        # --no-runner mode: do not run the subprocess and do not consult the
+        # cache. The auditor still gets Section 3a (runner source code) and
+        # may return COMPUTE_REQUIRED if the missing stdout is load-bearing.
+        runner_stdout = "(stdout suppressed by --no-runner)"
+    else:
+        runner_stdout = get_runner_stdout(runner_path, runner_timeout_sec, use_cache=use_cache)
 
     # Read the runner source code so the auditor can inspect what the runner
     # actually does, not just what it printed. Catches fake-pass runners
@@ -641,9 +667,18 @@ def main() -> int:
             print(f"WARNING: {reason}; --allow-non-main forces push-mode=none for safety.")
             args.push_mode = "none"
         else:
-            # Pull in any remote audit-bot commits before we start.
+            # Pull in any remote audit-bot commits before we start. If the
+            # rebase conflicts, abort and bail — silently continuing on a
+            # half-rebased worktree would push tangled history to main.
             git("fetch", "origin", "main", check=False)
-            git("rebase", "origin/main", check=False)
+            rebase = git("rebase", "origin/main", check=False)
+            if rebase.returncode != 0:
+                git("rebase", "--abort", check=False)
+                print("REFUSING to run with --push-mode=" + args.push_mode + ":")
+                print("  pre-run `git rebase origin/main` failed with conflicts.")
+                print("  Resolve the conflict on main manually, then re-run.")
+                print(f"  rebase stderr: {(rebase.stderr or rebase.stdout).strip()[:300]}")
+                return 2
 
     ledger_rows = load_ledger_rows()
     queue = load_queue(args.criticality)
@@ -689,15 +724,11 @@ def main() -> int:
 
             use_cache = not args.no_cache_runner
             if args.no_runner:
-                # Build the prompt manually with empty runner stdout
-                ledger_rows_view = ledger_rows
-                full_row = ledger_rows_view.get(cid, {})
-                row_for_prompt = {**row, "note_path": full_row.get("note_path"),
-                                  "runner_path": full_row.get("runner_path")}
-                prompt = render_prompt(row_for_prompt, ledger_rows_view, template, 1,
-                                       use_cache=False)
-                # Wipe runner stdout block
-                prompt = re.sub(r"### 3\. Runner output.*?### 4\.", "### 4.", prompt, count=1, flags=re.DOTALL)
+                # Skip the runner subprocess + cache, but keep Section 3a
+                # (runner source code) so the auditor can still inspect what
+                # the runner does. Pass timeout=0 since it is unused.
+                prompt = render_prompt(row, ledger_rows, template, 0,
+                                       use_cache=False, skip_runner_stdout=True)
             else:
                 prompt = render_prompt(row, ledger_rows, template, args.runner_timeout_sec,
                                        use_cache=use_cache)
