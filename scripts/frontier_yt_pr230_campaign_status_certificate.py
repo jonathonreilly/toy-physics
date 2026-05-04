@@ -1418,8 +1418,8 @@ def main() -> int:
         statuses["finite_source_shift_derivative_no_go"],
     )
     report(
-        "fh-lsz-finite-source-linearity-gate-blocks",
-        "finite-source-linearity gate not passed"
+        "fh-lsz-finite-source-linearity-gate-not-closure",
+        "finite-source-linearity gate"
         in str(statuses["fh_lsz_finite_source_linearity_gate"]),
         statuses["fh_lsz_finite_source_linearity_gate"],
     )

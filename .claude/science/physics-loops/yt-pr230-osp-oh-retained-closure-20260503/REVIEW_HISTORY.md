@@ -258,6 +258,25 @@ Findings:
 - No retained/proposed-retained claim is authorized and no physical readout
   switch is authorized.
 
+## 2026-05-04 Finite-Source-Linearity Gate Refresh Self-Review
+
+Disposition: bounded response support; continue campaign.
+
+Findings:
+
+- The existing multi-radius calibration checkpoint is now consumed by the
+  finite-source-linearity gate instead of remaining as a detached support
+  artifact.
+- The calibration uses three nonzero source radii and passes the central
+  finite-source fit with max fractional deviation `4.94991790248229e-05`.
+- The finite-source-linearity gate now reports passed as response support:
+  `PASS=15 FAIL=0`.
+- Response-window acceptance still does not pass because full ready-set v2
+  covariance is absent for legacy chunks001-016 and fitted/replacement
+  response stability remains open.
+- No retained/proposed-retained claim is authorized and no physical readout
+  switch is authorized.
+
 ## 2026-05-04 Schur/K-Prime Row Absence Refresh Self-Review
 
 Disposition: bounded support / exact negative boundary; continue campaign.

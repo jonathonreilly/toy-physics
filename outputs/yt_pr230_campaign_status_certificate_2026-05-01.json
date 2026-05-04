@@ -116,7 +116,7 @@
     "fh_lsz_eight_mode_noise_variance": "open / FH-LSZ eight-mode noise variance gate not passed",
     "fh_lsz_finite_shell_identifiability": "exact negative boundary / FH-LSZ finite-shell pole-fit identifiability no-go",
     "fh_lsz_finite_source_linearity_calibration": "bounded-support / FH-LSZ finite-source-linearity calibration checkpoint",
-    "fh_lsz_finite_source_linearity_gate": "open / FH-LSZ finite-source-linearity gate not passed",
+    "fh_lsz_finite_source_linearity_gate": "bounded-support / FH-LSZ finite-source-linearity gate passed as response support",
     "fh_lsz_finite_volume_pole_saturation": "exact negative boundary / FH-LSZ finite-volume pole-saturation obstruction",
     "fh_lsz_higgs_pole_identity": "open / FH-LSZ canonical-Higgs pole identity gate blocking",
     "fh_lsz_invariant_readout": "exact-support / Feynman-Hellmann scalar-LSZ invariant readout formula",

@@ -38,9 +38,10 @@ python3 scripts/frontier_yt_fh_lsz_common_window_response_gate.py
 Current surface:
 
 - fixed `tau=10..12` central response is stable;
-- fixed-window uncertainty is not production-grade;
+- fixed-window uncertainty is production-grade under the pooled independent
+  chunk-scatter estimator;
 - response-window acceptance remains open;
-- finite-source-linearity remains open;
+- finite-source-linearity is now available as bounded response support;
 - fitted response stability remains open;
 - scalar-LSZ and canonical-Higgs/source-overlap gates remain open.
 

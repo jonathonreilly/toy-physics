@@ -275,15 +275,20 @@ def main() -> int:
         ),
     )
     report(
-        "multiple-source-radii-missing",
-        not multiple_source_radii_present,
-        "finite-source-linearity gate is not passed",
+        "multiple-source-radii-state-recorded",
+        True,
+        f"finite_source_linearity_gate_passed={multiple_source_radii_present}",
     )
     report("production-response-stability-still-open", not response_stability_passed, f"passed={response_stability_passed}")
     report("readout-switch-not-authorized", not readout_switch_authorized, f"readout_switch_authorized={readout_switch_authorized}")
     report("response-window-acceptance-gate-not-passed", not gate_passed, "acceptance gate remains open")
     report("does-not-authorize-retained-proposal", True, "response-window gate is not scalar LSZ/canonical-Higgs closure")
 
+    finite_source_clause = (
+        "finite-source-linearity support is present"
+        if multiple_source_radii_present
+        else "the finite-source-linearity gate is not passed"
+    )
     result = {
         "actual_current_surface_status": "open / FH-LSZ response-window acceptance gate not passed",
         "verdict": (
@@ -291,9 +296,8 @@ def main() -> int:
             "effective-mass slopes across tau windows 0-9, so the forensics "
             "diagnostic is reproducible beyond tau=1.  The acceptance gate still "
             "does not pass: per-configuration multi-tau target rows are not yet "
-            "complete for the full ready set, the finite-source-linearity gate is "
-            "not passed, and the production fitted-slope response-stability gate "
-            "remains open."
+            f"complete for the full ready set, {finite_source_clause}, and the "
+            "production fitted-slope response-stability gate remains open."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (

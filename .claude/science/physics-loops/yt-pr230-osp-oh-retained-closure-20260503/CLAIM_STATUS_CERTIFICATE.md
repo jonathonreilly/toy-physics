@@ -111,4 +111,8 @@ Open imports:
   `tau=10..12` central response, but it does not authorize a readout switch or
   supply finite-source-linearity, scalar-LSZ, or canonical-Higgs/source-overlap
   closure;
+- finite-source-linearity gate now passes as bounded response support after
+  consuming the multi-radius calibration checkpoint, but it does not authorize
+  a readout switch or supply response-window acceptance, scalar-LSZ, or
+  canonical-Higgs/source-overlap closure;
 - independent audit after any proposed positive certificate.

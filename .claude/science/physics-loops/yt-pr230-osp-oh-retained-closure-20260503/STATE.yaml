@@ -5,21 +5,21 @@ start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
 actual_current_surface_status: exact-negative-boundary
-active_residual: "finite-source-linearity / response-window acceptance / O_sp/O_H identity"
+active_residual: "response-window acceptance / fitted-response stability / O_sp/O_H identity"
 latest_checkpoint:
-  utc: "2026-05-04T05:33:01Z"
-  block: 21
-  artifact: "FH/LSZ common-window pooled response estimator"
-  status: "bounded-support / pooled fixed-window uncertainty production-grade"
-  result: "independent chunk-scatter gives relative SE 0.0008115884077021353 for fixed tau=10..12 common-window response; common-window gate still blocks on remaining physics gates"
-  claim_boundary: "no readout switch, no retained/proposed-retained y_t closure; finite-source-linearity, response-window acceptance, fitted/replacement response stability, scalar-LSZ, and canonical-Higgs gates remain open"
+  utc: "2026-05-04T05:37:52Z"
+  block: 22
+  artifact: "FH/LSZ finite-source-linearity gate refresh"
+  status: "bounded-support / finite-source-linearity response support passed"
+  result: "multi-radius calibration checkpoint is now consumed by the gate; max fractional deviation 4.94991790248229e-05, finite-source-linearity_gate_passed=true as response support"
+  claim_boundary: "no readout switch, no retained/proposed-retained y_t closure; response-window acceptance, fitted/replacement response stability, scalar-LSZ, and canonical-Higgs gates remain open"
   live_compute: "chunks047-052 running under chunk-wave orchestrator"
 lock_status:
   repo_lock_attempted: true
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 21
+block: 22
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -172,6 +172,10 @@ files_touched:
   - scripts/frontier_yt_fh_lsz_common_window_pooled_response_estimator.py
   - docs/YT_FH_LSZ_COMMON_WINDOW_POOLED_RESPONSE_ESTIMATOR_NOTE_2026-05-04.md
   - outputs/yt_fh_lsz_common_window_pooled_response_estimator_2026-05-04.json
+  - scripts/frontier_yt_fh_lsz_finite_source_linearity_gate.py
+  - scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+  - outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json
+  - outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json
   - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
 commands_run:
   - "python3 -m py_compile scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py # pass"
@@ -508,14 +512,22 @@ current_result: >
   acceptance, fitted/replacement response stability, scalar-LSZ, and
   canonical-Higgs/source-overlap gates remain open.  Aggregates now include
   the pooled estimator with PASS=153 and PASS=179 respectively.
+  The existing multi-radius finite-source-linearity calibration checkpoint was
+  then wired back into the finite-source-linearity gate.  The gate now passes
+  as bounded response support with max fractional deviation
+  4.94991790248229e-05, and downstream response-window/common-window gates
+  record finite-source-linearity support as present.  Response-window
+  acceptance still blocks because full ready-set v2 covariance and fitted/
+  replacement response stability are not passed.  Aggregates remain
+  PASS=153/PASS=179 with no proposal authority.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
   Monitor chunks047, 048, 049, 050, 051, and 052.  When outputs land, rerun
   their chunk gates plus aggregate retained and campaign certificates.  In
-  parallel, pursue finite-source-linearity, response-window acceptance, or a
-  replacement response-stability readout.  The common-window estimator
-  uncertainty sub-blocker is retired, but no physical readout switch is
+  parallel, pursue response-window acceptance or a replacement response-
+  stability readout.  The fixed-window uncertainty and finite-source-linearity
+  sub-blockers are retired as support, but no physical readout switch is
   authorized until the remaining gates pass.
   Only take routes that can add a real new same-surface row/theorem: a new EW
   gauge-Higgs/O_H certificate plus C_sH/C_HH pole residues, a genuine

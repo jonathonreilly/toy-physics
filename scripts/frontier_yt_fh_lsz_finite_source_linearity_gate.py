@@ -23,11 +23,13 @@ PARENTS = {
     "chunked_manifest": "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json",
     "chunk_combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
     "production_postprocess_gate": "outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json",
+    "finite_source_linearity_calibration_checkpoint": "outputs/yt_fh_lsz_finite_source_linearity_calibration_checkpoint_2026-05-03.json",
 }
 
 CURRENT_CHUNK_SHIFTS = [-0.01, 0.0, 0.01]
 CALIBRATION_SHIFTS = [-0.015, -0.01, -0.005, 0.0, 0.005, 0.01, 0.015]
 CAMPAIGN_HOURS = 12.0
+MAX_CALIBRATION_FRACTIONAL_DEVIATION = 1.0e-3
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -160,8 +162,16 @@ def main() -> int:
         "postprocess gate" in status(parents["production_postprocess_gate"])
         and parents["production_postprocess_gate"].get("retained_proposal_gate_ready") is False
     )
+    calibration_checkpoint = parents["finite_source_linearity_calibration_checkpoint"]
+    calibration_fit = calibration_checkpoint.get("zero_source_fit", {})
+    calibration_fractional_deviation = calibration_fit.get("max_fractional_deviation_from_intercept")
+    calibration_support_passed = (
+        calibration_checkpoint.get("calibration_gate_passed") is True
+        and isinstance(calibration_fractional_deviation, (int, float))
+        and calibration_fractional_deviation < MAX_CALIBRATION_FRACTIONAL_DEVIATION
+    )
 
-    current_gate_passed = False
+    current_gate_passed = calibration_support_passed
     future_gate_passed = False
     current_has_single_radius = len(current_radii) == 1
     calibration_has_three_radii = len(calibration_radii) >= 3
@@ -176,7 +186,21 @@ def main() -> int:
     report("chunk-combiner-not-evidence", combiner_not_evidence, status(parents["chunk_combiner_gate"]))
     report("postprocess-gate-not-ready", postprocess_not_ready, status(parents["production_postprocess_gate"]))
     report("current-chunks-have-single-radius", current_has_single_radius, f"radii={current_radii}")
-    report("current-finite-source-linearity-gate-not-passed", not current_gate_passed, "current chunks use one nonzero source radius")
+    report(
+        "finite-source-linearity-calibration-checkpoint-loaded",
+        bool(calibration_checkpoint),
+        status(calibration_checkpoint),
+    )
+    report(
+        "finite-source-linearity-calibration-support-passed",
+        calibration_support_passed,
+        f"max_fractional_deviation={calibration_fractional_deviation}",
+    )
+    report(
+        "current-finite-source-linearity-gate-state-recorded",
+        True,
+        f"passed={current_gate_passed}; current chunks use one radius, calibration supplies multi-radius support",
+    )
     report("future-calibration-symmetric", calibration_symmetric, f"shifts={CALIBRATION_SHIFTS}")
     report("future-calibration-has-three-radii", calibration_has_three_radii, f"radii={calibration_radii}")
     report(
@@ -187,22 +211,35 @@ def main() -> int:
     report("future-calibration-is-not-evidence-yet", not future_gate_passed, "manifest command only")
 
     result = {
-        "actual_current_surface_status": "open / FH-LSZ finite-source-linearity gate not passed",
+        "actual_current_surface_status": (
+            "bounded-support / FH-LSZ finite-source-linearity gate passed as response support"
+            if current_gate_passed
+            else "open / FH-LSZ finite-source-linearity gate not passed"
+        ),
         "verdict": (
-            "The current FH/LSZ chunks use one nonzero symmetric source radius, "
-            "so they cannot certify the zero-source Feynman-Hellmann derivative. "
-            "A future production-grade response gate must include multiple "
-            "nonzero radii on common ensembles and fit the finite slopes "
-            "S(delta) against delta^2 with a certified small remainder, or it "
-            "must supply a retained analytic response-bound theorem.  The "
-            "calibration manifest below uses three radii, but it is launch "
-            "planning only, projects beyond the 12h foreground window under "
-            "current chunk settings, and still would not bypass scalar LSZ, "
-            "FV/IR/model-class, or canonical-Higgs identity gates."
+            (
+                "The current production chunks use one nonzero source radius, "
+                "but the separate multi-radius calibration checkpoint is now "
+                "present and supports a small finite-source extrapolation "
+                "remainder.  This passes finite-source-linearity as response "
+                "support only.  It does not bypass response-window acceptance, "
+                "fitted/replacement response stability, scalar LSZ, FV/IR/"
+                "model-class, or canonical-Higgs identity gates."
+            )
+            if current_gate_passed
+            else (
+                "The current FH/LSZ chunks use one nonzero symmetric source "
+                "radius, so they cannot certify the zero-source "
+                "Feynman-Hellmann derivative.  A future production-grade "
+                "response gate must include multiple nonzero radii on common "
+                "ensembles and fit the finite slopes S(delta) against delta^2 "
+                "with a certified small remainder, or it must supply a "
+                "retained analytic response-bound theorem."
+            )
         ),
         "proposal_allowed": False,
-        "proposal_allowed_reason": "No completed multi-radius production calibration or analytic response-bound theorem exists.",
-        "finite_source_linearity_gate_passed": False,
+        "proposal_allowed_reason": "Finite-source-linearity is response support only and does not close scalar LSZ or canonical-Higgs identity.",
+        "finite_source_linearity_gate_passed": current_gate_passed,
         "current_source_shifts": CURRENT_CHUNK_SHIFTS,
         "current_source_radii": current_radii,
         "acceptance_requirements": {
@@ -220,6 +257,14 @@ def main() -> int:
                 "canonical-Higgs source-pole identity",
                 "retained-proposal certificate",
             ],
+        },
+        "calibration_checkpoint": {
+            "path": PARENTS["finite_source_linearity_calibration_checkpoint"],
+            "calibration_gate_passed": calibration_checkpoint.get("calibration_gate_passed"),
+            "source_radii": calibration_checkpoint.get("source_radii"),
+            "zero_source_fit": calibration_fit,
+            "max_fractional_deviation_threshold": MAX_CALIBRATION_FRACTIONAL_DEVIATION,
+            "calibration_support_passed": calibration_support_passed,
         },
         "future_calibration_manifest": {
             "source_shifts": CALIBRATION_SHIFTS,

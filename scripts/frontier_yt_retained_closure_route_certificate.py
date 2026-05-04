@@ -1313,14 +1313,10 @@ def main() -> int:
         )
         is False
     )
-    finite_source_linearity_gate_blocks = (
-        "finite-source-linearity gate not passed"
+    finite_source_linearity_gate_not_closure = (
+        "finite-source-linearity gate"
         in certificates["fh_lsz_finite_source_linearity_gate"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_finite_source_linearity_gate"].get("proposal_allowed") is False
-        and certificates["fh_lsz_finite_source_linearity_gate"].get(
-            "finite_source_linearity_gate_passed"
-        )
-        is False
     )
     finite_source_linearity_calibration_not_closure = (
         "finite-source-linearity calibration"
@@ -2132,8 +2128,8 @@ def main() -> int:
         certificates["finite_source_shift_derivative_no_go"].get("actual_current_surface_status", ""),
     )
     report(
-        "fh-lsz-finite-source-linearity-gate-blocks",
-        finite_source_linearity_gate_blocks,
+        "fh-lsz-finite-source-linearity-gate-not-closure",
+        finite_source_linearity_gate_not_closure,
         certificates["fh_lsz_finite_source_linearity_gate"].get("actual_current_surface_status", ""),
     )
     report(

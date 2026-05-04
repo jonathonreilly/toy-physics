@@ -3613,7 +3613,7 @@
     }
   ],
   "multi_tau_target_timeseries_schema_version": "fh_lsz_target_timeseries_v2_multitau",
-  "multiple_source_radii_present": false,
+  "multiple_source_radii_present": true,
   "pass_count": 12,
   "per_configuration_multi_tau_covariance_present": false,
   "proposal_allowed": false,
@@ -3802,5 +3802,5 @@
       "stdev": 0.005123206681944163
     }
   },
-  "verdict": "The current chunks give stable chunk-level symmetric source-shift effective-mass slopes across tau windows 0-9, so the forensics diagnostic is reproducible beyond tau=1.  The acceptance gate still does not pass: per-configuration multi-tau target rows are not yet complete for the full ready set, the finite-source-linearity gate is not passed, and the production fitted-slope response-stability gate remains open."
+  "verdict": "The current chunks give stable chunk-level symmetric source-shift effective-mass slopes across tau windows 0-9, so the forensics diagnostic is reproducible beyond tau=1.  The acceptance gate still does not pass: per-configuration multi-tau target rows are not yet complete for the full ready set, finite-source-linearity support is present, and the production fitted-slope response-stability gate remains open."
 }

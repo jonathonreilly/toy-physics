@@ -50,7 +50,6 @@
   "fail_count": 0,
   "open_blockers": [
     "response_window_acceptance_gate_passed",
-    "finite_source_linearity_gate_passed",
     "fitted_response_stability_passed"
   ],
   "parent_certificates": {
@@ -65,7 +64,7 @@
   "predeclared_criteria": {
     "common_window_production_grade": true,
     "common_window_stability_passed": true,
-    "finite_source_linearity_gate_passed": false,
+    "finite_source_linearity_gate_passed": true,
     "fitted_response_stability_passed": false,
     "pooled_common_window_response_production_grade": true,
     "response_window_acceptance_gate_passed": false,
