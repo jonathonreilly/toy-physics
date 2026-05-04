@@ -3,6 +3,7 @@
 **Date:** 2026-04-15  
 **Role:** direct-universal quantum-gravity / UV-finiteness step
 **Status:** support - UV-finite partition-density bridge on the discrete route
+**Primary runner:** [`scripts/frontier_universal_qg_uv_finite_partition.py`](../scripts/frontier_universal_qg_uv_finite_partition.py) (PASS=7/0)
 
 ## Verdict
 

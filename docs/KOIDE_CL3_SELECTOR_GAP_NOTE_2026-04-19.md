@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-19
 **Status:** exact negative-result / support note on current `main` — the Cl(3) doublet/Kramers route is sharpened and exhausted cleanly, but the charged-lepton package remains bounded
+**Primary runner:** [`scripts/frontier_koide_cl3_selector_gap.py`](../scripts/frontier_koide_cl3_selector_gap.py) (PASS=26/0)
 
 ---
 

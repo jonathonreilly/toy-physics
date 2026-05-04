@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-15  
 **Role:** direct-universal quantum-gravity / smooth local gravitational
+**Primary runner:** [`scripts/frontier_universal_qg_smooth_gravitational_local_identification.py`](../scripts/frontier_universal_qg_smooth_gravitational_local_identification.py) (PASS=6/0)
 continuum identification theorem
 
 ## Verdict

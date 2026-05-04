@@ -1,6 +1,7 @@
 # CPT Exact Preservation in the Cl(3) Staggered Framework
 
 **Status:** proposed_retained exact staggered CPT theorem; audit pending
+**Primary runner:** [`scripts/frontier_cpt_exact.py`](../scripts/frontier_cpt_exact.py) (PASS=53/0)
 after Hermitian-Hamiltonian bridge
 **Bridge:** [PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md](./PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md)
 ## Status

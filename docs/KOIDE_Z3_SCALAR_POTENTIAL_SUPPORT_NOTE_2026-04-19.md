@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-19
 **Status:** exact selected-slice scalar-potential support theorem on the
+**Primary runner:** [`scripts/frontier_koide_z3_scalar_potential.py`](../scripts/frontier_koide_z3_scalar_potential.py) (PASS=22/0)
 charged-lepton Koide review stack; cubic coupling pinned by Clifford trace
 identity; honest gap to the physical selected point recorded
 

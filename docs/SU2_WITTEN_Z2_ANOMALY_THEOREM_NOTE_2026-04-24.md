@@ -5,6 +5,7 @@
 **Claim type:** structural-anomaly cancellation theorem (binary parity arithmetic on retained chiral fermion content)
 **Claim scope:** for the retained SM left-handed chiral fermion content `Q_L : (2,3)_{+1/3}` (3 colour copies) plus `L_L : (2,1)_{-1}` (1 colour copy) replicated across the retained three generations, the count of fundamental SU(2) Weyl doublets is `N_D = n_gen * (N_c + 1) = 12`, even, so the Witten Z_2 global anomaly cancels. Conditional on retained native SU(2) gauge structure, retained N_c = 3 colour count, and retained three-generation structure as upstream inputs.
 **Status:** awaiting independent audit. Under the scope-aware classification framework, ratified status is computed by the audit pipeline from audit-lane data; no author-side retained tier is asserted in source.
+**Primary runner:** [`scripts/frontier_su2_witten_z2_anomaly.py`](../scripts/frontier_su2_witten_z2_anomaly.py) (PASS=35/0)
 
 ## Statement
 

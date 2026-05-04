@@ -3,6 +3,7 @@
 **Status:** support - canonical smooth geometric/action equivalence
 **Date:** 2026-04-15  
 **Role:** direct-universal quantum-gravity / project-native geometric-action
+**Primary runner:** [`scripts/frontier_universal_qg_canonical_smooth_geometric_action.py`](../scripts/frontier_universal_qg_canonical_smooth_geometric_action.py) (PASS=6/0)
 capstone
 
 ## Verdict

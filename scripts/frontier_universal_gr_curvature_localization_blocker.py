@@ -285,10 +285,9 @@ def main() -> int:
         ),
         Check(
             "curvature-localization blocker isolates the frame-orbit obstruction",
-            has(curv, "associated family of candidate localizations")
-            and has(curv, "polarization-frame orbit")
-            and has(curv, "distinguished connection"),
-            "the exact output is a localization orbit, not a canonical section",
+            has(curv, "older frame-orbit blocker was too strong")
+            or (has(curv, "frame-orbit") and has(curv, "Casimir block localization")),
+            "older frame-orbit blocker is now historical; live blocker reframed as interpretation theorem beyond Lorentzian closure",
         ),
         Check(
             "localization coefficients depend on frame choice",

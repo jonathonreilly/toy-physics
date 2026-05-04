@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-15  
 **Role:** direct-universal quantum-gravity / canonical textbook
+**Primary runner:** [`scripts/frontier_universal_qg_canonical_textbook_geometric_action_equivalence.py`](../scripts/frontier_universal_qg_canonical_textbook_geometric_action_equivalence.py) (PASS=6/0)
 Einstein-Hilbert-style geometric-action theorem
 
 ## Verdict

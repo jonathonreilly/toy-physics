@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-15  
 **Role:** direct-universal quantum-gravity / continuum-interpretation frontier
+**Primary runner:** [`scripts/frontier_universal_qg_continuum_bridge_reduction.py`](../scripts/frontier_universal_qg_continuum_bridge_reduction.py) (PASS=5/0)
 
 ## Verdict
 

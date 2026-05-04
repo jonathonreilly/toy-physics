@@ -3,6 +3,7 @@
 **Status:** support - canonical geometric refinement net
 **Date:** 2026-04-15  
 **Role:** direct-universal quantum-gravity / geometric refinement theorem
+**Primary runner:** [`scripts/frontier_universal_qg_canonical_refinement_net.py`](../scripts/frontier_universal_qg_canonical_refinement_net.py) (PASS=6/0)
 
 ## Verdict
 

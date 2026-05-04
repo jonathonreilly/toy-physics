@@ -4,6 +4,7 @@
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / constraint interpretation test  
+**Primary runner:** [`scripts/frontier_universal_gr_block_constraint_interpretation.py`](../scripts/frontier_universal_gr_block_constraint_interpretation.py) (PASS=10/0)
 **Ownership:** universal constraint interpretation only
 
 ## Verdict

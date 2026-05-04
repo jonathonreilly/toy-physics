@@ -1,4 +1,5 @@
 # Omega_Lambda Derivation: The Cosmological Pie Chart
+**Primary runner:** [`scripts/frontier_omega_lambda_derivation.py`](../scripts/frontier_omega_lambda_derivation.py) (all checks pass)
 
 ## Status
 

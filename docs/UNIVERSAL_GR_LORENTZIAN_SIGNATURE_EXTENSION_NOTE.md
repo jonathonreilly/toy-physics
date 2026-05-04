@@ -4,6 +4,7 @@
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / signature-class extension
+**Primary runner:** [`scripts/frontier_universal_gr_lorentzian_signature_extension.py`](../scripts/frontier_universal_gr_lorentzian_signature_extension.py) (PASS=6/0)
 
 ## Verdict
 

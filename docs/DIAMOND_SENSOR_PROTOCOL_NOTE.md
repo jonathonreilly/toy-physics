@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-05  
 **Status:** lab-facing discriminator protocol, intentionally bounded
+**Primary runner:** [`scripts/diamond_sensor_protocol_probe.py`](../scripts/diamond_sensor_protocol_probe.py) (protocol probe table)
 
 ## Purpose
 

@@ -4,6 +4,7 @@
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Purpose:** route-2 assessment from `FULL_GR_AXIOM_FIRST_PATHS_NOTE.md`
+**Primary runner:** [`scripts/frontier_s3_anomaly_spacetime_lift.py`](../scripts/frontier_s3_anomaly_spacetime_lift.py) (PASS=5/0)
 
 ## Verdict
 

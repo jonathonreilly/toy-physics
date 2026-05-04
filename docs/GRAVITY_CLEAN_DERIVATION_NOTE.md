@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-13 (status line narrowed 2026-04-28 per audit-lane verdict)
 **Status:** bounded conditional weak-field gravity chain — IF the framework imposes the self-consistency condition `L^{-1} = G_0`, the Born/mass-density source map `rho = |psi|^2`, and the weak-field test-mass response `S = L(1 - phi)`, THEN the `Z^3` Laplacian Green function gives a `1/r` potential and inverse-square force in lattice units. The IF-conditions are not currently registered as audit-clean dependencies and no primary runner is registered. Not yet an audit-clean derivation from the single axiom alone.
+**Primary runner:** [`scripts/frontier_gravity_clean_derivation.py`](../scripts/frontier_gravity_clean_derivation.py) (all checks pass (slow ~11min))
 
 ---
 

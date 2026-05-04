@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-15  
 **Role:** direct-universal quantum-gravity / smooth global weak gravitational
+**Primary runner:** [`scripts/frontier_universal_qg_smooth_gravitational_global_solution_class.py`](../scripts/frontier_universal_qg_smooth_gravitational_global_solution_class.py) (PASS=6/0)
 solution-class theorem
 
 ## Verdict

@@ -1,13 +1,13 @@
 # Audit Queue
 
-**Total pending:** 1178
-**Ready (all deps already at retained-grade or metadata tiers):** 319
+**Total pending:** 1181
+**Ready (all deps already at retained-grade or metadata tiers):** 321
 
 By criticality:
 - `critical`: 823
 - `high`: 24
 - `medium`: 130
-- `leaf`: 201
+- `leaf`: 204
 
 Auditor (current best Codex GPT model at maximum reasoning by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -16,17 +16,17 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
 | 1 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 414 | 13.20 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_reflection_positivity_check.py` |
-| 2 | `gravity_clean_derivation_note` | bounded_theorem | unaudited | critical | 409 | 14.68 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 2 | `gravity_clean_derivation_note` | bounded_theorem | unaudited | critical | 409 | 14.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gravity_clean_derivation.py` |
 | 3 | `gate_b_grown_distance_law_note` | bounded_theorem | unaudited | critical | 328 | 12.36 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/gate_b_grown_distance_law.py` |
 | 4 | `ew_current_matching_rule_open_gate_note_2026-05-03` | no_go | unaudited | critical | 326 | 13.85 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ew_current_matching_rule_no_go.py` |
 | 5 | `universal_qg_optional_textbook_comparison_note` | positive_theorem | unaudited | critical | 324 | 13.84 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
-| 6 | `universal_gr_lorentzian_global_atlas_closure_note` | positive_theorem | unaudited | critical | 310 | 16.28 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
-| 7 | `universal_gr_isotropic_glue_operator_note` | positive_theorem | unaudited | critical | 309 | 9.78 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 6 | `universal_gr_lorentzian_global_atlas_closure_note` | positive_theorem | unaudited | critical | 310 | 16.28 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_universal_gr_lorentzian_global_atlas_closure.py` |
+| 7 | `universal_gr_isotropic_glue_operator_note` | positive_theorem | unaudited | critical | 309 | 9.78 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_universal_gr_isotropic_glue_operator.py` |
 | 8 | `claude_complex_action_grown_companion_note` | positive_theorem | unaudited | critical | 306 | 11.26 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/complex_action_grown_companion.py` |
 | 9 | `source_resolved_wavefield_escalation_note` | positive_theorem | unaudited | critical | 304 | 10.75 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/source_resolved_wavefield_escalation.py` |
 | 10 | `retarded_field_causality_probe_note` | bounded_theorem | unaudited | critical | 304 | 10.25 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/retarded_field_causality_probe.py` |
 | 11 | `cl3_taste_generation_theorem` | positive_theorem | unaudited | critical | 303 | 13.75 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/verify_cl3_sm_embedding.py` |
-| 12 | `s3_time_bilinear_tensor_primitive_note` | positive_theorem | unaudited | critical | 303 | 11.75 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 12 | `s3_time_bilinear_tensor_primitive_note` | positive_theorem | unaudited | critical | 303 | 11.75 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_time_bilinear_tensor_primitive.py` |
 | 13 | `alt_connectivity_family_sign_note` | bounded_theorem | unaudited | critical | 303 | 10.75 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/ALT_CONNECTIVITY_FAMILY_SIGN_SWEEP.py` |
 | 14 | `causal_field_portability_note` | positive_theorem | unaudited | critical | 302 | 11.74 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/causal_field_portability_probe.py` |
 | 15 | `moving_source_retarded_portability_note` | bounded_theorem | unaudited | critical | 301 | 10.74 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/moving_source_retarded_portability_probe.py` |
@@ -36,14 +36,14 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 19 | `second_grown_family_sign_note` | bounded_theorem | unaudited | critical | 301 | 9.24 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 20 | `third_grown_family_boundary_note` | positive_theorem | unaudited | critical | 301 | 9.24 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/THIRD_GROWN_FAMILY_SIGN_SWEEP.py` |
 | 21 | `electrostatics_superposition_proxy_note` | positive_theorem | unaudited | critical | 301 | 8.74 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/electrostatics_superposition_proxy.py` |
-| 22 | `diamond_sensor_protocol_note` | bounded_theorem | unaudited | critical | 300 | 9.73 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 22 | `diamond_sensor_protocol_note` | bounded_theorem | unaudited | critical | 300 | 9.73 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/diamond_sensor_protocol_probe.py` |
 | 23 | `fourth_family_quadrant_note` | positive_theorem | unaudited | critical | 297 | 9.22 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/FOURTH_FAMILY_QUADRANT_SWEEP.py` |
-| 24 | `s3_time_bilinear_tensor_action_note` | open_gate | unaudited | critical | 297 | 9.22 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 24 | `s3_time_bilinear_tensor_action_note` | open_gate | unaudited | critical | 297 | 9.22 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_time_bilinear_tensor_action.py` |
 | 25 | `fifth_family_radial_boundary_note` | bounded_theorem | unaudited | critical | 296 | 8.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/FIFTH_FAMILY_RADIAL_FAILURE_AUDIT.py` |
 | 26 | `source_resolved_wavefield_v2_note` | positive_theorem | unaudited | critical | 295 | 8.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/source_resolved_wavefield_v2.py` |
 | 27 | `gravity_sign_audit_2026-04-10` | positive_theorem | unaudited | critical | 293 | 12.20 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_correct_coupling.py` |
 | 28 | `tensor_source_map_eta_note` | bounded_theorem | unaudited | critical | 293 | 9.70 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_tensor_source_map_eta.py` |
-| 29 | `universal_gr_discrete_global_closure_note` | positive_theorem | unaudited | critical | 292 | 18.70 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 29 | `universal_gr_discrete_global_closure_note` | positive_theorem | unaudited | critical | 292 | 18.70 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_universal_gr_discrete_global_closure.py` |
 | 30 | `cl3_sm_embedding_theorem` | positive_theorem | unaudited | critical | 292 | 14.70 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/verify_cl3_sm_embedding.py` |
 | 31 | `shapiro_static_discriminator_note` | positive_theorem | unaudited | critical | 291 | 10.19 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/shapiro_static_discriminator.py` |
 | 32 | `signed_gravity_response_lane_status_note_2026-04-26` | no_go | unaudited | critical | 289 | 12.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_signed_gravity_response_lane_status.py` |
@@ -63,7 +63,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 46 | `yt_bridge_nonlocal_corrections_note` | bounded_theorem | unaudited | critical | 280 | 10.63 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_nonlocal_corrections.py` |
 | 47 | `yt_bridge_uv_class_uniqueness_note` | bounded_theorem | unaudited | critical | 279 | 9.63 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_uv_class_uniqueness.py` |
 | 48 | `oh_schur_boundary_action_note` | positive_theorem | unaudited | critical | 278 | 12.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_oh_schur_boundary_action.py` |
-| 49 | `cosmology_scale_identification_and_reduction_note` | bounded_theorem | unaudited | critical | 277 | 14.62 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 49 | `cosmology_scale_identification_and_reduction_note` | bounded_theorem | unaudited | critical | 277 | 14.62 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_cosmology_scale_identification.py` |
 | 50 | `charged_lepton_two_higgs_canonical_reduction_note` | positive_theorem | unaudited | critical | 277 | 13.62 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_charged_lepton_two_higgs_canonical_reduction.py` |
 
 ## Citation cycle break targets

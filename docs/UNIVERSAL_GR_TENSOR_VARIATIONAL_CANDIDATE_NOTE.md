@@ -5,6 +5,7 @@
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / theorem step  
 **Purpose:** identify the first exact tensor-valued `3+1` variational candidate
+**Primary runner:** [`scripts/frontier_universal_gr_tensor_variational_candidate.py`](../scripts/frontier_universal_gr_tensor_variational_candidate.py) (PASS=6/0)
 from the axiom-side observable principle and the exact `3+1` kinematic lift
 
 ## Verdict

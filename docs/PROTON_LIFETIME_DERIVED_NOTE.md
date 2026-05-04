@@ -1,4 +1,5 @@
 # Proton Lifetime Derived from Cl(3) on Z^3
+**Primary runner:** [`scripts/frontier_proton_lifetime_derived.py`](../scripts/frontier_proton_lifetime_derived.py) (PASS=25/0)
 
 ## Status
 

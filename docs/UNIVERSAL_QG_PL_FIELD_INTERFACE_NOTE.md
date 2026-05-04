@@ -3,6 +3,7 @@
 **Date:** 2026-04-15  
 **Role:** direct-universal quantum-gravity / project-native continuum-interface theorem
 **Status:** support - canonical PL field interface
+**Primary runner:** [`scripts/frontier_universal_qg_pl_field_interface.py`](../scripts/frontier_universal_qg_pl_field_interface.py) (PASS=5/0)
 
 ## Verdict
 

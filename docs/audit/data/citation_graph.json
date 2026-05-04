@@ -11585,6 +11585,22 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "s3_time_observable_hessian_route_note",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "s3_time_observable_hessian_route_note",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "s3_time_observable_hessian_route_note",
+      "to": "s3_general_r_derivation_note"
+    },
+    {
+      "from": "s3_time_observable_hessian_route_note",
+      "to": "s3_time_transfer_matrix_bridge_note"
+    },
+    {
       "from": "s3_time_spacetime_tensor_primitive_note",
       "to": "s3_general_r_derivation_note"
     },
@@ -26691,9 +26707,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "4d27a4224e509f4378a1a7b8b9617c5ef1939b4946c3d5bed2b1624f05600dc1",
+      "note_hash": "d61774c39602a9bd6449560e2cfab43b36461fec0d1fdd31ffae9c853108c4e0",
       "path": "docs/ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_alpha_lm_geometric_mean_identity.py",
       "title": "alpha_LM Geometric-Mean Identity Theorem"
     },
     "alpha_s_derived_note": {
@@ -29426,9 +29442,9 @@
         "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
         "ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25"
       ],
-      "note_hash": "dca72fefc0dc9e7d23d63d70195d2f448e5e7b890585ee88d157ae0659a6451c",
+      "note_hash": "eb384c4a1f760c535bcd26a7b72a7a67bf1c1d753dd91386633b36080980f5a6",
       "path": "docs/CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_ckm_n9_structural_family_koide_bridge.py",
       "title": "Complete n/N_color^2 Structural Family from CKM Retained Inputs: Koide-Bridge Support"
     },
     "ckm_neutron_edm_bound_note": {
@@ -30029,9 +30045,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "79581ac4d7cf0bc5aea04c543537a32dd2ce1354a959eb4833d8c8e94fed22ce",
+      "note_hash": "c77c2d1d694c47b3e6aa9381d5c5b1af3189fabb16bebf6fde9989729e703e74",
       "path": "docs/COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_cosmology_scale_identification.py",
       "title": "Cosmology Scale Identification and Reduction"
     },
     "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25": {
@@ -30064,9 +30080,9 @@
       "deps": [
         "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
       ],
-      "note_hash": "3afa404d43a363c2dde5dd7c210c3aaa95d92fa696759bab6ceac344f83b7826",
+      "note_hash": "ba6ae7ac11c01a92fa3eba0ffc25b1668a0de017d8caa4c44e39f42b008722ed",
       "path": "docs/CPT_EXACT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_cpt_exact.py",
       "title": "CPT Exact Preservation in the Cl(3) Staggered Framework"
     },
     "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02": {
@@ -30392,9 +30408,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "d692ef66417cf7e37d47543bf54f4d4ff73090742644c2bbc65d171d5fd23792",
+      "note_hash": "86ddacc78aa0158e752ad054254e973ee89ca0b62f7ef9a355b654205fc868e5",
       "path": "docs/DIAMOND_SENSOR_PROTOCOL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/diamond_sensor_protocol_probe.py",
       "title": "Diamond Sensor Protocol Note"
     },
     "diamond_signal_budget_hardening_note": {
@@ -30579,6 +30595,17 @@
       "path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md",
       "runner_path": "scripts/directional_b_geometry_normalized_overlap_map.py",
       "title": "Directional-B Geometry-Normalized Overlap Subcritical `N=12` Note"
+    },
+    "discrete_einstein_regge_lift_note": {
+      "claim_id": "discrete_einstein_regge_lift_note",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "f54acc6522c9bde706709c38500f62f2167ad35fdb2341c232191afe9aa1adde",
+      "path": "docs/DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md",
+      "runner_path": "scripts/frontier_discrete_einstein_regge_lift.py",
+      "title": "Discrete Einstein/Regge Lift on the Restricted Strong-Field Class"
     },
     "dispersion_high_p_tiebreaker_note": {
       "claim_id": "dispersion_high_p_tiebreaker_note",
@@ -32640,9 +32667,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "51c11b91609e462a2844b7b177ecf106ee354f825ddabc2a7992d7a387f29b32",
+      "note_hash": "bbe0ff8ad8f45b3e7a2c8c4957f09ef54b435b73a120921f4613ced4ced30eb2",
       "path": "docs/DM_NEUTRINO_WEAK_VECTOR_THEOREM_NOTE_2026-04-15.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_neutrino_weak_vector_theorem.py",
       "title": "DM Neutrino Weak Vector Theorem"
     },
     "dm_neutrino_yukawa_cascade_candidate_note_2026-04-14": {
@@ -35125,9 +35152,9 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "d3f1ac27aca3ec69e276e2de1415565b2fcf371ddb927d7105179934e0799121",
+      "note_hash": "ce0c9dca9ae8b03878b530848b13bddee60537ff60e8ca6a8da88e472354ca62",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion `3d+1` Exact-Solve Doublet Theorem"
     },
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20": {
@@ -35736,9 +35763,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "5be3d259dc3b28ca373d03610b045f4e2f1980dad03890c7a0b0adb8e63ded6d",
+      "note_hash": "1fcb8eaf922efbfb451183e08c989add84ae80be2111bfdbd257e3649aeb5eba",
       "path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_gravity_clean_derivation.py",
       "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)"
     },
     "gravity_cosmology_tower_lambda_spectral_bridge_theorem_note_2026-04-25": {
@@ -35774,9 +35801,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "7a749d2cf4576fe5b9f6e5af1baaac73fc5029252d033af94b7fd6eef0fdc63b",
+      "note_hash": "a634275d4a83214326ec81042027a498fa5ccde56e0369705f07491322061ca4",
       "path": "docs/GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_gravity_full_self_consistency.py",
       "title": "Full Self-Consistency Forces Poisson on the Entire Framework Surface"
     },
     "gravity_law_cleanup_note": {
@@ -37376,9 +37403,9 @@
         "charged_lepton_mass_hierarchy_review_note_2026-04-17",
         "charged_lepton_koide_review_packet_2026-04-18"
       ],
-      "note_hash": "c6c21d7044396a5b171ca9525724d37730a7935b39124128b281db1888a07593",
+      "note_hash": "8885c22d594cc2acc4c4ccec75859a50730348f15c88466ef2bf5a74d1c288a8",
       "path": "docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_cl3_selector_gap.py",
       "title": "Koide Cl(3) \u2192 SM Embedding \u2014 Selector Gap Note"
     },
     "koide_closure_atlas_issues_flagged": {
@@ -38407,9 +38434,9 @@
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "dfd4aafc5cb26893333c2b84eaec7ebf53daffb8bc409c68bbfc3f90cd0ba9f5",
+      "note_hash": "9a6c36a67f25f10cbe2c7aeb5b3c3654cd90048ed44d3b93215262d636e71d5e",
       "path": "docs/KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_z3_scalar_potential.py",
       "title": "Koide Z\u00b3 Scalar Potential \u2014 Lepton Mass Tower Note"
     },
     "koide_z3_scalar_potential_support_note_2026-04-19": {
@@ -38422,9 +38449,9 @@
         "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
         "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16"
       ],
-      "note_hash": "0db417d51ae316142aa5dac78837458843c26f6e1f0b35fb970e041d32fb2e4f",
+      "note_hash": "f38260a90b9b5ada7a39ddca7e4b993b7788273f8f9c8f8cfb99acf170f825eb",
       "path": "docs/KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_z3_scalar_potential.py",
       "title": "Koide Z\u00b3 Scalar Potential Support Note"
     },
     "kubo_continuum_limit_families_note": {
@@ -40924,9 +40951,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "20116e4c0db6b864b3573327b9a4cfb360fcde194d143520c3626c74dbe098f0",
+      "note_hash": "c07d7d399db939eb18d93ba1fbcfe77291697fbda6460771b5f4031b8fb79b03",
       "path": "docs/NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py",
       "title": "Neutrino Majorana Lower-Level Pairing No-Go"
     },
     "neutrino_majorana_nambu_quadratic_comparator_note": {
@@ -41668,9 +41695,9 @@
       "deps": [
         "r_base_group_theory_derivation_theorem_note_2026-04-24"
       ],
-      "note_hash": "37a6a9ee9ce4bfdd042c3173c547b75247a181ed9a772bbe57d5738d91f33a79",
+      "note_hash": "9162631bd665b6bba7c021eb0b64ef48407b8f18cdec0f2216028b4f9963abda",
       "path": "docs/OMEGA_LAMBDA_DERIVATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_omega_lambda_derivation.py",
       "title": "Omega_Lambda Derivation: The Cosmological Pie Chart"
     },
     "omega_lambda_matter_bridge_theorem_note_2026-04-22": {
@@ -42440,9 +42467,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "6f508bfa6c4d683283edc6bcaeed14ced40b21aa64938a475a5f3dd3c31d4d7a",
+      "note_hash": "ee2d09c8b7d8103ae71164da9f599b37abad582d129d9f0988fec0e24500c2e6",
       "path": "docs/PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_active_four_real_source_from_transport.py",
       "title": "PMNS Active Four-Real Source From Transport"
     },
     "pmns_branch_conditioned_quadratic_sheet_closure_note": {
@@ -42517,9 +42544,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "000e7bfbca4e9e91bbb2e7fffd27436565bcfda0572a29ae36ed8b7f47013ac9",
+      "note_hash": "679a5ed021fdf733c1e5c45a96f41525066e05000a25fbc8586c47ca578e850b",
       "path": "docs/PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_c3_nontrivial_current_boundary.py",
       "title": "PMNS `C3` Nontrivial-Character Current Boundary"
     },
     "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03": {
@@ -42662,9 +42689,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "534df54467bb341951cd0d858a74d9d16c1c2eb5e29c02496610a2621a7bb60a",
+      "note_hash": "cd34b676ea5fd7bd50ca5b415f42c981fdc3118421ab7d6df44237b4c839ec7d",
       "path": "docs/PMNS_LOWER_LEVEL_END_TO_END_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_lower_level_end_to_end_closure.py",
       "title": "PMNS Lower-Level End-to-End Closure"
     },
     "pmns_minimal_branch_nonselection_note": {
@@ -42888,9 +42915,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "8b75a900f7e1e7408230c8ae7ad8cbab72e734669b8f0032864149697d3b757b",
+      "note_hash": "2a76a4a3deb5cd9b701acce86596459225e3fc877266e2ef758e5db61633a7c8",
       "path": "docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py",
       "title": "PMNS Selector Three-Identity Support Note"
     },
     "pmns_selector_three_identity_support_proposal_readme_2026-04-21": {
@@ -43162,9 +43189,9 @@
       "deps": [
         "bminusl_anomaly_freedom_theorem_note_2026-04-24"
       ],
-      "note_hash": "416fe64000b4b60c505e7dede9f0df5c4f7b099feab0f218bad536500cd9f271",
+      "note_hash": "073fa28eee368370810893fd0de241fd2b46fe7452a581374b4303c021f05046",
       "path": "docs/PROTON_LIFETIME_DERIVED_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_proton_lifetime_derived.py",
       "title": "Proton Lifetime Derived from Cl(3) on Z^3"
     },
     "publication.ci3_z3.arxiv_draft": {
@@ -46096,9 +46123,9 @@
         "ckm_from_mass_hierarchy_note",
         "ckm_five_sixths_bridge_support_note"
       ],
-      "note_hash": "f1b7e70c2bc9a8c184d71cd8dd84d88210050b055936945e3b7f2f68ec4a45e1",
+      "note_hash": "ee03fd76721c27320f90059bf2142b705f78a3f8d0e1c7236f030f1e8b3f4c00",
       "path": "docs/QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_quark_mass_ratio_review.py",
       "title": "Quark Mass-Ratio Support Packet (2026-04-18)"
     },
     "quark_mass_ratios_taste_staircase_support_note_2026-04-25": {
@@ -46752,9 +46779,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "67c521b4acbaec1fa762128cb3e5c1408b0963c16e9e50451cc95ee5629e2493",
+      "note_hash": "05d184ea284b36593b3f2e7f543f599587c92a0394c1c0d0278b0c7fd9916778",
       "path": "docs/S3_ANOMALY_SPACETIME_LIFT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_anomaly_spacetime_lift.py",
       "title": "`S^3` + Anomaly-Forced Time: Axiom-First Spacetime Lift"
     },
     "s3_boundary_link_theorem_note": {
@@ -46821,9 +46848,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "8498695bfae074f5b2adaa38b803c17011a9416aa0e21c3dd5441175f9a6b17d",
+      "note_hash": "aaf672cdfe0b40699642079567a1c8a4e21bf0f44d90326c92037cd8854c3536",
       "path": "docs/S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_bilinear_tensor_action.py",
       "title": "Route 2 Exact Tensorized Action from the Bilinear Carrier"
     },
     "s3_time_bilinear_tensor_primitive_note": {
@@ -46832,9 +46859,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "dd34318c70f983ae387ff32c953dc93adeb0b1bf5835dd0ecfe0d98b00b576be",
+      "note_hash": "71691bb2becf76b3c53009cf5b642ef8554e2c495385daccbbba38761ae22bf0",
       "path": "docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_bilinear_tensor_primitive.py",
       "title": "Route 2 Exact Bilinear Tensor Primitive"
     },
     "s3_time_constructed_support_tensor_primitive_note": {
@@ -46843,10 +46870,26 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "216afda747abab954d95dbfbf216dc51a37e43b94b63ee43b3f731779f09f07a",
+      "note_hash": "11d3f5ea5557700d1dba00ce5154e88e115dfe039370480c88635befbf93cc65",
       "path": "docs/S3_TIME_CONSTRUCTED_SUPPORT_TENSOR_PRIMITIVE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_constructed_support_tensor_primitive.py",
       "title": "Constructed Route-2 Support Tensor Primitive: Response Jacobian of the Bounded Prototype"
+    },
+    "s3_time_observable_hessian_route_note": {
+      "claim_id": "s3_time_observable_hessian_route_note",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [
+        "observable_principle_from_axiom_note",
+        "anomaly_forces_time_theorem",
+        "s3_general_r_derivation_note",
+        "s3_time_transfer_matrix_bridge_note"
+      ],
+      "note_hash": "37459f04459e8abf6a224c530925a4fc538148ac229f28ea8afa0566806fac38",
+      "path": "docs/S3_TIME_OBSERVABLE_HESSIAN_ROUTE_NOTE.md",
+      "runner_path": null,
+      "title": "`S^3` + Anomaly-Forced Time: Observable-Hessian Route"
     },
     "s3_time_primitive_chain_note": {
       "claim_id": "s3_time_primitive_chain_note",
@@ -46858,6 +46901,17 @@
       "path": "docs/S3_TIME_PRIMITIVE_CHAIN_NOTE.md",
       "runner_path": null,
       "title": "Route 2 Primitive Chain: Readout and Time-Coupling Update"
+    },
+    "s3_time_spacetime_observable_route_note": {
+      "claim_id": "s3_time_spacetime_observable_route_note",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "e7429b11bf70e992474aada43fa025ffb9d2092f7c4d6c41ef99085081e1bc36",
+      "path": "docs/S3_TIME_SPACETIME_OBSERVABLE_ROUTE_NOTE.md",
+      "runner_path": null,
+      "title": "Route 2 Observable Pass: `S^3` + Anomaly-Forced Time"
     },
     "s3_time_spacetime_tensor_primitive_note": {
       "claim_id": "s3_time_spacetime_tensor_primitive_note",
@@ -46891,9 +46945,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "fcc6017e5156f99bcea2d62a14c375c873052e18ec0ca03987567070cb52e9cc",
+      "note_hash": "eb6a2ce547f2d04dbbdbc05722c09277fd7e12d2634513bcdfba0c8ccf73b723",
       "path": "docs/S3_TIME_TENSOR_PRIMITIVE_PROTOTYPE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_tensor_primitive_prototype.py",
       "title": "Route 2 Tensor Primitive Prototype on `A1 x {E_x, T1x}`"
     },
     "s3_time_tensorized_schur_primitive_note": {
@@ -48935,9 +48989,9 @@
         "graph_first_su3_integration_note",
         "three_generation_structure_note"
       ],
-      "note_hash": "12fd7ef6374d06440447bcab675a44b6736448e402a8e00dee78cf29bf24b429",
+      "note_hash": "5bd79b8539e45eaea9268595680a9b91b01f56f17c03f0f8cf3472474991457a",
       "path": "docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_su2_witten_z2_anomaly.py",
       "title": "SU(2) Witten Z_2 Global Anomaly Cancellation Theorem"
     },
     "su3_adjoint_casimir_theorem_note_2026-05-02": {
@@ -49021,9 +49075,9 @@
         "graph_first_su3_integration_note",
         "left_handed_charge_matching_note"
       ],
-      "note_hash": "89085dde243dd69e8cd4adb9ce663291652c1283152e79d3a4e9450c34286478",
+      "note_hash": "5a69e9f50da6e6d6fa3d134c87be7de6e411ba609051b2d373cbb6074951619b",
       "path": "docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_su3_cubic_anomaly_cancellation.py",
       "title": "SU(3)^3 Cubic Gauge Anomaly Cancellation Theorem"
     },
     "su3_dabc_symmetric_theorem_note_2026-05-02": {
@@ -50106,9 +50160,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "d3827ea23e8d5ec2163df75606fcc1526578e6e288c69d041a9ac5857a2df289",
+      "note_hash": "8b3444d49dc811c03b96a57299de698a32d0b308c8b801f55f8297ce573e4af8",
       "path": "docs/UNIVERSAL_GR_BLOCK_CONSTRAINT_INTERPRETATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_block_constraint_interpretation.py",
       "title": "Universal GR Block-Constraint Interpretation on `PL S^3 x R`"
     },
     "universal_gr_block_ident_note": {
@@ -50152,9 +50206,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "bfdc6443d9f4919b73786224e769d26996ba555990b9970e6919c91f0653d0f0",
+      "note_hash": "f58227a81ef8ab21eb14e20e59d0a759e1c161198024bb10036bd427c306d879",
       "path": "docs/UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_casimir_block_localization.py",
       "title": "Universal GR Casimir Block Localization on `PL S^3 x R`"
     },
     "universal_gr_complement_canonical_note": {
@@ -50188,9 +50242,9 @@
         "universal_gr_isotropic_glue_operator_note",
         "universal_gr_discrete_global_closure_note"
       ],
-      "note_hash": "e6b5e195abfbeac6c36aeb5b391a251e96e100dab04b6c209c73f12dc644415c",
+      "note_hash": "ee358afd2b2ffc5626c0aeaaffb7e2cf49fefcfd98a1e5c4acf661951bbbd553",
       "path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_curvature_localization_blocker.py",
       "title": "Universal GR Curvature Localization Blocker Note"
     },
     "universal_gr_discrete_global_closure_note": {
@@ -50199,9 +50253,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "51fb6531f8553565be1f300cefa285c00c955c01c98cbbc5d3f72061d09c01bf",
+      "note_hash": "fcd50c05068fbe15b2e286f9439981861df4d38a162371572c1e8a3e0b796b44",
       "path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_discrete_global_closure.py",
       "title": "Universal GR Discrete Global Closure on `PL S^3 x R`"
     },
     "universal_gr_invariant_frame_obstruction_note": {
@@ -50221,9 +50275,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "1593fd502000b7f2ac37efc1c4d64d0a170672468c904925a2ab45f8faa60db1",
+      "note_hash": "e38357b3c9cf4bde649ff2351a8bdb5270d7e90801250e08e43228eec9b8050b",
       "path": "docs/UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_invariant_nonlinear_completion.py",
       "title": "Universal GR Invariant Nonlinear Completion on `PL S^3 x R`"
     },
     "universal_gr_isotropic_glue_operator_note": {
@@ -50232,9 +50286,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "c82a2886275748c4eb69dc28ebf5ce5a3d77f66e32cbe2c647ea790ec8205ed7",
+      "note_hash": "45d79e5b045db2f9643a1d7bbf7ae312c8c407b879080383fe95484441f312c5",
       "path": "docs/UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_isotropic_glue_operator.py",
       "title": "Universal GR Isotropic Glue Operator on `PL S^3 x R`"
     },
     "universal_gr_isotropic_schur_localization_note": {
@@ -50243,9 +50297,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "f1824029195ac26e2016c88b405da580edc1be55313297e72d51b729be99ddae",
+      "note_hash": "b7efa3dcfaa75405f53da049a6c8100225f6a736a22911e4a401fd33ea0bc369",
       "path": "docs/UNIVERSAL_GR_ISOTROPIC_SCHUR_LOCALIZATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_isotropic_schur_localization.py",
       "title": "Universal GR Isotropic Schur Localization on `PL S^3 x R`"
     },
     "universal_gr_lambda_bypass_note": {
@@ -50265,9 +50319,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "0f3bed8572f0fd5043f73538ec6bf9df4ad719b33d87ba224d61e9c6c6b35cc4",
+      "note_hash": "21779f859ebe36bed32e2ac611071dfa0b2dc365fc992c0d0fc35977177481e6",
       "path": "docs/UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_lorentzian_global_atlas_closure.py",
       "title": "Universal GR Lorentzian Global Atlas Closure on `PL S^3 x R`"
     },
     "universal_gr_lorentzian_signature_extension_note": {
@@ -50276,9 +50330,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "62779cce3628d562890e032d44dbd7265700ca2801f3bd6d3c2d2c19c89900b6",
+      "note_hash": "06a5564a22d5edc4df48c5ad0cfba4159f750def79616fd046cc3041830b4c45",
       "path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_lorentzian_signature_extension.py",
       "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`"
     },
     "universal_gr_polarization_frame_bundle_attempt": {
@@ -50335,9 +50389,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "f91bf6570d524c0ae7d8cc0cb9f0f745fd48b74d26f5606e548743f2da33caa1",
+      "note_hash": "3d6799f8c8fa02bfd6b00cc344ec665d33be29778a81860c30de6f1dc16a827a",
       "path": "docs/UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_supermetric_normal_form.py",
       "title": "Universal GR Supermetric Normal Form on `PL S^3 x R`"
     },
     "universal_gr_tensor_action_blocker_note": {
@@ -50346,9 +50400,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "45d3d57924457fd80d7fd4daf7bfda3717e7d90ab93a92c707bd6c0f0b0b0375",
+      "note_hash": "7fb0e1d0764e8425221c51099acf3f40ba6635096c81450a307a021d0084a56c",
       "path": "docs/UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_tensor_action_blocker.py",
       "title": "Universal GR Tensor Action Blocker Note"
     },
     "universal_gr_tensor_quotient_uniqueness_note": {
@@ -50377,9 +50431,9 @@
         "universal_gr_tensor_quotient_uniqueness_note",
         "universal_gr_curvature_localization_blocker_note"
       ],
-      "note_hash": "0bdffe1aa6ce61fbea115f1bcc0b48dab82875eb3b09dcb348153e6e1eec228b",
+      "note_hash": "25c3555a630fcaf0c87e8c46c8683a09972a0f6317fead2a6548629759204d40",
       "path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_tensor_variational_candidate.py",
       "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`"
     },
     "universal_qg_abstract_gaussian_completion_note": {
@@ -50390,9 +50444,9 @@
       "deps": [
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "067f0989b6bec10f252a04932398e27776615bfcfb094dd909b3c6c4bfaac026",
+      "note_hash": "66e15753cfb1107d410bc3e014e4ba8345df5ada8477c7815a82082ba54c05f1",
       "path": "docs/UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_abstract_gaussian_completion.py",
       "title": "Universal QG Abstract Gaussian Completion on `PL S^3 x R`"
     },
     "universal_qg_canonical_refinement_net_note": {
@@ -50405,9 +50459,9 @@
         "universal_qg_uv_finite_partition_note",
         "universal_qg_projective_schur_closure_note"
       ],
-      "note_hash": "45276d94ee72abf6b728b2bbf4be0dbe37331a838d3e2e2a07b7686f3128c568",
+      "note_hash": "89edc744780a164e76fc9bf4c26aee5e1ca4e743632abb4eb4334df9ad042664",
       "path": "docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_canonical_refinement_net.py",
       "title": "Universal QG Canonical Geometric Refinement Net on `PL S^3 x R`"
     },
     "universal_qg_canonical_smooth_geometric_action_note": {
@@ -50421,9 +50475,9 @@
         "universal_gr_lorentzian_global_atlas_closure_note",
         "universal_gr_lorentzian_signature_extension_note"
       ],
-      "note_hash": "d6bc7e3c2cab5a4cb2c6b032c9bf13fa771c0cba16cff8c0e136a97659f059e4",
+      "note_hash": "0963dda0e3e2279261fff9ac3477d9210dceae6abc6c67bc968fd9cb3a414b97",
       "path": "docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_canonical_smooth_geometric_action.py",
       "title": "Universal QG Canonical Smooth Geometric/Action Equivalence"
     },
     "universal_qg_canonical_smooth_gravitational_weak_measure_note": {
@@ -50434,9 +50488,9 @@
       "deps": [
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "b346f882988bfdd4a57b99a464621e3abb12a69956e9e8ae014029f3489fdcb8",
+      "note_hash": "ee723739e507ff2fb65770fd86632c0f1d93d136776ef58d5b4634ea3f0fcbd8",
       "path": "docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_canonical_smooth_gravitational_weak_measure.py",
       "title": "Universal QG Canonical Smooth Gravitational Weak/Measure Equivalence"
     },
     "universal_qg_canonical_textbook_continuum_gr_closure_note": {
@@ -50447,9 +50501,9 @@
       "deps": [
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "b1b657db581cb1111dacf9d92c1c7d6696738a2c9402ab24b0c006db30b83ab4",
+      "note_hash": "1b34c50f077daa34c077fe47a5153f0d73e90af4bf4c29959fca8510abae740c",
       "path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_canonical_textbook_continuum_gr_closure.py",
       "title": "Universal QG Canonical Textbook Continuum Gravitational Closure"
     },
     "universal_qg_canonical_textbook_geometric_action_equivalence_note": {
@@ -50460,9 +50514,9 @@
       "deps": [
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "20a8163b5d3a9d51914992b2d7615ba57eb69ee4e08a3102e97cc737a3a9133b",
+      "note_hash": "76021009b45f9cff7c6e83911a3ec2d0173db469431f5b59902fd7a340843c28",
       "path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_canonical_textbook_geometric_action_equivalence.py",
       "title": "Universal QG Canonical Textbook Einstein-Hilbert-Style Geometric/Action Equivalence"
     },
     "universal_qg_canonical_textbook_weak_measure_equivalence_note": {
@@ -50473,9 +50527,9 @@
       "deps": [
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "b9374b7e783b813410eacc7f1d838a66b5329b898a5d6917ef308cafcf2c1ee5",
+      "note_hash": "dda47f71134e5a73cbd54600c7f1b7780dbf4a78889ad9f1a06aa04e8601d62d",
       "path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_canonical_textbook_weak_measure_equivalence.py",
       "title": "Universal QG Canonical Textbook Weak/Measure Equivalence"
     },
     "universal_qg_continuum_bridge_reduction_note": {
@@ -50486,9 +50540,9 @@
       "deps": [
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "30de285c4f30ffbba0326e2154d812a258e5b5dbd435178c8a34838c6ec13bc7",
+      "note_hash": "9ef48ec4f27a6cf6aaba83d45d0a56d5547d8532925f5102d24a9566a33f46be",
       "path": "docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_continuum_bridge_reduction.py",
       "title": "Universal QG Continuum Bridge Reduction Note"
     },
     "universal_qg_external_fe_smooth_equivalence_note": {
@@ -50499,9 +50553,9 @@
       "deps": [
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "8dbebfc4c48f6113369168ae9eb95825aeae25de90b14fbb6171f2789403df74",
+      "note_hash": "0cde0b2e0755c81de2b469503f4152bf04a2d3eacbb8a4e982e82522fa16bb4a",
       "path": "docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_external_fe_smooth_equivalence.py",
       "title": "Universal QG External FE-to-Smooth Weak/Measure Equivalence"
     },
     "universal_qg_inverse_limit_closure_note": {
@@ -50514,9 +50568,9 @@
         "universal_qg_projective_schur_closure_note",
         "universal_qg_canonical_refinement_net_note"
       ],
-      "note_hash": "37fbf738ad724f260a46a808a3acd2a86a1e16039b4f12e73fc653f71d6d9e87",
+      "note_hash": "60436315233bf82100c3927a93137f2561472202cd789ccc80d14f82b0afe1f0",
       "path": "docs/UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_inverse_limit_closure.py",
       "title": "Universal QG Inverse-Limit Closure on `PL S^3 x R`"
     },
     "universal_qg_optional_textbook_comparison_note": {
@@ -50540,9 +50594,9 @@
         "universal_qg_inverse_limit_closure_note",
         "universal_qg_abstract_gaussian_completion_note"
       ],
-      "note_hash": "243655133388760bc21ace643b19d81c1e35e4e5b1f9139c426f9a3b5c97aa67",
+      "note_hash": "0f405a889fbf8cff4bda1a49f863c2d0e7d101b434a01317c52738f83d9f55c1",
       "path": "docs/UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_pl_field_interface.py",
       "title": "Universal QG Canonical PL Field Interface on `PL S^3 x R`"
     },
     "universal_qg_pl_sobolev_interface_note": {
@@ -50556,9 +50610,9 @@
         "universal_qg_canonical_refinement_net_note",
         "universal_qg_abstract_gaussian_completion_note"
       ],
-      "note_hash": "e1b396338fa17c18ae087744a1a52afee098184e6d46ef76919498c5dbabba89",
+      "note_hash": "f671762fb3ef15ff74fc6bd07215499d627522ce75609aa5afe18af97f2f997b",
       "path": "docs/UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_pl_sobolev_interface.py",
       "title": "Universal QG Canonical PL Sobolev Interface on `PL S^3 x R`"
     },
     "universal_qg_pl_weak_form_note": {
@@ -50573,9 +50627,9 @@
         "universal_qg_abstract_gaussian_completion_note",
         "universal_qg_pl_field_interface_note"
       ],
-      "note_hash": "8f60ade4d2b217b6622dd27c318c7d1437f98da8d2c230658b27edd38c79f35d",
+      "note_hash": "cbf1defe7e7debeef04d75c06d1d263485f72f1ae7de21cf18b25bbd217f956b",
       "path": "docs/UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_pl_weak_form.py",
       "title": "Universal QG Canonical PL Weak-Form Closure on `PL S^3 x R`"
     },
     "universal_qg_projective_schur_closure_note": {
@@ -50588,9 +50642,9 @@
         "universal_qg_uv_finite_partition_note",
         "universal_qg_canonical_refinement_net_note"
       ],
-      "note_hash": "c9cd2bad7bca2867c9f60529c1e5469c04e9de6905776487eb64fb976f537477",
+      "note_hash": "d192e97c1c2ecf07557ed0d68a8997850004f4cbaa7561e6a94015f1713a478f",
       "path": "docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_projective_schur_closure.py",
       "title": "Universal QG Projective Schur Closure Note"
     },
     "universal_qg_smooth_gravitational_global_atlas_note": {
@@ -50614,9 +50668,9 @@
       "deps": [
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "376c4c1de29234d74f1e4d783db6d2037a3aebc5e70913b73f4a53dc705bb093",
+      "note_hash": "8dbeebdcd3f58c23a7f8cc5e3d2feea038473c6f5885ad42c7de9d192db7bf3e",
       "path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_smooth_gravitational_global_solution_class.py",
       "title": "Universal QG Smooth Gravitational Global Solution Class"
     },
     "universal_qg_smooth_gravitational_local_identification_note": {
@@ -50627,9 +50681,9 @@
       "deps": [
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "4f17e4559f2c80c40119a40e136856c5f262a4818b229aa8d20047d5d74f72c6",
+      "note_hash": "c5829a799658320d3d470e9ea068a1148190ed188bba599f52c5b85f96e8822c",
       "path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_smooth_gravitational_local_identification.py",
       "title": "Universal QG Smooth Gravitational Local Identification"
     },
     "universal_qg_uv_finite_partition_note": {
@@ -50641,9 +50695,9 @@
         "universal_gr_lorentzian_global_atlas_closure_note",
         "universal_qg_projective_schur_closure_note"
       ],
-      "note_hash": "c8c50d38c786df8bba90e33c7c0b4d2165f6c34c132f40d53280e0ff77f18987",
+      "note_hash": "794c54bed1bc7d25853bcb5f2d7ece344ab84cc8c671b655da354ba840526255",
       "path": "docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_qg_uv_finite_partition.py",
       "title": "Universal QG UV-Finite Partition Density Note"
     },
     "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24": {
@@ -53532,6 +53586,7 @@
     "dirac_v4_convergence_note",
     "dirac_weak_coupling_note",
     "directional_b_density_stencil_note",
+    "discrete_einstein_regge_lift_note",
     "dispersion_high_p_tiebreaker_note",
     "dispersion_relation_note",
     "distance_law_3d_64_closure_note_2026-04-11",
@@ -54005,6 +54060,7 @@
     "s3_time_bilinear_tensor_primitive_note",
     "s3_time_constructed_support_tensor_primitive_note",
     "s3_time_primitive_chain_note",
+    "s3_time_spacetime_observable_route_note",
     "s3_time_tensor_build_memo",
     "s3_time_tensor_primitive_prototype_note",
     "s3_time_theta_to_slice_coupling_note",
@@ -54245,7 +54301,7 @@
       "bounded_theorem": 57,
       "meta": 8,
       "no_go": 7,
-      "none": 1719,
+      "none": 1722,
       "open_gate": 7,
       "positive_theorem": 74
     },
@@ -54253,14 +54309,14 @@
       "bounded_theorem": 555,
       "meta": 8,
       "no_go": 112,
-      "none": 457,
+      "none": 460,
       "open_gate": 114,
       "positive_theorem": 626
     },
-    "edge_count": 6354,
-    "leaf_count": 550,
-    "node_count": 1872,
-    "root_count": 899,
-    "runners_with_path": 1446
+    "edge_count": 6358,
+    "leaf_count": 553,
+    "node_count": 1875,
+    "root_count": 901,
+    "runners_with_path": 1503
   }
 }

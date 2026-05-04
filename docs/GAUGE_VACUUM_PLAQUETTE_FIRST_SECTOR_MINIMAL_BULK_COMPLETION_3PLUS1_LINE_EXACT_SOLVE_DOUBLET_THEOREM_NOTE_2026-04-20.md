@@ -3,6 +3,7 @@
 **Status:** bounded - bounded or caveated result note
 **Claim type:** bounded_theorem
 **Date:** 2026-04-20 (originally); 2026-05-03 (review-loop repair)
+**Primary runner:** [`scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.py`](../scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.py) (PASS=6/0)
 
 ## Review-loop repair (2026-05-03)
 

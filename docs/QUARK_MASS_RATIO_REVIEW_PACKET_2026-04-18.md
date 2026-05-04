@@ -1,4 +1,5 @@
 # Quark Mass-Ratio Support Packet (2026-04-18)
+**Primary runner:** [`scripts/frontier_quark_mass_ratio_review.py`](../scripts/frontier_quark_mass_ratio_review.py) (PASS=46/0)
 
 ## Scope
 

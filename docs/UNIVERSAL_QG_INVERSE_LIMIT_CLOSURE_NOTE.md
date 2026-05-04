@@ -3,6 +3,7 @@
 **Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-15  
 **Role:** direct-universal quantum-gravity / inverse-limit theorem
+**Primary runner:** [`scripts/frontier_universal_qg_inverse_limit_closure.py`](../scripts/frontier_universal_qg_inverse_limit_closure.py) (PASS=5/0)
 
 ## Verdict
 

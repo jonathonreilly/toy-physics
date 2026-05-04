@@ -3,6 +3,7 @@
 **Date:** 2026-04-15  
 **Role:** direct-universal quantum-gravity / refinement-projective theorem
 **Status:** support - projective Schur coarse-graining closure
+**Primary runner:** [`scripts/frontier_universal_qg_projective_schur_closure.py`](../scripts/frontier_universal_qg_projective_schur_closure.py) (PASS=5/0)
 
 ## Verdict
 

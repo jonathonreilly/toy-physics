@@ -3,6 +3,7 @@
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Status:** exact carrier/action/coupling construction; final GR identification still open
+**Primary runner:** [`scripts/frontier_s3_time_bilinear_tensor_action.py`](../scripts/frontier_s3_time_bilinear_tensor_action.py) (PASS=4/0)
 
 ## Verdict
 
