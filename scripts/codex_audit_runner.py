@@ -342,6 +342,7 @@ def render_prompt(row: dict, ledger_rows: dict[str, dict],
     prompt = prompt.replace("{{RUNNER_PATH}}", runner_path or "(none)")
     prompt = prompt.replace("{{NOTE_BODY}}", note_body)
     prompt = prompt.replace("{{RUNNER_STDOUT}}", runner_stdout or "(no stdout captured)")
+    prompt = prompt.replace("{{RUNNER_SOURCE}}", runner_source or "(no source available)")
 
     # Replace the FOREACH ... ENDFOREACH block with the rendered cited authorities
     foreach_re = re.compile(
@@ -350,30 +351,6 @@ def render_prompt(row: dict, ledger_rows: dict[str, dict],
     )
     # Use a lambda so cited_str isn't interpreted as a re replacement template
     prompt = foreach_re.sub(lambda _m: cited_str, prompt)
-
-    # Inject the runner source code as a new "Section 3a" between current
-    # Section 3 (Runner output) and Section 4 (rubric). The canonical
-    # AUDIT_AGENT_PROMPT_TEMPLATE.md does not yet have a {{RUNNER_SOURCE}}
-    # variable — once it does, this block can be removed and the
-    # substitution moved to the .replace() chain above.
-    if runner_source:
-        runner_source_block = (
-            "\n\n### 3a. Runner source code\n\n"
-            f"Source of `{runner_path}` is included so you can verify the runner\n"
-            "actually computes what its stdout claims. A trivial runner that\n"
-            "prints PASS lines without computing anything should NOT pass as\n"
-            "class (C); the load-bearing-step class judgment must reflect the\n"
-            "code, not just the output.\n\n"
-            "```python\n"
-            f"{runner_source}\n"
-            "```\n"
-        )
-        sec4_match = re.search(r"\n### 4\. The audit rubric\b", prompt)
-        if sec4_match:
-            insert_at = sec4_match.start()
-            prompt = prompt[:insert_at] + runner_source_block + prompt[insert_at:]
-        else:
-            prompt += runner_source_block
 
     # Append a tightening footer so we get clean JSON back. We DELIBERATELY
     # do not suppress the COMPUTE_REQUIRED escape — the audit-lane policy

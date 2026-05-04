@@ -112,6 +112,58 @@ def runner_log_pattern(runner_path: str) -> str:
     return f"{Path(runner_path).stem}-precompute-*.txt"
 
 
+# --- git helpers for direct-to-main commits, mirroring codex_audit_runner ---
+
+def git(*args: str, check: bool = True) -> subprocess.CompletedProcess:
+    return subprocess.run(
+        ["git", *args],
+        cwd=REPO_ROOT, capture_output=True, text=True, check=check,
+    )
+
+
+def assert_main_and_clean_for_logs() -> str | None:
+    """Return None if we're on main with nothing dirty outside logs/, else a reason."""
+    branch = git("rev-parse", "--abbrev-ref", "HEAD").stdout.strip()
+    if branch != "main":
+        return f"not on main (currently on {branch!r})"
+    porcelain = git("status", "--porcelain").stdout
+    other_dirty = []
+    for line in porcelain.splitlines():
+        path = line[3:]
+        if not path.startswith("logs/"):
+            other_dirty.append(path)
+    if other_dirty:
+        return f"working tree dirty outside logs/: {other_dirty[:5]}"
+    return None
+
+
+def commit_and_push_logs(message: str, paths: list[Path],
+                         max_attempts: int = 3) -> tuple[bool, str]:
+    """Stage given log paths, commit, push to main with rebase-on-conflict retry."""
+    if not paths:
+        return True, "no logs to commit"
+    rel = [str(p.relative_to(REPO_ROOT)) for p in paths]
+    add = git("add", *rel, check=False)
+    if add.returncode != 0:
+        return False, f"git add failed: {add.stderr.strip()[:200]}"
+    diff = git("diff", "--cached", "--quiet", check=False)
+    if diff.returncode == 0:
+        return True, "no actual changes to commit"
+    commit = git("commit", "-m", message, check=False)
+    if commit.returncode != 0:
+        return False, f"git commit failed: {(commit.stderr or commit.stdout).strip()[:200]}"
+    for attempt in range(1, max_attempts + 1):
+        push = git("push", "origin", "main", check=False)
+        if push.returncode == 0:
+            return True, f"pushed (attempt {attempt})"
+        git("fetch", "origin", "main", check=False)
+        rebase = git("rebase", "origin/main", check=False)
+        if rebase.returncode != 0:
+            git("rebase", "--abort", check=False)
+            return False, f"push attempt {attempt} failed and rebase conflicted: {(push.stderr or push.stdout).strip()[:200]}"
+    return False, f"push failed after {max_attempts} attempts"
+
+
 def has_fresh_cached_log(runner_path: str, max_age_hours: float) -> Path | None:
     """Return the path to a fresh enough precompute log, else None."""
     stem = Path(runner_path).stem
@@ -229,7 +281,35 @@ def main() -> int:
     p.add_argument("--exclude", action="append", default=[],
                    help="Substring filter on runner basenames; matching runners "
                         "are skipped. Repeatable.")
+    p.add_argument("--push-mode",
+                   choices=["batch", "none"], default="batch",
+                   help="When to commit and push the new logs/ files to main: "
+                        "'batch' (one commit covering the whole pre-compute run; "
+                        "default) or 'none' (no auto-commit).")
+    p.add_argument("--allow-non-main", action="store_true",
+                   help="Permit running from a branch other than main. Default "
+                        "refuses with --push-mode != none. Use only for testing.")
+    p.add_argument("--commit-batch-size", type=int, default=200,
+                   help="Maximum logs per commit when --push-mode=batch. "
+                        "Splits very large pre-compute runs across multiple "
+                        "commits to avoid pushing 500+ files in one shot. "
+                        "Default 200.")
     args = p.parse_args()
+
+    # Branch + cleanliness guard for direct-to-main pushes.
+    if args.push_mode != "none" and not args.dry_run:
+        reason = assert_main_and_clean_for_logs()
+        if reason and not args.allow_non_main:
+            print(f"REFUSING to run with --push-mode={args.push_mode}: {reason}")
+            print("Either checkout main and clean the worktree, or pass --allow-non-main "
+                  "(local-only; logs will be written but NOT pushed to main).")
+            return 2
+        if reason and args.allow_non_main:
+            print(f"WARNING: {reason}; --allow-non-main forces push-mode=none for safety.")
+            args.push_mode = "none"
+        else:
+            git("fetch", "origin", "main", check=False)
+            git("rebase", "origin/main", check=False)
 
     runners = collect_runners_from_ledger() if args.all else collect_runners_from_queue()
     runners = sorted(set(runners))
@@ -278,6 +358,7 @@ def main() -> int:
 
     counts = {"ok": 0, "nonzero_exit": 0, "timeout": 0, "error": 0, "missing": 0}
     completed = 0
+    written_logs: list[Path] = []
     t0 = time.time()
     with ThreadPoolExecutor(max_workers=args.concurrency) as ex:
         futures = {ex.submit(run_one, rp): rp for rp in to_run}
@@ -297,6 +378,9 @@ def main() -> int:
                    "error": "ERROR", "missing": "MISSING"}.get(result["status"], "?")
             print(f"  [{completed:3d}/{len(to_run)}] {tag:7s} {elapsed:6.1f}s  "
                   f"{Path(rp).name}")
+            log_rel = result.get("log_path")
+            if log_rel:
+                written_logs.append(REPO_ROOT / log_rel)
 
     total_elapsed = time.time() - t0
     print(f"\nDone in {total_elapsed:.1f}s.")
@@ -304,6 +388,35 @@ def main() -> int:
         print(f"  {k:14s} {counts.get(k, 0)}")
     print(f"\nCache populated under {LOGS_DIR.relative_to(REPO_ROOT)}/")
     print("Subsequent codex_audit_runner.py runs will use these as cache hits.")
+
+    # Push the new logs to main in batched commits so audit history is
+    # inspectable later (each pre-compute log records the runner stdout +
+    # source + exit code at its specific point in time).
+    if args.push_mode == "batch" and written_logs:
+        print(f"\nCommitting {len(written_logs)} log file(s) to main "
+              f"in batches of {args.commit_batch_size}...")
+        utc_stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+        n_batches = (len(written_logs) + args.commit_batch_size - 1) // args.commit_batch_size
+        push_failed = 0
+        for batch_idx in range(n_batches):
+            start = batch_idx * args.commit_batch_size
+            end = start + args.commit_batch_size
+            batch_paths = written_logs[start:end]
+            msg = (
+                f"audit: precompute runner cache batch {batch_idx + 1}/{n_batches} "
+                f"({len(batch_paths)} runners) {utc_stamp} [skip ci]"
+            )
+            ok, push_msg = commit_and_push_logs(msg, batch_paths)
+            if ok:
+                print(f"  batch {batch_idx + 1}/{n_batches}: {push_msg}")
+            else:
+                push_failed += 1
+                print(f"  batch {batch_idx + 1}/{n_batches} FAIL: {push_msg}")
+                print("  Local logs preserved; resolve the push conflict manually "
+                      "and run `git push origin main`.")
+        if push_failed:
+            print(f"\n{push_failed} batch(es) failed to push.")
+            return 1
     return 0 if counts.get("error", 0) == 0 else 1
 
 
