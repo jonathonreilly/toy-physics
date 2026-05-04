@@ -64,6 +64,14 @@ jobs:
             pip install -r requirements.txt
           fi
 
+      - name: Report missing dependency-edge repair candidates (PR only)
+        if: github.event_name == 'pull_request'
+        run: python3 docs/audit/scripts/repair_missing_dependency_edges.py
+
+      - name: Repair missing dependency edges (cron/manual only)
+        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+        run: python3 docs/audit/scripts/repair_missing_dependency_edges.py --apply
+
       - name: Run audit pipeline
         run: bash docs/audit/scripts/run_pipeline.sh
 
@@ -85,34 +93,21 @@ jobs:
         if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
         run: |
           set -e
-          if [[ -z "$(git status --porcelain docs/audit docs/publication/ci3_z3)" ]]; then
+          if [[ -z "$(git status --porcelain docs)" ]]; then
             echo "No audit-data changes; nothing to commit."
             exit 0
           fi
           git config user.name  "audit-bot"
           git config user.email "audit-bot@users.noreply.github.com"
-          git add \
-            docs/audit/AUDIT_LEDGER.md \
-            docs/audit/AUDIT_QUEUE.md \
-            docs/audit/data/ \
-            docs/publication/ci3_z3/CLAIMS_TABLE_EFFECTIVE_STATUS.md \
-            docs/publication/ci3_z3/DERIVATION_ATLAS_EFFECTIVE_STATUS.md \
-            docs/publication/ci3_z3/PUBLICATION_MATRIX_EFFECTIVE_STATUS.md \
-            docs/publication/ci3_z3/FULL_CLAIM_LEDGER_EFFECTIVE_STATUS.md \
-            docs/publication/ci3_z3/USABLE_DERIVED_VALUES_INDEX_EFFECTIVE_STATUS.md \
-            docs/publication/ci3_z3/RESULTS_INDEX_EFFECTIVE_STATUS.md \
-            docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE_EFFECTIVE_STATUS.md \
-            docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP_EFFECTIVE_STATUS.md \
-            docs/publication/ci3_z3/PUBLICATION_AUDIT_DIVERGENCE.md \
-            2>/dev/null || true
+          git add docs
           if git diff --cached --quiet; then
             echo "No audit-data changes after staging; nothing to commit."
             exit 0
           fi
           if [[ "${{ github.event_name }}" == "schedule" ]]; then
-            msg="audit: nightly pipeline refresh (automated) [skip ci]"
+            msg="audit: nightly repair and pipeline refresh (automated) [skip ci]"
           else
-            msg="audit: workflow_dispatch pipeline refresh (automated) [skip ci]"
+            msg="audit: workflow_dispatch repair and pipeline refresh (automated) [skip ci]"
           fi
           git commit -m "$msg"
           # Race-condition safety: main may have moved while pipeline ran;

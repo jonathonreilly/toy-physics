@@ -49,11 +49,26 @@ echo "==> 6/13 compute_effective_status.py"
 python3 docs/audit/scripts/compute_effective_status.py
 
 echo "==> 7/13 invalidate_stale_audits.py"
-python3 docs/audit/scripts/invalidate_stale_audits.py
+for attempt in 1 2 3 4 5 6 7 8 9 10; do
+  python3 docs/audit/scripts/invalidate_stale_audits.py
+  invalidated="$(
+    python3 - <<'PY'
+import json
+with open("docs/audit/data/audit_ledger.json", encoding="utf-8") as f:
+    print(len(json.load(f).get("last_invalidations", [])))
+PY
+  )"
+  if [[ "${invalidated}" == "0" ]]; then
+    break
+  fi
+  echo "==> 7.${attempt}/13 compute_effective_status.py post-invalidation (${invalidated} invalidated)"
+  python3 docs/audit/scripts/compute_effective_status.py
+done
 
-# Effective status may need to be recomputed after invalidation.
-echo "==> 7b/13 compute_effective_status.py post-invalidation"
-python3 docs/audit/scripts/compute_effective_status.py
+if [[ "${invalidated}" != "0" ]]; then
+  echo "invalidate_stale_audits.py did not reach a fixed point after 10 passes" >&2
+  exit 1
+fi
 
 echo "==> 8/13 build_cycle_inventory.py"
 python3 docs/audit/scripts/build_cycle_inventory.py

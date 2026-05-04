@@ -20,7 +20,6 @@ import hashlib
 import json
 import re
 import urllib.parse
-from datetime import datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -325,7 +324,6 @@ def build_graph() -> dict:
     leaves = [cid for cid in nodes if not any(e["to"] == cid for e in edges)]
 
     return {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
         "schema_version": 1,
         "stats": {
             "node_count": len(nodes),

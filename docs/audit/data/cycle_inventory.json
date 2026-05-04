@@ -5385,7 +5385,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
-          "claim_type": null,
+          "claim_type": "no_go",
           "effective_status": "unaudited",
           "note_path": "docs/DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md",
           "title": "DM PMNS CP-Orientation Parity Reduction",
@@ -9396,7 +9396,6 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-05-04T12:32:51.453973+00:00",
   "length_counts": {
     "10": 2,
     "11": 1,
@@ -9417,6 +9416,5 @@
     "max_transitive_descendants descending",
     "length ascending",
     "claim_id list ascending"
-  ],
-  "source_graph_generated_at": "2026-05-04T12:32:48.423547+00:00"
+  ]
 }

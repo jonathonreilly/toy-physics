@@ -224,12 +224,10 @@ def main() -> int:
 
     new_rows, cycles = compute_effective(rows)
     ledger["rows"] = new_rows
-    ledger["effective_status_computed_at"] = datetime.now(timezone.utc).isoformat()
 
     LEDGER_PATH.write_text(json.dumps(ledger, indent=2, sort_keys=True) + "\n")
 
     summary = summarize(new_rows)
-    summary["computed_at"] = datetime.now(timezone.utc).isoformat()
     summary["cycles_detected"] = len(cycles)
     summary["cycle_examples"] = cycles[:5]
     SUMMARY_PATH.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")

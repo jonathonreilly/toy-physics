@@ -188,7 +188,8 @@ def main() -> int:
             row[k] = v
         rows[cid] = row
     ledger["rows"] = rows
-    ledger["load_bearing_computed_at"] = datetime.now(timezone.utc).isoformat()
+    # Do not write a timestamp here. The audit PR gate compares generated
+    # files byte-for-byte, so ornamental timestamps make every run look stale.
 
     LEDGER_PATH.write_text(json.dumps(ledger, indent=2, sort_keys=True) + "\n")
 
@@ -202,7 +203,6 @@ def main() -> int:
     )[:25]
 
     summary = {
-        "computed_at": datetime.now(timezone.utc).isoformat(),
         "node_count": len(metrics),
         "criticality_counts": crit_counts,
         "top_25_by_load_bearing_score": [

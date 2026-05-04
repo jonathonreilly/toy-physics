@@ -1,14 +1,13 @@
 # Audit Queue
 
-**Generated:** 2026-05-04T12:32:51.494574+00:00
-**Total pending:** 921
+**Total pending:** 924
 **Ready (all deps already at retained-grade or metadata tiers):** 78
 
 By criticality:
 - `critical`: 109
 - `high`: 337
-- `medium`: 281
-- `leaf`: 194
+- `medium`: 282
+- `leaf`: 196
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -16,16 +15,16 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `yt_constructive_uv_bridge_note` | - | unaudited | critical | 265 | 10.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_constructive_uv_bridge.py` |
-| 2 | `yt_bridge_hessian_selector_note` | - | unaudited | critical | 264 | 10.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_hessian_selector.py` |
-| 3 | `neutrino_majorana_current_stack_exhaustion_note` | - | unaudited | critical | 264 | 8.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_neutrino_majorana_current_stack_exhaustion.py` |
-| 4 | `yt_bridge_higher_order_corrections_note` | - | unaudited | critical | 263 | 10.54 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_higher_order_corrections.py` |
-| 5 | `yt_bridge_nonlocal_corrections_note` | - | unaudited | critical | 263 | 10.54 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_nonlocal_corrections.py` |
-| 6 | `yt_bridge_uv_class_uniqueness_note` | - | unaudited | critical | 262 | 9.54 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_uv_class_uniqueness.py` |
+| 1 | `yt_constructive_uv_bridge_note` | bounded_theorem | unaudited | critical | 265 | 10.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_constructive_uv_bridge.py` |
+| 2 | `yt_bridge_hessian_selector_note` | bounded_theorem | unaudited | critical | 264 | 10.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_hessian_selector.py` |
+| 3 | `neutrino_majorana_current_stack_exhaustion_note` | positive_theorem | unaudited | critical | 264 | 8.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_neutrino_majorana_current_stack_exhaustion.py` |
+| 4 | `yt_bridge_higher_order_corrections_note` | bounded_theorem | unaudited | critical | 263 | 10.54 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_higher_order_corrections.py` |
+| 5 | `yt_bridge_nonlocal_corrections_note` | bounded_theorem | unaudited | critical | 263 | 10.54 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_nonlocal_corrections.py` |
+| 6 | `yt_bridge_uv_class_uniqueness_note` | bounded_theorem | unaudited | critical | 262 | 9.54 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_uv_class_uniqueness.py` |
 | 7 | `yt_color_projection_correction_note` | positive_theorem | unaudited | critical | 258 | 12.52 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_color_projection_correction.py` |
-| 8 | `dm_leptogenesis_transport_status_note_2026-04-16` | - | unaudited | critical | 202 | 15.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_leptogenesis_transport_status.py` |
-| 9 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | - | unaudited | critical | 155 | 15.29 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_a1_radian_bridge_irreducibility_audit.py` |
-| 10 | `universal_gr_lorentzian_global_atlas_closure_note` | - | unaudited | critical | 111 | 14.81 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 8 | `dm_leptogenesis_transport_status_note_2026-04-16` | positive_theorem | unaudited | critical | 202 | 15.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_leptogenesis_transport_status.py` |
+| 9 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | no_go | unaudited | critical | 155 | 15.29 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_a1_radian_bridge_irreducibility_audit.py` |
+| 10 | `universal_gr_lorentzian_global_atlas_closure_note` | positive_theorem | unaudited | critical | 111 | 14.81 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 11 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 413 | 13.19 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_cl3_per_site_uniqueness_check.py` |
 | 12 | `cpt_exact_note` | positive_theorem | unaudited | critical | 409 | 17.68 |  | fresh_context_or_stronger_with_cross_confirmation | - |
 | 13 | `axiom_first_spectrum_condition_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 409 | 11.68 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_spectrum_condition_check.py` |

@@ -133,8 +133,6 @@ def main() -> int:
         item["cycle_id"] = f"cycle-{idx:04d}"
 
     out = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "source_graph_generated_at": graph.get("generated_at"),
         "cycle_count": len(inventory),
         "length_counts": {str(k): v for k, v in sorted(length_counts.items())},
         "sort": [

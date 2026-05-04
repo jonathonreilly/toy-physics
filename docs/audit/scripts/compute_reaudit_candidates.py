@@ -165,7 +165,6 @@ def main() -> int:
         entry["generated_order"] = idx
 
     output = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
         "policy": "reaudit_unblocked_by_ratified_dependencies_v1",
         "policy_summary": (
             "Non-clean audited theorem/no-go/open-gate claims whose current "

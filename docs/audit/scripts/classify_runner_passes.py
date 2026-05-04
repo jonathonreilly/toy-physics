@@ -186,7 +186,6 @@ def main() -> int:
         dominant_distribution[k] = dominant_distribution.get(k, 0) + 1
 
     out = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
         "schema_version": 1,
         "stats": {
             "runners_classified": n_runners,

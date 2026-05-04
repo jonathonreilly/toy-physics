@@ -350,7 +350,6 @@ def seed() -> dict:
     ]
 
     return {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
         "schema_version": 1,
         "stats": {
             "row_count": len(out_rows),
