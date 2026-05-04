@@ -165,6 +165,25 @@ depends on a new axiom, same-surface family, observational admission, fitted
 selector, admitted unit convention, or human judgment, the actual current
 surface status is **not** `retained`.
 
+**No-new-axiom rule.** The repo does NOT accept extensions to its axiom
+stack as part of physics-loop work. `A_min` means the minimum axiom set,
+NOT permission to enlarge it. A route or counterfactual whose closure
+requires adopting a new axiom is `infeasible`, regardless of how
+productive its consequences would be. The legitimate "import → retained"
+shape is:
+
+1. take an explicit import (theorem, value, convention) with a narrow
+   non-derivation role;
+2. produce a **bounded retained** result — the import-bearing ceiling;
+3. queue an import-retirement audit as the next work in the lane.
+
+Any artifact that maps consequences of an unadopted axiom must be
+labeled `hypothetical_axiom_status: ...` and its tables/runner summaries
+must say "conditional on accepted new axiom; not retained on the actual
+current surface." This labeling does not promote the axiom — only an
+external repo-wide governance decision does that, and physics-loop
+runs do NOT make such decisions.
+
 Required status fields for major artifacts:
 
 ```yaml
@@ -280,8 +299,14 @@ For publication-facing or quantitative work, also inspect
    files, use the repo lock protocol and plan lock refreshes at checkpoints.
 2. **Ground.** Build the current lane map from repo authority surfaces rather
    than memory.
-3. **Audit assumptions/imports.** Create or refresh
-   `ASSUMPTIONS_AND_IMPORTS.md`. See
+3. **Audit assumptions/imports + counterfactual pass.** Create or
+   refresh `ASSUMPTIONS_AND_IMPORTS.md` with the import ledger AND
+   the counterfactual pass over implicit framework choices (geometry,
+   boundary conditions, observable definitions, irrep truncations,
+   traversal conventions, sector choices, normalization conventions).
+   The counterfactual pass surfaces hidden routes by asking, for each
+   assumption, "what if this is wrong, and what direction does the
+   alternative open?" — bounded by the no-new-axiom rule below. See
    [`references/assumption-import-audit.md`](references/assumption-import-audit.md).
 4. **Update no-go memory.** Extract prior no-go routes and reviewer objections
    into `NO_GO_LEDGER.md` so the loop does not re-explore dead routes.
@@ -397,7 +422,11 @@ routes are risky.
 - **First-principles reset:** before the stretch attempt, write the minimal
   allowed premise set (`A_min`) and forbidden imports. The attempt must not
   rely on observed target values, fitted selectors, or literature as hidden
-  proof inputs.
+  proof inputs. `A_min` is the minimum axiom set, NOT a license to add
+  axioms — extending the stack is forbidden in physics-loop work; see
+  the no-new-axiom rule above. Counterfactual-pass output (see
+  references/assumption-import-audit.md) is a useful stretch input
+  here.
 - **Stuck fan-out:** before declaring "no route passes the gate", generate
   3-5 orthogonal premises/attack frames. If the active tool policy and user
   authorization allow parallel agents, run them in parallel; otherwise emulate
