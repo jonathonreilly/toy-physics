@@ -23269,7 +23269,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-04T00:21:35.453337+00:00",
+  "generated_at": "2026-05-04T00:43:13.658278+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25306,7 +25306,7 @@
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "826e529e238eeac35a70f0d633a639f3044aa3f256ee8a25ac97789195dbb447",
+      "note_hash": "0bfd9d6f48db445e1f13c17858bd34f039cb379e3a748bf21d715f33a6015717",
       "path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
       "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action"
@@ -28265,7 +28265,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "ea379ed024a452799ac86acc36790a5e40a8bc741a9e5cdff0936cfb48c2614a",
+      "note_hash": "9171468e0053a556900ce1f994bef0a5f8afcf512e5ab91e00fb888b7f06fb32",
       "path": "docs/DIMENSIONAL_GRAVITY_TABLE.md",
       "runner_path": null,
       "title": "Dimensional Gravity Table"
@@ -31866,7 +31866,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "4a0723a08ae5321256ae817a5386a927b284bdf5a8e2122708b58e07a7c3522f",
+      "note_hash": "396f67fdce5fd8c04f696e9ad54c03c6fe0c55d96937bffdc5e3fb922332f064",
       "path": "docs/FIFTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md",
       "runner_path": "scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py",
       "title": "Fifth Family Complex Boundary Note"
@@ -32843,9 +32843,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "e17619a84d07469c195c457cebfb02a3d3053a561528dea76a852a313114022b",
+      "note_hash": "a9a2131bb127333da4b3f655cec12086805dd29b574aac77fdc009237c2ed345",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md",
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py",
+      "runner_path": null,
       "title": "Gauge-Vacuum Plaquette First-Sector Completed Triple Current Transfer-Family Boundary"
     },
     "gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19": {
@@ -34245,9 +34245,9 @@
       "claim_id": "higher_symmetry_gravity_probe_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "df8c7a795aa5f6178a77266ecec85b4acb9221d79510e1ae40756a6b7d3e0f5b",
+      "note_hash": "b66c30e796d2432750acfb1a33744dc0b5dbacc6a53a75ef2c440a9390c6a053",
       "path": "docs/HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md",
       "runner_path": "scripts/higher_symmetry_gravity_probe.py",
       "title": "Higher-Symmetry Gravity Probe Note"
@@ -44676,7 +44676,7 @@
       "deps": [
         "staggered_fermion_card_2026-04-10"
       ],
-      "note_hash": "c9875cdd5b069abe48f66682c09630cc9072cf2a46fdd07a2c5e742e7658f7bb",
+      "note_hash": "1422e4cf8e07a86917f6c3e6cc873f1556393f023eda2323eb7baba870c0c688",
       "path": "docs/SESSION_SYNTHESIS_2026-04-10_GRAPH_AXIOMS.md",
       "runner_path": "scripts/frontier_axioms_16card.py",
       "title": "Session Synthesis: Graph Laplacian Axioms (2026-04-10)"
@@ -46168,7 +46168,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "605f761f2ad0a9addf780450c5d0cbcb2e40fe0a1b2853087d93c72119b2d68a",
+      "note_hash": "0d249d389ee95242a1f64e539cc5942370ab918ea88bd6016867b35da39c6b7a",
       "path": "docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md",
       "runner_path": null,
       "title": "Structured Mirror Born-Safe Scan Note"
@@ -51566,10 +51566,10 @@
       "positive_theorem": 74
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 556,
+      "bounded_theorem": 555,
       "meta": 8,
       "no_go": 112,
-      "none": 456,
+      "none": 457,
       "open_gate": 114,
       "positive_theorem": 626
     },
@@ -51577,6 +51577,6 @@
     "leaf_count": 600,
     "node_count": 1872,
     "root_count": 1057,
-    "runners_with_path": 1430
+    "runners_with_path": 1429
   }
 }

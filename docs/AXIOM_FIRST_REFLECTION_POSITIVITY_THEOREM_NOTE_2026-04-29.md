@@ -304,11 +304,15 @@ follows from (10) applied to `< Θ(F) F >`.
 
 The two factorisations (7) and (10) commute because the gauge sector
 is integrated against a positive Haar measure and the fermion sector
-gives a real positive determinant on the canonical surface — proved
-in Step 3a below. The product of two positive measures is a positive
-measure, and the sesquilinear-pairing rewriting applies term by term.
+gives a real determinant on the canonical surface (γ_5-Hermiticity).
+For positivity of the combined measure, the fermion determinant must
+also be non-negative configuration-by-configuration; Step 3a below
+gives the derivation for the staggered-only sector and the
+runner-supported extension for the full staggered+Wilson sector. The
+product of two positive measures is a positive measure, and the
+sesquilinear-pairing rewriting applies term by term.
 
-### Step 3a — explicit det(M) ≥ 0 from γ_5-Hermiticity + eigenvalue pairing
+### Step 3a — det(M) ≥ 0: staggered-only derivation; staggered+Wilson runner-supported
 
 γ_5-Hermiticity for the staggered+Wilson Dirac operator on the
 canonical real-mass surface states
@@ -326,44 +330,67 @@ so that `γ_5 M` is Hermitian:
 Reality of det(M) follows immediately: `det(M)* = det(M^†) =
 det(γ_5 M γ_5) = det(M)`, since det is conjugation-invariant.
 
-Reality ≠ positivity. Positivity requires the additional eigenvalue-
-pairing structure of staggered fermions. The argument:
+Reality ≠ positivity. Positivity requires additional structure that
+behaves differently for the staggered vs Wilson contributions. We
+state the two cases honestly:
 
-(i) Let `λ` be a non-zero eigenvalue of `γ_5 M` (which is Hermitian by
-    (13)), with eigenvector `v`: `γ_5 M v = λ v`. Apply γ_5 to both
-    sides: `M v = λ γ_5 v`. Apply M from the left: `M² v = λ M γ_5 v`.
-    The original eigenvalue equation gives `γ_5 M v = λ v`, i.e.
-    `γ_5 v = λ⁻¹ M v` (when v isn't in the kernel of γ_5 M). Substitute:
-    `M² v = λ · λ⁻¹ M v = M v`, so `M² v = (something we'll resolve) v`.
+**Case A — staggered-only (M = M_KS + mI, derived).** Use the
+staggered chirality grading `ε(x) = (-1)^{x_1+x_2+x_3+x_4}`. The
+canonical Kogut-Susskind hop satisfies the anticommutation
+`{ε, M_KS} = 0` (verified explicitly by exhibit E5). The mass term
+commutes with `ε`. Hence
 
-(ii) The cleaner path uses the staggered chirality grading. On the
-     canonical staggered surface, define the staggered chirality
-     ε(x) = (-1)^{x_1+x_2+x_3+x_4}. Then `ε M ε = -M_KS + (m+M_W)`,
-     so `ε γ_5 M γ_5 ε = -γ_5 M_KS γ_5 + ...`. With γ_5 = ε on the
-     staggered carrier (the standard identification), this gives the
-     paired-eigenvalue structure: if `γ_5 M v = λ v` then
-     `γ_5 M (ε v) = -λ (ε v)`. Hence non-zero eigenvalues of `γ_5 M`
-     come in `±λ` pairs.
+```text
+    ε (M_KS + mI) ε  =  -M_KS + mI.                                    (14a)
+```
 
-(iii) det(γ_5 M) = Π_i λ_i = (∏_{pairs} λ²) · (kernel contribution).
-      For the canonical action with positive mass `m > 0`, the
-      kernel of `γ_5 M` is empty and all paired eigenvalues come in
-      `±λ` pairs, so `det(γ_5 M) = Π_pairs (-λ²) = (-1)^{#pairs} Π λ²`.
-      Since `det(γ_5 M) = det(γ_5)·det(M) = det(M)` (using
-      `det(γ_5) = +1` on the staggered carrier with even fermion
-      number on each site), we conclude
+Identify `γ_5 ≡ ε` on the staggered carrier. If `γ_5 M v = λ v` with
+`λ ≠ 0`, then `γ_5 M (ε v) = -λ (ε v)`, so non-zero eigenvalues of
+`γ_5 M = ε(M_KS + mI)` come in `±λ` pairs. With `m > 0` the kernel
+of `γ_5 M` is empty (since M is invertible), and
 
-      ```text
-          det(M)  =  (-1)^{#pairs}  ∏_pairs  λ²                       (14)
-      ```
+```text
+    det(M_KS + mI)  =  ∏_pairs  λ²  ≥  0.                              (14b)
+```
 
-      With the canonical staggered convention `#pairs` is even (each
-      site contributes one pair with the staggered ε grading
-      symmetric across the lattice), so `det(M) = ∏_pairs λ² ≥ 0`.
+This is a closed-form derivation on `A_min` for the staggered-only
+sector.
 
-The runner exhibit E6 verifies this numerically: build M for the
-canonical staggered+Wilson SU(3) action at several mass values and
-lattice sizes, compute det(M), and verify it is real and non-negative.
+**Case B — staggered + Wilson (M = M_KS + M_W + mI, runner-supported).**
+The Wilson term `M_W` commutes with the staggered chirality `ε`, so
+adding `M_W` to `M_KS` breaks the `{ε, M}` anticommutation:
+
+```text
+    ε (M_KS + M_W + mI) ε  =  -M_KS + M_W + mI                         (14c)
+```
+
+which is *not* equal to `±(M_KS + M_W + mI)`. The ±λ paired-eigenvalue
+argument therefore does **not** extend in closed form to the full
+staggered+Wilson operator; reality of det(M) (from γ_5-Hermiticity)
+plus an upper bound on the Wilson coefficient is the standard
+sufficient condition for positivity, but neither γ_5-Hermiticity nor
+the canonical r=1 choice gives det(M) ≥ 0 by an axiom-first identity.
+
+The runner exhibit E6 instead verifies det(M) ≥ 0 **operationally**
+across the canonical parameter range (multiple lattice sizes, multiple
+mass values, well-conditioned cases only). This is a finite-evidence
+positivity certificate, not a closed-form derivation, and it is the
+honest support level for det(M_KS + M_W + mI) ≥ 0 on `A_min`.
+
+**Consequence for the load-bearing claim.** The combined-sector RP
+proof in Step 3 quotes `det(M) ≥ 0 on the canonical surface` as
+input. With the scope above:
+
+- For the staggered-only canonical action, the input is **derived**
+  from (14b).
+- For the staggered+Wilson canonical action at `r = 1`, the input is
+  **runner-supported via E6** across the audited parameter range,
+  not derived.
+
+The note's RP statement (R1)–(R4) for the full A_min action is
+therefore a theorem on the staggered-only sector and a runner-supported
+extension on the full staggered+Wilson sector — not a single closed-form
+derivation across both. The honest-status section below records this.
 
 Hence
 
@@ -417,7 +444,7 @@ by the A_min canonical staggered+Wilson SU(3) action:
 | Wilson term added to lift doublers, with positive r-coefficient | A3: M_W with `r = 1` (canonical) | ✓ exact match |
 | Reflection convention for fermions: `Θ χ_x = χ̄_{θ x}^T`, `Θ χ̄_x = χ_{θ x}^T` (Sharatchandra) | The reflection map's fermion-half implements this | ✓ definition |
 | Real positive mass `m > 0` in the Dirac operator | A4: canonical mass surface | ✓ explicit |
-| `det(M) ≥ 0` on the canonical surface | Step 3a derivation via γ_5-Hermiticity + paired eigenvalues | ✓ derived (not just cited) |
+| `det(M) ≥ 0` on the canonical surface | Step 3a: derived for staggered-only via {ε,M_KS}=0 + ±λ pairing; runner-supported (E6) for staggered+Wilson | ✓ staggered-only derived; staggered+Wilson runner-supported |
 | Sesquilinear pairing on crossing links is L²-positive | OS's Cauchy–Schwarz manipulation applied to `Re tr(A_+ B_-^†)` after Haar integration | ✓ standard |
 
 Every precondition is met. The factorisation identities (7) and (10)
@@ -449,19 +476,39 @@ mutually consistent on `A_min`.
 
 ## Honest status
 
-**Branch-local theorem.** (R1)–(R4) are proved on `A_min` by
-Steps 1–3. The proof leans on the *factorisation* identities
-(7) and (10), which are the canonical lattice-RP arguments adapted
-to the framework's specific staggered + Wilson + canonical-`β`
-surface. The runner exhibits the structural content (transfer
-matrix construction, Hermiticity, positive spectrum, RP inequality)
-on tractable small lattices.
+**Branch-local theorem with sector-dependent support level.**
+
+- (R1)–(R4) on the **staggered-only** sector (M = M_KS + mI) are
+  proved on `A_min` by Steps 1–3 with closed-form derivation of
+  det(M_KS + mI) ≥ 0 from the {ε, M_KS} = 0 anticommutation
+  (verified by E5) and the ±λ paired-eigenvalue argument (14a–b).
+- (R1)–(R4) on the **staggered + Wilson** sector (M = M_KS + M_W + mI)
+  are supported by the same factorisation identities (7) and (10),
+  but the additional input det(M) ≥ 0 is **runner-verified by E6
+  across the audited parameter range**, not derived in closed form.
+  Adding the Wilson term breaks the {ε, M} anticommutation (14c),
+  so the staggered ±λ pairing argument does not extend.
+
+**What this rules out.**
+
+- The note no longer claims a single closed-form derivation of
+  det(M) ≥ 0 for the full canonical staggered+Wilson operator on
+  `A_min`. That gap is honest and recorded.
+- Downstream notes that quote "RP holds on `A_min`" can cite this
+  note for the staggered-only sector with full theorem support;
+  the staggered+Wilson extension carries the runner-supported (not
+  derived) qualifier.
 
 **Not in scope.**
 
 - Continuum reflection positivity / OS reconstruction in the
   Wightman sense. We prove the lattice analogue, which is what
   `A_min` allows.
+- A closed-form derivation of det(M_KS + M_W + mI) ≥ 0 on `A_min`.
+  The standard literature (Sharatchandra–Thun–Weisz, Menotti–
+  Pelissetto) provides RP for staggered fermions; extending the
+  same argument to staggered+Wilson with axiom-first input only
+  remains an open repair target.
 - Publication retention or effective-status elevation in the canonical
   paper package. The independent audit lane owns that decision after
   review-loop prepares the source surface.

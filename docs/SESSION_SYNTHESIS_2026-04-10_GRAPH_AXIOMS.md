@@ -1,6 +1,74 @@
 # Session Synthesis: Graph Laplacian Axioms (2026-04-10)
 
-**Status:** support / historical synthesis note (downgraded 2026-04-28 per audit-lane verdict). The current staggered status is tracked by the force-based card and corrected full-suite baseline, not by the older `frontier_staggered_fermion.py` successor framing alone. The runner declared in this note is a legacy proxy harness and does not function as a current-main evidence surface.
+**Status:** **HISTORICAL SYNTHESIS / SUPPORT** — this is a 2026-04-10 session-log document, NOT a current retained positive theorem. The "frozen audited scores" tabulated below are scores **from that session at that time** against `frontier_axioms_16card.py`, which the script itself explicitly prints "Do not use this script as a current-main evidence surface." The note has been formally re-tiered to `support` (2026-04-28) and re-tiered again per the 2026-05-03 audit (fresh-agent-session-graph-axioms) — see "Audit-driven repair (2026-05-03)" below.
+
+**Current evidence surface:** the live staggered status is tracked by the
+**force-based staggered card** ([`STAGGERED_FERMION_CARD_2026-04-10.md`](STAGGERED_FERMION_CARD_2026-04-10.md))
+and the corrected full-suite baseline runner
+[`scripts/frontier_staggered_17card.py`](../scripts/frontier_staggered_17card.py)
+— **not** by the older `frontier_staggered_fermion.py` or
+`frontier_axioms_16card.py` framing in this synthesis note.
+
+## Audit-driven repair (2026-05-03)
+
+The 2026-05-03 audit (fresh-agent-session-graph-axioms) re-flagged
+this row `audited_failed`:
+
+> "The source note's positive graph-axiom/card language is not
+> supported by a current evidence surface, because the declared
+> runner and note both state that frontier_axioms_16card.py is a
+> historical legacy proxy/control harness. Why this blocks: a legacy
+> proxy 16-card cannot ratify a current positive theorem, especially
+> where the note says live status belongs to separate force-based
+> staggered, corrected graph-KG, and portability cards with different
+> semantics. Repair target: audit the current successor cards and
+> runners as separate scoped claims, or supply a current retained-grade
+> graph-axiom runner/certificate for this exact theorem. Claim
+> boundary until fixed: the file may be cited only as historical
+> synthesis/support context, not as a current retained positive
+> theorem."
+
+This repair sharpens the historical-synthesis framing throughout the
+note:
+
+- The status line is rewritten to put **HISTORICAL SYNTHESIS / SUPPORT**
+  in bold-caps at the front, leaving no parser ambiguity about the
+  note's tier.
+- The "Frozen audited scores" table is now explicitly labelled as
+  **2026-04-10 session frozen scores against `frontier_axioms_16card.py`**
+  (the legacy proxy harness, not the current evidence surface).
+- The pointers to current successor cards (force-based staggered card,
+  corrected graph-KG card, portability probe) are moved up so they are
+  visible immediately after the status line.
+- A new "What this note IS" section is added at the top to disambiguate
+  scope: this is session-log historical context, not a current
+  retained theorem.
+
+The note's substantive content (the 2026-04-10 axiom proposal, the
+journey from chiral walk failures to the graph Laplacian formulation,
+and the frozen-at-the-time 16-card scores) is preserved as historical
+context for the live successor cards.
+
+## What this note IS (and is NOT)
+
+**This note IS:**
+- A 2026-04-10 session-log document recording the journey from chiral-walk
+  gravity blockers to the graph Laplacian axiom proposal.
+- A historical inventory of "frozen at the time" 16-card scores against
+  the now-legacy `frontier_axioms_16card.py` proxy harness.
+- Background context for the live force-based staggered card and
+  corrected graph-KG card.
+
+**This note is NOT:**
+- A current retained positive theorem.
+- A claim that the listed 16/16 scores are current evidence on
+  `main`. The script the scores were measured against is explicitly
+  labelled a "historical legacy proxy/control harness".
+- A successor-card ratification surface. The live successor cards
+  (force-based staggered, corrected graph-KG, portability probe)
+  are separate documents with their own runner-backed evidence and
+  must be audited as separate scoped claims per the 2026-05-03
+  audit's repair target.
 
 ## Cited authorities (one hop)
 
@@ -75,9 +143,15 @@ KG-like spectrum, not a fully demonstrated local KG dynamics.
 - **Decoherence**: Phase noise suppresses coherences (94->7% on cubic).
 - **Superposition**: Two-body gravity error < 0.1%.
 
-## Frozen audited scores
+## 2026-04-10 session-frozen scores against `frontier_axioms_16card.py` (legacy proxy)
 
-Script: `frontier_axioms_16card.py` @ commit 3dbcd73 (C1 Sorkin fix) + 9c830fc (C11 dense grid)
+**These are session-frozen scores from 2026-04-10, NOT current evidence.** The
+`frontier_axioms_16card.py` script is explicitly labelled a "historical legacy
+proxy / control harness" and prints "Do not use this script as a current-main
+evidence surface." Cite the live successor cards listed in the status block
+above for current retained scores.
+
+Script: `frontier_axioms_16card.py` (LEGACY PROXY, 2026-04-10 only) @ commit 3dbcd73 (C1 Sorkin fix) + 9c830fc (C11 dense grid)
 
 | Row | Test | Cubic (3375) | Random (300) | Growing (150) |
 |-----|------|:---:|:---:|:---:|
