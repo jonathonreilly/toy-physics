@@ -50,8 +50,21 @@ ISOLATED_BASE = Path("/tmp/codex-audit-isolated")
 LOG_DIR = REPO_ROOT / "logs" / "codex-audit-runs"
 
 # These fields are NOT controlled by the LLM; we set them on the runner side.
+# AUDITOR_FAMILY is fixed: this runner always invokes Codex GPT-5.5.
+# Independence is determined PER ROW (see determine_audit_role) because it
+# depends on whether this is a first-pass (typically cross_family vs Claude
+# autopilot authors) or a same-family second-pass (must be fresh_context).
 AUDITOR_FAMILY = "codex-gpt-5.5"
-AUDITOR_INDEPENDENCE = "cross_family"
+
+# Statuses where this runner SHOULD NOT proceed automatically. Disagreements
+# and three-way disagreements need a judicial third-auditor pass that the
+# operator runs manually (per docs/audit/FRESH_LOOK_REQUIREMENTS.md and
+# apply_audit.py's apply_judicial_review path).
+SKIP_BLOCKERS = {
+    "cross_confirmation_disagreement",
+    "third_auditor_disagreement",
+    "judicial_review_irresolvable",
+}
 
 REQUIRED_VERDICT_FIELDS = {
     "claim_id",
@@ -67,16 +80,65 @@ REQUIRED_VERDICT_FIELDS = {
 
 # Map JSON-extracted-from-stdout to apply_audit.py's input schema. apply_audit
 # expects `verdict` etc. plus the runner-side fields auditor/auditor_family/
-# independence/audit_date.
-def add_auditor_metadata(verdict_blob: dict, auditor_name: str) -> dict:
+# independence/audit_date. Independence is determined per-row by the role.
+def add_auditor_metadata(verdict_blob: dict, auditor_name: str,
+                         independence: str) -> dict:
     blob = dict(verdict_blob)
     blob.setdefault("auditor", auditor_name)
     blob.setdefault("auditor_family", AUDITOR_FAMILY)
-    blob.setdefault("independence", AUDITOR_INDEPENDENCE)
+    blob.setdefault("independence", independence)
     blob.setdefault("audit_date", datetime.now(timezone.utc).isoformat())
     # Some downstream callers want runner_check_breakdown even when missing.
     blob.setdefault("runner_check_breakdown", {"A": 0, "B": 0, "C": 0, "D": 0, "total_pass": 0})
     return blob
+
+
+def determine_audit_role(led_row: dict) -> tuple[str, str | None]:
+    """Decide what role this audit attempt plays for the given row.
+
+    Returns (role, reason_or_independence):
+      - ("skip", "<reason>")            row should be skipped
+      - ("first", "cross_family")       first-pass; Codex on Claude-authored
+                                        notes is cross-family
+      - ("first", "fresh_context")      first-pass on a Codex-authored note
+                                        (rare; same-family fresh-context)
+      - ("second", "fresh_context")     second-pass on a row whose first
+                                        audit was also Codex (same family)
+      - ("second", "cross_family")      second-pass on a row whose first
+                                        audit was a different model family
+                                        (e.g., Claude or human)
+
+    apply_audit.py validates these constraints; we precompute here so the
+    auditor metadata sent into apply_audit is always correct on the first
+    try, avoiding spurious "rejected: same-family second audit requires
+    fresh_context" errors. Disagreement / judicial-review cases are
+    skipped — the operator runs those manually.
+    """
+    blocker = led_row.get("blocker") or ""
+    if blocker in SKIP_BLOCKERS:
+        return "skip", f"blocker={blocker} (judicial review needed; manual)"
+
+    cc = led_row.get("cross_confirmation") or {}
+    if not isinstance(cc, dict):
+        cc = {}
+    cc_status = cc.get("status")
+    if cc_status in {"disagreement", "three_way_disagreement", "disagreement_irresolvable"}:
+        return "skip", f"cross_confirmation.status={cc_status} (judicial review)"
+
+    first_audit = cc.get("first_audit") or {}
+    first_family = first_audit.get("auditor_family") if isinstance(first_audit, dict) else None
+
+    if not first_audit:
+        # No prior audit recorded. This is a first-pass.
+        # Codex auditing Claude/anyone-else's note is cross-family by default.
+        return "first", "cross_family"
+
+    # A prior audit exists -> this is a second-pass.
+    if first_family == AUDITOR_FAMILY:
+        # Same model family -> apply_audit requires fresh_context.
+        return "second", "fresh_context"
+    # Different family from the first auditor -> we (Codex) are cross-family.
+    return "second", "cross_family"
 
 
 def load_queue(criticality_filter: str | None = None) -> list[dict]:
@@ -515,12 +577,17 @@ def main() -> int:
     # ALL audits run at xhigh. We do not expose a knob to lower it.
     REASONING_EFFORT = "xhigh"
 
-    auditor_name = args.auditor_name or f"codex-cli-batch-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M')}"
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     run_id = uuid.uuid4().hex[:8]
+    auditor_name_base = args.auditor_name or f"codex-cli-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S')}-{run_id}"
     run_log = LOG_DIR / f"run-{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}-{run_id}.jsonl"
     print(f"Run log: {run_log}")
-    print(f"Auditor: {auditor_name}  ({AUDITOR_FAMILY}, {AUDITOR_INDEPENDENCE})")
+    print(f"Auditor (base): {auditor_name_base}  ({AUDITOR_FAMILY})")
+    print("Per-row independence is determined from each row's existing cross_confirmation:")
+    print("  first-pass with no prior audit                    -> cross_family")
+    print("  second-pass after a prior audit by a different family -> cross_family")
+    print("  second-pass after a prior audit by Codex            -> fresh_context")
+    print("  rows in disagreement / awaiting-judicial-review     -> skipped (manual)")
 
     # Verify branch + cleanliness before any push-capable operation.
     if args.push_mode != "none" and not args.dry_run:
@@ -561,6 +628,25 @@ def main() -> int:
         cid = row["claim_id"]
         print(f"\n[{i}/{len(targets)}] {cid}")
         try:
+            # Determine first-pass vs second-pass vs skip BEFORE invoking codex.
+            # This avoids burning a codex call on a row apply_audit will reject,
+            # and ensures the verdict's independence matches the row's history.
+            full_led_row = ledger_rows.get(cid, {})
+            role, role_info = determine_audit_role(full_led_row)
+            if role == "skip":
+                print(f"  SKIP: {role_info}")
+                skipped += 1
+                with run_log.open("a", encoding="utf-8") as f:
+                    f.write(json.dumps({
+                        "claim_id": cid, "phase": "skip_role",
+                        "reason": role_info,
+                    }) + "\n")
+                continue
+            row_independence = role_info  # cross_family or fresh_context
+            # Per-row auditor identity to guarantee uniqueness across passes.
+            row_auditor = f"{auditor_name_base}-{cid[:24]}-{i:03d}"
+            print(f"  role={role}  independence={row_independence}")
+
             use_cache = not args.no_cache_runner
             if args.no_runner:
                 # Build the prompt manually with empty runner stdout
@@ -650,11 +736,12 @@ def main() -> int:
                     }) + "\n")
                 continue
 
-            full_blob = add_auditor_metadata(blob, auditor_name)
+            full_blob = add_auditor_metadata(blob, row_auditor, row_independence)
             ok, msg = apply_one(full_blob, propagate=not args.no_propagate)
             if ok:
                 print(f"  OK ({elapsed:.1f}s)  verdict={blob.get('verdict')}  "
-                      f"class={blob.get('load_bearing_step_class')}")
+                      f"class={blob.get('load_bearing_step_class')}  "
+                      f"role={role}/{row_independence}")
                 applied += 1
                 with run_log.open("a", encoding="utf-8") as f:
                     f.write(json.dumps({
@@ -663,13 +750,15 @@ def main() -> int:
                         "verdict": blob.get("verdict"),
                         "claim_type": blob.get("claim_type"),
                         "lb_class": blob.get("load_bearing_step_class"),
+                        "role": role,
+                        "independence": row_independence,
                     }) + "\n")
 
                 # Per-verdict push mode: commit + push immediately
                 if args.push_mode == "per-verdict":
                     msg = (
                         f"audit: {cid} -> {blob.get('verdict')} "
-                        f"(codex-cli, xhigh, {auditor_name})"
+                        f"(codex-cli, xhigh, {role}/{row_independence})"
                     )
                     pushed, push_msg = commit_and_push_to_main(msg)
                     if pushed:
@@ -700,7 +789,7 @@ def main() -> int:
         crit = f" {args.criticality}" if args.criticality else ""
         msg = (
             f"audit: codex-cli batch {applied} verdict(s){crit} "
-            f"(xhigh, {auditor_name})"
+            f"(xhigh, {auditor_name_base})"
         )
         pushed, push_msg = commit_and_push_to_main(msg)
         if pushed:
