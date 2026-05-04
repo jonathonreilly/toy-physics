@@ -2337,6 +2337,129 @@
       "original_windows_mixed": false,
       "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk057_2026-05-01.json",
       "seed": 2026051057
+    },
+    {
+      "chunk_index": 58,
+      "common_window_energy_fits": [
+        {
+          "chi2_dof": 0.22929439301244361,
+          "energy_lat": 1.8296891266018065,
+          "energy_lat_err": 0.2920721437788012,
+          "source_shift_lat": -0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.16720295474435282,
+          "energy_lat": 1.8440046364385125,
+          "energy_lat_err": 0.3402516944047917,
+          "source_shift_lat": 0.0,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.12215745271379452,
+          "energy_lat": 1.8582079731968406,
+          "energy_lat_err": 0.3959530190794111,
+          "source_shift_lat": 0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        }
+      ],
+      "common_window_slope_dE_ds_lat": 1.426510796236225,
+      "common_window_slope_dE_ds_lat_err": 24.23018788680905,
+      "original_fit_window_signature_tau_min": [
+        10,
+        10,
+        2
+      ],
+      "original_slope_dE_ds_lat": 7.182006782740703,
+      "original_slope_dE_ds_lat_err": 13.420086796010848,
+      "original_windows_mixed": true,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk058_2026-05-01.json",
+      "seed": 2026051058
+    },
+    {
+      "chunk_index": 59,
+      "common_window_energy_fits": [
+        {
+          "chi2_dof": 0.22801321766681104,
+          "energy_lat": 1.837688488780259,
+          "energy_lat_err": 0.29738765869424455,
+          "source_shift_lat": -0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.1663435999049902,
+          "energy_lat": 1.852056258750963,
+          "energy_lat_err": 0.34644706104336076,
+          "source_shift_lat": 0.0,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.12158622896141737,
+          "energy_lat": 1.8663052467318266,
+          "energy_lat_err": 0.40316649020642126,
+          "source_shift_lat": 0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        }
+      ],
+      "common_window_slope_dE_ds_lat": 1.4314398930989933,
+      "common_window_slope_dE_ds_lat_err": 24.67140918721843,
+      "original_fit_window_signature_tau_min": [
+        10,
+        10,
+        10
+      ],
+      "original_slope_dE_ds_lat": 1.4314398930989933,
+      "original_slope_dE_ds_lat_err": 24.67140918721843,
+      "original_windows_mixed": false,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk059_2026-05-01.json",
+      "seed": 2026051059
+    },
+    {
+      "chunk_index": 60,
+      "common_window_energy_fits": [
+        {
+          "chi2_dof": 0.2246283292973753,
+          "energy_lat": 1.8306631872765138,
+          "energy_lat_err": 0.29715740106553235,
+          "source_shift_lat": -0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.16373723966282175,
+          "energy_lat": 1.8448677729256815,
+          "energy_lat_err": 0.34615784288673346,
+          "source_shift_lat": 0.0,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.1195854429091372,
+          "energy_lat": 1.8589592780790554,
+          "energy_lat_err": 0.40280329340118054,
+          "source_shift_lat": 0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        }
+      ],
+      "common_window_slope_dE_ds_lat": 1.4153773994312473,
+      "common_window_slope_dE_ds_lat_err": 24.650592816970537,
+      "original_fit_window_signature_tau_min": [
+        10,
+        10,
+        10
+      ],
+      "original_slope_dE_ds_lat": 1.4153773994312473,
+      "original_slope_dE_ds_lat_err": 24.650592816970537,
+      "original_windows_mixed": false,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk060_2026-05-01.json",
+      "seed": 2026051060
     }
   ],
   "common_window": {
@@ -2344,20 +2467,20 @@
     "tau_min": 10
   },
   "common_window_production_grade": false,
-  "common_window_relative_fit_error": 17.21146559183898,
+  "common_window_relative_fit_error": 17.211488406226152,
   "common_window_slope_summary": {
     "available": true,
     "max": 1.4461110127928816,
-    "mean": 1.4249512429565174,
-    "median": 1.4236741753316455,
+    "mean": 1.424925815621466,
+    "median": 1.4241802591155581,
     "min": 1.4051480558663294,
-    "n": 57,
-    "relative_stdev": 0.005528231310922798,
+    "n": 60,
+    "relative_stdev": 0.005490444253610517,
     "spread_ratio": 1.0291520575042157,
-    "stdev": 0.007877460077850578
+    "stdev": 0.007823475756200156
   },
   "common_window_stability_passed": true,
-  "common_window_typical_fit_error": 24.525499288194286,
+  "common_window_typical_fit_error": 24.525094155301204,
   "exact_next_action": "Promote this into a predeclared common-window response gate or postprocessor, then require finite-source-linearity, scalar-pole model/FV/IR control, and canonical-Higgs identity before any physical y_t readout.",
   "fail_count": 0,
   "high_original_all_mixed_window": true,
@@ -2370,7 +2493,8 @@
     29,
     41,
     42,
-    54
+    54,
+    58
   ],
   "mixed_window_chunk_indices": [
     2,
@@ -2385,18 +2509,19 @@
     40,
     41,
     42,
-    54
+    54,
+    58
   ],
   "original_slope_summary": {
     "available": true,
     "max": 7.3549193842802785,
-    "mean": 2.2703558752592756,
-    "median": 1.4266663595777471,
+    "mean": 2.3239851494174943,
+    "median": 1.4267006767038177,
     "min": 1.2392686775356556,
-    "n": 57,
-    "relative_stdev": 0.8996614607779676,
+    "n": 60,
+    "relative_stdev": 0.9015853947143765,
     "spread_ratio": 5.934886855129659,
-    "stdev": 2.042551683221601
+    "stdev": 2.095271068247921
   },
   "pass_count": 11,
   "proposal_allowed": false,
@@ -2459,7 +2584,10 @@
     54,
     55,
     56,
-    57
+    57,
+    58,
+    59,
+    60
   ],
   "signature_summary": {
     "1/1/1": {
@@ -2533,18 +2661,21 @@
         53,
         55,
         56,
-        57
+        57,
+        59,
+        60
       ],
-      "n": 40,
-      "original_slope_mean": 1.4254074634753433
+      "n": 42,
+      "original_slope_mean": 1.4253122817034278
     },
     "10/10/2": {
       "chunk_indices": [
         29,
-        41
+        41,
+        58
       ],
-      "n": 2,
-      "original_slope_mean": 7.118496075856754
+      "n": 3,
+      "original_slope_mean": 7.139666311484737
     },
     "10/10/3": {
       "chunk_indices": [

@@ -556,3 +556,25 @@ Findings:
 - No retained/proposed-retained claim is authorized because scalar LSZ,
   canonical-Higgs/source-overlap, W/Z response, Schur-row, FV/IR/model-class,
   and retained-route gates remain open.
+
+## 2026-05-04 Chunks058-060 Packaging Self-Review
+
+Disposition: bounded production support; continue campaign.
+
+Findings:
+
+- Chunks058, 059, and 060 pass both generic and v2 multi-tau
+  target-timeseries checkpoints with zero fails after aggregate gates were
+  refreshed.
+- Chunk058 is another mixed-window/high-slope fitted-response row; the
+  common-window provenance gate explains it as source-shift fit-window
+  instability, not as a physical readout.
+- The ready L12 set advances to 60/63 chunks and 960/1000 saved
+  configurations; target-observable ESS passes with limiting ESS
+  `847.2344666684801`.
+- Response-window acceptance remains open because fitted response stability is
+  not production-grade and chunks001-016 still lack v2 rows; the common-window
+  support gates do not authorize a physical readout switch.
+- No retained/proposed-retained claim is authorized because scalar LSZ,
+  canonical-Higgs/source-overlap, W/Z response, Schur-row, FV/IR/model-class,
+  and retained-route gates remain open.

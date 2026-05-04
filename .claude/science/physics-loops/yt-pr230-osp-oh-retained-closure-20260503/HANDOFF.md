@@ -1359,3 +1359,41 @@ Target-observable ESS passes with limiting ESS `799.2344666684801`.
 Response-window acceptance remains open; scalar-LSZ pole/FV/IR/model-class
 control and canonical-Higgs/source-overlap closure remain blocking. Chunks058-
 063 remain live.
+
+## 2026-05-04 Chunks058-060 Packaging
+
+Chunks058, 059, and 060 have completed and passed local plus aggregate gates:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 58
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 58
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 59
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 59
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 60
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 60
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=155 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=181 FAIL=0
+```
+
+The ready L12 set is now `60/63` chunks and `960/1000` saved configurations.
+Target-observable ESS passes with limiting ESS `847.2344666684801`.  The
+common-window pooled response estimator remains production-grade support with
+relative standard error `0.0007088133052504581`, but response-window
+acceptance is still not passed and the physical readout remains blocked by
+scalar-LSZ pole/FV/IR/model-class control plus canonical-Higgs/source-overlap
+closure.  Chunks061-063 remain live under the final wave monitor.
