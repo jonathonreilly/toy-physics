@@ -260,6 +260,9 @@ def main() -> int:
         "wz_response_harness_implementation_plan": load(
             "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json"
         ),
+        "wz_same_source_ew_action_certificate_builder": load(
+            "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json"
+        ),
         "wz_same_source_ew_action_gate": load(
             "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json"
         ),
@@ -1164,6 +1167,15 @@ def main() -> int:
         and certificates["wz_response_harness_implementation_plan"].get("future_rows_written") is False
         and len(certificates["wz_response_harness_implementation_plan"].get("implementation_work_units", [])) == 5,
         statuses["wz_response_harness_implementation_plan"],
+    )
+    report(
+        "wz-same-source-ew-action-certificate-builder-blocks",
+        "same-source EW action certificate absent"
+        in str(statuses["wz_same_source_ew_action_certificate_builder"])
+        and certificates["wz_same_source_ew_action_certificate_builder"].get("proposal_allowed") is False
+        and certificates["wz_same_source_ew_action_certificate_builder"].get("input_present") is False
+        and certificates["wz_same_source_ew_action_certificate_builder"].get("same_source_ew_action_certificate_valid") is False,
+        statuses["wz_same_source_ew_action_certificate_builder"],
     )
     report(
         "wz-same-source-ew-action-gate-blocks",

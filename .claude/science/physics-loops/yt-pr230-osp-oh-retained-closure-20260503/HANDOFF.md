@@ -1668,3 +1668,39 @@ python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py \
   --launch \
   --run-gates
 ```
+
+## 2026-05-04 Non-Chunk Route: Same-Source EW Action Certificate Builder
+
+The chunk stream is delegated to the other CLI worker.  This block advances the
+non-chunk W/Z and source-Higgs bypass by making the missing same-source EW
+action certificate an executable prerequisite instead of an informal TODO.
+
+New runner:
+
+```bash
+python3 scripts/frontier_yt_wz_same_source_ew_action_certificate_builder.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_wz_same_source_ew_action_gate.py
+# SUMMARY: PASS=24 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=159 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=185 FAIL=0
+```
+
+The builder validates the future
+`outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json` contract:
+dynamic `SU(2)_L` and `U(1)_Y` fields, dynamic Higgs doublet, gauge-covariant
+Higgs kinetic term, source coupled to the canonical Higgs radial direction,
+W/Z correlator observables, and canonical-Higgs / sector-overlap / W/Z
+mass-fit certificate references.
+
+Current result is still open: no same-source EW action certificate exists, no
+W/Z rows exist, static EW algebra is rejected as a measurement substitute, and
+no retained/proposed-retained wording is authorized.  This narrows the W/Z
+bypass and source-Higgs route to a concrete next artifact: supply a valid
+same-source EW action certificate, then produce W/Z mass-response rows or
+source-Higgs `C_sH/C_HH` rows.

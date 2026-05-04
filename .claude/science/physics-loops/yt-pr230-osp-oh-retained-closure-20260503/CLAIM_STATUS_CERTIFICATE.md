@@ -181,4 +181,7 @@ Open imports:
 - the 12-hour polefit8x8 campaign stop leaves the homogeneous polefit8x8 stream
   at 12/63 packaged chunks and 192 saved configurations; chunks013-018 remain
   live worker processes and are not packaged evidence yet;
+- the same-source EW action certificate builder is bounded support only; it
+  records that no same-source EW action certificate is present and does not
+  synthesize W/Z rows, define `O_H`, or authorize a W/Z/source-Higgs bypass;
 - independent audit after any proposed positive certificate.

@@ -30,6 +30,7 @@ FUTURE_ROWS = ROOT / "outputs" / "yt_fh_gauge_mass_response_measurement_rows_202
 
 PARENTS = {
     "wz_implementation_plan": "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json",
+    "wz_action_certificate_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
     "wz_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
     "wz_row_production_attempt": "outputs/yt_wz_response_row_production_attempt_2026-05-03.json",
     "wz_repo_import_audit": "outputs/yt_wz_response_repo_harness_import_audit_2026-05-03.json",
@@ -194,6 +195,10 @@ def main() -> int:
         and "open Science Lane" in su2_beta_text
     )
     future_action_cert_present = FUTURE_ACTION_CERT.exists()
+    future_action_cert_valid = (
+        certs["wz_action_certificate_builder"].get("same_source_ew_action_certificate_valid")
+        is True
+    )
     future_rows_present = FUTURE_ROWS.exists()
     observable_gap_open = (
         "FH gauge-mass response observable gap" in status(certs["wz_observable_gap"])
@@ -227,7 +232,7 @@ def main() -> int:
         "closure not yet reached" in status(certs["retained_route"])
         and certs["retained_route"].get("proposal_allowed") is False
     )
-    same_source_ew_action_ready = False
+    same_source_ew_action_ready = future_action_cert_valid
 
     report("parent-certificates-present", not missing, f"missing={missing}")
     report("no-parent-authorizes-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
@@ -241,6 +246,16 @@ def main() -> int:
     report("sm-one-higgs-note-after-h-supplied", sm_note_after_h_supplied, display(SM_ONE_HIGGS_NOTE))
     report("su2-beta-note-not-ew-action", su2_beta_is_running_not_action, display(SU2_BETA_NOTE))
     report("future-ew-action-certificate-absent", not future_action_cert_present, display(FUTURE_ACTION_CERT))
+    report(
+        "future-ew-action-certificate-builder-loaded",
+        "same-source EW action certificate" in status(certs["wz_action_certificate_builder"]),
+        status(certs["wz_action_certificate_builder"]),
+    )
+    report(
+        "future-ew-action-certificate-not-valid",
+        not future_action_cert_valid,
+        f"valid={future_action_cert_valid}",
+    )
     report("future-wz-row-file-absent", not future_rows_present, display(FUTURE_ROWS))
     report("observable-gap-still-open", observable_gap_open, status(certs["wz_observable_gap"]))
     report("row-production-still-negative", row_production_still_negative, status(certs["wz_row_production_attempt"]))
@@ -270,6 +285,9 @@ def main() -> int:
         "same_source_ew_action_ready": same_source_ew_action_ready,
         "action_block_written": False,
         "future_action_certificate": display(FUTURE_ACTION_CERT),
+        "future_action_certificate_builder": PARENTS["wz_action_certificate_builder"],
+        "future_action_certificate_present": future_action_cert_present,
+        "future_action_certificate_valid": future_action_cert_valid,
         "future_rows_path": display(FUTURE_ROWS),
         "action_contract": contract,
         "shortcut_rejections": rejections,

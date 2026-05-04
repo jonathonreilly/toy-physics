@@ -7,14 +7,23 @@ target_status: retained-positive-closure
 actual_current_surface_status: exact-negative-boundary
 active_residual: "scalar-LSZ pole/FV/IR/model-class control / O_sp-O_H identity"
 latest_checkpoint:
-  utc: "2026-05-04T11:31:00Z"
-  block: 36
-  artifact: "12-hour campaign stop checkpoint"
-  status: "runtime exhausted; PR230 remains bounded support/open"
-  result: "12-hour campaign window completed; latest pushed science checkpoint is bc67c52d7 with polefit8x8 chunks001-012 packaged, 12/63 ready, 192 saved configurations, combiner PASS=6 FAIL=0, postprocessor PASS=5 FAIL=0, retained-route PASS=158 FAIL=0, campaign PASS=184 FAIL=0"
-  claim_boundary: "no physical y_t readout; finite-shell diagnostic support only and still needs completed homogeneous production, L16/L24, FV/IR/zero-mode, model-class, and canonical-Higgs/source-overlap closure"
-  live_compute: "foreground orchestrator session 34560 stopped by runtime boundary; chunk013-018 worker PIDs 63148, 63149, 63156, 65660, 68899, 70147 remain alive and CPU-active under PPID 1"
+  utc: "2026-05-04T12:43:52Z"
+  block: 37
+  artifact: "same-source EW action certificate builder"
+  status: "bounded support/open; non-chunk W/Z and source-Higgs bypass prerequisite now executable"
+  result: "added a same-source EW action certificate builder and wired it into the W/Z action gate plus retained/campaign aggregates; builder PASS=10 FAIL=0, W/Z action gate PASS=24 FAIL=0, retained-route PASS=159 FAIL=0, campaign PASS=185 FAIL=0"
+  claim_boundary: "no physical y_t readout; no retained/proposed-retained wording; current surface still lacks same-source EW action certificate, W/Z rows, canonical-Higgs identity, sector-overlap identity, source-Higgs C_sH/C_HH rows, Schur rows, and scalar-LSZ model-class/FV/IR closure"
+  live_compute: "chunk work intentionally left to the other CLI worker; this checkpoint does not package polefit8x8 chunks013-018"
   checkpoint_files:
+    - scripts/frontier_yt_wz_same_source_ew_action_certificate_builder.py
+    - docs/YT_WZ_SAME_SOURCE_EW_ACTION_CERTIFICATE_BUILDER_NOTE_2026-05-04.md
+    - outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json
+    - scripts/frontier_yt_wz_same_source_ew_action_gate.py
+    - outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json
+    - scripts/frontier_yt_retained_closure_route_certificate.py
+    - scripts/frontier_yt_pr230_campaign_status_certificate.py
+    - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+    - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
     - outputs/yt_fh_lsz_polefit8x8_wave_orchestrator_status_2026-05-04.json
     - docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS007_012_CHECKPOINT_NOTE_2026-05-04.md
     - outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk007_2026-05-04.json
@@ -43,7 +52,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 36
+block: 37
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md

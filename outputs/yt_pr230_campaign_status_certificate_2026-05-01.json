@@ -294,11 +294,12 @@
     "wz_response_measurement_row_contract_gate": "bounded-support / WZ response measurement-row contract gate",
     "wz_response_repo_harness_import_audit": "exact negative boundary / repo-wide WZ response harness import audit",
     "wz_response_row_production_attempt": "exact negative boundary / WZ response row production attempt on current surface",
+    "wz_same_source_ew_action_certificate_builder": "open / same-source EW action certificate absent",
     "wz_same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface",
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 185,
+  "pass_count": 186,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

@@ -658,6 +658,24 @@ Findings:
 - No retained/proposed-retained claim is authorized; retained-route and
   campaign-status certificates remain pass-clean only as overclaim guards.
 
+## 2026-05-04 Same-Source EW Action Certificate Builder Self-Review
+
+Disposition: bounded support; non-chunk W/Z/source-Higgs prerequisite hardened.
+
+Findings:
+
+- The chunk stream was not packaged or advanced in this block.
+- The new builder makes the future same-source EW action certificate schema
+  executable and rejects static EW algebra, native gauge structural notes,
+  source-Higgs instrumentation, and the current QCD top harness as substitutes.
+- The current surface remains open because the candidate certificate is absent:
+  no dynamic same-source EW gauge/Higgs action, W/Z rows, sector-overlap
+  certificate, or canonical-Higgs identity is present.
+- The W/Z action gate now consumes the builder output, and the retained-route
+  and campaign-status certificates include the new prerequisite as an
+  overclaim guard.
+- No retained/proposed-retained claim is authorized.
+
 ## 2026-05-04 12-Hour Campaign Stop Self-Review
 
 Disposition: runtime exhausted; bounded campaign checkpoint only.

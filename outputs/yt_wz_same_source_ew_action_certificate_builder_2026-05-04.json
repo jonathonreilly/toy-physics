@@ -1,0 +1,109 @@
+{
+  "acceptance_schema": {
+    "candidate_path": "outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json",
+    "claim_firewall": [
+      "used_hunit_matrix_element_readout=false",
+      "used_hunit_as_operator=false",
+      "used_yt_ward_identity=false",
+      "used_observed_masses_or_couplings_as_selectors=false",
+      "used_static_ew_algebra_as_measurement=false",
+      "used_alpha_lm_or_plaquette_u0=false",
+      "set_kappa_s_equal_one=false",
+      "set_cos_theta_equal_one=false",
+      "set_c2_equal_one=false",
+      "set_z_match_equal_one=false"
+    ],
+    "required_action_terms": [
+      "SU(2) gauge action",
+      "U(1) gauge action",
+      "gauge-covariant Higgs kinetic term",
+      "Higgs potential",
+      "source coupled to canonical Higgs radial mode"
+    ],
+    "required_certificates": [
+      "canonical Higgs operator certificate",
+      "same-source sector-overlap certificate",
+      "W/Z correlator mass-fit path certificate"
+    ],
+    "required_fields": {
+      "dynamic_higgs_doublet": true,
+      "higgs_radial_mode": "canonical radial mode identifier",
+      "su2_link_field": true,
+      "u1_link_field": true
+    },
+    "required_observables": [
+      "W/Z two-point correlators under source shifts",
+      "W/Z mass-fit method",
+      "same-source top/WZ covariance surface in later measurement rows"
+    ],
+    "required_top_level": {
+      "certificate_kind": "same_source_ew_action",
+      "phase": "theorem | production_design | production",
+      "same_source_coordinate": true,
+      "same_surface_cl3_z3": true,
+      "source_coordinate": "same scalar source coordinate used by top FH/LSZ"
+    }
+  },
+  "actual_current_surface_status": "open / same-source EW action certificate absent",
+  "bare_retained_allowed": false,
+  "candidate_validation": {
+    "checks": {},
+    "present": false,
+    "reasons": [
+      "same-source EW action certificate absent"
+    ],
+    "valid": false
+  },
+  "exact_next_action": "Supply a real same-source EW action certificate satisfying this schema, then implement W/Z correlator mass-fit rows or source-Higgs C_sH/C_HH rows with identity certificates.",
+  "fail_count": 0,
+  "input": "outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json",
+  "input_present": false,
+  "parent_certificates": {
+    "canonical_higgs_operator_certificate_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
+    "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "same_source_wz_response_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+    "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "wz_correlator_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
+    "wz_response_harness_implementation_plan": "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json"
+  },
+  "parent_statuses": {
+    "canonical_higgs_operator_certificate_gate": "open / canonical-Higgs operator certificate absent",
+    "canonical_higgs_operator_realization_gate": "open / canonical-Higgs operator realization gate not passed",
+    "same_source_sector_overlap_identity": "exact negative boundary / same-source sector-overlap identity obstruction",
+    "same_source_wz_response_certificate_gate": "open / same-source WZ response certificate gate not passed",
+    "source_higgs_gram_purity_gate": "open / source-Higgs Gram purity gate not passed",
+    "wz_correlator_mass_fit_path_gate": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
+    "wz_response_harness_implementation_plan": "bounded-support / WZ response harness implementation plan"
+  },
+  "pass_count": 10,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This builder validates an action-surface prerequisite only; it does not authorize retained/proposed-retained y_t wording.",
+  "same_source_ew_action_certificate_valid": false,
+  "shortcut_rejections": [
+    {
+      "candidate": "EW gauge-mass diagonalization after H is supplied",
+      "rejection": "static dM_W/dh is not a same-source lattice dM_W/ds measurement"
+    },
+    {
+      "candidate": "native SU(2)/hypercharge structural notes",
+      "rejection": "structural gauge support is not a production EW gauge/Higgs action block"
+    },
+    {
+      "candidate": "current QCD top FH/LSZ harness",
+      "rejection": "the harness guards W/Z rows as absent and has no dynamic EW fields"
+    },
+    {
+      "candidate": "source-Higgs diagonal-vertex shell",
+      "rejection": "instrumentation is default-off and lacks accepted O_H identity/normalization"
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not synthesize EW action data or W/Z rows",
+    "does not treat static EW algebra as a same-source measurement",
+    "does not define O_H by fiat",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "No same-source EW action certificate is present.  Current PR #230 still has static EW gauge-mass algebra and structural gauge support, but no dynamic SU(2)xU(1)/Higgs action block with the same scalar source coordinate used by the top FH/LSZ measurement."
+}

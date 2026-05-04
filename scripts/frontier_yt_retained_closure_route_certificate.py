@@ -152,6 +152,7 @@ def main() -> int:
         "wz_response_measurement_row_contract_gate": "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json",
         "wz_response_row_production_attempt": "outputs/yt_wz_response_row_production_attempt_2026-05-03.json",
         "wz_response_harness_implementation_plan": "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json",
+        "wz_same_source_ew_action_certificate_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
         "wz_same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
         "wz_correlator_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
@@ -1006,6 +1007,18 @@ def main() -> int:
             )
         )
         == 5
+    )
+    wz_same_source_ew_action_certificate_builder_blocks = (
+        "same-source EW action certificate absent"
+        in certificates["wz_same_source_ew_action_certificate_builder"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["wz_same_source_ew_action_certificate_builder"].get("proposal_allowed") is False
+        and certificates["wz_same_source_ew_action_certificate_builder"].get("input_present") is False
+        and certificates["wz_same_source_ew_action_certificate_builder"].get(
+            "same_source_ew_action_certificate_valid"
+        )
+        is False
     )
     wz_same_source_ew_action_gate_blocks = (
         "same-source EW action not defined"
@@ -2002,6 +2015,11 @@ def main() -> int:
         "wz-response-harness-implementation-plan-support-only",
         wz_response_harness_implementation_plan_support_only,
         certificates["wz_response_harness_implementation_plan"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "wz-same-source-ew-action-certificate-builder-blocks",
+        wz_same_source_ew_action_certificate_builder_blocks,
+        certificates["wz_same_source_ew_action_certificate_builder"].get("actual_current_surface_status", ""),
     )
     report(
         "wz-same-source-ew-action-gate-blocks",
