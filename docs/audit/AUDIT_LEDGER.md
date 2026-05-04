@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-04T10:38:03.933357+00:00
+**Generated:** 2026-05-04T10:40:41.503395+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 86 |
 | **retained_no_go** | 109 |
-| **retained_bounded** | 210 |
+| **retained_bounded** | 211 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 671 |
+| unaudited | 670 |
 | audit_in_progress | 1 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 379 |
+| `audited_clean` | 380 |
 | `audited_conditional` | 555 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 718 |
+| `unaudited` | 717 |
 
 | claim_type | count |
 |---|---:|
@@ -237,6 +237,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-context | A | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
+| `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-context | A | - |
 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
@@ -6552,6 +6553,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `scripts/frontier_dm_leptogenesis_k00_sparse_face_target_preimage_theorem.py`
   - `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_helper_2026_04_19.py`
   - `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_2026_04_20.py`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded empirical exact-solve certificate that the implemented selected-branch gauge-vacuum plaquette target equation has two nondegenerate roots found by the original solver and no additional cluster found by a 3660-seed dense search in the positive-angle chart.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-04`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** On the selected least-positive-bulk Wilson branch, dense Monte-Carlo exhaustion finds exactly two roots in the bounded positive-angle chart.  _(class `C`)_
+- **chain closes:** True — The original runner computes two target-hitting, well-separated, nondegenerate roots, and the dense certificate reruns the same live target equation over 3660 structured/random seeds with all converged seeds clustering onto those same two roots. The clean verdict is limited to this bounded empirical certificate and does not claim symbolic global exhaustiveness.
+- **rationale:** The load-bearing bounded claim is the dense empirical root-count certificate, not a symbolic theorem over the whole chart. The current original solver returns exactly two target-hitting nondegenerate roots with residuals below 1e-10, and the repaired dense certificate completes with 3660 seeds, 2201 converged seeds, exactly two clusters, and no additional cluster. Residual risk remains that symbolic elimination or interval arithmetic could reveal a missed basin, so the retained scope must stay bounded to the executable seed-bath certificate rather than global exhaustiveness.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20`

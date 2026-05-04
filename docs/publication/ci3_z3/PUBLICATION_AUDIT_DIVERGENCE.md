@@ -19,7 +19,7 @@ publication tables phrase it.
 |---|---|---:|
 | high | `unaudited` | 135 |
 | medium | `audited_conditional` | 118 |
-| medium | `unaudited` | 85 |
+| medium | `unaudited` | 84 |
 | high | `audited_conditional` | 77 |
 | critical | `unaudited` | 38 |
 | critical | `audited_conditional` | 28 |
@@ -37,7 +37,7 @@ publication tables phrase it.
 | high | `audited_decoration` | 1 |
 | medium | `retained_pending_chain` | 1 |
 
-**Total non-retained-grade rows in publication tables:** 530
+**Total non-retained-grade rows in publication tables:** 529
 
 ## Per-row breakdown
 
@@ -390,7 +390,6 @@ publication tables phrase it.
 | medium | `g_bare_dynamical_fixation_obstruction_note_2026-04-18` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, RESULTS_INDEX.md |
 | medium | `g_weak_from_framework_stretch_attempt_note_2026-05-03` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | medium | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
-| medium | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | medium | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | medium | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | medium | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | `audited_numerical_match` | `audited_numerical_match` | DERIVATION_ATLAS.md |
