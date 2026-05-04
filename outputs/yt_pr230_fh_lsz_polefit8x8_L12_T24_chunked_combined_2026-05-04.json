@@ -1,0 +1,121 @@
+{
+  "chunk_indices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "combined_lsz_summary": {
+    "mode_rows": {
+      "0,0,0": {
+        "C_ss_real_weighted": 0.12229324892200827,
+        "C_ss_real_weighted_stderr": 5.937991142879071e-05,
+        "Gamma_ss_real_proxy": 8.177066263385836,
+        "momentum_mode": [
+          0,
+          0,
+          0
+        ],
+        "p_hat_sq": 0.0
+      },
+      "1,0,0": {
+        "C_ss_real_weighted": 0.12528174527651936,
+        "C_ss_real_weighted_stderr": 5.9268011227914996e-05,
+        "Gamma_ss_real_proxy": 7.982008853666749,
+        "momentum_mode": [
+          1,
+          0,
+          0
+        ],
+        "p_hat_sq": 0.26794919243112264
+      },
+      "1,1,0": {
+        "C_ss_real_weighted": 0.12827256911112317,
+        "C_ss_real_weighted_stderr": 5.931032452925729e-05,
+        "Gamma_ss_real_proxy": 7.795899052537842,
+        "momentum_mode": [
+          1,
+          1,
+          0
+        ],
+        "p_hat_sq": 0.5358983848622453
+      },
+      "1,1,1": {
+        "C_ss_real_weighted": 0.13128093865467738,
+        "C_ss_real_weighted_stderr": 5.4960076398711565e-05,
+        "Gamma_ss_real_proxy": 7.617252056906825,
+        "momentum_mode": [
+          1,
+          1,
+          1
+        ],
+        "p_hat_sq": 0.803847577293368
+      },
+      "2,0,0": {
+        "C_ss_real_weighted": 0.1339083083094162,
+        "C_ss_real_weighted_stderr": 5.5813227638749595e-05,
+        "Gamma_ss_real_proxy": 7.4677965290200135,
+        "momentum_mode": [
+          2,
+          0,
+          0
+        ],
+        "p_hat_sq": 0.9999999999999998
+      },
+      "2,1,0": {
+        "C_ss_real_weighted": 0.13702639495097826,
+        "C_ss_real_weighted_stderr": 5.577988770694488e-05,
+        "Gamma_ss_real_proxy": 7.2978640382223725,
+        "momentum_mode": [
+          2,
+          1,
+          0
+        ],
+        "p_hat_sq": 1.2679491924311224
+      },
+      "2,1,1": {
+        "C_ss_real_weighted": 0.14016960490400865,
+        "C_ss_real_weighted_stderr": 5.233753511011245e-05,
+        "Gamma_ss_real_proxy": 7.134214301915332,
+        "momentum_mode": [
+          2,
+          1,
+          1
+        ],
+        "p_hat_sq": 1.5358983848622452
+      },
+      "2,2,0": {
+        "C_ss_real_weighted": 0.14614344851009467,
+        "C_ss_real_weighted_stderr": 5.2567810784010886e-05,
+        "Gamma_ss_real_proxy": 6.842592057289015,
+        "momentum_mode": [
+          2,
+          2,
+          0
+        ],
+        "p_hat_sq": 1.9999999999999996
+      }
+    }
+  },
+  "metadata": {
+    "chunk_count": 6,
+    "complete_l12_target": false,
+    "manifest": "outputs/yt_fh_lsz_polefit8x8_chunk_manifest_2026-05-04.json",
+    "phase": "partial_l12_polefit8x8_chunk_summary",
+    "saved_configurations": 96,
+    "source": "frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py",
+    "strict_limit": "Eight-mode/x8 L12 rows are same-source scalar-LSZ support only. They do not supply L16/L24 scaling, FV/IR/zero-mode control, a model-class theorem, canonical-Higgs/source overlap, or retained-proposal authority."
+  },
+  "source_response_summary": {
+    "mean": 1.2433408778037363,
+    "stderr": 0.09301794628246066
+  },
+  "strict_non_claims": [
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s, c2, Z_match, or cos(theta) to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not mix this eight-mode/x8 stream with the four-mode/x16 L12 stream"
+  ]
+}

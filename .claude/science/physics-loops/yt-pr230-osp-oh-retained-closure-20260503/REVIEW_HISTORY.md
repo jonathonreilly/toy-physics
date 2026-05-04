@@ -637,3 +637,23 @@ Findings:
   needs completed homogeneous production chunks, L16/L24, FV/IR/zero-mode
   control, model-class authority, canonical-Higgs/source-overlap closure, and
   independent audit.
+
+## 2026-05-04 Polefit8x8 Chunks001-006 Self-Review
+
+Disposition: bounded finite-shell diagnostic support; continue campaign.
+
+Findings:
+
+- Chunks001 through 006 completed in the separate homogeneous eight-mode/x8
+  pole-fit namespace and were not mixed with the completed four-mode/x16 L12
+  stream.
+- The combiner passes with 6/63 ready chunks and 96 saved configurations.
+- The postprocessor sees 8 mode rows and 8 distinct momentum shells, so the
+  finite-shell diagnostic fit is numerically formed, unlike the complete
+  four-mode stream.
+- The diagnostic fit is still not physical scalar-pole evidence because
+  complete L12 production, L16/L24 finite-volume scaling, FV/IR/zero-mode
+  control, pole-fit model-class authority, and canonical-Higgs/source-overlap
+  closure are absent.
+- No retained/proposed-retained claim is authorized; retained-route and
+  campaign-status certificates remain pass-clean only as overclaim guards.

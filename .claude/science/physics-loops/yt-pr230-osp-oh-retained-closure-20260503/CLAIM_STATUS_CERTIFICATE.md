@@ -157,6 +157,12 @@ Open imports:
   retained/campaign certificate hooks; chunks001-006 were started, but this is
   run-control/support only and not scalar-LSZ normalization or physical `y_t`
   evidence;
+- FH/LSZ polefit8x8 chunks001/002/003/004/005/006 are now packaged as bounded
+  finite-shell diagnostic support only; the homogeneous stream is 6/63 ready
+  with 96 saved configurations, 8 mode rows, and 8 distinct shells, but
+  complete L12 production, L16/L24 scaling, FV/IR/zero-mode control,
+  model-class authority, and canonical-Higgs/source-overlap closure remain
+  absent, so retained/proposed-retained wording is still unauthorized;
 - FH/LSZ chunks047/048 are now packaged with the ready set as bounded
   production support only; the 48/63 ready L12 state passes target-observable
   ESS with limiting ESS `678.1515635297619` but still fails response-window

@@ -1,6 +1,56 @@
 {
-  "actual_current_surface_status": "open / FH-LSZ eight-mode-x8 pole diagnostic awaiting combined rows",
-  "diagnostic_fit_if_ready": {},
+  "actual_current_surface_status": "bounded-support / FH-LSZ eight-mode-x8 finite-shell pole diagnostic",
+  "diagnostic_fit_if_ready": {
+    "chi2": 0.0014980849978701199,
+    "dof": 6,
+    "fit_kind": "diagnostic_weighted_linear_Gamma_vs_p_hat_sq",
+    "input_rows": [
+      {
+        "Gamma_ss_real": 8.177066263385836,
+        "Gamma_ss_real_err": NaN,
+        "p_hat_sq": 0.0
+      },
+      {
+        "Gamma_ss_real": 7.982008853666749,
+        "Gamma_ss_real_err": NaN,
+        "p_hat_sq": 0.26794919243112264
+      },
+      {
+        "Gamma_ss_real": 7.795899052537842,
+        "Gamma_ss_real_err": NaN,
+        "p_hat_sq": 0.5358983848622453
+      },
+      {
+        "Gamma_ss_real": 7.617252056906825,
+        "Gamma_ss_real_err": NaN,
+        "p_hat_sq": 0.803847577293368
+      },
+      {
+        "Gamma_ss_real": 7.4677965290200135,
+        "Gamma_ss_real_err": NaN,
+        "p_hat_sq": 0.9999999999999998
+      },
+      {
+        "Gamma_ss_real": 7.2978640382223725,
+        "Gamma_ss_real_err": NaN,
+        "p_hat_sq": 1.2679491924311224
+      },
+      {
+        "Gamma_ss_real": 7.134214301915332,
+        "Gamma_ss_real_err": NaN,
+        "p_hat_sq": 1.5358983848622452
+      },
+      {
+        "Gamma_ss_real": 6.842592057289015,
+        "Gamma_ss_real_err": NaN,
+        "p_hat_sq": 1.9999999999999996
+      }
+    ],
+    "intercept": 8.158273417106976,
+    "pole_p_hat_sq": 12.211544597126109,
+    "slope_dGamma_dp_hat_sq": -0.6680787473049856,
+    "strict_limit": "finite-shell diagnostic only; model-class/FV/IR/source-Higgs gates remain load-bearing"
+  },
   "fail_count": 0,
   "input": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunked_combined_2026-05-04.json",
   "parent_certificates": {
@@ -12,14 +62,14 @@
   "proposal_allowed_reason": "Finite-shell diagnostic fits do not provide retained scalar LSZ normalization.",
   "readiness": {
     "complete_l12_target": false,
-    "diagnostic_fit_ready": false,
-    "distinct_shells": 0,
-    "has_zero_shell": false,
-    "input_exists": false,
-    "mode_rows": 0,
+    "diagnostic_fit_ready": true,
+    "distinct_shells": 8,
+    "has_zero_shell": true,
+    "input_exists": true,
+    "mode_rows": 8,
     "model_class_blocks_retained_use": true,
-    "positive_shells": 0,
-    "saved_configurations": 0
+    "positive_shells": 7,
+    "saved_configurations": 96
   },
   "strict_non_claims": [
     "not retained or proposed_retained y_t closure",
