@@ -92,6 +92,7 @@
     "neutral_scalar_irreducibility": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
     "schur_kprime_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
     "schur_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
     "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
@@ -124,6 +125,7 @@
     "neutral_scalar_irreducibility": "exact negative boundary / neutral-scalar irreducibility authority absent on current PR230 surface",
     "retained_route": "open / retained closure not yet reached",
     "same_source_sector_overlap": "exact negative boundary / same-source sector-overlap identity obstruction",
+    "same_source_w_response_decomposition": "exact-support / same-source W-response decomposition theorem; current rows absent",
     "schur_kprime_rows": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
     "schur_kprime_sufficiency": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent",
     "source_higgs_gram": "open / source-Higgs Gram purity gate not passed",
@@ -154,12 +156,14 @@
       "blocked_by": [
         "same-source EW action certificate absent",
         "W/Z correlator mass-fit path absent",
+        "orthogonal-neutral top-coupling null or correction absent",
         "sector-overlap identity not derived",
         "canonical-Higgs identity not derived"
       ],
       "parents": [
         "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
         "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
+        "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
         "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
         "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
         "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json"

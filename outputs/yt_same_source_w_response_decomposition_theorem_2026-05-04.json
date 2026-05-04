@@ -1,0 +1,82 @@
+{
+  "actual_current_surface_status": "exact-support / same-source W-response decomposition theorem; current rows absent",
+  "bare_retained_allowed": false,
+  "counterexample_rows": [
+    {
+      "R_W": 0.324,
+      "R_t": 0.648416918348064,
+      "g2": 0.648,
+      "kappa_h": 1.0,
+      "kappa_x": 0.4,
+      "orthogonal_correction": -1.1102230246251565e-16,
+      "orthogonal_y_x": 0.0,
+      "physical_y_h": 0.917,
+      "same_source_w_readout": 0.9169999999999999
+    },
+    {
+      "R_W": 0.324,
+      "R_t": 0.704985460842988,
+      "g2": 0.648,
+      "kappa_h": 1.0,
+      "kappa_x": 0.4,
+      "orthogonal_correction": 0.07999999999999996,
+      "orthogonal_y_x": 0.2,
+      "physical_y_h": 0.917,
+      "same_source_w_readout": 0.997
+    },
+    {
+      "R_W": 0.324,
+      "R_t": 0.5918483758531402,
+      "g2": 0.648,
+      "kappa_h": 1.0,
+      "kappa_x": 0.4,
+      "orthogonal_correction": -0.08000000000000018,
+      "orthogonal_y_x": -0.2,
+      "physical_y_h": 0.917,
+      "same_source_w_readout": 0.8369999999999999
+    }
+  ],
+  "current_closure_gate_passed": false,
+  "exact_next_action": "Produce same-source W response rows and either an orthogonal-top null theorem, a tomography correction row, or O_sp/O_H Gram-purity rows; then combine with FH/LSZ top response and matching/running.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "ew_higgs_gauge_mass": "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md",
+    "non_source_rank_repair": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
+    "same_source_sector_overlap_obstruction": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "sm_one_higgs_selection": "docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md",
+    "wz_same_source_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json"
+  },
+  "parent_statuses": {
+    "ew_higgs_gauge_mass": "present",
+    "non_source_rank_repair": "exact-support / non-source response rank-repair sufficiency theorem; current rows absent",
+    "same_source_sector_overlap_obstruction": "exact negative boundary / same-source sector-overlap identity obstruction",
+    "sm_one_higgs_selection": "present",
+    "wz_same_source_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface"
+  },
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The theorem cancels source normalization but leaves an orthogonal-neutral top-coupling correction unless a null theorem, tomography row, or source-Higgs Gram-purity row is supplied.",
+  "readout_formula": {
+    "R_W": "d M_W / d s = g_2 kappa_h / 2",
+    "R_t": "d m_t / d s = (y_h kappa_h + y_x kappa_x) / sqrt(2)",
+    "closure_condition": "orthogonal correction y_x kappa_x/kappa_h = 0 or measured/subtracted",
+    "same_source_w_readout": "g_2 R_t / (sqrt(2) R_W) = y_h + y_x kappa_x/kappa_h"
+  },
+  "same_source_w_response_decomposition_theorem_passed": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not use observed target values as proof input",
+    "does not use H_unit or yt_ward_identity",
+    "does not use alpha_LM, plaquette, or u0 authority",
+    "does not set kappa_s, c2, Z_match, or cos(theta) to one",
+    "does not treat missing W-response rows as evidence"
+  ],
+  "symbolic_derivation": {
+    "R_W": "g_2*k_h/2",
+    "R_t": "sqrt(2)*(k_h*y_h + k_x*y_x)/2",
+    "decomposition_residual_zero": true,
+    "no_orthogonal_residual_zero": true,
+    "source_rescaling_residual_zero": true,
+    "y_readout": "y_h + k_x*y_x/k_h"
+  }
+}

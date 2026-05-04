@@ -275,6 +275,9 @@ def main() -> int:
         "wz_same_source_ew_action_semantic_firewall": load(
             "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json"
         ),
+        "same_source_w_response_decomposition": load(
+            "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json"
+        ),
         "wz_correlator_mass_fit_path_gate": load(
             "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json"
         ),
@@ -1221,6 +1224,18 @@ def main() -> int:
         in str(statuses["wz_same_source_ew_action_semantic_firewall"])
         and certificates["wz_same_source_ew_action_semantic_firewall"].get("proposal_allowed") is False,
         statuses["wz_same_source_ew_action_semantic_firewall"],
+    )
+    report(
+        "same-source-w-response-decomposition-not-closure",
+        "same-source W-response decomposition theorem"
+        in str(statuses["same_source_w_response_decomposition"])
+        and certificates["same_source_w_response_decomposition"].get("proposal_allowed") is False
+        and certificates["same_source_w_response_decomposition"].get(
+            "same_source_w_response_decomposition_theorem_passed"
+        )
+        is True
+        and certificates["same_source_w_response_decomposition"].get("current_closure_gate_passed") is False,
+        statuses["same_source_w_response_decomposition"],
     )
     report(
         "wz-correlator-mass-fit-path-gate-blocks",

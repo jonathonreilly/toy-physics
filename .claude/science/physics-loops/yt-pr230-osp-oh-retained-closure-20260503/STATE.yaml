@@ -7,17 +7,17 @@ target_status: retained-positive-closure
 actual_current_surface_status: exact-negative-boundary
 active_residual: "scalar-LSZ pole/FV/IR/model-class control / O_sp-O_H identity"
 latest_checkpoint:
-  utc: "2026-05-04T13:28:42Z"
-  block: 41
-  artifact: "PR230 matching/running bridge gate"
-  status: "open; bridge contract ready but no certified physical input readout"
-  result: "added PR230 matching/running bridge gate; bridge gate PASS=5 FAIL=0, assembly PASS=16 FAIL=0, retained-route PASS=164 FAIL=0, campaign PASS=190 FAIL=0"
-  claim_boundary: "no certified physical readout, scalar-LSZ/direct-mass, source-overlap/direct-mass, scale-setting, or 4/5-loop bridge certificate; no physical y_t or m_t claim; no retained/proposed-retained wording"
+  utc: "2026-05-04T21:50:45Z"
+  block: 42
+  artifact: "same-source W-response decomposition theorem"
+  status: "exact support/open; source normalization cancellation derived, orthogonal correction exposed"
+  result: "same-source W theorem PASS=6 FAIL=0, assembly PASS=17 FAIL=0, retained-route PASS=166 FAIL=0, campaign PASS=192 FAIL=0"
+  claim_boundary: "no W response rows; no same-source EW action; no orthogonal-top null/tomography/Gram correction; no physical y_t or retained/proposed-retained wording"
   live_compute: "chunk work intentionally left to the other CLI worker; this checkpoint does not package polefit8x8 chunks013-018 or any other chunk artifacts"
   checkpoint_files:
-    - scripts/frontier_yt_pr230_matching_running_bridge_gate.py
-    - docs/YT_PR230_MATCHING_RUNNING_BRIDGE_GATE_NOTE_2026-05-04.md
-    - outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json
+    - scripts/frontier_yt_same_source_w_response_decomposition_theorem.py
+    - docs/YT_SAME_SOURCE_W_RESPONSE_DECOMPOSITION_THEOREM_NOTE_2026-05-04.md
+    - outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json
     - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
     - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
     - scripts/frontier_yt_retained_closure_route_certificate.py
@@ -29,7 +29,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 41
+block: 42
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md

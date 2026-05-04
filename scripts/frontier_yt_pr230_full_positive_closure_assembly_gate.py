@@ -42,6 +42,7 @@ PARENTS = {
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_same_source_action_semantic_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
+    "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
     "wz_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
@@ -162,12 +163,14 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
             "blocked_by": [
                 "same-source EW action certificate absent",
                 "W/Z correlator mass-fit path absent",
+                "orthogonal-neutral top-coupling null or correction absent",
                 "sector-overlap identity not derived",
                 "canonical-Higgs identity not derived",
             ],
             "parents": [
                 PARENTS["wz_same_source_action"],
                 PARENTS["wz_same_source_action_semantic_firewall"],
+                PARENTS["same_source_w_response_decomposition"],
                 PARENTS["wz_certificate_gate"],
                 PARENTS["wz_mass_fit_path"],
                 PARENTS["same_source_sector_overlap"],

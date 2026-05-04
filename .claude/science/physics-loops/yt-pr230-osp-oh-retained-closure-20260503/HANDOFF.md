@@ -1863,3 +1863,39 @@ firewalls for observed selectors, `H_unit`/Ward, `alpha_LM`/plaquette, and
 Next exact action: continue the positive non-chunk route with a real
 source-overlap bridge (`O_H/C_sH/C_HH`, W/Z response, Schur rows, or
 neutral-rank theorem) or a real scalar-LSZ denominator/pole-saturation theorem.
+
+## 2026-05-04 Same-Source W-Response Decomposition Theorem
+
+This non-chunk block derives the exact same-source W-response algebra needed
+for the W/Z bypass.  If the scalar source moves the canonical Higgs radial
+direction by `kappa_h ds` and an orthogonal neutral scalar by `kappa_x ds`,
+then the paired top and W responses satisfy
+`g_2 R_t/(sqrt(2) R_W)=y_h+y_x kappa_x/kappa_h`.
+
+Verification:
+
+```bash
+python3 -m py_compile \
+  scripts/frontier_yt_same_source_w_response_decomposition_theorem.py \
+  scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py \
+  scripts/frontier_yt_retained_closure_route_certificate.py \
+  scripts/frontier_yt_pr230_campaign_status_certificate.py
+# pass
+
+python3 scripts/frontier_yt_same_source_w_response_decomposition_theorem.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=166 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=192 FAIL=0
+```
+
+Result: exact support.  Source normalization cancellation is real; the blocker
+is now the orthogonal correction.  Next exact action: produce W response rows
+plus an orthogonal-top null/tomography row, source-Higgs Gram rows, or a
+scalar-LSZ denominator/pole theorem.

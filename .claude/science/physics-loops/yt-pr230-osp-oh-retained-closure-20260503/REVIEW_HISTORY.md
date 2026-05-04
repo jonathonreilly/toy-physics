@@ -797,3 +797,20 @@ Findings checked:
   and `kappa/c2/Z_match` shortcuts.
 - The toy arithmetic sanity row is explicitly not evidence and no
   retained/proposed_retained claim is authorized.
+
+# 2026-05-04 Same-Source W-Response Decomposition Self-Review
+
+Disposition: pass as exact support, not as closure.
+
+Findings checked:
+
+- The symbolic decomposition verifies
+  `g_2 R_t/(sqrt(2) R_W)=y_h+y_x kappa_x/kappa_h`.
+- The common scalar source normalization cancels under
+  `kappa_h,kappa_x -> lambda kappa_h,lambda kappa_x`.
+- The orthogonal-null case gives the physical Higgs Yukawa, but this null
+  condition is not assumed.
+- A counterfamily with fixed W response and varied orthogonal top coupling
+  changes the readout, proving W response alone is not closure.
+- The artifact uses no `H_unit`, Ward identity, observed selector,
+  `alpha_LM`/plaquette, or `kappa/c2/Z_match` shortcut.

@@ -23,6 +23,11 @@ Open imports:
 - same-source W/Z route is contract/gate support only; no W/Z mass-response
   rows, same-source EW production action certificate, sector-overlap identity,
   or canonical-Higgs identity pass;
+- same-source W-response decomposition theorem is exact support only: it
+  proves `g_2 R_t/(sqrt(2) R_W)=y_h+y_x kappa_x/kappa_h`, so scalar source
+  normalization cancels but an orthogonal neutral top-coupling correction
+  remains unless nulled or measured; it supplies no W rows, orthogonal-null
+  theorem, matching, or retained/proposed-retained claim;
 - W/Z correlator mass-fit path is absent on the current PR230 surface; static
   EW gauge-mass algebra, aggregate slopes, mismatched source coordinates, and
   observed-W/Z selectors are explicitly rejected as measurement rows;
