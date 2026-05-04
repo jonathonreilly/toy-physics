@@ -99,13 +99,85 @@ def read_note_body(note_path: str) -> str | None:
     return p.read_text(encoding="utf-8", errors="replace")
 
 
-def get_runner_stdout(runner_path: str | None, timeout_sec: int) -> str:
-    """Run the row's primary runner with a timeout; return stdout or empty."""
+# Per-runner timeout overrides for known-heavy compute lanes. Anything not
+# matched falls through to --runner-timeout-sec (default 120s). Patterns are
+# substring matches against the runner basename. Long timeouts here trade
+# wall-clock for verdict completeness on lanes that genuinely need it.
+RUNNER_TIMEOUT_OVERRIDES: list[tuple[str, int]] = [
+    ("frontier_alpha_s", 900),
+    ("frontier_confinement", 900),
+    ("frontier_gauge_vacuum_plaquette_perron", 900),
+    ("frontier_gauge_vacuum_plaquette_reduction", 900),
+    ("frontier_gauge_vacuum_plaquette_spectral", 900),
+    ("frontier_gauge_vacuum_plaquette_susceptibility", 900),
+    ("frontier_yt_uv_to_ir", 900),
+    ("frontier_yt_p1_delta_r_master", 900),
+    ("frontier_higgs_mass_full", 900),
+    ("frontier_dm_neutrino_source_surface", 600),
+    ("frontier_ckm_atlas", 600),
+    ("frontier_self_consistent_field", 600),
+    ("frontier_emergent_lorentz", 600),
+]
+
+
+def runner_timeout_for(runner_path: str, default_sec: int) -> int:
+    """Return the timeout to use for a given runner."""
+    bn = Path(runner_path).name
+    for needle, override in RUNNER_TIMEOUT_OVERRIDES:
+        if needle in bn:
+            return override
+    return default_sec
+
+
+def find_cached_runner_output(runner_path: str) -> str | None:
+    """Look for a recent log file from this runner. Returns its tail content
+    if found, else None. Most runners in this repo emit logs/<name>-*.txt.
+    """
+    if not runner_path:
+        return None
+    bn = Path(runner_path).stem  # strip .py
+    logs_dir = REPO_ROOT / "logs"
+    if not logs_dir.is_dir():
+        return None
+    # Look for any file whose name contains the runner stem
+    candidates = []
+    try:
+        for p in logs_dir.iterdir():
+            if not p.is_file():
+                continue
+            if bn in p.name:
+                candidates.append(p)
+    except OSError:
+        return None
+    if not candidates:
+        return None
+    # Most recent by mtime
+    latest = max(candidates, key=lambda p: p.stat().st_mtime)
+    age_sec = time.time() - latest.stat().st_mtime
+    try:
+        body = latest.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return None
+    header = f"[cached runner output from {latest.name} (age {int(age_sec)}s)]\n"
+    return header + body[-6000:]
+
+
+def get_runner_stdout(runner_path: str | None, default_timeout_sec: int,
+                      use_cache: bool = True) -> str:
+    """Get runner output. Tries logs/<name>* cache first if use_cache=True;
+    falls back to running the runner with a per-runner timeout (override
+    map for known-heavy lanes; --runner-timeout-sec for everything else).
+    """
     if not runner_path:
         return ""
+    if use_cache:
+        cached = find_cached_runner_output(runner_path)
+        if cached:
+            return cached
     p = REPO_ROOT / runner_path
     if not p.exists():
         return f"[runner missing on disk: {runner_path}]"
+    timeout_sec = runner_timeout_for(runner_path, default_timeout_sec)
     try:
         res = subprocess.run(
             [sys.executable, str(p)],
@@ -119,13 +191,14 @@ def get_runner_stdout(runner_path: str | None, timeout_sec: int) -> str:
             return f"[runner exit={res.returncode}]\n{res.stdout[-3000:]}\n--- stderr ---\n{res.stderr[-1500:]}"
         return res.stdout[-6000:]   # cap to keep prompt size sane
     except subprocess.TimeoutExpired:
-        return f"[runner timed out at {timeout_sec}s]"
+        return f"[runner timed out at {timeout_sec}s — likely needs compute-rerun]"
     except Exception as e:
         return f"[runner error: {e}]"
 
 
 def render_prompt(row: dict, ledger_rows: dict[str, dict],
-                  template: str, runner_timeout_sec: int) -> str:
+                  template: str, runner_timeout_sec: int,
+                  use_cache: bool = True) -> str:
     """Substitute the prompt template's variables for one queue row."""
     cid = row["claim_id"]
     note_path = row.get("note_path") or ledger_rows.get(cid, {}).get("note_path") or ""
@@ -157,7 +230,7 @@ def render_prompt(row: dict, ledger_rows: dict[str, dict],
         )
     cited_str = "\n\n".join(cited_blocks) if cited_blocks else "(no cited authorities — load-bearing step must derive from axiom)"
 
-    runner_stdout = get_runner_stdout(runner_path, runner_timeout_sec)
+    runner_stdout = get_runner_stdout(runner_path, runner_timeout_sec, use_cache=use_cache)
 
     # Inline-substitute the {{...}} variables. We only replace the variables
     # actually appearing in the template; the FOREACH block uses cited_str.
@@ -177,17 +250,26 @@ def render_prompt(row: dict, ledger_rows: dict[str, dict],
     # Use a lambda so cited_str isn't interpreted as a re replacement template
     prompt = foreach_re.sub(lambda _m: cited_str, prompt)
 
-    # Append a tightening footer so we get clean JSON back
+    # Append a tightening footer so we get clean JSON back. We DELIBERATELY
+    # do not suppress the COMPUTE_REQUIRED escape — the audit-lane policy
+    # in AUDIT_AGENT_PROMPT_TEMPLATE.md says runner timeouts / missing
+    # compute must NOT be converted to terminal verdicts. If codex returns
+    # COMPUTE_REQUIRED, the wrapper detects it and skips the row (no
+    # apply, no commit, logged for compute-rerun follow-up).
     prompt += (
         "\n\n---\n"
         "OUTPUT INSTRUCTIONS (binding):\n"
-        "Respond with EXACTLY one JSON object matching the schema in section 5. "
-        "No markdown fences, no preamble, no explanation outside the JSON. "
-        "If you must signal compute is required (per the COMPUTE_REQUIRED rule), "
-        "set verdict to one of the audited_* values that best reflects what you can "
-        "actually decide; do not return the literal COMPUTE_REQUIRED string in this "
-        "automated mode — instead set chain_closes=false and explain the missing "
-        "compute in chain_closure_explanation.\n"
+        "If the runner output is missing only because of timeout, missing\n"
+        "stdout, or compute-budget exhaustion AND the load-bearing step\n"
+        "cannot be judged without that completed run, return EXACTLY one\n"
+        "line of the form:\n"
+        "    COMPUTE_REQUIRED: <one sentence naming the missing run / cached\n"
+        "    certificate / independent derivation needed>\n"
+        "and nothing else. Do NOT fabricate a terminal verdict in that case.\n"
+        "\n"
+        "Otherwise, respond with EXACTLY one JSON object matching the schema\n"
+        "in section 5. No markdown fences, no preamble, no explanation\n"
+        "outside the JSON.\n"
     )
     return prompt
 
@@ -413,6 +495,9 @@ def main() -> int:
                    help="Pass --no-propagate to apply_audit; run the pipeline once at end.")
     p.add_argument("--no-runner", action="store_true",
                    help="Skip running each row's primary runner (faster; uses empty stdout).")
+    p.add_argument("--no-cache-runner", action="store_true",
+                   help="Don't use logs/<runner-name>*.txt cache; always re-run "
+                        "the runner. Slower but freshest output.")
     p.add_argument("--push-mode",
                    choices=["per-verdict", "batch", "none"],
                    default="batch",
@@ -476,19 +561,20 @@ def main() -> int:
         cid = row["claim_id"]
         print(f"\n[{i}/{len(targets)}] {cid}")
         try:
-            # Honor --no-runner by passing 0 timeout (subprocess.run skips)
-            timeout = 0 if args.no_runner else args.runner_timeout_sec
+            use_cache = not args.no_cache_runner
             if args.no_runner:
                 # Build the prompt manually with empty runner stdout
                 ledger_rows_view = ledger_rows
                 full_row = ledger_rows_view.get(cid, {})
                 row_for_prompt = {**row, "note_path": full_row.get("note_path"),
                                   "runner_path": full_row.get("runner_path")}
-                prompt = render_prompt(row_for_prompt, ledger_rows_view, template, 1)
+                prompt = render_prompt(row_for_prompt, ledger_rows_view, template, 1,
+                                       use_cache=False)
                 # Wipe runner stdout block
                 prompt = re.sub(r"### 3\. Runner output.*?### 4\.", "### 4.", prompt, count=1, flags=re.DOTALL)
             else:
-                prompt = render_prompt(row, ledger_rows, template, args.runner_timeout_sec)
+                prompt = render_prompt(row, ledger_rows, template, args.runner_timeout_sec,
+                                       use_cache=use_cache)
 
             if args.dry_run:
                 print(f"  [dry-run] prompt size: {len(prompt)} chars")
@@ -524,6 +610,21 @@ def main() -> int:
                     f.write(json.dumps({
                         "claim_id": cid, "phase": "extract_failed",
                         "elapsed_sec": elapsed, "stdout_tail": stdout[-2000:]
+                    }) + "\n")
+                continue
+
+            # COMPUTE_REQUIRED escape per AUDIT_AGENT_PROMPT_TEMPLATE.md:
+            # if codex says the load-bearing step needs a missing run, do
+            # NOT apply a verdict. Skip the row and log it for compute-rerun.
+            cr_match = re.search(r"COMPUTE_REQUIRED:\s*(.+?)(?:\n|$)", reply, re.IGNORECASE)
+            if cr_match:
+                reason = cr_match.group(1).strip()[:300]
+                print(f"  COMPUTE_REQUIRED: {reason[:200]}")
+                skipped += 1
+                with run_log.open("a", encoding="utf-8") as f:
+                    f.write(json.dumps({
+                        "claim_id": cid, "phase": "compute_required",
+                        "elapsed_sec": elapsed, "reason": reason,
                     }) + "\n")
                 continue
 
