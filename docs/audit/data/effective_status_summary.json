@@ -4,8 +4,8 @@
     "decoration": 1,
     "meta": 47,
     "no_go": 165,
-    "open_gate": 96,
-    "positive_theorem": 866
+    "open_gate": 97,
+    "positive_theorem": 865
   },
   "cycle_examples": [
     [
@@ -40,17 +40,17 @@
   "cycles_detected": 189,
   "effective_status_counts": {
     "audit_in_progress": 3,
-    "audited_conditional": 234,
+    "audited_conditional": 238,
     "audited_numerical_match": 4,
-    "audited_renaming": 9,
+    "audited_renaming": 10,
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,
     "meta": 46,
     "open_gate": 15,
     "retained": 37,
-    "retained_bounded": 173,
+    "retained_bounded": 176,
     "retained_no_go": 95,
     "retained_pending_chain": 1,
-    "unaudited": 1147
+    "unaudited": 1139
   },
   "retained_pending_chain_count": 1,
   "retained_pending_chain_examples": [
