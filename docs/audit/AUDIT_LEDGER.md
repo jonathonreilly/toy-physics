@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 204 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 17 |
-| unaudited | 899 |
+| unaudited | 898 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 23 |
+| ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 14 |
 | ~~audited_conditional~~ | 365 |
 | ~~audited_failed~~ | 7 |
@@ -40,9 +40,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 365 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 51 |
-| `audited_numerical_match` | 23 |
+| `audited_numerical_match` | 24 |
 | `audited_renaming` | 14 |
-| `unaudited` | 946 |
+| `unaudited` | 945 |
 
 | claim_type | count |
 |---|---:|
@@ -910,6 +910,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_action_invariant_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_bridge_moment_closure_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_bridge_operator_closure_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
+| `yt_constructive_uv_bridge_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `yt_exact_interacting_bridge_transport_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_interacting_bridge_locality_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `cl3_color_automorphism_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -12434,6 +12435,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** The unresolved bridge is not plausibly being absorbed into wide EW-side operator ambiguity.  _(class `G`)_
 - **chain closes:** False — The scan narrows the plausible bridge mechanism but does not prove that all electroweak-side operator freedom is excluded or that the exact interacting bridge is uniquely UV-localized.
 - **rationale:** Re-audit confirms the original numerical-match verdict: target-conditioned scan, not a closure theorem. Scope narrowed from the migration backfill to the bounded proxy result.
+- **auditor confidence:** high
+
+### `yt_constructive_uv_bridge_note`
+
+- **Note:** [`YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md`](../../docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded claim that three chosen endpoint-preserving UV-localized bridge families can be tuned within the scanned window to reproduce y_t(v)=0.9176 with small cross-family spread.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260504-131948-dc8b8c05-yt_constructive_uv_bridg-001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Each bridge family scans the UV-localized window and selects its best fit to the accepted endpoint y_t(v)=0.9176, after which the best fits are compared for stability.  _(class `G`)_
+- **chain closes:** False — The runner optimizes profile center and width against the accepted endpoint y_t(v)=0.9176 rather than deriving that endpoint or deriving that the exact interacting bridge lies in this class. The missing step is an independent theorem or retained input forcing the physical bridge into the UV-localized constructive class.
+- **rationale:** The code performs a real numerical scan, but the scan objective is explicitly the imported target y_t(v)=0.9176 and the best rows are selected by minimizing deviation from that target. The result therefore establishes a tuned numerical match within a chosen profile class, not a first-principles computation from the stated axiom. The note itself acknowledges that deriving why the exact interacting lattice bridge belongs to this UV-localized class remains open.
 - **auditor confidence:** high
 
 ### `yt_ew_color_projection_theorem`

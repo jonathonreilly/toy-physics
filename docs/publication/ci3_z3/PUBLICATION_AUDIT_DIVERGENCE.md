@@ -19,7 +19,7 @@ publication tables phrase it.
 |---|---|---:|
 | high | `unaudited` | 208 |
 | medium | `unaudited` | 99 |
-| critical | `unaudited` | 67 |
+| critical | `unaudited` | 66 |
 | medium | `audited_conditional` | 50 |
 | high | `audited_conditional` | 45 |
 | critical | `audited_conditional` | 30 |
@@ -31,6 +31,7 @@ publication tables phrase it.
 | high | `retained_pending_chain` | 2 |
 | medium | `audited_decoration` | 2 |
 | critical | `audited_failed` | 1 |
+| critical | `audited_numerical_match` | 1 |
 | critical | `open_gate` | 1 |
 | high | `audited_decoration` | 1 |
 | medium | `audited_renaming` | 1 |
@@ -136,7 +137,7 @@ publication tables phrase it.
 | critical | `yt_bridge_nonlocal_corrections_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `yt_bridge_uv_class_uniqueness_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `yt_color_projection_correction_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
-| critical | `yt_constructive_uv_bridge_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| critical | `yt_constructive_uv_bridge_note` | `audited_numerical_match` | `audited_numerical_match` | DERIVATION_ATLAS.md |
 | critical | `yt_exact_coarse_grained_bridge_operator_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `yt_exact_schur_normal_form_uniqueness_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `yt_explicit_systematic_budget_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |

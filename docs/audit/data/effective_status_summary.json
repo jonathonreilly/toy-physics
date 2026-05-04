@@ -41,7 +41,7 @@
     "audited_conditional": 365,
     "audited_decoration": 3,
     "audited_failed": 7,
-    "audited_numerical_match": 23,
+    "audited_numerical_match": 24,
     "audited_renaming": 14,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
@@ -52,7 +52,7 @@
     "retained_bounded": 204,
     "retained_no_go": 108,
     "retained_pending_chain": 3,
-    "unaudited": 899
+    "unaudited": 898
   },
   "retained_pending_chain_count": 3,
   "retained_pending_chain_examples": [
