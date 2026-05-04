@@ -34341,6 +34341,17 @@
       "runner_path": "scripts/frontier_frozen_stars_rigorous.py",
       "title": "Frozen Stars Rigorous: Bounded Hartree Note"
     },
+    "full_gr_axiom_first_paths_note": {
+      "claim_id": "full_gr_axiom_first_paths_note",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "d4203e422f531b1288061ea76c0368eadbcf8149655f1878397d86d38f1f98eb",
+      "path": "docs/FULL_GR_AXIOM_FIRST_PATHS_NOTE.md",
+      "runner_path": null,
+      "title": "Full GR: Axiom-First Path Survey"
+    },
     "full_pl_s3_atlas_cocycle_closure_theorem_note_2026-05-03": {
       "claim_id": "full_pl_s3_atlas_cocycle_closure_theorem_note_2026-05-03",
       "claim_type_author_hint": null,
@@ -43136,6 +43147,28 @@
       "runner_path": "scripts/poisson_self_gravity_mechanism.py",
       "title": "Poisson Self-Gravity Mechanism Note"
     },
+    "polarization_common_primitive_synthesis_note": {
+      "claim_id": "polarization_common_primitive_synthesis_note",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "10960a19a3ed4d1c29b10991d2817c2b7d2ca31ac445eec381f90e44060f7218",
+      "path": "docs/POLARIZATION_COMMON_PRIMITIVE_SYNTHESIS_NOTE.md",
+      "runner_path": null,
+      "title": "Polarization Common Primitive Synthesis"
+    },
+    "polarization_universal_weight_decomposition_note": {
+      "claim_id": "polarization_universal_weight_decomposition_note",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "632b304c4c5fd684bc0685a2e1bc60ca41f8e9d491c6cc067b7f2acdd416e0d5",
+      "path": "docs/POLARIZATION_UNIVERSAL_WEIGHT_DECOMPOSITION_NOTE.md",
+      "runner_path": null,
+      "title": "Universal Weight Decomposition Under the Shared-Axis `SO(2)` Stabilizer"
+    },
     "portable_package_hierarchy_classifier_note": {
       "claim_id": "portable_package_hierarchy_classifier_note",
       "claim_type_author_hint": null,
@@ -46772,6 +46805,17 @@
       "path": "docs/RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_rh_sector_anomaly_cancellation_identities.py",
       "title": "RH-Sector Anomaly Cancellation Identities: SU(3)\u00b2\u00d7Y, Y\u00b3, and Gravitational\u00b2\u00d7Y"
+    },
+    "route2_polarization_common_primitive_note": {
+      "claim_id": "route2_polarization_common_primitive_note",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "9de2804f5c5bfac957d917af98e3668a6a8730b478e464d0d2dd97d3906d66a1",
+      "path": "docs/ROUTE2_POLARIZATION_COMMON_PRIMITIVE_NOTE.md",
+      "runner_path": null,
+      "title": "Route 2 Polarization Common Primitive Candidate"
     },
     "s3_anomaly_spacetime_lift_note": {
       "claim_id": "s3_anomaly_spacetime_lift_note",
@@ -53741,6 +53785,7 @@
     "fourth_family_complex_boundary_note",
     "fourth_family_quadrant_note",
     "framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30",
+    "full_gr_axiom_first_paths_note",
     "g_bare_rigidity_theorem_note",
     "gap_physics_note",
     "gate_b_connectivity_tolerance_note",
@@ -54023,6 +54068,8 @@
     "poisson_self_gravity_born_audit_note",
     "poisson_self_gravity_loop_note",
     "poisson_self_gravity_loop_v3_note",
+    "polarization_common_primitive_synthesis_note",
+    "polarization_universal_weight_decomposition_note",
     "primordial_spectrum_note",
     "publication.ci3_z3.arxiv_draft",
     "publication.ci3_z3.release_environment",
@@ -54051,6 +54098,7 @@
     "retained_cross_lane_consistency_support_note_2026-04-22",
     "retardation_discriminator_note",
     "retarded_field_compact_refinement_note",
+    "route2_polarization_common_primitive_note",
     "s3_anomaly_spacetime_lift_note",
     "s3_boundary_link_theorem_note",
     "s3_cap_uniqueness_note",
@@ -54301,7 +54349,7 @@
       "bounded_theorem": 57,
       "meta": 8,
       "no_go": 7,
-      "none": 1722,
+      "none": 1726,
       "open_gate": 7,
       "positive_theorem": 74
     },
@@ -54309,14 +54357,14 @@
       "bounded_theorem": 555,
       "meta": 8,
       "no_go": 112,
-      "none": 460,
+      "none": 464,
       "open_gate": 114,
       "positive_theorem": 626
     },
     "edge_count": 6358,
-    "leaf_count": 553,
-    "node_count": 1875,
-    "root_count": 901,
+    "leaf_count": 557,
+    "node_count": 1879,
+    "root_count": 905,
     "runners_with_path": 1513
   }
 }

@@ -5,7 +5,7 @@
     "meta": 46,
     "no_go": 165,
     "open_gate": 96,
-    "positive_theorem": 871
+    "positive_theorem": 875
   },
   "cycle_examples": [
     [
@@ -49,7 +49,7 @@
     "retained_bounded": 172,
     "retained_no_go": 94,
     "retained_pending_chain": 1,
-    "unaudited": 1163
+    "unaudited": 1167
   },
   "retained_pending_chain_count": 1,
   "retained_pending_chain_examples": [
