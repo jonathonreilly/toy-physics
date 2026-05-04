@@ -60,32 +60,13 @@ LEDGER_PATH = REPO_ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
 QUEUE_PATH = REPO_ROOT / "docs" / "audit" / "data" / "audit_queue.json"
 CACHE_DIR = rc.CACHE_DIR
 
-# Per-runner timeout overrides for known-heavy compute lanes. Keep in
-# sync with the same map in scripts/codex_audit_runner.py.
-RUNNER_TIMEOUT_OVERRIDES: list[tuple[str, int]] = [
-    ("frontier_alpha_s", 900),
-    ("frontier_confinement", 900),
-    ("frontier_gauge_vacuum_plaquette_perron", 900),
-    ("frontier_gauge_vacuum_plaquette_reduction", 900),
-    ("frontier_gauge_vacuum_plaquette_spectral", 900),
-    ("frontier_gauge_vacuum_plaquette_susceptibility", 900),
-    ("frontier_yt_uv_to_ir", 900),
-    ("frontier_yt_p1_delta_r_master", 900),
-    ("frontier_higgs_mass_full", 900),
-    ("frontier_dm_neutrino_source_surface", 600),
-    ("frontier_ckm_atlas", 600),
-    ("frontier_self_consistent_field", 600),
-    ("frontier_emergent_lorentz", 600),
-]
-DEFAULT_TIMEOUT_SEC = 120
-
+# Timeout resolution lives in scripts/runner_cache.runner_timeout_for.
+# It honors `AUDIT_TIMEOUT_SEC = N` declared at the top of the runner,
+# falling back to a small legacy substring map and finally 120s. This
+# script just calls into it.
 
 def runner_timeout_for(runner_path: str) -> int:
-    bn = Path(runner_path).name
-    for needle, override in RUNNER_TIMEOUT_OVERRIDES:
-        if needle in bn:
-            return override
-    return DEFAULT_TIMEOUT_SEC
+    return rc.runner_timeout_for(runner_path)
 
 
 def collect_runners_from_queue() -> list[str]:
@@ -329,33 +310,76 @@ def main() -> int:
         return 0
 
     print(f"\nExecuting {len(stale)} runner(s) with concurrency={args.concurrency}...")
+    print(f"Live logs available under {rc.LIVE_LOG_DIR.relative_to(REPO_ROOT)}/<stem>.txt"
+          " — `tail -F` any one to watch a specific runner mid-execution.")
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    rc.LIVE_LOG_DIR.mkdir(parents=True, exist_ok=True)
 
     counts = {"ok": 0, "nonzero_exit": 0, "timeout": 0, "error": 0, "missing": 0}
     completed = 0
     written: list[Path] = []
     t0 = time.time()
-    with ThreadPoolExecutor(max_workers=args.concurrency) as ex:
-        futures = {ex.submit(run_one, rp): rp for rp, _ in stale}
-        for fut in as_completed(futures):
-            rp = futures[fut]
-            try:
-                result = fut.result()
-            except Exception as exc:
-                result = {"runner": rp, "status": "error",
-                          "elapsed_sec": 0.0, "exit_code": None,
-                          "cache_path": None}
-                print(f"  ! orchestrator error on {rp}: {exc!r}")
-            counts[result["status"]] = counts.get(result["status"], 0) + 1
-            completed += 1
-            elapsed = result.get("elapsed_sec") or 0.0
-            tag = {"ok": "OK", "nonzero_exit": "EXIT!=0", "timeout": "TIMEOUT",
-                   "error": "ERROR", "missing": "MISSING"}.get(result["status"], "?")
-            print(f"  [{completed:3d}/{len(stale)}] {tag:8s} {elapsed:6.1f}s  "
-                  f"{Path(rp).name}")
-            cache_rel = result.get("cache_path")
-            if cache_rel:
-                written.append(REPO_ROOT / cache_rel)
+    # Track when each runner started so the heartbeat thread can emit
+    # "still alive" lines for runners that have been running > 60s.
+    started_at: dict[str, float] = {}
+    started_lock = __import__("threading").Lock()
+    stop_heartbeat = __import__("threading").Event()
+
+    def heartbeat_loop():
+        # Print a per-runner heartbeat every 30s for in-progress runners
+        # whose elapsed time has crossed 60s. Helps the operator see
+        # which runners are still working vs which might be stuck.
+        while not stop_heartbeat.wait(30):
+            now = time.time()
+            with started_lock:
+                long_running = [
+                    (rp, now - t)
+                    for rp, t in started_at.items()
+                    if now - t > 60
+                ]
+            if long_running:
+                print(f"  [heartbeat] {len(long_running)} runner(s) > 60s in flight:")
+                for rp, elapsed_sec in sorted(long_running, key=lambda x: -x[1])[:8]:
+                    live = rc.live_log_path_for(rp)
+                    size = live.stat().st_size if live.exists() else 0
+                    print(f"    {elapsed_sec:6.0f}s  {size:>8d}b  {Path(rp).name}")
+
+    hb_thread = __import__("threading").Thread(target=heartbeat_loop, daemon=True)
+    hb_thread.start()
+
+    def run_one_tracked(runner_path: str) -> dict:
+        with started_lock:
+            started_at[runner_path] = time.time()
+        try:
+            return run_one(runner_path)
+        finally:
+            with started_lock:
+                started_at.pop(runner_path, None)
+
+    try:
+        with ThreadPoolExecutor(max_workers=args.concurrency) as ex:
+            futures = {ex.submit(run_one_tracked, rp): rp for rp, _ in stale}
+            for fut in as_completed(futures):
+                rp = futures[fut]
+                try:
+                    result = fut.result()
+                except Exception as exc:
+                    result = {"runner": rp, "status": "error",
+                              "elapsed_sec": 0.0, "exit_code": None,
+                              "cache_path": None}
+                    print(f"  ! orchestrator error on {rp}: {exc!r}")
+                counts[result["status"]] = counts.get(result["status"], 0) + 1
+                completed += 1
+                elapsed = result.get("elapsed_sec") or 0.0
+                tag = {"ok": "OK", "nonzero_exit": "EXIT!=0", "timeout": "TIMEOUT",
+                       "error": "ERROR", "missing": "MISSING"}.get(result["status"], "?")
+                print(f"  [{completed:3d}/{len(stale)}] {tag:8s} {elapsed:6.1f}s  "
+                      f"{Path(rp).name}")
+                cache_rel = result.get("cache_path")
+                if cache_rel:
+                    written.append(REPO_ROOT / cache_rel)
+    finally:
+        stop_heartbeat.set()
 
     total_elapsed = time.time() - t0
     print(f"\nDone in {total_elapsed:.1f}s.")
