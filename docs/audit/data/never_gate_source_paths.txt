@@ -1,0 +1,9 @@
+# Exact source paths that must remain in the ledger even if they match a
+# broad infrastructure exclusion glob. seed_audit_ledger.py reads this file.
+# One path per line. Lines starting with `#` and blank lines are ignored.
+#
+# Use this when an exclusion pattern in excluded_source_patterns.txt is
+# overly broad and a specific file under that pattern is in fact a real
+# claim that should remain auditable.
+
+docs/ai_methodology/raw/prompts_session_ebae4639_jonreilly.md

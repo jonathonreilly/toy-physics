@@ -19,11 +19,13 @@
 #   6. compute_effective_status.py   -> applies claim_type-based status + summary
 #   7. invalidate_stale_audits.py    -> resets stale audit verdicts
 #   8. build_cycle_inventory.py      -> data/cycle_inventory.json
-#   9. compute_audit_queue.py        -> data/audit_queue.json
+#   9. compute_audit_queue.py        -> data/audit_queue.json (consumes
+#                                       cycle inventory for break targets)
 #  10. compute_reaudit_candidates.py -> data/reaudit_candidates.json
-#  11. audit_lint.py                 -> validates the ledger against hard rules
-#  12. render_audit_ledger.py        -> writes AUDIT_LEDGER.md
-#  13. render_publication_effective_status.py
+#  11. compute_auditor_reliability.py-> data/auditor_reliability.json
+#  12. audit_lint.py                 -> validates the ledger against hard rules
+#  13. render_audit_ledger.py        -> writes AUDIT_LEDGER.md
+#  14. render_publication_effective_status.py
 #                                      -> writes audit-derived publication views
 set -euo pipefail
 
@@ -31,25 +33,25 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
 cd "${REPO_ROOT}"
 
-echo "==> 1/13 build_citation_graph.py"
+echo "==> 1/14 build_citation_graph.py"
 python3 docs/audit/scripts/build_citation_graph.py
 
-echo "==> 2/13 seed_audit_ledger.py"
+echo "==> 2/14 seed_audit_ledger.py"
 python3 docs/audit/scripts/seed_audit_ledger.py
 
-echo "==> 3/13 sanitize_legacy_audit_artifacts.py"
+echo "==> 3/14 sanitize_legacy_audit_artifacts.py"
 python3 docs/audit/scripts/sanitize_legacy_audit_artifacts.py
 
-echo "==> 4/13 classify_runner_passes.py"
+echo "==> 4/14 classify_runner_passes.py"
 python3 docs/audit/scripts/classify_runner_passes.py
 
-echo "==> 5/13 compute_load_bearing.py"
+echo "==> 5/14 compute_load_bearing.py"
 python3 docs/audit/scripts/compute_load_bearing.py
 
-echo "==> 6/13 compute_effective_status.py"
+echo "==> 6/14 compute_effective_status.py"
 python3 docs/audit/scripts/compute_effective_status.py
 
-echo "==> 7/13 invalidate_stale_audits.py"
+echo "==> 7/14 invalidate_stale_audits.py"
 for attempt in 1 2 3 4 5 6 7 8 9 10; do
   python3 docs/audit/scripts/invalidate_stale_audits.py
   invalidated="$(
@@ -62,7 +64,7 @@ PY
   if [[ "${invalidated}" == "0" ]]; then
     break
   fi
-  echo "==> 7.${attempt}/13 compute_effective_status.py post-invalidation (${invalidated} invalidated)"
+  echo "==> 7.${attempt}/14 compute_effective_status.py post-invalidation (${invalidated} invalidated)"
   python3 docs/audit/scripts/compute_effective_status.py
 done
 
@@ -71,22 +73,25 @@ if [[ "${invalidated}" != "0" ]]; then
   exit 1
 fi
 
-echo "==> 8/13 build_cycle_inventory.py"
+echo "==> 8/14 build_cycle_inventory.py"
 python3 docs/audit/scripts/build_cycle_inventory.py
 
-echo "==> 9/13 compute_audit_queue.py"
+echo "==> 9/14 compute_audit_queue.py"
 python3 docs/audit/scripts/compute_audit_queue.py
 
-echo "==> 10/13 compute_reaudit_candidates.py"
+echo "==> 10/14 compute_reaudit_candidates.py"
 python3 docs/audit/scripts/compute_reaudit_candidates.py
 
-echo "==> 11/13 audit_lint.py"
+echo "==> 11/14 compute_auditor_reliability.py"
+python3 docs/audit/scripts/compute_auditor_reliability.py
+
+echo "==> 12/14 audit_lint.py"
 python3 docs/audit/scripts/audit_lint.py
 
-echo "==> 12/13 render_audit_ledger.py"
+echo "==> 13/14 render_audit_ledger.py"
 python3 docs/audit/scripts/render_audit_ledger.py
 
-echo "==> 13/13 render_publication_effective_status.py"
+echo "==> 14/14 render_publication_effective_status.py"
 python3 docs/audit/scripts/render_publication_effective_status.py
 
 echo

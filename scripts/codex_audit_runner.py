@@ -109,7 +109,7 @@ def _is_full_gpt_audit_model(model_info: dict) -> bool:
 
 
 def best_cached_codex_model() -> tuple[str | None, str | None]:
-    """Return the strongest cached full GPT model, preserving Codex cache order."""
+    """Return the strongest cached full GPT model by numeric GPT version."""
     codex_home = Path(os.environ.get("CODEX_HOME", Path.home() / ".codex"))
     cache_path = codex_home / "models_cache.json"
     try:
@@ -120,9 +120,22 @@ def best_cached_codex_model() -> tuple[str | None, str | None]:
     models = cache.get("models") or []
     if not isinstance(models, list):
         return None, f"{cache_path} has no models list"
-    for model_info in models:
-        if isinstance(model_info, dict) and _is_full_gpt_audit_model(model_info):
-            return str(model_info["slug"]), f"selected from {cache_path}"
+    candidates: list[tuple[tuple[int, ...], int, int, str]] = []
+    for index, model_info in enumerate(models):
+        if not isinstance(model_info, dict) or not _is_full_gpt_audit_model(model_info):
+            continue
+        slug = str(model_info["slug"])
+        rank = _model_rank(slug)
+        if not rank:
+            continue
+        try:
+            priority = int(model_info.get("priority", index))
+        except (TypeError, ValueError):
+            priority = index
+        candidates.append((rank, -priority, -index, slug))
+    if candidates:
+        _, _, _, slug = max(candidates)
+        return slug, f"selected from {cache_path}"
     return None, f"no full GPT model with {AUDIT_REASONING_EFFORT} reasoning found in {cache_path}"
 
 
@@ -276,11 +289,22 @@ def determine_audit_role(led_row: dict, auditor_family: str) -> tuple[str, str |
     return "skip", f"already at audit_status={audit_status}{cc_note}; not re-auditing"
 
 
-def load_queue(criticality_filter: str | None = None) -> list[dict]:
+def load_queue(criticality_filter: str | None = None,
+               ready_only: bool = True) -> list[dict]:
+    """Load the queue, optionally filtering to rows whose deps are all retained-grade.
+
+    ready_only=True is the default: auditing a row whose deps are not
+    retained-grade deterministically yields audited_conditional and burns a
+    Codex call without compounding progress. The 'ready' flag in the queue
+    encodes the dep-readiness condition computed by compute_audit_queue.py.
+    Pass --allow-blocked to opt into auditing blocked rows anyway.
+    """
     q = json.loads(QUEUE_PATH.read_text(encoding="utf-8"))
     rows = q.get("queue", [])
     if criticality_filter:
         rows = [r for r in rows if (r.get("criticality") or "") == criticality_filter]
+    if ready_only:
+        rows = [r for r in rows if r.get("ready")]
     # rows are already pre-sorted by descending score in audit_queue.json
     return rows
 
@@ -764,6 +788,24 @@ def main() -> int:
                    help="Permit running from a branch other than main. "
                         "Default refuses unless the runner can push to main "
                         "directly. Use only for testing.")
+    p.add_argument("--allow-blocked", action="store_true",
+                   help="Audit rows whose deps are not retained-grade. "
+                        "Default skips them: auditing a blocked row "
+                        "deterministically yields audited_conditional and "
+                        "burns a Codex call without compounding progress. "
+                        "Pass this when you specifically need to populate "
+                        "verdicts in a deeply chained subtree.")
+    p.add_argument("--require-runner-output", dest="require_runner_output",
+                   action="store_true", default=True,
+                   help="Refuse to audit rows whose primary runner has no "
+                        "logged stdout in logs/ (per the audit policy that "
+                        "runner stdout is part of the load-bearing evidence). "
+                        "On by default; pass --no-require-runner-output to "
+                        "fall back to running the runner inline.")
+    p.add_argument("--no-require-runner-output", dest="require_runner_output",
+                   action="store_false",
+                   help="Disable the --require-runner-output check; let the "
+                        "runner subprocess be invoked inline as fallback.")
     args = p.parse_args()
 
     # Reasoning-effort policy: per repo audit-lane decision (2026-05-04),
@@ -798,6 +840,8 @@ def main() -> int:
     print("  second-pass after a prior audit by a different family -> cross_family")
     print("  second-pass after a prior audit by Codex            -> fresh_context")
     print("  rows in disagreement / awaiting-judicial-review     -> skipped (manual)")
+    print(f"Queue filter: ready_only={not args.allow_blocked}  "
+          f"require_runner_output={args.require_runner_output}")
 
     # Verify branch + cleanliness before any push-capable operation.
     if args.push_mode != "none" and not args.dry_run:
@@ -825,10 +869,16 @@ def main() -> int:
                 return 2
 
     ledger_rows = load_ledger_rows()
-    queue = load_queue(args.criticality)
+    queue = load_queue(args.criticality, ready_only=not args.allow_blocked)
     targets = queue[: args.n]
     if not targets:
-        print("Queue empty for this filter; nothing to do.")
+        if args.allow_blocked:
+            print("Queue empty for this filter; nothing to do.")
+        else:
+            full_queue = load_queue(args.criticality, ready_only=False)
+            print(f"No ready rows in this filter (deps must be retained-grade). "
+                  f"{len(full_queue)} blocked rows exist; pass --allow-blocked "
+                  f"to audit them anyway.")
         return 0
 
     print(f"Selected {len(targets)} rows from the queue.")
@@ -866,6 +916,34 @@ def main() -> int:
             # Per-row auditor identity to guarantee uniqueness across passes.
             row_auditor = f"{auditor_name_base}-{cid[:24]}-{i:03d}"
             print(f"  role={role}  independence={row_independence}")
+
+            # Refuse rows whose primary runner has no logged stdout. The audit
+            # policy treats runner output as part of the load-bearing evidence
+            # (see AUDIT_AGENT_PROMPT_TEMPLATE.md sections 3 and 3a). With the
+            # runner-logging worker producing logs/<runner>-<utc>.txt files,
+            # the cached-log path is the canonical source. If a row's runner
+            # has no log, the audit cannot judge load-bearing class without
+            # invoking the runner inline — which breaks the "fresh-look in an
+            # isolated workdir" model.
+            runner_path = row.get("runner_path") or full_led_row.get("runner_path")
+            if (
+                args.require_runner_output
+                and runner_path
+                and not args.no_runner
+                and not args.dry_run
+            ):
+                cached = find_cached_runner_output(runner_path)
+                if cached is None:
+                    print(f"  SKIP: runner {runner_path} has no logged stdout in logs/; "
+                          f"the runner-logging worker must produce one before this row "
+                          f"is auditable. (Pass --no-require-runner-output to bypass.)")
+                    skipped += 1
+                    with run_log.open("a", encoding="utf-8") as f:
+                        f.write(json.dumps({
+                            "claim_id": cid, "phase": "skip_no_runner_log",
+                            "runner_path": runner_path,
+                        }) + "\n")
+                    continue
 
             use_cache = not args.no_cache_runner
             if args.no_runner:

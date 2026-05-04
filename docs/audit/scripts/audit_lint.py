@@ -85,6 +85,62 @@ ALLOWED_EFFECTIVE_STATUSES = {
 ALLOWED_INDEPENDENCE = {"weak", "fresh_context", "cross_family", "strong", "external", "judicial_review", None}
 DEPRECATED_LEDGER_FIELDS = {"current_status", "current_status_raw"}
 
+# Repair classes that audited_conditional rows must prefix in
+# notes_for_re_audit_if_any (per docs/audit/AUDIT_AGENT_PROMPT_TEMPLATE.md).
+ALLOWED_REPAIR_CLASSES = {
+    "missing_dependency_edge",
+    "dependency_not_retained",
+    "missing_bridge_theorem",
+    "scope_too_broad",
+    "runner_artifact_issue",
+    "compute_required",
+    "other",
+}
+
+# Boilerplate scope written by seed_audit_ledger.backfill_scope when the
+# auditor never supplied a real scope. Terminal verdicts must replace this
+# with a real claim_scope; the lint flags rows that still carry it.
+BACKFILL_SCOPE_PREFIX = (
+    "Legacy audit row backfilled during scope-aware classification migration"
+)
+
+# Canonical auditor families. Anything outside this set is a lint warning;
+# legacy strings (codex-current, codex-fresh, codex-fresh-agent, codex-fresh-context)
+# are accepted as known-legacy and produce a migration warning rather than a hard
+# error so the queue stays open while a one-time migration script normalises them.
+CANONICAL_AUDITOR_FAMILIES = {
+    # Codex GPT models (current and future): codex-gpt-<version>
+    "codex-gpt-5",
+    "codex-gpt-5.5",
+    "codex-gpt-5.6",
+    "codex-gpt-5.7",
+    "codex-gpt-6",
+    # Other model families
+    "claude-opus",
+    "claude-sonnet",
+    "human",
+    "external",
+    # Legacy archival summary rows produced by apply_audit's
+    # legacy_clean_consensus_summary (collapsed pre-PR291 cross-confirmations).
+    "legacy-confirmed-clean",
+}
+LEGACY_AUDITOR_FAMILIES = {
+    "codex-current",
+    "codex-fresh",
+    "codex-fresh-agent",
+    "codex-fresh-context",
+}
+
+# audit_status values that are terminal verdicts (not pending/in-progress).
+TERMINAL_VERDICTS = {
+    "audited_clean",
+    "audited_renaming",
+    "audited_conditional",
+    "audited_decoration",
+    "audited_failed",
+    "audited_numerical_match",
+}
+
 
 def load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
@@ -113,6 +169,21 @@ def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
 
+    # Top-level stale timestamp keys cause PR drift-gate noise and were
+    # removed by f383ded3d. compute_effective_status now drops them
+    # defensively on every run; this lint check guards against regression.
+    STALE_TIMESTAMP_KEYS = {
+        "generated_at",
+        "effective_status_computed_at",
+        "invalidation_run_at",
+        "load_bearing_computed_at",
+    }
+    for k in STALE_TIMESTAMP_KEYS & set(ledger):
+        errors.append(
+            f"audit_ledger.json top-level: stale timestamp key {k!r} present "
+            "(should be removed by compute_effective_status; rerun the pipeline)"
+        )
+
     # Schema and hard-rule checks.
     for cid, row in rows.items():
         a = row.get("audit_status")
@@ -133,12 +204,83 @@ def main() -> int:
                 errors.append(f"{cid}: audited row requires claim_type")
             if not row.get("claim_scope"):
                 errors.append(f"{cid}: audited row requires claim_scope")
+            scope = row.get("claim_scope") or ""
+            if scope.startswith(BACKFILL_SCOPE_PREFIX):
+                warnings.append(
+                    f"{cid}: terminal verdict {a!r} carries seeder backfill scope; "
+                    "re-audit required to record a real claim_scope"
+                )
         if row.get("claim_type_provenance") == "backfilled_pending_reaudit":
             warnings.append(
                 f"{cid}: claim_type was backfilled for a critical legacy audit; queue for re-audit"
             )
         if ind not in ALLOWED_INDEPENDENCE:
             errors.append(f"{cid}: independence={ind!r} not in allowed set")
+
+        # Repair-class enforcement on audited_conditional rows
+        # (per docs/audit/AUDIT_AGENT_PROMPT_TEMPLATE.md and README.md).
+        # Conditional verdicts must prefix notes_for_re_audit_if_any with one
+        # of the seven allowed repair classes so the repair lane is
+        # machine-sortable. Legacy rows lacking the prefix queue for re-audit.
+        if a == "audited_conditional":
+            notes = row.get("notes_for_re_audit_if_any") or ""
+            first_token = notes.strip().split(":", 1)[0].strip().split()[0].lower() if notes.strip() else ""
+            if first_token not in ALLOWED_REPAIR_CLASSES:
+                warnings.append(
+                    f"{cid}: audited_conditional notes_for_re_audit_if_any must start with one of "
+                    f"{sorted(ALLOWED_REPAIR_CLASSES)} (got {first_token!r}); re-audit required"
+                )
+
+        # Auditor-family canonicalization. Hard-error on unknown strings.
+        # Legacy strings produce a migration warning.
+        fam = row.get("auditor_family")
+        if a in TERMINAL_VERDICTS and fam is not None:
+            if fam not in CANONICAL_AUDITOR_FAMILIES and fam not in LEGACY_AUDITOR_FAMILIES:
+                # Tolerate codex-gpt-X.Y for any X.Y (forward-compat)
+                if not (isinstance(fam, str) and fam.startswith("codex-gpt-")):
+                    errors.append(
+                        f"{cid}: auditor_family={fam!r} not in canonical set "
+                        f"{sorted(CANONICAL_AUDITOR_FAMILIES)} or known-legacy "
+                        f"{sorted(LEGACY_AUDITOR_FAMILIES)}"
+                    )
+            elif fam in LEGACY_AUDITOR_FAMILIES:
+                warnings.append(
+                    f"{cid}: auditor_family={fam!r} is legacy; run "
+                    "scripts/canonicalize_auditor_family.py migration"
+                )
+
+        # Claude-authored note rule (per FRESH_LOOK_REQUIREMENTS.md §1).
+        # A note audited only by Claude — at any criticality — records
+        # independence='weak' regardless of session restriction. Cross-family
+        # confirmation by Codex/human/external is required for retained-grade
+        # promotion.
+        #
+        # We surface this as a WARNING for now (not an error) because a
+        # handful of legacy claude-only fresh_context audits exist on
+        # leaf/medium rows. Per current lint these are already prevented
+        # from landing as retained-grade on critical/high; the warning
+        # surfaces them for migration. After all such legacy rows are
+        # migrated to independence='weak' or re-audited by a non-Claude
+        # auditor, this branch can be promoted to errors.append.
+        if a == "audited_clean" and isinstance(fam, str) and fam.startswith("claude-"):
+            if ind != "weak":
+                xc = row.get("cross_confirmation") or {}
+                xc_status = xc.get("status") if isinstance(xc, dict) else None
+                other_side_non_claude = False
+                if xc_status in {"confirmed", "third_confirmed_first", "third_confirmed_second"}:
+                    for key in ("first_audit", "second_audit", "third_audit"):
+                        side = (xc.get(key) or {}) if isinstance(xc, dict) else {}
+                        side_fam = side.get("auditor_family") or ""
+                        if side_fam and not side_fam.startswith("claude-"):
+                            other_side_non_claude = True
+                            break
+                if not other_side_non_claude:
+                    warnings.append(
+                        f"{cid}: claude-only audited_clean should record independence='weak' "
+                        "per FRESH_LOOK_REQUIREMENTS.md §1, or carry a non-Claude "
+                        f"cross-confirmation; got independence={ind!r}, "
+                        f"cross_confirmation_status={xc_status!r}"
+                    )
 
         xc = row.get("cross_confirmation") or {}
         if isinstance(xc, dict) and xc.get("status") in {"third_confirmed_first", "third_confirmed_second"}:
