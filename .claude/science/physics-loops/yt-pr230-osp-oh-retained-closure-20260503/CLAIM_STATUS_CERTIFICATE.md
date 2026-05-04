@@ -37,6 +37,15 @@ Open imports:
   production support only; the 30/63 ready L12 state passes target-observable
   ESS but still fails response-window acceptance and does not provide
   canonical-Higgs/source-overlap closure;
+- FH/LSZ chunks032/034 are now packaged with the ready set as bounded
+  production support only; the 32/63 ready L12 state passes target-observable
+  ESS but still fails response-window acceptance and does not provide
+  canonical-Higgs/source-overlap closure;
+- chunk031 temporarily exited without the root output certificate, but the
+  same-seed `--resume` completed; FH/LSZ chunks031/033 are now packaged with
+  the ready set as bounded production support only; the 34/63 ready L12 state
+  passes target-observable ESS but still fails response-window acceptance and
+  does not provide canonical-Higgs/source-overlap closure;
 - source-Higgs production readiness is blocked by the missing same-surface
   `O_H` certificate; current chunks were source-Higgs absent-guarded and have
   no `C_sH/C_HH` rows;

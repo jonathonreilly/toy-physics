@@ -11,7 +11,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 8
+block: 10
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -62,6 +62,24 @@ files_touched:
   - scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py
   - docs/YT_WZ_CORRELATOR_MASS_FIT_PATH_GATE_NOTE_2026-05-04.md
   - outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json
+  - docs/YT_FH_LSZ_CHUNKS032_034_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-04.md
+  - outputs/yt_pr230_fh_lsz_production_L12_T24_chunk032_2026-05-01.json
+  - outputs/yt_pr230_fh_lsz_production_L12_T24_chunk034_2026-05-01.json
+  - outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk032/
+  - outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk034/
+  - outputs/yt_fh_lsz_chunk032_target_timeseries_generic_checkpoint_2026-05-02.json
+  - outputs/yt_fh_lsz_chunk034_target_timeseries_generic_checkpoint_2026-05-02.json
+  - outputs/yt_fh_lsz_chunk032_multitau_target_timeseries_checkpoint_2026-05-03.json
+  - outputs/yt_fh_lsz_chunk034_multitau_target_timeseries_checkpoint_2026-05-03.json
+  - docs/YT_FH_LSZ_CHUNKS031_033_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-04.md
+  - outputs/yt_pr230_fh_lsz_production_L12_T24_chunk031_2026-05-01.json
+  - outputs/yt_pr230_fh_lsz_production_L12_T24_chunk033_2026-05-01.json
+  - outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk031/
+  - outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk033/
+  - outputs/yt_fh_lsz_chunk031_target_timeseries_generic_checkpoint_2026-05-02.json
+  - outputs/yt_fh_lsz_chunk033_target_timeseries_generic_checkpoint_2026-05-02.json
+  - outputs/yt_fh_lsz_chunk031_multitau_target_timeseries_checkpoint_2026-05-03.json
+  - outputs/yt_fh_lsz_chunk033_multitau_target_timeseries_checkpoint_2026-05-03.json
   - docs/YT_FH_LSZ_CHUNKS029_030_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-04.md
   - outputs/yt_pr230_fh_lsz_production_L12_T24_chunk029_2026-05-01.json
   - outputs/yt_pr230_fh_lsz_production_L12_T24_chunk030_2026-05-01.json
@@ -135,6 +153,33 @@ commands_run:
   - "python3 -m py_compile scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py # pass"
   - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=144 FAIL=0"
   - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=170 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 32 # PASS=19 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 34 # PASS=19 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py # PASS=9 FAIL=0, 32/63 ready"
+  - "python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py # PASS=8 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py # PASS=8 FAIL=0, limiting ESS 445.3528176804397"
+  - "python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py # PASS=11 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py # PASS=6 FAIL=0, stability still open"
+  - "python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py # PASS=10 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py # PASS=12 FAIL=0, gate still open"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 32 # PASS=14 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 34 # PASS=14 FAIL=0"
+  - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=144 FAIL=0"
+  - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=170 FAIL=0"
+  - "python3 scripts/yt_direct_lattice_correlator_production.py ... --resume --seed 2026051031 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk031_2026-05-01.json # relaunched session 72054 after root certificate was missing"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 31 # PASS=19 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 33 # PASS=19 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py # PASS=9 FAIL=0, 34/63 ready"
+  - "python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py # PASS=8 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py # PASS=8 FAIL=0, limiting ESS 477.3528176804397"
+  - "python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py # PASS=11 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py # PASS=6 FAIL=0, stability still open"
+  - "python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py # PASS=10 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py # PASS=12 FAIL=0, gate still open"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 31 # PASS=14 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 33 # PASS=14 FAIL=0"
+  - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=144 FAIL=0"
+  - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=170 FAIL=0"
 current_result: >
   O_sp is derived and unit-normalized, but the current PR230 surface does not
   derive O_sp = O_H.  A counterfamily holds Res(C_sp,sp)=1 and same-source top
@@ -195,14 +240,28 @@ current_result: >
   rows, mismatched source coordinates, observed W/Z selectors, H_unit/Ward
   imports, and alpha_LM/plaquette/u0 imports.  No W/Z rows were written.
   Aggregate retained and campaign certificates include this blocker and still
-  deny proposal authority with PASS=144 and PASS=170 respectively.
+  deny proposal authority with PASS=144 and PASS=170 respectively.  Chunks032
+  and 034 then landed and were packaged as bounded production support.  The
+  ready L12 set is now 32/63 chunks, 512/1000 saved configurations;
+  target-observable ESS passes with limiting ESS 445.3528176804397,
+  response-window acceptance remains open, and retained/campaign aggregate
+  certificates pass with PASS=144 and PASS=170 respectively.  Chunk031 exited
+  without its root output certificate while leaving a per-volume ensemble
+  artifact; it was relaunched with --resume under the same seed and remains
+  uncounted until the root certificate lands and gates pass.  Chunk031 resume
+  then completed cleanly, and chunk033 landed.  Chunks031 and 033 were packaged
+  as bounded production support.  The ready L12 set is now 34/63 chunks,
+  544/1000 saved configurations; target-observable ESS passes with limiting
+  ESS 477.3528176804397, response-window acceptance remains open, and
+  retained/campaign aggregate certificates pass with PASS=144 and PASS=170
+  respectively.  The orchestrator filled the remaining wave slots; chunks035,
+  036, 037, 038, 039, and 040 are now running.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
-  Monitor chunks031/032, chunks033/034, and orchestrator-launched chunks035/036.
+  Monitor chunks035, 036, 037, 038, 039, and 040.
   When outputs land, rerun their chunk gates plus aggregate retained and
-  campaign certificates, then let the chunk-wave orchestrator launch
-  chunks037-040 as slots open.  While waiting, only take routes that can add a
+  campaign certificates.  While waiting, only take routes that can add a
   real new same-surface row/theorem: certified O_H/C_sH/C_HH pole residues, a
   genuine same-source EW action plus W/Z correlator mass-fit rows and response
   rows, Schur A/B/C kernel rows, or a direct proof of the missing

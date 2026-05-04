@@ -252,6 +252,128 @@ correlator mass-fit rows, certified `O_H/C_sH/C_HH` pole residues, Schur
 A/B/C rows, or a neutral-sector irreducibility theorem can move the claim
 state.
 
+## 2026-05-04 Chunks032 and 034 Packaging
+
+Chunks032 and 034 landed and were packaged as bounded FH/LSZ production
+support:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 32
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 34
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 32
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 34
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=144 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=170 FAIL=0
+```
+
+Current production state: 32/63 L12 chunks ready, 512/1000 saved
+configurations, target-observable ESS passed with limiting ESS
+`445.3528176804397`, response-window acceptance still open, and retained
+closure still unauthorized.
+
+Chunk031 exited without the root output certificate while leaving a per-volume
+ensemble artifact.  It was relaunched with `--resume` under seed `2026051031`
+in session `72054` and is not counted as ready until its root certificate lands
+and gates pass.
+
+The orchestrator has filled freed slots with chunks037/038.  Currently running:
+chunk031-resume, chunk033, and chunks035-038.  Missing in this wave:
+chunks039/040.
+
+Next exact action: monitor these running chunks.  When the next output lands,
+rerun chunk-local gates plus the aggregate FH/LSZ, retained-route, and
+campaign certificates before packaging.
+
+## 2026-05-04 Chunk031 Resume and Chunk033 Packaging
+
+Chunk031 resume completed cleanly and wrote the missing root certificate.
+Chunk033 also landed.  Both were packaged as bounded FH/LSZ production support:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 31
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 33
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 31
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 33
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=144 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=170 FAIL=0
+```
+
+Current production state: 34/63 L12 chunks ready, 544/1000 saved
+configurations, target-observable ESS passed with limiting ESS
+`477.3528176804397`, response-window acceptance still open, and retained
+closure still unauthorized.
+
+The chunk-wave orchestrator filled the remaining wave slots.  Currently
+running: chunks035-040.
+
+Next exact action: monitor chunks035-040.  When the next output lands, rerun
+chunk-local gates plus the aggregate FH/LSZ, retained-route, and campaign
+certificates before packaging.
+
 ## 2026-05-04 Same-Source EW Action Gate
 
 The first W/Z implementation work unit was tested directly:

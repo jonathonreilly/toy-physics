@@ -32,6 +32,12 @@ Completed during 2026-05-04 campaign continuation:
 - `docs/YT_FH_LSZ_CHUNKS029_030_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-04.md`
 - chunks029/030 production outputs and local generic/v2 target-timeseries
   checkpoints
+- `docs/YT_FH_LSZ_CHUNKS032_034_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-04.md`
+- chunks032/034 production outputs and local generic/v2 target-timeseries
+  checkpoints
+- `docs/YT_FH_LSZ_CHUNKS031_033_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-04.md`
+- chunks031/033 production outputs and local generic/v2 target-timeseries
+  checkpoints
 - refreshed FH/LSZ combiner, ready-set, target ESS, autocorrelation ESS,
   response-stability, response-window, retained-route, and campaign
   certificates

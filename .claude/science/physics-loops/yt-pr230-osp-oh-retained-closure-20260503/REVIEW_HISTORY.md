@@ -174,3 +174,43 @@ Findings:
 - No retained/proposed-retained claim is authorized because no W/Z mass-fit
   rows, response rows, same-source EW action certificate, sector-overlap
   identity, or canonical-Higgs identity exist.
+
+## 2026-05-04 Chunks032 and 034 Packaging Self-Review
+
+Disposition: bounded production support; continue campaign.
+
+Findings:
+
+- Chunks032 and 034 pass both generic and v2 multi-tau target-timeseries
+  checkpoints with zero fails after aggregate gates are refreshed.
+- The ready L12 set advances to 32/63 chunks and 512/1000 saved
+  configurations; target-observable ESS passes with limiting ESS
+  `445.3528176804397`.
+- Response-window acceptance remains open because response stability is not
+  production-grade, chunks001-016 still lack v2 rows, and finite-source
+  linearity is not passed.
+- Chunk031 is explicitly not counted: it exited without the root output
+  certificate and was relaunched with `--resume` under the same seed.
+- No retained/proposed-retained claim is authorized because scalar LSZ,
+  canonical-Higgs/source-overlap, W/Z response, Schur-row, and retained-route
+  gates remain open.
+
+## 2026-05-04 Chunk031 Resume and Chunk033 Packaging Self-Review
+
+Disposition: bounded production support; continue campaign.
+
+Findings:
+
+- Chunk031's missing root certificate was resolved by a same-seed `--resume`
+  run against the existing per-volume ensemble artifact.
+- Chunks031 and 033 pass both generic and v2 multi-tau target-timeseries
+  checkpoints with zero fails after aggregate gates are refreshed.
+- The ready L12 set advances to 34/63 chunks and 544/1000 saved
+  configurations; target-observable ESS passes with limiting ESS
+  `477.3528176804397`.
+- Response-window acceptance remains open because response stability is not
+  production-grade, chunks001-016 still lack v2 rows, and finite-source
+  linearity is not passed.
+- No retained/proposed-retained claim is authorized because scalar LSZ,
+  canonical-Higgs/source-overlap, W/Z response, Schur-row, and retained-route
+  gates remain open.
