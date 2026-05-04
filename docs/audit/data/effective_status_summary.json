@@ -7,7 +7,7 @@
     "open_gate": 94,
     "positive_theorem": 849
   },
-  "computed_at": "2026-05-04T08:12:17.991035+00:00",
+  "computed_at": "2026-05-04T10:31:33.968685+00:00",
   "cycle_examples": [
     [
       "anomaly_forces_time_theorem",
@@ -41,7 +41,7 @@
   "cycles_detected": 43,
   "effective_status_counts": {
     "audit_in_progress": 1,
-    "audited_conditional": 553,
+    "audited_conditional": 554,
     "audited_decoration": 3,
     "audited_failed": 7,
     "audited_numerical_match": 31,
@@ -54,7 +54,7 @@
     "retained_bounded": 209,
     "retained_no_go": 109,
     "retained_pending_chain": 3,
-    "unaudited": 674
+    "unaudited": 673
   },
   "retained_pending_chain_count": 3,
   "retained_pending_chain_examples": [
