@@ -18,8 +18,8 @@ publication tables phrase it.
 | criticality | effective_status | count |
 |---|---|---:|
 | high | `unaudited` | 135 |
-| medium | `audited_conditional` | 118 |
-| medium | `unaudited` | 84 |
+| medium | `audited_conditional` | 119 |
+| medium | `unaudited` | 83 |
 | high | `audited_conditional` | 77 |
 | critical | `unaudited` | 38 |
 | critical | `audited_conditional` | 28 |
@@ -380,7 +380,7 @@ publication tables phrase it.
 | medium | `dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | medium | `dm_pmns_local_selector_family_no_go_theorem_note_2026-04-20` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | medium | `dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
-| medium | `dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| medium | `dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | medium | `dm_selector_shifted_relative_action_recovered_packet_closure_theorem_note_2026-04-21` | `audited_conditional` | `audited_conditional` | FULL_CLAIM_LEDGER.md |
 | medium | `dm_wilson_direct_descendant_canonical_path_selector_theorem_note_2026-04-19` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | medium | `dm_wilson_direct_descendant_flagship_frontier_collapse_theorem_note_2026-04-18` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |

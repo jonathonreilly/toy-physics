@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-04T10:40:41.503395+00:00
+**Generated:** 2026-05-04T10:42:45.825529+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 211 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 670 |
+| unaudited | 669 |
 | audit_in_progress | 1 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 31 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 555 |
+| ~~audited_conditional~~ | 556 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 380 |
-| `audited_conditional` | 555 |
+| `audited_conditional` | 556 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 717 |
+| `unaudited` | 716 |
 
 | claim_type | count |
 |---|---:|
@@ -664,6 +664,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_pns_attack_cascade_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_selector_relative_action_recovered_branch_separation_support_theorem_note_2026-04-21` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_selector_relative_action_recovered_projection_support_theorem_note_2026-04-21` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -5275,6 +5276,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — The selector calculation closes only after importing the chamber threshold, exact chamber-root set, parity-reduction identity, and target PMNS triple. Those authorities are asserted in the note but are not present as ledger one-hop dependencies for this restricted audit.
 - **rationale:** Issue: the proof relies on unprovided upstream chamber-closure, chamber-completeness, and source-cubic parity-reduction facts, while the runner hardcodes the chamber roots and imports the chamber/PMNS machinery. Why this blocks: the physical branch selector is not derived from the restricted source note plus deps=0; it is a conditional combination of prior results. Repair target: record the actual one-hop dependency notes and ensure their audit status closes the threshold, root set, and I_src orientation law. Claim boundary until fixed: given the stated root set and laws, I_src > 0 selects Basin 1 among upper-octant survivors.
 - **auditor confidence:** medium
+
+### `dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20`
+
+- **Note:** [`DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_POSITIVE_SHEET_NO_GO_THEOREM_NOTE_2026-04-20.md`](../../docs/DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_POSITIVE_SHEET_NO_GO_THEOREM_NOTE_2026-04-20.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Conditional no-go that, within the implemented fixed N_e seed-surface chart and right-sensitive Z_3 doublet-block readout, the center law delta_db = 1, q_+ = 0 plus I_src > 0 leaves a positive-sheet family and does not by itself select the PMNS target.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-04`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** On the fixed native N_e seed surface, the positive-sheet center system has multiple distinct exact source solutions and the PMNS angle triple varies macroscopically along that locus.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the local no-go evidence, but the restricted packet relies on upstream PMNS seed-surface and I5-status machinery that is not retained-grade in the current audit ledger. The no-go is therefore valid as an executable conditional result on that implemented chart, not yet a retained no-go on the closed theorem stack.
+- **rationale:** Issue: the no-go evidence depends on the fixed N_e seed-surface theorem/readout machinery and the current I5 status register, but the relevant upstream rows are not retained-grade in the restricted audit state. Why this blocks: a hostile referee can accept the runner's counterexamples inside the implemented chart while rejecting retained no-go status until the seed surface, target/readout map, and I5-status authority are themselves clean retained inputs. Repair target: register the source dependencies explicitly and audit/retain the N_e seed-surface exact-source manifold plus the local selector/I5 status authority used by the runner. Claim boundary until fixed: within the implemented chart, the runner shows center law + I12 leaves many positive-sheet center solutions and does not select the PMNS angle triple.
+- **open / conditional deps cited:**
+  - `DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md`
+  - `DM_PMNS_LOCAL_SELECTOR_FAMILY_NO_GO_THEOREM_NOTE_2026-04-20.md`
+- **auditor confidence:** high
 
 ### `dm_pns_attack_cascade_note_2026-04-19`
 

@@ -3,9 +3,9 @@
     "critical": 66,
     "high": 215,
     "leaf": 177,
-    "medium": 242
+    "medium": 241
   },
-  "generated_at": "2026-05-04T10:40:41.171653+00:00",
+  "generated_at": "2026-05-04T10:42:45.458406+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7786,27 +7786,6 @@
       "queue_reason": "claim_type_backfill_reaudit",
       "ready": true,
       "runner_path": "scripts/frontier_retained_cross_lane_consistency.py",
-      "transitive_descendants": 44
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20",
-      "claim_scope": null,
-      "claim_type": "no_go",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 5.992,
-      "note_path": "docs/DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_POSITIVE_SHEET_NO_GO_THEOREM_NOTE_2026-04-20.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_pmns_z3_doublet_block_center_positive_sheet_no_go_2026_04_20.py",
       "transitive_descendants": 44
     },
     {
@@ -18630,6 +18609,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 18,
-  "total_pending": 700
+  "ready_count": 17,
+  "total_pending": 699
 }
