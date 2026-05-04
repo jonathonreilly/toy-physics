@@ -106,4 +106,9 @@ Open imports:
   uncertainty, finite-source-linearity, response-window acceptance,
   fitted-response stability, scalar-LSZ, and canonical-Higgs/source-overlap
   gates remain open;
+- common-window pooled response estimator is bounded support only: it gives a
+  production-grade independent chunk-scatter uncertainty for the fixed
+  `tau=10..12` central response, but it does not authorize a readout switch or
+  supply finite-source-linearity, scalar-LSZ, or canonical-Higgs/source-overlap
+  closure;
 - independent audit after any proposed positive certificate.

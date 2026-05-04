@@ -110,6 +110,7 @@
     "fh_lsz_chunk046_target_timeseries_generic": "bounded-support / FH-LSZ chunk046 generic target-timeseries checkpoint",
     "fh_lsz_chunk_combiner_gate": "open / FH-LSZ chunk combiner gate blocks partial or non-independent evidence",
     "fh_lsz_chunked_production_manifest": "bounded-support / FH-LSZ chunked production manifest",
+    "fh_lsz_common_window_pooled_response_estimator": "bounded-support / FH-LSZ common-window pooled response estimator production-grade",
     "fh_lsz_common_window_response_gate": "open / FH-LSZ common-window response gate not passed",
     "fh_lsz_common_window_response_provenance": "bounded-support / FH-LSZ common-window response provenance",
     "fh_lsz_eight_mode_noise_variance": "open / FH-LSZ eight-mode noise variance gate not passed",
@@ -257,7 +258,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 178,
+  "pass_count": 179,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

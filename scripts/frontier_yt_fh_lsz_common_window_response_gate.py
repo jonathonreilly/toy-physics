@@ -26,6 +26,7 @@ OUTPUT = ROOT / "outputs" / "yt_fh_lsz_common_window_response_gate_2026-05-04.js
 
 PARENTS = {
     "common_window_response_provenance": "outputs/yt_fh_lsz_common_window_response_provenance_2026-05-04.json",
+    "common_window_pooled_response_estimator": "outputs/yt_fh_lsz_common_window_pooled_response_estimator_2026-05-04.json",
     "response_window_acceptance_gate": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
     "finite_source_linearity_gate": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
     "fitted_response_stability": "outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json",
@@ -69,13 +70,20 @@ def main() -> int:
     proposal_allowed = [name for name, data in parents.items() if data.get("proposal_allowed") is True]
 
     provenance = parents["common_window_response_provenance"]
+    pooled = parents["common_window_pooled_response_estimator"]
     acceptance = parents["response_window_acceptance_gate"]
     finite_source = parents["finite_source_linearity_gate"]
     fitted_response = parents["fitted_response_stability"]
     v2_target = parents["v2_target_response_stability"]
 
     common_window_stable = provenance.get("common_window_stability_passed") is True
-    common_window_production_grade = provenance.get("common_window_production_grade") is True
+    pooled_common_window_production_grade = (
+        pooled.get("pooled_common_window_response_production_grade") is True
+    )
+    common_window_production_grade = (
+        provenance.get("common_window_production_grade") is True
+        or pooled_common_window_production_grade
+    )
     provenance_forbids_switch = provenance.get("readout_switch_authorized") is False
     acceptance_passed = acceptance.get("response_window_acceptance_gate_passed") is True
     finite_source_linearity_passed = finite_source.get("finite_source_linearity_gate_passed") is True
@@ -87,6 +95,7 @@ def main() -> int:
     predeclared_criteria = {
         "common_window_stability_passed": common_window_stable,
         "common_window_production_grade": common_window_production_grade,
+        "pooled_common_window_response_production_grade": pooled_common_window_production_grade,
         "response_window_acceptance_gate_passed": acceptance_passed,
         "finite_source_linearity_gate_passed": finite_source_linearity_passed,
         "fitted_response_stability_passed": fitted_response_stability_passed,
@@ -115,8 +124,14 @@ def main() -> int:
     report("common-window-stability-recorded", common_window_stable, str(status(provenance)))
     report(
         "common-window-production-grade-state-recorded",
-        "common_window_production_grade" in provenance,
+        "common_window_production_grade" in provenance
+        or "pooled_common_window_response_production_grade" in pooled,
         f"production_grade={common_window_production_grade}",
+    )
+    report(
+        "pooled-common-window-estimator-state-recorded",
+        bool(pooled),
+        pooled.get("actual_current_surface_status", ""),
     )
     report("provenance-forbids-readout-switch", provenance_forbids_switch, f"authorized={provenance.get('readout_switch_authorized')}")
     report("v2-target-support-state-recorded", "v2_target_response_stability_passed" in v2_target, str(status(v2_target)))
@@ -156,6 +171,8 @@ def main() -> int:
             "common_window": provenance.get("common_window"),
             "common_window_slope_summary": provenance.get("common_window_slope_summary"),
             "common_window_relative_fit_error": provenance.get("common_window_relative_fit_error"),
+            "pooled_relative_standard_error": pooled.get("relative_standard_error"),
+            "pooled_empirical_standard_error": pooled.get("empirical_standard_error"),
             "high_original_slope_chunk_indices": provenance.get("high_original_slope_chunk_indices"),
             "mixed_window_chunk_indices": provenance.get("mixed_window_chunk_indices"),
         },

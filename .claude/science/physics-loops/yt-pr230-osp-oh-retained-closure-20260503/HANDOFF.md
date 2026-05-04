@@ -1185,3 +1185,33 @@ provenance audit and the common-window gate for future chunk waves.  The active
 047-052 process was already running when this was patched, so rerun aggregate
 gates manually after those chunks land if the live orchestrator does not pick
 up the new gate list.
+
+## 2026-05-04 Common-Window Pooled Response Estimator
+
+The fixed-window uncertainty sub-blocker is now retired as bounded support:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_common_window_pooled_response_estimator.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_common_window_response_gate.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=153 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=179 FAIL=0
+```
+
+Using independent chunk-to-chunk scatter over 46 ready chunks, the fixed
+`tau=10..12` common-window response has mean `1.4256769178257236`,
+empirical standard error `0.001157062859635867`, and relative standard error
+`0.0008115884077021353`.  The bootstrap 68% relative half-width is
+`0.0007853851002698261`.
+
+This does not authorize a readout switch.  It only removes the common-window
+estimator-uncertainty sub-blocker.  Remaining blockers for the common-window
+gate are finite-source-linearity, response-window acceptance,
+fitted/replacement response stability, scalar-LSZ, and
+canonical-Higgs/source-overlap closure.

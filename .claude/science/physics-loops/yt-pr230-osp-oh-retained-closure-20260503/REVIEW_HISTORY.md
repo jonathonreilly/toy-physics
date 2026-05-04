@@ -236,6 +236,28 @@ Findings:
 - No retained/proposed-retained claim is authorized and no physical readout
   switch is authorized.
 
+## 2026-05-04 Common-Window Pooled Response Estimator Self-Review
+
+Disposition: bounded support / estimator uncertainty sub-blocker retired;
+continue campaign.
+
+Findings:
+
+- The estimator uses independent chunk-to-chunk scatter over the current 46
+  ready chunk common-window slopes.
+- The fixed `tau=10..12` common-window mean is `1.4256769178257236` with
+  empirical standard error `0.001157062859635867`, relative standard error
+  `0.0008115884077021353`, and bootstrap 68% relative half-width
+  `0.0007853851002698261`.
+- The common-window gate now sees production-grade fixed-window uncertainty,
+  but it remains open because finite-source-linearity, response-window
+  acceptance, fitted/replacement response stability, scalar-LSZ, and
+  canonical-Higgs/source-overlap gates remain open.
+- Retained-route and campaign aggregate certificates include the estimator as
+  a non-closure support artifact: `PASS=153 FAIL=0` and `PASS=179 FAIL=0`.
+- No retained/proposed-retained claim is authorized and no physical readout
+  switch is authorized.
+
 ## 2026-05-04 Schur/K-Prime Row Absence Refresh Self-Review
 
 Disposition: bounded support / exact negative boundary; continue campaign.
