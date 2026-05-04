@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-04T00:14:41.907116+00:00
+**Generated:** 2026-05-04T00:17:17.599400+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 209 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 677 |
+| unaudited | 676 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 31 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 551 |
+| ~~audited_conditional~~ | 552 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 551 |
+| `audited_conditional` | 552 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 724 |
+| `unaudited` | 723 |
 
 | claim_type | count |
 |---|---:|
@@ -50,8 +50,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `decoration` | 8 |
 | `meta` | 47 |
 | `no_go` | 167 |
-| `open_gate` | 93 |
-| `positive_theorem` | 850 |
+| `open_gate` | 94 |
+| `positive_theorem` | 849 |
 
 | criticality | count |
 |---|---:|
@@ -585,6 +585,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dirac_weak_coupling_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `directional_b_density_stencil_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dispersion_high_p_tiebreaker_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dispersion_relation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `distance_law_definitive_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `distance_law_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | unsupported_numerical_sweep_and_readout_bridge | - |
 | `distracted_napier_reconciliation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -3398,6 +3399,24 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `dispersion_relation_note`
+
+- **Note:** [`DISPERSION_RELATION_NOTE.md`](../../docs/DISPERSION_RELATION_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Open gate that current dispersion measurements do not distinguish Schrödinger from Klein-Gordon on the Fam1 grown DAG, so the propagator cannot yet be claimed decisively relativistic or non-relativistic.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-03`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** On the actual Fam1 grown DAG, Schrödinger R²=0.994 vs Klein-Gordon R²=0.992, so the free propagator's dispersion type is too close to distinguish and cannot support a decisive relativistic or non-relativistic claim.  _(class `B`)_
+- **chain closes:** False — The primary runner in the audit row measures only the 2D regular-lattice dispersion and confirms the older 2D Schrödinger fit; it does not compute the 3D grown-DAG comparison that carries the note's actual bottom-line claim. The grown-DAG and 3D values appear only as imported artifact-chain results in the note, not as a one-hop retained dependency or the current primary runner output.
+- **rationale:** Issue: the scoped open-gate claim depends on the 3D/grown-DAG artifact-chain results, but the ledger primary runner is the 2D regular-lattice script and does not reproduce the Fam1 Schrödinger-vs-Klein-Gordon tie. Why this blocks: the note's conservative conclusion about the actual physics geometry cannot be ratified from the current primary runner and empty one-hop dependency set. Repair target: promote the grown-DAG and 3D dispersion scripts or their completed logs into the row's load-bearing runner/dependency packet, with current outputs showing the stated R² comparisons. Claim boundary until fixed: the 2D regular-lattice script supports a Schrödinger-like fit on that geometry, while the full grown-DAG dispersion-type open gate remains conditional on the listed but unaudited artifacts.
+- **open / conditional deps cited:**
+  - `scripts/dispersion_grown_dag.py`
+  - `scripts/dispersion_3d_lattice.py`
+  - `scripts/dispersion_3d_fine.py`
+  - `logs/2026-04-08-lattice-dispersion.txt`
 - **auditor confidence:** high
 
 ### `distance_law_3d_64_closure_note_2026-04-11`
