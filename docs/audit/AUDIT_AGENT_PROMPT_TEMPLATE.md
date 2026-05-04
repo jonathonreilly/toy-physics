@@ -103,8 +103,11 @@ Definitions you must use:
     derivation.
   - `audited_conditional` — at least one cited authority is not retained-grade
     (`retained`, `retained_no_go`, or `retained_bounded`) or contains
-    explicit language that the identification is open work. Retained status
-    does not propagate through an open identification.
+    explicit language that the identification is open work; or the claim
+    imports an explicit premise, bridge, carrier, readout, normalization,
+    boundary condition, or asymptotic authority that is not closed by the
+    restricted packet. Retained status does not propagate through an open
+    identification.
   - `audited_decoration` — every load-bearing step is class (A), the
     note has zero (D) checks, and the chain reduces to a single upstream
     parent claim plus standard mathematics. (See
@@ -135,7 +138,7 @@ Return a single JSON object with exactly these fields. No other prose.
   "decoration_parent_claim_id": "<claim_id of the upstream parent if verdict = audited_decoration, else null>",
   "open_dependency_paths": ["<note path of any cited authority that is itself support / open / conditional>"],
   "auditor_confidence": "<low | medium | high>",
-  "notes_for_re_audit_if_any": "<short note flagging anything a second auditor should re-check, or empty>"
+  "notes_for_re_audit_if_any": "<for audited_conditional, prefix exactly one repair class from missing_dependency_edge, dependency_not_retained, missing_bridge_theorem, scope_too_broad, runner_artifact_issue, compute_required, other, then name the cheapest next repair action; otherwise short note flagging anything a second auditor should re-check, or empty>"
 }
 ```
 

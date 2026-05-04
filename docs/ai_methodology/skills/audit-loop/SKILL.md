@@ -138,6 +138,32 @@ Claim boundary until fixed: <what may still be safely said>.
 
 For `audited_clean`, still explain why the load-bearing step closes and what residual risk remains.
 
+## Conditional Repair Surfacing
+
+For every `audited_conditional` result, make the next repair lane sortable.
+Prefix `notes_for_re_audit_if_any` with exactly one repair class:
+
+- `missing_dependency_edge`: a needed source note or authority exists or is
+  named, but is not wired as a direct dependency for the audited claim.
+- `dependency_not_retained`: a direct dependency exists but is not retained
+  grade.
+- `missing_bridge_theorem`: the claim needs a new theorem for a physical
+  carrier, readout, unit map, boundary condition, sector choice,
+  normalization, or observable bridge.
+- `scope_too_broad`: a clean bounded core exists, but the current claim scope
+  includes an unclosed extension.
+- `runner_artifact_issue`: a runner, log, classifier, threshold, import, or
+  pass/fail accounting problem blocks closure despite otherwise local scope.
+- `compute_required`: closure needs a completed long run, sliced runner,
+  cached certificate, or independent derivation.
+- `other`: use only when none of the above fits, and state why.
+
+After the class, name the cheapest next repair action, such as adding an
+explicit citation/dependency edge, auditing a named dependency first, creating
+an open bridge theorem, splitting the clean bounded core from the conditional
+extension, or repairing/slicing the runner. Do not repair during the audit
+unless the user explicitly asks for repair work.
+
 ## Apply The Audit
 
 Create an audit JSON matching `docs/audit/scripts/apply_audit.py`. Returning this JSON to the user is not the end of the task unless they explicitly requested dry-run/no-apply behavior. Required metadata:

@@ -184,6 +184,31 @@ compute blocker when supported, and then continues to the next ready row.
 Rows skipped this way need a completed run artifact, reduced deterministic
 runner, or proof-level replacement before re-audit.
 
+For every `audited_conditional` result, the auditor must make the repair lane
+machine-sortable by prefixing `notes_for_re_audit_if_any` with one repair
+class:
+
+- `missing_dependency_edge` — a needed source note or authority exists or is
+  named, but is not wired as a direct dependency for the audited claim.
+- `dependency_not_retained` — a direct dependency exists but is not retained
+  grade.
+- `missing_bridge_theorem` — the claim needs a new theorem for a physical
+  carrier, readout, unit map, boundary condition, sector choice,
+  normalization, or observable bridge.
+- `scope_too_broad` — a clean bounded core exists, but the current claim scope
+  includes an unclosed extension.
+- `runner_artifact_issue` — a runner, log, classifier, threshold, import, or
+  pass/fail accounting problem blocks closure despite otherwise local scope.
+- `compute_required` — closure needs a completed long run, sliced runner,
+  cached certificate, or independent derivation.
+- `other` — none of the above fits; the note must state why.
+
+After the class, the auditor names the cheapest next repair action. Examples:
+add an explicit citation/dependency edge, audit a named dependency first,
+create/open a bridge theorem, split a clean bounded core from a conditional
+extension, or repair/slice a runner. The audit lane surfaces these repairs; it
+does not perform them unless explicitly asked.
+
 For high-stakes claims (`criticality = critical` by transitive-descendant
 count; the audit lane does not use author-declared flagship status), a second independent
 agent runs the same audit; the two must agree before `audited_clean` lands.
