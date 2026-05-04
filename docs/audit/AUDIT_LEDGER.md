@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-04T10:55:09.151240+00:00
+**Generated:** 2026-05-04T10:57:43.720738+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,7 +24,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 213 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 667 |
+| unaudited | 666 |
 | audit_in_progress | 1 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
@@ -34,22 +34,23 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
+| `decoration_under_wide_lattice_h2t_distance_law_note` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 382 |
 | `audited_conditional` | 556 |
-| `audited_decoration` | 8 |
+| `audited_decoration` | 9 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 714 |
+| `unaudited` | 713 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 600 |
-| `decoration` | 8 |
+| `bounded_theorem` | 599 |
+| `decoration` | 9 |
 | `meta` | 47 |
 | `no_go` | 167 |
 | `open_gate` | 94 |
@@ -1055,6 +1056,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retained_cross_lane_consistency_support_note_2026-04-22` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
 | `three_generation_observable_count_corollary_note_2026-05-03` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | fresh_context | codex-current | A | `three_generation_observable_theorem_note` |
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
+| `wide_lattice_h2t_skeptic_audit_note` | decoration | ~~audited_decoration~~ | `decoration_under_wide_lattice_h2t_distance_law_note` | cross_family | codex-gpt-5 | B | `wide_lattice_h2t_distance_law_note` |
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5 | A | - |
@@ -16018,6 +16020,20 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** Independent wide replay at h = 0.25, W = 12, L = 12 gives Born=4.82e-15, k=0=0.000000, distance support 10/10 TOWARD, peak-tail b^(-0.95) with R^2=0.980, far-tail b^(-1.05) with R^2=0.990, and F~M exponent 1.000.  _(class `C`)_
 - **chain closes:** True — The cited completed log matches the source note's frozen finite-lattice numbers, and the runner constructs the W=12, h=0.25 lattice replay and reports the distance rows, tail fits, and mass-scaling sweep. The note explicitly limits the conclusion to a finite-lattice frontier, so no continuum-limit or exact -1 exponent proof is needed for this scoped claim.
 - **rationale:** The scoped claim is bounded to one frozen finite-lattice replay, not a universal continuum theorem. The completed log closes the load-bearing numerical replay: it reproduces every headline value in the note and includes the stated sanity checks. Residual risk is confined to the upstream harness/normalization assumptions imported by the replay, but within the provided restricted packet the finite replay result itself is not a renaming, decoration, tuned external comparator, or stale numerical claim.
+- **auditor confidence:** high
+
+### `wide_lattice_h2t_skeptic_audit_note`
+
+- **Note:** [`WIDE_LATTICE_H2T_SKEPTIC_AUDIT_NOTE.md`](../../docs/WIDE_LATTICE_H2T_SKEPTIC_AUDIT_NOTE.md)
+- **claim_type:** `decoration`
+- **claim_scope:** Scope-management corollary of wide_lattice_h2t_distance_law_note: the same completed replay supports a finite-lattice near-Newtonian tail but not a universal distance-law promotion.
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** `decoration_under_wide_lattice_h2t_distance_law_note`  (reason: `decoration_parent_retained`)
+- **auditor:** `codex-audit-loop-2026-05-04`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The replay is genuinely clean on the tested wide slice, but it does not justify exact 1/b asymptotics, a continuum-limit theorem, or geometry-generic behavior.  _(class `B`)_
+- **chain closes:** True — The note's parent target is already retained-bounded, and the completed replay log supports the stated finite-lattice caution. The note adds no independent observable, runner evidence, or new physical theorem beyond the parent result's scoped interpretation.
+- **rationale:** Issue: this note is a skeptic/scope wrapper around the already retained-bounded wide_lattice_h2t_distance_law_note and uses the same replay/log rather than adding an independent theorem or comparator. Why this blocks separate retained status: giving it another retained-bounded row would double-count the same finite-lattice evidence as an additional claim. Repair target: keep the cautionary wording boxed under the parent distance-law note or add genuinely independent controls such as width/refinement/window/source-placement replays. Claim boundary until fixed: it is safe as a scope-management corollary saying the parent replay is finite-lattice evidence only, not a universal distance law.
+- **decoration parent:** `wide_lattice_h2t_distance_law_note`
 - **auditor confidence:** high
 
 ### `wilson_mu2_distance_sweep_note_2026-04-11`
