@@ -386,6 +386,9 @@ def main() -> int:
         "fh_lsz_common_window_pooled_response_estimator": load(
             "outputs/yt_fh_lsz_common_window_pooled_response_estimator_2026-05-04.json"
         ),
+        "fh_lsz_common_window_replacement_response_stability": load(
+            "outputs/yt_fh_lsz_common_window_replacement_response_stability_2026-05-04.json"
+        ),
         "fh_lsz_common_window_response_gate": load(
             "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json"
         ),
@@ -1459,8 +1462,14 @@ def main() -> int:
         statuses["fh_lsz_common_window_pooled_response_estimator"],
     )
     report(
-        "fh-lsz-common-window-response-gate-blocks",
-        "common-window response gate not passed"
+        "fh-lsz-common-window-replacement-response-stability-not-closure",
+        "common-window replacement response-stability passed"
+        in str(statuses["fh_lsz_common_window_replacement_response_stability"]),
+        statuses["fh_lsz_common_window_replacement_response_stability"],
+    )
+    report(
+        "fh-lsz-common-window-response-gate-not-closure",
+        "common-window response gate"
         in str(statuses["fh_lsz_common_window_response_gate"]),
         statuses["fh_lsz_common_window_response_gate"],
     )

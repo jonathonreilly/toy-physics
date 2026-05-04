@@ -115,4 +115,8 @@ Open imports:
   consuming the multi-radius calibration checkpoint, but it does not authorize
   a readout switch or supply response-window acceptance, scalar-LSZ, or
   canonical-Higgs/source-overlap closure;
+- common-window replacement response-stability and common-window response gate
+  now pass as bounded response-side support, but they do not authorize a
+  physical readout switch or supply scalar-LSZ pole/FV/IR/model-class control
+  or canonical-Higgs/source-overlap closure;
 - independent audit after any proposed positive certificate.

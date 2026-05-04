@@ -1246,3 +1246,31 @@ This still does not authorize a readout switch.  Response-window acceptance
 remains open because full ready-set v2 covariance is missing for chunks001-016
 and fitted/replacement response stability is still not passed.  Scalar-LSZ and
 canonical-Higgs/source-overlap closure remain separate blockers.
+
+## 2026-05-04 Common-Window Replacement Response Stability
+
+The response-window support path now has a replacement stability gate that does
+not fabricate legacy v2 covariance rows:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_common_window_replacement_response_stability.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_common_window_response_gate.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=154 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=180 FAIL=0
+```
+
+The replacement gate passes as support over all 46 ready chunks using
+common-window coverage, target/autocorrelation ESS, honest legacy-v2 backfill
+failure, production-grade pooled uncertainty, and finite-source-linearity
+support.  The common-window response gate now passes as response-side support.
+
+This is not y_t closure.  The remaining positive-retention blockers are
+scalar-LSZ pole/FV/IR/model-class control and canonical-Higgs/source-overlap
+closure.  No physical readout switch is authorized.

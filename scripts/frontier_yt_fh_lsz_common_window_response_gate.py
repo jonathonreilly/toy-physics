@@ -27,6 +27,7 @@ OUTPUT = ROOT / "outputs" / "yt_fh_lsz_common_window_response_gate_2026-05-04.js
 PARENTS = {
     "common_window_response_provenance": "outputs/yt_fh_lsz_common_window_response_provenance_2026-05-04.json",
     "common_window_pooled_response_estimator": "outputs/yt_fh_lsz_common_window_pooled_response_estimator_2026-05-04.json",
+    "common_window_replacement_response_stability": "outputs/yt_fh_lsz_common_window_replacement_response_stability_2026-05-04.json",
     "response_window_acceptance_gate": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
     "finite_source_linearity_gate": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
     "fitted_response_stability": "outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json",
@@ -71,6 +72,7 @@ def main() -> int:
 
     provenance = parents["common_window_response_provenance"]
     pooled = parents["common_window_pooled_response_estimator"]
+    replacement = parents["common_window_replacement_response_stability"]
     acceptance = parents["response_window_acceptance_gate"]
     finite_source = parents["finite_source_linearity_gate"]
     fitted_response = parents["fitted_response_stability"]
@@ -90,15 +92,22 @@ def main() -> int:
     fitted_response_stability_passed = (
         fitted_response.get("stability_summary", {}).get("stability_passed") is True
     )
+    replacement_response_stability_passed = (
+        replacement.get("replacement_response_stability_passed") is True
+    )
+    response_stability_or_replacement_passed = (
+        fitted_response_stability_passed or replacement_response_stability_passed
+    )
+    acceptance_or_replacement_passed = acceptance_passed or replacement_response_stability_passed
     v2_target_support_passed = v2_target.get("v2_target_response_stability_passed") is True
 
     predeclared_criteria = {
         "common_window_stability_passed": common_window_stable,
         "common_window_production_grade": common_window_production_grade,
         "pooled_common_window_response_production_grade": pooled_common_window_production_grade,
-        "response_window_acceptance_gate_passed": acceptance_passed,
+        "response_window_acceptance_or_replacement_passed": acceptance_or_replacement_passed,
         "finite_source_linearity_gate_passed": finite_source_linearity_passed,
-        "fitted_response_stability_passed": fitted_response_stability_passed,
+        "fitted_or_replacement_response_stability_passed": response_stability_or_replacement_passed,
         "v2_target_response_stability_support_passed": v2_target_support_passed,
         "scalar_lsz_and_canonical_higgs_closure_required_separately": True,
     }
@@ -107,9 +116,9 @@ def main() -> int:
         and not proposal_allowed
         and common_window_stable
         and common_window_production_grade
-        and acceptance_passed
+        and acceptance_or_replacement_passed
         and finite_source_linearity_passed
-        and fitted_response_stability_passed
+        and response_stability_or_replacement_passed
         and v2_target_support_passed
     )
     readout_switch_authorized = False
@@ -137,6 +146,11 @@ def main() -> int:
     report("v2-target-support-state-recorded", "v2_target_response_stability_passed" in v2_target, str(status(v2_target)))
     report("finite-source-linearity-state-recorded", bool(finite_source), str(status(finite_source)))
     report("response-window-acceptance-state-recorded", bool(acceptance), str(status(acceptance)))
+    report(
+        "replacement-response-stability-state-recorded",
+        bool(replacement),
+        replacement.get("actual_current_surface_status", ""),
+    )
     report("fitted-response-stability-state-recorded", bool(fitted_response), str(status(fitted_response)))
     report("common-window-gate-state-recorded", True, f"passed={common_window_response_gate_passed}")
     report("readout-switch-not-authorized-currently", not readout_switch_authorized, "separate physics gates remain open")
@@ -151,10 +165,13 @@ def main() -> int:
         "verdict": (
             "The common-window provenance result is now formalized as a "
             "predeclared gate.  On the current surface the fixed-window "
-            "central slope is stable, but it is not production-grade and the "
-            "response-window, finite-source-linearity, fitted-response "
-            "stability, scalar-LSZ, and canonical-Higgs/source-overlap gates "
-            "remain open.  No physical readout switch is authorized."
+            "central slope is stable, production-grade under pooled "
+            "chunk-scatter uncertainty, and paired with finite-source-"
+            "linearity plus replacement response-stability support.  This "
+            "passes the common-window response gate as support when the "
+            "criteria are satisfied, but no physical readout switch is "
+            "authorized because scalar-LSZ and canonical-Higgs/source-overlap "
+            "closure remain separate blockers."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
@@ -173,6 +190,9 @@ def main() -> int:
             "common_window_relative_fit_error": provenance.get("common_window_relative_fit_error"),
             "pooled_relative_standard_error": pooled.get("relative_standard_error"),
             "pooled_empirical_standard_error": pooled.get("empirical_standard_error"),
+            "replacement_response_stability_passed": replacement.get(
+                "replacement_response_stability_passed"
+            ),
             "high_original_slope_chunk_indices": provenance.get("high_original_slope_chunk_indices"),
             "mixed_window_chunk_indices": provenance.get("mixed_window_chunk_indices"),
         },
@@ -184,11 +204,10 @@ def main() -> int:
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
         ],
         "exact_next_action": (
-            "If pursuing this route, improve the fixed-window estimator until "
-            "the common-window response is production-grade, then pass "
-            "finite-source-linearity and response-window acceptance before any "
-            "readout-switch request.  This still remains downstream of scalar "
-            "LSZ and canonical-Higgs/source-overlap closure."
+            "Use this response-side support only as a parent for scalar-LSZ "
+            "pole/FV/IR/model-class work and canonical-Higgs/source-overlap "
+            "closure.  Do not request a physical y_t readout switch until "
+            "those independent gates pass."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

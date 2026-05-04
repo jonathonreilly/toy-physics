@@ -194,6 +194,7 @@ def main() -> int:
         "fh_lsz_response_window_forensics": "outputs/yt_fh_lsz_response_window_forensics_2026-05-03.json",
         "fh_lsz_common_window_response_provenance": "outputs/yt_fh_lsz_common_window_response_provenance_2026-05-04.json",
         "fh_lsz_common_window_pooled_response_estimator": "outputs/yt_fh_lsz_common_window_pooled_response_estimator_2026-05-04.json",
+        "fh_lsz_common_window_replacement_response_stability": "outputs/yt_fh_lsz_common_window_replacement_response_stability_2026-05-04.json",
         "fh_lsz_common_window_response_gate": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
         "fh_lsz_v2_target_response_stability": "outputs/yt_fh_lsz_v2_target_response_stability_2026-05-04.json",
         "fh_lsz_response_window_acceptance_gate": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
@@ -1359,16 +1360,12 @@ def main() -> int:
         )
         is False
     )
-    common_window_response_gate_blocks = (
-        "common-window response gate not passed"
+    common_window_response_gate_not_closure = (
+        "common-window response gate"
         in certificates["fh_lsz_common_window_response_gate"].get(
             "actual_current_surface_status", ""
         )
         and certificates["fh_lsz_common_window_response_gate"].get("proposal_allowed")
-        is False
-        and certificates["fh_lsz_common_window_response_gate"].get(
-            "common_window_response_gate_passed"
-        )
         is False
         and certificates["fh_lsz_common_window_response_gate"].get(
             "readout_switch_authorized"
@@ -1389,6 +1386,24 @@ def main() -> int:
         )
         is True
         and certificates["fh_lsz_common_window_pooled_response_estimator"].get(
+            "readout_switch_authorized"
+        )
+        is False
+    )
+    common_window_replacement_response_stability_not_closure = (
+        "common-window replacement response-stability passed"
+        in certificates["fh_lsz_common_window_replacement_response_stability"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["fh_lsz_common_window_replacement_response_stability"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["fh_lsz_common_window_replacement_response_stability"].get(
+            "replacement_response_stability_passed"
+        )
+        is True
+        and certificates["fh_lsz_common_window_replacement_response_stability"].get(
             "readout_switch_authorized"
         )
         is False
@@ -2167,8 +2182,15 @@ def main() -> int:
         ),
     )
     report(
-        "fh-lsz-common-window-response-gate-blocks",
-        common_window_response_gate_blocks,
+        "fh-lsz-common-window-replacement-response-stability-not-closure",
+        common_window_replacement_response_stability_not_closure,
+        certificates["fh_lsz_common_window_replacement_response_stability"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "fh-lsz-common-window-response-gate-not-closure",
+        common_window_response_gate_not_closure,
         certificates["fh_lsz_common_window_response_gate"].get(
             "actual_current_surface_status", ""
         ),

@@ -4,8 +4,8 @@ Date: 2026-05-04
 
 PR: #230
 
-Status: open / response-gate contract; no readout switch and no retained
-closure proposal is authorized.
+Status: bounded support / common-window response gate passed as response
+support; no readout switch and no retained closure proposal is authorized.
 
 ## Purpose
 
@@ -40,24 +40,27 @@ Current surface:
 - fixed `tau=10..12` central response is stable;
 - fixed-window uncertainty is production-grade under the pooled independent
   chunk-scatter estimator;
-- response-window acceptance remains open;
+- legacy response-window acceptance remains open, but replacement response-
+  stability is passed as support;
 - finite-source-linearity is now available as bounded response support;
-- fitted response stability remains open;
+- fitted response stability remains open, but replacement response stability
+  is passed as support;
 - scalar-LSZ and canonical-Higgs/source-overlap gates remain open.
 
-Therefore the gate is not passed and no readout switch is authorized.
+Therefore the response-side common-window gate is passed as support, but no
+physical readout switch is authorized.
 
 ## Claim Boundary
 
 This gate is evidence-quality hygiene.  It does not compute or derive physical
-`y_t`, does not replace the production readout, and does not identify
-`O_sp = O_H`.
+`y_t`, does not authorize replacing the production readout with a physical
+Yukawa readout, and does not identify `O_sp = O_H`.
 
 Forbidden shortcuts remain unused: `H_unit`, `yt_ward_identity`, observed top
 mass or observed `y_t`, `alpha_LM`, plaquette/u0, `kappa_s=1`, `c2=1`,
 `Z_match=1`, and `cos(theta)=1`.
 
-Exact next action: improve the fixed-window estimator until the common-window
-response is production-grade, then pass finite-source-linearity and
-response-window acceptance before any readout-switch request.  This still
-remains downstream of scalar-LSZ and canonical-Higgs/source-overlap closure.
+Exact next action: use the response-side support only as a parent for
+scalar-LSZ pole/FV/IR/model-class work and canonical-Higgs/source-overlap
+closure.  Do not request a physical `y_t` readout switch until those
+independent gates pass.

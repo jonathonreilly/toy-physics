@@ -46,6 +46,7 @@ GATE_COMMANDS = [
     ["python3", "scripts/frontier_yt_fh_lsz_response_window_forensics.py"],
     ["python3", "scripts/frontier_yt_fh_lsz_common_window_response_provenance.py"],
     ["python3", "scripts/frontier_yt_fh_lsz_common_window_pooled_response_estimator.py"],
+    ["python3", "scripts/frontier_yt_fh_lsz_common_window_replacement_response_stability.py"],
     ["python3", "scripts/frontier_yt_fh_lsz_common_window_response_gate.py"],
     ["python3", "scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py"],
     ["python3", "scripts/frontier_yt_fh_lsz_v2_target_response_stability.py"],

@@ -277,6 +277,25 @@ Findings:
 - No retained/proposed-retained claim is authorized and no physical readout
   switch is authorized.
 
+## 2026-05-04 Common-Window Replacement Response Stability Self-Review
+
+Disposition: bounded response-side support; continue campaign.
+
+Findings:
+
+- The replacement gate explicitly avoids fabricating legacy v2 covariance rows
+  for chunks001-016.
+- It uses full ready-set common-window coverage, target/autocorrelation ESS,
+  honest legacy-v2 backfill failure, production-grade pooled uncertainty, and
+  finite-source-linearity support.
+- The replacement response-stability gate passes with `PASS=14 FAIL=0`, and
+  the common-window response gate now passes as support with `PASS=14 FAIL=0`.
+- Retained-route and campaign aggregate certificates remain no-proposal:
+  `PASS=154 FAIL=0` and `PASS=180 FAIL=0`.
+- No retained/proposed-retained claim is authorized and no physical readout
+  switch is authorized because scalar-LSZ pole/FV/IR/model-class control and
+  canonical-Higgs/source-overlap closure remain open.
+
 ## 2026-05-04 Schur/K-Prime Row Absence Refresh Self-Review
 
 Disposition: bounded support / exact negative boundary; continue campaign.
