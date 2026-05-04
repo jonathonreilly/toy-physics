@@ -300,10 +300,11 @@
     "wz_response_row_production_attempt": "exact negative boundary / WZ response row production attempt on current surface",
     "wz_same_source_ew_action_certificate_builder": "open / same-source EW action certificate absent",
     "wz_same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface",
+    "wz_same_source_ew_action_semantic_firewall": "bounded-support / same-source EW action semantic firewall passed",
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 190,
+  "pass_count": 191,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

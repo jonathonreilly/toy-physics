@@ -21,9 +21,9 @@
       "source coupled to canonical Higgs radial mode"
     ],
     "required_certificates": [
-      "canonical Higgs operator certificate",
-      "same-source sector-overlap certificate",
-      "W/Z correlator mass-fit path certificate"
+      "canonical Higgs operator certificate with non-shortcut reference and allowed kind",
+      "same-source sector-overlap certificate with non-shortcut reference and allowed kind",
+      "W/Z correlator mass-fit path certificate with non-shortcut reference and allowed kind"
     ],
     "required_fields": {
       "dynamic_higgs_doublet": true,

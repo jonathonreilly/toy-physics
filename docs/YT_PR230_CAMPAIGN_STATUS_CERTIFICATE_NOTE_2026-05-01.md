@@ -26,8 +26,25 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=190 FAIL=0
+# SUMMARY: PASS=191 FAIL=0
 ```
+
+## 2026-05-04 W/Z Same-Source EW Action Semantic Firewall Update
+
+The campaign status certificate now consumes
+`outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json`.
+This closes a shortcut-risk gap in the W/Z physical-response bypass: a future
+same-source EW action certificate must use non-shortcut identity references
+and allowed certificate kinds, not static EW algebra, current QCD/top harness
+paths, gate outputs, observed selectors, `H_unit`/Ward authority, or
+self-declared certificate labels.
+
+The semantic firewall runner passes with `PASS=12 FAIL=0`; campaign status
+passes with `PASS=191 FAIL=0`; retained-route passes with `PASS=165 FAIL=0`;
+the full positive closure assembly gate remains open with `PASS=17 FAIL=0`.
+This is contract hardening only.  It does not provide an EW action block, W/Z
+mass-response rows, sector-overlap identity, canonical-Higgs identity, scalar
+LSZ normalization, or retained/proposed-retained `y_t` closure.
 
 ## 2026-05-04 FH/LSZ Global Production Collision Guard Update
 

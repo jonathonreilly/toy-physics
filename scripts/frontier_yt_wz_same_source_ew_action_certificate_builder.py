@@ -45,6 +45,35 @@ FORBIDDEN_FALSE_FIELDS = (
     "set_z_match_equal_one",
 )
 
+SHORTCUT_REFERENCE_TOKENS = (
+    "EW_HIGGS_GAUGE_MASS",
+    "SM_ONE_HIGGS",
+    "HUNIT",
+    "H_UNIT",
+    "WARD",
+    "OBSERVED",
+    "PDG",
+    "ALPHA_LM",
+    "PLAQUETTE",
+    "U0",
+    "GATE",
+    "GUARD",
+    "FIREWALL",
+    "CHECKPOINT",
+    "CONTRACT",
+    "BUILDER",
+    "HARNESS",
+    "MANIFEST",
+    "ABSENCE",
+    "ABSENT",
+    "OBSTRUCTION",
+    "IMPORT_AUDIT",
+    "PRODUCTION_ATTEMPT",
+    "IMPLEMENTATION_PLAN",
+    "MASS_FIT_PATH_GATE",
+    "YT_DIRECT_LATTICE_CORRELATOR_PRODUCTION",
+)
+
 PASS_COUNT = 0
 FAIL_COUNT = 0
 
@@ -90,6 +119,13 @@ def path_ref_ok(value: Any) -> bool:
     return path.exists() and str(value).startswith(("docs/", "outputs/", "scripts/"))
 
 
+def nonshortcut_path_ref_ok(value: Any) -> bool:
+    if not path_ref_ok(value):
+        return False
+    upper = str(value).upper()
+    return not any(token in upper for token in SHORTCUT_REFERENCE_TOKENS)
+
+
 def validate_action_certificate(candidate: dict[str, Any]) -> dict[str, Any]:
     if not candidate:
         return {
@@ -125,8 +161,17 @@ def validate_action_certificate(candidate: dict[str, Any]) -> dict[str, Any]:
         "wz_correlator_observables_defined": observables.get("wz_two_point_correlators") is True,
         "wz_mass_fit_method_defined": nonempty_string(observables.get("wz_mass_fit_method")),
         "canonical_higgs_certificate_reference": path_ref_ok(certificates.get("canonical_higgs_operator_certificate")),
+        "canonical_higgs_certificate_not_shortcut": nonshortcut_path_ref_ok(certificates.get("canonical_higgs_operator_certificate")),
+        "canonical_higgs_certificate_kind_allowed": certificates.get("canonical_higgs_operator_certificate_kind")
+        in {"same_surface_canonical_higgs_operator_certificate", "canonical_higgs_identity_theorem"},
         "sector_overlap_certificate_reference": path_ref_ok(certificates.get("same_source_sector_overlap_certificate")),
+        "sector_overlap_certificate_not_shortcut": nonshortcut_path_ref_ok(certificates.get("same_source_sector_overlap_certificate")),
+        "sector_overlap_certificate_kind_allowed": certificates.get("same_source_sector_overlap_certificate_kind")
+        in {"same_source_sector_overlap_identity", "same_surface_sector_overlap_theorem"},
         "wz_mass_fit_path_certificate_reference": path_ref_ok(certificates.get("wz_correlator_mass_fit_path_certificate")),
+        "wz_mass_fit_path_certificate_not_shortcut": nonshortcut_path_ref_ok(certificates.get("wz_correlator_mass_fit_path_certificate")),
+        "wz_mass_fit_path_certificate_kind_allowed": certificates.get("wz_correlator_mass_fit_path_certificate_kind")
+        in {"production_wz_correlator_mass_fit_path", "same_source_wz_mass_fit_theorem"},
         "proposal_not_authorized_by_candidate": candidate.get("proposal_allowed") is not True,
     }
     checks.update({f"forbidden_{field}_false": firewall.get(field) is False for field in FORBIDDEN_FALSE_FIELDS})
@@ -168,9 +213,9 @@ def acceptance_schema() -> dict[str, Any]:
             "same-source top/WZ covariance surface in later measurement rows",
         ],
         "required_certificates": [
-            "canonical Higgs operator certificate",
-            "same-source sector-overlap certificate",
-            "W/Z correlator mass-fit path certificate",
+            "canonical Higgs operator certificate with non-shortcut reference and allowed kind",
+            "same-source sector-overlap certificate with non-shortcut reference and allowed kind",
+            "W/Z correlator mass-fit path certificate with non-shortcut reference and allowed kind",
         ],
         "claim_firewall": [f"{field}=false" for field in FORBIDDEN_FALSE_FIELDS],
     }

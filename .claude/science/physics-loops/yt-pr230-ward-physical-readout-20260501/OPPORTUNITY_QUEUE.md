@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-04 update: the W/Z same-source EW action semantic firewall is now
+landed and wired into retained-route, campaign-status, and full-positive
+assembly gates.  A future W/Z bypass certificate cannot pass by importing
+static EW algebra, the current QCD/top harness, gate/obstruction outputs,
+observed selectors, `H_unit`/Ward authority, self-declared certificate kinds,
+or candidate-local proposal flags.  This does not change the closure ranking:
+the positive W/Z path still needs a real same-source EW action certificate,
+production W/Z correlator mass-fit rows, sector-overlap identity, and
+canonical-Higgs identity.  Competing high-value routes remain certified
+`O_H/C_sH/C_HH` pole rows, genuine Schur `A/B/C` rows, a rank-one
+neutral-scalar theorem, or honest production evidence.
+
 2026-05-04 update: polefit8x8 chunks013-018 are now active under the global
 collision guard.  A pre-launch dry run saw 12 completed chunks and zero active
 workers; after launch, the guard records six active FH/LSZ production workers

@@ -18,8 +18,24 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=164 FAIL=0
+# SUMMARY: PASS=165 FAIL=0
 ```
+
+## 2026-05-04 W/Z Same-Source EW Action Semantic Firewall Update
+
+The retained-route certificate now consumes
+`outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json`.
+This hardens the future same-source EW action contract by rejecting candidate
+certificates that point at static EW algebra, the current QCD/top harness,
+gate or obstruction outputs, observed selectors, `H_unit`/Ward authority,
+self-declared certificate kinds, or candidate-local proposal flags.
+
+The firewall runner passes with `PASS=12 FAIL=0`; the retained-route runner
+passes with `PASS=165 FAIL=0`; the full positive closure assembly gate remains
+open with `PASS=17 FAIL=0`.  This is overclaim protection only.  It supplies no
+same-source EW action block, no W/Z correlator mass-fit rows, no sector-overlap
+identity, no canonical-Higgs identity, and no retained or `proposed_retained`
+`y_t` closure.
 
 ## 2026-05-04 FH/LSZ Global Production Collision Guard Update
 

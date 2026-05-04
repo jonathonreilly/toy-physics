@@ -1,5 +1,26 @@
 # No-Go Ledger
 
+## W/Z same-source EW action semantic firewall is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_wz_same_source_ew_action_semantic_firewall.py
+# SUMMARY: PASS=12 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=17 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=165 FAIL=0
+```
+
+The firewall blocks semantic shortcut candidates for a future same-source EW
+action certificate.  It rejects static EW algebra, current QCD/top harness
+references, gate/obstruction outputs, observed selectors, `H_unit`/Ward
+authority, self-declared certificate kinds, and candidate-local proposal
+flags.  It does not provide a same-source EW action block, W/Z correlator
+mass-fit rows, sector-overlap identity, canonical-Higgs identity, scalar LSZ
+normalization, retained closure, or `proposed_retained` evidence.
+
 ## FH/LSZ polefit8x8 active launch is not closure
 
 Runners:

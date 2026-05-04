@@ -1,0 +1,94 @@
+{
+  "action_gate_output": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+  "actual_current_surface_status": "bounded-support / same-source EW action semantic firewall passed",
+  "bare_retained_allowed": false,
+  "builder_output": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
+  "current_action_gate_open": true,
+  "current_builder_open": true,
+  "exact_next_action": "A future W/Z bypass must supply a real same-source EW action certificate with non-shortcut identity references, then production W/Z correlator mass-fit rows, sector-overlap identity, canonical-Higgs identity, and retained-route approval.",
+  "fail_count": 0,
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The firewall hardens a future W/Z same-source action contract; it does not provide same-source EW dynamics, W/Z correlator rows, sector-overlap identity, canonical-Higgs identity, or retained y_t closure.",
+  "spoof_cases": [
+    {
+      "case": "reject-static-ew-canonical-higgs-reference",
+      "failed_checks": [
+        "canonical_higgs_certificate_not_shortcut",
+        "sector_overlap_certificate_not_shortcut",
+        "wz_mass_fit_path_certificate_not_shortcut"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-current-qcd-top-harness-reference",
+      "failed_checks": [
+        "canonical_higgs_certificate_not_shortcut",
+        "sector_overlap_certificate_not_shortcut",
+        "wz_mass_fit_path_certificate_not_shortcut"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-gate-output-as-identity-certificate",
+      "failed_checks": [
+        "canonical_higgs_certificate_not_shortcut",
+        "sector_overlap_certificate_not_shortcut",
+        "wz_mass_fit_path_certificate_not_shortcut"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-observed-mass-coupling-selector",
+      "failed_checks": [
+        "canonical_higgs_certificate_not_shortcut",
+        "sector_overlap_certificate_not_shortcut",
+        "wz_mass_fit_path_certificate_not_shortcut",
+        "forbidden_used_observed_masses_or_couplings_as_selectors_false"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-hunit-ward-authority",
+      "failed_checks": [
+        "canonical_higgs_certificate_not_shortcut",
+        "sector_overlap_certificate_not_shortcut",
+        "wz_mass_fit_path_certificate_not_shortcut",
+        "forbidden_used_hunit_as_operator_false",
+        "forbidden_used_yt_ward_identity_false"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-self-declared-certificate-kinds",
+      "failed_checks": [
+        "canonical_higgs_certificate_not_shortcut",
+        "canonical_higgs_certificate_kind_allowed",
+        "sector_overlap_certificate_not_shortcut",
+        "sector_overlap_certificate_kind_allowed",
+        "wz_mass_fit_path_certificate_not_shortcut",
+        "wz_mass_fit_path_certificate_kind_allowed"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-candidate-local-proposal-authorization",
+      "failed_checks": [
+        "canonical_higgs_certificate_not_shortcut",
+        "sector_overlap_certificate_not_shortcut",
+        "wz_mass_fit_path_certificate_not_shortcut",
+        "proposal_not_authorized_by_candidate"
+      ],
+      "rejected": true
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not provide a same-source EW action certificate",
+    "does not synthesize W/Z measurement rows",
+    "does not treat static EW algebra as dM_W/ds or dM_Z/ds",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette/u0, kappa_s=1, c2=1, Z_match=1, or cos(theta)=1"
+  ],
+  "stronger_schema": true,
+  "verdict": "The same-source EW action certificate builder now rejects semantic spoof candidates that try to use static EW algebra, the current QCD/top harness, gate/obstruction outputs, observed selectors, H_unit/Ward authority, self-declared certificate kinds, or candidate-local proposal authorization.  This is overclaim protection only; no EW action block or W/Z row is supplied."
+}

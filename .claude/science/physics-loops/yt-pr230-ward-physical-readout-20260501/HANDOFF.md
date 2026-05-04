@@ -1,5 +1,32 @@
 # Handoff
 
+Latest checkpoint, 2026-05-04 W/Z same-source EW action semantic firewall:
+
+- Hardened `scripts/frontier_yt_wz_same_source_ew_action_certificate_builder.py`
+  with non-shortcut reference checks and allowed certificate-kind checks for
+  canonical-Higgs identity, same-source sector-overlap identity, and W/Z
+  correlator mass-fit path inputs.
+- Added `scripts/frontier_yt_wz_same_source_ew_action_semantic_firewall.py`,
+  `docs/YT_WZ_SAME_SOURCE_EW_ACTION_SEMANTIC_FIREWALL_NOTE_2026-05-04.md`,
+  and
+  `outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json`.
+- The firewall rejects static EW algebra, the current QCD/top harness,
+  gate/obstruction outputs, observed selectors, `H_unit`/Ward authority,
+  self-declared certificate kinds, and candidate-local proposal flags.
+- Verification: action builder `PASS=10 FAIL=0`; action gate
+  `PASS=24 FAIL=0`; semantic firewall `PASS=12 FAIL=0`; full positive
+  assembly gate `PASS=17 FAIL=0`; retained-route `PASS=165 FAIL=0`;
+  campaign status `PASS=191 FAIL=0`.
+- Claim boundary: this is W/Z action-contract hardening only.  It supplies no
+  same-source EW action block, W/Z mass-fit rows, sector-overlap identity,
+  canonical-Higgs identity, or retained/proposed-retained closure.
+
+Next exact action: a future W/Z bypass must supply a real same-source EW
+action certificate with non-shortcut identity references, then production W/Z
+correlator mass-fit rows, sector-overlap identity, canonical-Higgs identity,
+and retained-route approval.  Do not launch chunks019-024 until a fresh guard
+reports capacity.
+
 Latest checkpoint, 2026-05-04 polefit8x8 chunks013-018 guarded launch:
 
 - Hardened `scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py` to

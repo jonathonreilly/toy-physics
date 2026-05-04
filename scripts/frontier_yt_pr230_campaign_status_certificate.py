@@ -272,6 +272,9 @@ def main() -> int:
         "wz_same_source_ew_action_gate": load(
             "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json"
         ),
+        "wz_same_source_ew_action_semantic_firewall": load(
+            "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json"
+        ),
         "wz_correlator_mass_fit_path_gate": load(
             "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json"
         ),
@@ -1211,6 +1214,13 @@ def main() -> int:
         and certificates["wz_same_source_ew_action_gate"].get("same_source_ew_action_ready") is False
         and certificates["wz_same_source_ew_action_gate"].get("action_block_written") is False,
         statuses["wz_same_source_ew_action_gate"],
+    )
+    report(
+        "wz-same-source-ew-action-semantic-firewall-not-closure",
+        "same-source EW action semantic firewall passed"
+        in str(statuses["wz_same_source_ew_action_semantic_firewall"])
+        and certificates["wz_same_source_ew_action_semantic_firewall"].get("proposal_allowed") is False,
+        statuses["wz_same_source_ew_action_semantic_firewall"],
     )
     report(
         "wz-correlator-mass-fit-path-gate-blocks",

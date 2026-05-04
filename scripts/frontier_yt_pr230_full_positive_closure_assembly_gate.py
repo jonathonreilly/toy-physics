@@ -41,6 +41,7 @@ PARENTS = {
     "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "wz_same_source_action_semantic_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
     "wz_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
@@ -166,6 +167,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
             ],
             "parents": [
                 PARENTS["wz_same_source_action"],
+                PARENTS["wz_same_source_action_semantic_firewall"],
                 PARENTS["wz_certificate_gate"],
                 PARENTS["wz_mass_fit_path"],
                 PARENTS["same_source_sector_overlap"],
@@ -254,6 +256,7 @@ def main() -> int:
         and certs["source_pole_mixing"].get("proposal_allowed") is False
         and certs["source_pole_purity"].get("proposal_allowed") is False
         and certs["canonical_higgs_operator"].get("proposal_allowed") is False
+        and certs["wz_same_source_action_semantic_firewall"].get("proposal_allowed") is False
     )
     matching_running_blocks = (
         certs["matching_running"].get("matching_running_bridge_passed") is not True
@@ -309,6 +312,13 @@ def main() -> int:
         "model-class semantic firewall passed" in statuses["fh_lsz_model_class_semantic_firewall"]
         and certs["fh_lsz_model_class_semantic_firewall"].get("proposal_allowed") is False,
         statuses["fh_lsz_model_class_semantic_firewall"],
+    )
+    report(
+        "wz-action-semantic-firewall-support-only",
+        "same-source EW action semantic firewall passed"
+        in statuses["wz_same_source_action_semantic_firewall"]
+        and certs["wz_same_source_action_semantic_firewall"].get("proposal_allowed") is False,
+        statuses["wz_same_source_action_semantic_firewall"],
     )
     report("scalar-lsz-model-fv-ir-blocked", scalar_lsz_blocks, "model-class/FV/IR/threshold controls still block retained use")
     report("source-overlap-bridge-absent", source_overlap_blocks, f"route_passes={any_bridge_passes}")
