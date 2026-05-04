@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-15  
 **Status:** bounded - bounded or caveated result note
+**Primary runner:** [`scripts/frontier_cosmological_constant.py`](../scripts/frontier_cosmological_constant.py) (honest negative result; CC problem unsolved)
 surface.
 
 ## Role In The Cosmology Lane

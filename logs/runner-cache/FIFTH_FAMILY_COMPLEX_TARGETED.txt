@@ -1,15 +1,31 @@
 ===== runner cache v1 =====
 runner: scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py
-runner_sha256: d67b6986dc18c9dbd8774bdeec95e166e7206813566d4ab7d8ece03dfba17bd0
+runner_sha256: 2b46ebc76a6c92ae24a179a1928bed8b388f022f850bf9a1a6a3a1d0dd9f832e
 timeout_sec: 120
-exit_code: 1
-elapsed_sec: 0.05
-status: nonzero_exit
+exit_code: 0
+elapsed_sec: 91.56
+status: ok
 ----- stdout -----
+==================================================================================================
+FIFTH FAMILY COMPLEX TARGETED
+  complex-action probe on the radial-shell fifth-family slice
+==================================================================================================
+drifts=[0.05, 0.2, 0.3], seeds=[0, 1]
+guards: exact gamma=0 baseline, Born proxy where feasible, TOWARD -> AWAY crossover
+
+drift seed       born           g0          d01          d05      e01      e05     fm0    fm05   t01   t05
+----------------------------------------------------------------------------------------------------------------------
+ 0.05    0        n/a -2.261935e-05 -3.529106e-05 -8.597726e-05    1.000    1.000   1.001   1.000     0     0
+ 0.05    1        n/a +2.313390e-05 +1.934119e-05 +4.170437e-06    1.000    1.000   1.000   0.999     1     1
+ 0.20    0  0.000e+00 +2.028191e-06 +1.598345e-06 -1.209924e-07    1.000    1.000   1.000   1.002     1     0
+ 0.20    1        n/a +2.536202e-06 +1.683026e-06 -1.729604e-06    1.000    1.000   1.000   1.000     1     0
+ 0.30    0        n/a -1.388301e-05 -1.541744e-05 -2.155514e-05    1.000    1.000   1.000   1.000     0     0
+ 0.30    1        n/a -1.131528e-05 -1.339674e-05 -2.172221e-05    1.000    1.000   1.000   1.000     0     0
+
+SAFE READ
+  anchor rows passing exact gamma=0 + Born/F~M gates: 1
+  anchor rows with TOWARD -> AWAY crossover: 1
+  the radial-shell fifth-family slice carries a narrow complex-action companion
 
 ----- stderr -----
-Traceback (most recent call last):
-  File "/private/tmp/gate-fix-worktree/scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py", line 23, in <module>
-    from CONNECTIVITY_FAMILY_V2_QUADRANT_SWEEP import (
-ImportError: cannot import name '_field_from_sources' from 'CONNECTIVITY_FAMILY_V2_QUADRANT_SWEEP' (/private/tmp/gate-fix-worktree/scripts/CONNECTIVITY_FAMILY_V2_QUADRANT_SWEEP.py)
 

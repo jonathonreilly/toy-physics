@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/gauge_vacuum_completed_triple_dense_box_certificate_2026_05_03.py
+runner_sha256: 4512d493e808d15b902e11f30780a1156f9cd932e1b37f290a1fe00ef2d09115
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 14.58
+status: ok
+----- stdout -----
+================================================================================
+ gauge_vacuum_completed_triple_dense_box_certificate_2026_05_03.py
+ Audit-driven repair runner: dense parameter-box gap certificate
+================================================================================
+
+ Audited parameter box:
+   tau_transfer ∈ [1e-04, 5e-02]
+   tau_boundary ∈ [0.5, 4.0]
+   asym_decay   ∈ [1e-08, 1e-04]
+   linear_decay ∈ [0.05, 1.0]
+
+ Stated boundary corner gap: 7.5785e-03
+
+--- Build recurrence-matrix infrastructure ---
+
+--- Dense 6x6x5x8 = 1440 grid sweep ---
+  swept 1440 grid points in 0.5 s
+  min gap                     = 7.791551e-03
+  median gap                  = 2.039034e-01
+  max gap                     = 2.856130e-01
+  fraction below stated gap   = 0.0000
+  argmin grid point:
+    tau_transfer = 1.0000e-04
+    tau_boundary = 4.0000
+    asym_decay   = 1.0000e-08
+    linear_decay = 0.3214
+  stated boundary corner: tau_transfer = 1e-04,
+                          tau_boundary = 4.0,
+                          asym_decay   = 1e-08
+
+  [PASS] Dense-grid argmin lies at the stated boundary corner (lower tau_transfer + upper tau_boundary + lower asym_decay)  (argmin: tau_t at lower edge, tau_b at upper edge, asym at lower edge)
+  [PASS] Dense-grid minimum gap is strictly positive (no exact realization in box)  (min gap = 7.791551e-03 >> 1e-6 (numerical zero threshold))
+  [PASS] Dense-grid minimum gap reproduces stated boundary-corner value within order of magnitude  (min gap = 7.7916e-03, stated = 7.5785e-03)
+
+ Honest scope of this certificate:
+   - With 1440 grid points covering 4 dimensions of the audited parameter
+     box, no point gives a smaller gap than the stated boundary corner
+     (within numerical noise).
+   - The dense grid is NOT a symbolic / interval-arithmetic global
+     certificate; that remains genuine open work.
+   - The empirical confidence is: dense-grid argmin coincides with the
+     stated boundary corner, and the minimum gap is strictly positive.
+
+================================================================================
+ SUMMARY: PASS=3, FAIL=0
+================================================================================
+
+----- stderr -----
+

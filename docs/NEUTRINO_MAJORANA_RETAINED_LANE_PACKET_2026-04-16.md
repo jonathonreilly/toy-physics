@@ -1,5 +1,7 @@
 # Neutrino Majorana Retained Lane Packet (2026-04-16)
 
+**Primary runner:** [`scripts/frontier_neutrino_majorana_current_stack_zero_law.py`](../scripts/frontier_neutrino_majorana_current_stack_zero_law.py) (PASS=13/0)
+
 ## Scope
 
 This packet covers the retained Majorana side of the neutrino lane on the

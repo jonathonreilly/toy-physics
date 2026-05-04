@@ -2,16 +2,17 @@
 
 **Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict)
 **Status:** bounded null-result note — gravity-law cleanup found no clean 2D mirror mass law and no clean 2D mirror distance law on the searched windows.
+**Primary runner:** [`scripts/mirror_2d_validation.py`](../scripts/mirror_2d_validation.py) (2D exact mirror linear propagator; companion: mirror_2d_gravity_law_cleanup.py (slow))
 
 This note freezes the exact 2D mirror gravity-law cleanup lane.
 
 It uses the exact 2D mirror family retained in:
 
-[`scripts/mirror_2d_validation.py`](/Users/jonreilly/Projects/Physics/scripts/mirror_2d_validation.py)
+[`scripts/mirror_2d_validation.py`](../scripts/mirror_2d_validation.py)
 
 and the cleanup sweep:
 
-[`scripts/mirror_2d_gravity_law_cleanup.py`](/Users/jonreilly/Projects/Physics/scripts/mirror_2d_gravity_law_cleanup.py)
+[`scripts/mirror_2d_gravity_law_cleanup.py`](../scripts/mirror_2d_gravity_law_cleanup.py)
 
 The goal was narrow:
 

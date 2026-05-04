@@ -5,6 +5,7 @@
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / blocker note  
 **Purpose:** isolate the smallest missing primitive on the straight-to-full-GR
+**Primary runner:** [`scripts/frontier_universal_gr_polarization_frame_bundle.py`](../scripts/frontier_universal_gr_polarization_frame_bundle.py) (PASS=11/0)
 path after the exact scalar observable generator, exact `3+1` lift, exact
 tensor-valued variational candidate, and unique symmetric quotient kernel are
 already in hand

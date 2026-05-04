@@ -1,0 +1,33 @@
+===== runner cache v1 =====
+runner: scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py
+runner_sha256: 789aa40c753ff14810d10f9d6fce084421739aed203a04196f90955b4351d3ba
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+======================================================================
+DIMENSIONAL GRAVITY TABLE — STRUCTURAL CERTIFICATE
+Source note: docs/DIMENSIONAL_GRAVITY_TABLE.md
+Companion (slow) runner: scripts/dimensional_gravity_card.py
+======================================================================
+C1: dimensional prescription (kernel/field/measure powers)
+  [PASS] d=2: kernel=1/L^1, field=s/r^0, measure=h^1
+  [PASS] d=3: kernel=1/L^2, field=s/r^1, measure=h^2
+  [PASS] d=4: kernel=1/L^3, field=s/r^2, measure=h^3
+C2: Newtonian deflection targets per spatial dimension
+  [PASS] d=2 Newtonian deflection ln(b)
+  [PASS] d=3 Newtonian deflection 1/b <-> 1/b^1
+  [PASS] d=4 Newtonian deflection 1/b^2 <-> 1/b^2
+C3: valley-linear S=L(1-f) gives F~M=1 by structural identity
+  [PASS] valley-linear: deflection ∝ source_strength (linear-mass identity) — ratio=7.000000, expected=7.000000
+C4: spent-delay action S=L*f gives F~M=0.5 (sqrt(M))
+  [PASS] spent-delay: deflection ∝ sqrt(source_strength) — M=2 ratio=1.4142 (sqrt 2=1.4142); M=4 ratio=2.0000 (sqrt 4=2.0000)
+C5: 4D distance tail flagged as width-limited in the note
+  [PASS] 4D W∈{7,8} tail slopes far from Newtonian 1/b^2 (width-limited honest read) — max |slope - (-2)| = 1.71
+
+PASS=5/5
+STATUS: STRUCTURAL CERTIFICATE PASS
+
+----- stderr -----
+

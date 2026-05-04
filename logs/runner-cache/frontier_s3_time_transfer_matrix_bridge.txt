@@ -1,0 +1,50 @@
+===== runner cache v1 =====
+runner: scripts/frontier_s3_time_transfer_matrix_bridge.py
+runner_sha256: c952fd283165cfc8794340be47751725ace2eebc9b41e9b2783121cc67e0054a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.99
+status: ok
+----- stdout -----
+Route 2: S^3 + anomaly-forced time transfer-matrix bridge
+========================================================================
+  Candidate background: PL S^3 x R
+
+[BOUNDED] PASS: S^3 topology theorem is present and closed
+    S^3 compactification is a retained route-2 tool
+[BOUNDED] PASS: Anomaly-forced time theorem is present and exact
+    single-clock closure is a retained route-2 tool
+[BOUNDED] PASS: Atlas contains both route-2 ingredients as reusable tools
+    the atlas exposes the required topology/time primitives
+[BOUNDED] PASS: Schur boundary action is present as the exact slice generator
+    the slice Hamiltonian comes from the exact microscopic boundary energy
+
+slice trace nodes: 1052
+bulk nodes: 888
+Lambda symmetry error: 3.331e-16
+Lambda eigenvalue range: [1.148587e+00, 9.879422e+00]
+T symmetry error: 9.957e-16
+T eigenvalue range: [5.121790e-05, 3.170846e-01]
+T spectral radius: 3.170846e-01
+O_h family stationary grad max: 8.327e-17
+finite-rank family stationary grad max: 2.498e-16
+[BOUNDED] PASS: slice generator is symmetric positive definite
+    symmetry error=3.331e-16, min eig=1.148587e+00
+[BOUNDED] PASS: one-step transfer operator is self-adjoint and contractive
+    eig range=[5.121790e-05, 3.170846e-01], spectral radius=3.170846e-01
+[BOUNDED] PASS: the exact local O_h bridge is stationary for the same slice generator
+    max |Lambda f - j| = 8.327e-17
+[BOUNDED] PASS: the broader finite-rank bridge is stationary for the same slice generator
+    max |Lambda f - j| = 2.498e-16
+[BLOCKED] PASS: the atlas still lacks an exact PL S^3 x R dynamics bridge
+    no exact Einstein/Regge time-coupling theorem is present on this route; gap is documented in the bridge note
+
+Summary:
+  Background lift: yes
+  Slice transfer generator: yes
+  Exact GR dynamics closure: blocked
+  Missing theorem: exact time-coupling / curvature law on PL S^3 x R
+PASS=9 FAIL=0
+
+----- stderr -----
+

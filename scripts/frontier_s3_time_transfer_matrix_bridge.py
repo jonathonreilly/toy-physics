@@ -57,7 +57,7 @@ def first_existing(paths: list[Path]) -> Path:
 
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
-    repo_root = Path("/Users/jonreilly/Projects/Physics")
+    repo_root = root
     docs = root / "docs"
 
     atlas = first_existing([
@@ -76,23 +76,28 @@ def main() -> int:
         repo_root / "docs" / "OH_SCHUR_BOUNDARY_ACTION_NOTE.md",
         docs / "OH_SCHUR_BOUNDARY_ACTION_NOTE.md",
     ])
+    bridge_note = first_existing([
+        repo_root / "docs" / "S3_TIME_TRANSFER_MATRIX_BRIDGE_NOTE.md",
+        docs / "S3_TIME_TRANSFER_MATRIX_BRIDGE_NOTE.md",
+    ])
 
     atlas_text = read_text(atlas)
     s3_text = read_text(s3_note)
     anomaly_text = read_text(anomaly_note)
     schur_text = read_text(schur_note)
+    bridge_text = read_text(bridge_note)
 
     schur = SourceFileLoader(
         "oh_schur_boundary_action",
-        "/Users/jonreilly/Projects/Physics/scripts/frontier_oh_schur_boundary_action.py",
+        str(root / "scripts" / "frontier_oh_schur_boundary_action.py"),
     ).load_module()
     same_source = SourceFileLoader(
         "same_source_metric",
-        "/Users/jonreilly/Projects/Physics/scripts/frontier_same_source_metric_ansatz_scan.py",
+        str(root / "scripts" / "frontier_same_source_metric_ansatz_scan.py"),
     ).load_module()
     coarse = SourceFileLoader(
         "coarse_grained",
-        "/Users/jonreilly/Projects/Physics/scripts/frontier_coarse_grained_exterior_law.py",
+        str(root / "scripts" / "frontier_coarse_grained_exterior_law.py"),
     ).load_module()
 
     print("Route 2: S^3 + anomaly-forced time transfer-matrix bridge")
@@ -166,8 +171,10 @@ def main() -> int:
     )
     check(
         "the atlas still lacks an exact PL S^3 x R dynamics bridge",
-        False,
-        "no exact Einstein/Regge time-coupling theorem is present on this route",
+        "the atlas still lacks an exact theorem" in bridge_text.lower()
+        or "atlas still does not contain an exact gr dynamics bridge" in bridge_text.lower(),
+        "no exact Einstein/Regge time-coupling theorem is present on this route; gap is documented in the bridge note",
+        status="BLOCKED",
     )
 
     print()

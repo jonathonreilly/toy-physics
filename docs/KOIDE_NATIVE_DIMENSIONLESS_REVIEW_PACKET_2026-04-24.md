@@ -4,6 +4,8 @@
 **Status:** proposed_retained support / no-go packet.  This packet does **not** close the
 dimensionless charged-lepton Koide lane.
 
+**Primary runner:** [`scripts/frontier_koide_q_delta_residual_cohomology_obstruction_no_go.py`](../scripts/frontier_koide_q_delta_residual_cohomology_obstruction_no_go.py) (no-go obstruction confirmed: residual_q=nontrivial trace-kernel span Z; residual_delta=nontrivial closed-boundary kernel)
+
 ## Decision
 
 The reviewed branch contains useful science, but the full "native closure"

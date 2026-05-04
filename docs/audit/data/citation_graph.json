@@ -27458,7 +27458,7 @@
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "826e529e238eeac35a70f0d633a639f3044aa3f256ee8a25ac97789195dbb447",
+      "note_hash": "0bfd9d6f48db445e1f13c17858bd34f039cb379e3a748bf21d715f33a6015717",
       "path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
       "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action"
@@ -29968,9 +29968,9 @@
       "deps": [
         "cosmological_constant_result_2026-04-12"
       ],
-      "note_hash": "2bb841f96f0f59103d2148863d9292936ff0dbf1a3f8b5bb3386c67b0f7d0e79",
+      "note_hash": "326e3df85bc88b705ef09775c48fbda7c5cc052491e416f8e63e4f45891729ee",
       "path": "docs/COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_cosmological_constant.py",
       "title": "Cosmological Constant Vacuum-Energy Audit"
     },
     "cosmology_from_mass_spectrum_note": {
@@ -30427,9 +30427,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "ea379ed024a452799ac86acc36790a5e40a8bc741a9e5cdff0936cfb48c2614a",
+      "note_hash": "5823a6ca4e2d92dcb71d0fd952cc1229967087728b4e985554515cf5f75037f0",
       "path": "docs/DIMENSIONAL_GRAVITY_TABLE.md",
-      "runner_path": null,
+      "runner_path": "scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py",
       "title": "Dimensional Gravity Table"
     },
     "dirac_core_card_note": {
@@ -33922,9 +33922,9 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "67e43414f6fbf665a8da002e3e15891f0ce16c226d46bcc3dda8ea2ec59e9881",
+      "note_hash": "81ee91a5c4381113cb950035686714e8083555b00e29797c51a8ac5fd6d566bb",
       "path": "docs/EW_COUPLING_DERIVATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/ew_coupling_bounded_status_runner_2026_05_03.py",
       "title": "Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)"
     },
     "ew_current_fierz_channel_decomposition_note_2026-05-01": {
@@ -34100,7 +34100,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "4a0723a08ae5321256ae817a5386a927b284bdf5a8e2122708b58e07a7c3522f",
+      "note_hash": "e8ba413dedbe8213fc3e2b867d1da6bbe9467657e090dd3592a2a5de72abaede",
       "path": "docs/FIFTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md",
       "runner_path": "scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py",
       "title": "Fifth Family Complex Boundary Note"
@@ -35077,9 +35077,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "e17619a84d07469c195c457cebfb02a3d3053a561528dea76a852a313114022b",
+      "note_hash": "cd07702a3ab6b0e7bcec19c6ce4db61748edd503d8d8b3cf73b59aa095d4cd59",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md",
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py",
+      "runner_path": "scripts/gauge_vacuum_completed_triple_dense_box_certificate_2026_05_03.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Completed Triple Current Transfer-Family Boundary"
     },
     "gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19": {
@@ -36527,9 +36527,9 @@
       "claim_id": "higher_symmetry_gravity_probe_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "df8c7a795aa5f6178a77266ecec85b4acb9221d79510e1ae40756a6b7d3e0f5b",
+      "note_hash": "971b3ee0105d2d2096c760de050a990b158b380ea7b071a3007633a75f48bf76",
       "path": "docs/HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md",
       "runner_path": "scripts/higher_symmetry_gravity_probe.py",
       "title": "Higher-Symmetry Gravity Probe Note"
@@ -37799,9 +37799,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "341b4b2acbfec417b42c067b261488d90a353d318c9551caae36b24895d8f84c",
+      "note_hash": "3d186acd34936ecaca28c1d39be00087e6e80a747e4aefed3ef865f140b2273b",
       "path": "docs/KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_q_delta_residual_cohomology_obstruction_no_go.py",
       "title": "Koide native dimensionless review packet"
     },
     "koide_native_zero_section_closure_route_note_2026-04-24": {
@@ -40064,9 +40064,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "a69fe1134adf919ef597c2f1508b31a8096b9e9a451a0e0de60be389f6792d55",
+      "note_hash": "2a2d938f380a205acbadcfa98af76083a6c689d1348b997fcc466fb95805321a",
       "path": "docs/MIRROR_2D_GRAVITY_LAW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mirror_2d_validation.py",
       "title": "Exact 2D Mirror Gravity-Law Cleanup Note"
     },
     "mirror_2d_validation_note": {
@@ -40075,9 +40075,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "5a62ac64a86931d540a6fec682e4828599bb63301a9ef262a0f6175571ae492c",
+      "note_hash": "7ac200c8589a7969d5834bbf7f4171be781e3d0812701b2148b7baa2a2f5cc44",
       "path": "docs/MIRROR_2D_VALIDATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mirror_2d_validation.py",
       "title": "Exact 2D Mirror Validation Note"
     },
     "mirror_chokepoint_boundary_fit_note": {
@@ -40548,9 +40548,9 @@
         "pmns_branch_conditioned_quadratic_sheet_closure_note",
         "pmns_right_polar_section_note"
       ],
-      "note_hash": "331fd6e4095e9288384ab3d26477e4f1aed126ffbe8f81e3929e90f0f1c42ae1",
+      "note_hash": "7a7f9e74220a5299d5fed2e2e9b31cb80f08b636d68709d1dfdaeb50e6bce8c3",
       "path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_lepton_single_higgs_pmns_triviality.py",
       "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)"
     },
     "neutrino_dirac_two_higgs_canonical_reduction_note": {
@@ -41167,9 +41167,9 @@
         "neutrino_majorana_nur_character_boundary_note",
         "neutrino_majorana_nur_charge2_primitive_reduction_note"
       ],
-      "note_hash": "844c8a5505b55a2e126911d96b4c5731801fa7fcaeacc4b228f95ca3c042ec4a",
+      "note_hash": "0692aca2add9929012c1e8a191bd105f4d632525a9ea5854d65d67904e82a6ce",
       "path": "docs/NEUTRINO_MAJORANA_RETAINED_LANE_PACKET_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_neutrino_majorana_current_stack_zero_law.py",
       "title": "Neutrino Majorana Retained Lane Packet (2026-04-16)"
     },
     "neutrino_majorana_scalar_datum_transplant_obstruction_note": {
@@ -41968,9 +41968,9 @@
         "persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16",
         "persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16"
       ],
-      "note_hash": "bbd539df2ccd1daa93bb34a9939e371f10a67e4fbfab7872e6e0486e7121ff74",
+      "note_hash": "39ce47ab52a569f22b6bcc34e9018154dfe0a3591caa01548573fc45d355261b",
       "path": "docs/PERSISTENT_OBJECT_EXACT_LATTICE_PARK_NOTE_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_compact_update_probe.py",
       "title": "Persistent Object Exact-Lattice Park Note"
     },
     "persistent_object_green_scout_note": {
@@ -46785,9 +46785,9 @@
       "claim_type_author_hint_raw": "Constructive computation (R=2..6) + theorem chain with standard mathematical citation (Perelman 2003)",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "c3d9c26c4c86b9ad615460614cc7b980ba202a85f456faaaa730c484f2c7797c",
+      "note_hash": "48e40fcc07bb904550e7f5010bcf46a0ca88aac97833a0a1dd9f3949092ac4c8",
       "path": "docs/S3_GENERAL_R_DERIVATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_cap_uniqueness.py",
       "title": "S^3 Topology: General-R Derivation"
     },
     "s3_mass_matrix_no_go_note": {
@@ -46869,9 +46869,9 @@
         "anomaly_forces_time_theorem",
         "oh_schur_boundary_action_note"
       ],
-      "note_hash": "abfab752b42535bc63f203b25dfd99c737815ad7a2ee913690126276424b83b0",
+      "note_hash": "7e2cbd1cc31490a8b5c717342ea485bd122c04958a5c3da2722130f016746ae3",
       "path": "docs/S3_TIME_SPACETIME_TENSOR_PRIMITIVE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_spacetime_tensor_primitive.py",
       "title": "Route 2 Spacetime Tensor Primitive Candidate on `PL S^3 x R`"
     },
     "s3_time_tensor_build_memo": {
@@ -46932,9 +46932,9 @@
         "anomaly_forces_time_theorem",
         "oh_schur_boundary_action_note"
       ],
-      "note_hash": "f393985f2d7682ce6b418426f64f653d48ce2fdaff744a1e858ea2fe91a0925a",
+      "note_hash": "3e5ec206f63664fe69f9df0113aeddefcdc4e4d20618423f334500b3c5645d2b",
       "path": "docs/S3_TIME_TRANSFER_MATRIX_BRIDGE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_transfer_matrix_bridge.py",
       "title": "`S^3` + Anomaly-Forced Time: Transfer-Matrix Bridge Candidate"
     },
     "same_family_3d_closure_note": {
@@ -47312,7 +47312,7 @@
       "deps": [
         "staggered_fermion_card_2026-04-10"
       ],
-      "note_hash": "c9875cdd5b069abe48f66682c09630cc9072cf2a46fdd07a2c5e742e7658f7bb",
+      "note_hash": "c88f0905ae4b4ea86b3cf603be42fcf964851d9a9e8708fe1d333e051fed27c2",
       "path": "docs/SESSION_SYNTHESIS_2026-04-10_GRAPH_AXIOMS.md",
       "runner_path": "scripts/frontier_axioms_16card.py",
       "title": "Session Synthesis: Graph Laplacian Axioms (2026-04-10)"
@@ -47403,9 +47403,9 @@
         "shapiro_static_discriminator_note",
         "shapiro_family_portability_note"
       ],
-      "note_hash": "fd6ecfa6b496196c87d78dc1d5e9efc2ae77ffcd4c396b1f8cc571647c0e2cdc",
+      "note_hash": "1c9825e6911a2d43f5850529fe97f0426488bf700f0a169f962a412b36fb18b0",
       "path": "docs/SHAPIRO_QA_RETEST_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/shapiro_phase_lag_probe.py",
       "title": "Shapiro QA Retest Note"
     },
     "shapiro_static_discriminator_note": {
@@ -48866,9 +48866,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "605f761f2ad0a9addf780450c5d0cbcb2e40fe0a1b2853087d93c72119b2d68a",
+      "note_hash": "2ddd9c0b02c63d912074ac6ce26104cecab1db9d7ddbe0df2f5f161676102f66",
       "path": "docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py",
       "title": "Structured Mirror Born-Safe Scan Note"
     },
     "structured_mirror_reconciliation_note": {
@@ -50298,9 +50298,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "44ed83eaa94ee77bbe0e1b7a235b253190e3559ff4c49907d9617d3129648e58",
+      "note_hash": "6f21ea143851e35428dec289be869f3bd7f85fe05fa196df6ee27d182e94bfd1",
       "path": "docs/UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_polarization_frame_bundle.py",
       "title": "Universal GR Polarization-Frame Bundle Blocker Note"
     },
     "universal_gr_positive_background_extension_note": {
@@ -52189,9 +52189,9 @@
         "yt_exact_interacting_bridge_transport_note",
         "yt_bridge_uv_class_uniqueness_note"
       ],
-      "note_hash": "09e8c3e9ec00280dc48f76ae29f0e9d4acc53f9287c7c99a624ca68dd091d472",
+      "note_hash": "e3417a0f4c37534790db968cb6efa93078eefb05924cdb993ecd877a2e06afd7",
       "path": "docs/YT_AXIOM_FIRST_MICROSCOPIC_BRIDGE_THEOREM.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_yt_constructive_uv_bridge.py",
       "title": "Axiom-First Microscopic Bridge Theorem"
     },
     "yt_bottom_yukawa_retention_analysis_note_2026-04-18": {
@@ -54250,10 +54250,10 @@
       "positive_theorem": 74
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 556,
+      "bounded_theorem": 555,
       "meta": 8,
       "no_go": 112,
-      "none": 456,
+      "none": 457,
       "open_gate": 114,
       "positive_theorem": 626
     },
@@ -54261,6 +54261,6 @@
     "leaf_count": 550,
     "node_count": 1872,
     "root_count": 899,
-    "runners_with_path": 1430
+    "runners_with_path": 1446
   }
 }

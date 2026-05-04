@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-16  
 **Status:** parked as a bounded beyond-pocket positive below closure
+**Primary runner:** [`scripts/persistent_object_compact_update_probe.py`](../scripts/persistent_object_compact_update_probe.py) (compact update obj_eff=3.59, broad obj_eff=4.86, pass=True)
 
 ## Why park here
 
@@ -19,19 +20,19 @@ Current retained branch verdict:
 ## Frozen artifact trail
 
 1. compact-object response emergence:
-   [`docs/PERSISTENT_OBJECT_COMPACT_INERTIAL_PROBE_NOTE_2026-04-16.md`](/Users/jonreilly/Projects/Physics/docs/PERSISTENT_OBJECT_COMPACT_INERTIAL_PROBE_NOTE_2026-04-16.md)
+   [`docs/PERSISTENT_OBJECT_COMPACT_INERTIAL_PROBE_NOTE_2026-04-16.md`](PERSISTENT_OBJECT_COMPACT_INERTIAL_PROBE_NOTE_2026-04-16.md)
 2. single retained readout on the nearby family:
-   [`docs/PERSISTENT_OBJECT_BLENDED_READOUT_TRANSFER_SWEEP_NOTE_2026-04-16.md`](/Users/jonreilly/Projects/Physics/docs/PERSISTENT_OBJECT_BLENDED_READOUT_TRANSFER_SWEEP_NOTE_2026-04-16.md)
+   [`docs/PERSISTENT_OBJECT_BLENDED_READOUT_TRANSFER_SWEEP_NOTE_2026-04-16.md`](PERSISTENT_OBJECT_BLENDED_READOUT_TRANSFER_SWEEP_NOTE_2026-04-16.md)
 3. second-ring transfer and first inward boundary:
-   [`docs/PERSISTENT_OBJECT_BLENDED_READOUT_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md`](/Users/jonreilly/Projects/Physics/docs/PERSISTENT_OBJECT_BLENDED_READOUT_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md)
+   [`docs/PERSISTENT_OBJECT_BLENDED_READOUT_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md`](PERSISTENT_OBJECT_BLENDED_READOUT_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md)
 4. multistage floor identification:
-   [`docs/PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md`](/Users/jonreilly/Projects/Physics/docs/PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md)
+   [`docs/PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md`](PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md)
 5. widened-pocket multistage transfer:
-   [`docs/PERSISTENT_OBJECT_TOP4_MULTISTAGE_TRANSFER_SWEEP_NOTE_2026-04-16.md`](/Users/jonreilly/Projects/Physics/docs/PERSISTENT_OBJECT_TOP4_MULTISTAGE_TRANSFER_SWEEP_NOTE_2026-04-16.md)
+   [`docs/PERSISTENT_OBJECT_TOP4_MULTISTAGE_TRANSFER_SWEEP_NOTE_2026-04-16.md`](PERSISTENT_OBJECT_TOP4_MULTISTAGE_TRANSFER_SWEEP_NOTE_2026-04-16.md)
 6. inward-boundary width diagnosis:
-   [`docs/PERSISTENT_OBJECT_INWARD_BOUNDARY_FLOOR_DIAGNOSIS_NOTE_2026-04-16.md`](/Users/jonreilly/Projects/Physics/docs/PERSISTENT_OBJECT_INWARD_BOUNDARY_FLOOR_DIAGNOSIS_NOTE_2026-04-16.md)
+   [`docs/PERSISTENT_OBJECT_INWARD_BOUNDARY_FLOOR_DIAGNOSIS_NOTE_2026-04-16.md`](PERSISTENT_OBJECT_INWARD_BOUNDARY_FLOOR_DIAGNOSIS_NOTE_2026-04-16.md)
 7. beyond-pocket transfer:
-   [`docs/PERSISTENT_OBJECT_TOP4_MULTISTAGE_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md`](/Users/jonreilly/Projects/Physics/docs/PERSISTENT_OBJECT_TOP4_MULTISTAGE_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md)
+   [`docs/PERSISTENT_OBJECT_TOP4_MULTISTAGE_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md`](PERSISTENT_OBJECT_TOP4_MULTISTAGE_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md)
 
 ## Final retained read
 
@@ -64,15 +65,15 @@ them from scratch:
 1. `7b1efec9` root toy substrate:
    [toy_event_physics.py](/Users/jonreilly/Projects/Physics/toy_event_physics.py:1)
 2. `b113cc0d` self-maintenance is not fixed-point stasis:
-   [self_maintenance_rule_sweep.py](/Users/jonreilly/Projects/Physics/scripts/self_maintenance_rule_sweep.py:1)
+   [self_maintenance_rule_sweep.py](../scripts/self_maintenance_rule_sweep.py:1)
 3. `10acd98b` inertial analogue means identity surviving translation:
-   [pattern_mobility_test.py](/Users/jonreilly/Projects/Physics/scripts/pattern_mobility_test.py:1)
+   [pattern_mobility_test.py](../scripts/pattern_mobility_test.py:1)
 4. `73e2ce89` relaunch / re-identification:
-   [quasi_persistent_relaunch_probe.py](/Users/jonreilly/Projects/Physics/scripts/quasi_persistent_relaunch_probe.py:1)
+   [quasi_persistent_relaunch_probe.py](../scripts/quasi_persistent_relaunch_probe.py:1)
 5. `0237099f` multistage surrogate persistence:
-   [mesoscopic_surrogate_multistage.py](/Users/jonreilly/Projects/Physics/scripts/mesoscopic_surrogate_multistage.py:1)
+   [mesoscopic_surrogate_multistage.py](../scripts/mesoscopic_surrogate_multistage.py:1)
 6. `79561aaa` compact repeated-update object:
-   [persistent_object_compact_update_probe.py](/Users/jonreilly/Projects/Physics/scripts/persistent_object_compact_update_probe.py:1)
+   [persistent_object_compact_update_probe.py](../scripts/persistent_object_compact_update_probe.py:1)
 
 Carry-forward lesson from that trail:
 

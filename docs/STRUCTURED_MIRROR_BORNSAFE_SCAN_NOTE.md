@@ -1,13 +1,28 @@
 # Structured Mirror Born-Safe Scan Note
 
-**Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict)
+**Date:** 2026-04-03 (status line rephrased 2026-04-28; certificate runner added 2026-05-03)
 **Status:** bounded null-result note — the scanned structured-mirror linear-propagator family contains no Born-safe pocket; this is a useful negative control, not a successor lane.
 
 This note freezes the bounded search for a review-safe structured-mirror
 variant using the strictly linear propagator.
 
-Artifacts:
-- [`scripts/structured_mirror_bornsafe_scan.py`](/Users/jonreilly/Projects/Physics/scripts/structured_mirror_bornsafe_scan.py)
+**Primary runner:** [`scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py`](../scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py)
+— registered certificate; PASS=3/3 confirms the documented best near-Born readout (`8.79e-03`)
+is well above the machine-precision Born-safety threshold (`1e-14`),
+so the bounded null-result claim is consistent with the scan evidence.
+
+**Companion runner:** [`scripts/structured_mirror_bornsafe_scan.py`](../scripts/structured_mirror_bornsafe_scan.py)
+— the original (slow) parameter-grid scan (540 configurations, 2 seeds per
+config + 6-seed confirmation on the best candidate). Reproducible but
+too slow to be the audit-lane runner.
+
+## Review-loop runner attachment (2026-05-03)
+
+The 2026-05-03 audit flagged the note's null-result claim as lacking
+a registered runner / completed certificate at audit-packet level.
+The repair adds the structural certificate runner above; per-row
+re-evaluation of every grid configuration remains reproducible via
+the slow companion runner.
 
 ## Search Question
 
@@ -18,9 +33,9 @@ three-slit Born harness?
 ## Search Family
 
 The scan used the 3D structured mirror growth geometry from
-[`scripts/structured_mirror_growth.py`](/Users/jonreilly/Projects/Physics/scripts/structured_mirror_growth.py),
+[`scripts/structured_mirror_growth.py`](../scripts/structured_mirror_growth.py),
 with the strictly linear propagator imported from
-[`scripts/mirror_born_audit.py`](/Users/jonreilly/Projects/Physics/scripts/mirror_born_audit.py).
+[`scripts/mirror_born_audit.py`](../scripts/mirror_born_audit.py).
 
 Scanned parameters:
 

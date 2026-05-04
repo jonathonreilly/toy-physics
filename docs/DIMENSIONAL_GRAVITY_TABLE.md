@@ -6,9 +6,25 @@ across all dimensions, all h values, or all parameter variations. The bolded
 "1.00" entries are point-tested results, not universality theorems. (NARROWED
 2026-05-02 in response to audit verdict requesting a finite-scope reframing.)
 
-**Date:** 2026-04-04 (NARROWED 2026-05-02)
+**Date:** 2026-04-04 (NARROWED 2026-05-02; CERTIFICATE RUNNER ADDED 2026-05-03)
 **Action:** Valley-linear S = L(1-f)
 **Kernel:** 1/L^(d-1) with h^(d-1) measure
+
+**Primary runner:** [`scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py`](../scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py) (structural certificate, PASS=5/5)
+
+**Companion runner:** [`scripts/dimensional_gravity_card.py`](../scripts/dimensional_gravity_card.py) — slow lattice card, invoke with `--dim 3` or `--dim 4` to reproduce individual table rows; unsuitable as the audit-lane runner because of runtime.
+
+## Review-loop runner attachment (2026-05-03)
+
+The 2026-05-03 audit flagged that the table's bolded "1.00" entries were
+asserted by prose with no executable runner attached at the audit-packet
+level. The repair adds the structural certificate runner above, which
+verifies the table's *invariants* (kernel/field/measure powers, Newtonian
+targets per d, the linear-mass identity for valley-linear S=L(1-f),
+the sqrt-mass identity for spent-delay, and the 4D width-limited honest
+read) without requiring a long lattice card to run inside the audit
+window. Per-row lattice measurements remain reproducible via the
+companion runner above.
 
 ## Tested entries
 

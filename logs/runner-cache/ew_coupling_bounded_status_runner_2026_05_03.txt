@@ -1,0 +1,74 @@
+===== runner cache v1 =====
+runner: scripts/ew_coupling_bounded_status_runner_2026_05_03.py
+runner_sha256: d041def9e05cb7229b0393f33d90123db9915cf4c64b06abf92fae0de2fecc66
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+================================================================================
+ ew_coupling_bounded_status_runner_2026_05_03.py
+ Review-loop repair runner for EW_COUPLING_DERIVATION_NOTE.md
+ Reproduces the note's bounded status table without fitting
+ taste_weight to sin^2(theta_W).
+================================================================================
+
+--- D1: g_1(v) DERIVED via 1-loop U(1) RGE from M_Pl ---
+  1/alpha_GUT = 11.0254
+  shift = b_1/(2pi) * ln(M_Pl/v) = 0.6525 * 38.44 = 25.0835
+  1/alpha_1_GUT(v) = 36.1088
+  g_1_GUT(v) = sqrt(4pi * alpha_1) = 0.5899
+  g_1_SM(v) = g_1_GUT * sqrt(3/5) = 0.4570
+  Comparison: g_1_GUT(v) observed = 0.4640
+  Deviation: +27.1% (expected at 1-loop SU(5); 2-loop + GUT thresholds reduce this)
+  [PASS] g_1(v) derivation reproduces note's 1-loop value (within 30% of observed)  (derived g_1_GUT(v) = 0.5899, observed = 0.4640, dev = 27.1%)
+
+--- D2: g_2(v) BOUNDED — Landau pole barrier, NOT derived ---
+  SU(2) is asymptotically free (b_2 = -3.167)
+  Naive 1-loop running from M_Pl to v gives 1/alpha_2(v) = -8.3501
+  -> NEGATIVE inverse coupling: perturbative running has crossed the Landau pole.
+  Estimated 1-loop Landau pole scale: mu_pole ~ 3.86e+09 GeV
+  Observed g_2(v) = 0.6460 requires non-perturbative matching
+  CMT-based estimate (alpha_bare/u_0^2 ~ 0.1033): g_2(v) ~ 1.139 (76% above observed)
+  Backward extrapolation g_2(v) -> alpha_2(M_Pl): 78% below alpha_GUT
+  Status: g_2(v) is BOUNDED (Landau pole barrier + open SU(2) matching), NOT DERIVED.
+  [PASS] g_2(v) Landau pole correctly identified as the derivation barrier  (1/alpha_2(v) at 1-loop = -8.3501 (perturbatively crosses Landau pole))
+
+--- D3: lambda(v) BOUNDED — vacuum stability + CW estimate ---
+  Coleman-Weinberg dominant top-loop: lambda_CW = 3 y_t^4 / (8 pi^2) = 0.0269
+  Observed lambda(v) = 0.1290
+  Observed / CW estimate = 4.80x  (gauge-boson and self-coupling contributions)
+  Vacuum stability bound: lambda(v) > 0 up to M_Pl
+  Observed value sits near the metastability boundary (well-known SM feature).
+  Status: lambda(v) is BOUNDED (CW lower bound + stability upper window), NOT DERIVED.
+  [PASS] lambda(v) bounded by CW lower estimate (within order of magnitude)  (observed/CW = 4.80, in expected O(few))
+
+--- D4: y_t sensitivity to EW couplings (note Part 5) ---
+  Reported in note Part 5 (qualitative confirmation):
+    Imported EW (experiment): g_1 = 0.464, g_2 = 0.646 -> m_t ~ 169.4 GeV (baseline)
+    Derived g_1 (D1) + obs g_2: g_1 = 0.590, g_2 = 0.646 -> m_t ~ 175.0 GeV (+5.6 GeV)
+    No EW (g_1 = g_2 = 0):                              -> m_t ~ 146.0 GeV (-23.4 GeV)
+  Confirms: imported EW couplings are subdominant (delta m_t ~ 5-6 GeV vs 23 GeV for full EW removal)
+  The QCD beta coefficient (c_3 = 8) dominates over the EW contributions (c_2 = 9/4, c_1 = 17/20).
+  [PASS] EW couplings confirmed subdominant to QCD beta in y_t chain  (qualitative table per note Part 5)
+
+--- Import Status Summary (matches note's table) ---
+  | Parameter   | Status   | Source                              |
+  | alpha_s(v)  | DERIVED  | CMT, n_link = 2                     |
+  | v           | DERIVED  | Hierarchy theorem                   |
+  | g_1_GUT(v)  | DERIVED  | 1-loop U(1) RGE from M_Pl (~+27%)   |
+  | g_2(v)      | BOUNDED  | Landau pole; CMT/SU(2) matching open|
+  | lambda(v)   | BOUNDED  | Vacuum stability + CW lower bound   |
+  | y_t(v)      | DERIVED  | Backward Ward (robust to EW)        |
+
+  No parameter is fit to observed sin^2(theta_W) or any other
+  EW observable in this runner.  The g_2 and lambda statuses
+  remain BOUNDED until SU(2) non-perturbative matching is
+  derived from retained inputs.
+
+================================================================================
+ SUMMARY: PASS=4, FAIL=0
+================================================================================
+
+----- stderr -----
+

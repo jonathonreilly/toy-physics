@@ -3,8 +3,8 @@
 **Date:** 2026-04-14 (originally); 2026-05-03 (review-loop repair)
 **Status:** SUPERSEDED by `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`; bounded-status support scan
 **Claim type:** bounded_theorem
-**Primary runner (post-2026-05-03 repair):** `scripts/ew_coupling_bounded_status_runner_2026_05_03.py`
-**Companion runner (does NOT match this note's claims):** `scripts/frontier_yt_ew_coupling_derivation.py` — that runner scans a `taste_weight` parameter against `sin^2(theta_W)` and reports different g_1, g_2 outputs; it is a separate derivation attempt, not a verifier of this note.
+**Primary runner:** [`scripts/ew_coupling_bounded_status_runner_2026_05_03.py`](../scripts/ew_coupling_bounded_status_runner_2026_05_03.py) (post-2026-05-03 repair)
+**Companion runner (does NOT match this note's claims):** [`scripts/frontier_yt_ew_coupling_derivation.py`](../scripts/frontier_yt_ew_coupling_derivation.py) — that runner scans a `taste_weight` parameter against `sin^2(theta_W)` and reports different g_1, g_2 outputs; it is a separate derivation attempt, not a verifier of this note.
 
 ## Review-loop repair (2026-05-03)
 

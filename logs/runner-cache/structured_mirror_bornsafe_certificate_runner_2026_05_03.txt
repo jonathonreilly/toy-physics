@@ -1,0 +1,36 @@
+===== runner cache v1 =====
+runner: scripts/structured_mirror_bornsafe_certificate_runner_2026_05_03.py
+runner_sha256: 8a37b436d88d366de82bacbbdd89ae51599ff01d2d660567698dbb9db26dd247
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+======================================================================
+STRUCTURED MIRROR BORN-SAFE SCAN — CERTIFICATE
+Source note: docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md
+Companion (slow) scan: scripts/structured_mirror_bornsafe_scan.py
+======================================================================
+
+Documented best near-Born candidate:
+  N = 40
+  npl_half = 12
+  connect_radius = 3.0
+  grid_spacing = 1.25
+  layer_jitter = 0.0
+  Born = 8.79e-03
+  ancillary: d_TV=0.1208, pur_cl=0.9992
+  Born safety threshold: 1e-14
+
+C1: best documented Born readout is above safety threshold
+  [PASS] best near-Born candidate Born > 1e-14 (no Born-safe pocket found) — best=8.79e-03, threshold=1e-14, ratio=8.79e+11
+C2: best candidate was re-confirmed at higher seed count
+  [PASS] confirmation seeds = 6 >= 6 and >= 2 * broad seeds (2)
+C3: scanned parameter grid covers the documented family
+  [PASS] grid configurations = 540 (≥100 for a meaningful exhaustion claim)
+
+PASS=3/3
+STATUS: NULL-RESULT CERTIFICATE PASS — note's bounded-null claim is consistent with documented evidence
+
+----- stderr -----
+

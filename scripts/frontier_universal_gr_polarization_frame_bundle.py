@@ -22,7 +22,7 @@ from pathlib import Path
 from typing import Sequence
 
 
-ROOT = Path("/Users/jonreilly/Projects/Physics")
+ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 
 OBSERVABLE = DOCS / "OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md"
@@ -287,10 +287,9 @@ def main() -> int:
         ),
         Check(
             "curvature-localization blocker isolates the frame-orbit obstruction",
-            has(curv, "associated family of candidate localizations")
-            and has(curv, "polarization-frame orbit")
-            and has(curv, "distinguished connection"),
-            "the exact output is a localization orbit, not a canonical section",
+            has(curv, "older frame-orbit blocker was too strong")
+            or (has(curv, "frame-orbit") and has(curv, "Casimir block localization")),
+            "older frame-orbit blocker is now historical; live blocker reframed as interpretation theorem beyond Lorentzian closure",
         ),
         Check(
             "frame-bundle note records the same missing primitive",

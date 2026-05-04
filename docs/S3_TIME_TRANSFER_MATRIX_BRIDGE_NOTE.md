@@ -3,6 +3,7 @@
 **Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-14  
 **Purpose:** bounded transfer-matrix / discrete-action bridge from the retained `S^3` + anomaly-forced-time stack to slice dynamics on `PL S^3 x R`
+**Primary runner:** [`scripts/frontier_s3_time_transfer_matrix_bridge.py`](../scripts/frontier_s3_time_transfer_matrix_bridge.py) (PASS=9/0 (1 BLOCKED))
 
 ## Verdict
 
@@ -28,14 +29,14 @@ with the full Einstein/Regge metric dynamics.
 
 ### `S^3` compactification
 
-[`S3_GENERAL_R_DERIVATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/S3_GENERAL_R_DERIVATION_NOTE.md)
+[`S3_GENERAL_R_DERIVATION_NOTE.md`](S3_GENERAL_R_DERIVATION_NOTE.md)
 already gives the retained spatial background candidate:
 
 - the cone-capped cubical ball is PL homeomorphic to `S^3` for all `R >= 2`
 
 ### Anomaly-forced time
 
-[`ANOMALY_FORCES_TIME_THEOREM.md`](/Users/jonreilly/Projects/Physics/docs/ANOMALY_FORCES_TIME_THEOREM.md)
+[`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md)
 already gives the retained temporal background candidate:
 
 - anomaly cancellation plus chirality plus the one-clock Cauchy requirement force `d_t = 1`
@@ -46,7 +47,7 @@ So the clean kinematic background remains:
 
 ### Exact boundary Hamiltonian
 
-[`OH_SCHUR_BOUNDARY_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/OH_SCHUR_BOUNDARY_ACTION_NOTE.md)
+[`OH_SCHUR_BOUNDARY_ACTION_NOTE.md`](OH_SCHUR_BOUNDARY_ACTION_NOTE.md)
 already gives the exact microscopic boundary action on the current strong-field class:
 
 - `I_R(f ; j) = 1/2 f^T Lambda_R f - j^T f`

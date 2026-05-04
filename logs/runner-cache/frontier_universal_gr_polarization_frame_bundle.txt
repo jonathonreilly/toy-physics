@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_polarization_frame_bundle.py
+runner_sha256: 44397464c484bd23af6725d8470e9b38418b6b64b06624f818e5cdbf5c732a16
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.06
+status: ok
+----- stdout -----
+UNIVERSAL GR POLARIZATION-FRAME BUNDLE AUDIT
+==============================================================================
+[PASS] scalar generator is exact
+    observable principle gives the exact scalar generator
+[PASS] 3+1 lift is exact
+    route-2 gives the exact PL S^3 x R scaffold
+[PASS] tensor candidate is exact as a construction
+    candidate note identifies the Hessian on the lifted background
+[PASS] unique symmetric quotient kernel is exact on the prototype
+    quotient-uniqueness note records the nondegenerate prototype kernel
+[PASS] prototype Gram matrix is symmetric
+    max symmetry error = 0.000e+00
+[PASS] prototype symmetric quotient basis is nondegenerate
+    rank = 10 / 10
+[PASS] scalar-line restriction matches the same Hessian
+    direct = -4.215193e-01, expected = -4.215193e-01
+[PASS] blocker note names the curvature-localization map
+    blocker is still sharpened to the localization primitive
+[PASS] curvature-localization blocker isolates the frame-orbit obstruction
+    older frame-orbit blocker is now historical; live blocker reframed as interpretation theorem beyond Lorentzian closure
+[PASS] frame-bundle note records the same missing primitive
+    the dedicated blocker note matches the curvature blocker
+[PASS] localization coefficients depend on frame choice
+    max channel delta across two valid polarization frames = 6.767e-02
+
+==============================================================================
+PROTOTYPE RESULTS
+==============================================================================
+scalar_direct   = -4.215192743764e-01
+scalar_expected = -4.215192743764e-01
+gram_rank       = 10
+gram_size       = 10
+symmetry_error  = 0.000000000000e+00
+frame_delta     = 6.767360754447e-02
+resp_a[0:4]     = ['-2.500000e-01', '-8.249579e-02', '3.111270e-02', '-1.818275e-02']
+resp_b[0:4]     = ['-2.500000e-01', '-8.699980e-02', '-1.430351e-02', '-1.818275e-02']
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=11 FAIL=0 TOTAL=11
+Direct-universal progress: the scalar observable principle and the 3+1 lift now support an exact tensor-valued variational candidate with a unique symmetric quotient kernel, but the exact curvature-localization operator is still missing and only an associated localization orbit is currently determined.
+
+----- stderr -----
+

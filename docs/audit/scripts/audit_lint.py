@@ -427,8 +427,13 @@ def main() -> int:
                     )
 
         # Criticality bump after audit (warn that re-audit may be needed).
+        # Skip rows already at unaudited / audit_in_progress: the warning is
+        # only meaningful for an ACTIVE audit verdict whose snapshot might be
+        # stale relative to current criticality. Once the row has been reset
+        # (e.g. via invalidate_stale_audits.py or note-hash drift), the
+        # snapshot is just historical noise and shouldn't generate a warning.
         snap = row.get("audit_state_snapshot")
-        if snap is not None:
+        if snap is not None and a not in {None, "unaudited", "audit_in_progress"}:
             crit_now = row.get("criticality") or "leaf"
             crit_at_audit = snap.get("criticality") or "leaf"
             crit_rank = {"leaf": 0, "medium": 1, "high": 2, "critical": 3}
