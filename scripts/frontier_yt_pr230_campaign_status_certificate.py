@@ -287,6 +287,9 @@ def main() -> int:
         "canonical_higgs_repo_authority_audit": load(
             "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json"
         ),
+        "sm_one_higgs_oh_import_boundary": load(
+            "outputs/yt_sm_one_higgs_oh_import_boundary_2026-05-03.json"
+        ),
         "hunit_canonical_higgs_operator_candidate_gate": load(
             "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json"
         ),
@@ -1116,6 +1119,16 @@ def main() -> int:
         and certificates["canonical_higgs_repo_authority_audit"].get("repo_authority_found") is False
         and certificates["canonical_higgs_repo_authority_audit"].get("exact_negative_boundary_passed") is True,
         statuses["canonical_higgs_repo_authority_audit"],
+    )
+    report(
+        "sm-one-higgs-oh-import-boundary-blocks-shortcut",
+        "SM one-Higgs gauge selection is not PR230 O_H identity"
+        in str(statuses["sm_one_higgs_oh_import_boundary"])
+        and certificates["sm_one_higgs_oh_import_boundary"].get(
+            "sm_one_higgs_import_closes_pr230"
+        )
+        is False,
+        statuses["sm_one_higgs_oh_import_boundary"],
     )
     candidate_stress = certificates["canonical_higgs_operator_candidate_stress"]
     report(

@@ -109,8 +109,9 @@ def main() -> int:
         hypercharge_status,
     )
     check(
-        "EW Higgs authority status is standalone positive",
-        "standalone positive" in ew_higgs_status.lower(),
+        "EW Higgs authority status is proposed retained or standalone positive",
+        "proposed_retained" in ew_higgs_status.lower()
+        or "standalone positive" in ew_higgs_status.lower(),
         ew_higgs_status,
     )
 

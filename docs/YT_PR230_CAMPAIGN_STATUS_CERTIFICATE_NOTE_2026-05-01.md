@@ -26,8 +26,20 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=162 FAIL=0
+# SUMMARY: PASS=163 FAIL=0
 ```
+
+## 2026-05-03 SM One-Higgs To O_H Import Boundary Update
+
+The campaign status certificate now consumes the SM one-Higgs to O_H import
+boundary.  This closes the "maybe one-Higgs gauge selection is the missing
+canonical-Higgs identity" branch of the O_H queue.
+
+The runner passes with `PASS=11 FAIL=0`.  The support theorem itself now
+passes `TOTAL: PASS=43, FAIL=0`, but it remains operator-pattern support only:
+canonical `H` is assumed after it is supplied, numerical Yukawa entries are
+free, `O_sp = O_H` is not derived, and no no-orthogonal-top-coupling selection
+rule is produced.
 
 ## 2026-05-03 Schur Row Candidate Extraction Attempt Update
 

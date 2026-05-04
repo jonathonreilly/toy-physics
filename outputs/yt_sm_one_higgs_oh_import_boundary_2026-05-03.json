@@ -1,0 +1,71 @@
+{
+  "actual_current_surface_status": "exact negative boundary / SM one-Higgs gauge selection is not PR230 O_H identity",
+  "candidate_surface": {
+    "acceptance_checks": {
+      "csh_chh_residue_hint": false,
+      "forbidden_hunit_or_observed_authority_absent": true,
+      "ledger_not_renaming_or_conditional": true,
+      "normalization_hint": false,
+      "operator_definition_hint": true,
+      "same_source_coordinate_hint": false,
+      "same_surface_cl3z3_hint": false
+    },
+    "classification": "gauge monomial selection; Yukawa entries free",
+    "id": "sm_one_higgs_yukawa_gauge_selection",
+    "ledger": {
+      "audit_status": "unaudited",
+      "effective_status": "proposed_retained",
+      "load_bearing_step": null,
+      "verdict_rationale": null
+    },
+    "missing_or_blocking": [
+      "does not select numerical Yukawa entries",
+      "does not identify PR230 scalar source with canonical H"
+    ],
+    "path_presence": {
+      "docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md": true
+    },
+    "paths": [
+      "docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md"
+    ],
+    "positive_reuse": "confirms allowed one-Higgs Yukawa operator pattern",
+    "usable_as_pr230_oh_certificate": false
+  },
+  "exact_next_action": "Stop trying SM one-Higgs monomial selection as the O_H proof. Proceed through certified C_sH/C_HH pole rows, a genuine rank-one neutral-scalar theorem, a same-source W/Z response harness, or honest production evidence.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "canonical_higgs_repo_authority_audit": "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json",
+    "no_orthogonal_import": "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json",
+    "no_orthogonal_selection_rule": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
+    "osp_oh_identity_stretch": "outputs/yt_osp_oh_identity_stretch_attempt_2026-05-03.json",
+    "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The support theorem is an operator-pattern theorem, not a source-pole/canonical-Higgs identity or pole-residue measurement.",
+  "sm_one_higgs_import_closes_pr230": false,
+  "sm_support_runner": {
+    "fail_count": 0,
+    "pass_count": 43,
+    "returncode": 0,
+    "tail": [
+      "PASS: mass readout coefficient is v/sqrt(2) for every selected Dirac matrix",
+      "PASS: generation matrices remain gauge-singlet freedom -- 9",
+      "PASS: gauge selection does not diagonalize flavor matrices -- 9 entries vs 3 eigenvalues",
+      "PASS: note records primary runner",
+      "PASS: note states no numerical Yukawa eigenvalue claim",
+      "PASS: note states no CKM or PMNS angle claim",
+      "PASS: note states no top-Yukawa Ward normalization claim",
+      "TOTAL: PASS=43, FAIL=0"
+    ]
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not define O_H by one-Higgs notation",
+    "does not identify O_sp with O_H",
+    "does not set orthogonal scalar top coupling to zero",
+    "does not use H_unit, yt_ward_identity, observed top, observed y_t, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "The SM one-Higgs gauge-selection theorem remains useful support: its runner passes and it proves the allowed one-doublet Yukawa monomial pattern.  It does not close PR #230 because it assumes canonical H after H is supplied, leaves Yukawa matrix entries free, does not identify the PR230 source-pole operator O_sp with O_H, and does not prove a no-orthogonal-top-coupling selection rule."
+}

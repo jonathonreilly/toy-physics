@@ -18,8 +18,22 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=136 FAIL=0
+# SUMMARY: PASS=137 FAIL=0
 ```
+
+## 2026-05-03 SM One-Higgs To O_H Import Boundary Update
+
+The retained-route certificate now consumes
+`outputs/yt_sm_one_higgs_oh_import_boundary_2026-05-03.json`.  This checks
+the tempting O_H shortcut through the SM one-Higgs gauge-selection theorem.
+The support runner now passes on the current EW Higgs status wording:
+`TOTAL: PASS=43, FAIL=0`.
+
+The import still blocks.  SM one-Higgs gauge selection proves the allowed
+one-doublet Yukawa monomial pattern after canonical `H` is supplied, and it
+leaves Yukawa matrix entries free.  It does not identify the PR230 source pole
+with `O_H`, does not provide `C_sH/C_HH` pole residues, and does not remove
+the orthogonal neutral scalar top-coupling blocker.
 
 ## 2026-05-03 Schur Row Candidate Extraction Attempt Update
 

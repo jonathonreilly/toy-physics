@@ -1,5 +1,13 @@
 # Opportunity Queue
 
+2026-05-03 update: the SM one-Higgs to O_H import boundary is now landed and
+wired into the retained-route/campaign gates.  The support runner passes after
+status-wording hygiene, but this closes the import as a positive PR230 O_H
+route: one-Higgs gauge selection assumes canonical `H` after supplied, leaves
+Yukawa matrices free, and supplies neither `O_sp = O_H` nor a
+no-orthogonal-top-coupling theorem.  Do not spend more loop time trying to
+promote SM monomial selection into the missing canonical-Higgs identity.
+
 2026-05-03 update: the W/Z response row production attempt is now landed and
 wired into the retained-route/campaign gates.  It tries the next concrete W/Z
 step after the row contract and blocks honestly: the current top production

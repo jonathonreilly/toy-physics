@@ -1,5 +1,23 @@
 # No-Go Ledger
 
+## SM one-Higgs gauge selection is not the PR230 O_H identity
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_sm_one_higgs_oh_import_boundary.py
+# SUMMARY: PASS=11 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=137 FAIL=0
+```
+
+The SM one-Higgs gauge-selection theorem proves the allowed one-doublet
+Yukawa monomial pattern and now has a passing support runner.  It assumes
+canonical `H` after it is supplied, leaves Yukawa entries free, and does not
+derive `O_sp = O_H`, `C_sH/C_HH` pole residues, or a no-orthogonal-top-coupling
+rule.  Do not treat one-Higgs notation or monomial selection as the missing
+canonical-Higgs operator identity.
+
 ## W/Z response row production from current PR230 surface is blocked
 
 Runners:

@@ -168,6 +168,7 @@
     "schur_kprime_row_absence_guard": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
     "schur_row_candidate_extraction_attempt": "exact negative boundary / Schur row candidate extraction from finite ladder support",
     "short_distance_ope_lsz_no_go": "exact negative boundary / short-distance OPE not scalar LSZ closure",
+    "sm_one_higgs_oh_import_boundary": "exact negative boundary / SM one-Higgs gauge selection is not PR230 O_H identity",
     "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem",
     "source_higgs_cross_correlator_certificate_builder": "open / source-Higgs cross-correlator rows absent",
     "source_higgs_cross_correlator_harness_extension": "bounded-support / source-Higgs cross-correlator harness extension",
@@ -197,7 +198,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 162,
+  "pass_count": 163,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

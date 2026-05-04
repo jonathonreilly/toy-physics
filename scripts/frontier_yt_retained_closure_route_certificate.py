@@ -161,6 +161,7 @@ def main() -> int:
         "canonical_higgs_operator_candidate_stress": "outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json",
         "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
         "canonical_higgs_repo_authority_audit": "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json",
+        "sm_one_higgs_oh_import_boundary": "outputs/yt_sm_one_higgs_oh_import_boundary_2026-05-03.json",
         "hunit_canonical_higgs_operator_candidate_gate": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
         "source_higgs_harness_absence_guard": "outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json",
         "source_higgs_unratified_operator_smoke": "outputs/yt_source_higgs_unratified_operator_smoke_checkpoint_2026-05-03.json",
@@ -1007,6 +1008,17 @@ def main() -> int:
         )
         is True
     )
+    sm_one_higgs_oh_import_boundary_blocks_shortcut = (
+        "SM one-Higgs gauge selection is not PR230 O_H identity"
+        in certificates["sm_one_higgs_oh_import_boundary"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["sm_one_higgs_oh_import_boundary"].get("proposal_allowed") is False
+        and certificates["sm_one_higgs_oh_import_boundary"].get(
+            "sm_one_higgs_import_closes_pr230"
+        )
+        is False
+    )
     canonical_higgs_operator_candidate_stress_blocks = (
         "canonical-Higgs operator candidate stress rejects current substitutes"
         in certificates["canonical_higgs_operator_candidate_stress"].get(
@@ -1775,6 +1787,11 @@ def main() -> int:
         "canonical-higgs-repo-authority-audit-blocks-hidden-oh",
         canonical_higgs_repo_authority_audit_blocks_hidden_oh,
         certificates["canonical_higgs_repo_authority_audit"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "sm-one-higgs-oh-import-boundary-blocks-shortcut",
+        sm_one_higgs_oh_import_boundary_blocks_shortcut,
+        certificates["sm_one_higgs_oh_import_boundary"].get("actual_current_surface_status", ""),
     )
     report(
         "canonical-higgs-operator-candidate-stress-blocks",

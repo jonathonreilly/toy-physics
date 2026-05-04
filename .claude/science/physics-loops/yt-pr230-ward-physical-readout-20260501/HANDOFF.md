@@ -1,5 +1,26 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 SM one-Higgs to O_H import boundary:
+
+- Added `scripts/frontier_yt_sm_one_higgs_oh_import_boundary.py`,
+  `docs/YT_SM_ONE_HIGGS_OH_IMPORT_BOUNDARY_NOTE_2026-05-03.md`, and
+  `outputs/yt_sm_one_higgs_oh_import_boundary_2026-05-03.json`.
+- Fixed stale status matching in
+  `scripts/frontier_sm_one_higgs_yukawa_gauge_selection.py`; the support
+  runner now reports `TOTAL: PASS=43, FAIL=0`.
+- Result: exact negative boundary.  SM one-Higgs gauge selection proves the
+  allowed one-doublet Yukawa monomial pattern after canonical `H` is supplied;
+  it does not identify the PR230 source pole with `O_H`, provide
+  `C_sH/C_HH` residues, or remove the orthogonal neutral scalar top-coupling
+  blocker.
+- Verification: SM one-Higgs O_H boundary `PASS=11 FAIL=0`; retained-route
+  `PASS=137 FAIL=0`; campaign status `PASS=163 FAIL=0`.
+- Claim boundary: no retained or `proposed_retained` wording is authorized.
+
+Next exact action: produce certified `O_H/C_sH/C_HH` pole rows, a rank-one
+neutral-scalar theorem, same-source W/Z response, genuine Schur rows, or
+honest production evidence while chunks025-026 run.
+
 Latest checkpoint, 2026-05-03 W/Z response row production attempt:
 
 - Added `scripts/frontier_yt_wz_response_row_production_attempt.py`,
