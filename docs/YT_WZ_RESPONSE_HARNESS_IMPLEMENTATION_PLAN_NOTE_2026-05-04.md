@@ -53,3 +53,17 @@ gauge-mass algebra as `dM_W/ds`, and does not authorize retained or
 Next action: either implement the EW same-source W/Z correlator workstream, or
 continue the higher-priority source-Higgs, Schur, rank-one, and FH/LSZ chunk
 routes already active in PR #230.
+
+## Adapter Added
+
+The mass-fit-to-response adapter is now explicit:
+
+```text
+scripts/frontier_yt_wz_mass_fit_response_row_builder.py
+```
+
+It consumes future W/Z correlator mass-fit rows, a matched same-source top
+response certificate, and a non-observed `g_2` certificate, then emits the
+measurement-row file consumed by the existing W/Z response certificate builder.
+Scout mode writes only scout-named rows; strict mode remains blocked until the
+future production inputs exist.

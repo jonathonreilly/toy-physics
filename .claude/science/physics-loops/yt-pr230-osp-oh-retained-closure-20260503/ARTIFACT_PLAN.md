@@ -76,3 +76,17 @@ The W-route now has an explicit strict adapter path: future W/top response
 certificate plus future `delta_perp` correction certificate -> production row
 file -> lightweight W-response readout harness.  No production row file is
 present on the current surface.
+
+Completed in the W/Z mass-fit response-row continuation:
+
+- `scripts/frontier_yt_wz_mass_fit_response_row_builder.py`
+- `docs/YT_WZ_MASS_FIT_RESPONSE_ROW_BUILDER_NOTE_2026-05-04.md`
+- `outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json`
+- `outputs/yt_wz_mass_fit_response_row_builder_scout_2026-05-04.json`
+- `outputs/yt_wz_mass_fit_response_row_builder_scout_rows_2026-05-04.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
+This reduces the first W-route strict input to three concrete future files:
+W/Z correlator mass-fit rows, matched same-source top-response certificate, and
+non-observed `g_2` certificate.  The final W/Z measurement-row file is still
+absent.

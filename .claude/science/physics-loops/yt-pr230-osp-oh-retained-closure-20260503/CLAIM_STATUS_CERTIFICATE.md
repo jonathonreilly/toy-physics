@@ -55,6 +55,12 @@ Open imports:
 - W/Z correlator mass-fit path is absent on the current PR230 surface; static
   EW gauge-mass algebra, aggregate slopes, mismatched source coordinates, and
   observed-W/Z selectors are explicitly rejected as measurement rows;
+- W/Z mass-fit response-row builder is now an executable adapter contract:
+  scout rows validate slope extraction into the downstream measurement-row
+  schema, but current mode writes no
+  `outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json` file
+  and strict mode fails until W/Z mass-fit rows, matched same-source top
+  response, and non-observed `g_2` certificates exist;
 - positivity-improving/rank-one route is conditional support only; the direct
   neutral-sector irreducibility theorem is blocked on the current surface;
 - scalar denominator / K-prime route is exact support only; same-surface Schur

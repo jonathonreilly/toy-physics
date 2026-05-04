@@ -50,6 +50,7 @@ PARENTS = {
     "same_source_w_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
     "wz_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
+    "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
     "canonical_higgs_operator": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "canonical_higgs_semantic_firewall": "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
@@ -173,6 +174,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "strict delta_perp tomography correction rows absent",
                 "same-source W-response row builder strict inputs absent",
                 "lightweight same-source W readout production rows absent",
+                "W/Z mass-fit response-row builder strict inputs absent",
                 "sector-overlap identity not derived",
                 "canonical-Higgs identity not derived",
             ],
@@ -187,6 +189,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["same_source_w_lightweight_readout"],
                 PARENTS["wz_certificate_gate"],
                 PARENTS["wz_mass_fit_path"],
+                PARENTS["wz_mass_fit_response_row_builder"],
                 PARENTS["same_source_sector_overlap"],
             ],
         },
@@ -392,6 +395,16 @@ def main() -> int:
         and certs["same_source_w_lightweight_readout"].get("strict_lightweight_readout_gate_passed")
         is False,
         statuses["same_source_w_lightweight_readout"],
+    )
+    report(
+        "wz-mass-fit-response-row-builder-open",
+        "WZ mass-fit response-row builder" in statuses["wz_mass_fit_response_row_builder"]
+        and certs["wz_mass_fit_response_row_builder"].get("proposal_allowed") is False
+        and certs["wz_mass_fit_response_row_builder"].get(
+            "strict_wz_mass_fit_response_row_builder_passed"
+        )
+        is False,
+        statuses["wz_mass_fit_response_row_builder"],
     )
     report("scalar-lsz-model-fv-ir-blocked", scalar_lsz_blocks, "model-class/FV/IR/threshold controls still block retained use")
     report("source-overlap-bridge-absent", source_overlap_blocks, f"route_passes={any_bridge_passes}")

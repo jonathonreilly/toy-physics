@@ -163,6 +163,7 @@ def main() -> int:
         "delta_perp_tomography_correction_builder": "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json",
         "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
         "same_source_w_response_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
+        "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
         "wz_correlator_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
@@ -1146,6 +1147,17 @@ def main() -> int:
         and certificates["wz_correlator_mass_fit_path_gate"].get("future_mass_fit_rows_present")
         is False
         and certificates["wz_correlator_mass_fit_path_gate"].get("future_response_rows_present")
+        is False
+    )
+    wz_mass_fit_response_row_builder_open = (
+        "WZ mass-fit response-row builder"
+        in certificates["wz_mass_fit_response_row_builder"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["wz_mass_fit_response_row_builder"].get("proposal_allowed") is False
+        and certificates["wz_mass_fit_response_row_builder"].get(
+            "strict_wz_mass_fit_response_row_builder_passed"
+        )
         is False
     )
     same_source_sector_overlap_identity_blocks = (
@@ -2193,6 +2205,11 @@ def main() -> int:
         "wz-correlator-mass-fit-path-gate-blocks",
         wz_correlator_mass_fit_path_gate_blocks,
         certificates["wz_correlator_mass_fit_path_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "wz-mass-fit-response-row-builder-open",
+        wz_mass_fit_response_row_builder_open,
+        certificates["wz_mass_fit_response_row_builder"].get("actual_current_surface_status", ""),
     )
     report(
         "same-source-sector-overlap-identity-blocks",

@@ -293,6 +293,9 @@ def main() -> int:
         "same_source_w_response_lightweight_readout": load(
             "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json"
         ),
+        "wz_mass_fit_response_row_builder": load(
+            "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json"
+        ),
         "wz_correlator_mass_fit_path_gate": load(
             "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json"
         ),
@@ -1324,6 +1327,17 @@ def main() -> int:
         and certificates["wz_correlator_mass_fit_path_gate"].get("future_mass_fit_rows_present") is False
         and certificates["wz_correlator_mass_fit_path_gate"].get("future_response_rows_present") is False,
         statuses["wz_correlator_mass_fit_path_gate"],
+    )
+    report(
+        "wz-mass-fit-response-row-builder-open",
+        "WZ mass-fit response-row builder"
+        in str(statuses["wz_mass_fit_response_row_builder"])
+        and certificates["wz_mass_fit_response_row_builder"].get("proposal_allowed") is False
+        and certificates["wz_mass_fit_response_row_builder"].get(
+            "strict_wz_mass_fit_response_row_builder_passed"
+        )
+        is False,
+        statuses["wz_mass_fit_response_row_builder"],
     )
     report(
         "same-source-sector-overlap-identity-blocks",

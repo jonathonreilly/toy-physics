@@ -1,0 +1,62 @@
+{
+  "actual_current_surface_status": "open / WZ mass-fit response-row builder inputs absent",
+  "bare_retained_allowed": false,
+  "exact_next_action": "Supply outputs/yt_wz_correlator_mass_fit_rows_2026-05-04.json, outputs/yt_same_source_top_response_certificate_2026-05-04.json, and outputs/yt_electroweak_g2_certificate_2026-05-04.json, rerun this builder in strict mode to write outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json, then rerun the W/Z response certificate builder and same-source W/Z gate.",
+  "fail_count": 0,
+  "g2_input": "outputs/yt_electroweak_g2_certificate_2026-05-04.json",
+  "g2_validation": {
+    "failed_checks": [
+      "electroweak g2 certificate absent"
+    ],
+    "present": false,
+    "valid": false
+  },
+  "measurement_rows": {},
+  "measurement_rows_output": "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
+  "measurement_rows_written": false,
+  "mode": "current",
+  "parent_certificates": {
+    "fh_gauge_mass_response_builder": "outputs/yt_fh_gauge_mass_response_certificate_builder_2026-05-03.json",
+    "same_source_w_response_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
+    "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
+    "same_source_wz_response_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+    "wz_correlator_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
+    "wz_response_measurement_row_contract": "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json"
+  },
+  "parent_statuses": {
+    "fh_gauge_mass_response_builder": "open / same-source WZ response rows absent",
+    "same_source_w_response_lightweight_readout": "open / lightweight same-source W-response readout production rows absent",
+    "same_source_w_response_row_builder": "open / same-source W-response row builder inputs absent",
+    "same_source_wz_response_gate": "open / same-source WZ response certificate gate not passed",
+    "wz_correlator_mass_fit_path": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
+    "wz_response_measurement_row_contract": "bounded-support / WZ response measurement-row contract gate"
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The builder only adapts future W/Z mass fits into the row schema for the existing W/Z certificate builder.  Closure still requires strict rows, W/Z gate pass, W-response rows, correction authority, matching/running, and audit.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not produce W/Z correlator mass fits",
+    "does not use static EW algebra as dM_W/ds",
+    "does not use observed W/Z, top, y_t, or g2 selectors",
+    "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, c2=1, Z_match=1, or kappa_s=1"
+  ],
+  "strict_wz_mass_fit_response_row_builder_passed": false,
+  "top_response_input": "outputs/yt_same_source_top_response_certificate_2026-05-04.json",
+  "top_response_validation": {
+    "failed_checks": [
+      "same-source top response certificate absent"
+    ],
+    "present": false,
+    "valid": false
+  },
+  "wz_mass_fit_input": "outputs/yt_wz_correlator_mass_fit_rows_2026-05-04.json",
+  "wz_mass_fit_response_row_builder_passed": false,
+  "wz_validation": {
+    "failed_checks": [
+      "W/Z mass-fit rows absent"
+    ],
+    "present": false,
+    "valid": false
+  }
+}

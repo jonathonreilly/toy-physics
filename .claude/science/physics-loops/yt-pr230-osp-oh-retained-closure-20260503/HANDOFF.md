@@ -2070,3 +2070,42 @@ honestly blocked until both strict inputs exist:
 
 - `outputs/yt_fh_gauge_mass_response_certificate_2026-05-02.json`;
 - `outputs/yt_same_source_w_response_orthogonal_correction_certificate_2026-05-04.json`.
+
+## 2026-05-04 W/Z Mass-Fit Response-Row Builder
+
+This continuation adds the adapter that converts future W/Z correlator
+mass-fit rows into the W/Z measurement-row file consumed by the existing
+same-source W/Z response certificate builder.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_wz_mass_fit_response_row_builder.py --scout
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_wz_mass_fit_response_row_builder.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_wz_mass_fit_response_row_builder.py --strict \
+  --output outputs/tmp_yt_wz_mass_fit_response_row_builder_strict_probe_2026-05-04.json
+# expected failure until W/Z mass-fit rows, matched top-response, and g2 inputs exist
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=23 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=172 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=198 FAIL=0
+```
+
+Result: open.  Scout mode writes only
+`outputs/yt_wz_mass_fit_response_row_builder_scout_rows_2026-05-04.json`.
+Current/default mode does not write
+`outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json`.
+Strict mode remains blocked until:
+
+- `outputs/yt_wz_correlator_mass_fit_rows_2026-05-04.json`;
+- `outputs/yt_same_source_top_response_certificate_2026-05-04.json`;
+- `outputs/yt_electroweak_g2_certificate_2026-05-04.json`.

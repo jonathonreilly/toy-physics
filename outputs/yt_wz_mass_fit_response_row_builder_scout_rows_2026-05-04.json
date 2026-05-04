@@ -1,0 +1,123 @@
+{
+  "electroweak_coupling": {
+    "g2": 0.65,
+    "g2_certificate": "synthetic scout g2",
+    "sigma_g2": 0.0015,
+    "used_observed_g2_as_selector": false
+  },
+  "firewall": {
+    "used_H_unit_or_Ward_authority": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_c2_or_zmatch_equal_one": false,
+    "used_observed_WZ_masses_as_selector": false,
+    "used_observed_top_or_yukawa_as_selector": false,
+    "used_static_v_overlap_selector": false
+  },
+  "gauge_response": {
+    "cov_dE_top_dM_W": 0.0007,
+    "slope_dM_W_ds": 0.46,
+    "slope_error": 0.282842712474619
+  },
+  "gauge_response_fit": {
+    "channel": "W",
+    "fit_points": [
+      {
+        "mass_lat": 0.3134,
+        "mass_lat_err": 0.004,
+        "source_shift": -0.01
+      },
+      {
+        "mass_lat": 0.318,
+        "mass_lat_err": 0.004,
+        "source_shift": 0.0
+      },
+      {
+        "mass_lat": 0.3226,
+        "mass_lat_err": 0.004,
+        "source_shift": 0.01
+      }
+    ],
+    "weighted_linear_fit": {
+      "chi2": 0.0,
+      "chi2_per_dof": 0.0,
+      "dof": 1,
+      "intercept": 0.318,
+      "slope": 0.46,
+      "slope_error": 0.282842712474619,
+      "valid": true
+    }
+  },
+  "identity_certificates": {
+    "canonical_higgs_pole_identity_passed": true,
+    "retained_route_or_proposal_gate_passed": true,
+    "same_source_sector_overlap_identity_passed": true
+  },
+  "per_source_shift_rows": [
+    {
+      "configuration_count": 256,
+      "effective_mass_method": "single_state_plateau_scout",
+      "jackknife_or_bootstrap_block_count": 64,
+      "source_shift": -0.01,
+      "w_mass_fit": {
+        "fit_window": [
+          4,
+          10
+        ],
+        "from_correlator": true,
+        "mass_lat": 0.3134,
+        "mass_lat_err": 0.004
+      }
+    },
+    {
+      "configuration_count": 256,
+      "effective_mass_method": "single_state_plateau_scout",
+      "jackknife_or_bootstrap_block_count": 64,
+      "source_shift": 0.0,
+      "w_mass_fit": {
+        "fit_window": [
+          4,
+          10
+        ],
+        "from_correlator": true,
+        "mass_lat": 0.318,
+        "mass_lat_err": 0.004
+      }
+    },
+    {
+      "configuration_count": 256,
+      "effective_mass_method": "single_state_plateau_scout",
+      "jackknife_or_bootstrap_block_count": 64,
+      "source_shift": 0.01,
+      "w_mass_fit": {
+        "fit_window": [
+          4,
+          10
+        ],
+        "from_correlator": true,
+        "mass_lat": 0.3226,
+        "mass_lat_err": 0.004
+      }
+    }
+  ],
+  "phase": "scout",
+  "proposal_allowed": false,
+  "same_source_coordinate": true,
+  "source_coordinate": "synthetic_same_source_s",
+  "source_shifts": [
+    -0.01,
+    0.0,
+    0.01
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not generate W/Z mass fits",
+    "does not use static EW algebra as dM_W/ds",
+    "does not use observed W/Z, top, y_t, or g2 selectors",
+    "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, c2=1, Z_match=1, or kappa_s=1"
+  ],
+  "top_response": {
+    "slope_dE_top_ds": 1.31,
+    "slope_error": 0.04
+  },
+  "wz_mass_fits_from_correlators": true
+}
