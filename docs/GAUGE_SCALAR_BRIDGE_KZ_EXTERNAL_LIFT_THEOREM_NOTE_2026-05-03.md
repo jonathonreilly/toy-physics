@@ -14,6 +14,19 @@ section 5 escape route #4: "an exact independently selected
 escape route quantitatively as a NARROWING (Honest Path A), not as a
 quantitative bypass of the Lemma-2 witness construction.
 
+> **CORRECTION 2026-05-03 (post-PDF read of GLYZ 2025 full paper):**
+> The original W_lift = 0.05 used throughout this note was based on
+> incomplete extraction from the GLYZ 2025 abstract. After reading the
+> full JHEP 12 (2025) 033 paper, the actual published SU(3) 4D
+> bracket at β = 6 (= λ = 1.5 in their convention β = N²/λ) is
+> **W_lift_actual ≈ 0.15 - 0.35** — the SU(3) D=4 result lands in the
+> first-order phase transition region (between λ = 1 and λ = 2 per
+> their analysis) where the bootstrap method is intrinsically loosest.
+> The original 0.05 was therefore OPTIMISTIC, not conservative. See
+> Section 11 (Correction) at the end of this note for the full
+> updated analysis. The original analysis below is preserved for
+> historical context but should be read with the corrected W_lift.
+
 ## 0. Headline
 
 The framework's local Wilson packet does not derive
@@ -524,3 +537,130 @@ Expected summary line:
 ```text
 SUMMARY: THEOREM PASS=7 SUPPORT=2 FAIL=0
 ```
+
+## 11. CORRECTION (2026-05-03 post-PDF read)
+
+This section corrects the W_lift estimate used throughout Sections 0-10.
+The original analysis used W_lift = 0.05 as a "conservative" estimate,
+based on incomplete extraction from the GLYZ 2025 abstract. After
+reading the full JHEP 12 (2025) 033 paper, the actual W_lift is
+substantially LARGER, not smaller.
+
+### 11.1 What the GLYZ 2025 paper actually reports for SU(3) β=6
+
+GLYZ uses convention `β = N²/λ`, so for SU(3) (N=3) at β=6:
+
+```text
+λ_GLYZ = N² / β = 9 / 6 = 1.5
+```
+
+The paper's Figure 16 and Section 7.4 show their best Path Choice 4
+result for SU(3) in 4D (6241 paths, 39893 loop variables, ~33 GB
+memory per data point, ~2 hours per data point with Mosek). The paper
+makes the following crucial structural observations:
+
+> "The expectation value of the Wilson loop exhibits a notable
+> transition when the coupling parameter λ increases from 1 to 2.
+> This behavior aligns with the expected first-order phase transition
+> for high N, as observed in lattice simulations." (Section 8)
+
+> "We find that upper bounds are more reliable before the transition,
+> while lower bounds are more effective beyond the transition, a
+> pattern observed in our 4D SU(3) results." (Section 8)
+
+`λ = 1.5` (= our β=6) is **inside the first-order phase transition
+region** (between λ=1 and λ=2). At this specific coupling, the GLYZ
+bracket is the LOOSEST it gets across their reported λ range, because
+the bootstrap method's tightness deteriorates exactly in the
+transition region.
+
+### 11.2 Eyeball estimate of W_lift_actual at β=6
+
+Reading GLYZ Figure 16(c) at λ=1.5:
+
+| Quantity | Approximate value |
+|---|---|
+| Upper bound (Path Choice 4) | ~ 0.7 - 0.8 |
+| Lower bound (Path Choice 3) | ~ 0.45 - 0.55 |
+| MC reference | ~ 0.59 |
+| **Actual GLYZ bracket width** | **~ 0.15 - 0.35** |
+
+The bracket width is **3-7× larger** than the W_lift = 0.05 used in
+Sections 0-10 of this note. The original "conservative" framing was
+based on extrapolating from K-Z 2022's SU(∞) λ=1.35 weak-coupling
+benchmark (width 0.02) plus a generous safety margin — but failed to
+account for the SU(3) phase transition at λ ≈ 1-2.
+
+### 11.3 Implications for the closure analysis
+
+With W_lift_actual ≈ 0.15 - 0.35:
+
+```text
+W_lift_actual / epsilon_witness ≈ 500 - 1000
+```
+
+instead of the previously-claimed factor ~165. The K-Z external lift
+route does **not narrow the no-go to within ε_witness** — it remains
+HONEST PATH A by a wider margin than originally reported.
+
+### 11.4 What the parent gauge_scalar_temporal_completion theorem inherits
+
+The parent theorem still upgrades from `audited_conditional` (no
+quantitative bound) to `retained_bounded` (W_lift_actual quantitative
+bound), so the structural status improvement remains valid. The
+inherited width is just larger than originally claimed:
+
+| Parent's inherited width | This note (corrected) |
+|---|---|
+| Original claim | W_lift = 0.05 |
+| **Honest correction** | **W_lift_actual ≈ 0.15 - 0.35** |
+
+Downstream consumers (alpha_s_derived_note,
+plaquette_self_consistency_note, etc.) inherit the LARGER bracket as
+their bounded-conditionality.
+
+### 11.5 Implication for the closure path forward
+
+The original strategic framing — "tightening W_lift via Guo-Li-Yang-Zhu
+table extraction is the highest-leverage move toward closure" — is
+now known to be WRONG. The literature's best published bracket at
+SU(3) β=6 is ~0.2 wide, not ~0.001-0.005 as originally hoped. There
+is NO path to ε_witness closure via better external lift extraction
+alone — the bootstrap method intrinsically loses precision at the
+SU(3) phase transition coupling.
+
+The remaining viable closure paths are:
+
+1. **Wigner-Racah engine + L=3 cube tensor-network contraction**
+   (multi-block campaign, originally PR 2-5 of the engine roadmap;
+   Block 1 = SU(3) (1,1)⊗(1,1) CG decomposition shipped in
+   `docs/SU3_WIGNER_INTERTWINER_BLOCK1_THEOREM_NOTE_2026-05-03.md` /
+   PR #495). This route does not depend on bootstrap precision in
+   the phase transition region.
+
+2. **A novel structural framework primitive** — one of the no-go's
+   Section 5 escape routes #1 (exact β=6 spectral measure), #2
+   (exact Perron data), or #3 (exact effective action). None are
+   currently developed in the framework.
+
+3. **Industrial-scale Mosek bootstrap** at L_max ≥ 16 with full SU(3)
+   Wigner-Racah machinery (essentially what GLYZ would need to push
+   their Path Choice 4 further, but in the framework's V-invariant
+   notation). This is multi-month engineering and likely still
+   bottlenecked by the phase-transition tightness ceiling.
+
+The Wigner-Racah engine path (Option 1) is the actual route to
+quantitative closure. The K-Z external lift in this note remains a
+real structural advance (parent moves to `retained_bounded`) but
+not a quantitative bypass of ε_witness.
+
+### 11.6 Action items from this correction
+
+- [x] Add this CORRECTION section
+- [ ] Update PR #484 description with the corrected W_lift_actual
+- [ ] Codex audit will verify the correction is honest and complete
+- [ ] Continue with Block 2 of the Wigner-Racah engine campaign
+
+The correction is filed honestly to prevent any downstream consumer
+from inheriting an over-tight bracket. Codex review should confirm
+the correction matches GLYZ Figure 16(c) reading.
