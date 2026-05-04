@@ -786,20 +786,80 @@
         0.0,
         0.01
       ]
+    },
+    {
+      "chunk_index": 53,
+      "mass_fit_m_lat": 1.8506573402601134,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk053_2026-05-01.json",
+      "phase": "production",
+      "ready": true,
+      "seed": 2026051053,
+      "slope_dE_ds_lat": 1.4293653630051477,
+      "slope_dE_ds_lat_err": 25.058395151119647,
+      "source_shifts": [
+        -0.01,
+        0.0,
+        0.01
+      ]
+    },
+    {
+      "chunk_index": 54,
+      "mass_fit_m_lat": 1.8506773556255212,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk054_2026-05-01.json",
+      "phase": "production",
+      "ready": true,
+      "seed": 2026051054,
+      "slope_dE_ds_lat": 7.061144932574286,
+      "slope_dE_ds_lat_err": 13.632696480335577,
+      "source_shifts": [
+        -0.01,
+        0.0,
+        0.01
+      ]
+    },
+    {
+      "chunk_index": 55,
+      "mass_fit_m_lat": 1.8552228797980206,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk055_2026-05-01.json",
+      "phase": "production",
+      "ready": true,
+      "seed": 2026051055,
+      "slope_dE_ds_lat": 1.4219250305991056,
+      "slope_dE_ds_lat_err": 23.632180461916068,
+      "source_shifts": [
+        -0.01,
+        0.0,
+        0.01
+      ]
+    },
+    {
+      "chunk_index": 56,
+      "mass_fit_m_lat": 1.8513175521929952,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk056_2026-05-01.json",
+      "phase": "production",
+      "ready": true,
+      "seed": 2026051056,
+      "slope_dE_ds_lat": 1.4051480558663294,
+      "slope_dE_ds_lat_err": 24.32621587744469,
+      "source_shifts": [
+        -0.01,
+        0.0,
+        0.01
+      ]
     }
   ],
   "stability_summary": {
     "max_slope": 7.3549193842802785,
     "min_slope": 1.2392686775356556,
-    "n_chunks": 52,
-    "relative_fit_error": 8.50492827423524,
-    "relative_stdev": 0.8996605522066465,
-    "slope_mean": 2.243480038842786,
-    "slope_stdev": 2.0183704906098896,
+    "n_chunks": 56,
+    "relative_fit_error": 8.429870795647803,
+    "relative_stdev": 0.9004720441599772,
+    "slope_mean": 2.2853311678905306,
+    "slope_stdev": 2.057876828332894,
     "spread_ratio": 5.934886855129659,
     "stability_acceptance_rule": "n>=8, relative_stdev<0.25, spread_ratio<2",
     "stability_passed": false,
-    "typical_fit_error": 19.080636815036385
+    "typical_fit_error": 19.26504647058407
   },
   "strict_non_claims": [
     "does not treat dE/ds as physical dE/dh",
@@ -807,5 +867,5 @@
     "does not use observed top mass, observed y_t, H_unit, Ward authority, alpha_LM, plaquette, or u0",
     "does not treat a partial L12 set as production closure"
   ],
-  "verdict": "The current seed-controlled ready chunks expose same-source dE/ds, but the 52/63 partial set is not stable enough to use as production response evidence beyond bounded support.  The chunk slopes are finite but have large chunk-to-chunk spread.  Even a stable slope would still require scalar LSZ pole derivative, model-class/FV/IR control, and canonical-Higgs identity before physical y_t closure."
+  "verdict": "The current seed-controlled ready chunks expose same-source dE/ds, but the 56/63 partial set is not stable enough to use as production response evidence beyond bounded support.  The chunk slopes are finite but have large chunk-to-chunk spread.  Even a stable slope would still require scalar LSZ pole derivative, model-class/FV/IR control, and canonical-Higgs identity before physical y_t closure."
 }

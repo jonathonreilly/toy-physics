@@ -71,6 +71,11 @@ Open imports:
   ESS with limiting ESS `731.9910843504125` but still fails response-window
   acceptance and does not provide scalar-LSZ or canonical-Higgs/source-overlap
   closure;
+- FH/LSZ chunks053/054/055/056 are now packaged with the ready set as bounded
+  production support only; the 56/63 ready L12 state passes target-observable
+  ESS with limiting ESS `783.2344666684801` but still fails response-window
+  acceptance and does not provide scalar-LSZ or canonical-Higgs/source-overlap
+  closure;
 - the legacy-v2 backfill feasibility audit is an exact negative boundary:
   chunks001-016 contain aggregate correlators and tau=1 per-configuration rows
   but no raw per-configuration source-shift correlator time series, so v2
@@ -121,10 +126,13 @@ Open imports:
   now pass as bounded response-side support, but they do not authorize a
   physical readout switch or supply scalar-LSZ pole/FV/IR/model-class control
   or canonical-Higgs/source-overlap closure;
-- paired x8/x16 variance calibration gate is now wired into the PR230
-  certificate surface; the paired production outputs are absent, so x8 remains
-  unaccepted and any future eight-mode pole-fit launch remains support only
-  until the calibration gate passes;
+- paired x8/x16 variance calibration gate now passes as launch support only;
+  x8 is accepted only for a future eight-mode pole-fit stream, and the gate
+  does not provide scalar-LSZ, FV/IR, model-class, canonical-Higgs,
+  source-overlap, or physical `y_t` closure;
+- the eight-mode noise variance gate now passes as launch support by consuming
+  the paired x8/x16 calibration certificate; this is not production pole data
+  and does not authorize retained/proposed-retained wording;
 - FH/LSZ chunks047/048 are now packaged with the ready set as bounded
   production support only; the 48/63 ready L12 state passes target-observable
   ESS with limiting ESS `678.1515635297619` but still fails response-window

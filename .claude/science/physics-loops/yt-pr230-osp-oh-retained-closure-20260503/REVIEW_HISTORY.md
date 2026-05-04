@@ -500,3 +500,24 @@ Findings:
 - No retained/proposed-retained claim is authorized because scalar LSZ,
   canonical-Higgs/source-overlap, W/Z response, Schur-row, and retained-route
   gates remain open.
+
+## 2026-05-04 Chunks053-056 And Calibration Self-Review
+
+Disposition: bounded production and launch support; continue campaign.
+
+Findings:
+
+- Chunks053, 054, 055, and 056 pass both generic and v2 multi-tau
+  target-timeseries checkpoints with zero fails.
+- The ready L12 set advances to 56/63 chunks and 896/1000 saved
+  configurations; target-observable ESS passes with limiting ESS
+  `783.2344666684801`.
+- The fitted response surface remains unstable because mixed source-shift
+  windows are still present; the common-window response support does not
+  authorize a physical readout switch.
+- The paired x8/x16 calibration gate and the eight-mode noise variance gate
+  now pass as launch support only.  The calibration shares a source coordinate
+  by design and is not independent physics replication.
+- No retained/proposed-retained claim is authorized because scalar LSZ,
+  canonical-Higgs/source-overlap, W/Z response, Schur-row, FV/IR/model-class,
+  and retained-route gates remain open.

@@ -1479,11 +1479,10 @@ def main() -> int:
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_pole_fit_mode_budget"].get("proposal_allowed") is False
     )
-    eight_mode_noise_variance_not_passed = (
+    eight_mode_noise_variance_not_closure = (
         "eight-mode noise variance gate"
         in certificates["fh_lsz_eight_mode_noise_variance"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_eight_mode_noise_variance"].get("proposal_allowed") is False
-        and certificates["fh_lsz_eight_mode_noise_variance"].get("variance_gate_passed") is False
     )
     noise_subsample_diagnostics_not_closure = (
         "noise-subsample diagnostics"
@@ -2249,8 +2248,8 @@ def main() -> int:
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
     )
     report(
-        "fh-lsz-eight-mode-noise-variance-not-passed",
-        eight_mode_noise_variance_not_passed,
+        "fh-lsz-eight-mode-noise-variance-not-closure",
+        eight_mode_noise_variance_not_closure,
         certificates["fh_lsz_eight_mode_noise_variance"].get("actual_current_surface_status", ""),
     )
     report(

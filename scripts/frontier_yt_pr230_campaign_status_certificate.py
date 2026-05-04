@@ -1530,7 +1530,7 @@ def main() -> int:
         statuses["fh_lsz_pole_fit_mode_budget"],
     )
     report(
-        "fh-lsz-eight-mode-noise-variance-gate-not-passed",
+        "fh-lsz-eight-mode-noise-variance-gate-not-closure",
         "eight-mode noise variance gate" in str(statuses["fh_lsz_eight_mode_noise_variance"])
         or "open" in str(statuses["fh_lsz_eight_mode_noise_variance"]),
         statuses["fh_lsz_eight_mode_noise_variance"],

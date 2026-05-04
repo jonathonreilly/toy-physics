@@ -1,6 +1,6 @@
 # PR #230 FH/LSZ Eight-Mode Noise Variance Gate
 
-**Status:** open / FH-LSZ eight-mode noise variance gate not passed  
+**Status:** bounded-support / FH-LSZ eight-mode noise variance gate passed for launch support  
 **Runner:** `scripts/frontier_yt_fh_lsz_eight_mode_noise_variance_gate.py`  
 **Certificate:** `outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json`
 
@@ -11,7 +11,8 @@ noise count from sixteen to eight while staying production-facing?
 
 ## Result
 
-No current-surface evidence passes that variance gate.
+The paired x8/x16 calibration stream now passes the variance gate as launch
+support.
 
 The mode/noise budget found that eight modes with eight noises fit the current
 foreground estimate:
@@ -27,13 +28,13 @@ standard error by:
 sqrt(16 / 8) = 1.41421
 ```
 
-That trade can only be accepted after a same-source production calibration, or
-after a theorem bounding the stochastic variance for the pole-fit modes.  The
-current reduced smoke output is disqualified: it is reduced-scope, one
-configuration, two modes, two noises, and the wrong volume.  The currently
-running foreground chunk is four-mode/x16, and until it completes it is absent
-from the combiner surface; in either case it is not an eight-mode/x8 variance
-calibration.
+That trade has now been accepted only for future pole-fit launch support after
+the same-source production calibration passed:
+
+```text
+outputs/yt_pr230_fh_lsz_variance_calibration_L12_T24_x8_2026-05-01.json
+outputs/yt_pr230_fh_lsz_variance_calibration_L12_T24_x16_2026-05-01.json
+```
 
 The consumable calibration contract is now the paired x8/x16 gate:
 
@@ -42,15 +43,15 @@ scripts/frontier_yt_fh_lsz_paired_variance_calibration_gate.py
 outputs/yt_fh_lsz_paired_variance_calibration_gate_2026-05-04.json
 ```
 
-The eight-mode variance gate reads that paired certificate.  If the paired
-gate later accepts x8, this gate will mark x8 as pole-fit launch support only;
-it still will not authorize retained/proposed-retained `y_t` wording.
+The eight-mode variance gate reads that paired certificate and marks x8 as
+pole-fit launch support only. It still does not authorize retained/proposed-
+retained `y_t` wording.
 
 ## Claim Boundary
 
 ```text
 proposal_allowed: false
-variance_gate_passed: false
+variance_gate_passed: true
 ```
 
 This gate is launch control only.  It does not derive `kappa_s`, does not
@@ -59,10 +60,9 @@ production evidence.
 
 ## Exact Next Action
 
-Either add a paired eight-mode x8/x16 calibration chunk with noise-subsample
-diagnostics, or keep the x16 noise plan and schedule beyond the 12-hour
-foreground window.  In both cases, any completed chunks must still pass the
-combiner, pole-fit, FV/IR/zero-mode, and retained-proposal gates.
+Use the x8 setting only if a separate eight-mode pole-fit stream is launched.
+Any such stream must still pass combiner, pole-fit, FV/IR/zero-mode,
+model-class, source-Higgs/canonical-operator, and retained-proposal gates.
 
 ## Verification
 

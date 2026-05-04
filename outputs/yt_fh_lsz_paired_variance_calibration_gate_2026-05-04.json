@@ -7,10 +7,122 @@
     "C_ss(q) and Gamma_ss(q) agree within the recorded z and relative-delta thresholds",
     "accepted x8 is launch support only and does not close model-class, FV/IR, or O_H identity gates"
   ],
-  "actual_current_surface_status": "open / paired x8/x16 variance calibration awaiting production outputs",
+  "actual_current_surface_status": "bounded-support / paired x8/x16 variance calibration passed as launch support",
   "comparison": {
-    "reason": "paired outputs absent, invalid, or run controls unmatched",
-    "stable": false
+    "max_C_ss_real_combined_z": 0.9237136519218473,
+    "max_C_ss_real_relative_delta": 0.0011511351973901005,
+    "max_Gamma_ss_real_combined_z": 0.9255865563623463,
+    "max_Gamma_ss_real_relative_delta": 0.001153095675090564,
+    "row_comparisons": [
+      {
+        "C_ss_real_combined_z": 0.9237136519218473,
+        "C_ss_real_relative_delta": 0.0011511351973901005,
+        "C_ss_real_x16": 0.12247060410712542,
+        "C_ss_real_x8": 0.12232962388409208,
+        "Gamma_ss_real_combined_z": 0.9255865563623463,
+        "Gamma_ss_real_relative_delta": 0.001153095675090564,
+        "Gamma_ss_real_x16": 8.165208512785732,
+        "Gamma_ss_real_x8": 8.17463464864453,
+        "mode": "0,0,0"
+      },
+      {
+        "C_ss_real_combined_z": 0.6952519416392303,
+        "C_ss_real_relative_delta": 0.0009026115066915304,
+        "C_ss_real_x16": 0.12547452727930972,
+        "C_ss_real_x8": 0.12536127252719073,
+        "Gamma_ss_real_combined_z": 0.6965256840356225,
+        "Gamma_ss_real_relative_delta": 0.0009033952021277946,
+        "Gamma_ss_real_x16": 7.969737213075451,
+        "Gamma_ss_real_x8": 7.976943545602192,
+        "mode": "1,0,0"
+      },
+      {
+        "C_ss_real_combined_z": 0.4070363335022646,
+        "C_ss_real_relative_delta": 0.0005290969854952188,
+        "C_ss_real_x16": 0.12845021010715016,
+        "C_ss_real_x8": 0.12838224748819624,
+        "Gamma_ss_real_combined_z": 0.40750058580127285,
+        "Gamma_ss_real_relative_delta": 0.0005295713432529307,
+        "Gamma_ss_real_x16": 7.785113237837407,
+        "Gamma_ss_real_x8": 7.7892381951713405,
+        "mode": "1,1,0"
+      },
+      {
+        "C_ss_real_combined_z": 0.252907471948797,
+        "C_ss_real_relative_delta": 0.0002983806792915038,
+        "C_ss_real_x16": 0.13148892285884797,
+        "C_ss_real_x8": 0.13144968910472604,
+        "Gamma_ss_real_combined_z": 0.253318927597058,
+        "Gamma_ss_real_relative_delta": 0.00029863416772478045,
+        "Gamma_ss_real_x16": 7.605199878557459,
+        "Gamma_ss_real_x8": 7.607471729545901,
+        "mode": "1,1,1"
+      },
+      {
+        "C_ss_real_combined_z": 0.7678487485279647,
+        "C_ss_real_relative_delta": 0.001007867068846074,
+        "C_ss_real_x16": 0.1341283886597956,
+        "C_ss_real_x8": 0.133993205073868,
+        "Gamma_ss_real_combined_z": 0.7681073600467446,
+        "Gamma_ss_real_relative_delta": 0.001008037691656973,
+        "Gamma_ss_real_x16": 7.455538800889457,
+        "Gamma_ss_real_x8": 7.46306184852794,
+        "mode": "2,0,0"
+      },
+      {
+        "C_ss_real_combined_z": 0.4300997082353601,
+        "C_ss_real_relative_delta": 0.0005633504623873279,
+        "C_ss_real_x16": 0.13720457267009123,
+        "C_ss_real_x8": 0.13712727841063588,
+        "Gamma_ss_real_combined_z": 0.43013007249610447,
+        "Gamma_ss_real_relative_delta": 0.0005635515815101535,
+        "Gamma_ss_real_x16": 7.288383713196036,
+        "Gamma_ss_real_x8": 7.29249340939005,
+        "mode": "2,1,0"
+      },
+      {
+        "C_ss_real_combined_z": 0.6106378481949757,
+        "C_ss_real_relative_delta": 0.0006967483108272211,
+        "C_ss_real_x16": 0.1404052504618642,
+        "C_ss_real_x8": 0.14030742334077362,
+        "Gamma_ss_real_combined_z": 0.6108385706929153,
+        "Gamma_ss_real_relative_delta": 0.0006968536806723951,
+        "Gamma_ss_real_x16": 7.122238369464778,
+        "Gamma_ss_real_x8": 7.127204988493917,
+        "mode": "2,1,1"
+      },
+      {
+        "C_ss_real_combined_z": 0.09212398346749048,
+        "C_ss_real_relative_delta": 0.00010594765893262455,
+        "C_ss_real_x16": 0.14626424919928782,
+        "C_ss_real_x8": 0.14624875284449962,
+        "Gamma_ss_real_combined_z": 0.09214126682327958,
+        "Gamma_ss_real_relative_delta": 0.00010599566428832256,
+        "Gamma_ss_real_x16": 6.836937711110904,
+        "Gamma_ss_real_x8": 6.837662473686982,
+        "mode": "2,2,0"
+      }
+    ],
+    "slope_proxy_relative_delta": 0.004624694118823377,
+    "slope_proxy_x16": {
+      "available": true,
+      "intercept": 8.145319207271468,
+      "point_count": 8,
+      "slope": -0.665744825302094
+    },
+    "slope_proxy_x8": {
+      "available": true,
+      "intercept": 8.153229028807809,
+      "point_count": 8,
+      "slope": -0.6688379964507253
+    },
+    "stable": true,
+    "thresholds": {
+      "max_C_ss_relative_delta": 0.03,
+      "max_Gamma_ss_relative_delta": 0.03,
+      "max_noise_half_delta_over_stderr": 6.0,
+      "max_row_z": 4.0
+    }
   },
   "eight_mode_x8_launch_allowed_as_retained_evidence": false,
   "fail_count": 0,
@@ -19,10 +131,12 @@
   "proposal_allowed": false,
   "proposal_allowed_reason": "Variance calibration does not derive scalar LSZ normalization or physical y_t.",
   "run_control_match": {
-    "matched": false,
-    "unexpected_differences": [
-      "outputs absent"
-    ]
+    "allowed_differences": [
+      "production_output_dir",
+      "scalar_two_point_noises"
+    ],
+    "matched": true,
+    "unexpected_differences": []
   },
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",
@@ -32,25 +146,191 @@
   ],
   "validations": {
     "x16": {
-      "exists": false,
-      "issues": [
-        "output absent"
-      ],
+      "configuration_count_min": 16,
+      "exists": true,
+      "issues": [],
       "label": "x16",
+      "mode_keys": [
+        "0,0,0",
+        "1,0,0",
+        "1,1,0",
+        "1,1,1",
+        "2,0,0",
+        "2,1,0",
+        "2,1,1",
+        "2,2,0"
+      ],
+      "noise_half_delta_over_stderr_max": 4.386123834952684,
+      "noise_vectors_per_configuration": 16,
       "path": "outputs/yt_pr230_fh_lsz_variance_calibration_L12_T24_x16_2026-05-01.json",
-      "ready": false
+      "phase": "production",
+      "ready": true,
+      "run_control": {
+        "engine": "numba",
+        "fh_lsz_selected_mass_only": true,
+        "fh_lsz_selected_mass_parameter": 0.75,
+        "masses": [
+          0.75
+        ],
+        "measurement_separation_sweeps": 20,
+        "measurement_sweeps": 16,
+        "momentum_modes": [],
+        "normal_equation_cache_enabled": true,
+        "overrelaxation_sweeps": 4,
+        "pilot_targets": false,
+        "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_variance_calibration/L12_T24_x16",
+        "production_targets": true,
+        "scalar_source_shifts": [
+          -0.01,
+          0.0,
+          0.01
+        ],
+        "scalar_two_point_modes": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            0
+          ]
+        ],
+        "scalar_two_point_noises": 16,
+        "seed": 2026051801,
+        "seed_control_version": "numba_gauge_seed_v1",
+        "source_higgs_cross_modes": [],
+        "source_higgs_cross_noises": 0,
+        "source_higgs_operator_certificate": null,
+        "thermalization_sweeps": 1000,
+        "volumes": "12x24"
+      }
     },
     "x8": {
-      "exists": false,
-      "issues": [
-        "output absent"
-      ],
+      "configuration_count_min": 16,
+      "exists": true,
+      "issues": [],
       "label": "x8",
+      "mode_keys": [
+        "0,0,0",
+        "1,0,0",
+        "1,1,0",
+        "1,1,1",
+        "2,0,0",
+        "2,1,0",
+        "2,1,1",
+        "2,2,0"
+      ],
+      "noise_half_delta_over_stderr_max": 4.386447318035091,
+      "noise_vectors_per_configuration": 8,
       "path": "outputs/yt_pr230_fh_lsz_variance_calibration_L12_T24_x8_2026-05-01.json",
-      "ready": false
+      "phase": "production",
+      "ready": true,
+      "run_control": {
+        "engine": "numba",
+        "fh_lsz_selected_mass_only": true,
+        "fh_lsz_selected_mass_parameter": 0.75,
+        "masses": [
+          0.75
+        ],
+        "measurement_separation_sweeps": 20,
+        "measurement_sweeps": 16,
+        "momentum_modes": [],
+        "normal_equation_cache_enabled": true,
+        "overrelaxation_sweeps": 4,
+        "pilot_targets": false,
+        "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_variance_calibration/L12_T24_x8",
+        "production_targets": true,
+        "scalar_source_shifts": [
+          -0.01,
+          0.0,
+          0.01
+        ],
+        "scalar_two_point_modes": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            0
+          ]
+        ],
+        "scalar_two_point_noises": 8,
+        "seed": 2026051801,
+        "seed_control_version": "numba_gauge_seed_v1",
+        "source_higgs_cross_modes": [],
+        "source_higgs_cross_noises": 0,
+        "source_higgs_operator_certificate": null,
+        "thermalization_sweeps": 1000,
+        "volumes": "12x24"
+      }
     }
   },
-  "variance_calibration_gate_passed": false,
-  "verdict": "The paired x8/x16 calibration outputs are absent, so the x8 noise reduction remains unaccepted.",
-  "x8_noise_reduction_accepted_for_polefit_launch": false
+  "variance_calibration_gate_passed": true,
+  "verdict": "The paired x8/x16 calibration outputs satisfy the same-source run-control, eight-mode, stochastic stability, and row-stability checks.  This accepts x8 only as pole-fit launch support.",
+  "x8_noise_reduction_accepted_for_polefit_launch": true
 }

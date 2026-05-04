@@ -1,6 +1,6 @@
 # PR #230 FH/LSZ Paired Variance Calibration Gate
 
-**Status:** open / paired x8/x16 variance calibration awaiting production outputs  
+**Status:** bounded-support / paired x8/x16 variance calibration passed as launch support  
 **Runner:** `scripts/frontier_yt_fh_lsz_paired_variance_calibration_gate.py`  
 **Certificate:** `outputs/yt_fh_lsz_paired_variance_calibration_gate_2026-05-04.json`
 
@@ -25,10 +25,18 @@ the future outputs under one contract:
 
 ## Current Result
 
-The paired calibration outputs are absent, so x8 remains unaccepted.  The
-useful progress is contract-level: a future calibration wave will either pass
-or fail this gate directly instead of landing as an orphan output that the old
-variance gate cannot consume.
+The paired calibration outputs are present and pass the manifest contract as
+launch support.  The x8 and x16 runs share the same source coordinate and
+eight-mode list; the gate compares the production-phase outputs under the
+recorded stability thresholds.
+
+Accepted outputs:
+
+- `outputs/yt_pr230_fh_lsz_variance_calibration_L12_T24_x8_2026-05-01.json`
+- `outputs/yt_pr230_fh_lsz_variance_calibration_L12_T24_x16_2026-05-01.json`
+
+This accepts the eight-mode x8 setting only as a future pole-fit launch
+support choice.  It is not scalar-LSZ closure or physical `y_t` evidence.
 
 Verification:
 

@@ -1274,3 +1274,38 @@ support.  The common-window response gate now passes as response-side support.
 This is not y_t closure.  The remaining positive-retention blockers are
 scalar-LSZ pole/FV/IR/model-class control and canonical-Higgs/source-overlap
 closure.  No physical readout switch is authorized.
+
+## 2026-05-04 Chunks053-056 And Paired Variance Calibration
+
+Chunks053-056 have been packaged as bounded production support:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The ready L12 set is now `56/63` chunks and `896/1000` saved configurations.
+Target-observable ESS passes with limiting ESS `783.2344666684801`, but
+response-window acceptance remains open and the physical readout is still
+blocked by scalar-LSZ pole/FV/IR/model-class control and canonical-Higgs/source-
+overlap closure.
+
+The paired x8/x16 calibration stream also completed:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_paired_variance_calibration_gate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_eight_mode_noise_variance_gate.py
+# SUMMARY: PASS=11 FAIL=0
+```
+
+This accepts x8 only as future pole-fit launch support.  It is not scalar-LSZ
+closure, not production pole data, and not physical `y_t` evidence.
+
+Currently running: chunks057-060.  Continue monitoring the 53-63 wave
+orchestrator; it should launch chunks061-063 as slots free.  Package completed
+root outputs only after local and aggregate gates pass.
