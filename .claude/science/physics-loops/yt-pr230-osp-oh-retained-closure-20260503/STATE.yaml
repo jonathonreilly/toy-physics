@@ -47,6 +47,9 @@ files_touched:
   - "launched outputs/yt_pr230_fh_lsz_production_L12_T24_chunk032_2026-05-01.json"
   - "launched outputs/yt_pr230_fh_lsz_production_L12_T24_chunk033_2026-05-01.json"
   - "launched outputs/yt_pr230_fh_lsz_production_L12_T24_chunk034_2026-05-01.json"
+  - scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py
+  - docs/YT_FH_LSZ_CHUNK_WAVE_ORCHESTRATOR_NOTE_2026-05-04.md
+  - outputs/yt_fh_lsz_chunk_wave_orchestrator_status_2026-05-04.json
   - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
 commands_run:
   - "python3 -m py_compile scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py # pass"
@@ -76,6 +79,9 @@ commands_run:
   - "python3 scripts/yt_direct_lattice_correlator_production.py ... --seed 2026051032 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk032_2026-05-01.json # launched PID 3593"
   - "python3 scripts/yt_direct_lattice_correlator_production.py ... --seed 2026051033 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk033_2026-05-01.json # launched PID 7011"
   - "python3 scripts/yt_direct_lattice_correlator_production.py ... --seed 2026051034 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk034_2026-05-01.json # launched PID 7012"
+  - "python3 -m py_compile scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py # pass"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py --start-index 35 --end-index 40 --max-concurrent 6 --runtime-minutes 1 --dry-run --run-gates # detected chunks029-034 running, chunks035-040 missing"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py --start-index 35 --end-index 40 --max-concurrent 6 --runtime-minutes 720 --poll-seconds 60 --launch --run-gates # launched session 80241; first poll launched no chunks because six jobs already running"
 current_result: >
   O_sp is derived and unit-normalized, but the current PR230 surface does not
   derive O_sp = O_H.  A counterfamily holds Res(C_sp,sp)=1 and same-source top
@@ -102,12 +108,17 @@ current_result: >
   headroom after calibration completion, chunks031/032 were launched with
   fixed seeds 2026051031/2026051032 and monitor session 42070.  Load remained
   below the 10-core ceiling, so chunks033/034 were also launched with fixed
-  seeds 2026051033/2026051034 and monitor session 6375.
+  seeds 2026051033/2026051034 and monitor session 6375.  A chunk-wave
+  orchestrator was added and launched for chunks035-040 with a global
+  six-production-job cap; its first status certificate detected chunks029-034
+  running and launched no new chunks until slots open.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
   Monitor chunks029/030, chunks031/032, and chunks033/034.  When outputs land,
   rerun their chunk gates plus aggregate retained and campaign certificates.
+  Let the chunk-wave orchestrator launch chunks035-040 as slots open and
+  package its status alongside the next chunk checkpoint.
   While waiting, only take routes that can add a real new same-surface
   row/theorem: certified O_H/C_sH/C_HH pole residues, genuine same-source W/Z
   response rows, Schur A/B/C kernel rows, or a direct proof of the missing

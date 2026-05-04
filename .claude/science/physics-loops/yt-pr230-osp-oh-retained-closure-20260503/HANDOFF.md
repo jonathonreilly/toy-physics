@@ -140,6 +140,38 @@ Claim boundary: these are production-support chunks only.  They do not
 authorize retained/proposed-retained closure without the downstream scalar
 LSZ, source-Higgs/WZ/rank-one, and retained-route gates.
 
+## 2026-05-04 Chunk-Wave Orchestrator
+
+Added and dry-ran the L12 chunk-wave orchestrator:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py
+# pass
+
+python3 scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py \
+  --start-index 35 --end-index 40 --max-concurrent 6 \
+  --runtime-minutes 1 --dry-run --run-gates
+# detected all_running=[29,30,31,32,33,34], missing=[35,36,37,38,39,40]
+```
+
+Then launched the live 12-hour orchestrator session for chunks035-040:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py \
+  --start-index 35 --end-index 40 --max-concurrent 6 \
+  --runtime-minutes 720 --poll-seconds 60 --launch --run-gates
+```
+
+The first status certificate is
+`outputs/yt_fh_lsz_chunk_wave_orchestrator_status_2026-05-04.json`.  It is
+bounded run-control support only: chunks029-034 were already occupying all six
+allowed production slots, so the orchestrator launched no new chunks on its
+first poll and will launch chunks035-040 only as slots open.
+
+The source-Higgs, W/Z, neutral-rank, Schur/K-prime, global proof, assumption,
+retained-route, and campaign gates remain the actual claim surfaces.  The
+orchestrator does not authorize retained or proposed-retained wording.
+
 ## 2026-05-04 Chunk033-034 Launch
 
 Load remained below the 10-core ceiling after chunks031/032 launched, so I

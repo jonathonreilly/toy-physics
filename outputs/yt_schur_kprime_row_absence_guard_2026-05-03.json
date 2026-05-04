@@ -80,8 +80,13 @@
   "scan": {
     "complete_schur_row_hits": [],
     "current_schur_kernel_rows_present": false,
-    "metadata_absent_guards": [],
-    "scanned_file_count": 49,
+    "metadata_absent_guards": [
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk025_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk026_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk027_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk028_2026-05-01.json"
+    ],
+    "scanned_file_count": 57,
     "scanned_files": [
       "outputs/yt_direct_lattice_correlator_certificate_2026-04-30.json",
       "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk001_2026-05-01.json",
@@ -108,6 +113,10 @@
       "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk022_2026-05-01.json",
       "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk023_2026-05-01.json",
       "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk024_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk025_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk026_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk027_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk028_2026-05-01.json",
       "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk001/L12xT24/ensemble_measurement.json",
       "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk002/L12xT24/ensemble_measurement.json",
       "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk003/L12xT24/ensemble_measurement.json",
@@ -131,7 +140,11 @@
       "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk021/L12xT24/ensemble_measurement.json",
       "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk022/L12xT24/ensemble_measurement.json",
       "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk023/L12xT24/ensemble_measurement.json",
-      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk024/L12xT24/ensemble_measurement.json"
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk024/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk025/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk026/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk027/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk028/L12xT24/ensemble_measurement.json"
     ],
     "schur_row_hits": []
   },
