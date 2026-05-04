@@ -11,7 +11,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 15
+block: 16
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -115,6 +115,11 @@ files_touched:
   - outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk036/
   - outputs/yt_fh_lsz_chunk036_target_timeseries_generic_checkpoint_2026-05-02.json
   - outputs/yt_fh_lsz_chunk036_multitau_target_timeseries_checkpoint_2026-05-03.json
+  - scripts/frontier_yt_fh_lsz_legacy_v2_backfill_feasibility.py
+  - docs/YT_FH_LSZ_LEGACY_V2_BACKFILL_FEASIBILITY_NOTE_2026-05-04.md
+  - outputs/yt_fh_lsz_legacy_v2_backfill_feasibility_2026-05-04.json
+  - "launched outputs/yt_pr230_fh_lsz_production_L12_T24_chunk041_2026-05-01.json"
+  - "launched outputs/yt_pr230_fh_lsz_production_L12_T24_chunk042_2026-05-01.json"
   - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
 commands_run:
   - "python3 -m py_compile scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py # pass"
@@ -223,6 +228,10 @@ commands_run:
   - "python3 scripts/frontier_yt_neutral_scalar_irreducibility_authority_audit.py # PASS=11 FAIL=0"
   - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=148 FAIL=0"
   - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=174 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_legacy_v2_backfill_feasibility.py # PASS=10 FAIL=0"
+  - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=149 FAIL=0"
+  - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=175 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py --start-index 41 --end-index 46 --max-concurrent 6 --runtime-minutes 720 --poll-seconds 60 --launch --run-gates # launched chunks041-042; chunks037-040 already running"
   - "python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 36 # PASS=19 FAIL=0"
   - "python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 36 # PASS=14 FAIL=0"
   - "python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py # PASS=9 FAIL=0, 35/63 ready"

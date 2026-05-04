@@ -140,6 +140,42 @@ Claim boundary: these are production-support chunks only.  They do not
 authorize retained/proposed-retained closure without the downstream scalar
 LSZ, source-Higgs/WZ/rank-one, and retained-route gates.
 
+## 2026-05-04 Legacy v2 Backfill Feasibility + Chunk041-042 Launch
+
+The next production-hygiene target was the legacy v2 row question.  The audit
+found that chunks001-016 cannot be honestly v2-backfilled from saved artifacts:
+they contain aggregate source-shift correlators and legacy tau=1
+per-configuration rows, but not the raw per-configuration source-shift
+correlator time series needed for v2 multi-tau covariance rows.
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_legacy_v2_backfill_feasibility.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=149 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=175 FAIL=0
+```
+
+This retires the false backfill option.  Use chunks017+ as the honest v2
+multi-tau population, or rerun chunks001-016 with the current harness if an
+all-configuration same-schema covariance table becomes required.
+
+I also launched the next chunk-wave orchestrator range:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py \
+  --start-index 41 --end-index 46 --max-concurrent 6 \
+  --runtime-minutes 720 --poll-seconds 60 --launch --run-gates
+```
+
+The first poll launched chunks041 and 042 while chunks037-040 were already
+running.  Next exact action: keep monitoring the chunk-wave session.  When
+chunks037/038/039/040 or later chunks land, package them with local chunk
+gates and refresh the aggregate certificates.
+
 ## 2026-05-04 Source-Higgs Readiness And Chunks029-030 Packaging
 
 The source-Higgs production row path was narrowed to a launch-readiness

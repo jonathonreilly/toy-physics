@@ -193,6 +193,7 @@ def main() -> int:
         "fh_lsz_autocorrelation_ess_gate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
         "fh_lsz_response_window_forensics": "outputs/yt_fh_lsz_response_window_forensics_2026-05-03.json",
         "fh_lsz_response_window_acceptance_gate": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
+        "fh_lsz_legacy_v2_backfill_feasibility": "outputs/yt_fh_lsz_legacy_v2_backfill_feasibility_2026-05-04.json",
         "fh_lsz_target_timeseries_replacement_queue": "outputs/yt_fh_lsz_target_timeseries_replacement_queue_2026-05-02.json",
         "fh_lsz_target_timeseries_harness": "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json",
         "fh_lsz_multitau_target_timeseries_harness": "outputs/yt_fh_lsz_multitau_target_timeseries_harness_certificate_2026-05-03.json",
@@ -502,6 +503,15 @@ def main() -> int:
         "v2 multi-tau target-timeseries checkpoint" in cert.get("actual_current_surface_status", "")
         and cert.get("proposal_allowed") is False
         for cert in multitau_chunk_target_certificates.values()
+    )
+    legacy_v2_backfill_not_possible = (
+        "legacy chunks001-016 cannot be honestly v2-backfilled"
+        in certificates["fh_lsz_legacy_v2_backfill_feasibility"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_legacy_v2_backfill_feasibility"].get("proposal_allowed") is False
+        and certificates["fh_lsz_legacy_v2_backfill_feasibility"]
+        .get("legacy_summary", {})
+        .get("honest_v2_backfill_possible")
+        is False
     )
     pole_fit_kinematics_not_closure = (
         "scalar-pole kinematics gate"
@@ -1632,6 +1642,11 @@ def main() -> int:
         "fh-lsz-v2-multitau-chunk-target-checkpoints-discovered",
         multitau_chunk_targets_not_closure,
         f"count={len(multitau_chunk_target_certificates)}",
+    )
+    report(
+        "fh-lsz-legacy-v2-backfill-boundary",
+        legacy_v2_backfill_not_possible,
+        certificates["fh_lsz_legacy_v2_backfill_feasibility"].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-pole-fit-kinematics-not-closure",

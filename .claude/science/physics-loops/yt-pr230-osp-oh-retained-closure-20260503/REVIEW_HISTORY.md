@@ -287,3 +287,21 @@ Findings:
 - No retained/proposed-retained claim is authorized because scalar LSZ,
   canonical-Higgs/source-overlap, W/Z response, Schur-row, and retained-route
   gates remain open.
+
+## 2026-05-04 Legacy v2 Backfill Feasibility Self-Review
+
+Disposition: exact negative boundary for legacy chunks001-016; continue
+campaign.
+
+Findings:
+
+- The runner inspects saved chunk outputs and artifacts without mutating them.
+- Legacy chunks001-016 have aggregate source-shift correlators and tau=1
+  per-configuration rows, but no raw per-configuration source-shift correlator
+  time series.
+- Therefore an aggregate-only multi-tau reconstruction would be schema
+  padding, not v2 response-window covariance evidence.
+- Chunks017-036 remain the honest v2 reference population; chunks041/042 are
+  launched and chunks037-040 continue running.
+- No retained/proposed-retained claim is authorized; this is run-control and
+  evidence-quality hygiene only.

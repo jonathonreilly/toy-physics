@@ -50,6 +50,13 @@ Open imports:
   production support only; the 36/63 ready L12 state passes target-observable ESS but
   still fails response-window acceptance and does not provide canonical-Higgs/
   source-overlap closure;
+- chunks041/042 are now launched under the chunk-wave orchestrator while
+  chunks037-040 continue running; this is run-control only until their output
+  certificates land and local/aggregate gates pass;
+- the legacy-v2 backfill feasibility audit is an exact negative boundary:
+  chunks001-016 contain aggregate correlators and tau=1 per-configuration rows
+  but no raw per-configuration source-shift correlator time series, so v2
+  multi-tau covariance rows cannot be honestly backfilled from saved artifacts;
 - source-Higgs production readiness is blocked by the missing same-surface
   `O_H` certificate; current chunks were source-Higgs absent-guarded and have
   no `C_sH/C_HH` rows;

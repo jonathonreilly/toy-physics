@@ -383,6 +383,9 @@ def main() -> int:
         "fh_lsz_response_window_acceptance_gate": load(
             "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json"
         ),
+        "fh_lsz_legacy_v2_backfill_feasibility": load(
+            "outputs/yt_fh_lsz_legacy_v2_backfill_feasibility_2026-05-04.json"
+        ),
         "fh_lsz_target_timeseries_replacement_queue": load(
             "outputs/yt_fh_lsz_target_timeseries_replacement_queue_2026-05-02.json"
         ),
@@ -719,6 +722,12 @@ def main() -> int:
             for status in multitau_chunk_target_statuses.values()
         ),
         f"count={len(multitau_chunk_target_statuses)}",
+    )
+    report(
+        "fh-lsz-legacy-v2-backfill-boundary",
+        "legacy chunks001-016 cannot be honestly v2-backfilled"
+        in str(statuses["fh_lsz_legacy_v2_backfill_feasibility"]),
+        statuses["fh_lsz_legacy_v2_backfill_feasibility"],
     )
     report(
         "fh-lsz-pole-fit-kinematics-not-closure",
