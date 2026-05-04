@@ -325,7 +325,6 @@ def build_graph() -> dict:
     leaves = [cid for cid in nodes if not any(e["to"] == cid for e in edges)]
 
     return {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
         "schema_version": 1,
         "stats": {
             "node_count": len(nodes),

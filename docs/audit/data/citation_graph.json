@@ -23269,7 +23269,6 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-04T11:15:43.350419+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -24397,7 +24396,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "30c3d7012e9407c4a00794d5c8e29da42107846886ce96eb0fda3fbc8d355f60",
+      "note_hash": "5fb6a4b924dc365e7a719ec619a581c621424fcb74a7a771bff8f2e62b6630ed",
       "path": "docs/ai_methodology/skills/audit-loop/SKILL.md",
       "runner_path": "scripts/audit_lint.py",
       "title": "Audit Loop"

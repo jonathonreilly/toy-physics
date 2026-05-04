@@ -203,7 +203,6 @@ def main() -> int:
         invalidated.append((cid, reason))
 
     ledger["rows"] = rows
-    ledger["invalidation_run_at"] = datetime.now(timezone.utc).isoformat()
     ledger["last_invalidations"] = [{"claim_id": c, "reason": r} for c, r in invalidated]
 
     LEDGER_PATH.write_text(json.dumps(ledger, indent=2, sort_keys=True) + "\n")

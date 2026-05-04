@@ -204,7 +204,6 @@ def main() -> int:
     out: list[str] = []
     out.append("# Audit Ledger")
     out.append("")
-    out.append(f"**Generated:** {datetime.now(timezone.utc).isoformat()}")
     out.append("**Source of truth:** `data/audit_ledger.json`")
     out.append("**Schema:** see [README.md](README.md), "
                "[FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and "

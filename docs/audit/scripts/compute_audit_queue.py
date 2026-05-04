@@ -119,7 +119,6 @@ def main() -> int:
     )
 
     queue = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
         "total_pending": len(pending),
         "ready_count": sum(1 for e in pending if e["ready"]),
         "by_criticality": {
@@ -135,7 +134,6 @@ def main() -> int:
     md_lines = [
         "# Audit Queue",
         "",
-        f"**Generated:** {queue['generated_at']}",
         f"**Total pending:** {queue['total_pending']}",
         f"**Ready (all deps already at retained-grade or metadata tiers):** {queue['ready_count']}",
         "",

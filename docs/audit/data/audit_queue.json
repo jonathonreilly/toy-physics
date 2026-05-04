@@ -5,7 +5,6 @@
     "leaf": 175,
     "medium": 240
   },
-  "generated_at": "2026-05-04T11:15:47.603290+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",

@@ -2653,7 +2653,6 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-05-04T11:15:47.548155+00:00",
   "length_counts": {
     "2": 7,
     "3": 18,
@@ -2666,6 +2665,5 @@
     "max_transitive_descendants descending",
     "length ascending",
     "claim_id list ascending"
-  ],
-  "source_graph_generated_at": "2026-05-04T11:15:43.350419+00:00"
+  ]
 }
