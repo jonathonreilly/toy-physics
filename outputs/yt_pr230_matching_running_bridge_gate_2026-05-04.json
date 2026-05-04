@@ -1,0 +1,54 @@
+{
+  "actual_current_surface_status": "open / PR230 matching-running bridge awaits certified physical input",
+  "allowed_readout_kinds": [
+    "direct_correlator_mass",
+    "fh_lsz_source_pole",
+    "same_source_wz_response",
+    "source_higgs_gram"
+  ],
+  "bare_retained_allowed": false,
+  "bridge_contract_ready": true,
+  "candidate_certificate": "outputs/yt_pr230_matching_running_bridge_certificate_2026-05-04.json",
+  "candidate_certificate_checks": {},
+  "candidate_certificate_failed_checks": [],
+  "candidate_certificate_present": false,
+  "exact_next_action": "After production/LSZ/source-overlap or direct-mass gates pass, emit a PR230 matching-running bridge certificate with 4/5-loop SM running, MSbar-to-pole conversion, scale-setting and matching uncertainties, then rerun the full closure assembly gate.",
+  "fail_count": 0,
+  "matching_running_bridge_passed": false,
+  "parent_references": {
+    "k1": "docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md",
+    "k2": "docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
+    "k3": "docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
+    "v_input": "docs/MINIMAL_AXIOMS_2026-04-11.md"
+  },
+  "pass_count": 5,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No certified production readout with scalar-LSZ/direct-mass, source-overlap/direct-mass, scale-setting, and 4/5-loop running inputs has been supplied.",
+  "required_candidate_fields": [
+    "certificate_kind = pr230_matching_running_bridge",
+    "input_readout_reference to certified physical readout",
+    "physical_inputs_certified = true",
+    "scalar_lsz_or_direct_mass_certified = true",
+    "source_overlap_or_direct_mass_certified = true",
+    "scale_anchor_certified = true",
+    "v_input_declared_as_substrate = true",
+    "sm_rge_loop_order in {4, 5}",
+    "msbar_to_pole_order >= 3",
+    "complete uncertainty budget",
+    "shortcut firewall flags all false"
+  ],
+  "sample_arithmetic_sanity_not_evidence": {
+    "sample_alpha_s": 0.1,
+    "sample_m_msbar_v_GeV": 100.0,
+    "sample_m_pole_GeV": 105.611954688033,
+    "sample_msbar_to_pole_factor_3loop": 1.05611954688033,
+    "sample_y_t_v": 0.5742233957657195
+  },
+  "strict_non_claims": [
+    "does not run from observed m_t or observed y_t",
+    "does not use H_unit or yt_ward_identity",
+    "does not use alpha_LM, plaquette, or u0 authority",
+    "does not set kappa_s, c2, Z_match, or cos(theta) to one",
+    "does not claim current physical y_t or m_t"
+  ]
+}

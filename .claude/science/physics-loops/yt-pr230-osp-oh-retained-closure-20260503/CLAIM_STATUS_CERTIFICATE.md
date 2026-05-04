@@ -199,4 +199,9 @@ Open imports:
   control, observed selectors, and `kappa/c2/Z_match` shortcuts, but it
   supplies no scalar LSZ normalization, denominator theorem, or pole
   saturation;
+- the PR230 matching/running bridge gate is open: the contract for a future
+  lattice-scale to `y_t(v)` / `m_t(pole)` bridge is executable and rejects
+  observed selectors plus `H_unit`/Ward, `alpha_LM`/plaquette, and
+  `kappa/c2/Z_match` shortcuts, but no certified physical input readout has
+  been supplied;
 - independent audit after any proposed positive certificate.

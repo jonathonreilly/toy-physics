@@ -237,6 +237,7 @@
     "osp_oh_identity_stretch": "exact negative boundary / O_sp-to-O_H identity not derived on current surface",
     "osp_oh_literature_bridge": "bounded-support / O_sp/O_H literature bridge; no current-surface closure import",
     "positivity_improving_neutral_scalar_rank_one": "conditional-support / positivity-improving neutral-scalar rank-one theorem; premise absent",
+    "pr230_matching_running_bridge_gate": "open / PR230 matching-running bridge awaits certified physical input",
     "production_resource": "bounded support / production resource projection",
     "projector_norm": "exact negative boundary / projector-normalization obstruction",
     "reflection_positivity_lsz_shortcut": "exact negative boundary / reflection positivity not scalar LSZ closure",
@@ -302,7 +303,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 189,
+  "pass_count": 190,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

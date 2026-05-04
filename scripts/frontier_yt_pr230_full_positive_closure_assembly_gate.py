@@ -51,6 +51,7 @@ PARENTS = {
     "neutral_scalar_irreducibility": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
     "schur_kprime_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
     "schur_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+    "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
 PASS_COUNT = 0
@@ -254,6 +255,10 @@ def main() -> int:
         and certs["source_pole_purity"].get("proposal_allowed") is False
         and certs["canonical_higgs_operator"].get("proposal_allowed") is False
     )
+    matching_running_blocks = (
+        certs["matching_running"].get("matching_running_bridge_passed") is not True
+        and certs["matching_running"].get("proposal_allowed") is False
+    )
     retained_route_open = (
         "retained closure not yet reached" in statuses["retained_route"]
         and certs["retained_route"].get("proposal_allowed") is False
@@ -267,7 +272,7 @@ def main() -> int:
         "production_physical_response": False,
         "scalar_lsz_model_class_fv_ir": False,
         "source_overlap_or_physical_response_bridge": any_bridge_passes,
-        "matching_running_bridge": False,
+        "matching_running_bridge": truth(certs["matching_running"], "matching_running_bridge_passed"),
         "retained_proposal_firewall": False,
         "forbidden_import_firewall": True,
     }
@@ -307,6 +312,7 @@ def main() -> int:
     )
     report("scalar-lsz-model-fv-ir-blocked", scalar_lsz_blocks, "model-class/FV/IR/threshold controls still block retained use")
     report("source-overlap-bridge-absent", source_overlap_blocks, f"route_passes={any_bridge_passes}")
+    report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
     report("current-surface-assembly-rejected", not current_eval["assembly_passed"], f"missing={current_eval['missing']}")

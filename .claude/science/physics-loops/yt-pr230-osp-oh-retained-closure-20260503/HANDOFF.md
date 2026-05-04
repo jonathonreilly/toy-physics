@@ -1823,3 +1823,43 @@ control, threshold or scalar-denominator control, and the shortcut firewall.
 Next exact action: attempt a positive scalar-denominator / pole-saturation
 certificate from repo primitives, or pivot to same-source W/Z, source-Higgs
 Gram rows, Schur/K-prime rows, or neutral-rank proof if that attempt fails.
+
+## 2026-05-04 PR230 Matching/Running Bridge Gate
+
+This non-chunk block turns the final lattice-scale to physical-scale bridge
+into an executable certificate contract.  It does not consume or package chunk
+outputs and it does not claim a physical readout.
+
+Verification:
+
+```bash
+python3 -m py_compile \
+  scripts/frontier_yt_pr230_matching_running_bridge_gate.py \
+  scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py \
+  scripts/frontier_yt_retained_closure_route_certificate.py \
+  scripts/frontier_yt_pr230_campaign_status_certificate.py
+# pass
+
+python3 scripts/frontier_yt_pr230_matching_running_bridge_gate.py
+# SUMMARY: PASS=5 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=16 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=164 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=190 FAIL=0
+```
+
+Result: the matching/running bridge is now contract-ready but open.  A future
+certificate must reference a certified physical PR230 readout, use 4/5-loop SM
+running and at least 3-loop MSbar-to-pole conversion, include complete
+uncertainties, declare `v` only as substrate input, and pass shortcut
+firewalls for observed selectors, `H_unit`/Ward, `alpha_LM`/plaquette, and
+`kappa/c2/Z_match`.
+
+Next exact action: continue the positive non-chunk route with a real
+source-overlap bridge (`O_H/C_sH/C_HH`, W/Z response, Schur rows, or
+neutral-rank theorem) or a real scalar-LSZ denominator/pole-saturation theorem.

@@ -137,6 +137,7 @@ def main() -> int:
         "neutral_scalar_irreducibility_authority_audit": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
+        "pr230_matching_running_bridge_gate": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
         "schur_complement_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
         "schur_kprime_row_absence_guard": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
         "legacy_schur_bridge_import_audit": "outputs/yt_legacy_schur_bridge_import_audit_2026-05-03.json",
@@ -869,6 +870,12 @@ def main() -> int:
         in certificates["kprime_closure"].get("actual_current_surface_status", "")
         and certificates["kprime_closure"].get("proposal_allowed") is False
         and certificates["kprime_closure"].get("kprime_closed") is False
+    )
+    matching_running_bridge_gate_open = (
+        "matching-running bridge awaits certified physical input"
+        in certificates["pr230_matching_running_bridge_gate"].get("actual_current_surface_status", "")
+        and certificates["pr230_matching_running_bridge_gate"].get("proposal_allowed") is False
+        and certificates["pr230_matching_running_bridge_gate"].get("matching_running_bridge_passed") is False
     )
     schur_complement_kprime_sufficiency_not_closure = (
         "Schur-complement K-prime sufficiency theorem"
@@ -1962,6 +1969,11 @@ def main() -> int:
         "kprime-closure-attempt-blocked",
         kprime_closure_blocked,
         certificates["kprime_closure"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "pr230-matching-running-bridge-gate-open",
+        matching_running_bridge_gate_open,
+        certificates["pr230_matching_running_bridge_gate"].get("actual_current_surface_status", ""),
     )
     report(
         "schur-complement-kprime-sufficiency-not-closure",

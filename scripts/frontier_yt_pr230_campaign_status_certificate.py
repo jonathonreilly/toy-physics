@@ -215,6 +215,9 @@ def main() -> int:
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
         "kprime_closure": load("outputs/yt_kprime_closure_attempt_2026-05-02.json"),
+        "pr230_matching_running_bridge_gate": load(
+            "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json"
+        ),
         "schur_complement_kprime_sufficiency": load(
             "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json"
         ),
@@ -1023,6 +1026,13 @@ def main() -> int:
         "kprime-closure-attempt-blocked",
         "K-prime closure attempt blocked" in str(statuses["kprime_closure"]),
         statuses["kprime_closure"],
+    )
+    report(
+        "pr230-matching-running-bridge-gate-open",
+        "matching-running bridge awaits certified physical input"
+        in str(statuses["pr230_matching_running_bridge_gate"])
+        and certificates["pr230_matching_running_bridge_gate"].get("proposal_allowed") is False,
+        statuses["pr230_matching_running_bridge_gate"],
     )
     report(
         "schur-complement-kprime-sufficiency-not-closure",

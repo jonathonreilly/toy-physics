@@ -781,3 +781,19 @@ Findings checked:
   theorem, no pole saturation, and no physical `y_t` readout.
 - Aggregate assembly, retained-route, and campaign certificates remain open
   and proposal-forbidden.
+
+# 2026-05-04 PR230 Matching/Running Bridge Gate Self-Review
+
+Disposition: pass as bridge-contract support, not as closure.
+
+Findings checked:
+
+- The new gate creates an executable future certificate schema for converting
+  a certified PR230 lattice-scale readout into `y_t(v)` and `m_t(pole)`.
+- The current candidate bridge certificate is absent, so
+  `matching_running_bridge_passed` remains false and the assembly gate still
+  rejects both current and chunk-only surfaces.
+- The gate rejects observed selectors and `H_unit`/Ward, `alpha_LM`/plaquette,
+  and `kappa/c2/Z_match` shortcuts.
+- The toy arithmetic sanity row is explicitly not evidence and no
+  retained/proposed_retained claim is authorized.

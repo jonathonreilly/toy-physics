@@ -28,7 +28,8 @@ authorized:
   identity, same-surface Schur/K-prime rows plus canonical bridge, or a
   neutral-scalar rank-one/irreducibility theorem;
 - matching/running bridge whose inputs are measured or certified, not selected
-  from observed target values;
+  from observed target values; this is now guarded by
+  `scripts/frontier_yt_pr230_matching_running_bridge_gate.py`;
 - retained-route and campaign certificates authorizing a proposal with no
   forbidden imports or open load-bearing assumptions.
 
@@ -38,6 +39,9 @@ The gate rejects the current PR #230 surface.  It also rejects a hypothetical
 chunk-only completion: even perfect chunk data would still lack scalar LSZ
 model-class/FV/IR control, a canonical-Higgs/source-overlap bridge, matching
 authority, and retained-route authorization.
+
+The matching/running bridge contract is executable, but the candidate bridge
+certificate is absent, so this condition remains open on the current surface.
 
 The current positive non-chunk bridge candidates remain:
 
