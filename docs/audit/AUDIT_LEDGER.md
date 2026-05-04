@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 204 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 17 |
-| unaudited | 898 |
+| unaudited | 895 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 14 |
-| ~~audited_conditional~~ | 365 |
+| ~~audited_conditional~~ | 368 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,21 +37,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 357 |
-| `audited_conditional` | 365 |
+| `audited_conditional` | 368 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 14 |
-| `unaudited` | 945 |
+| `unaudited` | 942 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 597 |
 | `decoration` | 9 |
 | `meta` | 47 |
-| `no_go` | 166 |
+| `no_go` | 167 |
 | `open_gate` | 95 |
-| `positive_theorem` | 851 |
+| `positive_theorem` | 850 |
 
 | criticality | count |
 |---|---:|
@@ -737,6 +737,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_dirac_z3_support_trichotomy_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `neutrino_lane4_theorem_plan_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `neutrino_lane4_workstream_closeout_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `neutrino_majorana_current_stack_exhaustion_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `newton_persistent_pattern_control_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `nonlinear_born_gravity_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -827,6 +828,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wilson_two_body_open_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `work_history.potential_publication_discoveries_log` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `yt_bridge_hessian_selector_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `yt_bridge_higher_order_corrections_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `yt_exact_hessian_selector_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
@@ -8320,6 +8323,26 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the workstream-progress claims depend on prior cycle notes, A_min policy, and C2-X status that are not available as one-hop ledger inputs. Why this blocks: the audit can accept the boundary language, but cannot ratify the summarized structural progress or PR/workstream assertions from the restricted record. Repair target: register the cycle artifacts as dependencies and audit the C2-X gate or the named SR attack frame that closes it. Claim boundary until fixed: close-out and handoff inventory only; 4D remains bounded conditional.
 - **auditor confidence:** high
 
+### `neutrino_majorana_current_stack_exhaustion_note`
+
+- **Note:** [`NEUTRINO_MAJORANA_CURRENT_STACK_EXHAUSTION_NOTE.md`](../../docs/NEUTRINO_MAJORANA_CURRENT_STACK_EXHAUSTION_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Audited only the restricted packet's claim that the present retained Majorana stack cannot force a nonzero activation law because its retained normal/source-response data are blind to the Pfaffian amplitude and the retained Z3 lift does not activate it.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260504-132106-a3df5d7f-neutrino_majorana_curren-002`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The current retained normal signature and observable-principle jet are identical across the full mu family, including mu=0 and mu>0.  _(class `A`)_
+- **chain closes:** False — The packet does not provide the upstream retained theorems that define and close the actual retained stack. The runner demonstrates toy algebraic checks and in places makes mu-blindness true by constructing signatures and jets from a kernel that does not depend on mu.
+- **rationale:** The source note explicitly depends on several upstream surfaces, but the restricted packet provides no cited authorities for them. The runner source does not derive the current retained stack from axioms; it instantiates small toy matrices and operator examples, including mu-independent retained data by construction. Thus the no-go conclusion may be a valid synthesis if the missing upstream retained results are admitted, but it does not close from this packet alone.
+- **open / conditional deps cited:**
+  - `NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md`
+  - `NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md`
+  - `NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md`
+  - `NEUTRINO_MAJORANA_Z3_NONACTIVATION_THEOREM_NOTE.md`
+  - `NEUTRINO_MAJORANA_OBSERVABLE_PRINCIPLE_OBSTRUCTION_NOTE.md`
+  - `publication/ci3_z3/DERIVATION_ATLAS.md`
+- **auditor confidence:** high
+
 ### `neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28`
 
 - **Note:** [`NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md`](../../docs/NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md)
@@ -12409,6 +12432,32 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** Inside the viable UV-localized bridge scan, the low-energy endpoint deviation is almost perfectly correlated with the normalized gauge-surplus action I2, and near-target rows collapse into a narrow I2 band.  _(class `G`)_
 - **chain closes:** False — Strong scan correlation is real, but rows are selected by proximity to the accepted endpoint and chosen profile families; the bridge action invariant is not derived from the exact interacting bridge operator.
 - **rationale:** Re-audit confirms the original numerical-match verdict: target-conditioned scan reduction, not a structural theorem. Scope narrowed from the migration backfill to the bounded scan reduction.
+- **auditor confidence:** high
+
+### `yt_bridge_hessian_selector_note`
+
+- **Note:** [`YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md`](../../docs/YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the leading-order claim that the exact interacting lattice bridge induces a positive local quadratic Hessian selector on the forced UV window.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260504-132106-a3df5d7f-yt_bridge_hessian_select-001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The coarse-grained bridge action has a local expansion with no linear term and a positive local Hessian because the accepted saddle is stable and quasi-local on the forced UV window.  _(class `A`)_
+- **chain closes:** False — The Taylor/Hessian inference is standard only after assuming a stable quasi-local accepted saddle. The restricted packet provides no retained upstream authority or axiom-level derivation of that saddle, locality, or the identification of the runner's inferred family stiffness with the exact bridge Hessian.
+- **rationale:** The note explicitly relies on earlier branch results that are not provided as cited authorities, so the bridge stability and UV-locality premises are imported rather than closed in this packet. The runner performs real numerical work, but it uses fixed phenomenological constants, a chosen accepted logistic bridge, and a search over parametric bridge families selected against the physical top-Yukawa target. It verifies consistency of that ansatz family and response kernel; it does not compute the exact interacting lattice bridge Hessian from the axiom.
+- **auditor confidence:** high
+
+### `yt_bridge_higher_order_corrections_note`
+
+- **Note:** [`YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md`](../../docs/YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded numerical hierarchy test for cubic and quartic amplitude corrections around the selected UV-localized bridge profile.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260504-132106-a3df5d7f-yt_bridge_higher_order_c-003`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the probe tube |δ| <= 0.10, |cubic + quartic| / quadratic = 7.123842e-03, so the quadratic leading piece dominates the higher-order corrections.  _(class `G`)_
+- **chain closes:** False — The runner does compute the polynomial fit and correction ratios, but the selected bridge family, endpoint target, electroweak inputs, plaquette normalization, and RG setup are imported rather than derived from the restricted packet. The chain therefore does not close from the axiom alone.
+- **rationale:** The source note is honest that this is bounded support, and the runner source appears to perform the advertised amplitude scan rather than merely print constants. However, the load-bearing hierarchy is conditional on a chosen constructive bridge family and on embedded calibrated inputs, including the accepted target endpoint used to select the best bridge. Because no cited retained authority or first-principles axiom derivation closes those dependencies in the restricted packet, the claim cannot be audited clean.
 - **auditor confidence:** high
 
 ### `yt_bridge_moment_closure_note`

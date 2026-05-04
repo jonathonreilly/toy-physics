@@ -19,10 +19,10 @@ publication tables phrase it.
 |---|---|---:|
 | high | `unaudited` | 208 |
 | medium | `unaudited` | 99 |
-| critical | `unaudited` | 66 |
+| critical | `unaudited` | 64 |
 | medium | `audited_conditional` | 50 |
 | high | `audited_conditional` | 45 |
-| critical | `audited_conditional` | 30 |
+| critical | `audited_conditional` | 32 |
 | medium | `audited_numerical_match` | 9 |
 | high | `audited_renaming` | 8 |
 | high | `audited_numerical_match` | 4 |
@@ -132,8 +132,8 @@ publication tables phrase it.
 | critical | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `yt_boundary_theorem` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `yt_bridge_endpoint_shift_bound_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
-| critical | `yt_bridge_hessian_selector_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
-| critical | `yt_bridge_higher_order_corrections_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| critical | `yt_bridge_hessian_selector_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
+| critical | `yt_bridge_higher_order_corrections_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `yt_bridge_nonlocal_corrections_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `yt_bridge_uv_class_uniqueness_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `yt_color_projection_correction_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
