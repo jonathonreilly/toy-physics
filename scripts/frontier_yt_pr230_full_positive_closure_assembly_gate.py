@@ -67,6 +67,7 @@ PARENTS = {
     "same_source_w_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
     "wz_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
     "wz_harness_smoke_schema": "outputs/yt_pr230_wz_harness_smoke_schema_gate_2026-05-05.json",
+    "wz_smoke_to_production_no_go": "outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
     "electroweak_g2_certificate_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
@@ -245,6 +246,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "same-source W-response row builder strict inputs absent",
                 "lightweight same-source W readout production rows absent",
                 "W/Z harness smoke schema path is synthetic infrastructure only",
+                "W/Z smoke rows cannot be promoted to production W/Z response",
                 "W/Z mass-fit response-row builder strict inputs absent",
                 "strict electroweak g2 certificate builder inputs absent",
                 "SU(2) generator/Casimir normalization rejected as g2 authority",
@@ -272,6 +274,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["same_source_w_lightweight_readout"],
                 PARENTS["wz_certificate_gate"],
                 PARENTS["wz_harness_smoke_schema"],
+                PARENTS["wz_smoke_to_production_no_go"],
                 PARENTS["wz_mass_fit_path"],
                 PARENTS["wz_mass_fit_response_row_builder"],
                 PARENTS["electroweak_g2_certificate_builder"],
@@ -1124,6 +1127,16 @@ def main() -> int:
         and certs["wz_harness_smoke_schema"].get("proposal_allowed") is False
         and certs["wz_harness_smoke_schema"].get("wz_harness_smoke_schema_gate_passed") is True,
         statuses["wz_harness_smoke_schema"],
+    )
+    report(
+        "wz-smoke-to-production-promotion-no-go-blocks",
+        "WZ smoke rows cannot be promoted" in statuses["wz_smoke_to_production_no_go"]
+        and certs["wz_smoke_to_production_no_go"].get("proposal_allowed") is False
+        and certs["wz_smoke_to_production_no_go"].get(
+            "wz_smoke_to_production_promotion_no_go_passed"
+        )
+        is True,
+        statuses["wz_smoke_to_production_no_go"],
     )
     report(
         "wz-mass-fit-response-row-builder-open",

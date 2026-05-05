@@ -4,17 +4,26 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: bounded support / WZ harness smoke schema path; positive closure still open
-active_residual: "Default-off W/Z smoke-schema rows now exercise the direct top-correlator harness contract, selected-mass-only scalar FH/LSZ metadata, numba seed control, scalar target time series, and LSZ C_ss_timeseries.  They are synthetic scout rows only: no same-source EW action, production W/Z rows, top/W covariance, sector identity, canonical-Higgs/source-overlap, or retained/proposed-retained authority is supplied."
+actual_current_surface_status: exact negative boundary / WZ smoke rows cannot be promoted to production WZ response; positive closure still open
+active_residual: "The W/Z smoke-schema path is certified as infrastructure only and now has a paired promotion no-go: synthetic scout rows cannot be reclassified as production W/Z response, top/W covariance, same-source EW action, sector identity, canonical-Higgs identity, or retained/proposed-retained top-Yukawa evidence.  Positive closure now requires a genuine same-source EW action plus production W/Z mass-fit rows and matched covariance, source-Higgs C_sH/C_HH pole rows, Schur A/B/C rows, or a neutral-sector irreducibility theorem."
 latest_checkpoint:
-  utc: "2026-05-05T13:14:58Z"
-  block: 92
-  artifact: "W/Z harness smoke schema path"
-  status: "bounded support / smoke-schema infrastructure only; positive closure remains open"
-  result: "The harness now has an explicit --wz-mass-response-smoke path that emits synthetic positive W/Z scout correlators only when requested.  The new gate reruns a tiny numba smoke artifact and verifies W/Z metadata, selected-mass-only scalar FH/LSZ behavior, numba seed control, scalar target series, LSZ C_ss_timeseries rows, negative/zero/positive W source shifts, correlator-marked W mass fits, false identity certificates, absent g2 selector authority, and all firewall flags.  W/Z implementation-plan, same-source EW action, and W/Z mass-fit path gates were refreshed to classify this as smoke schema rather than production W/Z evidence.  Full assembly PASS=75 FAIL=0, retained-route PASS=223 FAIL=0, and campaign PASS=250 FAIL=0 still deny proposal authority."
-  claim_boundary: "no closure proposal, no production W/Z rows, no same-source EW action, no top/W covariance, no sector/canonical-Higgs identity, no static EW algebra shortcut, and no use of smoke slopes as physics evidence"
+  utc: "2026-05-05T13:28:15Z"
+  block: 93
+  artifact: "W/Z smoke-to-production promotion no-go"
+  status: "exact negative boundary / smoke rows cannot be promoted; positive closure remains open"
+  result: "The new no-go runner reloads the W/Z smoke-schema artifact and strict W/Z route certificates, then verifies the smoke rows are scout-phase synthetic rows with production_wz_rows_written=false, false same-source/sector/canonical/retained identity certificates, absent g2 and covariance, absent same-source EW action, absent W/Z mass-fit path, absent strict W/Z response rows, absent matched top/W covariance, open same-source W/Z gate, and aggregate proposal denial.  It passes with PASS=22 FAIL=0.  Aggregate gates now include the blocker: full assembly PASS=76 FAIL=0, retained-route PASS=224 FAIL=0, and campaign PASS=251 FAIL=0, all with proposal_allowed=false."
+  claim_boundary: "no closure proposal, no smoke-row promotion, no production W/Z rows, no same-source EW action, no top/W covariance, no sector/canonical-Higgs identity, no static EW algebra shortcut, and no use of smoke slopes as physics evidence"
   live_compute: "chunk artifacts are complete; no production chunk worker is running"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_wz_smoke_to_production_promotion_no_go.py
+    - docs/YT_PR230_WZ_SMOKE_TO_PRODUCTION_PROMOTION_NO_GO_NOTE_2026-05-05.md
+    - outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json
+    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+    - scripts/frontier_yt_retained_closure_route_certificate.py
+    - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+    - scripts/frontier_yt_pr230_campaign_status_certificate.py
+    - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
     - scripts/yt_direct_lattice_correlator_production.py
     - scripts/frontier_yt_pr230_wz_harness_smoke_schema_gate.py
     - docs/YT_PR230_WZ_HARNESS_SMOKE_SCHEMA_GATE_NOTE_2026-05-05.md

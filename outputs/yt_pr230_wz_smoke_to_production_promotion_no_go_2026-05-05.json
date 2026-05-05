@@ -1,0 +1,67 @@
+{
+  "actual_current_surface_status": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
+  "bare_retained_allowed": false,
+  "exact_next_action": "Create a genuine same-source EW action certificate and production W/Z correlator mass-fit rows, then rerun the W/Z mass-fit response row builder and matched top/W covariance builder in strict mode.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_wz_response_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+    "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
+    "wz_correlator_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
+    "wz_harness_smoke_schema": "outputs/yt_pr230_wz_harness_smoke_schema_gate_2026-05-05.json",
+    "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
+    "wz_response_harness_implementation_plan": "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json",
+    "wz_same_source_ew_action_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
+    "wz_same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "retained_route": "open / retained closure not yet reached",
+    "same_source_wz_response_gate": "open / same-source WZ response certificate gate not passed",
+    "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
+    "wz_correlator_mass_fit_path_gate": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
+    "wz_harness_smoke_schema": "bounded-support / WZ harness smoke schema path",
+    "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
+    "wz_response_harness_implementation_plan": "bounded-support / WZ response harness implementation plan with smoke schema path",
+    "wz_same_source_ew_action_builder": "open / same-source EW action certificate absent",
+    "wz_same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface"
+  },
+  "pass_count": 22,
+  "promotion_blockers": {
+    "analysis_phase_is_scout": true,
+    "canonical_higgs_identity_false": true,
+    "covariance_absent": true,
+    "g2_absent": true,
+    "metadata_says_not_ew_production": true,
+    "production_rows_not_written": true,
+    "retained_route_gate_false": true,
+    "rows_marked_synthetic": true,
+    "same_source_identity_not_certified": true,
+    "sector_identity_false": true,
+    "smoke_not_yukawa_readout": true
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Promotion would import the same-source EW action, W/Z production row, covariance, g2, and identity certificates that the smoke schema explicitly does not supply.",
+  "smoke_artifact": "outputs/yt_pr230_wz_harness_smoke_schema_smoke_2026-05-05.json",
+  "smoke_gate": "outputs/yt_pr230_wz_harness_smoke_schema_gate_2026-05-05.json",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not promote smoke rows to production rows",
+    "does not treat synthetic correlators as W/Z field measurements",
+    "does not infer same-source EW action or source-coordinate identity from schema metadata",
+    "does not use static EW algebra, H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "strict_surface_checks": {
+    "aggregate_proposal_denied": true,
+    "matched_top_w_covariance_absent": true,
+    "same_source_ew_action_absent": true,
+    "same_source_wz_gate_open": true,
+    "strict_wz_response_rows_absent": true,
+    "wz_correlator_mass_fit_path_absent": true
+  },
+  "verdict": "The W/Z smoke artifact is a scout/schema artifact and cannot be promoted into the strict production W/Z response surface.  Its rows are explicitly synthetic, production_wz_rows_written is false, same-source and canonical-Higgs identities are false, g2 and matched covariance are absent, and the strict W/Z row, same-source EW action, matched covariance, W/Z gate, assembly, retained-route, and campaign certificates all deny proposal authority.",
+  "wz_smoke_to_production_promotion_no_go_passed": true
+}

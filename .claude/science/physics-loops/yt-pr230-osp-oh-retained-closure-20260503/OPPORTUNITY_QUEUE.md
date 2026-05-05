@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-05 W/Z smoke-promotion update: the smoke-schema path now has an
+explicit promotion no-go,
+`outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json`,
+with `PASS=22 FAIL=0`.  The no-go verifies that the smoke rows are
+scout-phase synthetic rows, production rows are not written, identity
+certificates are false, `g2` and matched covariance are absent, strict W/Z
+response rows are absent, and assembly/retained/campaign gates deny proposal
+authority.  This removes the smoke-row promotion shortcut from the queue; the
+next admissible W/Z route still requires a genuine same-source EW action plus
+production W/Z correlator mass-fit rows, matched top/W covariance, and
+non-observed `g2`/identity certificates.
+
 2026-05-05 W/Z smoke-schema update: the direct top-correlator harness now has
 a default-off `--wz-mass-response-smoke` path, certified by
 `outputs/yt_pr230_wz_harness_smoke_schema_gate_2026-05-05.json` with

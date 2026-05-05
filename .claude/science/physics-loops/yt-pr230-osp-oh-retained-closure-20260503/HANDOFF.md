@@ -1,5 +1,45 @@
 # Handoff
 
+## 2026-05-05 PR230 W/Z Smoke-To-Production Promotion No-Go
+
+Result: exact negative boundary.  The W/Z smoke-schema rows cannot be
+promoted into production W/Z response evidence.  The runner
+`scripts/frontier_yt_pr230_wz_smoke_to_production_promotion_no_go.py` reloads
+the smoke artifact and strict W/Z parent certificates, then confirms the rows
+are scout-phase synthetic rows with `production_wz_rows_written=false`, false
+same-source/sector/canonical/retained identity certificates, absent `g2`,
+absent matched covariance, absent same-source EW action, absent W/Z mass-fit
+path, absent strict W/Z response rows, open same-source W/Z gate, and
+aggregate proposal denial.
+
+Artifacts:
+
+```bash
+python3 -m py_compile \
+  scripts/frontier_yt_pr230_wz_smoke_to_production_promotion_no_go.py \
+  scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py \
+  scripts/frontier_yt_retained_closure_route_certificate.py \
+  scripts/frontier_yt_pr230_campaign_status_certificate.py
+
+python3 scripts/frontier_yt_pr230_wz_smoke_to_production_promotion_no_go.py
+# SUMMARY: PASS=22 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=76 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=224 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=251 FAIL=0
+```
+
+Claim boundary: this block is not retained or proposed-retained closure.  It
+only prevents a schema artifact from being used as physical `y_t` evidence.
+The exact next positive action remains a genuine same-source EW action plus
+production W/Z mass-fit rows and matched top/W covariance, or an independent
+source-Higgs, Schur, or neutral-sector irreducibility closure artifact.
+
 ## 2026-05-05 PR230 W/Z Harness Smoke-Schema Path
 
 Result: bounded infrastructure support.  The direct top-correlator production

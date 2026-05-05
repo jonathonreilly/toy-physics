@@ -13,7 +13,7 @@
 | Source-only `O_sp/O_H` identity | closed negatively | `YT_OSP_OH_IDENTITY_STRETCH_ATTEMPT_NOTE_2026-05-03.md` |
 | Overclaim by assumption in the O_sp/O_H loop | blocked by current assumption-route audit | `YT_OSP_OH_ASSUMPTION_ROUTE_AUDIT_NOTE_2026-05-04.md` |
 | Same-source W/Z shortcut from static EW algebra or QCD-only harness | blocked | `yt_wz_response_row_production_attempt_2026-05-03.json` |
-| W/Z smoke-schema rows as production W/Z response or top-Yukawa evidence | blocked / infrastructure only | `YT_PR230_WZ_HARNESS_SMOKE_SCHEMA_GATE_NOTE_2026-05-05.md` |
+| W/Z smoke-schema rows as production W/Z response or top-Yukawa evidence | closed negatively / promotion forbidden | `YT_PR230_WZ_SMOKE_TO_PRODUCTION_PROMOTION_NO_GO_NOTE_2026-05-05.md` |
 | Deterministic W response alone as top/W covariance authority | closed negatively | `YT_TOP_WZ_DETERMINISTIC_RESPONSE_COVARIANCE_GATE_NOTE_2026-05-05.md` |
 | Current builders/scouts/support/no-go artifacts as top/W joint covariance theorem | closed negatively | `YT_TOP_WZ_COVARIANCE_THEOREM_IMPORT_AUDIT_NOTE_2026-05-05.md` |
 | Static W-mass algebra plus uncertified source-coordinate transport as W/Z row authority | closed negatively | `YT_WZ_SOURCE_COORDINATE_TRANSPORT_NO_GO_NOTE_2026-05-05.md` |

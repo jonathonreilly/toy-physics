@@ -377,6 +377,9 @@ def main() -> int:
         "wz_harness_smoke_schema": load(
             "outputs/yt_pr230_wz_harness_smoke_schema_gate_2026-05-05.json"
         ),
+        "wz_smoke_to_production_promotion_no_go": load(
+            "outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json"
+        ),
         "wz_same_source_ew_action_certificate_builder": load(
             "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json"
         ),
@@ -1545,6 +1548,17 @@ def main() -> int:
         and certificates["wz_harness_smoke_schema"].get("proposal_allowed") is False
         and certificates["wz_harness_smoke_schema"].get("wz_harness_smoke_schema_gate_passed") is True,
         statuses["wz_harness_smoke_schema"],
+    )
+    report(
+        "wz-smoke-to-production-promotion-no-go-blocks",
+        "WZ smoke rows cannot be promoted"
+        in str(statuses["wz_smoke_to_production_promotion_no_go"])
+        and certificates["wz_smoke_to_production_promotion_no_go"].get("proposal_allowed") is False
+        and certificates["wz_smoke_to_production_promotion_no_go"].get(
+            "wz_smoke_to_production_promotion_no_go_passed"
+        )
+        is True,
+        statuses["wz_smoke_to_production_promotion_no_go"],
     )
     report(
         "wz-same-source-ew-action-certificate-builder-blocks",

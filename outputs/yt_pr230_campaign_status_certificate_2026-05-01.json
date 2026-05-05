@@ -360,11 +360,12 @@
     "wz_same_source_ew_action_certificate_builder": "open / same-source EW action certificate absent",
     "wz_same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface",
     "wz_same_source_ew_action_semantic_firewall": "bounded-support / same-source EW action semantic firewall passed",
+    "wz_smoke_to_production_promotion_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected",
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 250,
+  "pass_count": 251,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

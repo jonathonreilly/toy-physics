@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: bounded support / WZ harness smoke schema path; positive closure still open
+actual_current_surface_status: exact negative boundary / WZ smoke rows cannot be promoted to production WZ response; positive closure still open
 conditional_surface_status: conditional-support if C_sH/C_HH Gram purity, W/Z response, or rank-one neutral scalar theorem closes the overlap
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "The W/Z smoke-schema harness path is infrastructure support only.  It validates selected-mass-only scalar FH/LSZ metadata, seed control, scalar target time series, LSZ C_ss_timeseries rows, and contract-shaped synthetic W/Z scout rows, but no current-surface premise supplies physical overlap authority, scalar-LSZ authority, same-source Schur A/B/C kernel rows, production W/Z rows, same-source EW action, top/W covariance, sector identity, canonical-Higgs identity, or neutral-rank authority.  Full assembly, retained-route, and campaign certificates still deny proposal authority."
+proposal_allowed_reason: "The W/Z smoke-schema harness path is infrastructure support only and now has an explicit promotion no-go.  It validates selected-mass-only scalar FH/LSZ metadata, seed control, scalar target time series, LSZ C_ss_timeseries rows, and contract-shaped synthetic W/Z scout rows, but those rows are scout-phase synthetic rows with production_wz_rows_written=false, false same-source/sector/canonical identity certificates, absent g2, and absent matched covariance.  No current-surface premise supplies physical overlap authority, scalar-LSZ authority, same-source Schur A/B/C kernel rows, production W/Z rows, same-source EW action, top/W covariance, sector identity, canonical-Higgs identity, or neutral-rank authority.  Full assembly, retained-route, and campaign certificates still deny proposal authority."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -38,6 +38,12 @@ Open imports:
   scout correlators and cannot be used as production W/Z response, top/W
   covariance, same-source EW action, source-coordinate identity, or y_t
   closure evidence;
+- W/Z smoke-to-production promotion is closed negatively:
+  `outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json`
+  verifies that the smoke rows are scout-phase synthetic rows, production
+  rows are not written, same-source/sector/canonical/retained identity
+  certificates are false, `g2` and matched covariance are absent, and strict
+  W/Z parent gates plus aggregate gates deny proposal authority;
 - same-source W-response decomposition theorem is exact support only: it
   proves `g_2 R_t/(sqrt(2) R_W)=y_h+y_x kappa_x/kappa_h`, so scalar source
   normalization cancels but an orthogonal neutral top-coupling correction

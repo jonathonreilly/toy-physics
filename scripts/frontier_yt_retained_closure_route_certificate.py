@@ -190,6 +190,9 @@ def main() -> int:
         "wz_response_row_production_attempt": "outputs/yt_wz_response_row_production_attempt_2026-05-03.json",
         "wz_response_harness_implementation_plan": "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json",
         "wz_harness_smoke_schema": "outputs/yt_pr230_wz_harness_smoke_schema_gate_2026-05-05.json",
+        "wz_smoke_to_production_promotion_no_go": (
+            "outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json"
+        ),
         "wz_same_source_ew_action_certificate_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
         "wz_same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
         "wz_same_source_ew_action_semantic_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
@@ -1232,6 +1235,17 @@ def main() -> int:
         in certificates["wz_harness_smoke_schema"].get("actual_current_surface_status", "")
         and certificates["wz_harness_smoke_schema"].get("proposal_allowed") is False
         and certificates["wz_harness_smoke_schema"].get("wz_harness_smoke_schema_gate_passed") is True
+    )
+    wz_smoke_to_production_promotion_no_go_blocks = (
+        "WZ smoke rows cannot be promoted"
+        in certificates["wz_smoke_to_production_promotion_no_go"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["wz_smoke_to_production_promotion_no_go"].get("proposal_allowed") is False
+        and certificates["wz_smoke_to_production_promotion_no_go"].get(
+            "wz_smoke_to_production_promotion_no_go_passed"
+        )
+        is True
     )
     wz_same_source_ew_action_certificate_builder_blocks = (
         "same-source EW action certificate absent"
@@ -3059,6 +3073,13 @@ def main() -> int:
         "wz-harness-smoke-schema-support-only",
         wz_harness_smoke_schema_support_only,
         certificates["wz_harness_smoke_schema"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "wz-smoke-to-production-promotion-no-go-blocks",
+        wz_smoke_to_production_promotion_no_go_blocks,
+        certificates["wz_smoke_to_production_promotion_no_go"].get(
+            "actual_current_surface_status", ""
+        ),
     )
     report(
         "wz-same-source-ew-action-certificate-builder-blocks",

@@ -1,5 +1,28 @@
 # Review History
 
+## 2026-05-05 W/Z Smoke-To-Production Promotion No-Go Self-Review
+
+Disposition: pass as exact negative boundary / no closure authority.
+
+Findings:
+
+- The runner does not generate production W/Z rows and does not reinterpret
+  smoke rows as physical measurements.
+- The gate requires the smoke artifact to be scout-phase, synthetic, and
+  marked with `production_wz_rows_written=false`.
+- It checks false same-source, sector-overlap, canonical-Higgs, and
+  retained-route identity certificates; absent `g2`; absent matched covariance;
+  absent same-source EW action; absent W/Z correlator mass-fit path; absent
+  strict W/Z response rows; open same-source W/Z gate; and aggregate proposal
+  denial.
+- Full assembly, retained-route, and campaign gates now load this no-go and
+  pass while keeping `proposal_allowed=false`.
+
+Review-loop iteration 1: local self-review pass.  No retained or
+proposed-retained wording is authorized; the next positive route needs genuine
+same-source EW production rows/certificates or an independent source-Higgs,
+Schur, or neutral-sector theorem/row artifact.
+
 ## 2026-05-05 W/Z Harness Smoke-Schema Path Self-Review
 
 Disposition: pass as bounded infrastructure support / no closure authority.
