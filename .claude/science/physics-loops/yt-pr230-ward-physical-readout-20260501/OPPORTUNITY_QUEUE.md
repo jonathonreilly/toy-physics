@@ -1361,3 +1361,13 @@ positive queue remains: certified `O_H/C_sH/C_HH` pole rows; genuine W/Z rows
 with identity/covariance/strict `g2`; Schur `A/B/C` rows; strict scalar-LSZ
 moment/threshold/FV authority; or a neutral primitive-cone / irreducibility
 certificate.
+
+2026-05-05 update: the fresh artifact/literature review selects one clean
+contract to target first: `O_H/C_sH/C_HH` source-Higgs pole rows.  The first
+genuine artifact is the same-surface canonical `O_H` certificate, preferably
+via an action-first FMS construction with a real same-source EW/Higgs action
+and canonical pole normalization.  Current artifact files are still absent, so
+this is a priority target, not evidence.  If the action-first `O_H` artifact
+cannot be built, the fallback order is genuine W/Z rows with identity,
+covariance, and strict `g2`; strict scalar-LSZ moment/threshold/FV authority;
+Schur `A/B/C` rows; then a neutral primitive-cone/irreducibility certificate.

@@ -1,7 +1,7 @@
 # PR230 W/Z Smoke-To-Production Promotion No-Go Note
 
-**Status:** exact negative boundary / WZ smoke rows cannot be promoted to
-production WZ response.
+**Status:** exact negative boundary / WZ smoke rows are not production WZ
+response.
 
 This block closes the obvious shortcut opened by the W/Z smoke-schema harness:
 using the synthetic smoke rows as if they were production W/Z mass-response

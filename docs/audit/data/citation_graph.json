@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T08:36:34.989767+00:00",
+  "generated_at": "2026-05-05T22:10:17.998089+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41320,6 +41320,26 @@
       "runner_path": "scripts/frontier_yt_momentum_pilot_scaling_certificate.py",
       "title": "Top-Yukawa Momentum Pilot Scaling Note"
     },
+    "yt_neutral_offdiagonal_generator_derivation_attempt_note_2026-05-05": {
+      "claim_id": "yt_neutral_offdiagonal_generator_derivation_attempt_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / neutral off-diagonal generator not",
+      "deps": [],
+      "note_hash": "93be035421b0439647aacfed200d1a8bbe465fc88ec94c5e618075c34bd46a82",
+      "path": "docs/YT_NEUTRAL_OFFDIAGONAL_GENERATOR_DERIVATION_ATTEMPT_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_neutral_offdiagonal_generator_derivation_attempt.py",
+      "title": "PR230 Neutral Off-Diagonal Generator Derivation Attempt"
+    },
+    "yt_neutral_scalar_burnside_irreducibility_attempt_note_2026-05-05": {
+      "claim_id": "yt_neutral_scalar_burnside_irreducibility_attempt_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / Burnside neutral irreducibility attempt",
+      "deps": [],
+      "note_hash": "db196dd130d15b74544ab8d48bc86623ea38059fbd2cc5cc47e2cb17784cdf81",
+      "path": "docs/YT_NEUTRAL_SCALAR_BURNSIDE_IRREDUCIBILITY_ATTEMPT_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_neutral_scalar_burnside_irreducibility_attempt.py",
+      "title": "PR #230 Neutral-Scalar Burnside Irreducibility Attempt"
+    },
     "yt_neutral_scalar_commutant_rank_no_go_note_2026-05-02": {
       "claim_id": "yt_neutral_scalar_commutant_rank_no_go_note_2026-05-02",
       "current_status": "unknown",
@@ -41933,17 +41953,47 @@
       "current_status": "open",
       "current_status_raw": "open / active campaign continuing after current shortcut blocks",
       "deps": [],
-      "note_hash": "31fbec7632eb8d0724969d17f30fee16ca4d9febe53f75a083ff18b7765071e7",
+      "note_hash": "ac89eb28ac733dc670809f4c9cc24ea68d3fc0fb3ac9053ed3062d83500c31e2",
       "path": "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
+    },
+    "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05": {
+      "claim_id": "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05",
+      "current_status": "support",
+      "current_status_raw": "exact support / clean source-Higgs outside-math route selector;",
+      "deps": [],
+      "note_hash": "b87b7a6cedf86090e0ea08159de63ed368354b5b6e332541bc10976f459faf88",
+      "path": "docs/YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py",
+      "title": "PR230 Clean Source-Higgs Math-Tool Route Selector"
+    },
+    "yt_pr230_exact_tensor_schur_row_feasibility_attempt_note_2026-05-05": {
+      "claim_id": "yt_pr230_exact_tensor_schur_row_feasibility_attempt_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "0fb22b250a23fd7c0606011563d90727ca69205f82f8de01c4f3ad2f1d500138",
+      "path": "docs/YT_PR230_EXACT_TENSOR_SCHUR_ROW_FEASIBILITY_ATTEMPT_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_exact_tensor_schur_row_feasibility_attempt.py",
+      "title": "PR230 Exact Tensor Schur Row Feasibility Attempt"
+    },
+    "yt_pr230_fresh_artifact_literature_route_review_note_2026-05-05": {
+      "claim_id": "yt_pr230_fresh_artifact_literature_route_review_note_2026-05-05",
+      "current_status": "bounded",
+      "current_status_raw": "bounded support / selected artifact contract; no current closure",
+      "deps": [],
+      "note_hash": "337b1ad621ca1b61e5c6544e6641edb5d6b7578290e8f19a7a9b5462852a29d4",
+      "path": "docs/YT_PR230_FRESH_ARTIFACT_LITERATURE_ROUTE_REVIEW_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_fresh_artifact_literature_route_review.py",
+      "title": "PR230 Fresh Artifact Literature Route Review"
     },
     "yt_pr230_full_positive_closure_assembly_gate_note_2026-05-04": {
       "claim_id": "yt_pr230_full_positive_closure_assembly_gate_note_2026-05-04",
       "current_status": "open",
       "current_status_raw": "open / assembly gate; proposal_allowed=false.",
       "deps": [],
-      "note_hash": "3fc001cb55f2537b49015072f723b0e792375f3bac5d562d76200f818cef928e",
+      "note_hash": "a79c0178b7d7306fdaadb3fdd948888791272ced0f07603b733d0ecf911bdafb",
       "path": "docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md",
       "runner_path": null,
       "title": "PR230 Full Positive Closure Assembly Gate Note"
@@ -41957,6 +42007,26 @@
       "path": "docs/YT_PR230_GLOBAL_YT_PROOF_AUDIT_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_global_proof_audit.py",
       "title": "PR230 Global Top-Yukawa Proof Audit Note"
+    },
+    "yt_pr230_gns_source_higgs_flat_extension_attempt_note_2026-05-05": {
+      "claim_id": "yt_pr230_gns_source_higgs_flat_extension_attempt_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "124b3c7eb04eab23e5b1134288bf3e59fe12f0d028783374e1bf66b482700a56",
+      "path": "docs/YT_PR230_GNS_SOURCE_HIGGS_FLAT_EXTENSION_ATTEMPT_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_gns_source_higgs_flat_extension_attempt.py",
+      "title": "PR230 GNS Source-Higgs Flat-Extension Attempt"
+    },
+    "yt_pr230_invariant_ring_oh_certificate_attempt_note_2026-05-05": {
+      "claim_id": "yt_pr230_invariant_ring_oh_certificate_attempt_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / invariant-ring `O_H` certificate attempt",
+      "deps": [],
+      "note_hash": "3c5c3a21472f8339a51bf547ebcd5022a3ff1af2bfd4a4cec150f0ce30a87e39",
+      "path": "docs/YT_PR230_INVARIANT_RING_OH_CERTIFICATE_ATTEMPT_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_invariant_ring_oh_certificate_attempt.py",
+      "title": "PR230 Invariant-Ring O_H Certificate Attempt"
     },
     "yt_pr230_matching_running_bridge_gate_note_2026-05-04": {
       "claim_id": "yt_pr230_matching_running_bridge_gate_note_2026-05-04",
@@ -42033,10 +42103,180 @@
       "current_status": "unknown",
       "current_status_raw": "exact negative boundary",
       "deps": [],
-      "note_hash": "e91efc3b79181fd1894d61b4af18099246d913efa5e74cc50b7dab4f59683a05",
+      "note_hash": "8fedc8053a55bca900da047283a968c270e62bb3f8dbdf6daa370e112ed0dec2",
       "path": "docs/YT_PR230_NONCHUNK_CYCLE18_REOPEN_FRESHNESS_GATE_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_nonchunk_cycle18_reopen_freshness_gate.py",
       "title": "PR230 Non-Chunk Cycle-18 Reopen-Freshness Gate"
+    },
+    "yt_pr230_nonchunk_cycle19_no_duplicate_route_gate_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle19_no_duplicate_route_gate_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary.  This note records a process gate only; it",
+      "deps": [],
+      "note_hash": "37e767337933f5854a1a0c8079812f4f3ff2f4c3ca5a0b2342d1fddc0c9ccb4c",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE19_NO_DUPLICATE_ROUTE_GATE_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_nonchunk_cycle19_no_duplicate_route_gate.py",
+      "title": "PR230 Non-Chunk Cycle-19 No-Duplicate-Route Gate"
+    },
+    "yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary.  This note records a process-continuation",
+      "deps": [],
+      "note_hash": "c1821ed510f21635c4bfd06b1e135fb903b97974e19ef6b1c85750ab7bcfee05",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE20_PROCESS_GATE_CONTINUATION_NO_GO_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go.py",
+      "title": "PR230 Non-Chunk Cycle-20 Process-Gate Continuation No-Go"
+    },
+    "yt_pr230_nonchunk_cycle21_remote_reopen_guard_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle21_remote_reopen_guard_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary.  This note records a remote-surface reopen",
+      "deps": [],
+      "note_hash": "5f37c2c2b7c7ce84d9711e5bd71fc19ce178291a3c0308995f055867464f62fe",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE21_REMOTE_REOPEN_GUARD_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_nonchunk_cycle21_remote_reopen_guard.py",
+      "title": "PR230 Non-Chunk Cycle-21 Remote-Surface Reopen Guard"
+    },
+    "yt_pr230_nonchunk_cycle22_main_audit_drift_guard_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle22_main_audit_drift_guard_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / origin/main audit/effective-status drift",
+      "deps": [],
+      "note_hash": "4850a893b6b3bf89f3b40face5a72eb7a7c8718fc776be7cbfaa2c4e6bbae7b1",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE22_MAIN_AUDIT_DRIFT_GUARD_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 Non-Chunk Cycle-22 Main-Audit-Drift Reopen Guard"
+    },
+    "yt_pr230_nonchunk_cycle23_main_effective_status_drift_guard_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle23_main_effective_status_drift_guard_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / origin/main effective-status drift does not",
+      "deps": [],
+      "note_hash": "c9082034fff89b025a85645fc327b6bd7f5cd70590bc067ed03ab97789ded83e",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE23_MAIN_EFFECTIVE_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 Non-Chunk Cycle-23 Main-Effective-Status-Drift Reopen Guard"
+    },
+    "yt_pr230_nonchunk_cycle24_post_cycle23_main_status_drift_guard_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle24_post_cycle23_main_status_drift_guard_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / post-cycle-23 `origin/main` status drift",
+      "deps": [],
+      "note_hash": "ba05a5f8f522ebe72dff9dd6c2be8463d120cff617785376b21aa81bf1afe290",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE24_POST_CYCLE23_MAIN_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 Non-Chunk Cycle-24 Post-Cycle-23 Main-Status-Drift Reopen Guard"
+    },
+    "yt_pr230_nonchunk_cycle25_post_cycle24_main_audit_status_drift_guard_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle25_post_cycle24_main_audit_status_drift_guard_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / post-cycle-24 `origin/main`",
+      "deps": [],
+      "note_hash": "39f01debd44d357e62a64ab2ac073a40d2d791a4d4d02237e9d86a69bc8afae9",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE25_POST_CYCLE24_MAIN_AUDIT_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 Non-Chunk Cycle-25 Post-Cycle-24 Main-Audit-Status-Drift Reopen Guard"
+    },
+    "yt_pr230_nonchunk_cycle26_post_cycle25_main_audit_status_drift_guard_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle26_post_cycle25_main_audit_status_drift_guard_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / post-cycle-25 `origin/main`",
+      "deps": [],
+      "note_hash": "b5bbbd46b3a32d2bfaa9d455dbae7717f9659ef591262e06169194546dff147a",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE26_POST_CYCLE25_MAIN_AUDIT_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 Non-Chunk Cycle-26 Post-Cycle-25 Main-Audit-Status-Drift Reopen Guard"
+    },
+    "yt_pr230_nonchunk_cycle27_post_cycle26_main_audit_status_drift_guard_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle27_post_cycle26_main_audit_status_drift_guard_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / post-cycle-26 `origin/main`",
+      "deps": [],
+      "note_hash": "a3654b56c05578acc8c606b5243d87d1da9cd4cba1da649e11c9bed7cb905bf0",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE27_POST_CYCLE26_MAIN_AUDIT_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 Non-Chunk Cycle-27 Post-Cycle-26 Main-Audit-Status-Drift Reopen Guard"
+    },
+    "yt_pr230_nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / post-cycle-27 `origin/main`",
+      "deps": [],
+      "note_hash": "55daebbfbaa054f4f96a983bc5f6d1f8933aff11aca4fa62aa9f10646d898e0d",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE28_POST_CYCLE27_MAIN_AUDIT_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 Non-Chunk Cycle-28 Post-Cycle-27 Main-Audit-Status-Drift Reopen Guard"
+    },
+    "yt_pr230_nonchunk_cycle29_post_cycle28_main_audit_status_drift_guard_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle29_post_cycle28_main_audit_status_drift_guard_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / post-cycle-28 `origin/main`",
+      "deps": [],
+      "note_hash": "df87baf15971ac3a32862b7fd70fca2a57cab5e04f6a7cbbff2e80635e956b8f",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE29_POST_CYCLE28_MAIN_AUDIT_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 Non-Chunk Cycle-29 Post-Cycle-28 Main-Audit-Status-Drift Reopen Guard"
+    },
+    "yt_pr230_nonchunk_cycle30_post_cycle29_main_audit_status_drift_guard_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle30_post_cycle29_main_audit_status_drift_guard_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / post-cycle-29 `origin/main`",
+      "deps": [],
+      "note_hash": "b8925a61f95977615d21995a765f3773be7153505128034e7fcb428277c50bf2",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE30_POST_CYCLE29_MAIN_AUDIT_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 Non-Chunk Cycle-30 Post-Cycle-29 Main-Audit-Status-Drift Reopen Guard"
+    },
+    "yt_pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / post-cycle-30 `origin/main`",
+      "deps": [],
+      "note_hash": "c1062a4e41d31f9c466a0187f8dca7d1ff5c3f2ecc7559d180d3968c03f328bb",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE31_POST_CYCLE30_MAIN_AUDIT_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 Non-Chunk Cycle-31 Post-Cycle-30 Main-Audit-Status-Drift Reopen Guard"
+    },
+    "yt_pr230_nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / post-cycle-31 `origin/main`",
+      "deps": [],
+      "note_hash": "35086b39aba6ba0ed425d26f0728272c6f37aabd931155bc6eca00bda8c9439e",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE32_POST_CYCLE31_MAIN_AUDIT_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 Non-Chunk Cycle-32 Post-Cycle-31 Main-Audit-Status-Drift Reopen Guard"
+    },
+    "yt_pr230_nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / post-cycle-32 `origin/main`",
+      "deps": [],
+      "note_hash": "f772f8b7488523e638803751401763d31f270b906368268e8749babf8851f0ad",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE33_POST_CYCLE32_MAIN_AUDIT_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 Non-Chunk Cycle-33 Post-Cycle-32 Main-Audit-Status-Drift Reopen Guard"
+    },
+    "yt_pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / post-cycle-33 `origin/main` non-PR230 drift",
+      "deps": [],
+      "note_hash": "a0efb0dbca53b5680ea391b77ab9d3ab1b4ead2d0a9eee20cb51d3f323b179ab",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE34_POST_CYCLE33_MAIN_NONPR230_DRIFT_GUARD_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 Non-Chunk Cycle-34 Post-Cycle-33 Main Non-PR230 Drift Reopen Guard"
+    },
+    "yt_pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / post-cycle-34 `origin/main` audit",
+      "deps": [],
+      "note_hash": "9e441239d04e675848364ccd26357dd26a14c791e5daac1634c0b7d6c25f0116",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE35_POST_CYCLE34_MAIN_AUDIT_LEDGER_DRIFT_GUARD_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard.py",
+      "title": "PR230 Non-Chunk Cycle-35 Post-Cycle-34 Main Audit-Ledger Drift Guard"
     },
     "yt_pr230_nonchunk_future_artifact_intake_gate_note_2026-05-05": {
       "claim_id": "yt_pr230_nonchunk_future_artifact_intake_gate_note_2026-05-05",
@@ -42047,6 +42287,16 @@
       "path": "docs/YT_PR230_NONCHUNK_FUTURE_ARTIFACT_INTAKE_GATE_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_nonchunk_future_artifact_intake_gate.py",
       "title": "PR230 Non-Chunk Future-Artifact Intake Gate"
+    },
+    "yt_pr230_nonchunk_gate_stack_compatibility_repair_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_gate_stack_compatibility_repair_note_2026-05-05",
+      "current_status": "support",
+      "current_status_raw": "exact support / audit-gate compatibility repair only; positive closure remains open",
+      "deps": [],
+      "note_hash": "0f13533b31557a393e85ce981cb02ac6584fab9a744f2a1d8900725a6b294b0a",
+      "path": "docs/YT_PR230_NONCHUNK_GATE_STACK_COMPATIBILITY_REPAIR_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 Non-Chunk Gate Stack Compatibility Repair"
     },
     "yt_pr230_nonchunk_reopen_admissibility_gate_note_2026-05-05": {
       "claim_id": "yt_pr230_nonchunk_reopen_admissibility_gate_note_2026-05-05",
@@ -42088,6 +42338,16 @@
       "runner_path": "scripts/frontier_yt_pr230_physics_loop_assumption_audit.py",
       "title": "YT PR230 Physics-Loop Assumption Audit Note"
     },
+    "yt_pr230_positive_closure_completion_audit_note_2026-05-05": {
+      "claim_id": "yt_pr230_positive_closure_completion_audit_note_2026-05-05",
+      "current_status": "open",
+      "current_status_raw": "open / positive closure completion audit: closure not achieved.",
+      "deps": [],
+      "note_hash": "fc53a67c650bc413b804a4579ebfc4a8f6e1b31d4764da55060cfbde6386046a",
+      "path": "docs/YT_PR230_POSITIVE_CLOSURE_COMPLETION_AUDIT_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_positive_closure_completion_audit.py",
+      "title": "PR230 Positive Closure Completion Audit Note"
+    },
     "yt_pr230_queue_exhaustion_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_queue_exhaustion_certificate_note_2026-05-01",
       "current_status": "open",
@@ -42108,6 +42368,36 @@
       "runner_path": null,
       "title": "YT PR230 Review-Backpressure Pass Note"
     },
+    "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05": {
+      "claim_id": "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / Carleman/Tauberian scalar-LSZ",
+      "deps": [],
+      "note_hash": "6e25cc6c5a828f3d3a970a81078b58d64820251f6ec8ab336b14422431282164",
+      "path": "docs/YT_PR230_SCALAR_LSZ_CARLEMAN_TAUBERIAN_DETERMINACY_ATTEMPT_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt.py",
+      "title": "PR230 Scalar-LSZ Carleman/Tauberian Determinacy Attempt"
+    },
+    "yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_note_2026-05-05": {
+      "claim_id": "yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / scalar-LSZ holonomic exact authority not",
+      "deps": [],
+      "note_hash": "093a24129d046e20e923b7381a533a5a7e8ced91f49ac406239c1101af7293b5",
+      "path": "docs/YT_PR230_SCALAR_LSZ_HOLONOMIC_EXACT_AUTHORITY_ATTEMPT_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_scalar_lsz_holonomic_exact_authority_attempt.py",
+      "title": "PR230 Scalar-LSZ Holonomic Exact-Authority Attempt"
+    },
+    "yt_pr230_schur_abc_definition_derivation_attempt_note_2026-05-05": {
+      "claim_id": "yt_pr230_schur_abc_definition_derivation_attempt_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / Schur A/B/C definition not derivable from the current PR230 source-only surface.",
+      "deps": [],
+      "note_hash": "e4e77075cd8cfcc9a9b01a3e0a0a6d03b0be15ff39ec42cd041f957b42926b0e",
+      "path": "docs/YT_PR230_SCHUR_ABC_DEFINITION_DERIVATION_ATTEMPT_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_schur_abc_definition_derivation_attempt.py",
+      "title": "PR #230 Schur A/B/C Definition Derivation Attempt Note"
+    },
     "yt_pr230_source_overlap_route_selection_note_2026-05-03": {
       "claim_id": "yt_pr230_source_overlap_route_selection_note_2026-05-03",
       "current_status": "bounded",
@@ -42117,6 +42407,36 @@
       "path": "docs/YT_PR230_SOURCE_OVERLAP_ROUTE_SELECTION_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_yt_pr230_source_overlap_route_selection.py",
       "title": "PR #230 Source-Overlap Route Selection"
+    },
+    "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05": {
+      "claim_id": "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / WZ `g2` bare-to-low-scale running bridge not derivable on the current PR230 surface.",
+      "deps": [],
+      "note_hash": "3c6145bda2e33f950f8fa19823c2b59d6e421df4cc6f822ad9d78fbbe43e751d",
+      "path": "docs/YT_PR230_WZ_G2_BARE_RUNNING_BRIDGE_ATTEMPT_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_wz_g2_bare_running_bridge_attempt.py",
+      "title": "PR #230 W/Z G2 Bare-Running Bridge Attempt Note"
+    },
+    "yt_pr230_wz_harness_smoke_schema_gate_note_2026-05-05": {
+      "claim_id": "yt_pr230_wz_harness_smoke_schema_gate_note_2026-05-05",
+      "current_status": "bounded",
+      "current_status_raw": "bounded support / W/Z harness smoke schema path.",
+      "deps": [],
+      "note_hash": "7df0a67b40f19e8416964b5539a6fdb87caa9bdfe4015852db7bed0193a3eca6",
+      "path": "docs/YT_PR230_WZ_HARNESS_SMOKE_SCHEMA_GATE_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 W/Z Harness Smoke-Schema Gate Note"
+    },
+    "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05": {
+      "claim_id": "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / WZ smoke rows are not production WZ",
+      "deps": [],
+      "note_hash": "30a13b20f4c3d0ef49c2a47fd26ce74f1cd0fc0541c2d8bcf6c20cebe2918162",
+      "path": "docs/YT_PR230_WZ_SMOKE_TO_PRODUCTION_PROMOTION_NO_GO_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_wz_smoke_to_production_promotion_no_go.py",
+      "title": "PR230 W/Z Smoke-To-Production Promotion No-Go Note"
     },
     "yt_production_resource_projection_note_2026-05-01": {
       "claim_id": "yt_production_resource_projection_note_2026-05-01",
@@ -42165,7 +42485,7 @@
       "current_status": "open",
       "current_status_raw": "open / closure not yet reached",
       "deps": [],
-      "note_hash": "41c50462403ef6f45384debcc9692a4813a4d748e823535d66aa207773effb2d",
+      "note_hash": "2072ac9b81bc61e9222aed38f344532c4a4ec21d870caca748642fb4be076f5f",
       "path": "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_retained_closure_route_certificate.py",
       "title": "PR230 Top-Yukawa Retained-Closure Route Certificate"
@@ -44752,6 +45072,8 @@
     "yt_mass_response_bracket_certificate_note_2026-05-01",
     "yt_microscopic_schur_class_admissibility_note",
     "yt_momentum_pilot_scaling_note_2026-05-01",
+    "yt_neutral_offdiagonal_generator_derivation_attempt_note_2026-05-05",
+    "yt_neutral_scalar_burnside_irreducibility_attempt_note_2026-05-05",
     "yt_neutral_scalar_commutant_rank_no_go_note_2026-05-02",
     "yt_neutral_scalar_dynamical_rank_one_closure_attempt_note_2026-05-02",
     "yt_neutral_scalar_irreducibility_authority_audit_note_2026-05-04",
@@ -44780,8 +45102,13 @@
     "yt_positivity_improving_neutral_scalar_rank_one_support_note_2026-05-03",
     "yt_pr230_assumption_import_stress_note_2026-05-01",
     "yt_pr230_campaign_status_certificate_note_2026-05-01",
+    "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05",
+    "yt_pr230_exact_tensor_schur_row_feasibility_attempt_note_2026-05-05",
+    "yt_pr230_fresh_artifact_literature_route_review_note_2026-05-05",
     "yt_pr230_full_positive_closure_assembly_gate_note_2026-05-04",
     "yt_pr230_global_yt_proof_audit_note_2026-05-01",
+    "yt_pr230_gns_source_higgs_flat_extension_attempt_note_2026-05-05",
+    "yt_pr230_invariant_ring_oh_certificate_attempt_note_2026-05-05",
     "yt_pr230_matching_running_bridge_gate_note_2026-05-04",
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
     "yt_pr230_nonchunk_current_surface_exhaustion_gate_note_2026-05-05",
@@ -44790,14 +45117,39 @@
     "yt_pr230_nonchunk_cycle16_reopen_source_guard_note_2026-05-05",
     "yt_pr230_nonchunk_cycle17_stop_condition_gate_note_2026-05-05",
     "yt_pr230_nonchunk_cycle18_reopen_freshness_gate_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle19_no_duplicate_route_gate_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle21_remote_reopen_guard_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle22_main_audit_drift_guard_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle23_main_effective_status_drift_guard_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle24_post_cycle23_main_status_drift_guard_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle25_post_cycle24_main_audit_status_drift_guard_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle26_post_cycle25_main_audit_status_drift_guard_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle27_post_cycle26_main_audit_status_drift_guard_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle29_post_cycle28_main_audit_status_drift_guard_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle30_post_cycle29_main_audit_status_drift_guard_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard_note_2026-05-05",
     "yt_pr230_nonchunk_future_artifact_intake_gate_note_2026-05-05",
+    "yt_pr230_nonchunk_gate_stack_compatibility_repair_note_2026-05-05",
     "yt_pr230_nonchunk_reopen_admissibility_gate_note_2026-05-05",
     "yt_pr230_nonchunk_route_family_import_audit_note_2026-05-05",
     "yt_pr230_nonchunk_terminal_route_exhaustion_gate_note_2026-05-05",
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
+    "yt_pr230_positive_closure_completion_audit_note_2026-05-05",
     "yt_pr230_queue_exhaustion_certificate_note_2026-05-01",
     "yt_pr230_review_backpressure_pass_note_2026-05-01",
+    "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05",
+    "yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_note_2026-05-05",
+    "yt_pr230_schur_abc_definition_derivation_attempt_note_2026-05-05",
     "yt_pr230_source_overlap_route_selection_note_2026-05-03",
+    "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05",
+    "yt_pr230_wz_harness_smoke_schema_gate_note_2026-05-05",
+    "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05",
     "yt_production_resource_projection_note_2026-05-01",
     "yt_qfp_insensitivity_support_note",
     "yt_reflection_positivity_lsz_shortcut_no_go_note_2026-05-02",
@@ -44916,17 +45268,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1024,
-    "node_count": 1977,
-    "root_count": 1490,
-    "runners_with_path": 1490,
+    "leaf_count": 1056,
+    "node_count": 2009,
+    "root_count": 1522,
+    "runners_with_path": 1507,
     "status_counts": {
-      "bounded": 549,
-      "open": 101,
+      "bounded": 551,
+      "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 428,
-      "unknown": 525
+      "support": 430,
+      "unknown": 552
     }
   }
 }

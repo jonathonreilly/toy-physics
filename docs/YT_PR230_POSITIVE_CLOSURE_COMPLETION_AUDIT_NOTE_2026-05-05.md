@@ -1,7 +1,6 @@
 # PR230 Positive Closure Completion Audit Note
 
-**Status:** open / positive closure completion audit: retained closure not
-achieved.
+**Status:** open / positive closure completion audit: closure not achieved.
 
 This block turns the current "are we done?" question into an executable audit.
 The runner

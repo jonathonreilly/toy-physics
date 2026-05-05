@@ -23,6 +23,7 @@
 | Feynman-Hellmann scalar-source response data | alternate observable route | synthetic support only | unavailable for closure |
 | Same-source scalar pole derivative `D'_ss(pole)` | removes source-coordinate normalization with `dE/ds` | sufficiency theorem support only; production pole data absent | open import until postprocess/model-class/FV/IR/Higgs-identity gates pass |
 | Source-Higgs cross-correlator `C_sH` and canonical `C_HH` residue | possible source-pole purity observable | open gate; no hidden current authority | open import; requires a canonical-Higgs source operator and cross-correlator implementation, not assumed |
+| FMS/action-first source-Higgs artifact route | possible clean route to `O_H/C_sH/C_HH` rows | bounded support only; no current artifact | allowed only after a same-source EW/Higgs action, gauge-invariant `O_H`, canonical pole normalization, and production `C_ss/C_sH/C_HH` rows exist; FMS literature, gauge-invariant-composite language, and action names are not proof selectors |
 | Exact tensor/PEPS Schur row production | possible outside-math row engine | exact negative boundary for current PR230 surface | allowed only after a same-surface neutral kernel basis, source/orthogonal projector, `A/B/C` row definitions, contact/FV/IR conventions, and certified contraction are supplied; method name and source-only marginals are not proof inputs |
 | Schur A/B/C definition derivation | possible outside-math row-definition route | exact negative boundary for current PR230 surface | allowed only after same-surface Schur A/B/C rows and projectors exist; source-only denominators, Feshbach responses, PSLQ, Picard-Fuchs/D-module, free-probability, and exact-tensor method names are not proof selectors until same-surface Schur A/B/C rows and projectors exist |
 | W/Z g2 bare-running bridge | possible non-observed electroweak coupling route | exact negative boundary for current PR230 surface | allowed only after a same-source EW action, scale ratio, thresholds, and finite matching exist; structural bare `g2`, beta-function formulas, PSLQ/value recognition, and convention choices are not proof selectors until same-source EW action, scale ratio, thresholds, and finite matching exist |
@@ -760,3 +761,15 @@ Target time-series presence in one chunk is not production evidence and not a
 canonical-Higgs identity.  It must not be used as target ESS for chunks that do
 not carry target time series, as response stability, as pole/FV/IR/model-class
 control, or as retained/proposed-retained `y_t` support.
+
+2026-05-05 fresh artifact literature route review:
+
+The selected clean artifact contract is `O_H/C_sH/C_HH`, but no such artifact
+exists on the current surface.  FMS/gauge-invariant Higgs literature may guide
+an action-first construction only after a same-source EW/Higgs action is
+defined on the PR230 surface.  It must not be used to identify the current
+Cl(3)/Z3 scalar source with the canonical Higgs, to set `kappa_s = 1`, or to
+treat source-only FH/LSZ rows as source-Higgs Gram purity.  Feynman-Hellmann,
+Lellouch-Luscher, RI/MOM, PSLQ, Picard-Fuchs/D-module, exact tensor/PEPS,
+free-probability, and motivic tools remain certificate engines only; method
+names are not proof selectors.

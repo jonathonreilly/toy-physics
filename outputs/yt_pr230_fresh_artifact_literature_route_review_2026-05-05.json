@@ -1,0 +1,163 @@
+{
+  "actual_current_surface_status": "bounded-support / fresh artifact literature route review; selected O_H/C_sH/C_HH action-first FMS contract, no current closure",
+  "bare_retained_allowed": false,
+  "contract_ranking": [
+    {
+      "contract": "O_H/C_sH/C_HH source-Higgs pole rows",
+      "current_admissible_for_closure": false,
+      "current_blocker": "open / source-Higgs production launch blocked by missing O_H certificate",
+      "first_genuine_artifact": "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+      "fresh_route": "Action-first FMS route: define a same-source EW/Higgs action on the PR230 surface, construct gauge-invariant O_H with canonical pole normalization, then measure C_ss/C_sH/C_HH.",
+      "rank": 1,
+      "second_genuine_artifact": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+      "selected_as_cleanest": true,
+      "why": "This is the only option that attacks the missing source-to-canonical-Higgs normalization directly."
+    },
+    {
+      "contract": "genuine same-source W/Z response rows",
+      "current_admissible_for_closure": false,
+      "current_blocker": "exact negative boundary / WZ g2 bare-to-low-scale running bridge not derivable on current PR230 surface",
+      "first_genuine_artifact": "outputs/yt_top_wz_matched_response_rows_2026-05-04.json",
+      "rank": 2,
+      "selected_as_cleanest": false,
+      "why": "Physical-response fallback, but it adds same-source EW action, identity/covariance, strict g2, and correction obligations."
+    },
+    {
+      "contract": "strict scalar-LSZ moment/threshold/FV authority",
+      "current_admissible_for_closure": false,
+      "current_blocker": "exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows",
+      "first_genuine_artifact": "outputs/yt_fh_lsz_stieltjes_moment_certificate_2026-05-05.json",
+      "rank": 3,
+      "selected_as_cleanest": false,
+      "why": "Needed downstream, but finite source-only rows cannot determine the source-Higgs overlap or pole residue."
+    },
+    {
+      "contract": "Schur A/B/C kernel rows",
+      "current_admissible_for_closure": false,
+      "current_blocker": "exact negative boundary / Schur A/B/C definition not derivable from current PR230 source-only surface",
+      "first_genuine_artifact": "outputs/yt_schur_kernel_rows_2026-05-03.json",
+      "rank": 4,
+      "selected_as_cleanest": false,
+      "why": "Useful for K-prime/orthogonal-sector control, but the current surface lacks row definitions and source/orthogonal projectors."
+    },
+    {
+      "contract": "neutral primitive-cone or irreducibility certificate",
+      "current_admissible_for_closure": false,
+      "current_blocker": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
+      "first_genuine_artifact": "outputs/yt_neutral_scalar_primitive_cone_certificate_2026-05-05.json",
+      "rank": 5,
+      "selected_as_cleanest": false,
+      "why": "Could collapse the neutral sector, but current rows remain source-only or block diagonal."
+    }
+  ],
+  "exact_next_action": "Start from the O_H/C_sH/C_HH contract, not from another source-only shortcut: derive or implement a same-source EW/Higgs action on the PR230 surface, construct a gauge-invariant FMS-style O_H with canonical pole normalization, write the canonical O_H certificate, then produce C_ss/C_sH/C_HH pole rows and rerun the Gram-purity, scalar-LSZ, full assembly, retained-route, and campaign gates.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "set_c2_equal_one_without_derivation": false,
+    "set_kappa_s_equal_one_without_derivation": false,
+    "set_z_match_equal_one_without_derivation": false,
+    "used_alpha_lm_plaquette_u0_or_rconn": false,
+    "used_g2_by_convention": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_mass_or_yt_selector": false,
+    "used_pslq_or_method_name_as_proof_selector": false,
+    "used_reduced_pilots_as_production_evidence": false,
+    "used_yt_ward_identity_as_authority": false
+  },
+  "future_artifact_presence": {
+    "canonical_higgs_operator_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "scalar_lsz_stieltjes_moment_certificate": false,
+    "schur_kernel_rows": false,
+    "source_higgs_cross_correlator_rows": false,
+    "top_wz_matched_response_rows": false
+  },
+  "genuine_artifact_found_on_current_surface": false,
+  "goal_refresh": "Find one genuinely admissible artifact inside the PR230 contracts; do not claim retained/proposed_retained closure.",
+  "literature_rows": [
+    {
+      "id": "fms_bound_state_spectrum",
+      "pr230_boundary": "It does not identify the current PR230 scalar source with O_H and does not supply C_sH/C_HH rows.",
+      "role": "FMS gives the right operator language: physical Higgs states are handled through gauge-invariant composite operators once the gauge-Higgs action is supplied.",
+      "url": "https://arxiv.org/abs/1912.08680"
+    },
+    {
+      "id": "fms_higgs_resonance",
+      "pr230_boundary": "Pole matching in an EW Higgs theory is not a current-surface Cl(3)/Z3 source-overlap theorem.",
+      "role": "FMS pole matching motivates an O_H pole-residue certificate rather than a source-only scalar readout.",
+      "url": "https://arxiv.org/abs/2009.06671"
+    },
+    {
+      "id": "feynman_hellmann_qft",
+      "pr230_boundary": "FH does not normalize the scalar source into the canonical Higgs field; kappa_s remains load-bearing.",
+      "role": "FH justifies measuring matrix elements from energy shifts and two-point functions.",
+      "url": "https://doi.org/10.1103/PhysRevD.96.014504"
+    },
+    {
+      "id": "lellouch_luscher_fv_matrix_elements",
+      "pr230_boundary": "It does not create source-Higgs identity and cannot act on the current finite source-only row set as closure.",
+      "role": "Finite-volume matrix-element machinery is relevant to strict LSZ/FV normalization if the required spectra and row identities exist.",
+      "url": "https://cds.cern.ch/record/432699"
+    },
+    {
+      "id": "rome_southampton_ri_mom",
+      "pr230_boundary": "A scalar-density renormalization scheme is not the canonical-Higgs identity or source-pole purity certificate.",
+      "role": "Nonperturbative operator renormalization can normalize composite operators in a chosen scheme.",
+      "url": "https://cds.cern.ch/record/271679"
+    }
+  ],
+  "parent_certificates": {
+    "assumption_stress": "outputs/yt_pr230_assumption_import_stress_2026-05-01.json",
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_higgs_operator_certificate_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "clean_source_higgs_math_tool_selector": "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json",
+    "fms_oh_certificate_construction_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
+    "full_positive_closure_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "neutral_offdiagonal_generator_derivation_attempt": "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
+    "osp_oh_literature_bridge": "outputs/yt_osp_oh_literature_bridge_2026-05-04.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "scalar_lsz_carleman_tauberian_attempt": "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json",
+    "schur_abc_definition_derivation_attempt": "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json",
+    "source_higgs_production_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+    "wz_g2_bare_running_bridge_attempt": "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json"
+  },
+  "parent_statuses": {
+    "assumption_stress": "open / assumption-import stress complete",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_operator_certificate_gate": "open / canonical-Higgs operator certificate absent",
+    "clean_source_higgs_math_tool_selector": "exact support / clean source-Higgs outside-math route selector; positive closure still open",
+    "fms_oh_certificate_construction_attempt": "exact negative boundary / FMS O_H certificate construction blocked on current PR230 surface",
+    "full_positive_closure_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "neutral_offdiagonal_generator_derivation_attempt": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
+    "osp_oh_literature_bridge": "bounded-support / O_sp/O_H literature bridge; no current-surface closure import",
+    "retained_route": "open / retained closure not yet reached",
+    "same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface",
+    "scalar_lsz_carleman_tauberian_attempt": "exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows",
+    "schur_abc_definition_derivation_attempt": "exact negative boundary / Schur A/B/C definition not derivable from current PR230 source-only surface",
+    "source_higgs_production_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "wz_g2_bare_running_bridge_attempt": "exact negative boundary / WZ g2 bare-to-low-scale running bridge not derivable on current PR230 surface"
+  },
+  "pass_count": 17,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No listed current-surface artifact is present.  The review selects the source-Higgs O_H/C_sH/C_HH contract as the cleanest artifact target, but the first required certificate is still absent.",
+  "review_passed": true,
+  "selected_genuine_artifact_contract": {
+    "contract": "O_H/C_sH/C_HH source-Higgs pole rows",
+    "current_admissible_for_closure": false,
+    "current_blocker": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "first_genuine_artifact": "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+    "fresh_route": "Action-first FMS route: define a same-source EW/Higgs action on the PR230 surface, construct gauge-invariant O_H with canonical pole normalization, then measure C_ss/C_sH/C_HH.",
+    "rank": 1,
+    "second_genuine_artifact": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+    "selected_as_cleanest": true,
+    "why": "This is the only option that attacks the missing source-to-canonical-Higgs normalization directly."
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not write or imply an O_H certificate",
+    "does not treat FMS, FH, Lellouch-Luscher, RI/MOM, PSLQ, or any method name as proof authority",
+    "does not import H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, R_conn, c2=1, Z_match=1, kappa_s=1, or g2 by convention",
+    "does not treat source-only rows, reduced pilots, finite shells, or absent guards as physics evidence"
+  ]
+}

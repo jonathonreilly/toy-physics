@@ -80,6 +80,9 @@ def main() -> int:
         "scalar_lsz_carleman_tauberian_determinacy_attempt": load(
             "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json"
         ),
+        "fresh_artifact_literature_route_review": load(
+            "outputs/yt_pr230_fresh_artifact_literature_route_review_2026-05-05.json"
+        ),
         "kinetic_matching": load("outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"),
         "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "scalar_ir": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
@@ -157,6 +160,7 @@ def main() -> int:
         "not proof selectors until same-source EW action, scale ratio, thresholds, and finite matching exist",
         "Carleman/Tauberian scalar-LSZ determinacy",
         "not proof selectors until an infinite same-surface moment/asymptotic certificate exists",
+        "FMS/action-first source-Higgs artifact route",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -395,6 +399,21 @@ def main() -> int:
         and wz_g2_running_attempt.get("exact_negative_boundary_passed") is True,
         wz_g2_running_attempt.get("actual_current_surface_status"),
     )
+    fresh_artifact_review = certificates["fresh_artifact_literature_route_review"]
+    report(
+        "fresh-artifact-literature-review-selects-target-not-closure",
+        "fresh artifact literature route review"
+        in str(fresh_artifact_review.get("actual_current_surface_status"))
+        and fresh_artifact_review.get("proposal_allowed") is False
+        and fresh_artifact_review.get("review_passed") is True
+        and fresh_artifact_review.get("genuine_artifact_found_on_current_surface")
+        is False
+        and fresh_artifact_review.get("selected_genuine_artifact_contract", {}).get(
+            "contract"
+        )
+        == "O_H/C_sH/C_HH source-Higgs pole rows",
+        fresh_artifact_review.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -447,7 +466,12 @@ def main() -> int:
             "certificate.  The Carleman/Tauberian scalar-LSZ "
             "determinacy attempt adds the same firewall for moment theory: "
             "finite scalar shell/moment prefixes are not proof selectors until "
-            "an infinite same-surface moment/asymptotic certificate exists.  No current route "
+            "an infinite same-surface moment/asymptotic certificate exists.  The "
+            "fresh artifact/literature review adds the same firewall for "
+            "FMS/FH/finite-volume/operator-renormalization literature: it "
+            "selects the O_H/C_sH/C_HH contract as the cleanest next target "
+            "but does not write a current-surface O_H certificate or authorize "
+            "closure.  No current route "
             "certificate authorizes retained proposal wording.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."

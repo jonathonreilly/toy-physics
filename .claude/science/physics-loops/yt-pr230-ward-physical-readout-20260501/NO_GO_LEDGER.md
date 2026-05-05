@@ -3201,3 +3201,19 @@ Reopen this route only with a same-source EW action plus scale/threshold/
 matching certificate, or with a different genuine physical-response observable
 whose certified ratio cancels `g2` without importing observed masses or
 forbidden package normalizations.
+
+## 2026-05-05 - Fresh Artifact Literature Review Boundary
+
+The review found no existing current-surface artifact among the listed
+contracts.  Literature methods are not proof selectors:
+
+- FMS/gauge-invariant Higgs language does not identify the current Cl(3)/Z3
+  scalar source with canonical `O_H`.
+- Feynman-Hellmann source response does not fix `kappa_s`.
+- Lellouch-Luscher finite-volume machinery does not turn finite source-only
+  FH/LSZ rows into source-Higgs identity.
+- RI/MOM operator renormalization does not supply canonical-Higgs pole purity.
+
+The selected future target is the `O_H/C_sH/C_HH` contract via an action-first
+same-source EW/Higgs and FMS `O_H` certificate.  Do not treat this route
+selection as an `O_H` certificate or retained/proposed-retained support.

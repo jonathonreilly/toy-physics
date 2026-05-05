@@ -1,5 +1,34 @@
 # Handoff
 
+Latest checkpoint, 2026-05-05 fresh artifact literature route review:
+
+- Added
+  `scripts/frontier_yt_pr230_fresh_artifact_literature_route_review.py`,
+  `docs/YT_PR230_FRESH_ARTIFACT_LITERATURE_ROUTE_REVIEW_NOTE_2026-05-05.md`,
+  and
+  `outputs/yt_pr230_fresh_artifact_literature_route_review_2026-05-05.json`.
+- This refreshes the active target to finding one genuine artifact inside the
+  listed contracts.  The current surface has none of the listed artifact files.
+- Selected contract: `O_H/C_sH/C_HH` source-Higgs pole rows, via an
+  action-first FMS/canonical-operator route.
+- Exact next action: define a same-source EW/Higgs action on the PR230
+  surface, construct a gauge-invariant `O_H` with canonical pole
+  normalization, write the canonical `O_H` certificate, then produce
+  `C_ss/C_sH/C_HH` pole rows and rerun Gram-purity/LSZ/aggregate gates.
+- Verification: fresh artifact review `PASS=17 FAIL=0`; assumption stress
+  `PASS=28 FAIL=0`; campaign status `PASS=263 FAIL=0`; full assembly
+  `PASS=83 FAIL=0`; retained-route `PASS=231 FAIL=0`; audit pipeline and
+  strict audit lint complete with warnings only.
+- Claim boundary: the review is support only.  It does not write an `O_H`
+  certificate, source-Higgs rows, W/Z rows, Schur rows, scalar-LSZ authority,
+  neutral primitive certificate, retained closure, or `proposed_retained`
+  closure.
+
+Next exact action: pursue the action-first `O_H/C_sH/C_HH` artifact unless a
+real same-surface W/Z, Schur, scalar-LSZ, or neutral primitive artifact lands
+first.  Do not continue source-only shortcut derivations as if literature or
+method names were proof selectors.
+
 Latest checkpoint, 2026-05-05 neutral-scalar Burnside irreducibility attempt:
 
 - Added

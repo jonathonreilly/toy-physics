@@ -542,6 +542,9 @@ def main() -> int:
         "pr230_clean_source_higgs_math_tool_route_selector": load(
             "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json"
         ),
+        "pr230_fresh_artifact_literature_route_review": load(
+            "outputs/yt_pr230_fresh_artifact_literature_route_review_2026-05-05.json"
+        ),
         "pr230_invariant_ring_oh_certificate_attempt": load(
             "outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json"
         ),
@@ -2126,6 +2129,28 @@ def main() -> int:
         .get("id")
         == "source_higgs_invariant_ring_then_gns_pole_rows",
         statuses["pr230_clean_source_higgs_math_tool_route_selector"],
+    )
+    report(
+        "pr230-fresh-artifact-literature-review-selects-oh-contract-not-closure",
+        "fresh artifact literature route review"
+        in str(statuses["pr230_fresh_artifact_literature_route_review"])
+        and certificates["pr230_fresh_artifact_literature_route_review"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_fresh_artifact_literature_route_review"].get(
+            "review_passed"
+        )
+        is True
+        and certificates["pr230_fresh_artifact_literature_route_review"].get(
+            "genuine_artifact_found_on_current_surface"
+        )
+        is False
+        and certificates["pr230_fresh_artifact_literature_route_review"]
+        .get("selected_genuine_artifact_contract", {})
+        .get("contract")
+        == "O_H/C_sH/C_HH source-Higgs pole rows",
+        statuses["pr230_fresh_artifact_literature_route_review"],
     )
     report(
         "pr230-invariant-ring-oh-certificate-attempt-blocks-current-surface",
