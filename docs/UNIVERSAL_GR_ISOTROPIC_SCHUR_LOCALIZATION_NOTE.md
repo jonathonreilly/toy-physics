@@ -4,6 +4,7 @@
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / isotropic background theorem step
+**Primary runner:** [`scripts/frontier_universal_gr_isotropic_schur_localization.py`](../scripts/frontier_universal_gr_isotropic_schur_localization.py) (PASS=6/0)
 
 ## Verdict
 

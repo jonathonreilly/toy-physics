@@ -4477,7 +4477,7 @@
       "note_path": "docs/COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_cosmology_scale_identification.py",
       "transitive_descendants": 277
     },
     {
@@ -4816,7 +4816,7 @@
       "note_path": "docs/PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_c3_nontrivial_current_boundary.py",
       "transitive_descendants": 273
     },
     {
@@ -5089,7 +5089,7 @@
       "note_path": "docs/ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_alpha_lm_geometric_mean_identity.py",
       "transitive_descendants": 270
     },
     {
@@ -5530,7 +5530,7 @@
       "note_path": "docs/NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py",
       "transitive_descendants": 268
     },
     {
@@ -5761,7 +5761,7 @@
       "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_lorentzian_signature_extension.py",
       "transitive_descendants": 267
     },
     {
@@ -5845,7 +5845,7 @@
       "note_path": "docs/PMNS_LOWER_LEVEL_END_TO_END_CLOSURE_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_lower_level_end_to_end_closure.py",
       "transitive_descendants": 267
     },
     {
@@ -6732,7 +6732,7 @@
       "note_path": "docs/UNIVERSAL_GR_ISOTROPIC_SCHUR_LOCALIZATION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_isotropic_schur_localization.py",
       "transitive_descendants": 266
     },
     {
@@ -9338,7 +9338,7 @@
       "note_path": "docs/UNIVERSAL_GR_BLOCK_CONSTRAINT_INTERPRETATION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_block_constraint_interpretation.py",
       "transitive_descendants": 265
     },
     {
@@ -9359,7 +9359,7 @@
       "note_path": "docs/UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_casimir_block_localization.py",
       "transitive_descendants": 265
     },
     {
@@ -9380,7 +9380,7 @@
       "note_path": "docs/UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_invariant_nonlinear_completion.py",
       "transitive_descendants": 265
     },
     {

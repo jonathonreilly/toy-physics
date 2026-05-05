@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-15
 **Status:** bounded/conditional cosmology-lane synthesis on `main`
+**Primary runner:** [`scripts/frontier_cosmology_scale_identification.py`](../scripts/frontier_cosmology_scale_identification.py) (PASS=7/0)
 
 ## Verdict
 

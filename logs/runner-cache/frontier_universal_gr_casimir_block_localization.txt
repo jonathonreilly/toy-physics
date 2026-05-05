@@ -1,0 +1,40 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_casimir_block_localization.py
+runner_sha256: f93e3759e0dfee6fd031237c3ca967b2ed1fe142c4160a0bb8dfd3bbbf0639b1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.37
+status: ok
+----- stdout -----
+UNIVERSAL GR CASIMIR BLOCK LOCALIZATION
+==============================================================================
+Casimir eigenvalues on complement = [-6.0, -6.0, -6.0, -6.0, -6.0, -2.0, -2.0, -2.0]
+ranks = {'lapse': 1, 'shift': 3, 'trace': 1, 'shear': 5}
+sum error = 0.000e+00
+orthogonality error = 0.000e+00
+idempotence error = 0.000e+00
+comm errors: lapse=0.000e+00, trace=4.180e-17, shift=0.000e+00, shear=4.180e-17
+diag P_shift on complement = [1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 0.000000]
+diag P_shear on complement = [0.000000 0.000000 0.000000 1.000000 1.000000 1.000000 1.000000 1.000000]
+[EXACT] PASS: the universal complement Casimir has exactly the j=1 and j=2 eigenvalue split
+    Casimir eigenvalues=[-6.0, -6.0, -6.0, -6.0, -6.0, -2.0, -2.0, -2.0]
+[EXACT] PASS: the spectral projectors define a canonical shift/shear split on the complement
+    ranks={'lapse': 1, 'shift': 3, 'trace': 1, 'shear': 5}
+[EXACT] PASS: the four block projectors are exact, orthogonal, and complete
+    sum=0.000e+00, orth=0.000e+00, idem=0.000e+00
+[EXACT] PASS: the shift/shear projectors commute with the universal SO(3) generators
+    comm errors=(0.000e+00,4.180e-17,0.000e+00,4.180e-17)
+[EXACT] PASS: in the current canonical basis the Casimir projectors land exactly on the expected shift and shear coordinates
+    P_shift selects h0i and P_shear selects spatial traceless-symmetric channels
+
+Verdict:
+The direct universal route already carries a canonical block-localization operator. Pi_A1 fixes lapse and trace, and the complement Casimir spectrally fixes the shift and traceless-shear blocks. So the old full complement-frame blocker was too strong.
+The remaining question is not whether a canonical lapse/shift/trace/shear block split exists. It does. The remaining question is whether this canonical block-localized Hessian is already enough to identify the Einstein/Regge dynamics law, or whether an extra theorem is still needed inside the shift/shear blocks.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=5 FAIL=0 TOTAL=5
+
+----- stderr -----
+

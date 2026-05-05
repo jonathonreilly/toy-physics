@@ -1,4 +1,5 @@
 # alpha_LM Geometric-Mean Identity Theorem
+**Primary runner:** [`scripts/frontier_alpha_lm_geometric_mean_identity.py`](../scripts/frontier_alpha_lm_geometric_mean_identity.py) (PASS=38/0)
 
 Date: 2026-04-24
 

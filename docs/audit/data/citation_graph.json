@@ -26871,9 +26871,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "4d27a4224e509f4378a1a7b8b9617c5ef1939b4946c3d5bed2b1624f05600dc1",
+      "note_hash": "d61774c39602a9bd6449560e2cfab43b36461fec0d1fdd31ffae9c853108c4e0",
       "path": "docs/ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_alpha_lm_geometric_mean_identity.py",
       "title": "alpha_LM Geometric-Mean Identity Theorem"
     },
     "alpha_s_derived_note": {
@@ -30216,9 +30216,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "79581ac4d7cf0bc5aea04c543537a32dd2ce1354a959eb4833d8c8e94fed22ce",
+      "note_hash": "c77c2d1d694c47b3e6aa9381d5c5b1af3189fabb16bebf6fde9989729e703e74",
       "path": "docs/COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_cosmology_scale_identification.py",
       "title": "Cosmology Scale Identification and Reduction"
     },
     "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25": {
@@ -41319,9 +41319,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "20116e4c0db6b864b3573327b9a4cfb360fcde194d143520c3626c74dbe098f0",
+      "note_hash": "c07d7d399db939eb18d93ba1fbcfe77291697fbda6460771b5f4031b8fb79b03",
       "path": "docs/NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py",
       "title": "Neutrino Majorana Lower-Level Pairing No-Go"
     },
     "neutrino_majorana_nambu_quadratic_comparator_note": {
@@ -42912,9 +42912,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "000e7bfbca4e9e91bbb2e7fffd27436565bcfda0572a29ae36ed8b7f47013ac9",
+      "note_hash": "679a5ed021fdf733c1e5c45a96f41525066e05000a25fbc8586c47ca578e850b",
       "path": "docs/PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_c3_nontrivial_current_boundary.py",
       "title": "PMNS `C3` Nontrivial-Character Current Boundary"
     },
     "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03": {
@@ -43057,9 +43057,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "534df54467bb341951cd0d858a74d9d16c1c2eb5e29c02496610a2621a7bb60a",
+      "note_hash": "cd34b676ea5fd7bd50ca5b415f42c981fdc3118421ab7d6df44237b4c839ec7d",
       "path": "docs/PMNS_LOWER_LEVEL_END_TO_END_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_lower_level_end_to_end_closure.py",
       "title": "PMNS Lower-Level End-to-End Closure"
     },
     "pmns_minimal_branch_nonselection_note": {
@@ -50510,9 +50510,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "d3827ea23e8d5ec2163df75606fcc1526578e6e288c69d041a9ac5857a2df289",
+      "note_hash": "8b3444d49dc811c03b96a57299de698a32d0b308c8b801f55f8297ce573e4af8",
       "path": "docs/UNIVERSAL_GR_BLOCK_CONSTRAINT_INTERPRETATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_block_constraint_interpretation.py",
       "title": "Universal GR Block-Constraint Interpretation on `PL S^3 x R`"
     },
     "universal_gr_block_ident_note": {
@@ -50556,9 +50556,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "bfdc6443d9f4919b73786224e769d26996ba555990b9970e6919c91f0653d0f0",
+      "note_hash": "f58227a81ef8ab21eb14e20e59d0a759e1c161198024bb10036bd427c306d879",
       "path": "docs/UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_casimir_block_localization.py",
       "title": "Universal GR Casimir Block Localization on `PL S^3 x R`"
     },
     "universal_gr_complement_canonical_note": {
@@ -50625,9 +50625,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "1593fd502000b7f2ac37efc1c4d64d0a170672468c904925a2ab45f8faa60db1",
+      "note_hash": "e38357b3c9cf4bde649ff2351a8bdb5270d7e90801250e08e43228eec9b8050b",
       "path": "docs/UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_invariant_nonlinear_completion.py",
       "title": "Universal GR Invariant Nonlinear Completion on `PL S^3 x R`"
     },
     "universal_gr_isotropic_glue_operator_note": {
@@ -50647,9 +50647,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "f1824029195ac26e2016c88b405da580edc1be55313297e72d51b729be99ddae",
+      "note_hash": "b7efa3dcfaa75405f53da049a6c8100225f6a736a22911e4a401fd33ea0bc369",
       "path": "docs/UNIVERSAL_GR_ISOTROPIC_SCHUR_LOCALIZATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_isotropic_schur_localization.py",
       "title": "Universal GR Isotropic Schur Localization on `PL S^3 x R`"
     },
     "universal_gr_lambda_bypass_note": {
@@ -50680,9 +50680,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "62779cce3628d562890e032d44dbd7265700ca2801f3bd6d3c2d2c19c89900b6",
+      "note_hash": "06a5564a22d5edc4df48c5ad0cfba4159f750def79616fd046cc3041830b4c45",
       "path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_lorentzian_signature_extension.py",
       "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`"
     },
     "universal_gr_polarization_frame_bundle_attempt": {
@@ -54666,6 +54666,6 @@
     "leaf_count": 552,
     "node_count": 1887,
     "root_count": 900,
-    "runners_with_path": 1461
+    "runners_with_path": 1471
   }
 }

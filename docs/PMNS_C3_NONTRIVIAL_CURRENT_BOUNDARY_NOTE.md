@@ -1,6 +1,7 @@
 # PMNS `C3` Nontrivial-Character Current Boundary
 
 **Status:** support - structural or confirmatory support note
+**Primary runner:** [`scripts/frontier_pmns_c3_nontrivial_current_boundary.py`](../scripts/frontier_pmns_c3_nontrivial_current_boundary.py) (PASS=16/0)
 ## Question
 Once the retained PMNS lane has been reduced to the native `C3`-character
 family, what is the exact smallest remaining sole-axiom source object?

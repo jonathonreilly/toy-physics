@@ -1,0 +1,51 @@
+===== runner cache v1 =====
+runner: scripts/frontier_alpha_lm_geometric_mean_identity.py
+runner_sha256: 85503bf53be05b81a1b0d2f36d55f8e397d4f87c2510b4b0e0f7444d1e7e0819
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.50
+status: ok
+----- stdout -----
+[PASS] retained plaquette is the packaged value: <P>=0.5934
+[PASS] u0 is the retained plaquette fourth root: u0=0.87768138119868433
+[PASS] alpha_bare is 1/(4*pi): alpha_bare=0.079577471545947673
+[PASS] alpha_LM uses one power of u0: alpha_LM=0.090667836017286313
+[PASS] alpha_s(v) uses two powers of u0: alpha_s(v)=0.10330381612226712
+[PASS] geometric mean identity at retained value: alpha_LM^2=0.0082206564880575213, alpha_bare*alpha_s(v)=0.008220656488057523
+[PASS] positive root form at retained value: alpha_LM=0.090667836017286313, sqrt(product)=0.090667836017286327
+[PASS] log-mean form at retained value: log(alpha_LM)=-2.4005526041879368
+[PASS] lower ratio is 1/u0: alpha_LM/alpha_bare=1.1393656301951629
+[PASS] upper ratio is 1/u0: alpha_s(v)/alpha_LM=1.1393656301951631
+[PASS] the two adjacent ratios match: ratio=1.1393656301951629
+[PASS] symbolic geometric identity: 0
+[PASS] symbolic lower ratio: 0
+[PASS] symbolic upper ratio: 0
+[PASS] symbolic adjacent-ratio equality: 0
+[PASS] symbolic no extra alpha_LM degree of freedom: 0
+[PASS] parametric identity alpha=0.0795775, u0=0.5: delta=0.000e+00
+[PASS] parametric identity alpha=0.0795775, u0=0.75: delta=0.000e+00
+[PASS] parametric identity alpha=0.0795775, u0=0.877681: delta=-1.735e-18
+[PASS] parametric identity alpha=0.0795775, u0=1: delta=0.000e+00
+[PASS] parametric identity alpha=0.0795775, u0=1.25: delta=-8.674e-19
+[PASS] parametric identity alpha=0.0795775, u0=2: delta=0.000e+00
+[PASS] parametric identity alpha=0.01, u0=0.5: delta=0.000e+00
+[PASS] parametric identity alpha=0.01, u0=0.75: delta=2.711e-20
+[PASS] parametric identity alpha=0.01, u0=0.877681: delta=-2.711e-20
+[PASS] parametric identity alpha=0.01, u0=1: delta=0.000e+00
+[PASS] parametric identity alpha=0.01, u0=1.25: delta=-1.355e-20
+[PASS] parametric identity alpha=0.01, u0=2: delta=0.000e+00
+[PASS] parametric identity alpha=0.125, u0=0.5: delta=0.000e+00
+[PASS] parametric identity alpha=0.125, u0=0.75: delta=0.000e+00
+[PASS] parametric identity alpha=0.125, u0=0.877681: delta=0.000e+00
+[PASS] parametric identity alpha=0.125, u0=1: delta=0.000e+00
+[PASS] parametric identity alpha=0.125, u0=1.25: delta=1.735e-18
+[PASS] parametric identity alpha=0.125, u0=2: delta=0.000e+00
+[PASS] perturbing alpha_LM breaks the identity: relative perturbation=1e-6
+[PASS] alpha_LM is fixed by alpha_bare and alpha_s(v): no independent alpha_LM knob remains on this definition surface
+[PASS] runner scope excludes alpha_s(M_Z) bridge: downstream running is separate from this algebraic identity
+[PASS] runner scope excludes plaquette-value derivation: the theorem uses the retained <P> value but does not derive it
+
+TOTAL: PASS=38, FAIL=0
+
+----- stderr -----
+

@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_block_constraint_interpretation.py
+runner_sha256: e3bf08cd7010e54e8457d79a26698f3924063b63364df497a87a98adb33788d8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.42
+status: ok
+----- stdout -----
+UNIVERSAL GR BLOCK-CONSTRAINT INTERPRETATION AUDIT
+==============================================================================
+[PASS] scalar generator is exact
+    the observable-principle scalar generator is present in the universal stack
+[PASS] 3+1 lift is exact
+    Route 2 supplies the exact `PL S^3 x R` lift
+[PASS] tensor variational candidate is exact
+    the universal tensor-valued variational candidate is exact as a construction
+[PASS] quotient uniqueness is exact
+    the quotient kernel is unique on the finite prototype
+[PASS] A1 projector is exact
+    Pi_A1 is the invariant rank-2 core
+[PASS] Casimir block split is exact
+    ranks = {'Pi_A1': 2, 'P_shift': 3, 'P_shear': 5, 'P_hamiltonian': 2, 'P_lapse': 1, 'P_trace': 1}
+[PASS] block projectors are orthogonal and complete
+    Pi_A1, shift, and shear projectors form a complete orthogonal split
+[PASS] block projectors commute with valid rotations
+    commutator norms = {'Pi_A1': {'x': '5.722e-17', 'y': '6.655e-17', 'z': '0.000e+00'}, 'P_shift': {'x': '0.000e+00', 'y': '0.000e+00', 'z': '0.000e+00'}, 'P_shear': {'x': '1.309e-16', 'y': '4.972e-16', 'z': '5.093e-16'}}
+[PASS] current atlas records the remaining gap
+    the remaining obstruction is still the complement bundle, not the block split
+[PASS] canonical block interpretation is now justified
+    the universal route already has the canonical block-localization theorem
+
+==============================================================================
+BLOCK PROJECTORS
+==============================================================================
+Pi_A1 rank = 2
+Pi_A1 = diag(1,0,0,0,1,0,0,0,0,0)
+P_lapse rank = 1
+P_trace rank = 1
+P_shift rank = 3
+P_shear rank = 5
+commutator norms = {'Pi_A1': {'x': '5.722e-17', 'y': '6.655e-17', 'z': '0.000e+00'}, 'P_shift': {'x': '0.000e+00', 'y': '0.000e+00', 'z': '0.000e+00'}, 'P_shear': {'x': '1.309e-16', 'y': '4.972e-16', 'z': '5.093e-16'}}
+
+==============================================================================
+CONSTRAINT INTERPRETATION
+==============================================================================
+Hamiltonian block = Pi_A1 = lapse + spatial trace
+Momentum block = P_shift = j=1 Casimir block on the complement
+Trace/shear split = P_trace ⊕ P_shear
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=10 FAIL=0 TOTAL=10
+The direct universal route now admits a canonical Hamiltonian/momentum-constraint interpretation at the block level: the exact Pi_A1 core and the Casimir-derived shift block are canonical. What remains open is the operator-level identification of the block-localized universal Hessian with the Einstein/Regge constraint operator and its exact normalization on the E \oplus T1 complement.
+
+----- stderr -----
+

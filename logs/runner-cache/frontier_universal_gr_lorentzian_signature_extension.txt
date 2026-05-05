@@ -1,0 +1,42 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_lorentzian_signature_extension.py
+runner_sha256: 50040d9e738ef425a2ed942c559f5b964b449753dc8cc0fa44ffd0df313c4be6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.42
+status: ok
+----- stdout -----
+[EXACT] PASS: the universal route already has the exact scalar generator, 3+1 lift, and positive-background local closure
+    the Lorentzian step starts from the fully closed positive-background local family
+[EXACT] PASS: the Hessian bilinear is exactly congruence-covariant on the nondegenerate Lorentzian class
+    max congruence-covariance error=2.276e-15
+[EXACT] PASS: the principal basis diagonalizes the Lorentzian local operator exactly
+    max diagonal error=3.775e-15, max offdiag error=1.138e-15
+[EXACT] PASS: the local Lorentzian Hessian is nondegenerate with mixed signature
+    min positive eig=3.190467e-01, min |negative eig|=3.627454e-01, min |glued eig|=3.190467e-01
+[EXACT] PASS: every sampled Lorentzian background carries a unique exact stationary bridge field
+    Lambda_R symmetry=0.000e+00, Lambda_R min eig=1.363463e+00, min |det K|=4.189525e-04, max stationary gradient error=4.441e-16
+[EXACT] PASS: the exact quadratic completion identity survives without positivity on the Lorentzian class
+    max completion identity error=4.796e-15
+UNIVERSAL GR LORENTZIAN SIGNATURE EXTENSION
+==============================================================================
+max congruence-covariance error = 2.276e-15
+max principal diagonal error    = 3.775e-15
+max principal offdiag error     = 1.138e-15
+Lambda_R symmetry error         = 0.000e+00
+Lambda_R min eigenvalue         = 1.363463e+00
+min |glued operator eigenvalue| = 3.190467e-01
+min |det glued operator|        = 4.189525e-04
+max stationary gradient error   = 4.441e-16
+max completion identity error   = 4.796e-15
+
+Verdict:
+The direct-universal route extends exactly from the positive-symmetric background family to the full nondegenerate Lorentzian 3+1 background class. The price of Lorentzian signature is loss of convexity, not loss of exact stationary closure.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=6 FAIL=0 TOTAL=6
+
+----- stderr -----
+
