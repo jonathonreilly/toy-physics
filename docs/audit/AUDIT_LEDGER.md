@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | _retained_pending_chain_ | 2 |
 | open_gate | 17 |
 | unaudited | 872 |
-| audit_in_progress | 40 |
+| audit_in_progress | 39 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
-| ~~audited_conditional~~ | 384 |
+| ~~audited_conditional~~ | 385 |
 | ~~audited_failed~~ | 15 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 40 |
+| `audit_in_progress` | 39 |
 | `audited_clean` | 325 |
-| `audited_conditional` | 384 |
+| `audited_conditional` | 385 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
@@ -113,7 +113,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | open_gate | audit_in_progress | audit_in_progress | - | - | - | - |
 | `generation_axiom_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -630,6 +629,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_two_higgs_minimality_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_pns_attack_cascade_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_selector_threshold_stabilization_support_theorem_note_2026-04-21` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -4491,6 +4491,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — The note asserts the Clifford/gamma algebra consequences but does not provide the Gamma_i defining relations, chirality commutation relations, runner output, or runner source needed to verify the algebra inside the restricted packet. The missing step is an explicit derivation or auditable computation of the commutator and trace identities from the stated axiom-level operator definitions.
 - **rationale:** The load-bearing step is an algebraic identity claim, not a renaming or numerical match. However, with no cited authorities, no runner stdout, and no runner source, the restricted packet contains only the theorem statement and a description of checks, not the checks themselves. Because the relevant operator algebra is not fully specified in the packet, the claimed exact weak-vector theorem does not close on its own terms in this audit.
 - **auditor confidence:** medium
+
+### `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_Z3_CHARACTER_TRANSFER_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_Z3_CHARACTER_TRANSFER_THEOREM_NOTE_2026-04-15.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the conditional algebra that, once chi(lambda)=exp(i lambda 2pi/3) is required to be a one-dimensional Z3 character, lambda is integral and the local |lambda|<=1 branches are {-1,0,+1}, with +1 selected only under the stated positive source orientation.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-judicial-third-dm_neutrino_z3_character_transfer_theorem_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The note asserts that exact weak-only Z3 source transfer requires chi(lambda)=exp(i lambda delta_src) to be a true one-dimensional Z3 character, so chi^3=1 and with delta_src=2pi/3 this gives exp(i 2pi lambda)=1, hence lambda in Z.  _(class `A`)_
+- **chain closes:** False — The algebra from chi^3=1 to lambda in Z closes. The restricted packet does not derive the decisive bridge from exact weak-only source transfer to the imposed character condition, nor the positive orientation or local continuity strip, and the runner hard-codes those premises before checking consistency.
+- **rationale:** Issue: the note's decisive step is the unproved assertion that exact weak-only Z3 source transfer for the phase-lift family is equivalent to imposing the one-dimensional Z3-character condition chi^3=1, with delta_src=2pi/3, the local strip, and the + orientation already selected. Why this blocks: without a retained theorem or cited authority deriving that source-transfer bridge, the note proves only the algebraic consequence of an imposed premise. Repair target: add or cite a retained bridge theorem deriving the character-transfer rule, delta_src normalization, local continuity strip, and source orientation from retained primitives, and make the runner construct rather than assume those objects. Claim boundary until fixed: if chi(lambda)=exp(i lambda 2pi/3) is required to be a Z3 character, then lambda is integral and the local branches are {-1,0,+1}.
+- **auditor confidence:** high
 
 ### `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15`
 
