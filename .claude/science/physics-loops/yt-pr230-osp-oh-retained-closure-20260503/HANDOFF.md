@@ -1,5 +1,52 @@
 # Handoff
 
+## 2026-05-05 PR230 Non-Chunk Cycle-25 Post-Cycle-24 Main-Audit-Status-Drift Reopen Guard
+
+Cycle 25 checked the only new resume fact after cycle 24: `origin/main`
+advanced from `eaa2130fc4dd5c8f304b66f6de2eebae90741e71` to
+`0fbd8ecd41fe4ee6ee84d373c84dc5291953e606`.
+
+Result: exact negative boundary.  The runner reloads the worklist,
+route-family audit, future-artifact intake gate, terminal route-exhaustion
+gate, reopen-admissibility gate, cycle-18 reopen-freshness gate, cycle-19
+no-duplicate-route gate, cycle-20 process-gate continuation no-go, cycle-21
+remote-surface reopen guard, cycle-22 main-audit-drift guard, cycle-23
+main-effective-status-drift guard, cycle-24 post-cycle-23 main-status-drift
+guard, full assembly gate, retained-route certificate, and campaign
+certificate.  It verifies that the new main diff is still
+audit/effective-status drift only, no listed PR230 future same-surface path
+changed or exists on `origin/main`, all six worklist units remain blocked, no
+route family is executable, process gates through cycle 24 remain closed, and
+aggregate gates still deny proposal authority.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_nonchunk_cycle25_post_cycle24_main_audit_status_drift_guard.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=65 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=213 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=240 FAIL=0
+```
+
+Claim boundary: no closure proposal, no main-drift reopen, no remote-drift
+reopen, no process-only route, no chunk packaging, and no admissible reopen
+source remains on this branch.
+
+Next exact action: stop PR230 current-surface non-chunk cycling on this branch.
+Reopen only after a listed same-surface row, certificate, or theorem exists as
+a parseable claim-status artifact on the target branch; then rerun
+reopen-admissibility, worklist, exhaustion, intake, independent-route,
+cycle-16, cycle-17, cycle-18, cycle-19, cycle-20, cycle-21, cycle-22,
+cycle-23, cycle-24, cycle-25, assembly, retained-route, and campaign gates
+before any proposal language.
+
 ## 2026-05-05 PR230 Non-Chunk Cycle-24 Post-Cycle-23 Main-Status-Drift Reopen Guard
 
 Cycle 24 checked the only new resume fact after cycle 23: `origin/main`
