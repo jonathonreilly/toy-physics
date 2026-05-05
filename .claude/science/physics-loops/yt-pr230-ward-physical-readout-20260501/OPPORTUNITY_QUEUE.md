@@ -1,5 +1,19 @@
 # Opportunity Queue
 
+2026-05-05 update: the neutral-scalar Burnside/double-commutant irreducibility
+attempt is now landed and blocks on the current PR230 source-only generator
+surface.  The current neutral generator set is block diagonal in a
+source/orthogonal completion; it generates a dimension-2 algebra rather than
+full `M_2`, has a dimension-2 commutant rather than scalar-only commutant, and
+its transfer is not primitive.  Burnside is therefore a future certificate
+engine only after a same-surface off-diagonal neutral generator, primitive
+transfer matrix, or equivalent source/orthogonal row exists.  Highest-value
+positive work is unchanged: define certified `O_H/C_sH/C_HH` pole rows,
+produce genuine same-source W/Z response rows with identity/covariance/`g2`
+authority, produce Schur `A/B/C` rows, prove strict scalar-LSZ
+moment/threshold/FV authority, or supply the missing neutral primitive
+generator/certificate.
+
 2026-05-05 update: the GNS/source-Higgs flat-extension attempt is now landed
 and blocks on the current PR230 surface.  The source-only `C_ss` projection
 has multiple PSD source-Higgs moment extensions with different GNS ranks and

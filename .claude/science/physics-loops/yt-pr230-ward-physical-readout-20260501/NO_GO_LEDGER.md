@@ -1,5 +1,30 @@
 # No-Go Ledger
 
+## Burnside/double-commutant does not certify neutral irreducibility from source-only generators
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_neutral_scalar_burnside_irreducibility_attempt.py
+# SUMMARY: PASS=17 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=23 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=78 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=226 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=258 FAIL=0
+```
+
+The current neutral scalar generator set is source-only and block diagonal in
+a source/orthogonal completion.  It generates a dimension-2 algebra, not full
+`M_2`, and has a dimension-2 commutant, not scalar-only commutant.  The
+transfer graph is not strongly connected and no primitive positive power is
+present.  Do not treat Burnside's theorem, double-commutant language,
+source-only `C_ss` rows, or a future mixed-generator toy witness as retained
+closure or `proposed_retained` evidence.
+
 ## GNS/source-Higgs flat extension is not current-surface closure
 
 Runners:

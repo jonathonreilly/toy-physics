@@ -1,0 +1,142 @@
+{
+  "actual_current_surface_status": "exact negative boundary / Burnside neutral irreducibility attempt blocked by non-full current generator algebra",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "burnside_certificate_written": false,
+  "burnside_irreducibility_certificate_passed": false,
+  "burnside_witnesses": {
+    "basis": [
+      "source_created_neutral",
+      "orthogonal_neutral"
+    ],
+    "current_source_only_generators": {
+      "algebra_dimension": 2,
+      "burnside_irreducible": false,
+      "commutant_dimension": 2,
+      "full_matrix_algebra_dimension": 4,
+      "missing_generator": "same-surface off-diagonal source/orthogonal neutral transfer or row coupling",
+      "names": [
+        "I",
+        "P_source",
+        "T_source_only_block_diagonal"
+      ],
+      "primitive_power": {
+        "first_positive_power": null,
+        "positive": false
+      },
+      "scalar_commutant_dimension": 1,
+      "source_rows": [
+        {
+          "C_ss": 4.0,
+          "p_hat_sq": 0.0
+        },
+        {
+          "C_ss": 1.9306913006394557,
+          "p_hat_sq": 0.2679491924311227
+        },
+        {
+          "C_ss": 1.2724291323938564,
+          "p_hat_sq": 0.5358983848622454
+        },
+        {
+          "C_ss": 0.8,
+          "p_hat_sq": 1.0
+        }
+      ],
+      "strongly_connected": false
+    },
+    "future_mixed_generator_example": {
+      "algebra_dimension": 4,
+      "burnside_irreducible": true,
+      "commutant_dimension": 1,
+      "full_matrix_algebra_dimension": 4,
+      "interpretation": "This is an acceptance-shape example only.  It is not a PR230 measurement or theorem until the off-diagonal generator is derived on the same surface.",
+      "names": [
+        "I",
+        "P_source",
+        "T_with_source_orthogonal_mixing"
+      ],
+      "primitive_power": {
+        "first_positive_power": 1,
+        "positive": true
+      },
+      "scalar_commutant_dimension": 1,
+      "strongly_connected": true
+    }
+  },
+  "conditional_surface_status": "conditional-support if a future same-surface neutral generator set generates the full matrix algebra or a primitive positive transfer power, with certified source and canonical-Higgs overlaps",
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "To make the neutral Burnside route positive, supply a same-surface neutral scalar generator set with source/orthogonal mixing and prove that its generated algebra is full M_n, or supply an equivalent primitive-cone certificate.  Otherwise return to certified O_H/C_sH/C_HH rows, W/Z response rows, Schur A/B/C rows, or strict scalar-LSZ moment/threshold/FV authority.",
+  "fail_count": 0,
+  "future_certificate_contract": [
+    {
+      "current_satisfied": false,
+      "id": "same_surface_generator_set",
+      "required": "explicit PR230 neutral scalar generator set after gauge, fermion, scalar-source, and canonical-Higgs construction"
+    },
+    {
+      "current_satisfied": false,
+      "id": "full_matrix_algebra_or_scalar_commutant",
+      "required": "Burnside certificate that the generated algebra is M_n or the commutant is scalar-only"
+    },
+    {
+      "current_satisfied": false,
+      "id": "primitive_positive_transfer",
+      "required": "equivalent nonnegative transfer matrix with a positive finite power on the same neutral cone"
+    },
+    {
+      "current_satisfied": false,
+      "id": "source_and_canonical_higgs_overlap",
+      "required": "nonzero certified source and canonical-Higgs overlaps with the unique lowest isolated pole"
+    },
+    {
+      "current_satisfied": true,
+      "id": "forbidden_import_firewall",
+      "required": "reject H_unit, Ward, observed selectors, alpha/plaquette/u0, reduced pilots, unit c2/Z_match/kappa_s, and PSLQ selectors"
+    }
+  ],
+  "future_file_presence": {
+    "burnside_irreducibility_certificate": false,
+    "matched_top_wz_rows": false,
+    "neutral_irreducibility_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "schur_kernel_rows": false,
+    "source_higgs_rows": false
+  },
+  "hypothetical_axiom_status": null,
+  "parent_certificates": {
+    "clean_source_higgs_math_selector": "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json",
+    "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "invariant_ring_oh_attempt": "outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json",
+    "neutral_scalar_commutant_rank_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
+    "neutral_scalar_irreducibility_authority_audit": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
+    "neutral_scalar_positivity_improving_direct_closure": "outputs/yt_neutral_scalar_positivity_improving_direct_closure_attempt_2026-05-03.json",
+    "neutral_scalar_primitive_cone_certificate_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+    "neutral_scalar_primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
+    "positivity_improving_neutral_scalar_rank_one": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json",
+    "retained_closure_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  },
+  "parent_statuses": {
+    "clean_source_higgs_math_selector": "exact support / clean source-Higgs outside-math route selector; positive closure still open",
+    "full_positive_closure_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
+    "invariant_ring_oh_attempt": "exact negative boundary / invariant-ring O_H certificate attempt blocked on current PR230 surface",
+    "neutral_scalar_commutant_rank_no_go": "exact negative boundary / neutral scalar commutant does not force rank-one purity",
+    "neutral_scalar_irreducibility_authority_audit": "exact negative boundary / neutral-scalar irreducibility authority absent on current PR230 surface",
+    "neutral_scalar_positivity_improving_direct_closure": "exact negative boundary / neutral-scalar positivity-improving direct theorem not derived",
+    "neutral_scalar_primitive_cone_certificate_gate": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+    "neutral_scalar_primitive_cone_stretch_no_go": "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface",
+    "positivity_improving_neutral_scalar_rank_one": "conditional-support / positivity-improving neutral-scalar rank-one theorem; premise absent",
+    "retained_closure_route": "open / retained closure not yet reached"
+  },
+  "pass_count": 17,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current PR230 neutral generator set is block diagonal in a source/orthogonal completion.  Burnside/double-commutant methods therefore do not prove neutral-sector irreducibility until a same-surface off-diagonal generator, primitive transfer matrix, or equivalent non-source row is supplied.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not write a neutral irreducibility or primitive-cone certificate",
+    "does not treat source-only C_ss rows as off-diagonal generator data",
+    "does not import H_unit, Ward, observed targets, alpha_LM, plaquette, u0, reduced pilots, c2=1, Z_match=1, kappa_s=1, or PSLQ selectors",
+    "does not use the future mixed-generator example as PR230 evidence"
+  ]
+}

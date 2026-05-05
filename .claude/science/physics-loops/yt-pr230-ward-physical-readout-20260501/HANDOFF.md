@@ -1,5 +1,36 @@
 # Handoff
 
+Latest checkpoint, 2026-05-05 neutral-scalar Burnside irreducibility attempt:
+
+- Added
+  `scripts/frontier_yt_neutral_scalar_burnside_irreducibility_attempt.py`,
+  `docs/YT_NEUTRAL_SCALAR_BURNSIDE_IRREDUCIBILITY_ATTEMPT_NOTE_2026-05-05.md`,
+  and
+  `outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json`.
+- This tests the outside-math neutral-sector route: Burnside's theorem /
+  double-commutant irreducibility as a possible primitive-cone certificate.
+- Result: exact negative boundary.  The current source-only neutral generator
+  set generates a dimension-2 algebra in a source/orthogonal completion, not
+  the full `M_2` dimension 4; its commutant has dimension 2, not scalar-only
+  dimension 1.  The associated transfer is not strongly connected and has no
+  positive primitive power.
+- The runner records only an acceptance-shape example: a future off-diagonal
+  same-surface neutral generator could make the algebra full and primitive,
+  but that generator is not derived or measured on the current PR230 surface.
+- Verification: Burnside attempt `PASS=17 FAIL=0`; assumption stress
+  `PASS=23 FAIL=0`; full assembly `PASS=78 FAIL=0`; retained-route
+  `PASS=226 FAIL=0`; campaign status `PASS=258 FAIL=0`.
+- Claim boundary: no neutral irreducibility or primitive-cone certificate was
+  written, no retained or `proposed_retained` closure is authorized, and
+  Burnside/double-commutant theorem names are not proof selectors without
+  same-surface neutral generators.
+
+Next exact action: supply a same-surface off-diagonal neutral generator or
+primitive transfer certificate, or return to the other positive inputs:
+certified `O_H/C_sH/C_HH` pole rows, same-source W/Z response rows with
+identity/covariance/`g2` authority, Schur `A/B/C` rows, or strict scalar-LSZ
+moment/threshold/FV authority.
+
 Latest checkpoint, 2026-05-05 GNS/source-Higgs flat-extension attempt:
 
 - Added `scripts/frontier_yt_pr230_gns_source_higgs_flat_extension_attempt.py`,

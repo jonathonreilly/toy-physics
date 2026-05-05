@@ -65,6 +65,9 @@ def main() -> int:
         "gns_source_higgs_flat_extension_attempt": load(
             "outputs/yt_pr230_gns_source_higgs_flat_extension_attempt_2026-05-05.json"
         ),
+        "neutral_scalar_burnside_irreducibility_attempt": load(
+            "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json"
+        ),
         "kinetic_matching": load("outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"),
         "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "scalar_ir": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
@@ -132,6 +135,8 @@ def main() -> int:
         "two-singlet completion",
         "GNS/source-Higgs flat extension",
         "not proof selectors until O_H/C_sH/C_HH rows exist",
+        "Burnside/double-commutant neutral irreducibility",
+        "not proof selectors until a same-surface off-diagonal neutral generator or primitive transfer exists",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -309,6 +314,20 @@ def main() -> int:
         is False,
         gns_attempt.get("actual_current_surface_status"),
     )
+    burnside_attempt = certificates["neutral_scalar_burnside_irreducibility_attempt"]
+    report(
+        "burnside-double-commutant-attempt-does-not-certify-neutral-irreducibility",
+        "Burnside neutral irreducibility attempt"
+        in str(burnside_attempt.get("actual_current_surface_status"))
+        and burnside_attempt.get("proposal_allowed") is False
+        and burnside_attempt.get("burnside_irreducibility_certificate_passed") is False
+        and burnside_attempt.get("burnside_certificate_written") is False
+        and burnside_attempt.get("future_file_presence", {}).get(
+            "burnside_irreducibility_certificate"
+        )
+        is False,
+        burnside_attempt.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -345,7 +364,12 @@ def main() -> int:
             "GNS/source-Higgs flat-extension attempt confirms the same "
             "outside-math firewall at the moment-matrix level: source-only "
             "C_ss projections admit multiple PSD O_H extensions with different "
-            "GNS ranks and overlaps until O_H/C_sH/C_HH rows exist.  No current route "
+            "GNS ranks and overlaps until O_H/C_sH/C_HH rows exist.  The "
+            "Burnside/double-commutant neutral irreducibility attempt confirms "
+            "the same firewall at the neutral-generator level: the current "
+            "source-only generator algebra is not full and has a non-scalar "
+            "commutant until a same-surface off-diagonal neutral generator or "
+            "primitive transfer exists.  No current route "
             "certificate authorizes retained proposal wording.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
@@ -365,6 +389,7 @@ def main() -> int:
             "does not set kappa_s to one without scalar LSZ/canonical normalization",
             "does not use source-only LSZ data as canonical-Higgs identity",
             "does not use outside-math value recognition as a proof selector",
+            "does not use Burnside or double-commutant theorem names without same-surface neutral generators",
         ],
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

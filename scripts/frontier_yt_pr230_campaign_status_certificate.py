@@ -322,6 +322,9 @@ def main() -> int:
         "neutral_scalar_primitive_cone_stretch_no_go": load(
             "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json"
         ),
+        "neutral_scalar_burnside_irreducibility_attempt": load(
+            "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json"
+        ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
@@ -1392,6 +1395,28 @@ def main() -> int:
         )
         is True,
         statuses["neutral_scalar_primitive_cone_stretch_no_go"],
+    )
+    report(
+        "neutral-scalar-burnside-irreducibility-attempt-blocks-source-only-generators",
+        "Burnside neutral irreducibility attempt"
+        in str(statuses["neutral_scalar_burnside_irreducibility_attempt"])
+        and certificates["neutral_scalar_burnside_irreducibility_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["neutral_scalar_burnside_irreducibility_attempt"].get(
+            "burnside_irreducibility_certificate_passed"
+        )
+        is False
+        and certificates["neutral_scalar_burnside_irreducibility_attempt"].get(
+            "burnside_certificate_written"
+        )
+        is False
+        and certificates["neutral_scalar_burnside_irreducibility_attempt"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True,
+        statuses["neutral_scalar_burnside_irreducibility_attempt"],
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",
@@ -3491,7 +3516,11 @@ def main() -> int:
         "PR230 same-surface artifact.  The cycle-33 post-cycle-32 "
         "main-audit-status-drift guard records that origin/main advanced again "
         "only on audit/effective-status/runner-cache surfaces and still "
-        "supplies no listed PR230 same-surface artifact."
+        "supplies no listed PR230 same-surface artifact.  The neutral-scalar "
+        "Burnside/double-commutant attempt records that the current source-only "
+        "neutral generator algebra is not full and has a non-scalar commutant; "
+        "it remains blocked until a same-surface off-diagonal neutral generator "
+        "or primitive transfer certificate exists."
     )
     result["strict_non_claims"] = [
         "does not claim retained closure",
@@ -3512,6 +3541,7 @@ def main() -> int:
         "does not treat post-cycle-30 origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-31 origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-32 origin/main audit/effective-status/runner-cache drift as same-surface physics evidence",
+        "does not treat Burnside/double-commutant theorem names as proof without same-surface neutral generators",
     ]
     OUTPUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"\nWrote certificate: {OUTPUT.relative_to(ROOT)}")

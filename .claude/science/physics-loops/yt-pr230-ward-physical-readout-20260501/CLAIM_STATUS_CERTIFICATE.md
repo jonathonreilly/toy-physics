@@ -1,5 +1,35 @@
 # Claim Status Certificate
 
+Neutral-scalar Burnside irreducibility attempt:
+
+```text
+actual_current_surface_status: exact negative boundary / Burnside neutral irreducibility attempt blocked by non-full current generator algebra
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_neutral_scalar_burnside_irreducibility_attempt.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=23 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=78 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=226 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=258 FAIL=0
+```
+
+The current source-only neutral generator algebra is not full and has a
+non-scalar commutant.  Therefore Burnside/double-commutant methods do not
+certify neutral-sector irreducibility or a primitive cone until a same-surface
+off-diagonal neutral generator, primitive transfer matrix, or equivalent
+source/orthogonal row is supplied.  No neutral irreducibility certificate was
+written, and no retained or `proposed_retained` wording is authorized.
+
 GNS/source-Higgs flat-extension attempt:
 
 ```text

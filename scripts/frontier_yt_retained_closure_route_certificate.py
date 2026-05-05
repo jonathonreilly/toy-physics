@@ -144,6 +144,7 @@ def main() -> int:
         "neutral_scalar_irreducibility_authority_audit": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
         "neutral_scalar_primitive_cone_certificate_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
         "neutral_scalar_primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
+        "neutral_scalar_burnside_irreducibility_attempt": "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "pr230_matching_running_bridge_gate": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
@@ -1052,6 +1053,26 @@ def main() -> int:
         is False
         and certificates["neutral_scalar_primitive_cone_stretch_no_go"].get(
             "primitive_cone_stretch_no_go_passed"
+        )
+        is True
+    )
+    neutral_scalar_burnside_irreducibility_blocks = (
+        "Burnside neutral irreducibility attempt"
+        in certificates["neutral_scalar_burnside_irreducibility_attempt"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["neutral_scalar_burnside_irreducibility_attempt"].get("proposal_allowed")
+        is False
+        and certificates["neutral_scalar_burnside_irreducibility_attempt"].get(
+            "burnside_irreducibility_certificate_passed"
+        )
+        is False
+        and certificates["neutral_scalar_burnside_irreducibility_attempt"].get(
+            "burnside_certificate_written"
+        )
+        is False
+        and certificates["neutral_scalar_burnside_irreducibility_attempt"].get(
+            "exact_negative_boundary_passed"
         )
         is True
     )
@@ -2983,6 +3004,13 @@ def main() -> int:
         "neutral-scalar-primitive-cone-stretch-no-go-blocks",
         neutral_scalar_primitive_cone_stretch_blocks,
         certificates["neutral_scalar_primitive_cone_stretch_no_go"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "neutral-scalar-burnside-irreducibility-attempt-blocks-source-only-generators",
+        neutral_scalar_burnside_irreducibility_blocks,
+        certificates["neutral_scalar_burnside_irreducibility_attempt"].get(
             "actual_current_surface_status", ""
         ),
     )
