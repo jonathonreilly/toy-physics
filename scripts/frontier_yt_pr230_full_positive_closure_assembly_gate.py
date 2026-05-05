@@ -107,6 +107,7 @@ PARENTS = {
     "nonchunk_cycle29_post_cycle28_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle29_post_cycle28_main_audit_status_drift_guard_2026-05-05.json",
     "nonchunk_cycle30_post_cycle29_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle30_post_cycle29_main_audit_status_drift_guard_2026-05-05.json",
     "nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard_2026-05-05.json",
+    "nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -752,6 +753,22 @@ def main() -> int:
         ).get("passed")
         is False
     )
+    nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard_closed = (
+        "cycle-32 post-cycle-31 main-audit-status-drift reopen guard"
+        in statuses["nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard"]
+        and certs["nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard"].get(
+            "cycle32_post_cycle31_main_audit_status_drift_guard_passed"
+        )
+        is True
+        and certs["nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
 
     current_state = {
         "production_physical_response": False,
@@ -1256,6 +1273,11 @@ def main() -> int:
         nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard_closed,
         statuses["nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard"],
     )
+    report(
+        "nonchunk-cycle32-post-cycle31-main-audit-status-drift-guard-recorded",
+        nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard_closed,
+        statuses["nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard"],
+    )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
@@ -1328,6 +1350,9 @@ def main() -> int:
             "that origin/main advanced again only on audit/effective-status "
             "surfaces and still supplies no listed PR230 same-surface artifact.  "
             "The cycle-31 post-cycle-30 main-audit-status-drift guard records "
+            "that origin/main advanced again only on audit/effective-status "
+            "surfaces and still supplies no listed PR230 same-surface artifact.  "
+            "The cycle-32 post-cycle-31 main-audit-status-drift guard records "
             "that origin/main advanced again only on audit/effective-status "
             "surfaces and still supplies no listed PR230 same-surface artifact."
         ),
