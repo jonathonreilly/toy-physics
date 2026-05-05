@@ -1,5 +1,23 @@
 # No-Go Ledger
 
+## FH/LSZ polefit8x8 chunks031-036 active launch is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py --start-index 31 --end-index 36 --max-concurrent 6 --global-max-production-jobs 6 --runtime-minutes 1 --poll-seconds 60 --launch --status-output outputs/yt_fh_lsz_polefit8x8_chunks031_036_launch_status_2026-05-05.json
+# poll=2 completed=0 running=[31, 32, 33, 34, 35, 36] missing=0 all_jobs=6 launched_total=6
+python3 scripts/frontier_yt_fh_lsz_global_production_collision_guard.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+Active production workers, launch records, logs, and output directories are
+not physics evidence.  The chunks031-036 polefit8x8 wave may contribute only
+after root artifacts land and pass the polefit8x8 combiner/postprocessor plus
+aggregate retained/campaign gates.  This launch derives no `kappa_s`,
+canonical-Higgs/source-overlap identity, W/Z response row, Schur row, or
+rank-one neutral-scalar theorem.
+
 ## FH/LSZ polefit8x8 chunks025-030 completion is not closure
 
 Runners:

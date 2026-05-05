@@ -1,5 +1,34 @@
 # Review History
 
+## Review-Loop Backpressure - FH/LSZ Polefit8x8 Chunks031-036 Launch
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: RUN-CONTROL ONLY / ACTIVE WORKERS ARE NOT EVIDENCE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- chunks031-036 launched with fixed seeds, selected mass `0.75`, x8
+  scalar-two-point noise, eight modes, and isolated production directories;
+- post-launch global collision guard records six active FH/LSZ production
+  workers at the global cap and blocks further launch;
+- launch status, logs, active PIDs, and output directories are not counted as
+  evidence;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py --start-index 31 --end-index 36 --max-concurrent 6 --global-max-production-jobs 6 --runtime-minutes 1 --poll-seconds 60 --launch --status-output outputs/yt_fh_lsz_polefit8x8_chunks031_036_launch_status_2026-05-05.json
+python3 scripts/frontier_yt_fh_lsz_global_production_collision_guard.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Polefit8x8 Chunks025-030 Completion
 
 Local review-loop disposition:
