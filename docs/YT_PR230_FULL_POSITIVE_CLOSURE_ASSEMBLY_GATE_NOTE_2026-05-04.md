@@ -209,12 +209,12 @@ After cycle 23, `origin/main` advanced again by audit/effective-status drift
 only; no listed PR230 same-surface artifact exists or changed for admissible
 reopen.  The assembly gate remains open with `PASS=64 FAIL=0`.
 
-2026-05-05 cycle-25 through cycle-28 main-drift updates: the gate now also
-consumes the post-cycle-24, post-cycle-25, post-cycle-26, and post-cycle-27
-main-audit-status-drift guards.  Each checks a fresh `origin/main` advance,
-and each finds only audit/effective-status drift with no listed PR230
-same-surface artifact present or changed for admissible reopen.  The assembly
-gate remains open with `PASS=68 FAIL=0`.
+2026-05-05 cycle-25 through cycle-29 main-drift updates: the gate now also
+consumes the post-cycle-24, post-cycle-25, post-cycle-26, post-cycle-27, and
+post-cycle-28 main-audit-status-drift guards.  Each checks a fresh
+`origin/main` advance, and each finds only audit/effective-status drift with no
+listed PR230 same-surface artifact present or changed for admissible reopen.
+The assembly gate remains open with `PASS=69 FAIL=0`.
 
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
@@ -256,5 +256,5 @@ irreducibility, or scalar-LSZ moment/threshold/FV authority.  A path alone is
 not enough; the candidate must pass the reopen-admissibility gate first.  Then
 rerun the worklist, exhaustion, intake, independent-route, cycle-16, cycle-17,
 cycle-18, cycle-19, cycle-20, cycle-21, cycle-22, cycle-23, cycle-24,
-cycle-25, cycle-26, cycle-27, cycle-28, assembly, retained-route, and campaign
-gates before any proposal language.
+cycle-25, cycle-26, cycle-27, cycle-28, cycle-29, assembly, retained-route,
+and campaign gates before any proposal language.

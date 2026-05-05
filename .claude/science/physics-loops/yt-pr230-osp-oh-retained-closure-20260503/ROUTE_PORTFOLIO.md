@@ -2,16 +2,16 @@
 
 ## Current Stop/Reopen Contract
 
-Status: exact negative boundary through cycle 24.
+Status: exact negative boundary through cycle 29.
 
-Cycle 24 checked the latest `origin/main` advance and again found only
+Cycle 29 checked the latest `origin/main` advance and again found only
 audit/effective-status drift, with no listed PR230 same-surface row,
 certificate, or theorem present.  The current non-chunk surface has no
 executable route until a listed same-surface artifact exists as a parseable
 claim-status artifact and the reopen-admissibility, worklist, exhaustion,
 intake, independent-route, cycle-16, cycle-17, cycle-18, cycle-19, cycle-20,
-cycle-21, cycle-22, cycle-23, cycle-24, assembly, retained-route, and campaign
-gates rerun.
+cycle-21, cycle-22, cycle-23, cycle-24, cycle-25, cycle-26, cycle-27,
+cycle-28, cycle-29, assembly, retained-route, and campaign gates rerun.
 
 ## R1: Source-Only O_sp/O_H Identity
 
