@@ -1262,6 +1262,14 @@
     },
     {
       "from": "canonical_harness_index",
+      "to": "plaquette_4d_mc_support_note_2026-05-04"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "gauge_wilson_isotropy_boundary_note_2026-05-04"
+    },
+    {
+      "from": "canonical_harness_index",
       "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19"
     },
     {
@@ -6485,6 +6493,14 @@
       "to": "gauge_vacuum_plaquette_constant_lift_obstruction_note"
     },
     {
+      "from": "gauge_wilson_isotropy_boundary_note_2026-05-04",
+      "to": "gauge_scalar_temporal_completion_theorem_note"
+    },
+    {
+      "from": "gauge_wilson_isotropy_boundary_note_2026-05-04",
+      "to": "gauge_vacuum_plaquette_constant_lift_obstruction_note"
+    },
+    {
       "from": "gellmann_completeness_theorem_note_2026-05-02",
       "to": "cl3_color_automorphism_theorem"
     },
@@ -10535,6 +10551,22 @@
     {
       "from": "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25",
       "to": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+    },
+    {
+      "from": "plaquette_4d_mc_support_note_2026-05-04",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "plaquette_4d_mc_support_note_2026-05-04",
+      "to": "gauge_scalar_temporal_completion_theorem_note"
+    },
+    {
+      "from": "plaquette_4d_mc_support_note_2026-05-04",
+      "to": "gauge_vacuum_plaquette_framework_point_underdetermination_note"
+    },
+    {
+      "from": "plaquette_4d_mc_support_note_2026-05-04",
+      "to": "gauge_vacuum_plaquette_constant_lift_obstruction_note"
     },
     {
       "from": "plaquette_bootstrap_framework_integration_note_2026-05-03",
@@ -28195,6 +28227,8 @@
         "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
         "scalar_3plus1_temporal_ratio_note",
+        "plaquette_4d_mc_support_note_2026-05-04",
+        "gauge_wilson_isotropy_boundary_note_2026-05-04",
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
@@ -28402,7 +28436,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "d3ab83097f583b05622af6a022c4aeb74a51b87ee02ba0724ed62b0164cc7413",
+      "note_hash": "024e661f2055b4a687bc02507599dba3690739ae87f8f8e0e1105e8fc9554c6c",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -35807,6 +35841,20 @@
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py",
       "title": "Gauge-Vacuum Plaquette Transfer-Operator / Character-Recurrence Theorem"
     },
+    "gauge_wilson_isotropy_boundary_note_2026-05-04": {
+      "claim_id": "gauge_wilson_isotropy_boundary_note_2026-05-04",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "gauge_scalar_temporal_completion_theorem_note",
+        "gauge_vacuum_plaquette_constant_lift_obstruction_note"
+      ],
+      "note_hash": "111e8e50a1a364f058b8baf19b2510d277196d4a93e4bd71d72fd93e4918c3bb",
+      "path": "docs/GAUGE_WILSON_ISOTROPY_BOUNDARY_NOTE_2026-05-04.md",
+      "runner_path": "scripts/frontier_gauge_wilson_isotropy_boundary_2026_05_04.py",
+      "title": "Gauge Wilson Isotropy Boundary Note"
+    },
     "gellmann_completeness_theorem_note_2026-05-02": {
       "claim_id": "gellmann_completeness_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -42762,6 +42810,22 @@
       "path": "docs/PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_planck_target3_phase_unit_edge_statistics.py",
       "title": "Planck Target 3 Phase-Unit / Edge-Statistics Boundary Note"
+    },
+    "plaquette_4d_mc_support_note_2026-05-04": {
+      "claim_id": "plaquette_4d_mc_support_note_2026-05-04",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "plaquette_self_consistency_note",
+        "gauge_scalar_temporal_completion_theorem_note",
+        "gauge_vacuum_plaquette_framework_point_underdetermination_note",
+        "gauge_vacuum_plaquette_constant_lift_obstruction_note"
+      ],
+      "note_hash": "0f3e16396488421abf456e4c04088abe4809a19147dd2017e42be77b5f7e636f",
+      "path": "docs/PLAQUETTE_4D_MC_SUPPORT_NOTE_2026-05-04.md",
+      "runner_path": "scripts/frontier_su3_4d_mc_support_2026_05_04.py",
+      "title": "Plaquette 3+1D Wilson MC Support Note"
     },
     "plaquette_bootstrap_framework_integration_note_2026-05-03": {
       "claim_id": "plaquette_bootstrap_framework_integration_note_2026-05-03",
@@ -54647,25 +54711,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 59,
+      "bounded_theorem": 60,
       "meta": 8,
       "no_go": 12,
       "none": 1715,
-      "open_gate": 9,
+      "open_gate": 10,
       "positive_theorem": 84
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 557,
+      "bounded_theorem": 558,
       "meta": 8,
       "no_go": 117,
       "none": 457,
-      "open_gate": 115,
+      "open_gate": 116,
       "positive_theorem": 633
     },
-    "edge_count": 6399,
+    "edge_count": 6407,
     "leaf_count": 552,
-    "node_count": 1887,
+    "node_count": 1889,
     "root_count": 900,
-    "runners_with_path": 1461
+    "runners_with_path": 1463
   }
 }

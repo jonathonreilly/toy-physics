@@ -3,7 +3,7 @@
     "critical": 777,
     "high": 25,
     "leaf": 208,
-    "medium": 137
+    "medium": 139
   },
   "cycle_break_target_count": 192,
   "cycle_break_targets": [
@@ -9956,12 +9956,12 @@
       ],
       "direct_in_degree": 13,
       "effective_status": "unaudited",
-      "load_bearing_score": 15.118,
+      "load_bearing_score": 15.122,
       "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_derivation.py",
-      "transitive_descendants": 392
+      "transitive_descendants": 393
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9979,12 +9979,12 @@
       ],
       "direct_in_degree": 7,
       "effective_status": "unaudited",
-      "load_bearing_score": 12.104,
+      "load_bearing_score": 12.107,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py",
-      "transitive_descendants": 388
+      "transitive_descendants": 389
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10008,12 +10008,12 @@
       ],
       "direct_in_degree": 7,
       "effective_status": "unaudited",
-      "load_bearing_score": 12.1,
+      "load_bearing_score": 12.104,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py",
-      "transitive_descendants": 387
+      "transitive_descendants": 388
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10034,12 +10034,12 @@
       ],
       "direct_in_degree": 7,
       "effective_status": "unaudited",
-      "load_bearing_score": 12.081,
+      "load_bearing_score": 12.085,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py",
-      "transitive_descendants": 382
+      "transitive_descendants": 383
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10060,12 +10060,12 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.081,
+      "load_bearing_score": 11.085,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py",
-      "transitive_descendants": 382
+      "transitive_descendants": 383
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10085,12 +10085,12 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.081,
+      "load_bearing_score": 11.085,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py",
-      "transitive_descendants": 382
+      "transitive_descendants": 383
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10110,12 +10110,12 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.081,
+      "load_bearing_score": 11.085,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py",
-      "transitive_descendants": 382
+      "transitive_descendants": 383
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10135,12 +10135,12 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.081,
+      "load_bearing_score": 11.085,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py",
-      "transitive_descendants": 382
+      "transitive_descendants": 383
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10177,14 +10177,14 @@
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
         "scalar_3plus1_temporal_ratio_note"
       ],
-      "direct_in_degree": 23,
+      "direct_in_degree": 24,
       "effective_status": "unaudited",
-      "load_bearing_score": 20.077,
+      "load_bearing_score": 20.581,
       "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_plaquette_self_consistency.py",
-      "transitive_descendants": 381
+      "transitive_descendants": 382
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -23505,6 +23505,8 @@
         "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
         "scalar_3plus1_temporal_ratio_note",
+        "plaquette_4d_mc_support_note_2026-05-04",
+        "gauge_wilson_isotropy_boundary_note_2026-05-04",
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
@@ -24079,6 +24081,30 @@
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 22
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_wilson_isotropy_boundary_note_2026-05-04",
+      "claim_scope": null,
+      "claim_type": "open_gate",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_scalar_temporal_completion_theorem_note",
+        "gauge_vacuum_plaquette_constant_lift_obstruction_note"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 4.959,
+      "note_path": "docs/GAUGE_WILSON_ISOTROPY_BOUNDARY_NOTE_2026-05-04.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_gauge_wilson_isotropy_boundary_2026_05_04.py",
+      "transitive_descendants": 21
     },
     {
       "audit_independence_required": "any_non_self",
@@ -25511,6 +25537,32 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": null,
+      "transitive_descendants": 21
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "plaquette_4d_mc_support_note_2026-05-04",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "plaquette_self_consistency_note",
+        "gauge_scalar_temporal_completion_theorem_note",
+        "gauge_vacuum_plaquette_framework_point_underdetermination_note",
+        "gauge_vacuum_plaquette_constant_lift_obstruction_note"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 4.959,
+      "note_path": "docs/PLAQUETTE_4D_MC_SUPPORT_NOTE_2026-05-04.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_su3_4d_mc_support_2026_05_04.py",
       "transitive_descendants": 21
     },
     {
@@ -32834,6 +32886,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 289,
-  "total_pending": 1147
+  "ready_count": 290,
+  "total_pending": 1149
 }

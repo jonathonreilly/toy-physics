@@ -7032,6 +7032,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py"
     },
+    "gauge_wilson_isotropy_boundary_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_wilson_isotropy_boundary_2026_05_04.py"
+    },
     "gellmann_completeness_theorem_note_2026-05-02": {
       "assert_count": 0,
       "counts": {
@@ -11855,6 +11867,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_planck_target3_phase_unit_edge_statistics.py"
+    },
+    "plaquette_4d_mc_support_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 27,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_4d_mc_support_2026_05_04.py"
     },
     "plaquette_bootstrap_framework_integration_note_2026-05-03": {
       "assert_count": 0,
@@ -25720,6 +25744,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_gauge_wilson_isotropy_boundary_2026_05_04.py": {
+      "assert_count": 1,
+      "claims": [
+        "gauge_wilson_isotropy_boundary_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_generation_axiom_boundary.py": {
       "assert_count": 1,
       "claims": [
@@ -31793,6 +31832,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_su3_4d_mc_support_2026_05_04.py": {
+      "assert_count": 1,
+      "claims": [
+        "plaquette_4d_mc_support_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 27,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_su3_anomaly_forced_3bar_completion.py": {
@@ -38254,12 +38308,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 164,
-      "C": 561,
+      "C": 563,
       "D": 208,
       "none": 421
     },
-    "runners_classified": 1364,
-    "runners_with_C": 668,
-    "runners_with_D": 338
+    "runners_classified": 1366,
+    "runners_with_C": 670,
+    "runners_with_D": 339
   }
 }
