@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 872 |
-| audit_in_progress | 25 |
+| audit_in_progress | 24 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
-| ~~audited_conditional~~ | 388 |
+| ~~audited_conditional~~ | 389 |
 | ~~audited_failed~~ | 15 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 25 |
+| `audit_in_progress` | 24 |
 | `audited_clean` | 336 |
-| `audited_conditional` | 388 |
+| `audited_conditional` | 389 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
@@ -113,7 +113,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
-| `koide_berry_bundle_obstruction_theorem_note_2026-04-19` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_cone_completing_root_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -712,6 +711,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `koide_berry_bundle_obstruction_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -7060,6 +7060,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Applying the stated ABSS fixed-point formula with p = 3 and tangent weights (1,2) gives eta = (1/3)(1/3 + 1/3) = 2/9.  _(class `A`)_
 - **chain closes:** False — The symbolic eta evaluation closes after p = 3, weights (1,2), and the ABSS formula/normalization are accepted. The missing step is a retained or self-contained derivation of the admitted Cl(3)/Z^3-to-ambient APS setup and the exact ABSS fixed-point formula in this restricted packet.
 - **rationale:** The runner is not a trivial printout: it performs symbolic Rodrigues, eigenvalue, fixed-locus, weight, and eta-sum checks. But the load-bearing result is an algebraic closure after the admitted C3 route, the ABSS fixed-point formula, and its normalization are taken as inputs. The packet supplies no cited retained authority or self-contained proof for those imports, and the source explicitly leaves the physical-observable bridge delta_physical = eta_APS open.
+- **auditor confidence:** high
+
+### `koide_berry_bundle_obstruction_theorem_note_2026-04-19`
+
+- **Note:** [`KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`](../../docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Topological obstruction that the actual positive projectivized Koide cone has interval quotient under C3, forcing equivariant complex line bundles and Berry holonomy there to be trivial.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-judicial-third-koide_berry_bundle_obstruction_theorem_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** By the retained algebraic Koide theorem, Q = 2/3 iff sigma := |v_parallel|^2 / |v|^2 = 1/2, so after normalization |v| = 1 the Koide locus is K_norm = {s in S^2 : (s . e_+)^2 = 1/2}.  _(class `B`)_
+- **chain closes:** False — The interval quotient and bundle-triviality argument closes for the fixed-latitude locus once that locus is assumed. The identification of that fixed-latitude locus with the actual Koide cone is imported from the named Koide algebraic equivalence note, but the restricted packet exposes no direct dependency edge closing that upstream equivalence.
+- **rationale:** Issue: The first load-bearing step imports the Koide Q = 2/3 iff sigma = 1/2 equivalence from docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md, while the available dependency packet does not provide that note as a direct retained-grade input. Why this blocks: The runner verifies the topology, freeness, Betti numbers, and flat-holonomy non-uniqueness for the fixed-latitude model, but it does not independently prove that this model is the actual positive projectivized Koide cone. Repair target: Add the Koide algebraic equivalence note as a direct dependency and verify that it is retained-grade, or narrow the audited theorem to the abstract fixed-latitude locus. Claim boundary until fixed: The bundle and Berry-holonomy obstruction is supported for the defined fixed-latitude locus, but retained status for the actual Koide-cone theorem remains conditional.
+- **open / conditional deps cited:**
+  - `CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`
 - **auditor confidence:** high
 
 ### `koide_cyclic_wilson_descendant_law_note_2026-04-18`
