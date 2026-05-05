@@ -1,0 +1,90 @@
+{
+  "acceptance_contract": {
+    "certificate_kind": "neutral_scalar_primitive_cone_certificate",
+    "mathematical_checks": [
+      "neutral_transfer_matrix is square and nonnegative",
+      "directed positive-entry graph is strongly connected",
+      "some finite matrix power is strictly positive"
+    ],
+    "required_fields": [
+      "same_surface_cl3_z3",
+      "neutral_sector_basis",
+      "neutral_transfer_matrix",
+      "isolated_lowest_neutral_pole_certified",
+      "source_pole_overlap > 0",
+      "canonical_higgs_overlap > 0",
+      "orthogonal_neutral_null_certified",
+      "firewall.used_observed_targets_as_selectors == false",
+      "firewall.used_hunit_or_ward_authority == false",
+      "firewall.used_alpha_lm_or_plaquette == false",
+      "firewall.set_unit_overlap_or_normalization == false"
+    ]
+  },
+  "actual_current_surface_status": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+  "bare_retained_allowed": false,
+  "exact_next_action": "Either supply the strict neutral primitive-cone certificate, measure same-surface O_H/C_sH/C_HH or W/Z rows, provide Schur A/B/C kernel rows, or continue scalar-LSZ production toward a certified physical readout.",
+  "fail_count": 0,
+  "future_certificate": "outputs/yt_neutral_scalar_primitive_cone_certificate_2026-05-05.json",
+  "future_certificate_checks": {},
+  "future_certificate_missing_or_failed_checks": [],
+  "parent_certificates": {
+    "neutral_scalar_commutant_rank_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
+    "neutral_scalar_dynamical_rank_one": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
+    "neutral_scalar_irreducibility_authority": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
+    "neutral_scalar_positivity_improving_direct_closure": "outputs/yt_neutral_scalar_positivity_improving_direct_closure_attempt_2026-05-03.json",
+    "neutral_scalar_top_coupling_tomography": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
+    "non_source_response_rank_repair": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
+    "positivity_improving_neutral_scalar_rank_one": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json"
+  },
+  "pass_count": 10,
+  "primitive_cone_certificate_gate_passed": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No strict same-surface neutral-scalar primitive-cone / irreducibility certificate is present.",
+  "strict_non_claims": [
+    "does not claim neutral rank-one closure",
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not infer irreducibility from reflection positivity, gauge Perron, symmetry labels, or source-only rows",
+    "does not use H_unit, Ward authority, alpha_LM, plaquette, u0, observed targets, or unit-overlap shortcuts"
+  ],
+  "verdict": "The neutral-rank route now has an executable positive contract.  A future same-surface primitive-cone certificate must prove a nonnegative strongly connected neutral transfer matrix with a positive primitive power, an isolated lowest neutral pole, positive source and canonical-Higgs overlaps, and a forbidden-import firewall.  The current surface has only conditional Perron support and no such certificate.",
+  "witness_family": {
+    "primitive_positive_example": {
+      "interpretation": "This is the shape a future neutral transfer certificate must have before Perron/rank-one support can become load-bearing.",
+      "matrix": [
+        [
+          0.62,
+          0.18
+        ],
+        [
+          0.11,
+          0.71
+        ]
+      ],
+      "nonnegative": true,
+      "primitive_power": {
+        "first_positive_power": 1,
+        "positive": true
+      },
+      "strongly_connected": true
+    },
+    "reducible_positive_counterexample": {
+      "interpretation": "This preserves positivity but leaves two invariant neutral directions, matching the current obstruction.",
+      "matrix": [
+        [
+          0.91,
+          0.0
+        ],
+        [
+          0.0,
+          0.88
+        ]
+      ],
+      "nonnegative": true,
+      "primitive_power": {
+        "first_positive_power": null,
+        "positive": false
+      },
+      "strongly_connected": false
+    }
+  }
+}

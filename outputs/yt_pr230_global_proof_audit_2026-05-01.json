@@ -4,10 +4,10 @@
     "audited_conditional": 28,
     "audited_failed": 14,
     "audited_renaming": 13,
-    "bounded": 19,
-    "open": 3,
-    "support": 12,
-    "unknown": 6
+    "bounded": 112,
+    "open": 49,
+    "support": 43,
+    "unknown": 93
   },
   "fail_count": 0,
   "named_status": {
@@ -549,6 +549,6 @@
     }
   },
   "verdict": "Review of all docs/YT*.md notes plus the audit ledger found no existing retained top-Yukawa proof that the auditor missed.  The proof-looking zero-import/Ward/color-projection stack still routes through audited_renaming or audited_conditional nodes; the direct correlator route is cutoff-obstructed at the current scale; and the Planck selector remains conditional on beta_lambda(M_Pl)=0.",
-  "yt_doc_count": 289,
-  "yt_ledger_row_count": 95
+  "yt_doc_count": 356,
+  "yt_ledger_row_count": 352
 }

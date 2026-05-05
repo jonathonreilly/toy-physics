@@ -216,3 +216,33 @@ remaining positive work units: same-surface `O_H`/source-Higgs rows, W/Z
 response rows plus non-observed `g_2`/`delta_perp`, scalar-LSZ
 moment/threshold/FV/IR authority, same-surface Schur rows, neutral-sector
 irreducibility, and matching/running after a certified physical readout.
+
+Completed in the Pade-Stieltjes non-chunk continuation:
+
+- `scripts/frontier_yt_fh_lsz_pade_stieltjes_bounds_gate.py`
+- `docs/YT_FH_LSZ_PADE_STIELTJES_BOUNDS_GATE_NOTE_2026-05-05.md`
+- `outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json`
+- refreshed full assembly, retained-route, campaign, and non-chunk worklist
+  certificates.
+
+This is the direct moment-theory bypass test for scalar-LSZ.  It shows that
+same-surface Stieltjes/Pade bounds can certify a pole residue if a strict
+positive moment sequence, isolated pole, certified threshold gap, FV/IR
+control, and tight positive residue interval are supplied.  The current
+surface does not supply that certificate, so the non-chunk scalar-LSZ route is
+now sharper but still open.
+
+Completed in the neutral primitive-cone continuation:
+
+- `scripts/frontier_yt_neutral_scalar_primitive_cone_certificate_gate.py`
+- `docs/YT_NEUTRAL_SCALAR_PRIMITIVE_CONE_CERTIFICATE_GATE_NOTE_2026-05-05.md`
+- `outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json`
+- refreshed full assembly, retained-route, campaign, and non-chunk worklist
+  certificates.
+
+This makes the rank-one neutral route executable without pretending it has
+closed.  A future same-surface certificate must provide a nonnegative strongly
+connected neutral transfer matrix, a positive primitive power, isolated-pole
+and overlap certificates, and the forbidden-import firewall.  The current
+surface has only conditional Perron support and no such primitive-cone
+certificate.

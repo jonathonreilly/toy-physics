@@ -10,7 +10,7 @@
     "matching_running"
   ],
   "closed_work_unit_ids": [],
-  "exact_next_action": "Pick one remaining work unit and supply its missing future file or theorem.  The highest-value choices are: same-surface O_H plus C_sH/C_HH rows; strict scalar-LSZ Stieltjes/threshold/FV certificate; matched top/WZ response rows plus non-observed g2; same-surface Schur kernel rows; or neutral-sector irreducibility.",
+  "exact_next_action": "Pick one remaining work unit and supply its missing future file or theorem.  The highest-value choices are: same-surface O_H plus C_sH/C_HH rows; strict scalar-LSZ Stieltjes/Pade/threshold/FV certificate; matched top/WZ response rows plus non-observed g2; same-surface Schur kernel rows; or neutral-sector primitive-cone irreducibility.",
   "fail_count": 0,
   "future_file_presence": {
     "canonical_oh_certificate": false,
@@ -18,7 +18,9 @@
     "delta_perp_rows": false,
     "matched_top_wz_rows": false,
     "neutral_irreducibility_certificate": false,
+    "neutral_primitive_cone_certificate": false,
     "non_observed_g2_certificate": false,
+    "pade_stieltjes_bounds_certificate": false,
     "schur_kernel_rows": false,
     "source_higgs_rows": false,
     "stieltjes_moment_certificate": false,
@@ -38,6 +40,7 @@
     "lsz_fv_obstruction": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
     "lsz_model_class": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
     "lsz_model_class_firewall": "outputs/yt_fh_lsz_model_class_semantic_firewall_2026-05-04.json",
+    "lsz_pade_stieltjes_bounds": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
     "lsz_pole_saturation": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
     "lsz_soft_continuum": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
     "lsz_stieltjes_moment_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
@@ -47,6 +50,7 @@
     "neutral_commutant_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
     "neutral_dynamic_attempt": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
     "neutral_irreducibility_audit": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
+    "neutral_primitive_cone_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
     "neutral_rank_one": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "same_source_w_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
@@ -76,7 +80,7 @@
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_same_source_action_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json"
   },
-  "pass_count": 15,
+  "pass_count": 17,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Current and chunk-only assembly are rejected.  The strict future files for O_H/source-Higgs, scalar-LSZ, W/Z response, Schur rows, neutral irreducibility, and certified physical readout are absent.",
   "strict_non_claims": [
@@ -130,6 +134,7 @@
         "open / FH-LSZ pole-fit model-class gate blocks finite-shell fit as evidence",
         "exact negative boundary / FH-LSZ Stieltjes model-class obstruction",
         "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
+        "exact-support / FH-LSZ Pade-Stieltjes bounds gate; strict moment-threshold certificate absent",
         "open / FH-LSZ pole-saturation threshold gate blocks current finite-shell fit",
         "exact negative boundary / FH-LSZ finite-volume pole-saturation obstruction",
         "exact negative boundary / FH-LSZ soft-continuum threshold no-go",
@@ -140,7 +145,8 @@
       "kind": "non_chunk_theorem_or_strict_certificate",
       "next_action": "produce a strict Stieltjes moment certificate, derive a scalar denominator/analytic-continuation theorem, or prove a uniform threshold/FV/IR pole-saturation bound",
       "remaining": [
-        "outputs/yt_fh_lsz_stieltjes_moment_certificate_2026-05-05.json"
+        "outputs/yt_fh_lsz_stieltjes_moment_certificate_2026-05-05.json",
+        "outputs/yt_fh_lsz_pade_stieltjes_bounds_certificate_2026-05-05.json"
       ]
     },
     {
@@ -164,14 +170,16 @@
         "open / neutral scalar rank-one purity gate not passed",
         "exact negative boundary / neutral scalar commutant does not force rank-one purity",
         "exact negative boundary / dynamical rank-one neutral scalar theorem not derived",
-        "exact negative boundary / neutral-scalar irreducibility authority absent on current PR230 surface"
+        "exact negative boundary / neutral-scalar irreducibility authority absent on current PR230 surface",
+        "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent"
       ],
       "current_state": "blocked",
       "id": "neutral_scalar_rank_one",
       "kind": "new_irreducibility_theorem",
       "next_action": "derive primitive-cone/positivity-improving irreducibility for the neutral top-coupled scalar sector",
       "remaining": [
-        "outputs/yt_neutral_scalar_irreducibility_certificate_2026-05-04.json"
+        "outputs/yt_neutral_scalar_irreducibility_certificate_2026-05-04.json",
+        "outputs/yt_neutral_scalar_primitive_cone_certificate_2026-05-05.json"
       ]
     },
     {

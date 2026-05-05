@@ -20,13 +20,14 @@ This is an integration/worklist gate, not a physics closure theorem.
 - **Same-source W/Z response:** produce matched top/WZ response rows,
   W/Z mass-response rows, non-observed `g_2`, and strict `delta_perp`; or
   derive a real same-surface product-measure/conditional-independence theorem.
-- **Scalar-LSZ model/FV/IR:** produce a strict Stieltjes moment certificate,
-  a scalar-denominator/analytic-continuation theorem, or a uniform
+- **Scalar-LSZ model/FV/IR:** produce a strict Stieltjes/Pade
+  moment-threshold-FV certificate, a scalar-denominator/analytic-continuation
+  theorem, or a uniform
   threshold/FV/IR pole-saturation bound.
 - **Schur/scalar-denominator rows:** supply same-surface Schur `A/B/C` kernel
   rows; current FH/LSZ source rows do not substitute.
-- **Neutral rank-one:** derive primitive-cone/positivity-improving
-  irreducibility for the neutral top-coupled scalar sector.
+- **Neutral rank-one:** derive a strict primitive-cone/positivity-improving
+  irreducibility certificate for the neutral top-coupled scalar sector.
 - **Matching/running:** rerun only after a certified physical readout exists.
 
 ## Boundary
@@ -41,5 +42,5 @@ real positive certificate and the aggregate gates pass.
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
 python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
-# SUMMARY: PASS=15 FAIL=0
+# SUMMARY: PASS=17 FAIL=0
 ```

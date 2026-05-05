@@ -1,0 +1,294 @@
+{
+  "acceptance_contract": {
+    "allowed_positive_route": "strict same-surface Stieltjes moments plus threshold/FV/IR authority; not a fit to observed y_t or a unit-normalization shortcut",
+    "certificate_kind": "fh_lsz_pade_stieltjes_bounds_certificate",
+    "required_fields": [
+      "same_surface_cl3_z3",
+      "moment_certificate_gate_passed",
+      "moment_count >= 6",
+      "pole_location_certified",
+      "threshold_gap_certified",
+      "fv_ir_control_certified",
+      "residue_interval.lower_bound_positive",
+      "residue_interval.relative_width_over_lower <= 0.02",
+      "analytic_continuation_or_denominator_authority",
+      "firewall.used_observed_targets_as_selectors == false",
+      "firewall.used_hunit_or_ward_authority == false",
+      "firewall.used_alpha_lm_or_plaquette == false",
+      "firewall.set_kappa_c2_zmatch_equal_one == false"
+    ]
+  },
+  "actual_current_surface_status": "exact-support / FH-LSZ Pade-Stieltjes bounds gate; strict moment-threshold certificate absent",
+  "bare_retained_allowed": false,
+  "exact_next_action": "Either produce the strict Pade/Stieltjes bounds certificate from same-surface scalar data, derive the microscopic scalar denominator theorem that implies it, or continue production chunks until the postprocessor can emit a certified moment/threshold/FV package.",
+  "fail_count": 0,
+  "future_certificate": "outputs/yt_fh_lsz_pade_stieltjes_bounds_certificate_2026-05-05.json",
+  "future_certificate_checks": {},
+  "future_certificate_missing_or_failed_checks": [],
+  "pade_stieltjes_bounds_gate_passed": false,
+  "pade_stieltjes_scan": {
+    "broad_row_examples": [
+      {
+        "feasible": true,
+        "lower_bound_positive": true,
+        "moment_count": 4,
+        "moment_order_nmax": 3,
+        "relative_width_over_lower": 9.730870855490686,
+        "residue_lower": 0.14698276224443574,
+        "residue_upper": 1.5772530396283322,
+        "y_proxy_span_factor": 3.275800796063565
+      },
+      {
+        "feasible": true,
+        "lower_bound_positive": true,
+        "moment_count": 6,
+        "moment_order_nmax": 5,
+        "relative_width_over_lower": 1.695484543782911,
+        "residue_lower": 0.4460134300852565,
+        "residue_upper": 1.202222307114409,
+        "y_proxy_span_factor": 1.6417930879934022
+      }
+    ],
+    "gap_rows": [
+      {
+        "continuum_grid_size": 85,
+        "rows": [
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 4,
+            "moment_order_nmax": 3,
+            "relative_width_over_lower": 9.730870855490686,
+            "residue_lower": 0.14698276224443574,
+            "residue_upper": 1.5772530396283322,
+            "y_proxy_span_factor": 3.275800796063565
+          },
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 6,
+            "moment_order_nmax": 5,
+            "relative_width_over_lower": 1.695484543782911,
+            "residue_lower": 0.4460134300852565,
+            "residue_upper": 1.202222307114409,
+            "y_proxy_span_factor": 1.6417930879934022
+          },
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 8,
+            "moment_order_nmax": 7,
+            "relative_width_over_lower": 0.08143565494454907,
+            "residue_lower": 0.9285417594150824,
+            "residue_upper": 1.0041581657364136,
+            "y_proxy_span_factor": 1.0399209849524862
+          },
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 10,
+            "moment_order_nmax": 9,
+            "relative_width_over_lower": 6.460625420230889e-05,
+            "residue_lower": 0.9999371742002473,
+            "residue_upper": 1.00000177639551,
+            "y_proxy_span_factor": 1.000032302605372
+          }
+        ],
+        "threshold_gap_m2": 0.001
+      },
+      {
+        "continuum_grid_size": 85,
+        "rows": [
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 4,
+            "moment_order_nmax": 3,
+            "relative_width_over_lower": 1.0830475036375256,
+            "residue_lower": 0.6087539483506488,
+            "residue_upper": 1.268063392441306,
+            "y_proxy_span_factor": 1.4432766552665937
+          },
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 6,
+            "moment_order_nmax": 5,
+            "relative_width_over_lower": 0.19882619349969605,
+            "residue_lower": 0.8499203131963455,
+            "residue_upper": 1.0189067338472444,
+            "y_proxy_span_factor": 1.0949092170128516
+          },
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 8,
+            "moment_order_nmax": 7,
+            "relative_width_over_lower": 0.0007258272004971605,
+            "residue_lower": 0.9993150848954594,
+            "residue_upper": 1.0000404149659436,
+            "y_proxy_span_factor": 1.000362847770996
+          },
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 10,
+            "moment_order_nmax": 9,
+            "relative_width_over_lower": 6.058447559853551e-07,
+            "residue_lower": 0.9999994114676635,
+            "residue_upper": 1.000000017312063,
+            "y_proxy_span_factor": 1.000000302922332
+          }
+        ],
+        "threshold_gap_m2": 0.01
+      },
+      {
+        "continuum_grid_size": 85,
+        "rows": [
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 4,
+            "moment_order_nmax": 3,
+            "relative_width_over_lower": 0.03412877566450902,
+            "residue_lower": 0.984540080112803,
+            "residue_upper": 1.0181412276396906,
+            "y_proxy_span_factor": 1.0169212239227328
+          },
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 6,
+            "moment_order_nmax": 5,
+            "relative_width_over_lower": 0.0003969362359729636,
+            "residue_lower": 0.999758531005875,
+            "residue_upper": 1.0001553713940543,
+            "y_proxy_span_factor": 1.0001984484270974
+          },
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 8,
+            "moment_order_nmax": 7,
+            "relative_width_over_lower": 3.920812853036192e-06,
+            "residue_lower": 0.9999982741636687,
+            "residue_upper": 1.000002194969755,
+            "y_proxy_span_factor": 1.000001960404505
+          },
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 10,
+            "moment_order_nmax": 9,
+            "relative_width_over_lower": 5.611195612418207e-08,
+            "residue_lower": 1.0000000130907332,
+            "residue_upper": 1.00000006920269,
+            "y_proxy_span_factor": 1.0000000280559778
+          }
+        ],
+        "threshold_gap_m2": 0.1
+      },
+      {
+        "continuum_grid_size": 85,
+        "rows": [
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 4,
+            "moment_order_nmax": 3,
+            "relative_width_over_lower": 0.0009545345567370127,
+            "residue_lower": 0.9997180606596235,
+            "residue_upper": 1.0006723260955173,
+            "y_proxy_span_factor": 1.0004771534406656
+          },
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 6,
+            "moment_order_nmax": 5,
+            "relative_width_over_lower": 3.951389799307439e-06,
+            "residue_lower": 0.9999978460956562,
+            "residue_upper": 1.0000017974769446,
+            "y_proxy_span_factor": 1.000001975692948
+          },
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 8,
+            "moment_order_nmax": 7,
+            "relative_width_over_lower": 1.8787962207230363e-08,
+            "residue_lower": 0.9999999988709406,
+            "residue_upper": 1.0000000176589028,
+            "y_proxy_span_factor": 1.0000000093939811
+          },
+          {
+            "feasible": true,
+            "lower_bound_positive": true,
+            "moment_count": 10,
+            "moment_order_nmax": 9,
+            "relative_width_over_lower": -7.196465645596486e-13,
+            "residue_lower": 1.0000000000033042,
+            "residue_upper": 1.0000000000025846,
+            "y_proxy_span_factor": 0.9999999999996402
+          }
+        ],
+        "threshold_gap_m2": 0.5
+      }
+    ],
+    "near_threshold_has_broad_rows": true,
+    "pole_mass_squared": 0.25,
+    "separated_gap_has_tight_rows": true,
+    "theorem_boundary": "For a positive Stieltjes scalar correlator with certified pole mass, positive moments, threshold gap, and FV/IR authority, the truncated moment problem gives Markov/Pade-style upper and lower bounds on the pole residue.  A tight interval can serve as a non-MC scalar-LSZ certificate.  Without a certified gap or moment sequence, the same formalism leaves broad positive-residue families and cannot identify y_t.",
+    "tight_row_examples": [
+      {
+        "feasible": true,
+        "lower_bound_positive": true,
+        "moment_count": 6,
+        "moment_order_nmax": 5,
+        "relative_width_over_lower": 0.0003969362359729636,
+        "residue_lower": 0.999758531005875,
+        "residue_upper": 1.0001553713940543,
+        "y_proxy_span_factor": 1.0001984484270974
+      },
+      {
+        "feasible": true,
+        "lower_bound_positive": true,
+        "moment_count": 8,
+        "moment_order_nmax": 7,
+        "relative_width_over_lower": 3.920812853036192e-06,
+        "residue_lower": 0.9999982741636687,
+        "residue_upper": 1.000002194969755,
+        "y_proxy_span_factor": 1.000001960404505
+      },
+      {
+        "feasible": true,
+        "lower_bound_positive": true,
+        "moment_count": 10,
+        "moment_order_nmax": 9,
+        "relative_width_over_lower": 5.611195612418207e-08,
+        "residue_lower": 1.0000000130907332,
+        "residue_upper": 1.00000006920269,
+        "y_proxy_span_factor": 1.0000000280559778
+      }
+    ],
+    "true_pole_residue_for_witness": 1.0
+  },
+  "parent_certificates": {
+    "finite_volume_obstruction": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
+    "pole_saturation_threshold": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
+    "scalar_denominator_attempt": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json",
+    "soft_continuum_no_go": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
+    "stieltjes_moment_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
+    "threshold_authority": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json"
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No same-surface Pade/Stieltjes bounds certificate is present; finite source/shell rows cannot be promoted to scalar-LSZ residue evidence.",
+  "strict_non_claims": [
+    "does not claim scalar-LSZ closure",
+    "does not infer Pade bounds from finite source/shell rows without moments",
+    "does not define y_t_bare",
+    "does not use H_unit, Ward authority, alpha_LM, plaquette, u0, observed targets, or unit shortcuts"
+  ],
+  "verdict": "The non-chunk scalar-LSZ bypass is now sharply characterized.  Pade/Stieltjes moment bounds can in principle certify a pole residue from same-surface data, but only with positive moment authority, an isolated pole, a certified threshold gap, FV/IR control, and a tight positive residue interval.  The current PR230 surface has none of those strict future inputs, so the route is exact support rather than closure."
+}

@@ -970,3 +970,39 @@ Findings checked:
 - The note and runner do not claim retained/proposed-retained closure and do
   not use observed selectors, `H_unit`/Ward authority, `alpha_LM`/plaquette/u0,
   or by-fiat normalization shortcuts.
+
+# 2026-05-05 FH/LSZ Pade-Stieltjes Bounds Gate Review
+
+Disposition: pass as exact support / open, not as closure.
+
+Findings checked:
+
+- The runner attacks the scalar-LSZ non-chunk bypass directly: whether
+  Stieltjes/Pade moment theory can replace production pole-fit compute.
+- A positive witness demonstrates that separated threshold plus enough moments
+  can make a tight pole-residue interval.
+- A near-threshold witness demonstrates that finite moments remain broad when
+  the continuum can approach the pole.
+- Current mode accepts no closure because the same-surface
+  Pade/Stieltjes bounds certificate is absent.
+- The note and runner do not claim retained/proposed-retained closure and do
+  not use observed selectors, `H_unit`/Ward authority, `alpha_LM`/plaquette/u0,
+  or by-fiat normalization shortcuts.
+
+# 2026-05-05 Neutral Primitive-Cone Certificate Gate Review
+
+Disposition: pass as exact support / open, not as closure.
+
+Findings checked:
+
+- The runner turns the neutral rank-one route into an executable future
+  certificate instead of a loose premise.
+- A primitive positive matrix witness passes strong connectivity and positive
+  primitive-power checks.
+- A reducible positive diagonal witness is rejected, preserving the boundary
+  between positivity preservation and positivity improvement.
+- Current mode accepts no closure because the same-surface primitive-cone
+  certificate is absent.
+- The note and runner do not claim retained/proposed-retained closure and do
+  not use observed selectors, `H_unit`/Ward authority, `alpha_LM`/plaquette/u0,
+  or unit-overlap shortcuts.

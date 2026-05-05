@@ -139,6 +139,9 @@ def main() -> int:
         "fh_lsz_stieltjes_moment_certificate_gate": load(
             "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json"
         ),
+        "fh_lsz_pade_stieltjes_bounds_gate": load(
+            "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -213,6 +216,9 @@ def main() -> int:
         ),
         "neutral_scalar_irreducibility_authority_audit": load(
             "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json"
+        ),
+        "neutral_scalar_primitive_cone_certificate_gate": load(
+            "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json"
         ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
@@ -883,6 +889,18 @@ def main() -> int:
         statuses["fh_lsz_stieltjes_moment_certificate_gate"],
     )
     report(
+        "fh-lsz-pade-stieltjes-bounds-gate-absent",
+        "Pade-Stieltjes bounds gate"
+        in str(statuses["fh_lsz_pade_stieltjes_bounds_gate"])
+        and certificates["fh_lsz_pade_stieltjes_bounds_gate"].get("proposal_allowed")
+        is False
+        and certificates["fh_lsz_pade_stieltjes_bounds_gate"].get(
+            "pade_stieltjes_bounds_gate_passed"
+        )
+        is False,
+        statuses["fh_lsz_pade_stieltjes_bounds_gate"],
+    )
+    report(
         "fh-lsz-pole-saturation-threshold-gate-blocks",
         "pole-saturation threshold gate" in str(statuses["fh_lsz_pole_saturation_threshold_gate"]),
         statuses["fh_lsz_pole_saturation_threshold_gate"],
@@ -1085,6 +1103,18 @@ def main() -> int:
         )
         is False,
         statuses["neutral_scalar_irreducibility_authority_audit"],
+    )
+    report(
+        "neutral-scalar-primitive-cone-certificate-gate-absent",
+        "neutral-scalar primitive-cone certificate gate"
+        in str(statuses["neutral_scalar_primitive_cone_certificate_gate"])
+        and certificates["neutral_scalar_primitive_cone_certificate_gate"].get("proposal_allowed")
+        is False
+        and certificates["neutral_scalar_primitive_cone_certificate_gate"].get(
+            "primitive_cone_certificate_gate_passed"
+        )
+        is False,
+        statuses["neutral_scalar_primitive_cone_certificate_gate"],
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",
@@ -2228,6 +2258,10 @@ def main() -> int:
             "interval is made tight by pole-saturation, continuum-threshold "
             "control, or a scalar denominator theorem.  The threshold-authority "
             "audit finds no hidden current artifact that supplies that premise.  "
+            "The Pade-Stieltjes bounds gate now tests the direct moment-theory "
+            "bypass: it is a valid positive route only if a same-surface "
+            "moment/threshold/FV certificate is supplied, and the current "
+            "surface has no such certificate.  "
             "The finite-volume pole-saturation obstruction also blocks using "
             "finite-L discreteness as a substitute for a uniform gap.  "
             "The numba seed-independence audit closes the adjacent production "
@@ -2288,7 +2322,12 @@ def main() -> int:
             "No certified O_H/C_sH/C_HH pole certificate is present.  The "
             "neutral-scalar rank-one purity gate also fails: D17 carrier "
             "support is not a dynamical rank-one theorem for the neutral "
-            "scalar response space.  "
+            "scalar response space.  The primitive-cone certificate gate now "
+            "states the exact positive neutral-rank contract: a future "
+            "same-surface neutral transfer matrix must be nonnegative, "
+            "strongly connected, have a positive primitive power, certify the "
+            "isolated pole and overlaps, and pass the shortcut firewall.  No "
+            "such certificate is present.  "
             "The effective-potential Hessian/source-overlap no-go blocks using "
             "SSB radial curvature as the source-pole identity: canonical VEV, "
             "W/Z masses, and Hessian eigenvalues still leave the source "

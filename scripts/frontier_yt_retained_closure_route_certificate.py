@@ -111,6 +111,7 @@ def main() -> int:
         "fh_lsz_model_class_semantic_firewall": "outputs/yt_fh_lsz_model_class_semantic_firewall_2026-05-04.json",
         "fh_lsz_stieltjes_model_class": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json",
         "fh_lsz_stieltjes_moment_certificate_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
+        "fh_lsz_pade_stieltjes_bounds_gate": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
         "fh_lsz_pole_saturation_threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
         "fh_lsz_threshold_authority_audit": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json",
         "confinement_gap_threshold_import": "outputs/yt_confinement_gap_threshold_import_audit_2026-05-02.json",
@@ -136,6 +137,7 @@ def main() -> int:
         "gauge_perron_neutral_scalar_rank_one_import": "outputs/yt_gauge_perron_to_neutral_scalar_rank_one_import_audit_2026-05-03.json",
         "neutral_scalar_positivity_improving_direct_closure": "outputs/yt_neutral_scalar_positivity_improving_direct_closure_attempt_2026-05-03.json",
         "neutral_scalar_irreducibility_authority_audit": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
+        "neutral_scalar_primitive_cone_certificate_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "pr230_matching_running_bridge_gate": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
@@ -605,6 +607,18 @@ def main() -> int:
         )
         is False
     )
+    pade_stieltjes_bounds_certificate_absent = (
+        "Pade-Stieltjes bounds gate"
+        in certificates["fh_lsz_pade_stieltjes_bounds_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["fh_lsz_pade_stieltjes_bounds_gate"].get("proposal_allowed")
+        is False
+        and certificates["fh_lsz_pade_stieltjes_bounds_gate"].get(
+            "pade_stieltjes_bounds_gate_passed"
+        )
+        is False
+    )
     pole_saturation_threshold_gate_blocks = (
         "pole-saturation threshold gate"
         in certificates["fh_lsz_pole_saturation_threshold_gate"].get("actual_current_surface_status", "")
@@ -887,6 +901,18 @@ def main() -> int:
         is False
         and certificates["neutral_scalar_irreducibility_authority_audit"].get(
             "current_closure_gate_passed"
+        )
+        is False
+    )
+    neutral_scalar_primitive_cone_certificate_absent = (
+        "neutral-scalar primitive-cone certificate gate"
+        in certificates["neutral_scalar_primitive_cone_certificate_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["neutral_scalar_primitive_cone_certificate_gate"].get("proposal_allowed")
+        is False
+        and certificates["neutral_scalar_primitive_cone_certificate_gate"].get(
+            "primitive_cone_certificate_gate_passed"
         )
         is False
     )
@@ -2081,6 +2107,13 @@ def main() -> int:
         ),
     )
     report(
+        "fh-lsz-pade-stieltjes-bounds-gate-absent",
+        pade_stieltjes_bounds_certificate_absent,
+        certificates["fh_lsz_pade_stieltjes_bounds_gate"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "fh-lsz-pole-saturation-threshold-gate-blocks",
         pole_saturation_threshold_gate_blocks,
         certificates["fh_lsz_pole_saturation_threshold_gate"].get("actual_current_surface_status", ""),
@@ -2208,6 +2241,13 @@ def main() -> int:
         "neutral-scalar-irreducibility-authority-absent",
         neutral_scalar_irreducibility_authority_absent,
         certificates["neutral_scalar_irreducibility_authority_audit"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "neutral-scalar-primitive-cone-certificate-gate-absent",
+        neutral_scalar_primitive_cone_certificate_absent,
+        certificates["neutral_scalar_primitive_cone_certificate_gate"].get(
+            "actual_current_surface_status", ""
+        ),
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",
@@ -2848,6 +2888,10 @@ def main() -> int:
             "pole-saturation, continuum-threshold control, or a scalar "
             "denominator theorem.  The threshold-authority audit finds no "
             "hidden current artifact that supplies that premise.  The "
+            "Pade-Stieltjes bounds gate sharpens the non-compute bypass: "
+            "moment theory can certify the pole residue only after a strict "
+            "same-surface moment/threshold/FV certificate exists, and the "
+            "current surface has no such certificate.  The "
             "finite-volume pole-saturation obstruction blocks using finite-L "
             "discreteness as a substitute for a uniform gap.  The numba "
             "seed-independence audit also demotes historical chunk001/chunk002: "
@@ -3016,7 +3060,12 @@ def main() -> int:
             "canonical-Higgs overlap remain allowed.  The orthogonal-neutral "
             "decoupling no-go also blocks dismissing that pole by finite mass "
             "gap alone; no current theorem ties the overlap or top coupling to "
-            "inverse orthogonal mass.  "
+            "inverse orthogonal mass.  The primitive-cone certificate gate "
+            "now makes the only positive rank-one theorem route executable: a "
+            "future same-surface neutral transfer matrix must be nonnegative, "
+            "strongly connected, have a positive primitive power, certify the "
+            "isolated pole and overlaps, and pass the forbidden-import "
+            "firewall.  No such certificate is present.  "
             "A paired x8/x16 calibration "
             "manifest now exists, but it is still launch planning rather than "
             "completed same-source production variance evidence.  The "

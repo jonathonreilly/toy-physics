@@ -2412,3 +2412,82 @@ same-surface EW gauge-Higgs/`O_H` certificate plus source-Higgs rows, W/Z
 response rows with strict identity/covariance certificates and non-observed
 `g_2`, Schur `A/B/C` rows, or a direct neutral-sector irreducibility theorem.
 The running chunk worker remains separate.
+
+## 2026-05-05 FH/LSZ Pade-Stieltjes Bounds Gate
+
+The scalar-LSZ non-chunk bypass was tested directly: can finite
+Stieltjes/Pade moment theory replace production pole-fit compute?
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_pade_stieltjes_bounds_gate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=35 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=184 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=210 FAIL=0
+
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+# SUMMARY: PASS=16 FAIL=0
+```
+
+Result: exact support / open.  A strict Pade/Stieltjes route exists in
+principle, but only if the future certificate supplies same-surface positive
+moments, an isolated scalar pole, a certified threshold gap, FV/IR control,
+and a tight positive residue interval.  The current surface supplies no such
+certificate, so finite source/shell rows still cannot be promoted to
+scalar-LSZ residue evidence.
+
+Next exact action remains one of the real positive surfaces:
+
+- produce the strict Pade/Stieltjes moment-threshold-FV certificate;
+- derive a microscopic scalar denominator theorem that implies it;
+- use completed production chunks only after they emit the certified
+  moment/threshold/FV package;
+- or pursue a separate source-overlap route through same-surface `O_H`, W/Z,
+  Schur rows, or neutral-sector irreducibility.
+
+## 2026-05-05 Neutral Primitive-Cone Certificate Gate
+
+The neutral-rank non-chunk route was converted into a strict future
+certificate gate.  This tests the only theorem route that could remove the
+orthogonal neutral scalar ambiguity without `O_H/C_sH/C_HH`, W/Z, Schur, or
+scalar-LSZ production evidence.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_neutral_scalar_primitive_cone_certificate_gate.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=36 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=185 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=211 FAIL=0
+
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+# SUMMARY: PASS=17 FAIL=0
+```
+
+Result: exact support / open.  The route is positive in shape but not closed:
+the future certificate must prove same-surface neutral-sector primitive-cone
+irreducibility with a nonnegative strongly connected transfer matrix, positive
+primitive power, isolated-pole/overlap certificates, and shortcut firewalls.
+The current surface has no such certificate.
+
+The non-chunk route stack is now sharper:
+
+- scalar-LSZ: strict Stieltjes/Pade moment-threshold-FV certificate or scalar
+  denominator theorem;
+- neutral rank-one: strict primitive-cone certificate;
+- source-overlap: same-surface `O_H/C_sH/C_HH`, W/Z rows, or Schur rows.

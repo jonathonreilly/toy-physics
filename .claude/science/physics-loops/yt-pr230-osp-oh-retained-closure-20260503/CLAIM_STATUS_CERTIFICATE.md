@@ -280,4 +280,13 @@ Open imports:
   production identity certificate because sector-overlap identity,
   canonical-Higgs pole identity, an accepted identity route, and retained-route
   authorization are all absent;
+- the FH/LSZ Pade-Stieltjes bounds gate is exact support / open: it proves the
+  shape of a valid non-compute scalar-LSZ moment route, but the required
+  same-surface moment-threshold-FV certificate is absent, so finite source or
+  shell rows still cannot be treated as scalar-pole residue evidence;
+- the neutral primitive-cone certificate gate is exact support / open: it
+  proves the shape of a valid neutral rank-one theorem route, but the required
+  same-surface primitive-cone/irreducibility certificate is absent, so
+  positivity preservation and conditional Perron support still cannot be
+  treated as source-Higgs purity evidence;
 - independent audit after any proposed positive certificate.

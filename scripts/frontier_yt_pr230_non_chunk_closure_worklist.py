@@ -57,6 +57,7 @@ PARENTS = {
     "lsz_model_class_firewall": "outputs/yt_fh_lsz_model_class_semantic_firewall_2026-05-04.json",
     "lsz_stieltjes_obstruction": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json",
     "lsz_stieltjes_moment_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
+    "lsz_pade_stieltjes_bounds": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
     "lsz_pole_saturation": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
     "lsz_threshold_authority": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json",
     "lsz_fv_obstruction": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
@@ -71,6 +72,7 @@ PARENTS = {
     "neutral_commutant_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
     "neutral_dynamic_attempt": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
     "neutral_irreducibility_audit": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
+    "neutral_primitive_cone_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -78,12 +80,14 @@ FUTURE_FILES = {
     "canonical_oh_certificate": "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
     "source_higgs_rows": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
     "stieltjes_moment_certificate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_2026-05-05.json",
+    "pade_stieltjes_bounds_certificate": "outputs/yt_fh_lsz_pade_stieltjes_bounds_certificate_2026-05-05.json",
     "matched_top_wz_rows": "outputs/yt_top_wz_matched_response_rows_2026-05-04.json",
     "wz_mass_response_rows": "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
     "non_observed_g2_certificate": "outputs/yt_electroweak_g2_certificate_2026-05-05.json",
     "delta_perp_rows": "outputs/yt_delta_perp_tomography_rows_2026-05-04.json",
     "schur_kernel_rows": "outputs/yt_schur_kernel_rows_2026-05-03.json",
     "neutral_irreducibility_certificate": "outputs/yt_neutral_scalar_irreducibility_certificate_2026-05-04.json",
+    "neutral_primitive_cone_certificate": "outputs/yt_neutral_scalar_primitive_cone_certificate_2026-05-05.json",
     "certified_physical_readout": "outputs/yt_pr230_certified_physical_readout_2026-05-04.json",
 }
 
@@ -171,11 +175,15 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
             "id": "scalar_lsz_model_fv_ir",
             "kind": "non_chunk_theorem_or_strict_certificate",
             "current_state": "blocked",
-            "remaining": [FUTURE_FILES["stieltjes_moment_certificate"]],
+            "remaining": [
+                FUTURE_FILES["stieltjes_moment_certificate"],
+                FUTURE_FILES["pade_stieltjes_bounds_certificate"],
+            ],
             "current_blockers": [
                 status(certs["lsz_model_class"]),
                 status(certs["lsz_stieltjes_obstruction"]),
                 status(certs["lsz_stieltjes_moment_gate"]),
+                status(certs["lsz_pade_stieltjes_bounds"]),
                 status(certs["lsz_pole_saturation"]),
                 status(certs["lsz_fv_obstruction"]),
                 status(certs["lsz_soft_continuum"]),
@@ -205,12 +213,16 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
             "id": "neutral_scalar_rank_one",
             "kind": "new_irreducibility_theorem",
             "current_state": "blocked",
-            "remaining": [FUTURE_FILES["neutral_irreducibility_certificate"]],
+            "remaining": [
+                FUTURE_FILES["neutral_irreducibility_certificate"],
+                FUTURE_FILES["neutral_primitive_cone_certificate"],
+            ],
             "current_blockers": [
                 status(certs["neutral_rank_one"]),
                 status(certs["neutral_commutant_no_go"]),
                 status(certs["neutral_dynamic_attempt"]),
                 status(certs["neutral_irreducibility_audit"]),
+                status(certs["neutral_primitive_cone_gate"]),
             ],
             "next_action": (
                 "derive primitive-cone/positivity-improving irreducibility for the "
@@ -256,8 +268,10 @@ def main() -> int:
     report("wz-route-gated", "same-source EW action not defined" in status(certs["wz_same_source_action"]), status(certs["wz_same_source_action"]))
     report("wz-g2-shortcuts-closed", "does not certify PR230 g2" in status(certs["wz_g2_casimir_no_go"]) and "response-only" in status(certs["wz_g2_self_norm_no_go"]), "Casimir and response-only g2 shortcuts rejected")
     report("scalar-lsz-route-gated", "Stieltjes moment-certificate gate" in status(certs["lsz_stieltjes_moment_gate"]), status(certs["lsz_stieltjes_moment_gate"]))
+    report("pade-stieltjes-route-gated", "Pade-Stieltjes bounds gate" in status(certs["lsz_pade_stieltjes_bounds"]), status(certs["lsz_pade_stieltjes_bounds"]))
     report("schur-route-gated", "Schur K-prime row absence guard" in status(certs["schur_absence"]), status(certs["schur_absence"]))
     report("neutral-rank-one-route-gated", "irreducibility authority absent" in status(certs["neutral_irreducibility_audit"]), status(certs["neutral_irreducibility_audit"]))
+    report("neutral-primitive-cone-route-gated", "primitive-cone certificate gate" in status(certs["neutral_primitive_cone_gate"]), status(certs["neutral_primitive_cone_gate"]))
     report("matching-running-awaits-certified-input", "awaits certified physical input" in status(certs["matching_running"]), status(certs["matching_running"]))
     report("all-future-strict-files-currently-absent", no_future_strict_files, f"present={future_files_present}")
     report("all-non-chunk-work-units-blocked-not-hidden", len(blocked_units) == len(units) and not closed_units, f"blocked={blocked_units}")
@@ -295,9 +309,9 @@ def main() -> int:
         "exact_next_action": (
             "Pick one remaining work unit and supply its missing future file or "
             "theorem.  The highest-value choices are: same-surface O_H plus "
-            "C_sH/C_HH rows; strict scalar-LSZ Stieltjes/threshold/FV certificate; "
+            "C_sH/C_HH rows; strict scalar-LSZ Stieltjes/Pade/threshold/FV certificate; "
             "matched top/WZ response rows plus non-observed g2; same-surface Schur "
-            "kernel rows; or neutral-sector irreducibility."
+            "kernel rows; or neutral-sector primitive-cone irreducibility."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
