@@ -2723,3 +2723,32 @@ artifacts land and pass the polefit8x8 combiner/postprocessor/gates.  In
 parallel, either supply an allowed `g2` certificate, derive a `g2`-canceling
 same-source W/Z theorem, or continue the other non-source identity routes
 (`O_H/C_sH/C_HH`, Schur rows, rank-one neutral scalar).
+
+Block 199 added the W/Z response-only `g2` self-normalization no-go:
+
+```text
+python3 scripts/frontier_yt_wz_g2_response_self_normalization_no_go.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=179 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=205 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=30 FAIL=0
+```
+
+Result: response-only top/W/Z rows cannot self-normalize `g2`.  The exact
+scaling `k -> lambda k`, `y_t,g2,gY -> y_t/lambda,g2/lambda,gY/lambda`
+leaves `dE_top/ds`, `dM_W/ds`, `dM_Z/ds`, and the W/Z/top response ratios
+fixed while changing absolute `y_t` and `g2`.  This closes the response-only
+`g2` cancellation shortcut.  No retained/proposed-retained wording is
+authorized.
+
+Next exact action: do not spend another block on response-only `g2`
+cancellation.  Either build an allowed non-observed `g2` certificate, add an
+absolute EW normalization theorem outside response-only rows, continue
+source-Higgs/Schur/rank-one identity routes, or package chunks019-024 only
+after their root artifacts land and pass gates.

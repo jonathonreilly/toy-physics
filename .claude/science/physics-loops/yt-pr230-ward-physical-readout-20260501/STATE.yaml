@@ -13,11 +13,14 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-198-wz-g2-authority-firewall
-blocks_completed: 198
+current_phase: campaign-block-199-wz-g2-response-self-normalization-no-go
+blocks_completed: 199
 active_route: "same-source W/Z physical response route"
-active_hard_residual: "Added an executable W/Z g2 authority firewall.  The W/Z response ratio still depends multiplicatively on g2, outputs/yt_electroweak_g2_certificate_2026-05-04.json is absent, the W/Z mass-fit response-row builder records g2_validation.present=false, and the repo-level EW package g_2(v) surface is rejected as a PR230 load-bearing proof input under the current alpha/plaquette/u0 and audit-authority firewalls.  Runner PASS=7 FAIL=0; retained-route PASS=177 FAIL=0; campaign status PASS=203 FAIL=0; full assembly PASS=28 FAIL=0 after rebasing on the top-W covariance marginal-derivation no-go.  No effective-retention or proposed-retention closure is authorized.  Polefit8x8 chunks019-024 remain running and uncounted until root artifacts complete and pass gates."
+active_hard_residual: "Added an executable W/Z response-only g2 self-normalization no-go.  The countermodel rescales kappa_source by lambda and rescales y_t, g2, and gY by 1/lambda, leaving dE_top/ds, dM_W/ds, dM_Z/ds, top/W ratios, and W/Z ratios invariant while changing absolute y_t and g2.  Therefore same-source response rows can determine y_t/g2 and gY/g2 but cannot replace a strict non-observed g2 certificate or other absolute EW normalization input.  Runner PASS=9 FAIL=0; retained-route PASS=179 FAIL=0; campaign status PASS=205 FAIL=0; full assembly PASS=30 FAIL=0 after rebasing on the top-W factorization-independence gate.  No effective-retention or proposed-retention closure is authorized.  Polefit8x8 chunks019-024 remain running and uncounted until root artifacts complete and pass gates."
 files_touched:
+  - "scripts/frontier_yt_wz_g2_response_self_normalization_no_go.py"
+  - "docs/YT_WZ_G2_RESPONSE_SELF_NORMALIZATION_NO_GO_NOTE_2026-05-05.md"
+  - "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json"
   - "scripts/frontier_yt_wz_g2_authority_firewall.py"
   - "docs/YT_WZ_G2_AUTHORITY_FIREWALL_NOTE_2026-05-05.md"
   - "outputs/yt_wz_g2_authority_firewall_2026-05-05.json"

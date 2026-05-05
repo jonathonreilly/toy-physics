@@ -1013,3 +1013,11 @@ the EW package has audit caveats for independent physical-coupling authority.
 Positive W/Z closure now needs either an allowed non-observed `g2` certificate
 or a new theorem that cancels `g2`, in addition to same-source W/Z mass-fit rows,
 top/W covariance, sector-overlap, canonical-Higgs identity, and correction rows.
+
+2026-05-05 update: response-only `g2` self-normalization is now blocked.  The
+top/W/Z source-response equations are invariant under
+`k -> lambda k`, `y_t,g2,gY -> y_t/lambda,g2/lambda,gY/lambda`, so response
+rows alone can determine ratios but not absolute `g2` or absolute `y_t`.
+Future positive W/Z work must therefore supply an allowed non-observed `g2`
+certificate, an absolute EW normalization theorem outside response-only rows,
+or a different certified physical observable that cancels `g2`.

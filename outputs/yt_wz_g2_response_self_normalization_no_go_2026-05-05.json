@@ -1,0 +1,122 @@
+{
+  "actual_current_surface_status": "exact negative boundary / WZ response-only g2 self-normalization no-go",
+  "allowed_escape_routes": [
+    "supply a strict non-observed g2 certificate from an allowed authority",
+    "derive an absolute electroweak normalization theorem that is not response-only",
+    "derive a separate theorem in which g2 cancels against another already-certified physical observable"
+  ],
+  "bare_retained_allowed": false,
+  "countermodel_family": {
+    "invariant_response_data": {
+      "dE_top_ds": [
+        0.878226622234
+      ],
+      "dM_W_ds": [
+        0.4455
+      ],
+      "dM_Z_ds": [
+        0.507463545489
+      ],
+      "gY_over_g2": [
+        0.545454545455
+      ],
+      "top_over_w_response_ratio": [
+        1.971327996035
+      ],
+      "y_t_over_g2": [
+        1.393939393939
+      ],
+      "z_over_w_response_ratio": [
+        1.139087644195
+      ]
+    },
+    "rows": [
+      {
+        "dE_top_ds": 0.8782266222336923,
+        "dM_W_ds": 0.44550000000000006,
+        "dM_Z_ds": 0.5074635454887376,
+        "g2": 0.88,
+        "gY": 0.48,
+        "gY_over_g2": 0.5454545454545454,
+        "kappa_source": 1.0125000000000002,
+        "lambda": 0.75,
+        "top_over_w_response_ratio": 1.9713279960352237,
+        "y_t": 1.2266666666666668,
+        "y_t_over_g2": 1.393939393939394,
+        "z_over_w_response_ratio": 1.139087644194697
+      },
+      {
+        "dE_top_ds": 0.8782266222336921,
+        "dM_W_ds": 0.44550000000000006,
+        "dM_Z_ds": 0.5074635454887376,
+        "g2": 0.66,
+        "gY": 0.36,
+        "gY_over_g2": 0.5454545454545454,
+        "kappa_source": 1.35,
+        "lambda": 1.0,
+        "top_over_w_response_ratio": 1.9713279960352232,
+        "y_t": 0.92,
+        "y_t_over_g2": 1.393939393939394,
+        "z_over_w_response_ratio": 1.139087644194697
+      },
+      {
+        "dE_top_ds": 0.878226622233692,
+        "dM_W_ds": 0.4455,
+        "dM_Z_ds": 0.5074635454887375,
+        "g2": 0.528,
+        "gY": 0.288,
+        "gY_over_g2": 0.5454545454545454,
+        "kappa_source": 1.6875,
+        "lambda": 1.25,
+        "top_over_w_response_ratio": 1.9713279960352232,
+        "y_t": 0.736,
+        "y_t_over_g2": 1.3939393939393938,
+        "z_over_w_response_ratio": 1.1390876441946969
+      }
+    ],
+    "transformation": "kappa_source -> lambda*kappa_source; y_t,g2,gY -> (y_t,g2,gY)/lambda",
+    "varying_absolute_parameters": {
+      "g2": [
+        0.528,
+        0.66,
+        0.88
+      ],
+      "gY": [
+        0.288,
+        0.36,
+        0.48
+      ],
+      "kappa_source": [
+        1.0125,
+        1.35,
+        1.6875
+      ],
+      "y_t": [
+        0.736,
+        0.92,
+        1.226666666667
+      ]
+    }
+  },
+  "exact_next_action": "Do not spend another block on response-only g2 cancellation.  Either build an allowed electroweak g2 certificate, add absolute EW normalization data/theorem outside response-only rows, or continue source-Higgs/Schur/rank-one identity routes while chunks019-024 run.",
+  "fail_count": 0,
+  "g2_response_self_normalization_no_go_passed": true,
+  "parent_certificates": {
+    "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
+    "fh_gauge_response_mixed_scalar": "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json",
+    "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
+    "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
+    "wz_response_measurement_row_contract": "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json"
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Same-source top/W/Z response data determine response ratios such as y_t/g2 and gY/g2, but not the absolute g2 normalization or absolute y_t.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not import observed g2, observed W/Z, observed top mass, or observed y_t",
+    "does not use H_unit matrix-element readout or yt_ward_identity",
+    "does not use alpha_LM, plaquette, or u0 as proof authority",
+    "does not set kappa_s=1, c2=1, Z_match=1, or g2 to a package value"
+  ],
+  "theorem_statement": "For response observables dE_top/ds=k*y_t/sqrt(2), dM_W/ds=k*g2/2, and dM_Z/ds=k*sqrt(g2^2+gY^2)/2, the scaling (k,y_t,g2,gY)->(lambda k,y_t/lambda,g2/lambda,gY/lambda) leaves all same-source top/W/Z response slopes and ratios invariant while changing the absolute y_t and g2.  Therefore a response-only W/Z self-normalization cannot replace an allowed g2 certificate."
+}

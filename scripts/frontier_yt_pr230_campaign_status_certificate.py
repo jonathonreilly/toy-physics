@@ -314,6 +314,9 @@ def main() -> int:
         "wz_g2_authority_firewall": load(
             "outputs/yt_wz_g2_authority_firewall_2026-05-05.json"
         ),
+        "wz_g2_response_self_normalization_no_go": load(
+            "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json"
+        ),
         "wz_correlator_mass_fit_path_gate": load(
             "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json"
         ),
@@ -1421,6 +1424,18 @@ def main() -> int:
         and certificates["wz_g2_authority_firewall"].get("proposal_allowed") is False
         and certificates["wz_g2_authority_firewall"].get("g2_authority_gate_passed") is False,
         statuses["wz_g2_authority_firewall"],
+    )
+    report(
+        "wz-g2-response-self-normalization-no-go-blocks",
+        "WZ response-only g2 self-normalization no-go"
+        in str(statuses["wz_g2_response_self_normalization_no_go"])
+        and certificates["wz_g2_response_self_normalization_no_go"].get("proposal_allowed")
+        is False
+        and certificates["wz_g2_response_self_normalization_no_go"].get(
+            "g2_response_self_normalization_no_go_passed"
+        )
+        is True,
+        statuses["wz_g2_response_self_normalization_no_go"],
     )
     report(
         "same-source-sector-overlap-identity-blocks",

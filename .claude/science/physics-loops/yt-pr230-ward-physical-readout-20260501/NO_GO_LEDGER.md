@@ -2659,3 +2659,17 @@ absent, and the repo-level EW package `g_2(v)` cannot be silently imported as
 PR230 proof authority under the current alpha/plaquette/u0 and audit-authority
 firewalls.  Do not treat package `g_2(v)`, observed `g2`, static EW algebra, or
 the response ratio alone as retained/proposed-retained top-Yukawa evidence.
+
+W/Z response-only `g2` self-normalization is blocked:
+
+```text
+python3 scripts/frontier_yt_wz_g2_response_self_normalization_no_go.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The same top/W/Z response data are invariant under
+`k -> lambda k`, `y_t,g2,gY -> y_t/lambda,g2/lambda,gY/lambda`.  This keeps
+`dE_top/ds`, `dM_W/ds`, `dM_Z/ds`, `dE_top/dM_W`, and `dM_Z/dM_W` fixed while
+changing absolute `y_t` and `g2`.  Do not claim that W/Z response rows alone
+self-normalize `g2`; an allowed `g2` certificate or absolute EW normalization
+input remains required.

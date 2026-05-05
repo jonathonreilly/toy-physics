@@ -4781,3 +4781,21 @@ strict non-observed `g2` certificate or a new theorem that cancels `g2`.  The
 repo-level `g_2(v)` package surface is not accepted as PR230 load-bearing proof
 input under the current firewall.  No effective-retention or proposed-retention
 wording is allowed.
+
+## 2026-05-05 - Block 199 W/Z g2 Response Self-Normalization No-Go
+
+Review stance: response-only shortcut no-go / exact negative boundary.
+
+- Added `scripts/frontier_yt_wz_g2_response_self_normalization_no_go.py`.
+- Added `docs/YT_WZ_G2_RESPONSE_SELF_NORMALIZATION_NO_GO_NOTE_2026-05-05.md`.
+- Added `outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json`.
+- Wired the no-go into retained-route, campaign-status, and full assembly
+  gates.
+
+Disposition: exact negative boundary.  Same-source top/W/Z response data are
+invariant under an exact rescaling that changes absolute `y_t` and `g2`, so
+response rows alone cannot self-normalize `g2`.  The W/Z route still needs an
+allowed non-observed `g2` certificate or absolute EW normalization theorem, in
+addition to existing W/Z row, covariance, sector-overlap, and canonical-Higgs
+identity blockers.  No effective-retention or proposed-retention wording is
+allowed.

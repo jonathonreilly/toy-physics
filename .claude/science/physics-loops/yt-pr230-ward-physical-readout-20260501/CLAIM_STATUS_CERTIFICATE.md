@@ -3250,3 +3250,22 @@ the same-source response ratio does not determine `y_t` without that input or a
 new cancellation theorem.  The package `g_2(v)` surface is not accepted as a
 PR230 proof input here.  No effective-retention or proposed-retention wording
 is allowed.
+
+W/Z response-only `g2` self-normalization no-go:
+
+```text
+actual_current_surface_status: exact negative boundary / WZ response-only g2 self-normalization no-go
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_wz_g2_response_self_normalization_no_go.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=30 FAIL=0
+```
+
+Same-source top/W/Z response rows determine ratios such as `y_t/g2` and
+`gY/g2`, not the absolute electroweak coupling normalization.  Response-only
+`g2` cancellation/self-normalization is rejected on the actual PR230 surface.
+No effective-retention or proposed-retention wording is allowed.

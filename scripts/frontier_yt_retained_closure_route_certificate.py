@@ -170,6 +170,7 @@ def main() -> int:
         "same_source_w_response_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
         "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
         "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
+        "wz_g2_response_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
         "wz_correlator_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
@@ -1229,6 +1230,18 @@ def main() -> int:
         in certificates["wz_g2_authority_firewall"].get("actual_current_surface_status", "")
         and certificates["wz_g2_authority_firewall"].get("proposal_allowed") is False
         and certificates["wz_g2_authority_firewall"].get("g2_authority_gate_passed") is False
+    )
+    wz_g2_response_self_normalization_no_go_blocks = (
+        "WZ response-only g2 self-normalization no-go"
+        in certificates["wz_g2_response_self_normalization_no_go"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["wz_g2_response_self_normalization_no_go"].get("proposal_allowed")
+        is False
+        and certificates["wz_g2_response_self_normalization_no_go"].get(
+            "g2_response_self_normalization_no_go_passed"
+        )
+        is True
     )
     same_source_sector_overlap_identity_blocks = (
         "same-source sector-overlap identity obstruction"
@@ -2310,6 +2323,13 @@ def main() -> int:
         "wz-g2-authority-firewall-blocks",
         wz_g2_authority_firewall_blocks,
         certificates["wz_g2_authority_firewall"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "wz-g2-response-self-normalization-no-go-blocks",
+        wz_g2_response_self_normalization_no_go_blocks,
+        certificates["wz_g2_response_self_normalization_no_go"].get(
+            "actual_current_surface_status", ""
+        ),
     )
     report(
         "same-source-sector-overlap-identity-blocks",
