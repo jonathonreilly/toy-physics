@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 587,
+    "critical": 586,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -3060,27 +3060,6 @@
       "ready": true,
       "runner_path": "scripts/persistent_object_compact_inertial_probe.py",
       "transitive_descendants": 286
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24",
-      "claim_scope": "Bounded no-go that the listed retained periodic finite/lattice phase sources and finite-Wilson constructions do not derive the literal 2/9-radian selected-line bridge; the Type-B-to-radian identification remains primitive.",
-      "claim_type": "no_go",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 16,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 16.16,
-      "note_path": "docs/KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_a1_radian_bridge_irreducibility_audit.py",
-      "transitive_descendants": 285
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -27193,6 +27172,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 67,
-  "total_pending": 925
+  "ready_count": 66,
+  "total_pending": 924
 }
