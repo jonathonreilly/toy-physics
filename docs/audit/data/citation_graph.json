@@ -6221,6 +6221,14 @@
       "to": "gauge_scalar_temporal_completion_theorem_note"
     },
     {
+      "from": "gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17"
+    },
+    {
       "from": "gauge_vacuum_plaquette_bridge_support_note",
       "to": "gauge_scalar_temporal_completion_theorem_note"
     },
@@ -6235,6 +6243,14 @@
     {
       "from": "gauge_vacuum_plaquette_bridge_support_note",
       "to": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_conjugation_symmetric_retained_sampling_reduction_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_conjugation_symmetric_retained_sampling_reduction_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17"
     },
     {
       "from": "gauge_vacuum_plaquette_distinct_shell_theorem_note",
@@ -6285,6 +6301,110 @@
       "to": "gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19"
     },
     {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_current_stack_constraint_boundary_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_current_stack_constraint_boundary_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_current_stack_constraint_boundary_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_current_stack_constraint_boundary_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_current_stack_constraint_boundary_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_conjugation_symmetric_retained_sampling_reduction_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_current_stack_constraint_boundary_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_connected_hierarchy_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_current_stack_constraint_boundary_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_bridge_support_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_current_stack_constraint_boundary_note_2026-04-17",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_first_symmetric_three_sample_reconstruction_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_positive_cone_order_witness_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_positive_cone_order_witness_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_reconstruction_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_conjugation_symmetric_retained_sampling_reduction_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_local_wilson_partial_evaluation_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_local_wilson_partial_evaluation_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_local_environment_factorization_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_local_wilson_partial_evaluation_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_bridge_support_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_local_wilson_partial_evaluation_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_first_three_sample_local_wilson_partial_evaluation_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_first_symmetric_three_sample_positive_cone_order_witness_note_2026-04-17"
+    },
+    {
       "from": "gauge_vacuum_plaquette_reduction_existence_theorem_note",
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
@@ -6295,6 +6415,18 @@
     {
       "from": "gauge_vacuum_plaquette_reduction_existence_theorem_note",
       "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17"
     },
     {
       "from": "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
@@ -35072,6 +35204,31 @@
       "runner_path": "scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py",
       "title": "Gauge-Scalar Temporal Observable Bridge Stretch Attempt"
     },
+    "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "55c957b38b27401c77a2c060a460bff5d25d83a1de24f7e8262a1e9b05a6a183",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_BETA6_EVALUATION_SEAM_REDUCTION_SCIENCE_ONLY_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette Beta=6 Evaluation-Seam Reduction"
+    },
+    "gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "plaquette_self_consistency_note",
+        "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17"
+      ],
+      "note_hash": "3c3d59bc141c9950204ec1c2b990d9729853e2f8180c82457c4fde7b6e4a7361",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_BETA6_SCALAR_VALUE_INSUFFICIENCY_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette Beta=6 Scalar-Value Insufficiency"
+    },
     "gauge_vacuum_plaquette_bridge_support_note": {
       "claim_id": "gauge_vacuum_plaquette_bridge_support_note",
       "claim_type_author_hint": "positive_theorem",
@@ -35087,6 +35244,42 @@
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py",
       "title": "Gauge-Vacuum Plaquette Scalar-Bridge Support"
+    },
+    "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "27c5acb6db619f91a0e663c98143313a1390ccf7d4cef56a9b8bd2dd94edbd3d",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_COMPRESSED_RIM_EVALUATION_THEOREM_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette Compressed Rim-Evaluation Theorem"
+    },
+    "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "f80000c8c341a11e8937c6b27c1d5e6ea3517f43a45b21d2e34dca9a6bcf9975",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_COMPRESSED_RIM_FUNCTIONAL_UNIQUENESS_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette Compressed Rim-Functional Uniqueness"
+    },
+    "gauge_vacuum_plaquette_conjugation_symmetric_retained_sampling_reduction_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_conjugation_symmetric_retained_sampling_reduction_note_2026-04-17",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+        "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17"
+      ],
+      "note_hash": "d025088880e83006015bef71727f6d6064ce4fcc864a8b5f2fa8bc3ffb5d0c83",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_CONJUGATION_SYMMETRIC_RETAINED_SAMPLING_REDUCTION_NOTE_2026-04-17.md",
+      "runner_path": null,
+      "title": "Gauge-Vacuum Plaquette Conjugation-Symmetric Retained Sampling Reduction"
     },
     "gauge_vacuum_plaquette_connected_hierarchy_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
@@ -35258,6 +35451,40 @@
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Zero-Extension Factorized-Class Theorem"
     },
+    "gauge_vacuum_plaquette_first_symmetric_three_sample_current_stack_constraint_boundary_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_first_symmetric_three_sample_current_stack_constraint_boundary_note_2026-04-17",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
+        "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+        "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17",
+        "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17",
+        "gauge_vacuum_plaquette_conjugation_symmetric_retained_sampling_reduction_note_2026-04-17",
+        "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
+        "gauge_vacuum_plaquette_bridge_support_note",
+        "observable_principle_from_axiom_note"
+      ],
+      "note_hash": "ae2d259693071717b8a653c92b29e0b4f8aa8290955d329376a2fa5b56646f6b",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_CURRENT_STACK_CONSTRAINT_BOUNDARY_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette First Symmetric Three-Sample Current-Stack Constraint Boundary"
+    },
+    "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_reconstruction_note_2026-04-17",
+        "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17"
+      ],
+      "note_hash": "6f80823e677d11966d7953d879296ba513c580c2f7a6254c693210e2d7615fb9",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_EXACT_RADICAL_RECONSTRUCTION_MAP_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette First Symmetric Three-Sample Exact Radical Reconstruction Map"
+    },
     "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19": {
       "claim_id": "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19",
       "claim_type_author_hint": null,
@@ -35269,6 +35496,82 @@
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First Symmetric Three-Sample Minimal Positive Completion"
     },
+    "gauge_vacuum_plaquette_first_symmetric_three_sample_positive_cone_order_witness_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_first_symmetric_three_sample_positive_cone_order_witness_note_2026-04-17",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17"
+      ],
+      "note_hash": "0a15a3945464826a1e5cbe0c7589ebf3f5b289cbf28086994b2983d959911b8c",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_POSITIVE_CONE_ORDER_WITNESS_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette First Symmetric Three-Sample Positive-Cone Order Witness"
+    },
+    "gauge_vacuum_plaquette_first_symmetric_three_sample_reconstruction_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_first_symmetric_three_sample_reconstruction_note_2026-04-17",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "gauge_vacuum_plaquette_conjugation_symmetric_retained_sampling_reduction_note_2026-04-17"
+      ],
+      "note_hash": "3b6010b9eecbae39a812f54b879ef133012288147696709c077bb7e13c1384c4",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_RECONSTRUCTION_NOTE_2026-04-17.md",
+      "runner_path": null,
+      "title": "Gauge-Vacuum Plaquette First Symmetric Three-Sample Reconstruction"
+    },
+    "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
+        "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17",
+        "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17",
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
+        "gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17",
+        "gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17"
+      ],
+      "note_hash": "e7b6bae9695e5fb1bf2c7f683d28b92db2a17fab5434da8c7aa2d0ed33d198d4",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_THREE_SAMPLE_ENVIRONMENT_EVALUATOR_ROUTE_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette First Three-Sample Environment Evaluator Route"
+    },
+    "gauge_vacuum_plaquette_first_three_sample_local_wilson_partial_evaluation_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_first_three_sample_local_wilson_partial_evaluation_note_2026-04-17",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
+        "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
+        "gauge_vacuum_plaquette_bridge_support_note",
+        "gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17"
+      ],
+      "note_hash": "dfdaa71ec0f77fdcfbdd7cfeea2568368d915edff350c7506d3edee90559fb98",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_THREE_SAMPLE_LOCAL_WILSON_PARTIAL_EVALUATION_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette First Three-Sample Local Wilson Partial Evaluation"
+    },
+    "gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "gauge_vacuum_plaquette_first_three_sample_local_wilson_partial_evaluation_note_2026-04-17",
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_positive_cone_order_witness_note_2026-04-17"
+      ],
+      "note_hash": "47375535f148245caf9b0a3c935905a29fb932035377a86d8a348eb3cf83f434",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_THREE_SAMPLE_LOCAL_WILSON_RETAINED_POSITIVE_CONE_OBSTRUCTION_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette First Three-Sample Local-Wilson Retained Positive-Cone Obstruction"
+    },
     "gauge_vacuum_plaquette_framework_point_underdetermination_note": {
       "claim_id": "gauge_vacuum_plaquette_framework_point_underdetermination_note",
       "claim_type_author_hint": null,
@@ -35279,6 +35582,17 @@
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py",
       "title": "Gauge-Vacuum Plaquette Framework-Point Underdetermination"
+    },
+    "gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "44b1adf466eb8dc22744290e6a589522357b1adbdd8396e8ba80590b7e43f612",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_FULL_SLICE_RIM_LIFT_INTEGRAL_BOUNDARY_SCIENCE_ONLY_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette Full-Slice Rim-Lift Integral Boundary"
     },
     "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note": {
       "claim_id": "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note",
@@ -35361,6 +35675,21 @@
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py",
       "title": "Gauge-Vacuum Plaquette Residual Environment Identification Theorem"
     },
+    "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17",
+        "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17",
+        "gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17"
+      ],
+      "note_hash": "3e1022db32082337de6478fe897cdfce5f77be7b075e3aa166a481d5d56b2909",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_RETAINED_CLASS_SAMPLING_INVERSION_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette Retained Class-Sampling Inversion"
+    },
     "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note": {
       "claim_id": "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
       "claim_type_author_hint": null,
@@ -35406,6 +35735,17 @@
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py",
       "title": "Gauge-Vacuum Plaquette Spatial Environment Transfer Theorem"
+    },
+    "gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [],
+      "note_hash": "ad47f58376e66df481489e2805915cdd4ccf77549bf38d82f2049e62c8cb62f1",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_UNDERDETERMINATION_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette Spatial-Environment Transfer Underdetermination"
     },
     "gauge_vacuum_plaquette_spectral_measure_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_spectral_measure_theorem_note",
@@ -53768,6 +54108,9 @@
     "gate_b_v6_nearfield_comparator_note",
     "gauge_scalar_temporal_completion_theorem_note",
     "gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03",
+    "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17",
+    "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17",
+    "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17",
     "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
     "gauge_vacuum_plaquette_constant_lift_obstruction_note",
     "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19",
@@ -53780,6 +54123,7 @@
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
     "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19",
     "gauge_vacuum_plaquette_framework_point_underdetermination_note",
+    "gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17",
     "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note",
     "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
     "gauge_vacuum_plaquette_mixed_cumulant_audit_note",
@@ -53789,6 +54133,7 @@
     "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
     "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
     "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
+    "gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17",
     "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
     "generated_geometry_synthesis_note",
     "generation_axiom_boundary_note",
@@ -54304,23 +54649,23 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 59,
       "meta": 8,
-      "no_go": 7,
+      "no_go": 12,
       "none": 1715,
       "open_gate": 9,
-      "positive_theorem": 74
+      "positive_theorem": 84
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 557,
       "meta": 8,
-      "no_go": 112,
+      "no_go": 117,
       "none": 457,
       "open_gate": 115,
-      "positive_theorem": 623
+      "positive_theorem": 633
     },
-    "edge_count": 6366,
-    "leaf_count": 550,
-    "node_count": 1872,
-    "root_count": 895,
-    "runners_with_path": 1448
+    "edge_count": 6399,
+    "leaf_count": 552,
+    "node_count": 1887,
+    "root_count": 900,
+    "runners_with_path": 1461
   }
 }

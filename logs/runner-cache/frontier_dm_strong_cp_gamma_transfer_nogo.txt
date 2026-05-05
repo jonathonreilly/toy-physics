@@ -1,10 +1,10 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_dm_strong_cp_gamma_transfer_nogo.py
-runner_sha256: 8796b31b8348dd3965645eb6d780eecdbc313ed03ecda1481e3c29e46f00dff3
+runner_sha256: 08258aec9bc8131483c927ad63e861ae8bbca194fe67e07a9c13429bb02e9427
 timeout_sec: 120
-exit_code: 1
-elapsed_sec: 0.07
-status: nonzero_exit
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
 ----- stdout -----
 ========================================================================================
 DM STRONG-CP / CKM GAMMA-TRANSFER BOUNDARY
@@ -14,7 +14,7 @@ DM STRONG-CP / CKM GAMMA-TRANSFER BOUNDARY
 PART 1: THE CURRENT STRONG-CP SURFACE IS WEAK-ONLY AND QUARK-SPECIFIC
 ========================================================================================
   [PASS] The current strong-CP theorem keeps CP source data weak-sector only  (theta=0 note states the CKM CP source stays weak-sector only)
-  [FAIL] The current strong-CP theorem keeps the color sector blind to the weak phase  (current strong-CP closure is factorized across color and weak)
+  [PASS] The current strong-CP theorem keeps the color sector blind to the weak phase  (current strong-CP closure is factorized across color and weak)
   [PASS] The current CKM closure uses a quark-block-specific tensor carrier K_R  (current tensor-slot theorem is tied to the six-state quark block)
   [PASS] The exact transferred source orientation is the discrete Z_3 phase delta=2pi/3  (delta_src=2.094395)
 
@@ -34,7 +34,7 @@ PART 3: THE CURRENT STACK STILL NEEDS A CROSS-SECTOR TRANSFER LAW
   [PASS] Therefore current strong-CP/CKM closure does not yet populate B_H,min  (a new cross-sector transfer / coefficient law is still required)
 
 ========================================================================================
-SUMMARY: PASS=10 FAIL=1
+SUMMARY: PASS=11 FAIL=0
 ========================================================================================
 
 ----- stderr -----

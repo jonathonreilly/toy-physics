@@ -3712,7 +3712,7 @@
       "assert_count": 1,
       "counts": {
         "A": 0,
-        "B": 5,
+        "B": 1,
         "C": 7,
         "D": 0
       },
@@ -6480,6 +6480,30 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py"
     },
+    "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py"
+    },
+    "gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py"
+    },
     "gauge_vacuum_plaquette_bridge_support_note": {
       "assert_count": 1,
       "counts": {
@@ -6491,6 +6515,30 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py"
+    },
+    "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py"
+    },
+    "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py"
     },
     "gauge_vacuum_plaquette_connected_hierarchy_theorem_note": {
       "assert_count": 1,
@@ -6672,6 +6720,30 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_2026_04_19.py"
     },
+    "gauge_vacuum_plaquette_first_symmetric_three_sample_current_stack_constraint_boundary_note_2026-04-17": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py"
+    },
+    "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py"
+    },
     "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19": {
       "assert_count": 1,
       "counts": {
@@ -6684,6 +6756,54 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py"
     },
+    "gauge_vacuum_plaquette_first_symmetric_three_sample_positive_cone_order_witness_note_2026-04-17": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_2026_04_17.py"
+    },
+    "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py"
+    },
+    "gauge_vacuum_plaquette_first_three_sample_local_wilson_partial_evaluation_note_2026-04-17": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_2026_04_17.py"
+    },
+    "gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_2026_04_17.py"
+    },
     "gauge_vacuum_plaquette_framework_point_underdetermination_note": {
       "assert_count": 1,
       "counts": {
@@ -6695,6 +6815,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py"
+    },
+    "gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_2026_04_17.py"
     },
     "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note": {
       "assert_count": 1,
@@ -6780,6 +6912,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py"
     },
+    "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py"
+    },
     "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note": {
       "assert_count": 1,
       "counts": {
@@ -6827,6 +6971,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py"
+    },
+    "gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py"
     },
     "gauge_vacuum_plaquette_spectral_measure_theorem_note": {
       "assert_count": 1,
@@ -22527,7 +22683,7 @@
       ],
       "counts": {
         "A": 0,
-        "B": 5,
+        "B": 1,
         "C": 7,
         "D": 0
       },
@@ -25269,6 +25425,43 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py": {
+      "assert_count": 1,
+      "claims": [
+        "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17",
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_current_stack_constraint_boundary_note_2026-04-17",
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
+        "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17",
+        "gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_2026_04_17.py": {
+      "assert_count": 1,
+      "claims": [
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_positive_cone_order_witness_note_2026-04-17",
+        "gauge_vacuum_plaquette_first_three_sample_local_wilson_partial_evaluation_note_2026-04-17",
+        "gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17",
+        "gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py": {
       "assert_count": 1,
       "claims": [
@@ -25382,6 +25575,24 @@
       "counts": {
         "A": 0,
         "B": 0,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py": {
+      "assert_count": 1,
+      "claims": [
+        "gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17",
+        "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17",
+        "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17",
+        "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
         "C": 12,
         "D": 0
       },
@@ -38043,12 +38254,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 164,
-      "C": 558,
+      "C": 561,
       "D": 208,
       "none": 421
     },
-    "runners_classified": 1361,
-    "runners_with_C": 665,
+    "runners_classified": 1364,
+    "runners_with_C": 668,
     "runners_with_D": 338
   }
 }

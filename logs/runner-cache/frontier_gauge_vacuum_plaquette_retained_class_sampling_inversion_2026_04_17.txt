@@ -1,0 +1,48 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py
+runner_sha256: 47edfb6c99326fe19a417b43935227d32c2d6a135034092f9635894efa843b63
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
+================================================================================================
+GAUGE-VACUUM PLAQUETTE RETAINED CLASS-SAMPLING INVERSION
+================================================================================================
+
+Retained class sector
+  weights                                    = [(0, 0), (1, 0), (0, 1), (1, 1)]
+  witness coefficients                       = [1.   0.37 0.37 0.16]
+
+Generic marked-holonomy sampling matrix
+  sample count                               = 4
+  |det E|                                    = 1.129386e+02
+  cond(E)                                    = 2.150197e+02
+  recovery error                             = 5.786e-16
+
+Underdetermined sub-sampling witness
+  rank of first 3 samples                    = 3
+  3-sample null residual                     = 5.929e-15
+  3-sample response gap                      = 1.777e-15
+  4-sample response gap                      = 2.008e-02
+
+  [PASS] [SUPPORT] Compressed rim-evaluation note already fixes the retained boundary law as Z_beta^env(W)=<K(W), v_beta>
+  [PASS] [SUPPORT] Compressed rim-functional uniqueness note already fixes the retained left boundary functional as universal and unique
+  [PASS] [SUPPORT] Scalar-value insufficiency note already records that one scalar sample does not determine the retained coefficient vector
+  [PASS] [THEOREM] A retained finite-sector sample set defines an exact linear system for the retained coefficient vector
+         shape(E)=(4, 4)
+  [PASS] [THEOREM] A generic full retained sample set is invertible on the witness sector
+         |det E|=1.129e+02, cond(E)=2.150e+02
+  [PASS] [THEOREM] The retained coefficient vector is recovered exactly from full-rank marked-holonomy samples
+         max recovery error=5.786e-16
+  [PASS] [THEOREM] Too few retained samples leave the system underdetermined
+         rank(E_3)=3, null residual=5.929e-15
+  [PASS] [THEOREM] A null direction invisible to three samples becomes visible once a fourth generic sample is added
+         3-sample gap=1.777e-15, 4-sample gap=2.008e-02
+  [PASS] [THEOREM] So retained beta-side coefficient recovery is a finite sampling/inversion problem once the sector is truncated
+         one scalar is not enough, but N generic retained samples recover N retained coefficients
+
+THEOREM PASS=6 SUPPORT=3 FAIL=0
+
+----- stderr -----
+

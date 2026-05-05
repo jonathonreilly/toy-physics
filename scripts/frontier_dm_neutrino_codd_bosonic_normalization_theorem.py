@@ -153,12 +153,8 @@ def part3_canonical_odd_normalization_fixes_c_odd_to_unit_magnitude() -> None:
     print("PART 3: CANONICAL ODD NORMALIZATION FIXES C_ODD TO UNIT MAGNITUDE")
     print("=" * 88)
 
-    selector_note = Path("/Users/jonBridger/Toy Physics-neutrino-majorana/docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md").read_text(
-        encoding="utf-8"
-    )
-    sign_note = Path("/Users/jonBridger/Toy Physics-neutrino-majorana/docs/PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md").read_text(
-        encoding="utf-8"
-    )
+    selector_note = read("docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md")
+    sign_note = read("docs/PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md")
     source_note = read("docs/DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md")
     obs_note = read("docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md")
 

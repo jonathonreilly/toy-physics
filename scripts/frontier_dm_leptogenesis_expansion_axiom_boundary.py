@@ -72,18 +72,23 @@ def part2_the_current_branch_still_marks_radiation_expansion_as_non_authoritativ
     print("PART 2: THE CURRENT BRANCH STILL MARKS RADIATION EXPANSION AS NON-AUTHORITATIVE")
     print("=" * 88)
 
-    note = open(
-        "/Users/jonBridger/Toy Physics-dm-main-refresh/docs/DM_CLEAN_DERIVATION_NOTE.md",
-        encoding="utf-8",
-    ).read()
+    # Repair (2026-05-05): the original DM_CLEAN_DERIVATION_NOTE.md was
+    # deliberately trimmed in commit d2e754fdc ("Trim DM package to
+    # science-only surface"); the bounded-status check moved to the live
+    # boundary note. Read from a relative path off the script root, not a
+    # hardcoded absolute /Users/jonBridger path.
+    from pathlib import Path
+    repo_root = Path(__file__).resolve().parents[1]
+    boundary_note_path = repo_root / "docs" / "DM_LEPTOGENESIS_EXPANSION_AXIOM_BOUNDARY_NOTE_2026-04-16.md"
+    note = boundary_note_path.read_text(encoding="utf-8")
 
     check(
-        "The cleaned DM derivation still records H(T) with a bounded k = 0 sub-assumption",
-        "BOUNDED sub-assumption" in note and "Flatness k = 0" in note,
+        "The DM expansion-boundary note still records H_rad(T) as the single remaining non-axiom object",
+        "single remaining non-axiom object" in note and "H_rad(T)" in note,
     )
     check(
         "So the refreshed branch still lacks a strict theorem-grade radiation expansion law from Cl(3) on Z^3 alone",
-        "BOUNDED sub-assumption" in note,
+        "Status:** bounded" in note,
         "the remaining gap is not the transport integral but the background expansion law",
     )
 

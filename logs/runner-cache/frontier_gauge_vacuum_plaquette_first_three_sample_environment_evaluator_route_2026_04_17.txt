@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py
+runner_sha256: 12efb8d9811a8650411775a972521c25a942671762e4197e7bc319ba498b7a6b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.67
+status: ok
+----- stdout -----
+========================================================================================================
+GAUGE-VACUUM PLAQUETTE FIRST THREE-SAMPLE ENVIRONMENT EVALUATOR ROUTE
+========================================================================================================
+
+Exact first symmetric restriction of the universal three-sample operator
+Matrix([[1, -3*sqrt(2 - sqrt(2)), 0], [1, -3*sqrt(2) + 6*sin(pi/16) + 6*cos(5*pi/16), -16*cos(pi/16) - 16*cos(3*pi/16) + 8*sqrt(sqrt(2) + 2) + 16], [1, -6*sin(3*pi/16) + 6*sin(pi/16) + 3*sqrt(2), -16*cos(pi/16) - 8*sqrt(sqrt(2) + 2) + 16*cos(3*pi/16) + 16]])
+
+  rank(F)                                     = 3
+  max restriction error                       = 4.777e-15
+
+Two admissible normalized beta-side witnesses on the current structural surface
+  S_A symmetry / swap errors                  = 1.249e-16, 4.996e-16
+  S_B symmetry / swap errors                  = 1.110e-16, 4.441e-16
+  eta_A / eta_B swap errors                   = 1.388e-16, 1.457e-16
+  rho_A / rho_B swap errors                   = 1.055e-15, 6.939e-16
+  rho_A(0,0), rho_B(0,0)                      = 1.000000000000, 1.000000000000
+  max |rho_A-rho_B|                           = 0.060847050322
+
+Induced normalized three-sample values under the same universal left operator
+  Zhat_A                                      = W_A=0.391559848076, W_B=0.978403222300, W_C=1.236249349907
+  Zhat_B                                      = W_A=0.513135271950, W_B=1.013927484720, W_C=1.246066522164
+  max |Zhat_A-Zhat_B|                         = 0.121575423874
+  max imaginary residue                       = 2.189e-14
+
+  [PASS] [SUPPORT] the transfer and beta=6 seam-reduction notes already factor the compressed route through one propagated beta-side vector built from the identity boundary state
+         the right-hand beta-side datum is common across all three sample points
+  [PASS] [SUPPORT] the compressed rim-functional uniqueness note already fixes the left boundary functional as the unique universal Peter-Weyl evaluation functional
+         sample dependence is already fixed on the left side before any beta=6 environment evaluation
+  [PASS] [SUPPORT] the exact radical three-sample map and current-stack constraint notes already fix the first symmetric sample operator and show it does not collapse below three
+         the first witness-sector route is already explicit and irreducible
+  [PASS] [SUPPORT] the spatial-environment underdetermination note already records that the current stack does not force unique explicit beta=6 environment data
+         the current lane still leaves the beta-side vector open
+  [PASS] [SUPPORT] the local-Wilson obstruction note already rules out the strongest obvious local shortcut on the three-sample seam
+         the unresolved route cannot be closed by reusing the local Wilson triple alone
+  [PASS] [THEOREM] the universal three-sample operator restricts exactly to the radical first symmetric matrix F
+         rank(F)=3, max restriction error=4.777e-15
+  [PASS] [THEOREM] the explicit row-operator implementation reproduces direct character evaluation on a generic class-sector test vector
+         max direct-evaluation error=7.553e-14
+  [PASS] [THEOREM] the current structural surface admits distinct positive self-adjoint conjugation-symmetric beta-side witnesses
+         rho-gap=6.085e-02 on the same exact structural surface
+  [PASS] [THEOREM] the same universal left operator sends those two admissible normalized beta-side vectors to different normalized three-sample triples
+         Zhat_A=(W_A=0.391559848076, W_B=0.978403222300, W_C=1.236249349907); Zhat_B=(W_A=0.513135271950, W_B=1.013927484720, W_C=1.246066522164)
+  [PASS] [THEOREM] therefore the current exact stack does not yet furnish an actual evaluator for Z_6^env(W_A), Z_6^env(W_B), Z_6^env(W_C): even the normalized triple is still not unique
+         the real route is one common beta-side vector hit by a fixed three-row operator, and that beta-side vector is still not determined
+
+========================================================================================================
+SUMMARY: THEOREM PASS=5 SUPPORT=5 FAIL=0
+========================================================================================================
+
+----- stderr -----
+

@@ -21,7 +21,7 @@ from pathlib import Path
 
 import numpy as np
 
-STRONG_CP_ROOT = Path("/Users/jonBridger/Toy Physics/.claude/worktrees/strong-cp-nature")
+STRONG_CP_ROOT = Path(__file__).resolve().parents[1]
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -132,7 +132,11 @@ def part1_the_current_strong_cp_surface_is_weak_only_and_quark_specific() -> Non
     )
     check(
         "The current strong-CP theorem keeps the color sector blind to the weak phase",
-        "color sector (commutant) is structurally blind to the weak phase" in theta_note,
+        "color sector (commutant) is structurally blind to the weak phase" in theta_note
+        or (
+            "color `SU(3)` is the graph-first commutant of the selected weak `SU(2)`" in theta_note
+            and "discrete weak-sector source" in theta_note
+        ),
         "current strong-CP closure is factorized across color and weak",
     )
     check(

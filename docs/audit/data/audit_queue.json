@@ -1,9 +1,9 @@
 {
   "by_criticality": {
     "critical": 795,
-    "high": 24,
-    "leaf": 201,
-    "medium": 130
+    "high": 25,
+    "leaf": 208,
+    "medium": 137
   },
   "cycle_break_target_count": 192,
   "cycle_break_targets": [
@@ -4047,12 +4047,12 @@
       ],
       "direct_in_degree": 18,
       "effective_status": "audit_in_progress",
-      "load_bearing_score": 17.622,
+      "load_bearing_score": 17.658,
       "note_path": "docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md",
       "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/verify_cl3_sm_embedding.py",
-      "transitive_descendants": 393
+      "transitive_descendants": 403
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10251,12 +10251,12 @@
       ],
       "direct_in_degree": 2,
       "effective_status": "unaudited",
-      "load_bearing_score": 9.589,
+      "load_bearing_score": 9.626,
       "note_path": "docs/G_BARE_RESCALING_FREEDOM_REMOVAL_THEOREM_NOTE_2026-05-03.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_derivation.py",
-      "transitive_descendants": 384
+      "transitive_descendants": 394
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10274,12 +10274,12 @@
       ],
       "direct_in_degree": 1,
       "effective_status": "unaudited",
-      "load_bearing_score": 9.085,
+      "load_bearing_score": 9.122,
       "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_derivation.py",
-      "transitive_descendants": 383
+      "transitive_descendants": 393
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10298,12 +10298,12 @@
       ],
       "direct_in_degree": 13,
       "effective_status": "unaudited",
-      "load_bearing_score": 15.081,
+      "load_bearing_score": 15.118,
       "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_derivation.py",
-      "transitive_descendants": 382
+      "transitive_descendants": 392
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10319,14 +10319,14 @@
       "deps": [
         "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
       ],
-      "direct_in_degree": 6,
+      "direct_in_degree": 7,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.566,
+      "load_bearing_score": 12.104,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py",
-      "transitive_descendants": 378
+      "transitive_descendants": 388
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10350,12 +10350,12 @@
       ],
       "direct_in_degree": 7,
       "effective_status": "unaudited",
-      "load_bearing_score": 12.062,
+      "load_bearing_score": 12.1,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py",
-      "transitive_descendants": 377
+      "transitive_descendants": 387
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10374,14 +10374,14 @@
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
         "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
       ],
-      "direct_in_degree": 5,
+      "direct_in_degree": 7,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.043,
+      "load_bearing_score": 12.081,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py",
-      "transitive_descendants": 372
+      "transitive_descendants": 382
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10402,12 +10402,12 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.043,
+      "load_bearing_score": 11.081,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py",
-      "transitive_descendants": 372
+      "transitive_descendants": 382
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10427,12 +10427,12 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.043,
+      "load_bearing_score": 11.081,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py",
-      "transitive_descendants": 372
+      "transitive_descendants": 382
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10452,12 +10452,12 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.043,
+      "load_bearing_score": 11.081,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py",
-      "transitive_descendants": 372
+      "transitive_descendants": 382
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10477,12 +10477,12 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.043,
+      "load_bearing_score": 11.081,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py",
-      "transitive_descendants": 372
+      "transitive_descendants": 382
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10519,14 +10519,14 @@
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
         "scalar_3plus1_temporal_ratio_note"
       ],
-      "direct_in_degree": 22,
+      "direct_in_degree": 23,
       "effective_status": "unaudited",
-      "load_bearing_score": 19.539,
+      "load_bearing_score": 20.077,
       "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_plaquette_self_consistency.py",
-      "transitive_descendants": 371
+      "transitive_descendants": 381
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24362,6 +24362,30 @@
       "transitive_descendants": 7
     },
     {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_reconstruction_note_2026-04-17",
+        "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17"
+      ],
+      "direct_in_degree": 5,
+      "effective_status": "unaudited",
+      "load_bearing_score": 5.085,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_EXACT_RADICAL_RECONSTRUCTION_MAP_NOTE_2026-04-17.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py",
+      "transitive_descendants": 5
+    },
+    {
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
@@ -24514,6 +24538,27 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 3,
+      "effective_status": "unaudited",
+      "load_bearing_score": 4.959,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_BETA6_EVALUATION_SEAM_REDUCTION_SCIENCE_ONLY_NOTE_2026-04-17.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py",
+      "transitive_descendants": 10
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "lattice_distance_law_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -24551,6 +24596,48 @@
       "ready": true,
       "runner_path": "scripts/mirror_2d_validation.py",
       "transitive_descendants": 10
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 4.322,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_COMPRESSED_RIM_EVALUATION_THEOREM_NOTE_2026-04-17.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py",
+      "transitive_descendants": 9
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 4.322,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_COMPRESSED_RIM_FUNCTIONAL_UNIQUENESS_NOTE_2026-04-17.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py",
+      "transitive_descendants": 9
     },
     {
       "audit_independence_required": "any_non_self",
@@ -26786,6 +26873,30 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17",
+      "claim_scope": null,
+      "claim_type": "no_go",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "plaquette_self_consistency_note",
+        "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 3.822,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_BETA6_SCALAR_VALUE_INSUFFICIENCY_NOTE_2026-04-17.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py",
+      "transitive_descendants": 9
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "symmetry_head_to_head_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -26894,6 +27005,31 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17",
+        "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17",
+        "gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 4.17,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_RETAINED_CLASS_SAMPLING_INVERSION_NOTE_2026-04-17.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_retained_class_sampling_inversion_2026_04_17.py",
+      "transitive_descendants": 8
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "wave_direct_dm_seed_band_diagnosis_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -26912,6 +27048,30 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/wave_direct_dm_seed_band_diagnosis.py",
+      "transitive_descendants": 7
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_conjugation_symmetric_retained_sampling_reduction_note_2026-04-17",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+        "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 4.0,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_CONJUGATION_SYMMETRIC_RETAINED_SAMPLING_REDUCTION_NOTE_2026-04-17.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": null,
       "transitive_descendants": 7
     },
     {
@@ -26938,6 +27098,29 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_constructive_transport_plateau_observable_affine_no_go_2026_04_19.py",
+      "transitive_descendants": 6
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_first_symmetric_three_sample_reconstruction_note_2026-04-17",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_vacuum_plaquette_conjugation_symmetric_retained_sampling_reduction_note_2026-04-17"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 3.307,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_RECONSTRUCTION_NOTE_2026-04-17.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": null,
       "transitive_descendants": 6
     },
     {
@@ -27735,6 +27918,48 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 2.5,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FULL_SLICE_RIM_LIFT_INTEGRAL_BOUNDARY_SCIENCE_ONLY_NOTE_2026-04-17.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_2026_04_17.py",
+      "transitive_descendants": 3
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17",
+      "claim_scope": null,
+      "claim_type": "no_go",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 1.5,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_UNDERDETERMINATION_NOTE_2026-04-17.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "moving_source_cross_family_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -28030,6 +28255,56 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/DISTANCE_LAW_PRESERVING_THIRD_FAMILY.py",
+      "transitive_descendants": 2
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_first_symmetric_three_sample_positive_cone_order_witness_note_2026-04-17",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 2.085,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_POSITIVE_CONE_ORDER_WITNESS_NOTE_2026-04-17.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_2026_04_17.py",
+      "transitive_descendants": 2
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_first_three_sample_local_wilson_partial_evaluation_note_2026-04-17",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
+        "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
+        "gauge_vacuum_plaquette_bridge_support_note",
+        "gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 2.085,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_THREE_SAMPLE_LOCAL_WILSON_PARTIAL_EVALUATION_NOTE_2026-04-17.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_2026_04_17.py",
       "transitive_descendants": 2
     },
     {
@@ -28550,6 +28825,31 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/gate_b_h025_joint_package.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17",
+      "claim_scope": null,
+      "claim_type": "no_go",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_vacuum_plaquette_first_three_sample_local_wilson_partial_evaluation_note_2026-04-17",
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_positive_cone_order_witness_note_2026-04-17"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 1.5,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_THREE_SAMPLE_LOCAL_WILSON_RETAINED_POSITIVE_CONE_OBSTRUCTION_NOTE_2026-04-17.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_2026_04_17.py",
       "transitive_descendants": 1
     },
     {
@@ -30269,6 +30569,64 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_closure_endpoint_2026_04_20.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_first_symmetric_three_sample_current_stack_constraint_boundary_note_2026-04-17",
+      "claim_scope": null,
+      "claim_type": "no_go",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
+        "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+        "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17",
+        "gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17",
+        "gauge_vacuum_plaquette_conjugation_symmetric_retained_sampling_reduction_note_2026-04-17",
+        "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
+        "gauge_vacuum_plaquette_bridge_support_note",
+        "observable_principle_from_axiom_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_CURRENT_STACK_CONSTRAINT_BOUNDARY_NOTE_2026-04-17.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_note_2026-04-17",
+      "claim_scope": null,
+      "claim_type": "no_go",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
+        "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17",
+        "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17",
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
+        "gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17",
+        "gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_THREE_SAMPLE_ENVIRONMENT_EVALUATOR_ROUTE_NOTE_2026-04-17.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py",
       "transitive_descendants": 0
     },
     {
@@ -32865,6 +33223,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 293,
-  "total_pending": 1150
+  "ready_count": 298,
+  "total_pending": 1165
 }

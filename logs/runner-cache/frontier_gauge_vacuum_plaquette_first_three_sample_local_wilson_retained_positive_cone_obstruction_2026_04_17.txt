@@ -1,0 +1,49 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_2026_04_17.py
+runner_sha256: 34660cbd8cc025af6e50d43d5157e93e4ee9cefa34bc14db5c842874666af40c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 14.71
+status: ok
+----- stdout -----
+================================================================================================================
+GAUGE-VACUUM PLAQUETTE FIRST THREE-SAMPLE LOCAL WILSON RETAINED POSITIVE-CONE OBSTRUCTION
+================================================================================================================
+
+Exact first-symmetric radical sample matrix F
+Matrix([[1, -3*sqrt(2 - sqrt(2)), 0], [1, -3*sqrt(2) + 3*sqrt(2 - sqrt(sqrt(2) + 2)) + 3*sqrt(2 - sqrt(2 - sqrt(2))), -8*sqrt(sqrt(sqrt(2) + 2) + 2) - 8*sqrt(sqrt(2 - sqrt(2)) + 2) + 8*sqrt(sqrt(2) + 2) + 16], [1, -3*sqrt(2 - sqrt(2 - sqrt(2))) + 3*sqrt(2 - sqrt(sqrt(2) + 2)) + 3*sqrt(2), -8*sqrt(sqrt(sqrt(2) + 2) + 2) - 8*sqrt(sqrt(2) + 2) + 8*sqrt(sqrt(2 - sqrt(2)) + 2) + 16]])
+
+Exact normalized local Wilson one-plaquette sample triple
+  Z_loc(W_A)                                = 0.135165279562048
+  Z_loc(W_B)                                = 0.317022495500542
+  Z_loc(W_C)                                = 0.581213946674634
+  Z_(1plaq)(6)                              = 3.441440354987778   (mode cutoff m = 8)
+
+Exact reconstructed first-symmetric retained coordinates a_loc = F^(-1) Z_loc
+  a_loc_(0,0)                               = 0.349606952458405
+  a_loc_(1,0)                               = 0.093393849310838
+  a_loc_(1,1)                               = -0.031909612770024
+  reconstruction gap                        = 1.435e-82
+  |det(F)|                                  = 10.810321693971
+  local order gap Z_loc(W_B)-Z_loc(W_A)     = 0.181857215938493
+  minimal adjoint-channel repair            = 0.031909612770024
+
+  [PASS] [SUPPORT] Exact radical-map note already fixes the first-symmetric three-sample matrix and inverse reconstruction law
+  [PASS] [SUPPORT] Positive-cone note already fixes cone membership as the exact half-space test F^(-1) Z >= 0
+  [PASS] [SUPPORT] Local Wilson partial-evaluation note already fixes the exact normalized local one-plaquette sample triple
+  [PASS] [SUPPORT] Full-slice rim-lift note still records that explicit B_6(W) remains open, so any fix must come from the nonlocal completion side
+  [PASS] [THEOREM] The exact local Wilson sample triple reconstructs uniquely through the radical map
+         max |F a_loc - Z_loc|=1.435e-82, |det(F)|=10.810321693971
+  [PASS] [THEOREM] The reconstructed local retained coordinates have a strictly negative adjoint component
+         a_loc=( 0.349606952458405, 0.093393849310838, -0.031909612770024 )
+  [PASS] [THEOREM] Therefore the exact local Wilson triple lies outside the first-symmetric retained positive cone
+         cone membership would require all three reconstructed retained coordinates to be nonnegative
+  [PASS] [THEOREM] The obstruction is sharper than the coarse order witness: Z_loc(W_B) > Z_loc(W_A) still holds while the cone test fails
+         order gap=0.181857215938493, failing coordinate a_loc_(1,1)=-0.031909612770024
+  [PASS] [THEOREM] Any first-symmetric retained positive-type repair needs a positive adjoint-channel correction of at least -a_loc_(1,1)
+         minimal retained-channel repair in the adjoint coordinate=0.031909612770024
+
+THEOREM PASS=5 SUPPORT=4 FAIL=0
+
+----- stderr -----
+

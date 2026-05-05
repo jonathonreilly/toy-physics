@@ -1,13 +1,13 @@
 # Audit Queue
 
-**Total pending:** 1150
-**Ready (all deps already at retained-grade or metadata tiers):** 293
+**Total pending:** 1165
+**Ready (all deps already at retained-grade or metadata tiers):** 298
 
 By criticality:
 - `critical`: 795
-- `high`: 24
-- `medium`: 130
-- `leaf`: 201
+- `high`: 25
+- `medium`: 137
+- `leaf`: 208
 
 Auditor (current best Codex GPT model at maximum reasoning by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -15,7 +15,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `cl3_color_automorphism_theorem` | bounded_theorem | audit_in_progress | critical | 393 | 17.62 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/verify_cl3_sm_embedding.py` |
+| 1 | `cl3_color_automorphism_theorem` | bounded_theorem | audit_in_progress | critical | 403 | 17.66 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/verify_cl3_sm_embedding.py` |
 | 2 | `oh_schur_boundary_action_note` | bounded_theorem | audit_in_progress | critical | 318 | 13.32 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_oh_schur_boundary_action.py` |
 | 3 | `source_resolved_wavefield_mechanism_note` | positive_theorem | unaudited | critical | 301 | 9.74 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/source_resolved_wavefield_mechanism.py` |
 | 4 | `claude_complex_action_carryover_note` | positive_theorem | unaudited | critical | 301 | 9.24 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/exact_lattice_complex_action_carryover.py` |

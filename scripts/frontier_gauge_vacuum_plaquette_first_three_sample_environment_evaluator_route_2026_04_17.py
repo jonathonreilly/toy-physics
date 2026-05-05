@@ -209,7 +209,7 @@ def exact_first_symmetric_matrix() -> sp.Matrix:
 def format_triple(values: np.ndarray) -> str:
     names = list(sample_angle_units())
     return ", ".join(
-        f"{name}={float(np.real_if_close(values[i])):.12f}" for i, name in enumerate(names)
+        f"{name}={float(np.real_if_close(values[i]).real):.12f}" for i, name in enumerate(names)
     )
 
 

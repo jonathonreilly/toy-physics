@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_dm_leptogenesis_expansion_axiom_boundary.py
-runner_sha256: 1590d0bf88fb054ec3a97afa5bb6e6801179310815db3eac795b9c7033b46c0b
+runner_sha256: 7dc436b880c6624600904efe86d1c5bcdcfb5c9aea02000767cad2ed2a0b669b
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.62
+elapsed_sec: 0.45
 status: ok
 ----- stdout -----
 ========================================================================================
@@ -20,7 +20,7 @@ PART 1: EVERYTHING EXCEPT EXPANSION IS NOW CLOSED
 ========================================================================================
 PART 2: THE CURRENT BRANCH STILL MARKS RADIATION EXPANSION AS NON-AUTHORITATIVE
 ========================================================================================
-  [PASS] The cleaned DM derivation still records H(T) with a bounded k = 0 sub-assumption
+  [PASS] The DM expansion-boundary note still records H_rad(T) as the single remaining non-axiom object
   [PASS] So the refreshed branch still lacks a strict theorem-grade radiation expansion law from Cl(3) on Z^3 alone  (the remaining gap is not the transport integral but the background expansion law)
 
 ========================================================================================
