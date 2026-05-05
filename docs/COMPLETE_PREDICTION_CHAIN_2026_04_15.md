@@ -32,11 +32,25 @@ The framework has ONE number that must be computed numerically from the axiom:
 
     <P> = 0.5934       SU(3) plaquette expectation value at beta = 6
 
-This is evaluated by standard lattice Monte Carlo on the SU(3) gauge theory
-that Cl(3) on Z^3 generates. It is not imported from experiment. It is not
-a free parameter. It is the unique output of the axiom's own dynamics.
+**Status amendment 2026-05-04 (per PR #528)**: this value is now
+**framework-native verified** via direct 4D MC on framework's documented
+isotropic Wilson action + 3+1D structure:
+- Framework MC at L=3, 4, 6, 8 matches standard SU(3) Wilson at each L
+- L→∞ extrapolation (3-parameter fit): P_∞ = 0.5932 ± 0.0010
+- Within 0.2σ of standard SU(3) MC literature value 0.5934 ± 0.0001
+- Framework's gauge action isotropy soft-derived from Cl(3)/Z³
+  minimal-information principle ([GAUGE_ISOTROPY_FROM_CL3_PSEUDOSCALAR_THEOREM_NOTE_2026-05-04.md](GAUGE_ISOTROPY_FROM_CL3_PSEUDOSCALAR_THEOREM_NOTE_2026-05-04.md))
+
+This is evaluated by direct framework-native lattice Monte Carlo on the
+SU(3) gauge theory that Cl(3) on Z^3 generates. It is not imported from
+experiment. It is not a free parameter. It is the unique output of the
+axiom's own dynamics.
 
 From this single number, the entire prediction chain unfolds.
+
+(Analytic closed-form derivation of ⟨P⟩(β=6) remains the famous open
+lattice gauge theory problem; SDP bootstrap proof-of-concept built in
+PR #528 for future analytic-retained work.)
 
 ---
 

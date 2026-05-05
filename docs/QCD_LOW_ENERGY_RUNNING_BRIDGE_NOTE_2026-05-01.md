@@ -4,6 +4,22 @@
 **Status:** bounded - bounded-scope same-surface running bridge using standard SM infrastructure (Machacek-Vaughn 2-loop RGE plus quark-mass threshold matching). Not framework-native; scoped explicitly to acknowledge external physics inputs.
 **Primary runner:** `scripts/frontier_qcd_low_energy_running_bridge.py`
 
+## Status amendment 2026-05-04 (upstream plaquette retained via PR #528)
+
+The upstream input `α_s(v) = α_bare/u_0² = 0.1033` is now framework-native
+verified via PR #528:
+- Upstream `<P> = 0.5934` is framework-native via 4D MC + L→∞ extrapolation
+  (per [PLAQUETTE_RETAINED_PROMOTION_AUDIT_SUBMISSION_2026-05-04.md](PLAQUETTE_RETAINED_PROMOTION_AUDIT_SUBMISSION_2026-05-04.md))
+- Therefore `α_s(v) = 0.1033` boundary value is also framework-native
+
+This note's RUNNING BRIDGE scope (v → M_Z) remains `bounded` as standard
+SM 2-loop RGE infrastructure (Machacek-Vaughn 1984, Arason et al 1992,
+PDG quark-mass thresholds). The scope split is now cleaner:
+- Boundary `α_s(v)`: framework-native retained (per PR #528)
+- Running bridge v → M_Z: standard SM infrastructure (this note, bounded)
+- Combined `α_s(M_Z) = 0.1181`: proposed_retained on framework-native
+  boundary + standard running
+
 ## Why this note exists
 
 The audit ledger correctly flagged that the downstream

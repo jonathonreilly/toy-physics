@@ -63,6 +63,20 @@ plaquette fourth-root density.
 This is useful bookkeeping because any downstream lane that uses
 `alpha_LM` and `alpha_s(v)` should not count them as independent knobs.
 
+## Status amendment 2026-05-04 (plaquette retained promotion via PR #528)
+
+Per [PLAQUETTE_RETAINED_PROMOTION_AUDIT_SUBMISSION_2026-05-04.md](PLAQUETTE_RETAINED_PROMOTION_AUDIT_SUBMISSION_2026-05-04.md)
+in PR #528, the plaquette value `<P> = 0.5934` is now framework-native
+verified via:
+- Direct framework MC at L=3, 4, 6, 8 (matches standard SU(3) Wilson at each L)
+- L→∞ extrapolation (3-parameter fit): P_∞ = 0.5932 ± 0.0010 (within 0.2σ of 0.5934)
+- Soft isotropy theorem ([GAUGE_ISOTROPY_FROM_CL3_PSEUDOSCALAR_THEOREM_NOTE_2026-05-04.md](GAUGE_ISOTROPY_FROM_CL3_PSEUDOSCALAR_THEOREM_NOTE_2026-05-04.md))
+  derives framework's gauge action structure
+
+This note's downstream use of `<P> = 0.5934` now stands on framework-native
+basis (no longer "imported MC value with bounded scope"). Status updated
+pending PR #528 audit ratification.
+
 ## Retained Numerical Evaluation
 
 Using the retained plaquette value `<P> = 0.5934`,

@@ -29,6 +29,50 @@ plaquette reduction at `beta = 6` are outside this note's load-bearing
 claim.
 **Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py`, `scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py`, `scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py`, `scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py`, `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py`, `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py`, `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py`, `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py`
 
+## Status amendment 2026-05-04 (plaquette retained via PR #528)
+
+Per [PLAQUETTE_RETAINED_PROMOTION_AUDIT_SUBMISSION_2026-05-04.md](PLAQUETTE_RETAINED_PROMOTION_AUDIT_SUBMISSION_2026-05-04.md)
+and the companion [GAUGE_ISOTROPY_FROM_CL3_PSEUDOSCALAR_THEOREM_NOTE_2026-05-04.md](GAUGE_ISOTROPY_FROM_CL3_PSEUDOSCALAR_THEOREM_NOTE_2026-05-04.md):
+
+1. **Numerical ⟨P⟩(β=6) = 0.5934 is now framework-native verified**:
+   - Direct 4D MC at L=3,4,6,8 matching standard SU(3) Wilson at each L
+   - L→∞ extrapolation: P_∞ = 0.5932 ± 0.0010 (within 0.2σ of 0.5934)
+   - Soft isotropy theorem derives framework's gauge action structure
+   - "Same-surface evaluated value" language no longer required for
+     numerical claim
+
+2. **Constant-lift "best analytic candidate" 0.59353 RETIRED**:
+   - This note's section "Current best analytic candidate" identified
+     `β_eff = β · (3/2) · (2/√3)^(1/4)` giving `P_cand(6) = 0.59353`
+   - The framework's own constant-lift obstruction theorem
+     ([GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md))
+     proves Γ ≠ 1 with a constant-lift form is exactly disproven
+   - Therefore the 0.59353 candidate was a numerological coincidence
+     between the bridge factor and standard MC, NOT a derivation
+   - The framework-native derivation goes through 4D MC + L→∞
+     extrapolation (per PR #528), not via the constant-lift bridge
+
+3. **V-invariance role correctly scoped**:
+   - The V-invariant L_s=2 APBC spatial cube is a CLASS-LEVEL support
+     primitive (gives 2/√3 endpoint ratio for temporal completion, etc.)
+   - It is NOT the complete derivation of ⟨P⟩ (which requires full 3+1D
+     and gives 0.5934 at L→∞)
+   - Direct V-invariant Schur gives 0.4225 (spatial-only); full 3+1D MC
+     gives 0.5934 (matches standard)
+
+4. **Out-of-scope items #3 (reference Perron solves) and #4 (closed-form
+   ρ_(p,q)(6))**: still open AS DESCRIBED, but no longer load-bearing for
+   the NUMERICAL claim of ⟨P⟩(β=6) = 0.5934 (which is now retained via
+   the L→∞ MC extrapolation).
+
+5. **Analytic closed-form ⟨P⟩(β=6)**: still open (famous lattice
+   problem); SDP bootstrap proof-of-concept built (PR #528). Full
+   development is the analytic-retained path (separate Path 2 work).
+
+This amendment promotes the bridge-support note's role to a CLASS-LEVEL
+SUPPORT primitive (its original intended scope), with the NUMERICAL
+plaquette claim now retained via PR #528.
+
 ## Out of scope (admitted-context to this note)
 
 The following items are explicitly **NOT** load-bearing claims of this

@@ -20,6 +20,32 @@
 bounded lane):** `ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md`
 with runner `scripts/frontier_alpha_s_direct_wilson_loop.py`.
 
+## Status amendment 2026-05-04 (plaquette retained promotion via PR #528)
+
+Per [PLAQUETTE_RETAINED_PROMOTION_AUDIT_SUBMISSION_2026-05-04.md](PLAQUETTE_RETAINED_PROMOTION_AUDIT_SUBMISSION_2026-05-04.md)
+and the companion [GAUGE_ISOTROPY_FROM_CL3_PSEUDOSCALAR_THEOREM_NOTE_2026-05-04.md](GAUGE_ISOTROPY_FROM_CL3_PSEUDOSCALAR_THEOREM_NOTE_2026-05-04.md)
+in PR #528, the upstream plaquette dependency `<P> = 0.5934` is now
+framework-native verified:
+- Direct framework MC at L=3, 4, 6, 8 matches standard SU(3) Wilson at each L
+- L→∞ extrapolation: P_∞ = 0.5932 ± 0.0010 (within 0.2σ of 0.5934)
+- Soft isotropy theorem derives framework's gauge action structure
+
+This **closes the upstream "open analytic insertion" caveat from the 2026-05-01
+amendment** for the NUMERICAL claim. The chain `<P> → u_0 → α_s(v) → α_s(M_Z)`
+now stands on framework-native basis at the numerical level.
+
+**Proposed status change**: `bounded → proposed_retained` for the numerical
+claim `α_s(M_Z) = 0.1181`, pending:
+- PR #528 audit ratification (in progress)
+- Running bridge scope (separate; QCD_LOW_ENERGY_RUNNING_BRIDGE remains
+  bounded as standard SM 2-loop infrastructure)
+
+The honest scope post-PR #528 ratification:
+- `α_s(v)` upstream value: framework-native retained
+- `α_s(v) → α_s(M_Z)` running: standard SM infrastructure (still bounded)
+- Combined `α_s(M_Z) = 0.1181`: **proposed_retained** on framework-native
+  upstream + standard running bridge
+
 ## Status amendment 2026-05-01 (audit-driven scope sharpening)
 
 The 2026-04-29 Codex audit pass returned `audited_conditional` with the
