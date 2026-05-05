@@ -43,6 +43,13 @@ chunk-only completion: even perfect chunk data would still lack scalar LSZ
 model-class/FV/IR control, a canonical-Higgs/source-overlap bridge, matching
 authority, and retained-route authorization.
 
+2026-05-05 non-chunk cycle-34 update: the gate now also consumes
+`outputs/yt_pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard_2026-05-05.json`.
+After cycle 33, `origin/main` advanced again by audit/status, canonical-index,
+and unrelated SU3 FSS surfaces only.  No listed PR230 same-surface artifact is
+present or changed for admissible reopen, all six non-chunk worklist units
+remain blocked, and the assembly gate remains open with `PASS=74 FAIL=0`.
+
 2026-05-05 non-chunk cycle-33 update: the gate now also consumes
 `outputs/yt_pr230_nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard_2026-05-05.json`.
 After cycle 32, `origin/main` advanced again by

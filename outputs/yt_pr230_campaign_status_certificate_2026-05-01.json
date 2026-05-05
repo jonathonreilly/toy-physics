@@ -273,6 +273,7 @@
     "pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard": "exact negative boundary / PR230 non-chunk cycle-31 post-cycle-30 main-audit-status-drift reopen guard: origin/main advanced again only on audit/effective-status surfaces and no listed same-surface artifact is present; positive closure remains open",
     "pr230_nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard": "exact negative boundary / PR230 non-chunk cycle-32 post-cycle-31 main-audit-status-drift reopen guard: origin/main advanced again only on audit/effective-status surfaces and no listed same-surface artifact is present; positive closure remains open",
     "pr230_nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard": "exact negative boundary / PR230 non-chunk cycle-33 post-cycle-32 main-audit-status-drift reopen guard: origin/main advanced again only on audit/effective-status/runner-cache surfaces and no listed same-surface artifact is present; positive closure remains open",
+    "pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard": "exact negative boundary / PR230 non-chunk cycle-34 post-cycle-33 main non-PR230 drift reopen guard: origin/main advanced again only on audit/status and unrelated SU3 FSS surfaces with no listed same-surface artifact present; positive closure remains open",
     "pr230_nonchunk_future_artifact_intake": "exact negative boundary / PR230 non-chunk future-artifact intake finds no executable current route; positive closure still open",
     "pr230_nonchunk_reopen_admissibility": "exact negative boundary / PR230 non-chunk reopen-admissibility gate: no future artifact candidate is admissible on the current surface; positive closure still open",
     "pr230_nonchunk_route_family_import_audit": "exact negative boundary / non-chunk route-family import audit confirms no executable current-surface route after W/Z covariance-theorem import no-go",
@@ -362,7 +363,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 248,
+  "pass_count": 249,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

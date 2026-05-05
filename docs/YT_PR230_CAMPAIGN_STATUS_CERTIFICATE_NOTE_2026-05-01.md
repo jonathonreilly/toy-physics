@@ -28,8 +28,28 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=248 FAIL=0
+# SUMMARY: PASS=249 FAIL=0
 ```
+
+## 2026-05-05 Cycle-34 Post-Cycle-33 Main Non-PR230 Drift Reopen Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard_2026-05-05.json`.
+After cycle 33, `origin/main` advanced again by audit/status, canonical-index,
+and unrelated SU3 FSS surfaces.  No listed PR230 same-surface artifact is
+present or changed for admissible reopen, so no non-chunk route is admissible.
+
+Validation: cycle-34 post-cycle-33 main non-PR230 drift guard `PASS=14
+FAIL=0`; full positive closure assembly gate `PASS=74 FAIL=0`; retained-route
+`PASS=222 FAIL=0`; campaign status `PASS=249 FAIL=0`.
+
+The campaign target remains open, but the current PR230 non-chunk scope remains
+stopped for this branch.  Reopen only after an admissible strict future
+artifact exists and the worklist, exhaustion, intake, independent-route,
+cycle-16, cycle-17, cycle-18, cycle-19, cycle-20, cycle-21, cycle-22,
+cycle-23, cycle-24, cycle-25, cycle-26, cycle-27, cycle-28, cycle-29,
+cycle-30, cycle-31, cycle-32, cycle-33, cycle-34, assembly, retained-route,
+and campaign gates are rerun.
 
 ## 2026-05-05 Cycle-33 Post-Cycle-32 Main-Audit-Status-Drift Reopen Update
 

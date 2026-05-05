@@ -124,6 +124,7 @@
     "nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard_2026-05-05.json",
     "nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard_2026-05-05.json",
     "nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard_2026-05-05.json",
+    "nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard": "outputs/yt_pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard_2026-05-05.json",
     "nonchunk_future_artifact_intake": "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json",
     "nonchunk_reopen_admissibility": "outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json",
     "nonchunk_terminal_route_exhaustion": "outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json",
@@ -213,6 +214,7 @@
     "nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard": "exact negative boundary / PR230 non-chunk cycle-31 post-cycle-30 main-audit-status-drift reopen guard: origin/main advanced again only on audit/effective-status surfaces and no listed same-surface artifact is present; positive closure remains open",
     "nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard": "exact negative boundary / PR230 non-chunk cycle-32 post-cycle-31 main-audit-status-drift reopen guard: origin/main advanced again only on audit/effective-status surfaces and no listed same-surface artifact is present; positive closure remains open",
     "nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard": "exact negative boundary / PR230 non-chunk cycle-33 post-cycle-32 main-audit-status-drift reopen guard: origin/main advanced again only on audit/effective-status/runner-cache surfaces and no listed same-surface artifact is present; positive closure remains open",
+    "nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard": "exact negative boundary / PR230 non-chunk cycle-34 post-cycle-33 main non-PR230 drift reopen guard: origin/main advanced again only on audit/status and unrelated SU3 FSS surfaces with no listed same-surface artifact present; positive closure remains open",
     "nonchunk_future_artifact_intake": "exact negative boundary / PR230 non-chunk future-artifact intake finds no executable current route; positive closure still open",
     "nonchunk_reopen_admissibility": "exact negative boundary / PR230 non-chunk reopen-admissibility gate: no future artifact candidate is admissible on the current surface; positive closure still open",
     "nonchunk_terminal_route_exhaustion": "exact negative boundary / PR230 non-chunk terminal route-exhaustion gate: no current route may continue without a named same-surface artifact; positive closure still open",
@@ -250,7 +252,7 @@
     "wz_same_source_action_semantic_firewall": "bounded-support / same-source EW action semantic firewall passed",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
   },
-  "pass_count": 73,
+  "pass_count": 74,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",
   "route_statuses": {

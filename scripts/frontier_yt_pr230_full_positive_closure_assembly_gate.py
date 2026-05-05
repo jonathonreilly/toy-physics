@@ -109,6 +109,7 @@ PARENTS = {
     "nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard_2026-05-05.json",
     "nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard_2026-05-05.json",
     "nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard_2026-05-05.json",
+    "nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard": "outputs/yt_pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -786,6 +787,22 @@ def main() -> int:
         ).get("passed")
         is False
     )
+    nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard_closed = (
+        "cycle-34 post-cycle-33 main non-PR230 drift reopen guard"
+        in statuses["nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard"]
+        and certs["nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard"].get(
+            "cycle34_post_cycle33_main_nonpr230_drift_guard_passed"
+        )
+        is True
+        and certs["nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
 
     current_state = {
         "production_physical_response": False,
@@ -1299,6 +1316,11 @@ def main() -> int:
         "nonchunk-cycle33-post-cycle32-main-audit-status-drift-guard-recorded",
         nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard_closed,
         statuses["nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard"],
+    )
+    report(
+        "nonchunk-cycle34-post-cycle33-main-nonpr230-drift-guard-recorded",
+        nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard_closed,
+        statuses["nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard"],
     )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
