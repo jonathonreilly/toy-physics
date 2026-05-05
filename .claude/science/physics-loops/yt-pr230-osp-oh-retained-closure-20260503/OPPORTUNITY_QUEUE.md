@@ -1,5 +1,18 @@
 # Opportunity Queue
 
+2026-05-05 cycle-35 update:
+`outputs/yt_pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard_2026-05-05.json`
+passes with `PASS=15 FAIL=0`.  The only new remote fact is that
+`origin/main` advanced from `bbef5c4905a034cb75e9d7eaeb12cdcffbb03b25` to
+`457be579b6636b6165e09deb75235e690e5631d5` on audit metadata only:
+`docs/audit/data/audit_ledger.json` and
+`docs/audit/data/citation_graph.json`.  No listed PR230 same-surface artifact
+exists locally, on the PR remote branch, or on `origin/main`.  The non-chunk
+queue remains stopped until a fresh parseable same-surface artifact appears
+for source-Higgs `O_H/C_sH/C_HH`, genuine same-source W/Z response,
+Schur A/B/C kernel rows, scalar-LSZ strict moment/threshold/FV authority, or
+neutral-sector irreducibility.
+
 2026-05-05 completion-audit update:
 `outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json` passes
 with `PASS=18 FAIL=0` and records `closure_achieved=false`.  Both target

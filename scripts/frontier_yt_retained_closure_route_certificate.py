@@ -178,6 +178,7 @@ def main() -> int:
         "pr230_nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard_2026-05-05.json",
         "pr230_nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard_2026-05-05.json",
         "pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard": "outputs/yt_pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard_2026-05-05.json",
+        "pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard": "outputs/yt_pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard_2026-05-05.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
@@ -2520,6 +2521,24 @@ def main() -> int:
         ].get("dramatic_step_gate", {}).get("passed")
         is False
     )
+    pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard_blocks = (
+        "cycle-35 post-cycle-34 main audit-ledger drift reopen guard"
+        in certificates[
+            "pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard"
+        ].get("actual_current_surface_status", "")
+        and certificates[
+            "pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard"
+        ].get("cycle35_post_cycle34_main_audit_ledger_drift_guard_passed")
+        is True
+        and certificates[
+            "pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard"
+        ].get("dramatic_step_gate", {}).get("passed")
+        is False
+    )
     interacting_kinetic_still_open = (
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status")
         == "bounded-support / interacting kinetic background sensitivity"
@@ -3710,6 +3729,13 @@ def main() -> int:
         pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard_blocks,
         certificates[
             "pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard"
+        ].get("actual_current_surface_status", ""),
+    )
+    report(
+        "pr230-nonchunk-cycle35-post-cycle34-main-audit-ledger-drift-guard-blocks-main-drift-reopen",
+        pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard_blocks,
+        certificates[
+            "pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard"
         ].get("actual_current_surface_status", ""),
     )
     report(

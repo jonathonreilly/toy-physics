@@ -1,5 +1,27 @@
 # Review History
 
+## 2026-05-05 Non-Chunk Cycle-35 Main Audit-Ledger Drift Guard Self-Review
+
+Disposition: pass as exact negative boundary / no admissible post-cycle-34
+main-surface reopen.
+
+Findings:
+
+- The guard compares `bbef5c4905a034cb75e9d7eaeb12cdcffbb03b25..origin/main`
+  and finds only `docs/audit/data/audit_ledger.json` and
+  `docs/audit/data/citation_graph.json`.
+- It checks the listed future artifact paths from the non-chunk worklist
+  against local files, the PR remote branch, and `origin/main`.
+- It verifies the local branch and PR remote branch are aligned, cycle 34
+  remains closed, the completion audit still records `closure_achieved=false`,
+  and assembly/retained/campaign proposal gates remain false.
+- It does not load, combine, package, duplicate, or rerun chunk data and does
+  not touch publication, Planck, alpha_s, or claim-table surfaces.
+
+Review-loop iteration 1: local self-review pass.  No retained or
+proposed-retained wording is authorized; the exact next action remains a
+fresh parseable same-surface artifact.
+
 ## 2026-05-05 Positive Closure Completion Audit Self-Review
 
 Disposition: pass as an honest completion audit / no closure authority.

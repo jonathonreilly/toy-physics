@@ -235,6 +235,9 @@ def main() -> int:
         "pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard": load(
             "outputs/yt_pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard_2026-05-05.json"
         ),
+        "pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard": load(
+            "outputs/yt_pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -2895,6 +2898,24 @@ def main() -> int:
         ].get("dramatic_step_gate", {}).get("passed")
         is False,
         statuses["pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard"],
+    )
+    report(
+        "pr230-nonchunk-cycle35-post-cycle34-main-audit-ledger-drift-guard-recorded",
+        "cycle-35 post-cycle-34 main audit-ledger drift reopen guard"
+        in str(statuses["pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard"])
+        and certificates[
+            "pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard"
+        ].get("cycle35_post_cycle34_main_audit_ledger_drift_guard_passed")
+        is True
+        and certificates[
+            "pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard"
+        ].get("dramatic_step_gate", {}).get("passed")
+        is False,
+        statuses["pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard"],
     )
 
     remaining_routes = [
