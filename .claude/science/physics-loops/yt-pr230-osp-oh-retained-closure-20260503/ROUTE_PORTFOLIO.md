@@ -306,3 +306,19 @@ audit/effective-status surfaces only.  No listed future path exists or changed
 on branch, remote PR branch, or `origin/main`; all six worklist units remain
 blocked, no route family is executable, process gates through cycle 24 remain
 closed, and aggregate gates still deny proposal authority.
+
+## R20: Cycle-26 Post-Cycle-25 Main-Audit-Status-Drift Reopen Guard
+
+After cycle 25 closes post-cycle-24 main audit/status drift, test the next
+post-cycle-25 `origin/main` movement.
+
+Status: closed negatively in
+`docs/YT_PR230_NONCHUNK_CYCLE26_POST_CYCLE25_MAIN_AUDIT_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md`.
+
+Reason: `origin/main` advanced from
+`0fbd8ecd41fe4ee6ee84d373c84dc5291953e606` to
+`3189b67ea27e8b8670bd682cde145ead7fd1bae8`, but the changed paths are still
+audit/effective-status surfaces only.  No listed future path exists or changed
+on branch, remote PR branch, or `origin/main`; all six worklist units remain
+blocked, no route family is executable, process gates through cycle 25 remain
+closed, and aggregate gates still deny proposal authority.

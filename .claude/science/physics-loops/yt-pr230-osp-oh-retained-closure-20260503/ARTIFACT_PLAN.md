@@ -482,3 +482,17 @@ PR branch, remote PR branch, and `origin/main` contain no listed same-surface
 artifact for admissible reopen.  Remote branch drift is therefore not an
 executable non-chunk route; the next positive move still requires one listed
 same-surface row, certificate, or theorem on the target branch.
+
+Completed in the cycle-26 post-cycle-25 main-audit-status-drift reopen guard:
+
+- `scripts/frontier_yt_pr230_nonchunk_cycle26_post_cycle25_main_audit_status_drift_guard.py`
+- `docs/YT_PR230_NONCHUNK_CYCLE26_POST_CYCLE25_MAIN_AUDIT_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_cycle26_post_cycle25_main_audit_status_drift_guard_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
+This closes the newest main-drift reopen question negatively.  After fetch,
+`origin/main` advanced again only on audit/effective-status surfaces and no
+listed same-surface artifact exists or changed on branch, remote PR branch, or
+`origin/main`.  The next positive move still requires one listed same-surface
+row, certificate, or theorem as a parseable claim-status artifact on the target
+branch.
