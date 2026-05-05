@@ -1,11 +1,106 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_axioms_16card.py
-runner_sha256: 8f768d87f0f2998e038b2350370af3f4a4eaf16ce2bb65b8f96170d2f2b6bc58
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: e179e3e9c4c615879a08000880c054ab9f8311a7cdef7c94a4b80b7f8e9af5c8
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 154.82
+status: ok
 ----- stdout -----
+======================================================================
+HISTORICAL LEGACY C1-C16 CONTROL HARNESS ON 3 GRAPH TYPES
+======================================================================
+Evolution: Crank-Nicolson (exactly unitary)
+Guardrail: legacy proxy harness only; do not cite as current evidence.
+
+
+======================================================================
+CUBIC LATTICE — C1-C16 CARD (3375 nodes)
+======================================================================
+  [C1]  Sorkin |I3|/P=4.6921e-15 PASS
+  [C2]  d_TV=0.6637 PASS
+  [C3]  f=0 bias=0.0000 PASS
+  [C4]  F~M R^2=1.000000 PASS
+  [C5]  Gravity: +3.6398e-05 TOWARD PASS
+  [C6]  Decoh: 0.9448->0.0713 PASS
+  [C7]  MI=1.2210e-08 PASS
+  [C8]  Purity CV=0.2420 PASS
+  [C9]  GravGrow: all_tw=True, monotone=True PASS
+  [C10] Dist: 5/5 TW PASS
+  [C11] KG-cubic R^2=0.999809, iso=1.0309 (axis:11pts, diag:7pts) PASS
+  [C12] AB-proxy V=0.4294 PASS
+  [C13] k-achrom: CV=0.0017, same_sign=True [k=0.15:N=28,d=+1.67e-04, k=0.25:N=28,d=+1.67e-04, k=0.35:N=28,d=+1.67e-04, k=0.45:N=28,d=+1.66e-04, k=0.55:N=28,d=+1.66e-04] PASS
+  [C14] Equiv CV=0.000000 PASS
+  [C15] BC: agree=3/3 [N=7:per=+9.02e-06,open=+9.00e-06, N=10:per=+1.84e-05,open=+1.83e-05, N=14:per=+3.64e-05,open=+3.58e-05] PASS
+  [C16] Multi: ctr=T,pk=A,sh=T agree=2/3 PASS
+
+  Norm: init=1.000000, final=1.000000, drift=9.9920e-16
+
+  SCORE: 16/16
+
+======================================================================
+RANDOM GEOMETRIC — C1-C16 CARD (300 nodes)
+======================================================================
+  [C1]  Sorkin |I3|/P=2.9142e-15 PASS
+  [C2]  d_TV=0.7814 PASS
+  [C3]  f=0 bias=0.0520 PASS
+  [C4]  F~M R^2=1.000000 PASS
+  [C5]  Gravity: +1.2332e-05 TOWARD PASS
+  [C6]  Decoh: 0.1271->0.0544 PASS
+  [C7]  MI=1.0116e-01 PASS
+  [C8]  Purity CV=0.0453 PASS
+  [C9]  GravGrow: all_tw=True, monotone=True PASS
+  [C10] Dist: 5/5 TW PASS
+  [C11] KG-eigen R^2=1.000000, intercept=0.0900 (m^2=0.0900) PASS
+  [C12] AB-proxy V=0.6648 PASS
+  [C13] k-achrom: CV=0.0060, same_sign=True [k=0.15:N=60,d=+3.31e-05, k=0.25:N=60,d=+3.32e-05, k=0.35:N=60,d=+3.34e-05, k=0.45:N=60,d=+3.35e-05, k=0.55:N=60,d=+3.36e-05] PASS
+  [C14] Equiv CV=0.000000 PASS
+  [C15] BC: orig=T, variant_r=T PASS
+  [C16] Multi: ctr=T,pk=A,sh=T agree=2/3 PASS
+
+  Norm: init=1.000000, final=1.000000, drift=2.3315e-15
+
+  SCORE: 16/16
+
+======================================================================
+GROWING GRAPH — C1-C16 CARD (150 nodes)
+======================================================================
+  [C1]  Sorkin |I3|/P=4.3227e-15 PASS
+  [C2]  d_TV=0.9996 PASS
+  [C3]  f=0 bias=0.0107 PASS
+  [C4]  F~M R^2=1.000000 PASS
+  [C5]  Gravity: +1.7859e-05 TOWARD PASS
+  [C6]  Decoh: 0.3116->0.0275 PASS
+  [C7]  MI=1.1852e-01 PASS
+  [C8]  Purity CV=0.0085 PASS
+  [C9]  GravGrow: all_tw=True, monotone=True PASS
+  [C10] Dist: 4/4 TW PASS
+  [C11] KG-eigen R^2=1.000000, intercept=0.0900 (m^2=0.0900) PASS
+  [C12] AB-proxy V=0.7895 PASS
+  [C13] k-achrom: CV=0.0031, same_sign=True [k=0.15:N=60,d=+4.87e-05, k=0.25:N=60,d=+4.86e-05, k=0.35:N=60,d=+4.85e-05, k=0.45:N=60,d=+4.84e-05, k=0.55:N=60,d=+4.82e-05] PASS
+  [C14] Equiv CV=0.000000 PASS
+  [C15] BC: orig=T, seed99=T PASS
+  [C16] Multi: ctr=T,pk=A,sh=T agree=2/3 PASS
+
+  Norm: init=1.000000, final=1.000000, drift=2.2204e-16
+
+  SCORE: 16/16
+
+======================================================================
+FINAL SUMMARY (LEGACY CONTROL HARNESS)
+======================================================================
+  Cubic lattice:    16/16
+  Random geometric: 16/16
+  Growing graph:    16/16
+  Time: 153.9s
+
+  Note: C11 (KG) uses lattice dispersion for cubic, eigenvalue fit for others.
+  C12 is an AB-proxy (slit-phase), not a true gauge coupling.
+  C13 carrier-k sweep uses v_g-matched travel distance.
+  C15 uses periodic-vs-open (cubic), variant-radius (random), or seed-variant (growing).
+
+  Legacy result: all graphs >= 14/16 on this proxy control harness.
+  Do not use this script as a current-main evidence surface.
+  Prefer frontier_graph_kg_16card.py and frontier_staggered_17card.py.
 
 ----- stderr -----
 

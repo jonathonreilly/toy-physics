@@ -1,11 +1,65 @@
 ===== runner cache v1 =====
 runner: scripts/four_d_distance_width_probe.py
-runner_sha256: 22312626e37de235efa4b936176620ddda29667063450d0a4c8a29c1f78a50c9
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: 3fe3047271cbf22d3f66b50b72f891af036e00ba9a374cd4d30f3fbd5d0d2789
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 307.76
+status: ok
 ----- stdout -----
+========================================================================
+4D WIDTH-LIMITED DISTANCE-LAW PROBE
+Family: valley-linear S = L(1-f), kernel 1/L^3, field f=s/r^2
+Fixed h=0.5, L=15, strength=5e-05, max_d_phys=2
+Width ladder: [5, 6, 7]
+Mass offsets: [2, 3, 4, 5, 6, 7]
+Goal: freeze current 4D support without overclaiming asymptotic closure
+========================================================================
+
+WIDTH W=5  nodes=287,091  layers=31  max_d=4
+  free propagation baseline z=0.000000 (5.3s)
+  mass offsets:
+    z=2: +0.00003093 (TOWARD)
+    z=3: +0.00005520 (TOWARD)
+    z=4: +0.00007504 (TOWARD)
+    z=5: +0.00007130 (TOWARD)
+  TOWARD support: 4/4
+  peak at z=4
+  far tail: only 1 point(s) beyond the peak; width still blocks asymptotic closure
+  elapsed: 27.6s
+
+WIDTH W=6  nodes=484,375  layers=31  max_d=4
+  free propagation baseline z=-0.000000 (13.5s)
+  mass offsets:
+    z=2: +0.00003856 (TOWARD)
+    z=3: +0.00006420 (TOWARD)
+    z=4: +0.00007548 (TOWARD)
+    z=5: +0.00007524 (TOWARD)
+    z=6: +0.00006313 (TOWARD)
+  TOWARD support: 5/5
+  peak at z=4
+  early tail (z>=4): b^(-0.43), R²=0.713
+  far tail: only 2 point(s) beyond the peak; width still blocks asymptotic closure
+  elapsed: 93.5s
+
+WIDTH W=7  nodes=756,059  layers=31  max_d=4
+  free propagation baseline z=0.000000 (25.9s)
+  mass offsets:
+    z=2: +0.00004244 (TOWARD)
+    z=3: +0.00007075 (TOWARD)
+    z=4: +0.00007619 (TOWARD)
+    z=5: +0.00007397 (TOWARD)
+    z=6: +0.00006744 (TOWARD)
+    z=7: +0.00005321 (TOWARD)
+  TOWARD support: 6/6
+  peak at z=4
+  early tail (z>=4): b^(-0.60), R²=0.800
+  far tail   (z>=5): b^(-0.96), R²=0.915
+  elapsed: 186.6s
+
+========================================================================
+Readout: the retained 4D family remains TOWARD across the tested width ladder, but the tail fits are still width-limited and do not close to a stable asymptotic law here.
+Total elapsed: 307.6s
+========================================================================
 
 ----- stderr -----
 

@@ -1,11 +1,28 @@
 ===== runner cache v1 =====
 runner: scripts/SECOND_GROWN_FAMILY_COMPLEX_QUICK.py
-runner_sha256: 624e053d975a71f1c7bd5fb743562f0a6167bb9425ee80e211bef795a3a4a4ad
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: b1889fc22e22539eb491a5e909600716ba8734e782528e52d7e7b7b53915ede5
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 68.05
+status: ok
 ----- stdout -----
+==================================================================================================
+SECOND GROWN FAMILY COMPLEX QUICK
+  no-restore grown family + geometry-sector stencil
+==================================================================================================
+drifts=[0.18, 0.2, 0.22], seeds=[0]
+guards: exact gamma=0 baseline, Born proxy where feasible, TOWARD -> AWAY crossover
+
+drift       born           g0          d01          d05      e01      e05     fm0    fm05   t01   t05
+------------------------------------------------------------------------------------------------------------------
+ 0.18        n/a -5.498367e-03 -1.080390e-02 -3.110466e-02    1.079    0.301   1.000   1.000     0     0
+ 0.20  5.747e-17 -1.134023e-02 -1.577135e-02 -3.349544e-02    1.073    0.307   1.000   1.000     0     0
+ 0.22        n/a -2.214214e-02 -3.079748e-02 -6.686564e-02    1.088    0.313   1.000   1.000     0     0
+
+SAFE READ
+  anchor retained gamma=0 + Born proxy: True
+  anchor TOWARD@0.1 -> AWAY@0.5: False
+  the second grown-family candidate does not retain the complex-action companion cleanly
 
 ----- stderr -----
 

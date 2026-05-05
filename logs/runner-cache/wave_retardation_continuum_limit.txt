@@ -1,10 +1,10 @@
 ===== runner cache v1 =====
 runner: scripts/wave_retardation_continuum_limit.py
-runner_sha256: 41511730d4491243ff8d9fd2b8be6e1f30a8124b0ff87adab534d34a88978e30
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 0c1ffd073cb1f811e2c74507d6bbefe658c4798efcd5cca3522c16fe2ea8c2e1
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 304.28
+status: ok
 ----- stdout -----
 ====================================================================================================
 WAVE-RETARDATION CONTINUUM-LIMIT REFINEMENT
@@ -47,6 +47,76 @@ Physical parameters held APPROXIMATELY constant:
   rel_IeqN = 30.33%  (equilibrated vs imposed Newton)
 
 [fine] H = 0.25
+  NL = 60, iz_range = 12, k_phase = 10.000
+  src_layer = 20, n_active = 40, v_per_layer = -0.3000
+  n_nodes = 141660
+  dM = +0.007212
+  dI (cached static, NL_dyn)   = +0.012743
+  dIeq (equilibrated static, 3*NL) = +0.005542
+  dN (imposed Newton)          = +0.010490
+  rel_MI   = 43.40%  (M vs cached static)
+  rel_MIeq = 23.16%  (M vs equilibrated static)
+  rel_MN   = 31.24%  (M vs imposed Newton)
+  rel_IeqN = 47.17%  (equilibrated vs imposed Newton)
+
+====================================================================================================
+REFINEMENT TABLE — beam deflection values and relative gaps
+====================================================================================================
+   label      H   NL         dM         dI       dIeq         dN
+  coarse  0.500   30  +0.008362  +0.011747  +0.002165  +0.011240
+  medium  0.350   43  +0.007942  +0.008778  +0.011256  +0.007842
+    fine  0.250   60  +0.007212  +0.012743  +0.005542  +0.010490
+
+   label     rel_MI   rel_MIeq     rel_MN   rel_IeqN
+  coarse     28.81%     74.11%     25.60%     80.74%
+  medium      9.53%     29.44%      1.26%     30.33%
+    fine     43.40%     23.16%     31.24%     47.17%
+
+====================================================================================================
+CONVERGENCE — three quantities, two comparators
+====================================================================================================
+
+  dM (retarded wave field):
+      coarse(+0.008362) →   medium(+0.007942)  Δ = -0.000420 (-5.0%)
+      medium(+0.007942) →     fine(+0.007212)  Δ = -0.000730 (-9.2%)
+
+  dI (cached static, NL_dyn):
+      coarse(+0.011747) →   medium(+0.008778)  Δ = -0.002969 (-25.3%)
+      medium(+0.008778) →     fine(+0.012743)  Δ = +0.003965 (+45.2%)
+
+  dIeq (equilibrated static, 3*NL_dyn):
+      coarse(+0.002165) →   medium(+0.011256)  Δ = +0.009091 (+419.9%)
+      medium(+0.011256) →     fine(+0.005542)  Δ = -0.005714 (-50.8%)
+
+  dN (imposed Newton at current pos):
+      coarse(+0.011240) →   medium(+0.007842)  Δ = -0.003397 (-30.2%)
+      medium(+0.007842) →     fine(+0.010490)  Δ = +0.002648 (+33.8%)
+
+  rel_MI = (M - I) / max(|M|,|I|):
+      coarse(+0.288126) →   medium(+0.095258)  Δ = -0.192868 (-66.9%)
+      medium(+0.095258) →     fine(+0.434016)  Δ = +0.338759 (+355.6%)
+
+  rel_MIeq = (M - Ieq) / max(|M|,|Ieq|):
+      coarse(+0.741115) →   medium(+0.294413)  Δ = -0.446702 (-60.3%)
+      medium(+0.294413) →     fine(+0.231553)  Δ = -0.062860 (-21.4%)
+
+  rel_MN = (M - N) / max(|M|,|N|):
+      coarse(+0.256014) →   medium(+0.012566)  Δ = -0.243448 (-95.1%)
+      medium(+0.012566) →     fine(+0.312445)  Δ = +0.299880 (+2386.5%)
+
+====================================================================================================
+VERDICT — three comparators compared
+====================================================================================================
+  Δ(rel_MI)   last step = 0.3388  (cached static, NL_dyn)
+  Δ(rel_MIeq) last step = 0.0629  (equilibrated static, 3*NL_dyn)
+  Δ(rel_MN)   last step = 0.2999  (imposed Newton)
+  Δ(rel_IeqN) last step = 0.1684  (equilibrated static vs imposed Newton — should → 0)
+
+  dIeq → dN: rel_IeqN = 80.74% → 47.17% (not converging)
+
+  PARTIAL — equilibrated static is more stable than cached static
+  (Δ_MIeq = 0.0629 < Δ_MI = 0.3388)
+  but neither is strictly converged.
 
 ----- stderr -----
 

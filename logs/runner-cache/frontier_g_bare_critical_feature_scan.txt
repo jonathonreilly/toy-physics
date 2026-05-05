@@ -1,11 +1,125 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_g_bare_critical_feature_scan.py
-runner_sha256: c6494109e93140fbc5528edc9fc8817619961df83c4f4c9ad30bd4a9fdfaf900
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: 5d66495ea9f7aebaa89397e359ad3c6c772f14fd16a355579d81712375699b45
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 180.20
+status: ok
 ----- stdout -----
+========================================================================
+g_bare Critical Feature Scan
+========================================================================
+  lattice shape = Z^3 x L_t with L = 4, L_t = 4
+  beta grid (36 points): 1.00 -> 30.00
+  n_therm = 40, n_decor = 4, n_configs = 2
+
+    therm acc ~ 0.88
+  beta= 1.00  <P>=0.0581  |L|=0.0339  ln|det|/V=-0.1030  lambda_min=0.0064  gap=0.0000  rho(0)=0.0469  (4.7s)
+    therm acc ~ 0.76
+  beta= 2.00  <P>=0.1321  |L|=0.0620  ln|det|/V=-0.0827  lambda_min=0.0021  gap=0.0000  rho(0)=0.0469  (4.5s)
+    therm acc ~ 0.61
+  beta= 3.00  <P>=0.2597  |L|=0.0257  ln|det|/V=-0.0350  lambda_min=0.0061  gap=0.0000  rho(0)=0.0469  (4.8s)
+    therm acc ~ 0.50
+  beta= 4.00  <P>=0.3960  |L|=0.1152  ln|det|/V=+0.0391  lambda_min=0.0096  gap=0.0000  rho(0)=0.0469  (4.8s)
+    therm acc ~ 0.41
+  beta= 5.00  <P>=0.5324  |L|=0.3415  ln|det|/V=+0.1296  lambda_min=0.0914  gap=0.0000  rho(0)=0.0469  (4.8s)
+    therm acc ~ 0.39
+  beta= 5.25  <P>=0.5661  |L|=0.3337  ln|det|/V=+0.1410  lambda_min=0.0961  gap=0.0000  rho(0)=0.0430  (4.3s)
+    therm acc ~ 0.37
+  beta= 5.50  <P>=0.5915  |L|=0.3832  ln|det|/V=+0.1527  lambda_min=0.1167  gap=0.0000  rho(0)=0.0352  (4.6s)
+    therm acc ~ 0.35
+  beta= 5.75  <P>=0.6195  |L|=0.3790  ln|det|/V=+0.1657  lambda_min=0.1583  gap=0.0000  rho(0)=0.0234  (4.6s)
+    therm acc ~ 0.34
+  beta= 6.00  <P>=0.6321  |L|=0.4484  ln|det|/V=+0.1736  lambda_min=0.1743  gap=0.0000  rho(0)=0.0117  (4.6s)
+    therm acc ~ 0.33
+  beta= 6.25  <P>=0.6551  |L|=0.4407  ln|det|/V=+0.1803  lambda_min=0.2015  gap=0.0000  rho(0)=0.0039  (4.4s)
+    therm acc ~ 0.31
+  beta= 6.50  <P>=0.6657  |L|=0.4738  ln|det|/V=+0.1853  lambda_min=0.2117  gap=0.0000  rho(0)=0.0000  (4.6s)
+    therm acc ~ 0.30
+  beta= 6.75  <P>=0.6848  |L|=0.5221  ln|det|/V=+0.1937  lambda_min=0.2209  gap=0.0000  rho(0)=0.0000  (4.4s)
+    therm acc ~ 0.29
+  beta= 7.00  <P>=0.6893  |L|=0.5472  ln|det|/V=+0.1956  lambda_min=0.2320  gap=0.0000  rho(0)=0.0000  (4.6s)
+    therm acc ~ 0.24
+  beta= 8.00  <P>=0.7387  |L|=0.6130  ln|det|/V=+0.2121  lambda_min=0.2972  gap=0.0000  rho(0)=0.0000  (4.8s)
+    therm acc ~ 0.21
+  beta= 9.00  <P>=0.7765  |L|=0.6796  ln|det|/V=+0.2249  lambda_min=0.3450  gap=0.0000  rho(0)=0.0000  (5.0s)
+    therm acc ~ 0.17
+  beta=10.00  <P>=0.7971  |L|=0.6778  ln|det|/V=+0.2305  lambda_min=0.3633  gap=0.0000  rho(0)=0.0000  (4.6s)
+    therm acc ~ 0.14
+  beta=11.00  <P>=0.8227  |L|=0.6913  ln|det|/V=+0.2377  lambda_min=0.3863  gap=0.0000  rho(0)=0.0000  (4.5s)
+    therm acc ~ 0.12
+  beta=12.00  <P>=0.8458  |L|=0.7727  ln|det|/V=+0.2445  lambda_min=0.4135  gap=0.0000  rho(0)=0.0000  (4.8s)
+    therm acc ~ 0.10
+  beta=13.00  <P>=0.8588  |L|=0.7929  ln|det|/V=+0.2482  lambda_min=0.4442  gap=0.0000  rho(0)=0.0000  (4.8s)
+    therm acc ~ 0.08
+  beta=14.00  <P>=0.8822  |L|=0.8076  ln|det|/V=+0.2542  lambda_min=0.4695  gap=0.0000  rho(0)=0.0000  (4.7s)
+    therm acc ~ 0.06
+  beta=15.00  <P>=0.8916  |L|=0.8531  ln|det|/V=+0.2570  lambda_min=0.4849  gap=0.0000  rho(0)=0.0000  (5.1s)
+    therm acc ~ 0.05
+  beta=16.00  <P>=0.9126  |L|=0.8786  ln|det|/V=+0.2620  lambda_min=0.5205  gap=0.0000  rho(0)=0.0000  (4.8s)
+    therm acc ~ 0.04
+  beta=17.00  <P>=0.9207  |L|=0.8930  ln|det|/V=+0.2644  lambda_min=0.5292  gap=0.0000  rho(0)=0.0000  (4.5s)
+    therm acc ~ 0.04
+  beta=18.00  <P>=0.9306  |L|=0.9123  ln|det|/V=+0.2666  lambda_min=0.5513  gap=0.0000  rho(0)=0.0000  (4.5s)
+    therm acc ~ 0.03
+  beta=19.00  <P>=0.9462  |L|=0.9340  ln|det|/V=+0.2705  lambda_min=0.5659  gap=0.0000  rho(0)=0.0000  (4.6s)
+    therm acc ~ 0.02
+  beta=20.00  <P>=0.9500  |L|=0.9346  ln|det|/V=+0.2713  lambda_min=0.5773  gap=0.0000  rho(0)=0.0000  (4.7s)
+    therm acc ~ 0.02
+  beta=21.00  <P>=0.9593  |L|=0.9457  ln|det|/V=+0.2734  lambda_min=0.5915  gap=0.0000  rho(0)=0.0000  (5.1s)
+    therm acc ~ 0.02
+  beta=22.00  <P>=0.9676  |L|=0.9622  ln|det|/V=+0.2754  lambda_min=0.6024  gap=0.0000  rho(0)=0.0000  (5.5s)
+    therm acc ~ 0.01
+  beta=23.00  <P>=0.9731  |L|=0.9732  ln|det|/V=+0.2769  lambda_min=0.6185  gap=0.0000  rho(0)=0.0000  (5.2s)
+    therm acc ~ 0.01
+  beta=24.00  <P>=0.9737  |L|=0.9732  ln|det|/V=+0.2770  lambda_min=0.6178  gap=0.0000  rho(0)=0.0000  (5.0s)
+    therm acc ~ 0.01
+  beta=25.00  <P>=0.9788  |L|=0.9759  ln|det|/V=+0.2780  lambda_min=0.6294  gap=0.0000  rho(0)=0.0000  (4.5s)
+    therm acc ~ 0.01
+  beta=26.00  <P>=0.9811  |L|=0.9787  ln|det|/V=+0.2786  lambda_min=0.6394  gap=0.0000  rho(0)=0.0000  (6.3s)
+    therm acc ~ 0.01
+  beta=27.00  <P>=0.9827  |L|=0.9850  ln|det|/V=+0.2790  lambda_min=0.6343  gap=0.0000  rho(0)=0.0000  (6.3s)
+    therm acc ~ 0.01
+  beta=28.00  <P>=0.9867  |L|=0.9871  ln|det|/V=+0.2799  lambda_min=0.6462  gap=0.0000  rho(0)=0.0000  (6.7s)
+    therm acc ~ 0.01
+  beta=29.00  <P>=0.9891  |L|=0.9888  ln|det|/V=+0.2804  lambda_min=0.6507  gap=0.0000  rho(0)=0.0000  (6.3s)
+    therm acc ~ 0.00
+  beta=30.00  <P>=0.9914  |L|=0.9899  ln|det|/V=+0.2809  lambda_min=0.6552  gap=0.0000  rho(0)=0.0000  (5.9s)
+
+scan elapsed: 178.1s
+
+=== Feature scan around beta = 6 ===
+               <P>: smooth_rel=4.073e-02, resid@6/sigma=3.75, extremum=False, kink=False
+             |<L>|: smooth_rel=8.278e-02, resid@6/sigma=7.18, extremum=False, kink=False
+     ln|det D|/dim: smooth_rel=9.378e-02, resid@6/sigma=7.32, extremum=False, kink=False
+      |lambda_min|: smooth_rel=5.274e-02, resid@6/sigma=1.62, extremum=False, kink=False
+      spectral gap: smooth_rel=7.885e-03, resid@6/sigma=0.00, extremum=False, kink=False
+            rho(0): smooth_rel=3.508e-01, resid@6/sigma=2.71, extremum=False, kink=True
+  plaquette curvature at beta=6: d^2<P>/d beta^2 = +1.6733e-01  (|.|/max = 0.68)
+
+plots written:
+  outputs/figures/g_bare_critical_feature_scan/g_bare_scan_plaquette_L4.png
+  outputs/figures/g_bare_critical_feature_scan/g_bare_scan_polyakov_L4.png
+  outputs/figures/g_bare_critical_feature_scan/g_bare_scan_logdet_L4.png
+  outputs/figures/g_bare_critical_feature_scan/g_bare_scan_lambda_min_L4.png
+  outputs/figures/g_bare_critical_feature_scan/g_bare_scan_spectral_gap_L4.png
+  outputs/figures/g_bare_critical_feature_scan/g_bare_scan_rho_zero_L4.png
+  outputs/figures/g_bare_critical_feature_scan/g_bare_scan_plaq_curvature_L4.png
+json written: outputs/g_bare_critical_feature_scan.json
+
+=== PASS/FAIL harness ===
+  [PASS] [BOUNDED] observable 'plaquette' has no localized non-smooth feature at beta=6  (resid@6/sigma=3.75, kink=False, extremum=False)
+  [PASS] [BOUNDED] observable 'polyakov_abs' has no localized non-smooth feature at beta=6  (resid@6/sigma=7.18, kink=False, extremum=False)
+  [PASS] [BOUNDED] observable 'logdet_density' has no localized non-smooth feature at beta=6  (resid@6/sigma=7.32, kink=False, extremum=False)
+  [PASS] [BOUNDED] observable 'lambda_min' has no localized non-smooth feature at beta=6  (resid@6/sigma=1.62, kink=False, extremum=False)
+  [PASS] [BOUNDED] observable 'spectral_gap' has no localized non-smooth feature at beta=6  (resid@6/sigma=0.00, kink=False, extremum=False)
+  [PASS] [BOUNDED] observable 'rho_near_zero' has no localized non-smooth feature at beta=6  (resid@6/sigma=2.71, kink=True, extremum=False)
+
+========================================================================
+SUMMARY: PASS=6  FAIL=0
+VERDICT: NO critical feature at beta = 6 in any scanned observable
+         => obstruction note applies; Landing A (normalization-only fixed input) stands.
+========================================================================
 
 ----- stderr -----
 

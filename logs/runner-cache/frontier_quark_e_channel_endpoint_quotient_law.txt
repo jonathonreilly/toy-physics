@@ -1,11 +1,90 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_quark_e_channel_endpoint_quotient_law.py
-runner_sha256: d1f86d55cea4358f101002acb81b87b51cf31939b22bd0c250872aec372200b5
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 82273f6e97490d2ee6484f7a975c3f8944b4e317bb39190c4fb704b7a19d8a76
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 153.75
+status: ok
 ----- stdout -----
+Quark E-channel endpoint quotient law
+========================================================================
+
+========================================================================
+PART 1: Exact Endpoint Quotient Algebra
+========================================================================
+
+  gamma_E(center)/gamma_E(shell) = 1.876246130347
+  gamma_T(center)/gamma_T(shell) = 0.833328197623
+  r_E = b_E/a_E                  = 5.257476782081
+  r_T = b_T/a_T                  = -1.000030814262
+
+  exact endpoint identities:
+    r_E = 6 * (gamma_E(center)/gamma_E(shell) - 1)
+    r_T = 6 * (gamma_T(center)/gamma_T(shell) - 1)
+  [PASS] The E-channel ratio is fixed exactly by the shell/center endpoint quotient  (residual = 0.000e+00)
+  [PASS] The T-channel ratio is fixed exactly by the shell/center endpoint quotient  (residual = 4.441e-16)
+  [PASS] The live T-channel endpoint quotient stays tightly near 5/6  (q_T = 0.833328197623, gap = 0.000616%)
+  [PASS] The live T-channel quotient candidate 5/6 implies the known bounded T law r_T = -1  (6 * (5/6 - 1) = -1 exactly)
+
+========================================================================
+PART 2: Small-Rational E-Quotient Candidate
+========================================================================
+
+  controlled low-rational class:
+    numerator <= 96
+    denominator <= 32
+
+  nearest T-channel rational in class = 5/6 = 0.833333333333  (gap = 0.000000%)
+  nearest E-channel rational in class = 15/8 = 1.875000000000  (gap = 0.066416%)
+  [PASS] The controlled T-channel rational scan recovers 5/6 exactly  (candidate = 5/6)
+  [PASS] The controlled E-channel rational scan selects 15/8 as the nearest candidate  (candidate = 15/8)
+  [PASS] The bounded 15/8 E-channel quotient candidate stays within 0.1% of the live quotient  (gap = 0.066416%)
+
+========================================================================
+PART 3: Implied E-Channel Ratio Law
+========================================================================
+
+  candidate shell/center quotient   q_E = 15/8 = 1.875000000000
+  implied E-channel ratio           r_E = 6 * (15/8 - 1) = 5.250000000000
+  live E-channel ratio              r_E(live) = 5.257476782081
+
+  shell-multiplicity bridge candidate:
+    a_T / a_E = -2
+    r_T       = -1
+    => |b_E / b_T| = r_E / 2
+  implied anchored denominator      D_E = r_E / 2 = 2.625000000000
+  live bounded anchored denominator D_live       = 2.621601678209
+  [PASS] The bounded E-channel ratio candidate implies the clean exact law r_E = 21/4  (candidate = 5.250000000000)
+  [PASS] The live shell/intercept ratio still stays near the theory-first shell multiplicity candidate a_T/a_E = -2  (|a_T/a_E| gap = 0.269137%)
+  [PASS] The implied anchored denominator candidate is the clean exact law D_E = 21/8  (candidate = 2.625000000000)
+  [PASS] The rationalized denominator 21/8 sits closer to the live bounded denominator than the older sqrt(7) proxy  (gap(21/8) = 0.129628%, gap(sqrt7) = 0.921179%)
+  [PASS] The implied E-law ratio stays within 0.2% of the live E-channel ratio  (gap = 0.142212%)
+  [PASS] The live T-channel ratio remains compatible with the exact-support law r_T = -1  (|r_T| gap = 0.003081%)
+
+========================================================================
+PART 4: Quark Anchored Denominator Candidate
+========================================================================
+
+  exact-support anchored solve       a_u* = 0.778161628656
+  candidate denominator             D_E  = 2.625000000000
+  candidate amplitude               a_u  = 0.774180788008
+  live bounded endpoint amplitude   a_u  = 0.774170054824
+  direct sqrt(7) proxy amplitude    a_u  = 0.774245730253
+
+  candidate anchored aggregate      = 0.723153%  (max = 0.666622%, refit max = 1.064909%)
+  live bounded anchored aggregate   = 0.723246%  (max = 0.666354%, refit max = 1.065374%)
+  direct sqrt(7) anchored aggregate = 0.722589%  (max = 0.668244%, refit max = 1.062090%)
+  [PASS] The rationalized denominator candidate 21/8 keeps the anchored CKM+J package below 1%  (anchor max = 0.666622%)
+  [PASS] The rationalized denominator candidate stays within 0.2% of the live bounded anchored amplitude  (gap = 0.001386%)
+  [PASS] The candidate 21/8 anchored quality remains essentially on the same branch as the live bounded endpoint law  (candidate = 0.723153%, live = 0.723246%)
+
+Verdict:
+The exact endpoint reduction now supports one new theory-first bounded law candidate. The open E-channel primitive can be rewritten as the shell/center quotient gamma_E(center)/gamma_E(shell), and inside a controlled low-rational endpoint class that quotient is best rationalized by 15/8. That implies the exact bounded ratio law r_E = 21/4 and, under the live shell-multiplicity candidate a_T/a_E = -2 together with the exact-support T law r_T = -1, the anchored denominator candidate D_E = 21/8. This lands on the same anchored quark branch as the live bounded endpoint solve. It is a new bounded derivation candidate, not yet a theorem.
+
+========================================================================
+SUMMARY
+========================================================================
+PASS=16 FAIL=0
 
 ----- stderr -----
 

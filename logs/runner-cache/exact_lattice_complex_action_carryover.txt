@@ -1,11 +1,42 @@
 ===== runner cache v1 =====
 runner: scripts/exact_lattice_complex_action_carryover.py
-runner_sha256: e3f03fe2b41f7658b50e0c47dd6522447a6fbf5f9eb34f76740c453c7fa12cbe
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: 9adba04792443cf042da6ad7c102089ce6053595c54ced4074a727122802cb6e
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 96.12
+status: ok
 ----- stdout -----
+================================================================================================
+EXACT-LATTICE COMPLEX-ACTION CARRYOVER
+  S = L(1-f) + i*gamma*L*f on the retained exact 3D lattice family
+  narrow target: gamma=0 reduction, Born on frozen field, TOWARD->AWAY crossover
+================================================================================================
+h=0.5, W=6, L=30, s=0.1, z_src=3.0
+
+REDUCTION CHECK
+  standard propagator delta: +9.339748e-02
+  complex(gamma=0) delta:    +9.339748e-02
+  match: exact (within machine precision)
+
+BORN TEST
+  gamma=0.0: |I3|/P = 2.376e-15
+  gamma=0.5: |I3|/P = 1.126e-15
+  gamma=1.0: |I3|/P = 1.030e-16
+
+   gamma   deflection  direction     escape
+------------------------------------------------
+    0.00 +9.339748e-02     TOWARD     2.7311
+    0.05 +3.863016e-02     TOWARD     2.0970
+    0.10 -1.791678e-02       AWAY     1.6119
+    0.20 -1.353356e-01       AWAY     0.9558
+    0.50 -5.075192e-01       AWAY     0.2056
+    1.00 -1.133647e+00       AWAY     0.0177
+
+SAFE READ
+  gamma=0 reproduces the frozen exact-lattice baseline.
+  The Born test is machine clean on the frozen field.
+  The branch question is whether the TOWARD->AWAY crossover is retained
+  as a narrow exact-lattice carryover, not as a geometry-independent claim.
 
 ----- stderr -----
 

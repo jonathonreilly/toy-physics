@@ -1,11 +1,31 @@
 ===== runner cache v1 =====
 runner: scripts/gate_b_no_restore_farfield.py
-runner_sha256: 2d56e3962f82626c50108f846e0d15a61363cbd1145e54857c949e1ebcc9e658
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.10
-status: timeout
+runner_sha256: e6af20e5f54cbd8d49578d65573fc71c9f2a0a7a77cac1f4c11c6b0e501f8373
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 241.64
+status: ok
 ----- stdout -----
+========================================================================
+GATE B NO-RESTORE FAR-FIELD HARNESS
+  same grown-geometry family, restore=0
+========================================================================
+h=0.5, W=8, L=12, seeds=2, z=[3, 4, 5], restore=0.0
+growth rule: template previous layer + drift + NN connectivity from grid labels
+
+ drift         TOWARD      F~M
+   0.0     6/6     ( 100%)     1.00
+   0.1     6/6     ( 100%)     1.00
+   0.2     6/6     ( 100%)     1.00
+   0.3     6/6     ( 100%)     1.00
+   0.5     5/6     (  83%)     1.00
+
+SAFE INTERPRETATION
+  This harness freezes the no-restore far-field comparison only.
+  Use it to bound how much of the far-field package survives when
+  the restoring force is removed from the same grown-geometry family.
+
+Total time: 242s
 
 ----- stderr -----
 

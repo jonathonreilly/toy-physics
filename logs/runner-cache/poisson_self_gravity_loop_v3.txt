@@ -1,11 +1,74 @@
 ===== runner cache v1 =====
 runner: scripts/poisson_self_gravity_loop_v3.py
-runner_sha256: a621f455ba7b7192d459b6d87c13693e43d3dbd1497b83fe5b6abd91a07e5ec3
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: 6f33585df07358cc2bc242c6ddff94846554e0fe94aafaecc0833c575f1a7a80
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 283.21
+status: ok
 ----- stdout -----
+========================================================================================================
+POISSON SELF-GRAVITY LOOP V3
+  exact h=0.25 lattice, amplitude-sourced backreaction loop, matched null + Born audit
+  tested observables: detector centroid shift and detector-line phase ramp
+========================================================================================================
+h=0.25, W=3, L=6
+launch_nodes=[312]
+source patch nodes=[5322, 5347, 5297, 5323, 5321]
+born triplet=[287, 312, 337]
+kernel=exp(-mu r)/(r+eps), mu=0.08, eps=0.50
+source strengths=(0.002, 0.004, 0.008)
+backreaction couplings=(0.0, 0.05, 0.2, 0.5)
+field gain=9.000157e+00, relax=0.35, max_iters=6
+
+REDUCTION CHECK
+  zero-epsilon centroid shift: +0.000000e+00
+  zero-epsilon escape ratio:   1.000000
+  zero-epsilon phase slope:    +0.0000e+00
+  zero-epsilon phase span:     +0.0000e+00
+  zero-epsilon phase R^2:      0.000
+  zero-epsilon converged:      True
+  zero-epsilon iters/resid:    0 / 0.000e+00
+
+   eps        s     centroid    null-cent      phase      span   escape  converged
+--------------------------------------------------------------------------------------------
+  0.00   0.0020 +0.000000e+00 +0.000000e+00 +0.0000e+00 +0.0000e+00    1.000          Y
+  0.00   0.0040 +0.000000e+00 +0.000000e+00 +0.0000e+00 +0.0000e+00    1.000          Y
+  0.00   0.0080 +0.000000e+00 +0.000000e+00 +0.0000e+00 +0.0000e+00    1.000          Y
+  eps=0.00 summary: mean delta=+0.000000e+00 mean phase slope=+0.0000e+00 mean span=+0.0000e+00 mean escape=1.000 toward=0/3 resid=0.000e+00 converged=3/3
+  0.05   0.0020 +9.366518e-04 +9.366518e-04 -9.5098e-04 +6.6752e-03    1.004          n
+  0.05   0.0040 +1.873777e-03 +1.873777e-03 -1.9023e-03 +1.3355e-02    1.008          n
+  0.05   0.0080 +3.749467e-03 +3.749467e-03 -3.8062e-03 +2.6726e-02    1.016          n
+  eps=0.05 summary: mean delta=+2.186632e-03 mean phase slope=-2.2198e-03 mean span=+1.5585e-02 mean escape=1.010 toward=3/3 resid=5.779e-04 converged=0/3
+  0.20   0.0020 +3.749467e-03 +3.749467e-03 -3.8062e-03 +2.6726e-02    1.016          n
+  0.20   0.0040 +7.506748e-03 +7.506748e-03 -7.6182e-03 +5.3516e-02    1.033          n
+  0.20   0.0080 +1.504611e-02 +1.504611e-02 -1.5259e-02 +1.0727e-01    1.068          n
+  eps=0.20 summary: mean delta=+8.767442e-03 mean phase slope=-8.8945e-03 mean span=+6.2503e-02 mean escape=1.039 toward=3/3 resid=2.311e-03 converged=0/3
+  0.50   0.0020 +9.388424e-03 +9.388424e-03 -9.5264e-03 +6.6933e-02    1.042          n
+  0.50   0.0040 +1.882890e-02 +1.882890e-02 -1.9088e-02 +1.3422e-01    1.085          n
+  0.50   0.0080 +3.788948e-02 +3.788948e-02 -3.8314e-02 +2.6955e-01    1.178          n
+  eps=0.50 summary: mean delta=+2.203560e-02 mean phase slope=-2.2310e-02 mean span=+1.5690e-01 mean escape=1.102 toward=3/3 resid=5.779e-03 converged=0/3
+
+BORN AUDIT
+  audit row: epsilon=0.05, source_strength=0.0040
+  step-local Born:    1.889e-16
+  end-to-end Born:    4.911e-06
+  coupled centroid:   +4.547611e-16
+  null centroid:      +1.478700e-16
+  coupled escape:     8.175319
+  null escape:        8.091428
+  coupled converged:  False / iters=6 / resid=3.086e-04
+
+SAFE READ
+  best residual epsilon: 0.00 (resid=0.000e+00)
+  best mean centroid shift: +0.000000e+00
+  best mean phase slope:     +0.0000e+00
+  best mean phase span:      +0.0000e+00
+  best mean escape ratio:    1.000
+  best TOWARD rows:          0/3
+  exact zero-epsilon reduction shift: +0.000e+00
+  zero-epsilon phase slope/span: +0.0000e+00 / +0.0000e+00
+  strict read: no retained positive survives the exact reduction and Born controls
+  this lane remains a bounded no-go on the retained audit row
 
 ----- stderr -----
 

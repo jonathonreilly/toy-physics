@@ -1,11 +1,47 @@
 ===== runner cache v1 =====
 runner: scripts/gravitomagnetic_portable.py
-runner_sha256: 55241b260ce5236dcc92b17c9c687bd7c04397b880e363dc17be91bc7125d469
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: 692ef206801f5560f64568da4d26fa8d82f523bc5a7ab44b9a49c89ffce5d8db
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 520.39
+status: ok
 ----- stdout -----
+================================================================================
+GRAVITOMAGNETIC EFFECT: THREE-FAMILY PORTABILITY
+c=0.5, s=0.004, z0=3.0, 2 seeds per family
+================================================================================
+
+Fam1 (drift=0.2, restore=0.7):
+     v_z   mean_phase        delta
+  ----------------------------------
+    -0.5    +0.054194    +0.000000
+    -0.2    +0.058887    +0.000000
+    +0.0    +0.062347    +0.000000
+    +0.2    +0.065533    +0.003186
+    +0.5    +0.067979    +0.005631
+
+Fam2 (drift=0.05, restore=0.3):
+     v_z   mean_phase        delta
+  ----------------------------------
+    -0.5    +0.054829    +0.000000
+    -0.2    +0.059041    +0.000000
+    +0.0    +0.062405    +0.000000
+    +0.2    +0.065369    +0.002964
+    +0.5    +0.067823    +0.005418
+
+Fam3 (drift=0.5, restore=0.9):
+     v_z   mean_phase        delta
+  ----------------------------------
+    -0.5    +0.053796    +0.000000
+    -0.2    +0.058585    +0.000000
+    +0.0    +0.062141    +0.000000
+    +0.2    +0.065506    +0.003365
+    +0.5    +0.068009    +0.005868
+
+SAFE READ
+  delta antisymmetric in v: +v gives positive delta, -v gives negative
+  if all three families agree: gravitomagnetic effect is portable
+  this is the discrete analog of gravitomagnetic frame-dragging
 
 ----- stderr -----
 

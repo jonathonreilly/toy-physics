@@ -1,11 +1,55 @@
 ===== runner cache v1 =====
 runner: scripts/wave_retarded_gravity.py
-runner_sha256: 2decb02bf30d384a830094a03468e9fb48cddf6a1f2fa588cf3c7ce0a76d38c9
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 3f622973b524ab533c50737d5784d183dd05543a02456941c98f3231556a08e1
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 127.98
+status: ok
 ----- stdout -----
+======================================================================
+WAVE RETARDED GRAVITY HARNESS
+NL=30, W=8, s=0.004
+======================================================================
+
+Source motion: iz from 6 to 0 over 20 layers
+v = -0.3000 cells/layer (|v|/c = 0.3000)
+
+1. STATIC REFERENCE (v=0, frozen at iz_start)
+  delta_z (static, iz=iz_start=6) = +0.008158
+
+2. RETARDED vs INSTANTANEOUS MOVING-SOURCE (Fam1, seed=0)
+   Frozen references kept as intuition aids; the decisive
+   pairing is M (retarded) vs I (instantaneous, c=infinity).
+                                 reference      delta_z
+          A: frozen at z_start (intuition)    +0.008158
+            B: frozen at z_end (intuition)    +0.001846
+            C: frozen at z_mid (intuition)    +0.006543
+               M: moving source (RETARDED)    +0.008457
+          I: moving source (INSTANTANEOUS)    +0.011242
+
+  decisive: M - I = -0.002785  (relative 24.77%)
+  verdict: RETARDED != INSTANTANEOUS — finite-c effect resolved
+
+3. v-SYMMETRY (+v vs -v, Fam1)
+  +v: delta_z = +0.007173
+  -v: delta_z = +0.008457
+
+4. F~M on MOVING-SOURCE FIELD across families
+  Fam1: F~M = 0.9965
+  Fam2: F~M = 0.9955
+  Fam3: F~M = 0.9963
+
+5. BORN TEST on moving-source field (Fam1)
+  Born |I3|/P = 6.21e-16
+
+6. NULL TEST (s=0, moving source)
+  delta_z = +0.000000e+00
+
+7. FAMILY PORTABILITY (M vs I across families)
+  family           dM           dI          M-I      rel
+    Fam1    +0.008457    +0.011242    -0.002785   24.77%
+    Fam2    +0.008234    +0.011134    -0.002901   26.05%
+    Fam3    +0.008267    +0.010671    -0.002404   22.53%
 
 ----- stderr -----
 

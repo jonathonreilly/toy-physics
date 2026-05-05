@@ -1,11 +1,41 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_closure_endpoint_2026_04_20.py
-runner_sha256: 0331f91d9057641c7ee9ac350d3ba9aee02018c3d405091439136ca9179ee57a
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: ef506db367a632f7fd721dc10cfa80a07a7e7132899f7613dce04c374f591683
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 129.05
+status: ok
 ----- stdout -----
+======================================================================================================================
+GAUGE-VACUUM PLAQUETTE FIRST-SECTOR MINIMAL-BULK COMPLETION 3D+1 LINE CLOSURE ENDPOINT
+======================================================================================================================
+
+Question:
+  After the strengthened retained-slice wave, what exactly is closed on the
+  selected minimally-positive Wilson branch?
+  [PASS] The canonical minimal-positive Wilson completion fixes one explicit Wilson/Perron branch  ((alpha0,beta1)=(0.430755,0.252651))
+  [PASS] The canonical rho1 complement-line law fixes one exact retained real slice on that branch  (selected by the solved line doublet and least-distortion orientation law)
+  [PASS] Inside that fixed slice, the ordered complex-Givens law yields exact reduced projected-source packet commutation  (packet4_err=7.131e-13)
+  [PASS] The strengthened retained-slice law lands on the live DM target exactly  (dist=3.530e-13)
+  [PASS] The exact reduced-packet dressing is canonical inside the audited G12·G13·G23 grammar by least distortion to the identity basis  (distortion=0.380090)
+  [PASS] So the strongest exact closure on this retained 3d+1 ambient is reduced projected-source closure plus live-target closure, not full 9-channel packet equality
+
+======================================================================================================================
+RESULT
+======================================================================================================================
+  Strong retained-ambient closure endpoint:
+    - canonical minimal-positive completion selects the Wilson branch
+    - the retained `3d+1` complement-line problem reduces to a rho1/rho2
+      orientation doublet solved directly on the bounded line chart
+    - the rho1 selector picks the canonical retained real slice
+    - inside that fixed slice, an exact least-distortion complex-Givens
+      dressing reproduces the full reduced projected-source packet
+      (E1,E2,S12,S13) and the live DM target exactly
+    - exact full 9-channel sparse-face packet equality is structurally
+      impossible on this retained `3d+1` ambient, so the reduced-packet
+      closure above is the strongest attainable closure here
+
+PASS=6 FAIL=0
 
 ----- stderr -----
 

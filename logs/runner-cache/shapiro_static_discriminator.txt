@@ -1,11 +1,54 @@
 ===== runner cache v1 =====
 runner: scripts/shapiro_static_discriminator.py
-runner_sha256: 7d1d1a0d18b658f8678062de7a51505ebcf303ac635f466fc01ced15d868a168
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: b389f53a964d4b199b54ec64e8a745a38f9bd819630af113a204b2fd53b9b184
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 398.81
+status: ok
 ----- stdout -----
+========================================================================================
+SHAPIRO STATIC DISCRIMINATOR
+  static field shape / scheduling proxies vs retained c-dependent phase lag
+========================================================================================
+
+families=3 seeds=2 c-values=[2.0, 1.0, 0.5, 0.25]
+static cone candidates=[2.0, 1.0, 0.5, 0.25]
+static schedule delays=[0, 1, 2, 3]
+
+CAUSAL PHASE CURVE
+              family       zero      c=2.0      c=1.0      c=0.5     c=0.25
+------------------------------------------------------------------------
+                Fam1 +0.000e+00    +0.0372    +0.0446    +0.0568    +0.0662
+                Fam2 +0.000e+00    +0.0372    +0.0448    +0.0570    +0.0662
+                Fam3 +0.000e+00    +0.0371    +0.0445    +0.0567    +0.0662
+
+STATIC CONE-SHAPE FAMILY
+              family   cone=2.0   cone=1.0   cone=0.5  cone=0.25
+------------------------------------------------------------------------
+                Fam1    +0.0372    +0.0446    +0.0568    +0.0662
+                Fam2    +0.0372    +0.0448    +0.0570    +0.0662
+                Fam3    +0.0371    +0.0445    +0.0567    +0.0662
+
+STATIC SCHEDULE FAMILY
+              family        d=0        d=1        d=2        d=3
+------------------------------------------------------------------------
+                Fam1    +0.0446    +0.0445    +0.0445    +0.0449
+                Fam2    +0.0448    +0.0446    +0.0447    +0.0451
+                Fam3    +0.0445    +0.0444    +0.0445    +0.0448
+
+DISCRIMINATOR
+  causal mean curve: +0.0372, +0.0446, +0.0569, +0.0662
+  static cone curve:  +0.0372, +0.0446, +0.0569, +0.0662
+  static schedule curve: +0.0446, +0.0445, +0.0446, +0.0450
+  best static cone match: static-cone (rmse=0.0000)
+  best static schedule match: static-schedule (rmse=0.0128)
+
+SAFE READ
+  - Exact zero control stays exact.
+  - The causal phase lag is portable across the three families and varies with c.
+  - Static cone-shape exactly reproduces the same c-dependent portable curve.
+  - Static scheduling does not reproduce the curve and stays near-flat.
+  - The Shapiro-style phase lag is a portable observable, but not a unique discriminator against static field-shape effects.
 
 ----- stderr -----
 

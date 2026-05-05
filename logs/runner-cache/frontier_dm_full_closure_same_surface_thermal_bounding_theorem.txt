@@ -1,11 +1,68 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_dm_full_closure_same_surface_thermal_bounding_theorem.py
-runner_sha256: 86f3e4c0dcc5bf7b37a2fa9a87793884337d7efb0b7f1d33547bf32f8b684048
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: a8381ebd8cd71fc329464620bbb4f0c057ac056c8d4d3813c7cfc152b7f2717d
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 99.40
+status: ok
 ----- stdout -----
+========================================================================================
+DM FULL CLOSURE SAME-SURFACE THERMAL BOUNDING THEOREM
+========================================================================================
+
+========================================================================================
+PART 1: CERTIFIED CURRENT-BANK THERMAL ENVELOPES
+========================================================================================
+  [PASS] The lower current-bank endpoint has a certified narrow thermal ratio enclosure  (R_lo=[5.442019867867, 5.442019867931], width=6.359e-11)
+  [PASS] The upper current-bank endpoint has a certified narrow thermal ratio enclosure  (R_hi=[5.482855571890, 5.482855571936], width=4.646e-11)
+  [PASS] The current-bank endpoint enclosures are rigorously disjoint  (R_lo_hi=5.442019867931, R_hi_lo=5.482855571890)
+
+  alpha_lo = 0.090667836017286  ->  R in [5.442019867867, 5.442019867931]
+  alpha_hi = 0.092264992618360  ->  R in [5.482855571890, 5.482855571936]
+  trunc_lo = (N_att=60, N_rep=600)
+  trunc_hi = (N_att=60, N_rep=600)
+  Omega_b  = 0.049192957585
+
+========================================================================================
+PART 2: GLOBAL CURRENT-BANK IMAGE BY EXACT MONOTONICITY
+========================================================================================
+  [PASS] Exact monotonicity plus certified endpoint bounds gives a rigorous current-bank image interval  (Omega_DM in [[0.267709052538, 0.267709052541], [0.269717881594, 0.269717881596]])
+  [PASS] The observed DM target lies between the exact endpoint images and therefore does not force a current-bank selector  (Omega_DM_target=0.268000000000)
+  [PASS] The same statement on the ratio scale is rigorous  (R_target=5.447934280746)
+
+  current-bank Omega_DM lower endpoint = [0.267709052538, 0.267709052541]
+  current-bank Omega_DM upper endpoint = [0.269717881594, 0.269717881596]
+  Omega_DM target                     = 0.268000000000
+
+========================================================================================
+PART 3: CERTIFIED UNIQUE ROOT ON THE ONE-SCALAR SAME-SURFACE FAMILY
+========================================================================================
+  [PASS] The theorem-grade same-surface selector interval is nonempty and narrow  (sigma in [0.145076095756643, 0.145078095756643], width=2.000e-06)
+  [PASS] The target ratio is rigorously bracketed between certified left/right images  (R_left_hi=5.447934239974, R_target=5.447934280746, R_right_lo=5.447934321471)
+  [PASS] Exact monotonicity therefore forces a unique root inside the certified sigma interval  (strict monotonicity excludes multiple crossings on sigma in [0,1])
+
+  sigma in [0.145076095756643, 0.145078095756643]
+  alpha in [0.090899545261282, 0.090899548455595]
+  R(left)_upper  = 5.447934239974
+  R(right)_lower = 5.447934321471
+  alpha(sigma_lo)= 0.090899545261282
+  alpha(sigma_hi)= 0.090899548455595
+
+========================================================================================
+BOTTOM LINE
+========================================================================================
+  The same-surface DM thermal layer is now promoted from support to a
+  rigorous evaluation/bounding result:
+    - current-bank endpoint images are certified
+    - the current-bank no-go is certified
+    - the one-scalar same-surface admitted family has a certified unique root interval
+  What still remains open is not the thermal bounding layer.
+  It is whether the current exact bank itself supplies a selector, or whether
+  the DM-side one-scalar family must be admitted explicitly.
+
+========================================================================================
+SUMMARY: PASS=9 FAIL=0
+========================================================================================
 
 ----- stderr -----
 

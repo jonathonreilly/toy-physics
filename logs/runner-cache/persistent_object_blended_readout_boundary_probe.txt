@@ -1,11 +1,69 @@
 ===== runner cache v1 =====
 runner: scripts/persistent_object_blended_readout_boundary_probe.py
-runner_sha256: 0741ce1cf94685b2b7b1e4137b87e2943e9dc6fc99df797538ca84c106bb873c
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 51df7a55d05e9622ddeb29fbd21f9a8e35ab97684174a475dac3c0c1808fb153
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 1229.24
+status: ok
 ----- stdout -----
+==============================================================================================================================
+PERSISTENT OBJECT BLENDED READOUT BOUNDARY PROBE
+  top3 compact object, broad-adaptive readout blend on the complementary-miss exact-family rows
+==============================================================================================================================
+strengths=[0.001, 0.002, 0.004, 0.008], updates=3, h=0.25, top_keep=3, blends=(0.0, 0.25, 0.5, 0.75, 1.0)
+gates: overlap>=0.90, drift<=0.10, alpha in [0.95, 1.05], all steps 4/4 TOWARD
+field target max=0.02
+
+CASE: baseline  (h=0.25, W=3, L=6, source_z=2.0, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+  blend   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+------------------------------------------------------------------------------------------------------------
+   0.00    0.876    0.929    120.41    0.351     4.824%         [1.04,1.04,1.04]   True
+   0.25    0.876    0.929    305.77    0.513     3.125%         [1.03,1.03,1.03]   True
+   0.50    0.876    0.929    407.03    0.676     1.644%         [1.02,1.02,1.02]   True
+   0.75    0.876    0.929    464.03    0.838     0.346%         [1.01,1.01,1.01]   True
+   1.00    0.876    0.929    497.32    1.000     0.800%         [1.00,1.00,1.00]   True
+  verdict: best passing blend=0.50
+
+CASE: source1.5  (h=0.25, W=3, L=6, source_z=1.5, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+  blend   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+------------------------------------------------------------------------------------------------------------
+   0.00    0.884    0.929    120.40    0.352     8.796%         [1.02,1.02,1.02]   True
+   0.25    0.884    0.929    305.25    0.514     9.640%         [1.02,1.01,1.01]   True
+   0.50    0.884    0.929    406.42    0.676    10.484%         [1.01,1.01,1.01]  False
+   0.75    0.884    0.929    463.47    0.838    11.318%         [1.00,1.00,1.00]  False
+   1.00    0.884    0.929    496.83    1.000    12.137%         [0.99,0.99,0.99]  False
+  verdict: best passing blend=0.25
+
+CASE: width4  (h=0.25, W=4, L=6, source_z=2.0, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+  blend   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+------------------------------------------------------------------------------------------------------------
+   0.00    0.884    0.927    120.19    0.345     5.639%         [1.00,1.01,1.01]   True
+   0.25    0.884    0.927    376.04    0.509     1.843%         [1.00,1.00,1.00]   True
+   0.50    0.884    0.927    536.50    0.672     0.211%         [1.00,1.00,1.00]   True
+   0.75    0.884    0.927    634.10    0.836     1.498%         [1.00,1.00,1.00]   True
+   1.00    0.884    0.927    694.79    1.000     2.380%         [1.00,1.00,1.00]   True
+  verdict: best passing blend=0.50
+
+CASE: length7  (h=0.25, W=3, L=7, source_z=2.0, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+  blend   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+------------------------------------------------------------------------------------------------------------
+   0.00    0.869    0.931    125.15    0.337     3.292%         [1.06,1.06,1.06]  False
+   0.25    0.869    0.931    328.13    0.503     2.049%         [1.03,1.03,1.03]   True
+   0.50    0.869    0.931    430.73    0.668     0.904%         [1.02,1.02,1.02]   True
+   0.75    0.869    0.931    484.90    0.834     0.160%         [1.01,1.01,1.01]   True
+   1.00    0.869    0.931    514.82    1.000     1.154%         [1.00,1.00,1.00]   True
+  verdict: best passing blend=0.50
+
+SUMMARY
+  cases with at least one passing blend: 4/4
+  cases where every tested blend passes: 2/4
+
+SAFE READ
+  - If one blend passes on the complementary-miss rows, the readout split is bridgeable without changing the object.
+  - If the passing blends for source1.5 and length7 stay disjoint, the lane remains below a readout-invariant closure bar.
+  - This is still a readout-boundary probe on the compact object response lane.
+
+Total runtime: 1229.1s
 
 ----- stderr -----
 

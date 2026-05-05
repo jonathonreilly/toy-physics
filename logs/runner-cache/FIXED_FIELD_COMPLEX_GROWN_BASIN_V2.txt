@@ -1,11 +1,31 @@
 ===== runner cache v1 =====
 runner: scripts/FIXED_FIELD_COMPLEX_GROWN_BASIN_V2.py
-runner_sha256: bc5184e173d4a6894963cca994942c8c08f8abd7982630d20d622d9036762c23
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.06
-status: timeout
+runner_sha256: b7b54112984eaf612c58de048f5eccb2682705970b131c3cbdcef56708a92c79
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 118.13
+status: ok
 ----- stdout -----
+================================================================================================
+FIXED-FIELD COMPLEX GROWN BASIN V2
+  center row plus one immediate neighbor
+================================================================================================
+Seeds: [0]
+Rows: [(0.2, 0.7), (0.2, 0.6)]
+Center row: drift=0.20, restore=0.70
+
+drift restore       born           g0       E0      E05     fm0    fm05   t01   t05
+----------------------------------------------------------------------------------------------
+ 0.20    0.70  1.647e-15 +2.460475e-01    2.014    0.412   1.000   1.000     1     0
+ 0.20    0.60        n/a +2.431500e-01    1.932    0.398   1.000   1.000     1     0
+
+SAFE READ
+  center exact gamma=0 reduction: retained in the grown-row companion note
+  center Born proxy: True
+  center weak-field F~M~1: True
+  nearby crossover survives: True
+  nearby weak-field F~M~1: True
+  the exact-to-grown complex-action crossover survives the tiny basin
 
 ----- stderr -----
 

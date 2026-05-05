@@ -1,11 +1,30 @@
 ===== runner cache v1 =====
 runner: scripts/THIRD_GROWN_FAMILY_COMPLEX.py
-runner_sha256: 12ef508918d90dd49c36d824de107f1f4d3ec35f3b2d272241ed7db86338bbf6
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.03
-status: timeout
+runner_sha256: 64c969944f2b2d7147421f84583535c675711eb46f0ad4c8c9a089a810bf86ce
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 200.96
+status: ok
 ----- stdout -----
+==================================================================================================
+THIRD GROWN FAMILY COMPLEX
+  third-family no-restore cross-quadrant basin
+==================================================================================================
+drifts=[0.0, 0.1, 0.2, 0.3, 0.5], seeds=[0, 1, 2]
+guards: exact gamma=0 baseline, Born proxy where feasible, TOWARD -> AWAY crossover
+
+drift       born           g0          d01          d02          d05      e01      e05     fm0    fm05   t01   t05
+----------------------------------------------------------------------------------------------------------------------
+ 0.00        n/a +2.899794e-02 +2.766410e-02 +2.633131e-02 +2.233914e-02    1.186    0.953   1.000   1.000     3     3
+ 0.10        n/a -3.501485e-02 -4.486847e-02 -5.445368e-02 -8.165796e-02    1.151    0.905   1.000   1.000     1     0
+ 0.20  0.000e+00 -1.947161e-03 -2.946504e-03 -3.930230e-03 -6.791609e-03    1.091    0.875   1.000   1.000     2     1
+ 0.30        n/a -3.872634e-03 -6.403971e-03 -8.891108e-03 -1.610328e-02    1.079    0.851   1.000   1.000     0     0
+ 0.50        n/a +3.193999e-03 +2.585298e-03 +1.989513e-03 +2.761418e-04    1.124    0.894   1.000   1.000     3     2
+
+SAFE READ
+  anchor retained gamma=0 + Born proxy: True
+  anchor TOWARD@0.1 -> AWAY@0.5: False
+  the third grown-family candidate does not retain the complex-action companion cleanly
 
 ----- stderr -----
 

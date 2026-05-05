@@ -1,10 +1,10 @@
 ===== runner cache v1 =====
 runner: scripts/complex_action_harness.py
-runner_sha256: 6063923c7c064fbea8e987ee56f981e227e997666be2f26bea655434e1635926
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.08
-status: timeout
+runner_sha256: 4467478f347fc6d0090aaf8253f976c8a8498b893822ed2f406f2971ba5ee5ee
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 81.25
+status: ok
 ----- stdout -----
 ========================================================================================
 COMPLEX ACTION HARNESS
@@ -30,6 +30,29 @@ BORN TEST (|I3|/P with gravitational field)
   running gamma=0.0...
   gamma=0.0: |I3|/P = 2.38e-15
   running gamma=0.5...
+  gamma=0.5: |I3|/P = 1.13e-15
+  running gamma=1.0...
+  gamma=1.0: |I3|/P = 1.03e-16
+
+REDUCTION CHECK
+  standard propagator delta: +9.339748e-02
+  complex(gamma=0) delta:    +9.339748e-02
+  match: True
+
+MASS SCALING at gamma=0.5 (horizon regime)
+  s=0.025: delta=-9.578864e-02
+  s=0.050: delta=-2.141553e-01
+  s=0.100: delta=-5.075192e-01
+  s=0.200: delta=-1.441601e+00
+
+SAFE READ
+  gamma=0 must recover standard valley-linear (check reduction above)
+  Born |I3|/P should be ~0 for ALL gamma (propagator is linear in psi)
+  complex action is non-unitary but still linear: Born holds structurally
+  TOWARD->AWAY transition marks the exceptional point
+  escape < 1 means net absorption (horizon-like)
+  escape > 1 means net amplification (superradiance-like)
+  if Born holds AND gravity+horizons coexist, this is a genuine unification
 
 ----- stderr -----
 

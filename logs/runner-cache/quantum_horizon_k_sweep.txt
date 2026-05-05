@@ -1,10 +1,10 @@
 ===== runner cache v1 =====
 runner: scripts/quantum_horizon_k_sweep.py
-runner_sha256: f7dc5e7ef17ee80d46fd605740871450978949af95f229638a8cf12520bf842b
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 034ec195b4dce8d78b5b85af9e705a28448a4974a8abb869d4ca42cf6b8f0cb2
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 395.30
+status: ok
 ----- stdout -----
 ====================================================================================
 QUANTUM HORIZON k-SWEEP
@@ -18,6 +18,27 @@ observable: alpha_crit where escape(alpha) falls to 50% of free propagation
   running k=1.0...
    1.0      1.000         0.08      sub-Nyquist
   running k=2.0...
+   2.0      1.000         0.08      sub-Nyquist
+  running k=3.0...
+   3.0      1.000         0.08      sub-Nyquist
+  running k=4.0...
+   4.0      1.000         0.08      sub-Nyquist
+  running k=5.0...
+   5.0      1.000         0.09      sub-Nyquist
+  running k=6.0...
+   6.0      1.000         0.09      sub-Nyquist
+  running k=7.0...
+   7.0      1.000         0.09    above Nyquist
+  running k=10.0...
+  10.0      1.000         0.08    above Nyquist
+
+SAFE READ
+  sub-Nyquist fit: alpha_crit ≈ 0.08 * k^0.03
+  on this retained observable, alpha_crit stays near 0.08-0.09 across the
+  whole scanned k band; there is no strong quantum-horizon shift here
+  above Nyquist, this escape observable still does not show a clean new
+  regime; if a wavelength-dependent horizon exists, it is not established
+  by this retained sweep
 
 ----- stderr -----
 

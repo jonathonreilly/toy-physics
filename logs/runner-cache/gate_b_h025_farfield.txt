@@ -1,11 +1,28 @@
 ===== runner cache v1 =====
 runner: scripts/gate_b_h025_farfield.py
-runner_sha256: e7290b01d05fe097fa0340172bed9f06aee8e1ace0d176b31083433923bdf273
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 65e2d3977a74a1adb87d79a9955077adaf7cfc029506be2761c531e33b951de7
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 710.57
+status: ok
 ----- stdout -----
+========================================================================
+GATE B H=0.25 FAR-FIELD HARNESS
+  exact grid vs grown geometry on the retained finer-spacing family
+========================================================================
+h=0.25, W=6, L=6, seeds=4, z=[3, 4, 5]
+growth rule: template previous layer + drift + restore + NN connectivity
+
+geometry                   TOWARD      F~M
+exact grid            12/12    ( 100%)     1.00
+grown drift=0.2       12/12    ( 100%)     1.00
+
+SAFE INTERPRETATION
+  This harness freezes the h=0.25 far-field comparison only.
+  Use it to check whether the retained grown-geometry package survives
+  refinement in the same bounded family.
+
+Total time: 710s
 
 ----- stderr -----
 

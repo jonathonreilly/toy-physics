@@ -1,11 +1,72 @@
 ===== runner cache v1 =====
 runner: scripts/wave_equation_self_field.py
-runner_sha256: 2d3f22ed06f39d24aad991c2ab26f3b2773d7d0a494e2c2955cb5db5a069acd9
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 776873b3e652376921e1dc67d3fd9a38113d1e26aed93280f38a2b2d36eb3d6d
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 82.93
+status: ok
 ----- stdout -----
+======================================================================
+WAVE-EQUATION SELF-FIELD HARNESS
+NL=30, W=8, s=0.004, z_src=3.0
+======================================================================
+
+Solving wave equation (static source)...
+
+1. STATIONARY PROFILE at late time (layer NL-2)
+    iz         f_wave
+    -3      +0.000175
+    -2      +0.000397
+    -1      +0.000609
+     0      +0.000700
+     1      +0.000797
+     2      +0.000963
+     3      +0.001136
+     4      +0.001469
+     5      +0.001898
+     6      +0.002936
+     7      +0.001898
+
+2. GRAVITY across families (static wave field)
+  Fam1: delta=+0.008158 TOWARD
+  Fam2: delta=+0.007984 TOWARD
+  Fam3: delta=+0.008092 TOWARD
+
+3. F~M across families
+  Fam1: F~M = 0.9979
+  Fam2: F~M = 0.9970
+  Fam3: F~M = 0.9981
+
+4. BORN TEST (Fam1, seed=0, wave-equation field)
+  Born |I3|/P = 4.14e-17
+
+5. NULL TEST
+  s=0: delta = +0.000000e+00
+
+6. RETARDATION (single-layer pulse, off-source arrival)
+  pulse fired at layer 10, iz_src=6
+  amplitudes vs offset (iz - iz_src) and dt:
+    dt       off=0       off=1       off=2       off=3       off=4       off=5
+     0  1.0000e-01  0.0000e+00  0.0000e+00  0.0000e+00  0.0000e+00  0.0000e+00
+     1  1.0000e-01  2.5000e-02  0.0000e+00  0.0000e+00  0.0000e+00  0.0000e+00
+     2  2.5000e-02  5.0000e-02  6.2500e-03  0.0000e+00  0.0000e+00  0.0000e+00
+     3  2.5000e-02  3.9063e-02  1.8750e-02  1.5625e-03  0.0000e+00  0.0000e+00
+     4  1.0937e-02  6.2500e-03  2.5000e-02  6.2500e-03  3.9063e-04  0.0000e+00
+     5  2.0313e-02  5.8594e-03  1.8750e-02  1.1816e-02  1.9531e-03  9.7656e-05
+     6  2.5391e-02  8.5938e-03  1.1743e-02  1.4648e-02  4.7852e-03  5.8594e-04
+     7  1.3672e-02  1.8024e-02  1.3452e-02  1.5875e-02  8.1055e-03  1.7639e-03
+     8  6.3049e-03  9.0332e-03  1.3892e-02  1.8213e-02  1.1841e-02  3.7598e-03
+     9  1.6663e-03  9.5367e-04  3.1250e-03  1.7413e-02  1.6235e-02  6.8176e-03
+
+  First-arrival table (eps=1e-6):
+   offset   first dt   |f| at arrival
+        0          0       1.0000e-01
+        1          1       2.5000e-02
+        2          2       6.2500e-03
+        3          3       1.5625e-03
+        4          4       3.9063e-04
+        5          5       9.7656e-05
+  (finite-c lightcone: first dt should equal offset)
 
 ----- stderr -----
 

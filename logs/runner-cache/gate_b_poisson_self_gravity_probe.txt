@@ -1,10 +1,10 @@
 ===== runner cache v1 =====
 runner: scripts/gate_b_poisson_self_gravity_probe.py
-runner_sha256: 90f756d5bc8d9b0b60027be1ed6e0b2040cef481ff8f5a37c8524d2f19a928d1
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 8753f61d6f37402ec05f7a5c9176eae619d742b837d14211a04a42a62134eef2
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 126.41
+status: ok
 ----- stdout -----
 ========================================================================================================
 GATE B POISSON SELF-GRAVITY PROBE
@@ -17,6 +17,33 @@ backreaction kernel: exp(-mu r)/(r+eps), mu=0.06, eps0=0.25
 
   seed 0: building grown row and running one-loop backreaction...
   seed 0: done
+seed       P_det(0)     delta(0)      0.05      0.10      0.20      0.50
+--------------------------------------------------------------------------------------------------------
+   0   9.065230e+09 +1.666562e-04     0.000     0.000     0.000     0.000
+
+ZERO-COUPLING REDUCTION
+  max |psi(eps=0) - baseline| = 0.000e+00
+
+   eps  mean escape   mean delta  direction
+------------------------------------------------
+  0.00        1.000 1.666562e-04     TOWARD
+  0.05        0.000 9.188694e-02     TOWARD
+  0.10        0.000 1.628821e-01     TOWARD
+  0.20        0.000 5.838123e-02     TOWARD
+  0.50        0.000 2.926201e-01     TOWARD
+
+WEAK-FIELD MASS LAW CHECK
+  eps=0.00: F~M exponent = 1.00
+  eps=0.10: F~M exponent = -0.60
+
+SAFE READ
+  - eps=0 exactly recovers the frozen grown baseline.
+  - The backreaction loop is materially different from the static field,
+    but the only promoted observable here is the detector centroid shift.
+  - If the weak-field exponent stays near 1 and the centroid shift grows
+    monotonically with eps, this is a bounded self-gravity bridge;
+    if the exponent collapses, freeze it as a no-go.
+  runtime = 126.28s
 
 ----- stderr -----
 

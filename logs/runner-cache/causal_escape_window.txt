@@ -1,11 +1,34 @@
 ===== runner cache v1 =====
 runner: scripts/causal_escape_window.py
-runner_sha256: a974b566f104bfb513d3fbee65e12e4b54cc35ea66049ddcb4f476a56b1f6fa9
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: 3744a986af9154aeef92f734c123062b2f9e385410d8167d22e5637683cecca7
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 290.43
+status: ok
 ----- stdout -----
+======================================================================
+CAUSAL-ESCAPE WINDOW REPLAY: eta=20, s=0.004
+======================================================================
+
+1. EXACT NULL (eta=0)
+      inst: escape = 1.000000
+       fwd: escape = 1.000000
+    dyn0.5: escape = 1.000000
+   dyn0.25: escape = 1.000000
+
+2. WINDOW (eta=20)
+      inst: escape = 0.3907 TRAPPED 
+       fwd: escape = 0.5631  
+    dyn0.5: escape = 0.9006  ESCAPES
+   dyn0.25: escape = 0.9743  ESCAPES
+
+3. PORTABILITY (eta=20)
+  Fam1: inst=0.3925, dyn=0.9800
+  Fam2: inst=0.3935, dyn=0.9796
+  Fam3: inst=0.3908, dyn=0.9784
+
+NOTE: exposure-matched static proxy ALSO escapes (~0.99).
+The escape mechanism is average-exposure reduction, not cone geometry.
 
 ----- stderr -----
 

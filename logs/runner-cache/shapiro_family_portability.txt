@@ -1,11 +1,74 @@
 ===== runner cache v1 =====
 runner: scripts/shapiro_family_portability.py
-runner_sha256: 022093a8a5cd8b7344cfd6ca1716a672e4df00ed5dc136f4520f92f8fb472aa0
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 9b86ff8149bd85bfc733dc3d49e640311f0b3026f9aff8633743a8992cdf47cb
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 247.28
+status: ok
 ----- stdout -----
+===============================================================================
+DISCRETE SHAPIRO DELAY: THREE-FAMILY PORTABILITY
+NL=30, W=8, s=0.004, z_src=3.0
+Families: 3, Seeds: 2, c values: [2.0, 1.0, 0.5, 0.25]
+===============================================================================
+
+ZERO CONTROL
+  Fam1: zero lag = +0.000e+00 (exact by construction)
+  Fam2: zero lag = +0.000e+00 (exact by construction)
+  Fam3: zero lag = +0.000e+00 (exact by construction)
+  -> exact zero control survives on all three families
+
+Fam1 (drift=0.2, restore=0.7):
+       c    s0_phase    s1_phase    mean_phase
+  --------------------------------------------
+    inst   +0.000000   +0.000000     +0.000000
+    2.00   +0.040233   +0.039881     +0.040057
+    1.00   +0.050011   +0.049884     +0.049947
+    0.50   +0.061643   +0.062651     +0.062147
+    0.25   +0.067893   +0.067936     +0.067915
+
+Fam2 (drift=0.05, restore=0.3):
+       c    s0_phase    s1_phase    mean_phase
+  --------------------------------------------
+    inst   +0.000000   +0.000000     +0.000000
+    2.00   +0.040431   +0.039745     +0.040088
+    1.00   +0.050325   +0.049879     +0.050102
+    0.50   +0.061958   +0.062478     +0.062218
+    0.25   +0.068326   +0.067380     +0.067853
+
+Fam3 (drift=0.5, restore=0.9):
+       c    s0_phase    s1_phase    mean_phase
+  --------------------------------------------
+    inst   +0.000000   +0.000000     +0.000000
+    2.00   +0.040130   +0.039885     +0.040007
+    1.00   +0.049930   +0.049799     +0.049864
+    0.50   +0.061700   +0.062291     +0.061996
+    0.25   +0.067886   +0.067997     +0.067942
+
+PHASE LAG PORTABILITY
+      c             Fam1             Fam2             Fam3     max diff
+----------------------------------------------------------------------------
+   inst          +0.0000          +0.0000          +0.0000       0.0000
+   2.00          +0.0401          +0.0401          +0.0400       0.0001
+   1.00          +0.0499          +0.0501          +0.0499       0.0002
+   0.50          +0.0621          +0.0622          +0.0620       0.0002
+   0.25          +0.0679          +0.0679          +0.0679       0.0001
+
+STATIC BASELINE
+  Fam1: static phase = +0.0000 ± 0.0000
+  Fam2: static phase = +0.0000 ± 0.0000
+  Fam3: static phase = +0.0000 ± 0.0000
+
+SAFE READ
+  - exact zero-source control stays exact on all three families
+  - the c-dependent phase lag is stable across families to sub-percent scale
+  - this is a portability statement for the phase observable, not an absolute NV calibration
+  - the cleanest retained readout is the phase lag itself; the static baseline is only the reference
+
+NARROW CONCLUSION
+  The Shapiro-style phase lag reproduces cleanly across the three portable grown families.
+  It is a geometry-independent property of the propagator + action in this retained proxy.
+  The claim remains proxy-level; absolute NV units still require external calibration.
 
 ----- stderr -----
 

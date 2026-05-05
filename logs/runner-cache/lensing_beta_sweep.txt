@@ -1,11 +1,28 @@
 ===== runner cache v1 =====
 runner: scripts/lensing_beta_sweep.py
-runner_sha256: 1e1c40381c3cdb8bb7230d24d5a162785fd4b55dfa4f06f4281cb7786429dffe
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: ae43a25d4035bedf4d1bf0bbf85965ea11aea5e82a8876b8320e1079051ef1cd
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 145.27
+status: ok
 ----- stdout -----
+====================================================================================================
+LENSING BETA SWEEP
+====================================================================================================
+b_values=[3.0, 4.0, 5.0, 6.0]
+coarse_h=0.5  refine_beta=5  refine_h=0.35
+
+Coarse-H asymptotic sweep
+  beta                               kubo(b=3..6)     slope       R²    signs   1/b spread
+   0.8           [7.0619, 5.6136, 3.6639, 3.0176]   -1.2811   0.9711     ++++       14.54%
+   5.0           [0.0189, 0.0139, 0.0112, 0.0094]   -1.0114   0.9995     ++++        1.69%
+   7.0       [-0.0035, -0.0024, -0.0018, -0.0013]   -1.3922   0.9971     ----       24.00%
+  10.0       [-0.0004, -0.0003, -0.0002, -0.0002]   -1.2690   0.9989     ----       17.12%
+
+Refinement check at beta near the apparent ray-like spike
+H=0.35  beta=5.0  NL=43  x_src=4.900
+kubo=[-0.034338, -0.02764, -0.023081, -0.01981]
+slope=-0.7930  R²=0.9994  signs=----  1/b spread=15.38%
 
 ----- stderr -----
 

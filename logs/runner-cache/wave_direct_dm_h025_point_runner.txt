@@ -1,11 +1,23 @@
 ===== runner cache v1 =====
 runner: scripts/wave_direct_dm_h025_point_runner.py
-runner_sha256: 2f465866cda5411c2ff67f326bb145ca666f1dfd7f452889f52809040aa3b5f0
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: e82a23489d1400d1a8d731527ac8c769ec0694bd439f3d8975fe3225ba11809a
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 141.13
+status: ok
 ----- stdout -----
+WAVE DIRECT-DM SINGLE-POINT RUNNER
+family=Fam1 drift=0.20 restore=0.70
+seed=0
+H=0.250  strength=0.004000
+NL=60  PW=6.000  src_layer=20
+start_z_real=3.000  end_z_real=0.000
+dM(early)  = +0.004989
+dM(late)   = +0.006246
+delta_hist = -0.001256
+R_hist     = -20.12%
+elapsed_s  = 141.07
+rss_mb     = 698.7
 
 ----- stderr -----
 

@@ -1,11 +1,74 @@
 ===== runner cache v1 =====
 runner: scripts/broken_graph_action_power_robustness.py
-runner_sha256: 76a762de8d56e51f10f61cf92c2175a5e75b9635cde3fb69fe89ab7dab546110
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: ded4cb68acedca3c1745cc272cceea896deb4a12b50bbcafaa210b96fa3ec32c
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 94.01
+status: ok
 ----- stdout -----
+====================================================================================================
+BROKEN-GRAPH ACTION-POWER ROBUSTNESS
+  Retained 3D ordered-lattice family
+  h=0.5, W=8, L=12, max_d=6
+  Action family: S = L(1-f^p)
+  Damage ladder: baseline, offset deletion, asymmetry, jitter, sparse NN
+  Goal: check whether p=1 is structurally more robust than neighboring p values
+====================================================================================================
+
+[damage=baseline]
+    p       Born    Grav(z=3)   TOWARD      F~M           Tail
+ 0.50   2.50e-15    +0.020590   TOWARD     0.50 b^(-0.86),R²=0.988
+ 1.00   2.50e-15    +0.000144   TOWARD     1.00 b^(-1.47),R²=0.996
+ 2.00   2.50e-15    +0.000000   TOWARD     2.00 b^(-3.67),R²=0.909
+
+[damage=delete_30]
+    p       Born    Grav(z=3)   TOWARD      F~M           Tail
+ 0.50   1.47e-15    +0.006417   TOWARD     0.50 b^(-0.64),R²=0.978
+ 1.00   1.47e-15    +0.000041   TOWARD     1.00 b^(-1.16),R²=0.984
+ 2.00   1.47e-15    +0.000000   TOWARD     2.00 b^(-2.53),R²=0.989
+
+[damage=delete_50]
+    p       Born    Grav(z=3)   TOWARD      F~M           Tail
+ 0.50   1.06e-15    -0.062292     AWAY      n/a            n/a
+ 1.00   1.06e-15    -0.000245     AWAY      n/a            n/a
+ 2.00   1.06e-15    -0.000000     AWAY      n/a            n/a
+
+[damage=delete_70]
+    p       Born    Grav(z=3)   TOWARD      F~M           Tail
+ 0.50   6.89e-16    -0.046703     AWAY      n/a            n/a
+ 1.00   6.89e-16    -0.000079     AWAY      n/a            n/a
+ 2.00   6.89e-16    +0.000000   TOWARD     2.00 b^(-3.10),R²=0.900
+
+[damage=asymmetric]
+    p       Born    Grav(z=3)   TOWARD      F~M           Tail
+ 0.50   1.16e-17    -0.005644     AWAY      n/a            n/a
+ 1.00   1.16e-17    -0.000009     AWAY      n/a            n/a
+ 2.00   1.16e-17    +0.000000   TOWARD     2.28            n/a
+
+[damage=jitter_0.5h]
+    p       Born    Grav(z=3)   TOWARD      F~M           Tail
+ 0.50   2.21e-15    +0.025866   TOWARD     0.50 b^(-0.61),R²=0.965
+ 1.00   2.21e-15    +0.000152   TOWARD     1.00 b^(-1.14),R²=0.979
+ 2.00   2.21e-15    +0.000000   TOWARD     2.00 b^(-2.78),R²=0.908
+
+[damage=sparse_nn]
+    p       Born    Grav(z=3)   TOWARD      F~M           Tail
+ 0.50   0.00e+00    +0.006305   TOWARD     0.49 b^(-0.98),R²=0.989
+ 1.00   0.00e+00    +0.000055   TOWARD     1.00 b^(-1.27),R²=0.958
+ 2.00   0.00e+00    +0.000000   TOWARD     2.00 b^(-2.98),R²=0.995
+
+ROBUSTNESS SUMMARY
+    p    base Grav   toward/6    mean Grav  mean |Grav|   mean |F~M-p|
+ 0.50    +0.020590          3    -0.012675     0.025538          0.004
+ 1.00    +0.000144          3    -0.000014     0.000097          0.000
+ 2.00    +0.000000          5    +0.000000     0.000000          0.057
+
+SAFE READ
+  - This is a bounded graph-damage replay on one retained 3D family.
+  - The graph controls precision and retention, not whether gravity exists.
+  - p=1 is the Newtonian candidate; p!=1 are the neighboring comparison actions.
+  - Read p=1 as structurally more robust only if it keeps the best retention and the smallest drift across the ladder.
+  - If the summary does not favor p=1, the honest result is that the robustness claim weakens on this family.
 
 ----- stderr -----
 

@@ -1,11 +1,62 @@
 ===== runner cache v1 =====
 runner: scripts/persistent_object_blended_readout_outer_transfer_sweep.py
-runner_sha256: 6fc423ad352a6a327ed4f606a69ad4a243c4cc8d4417fa968a626ff101f95082
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: f28ec29e676f78cb2bd0f4da4dc6f77315e313665782d478ba9964b8aa08b29f
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 711.93
+status: ok
 ----- stdout -----
+==============================================================================================================================
+PERSISTENT OBJECT BLENDED READOUT OUTER TRANSFER SWEEP
+  second-ring transfer of the exact-lattice top3 compact object under the retained blended readout
+==============================================================================================================================
+fixed blended readout: blend=0.25
+
+CASE: source1.0  (h=0.25, W=3, L=6, source_z=1.0)
+    mode   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+----------------------------------------------------------------------------------------------------------
+    top2    0.786    0.899    304.43    0.512   336.225%         [0.91,1.03,1.03]  False
+    top3    0.882    0.931    304.39    0.512   230.968%         [0.91,1.05,1.05]  False
+  verdict: outer transfer closed
+
+CASE: source2.75  (h=0.25, W=3, L=6, source_z=2.75)
+    mode   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+----------------------------------------------------------------------------------------------------------
+    top2    0.738    0.899    305.84    0.513     4.116%         [1.03,1.03,1.03]  False
+    top3    0.834    0.931    305.84    0.513     2.048%         [1.03,1.04,1.04]   True
+  verdict: top3 outer bridge
+
+CASE: width5  (h=0.25, W=5, L=6, source_z=2.0)
+    mode   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+----------------------------------------------------------------------------------------------------------
+    top2    0.795    0.898    412.37    0.513     2.273%         [1.01,1.01,1.01]  False
+    top3    0.883    0.928    412.42    0.513     1.553%         [1.01,1.01,1.01]   True
+  verdict: top3 outer bridge
+
+CASE: length4  (h=0.25, W=3, L=4, source_z=2.0)
+    mode   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+----------------------------------------------------------------------------------------------------------
+    top2    0.812    0.896    222.40    0.516     3.642%         [0.99,0.99,0.99]  False
+    top3    0.893    0.923    222.41    0.516     2.569%         [0.99,0.99,0.99]   True
+  verdict: top3 outer bridge
+
+CASE: length8  (h=0.25, W=3, L=8, source_z=2.0)
+    mode   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+----------------------------------------------------------------------------------------------------------
+    top2    0.755    0.901    335.85    0.490     1.857%         [0.96,0.96,0.96]   True
+    top3    0.856    0.935    335.88    0.490     1.420%         [0.96,0.96,0.96]   True
+  verdict: top2 outer bridge
+
+SUMMARY
+  top2 admissible on 1/5 cases
+  top3 admissible on 4/5 cases
+
+SAFE READ
+  - If top3 survives most or all of this second ring, the compact-object lane is leaving the immediate neighborhood.
+  - If top3 collapses quickly here, the current positive should be read as a bounded local-family result.
+  - This is still a bounded exact-lattice transfer sweep, not matter closure.
+
+Total runtime: 711.3s
 
 ----- stderr -----
 

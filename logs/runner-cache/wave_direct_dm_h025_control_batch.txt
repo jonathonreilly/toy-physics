@@ -1,11 +1,59 @@
 ===== runner cache v1 =====
 runner: scripts/wave_direct_dm_h025_control_batch.py
-runner_sha256: 0ca899833c3f6fb6a8a9f4dee927a55879ce13a0181afa9f20f2365a02329bf2
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 9a6a7fecdc82245e6939b1184607553b3390f178e6ca5bf3b5369f9b3b688255
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 565.82
+status: ok
 ----- stdout -----
+============================================================================================================
+WAVE DIRECT-DM H=0.25 CONTROL BATCH
+============================================================================================================
+family=Fam2 drift=0.05 restore=0.30 seed=1 H=0.250
+Exact null plus weak-field ladder on one predeclared fine-H pair
+
+[strength=0.000000]
+  NL=60  PW=6.000  src_layer=20
+  start_z_real=3.000  end_z_real=0.000
+  dM(early)    = +0.000000
+  dM(late)     = +0.000000
+  delta_hist   = +0.000000
+  R_hist       = +0.00%
+  null         = exact S=0 control
+
+[strength=0.002000]
+  NL=60  PW=6.000  src_layer=20
+  start_z_real=3.000  end_z_real=0.000
+  dM(early)    = +0.001896
+  dM(late)     = +0.002900
+  delta_hist   = -0.001004
+  R_hist       = -34.62%
+  delta_hist/s = -0.501940
+
+[strength=0.004000]
+  NL=60  PW=6.000  src_layer=20
+  start_z_real=3.000  end_z_real=0.000
+  dM(early)    = +0.003777
+  dM(late)     = +0.005814
+  delta_hist   = -0.002037
+  R_hist       = -35.03%
+  delta_hist/s = -0.509158
+
+[strength=0.008000]
+  NL=60  PW=6.000  src_layer=20
+  start_z_real=3.000  end_z_real=0.000
+  dM(early)    = +0.007497
+  dM(late)     = +0.011686
+  delta_hist   = -0.004189
+  R_hist       = -35.85%
+  delta_hist/s = -0.523664
+
+============================================================================================================
+SUMMARY
+============================================================================================================
+null max |delta_hist| = 0.000e+00
+delta_hist sign pattern = - - -
+|delta_hist/s| spread   = +4.25%
 
 ----- stderr -----
 

@@ -1,11 +1,49 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_atomic_hydrogen_helium_probe.py
-runner_sha256: 1883427059fd735acf9a687adc260e567c39968c689999a45fc5314ab9234c3c
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: a00f965a332955609acf9032545bcdaf2aff3e9cbd6cfc35d05e274beb3ce0b7
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 95.00
+status: ok
 ----- stdout -----
+==============================================================================
+HYDROGEN  (Z = 1)
+  grid: n_grid = 8000, r_max = 200.0 Bohr
+  reference: E_n = -13.605693 eV / n^2 (analytic Bohr)
+------------------------------------------------------------------------------
+   l   n      E_num [eV]   E_exact [eV]   |err| [eV]    rel_err
+   0   1      -13.603568     -13.605693     2.12e-03  -1.56e-04
+   0   2       -3.401290      -3.401423     1.33e-04  -3.90e-05
+   0   3       -1.511717      -1.511744     2.62e-05  -1.74e-05
+   0   4       -0.850348      -0.850356     8.30e-06  -9.76e-06
+   0   5       -0.544224      -0.544228     3.40e-06  -6.25e-06
+   1   2       -3.401468      -3.401423     4.43e-05   1.30e-05
+   1   3       -1.511764      -1.511744     2.04e-05   1.35e-05
+   1   4       -0.850366      -0.850356     1.05e-05   1.24e-05
+   1   5       -0.544234      -0.544228     6.03e-06   1.11e-05
+   1   6       -0.377940      -0.377936     3.75e-06   9.93e-06
+   2   3       -1.511745      -1.511744     1.75e-06   1.16e-06
+   2   4       -0.850357      -0.850356     1.66e-06   1.95e-06
+   2   5       -0.544229      -0.544228     1.26e-06   2.32e-06
+   2   6       -0.377937      -0.377936     9.21e-07   2.44e-06
+   2   7       -0.277668      -0.277667     6.75e-07   2.43e-06
+------------------------------------------------------------------------------
+  worst relative error vs analytic: 1.56e-04
+
+==============================================================================
+HELIUM  (Z = 2)  [no closed-form: three-body]
+  reference (NIST experimental): E_exp = -79.0052 eV
+------------------------------------------------------------------------------
+  independent-electron baseline   =  -108.8455 eV  (err -29.8403 eV)
+  one-parameter variational       =   -77.4887 eV  (err +1.5165 eV, rel -1.92%)
+  optimal Z_eff                   = 1.6875  (= 27/16)
+
+==============================================================================
+STATUS: bounded exploratory scaffold lane.
+This script uses STANDARD quantum mechanics with TEXTBOOK inputs.
+It does NOT use any Cl(3)-on-Z^3 framework input.
+See docs/ATOMIC_HYDROGEN_HELIUM_PROBE_NOTE.md for scope and gap map.
+==============================================================================
 
 ----- stderr -----
 

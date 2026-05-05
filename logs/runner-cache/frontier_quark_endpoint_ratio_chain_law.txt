@@ -1,11 +1,77 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_quark_endpoint_ratio_chain_law.py
-runner_sha256: c0acb8cb70924f9885391b7d36f05fc31c220576095129792baa54956a71bd93
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: c439a5c5ea436df318e84f59322992f1b5a11a4138be84443196a89270b302e6
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 152.71
+status: ok
 ----- stdout -----
+Quark endpoint ratio-chain law
+========================================================================
+
+========================================================================
+PART 1: Exact Endpoint Ratio Chain
+========================================================================
+
+  gamma_T(center)/gamma_T(shell) = 0.833328197623
+  gamma_T(shell)/gamma_E(shell)  = -2.005382749600
+  gamma_T(center)/gamma_E(center)= -0.890683778231
+  gamma_E(center)/gamma_E(shell) = 1.876246130347
+
+  exact chain identity:
+    gamma_E(center)/gamma_E(shell)
+      = [gamma_E(center)/gamma_T(center)]
+        * [gamma_T(center)/gamma_T(shell)]
+        * [gamma_T(shell)/gamma_E(shell)]
+  [PASS] The endpoint E-quotient is fixed exactly by the three endpoint ratio factors  (residual = 0.000e+00)
+  [PASS] The T-chain factor remains the already-isolated exact-support candidate 5/6  (gap = 0.000616%)
+
+========================================================================
+PART 2: Controlled Small-Rational Chain Candidates
+========================================================================
+
+  T endpoint candidate      =   5/6 = +0.833333333333  gap = 0.000616%
+  shell T/E candidate       =  -2/1 = -2.000000000000  gap = 0.268415%
+  center T/E candidate      =  -8/9 = -0.888888888889  gap = 0.201518%
+  [PASS] The T endpoint scan recovers 5/6  (candidate = 5/6)
+  [PASS] The shell T/E scan selects -2  (candidate = -2/1)
+  [PASS] The center T/E scan selects -8/9  (candidate = -8/9)
+  [PASS] Both shell and center T/E candidates stay within 0.3% of live endpoint ratios  (shell gap = 0.268415%, center gap = 0.201518%)
+
+========================================================================
+PART 3: Implied E-Channel Quotient and Denominator
+========================================================================
+
+  chain-implied E quotient      = 1.875000000000
+  chain-implied E ratio         = 5.250000000000
+  chain-implied denominator     = 2.625000000000
+  live E quotient               = 1.876246130347
+  live bounded denominator      = 2.621601678209
+  [PASS] The rational ratio chain implies gamma_E(center)/gamma_E(shell) = 15/8 exactly  (chain = 1.875000000000)
+  [PASS] The rational ratio chain implies r_E = 21/4 exactly  (chain = 5.250000000000)
+  [PASS] The rational ratio chain implies the anchored denominator D_E = 21/8 exactly  (chain = 2.625000000000)
+  [PASS] The chain-implied E quotient stays within 0.1% of the live E quotient  (gap = 0.066416%)
+  [PASS] The chain-implied denominator stays closer to the live bounded denominator than sqrt(7)  (gap(21/8) = 0.129628%, gap(sqrt7) = 0.921179%)
+
+========================================================================
+PART 4: Anchored Quark Branch
+========================================================================
+
+  chain-implied amplitude      = 0.774180788008
+  live bounded amplitude       = 0.774170054824
+  chain anchor aggregate       = 0.723153%  (max = 0.666622%)
+  live anchor aggregate        = 0.723246%  (max = 0.666354%)
+  [PASS] The ratio-chain denominator keeps the anchored CKM+J package below 1%  (anchor max = 0.666622%)
+  [PASS] The ratio-chain amplitude stays within 0.01% of the live bounded anchored amplitude  (gap = 0.001386%)
+  [PASS] The ratio-chain anchored branch is numerically indistinguishable from the live bounded endpoint branch  (chain = 0.723153%, live = 0.723246%)
+
+Verdict:
+The endpoint data now support a tighter theory-first chain than the standalone E-quotient candidate. The live tensor endpoint ratios are simultaneously nearest to the small rational set {5/6, -2, -8/9}. That chain forces gamma_E(center)/gamma_E(shell) = 15/8 and therefore reproduces the bounded E-channel law r_E = 21/4 and denominator candidate D_E = 21/8. So the theorem-grade target narrows again: the right next derivation problem is no longer an isolated E quotient, but the exact endpoint ratio chain itself.
+
+========================================================================
+SUMMARY
+========================================================================
+PASS=14 FAIL=0
 
 ----- stderr -----
 

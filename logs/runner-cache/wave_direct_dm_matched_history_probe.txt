@@ -1,11 +1,69 @@
 ===== runner cache v1 =====
 runner: scripts/wave_direct_dm_matched_history_probe.py
-runner_sha256: 46eb44400cf46fd9f7fe08da9636443e1976b19c87ac4d956d823b675d0dd280
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 6ed89e5a01072d2b12a8a80a5aeb1626b0546058594614eae620683bb5290211
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 100.34
+status: ok
 ----- stdout -----
+============================================================================================================
+WAVE DIRECT-DM MATCHED-HISTORY PROBE
+============================================================================================================
+Two source schedules with the same start/end/final geometry and the same realized move trace
+Includes an exact S=0 null and a small-s sweep over the direct response
+
+[family=Fam1 drift=0.20 restore=0.70]
+  [strength=0.000000]
+    [H=0.500]
+      NL=30  PW=6.000  src_layer=10
+      start_z_real=3.000  end_z_real=0.000
+      dM(early)    = +0.000000
+      dM(late)     = +0.000000
+      delta_hist   = +0.000000
+      R_hist       = +0.00%
+      null         = exact S=0 control
+    [H=0.350]
+      NL=43  PW=5.950  src_layer=14
+      start_z_real=3.150  end_z_real=0.000
+      dM(early)    = +0.000000
+      dM(late)     = +0.000000
+      delta_hist   = +0.000000
+      R_hist       = +0.00%
+      null         = exact S=0 control
+  [strength=0.004000]
+    [H=0.500]
+      NL=30  PW=6.000  src_layer=10
+      start_z_real=3.000  end_z_real=0.000
+      dM(early)    = +0.005385
+      dM(late)     = +0.009547
+      delta_hist   = -0.004161
+      R_hist       = -43.59%
+      delta_hist/s = -1.040348
+    [H=0.350]
+      NL=43  PW=5.950  src_layer=14
+      start_z_real=3.150  end_z_real=0.000
+      dM(early)    = +0.004811
+      dM(late)     = +0.008346
+      delta_hist   = -0.003535
+      R_hist       = -42.36%
+      delta_hist/s = -0.883765
+  [strength=0.008000]
+    [H=0.500]
+      NL=30  PW=6.000  src_layer=10
+      start_z_real=3.000  end_z_real=0.000
+      dM(early)    = +0.010627
+      dM(late)     = +0.019059
+      delta_hist   = -0.008432
+      R_hist       = -44.24%
+      delta_hist/s = -1.054014
+    [H=0.350]
+      NL=43  PW=5.950  src_layer=14
+      start_z_real=3.150  end_z_real=0.000
+      dM(early)    = +0.009483
+      dM(late)     = +0.016764
+      delta_hist   = -0.007281
+      R_hist       = -43.43%
+      delta_hist/s = -0.910156
 
 ----- stderr -----
 

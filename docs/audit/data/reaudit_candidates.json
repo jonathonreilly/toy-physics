@@ -6,7 +6,7 @@
     "medium": 0
   },
   "by_criticality_runner_drift": {
-    "critical": 0,
+    "critical": 1,
     "high": 0,
     "leaf": 0,
     "medium": 0
@@ -32,7 +32,32 @@
     "retained_bounded",
     "retained_no_go"
   ],
-  "runner_drift_candidates": [],
+  "runner_drift_candidates": [
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "audited_conditional",
+      "candidate_reason": "runner_artifact_repaired_since_audit",
+      "claim_id": "gravitomagnetic_note",
+      "claim_scope": "Audited the restricted claim that the provided moving-source runner computes a portable antisymmetric velocity-dependent phase correction in the imposed discrete Shapiro setup.",
+      "claim_type": "positive_theorem",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "current_dep_effective_status": {},
+      "current_runner_hash": "692ef206801f5560f64568da4d26fa8d82f523bc5a7ab44b9a49c89ffce5d8db",
+      "deps": [],
+      "direct_in_degree": 2,
+      "effective_status": "audited_conditional",
+      "generated_order": 1,
+      "improved_dependencies": [],
+      "load_bearing_score": 9.18,
+      "note_hash": "fead708294fd730677f896dbe4ba0f310904ca5dde3062ea8dc1f25fe2f749ef",
+      "note_path": "docs/GRAVITOMAGNETIC_NOTE.md",
+      "reraudit_after_claim_ids": [],
+      "runner_path": "scripts/gravitomagnetic_portable.py",
+      "snap_runner_hash": "55241b260ce5236dcc92b17c9c687bd7c04397b880e363dc17be91bc7125d469",
+      "transitive_descendants": 289
+    }
+  ],
   "total_candidates": 0,
-  "total_runner_drift_candidates": 0
+  "total_runner_drift_candidates": 1
 }

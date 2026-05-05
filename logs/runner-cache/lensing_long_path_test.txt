@@ -1,10 +1,10 @@
 ===== runner cache v1 =====
 runner: scripts/lensing_long_path_test.py
-runner_sha256: 4b559d97f5243b06a69c3d7c43a31da19ef7373573d1ae33d1a512c00551d6af
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 6c97ab1fe30b85a83357e7cea950013ff286e3a1765a4daa3bdea9a667d6583b
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 732.69
+status: ok
 ----- stdout -----
 ================================================================================
 LANE L++ LONG-PATH LENSING TEST
@@ -21,6 +21,74 @@ LANE L++ LONG-PATH LENSING TEST
   b=3.0  NL= 90  n= 55626  dM=+0.030299  kubo_true=+6.6230
   b=4.0  NL= 90  n= 55626  dM=+0.044142  kubo_true=+8.7234
   b=5.0  NL= 90  n= 55626  dM=+0.013652  kubo_true=+3.7693
+  b=6.0  NL= 90  n= 55626  dM=+0.006449  kubo_true=+1.9938
+
+================================================================================
+--- T_phys = 7.5 (short path), H ∈ {0.5, 0.35, 0.25} ---
+  PREDICTION: slope on b ∈ {3..6} should be ≈ -1.734
+             (steeper than the L=10 measurement of -1.43)
+================================================================================
+
+  H = 0.5
+    b=3.0  NL= 15  n=  8751  dM=+0.011603  kubo_true=+2.5530
+    b=4.0  NL= 15  n=  8751  dM=+0.006875  kubo_true=+1.7626
+    b=5.0  NL= 15  n=  8751  dM=+0.005795  kubo_true=+1.3344
+    b=6.0  NL= 15  n=  8751  dM=+0.003853  kubo_true=+0.9578
+
+  H = 0.35
+    b=3.0  NL= 21  n= 24501  dM=+0.010871  kubo_true=+2.6580
+    b=4.0  NL= 21  n= 24501  dM=+0.006482  kubo_true=+1.6890
+    b=5.0  NL= 21  n= 24501  dM=+0.005339  kubo_true=+1.2853
+    b=6.0  NL= 21  n= 24501  dM=+0.003792  kubo_true=+0.9299
+
+  H = 0.25
+    b=3.0  NL= 30  n= 69630  dM=+0.010080  kubo_true=+2.4556
+    b=4.0  NL= 30  n= 69630  dM=+0.006643  kubo_true=+1.6688
+    b=5.0  NL= 30  n= 69630  dM=+0.004909  kubo_true=+1.2111
+    b=6.0  NL= 30  n= 69630  dM=+0.003630  kubo_true=+0.9039
+
+================================================================================
+SLOPE FITS at T_phys = 45.0 (L_eff = 30.000000000000004) — long path
+================================================================================
+  analytical (no fit):    slope = -1.0776  R² = 0.9998
+  H=0.5 kubo_true:        slope = -1.8128  R² = 0.6874  |Δ from analytic| = 0.7352
+  H=0.5 dM:               slope = -2.3796  R² = 0.6887  |Δ from analytic| = 1.3020
+
+================================================================================
+SLOPE FITS at T_phys = 7.5 (L_eff = 5.000000000000001) — short path
+================================================================================
+  analytical (no fit):    slope = -1.7336  R² = 0.9995
+  H=0.5 kubo_true:        slope = -1.3881  R² = 0.9932  |Δ from analytic| = 0.3456
+  H=0.5 dM:               slope = -1.5085  R² = 0.9747  |Δ from analytic| = 0.2251
+  H=0.35 kubo_true:        slope = -1.4853  R² = 0.9965  |Δ from analytic| = 0.2484
+  H=0.35 dM:               slope = -1.4606  R² = 0.9834  |Δ from analytic| = 0.2731
+  H=0.25 kubo_true:        slope = -1.4356  R² = 0.9985  |Δ from analytic| = 0.2980
+  H=0.25 dM:               slope = -1.4584  R² = 0.9988  |Δ from analytic| = 0.2753
+
+================================================================================
+REGIME TRANSITION TEST
+================================================================================
+
+Predicted slope on b ∈ {3..6} as a function of T_phys (analytical):
+    T_phys     L_eff    predicted slope
+       7.5       5.0            -1.7336
+      15.0      10.0            -1.4188 ← we measured this
+      30.0      20.0            -1.1576
+      45.0      30.0            -1.0776 ← we ARE measuring this
+      60.0      40.0            -1.0454
+      90.0      60.0            -1.0208
+     150.0     100.0            -1.0076
+
+================================================================================
+VERDICT
+================================================================================
+  Predicted slope (analytical, L_eff=30.000000000000004):  -1.0776
+  Measured slope (H=0.5 kubo_true):                  -1.8128
+  |measured - analytical|:                           0.7352
+
+  POOR MATCH — measured slope deviates significantly from prediction.
+  Either the explanation needs refinement or the long-path setup
+  has its own confounders.
 
 ----- stderr -----
 
