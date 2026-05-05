@@ -16,6 +16,11 @@ tensor observable.
 
 from __future__ import annotations
 
+# Runner takes ~140s on the canonical grid. Declare an explicit
+# AUDIT_TIMEOUT_SEC per RUNNER_CACHE_POLICY.md so the audit-loop cache
+# captures the full tail rather than recording status: timeout.
+AUDIT_TIMEOUT_SEC = 300
+
 from dataclasses import dataclass
 from _frontier_loader import load_frontier
 

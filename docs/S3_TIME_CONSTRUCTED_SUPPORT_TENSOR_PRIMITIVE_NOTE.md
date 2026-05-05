@@ -3,6 +3,7 @@
 **Date:** 2026-04-14  
 **Scope:** microscopic support block `A1 x {E_x, T1x}`  
 **Status:** bounded constructed primitive candidate, not exact theorem
+**Primary runner:** [`scripts/frontier_s3_time_constructed_support_tensor_primitive.py`](../scripts/frontier_s3_time_constructed_support_tensor_primitive.py) (PASS=5/0; slow ~140s, AUDIT_TIMEOUT_SEC=300)
 
 ## Purpose
 

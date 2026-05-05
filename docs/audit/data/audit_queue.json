@@ -5026,7 +5026,7 @@
       "note_path": "docs/S3_TIME_CONSTRUCTED_SUPPORT_TENSOR_PRIMITIVE_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_constructed_support_tensor_primitive.py",
       "transitive_descendants": 271
     },
     {
@@ -5047,7 +5047,7 @@
       "note_path": "docs/S3_TIME_TENSOR_PRIMITIVE_PROTOTYPE_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_tensor_primitive_prototype.py",
       "transitive_descendants": 271
     },
     {
@@ -24699,7 +24699,7 @@
       "note_path": "docs/STRUCTURED_MIRROR_RECONCILIATION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/structured_mirror_reconciliation.py",
       "transitive_descendants": 9
     },
     {

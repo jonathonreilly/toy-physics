@@ -3,6 +3,7 @@
 **Status:** bounded - tensor primitive prototype
 **Date:** 2026-04-14  
 **Purpose:** define the current bounded prototype for the first missing Route-2
+**Primary runner:** [`scripts/frontier_s3_time_tensor_primitive_prototype.py`](../scripts/frontier_s3_time_tensor_primitive_prototype.py) (PASS=4/0; slow ~120s, AUDIT_TIMEOUT_SEC=240)
 primitive and extract its endpoint data cleanly from the existing tensor
 frontier
 

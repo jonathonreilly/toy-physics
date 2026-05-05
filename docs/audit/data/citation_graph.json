@@ -47247,9 +47247,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "216afda747abab954d95dbfbf216dc51a37e43b94b63ee43b3f731779f09f07a",
+      "note_hash": "875c3a6a9953f762b5ce1199bf68eaef53bb928f0c118e7b20732846bc6b8696",
       "path": "docs/S3_TIME_CONSTRUCTED_SUPPORT_TENSOR_PRIMITIVE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_constructed_support_tensor_primitive.py",
       "title": "Constructed Route-2 Support Tensor Primitive: Response Jacobian of the Bounded Prototype"
     },
     "s3_time_primitive_chain_note": {
@@ -47295,9 +47295,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "fcc6017e5156f99bcea2d62a14c375c873052e18ec0ca03987567070cb52e9cc",
+      "note_hash": "192cc0708feaa8f1ba1e4f0d8b09eed0e29e8b2c0ae39e416f6412b9ac5620d8",
       "path": "docs/S3_TIME_TENSOR_PRIMITIVE_PROTOTYPE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_tensor_primitive_prototype.py",
       "title": "Route 2 Tensor Primitive Prototype on `A1 x {E_x, T1x}`"
     },
     "s3_time_tensorized_schur_primitive_note": {
@@ -49281,9 +49281,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "97494a1b6321b7fb8cfca9e7e92f1637691b7ff2768e3fbbbd36482e917b7552",
+      "note_hash": "80045e75b6d9e21d2b5355b2a6e2f05002343dac668fa2b7b2b471e4a4667182",
       "path": "docs/STRUCTURED_MIRROR_RECONCILIATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/structured_mirror_reconciliation.py",
       "title": "Structured Mirror Reconciliation Note"
     },
     "structureless_dag_gravity_harness_note": {
@@ -54666,6 +54666,6 @@
     "leaf_count": 552,
     "node_count": 1887,
     "root_count": 900,
-    "runners_with_path": 1461
+    "runners_with_path": 1464
   }
 }

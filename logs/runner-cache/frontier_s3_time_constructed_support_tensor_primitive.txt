@@ -1,0 +1,52 @@
+===== runner cache v1 =====
+runner: scripts/frontier_s3_time_constructed_support_tensor_primitive.py
+runner_sha256: cc19595813ac0de370057c1210f0c3d884bb89ccb823ecf1cf718f255e5b4576
+timeout_sec: 300
+exit_code: 0
+elapsed_sec: 155.34
+status: ok
+----- stdout -----
+Constructed Route-2 support tensor primitive candidate
+==============================================================================
+Exact support scalar:
+  delta_A1(e0) = 1.666666666667e-01
+  delta_A1(s/sqrt(6)) = 0.000000000000e+00
+
+Bounded prototype endpoint values:
+  Theta_R^(0)(e0)        = (-3.772329168017e-04, +3.359952396063e-04)
+  Theta_R^(0)(s/sqrt(6)) = (-2.010571874025e-04, +4.031967723697e-04)
+
+Constructed support-response Jacobian:
+  Xi_R^(0) = d Theta_R^(0) / d delta_A1 = (-1.057054376395e-03, -4.032091965809e-04)
+canonical r=0.25: delta=1.033673504811e-01, Theta err=(4.507e-09, 1.000e-08)
+canonical r=0.50: delta=7.491495713053e-02, Theta err=(4.762e-09, 1.067e-08)
+canonical r=0.75: delta=5.874507418157e-02, Theta err=(4.386e-09, 9.798e-09)
+canonical r=1.00: delta=4.831632475944e-02, Theta err=(3.972e-09, 8.787e-09)
+canonical r=1.50: delta=3.565646152233e-02, Theta err=(3.265e-09, 7.134e-09)
+canonical r=2.00: delta=2.825347453309e-02, Theta err=(2.664e-09, 6.029e-09)
+exact local O_h: delta=6.242611227355e-02, Theta err=(4.382e-07, 1.171e-07)
+finite-rank: delta=3.307783365857e-02, Theta err=(3.380e-06, 4.190e-06)
+
+Candidate compatibility law:
+  Theta_R^(0)(q) = Theta_R^(0)(s/sqrt(6)) + Xi_R^(0) * delta_A1(q)
+[BOUNDED] PASS: the constructed support-response Jacobian is nonzero
+    Xi_R^(0)=(np.float64(-0.0010570543763954673), np.float64(-0.0004032091965808723))
+[BOUNDED] PASS: the constructed primitive has two bright channels and no hidden mixed support block
+    domain=A1 x {E_x, T1x}; image=(gamma_E, gamma_T)
+[BOUNDED] PASS: the constructed response Jacobian reconstructs the canonical A1 family from the exact support scalar
+    max canonical errors: gamma_E=4.762e-09, gamma_T=1.067e-08
+[BOUNDED] PASS: the same constructed primitive tracks the exact local O_h and finite-rank A1 baselines
+    max audited-family errors: gamma_E=3.380e-06, gamma_T=4.190e-06
+[BOUNDED] PASS: the bounded primitive is compatible with the existing Theta_R^(0) staging object
+    Theta_shell=(np.float64(-0.00020105718740250195), np.float64(0.0004031967723697443)), Xi_R^(0)=(np.float64(-0.0010570543763954673), np.float64(-0.0004032091965808723))
+
+Verdict:
+The smallest new tensor-valued object that survives the scalar/rank-one support no-go is the response Jacobian of the bounded prototype, Xi_R^(0) = d Theta_R^(0) / d delta_A1. It is nonzero, structurally clean, and compatible with the current Theta_R^(0) staging law, but it is still bounded rather than an exact tensor observable.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=5 FAIL=0 TOTAL=5
+
+----- stderr -----
+

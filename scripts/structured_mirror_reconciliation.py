@@ -15,6 +15,11 @@ any retained harness is genuinely Born-clean.
 
 from __future__ import annotations
 
+# Runner takes ~118s on the canonical sweep — borderline on the default
+# 120s cache ceiling, so declare AUDIT_TIMEOUT_SEC explicitly per
+# RUNNER_CACHE_POLICY.md to avoid intermittent status: timeout.
+AUDIT_TIMEOUT_SEC = 240
+
 import argparse
 import math
 import os

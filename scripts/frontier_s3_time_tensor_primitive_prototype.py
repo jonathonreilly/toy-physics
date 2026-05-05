@@ -11,6 +11,11 @@ current affine delta_A1 law reproduces the canonical and audited families.
 
 from __future__ import annotations
 
+# Runner takes ~120s on the canonical grid; declare an explicit
+# AUDIT_TIMEOUT_SEC per RUNNER_CACHE_POLICY.md so cached runs don't
+# straddle the default 120s ceiling and intermittently record status: timeout.
+AUDIT_TIMEOUT_SEC = 240
+
 from dataclasses import dataclass
 from _frontier_loader import load_frontier
 
