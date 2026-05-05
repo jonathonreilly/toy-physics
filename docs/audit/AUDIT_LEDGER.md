@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 49 |
-| **retained_no_go** | 104 |
+| **retained_no_go** | 105 |
 | **retained_bounded** | 198 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 17 |
 | unaudited | 872 |
-| audit_in_progress | 41 |
+| audit_in_progress | 40 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 41 |
-| `audited_clean` | 324 |
+| `audit_in_progress` | 40 |
+| `audited_clean` | 325 |
 | `audited_conditional` | 384 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -114,7 +114,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | open_gate | audit_in_progress | audit_in_progress | - | - | - | - |
 | `generation_axiom_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -213,6 +212,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_split2_edge_profile_transition_candidate_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_weak_matching_obstruction_note_2026-04-15` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
+| `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `dm_pmns_asymptotic_source_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_selector_first_shoulder_exit_threshold_support_note_2026-04-21` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | A | - |
 | `dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
@@ -4491,6 +4491,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — The note asserts the Clifford/gamma algebra consequences but does not provide the Gamma_i defining relations, chirality commutation relations, runner output, or runner source needed to verify the algebra inside the restricted packet. The missing step is an explicit derivation or auditable computation of the commutator and trace identities from the stated axiom-level operator definitions.
 - **rationale:** The load-bearing step is an algebraic identity claim, not a renaming or numerical match. However, with no cited authorities, no runner stdout, and no runner source, the restricted packet contains only the theorem statement and a description of checks, not the checks themselves. Because the relevant operator algebra is not fully specified in the packet, the claimed exact weak-vector theorem does not close on its own terms in this audit.
 - **auditor confidence:** medium
+
+### `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_Z3_CIRCULANT_MASS_BASIS_NO_GO_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_Z3_CIRCULANT_MASS_BASIS_NO_GO_NOTE_2026-04-15.md)
+- **claim_type:** `no_go`
+- **claim_scope:** For the explicitly stated exact Z_3-character circulant kernel family K = d I + r(chi S + chi* S^2) on the current Majorana stack M_R = [[A,0,0],[0,eps,B],[0,B,eps]], the standard heavy-neutrino mass-basis leptogenesis CP tensor entries Im[(K_mass)_{1j}^2] vanish.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-dm_neutrino_z3_circulant_mass_basis_no_go_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Every exact Z_3-covariant circulant kernel is diagonalized by U_Z3 with a real diagonal spectrum, and the remaining heavy-neutrino mass-basis change is real orthogonal, so K_mass stays real symmetric and Im[(K_mass)_{1j}^2] = 0 for all j.  _(class `A`)_
+- **chain closes:** True — The no-go is an exact linear-algebra statement: the Z_3 Fourier basis makes the stated circulant kernel real diagonal, and the stated Majorana doublet diagonalization is a real orthogonal rotation, which cannot generate imaginary squared off-diagonal entries. Within the stated current-stack assumptions, no extra physical bridge is needed to conclude the CP tensor vanishes.
+- **rationale:** The load-bearing step is an algebraic no-go over the kernel family and mass matrix stated in the note, not a numerical fit or renaming. The cached runner output reports PASS=4 FAIL=0 and checks the same three algebraic pieces: Z_3 diagonalization, real doublet rotation, and vanishing Im[(K_mass)_{1j}^2]. Residual risk is that the runner uses representative numeric d,r samples rather than symbolic quantification over all real d,r, but the note's closed-form Fourier/circulant argument supplies the exact family closure.
+- **auditor confidence:** high
 
 ### `dm_pmns_asymptotic_source_no_go_note_2026-04-20`
 
