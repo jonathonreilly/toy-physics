@@ -1,5 +1,22 @@
 # Review History
 
+## 2026-05-05 Non-Chunk Future-Artifact Intake Self-Review
+
+Disposition: pass as exact negative boundary / non-chunk stop until new input.
+
+Findings:
+
+- The runner does not produce or infer any new same-surface row, certificate,
+  theorem, or production evidence; it only tests whether a named strict future
+  artifact is present for intake.
+- The gate loads no chunk MC and does not package or rerun chunk outputs.
+- All six non-chunk worklist units remain blocked, all strict future paths are
+  absent, and current/chunk-only assembly remains rejected.
+- Aggregate assembly, retained-route, and campaign certificates now include
+  this cycle-9 boundary and still deny proposal authority.
+- The honest next action is to stop current-surface non-chunk shortcut cycling
+  until a named strict future same-surface artifact exists.
+
 ## 2026-05-05 Schur Compressed-Denominator Row-Bootstrap Self-Review
 
 Disposition: pass as exact negative boundary / open campaign.

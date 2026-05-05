@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact negative boundary / current PR230 non-chunk route queue exhausted; positive closure still open
+actual_current_surface_status: exact negative boundary / PR230 non-chunk future-artifact intake finds no executable current route; positive closure still open
 conditional_surface_status: conditional-support if C_sH/C_HH Gram purity, W/Z response, or rank-one neutral scalar theorem closes the overlap
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "The Legendre source-pole operator is derived, but no current-surface premise supplies physical overlap authority, scalar-LSZ authority, same-surface Schur A/B/C kernel rows, W/Z rows, or neutral-rank authority; the current non-chunk route queue is exhausted without named future artifacts."
+proposal_allowed_reason: "The Legendre source-pole operator is derived, but no current-surface premise supplies physical overlap authority, scalar-LSZ authority, same-surface Schur A/B/C kernel rows, W/Z rows, or neutral-rank authority; the current non-chunk route queue is exhausted and the cycle-9 future-artifact intake gate finds no named future artifact."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -143,6 +143,11 @@ Open imports:
   row/certificate file named by the worklist is absent, current and chunk-only
   assembly are rejected, and no current-surface shortcut remains executable
   without a new same-surface row, certificate, or theorem;
+- the PR230 non-chunk future-artifact intake gate is an exact negative
+  boundary: the cycle-8 exhaustion surface remains closed, all six worklist
+  units are still blocked, every named strict future path is absent on disk,
+  the dramatic-step gate has no executable intake route, and no proposal is
+  authorized;
 - the Schur/K-prime row absence guard has been refreshed against the current
   46-chunk production surface; it scanned `93` current output/certificate
   files and found `0` complete Schur row hits, so current FH/LSZ source rows

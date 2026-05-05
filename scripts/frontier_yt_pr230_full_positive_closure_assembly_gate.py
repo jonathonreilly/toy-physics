@@ -85,6 +85,7 @@ PARENTS = {
     "schur_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
     "schur_compressed_bootstrap_no_go": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
     "nonchunk_current_surface_exhaustion": "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json",
+    "nonchunk_future_artifact_intake": "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -424,6 +425,18 @@ def main() -> int:
             "current_surface_exhaustion_gate_passed"
         )
         is True
+    )
+    nonchunk_future_artifact_intake_closed = (
+        "future-artifact intake" in statuses["nonchunk_future_artifact_intake"]
+        and certs["nonchunk_future_artifact_intake"].get("proposal_allowed") is False
+        and certs["nonchunk_future_artifact_intake"].get(
+            "future_artifact_intake_gate_passed"
+        )
+        is True
+        and certs["nonchunk_future_artifact_intake"].get("dramatic_step_gate", {}).get(
+            "passed"
+        )
+        is False
     )
 
     current_state = {
@@ -812,6 +825,11 @@ def main() -> int:
         nonchunk_current_surface_exhausted,
         statuses["nonchunk_current_surface_exhaustion"],
     )
+    report(
+        "nonchunk-future-artifact-intake-recorded",
+        nonchunk_future_artifact_intake_closed,
+        statuses["nonchunk_future_artifact_intake"],
+    )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
@@ -831,7 +849,9 @@ def main() -> int:
             "full positive closure remains open."
             " The cycle-8 current-surface exhaustion gate now records that no "
             "hidden non-chunk shortcut remains executable without one of the "
-            "named future same-surface rows, certificates, or theorems."
+            "named future same-surface rows, certificates, or theorems.  The "
+            "cycle-9 future-artifact intake gate records that no such named "
+            "artifact has appeared on the current surface."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (

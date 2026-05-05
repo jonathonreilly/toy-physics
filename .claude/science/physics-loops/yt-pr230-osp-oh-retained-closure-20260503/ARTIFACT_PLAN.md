@@ -1,5 +1,12 @@
 # Artifact Plan
 
+Completed in the future-artifact intake continuation:
+
+- `scripts/frontier_yt_pr230_nonchunk_future_artifact_intake_gate.py`
+- `docs/YT_PR230_NONCHUNK_FUTURE_ARTIFACT_INTAKE_GATE_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
 Completed in the Schur compressed-denominator row-bootstrap continuation:
 
 - `scripts/frontier_yt_schur_compressed_denominator_row_bootstrap_no_go.py`

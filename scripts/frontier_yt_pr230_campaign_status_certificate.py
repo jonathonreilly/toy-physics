@@ -163,6 +163,9 @@ def main() -> int:
         "pr230_nonchunk_current_surface_exhaustion": load(
             "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json"
         ),
+        "pr230_nonchunk_future_artifact_intake": load(
+            "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -2355,6 +2358,21 @@ def main() -> int:
         )
         is True,
         statuses["pr230_nonchunk_current_surface_exhaustion"],
+    )
+    report(
+        "pr230-nonchunk-future-artifact-intake-recorded",
+        "future-artifact intake" in str(statuses["pr230_nonchunk_future_artifact_intake"])
+        and certificates["pr230_nonchunk_future_artifact_intake"].get("proposal_allowed")
+        is False
+        and certificates["pr230_nonchunk_future_artifact_intake"].get(
+            "future_artifact_intake_gate_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_future_artifact_intake"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False,
+        statuses["pr230_nonchunk_future_artifact_intake"],
     )
 
     remaining_routes = [

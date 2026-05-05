@@ -154,6 +154,7 @@ def main() -> int:
         "schur_row_candidate_extraction_attempt": "outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json",
         "schur_compressed_denominator_row_bootstrap_no_go": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
         "pr230_nonchunk_current_surface_exhaustion": "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json",
+        "pr230_nonchunk_future_artifact_intake": "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
@@ -2030,6 +2031,22 @@ def main() -> int:
         )
         is True
     )
+    pr230_nonchunk_future_artifact_intake_blocks = (
+        "future-artifact intake"
+        in certificates["pr230_nonchunk_future_artifact_intake"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_nonchunk_future_artifact_intake"].get("proposal_allowed")
+        is False
+        and certificates["pr230_nonchunk_future_artifact_intake"].get(
+            "future_artifact_intake_gate_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_future_artifact_intake"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
     interacting_kinetic_still_open = (
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status")
         == "bounded-support / interacting kinetic background sensitivity"
@@ -3038,6 +3055,13 @@ def main() -> int:
         ),
     )
     report(
+        "pr230-nonchunk-future-artifact-intake-blocks-shortcuts",
+        pr230_nonchunk_future_artifact_intake_blocks,
+        certificates["pr230_nonchunk_future_artifact_intake"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "interacting-kinetic-route-still-needs-ensemble-or-theorem",
         interacting_kinetic_still_open,
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status", ""),
@@ -3403,7 +3427,9 @@ def main() -> int:
             "currently rejects both the current surface and a hypothetical "
             "chunk-only completion.  The non-chunk current-surface exhaustion "
             "gate also records that no hidden branch-local shortcut remains "
-            "without a named future same-surface row, certificate, or theorem."
+            "without a named future same-surface row, certificate, or theorem.  "
+            "The future-artifact intake gate records that no such named input "
+            "is present on the current surface."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

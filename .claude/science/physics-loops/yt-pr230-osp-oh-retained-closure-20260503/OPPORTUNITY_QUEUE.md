@@ -1,5 +1,11 @@
 # Opportunity Queue
 
+Cycle-9 update: the future-artifact intake gate found no named strict
+same-surface row, certificate, or theorem on the current branch.  The queue
+therefore has no executable current-surface non-chunk item.  The ranked rows
+below remain future opportunities only; they should not be cycled again until
+their first-action artifact exists.
+
 Cycle-8 update: the current-surface non-chunk queue is exhausted.  The rows
 below remain the only future positive opportunities, but none is executable on
 the present surface without a new same-surface row, certificate, or theorem.

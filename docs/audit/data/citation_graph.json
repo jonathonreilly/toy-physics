@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T05:53:36.715302+00:00",
+  "generated_at": "2026-05-05T06:07:41.355213+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41938,6 +41938,16 @@
       "runner_path": "scripts/frontier_yt_pr230_nonchunk_current_surface_exhaustion_gate.py",
       "title": "PR230 Non-Chunk Current-Surface Exhaustion Gate"
     },
+    "yt_pr230_nonchunk_future_artifact_intake_gate_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_future_artifact_intake_gate_note_2026-05-05",
+      "current_status": "open",
+      "current_status_raw": "exact negative boundary / no executable current non-chunk intake route; positive closure still open.",
+      "deps": [],
+      "note_hash": "d36f7b11ec21c6369c738ee135312e9dfb88e639621b1b29fbbe95456c4dcaa1",
+      "path": "docs/YT_PR230_NONCHUNK_FUTURE_ARTIFACT_INTAKE_GATE_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_nonchunk_future_artifact_intake_gate.py",
+      "title": "PR230 Non-Chunk Future-Artifact Intake Gate"
+    },
     "yt_pr230_nonchunk_route_family_import_audit_note_2026-05-05": {
       "claim_id": "yt_pr230_nonchunk_route_family_import_audit_note_2026-05-05",
       "current_status": "open",
@@ -44640,6 +44650,7 @@
     "yt_pr230_matching_running_bridge_gate_note_2026-05-04",
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
     "yt_pr230_nonchunk_current_surface_exhaustion_gate_note_2026-05-05",
+    "yt_pr230_nonchunk_future_artifact_intake_gate_note_2026-05-05",
     "yt_pr230_nonchunk_route_family_import_audit_note_2026-05-05",
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
     "yt_pr230_queue_exhaustion_certificate_note_2026-05-01",
@@ -44762,13 +44773,13 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1010,
-    "node_count": 1963,
-    "root_count": 1476,
-    "runners_with_path": 1481,
+    "leaf_count": 1011,
+    "node_count": 1964,
+    "root_count": 1477,
+    "runners_with_path": 1482,
     "status_counts": {
       "bounded": 546,
-      "open": 100,
+      "open": 101,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 426,

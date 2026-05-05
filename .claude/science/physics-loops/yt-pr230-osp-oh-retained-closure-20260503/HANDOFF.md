@@ -1,5 +1,43 @@
 # Handoff
 
+## 2026-05-05 PR230 Non-Chunk Future-Artifact Intake Gate
+
+Cycle 9 tested the only honest post-exhaustion non-chunk route: whether a
+named strict same-surface row, certificate, or theorem has appeared after the
+cycle-8 current-surface exhaustion gate.
+
+Result: exact negative boundary.  The new runner reloads the worklist,
+exhaustion gate, assembly gate, retained-route certificate, and campaign
+certificate.  It verifies that all six non-chunk work units remain blocked, the
+future-file presence schemas agree, every listed strict future path is absent
+on disk, current and chunk-only assembly remain rejected, and no proposal is
+authorized.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_nonchunk_future_artifact_intake_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=50 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=198 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=225 FAIL=0
+```
+
+Claim boundary: no retained/proposed-retained closure, no chunk packaging, no
+new shortcut attempt, and no current-surface non-chunk route unless a named
+strict future same-surface artifact is supplied.
+
+Next exact action: stop current-surface non-chunk shortcut cycling.  Reopen
+only when a named strict same-surface row, certificate, or theorem exists; then
+rerun the worklist, assembly, retained-route, and campaign gates before any
+proposal language.
+
 ## 2026-05-05 PR230 Non-Chunk Current-Surface Exhaustion Gate
 
 Cycle 8 converted the post-Schur checkpoint into a strict current-surface

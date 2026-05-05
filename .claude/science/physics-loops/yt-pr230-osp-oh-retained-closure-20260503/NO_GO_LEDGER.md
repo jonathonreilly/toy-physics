@@ -28,3 +28,4 @@
 | Same-surface `O_H` identity/normalization from current PR230 primitives | closed negatively | `YT_CANONICAL_OH_PREMISE_STRETCH_NO_GO_NOTE_2026-05-05.md` |
 | Source-only neutral support plus conditional Perron theorem as primitive-cone irreducibility | closed negatively | `YT_NEUTRAL_SCALAR_PRIMITIVE_CONE_STRETCH_NO_GO_NOTE_2026-05-05.md` |
 | Any remaining current-surface non-chunk shortcut after the May 5 worklist | closed negatively / queue exhausted on current surface | `YT_PR230_NONCHUNK_CURRENT_SURFACE_EXHAUSTION_GATE_NOTE_2026-05-05.md` |
+| Post-exhaustion non-chunk route without a named strict future same-surface artifact | closed negatively / no executable intake route | `YT_PR230_NONCHUNK_FUTURE_ARTIFACT_INTAKE_GATE_NOTE_2026-05-05.md` |
