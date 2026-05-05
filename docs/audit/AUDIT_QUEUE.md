@@ -1,10 +1,10 @@
 # Audit Queue
 
-**Total pending:** 1148
-**Ready (all deps already at retained-grade or metadata tiers):** 289
+**Total pending:** 1147
+**Ready (all deps already at retained-grade or metadata tiers):** 290
 
 By criticality:
-- `critical`: 776
+- `critical`: 775
 - `high`: 25
 - `medium`: 139
 - `leaf`: 208
@@ -15,8 +15,8 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `third_grown_family_boundary_note` | bounded_theorem | audit_in_progress | critical | 301 | 9.24 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/THIRD_GROWN_FAMILY_SIGN_SWEEP.py` |
-| 2 | `alt_connectivity_family_basin_note` | bounded_theorem | audit_in_progress | critical | 299 | 10.23 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/ALT_CONNECTIVITY_FAMILY_BASIN.py` |
+| 1 | `alt_connectivity_family_basin_note` | bounded_theorem | audit_in_progress | critical | 299 | 10.23 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/ALT_CONNECTIVITY_FAMILY_BASIN.py` |
+| 2 | `third_grown_family_sign_note` | bounded_theorem | unaudited | critical | 299 | 9.73 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/THIRD_GROWN_FAMILY_SIGN_SWEEP.py` |
 | 3 | `fourth_family_quadrant_note` | bounded_theorem | audit_in_progress | critical | 297 | 9.22 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/FOURTH_FAMILY_QUADRANT_SWEEP.py` |
 | 4 | `fifth_family_radial_boundary_note` | bounded_theorem | audit_in_progress | critical | 296 | 8.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/FIFTH_FAMILY_RADIAL_FAILURE_AUDIT.py` |
 | 5 | `source_resolved_wavefield_v2_note` | bounded_theorem | audit_in_progress | critical | 295 | 8.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/source_resolved_wavefield_v2.py` |
