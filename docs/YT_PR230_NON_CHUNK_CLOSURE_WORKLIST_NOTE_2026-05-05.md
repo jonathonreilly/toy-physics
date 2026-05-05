@@ -33,6 +33,9 @@ This is an integration/worklist gate, not a physics closure theorem.
   Longitudinal/Goldstone-equivalence bookkeeping is also closed as source
   identity authority by
   `outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json`.
+  Existing builders, scout schemas, support-only W decompositions, and no-go
+  gates are also now closed as covariance-theorem import authority by
+  `outputs/yt_top_wz_covariance_theorem_import_audit_2026-05-05.json`.
 - **Scalar-LSZ model/FV/IR:** produce a strict Stieltjes/Pade
   moment-threshold-FV certificate, a same-surface contact-subtraction
   certificate, a scalar-denominator/analytic-continuation theorem, or a
@@ -76,8 +79,10 @@ canonical `O_H` stretch, and the W/Z source-coordinate transport block closed
 negatively, the cycle-5 audit selected the neutral primitive-cone stretch as
 the next hard residual to close.  The cycle-6 audit selected same-source
 W/Z response and recorded the Goldstone-equivalence source-identity no-go.
-The cycle-7 audit now selects the Schur/scalar-denominator row family and
-records the compressed-denominator row-bootstrap no-go.
+The cycle-7 audit selected the Schur/scalar-denominator row family and
+recorded the compressed-denominator row-bootstrap no-go.  The cycle-13 audit
+selects the same-source W/Z family again and closes the current-branch
+covariance-theorem import shortcut.
 
 ## 2026-05-05 Source-Higgs Unratified-Gram Update
 
@@ -126,6 +131,19 @@ The same-source W/Z route remains open only through real W/Z response rows or
 a strict same-surface identity/covariance/correction theorem; equivalence
 structure alone does not supply source-coordinate authority.
 
+## 2026-05-05 Top/W Covariance-Theorem Import Update
+
+The worklist now consumes
+`outputs/yt_top_wz_covariance_theorem_import_audit_2026-05-05.json`.  This
+closes the remaining W/Z import shortcut: current top/W builders, scout
+schemas, support-only W decompositions, and no-go gates are not a strict
+same-surface product-measure, conditional-independence, or closed-covariance
+theorem.
+
+The same-source W/Z route remains open only through measured matched top/W
+response rows or a new admissible joint covariance theorem, in addition to the
+source-identity, W/Z, `g_2`, sector-overlap, and correction certificates.
+
 ## 2026-05-05 Neutral Primitive-Cone Stretch Update
 
 The worklist now consumes
@@ -157,5 +175,5 @@ from a neutral scalar kernel theorem or measurement.
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
 python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
-# SUMMARY: PASS=30 FAIL=0
+# SUMMARY: PASS=31 FAIL=0
 ```

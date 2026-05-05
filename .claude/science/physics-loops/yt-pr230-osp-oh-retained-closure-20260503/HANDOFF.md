@@ -3003,3 +3003,53 @@ production `C_ss/C_sH/C_HH` pole residues can be used.  If that surface is not
 available, move to W/Z matched rows, Schur `A/B/C` rows, neutral primitive-cone
 authority, or scalar-LSZ moment/threshold/FV authority.  The chunk worker
 remains separate.
+
+## 2026-05-05 Top/W Covariance-Theorem Import Audit
+
+Cycle 13 returned to the top-ranked same-source W/Z response route and closed
+the remaining current-branch import shortcut.  The tested shortcut was whether
+existing top/W builders, scout schemas, support-only W decompositions, or
+no-go gates could be imported as the strict same-surface product-measure,
+conditional-independence, or closed-covariance theorem needed to avoid matched
+top/W rows.
+
+Verification:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_top_wz_covariance_theorem_import_audit.py \
+  scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py \
+  scripts/frontier_yt_pr230_non_chunk_closure_worklist.py \
+  scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py \
+  scripts/frontier_yt_retained_closure_route_certificate.py \
+  scripts/frontier_yt_pr230_campaign_status_certificate.py
+
+python3 scripts/frontier_yt_top_wz_covariance_theorem_import_audit.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+# SUMMARY: PASS=31 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=53 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=201 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=228 FAIL=0
+```
+
+Result: exact negative boundary, not closure.  The current branch has no
+importable same-surface top/W joint covariance theorem.  The future theorem
+path `outputs/yt_top_wz_closed_covariance_theorem_2026-05-05.json` remains
+absent, and all aggregate gates still deny proposal authority.
+
+Next exact action: stop current-surface non-chunk shortcut cycling.  Reopen
+only after measured matched top/W rows, a new parseable same-surface joint
+covariance theorem, source-Higgs rows after a real `O_H` certificate, Schur
+`A/B/C` rows, scalar-LSZ contact/threshold/FV authority, or neutral
+primitive-cone irreducibility exists.  Then rerun reopen-admissibility plus
+the worklist, exhaustion, intake, assembly, retained-route, and campaign gates.

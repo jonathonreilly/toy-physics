@@ -1206,3 +1206,14 @@ refreshed at `PASS=132 FAIL=0`.  The gate makes the future row schema
 executable and rejects source-only `C_ss` plus `kappa_s=1` shortcuts.  The
 current row file is absent, so no retained/proposed-retained wording is
 authorized.
+
+Latest cycle-13 W/Z covariance-theorem import checkpoint: the retained-route
+certificate now includes
+`scripts/frontier_yt_top_wz_covariance_theorem_import_audit.py` and is
+refreshed at `PASS=201 FAIL=0`.  Current top/W builders, scout schemas,
+support-only W decompositions, and no-go gates are not importable
+same-surface product-measure, conditional-independence, or closed-covariance
+theorem authority.  The W/Z route still needs measured matched top/W rows or
+a new strict joint covariance theorem plus source-identity, W/Z, `g_2`,
+sector-overlap, and correction certificates.  No retained/proposed-retained
+wording is authorized.

@@ -1148,3 +1148,12 @@ Latest Schur kernel row contract checkpoint: campaign status now includes
 executable, validates a positive in-memory witness, and rejects source-only
 `C_ss` plus `kappa_s=1` shortcuts.  It is not closure because the current
 Schur row file is absent and the canonical-Higgs identity remains open.
+
+Latest cycle-13 W/Z covariance-theorem import checkpoint: campaign status now
+includes `scripts/frontier_yt_top_wz_covariance_theorem_import_audit.py` and
+reports `PASS=228 FAIL=0`.  The current W/Z route has no importable
+same-surface top/W joint covariance theorem: builders, scout schemas,
+support-only W decompositions, and no-go gates remain non-authority.  Positive
+closure still requires a new strict joint covariance theorem or measured
+matched rows, plus the other W/Z identity/correction certificates and the
+scalar-LSZ and matching gates.

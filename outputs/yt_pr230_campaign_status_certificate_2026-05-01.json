@@ -255,7 +255,7 @@
     "pr230_nonchunk_current_surface_exhaustion": "exact negative boundary / current PR230 non-chunk route queue exhausted; positive closure still open",
     "pr230_nonchunk_future_artifact_intake": "exact negative boundary / PR230 non-chunk future-artifact intake finds no executable current route; positive closure still open",
     "pr230_nonchunk_reopen_admissibility": "exact negative boundary / PR230 non-chunk reopen-admissibility gate: no future artifact candidate is admissible on the current surface; positive closure still open",
-    "pr230_nonchunk_route_family_import_audit": "open / non-chunk route-family import audit records Schur compressed-denominator row-bootstrap no-go",
+    "pr230_nonchunk_route_family_import_audit": "open / non-chunk route-family import audit records W/Z covariance-theorem import no-go",
     "pr230_nonchunk_terminal_route_exhaustion": "exact negative boundary / PR230 non-chunk terminal route-exhaustion gate: no current route may continue without a named same-surface artifact; positive closure still open",
     "production_resource": "bounded support / production resource projection",
     "projector_norm": "exact negative boundary / projector-normalization obstruction",
@@ -319,6 +319,7 @@
     "taste_corner_ladder_pole_obstruction": "exact negative boundary / finite-ladder taste-corner pole-witness obstruction",
     "taste_singlet_ladder_normalization": "exact negative boundary / taste-singlet normalization removes finite ladder crossings",
     "top_wz_covariance_marginal_derivation_no_go": "exact negative boundary / matched top-W covariance not derivable from marginal response support",
+    "top_wz_covariance_theorem_import_audit": "exact negative boundary / no importable same-surface top-W covariance theorem on current PR230 surface",
     "top_wz_deterministic_response_covariance_gate": "exact negative boundary / deterministic W response covariance shortcut not derived on current PR230 surface",
     "top_wz_factorization_independence_gate": "exact negative boundary / same-source top-W factorization not derived on current PR230 surface",
     "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
@@ -341,7 +342,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 227,
+  "pass_count": 228,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

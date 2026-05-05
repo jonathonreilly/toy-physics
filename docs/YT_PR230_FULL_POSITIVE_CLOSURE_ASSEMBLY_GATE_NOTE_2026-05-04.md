@@ -139,6 +139,13 @@ future artifact must be a parseable claim-status artifact before the
 non-chunk route surface can reopen.  The assembly gate remains open with
 `PASS=52 FAIL=0`.
 
+2026-05-05 top/W covariance-theorem import update: the gate now also consumes
+`outputs/yt_top_wz_covariance_theorem_import_audit_2026-05-05.json`.
+Current top/W builders, scout schemas, support-only W decompositions, and
+no-go gates are not importable same-surface product-measure,
+conditional-independence, or closed-covariance theorem authority.  The
+assembly gate remains open with `PASS=53 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 
@@ -152,9 +159,9 @@ The current positive non-chunk bridge candidates remain:
   missing source-to-Higgs transport certificate, missing W/Z correlator
   mass-fit rows, missing lightweight W-response production row certificate,
   missing strict `delta_perp` tomography/null/purity correction certificate,
-  missing matched top/W rows or a strict same-surface top/W factorization
+  missing matched top/W rows or a strict same-surface top/W joint covariance
   theorem, missing sector-overlap identity, missing canonical-Higgs identity,
-  and the new Goldstone-equivalence source-identity no-go;
+  and the Goldstone-equivalence plus covariance-theorem import no-gos;
 - Schur/K-prime kernel rows, blocked by absent same-surface Schur `A/B/C` rows
   and the separate canonical bridge; compressed denominator data also does not
   reconstruct those rows;

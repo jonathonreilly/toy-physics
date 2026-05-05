@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T06:47:18.950317+00:00",
+  "generated_at": "2026-05-05T07:11:34.646048+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17629,6 +17629,18 @@
       "dominant_class": "A",
       "runner": "scripts/frontier_yt_top_wz_covariance_marginal_derivation_no_go.py"
     },
+    "yt_top_wz_covariance_theorem_import_audit_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_top_wz_covariance_theorem_import_audit.py"
+    },
     "yt_top_wz_deterministic_response_covariance_gate_note_2026-05-05": {
       "assert_count": 1,
       "counts": {
@@ -35235,6 +35247,21 @@
       "dominant_class": "A",
       "exists": true
     },
+    "scripts/frontier_yt_top_wz_covariance_theorem_import_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_top_wz_covariance_theorem_import_audit_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_top_wz_deterministic_response_covariance_gate.py": {
       "assert_count": 1,
       "claims": [
@@ -39180,12 +39207,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 211,
-      "C": 490,
+      "C": 491,
       "D": 291,
       "none": 404
     },
-    "runners_classified": 1405,
-    "runners_with_C": 727,
-    "runners_with_D": 507
+    "runners_classified": 1406,
+    "runners_with_C": 728,
+    "runners_with_D": 508
   }
 }

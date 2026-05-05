@@ -93,6 +93,12 @@ Open imports:
   same-surface covariance formula, and the current EW action, top identity,
   W/Z mass-fit, non-observed `g_2`, and overlap/correction certificates remain
   absent;
+- top/W covariance-theorem import audit is closed negatively on the current
+  PR230 surface: current builders, scout schemas, support-only W
+  decompositions, and no-go gates are not a same-surface product-measure,
+  conditional-independence, or closed-covariance theorem.  A future positive
+  route needs a new parseable joint covariance theorem or measured matched
+  top/W response rows;
 - W/Z source-coordinate transport shortcut is closed negatively on the current
   PR230 surface: static `dM_W/dh` cannot become a same-source `dM_W/ds` row
   without a same-surface source-to-Higgs Jacobian certificate, so the W/Z

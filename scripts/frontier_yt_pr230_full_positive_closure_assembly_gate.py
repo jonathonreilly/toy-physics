@@ -61,6 +61,7 @@ PARENTS = {
     "top_wz_covariance_marginal_derivation_no_go": "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
     "top_wz_factorization_independence_gate": "outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json",
     "top_wz_deterministic_response_covariance_gate": "outputs/yt_top_wz_deterministic_response_covariance_gate_2026-05-05.json",
+    "top_wz_covariance_theorem_import_audit": "outputs/yt_top_wz_covariance_theorem_import_audit_2026-05-05.json",
     "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
     "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
     "same_source_w_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
@@ -217,6 +218,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "marginal derivation of top/W covariance rejected",
                 "same-source/native top/W factorization-independence shortcut rejected",
                 "deterministic W-response covariance shortcut rejected",
+                "current-branch covariance-theorem import shortcut rejected",
                 "same-source top-response certificate absent",
                 "same-source W-response row builder strict inputs absent",
                 "lightweight same-source W readout production rows absent",
@@ -735,6 +737,18 @@ def main() -> int:
         )
         is False,
         statuses["top_wz_deterministic_response_covariance_gate"],
+    )
+    report(
+        "top-wz-covariance-theorem-import-audit-blocks",
+        "no importable same-surface top-W covariance theorem"
+        in statuses["top_wz_covariance_theorem_import_audit"]
+        and certs["top_wz_covariance_theorem_import_audit"].get("proposal_allowed")
+        is False
+        and certs["top_wz_covariance_theorem_import_audit"].get(
+            "covariance_theorem_import_audit_passed"
+        )
+        is True,
+        statuses["top_wz_covariance_theorem_import_audit"],
     )
     report(
         "same-source-top-response-builder-open",

@@ -330,6 +330,19 @@ matched rows or a strict same-surface covariance theorem plus the EW action,
 top identity, W/Z mass-fit, non-observed `g_2`, and overlap/correction
 certificates.
 
+Completed in the cycle-13 W/Z covariance-theorem import audit:
+
+- `scripts/frontier_yt_top_wz_covariance_theorem_import_audit.py`
+- `docs/YT_TOP_WZ_COVARIANCE_THEOREM_IMPORT_AUDIT_NOTE_2026-05-05.md`
+- `outputs/yt_top_wz_covariance_theorem_import_audit_2026-05-05.json`
+- refreshed full assembly, retained-route, campaign, non-chunk worklist, and
+  route-family audit certificates.
+
+This closes the current-branch theorem import shortcut negatively.  Builders,
+scout schemas, support-only W decompositions, and no-go gates cannot replace a
+new same-surface top/W joint covariance theorem or measured matched top/W
+response rows.
+
 Completed in the W/Z source-coordinate transport continuation:
 
 - `scripts/frontier_yt_wz_source_coordinate_transport_no_go.py`

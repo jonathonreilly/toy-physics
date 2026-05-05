@@ -353,6 +353,9 @@ def main() -> int:
         "top_wz_deterministic_response_covariance_gate": load(
             "outputs/yt_top_wz_deterministic_response_covariance_gate_2026-05-05.json"
         ),
+        "top_wz_covariance_theorem_import_audit": load(
+            "outputs/yt_top_wz_covariance_theorem_import_audit_2026-05-05.json"
+        ),
         "same_source_top_response_builder": load(
             "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json"
         ),
@@ -1046,7 +1049,7 @@ def main() -> int:
         and certificates["pr230_nonchunk_route_family_import_audit"]
         .get("selected_route", {})
         .get("id")
-        == "schur_scalar_denominator_rows",
+        == "same_source_wz_response",
         statuses["pr230_nonchunk_route_family_import_audit"],
     )
     report(
@@ -1651,6 +1654,18 @@ def main() -> int:
         )
         is False,
         statuses["top_wz_deterministic_response_covariance_gate"],
+    )
+    report(
+        "top-wz-covariance-theorem-import-audit-blocks",
+        "no importable same-surface top-W covariance theorem"
+        in str(statuses["top_wz_covariance_theorem_import_audit"])
+        and certificates["top_wz_covariance_theorem_import_audit"].get("proposal_allowed")
+        is False
+        and certificates["top_wz_covariance_theorem_import_audit"].get(
+            "covariance_theorem_import_audit_passed"
+        )
+        is True,
+        statuses["top_wz_covariance_theorem_import_audit"],
     )
     report(
         "same-source-w-response-row-builder-open",

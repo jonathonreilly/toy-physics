@@ -1239,3 +1239,27 @@ Findings checked:
   package or rerun chunk MC, and do not use observed selectors, `H_unit`/Ward/
   `yt_ward` authority, `alpha_LM`/plaquette/u0, `y_t_bare`, or bare-coupling
   shortcuts as premises.
+
+# 2026-05-05 Top/W Covariance-Theorem Import Audit Review
+
+Disposition: pass as exact negative boundary / open campaign, not as closure.
+
+Findings checked:
+
+- No subagents were used because this session did not explicitly authorize
+  delegation.
+- The runner attacks a distinct W/Z shortcut after the marginal,
+  factorization, deterministic-W, transport, and Goldstone no-gos: importing
+  current builders, scout schemas, support-only W decompositions, or no-go
+  gates as the missing joint covariance theorem.
+- The audit requires a future parseable same-surface theorem artifact or
+  measured matched top/W rows; current surfaces are classified as open,
+  support, scout, or no-go, never as theorem authority.
+- The aggregate assembly, retained-route, campaign, worklist, and route-family
+  gates consume the new audit while keeping `proposal_allowed=false`.
+- Local review found that the new note needed the conventional `Status:`
+  header for audit-lane parsing; that header was added and the audit pipeline
+  was rerun with no errors.
+- The note and runner do not claim retained/proposed_retained closure, do not
+  synthesize matched rows, do not promote scout outputs, do not load chunk MC,
+  and do not use any of the user-banned shortcut authorities as premises.

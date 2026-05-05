@@ -105,6 +105,7 @@ def family_rows(worklist: dict[str, Any]) -> list[dict[str, Any]]:
                 worklist,
                 [
                     "matched_top_wz_rows",
+                    "top_wz_closed_covariance_theorem",
                     "deterministic_response_covariance_certificate",
                     "source_coordinate_transport_certificate",
                     "wz_mass_response_rows",
@@ -115,10 +116,11 @@ def family_rows(worklist: dict[str, Any]) -> list[dict[str, Any]]:
             "open_import_count": 6,
             "runner_or_gate_available": True,
             "can_execute_now": False,
+            "cycle13_selected_shortcut": True,
             "dramatic_step_score": 5,
             "hard_residual_pressure": 5,
-            "current_disposition": "cycle-6 W/Z stretch executed; source-coordinate transport and Goldstone-equivalence source identity both close negatively",
-            "retirement_path": "produce matched rows or prove a same-surface product/covariance theorem plus source-transport authority",
+            "current_disposition": "cycle-13 W/Z covariance-theorem import audit executed; source-coordinate transport, Goldstone-equivalence source identity, and existing covariance-theorem import shortcuts are closed negatively",
+            "retirement_path": "produce matched rows or prove a new same-surface product/conditional-independence/closed-covariance theorem plus source-transport authority",
         },
         {
             "id": "scalar_lsz_polynomial_contact",
@@ -209,6 +211,7 @@ def main() -> int:
     selected = max(
         rows,
         key=lambda row: (
+            bool(row.get("cycle13_selected_shortcut")),
             bool(row["can_execute_now"]),
             int(row["dramatic_step_score"]),
             int(row["hard_residual_pressure"]),
@@ -227,9 +230,9 @@ def main() -> int:
         "proposal_allowed remains false",
     )
     report(
-        "selected-route-reflects-cycle7-schur-bootstrap",
-        selected["id"] == "schur_scalar_denominator_rows"
-        and "compressed-denominator row-bootstrap no-go" in selected["current_disposition"],
+        "selected-route-reflects-cycle13-wz-covariance-import-audit",
+        selected["id"] == "same_source_wz_response"
+        and "covariance-theorem import audit" in selected["current_disposition"],
         selected["id"],
     )
     report(
@@ -247,7 +250,7 @@ def main() -> int:
                 "y_t_bare",
             )
         )
-        and selected["id"] == "schur_scalar_denominator_rows",
+        and selected["id"] == "same_source_wz_response",
         "forbidden imports are explicit blockers, not premises",
     )
     report(
@@ -258,22 +261,26 @@ def main() -> int:
 
     result = {
         "actual_current_surface_status": (
-            "open / non-chunk route-family import audit records Schur compressed-denominator row-bootstrap no-go"
+            "open / non-chunk route-family import audit records W/Z covariance-theorem import no-go"
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "All audited route families retain open load-bearing imports.  The "
-            "cycle-7 Schur bootstrap no-go sharpens the scalar-denominator "
-            "route but cannot supply proposed_retained PR230 closure."
+            "cycle-13 W/Z covariance-theorem import audit sharpens the "
+            "same-source W/Z route but cannot supply proposed_retained PR230 "
+            "closure."
         ),
         "route_families_audited": rows,
         "selected_route": selected,
         "selection_reason": (
-            "After the W/Z, scalar contact, O_H premise, and neutral "
-            "primitive-cone shortcuts closed negatively, the Schur route still "
-            "had one exact executable shortcut: row bootstrap from compressed "
-            "denominator data.  It is now blocked on the current surface; every "
-            "positive route requires absent future rows or a same-surface theorem."
+            "After the W/Z source-coordinate transport, Goldstone-equivalence, "
+            "native-label factorization, deterministic-response, scalar contact, "
+            "O_H premise, Schur bootstrap, and neutral primitive-cone shortcuts "
+            "closed negatively, the top-ranked W/Z route still had one exact "
+            "import loophole: treating current builders, scout schemas, support "
+            "notes, or no-go gates as the missing joint covariance theorem.  "
+            "Cycle 13 closes that shortcut.  Every positive route now requires "
+            "absent future rows or a new same-surface theorem."
         ),
         "strict_non_claims": [
             "does not package or rerun chunk MC",
@@ -283,12 +290,13 @@ def main() -> int:
         ],
         "exact_next_action": (
             "Do not repeat source-only primitive-cone, scalar polynomial-contact, "
-            "static W/Z transport, or Goldstone-equivalence source-identity "
-            "shortcuts, and do not bootstrap Schur rows from compressed "
-            "denominator data.  The next positive move requires a strict future "
+            "static W/Z transport, Goldstone-equivalence source-identity, or "
+            "current-branch top/W covariance-theorem import shortcuts, and do not "
+            "bootstrap Schur rows from compressed denominator data.  The next positive move requires a strict future "
             "row/certificate surface: O_H/C_sH/C_HH rows, W/Z mass-response rows "
-            "with identities, Schur A/B/C rows, scalar-LSZ moment/threshold/FV "
-            "authority, or a neutral primitive-cone certificate."
+            "with identities or a new top/W joint covariance theorem, Schur A/B/C "
+            "rows, scalar-LSZ moment/threshold/FV authority, or a neutral "
+            "primitive-cone certificate."
         ),
         "parent_certificates": {
             "worklist": rel(WORKLIST),

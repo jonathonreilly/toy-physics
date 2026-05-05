@@ -182,6 +182,7 @@ def main() -> int:
         "top_wz_covariance_marginal_derivation_no_go": "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
         "top_wz_factorization_independence_gate": "outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json",
         "top_wz_deterministic_response_covariance_gate": "outputs/yt_top_wz_deterministic_response_covariance_gate_2026-05-05.json",
+        "top_wz_covariance_theorem_import_audit": "outputs/yt_top_wz_covariance_theorem_import_audit_2026-05-05.json",
         "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
         "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
         "same_source_w_response_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
@@ -1405,6 +1406,18 @@ def main() -> int:
             "strict_deterministic_response_covariance_gate_passed"
         )
         is False
+    )
+    top_wz_covariance_theorem_import_audit_blocks = (
+        "no importable same-surface top-W covariance theorem"
+        in certificates["top_wz_covariance_theorem_import_audit"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["top_wz_covariance_theorem_import_audit"].get("proposal_allowed")
+        is False
+        and certificates["top_wz_covariance_theorem_import_audit"].get(
+            "covariance_theorem_import_audit_passed"
+        )
+        is True
     )
     wz_correlator_mass_fit_path_gate_blocks = (
         "WZ correlator mass-fit path absent"
@@ -2720,6 +2733,11 @@ def main() -> int:
         "top-wz-deterministic-response-covariance-gate-blocks",
         top_wz_deterministic_response_covariance_gate_blocks,
         certificates["top_wz_deterministic_response_covariance_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "top-wz-covariance-theorem-import-audit-blocks",
+        top_wz_covariance_theorem_import_audit_blocks,
+        certificates["top_wz_covariance_theorem_import_audit"].get("actual_current_surface_status", ""),
     )
     report(
         "wz-correlator-mass-fit-path-gate-blocks",

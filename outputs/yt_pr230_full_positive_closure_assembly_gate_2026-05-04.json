@@ -126,6 +126,7 @@
     "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
     "source_pole_purity": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json",
     "top_wz_covariance_marginal_derivation_no_go": "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
+    "top_wz_covariance_theorem_import_audit": "outputs/yt_top_wz_covariance_theorem_import_audit_2026-05-05.json",
     "top_wz_deterministic_response_covariance_gate": "outputs/yt_top_wz_deterministic_response_covariance_gate_2026-05-05.json",
     "top_wz_factorization_independence_gate": "outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json",
     "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
@@ -194,6 +195,7 @@
     "source_pole_mixing": "exact negative boundary / source-pole canonical-Higgs mixing obstruction",
     "source_pole_purity": "open / source-pole purity cross-correlator gate not passed",
     "top_wz_covariance_marginal_derivation_no_go": "exact negative boundary / matched top-W covariance not derivable from marginal response support",
+    "top_wz_covariance_theorem_import_audit": "exact negative boundary / no importable same-surface top-W covariance theorem on current PR230 surface",
     "top_wz_deterministic_response_covariance_gate": "exact negative boundary / deterministic W response covariance shortcut not derived on current PR230 surface",
     "top_wz_factorization_independence_gate": "exact negative boundary / same-source top-W factorization not derived on current PR230 surface",
     "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
@@ -208,7 +210,7 @@
     "wz_same_source_action_semantic_firewall": "bounded-support / same-source EW action semantic firewall passed",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
   },
-  "pass_count": 52,
+  "pass_count": 53,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",
   "route_statuses": {
@@ -239,6 +241,7 @@
         "marginal derivation of top/W covariance rejected",
         "same-source/native top/W factorization-independence shortcut rejected",
         "deterministic W-response covariance shortcut rejected",
+        "current-branch covariance-theorem import shortcut rejected",
         "same-source top-response certificate absent",
         "same-source W-response row builder strict inputs absent",
         "lightweight same-source W readout production rows absent",

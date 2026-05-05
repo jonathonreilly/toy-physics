@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T06:47:15.360272+00:00",
+  "generated_at": "2026-05-05T07:11:31.188542+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41903,7 +41903,7 @@
       "current_status": "open",
       "current_status_raw": "open / active campaign continuing after current shortcut blocks",
       "deps": [],
-      "note_hash": "8d03470499710bf3a6b257db0776b0669a72232e215849c6f271eb6c17f5f6b7",
+      "note_hash": "77dafe500c2b7d2a07ec61fc4ce20e902c39b10736c1b87a1c7f60dc97787f87",
       "path": "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
@@ -41913,7 +41913,7 @@
       "current_status": "open",
       "current_status_raw": "open / assembly gate; proposal_allowed=false.",
       "deps": [],
-      "note_hash": "d19a2181aeda543c0108456867b6840b7e235549e622b23e504df8c45cafdca1",
+      "note_hash": "640d043a17aff29ed5023d41a43e44e565363c92100b48acc0552c5f0079a4d2",
       "path": "docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md",
       "runner_path": null,
       "title": "PR230 Full Positive Closure Assembly Gate Note"
@@ -41943,7 +41943,7 @@
       "current_status": "open",
       "current_status_raw": "open / PR230 non-chunk closure worklist complete; positive closure still blocked",
       "deps": [],
-      "note_hash": "d92319e765960ee1289c1bd750f0b08acd9781535198e63e40f13f6b39021bc2",
+      "note_hash": "8dd619fc51c1f11f85c306e1dfde78aae31f2b8f9a4087130ded7398dc5c262f",
       "path": "docs/YT_PR230_NON_CHUNK_CLOSURE_WORKLIST_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_non_chunk_closure_worklist.py",
       "title": "PR #230 Non-Chunk Closure Worklist Gate"
@@ -41981,9 +41981,9 @@
     "yt_pr230_nonchunk_route_family_import_audit_note_2026-05-05": {
       "claim_id": "yt_pr230_nonchunk_route_family_import_audit_note_2026-05-05",
       "current_status": "open",
-      "current_status_raw": "open / non-chunk route-family import audit records Schur",
+      "current_status_raw": "open / non-chunk route-family import audit records W/Z",
       "deps": [],
-      "note_hash": "6375e463604339237c238df14aa717ef0fe6267f893cacf9709e4b2dbf2ed5cb",
+      "note_hash": "72ae9b69bfd89c5f4f612141fabb5af5e924dfd6ac2dfcb9d3410b9a72085fc7",
       "path": "docs/YT_PR230_NONCHUNK_ROUTE_FAMILY_IMPORT_AUDIT_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py",
       "title": "PR #230 Non-Chunk Route-Family Import Audit"
@@ -42085,7 +42085,7 @@
       "current_status": "open",
       "current_status_raw": "open / closure not yet reached",
       "deps": [],
-      "note_hash": "e78fb202ee7802b7532b8b8a86214a67524e3ad8980a6fc3ec6685b2698c0b75",
+      "note_hash": "51226dbf39efbbeccda72169371aa8b8cd844842ca7f84a637623b68001e412c",
       "path": "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_retained_closure_route_certificate.py",
       "title": "PR230 Top-Yukawa Retained-Closure Route Certificate"
@@ -42965,6 +42965,16 @@
       "path": "docs/YT_TOP_WZ_COVARIANCE_MARGINAL_DERIVATION_NO_GO_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_top_wz_covariance_marginal_derivation_no_go.py",
       "title": "YT Top/W Covariance Marginal-Derivation No-Go"
+    },
+    "yt_top_wz_covariance_theorem_import_audit_note_2026-05-05": {
+      "claim_id": "yt_top_wz_covariance_theorem_import_audit_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / no importable same-surface top-W",
+      "deps": [],
+      "note_hash": "b072740a669e2212ef7300a06b04b0f45e62204c036b15cd6430af5dfb53b949",
+      "path": "docs/YT_TOP_WZ_COVARIANCE_THEOREM_IMPORT_AUDIT_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_top_wz_covariance_theorem_import_audit.py",
+      "title": "PR #230 Top/W Covariance-Theorem Import Audit"
     },
     "yt_top_wz_deterministic_response_covariance_gate_note_2026-05-05": {
       "claim_id": "yt_top_wz_deterministic_response_covariance_gate_note_2026-05-05",
@@ -44787,6 +44797,7 @@
     "yt_top_mass_ward_decomp_claim_status_certificate_2026-04-30",
     "yt_top_mass_ward_decomp_handoff_2026-04-30",
     "yt_top_mass_ward_decomp_no_go_note_2026-04-30",
+    "yt_top_wz_covariance_theorem_import_audit_note_2026-05-05",
     "yt_top_wz_deterministic_response_covariance_gate_note_2026-05-05",
     "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
     "yt_unit_projector_pole_threshold_obstruction_note_2026-05-01",
@@ -44817,17 +44828,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1015,
-    "node_count": 1968,
-    "root_count": 1481,
-    "runners_with_path": 1484,
+    "leaf_count": 1016,
+    "node_count": 1969,
+    "root_count": 1482,
+    "runners_with_path": 1485,
     "status_counts": {
       "bounded": 547,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 427,
-      "unknown": 518
+      "unknown": 519
     }
   }
 }

@@ -1,5 +1,14 @@
 # Opportunity Queue
 
+Cycle-13 update: the same-source W/Z response route now also has a
+covariance-theorem import audit.  Current top/W builders, scout schemas,
+support-only W decompositions, and no-go gates are not importable as the
+strict product-measure, conditional-independence, or closed-covariance theorem
+needed to avoid matched top/W rows.  The queue still has no executable
+current-surface non-chunk item; the W/Z route can reopen only with measured
+matched rows or a new parseable joint covariance theorem plus the required
+identity, W/Z, `g_2`, sector-overlap, and correction certificates.
+
 Cycle-12 update: the reopen-admissibility gate closes the path-only reopen
 loophole.  A listed future artifact path is not enough to resume non-chunk
 cycling; the candidate must be a parseable claim-status artifact, deny
@@ -29,7 +38,7 @@ records this as an exact negative boundary, not as retained closure.
 
 | Rank | Opportunity | Retained-positive probability | Why next | First action |
 |---:|---|---|---|---|
-| 1 | Same-source W/Z response | medium-low | Still the most concrete future-row route, but only with real same-surface response authority | W-response decomposition, top-response identity builder, matched top/W covariance builder, top-response certificate builder, W/Z mass-fit adapter, W-response row builder, lightweight readout, and `delta_perp` tomography contracts now make the route exact; marginal covariance, native-label factorization, deterministic-W-alone, static-algebra source-transport, and Goldstone-equivalence source-identity shortcuts are closed negatively, so first derive a real same-source EW action, source-transport certificate, and W/Z rows, or a strict product-measure/conditional-independence/closed-covariance theorem with paired top rows or a closed same-surface covariance formula |
+| 1 | Same-source W/Z response | medium-low | Still the most concrete future-row route, but only with real same-surface response authority | W-response decomposition, top-response identity builder, matched top/W covariance builder, top-response certificate builder, W/Z mass-fit adapter, W-response row builder, lightweight readout, and `delta_perp` tomography contracts now make the route exact; marginal covariance, native-label factorization, deterministic-W-alone, static-algebra source-transport, Goldstone-equivalence source-identity, and current-branch covariance-theorem import shortcuts are closed negatively, so first derive a real same-source EW action, source-transport certificate, and W/Z rows, or a new strict product-measure/conditional-independence/closed-covariance theorem with paired top rows or a closed same-surface covariance formula |
 | 2 | Source-Higgs Gram purity with `O_sp` source side | low unless a new EW/O_H surface is allowed | Directly measures the missing overlap, but both shortcut and current-primitives derivation are now closed negatively | FMS construction, cross-lane O_H audit, unratified-Gram no-go, and canonical `O_H` premise stretch show current harness lacks same-surface EW gauge-Higgs/O_H authority; next requires a real new EW gauge-Higgs/O_H certificate, then production `C_sH/C_HH` rows and pole residues |
 | 3 | Scalar-LSZ pole/FV/IR/model-class control | low for closure, high leverage | Needed even if chunk production finishes; chunk-only completion now fails the assembly gate | Stieltjes moment and Pade-Stieltjes bounds gates now give the strict positive contract; the finite polynomial-contact repair route is closed negatively, so next requires a same-surface contact-subtraction certificate, a microscopic scalar-denominator/analytic-continuation theorem, a strict same-surface moment/threshold/FV certificate from scalar data, or a real threshold/FV/IR pole-saturation bound |
 | 4 | Dynamical rank-one neutral scalar theorem | low but high leverage | Would retire the overlap without new MC rows, but the source-only shortcut is now closed | direct positivity-improvement, repo-authority audit, primitive-cone certificate gate, and cycle-5 primitive-cone stretch no-go block current premises; only continue if a same-surface neutral transfer primitive-cone theorem/certificate appears |

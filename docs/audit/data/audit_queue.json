@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 587,
+    "leaf": 588,
     "medium": 301
   },
-  "generated_at": "2026-05-05T06:47:19.478334+00:00",
+  "generated_at": "2026-05-05T07:11:35.373683+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -21602,6 +21602,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_top_wz_covariance_theorem_import_audit_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_TOP_WZ_COVARIANCE_THEOREM_IMPORT_AUDIT_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_top_wz_covariance_theorem_import_audit.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_unit_projector_pole_threshold_obstruction_note_2026-05-01",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -23548,6 +23565,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 734,
-  "total_pending": 1125
+  "ready_count": 735,
+  "total_pending": 1126
 }

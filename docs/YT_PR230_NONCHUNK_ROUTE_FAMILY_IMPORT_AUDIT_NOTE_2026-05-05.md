@@ -1,7 +1,7 @@
 # PR #230 Non-Chunk Route-Family Import Audit
 
-**Status:** open / non-chunk route-family import audit records Schur
-compressed-denominator row-bootstrap no-go
+**Status:** open / non-chunk route-family import audit records W/Z
+covariance-theorem import no-go
 **Runner:** `scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py`
 **Certificate:** `outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json`
 
@@ -48,6 +48,16 @@ direction is certified, but it does not identify the PR230 source coordinate.
 `outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json`.
 The compressed scalar denominator and its pole derivative do not reconstruct
 the same-surface Schur `A/B/C` rows; genuine kernel rows remain required.
+
+2026-05-05 cycle-13 update: the selected route is now
+`same_source_wz_response`, and the cycle closes the current-branch
+covariance-theorem import shortcut at
+`outputs/yt_top_wz_covariance_theorem_import_audit_2026-05-05.json`.
+Builders, scout schemas, support-only W decompositions, and no-go gates cannot
+be imported as the missing same-surface product-measure,
+conditional-independence, or closed-covariance theorem.  A positive W/Z route
+still requires measured matched top/W rows or a new strict joint covariance
+theorem plus source-identity and W/Z certificates.
 
 ## Boundary
 

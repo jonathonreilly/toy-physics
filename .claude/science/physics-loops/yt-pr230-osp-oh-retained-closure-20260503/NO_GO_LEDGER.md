@@ -14,6 +14,7 @@
 | Overclaim by assumption in the O_sp/O_H loop | blocked by current assumption-route audit | `YT_OSP_OH_ASSUMPTION_ROUTE_AUDIT_NOTE_2026-05-04.md` |
 | Same-source W/Z shortcut from static EW algebra or QCD-only harness | blocked | `yt_wz_response_row_production_attempt_2026-05-03.json` |
 | Deterministic W response alone as top/W covariance authority | closed negatively | `YT_TOP_WZ_DETERMINISTIC_RESPONSE_COVARIANCE_GATE_NOTE_2026-05-05.md` |
+| Current builders/scouts/support/no-go artifacts as top/W joint covariance theorem | closed negatively | `YT_TOP_WZ_COVARIANCE_THEOREM_IMPORT_AUDIT_NOTE_2026-05-05.md` |
 | Static W-mass algebra plus uncertified source-coordinate transport as W/Z row authority | closed negatively | `YT_WZ_SOURCE_COORDINATE_TRANSPORT_NO_GO_NOTE_2026-05-05.md` |
 | Longitudinal/Goldstone equivalence as PR230 source identity | closed negatively | `YT_WZ_GOLDSTONE_EQUIVALENCE_SOURCE_IDENTITY_NO_GO_NOTE_2026-05-05.md` |
 | Direct neutral-sector positivity improvement | not derived | `YT_NEUTRAL_SCALAR_POSITIVITY_IMPROVING_DIRECT_CLOSURE_ATTEMPT_NOTE_2026-05-03.md` |

@@ -1,0 +1,155 @@
+{
+  "actual_current_surface_status": "exact negative boundary / no importable same-surface top-W covariance theorem on current PR230 surface",
+  "bare_retained_allowed": false,
+  "candidate_surfaces": [
+    {
+      "actual_current_surface_status": "open / matched top-W response rows absent",
+      "classification": "builder / open",
+      "id": "matched_covariance_builder",
+      "importable_as_joint_covariance_theorem": false,
+      "path": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
+      "path_exists": true,
+      "reason": "strict matched top/W response rows are absent; builder writes no production covariance certificate"
+    },
+    {
+      "actual_current_surface_status": "exact negative boundary / matched top-W covariance not derivable from marginal response support",
+      "classification": "exact negative boundary",
+      "id": "marginal_covariance_no_go",
+      "importable_as_joint_covariance_theorem": false,
+      "path": "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
+      "path_exists": true,
+      "reason": "proves covariance is not derivable from separate top and W marginals"
+    },
+    {
+      "actual_current_surface_status": "exact negative boundary / same-source top-W factorization not derived on current PR230 surface",
+      "classification": "exact negative boundary / absent theorem gate",
+      "id": "factorization_independence_gate",
+      "importable_as_joint_covariance_theorem": false,
+      "path": "outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json",
+      "path_exists": true,
+      "reason": "current mode finds no production product-measure, conditional-independence, or closed covariance theorem"
+    },
+    {
+      "actual_current_surface_status": "",
+      "classification": "scout schema",
+      "id": "factorization_independence_scout_certificate",
+      "importable_as_joint_covariance_theorem": false,
+      "path": "outputs/yt_top_wz_factorization_independence_gate_scout_certificate_2026-05-05.json",
+      "path_exists": true,
+      "reason": "synthetic scout certificate validates schema only and is not production/theorem authority"
+    },
+    {
+      "actual_current_surface_status": "exact negative boundary / deterministic W response covariance shortcut not derived on current PR230 surface",
+      "classification": "exact negative boundary / absent certificate gate",
+      "id": "deterministic_response_covariance_gate",
+      "importable_as_joint_covariance_theorem": false,
+      "path": "outputs/yt_top_wz_deterministic_response_covariance_gate_2026-05-05.json",
+      "path_exists": true,
+      "reason": "deterministic W response alone does not fix top/W covariance"
+    },
+    {
+      "actual_current_surface_status": "",
+      "classification": "scout schema",
+      "id": "deterministic_response_scout_certificate",
+      "importable_as_joint_covariance_theorem": false,
+      "path": "outputs/yt_top_wz_deterministic_response_covariance_gate_scout_certificate_2026-05-05.json",
+      "path_exists": true,
+      "reason": "synthetic scout certificate is not a production covariance theorem"
+    },
+    {
+      "actual_current_surface_status": "open / same-source top-response identity or covariance inputs absent",
+      "classification": "builder / open",
+      "id": "same_source_top_response_builder",
+      "importable_as_joint_covariance_theorem": false,
+      "path": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
+      "path_exists": true,
+      "reason": "top-response support is not paired top/W covariance authority"
+    },
+    {
+      "actual_current_surface_status": "exact-support / same-source W-response decomposition theorem; current rows absent",
+      "classification": "exact support / W decomposition",
+      "id": "same_source_w_decomposition",
+      "importable_as_joint_covariance_theorem": false,
+      "path": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
+      "path_exists": true,
+      "reason": "W-response decomposition does not determine the joint top/W law"
+    },
+    {
+      "actual_current_surface_status": "open / same-source W-response row builder inputs absent",
+      "classification": "builder / open",
+      "id": "same_source_w_row_builder",
+      "importable_as_joint_covariance_theorem": false,
+      "path": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
+      "path_exists": true,
+      "reason": "strict W rows and paired top/W rows are absent"
+    },
+    {
+      "actual_current_surface_status": "exact negative boundary / same-source EW action not defined on PR230 surface",
+      "classification": "exact negative boundary",
+      "id": "same_source_ew_action_gate",
+      "importable_as_joint_covariance_theorem": false,
+      "path": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+      "path_exists": true,
+      "reason": "same-source EW action is absent on the current PR230 surface"
+    },
+    {
+      "actual_current_surface_status": "exact negative boundary / same-source sector-overlap identity obstruction",
+      "classification": "obstruction",
+      "id": "sector_overlap_obstruction",
+      "importable_as_joint_covariance_theorem": false,
+      "path": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+      "path_exists": true,
+      "reason": "sector-overlap identity remains open and cannot fix top/W covariance"
+    }
+  ],
+  "covariance_theorem_import_audit_passed": true,
+  "exact_next_action": "Supply a real same-surface top/W joint covariance theorem at outputs/yt_top_wz_closed_covariance_theorem_2026-05-05.json, or supply measured matched top/W response rows.  Do not import builders, scout schemas, support-only W decompositions, or no-go gates as covariance authority.",
+  "fail_count": 0,
+  "future_closed_covariance_theorem": "outputs/yt_top_wz_closed_covariance_theorem_2026-05-05.json",
+  "future_closed_covariance_theorem_present": false,
+  "future_theorem_validation": {
+    "checks": {},
+    "failed_checks": [
+      "closed covariance theorem artifact absent"
+    ],
+    "present": false,
+    "valid": false
+  },
+  "parent_certificates": {
+    "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
+    "same_source_top_response_identity_builder": "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json",
+    "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
+    "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
+    "top_wz_covariance_marginal_no_go": "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
+    "top_wz_deterministic_response_covariance_gate": "outputs/yt_top_wz_deterministic_response_covariance_gate_2026-05-05.json",
+    "top_wz_factorization_independence_gate": "outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json",
+    "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
+    "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
+    "wz_same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json"
+  },
+  "parent_statuses": {
+    "same_source_sector_overlap": "exact negative boundary / same-source sector-overlap identity obstruction",
+    "same_source_top_response_builder": "open / same-source top-response identity or covariance inputs absent",
+    "same_source_top_response_identity_builder": "open / same-source top-response identity blockers remain",
+    "same_source_w_response_decomposition": "exact-support / same-source W-response decomposition theorem; current rows absent",
+    "same_source_w_response_row_builder": "open / same-source W-response row builder inputs absent",
+    "top_wz_covariance_marginal_no_go": "exact negative boundary / matched top-W covariance not derivable from marginal response support",
+    "top_wz_deterministic_response_covariance_gate": "exact negative boundary / deterministic W response covariance shortcut not derived on current PR230 surface",
+    "top_wz_factorization_independence_gate": "exact negative boundary / same-source top-W factorization not derived on current PR230 surface",
+    "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
+    "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
+    "wz_same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current branch contains W/Z support builders, gates, scout schemas, and no-go certificates, but no production/theorem artifact that proves product-measure factorization, conditional independence, or a closed same-surface cov_dE_top_dM_W formula.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not create matched top/W response rows",
+    "does not convert scout certificates into production theorem authority",
+    "does not use observed W/Z/top/y_t/g2 selectors",
+    "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, c2=1, Z_match=1, kappa_s=1, or cos(theta)=1",
+    "does not package or rerun chunk MC"
+  ]
+}

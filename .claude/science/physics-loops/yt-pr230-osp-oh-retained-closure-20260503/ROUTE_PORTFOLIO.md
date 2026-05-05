@@ -61,6 +61,15 @@ negatively in
 Longitudinal-equivalence bookkeeping is not the PR230 source-coordinate
 identity.
 
+Cycle-13 update: the covariance-theorem import shortcut is closed negatively
+in
+`docs/YT_TOP_WZ_COVARIANCE_THEOREM_IMPORT_AUDIT_NOTE_2026-05-05.md`.
+Current builders, scout schemas, support-only W decompositions, and no-go
+gates are not importable same-surface top/W joint covariance theorem
+authority.  W/Z remains viable only through measured matched rows or a new
+strict product-measure, conditional-independence, or closed-covariance theorem
+plus source-identity and W/Z certificates.
+
 ## R4: Dynamical Rank-One Neutral Scalar Theorem
 
 Prove the neutral scalar response space is rank one so `O_sp` cannot contain
