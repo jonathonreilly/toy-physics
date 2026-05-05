@@ -51,6 +51,7 @@ REOPEN_ARTIFACT_KEYS = {
     "wz_mass_response_rows",
     "non_observed_g2_certificate",
     "delta_perp_rows",
+    "top_wz_closed_covariance_theorem",
     "stieltjes_moment_certificate",
     "pade_stieltjes_bounds_certificate",
     "contact_subtraction_certificate",

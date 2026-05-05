@@ -56,6 +56,7 @@ EXPECTED_FUTURE_FILES = {
     "wz_mass_response_rows",
     "non_observed_g2_certificate",
     "delta_perp_rows",
+    "top_wz_closed_covariance_theorem",
     "stieltjes_moment_certificate",
     "pade_stieltjes_bounds_certificate",
     "contact_subtraction_certificate",
@@ -145,12 +146,23 @@ def selected_route_after_no_go(route_audit: dict[str, Any]) -> bool:
     selected = route_audit.get("selected_route", {})
     disposition = str(selected.get("current_disposition", ""))
     exact_next = str(route_audit.get("exact_next_action", ""))
-    return (
+    legacy_schur_closeout = (
         selected.get("id") == "schur_scalar_denominator_rows"
         and "compressed-denominator row-bootstrap no-go" in disposition
         and "strict future row/certificate surface" in exact_next
         and route_audit.get("proposal_allowed") is False
     )
+    post_exhaustion_closeout = (
+        route_audit.get("proposal_allowed") is False
+        and selected.get("id") == "no_current_surface_nonchunk_route"
+        and "Reopen only after a listed same-surface row, certificate, or theorem exists" in exact_next
+        and (
+            "current non-chunk route surface is exhausted" in disposition
+            or "No route family has the first-action same-surface row" in disposition
+            or "no current-surface non-chunk route" in disposition
+        )
+    )
+    return legacy_schur_closeout or post_exhaustion_closeout
 
 
 def shortcut_firewall_ok() -> bool:
@@ -237,7 +249,7 @@ def main() -> int:
     report("all-nonchunk-work-units-blocked", all_units_blocked, f"blocked={sorted(blocked_ids)} closed={sorted(closed_ids)}")
     report("strict-future-surface-files-absent", strict_future_surface_absent, f"present={future_present} key_gaps={future_key_gaps}")
     report("remaining-work-unit-files-absent", remaining_paths_absent, "all listed future row/certificate paths are absent")
-    report("route-audit-selected-schur-after-no-go", selected_route_after_no_go(route_audit), route_audit.get("exact_next_action", ""))
+    report("route-audit-closeout-after-no-go", selected_route_after_no_go(route_audit), route_audit.get("exact_next_action", ""))
     report("assembly-rejects-current-surface", assembly_rejects_current, str(assembly.get("current_evaluation", {})))
     report("assembly-rejects-chunk-only-surface", assembly_rejects_chunk_only, str(assembly.get("chunk_only_evaluation", {})))
     report("retained-route-still-open", retained_still_open, statuses["retained_route"])
@@ -269,9 +281,9 @@ def main() -> int:
             "id": "current_surface_nonchunk_exhaustion",
             "prior_selected_family": route_audit.get("selected_route", {}).get("id"),
             "reason": (
-                "Cycle 7 closed the last executable Schur compressed-denominator "
-                "shortcut.  The May 5 worklist now leaves only absent future "
-                "same-surface rows, certificates, or new theorems."
+                "The route-family audit now selects no current-surface "
+                "non-chunk route.  The May 5 worklist leaves only absent "
+                "future same-surface rows, certificates, or new theorems."
             ),
         },
         "allowed_future_routes": [

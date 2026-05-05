@@ -4,17 +4,24 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact negative boundary / cycle-35 origin/main audit-ledger drift does not reopen PR230 positive closure
-active_residual: "Both target production chunks001-063 and polefit8x8 chunks001-063 are complete with required FH/LSZ target schema, but positive closure still fails the assembly checklist.  The fresh fetch advanced origin/main only on docs/audit/data/audit_ledger.json and docs/audit/data/citation_graph.json; no listed PR230 same-surface artifact exists locally, on the PR remote, or on origin/main.  Missing closure items remain scalar-LSZ model-class/FV/IR/pole authority, one accepted source-overlap or same-source physical-response bridge, matching/running authority from certified physical input, and retained-route/campaign proposal authorization.  The next productive input must be a fresh parseable same-surface artifact: O_H/C_sH/C_HH pole rows, genuine same-source EW action plus W/Z rows/covariance/non-observed g2, Schur A/B/C rows, or neutral-sector irreducibility."
+actual_current_surface_status: exact support / post-cycle35 non-chunk gate stack compatibility repaired; positive closure still open
+active_residual: "Both target production chunks001-063 and polefit8x8 chunks001-063 are complete with required FH/LSZ target schema, but positive closure still fails the assembly checklist.  The branch and remote PR head match, origin/main has not advanced past the cycle-35 audit-ledger baseline, and no listed PR230 same-surface artifact exists locally, on the PR remote, or on origin/main.  The non-chunk exhaustion/intake/terminal/reopen gates have been made rerunnable against the current route-audit wording and expanded future-artifact key set.  Missing closure items remain scalar-LSZ model-class/FV/IR/pole authority, one accepted source-overlap or same-source physical-response bridge, matching/running authority from certified physical input, and retained-route/campaign proposal authorization.  The next productive input must be a fresh parseable same-surface artifact: O_H/C_sH/C_HH pole rows, genuine same-source EW action plus W/Z rows/covariance/non-observed g2, Schur A/B/C rows, or neutral-sector irreducibility."
 latest_checkpoint:
-  utc: "2026-05-05T13:49:00Z"
-  block: 95
-  artifact: "cycle-35 post-cycle-34 main audit-ledger drift guard"
-  status: "exact negative boundary / no PR230 reopen from audit metadata drift"
-  result: "After fetch, origin/main advanced from bbef5c4905a034cb75e9d7eaeb12cdcffbb03b25 to 457be579b6636b6165e09deb75235e690e5631d5 with only docs/audit/data/audit_ledger.json and docs/audit/data/citation_graph.json changed.  The new guard verifies no listed PR230 same-surface future artifact exists locally, on the PR remote branch, or on origin/main; all six non-chunk worklist units remain blocked; completion audit, assembly, retained-route, and campaign gates deny proposal authority.  The guard passes with PASS=15 FAIL=0; refreshed assembly PASS=77 FAIL=0, retained-route PASS=225 FAIL=0, campaign PASS=252 FAIL=0."
-  claim_boundary: "no retained or proposed_retained closure; audit metadata drift is not PR230 physics evidence and cannot reopen the non-chunk queue"
+  utc: "2026-05-05T13:59:56Z"
+  block: 96
+  artifact: "post-cycle35 non-chunk gate stack compatibility repair"
+  status: "exact support / audit-gate compatibility repair only"
+  result: "The cycle-8 exhaustion and terminal gates were updated for the current route-family no-route closeout wording and for the expanded future-artifact key set including top_wz_closed_covariance_theorem.  Regenerated exhaustion PASS=15 FAIL=0, future-intake PASS=12 FAIL=0, terminal PASS=15 FAIL=0, and reopen-admissibility PASS=11 FAIL=0.  This repairs rerunnability only; no same-surface row, certificate, theorem, or proposal authority was added."
+  claim_boundary: "no retained or proposed_retained closure; gate-stack compatibility is not PR230 physics evidence and cannot reopen the non-chunk queue"
   live_compute: "chunk artifacts are complete; no production chunk worker is running"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_nonchunk_current_surface_exhaustion_gate.py
+    - scripts/frontier_yt_pr230_nonchunk_terminal_route_exhaustion_gate.py
+    - docs/YT_PR230_NONCHUNK_GATE_STACK_COMPATIBILITY_REPAIR_NOTE_2026-05-05.md
+    - outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json
+    - outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json
+    - outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json
+    - outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json
     - scripts/frontier_yt_pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard.py
     - docs/YT_PR230_NONCHUNK_CYCLE35_POST_CYCLE34_MAIN_AUDIT_LEDGER_DRIFT_GUARD_NOTE_2026-05-05.md
     - outputs/yt_pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard_2026-05-05.json

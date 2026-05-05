@@ -127,6 +127,15 @@
         "absent"
       ],
       "json_loaded": false,
+      "path": "outputs/yt_top_wz_closed_covariance_theorem_2026-05-05.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
       "path": "outputs/yt_top_wz_deterministic_response_covariance_certificate_2026-05-05.json",
       "present": false
     },
@@ -173,6 +182,7 @@
     "source_coordinate_transport_certificate": false,
     "source_higgs_rows": false,
     "stieltjes_moment_certificate": false,
+    "top_wz_closed_covariance_theorem": false,
     "wz_mass_response_rows": false
   },
   "hypothetical_axiom_status": null,
@@ -190,6 +200,7 @@
     "outputs/yt_pr230_certified_physical_readout_2026-05-04.json",
     "outputs/yt_schur_kernel_rows_2026-05-03.json",
     "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+    "outputs/yt_top_wz_closed_covariance_theorem_2026-05-05.json",
     "outputs/yt_top_wz_deterministic_response_covariance_certificate_2026-05-05.json",
     "outputs/yt_top_wz_matched_response_rows_2026-05-04.json",
     "outputs/yt_wz_source_coordinate_transport_certificate_2026-05-05.json"

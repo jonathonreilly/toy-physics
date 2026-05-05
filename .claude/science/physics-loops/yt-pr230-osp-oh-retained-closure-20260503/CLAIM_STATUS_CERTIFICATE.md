@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact negative boundary / cycle-35 origin/main audit-ledger drift does not reopen PR230 positive closure
+actual_current_surface_status: exact support / post-cycle35 non-chunk gate stack compatibility repaired; positive closure still open
 conditional_surface_status: conditional-support if C_sH/C_HH Gram purity, W/Z response, or rank-one neutral scalar theorem closes the overlap
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "The completion audit verifies target production and polefit8x8 chunks001-063 are complete with required target schema, but current-surface and chunk-only assembly are both rejected.  Cycle 35 verifies the latest origin/main movement is only audit ledger/citation metadata and supplies no listed PR230 same-surface row, certificate, or theorem.  No current-surface premise supplies scalar-LSZ authority, physical overlap authority, same-source Schur A/B/C kernel rows, production W/Z rows, same-source EW action, top/W covariance, non-observed g2, sector identity, canonical-Higgs identity, neutral-rank authority, matching/running authority, or retained-route/campaign proposal authorization."
+proposal_allowed_reason: "The completion audit verifies target production and polefit8x8 chunks001-063 are complete with required target schema, but current-surface and chunk-only assembly are both rejected.  Cycle 35 verifies the latest origin/main movement is only audit ledger/citation metadata and supplies no listed PR230 same-surface row, certificate, or theorem.  The post-cycle35 gate-stack repair only restores rerunnability for the exhaustion/intake/terminal/reopen gates under the current no-route wording and expanded future-artifact key set.  No current-surface premise supplies scalar-LSZ authority, physical overlap authority, same-source Schur A/B/C kernel rows, production W/Z rows, same-source EW action, top/W covariance, non-observed g2, sector identity, canonical-Higgs identity, neutral-rank authority, matching/running authority, or retained-route/campaign proposal authorization."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -15,6 +15,11 @@ Retained/proposed-retained wording is not allowed for this block.
 
 Open imports:
 
+- post-cycle35 non-chunk gate-stack compatibility is exact support only:
+  exhaustion, future-intake, terminal, and reopen-admissibility gates now rerun
+  cleanly with the expanded `top_wz_closed_covariance_theorem` future key and
+  current route-family no-route wording, but this adds no physics row,
+  certificate, or theorem;
 - cycle-35 remote-drift guard is an exact negative boundary:
   `outputs/yt_pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard_2026-05-05.json`
   records that `origin/main` advanced only on audit ledger/citation metadata

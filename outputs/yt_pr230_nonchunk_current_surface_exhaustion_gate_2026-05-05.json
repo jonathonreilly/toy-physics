@@ -36,6 +36,7 @@
     "source_coordinate_transport_certificate": false,
     "source_higgs_rows": false,
     "stieltjes_moment_certificate": false,
+    "top_wz_closed_covariance_theorem": false,
     "wz_mass_response_rows": false
   },
   "parent_certificates": {
@@ -59,7 +60,7 @@
     "neutral_primitive_stretch_no_go": "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface",
     "polynomial_contact_repair_no_go": "exact negative boundary / polynomial contact repair not scalar-LSZ authority",
     "retained_route": "open / retained closure not yet reached",
-    "route_family_audit": "open / non-chunk route-family import audit records Schur compressed-denominator row-bootstrap no-go",
+    "route_family_audit": "exact negative boundary / non-chunk route-family import audit confirms no executable current-surface route after W/Z covariance-theorem import no-go",
     "schur_bootstrap_no_go": "exact negative boundary / Schur compressed-denominator row-bootstrap no-go",
     "source_higgs_unratified_gram_no_go": "exact negative boundary / unratified source-Higgs Gram shortcut is not O_H authority",
     "worklist": "open / PR230 non-chunk closure worklist complete; positive closure still blocked",
@@ -71,8 +72,8 @@
   "proposal_allowed_reason": "Every current non-chunk work unit is blocked and every strict future row/certificate file named by the worklist is absent.  The allowed next moves require new same-surface artifacts, not another current shortcut.",
   "selected_route": {
     "id": "current_surface_nonchunk_exhaustion",
-    "prior_selected_family": "schur_scalar_denominator_rows",
-    "reason": "Cycle 7 closed the last executable Schur compressed-denominator shortcut.  The May 5 worklist now leaves only absent future same-surface rows, certificates, or new theorems."
+    "prior_selected_family": "no_current_surface_nonchunk_route",
+    "reason": "The route-family audit now selects no current-surface non-chunk route.  The May 5 worklist leaves only absent future same-surface rows, certificates, or new theorems."
   },
   "strict_non_claims": [
     "does not claim retained or proposed_retained top-Yukawa closure",

@@ -1,5 +1,18 @@
 # Opportunity Queue
 
+2026-05-05 gate-stack compatibility update:
+the post-cycle35 audit rerun found that the older exhaustion/intake/terminal/
+reopen stack needed compatibility repairs for the current
+`no_current_surface_nonchunk_route` closeout and the expanded future-artifact
+schema including `top_wz_closed_covariance_theorem`.  The refreshed gates now
+pass again: exhaustion `PASS=15 FAIL=0`, future-intake `PASS=12 FAIL=0`,
+terminal `PASS=15 FAIL=0`, reopen-admissibility `PASS=11 FAIL=0`.  This does
+not change route ranking or authorize proposal language.  The queue remains
+stopped until a fresh parseable same-surface artifact appears for
+source-Higgs `O_H/C_sH/C_HH`, genuine same-source W/Z response, Schur A/B/C
+kernel rows, scalar-LSZ strict moment/threshold/FV authority, or
+neutral-sector irreducibility.
+
 2026-05-05 cycle-35 update:
 `outputs/yt_pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard_2026-05-05.json`
 passes with `PASS=15 FAIL=0`.  The only new remote fact is that

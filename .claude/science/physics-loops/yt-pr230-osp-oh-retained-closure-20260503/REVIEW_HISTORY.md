@@ -1,5 +1,27 @@
 # Review History
 
+## 2026-05-05 Non-Chunk Gate Stack Compatibility Repair Self-Review
+
+Disposition: pass as exact support / audit-gate compatibility repair only.
+
+Findings:
+
+- The change does not add or promote any physics evidence.  It updates the
+  cycle-8 exhaustion gate to accept the current
+  `no_current_surface_nonchunk_route` route-audit closeout and updates the
+  exhaustion/terminal future-artifact key sets to include
+  `top_wz_closed_covariance_theorem`.
+- The regenerated exhaustion, future-intake, terminal, and reopen-admissibility
+  certificates all pass while preserving `proposal_allowed=false`.
+- The stop/reopen contract is unchanged: a listed same-surface row,
+  certificate, or theorem must exist as a parseable claim-status artifact
+  before the non-chunk queue can execute again.
+- No chunk MC, publication, Planck, alpha_s, manuscript, or claim-table
+  surfaces are touched.
+
+Review-loop iteration 1: local self-review pass.  No retained or
+proposed-retained wording is authorized.
+
 ## 2026-05-05 Non-Chunk Cycle-35 Main Audit-Ledger Drift Guard Self-Review
 
 Disposition: pass as exact negative boundary / no admissible post-cycle-34

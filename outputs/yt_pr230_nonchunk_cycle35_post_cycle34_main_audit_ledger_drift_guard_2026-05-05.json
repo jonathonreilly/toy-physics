@@ -19,14 +19,14 @@
     ],
     "changed_paths_are_audit_metadata_only": true,
     "local_future_paths_present": [],
-    "local_head": "d8d017a891443bdce8b1a6e4111de3a1d6175885",
+    "local_head": "9d6bcb27cf53c22dc52b23caa98264aa18b2c55e",
     "local_head_matches_remote_pr": true,
     "previous_main_is_ancestor_of_remote_main": true,
     "previous_remote_main": "bbef5c4905a034cb75e9d7eaeb12cdcffbb03b25",
     "remote_main_future_paths_present": [],
     "remote_main_head": "457be579b6636b6165e09deb75235e690e5631d5",
     "remote_pr_future_paths_present": [],
-    "remote_pr_head": "d8d017a891443bdce8b1a6e4111de3a1d6175885"
+    "remote_pr_head": "9d6bcb27cf53c22dc52b23caa98264aa18b2c55e"
   },
   "closed_work_unit_ids": [],
   "conditional_surface_status": null,

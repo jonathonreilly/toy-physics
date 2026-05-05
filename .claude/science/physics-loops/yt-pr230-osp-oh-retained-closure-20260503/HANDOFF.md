@@ -1,5 +1,40 @@
 # Handoff
 
+## 2026-05-05 PR230 Non-Chunk Gate Stack Compatibility Repair
+
+Result: exact support / audit-gate compatibility repair only.  Rerunning the
+older non-chunk exhaustion/intake/reopen stack after cycle 35 exposed stale
+assumptions: the future-artifact schema now includes
+`top_wz_closed_covariance_theorem`, and the route-family audit now records
+`no_current_surface_nonchunk_route` rather than the older Schur-selected
+closeout wording.
+
+The repair updates the cycle-8 exhaustion gate and terminal gate to use the
+expanded future-artifact key set and to accept the current no-route closeout
+without weakening the stop/reopen contract.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_nonchunk_current_surface_exhaustion_gate.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_nonchunk_future_artifact_intake_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_pr230_nonchunk_terminal_route_exhaustion_gate.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_nonchunk_reopen_admissibility_gate.py
+# SUMMARY: PASS=11 FAIL=0
+```
+
+Claim boundary: no retained or proposed-retained closure.  This block repairs
+gate rerunnability only; it supplies no `O_H/C_sH/C_HH`, W/Z, Schur,
+neutral-irreducibility, scalar-LSZ, matching/running, or certified physical
+readout artifact.  The exact next action remains a fresh parseable
+same-surface artifact, followed by aggregate gate reruns.
+
 ## 2026-05-05 PR230 Non-Chunk Cycle-35 Post-Cycle-34 Main Audit-Ledger Drift Guard
 
 Result: exact negative boundary.  After fetch, `origin/main` advanced from
