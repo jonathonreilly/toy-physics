@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 44 |
 | **retained_no_go** | 103 |
-| **retained_bounded** | 192 |
+| **retained_bounded** | 193 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 16 |
 | unaudited | 878 |
-| audit_in_progress | 51 |
+| audit_in_progress | 50 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 51 |
-| `audited_clean` | 311 |
+| `audit_in_progress` | 50 |
+| `audited_clean` | 312 |
 | `audited_conditional` | 381 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -120,7 +120,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | open_gate | audit_in_progress | audit_in_progress | - | - | - | - |
 | `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `generation_axiom_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `hierarchy_matsubara_decomposition_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -241,6 +240,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `fourth_family_complex_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
 | `fourth_family_quadrant_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gate_b_connectivity_tolerance_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `gate_b_grown_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `gate_b_grown_propagating_field_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -5288,6 +5288,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
   - `G_BARE_RIGIDITY_THEOREM_NOTE.md`
   - `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19`
+
+- **Note:** [`G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md`](../../docs/G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded tree-level statement that the unit-normalized scalar-singlet bilinear on the Q_L=(2,3) block has form factor 1/sqrt(6) against a chosen basis top-pair component, independent of g_bare, without claiming the Standard Model top-Yukawa Ward readout.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-second-g_bare_two_ward_rep_b_independence_theorem_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** "F_Htt^(0)(g_bare) = (1 / sqrt(6)) * 1 = 1 / sqrt(6)," with no gauge-coupling insertion at tree order.  _(class `A`)_
+- **chain closes:** True — The cited narrow overlap theorem supplies the normalized diagonal Wick-contractor identity and gauge-coupling independence for the operator definition; the source note only specializes it to N_iso=2, N_c=3 and a basis pair. The note explicitly excludes the broader Ward-identification step, so no unproved SM Yukawa readout is needed for the scoped claim.
+- **rationale:** The bounded theorem closes as exact algebra over the supplied narrow overlap authority plus the source note's tree-order no-gauge-insertion argument. There is no tuned numerical comparator, no hidden g_bare dependence in the stated tree-level operator matrix element, and no reliance on the terminal top-Yukawa Ward-identification row within the audited scope. Residual risk is only that downstream uses may overread the internal bare datum as a physical Standard Model top-Yukawa readout, which this note explicitly does not establish.
 - **auditor confidence:** high
 
 ### `g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19`

@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 609,
+    "critical": 608,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -3041,29 +3041,6 @@
       "ready": true,
       "runner_path": "scripts/wave_retardation_continuum_limit.py",
       "transitive_descendants": 290
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
-      "claim_scope": "For the explicitly defined unit-normalized scalar-singlet operator on the Q_L = (2,3) block, the tree-level form factor to a selected basis top-pair component is 1 / sqrt(6) and is independent of g_bare; this does not audit the later physical Standard Model top-Yukawa/Ward readout.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [
-        "unit_singlet_overlap_narrow_theorem_note_2026-05-02"
-      ],
-      "direct_in_degree": 6,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 11.18,
-      "note_path": "docs/G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 289
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -27668,6 +27645,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 81,
-  "total_pending": 947
+  "ready_count": 80,
+  "total_pending": 946
 }
