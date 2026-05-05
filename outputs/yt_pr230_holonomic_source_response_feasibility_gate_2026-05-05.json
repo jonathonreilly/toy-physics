@@ -1,0 +1,126 @@
+{
+  "actual_current_surface_status": "exact negative boundary / PR541-style holonomic source-response route is relevant but blocked by missing current-surface O_H and h-source",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "exact-support candidate if a future PR230 artifact supplies a same-source EW/Higgs action or canonical O_H identity plus C_sH/C_HH row definitions; holonomic/tensor methods can then compute defined finite-volume rows.",
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "To make the PR541-style route positive, first derive a same-current-surface O_H/h-source artifact: either a same-source EW/Higgs action certificate tied to the Cl(3)/Z3 source coordinate, or a canonical O_H identity/normalization theorem.  Then build Z(beta,s,h) and compute C_ss/C_sH/C_HH rows by finite-volume tensor contraction or holonomic creative telescoping.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "defined_O_H_by_name_only": false,
+    "defined_h_source_by_hypothetical_ew_action": false,
+    "set_kappa_s_equal_one": false,
+    "used_alpha_lm_plaquette_u0_or_rconn": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_targets": false,
+    "used_pr541_plaquette_value_as_yukawa_input": false,
+    "used_yt_ward_identity_as_authority": false
+  },
+  "future_artifact_presence": {
+    "canonical_oh_certificate": false,
+    "holonomic_source_response_rows": false,
+    "same_source_ew_action_certificate": false,
+    "source_higgs_rows": false
+  },
+  "hypothetical_axiom_status": null,
+  "method_contract": {
+    "method_name": "PR541-style holonomic/source-generating functional",
+    "pr230_target_functional": "Z_PR230(beta, s, h) = integral exp(-S_Cl3Z3 + s O_s + h O_H) dmu",
+    "target_derivatives": {
+      "C_HH": "d_h d_h log Z at s=h=0",
+      "C_sH": "d_s d_h log Z at s=h=0",
+      "C_ss": "d_s d_s log Z at s=h=0"
+    },
+    "usable_after": [
+      "finite-volume compact integral or finite tensor network is explicitly defined",
+      "action/measure are fixed on the same current surface",
+      "all source coordinates are named current-surface operators",
+      "target rows are derivatives of log Z, not labels chosen after the fact",
+      "no observed target values or fitted selectors are used as proof inputs"
+    ],
+    "why_pr541_is_relevant": "It supplies a disciplined compute/proof pattern: define Z first, then compute rows as derivatives.  It cannot by itself supply the missing PR230 O_H or h-source."
+  },
+  "parent_certificates": {
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "retained_closure_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "schur_abc_definition_attempt": "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_higgs_production_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json"
+  },
+  "parent_statuses": {
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "full_positive_closure_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
+    "retained_closure_route": "open / retained closure not yet reached",
+    "same_source_sector_overlap": "exact negative boundary / same-source sector-overlap identity obstruction",
+    "schur_abc_definition_attempt": "exact negative boundary / Schur A/B/C definition not derivable from current PR230 source-only surface",
+    "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem",
+    "source_higgs_gram_purity": "open / source-Higgs Gram purity gate not passed",
+    "source_higgs_production_readiness": "open / source-Higgs production launch blocked by missing O_H certificate"
+  },
+  "pass_count": 17,
+  "pr541_route_immediate_closure": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The PR541 method transfers as a compute/proof discipline, not as a missing operator definition.  Current PR230 has source-only Z(s,0) support but lacks the h-source/canonical O_H needed for Z(s,h), C_sH, and C_HH.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not compute y_t or m_t",
+    "does not define y_t_bare",
+    "does not use H_unit or yt_ward_identity",
+    "does not use PR541 plaquette values as top-Yukawa inputs",
+    "does not use observed top mass, observed y_t, alpha_LM, plaquette, u0, or R_conn",
+    "does not identify source-only O_s with canonical O_H",
+    "does not treat holonomic/Picard-Fuchs labels as operator definitions"
+  ],
+  "toy_source_projection_counterfamily": [
+    {
+      "C_HH": 1.0,
+      "C_sH": 1.0,
+      "C_ss": 1.0,
+      "Z_source_only_log_quadratic": "0.5 * s^2",
+      "gram_determinant": 0.0,
+      "gram_purity_certified": true,
+      "rho": 1.0
+    },
+    {
+      "C_HH": 1.0,
+      "C_sH": 0.75,
+      "C_ss": 1.0,
+      "Z_source_only_log_quadratic": "0.5 * s^2",
+      "gram_determinant": 0.4375,
+      "gram_purity_certified": false,
+      "rho": 0.75
+    },
+    {
+      "C_HH": 1.0,
+      "C_sH": 0.25,
+      "C_ss": 1.0,
+      "Z_source_only_log_quadratic": "0.5 * s^2",
+      "gram_determinant": 0.9375,
+      "gram_purity_certified": false,
+      "rho": 0.25
+    },
+    {
+      "C_HH": 1.0,
+      "C_sH": 0.0,
+      "C_ss": 1.0,
+      "Z_source_only_log_quadratic": "0.5 * s^2",
+      "gram_determinant": 1.0,
+      "gram_purity_certified": false,
+      "rho": 0.0
+    },
+    {
+      "C_HH": 1.0,
+      "C_sH": -0.25,
+      "C_ss": 1.0,
+      "Z_source_only_log_quadratic": "0.5 * s^2",
+      "gram_determinant": 0.9375,
+      "gram_purity_certified": false,
+      "rho": -0.25
+    }
+  ],
+  "two_source_functional_current_surface_defined": false
+}
