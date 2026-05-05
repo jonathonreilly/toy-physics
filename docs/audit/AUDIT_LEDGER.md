@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 46 |
 | **retained_no_go** | 104 |
-| **retained_bounded** | 197 |
+| **retained_bounded** | 198 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 16 |
 | unaudited | 876 |
-| audit_in_progress | 44 |
+| audit_in_progress | 43 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 44 |
-| `audited_clean` | 319 |
+| `audit_in_progress` | 43 |
+| `audited_clean` | 320 |
 | `audited_conditional` | 382 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -121,7 +121,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `generation_axiom_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `hierarchy_matsubara_decomposition_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `hierarchy_spatial_bc_and_u0_scaling_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_berry_bundle_obstruction_theorem_note_2026-04-19` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_cone_completing_root_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -277,6 +276,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | D | - |
 | `half_plane_chart_equivalence_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `hard_geometry_local_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
+| `hierarchy_spatial_bc_and_u0_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `holographic_probe_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
 | `hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | C | - |
@@ -6534,6 +6534,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Starting from Delta f(L_t,m) = (1/(2 L_t)) sum_omega ln(1 + m^2/[u_0^2(3+sin^2 omega)]), the small-m coefficient is A(L_t) = (1/(2 L_t u_0^2)) sum_omega 1/(3+sin^2 omega), giving A_2=1/(8u_0^2) and A_inf=1/(4 sqrt(3)u_0^2).  _(class `A`)_
 - **chain closes:** False — The algebra from the stated free-energy formula to A_2, A_4, A_inf, and C_inf^(4D) closes. The restricted packet does not derive the exact Matsubara free-energy density formula itself from the axiom, so the full claimed endpoint theorem is conditional on that imported starting formula.
 - **rationale:** The runner genuinely checks the small-m expansion and endpoint sums from the encoded Matsubara formula, but it does not derive that formula from first principles; it takes the temporal modes and free-energy density ansatz as inputs. Part 4 also imports canonical plaquette/alpha constants and compares to the observed electroweak prefactor, which is comparator evidence rather than closure of the physical insertion map. The note itself explicitly states that the physical selection/insertion of the dimension-4 normalization remains open.
+- **auditor confidence:** high
+
+### `hierarchy_spatial_bc_and_u0_scaling_note`
+
+- **Note:** [`HIERARCHY_SPATIAL_BC_AND_U0_SCALING_NOTE.md`](../../docs/HIERARCHY_SPATIAL_BC_AND_U0_SCALING_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Exact minimal L_s=2 hierarchy-block statements: temporal-APBC determinant formulas for spatial PBC/APBC, BC-independent zero-mass u0^(8Lt) power, APBC-only finite intensive small-m coefficient limit, and local m/u0 homogeneity of the free-energy density.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-second-hierarchy_spatial_bc_and_u0_scaling_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Spatial APBC is not selected by exponent counting; it is selected by the existence of a finite intensive 3+1 order-parameter limit on the minimal hierarchy block, while the exact local observable depends on u0 only through m/u0.  _(class `C`)_
+- **chain closes:** True — Within the bounded minimal-block scope, the determinant formulas, coefficient asymptotics, and u0 homogeneity follow from the explicit finite Dirac operator and exact formulas checked by the runner. The note explicitly excludes the broader physical electroweak order-parameter selection theorem from the closed claim.
+- **rationale:** The runner constructs the minimal L_s=2 Dirac matrix, compares direct determinants against the stated closed formulas for both spatial BCs, verifies the BC-independent zero-mass u0 power, and checks the exact homogeneity and small-m coefficient consequences with zero failures. The source note does not overclaim the full hierarchy theorem: it confines closure to the spatial-BC and u0-scaling objections and explicitly leaves the physical intensive order-parameter selection as open. Residual risk is limited to not treating this bounded theorem as the missing physical bridge.
 - **auditor confidence:** high
 
 ### `higgs_mass_derived_note`
