@@ -2748,6 +2748,18 @@
       "dominant_class": null,
       "runner": "scripts/directional_b_geometry_normalized_overlap_map.py"
     },
+    "discrete_einstein_regge_lift_note": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_universal_gr_isotropic_glue_operator.py"
+    },
     "dispersion_high_p_tiebreaker_note": {
       "assert_count": 0,
       "counts": {
@@ -13368,6 +13380,30 @@
       "dominant_class": null,
       "runner": "scripts/frontier_s3_time_bilinear_tensor_primitive.py"
     },
+    "s3_time_observable_hessian_route_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_universal_gr_tensor_action_blocker.py"
+    },
+    "s3_time_spacetime_observable_route_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_universal_gr_tensor_action_blocker.py"
+    },
     "s3_time_spacetime_tensor_primitive_note": {
       "assert_count": 1,
       "counts": {
@@ -15203,6 +15239,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_su3_wilson_closed_form_fanout_2026_05_04.py"
+    },
+    "su3_z3_apbc_variant_probe_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_cube_z3_apbc_attempt_2026_05_04.py"
     },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "assert_count": 2,
@@ -32047,6 +32095,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_su3_cube_z3_apbc_attempt_2026_05_04.py": {
+      "assert_count": 1,
+      "claims": [
+        "su3_z3_apbc_variant_probe_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_su3_fusion_engine.py": {
       "assert_count": 1,
       "claims": [
@@ -33070,10 +33133,41 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_universal_gr_isotropic_glue_operator.py": {
+      "assert_count": 2,
+      "claims": [
+        "discrete_einstein_regge_lift_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_universal_gr_polarization_frame_bundle.py": {
       "assert_count": 1,
       "claims": [
         "universal_gr_polarization_frame_bundle_blocker_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_universal_gr_tensor_action_blocker.py": {
+      "assert_count": 1,
+      "claims": [
+        "s3_time_observable_hessian_route_note",
+        "s3_time_spacetime_observable_route_note"
       ],
       "counts": {
         "A": 0,
@@ -38547,16 +38641,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 115,
+    "decoration_candidates": 116,
     "dominant_class_distribution": {
       "A": 10,
-      "B": 164,
-      "C": 570,
+      "B": 165,
+      "C": 572,
       "D": 211,
       "none": 420
     },
-    "runners_classified": 1375,
-    "runners_with_C": 679,
+    "runners_classified": 1378,
+    "runners_with_C": 681,
     "runners_with_D": 344
   }
 }

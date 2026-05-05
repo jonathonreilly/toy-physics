@@ -3885,6 +3885,10 @@
       "to": "directional_b_geometry_normalized_holdout_transfer_note"
     },
     {
+      "from": "discrete_einstein_regge_lift_note",
+      "to": "oh_schur_boundary_action_note"
+    },
+    {
       "from": "distance_law_breakpoint_note",
       "to": "distance_law_portability_note"
     },
@@ -12137,6 +12141,26 @@
       "to": "oh_schur_boundary_action_note"
     },
     {
+      "from": "s3_time_observable_hessian_route_note",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "s3_time_observable_hessian_route_note",
+      "to": "s3_anomaly_spacetime_lift_note"
+    },
+    {
+      "from": "s3_time_observable_hessian_route_note",
+      "to": "s3_time_transfer_matrix_bridge_note"
+    },
+    {
+      "from": "s3_time_spacetime_observable_route_note",
+      "to": "universal_gr_tensor_action_blocker_note"
+    },
+    {
+      "from": "s3_time_spacetime_observable_route_note",
+      "to": "s3_anomaly_spacetime_lift_note"
+    },
+    {
       "from": "s3_time_spacetime_tensor_primitive_note",
       "to": "s3_general_r_derivation_note"
     },
@@ -13283,6 +13307,10 @@
     {
       "from": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
       "to": "su3_wigner_intertwiner_block3_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_z3_apbc_variant_probe_2026-05-04",
+      "to": "su3_cube_full_rho_perron_2026-05-04"
     },
     {
       "from": "symmetry_head_to_head_note",
@@ -31198,6 +31226,19 @@
       "runner_path": "scripts/directional_b_geometry_normalized_overlap_map.py",
       "title": "Directional-B Geometry-Normalized Overlap Subcritical `N=12` Note"
     },
+    "discrete_einstein_regge_lift_note": {
+      "claim_id": "discrete_einstein_regge_lift_note",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "oh_schur_boundary_action_note"
+      ],
+      "note_hash": "75e2dd47f5528c449bfa822f31936b437b262e4b41e36a9c1cf5ef1431408032",
+      "path": "docs/DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md",
+      "runner_path": "scripts/frontier_universal_gr_isotropic_glue_operator.py",
+      "title": "Discrete Einstein/Regge Lift on the Restricted Strong-Field Class"
+    },
     "dispersion_high_p_tiebreaker_note": {
       "claim_id": "dispersion_high_p_tiebreaker_note",
       "claim_type_author_hint": null,
@@ -47831,6 +47872,21 @@
       "runner_path": null,
       "title": "Constructed Route-2 Support Tensor Primitive: Response Jacobian of the Bounded Prototype"
     },
+    "s3_time_observable_hessian_route_note": {
+      "claim_id": "s3_time_observable_hessian_route_note",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "observable_principle_from_axiom_note",
+        "s3_anomaly_spacetime_lift_note",
+        "s3_time_transfer_matrix_bridge_note"
+      ],
+      "note_hash": "742aedab48194e63a90b2e96629c091ebdf5e94edd226d47a61bdda4227d856e",
+      "path": "docs/S3_TIME_OBSERVABLE_HESSIAN_ROUTE_NOTE.md",
+      "runner_path": "scripts/frontier_universal_gr_tensor_action_blocker.py",
+      "title": "`S^3` + Anomaly-Forced Time: Observable-Hessian Route"
+    },
     "s3_time_primitive_chain_note": {
       "claim_id": "s3_time_primitive_chain_note",
       "claim_type_author_hint": null,
@@ -47841,6 +47897,20 @@
       "path": "docs/S3_TIME_PRIMITIVE_CHAIN_NOTE.md",
       "runner_path": null,
       "title": "Route 2 Primitive Chain: Readout and Time-Coupling Update"
+    },
+    "s3_time_spacetime_observable_route_note": {
+      "claim_id": "s3_time_spacetime_observable_route_note",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "universal_gr_tensor_action_blocker_note",
+        "s3_anomaly_spacetime_lift_note"
+      ],
+      "note_hash": "685a4b62ab7616d3ddfbd3722dfcf29b142531844402e5eb7954439791ca7570",
+      "path": "docs/S3_TIME_SPACETIME_OBSERVABLE_ROUTE_NOTE.md",
+      "runner_path": "scripts/frontier_universal_gr_tensor_action_blocker.py",
+      "title": "Route 2 Observable Pass: `S^3` + Anomaly-Forced Time"
     },
     "s3_time_spacetime_tensor_primitive_note": {
       "claim_id": "s3_time_spacetime_tensor_primitive_note",
@@ -49959,7 +50029,7 @@
         "su3_cube_full_rho_perron_2026-05-04",
         "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
       ],
-      "note_hash": "c10ff84a303e3fcd6d6f4603be4813bd7598afa4397769077cf61d152a68fa84",
+      "note_hash": "cd66ee0def8fc7d54ccc1c377d308f231adecacd2e0ddfca065e018e10e2439a",
       "path": "docs/SU3_BRIDGE_CLEAN_TUBE_K12_SUPPORT_2026-05-04.md",
       "runner_path": "scripts/frontier_su3_bridge_rho_modification_scoping_2026_05_04.py",
       "title": "SU(3) Bridge Clean-Tube k=12 Support Calculation: \u03c1 = (c/c_00)^12 \u2192 P = 0.5888"
@@ -50140,6 +50210,19 @@
       "path": "docs/SU3_WILSON_CLOSED_FORM_FANOUT_THEOREM_NOTE_2026-05-04.md",
       "runner_path": "scripts/frontier_su3_wilson_closed_form_fanout_2026_05_04.py",
       "title": "SU(3) Wilson Plaquette Closed-Form Fan-Out at \u03b2 = 6"
+    },
+    "su3_z3_apbc_variant_probe_2026-05-04": {
+      "claim_id": "su3_z3_apbc_variant_probe_2026-05-04",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "su3_cube_full_rho_perron_2026-05-04"
+      ],
+      "note_hash": "5f7a8b9d91ff31fdb27d04eda175b873826c4172908221bb9faee54249a213cf",
+      "path": "docs/SU3_Z3_APBC_VARIANT_PROBE_2026-05-04.md",
+      "runner_path": "scripts/frontier_su3_cube_z3_apbc_attempt_2026_05_04.py",
+      "title": "SU(3) L_s=2 Z3 APBC Variant Probe"
     },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "claim_id": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
@@ -55299,25 +55382,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 67,
+      "bounded_theorem": 69,
       "meta": 8,
       "no_go": 12,
       "none": 1715,
-      "open_gate": 10,
+      "open_gate": 12,
       "positive_theorem": 86
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 565,
+      "bounded_theorem": 567,
       "meta": 8,
       "no_go": 117,
       "none": 457,
-      "open_gate": 116,
+      "open_gate": 118,
       "positive_theorem": 635
     },
-    "edge_count": 6503,
-    "leaf_count": 549,
-    "node_count": 1898,
+    "edge_count": 6510,
+    "leaf_count": 553,
+    "node_count": 1902,
     "root_count": 879,
-    "runners_with_path": 1471
+    "runners_with_path": 1475
   }
 }

@@ -113,6 +113,25 @@ calculation does not identify the missing term. Treat any proposed
 1-loop, tadpole, marked/unmarked, or larger-cube correction as an open
 science item until it has its own derivation and runner.
 
+### 4.1 Review disposition of closed target-fit branches
+
+The closed `12 + 2/pi` branches are preserved as review context, not as
+source authority:
+
+- the numerical beta=6 match from the `12 + 2/pi` exponent is real as a
+  target-fit calculation, but the correction is not derived here;
+- the beta-dependence check showed the same `2/pi` correction is not a
+  universal beta-family law;
+- the proposed `(N^2 - 1)/(4 pi)` interpretation imports an unproved
+  correction term and does not supply the source-sector derivation;
+- the Schur-vs-K-tube comparison remains a real tension: the landed full-rho
+  Schur calculation gives `0.4291`, while the independent-product K-tube
+  support calculation gives `0.5888`.
+
+The durable theorem boundary is therefore exactly the one stated in this
+note: k=12 is a strong bounded near-miss, and the residual correction remains
+open science until derived from repo primitives with a load-bearing runner.
+
 ## 5. NMAX convergence
 
 Stable to 12 decimal places across NMAX_rho ∈ {2..8}:
