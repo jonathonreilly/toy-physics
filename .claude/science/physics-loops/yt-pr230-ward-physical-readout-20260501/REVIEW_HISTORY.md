@@ -4814,3 +4814,19 @@ Disposition: open builder gate.  The strict `g2` certificate remains absent,
 and all current shortcut authorities are rejected under the PR230 firewall.
 The builder records future required fields for an allowed certificate but does
 not mint one.  No effective-retention or proposed-retention wording is allowed.
+
+## 2026-05-05 - Block 201 W/Z g2 Generator/Casimir Normalization No-Go
+
+Review stance: algebraic shortcut no-go / exact negative boundary.
+
+- Added `scripts/frontier_yt_wz_g2_generator_casimir_normalization_no_go.py`.
+- Added `docs/YT_WZ_G2_GENERATOR_CASIMIR_NORMALIZATION_NO_GO_NOTE_2026-05-05.md`.
+- Added `outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json`.
+- Wired the no-go into the electroweak `g2` builder, retained-route,
+  campaign-status, and full assembly gates.
+
+Disposition: exact negative boundary.  SU(2) generator normalization and
+Casimir data do not select the physical low-scale `g2`; they fix
+representation charges only.  The W/Z route still needs a strict non-observed
+`g2` authority or a different physical observable route.  No
+effective-retention or proposed-retention wording is allowed.

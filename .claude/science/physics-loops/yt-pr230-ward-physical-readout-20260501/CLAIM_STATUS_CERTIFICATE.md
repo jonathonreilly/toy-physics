@@ -3287,3 +3287,25 @@ python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
 No accepted non-observed, non-forbidden PR230 `g2` authority candidate is
 present.  The builder does not write the strict certificate and does not
 authorize effective-retention or proposed-retention wording.
+
+W/Z `g2` generator/Casimir normalization no-go:
+
+```text
+actual_current_surface_status: exact negative boundary / SU2 generator-Casimir normalization does not certify PR230 g2
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_wz_g2_generator_casimir_normalization_no_go.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_electroweak_g2_certificate_builder.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=34 FAIL=0
+```
+
+Generator/Casimir normalization fixes SU(2) representation charges but does
+not select the physical low-scale `g2`.  This is an exact negative boundary on
+that shortcut only; it does not supply `g2`, W/Z response rows, or
+effective-retention/proposed-retention authorization.

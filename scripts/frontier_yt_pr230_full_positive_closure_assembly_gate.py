@@ -58,6 +58,7 @@ PARENTS = {
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
     "electroweak_g2_certificate_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
+    "wz_g2_generator_casimir_normalization_no_go": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
     "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
     "wz_g2_response_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
@@ -196,6 +197,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "lightweight same-source W readout production rows absent",
                 "W/Z mass-fit response-row builder strict inputs absent",
                 "strict electroweak g2 certificate builder inputs absent",
+                "SU(2) generator/Casimir normalization rejected as g2 authority",
                 "strict non-observed g2 authority certificate absent",
                 "response-only g2 self-normalization rejected",
                 "sector-overlap identity not derived",
@@ -219,6 +221,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["wz_mass_fit_path"],
                 PARENTS["wz_mass_fit_response_row_builder"],
                 PARENTS["electroweak_g2_certificate_builder"],
+                PARENTS["wz_g2_generator_casimir_normalization_no_go"],
                 PARENTS["wz_g2_authority_firewall"],
                 PARENTS["wz_g2_response_self_normalization_no_go"],
                 PARENTS["same_source_sector_overlap"],
@@ -520,6 +523,20 @@ def main() -> int:
         )
         is False,
         statuses["electroweak_g2_certificate_builder"],
+    )
+    report(
+        "wz-g2-generator-casimir-normalization-no-go-blocks",
+        "generator-Casimir normalization does not certify PR230 g2"
+        in statuses["wz_g2_generator_casimir_normalization_no_go"]
+        and certs["wz_g2_generator_casimir_normalization_no_go"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["wz_g2_generator_casimir_normalization_no_go"].get(
+            "g2_generator_casimir_no_go_passed"
+        )
+        is True,
+        statuses["wz_g2_generator_casimir_normalization_no_go"],
     )
     report(
         "wz-g2-authority-firewall-blocks",

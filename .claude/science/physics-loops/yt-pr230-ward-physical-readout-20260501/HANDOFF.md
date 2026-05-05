@@ -2780,3 +2780,35 @@ Next exact action: either derive a non-plaquette absolute EW normalization
 theorem or strict measurement/certificate satisfying the builder fields, or
 pivot to source-Higgs/Schur/rank-one identity routes.  Continue to leave
 chunks019-024 alone until their root artifacts complete.
+
+Block 201 added the W/Z `g2` generator/Casimir normalization no-go:
+
+```text
+python3 scripts/frontier_yt_wz_g2_generator_casimir_normalization_no_go.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_electroweak_g2_certificate_builder.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=183 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=209 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=34 FAIL=0
+```
+
+Result: SU(2) generator normalization and Casimir data fix representation
+charges, not the physical low-scale electroweak coupling coefficient.  The
+shortcut `g2^2=1/4` from normalized generators is now explicitly rejected by
+the electroweak `g2` builder.  Counts above are after rebasing over the
+cross-lane `O_H` authority audit and Stieltjes moment certificate gate.  No
+retained/proposed-retained wording is authorized.
+
+Next exact action: the W/Z route still needs a strict non-observed `g2`
+authority with canonical gauge-field/action normalization and allowed matching,
+or a different certified physical observable whose absolute readout does not
+need `g2`.  Continue to leave chunks019-024 alone until their root artifacts
+complete, then package only passing outputs through the polefit8x8 gates.

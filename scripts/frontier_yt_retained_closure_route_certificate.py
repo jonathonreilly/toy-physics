@@ -171,6 +171,7 @@ def main() -> int:
         "same_source_w_response_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
         "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
         "electroweak_g2_certificate_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
+        "wz_g2_generator_casimir_normalization_no_go": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
         "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
         "wz_g2_response_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
         "wz_correlator_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
@@ -1251,6 +1252,20 @@ def main() -> int:
             "strict_electroweak_g2_certificate_passed"
         )
         is False
+    )
+    wz_g2_generator_casimir_normalization_no_go_blocks = (
+        "generator-Casimir normalization does not certify PR230 g2"
+        in certificates["wz_g2_generator_casimir_normalization_no_go"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["wz_g2_generator_casimir_normalization_no_go"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["wz_g2_generator_casimir_normalization_no_go"].get(
+            "g2_generator_casimir_no_go_passed"
+        )
+        is True
     )
     wz_g2_authority_firewall_blocks = (
         "WZ response g2 authority absent"
@@ -2373,6 +2388,13 @@ def main() -> int:
         "electroweak-g2-certificate-builder-open",
         electroweak_g2_certificate_builder_open,
         certificates["electroweak_g2_certificate_builder"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "wz-g2-generator-casimir-normalization-no-go-blocks",
+        wz_g2_generator_casimir_normalization_no_go_blocks,
+        certificates["wz_g2_generator_casimir_normalization_no_go"].get(
+            "actual_current_surface_status", ""
+        ),
     )
     report(
         "wz-g2-authority-firewall-blocks",

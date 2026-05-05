@@ -1029,3 +1029,13 @@ tainted for PR230 by plaquette/u0/R_conn and audit-authority caveats; bare
 rows reuse the existing EW lane; response-only self-normalization is no-go.
 The remaining positive `g2` route is a non-plaquette absolute EW
 normalization theorem or a strict certificate satisfying the builder fields.
+
+2026-05-05 update: SU(2) generator/Casimir normalization is now explicitly
+blocked as `g2` authority.  The algebra fixes representation charges but not
+the coefficient of the canonically normalized gauge field.  Do not spend more
+foreground time trying to turn `Tr(T_a T_b)=delta_ab/2`, Casimir 3/4, or
+`g2^2=1/4` into the missing low-scale `g2` certificate.  Positive W/Z work
+must supply a real action-normalization/matching certificate or pivot to a
+different physical observable; otherwise prioritize source-Higgs
+`O_H/C_sH/C_HH`, Schur rows, rank-one neutral scalar, or package completed
+chunks019-024 only after their root artifacts land.

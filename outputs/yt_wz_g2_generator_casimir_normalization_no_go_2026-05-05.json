@@ -1,0 +1,55 @@
+{
+  "actual_current_surface_status": "exact negative boundary / SU2 generator-Casimir normalization does not certify PR230 g2",
+  "bare_retained_allowed": false,
+  "blocked_shortcut": "Do not infer the missing electroweak g2 certificate from SU(2) generator norms, fundamental Casimir 3/4, or the bare convention g2^2=1/4.  A physical g2 still requires an allowed action normalization, matching/running bridge, or direct non-observed certificate.",
+  "counterfamily": [
+    {
+      "fundamental_casimir": 0.75,
+      "g2": 0.35,
+      "mW_over_v_if_static_formula_used": 0.175,
+      "trace_TaTb_diagonal": 0.5,
+      "yt_from_fixed_response_ratio_1p23": 0.30440946930080864
+    },
+    {
+      "fundamental_casimir": 0.75,
+      "g2": 0.5,
+      "mW_over_v_if_static_formula_used": 0.25,
+      "trace_TaTb_diagonal": 0.5,
+      "yt_from_fixed_response_ratio_1p23": 0.43487067042972666
+    },
+    {
+      "fundamental_casimir": 0.75,
+      "g2": 0.648,
+      "mW_over_v_if_static_formula_used": 0.324,
+      "trace_TaTb_diagonal": 0.5,
+      "yt_from_fixed_response_ratio_1p23": 0.5635923888769259
+    },
+    {
+      "fundamental_casimir": 0.75,
+      "g2": 0.9,
+      "mW_over_v_if_static_formula_used": 0.45,
+      "trace_TaTb_diagonal": 0.5,
+      "yt_from_fixed_response_ratio_1p23": 0.7827672067735081
+    }
+  ],
+  "exact_next_action": "Supply a strict non-observed g2 authority that includes the canonical gauge-field/action normalization and any allowed low-scale matching, then rerun the electroweak g2 builder.",
+  "fail_count": 0,
+  "g2_generator_casimir_no_go_passed": true,
+  "generator_normalization": {
+    "commutators_close": true,
+    "fundamental_casimir": 0.75,
+    "trace_TaTb_diagonal": 0.5
+  },
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Generator and Casimir normalization fix representation charges, not the low-scale physical coupling coefficient of the canonical gauge field.",
+  "strict_certificate_written": false,
+  "strict_electroweak_g2_certificate_passed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not use observed g2, W/Z, top mass, or observed y_t",
+    "does not use alpha_LM, plaquette, u0, or package g2 as proof authority",
+    "does not use H_unit matrix-element readout or yt_ward_identity",
+    "does not set c2=1, Z_match=1, or kappa_s=1"
+  ]
+}

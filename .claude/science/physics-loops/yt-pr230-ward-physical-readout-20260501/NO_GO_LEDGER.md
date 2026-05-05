@@ -2685,3 +2685,16 @@ The strict certificate file is absent.  The builder rejects package `g_2(v)`,
 bare `g2^2=1/4`, W-mass companion reuse, and response-only self-normalization
 as current PR230 proof authority.  Do not treat any of those candidates as the
 missing `outputs/yt_electroweak_g2_certificate_2026-05-04.json` input.
+
+SU(2) generator/Casimir normalization is not `g2` authority:
+
+```text
+python3 scripts/frontier_yt_wz_g2_generator_casimir_normalization_no_go.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+The normalized SU(2) commutators, trace normalization, and fundamental Casimir
+are representation data.  They remain unchanged across many candidate `g2`
+values, while `m_W/v = g2/2` and a fixed W-response ratio readout for `y_t`
+vary with `g2`.  Do not use generator normalization, Casimir 3/4, or
+`g2^2=1/4` as the missing low-scale electroweak `g2` certificate.

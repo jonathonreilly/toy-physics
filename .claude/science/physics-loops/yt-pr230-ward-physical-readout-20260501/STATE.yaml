@@ -13,11 +13,14 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-200-electroweak-g2-certificate-builder
-blocks_completed: 200
+current_phase: campaign-block-201-wz-g2-generator-casimir-normalization-no-go
+blocks_completed: 201
 active_route: "same-source W/Z physical response route"
-active_hard_residual: "Added an executable electroweak g2 certificate builder gate.  The strict certificate outputs/yt_electroweak_g2_certificate_2026-05-04.json remains absent; package g_2(v), bare g2^2=1/4, W-mass companion reuse, and response-only self-normalization are all rejected as PR230 load-bearing proof inputs under the active observed-value, alpha/plaquette/u0, package-authority, and response-only firewalls.  Builder PASS=12 FAIL=0; retained-route PASS=180 FAIL=0; campaign status PASS=206 FAIL=0; full assembly PASS=31 FAIL=0.  No effective-retention or proposed-retention closure is authorized.  Polefit8x8 chunks019-024 remain running and uncounted until root artifacts complete and pass gates."
+active_hard_residual: "Added a W/Z g2 generator/Casimir normalization no-go.  Normalized SU(2) commutators, Tr(TaTb)=delta_ab/2, and fundamental Casimir 3/4 fix representation charges but do not select the physical low-scale coupling coefficient; g2=1/2 is one algebraically indistinguishable member of a family.  The electroweak g2 builder now rejects this shortcut explicitly.  No-go PASS=8 FAIL=0; builder PASS=13 FAIL=0; retained-route PASS=183 FAIL=0; campaign status PASS=209 FAIL=0; full assembly PASS=34 FAIL=0 after rebasing over the cross-lane O_H authority audit and Stieltjes moment certificate gate.  No effective-retention or proposed-retention closure is authorized.  Polefit8x8 chunks019-024 remain running and uncounted until root artifacts complete and pass gates."
 files_touched:
+  - "scripts/frontier_yt_wz_g2_generator_casimir_normalization_no_go.py"
+  - "docs/YT_WZ_G2_GENERATOR_CASIMIR_NORMALIZATION_NO_GO_NOTE_2026-05-05.md"
+  - "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json"
   - "scripts/frontier_yt_electroweak_g2_certificate_builder.py"
   - "docs/YT_ELECTROWEAK_G2_CERTIFICATE_BUILDER_NOTE_2026-05-05.md"
   - "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json"

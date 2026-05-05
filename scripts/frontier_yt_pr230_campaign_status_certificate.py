@@ -317,6 +317,9 @@ def main() -> int:
         "electroweak_g2_certificate_builder": load(
             "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json"
         ),
+        "wz_g2_generator_casimir_normalization_no_go": load(
+            "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json"
+        ),
         "wz_g2_authority_firewall": load(
             "outputs/yt_wz_g2_authority_firewall_2026-05-05.json"
         ),
@@ -1450,6 +1453,20 @@ def main() -> int:
         )
         is False,
         statuses["electroweak_g2_certificate_builder"],
+    )
+    report(
+        "wz-g2-generator-casimir-normalization-no-go-blocks",
+        "generator-Casimir normalization does not certify PR230 g2"
+        in str(statuses["wz_g2_generator_casimir_normalization_no_go"])
+        and certificates["wz_g2_generator_casimir_normalization_no_go"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["wz_g2_generator_casimir_normalization_no_go"].get(
+            "g2_generator_casimir_no_go_passed"
+        )
+        is True,
+        statuses["wz_g2_generator_casimir_normalization_no_go"],
     )
     report(
         "wz-g2-authority-firewall-blocks",

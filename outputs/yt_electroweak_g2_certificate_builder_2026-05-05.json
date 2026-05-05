@@ -26,6 +26,13 @@
     },
     {
       "accepted": false,
+      "name": "su2_generator_casimir_normalization",
+      "path": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
+      "present": true,
+      "rejection": "SU(2) generator normalization and Casimir values fix representation charges, not the physical g2 coefficient"
+    },
+    {
+      "accepted": false,
       "name": "w_mass_same_surface_probe",
       "path": "docs/W_MASS_DERIVED_NOTE.md",
       "present": true,
@@ -43,16 +50,18 @@
   "fail_count": 0,
   "parent_certificates": {
     "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
+    "wz_g2_generator_casimir_normalization_no_go": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
     "wz_g2_response_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json"
   },
-  "pass_count": 12,
+  "pass_count": 13,
   "proposal_allowed": false,
   "proposal_allowed_reason": "No accepted non-observed, non-forbidden PR230 g2 authority candidate is present.",
   "rejected_shortcuts": [
     "observed g2 or observed W/Z/top/y_t selectors",
     "repo package g_2(v) when its load-bearing path uses plaquette/u0/R_conn or audit-caveated EW authority",
     "bare g2^2=1/4 without an allowed PR230 low-scale running/matching bridge",
+    "SU(2) generator/Casimir normalization as physical g2",
     "W-mass companion rows that reuse the existing EW g2 lane",
     "response-only W/Z self-normalization"
   ],

@@ -29,6 +29,7 @@ AUDIT_LEDGER = ROOT / "docs" / "audit" / "AUDIT_LEDGER.md"
 
 PARENTS = {
     "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
+    "wz_g2_generator_casimir_normalization_no_go": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
     "wz_g2_response_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
 }
@@ -119,6 +120,16 @@ def main() -> int:
         )
         is True
     )
+    generator_casimir_normalization_blocked = (
+        "generator-Casimir normalization does not certify PR230 g2"
+        in parents["wz_g2_generator_casimir_normalization_no_go"].get(
+            "actual_current_surface_status", ""
+        )
+        and parents["wz_g2_generator_casimir_normalization_no_go"].get(
+            "g2_generator_casimir_no_go_passed"
+        )
+        is True
+    )
     row_builder_requires_strict_cert = (
         "electroweak g2 certificate absent"
         in parents["wz_mass_fit_response_row_builder"].get("g2_validation", {}).get(
@@ -147,6 +158,13 @@ def main() -> int:
             "present": bare_g2_present,
             "accepted": False,
             "rejection": "bare g2^2=1/4 does not by itself certify the PR230 low-scale physical g2 without an allowed running/matching bridge",
+        },
+        {
+            "name": "su2_generator_casimir_normalization",
+            "path": PARENTS["wz_g2_generator_casimir_normalization_no_go"],
+            "present": generator_casimir_normalization_blocked,
+            "accepted": False,
+            "rejection": "SU(2) generator normalization and Casimir values fix representation charges, not the physical g2 coefficient",
         },
         {
             "name": "w_mass_same_surface_probe",
@@ -181,6 +199,7 @@ def main() -> int:
     report("package-g2-present", package_g2_present, rel(USABLE_INDEX))
     report("package-g2-rejected-for-pr230-firewall", package_uses_forbidden_pr230_inputs and audit_blocks_silent_import, "forbidden package dependencies/audit caveats")
     report("bare-g2-present-but-not-low-scale-cert", bare_g2_present and bare_to_v_bridge_uses_forbidden_inputs, rel(EW_COLOR_NOTE))
+    report("generator-casimir-normalization-blocked", generator_casimir_normalization_blocked, PARENTS["wz_g2_generator_casimir_normalization_no_go"])
     report("w-mass-probe-not-independent-g2-authority", w_mass_route_uses_existing_g2_or_observed_context, rel(W_MASS_NOTE))
     report("response-only-self-normalization-blocked", response_self_normalization_blocked, PARENTS["wz_g2_response_self_normalization_no_go"])
     report("no-accepted-g2-candidate", not accepted_candidates, f"accepted={accepted_candidates}")
@@ -202,6 +221,7 @@ def main() -> int:
             "observed g2 or observed W/Z/top/y_t selectors",
             "repo package g_2(v) when its load-bearing path uses plaquette/u0/R_conn or audit-caveated EW authority",
             "bare g2^2=1/4 without an allowed PR230 low-scale running/matching bridge",
+            "SU(2) generator/Casimir normalization as physical g2",
             "W-mass companion rows that reuse the existing EW g2 lane",
             "response-only W/Z self-normalization",
         ],
