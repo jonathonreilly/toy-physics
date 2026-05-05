@@ -1,5 +1,23 @@
 # Review History
 
+## 2026-05-05 Non-Chunk Cycle-14 Route-Selector Self-Review
+
+Disposition: pass as exact negative boundary / no executable current route.
+
+Findings:
+
+- The runner does not produce or infer any new same-surface row, certificate,
+  theorem, or production evidence; it only closes current-surface route
+  selection after the cycle-13 W/Z covariance-theorem import no-go.
+- The gate loads no chunk MC and does not package or rerun chunk outputs.
+- The route-family audit now selects `no_current_surface_nonchunk_route`; the
+  W/Z route remains a future-only opportunity, not a current selected route.
+- The worklist, exhaustion, intake, terminal, reopen-admissibility,
+  retained-route, and campaign certificates still deny proposal authority.
+- The exact next action is to supply a listed same-surface artifact with
+  claim-status fields, then rerun the reopen-admissibility and aggregate gates
+  before selecting a positive route.
+
 ## 2026-05-05 Non-Chunk Reopen-Admissibility Self-Review
 
 Disposition: pass as exact negative boundary / path-only reopen rejected.

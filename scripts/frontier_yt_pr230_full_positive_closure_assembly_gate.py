@@ -89,6 +89,7 @@ PARENTS = {
     "nonchunk_future_artifact_intake": "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json",
     "nonchunk_terminal_route_exhaustion": "outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json",
     "nonchunk_reopen_admissibility": "outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json",
+    "nonchunk_cycle14_route_selector": "outputs/yt_pr230_nonchunk_cycle14_route_selector_gate_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -464,6 +465,16 @@ def main() -> int:
         and certs["nonchunk_reopen_admissibility"].get(
             "dramatic_step_gate", {}
         ).get("passed")
+        is False
+    )
+    nonchunk_cycle14_route_selector_closed = (
+        "cycle-14 route-selector gate" in statuses["nonchunk_cycle14_route_selector"]
+        and certs["nonchunk_cycle14_route_selector"].get("proposal_allowed") is False
+        and certs["nonchunk_cycle14_route_selector"].get("route_selector_gate_passed")
+        is True
+        and certs["nonchunk_cycle14_route_selector"].get("dramatic_step_gate", {}).get(
+            "passed"
+        )
         is False
     )
 
@@ -880,6 +891,11 @@ def main() -> int:
         nonchunk_reopen_admissibility_closed,
         statuses["nonchunk_reopen_admissibility"],
     )
+    report(
+        "nonchunk-cycle14-route-selector-recorded",
+        nonchunk_cycle14_route_selector_closed,
+        statuses["nonchunk_cycle14_route_selector"],
+    )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
@@ -904,7 +920,9 @@ def main() -> int:
             "artifact has appeared on the current surface.  The terminal "
             "route-exhaustion gate records the corresponding stop/reopen rule.  "
             "The cycle-12 reopen-admissibility gate rejects a path-only reopen "
-            "attempt before the aggregate gates may be rerun."
+            "attempt before the aggregate gates may be rerun.  The cycle-14 "
+            "route-selector gate now records that no current-surface non-chunk "
+            "route is selected after the W/Z covariance-theorem import no-go."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
@@ -935,6 +953,7 @@ def main() -> int:
             "does not treat static EW algebra, W/Z absent guards, source-only C_ss rows, or finite-shell fits as physical y_t readouts",
             "does not treat current-surface non-chunk exhaustion as retained closure",
             "does not treat terminal non-chunk route exhaustion as positive closure",
+            "does not treat cycle-14 non-chunk route selection closure as positive evidence",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks.  In parallel, "

@@ -1,6 +1,8 @@
 # PR #230 Non-Chunk Closure Worklist Gate
 
 **Status:** open / PR230 non-chunk closure worklist complete; positive closure still blocked
+**Claim type:** open_gate
+**Audit status authority:** independent audit lane only
 **Runner:** `scripts/frontier_yt_pr230_non_chunk_closure_worklist.py`
 **Certificate:** `outputs/yt_pr230_non_chunk_closure_worklist_2026-05-05.json`
 
@@ -82,7 +84,10 @@ W/Z response and recorded the Goldstone-equivalence source-identity no-go.
 The cycle-7 audit selected the Schur/scalar-denominator row family and
 recorded the compressed-denominator row-bootstrap no-go.  The cycle-13 audit
 selects the same-source W/Z family again and closes the current-branch
-covariance-theorem import shortcut.
+covariance-theorem import shortcut.  The cycle-14 audit now selects
+`no_current_surface_nonchunk_route`: all five route families are future-only
+until a listed same-surface artifact exists as a parseable claim-status
+artifact and the aggregate gates rerun.
 
 ## 2026-05-05 Source-Higgs Unratified-Gram Update
 

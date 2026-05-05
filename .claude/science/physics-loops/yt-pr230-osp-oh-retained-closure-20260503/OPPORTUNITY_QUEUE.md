@@ -1,5 +1,13 @@
 # Opportunity Queue
 
+Cycle-14 update: the route-family selector has been refreshed after the
+cycle-13 W/Z covariance-theorem import no-go.  No executable current-surface
+non-chunk route is selected.  The same-source W/Z route remains the top-ranked
+future opportunity, but it can reopen only after a listed same-surface row,
+certificate, or theorem exists as a parseable claim-status artifact and the
+reopen-admissibility, worklist, exhaustion, intake, assembly, retained-route,
+and campaign gates all rerun.
+
 Cycle-13 update: the same-source W/Z response route now also has a
 covariance-theorem import audit.  Current top/W builders, scout schemas,
 support-only W decompositions, and no-go gates are not importable as the

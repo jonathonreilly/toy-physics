@@ -166,7 +166,7 @@ def family_rows(worklist: dict[str, Any]) -> list[dict[str, Any]]:
             "future_files": future_presence(worklist, ["schur_kernel_rows"]),
             "open_import_count": 1,
             "runner_or_gate_available": True,
-            "can_execute_now": True,
+            "can_execute_now": False,
             "dramatic_step_score": 2,
             "hard_residual_pressure": 2,
             "current_disposition": "cycle-7 Schur compressed-denominator row-bootstrap no-go executed; no same-surface Schur A/B/C rows present",
@@ -208,16 +208,32 @@ def main() -> int:
     retained = load_json(RETAINED_ROUTE)
     campaign = load_json(CAMPAIGN)
     rows = family_rows(worklist)
-    selected = max(
+    ranked_future = max(
         rows,
         key=lambda row: (
             bool(row.get("cycle13_selected_shortcut")),
-            bool(row["can_execute_now"]),
             int(row["dramatic_step_score"]),
             int(row["hard_residual_pressure"]),
             -int(row["open_import_count"]),
         ),
     )
+    executable_rows = [row for row in rows if row["can_execute_now"]]
+    selected = {
+        "id": "no_current_surface_nonchunk_route",
+        "route_family": "cycle-14 route selector",
+        "can_execute_now": False,
+        "current_disposition": (
+            "The current non-chunk route surface is exhausted after the "
+            "cycle-13 W/Z covariance-theorem import no-go.  No route family "
+            "has the first-action same-surface row, certificate, or theorem "
+            "needed to pass the dramatic-step gate."
+        ),
+        "retirement_path": (
+            "Supply one listed future artifact as a parseable claim-status "
+            "artifact, rerun reopen-admissibility plus the aggregate gates, "
+            "then select the corresponding positive route."
+        ),
+    }
 
     report("worklist-parent-loaded", bool(worklist), rel(WORKLIST))
     report("assembly-parent-loaded", bool(assembly), rel(ASSEMBLY))
@@ -230,15 +246,20 @@ def main() -> int:
         "proposal_allowed remains false",
     )
     report(
-        "selected-route-reflects-cycle13-wz-covariance-import-audit",
-        selected["id"] == "same_source_wz_response"
-        and "covariance-theorem import audit" in selected["current_disposition"],
-        selected["id"],
+        "top-ranked-future-route-reflects-cycle13-wz-covariance-import-audit",
+        ranked_future["id"] == "same_source_wz_response"
+        and "covariance-theorem import audit" in ranked_future["current_disposition"],
+        ranked_future["id"],
     )
     report(
-        "selected-route-has-no-banned-import",
+        "no-current-route-family-executable",
+        not executable_rows and selected["id"] == "no_current_surface_nonchunk_route",
+        f"executable={[row['id'] for row in executable_rows]} selected={selected['id']}",
+    )
+    report(
+        "top-ranked-future-route-has-no-banned-import",
         not any(
-            banned in " ".join(selected["minimum_allowed_premises"])
+            banned in " ".join(ranked_future["minimum_allowed_premises"])
             for banned in (
                 "H_unit",
                 "yt_ward",
@@ -250,7 +271,7 @@ def main() -> int:
                 "y_t_bare",
             )
         )
-        and selected["id"] == "same_source_wz_response",
+        and ranked_future["id"] == "same_source_wz_response",
         "forbidden imports are explicit blockers, not premises",
     )
     report(
@@ -261,16 +282,18 @@ def main() -> int:
 
     result = {
         "actual_current_surface_status": (
-            "open / non-chunk route-family import audit records W/Z covariance-theorem import no-go"
+            "exact negative boundary / non-chunk route-family import audit confirms no executable current-surface route after W/Z covariance-theorem import no-go"
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "All audited route families retain open load-bearing imports.  The "
             "cycle-13 W/Z covariance-theorem import audit sharpens the "
-            "same-source W/Z route but cannot supply proposed_retained PR230 "
-            "closure."
+            "same-source W/Z route, but no route family now has an executable "
+            "current-surface first action or proposed_retained PR230 closure."
         ),
         "route_families_audited": rows,
+        "executable_route_ids": [row["id"] for row in executable_rows],
+        "ranked_future_route": ranked_future,
         "selected_route": selected,
         "selection_reason": (
             "After the W/Z source-coordinate transport, Goldstone-equivalence, "
@@ -280,7 +303,8 @@ def main() -> int:
             "import loophole: treating current builders, scout schemas, support "
             "notes, or no-go gates as the missing joint covariance theorem.  "
             "Cycle 13 closes that shortcut.  Every positive route now requires "
-            "absent future rows or a new same-surface theorem."
+            "absent future rows or a new same-surface theorem, so cycle 14 "
+            "selects no current-surface non-chunk route."
         ),
         "strict_non_claims": [
             "does not package or rerun chunk MC",
@@ -289,14 +313,12 @@ def main() -> int:
             "does not use prohibited operator/readout, target-value, coupling-normalization, or unit shortcuts",
         ],
         "exact_next_action": (
-            "Do not repeat source-only primitive-cone, scalar polynomial-contact, "
-            "static W/Z transport, Goldstone-equivalence source-identity, or "
-            "current-branch top/W covariance-theorem import shortcuts, and do not "
-            "bootstrap Schur rows from compressed denominator data.  The next positive move requires a strict future "
-            "row/certificate surface: O_H/C_sH/C_HH rows, W/Z mass-response rows "
-            "with identities or a new top/W joint covariance theorem, Schur A/B/C "
-            "rows, scalar-LSZ moment/threshold/FV authority, or a neutral "
-            "primitive-cone certificate."
+            "Do not select another current-surface non-chunk shortcut.  Reopen "
+            "only after a listed same-surface row, certificate, or theorem "
+            "exists as a parseable claim-status artifact, then rerun the "
+            "reopen-admissibility, worklist, exhaustion, intake, assembly, "
+            "retained-route, and campaign gates before selecting the next "
+            "positive route."
         ),
         "parent_certificates": {
             "worklist": rel(WORKLIST),

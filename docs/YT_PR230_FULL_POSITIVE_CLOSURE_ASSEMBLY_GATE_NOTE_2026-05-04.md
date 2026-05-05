@@ -1,6 +1,8 @@
 # PR230 Full Positive Closure Assembly Gate Note
 
 Status: open / assembly gate; proposal_allowed=false.
+Claim type: open_gate
+Audit status authority: independent audit lane only.
 
 This note records the integration boundary for PR #230.  The chunk worker can
 complete the production-response leg, but chunk completion alone cannot close
@@ -77,13 +79,13 @@ assembly gate remains open with `PASS=41 FAIL=0`.
 2026-05-05 non-chunk route-family update: the gate now also consumes
 `outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json` and
 `outputs/yt_fh_lsz_polynomial_contact_repair_no_go_2026-05-05.json`.  The
-route-family audit compares five live non-chunk families and selects the
-scalar-LSZ polynomial-contact repair shortcut as the only currently executable
-non-chunk block.  That block is closed negatively: degree `0..5` polynomial
-contacts leave higher complete-monotonicity violations invariant, while
-degree-seven finite interpolation can manufacture distinct Stieltjes-looking
-residuals without identifying a physical contact.  The assembly gate remains
-open with `PASS=42 FAIL=0`.
+route-family audit compares five live non-chunk families.  Earlier in the
+cycle it selected the scalar-LSZ polynomial-contact repair shortcut as an
+executable block; that block is closed negatively because degree `0..5`
+polynomial contacts leave higher complete-monotonicity violations invariant,
+while degree-seven finite interpolation can manufacture distinct
+Stieltjes-looking residuals without identifying a physical contact.  The
+assembly gate remains open with `PASS=42 FAIL=0`.
 
 2026-05-05 source-Higgs unratified-Gram update: the gate now also consumes
 `outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json`.
@@ -145,6 +147,15 @@ Current top/W builders, scout schemas, support-only W decompositions, and
 no-go gates are not importable same-surface product-measure,
 conditional-independence, or closed-covariance theorem authority.  The
 assembly gate remains open with `PASS=53 FAIL=0`.
+
+2026-05-05 cycle-14 route-selector update: the gate now also consumes
+`outputs/yt_pr230_nonchunk_cycle14_route_selector_gate_2026-05-05.json`.
+After the W/Z covariance-theorem import no-go, the refreshed route-family
+selector chooses `no_current_surface_nonchunk_route`.  The W/Z route remains
+the top-ranked future opportunity, but no current non-chunk route is
+executable until a listed same-surface artifact exists as a parseable
+claim-status artifact and the aggregate gates rerun.  The assembly gate
+remains open with `PASS=54 FAIL=0`.
 
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.

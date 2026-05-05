@@ -2,6 +2,8 @@
 
 **Date:** 2026-05-01  
 **Status:** open / active campaign continuing after current shortcut blocks
+**Claim type:** open_gate
+**Audit status authority:** independent audit lane only
 **Runner:** `scripts/frontier_yt_pr230_campaign_status_certificate.py`  
 **Certificate:** `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
 
@@ -26,8 +28,26 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=227 FAIL=0
+# SUMMARY: PASS=229 FAIL=0
 ```
+
+## 2026-05-05 Cycle-14 Route-Selector Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_nonchunk_cycle14_route_selector_gate_2026-05-05.json`.
+After the cycle-13 W/Z covariance-theorem import no-go, the route-family
+selector chooses `no_current_surface_nonchunk_route`; the W/Z route remains
+future-only until a listed same-surface row, certificate, or theorem exists as
+a parseable claim-status artifact and the aggregate gates rerun.
+
+Validation: route-family audit `PASS=10 FAIL=0`; cycle-14 route-selector gate
+`PASS=14 FAIL=0`; retained-route `PASS=201 FAIL=0`; campaign status
+`PASS=229 FAIL=0`; full positive closure assembly gate `PASS=54 FAIL=0`.
+
+The campaign remains open as a physics target, but the current non-chunk
+shortcut loop remains stopped.  Reopen only after an admissible strict future
+artifact exists and the worklist, exhaustion, intake, assembly, retained-route,
+and campaign gates are rerun.
 
 ## 2026-05-05 Non-Chunk Reopen-Admissibility Update
 
@@ -1157,3 +1177,10 @@ support-only W decompositions, and no-go gates remain non-authority.  Positive
 closure still requires a new strict joint covariance theorem or measured
 matched rows, plus the other W/Z identity/correction certificates and the
 scalar-LSZ and matching gates.
+
+Latest cycle-14 route-selector checkpoint: campaign status now includes
+`scripts/frontier_yt_pr230_nonchunk_cycle14_route_selector_gate.py` and
+reports `PASS=229 FAIL=0`.  No executable current-surface non-chunk route is
+selected after the W/Z covariance-theorem import no-go.  Positive closure
+still requires a listed future same-surface artifact and full aggregate reruns
+before any proposal language.

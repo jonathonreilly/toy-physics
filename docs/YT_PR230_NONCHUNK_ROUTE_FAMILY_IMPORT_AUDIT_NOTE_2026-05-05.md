@@ -1,7 +1,10 @@
 # PR #230 Non-Chunk Route-Family Import Audit
 
-**Status:** open / non-chunk route-family import audit records W/Z
-covariance-theorem import no-go
+**Status:** exact negative boundary / non-chunk route-family import audit
+confirms no executable current-surface route after W/Z covariance-theorem
+import no-go
+**Claim type:** no_go
+**Audit status authority:** independent audit lane only
 **Runner:** `scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py`
 **Certificate:** `outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json`
 
@@ -59,6 +62,12 @@ conditional-independence, or closed-covariance theorem.  A positive W/Z route
 still requires measured matched top/W rows or a new strict joint covariance
 theorem plus source-identity and W/Z certificates.
 
+2026-05-05 cycle-14 update: the selected current route is now
+`no_current_surface_nonchunk_route`.  The same-source W/Z route remains the
+top-ranked future opportunity, but it is not executable on the current
+surface.  All audited families require a listed same-surface row,
+certificate, or theorem before route selection can reopen.
+
 ## Boundary
 
 This audit does not authorize retained or proposed-retained PR230 closure.  It
@@ -71,5 +80,5 @@ shortcuts.
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py
 python3 scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py
-# SUMMARY: PASS=9 FAIL=0
+# SUMMARY: PASS=10 FAIL=0
 ```

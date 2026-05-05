@@ -4,17 +4,25 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact negative boundary / no importable same-surface top-W covariance theorem on current PR230 surface; positive closure still open
-active_residual: "Cycle 13 closes the same-source W/Z covariance-theorem import shortcut.  Current top/W builders, scout schemas, support-only W decompositions, and no-go gates are not importable as the strict product-measure, conditional-independence, or closed-covariance theorem needed to avoid matched top/W rows.  The route can reopen only with measured matched rows or a new parseable joint covariance theorem plus identity, W/Z, g2, sector-overlap, and correction certificates."
+actual_current_surface_status: exact negative boundary / PR230 non-chunk cycle-14 route-selector gate: no executable current-surface non-chunk route remains after the W/Z covariance-theorem import no-go; positive closure still open
+active_residual: "Cycle 14 refreshes the non-chunk route selector after cycle 13 closed the W/Z covariance-theorem import shortcut.  No route family has an executable current-surface first action; the same-source W/Z route remains the top-ranked future opportunity only after measured matched top/W rows or a new parseable joint covariance theorem plus identity, W/Z, g2, sector-overlap, and correction certificates."
 latest_checkpoint:
-  utc: "2026-05-05T07:10:11Z"
-  block: 70
-  artifact: "top/W covariance-theorem import audit"
-  status: "exact negative boundary / no importable same-surface top-W covariance theorem on current PR230 surface; positive closure still open"
-  result: "The audit classifies current top/W builders, scout schemas, support-only W decompositions, and no-go gates as non-authority for the missing same-surface joint covariance theorem.  The future closed-covariance theorem artifact remains absent, and all aggregates continue to deny proposal authority."
-  claim_boundary: "no closure proposal, no chunk packaging, no scout-to-production import, and no current-surface W/Z covariance closure until measured matched top/W rows or a new parseable same-surface joint covariance theorem exists and the aggregate gates are rerun"
+  utc: "2026-05-05T07:22:37Z"
+  block: 71
+  artifact: "cycle-14 non-chunk route-selector gate"
+  status: "exact negative boundary / no executable current-surface non-chunk route remains after the W/Z covariance-theorem import no-go; positive closure still open"
+  result: "The route-family audit now selects no current-surface non-chunk route.  All five audited route families are future-only, all six worklist units remain blocked, all listed future artifacts remain absent, and the exhaustion, intake, terminal, reopen-admissibility, retained-route, and campaign gates continue to deny proposal authority."
+  claim_boundary: "no closure proposal, no chunk packaging, no new current-surface shortcut selection, and no non-chunk route reopen until a listed same-surface row, certificate, or theorem exists as a parseable claim-status artifact and the aggregate gates are rerun"
   live_compute: "chunk worker remains separate; this checkpoint loads no chunk MC"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_nonchunk_cycle14_route_selector_gate.py
+    - docs/YT_PR230_NONCHUNK_CYCLE14_ROUTE_SELECTOR_GATE_NOTE_2026-05-05.md
+    - outputs/yt_pr230_nonchunk_cycle14_route_selector_gate_2026-05-05.json
+    - scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py
+    - docs/YT_PR230_NONCHUNK_ROUTE_FAMILY_IMPORT_AUDIT_NOTE_2026-05-05.md
+    - outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json
+    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
     - scripts/frontier_yt_top_wz_covariance_theorem_import_audit.py
     - docs/YT_TOP_WZ_COVARIANCE_THEOREM_IMPORT_AUDIT_NOTE_2026-05-05.md
     - outputs/yt_top_wz_covariance_theorem_import_audit_2026-05-05.json
@@ -248,9 +256,17 @@ lock_status:
   repo_lock_attempted: true
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
-cycle: 13
-block: 70
+cycle: 14
+block: 71
 files_touched:
+  - scripts/frontier_yt_pr230_nonchunk_cycle14_route_selector_gate.py
+  - docs/YT_PR230_NONCHUNK_CYCLE14_ROUTE_SELECTOR_GATE_NOTE_2026-05-05.md
+  - outputs/yt_pr230_nonchunk_cycle14_route_selector_gate_2026-05-05.json
+  - scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py
+  - docs/YT_PR230_NONCHUNK_ROUTE_FAMILY_IMPORT_AUDIT_NOTE_2026-05-05.md
+  - outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json
+  - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+  - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
   - scripts/frontier_yt_top_wz_covariance_theorem_import_audit.py
   - docs/YT_TOP_WZ_COVARIANCE_THEOREM_IMPORT_AUDIT_NOTE_2026-05-05.md
   - outputs/yt_top_wz_covariance_theorem_import_audit_2026-05-05.json
@@ -935,7 +951,7 @@ current_result: >
   certificates still deny proposal authority with PASS=155 and PASS=181
   respectively.  Chunks049-052 continue running under the wave orchestrator.
 proposal_allowed: false
-proposal_allowed_reason: "The current non-chunk route queue remains exhausted on this surface: all six worklist units are blocked, all strict future row/certificate paths are absent, the terminal and reopen-admissibility gates have no executable dramatic-step route, and current/chunk-only assembly still fails.  Cycle 13 also closes current-branch covariance-theorem import for the W/Z route.  No independent non-source row, matched covariance theorem, Schur row certificate, scalar-LSZ authority, O_H/source-Higgs rows, or rank-one theorem has passed."
+proposal_allowed_reason: "The current non-chunk route queue remains exhausted on this surface: all six worklist units are blocked, all strict future row/certificate paths are absent, the terminal and reopen-admissibility gates have no executable dramatic-step route, current/chunk-only assembly still fails, cycle 13 closes current-branch covariance-theorem import for the W/Z route, and cycle 14 selects no executable current-surface non-chunk route.  No independent non-source row, matched covariance theorem, Schur row certificate, scalar-LSZ authority, O_H/source-Higgs rows, or rank-one theorem has passed."
 next_exact_action: >
   Stop current-surface non-chunk shortcut cycling.  Reopen this non-chunk loop
   only when one of the named strict future same-surface artifacts exists:

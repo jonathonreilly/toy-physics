@@ -1,6 +1,7 @@
 {
-  "actual_current_surface_status": "open / non-chunk route-family import audit records W/Z covariance-theorem import no-go",
-  "exact_next_action": "Do not repeat source-only primitive-cone, scalar polynomial-contact, static W/Z transport, Goldstone-equivalence source-identity, or current-branch top/W covariance-theorem import shortcuts, and do not bootstrap Schur rows from compressed denominator data.  The next positive move requires a strict future row/certificate surface: O_H/C_sH/C_HH rows, W/Z mass-response rows with identities or a new top/W joint covariance theorem, Schur A/B/C rows, scalar-LSZ moment/threshold/FV authority, or a neutral primitive-cone certificate.",
+  "actual_current_surface_status": "exact negative boundary / non-chunk route-family import audit confirms no executable current-surface route after W/Z covariance-theorem import no-go",
+  "exact_next_action": "Do not select another current-surface non-chunk shortcut.  Reopen only after a listed same-surface row, certificate, or theorem exists as a parseable claim-status artifact, then rerun the reopen-admissibility, worklist, exhaustion, intake, assembly, retained-route, and campaign gates before selecting the next positive route.",
+  "executable_route_ids": [],
   "fail_count": 0,
   "parent_certificates": {
     "assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
@@ -8,9 +9,43 @@
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "worklist": "outputs/yt_pr230_non_chunk_closure_worklist_2026-05-05.json"
   },
-  "pass_count": 9,
+  "pass_count": 10,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "All audited route families retain open load-bearing imports.  The cycle-13 W/Z covariance-theorem import audit sharpens the same-source W/Z route but cannot supply proposed_retained PR230 closure.",
+  "proposal_allowed_reason": "All audited route families retain open load-bearing imports.  The cycle-13 W/Z covariance-theorem import audit sharpens the same-source W/Z route, but no route family now has an executable current-surface first action or proposed_retained PR230 closure.",
+  "ranked_future_route": {
+    "can_execute_now": false,
+    "current_disposition": "cycle-13 W/Z covariance-theorem import audit executed; source-coordinate transport, Goldstone-equivalence source identity, and existing covariance-theorem import shortcuts are closed negatively",
+    "cycle13_selected_shortcut": true,
+    "dramatic_step_score": 5,
+    "forbidden_imports": [
+      "observed W/Z/top/y_t/g2 selectors",
+      "user-banned coupling-normalization shortcuts",
+      "deterministic W response without paired top rows or covariance theorem"
+    ],
+    "future_files": {
+      "delta_perp_rows": false,
+      "deterministic_response_covariance_certificate": false,
+      "matched_top_wz_rows": false,
+      "non_observed_g2_certificate": false,
+      "source_coordinate_transport_certificate": false,
+      "top_wz_closed_covariance_theorem": false,
+      "wz_mass_response_rows": false
+    },
+    "hard_residual_pressure": 5,
+    "id": "same_source_wz_response",
+    "minimum_allowed_premises": [
+      "same source coordinate for top and W/Z rows",
+      "same-source EW action and W/Z mass-fit rows",
+      "source-coordinate transport from PR230 source to canonical Higgs radial coordinate",
+      "matched top/W covariance or closed covariance theorem",
+      "non-observed g2 certificate",
+      "strict delta_perp correction or null theorem"
+    ],
+    "open_import_count": 6,
+    "retirement_path": "produce matched rows or prove a new same-surface product/conditional-independence/closed-covariance theorem plus source-transport authority",
+    "route_family": "same-source W/Z response",
+    "runner_or_gate_available": true
+  },
   "route_families_audited": [
     {
       "can_execute_now": false,
@@ -98,7 +133,7 @@
       "runner_or_gate_available": true
     },
     {
-      "can_execute_now": true,
+      "can_execute_now": false,
       "current_disposition": "cycle-7 Schur compressed-denominator row-bootstrap no-go executed; no same-surface Schur A/B/C rows present",
       "dramatic_step_score": 2,
       "forbidden_imports": [
@@ -147,39 +182,12 @@
   ],
   "selected_route": {
     "can_execute_now": false,
-    "current_disposition": "cycle-13 W/Z covariance-theorem import audit executed; source-coordinate transport, Goldstone-equivalence source identity, and existing covariance-theorem import shortcuts are closed negatively",
-    "cycle13_selected_shortcut": true,
-    "dramatic_step_score": 5,
-    "forbidden_imports": [
-      "observed W/Z/top/y_t/g2 selectors",
-      "user-banned coupling-normalization shortcuts",
-      "deterministic W response without paired top rows or covariance theorem"
-    ],
-    "future_files": {
-      "delta_perp_rows": false,
-      "deterministic_response_covariance_certificate": false,
-      "matched_top_wz_rows": false,
-      "non_observed_g2_certificate": false,
-      "source_coordinate_transport_certificate": false,
-      "top_wz_closed_covariance_theorem": false,
-      "wz_mass_response_rows": false
-    },
-    "hard_residual_pressure": 5,
-    "id": "same_source_wz_response",
-    "minimum_allowed_premises": [
-      "same source coordinate for top and W/Z rows",
-      "same-source EW action and W/Z mass-fit rows",
-      "source-coordinate transport from PR230 source to canonical Higgs radial coordinate",
-      "matched top/W covariance or closed covariance theorem",
-      "non-observed g2 certificate",
-      "strict delta_perp correction or null theorem"
-    ],
-    "open_import_count": 6,
-    "retirement_path": "produce matched rows or prove a new same-surface product/conditional-independence/closed-covariance theorem plus source-transport authority",
-    "route_family": "same-source W/Z response",
-    "runner_or_gate_available": true
+    "current_disposition": "The current non-chunk route surface is exhausted after the cycle-13 W/Z covariance-theorem import no-go.  No route family has the first-action same-surface row, certificate, or theorem needed to pass the dramatic-step gate.",
+    "id": "no_current_surface_nonchunk_route",
+    "retirement_path": "Supply one listed future artifact as a parseable claim-status artifact, rerun reopen-admissibility plus the aggregate gates, then select the corresponding positive route.",
+    "route_family": "cycle-14 route selector"
   },
-  "selection_reason": "After the W/Z source-coordinate transport, Goldstone-equivalence, native-label factorization, deterministic-response, scalar contact, O_H premise, Schur bootstrap, and neutral primitive-cone shortcuts closed negatively, the top-ranked W/Z route still had one exact import loophole: treating current builders, scout schemas, support notes, or no-go gates as the missing joint covariance theorem.  Cycle 13 closes that shortcut.  Every positive route now requires absent future rows or a new same-surface theorem.",
+  "selection_reason": "After the W/Z source-coordinate transport, Goldstone-equivalence, native-label factorization, deterministic-response, scalar contact, O_H premise, Schur bootstrap, and neutral primitive-cone shortcuts closed negatively, the top-ranked W/Z route still had one exact import loophole: treating current builders, scout schemas, support notes, or no-go gates as the missing joint covariance theorem.  Cycle 13 closes that shortcut.  Every positive route now requires absent future rows or a new same-surface theorem, so cycle 14 selects no current-surface non-chunk route.",
   "strict_non_claims": [
     "does not package or rerun chunk MC",
     "does not claim retained or proposed_retained top-Yukawa closure",

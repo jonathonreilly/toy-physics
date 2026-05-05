@@ -172,6 +172,9 @@ def main() -> int:
         "pr230_nonchunk_reopen_admissibility": load(
             "outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json"
         ),
+        "pr230_nonchunk_cycle14_route_selector": load(
+            "outputs/yt_pr230_nonchunk_cycle14_route_selector_gate_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -1048,6 +1051,10 @@ def main() -> int:
         is False
         and certificates["pr230_nonchunk_route_family_import_audit"]
         .get("selected_route", {})
+        .get("id")
+        == "no_current_surface_nonchunk_route"
+        and certificates["pr230_nonchunk_route_family_import_audit"]
+        .get("ranked_future_route", {})
         .get("id")
         == "same_source_wz_response",
         statuses["pr230_nonchunk_route_family_import_audit"],
@@ -2428,6 +2435,22 @@ def main() -> int:
         ).get("passed")
         is False,
         statuses["pr230_nonchunk_reopen_admissibility"],
+    )
+    report(
+        "pr230-nonchunk-cycle14-route-selector-recorded",
+        "cycle-14 route-selector gate"
+        in str(statuses["pr230_nonchunk_cycle14_route_selector"])
+        and certificates["pr230_nonchunk_cycle14_route_selector"].get("proposal_allowed")
+        is False
+        and certificates["pr230_nonchunk_cycle14_route_selector"].get(
+            "route_selector_gate_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_cycle14_route_selector"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False,
+        statuses["pr230_nonchunk_cycle14_route_selector"],
     )
 
     remaining_routes = [

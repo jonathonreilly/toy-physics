@@ -101,9 +101,8 @@ route still needs a same-surface contact-subtraction certificate, microscopic
 scalar-denominator theorem, or strict moment-threshold-FV certificate.
 
 Route-family audit: `docs/YT_PR230_NONCHUNK_ROUTE_FAMILY_IMPORT_AUDIT_NOTE_2026-05-05.md`
-compares five non-chunk families and now records the W/Z
-Goldstone-equivalence source-identity no-go as the latest selected shortcut
-boundary.
+compares five non-chunk families and now records no executable
+current-surface route after the W/Z covariance-theorem import no-go.
 
 ## R7: Reopen-Admissibility Gate
 
@@ -118,3 +117,15 @@ Reason: no listed future key or path exists on the current branch, and a path
 alone would not be enough.  A candidate must be a parseable claim-status
 artifact that denies branch-local closure authority by itself and passes the
 forbidden-import text firewall before aggregate reruns can even begin.
+
+## R8: Cycle-14 Route Selector
+
+After cycle 13, test whether any route family can still be selected on the
+current non-chunk surface.
+
+Status: closed negatively in
+`docs/YT_PR230_NONCHUNK_CYCLE14_ROUTE_SELECTOR_GATE_NOTE_2026-05-05.md`.
+
+Reason: all five route families are future-only.  The selected current route is
+`no_current_surface_nonchunk_route`; reopen requires a listed same-surface
+artifact with claim-status fields and full aggregate reruns.

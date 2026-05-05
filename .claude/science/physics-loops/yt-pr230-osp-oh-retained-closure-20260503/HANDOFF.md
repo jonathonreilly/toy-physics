@@ -3053,3 +3053,35 @@ covariance theorem, source-Higgs rows after a real `O_H` certificate, Schur
 `A/B/C` rows, scalar-LSZ contact/threshold/FV authority, or neutral
 primitive-cone irreducibility exists.  Then rerun reopen-admissibility plus
 the worklist, exhaustion, intake, assembly, retained-route, and campaign gates.
+
+## 2026-05-05 Non-Chunk Cycle-14 Route-Selector Gate
+
+Cycle 14 refreshed the route-family selector after the cycle-13 W/Z
+covariance-theorem import no-go.  The selected current route is now
+`no_current_surface_nonchunk_route`; the same-source W/Z route remains only
+the top-ranked future opportunity.
+
+Verification:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_nonchunk_cycle14_route_selector_gate.py \
+  scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py \
+  scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+
+python3 scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_pr230_nonchunk_cycle14_route_selector_gate.py
+# SUMMARY: PASS=14 FAIL=0
+```
+
+Result: exact negative boundary, not closure.  No current-surface non-chunk
+route remains executable after cycle 13.  All six worklist units remain
+blocked, all listed future artifacts are absent, and retained/campaign
+certificates still deny proposal authority.
+
+Next exact action: stop current-surface non-chunk shortcut cycling.  Reopen
+only when a listed same-surface row, certificate, or theorem exists as a
+parseable claim-status artifact; then rerun reopen-admissibility, worklist,
+current-surface exhaustion, future-artifact intake, assembly, retained-route,
+and campaign gates before any proposal language or route selection.

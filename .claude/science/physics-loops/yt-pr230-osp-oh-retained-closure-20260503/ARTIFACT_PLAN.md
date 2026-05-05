@@ -1,5 +1,12 @@
 # Artifact Plan
 
+Completed in the cycle-14 route-selector continuation:
+
+- `scripts/frontier_yt_pr230_nonchunk_cycle14_route_selector_gate.py`
+- `docs/YT_PR230_NONCHUNK_CYCLE14_ROUTE_SELECTOR_GATE_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_cycle14_route_selector_gate_2026-05-05.json`
+- refreshed non-chunk route-family audit and full assembly gate.
+
 Completed in the reopen-admissibility continuation:
 
 - `scripts/frontier_yt_pr230_nonchunk_reopen_admissibility_gate.py`
