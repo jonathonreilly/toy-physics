@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 61 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 217 |
+| **retained_bounded** | 218 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 841 |
+| unaudited | 840 |
 | audit_in_progress | 1 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 373 |
+| `audited_clean` | 374 |
 | `audited_conditional` | 400 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 31 |
-| `unaudited` | 887 |
+| `unaudited` | 886 |
 
 | claim_type | count |
 |---|---:|
@@ -372,6 +372,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `sixth_family_sheared_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | B | - |
 | `source_driven_field_recovery_h025_pocket_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_driven_field_recovery_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `source_resolved_exact_green_h025_pocket_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_exact_green_pocket_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `source_resolved_exact_green_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -10581,6 +10582,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The minimal source-driven field architecture has a real weak-field recovery pocket, with TOWARD surviving and the dynamic mass exponent staying near linear only while stronger calibrations drift away from linear scaling.  _(class `C`)_
 - **chain closes:** True — The two cited runners recompute the broad calibration sweep and the conservative pocket replay values stated in the note. The note does not promote this to a self-consistent strong-field theorem and explicitly keeps the calibration-sensitive boundary.
 - **rationale:** The frozen broad sweep matches the current sweep runner for all seven target maxima, including the F~M drift from 0.997 at target 0.001 to 0.642 at target 0.080. The conservative pocket replay also matches: zero-source shift is exactly zero, dynamic F~M is 0.96, all four rows are TOWARD, and the mean dynamic/instantaneous ratio is 1.304. Residual risk is the declared calibration sensitivity, but the source note states that as the claim boundary rather than hiding it.
+- **auditor confidence:** high
+
+### `source_resolved_exact_green_h025_pocket_note`
+
+- **Note:** [`SOURCE_RESOLVED_EXACT_GREEN_H025_POCKET_NOTE.md`](../../docs/SOURCE_RESOLVED_EXACT_GREEN_H025_POCKET_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** On the fixed h=0.25, W=3, L=6 compact exact-lattice family with the stated source-resolved Green kernel and source ladder, the runner computes exact zero-source reduction, 4/4 TOWARD Green-kernel rows, F~M exponents rounded to 1.00, and mean |green/inst| = 1.329.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-20260505`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The strongest bounded statement is that exact zero-source reduction survives, the Green-kernel field keeps the weak-field TOWARD sign on the compact h=0.25 refinement family, the mass-scaling class stays essentially linear, and the dynamic field remains nontrivial with mean |green/inst| = 1.329.  _(class `C`)_
+- **chain closes:** True — Both one-hop dependencies are retained_bounded finite Green-pocket controls, and the runner directly constructs the compact exact lattice, source cluster, calibrated Green field, instantaneous comparator, propagation, centroid shifts, ratios, and fitted exponents. The closure is limited to this refinement pocket and does not assert a self-consistent dynamical field theory.
+- **rationale:** The cached runner output matches the frozen zero-source check, calibration gain, four source-strength rows, fitted exponents, TOWARD count, and mean |green/inst| ratio. The source note already states the compact/refinement limitation and does not promote the result beyond a bounded pocket. No unretained dependency, external comparator, or hidden bridge is needed for the finite replay.
 - **auditor confidence:** high
 
 ### `source_resolved_exact_green_pocket_note`
