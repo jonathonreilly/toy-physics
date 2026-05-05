@@ -84,6 +84,7 @@ PARENTS = {
     "schur_kprime_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
     "schur_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
     "schur_compressed_bootstrap_no_go": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
+    "nonchunk_current_surface_exhaustion": "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -414,6 +415,15 @@ def main() -> int:
     campaign_open = (
         "active campaign" in statuses["campaign_status"]
         and certs["campaign_status"].get("proposal_allowed") is False
+    )
+    nonchunk_current_surface_exhausted = (
+        "current PR230 non-chunk route queue exhausted"
+        in statuses["nonchunk_current_surface_exhaustion"]
+        and certs["nonchunk_current_surface_exhaustion"].get("proposal_allowed") is False
+        and certs["nonchunk_current_surface_exhaustion"].get(
+            "current_surface_exhaustion_gate_passed"
+        )
+        is True
     )
 
     current_state = {
@@ -797,6 +807,11 @@ def main() -> int:
         is True,
         statuses["neutral_scalar_primitive_cone_stretch_no_go"],
     )
+    report(
+        "nonchunk-current-surface-exhaustion-recorded",
+        nonchunk_current_surface_exhausted,
+        statuses["nonchunk_current_surface_exhaustion"],
+    )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
@@ -814,6 +829,9 @@ def main() -> int:
             "or retained-proposal authorization.  On the current PR230 surface "
             "all allowed bridge routes are absent, blocked, or support-only, so "
             "full positive closure remains open."
+            " The cycle-8 current-surface exhaustion gate now records that no "
+            "hidden non-chunk shortcut remains executable without one of the "
+            "named future same-surface rows, certificates, or theorems."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
@@ -842,6 +860,7 @@ def main() -> int:
             "does not define y_t through a matrix element or y_t_bare",
             "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, observed targets, kappa_s=1, c2=1, Z_match=1, or cos(theta)=1",
             "does not treat static EW algebra, W/Z absent guards, source-only C_ss rows, or finite-shell fits as physical y_t readouts",
+            "does not treat current-surface non-chunk exhaustion as retained closure",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks.  In parallel, "

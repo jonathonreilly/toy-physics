@@ -1,5 +1,11 @@
 # Opportunity Queue
 
+Cycle-8 update: the current-surface non-chunk queue is exhausted.  The rows
+below remain the only future positive opportunities, but none is executable on
+the present surface without a new same-surface row, certificate, or theorem.
+`scripts/frontier_yt_pr230_nonchunk_current_surface_exhaustion_gate.py`
+records this as an exact negative boundary, not as retained closure.
+
 | Rank | Opportunity | Retained-positive probability | Why next | First action |
 |---:|---|---|---|---|
 | 1 | Same-source W/Z response | medium-low | Still the most concrete future-row route, but only with real same-surface response authority | W-response decomposition, top-response identity builder, matched top/W covariance builder, top-response certificate builder, W/Z mass-fit adapter, W-response row builder, lightweight readout, and `delta_perp` tomography contracts now make the route exact; marginal covariance, native-label factorization, deterministic-W-alone, static-algebra source-transport, and Goldstone-equivalence source-identity shortcuts are closed negatively, so first derive a real same-source EW action, source-transport certificate, and W/Z rows, or a strict product-measure/conditional-independence/closed-covariance theorem with paired top rows or a closed same-surface covariance formula |

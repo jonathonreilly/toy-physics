@@ -153,6 +153,7 @@ def main() -> int:
         "schur_kernel_row_contract_gate": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
         "schur_row_candidate_extraction_attempt": "outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json",
         "schur_compressed_denominator_row_bootstrap_no_go": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
+        "pr230_nonchunk_current_surface_exhaustion": "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
@@ -2017,6 +2018,18 @@ def main() -> int:
         )
         is False
     )
+    pr230_nonchunk_current_surface_exhaustion_blocks = (
+        "current PR230 non-chunk route queue exhausted"
+        in certificates["pr230_nonchunk_current_surface_exhaustion"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_nonchunk_current_surface_exhaustion"].get("proposal_allowed")
+        is False
+        and certificates["pr230_nonchunk_current_surface_exhaustion"].get(
+            "current_surface_exhaustion_gate_passed"
+        )
+        is True
+    )
     interacting_kinetic_still_open = (
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status")
         == "bounded-support / interacting kinetic background sensitivity"
@@ -3018,6 +3031,13 @@ def main() -> int:
         certificates["full_positive_closure_assembly_gate"].get("actual_current_surface_status", ""),
     )
     report(
+        "pr230-nonchunk-current-surface-exhaustion-blocks-shortcuts",
+        pr230_nonchunk_current_surface_exhaustion_blocks,
+        certificates["pr230_nonchunk_current_surface_exhaustion"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "interacting-kinetic-route-still-needs-ensemble-or-theorem",
         interacting_kinetic_still_open,
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status", ""),
@@ -3381,7 +3401,9 @@ def main() -> int:
             "production evidence.  Before any retained/proposed-retained "
             "wording, rerun the full positive closure assembly gate; it "
             "currently rejects both the current surface and a hypothetical "
-            "chunk-only completion."
+            "chunk-only completion.  The non-chunk current-surface exhaustion "
+            "gate also records that no hidden branch-local shortcut remains "
+            "without a named future same-surface row, certificate, or theorem."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

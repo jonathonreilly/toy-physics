@@ -1,5 +1,43 @@
 # Handoff
 
+## 2026-05-05 PR230 Non-Chunk Current-Surface Exhaustion Gate
+
+Cycle 8 converted the post-Schur checkpoint into a strict current-surface
+queue-exhaustion gate for the non-chunk PR230 loop.
+
+Result: exact negative boundary.  The new runner verifies that all six
+non-chunk worklist units are blocked, every strict future row/certificate file
+named by the worklist is absent, the full assembly gate rejects both the
+current and chunk-only surfaces, retained/campaign certificates deny proposal
+authority, and the latest W/Z, `O_H`, scalar-LSZ, Schur, and neutral-rank
+shortcuts are already closed or gated.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_nonchunk_current_surface_exhaustion_gate.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=49 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=197 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=224 FAIL=0
+```
+
+Claim boundary: no closure proposal, no chunk packaging, no old May 1
+queue-exhaustion authority, and no current-surface non-chunk shortcut beyond
+the named future same-surface rows, certificates, or theorems.
+
+Next exact action: stop current-surface non-chunk shortcut cycling unless a
+strict future artifact appears: `O_H/C_sH/C_HH` rows, W/Z response rows with
+identity/covariance/correction authority, scalar-LSZ moment/threshold/FV
+authority, Schur `A/B/C` kernel rows, or a neutral primitive-cone certificate.
+The chunk worker remains separate.
+
 ## 2026-05-05 Schur Compressed-Denominator Row-Bootstrap No-Go
 
 Cycle 7 tested the Schur/scalar-denominator shortcut left after finite

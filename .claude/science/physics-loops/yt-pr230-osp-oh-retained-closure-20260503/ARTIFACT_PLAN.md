@@ -339,3 +339,15 @@ purity against an unratified supplied operator is not PR230 canonical `O_H`
 authority.  A future positive source-Higgs route must first supply a
 same-surface canonical-Higgs identity and normalization certificate, then
 production source-Higgs pole residues.
+
+Completed in the non-chunk current-surface exhaustion continuation:
+
+- `scripts/frontier_yt_pr230_nonchunk_current_surface_exhaustion_gate.py`
+- `docs/YT_PR230_NONCHUNK_CURRENT_SURFACE_EXHAUSTION_GATE_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
+This closes the current-surface non-chunk shortcut queue negatively.  All six
+worklist units are blocked and every strict future row/certificate file is
+absent, so the next positive move requires a new same-surface row, certificate,
+or theorem rather than another branch-local shortcut.

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T05:42:36.308946+00:00",
+  "generated_at": "2026-05-05T05:53:40.196187+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16524,6 +16524,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_non_chunk_closure_worklist.py"
+    },
+    "yt_pr230_nonchunk_current_surface_exhaustion_gate_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_nonchunk_current_surface_exhaustion_gate.py"
     },
     "yt_pr230_nonchunk_route_family_import_audit_note_2026-05-05": {
       "assert_count": 1,
@@ -33876,6 +33888,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_nonchunk_current_surface_exhaustion_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_nonchunk_current_surface_exhaustion_gate_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py": {
       "assert_count": 1,
       "claims": [
@@ -39073,11 +39100,11 @@
       "A": 9,
       "B": 208,
       "C": 490,
-      "D": 290,
+      "D": 291,
       "none": 404
     },
-    "runners_classified": 1401,
-    "runners_with_C": 726,
-    "runners_with_D": 505
+    "runners_classified": 1402,
+    "runners_with_C": 727,
+    "runners_with_D": 506
   }
 }

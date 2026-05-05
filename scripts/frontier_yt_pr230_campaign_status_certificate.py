@@ -160,6 +160,9 @@ def main() -> int:
         "pr230_nonchunk_route_family_import_audit": load(
             "outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json"
         ),
+        "pr230_nonchunk_current_surface_exhaustion": load(
+            "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -2341,6 +2344,18 @@ def main() -> int:
         is False,
         statuses["full_positive_closure_assembly_gate"],
     )
+    report(
+        "pr230-nonchunk-current-surface-exhaustion-recorded",
+        "current PR230 non-chunk route queue exhausted"
+        in str(statuses["pr230_nonchunk_current_surface_exhaustion"])
+        and certificates["pr230_nonchunk_current_surface_exhaustion"].get("proposal_allowed")
+        is False
+        and certificates["pr230_nonchunk_current_surface_exhaustion"].get(
+            "current_surface_exhaustion_gate_passed"
+        )
+        is True,
+        statuses["pr230_nonchunk_current_surface_exhaustion"],
+    )
 
     remaining_routes = [
         {
@@ -2366,6 +2381,10 @@ def main() -> int:
         {
             "route": "full positive closure assembly",
             "needed": "production response plus scalar-LSZ model/FV/IR control plus one accepted O_H/WZ/Schur/rank-one bridge and retained-route approval",
+        },
+        {
+            "route": "current-surface non-chunk queue exhausted",
+            "needed": "a new same-surface row, certificate, or theorem before continuing non-chunk shortcut cycling",
         },
     ]
 
@@ -2630,7 +2649,10 @@ def main() -> int:
             "dependent.  "
             "They do not supply the "
             "interacting scalar pole/LSZ "
-            "theorem."
+            "theorem.  The cycle-8 non-chunk current-surface exhaustion gate "
+            "now records the queue-level consequence: without one of the named "
+            "future same-surface artifacts, no further current-surface "
+            "non-chunk shortcut remains to cycle."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",

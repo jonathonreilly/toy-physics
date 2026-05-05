@@ -4,17 +4,26 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: open
-active_residual: "Schur compressed-denominator row bootstrap closed negatively; current PR230 surface still lacks same-surface Schur A/B/C rows, W/Z response rows/identity/covariance authority, neutral irreducibility, O_H/source-Higgs rows, and scalar-LSZ moment/FV authority"
+actual_current_surface_status: exact negative boundary / current PR230 non-chunk route queue exhausted; positive closure still open
+active_residual: "Cycle 8 closes the current-surface non-chunk shortcut queue negatively.  All worklist units are blocked and all strict future row/certificate files are absent: same-surface Schur A/B/C rows, W/Z response rows/identity/covariance/correction authority, neutral irreducibility, O_H/source-Higgs rows, and scalar-LSZ moment/FV authority."
 latest_checkpoint:
-  utc: "2026-05-05T05:38:02Z"
-  block: 65
-  artifact: "Schur compressed-denominator row-bootstrap no-go"
-  status: "exact negative boundary / Schur compressed-denominator row bootstrap does not reconstruct same-surface A/B/C rows"
-  result: "The runner constructs two inequivalent Schur partitions with the same compressed scalar denominator and the same pole derivative; compressed denominator data cannot supply the missing kernel rows."
-  claim_boundary: "no closure proposal, no chunk packaging, no synthetic Schur rows, and no compressed-denominator row-bootstrap authority"
-  live_compute: "chunk worker remains separate; this checkpoint is non-chunk Schur route-gating only"
+  utc: "2026-05-05T05:51:25Z"
+  block: 66
+  artifact: "PR230 non-chunk current-surface exhaustion gate"
+  status: "exact negative boundary / current PR230 non-chunk route queue exhausted; positive closure still open"
+  result: "The gate verifies that all six non-chunk worklist units are blocked, all strict future row/certificate files are absent, current and chunk-only assembly are rejected, and no retained/proposed-retained proposal is authorized."
+  claim_boundary: "no closure proposal, no chunk packaging, no old queue-exhaustion shortcut, and no current-surface non-chunk shortcut authority beyond the named future rows/certificates/theorems"
+  live_compute: "chunk worker remains separate; this checkpoint is non-chunk current-surface route exhaustion only"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_nonchunk_current_surface_exhaustion_gate.py
+    - docs/YT_PR230_NONCHUNK_CURRENT_SURFACE_EXHAUSTION_GATE_NOTE_2026-05-05.md
+    - outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json
+    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+    - scripts/frontier_yt_retained_closure_route_certificate.py
+    - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+    - scripts/frontier_yt_pr230_campaign_status_certificate.py
+    - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
     - scripts/frontier_yt_schur_compressed_denominator_row_bootstrap_no_go.py
     - docs/YT_SCHUR_COMPRESSED_DENOMINATOR_ROW_BOOTSTRAP_NO_GO_NOTE_2026-05-05.md
     - outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json
@@ -194,8 +203,8 @@ lock_status:
   repo_lock_attempted: true
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
-cycle: 7
-block: 65
+cycle: 8
+block: 66
 files_touched:
   - scripts/frontier_yt_schur_compressed_denominator_row_bootstrap_no_go.py
   - docs/YT_SCHUR_COMPRESSED_DENOMINATOR_ROW_BOOTSTRAP_NO_GO_NOTE_2026-05-05.md
@@ -819,14 +828,11 @@ current_result: >
   certificates still deny proposal authority with PASS=155 and PASS=181
   respectively.  Chunks049-052 continue running under the wave orchestrator.
 proposal_allowed: false
-proposal_allowed_reason: "O_sp/O_H overlap remains open; W/Z source transport, Goldstone-equivalence source identity, neutral primitive-cone shortcut, and Schur compressed-denominator row bootstrap are closed negatively; no independent non-source row, matched covariance theorem, Schur row certificate, or rank-one theorem has passed."
+proposal_allowed_reason: "The current non-chunk route queue is exhausted on this surface: all six worklist units are blocked, all strict future row/certificate files are absent, and current/chunk-only assembly still fails.  No independent non-source row, matched covariance theorem, Schur row certificate, scalar-LSZ authority, O_H/source-Higgs rows, or rank-one theorem has passed."
 next_exact_action: >
-  Continue the non-chunk physics-loop on real identity or row-producing routes
-  only.  Do not spend another block on static-algebra source transport or
-  Goldstone-equivalence source identity, and do not bootstrap Schur rows from
-  compressed denominator data.  The next move must supply a strict same-surface
-  artifact: real Schur A/B/C kernel rows, a same-source EW action plus W/Z
-  response rows and covariance/correction authority, source-Higgs rows after a
-  real same-surface O_H certificate, scalar-LSZ contact/threshold/FV authority,
-  or a direct neutral-sector irreducibility proof.  The chunk worker remains
-  separate.
+  Stop current-surface non-chunk shortcut cycling unless one of the named strict
+  future same-surface artifacts is supplied: real Schur A/B/C kernel rows, a
+  same-source EW action plus W/Z response rows and covariance/correction
+  authority, source-Higgs rows after a real same-surface O_H certificate,
+  scalar-LSZ contact/threshold/FV authority, or a direct neutral-sector
+  irreducibility/primitive-cone proof.  The chunk worker remains separate.

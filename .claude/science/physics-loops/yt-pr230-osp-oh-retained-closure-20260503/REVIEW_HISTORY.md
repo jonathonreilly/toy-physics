@@ -1155,3 +1155,24 @@ Findings checked:
 - The note and runner do not claim retained/proposed-retained closure and do
   not use observed selectors, `H_unit`/Ward/`yt_ward` authority,
   `alpha_LM`/plaquette/u0, `y_t_bare`, or bare-coupling shortcuts as premises.
+
+# 2026-05-05 Non-Chunk Current-Surface Exhaustion Gate Review
+
+Disposition: pass as exact negative boundary / current-surface queue
+exhaustion, not as closure.
+
+Findings checked:
+
+- No subagents were used for this review because the user did not explicitly
+  authorize subagents; the review was performed locally.
+- The runner consumes the May 5 non-chunk worklist and route-family audit
+  rather than the older May 1 queue-exhaustion runner.
+- All six worklist units are blocked, every strict future row/certificate file
+  is absent, and the assembly gate rejects both the current and chunk-only
+  surfaces.
+- The aggregate assembly, retained-route, and campaign gates consume the new
+  exhaustion certificate while keeping `proposal_allowed=false`.
+- The note and runner do not claim retained/proposed-retained closure, do not
+  package or rerun chunk MC, and do not use observed selectors, `H_unit`/Ward/
+  `yt_ward` authority, `alpha_LM`/plaquette/u0, `y_t_bare`, or bare-coupling
+  shortcuts as premises.
