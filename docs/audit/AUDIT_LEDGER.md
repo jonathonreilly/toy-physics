@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 39 |
 | **retained_no_go** | 95 |
-| **retained_bounded** | 181 |
+| **retained_bounded** | 182 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
 | unaudited | 1121 |
-| audit_in_progress | 7 |
+| audit_in_progress | 6 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 6 |
 | ~~audited_renaming~~ | 9 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 7 |
-| `audited_clean` | 287 |
+| `audit_in_progress` | 6 |
+| `audited_clean` | 288 |
 | `audited_conditional` | 257 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 45 |
@@ -108,7 +108,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `alt_connectivity_family_basin_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `charged_lepton_two_higgs_canonical_reduction_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `fifth_family_radial_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `fourth_family_quadrant_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -121,6 +120,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `action_power_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_power_scaling_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_uniqueness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `alt_connectivity_family_basin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `alt_connectivity_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `anderson_phase_mu2_0001_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
@@ -921,6 +921,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `ai_methodology/raw/prompts_session_ebae4639_jonreilly.md is raw transcript rather than canonical theorem note`
   - `stale embedded PASS=41/JTS-residue transcript state conflicts with live PASS=13/JTS-derived runner state`
   - `canonical ISSR1/JTS theorem notes are not registered as this row's one-hop dependencies`
+- **auditor confidence:** high
+
+### `alt_connectivity_family_basin_note`
+
+- **Note:** [`ALT_CONNECTIVITY_FAMILY_BASIN_NOTE.md`](../../docs/ALT_CONNECTIVITY_FAMILY_BASIN_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite bounded sweep showing that the parity-rotated sector-transition alternative connectivity family has 32/45 passing rows over the stated 9 drift values and 5 seeds on the no-restore grown slice, with no claim of seed-wide, geometry-generic, or unique-family closure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-second-alt_connectivity_family_basin_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Sweep summary: tested drifts 0.0 through 0.5 over seeds 0 through 4, with passing rows 32/45 and clean zero, neutral, sign-orientation, and near-linear charge-scaling controls on passing rows.  _(class `C`)_
+- **chain closes:** True — The dependency is retained_bounded and supplies the alternative family/sign setup; the basin runner extends it over the explicitly listed finite drift/seed grid and computes the row outcomes. The source note's bounded, non-universal safe read follows from the cached runner output.
+- **rationale:** The load-bearing result is a finite deterministic sweep, not a generic physics bridge, and the note correctly limits the claim to a bounded basin rather than universal closure. The cached runner completes successfully and computes the 32/45 row count from the grown geometries, alternative connectivity construction, propagated source fields, and explicit ok gate; it does not use an external comparator or import the 32/45 result as an input. Residual risk is that the runner's final mean-exponent summary appears to index the neutral column rather than the exponent column, but the row-level exponents and ok predicate still support the source note's near-linear scaling statement.
 - **auditor confidence:** high
 
 ### `alt_connectivity_family_sign_note`
