@@ -22,9 +22,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 108 |
 | **retained_bounded** | 199 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 17 |
+| open_gate | 18 |
 | unaudited | 872 |
-| audit_in_progress | 33 |
+| audit_in_progress | 32 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 33 |
-| `audited_clean` | 330 |
+| `audit_in_progress` | 32 |
+| `audited_clean` | 331 |
 | `audited_conditional` | 386 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -114,7 +114,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | open_gate | audit_in_progress | audit_in_progress | - | - | - | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_berry_bundle_obstruction_theorem_note_2026-04-19` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_cone_completing_root_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -209,6 +208,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_pmns_asymptotic_source_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_selector_first_shoulder_exit_threshold_support_note_2026-04-21` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | A | - |
 | `dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
+| `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | A | - |
 | `eigenvalue_anderson_phase_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `electric_sign_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `electrostatics_card_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
@@ -4707,6 +4707,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** - boundary sensitivity, so the law vanishes whenever any one Schur channel  _(class `B`)_
 - **chain closes:** False — No. The source row is author-declared unknown, so the audit packet does not assert a closed derivation to ratify.
 - **rationale:** Issue: the source note's own Status line is unknown, not a closed theorem/result tier. Why this blocks: a leaf audit cannot turn an explicitly unsettled source claim into a closed chain without an author reclassification and supporting derivation. Repair target: update the source note to a precise support/bounded/candidate retained-grade claim with a runner or cited theorem package. Claim boundary until fixed: safe to cite only as an unknown note in its current wording.
+- **auditor confidence:** high
+
+### `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25`
+
+- **Note:** [`DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md`](../../docs/DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Finite-dimensional Schur-Feshbach boundary theorem for L_e=Schur_{E_e}(D_-) under stated invertibility and positive-Hermitian hypotheses, excluding evaluation of D_-, Wilson-native support construction, and final DM selector closure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-fresh-dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The exact block factorization of D_- with middle block diag(L_e,F), where L_e=A-BF^(-1)C, gives I_e^* D_-^(-1) I_e=L_e^(-1); under D_-=D_-^*>0, completing the square gives u^*L_eu=min_v [u;v]^*D_-[u;v].  _(class `A`)_
+- **chain closes:** True — The scoped theorem closes as exact linear algebra: the block factorization, inverse-compression identity, Feshbach elimination, Dirichlet minimum, and Loewner monotonicity follow from the stated hypotheses with no one-hop dependencies. It remains an open gate because the note explicitly does not supply D_- or the right-sensitive selector law.
+- **rationale:** The load-bearing step is a standard Schur-complement/Feshbach identity and positive-definite quadratic completion, not a renamed physical observable or tuned numerical comparator. The runner cache completed successfully with 42/42 passes and checks the relevant block algebra, determinant response, elimination equation, positive variational principle, trial-map certificate, and monotonicity; its document-wiring checks are hygiene rather than physics closure. No hidden DM closure is imported because the audited scope explicitly stops at the boundary object once D_- is supplied.
 - **auditor confidence:** high
 
 ### `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19`
