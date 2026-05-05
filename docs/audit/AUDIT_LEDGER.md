@@ -18,7 +18,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 63 |
+| **retained** | 62 |
 | **retained_no_go** | 119 |
 | **retained_bounded** | 213 |
 | _retained_pending_chain_ | 2 |
@@ -28,7 +28,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 31 |
-| ~~audited_conditional~~ | 397 |
+| ~~audited_conditional~~ | 398 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,8 +40,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 5 |
-| `audited_clean` | 369 |
-| `audited_conditional` | 397 |
+| `audited_clean` | 368 |
+| `audited_conditional` | 398 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 21 |
@@ -278,7 +278,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_bridge_single_primitive_note_2026-04-22` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
-| `koide_q_readout_factorization_theorem_2026-04-22` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -739,6 +738,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_eq_3delta_identity_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_no_hidden_source_audit_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_normalized_second_order_effective_action_theorem_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `koide_q_readout_factorization_theorem_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_reduced_observable_restriction_theorem_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_second_order_support_batch_note_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `koide_reviewer_stress_test_note_2026-04-21` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -7624,13 +7624,13 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 
 - **Note:** [`KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md`](../../docs/KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the restricted retained Γ_1/T_1 first-live second-order readout grammar and its quotient/factorization statement for local bosonic species-resolving selectors.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-110856-be71e5c1-koide_q_readout_factoriz-014`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The exact first-live second-order readout map is L(u,v,w,z)=diag(u,v,w), with kernel span{(0,0,0,1)} and image the full diagonal species space.  _(class `A`)_
-- **chain closes:** True — Within the restricted grammar, the runner constructs Γ_1, the T_1 and intermediate projectors, computes the four single-slot images, and verifies the rank/kernel/fiber statements. The selector factorization follows for selectors whose admissible data are exactly the first-live species diagonal sector specified in the note.
-- **rationale:** The load-bearing step is a direct algebraic closure over the explicitly instantiated Γ_1/T_1 projectors, not a numerical fit, external comparator, or definition substitution. The runner source performs the relevant matrix/projector computations and symbolic quotient checks rather than merely printing expected constants. The clean verdict is limited to the admitted first-live second-order grammar and does not establish physical selection or higher-order/nonlocal universality.
+- **claim_scope:** Audited the Gamma_1/T_1 four-slot first-live second-order readout map L:R^4->Diag_3 and the claimed universal factorization of local bosonic first-live species-resolving C3-covariant selectors through L.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-adjudicator-koide-q-readout-current-main-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Every admissible first-live bosonic species-resolving selector factors uniquely through the returned operator R_Gamma1(W)=diag(u,v,w).  _(class `A`)_
+- **chain closes:** False — The exact quotient L(u,v,w,z)=diag(u,v,w), rank, kernel, fiber, and C3 intertwining checks close. The universal selector-factorization claim does not close because the note and runner do not prove that the listed admissibility conditions force invariance along ker(L)=span(e_z).
+- **rationale:** Issue: The note asserts that every admissible selector factors through the returned operator, but only proves the quotient for weight packages already identified by L. Why this blocks: rank/kernel algebra proves factorization only for functions constant on ker(L); C3 covariance and the stated local/bosonic/species-resolving conditions do not by themselves exclude z-sensitive admissible scalars, and the runner's final selector-factorization PASS is a True assertion rather than a computation excluding them. Repair target: prove that admissibility implies kernel-invariance under z-shifts, or narrow the retained claim to the exact rank/kernel quotient of L. Claim boundary until fixed: the clean core is the exact map L:R^4->Diag_3 with rank 3, kernel span(e_z), full diagonal image, fiber classification, and C3 intertwining; universal factorization of all admissible selectors remains unclosed.
 - **auditor confidence:** high
 
 ### `koide_q_reduced_observable_restriction_theorem_2026-04-22`

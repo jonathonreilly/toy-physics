@@ -18,7 +18,7 @@ publication tables phrase it.
 | criticality | effective_status | count |
 |---|---|---:|
 | critical | `unaudited` | 358 |
-| critical | `audited_conditional` | 143 |
+| critical | `audited_conditional` | 144 |
 | critical | `audited_renaming` | 20 |
 | critical | `audited_numerical_match` | 11 |
 | critical | `audited_failed` | 10 |
@@ -26,7 +26,7 @@ publication tables phrase it.
 | critical | `open_gate` | 2 |
 | critical | `retained_pending_chain` | 1 |
 
-**Total non-retained-grade rows in publication tables:** 549
+**Total non-retained-grade rows in publication tables:** 550
 
 ## Per-row breakdown
 
@@ -309,6 +309,7 @@ publication tables phrase it.
 | critical | `koide_q_no_hidden_source_audit_2026-04-22` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `koide_q_normalized_second_order_effective_action_theorem_2026-04-22` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| critical | `koide_q_readout_factorization_theorem_2026-04-22` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `koide_q_reduced_observable_restriction_theorem_2026-04-22` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `koide_q_second_order_reviewer_stress_test_note_2026-04-22` | `unaudited` | `unaudited` | RESULTS_INDEX.md |
 | critical | `koide_q_second_order_support_batch_note_2026-04-22` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
