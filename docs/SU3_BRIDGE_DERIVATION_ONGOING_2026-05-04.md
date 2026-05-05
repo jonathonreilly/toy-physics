@@ -391,6 +391,65 @@ The framework's exact L_s=2 Wilson plaquette is **0.4225** (via V-invariant Schu
 
 The remaining open derivation pathway is the framework's **explicit Perron state at β=6 of the source-sector transfer operator** `T_src(6) = exp(3J) D_6^loc C_(Z_6^env) exp(3J)` on the V-invariant minimal block — explicitly named "open" by the framework's own bridge-support note. This is structurally a different problem than Schur cube enumeration; it's the spectral-measure problem of the SU(3) character recurrence operator J in the unknown β=6 transfer state.
 
+## 13. PATH B RESULT: direct MC on framework geometries — V-invariance ≠ L→∞
+
+User-prompted: start path B (full intertwiner / direct numerical verification).
+Cleanest first step: direct SU(3) Metropolis MC on the framework's exact V-invariant cube structure to verify whether naive Schur 0.4225 is correct or missing something.
+
+Scripts:
+- `scripts/frontier_su3_v_invariant_apbc_mc_2026_05_04.py`
+- `scripts/frontier_su3_apbc_mc_high_stats_2026_05_04.py`
+
+Both use direct Metropolis MC on framework's exact cube geometry, β=6, no character truncation. This is the cleanest possible "is the analytic computation right?" check.
+
+### 13.1 Results
+
+| Geometry | Plaquettes | ⟨P⟩ (MC, direct) | Naive Schur ref |
+|---|---:|---:|---:|
+| V-invariant L_s=2 APBC | 6 | **0.4360 ± 0.0035** | 0.4225 |
+| L_s=3 APBC | 81 | **0.4591 ± 0.0016** | (formula degenerates) |
+| **L→∞ standard 4D Wilson MC** | **— ** | **0.5934** | — |
+
+(L_s=2 PBC test had a plaquette double-counting bug in the runner — separate fix needed; not load-bearing for this finding.)
+
+### 13.2 Critical interpretation
+
+**Direct MC on V-invariant L_s=2 APBC gives 0.4360 ± 0.0035.** This is:
+- Slightly above naive Schur 0.4225 (~3.2%, consistent with naive Schur missing some Wigner-intertwiner contributions even at link-incidence=2, or MC equilibration trail)
+- FAR below standard L→∞ MC value 0.5934 (35σ below!)
+
+**Direct MC on L_s=3 APBC gives 0.4591 ± 0.0016.** Increase of +0.023 over L_s=2.
+
+**Finite-volume scaling**:
+- L_s=2 gap to L→∞: +0.157
+- L_s=3 gap to L→∞: +0.134
+- Reduction per L step: ~15% of the gap
+- To reach 0.5934 needs L_s extrapolation of order ~10-30+ (clearly far from L_s=2)
+
+### 13.3 The smoking gun
+
+**V-invariance at L_s=2 APBC does NOT enforce L→∞ equivalence.** Direct MC explicitly refutes the framework's load-bearing assumption.
+
+Key implications:
+1. The naive Schur formula 0.4225 was nearly correct (within ~3% of full MC); the framework's "missing intertwiner contribution" hypothesis is small.
+2. The V-invariant L_s=2 APBC cube is **genuinely a small-volume system**.
+3. Path B "build full Wigner intertwiner contraction on V-invariant L_s=2 APBC" would converge to ~0.44, NOT to 0.5934.
+4. To reach 0.5934 natively, framework needs **finite-volume extrapolation L_s → ∞**, NOT a better L_s=2 contraction.
+
+### 13.4 Path B revised conclusion
+
+The campaign's "derive 0.5934 from V-invariant L_s=2 APBC" is now decisively **structurally infeasible** with current framework primitives:
+
+- Path B (proper L_s=2 APBC contraction): converges to ~0.44, NOT 0.59
+- Path A (downstream α_s test): requires P ≈ 0.59, so 0.44 fails downstream physics
+- Therefore: framework needs L_s → ∞ behavior somehow
+
+The L_s=3 APBC direct MC (0.4591) demonstrates finite-volume scaling exists — the gap shrinks with L. But to reach 0.59 needs L of order 10-30, which is treewidth-infeasible analytically and slow for direct MC.
+
+**Implication**: the framework genuinely lacks a primitive that gives L→∞ behavior from V-invariant L_s=2. The bridge candidate `(3/2)(2/√3)^(1/4)` was attempting to construct this, but its constant-lift structure is exactly disproven by the slope theorem.
+
+**The honest open derivation problem is now sharpened**: how does the framework natively access L → ∞ Wilson plaquette behavior from finite Cl(3)/Z³ primitives? This is the real missing piece, and no current framework primitive provides it.
+
 ## 12. PATH A RESULT: downstream α_s(M_Z) test resolves the target question
 
 User-prompted (2026-05-04): "yes path A now to start, then b later"
