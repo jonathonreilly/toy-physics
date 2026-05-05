@@ -19,14 +19,14 @@ publication tables phrase it.
 |---|---|---:|
 | critical | `unaudited` | 367 |
 | critical | `audited_conditional` | 134 |
-| critical | `audit_in_progress` | 47 |
+| critical | `audit_in_progress` | 46 |
 | critical | `audited_renaming` | 19 |
 | critical | `audited_numerical_match` | 11 |
 | critical | `audited_failed` | 9 |
 | critical | `open_gate` | 1 |
 | critical | `retained_pending_chain` | 1 |
 
-**Total non-retained-grade rows in publication tables:** 589
+**Total non-retained-grade rows in publication tables:** 588
 
 ## Per-row breakdown
 
@@ -354,7 +354,6 @@ publication tables phrase it.
 | critical | `lepton_shared_higgs_universality_underdetermination_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `lepton_single_higgs_pmns_triviality_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
-| critical | `linear_response_true_kubo_note` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md |
 | critical | `lorentz_boost_covariance_2d_theorem_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `lorentz_boost_covariance_3plus1d_theorem_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `lorentz_kernel_positive_closure_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |

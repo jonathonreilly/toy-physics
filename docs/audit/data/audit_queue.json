@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 614,
+    "critical": 613,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -3023,27 +3023,6 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audit_in_progress",
       "blocker": "awaiting_cross_confirmation",
-      "claim_id": "linear_response_true_kubo_note",
-      "claim_scope": "Conditional first-order response formula for the specified exp(i k L(1-f)) weighted propagator and imposed regularized 1/r edge field, plus a runner-backed finite-difference comparison over the stated 44 generated families.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.685,
-      "note_path": "docs/LINEAR_RESPONSE_TRUE_KUBO_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/linear_response_true_kubo.py",
-      "transitive_descendants": 290
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
       "claim_id": "unit_singlet_overlap_narrow_theorem_note_2026-05-02",
       "claim_scope": "Audited the narrow algebraic identity that the explicitly defined unit scalar-singlet operator has basis-pair overlap 1 / sqrt(N_iso * N_c) and contains no gauge-coupling parameter.",
       "claim_type": "positive_theorem",
@@ -4201,6 +4180,29 @@
       "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/frontier_koide_kappa_spectrum_operator_bridge_theorem.py",
+      "transitive_descendants": 285
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "kubo_range_of_validity_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "linear_response_true_kubo_note"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 8.66,
+      "note_path": "docs/KUBO_RANGE_OF_VALIDITY_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/kubo_range_of_validity.py",
       "transitive_descendants": 285
     },
     {
@@ -12875,29 +12877,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_koide_taste_cube_cyclic_source_descent.py",
-      "transitive_descendants": 285
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "kubo_range_of_validity_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "linear_response_true_kubo_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.66,
-      "note_path": "docs/KUBO_RANGE_OF_VALIDITY_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/kubo_range_of_validity.py",
       "transitive_descendants": 285
     },
     {
@@ -27774,5 +27753,5 @@
     }
   ],
   "ready_count": 83,
-  "total_pending": 952
+  "total_pending": 951
 }

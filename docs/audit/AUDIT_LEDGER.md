@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 43 |
 | **retained_no_go** | 100 |
-| **retained_bounded** | 191 |
+| **retained_bounded** | 192 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 16 |
 | unaudited | 880 |
-| audit_in_progress | 54 |
+| audit_in_progress | 53 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 54 |
-| `audited_clean` | 306 |
+| `audit_in_progress` | 53 |
+| `audited_clean` | 307 |
 | `audited_conditional` | 381 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -141,7 +141,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `lattice_complementarity_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `linear_response_true_kubo_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `lorentz_violation_derived_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `matter_inertial_closure_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `persistent_object_compact_inertial_probe_note_2026-04-16` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -306,6 +305,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_weak_field_mass_scaling_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | C | - |
 | `lattice_weak_field_purity_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `lensing_adjoint_kernel_reduced_model_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `linear_response_true_kubo_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `literature_backmatch_live_scan_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
 | `main_open_cubic_validation_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -7453,6 +7453,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Adding the second-order term 1/2*kubo2*s^2 does not increase the strict linearity-regime subset and slightly worsens the aggregate residual at s=0.008 in the 44-family replay.  _(class `C`)_
 - **chain closes:** False — The live runner reproduces the second-order null result, but the note extrapolates that finite computation into a boundary claim about the Taylor-expansion approach and higher Taylor orders without a convergence/no-go theorem.
 - **rationale:** Issue: The runner verifies that the specific second-order correction does not improve the 44-family battery, but the note also claims a broader boundary of the Kubo-Taylor approach and says the failing nonlinearities are not fixed by more Taylor terms at s=0. Why this blocks: a second-order replay cannot rule out third or higher orders, prove non-analyticity, or establish that all Taylor expansions around s=0 fail for the structural families. Repair target: either narrow the source claim to the computed second-order null result, or add a theorem/computation bounding the Taylor remainder or demonstrating non-convergence/non-analyticity for the failing families, with the first-order and range-of-validity inputs explicitly audited. Claim boundary until fixed: it is safe to claim the live artifact reproduces +0 growth in the linearity-regime subset (15/44 to 15/44), sum |residual| worsening from 5.6090 to 5.7221 at s=0.008, and the listed per-family second-order pathologies; it is not safe to claim a retained no-go for all higher Taylor terms from this note alone.
+- **auditor confidence:** high
+
+### `linear_response_true_kubo_note`
+
+- **Note:** [`LINEAR_RESPONSE_TRUE_KUBO_NOTE.md`](../../docs/LINEAR_RESPONSE_TRUE_KUBO_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the specified finite path-sum propagator exp(i k L(1 - s/r_edge)) times the stated weights, the parallel perturbation recurrence computes the exact first derivative d(cz)/ds at s = 0 for the stated detector centroid observable.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-second-linear_response_true_kubo_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** B_j = Σ_{i→j} [B_i exp(i k L_ij) + A_i (-i k L_ij / r_edge_ij) exp(i k L_ij)] w_ij h²/L_ij², followed by d(cz)/ds = (1/T) Σ_j (z_j - cz_free) 2 Re[A_j* B_j].  _(class `A`)_
+- **chain closes:** True — The B recurrence follows by direct Leibniz/chain-rule differentiation of each edge factor in the finite path product, and the centroid formula follows by differentiating the quotient N/T. Closure is bounded to the specified propagator, regularized 1/r_edge field, finite DAG-style propagation, detector readout, and s = 0 linear-response regime.
+- **rationale:** The bounded analytic claim closes: the note's load-bearing recurrence is not a fitted definition or renaming, but the exact first derivative of the stated path-sum propagator, and the d(cz)/ds expression is the standard quotient derivative written in centered form. The cached runner completed successfully and independently recomputes the stated 44-family correlation/sign evidence, but that evidence is supportive rather than needed for the algebraic closure. This clean verdict does not promote broader claims about nonlinear response, F~M scaling, PASS/FAIL thresholds, physical gravity strength, or a compact-principle theorem beyond the specified first-order propagator/field/readout.
 - **auditor confidence:** high
 
 ### `literature_backmatch_live_scan_note`
