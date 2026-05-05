@@ -18,13 +18,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 51 |
+| **retained** | 52 |
 | **retained_no_go** | 113 |
 | **retained_bounded** | 200 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 871 |
-| audit_in_progress | 20 |
+| audit_in_progress | 19 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 30 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 20 |
-| `audited_clean` | 338 |
+| `audit_in_progress` | 19 |
+| `audited_clean` | 339 |
 | `audited_conditional` | 391 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -113,7 +113,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
-| `koide_cone_completing_root_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_q_bridge_single_primitive_note_2026-04-22` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -268,6 +267,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `i3_zero_exact_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `independent_generators_heldout_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
+| `koide_cone_completing_root_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_cyclic_wilson_descendant_law_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_dweh_cyclic_compression_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
@@ -7092,6 +7092,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md`
   - `KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `koide_cone_completing_root_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`KOIDE_CONE_COMPLETING_ROOT_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/KOIDE_CONE_COMPLETING_ROOT_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For arbitrary positive real v,w, the explicit u_small and u_large are exactly the two roots placing (u,v,w) on the stated Koide cone; they satisfy the cone identity, Vieta identities, the u_small ratio identity, and the stated u_small positivity criterion.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-koide-cone-completing-root-narrow-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Rearranging the Koide cone as u^2 - 4(v+w)u + (v^2+w^2-4vw)=0 gives discriminant 12(v^2+4vw+w^2), hence roots u=2(v+w) ± sqrt(3(v^2+4vw+w^2)).  _(class `A`)_
+- **chain closes:** True — The scoped claim is pure polynomial algebra over positive real v,w. The quadratic-formula derivation, substitution identities, Vieta relations, ratio equivalence, and positivity inequality close without cited authorities or physical observable bridges.
+- **rationale:** Clean within the note's stated narrow algebra-only boundary. The load-bearing step is an elementary quadratic-formula identity, and the cached runner completes with nine class-A exact algebra checks covering the roots, cone identities, Vieta relations, ratio identity, and representative concrete cases. Residual risk is only downstream scope drift: this audit does not ratify any charged-lepton, sqrt-mass, selected-line, or physical-point identification.
 - **auditor confidence:** high
 
 ### `koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02`

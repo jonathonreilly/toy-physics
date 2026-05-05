@@ -20,13 +20,13 @@ publication tables phrase it.
 | critical | `unaudited` | 363 |
 | critical | `audited_conditional` | 142 |
 | critical | `audited_renaming` | 20 |
-| critical | `audit_in_progress` | 18 |
+| critical | `audit_in_progress` | 17 |
 | critical | `audited_numerical_match` | 11 |
 | critical | `audited_failed` | 9 |
 | critical | `open_gate` | 2 |
 | critical | `retained_pending_chain` | 1 |
 
-**Total non-retained-grade rows in publication tables:** 566
+**Total non-retained-grade rows in publication tables:** 565
 
 ## Per-row breakdown
 
@@ -287,7 +287,6 @@ publication tables phrase it.
 | critical | `koide_circulant_character_bridge_note_2026-04-18` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `koide_circulant_character_derivation_note_2026-04-18` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md |
 | critical | `koide_cl3_selector_gap_note_2026-04-19` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md |
-| critical | `koide_cone_completing_root_narrow_theorem_note_2026-05-02` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md |
 | critical | `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | `audited_failed` | `audited_failed` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, RESULTS_INDEX.md |
 | critical | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, RESULTS_INDEX.md |
 | critical | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
