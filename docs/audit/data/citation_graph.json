@@ -43244,7 +43244,7 @@
         "g_bare_derivation_note",
         "gauge_scalar_temporal_completion_theorem_note"
       ],
-      "note_hash": "6bb0f8f002e941f774a5ab2d956f57c1a6e8fae6aeef7934988d0eeae104e878",
+      "note_hash": "8ef4381ef63afb50806c6032e4b8097c432349f206eba8947c6bf27f3b45c60b",
       "path": "docs/PLAQUETTE_4D_MC_FSS_NUMERICAL_THEOREM_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_su3_4d_plaquette_fss_verify_2026_05_05.py",
       "title": "Plaquette 3+1D Wilson MC Finite-Size Numerical Theorem Note"
