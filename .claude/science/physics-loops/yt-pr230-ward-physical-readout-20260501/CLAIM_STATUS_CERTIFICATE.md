@@ -3230,3 +3230,23 @@ under the global cap.  It does not certify completed chunks, target
 observables, pole fits, scalar-pole saturation, FV/IR control,
 source-Higgs/canonical-Higgs identity, or W/Z physical response.  No
 effective-retention or proposed-retention wording is allowed.
+
+W/Z `g2` authority firewall:
+
+```text
+actual_current_surface_status: exact negative boundary / WZ response g2 authority absent for PR230
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_wz_g2_authority_firewall.py
+# SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=28 FAIL=0
+```
+
+The W/Z response route still lacks a strict non-observed `g2` certificate, and
+the same-source response ratio does not determine `y_t` without that input or a
+new cancellation theorem.  The package `g_2(v)` surface is not accepted as a
+PR230 proof input here.  No effective-retention or proposed-retention wording
+is allowed.

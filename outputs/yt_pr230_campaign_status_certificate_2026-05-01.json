@@ -303,6 +303,7 @@
     "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
     "unit_projector_pole_threshold": "exact negative boundary / unit-projector finite-ladder pole-threshold obstruction",
     "wz_correlator_mass_fit_path_gate": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
+    "wz_g2_authority_firewall": "exact negative boundary / WZ response g2 authority absent for PR230",
     "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
     "wz_response_harness_absence_guard": "bounded-support / WZ response harness absence guard",
     "wz_response_harness_implementation_plan": "bounded-support / WZ response harness implementation plan",
@@ -315,7 +316,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 202,
+  "pass_count": 203,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

@@ -1,0 +1,62 @@
+{
+  "actual_current_surface_status": "exact negative boundary / WZ response g2 authority absent for PR230",
+  "bare_retained_allowed": false,
+  "exact_next_action": "Supply outputs/yt_electroweak_g2_certificate_2026-05-04.json from an allowed non-observed authority, or derive a new same-source W/Z response theorem that cancels g2. Then rerun the W/Z mass-fit response-row builder and top/W response gates.",
+  "explicit_g2_certificate": {
+    "path": "outputs/yt_electroweak_g2_certificate_2026-05-04.json",
+    "present": false,
+    "strict_candidate_valid": false
+  },
+  "fail_count": 0,
+  "g2_authority_gate_passed": false,
+  "package_g2_surface": {
+    "ew_note": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
+    "package_g2_present": true,
+    "rejected_as_pr230_load_bearing_input": true,
+    "rejection_reasons": [
+      "PR230 firewall forbids alpha_LM/plaquette/u0 as load-bearing proof inputs",
+      "repo EW package g2 is not a same-source W/Z response measurement row",
+      "audit surface records caveats for treating EW package g2 as an independently derived physical coupling"
+    ],
+    "usable_index": "docs/publication/ci3_z3/USABLE_DERIVED_VALUES_INDEX.md"
+  },
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No strict non-observed g2 certificate is present, and the package EW g2 value is not an allowed PR230 proof input under the current firewall.",
+  "ratio_witness": {
+    "conclusion": "The response ratio does not determine y_t unless g2 is certified or otherwise canceled by a new theorem.",
+    "formula": "y_t = (g2 / sqrt(2)) * (dE_top/ds) / (dM_W/ds)",
+    "g2_values": [
+      0.6,
+      0.7
+    ],
+    "held_fixed": {
+      "canonical_higgs_identity": "hypothetically fixed",
+      "response_ratio": 2.0,
+      "same_source_coordinate": true,
+      "sector_overlap_identity": "hypothetically fixed"
+    },
+    "yt_spread": 0.14142135623730945,
+    "yt_values": [
+      0.8485281374238569,
+      0.9899494936611664
+    ]
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not import observed g2 or observed W/Z/top/y_t selectors",
+    "does not use H_unit or yt_ward_identity",
+    "does not use alpha_LM, plaquette, or u0 as proof authority",
+    "does not set c2=1, Z_match=1, kappa_s=1, or k_top/k_gauge=1"
+  ],
+  "wz_mass_fit_response_row_builder": {
+    "g2_validation": {
+      "failed_checks": [
+        "electroweak g2 certificate absent"
+      ],
+      "present": false,
+      "valid": false
+    },
+    "path": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json"
+  }
+}

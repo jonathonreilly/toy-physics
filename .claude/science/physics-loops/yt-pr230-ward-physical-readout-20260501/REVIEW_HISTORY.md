@@ -4765,3 +4765,19 @@ chunks019-024 running and the global guard blocks additional FH/LSZ launches
 while six workers are active.  The checkpoint does not count chunks019-024 as
 completed evidence and authorizes no effective-retention or proposed-retention
 wording.
+
+## 2026-05-05 - Block 198 W/Z g2 Authority Firewall
+
+Review stance: missing-input firewall / exact negative boundary.
+
+- Added `scripts/frontier_yt_wz_g2_authority_firewall.py`.
+- Added `docs/YT_WZ_G2_AUTHORITY_FIREWALL_NOTE_2026-05-05.md`.
+- Added `outputs/yt_wz_g2_authority_firewall_2026-05-05.json`.
+- Wired the firewall into retained-route, campaign-status, and full assembly
+  gates.
+
+Disposition: exact negative boundary.  The W/Z response ratio still needs a
+strict non-observed `g2` certificate or a new theorem that cancels `g2`.  The
+repo-level `g_2(v)` package surface is not accepted as PR230 load-bearing proof
+input under the current firewall.  No effective-retention or proposed-retention
+wording is allowed.

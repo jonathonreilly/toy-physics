@@ -308,6 +308,9 @@ def main() -> int:
         "wz_mass_fit_response_row_builder": load(
             "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json"
         ),
+        "wz_g2_authority_firewall": load(
+            "outputs/yt_wz_g2_authority_firewall_2026-05-05.json"
+        ),
         "wz_correlator_mass_fit_path_gate": load(
             "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json"
         ),
@@ -1396,6 +1399,13 @@ def main() -> int:
         )
         is False,
         statuses["wz_mass_fit_response_row_builder"],
+    )
+    report(
+        "wz-g2-authority-firewall-blocks",
+        "WZ response g2 authority absent" in str(statuses["wz_g2_authority_firewall"])
+        and certificates["wz_g2_authority_firewall"].get("proposal_allowed") is False
+        and certificates["wz_g2_authority_firewall"].get("g2_authority_gate_passed") is False,
+        statuses["wz_g2_authority_firewall"],
     )
     report(
         "same-source-sector-overlap-identity-blocks",

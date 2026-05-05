@@ -1003,3 +1003,13 @@ package the completed outputs through the polefit8x8 combiner and
 postprocessor.  This scheduling state does not outrank identity work if a real
 same-surface `O_H/C_sH/C_HH`, W/Z response, Schur row, or no-orthogonal-top-
 coupling theorem opportunity becomes available.
+
+2026-05-05 update: the W/Z `g2` authority firewall is now landed.  A same-source
+top/W response ratio cancels the common source coordinate but still requires
+`g2`, and the current strict `outputs/yt_electroweak_g2_certificate_2026-05-04.json`
+is absent.  The repo-level EW package `g_2(v)` is not accepted as a PR230
+load-bearing input because this loop forbids alpha/plaquette/u0 authority and
+the EW package has audit caveats for independent physical-coupling authority.
+Positive W/Z closure now needs either an allowed non-observed `g2` certificate
+or a new theorem that cancels `g2`, in addition to same-source W/Z mass-fit rows,
+top/W covariance, sector-overlap, canonical-Higgs identity, and correction rows.

@@ -2695,3 +2695,31 @@ more FH/LSZ workers while the guard reports six active workers.  Next exact
 action: when chunks019-024 complete, run the polefit8x8 combiner,
 postprocessor, retained-route certificate, campaign-status certificate, and
 full positive closure assembly gate; package only completed artifacts.
+
+Block 198 added the W/Z `g2` authority firewall:
+
+```text
+python3 scripts/frontier_yt_wz_g2_authority_firewall.py
+# SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=177 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=203 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=28 FAIL=0
+```
+
+Result: the same-source W/Z response ratio still needs a strict, non-observed
+`g2` certificate or a new theorem that cancels `g2`.  The existing repo-level
+`g_2(v)` package value is not an allowed PR230 load-bearing input under the
+current alpha/plaquette/u0 and audit-authority firewalls.  No
+retained/proposed-retained wording is authorized.
+
+Next exact action: keep chunks019-024 running; package them only after root
+artifacts land and pass the polefit8x8 combiner/postprocessor/gates.  In
+parallel, either supply an allowed `g2` certificate, derive a `g2`-canceling
+same-source W/Z theorem, or continue the other non-source identity routes
+(`O_H/C_sH/C_HH`, Schur rows, rank-one neutral scalar).

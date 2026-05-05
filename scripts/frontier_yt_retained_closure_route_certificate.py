@@ -168,6 +168,7 @@ def main() -> int:
         "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
         "same_source_w_response_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
         "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
+        "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
         "wz_correlator_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
@@ -1209,6 +1210,12 @@ def main() -> int:
             "strict_wz_mass_fit_response_row_builder_passed"
         )
         is False
+    )
+    wz_g2_authority_firewall_blocks = (
+        "WZ response g2 authority absent"
+        in certificates["wz_g2_authority_firewall"].get("actual_current_surface_status", "")
+        and certificates["wz_g2_authority_firewall"].get("proposal_allowed") is False
+        and certificates["wz_g2_authority_firewall"].get("g2_authority_gate_passed") is False
     )
     same_source_sector_overlap_identity_blocks = (
         "same-source sector-overlap identity obstruction"
@@ -2280,6 +2287,11 @@ def main() -> int:
         "wz-mass-fit-response-row-builder-open",
         wz_mass_fit_response_row_builder_open,
         certificates["wz_mass_fit_response_row_builder"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "wz-g2-authority-firewall-blocks",
+        wz_g2_authority_firewall_blocks,
+        certificates["wz_g2_authority_firewall"].get("actual_current_surface_status", ""),
     )
     report(
         "same-source-sector-overlap-identity-blocks",

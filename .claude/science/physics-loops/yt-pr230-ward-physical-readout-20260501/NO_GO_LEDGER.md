@@ -2644,3 +2644,18 @@ logs, launch return codes, and output directories do not count as top-Yukawa
 evidence.  The completed polefit8x8 support set remains chunks001-018 until
 new root artifacts pass the homogeneous combiner/postprocessor/gates.  Do not
 use launch state as retained/proposed-retained evidence.
+
+W/Z response `g2` package import is blocked:
+
+```text
+python3 scripts/frontier_yt_wz_g2_authority_firewall.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+The same-source response ratio
+`y_t = (g2 / sqrt(2)) * (dE_top/ds) / (dM_W/ds)` still changes when `g2`
+changes with the ratio held fixed.  The current strict `g2` certificate is
+absent, and the repo-level EW package `g_2(v)` cannot be silently imported as
+PR230 proof authority under the current alpha/plaquette/u0 and audit-authority
+firewalls.  Do not treat package `g_2(v)`, observed `g2`, static EW algebra, or
+the response ratio alone as retained/proposed-retained top-Yukawa evidence.

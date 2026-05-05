@@ -55,6 +55,7 @@ PARENTS = {
     "wz_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
+    "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
     "canonical_higgs_operator": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "canonical_higgs_semantic_firewall": "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
@@ -183,6 +184,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "same-source W-response row builder strict inputs absent",
                 "lightweight same-source W readout production rows absent",
                 "W/Z mass-fit response-row builder strict inputs absent",
+                "strict non-observed g2 authority certificate absent",
                 "sector-overlap identity not derived",
                 "canonical-Higgs identity not derived",
             ],
@@ -202,6 +204,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["wz_certificate_gate"],
                 PARENTS["wz_mass_fit_path"],
                 PARENTS["wz_mass_fit_response_row_builder"],
+                PARENTS["wz_g2_authority_firewall"],
                 PARENTS["same_source_sector_overlap"],
             ],
         },
@@ -459,6 +462,13 @@ def main() -> int:
         )
         is False,
         statuses["wz_mass_fit_response_row_builder"],
+    )
+    report(
+        "wz-g2-authority-firewall-blocks",
+        "WZ response g2 authority absent" in statuses["wz_g2_authority_firewall"]
+        and certs["wz_g2_authority_firewall"].get("proposal_allowed") is False
+        and certs["wz_g2_authority_firewall"].get("g2_authority_gate_passed") is False,
+        statuses["wz_g2_authority_firewall"],
     )
     report("scalar-lsz-model-fv-ir-blocked", scalar_lsz_blocks, "model-class/FV/IR/threshold controls still block retained use")
     report("source-overlap-bridge-absent", source_overlap_blocks, f"route_passes={any_bridge_passes}")
