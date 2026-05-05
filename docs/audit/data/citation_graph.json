@@ -3229,6 +3229,14 @@
       "to": "cl3_color_automorphism_theorem"
     },
     {
+      "from": "cl3_color_automorphism_theorem",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "cl3_color_automorphism_theorem",
+      "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
+    },
+    {
       "from": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02",
       "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
     },
@@ -3254,6 +3262,18 @@
     },
     {
       "from": "cl3_sm_embedding_theorem",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "cl3_taste_generation_theorem",
+      "to": "s3_taste_cube_decomposition_note"
+    },
+    {
+      "from": "cl3_taste_generation_theorem",
+      "to": "three_generation_structure_note"
+    },
+    {
+      "from": "cl3_taste_generation_theorem",
       "to": "minimal_axioms_2026-04-11"
     },
     {
@@ -11583,6 +11603,34 @@
     {
       "from": "s3_taste_cube_decomposition_note",
       "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "s3_time_bilinear_tensor_action_note",
+      "to": "oh_schur_boundary_action_note"
+    },
+    {
+      "from": "s3_time_bilinear_tensor_action_note",
+      "to": "s3_time_bilinear_tensor_primitive_note"
+    },
+    {
+      "from": "s3_time_bilinear_tensor_action_note",
+      "to": "s3_time_transfer_matrix_bridge_note"
+    },
+    {
+      "from": "s3_time_bilinear_tensor_action_note",
+      "to": "s3_time_spacetime_tensor_primitive_note"
+    },
+    {
+      "from": "s3_time_bilinear_tensor_primitive_note",
+      "to": "s3_time_spacetime_tensor_primitive_note"
+    },
+    {
+      "from": "s3_time_bilinear_tensor_primitive_note",
+      "to": "s3_time_transfer_matrix_bridge_note"
+    },
+    {
+      "from": "s3_time_bilinear_tensor_primitive_note",
+      "to": "oh_schur_boundary_action_note"
     },
     {
       "from": "s3_time_spacetime_tensor_primitive_note",
@@ -29592,11 +29640,14 @@
     },
     "cl3_color_automorphism_theorem": {
       "claim_id": "cl3_color_automorphism_theorem",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "609a2c0a7bd5401788580fd68f7807aaca60ecea8e01d5b7350b3661ec8cd226",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "native_gauge_closure_note",
+        "ew_current_matching_rule_open_gate_note_2026-05-03"
+      ],
+      "note_hash": "7f1795669c3439f497792abbd993c0aff160f3e6ca221ec8811c9be58ac31b96",
       "path": "docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md",
       "runner_path": "scripts/verify_cl3_sm_embedding.py",
       "title": "Cl(3) Color Structure Theorem: SU(3)_c on the Symmetric Base + R_conn Derivation"
@@ -29658,11 +29709,15 @@
     },
     "cl3_taste_generation_theorem": {
       "claim_id": "cl3_taste_generation_theorem",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "81312723d355d761f0036f90d4a1b3eb434f77bfd648c476a29590c1d04b66ed",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "s3_taste_cube_decomposition_note",
+        "three_generation_structure_note",
+        "minimal_axioms_2026-04-11"
+      ],
+      "note_hash": "e2c73607cbc20ab5fed6e81835a11a1e7025902115febbf92d6375c6d726417c",
       "path": "docs/CL3_TASTE_GENERATION_THEOREM.md",
       "runner_path": "scripts/verify_cl3_sm_embedding.py",
       "title": "Cl(3) Taste-Generation Theorem: Z\u00b3 Lattice Doubling \u2192 3 Tastes with Generation Structure"
@@ -46817,24 +46872,33 @@
     },
     "s3_time_bilinear_tensor_action_note": {
       "claim_id": "s3_time_bilinear_tensor_action_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
       "claim_type_seed_hint": "open_gate",
-      "deps": [],
-      "note_hash": "8498695bfae074f5b2adaa38b803c17011a9416aa0e21c3dd5441175f9a6b17d",
+      "deps": [
+        "oh_schur_boundary_action_note",
+        "s3_time_bilinear_tensor_primitive_note",
+        "s3_time_transfer_matrix_bridge_note",
+        "s3_time_spacetime_tensor_primitive_note"
+      ],
+      "note_hash": "3c46c2026743b6a60aff5edb7f192a45fa4a3ab742ff65df40afdf1e00cc40f4",
       "path": "docs/S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_bilinear_tensor_action.py",
       "title": "Route 2 Exact Tensorized Action from the Bilinear Carrier"
     },
     "s3_time_bilinear_tensor_primitive_note": {
       "claim_id": "s3_time_bilinear_tensor_primitive_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "dd34318c70f983ae387ff32c953dc93adeb0b1bf5835dd0ecfe0d98b00b576be",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "s3_time_spacetime_tensor_primitive_note",
+        "s3_time_transfer_matrix_bridge_note",
+        "oh_schur_boundary_action_note"
+      ],
+      "note_hash": "ae36aa25ad132eb3a5f9bc0e9a971be7bd10c0755e93b2fde807db9bf2145600",
       "path": "docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_bilinear_tensor_primitive.py",
       "title": "Route 2 Exact Bilinear Tensor Primitive"
     },
     "s3_time_constructed_support_tensor_primitive_note": {
@@ -53500,8 +53564,6 @@
     "ckm_from_mass_hierarchy_note",
     "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
     "ckm_schur_complement_theorem",
-    "cl3_color_automorphism_theorem",
-    "cl3_taste_generation_theorem",
     "claude_branch_retainability_note",
     "claude_complex_action_carryover_note",
     "claude_complex_action_grown_companion_note",
@@ -54001,8 +54063,6 @@
     "s3_cap_uniqueness_note",
     "s3_general_r_derivation_note",
     "s3_mass_matrix_no_go_note",
-    "s3_time_bilinear_tensor_action_note",
-    "s3_time_bilinear_tensor_primitive_note",
     "s3_time_constructed_support_tensor_primitive_note",
     "s3_time_primitive_chain_note",
     "s3_time_tensor_build_memo",
@@ -54242,25 +54302,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 57,
+      "bounded_theorem": 59,
       "meta": 8,
       "no_go": 7,
-      "none": 1719,
-      "open_gate": 7,
+      "none": 1715,
+      "open_gate": 9,
       "positive_theorem": 74
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 555,
+      "bounded_theorem": 557,
       "meta": 8,
       "no_go": 112,
       "none": 457,
-      "open_gate": 114,
-      "positive_theorem": 626
+      "open_gate": 115,
+      "positive_theorem": 623
     },
-    "edge_count": 6354,
+    "edge_count": 6366,
     "leaf_count": 550,
     "node_count": 1872,
-    "root_count": 899,
-    "runners_with_path": 1446
+    "root_count": 895,
+    "runners_with_path": 1448
   }
 }

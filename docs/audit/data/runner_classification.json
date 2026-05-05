@@ -13140,6 +13140,30 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_s3_action_taste_cube_decomposition.py"
     },
+    "s3_time_bilinear_tensor_action_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 14,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_s3_time_bilinear_tensor_action.py"
+    },
+    "s3_time_bilinear_tensor_primitive_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/frontier_s3_time_bilinear_tensor_primitive.py"
+    },
     "s3_time_spacetime_tensor_primitive_note": {
       "assert_count": 1,
       "counts": {
@@ -30668,6 +30692,36 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_s3_time_bilinear_tensor_action.py": {
+      "assert_count": 1,
+      "claims": [
+        "s3_time_bilinear_tensor_action_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 14,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_s3_time_bilinear_tensor_primitive.py": {
+      "assert_count": 1,
+      "claims": [
+        "s3_time_bilinear_tensor_primitive_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/frontier_s3_time_spacetime_tensor_primitive.py": {
       "assert_count": 1,
       "claims": [
@@ -37989,12 +38043,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 164,
-      "C": 557,
+      "C": 558,
       "D": 208,
-      "none": 420
+      "none": 421
     },
-    "runners_classified": 1359,
-    "runners_with_C": 664,
+    "runners_classified": 1361,
+    "runners_with_C": 665,
     "runners_with_D": 338
   }
 }

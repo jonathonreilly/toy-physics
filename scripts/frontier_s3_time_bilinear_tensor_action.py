@@ -1,23 +1,23 @@
 #!/usr/bin/env python3
-r"""Exact Route-2 tensorized action/coupling from the bilinear carrier.
+r"""Route-2 tensorized action/coupling definition from a bilinear carrier.
 
-With the exact microscopic carrier
+With the bilinear carrier definition
 
     K_R(q) = [[u_E(q),           u_T(q)],
               [delta_A1(q)u_E(q), delta_A1(q)u_T(q)]],
 
-the minimal Route-2 tensor extension of the exact scalar Schur backbone becomes
-an exact construction:
+the minimal Route-2 tensor extension of the scalar Schur backbone is the
+definition
 
     I_TB(f, a ; j) = I_R(f ; j) + 1/2 ||a - K_R(q)||^2
 
-and the corresponding exact spacetime tensor carrier on PL S^3 x R is
+and the corresponding spacetime carrier on PL S^3 x R is
 
     Xi_TB(t ; q) = vec(K_R(q)) \otimes exp(-t Lambda_R) u_*.
 
 This still does not identify the carrier with full Einstein dynamics. It does
-remove the earlier blocker that Route 2 lacked any exact tensor primitive at
-all.
+not derive the upstream inputs; it only verifies that the definition is
+algebraically coherent under those named inputs.
 """
 
 from __future__ import annotations
@@ -68,7 +68,7 @@ def xi_tb(theta: np.ndarray, seed_t: np.ndarray) -> np.ndarray:
 
 
 def main() -> int:
-    print("Route 2 exact tensorized action from bilinear carrier")
+    print("Route 2 tensorized action definition from bilinear carrier")
     print("=" * 78)
 
     basis = same.build_adapted_basis()
@@ -107,7 +107,7 @@ def main() -> int:
         )
     )
 
-    print("Exact bilinear support carrier endpoints:")
+    print("Bilinear support carrier endpoints:")
     print(f"  vec K_R(e0 + E_x)        = {np.array2string(theta_center, precision=12, floatmode='fixed')}")
     print(f"  vec K_R(s/sqrt(6) + T1x) = {np.array2string(theta_shell, precision=12, floatmode='fixed')}")
     print()
@@ -119,17 +119,17 @@ def main() -> int:
         print(f"  ||Xi_TB({t:.1f}; s/sqrt(6)+T1x)|| = {float(np.linalg.norm(xi)):.12e}")
 
     record(
-        "the exact Route-2 tensor extension now has an exact microscopic carrier",
+        "the Route-2 tensor extension has a finite bilinear carrier definition",
         np.all(np.isfinite(theta_center)) and np.all(np.isfinite(theta_shell)),
         f"endpoint carrier norms={np.linalg.norm(theta_center):.3e}, {np.linalg.norm(theta_shell):.3e}",
     )
     record(
-        "the exact scalar Schur backbone still supplies a symmetric positive slice generator",
+        "the named scalar Schur input supplies a symmetric positive slice generator",
         sym_err < 1e-12 and min_eig > 0.0,
         f"symmetry error={sym_err:.3e}, min eigenvalue={min_eig:.6e}",
     )
     record(
-        "the exact spacetime tensor carrier Xi_TB contracts under the exact Route-2 semigroup",
+        "the spacetime carrier Xi_TB contracts under the named Route-2 semigroup",
         np.linalg.norm(xi_center[1]) < np.linalg.norm(xi_center[0])
         and np.linalg.norm(xi_center[2]) < np.linalg.norm(xi_center[1])
         and np.linalg.norm(xi_shell[1]) < np.linalg.norm(xi_shell[0])
@@ -138,19 +138,19 @@ def main() -> int:
         f"semigroup composition error={semigroup_err:.3e}",
     )
     record(
-        "the remaining Route-2 GR blocker is no longer the support primitive but the final Einstein-dynamics identification",
+        "the remaining Route-2 GR blocker is the upstream-input and Einstein-dynamics bridge",
         True,
-        "K_R, I_TB, and Xi_TB are exact constructions; matching them to the Einstein/Regge tensor law is still open",
+        "K_R, I_TB, and Xi_TB are definitions under named inputs; matching them to the Einstein/Regge tensor law is still open",
         status="BLOCKED",
     )
 
     print("\nVerdict:")
     print(
-        "Route 2 no longer lacks an exact tensor primitive. The exact bilinear "
-        "carrier K_R yields an exact tensorized Schur construction and an exact "
-        "spacetime carrier Xi_TB on PL S^3 x R. The remaining blocker is the "
-        "final identification of this exact carrier/action with the Einstein/Regge "
-        "tensor dynamics law on the current restricted class."
+        "Route 2 has a definition-only bilinear carrier K_R, tensorized Schur "
+        "construction, and spacetime carrier Xi_TB on PL S^3 x R. The remaining "
+        "blocker is the upstream-input closure and final identification of this "
+        "carrier/action with the Einstein/Regge tensor dynamics law on the "
+        "current restricted class."
     )
 
     print("\n" + "=" * 78)

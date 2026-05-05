@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Exact bilinear Route-2 tensor primitive on the microscopic support block.
+"""Bilinear Route-2 tensor-carrier definition on the microscopic support block.
 
 This runner takes the next axiom-first step after the scalar/rank-one support
 no-go. The key observation is that the current no-go only rules out a *linear*
-exact tensor observable produced by the scalar support Green / Schur stack.
+tensor observable produced by the scalar support Green / Schur stack.
 
-It does not rule out an exact *bilinear* carrier built from:
+It does not rule out a *bilinear* carrier definition built from:
 
-  1. the exact scalar A1 background datum delta_A1, and
-  2. the exact aligned bright support coefficients u_E, u_T on E_x and T1x.
+  1. the scalar A1 background datum delta_A1, and
+  2. the aligned bright support coefficients u_E, u_T on E_x and T1x.
 
-Define the exact microscopic tensor carrier
+Define the microscopic tensor carrier
 
     K_R(q) = [[u_E(q),           u_T(q)],
               [delta_A1(q)u_E(q), delta_A1(q)u_T(q)]]
@@ -19,9 +19,11 @@ where
   u_E(q) = <E_x, q>
   u_T(q) = <T1x, q>.
 
-This object is exact on the support block, before any metric/curvature readout.
-The prior bounded tensor pair Theta_R^(0) is then tested as a bounded linear
-projection of this exact carrier on the canonical A1 family.
+This object is algebraically defined on the support block, before any
+metric/curvature readout. The prior bounded tensor pair Theta_R^(0) is then
+tested as a bounded linear projection of this carrier on the canonical A1
+family. The runner does not derive the upstream decoupling/coordinate
+certificates or the physical tensor-primitive bridge.
 """
 
 from __future__ import annotations
@@ -128,12 +130,12 @@ def theta_bounded_from_k(q: np.ndarray, direction: str) -> float:
 
 
 def main() -> int:
-    print("Route 2 exact bilinear tensor primitive")
+    print("Route 2 bilinear tensor-carrier definition")
     print("=" * 78)
 
     d_center = delta_a1(e0)
     d_shell = delta_a1(s_unit)
-    print("Exact A1 background endpoints:")
+    print("A1 background endpoints under the named coordinates:")
     print(f"  delta_A1(e0) = {d_center:.12e}")
     print(f"  delta_A1(s/sqrt(6)) = {d_shell:.12e}")
 
@@ -188,22 +190,22 @@ def main() -> int:
     )
 
     record(
-        "delta_A1 is exactly blind to bright and dark non-A1 support perturbations",
+        "delta_A1 is blind to bright and dark non-A1 support perturbations under the named coordinate model",
         blind_max < 1e-12,
         f"max non-A1-induced delta_A1 shift={blind_max:.3e}",
     )
     record(
-        "the exact microscopic tensor carrier is the bilinear support object K_R(q)=[[u_E,u_T],[delta_A1 u_E, delta_A1 u_T]]",
+        "the bilinear support carrier definition is K_R(q)=[[u_E,u_T],[delta_A1 u_E, delta_A1 u_T]]",
         exact_endpoint_err < 1e-12,
         f"max exact endpoint-column error={exact_endpoint_err:.3e}",
     )
     record(
-        "the exact carrier vanishes on pure A1 backgrounds and on dark aligned coordinates",
+        "the carrier vanishes on pure A1 backgrounds and on dark aligned coordinates",
         pure_a1_norm < 1e-12 and dark_leak_max < 1e-12,
         f"pure-A1 norm={pure_a1_norm:.3e}, dark-channel norm={dark_leak_max:.3e}",
     )
     record(
-        "the prior bounded tensor pair Theta_R^(0) is a bounded linear projection of the exact carrier on the canonical A1 family",
+        "the prior bounded tensor pair Theta_R^(0) is a bounded linear projection of the carrier on the canonical A1 family",
         True,
         "the bounded readout is endpoint-fixed from the old eta_floor_tf surface and now acts on vec(K_R)",
         status="BOUNDED",
@@ -211,11 +213,12 @@ def main() -> int:
 
     print("\nVerdict:")
     print(
-        "The exact missing Route-2 tensor primitive is not a linear support "
-        "observable from the scalar/rank-one support stack. It is the exact "
-        "bilinear support carrier K_R built from the aligned bright support "
-        "coordinates and the exact scalar background datum delta_A1. The prior "
-        "Theta_R^(0) pair is then a bounded readout of this exact carrier."
+        "The Route-2 tensor-carrier candidate is not a linear support observable "
+        "from the scalar/rank-one support stack. It is the bilinear support "
+        "carrier K_R built from the aligned bright support coordinates and the "
+        "scalar background datum delta_A1. The prior Theta_R^(0) pair is then a "
+        "bounded readout of this carrier; upstream certificates and the physical "
+        "tensor-primitive bridge remain outside this runner."
     )
 
     print("\n" + "=" * 78)

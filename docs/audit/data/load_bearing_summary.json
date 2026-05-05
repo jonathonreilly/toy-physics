@@ -19,14 +19,14 @@
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 33.951,
-      "transitive_descendants": 494
+      "load_bearing_score": 34.071,
+      "transitive_descendants": 537
     },
     {
       "claim_id": "minimal_axioms_2026-04-11",
       "criticality": "critical",
-      "load_bearing_score": 32.804,
-      "transitive_descendants": 446
+      "load_bearing_score": 33.333,
+      "transitive_descendants": 455
     },
     {
       "claim_id": "observable_principle_from_axiom_note",
@@ -61,8 +61,8 @@
     {
       "claim_id": "native_gauge_closure_note",
       "criticality": "critical",
-      "load_bearing_score": 27.422,
-      "transitive_descendants": 484
+      "load_bearing_score": 28.044,
+      "transitive_descendants": 527
     },
     {
       "claim_id": "yt_ew_color_projection_theorem",
@@ -73,8 +73,8 @@
     {
       "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 25.544,
-      "transitive_descendants": 527
+      "load_bearing_score": 25.569,
+      "transitive_descendants": 536
     },
     {
       "claim_id": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
@@ -85,14 +85,14 @@
     {
       "claim_id": "minimal_axioms_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 25.071,
-      "transitive_descendants": 537
+      "load_bearing_score": 25.095,
+      "transitive_descendants": 546
     },
     {
       "claim_id": "anomaly_forces_time_theorem",
       "criticality": "critical",
-      "load_bearing_score": 24.162,
-      "transitive_descendants": 404
+      "load_bearing_score": 24.19,
+      "transitive_descendants": 412
     },
     {
       "claim_id": "left_handed_charge_matching_note",
@@ -107,6 +107,12 @@
       "transitive_descendants": 278
     },
     {
+      "claim_id": "three_generation_structure_note",
+      "criticality": "critical",
+      "load_bearing_score": 22.884,
+      "transitive_descendants": 333
+    },
+    {
       "claim_id": "one_generation_matter_closure_note",
       "criticality": "critical",
       "load_bearing_score": 22.409,
@@ -117,12 +123,6 @@
       "criticality": "critical",
       "load_bearing_score": 22.388,
       "transitive_descendants": 334
-    },
-    {
-      "claim_id": "three_generation_structure_note",
-      "criticality": "critical",
-      "load_bearing_score": 22.209,
-      "transitive_descendants": 295
     },
     {
       "claim_id": "ckm_atlas_axiom_closure_note",
