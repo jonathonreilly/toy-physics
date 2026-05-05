@@ -1,6 +1,6 @@
 # PR230 Matching/Running Bridge Gate
 
-Status: open / bridge contract ready, not retained and not proposed_retained.
+Status: open / bridge contract ready; proposal_allowed=false.
 
 This note adds the missing non-chunk gate for converting a certified PR230
 lattice-scale readout into `y_t(v)` and `m_t(pole)`.  It does not supply a

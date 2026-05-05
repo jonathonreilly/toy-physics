@@ -1,7 +1,6 @@
 # YT WZ Mass-Fit Response-Row Builder Note
 
-Status: open / W/Z mass-fit adapter contract, not retained and not
-proposed_retained.
+Status: open / W/Z mass-fit adapter contract; proposal_allowed=false.
 
 This note records the next executable adapter in the PR #230 same-source W
 route.  The existing W/Z certificate builder consumes

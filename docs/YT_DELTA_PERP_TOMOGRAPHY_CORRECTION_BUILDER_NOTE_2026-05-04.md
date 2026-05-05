@@ -1,7 +1,6 @@
 # YT Delta-Perp Tomography Correction Builder Note
 
-Status: open / tomography correction contract, not retained and not
-proposed_retained.
+Status: open / tomography correction contract; proposal_allowed=false.
 
 The same-source W-response route has reduced the physical readout to
 

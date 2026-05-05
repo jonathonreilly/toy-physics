@@ -290,6 +290,9 @@ def main() -> int:
         "same_source_top_response_identity_builder": load(
             "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json"
         ),
+        "top_wz_matched_covariance_builder": load(
+            "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json"
+        ),
         "same_source_top_response_builder": load(
             "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json"
         ),
@@ -1335,6 +1338,17 @@ def main() -> int:
         )
         is False,
         statuses["same_source_top_response_identity_builder"],
+    )
+    report(
+        "top-wz-matched-covariance-builder-open",
+        "matched top-W"
+        in str(statuses["top_wz_matched_covariance_builder"])
+        and certificates["top_wz_matched_covariance_builder"].get("proposal_allowed") is False
+        and certificates["top_wz_matched_covariance_builder"].get(
+            "strict_top_wz_matched_covariance_builder_passed"
+        )
+        is False,
+        statuses["top_wz_matched_covariance_builder"],
     )
     report(
         "same-source-w-response-row-builder-open",

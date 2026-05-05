@@ -2196,3 +2196,52 @@ Strict mode remains blocked until all four positive legs close:
 - one accepted identity route: direct Higgs-pole identity, source-Higgs Gram
   purity, neutral-scalar rank-one purity, or same-source W/Z response;
 - retained-route/proposal authorization.
+
+## 2026-05-04 Matched Top/W Covariance Certificate Builder
+
+This continuation adds the covariance sub-builder required by the top-response
+certificate builder.  It refuses to emit the production covariance certificate
+until a matched top/W response-row file exists on a common configuration set.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_top_wz_matched_covariance_certificate_builder.py --scout
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_top_wz_matched_covariance_certificate_builder.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_top_wz_matched_covariance_certificate_builder.py --strict \
+  --output /tmp/pr230_cov_status.json \
+  --covariance-output /tmp/pr230_cov_cert.json
+# expected failure until matched top/W response rows exist
+
+python3 scripts/frontier_yt_same_source_top_response_certificate_builder.py --scout
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_same_source_top_response_certificate_builder.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=26 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=175 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=201 FAIL=0
+```
+
+Result: open.  Scout mode writes only
+`outputs/yt_top_wz_matched_covariance_certificate_builder_scout_certificate_2026-05-04.json`.
+Current/default mode does not write
+`outputs/yt_top_wz_matched_covariance_certificate_2026-05-04.json`.  Strict mode
+remains blocked until:
+
+- `outputs/yt_top_wz_matched_response_rows_2026-05-04.json`.
+
+Chunk-worker check-in: four-mode L12 chunk025 output was present at this
+checkpoint.  Active local compute had polefit8x8 chunks019-024 running under
+the other worker's namespace.  This continuation did not package or stage
+chunk artifacts.

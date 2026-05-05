@@ -299,6 +299,7 @@
     "taste_carrier_import_audit": "exact negative boundary / taste-corner scalar-carrier import audit",
     "taste_corner_ladder_pole_obstruction": "exact negative boundary / finite-ladder taste-corner pole-witness obstruction",
     "taste_singlet_ladder_normalization": "exact negative boundary / taste-singlet normalization removes finite ladder crossings",
+    "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
     "unit_projector_pole_threshold": "exact negative boundary / unit-projector finite-ladder pole-threshold obstruction",
     "wz_correlator_mass_fit_path_gate": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
     "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
@@ -313,7 +314,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 200,
+  "pass_count": 201,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

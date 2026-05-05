@@ -1,7 +1,6 @@
 # Same-Source W-Response Decomposition Theorem
 
-Status: exact-support / current rows absent, not retained and not
-proposed_retained.
+Status: exact-support / current rows absent; proposal_allowed=false.
 
 This theorem is the real same-source W-response physics needed by PR #230.
 It shows exactly what can be extracted if the FH/LSZ top response is paired

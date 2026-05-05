@@ -61,6 +61,12 @@ Open imports:
   `outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json` file
   and strict mode fails until W/Z mass-fit rows, matched same-source top
   response, and non-observed `g_2` certificates exist;
+- matched top/W covariance builder is now an executable adapter contract:
+  scout rows validate covariance extraction, but current mode writes no
+  `outputs/yt_top_wz_matched_covariance_certificate_2026-05-04.json` file and
+  strict mode fails until
+  `outputs/yt_top_wz_matched_response_rows_2026-05-04.json` supplies paired
+  top and W/Z source-response rows on a matched configuration set;
 - positivity-improving/rank-one route is conditional support only; the direct
   neutral-sector irreducibility theorem is blocked on the current surface;
 - scalar denominator / K-prime route is exact support only; same-surface Schur

@@ -1,7 +1,6 @@
 # YT Same-Source W-Response Row Builder Note
 
-Status: open / production-row adapter contract, not retained and not
-proposed_retained.
+Status: open / production-row adapter contract; proposal_allowed=false.
 
 This note records the final adapter needed by the lightweight W-response route
 in PR #230.  The adapter turns future same-source W/top response certificates

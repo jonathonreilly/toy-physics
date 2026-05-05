@@ -1,7 +1,6 @@
 # FH/LSZ Model-Class Semantic Firewall
 
-Status: bounded-support / gate hardening only, not retained and not
-proposed_retained.
+Status: bounded-support / gate hardening only; proposal_allowed=false.
 
 The chunk pole-fit route needs scalar-LSZ model-class authority before finite
 Euclidean shell fits can be treated as a physical pole derivative or residue.

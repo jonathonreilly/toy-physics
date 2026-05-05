@@ -866,3 +866,24 @@ Findings checked:
 - The current surface has no same-source EW action certificate and no
   one-Higgs completeness certificate.
 - No retained/proposed-retained wording or forbidden shortcut is authorized.
+
+# 2026-05-04 Matched Top/W Covariance Builder Review
+
+Disposition: pass as open covariance contract, not as closure.
+
+Findings checked:
+
+- The builder writes a production covariance certificate only in strict mode;
+  default/current mode remains an open status and writes no production
+  covariance output.
+- Scout covariance rows are isolated in scout-named output and are not read by
+  strict/current top-response closure.
+- The runner rejects missing matched response rows, observed W/Z/top selectors,
+  `H_unit`/Ward authority, `alpha_LM`/plaquette/u0, and by-fiat
+  `c2`/`Z_match` shortcuts.
+- The same-source top-response builder and aggregate assembly/retained/campaign
+  gates now name matched top/W covariance as an explicit open blocker.
+- Review-loop audit compatibility found strict-lint status-line errors in
+  several 2026-05-04 PR230 notes; those lines were narrowed to
+  `proposal_allowed=false`, the audit pipeline was rerun, and strict lint
+  now reports only pre-existing warnings plus graph-cycle warnings.

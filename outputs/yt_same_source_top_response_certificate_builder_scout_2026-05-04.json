@@ -44,6 +44,7 @@
     "pooled_response_estimator": "outputs/yt_fh_lsz_common_window_pooled_response_estimator_2026-05-04.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
     "same_source_top_response_identity_builder": "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json",
+    "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json"
   },
   "parent_statuses": {
@@ -52,9 +53,10 @@
     "pooled_response_estimator": "bounded-support / FH-LSZ common-window pooled response estimator production-grade",
     "same_source_sector_overlap": "exact negative boundary / same-source sector-overlap identity obstruction",
     "same_source_top_response_identity_builder": "open / same-source top-response identity blockers remain",
+    "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
     "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent"
   },
-  "pass_count": 11,
+  "pass_count": 12,
   "pooled_input": "outputs/yt_fh_lsz_common_window_pooled_response_estimator_2026-05-04.json",
   "proposal_allowed": false,
   "proposal_allowed_reason": "The builder wraps response-side support only after identity and matched covariance certificates exist.  It does not authorize a physical y_t readout by itself.",

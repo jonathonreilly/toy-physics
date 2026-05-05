@@ -1,6 +1,6 @@
 # YT Same-Source W-Response Lightweight Readout Harness Note
 
-Status: open / executable scout contract, not retained and not proposed_retained.
+Status: open / executable scout contract; proposal_allowed=false.
 
 This note records the small-compute route for PR #230.  The route replaces a
 full direct top-mass lattice campaign with same-source response rows, provided

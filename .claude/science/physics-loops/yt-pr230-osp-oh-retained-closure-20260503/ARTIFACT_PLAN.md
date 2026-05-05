@@ -127,3 +127,22 @@ This reduces the identity blocker to explicit positive checks:
 - retained-route/proposal authorization.
 
 The production identity certificate remains absent on the current surface.
+
+Completed in the matched top/W covariance continuation:
+
+- `scripts/frontier_yt_top_wz_matched_covariance_certificate_builder.py`
+- `docs/YT_TOP_WZ_MATCHED_COVARIANCE_CERTIFICATE_BUILDER_NOTE_2026-05-04.md`
+- `outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json`
+- `outputs/yt_top_wz_matched_covariance_certificate_builder_scout_2026-05-04.json`
+- `outputs/yt_top_wz_matched_covariance_certificate_builder_scout_certificate_2026-05-04.json`
+- refreshed top-response builder, full assembly, retained-route, and campaign
+  certificates.
+
+This reduces the covariance blocker to one concrete future input:
+
+- `outputs/yt_top_wz_matched_response_rows_2026-05-04.json`.
+
+That file must contain paired top and W/Z source-response rows on a matched
+configuration set with correlator-derived W/Z mass fits and clean selector
+firewalls.  The production covariance certificate remains absent on the
+current surface.

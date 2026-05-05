@@ -1,6 +1,6 @@
 # PR230 Full Positive Closure Assembly Gate Note
 
-Status: open / assembly gate, not retained and not proposed_retained.
+Status: open / assembly gate; proposal_allowed=false.
 
 This note records the integration boundary for PR #230.  The chunk worker can
 complete the production-response leg, but chunk completion alone cannot close

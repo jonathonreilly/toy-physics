@@ -1,7 +1,6 @@
 # Canonical-Higgs Operator Semantic Firewall
 
-Status: bounded-support / gate hardening only, not retained and not
-proposed_retained.
+Status: bounded-support / gate hardening only; proposal_allowed=false.
 
 The source-Higgs route now depends on a future same-surface canonical-Higgs
 operator certificate.  This firewall hardens that future gate so a candidate

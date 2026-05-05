@@ -1,7 +1,6 @@
 # YT Same-Source Top-Response Identity Certificate Builder Note
 
-Status: open / top-response identity contract, not retained and not
-proposed_retained.
+Status: open / top-response identity contract; proposal_allowed=false.
 
 This note records the identity object required before the PR #230 same-source
 top response can be consumed by the W/Z response route.  A same-source label

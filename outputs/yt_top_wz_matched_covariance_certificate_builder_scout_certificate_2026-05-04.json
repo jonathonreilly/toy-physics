@@ -1,0 +1,26 @@
+{
+  "certificate": "matched top/W covariance certificate",
+  "certificate_kind": "top_wz_matched_covariance",
+  "cov_dE_top_dM_W": 1.2833333333333357e-05,
+  "firewall": {
+    "used_H_unit_or_Ward_authority": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_c2_or_zmatch_equal_one": false,
+    "used_observed_WZ_masses_as_selector": false,
+    "used_observed_top_or_yukawa_as_selector": false
+  },
+  "matched_configuration_set": true,
+  "mean_dE_top_ds": 1.4245,
+  "mean_dM_W_ds": 0.51625,
+  "pair_count": 4,
+  "phase": "scout",
+  "proposal_allowed": false,
+  "same_source_coordinate": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not use observed W/Z/top/y_t selectors",
+    "does not use H_unit, yt_ward_identity, alpha_LM, plaquette, or u0",
+    "does not set c2=1, Z_match=1, kappa_s=1, or k_top/k_gauge=1"
+  ],
+  "wz_mass_fits_from_correlators": true
+}

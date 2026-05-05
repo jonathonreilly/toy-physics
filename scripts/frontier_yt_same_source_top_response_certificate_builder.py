@@ -34,6 +34,7 @@ PARENTS = {
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
     "higgs_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
     "same_source_top_response_identity_builder": "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json",
+    "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
 }
 
@@ -328,6 +329,7 @@ def main() -> int:
     report("sector-overlap-currently-blocked", "sector-overlap identity obstruction" in parent_statuses["same_source_sector_overlap"], parent_statuses["same_source_sector_overlap"])
     report("higgs-identity-currently-blocked", "Higgs-pole identity blocker" in parent_statuses["higgs_identity_latest_blocker"], parent_statuses["higgs_identity_latest_blocker"])
     report("top-response-identity-builder-currently-open", "same-source top-response identity" in parent_statuses["same_source_top_response_identity_builder"], parent_statuses["same_source_top_response_identity_builder"])
+    report("top-wz-covariance-builder-currently-open", "matched top-W" in parent_statuses["top_wz_matched_covariance_builder"], parent_statuses["top_wz_matched_covariance_builder"])
     if args.scout:
         report("scout-response-valid", response_validation["valid"], str(response_validation.get("failed_checks", [])))
         report("scout-identity-valid", identity_validation["valid"], str(identity_validation.get("failed_checks", [])))

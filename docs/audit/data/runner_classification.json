@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T11:07:03.087467+00:00",
+  "generated_at": "2026-05-05T00:00:51.155506+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14161,6 +14161,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_bridge_rearrangement_principle.py"
     },
+    "yt_bridge_stack_import_audit_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 10,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_bridge_stack_import_audit.py"
+    },
     "yt_bridge_uv_class_uniqueness_note": {
       "assert_count": 0,
       "counts": {
@@ -14184,6 +14196,102 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_bridge_variational_selector.py"
+    },
+    "yt_brst_nielsen_higgs_identity_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_brst_nielsen_higgs_identity_no_go.py"
+    },
+    "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 4,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_canonical_higgs_operator_certificate_gate.py"
+    },
+    "yt_canonical_higgs_operator_realization_gate_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_canonical_higgs_operator_realization_gate.py"
+    },
+    "yt_canonical_higgs_repo_authority_audit_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_canonical_higgs_repo_authority_audit.py"
+    },
+    "yt_canonical_scalar_normalization_import_audit_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_canonical_scalar_normalization_import_audit.py"
+    },
+    "yt_chirality_selector_bridge_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_chirality_selector_bridge.py"
+    },
+    "yt_cl3_automorphism_source_identity_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_cl3_automorphism_source_identity_no_go.py"
+    },
+    "yt_cl3_source_unit_normalization_no_go_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_cl3_source_unit_normalization_no_go.py"
     },
     "yt_class_3_susy_2hdm_analysis_note_2026-04-18": {
       "assert_count": 0,
@@ -14245,6 +14353,78 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_color_projection_correction.py"
     },
+    "yt_color_singlet_finite_q_ir_regular_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_color_singlet_finite_q_ir_regular.py"
+    },
+    "yt_color_singlet_zero_mode_cancellation_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_color_singlet_zero_mode_cancellation.py"
+    },
+    "yt_color_singlet_zero_mode_removed_ladder_pole_search_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_color_singlet_zero_mode_removed_ladder_pole_search.py"
+    },
+    "yt_common_dressing_obstruction_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 7,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_common_dressing_obstruction.py"
+    },
+    "yt_complete_source_spectrum_identity_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_complete_source_spectrum_identity_no_go.py"
+    },
+    "yt_confinement_gap_threshold_import_audit_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_confinement_gap_threshold_import_audit.py"
+    },
     "yt_constructive_uv_bridge_note": {
       "assert_count": 0,
       "counts": {
@@ -14257,6 +14437,30 @@
       "dominant_class": null,
       "runner": "scripts/frontier_yt_constructive_uv_bridge.py"
     },
+    "yt_d17_source_pole_identity_closure_attempt_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_d17_source_pole_identity_closure_attempt.py"
+    },
+    "yt_delta_perp_tomography_correction_builder_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 4,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_delta_perp_tomography_correction_builder.py"
+    },
     "yt_direct_lattice_correlator_derivation_theorem_note_2026-04-30": {
       "assert_count": 4,
       "counts": {
@@ -14268,6 +14472,42 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_direct_lattice_correlator.py"
+    },
+    "yt_direct_measurement_scale_requirements_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_direct_measurement_scale_requirements.py"
+    },
+    "yt_effective_mass_plateau_residue_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_effective_mass_plateau_residue_no_go.py"
+    },
+    "yt_effective_potential_hessian_source_overlap_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_effective_potential_hessian_source_overlap_no_go.py"
     },
     "yt_eft_bridge_theorem": {
       "assert_count": 0,
@@ -14377,6 +14617,894 @@
       "dominant_class": null,
       "runner": "scripts/frontier_yt_explicit_systematic_budget.py"
     },
+    "yt_feshbach_operator_response_boundary_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 5,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_feshbach_operator_response_boundary.py"
+    },
+    "yt_feynman_hellmann_source_response_route_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_feynman_hellmann_source_response_route.py"
+    },
+    "yt_fh_gauge_mass_response_certificate_builder_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 4,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_fh_gauge_mass_response_certificate_builder.py"
+    },
+    "yt_fh_gauge_mass_response_manifest_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_gauge_mass_response_manifest.py"
+    },
+    "yt_fh_gauge_mass_response_observable_gap_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_gauge_mass_response_observable_gap.py"
+    },
+    "yt_fh_gauge_normalized_response_route_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_gauge_normalized_response_route.py"
+    },
+    "yt_fh_gauge_response_mixed_scalar_obstruction_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 17
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_gauge_response_mixed_scalar_obstruction.py"
+    },
+    "yt_fh_lsz_autocorrelation_ess_gate_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 18,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py"
+    },
+    "yt_fh_lsz_chunk001_production_checkpoint_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_chunk001_checkpoint_certificate.py"
+    },
+    "yt_fh_lsz_chunk001_target_timeseries_rerun_checkpoint_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_chunk001_checkpoint_certificate.py"
+    },
+    "yt_fh_lsz_chunk002_production_checkpoint_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_chunk002_checkpoint_certificate.py"
+    },
+    "yt_fh_lsz_chunk002_target_timeseries_rerun_checkpoint_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_chunk002_checkpoint_certificate.py"
+    },
+    "yt_fh_lsz_chunk003_target_timeseries_rerun_checkpoint_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py"
+    },
+    "yt_fh_lsz_chunk004_target_timeseries_rerun_checkpoint_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py"
+    },
+    "yt_fh_lsz_chunk011_target_timeseries_checkpoint_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 5,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py"
+    },
+    "yt_fh_lsz_chunk012_target_timeseries_checkpoint_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py"
+    },
+    "yt_fh_lsz_chunk_combiner_gate_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 5,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py"
+    },
+    "yt_fh_lsz_chunk_target_timeseries_generic_checkpoint_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py"
+    },
+    "yt_fh_lsz_chunk_wave_orchestrator_note_2026-05-04": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py"
+    },
+    "yt_fh_lsz_chunked_production_manifest_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_chunked_production_manifest.py"
+    },
+    "yt_fh_lsz_chunks013_016_target_ess_wave_checkpoint_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py"
+    },
+    "yt_fh_lsz_common_window_pooled_response_estimator_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_common_window_pooled_response_estimator.py"
+    },
+    "yt_fh_lsz_common_window_replacement_response_stability_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_common_window_replacement_response_stability.py"
+    },
+    "yt_fh_lsz_common_window_response_gate_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_common_window_response_gate.py"
+    },
+    "yt_fh_lsz_common_window_response_provenance_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_fh_lsz_common_window_response_provenance.py"
+    },
+    "yt_fh_lsz_eight_mode_noise_variance_gate_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_eight_mode_noise_variance_gate.py"
+    },
+    "yt_fh_lsz_finite_shell_identifiability_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_finite_shell_identifiability_no_go.py"
+    },
+    "yt_fh_lsz_finite_source_linearity_calibration_checkpoint_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_fh_lsz_finite_source_linearity_calibration_checkpoint.py"
+    },
+    "yt_fh_lsz_finite_source_linearity_gate_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_finite_source_linearity_gate.py"
+    },
+    "yt_fh_lsz_finite_volume_pole_saturation_obstruction_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_finite_volume_pole_saturation_obstruction.py"
+    },
+    "yt_fh_lsz_generic_chunk_discovery_checkpoint_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 5,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_retained_closure_route_certificate.py"
+    },
+    "yt_fh_lsz_global_production_collision_guard_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_global_production_collision_guard.py"
+    },
+    "yt_fh_lsz_higgs_pole_identity_gate_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_higgs_pole_identity_gate.py"
+    },
+    "yt_fh_lsz_invariant_readout_theorem_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_invariant_readout_theorem.py"
+    },
+    "yt_fh_lsz_joint_harness_certificate_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_joint_harness_certificate.py"
+    },
+    "yt_fh_lsz_joint_resource_projection_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_joint_resource_projection.py"
+    },
+    "yt_fh_lsz_legacy_v2_backfill_feasibility_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_legacy_v2_backfill_feasibility.py"
+    },
+    "yt_fh_lsz_multitau_target_timeseries_harness_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_multitau_target_timeseries_harness_certificate.py"
+    },
+    "yt_fh_lsz_noise_subsample_diagnostics_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_noise_subsample_diagnostics_certificate.py"
+    },
+    "yt_fh_lsz_paired_variance_calibration_gate_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_paired_variance_calibration_gate.py"
+    },
+    "yt_fh_lsz_paired_variance_calibration_orchestrator_note_2026-05-04": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_paired_variance_calibration_orchestrator.py"
+    },
+    "yt_fh_lsz_pole_fit_kinematics_gate_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_pole_fit_kinematics_gate.py"
+    },
+    "yt_fh_lsz_pole_fit_mode_budget_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_pole_fit_mode_budget.py"
+    },
+    "yt_fh_lsz_pole_fit_model_class_gate_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_fh_lsz_pole_fit_model_class_gate.py"
+    },
+    "yt_fh_lsz_pole_fit_postprocessor_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_fh_lsz_pole_fit_postprocessor.py"
+    },
+    "yt_fh_lsz_pole_saturation_threshold_gate_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_pole_saturation_threshold_gate.py"
+    },
+    "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_polefit8x8_chunk_manifest.py"
+    },
+    "yt_fh_lsz_production_checkpoint_granularity_gate_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_production_checkpoint_granularity_gate.py"
+    },
+    "yt_fh_lsz_production_manifest_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_production_manifest.py"
+    },
+    "yt_fh_lsz_production_postprocess_gate_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_production_postprocess_gate.py"
+    },
+    "yt_fh_lsz_ready_chunk_response_stability_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py"
+    },
+    "yt_fh_lsz_ready_chunk_set_checkpoint_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py"
+    },
+    "yt_fh_lsz_response_window_acceptance_gate_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py"
+    },
+    "yt_fh_lsz_response_window_forensics_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_response_window_forensics.py"
+    },
+    "yt_fh_lsz_selected_mass_normal_cache_speedup_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_selected_mass_normal_cache_speedup_certificate.py"
+    },
+    "yt_fh_lsz_selected_mass_replacement_wave_checkpoint_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py"
+    },
+    "yt_fh_lsz_soft_continuum_threshold_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_soft_continuum_threshold_no_go.py"
+    },
+    "yt_fh_lsz_stieltjes_model_class_obstruction_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_stieltjes_model_class_obstruction.py"
+    },
+    "yt_fh_lsz_target_observable_ess_certificate_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py"
+    },
+    "yt_fh_lsz_target_timeseries_harness_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_target_timeseries_harness_certificate.py"
+    },
+    "yt_fh_lsz_target_timeseries_higgs_identity_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_target_timeseries_higgs_identity_no_go.py"
+    },
+    "yt_fh_lsz_target_timeseries_replacement_queue_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py"
+    },
+    "yt_fh_lsz_threshold_authority_import_audit_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_threshold_authority_import_audit.py"
+    },
+    "yt_fh_lsz_uniform_gap_self_certification_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_uniform_gap_self_certification_no_go.py"
+    },
+    "yt_fh_lsz_v2_target_response_stability_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_v2_target_response_stability.py"
+    },
+    "yt_fh_lsz_variance_calibration_manifest_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_variance_calibration_manifest.py"
+    },
+    "yt_fh_production_protocol_certificate_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 2,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_yt_fh_production_protocol_certificate.py"
+    },
+    "yt_finite_source_shift_derivative_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_finite_source_shift_derivative_no_go.py"
+    },
+    "yt_fitted_kernel_residue_selector_no_go_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fitted_kernel_residue_selector_no_go.py"
+    },
+    "yt_flat_toron_scalar_denominator_obstruction_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 11,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_flat_toron_scalar_denominator_obstruction.py"
+    },
+    "yt_flat_toron_thermodynamic_washout_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_flat_toron_thermodynamic_washout.py"
+    },
+    "yt_fms_oh_certificate_construction_attempt_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fms_oh_certificate_construction_attempt.py"
+    },
+    "yt_free_scalar_two_point_pole_absence_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_free_scalar_two_point_pole_absence.py"
+    },
+    "yt_free_staggered_kinetic_coefficient_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_free_staggered_kinetic_coefficient.py"
+    },
     "yt_gauge_crossover_theorem": {
       "assert_count": 0,
       "counts": {
@@ -14388,6 +15516,30 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_gauge_crossover_theorem.py"
+    },
+    "yt_gauge_perron_to_neutral_scalar_rank_one_import_audit_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 14,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_gauge_perron_to_neutral_scalar_rank_one_import_audit.py"
+    },
+    "yt_gauge_vev_source_overlap_no_go_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_gauge_vev_source_overlap_no_go.py"
     },
     "yt_generation_hierarchy_primitive_analysis_note_2026-04-18": {
       "assert_count": 1,
@@ -14413,6 +15565,78 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_h_unit_flavor_column.py"
     },
+    "yt_heavy_kinetic_mass_route_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_heavy_kinetic_mass_route.py"
+    },
+    "yt_heavy_kinetic_matching_obstruction_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 15
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_heavy_kinetic_matching_obstruction.py"
+    },
+    "yt_higgs_pole_identity_latest_blocker_certificate_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 11
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_higgs_pole_identity_latest_blocker_certificate.py"
+    },
+    "yt_hqet_direct_route_requirements_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_hqet_direct_route_requirements.py"
+    },
+    "yt_hs_rpa_pole_condition_attempt_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_hs_rpa_pole_condition_attempt.py"
+    },
+    "yt_hunit_canonical_higgs_operator_candidate_gate_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_hunit_canonical_higgs_operator_candidate_gate.py"
+    },
     "yt_interacting_bridge_locality_note": {
       "assert_count": 0,
       "counts": {
@@ -14424,6 +15648,114 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/frontier_yt_interacting_bridge_locality.py"
+    },
+    "yt_interacting_kinetic_background_sensitivity_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_interacting_kinetic_background_sensitivity.py"
+    },
+    "yt_isolated_pole_gram_factorization_theorem_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_isolated_pole_gram_factorization_theorem.py"
+    },
+    "yt_key_blocker_closure_attempt_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_key_blocker_closure_attempt.py"
+    },
+    "yt_kprime_closure_attempt_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_kprime_closure_attempt.py"
+    },
+    "yt_large_nc_pole_dominance_boundary_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_large_nc_pole_dominance_boundary.py"
+    },
+    "yt_legacy_schur_bridge_import_audit_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_legacy_schur_bridge_import_audit.py"
+    },
+    "yt_legendre_kappa_gauge_freedom_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_legendre_kappa_gauge_freedom.py"
+    },
+    "yt_legendre_source_pole_operator_construction_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_legendre_source_pole_operator_construction.py"
+    },
+    "yt_mass_response_bracket_certificate_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_mass_response_bracket_certificate.py"
     },
     "yt_microscopic_schur_class_admissibility_note": {
       "assert_count": 0,
@@ -14437,6 +15769,138 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_microscopic_schur_class_admissibility.py"
     },
+    "yt_momentum_pilot_scaling_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_momentum_pilot_scaling_certificate.py"
+    },
+    "yt_neutral_scalar_commutant_rank_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_neutral_scalar_commutant_rank_no_go.py"
+    },
+    "yt_neutral_scalar_dynamical_rank_one_closure_attempt_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_neutral_scalar_dynamical_rank_one_closure_attempt.py"
+    },
+    "yt_neutral_scalar_irreducibility_authority_audit_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_neutral_scalar_irreducibility_authority_audit.py"
+    },
+    "yt_neutral_scalar_positivity_improving_direct_closure_attempt_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_neutral_scalar_positivity_improving_direct_closure_attempt.py"
+    },
+    "yt_neutral_scalar_rank_one_purity_gate_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_neutral_scalar_rank_one_purity_gate.py"
+    },
+    "yt_neutral_scalar_top_coupling_tomography_gate_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_neutral_scalar_top_coupling_tomography_gate.py"
+    },
+    "yt_no_orthogonal_top_coupling_import_audit_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 1,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_no_orthogonal_top_coupling_import_audit.py"
+    },
+    "yt_no_orthogonal_top_coupling_selection_rule_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_no_orthogonal_top_coupling_selection_rule_no_go.py"
+    },
+    "yt_non_source_response_rank_repair_sufficiency_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_non_source_response_rank_repair_sufficiency.py"
+    },
+    "yt_nonzero_momentum_correlator_scout_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_nonzero_momentum_correlator_scout.py"
+    },
     "yt_observed_mass_inversion_no_go_note_2026-05-01": {
       "assert_count": 1,
       "counts": {
@@ -14448,6 +15912,66 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_observed_mass_inversion_no_go.py"
+    },
+    "yt_one_higgs_completeness_orthogonal_null_gate_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_one_higgs_completeness_orthogonal_null_gate.py"
+    },
+    "yt_orthogonal_neutral_decoupling_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_orthogonal_neutral_decoupling_no_go.py"
+    },
+    "yt_osp_oh_assumption_route_audit_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_osp_oh_assumption_route_audit.py"
+    },
+    "yt_osp_oh_identity_stretch_attempt_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 2,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_osp_oh_identity_stretch_attempt.py"
+    },
+    "yt_osp_oh_literature_bridge_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_osp_oh_literature_bridge.py"
     },
     "yt_p1_bz_quadrature_2_loop_full_staggered_pt_note_2026-04-18": {
       "assert_count": 1,
@@ -14785,6 +16309,66 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_planck_selector_scale_anchor_sensitivity.py"
     },
+    "yt_positivity_improving_neutral_scalar_rank_one_support_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_positivity_improving_neutral_scalar_rank_one_support.py"
+    },
+    "yt_pr230_assumption_import_stress_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 3,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_assumption_import_stress.py"
+    },
+    "yt_pr230_campaign_status_certificate_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+    },
+    "yt_pr230_global_yt_proof_audit_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_global_proof_audit.py"
+    },
+    "yt_pr230_matching_running_bridge_gate_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_matching_running_bridge_gate.py"
+    },
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01": {
       "assert_count": 1,
       "counts": {
@@ -14808,6 +16392,30 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_queue_exhaustion_certificate.py"
+    },
+    "yt_pr230_source_overlap_route_selection_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_source_overlap_route_selection.py"
+    },
+    "yt_production_resource_projection_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_production_resource_projection.py"
     },
     "yt_qfp_insensitivity_support_note": {
       "assert_count": 0,
@@ -14833,6 +16441,30 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_qfp_selector_no_go.py"
     },
+    "yt_reflection_positivity_lsz_shortcut_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_reflection_positivity_lsz_shortcut_no_go.py"
+    },
+    "yt_retained_closure_route_certificate_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 5,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_retained_closure_route_certificate.py"
+    },
     "yt_rge_only_selector_no_go_note_2026-05-01": {
       "assert_count": 1,
       "counts": {
@@ -14857,6 +16489,438 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_right_handed_species_dependence.py"
     },
+    "yt_same_1pi_scalar_pole_boundary_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_same_1pi_scalar_pole_boundary.py"
+    },
+    "yt_same_source_pole_data_sufficiency_gate_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py"
+    },
+    "yt_same_source_scalar_two_point_lsz_measurement_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_same_source_scalar_two_point_lsz_measurement.py"
+    },
+    "yt_same_source_sector_overlap_identity_obstruction_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_same_source_sector_overlap_identity_obstruction.py"
+    },
+    "yt_same_source_top_response_certificate_builder_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_same_source_top_response_certificate_builder.py"
+    },
+    "yt_same_source_top_response_identity_certificate_builder_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_same_source_top_response_identity_certificate_builder.py"
+    },
+    "yt_same_source_w_response_decomposition_theorem_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_same_source_w_response_decomposition_theorem.py"
+    },
+    "yt_same_source_w_response_lightweight_readout_harness_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_same_source_w_response_lightweight_readout_harness.py"
+    },
+    "yt_same_source_w_response_row_builder_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 9,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_same_source_w_response_row_builder.py"
+    },
+    "yt_same_source_wz_response_certificate_gate_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_same_source_wz_response_certificate_gate.py"
+    },
+    "yt_scalar_bs_kernel_residue_degeneracy_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_scalar_bs_kernel_residue_degeneracy.py"
+    },
+    "yt_scalar_carrier_projector_closure_attempt_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_scalar_carrier_projector_closure_attempt.py"
+    },
+    "yt_scalar_denominator_theorem_closure_attempt_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_scalar_denominator_theorem_closure_attempt.py"
+    },
+    "yt_scalar_kernel_enhancement_import_audit_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_scalar_kernel_enhancement_import_audit.py"
+    },
+    "yt_scalar_kernel_ward_identity_obstruction_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_scalar_kernel_ward_identity_obstruction.py"
+    },
+    "yt_scalar_ladder_derivative_limit_obstruction_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_scalar_ladder_derivative_limit_obstruction.py"
+    },
+    "yt_scalar_ladder_eigen_derivative_gate_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_scalar_ladder_eigen_derivative_gate.py"
+    },
+    "yt_scalar_ladder_ir_zero_mode_obstruction_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_scalar_ladder_ir_zero_mode_obstruction.py"
+    },
+    "yt_scalar_ladder_kernel_input_audit_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_scalar_ladder_kernel_input_audit.py"
+    },
+    "yt_scalar_ladder_kernel_scout_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_scalar_ladder_kernel_scout.py"
+    },
+    "yt_scalar_ladder_projector_normalization_obstruction_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_scalar_ladder_projector_normalization_obstruction.py"
+    },
+    "yt_scalar_ladder_residue_envelope_obstruction_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_scalar_ladder_residue_envelope_obstruction.py"
+    },
+    "yt_scalar_ladder_total_momentum_derivative_scout_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_scalar_ladder_total_momentum_derivative_scout.py"
+    },
+    "yt_scalar_lsz_normalization_cancellation_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_scalar_lsz_normalization_cancellation.py"
+    },
+    "yt_scalar_lsz_residue_bridge_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_scalar_lsz_residue_bridge.py"
+    },
+    "yt_scalar_pole_determinant_gate_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_scalar_pole_determinant_gate.py"
+    },
+    "yt_scalar_pole_residue_current_surface_no_go_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_scalar_pole_residue_current_surface_no_go.py"
+    },
+    "yt_scalar_renormalization_condition_overlap_no_go_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_scalar_renormalization_condition_overlap_no_go.py"
+    },
+    "yt_scalar_residue_stuck_fanout_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_scalar_residue_stuck_fanout.py"
+    },
+    "yt_scalar_source_contact_term_scheme_boundary_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_scalar_source_contact_term_scheme_boundary.py"
+    },
+    "yt_scalar_source_response_harness_extension_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_scalar_source_response_harness_certificate.py"
+    },
+    "yt_scalar_source_two_point_stretch_attempt_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 4,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_scalar_source_two_point_stretch.py"
+    },
+    "yt_scalar_spectral_saturation_no_go_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_scalar_spectral_saturation_no_go.py"
+    },
+    "yt_scalar_taste_projector_normalization_attempt_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_scalar_taste_projector_normalization_attempt.py"
+    },
+    "yt_scalar_two_point_harness_extension_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_scalar_two_point_harness_certificate.py"
+    },
+    "yt_scalar_zero_mode_limit_order_theorem_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_scalar_zero_mode_limit_order_theorem.py"
+    },
     "yt_scale_stationarity_substrate_no_go_note_2026-05-01": {
       "assert_count": 1,
       "counts": {
@@ -14868,6 +16932,54 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_scale_stationarity_substrate_no_go.py"
+    },
+    "yt_schur_complement_kprime_sufficiency_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_schur_complement_kprime_sufficiency.py"
+    },
+    "yt_schur_kernel_row_contract_gate_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_schur_kernel_row_contract_gate.py"
+    },
+    "yt_schur_kprime_row_absence_guard_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 2,
+        "B": 3,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_schur_kprime_row_absence_guard.py"
+    },
+    "yt_schur_row_candidate_extraction_attempt_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_schur_row_candidate_extraction_attempt.py"
     },
     "yt_schur_stability_gap_note": {
       "assert_count": 0,
@@ -14881,6 +16993,234 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_schur_stability_gap.py"
     },
+    "yt_short_distance_ope_lsz_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_short_distance_ope_lsz_no_go.py"
+    },
+    "yt_source_functional_lsz_identifiability_theorem_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_source_functional_lsz_identifiability_theorem.py"
+    },
+    "yt_source_higgs_cross_correlator_certificate_builder_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_source_higgs_cross_correlator_certificate_builder.py"
+    },
+    "yt_source_higgs_cross_correlator_harness_extension_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_source_higgs_cross_correlator_harness_extension.py"
+    },
+    "yt_source_higgs_cross_correlator_import_audit_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 6,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_source_higgs_cross_correlator_import_audit.py"
+    },
+    "yt_source_higgs_cross_correlator_manifest_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_source_higgs_cross_correlator_manifest.py"
+    },
+    "yt_source_higgs_gram_purity_contract_witness_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py"
+    },
+    "yt_source_higgs_gram_purity_gate_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_source_higgs_gram_purity_gate.py"
+    },
+    "yt_source_higgs_gram_purity_postprocessor_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py"
+    },
+    "yt_source_higgs_harness_absence_guard_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_source_higgs_harness_absence_guard.py"
+    },
+    "yt_source_higgs_kappa_residue_obstruction_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_source_higgs_kappa_residue_obstruction.py"
+    },
+    "yt_source_higgs_legendre_ssb_bridge_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_source_higgs_legendre_ssb_bridge.py"
+    },
+    "yt_source_higgs_pole_residue_extractor_note_2026-05-03": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 7,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_source_higgs_pole_residue_extractor.py"
+    },
+    "yt_source_higgs_production_readiness_gate_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_source_higgs_production_readiness_gate.py"
+    },
+    "yt_source_overlap_spectral_sum_rule_no_go_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_source_overlap_sum_rule_no_go.py"
+    },
+    "yt_source_pole_canonical_higgs_mixing_obstruction_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_source_pole_canonical_higgs_mixing_obstruction.py"
+    },
+    "yt_source_pole_purity_cross_correlator_gate_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_source_pole_purity_cross_correlator_gate.py"
+    },
+    "yt_source_reparametrization_gauge_no_go_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_source_reparametrization_gauge_no_go.py"
+    },
+    "yt_source_to_higgs_lsz_closure_attempt_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 11
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_source_to_higgs_lsz_closure_attempt.py"
+    },
     "yt_ssb_matching_gap_analysis_note_2026-04-18": {
       "assert_count": 0,
       "counts": {
@@ -14892,6 +17232,54 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_ssb_matching_gap.py"
+    },
+    "yt_static_mass_matching_obstruction_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_static_mass_matching_obstruction.py"
+    },
+    "yt_taste_carrier_import_audit_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_taste_carrier_import_audit.py"
+    },
+    "yt_taste_corner_ladder_pole_obstruction_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_taste_corner_ladder_pole_obstruction.py"
+    },
+    "yt_taste_singlet_ladder_normalization_boundary_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_taste_singlet_ladder_normalization_boundary.py"
     },
     "yt_top_mass_cutoff_obstruction_note_2026-05-01": {
       "assert_count": 1,
@@ -14989,6 +17377,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_top_mass_ward_decomp_no_go.py"
     },
+    "yt_top_wz_matched_covariance_certificate_builder_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_top_wz_matched_covariance_certificate_builder.py"
+    },
     "yt_trace_anomaly_stationarity_no_go_note_2026-05-01": {
       "assert_count": 1,
       "counts": {
@@ -15000,6 +17400,18 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_trace_anomaly_stationarity_no_go.py"
+    },
+    "yt_unit_projector_pole_threshold_obstruction_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_unit_projector_pole_threshold_obstruction.py"
     },
     "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17": {
       "assert_count": 1,
@@ -15049,6 +17461,30 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_ward_identity_derivation.py"
     },
+    "yt_ward_operator_matching_candidate_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_ward_operator_matching_candidate.py"
+    },
+    "yt_ward_physical_readout_repair_audit_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
+    },
     "yt_ward_ratio_stationarity_no_go_note_2026-05-01": {
       "assert_count": 1,
       "counts": {
@@ -15060,6 +17496,114 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_ward_ratio_stationarity_no_go.py"
+    },
+    "yt_wz_correlator_mass_fit_path_gate_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 5,
+        "C": 6,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py"
+    },
+    "yt_wz_mass_fit_response_row_builder_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 9,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_wz_mass_fit_response_row_builder.py"
+    },
+    "yt_wz_response_harness_absence_guard_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_wz_response_harness_absence_guard.py"
+    },
+    "yt_wz_response_harness_implementation_plan_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_wz_response_harness_implementation_plan.py"
+    },
+    "yt_wz_response_measurement_row_contract_gate_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 6,
+        "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_wz_response_measurement_row_contract_gate.py"
+    },
+    "yt_wz_response_repo_harness_import_audit_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_wz_response_repo_harness_import_audit.py"
+    },
+    "yt_wz_response_row_production_attempt_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 6,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_wz_response_row_production_attempt.py"
+    },
+    "yt_wz_same_source_ew_action_certificate_builder_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 4,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_wz_same_source_ew_action_certificate_builder.py"
+    },
+    "yt_wz_same_source_ew_action_gate_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 9,
+        "C": 3,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_wz_same_source_ew_action_gate.py"
     },
     "yt_zero_import_authority_note": {
       "assert_count": 0,
@@ -15084,6 +17628,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_zero_import_chain.py"
+    },
+    "yt_zero_mode_prescription_import_audit_note_2026-05-01": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_zero_mode_prescription_import_audit.py"
     },
     "yukawa_color_projection_theorem": {
       "assert_count": 0,
@@ -28217,6 +30773,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_bridge_stack_import_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_bridge_stack_import_audit_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 10,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_bridge_uv_class_uniqueness.py": {
       "assert_count": 0,
       "claims": [
@@ -28245,6 +30816,126 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_brst_nielsen_higgs_identity_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_brst_nielsen_higgs_identity_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_canonical_higgs_operator_certificate_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 4,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_canonical_higgs_operator_realization_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_canonical_higgs_operator_realization_gate_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_canonical_higgs_repo_authority_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_canonical_higgs_repo_authority_audit_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_canonical_scalar_normalization_import_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_canonical_scalar_normalization_import_audit_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_chirality_selector_bridge.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_chirality_selector_bridge_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_cl3_automorphism_source_identity_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_cl3_automorphism_source_identity_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_cl3_source_unit_normalization_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_cl3_source_unit_normalization_no_go_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_yt_class_3_susy_2hdm.py": {
@@ -28323,6 +31014,96 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_color_singlet_finite_q_ir_regular.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_color_singlet_finite_q_ir_regular_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_color_singlet_zero_mode_cancellation.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_color_singlet_zero_mode_cancellation_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_color_singlet_zero_mode_removed_ladder_pole_search.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_color_singlet_zero_mode_removed_ladder_pole_search_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_common_dressing_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_common_dressing_obstruction_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 7,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_complete_source_spectrum_identity_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_complete_source_spectrum_identity_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_confinement_gap_threshold_import_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_confinement_gap_threshold_import_audit_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_constructive_uv_bridge.py": {
       "assert_count": 0,
       "claims": [
@@ -28338,6 +31119,36 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_yt_d17_source_pole_identity_closure_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_d17_source_pole_identity_closure_attempt_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_delta_perp_tomography_correction_builder.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_delta_perp_tomography_correction_builder_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 4,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_direct_lattice_correlator.py": {
       "assert_count": 4,
       "claims": [
@@ -28348,6 +31159,51 @@
         "B": 0,
         "C": 6,
         "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_direct_measurement_scale_requirements.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_direct_measurement_scale_requirements_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_effective_mass_plateau_residue_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_effective_mass_plateau_residue_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_effective_potential_hessian_source_overlap_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_effective_potential_hessian_source_overlap_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -28474,6 +31330,989 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_yt_feshbach_operator_response_boundary.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_feshbach_operator_response_boundary_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 5,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_feynman_hellmann_source_response_route.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_feynman_hellmann_source_response_route_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_gauge_mass_response_certificate_builder.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_gauge_mass_response_certificate_builder_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 4,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_gauge_mass_response_manifest.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_gauge_mass_response_manifest_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_gauge_mass_response_observable_gap.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_gauge_mass_response_observable_gap_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_gauge_normalized_response_route.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_gauge_normalized_response_route_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_gauge_response_mixed_scalar_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_gauge_response_mixed_scalar_obstruction_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 17
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_autocorrelation_ess_gate_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 18,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_chunk001_checkpoint_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_chunk001_production_checkpoint_note_2026-05-02",
+        "yt_fh_lsz_chunk001_target_timeseries_rerun_checkpoint_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_chunk002_checkpoint_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_chunk002_production_checkpoint_note_2026-05-02",
+        "yt_fh_lsz_chunk002_target_timeseries_rerun_checkpoint_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_chunk011_target_timeseries_checkpoint_note_2026-05-02",
+        "yt_fh_lsz_chunk_combiner_gate_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 5,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_chunk003_target_timeseries_rerun_checkpoint_note_2026-05-03",
+        "yt_fh_lsz_chunk004_target_timeseries_rerun_checkpoint_note_2026-05-03",
+        "yt_fh_lsz_chunk012_target_timeseries_checkpoint_note_2026-05-02",
+        "yt_fh_lsz_chunk_target_timeseries_generic_checkpoint_note_2026-05-02",
+        "yt_fh_lsz_chunks013_016_target_ess_wave_checkpoint_note_2026-05-03",
+        "yt_fh_lsz_selected_mass_replacement_wave_checkpoint_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py": {
+      "assert_count": 0,
+      "claims": [
+        "yt_fh_lsz_chunk_wave_orchestrator_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_chunked_production_manifest.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_chunked_production_manifest_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_common_window_pooled_response_estimator.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_common_window_pooled_response_estimator_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_common_window_replacement_response_stability.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_common_window_replacement_response_stability_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_common_window_response_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_common_window_response_gate_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_common_window_response_provenance.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_common_window_response_provenance_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_eight_mode_noise_variance_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_eight_mode_noise_variance_gate_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_finite_shell_identifiability_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_finite_shell_identifiability_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_finite_source_linearity_calibration_checkpoint.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_finite_source_linearity_calibration_checkpoint_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_finite_source_linearity_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_finite_source_linearity_gate_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_finite_volume_pole_saturation_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_finite_volume_pole_saturation_obstruction_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_global_production_collision_guard.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_global_production_collision_guard_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_higgs_pole_identity_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_higgs_pole_identity_gate_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_invariant_readout_theorem.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_invariant_readout_theorem_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_joint_harness_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_joint_harness_certificate_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_joint_resource_projection.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_joint_resource_projection_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_legacy_v2_backfill_feasibility.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_legacy_v2_backfill_feasibility_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_multitau_target_timeseries_harness_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_multitau_target_timeseries_harness_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_noise_subsample_diagnostics_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_noise_subsample_diagnostics_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_paired_variance_calibration_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_paired_variance_calibration_gate_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_paired_variance_calibration_orchestrator.py": {
+      "assert_count": 0,
+      "claims": [
+        "yt_fh_lsz_paired_variance_calibration_orchestrator_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_pole_fit_kinematics_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_pole_fit_kinematics_gate_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_pole_fit_mode_budget.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_pole_fit_mode_budget_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_pole_fit_model_class_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_pole_fit_model_class_gate_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_pole_fit_postprocessor.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_pole_fit_postprocessor_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_pole_saturation_threshold_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_pole_saturation_threshold_gate_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_polefit8x8_chunk_manifest.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_production_checkpoint_granularity_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_production_checkpoint_granularity_gate_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_production_manifest.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_production_manifest_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_production_postprocess_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_production_postprocess_gate_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_ready_chunk_response_stability_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_ready_chunk_set_checkpoint_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_response_window_acceptance_gate_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_response_window_forensics.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_response_window_forensics_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_selected_mass_normal_cache_speedup_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_selected_mass_normal_cache_speedup_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_soft_continuum_threshold_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_soft_continuum_threshold_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_stieltjes_model_class_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_stieltjes_model_class_obstruction_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_target_observable_ess_certificate_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_target_timeseries_harness_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_target_timeseries_harness_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_target_timeseries_higgs_identity_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_target_timeseries_higgs_identity_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_target_timeseries_replacement_queue_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_threshold_authority_import_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_threshold_authority_import_audit_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_uniform_gap_self_certification_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_uniform_gap_self_certification_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_v2_target_response_stability.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_v2_target_response_stability_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_variance_calibration_manifest.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_variance_calibration_manifest_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_production_protocol_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_production_protocol_certificate_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 2,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
+    "scripts/frontier_yt_finite_source_shift_derivative_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_finite_source_shift_derivative_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fitted_kernel_residue_selector_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fitted_kernel_residue_selector_no_go_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_flat_toron_scalar_denominator_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_flat_toron_scalar_denominator_obstruction_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 11,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_flat_toron_thermodynamic_washout.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_flat_toron_thermodynamic_washout_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fms_oh_certificate_construction_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fms_oh_certificate_construction_attempt_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_free_scalar_two_point_pole_absence.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_free_scalar_two_point_pole_absence_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_free_staggered_kinetic_coefficient.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_free_staggered_kinetic_coefficient_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_gauge_crossover_theorem.py": {
       "assert_count": 0,
       "claims": [
@@ -28487,6 +32326,36 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_gauge_perron_to_neutral_scalar_rank_one_import_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_gauge_perron_to_neutral_scalar_rank_one_import_audit_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 14,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_gauge_vev_source_overlap_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_gauge_vev_source_overlap_no_go_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_yt_generation_hierarchy_primitive.py": {
@@ -28519,6 +32388,96 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_heavy_kinetic_mass_route.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_heavy_kinetic_mass_route_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_heavy_kinetic_matching_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_heavy_kinetic_matching_obstruction_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 15
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_higgs_pole_identity_latest_blocker_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_higgs_pole_identity_latest_blocker_certificate_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 11
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_hqet_direct_route_requirements.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_hqet_direct_route_requirements_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_hs_rpa_pole_condition_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_hs_rpa_pole_condition_attempt_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_hunit_canonical_higgs_operator_candidate_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_hunit_canonical_higgs_operator_candidate_gate_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_interacting_bridge_locality.py": {
       "assert_count": 0,
       "claims": [
@@ -28534,6 +32493,141 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_yt_interacting_kinetic_background_sensitivity.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_interacting_kinetic_background_sensitivity_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_isolated_pole_gram_factorization_theorem.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_isolated_pole_gram_factorization_theorem_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_key_blocker_closure_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_key_blocker_closure_attempt_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_kprime_closure_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_kprime_closure_attempt_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_large_nc_pole_dominance_boundary.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_large_nc_pole_dominance_boundary_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_legacy_schur_bridge_import_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_legacy_schur_bridge_import_audit_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_legendre_kappa_gauge_freedom.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_legendre_kappa_gauge_freedom_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_legendre_source_pole_operator_construction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_legendre_source_pole_operator_construction_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_mass_response_bracket_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_mass_response_bracket_certificate_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_microscopic_schur_class_admissibility.py": {
       "assert_count": 0,
       "claims": [
@@ -28544,6 +32638,171 @@
         "B": 0,
         "C": 16,
         "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_momentum_pilot_scaling_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_momentum_pilot_scaling_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_neutral_scalar_commutant_rank_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_neutral_scalar_commutant_rank_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_neutral_scalar_dynamical_rank_one_closure_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_neutral_scalar_dynamical_rank_one_closure_attempt_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_neutral_scalar_irreducibility_authority_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_neutral_scalar_irreducibility_authority_audit_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_neutral_scalar_positivity_improving_direct_closure_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_neutral_scalar_positivity_improving_direct_closure_attempt_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_neutral_scalar_rank_one_purity_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_neutral_scalar_rank_one_purity_gate_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_neutral_scalar_top_coupling_tomography_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_neutral_scalar_top_coupling_tomography_gate_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_no_orthogonal_top_coupling_import_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_no_orthogonal_top_coupling_import_audit_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 1,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_no_orthogonal_top_coupling_selection_rule_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_no_orthogonal_top_coupling_selection_rule_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_non_source_response_rank_repair_sufficiency.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_non_source_response_rank_repair_sufficiency_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_nonzero_momentum_correlator_scout.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_nonzero_momentum_correlator_scout_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 1
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -28562,6 +32821,81 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_one_higgs_completeness_orthogonal_null_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_one_higgs_completeness_orthogonal_null_gate_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_orthogonal_neutral_decoupling_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_orthogonal_neutral_decoupling_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_osp_oh_assumption_route_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_osp_oh_assumption_route_audit_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_osp_oh_identity_stretch_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_osp_oh_identity_stretch_attempt_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 2,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_osp_oh_literature_bridge.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_osp_oh_literature_bridge_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_yt_p1_bz_quadrature_2_loop_full_staggered_pt.py": {
@@ -28984,6 +33318,81 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_yt_positivity_improving_neutral_scalar_rank_one_support.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_positivity_improving_neutral_scalar_rank_one_support_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_assumption_import_stress.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_assumption_import_stress_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 3,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_campaign_status_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_campaign_status_certificate_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_global_proof_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_global_yt_proof_audit_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_matching_running_bridge_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_matching_running_bridge_gate_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_physics_loop_assumption_audit.py": {
       "assert_count": 1,
       "claims": [
@@ -29007,6 +33416,36 @@
       "counts": {
         "A": 0,
         "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_source_overlap_route_selection.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_source_overlap_route_selection_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_production_resource_projection.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_production_resource_projection_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
         "C": 0,
         "D": 0
       },
@@ -29044,6 +33483,37 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_yt_reflection_positivity_lsz_shortcut_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_reflection_positivity_lsz_shortcut_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_retained_closure_route_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_generic_chunk_discovery_checkpoint_note_2026-05-02",
+        "yt_retained_closure_route_certificate_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 5,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_rge_only_selector_no_go.py": {
       "assert_count": 1,
       "claims": [
@@ -29074,6 +33544,546 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_same_1pi_scalar_pole_boundary.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_same_1pi_scalar_pole_boundary_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_same_source_pole_data_sufficiency_gate_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_same_source_scalar_two_point_lsz_measurement.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_same_source_scalar_two_point_lsz_measurement_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_same_source_sector_overlap_identity_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_same_source_sector_overlap_identity_obstruction_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_same_source_top_response_certificate_builder.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_same_source_top_response_certificate_builder_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_same_source_top_response_identity_certificate_builder.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_same_source_top_response_identity_certificate_builder_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_same_source_w_response_decomposition_theorem.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_same_source_w_response_decomposition_theorem_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_same_source_w_response_lightweight_readout_harness.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_same_source_w_response_lightweight_readout_harness_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_same_source_w_response_row_builder.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_same_source_w_response_row_builder_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 9,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_same_source_wz_response_certificate_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_same_source_wz_response_certificate_gate_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_bs_kernel_residue_degeneracy.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_bs_kernel_residue_degeneracy_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_carrier_projector_closure_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_carrier_projector_closure_attempt_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_denominator_theorem_closure_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_denominator_theorem_closure_attempt_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_kernel_enhancement_import_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_kernel_enhancement_import_audit_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_kernel_ward_identity_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_kernel_ward_identity_obstruction_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_ladder_derivative_limit_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_ladder_derivative_limit_obstruction_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_ladder_eigen_derivative_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_ladder_eigen_derivative_gate_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_ladder_ir_zero_mode_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_ladder_ir_zero_mode_obstruction_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_ladder_kernel_input_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_ladder_kernel_input_audit_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_ladder_kernel_scout.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_ladder_kernel_scout_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_ladder_projector_normalization_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_ladder_projector_normalization_obstruction_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_ladder_residue_envelope_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_ladder_residue_envelope_obstruction_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_ladder_total_momentum_derivative_scout.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_ladder_total_momentum_derivative_scout_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_lsz_normalization_cancellation.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_lsz_normalization_cancellation_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_lsz_residue_bridge.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_lsz_residue_bridge_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_pole_determinant_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_pole_determinant_gate_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_pole_residue_current_surface_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_pole_residue_current_surface_no_go_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_renormalization_condition_overlap_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_renormalization_condition_overlap_no_go_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_residue_stuck_fanout.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_residue_stuck_fanout_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_source_contact_term_scheme_boundary.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_source_contact_term_scheme_boundary_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_source_response_harness_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_source_response_harness_extension_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_source_two_point_stretch.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_source_two_point_stretch_attempt_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 4,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_spectral_saturation_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_spectral_saturation_no_go_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_taste_projector_normalization_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_taste_projector_normalization_attempt_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_two_point_harness_certificate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_two_point_harness_extension_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_scalar_zero_mode_limit_order_theorem.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_scalar_zero_mode_limit_order_theorem_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_scale_stationarity_substrate_no_go.py": {
       "assert_count": 1,
       "claims": [
@@ -29086,6 +34096,66 @@
         "D": 0
       },
       "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_schur_complement_kprime_sufficiency.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_schur_complement_kprime_sufficiency_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_schur_kernel_row_contract_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_schur_kernel_row_contract_gate_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_schur_kprime_row_absence_guard.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_schur_kprime_row_absence_guard_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 2,
+        "B": 3,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_schur_row_candidate_extraction_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_schur_row_candidate_extraction_attempt_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
       "dominant_class": "B",
       "exists": true
     },
@@ -29104,6 +34174,291 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_short_distance_ope_lsz_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_short_distance_ope_lsz_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_functional_lsz_identifiability_theorem.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_functional_lsz_identifiability_theorem_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_higgs_cross_correlator_certificate_builder.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_higgs_cross_correlator_certificate_builder_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_higgs_cross_correlator_harness_extension.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_higgs_cross_correlator_harness_extension_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_higgs_cross_correlator_import_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_higgs_cross_correlator_import_audit_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 6,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_higgs_cross_correlator_manifest.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_higgs_cross_correlator_manifest_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_higgs_gram_purity_contract_witness_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_higgs_gram_purity_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_higgs_gram_purity_gate_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_higgs_gram_purity_postprocessor_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_higgs_harness_absence_guard.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_higgs_harness_absence_guard_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_higgs_kappa_residue_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_higgs_kappa_residue_obstruction_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_higgs_legendre_ssb_bridge.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_higgs_legendre_ssb_bridge_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_higgs_pole_residue_extractor.py": {
+      "assert_count": 2,
+      "claims": [
+        "yt_source_higgs_pole_residue_extractor_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 7,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_higgs_production_readiness_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_higgs_production_readiness_gate_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_overlap_sum_rule_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_overlap_spectral_sum_rule_no_go_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_pole_canonical_higgs_mixing_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_pole_canonical_higgs_mixing_obstruction_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_pole_purity_cross_correlator_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_pole_purity_cross_correlator_gate_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_reparametrization_gauge_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_reparametrization_gauge_no_go_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_source_to_higgs_lsz_closure_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_to_higgs_lsz_closure_attempt_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 11
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_ssb_matching_gap.py": {
       "assert_count": 0,
       "claims": [
@@ -29116,6 +34471,66 @@
         "D": 0
       },
       "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_static_mass_matching_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_static_mass_matching_obstruction_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_taste_carrier_import_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_taste_carrier_import_audit_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_taste_corner_ladder_pole_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_taste_corner_ladder_pole_obstruction_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_taste_singlet_ladder_normalization_boundary.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_taste_singlet_ladder_normalization_boundary_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
       "dominant_class": "B",
       "exists": true
     },
@@ -29169,6 +34584,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_top_wz_matched_covariance_certificate_builder.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_top_wz_matched_covariance_certificate_builder_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_trace_anomaly_stationarity_no_go.py": {
       "assert_count": 1,
       "claims": [
@@ -29182,6 +34612,21 @@
       },
       "decoration_candidate": true,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_unit_projector_pole_threshold_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_unit_projector_pole_threshold_obstruction_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_yt_uv_to_ir_transport_obstruction.py": {
@@ -29231,6 +34676,36 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_ward_operator_matching_candidate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_ward_operator_matching_candidate_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_ward_physical_readout_repair_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_ward_physical_readout_repair_audit_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_ward_ratio_stationarity_no_go.py": {
       "assert_count": 1,
       "claims": [
@@ -29241,6 +34716,141 @@
         "B": 2,
         "C": 0,
         "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_wz_correlator_mass_fit_path_gate_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 5,
+        "C": 6,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_wz_mass_fit_response_row_builder.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_wz_mass_fit_response_row_builder_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 9,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_wz_response_harness_absence_guard.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_wz_response_harness_absence_guard_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_wz_response_harness_implementation_plan.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_wz_response_harness_implementation_plan_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_wz_response_measurement_row_contract_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_wz_response_measurement_row_contract_gate_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 6,
+        "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_wz_response_repo_harness_import_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_wz_response_repo_harness_import_audit_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_wz_response_row_production_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_wz_response_row_production_attempt_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 6,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_wz_same_source_ew_action_certificate_builder.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_wz_same_source_ew_action_certificate_builder_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 4,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_wz_same_source_ew_action_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_wz_same_source_ew_action_gate_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 9,
+        "C": 3,
+        "D": 2
       },
       "decoration_candidate": false,
       "dominant_class": "B",
@@ -29260,6 +34870,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_zero_mode_prescription_import_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_zero_mode_prescription_import_audit_note_2026-05-01"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_z2_hw1_mass_matrix_parametrization.py": {
@@ -32795,16 +38420,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 89,
+    "decoration_candidates": 94,
     "dominant_class_distribution": {
-      "A": 7,
-      "B": 129,
-      "C": 445,
-      "D": 188,
+      "A": 8,
+      "B": 198,
+      "C": 486,
+      "D": 281,
       "none": 404
     },
-    "runners_classified": 1173,
-    "runners_with_C": 537,
-    "runners_with_D": 292
+    "runners_classified": 1377,
+    "runners_with_C": 707,
+    "runners_with_D": 485
   }
 }

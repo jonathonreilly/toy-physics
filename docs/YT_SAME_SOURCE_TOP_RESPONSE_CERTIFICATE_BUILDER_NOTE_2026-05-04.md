@@ -1,7 +1,6 @@
 # YT Same-Source Top-Response Certificate Builder Note
 
-Status: open / top-response certificate adapter contract, not retained and not
-proposed_retained.
+Status: open / top-response certificate adapter contract; proposal_allowed=false.
 
 This note records the missing top-side certificate needed by the PR #230
 same-source W/Z response route.  The repo already has bounded support for the
@@ -55,6 +54,12 @@ The identity certificate is now assigned to
 `frontier_yt_same_source_top_response_identity_certificate_builder.py`.  Its
 current mode remains open until sector-overlap, canonical-Higgs pole identity,
 one accepted identity route, and retained-route authorization exist.
+
+The matched covariance certificate is now assigned to
+`frontier_yt_top_wz_matched_covariance_certificate_builder.py`.  Its current
+mode remains open until a future
+`outputs/yt_top_wz_matched_response_rows_2026-05-04.json` file supplies paired
+top and W/Z source-response rows on the same configuration set.
 
 ## Current Result
 
