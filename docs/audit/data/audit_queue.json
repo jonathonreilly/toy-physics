@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 582,
+    "critical": 581,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -3039,27 +3039,6 @@
       "ready": true,
       "runner_path": "scripts/persistent_object_top4_multistage_transfer_sweep.py",
       "transitive_descendants": 288
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "self_consistency_forces_poisson_note",
-      "claim_scope": "On the provided Dirichlet 3D cubic lattice runs at N=20 and N=24, for the finite tested operator family, unscreened Poisson is the best-supported operator relative to an attractive monotone near-1/r target.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 8,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 12.16,
-      "note_path": "docs/SELF_CONSISTENCY_FORCES_POISSON_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_self_consistent_field_equation.py",
-      "transitive_descendants": 285
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -27088,6 +27067,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 62,
-  "total_pending": 920
+  "ready_count": 61,
+  "total_pending": 919
 }

@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 50 |
 | **retained_no_go** | 110 |
-| **retained_bounded** | 199 |
+| **retained_bounded** | 200 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 872 |
-| audit_in_progress | 30 |
+| audit_in_progress | 29 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 30 |
-| `audited_clean` | 333 |
+| `audit_in_progress` | 29 |
+| `audited_clean` | 334 |
 | `audited_conditional` | 386 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -131,7 +131,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `pmns_transfer_operator_dominant_mode_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `s3_boundary_link_theorem_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `self_consistency_forces_poisson_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `tensor_block_closure_test_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `three_generation_observable_count_corollary_note_2026-05-03` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `wave_equation_gravity_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -357,6 +356,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_3plus1_temporal_ratio_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `scalar_kg_rerun_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `schur_covariance_inheritance_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `self_consistency_forces_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `self_consistency_structured_null_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `self_gravity_backreaction_closure_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
 | `self_gravity_born_hardening_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -9584,6 +9584,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — The restricted packet contains only the note's assertion of the sweep result. It provides no runner output, runner source, cached certificate, or independent derivation establishing the 15/15 pass count and exponent statistic.
 - **rationale:** Issue: The bounded claim rests on a reported C-type finite computation, but no executable runner, source, stdout, or certificate is included. Why this blocks: the auditor cannot verify that the sweep instantiated the stated geometry, controls, sign tests, and weak-charge scaling rather than merely reporting them. Repair target: provide the runner source and completed output, or an independent derivation/certificate for the listed rows. Claim boundary until fixed: the note may be treated as an unsupported report of a bounded positive sweep, not an audited closure result.
 - **auditor confidence:** high
+
+### `self_consistency_forces_poisson_note`
+
+- **Note:** [`SELF_CONSISTENCY_FORCES_POISSON_NOTE.md`](../../docs/SELF_CONSISTENCY_FORCES_POISSON_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite numerical operator-preference result for the tested 3D Dirichlet cubic-lattice self-consistent field setup: Poisson versus the runner's biharmonic, inverse-r-squared, local, random-kernel, and screened-Poisson alternatives.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-self_consistency_forces_poisson_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** On this 3D cubic lattice with nearest-neighbor coupling, unscreened Poisson is the best-supported operator in the tested family and the only tested one that stays close to the Newtonian target.  _(class `C`)_
+- **chain closes:** True — The source note explicitly bounds the result to the tested operator family and lattice surface, and the cached runner output supports the stated convergence, attractiveness, beta, susceptibility-correlation, and screened-sweep claims. The chain does not close for full uniqueness over all local or nonlocal operators, but the note disclaims that broader theorem.
+- **rationale:** The runner constructs the lattice Laplacian and alternative solvers, performs self-consistent propagation/field iteration, and reports completed finite-grid comparisons matching the note's bounded claims. The note's stronger rhetorical language is caveated back to a tested-family preference, and the audited scope is limited to that bounded result. Residual risk is that the susceptibility-to-Green-function interpretation remains supportive evidence rather than a general uniqueness proof.
+- **auditor confidence:** medium
 
 ### `self_consistency_structured_null_note_2026-04-11`
 
