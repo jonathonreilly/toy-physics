@@ -163,6 +163,13 @@ After cycle 16 found no admissible reopen source, the refreshed non-chunk queue
 has no executable current-surface route on this branch.  The assembly gate
 remains open with `PASS=57 FAIL=0`.
 
+2026-05-05 cycle-18 reopen-freshness update: the gate now also consumes
+`outputs/yt_pr230_nonchunk_cycle18_reopen_freshness_gate_2026-05-05.json`.
+After the cycle-17 stop condition, no listed same-surface row, certificate, or
+theorem is present for admissible reopen, and the remote PR branch remains
+aligned with the cycle-17 head.  The assembly gate remains open with
+`PASS=58 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 
@@ -202,4 +209,5 @@ covariance control, Schur `A/B/C` kernel rows, neutral-sector primitive-cone
 irreducibility, or scalar-LSZ moment/threshold/FV authority.  A path alone is
 not enough; the candidate must pass the reopen-admissibility gate first.  Then
 rerun the worklist, exhaustion, intake, independent-route, cycle-16, cycle-17,
-assembly, retained-route, and campaign gates before any proposal language.
+cycle-18, assembly, retained-route, and campaign gates before any proposal
+language.

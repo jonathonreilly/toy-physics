@@ -184,6 +184,9 @@ def main() -> int:
         "pr230_nonchunk_cycle17_stop_condition_gate": load(
             "outputs/yt_pr230_nonchunk_cycle17_stop_condition_gate_2026-05-05.json"
         ),
+        "pr230_nonchunk_cycle18_reopen_freshness_gate": load(
+            "outputs/yt_pr230_nonchunk_cycle18_reopen_freshness_gate_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -2515,6 +2518,24 @@ def main() -> int:
         is False,
         statuses["pr230_nonchunk_cycle17_stop_condition_gate"],
     )
+    report(
+        "pr230-nonchunk-cycle18-reopen-freshness-gate-recorded",
+        "cycle-18 reopen-freshness gate"
+        in str(statuses["pr230_nonchunk_cycle18_reopen_freshness_gate"])
+        and certificates["pr230_nonchunk_cycle18_reopen_freshness_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_cycle18_reopen_freshness_gate"].get(
+            "reopen_freshness_gate_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_cycle18_reopen_freshness_gate"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False,
+        statuses["pr230_nonchunk_cycle18_reopen_freshness_gate"],
+    )
 
     remaining_routes = [
         {
@@ -2834,7 +2855,9 @@ def main() -> int:
             "independent-route admission gate records that no independent "
             "current route is admitted without a new same-surface artifact.  "
             "The cycle-16 reopen-source guard records that the post-checkpoint "
-            "surface has no admissible same-surface artifact to consume."
+            "surface has no admissible same-surface artifact to consume.  The "
+            "cycle-18 reopen-freshness gate records that no post-cycle-17 "
+            "same-surface artifact is present for admissible reopen."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
@@ -2864,7 +2887,9 @@ def main() -> int:
         "reopen-source guard records that no post-checkpoint same-surface "
         "artifact is present for admissible reopen.  The cycle-17 stop-condition "
         "gate records that the refreshed non-chunk queue has no executable "
-        "current-surface route on this branch."
+        "current-surface route on this branch.  The cycle-18 reopen-freshness "
+        "gate records that no post-cycle-17 same-surface artifact is present "
+        "for admissible reopen."
     )
     result["strict_non_claims"] = [
         "does not claim retained closure",

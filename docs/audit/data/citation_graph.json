@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T08:22:50.705732+00:00",
+  "generated_at": "2026-05-05T08:36:34.989767+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41933,7 +41933,7 @@
       "current_status": "open",
       "current_status_raw": "open / active campaign continuing after current shortcut blocks",
       "deps": [],
-      "note_hash": "67d70197107c534e1216690bb77c12e8ae1599a3c7e61ab4c31dbe661d1ada2c",
+      "note_hash": "31fbec7632eb8d0724969d17f30fee16ca4d9febe53f75a083ff18b7765071e7",
       "path": "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
@@ -41943,7 +41943,7 @@
       "current_status": "open",
       "current_status_raw": "open / assembly gate; proposal_allowed=false.",
       "deps": [],
-      "note_hash": "6dceb3750aaa012ff5dfd80b65196c585a8787b5427bbd2ee22f63b5fc5390f5",
+      "note_hash": "3fc001cb55f2537b49015072f723b0e792375f3bac5d562d76200f818cef928e",
       "path": "docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md",
       "runner_path": null,
       "title": "PR230 Full Positive Closure Assembly Gate Note"
@@ -42027,6 +42027,16 @@
       "path": "docs/YT_PR230_NONCHUNK_CYCLE17_STOP_CONDITION_GATE_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_nonchunk_cycle17_stop_condition_gate.py",
       "title": "PR230 Non-Chunk Cycle-17 Stop-Condition Gate"
+    },
+    "yt_pr230_nonchunk_cycle18_reopen_freshness_gate_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle18_reopen_freshness_gate_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary",
+      "deps": [],
+      "note_hash": "e91efc3b79181fd1894d61b4af18099246d913efa5e74cc50b7dab4f59683a05",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE18_REOPEN_FRESHNESS_GATE_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_nonchunk_cycle18_reopen_freshness_gate.py",
+      "title": "PR230 Non-Chunk Cycle-18 Reopen-Freshness Gate"
     },
     "yt_pr230_nonchunk_future_artifact_intake_gate_note_2026-05-05": {
       "claim_id": "yt_pr230_nonchunk_future_artifact_intake_gate_note_2026-05-05",
@@ -42155,7 +42165,7 @@
       "current_status": "open",
       "current_status_raw": "open / closure not yet reached",
       "deps": [],
-      "note_hash": "c50b5d7672703f781feae67b889000c6da373d44ea90404c861faeb78edc72bc",
+      "note_hash": "41c50462403ef6f45384debcc9692a4813a4d748e823535d66aa207773effb2d",
       "path": "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_retained_closure_route_certificate.py",
       "title": "PR230 Top-Yukawa Retained-Closure Route Certificate"
@@ -44779,6 +44789,7 @@
     "yt_pr230_nonchunk_cycle15_independent_route_admission_gate_note_2026-05-05",
     "yt_pr230_nonchunk_cycle16_reopen_source_guard_note_2026-05-05",
     "yt_pr230_nonchunk_cycle17_stop_condition_gate_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle18_reopen_freshness_gate_note_2026-05-05",
     "yt_pr230_nonchunk_future_artifact_intake_gate_note_2026-05-05",
     "yt_pr230_nonchunk_reopen_admissibility_gate_note_2026-05-05",
     "yt_pr230_nonchunk_route_family_import_audit_note_2026-05-05",
@@ -44905,17 +44916,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1023,
-    "node_count": 1976,
-    "root_count": 1489,
-    "runners_with_path": 1489,
+    "leaf_count": 1024,
+    "node_count": 1977,
+    "root_count": 1490,
+    "runners_with_path": 1490,
     "status_counts": {
       "bounded": 549,
       "open": 101,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 428,
-      "unknown": 524
+      "unknown": 525
     }
   }
 }

@@ -172,3 +172,18 @@ stuck fanout admits no independent route, and aggregate gates still deny
 proposal authority.  No executable current-surface non-chunk queue item remains
 until a listed same-surface row, certificate, or theorem exists as a parseable
 claim-status artifact and the aggregate gates rerun.
+
+## R12: Cycle-18 Reopen-Freshness Gate
+
+After cycle 17 stops current-surface non-chunk route cycling, test whether any
+listed same-surface row, certificate, or theorem has appeared as a parseable
+claim-status artifact for admissible reopen.
+
+Status: closed negatively in
+`docs/YT_PR230_NONCHUNK_CYCLE18_REOPEN_FRESHNESS_GATE_NOTE_2026-05-05.md`.
+
+Reason: no listed reopen key or future path is present, the local and remote
+PR branches remain aligned at the cycle-17 head, all six worklist units remain
+blocked, and aggregate gates still deny proposal authority.  No route may be
+selected until a listed same-surface artifact exists and aggregate gates
+rerun.

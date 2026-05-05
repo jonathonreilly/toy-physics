@@ -161,6 +161,7 @@ def main() -> int:
         "pr230_nonchunk_cycle15_independent_route_admission": "outputs/yt_pr230_nonchunk_cycle15_independent_route_admission_gate_2026-05-05.json",
         "pr230_nonchunk_cycle16_reopen_source_guard": "outputs/yt_pr230_nonchunk_cycle16_reopen_source_guard_2026-05-05.json",
         "pr230_nonchunk_cycle17_stop_condition_gate": "outputs/yt_pr230_nonchunk_cycle17_stop_condition_gate_2026-05-05.json",
+        "pr230_nonchunk_cycle18_reopen_freshness_gate": "outputs/yt_pr230_nonchunk_cycle18_reopen_freshness_gate_2026-05-05.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
@@ -2176,6 +2177,24 @@ def main() -> int:
         ).get("passed")
         is False
     )
+    pr230_nonchunk_cycle18_reopen_freshness_blocks = (
+        "cycle-18 reopen-freshness gate"
+        in certificates["pr230_nonchunk_cycle18_reopen_freshness_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_nonchunk_cycle18_reopen_freshness_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_cycle18_reopen_freshness_gate"].get(
+            "reopen_freshness_gate_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_cycle18_reopen_freshness_gate"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
     interacting_kinetic_still_open = (
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status")
         == "bounded-support / interacting kinetic background sensitivity"
@@ -3238,6 +3257,13 @@ def main() -> int:
         ),
     )
     report(
+        "pr230-nonchunk-cycle18-reopen-freshness-blocks-reopen",
+        pr230_nonchunk_cycle18_reopen_freshness_blocks,
+        certificates["pr230_nonchunk_cycle18_reopen_freshness_gate"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "interacting-kinetic-route-still-needs-ensemble-or-theorem",
         interacting_kinetic_still_open,
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status", ""),
@@ -3609,7 +3635,9 @@ def main() -> int:
             "gate records the stop/reopen rule for further non-chunk work.  "
             "The cycle-14 through cycle-17 gates record that no current route, "
             "independent pivot, reopen source, or executable non-chunk queue "
-            "item remains on this branch."
+            "item remains on this branch.  The cycle-18 reopen-freshness gate "
+            "records that no post-cycle-17 same-surface artifact is present for "
+            "admissible reopen."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

@@ -1,5 +1,51 @@
 # Handoff
 
+## 2026-05-05 PR230 Non-Chunk Cycle-18 Reopen-Freshness Gate
+
+Cycle 18 tested the only admissible post-stop non-chunk action after the
+cycle-17 stop-condition gate: whether any listed same-surface row,
+certificate, or theorem is now present as a parseable claim-status artifact
+that can reopen the route surface.
+
+Result: exact negative boundary.  The runner reloads the worklist,
+route-family audit, current-surface exhaustion gate, future-artifact intake
+gate, terminal route-exhaustion gate, reopen-admissibility gate, cycle-14
+selector, cycle-15 independent-route admission gate, cycle-16 reopen-source
+guard, cycle-17 stop-condition gate, full assembly gate, retained-route
+certificate, and campaign certificate.  It verifies that all parents pass, no
+parent authorizes a proposal, the cycle-17 head remains on branch history, the
+local and remote PR branches are aligned at that head, the remote PR branch
+has no post-cycle-17 commit to inspect, all six worklist units remain blocked,
+every listed reopen-source key and future path remains absent, and aggregate
+gates still deny proposal authority.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_nonchunk_cycle18_reopen_freshness_gate.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=58 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=206 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=233 FAIL=0
+```
+
+Claim boundary: no closure proposal, no chunk packaging, no branch-freshness
+evidence, no new shortcut route, and no admissible reopen source remains on
+this branch.
+
+Next exact action: keep PR230 current-surface non-chunk route cycling stopped
+on this branch.  Reopen only after a listed same-surface row, certificate, or
+theorem exists as a parseable claim-status artifact; then rerun
+reopen-admissibility, worklist, exhaustion, intake, independent-route
+admission, cycle-16, cycle-17, cycle-18, assembly, retained-route, and campaign
+gates before any proposal language.
+
 ## 2026-05-05 PR230 Non-Chunk Cycle-17 Stop-Condition Gate
 
 Cycle 17 tested the stop condition inside the PR230 non-chunk scope after the

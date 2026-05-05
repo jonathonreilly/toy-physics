@@ -1,5 +1,12 @@
 # Artifact Plan
 
+Completed in the cycle-18 reopen-freshness continuation:
+
+- `scripts/frontier_yt_pr230_nonchunk_cycle18_reopen_freshness_gate.py`
+- `docs/YT_PR230_NONCHUNK_CYCLE18_REOPEN_FRESHNESS_GATE_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_cycle18_reopen_freshness_gate_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
 Completed in the cycle-17 stop-condition continuation:
 
 - `scripts/frontier_yt_pr230_nonchunk_cycle17_stop_condition_gate.py`

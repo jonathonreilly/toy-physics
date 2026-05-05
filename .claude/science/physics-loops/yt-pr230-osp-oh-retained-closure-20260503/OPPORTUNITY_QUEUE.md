@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+Cycle-18 update: the reopen-freshness gate has now checked the only admissible
+post-stop non-chunk question after cycle 17.  No listed same-surface row,
+certificate, or theorem is present for admissible reopen, the remote PR branch
+remains aligned with the cycle-17 head, all six worklist units remain blocked,
+and aggregate gates still deny proposal authority.  The non-chunk scope
+remains stopped on this branch until a listed same-surface artifact exists as a
+parseable claim-status artifact and the reopen-admissibility, worklist,
+exhaustion, intake, independent-route, cycle-16, cycle-17, cycle-18,
+assembly, retained-route, and campaign gates all rerun.
+
 Cycle-17 update: the stop-condition gate has now checked the refreshed PR230
 non-chunk queue after cycle 16 found no admissible reopen source.  All parent
 certificates pass, no parent authorizes proposal language, all six worklist

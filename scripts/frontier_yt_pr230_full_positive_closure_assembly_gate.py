@@ -93,6 +93,7 @@ PARENTS = {
     "nonchunk_cycle15_independent_route_admission": "outputs/yt_pr230_nonchunk_cycle15_independent_route_admission_gate_2026-05-05.json",
     "nonchunk_cycle16_reopen_source_guard": "outputs/yt_pr230_nonchunk_cycle16_reopen_source_guard_2026-05-05.json",
     "nonchunk_cycle17_stop_condition_gate": "outputs/yt_pr230_nonchunk_cycle17_stop_condition_gate_2026-05-05.json",
+    "nonchunk_cycle18_reopen_freshness_gate": "outputs/yt_pr230_nonchunk_cycle18_reopen_freshness_gate_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -518,6 +519,20 @@ def main() -> int:
         )
         is True
         and certs["nonchunk_cycle17_stop_condition_gate"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
+    nonchunk_cycle18_reopen_freshness_closed = (
+        "cycle-18 reopen-freshness gate"
+        in statuses["nonchunk_cycle18_reopen_freshness_gate"]
+        and certs["nonchunk_cycle18_reopen_freshness_gate"].get("proposal_allowed")
+        is False
+        and certs["nonchunk_cycle18_reopen_freshness_gate"].get(
+            "reopen_freshness_gate_passed"
+        )
+        is True
+        and certs["nonchunk_cycle18_reopen_freshness_gate"].get(
             "dramatic_step_gate", {}
         ).get("passed")
         is False
@@ -956,6 +971,11 @@ def main() -> int:
         nonchunk_cycle17_stop_condition_closed,
         statuses["nonchunk_cycle17_stop_condition_gate"],
     )
+    report(
+        "nonchunk-cycle18-reopen-freshness-gate-recorded",
+        nonchunk_cycle18_reopen_freshness_closed,
+        statuses["nonchunk_cycle18_reopen_freshness_gate"],
+    )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
@@ -989,7 +1009,9 @@ def main() -> int:
             "post-checkpoint parseable same-surface artifact exists for "
             "admissible reopen.  The cycle-17 stop-condition gate records that "
             "the refreshed non-chunk queue has no executable current-surface "
-            "route on this branch."
+            "route on this branch.  The cycle-18 reopen-freshness gate records "
+            "that no post-cycle-17 same-surface artifact is present for "
+            "admissible reopen."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
@@ -1024,6 +1046,7 @@ def main() -> int:
             "does not treat cycle-15 independent-route exhaustion as positive evidence",
             "does not treat cycle-16 reopen-source absence as positive evidence",
             "does not treat cycle-17 non-chunk stop condition as positive evidence",
+            "does not treat cycle-18 reopen freshness as positive evidence",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks.  In parallel, "
@@ -1037,7 +1060,8 @@ def main() -> int:
             "or a neutral-sector irreducibility theorem.  Rerun this assembly "
             "gate, including the cycle-15 independent-route admission gate, "
             "the cycle-16 reopen-source guard, and the cycle-17 stop-condition "
-            "gate before any retained-route proposal."
+            "gate, plus the cycle-18 reopen-freshness gate, before any "
+            "retained-route proposal."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
