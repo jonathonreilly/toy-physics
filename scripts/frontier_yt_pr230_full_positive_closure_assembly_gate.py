@@ -37,6 +37,8 @@ PARENTS = {
     "fh_lsz_stieltjes_moment_certificate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
     "fh_lsz_pade_stieltjes_bounds": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
     "fh_lsz_polefit8x8_stieltjes_proxy_diagnostic": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json",
+    "pr230_scalar_lsz_holonomic_exact_authority": "outputs/yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_2026-05-05.json",
+    "pr230_scalar_lsz_carleman_tauberian_determinacy": "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json",
     "fh_lsz_contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
     "fh_lsz_affine_contact_complete_monotonicity": "outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json",
     "fh_lsz_polynomial_contact_finite_shell": "outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json",
@@ -379,6 +381,20 @@ def main() -> int:
         is False
         and certs["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"].get(
             "stieltjes_proxy_certificate_passed"
+        )
+        is False
+        and certs["pr230_scalar_lsz_holonomic_exact_authority"].get("proposal_allowed")
+        is False
+        and certs["pr230_scalar_lsz_holonomic_exact_authority"].get(
+            "holonomic_exact_authority_passed"
+        )
+        is False
+        and certs["pr230_scalar_lsz_carleman_tauberian_determinacy"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_scalar_lsz_carleman_tauberian_determinacy"].get(
+            "carleman_tauberian_determinacy_passed"
         )
         is False
         and certs["fh_lsz_contact_subtraction_identifiability"].get("proposal_allowed")
@@ -925,6 +941,38 @@ def main() -> int:
         )
         is False,
         statuses["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"],
+    )
+    report(
+        "scalar-lsz-holonomic-exact-authority-attempt-blocks-current-finite-shell",
+        "scalar-LSZ holonomic exact-authority not derivable"
+        in statuses["pr230_scalar_lsz_holonomic_exact_authority"]
+        and certs["pr230_scalar_lsz_holonomic_exact_authority"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_scalar_lsz_holonomic_exact_authority"].get(
+            "holonomic_exact_authority_passed"
+        )
+        is False,
+        statuses["pr230_scalar_lsz_holonomic_exact_authority"],
+    )
+    report(
+        "scalar-lsz-carleman-tauberian-determinacy-attempt-blocks-current-finite-prefix",
+        "Carleman/Tauberian scalar-LSZ determinacy not derivable"
+        in statuses["pr230_scalar_lsz_carleman_tauberian_determinacy"]
+        and certs["pr230_scalar_lsz_carleman_tauberian_determinacy"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_scalar_lsz_carleman_tauberian_determinacy"].get(
+            "carleman_tauberian_determinacy_passed"
+        )
+        is False
+        and certs["pr230_scalar_lsz_carleman_tauberian_determinacy"].get(
+            "finite_prefix_stieltjes_counterfamily_passed"
+        )
+        is True,
+        statuses["pr230_scalar_lsz_carleman_tauberian_determinacy"],
     )
     report(
         "contact-subtraction-identifiability-blocks-arbitrary-subtraction",

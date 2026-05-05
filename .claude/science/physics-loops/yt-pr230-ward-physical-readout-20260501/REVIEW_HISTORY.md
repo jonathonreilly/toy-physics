@@ -5512,3 +5512,20 @@ Disposition: bounded run-control support.  The launch adds no ready chunks and
 does not count as evidence until root artifacts pass the polefit8x8
 combiner/postprocessor and aggregate gates.  No effective-retention or
 proposed-retention wording is allowed.
+
+## 2026-05-05 - Block 204 Carleman/Tauberian Scalar-LSZ Determinacy Attempt
+
+Review stance: moment-theory no-go / exact negative boundary.
+
+- Added `scripts/frontier_yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt.py`.
+- Added `docs/YT_PR230_SCALAR_LSZ_CARLEMAN_TAUBERIAN_DETERMINACY_ATTEMPT_NOTE_2026-05-05.md`.
+- Added `outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json`.
+- Wired the attempt into assumption stress, retained-route, campaign-status,
+  and full assembly gates.
+
+Disposition: exact negative boundary.  Finite positive Stieltjes moment
+prefixes can agree on all checked orders while changing the isolated pole
+residue.  Carleman determinacy and Tauberian threshold reconstruction remain
+future scalar-LSZ tools only after infinite/tail/asymptotic same-surface
+authority exists with contact, threshold, FV/IR, and pole-residue control.  No
+effective-retention or proposed-retention wording is allowed.

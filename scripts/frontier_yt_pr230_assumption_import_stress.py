@@ -68,6 +68,9 @@ def main() -> int:
         "neutral_scalar_burnside_irreducibility_attempt": load(
             "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json"
         ),
+        "scalar_lsz_carleman_tauberian_determinacy_attempt": load(
+            "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json"
+        ),
         "kinetic_matching": load("outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"),
         "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "scalar_ir": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
@@ -137,6 +140,8 @@ def main() -> int:
         "not proof selectors until O_H/C_sH/C_HH rows exist",
         "Burnside/double-commutant neutral irreducibility",
         "not proof selectors until a same-surface off-diagonal neutral generator or primitive transfer exists",
+        "Carleman/Tauberian scalar-LSZ determinacy",
+        "not proof selectors until an infinite same-surface moment/asymptotic certificate exists",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -328,6 +333,17 @@ def main() -> int:
         is False,
         burnside_attempt.get("actual_current_surface_status"),
     )
+    carleman_attempt = certificates["scalar_lsz_carleman_tauberian_determinacy_attempt"]
+    report(
+        "carleman-tauberian-attempt-does-not-certify-scalar-lsz-determinacy",
+        "Carleman/Tauberian scalar-LSZ determinacy not derivable"
+        in str(carleman_attempt.get("actual_current_surface_status"))
+        and carleman_attempt.get("proposal_allowed") is False
+        and carleman_attempt.get("carleman_tauberian_determinacy_passed") is False
+        and carleman_attempt.get("finite_prefix_stieltjes_counterfamily_passed")
+        is True,
+        carleman_attempt.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -369,7 +385,10 @@ def main() -> int:
             "the same firewall at the neutral-generator level: the current "
             "source-only generator algebra is not full and has a non-scalar "
             "commutant until a same-surface off-diagonal neutral generator or "
-            "primitive transfer exists.  No current route "
+            "primitive transfer exists.  The Carleman/Tauberian scalar-LSZ "
+            "determinacy attempt adds the same firewall for moment theory: "
+            "finite scalar shell/moment prefixes are not proof selectors until "
+            "an infinite same-surface moment/asymptotic certificate exists.  No current route "
             "certificate authorizes retained proposal wording.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."

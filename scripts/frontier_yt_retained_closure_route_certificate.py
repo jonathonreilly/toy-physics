@@ -113,6 +113,8 @@ def main() -> int:
         "fh_lsz_stieltjes_moment_certificate_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
         "fh_lsz_pade_stieltjes_bounds_gate": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
         "fh_lsz_polefit8x8_stieltjes_proxy_diagnostic": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json",
+        "pr230_scalar_lsz_holonomic_exact_authority_attempt": "outputs/yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_2026-05-05.json",
+        "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt": "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json",
         "fh_lsz_contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
         "fh_lsz_affine_contact_complete_monotonicity": "outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json",
         "fh_lsz_polynomial_contact_finite_shell": "outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json",
@@ -676,6 +678,42 @@ def main() -> int:
             "stieltjes_proxy_certificate_passed"
         )
         is False
+    )
+    scalar_lsz_holonomic_exact_authority_blocks = (
+        "scalar-LSZ holonomic exact-authority not derivable"
+        in certificates["pr230_scalar_lsz_holonomic_exact_authority_attempt"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_scalar_lsz_holonomic_exact_authority_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_scalar_lsz_holonomic_exact_authority_attempt"].get(
+            "holonomic_exact_authority_passed"
+        )
+        is False
+        and certificates["pr230_scalar_lsz_holonomic_exact_authority_attempt"]
+        .get("counterfamily", {})
+        .get("residues_differ")
+        is True
+    )
+    scalar_lsz_carleman_tauberian_determinacy_blocks = (
+        "Carleman/Tauberian scalar-LSZ determinacy not derivable"
+        in certificates[
+            "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt"
+        ].get("actual_current_surface_status", "")
+        and certificates[
+            "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt"
+        ].get("carleman_tauberian_determinacy_passed")
+        is False
+        and certificates[
+            "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt"
+        ].get("finite_prefix_stieltjes_counterfamily_passed")
+        is True
     )
     contact_subtraction_identifiability_blocks = (
         "contact-subtraction identifiability obstruction"
@@ -2835,6 +2873,20 @@ def main() -> int:
         certificates["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"].get(
             "actual_current_surface_status", ""
         ),
+    )
+    report(
+        "pr230-scalar-lsz-holonomic-exact-authority-attempt-blocks-current-finite-shell",
+        scalar_lsz_holonomic_exact_authority_blocks,
+        certificates["pr230_scalar_lsz_holonomic_exact_authority_attempt"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "pr230-scalar-lsz-carleman-tauberian-determinacy-attempt-blocks-current-finite-prefix",
+        scalar_lsz_carleman_tauberian_determinacy_blocks,
+        certificates[
+            "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt"
+        ].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-contact-subtraction-identifiability-blocks-arbitrary-subtraction",

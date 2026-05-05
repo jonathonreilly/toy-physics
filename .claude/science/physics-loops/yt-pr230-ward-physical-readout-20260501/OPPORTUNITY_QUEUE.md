@@ -1311,3 +1311,13 @@ running and no selected missing chunks.  Do not launch additional FH/LSZ
 workers while these are active.  Their logs/directories/status records are
 run-control support only and must not be counted until root artifacts pass the
 polefit8x8 combiner/postprocessor and aggregate gates.
+
+2026-05-05 update: the Carleman/Tauberian scalar-LSZ determinacy attempt is
+landed as an exact negative boundary for finite current rows.  Moment theory is
+still useful, but only after a same-surface infinite or tail-certified
+moment/asymptotic certificate exists with contact, threshold, FV/IR, and
+pole-residue authority.  The cleanest positive queue remains: certified
+`O_H/C_sH/C_HH` pole rows; same-source W/Z response rows with identity,
+covariance, and strict `g2`; genuine Schur `A/B/C` rows; a neutral
+off-diagonal generator or primitive transfer certificate; or a strict
+scalar-LSZ infinite/tail moment certificate.

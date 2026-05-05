@@ -1,0 +1,189 @@
+{
+  "actual_current_surface_status": "exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "carleman_tauberian_boundary": {
+    "carleman_condition": "sum_n m_{2n}^{-1/(2n)} = infinity",
+    "finite_prefix_can_prove_divergence": false,
+    "finite_prefix_identifies_pole_residue": false,
+    "finite_prefix_partial_sum": 0.2856268309617569,
+    "finite_shell_rows_are_threshold_asymptotic": false,
+    "lesson": "Carleman determinacy is an infinite-tail statement and Tauberian threshold reconstruction is an asymptotic statement.  The current PR230 finite shell/moment rows cannot supply either statement and cannot select a unique scalar pole residue.",
+    "tauberian_requirement": "same-surface large-order/asymptotic moment or threshold-density control with contact subtraction and FV/IR limiting order"
+  },
+  "carleman_tauberian_determinacy_passed": false,
+  "conditional_surface_status": "conditional-support if a future same-surface infinite or tail-certified scalar moment sequence supplies Carleman/equivalent determinacy, threshold/Tauberian asymptotics, contact subtraction, FV/IR limiting order, isolated-pole authority, and a positive tight residue interval",
+  "exact_next_action": "A positive scalar-LSZ moment route must supply a same-surface subtracted scalar correlator and either an infinite moment sequence or rigorous tail/asymptotic control proving Stieltjes determinacy, plus threshold, contact, FV/IR, and isolated-pole residue bounds. Otherwise the cleaner foreground remains O_H/C_sH/C_HH pole rows, same-source W/Z response rows, genuine Schur rows, or a neutral off-diagonal primitive-cone certificate.",
+  "fail_count": 0,
+  "finite_prefix_counterfamily": {
+    "all_altered_weights_positive": true,
+    "all_base_weights_positive": true,
+    "altered_pole_residue": 1.1000139173360466,
+    "altered_prefix_moments": [
+      6.020161962220786,
+      20.489831202447146,
+      76.55615805008472,
+      295.7907855497326,
+      1160.3837057610065
+    ],
+    "altered_weights": [
+      1.1000139173360466,
+      0.32970047624933385,
+      0.27378869795736416,
+      0.20618841026807702,
+      0.19412161179834417,
+      0.15387879080607386,
+      0.12802514370162155,
+      0.075
+    ],
+    "base_pole_residue": 1.1,
+    "base_prefix_moments": [
+      6.020161962220786,
+      20.489831202447146,
+      76.55615805008473,
+      295.7907855497326,
+      1160.3837057610065
+    ],
+    "base_weights": [
+      1.1,
+      0.33,
+      0.27,
+      0.22,
+      0.18,
+      0.15,
+      0.12,
+      0.1
+    ],
+    "construction": "A positive discrete Stieltjes measure with eight support atoms is perturbed along the nullspace of the moment map for orders 0..4. The checked finite prefix is unchanged while the isolated-pole atom weight changes.",
+    "epsilon": 0.03330273293044648,
+    "finite_prefix_stieltjes_counterfamily_passed": true,
+    "higher_moment_order_10_delta": 51.41914305463433,
+    "max_prefix_moment_delta": 1.4210854715202004e-14,
+    "moment_prefix_orders": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "perturbation_vector": [
+      0.00041790372206416244,
+      -0.00899396909231758,
+      0.11376537671178316,
+      -0.4147284176577581,
+      0.4240376256158161,
+      0.11647064564265049,
+      0.24097552949730158,
+      -0.7506891417053693
+    ],
+    "pole_mass_squared": 0.25,
+    "pole_residue_changes": true,
+    "pole_residue_delta": 1.3917336046498363e-05,
+    "same_finite_prefix": true,
+    "stieltjes_measure_kind": "positive finite atomic measures",
+    "support_masses_squared": [
+      0.25,
+      0.4,
+      0.7,
+      1.1,
+      1.7,
+      2.6,
+      4.0,
+      6.3
+    ]
+  },
+  "finite_prefix_stieltjes_counterfamily_passed": true,
+  "future_certificate_contract": [
+    {
+      "current_satisfied": false,
+      "id": "same_surface_subtracted_scalar_correlator",
+      "required": "the scalar object, source coordinate, contact subtraction, and zero-source limit are fixed on the PR230 surface"
+    },
+    {
+      "current_satisfied": false,
+      "id": "infinite_or_certified_tail_moment_sequence",
+      "required": "all moments or rigorous tail bounds/asymptotics for the same scalar measure, not a finite shell prefix"
+    },
+    {
+      "current_satisfied": false,
+      "id": "carleman_or_equivalent_determinacy",
+      "required": "Carleman divergence or another theorem-grade Stieltjes determinacy certificate"
+    },
+    {
+      "current_satisfied": false,
+      "id": "tauberian_threshold_authority",
+      "required": "derived threshold density/gap asymptotics, limiting order, and no hidden continuum ambiguity"
+    },
+    {
+      "current_satisfied": false,
+      "id": "isolated_pole_and_residue_interval",
+      "required": "isolated pole plus a positive tight pole-residue interval from the same moment problem"
+    },
+    {
+      "current_satisfied": false,
+      "id": "fv_ir_limiting_order",
+      "required": "finite-volume/IR/zero-mode limiting-order authority for the scalar pole"
+    },
+    {
+      "current_satisfied": true,
+      "id": "forbidden_import_firewall",
+      "required": "reject observed selectors, H_unit/Ward, alpha/plaquette/u0, unit kappa_s/c2/Z_match, PSLQ and finite-prefix selectors"
+    }
+  ],
+  "future_file_presence": {
+    "carleman_tauberian_certificate": false,
+    "contact_subtraction_certificate": false,
+    "fv_ir_limiting_order_certificate": false,
+    "infinite_same_surface_moment_sequence": false,
+    "threshold_asymptotic_certificate": false
+  },
+  "hypothetical_axiom_status": null,
+  "parent_certificates": {
+    "affine_contact_complete_monotonicity": "outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json",
+    "clean_source_higgs_math_selector": "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json",
+    "contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
+    "finite_volume_pole_saturation": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
+    "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "holonomic_exact_authority_attempt": "outputs/yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_2026-05-05.json",
+    "pade_stieltjes_bounds_gate": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
+    "pole_saturation_threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
+    "polefit8x8_stieltjes_proxy_diagnostic": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json",
+    "polynomial_contact_finite_shell": "outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json",
+    "polynomial_contact_repair": "outputs/yt_fh_lsz_polynomial_contact_repair_no_go_2026-05-05.json",
+    "retained_closure_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "scalar_denominator_theorem_attempt": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json",
+    "soft_continuum_threshold_no_go": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
+    "stieltjes_moment_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
+    "threshold_authority_import_audit": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json"
+  },
+  "parent_statuses": {
+    "affine_contact_complete_monotonicity": "exact negative boundary / affine contact complete-monotonicity no-go",
+    "clean_source_higgs_math_selector": "exact support / clean source-Higgs outside-math route selector; positive closure still open",
+    "contact_subtraction_identifiability": "exact negative boundary / contact-subtraction identifiability obstruction",
+    "finite_volume_pole_saturation": "exact negative boundary / FH-LSZ finite-volume pole-saturation obstruction",
+    "full_positive_closure_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
+    "holonomic_exact_authority_attempt": "exact negative boundary / scalar-LSZ holonomic exact-authority not derivable from current finite-shell PR230 data",
+    "pade_stieltjes_bounds_gate": "exact-support / FH-LSZ Pade-Stieltjes bounds gate; strict moment-threshold certificate absent",
+    "pole_saturation_threshold_gate": "open / FH-LSZ pole-saturation threshold gate blocks current finite-shell fit",
+    "polefit8x8_stieltjes_proxy_diagnostic": "exact negative boundary / current polefit8x8 C_ss proxy fails Stieltjes monotonicity",
+    "polynomial_contact_finite_shell": "exact negative boundary / finite-shell polynomial contact non-identifiability no-go",
+    "polynomial_contact_repair": "exact negative boundary / polynomial contact repair not scalar-LSZ authority",
+    "retained_closure_route": "open / retained closure not yet reached",
+    "scalar_denominator_theorem_attempt": "open / scalar denominator theorem closure attempt blocked",
+    "soft_continuum_threshold_no_go": "exact negative boundary / FH-LSZ soft-continuum threshold no-go",
+    "stieltjes_moment_gate": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
+    "threshold_authority_import_audit": "exact negative boundary / FH-LSZ threshold-authority import audit"
+  },
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current scalar-LSZ surface has finite shell/moment support only. Carleman determinacy is an infinite-tail condition, and Tauberian threshold reconstruction is an asymptotic condition.  A finite positive Stieltjes prefix admits positive measures with the same checked prefix and different pole residue.",
+  "strict_non_claims": [
+    "does not claim scalar-LSZ closure",
+    "does not write a Carleman/Tauberian or infinite-moment certificate",
+    "does not use finite moments or finite shells as determinacy proof",
+    "does not use PSLQ/value recognition as proof selector",
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not set kappa_s, c2, or Z_match to one"
+  ]
+}

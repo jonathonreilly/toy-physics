@@ -3925,3 +3925,24 @@ Generator/Casimir normalization fixes SU(2) representation charges but does
 not select the physical low-scale `g2`.  This is an exact negative boundary on
 that shortcut only; it does not supply `g2`, W/Z response rows, or
 effective-retention/proposed-retention authorization.
+
+Scalar-LSZ Carleman/Tauberian determinacy attempt:
+
+```text
+actual_current_surface_status: exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=80 FAIL=0
+```
+
+Finite positive Stieltjes moment prefixes do not determine the scalar pole
+residue: the certificate constructs same-prefix positive measures with
+different pole weights.  Carleman/Tauberian tools remain admissible only as a
+future same-surface infinite/tail moment or asymptotic certificate with
+contact, threshold, FV/IR, and pole-residue authority.  No effective-retention
+or proposed-retention wording is allowed.

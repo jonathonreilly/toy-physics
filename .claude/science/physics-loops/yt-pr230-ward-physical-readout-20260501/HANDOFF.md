@@ -3447,3 +3447,32 @@ authority with canonical gauge-field/action normalization and allowed matching,
 or a different certified physical observable whose absolute readout does not
 need `g2`.  Continue to leave chunks019-024 alone until their root artifacts
 complete, then package only passing outputs through the polefit8x8 gates.
+
+## 2026-05-05 - Carleman/Tauberian Scalar-LSZ Determinacy Attempt
+
+The scalar-LSZ moment-theory route is now explicitly blocked on the current
+finite row surface:
+
+```text
+python3 scripts/frontier_yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=24 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=80 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=228 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=259 FAIL=0
+```
+
+The runner constructs positive finite atomic Stieltjes measures with the same
+checked moment prefix and different isolated pole residues.  Therefore finite
+FH/LSZ shell or moment rows cannot be promoted into Carleman/Tauberian scalar
+LSZ authority.  A positive route must supply an infinite or tail-certified
+same-surface moment/asymptotic certificate with contact, threshold, FV/IR, and
+pole-residue control.  No retained/proposed-retained wording is authorized.

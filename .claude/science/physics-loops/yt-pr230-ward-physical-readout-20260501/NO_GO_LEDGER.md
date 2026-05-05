@@ -3123,3 +3123,21 @@ active PIDs, logs, chunk-local directories, and scheduler return status do not
 provide scalar LSZ normalization or canonical-Higgs/source-overlap closure.
 The chunks can be counted only after root artifacts land and pass the
 polefit8x8 combiner/postprocessor and aggregate gates.
+
+## 2026-05-05 - Carleman/Tauberian Scalar-LSZ Determinacy From Finite Rows
+
+No-go: finite FH/LSZ shell rows or finite Stieltjes moment prefixes do not
+determine the isolated scalar pole residue.  The runner constructs two positive
+finite atomic Stieltjes measures whose checked prefix agrees through the
+current finite moment orders while the pole atom weight changes.
+
+Carleman determinacy requires an infinite-tail condition; a finite prefix gives
+only a finite partial sum.  Tauberian threshold reconstruction requires
+same-surface large-order/asymptotic or threshold-density control.  Neither is
+present on the current PR230 surface.
+
+Do not use finite moment prefixes, finite shell rows, PSLQ/value recognition,
+or theorem names as scalar-LSZ proof selectors.  The route can reopen only
+with an infinite or tail-certified same-surface scalar moment/asymptotic
+certificate plus contact, threshold, FV/IR, isolated-pole, and residue-interval
+authority.

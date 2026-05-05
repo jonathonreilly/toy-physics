@@ -148,6 +148,9 @@ def main() -> int:
         "pr230_scalar_lsz_holonomic_exact_authority_attempt": load(
             "outputs/yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_2026-05-05.json"
         ),
+        "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt": load(
+            "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json"
+        ),
         "fh_lsz_contact_subtraction_identifiability": load(
             "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json"
         ),
@@ -1079,6 +1082,24 @@ def main() -> int:
         ).get("residues_differ")
         is True,
         statuses["pr230_scalar_lsz_holonomic_exact_authority_attempt"],
+    )
+    report(
+        "pr230-scalar-lsz-carleman-tauberian-determinacy-attempt-blocks-current-finite-prefix",
+        "Carleman/Tauberian scalar-LSZ determinacy not derivable"
+        in str(statuses["pr230_scalar_lsz_carleman_tauberian_determinacy_attempt"])
+        and certificates[
+            "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt"
+        ].get("carleman_tauberian_determinacy_passed")
+        is False
+        and certificates[
+            "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt"
+        ].get("finite_prefix_stieltjes_counterfamily_passed")
+        is True,
+        statuses["pr230_scalar_lsz_carleman_tauberian_determinacy_attempt"],
     )
     report(
         "fh-lsz-contact-subtraction-identifiability-blocks-arbitrary-subtraction",
