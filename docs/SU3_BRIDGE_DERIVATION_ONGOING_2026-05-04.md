@@ -391,6 +391,49 @@ The framework's exact L_s=2 Wilson plaquette is **0.4225** (via V-invariant Schu
 
 The remaining open derivation pathway is the framework's **explicit Perron state at β=6 of the source-sector transfer operator** `T_src(6) = exp(3J) D_6^loc C_(Z_6^env) exp(3J)` on the V-invariant minimal block — explicitly named "open" by the framework's own bridge-support note. This is structurally a different problem than Schur cube enumeration; it's the spectral-measure problem of the SU(3) character recurrence operator J in the unknown β=6 transfer state.
 
+## 11.0 CRITICAL CLARIFICATION: framework has NO 4D periodic lattice
+
+User-prompted realization (2026-05-04): "we don't have a 4D periodic lattice do we?"
+
+**Correct.** The campaign has been comparing apples to oranges:
+
+- **Framework's surface**: 3+1D structure (3 spatial Z³ + 1 derived time), V-invariant minimal block at L_s=2 spatial extent with APBC (anti-periodic boundary conditions in spatial directions).
+- **MC's surface (where 0.5934 comes from)**: standard 4D Wilson lattice with all four directions treated as symmetric Euclidean spacetime, PBC (periodic) in all four directions, large enough volume (L → ∞) that thermodynamic limit applies.
+
+**These are NOT the same physical setup.** Different:
+- Boundary conditions (APBC vs PBC)
+- Volume (L_s=2 vs L→∞)
+- Dimensional structure (3 spatial + 1 derived time vs 4 Wick-rotated Euclidean)
+
+**The honest comparison** would be either:
+- **(a) MC at L=2 APBC** (same setup as framework) → would probably give ~0.42-0.45, matching framework's 0.4225 — which would VALIDATE the framework's action/normalization
+- **(b) Framework at L→∞** (currently treewidth-infeasible) → would probably give ~0.5934 if V-invariance washes out at large L
+
+But comparing framework's L=2 APBC to MC's L=∞ PBC is comparing two different systems and asking why they disagree. They disagree because they ARE different systems.
+
+**What this means for the campaign**:
+
+1. The "0.5934 target" was anchored to standard 4D Wilson MC at L→∞, not to anything the framework's V-invariant L_s=2 APBC IS supposed to compute directly.
+
+2. The framework's V-invariance claim is essentially: "L_s=2 APBC captures L→∞ thermodynamic-limit physics." This is the load-bearing unproven assumption.
+
+3. Without this claim, the framework's exact L_s=2 APBC prediction is just **0.4225**, which is fine and doesn't need to match MC's L→∞ value.
+
+4. The "bridge candidate" 0.59353 = constant-lift attempt was trying to make the V-invariance claim work via class-level corrections. It's exactly disproven by the framework's own slope theorem (Section 10c).
+
+**Cleanest restatement of the campaign's actual scientific question**:
+
+"Does the framework's V-invariance at L_s=2 APBC genuinely capture infinite-volume physics, or is it just a finite-volume choice?"
+
+Per framework's own primitives: **no theorem establishes this equivalence.** The framework's [SU3_TENSOR_NETWORK_ENGINE_ROADMAP_NOTE_2026-05-03.md](docs/SU3_TENSOR_NETWORK_ENGINE_ROADMAP_NOTE_2026-05-03.md) explicitly admits a 5-PR multi-month engine is needed to even compute the V-invariant L_s=2 cube precisely.
+
+**Honest framework status**:
+- Exact L_s=2 V-invariant APBC prediction: **0.4225** (verified, no imports)
+- Whether this matches "reality" depends on downstream observables (α_s, hadron masses, V(r)), NOT on matching MC's L→∞ intermediate plaquette
+- The campaign should pivot to testing framework consistency at P=0.4225 via downstream observables, OR to building the tensor-network engine to compute L_s=3+ behavior
+
+**This reframing changes everything**: the "missing 0.17 in plaquette" isn't a derivation failure — it's a misapplied comparator. The framework's gauge sector at its native L_s=2 V-invariant APBC surface gives 0.4225. Standard MC's 0.5934 is for a different setup (L→∞ PBC 4D) and shouldn't be the framework's target unless V-invariance ↔ L→∞ equivalence is independently proven.
+
 ## 11. FIRST-PRINCIPLES AUDIT (this iteration): is 0.5934 even the right target?
 
 User-prompted re-examination: "are we sure the number we are targeting is correct if our framework is correct and not some other calculated non-reality based number?"
