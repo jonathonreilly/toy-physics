@@ -1,17 +1,33 @@
 # Cl(3) Taste-Generation Theorem: Z³ Lattice Doubling → 3 Tastes with Generation Structure
 
-**Date:** 2026-04-19
-**Status:** reviewed exact algebraic support theorem on current `main`; numerically verified
+**Date:** 2026-04-19 (originally); 2026-05-04 (audited_renaming scope-narrow)
+**Status:** representation-theory theorem on the staggered-Dirac taste cube. The hw=1 orbit gives **three Z₃-related generation-candidate states** with the listed Y/T₃ spectra; identifying these candidates with **physical SM generations** is a separate retained-bridge requirement, not part of this theorem's load-bearing scope.
 **Claim boundary authority:** this note
 **Script:** `scripts/verify_cl3_sm_embedding.py` (section G);
             `scripts/frontier_s3_action_taste_cube_decomposition.py` (independent crosscheck)
 
 ---
 
-## Statement
+## Audit-driven scope narrowing (2026-05-04)
 
-**Theorem:** The staggered-fermion doubling on Z³ produces a taste space
-`C^8 = (ℂ²)^{⊗3}` on which:
+The 2026-05-04 audit verdict was `audited_renaming`: the
+representation-theory checks (S₃ decomposition `4A₁ + 0A₂ + 2E`, hw=1 = A₁+E
+with Z₃ orbit, restricted Y/T₃ spectra) are ratified, but the
+load-bearing identification of these Z₃-orbit states with **three physical
+SM generations** requires a separate retained bridge theorem this note
+does not provide. The narrowed scope below keeps the verified algebraic
+content and explicitly defers the physical generation identification.
+
+The renaming criterion (from the audit): *"Re-check whether a separate
+retained bridge theorem derives taste-orbit states as physical SM
+generations rather than naming them generation candidates."* This note now
+adopts the narrower "generation-candidate" framing throughout.
+
+## Statement (scope-narrowed)
+
+**Theorem (representation-theory, scope-narrowed).** The staggered-fermion
+doubling on Z³ produces a taste space `C^8 = (ℂ²)^{⊗3}` on which the
+following are exact representation-theory facts:
 
 1. The axis-permutation group S₃ acts by tensor-position permutation, giving the
    decomposition `C^8 = 4A₁ + 0A₂ + 2E` (no A₂ component).
@@ -25,9 +41,37 @@
 
 4. The hw=1 sector has Y eigenvalues {+1/3, +1/3, −1} and T₃ eigenvalues
    {−1/2, +1/2, +1/2} within the 3D subspace. The Z₃ cyclic symmetry relates all
-   three states; the combined matter content — two quark-like (Y=+1/3) and one
-   lepton-like (Y=−1) — is consistent with one SM left-handed generation, and the
-   three-fold Z₃ degeneracy provides 3 such generation candidates.
+   three states.
+
+5. **Generation-candidate framing.** The combined hw=1 matter content — two
+   quark-like (Y=+1/3) and one lepton-like (Y=−1) — is **consistent with**
+   one SM left-handed generation, and the three-fold Z₃ degeneracy provides
+   **3 such generation-candidate states**. This statement is at the level
+   of representation-theory consistency, not physical identification.
+
+## Physical-generation identification (deferred to a separate bridge)
+
+This note **does not derive** the physical identification
+
+> "the three Z₃-related taste states **are** the three physical SM
+> generations (e/μ/τ together with d/s/b and u/c/t partner blocks)."
+
+That identification is the load-bearing bridge gap flagged by the
+2026-05-04 audit. To close this lane to retained-grade, a separate
+retained theorem must derive:
+
+- The map between the Z₃-cyclic taste-orbit indexing and the physical
+  generation index;
+- Why the residual block degeneracy lifts in the physical mass spectrum
+  in the Yukawa hierarchy direction (light/heavy generation split), not
+  the taste-cycle direction;
+- Why the Z₃-orbit ordering matches the observed e/μ/τ mass ordering or,
+  equivalently, why the Yukawa hierarchy respects the cyclic structure.
+
+Until that bridge is on the retained surface, the corollary "the three
+hw=1 Z₃ states **are** the three physical SM generations" is **conditional
+on the bridge**, not a direct consequence of this note's
+representation-theory.
 
 ---
 

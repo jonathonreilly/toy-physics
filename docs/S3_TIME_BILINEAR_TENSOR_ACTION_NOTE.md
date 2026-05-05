@@ -1,18 +1,76 @@
 # Route 2 Exact Tensorized Action from the Bilinear Carrier
 
-**Date:** 2026-04-14  
-**Branch:** `codex/review-active`  
-**Status:** exact carrier/action/coupling construction; final GR identification still open
+**Date:** 2026-04-14 (originally); 2026-05-04 (audited_renaming scope-narrow)
+**Branch:** `codex/review-active`
+**Status:** **definition-only** of `I_TB` and `Xi_TB` from named upstream inputs `(I_R, K_R, Lambda_R, u_*)`. The construction's identification with the **physical tensor dynamics law** (Einstein/Regge) is open and conditional on the upstream certificates listed below.
 **Primary runner:** [`scripts/frontier_s3_time_bilinear_tensor_action.py`](../scripts/frontier_s3_time_bilinear_tensor_action.py) (PASS=4/0)
 
-## Verdict
+## Audit-driven scope narrowing (2026-05-04)
 
-Once the exact bilinear support carrier `K_R` is admitted, Route 2 no longer
-lacks an exact tensorized construction.
+The 2026-05-04 audit verdict was `audited_renaming`. The note's
+load-bearing step is the **definition** of `I_TB` and `Xi_TB` as new
+constructed symbols from the named inputs; it is not a derivation of
+tensor dynamics from the axiom or from retained cited inputs. The note
+itself acknowledges that the Einstein/Regge identification remains open.
+
+The renaming criterion (from the audit, repair class
+`missing_dependency_edge`): *"Provide retained upstream certificates for
+I_R, K_R, Lambda_R, the canonical slice seed, and a bridge theorem
+identifying the constructed action/carrier with the claimed tensor
+dynamics."* This note now adopts the definition-only scope and records the
+five upstream dependencies that closure would need.
+
+## Statement (scope-narrowed)
+
+**Definition (scope-narrowed).** Given the following upstream retained
+inputs, the tensorized action `I_TB(f, a ; j)` and the spacetime carrier
+`Xi_TB(t ; q)` defined below are well-defined and the algebraic identities
+verified by the runner hold:
+
+1. **`I_R` retained certificate** — the exact scalar Schur boundary
+   action `I_R(f ; j) = (1/2) f^T Lambda_R f - j^T f`.
+2. **`K_R` retained certificate** — the exact bilinear support carrier
+   from `S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md` (which is itself
+   currently under audited_renaming pending its own upstream certificates).
+3. **`Lambda_R` retained certificate** — exact symmetric positive
+   definite slice generator from the Schur boundary action.
+4. **Canonical slice seed certificate** — exact normalized `u_*` on the
+   slice carrier.
+5. **Tensor-dynamics bridge theorem** — identification of the constructed
+   `I_TB`/`Xi_TB` with the **physical** tensor dynamics law (Einstein/Regge
+   on `PL S^3 x R`).
+
+Items 1, 3, 4 are on the retained surface elsewhere; items 2 and 5 are the
+load-bearing gaps.
+
+## Physical-dynamics identification (deferred to a separate bridge)
+
+This note **does not derive**:
+
+- The interpretation of `I_TB` as an exact tensor dynamics action (rather
+  than a constructed quadratic functional)
+- The interpretation of `Xi_TB(t; q) = vec K_R(q) ⊗ V_R(t)` as a physical
+  spacetime tensor field (rather than a definitional outer product)
+- The bridge from `I_TB`'s stationary points to the Einstein equations on
+  `PL S^3 x R`
+
+These three are the load-bearing bridge gaps flagged by the 2026-05-04
+audit. Until those certificates are on the retained surface, "Route 2 has
+an exact tensorized action" is a **definitional statement under upstream
+inputs**, not a derived physical-dynamics theorem.
+
+## Verdict (scope-narrowed)
+
+Once the exact bilinear support carrier `K_R` is admitted (under its own
+upstream-input conditional), Route 2 has an exact **definitional**
+tensorized construction. The Einstein/Regge identification — i.e., the
+step that turns `I_TB` into a physical tensor dynamics law — remains the
+open bridge.
 
 The exact scalar Schur backbone and exact Route-2 kinematic scaffold are
-already in hand, so they can be combined with `K_R` into an exact tensorized
-action/coupling candidate.
+already in hand, so they can be combined with `K_R` into a definitional
+tensorized action/coupling candidate. The construction itself is
+algebraically clean; the physical-meaning bridge is the gap.
 
 ## Exact inputs
 

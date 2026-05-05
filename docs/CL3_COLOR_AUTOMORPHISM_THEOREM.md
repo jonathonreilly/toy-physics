@@ -1,38 +1,86 @@
 # Cl(3) Color Structure Theorem: SU(3)_c on the Symmetric Base + R_conn Derivation
 
-**Date:** 2026-04-19
-**Status:** reviewed exact algebraic support theorem on current `main`; numerically verified
+**Date:** 2026-04-19 (originally); 2026-05-04 (audited_renaming scope-narrow)
+**Status:** algebraic SU(3) embedding + Fierz channel-count theorem on the 3D symmetric base subspace of the taste cube. **The identification of this 3D base with physical SM color is a separate retained-bridge requirement, not part of this theorem's load-bearing scope.**
 **Claim boundary authority:** this note
 **Script:** `scripts/verify_cl3_sm_embedding.py` (sections H, I)
 
 ---
 
-## Statement
+## Audit-driven scope narrowing (2026-05-04)
 
-**Theorem:** The Z³ spatial lattice forces `N_c = 3`, and SU(3)_c is realised as
-the group acting on the 3D symmetric base subspace of the taste cube, with:
+The 2026-05-04 audit verdict was `audited_renaming`: the algebraic checks are
+ratified, but the load-bearing identification of the **3D symmetric base
+subspace** with **physical SM color SU(3)_c** requires a separate retained
+bridge theorem that this note does not provide. The narrowed scope below
+keeps the verified algebraic content and explicitly defers the physical
+identification.
 
-1. `N_c = 3` from the spatial dimension of `Z³` — the number of independent
-   coordinate axes equals the size of the hw=1 orbit (3 states) and the rank of
-   SU(3)_c.
+The renaming criterion (from the audit): *"Re-audit after the claim is
+narrowed to the algebraic embedding/channel-count result or after a retained
+bridge derives physical color and R_conn from the selected symmetric-base
+carrier."* This note now adopts the first option.
 
-2. SU(3)_c acts on the 3-dimensional symmetric base subspace of
+## Statement (scope-narrowed)
+
+**Theorem (algebraic, scope-narrowed).** On the Z³ spatial lattice the
+following are exact algebraic facts about the tensor-product carrier
+`{0,1}² ⊗ {0,1}` and the 3D symmetric base subspace inside it:
+
+1. The spatial dimension of `Z³` is 3, so the hw=1 orbit on the taste cube
+   has size 3. We adopt the convention `N_c := dim(Z³) = 3` for the
+   algebraic counting below. (The physical identification of `N_c` with the
+   SM color count is the bridge requirement deferred below.)
+
+2. SU(3) acts on the 3-dimensional symmetric base subspace of
    `{0,1}² ⊗ {0,1}` (the (b₁,b₂)-base ⊗ b₃-fiber decomposition), embedded as
-   `M₃_sym ⊗ I₂` in the 8D taste space.
+   `M₃_sym ⊗ I₂` in the 8D taste space. This is an embedding theorem on the
+   chosen carrier; reading this SU(3) as physical SM color requires a
+   separate bridge (see "Physical-identification bridge" below).
 
 3. `T_F = 1/2` (trace normalization), `dim(adjoint) = N_c² - 1 = 8`.
 
-4. `[SU(3)_c, SU(2)_weak] = 0` and `[SU(3)_c, Y] = 0` by tensor product structure.
+4. The embedded SU(3) commutes with the embedded SU(2)_weak and the
+   embedded U(1)_Y on the same carrier: `[SU(3), SU(2)_weak] = 0` and
+   `[SU(3), Y] = 0` by tensor product structure.
 
 5. The Fierz identity for SU(3) gives:
    `∑_a T^a_{ij} T^a_{kl} = (1/2)δᵢₗδₖⱼ − (1/2N_c)δᵢⱼδₖₗ`
 
-6. From the Fierz identity, the color-trace ratio is:
+6. From the Fierz identity, the algebraic channel-count ratio on
+   `End(ℂ^{N_c})` is:
    `R_conn = (N_c² − 1)/N_c² = 8/9`
-   as an exact channel-count fraction. The EW alpha-level factor is now
-   tracked as `K_EW(kappa_EW)=1/(8/9+kappa_EW/9)`; `sqrt(9/8)` is the
+   This is an **exact channel-count fraction on the 3D symmetric base
+   carrier**. Reading it as a physical EW-color coupling factor requires
+   the bridge below; the EW alpha-level factor is tracked as
+   `K_EW(kappa_EW)=1/(8/9+kappa_EW/9)` with `sqrt(9/8)` the
    connected-trace specialization `kappa_EW=0`, not an unconditional
    consequence of this algebra alone.
+
+## Physical-identification bridge (deferred to a separate theorem)
+
+This note **does not derive** the identification
+
+> "the 3D symmetric base subspace inside the taste cube **is** the physical
+> SM color carrier SU(3)_c."
+
+That identification is the load-bearing bridge gap flagged by the
+2026-05-04 audit. To clean this lane, a separate retained theorem must
+either:
+
+- Derive the bridge from accepted upstream inputs (e.g., a representation
+  match between the Z³ axis-selector orbit and the physical SU(3)_c rep
+  carried by SM quark fields), or
+- Cite an existing retained authority that supplies the bridge.
+
+Until that bridge is on the retained surface, the corollary "`R_conn = 8/9`
+is the physical color-trace ratio" must be read as **conditional on the
+bridge**, not as a direct consequence of this note's algebra.
+
+The bridge is currently flagged as a discrete retained-elsewhere
+dependency; the closure path is documented in
+`NATIVE_GAUGE_CLOSURE_NOTE.md` (graph-first axis selector) and in the
+representation-match work on the residual axis swap.
 
 ---
 

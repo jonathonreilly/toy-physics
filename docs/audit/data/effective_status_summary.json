@@ -42,7 +42,7 @@
     "audit_in_progress": 3,
     "audited_conditional": 238,
     "audited_numerical_match": 4,
-    "audited_renaming": 10,
+    "audited_renaming": 6,
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,
     "meta": 46,
     "open_gate": 15,
@@ -50,7 +50,7 @@
     "retained_bounded": 175,
     "retained_no_go": 95,
     "retained_pending_chain": 1,
-    "unaudited": 1152
+    "unaudited": 1156
   },
   "retained_pending_chain_count": 1,
   "retained_pending_chain_examples": [

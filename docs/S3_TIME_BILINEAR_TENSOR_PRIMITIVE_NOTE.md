@@ -1,22 +1,61 @@
 # Route 2 Exact Bilinear Tensor Primitive
 
-**Date:** 2026-04-14  
-**Branch:** `codex/review-active`  
-**Status:** exact new microscopic tensor primitive derived
+**Date:** 2026-04-14 (originally); 2026-05-04 (audited_renaming scope-narrow)
+**Branch:** `codex/review-active`
+**Status:** **definition-only** of a new bilinear microscopic carrier `K_R(q)` from named coordinates `(delta_A1, u_E, u_T)`. The decoupling fact, the exact aligned-bright property, and the tensor-primitive interpretation are **conditional on upstream retained derivations** that this note does not provide; see "Audit-driven scope narrowing" below.
 **Primary runner:** [`scripts/frontier_s3_time_bilinear_tensor_primitive.py`](../scripts/frontier_s3_time_bilinear_tensor_primitive.py) (PASS=4/0)
 
-## Verdict
+## Audit-driven scope narrowing (2026-05-04)
 
-The previous exact blocker was too narrow. What fails on the current support
-stack is a **linear** tensor observable produced by the scalar/rank-one
-support Green / Schur machinery.
+The 2026-05-04 audit verdict was `audited_renaming`. The runner verifies
+the algebraic shape of `K_R(q)` once the input coordinates
+`(delta_A1, u_E, u_T)` and the decoupling fact are accepted; the verdict
+narrows the load-bearing claim to the **definition** of the bilinear
+carrier from those named inputs, not to a derivation of the inputs from
+first principles.
 
-What does exist exactly is a **bilinear** microscopic tensor carrier on the
-support block.
+The renaming criterion (from the audit): *"A second audit should re-check
+whether an upstream retained derivation exists for the exact decoupling
+fact and the tensor-primitive identification, since none is included in
+this restricted packet."* This note now adopts the definition-only scope
+and records the retained-elsewhere dependencies the closure would need.
 
-## Exact ingredients
+## Statement (scope-narrowed)
 
-On the seven-site star support:
+**Definition (scope-narrowed).** Given input coordinates and the decoupling
+fact below as upstream retained inputs, the bilinear microscopic tensor
+carrier `K_R(q)` on the seven-site star support is well-defined and the
+algebraic shape stated below holds.
+
+This note **does not derive**:
+
+- The decoupling fact `delta_A1 ⊥ {E_x, T1x, E_perp, T1y, T1z}`
+- The exact aligned-bright coordinates `u_E(q) = <E_x, q>`, `u_T(q) = <T1x, q>`
+- The interpretation of `K_R(q)` as a **physical** tensor primitive
+  (rather than a definitional bilinear object)
+
+These are the three load-bearing upstream dependencies flagged by the
+2026-05-04 audit. To close this lane to retained-grade, a separate
+retained theorem must supply:
+
+1. A retained derivation of the `delta_A1`-decoupling property from the
+   support-side Green / Schur machinery on the star support.
+2. A retained derivation of the aligned-bright coordinate identification
+   `u_E ↔ <E_x, ·>`, `u_T ↔ <T1x, ·>` from the canonical bright/dark
+   decomposition of the support block.
+3. A bridge theorem identifying the bilinear carrier `K_R(q)` with the
+   physical tensor primitive used in the GR-readout chain (rather than as
+   a constructed object whose physical meaning is asserted).
+
+Until those three dependencies are on the retained surface, the corollary
+"`K_R(q)` is the **physical** microscopic tensor primitive on the support
+block" is **conditional on the bridges**, not a direct consequence of this
+note.
+
+## Exact ingredients (under upstream retained inputs)
+
+On the seven-site star support, taking the decoupling fact as retained
+upstream:
 
 - the exact scalar background datum is
   - `delta_A1(q) = phi_support(center)/Q - phi_support(arm_mean)/Q`
@@ -24,7 +63,7 @@ On the seven-site star support:
   - `u_E(q) = <E_x, q>`
   - `u_T(q) = <T1x, q>`
 
-The key exact decoupling fact is:
+The key exact decoupling fact (asserted, retained-elsewhere):
 
 > `delta_A1` is exactly blind to all non-`A1` perturbations, including
 > `E_x`, `T1x`, `E_perp`, `T1y`, and `T1z`.

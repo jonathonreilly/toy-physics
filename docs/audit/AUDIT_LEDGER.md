@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 175 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 15 |
-| unaudited | 1152 |
+| unaudited | 1156 |
 | audit_in_progress | 3 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 4 |
-| ~~audited_renaming~~ | 10 |
+| ~~audited_renaming~~ | 6 |
 | ~~audited_conditional~~ | 238 |
 | `decoration_under_wide_lattice_h2t_distance_law_note` | 1 |
 
@@ -39,8 +39,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 1 |
 | `audited_failed` | 44 |
 | `audited_numerical_match` | 4 |
-| `audited_renaming` | 10 |
-| `unaudited` | 1198 |
+| `audited_renaming` | 6 |
+| `unaudited` | 1202 |
 
 | claim_type | count |
 |---|---:|
@@ -674,14 +674,10 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_exact_green_self_consistent_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | D | - |
 | `wave_direct_dm_h025_seed0_crossfamily_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_constructive_uv_bridge_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
-| `cl3_color_automorphism_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-gpt-5 | F | - |
-| `cl3_taste_generation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | F | - |
 | `hypercharge_identification_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | F | - |
 | `lattice_nn_light_cone_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
-| `s3_time_bilinear_tensor_action_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
-| `s3_time_bilinear_tensor_primitive_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_qg_optional_textbook_comparison_note` | meta | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 
@@ -1973,35 +1969,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
   - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
   - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
-- **auditor confidence:** high
-
-### `cl3_color_automorphism_theorem`
-
-- **Note:** [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](../../docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** The claim that Z3 forces N_c=3, realizes SU(3)_c on the 3D symmetric base subspace of the taste cube, and yields R_conn=8/9 from the SU(3) Fierz channel fraction.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-color-auto-judicial-2026-05-03`  (codex-gpt-5; independence=judicial_review)
-- **load-bearing step:** N_c = |hw=1 states| = dim(Z3) = 3, followed by the identification that the 3D symmetric base subspace carries physical SU(3)_c color.  _(class `F`)_
-- **chain closes:** False — The first audit is ratified. The operative load-bearing move is the asserted identity between a selected 3D taste/base carrier and physical SM color N_c/SU(3)_c. The verifier sets N_c=3 and constructs standard Gell-Mann generators on the chosen 3D symmetric block, then checks SU(3) algebra, commutation, and the Fierz 8/9 fraction. Those checks are internally valid after the carrier has been selected, but they do not derive the physical-carrier identification. The statement that the 3-axis count equals rank(SU(3)_c) is mathematically wrong because SU(3) has rank 2 and must be repaired, but it is not the step used by the runner to derive R_conn; the controlling audit failure mode is class-F renaming/identification rather than failed algebraic computation.
-- **rationale:** The first audit is ratified. The operative load-bearing move is the asserted identity between a selected 3D taste/base carrier and physical SM color N_c/SU(3)_c. The verifier sets N_c=3 and constructs standard Gell-Mann generators on the chosen 3D symmetric block, then checks SU(3) algebra, commutation, and the Fierz 8/9 fraction. Those checks are internally valid after the carrier has been selected, but they do not derive the physical-carrier identification. The statement that the 3-axis count equals rank(SU(3)_c) is mathematically wrong because SU(3) has rank 2 and must be repaired, but it is not the step used by the runner to derive R_conn; the controlling audit failure mode is class-F renaming/identification rather than failed algebraic computation.
-- **open / conditional deps cited:**
-  - `EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md`
-  - `RCONN_DERIVED_NOTE.md`
-- **auditor confidence:** high
-
-### `cl3_taste_generation_theorem`
-
-- **Note:** [`CL3_TASTE_GENERATION_THEOREM.md`](../../docs/CL3_TASTE_GENERATION_THEOREM.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the restricted claim that the Z^3 taste cube S3 action decomposes C^8 as 4A1+0A2+2E, that hw=1 is A1+E with a Z3 orbit, and that its restricted Y/T3 spectra are interpreted as three SM-generation candidates.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260504-224530-44c0e178-cl3_taste_generation_the-006`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The Z3 symmetry establishes these three states as a degenerate generation-structure orbit, so three Z3-orbit copies yield three families with the same quantum number structure.  _(class `F`)_
-- **chain closes:** False — The algebraic S3 decomposition, Z3 orbit, and restricted spectra close from the provided matrices. The step from a single hw=1 Z3 orbit with spectrum {-1,+1/3,+1/3} to three SM generations is an identification/renaming not derived by the packet.
-- **rationale:** The runner genuinely computes the finite-dimensional permutation representation and the restricted Y/T3 spectra, and those algebraic checks support the bounded representation-theory statements. However, the load-bearing physics conclusion is the assertion that the Z3-related taste states or axis choices are generation candidates/families. That is a symbol-identification bridge, not a first-principles derivation of SM generations, and the runner only verifies the algebraic orbit and spectra it has defined.
 - **auditor confidence:** high
 
 ### `cl4c_carrier_axiom_consequence_map_note_2026-04-28`
@@ -6338,34 +6305,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Since V ~= A_1 + E, every S_3-invariant Hermitian operator on V has the form M = alpha I_3 + beta P_(A_1), so its spectrum is {alpha, alpha, alpha + beta}.  _(class `A`)_
 - **chain closes:** True — The conclusion follows from the supplied finite S_3 representation, the A_1 + E decomposition, Schur-type invariant algebra structure, and the Hermitian spectral theorem. The no-go is clean because it is scoped only to the stated carrier and exact unbroken S_3 class.
 - **rationale:** The claim is an exact symmetry-theoretic boundary result, not a flavor-numerics or phenomenological claim. The runner verifies the invariant algebra dimension, the alpha I_3 + beta P_(A_1) form consequences, the forced two-value spectrum, and the Z_2 dimension jump. No hidden physical bridge is needed once the scope is restricted to the provided hw=1 carrier and exact S_3-invariant Hermitian class.
-- **auditor confidence:** high
-
-### `s3_time_bilinear_tensor_action_note`
-
-- **Note:** [`S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md`](../../docs/S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md)
-- **claim_type:** `open_gate`
-- **claim_scope:** Audited the note's claim that an exact tensorized Route-2 action/coupling candidate can be constructed from I_R and K_R on PL S^3 x R, while GR identification remains open.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260504-232946-c1a20bdf-s3_time_bilinear_tensor_-016`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The exact tensorized construction is defined as I_TB(f, a ; j) = I_R(f ; j) + 1/2 ||a - vec K_R(q)||^2, and is exact because I_R and vec K_R are exact and the penalty is algebraic.  _(class `E`)_
-- **chain closes:** False — The construction is introduced by definition and depends on exactness of I_R, K_R, the slice seed, and Lambda_R, none of which are closed by the restricted packet. The final identification with Einstein/Regge dynamics is explicitly left open.
-- **rationale:** The load-bearing step introduces I_TB and Xi_TB as new constructed symbols rather than deriving a tensor dynamics law from the axiom or from retained cited inputs. The note itself acknowledges that the Einstein/Regge identification remains open. With no cited authorities in the packet, the claimed exact upstream inputs are imported premises, not audited closures.
-- **open / conditional deps cited:**
-  - `S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md`
-- **auditor confidence:** high
-
-### `s3_time_bilinear_tensor_primitive_note`
-
-- **Note:** [`S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md`](../../docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the asserted existence of an exact bilinear support-side microscopic tensor carrier K_R built from delta_A1, u_E, and u_T in the provided note only.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260504-224530-44c0e178-s3_time_bilinear_tensor_-007`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Define the exact microscopic tensor carrier K_R(q) = [[u_E(q), u_T(q)], [delta_A1(q) u_E(q), delta_A1(q) u_T(q)]].  _(class `E`)_
-- **chain closes:** False — The note introduces K_R by definition and states exactness, but provides no derivation from axioms or cited retained inputs that this object is a tensor primitive with the claimed status. The missing step is an independent derivation of the carrier and its exact properties from the support-block framework.
-- **rationale:** The load-bearing move is the definition of a new bilinear object K_R from already named coordinates. With no cited authorities or runner source, the packet does not derive the scalar datum, aligned bright coordinates, decoupling fact, or tensor-primitive interpretation from first principles. The conclusion therefore reduces to introducing a symbol and assigning it the claimed role rather than proving the role.
 - **auditor confidence:** high
 
 ### `s3_time_primitive_chain_note`

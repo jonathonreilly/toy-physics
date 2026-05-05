@@ -29628,7 +29628,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "609a2c0a7bd5401788580fd68f7807aaca60ecea8e01d5b7350b3661ec8cd226",
+      "note_hash": "2682d5066e8de631c89ab5cb6093ae37385886fc64827030333fefcea4aa9ebe",
       "path": "docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md",
       "runner_path": "scripts/verify_cl3_sm_embedding.py",
       "title": "Cl(3) Color Structure Theorem: SU(3)_c on the Symmetric Base + R_conn Derivation"
@@ -29694,7 +29694,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "81312723d355d761f0036f90d4a1b3eb434f77bfd648c476a29590c1d04b66ed",
+      "note_hash": "ff29b37e42c800d8a529c67c84b6f059824b8cf8f1443433b386f871287c1102",
       "path": "docs/CL3_TASTE_GENERATION_THEOREM.md",
       "runner_path": "scripts/verify_cl3_sm_embedding.py",
       "title": "Cl(3) Taste-Generation Theorem: Z\u00b3 Lattice Doubling \u2192 3 Tastes with Generation Structure"
@@ -46969,7 +46969,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "aaf672cdfe0b40699642079567a1c8a4e21bf0f44d90326c92037cd8854c3536",
+      "note_hash": "138ce0e1264a972fa27302e9ef6e6336344427540daae81f023edf5b5a926887",
       "path": "docs/S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md",
       "runner_path": "scripts/frontier_s3_time_bilinear_tensor_action.py",
       "title": "Route 2 Exact Tensorized Action from the Bilinear Carrier"
@@ -46980,7 +46980,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "71691bb2becf76b3c53009cf5b642ef8554e2c495385daccbbba38761ae22bf0",
+      "note_hash": "f3eeb69787ddf20f633c77feddcc8703a685a751a29a347cf7d41add2c1d1b46",
       "path": "docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md",
       "runner_path": "scripts/frontier_s3_time_bilinear_tensor_primitive.py",
       "title": "Route 2 Exact Bilinear Tensor Primitive"
