@@ -14,12 +14,13 @@ and per-seed variance). Impact parameters b ∈ {3, 4, 5, 6}.
 
 from __future__ import annotations
 
-# Heavy compute / sweep runner — `AUDIT_TIMEOUT_SEC = 1800`
-# means the audit-lane precompute and live audit runner allow up to
-# 30 min of wall time before recording a timeout. The 120 s default
-# ceiling is too tight under concurrency contention; see
+# Heavy k-sweep over many seeds and slope-fit windows. Empirically
+# observed to exceed the 30-min ceiling under concurrency contention,
+# so the AUDIT_TIMEOUT_SEC is raised to 60 min (3600 s). If this still
+# times out, the right fix is to add a --quick subsample mode or split
+# the sweep across multiple runners. See
 # `docs/audit/RUNNER_CACHE_POLICY.md`.
-AUDIT_TIMEOUT_SEC = 1800
+AUDIT_TIMEOUT_SEC = 3600
 
 import math
 import random

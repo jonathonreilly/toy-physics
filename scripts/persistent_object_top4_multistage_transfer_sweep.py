@@ -4,12 +4,13 @@
 from __future__ import annotations
 
 
-# Heavy compute / sweep runner — `AUDIT_TIMEOUT_SEC = 1800`
-# means the audit-lane precompute and live audit runner allow up to
-# 30 min of wall time before recording a timeout. The 120 s default
-# ceiling is too tight under concurrency contention; see
+# Top-4 multistage transfer sweep across all source-strength cases —
+# empirically exceeds the 30-min ceiling under concurrency contention
+# because each Case runs the full top-3 probe pipeline. AUDIT_TIMEOUT_SEC
+# raised to 60 min (3600 s). If this still times out, the right fix is
+# subsetting CASES via a --quick mode. See
 # `docs/audit/RUNNER_CACHE_POLICY.md`.
-AUDIT_TIMEOUT_SEC = 1800
+AUDIT_TIMEOUT_SEC = 3600
 
 import argparse
 import os
