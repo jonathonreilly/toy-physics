@@ -11868,6 +11868,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_planck_target3_phase_unit_edge_statistics.py"
     },
+    "plaquette_4d_mc_fss_retained_theorem_note_2026-05-05": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 8,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_4d_plaquette_fss_verify_2026_05_05.py"
+    },
     "plaquette_4d_mc_support_note_2026-05-04": {
       "assert_count": 1,
       "counts": {
@@ -31849,6 +31861,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_su3_4d_plaquette_fss_verify_2026_05_05.py": {
+      "assert_count": 2,
+      "claims": [
+        "plaquette_4d_mc_fss_retained_theorem_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 8,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_su3_anomaly_forced_3bar_completion.py": {
       "assert_count": 1,
       "claims": [
@@ -38308,12 +38335,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 164,
-      "C": 563,
+      "C": 564,
       "D": 208,
       "none": 421
     },
-    "runners_classified": 1366,
-    "runners_with_C": 670,
-    "runners_with_D": 339
+    "runners_classified": 1367,
+    "runners_with_C": 671,
+    "runners_with_D": 340
   }
 }

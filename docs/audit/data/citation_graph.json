@@ -1270,6 +1270,10 @@
     },
     {
       "from": "canonical_harness_index",
+      "to": "plaquette_4d_mc_fss_retained_theorem_note_2026-05-05"
+    },
+    {
+      "from": "canonical_harness_index",
       "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19"
     },
     {
@@ -10787,6 +10791,10 @@
     {
       "from": "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25",
       "to": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+    },
+    {
+      "from": "plaquette_4d_mc_fss_retained_theorem_note_2026-05-05",
+      "to": "plaquette_4d_mc_support_note_2026-05-04"
     },
     {
       "from": "plaquette_4d_mc_support_note_2026-05-04",
@@ -28553,6 +28561,7 @@
         "scalar_3plus1_temporal_ratio_note",
         "plaquette_4d_mc_support_note_2026-05-04",
         "gauge_wilson_isotropy_boundary_note_2026-05-04",
+        "plaquette_4d_mc_fss_retained_theorem_note_2026-05-05",
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
@@ -28760,7 +28769,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "024e661f2055b4a687bc02507599dba3690739ae87f8f8e0e1105e8fc9554c6c",
+      "note_hash": "3ba46860028dea063c00755df2f29a75f173e5e7f328672628005463bf7243cc",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -43212,6 +43221,19 @@
       "runner_path": "scripts/frontier_planck_target3_phase_unit_edge_statistics.py",
       "title": "Planck Target 3 Phase-Unit / Edge-Statistics Boundary Note"
     },
+    "plaquette_4d_mc_fss_retained_theorem_note_2026-05-05": {
+      "claim_id": "plaquette_4d_mc_fss_retained_theorem_note_2026-05-05",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed_retained on numerical chain)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "plaquette_4d_mc_support_note_2026-05-04"
+      ],
+      "note_hash": "583f468a476221dfc4c21d4049677bc093bfaa08b93cc27ac96af697c7a26974",
+      "path": "docs/PLAQUETTE_4D_MC_FSS_RETAINED_THEOREM_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_su3_4d_plaquette_fss_verify_2026_05_05.py",
+      "title": "Plaquette 3+1D Wilson MC Finite-Size-Scaling Retained Theorem Note"
+    },
     "plaquette_4d_mc_support_note_2026-05-04": {
       "claim_id": "plaquette_4d_mc_support_note_2026-05-04",
       "claim_type_author_hint": "bounded_theorem",
@@ -55121,7 +55143,7 @@
       "no_go": 12,
       "none": 1715,
       "open_gate": 10,
-      "positive_theorem": 84
+      "positive_theorem": 85
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 558,
@@ -55129,12 +55151,12 @@
       "no_go": 117,
       "none": 457,
       "open_gate": 116,
-      "positive_theorem": 633
+      "positive_theorem": 634
     },
-    "edge_count": 6488,
+    "edge_count": 6490,
     "leaf_count": 546,
-    "node_count": 1889,
+    "node_count": 1890,
     "root_count": 876,
-    "runners_with_path": 1462
+    "runners_with_path": 1463
   }
 }
