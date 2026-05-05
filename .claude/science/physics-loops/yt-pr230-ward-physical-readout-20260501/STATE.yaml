@@ -13,11 +13,22 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-228-neutral-offdiagonal-generator-derivation
-blocks_completed: 228
-active_route: "neutral off-diagonal generator / primitive-cone derivation certificate"
-active_hard_residual: "A neutral primitive-cone/Burnside closure would need a same-surface mixed source/orthogonal neutral generator.  The current PR230 source-only, source-Higgs, W/Z, Schur, and neutral primitive artifacts are absent, absence-guarded, or block diagonal, so the mixed generator is not derivable on the current surface.  Runner PASS=15 FAIL=0, assumption stress PASS=25 FAIL=0, full assembly PASS=81 FAIL=0, retained-route PASS=229 FAIL=0, campaign status PASS=260 FAIL=0.  This is an exact negative boundary only; no off-diagonal generator or primitive transfer certificate is written and no retained/proposed-retained closure is authorized."
+current_phase: campaign-block-229-schur-abc-definition-derivation
+blocks_completed: 229
+active_route: "Schur A/B/C definition derivation with outside-math firewall"
+active_hard_residual: "A Schur K-prime closure would need same-surface neutral scalar kernel basis, source/orthogonal projector, A/B/C block rows, block-derivative rows, and contact/FV/IR/canonical-bridge authority.  The current PR230 surface supplies source-denominator support but not the missing row definitions.  A finite nondegenerate counterfamily keeps D_eff = A - B C^{-1} B fixed while changing A/B/C rows, so exact tensor, PSLQ, Picard-Fuchs, creative telescoping, free-probability, Feshbach, and finite ladder support cannot define the rows by method name.  Runner PASS=19 FAIL=0, assumption stress PASS=26 FAIL=0, full assembly PASS=82 FAIL=0, retained-route PASS=230 FAIL=0, campaign status PASS=261 FAIL=0.  This is an exact negative boundary only; no Schur row file or definition certificate is written and no retained/proposed-retained closure is authorized."
 files_touched:
+  - "docs/YT_PR230_SCHUR_ABC_DEFINITION_DERIVATION_ATTEMPT_NOTE_2026-05-05.md"
+  - "scripts/frontier_yt_pr230_schur_abc_definition_derivation_attempt.py"
+  - "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json"
+  - "scripts/frontier_yt_pr230_assumption_import_stress.py"
+  - "outputs/yt_pr230_assumption_import_stress_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py"
+  - "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
   - "docs/YT_PR230_SCALAR_LSZ_CARLEMAN_TAUBERIAN_DETERMINACY_ATTEMPT_NOTE_2026-05-05.md"
   - "scripts/frontier_yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt.py"
   - "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json"

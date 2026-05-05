@@ -157,6 +157,7 @@ def main() -> int:
         "schur_kernel_row_contract_gate": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
         "schur_row_candidate_extraction_attempt": "outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json",
         "schur_compressed_denominator_row_bootstrap_no_go": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
+        "pr230_schur_abc_definition_derivation_attempt": "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json",
         "pr230_nonchunk_current_surface_exhaustion": "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json",
         "pr230_nonchunk_future_artifact_intake": "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json",
         "pr230_nonchunk_terminal_route_exhaustion": "outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json",
@@ -1201,6 +1202,26 @@ def main() -> int:
         is False
         and certificates["schur_compressed_denominator_row_bootstrap_no_go"].get(
             "bootstrap_no_go_passed"
+        )
+        is True
+    )
+    schur_abc_definition_derivation_blocks_current_surface = (
+        "Schur A/B/C definition not derivable"
+        in certificates["pr230_schur_abc_definition_derivation_attempt"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_schur_abc_definition_derivation_attempt"].get("proposal_allowed")
+        is False
+        and certificates["pr230_schur_abc_definition_derivation_attempt"].get(
+            "schur_abc_definition_derivation_passed"
+        )
+        is False
+        and certificates["pr230_schur_abc_definition_derivation_attempt"].get(
+            "schur_abc_rows_written"
+        )
+        is False
+        and certificates["pr230_schur_abc_definition_derivation_attempt"].get(
+            "exact_negative_boundary_passed"
         )
         is True
     )
@@ -3136,6 +3157,13 @@ def main() -> int:
         "schur-compressed-denominator-bootstrap-blocks-hidden-rows",
         schur_compressed_denominator_bootstrap_blocks_hidden_rows,
         certificates["schur_compressed_denominator_row_bootstrap_no_go"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "schur-abc-definition-derivation-blocks-current-surface",
+        schur_abc_definition_derivation_blocks_current_surface,
+        certificates["pr230_schur_abc_definition_derivation_attempt"].get(
             "actual_current_surface_status", ""
         ),
     )

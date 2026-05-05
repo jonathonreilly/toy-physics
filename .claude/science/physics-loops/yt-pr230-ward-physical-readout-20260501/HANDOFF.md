@@ -3505,3 +3505,39 @@ generator needed by Burnside, Perron-Frobenius primitive-cone,
 Schur-commutant, or GNS routes.  A future same-surface off-diagonal generator
 or primitive transfer certificate is still the positive intake needed for this
 lane.  No retained/proposed-retained wording is authorized.
+
+## 2026-05-05 - Schur A/B/C Definition Derivation Attempt
+
+The Schur K-prime route is now explicitly blocked at the row-definition layer:
+
+```text
+python3 scripts/frontier_yt_pr230_schur_abc_definition_derivation_attempt.py
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=26 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=82 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=230 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=261 FAIL=0
+```
+
+The runner constructs finite nondegenerate `A/B/C` block families with the
+same effective source denominator `D_eff = A - B C^{-1} B` but different
+block rows and derivatives at the pole.  Therefore source-only denominators,
+compressed scalar data, Feshbach responses, finite ladder scouts, exact
+tensor/PEPS method names, PSLQ, Picard-Fuchs/D-module, creative telescoping,
+free probability, and motivic searches cannot define the missing Schur rows.
+
+Next exact action: supply a same-surface neutral scalar kernel basis and
+source/orthogonal projector, then emit certified `A/B/C` rows or an equivalent
+precontracted Schur row certificate with contact/FV/IR and pole-derivative
+authority.  Otherwise pivot to certified `O_H/C_sH/C_HH` pole rows, genuine
+same-source W/Z response rows, strict scalar-LSZ moment/threshold/FV
+authority, or a neutral primitive-cone certificate.  No
+retained/proposed-retained wording is authorized.

@@ -5550,3 +5550,23 @@ Perron-Frobenius primitive-cone, Schur-commutant, or GNS routes.  A future
 same-surface off-diagonal generator or primitive transfer certificate is still
 the positive intake needed for this lane.  No effective-retention or
 proposed-retention wording is allowed.
+
+## 2026-05-05 - Block 206 Schur A/B/C Definition Derivation Attempt
+
+Review stance: Schur row-definition no-go / exact negative boundary.
+
+- Added `scripts/frontier_yt_pr230_schur_abc_definition_derivation_attempt.py`.
+- Added `docs/YT_PR230_SCHUR_ABC_DEFINITION_DERIVATION_ATTEMPT_NOTE_2026-05-05.md`.
+- Added `outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json`.
+- Refreshed assumption/import stress, full assembly, retained-route, and
+  campaign-status certificates.
+- Validation: runner `PASS=19 FAIL=0`, assumption stress `PASS=26 FAIL=0`,
+  full assembly `PASS=82 FAIL=0`, retained-route `PASS=230 FAIL=0`,
+  campaign status `PASS=261 FAIL=0`.
+
+Disposition: exact negative boundary.  The current PR230 source-only surface
+does not define the neutral scalar kernel basis, source/orthogonal projector,
+`A/B/C` block rows, block derivatives, contact/FV/IR scheme, or canonical
+bridge.  Outside-math tools remain allowed only as future row-certificate
+engines after those objects are defined.  No effective-retention or
+proposed-retention wording is allowed.

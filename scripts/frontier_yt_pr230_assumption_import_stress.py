@@ -71,6 +71,9 @@ def main() -> int:
         "neutral_offdiagonal_generator_derivation_attempt": load(
             "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json"
         ),
+        "schur_abc_definition_derivation_attempt": load(
+            "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json"
+        ),
         "scalar_lsz_carleman_tauberian_determinacy_attempt": load(
             "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json"
         ),
@@ -145,6 +148,8 @@ def main() -> int:
         "not proof selectors until a same-surface off-diagonal neutral generator or primitive transfer exists",
         "Neutral off-diagonal generator derivation",
         "not proof selectors until the mixed generator is derived on the same PR230 surface",
+        "Schur A/B/C definition derivation",
+        "not proof selectors until same-surface Schur A/B/C rows and projectors exist",
         "Carleman/Tauberian scalar-LSZ determinacy",
         "not proof selectors until an infinite same-surface moment/asymptotic certificate exists",
     ]
@@ -363,6 +368,17 @@ def main() -> int:
         is True,
         carleman_attempt.get("actual_current_surface_status"),
     )
+    schur_abc_attempt = certificates["schur_abc_definition_derivation_attempt"]
+    report(
+        "schur-abc-definition-attempt-does-not-certify-kprime-rows",
+        "Schur A/B/C definition not derivable"
+        in str(schur_abc_attempt.get("actual_current_surface_status"))
+        and schur_abc_attempt.get("proposal_allowed") is False
+        and schur_abc_attempt.get("schur_abc_definition_derivation_passed") is False
+        and schur_abc_attempt.get("schur_abc_rows_written") is False
+        and schur_abc_attempt.get("exact_negative_boundary_passed") is True,
+        schur_abc_attempt.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -404,7 +420,11 @@ def main() -> int:
             "the same firewall at the neutral-generator level: the current "
             "source-only generator algebra is not full and has a non-scalar "
             "commutant until a same-surface off-diagonal neutral generator or "
-            "primitive transfer exists.  The Carleman/Tauberian scalar-LSZ "
+            "primitive transfer exists.  The Schur A/B/C definition derivation "
+            "attempt adds it for row-definition machinery: outside math can compute defined "
+            "Schur rows but cannot supply the missing neutral kernel basis, "
+            "source/orthogonal projector, or A/B/C labels from source-only "
+            "denominator data.  The Carleman/Tauberian scalar-LSZ "
             "determinacy attempt adds the same firewall for moment theory: "
             "finite scalar shell/moment prefixes are not proof selectors until "
             "an infinite same-surface moment/asymptotic certificate exists.  No current route "

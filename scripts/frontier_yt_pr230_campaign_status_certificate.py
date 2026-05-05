@@ -359,6 +359,9 @@ def main() -> int:
         "pr230_exact_tensor_schur_row_feasibility_attempt": load(
             "outputs/yt_pr230_exact_tensor_schur_row_feasibility_attempt_2026-05-05.json"
         ),
+        "pr230_schur_abc_definition_derivation_attempt": load(
+            "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json"
+        ),
         "fh_lsz_higgs_pole_identity": load(
             "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json"
         ),
@@ -1582,6 +1585,28 @@ def main() -> int:
             ).values()
         ),
         statuses["pr230_exact_tensor_schur_row_feasibility_attempt"],
+    )
+    report(
+        "pr230-schur-abc-definition-derivation-blocks-current-surface",
+        "Schur A/B/C definition not derivable"
+        in str(statuses["pr230_schur_abc_definition_derivation_attempt"])
+        and certificates["pr230_schur_abc_definition_derivation_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_schur_abc_definition_derivation_attempt"].get(
+            "schur_abc_definition_derivation_passed"
+        )
+        is False
+        and certificates["pr230_schur_abc_definition_derivation_attempt"].get(
+            "schur_abc_rows_written"
+        )
+        is False
+        and certificates["pr230_schur_abc_definition_derivation_attempt"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True,
+        statuses["pr230_schur_abc_definition_derivation_attempt"],
     )
     report(
         "fh-lsz-higgs-pole-identity-gate-blocks",

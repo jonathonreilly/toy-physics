@@ -1,5 +1,19 @@
 # Opportunity Queue
 
+2026-05-05 update: the Schur `A/B/C` definition derivation attempt is now
+landed and blocks on the current PR230 source-only surface.  The row-definition
+counterfamily keeps `D_eff = A - B C^{-1} B` fixed while changing finite
+nondegenerate `A/B/C` rows and pole derivatives, so source-only denominators,
+compressed scalar data, Feshbach responses, finite ladder scouts, exact
+tensor/PEPS method names, PSLQ, Picard-Fuchs/D-module, creative telescoping,
+free probability, and motivic searches are not row-definition authority.
+Schur remains a high-value route only after a same-surface neutral scalar
+kernel basis, source/orthogonal projector, and certified `A/B/C` or
+precontracted Schur rows exist.  Highest-value positive work remains certified
+`O_H/C_sH/C_HH` pole rows, genuine same-source W/Z response rows with
+identity/covariance/`g2` authority, strict scalar-LSZ moment/threshold/FV
+authority, or a neutral primitive-cone/off-diagonal-generator certificate.
+
 2026-05-05 update: the neutral-scalar Burnside/double-commutant irreducibility
 attempt is now landed and blocks on the current PR230 source-only generator
 surface.  The current neutral generator set is block diagonal in a

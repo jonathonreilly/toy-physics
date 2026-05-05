@@ -1,0 +1,206 @@
+{
+  "actual_current_surface_status": "exact negative boundary / Schur A/B/C definition not derivable from current PR230 source-only surface",
+  "admitted_observation_status": null,
+  "allowed_outside_math_tools": [
+    "exact tensor/PEPS contraction after row network definition",
+    "holonomic D-module / Picard-Fuchs / creative telescoping after row-generating integrals are defined",
+    "free probability or Weingarten expansions after the neutral kernel partition is defined",
+    "motivic or PSLQ searches only as post hoc exact-value recognition, never as a physical-row selector"
+  ],
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support if a future same-surface neutral scalar kernel basis, source/orthogonal projector, A/B/C block definitions, block-derivative rows, contact/FV/IR scheme, and certified contraction or theorem are supplied",
+  "definition_contract": [
+    {
+      "current_satisfied": true,
+      "current_surface": "finite FH/LSZ and scalar-ladder source support",
+      "id": "same_surface_source_denominator",
+      "needed": "source-only scalar effective denominator or source marginal"
+    },
+    {
+      "current_satisfied": false,
+      "id": "neutral_scalar_kernel_basis",
+      "needed": "same-surface neutral scalar kernel basis before Schur elimination"
+    },
+    {
+      "current_satisfied": false,
+      "id": "source_orthogonal_projector",
+      "needed": "projector P_s and complement Q with normalization and measure authority"
+    },
+    {
+      "current_satisfied": false,
+      "id": "abc_block_definition",
+      "needed": "A=P_s K P_s, B=P_s K Q, C=Q K Q or equivalent precontracted row definitions"
+    },
+    {
+      "current_satisfied": false,
+      "id": "block_derivative_rows",
+      "needed": "A'(pole), B'(pole), C'(pole), or certified derivative of the block Schur complement"
+    },
+    {
+      "current_satisfied": false,
+      "id": "contact_threshold_fv_ir_scheme",
+      "needed": "contact subtraction, threshold, finite-volume, IR, and zero-mode limiting order"
+    },
+    {
+      "current_satisfied": false,
+      "id": "canonical_bridge",
+      "needed": "O_H/source-Higgs, W/Z physical response, or neutral irreducibility authority"
+    },
+    {
+      "current_satisfied": true,
+      "id": "outside_math_firewall",
+      "needed": "outside math may compute defined rows but cannot define missing rows or proof-normalizations by name"
+    }
+  ],
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "Produce a same-surface neutral scalar kernel basis and source/orthogonal projector, then emit A/B/C block rows or an equivalent precontracted Schur row certificate with contact/FV/IR and pole-derivative authority.  Otherwise pivot to certified O_H/C_sH/C_HH pole rows, genuine same-source W/Z response rows with g2/identity/covariance authority, strict scalar-LSZ moment/threshold/FV authority, or a neutral primitive-cone certificate.",
+  "fail_count": 0,
+  "future_file_presence": {
+    "schur_abc_definition_certificate": false,
+    "schur_abc_kernel_rows": false,
+    "schur_kernel_rows": false,
+    "schur_scalar_kernel_rows": false
+  },
+  "hypothetical_axiom_status": null,
+  "missing_definition_contract": [
+    "neutral_scalar_kernel_basis",
+    "source_orthogonal_projector",
+    "abc_block_definition",
+    "block_derivative_rows",
+    "contact_threshold_fv_ir_scheme",
+    "canonical_bridge"
+  ],
+  "parent_certificates": {
+    "exact_tensor_schur_feasibility": "outputs/yt_pr230_exact_tensor_schur_row_feasibility_attempt_2026-05-05.json",
+    "feshbach_response_boundary": "outputs/yt_feshbach_operator_response_boundary_2026-05-01.json",
+    "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "neutral_offdiagonal_generator": "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
+    "retained_closure_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "scalar_kernel_ward_obstruction": "outputs/yt_scalar_kernel_ward_identity_obstruction_2026-05-01.json",
+    "scalar_ladder_derivative_limit": "outputs/yt_scalar_ladder_derivative_limit_obstruction_2026-05-01.json",
+    "scalar_ladder_eigen_derivative": "outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json",
+    "scalar_ladder_ir_zero_mode": "outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json",
+    "scalar_ladder_kernel_scout": "outputs/yt_scalar_ladder_kernel_scout_2026-05-01.json",
+    "scalar_ladder_projector_norm": "outputs/yt_scalar_ladder_projector_normalization_obstruction_2026-05-01.json",
+    "scalar_ladder_residue_envelope": "outputs/yt_scalar_ladder_residue_envelope_obstruction_2026-05-01.json",
+    "scalar_ladder_total_momentum": "outputs/yt_scalar_ladder_total_momentum_derivative_scout_2026-05-01.json",
+    "schur_absence_guard": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
+    "schur_candidate_extraction": "outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json",
+    "schur_compressed_bootstrap": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
+    "schur_contract": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
+    "schur_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json"
+  },
+  "parent_statuses": {
+    "exact_tensor_schur_feasibility": "exact negative boundary / exact tensor Schur A/B/C row feasibility blocked on current PR230 surface",
+    "feshbach_response_boundary": "exact support / Feshbach response boundary",
+    "full_positive_closure_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
+    "neutral_offdiagonal_generator": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
+    "retained_closure_route": "open / retained closure not yet reached",
+    "scalar_kernel_ward_obstruction": "exact negative boundary / scalar kernel Ward-identity obstruction",
+    "scalar_ladder_derivative_limit": "exact negative boundary / scalar ladder derivative limiting-order obstruction",
+    "scalar_ladder_eigen_derivative": "exact-support / scalar ladder eigen-derivative gate",
+    "scalar_ladder_ir_zero_mode": "exact negative boundary / scalar ladder IR zero-mode obstruction",
+    "scalar_ladder_kernel_scout": "bounded-support / ladder-kernel scout",
+    "scalar_ladder_projector_norm": "exact negative boundary / projector-normalization obstruction",
+    "scalar_ladder_residue_envelope": "exact negative boundary / scalar ladder residue-envelope obstruction",
+    "scalar_ladder_total_momentum": "bounded-support / scalar ladder total-momentum derivative scout",
+    "schur_absence_guard": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
+    "schur_candidate_extraction": "exact negative boundary / Schur row candidate extraction from finite ladder support",
+    "schur_compressed_bootstrap": "exact negative boundary / Schur compressed-denominator row-bootstrap no-go",
+    "schur_contract": "open / Schur kernel row contract gate not passed; current rows absent",
+    "schur_sufficiency": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent"
+  },
+  "pass_count": 19,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current artifacts define source-denominator support and useful Schur sufficiency contracts, but they do not define the neutral scalar kernel basis, source/orthogonal projector, or A/B/C block rows.  Distinct finite nondegenerate block families share the same source effective denominator while changing the row data needed for K'(pole).",
+  "row_definition_gauge_counterfamily": {
+    "checks": {
+      "abc_rows_differ": true,
+      "all_share_source_denominator": true,
+      "family_D_eff_samples": [
+        [
+          -0.2168,
+          -0.087675,
+          0.0,
+          0.149293,
+          0.355317
+        ],
+        [
+          -0.2168,
+          -0.087675,
+          0.0,
+          0.149293,
+          0.355317
+        ],
+        [
+          -0.2168,
+          -0.087675,
+          0.0,
+          0.149293,
+          0.355317
+        ]
+      ],
+      "finite_nonzero_orthogonal_blocks": true,
+      "grid": [
+        -0.4,
+        -0.15,
+        0.0,
+        0.23,
+        0.51
+      ],
+      "interpretation": "A source-only denominator, even if known exactly, is invariant under a row-definition gauge: changing B and C while shifting A keeps A - B C^{-1} B fixed but changes the A/B/C rows and their derivatives at the pole.",
+      "target_D_eff_samples": [
+        -0.2168,
+        -0.087675,
+        0.0,
+        0.149293,
+        0.355317
+      ]
+    },
+    "families": [
+      {
+        "id": "abc_definition_family_alpha",
+        "rows_at_pole": {
+          "A": 0.028928571428571425,
+          "A_prime": 0.5950765306122449,
+          "B": 0.18,
+          "B_prime": -0.04,
+          "C": 1.12,
+          "C_prime": 0.08
+        }
+      },
+      {
+        "id": "abc_definition_family_beta",
+        "rows_at_pole": {
+          "A": 0.0735,
+          "A_prime": 0.56786875,
+          "B": -0.42,
+          "B_prime": 0.13,
+          "C": 2.4,
+          "C_prime": -0.11
+        }
+      },
+      {
+        "id": "abc_definition_family_gamma",
+        "rows_at_pole": {
+          "A": 0.10281967213114757,
+          "A_prime": 0.6153215802203709,
+          "B": 0.56,
+          "B_prime": 0.02,
+          "C": 3.05,
+          "C_prime": 0.06
+        }
+      }
+    ]
+  },
+  "schur_abc_definition_derivation_passed": false,
+  "schur_abc_rows_written": false,
+  "strict_non_claims": [
+    "does not produce Schur A/B/C rows",
+    "does not write a Schur row or definition certificate future file",
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not infer row definitions from the compressed denominator, source-only C_ss rows, Feshbach response, exact tensor method names, PSLQ, or finite ladder scouts",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, reduced pilots, c2=1, Z_match=1, or kappa_s=1"
+  ]
+}

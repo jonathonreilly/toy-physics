@@ -3157,3 +3157,26 @@ method name, exact tensor method name, or PSLQ/value recognition result is not
 a same-surface mixed generator.  Reopen this route only with a real
 same-surface off-diagonal generator certificate or primitive transfer
 certificate, then rerun the aggregate closure gates.
+
+## 2026-05-05 - Schur A/B/C Row Definition From Source-Only Denominator
+
+No-go: the current PR230 surface does not derive the same-surface Schur
+`A/B/C` row definitions needed for the K-prime route.  Schur sufficiency,
+row-contract, row-absence, finite-candidate extraction, compressed-denominator,
+and exact-tensor feasibility certificates all point to the same missing
+premises: neutral scalar kernel basis, source/orthogonal projector, block-row
+definitions, block derivatives, limiting-order/contact authority, and a
+canonical bridge.
+
+The runner gives an explicit row-definition gauge counterfamily:
+`D_eff = A - B C^{-1} B` is held fixed while finite nondegenerate `A`, `B`,
+`C`, `A'`, `B'`, and `C'` data vary.  Thus exact knowledge of a source-only
+denominator is not enough to identify the pre-Schur rows.  Outside-math tools
+remain allowed as certificate engines only after the row network is defined;
+PSLQ/value recognition, Picard-Fuchs/D-module, creative telescoping, exact
+tensor/PEPS, free-probability, and motivic method names are not proof
+selectors for missing row labels or normalizations.
+
+Reopen this route only with same-surface `A/B/C` rows or an equivalent
+precontracted Schur row definition certificate, then rerun the assumption
+stress, assembly, retained-route, and campaign gates.

@@ -3964,3 +3964,24 @@ W/Z, and Schur rows remain absent or absence-guarded.  Burnside,
 Perron-Frobenius, Schur-commutant, GNS, and exact tensor tools remain future
 certificate engines only; no effective-retention or proposed-retention wording
 is allowed.
+
+Schur A/B/C definition derivation attempt:
+
+```text
+actual_current_surface_status: exact negative boundary / Schur A/B/C definition not derivable from current PR230 source-only surface
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_schur_abc_definition_derivation_attempt.py
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=82 FAIL=0
+```
+
+The current surface defines source-denominator support but not the
+source/orthogonal neutral kernel partition or `A/B/C` rows.  A finite
+counterfamily keeps the effective denominator fixed while changing the rows
+needed for `K'(pole)`.  Outside-math tools may compute future defined row
+certificates, but cannot act as row-definition or normalization selectors.
+No effective-retention or proposed-retention wording is allowed.
