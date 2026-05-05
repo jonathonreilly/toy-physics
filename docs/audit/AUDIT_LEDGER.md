@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 198 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 16 |
-| unaudited | 876 |
-| audit_in_progress | 43 |
+| unaudited | 875 |
+| audit_in_progress | 44 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,14 +36,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 43 |
+| `audit_in_progress` | 44 |
 | `audited_clean` | 320 |
 | `audited_conditional` | 382 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 29 |
-| `unaudited` | 922 |
+| `unaudited` | 921 |
 
 | claim_type | count |
 |---|---:|
@@ -116,6 +116,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
+| `dm_selector_first_shoulder_exit_threshold_support_note_2026-04-21` | open_gate | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | open_gate | audit_in_progress | audit_in_progress | - | - | - | - |
 | `generation_axiom_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
