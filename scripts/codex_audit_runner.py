@@ -53,6 +53,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 AUDIT_DIR = REPO_ROOT / "docs" / "audit"
 LEDGER_PATH = AUDIT_DIR / "data" / "audit_ledger.json"
 QUEUE_PATH = AUDIT_DIR / "data" / "audit_queue.json"
+REAUDIT_CANDIDATES_PATH = AUDIT_DIR / "data" / "reaudit_candidates.json"
 PROMPT_TEMPLATE_PATH = AUDIT_DIR / "AUDIT_AGENT_PROMPT_TEMPLATE.md"
 APPLY_AUDIT_SCRIPT = AUDIT_DIR / "scripts" / "apply_audit.py"
 ISOLATED_BASE = Path("/tmp/codex-audit-isolated")
@@ -235,7 +236,8 @@ def add_auditor_metadata(verdict_blob: dict, auditor_name: str,
     return blob
 
 
-def determine_audit_role(led_row: dict, auditor_family: str) -> tuple[str, str | None]:
+def determine_audit_role(led_row: dict, auditor_family: str,
+                         is_reaudit_candidate: bool = False) -> tuple[str, str | None]:
     """Decide what role this audit attempt plays for the given row.
 
     The runner only audits rows that genuinely need an audit. Re-auditing
@@ -243,6 +245,12 @@ def determine_audit_role(led_row: dict, auditor_family: str) -> tuple[str, str |
     rows is a waste of subscription messages and produces churn — all
     existing audits in this repo were already done at xhigh, so re-doing
     them adds no quality. We skip them.
+
+    EXCEPTION: when ``is_reaudit_candidate=True``, the caller has explicitly
+    pulled this row from ``reaudit_candidates.json`` because either its
+    deps have strengthened or its runner SHA has drifted. The new audit
+    supersedes the prior verdict; we record independence relative to the
+    PRIOR auditor's family.
 
     Returns (role, reason_or_independence):
       - ("skip", "<reason>")              row should be skipped
@@ -255,6 +263,12 @@ def determine_audit_role(led_row: dict, auditor_family: str) -> tuple[str, str |
       - ("second", "cross_family")        row is awaiting cross-confirmation
                                           and the first auditor was a
                                           different family (Claude / human)
+      - ("reaudit", "fresh_context"|"cross_family")
+                                          re-audit candidate; supersedes
+                                          prior verdict. Independence is
+                                          fresh_context vs same-family
+                                          prior auditor, cross_family vs
+                                          different-family prior auditor
 
     apply_audit.py validates the independence rule; we precompute here so
     the metadata is always correct on the first try.
@@ -283,6 +297,16 @@ def determine_audit_role(led_row: dict, auditor_family: str) -> tuple[str, str |
         if first_family == auditor_family:
             return "second", "fresh_context"
         return "second", "cross_family"
+
+    # Re-audit pass: the caller pulled this row from reaudit_candidates.json
+    # because deps strengthened or runner SHA drifted. The new audit
+    # supersedes the prior verdict. Independence is determined against
+    # whichever auditor produced the prior verdict.
+    if is_reaudit_candidate:
+        prior_family = led_row.get("auditor_family")
+        if prior_family == auditor_family:
+            return "reaudit", "fresh_context"
+        return "reaudit", "cross_family"
 
     # Anything else — already at a terminal verdict (audited_clean,
     # audited_conditional, audited_failed, audited_renaming,
@@ -313,6 +337,64 @@ def load_queue(criticality_filter: str | None = None,
         rows = [r for r in rows if r.get("ready")]
     # rows are already pre-sorted by descending score in audit_queue.json
     return rows
+
+
+def load_reaudit_candidates(criticality_filter: str | None = None,
+                            include_runner_drift: bool = True) -> list[dict]:
+    """Load rows from reaudit_candidates.json, sorted by leverage.
+
+    The pipeline writes two streams to that file:
+
+    - `candidates`: rows whose audit was non-clean and where every current
+      dep is now retained-grade. Re-audit may now close the chain.
+    - `runner_drift_candidates`: rows whose audit cited a runner_artifact_issue
+      and whose runner SHA has changed since audit time.
+
+    Both are valid re-audit triggers. Each entry is normalized into the
+    same shape as audit_queue.json rows (claim_id, note_path, runner_path,
+    deps, criticality, etc.) so the rest of the runner can treat them
+    uniformly. The `ready` flag is set to True because this alternate source
+    has already been prefiltered by the re-audit-candidate producer; runner
+    drift rows may still get a non-clean verdict if a different blocker
+    remains.
+    """
+    payload = json.loads(REAUDIT_CANDIDATES_PATH.read_text(encoding="utf-8"))
+    streams: list[dict] = []
+    streams.extend(payload.get("candidates", []))
+    if include_runner_drift:
+        streams.extend(payload.get("runner_drift_candidates", []))
+
+    if criticality_filter:
+        streams = [
+            r for r in streams
+            if (r.get("criticality") or "") == criticality_filter
+        ]
+
+    # Normalize: ensure each row has the queue-shape fields the audit
+    # runner expects. Most are already present; ready=True is implied.
+    normalized: list[dict] = []
+    seen_ids: set[str] = set()
+    for r in streams:
+        cid = r.get("claim_id")
+        if not cid or cid in seen_ids:
+            continue
+        seen_ids.add(cid)
+        out = dict(r)
+        out["ready"] = True
+        out.setdefault("queue_reason", "reaudit_candidate")
+        out.setdefault("audit_status", r.get("audit_status") or "unaudited")
+        normalized.append(out)
+
+    # Sort by criticality_rank desc, then transitive_descendants desc,
+    # then load_bearing_score desc — matches compute_audit_queue ordering.
+    normalized.sort(
+        key=lambda e: (
+            -(e.get("criticality_rank") or 0),
+            -(e.get("transitive_descendants") or 0),
+            -(e.get("load_bearing_score") or 0.0),
+        )
+    )
+    return normalized
 
 
 def load_ledger_rows() -> dict[str, dict]:
@@ -762,6 +844,19 @@ def main() -> int:
                    action="store_false",
                    help="Disable the --require-runner-output check; let the "
                         "runner subprocess be invoked inline as fallback.")
+    p.add_argument("--from-reaudit-candidates", action="store_true",
+                   help="Pull rows from docs/audit/data/reaudit_candidates.json "
+                        "instead of audit_queue.json. These are rows whose prior "
+                        "audit was non-clean (conditional/renaming/etc.) but "
+                        "whose deps have since become retained-grade, OR whose "
+                        "cited runner SHA has drifted. Each row gets a fresh "
+                        "audit pass that can now potentially close the chain. "
+                        "--allow-blocked is ignored for this alternate source; "
+                        "the candidate producer owns eligibility.")
+    p.add_argument("--no-runner-drift-candidates", action="store_true",
+                   help="With --from-reaudit-candidates, skip the "
+                        "runner_drift_candidates stream (only re-audit on "
+                        "dependency-strengthening). Default includes both.")
     args = p.parse_args()
 
     # Reasoning-effort policy: per repo audit-lane decision (2026-05-04),
@@ -796,8 +891,14 @@ def main() -> int:
     print("  second-pass after a prior audit by a different family -> cross_family")
     print("  second-pass after a prior audit by Codex            -> fresh_context")
     print("  rows in disagreement / awaiting-judicial-review     -> skipped (manual)")
-    print(f"Queue filter: ready_only={not args.allow_blocked}  "
-          f"require_runner_output={args.require_runner_output}")
+    if args.from_reaudit_candidates:
+        print("Source: reaudit_candidates.json (rows whose chain may now close "
+              "after dependency strengthening or runner SHA drift)")
+        print(f"  include_runner_drift={not args.no_runner_drift_candidates}")
+    else:
+        print(f"Source: audit_queue.json")
+        print(f"  ready_only={not args.allow_blocked}  "
+              f"require_runner_output={args.require_runner_output}")
 
     # Verify branch + cleanliness before any push-capable operation.
     if args.push_mode != "none" and not args.dry_run:
@@ -825,10 +926,21 @@ def main() -> int:
                 return 2
 
     ledger_rows = load_ledger_rows()
-    queue = load_queue(args.criticality, ready_only=not args.allow_blocked)
+    if args.from_reaudit_candidates:
+        queue = load_reaudit_candidates(
+            args.criticality,
+            include_runner_drift=not args.no_runner_drift_candidates,
+        )
+    else:
+        queue = load_queue(args.criticality, ready_only=not args.allow_blocked)
     targets = queue[: args.n]
     if not targets:
-        if args.allow_blocked:
+        if args.from_reaudit_candidates:
+            print("No re-audit candidates in this filter. Either no upstream "
+                  "deps have ratified since prior audits, or the candidates "
+                  "stream is empty. Run `bash docs/audit/scripts/run_pipeline.sh` "
+                  "to recompute, or fall back to the regular audit queue.")
+        elif args.allow_blocked:
             print("Queue empty for this filter; nothing to do.")
         else:
             full_queue = load_queue(args.criticality, ready_only=False)
@@ -858,7 +970,11 @@ def main() -> int:
             # This avoids burning a codex call on a row apply_audit will reject,
             # and ensures the verdict's independence matches the row's history.
             full_led_row = ledger_rows.get(cid, {})
-            role, role_info = determine_audit_role(full_led_row, auditor_family)
+            role, role_info = determine_audit_role(
+                full_led_row,
+                auditor_family,
+                is_reaudit_candidate=args.from_reaudit_candidates,
+            )
             if role == "skip":
                 print(f"  SKIP: {role_info}")
                 skipped += 1

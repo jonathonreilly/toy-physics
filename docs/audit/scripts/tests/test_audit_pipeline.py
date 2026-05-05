@@ -600,5 +600,94 @@ class CodexAuditRunnerModelPolicyTest(unittest.TestCase):
         self.assertIn("models_cache.json", source)
 
 
+class CodexAuditRunnerReauditCandidatesTest(unittest.TestCase):
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._tmp.cleanup)
+        self.tmp_root = Path(self._tmp.name)
+
+    def test_reaudit_role_records_independence_against_prior_auditor(self):
+        m = _import_codex_audit_runner()
+
+        same_family = {
+            "audit_status": "audited_conditional",
+            "auditor_family": "codex-gpt-5.5",
+        }
+        role, independence = m.determine_audit_role(
+            same_family,
+            "codex-gpt-5.5",
+            is_reaudit_candidate=True,
+        )
+        self.assertEqual((role, independence), ("reaudit", "fresh_context"))
+
+        cross_family = {
+            "audit_status": "audited_failed",
+            "auditor_family": "claude-sonnet",
+        }
+        role, independence = m.determine_audit_role(
+            cross_family,
+            "codex-gpt-5.5",
+            is_reaudit_candidate=True,
+        )
+        self.assertEqual((role, independence), ("reaudit", "cross_family"))
+
+    def test_reaudit_role_still_skips_judicial_blockers(self):
+        m = _import_codex_audit_runner()
+
+        role, reason = m.determine_audit_role(
+            {
+                "audit_status": "audited_conditional",
+                "blocker": "cross_confirmation_disagreement",
+            },
+            "codex-gpt-5.5",
+            is_reaudit_candidate=True,
+        )
+
+        self.assertEqual(role, "skip")
+        self.assertIn("judicial review needed", reason)
+
+    def test_load_reaudit_candidates_normalizes_sorts_and_filters_streams(self):
+        m = _import_codex_audit_runner()
+        path = self.tmp_root / "reaudit_candidates.json"
+        path.write_text(
+            json.dumps(
+                {
+                    "candidates": [
+                        {
+                            "claim_id": "medium_dep",
+                            "criticality": "medium",
+                            "criticality_rank": 1,
+                            "transitive_descendants": 10,
+                            "load_bearing_score": 2.0,
+                        }
+                    ],
+                    "runner_drift_candidates": [
+                        {
+                            "claim_id": "critical_runner",
+                            "criticality": "critical",
+                            "criticality_rank": 3,
+                            "transitive_descendants": 1,
+                            "load_bearing_score": 1.0,
+                            "queue_reason": "custom_runner_reason",
+                        }
+                    ],
+                }
+            ),
+            encoding="utf-8",
+        )
+        m.REAUDIT_CANDIDATES_PATH = path
+
+        rows = m.load_reaudit_candidates()
+
+        self.assertEqual([r["claim_id"] for r in rows], ["critical_runner", "medium_dep"])
+        self.assertTrue(all(r["ready"] for r in rows))
+        self.assertEqual(rows[0]["queue_reason"], "custom_runner_reason")
+        self.assertEqual(rows[1]["queue_reason"], "reaudit_candidate")
+        self.assertEqual(rows[1]["audit_status"], "unaudited")
+
+        dep_only = m.load_reaudit_candidates(include_runner_drift=False)
+        self.assertEqual([r["claim_id"] for r in dep_only], ["medium_dep"])
+
+
 if __name__ == "__main__":
     unittest.main()
