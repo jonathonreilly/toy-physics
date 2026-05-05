@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 192 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 16 |
-| unaudited | 879 |
-| audit_in_progress | 50 |
+| unaudited | 878 |
+| audit_in_progress | 51 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,14 +36,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 50 |
+| `audit_in_progress` | 51 |
 | `audited_clean` | 311 |
 | `audited_conditional` | 381 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 29 |
-| `unaudited` | 925 |
+| `unaudited` | 924 |
 
 | claim_type | count |
 |---|---:|
@@ -120,6 +120,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | open_gate | audit_in_progress | audit_in_progress | - | - | - | - |
 | `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
+| `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `generation_axiom_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `hierarchy_matsubara_decomposition_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
