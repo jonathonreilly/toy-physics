@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 44 |
-| **retained_no_go** | 102 |
+| **retained_no_go** | 103 |
 | **retained_bounded** | 192 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 16 |
 | unaudited | 880 |
-| audit_in_progress | 50 |
+| audit_in_progress | 49 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 50 |
-| `audited_clean` | 310 |
+| `audit_in_progress` | 49 |
+| `audited_clean` | 311 |
 | `audited_conditional` | 381 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -147,7 +147,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `pmns_transfer_operator_dominant_mode_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `pmns_uniform_scalar_deformation_boundary_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `s3_boundary_link_theorem_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `self_consistency_forces_poisson_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `self_gravity_backreaction_closure_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -338,6 +337,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `pmns_uniform_scalar_deformation_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `poisson_self_gravity_born_audit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `poisson_self_gravity_loop_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `poisson_self_gravity_loop_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -8565,6 +8565,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The sole-axiom active/passive blocks are therefore exactly (I3, I3), so source insertion and graph-first transfer only produce the trivial free pack.  _(class `E`)_
 - **chain closes:** False — The runner hard-codes the active and passive blocks as I3 and imports the graph/closure machinery, rather than deriving those blocks from Cl(3) on Z^3 inside the restricted packet. The algebraic consequences of that definition are checked, but the advertised sole-axiom derivation is missing.
 - **rationale:** The provided runner performs mostly algebraic consistency checks after defining the canonical pack with active_block = I3 and passive_block = I3. It does not instantiate the Clifford/lattice axiom or compute the identity resolvent result from first principles, and key support/closure functions are imported without their sources. The bounded conclusion is true for the defined trivial pack, but the load-bearing claim that this pack is derived from the sole axiom is not closed by the restricted packet.
+- **auditor confidence:** high
+
+### `pmns_uniform_scalar_deformation_boundary_note`
+
+- **Note:** [`PMNS_UNIFORM_SCALAR_DEFORMATION_BOUNDARY_NOTE.md`](../../docs/PMNS_UNIFORM_SCALAR_DEFORMATION_BOUNDARY_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Uniform translation-invariant scalar/Coleman-Weinberg deformation on retained lepton hw=1 triplets remains generation-scalar and is rejected by the retained lower-level PMNS closure stack.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-second-pmns_uniform_scalar_deformation_boundary_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** For the scalar family D_0^trip = u_0 I_3 and D_-^trip = u_- I_3, both lower-level response profiles remain scalar column sets, so neither sector realizes the required one-sided minimal PMNS class.  _(class `A`)_
+- **chain closes:** True — Within the scoped uniform-scalar lane, the note reduces the deformation to sector-scalar triplet blocks and scalar resolvent profiles. The cached runner constructs the uniform scalar Hamiltonian, verifies the scalar/degenerate response chain, and confirms the live retained lower-level PMNS closure rejects the resulting scalar packs.
+- **rationale:** The claim is a bounded no-go, not a positive PMNS construction: it only closes the uniform translation-invariant scalar deformation route. The load-bearing algebra shows that a uniform scalar condensate cannot split or mix the hw=1 generation triplets, and the induced active/passive response profiles remain scalar. The runner does not merely print constants; it constructs the finite Hamiltonian, computes the response profiles, and invokes the live retained closure stack, which rejects the scalar lane with PASS=22 FAIL=0. Residual risk is confined to the already-scoped reliance on the retained PMNS closure criterion itself, not to this uniform-scalar boundary argument.
 - **auditor confidence:** high
 
 ### `poisson_exhaustive_uniqueness_note`
