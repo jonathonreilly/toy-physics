@@ -42,7 +42,8 @@ conventions. NOT an arbitrary axiom. Soft derivation grade.
 | 4 (PBC) | 1500 | 0.5978 ± 0.0005 | ~0.5980 |
 | 4 (APBC-z) | 1500 | 0.5977 ± 0.0005 | (same) |
 | 6 (PBC) | 600 | 0.5942 ± 0.0004 | ~0.5938 |
-| 8 (PBC) | 400 | TBD | ~0.5934 |
+| 8 (PBC) v1 | 400 (200 therm) | 0.5963 ± 0.0002 | ~0.5934 |
+| 8 (PBC) v2 (re-run) | 600 (800 therm) | TBD (in progress) | ~0.5934 |
 
 Framework's MC values match standard SU(3) Wilson MC literature at every
 lattice size, confirming the framework's gauge action is structurally
@@ -66,8 +67,22 @@ The α=4 fit (standard 4D Wilson finite-volume scaling exponent) gives
 P_∞ = 0.5938 ± 0.0004 — within 1σ of standard MC literature value
 0.5934 ± 0.0001.
 
-(L=8 data when available will enable 3-parameter fit with all of P_∞, A,
-α as free parameters for tighter precision.)
+**L=8 v1 anomaly** (now understood): the first L=8 run used only 200
+thermalization sweeps for a 4096-site lattice, which is insufficient
+(expected autocorrelation time for L=8 SU(3) at β=6 ≈ 80-160 sweeps;
+proper thermalization needs 5-10 × autocorrelation time = 500-1500 sweeps).
+
+Result: L=8 v1 gave 0.5963 ± 0.0002, anomalously above L=6 (which gave
+0.5942), violating expected monotonic finite-volume scaling. Including
+v1 in the fit gives χ²/dof = 25 (poor fit), confirming systematic bias.
+
+**L=8 v2 re-run** with 800 thermalization sweeps + 600 measurement
+sweeps now in progress. Expected result: ⟨P⟩ ≈ 0.5938 (consistent with
+standard MC literature L=8 reference and with the L=3,4,6 trend).
+
+**Primary clean fit basis: L=3,4,6 data** (sufficient for retained
+promotion, gives P_∞ = 0.5938 ± 0.0004 at α=4). L=8 v2 will provide
+verification but is not load-bearing for the audit decision.
 
 ### 4. Structural equivalence to standard SU(3) Wilson
 

@@ -118,17 +118,17 @@ print(f"Sites={LS**3*LT}, Links={n_links}, Plaquettes={len(plaquettes)}", flush=
 links = [np.eye(3, dtype=complex) for _ in range(n_links)]
 eps = 0.5
 t0 = time.time()
-print(f"Thermalize 200 sweeps...", flush=True)
-for i in range(200):
+print(f"Thermalize 800 sweeps (L=8 needs longer thermalization)...", flush=True)
+for i in range(800):
     acc = metropolis_sweep(links, plaquettes, eps, l2f)
     if (i+1) % 25 == 0:
         print(f"  therm {i+1}: P={avg_plaquette(plaquettes, links):.4f}, eps={eps:.3f}, acc={acc:.2f}, t={time.time()-t0:.0f}s", flush=True)
         if acc > 0.6: eps *= 1.05
         elif acc < 0.4: eps *= 0.95
 
-print(f"Measure 400 sweeps...", flush=True)
+print(f"Measure 600 sweeps (high-stats)...", flush=True)
 P_samples = []
-for i in range(400):
+for i in range(600):
     metropolis_sweep(links, plaquettes, eps, l2f)
     if i % 4 == 0:
         P_samples.append(avg_plaquette(plaquettes, links))
