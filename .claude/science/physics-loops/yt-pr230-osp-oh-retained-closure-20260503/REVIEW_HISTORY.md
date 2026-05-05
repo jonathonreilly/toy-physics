@@ -1480,3 +1480,23 @@ Findings checked:
 - The note and runner do not claim retained/proposed_retained closure, do not
   synthesize matched rows, do not promote scout outputs, do not load chunk MC,
   and do not use any of the user-banned shortcut authorities as premises.
+
+# 2026-05-05 Non-Chunk Cycle-22 Main-Audit-Drift Guard Review
+
+Disposition: pass as exact negative boundary / open campaign, not as closure.
+
+Findings checked:
+
+- No subagents were used because this session did not explicitly authorize
+  delegation.
+- The runner attacks a distinct post-cycle-21 resume fact: `origin/main`
+  advanced from `8b9f29fc2d6fced28e64761becd010e809e47a6c` to
+  `c3fce9a17d0cba277485bbbcff335ecbea62c69f`.
+- The new main diff is classified as audit/effective-status drift only; no
+  listed PR230 future same-surface path changed or exists on the branch,
+  remote PR branch, or `origin/main`.
+- The aggregate assembly, retained-route, and campaign gates consume the new
+  cycle-22 guard while keeping `proposal_allowed=false`.
+- The note and runner do not claim retained/proposed_retained closure, do not
+  package or rerun chunk MC, and do not edit paper-facing, Planck, alpha,
+  claim-table, or manuscript surfaces.

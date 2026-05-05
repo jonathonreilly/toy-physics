@@ -4,17 +4,26 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact negative boundary / PR230 non-chunk cycle-21 remote-surface reopen guard: no listed same-surface artifact is present on the branch or fetched remote surfaces; positive closure still open
-active_residual: "Cycle 21 checks the only new resume fact after cycle 20: whether fetched remote surfaces contain any listed same-surface row, certificate, or theorem that can reopen the stopped non-chunk queue.  The cycle-20 head remains an ancestor of the aligned PR heads, origin/main is visible, all listed future paths are absent on the branch, remote PR branch, and origin/main, all six worklist units remain blocked, no route family is executable, and aggregate gates still deny proposal authority."
+actual_current_surface_status: exact negative boundary / PR230 non-chunk cycle-22 main-audit-drift reopen guard: origin/main advanced only on audit/effective-status surfaces and no listed same-surface artifact is present; positive closure still open
+active_residual: "Cycle 22 checks the only new resume fact after cycle 21: origin/main advanced from 8b9f29fc2d6fced28e64761becd010e809e47a6c to c3fce9a17d0cba277485bbbcff335ecbea62c69f.  The new main diff is audit/effective-status drift only, no listed PR230 future same-surface path changed or exists, the cycle-21 head remains an ancestor of the aligned PR heads, all six worklist units remain blocked, no route family is executable, and aggregate gates still deny proposal authority."
 latest_checkpoint:
-  utc: "2026-05-05T09:25:17Z"
-  block: 78
-  artifact: "cycle-21 remote-surface reopen guard"
-  status: "exact negative boundary / no listed same-surface artifact is present on the branch or fetched remote surfaces; positive closure remains open"
-  result: "The remote-surface reopen guard verifies that all parents pass, no parent authorizes a proposal, the cycle-20 head remains an ancestor of the aligned PR heads, origin/main is visible after fetch, no listed future path exists on the branch, remote PR branch, or origin/main, all six worklist units remain blocked, no route family is executable, process gates through cycle 20 remain closed, and aggregate gates continue to deny proposal authority."
-  claim_boundary: "no closure proposal, no remote-drift reopen, no process-only route, no chunk packaging, and no admissible reopen until a listed same-surface row, certificate, or theorem exists as a parseable claim-status artifact and the aggregate gates are rerun"
+  utc: "2026-05-05T09:42:52Z"
+  block: 79
+  artifact: "cycle-22 main-audit-drift reopen guard"
+  status: "exact negative boundary / origin/main audit/effective-status drift supplies no listed PR230 same-surface artifact; positive closure remains open"
+  result: "The main-audit-drift guard verifies that all parents pass, no parent authorizes a proposal, the cycle-21 head remains an ancestor of the aligned PR heads, origin/main advanced by six commits since the cycle-21 baseline, changed paths are audit/effective-status surfaces only, no listed future same-surface path exists or changed on branch, remote PR branch, or origin/main, all six worklist units remain blocked, no route family is executable, process gates through cycle 21 remain closed, and aggregate gates continue to deny proposal authority."
+  claim_boundary: "no closure proposal, no main-drift reopen, no remote-drift reopen, no process-only route, no chunk packaging, and no admissible reopen until a listed same-surface row, certificate, or theorem exists as a parseable claim-status artifact and the aggregate gates are rerun"
   live_compute: "chunk worker remains separate; this checkpoint loads no chunk data"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_nonchunk_cycle22_main_audit_drift_guard.py
+    - docs/YT_PR230_NONCHUNK_CYCLE22_MAIN_AUDIT_DRIFT_GUARD_NOTE_2026-05-05.md
+    - outputs/yt_pr230_nonchunk_cycle22_main_audit_drift_guard_2026-05-05.json
+    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+    - scripts/frontier_yt_retained_closure_route_certificate.py
+    - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+    - scripts/frontier_yt_pr230_campaign_status_certificate.py
+    - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
     - scripts/frontier_yt_pr230_nonchunk_cycle21_remote_reopen_guard.py
     - docs/YT_PR230_NONCHUNK_CYCLE21_REMOTE_REOPEN_GUARD_NOTE_2026-05-05.md
     - outputs/yt_pr230_nonchunk_cycle21_remote_reopen_guard_2026-05-05.json
@@ -313,9 +322,18 @@ lock_status:
   repo_lock_attempted: true
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
-cycle: 21
-block: 78
+cycle: 22
+block: 79
 files_touched:
+  - scripts/frontier_yt_pr230_nonchunk_cycle22_main_audit_drift_guard.py
+  - docs/YT_PR230_NONCHUNK_CYCLE22_MAIN_AUDIT_DRIFT_GUARD_NOTE_2026-05-05.md
+  - outputs/yt_pr230_nonchunk_cycle22_main_audit_drift_guard_2026-05-05.json
+  - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+  - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+  - scripts/frontier_yt_retained_closure_route_certificate.py
+  - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+  - scripts/frontier_yt_pr230_campaign_status_certificate.py
+  - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
   - scripts/frontier_yt_pr230_nonchunk_cycle15_independent_route_admission_gate.py
   - docs/YT_PR230_NONCHUNK_CYCLE15_INDEPENDENT_ROUTE_ADMISSION_GATE_NOTE_2026-05-05.md
   - outputs/yt_pr230_nonchunk_cycle15_independent_route_admission_gate_2026-05-05.json

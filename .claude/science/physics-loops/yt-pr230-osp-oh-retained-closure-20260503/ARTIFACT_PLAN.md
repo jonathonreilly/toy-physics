@@ -1,5 +1,26 @@
 # Artifact Plan
 
+Completed in the cycle-22 main-audit-drift continuation:
+
+- `scripts/frontier_yt_pr230_nonchunk_cycle22_main_audit_drift_guard.py`
+- `docs/YT_PR230_NONCHUNK_CYCLE22_MAIN_AUDIT_DRIFT_GUARD_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_cycle22_main_audit_drift_guard_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
+Completed in the cycle-21 remote-surface reopen continuation:
+
+- `scripts/frontier_yt_pr230_nonchunk_cycle21_remote_reopen_guard.py`
+- `docs/YT_PR230_NONCHUNK_CYCLE21_REMOTE_REOPEN_GUARD_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_cycle21_remote_reopen_guard_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
+Completed in the cycle-20 process-gate continuation no-go:
+
+- `scripts/frontier_yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go.py`
+- `docs/YT_PR230_NONCHUNK_CYCLE20_PROCESS_GATE_CONTINUATION_NO_GO_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
 Completed in the cycle-19 no-duplicate-route continuation:
 
 - `scripts/frontier_yt_pr230_nonchunk_cycle19_no_duplicate_route_gate.py`

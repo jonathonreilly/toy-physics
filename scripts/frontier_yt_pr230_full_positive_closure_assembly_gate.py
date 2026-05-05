@@ -97,6 +97,7 @@ PARENTS = {
     "nonchunk_cycle19_no_duplicate_route_gate": "outputs/yt_pr230_nonchunk_cycle19_no_duplicate_route_gate_2026-05-05.json",
     "nonchunk_cycle20_process_gate_continuation_no_go": "outputs/yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go_2026-05-05.json",
     "nonchunk_cycle21_remote_reopen_guard": "outputs/yt_pr230_nonchunk_cycle21_remote_reopen_guard_2026-05-05.json",
+    "nonchunk_cycle22_main_audit_drift_guard": "outputs/yt_pr230_nonchunk_cycle22_main_audit_drift_guard_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -584,6 +585,20 @@ def main() -> int:
         ).get("passed")
         is False
     )
+    nonchunk_cycle22_main_audit_drift_guard_closed = (
+        "cycle-22 main-audit-drift reopen guard"
+        in statuses["nonchunk_cycle22_main_audit_drift_guard"]
+        and certs["nonchunk_cycle22_main_audit_drift_guard"].get("proposal_allowed")
+        is False
+        and certs["nonchunk_cycle22_main_audit_drift_guard"].get(
+            "cycle22_main_audit_drift_guard_passed"
+        )
+        is True
+        and certs["nonchunk_cycle22_main_audit_drift_guard"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
 
     current_state = {
         "production_physical_response": False,
@@ -1038,6 +1053,11 @@ def main() -> int:
         nonchunk_cycle21_remote_reopen_guard_closed,
         statuses["nonchunk_cycle21_remote_reopen_guard"],
     )
+    report(
+        "nonchunk-cycle22-main-audit-drift-guard-recorded",
+        nonchunk_cycle22_main_audit_drift_guard_closed,
+        statuses["nonchunk_cycle22_main_audit_drift_guard"],
+    )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
@@ -1081,7 +1101,10 @@ def main() -> int:
             "science route unless a fresh parseable same-surface artifact "
             "exists first.  The cycle-21 remote-surface reopen guard records "
             "that fetched remote surfaces also contain no listed same-surface "
-            "artifact for admissible reopen."
+            "artifact for admissible reopen.  The cycle-22 main-audit-drift "
+            "guard records that the latest origin/main advance is only "
+            "audit/effective-status drift and still supplies no listed PR230 "
+            "same-surface artifact."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
@@ -1120,6 +1143,7 @@ def main() -> int:
             "does not treat cycle-19 no-duplicate-route closure as positive evidence",
             "does not treat cycle-20 process-gate continuation closure as positive evidence",
             "does not treat cycle-21 remote-surface reopen guard closure as positive evidence",
+            "does not treat cycle-22 main-audit-drift guard closure as positive evidence",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks.  In parallel, "
@@ -1138,7 +1162,9 @@ def main() -> int:
             "and cycle-20 process-gate continuation no-go must also rerun if "
             "no fresh parseable same-surface artifact has appeared.  The "
             "cycle-21 remote-surface reopen guard must rerun after any fetch "
-            "or target-branch update before proposal language."
+            "or target-branch update before proposal language.  The cycle-22 "
+            "main-audit-drift guard must rerun after an origin/main advance "
+            "before proposal language."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

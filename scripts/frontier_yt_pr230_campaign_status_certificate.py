@@ -196,6 +196,9 @@ def main() -> int:
         "pr230_nonchunk_cycle21_remote_reopen_guard": load(
             "outputs/yt_pr230_nonchunk_cycle21_remote_reopen_guard_2026-05-05.json"
         ),
+        "pr230_nonchunk_cycle22_main_audit_drift_guard": load(
+            "outputs/yt_pr230_nonchunk_cycle22_main_audit_drift_guard_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -2599,6 +2602,24 @@ def main() -> int:
         is False,
         statuses["pr230_nonchunk_cycle21_remote_reopen_guard"],
     )
+    report(
+        "pr230-nonchunk-cycle22-main-audit-drift-guard-recorded",
+        "cycle-22 main-audit-drift reopen guard"
+        in str(statuses["pr230_nonchunk_cycle22_main_audit_drift_guard"])
+        and certificates["pr230_nonchunk_cycle22_main_audit_drift_guard"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_cycle22_main_audit_drift_guard"].get(
+            "cycle22_main_audit_drift_guard_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_cycle22_main_audit_drift_guard"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False,
+        statuses["pr230_nonchunk_cycle22_main_audit_drift_guard"],
+    )
 
     remaining_routes = [
         {
@@ -2652,6 +2673,10 @@ def main() -> int:
         {
             "route": "remote-surface reopen guard",
             "needed": "do not reopen from fetched remote drift unless a listed same-surface artifact is present on the target branch",
+        },
+        {
+            "route": "main audit-drift reopen guard",
+            "needed": "do not reopen from origin/main audit/effective-status drift unless a listed PR230 same-surface artifact is present",
         },
     ]
 
@@ -2934,7 +2959,12 @@ def main() -> int:
             "non-chunk family until a fresh parseable same-surface artifact "
             "exists.  The cycle-20 process-gate continuation no-go records "
             "that another process-only gate is also not an admissible science "
-            "route until that fresh same-surface artifact exists."
+            "route until that fresh same-surface artifact exists.  The cycle-21 "
+            "remote-surface reopen guard records that fetched remote surfaces "
+            "also contain no listed same-surface artifact for admissible reopen.  "
+            "The cycle-22 main-audit-drift guard records that the latest "
+            "origin/main advance is audit/effective-status drift only and "
+            "supplies no listed PR230 same-surface artifact."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
@@ -2973,7 +3003,10 @@ def main() -> int:
         "another process-only gate is also not an admissible science route "
         "until that fresh same-surface artifact exists.  The cycle-21 "
         "remote-surface reopen guard records that fetched remote surfaces "
-        "also contain no listed same-surface artifact for admissible reopen."
+        "also contain no listed same-surface artifact for admissible reopen.  "
+        "The cycle-22 main-audit-drift guard records that the latest origin/main "
+        "advance is audit/effective-status drift only and supplies no listed "
+        "PR230 same-surface artifact."
     )
     result["strict_non_claims"] = [
         "does not claim retained closure",
@@ -2983,6 +3016,7 @@ def main() -> int:
         "does not treat chunk completion alone as positive retained closure",
         "does not treat process-only gates as proof inputs",
         "does not treat remote branch drift as same-surface physics evidence",
+        "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
     ]
     OUTPUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"\nWrote certificate: {OUTPUT.relative_to(ROOT)}")
