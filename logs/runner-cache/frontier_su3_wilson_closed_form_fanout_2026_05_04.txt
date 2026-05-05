@@ -1,0 +1,111 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_wilson_closed_form_fanout_2026_05_04.py
+runner_sha256: 773caac6b95f7ae12db813aa7b5d71c447df9ad49ef8e30a6c5b068583b86a40
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.56
+status: ok
+----- stdout -----
+==============================================================================
+SU(3) Wilson Plaquette Closed-Form Fan-Out at beta = 6
+==============================================================================
+
+Goal: rule out simpler closed-form paths to <P>(beta=6) before
+committing multi-day engineering on the L_s>=3 Wigner-Racah engine.
+
+  Reference: <P>_MC(beta=6) = 0.5934 (canonical lattice MC)
+  epsilon_witness = 3.030e-04
+
+--- M1: single-plaquette character expansion (Haar one-plaquette) ---
+  <P>_1plaq = (1/3) c_(1,0)(6) / c_(0,0)(6) = 0.422532
+  gap to MC: 0.1709 = 564x epsilon_witness
+  PASS: M1 produces a sane one-plaquette estimate.
+
+--- M2: strong-coupling leading order beta / (2 N^2) ---
+  <P>_SC1 = beta / (2 N^2) = 6 / 18 = 0.333333
+  gap to MC: 0.2601 = 858x epsilon_witness
+  PASS: M2 produces a sane leading-order estimate.
+
+--- M3: single-plaquette all-order strong coupling (= M1) ---
+  M3 value = 0.422532  (same as M1)
+  SUPPORT: genuine 2nd-order strong-coupling improvement requires
+           inter-plaquette small-loop enumeration, beyond this fan-out.
+
+--- M4: single-plaquette mean-field self-consistency (z = 6) ---
+  <P>_MF = c_F(beta_eff)/(3 c_0(beta_eff))  with beta_eff = z beta <P>_MF
+  fixed-point iterations: 12
+  <P>_MF = 0.874049
+  gap to MC: 0.2806 = 926x epsilon_witness
+  PASS: M4 mean-field converges and is in range.
+
+--- M5: weak-coupling 1-loop perturbation ---
+  <P>_WC = 1 - (N^2-1)/(8 N^2) * 4 / beta = 1 - 4/54 = 0.925926
+  gap to MC: 0.3325 = 1097x epsilon_witness
+  PASS: M5 weak-coupling estimate is in range.
+
+--- Comparison table ---
+
+  Method                                       <P>(6)   gap to MC   gap / eps
+  ---------------------------------------- ----------  ----------  ----------
+  M1: single-plaquette character               0.4225      0.1709         564x
+  M2: strong-coupling 1st order                0.3333      0.2601         858x
+  M4: mean-field self-consistency              0.8740      0.2806         926x
+  M5: weak-coupling 1-loop                     0.9259      0.3325        1097x
+  MC reference (canonical)                     0.5934      0.0000          0x
+
+--- Verdict ---
+
+  closures (gap < epsilon_witness):  0
+  near-misses (eps <= gap < 0.05):   0
+  far-misses (gap >= 0.05):          4
+
+  All closed-form estimates are FAR-MISSES (gap >= 0.05).
+
+  This confirms: simple closed-form methods (single-plaquette
+  Haar, strong-coupling, mean-field, weak-coupling 1-loop)
+  CANNOT reproduce <P>(beta=6) = 0.5934 within epsilon_witness.
+
+  The L_s>=3 Wigner-Racah engine path remains the next
+  exact-cube route among the tested methods. The Block 5
+  verdict is strengthened by this explicit ruling-out of orthogonal
+  closed-form attack frames.
+
+  Method-by-method commentary:
+    M1 (single-plaq char): 0.4225 — captures one plaquette
+                            in isolation; no inter-plaquette
+                            structure.
+    M2 (SC1):              0.3333 — strict leading-order
+                            beta/18; ignores all corrections.
+    M4 (MF):               0.8740 — adds coordination effect;
+                            saturates near M1 for SU(3) at beta=6
+                            because the self-consistent beta_eff
+                            stays in the strong-coupling regime.
+    M5 (WC 1-loop):        0.9259 — overshoots; beta=6 is
+                            in the CROSSOVER regime where neither
+                            strong-coupling (M1, M2, M4) nor
+                            weak-coupling (M5) is a good
+                            asymptotic.
+
+  beta = 6 is the SU(3) crossover regime where the correlation
+  length exceeds 2 lattice spacings (so L_s=2 fails, per Block 5)
+  AND no single-plaquette / leading-perturbative method captures
+  the connected multi-plaquette structure that drives <P> to
+  ~ 0.59. Exact closure would need a full lattice tensor-network
+  contraction route, a different audited derivation, or numerical MC.
+
+==============================================================================
+SUMMARY: THEOREM PASS=4 SUPPORT=1 FAIL=0
+==============================================================================
+
+Headline:
+  Closed-form fan-out at beta = 6 for SU(3) Wilson plaquette:
+    M1 single-plaquette = 0.4225  (gap 564x eps)
+    M2 SC leading       = 0.3333  (gap 858x eps)
+    M4 mean-field       = 0.8740  (gap 926x eps)
+    M5 WC 1-loop        = 0.9259  (gap 1097x eps)
+    MC reference        = 0.5934
+  Verdict: 4 simpler closed-form paths explicitly ruled out;
+  L_s>=3 Wigner-Racah path remains the next exact-cube route.
+
+----- stderr -----
+

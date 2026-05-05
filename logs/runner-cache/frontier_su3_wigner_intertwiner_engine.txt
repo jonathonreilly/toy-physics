@@ -1,0 +1,78 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_wigner_intertwiner_engine.py
+runner_sha256: 23db94b78c85f167b7a0daebe428c61643d441c4532cdca8bd6826ddac034d6e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.34
+status: ok
+----- stdout -----
+==============================================================================
+SU(3) Wigner Intertwiner Engine — Block 1: (1,1) ⊗ (1,1) CG
+==============================================================================
+
+--- Section A: Gell-Mann basis + structure constants ---
+  f antisymmetry error: 0.000e+00
+  d symmetry error:     0.000e+00
+  PASS: structure constants satisfy expected symmetries.
+
+  Standard structure constant values:
+    f[123] = 1.000000  (expected 1.000000)  [OK]
+    f[345] = 0.500000  (expected 0.500000)  [OK]
+    f[458] = 0.866025  (expected 0.866025)  [OK]
+  PASS: standard nonzero f_abc spot checks match.
+
+--- Section B: adjoint generators + quadratic Casimir ---
+  T^a Hermiticity error: 0.000e+00
+  Lie algebra commutator error: 3.331e-16
+  PASS: adjoint generators satisfy Hermiticity + Lie algebra.
+  C_2 on (1,1) adjoint eigenvalues: [3.0]
+  PASS: all C_2 eigenvalues = 3 (matches SU(3) (1,1) Casimir).
+
+--- Section C: tensor product Casimir + exchange operator ---
+  Exchange E^2 - I error: 0.000e+00
+  PASS: exchange operator satisfies E^2 = I.
+
+--- Section D: CG decomposition via simultaneous diagonalization ---
+  Diagonalizing H = C_2_total + α E + β C_3_total
+  α = sqrt(2) = 1.414214, β = sqrt(3)/7 = 0.247436
+  Number of unique eigenvalue clusters: 6
+  (eigenvalue, multiplicity) pairs:
+    H =      1.4142  multiplicity   1
+    H =      1.5858  multiplicity   8
+    H =      2.3589  multiplicity  10
+    H =      4.4142  multiplicity   8
+    H =      6.8127  multiplicity  10
+    H =      9.4142  multiplicity  27
+
+  Total dimension: 64  (expected 64)
+  PASS: dimensions sum to 64 = 8 × 8.
+
+--- Section F: verify (1,1) ⊗ (1,1) = 1 + 8 + 8 + 10 + 10̄ + 27 ---
+  Expected dimensions (sorted): [1, 8, 8, 10, 10, 27]
+  Actual dimensions (sorted):   [1, 8, 8, 10, 10, 27]
+  PASS: 6 channels with correct dimensions.
+
+--- Section G: orthonormality of CG eigenbasis ---
+  ||V^† V - I|| = 1.998e-15
+  PASS: CG basis is orthonormal.
+
+--- Section H: SU(3) equivariance of channel decomposition ---
+  ||[D⊗D, C_total]|| = 1.333e-15
+  ||[D⊗D, E]|| = 3.081e-33
+  PASS: D⊗D commutes with both Casimir and exchange.
+
+==============================================================================
+SUMMARY: THEOREM PASS=8 FAIL=0
+==============================================================================
+
+Headline:
+  SU(3) (1,1) ⊗ (1,1) decomposed into 6 fusion channels
+  with dimensions [1, 8, 8, 10, 10, 27] = 64 total.
+  Expected: 1 + 8 + 8 + 10 + 10̄ + 27 = 64. Match: True
+
+Block 1 deliverable: SU(3) (1,1) ⊗ (1,1) CG basis (64 orthonormal
+vectors organized into 6 irrep blocks). Available as `eigvecs` array
+and importable for Block 2 (4-fold Haar projector).
+
+----- stderr -----
+

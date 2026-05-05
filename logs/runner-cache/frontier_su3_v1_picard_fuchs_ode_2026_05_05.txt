@@ -1,0 +1,58 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py
+runner_sha256: fe578cf636503fc3f3dd37ce8eb5bb11e17ca2edf3cf3deacdc5bf2f3a787ab6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.68
+status: ok
+----- stdout -----
+Picard-Fuchs ODE:
+      3                      2                                                 ↪
+   2 d                      d           ⎛   2       ⎞        ⎛     2           ↪
+6⋅β ⋅───(J(β)) + β⋅(60 - β)⋅───(J(β)) + ⎝- β  - 10⋅β⎠⋅J(β) + ⎝- 4⋅β  - 2⋅β + 1 ↪
+       3                      2                                                ↪
+     dβ                     dβ                                                 ↪
+
+↪                 
+↪   ⎞ d           
+↪ 20⎠⋅──(J(β)) = 0
+↪     dβ          
+↪                 
+
+ODE residual (truncated to degree 21):
+  = 0
+
+Numerical solution and verification at β=6:
+ beta            J_ODE           Jp_ODE      <P>_1_ODE     <P>_1_Weyl
+ 2.00 1.1309566867e+00 1.4547245390e-01   0.1286277853   0.1286277853
+ 4.00 1.6987936929e+00 4.7501524744e-01   0.2796191494   0.2796191494
+ 6.00 3.4414403550e+00 1.4541177801e+00   0.4225317396   0.4225317396
+ 8.00 9.0224728415e+00 4.8338258264e+00   0.5357539902   0.5357539902
+10.00 2.8737268099e+01 1.7764681943e+01   0.6181757390   0.6181757390
+
+*** ⟨P⟩_1(β=6) = 0.422531739650 (direct integration, Ng=1200)
+
+Frobenius solution at β=0 (regular sing. point, indices ρ=0,-3,-4):
+  Solution analytic at β=0 is the 'physical' J(β); two singular ones grow as 1/β^3, 1/β^4 near 0.
+  Series J(β) = sum_n a_n β^n with a_0=1, a_1=0, a_2=1/36, a_3=1/648, a_4=1/2592, ...
+  Recurrence (extracted from ODE on Taylor coefficients):
+  6(N+1)(N+4)(N+5) a_{N+1} = N(N+1) a_N + 2(2N+3) a_{N-1} + a_{N-2}
+
+Recurrence verification (with a_0=1, a_1=0, a_2=1/36):
+  a_3 = 1/648
+  a_4 = 1/2592
+  a_5 = 1/31104
+  a_6 = 13/3359232
+  a_7 = 11/33592320
+  a_8 = 139/4837294080
+  a_9 = 19/8707129344
+  a_10 = 23/145118822400
+  a_11 = 29/2742745743360
+  a_12 = 2629/3949553870438400
+
+==============================================================================
+SUMMARY: THEOREM PASS=4 FAIL=0
+==============================================================================
+
+----- stderr -----
+
