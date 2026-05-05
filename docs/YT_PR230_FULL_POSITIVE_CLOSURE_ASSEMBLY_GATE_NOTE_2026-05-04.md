@@ -195,6 +195,13 @@ After cycle 21, `origin/main` advanced by audit/effective-status drift only;
 no listed PR230 same-surface artifact exists or changed for admissible reopen.
 The assembly gate remains open with `PASS=62 FAIL=0`.
 
+2026-05-05 cycle-23 main-effective-status-drift update: the gate now also
+consumes
+`outputs/yt_pr230_nonchunk_cycle23_main_effective_status_drift_guard_2026-05-05.json`.
+After cycle 22, `origin/main` advanced again by audit/effective-status drift
+only; no listed PR230 same-surface artifact exists or changed for admissible
+reopen.  The assembly gate remains open with `PASS=63 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 
@@ -234,5 +241,5 @@ covariance control, Schur `A/B/C` kernel rows, neutral-sector primitive-cone
 irreducibility, or scalar-LSZ moment/threshold/FV authority.  A path alone is
 not enough; the candidate must pass the reopen-admissibility gate first.  Then
 rerun the worklist, exhaustion, intake, independent-route, cycle-16, cycle-17,
-cycle-18, cycle-19, cycle-20, cycle-21, cycle-22, assembly, retained-route,
-and campaign gates before any proposal language.
+cycle-18, cycle-19, cycle-20, cycle-21, cycle-22, cycle-23, assembly,
+retained-route, and campaign gates before any proposal language.

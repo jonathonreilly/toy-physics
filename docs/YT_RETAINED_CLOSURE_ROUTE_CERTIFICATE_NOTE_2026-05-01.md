@@ -18,8 +18,24 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=210 FAIL=0
+# SUMMARY: PASS=211 FAIL=0
 ```
+
+## 2026-05-05 Non-Chunk Cycle-23 Main-Effective-Status-Drift Reopen Update
+
+The retained-route certificate now consumes
+`outputs/yt_pr230_nonchunk_cycle23_main_effective_status_drift_guard_2026-05-05.json`.
+This records the main-effective-status-drift guard: after cycle 22,
+`origin/main` advanced again by audit/effective-status drift only, with no
+listed PR230 same-surface artifact present or changed for admissible reopen.
+
+Validation: cycle-23 main-effective-status-drift guard `PASS=14 FAIL=0`;
+retained-route `PASS=211 FAIL=0`; campaign status `PASS=238 FAIL=0`; full
+positive closure assembly gate `PASS=63 FAIL=0`.
+
+No closure proposal is authorized.  Reopen only after a listed same-surface
+artifact exists as a parseable claim-status artifact, then rerun cycle-20,
+cycle-21, cycle-22, cycle-23, and aggregate gates before proposal language.
 
 ## 2026-05-05 Non-Chunk Cycle-22 Main-Audit-Drift Reopen Update
 
