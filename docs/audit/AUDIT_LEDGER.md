@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 61 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 214 |
+| **retained_bounded** | 215 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 844 |
-| audit_in_progress | 2 |
+| audit_in_progress | 1 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 31 |
@@ -39,8 +39,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
-| `audited_clean` | 369 |
+| `audit_in_progress` | 1 |
+| `audited_clean` | 370 |
 | `audited_conditional` | 400 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
@@ -50,12 +50,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 621 |
+| `bounded_theorem` | 622 |
 | `decoration` | 9 |
 | `meta` | 55 |
 | `no_go` | 187 |
 | `open_gate` | 112 |
-| `positive_theorem` | 798 |
+| `positive_theorem` | 797 |
 
 | criticality | count |
 |---|---:|
@@ -112,7 +112,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
-| `wave_radiation_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -467,6 +466,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_amplification_near_horizon_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `wave_equation_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `wave_equation_self_field_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `wave_radiation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | C | - |
 | `wave_retardation_continuum_limit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `wave_retardation_lab_prediction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
 | `wave_static_boundary_sensitivity_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
@@ -12732,6 +12732,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **chain closes:** True — Within the bounded numerical scope, the runner directly evolves the discrete local wave equation and then computes the reported observables from that field. No cited upstream authority or external comparator is needed for the finite-run claim.
 - **rationale:** The runner source performs actual numerical evolution of the stated second-order stencil and propagates amplitudes through the generated field; it does not merely print constants or import the contested results. The static, F~M, Born, null, gravity-sign, and retardation outputs are computed internally from the specified finite lattice setup. The clean verdict is bounded to this runner-level numerical theorem, not to broader physical equivalence with GR or untested multi-source/backreaction claims.
 - **auditor confidence:** medium
+
+### `wave_radiation_note`
+
+- **Note:** [`WAVE_RADIATION_NOTE.md`](../../docs/WAVE_RADIATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For scripts/wave_radiation.py on NL=60, W=12, S0=0.04 and the stated offsets/frequencies, the finite-difference 2+1D scalar wave run produces nonzero detector peaks with log-log slope -0.469, drive-frequency DFT dominance at f=0.10, zero f=0 peak reference, and exact S0=0 beam null.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-judicial-third-wave-radiation-note-20260505`  (codex-gpt-5; independence=judicial_review)
+- **load-bearing step:** Peak amplitudes over r = 2,4,6,8,10,12 give log-log slope = -0.469, with DFT peak at drive f = 0.10 and exact S0 = 0 null.  _(class `C`)_
+- **chain closes:** True — The runner constructs the field by an explicit local finite-difference update with a sinusoidal monopole source and computes the detector peaks, slope, DFT magnitudes, and null cases from the simulated histories. The clean result is bounded to that finite numerical experiment; it does not ratify the note's broader asymptotic or full-classical-wave framing.
+- **rationale:** The cached run completes with current output matching the note's peak table and slope -0.469; f=0.10 is the largest DFT magnitude at every listed detector; the f=0 reference peaks are zero; and the S0=0 beam null is exactly zero. The code computes these quantities from the finite-difference evolution rather than hard-coding the reported slope or detector amplitudes. Under hostile review this is a clean bounded theorem, not a positive theorem, because the evidence is for a fixed lattice size, finite time window, chosen source, offsets, and trial frequencies, and because no independent proof of the general far-field PDE asymptotic is in the restricted packet.
+- **auditor confidence:** high
 
 ### `wave_retardation_continuum_limit_note`
 
