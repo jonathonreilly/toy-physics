@@ -1,5 +1,33 @@
 # Review History
 
+## 2026-05-05 Non-Chunk Cycle-16 Reopen-Source Guard Self-Review
+
+Disposition: pass as exact negative boundary / no admissible reopen source.
+
+Findings:
+
+- The runner does not produce or infer any new same-surface row, certificate,
+  theorem, or production evidence; it only tests whether the post-checkpoint
+  branch has a valid reopen source after the cycle-15 stop contract.
+- The gate loads no chunk MC and does not package or rerun chunk outputs.
+- All six worklist units remain blocked, and every listed reopen-source key is
+  absent across the worklist, intake, terminal, reopen, and cycle-15 parent
+  surfaces.
+- The opportunity queue and handoff keep the stop/reopen contract, and
+  retained-route, assembly, and campaign certificates still deny proposal
+  authority.
+- The exact next action is to supply a listed same-surface artifact with
+  claim-status fields, then rerun the reopen-admissibility and aggregate gates
+  before selecting any positive route.
+
+Review-loop iteration 1: pass with no required code or claim edits.  Local
+review covered runner behavior, claim boundary, imports/support, Nature
+retention, repo governance, and audit compatibility for the changed file set.
+No subagents were used because this session did not explicitly authorize
+delegation.  The cycle-16 artifact is a process guard only: it reports no
+admissible reopen source, keeps `proposal_allowed=false`, and leaves all
+positive-route proof obligations future-only.
+
 ## 2026-05-05 Non-Chunk Cycle-15 Independent-Route Admission Self-Review
 
 Disposition: pass as exact negative boundary / no independent current route.

@@ -1,5 +1,12 @@
 # Artifact Plan
 
+Completed in the cycle-16 reopen-source guard continuation:
+
+- `scripts/frontier_yt_pr230_nonchunk_cycle16_reopen_source_guard.py`
+- `docs/YT_PR230_NONCHUNK_CYCLE16_REOPEN_SOURCE_GUARD_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_cycle16_reopen_source_guard_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
 Completed in the cycle-15 independent-route admission continuation:
 
 - `scripts/frontier_yt_pr230_nonchunk_cycle15_independent_route_admission_gate.py`

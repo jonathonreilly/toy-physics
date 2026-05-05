@@ -1,5 +1,13 @@
 # Opportunity Queue
 
+Cycle-16 update: the post-checkpoint reopen-source guard has now checked the
+only admissible action after the cycle-15 stop contract.  No listed
+same-surface row, certificate, or theorem is present as a parseable
+claim-status artifact, so no non-chunk route can reopen or be selected on the
+current branch.  The queue remains future-only until a listed artifact exists
+and the reopen-admissibility, worklist, exhaustion, intake, independent-route,
+cycle-16 guard, assembly, retained-route, and campaign gates all rerun.
+
 Cycle-15 update: the independent-route admission gate has now checked the
 only remaining continuation clause after the cycle-14 selector.  No
 independent current-surface route is admitted.  The stuck fanout covered the

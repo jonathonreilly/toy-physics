@@ -1,5 +1,49 @@
 # Handoff
 
+## 2026-05-05 PR230 Non-Chunk Cycle-16 Reopen-Source Guard
+
+Cycle 16 tested the only admissible post-checkpoint non-chunk action after the
+cycle-15 independent-route admission gate: whether a listed same-surface row,
+certificate, or theorem is now present as a parseable claim-status artifact
+that can reopen the route surface.
+
+Result: exact negative boundary.  The runner reloads the worklist,
+route-family audit, current-surface exhaustion gate, future-artifact intake
+gate, terminal route-exhaustion gate, reopen-admissibility gate, cycle-14
+selector, cycle-15 independent-route admission gate, full assembly gate,
+retained-route certificate, and campaign certificate.  It verifies that all
+parents pass, no parent authorizes a proposal, the latest checkpoint head
+remains on branch history, all six worklist units remain blocked, every listed
+reopen-source key remains absent across parent surfaces, and the opportunity
+queue plus handoff still record the stop/reopen contract.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_nonchunk_cycle16_reopen_source_guard.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=56 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=201 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=231 FAIL=0
+```
+
+Claim boundary: no closure proposal, no chunk packaging, no path-only reopen,
+no independent current route, and no further current-surface non-chunk route
+selection until a listed same-surface row, certificate, or theorem exists as a
+parseable claim-status artifact and the aggregate gates are rerun.
+
+Next exact action: do not select another current-surface non-chunk route on
+this branch.  Reopen only after a listed same-surface artifact exists as a
+parseable claim-status artifact; then rerun reopen-admissibility, worklist,
+exhaustion, intake, independent-route admission, cycle-16 guard, assembly,
+retained-route, and campaign gates before any proposal language.
+
 ## 2026-05-05 PR230 Non-Chunk Cycle-15 Independent-Route Admission Gate
 
 Cycle 15 tested the only remaining non-chunk continuation clause after the

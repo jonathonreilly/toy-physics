@@ -91,6 +91,7 @@ PARENTS = {
     "nonchunk_reopen_admissibility": "outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json",
     "nonchunk_cycle14_route_selector": "outputs/yt_pr230_nonchunk_cycle14_route_selector_gate_2026-05-05.json",
     "nonchunk_cycle15_independent_route_admission": "outputs/yt_pr230_nonchunk_cycle15_independent_route_admission_gate_2026-05-05.json",
+    "nonchunk_cycle16_reopen_source_guard": "outputs/yt_pr230_nonchunk_cycle16_reopen_source_guard_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -488,6 +489,20 @@ def main() -> int:
         )
         is True
         and certs["nonchunk_cycle15_independent_route_admission"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
+    nonchunk_cycle16_reopen_source_guard_closed = (
+        "cycle-16 reopen-source guard"
+        in statuses["nonchunk_cycle16_reopen_source_guard"]
+        and certs["nonchunk_cycle16_reopen_source_guard"].get("proposal_allowed")
+        is False
+        and certs["nonchunk_cycle16_reopen_source_guard"].get(
+            "reopen_source_guard_passed"
+        )
+        is True
+        and certs["nonchunk_cycle16_reopen_source_guard"].get(
             "dramatic_step_gate", {}
         ).get("passed")
         is False
@@ -916,6 +931,11 @@ def main() -> int:
         nonchunk_cycle15_independent_route_admission_closed,
         statuses["nonchunk_cycle15_independent_route_admission"],
     )
+    report(
+        "nonchunk-cycle16-reopen-source-guard-recorded",
+        nonchunk_cycle16_reopen_source_guard_closed,
+        statuses["nonchunk_cycle16_reopen_source_guard"],
+    )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
@@ -945,7 +965,9 @@ def main() -> int:
             "route is selected after the W/Z covariance-theorem import no-go.  "
             "The cycle-15 independent-route admission gate records that no "
             "independent current route is admitted without a new same-surface "
-            "artifact."
+            "artifact.  The cycle-16 reopen-source guard records that no "
+            "post-checkpoint parseable same-surface artifact exists for "
+            "admissible reopen."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
@@ -978,6 +1000,7 @@ def main() -> int:
             "does not treat terminal non-chunk route exhaustion as positive closure",
             "does not treat cycle-14 non-chunk route selection closure as positive evidence",
             "does not treat cycle-15 independent-route exhaustion as positive evidence",
+            "does not treat cycle-16 reopen-source absence as positive evidence",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks.  In parallel, "
@@ -990,7 +1013,8 @@ def main() -> int:
             "or same-surface Schur A/B/C kernel rows with scalar denominator closure, "
             "or a neutral-sector irreducibility theorem.  Rerun this assembly "
             "gate, including the cycle-15 independent-route admission gate, "
-            "before any retained-route proposal."
+            "and the cycle-16 reopen-source guard before any retained-route "
+            "proposal."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

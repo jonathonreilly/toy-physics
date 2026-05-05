@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 592,
+    "leaf": 593,
     "medium": 301
   },
-  "generated_at": "2026-05-05T07:47:05.242358+00:00",
+  "generated_at": "2026-05-05T08:02:27.198203+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20208,6 +20208,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_nonchunk_cycle16_reopen_source_guard_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_NONCHUNK_CYCLE16_REOPEN_SOURCE_GUARD_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_nonchunk_cycle16_reopen_source_guard.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_nonchunk_future_artifact_intake_gate_note_2026-05-05",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -23633,6 +23650,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 739,
-  "total_pending": 1130
+  "ready_count": 740,
+  "total_pending": 1131
 }

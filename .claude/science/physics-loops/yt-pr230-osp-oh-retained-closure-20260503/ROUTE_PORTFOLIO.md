@@ -142,3 +142,18 @@ Reason: the stuck fanout covers same-source W/Z, canonical-Higgs/source-Higgs,
 scalar-LSZ, Schur-row, neutral-rank, and downstream matching frames.  Every
 frame is future-only until one listed same-surface row, certificate, or theorem
 exists as a parseable claim-status artifact and the aggregate gates rerun.
+
+## R10: Cycle-16 Reopen-Source Guard
+
+After cycle 15 closes independent-route admission, test whether the
+post-checkpoint branch has any listed same-surface row, certificate, or theorem
+as a parseable claim-status artifact for admissible reopen.
+
+Status: closed negatively in
+`docs/YT_PR230_NONCHUNK_CYCLE16_REOPEN_SOURCE_GUARD_NOTE_2026-05-05.md`.
+
+Reason: all six worklist units remain blocked, every listed reopen-source key
+is absent across the parent surfaces, the route-family selector remains closed,
+and aggregate gates still deny proposal authority.  The branch should not
+select another current-surface non-chunk route until a listed artifact exists
+and the aggregate gates rerun.

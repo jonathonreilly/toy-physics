@@ -178,6 +178,9 @@ def main() -> int:
         "pr230_nonchunk_cycle15_independent_route_admission": load(
             "outputs/yt_pr230_nonchunk_cycle15_independent_route_admission_gate_2026-05-05.json"
         ),
+        "pr230_nonchunk_cycle16_reopen_source_guard": load(
+            "outputs/yt_pr230_nonchunk_cycle16_reopen_source_guard_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -2473,6 +2476,24 @@ def main() -> int:
         is False,
         statuses["pr230_nonchunk_cycle15_independent_route_admission"],
     )
+    report(
+        "pr230-nonchunk-cycle16-reopen-source-guard-recorded",
+        "cycle-16 reopen-source guard"
+        in str(statuses["pr230_nonchunk_cycle16_reopen_source_guard"])
+        and certificates["pr230_nonchunk_cycle16_reopen_source_guard"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_cycle16_reopen_source_guard"].get(
+            "reopen_source_guard_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_cycle16_reopen_source_guard"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False,
+        statuses["pr230_nonchunk_cycle16_reopen_source_guard"],
+    )
 
     remaining_routes = [
         {
@@ -2510,6 +2531,10 @@ def main() -> int:
         {
             "route": "independent non-chunk route admission",
             "needed": "no independent current route is admissible before a named same-surface artifact exists",
+        },
+        {
+            "route": "post-checkpoint non-chunk reopen source",
+            "needed": "no admissible reopen source exists until a named same-surface artifact is present and aggregate gates rerun",
         },
     ]
 
@@ -2782,7 +2807,9 @@ def main() -> int:
             "The cycle-12 reopen-admissibility gate rejects a path-only "
             "reopen attempt before aggregate reruns.  The cycle-15 "
             "independent-route admission gate records that no independent "
-            "current route is admitted without a new same-surface artifact."
+            "current route is admitted without a new same-surface artifact.  "
+            "The cycle-16 reopen-source guard records that the post-checkpoint "
+            "surface has no admissible same-surface artifact to consume."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
@@ -2808,7 +2835,9 @@ def main() -> int:
         "that no further current-surface non-chunk shortcut may be cycled until "
         "a named same-surface artifact exists and the aggregate gates are rerun.  "
         "The cycle-15 independent-route admission gate also records that no "
-        "independent current route is admitted on this branch."
+        "independent current route is admitted on this branch.  The cycle-16 "
+        "reopen-source guard records that no post-checkpoint same-surface "
+        "artifact is present for admissible reopen."
     )
     result["strict_non_claims"] = [
         "does not claim retained closure",
