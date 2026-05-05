@@ -1,0 +1,52 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_4d_mc_support_2026_05_04.py
+runner_sha256: bcd10bdeca3489e5435e37fb753a8d3eb159b7f0d1b3880cf9c1b0624e23b513
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 53.36
+status: ok
+----- stdout -----
+==============================================================================
+SU(3) WILSON PLAQUETTE 4D FINITE-VOLUME SUPPORT
+==============================================================================
+seed=42, beta=6.0, comparator=0.5934
+
+4D periodic Wilson MC: Ls=2, Lt=2
+  sites=16, links=64, plaquettes=96
+  thermalize 100: P=0.6168, t=1s
+  thermalize 200: P=0.6201, t=2s
+  thermalize 300: P=0.5619, t=4s
+  thermalize 400: P=0.5972, t=5s
+  thermalize 500: P=0.6423, t=6s
+  measure 100: P=0.6274 +/- 0.0054, t=7s
+  measure 200: P=0.6361 +/- 0.0036, t=8s
+  measure 300: P=0.6257 +/- 0.0035, t=9s
+  result Ls=2, Lt=2: P = 0.6257 +/- 0.0035
+
+4D periodic Wilson MC: Ls=3, Lt=3
+  sites=81, links=324, plaquettes=486
+  thermalize 100: P=0.6131, t=6s
+  thermalize 200: P=0.5953, t=12s
+  thermalize 300: P=0.5801, t=18s
+  thermalize 400: P=0.5948, t=25s
+  thermalize 500: P=0.5898, t=31s
+  measure 100: P=0.6000 +/- 0.0016, t=37s
+  measure 200: P=0.5970 +/- 0.0013, t=44s
+  result Ls=3, Lt=3: P = 0.5970 +/- 0.0013
+
+Bounded checks
+  [PASS] L=2 full 3+1D periodic Wilson run remains in the expected small-volume beta=6 band
+         P22=0.6257 +/- 0.0035
+  [PASS] L=3 full 3+1D periodic Wilson run is in the canonical plaquette region
+         P33=0.5970 +/- 0.0013
+  [PASS] the L=3 value is close to, but does not prove, the canonical L->infinity comparator
+         delta=+0.0036
+  [PASS] the finite-volume result supports the full 3+1D surface rather than a spatial-only minimal-block reading
+         support-only numerical separation; not an analytic closure
+
+==============================================================================
+SUMMARY: PASS=4 FAIL=0
+==============================================================================
+
+----- stderr -----
+

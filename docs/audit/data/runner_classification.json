@@ -9846,10 +9846,10 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0
+        "D": 1
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "D",
       "runner": "scripts/lensing_k_sweep.py"
     },
     "lensing_long_path_test_note": {
@@ -35503,10 +35503,10 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0
+        "D": 1
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/lensing_long_path_test.py": {
@@ -38336,11 +38336,11 @@
       "A": 10,
       "B": 164,
       "C": 563,
-      "D": 209,
-      "none": 421
+      "D": 210,
+      "none": 420
     },
     "runners_classified": 1367,
     "runners_with_C": 671,
-    "runners_with_D": 340
+    "runners_with_D": 341
   }
 }

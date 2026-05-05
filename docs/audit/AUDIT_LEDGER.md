@@ -71,7 +71,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 - runners classified: 1367
 - runners with (C) first-principles compute hits: 671
-- runners with (D) external comparator hits: 340
+- runners with (D) external comparator hits: 341
 - decoration candidates (no C, no D): 115
 
 ## Top 25 by load-bearing score (topology only)

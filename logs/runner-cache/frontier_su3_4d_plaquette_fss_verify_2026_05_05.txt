@@ -1,0 +1,77 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_4d_plaquette_fss_verify_2026_05_05.py
+runner_sha256: 4e58287e7d1723847d61d0dd39d9b5c114335e63ebd835141d3b94c8f34e1b47
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.31
+status: ok
+----- stdout -----
+==============================================================================
+SU(3) WILSON PLAQUETTE 4D FSS VERIFIER
+==============================================================================
+loaded 5 artifacts from outputs/su3_plaquette_fss_2026_05_05
+
+--- L = 3 ---
+  n_samples=300, n_meas_sweeps=600, sample_every=2
+  acceptance during measure = 0.512
+  tau_int = 3.73 (window = 19), n_eff = 40.2
+  block-jackknife (block=8): mean = 0.60111, SE = 0.00182
+--- L = 4 ---
+  n_samples=300, n_meas_sweeps=600, sample_every=2
+  acceptance during measure = 0.489
+  tau_int = 5.32 (window = 27), n_eff = 28.2
+  block-jackknife (block=11): mean = 0.59717, SE = 0.00101
+--- L = 5 ---
+  n_samples=625, n_meas_sweeps=1250, sample_every=2
+  acceptance during measure = 0.489
+  tau_int = 4.28 (window = 22), n_eff = 73.0
+  block-jackknife (block=9): mean = 0.59546, SE = 0.00041
+--- L = 6 ---
+  n_samples=1000, n_meas_sweeps=2000, sample_every=2
+  acceptance during measure = 0.489
+  tau_int = 11.94 (window = 60), n_eff = 41.9
+  block-jackknife (block=24): mean = 0.59502, SE = 0.00034
+--- L = 8 ---
+  n_samples=1000, n_meas_sweeps=2000, sample_every=2
+  acceptance during measure = 0.490
+  tau_int = 7.69 (window = 39), n_eff = 65.0
+  block-jackknife (block=16): mean = 0.59395, SE = 0.00019
+
+--- FSS fits ---
+  M1_inv_V: P_inf = 0.59400 +/- 0.00018 (fit), +/- 0.00032 (LOO),  chi2/dof = 1.647
+  M2_inv_L2: P_inf = 0.59288 +/- 0.00031 (fit), +/- 0.00009 (LOO),  chi2/dof = 0.239
+  wrote: outputs/su3_plaquette_fss_2026_05_05/fss_summary.json
+
+--- Baseline numerical checks ---
+  [PASS] A. at least 3 distinct lattice volumes are present
+         L values present = [3, 4, 5, 6, 8]
+  [PASS] B. effective sample size n_eff >= 8 for every L
+         min n_eff over L = 28.2
+  [PASS] C. block-jackknife SE finite and positive for every L
+         SE values = [0.00182, 0.00101, 0.00041, 0.00034, 0.00019]
+  [PASS] D. each P(L) lies in the canonical 0.55..0.65 band
+         means = [0.60111, 0.59717, 0.59546, 0.59502, 0.59395]
+  [PASS] E. P(L) is monotone decreasing with L up to 3 combined SE
+         all neighboring L pairs consistent
+  [PASS] F. two FSS forms (1/V and 1/L^2) give P_inf agreeing within 3 sigma (RSS)
+         |M1-M2| = 0.00112, 3-sigma RSS threshold = 0.00147, sigma_significance = 2.29
+  [PASS] G. M1 bracket [P_inf - 2 SE, P_inf + 2 SE] has finite diameter
+         bracket = [0.59327, 0.59473], diameter = 0.00146
+  [INFO] H. comparator distance |P_inf(M1) - 0.5934| = 0.00060  (reported, not asserted)
+
+--- Five-volume numerical-theorem checks ---
+  [PASS] H. at least 5 distinct lattice volumes are present
+         L values present = [3, 4, 5, 6, 8]
+  [PASS] I. two-parameter FSS fits have at least 3 degrees of freedom
+         dof = 3
+  [PASS] J. two FSS forms agree within 3 sigma RSS
+         |M1-M2| = 0.00112, 3-sigma RSS threshold = 0.00147
+  [PASS] K. canonical comparator lies inside the M1 two-sigma bracket
+         comparator=0.5934, bracket=[0.59327, 0.59473]
+
+==============================================================================
+SUMMARY: PASS=11 FAIL=0
+==============================================================================
+
+----- stderr -----
+

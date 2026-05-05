@@ -1,10 +1,10 @@
 ===== runner cache v1 =====
 runner: scripts/persistent_object_top4_multistage_transfer_sweep.py
-runner_sha256: 9c42a7fd7264638e645362f65184fa2f0c500488a94c4545bf2357a1355af98d
-timeout_sec: 1800
-exit_code: -9
-elapsed_sec: 1800.01
-status: timeout
+runner_sha256: c9f10056bf35ed16e0baa7806e5dcd0c3d7bae12412229b5527a837c3dca206d
+timeout_sec: 3600
+exit_code: 0
+elapsed_sec: 759.90
+status: ok
 ----- stdout -----
 ==========================================================================================================================================
 PERSISTENT OBJECT MULTISTAGE TRANSFER SWEEP
@@ -96,6 +96,22 @@ CASE: length7  (W=3, L=7, source_z=2.0)
   max_kappa_drift     = 0.000%
   admissible          = True
 
+CASE: length8  (W=3, L=8, source_z=2.0)
+  stage_mean_overlap  = [0.965,0.946,0.946]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [0.96,0.96,0.96]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+SUMMARY
+  top4 multistage-admissible on 11/13 listed widened-pocket cases
+
+SAFE READ
+  - If top4 stays open across most of this pocket, the exact-lattice route now has a real transferable multistage floor.
+  - If top4 collapses on the boundary rows, the floor is real but still pocket-limited.
+  - This is still a bounded exact-lattice transfer sweep, not matter closure.
+
+Total runtime: 759.8s
 
 ----- stderr -----
 
