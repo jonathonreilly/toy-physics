@@ -74,10 +74,24 @@ authority.  The source-Higgs route still requires a same-surface
 canonical-Higgs identity and normalization certificate plus production pole
 residue rows.
 
+## 2026-05-05 Canonical O_H Premise Stretch Update
+
+The worklist now consumes
+`outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json`.  This is the
+deep-work stretch on the named hard residual: current PR230 primitives do not
+derive the same-surface `O_H` identity and normalization certificate.  The
+runner records the minimal allowed premise set, six missing certificate
+obligations, an algebraic non-data counterfamily with fixed norms and varying
+source-to-`O_H` overlap, and a stuck fan-out.
+
+The selected next positive non-chunk route is now same-source W/Z response:
+derive a same-source EW action/row authority or a closed top/W covariance
+theorem, otherwise keep W/Z rows as the next measurement-row target.
+
 ## Verification
 
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
 python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
-# SUMMARY: PASS=25 FAIL=0
+# SUMMARY: PASS=26 FAIL=0
 ```

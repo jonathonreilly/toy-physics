@@ -1,5 +1,21 @@
 # Review History
 
+## 2026-05-05 Canonical O_H Premise Stretch Self-Review
+
+Disposition: pass as exact negative boundary / open campaign.
+
+Findings:
+
+- The runner does not claim a same-surface `O_H` identity or normalization
+  certificate; it proves those obligations remain open on current PR230
+  primitives.
+- The algebraic counterfamily is a non-data proof witness and is explicitly
+  distinguished from production evidence.
+- The stuck fan-out is recorded and selects same-source W/Z response as the
+  next positive non-chunk pivot.
+- Aggregate worklist, assembly, retained-route, and campaign certificates all
+  remain open with proposal authority denied.
+
 ## Block 1 Self-Review
 
 Disposition: demote-to-exact-negative-boundary.

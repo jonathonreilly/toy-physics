@@ -1,7 +1,7 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact negative boundary / unratified source-Higgs Gram shortcut is not O_H authority
+actual_current_surface_status: exact negative boundary / same-surface O_H identity and normalization certificate not derivable from current PR230 primitives
 conditional_surface_status: conditional-support if C_sH/C_HH Gram purity, W/Z response, or rank-one neutral scalar theorem closes the overlap
 hypothetical_axiom_status: null
 admitted_observation_status: null
@@ -16,6 +16,10 @@ Retained/proposed-retained wording is not allowed for this block.
 Open imports:
 
 - same-surface `O_H` realization or equivalent overlap row;
+- canonical `O_H` premise stretch is closed negatively on the current PR230
+  primitives: the allowed premise set leaves all same-surface identity,
+  normalization, and independent-overlap obligations open, with an algebraic
+  counterfamily varying source-to-`O_H` overlap at fixed norms;
 - `C_sH/C_HH` pole residues, W/Z response row, or rank-one neutral-scalar
   theorem;
 - source-Higgs Gram-purity contract witness is exact support only; real

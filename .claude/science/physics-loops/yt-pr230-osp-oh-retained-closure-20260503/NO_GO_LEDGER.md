@@ -22,3 +22,4 @@
 | Adjacent gravity/lepton/DM/Higgs/Koide `O_h/O_H` surfaces as PR230 `O_H` authority | closed negatively | `YT_CROSS_LANE_OH_AUTHORITY_AUDIT_NOTE_2026-05-05.md` |
 | Finite polynomial contact repair as scalar-LSZ authority | closed negatively | `YT_FH_LSZ_POLYNOMIAL_CONTACT_REPAIR_NO_GO_NOTE_2026-05-05.md` |
 | Perfect source-Higgs Gram purity against an unratified supplied operator as PR230 `O_H` authority | closed negatively | `YT_SOURCE_HIGGS_UNRATIFIED_GRAM_SHORTCUT_NO_GO_NOTE_2026-05-05.md` |
+| Same-surface `O_H` identity/normalization from current PR230 primitives | closed negatively | `YT_CANONICAL_OH_PREMISE_STRETCH_NO_GO_NOTE_2026-05-05.md` |

@@ -416,6 +416,9 @@ def main() -> int:
         "cross_lane_oh_authority_audit": load(
             "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json"
         ),
+        "canonical_oh_premise_stretch": load(
+            "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json"
+        ),
         "sm_one_higgs_oh_import_boundary": load(
             "outputs/yt_sm_one_higgs_oh_import_boundary_2026-05-03.json"
         ),

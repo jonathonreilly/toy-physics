@@ -30,6 +30,7 @@ PARENTS = {
     "canonical_oh_semantic_firewall": "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
     "fms_oh_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
     "cross_lane_oh": "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
+    "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
     "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
     "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
@@ -151,6 +152,7 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 status(certs["canonical_oh_gate"]),
                 status(certs["fms_oh_attempt"]),
                 status(certs["cross_lane_oh"]),
+                status(certs["canonical_oh_premise_stretch"]),
                 status(certs["source_higgs_readiness"]),
                 status(certs["source_higgs_unratified_gram_no_go"]),
             ],
@@ -285,6 +287,7 @@ def main() -> int:
     report("assembly-still-rejects-current-surface", "scalar_lsz_model_class_fv_ir" in assembly_missing, f"missing={assembly_missing}")
     report("assembly-still-rejects-chunk-only", "scalar_lsz_model_class_fv_ir" in chunk_only_missing, f"missing={chunk_only_missing}")
     report("canonical-oh-route-gated", "canonical-Higgs operator certificate absent" in status(certs["canonical_oh_gate"]), status(certs["canonical_oh_gate"]))
+    report("canonical-oh-premise-stretch-gated", "same-surface O_H identity and normalization" in status(certs["canonical_oh_premise_stretch"]), status(certs["canonical_oh_premise_stretch"]))
     report("source-higgs-route-gated", "source-Higgs production launch blocked" in status(certs["source_higgs_readiness"]), status(certs["source_higgs_readiness"]))
     report("source-higgs-unratified-gram-shortcut-closed", "unratified source-Higgs Gram shortcut" in status(certs["source_higgs_unratified_gram_no_go"]), status(certs["source_higgs_unratified_gram_no_go"]))
     report("wz-route-gated", "same-source EW action not defined" in status(certs["wz_same_source_action"]), status(certs["wz_same_source_action"]))
@@ -342,11 +345,12 @@ def main() -> int:
             "does not turn support/no-go gates into physical y_t evidence",
         ],
         "exact_next_action": (
-            "Pick one remaining work unit and supply its missing future file or "
-            "theorem.  The highest-value choices are: same-surface O_H plus "
-            "C_sH/C_HH rows; strict scalar-LSZ Stieltjes/Pade/threshold/FV certificate; "
-            "matched top/WZ response rows plus non-observed g2; same-surface Schur "
-            "kernel rows; or neutral-sector primitive-cone irreducibility."
+            "After the canonical O_H premise stretch no-go, pivot to the "
+            "same-source W/Z response route: derive the same-source EW "
+            "action/row authority or a closed top/W covariance theorem.  "
+            "Other remaining choices are strict scalar-LSZ authority, "
+            "same-surface Schur kernel rows, or neutral-sector primitive-cone "
+            "irreducibility."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

@@ -21,6 +21,22 @@ PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificat
 # SUMMARY: PASS=192 FAIL=0
 ```
 
+## 2026-05-05 Canonical O_H Premise Stretch Update
+
+The retained-route certificate now consumes
+`outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json`.  This closes
+the current-primitives stretch attempt: the same-surface `O_H` identity and
+normalization certificate is not derivable from the loaded PR230 gates and
+support premises.  The runner records an algebraic non-data counterfamily and
+selects same-source W/Z response as the next positive non-chunk pivot.
+
+Validation: canonical `O_H` premise stretch no-go `PASS=17 FAIL=0`;
+retained-route `PASS=192 FAIL=0`; campaign status `PASS=219 FAIL=0`; full
+positive closure assembly gate `PASS=44 FAIL=0`; non-chunk worklist
+`PASS=26 FAIL=0`.
+
+No retained or `proposed_retained` closure is authorized.
+
 ## 2026-05-05 Source-Higgs Unratified-Gram Shortcut Update
 
 The retained-route certificate now consumes
@@ -33,8 +49,8 @@ authorization remain required.
 
 Validation: source-Higgs unratified-Gram no-go `PASS=10 FAIL=0`;
 retained-route `PASS=192 FAIL=0`; campaign status `PASS=219 FAIL=0`; full
-positive closure assembly gate `PASS=43 FAIL=0`; non-chunk worklist
-`PASS=25 FAIL=0`.
+positive closure assembly gate `PASS=44 FAIL=0`; non-chunk worklist
+`PASS=26 FAIL=0`.
 
 No retained or `proposed_retained` closure is authorized.
 

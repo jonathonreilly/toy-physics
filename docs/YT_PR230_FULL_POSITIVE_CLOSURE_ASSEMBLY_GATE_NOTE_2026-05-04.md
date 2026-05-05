@@ -93,6 +93,12 @@ source-Higgs bridge still needs a same-surface `O_H` identity and normalization
 certificate plus production `C_sH/C_HH` pole residues.  The assembly gate
 remains open with `PASS=43 FAIL=0`.
 
+2026-05-05 canonical `O_H` premise stretch update: the gate now also consumes
+`outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json`.  The current
+PR230 primitives still do not derive the same-surface `O_H` identity and
+normalization certificate.  The source-overlap bridge remains absent, and the
+assembly gate remains open with `PASS=44 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 
@@ -100,7 +106,8 @@ The current positive non-chunk bridge candidates remain:
 
 - source-Higgs Gram purity, blocked by the missing same-surface `O_H`
   certificate, missing production `C_sH/C_HH` pole residues, and the
-  unratified-Gram shortcut no-go;
+  unratified-Gram shortcut no-go plus the canonical `O_H` premise-stretch
+  no-go;
 - same-source W/Z response, blocked by the missing same-source EW action,
   missing W/Z correlator mass-fit rows, missing lightweight W-response
   production row certificate, missing strict `delta_perp` tomography/null/purity
@@ -122,11 +129,10 @@ define `y_t` through a matrix element or `y_t_bare`, or use `H_unit`,
 
 ## Next Action
 
-Keep chunk production separate.  In parallel, pursue one real non-chunk bridge
-that can satisfy the gate: a same-surface `O_H` certificate plus
-`C_sH/C_HH` production rows, a same-source EW action plus W/Z mass-response
-rows plus the lightweight readout certificate, strict `delta_perp` correction
-authority, matched top/W rows or a strict top/W factorization theorem, and
-sector-overlap identity, same-surface Schur `A/B/C` kernel rows, or a
+Keep chunk production separate.  The next non-chunk pivot is same-source W/Z
+response: derive a same-source EW action/row authority or a closed top/W
+covariance theorem, then rerun the W/Z gates and the assembly gate.  Other
+remaining bridge options are a future same-surface `O_H` certificate plus
+`C_sH/C_HH` production rows, same-surface Schur `A/B/C` kernel rows, or a
 neutral-sector irreducibility theorem.  Rerun the assembly gate before any
 retained-route proposal.

@@ -5,14 +5,14 @@ start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
 actual_current_surface_status: open
-active_residual: "source-Higgs unratified-Gram shortcut closed negatively; remaining units are same-surface O_H/source-Higgs, W/Z response, scalar-LSZ, Schur rows, neutral rank-one, matching/running after readout"
+active_residual: "canonical O_H premise stretch closed negatively; current PR230 primitives still lack same-surface O_H identity/normalization, so next non-chunk pivot is same-source W/Z response or closed top/W covariance theorem"
 latest_checkpoint:
-  utc: "2026-05-05T04:05:31Z"
-  block: 60
-  artifact: "source-Higgs unratified-Gram shortcut no-go"
-  status: "exact negative boundary / unratified source-Higgs Gram shortcut is not O_H authority"
-  result: "The new runner constructs a perfect C_ss/C_sH/C_HH Gram witness against an unratified supplied operator and shows the postprocessor contract still rejects it without same-surface canonical-Higgs identity, identity certificate, normalization certificate, production phase, and retained-route gate. Counterfamily rows keep the unratified Gram relation fixed while varying canonical-Higgs overlap, so perfect Gram purity against an unratified operator cannot be promoted to PR230 O_H authority."
-  claim_boundary: "no retained/proposed-retained closure, no chunk packaging, no y_t_bare, no H_unit/Ward/yt_ward/alpha_LM/plaquette/u0/observed-target/bare-coupling/unit-shortcut authority; unratified source-Higgs Gram rows are not promoted to canonical-Higgs identity"
+  utc: "2026-05-05T04:21:33Z"
+  block: 61
+  artifact: "canonical O_H premise-lattice stretch no-go"
+  status: "exact negative boundary / same-surface O_H identity and normalization certificate not derivable from current PR230 primitives"
+  result: "The new runner records the allowed premise set, six missing certificate obligations, an algebraic non-data counterfamily with fixed source/candidate norms and varying source-to-O_H overlap, and a stuck fan-out. The source-Higgs route remains blocked until a same-surface O_H certificate and overlap rows land; the best next non-chunk pivot is same-source W/Z response through same-source action/row authority or a closed top/W covariance theorem."
+  claim_boundary: "no retained/proposed-retained closure, no chunk packaging, no empirical data introduced, and no user-listed shortcut authority used; current support gates are not promoted to canonical-Higgs identity"
   live_compute: "chunk worker remains separate; this checkpoint is non-chunk source-Higgs route-gating only"
   checkpoint_files:
     - scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py
@@ -36,6 +36,9 @@ latest_checkpoint:
     - scripts/frontier_yt_source_higgs_unratified_gram_shortcut_no_go.py
     - docs/YT_SOURCE_HIGGS_UNRATIFIED_GRAM_SHORTCUT_NO_GO_NOTE_2026-05-05.md
     - outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json
+    - scripts/frontier_yt_canonical_oh_premise_stretch_no_go.py
+    - docs/YT_CANONICAL_OH_PREMISE_STRETCH_NO_GO_NOTE_2026-05-05.md
+    - outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json
     - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
     - docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md
     - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
@@ -133,12 +136,15 @@ lock_status:
   repo_lock_attempted: true
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
-cycle: 2
-block: 60
+cycle: 3
+block: 61
 files_touched:
   - scripts/frontier_yt_source_higgs_unratified_gram_shortcut_no_go.py
   - docs/YT_SOURCE_HIGGS_UNRATIFIED_GRAM_SHORTCUT_NO_GO_NOTE_2026-05-05.md
   - outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json
+  - scripts/frontier_yt_canonical_oh_premise_stretch_no_go.py
+  - docs/YT_CANONICAL_OH_PREMISE_STRETCH_NO_GO_NOTE_2026-05-05.md
+  - outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json
   - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
   - docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md
   - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json

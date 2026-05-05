@@ -10,6 +10,7 @@
     "canonical_higgs_operator_realization_gate": "open / canonical-Higgs operator realization gate not passed",
     "canonical_higgs_operator_semantic_firewall": "bounded-support / canonical-Higgs operator semantic firewall passed",
     "canonical_higgs_repo_authority_audit": "exact negative boundary / repo-wide canonical-Higgs O_H authority audit",
+    "canonical_oh_premise_stretch": "exact negative boundary / same-surface O_H identity and normalization certificate not derivable from current PR230 primitives",
     "canonical_scalar_import": "exact negative boundary / canonical scalar normalization import audit",
     "cl3_automorphism_source_identity": "exact negative boundary / Cl3 automorphism data not source-Higgs identity",
     "cl3_source_unit": "exact negative boundary / Cl3 source-unit normalization no-go",

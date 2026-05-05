@@ -44,10 +44,19 @@ Completed during 2026-05-04 campaign continuation:
 
 Next positive artifact candidates:
 
-- same-surface canonical-Higgs `O_H` certificate, then source-Higgs production
-  rows through the existing default-off harness;
-- actual same-source EW action plus W/Z correlator response harness and production rows;
+- same-source W/Z response: derive same-source EW action/row authority or a
+  closed top/W covariance theorem;
+- future same-surface canonical-Higgs `O_H` certificate, then source-Higgs
+  production rows through the existing default-off harness;
 - dynamical rank-one theorem stretch attempt from minimal scalar kernel data.
+
+Completed in the canonical `O_H` premise stretch continuation:
+
+- `scripts/frontier_yt_canonical_oh_premise_stretch_no_go.py`
+- `docs/YT_CANONICAL_OH_PREMISE_STRETCH_NO_GO_NOTE_2026-05-05.md`
+- `outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json`
+- refreshed non-chunk worklist, full assembly, retained-route, and campaign
+  certificates.
 
 Completed in the lightweight W-response continuation:
 

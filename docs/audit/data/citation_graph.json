@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T04:08:52.709614+00:00",
+  "generated_at": "2026-05-05T04:25:21.504929+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39412,6 +39412,16 @@
       "runner_path": "scripts/frontier_yt_canonical_higgs_repo_authority_audit.py",
       "title": "Canonical-Higgs Repo Authority Audit"
     },
+    "yt_canonical_oh_premise_stretch_no_go_note_2026-05-05": {
+      "claim_id": "yt_canonical_oh_premise_stretch_no_go_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / same-surface O_H identity and normalization certificate not derivable from current PR230 primitives",
+      "deps": [],
+      "note_hash": "85322f8dbf6385f2c4a91c70ce4f20c070879303a87d19e2f906917283196e41",
+      "path": "docs/YT_CANONICAL_OH_PREMISE_STRETCH_NO_GO_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_canonical_oh_premise_stretch_no_go.py",
+      "title": "PR230 Canonical O_H Premise Stretch No-Go"
+    },
     "yt_canonical_scalar_normalization_import_audit_note_2026-05-01": {
       "claim_id": "yt_canonical_scalar_normalization_import_audit_note_2026-05-01",
       "current_status": "unknown",
@@ -41823,7 +41833,7 @@
       "current_status": "open",
       "current_status_raw": "open / active campaign continuing after current shortcut blocks",
       "deps": [],
-      "note_hash": "97cf116203f34ef6b8914c6e998ffdf4bdfb8cae084fc6f2409f6d2ece716c72",
+      "note_hash": "bf8af760b573664dca5dfcf05974df804b4af485081d55a1bbb15bd1b6503e1e",
       "path": "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
@@ -41833,7 +41843,7 @@
       "current_status": "open",
       "current_status_raw": "open / assembly gate; proposal_allowed=false.",
       "deps": [],
-      "note_hash": "4f986305e31df63876f6d775774f9ee484933bf86d7c5f8930339031914a6bee",
+      "note_hash": "8c143d1b2ce7038555db58401f5a90c91dbcaf158eaf32f0c785e28837d0f2b4",
       "path": "docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md",
       "runner_path": null,
       "title": "PR230 Full Positive Closure Assembly Gate Note"
@@ -41863,7 +41873,7 @@
       "current_status": "open",
       "current_status_raw": "open / PR230 non-chunk closure worklist complete; positive closure still blocked",
       "deps": [],
-      "note_hash": "939c04e46f11d77e3e605800d8d10ce38b5c15649596410fca5ca35edd5b1427",
+      "note_hash": "fe8a2f5066e99eb85e6ade15afd5c51a5c34dfeccb6b5b87af6c2bcc60c7d5a1",
       "path": "docs/YT_PR230_NON_CHUNK_CLOSURE_WORKLIST_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_non_chunk_closure_worklist.py",
       "title": "PR #230 Non-Chunk Closure Worklist Gate"
@@ -41965,7 +41975,7 @@
       "current_status": "open",
       "current_status_raw": "open / closure not yet reached",
       "deps": [],
-      "note_hash": "9c94e3d09a09158b6a80eb9a58d1d45b68b09b936fa2cfc10acbafd4bffefc88",
+      "note_hash": "9e53e0a338ba3988651b320ff511be0a2ed60c28339a373b755cdf05165e6817",
       "path": "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_retained_closure_route_certificate.py",
       "title": "PR230 Top-Yukawa Retained-Closure Route Certificate"
@@ -42619,7 +42629,7 @@
       "current_status": "unknown",
       "current_status_raw": "exact negative boundary / unratified source-Higgs Gram shortcut is",
       "deps": [],
-      "note_hash": "9e064abbf1b2ef47fd057a8ee2e73030dcd6013133f9deefc575f53e03d6e47c",
+      "note_hash": "9b907945ad4c7b5b32cc7dc3cf194c9a8cc796b82046be3290ecb39dd1f1b1f6",
       "path": "docs/YT_SOURCE_HIGGS_UNRATIFIED_GRAM_SHORTCUT_NO_GO_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_source_higgs_unratified_gram_shortcut_no_go.py",
       "title": "PR230 Source-Higgs Unratified-Gram Shortcut No-Go"
@@ -44344,6 +44354,7 @@
     "yt_canonical_higgs_operator_realization_gate_note_2026-05-02",
     "yt_canonical_higgs_operator_semantic_firewall_note_2026-05-04",
     "yt_canonical_higgs_repo_authority_audit_note_2026-05-03",
+    "yt_canonical_oh_premise_stretch_no_go_note_2026-05-05",
     "yt_canonical_scalar_normalization_import_audit_note_2026-05-01",
     "yt_chirality_selector_bridge_note_2026-05-01",
     "yt_cl3_automorphism_source_identity_no_go_note_2026-05-02",
@@ -44652,17 +44663,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1000,
-    "node_count": 1953,
-    "root_count": 1466,
-    "runners_with_path": 1475,
+    "leaf_count": 1001,
+    "node_count": 1954,
+    "root_count": 1467,
+    "runners_with_path": 1476,
     "status_counts": {
       "bounded": 544,
       "open": 99,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 424,
-      "unknown": 512
+      "unknown": 513
     }
   }
 }

@@ -29,6 +29,24 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=219 FAIL=0
 ```
 
+## 2026-05-05 Canonical O_H Premise Stretch Update
+
+The campaign status certificate now consumes
+`outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json`.  This is the
+cycle-3 deep-work artifact on the named hard residual.  It records that the
+current PR230 primitives cannot derive the same-surface `O_H` identity and
+normalization certificate, gives an algebraic non-data counterfamily, and
+performs the required stuck fan-out.
+
+Validation: canonical `O_H` premise stretch no-go `PASS=17 FAIL=0`;
+retained-route `PASS=192 FAIL=0`; campaign status `PASS=219 FAIL=0`; full
+positive closure assembly gate `PASS=44 FAIL=0`; non-chunk worklist
+`PASS=26 FAIL=0`.
+
+The campaign remains open.  The next non-chunk pivot is same-source W/Z
+response: derive same-source EW action/row authority or a closed top/W
+covariance theorem; otherwise keep W/Z rows as the next measurement-row target.
+
 ## 2026-05-05 Source-Higgs Unratified-Gram Shortcut Update
 
 The campaign status certificate now consumes
@@ -41,8 +59,8 @@ identity and normalization certificate plus production pole residues exist.
 
 Validation: source-Higgs unratified-Gram no-go `PASS=10 FAIL=0`;
 retained-route `PASS=192 FAIL=0`; campaign status `PASS=219 FAIL=0`; full
-positive closure assembly gate `PASS=43 FAIL=0`; non-chunk worklist
-`PASS=25 FAIL=0`.
+positive closure assembly gate `PASS=44 FAIL=0`; non-chunk worklist
+`PASS=26 FAIL=0`.
 
 The campaign remains open.  The next positive source-Higgs route requires a
 real same-surface `O_H` certificate and `C_ss/C_sH/C_HH` pole-residue rows; the

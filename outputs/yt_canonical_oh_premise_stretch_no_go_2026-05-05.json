@@ -1,0 +1,218 @@
+{
+  "actual_current_surface_status": "exact negative boundary / same-surface O_H identity and normalization certificate not derivable from current PR230 primitives",
+  "admitted_observation_status": null,
+  "algebraic_non_data_counterfamily": [
+    {
+      "candidate_oh_norm": 1.0,
+      "case": "identity_case",
+      "current_allowed_premises_distinguish_case": false,
+      "distinguished_by_future_non_source_row_or_theorem": false,
+      "future_source_higgs_gram_determinant": 0.0,
+      "orthogonal_component_norm": 0.0,
+      "source_pole_norm": 1.0,
+      "source_to_candidate_overlap": 1.0
+    },
+    {
+      "candidate_oh_norm": 1.0,
+      "case": "mixed_case",
+      "current_allowed_premises_distinguish_case": false,
+      "distinguished_by_future_non_source_row_or_theorem": true,
+      "future_source_higgs_gram_determinant": 0.3599999999999999,
+      "orthogonal_component_norm": 0.5999999999999999,
+      "source_pole_norm": 1.0,
+      "source_to_candidate_overlap": 0.8
+    },
+    {
+      "candidate_oh_norm": 1.0,
+      "case": "wide_mixed_case",
+      "current_allowed_premises_distinguish_case": false,
+      "distinguished_by_future_non_source_row_or_theorem": true,
+      "future_source_higgs_gram_determinant": 0.64,
+      "orthogonal_component_norm": 0.8,
+      "source_pole_norm": 1.0,
+      "source_to_candidate_overlap": 0.6
+    },
+    {
+      "candidate_oh_norm": 1.0,
+      "case": "orthogonal_case",
+      "current_allowed_premises_distinguish_case": false,
+      "distinguished_by_future_non_source_row_or_theorem": true,
+      "future_source_higgs_gram_determinant": 1.0,
+      "orthogonal_component_norm": 1.0,
+      "source_pole_norm": 1.0,
+      "source_to_candidate_overlap": 0.0
+    }
+  ],
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "certificate_obligations": [
+    {
+      "blocking_statuses": [
+        "exact negative boundary / same-source EW action not defined on PR230 surface",
+        "exact negative boundary / FMS O_H certificate construction blocked on current PR230 surface"
+      ],
+      "current_satisfied": false,
+      "id": "same_surface_state_space",
+      "required": "an accepted PR230 state/action surface containing the source operator and canonical O_H"
+    },
+    {
+      "blocking_statuses": [
+        "open / canonical-Higgs operator certificate absent",
+        "exact negative boundary / cross-lane O_H authority audit"
+      ],
+      "current_satisfied": false,
+      "id": "canonical_operator_definition",
+      "required": "a current-surface canonical O_H definition, not notation or adjacent-lane context"
+    },
+    {
+      "blocking_statuses": [
+        "open / canonical-Higgs operator realization gate not passed",
+        "exact negative boundary / unratified source-Higgs Gram shortcut is not O_H authority"
+      ],
+      "current_satisfied": false,
+      "id": "identity_certificate",
+      "required": "a proof or row certificate identifying the source-pole direction with canonical O_H"
+    },
+    {
+      "blocking_statuses": [
+        "open / canonical-Higgs operator realization gate not passed"
+      ],
+      "current_satisfied": false,
+      "id": "normalization_certificate",
+      "required": "same-surface pole/field normalization with no admitted convention"
+    },
+    {
+      "blocking_statuses": [
+        "open / source-Higgs production launch blocked by missing O_H certificate",
+        "open / same-source WZ response certificate gate not passed",
+        "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
+        "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent"
+      ],
+      "current_satisfied": false,
+      "id": "independent_overlap_evidence",
+      "required": "one accepted overlap route: source-Higgs rows, W/Z rows, Schur rows, or neutral primitive theorem"
+    },
+    {
+      "blocking_statuses": [
+        "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
+        "exact-support / FH-LSZ Pade-Stieltjes bounds gate; strict moment-threshold certificate absent",
+        "open / full positive PR230 closure assembly gate not passed"
+      ],
+      "current_satisfied": false,
+      "id": "scalar_lsz_and_assembly_gate",
+      "required": "positive physical-readout assembly after scalar-LSZ and overlap gates both pass"
+    }
+  ],
+  "conditional_surface_status": "conditional-support if a future same-surface O_H certificate plus overlap row, W/Z response route, Schur row route, or neutral primitive theorem lands and the aggregate gates pass",
+  "fail_count": 0,
+  "hypothetical_axiom_status": null,
+  "minimal_allowed_premises": [
+    {
+      "class": "allowed structural premise",
+      "id": "cl3_source_surface",
+      "role": "defines the additive source side and source-pole functional"
+    },
+    {
+      "class": "exact support; not a canonical O_H identity",
+      "id": "legendre_source_pole_normalization",
+      "role": "normalizes the source-side pole operator only"
+    },
+    {
+      "class": "default-off support; not operator authority",
+      "id": "current_source_higgs_shell",
+      "role": "future row instrumentation shape"
+    },
+    {
+      "class": "context/support; not a PR230 production operator",
+      "id": "current_ew_structural_notes",
+      "role": "static and structural context after canonical H is supplied"
+    },
+    {
+      "class": "negative/support boundaries",
+      "id": "current_route_gates",
+      "role": "firewalls and absence checks for source-Higgs, W/Z, Schur, neutral, and scalar-LSZ routes"
+    }
+  ],
+  "missing_obligation_ids": [
+    "same_surface_state_space",
+    "canonical_operator_definition",
+    "identity_certificate",
+    "normalization_certificate",
+    "independent_overlap_evidence",
+    "scalar_lsz_and_assembly_gate"
+  ],
+  "parent_certificates": {
+    "assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "canonical_oh_firewall": "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
+    "canonical_oh_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "canonical_oh_realization": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
+    "cross_lane_oh_audit": "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
+    "fms_oh_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
+    "neutral_primitive": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+    "nonchunk_worklist": "outputs/yt_pr230_non_chunk_closure_worklist_2026-05-05.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_ew_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "scalar_lsz_bounds": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
+    "scalar_lsz_moment": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
+    "schur_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
+    "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+    "source_higgs_unratified_gram": "outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json",
+    "wz_response_contract": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json"
+  },
+  "pass_count": 17,
+  "premise_lattice_stretch_no_go_passed": true,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current surface has source-side normalization and several support/absence gates, but no accepted same-surface state/action surface, canonical O_H definition, identity proof, normalization certificate, or independent overlap row/theorem.",
+  "selected_next_nonchunk_route": {
+    "first_action": "Try to derive the same-source EW action/row authority or a closed top/W covariance theorem; otherwise keep it as the next measurement-row target.",
+    "id": "same_source_wz_response",
+    "reason": "It is the best positive pivot after the source-Higgs O_H certificate remains blocked: a physical response row or a closed covariance theorem could bypass source-Higgs operator identity, while Schur, neutral, and scalar-LSZ routes currently lack their strict same-surface inputs."
+  },
+  "strict_future_file_presence": {
+    "canonical_oh_certificate": false,
+    "matched_wz_rows": false,
+    "neutral_primitive_certificate": false,
+    "schur_kernel_rows": false,
+    "source_higgs_rows": false,
+    "strict_scalar_lsz_certificate": false
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not package or certify chunk outputs",
+    "does not introduce empirical data",
+    "does not define O_H by notation, adjacent-lane context, or row purity against an unratified operator",
+    "does not use user-listed shortcut authorities"
+  ],
+  "stuck_fanout": [
+    {
+      "frame": "source_higgs_identity",
+      "next": "new same-surface O_H certificate before rows",
+      "status": "blocked",
+      "wall": "open / source-Higgs production launch blocked by missing O_H certificate"
+    },
+    {
+      "frame": "same_source_wz_response",
+      "next": "derive the same-source EW action/row authority or a closed covariance theorem",
+      "status": "best_next_positive_route",
+      "wall": "exact negative boundary / same-source EW action not defined on PR230 surface"
+    },
+    {
+      "frame": "schur_kernel_rows",
+      "next": "supply same-surface A/B/C kernel rows",
+      "status": "blocked",
+      "wall": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected"
+    },
+    {
+      "frame": "neutral_primitive_cone",
+      "next": "prove primitive-cone irreducibility for the neutral scalar sector",
+      "status": "blocked",
+      "wall": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent"
+    },
+    {
+      "frame": "scalar_lsz_control",
+      "next": "supply strict moment/threshold/FV authority before physical readout",
+      "status": "independent_open_gate",
+      "wall": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent"
+    }
+  ]
+}

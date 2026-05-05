@@ -73,6 +73,7 @@ PARENTS = {
     "canonical_higgs_operator": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "canonical_higgs_semantic_firewall": "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
     "cross_lane_oh_authority_audit": "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
+    "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
     "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
     "source_pole_purity": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json",
     "neutral_scalar_irreducibility": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
@@ -177,6 +178,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
             "blocked_by": [
                 "same-surface O_H certificate absent",
                 "cross-lane O_h/O_H/Higgs artifacts audited as non-authority for PR230",
+                "current primitives do not derive same-surface O_H identity and normalization",
                 "production C_sH/C_HH pole residues absent",
                 "Gram-purity postprocessor awaiting production certificate",
                 "perfect Gram purity against an unratified supplied operator is not O_H authority",
@@ -188,6 +190,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["source_higgs_unratified_gram_no_go"],
                 PARENTS["canonical_higgs_semantic_firewall"],
                 PARENTS["cross_lane_oh_authority_audit"],
+                PARENTS["canonical_oh_premise_stretch"],
             ],
         },
         "same_source_wz_response": {
@@ -368,6 +371,9 @@ def main() -> int:
         and certs["source_pole_mixing"].get("proposal_allowed") is False
         and certs["source_pole_purity"].get("proposal_allowed") is False
         and certs["canonical_higgs_operator"].get("proposal_allowed") is False
+        and certs["canonical_oh_premise_stretch"].get("proposal_allowed") is False
+        and certs["canonical_oh_premise_stretch"].get("premise_lattice_stretch_no_go_passed")
+        is True
         and certs["source_higgs_unratified_gram_no_go"].get("proposal_allowed") is False
         and certs["source_higgs_unratified_gram_no_go"].get(
             "unratified_gram_shortcut_no_go_passed"
@@ -430,6 +436,15 @@ def main() -> int:
         and certs["cross_lane_oh_authority_audit"].get("proposal_allowed") is False
         and certs["cross_lane_oh_authority_audit"].get("repo_cross_lane_authority_found") is False,
         statuses["cross_lane_oh_authority_audit"],
+    )
+    report(
+        "canonical-oh-premise-stretch-blocks-current-primitives",
+        "same-surface O_H identity and normalization"
+        in statuses["canonical_oh_premise_stretch"]
+        and certs["canonical_oh_premise_stretch"].get("proposal_allowed") is False
+        and certs["canonical_oh_premise_stretch"].get("premise_lattice_stretch_no_go_passed")
+        is True,
+        statuses["canonical_oh_premise_stretch"],
     )
     report(
         "source-higgs-unratified-gram-shortcut-closed",

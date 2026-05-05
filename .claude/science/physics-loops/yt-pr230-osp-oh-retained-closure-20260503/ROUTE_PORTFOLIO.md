@@ -27,6 +27,12 @@ Requires a real same-surface `O_H` operator identity and normalization
 certificate before production rows can be audited as the canonical radial
 observable.
 
+Cycle-3 update: the current-primitives stretch attempt for that identity and
+normalization certificate is also closed negatively in
+`docs/YT_CANONICAL_OH_PREMISE_STRETCH_NO_GO_NOTE_2026-05-05.md`.  Source-Higgs
+is no longer the best immediate non-chunk executable route unless a new
+same-surface `O_H` surface appears.
+
 Reason: perfect `C_ss/C_sH/C_HH` Gram purity against an unratified supplied
 operator certifies only that supplied operator; it does not identify PR230
 canonical `O_H`.
@@ -36,8 +42,10 @@ canonical `O_H`.
 Measure a W/Z mass-response row under the same scalar source and use the
 response ratio to cancel source normalization.
 
-Status: fallback physical-observable route.  Current harness lacks W/Z
-response rows and sector-overlap identity certificates.
+Status: best next positive non-chunk pivot after the canonical `O_H` premise
+stretch no-go.  Current harness lacks W/Z response rows and sector-overlap
+identity certificates, so the next executable attack is a same-source EW
+action/row authority or closed top/W covariance theorem.
 
 ## R4: Dynamical Rank-One Neutral Scalar Theorem
 
