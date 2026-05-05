@@ -38,11 +38,11 @@
   ],
   "cycles_detected": 165,
   "effective_status_counts": {
-    "audit_in_progress": 22,
+    "audit_in_progress": 21,
     "audited_conditional": 391,
     "audited_failed": 15,
     "audited_numerical_match": 21,
-    "audited_renaming": 29,
+    "audited_renaming": 30,
     "decoration_under_cl3_color_automorphism_theorem": 2,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,

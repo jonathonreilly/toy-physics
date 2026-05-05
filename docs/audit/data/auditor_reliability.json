@@ -53,7 +53,7 @@
         "B": 180,
         "C": 265,
         "D": 18,
-        "E": 2,
+        "E": 3,
         "F": 9,
         "G": 2,
         "configured_numerical_proxy_to_surrogate_theorem_bridge": 1,
@@ -65,35 +65,35 @@
         "same_severity": 3
       },
       "criticality_counts": {
-        "critical": 116,
+        "critical": 117,
         "high": 8,
         "leaf": 410,
         "medium": 59
       },
-      "cross_confirmation_agreement_rate": 0.772,
+      "cross_confirmation_agreement_rate": 0.762,
       "cross_confirmation_outcomes": {
         "confirmed": 61,
         "third_confirmed_first": 5,
-        "third_confirmed_second": 13
+        "third_confirmed_second": 14
       },
       "cross_confirmation_pairs_agreed_first_try": 61,
-      "cross_confirmation_pairs_n": 79,
-      "cross_confirmation_pairs_seen": 79,
-      "judicial_third_pass_count": 18,
+      "cross_confirmation_pairs_n": 80,
+      "cross_confirmation_pairs_seen": 80,
+      "judicial_third_pass_count": 19,
       "overturned_by_third": 8,
-      "ratified_by_third": 14,
-      "third_pass_decisions_n": 22,
-      "third_pass_overturn_rate": 0.364,
+      "ratified_by_third": 15,
+      "third_pass_decisions_n": 23,
+      "third_pass_overturn_rate": 0.348,
       "third_pass_overturn_rate_caveat": "Selection-biased: third auditor only runs on disputed cases. Expected value for a competent auditor is ~0.5. See script docstring.",
-      "total_audits": 593,
-      "verdict_changed_after_re_audit": 262,
+      "total_audits": 594,
+      "verdict_changed_after_re_audit": 263,
       "verdict_counts": {
         "audited_clean": 308,
         "audited_conditional": 235,
         "audited_decoration": 2,
         "audited_failed": 44,
         "audited_numerical_match": 1,
-        "audited_renaming": 3
+        "audited_renaming": 4
       }
     },
     "codex-gpt-5.5": {
@@ -107,7 +107,7 @@
         "G": 25
       },
       "bias_direction_breakdown": {
-        "more_lenient": 9,
+        "more_lenient": 10,
         "more_strict": 2,
         "same_severity": 2
       },
@@ -117,20 +117,20 @@
         "leaf": 8,
         "medium": 21
       },
-      "cross_confirmation_agreement_rate": 0.726,
+      "cross_confirmation_agreement_rate": 0.714,
       "cross_confirmation_outcomes": {
         "confirmed": 45,
         "third_confirmed_first": 7,
-        "third_confirmed_second": 10
+        "third_confirmed_second": 11
       },
       "cross_confirmation_pairs_agreed_first_try": 45,
-      "cross_confirmation_pairs_n": 62,
-      "cross_confirmation_pairs_seen": 62,
+      "cross_confirmation_pairs_n": 63,
+      "cross_confirmation_pairs_seen": 63,
       "judicial_third_pass_count": 0,
-      "overturned_by_third": 13,
+      "overturned_by_third": 14,
       "ratified_by_third": 7,
-      "third_pass_decisions_n": 20,
-      "third_pass_overturn_rate": 0.65,
+      "third_pass_decisions_n": 21,
+      "third_pass_overturn_rate": 0.667,
       "third_pass_overturn_rate_caveat": "Selection-biased: third auditor only runs on disputed cases. Expected value for a competent auditor is ~0.5. See script docstring.",
       "total_audits": 238,
       "verdict_changed_after_re_audit": 7,
@@ -146,7 +146,7 @@
   },
   "family_pair_disagreements": [
     {
-      "count": 10,
+      "count": 11,
       "loser": "codex-gpt-5.5",
       "winner": "codex-gpt-5"
     },
@@ -170,10 +170,10 @@
   "policy_summary": "Per-auditor-family verdict and cross-confirmation aggregate. Informational only \u2014 humans set audit-lane policy. PRIMARY SIGNALS (unbiased): cross_confirmation_agreement_rate (rate at which this auditor's first-look verdict matched the other independent auditor without needing a third), bias_direction_breakdown (when overturned, was the auditor more_lenient or more_strict?), verdict_changed_after_re_audit (independent re-audit produced a different verdict). DIAGNOSTIC ONLY (selection-biased): third_pass_overturn_rate is the fraction of disputed cases where the auditor was on the losing side; expected value for a competent auditor is ~0.5 because disputes arise on genuinely ambiguous cases. See script docstring for the full read-with-care guide.",
   "totals": {
     "auditor_families_observed": 4,
-    "overall_agreement_rate": 0.774,
-    "total_audits_recorded": 843,
-    "total_cross_confirmation_family_participations": 141,
-    "total_cross_confirmation_pairs": 93,
-    "total_third_pass_decisions": 42
+    "overall_agreement_rate": 0.766,
+    "total_audits_recorded": 844,
+    "total_cross_confirmation_family_participations": 143,
+    "total_cross_confirmation_pairs": 94,
+    "total_third_pass_decisions": 44
   }
 }

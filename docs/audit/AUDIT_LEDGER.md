@@ -24,10 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 871 |
-| audit_in_progress | 22 |
+| audit_in_progress | 21 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
-| ~~audited_renaming~~ | 29 |
+| ~~audited_renaming~~ | 30 |
 | ~~audited_conditional~~ | 391 |
 | ~~audited_failed~~ | 15 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 22 |
+| `audit_in_progress` | 21 |
 | `audited_clean` | 337 |
 | `audited_conditional` | 391 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
-| `audited_renaming` | 29 |
+| `audited_renaming` | 30 |
 | `unaudited` | 917 |
 
 | claim_type | count |
@@ -122,7 +122,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `lattice_complementarity_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `lorentz_violation_derived_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `pmns_transfer_operator_dominant_mode_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `s3_boundary_link_theorem_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `tensor_block_closure_test_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `three_generation_observable_count_corollary_note_2026-05-03` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -960,6 +959,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `pmns_corner_transport_active_block_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `pmns_sole_axiom_hw1_source_transfer_boundary_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
+| `pmns_transfer_operator_dominant_mode_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-gpt-5 | E | - |
 | `rconn_derived_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `restricted_strong_field_closure_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `s3_time_constructed_support_tensor_primitive_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -8992,6 +8992,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The sole-axiom active/passive blocks are therefore exactly (I3, I3), so source insertion and graph-first transfer only produce the trivial free pack.  _(class `E`)_
 - **chain closes:** False — The runner hard-codes the active and passive blocks as I3 and imports the graph/closure machinery, rather than deriving those blocks from Cl(3) on Z^3 inside the restricted packet. The algebraic consequences of that definition are checked, but the advertised sole-axiom derivation is missing.
 - **rationale:** The provided runner performs mostly algebraic consistency checks after defining the canonical pack with active_block = I3 and passive_block = I3. It does not instantiate the Clifford/lattice axiom or compute the identity resolvent result from first principles, and key support/closure functions are imported without their sources. The bounded conclusion is true for the defined trivial pack, but the load-bearing claim that this pack is derived from the sole axiom is not closed by the restricted packet.
+- **auditor confidence:** high
+
+### `pmns_transfer_operator_dominant_mode_note`
+
+- **Note:** [`PMNS_TRANSFER_OPERATOR_DOMINANT_MODE_NOTE.md`](../../docs/PMNS_TRANSFER_OPERATOR_DOMINANT_MODE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the claimed bounded law that the aligned hw=1 native transfer-operator spectrum recovers the active PMNS seed pair and weak-axis seed patch while remaining blind to the 5-real zero-sum off-seed breaking carrier.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-judicial-third-pmns-transfer-operator-dominant-mode-20260505`  (codex-gpt-5; independence=judicial_review)
+- **load-bearing step:** On the aligned hw=1 active patch, the native positive transfer kernel T_seed = xbar I + ybar(C + C^2) has one dominant symmetric mode and one doubly-degenerate orthogonal mode, and those two eigenvalues reconstruct (xbar, ybar).  _(class `E`)_
+- **chain closes:** False — The exact spectral inversion closes only after T_seed has already been specified with xbar and ybar. The restricted packet does not derive that transfer kernel or its active-block normalization from independent hw=1 corner-to-corner dynamics.
+- **rationale:** Issue: The note names T_seed = xbar I + ybar(C + C^2) as the native positive transfer kernel and then recovers the same seed coefficients by eigenvalue inversion; the runner likewise constructs the kernel from supplied xbar and ybar, including a separate 2*xbar normalization in the active-block shadow. Why this blocks: This establishes an exact algebraic reparameterization of an already supplied C3 circulant kernel, not a native dynamical law that recovers PMNS microscopic data from independent transport. Repair target: Derive the hw=1 transfer kernel and its active-block normalization from primitive corner-to-corner dynamics without inserting the target seed coefficients, and make the runner construct that object from those primitive inputs. Claim boundary until fixed: The result may be cited as the exact spectral identity for an already specified positive aligned C3 transfer kernel, plus its blindness to zero-sum off-seed breaking, but not as a native recovery law for the PMNS seed data.
 - **auditor confidence:** high
 
 ### `pmns_uniform_scalar_deformation_boundary_note`
