@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 195 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 16 |
-| unaudited | 878 |
-| audit_in_progress | 45 |
+| unaudited | 877 |
+| audit_in_progress | 46 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,23 +36,23 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 45 |
+| `audit_in_progress` | 46 |
 | `audited_clean` | 317 |
 | `audited_conditional` | 381 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 29 |
-| `unaudited` | 924 |
+| `unaudited` | 923 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 615 |
+| `bounded_theorem` | 616 |
 | `decoration` | 6 |
 | `meta` | 54 |
 | `no_go` | 183 |
 | `open_gate` | 111 |
-| `positive_theorem` | 813 |
+| `positive_theorem` | 812 |
 
 | criticality | count |
 |---|---:|
@@ -144,6 +144,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `pmns_transfer_operator_dominant_mode_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
+| `quark_route2_exact_time_coupling_note_2026-04-19` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `s3_boundary_link_theorem_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `self_consistency_forces_poisson_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `self_gravity_backreaction_closure_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
