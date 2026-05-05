@@ -14940,6 +14940,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_two_field_wave.py"
     },
+    "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py"
+    },
     "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24": {
       "assert_count": 1,
       "counts": {
@@ -31930,6 +31942,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py": {
+      "assert_count": 2,
+      "claims": [
+        "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_star_supported_bridge_class.py": {
       "assert_count": 1,
       "claims": [
@@ -38645,12 +38672,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 165,
-      "C": 572,
+      "C": 573,
       "D": 211,
       "none": 420
     },
-    "runners_classified": 1378,
-    "runners_with_C": 681,
+    "runners_classified": 1379,
+    "runners_with_C": 682,
     "runners_with_D": 344
   }
 }

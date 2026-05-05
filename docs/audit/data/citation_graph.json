@@ -601,6 +601,10 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
+      "from": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+      "to": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
+    },
+    {
       "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
       "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
     },
@@ -1271,6 +1275,10 @@
     {
       "from": "canonical_harness_index",
       "to": "plaquette_4d_mc_fss_numerical_theorem_note_2026-05-05"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
     },
     {
       "from": "canonical_harness_index",
@@ -13007,6 +13015,10 @@
     {
       "from": "staggered_layered_loop_threshold_note",
       "to": "graph_dirac_requirements_2026-04-10"
+    },
+    {
+      "from": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
     },
     {
       "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
@@ -28081,8 +28093,10 @@
       "claim_type_author_hint": "positive_theorem",
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "0bfd9d6f48db445e1f13c17858bd34f039cb379e3a748bf21d715f33a6015717",
+      "deps": [
+        "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
+      ],
+      "note_hash": "966256cb5e301eb9fd4193d0567d3a212533092caf9d18e86b9542bb97c884b9",
       "path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
       "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action"
@@ -28642,6 +28656,7 @@
         "plaquette_4d_mc_support_note_2026-05-04",
         "gauge_wilson_isotropy_boundary_note_2026-05-04",
         "plaquette_4d_mc_fss_numerical_theorem_note_2026-05-05",
+        "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05",
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
@@ -28849,7 +28864,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "48b12dd073598aa81506ae83f58989c03784f29404d8fc13ed1ac555fa688de4",
+      "note_hash": "8bafd4e1544a5515af9c1240f77d74e4a2d9dca279ac2419e6264a3b7568c43b",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -49775,6 +49790,19 @@
       "runner_path": "scripts/frontier_two_field_wave.py",
       "title": "Staggered Two-Field Wave Coupling \u2014 Rerun-Corrected Note"
     },
+    "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05": {
+      "claim_id": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+      ],
+      "note_hash": "df28f109c70d1841a53dedee320c7469cbccd9044b162b5351aada318a4f9f90",
+      "path": "docs/STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py",
+      "title": "Staggered + Wilson Determinant-Positivity Bridge Theorem Note"
+    },
     "stale_narrative_review_2026-05-03": {
       "claim_id": "stale_narrative_review_2026-05-03",
       "claim_type_author_hint": "meta",
@@ -54605,7 +54633,6 @@
     "axiom_change_proposal_2026-04-10",
     "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
     "axiom_first_cpt_theorem_stretch_note_2026-04-29",
-    "axiom_first_reflection_positivity_theorem_note_2026-04-29",
     "axiom_reduction_note",
     "b_independence_mechanism_note",
     "background_independence_note",
@@ -55387,7 +55414,7 @@
       "no_go": 12,
       "none": 1715,
       "open_gate": 12,
-      "positive_theorem": 86
+      "positive_theorem": 87
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 567,
@@ -55395,12 +55422,12 @@
       "no_go": 117,
       "none": 457,
       "open_gate": 118,
-      "positive_theorem": 635
+      "positive_theorem": 636
     },
-    "edge_count": 6510,
+    "edge_count": 6513,
     "leaf_count": 553,
-    "node_count": 1902,
-    "root_count": 879,
-    "runners_with_path": 1475
+    "node_count": 1903,
+    "root_count": 878,
+    "runners_with_path": 1476
   }
 }

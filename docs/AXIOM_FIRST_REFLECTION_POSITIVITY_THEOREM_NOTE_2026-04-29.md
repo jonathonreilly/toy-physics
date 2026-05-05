@@ -312,7 +312,48 @@ runner-supported extension for the full staggered+Wilson sector. The
 product of two positive measures is a positive measure, and the
 sesquilinear-pairing rewriting applies term by term.
 
-### Step 3a — det(M) ≥ 0: staggered-only derivation; staggered+Wilson runner-supported
+### Step 3a — det(M) ≥ 0: closed-form bridge for the symmetric-canonical surface
+
+**Update 2026-05-05.** The closed-form bridge that the original Step 3a
+left as a runner-supported gap (E6 only) is now supplied by the dedicated
+bridge note
+[`STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md`](STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md).
+The bridge takes this note's own asserted conventions as input
+(`ε M_W ε = M_W`, mass `m · I`, balanced sublattices `n_+ = n_-`) and
+adds one further structural specification — symmetric-canonical
+`M_W = r · d · I` (the sublattice-uniform diagonal projection of the
+canonical Wilson Laplacian, which is the simplest representative of the
+`ε`-commuting projection at `r = 1`) — under which it proves
+
+```text
+    det(M_KS + M_W + m · I)  =  ∏_{i=1}^{n/2}  ( α²  +  σ_i² )  >  0
+```
+
+configuration-by-configuration on every SU(3) gauge background, with
+`α := r · d + m` and `σ_i` the singular values of the off-diagonal
+staggered-hop block of the `ε`-block decomposition of `M`. The proof is
+a two-sublattice block argument: with `A = B = α · I`, the operator
+`γ_5 M` has the BdG-like form
+`[[+α I, +K], [+K^†, -α I]]`, whose `2 × 2` block diagonalisation gives
+eigenvalue pairs `± √(α² + σ_i²)` and a determinant whose absolute
+factorisation combines with `det(γ_5) = (-1)^{n/2}` on the balanced
+lattice to yield the displayed strictly-positive product. The bridge
+note's companion runner
+(`scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py`)
+verifies the factorisation numerically across multiple lattice sizes,
+gauge-coupling scales, and mass values, matching the closed-form formula
+to floating-point precision in every case.
+
+This closed-form bridge supplies the load-bearing input of Step 3 for
+the symmetric-canonical surface. It is strictly additive on the
+original argument and on the existing Exhibits E5 and E6, which remain
+in force as additional numerical evidence at a smaller lattice size and
+under a different `M_W` discretisation choice in the runner. The
+generalisation to non-symmetric `ε`-commuting `M_W` (where the two
+sublattice diagonal blocks are unitarily equivalent but not equal) is
+recorded as the open frontier of the bridge note.
+
+### Step 3a — historical staggered-only derivation
 
 γ_5-Hermiticity for the staggered+Wilson Dirac operator on the
 canonical real-mass surface states

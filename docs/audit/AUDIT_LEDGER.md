@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 220 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 846 |
+| unaudited | 848 |
 | audit_in_progress | 2 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 31 |
-| ~~audited_conditional~~ | 403 |
+| ~~audited_conditional~~ | 402 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 377 |
-| `audited_conditional` | 403 |
+| `audited_conditional` | 402 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 31 |
-| `unaudited` | 892 |
+| `unaudited` | 894 |
 
 | claim_type | count |
 |---|---:|
@@ -55,22 +55,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `meta` | 55 |
 | `no_go` | 187 |
 | `open_gate` | 114 |
-| `positive_theorem` | 796 |
+| `positive_theorem` | 797 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 904 |
+| `critical` | 905 |
 | `high` | 34 |
 | `medium` | 205 |
 | `leaf` | 652 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 165
+- **Citation cycles detected:** 166
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1378
-- runners with (C) first-principles compute hits: 681
+- runners classified: 1379
+- runners with (C) first-principles compute hits: 682
 - runners with (D) external comparator hits: 344
 - decoration candidates (no C, no D): 116
 
@@ -512,7 +512,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `axiom_reduction_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `bell_inequality_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -1609,19 +1608,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `MINIMAL_AXIOMS_2026-04-11.md`
   - `MINIMAL_AXIOMS_2026-05-03.md`
-- **auditor confidence:** high
-
-### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
-
-- **Note:** [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Reflection positivity (R1)-(R4) for the canonical action as stated, with special attention to the determinant-positivity bridge for the full staggered+Wilson sector.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260504-214608-704bb450-axiom_first_reflection_p-001`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The combined-sector proof requires det(M) >= 0 on the canonical staggered+Wilson surface; the note derives this only for staggered-only M_KS+mI and uses finite runner support E6 for M_KS+M_W+mI.  _(class `C`)_
-- **chain closes:** False — The staggered-only sector has an internal algebraic determinant-positivity argument, but the full staggered+Wilson claim does not close: the Wilson term breaks the epsilon anticommutation and E6 is only finite, simplified, well-conditioned numerical evidence, not a proof for all canonical configurations.
-- **rationale:** The source note itself records that the full staggered+Wilson determinant-positivity input is runner-supported rather than derived. The runner performs real computations, but on reduced/free/U(1) or small finite representatives, and E6 filters to selected well-conditioned cases; it does not establish configuration-by-configuration det(M) >= 0 for the full canonical SU(3) staggered+Wilson action. The proof also cites OS/STW/MP factorisation identities, but no cited authority text is supplied in the restricted packet, so those imports cannot be independently checked here.
 - **auditor confidence:** high
 
 ### `axiom_reduction_note`

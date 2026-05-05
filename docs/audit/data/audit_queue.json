@@ -1,18 +1,32 @@
 {
   "by_criticality": {
-    "critical": 547,
+    "critical": 549,
     "high": 23,
     "leaf": 180,
     "medium": 116
   },
-  "cycle_break_target_count": 168,
+  "cycle_break_target_count": 169,
   "cycle_break_targets": [
+    {
+      "all_cycle_nodes": [
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
+      ],
+      "cycle_id": "cycle-0001",
+      "cycle_length": 2,
+      "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
+      "max_transitive_descendants": 449,
+      "primary_break_target": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+      "primary_break_target_audit_status": "unaudited",
+      "primary_break_target_criticality": "critical",
+      "repair_class": "cycle_break_required"
+    },
     {
       "all_cycle_nodes": [
         "angular_kernel_underdetermination_no_go_note",
         "architecture_note_directional_measure"
       ],
-      "cycle_id": "cycle-0001",
+      "cycle_id": "cycle-0002",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['architecture_note_directional_measure'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 438,
@@ -31,7 +45,7 @@
         "planck_scale_lane_status_note_2026-04-23",
         "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
       ],
-      "cycle_id": "cycle-0002",
+      "cycle_id": "cycle-0003",
       "cycle_length": 7,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01', 'axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03', 'lorentz_boost_covariance_3plus1d_theorem_note', 'lorentz_kernel_positive_closure_note', 'planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30', 'planck_scale_lane_status_note_2026-04-23'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 438,
@@ -45,7 +59,7 @@
         "yt_zero_import_authority_note",
         "yt_explicit_systematic_budget_note"
       ],
-      "cycle_id": "cycle-0003",
+      "cycle_id": "cycle-0004",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_zero_import_authority_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 321,
@@ -59,7 +73,7 @@
         "universal_qg_projective_schur_closure_note",
         "universal_qg_canonical_refinement_net_note"
       ],
-      "cycle_id": "cycle-0004",
+      "cycle_id": "cycle-0005",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['universal_qg_projective_schur_closure_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 319,
@@ -73,7 +87,7 @@
         "universal_qg_uv_finite_partition_note",
         "universal_qg_projective_schur_closure_note"
       ],
-      "cycle_id": "cycle-0005",
+      "cycle_id": "cycle-0006",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['universal_qg_uv_finite_partition_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 319,
@@ -88,7 +102,7 @@
         "universal_qg_projective_schur_closure_note",
         "universal_qg_canonical_refinement_net_note"
       ],
-      "cycle_id": "cycle-0006",
+      "cycle_id": "cycle-0007",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['universal_qg_projective_schur_closure_note', 'universal_qg_uv_finite_partition_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 319,
@@ -102,7 +116,7 @@
         "higgs_mass_derived_note",
         "higgs_from_lattice_note"
       ],
-      "cycle_id": "cycle-0007",
+      "cycle_id": "cycle-0008",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['higgs_mass_derived_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 302,
@@ -116,7 +130,7 @@
         "higgs_mass_derived_note",
         "higgs_mechanism_note"
       ],
-      "cycle_id": "cycle-0008",
+      "cycle_id": "cycle-0009",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['higgs_mechanism_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 302,
@@ -130,7 +144,7 @@
         "cosmological_constant_result_2026-04-12",
         "cosmological_constant_vacuum_energy_audit_note"
       ],
-      "cycle_id": "cycle-0009",
+      "cycle_id": "cycle-0010",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['cosmological_constant_vacuum_energy_audit_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 298,
@@ -144,7 +158,7 @@
         "universal_gr_tensor_variational_candidate_note",
         "universal_gr_tensor_quotient_uniqueness_note"
       ],
-      "cycle_id": "cycle-0010",
+      "cycle_id": "cycle-0011",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['universal_gr_tensor_variational_candidate_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 289,
@@ -158,7 +172,7 @@
         "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
         "koide_gamma_orbit_selector_bridge_note_2026-04-18"
       ],
-      "cycle_id": "cycle-0011",
+      "cycle_id": "cycle-0012",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['koide_gamma_orbit_selector_bridge_note_2026-04-18'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 288,
@@ -172,7 +186,7 @@
         "koide_gamma_orbit_selector_bridge_note_2026-04-18",
         "koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18"
       ],
-      "cycle_id": "cycle-0012",
+      "cycle_id": "cycle-0013",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['koide_gamma_orbit_selector_bridge_note_2026-04-18'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 288,
@@ -186,7 +200,7 @@
         "lensing_long_path_test_note",
         "lensing_finite_path_explanation_note"
       ],
-      "cycle_id": "cycle-0013",
+      "cycle_id": "cycle-0014",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['lensing_long_path_test_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 288,
@@ -201,7 +215,7 @@
         "koide_gamma_orbit_selector_bridge_note_2026-04-18",
         "koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18"
       ],
-      "cycle_id": "cycle-0014",
+      "cycle_id": "cycle-0015",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18', 'koide_gamma_orbit_selector_bridge_note_2026-04-18'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 288,
@@ -215,7 +229,7 @@
         "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17",
         "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0015",
+      "cycle_id": "cycle-0016",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 287,
@@ -229,7 +243,7 @@
         "quark_issr1_bicac_forcing_theorem_note_2026-04-19",
         "quark_jts_residue_note_2026-04-19"
       ],
-      "cycle_id": "cycle-0016",
+      "cycle_id": "cycle-0017",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['quark_jts_residue_note_2026-04-19'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 287,
@@ -243,7 +257,7 @@
         "pmns_c3_character_holonomy_closure_note",
         "pmns_three_flux_holonomy_closure_note"
       ],
-      "cycle_id": "cycle-0017",
+      "cycle_id": "cycle-0018",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['pmns_three_flux_holonomy_closure_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 286,
@@ -257,7 +271,7 @@
         "abcc_cp_phase_no_go_theorem_note_2026-04-19",
         "sigma_hier_uniqueness_theorem_note_2026-04-19"
       ],
-      "cycle_id": "cycle-0018",
+      "cycle_id": "cycle-0019",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['sigma_hier_uniqueness_theorem_note_2026-04-19'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -271,7 +285,7 @@
         "charged_lepton_koide_review_packet_2026-04-18",
         "koide_a1_loop_investigation_summary"
       ],
-      "cycle_id": "cycle-0019",
+      "cycle_id": "cycle-0020",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['koide_a1_loop_investigation_summary'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -285,7 +299,7 @@
         "charged_lepton_koide_review_packet_2026-04-18",
         "koide_cl3_selector_gap_note_2026-04-19"
       ],
-      "cycle_id": "cycle-0020",
+      "cycle_id": "cycle-0021",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['koide_cl3_selector_gap_note_2026-04-19'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -299,7 +313,7 @@
         "charged_lepton_koide_review_packet_2026-04-18",
         "koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20"
       ],
-      "cycle_id": "cycle-0021",
+      "cycle_id": "cycle-0022",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -313,7 +327,7 @@
         "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21",
         "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21"
       ],
-      "cycle_id": "cycle-0022",
+      "cycle_id": "cycle-0023",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -327,7 +341,7 @@
         "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
         "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26"
       ],
-      "cycle_id": "cycle-0023",
+      "cycle_id": "cycle-0024",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -341,7 +355,7 @@
         "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24",
         "koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24"
       ],
-      "cycle_id": "cycle-0024",
+      "cycle_id": "cycle-0025",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -355,7 +369,7 @@
         "koide_eigenvalue_q23_surface_theorem_note_2026-04-20",
         "koide_scale_selector_reparameterization_theorem_note_2026-04-20"
       ],
-      "cycle_id": "cycle-0025",
+      "cycle_id": "cycle-0026",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['koide_scale_selector_reparameterization_theorem_note_2026-04-20'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -369,7 +383,7 @@
         "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
         "koide_berry_phase_theorem_note_2026-04-19"
       ],
-      "cycle_id": "cycle-0026",
+      "cycle_id": "cycle-0027",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['koide_selected_line_cyclic_response_bridge_note_2026-04-18'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -383,7 +397,7 @@
         "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
         "hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30"
       ],
-      "cycle_id": "cycle-0027",
+      "cycle_id": "cycle-0028",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -397,7 +411,7 @@
         "pmns_selector_class_space_uniqueness_note",
         "publication.ci3_z3.derivation_atlas"
       ],
-      "cycle_id": "cycle-0028",
+      "cycle_id": "cycle-0029",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.derivation_atlas'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -411,7 +425,7 @@
         "publication.ci3_z3.claims_table",
         "publication.ci3_z3.full_claim_ledger"
       ],
-      "cycle_id": "cycle-0029",
+      "cycle_id": "cycle-0030",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.full_claim_ledger'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -425,7 +439,7 @@
         "publication.ci3_z3.derivation_atlas",
         "dm_wilson_direct_descendant_batch_authority_note_2026-05-03"
       ],
-      "cycle_id": "cycle-0030",
+      "cycle_id": "cycle-0031",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.derivation_atlas'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -439,7 +453,7 @@
         "publication.ci3_z3.readme",
         "publication.ci3_z3.science_map"
       ],
-      "cycle_id": "cycle-0031",
+      "cycle_id": "cycle-0032",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.science_map'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -453,7 +467,7 @@
         "publication.ci3_z3.reproduce",
         "publication.ci3_z3.results_index"
       ],
-      "cycle_id": "cycle-0032",
+      "cycle_id": "cycle-0033",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.results_index'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -467,7 +481,7 @@
         "quark_mass_ratio_review_packet_2026-04-18",
         "mass_spectrum_derived_note"
       ],
-      "cycle_id": "cycle-0033",
+      "cycle_id": "cycle-0034",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['quark_mass_ratio_review_packet_2026-04-18'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -481,7 +495,7 @@
         "scalar_selector_cycle1_science_review_note_2026-04-19",
         "dm_dple_dimension_parametric_extremum_theorem_note_2026-04-19"
       ],
-      "cycle_id": "cycle-0034",
+      "cycle_id": "cycle-0035",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['scalar_selector_cycle1_science_review_note_2026-04-19'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -495,7 +509,7 @@
         "yt_p2_taste_staircase_transport_note_2026-04-17",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0035",
+      "cycle_id": "cycle-0036",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -510,7 +524,7 @@
         "charged_lepton_koide_review_packet_2026-04-18",
         "koide_cl3_selector_gap_note_2026-04-19"
       ],
-      "cycle_id": "cycle-0036",
+      "cycle_id": "cycle-0037",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['charged_lepton_mass_hierarchy_review_note_2026-04-17', 'koide_cl3_selector_gap_note_2026-04-19'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -525,7 +539,7 @@
         "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21",
         "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21"
       ],
-      "cycle_id": "cycle-0037",
+      "cycle_id": "cycle-0038",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21', 'dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -540,7 +554,7 @@
         "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21",
         "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21"
       ],
-      "cycle_id": "cycle-0038",
+      "cycle_id": "cycle-0039",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21', 'dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -555,7 +569,7 @@
         "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
         "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26"
       ],
-      "cycle_id": "cycle-0039",
+      "cycle_id": "cycle-0040",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['hadron_mass_lane1_theorem_plan_support_note_2026-04-27', 'lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -570,7 +584,7 @@
         "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
         "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27"
       ],
-      "cycle_id": "cycle-0040",
+      "cycle_id": "cycle-0041",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['hadron_mass_lane1_theorem_plan_support_note_2026-04-27', 'lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -585,7 +599,7 @@
         "pmns_selector_class_space_uniqueness_note",
         "publication.ci3_z3.derivation_atlas"
       ],
-      "cycle_id": "cycle-0041",
+      "cycle_id": "cycle-0042",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.derivation_atlas'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -600,7 +614,7 @@
         "publication.ci3_z3.derivation_validation_map",
         "publication.ci3_z3.publication_matrix"
       ],
-      "cycle_id": "cycle-0042",
+      "cycle_id": "cycle-0043",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -615,7 +629,7 @@
         "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
         "publication.ci3_z3.external_reviewer_guide"
       ],
-      "cycle_id": "cycle-0043",
+      "cycle_id": "cycle-0044",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -630,7 +644,7 @@
         "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
         "work_history.repo.dm_lane_weave_triage_2026-05-03"
       ],
-      "cycle_id": "cycle-0044",
+      "cycle_id": "cycle-0045",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.derivation_atlas', 'work_history.repo.dm_lane_weave_triage_2026-05-03'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -645,7 +659,7 @@
         "publication.ci3_z3.claims_table",
         "publication.ci3_z3.derivation_validation_map"
       ],
-      "cycle_id": "cycle-0045",
+      "cycle_id": "cycle-0046",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -660,7 +674,7 @@
         "publication.ci3_z3.external_reviewer_guide",
         "publication.ci3_z3.readme"
       ],
-      "cycle_id": "cycle-0046",
+      "cycle_id": "cycle-0047",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -675,7 +689,7 @@
         "yt_p1_color_factor_retention_note_2026-04-17",
         "yt_p1_delta_1_bz_computation_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0047",
+      "cycle_id": "cycle-0048",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p1_delta_1_bz_computation_note_2026-04-17', 'yt_p1_i_s_lattice_pt_citation_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -690,7 +704,7 @@
         "yt_p1_color_factor_retention_note_2026-04-17",
         "yt_p1_delta_2_bz_computation_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0048",
+      "cycle_id": "cycle-0049",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p1_delta_2_bz_computation_note_2026-04-17', 'yt_p1_i_s_lattice_pt_citation_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -705,7 +719,7 @@
         "yt_p1_color_factor_retention_note_2026-04-17",
         "yt_p1_delta_3_bz_computation_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0049",
+      "cycle_id": "cycle-0050",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p1_delta_3_bz_computation_note_2026-04-17', 'yt_p1_i_s_lattice_pt_citation_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -720,7 +734,7 @@
         "yt_p2_taste_staircase_transport_note_2026-04-17",
         "yt_qfp_insensitivity_support_note"
       ],
-      "cycle_id": "cycle-0050",
+      "cycle_id": "cycle-0051",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_qfp_insensitivity_support_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -735,7 +749,7 @@
         "yt_p2_taste_staircase_transport_note_2026-04-17",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0051",
+      "cycle_id": "cycle-0052",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -750,7 +764,7 @@
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_p2_v_matching_theorem_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0052",
+      "cycle_id": "cycle-0053",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p2_v_matching_theorem_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -766,7 +780,7 @@
         "pmns_selector_class_space_uniqueness_note",
         "publication.ci3_z3.derivation_atlas"
       ],
-      "cycle_id": "cycle-0053",
+      "cycle_id": "cycle-0054",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.derivation_atlas'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -782,7 +796,7 @@
         "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21",
         "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21"
       ],
-      "cycle_id": "cycle-0054",
+      "cycle_id": "cycle-0055",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21', 'dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21', 'dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -798,7 +812,7 @@
         "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
         "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27"
       ],
-      "cycle_id": "cycle-0055",
+      "cycle_id": "cycle-0056",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27', 'hadron_mass_lane1_theorem_plan_support_note_2026-04-27', 'lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -814,7 +828,7 @@
         "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26",
         "hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30"
       ],
-      "cycle_id": "cycle-0056",
+      "cycle_id": "cycle-0057",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27', 'hadron_mass_lane1_theorem_plan_support_note_2026-04-27', 'lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -830,7 +844,7 @@
         "publication.ci3_z3.external_reviewer_guide",
         "publication.ci3_z3.inputs_and_qualifiers_note"
       ],
-      "cycle_id": "cycle-0057",
+      "cycle_id": "cycle-0058",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.inputs_and_qualifiers_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -846,7 +860,7 @@
         "publication.ci3_z3.external_reviewer_guide",
         "publication.ci3_z3.readme"
       ],
-      "cycle_id": "cycle-0058",
+      "cycle_id": "cycle-0059",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -862,7 +876,7 @@
         "publication.ci3_z3.external_reviewer_guide",
         "publication.ci3_z3.what_this_paper_does_not_claim"
       ],
-      "cycle_id": "cycle-0059",
+      "cycle_id": "cycle-0060",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.what_this_paper_does_not_claim'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -878,7 +892,7 @@
         "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
         "publication.ci3_z3.external_reviewer_guide"
       ],
-      "cycle_id": "cycle-0060",
+      "cycle_id": "cycle-0061",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -894,7 +908,7 @@
         "publication.ci3_z3.readme",
         "publication.ci3_z3.science_map"
       ],
-      "cycle_id": "cycle-0061",
+      "cycle_id": "cycle-0062",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme', 'publication.ci3_z3.science_map'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -910,7 +924,7 @@
         "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
         "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20"
       ],
-      "cycle_id": "cycle-0062",
+      "cycle_id": "cycle-0063",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_sigma_hier_closure_packet_note_2026-04-20', 'dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20', 'sigma_hier_uniqueness_theorem_note_2026-04-19'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -926,7 +940,7 @@
         "yt_p2_taste_staircase_transport_note_2026-04-17",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0063",
+      "cycle_id": "cycle-0064",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p2_taste_staircase_beta_functions_note_2026-04-17', 'yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -942,7 +956,7 @@
         "yt_p1_color_factor_retention_note_2026-04-17",
         "yt_p1_delta_1_bz_computation_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0064",
+      "cycle_id": "cycle-0065",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p1_delta_1_bz_computation_note_2026-04-17', 'yt_p1_i_s_lattice_pt_citation_note_2026-04-17', 'yt_p1_i_s_revision_verification_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -958,7 +972,7 @@
         "yt_p1_color_factor_retention_note_2026-04-17",
         "yt_p1_delta_2_bz_computation_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0065",
+      "cycle_id": "cycle-0066",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p1_delta_2_bz_computation_note_2026-04-17', 'yt_p1_i_s_lattice_pt_citation_note_2026-04-17', 'yt_p1_i_s_revision_verification_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -975,7 +989,7 @@
         "publication.ci3_z3.derivation_atlas",
         "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03"
       ],
-      "cycle_id": "cycle-0066",
+      "cycle_id": "cycle-0067",
       "cycle_length": 5,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['pmns_chart_constants_retention_stretch_attempt_note_2026-05-03', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.derivation_atlas'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -992,7 +1006,7 @@
         "pmns_selector_class_space_uniqueness_note",
         "publication.ci3_z3.derivation_atlas"
       ],
-      "cycle_id": "cycle-0067",
+      "cycle_id": "cycle-0068",
       "cycle_length": 5,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.derivation_atlas'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1009,7 +1023,7 @@
         "publication.ci3_z3.readme",
         "publication.ci3_z3.science_map"
       ],
-      "cycle_id": "cycle-0068",
+      "cycle_id": "cycle-0069",
       "cycle_length": 5,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme', 'publication.ci3_z3.science_map'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1026,7 +1040,7 @@
         "publication.ci3_z3.external_reviewer_guide",
         "publication.ci3_z3.readme"
       ],
-      "cycle_id": "cycle-0069",
+      "cycle_id": "cycle-0070",
       "cycle_length": 5,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1043,7 +1057,7 @@
         "yt_p2_taste_staircase_transport_note_2026-04-17",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0070",
+      "cycle_id": "cycle-0071",
       "cycle_length": 5,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p1_delta_3_bz_computation_note_2026-04-17', 'yt_p2_taste_staircase_beta_functions_note_2026-04-17', 'yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1060,7 +1074,7 @@
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_p1_delta_r_2_loop_extension_note_2026-04-18"
       ],
-      "cycle_id": "cycle-0071",
+      "cycle_id": "cycle-0072",
       "cycle_length": 5,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p1_delta_r_2_loop_extension_note_2026-04-18', 'yt_p2_taste_staircase_beta_functions_note_2026-04-17', 'yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1078,7 +1092,7 @@
         "publication.ci3_z3.derivation_atlas",
         "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03"
       ],
-      "cycle_id": "cycle-0072",
+      "cycle_id": "cycle-0073",
       "cycle_length": 6,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'pmns_chart_constants_retention_stretch_attempt_note_2026-05-03', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.derivation_atlas'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1096,7 +1110,7 @@
         "pmns_selector_class_space_uniqueness_note",
         "publication.ci3_z3.derivation_atlas"
       ],
-      "cycle_id": "cycle-0073",
+      "cycle_id": "cycle-0074",
       "cycle_length": 6,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.derivation_atlas'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1114,7 +1128,7 @@
         "koide_circulant_character_derivation_note_2026-04-18",
         "koide_positive_paths_first_principles_note_2026-04-18"
       ],
-      "cycle_id": "cycle-0074",
+      "cycle_id": "cycle-0075",
       "cycle_length": 6,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['koide_circulant_character_derivation_note_2026-04-18', 'koide_positive_paths_first_principles_note_2026-04-18', 'koide_q_delta_linking_relation_theorem_note_2026-04-20', 'koide_selected_line_cyclic_response_bridge_note_2026-04-18', 'koide_z3_qubit_radian_bridge_no_go_note_2026-04-20'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1132,7 +1146,7 @@
         "publication.ci3_z3.publication_matrix",
         "neutrino_retained_status_note_2026-04-16"
       ],
-      "cycle_id": "cycle-0075",
+      "cycle_id": "cycle-0076",
       "cycle_length": 6,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['pmns_selector_class_space_uniqueness_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1150,7 +1164,7 @@
         "publication.ci3_z3.readme",
         "publication.ci3_z3.science_map"
       ],
-      "cycle_id": "cycle-0076",
+      "cycle_id": "cycle-0077",
       "cycle_length": 6,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme', 'publication.ci3_z3.science_map'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1168,7 +1182,7 @@
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0077",
+      "cycle_id": "cycle-0078",
       "cycle_length": 6,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p1_delta_3_bz_computation_note_2026-04-17', 'yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17', 'yt_p2_taste_staircase_beta_functions_note_2026-04-17', 'yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1186,7 +1200,7 @@
         "yt_p2_taste_staircase_transport_note_2026-04-17",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0078",
+      "cycle_id": "cycle-0079",
       "cycle_length": 6,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p1_delta_3_bz_computation_note_2026-04-17', 'yt_p1_i_s_lattice_pt_citation_note_2026-04-17', 'yt_p2_taste_staircase_beta_functions_note_2026-04-17', 'yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1205,7 +1219,7 @@
         "koide_circulant_character_derivation_note_2026-04-18",
         "koide_positive_paths_first_principles_note_2026-04-18"
       ],
-      "cycle_id": "cycle-0079",
+      "cycle_id": "cycle-0080",
       "cycle_length": 7,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['koide_circulant_character_derivation_note_2026-04-18', 'koide_gamma_orbit_selected_line_closure_note_2026-04-18', 'koide_positive_paths_first_principles_note_2026-04-18', 'koide_q_delta_linking_relation_theorem_note_2026-04-20', 'koide_selected_line_cyclic_response_bridge_note_2026-04-18', 'koide_z3_qubit_radian_bridge_no_go_note_2026-04-20'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1224,7 +1238,7 @@
         "koide_positive_paths_first_principles_note_2026-04-18",
         "koide_microscopic_scalar_selector_target_note_2026-04-18"
       ],
-      "cycle_id": "cycle-0080",
+      "cycle_id": "cycle-0081",
       "cycle_length": 7,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['koide_circulant_character_derivation_note_2026-04-18', 'koide_microscopic_scalar_selector_target_note_2026-04-18', 'koide_positive_paths_first_principles_note_2026-04-18', 'koide_q_delta_linking_relation_theorem_note_2026-04-20', 'koide_selected_line_cyclic_response_bridge_note_2026-04-18', 'koide_z3_qubit_radian_bridge_no_go_note_2026-04-20'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1243,7 +1257,7 @@
         "neutrino_retained_status_note_2026-04-16",
         "neutrino_dirac_pmns_retained_lane_packet_2026-04-16"
       ],
-      "cycle_id": "cycle-0081",
+      "cycle_id": "cycle-0082",
       "cycle_length": 7,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['neutrino_retained_status_note_2026-04-16', 'pmns_selector_class_space_uniqueness_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1262,7 +1276,7 @@
         "publication.ci3_z3.publication_matrix",
         "neutrino_retained_status_note_2026-04-16"
       ],
-      "cycle_id": "cycle-0082",
+      "cycle_id": "cycle-0083",
       "cycle_length": 7,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1281,7 +1295,7 @@
         "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
         "pmns_scalar_bridge_nonrealization_note"
       ],
-      "cycle_id": "cycle-0083",
+      "cycle_id": "cycle-0084",
       "cycle_length": 7,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['neutrino_retained_status_note_2026-04-16', 'pmns_scalar_bridge_nonrealization_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1300,7 +1314,7 @@
         "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
         "pmns_sector_exchange_nonforcing_note"
       ],
-      "cycle_id": "cycle-0084",
+      "cycle_id": "cycle-0085",
       "cycle_length": 7,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['neutrino_retained_status_note_2026-04-16', 'pmns_sector_exchange_nonforcing_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1319,7 +1333,7 @@
         "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
         "pmns_sector_orientation_orbit_note"
       ],
-      "cycle_id": "cycle-0085",
+      "cycle_id": "cycle-0086",
       "cycle_length": 7,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['neutrino_retained_status_note_2026-04-16', 'pmns_sector_orientation_orbit_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1338,7 +1352,7 @@
         "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
         "pmns_selector_current_stack_zero_law_note"
       ],
-      "cycle_id": "cycle-0086",
+      "cycle_id": "cycle-0087",
       "cycle_length": 7,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['neutrino_retained_status_note_2026-04-16', 'pmns_selector_current_stack_zero_law_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1357,7 +1371,7 @@
         "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
         "pmns_selector_nonuniversal_support_reduction_note"
       ],
-      "cycle_id": "cycle-0087",
+      "cycle_id": "cycle-0088",
       "cycle_length": 7,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['neutrino_retained_status_note_2026-04-16', 'pmns_selector_nonuniversal_support_reduction_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1376,7 +1390,7 @@
         "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
         "pmns_selector_sector_odd_reduction_note"
       ],
-      "cycle_id": "cycle-0088",
+      "cycle_id": "cycle-0089",
       "cycle_length": 7,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['neutrino_retained_status_note_2026-04-16', 'pmns_selector_sector_odd_reduction_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1395,7 +1409,7 @@
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18"
       ],
-      "cycle_id": "cycle-0089",
+      "cycle_id": "cycle-0090",
       "cycle_length": 7,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p1_delta_3_bz_computation_note_2026-04-17', 'yt_p1_delta_r_master_assembly_theorem_note_2026-04-18', 'yt_p1_i_s_lattice_pt_citation_note_2026-04-17', 'yt_p2_taste_staircase_beta_functions_note_2026-04-17', 'yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1414,7 +1428,7 @@
         "yt_p2_taste_staircase_transport_note_2026-04-17",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0090",
+      "cycle_id": "cycle-0091",
       "cycle_length": 7,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p1_delta_3_bz_computation_note_2026-04-17', 'yt_p1_i_s_lattice_pt_citation_note_2026-04-17', 'yt_p1_i_s_revision_verification_note_2026-04-17', 'yt_p2_taste_staircase_beta_functions_note_2026-04-17', 'yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1434,7 +1448,7 @@
         "koide_circulant_character_derivation_note_2026-04-18",
         "koide_positive_paths_first_principles_note_2026-04-18"
       ],
-      "cycle_id": "cycle-0091",
+      "cycle_id": "cycle-0092",
       "cycle_length": 8,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['koide_circulant_character_derivation_note_2026-04-18', 'koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18', 'koide_gamma_orbit_selected_line_closure_note_2026-04-18', 'koide_positive_paths_first_principles_note_2026-04-18', 'koide_q_delta_linking_relation_theorem_note_2026-04-20', 'koide_selected_line_cyclic_response_bridge_note_2026-04-18', 'koide_z3_qubit_radian_bridge_no_go_note_2026-04-20'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1454,7 +1468,7 @@
         "publication.ci3_z3.reproduce",
         "publication.ci3_z3.results_index"
       ],
-      "cycle_id": "cycle-0092",
+      "cycle_id": "cycle-0093",
       "cycle_length": 8,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme', 'publication.ci3_z3.reproduce', 'publication.ci3_z3.results_index'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1474,7 +1488,7 @@
         "neutrino_retained_status_note_2026-04-16",
         "neutrino_dirac_pmns_retained_lane_packet_2026-04-16"
       ],
-      "cycle_id": "cycle-0093",
+      "cycle_id": "cycle-0094",
       "cycle_length": 8,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['neutrino_retained_status_note_2026-04-16', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1494,7 +1508,7 @@
         "pmns_right_polar_section_note",
         "pmns_right_conjugacy_invariant_no_go_note"
       ],
-      "cycle_id": "cycle-0094",
+      "cycle_id": "cycle-0095",
       "cycle_length": 8,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['neutrino_retained_status_note_2026-04-16', 'pmns_right_conjugacy_invariant_no_go_note', 'pmns_right_polar_section_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1514,7 +1528,7 @@
         "pmns_sector_orientation_orbit_note",
         "lepton_shared_higgs_universality_underdetermination_note"
       ],
-      "cycle_id": "cycle-0095",
+      "cycle_id": "cycle-0096",
       "cycle_length": 8,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['neutrino_dirac_pmns_retained_lane_packet_2026-04-16', 'neutrino_retained_status_note_2026-04-16', 'pmns_sector_orientation_orbit_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1534,7 +1548,7 @@
         "pmns_sector_orientation_orbit_note",
         "pmns_minimal_branch_nonselection_note"
       ],
-      "cycle_id": "cycle-0096",
+      "cycle_id": "cycle-0097",
       "cycle_length": 8,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['neutrino_retained_status_note_2026-04-16', 'pmns_minimal_branch_nonselection_note', 'pmns_sector_orientation_orbit_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1554,7 +1568,7 @@
         "yt_p2_taste_staircase_transport_note_2026-04-17",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0097",
+      "cycle_id": "cycle-0098",
       "cycle_length": 8,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p1_delta_3_bz_computation_note_2026-04-17', 'yt_p1_i_s_lattice_pt_citation_note_2026-04-17', 'yt_p1_i_s_revision_verification_note_2026-04-17', 'yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17', 'yt_p2_taste_staircase_beta_functions_note_2026-04-17', 'yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1575,7 +1589,7 @@
         "koide_circulant_character_derivation_note_2026-04-18",
         "koide_positive_paths_first_principles_note_2026-04-18"
       ],
-      "cycle_id": "cycle-0098",
+      "cycle_id": "cycle-0099",
       "cycle_length": 9,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['koide_circulant_character_derivation_note_2026-04-18', 'koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18', 'koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18', 'koide_gamma_orbit_selected_line_closure_note_2026-04-18', 'koide_positive_paths_first_principles_note_2026-04-18', 'koide_q_delta_linking_relation_theorem_note_2026-04-20', 'koide_selected_line_cyclic_response_bridge_note_2026-04-18', 'koide_z3_qubit_radian_bridge_no_go_note_2026-04-20'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1596,7 +1610,7 @@
         "publication.ci3_z3.derivation_atlas",
         "dm_pmns_local_selector_family_no_go_theorem_note_2026-04-20"
       ],
-      "cycle_id": "cycle-0099",
+      "cycle_id": "cycle-0100",
       "cycle_length": 9,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17', 'dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16', 'dm_pmns_local_selector_family_no_go_theorem_note_2026-04-20', 'pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.derivation_atlas'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1617,7 +1631,7 @@
         "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
         "pmns_selector_current_stack_zero_law_note"
       ],
-      "cycle_id": "cycle-0100",
+      "cycle_id": "cycle-0101",
       "cycle_length": 9,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['neutrino_retained_status_note_2026-04-16', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_current_stack_zero_law_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1638,7 +1652,7 @@
         "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
         "pmns_selector_sign_to_branch_reduction_note"
       ],
-      "cycle_id": "cycle-0101",
+      "cycle_id": "cycle-0102",
       "cycle_length": 9,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['neutrino_retained_status_note_2026-04-16', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_sign_to_branch_reduction_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1659,7 +1673,7 @@
         "publication.ci3_z3.reproduce",
         "publication.ci3_z3.results_index"
       ],
-      "cycle_id": "cycle-0102",
+      "cycle_id": "cycle-0103",
       "cycle_length": 9,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme', 'publication.ci3_z3.reproduce', 'publication.ci3_z3.results_index'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1680,7 +1694,7 @@
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_p1_delta_r_2_loop_extension_note_2026-04-18"
       ],
-      "cycle_id": "cycle-0103",
+      "cycle_id": "cycle-0104",
       "cycle_length": 9,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p1_delta_3_bz_computation_note_2026-04-17', 'yt_p1_delta_r_2_loop_extension_note_2026-04-18', 'yt_p1_i_s_lattice_pt_citation_note_2026-04-17', 'yt_p1_i_s_revision_verification_note_2026-04-17', 'yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17', 'yt_p2_taste_staircase_beta_functions_note_2026-04-17', 'yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1701,7 +1715,7 @@
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0104",
+      "cycle_id": "cycle-0105",
       "cycle_length": 9,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p1_delta_3_bz_computation_note_2026-04-17', 'yt_p1_i_s_lattice_pt_citation_note_2026-04-17', 'yt_p1_i_s_revision_verification_note_2026-04-17', 'yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17', 'yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17', 'yt_p2_taste_staircase_beta_functions_note_2026-04-17', 'yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1723,7 +1737,7 @@
         "yt_p2_taste_staircase_transport_note_2026-04-17",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0105",
+      "cycle_id": "cycle-0106",
       "cycle_length": 10,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['yt_p1_bz_quadrature_numerical_note_2026-04-18', 'yt_p1_color_factor_retention_note_2026-04-17', 'yt_p1_delta_3_bz_computation_note_2026-04-17', 'yt_p1_i_s_lattice_pt_citation_note_2026-04-17', 'yt_p1_i_s_revision_verification_note_2026-04-17', 'yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17', 'yt_p2_taste_staircase_beta_functions_note_2026-04-17', 'yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1746,7 +1760,7 @@
         "publication.ci3_z3.reproduce",
         "publication.ci3_z3.results_index"
       ],
-      "cycle_id": "cycle-0106",
+      "cycle_id": "cycle-0107",
       "cycle_length": 11,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme', 'publication.ci3_z3.reproduce', 'publication.ci3_z3.results_index'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1769,7 +1783,7 @@
         "dm_flagship_closure_review_note_2026-04-17",
         "dm_neutrino_source_surface_parity_mixing_selection_obstruction_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0107",
+      "cycle_id": "cycle-0108",
       "cycle_length": 11,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_source_surface_parity_mixing_selection_obstruction_note_2026-04-17', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme', 'publication.ci3_z3.reproduce', 'publication.ci3_z3.results_index'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1793,7 +1807,7 @@
         "koide_positive_paths_first_principles_note_2026-04-18",
         "koide_sqrtm_amplitude_principle_note_2026-04-18"
       ],
-      "cycle_id": "cycle-0108",
+      "cycle_id": "cycle-0109",
       "cycle_length": 12,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['charged_lepton_mass_hierarchy_review_note_2026-04-17', 'koide_brannen_phase_reduction_theorem_note_2026-04-20', 'koide_circulant_character_derivation_note_2026-04-18', 'koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18', 'koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18', 'koide_gamma_orbit_selected_line_closure_note_2026-04-18', 'koide_positive_paths_first_principles_note_2026-04-18', 'koide_q_delta_linking_relation_theorem_note_2026-04-20', 'koide_selected_line_cyclic_response_bridge_note_2026-04-18', 'koide_sqrtm_amplitude_principle_note_2026-04-18', 'koide_z3_qubit_radian_bridge_no_go_note_2026-04-20'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1817,7 +1831,7 @@
         "publication.ci3_z3.reproduce",
         "publication.ci3_z3.results_index"
       ],
-      "cycle_id": "cycle-0109",
+      "cycle_id": "cycle-0110",
       "cycle_length": 12,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme', 'publication.ci3_z3.reproduce', 'publication.ci3_z3.results_index'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1842,7 +1856,7 @@
         "yt_p2_taste_staircase_transport_note_2026-04-17",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0110",
+      "cycle_id": "cycle-0111",
       "cycle_length": 13,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['charged_lepton_mass_hierarchy_review_note_2026-04-17', 'koide_explicit_calculations_note', 'yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18', 'yt_p1_bz_quadrature_numerical_note_2026-04-18', 'yt_p1_color_factor_retention_note_2026-04-17', 'yt_p1_delta_3_bz_computation_note_2026-04-17', 'yt_p1_i_s_lattice_pt_citation_note_2026-04-17', 'yt_p1_i_s_revision_verification_note_2026-04-17', 'yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17', 'yt_p2_taste_staircase_beta_functions_note_2026-04-17', 'yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1867,7 +1881,7 @@
         "pmns_selector_class_space_uniqueness_note",
         "publication.ci3_z3.derivation_atlas"
       ],
-      "cycle_id": "cycle-0111",
+      "cycle_id": "cycle-0112",
       "cycle_length": 13,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17', 'dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16', 'dm_pmns_cp_orientation_parity_reduction_note_2026-04-20', 'dm_sigma_hier_closure_packet_note_2026-04-20', 'dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20', 'pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17', 'publication.ci3_z3.derivation_atlas', 'sigma_hier_uniqueness_theorem_note_2026-04-19'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1893,7 +1907,7 @@
         "pmns_selector_class_space_uniqueness_note",
         "publication.ci3_z3.derivation_atlas"
       ],
-      "cycle_id": "cycle-0112",
+      "cycle_id": "cycle-0113",
       "cycle_length": 14,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15', 'dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17', 'dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16', 'dm_pmns_cp_orientation_parity_reduction_note_2026-04-20', 'dm_sigma_hier_closure_packet_note_2026-04-20', 'dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20', 'pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17', 'publication.ci3_z3.derivation_atlas', 'sigma_hier_uniqueness_theorem_note_2026-04-19'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1919,7 +1933,7 @@
         "charged_lepton_koide_cone_algebraic_equivalence_note",
         "structural_no_go_survey_note"
       ],
-      "cycle_id": "cycle-0113",
+      "cycle_id": "cycle-0114",
       "cycle_length": 14,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['charged_lepton_koide_review_packet_2026-04-18', 'charged_lepton_mass_hierarchy_review_note_2026-04-17', 'koide_brannen_phase_reduction_theorem_note_2026-04-20', 'koide_circulant_character_bridge_note_2026-04-18', 'koide_circulant_character_derivation_note_2026-04-18', 'koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18', 'koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18', 'koide_gamma_orbit_selected_line_closure_note_2026-04-18', 'koide_positive_paths_first_principles_note_2026-04-18', 'koide_q_delta_linking_relation_theorem_note_2026-04-20', 'koide_selected_line_cyclic_response_bridge_note_2026-04-18', 'koide_z3_qubit_radian_bridge_no_go_note_2026-04-20', 'structural_no_go_survey_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1945,7 +1959,7 @@
         "publication.ci3_z3.results_index",
         "dm_flagship_closure_review_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0114",
+      "cycle_id": "cycle-0115",
       "cycle_length": 14,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15', 'dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17', 'dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme', 'publication.ci3_z3.reproduce', 'publication.ci3_z3.results_index'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1971,7 +1985,7 @@
         "publication.ci3_z3.reproduce",
         "publication.ci3_z3.results_index"
       ],
-      "cycle_id": "cycle-0115",
+      "cycle_id": "cycle-0116",
       "cycle_length": 14,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17', 'dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16', 'pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme', 'publication.ci3_z3.reproduce', 'publication.ci3_z3.results_index'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -1998,7 +2012,7 @@
         "yt_p1_delta_r_2_loop_extension_note_2026-04-18",
         "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0116",
+      "cycle_id": "cycle-0117",
       "cycle_length": 15,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['charged_lepton_mass_hierarchy_review_note_2026-04-17', 'koide_explicit_calculations_note', 'yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18', 'yt_p1_bz_quadrature_numerical_note_2026-04-18', 'yt_p1_color_factor_retention_note_2026-04-17', 'yt_p1_delta_3_bz_computation_note_2026-04-17', 'yt_p1_delta_r_2_loop_extension_note_2026-04-18', 'yt_p1_i_s_lattice_pt_citation_note_2026-04-17', 'yt_p1_i_s_revision_verification_note_2026-04-17', 'yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17', 'yt_p2_taste_staircase_beta_functions_note_2026-04-17', 'yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -2025,7 +2039,7 @@
         "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17",
         "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0117",
+      "cycle_id": "cycle-0118",
       "cycle_length": 15,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['charged_lepton_mass_hierarchy_review_note_2026-04-17', 'koide_explicit_calculations_note', 'yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18', 'yt_p1_bz_quadrature_numerical_note_2026-04-18', 'yt_p1_color_factor_retention_note_2026-04-17', 'yt_p1_delta_3_bz_computation_note_2026-04-17', 'yt_p1_i_s_lattice_pt_citation_note_2026-04-17', 'yt_p1_i_s_revision_verification_note_2026-04-17', 'yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17', 'yt_p2_taste_staircase_beta_functions_note_2026-04-17', 'yt_p2_taste_staircase_transport_note_2026-04-17', 'yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17', 'yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17', 'yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -2052,7 +2066,7 @@
         "publication.ci3_z3.results_index",
         "dm_flagship_closure_review_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0118",
+      "cycle_id": "cycle-0119",
       "cycle_length": 15,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15', 'dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17', 'dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16', 'pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme', 'publication.ci3_z3.reproduce', 'publication.ci3_z3.results_index'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -2079,7 +2093,7 @@
         "publication.ci3_z3.reproduce",
         "publication.ci3_z3.results_index"
       ],
-      "cycle_id": "cycle-0119",
+      "cycle_id": "cycle-0120",
       "cycle_length": 15,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17', 'dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16', 'pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme', 'publication.ci3_z3.reproduce', 'publication.ci3_z3.results_index'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -2107,7 +2121,7 @@
         "publication.ci3_z3.results_index",
         "dm_flagship_closure_review_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0120",
+      "cycle_id": "cycle-0121",
       "cycle_length": 16,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15', 'dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17', 'dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16', 'pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme', 'publication.ci3_z3.reproduce', 'publication.ci3_z3.results_index'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -2137,7 +2151,7 @@
         "mass_spectrum_derived_note",
         "neutrino_mass_derived_note"
       ],
-      "cycle_id": "cycle-0121",
+      "cycle_id": "cycle-0122",
       "cycle_length": 18,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17', 'dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16', 'hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27', 'hadron_mass_lane1_theorem_plan_support_note_2026-04-27', 'lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26', 'mass_spectrum_derived_note', 'neutrino_mass_derived_note', 'pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix', 'quark_mass_ratio_review_packet_2026-04-18'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -2168,7 +2182,7 @@
         "publication.ci3_z3.reproduce",
         "publication.ci3_z3.results_index"
       ],
-      "cycle_id": "cycle-0122",
+      "cycle_id": "cycle-0123",
       "cycle_length": 19,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17', 'dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16', 'dm_pmns_cp_orientation_parity_reduction_note_2026-04-20', 'dm_sigma_hier_closure_packet_note_2026-04-20', 'dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20', 'pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme', 'publication.ci3_z3.reproduce', 'publication.ci3_z3.results_index', 'sigma_hier_uniqueness_theorem_note_2026-04-19'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -2200,7 +2214,7 @@
         "publication.ci3_z3.reproduce",
         "publication.ci3_z3.results_index"
       ],
-      "cycle_id": "cycle-0123",
+      "cycle_id": "cycle-0124",
       "cycle_length": 20,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15', 'dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17', 'dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16', 'dm_pmns_cp_orientation_parity_reduction_note_2026-04-20', 'dm_sigma_hier_closure_packet_note_2026-04-20', 'dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20', 'pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.external_reviewer_guide', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.readme', 'publication.ci3_z3.reproduce', 'publication.ci3_z3.results_index', 'sigma_hier_uniqueness_theorem_note_2026-04-19'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -2232,7 +2246,7 @@
         "dm_wilson_to_dweh_hermitian_source_family_current_bank_boundary_note_2026-04-18",
         "dm_neutrino_source_bank_z3_doublet_block_selection_obstruction_theorem_note_2026-04-16"
       ],
-      "cycle_id": "cycle-0124",
+      "cycle_id": "cycle-0125",
       "cycle_length": 20,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['charged_lepton_mass_hierarchy_review_note_2026-04-17', 'dm_effective_parent_one_clock_transfer_boundary_theorem_note_2026-04-18', 'dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15', 'dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_bank_z3_doublet_block_selection_obstruction_theorem_note_2026-04-16', 'dm_wilson_parent_correctness_audit_note_2026-04-18', 'dm_wilson_to_dweh_hermitian_source_family_current_bank_boundary_note_2026-04-18', 'hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27', 'hadron_mass_lane1_theorem_plan_support_note_2026-04-27', 'koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18', 'lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26', 'mass_spectrum_derived_note', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix', 'quark_mass_ratio_review_packet_2026-04-18'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -2265,7 +2279,7 @@
         "dm_wilson_parent_correctness_audit_note_2026-04-18",
         "dm_wilson_to_dweh_hermitian_source_family_current_bank_boundary_note_2026-04-18"
       ],
-      "cycle_id": "cycle-0125",
+      "cycle_id": "cycle-0126",
       "cycle_length": 21,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['charged_lepton_mass_hierarchy_review_note_2026-04-17', 'dm_effective_parent_one_clock_transfer_boundary_theorem_note_2026-04-18', 'dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15', 'dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17', 'dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16', 'dm_wilson_parent_correctness_audit_note_2026-04-18', 'dm_wilson_to_dweh_hermitian_source_family_current_bank_boundary_note_2026-04-18', 'hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27', 'hadron_mass_lane1_theorem_plan_support_note_2026-04-27', 'koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18', 'lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26', 'mass_spectrum_derived_note', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix', 'quark_mass_ratio_review_packet_2026-04-18'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -2298,7 +2312,7 @@
         "dm_wilson_to_dweh_hermitian_source_family_current_bank_boundary_note_2026-04-18",
         "dm_leptogenesis_pmns_microscopic_selector_reduction_theorem_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0126",
+      "cycle_id": "cycle-0127",
       "cycle_length": 21,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['charged_lepton_mass_hierarchy_review_note_2026-04-17', 'dm_effective_parent_one_clock_transfer_boundary_theorem_note_2026-04-18', 'dm_leptogenesis_pmns_microscopic_selector_reduction_theorem_note_2026-04-17', 'dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15', 'dm_neutrino_source_amplitude_theorem_note_2026-04-15', 'dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16', 'dm_wilson_parent_correctness_audit_note_2026-04-18', 'dm_wilson_to_dweh_hermitian_source_family_current_bank_boundary_note_2026-04-18', 'hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27', 'hadron_mass_lane1_theorem_plan_support_note_2026-04-27', 'koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18', 'lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26', 'mass_spectrum_derived_note', 'pmns_selector_class_space_uniqueness_note', 'pmns_selector_unique_amplitude_slot_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix', 'quark_mass_ratio_review_packet_2026-04-18'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -2336,7 +2350,7 @@
         "neutrino_majorana_nambu_source_principle_note",
         "neutrino_majorana_current_stack_exhaustion_note"
       ],
-      "cycle_id": "cycle-0127",
+      "cycle_id": "cycle-0128",
       "cycle_length": 26,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['charged_lepton_mass_hierarchy_review_note_2026-04-17', 'dm_effective_parent_one_clock_transfer_boundary_theorem_note_2026-04-18', 'dm_leptogenesis_universal_yukawa_no_go_note_2026-04-15', 'dm_neutrino_atmospheric_scale_theorem_note_2026-04-15', 'dm_neutrino_singlet_doublet_cp_slot_tool_note_2026-04-15', 'dm_neutrino_source_bank_z3_doublet_block_selection_obstruction_theorem_note_2026-04-16', 'dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16', 'dm_neutrino_source_surface_slot_torsion_boundary_theorem_note_2026-04-16', 'dm_neutrino_z3_circulant_cp_tool_note_2026-04-15', 'dm_wilson_parent_correctness_audit_note_2026-04-18', 'dm_wilson_to_dweh_hermitian_source_family_current_bank_boundary_note_2026-04-18', 'hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27', 'hadron_mass_lane1_theorem_plan_support_note_2026-04-27', 'koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18', 'lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26', 'mass_spectrum_derived_note', 'neutrino_majorana_axis_exchange_fixed_point_note', 'neutrino_majorana_current_stack_exhaustion_note', 'neutrino_majorana_endpoint_exchange_midpoint_theorem_note', 'neutrino_majorana_nambu_source_principle_note', 'publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.publication_matrix', 'quark_mass_ratio_review_packet_2026-04-18'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 284,
@@ -2350,7 +2364,7 @@
         "persistent_inertial_response_readiness_note",
         "localized_source_response_sweep_note"
       ],
-      "cycle_id": "cycle-0128",
+      "cycle_id": "cycle-0129",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['persistent_inertial_response_readiness_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 37,
@@ -2366,7 +2380,7 @@
         "mesoscopic_surrogate_h025_constrained_localization_note",
         "mesoscopic_surrogate_annular_tapered_sweep_note"
       ],
-      "cycle_id": "cycle-0129",
+      "cycle_id": "cycle-0130",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['mesoscopic_surrogate_annular_tapered_sweep_note', 'mesoscopic_surrogate_h025_constrained_localization_note', 'persistent_inertial_response_readiness_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 37,
@@ -2383,7 +2397,7 @@
         "mesoscopic_surrogate_backreaction_note",
         "ordered_lattice_packet_reidentification_note"
       ],
-      "cycle_id": "cycle-0130",
+      "cycle_id": "cycle-0131",
       "cycle_length": 5,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['mesoscopic_surrogate_compact_floor_sweep_note', 'mesoscopic_surrogate_multistage_note', 'ordered_lattice_packet_reidentification_note', 'persistent_inertial_response_readiness_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 37,
@@ -2398,7 +2412,7 @@
         "signed_gravity_staggered_dirac_aps_boundary_realization_note",
         "signed_gravity_native_boundary_complex_containment_note"
       ],
-      "cycle_id": "cycle-0131",
+      "cycle_id": "cycle-0132",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_remaining_closure_gates_note', 'signed_gravity_staggered_dirac_aps_boundary_realization_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 25,
@@ -2416,7 +2430,7 @@
         "signed_gravity_staggered_dirac_aps_boundary_realization_note",
         "signed_gravity_native_boundary_complex_containment_note"
       ],
-      "cycle_id": "cycle-0132",
+      "cycle_id": "cycle-0133",
       "cycle_length": 6,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_native_boundary_complex_containment_note', 'signed_gravity_nature_grade_closure_blocker_audit_note', 'signed_gravity_remaining_closure_gates_note', 'signed_gravity_source_character_uniqueness_theorem_note', 'signed_gravity_staggered_dirac_aps_boundary_realization_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 25,
@@ -2430,7 +2444,7 @@
         "wilson_mu2_distance_sweep_note_2026-04-11",
         "wilson_two_body_open_refined_note_2026-04-11"
       ],
-      "cycle_id": "cycle-0133",
+      "cycle_id": "cycle-0134",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wilson_two_body_open_refined_note_2026-04-11'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 22,
@@ -2444,7 +2458,7 @@
         "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
         "ai_methodology_note_2026-04-25"
       ],
-      "cycle_id": "cycle-0134",
+      "cycle_id": "cycle-0135",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['ai_methodology_note_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 20,
@@ -2459,7 +2473,7 @@
         "ai_methodology_note_2026-04-25",
         "ai_methodology.methodology_paper_source_packet_2026-04-25"
       ],
-      "cycle_id": "cycle-0135",
+      "cycle_id": "cycle-0136",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['ai_methodology.methodology_paper_source_packet_2026-04-25', 'ai_methodology_note_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 20,
@@ -2474,7 +2488,7 @@
         "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
         "ai_methodology_note_2026-04-25"
       ],
-      "cycle_id": "cycle-0136",
+      "cycle_id": "cycle-0137",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['ai_methodology.canonical_framing_paragraph_2026-04-25', 'ai_methodology_note_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 20,
@@ -2489,7 +2503,7 @@
         "lanes.active_working_lanes_2026-04-26",
         "ai_methodology.readme"
       ],
-      "cycle_id": "cycle-0137",
+      "cycle_id": "cycle-0138",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['canonical_harness_index', 'lanes.active_working_lanes_2026-04-26'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 20,
@@ -2504,7 +2518,7 @@
         "lanes.open_science.readme",
         "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26"
       ],
-      "cycle_id": "cycle-0138",
+      "cycle_id": "cycle-0139",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26', 'lanes.open_science.readme'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 20,
@@ -2520,7 +2534,7 @@
         "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
         "ai_methodology_note_2026-04-25"
       ],
-      "cycle_id": "cycle-0139",
+      "cycle_id": "cycle-0140",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['ai_methodology.canonical_framing_paragraph_2026-04-25', 'ai_methodology.readme', 'ai_methodology_note_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 20,
@@ -2537,7 +2551,7 @@
         "ai_methodology_note_2026-04-25",
         "ai_methodology.methodology_paper_source_packet_2026-04-25"
       ],
-      "cycle_id": "cycle-0140",
+      "cycle_id": "cycle-0141",
       "cycle_length": 5,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['ai_methodology.canonical_framing_paragraph_2026-04-25', 'ai_methodology.methodology_paper_source_packet_2026-04-25', 'ai_methodology.readme', 'ai_methodology_note_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 20,
@@ -2555,7 +2569,7 @@
         "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
         "ai_methodology_note_2026-04-25"
       ],
-      "cycle_id": "cycle-0141",
+      "cycle_id": "cycle-0142",
       "cycle_length": 6,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['ai_methodology.canonical_framing_paragraph_2026-04-25', 'ai_methodology.readme', 'ai_methodology_note_2026-04-25', 'canonical_harness_index', 'lanes.active_working_lanes_2026-04-26'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 20,
@@ -2570,7 +2584,7 @@
         "gravity_signed_source_density_boundary_note",
         "signed_gravity_chi_selector_theorem_or_nogo_note"
       ],
-      "cycle_id": "cycle-0142",
+      "cycle_id": "cycle-0143",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['gravity_signed_source_density_boundary_note', 'signed_gravity_chi_selector_theorem_or_nogo_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2585,7 +2599,7 @@
         "signed_gravity_chi_selector_theorem_or_nogo_note",
         "signed_gravity_response_backlog_2026-04-25"
       ],
-      "cycle_id": "cycle-0143",
+      "cycle_id": "cycle-0144",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_chi_selector_theorem_or_nogo_note', 'signed_gravity_response_backlog_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2600,7 +2614,7 @@
         "signed_gravity_retained_boundary_source_principle_no_go_note",
         "signed_gravity_aps_action_origin_superselection_stability_note"
       ],
-      "cycle_id": "cycle-0144",
+      "cycle_id": "cycle-0145",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_aps_locked_axiom_extension_note', 'signed_gravity_retained_boundary_source_principle_no_go_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2615,7 +2629,7 @@
         "signed_gravity_aps_locked_axiom_extension_note",
         "signed_gravity_retained_boundary_source_principle_no_go_note"
       ],
-      "cycle_id": "cycle-0145",
+      "cycle_id": "cycle-0146",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_aps_locked_source_action_proposal_note', 'signed_gravity_retained_boundary_source_principle_no_go_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2630,7 +2644,7 @@
         "signed_gravity_response_backlog_2026-04-25",
         "signed_gravity_aps_boundary_index_chi_probe_note"
       ],
-      "cycle_id": "cycle-0146",
+      "cycle_id": "cycle-0147",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_chi_selector_theorem_or_nogo_note', 'signed_gravity_response_backlog_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2645,7 +2659,7 @@
         "signed_gravity_response_backlog_2026-04-25",
         "signed_gravity_mechanism_separation_note"
       ],
-      "cycle_id": "cycle-0147",
+      "cycle_id": "cycle-0148",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_mechanism_separation_note', 'signed_gravity_response_backlog_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2660,7 +2674,7 @@
         "signed_gravity_response_backlog_2026-04-25",
         "signed_gravity_nonlocal_boundary_chi_target_note"
       ],
-      "cycle_id": "cycle-0148",
+      "cycle_id": "cycle-0149",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_nonlocal_boundary_chi_target_note', 'signed_gravity_response_backlog_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2675,7 +2689,7 @@
         "signed_gravity_response_backlog_2026-04-25",
         "signed_gravity_nonlocal_projector_charge_chi_probe_note"
       ],
-      "cycle_id": "cycle-0149",
+      "cycle_id": "cycle-0150",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_nonlocal_projector_charge_chi_probe_note', 'signed_gravity_response_backlog_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2690,7 +2704,7 @@
         "signed_gravity_aps_locked_source_action_proposal_note",
         "signed_gravity_aps_wald_gauss_bridge_audit_note"
       ],
-      "cycle_id": "cycle-0150",
+      "cycle_id": "cycle-0151",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_aps_wald_gauss_bridge_audit_note', 'signed_gravity_response_backlog_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2706,7 +2720,7 @@
         "signed_gravity_chi_selector_theorem_or_nogo_note",
         "signed_gravity_response_backlog_2026-04-25"
       ],
-      "cycle_id": "cycle-0151",
+      "cycle_id": "cycle-0152",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['gravity_signed_source_density_boundary_note', 'signed_gravity_chi_selector_theorem_or_nogo_note', 'signed_gravity_response_backlog_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2722,7 +2736,7 @@
         "signed_gravity_response_backlog_2026-04-25",
         "signed_gravity_aps_boundary_index_chi_probe_note"
       ],
-      "cycle_id": "cycle-0152",
+      "cycle_id": "cycle-0153",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_aps_boundary_index_chi_probe_note', 'signed_gravity_chi_selector_theorem_or_nogo_note', 'signed_gravity_response_backlog_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2738,7 +2752,7 @@
         "signed_gravity_response_backlog_2026-04-25",
         "signed_gravity_mechanism_separation_note"
       ],
-      "cycle_id": "cycle-0153",
+      "cycle_id": "cycle-0154",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_chi_selector_theorem_or_nogo_note', 'signed_gravity_mechanism_separation_note', 'signed_gravity_response_backlog_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2754,7 +2768,7 @@
         "signed_gravity_response_backlog_2026-04-25",
         "signed_gravity_nonlocal_boundary_chi_target_note"
       ],
-      "cycle_id": "cycle-0154",
+      "cycle_id": "cycle-0155",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_chi_selector_theorem_or_nogo_note', 'signed_gravity_nonlocal_boundary_chi_target_note', 'signed_gravity_response_backlog_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2770,7 +2784,7 @@
         "signed_gravity_response_backlog_2026-04-25",
         "signed_gravity_nonlocal_projector_charge_chi_probe_note"
       ],
-      "cycle_id": "cycle-0155",
+      "cycle_id": "cycle-0156",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_chi_selector_theorem_or_nogo_note', 'signed_gravity_nonlocal_projector_charge_chi_probe_note', 'signed_gravity_response_backlog_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2786,7 +2800,7 @@
         "signed_gravity_aps_action_origin_superselection_stability_note",
         "signed_gravity_source_line_origin_tensor_lift_note"
       ],
-      "cycle_id": "cycle-0156",
+      "cycle_id": "cycle-0157",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_aps_locked_axiom_extension_note', 'signed_gravity_retained_boundary_source_principle_no_go_note', 'signed_gravity_source_line_origin_tensor_lift_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2802,7 +2816,7 @@
         "signed_gravity_retained_boundary_source_principle_no_go_note",
         "signed_gravity_aps_action_origin_superselection_stability_note"
       ],
-      "cycle_id": "cycle-0157",
+      "cycle_id": "cycle-0158",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_aps_locked_axiom_extension_note', 'signed_gravity_aps_locked_source_action_proposal_note', 'signed_gravity_retained_boundary_source_principle_no_go_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2819,7 +2833,7 @@
         "signed_gravity_boundary_coframe_chi_probe_note",
         "signed_gravity_source_action_escape_hatch_note"
       ],
-      "cycle_id": "cycle-0158",
+      "cycle_id": "cycle-0159",
       "cycle_length": 5,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_boundary_coframe_chi_probe_note', 'signed_gravity_chi_selector_theorem_or_nogo_note', 'signed_gravity_response_backlog_2026-04-25', 'signed_gravity_source_action_escape_hatch_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
@@ -2833,7 +2847,7 @@
         "wave_direct_dm_h025_fam2_seed1_control_note",
         "wave_direct_dm_h025_fam2_two_point_synthesis_note"
       ],
-      "cycle_id": "cycle-0159",
+      "cycle_id": "cycle-0160",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_fam2_two_point_synthesis_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 15,
@@ -2847,7 +2861,7 @@
         "wave_direct_dm_h025_fam2_two_point_synthesis_note",
         "wave_direct_dm_h025_fam2_seed1_followup_note"
       ],
-      "cycle_id": "cycle-0160",
+      "cycle_id": "cycle-0161",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_fam2_two_point_synthesis_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 15,
@@ -2862,7 +2876,7 @@
         "wave_direct_dm_h025_fam2_seed1_control_note",
         "wave_direct_dm_h025_fam2_two_point_synthesis_note"
       ],
-      "cycle_id": "cycle-0161",
+      "cycle_id": "cycle-0162",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_fam2_seed1_control_note', 'wave_direct_dm_h025_fam2_two_point_synthesis_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 15,
@@ -2877,7 +2891,7 @@
         "wave_direct_dm_h025_fam2_two_point_synthesis_note",
         "wave_direct_dm_h025_fam2_seed1_followup_note"
       ],
-      "cycle_id": "cycle-0162",
+      "cycle_id": "cycle-0163",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_fam2_seed1_followup_note', 'wave_direct_dm_h025_fam2_two_point_synthesis_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 15,
@@ -2893,7 +2907,7 @@
         "wave_direct_dm_h025_fam2_seed1_control_note",
         "wave_direct_dm_h025_fam2_two_point_synthesis_note"
       ],
-      "cycle_id": "cycle-0163",
+      "cycle_id": "cycle-0164",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_fam2_seed0_control_note', 'wave_direct_dm_h025_fam2_seed1_control_note', 'wave_direct_dm_h025_fam2_two_point_synthesis_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 15,
@@ -2909,7 +2923,7 @@
         "wave_direct_dm_h025_fam2_two_point_synthesis_note",
         "wave_direct_dm_h025_fam2_seed1_followup_note"
       ],
-      "cycle_id": "cycle-0164",
+      "cycle_id": "cycle-0165",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_fam2_seed1_control_note', 'wave_direct_dm_h025_fam2_seed1_followup_note', 'wave_direct_dm_h025_fam2_two_point_synthesis_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 15,
@@ -2923,7 +2937,7 @@
         "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17",
         "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0165",
+      "cycle_id": "cycle-0166",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 11,
@@ -2938,7 +2952,7 @@
         "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17",
         "gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0166",
+      "cycle_id": "cycle-0167",
       "cycle_length": 3,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17', 'gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 11,
@@ -2952,7 +2966,7 @@
         "staggered_graph_gauge_closure_note",
         "staggered_graph_gauge_closure_results_2026-04-10"
       ],
-      "cycle_id": "cycle-0167",
+      "cycle_id": "cycle-0168",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['staggered_graph_gauge_closure_results_2026-04-10'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 2,
@@ -2966,7 +2980,7 @@
         "repo.active_review_queue",
         "work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03"
       ],
-      "cycle_id": "cycle-0168",
+      "cycle_id": "cycle-0169",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 0,
@@ -3039,6 +3053,52 @@
       "ready": true,
       "runner_path": "scripts/frontier_hadron_lane1_sqrt_sigma_b5_framework_link_audit.py",
       "transitive_descendants": 285
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
+      ],
+      "direct_in_degree": 10,
+      "effective_status": "unaudited",
+      "load_bearing_score": 13.814,
+      "note_path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
+      "transitive_descendants": 449
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.814,
+      "note_path": "docs/STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py",
+      "transitive_descendants": 449
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -17665,6 +17725,7 @@
         "plaquette_4d_mc_support_note_2026-05-04",
         "gauge_wilson_isotropy_boundary_note_2026-05-04",
         "plaquette_4d_mc_fss_numerical_theorem_note_2026-05-05",
+        "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05",
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
@@ -25915,5 +25976,5 @@
     }
   ],
   "ready_count": 4,
-  "total_pending": 866
+  "total_pending": 868
 }
