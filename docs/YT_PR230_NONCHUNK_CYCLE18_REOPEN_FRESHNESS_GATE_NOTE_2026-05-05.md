@@ -27,8 +27,8 @@ It checks:
 - all parent certificates are present and have no failures;
 - no parent authorizes proposal language;
 - the cycle-17 head remains in local branch history;
-- the local branch and remote PR branch are aligned at the cycle-17 head;
-- the remote PR branch has no post-cycle-17 commit to inspect;
+- the local branch and remote PR branch are aligned;
+- no post-cycle-17 changed path is a listed reopen artifact;
 - all six worklist units remain blocked;
 - every listed reopen-source key and future path remains absent;
 - the route selector, intake, terminal, reopen, cycle-16, and cycle-17 gates

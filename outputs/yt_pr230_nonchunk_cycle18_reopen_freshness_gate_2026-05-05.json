@@ -12,15 +12,18 @@
     "schur_scalar_denominator_rows"
   ],
   "branch_state": {
-    "commits_after_cycle17_on_remote_pr": "0",
+    "commits_after_cycle17_on_remote_pr": "1",
     "cycle17_head": "4e02c23eb61f966cdd63f46ce4e17844d184cbde",
     "cycle17_is_ancestor_of_local_head": true,
-    "local_head": "4e02c23eb61f966cdd63f46ce4e17844d184cbde",
+    "local_head": "9faff72278778d9039a860cce0dad93dbf3333eb",
     "local_head_matches_remote_pr_head": true,
-    "recent_remote_pr_subjects_after_cycle17": [],
-    "remote_pr_head": "4e02c23eb61f966cdd63f46ce4e17844d184cbde",
-    "remote_pr_ref": "origin/claude/yt-direct-lattice-correlator-2026-04-30",
-    "remote_pr_state_is_not_reopen_evidence": true
+    "post_cycle17_changed_future_paths": [],
+    "post_cycle17_changes_are_not_reopen_evidence": true,
+    "recent_remote_pr_subjects_after_cycle17": [
+      "9faff7227 physics-loop: close PR230 nonchunk reopen freshness"
+    ],
+    "remote_pr_head": "9faff72278778d9039a860cce0dad93dbf3333eb",
+    "remote_pr_ref": "origin/claude/yt-direct-lattice-correlator-2026-04-30"
   },
   "closed_work_unit_ids": [],
   "conditional_surface_status": null,
@@ -36,7 +39,7 @@
       "worklist": []
     },
     "present_future_paths": [],
-    "reason": "Cycle 17 already stopped current-surface non-chunk route cycling. No listed same-surface row, certificate, or theorem is present as a parseable reopen artifact, and the remote PR branch has no new post-cycle-17 commit to inspect.",
+    "reason": "Cycle 17 already stopped current-surface non-chunk route cycling. No listed same-surface row, certificate, or theorem is present as a parseable reopen artifact, and no post-cycle-17 changed path is a listed reopen artifact.",
     "selected_current_route": "none"
   },
   "exact_next_action": "Keep PR230 current-surface non-chunk route cycling stopped on this branch. Reopen only after a listed same-surface row, certificate, or theorem exists as a parseable claim-status artifact; then rerun reopen-admissibility, worklist, exhaustion, intake, independent-route, cycle-16, cycle-17, cycle-18, assembly, retained-route, and campaign gates before any proposal language.",
@@ -246,7 +249,7 @@
   },
   "present_future_paths": [],
   "proposal_allowed": false,
-  "proposal_allowed_reason": "Cycle 17 already satisfies the non-chunk stop condition, all listed reopen inputs remain absent, the remote PR branch has no new post-cycle-17 commit, and aggregate gates still deny proposal authority.",
+  "proposal_allowed_reason": "Cycle 17 already satisfies the non-chunk stop condition, all listed reopen inputs remain absent, no post-cycle-17 changed path is a listed reopen artifact, and aggregate gates still deny proposal authority.",
   "reopen_freshness_gate_passed": true,
   "strict_non_claims": [
     "does not claim PR230 positive closure or proposal authority",

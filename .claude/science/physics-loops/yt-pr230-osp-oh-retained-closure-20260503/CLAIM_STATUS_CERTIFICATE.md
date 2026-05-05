@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact negative boundary / PR230 non-chunk cycle-18 reopen-freshness gate: no post-cycle-17 same-surface artifact is present for admissible reopen; positive closure still open
+actual_current_surface_status: exact negative boundary / PR230 non-chunk cycle-19 no-duplicate-route gate: no new current-surface non-chunk route is admissible without a fresh parseable same-surface artifact; positive closure still open
 conditional_surface_status: conditional-support if C_sH/C_HH Gram purity, W/Z response, or rank-one neutral scalar theorem closes the overlap
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "The Legendre source-pole operator is derived, but no current-surface premise supplies physical overlap authority, scalar-LSZ authority, same-surface Schur A/B/C kernel rows, W/Z rows, or neutral-rank authority; the current non-chunk route queue is exhausted, the future-artifact intake gate finds no named future artifact, the terminal route-exhaustion gate allows no further shortcut cycling until a named same-surface artifact exists, the reopen-admissibility gate rejects path-only reopening until a parseable claim-status artifact is present, the cycle-14 route-selector gate selects no executable current-surface non-chunk route, the cycle-15 independent-route admission gate admits no independent current route, the cycle-16 reopen-source guard finds no post-checkpoint same-surface artifact to consume, the cycle-17 stop-condition gate records no executable current-surface non-chunk route on this branch, and the cycle-18 reopen-freshness gate records no post-cycle-17 same-surface artifact for admissible reopen."
+proposal_allowed_reason: "The Legendre source-pole operator is derived, but no current-surface premise supplies physical overlap authority, scalar-LSZ authority, same-surface Schur A/B/C kernel rows, W/Z rows, or neutral-rank authority; the current non-chunk route queue is exhausted, the future-artifact intake gate finds no named future artifact, the terminal route-exhaustion gate allows no further shortcut cycling until a named same-surface artifact exists, the reopen-admissibility gate rejects path-only reopening until a parseable claim-status artifact is present, the cycle-14 route-selector gate selects no executable current-surface non-chunk route, the cycle-15 independent-route admission gate admits no independent current route, the cycle-16 reopen-source guard finds no post-checkpoint same-surface artifact to consume, the cycle-17 stop-condition gate records no executable current-surface non-chunk route on this branch, the cycle-18 reopen-freshness gate records no post-cycle-17 same-surface artifact for admissible reopen, and the cycle-19 no-duplicate-route gate records that another current-surface route selection would only replay a closed non-chunk family."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -344,8 +344,12 @@ Open imports:
   theorem exists as a parseable claim-status artifact and aggregate gates rerun;
 - the PR230 non-chunk cycle-18 reopen-freshness gate is an exact negative
   boundary: after the cycle-17 stop condition, no listed same-surface row,
-  certificate, or theorem is present for admissible reopen, the remote PR
-  branch is aligned with the cycle-17 head, and no proposal is authorized;
+  certificate, or theorem is present for admissible reopen, no post-cycle-17
+  changed path is a listed reopen artifact, and no proposal is authorized;
+- the PR230 non-chunk cycle-19 no-duplicate-route gate is an exact negative
+  boundary: after the cycle-18 reopen-freshness gate, no current-surface
+  non-chunk route is admissible without a fresh parseable same-surface
+  artifact, so another selection would only replay a closed family;
 - the canonical-Higgs operator semantic firewall is bounded support only: it
   hardens the future `O_H` certificate gate against static EW algebra,
   `H_unit`, Ward, observed-selector, and self-declared identity spoofs, but it

@@ -182,8 +182,23 @@ claim-status artifact for admissible reopen.
 Status: closed negatively in
 `docs/YT_PR230_NONCHUNK_CYCLE18_REOPEN_FRESHNESS_GATE_NOTE_2026-05-05.md`.
 
-Reason: no listed reopen key or future path is present, the local and remote
-PR branches remain aligned at the cycle-17 head, all six worklist units remain
+Reason: no listed reopen key or future path is present, no post-cycle-17
+changed path is a listed reopen artifact, all six worklist units remain
 blocked, and aggregate gates still deny proposal authority.  No route may be
 selected until a listed same-surface artifact exists and aggregate gates
 rerun.
+
+## R13: Cycle-19 No-Duplicate-Route Gate
+
+After cycle 18 closes the reopen-freshness question, test whether another
+current-surface non-chunk route can be selected without replaying an already
+closed family.
+
+Status: closed negatively in
+`docs/YT_PR230_NONCHUNK_CYCLE19_NO_DUPLICATE_ROUTE_GATE_NOTE_2026-05-05.md`.
+
+Reason: all six worklist units remain blocked, every route family is
+future-only, no listed same-surface artifact is present as a parseable
+claim-status artifact, and aggregate gates still deny proposal authority.  A
+new selection would be a duplicate route replay until a fresh same-surface
+artifact exists and the aggregate gates rerun.

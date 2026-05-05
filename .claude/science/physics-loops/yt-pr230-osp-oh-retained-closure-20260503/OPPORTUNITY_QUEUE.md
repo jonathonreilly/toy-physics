@@ -1,10 +1,20 @@
 # Opportunity Queue
 
+Cycle-19 update: the no-duplicate-route gate has now checked the only
+admissible continuation after cycle 18.  No current-surface non-chunk route is
+admissible without a fresh parseable same-surface artifact; all six worklist
+units remain blocked, no route family is executable, and aggregate gates still
+deny proposal authority.  The non-chunk scope remains stopped on this branch
+until a listed same-surface row, certificate, or theorem exists as a parseable
+claim-status artifact and the reopen-admissibility, worklist, exhaustion,
+intake, independent-route, cycle-16, cycle-17, cycle-18, cycle-19, assembly,
+retained-route, and campaign gates all rerun.
+
 Cycle-18 update: the reopen-freshness gate has now checked the only admissible
 post-stop non-chunk question after cycle 17.  No listed same-surface row,
-certificate, or theorem is present for admissible reopen, the remote PR branch
-remains aligned with the cycle-17 head, all six worklist units remain blocked,
-and aggregate gates still deny proposal authority.  The non-chunk scope
+certificate, or theorem is present for admissible reopen, no post-cycle-17
+changed path is a listed reopen artifact, all six worklist units remain
+blocked, and aggregate gates still deny proposal authority.  The non-chunk scope
 remains stopped on this branch until a listed same-surface artifact exists as a
 parseable claim-status artifact and the reopen-admissibility, worklist,
 exhaustion, intake, independent-route, cycle-16, cycle-17, cycle-18,

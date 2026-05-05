@@ -37,3 +37,4 @@
 | Reopening after the cycle-15 stop contract without a listed parseable same-surface artifact | closed negatively / no admissible post-checkpoint reopen source remains | `YT_PR230_NONCHUNK_CYCLE16_REOPEN_SOURCE_GUARD_NOTE_2026-05-05.md` |
 | Continuing PR230 current-surface non-chunk route cycling after cycle-16 reopen-source failure | closed negatively / stop condition satisfied for the non-chunk scope on this branch | `YT_PR230_NONCHUNK_CYCLE17_STOP_CONDITION_GATE_NOTE_2026-05-05.md` |
 | Reopening after the cycle-17 stop condition without a post-cycle-17 same-surface artifact | closed negatively / no admissible reopen input is present | `YT_PR230_NONCHUNK_CYCLE18_REOPEN_FRESHNESS_GATE_NOTE_2026-05-05.md` |
+| Selecting another current-surface non-chunk route after cycle 18 without a fresh same-surface artifact | closed negatively / would replay a closed non-chunk family | `YT_PR230_NONCHUNK_CYCLE19_NO_DUPLICATE_ROUTE_GATE_NOTE_2026-05-05.md` |

@@ -187,6 +187,9 @@ def main() -> int:
         "pr230_nonchunk_cycle18_reopen_freshness_gate": load(
             "outputs/yt_pr230_nonchunk_cycle18_reopen_freshness_gate_2026-05-05.json"
         ),
+        "pr230_nonchunk_cycle19_no_duplicate_route_gate": load(
+            "outputs/yt_pr230_nonchunk_cycle19_no_duplicate_route_gate_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -2536,6 +2539,24 @@ def main() -> int:
         is False,
         statuses["pr230_nonchunk_cycle18_reopen_freshness_gate"],
     )
+    report(
+        "pr230-nonchunk-cycle19-no-duplicate-route-gate-recorded",
+        "cycle-19 no-duplicate-route gate"
+        in str(statuses["pr230_nonchunk_cycle19_no_duplicate_route_gate"])
+        and certificates["pr230_nonchunk_cycle19_no_duplicate_route_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_cycle19_no_duplicate_route_gate"].get(
+            "no_duplicate_route_gate_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_cycle19_no_duplicate_route_gate"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False,
+        statuses["pr230_nonchunk_cycle19_no_duplicate_route_gate"],
+    )
 
     remaining_routes = [
         {
@@ -2857,7 +2878,11 @@ def main() -> int:
             "The cycle-16 reopen-source guard records that the post-checkpoint "
             "surface has no admissible same-surface artifact to consume.  The "
             "cycle-18 reopen-freshness gate records that no post-cycle-17 "
-            "same-surface artifact is present for admissible reopen."
+            "same-surface artifact is present for admissible reopen.  The "
+            "cycle-19 no-duplicate-route gate records that another "
+            "current-surface route selection would only replay a closed "
+            "non-chunk family until a fresh parseable same-surface artifact "
+            "exists."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
@@ -2889,7 +2914,10 @@ def main() -> int:
         "gate records that the refreshed non-chunk queue has no executable "
         "current-surface route on this branch.  The cycle-18 reopen-freshness "
         "gate records that no post-cycle-17 same-surface artifact is present "
-        "for admissible reopen."
+        "for admissible reopen.  The cycle-19 no-duplicate-route gate records "
+        "that another current-surface route selection would only replay a "
+        "closed non-chunk family until a fresh parseable same-surface artifact "
+        "exists."
     )
     result["strict_non_claims"] = [
         "does not claim retained closure",

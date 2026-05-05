@@ -28,8 +28,27 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=233 FAIL=0
+# SUMMARY: PASS=234 FAIL=0
 ```
+
+## 2026-05-05 Cycle-19 No-Duplicate-Route Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_nonchunk_cycle19_no_duplicate_route_gate_2026-05-05.json`.
+After the cycle-18 reopen-freshness gate, the cycle-19 gate checks whether a
+new current-surface non-chunk route is admissible without a fresh parseable
+same-surface artifact.  No such route is admissible; another selection would
+only replay a closed non-chunk family.
+
+Validation: cycle-19 no-duplicate-route gate `PASS=19 FAIL=0`; full positive
+closure assembly gate `PASS=59 FAIL=0`; retained-route `PASS=207 FAIL=0`;
+campaign status `PASS=234 FAIL=0`.
+
+The campaign target remains open, but the current PR230 non-chunk scope
+remains stopped for this branch.  Reopen only after an admissible strict
+future artifact exists and the worklist, exhaustion, intake, independent-route,
+cycle-16, cycle-17, cycle-18, cycle-19, assembly, retained-route, and campaign
+gates are rerun.
 
 ## 2026-05-05 Cycle-18 Reopen-Freshness Update
 
@@ -38,7 +57,7 @@ The campaign status certificate now consumes
 After the cycle-17 stop condition, the cycle-18 gate checks whether any listed
 same-surface row, certificate, or theorem is present for admissible reopen.
 No such artifact is present, and the remote PR branch remains aligned with the
-cycle-17 head.
+current PR branch while no listed post-cycle-17 reopen artifact is present.
 
 Validation: cycle-18 reopen-freshness gate `PASS=17 FAIL=0`; full positive
 closure assembly gate `PASS=58 FAIL=0`; retained-route `PASS=206 FAIL=0`;

@@ -1,0 +1,154 @@
+{
+  "actual_current_surface_status": "exact negative boundary / PR230 non-chunk cycle-19 no-duplicate-route gate: no new current-surface non-chunk route is admissible without a fresh parseable same-surface artifact; positive closure remains open",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "blocked_work_unit_ids": [
+    "canonical_oh_source_higgs",
+    "matching_running",
+    "neutral_scalar_rank_one",
+    "same_source_wz_response",
+    "scalar_lsz_model_fv_ir",
+    "schur_scalar_denominator_rows"
+  ],
+  "branch_state": {
+    "cycle18_head": "9faff72278778d9039a860cce0dad93dbf3333eb",
+    "cycle18_is_ancestor_of_local_head": true,
+    "cycle18_is_ancestor_of_remote_pr": true,
+    "local_commits_after_cycle18": "0",
+    "local_head": "9faff72278778d9039a860cce0dad93dbf3333eb",
+    "local_head_matches_remote_pr_head": true,
+    "post_cycle18_changed_future_paths": [],
+    "post_cycle18_changes_are_not_reopen_evidence": true,
+    "remote_commits_after_cycle18": "0",
+    "remote_pr_head": "9faff72278778d9039a860cce0dad93dbf3333eb",
+    "remote_pr_ref": "origin/claude/yt-direct-lattice-correlator-2026-04-30"
+  },
+  "closed_work_unit_ids": [],
+  "conditional_surface_status": null,
+  "dramatic_step_gate": {
+    "passed": false,
+    "present_by_source": {
+      "cycle15_independent": [],
+      "cycle16_reopen_source": [],
+      "cycle17_stop_condition": [],
+      "cycle18_reopen_freshness": [],
+      "future_intake": [],
+      "reopen": [],
+      "terminal": [],
+      "worklist": []
+    },
+    "present_future_paths": [],
+    "reason": "Cycle 18 already records that no admissible same-surface reopen artifact exists.  Every current non-chunk family remains blocked or future-only, so selecting another route would duplicate a closed family rather than move claim state.",
+    "route_family_summaries": [
+      {
+        "can_execute_now": false,
+        "future_file_keys_present": [],
+        "id": "canonical_oh_source_higgs",
+        "route_family": "source-Higgs / canonical O_H"
+      },
+      {
+        "can_execute_now": false,
+        "future_file_keys_present": [],
+        "id": "same_source_wz_response",
+        "route_family": "same-source W/Z response"
+      },
+      {
+        "can_execute_now": false,
+        "future_file_keys_present": [],
+        "id": "scalar_lsz_polynomial_contact",
+        "route_family": "scalar-LSZ finite-shell contact/model-class"
+      },
+      {
+        "can_execute_now": false,
+        "future_file_keys_present": [],
+        "id": "schur_scalar_denominator_rows",
+        "route_family": "Schur/K-prime scalar denominator rows"
+      },
+      {
+        "can_execute_now": false,
+        "future_file_keys_present": [],
+        "id": "neutral_scalar_rank_one",
+        "route_family": "neutral-scalar primitive-cone rank one"
+      }
+    ],
+    "selected_current_route": "none"
+  },
+  "exact_next_action": "Keep PR230 current-surface non-chunk route cycling stopped on this branch. Reopen only after a listed same-surface row, certificate, or theorem exists as a parseable claim-status artifact; then rerun reopen-admissibility, worklist, exhaustion, intake, independent-route, cycle-16, cycle-17, cycle-18, cycle-19, assembly, retained-route, and campaign gates before any proposal language.",
+  "fail_count": 0,
+  "hypothetical_axiom_status": null,
+  "listed_future_paths": [
+    "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+    "outputs/yt_delta_perp_tomography_rows_2026-05-04.json",
+    "outputs/yt_electroweak_g2_certificate_2026-05-05.json",
+    "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
+    "outputs/yt_fh_lsz_contact_subtraction_certificate_2026-05-05.json",
+    "outputs/yt_fh_lsz_pade_stieltjes_bounds_certificate_2026-05-05.json",
+    "outputs/yt_fh_lsz_polynomial_contact_certificate_2026-05-05.json",
+    "outputs/yt_fh_lsz_stieltjes_moment_certificate_2026-05-05.json",
+    "outputs/yt_neutral_scalar_irreducibility_certificate_2026-05-04.json",
+    "outputs/yt_neutral_scalar_primitive_cone_certificate_2026-05-05.json",
+    "outputs/yt_pr230_certified_physical_readout_2026-05-04.json",
+    "outputs/yt_schur_kernel_rows_2026-05-03.json",
+    "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+    "outputs/yt_top_wz_closed_covariance_theorem_2026-05-05.json",
+    "outputs/yt_top_wz_deterministic_response_covariance_certificate_2026-05-05.json",
+    "outputs/yt_top_wz_matched_response_rows_2026-05-04.json",
+    "outputs/yt_wz_source_coordinate_transport_certificate_2026-05-05.json"
+  ],
+  "no_duplicate_route_gate_passed": true,
+  "nonchunk_scope_remains_stopped": true,
+  "parent_certificates": {
+    "assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "campaign": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "cycle14_selector": "outputs/yt_pr230_nonchunk_cycle14_route_selector_gate_2026-05-05.json",
+    "cycle15_independent": "outputs/yt_pr230_nonchunk_cycle15_independent_route_admission_gate_2026-05-05.json",
+    "cycle16_reopen_source": "outputs/yt_pr230_nonchunk_cycle16_reopen_source_guard_2026-05-05.json",
+    "cycle17_stop_condition": "outputs/yt_pr230_nonchunk_cycle17_stop_condition_gate_2026-05-05.json",
+    "cycle18_reopen_freshness": "outputs/yt_pr230_nonchunk_cycle18_reopen_freshness_gate_2026-05-05.json",
+    "exhaustion": "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json",
+    "future_intake": "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json",
+    "reopen": "outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "route_family": "outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json",
+    "terminal": "outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json",
+    "worklist": "outputs/yt_pr230_non_chunk_closure_worklist_2026-05-05.json"
+  },
+  "parent_statuses": {
+    "assembly": "open / full positive PR230 closure assembly gate not passed",
+    "campaign": "open / active campaign continuing after current shortcut blocks",
+    "cycle14_selector": "exact negative boundary / PR230 non-chunk cycle-14 route-selector gate: no executable current-surface non-chunk route remains after the W/Z covariance-theorem import no-go; positive closure still open",
+    "cycle15_independent": "exact negative boundary / PR230 non-chunk cycle-15 independent-route admission gate: no independent current-surface route is admitted after cycle-14 route selection; positive closure still open",
+    "cycle16_reopen_source": "exact negative boundary / PR230 non-chunk cycle-16 reopen-source guard: no post-checkpoint same-surface row, certificate, or theorem is present for admissible reopen; positive closure remains open",
+    "cycle17_stop_condition": "exact negative boundary / PR230 non-chunk cycle-17 stop-condition gate: the refreshed non-chunk opportunity queue has no executable current-surface route; positive closure remains open",
+    "cycle18_reopen_freshness": "exact negative boundary / PR230 non-chunk cycle-18 reopen-freshness gate: no post-cycle-17 same-surface artifact is present for admissible reopen; positive closure remains open",
+    "exhaustion": "exact negative boundary / current PR230 non-chunk route queue exhausted; positive closure still open",
+    "future_intake": "exact negative boundary / PR230 non-chunk future-artifact intake finds no executable current route; positive closure still open",
+    "reopen": "exact negative boundary / PR230 non-chunk reopen-admissibility gate: no future artifact candidate is admissible on the current surface; positive closure still open",
+    "retained_route": "open / retained closure not yet reached",
+    "route_family": "exact negative boundary / non-chunk route-family import audit confirms no executable current-surface route after W/Z covariance-theorem import no-go",
+    "terminal": "exact negative boundary / PR230 non-chunk terminal route-exhaustion gate: no current route may continue without a named same-surface artifact; positive closure still open",
+    "worklist": "open / PR230 non-chunk closure worklist complete; positive closure still blocked"
+  },
+  "pass_count": 19,
+  "presence_source_present_keys": {
+    "cycle15_independent": [],
+    "cycle16_reopen_source": [],
+    "cycle17_stop_condition": [],
+    "cycle18_reopen_freshness": [],
+    "future_intake": [],
+    "reopen": [],
+    "terminal": [],
+    "worklist": []
+  },
+  "present_future_paths": [],
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Cycle 18 already keeps the non-chunk surface stopped.  All six worklist units remain blocked, all listed reopen inputs remain absent, no route family is executable, and aggregate gates still deny proposal authority.",
+  "strict_non_claims": [
+    "does not claim PR230 positive closure or proposal authority",
+    "does not convert a stopped queue into positive evidence",
+    "does not replay a closed non-chunk family as a new route",
+    "does not load, combine, package, duplicate, or rerun MC chunks",
+    "does not edit paper-facing or authority-table surfaces"
+  ]
+}
