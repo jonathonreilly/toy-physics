@@ -1,5 +1,32 @@
 # Handoff
 
+Latest checkpoint, 2026-05-05 polefit8x8 chunks043-048 launch:
+
+- After chunks037-042 were packaged and pushed, refreshed the global FH/LSZ
+  production collision guard; it reported zero active workers and allowed a
+  new launch.
+- Launched the next homogeneous eight-mode/x8 polefit wave for chunks043-048
+  with fixed seeds `2026051943`-`2026051948`, selected mass `0.75`, x8
+  scalar-two-point noise, eight modes, and isolated production output
+  directories.
+- Added
+  `docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS043_048_LAUNCH_CHECKPOINT_NOTE_2026-05-05.md`.
+- Launch status:
+  `outputs/yt_fh_lsz_polefit8x8_chunks043_048_launch_status_2026-05-05.json`
+  records running chunks `[43, 44, 45, 46, 47, 48]`, `missing=0`,
+  `all_jobs=6`, `launched_total=6`, and PIDs `16475`-`16480`.
+- Refreshed the global collision guard after launch.  It reports
+  `PASS=8 FAIL=0`, active FH/LSZ workers `6`, global cap `6`, and
+  `launch_guard_allows_new_workers=false`.
+- Claim boundary: active workers, logs, output directories, launch records,
+  and guard occupancy are not evidence.  Count chunks043-048 only after root
+  artifacts land and pass the polefit8x8 combiner/postprocessor plus
+  aggregate gates.  No retained or proposed-retained closure is authorized.
+
+Next exact action: do not launch additional FH/LSZ workers while chunks043-048
+are active.  When their root artifacts complete, package only passing outputs
+through the polefit8x8 gate chain and update PR #230.
+
 Latest checkpoint, 2026-05-05 polefit8x8 chunks037-042 completion:
 
 - Packaged completed homogeneous eight-mode/x8 chunks037-042 with fixed seeds
