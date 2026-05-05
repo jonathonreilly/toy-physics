@@ -22,11 +22,12 @@ import numpy as np
 from scipy.optimize import curve_fit
 import math
 
-# Known data points
+# Known data points (updated with L=6)
 data = {
     3: {'P': 0.6034, 'err': 0.0012, 'note': 'PBC, 600 sweeps'},
     4: {'P': 0.5978, 'err': 0.0005, 'note': 'PBC, 1500 sweeps'},
-    # L=6 from background run
+    6: {'P': 0.5942, 'err': 0.0004, 'note': 'PBC, 600 sweeps'},
+    # L=8 in progress
 }
 
 print("="*64)
