@@ -1,5 +1,12 @@
 # Artifact Plan
 
+Completed in the cycle-33 post-cycle-32 main-audit-status-drift continuation:
+
+- `scripts/frontier_yt_pr230_nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard.py`
+- `docs/YT_PR230_NONCHUNK_CYCLE33_POST_CYCLE32_MAIN_AUDIT_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_cycle33_post_cycle32_main_audit_status_drift_guard_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
 Completed in the cycle-32 post-cycle-31 main-audit-status-drift continuation:
 
 - `scripts/frontier_yt_pr230_nonchunk_cycle32_post_cycle31_main_audit_status_drift_guard.py`
