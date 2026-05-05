@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 50 |
-| **retained_no_go** | 111 |
+| **retained_no_go** | 112 |
 | **retained_bounded** | 200 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 872 |
-| audit_in_progress | 27 |
+| audit_in_progress | 26 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 27 |
-| `audited_clean` | 335 |
+| `audit_in_progress` | 26 |
+| `audited_clean` | 336 |
 | `audited_conditional` | 387 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -119,7 +119,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `koide_q23_oh_covariance_nogo_note_2026-04-22` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_q_bridge_single_primitive_note_2026-04-22` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_q_readout_factorization_theorem_2026-04-22` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -281,6 +280,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_mru_demotion_note_2026-04-20` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | D | - |
 | `koide_native_dimensionless_review_packet_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_pointed_origin_exhaustion_theorem_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
+| `koide_q23_oh_covariance_nogo_note_2026-04-22` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -7229,6 +7229,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The retained unpointed tests are invariant along the source, CP1-line, and endpoint torsor fibres while the open charged-lepton readouts change, so origin-free retained data do not force the simultaneous closing representative.  _(class `A`)_
 - **chain closes:** True — The note scopes the result as an atlas no-go, not a positive Koide closure. The algebraic fibre checks exhibit invariant unpointed data together with changed readouts, so the claimed non-forcing result follows within that scoped atlas.
 - **rationale:** The runner completed from cache with 15/15 PASS lines and checks symbolic algebraic invariance/countermodel facts for the three residual freedoms. It does not hard-code a positive Koide closure; it explicitly reports that the dimensionless lane is not closed and that a physical source/boundary-origin law remains the next theorem. No one-hop dependencies are listed, so there is no open dependency chain in the restricted packet. Residual risk is limited to the note's scoped atlas premise, not to the internal no-go once that atlas is taken as the audited object.
+- **auditor confidence:** high
+
+### `koide_q23_oh_covariance_nogo_note_2026-04-22`
+
+- **Note:** [`KOIDE_Q23_OH_COVARIANCE_NOGO_NOTE_2026-04-22.md`](../../docs/KOIDE_Q23_OH_COVARIANCE_NOGO_NOTE_2026-04-22.md)
+- **claim_type:** `no_go`
+- **claim_scope:** For the affine chart H(m, delta, q_+) encoded by H_base, T_m, T_delta, and T_q in the runner, the O_h signed-permutation covariance group is only {+I, -I}, so the chart cannot support the proposed full O_h cubic-invariance route to spin-1 structure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-koide_q23_oh_covariance_nogo_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** CovG = {+I, -I}: out of 48 O_h elements, only identity and spatial inversion preserve the retained chart's span.  _(class `A`)_
+- **chain closes:** True — The claim is a finite internal algebraic check: enumerate the 48 signed permutation matrices and test span preservation of the chart generators. The cached runner completes and identifies only +I and -I as covariant, which is sufficient to rule out full O_h covariance of this chart.
+- **rationale:** The no-go does not import an external observable, tuned comparator, or unratified physical bridge; it only tests covariance of explicitly encoded matrices under a finite group action. The runner enumerates all 48 O_h elements, computes individual and joint stabilizers, and verifies the covariance group is exactly {+I, -I}. The final interpretive scope is appropriately negative: sub-route (a), full O_h covariance of the retained chart, is ruled out while other spin-1 routes are left open. Residual risk is runner-artifact level only: the note describes exact verification, while the runner uses floating-point linear algebra, but the finite check is direct and the conclusion is not dependent on an external or calibrated input.
 - **auditor confidence:** high
 
 ### `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24`
