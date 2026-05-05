@@ -511,3 +511,40 @@ Promoting from bounded conditional to retained would require:
    (`S = L(1 - phi)`).
 5. A registered lattice Green-function normalization/asymptotic
    theorem.
+
+## Citations
+
+The four IF-conditions of the conditional theorem are each addressed by
+existing source notes in the repository. Registering the markdown links
+here makes the dependency edges explicit so the audit lane can walk the
+chain rather than treat the IF-conditions as unsourced. Until each
+linked authority is itself audit-clean, this note remains
+`audited_conditional` even with the registered edges; the wiring is the
+prerequisite, not the unlock.
+
+- [SELF_CONSISTENCY_FORCES_POISSON_NOTE.md](SELF_CONSISTENCY_FORCES_POISSON_NOTE.md)
+  — supplies the `L^{-1} = G_0` self-consistency closure forcing the
+  field operator to be the negative graph Laplacian (Step 3 of the
+  derivation chain).
+- [POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md](POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md)
+  — supplies the uniqueness of Poisson's law given the closure
+  condition, so that the linear field operator is determined rather
+  than chosen.
+- [GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md](GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md)
+  — registers the broader self-consistency surface and the role of
+  `L^{-1} = G_0` within it.
+- [GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md](GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md)
+  — registers the Born / mass-density source-identification
+  `rho = |psi|^2` and its sign-orientation boundary, supplying the
+  Step 4 input that the propagator density acts as the gravitational
+  source.
+- [BROAD_GRAVITY_DERIVATION_NOTE.md](BROAD_GRAVITY_DERIVATION_NOTE.md)
+  — registers the weak-field action / test-mass response
+  `S = L(1 - phi)` referenced by Step 5 of the derivation chain.
+- [NEWTON_LAW_DERIVED_NOTE.md](NEWTON_LAW_DERIVED_NOTE.md)
+  — registers the Z^3 lattice Green-function asymptotic
+  `G_0(r) ~ 1/r` and the resulting inverse-square force law (Step 8).
+
+These dependency edges are additive. The note does not narrow its claim
+or change its hypotheses; the citations only make the four upstream
+authorities visible to the citation graph and audit pipeline.

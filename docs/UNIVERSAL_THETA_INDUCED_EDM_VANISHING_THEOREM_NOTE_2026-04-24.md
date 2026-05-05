@@ -151,3 +151,23 @@ atomic, and theta-mediated charged-lepton EDM channels.
 ```bash
 python3 scripts/frontier_universal_theta_induced_edm_vanishing.py
 ```
+
+## Citations
+
+The load-bearing input `theta_eff = 0` is taken from the upstream
+strong-CP theta-zero theorem; all theta-induced response statements in
+this note inherit retention from that one-hop dependency. The neutron-EDM
+specialisation that this note generalises is also explicitly cited.
+
+- [STRONG_CP_THETA_ZERO_NOTE.md](STRONG_CP_THETA_ZERO_NOTE.md) — supplies
+  `theta_eff = 0` on the retained Wilson-plus-staggered action surface
+  (the load-bearing input of every "theta-induced ... = 0" row in the
+  Vanishing Theta-Induced Components table).
+- [CKM_NEUTRON_EDM_BOUND_NOTE.md](CKM_NEUTRON_EDM_BOUND_NOTE.md) — the
+  prior single-channel statement that this note universalises across
+  hadronic, nuclear, atomic, and theta-mediated charged-lepton EDM
+  channels.
+
+This citation block resolves the audit-lane condition that the strong-CP
+theta-zero authority is registered as a one-hop dependency edge rather
+than a prose-level reference.

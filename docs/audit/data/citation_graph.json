@@ -6757,6 +6757,30 @@
       "to": "confinement_string_tension_note"
     },
     {
+      "from": "gravity_clean_derivation_note",
+      "to": "self_consistency_forces_poisson_note"
+    },
+    {
+      "from": "gravity_clean_derivation_note",
+      "to": "poisson_exhaustive_uniqueness_note"
+    },
+    {
+      "from": "gravity_clean_derivation_note",
+      "to": "gravity_full_self_consistency_note"
+    },
+    {
+      "from": "gravity_clean_derivation_note",
+      "to": "gravity_signed_source_density_boundary_note"
+    },
+    {
+      "from": "gravity_clean_derivation_note",
+      "to": "broad_gravity_derivation_note"
+    },
+    {
+      "from": "gravity_clean_derivation_note",
+      "to": "newton_law_derived_note"
+    },
+    {
       "from": "gravity_cosmology_tower_lambda_spectral_bridge_theorem_note_2026-04-25",
       "to": "graviton_spectral_tower_theorem_note_2026-04-24"
     },
@@ -13899,6 +13923,14 @@
     {
       "from": "universal_qg_uv_finite_partition_note",
       "to": "universal_qg_projective_schur_closure_note"
+    },
+    {
+      "from": "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24",
+      "to": "strong_cp_theta_zero_note"
+    },
+    {
+      "from": "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24",
+      "to": "ckm_neutron_edm_bound_note"
     },
     {
       "from": "unpromoted_branch_retainability_audit_note",
@@ -36647,8 +36679,15 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "5be3d259dc3b28ca373d03610b045f4e2f1980dad03890c7a0b0adb8e63ded6d",
+      "deps": [
+        "self_consistency_forces_poisson_note",
+        "poisson_exhaustive_uniqueness_note",
+        "gravity_full_self_consistency_note",
+        "gravity_signed_source_density_boundary_note",
+        "broad_gravity_derivation_note",
+        "newton_law_derived_note"
+      ],
+      "note_hash": "827753a7d1f5cf08a09122ff3eb9ca529611225654574efe4de6bff62ed68e15",
       "path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
       "runner_path": null,
       "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)"
@@ -51811,8 +51850,11 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "985f7031e3166a327a21381b4eea8fbbf29c2d1a8845cb9c13305558f74fde3f",
+      "deps": [
+        "strong_cp_theta_zero_note",
+        "ckm_neutron_edm_bound_note"
+      ],
+      "note_hash": "f8c223e0d5da13b5657fc547167b09477dd96ea4397a8b551d13eb43e4b30668",
       "path": "docs/UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_universal_theta_induced_edm_vanishing.py",
       "title": "Universal Theta-Induced EDM Response Vanishing Theorem"
@@ -54896,7 +54938,6 @@
     "gravitational_wave_probe_note",
     "gravitomagnetic_note",
     "graviton_mass_derived_note",
-    "gravity_clean_derivation_note",
     "gravity_design_blueprint",
     "gravity_full_self_consistency_note",
     "gravity_law_cleanup_note",
@@ -55306,7 +55347,6 @@
     "universal_gr_supermetric_normal_form_note",
     "universal_gr_tensor_action_blocker_note",
     "universal_qg_optional_textbook_comparison_note",
-    "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24",
     "valley_linear_action_note",
     "valley_linear_asymptotic_bridge_note",
     "valley_linear_mirror_transfer_note",
@@ -55397,10 +55437,10 @@
       "open_gate": 118,
       "positive_theorem": 635
     },
-    "edge_count": 6510,
+    "edge_count": 6518,
     "leaf_count": 553,
     "node_count": 1902,
-    "root_count": 879,
+    "root_count": 877,
     "runners_with_path": 1475
   }
 }
