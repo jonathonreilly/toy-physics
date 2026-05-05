@@ -18,8 +18,24 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=195 FAIL=0
+# SUMMARY: PASS=196 FAIL=0
 ```
+
+## 2026-05-05 Schur Compressed-Denominator Row-Bootstrap Update
+
+The retained-route certificate now consumes
+`outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json`.
+This closes the Schur shortcut where a compressed scalar denominator and its
+pole derivative are treated as enough to reconstruct same-surface `A/B/C`
+kernel rows.
+
+Validation: Schur compressed-denominator row-bootstrap no-go `PASS=11 FAIL=0`;
+route-family audit `PASS=9 FAIL=0`; retained-route `PASS=196 FAIL=0`;
+campaign status `PASS=223 FAIL=0`; full positive closure assembly gate
+`PASS=48 FAIL=0`; non-chunk worklist `PASS=30 FAIL=0`.
+
+No closure proposal is authorized.  The Schur route still requires genuine
+same-surface kernel rows plus the separate physical-readout bridge.
 
 ## 2026-05-05 W/Z Goldstone-Equivalence Source-Identity Update
 

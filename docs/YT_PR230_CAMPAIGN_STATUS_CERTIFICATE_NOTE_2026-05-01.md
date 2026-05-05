@@ -26,8 +26,30 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=222 FAIL=0
+# SUMMARY: PASS=223 FAIL=0
 ```
+
+## 2026-05-05 Schur Compressed-Denominator Row-Bootstrap Update
+
+The campaign status certificate now consumes
+`outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json`.
+This is the cycle-7 Schur shortcut test after the W/Z, source-Higgs, scalar
+contact, and neutral primitive-cone shortcuts closed negatively.
+
+The no-go is algebraic and non-data: it constructs two inequivalent
+same-surface Schur `A/B/C` partitions with the same compressed scalar
+denominator and the same pole derivative.  Therefore compressed denominator
+data cannot reconstruct the missing kernel rows.
+
+Validation: Schur compressed-denominator row-bootstrap no-go `PASS=11 FAIL=0`;
+route-family audit `PASS=9 FAIL=0`; retained-route `PASS=196 FAIL=0`;
+campaign status `PASS=223 FAIL=0`; full positive closure assembly gate
+`PASS=48 FAIL=0`; non-chunk worklist `PASS=30 FAIL=0`.
+
+The campaign remains open.  The next non-chunk move must supply a genuine
+same-surface artifact: Schur kernel rows, `O_H/source-Higgs` pole rows,
+same-source W/Z response rows, scalar-LSZ moment/threshold/FV authority, or a
+neutral-sector irreducibility certificate.
 
 ## 2026-05-05 W/Z Goldstone-Equivalence Source-Identity Update
 

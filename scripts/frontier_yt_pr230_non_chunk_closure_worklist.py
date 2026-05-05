@@ -79,6 +79,7 @@ PARENTS = {
     "schur_absence": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
     "schur_contract": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
     "schur_candidate_extraction": "outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json",
+    "schur_compressed_bootstrap_no_go": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
     "neutral_rank_one": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
     "neutral_commutant_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
     "neutral_dynamic_attempt": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
@@ -236,6 +237,7 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 status(certs["schur_absence"]),
                 status(certs["schur_contract"]),
                 status(certs["schur_candidate_extraction"]),
+                status(certs["schur_compressed_bootstrap_no_go"]),
                 status(certs["kprime_attempt"]),
             ],
             "next_action": "supply same-surface Schur A/B/C kernel rows; FH/LSZ source rows do not substitute",
@@ -338,6 +340,14 @@ def main() -> int:
         status(certs["nonchunk_route_family_import_audit"]),
     )
     report("schur-route-gated", "Schur K-prime row absence guard" in status(certs["schur_absence"]), status(certs["schur_absence"]))
+    report(
+        "schur-compressed-denominator-bootstrap-closed-negatively",
+        "Schur compressed-denominator row-bootstrap no-go"
+        in status(certs["schur_compressed_bootstrap_no_go"])
+        and certs["schur_compressed_bootstrap_no_go"].get("proposal_allowed") is False
+        and certs["schur_compressed_bootstrap_no_go"].get("bootstrap_no_go_passed") is True,
+        status(certs["schur_compressed_bootstrap_no_go"]),
+    )
     report("neutral-rank-one-route-gated", "irreducibility authority absent" in status(certs["neutral_irreducibility_audit"]), status(certs["neutral_irreducibility_audit"]))
     report("neutral-primitive-cone-route-gated", "primitive-cone certificate gate" in status(certs["neutral_primitive_cone_gate"]), status(certs["neutral_primitive_cone_gate"]))
     report(
@@ -384,8 +394,9 @@ def main() -> int:
             "After the W/Z source-coordinate transport no-go, the W/Z Goldstone-"
             "equivalence source-identity no-go, and the neutral primitive-cone "
             "stretch no-go, do not spend another block on source-only or "
-            "static-label shortcuts.  The next positive route requires a new "
-            "strict same-surface artifact: O_H/C_sH/C_HH pole rows, W/Z response "
+            "static-label shortcuts or compressed-denominator Schur row "
+            "bootstraps.  The next positive route requires a new strict "
+            "same-surface artifact: O_H/C_sH/C_HH pole rows, W/Z response "
             "rows with identities and covariance authority, scalar-LSZ moment/"
             "threshold/FV authority, Schur A/B/C kernel rows, or a neutral "
             "primitive-cone certificate."

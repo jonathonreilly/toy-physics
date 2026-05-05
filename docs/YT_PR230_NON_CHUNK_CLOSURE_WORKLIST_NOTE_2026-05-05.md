@@ -50,7 +50,8 @@ This is an integration/worklist gate, not a physics closure theorem.
   interpolate mutually different finite Stieltjes-looking residuals without a
   same-surface contact or scalar-denominator theorem.
 - **Schur/scalar-denominator rows:** supply same-surface Schur `A/B/C` kernel
-  rows; current FH/LSZ source rows do not substitute.
+  rows; current FH/LSZ source rows do not substitute, and compressed
+  scalar-denominator data cannot bootstrap the rows.
 - **Neutral rank-one:** derive a strict primitive-cone/positivity-improving
   irreducibility certificate for the neutral top-coupled scalar sector.  The
   source-only and conditional-Perron shortcut is now closed negatively by
@@ -59,10 +60,11 @@ This is an integration/worklist gate, not a physics closure theorem.
 
 ## Boundary
 
-This does not package chunk outputs, does not define `y_t_bare`, and does not
-use `H_unit`, Ward authority, `alpha_LM`, plaquette/u0, observed targets, or
-unit shortcuts.  It keeps PR #230 draft/open until one work unit supplies a
-real positive certificate and the aggregate gates pass.
+This does not package chunk outputs, does not define a bare top-Yukawa readout,
+and does not use prohibited operator/readout, target-value,
+coupling-normalization, or unit shortcuts.  It keeps PR #230 draft/open until
+one work unit supplies a real positive certificate and the aggregate gates
+pass.
 
 ## 2026-05-05 Route-Family Audit
 
@@ -72,8 +74,10 @@ the cycle it selected the scalar-LSZ polynomial-contact repair branch only as
 an executable no-go block, not as a closure route.  After that block, the
 canonical `O_H` stretch, and the W/Z source-coordinate transport block closed
 negatively, the cycle-5 audit selected the neutral primitive-cone stretch as
-the next hard residual to close.  The cycle-6 audit now selects same-source
-W/Z response and records the Goldstone-equivalence source-identity no-go.
+the next hard residual to close.  The cycle-6 audit selected same-source
+W/Z response and recorded the Goldstone-equivalence source-identity no-go.
+The cycle-7 audit now selects the Schur/scalar-denominator row family and
+records the compressed-denominator row-bootstrap no-go.
 
 ## 2026-05-05 Source-Higgs Unratified-Gram Update
 
@@ -136,10 +140,22 @@ The neutral route remains open only through a strict same-surface
 primitive-cone certificate or irreducibility theorem for the neutral transfer
 sector.
 
+## 2026-05-05 Schur Compressed-Denominator Row-Bootstrap Update
+
+The worklist now consumes
+`outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json`.
+This closes the shortcut that tries to reconstruct same-surface Schur `A/B/C`
+kernel rows from a compressed scalar denominator or its pole derivative.  The
+runner constructs two inequivalent Schur partitions with the same compressed
+denominator and pole derivative, proving that the row bootstrap is non-unique.
+
+The Schur route remains open only through genuine same-surface kernel rows
+from a neutral scalar kernel theorem or measurement.
+
 ## Verification
 
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
 python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
-# SUMMARY: PASS=29 FAIL=0
+# SUMMARY: PASS=30 FAIL=0
 ```

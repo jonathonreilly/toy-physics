@@ -1,7 +1,7 @@
 # PR #230 Non-Chunk Route-Family Import Audit
 
-**Status:** open / non-chunk route-family import audit records W/Z
-Goldstone-equivalence source-identity no-go
+**Status:** open / non-chunk route-family import audit records Schur
+compressed-denominator row-bootstrap no-go
 **Runner:** `scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py`
 **Certificate:** `outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json`
 
@@ -19,9 +19,10 @@ The non-chunk route-family exercise compares five live positive families:
 All five retain load-bearing open imports.  The scalar-LSZ/contact-model
 shortcut exposed by the finite-shell polefit8x8 certificates was already
 closed by the polynomial-contact repair no-go.  After the canonical `O_H`
-stretch, W/Z source-coordinate transport, and neutral primitive-cone shortcuts
-closed negatively, the refreshed cycle-6 audit selects the same-source W/Z
-family and records the Goldstone-equivalence source-identity boundary.
+stretch, W/Z source-coordinate transport, neutral primitive-cone, and
+Goldstone-equivalence shortcuts closed negatively, the refreshed cycle-7 audit
+selects the Schur family and records the compressed-denominator row-bootstrap
+boundary.
 
 2026-05-05 update: the W/Z family now also carries the
 source-coordinate transport no-go at
@@ -42,12 +43,18 @@ source-identity shortcut at
 Longitudinal-equivalence bookkeeping can be support after a canonical Higgs
 direction is certified, but it does not identify the PR230 source coordinate.
 
+2026-05-05 cycle-7 update: the selected route is now
+`schur_scalar_denominator_rows`, and the cycle closes the shortcut at
+`outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json`.
+The compressed scalar denominator and its pole derivative do not reconstruct
+the same-surface Schur `A/B/C` rows; genuine kernel rows remain required.
+
 ## Boundary
 
 This audit does not authorize retained or proposed-retained PR230 closure.  It
-does not package or rerun chunk MC, define `y_t_bare`, or use `H_unit`, Ward
-authority, `alpha_LM`, plaquette/u0, observed targets, bare-coupling algebra,
-or unit shortcuts.
+does not package or rerun chunk MC, define a bare top-Yukawa readout, or use
+prohibited operator/readout, target-value, coupling-normalization, or unit
+shortcuts.
 
 ## Verification
 

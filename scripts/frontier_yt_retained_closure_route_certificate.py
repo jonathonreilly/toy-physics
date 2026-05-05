@@ -152,6 +152,7 @@ def main() -> int:
         "legacy_schur_bridge_import_audit": "outputs/yt_legacy_schur_bridge_import_audit_2026-05-03.json",
         "schur_kernel_row_contract_gate": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
         "schur_row_candidate_extraction_attempt": "outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json",
+        "schur_compressed_denominator_row_bootstrap_no_go": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
@@ -1080,6 +1081,18 @@ def main() -> int:
         is False
         and certificates["schur_row_candidate_extraction_attempt"].get("candidate_rows_written") is False
         and certificates["schur_row_candidate_extraction_attempt"].get("exact_negative_boundary_passed")
+        is True
+    )
+    schur_compressed_denominator_bootstrap_blocks_hidden_rows = (
+        "Schur compressed-denominator row-bootstrap no-go"
+        in certificates["schur_compressed_denominator_row_bootstrap_no_go"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["schur_compressed_denominator_row_bootstrap_no_go"].get("proposal_allowed")
+        is False
+        and certificates["schur_compressed_denominator_row_bootstrap_no_go"].get(
+            "bootstrap_no_go_passed"
+        )
         is True
     )
     higgs_pole_identity_gate_blocks = (
@@ -2490,6 +2503,13 @@ def main() -> int:
         "schur-row-candidate-extraction-blocks-finite-support-import",
         schur_row_candidate_extraction_blocks_finite_support_import,
         certificates["schur_row_candidate_extraction_attempt"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "schur-compressed-denominator-bootstrap-blocks-hidden-rows",
+        schur_compressed_denominator_bootstrap_blocks_hidden_rows,
+        certificates["schur_compressed_denominator_row_bootstrap_no_go"].get(
+            "actual_current_surface_status", ""
+        ),
     )
     report(
         "fh-lsz-higgs-pole-identity-gate-blocks",

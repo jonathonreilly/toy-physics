@@ -1,5 +1,21 @@
 # Review History
 
+## 2026-05-05 Schur Compressed-Denominator Row-Bootstrap Self-Review
+
+Disposition: pass as exact negative boundary / open campaign.
+
+Findings:
+
+- The runner does not create Schur rows; it rejects reconstructing them from a
+  compressed scalar denominator or pole derivative.
+- The counterfamily is algebraic and non-data: two inequivalent Schur
+  partitions share the same compressed denominator and pole derivative while
+  their `A/B/C` rows differ.
+- Aggregate worklist, assembly, retained-route, route-family, and campaign
+  certificates now include the blocker and still deny proposal authority.
+- The Schur route remains open only through genuine same-surface kernel rows
+  from a neutral scalar kernel theorem or measurement.
+
 ## 2026-05-05 W/Z Goldstone-Equivalence Source-Identity Self-Review
 
 Disposition: pass as exact negative boundary / open campaign.

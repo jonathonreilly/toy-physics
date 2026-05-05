@@ -83,6 +83,7 @@ PARENTS = {
     "neutral_scalar_primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
     "schur_kprime_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
     "schur_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+    "schur_compressed_bootstrap_no_go": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -255,11 +256,13 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
             "blocked_by": [
                 "same-surface Schur A/B/C rows absent",
                 "finite FH/LSZ source rows explicitly rejected as kernel rows",
+                "compressed scalar denominator and pole derivative do not reconstruct A/B/C rows",
                 "canonical bridge still required after K-prime sufficiency",
             ],
             "parents": [
                 PARENTS["schur_kprime_rows"],
                 PARENTS["schur_kprime_sufficiency"],
+                PARENTS["schur_compressed_bootstrap_no_go"],
             ],
         },
         "neutral_scalar_rank_one": {
@@ -767,6 +770,15 @@ def main() -> int:
     )
     report("scalar-lsz-model-fv-ir-blocked", scalar_lsz_blocks, "model-class/FV/IR/threshold controls still block retained use")
     report("source-overlap-bridge-absent", source_overlap_blocks, f"route_passes={any_bridge_passes}")
+    report(
+        "schur-compressed-denominator-bootstrap-no-go-blocks",
+        "Schur compressed-denominator row-bootstrap no-go"
+        in statuses["schur_compressed_bootstrap_no_go"]
+        and certs["schur_compressed_bootstrap_no_go"].get("proposal_allowed") is False
+        and certs["schur_compressed_bootstrap_no_go"].get("bootstrap_no_go_passed")
+        is True,
+        statuses["schur_compressed_bootstrap_no_go"],
+    )
     report(
         "neutral-primitive-cone-certificate-gate-absent",
         "primitive-cone certificate gate" in statuses["neutral_scalar_primitive_cone"]

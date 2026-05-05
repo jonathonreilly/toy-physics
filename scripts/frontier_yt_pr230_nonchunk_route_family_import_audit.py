@@ -164,11 +164,11 @@ def family_rows(worklist: dict[str, Any]) -> list[dict[str, Any]]:
             "future_files": future_presence(worklist, ["schur_kernel_rows"]),
             "open_import_count": 1,
             "runner_or_gate_available": True,
-            "can_execute_now": False,
+            "can_execute_now": True,
             "dramatic_step_score": 2,
             "hard_residual_pressure": 2,
-            "current_disposition": "blocked; no same-surface Schur A/B/C rows present",
-            "retirement_path": "supply real same-surface Schur kernel rows",
+            "current_disposition": "cycle-7 Schur compressed-denominator row-bootstrap no-go executed; no same-surface Schur A/B/C rows present",
+            "retirement_path": "supply real same-surface Schur kernel rows; compressed denominator data cannot reconstruct them",
         },
         {
             "id": "neutral_scalar_rank_one",
@@ -227,9 +227,9 @@ def main() -> int:
         "proposal_allowed remains false",
     )
     report(
-        "selected-route-reflects-cycle6-wz-stretch",
-        selected["id"] == "same_source_wz_response"
-        and "Goldstone-equivalence" in selected["current_disposition"],
+        "selected-route-reflects-cycle7-schur-bootstrap",
+        selected["id"] == "schur_scalar_denominator_rows"
+        and "compressed-denominator row-bootstrap no-go" in selected["current_disposition"],
         selected["id"],
     )
     report(
@@ -247,7 +247,7 @@ def main() -> int:
                 "y_t_bare",
             )
         )
-        and selected["id"] == "same_source_wz_response",
+        and selected["id"] == "schur_scalar_denominator_rows",
         "forbidden imports are explicit blockers, not premises",
     )
     report(
@@ -258,35 +258,35 @@ def main() -> int:
 
     result = {
         "actual_current_surface_status": (
-            "open / non-chunk route-family import audit records W/Z Goldstone-equivalence source-identity no-go"
+            "open / non-chunk route-family import audit records Schur compressed-denominator row-bootstrap no-go"
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "All audited route families retain open load-bearing imports.  The "
-            "cycle-6 W/Z Goldstone-equivalence stretch sharpens the remaining "
-            "same-source response route but cannot supply retained or proposed-retained "
-            "PR230 closure."
+            "cycle-7 Schur bootstrap no-go sharpens the scalar-denominator "
+            "route but cannot supply proposed_retained PR230 closure."
         ),
         "route_families_audited": rows,
         "selected_route": selected,
         "selection_reason": (
-            "After W/Z source transport, scalar contact repair, O_H premise "
-            "stretch, and neutral primitive-cone no-gos, the remaining W/Z "
-            "identity shortcut worth testing was longitudinal/Goldstone "
-            "equivalence.  It is now blocked on the current surface; every "
+            "After the W/Z, scalar contact, O_H premise, and neutral "
+            "primitive-cone shortcuts closed negatively, the Schur route still "
+            "had one exact executable shortcut: row bootstrap from compressed "
+            "denominator data.  It is now blocked on the current surface; every "
             "positive route requires absent future rows or a same-surface theorem."
         ),
         "strict_non_claims": [
             "does not package or rerun chunk MC",
             "does not claim retained or proposed_retained top-Yukawa closure",
-            "does not define y_t_bare",
-            "does not use H_unit, yt_ward, alpha_LM, plaquette, u0, observed targets, bare-coupling algebra, or unit shortcuts",
+            "does not define a bare top-Yukawa readout",
+            "does not use prohibited operator/readout, target-value, coupling-normalization, or unit shortcuts",
         ],
         "exact_next_action": (
             "Do not repeat source-only primitive-cone, scalar polynomial-contact, "
             "static W/Z transport, or Goldstone-equivalence source-identity "
-            "shortcuts.  The next positive move requires a strict future row/"
-            "certificate surface: O_H/C_sH/C_HH rows, W/Z mass-response rows "
+            "shortcuts, and do not bootstrap Schur rows from compressed "
+            "denominator data.  The next positive move requires a strict future "
+            "row/certificate surface: O_H/C_sH/C_HH rows, W/Z mass-response rows "
             "with identities, Schur A/B/C rows, scalar-LSZ moment/threshold/FV "
             "authority, or a neutral primitive-cone certificate."
         ),

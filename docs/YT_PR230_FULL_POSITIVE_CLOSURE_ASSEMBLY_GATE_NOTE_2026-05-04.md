@@ -118,6 +118,14 @@ Longitudinal-equivalence structure can remain support after the canonical
 Higgs direction is certified, but it does not identify the PR230 scalar source
 coordinate.  The assembly gate remains open with `PASS=47 FAIL=0`.
 
+2026-05-05 Schur compressed-denominator row-bootstrap update: the gate now
+also consumes
+`outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json`.
+Two inequivalent Schur `A/B/C` partitions can share the same compressed
+denominator and pole derivative, so the missing kernel rows cannot be
+reconstructed from compressed scalar data.  The assembly gate remains open
+with `PASS=48 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 
@@ -135,7 +143,8 @@ The current positive non-chunk bridge candidates remain:
   theorem, missing sector-overlap identity, missing canonical-Higgs identity,
   and the new Goldstone-equivalence source-identity no-go;
 - Schur/K-prime kernel rows, blocked by absent same-surface Schur `A/B/C` rows
-  and the separate canonical bridge;
+  and the separate canonical bridge; compressed denominator data also does not
+  reconstruct those rows;
 - neutral-scalar rank one, blocked by the absence of a current
   primitive-cone/positivity-improving neutral-sector theorem and by the new
   source-only primitive-cone stretch no-go.
@@ -144,9 +153,8 @@ The current positive non-chunk bridge candidates remain:
 
 This assembly gate does not claim retained or proposed_retained top-Yukawa
 closure.  It does not package chunk outputs, synthesize measurement rows,
-define `y_t` through a matrix element or `y_t_bare`, or use `H_unit`,
-`yt_ward_identity`, `alpha_LM`, plaquette/u0, observed targets, `kappa_s=1`,
-`c2=1`, `Z_match=1`, or `cos(theta)=1`.
+define top-Yukawa through a matrix element or bare readout, or use prohibited
+operator/readout, target-value, coupling-normalization, or unit shortcuts.
 
 ## Next Action
 

@@ -1,5 +1,48 @@
 # Handoff
 
+## 2026-05-05 Schur Compressed-Denominator Row-Bootstrap No-Go
+
+Cycle 7 tested the Schur/scalar-denominator shortcut left after finite
+ladder/Feshbach support was already rejected as A/B/C row evidence: whether an
+already-compressed scalar denominator, or its pole derivative, can reconstruct
+the missing same-surface Schur kernel rows.
+
+Result: exact negative boundary.  The runner constructs two inequivalent
+one-orthogonal-mode Schur partitions with the same compressed denominator and
+the same pole derivative while their `A/B/C` rows differ.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_schur_compressed_denominator_row_bootstrap_no_go.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=48 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=196 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=223 FAIL=0
+
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+# SUMMARY: PASS=30 FAIL=0
+```
+
+Claim boundary: no closure proposal, no chunk packaging, no synthetic Schur
+rows, and no compressed-denominator row-bootstrap authority.
+
+Next exact action: do not repeat static W/Z transport, Goldstone-equivalence
+source identity, source-only neutral irreducibility, or compressed-denominator
+Schur row bootstrap.  Continue only with a strict same-surface artifact:
+`O_H/C_sH/C_HH` pole rows, W/Z response rows with identities/covariance/
+correction authority, genuine Schur `A/B/C` kernel rows, a neutral
+primitive-cone certificate, or scalar-LSZ moment/threshold/FV authority.
+
 ## 2026-05-05 W/Z Goldstone-Equivalence Source-Identity No-Go
 
 Cycle 6 tested the remaining W/Z identity shortcut after static source

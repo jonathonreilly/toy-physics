@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact negative boundary / W/Z Goldstone-equivalence source-identity no-go; PR230 closure still open
+actual_current_surface_status: exact negative boundary / Schur compressed-denominator row-bootstrap no-go; PR230 closure still open
 conditional_surface_status: conditional-support if C_sH/C_HH Gram purity, W/Z response, or rank-one neutral scalar theorem closes the overlap
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "The Legendre source-pole operator is derived, but no current-surface premise forces its overlap with canonical O_H to be unity."
+proposal_allowed_reason: "The Legendre source-pole operator is derived, but no current-surface premise supplies physical overlap authority or same-surface Schur A/B/C kernel rows."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -114,7 +114,9 @@ Open imports:
   the source-only primitive-cone stretch is now closed negatively by an
   algebraic reducible neutral completion;
 - scalar denominator / K-prime route is exact support only; same-surface Schur
-  A/B/C kernel rows and FV/IR pole-control certificates are absent;
+  A/B/C kernel rows and FV/IR pole-control certificates are absent, and
+  compressed-denominator row bootstrap is closed negatively by two
+  inequivalent partitions with the same denominator and pole derivative;
 - scalar-LSZ Stieltjes moment-certificate gate is exact support only: it
   defines the future positive certificate contract using Hankel/shifted-Hankel
   moment positivity, tight pole-residue interval, threshold-gap control,
@@ -124,7 +126,7 @@ Open imports:
 - non-chunk route-family import audit is exact support / routing only: it
   compares source-Higgs, same-source W/Z, scalar-LSZ/contact, Schur/K-prime,
   and neutral rank-one families, and after prior no-go blocks now records the
-  W/Z Goldstone-equivalence source-identity no-go as the selected hard
+  Schur compressed-denominator row-bootstrap no-go as the selected hard
   residual; it
   supplies no retained/proposed-retained proposal authority;
 - scalar-LSZ polynomial-contact repair is closed negatively on the current

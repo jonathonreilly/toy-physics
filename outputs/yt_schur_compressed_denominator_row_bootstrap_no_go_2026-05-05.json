@@ -1,0 +1,91 @@
+{
+  "actual_current_surface_status": "exact negative boundary / Schur compressed-denominator row-bootstrap no-go",
+  "bare_retained_allowed": false,
+  "bootstrap_no_go_passed": true,
+  "counterfamily": {
+    "pair_checks": {
+      "first_D_eff_samples": [
+        -0.3066,
+        -0.12410000000000002,
+        0.0,
+        0.0803,
+        0.2847
+      ],
+      "first_matches_target_denominator": true,
+      "orthogonal_block_nonzero_on_grid": true,
+      "rows_differ": true,
+      "same_compressed_denominator_on_grid": true,
+      "same_pole_and_kprime_data": true,
+      "sample_points": [
+        -0.42,
+        -0.17,
+        0.0,
+        0.11,
+        0.39
+      ],
+      "second_D_eff_samples": [
+        -0.3066,
+        -0.1241,
+        0.0,
+        0.0803,
+        0.28470000000000006
+      ],
+      "second_matches_target_denominator": true,
+      "target_D_eff_samples": [
+        -0.3066,
+        -0.1241,
+        0.0,
+        0.0803,
+        0.2847
+      ]
+    },
+    "partition_A_rows": {
+      "A_at_pole": 0.03457142857142857,
+      "A_prime_at_pole": 0.7149591836734693,
+      "B_at_pole": 0.22,
+      "B_prime_at_pole": -0.04,
+      "C_at_pole": 1.4,
+      "C_prime_at_pole": 0.1
+    },
+    "partition_B_rows": {
+      "A_at_pole": 0.11308695652173914,
+      "A_prime_at_pole": 0.6678937618147447,
+      "B_at_pole": -0.51,
+      "B_prime_at_pole": 0.16,
+      "C_at_pole": 2.3,
+      "C_prime_at_pole": -0.18
+    },
+    "shared_D_eff_prime_at_pole": 0.73,
+    "shared_pole": 0.0
+  },
+  "exact_next_action": "Produce genuine same-surface Schur A/B/C kernel rows from a neutral scalar kernel theorem or measurement.  If those rows remain absent, pivot to O_H/source-Higgs rows, same-source W/Z response rows, scalar-LSZ moment-threshold-FV authority, or a neutral-sector irreducibility certificate.",
+  "fail_count": 0,
+  "future_rows_present": [],
+  "parent_certificates": {
+    "kprime_attempt": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
+    "scalar_denominator_attempt": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json",
+    "schur_absence_guard": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
+    "schur_candidate_extraction": "outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json",
+    "schur_contract": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
+    "schur_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json"
+  },
+  "parent_statuses": {
+    "kprime_attempt": "open / K-prime closure attempt blocked",
+    "scalar_denominator_attempt": "open / scalar denominator theorem closure attempt blocked",
+    "schur_absence_guard": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
+    "schur_candidate_extraction": "exact negative boundary / Schur row candidate extraction from finite ladder support",
+    "schur_contract": "open / Schur kernel row contract gate not passed; current rows absent",
+    "schur_sufficiency": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent",
+    "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current surface has no same-surface Schur A/B/C row file, and the compressed scalar denominator plus pole derivative are compatible with multiple inequivalent Schur partitions.",
+  "strict_non_claims": [
+    "does not produce Schur A/B/C rows",
+    "does not claim physical top-Yukawa closure",
+    "does not use external numerical targets or banned readout shortcuts",
+    "does not package chunk outputs"
+  ]
+}

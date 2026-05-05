@@ -18,6 +18,7 @@
 | Longitudinal/Goldstone equivalence as PR230 source identity | closed negatively | `YT_WZ_GOLDSTONE_EQUIVALENCE_SOURCE_IDENTITY_NO_GO_NOTE_2026-05-05.md` |
 | Direct neutral-sector positivity improvement | not derived | `YT_NEUTRAL_SCALAR_POSITIVITY_IMPROVING_DIRECT_CLOSURE_ATTEMPT_NOTE_2026-05-03.md` |
 | Finite ladder / Feshbach support as Schur A/B/C rows | closed negatively | `yt_schur_row_candidate_extraction_attempt_2026-05-03.json` |
+| Compressed scalar denominator / pole derivative as Schur A/B/C row bootstrap | closed negatively | `YT_SCHUR_COMPRESSED_DENOMINATOR_ROW_BOOTSTRAP_NO_GO_NOTE_2026-05-05.md` |
 | External FMS/GEVP/FH/Nielsen literature as direct `O_sp/O_H` proof | blocked / context only | `YT_OSP_OH_LITERATURE_BRIDGE_NOTE_2026-05-04.md` |
 | FMS-style `O_H` certificate from the current PR230 harness | blocked on current surface | `YT_FMS_OH_CERTIFICATE_CONSTRUCTION_ATTEMPT_NOTE_2026-05-04.md` |
 | Neutral-scalar irreducibility authority already present in repo | absent on current surface | `YT_NEUTRAL_SCALAR_IRREDUCIBILITY_AUTHORITY_AUDIT_NOTE_2026-05-04.md` |

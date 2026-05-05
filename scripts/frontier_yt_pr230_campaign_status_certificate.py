@@ -263,6 +263,9 @@ def main() -> int:
         "schur_row_candidate_extraction_attempt": load(
             "outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json"
         ),
+        "schur_compressed_denominator_row_bootstrap_no_go": load(
+            "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json"
+        ),
         "fh_lsz_higgs_pole_identity": load(
             "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json"
         ),
@@ -1031,7 +1034,7 @@ def main() -> int:
         and certificates["pr230_nonchunk_route_family_import_audit"]
         .get("selected_route", {})
         .get("id")
-        == "same_source_wz_response",
+        == "schur_scalar_denominator_rows",
         statuses["pr230_nonchunk_route_family_import_audit"],
     )
     report(
@@ -1349,6 +1352,18 @@ def main() -> int:
         and certificates["schur_row_candidate_extraction_attempt"].get("exact_negative_boundary_passed")
         is True,
         statuses["schur_row_candidate_extraction_attempt"],
+    )
+    report(
+        "schur-compressed-denominator-bootstrap-no-go-blocks",
+        "Schur compressed-denominator row-bootstrap no-go"
+        in str(statuses["schur_compressed_denominator_row_bootstrap_no_go"])
+        and certificates["schur_compressed_denominator_row_bootstrap_no_go"].get("proposal_allowed")
+        is False
+        and certificates["schur_compressed_denominator_row_bootstrap_no_go"].get(
+            "bootstrap_no_go_passed"
+        )
+        is True,
+        statuses["schur_compressed_denominator_row_bootstrap_no_go"],
     )
     report(
         "fh-lsz-higgs-pole-identity-gate-blocks",

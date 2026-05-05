@@ -1,5 +1,13 @@
 # Artifact Plan
 
+Completed in the Schur compressed-denominator row-bootstrap continuation:
+
+- `scripts/frontier_yt_schur_compressed_denominator_row_bootstrap_no_go.py`
+- `docs/YT_SCHUR_COMPRESSED_DENOMINATOR_ROW_BOOTSTRAP_NO_GO_NOTE_2026-05-05.md`
+- `outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json`
+- refreshed non-chunk route-family audit, worklist, full assembly,
+  retained-route, and campaign certificates.
+
 Completed in block 1:
 
 - `scripts/frontier_yt_osp_oh_identity_stretch_attempt.py`
