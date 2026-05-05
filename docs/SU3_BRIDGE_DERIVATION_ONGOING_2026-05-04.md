@@ -341,6 +341,56 @@ For L_s ≥ 3: even at the simpler PBC geometry, treewidth analysis (PR #510) sh
 
 If L_s=3 APBC has REDUCED geometry (analogous to L_s=2 APBC having 6/12 instead of 12/24), the calculation might be tractable. But this isn't documented in the framework.
 
+## 10d. NEW FINDING: L_s=3 APBC Schur computation (this iteration)
+
+Per user plan after primitive search, attempted L_s=3 APBC Schur derivation (`scripts/frontier_su3_l3_apbc_schur_2026_05_04.py`).
+
+**Setup**:
+- 27 sites at corners of {0,1,2}³
+- 81 links (27 sites × 3 forward directions)
+- 81 plaquettes (27 per plane × 3 planes)
+- APBC in z-direction
+- Link-incidence: **4** per link (each link in 4 plaquettes — 2 perpendicular planes × 2 plaquettes per plane)
+
+**Critical structural observation**: V-invariant L_s=2 APBC has link-incidence **2** (each link in exactly 2 plaquettes — one in each of the 2 perpendicular planes). This is what allows the simple Schur orthogonality formula `∫dU χ_a(U)χ_b(U†) = δ_ab` to factorize the partition function.
+
+For L_s=3, link-incidence rises to 4. The Schur orthogonality at a 4-incidence link requires:
+```
+∫dU χ_a(U) χ_b(U†) χ_c(U) χ_d(U†) = ⟨a⊗c, b⊗d⟩
+```
+which involves SU(3) Clebsch-Gordan / 6j-symbol fusion — NOT clean δ-functions. The naive Schur formula `(c/c_00)^N_plaq × d^(N_comp - N_links)` is therefore NOT correct for L_s=3.
+
+**Result of running the naive formula anyway:**
+
+```
+L_s=3 APBC: 81 links, 81 plaquettes, link-incidence=4
+Cyclic-index graph: 324 nodes, 486 edges, N_components=1
+Naive Schur formula: ρ_(p,q) = (c/c_00)^81 × d^(1-81) = (c/c_00)^81 × d^(-80)
+
+P(L_s=3 APBC, β=6, naive Schur) = 0.4225317392
+```
+
+**Interpretation**: the d^(-80) factor crushes all non-trivial irreps to ~10^(-30) or smaller. The ρ effectively becomes the trivial-irrep δ measure → P → P_triv = 0.4225 (same as L_s=2 V-invariant, same as the framework's reference solve B).
+
+This is NOT the correct L_s=3 Wilson plaquette value — it's the **naive Schur formula's collapse limit** when it's misapplied to high-incidence geometry.
+
+**Honest outcome**:
+
+1. The naive Schur formula is only valid at link-incidence = 2 (V-invariant L_s=2 APBC). At L_s=3 it degenerates to P_triv.
+
+2. The genuine L_s=3 APBC derivation requires either:
+   - (a) SU(3) Clebsch-Gordan / 6j-symbol fusion at high-incidence links — combinatorial blow-up
+   - (b) Full tensor-network contraction — treewidth ≥ 29 per [PR #510](https://github.com/jonathonreilly/cl3-lattice-framework/pull/510), exponentially expensive
+   - (c) Some L_s=3 V-invariant analog reducing link-incidence to 2 — not defined in the framework (V-invariance at L_s=3 would naturally use Z_3 center, not Z_2 APBC)
+
+3. The L_s=2 V-invariant Schur was the only geometry where the closed-form formula applies, and it gives the framework's exact L_s=2 native prediction P = 0.4225.
+
+**Key honest conclusion of the campaign**:
+
+The framework's exact L_s=2 Wilson plaquette is **0.4225** (via V-invariant Schur, the only case where the formula applies cleanly). The 0.5934 MC value cannot be derived via Schur cube formulas at L_s=2 OR L_s=3 with current framework primitives. The "candidate" 0.59353 violates the framework's own constant-lift slope theorem. The k=12+2/π closure is in the framework's tube-power family that the no-go classifies as not closed by local inputs.
+
+The remaining open derivation pathway is the framework's **explicit Perron state at β=6 of the source-sector transfer operator** `T_src(6) = exp(3J) D_6^loc C_(Z_6^env) exp(3J)` on the V-invariant minimal block — explicitly named "open" by the framework's own bridge-support note. This is structurally a different problem than Schur cube enumeration; it's the spectral-measure problem of the SU(3) character recurrence operator J in the unknown β=6 transfer state.
+
 ## 10. Historical PRs (consolidated into this doc going forward)
 
 This consolidated doc supersedes the per-iteration PRs. Future updates go HERE, not new PRs.
