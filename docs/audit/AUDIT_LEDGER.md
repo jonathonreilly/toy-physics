@@ -18,13 +18,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 50 |
+| **retained** | 51 |
 | **retained_no_go** | 113 |
 | **retained_bounded** | 200 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 871 |
-| audit_in_progress | 21 |
+| audit_in_progress | 20 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 30 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 21 |
-| `audited_clean` | 337 |
+| `audit_in_progress` | 20 |
+| `audited_clean` | 338 |
 | `audited_conditional` | 391 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -114,7 +114,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_cone_completing_root_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_q_bridge_single_primitive_note_2026-04-22` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -269,6 +268,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `i3_zero_exact_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `independent_generators_heldout_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
+| `koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_cyclic_wilson_descendant_law_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_dweh_cyclic_compression_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_kappa_two_orbit_dimension_factorization_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
@@ -7092,6 +7092,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md`
   - `KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`KOIDE_CONE_THREE_FORM_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/KOIDE_CONE_THREE_FORM_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone polynomial-algebra equivalence over real triples between the orbit-slot quadratic, the explicit cyclic linear-map quadratic, the polynomial ratio form, and the divided ratio form when u+v+w is nonzero, plus non-emptiness by explicit examples.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-koide-cone-three-form-equivalence-narrow-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Direct expansion shows 2 r0^2 - r1^2 - r2^2 = 2 [4(uv + uw + vw) - (u^2 + v^2 + w^2)], and 3(u^2+v^2+w^2)-2(u+v+w)^2 = -F_orbit.  _(class `A`)_
+- **chain closes:** True — The claim closes as elementary algebra over explicitly defined real variables: F_cyclic = 2 F_orbit and F_ratio' = -F_orbit. The divided ratio form is correctly scoped to u+v+w != 0, and no physical Koide, mass-amplitude, or Gamma-orbit identification is imported.
+- **rationale:** The load-bearing step is exact polynomial expansion under an explicit linear definition of r0, r1, and r2. The cached runner completes and independently checks the symbolic identities, the ratio restriction, non-empty cone examples, and the off-cone uniform triple, all as class A algebra. Residual risk is only scope creep if downstream users treat this as a physical charged-lepton theorem, which this note explicitly does not claim.
 - **auditor confidence:** high
 
 ### `koide_cyclic_wilson_descendant_law_note_2026-04-18`
