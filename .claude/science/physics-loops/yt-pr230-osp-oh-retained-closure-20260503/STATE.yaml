@@ -4,17 +4,20 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact-support
-active_residual: "scalar-LSZ Stieltjes moment certificate, threshold/pole-saturation, FV/IR control, or microscopic scalar-denominator theorem"
+actual_current_surface_status: open
+active_residual: "six non-chunk work units remain: same-surface O_H/source-Higgs, W/Z response, scalar-LSZ, Schur rows, neutral rank-one, matching/running after readout"
 latest_checkpoint:
-  utc: "2026-05-05T02:05:00Z"
-  block: 54
-  artifact: "FH/LSZ Stieltjes moment-certificate gate"
-  status: "exact support; scalar-LSZ finite-shell and pole-fit rows now require a strict positive Stieltjes moment certificate plus threshold, FV/IR, denominator/analytic-continuation, and firewall authority"
-  result: "moment gate PASS=10 FAIL=0; assembly PASS=33 FAIL=0; retained-route PASS=182 FAIL=0; campaign PASS=208 FAIL=0"
-  claim_boundary: "no scalar LSZ closure, no y_t readout, no y_t_bare, no H_unit/Ward/alpha_LM/plaquette/u0/observed-target/unit-shortcut authority; current surface lacks the strict moment certificate"
-  live_compute: "chunk worker check-in: polefit8x8 chunks019-024 are still active in the other worker namespace with no root JSON outputs yet; this checkpoint does not package chunk artifacts"
+  utc: "2026-05-05T03:18:00Z"
+  block: 55
+  artifact: "PR230 non-chunk closure worklist gate"
+  status: "open; all current non-chunk routes are represented by explicit gates/support/no-go artifacts, and every remaining positive path requires a named future certificate, row file, or theorem"
+  result: "non-chunk worklist PASS=15 FAIL=0; assembly PASS=34 FAIL=0 after remote g2 Casimir no-go; retained-route PASS=183 FAIL=0; campaign PASS=209 FAIL=0"
+  claim_boundary: "no retained/proposed-retained closure, no chunk packaging, no y_t_bare, no H_unit/Ward/alpha_LM/plaquette/u0/observed-target/unit-shortcut authority; remaining work units are named future surfaces"
+  live_compute: "chunk worker check-in: previous polefit8x8 PIDs 53530-53535 are no longer present; no chunk019-024 root JSONs or output directories were found in this worktree, and this checkpoint does not package chunk artifacts"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+    - docs/YT_PR230_NON_CHUNK_CLOSURE_WORKLIST_NOTE_2026-05-05.md
+    - outputs/yt_pr230_non_chunk_closure_worklist_2026-05-05.json
     - scripts/frontier_yt_fh_lsz_stieltjes_moment_certificate_gate.py
     - docs/YT_FH_LSZ_STIELTJES_MOMENT_CERTIFICATE_GATE_NOTE_2026-05-05.md
     - outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json
@@ -75,8 +78,11 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 54
+block: 55
 files_touched:
+  - scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+  - docs/YT_PR230_NON_CHUNK_CLOSURE_WORKLIST_NOTE_2026-05-05.md
+  - outputs/yt_pr230_non_chunk_closure_worklist_2026-05-05.json
   - scripts/frontier_yt_fh_lsz_stieltjes_moment_certificate_gate.py
   - docs/YT_FH_LSZ_STIELTJES_MOMENT_CERTIFICATE_GATE_NOTE_2026-05-05.md
   - outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json

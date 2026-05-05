@@ -93,6 +93,10 @@ Open imports:
   FV/IR control, denominator/analytic-continuation authority, and the
   forbidden-import firewall, but the strict certificate is absent on the
   current surface;
+- the PR230 non-chunk closure worklist is now complete as an open integration
+  gate: all current non-chunk routes are represented by explicit blockers, and
+  the six remaining positive units require named future surfaces rather than
+  another hidden branch-local shortcut;
 - the Schur/K-prime row absence guard has been refreshed against the current
   46-chunk production surface; it scanned `93` current output/certificate
   files and found `0` complete Schur row hits, so current FH/LSZ source rows

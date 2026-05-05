@@ -203,3 +203,16 @@ Hankel checks, a tight positive residue interval, threshold-gap control, FV/IR
 control, analytic-continuation or scalar-denominator authority, and the PR230
 forbidden-import firewall.  The current surface has no such strict moment
 certificate, so this is exact support, not scalar-LSZ closure.
+
+Completed in the non-chunk closure-worklist continuation:
+
+- `scripts/frontier_yt_pr230_non_chunk_closure_worklist.py`
+- `docs/YT_PR230_NON_CHUNK_CLOSURE_WORKLIST_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_non_chunk_closure_worklist_2026-05-05.json`
+
+This is the integration answer to "what non-chunk work remains."  It verifies
+that the current surface has no untracked non-chunk shortcut and records six
+remaining positive work units: same-surface `O_H`/source-Higgs rows, W/Z
+response rows plus non-observed `g_2`/`delta_perp`, scalar-LSZ
+moment/threshold/FV/IR authority, same-surface Schur rows, neutral-sector
+irreducibility, and matching/running after a certified physical readout.

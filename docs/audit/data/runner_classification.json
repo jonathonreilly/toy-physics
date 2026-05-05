@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T01:08:42.818192+00:00",
+  "generated_at": "2026-05-05T01:22:36.846132+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16405,6 +16405,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_matching_running_bridge_gate.py"
     },
+    "yt_pr230_non_chunk_closure_worklist_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_non_chunk_closure_worklist.py"
+    },
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01": {
       "assert_count": 1,
       "counts": {
@@ -17580,6 +17592,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_wz_g2_authority_firewall.py"
+    },
+    "yt_wz_g2_generator_casimir_normalization_no_go_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 3,
+        "B": 0,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_wz_g2_generator_casimir_normalization_no_go.py"
     },
     "yt_wz_g2_response_self_normalization_no_go_note_2026-05-05": {
       "assert_count": 1,
@@ -33522,6 +33546,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_non_chunk_closure_worklist.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_non_chunk_closure_worklist_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_physics_loop_assumption_audit.py": {
       "assert_count": 1,
       "claims": [
@@ -34908,6 +34947,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_wz_g2_generator_casimir_normalization_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_wz_g2_generator_casimir_normalization_no_go_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 3,
+        "B": 0,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_yt_wz_g2_response_self_normalization_no_go.py": {
@@ -38614,11 +38668,11 @@
       "A": 9,
       "B": 200,
       "C": 488,
-      "D": 283,
+      "D": 285,
       "none": 404
     },
-    "runners_classified": 1384,
-    "runners_with_C": 714,
-    "runners_with_D": 492
+    "runners_classified": 1386,
+    "runners_with_C": 716,
+    "runners_with_D": 494
   }
 }

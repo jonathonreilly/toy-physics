@@ -173,6 +173,22 @@ Findings:
   strict moment certificate from production scalar data or a stronger
   same-surface scalar-denominator/analytic-continuation theorem.
 
+## 2026-05-05 Non-Chunk Closure Worklist Self-Review
+
+Disposition: open integration worklist; no retained/proposed-retained closure.
+
+Findings:
+
+- The worklist gate is deliberately not a theorem of `y_t`; it is the
+  campaign integration surface for non-chunk work.
+- It confirms that the loaded current surface still rejects both current and
+  chunk-only closure and that every non-chunk positive route is blocked by a
+  named missing future certificate, row file, or theorem.
+- The six remaining work units are concrete and non-overlapping enough for
+  future workers: `O_H`/source-Higgs, W/Z response, scalar-LSZ, Schur rows,
+  neutral rank-one, and matching/running after physical readout.
+- No chunk outputs were packaged or counted as evidence.
+
 ## 2026-05-04 Same-Source EW Action Gate Self-Review
 
 Disposition: exact negative boundary for current W/Z work unit; continue

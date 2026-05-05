@@ -18525,7 +18525,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T01:08:37.591447+00:00",
+  "generated_at": "2026-05-05T01:22:32.552038+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41724,6 +41724,16 @@
       "runner_path": "scripts/frontier_yt_pr230_matching_running_bridge_gate.py",
       "title": "PR230 Matching/Running Bridge Gate"
     },
+    "yt_pr230_non_chunk_closure_worklist_note_2026-05-05": {
+      "claim_id": "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
+      "current_status": "open",
+      "current_status_raw": "open / PR230 non-chunk closure worklist complete; positive closure still blocked",
+      "deps": [],
+      "note_hash": "34227a6b2fc237fdf72761abe01d375bc89cfc3230eb73bb40540c10b0382cd5",
+      "path": "docs/YT_PR230_NON_CHUNK_CLOSURE_WORKLIST_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_non_chunk_closure_worklist.py",
+      "title": "PR #230 Non-Chunk Closure Worklist Gate"
+    },
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01": {
       "claim_id": "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
       "current_status": "open",
@@ -42838,6 +42848,16 @@
       "path": "docs/YT_WZ_G2_AUTHORITY_FIREWALL_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_wz_g2_authority_firewall.py",
       "title": "PR #230 W/Z g2 Authority Firewall"
+    },
+    "yt_wz_g2_generator_casimir_normalization_no_go_note_2026-05-05": {
+      "claim_id": "yt_wz_g2_generator_casimir_normalization_no_go_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / SU2 generator-Casimir normalization does not certify PR230 g2.",
+      "deps": [],
+      "note_hash": "f567983e363e7c74b816a3449c5fb280439113dab8f5bbcdb7cd16e8356970dc",
+      "path": "docs/YT_WZ_G2_GENERATOR_CASIMIR_NORMALIZATION_NO_GO_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_wz_g2_generator_casimir_normalization_no_go.py",
+      "title": "W/Z g2 Generator/Casimir Normalization No-Go"
     },
     "yt_wz_g2_response_self_normalization_no_go_note_2026-05-05": {
       "claim_id": "yt_wz_g2_response_self_normalization_no_go_note_2026-05-05",
@@ -44333,6 +44353,7 @@
     "yt_pr230_full_positive_closure_assembly_gate_note_2026-05-04",
     "yt_pr230_global_yt_proof_audit_note_2026-05-01",
     "yt_pr230_matching_running_bridge_gate_note_2026-05-04",
+    "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
     "yt_pr230_queue_exhaustion_certificate_note_2026-05-01",
     "yt_pr230_review_backpressure_pass_note_2026-05-01",
@@ -44431,6 +44452,7 @@
     "yt_ward_ratio_stationarity_no_go_note_2026-05-01",
     "yt_wz_correlator_mass_fit_path_gate_note_2026-05-04",
     "yt_wz_g2_authority_firewall_note_2026-05-05",
+    "yt_wz_g2_generator_casimir_normalization_no_go_note_2026-05-05",
     "yt_wz_g2_response_self_normalization_no_go_note_2026-05-05",
     "yt_wz_mass_fit_response_row_builder_note_2026-05-04",
     "yt_wz_response_harness_absence_guard_note_2026-05-02",
@@ -44449,17 +44471,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4631,
-    "leaf_count": 983,
-    "node_count": 1935,
-    "root_count": 1449,
-    "runners_with_path": 1463,
+    "leaf_count": 985,
+    "node_count": 1937,
+    "root_count": 1451,
+    "runners_with_path": 1465,
     "status_counts": {
       "bounded": 541,
-      "open": 97,
+      "open": 98,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 419,
-      "unknown": 504
+      "unknown": 505
     }
   }
 }

@@ -55,6 +55,31 @@ Live chunk check-in: polefit8x8 chunks019-024 were still running in the other
 worker namespace with no root JSON outputs at the time of this checkpoint.
 Those jobs were not packaged here.
 
+## 2026-05-05 Non-Chunk Closure Worklist
+
+The remaining non-chunk surface is now explicit:
+
+```bash
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+# SUMMARY: PASS=15 FAIL=0
+```
+
+Result: no hidden non-chunk shortcut remains untracked on the current PR230
+surface.  The open positive work units are:
+
+- same-surface canonical `O_H` certificate plus source-Higgs `C_sH/C_HH` rows;
+- same-source W/Z response rows, non-observed `g_2`, strict `delta_perp`, or a
+  real same-surface top/W independence theorem;
+- scalar-LSZ Stieltjes/threshold/FV/IR or scalar-denominator authority;
+- same-surface Schur `A/B/C` kernel rows;
+- neutral-sector positivity-improving irreducibility;
+- matching/running after a certified physical readout.
+
+The chunk worker remains separate.  At this checkpoint the previously observed
+polefit8x8 PIDs `53530`-`53535` were no longer present, and no chunk019-024
+root JSONs or output directories were found in this worktree, so no chunk
+artifact was packaged here.
+
 ## Finite-Source Calibration Checkpoint
 
 The active multi-radius finite-source-linearity production job is now tracked
