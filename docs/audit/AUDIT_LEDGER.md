@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 44 |
 | **retained_no_go** | 103 |
-| **retained_bounded** | 194 |
+| **retained_bounded** | 195 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 16 |
 | unaudited | 878 |
-| audit_in_progress | 49 |
+| audit_in_progress | 48 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 49 |
-| `audited_clean` | 313 |
+| `audit_in_progress` | 48 |
+| `audited_clean` | 314 |
 | `audited_conditional` | 381 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -151,7 +151,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `self_consistency_forces_poisson_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `self_gravity_backreaction_closure_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `tensor_block_closure_test_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `tensor_support_center_excess_law_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `three_generation_observable_count_corollary_note_2026-05-03` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `wave_equation_gravity_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `wave_equation_self_field_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -436,6 +435,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_taste_readout_operator_model_note` | open_gate | ~~audited_clean~~ | open_gate | cross_family | codex-gpt-5.5 | A | - |
 | `teleportation_three_register_cross_encoding_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | C | - |
+| `tensor_support_center_excess_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `thales_right_angle_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `third_grown_family_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -11025,6 +11025,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `scripts/frontier_tensor_matching_completion_theorem.py`
 - **auditor confidence:** high
+
+### `tensor_support_center_excess_law_note`
+
+- **Note:** [`TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md`](../../docs/TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The audited scope is the exact seven-site support-side A1 center-excess scalar formula, together with the bounded cached-runner claim that current gamma_E and gamma_T values are affine in delta_A1 to the stated numerical tolerances on the sampled canonical A1 family and two named A1 baselines.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-second-tensor_support_center_excess_law_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Using the current bright tensor coefficients from the current tensor-boundary-drive pipeline, the runner fixes an affine law from the two exact A1 support endpoints and tests it on intermediate canonical A1 backgrounds, the exact local O_h A1 baseline, and the finite-rank A1 baseline.  _(class `C`)_
+- **chain closes:** True — Within the bounded scope, the cached runner completes and directly computes the support Green-matrix endpoint equality, the delta_A1(r) formula residuals, and the affine tensor-law residuals. The note explicitly leaves the exact tensor observable, exact endpoint coefficients, restricted tensor completion theorem, and nonlinear GR outside the closed claim.
+- **rationale:** The exact support-side portion is not just a symbol rename: the runner constructs the support potential and verifies the endpoint arm equality, center-excess size 1/6, and delta_A1(r)=1/(6(1+sqrt(6)r)) at machine precision. The bounded tensor portion is also scoped conservatively: it claims only that the current runner-computed bright tensor coefficients are nearly affine in this exact support scalar on the sampled canonical family and two baselines, with completed cached output showing all five checks pass. The note does not overclaim derivation of the tensor observable or endpoint coefficients, and those gaps are explicitly excluded from the closed scope.
+- **auditor confidence:** medium
 
 ### `testable_predictions_map_note`
 

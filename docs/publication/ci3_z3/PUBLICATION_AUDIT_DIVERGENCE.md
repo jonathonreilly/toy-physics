@@ -19,14 +19,14 @@ publication tables phrase it.
 |---|---|---:|
 | critical | `unaudited` | 366 |
 | critical | `audited_conditional` | 134 |
-| critical | `audit_in_progress` | 42 |
+| critical | `audit_in_progress` | 41 |
 | critical | `audited_renaming` | 19 |
 | critical | `audited_numerical_match` | 11 |
 | critical | `audited_failed` | 9 |
 | critical | `open_gate` | 1 |
 | critical | `retained_pending_chain` | 1 |
 
-**Total non-retained-grade rows in publication tables:** 583
+**Total non-retained-grade rows in publication tables:** 582
 
 ## Per-row breakdown
 
@@ -521,7 +521,6 @@ publication tables phrase it.
 | critical | `tensor_matching_completion_theorem_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `tensor_source_map_eta_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
-| critical | `tensor_support_center_excess_law_note` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md |
 | critical | `three_generation_chirality_boundary_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `three_generation_observable_count_corollary_note_2026-05-03` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md |
 | critical | `three_generation_observable_theorem_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |

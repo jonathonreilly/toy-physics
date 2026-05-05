@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 607,
+    "critical": 606,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -3040,27 +3040,6 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py",
-      "transitive_descendants": 289
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "tensor_support_center_excess_law_note",
-      "claim_scope": "Audited the runner-backed seven-site support A1 center-excess computation and the bounded numerical affine fit of current gamma_E and gamma_T against delta_A1.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.68,
-      "note_path": "docs/TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_tensor_support_center_excess_law.py",
       "transitive_descendants": 289
     },
     {
@@ -27622,6 +27601,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 81,
-  "total_pending": 945
+  "ready_count": 80,
+  "total_pending": 944
 }
