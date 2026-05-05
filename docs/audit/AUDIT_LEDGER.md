@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 179 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 1120 |
+| unaudited | 1119 |
 | audit_in_progress | 9 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 6 |
 | ~~audited_renaming~~ | 9 |
-| ~~audited_conditional~~ | 256 |
+| ~~audited_conditional~~ | 257 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_cl3_color_automorphism_theorem` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -38,12 +38,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 9 |
 | `audited_clean` | 285 |
-| `audited_conditional` | 256 |
+| `audited_conditional` | 257 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 6 |
 | `audited_renaming` | 9 |
-| `unaudited` | 1166 |
+| `unaudited` | 1165 |
 
 | claim_type | count |
 |---|---:|
@@ -534,6 +534,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fine_h_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `flagship_paper_contribution_statement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `g_bare_constraint_vs_convention_theorem_note_2026-05-03` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | A | - |
 | `g_bare_rigidity_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | F | - |
 | `g_bare_two_ward_closure_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -3957,6 +3958,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
 - **auditor confidence:** medium
+
+### `g_bare_constraint_vs_convention_theorem_note_2026-05-03`
+
+- **Note:** [`G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md`](../../docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Under canonical Cl(3) connection normalization and the cited rescaling-freedom-removal identity, the Wilson small-a relation beta = 2 N_c / g_bare^2 gives the unique value g_bare = 1 at N_c = 3 and beta = 6, locating the convention layer at canonical normalization rather than at a separate g_bare choice.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-gpt5-20260505`  (codex-gpt-5; independence=weak)
+- **load-bearing step:** At N_c = 3, g_bare^2 = 2 N_c / beta = 6 / 6 = 1, so g_bare = 1.  _(class `A`)_
+- **chain closes:** False — The algebra closes locally, but the one-hop rescaling-freedom-removal authority is not retained-grade; it is currently an audited decoration boxed under cl3_color_automorphism_theorem.
+- **rationale:** Issue: The load-bearing RR input is the one-hop rescaling-freedom-removal theorem, but the current ledger has that cited authority as audited_decoration/effective decoration_under_cl3_color_automorphism_theorem, not a retained-grade theorem. Why this blocks: the source's structural-constraint conclusion is exact algebra once CN, WM, and RR are accepted, and the fresh runner cache verifies the relevant Section E algebra, but an active positive_theorem cannot retain through a decoration dependency. Repair target: re-promote or retain g_bare_rescaling_freedom_removal_theorem_note_2026-05-03 as an active theorem, or split/box this note as decoration if it adds no independent claim beyond the decoration parent. Claim boundary until fixed: this remains a conditional algebraic disambiguation relative to CN, Wilson matching, and the boxed rescaling identity; it is not retained as an independent structural constraint.
+- **open / conditional deps cited:**
+  - `G_BARE_RESCALING_FREEDOM_REMOVAL_THEOREM_NOTE_2026-05-03.md`
+- **auditor confidence:** high
 
 ### `g_bare_rescaling_freedom_removal_theorem_note_2026-05-03`
 
