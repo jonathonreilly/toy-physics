@@ -1,0 +1,250 @@
+{
+  "actual_current_surface_status": "bounded-support / targeted literature and assumption exercises complete; missing O_s/O_sp-to-O_H bridge remains open",
+  "admitted_observation_status": null,
+  "assumption_questioning_exercise": [
+    {
+      "assumption": "A same-source label fixes the physical Higgs coordinate.",
+      "repair": "derive k_top/k_gauge=1 or measure a joint top-W/H response identity",
+      "stress_result": "false on current surface",
+      "why": "common source rescalings cancel, but sector-overlap ratios can still vary"
+    },
+    {
+      "assumption": "Exact Z(s,0) or C_ss determines C_sH and C_HH.",
+      "repair": "define O_H and measure/derive the 2x2 matrix-valued spectral rows",
+      "stress_result": "false",
+      "why": "matrix spectral measures with identical ss marginal can have different off-diagonal entries"
+    },
+    {
+      "assumption": "FMS lets us write O_H without an EW/Higgs action on PR230.",
+      "repair": "same-source EW/Higgs action certificate or independent canonical O_H theorem",
+      "stress_result": "false",
+      "why": "FMS is an operator expansion after a gauge-Higgs theory and composite are supplied"
+    },
+    {
+      "assumption": "Holonomic/Picard-Fuchs methods can replace the missing operator definition.",
+      "repair": "first define Z(beta,s,h), then use holonomic/tensor contraction",
+      "stress_result": "false",
+      "why": "they compute derivatives of a defined functional; they do not choose the h source"
+    },
+    {
+      "assumption": "One neutral scalar pole is automatic from Cl(3)/Z3 symmetry.",
+      "repair": "primitive cone / positivity-improving / rank-one neutral scalar theorem",
+      "stress_result": "unproved",
+      "why": "symmetry labels do not exclude orthogonal neutral scalar admixture or top coupling"
+    },
+    {
+      "assumption": "The v input fixes the source-Higgs normalization.",
+      "repair": "source-Higgs Gram purity or W/Z gauge-normalized response",
+      "stress_result": "false",
+      "why": "v is a substrate input for y_t computation, not a certificate that O_s=O_H"
+    },
+    {
+      "assumption": "Invariant-ring uniqueness of H dagger H closes O_s=O_H.",
+      "repair": "derive the Higgs doublet/action from PR230 surface before using invariant theory",
+      "stress_result": "conditional only",
+      "why": "unique invariant exists after a same-surface Higgs doublet is supplied"
+    },
+    {
+      "assumption": "Tannaka/DR reconstruction can be used with current scalar rows.",
+      "repair": "build category-level charge/intertwiner/fiber-functor data or drop this route",
+      "stress_result": "false now",
+      "why": "reconstruction needs a rich observable tensor category, not one source marginal"
+    },
+    {
+      "assumption": "Finite moment prefixes are enough for scalar-LSZ determinacy.",
+      "repair": "finite-rank moment certificate or threshold/FV/IR theorem",
+      "stress_result": "false",
+      "why": "Prony/stieltjes routes need finite-rank, separation, or asymptotic authority"
+    },
+    {
+      "assumption": "A measured y_t-compatible number can select the bridge.",
+      "repair": "only use rows derived/measured on the current Cl(3)/Z3 surface",
+      "stress_result": "forbidden",
+      "why": "observed top/y_t targets would be fitted selectors, not derivation inputs"
+    }
+  ],
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "The literature suggests two serious positive routes: measure multi-output same-source rows, or derive a positivity-improving rank-one neutral scalar theorem. Both require new current-surface artifacts.",
+  "exact_next_action": "Pursue either the measured multi-output route (same-source W/Z or O_H rows with covariance/Gram purity) or the derivation-preferred rank-one route (primitive cone plus positivity-improving neutral scalar transfer theorem). Holonomic/D-module/tensor tools become useful only after Z(beta,s,h) or equivalent row definitions exist.",
+  "exercise_passed": true,
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained_closure": false,
+    "defined_O_H_by_name_only": false,
+    "set_kappa_s_equal_one": false,
+    "treated_literature_as_bridge_proof": false,
+    "used_alpha_lm_plaquette_u0_or_rconn": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_targets": false,
+    "used_yt_ward_identity_as_authority": false
+  },
+  "future_artifact_presence": {
+    "canonical_oh_certificate": false,
+    "matrix_spectral_measure_rows": false,
+    "neutral_rank_one_certificate": false,
+    "same_source_ew_action_certificate": false,
+    "source_higgs_rows": false
+  },
+  "hypothetical_axiom_status": null,
+  "literature_exercise": [
+    {
+      "bridge_question": "Can gauge-invariant Higgs language identify current PR230 O_s with O_H?",
+      "family": "FMS / gauge-invariant Higgs spectroscopy",
+      "finding": "Useful physical language, but conditional on an EW/Higgs action and a gauge-invariant composite operator. It does not supply the current PR230 h-source or source-overlap identity.",
+      "next_positive_artifact": "same-source EW/Higgs action certificate or canonical O_H certificate",
+      "route_status": "conditional-support",
+      "sources": [
+        "Frohlich-Morchio-Strocchi 1981 IHES preprint: https://archives.ihes.fr/document/P_81_12.pdf",
+        "Maas-Sondenheimer 2020: https://arxiv.org/abs/2009.06671",
+        "Fradkin-Shenker 1979: https://www.osti.gov/biblio/6248890"
+      ]
+    },
+    {
+      "bridge_question": "Does exact source spectral data determine C_sH/C_HH?",
+      "family": "Matrix-valued Herglotz / matrix moment problem",
+      "finding": "No. Source-only C_ss is one marginal entry of a matrix-valued spectral measure. Off-diagonal and HH entries require either the second operator or extra constraints.",
+      "next_positive_artifact": "2x2 matrix spectral measure rows for O_s and O_H",
+      "route_status": "no-go for source-only; exact-support for future two-source rows",
+      "sources": [
+        "Gesztesy-Tsekanovskii matrix Herglotz functions: https://arxiv.org/abs/funct-an/9712004",
+        "Lopez-Rodriguez matrix moment Nevanlinna parametrization: https://www.mscand.dk/article/view/14340"
+      ]
+    },
+    {
+      "bridge_question": "Can input-output data fix the hidden scalar coordinate?",
+      "family": "Minimal realization / Ho-Kalman system identification",
+      "finding": "Minimal realizations are coordinate-free up to similarity. This maps directly to the PR230 source-coordinate ambiguity: source-only transfer data can identify a realization class, not the canonical Higgs coordinate.",
+      "next_positive_artifact": "joint top/W/H response rows with observability/rank certificate",
+      "route_status": "no-go for coordinate identity; support for multi-output response route",
+      "sources": [
+        "Ho-Kalman 1966 NASA record: https://ntrs.nasa.gov/citations/19670049337"
+      ]
+    },
+    {
+      "bridge_question": "Can a hidden overlap be inferred from one class of marginal measurements?",
+      "family": "Phase retrieval / latent-variable identifiability",
+      "finding": "Generally no. These literatures clarify the need for masks, views, or conditional-independence structure. The PR230 analog is a need for non-source rows such as C_sH/C_HH or W/Z output.",
+      "next_positive_artifact": "additional independent view: O_H, W/Z, or neutral projector row",
+      "route_status": "assumption stress / experimental design guidance",
+      "sources": [
+        "Grohs-Koppensteiner-Rathmair SIAM Review 2020: https://epubs.siam.org/doi/10.1137/19M1256865",
+        "Allman-Matias-Rhodes latent identifiability: https://arxiv.org/abs/0809.5032"
+      ]
+    },
+    {
+      "bridge_question": "Can uniqueness of the neutral scalar state remove the O_H overlap ambiguity?",
+      "family": "Krein-Rutman / Perron-Frobenius for positive semigroups",
+      "finding": "Potentially the best derivation-preferred route. If a current-surface neutral scalar transfer operator is positivity improving on a certified cone, the first scalar eigenvector can be unique. Current PR230 lacks the cone, irreducibility, and primitive certificate.",
+      "next_positive_artifact": "neutral scalar primitive-cone / positivity-improving certificate",
+      "route_status": "high-value open derivation route",
+      "sources": [
+        "Fonte Sanchez-Gabriel-Mischler 2023: https://arxiv.org/abs/2305.06652"
+      ]
+    },
+    {
+      "bridge_question": "Can charged field/Higgs structure be reconstructed from observables?",
+      "family": "Tannaka-Krein / Doplicher-Roberts reconstruction",
+      "finding": "Conceptually relevant but too large for immediate PR230. It reconstructs symmetry/field structure from a rich observable category, not from current source-only scalar rows.",
+      "next_positive_artifact": "explicit current-surface tensor category/fiber functor data",
+      "route_status": "long-horizon reconstruction route",
+      "sources": [
+        "Doplicher-Roberts Annals 1989: https://annals.math.princeton.edu/1989/130-1/p03",
+        "Doplicher-Roberts compact group duality: https://link.springer.com/article/10.1007/BF01388849"
+      ]
+    },
+    {
+      "bridge_question": "Can PR541-style exact math compute the bridge?",
+      "family": "Holonomic D-modules / Picard-Fuchs / creative telescoping",
+      "finding": "It can compute rows after Z(beta,s,h) is defined. It cannot define h, O_H, kappa_s, or the source-Higgs identity.",
+      "next_positive_artifact": "defined two-source finite-volume functional",
+      "route_status": "tool after object definition; blocked now",
+      "sources": [
+        "Zeilberger holonomic systems: https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/holonomic.html",
+        "Mueller-Stach-Weinzierl-Zayadeh Picard-Fuchs: https://arxiv.org/abs/1212.4389"
+      ]
+    },
+    {
+      "bridge_question": "Can exact finite-shell moments identify pole data?",
+      "family": "Prony / sparse moment reconstruction",
+      "finding": "Can reconstruct a finite sparse measure if finite-support and separation assumptions are certified. Current PR230 has finite prefixes, not an exact finite-support theorem.",
+      "next_positive_artifact": "finite-rank Stieltjes/moment certificate or threshold theorem",
+      "route_status": "conditional-support for scalar-LSZ only",
+      "sources": [
+        "Kunis-Peter-Roemer-von der Ohe multivariate Prony: https://www.sciencedirect.com/science/article/pii/S0024379515006187"
+      ]
+    }
+  ],
+  "parent_certificates": {
+    "action_first_oh_artifact_attempt": "outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json",
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "holonomic_source_response_gate": "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json",
+    "neutral_primitive_cone_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+    "retained_closure_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "schur_abc_definition_attempt": "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json"
+  },
+  "parent_statuses": {
+    "action_first_oh_artifact_attempt": "exact negative boundary / action-first O_H artifact not constructible from current PR230 surface",
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "full_positive_closure_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
+    "holonomic_source_response_gate": "exact negative boundary / PR541-style holonomic source-response route is relevant but blocked by missing current-surface O_H and h-source",
+    "neutral_primitive_cone_gate": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+    "retained_closure_route": "open / retained closure not yet reached",
+    "same_source_sector_overlap": "exact negative boundary / same-source sector-overlap identity obstruction",
+    "schur_abc_definition_attempt": "exact negative boundary / Schur A/B/C definition not derivable from current PR230 source-only surface",
+    "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem",
+    "source_higgs_gram_purity": "open / source-Higgs Gram purity gate not passed"
+  },
+  "pass_count": 15,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The exercises identify route families and expose assumptions; they do not supply O_H, h-source, C_sH/C_HH, W/Z response rows, or a rank-one neutral scalar theorem.",
+  "route_ranking": [
+    {
+      "blocking_artifact": "production W/Z or source-Higgs rows",
+      "rank": 1,
+      "route": "multi-output physical response",
+      "target": "top + W/Z or O_H rows on same ensemble",
+      "why_best": "turns hidden overlap into an observed covariance/ratio instead of an assumed identity"
+    },
+    {
+      "blocking_artifact": "current-surface cone, positivity, irreducibility certificate",
+      "rank": 2,
+      "route": "positivity-improving neutral scalar rank-one theorem",
+      "target": "primitive cone and irreducible transfer operator in neutral scalar sector",
+      "why_best": "derivation-preferred path that could make source-only pole data sufficient"
+    },
+    {
+      "blocking_artifact": "same-source EW action certificate",
+      "rank": 3,
+      "route": "same-source EW/Higgs action then invariant/FMS O_H",
+      "target": "derive EW/Higgs action tied to the PR230 source coordinate",
+      "why_best": "most direct O_H construction once the action is real"
+    },
+    {
+      "blocking_artifact": "O_H operator and h source",
+      "rank": 4,
+      "route": "matrix-valued spectral measure",
+      "target": "2x2 Stieltjes/Herglotz rows for O_s and O_H",
+      "why_best": "mathematically exact acceptance framework for C_sH/C_HH"
+    },
+    {
+      "blocking_artifact": "far more category data than PR230 currently has",
+      "rank": 5,
+      "route": "Tannaka/DR reconstruction",
+      "target": "reconstruct charged field/Higgs structure from observable category",
+      "why_best": "deepest possible reconstruction route"
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not define y_t_bare",
+    "does not use H_unit or yt_ward_identity",
+    "does not use observed y_t/top mass, alpha_LM, plaquette, u0, or R_conn",
+    "does not identify O_s or O_sp with O_H",
+    "does not treat any literature source as a current-surface bridge theorem"
+  ]
+}
