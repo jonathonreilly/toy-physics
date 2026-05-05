@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
 | unaudited | 845 |
-| audit_in_progress | 1 |
+| audit_in_progress | 2 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 31 |
-| ~~audited_conditional~~ | 402 |
+| ~~audited_conditional~~ | 401 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,9 +39,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
+| `audit_in_progress` | 2 |
 | `audited_clean` | 376 |
-| `audited_conditional` | 402 |
+| `audited_conditional` | 401 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 21 |
@@ -111,6 +111,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
+| `gravitomagnetic_note` | positive_theorem | audit_in_progress | audit_in_progress | cross_family | codex-gpt-5.5 | C | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
@@ -706,7 +707,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `global_coherence_predictor_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `gluon_tree_level_masslessness_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | F | - |
 | `gravitational_wave_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
-| `gravitomagnetic_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `gravity_clean_derivation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `gravity_observable_hierarchy_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `gravity_sign_audit_2026-04-10` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -6481,19 +6481,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — No. The runner exits zero, but the audit classifier records no A/B/C/D PASS checks for a load-bearing audit surface.
 - **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a bounded note with executable but unratified support.
 - **auditor confidence:** medium
-
-### `gravitomagnetic_note`
-
-- **Note:** [`GRAVITOMAGNETIC_NOTE.md`](../../docs/GRAVITOMAGNETIC_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the restricted claim that the provided moving-source runner computes a portable antisymmetric velocity-dependent phase correction in the imposed discrete Shapiro setup.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-022854-5eea0f25-gravitomagnetic_note-012`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The measured delta from static is antisymmetric in source velocity across three grown families, so the moving-source setup has a portable gravitomagnetic correction.  _(class `C`)_
-- **chain closes:** False — The restricted packet contains no completed runner output, and the provided cached run timed out with empty stdout. The source code appears to perform a first-principles numerical computation, but the actual numerical table and portability/antisymmetry checks are not certified by a completed run in the packet.
-- **rationale:** The runner source is not a trivial printer and does instantiate a lattice growth, moving source field, propagation, and phase readout, so the intended load-bearing step is class C rather than a renaming or external comparator. However, the only runner artifact provided is a timeout with no stdout, so the note's numerical values and cross-family agreement are not confirmed by the restricted evidence. The code also prints negative-velocity deltas before the static phase has been assigned, which means its displayed delta column would not directly certify the note's negative delta table even if it completed.
-- **auditor confidence:** high
 
 ### `graviton_mass_derived_note`
 
