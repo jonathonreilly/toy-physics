@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 602,
+    "critical": 601,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -3086,27 +3086,6 @@
       "ready": true,
       "runner_path": "scripts/kubo_continuum_limit.py",
       "transitive_descendants": 288
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "dm_neutrino_cascade_geometry_note_2026-04-14",
-      "claim_scope": "The audit covers only the exact C^8 weak-axis Clifford geometry for Gamma_1 on the O_0, T_1, and T_2 taste-sector subspaces, not a physical neutrino Dirac Yukawa theorem.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 5,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 10.67,
-      "note_path": "docs/DM_NEUTRINO_CASCADE_GEOMETRY_NOTE_2026-04-14.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_cascade_geometry.py",
-      "transitive_descendants": 287
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -27515,6 +27494,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 78,
-  "total_pending": 940
+  "ready_count": 77,
+  "total_pending": 939
 }

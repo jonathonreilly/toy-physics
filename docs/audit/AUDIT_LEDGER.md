@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 46 |
 | **retained_no_go** | 104 |
-| **retained_bounded** | 195 |
+| **retained_bounded** | 196 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 16 |
 | unaudited | 876 |
-| audit_in_progress | 46 |
+| audit_in_progress | 45 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 46 |
-| `audited_clean` | 317 |
+| `audit_in_progress` | 45 |
+| `audited_clean` | 318 |
 | `audited_conditional` | 382 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -112,7 +112,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `background_independence_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `dm_neutrino_cascade_geometry_note_2026-04-14` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -207,6 +206,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_sole_axiom_boundary_note_2026-04-16` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `dm_lepton_synthesis_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `dm_neutrino_cascade_geometry_note_2026-04-14` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | B | - |
@@ -3918,6 +3918,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — No. The registered runner returned nonzero, so the current executable chain is not cleanly reproducible.
 - **rationale:** Issue: the primary runner returned nonzero in the restricted audit environment. Why this blocks: a nonzero runner leaves either stale artifact/import drift or an explicit open-burden FAIL in the executable witness, so the chain cannot be ratified cleanly. Repair target: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun. Claim boundary until fixed: safe to cite as a support note with non-clean executable support.
 - **auditor confidence:** medium
+
+### `dm_neutrino_cascade_geometry_note_2026-04-14`
+
+- **Note:** [`DM_NEUTRINO_CASCADE_GEOMETRY_NOTE_2026-04-14.md`](../../docs/DM_NEUTRINO_CASCADE_GEOMETRY_NOTE_2026-04-14.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Exact C^8 weak-axis Clifford geometry for Gamma_1 on O_0, T_1, and T_2: no T_1 one-hop closure, rank-1 O_0 plus rank-2 T_2 split, and second-order return diag(1,0,0)+diag(0,1,1)=I_3.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-second-dm_neutrino_cascade_geometry_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** At second order, the return operator on T_1 decomposes exactly as diag(1,0,0) from O_0 plus diag(0,1,1) from T_2, with total I_3.  _(class `A`)_
+- **chain closes:** True — The bounded operator-geometry claim closes by direct finite matrix algebra over the stated basis, sectors, projectors, and Gamma_1. The note explicitly excludes the physical neutrino Dirac Yukawa theorem, so the open chirality, full C^16 embedding, operator-chain, and normalization bridges are outside the audited clean scope.
+- **rationale:** The runner constructs the 8-dimensional basis, Gamma_1, sector projectors, and projected return operators, then verifies the six load-bearing finite algebraic statements with completed cached output: 6 PASS, 0 FAIL. The claim is not a neutrino Yukawa derivation and does not claim a physical Dirac mass, sector normalization, or full chiral embedding closure. Within the bounded scope of exact weak-axis operator geometry, no hidden comparator, tuned numerical input, renaming, or unrun compute is load-bearing.
+- **auditor confidence:** high
 
 ### `dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16`
 
