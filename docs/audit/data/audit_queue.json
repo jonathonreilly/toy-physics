@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 597,
+    "critical": 596,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -3065,29 +3065,6 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audit_in_progress",
       "blocker": "awaiting_cross_confirmation",
-      "claim_id": "koide_cyclic_wilson_descendant_law_note_2026-04-18",
-      "claim_scope": "Exact algebraic cyclic descendant-law construction: the adjacent-chain algebra contains B0,B1,B2; cyclic projection has the three-response reconstruction formula; the Koide cone is the scalar response equation 2 r0^2 = r1^2 + r2^2.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [
-        "koide_dweh_cyclic_compression_note_2026-04-18"
-      ],
-      "direct_in_degree": 5,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 10.665,
-      "note_path": "docs/KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_cyclic_wilson_descendant_law.py",
-      "transitive_descendants": 286
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
       "claim_id": "hierarchy_matsubara_decomposition_note",
       "claim_scope": "Audited the exact temporal Matsubara decomposition, free-energy density formula, and condensate density formula for the constructed staggered Dirac operator on the L_s = 2 APBC hypercube.",
       "claim_type": "positive_theorem",
@@ -3481,6 +3458,30 @@
       "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/frontier_koide_berry_bundle_obstruction_theorem.py",
+      "transitive_descendants": 285
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "koide_circulant_wilson_target_note_2026-04-18",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "koide_cyclic_wilson_descendant_law_note_2026-04-18",
+        "koide_dweh_cyclic_compression_note_2026-04-18"
+      ],
+      "direct_in_degree": 3,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.66,
+      "note_path": "docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_koide_circulant_wilson_target.py",
       "transitive_descendants": 285
     },
     {
@@ -11590,30 +11591,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_up_sector_partition_revisit.py",
-      "transitive_descendants": 285
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_circulant_wilson_target_note_2026-04-18",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "koide_cyclic_wilson_descendant_law_note_2026-04-18",
-        "koide_dweh_cyclic_compression_note_2026-04-18"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.66,
-      "note_path": "docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_koide_circulant_wilson_target.py",
       "transitive_descendants": 285
     },
     {
@@ -27406,5 +27383,5 @@
     }
   ],
   "ready_count": 73,
-  "total_pending": 935
+  "total_pending": 934
 }
