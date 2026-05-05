@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 46 |
-| **retained_no_go** | 103 |
+| **retained_no_go** | 104 |
 | **retained_bounded** | 195 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 16 |
 | unaudited | 878 |
-| audit_in_progress | 46 |
+| audit_in_progress | 45 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 46 |
-| `audited_clean` | 316 |
+| `audit_in_progress` | 45 |
+| `audited_clean` | 317 |
 | `audited_conditional` | 381 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -134,7 +134,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q23_oh_covariance_nogo_note_2026-04-22` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_q_bridge_single_primitive_note_2026-04-22` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
-| `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_q_readout_factorization_theorem_2026-04-22` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -289,6 +288,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_dweh_cyclic_compression_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_kappa_two_orbit_dimension_factorization_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
 | `koide_mru_demotion_note_2026-04-20` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | D | - |
+| `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `lattice_3d_dense_window_extension_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -7062,6 +7062,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** With zero external selector source, K = 0, the dual relation K_* = Y^(-1) - I gives Y = I_2.  _(class `A`)_
 - **chain closes:** False — The algebraic chain closes after assuming the physical selector is source-free on the normalized carrier. The restricted packet does not prove that charged-lepton physics imposes K = 0 on this carrier.
 - **rationale:** The runner genuinely checks the symbolic algebra advertised in the note and supports the implication K = 0 -> Y = I_2 -> Q = 2/3. However, the load-bearing physical premise is the source-free law K = 0 on the normalized second-order charged-lepton carrier, and the note explicitly says this remains open. With no cited retained authority closing that bridge, retained status cannot propagate to the physical Koide conclusion.
+- **auditor confidence:** high
+
+### `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25`
+
+- **Note:** [`KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`](../../docs/KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Strict onsite C3-invariant scalar sources on the three-generation orbit reduce to common scalars, while the C3-commutant/projected source domain contains a non-onsite C3-invariant Z direction and therefore admits non-Koide zZ source values; this does not audit retained native Q=2/3 closure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-second-koide_q_onsite_source_domain_no_go_synthesis_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The exact intersection is only the common scalar: onsite local functions cap End_C3(V) = span{I}; onsite source functions erase Z, while the retained central/projected commutant source grammar keeps it visible.  _(class `A`)_
+- **chain closes:** True — The scoped no-go closes as exact finite-dimensional algebra: C diag(a,b,c) C^(-1)=diag(a,b,c) forces a=b=c, while Z=P_plus-P_perp commutes with C, squares to I, is not diagonal in the site basis, and the onsite/commutant intersection is only span{I}. With the note's stated reduced-carrier readout, the admitted commutant value z=-1/3 gives Q=1, so the current commutant/projected source grammar does not force Q=2/3.
+- **rationale:** The load-bearing result is not a numerical Koide fit or a physical-source closure claim; it is the source-domain separation and no-go that the broader commutant/projected grammar leaves a non-onsite Z direction available. The cached runner completed successfully and verifies the finite C3 matrix algebra, the onsite/commutant intersection, the non-onsite nature of Z, and the counterdomain value z=-1/3 -> Q=1. The runner also includes documentation guardrails confirming the note explicitly rejects native retained Q closure and identifies the remaining source-domain theorem. Residual risk is confined to any later attempt to promote the onsite source domain to the physical undeformed charged-lepton source domain, which this scoped claim explicitly does not assert.
 - **auditor confidence:** high
 
 ### `koide_q_reduced_observable_restriction_theorem_2026-04-22`

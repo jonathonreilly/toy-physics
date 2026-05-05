@@ -19,14 +19,14 @@ publication tables phrase it.
 |---|---|---:|
 | critical | `unaudited` | 366 |
 | critical | `audited_conditional` | 134 |
-| critical | `audit_in_progress` | 40 |
+| critical | `audit_in_progress` | 39 |
 | critical | `audited_renaming` | 19 |
 | critical | `audited_numerical_match` | 11 |
 | critical | `audited_failed` | 9 |
 | critical | `open_gate` | 1 |
 | critical | `retained_pending_chain` | 1 |
 
-**Total non-retained-grade rows in publication tables:** 581
+**Total non-retained-grade rows in publication tables:** 580
 
 ## Per-row breakdown
 
@@ -325,7 +325,6 @@ publication tables phrase it.
 | critical | `koide_q_minimal_scale_free_selector_note_2026-04-22` | `unaudited` | `unaudited` | RESULTS_INDEX.md |
 | critical | `koide_q_no_hidden_source_audit_2026-04-22` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `koide_q_normalized_second_order_effective_action_theorem_2026-04-22` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
-| critical | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | `audit_in_progress` | `audit_in_progress` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `koide_q_readout_factorization_theorem_2026-04-22` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `koide_q_reduced_observable_restriction_theorem_2026-04-22` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
