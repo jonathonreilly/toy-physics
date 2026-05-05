@@ -1,5 +1,50 @@
 # Handoff
 
+## 2026-05-05 W/Z Goldstone-Equivalence Source-Identity No-Go
+
+Cycle 6 tested the remaining W/Z identity shortcut after static source
+transport and neutral primitive-cone shortcuts closed negatively: whether
+longitudinal-equivalence or Goldstone bookkeeping can identify the PR230
+scalar source coordinate with the canonical Higgs direction.
+
+Result: exact negative boundary.  The runner constructs an algebraic non-data
+source-rotation family.  The gauge-sector equivalence signature stays fixed
+while the PR230 source direction, same-source top response, same-source W
+response, and W-normalized readout vary.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_wz_goldstone_equivalence_source_identity_no_go.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=47 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=195 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=222 FAIL=0
+
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+# SUMMARY: PASS=29 FAIL=0
+```
+
+Claim boundary: no closure proposal, no chunk packaging, no W/Z measurement
+rows, no empirical selector, and no Goldstone-equivalence source identity
+authority.
+
+Next exact action: do not repeat static W/Z transport, Goldstone-equivalence
+source identity, or source-only neutral irreducibility.  Continue only with a
+strict same-surface artifact: `O_H/C_sH/C_HH` pole rows, W/Z response rows
+with identities/covariance/correction control, Schur `A/B/C` kernel rows, a
+neutral primitive-cone certificate, or scalar-LSZ moment/threshold/FV
+authority.
+
 ## 2026-05-05 Neutral Primitive-Cone Stretch No-Go
 
 Cycle 5 tested the neutral rank-one residual after the W/Z source-coordinate

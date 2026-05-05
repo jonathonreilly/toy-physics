@@ -167,6 +167,7 @@ def main() -> int:
         "wz_same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
         "wz_same_source_ew_action_semantic_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
         "wz_source_coordinate_transport_no_go": "outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json",
+        "wz_goldstone_equivalence_source_identity_no_go": "outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json",
         "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
         "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
         "one_higgs_completeness_orthogonal_null": "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json",
@@ -1230,6 +1231,18 @@ def main() -> int:
         is False
         and certificates["wz_source_coordinate_transport_no_go"].get("future_wz_rows_present")
         is False
+    )
+    wz_goldstone_equivalence_source_identity_no_go_blocks = (
+        "Goldstone equivalence does not identify PR230 source coordinate"
+        in certificates["wz_goldstone_equivalence_source_identity_no_go"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["wz_goldstone_equivalence_source_identity_no_go"].get("proposal_allowed")
+        is False
+        and certificates["wz_goldstone_equivalence_source_identity_no_go"].get(
+            "goldstone_equivalence_source_identity_no_go_passed"
+        )
+        is True
     )
     same_source_w_response_decomposition_not_closure = (
         "same-source W-response decomposition theorem"
@@ -2554,6 +2567,13 @@ def main() -> int:
         certificates["wz_source_coordinate_transport_no_go"].get("actual_current_surface_status", ""),
     )
     report(
+        "wz-goldstone-equivalence-source-identity-no-go-blocks",
+        wz_goldstone_equivalence_source_identity_no_go_blocks,
+        certificates["wz_goldstone_equivalence_source_identity_no_go"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "same-source-w-response-decomposition-not-closure",
         same_source_w_response_decomposition_not_closure,
         certificates["same_source_w_response_decomposition"].get("actual_current_surface_status", ""),
@@ -3316,7 +3336,9 @@ def main() -> int:
             "conditional-independence theorem is required; the deterministic "
             "W-response gate further shows deterministic W alone is not "
             "covariance authority without paired top rows or a closed "
-            "same-surface covariance formula.  "
+            "same-surface covariance formula.  The Goldstone-equivalence "
+            "source-identity no-go now also blocks treating longitudinal-"
+            "equivalence bookkeeping as source-coordinate authority.  "
             "Continue chunked production only with "
             "seed-controlled replacement chunks or scheduler handoff; do not "
             "treat historical chunk001/chunk002 as independent evidence.  "

@@ -1,6 +1,6 @@
 {
-  "actual_current_surface_status": "open / non-chunk route-family import audit records neutral primitive-cone stretch no-go",
-  "exact_next_action": "Do not repeat source-only primitive-cone, scalar polynomial-contact, or static W/Z transport shortcuts.  The next positive move requires a strict future row/certificate surface: O_H/C_sH/C_HH rows, W/Z mass-response rows with identities, Schur A/B/C rows, scalar-LSZ moment/threshold/FV authority, or a neutral primitive-cone certificate.",
+  "actual_current_surface_status": "open / non-chunk route-family import audit records W/Z Goldstone-equivalence source-identity no-go",
+  "exact_next_action": "Do not repeat source-only primitive-cone, scalar polynomial-contact, static W/Z transport, or Goldstone-equivalence source-identity shortcuts.  The next positive move requires a strict future row/certificate surface: O_H/C_sH/C_HH rows, W/Z mass-response rows with identities, Schur A/B/C rows, scalar-LSZ moment/threshold/FV authority, or a neutral primitive-cone certificate.",
   "fail_count": 0,
   "parent_certificates": {
     "assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
@@ -10,7 +10,7 @@
   },
   "pass_count": 9,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "All audited route families retain open load-bearing imports.  The cycle-5 neutral primitive-cone stretch sharpens the remaining rank-one route but cannot supply retained or proposed-retained PR230 closure.",
+  "proposal_allowed_reason": "All audited route families retain open load-bearing imports.  The cycle-6 W/Z Goldstone-equivalence stretch sharpens the remaining same-source response route but cannot supply retained or proposed-retained PR230 closure.",
   "route_families_audited": [
     {
       "can_execute_now": false,
@@ -39,11 +39,11 @@
     },
     {
       "can_execute_now": false,
-      "current_disposition": "blocked; existing gates are contracts and negative shortcut boundaries, including source-coordinate transport",
-      "dramatic_step_score": 2,
+      "current_disposition": "cycle-6 W/Z stretch executed; source-coordinate transport and Goldstone-equivalence source identity both close negatively",
+      "dramatic_step_score": 5,
       "forbidden_imports": [
         "observed W/Z/top/y_t/g2 selectors",
-        "alpha_LM, plaquette, u0, or bare-coupling algebra",
+        "user-banned coupling-normalization shortcuts",
         "deterministic W response without paired top rows or covariance theorem"
       ],
       "future_files": {
@@ -54,7 +54,7 @@
         "source_coordinate_transport_certificate": false,
         "wz_mass_response_rows": false
       },
-      "hard_residual_pressure": 2,
+      "hard_residual_pressure": 5,
       "id": "same_source_wz_response",
       "minimum_allowed_premises": [
         "same source coordinate for top and W/Z rows",
@@ -145,29 +145,37 @@
   ],
   "selected_route": {
     "can_execute_now": false,
-    "current_disposition": "cycle-5 stretch executed; source-only and conditional Perron premises do not force primitive-cone irreducibility",
-    "dramatic_step_score": 4,
+    "current_disposition": "cycle-6 W/Z stretch executed; source-coordinate transport and Goldstone-equivalence source identity both close negatively",
+    "dramatic_step_score": 5,
     "forbidden_imports": [
-      "gauge-vacuum Perron theorem as neutral-sector authority",
-      "commutant rank asserted as dynamics",
-      "one-Higgs notation used as field-completeness proof"
+      "observed W/Z/top/y_t/g2 selectors",
+      "user-banned coupling-normalization shortcuts",
+      "deterministic W response without paired top rows or covariance theorem"
     ],
     "future_files": {
-      "neutral_irreducibility_certificate": false,
-      "neutral_primitive_cone_certificate": false
+      "delta_perp_rows": false,
+      "deterministic_response_covariance_certificate": false,
+      "matched_top_wz_rows": false,
+      "non_observed_g2_certificate": false,
+      "source_coordinate_transport_certificate": false,
+      "wz_mass_response_rows": false
     },
-    "hard_residual_pressure": 4,
-    "id": "neutral_scalar_rank_one",
+    "hard_residual_pressure": 5,
+    "id": "same_source_wz_response",
     "minimum_allowed_premises": [
-      "same-surface neutral transfer sector",
-      "primitive-cone or positivity-improving irreducibility certificate"
+      "same source coordinate for top and W/Z rows",
+      "same-source EW action and W/Z mass-fit rows",
+      "source-coordinate transport from PR230 source to canonical Higgs radial coordinate",
+      "matched top/W covariance or closed covariance theorem",
+      "non-observed g2 certificate",
+      "strict delta_perp correction or null theorem"
     ],
-    "open_import_count": 2,
-    "retirement_path": "derive primitive-cone irreducibility or produce the strict certificate",
-    "route_family": "neutral-scalar primitive-cone rank one",
+    "open_import_count": 6,
+    "retirement_path": "produce matched rows or prove a same-surface product/covariance theorem plus source-transport authority",
+    "route_family": "same-source W/Z response",
     "runner_or_gate_available": true
   },
-  "selection_reason": "After W/Z source transport, scalar contact repair, and O_H premise stretch no-gos, the neutral primitive-cone route was the next hard non-chunk residual worth a stretch attempt.  It is now blocked on the current surface; every positive route requires absent future rows or a same-surface theorem.",
+  "selection_reason": "After W/Z source transport, scalar contact repair, O_H premise stretch, and neutral primitive-cone no-gos, the remaining W/Z identity shortcut worth testing was longitudinal/Goldstone equivalence.  It is now blocked on the current surface; every positive route requires absent future rows or a same-surface theorem.",
   "strict_non_claims": [
     "does not package or rerun chunk MC",
     "does not claim retained or proposed_retained top-Yukawa closure",

@@ -241,6 +241,20 @@ control, and tight positive residue interval are supplied.  The current
 surface does not supply that certificate, so the non-chunk scalar-LSZ route is
 now sharper but still open.
 
+Completed in the W/Z Goldstone-equivalence source-identity continuation:
+
+- `scripts/frontier_yt_wz_goldstone_equivalence_source_identity_no_go.py`
+- `docs/YT_WZ_GOLDSTONE_EQUIVALENCE_SOURCE_IDENTITY_NO_GO_NOTE_2026-05-05.md`
+- `outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json`
+- refreshed route-family audit, full assembly, retained-route, campaign, and
+  non-chunk worklist certificates.
+
+This closes the longitudinal/Goldstone-equivalence source-identity shortcut
+negatively.  The runner keeps the gauge-sector equivalence signature fixed
+while the source direction and same-source responses vary.  A future positive
+W/Z route still needs real same-source rows or a strict same-surface
+identity/covariance/correction theorem.
+
 Completed in the neutral primitive-cone continuation:
 
 - `scripts/frontier_yt_neutral_scalar_primitive_cone_stretch_no_go.py`

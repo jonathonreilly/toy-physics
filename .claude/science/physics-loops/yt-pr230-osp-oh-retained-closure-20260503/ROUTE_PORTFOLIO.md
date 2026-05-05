@@ -42,10 +42,10 @@ canonical `O_H`.
 Measure a W/Z mass-response row under the same scalar source and use the
 response ratio to cancel source normalization.
 
-Status: best next positive non-chunk pivot after the canonical `O_H` premise
-stretch no-go.  Current harness lacks W/Z response rows and sector-overlap
-identity certificates, so the next executable attack is a same-source EW
-action/row authority or closed top/W covariance theorem.
+Status: current best positive non-chunk family only if real same-surface rows
+or identity/covariance theorems appear.  Current harness lacks W/Z response
+rows and sector-overlap identity certificates; static transport and
+Goldstone-equivalence source-identity shortcuts are now closed negatively.
 
 Cycle-4 update: the static-algebra source-coordinate transport shortcut is
 closed negatively in
@@ -54,6 +54,12 @@ closed negatively in
 source-to-Higgs Jacobian certificate.  W/Z remains viable only through real
 same-source EW action plus transport and mass-fit rows, measured matched top/W
 rows, or a strict same-surface covariance theorem.
+
+Cycle-6 update: the Goldstone-equivalence source-identity shortcut is closed
+negatively in
+`docs/YT_WZ_GOLDSTONE_EQUIVALENCE_SOURCE_IDENTITY_NO_GO_NOTE_2026-05-05.md`.
+Longitudinal-equivalence bookkeeping is not the PR230 source-coordinate
+identity.
 
 ## R4: Dynamical Rank-One Neutral Scalar Theorem
 
@@ -86,5 +92,6 @@ route still needs a same-surface contact-subtraction certificate, microscopic
 scalar-denominator theorem, or strict moment-threshold-FV certificate.
 
 Route-family audit: `docs/YT_PR230_NONCHUNK_ROUTE_FAMILY_IMPORT_AUDIT_NOTE_2026-05-05.md`
-compared five non-chunk families and selected this block only because it was
-the best current executable no-go test.
+compares five non-chunk families and now records the W/Z
+Goldstone-equivalence source-identity no-go as the latest selected shortcut
+boundary.

@@ -1,7 +1,7 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact negative boundary / neutral primitive-cone stretch no-go; PR230 closure still open
+actual_current_surface_status: exact negative boundary / W/Z Goldstone-equivalence source-identity no-go; PR230 closure still open
 conditional_surface_status: conditional-support if C_sH/C_HH Gram purity, W/Z response, or rank-one neutral scalar theorem closes the overlap
 hypothetical_axiom_status: null
 admitted_observation_status: null
@@ -99,6 +99,11 @@ Open imports:
   route still needs the EW action, source-transport certificate, W/Z mass-fit
   rows, non-observed `g_2`, sector/canonical identities, and matched
   covariance or correction authority;
+- W/Z Goldstone-equivalence source-identity shortcut is closed negatively on
+  the current PR230 surface: longitudinal-equivalence bookkeeping can stay
+  fixed while source direction, same-source top response, same-source W
+  response, and W-normalized readout vary, so it does not replace a
+  same-surface source identity or response-row certificate;
 - cross-lane `O_h/O_H` authority is closed negatively: gravity `O_h` shell
   notes, lepton/DM two-Higgs reductions, Higgs mass/vacuum summaries, EW
   one-Higgs algebra, and Koide `O_h` support/no-go surfaces are
@@ -119,7 +124,8 @@ Open imports:
 - non-chunk route-family import audit is exact support / routing only: it
   compares source-Higgs, same-source W/Z, scalar-LSZ/contact, Schur/K-prime,
   and neutral rank-one families, and after prior no-go blocks now records the
-  neutral primitive-cone stretch no-go as the selected hard residual; it
+  W/Z Goldstone-equivalence source-identity no-go as the selected hard
+  residual; it
   supplies no retained/proposed-retained proposal authority;
 - scalar-LSZ polynomial-contact repair is closed negatively on the current
   polefit8x8 finite-shell rows: low-degree contacts leave robust higher

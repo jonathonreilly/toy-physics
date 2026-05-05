@@ -26,8 +26,27 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=221 FAIL=0
+# SUMMARY: PASS=222 FAIL=0
 ```
+
+## 2026-05-05 W/Z Goldstone-Equivalence Source-Identity Update
+
+The campaign status certificate now consumes
+`outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json`.
+This is the cycle-6 W/Z shortcut test after source-coordinate transport and
+neutral primitive-cone routes closed negatively.
+
+The no-go is algebraic and non-data: it keeps the gauge-sector equivalence
+signature fixed while the PR230 source direction, same-source top response,
+same-source W response, and W-normalized readout vary.  A real same-surface
+source identity or response-row certificate remains required.
+
+Validation: Goldstone-equivalence source-identity no-go `PASS=15 FAIL=0`;
+route-family audit `PASS=9 FAIL=0`; retained-route `PASS=195 FAIL=0`;
+campaign status `PASS=222 FAIL=0`; full positive closure assembly gate
+`PASS=47 FAIL=0`; non-chunk worklist `PASS=29 FAIL=0`.
+
+The campaign remains open.
 
 ## 2026-05-05 Neutral Primitive-Cone Stretch Update
 

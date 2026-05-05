@@ -1,5 +1,22 @@
 # Review History
 
+## 2026-05-05 W/Z Goldstone-Equivalence Source-Identity Self-Review
+
+Disposition: pass as exact negative boundary / open campaign.
+
+Findings:
+
+- The runner does not create W/Z rows or define a same-source EW action; it
+  only rejects the longitudinal/Goldstone-equivalence source-identity shortcut
+  on the current surface.
+- The counterfamily is algebraic and non-data: the gauge-sector equivalence
+  signature stays fixed while source direction and same-source responses vary.
+- Aggregate worklist, assembly, retained-route, route-family, and campaign
+  certificates now include the blocker and still deny proposal authority.
+- The W/Z route remains open only through a real same-source source identity,
+  response rows, matched top/W rows, or strict same-surface covariance and
+  correction authority.
+
 ## 2026-05-05 Neutral Primitive-Cone Stretch Self-Review
 
 Disposition: pass as exact negative boundary / open campaign.

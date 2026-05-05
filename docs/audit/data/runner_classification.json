@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T05:02:50.905256+00:00",
+  "generated_at": "2026-05-05T05:22:17.763679+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16530,7 +16530,7 @@
       "counts": {
         "A": 0,
         "B": 1,
-        "C": 4,
+        "C": 3,
         "D": 6
       },
       "decoration_candidate": false,
@@ -17760,6 +17760,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_wz_g2_response_self_normalization_no_go.py"
+    },
+    "yt_wz_goldstone_equivalence_source_identity_no_go_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_wz_goldstone_equivalence_source_identity_no_go.py"
     },
     "yt_wz_mass_fit_response_row_builder_note_2026-05-04": {
       "assert_count": 1,
@@ -33860,7 +33872,7 @@
       "counts": {
         "A": 0,
         "B": 1,
-        "C": 4,
+        "C": 3,
         "D": 6
       },
       "decoration_candidate": false,
@@ -35313,6 +35325,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_wz_goldstone_equivalence_source_identity_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_wz_goldstone_equivalence_source_identity_no_go_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_yt_wz_mass_fit_response_row_builder.py": {
@@ -39014,15 +39041,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 96,
+    "decoration_candidates": 97,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 206,
+      "B": 207,
       "C": 490,
       "D": 290,
       "none": 404
     },
-    "runners_classified": 1399,
+    "runners_classified": 1400,
     "runners_with_C": 726,
     "runners_with_D": 505
   }

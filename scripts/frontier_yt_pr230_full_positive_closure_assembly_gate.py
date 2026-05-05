@@ -51,6 +51,7 @@ PARENTS = {
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_same_source_action_semantic_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
     "wz_source_coordinate_transport_no_go": "outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json",
+    "wz_goldstone_equivalence_no_go": "outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json",
     "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
     "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
     "one_higgs_completeness_orthogonal_null": "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json",
@@ -202,6 +203,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
             "blocked_by": [
                 "same-source EW action certificate absent",
                 "source-coordinate transport from static EW algebra rejected",
+                "longitudinal/Goldstone-equivalence source-identity shortcut rejected",
                 "W/Z correlator mass-fit path absent",
                 "orthogonal-neutral top-coupling null or correction absent",
                 "strict delta_perp tomography correction rows absent",
@@ -225,6 +227,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["wz_same_source_action"],
                 PARENTS["wz_same_source_action_semantic_firewall"],
                 PARENTS["wz_source_coordinate_transport_no_go"],
+                PARENTS["wz_goldstone_equivalence_no_go"],
                 PARENTS["same_source_w_response_decomposition"],
                 PARENTS["same_source_w_response_orthogonal_correction"],
                 PARENTS["one_higgs_completeness_orthogonal_null"],
@@ -389,6 +392,11 @@ def main() -> int:
         and certs["wz_source_coordinate_transport_no_go"].get("proposal_allowed") is False
         and certs["wz_source_coordinate_transport_no_go"].get(
             "wz_source_coordinate_transport_no_go_passed"
+        )
+        is True
+        and certs["wz_goldstone_equivalence_no_go"].get("proposal_allowed") is False
+        and certs["wz_goldstone_equivalence_no_go"].get(
+            "goldstone_equivalence_source_identity_no_go_passed"
         )
         is True
     )
@@ -570,6 +578,17 @@ def main() -> int:
         )
         is True,
         statuses["wz_source_coordinate_transport_no_go"],
+    )
+    report(
+        "wz-goldstone-equivalence-source-identity-no-go-blocks",
+        "Goldstone equivalence does not identify PR230 source coordinate"
+        in statuses["wz_goldstone_equivalence_no_go"]
+        and certs["wz_goldstone_equivalence_no_go"].get("proposal_allowed") is False
+        and certs["wz_goldstone_equivalence_no_go"].get(
+            "goldstone_equivalence_source_identity_no_go_passed"
+        )
+        is True,
+        statuses["wz_goldstone_equivalence_no_go"],
     )
     report(
         "same-source-w-orthogonal-correction-gate-open",
@@ -818,8 +837,9 @@ def main() -> int:
             "same-surface O_H certificate plus C_sH/C_HH pole rows, a same-source "
             "EW action plus top/W/Z mass-response rows, matched covariance or "
             "a real top/W factorization theorem, and sector-overlap identity, "
-            "a strict Stieltjes moment certificate or same-surface Schur A/B/C "
-            "kernel rows with scalar denominator closure, "
+            "with source identity supplied by real rows or a certificate rather "
+            "than Goldstone bookkeeping, a strict Stieltjes moment certificate "
+            "or same-surface Schur A/B/C kernel rows with scalar denominator closure, "
             "or a neutral-sector irreducibility theorem.  Rerun this assembly "
             "gate before any retained-route proposal."
         ),

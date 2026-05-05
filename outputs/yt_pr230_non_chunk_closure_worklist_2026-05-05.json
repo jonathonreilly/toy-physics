@@ -10,7 +10,7 @@
     "matching_running"
   ],
   "closed_work_unit_ids": [],
-  "exact_next_action": "After the W/Z source-coordinate transport no-go and the neutral primitive-cone stretch no-go, do not spend another block on source-only or static-label shortcuts.  The next positive route requires a new strict same-surface artifact: O_H/C_sH/C_HH pole rows, W/Z response rows with identities and covariance authority, scalar-LSZ moment/threshold/FV authority, Schur A/B/C kernel rows, or a neutral primitive-cone certificate.",
+  "exact_next_action": "After the W/Z source-coordinate transport no-go, the W/Z Goldstone-equivalence source-identity no-go, and the neutral primitive-cone stretch no-go, do not spend another block on source-only or static-label shortcuts.  The next positive route requires a new strict same-surface artifact: O_H/C_sH/C_HH pole rows, W/Z response rows with identities and covariance authority, scalar-LSZ moment/threshold/FV authority, Schur A/B/C kernel rows, or a neutral primitive-cone certificate.",
   "fail_count": 0,
   "future_file_presence": {
     "canonical_oh_certificate": false,
@@ -89,13 +89,14 @@
     "wz_g2_casimir_no_go": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
     "wz_g2_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
     "wz_g2_self_norm_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
+    "wz_goldstone_equivalence_no_go": "outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "wz_mass_fit_rows": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_same_source_action_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
     "wz_source_coordinate_transport_no_go": "outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json"
   },
-  "pass_count": 28,
+  "pass_count": 29,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Current and chunk-only assembly are rejected.  The strict future files for O_H/source-Higgs, scalar-LSZ, W/Z response, Schur rows, neutral irreducibility, and certified physical readout are absent.",
   "strict_non_claims": [
@@ -132,6 +133,7 @@
         "exact negative boundary / same-source top-W factorization not derived on current PR230 surface",
         "exact negative boundary / deterministic W response covariance shortcut not derived on current PR230 surface",
         "exact negative boundary / WZ source-coordinate transport shortcut rejected",
+        "exact negative boundary / WZ Goldstone equivalence does not identify PR230 source coordinate",
         "open / electroweak g2 certificate builder inputs absent",
         "exact negative boundary / SU2 generator-Casimir normalization does not certify PR230 g2",
         "exact negative boundary / WZ response g2 authority absent for PR230",

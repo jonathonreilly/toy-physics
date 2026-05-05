@@ -308,6 +308,9 @@ def main() -> int:
         "wz_source_coordinate_transport_no_go": load(
             "outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json"
         ),
+        "wz_goldstone_equivalence_source_identity_no_go": load(
+            "outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json"
+        ),
         "same_source_w_response_decomposition": load(
             "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json"
         ),
@@ -1028,7 +1031,7 @@ def main() -> int:
         and certificates["pr230_nonchunk_route_family_import_audit"]
         .get("selected_route", {})
         .get("id")
-        == "neutral_scalar_rank_one",
+        == "same_source_wz_response",
         statuses["pr230_nonchunk_route_family_import_audit"],
     )
     report(
@@ -1475,6 +1478,18 @@ def main() -> int:
         )
         is False,
         statuses["wz_source_coordinate_transport_no_go"],
+    )
+    report(
+        "wz-goldstone-equivalence-source-identity-no-go-blocks",
+        "Goldstone equivalence does not identify PR230 source coordinate"
+        in str(statuses["wz_goldstone_equivalence_source_identity_no_go"])
+        and certificates["wz_goldstone_equivalence_source_identity_no_go"].get("proposal_allowed")
+        is False
+        and certificates["wz_goldstone_equivalence_source_identity_no_go"].get(
+            "goldstone_equivalence_source_identity_no_go_passed"
+        )
+        is True,
+        statuses["wz_goldstone_equivalence_source_identity_no_go"],
     )
     report(
         "same-source-w-response-decomposition-not-closure",

@@ -1,7 +1,7 @@
 # PR #230 Non-Chunk Route-Family Import Audit
 
-**Status:** open / non-chunk route-family import audit records neutral
-primitive-cone stretch no-go
+**Status:** open / non-chunk route-family import audit records W/Z
+Goldstone-equivalence source-identity no-go
 **Runner:** `scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py`
 **Certificate:** `outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json`
 
@@ -19,9 +19,9 @@ The non-chunk route-family exercise compares five live positive families:
 All five retain load-bearing open imports.  The scalar-LSZ/contact-model
 shortcut exposed by the finite-shell polefit8x8 certificates was already
 closed by the polynomial-contact repair no-go.  After the canonical `O_H`
-stretch and W/Z source-coordinate transport shortcut also closed negatively,
-the refreshed audit selects the neutral-sector primitive-cone/rank-one family
-as the next hard residual.
+stretch, W/Z source-coordinate transport, and neutral primitive-cone shortcuts
+closed negatively, the refreshed cycle-6 audit selects the same-source W/Z
+family and records the Goldstone-equivalence source-identity boundary.
 
 2026-05-05 update: the W/Z family now also carries the
 source-coordinate transport no-go at
@@ -34,6 +34,13 @@ certified on the same surface.
 `outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json`.
 Current source/neutral premises do not force a primitive neutral transfer
 cone; a same-surface primitive-cone certificate remains required.
+
+2026-05-05 cycle-6 update: the selected route is now
+`same_source_wz_response`, and the cycle closes the Goldstone-equivalence
+source-identity shortcut at
+`outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json`.
+Longitudinal-equivalence bookkeeping can be support after a canonical Higgs
+direction is certified, but it does not identify the PR230 source coordinate.
 
 ## Boundary
 

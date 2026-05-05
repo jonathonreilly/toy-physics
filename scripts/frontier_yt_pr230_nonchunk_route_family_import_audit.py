@@ -98,7 +98,7 @@ def family_rows(worklist: dict[str, Any]) -> list[dict[str, Any]]:
             ],
             "forbidden_imports": [
                 "observed W/Z/top/y_t/g2 selectors",
-                "alpha_LM, plaquette, u0, or bare-coupling algebra",
+                "user-banned coupling-normalization shortcuts",
                 "deterministic W response without paired top rows or covariance theorem",
             ],
             "future_files": future_presence(
@@ -115,9 +115,9 @@ def family_rows(worklist: dict[str, Any]) -> list[dict[str, Any]]:
             "open_import_count": 6,
             "runner_or_gate_available": True,
             "can_execute_now": False,
-            "dramatic_step_score": 2,
-            "hard_residual_pressure": 2,
-            "current_disposition": "blocked; existing gates are contracts and negative shortcut boundaries, including source-coordinate transport",
+            "dramatic_step_score": 5,
+            "hard_residual_pressure": 5,
+            "current_disposition": "cycle-6 W/Z stretch executed; source-coordinate transport and Goldstone-equivalence source identity both close negatively",
             "retirement_path": "produce matched rows or prove a same-surface product/covariance theorem plus source-transport authority",
         },
         {
@@ -227,9 +227,9 @@ def main() -> int:
         "proposal_allowed remains false",
     )
     report(
-        "selected-route-reflects-cycle5-stretch",
-        selected["id"] == "neutral_scalar_rank_one"
-        and "primitive-cone" in selected["current_disposition"],
+        "selected-route-reflects-cycle6-wz-stretch",
+        selected["id"] == "same_source_wz_response"
+        and "Goldstone-equivalence" in selected["current_disposition"],
         selected["id"],
     )
     report(
@@ -247,7 +247,7 @@ def main() -> int:
                 "y_t_bare",
             )
         )
-        and selected["id"] == "neutral_scalar_rank_one",
+        and selected["id"] == "same_source_wz_response",
         "forbidden imports are explicit blockers, not premises",
     )
     report(
@@ -258,23 +258,23 @@ def main() -> int:
 
     result = {
         "actual_current_surface_status": (
-            "open / non-chunk route-family import audit records neutral primitive-cone stretch no-go"
+            "open / non-chunk route-family import audit records W/Z Goldstone-equivalence source-identity no-go"
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "All audited route families retain open load-bearing imports.  The "
-            "cycle-5 neutral primitive-cone stretch sharpens the remaining "
-            "rank-one route but cannot supply retained or proposed-retained "
+            "cycle-6 W/Z Goldstone-equivalence stretch sharpens the remaining "
+            "same-source response route but cannot supply retained or proposed-retained "
             "PR230 closure."
         ),
         "route_families_audited": rows,
         "selected_route": selected,
         "selection_reason": (
-            "After W/Z source transport, scalar contact repair, and O_H premise "
-            "stretch no-gos, the neutral primitive-cone route was the next hard "
-            "non-chunk residual worth a stretch attempt.  It is now blocked on "
-            "the current surface; every positive route requires absent future "
-            "rows or a same-surface theorem."
+            "After W/Z source transport, scalar contact repair, O_H premise "
+            "stretch, and neutral primitive-cone no-gos, the remaining W/Z "
+            "identity shortcut worth testing was longitudinal/Goldstone "
+            "equivalence.  It is now blocked on the current surface; every "
+            "positive route requires absent future rows or a same-surface theorem."
         ),
         "strict_non_claims": [
             "does not package or rerun chunk MC",
@@ -284,10 +284,11 @@ def main() -> int:
         ],
         "exact_next_action": (
             "Do not repeat source-only primitive-cone, scalar polynomial-contact, "
-            "or static W/Z transport shortcuts.  The next positive move requires "
-            "a strict future row/certificate surface: O_H/C_sH/C_HH rows, W/Z "
-            "mass-response rows with identities, Schur A/B/C rows, scalar-LSZ "
-            "moment/threshold/FV authority, or a neutral primitive-cone certificate."
+            "static W/Z transport, or Goldstone-equivalence source-identity "
+            "shortcuts.  The next positive move requires a strict future row/"
+            "certificate surface: O_H/C_sH/C_HH rows, W/Z mass-response rows "
+            "with identities, Schur A/B/C rows, scalar-LSZ moment/threshold/FV "
+            "authority, or a neutral primitive-cone certificate."
         ),
         "parent_certificates": {
             "worklist": rel(WORKLIST),

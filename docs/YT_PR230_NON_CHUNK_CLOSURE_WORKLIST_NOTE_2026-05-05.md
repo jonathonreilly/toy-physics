@@ -30,6 +30,9 @@ This is an integration/worklist gate, not a physics closure theorem.
   transported by an uncertified source-to-Higgs Jacobian is also closed
   negatively by
   `outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json`.
+  Longitudinal/Goldstone-equivalence bookkeeping is also closed as source
+  identity authority by
+  `outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json`.
 - **Scalar-LSZ model/FV/IR:** produce a strict Stieltjes/Pade
   moment-threshold-FV certificate, a same-surface contact-subtraction
   certificate, a scalar-denominator/analytic-continuation theorem, or a
@@ -68,8 +71,9 @@ the assumption/import exercise over five non-chunk route families.  Earlier in
 the cycle it selected the scalar-LSZ polynomial-contact repair branch only as
 an executable no-go block, not as a closure route.  After that block, the
 canonical `O_H` stretch, and the W/Z source-coordinate transport block closed
-negatively, the refreshed audit selects the neutral primitive-cone stretch as
-the next hard residual to close.
+negatively, the cycle-5 audit selected the neutral primitive-cone stretch as
+the next hard residual to close.  The cycle-6 audit now selects same-source
+W/Z response and records the Goldstone-equivalence source-identity no-go.
 
 ## 2026-05-05 Source-Higgs Unratified-Gram Update
 
@@ -107,6 +111,17 @@ The same-source W/Z route remains open only through real matched rows or a
 strict same-surface theorem plus the required action, transport, W/Z mass-fit,
 coupling, sector-overlap, and canonical-Higgs certificates.
 
+## 2026-05-05 W/Z Goldstone-Equivalence Source-Identity Update
+
+The worklist now consumes
+`outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json`.
+This closes the shortcut that tries to treat longitudinal-equivalence or
+Goldstone bookkeeping as the missing PR230 source-to-canonical-Higgs identity.
+
+The same-source W/Z route remains open only through real W/Z response rows or
+a strict same-surface identity/covariance/correction theorem; equivalence
+structure alone does not supply source-coordinate authority.
+
 ## 2026-05-05 Neutral Primitive-Cone Stretch Update
 
 The worklist now consumes
@@ -126,5 +141,5 @@ sector.
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
 python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
-# SUMMARY: PASS=28 FAIL=0
+# SUMMARY: PASS=29 FAIL=0
 ```

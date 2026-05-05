@@ -18,8 +18,22 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=194 FAIL=0
+# SUMMARY: PASS=195 FAIL=0
 ```
+
+## 2026-05-05 W/Z Goldstone-Equivalence Source-Identity Update
+
+The retained-route certificate now consumes
+`outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json`.
+This closes the W/Z shortcut where longitudinal-equivalence or Goldstone
+bookkeeping is treated as the missing PR230 source-coordinate identity.
+
+Validation: Goldstone-equivalence source-identity no-go `PASS=15 FAIL=0`;
+route-family audit `PASS=9 FAIL=0`; retained-route `PASS=195 FAIL=0`;
+campaign status `PASS=222 FAIL=0`; full positive closure assembly gate
+`PASS=47 FAIL=0`; non-chunk worklist `PASS=29 FAIL=0`.
+
+No closure proposal is authorized.
 
 ## 2026-05-05 Neutral Primitive-Cone Stretch Update
 

@@ -111,6 +111,13 @@ Source-only neutral support plus conditional Perron/rank-one support does not
 force primitive-cone irreducibility on the current surface.  The assembly gate
 remains open with `PASS=46 FAIL=0`.
 
+2026-05-05 W/Z Goldstone-equivalence source-identity update: the gate now also
+consumes
+`outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json`.
+Longitudinal-equivalence structure can remain support after the canonical
+Higgs direction is certified, but it does not identify the PR230 scalar source
+coordinate.  The assembly gate remains open with `PASS=47 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 
@@ -125,8 +132,8 @@ The current positive non-chunk bridge candidates remain:
   mass-fit rows, missing lightweight W-response production row certificate,
   missing strict `delta_perp` tomography/null/purity correction certificate,
   missing matched top/W rows or a strict same-surface top/W factorization
-  theorem, missing sector-overlap identity, and missing canonical-Higgs
-  identity;
+  theorem, missing sector-overlap identity, missing canonical-Higgs identity,
+  and the new Goldstone-equivalence source-identity no-go;
 - Schur/K-prime kernel rows, blocked by absent same-surface Schur `A/B/C` rows
   and the separate canonical bridge;
 - neutral-scalar rank one, blocked by the absence of a current

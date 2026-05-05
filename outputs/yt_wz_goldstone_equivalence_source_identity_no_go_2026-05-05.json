@@ -1,0 +1,127 @@
+{
+  "actual_current_surface_status": "exact negative boundary / WZ Goldstone equivalence does not identify PR230 source coordinate",
+  "bare_retained_allowed": false,
+  "exact_next_action": "Do not use longitudinal-equivalence or Goldstone bookkeeping as source-coordinate authority.  Continue only through real same-source W/Z rows plus identity/correction certificates, certified source-Higgs pole rows, Schur kernel rows, neutral irreducibility, or scalar-LSZ moment/threshold/FV authority.",
+  "fail_count": 0,
+  "goldstone_equivalence_source_identity_no_go_passed": true,
+  "parent_certificates": {
+    "brst_nielsen_higgs_identity_no_go": "outputs/yt_brst_nielsen_higgs_identity_no_go_2026-05-02.json",
+    "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
+    "one_higgs_completeness_orthogonal_null": "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
+    "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
+    "sm_one_higgs_oh_import_boundary": "outputs/yt_sm_one_higgs_oh_import_boundary_2026-05-03.json",
+    "wz_same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "wz_source_coordinate_transport_no_go": "outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json"
+  },
+  "pass_count": 15,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Longitudinal gauge-boson / Goldstone-equivalence structure fixes gauge-sector relations after the canonical Higgs direction is known, but it does not certify that the PR230 scalar source is that direction.",
+  "source_rotation_family": {
+    "checks": {
+      "gauge_equivalence_signature_fixed": true,
+      "source_overlap_span": 0.502428952108273,
+      "top_response_span": 0.4582359222759643,
+      "w_readout_span": 0.38352936819629757,
+      "w_response_span": 0.16077726467464737
+    },
+    "fixed_inputs": {
+      "canonical_top_yukawa": 0.91,
+      "canonical_vev": 1.0,
+      "g2_symbolic_role": "kept fixed only inside the algebraic witness",
+      "orthogonal_neutral_pole_mass": 1.35,
+      "orthogonal_neutral_top_coupling": -0.22
+    },
+    "rows": [
+      {
+        "gauge_equivalence_signature": {
+          "goldstone_radial_coupling_proxy": 0.32,
+          "longitudinal_equivalence_residual": 0.0,
+          "m_w": 0.32,
+          "m_z": 0.3671511950137164
+        },
+        "same_source_responses": {
+          "dE_top_ds": 0.6434671708797582,
+          "dM_W_ds": 0.32,
+          "orthogonal_correction": -0.0,
+          "w_normalized_readout": 0.9099999999999999
+        },
+        "source_direction": {
+          "canonical_higgs_component": 1.0,
+          "orthogonal_neutral_component": 0.0,
+          "orthogonal_neutral_pole_mass": 1.35
+        },
+        "theta": 0.0
+      },
+      {
+        "gauge_equivalence_signature": {
+          "goldstone_radial_coupling_proxy": 0.32,
+          "longitudinal_equivalence_residual": 0.0,
+          "m_w": 0.32,
+          "m_z": 0.3671511950137164
+        },
+        "same_source_responses": {
+          "dE_top_ds": 0.5849763110265236,
+          "dM_W_ds": 0.31005197494740633,
+          "orthogonal_correction": -0.05617522266862798,
+          "w_normalized_readout": 0.8538247773313719
+        },
+        "source_direction": {
+          "canonical_higgs_component": 0.9689124217106447,
+          "orthogonal_neutral_component": 0.24740395925452294,
+          "orthogonal_neutral_pole_mass": 1.35
+        },
+        "theta": 0.25
+      },
+      {
+        "gauge_equivalence_signature": {
+          "goldstone_radial_coupling_proxy": 0.32,
+          "longitudinal_equivalence_residual": 0.0,
+          "m_w": 0.32,
+          "m_z": 0.3671511950137164
+        },
+        "same_source_responses": {
+          "dE_top_ds": 0.4181088791324416,
+          "dM_W_ds": 0.2547468155356979,
+          "orthogonal_correction": -0.16724496780940878,
+          "w_normalized_readout": 0.742755032190591
+        },
+        "source_direction": {
+          "canonical_higgs_component": 0.7960837985490559,
+          "orthogonal_neutral_component": 0.6051864057360395,
+          "orthogonal_neutral_pole_mass": 1.35
+        },
+        "theta": 0.65
+      },
+      {
+        "gauge_equivalence_signature": {
+          "goldstone_radial_coupling_proxy": 0.32,
+          "longitudinal_equivalence_residual": 0.0,
+          "m_w": 0.32,
+          "m_z": 0.3671511950137164
+        },
+        "same_source_responses": {
+          "dE_top_ds": 0.18523124860379392,
+          "dM_W_ds": 0.15922273532535264,
+          "orthogonal_correction": -0.3835293681962975,
+          "w_normalized_readout": 0.5264706318037023
+        },
+        "source_direction": {
+          "canonical_higgs_component": 0.49757104789172696,
+          "orthogonal_neutral_component": 0.867423225594017,
+          "orthogonal_neutral_pole_mass": 1.35
+        },
+        "theta": 1.05
+      }
+    ]
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not write W/Z measurement rows",
+    "does not set the source-to-Higgs overlap by convention",
+    "does not use external numerical selectors or user-banned shortcut authorities",
+    "does not package or rerun chunk MC"
+  ],
+  "theorem_statement": "A family of source rotations can keep the longitudinal-equivalence and gauge-mass signature fixed while changing the source overlap with the canonical Higgs radial mode.  The same-source top and W responses then change, so equivalence structure alone cannot replace a same-surface source-identity, transport, one-Higgs completeness, or correction certificate."
+}

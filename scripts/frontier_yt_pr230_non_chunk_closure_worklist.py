@@ -39,6 +39,7 @@ PARENTS = {
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_same_source_action_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
     "wz_source_coordinate_transport_no_go": "outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json",
+    "wz_goldstone_equivalence_no_go": "outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json",
     "same_source_w_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
     "same_source_w_orthogonal": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
     "delta_perp_builder": "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json",
@@ -182,6 +183,7 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 status(certs["top_wz_factorization_gate"]),
                 status(certs["top_wz_deterministic_response_covariance_gate"]),
                 status(certs["wz_source_coordinate_transport_no_go"]),
+                status(certs["wz_goldstone_equivalence_no_go"]),
                 status(certs["electroweak_g2_builder"]),
                 status(certs["wz_g2_casimir_no_go"]),
                 status(certs["wz_g2_firewall"]),
@@ -309,6 +311,17 @@ def main() -> int:
         is True,
         status(certs["wz_source_coordinate_transport_no_go"]),
     )
+    report(
+        "wz-goldstone-equivalence-shortcut-closed",
+        "Goldstone equivalence does not identify PR230 source coordinate"
+        in status(certs["wz_goldstone_equivalence_no_go"])
+        and certs["wz_goldstone_equivalence_no_go"].get("proposal_allowed") is False
+        and certs["wz_goldstone_equivalence_no_go"].get(
+            "goldstone_equivalence_source_identity_no_go_passed"
+        )
+        is True,
+        status(certs["wz_goldstone_equivalence_no_go"]),
+    )
     report("wz-deterministic-response-shortcut-gated", "deterministic W response covariance shortcut not derived" in status(certs["top_wz_deterministic_response_covariance_gate"]), status(certs["top_wz_deterministic_response_covariance_gate"]))
     report("wz-g2-shortcuts-closed", "does not certify PR230 g2" in status(certs["wz_g2_casimir_no_go"]) and "response-only" in status(certs["wz_g2_self_norm_no_go"]), "Casimir and response-only g2 shortcuts rejected")
     report("scalar-lsz-route-gated", "Stieltjes moment-certificate gate" in status(certs["lsz_stieltjes_moment_gate"]), status(certs["lsz_stieltjes_moment_gate"]))
@@ -368,13 +381,14 @@ def main() -> int:
             "does not turn support/no-go gates into physical y_t evidence",
         ],
         "exact_next_action": (
-            "After the W/Z source-coordinate transport no-go and the neutral "
-            "primitive-cone stretch no-go, do not spend another block on "
-            "source-only or static-label shortcuts.  The next positive route "
-            "requires a new strict same-surface artifact: O_H/C_sH/C_HH pole "
-            "rows, W/Z response rows with identities and covariance authority, "
-            "scalar-LSZ moment/threshold/FV authority, Schur A/B/C kernel rows, "
-            "or a neutral primitive-cone certificate."
+            "After the W/Z source-coordinate transport no-go, the W/Z Goldstone-"
+            "equivalence source-identity no-go, and the neutral primitive-cone "
+            "stretch no-go, do not spend another block on source-only or "
+            "static-label shortcuts.  The next positive route requires a new "
+            "strict same-surface artifact: O_H/C_sH/C_HH pole rows, W/Z response "
+            "rows with identities and covariance authority, scalar-LSZ moment/"
+            "threshold/FV authority, Schur A/B/C kernel rows, or a neutral "
+            "primitive-cone certificate."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
