@@ -27135,7 +27135,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "3039d18709f066b15dadfd8817940a1f3d592275863333153027615013cc9d84",
+      "note_hash": "3589e785f1ba0aa7ab5cda0b7b4f22b0200c37394adceb9144c7ba0e8605a201",
       "path": "docs/ai_methodology/skills/physics-loop/references/assumption-import-audit.md",
       "runner_path": null,
       "title": "Assumption And Import Audit"
@@ -27184,7 +27184,7 @@
         "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
         "ai_methodology.skills.physics-loop.references.long-running-execution"
       ],
-      "note_hash": "961b94dc62c4723c0bf191d3b9889bed242a03b884e4ea742538d36395636142",
+      "note_hash": "87466d859defbcf9c11747663d6461252d02df260638bff34ff5a70190e1f625",
       "path": "docs/ai_methodology/skills/physics-loop/SKILL.md",
       "runner_path": null,
       "title": "Physics Loop"
