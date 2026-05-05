@@ -169,6 +169,7 @@ def main() -> int:
         "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
         "same_source_w_response_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
         "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
+        "electroweak_g2_certificate_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
         "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
         "wz_g2_response_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
         "wz_correlator_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
@@ -1222,6 +1223,18 @@ def main() -> int:
         and certificates["wz_mass_fit_response_row_builder"].get("proposal_allowed") is False
         and certificates["wz_mass_fit_response_row_builder"].get(
             "strict_wz_mass_fit_response_row_builder_passed"
+        )
+        is False
+    )
+    electroweak_g2_certificate_builder_open = (
+        "electroweak g2 certificate builder inputs absent"
+        in certificates["electroweak_g2_certificate_builder"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["electroweak_g2_certificate_builder"].get("proposal_allowed")
+        is False
+        and certificates["electroweak_g2_certificate_builder"].get(
+            "strict_electroweak_g2_certificate_passed"
         )
         is False
     )
@@ -2318,6 +2331,11 @@ def main() -> int:
         "wz-mass-fit-response-row-builder-open",
         wz_mass_fit_response_row_builder_open,
         certificates["wz_mass_fit_response_row_builder"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "electroweak-g2-certificate-builder-open",
+        electroweak_g2_certificate_builder_open,
+        certificates["electroweak_g2_certificate_builder"].get("actual_current_surface_status", ""),
     )
     report(
         "wz-g2-authority-firewall-blocks",

@@ -1021,3 +1021,11 @@ rows alone can determine ratios but not absolute `g2` or absolute `y_t`.
 Future positive W/Z work must therefore supply an allowed non-observed `g2`
 certificate, an absolute EW normalization theorem outside response-only rows,
 or a different certified physical observable that cancels `g2`.
+
+2026-05-05 update: the strict electroweak `g2` certificate now has an
+executable builder gate.  Current candidates are rejected: package `g_2(v)` is
+tainted for PR230 by plaquette/u0/R_conn and audit-authority caveats; bare
+`g2^2=1/4` lacks an allowed low-scale running/matching bridge; W-mass companion
+rows reuse the existing EW lane; response-only self-normalization is no-go.
+The remaining positive `g2` route is a non-plaquette absolute EW
+normalization theorem or a strict certificate satisfying the builder fields.

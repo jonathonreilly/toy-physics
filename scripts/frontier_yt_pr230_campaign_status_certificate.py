@@ -311,6 +311,9 @@ def main() -> int:
         "wz_mass_fit_response_row_builder": load(
             "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json"
         ),
+        "electroweak_g2_certificate_builder": load(
+            "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json"
+        ),
         "wz_g2_authority_firewall": load(
             "outputs/yt_wz_g2_authority_firewall_2026-05-05.json"
         ),
@@ -1417,6 +1420,18 @@ def main() -> int:
         )
         is False,
         statuses["wz_mass_fit_response_row_builder"],
+    )
+    report(
+        "electroweak-g2-certificate-builder-open",
+        "electroweak g2 certificate builder inputs absent"
+        in str(statuses["electroweak_g2_certificate_builder"])
+        and certificates["electroweak_g2_certificate_builder"].get("proposal_allowed")
+        is False
+        and certificates["electroweak_g2_certificate_builder"].get(
+            "strict_electroweak_g2_certificate_passed"
+        )
+        is False,
+        statuses["electroweak_g2_certificate_builder"],
     )
     report(
         "wz-g2-authority-firewall-blocks",

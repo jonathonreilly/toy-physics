@@ -2752,3 +2752,31 @@ cancellation.  Either build an allowed non-observed `g2` certificate, add an
 absolute EW normalization theorem outside response-only rows, continue
 source-Higgs/Schur/rank-one identity routes, or package chunks019-024 only
 after their root artifacts land and pass gates.
+
+Block 200 added the electroweak `g2` certificate builder gate:
+
+```text
+python3 scripts/frontier_yt_electroweak_g2_certificate_builder.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=180 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=206 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=31 FAIL=0
+```
+
+Result: the strict `outputs/yt_electroweak_g2_certificate_2026-05-04.json`
+file is still absent.  The builder rejects package `g_2(v)`, bare
+`g2^2=1/4`, W-mass companion reuse, and response-only self-normalization as
+current PR230 proof authorities.  It records the required future certificate
+fields instead of minting a certificate from forbidden inputs.  No
+retained/proposed-retained wording is authorized.
+
+Next exact action: either derive a non-plaquette absolute EW normalization
+theorem or strict measurement/certificate satisfying the builder fields, or
+pivot to source-Higgs/Schur/rank-one identity routes.  Continue to leave
+chunks019-024 alone until their root artifacts complete.

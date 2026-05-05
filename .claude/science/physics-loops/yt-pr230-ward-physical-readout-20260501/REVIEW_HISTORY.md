@@ -4799,3 +4799,18 @@ allowed non-observed `g2` certificate or absolute EW normalization theorem, in
 addition to existing W/Z row, covariance, sector-overlap, and canonical-Higgs
 identity blockers.  No effective-retention or proposed-retention wording is
 allowed.
+
+## 2026-05-05 - Block 200 Electroweak g2 Certificate Builder Gate
+
+Review stance: missing-input builder / claim firewall.
+
+- Added `scripts/frontier_yt_electroweak_g2_certificate_builder.py`.
+- Added `docs/YT_ELECTROWEAK_G2_CERTIFICATE_BUILDER_NOTE_2026-05-05.md`.
+- Added `outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json`.
+- Wired the builder into retained-route, campaign-status, and full assembly
+  gates.
+
+Disposition: open builder gate.  The strict `g2` certificate remains absent,
+and all current shortcut authorities are rejected under the PR230 firewall.
+The builder records future required fields for an allowed certificate but does
+not mint one.  No effective-retention or proposed-retention wording is allowed.

@@ -2673,3 +2673,15 @@ The same top/W/Z response data are invariant under
 changing absolute `y_t` and `g2`.  Do not claim that W/Z response rows alone
 self-normalize `g2`; an allowed `g2` certificate or absolute EW normalization
 input remains required.
+
+Current-surface electroweak `g2` certificate construction is blocked:
+
+```text
+python3 scripts/frontier_yt_electroweak_g2_certificate_builder.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+The strict certificate file is absent.  The builder rejects package `g_2(v)`,
+bare `g2^2=1/4`, W-mass companion reuse, and response-only self-normalization
+as current PR230 proof authority.  Do not treat any of those candidates as the
+missing `outputs/yt_electroweak_g2_certificate_2026-05-04.json` input.

@@ -13,11 +13,14 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-199-wz-g2-response-self-normalization-no-go
-blocks_completed: 199
+current_phase: campaign-block-200-electroweak-g2-certificate-builder
+blocks_completed: 200
 active_route: "same-source W/Z physical response route"
-active_hard_residual: "Added an executable W/Z response-only g2 self-normalization no-go.  The countermodel rescales kappa_source by lambda and rescales y_t, g2, and gY by 1/lambda, leaving dE_top/ds, dM_W/ds, dM_Z/ds, top/W ratios, and W/Z ratios invariant while changing absolute y_t and g2.  Therefore same-source response rows can determine y_t/g2 and gY/g2 but cannot replace a strict non-observed g2 certificate or other absolute EW normalization input.  Runner PASS=9 FAIL=0; retained-route PASS=179 FAIL=0; campaign status PASS=205 FAIL=0; full assembly PASS=30 FAIL=0 after rebasing on the top-W factorization-independence gate.  No effective-retention or proposed-retention closure is authorized.  Polefit8x8 chunks019-024 remain running and uncounted until root artifacts complete and pass gates."
+active_hard_residual: "Added an executable electroweak g2 certificate builder gate.  The strict certificate outputs/yt_electroweak_g2_certificate_2026-05-04.json remains absent; package g_2(v), bare g2^2=1/4, W-mass companion reuse, and response-only self-normalization are all rejected as PR230 load-bearing proof inputs under the active observed-value, alpha/plaquette/u0, package-authority, and response-only firewalls.  Builder PASS=12 FAIL=0; retained-route PASS=180 FAIL=0; campaign status PASS=206 FAIL=0; full assembly PASS=31 FAIL=0.  No effective-retention or proposed-retention closure is authorized.  Polefit8x8 chunks019-024 remain running and uncounted until root artifacts complete and pass gates."
 files_touched:
+  - "scripts/frontier_yt_electroweak_g2_certificate_builder.py"
+  - "docs/YT_ELECTROWEAK_G2_CERTIFICATE_BUILDER_NOTE_2026-05-05.md"
+  - "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json"
   - "scripts/frontier_yt_wz_g2_response_self_normalization_no_go.py"
   - "docs/YT_WZ_G2_RESPONSE_SELF_NORMALIZATION_NO_GO_NOTE_2026-05-05.md"
   - "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json"

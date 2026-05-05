@@ -3269,3 +3269,21 @@ Same-source top/W/Z response rows determine ratios such as `y_t/g2` and
 `gY/g2`, not the absolute electroweak coupling normalization.  Response-only
 `g2` cancellation/self-normalization is rejected on the actual PR230 surface.
 No effective-retention or proposed-retention wording is allowed.
+
+Electroweak `g2` certificate builder:
+
+```text
+actual_current_surface_status: open / electroweak g2 certificate builder inputs absent
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_electroweak_g2_certificate_builder.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=31 FAIL=0
+```
+
+No accepted non-observed, non-forbidden PR230 `g2` authority candidate is
+present.  The builder does not write the strict certificate and does not
+authorize effective-retention or proposed-retention wording.
