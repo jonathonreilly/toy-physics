@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 50 |
-| **retained_no_go** | 110 |
+| **retained_no_go** | 111 |
 | **retained_bounded** | 200 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 872 |
-| audit_in_progress | 29 |
+| audit_in_progress | 28 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 29 |
-| `audited_clean` | 334 |
+| `audit_in_progress` | 28 |
+| `audited_clean` | 335 |
 | `audited_conditional` | 386 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -122,7 +122,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_q23_oh_covariance_nogo_note_2026-04-22` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_q_bridge_single_primitive_note_2026-04-22` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_q_readout_factorization_theorem_2026-04-22` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `lattice_complementarity_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -283,6 +282,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_mru_demotion_note_2026-04-20` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | D | - |
 | `koide_native_dimensionless_review_packet_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_pointed_origin_exhaustion_theorem_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
+| `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -7213,6 +7213,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The retained unpointed tests are invariant along the source, CP1-line, and endpoint torsor fibres while the open charged-lepton readouts change, so origin-free retained data do not force the simultaneous closing representative.  _(class `A`)_
 - **chain closes:** True — The note scopes the result as an atlas no-go, not a positive Koide closure. The algebraic fibre checks exhibit invariant unpointed data together with changed readouts, so the claimed non-forcing result follows within that scoped atlas.
 - **rationale:** The runner completed from cache with 15/15 PASS lines and checks symbolic algebraic invariance/countermodel facts for the three residual freedoms. It does not hard-code a positive Koide closure; it explicitly reports that the dimensionless lane is not closed and that a physical source/boundary-origin law remains the next theorem. No one-hop dependencies are listed, so there is no open dependency chain in the restricted packet. Residual risk is limited to the note's scoped atlas premise, not to the internal no-go once that atlas is taken as the audited object.
+- **auditor confidence:** high
+
+### `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24`
+
+- **Note:** [`KOIDE_Q_DELTA_RESIDUAL_COHOMOLOGY_OBSTRUCTION_NO_GO_NOTE_2026-04-24.md`](../../docs/KOIDE_Q_DELTA_RESIDUAL_COHOMOLOGY_OBSTRUCTION_NO_GO_NOTE_2026-04-24.md)
+- **claim_type:** `no_go`
+- **claim_scope:** For the explicit Q projection pi_Q(t,z)=t and delta projection pi_delta(selected,spectator,c)=selected+spectator, exactness identifies nontrivial fibres but does not select the zero representative needed to close the Koide Q/delta lane.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-koide_q_delta_residual_cohomology_obstruction_no_go_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Exactness gives fibres, not canonical splittings; the closing section a=0, b1=0, b2=0 is exactly the missing primitive-based readout/basepoint law or an equivalent retained canonical-section theorem.  _(class `A`)_
+- **chain closes:** True — The no-go closes within the restricted packet: the note and runner exhibit nontrivial kernels, nonunique section families, and counter-representatives that preserve retained totals while changing Q or delta. No dependency note is required because the audited scope is the algebraic obstruction for the stated projections, not a positive derivation of the missing physical readout law.
+- **rationale:** The runner verifies the load-bearing linear-algebra obstruction rather than hard-coding a target Koide closure: nonzero kernel representatives preserve the retained projections and fail to close the target readouts, while the zero representative is an additional section choice. This supports the no-go claim that exactness/cohomology data alone do not supply the primitive-based basepoint/readout law. Residual risk is scope control: the clean result applies to the explicit retained-projection exact-sequence packet, not to every conceivable future cohomological theorem that might add new structure.
 - **auditor confidence:** high
 
 ### `koide_q_eq_3delta_identity_note_2026-04-21`
