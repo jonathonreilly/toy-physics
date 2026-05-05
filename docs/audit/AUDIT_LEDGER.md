@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 61 |
-| **retained_no_go** | 119 |
+| **retained_no_go** | 120 |
 | **retained_bounded** | 213 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 844 |
-| audit_in_progress | 5 |
+| audit_in_progress | 4 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 31 |
@@ -39,8 +39,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 5 |
-| `audited_clean` | 367 |
+| `audit_in_progress` | 4 |
+| `audited_clean` | 368 |
 | `audited_conditional` | 399 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
@@ -115,7 +115,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lorentz_violation_derived_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `tensor_block_closure_test_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `wave_radiation_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `yt_ew_m_residual_stretch_attempt_note_2026-05-02` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -481,6 +480,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `weak_coupling_sign_sensitivity_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | C | - |
 | `wide_lattice_h2t_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `work_history.yt.yt_unbounded_program_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | B | - |
+| `yt_ew_m_residual_stretch_attempt_note_2026-05-02` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `accessible_prediction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -13145,6 +13145,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
   - `EW_COUPLING_DERIVATION_NOTE.md`
   - `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`
+- **auditor confidence:** high
+
+### `yt_ew_m_residual_stretch_attempt_note_2026-05-02`
+
+- **Note:** [`YT_EW_M_RESIDUAL_STRETCH_ATTEMPT_NOTE_2026-05-02.md`](../../docs/YT_EW_M_RESIDUAL_STRETCH_ATTEMPT_NOTE_2026-05-02.md)
+- **claim_type:** `no_go`
+- **claim_scope:** CMT mean-field factorization by a scalar u_0 scales the singlet and adjoint Fierz channels uniformly and therefore cannot by itself select the adjoint channel.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-second-yt-ew-m-residual-stretch-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** G_full = u_0 * G_V implies S(G_full) = u_0^2 * S(G_V) and C(G_full) = u_0^2 * C(G_V), so CMT factorization alone is channel-blind.  _(class `A`)_
+- **chain closes:** True — The cited Fierz decomposition defines S(G) and C(G) as homogeneous quadratic channel functionals of G. Scalar replacement G_full = u_0 G_V therefore multiplies both channel weights by u_0^2, so the no-go follows without importing the still-open EW-current matching rule.
+- **rationale:** Within the scoped no-go, the result is exact algebra over the retained-bounded Fierz channel decomposition. The runner checks the load-bearing uniform u_0^2 scaling directly in Test 5 and does not hard-code an adjoint-only projection. The residual risk is only scope confusion: this audit does not close the full M matching rule or the EW-current Wilson-line construction, which the note explicitly leaves open.
 - **auditor confidence:** high
 
 ### `yt_exact_hessian_selector_uniqueness_note`
