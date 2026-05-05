@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 570,
+    "critical": 569,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -3082,27 +3082,6 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/frontier_hierarchy_matsubara_determinant_narrow.py",
-      "transitive_descendants": 285
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "koide_q_bridge_single_primitive_note_2026-04-22",
-      "claim_scope": "The audit checked the restricted algebraic narrowing claim that, on the stated cyclic carrier and stated support-face inputs, the surviving Q-bridge faces evaluate to the same scalar primitive P_Q = 1/2 and imply c = sqrt(2) and Q = 2/3.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.16,
-      "note_path": "docs/KOIDE_Q_BRIDGE_SINGLE_PRIMITIVE_NOTE_2026-04-22.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_q_bridge_single_primitive.py",
       "transitive_descendants": 285
     },
     {
@@ -26833,6 +26812,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 50,
-  "total_pending": 908
+  "ready_count": 49,
+  "total_pending": 907
 }

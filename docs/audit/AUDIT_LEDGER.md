@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 52 |
 | **retained_no_go** | 113 |
-| **retained_bounded** | 200 |
+| **retained_bounded** | 201 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 871 |
-| audit_in_progress | 19 |
+| audit_in_progress | 18 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 30 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 19 |
-| `audited_clean` | 339 |
+| `audit_in_progress` | 18 |
+| `audited_clean` | 340 |
 | `audited_conditional` | 391 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -115,7 +115,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `koide_q_bridge_single_primitive_note_2026-04-22` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_q_readout_factorization_theorem_2026-04-22` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `lattice_complementarity_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -276,6 +275,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_native_dimensionless_review_packet_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_pointed_origin_exhaustion_theorem_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q23_oh_covariance_nogo_note_2026-04-22` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
+| `koide_q_bridge_single_primitive_note_2026-04-22` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -7313,6 +7313,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** CovG = {+I, -I}: out of 48 O_h elements, only identity and spatial inversion preserve the retained chart's span.  _(class `A`)_
 - **chain closes:** True — The claim is a finite internal algebraic check: enumerate the 48 signed permutation matrices and test span preservation of the chart generators. The cached runner completes and identifies only +I and -I as covariant, which is sufficient to rule out full O_h covariance of this chart.
 - **rationale:** The no-go does not import an external observable, tuned comparator, or unratified physical bridge; it only tests covariance of explicitly encoded matrices under a finite group action. The runner enumerates all 48 O_h elements, computes individual and joint stabilizers, and verifies the covariance group is exactly {+I, -I}. The final interpretive scope is appropriately negative: sub-route (a), full O_h covariance of the retained chart, is ruled out while other spin-1 routes are left open. Residual risk is runner-artifact level only: the note describes exact verification, while the runner uses floating-point linear algebra, but the finite check is direct and the conclusion is not dependent on an external or calibrated input.
+- **auditor confidence:** high
+
+### `koide_q_bridge_single_primitive_note_2026-04-22`
+
+- **Note:** [`KOIDE_Q_BRIDGE_SINGLE_PRIMITIVE_NOTE_2026-04-22.md`](../../docs/KOIDE_Q_BRIDGE_SINGLE_PRIMITIVE_NOTE_2026-04-22.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded algebraic narrowing that the listed Koide Q support faces and equivalent parametrizations reduce to the scalar primitive P_Q = |b|^2/a^2 = 1/2, without deriving physical/source-law identification.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-koide-q-bridge-single-primitive-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Under the standard circulant coordinates a = r0/3 and |b|^2 = (r1^2 + r2^2)/36, equal cyclic block power becomes a^2 = 2|b|^2, hence P_Q = |b|^2/a^2 = 1/2 and kappa = 2.  _(class `A`)_
+- **chain closes:** True — Within the bounded scope, the displayed definitions and symbolic runner close the algebraic equivalence chain to P_Q = 1/2 and Q = 2/3. The note explicitly leaves the physical charged-lepton realization of that primitive outside the claim.
+- **rationale:** The runner performs symbolic algebra and arithmetic checks, not a first-principles physical derivation, but that matches the audited bounded claim. The equivalence between equal block power, a^2 = 2|b|^2, kappa = 2, Brannen c = sqrt(2), and Q = 2/3 closes from the definitions shown, and the listed dimension/Casimir support faces evaluate to 1/2. The remaining physical/source-law bridge is stated as open and is excluded from the audited scope.
 - **auditor confidence:** high
 
 ### `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24`
