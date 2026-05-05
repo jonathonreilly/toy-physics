@@ -3202,6 +3202,25 @@ contracts: W/Z rows with identity/covariance/strict `g2`, strict scalar-LSZ
 moment/threshold/FV authority, Schur `A/B/C` rows, or a neutral
 primitive-cone/irreducibility certificate.
 
+## 2026-05-05 - PR541-Style Holonomic Source-Response From Source-Only Z(s)
+
+No-go: a PR541-style holonomic/source-generating-functional method does not
+turn source-only PR230 data into a source-Higgs artifact.  The method requires
+a same-current-surface two-source object
+`Z(beta,s,h) = integral exp(-S + s O_s + h O_H) dmu` before it can compute
+`C_ss`, `C_sH`, or `C_HH` rows.
+
+The current surface defines source-only support, effectively `Z(s,0)`, but not
+the `h` source, canonical `O_H`, same-source EW/Higgs action, or production
+`C_sH/C_HH` rows.  A normalized quadratic counterfamily keeps `Z(s,0)` fixed
+while changing `C_sH` and the Gram determinant, so exact source-only knowledge
+does not determine source-Higgs purity.
+
+Do not use Picard-Fuchs, D-module, creative-telescoping, exact tensor/PEPS, or
+source-generating functional method names as operator definitions or proof
+selectors.  Reopen this route only after a same-current-surface `O_H/h`
+artifact lands.
+
 ## 2026-05-05 - W/Z G2 Bare-To-Low-Scale Running Bridge
 
 No-go: the current PR230 surface does not derive a strict low-scale

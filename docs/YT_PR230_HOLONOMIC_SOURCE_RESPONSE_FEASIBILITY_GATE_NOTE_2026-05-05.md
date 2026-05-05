@@ -2,8 +2,7 @@
 
 Date: 2026-05-05
 
-Status: exact negative boundary / PR541-style holonomic source-response route
-is relevant but blocked by missing current-surface `O_H` and `h` source.
+Status: exact negative boundary / PR541-style holonomic source-response route is relevant but blocked by missing current-surface `O_H` and `h` source.
 
 Runner:
 `scripts/frontier_yt_pr230_holonomic_source_response_feasibility_gate.py`
@@ -113,4 +112,16 @@ inputs, and does not identify source-only `O_s` with canonical `O_H`.
 ```bash
 python3 scripts/frontier_yt_pr230_holonomic_source_response_feasibility_gate.py
 # SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=30 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=265 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=85 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=233 FAIL=0
 ```

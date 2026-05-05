@@ -783,3 +783,14 @@ only then write or consume same-surface `C_ss/C_sH/C_HH` pole rows.  Standard
 EW action formulas, FMS names, gauge-invariant-composite language, and the
 existence of structural EW/Higgs notes are not proof selectors for current
 PR230 closure.
+
+2026-05-05 PR541-style holonomic source-response route:
+
+The PR541-style holonomic source-response route is a compute/proof discipline,
+not an operator-definition shortcut.  Picard-Fuchs, D-module, creative
+telescoping, exact tensor/PEPS, and source-generating functional methods are
+not proof selectors until a same-current-surface O_H/h-source artifact exists.
+They may compute `Z(beta,s,h)` derivatives only after the PR230 action/measure,
+source operator, canonical `O_H`, and source coordinates are defined on the
+same current surface.  Source-only `Z(s,0)` does not determine `C_sH`, `C_HH`,
+or source-Higgs Gram purity.

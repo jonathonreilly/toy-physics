@@ -1,5 +1,34 @@
 # Claim Status Certificate
 
+PR541-style holonomic source-response feasibility gate:
+
+```text
+actual_current_surface_status: exact negative boundary / PR541-style holonomic source-response route is relevant but blocked by missing current-surface O_H and h-source
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_holonomic_source_response_feasibility_gate.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=30 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=265 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=85 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=233 FAIL=0
+```
+
+The method transfers as a row-computation discipline only after the
+same-current-surface `O_H/h` artifact exists.  Source-only `Z(s,0)` does not
+define `C_sH`, `C_HH`, or source-Higgs Gram purity, so holonomic, tensor, or
+creative-telescoping method names do not authorize effective-retention or
+proposed-retention wording.
+
 Action-first `O_H` artifact attempt:
 
 ```text

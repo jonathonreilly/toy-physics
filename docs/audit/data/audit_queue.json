@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 630,
+    "leaf": 631,
     "medium": 301
   },
-  "generated_at": "2026-05-05T22:57:32.208891+00:00",
+  "generated_at": "2026-05-05T23:26:55.773972+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20310,6 +20310,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_missing_bridge_literature_assumption_exercises_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_MISSING_BRIDGE_LITERATURE_ASSUMPTION_EXERCISES_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_missing_bridge_literature_assumption_exercises.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -24279,6 +24296,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 777,
-  "total_pending": 1168
+  "ready_count": 778,
+  "total_pending": 1169
 }

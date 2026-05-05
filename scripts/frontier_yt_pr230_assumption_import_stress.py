@@ -86,6 +86,9 @@ def main() -> int:
         "action_first_oh_artifact_attempt": load(
             "outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json"
         ),
+        "holonomic_source_response_feasibility_gate": load(
+            "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json"
+        ),
         "kinetic_matching": load("outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"),
         "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "scalar_ir": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
@@ -165,6 +168,8 @@ def main() -> int:
         "not proof selectors until an infinite same-surface moment/asymptotic certificate exists",
         "FMS/action-first source-Higgs artifact route",
         "action-first `O_H/C_sH/C_HH`",
+        "PR541-style holonomic source-response route",
+        "not proof selectors until a same-current-surface O_H/h-source artifact exists",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -431,6 +436,18 @@ def main() -> int:
         and action_first_attempt.get("source_higgs_rows_written") is False,
         action_first_attempt.get("actual_current_surface_status"),
     )
+    holonomic_source_response = certificates["holonomic_source_response_feasibility_gate"]
+    report(
+        "holonomic-source-response-gate-does-not-supply-oh-or-h-source",
+        "PR541-style holonomic source-response route"
+        in str(holonomic_source_response.get("actual_current_surface_status"))
+        and holonomic_source_response.get("proposal_allowed") is False
+        and holonomic_source_response.get("exact_negative_boundary_passed") is True
+        and holonomic_source_response.get("two_source_functional_current_surface_defined")
+        is False
+        and holonomic_source_response.get("pr541_route_immediate_closure") is False,
+        holonomic_source_response.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -491,7 +508,11 @@ def main() -> int:
             "closure.  The action-first O_H artifact attempt confirms the "
             "next premise: writing a standard EW/Higgs action is a hypothetical "
             "new surface unless the same-source action and canonical O_H are "
-            "derived on PR230.  No current route "
+            "derived on PR230.  The PR541-style holonomic source-response "
+            "gate adds the same boundary for creative-telescoping/tensor "
+            "methods: they can compute defined Z(beta,s,h) rows only after "
+            "a same-current-surface O_H/h-source artifact exists; they do "
+            "not supply the missing operator/source by method name.  No current route "
             "certificate authorizes retained proposal wording.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."

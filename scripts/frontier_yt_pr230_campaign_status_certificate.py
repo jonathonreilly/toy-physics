@@ -548,6 +548,9 @@ def main() -> int:
         "pr230_action_first_oh_artifact_attempt": load(
             "outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json"
         ),
+        "pr230_holonomic_source_response_feasibility_gate": load(
+            "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json"
+        ),
         "pr230_invariant_ring_oh_certificate_attempt": load(
             "outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json"
         ),
@@ -2176,6 +2179,24 @@ def main() -> int:
         )
         is False,
         statuses["pr230_action_first_oh_artifact_attempt"],
+    )
+    report(
+        "pr230-holonomic-source-response-gate-blocks-missing-oh-h-source",
+        "PR541-style holonomic source-response route"
+        in str(statuses["pr230_holonomic_source_response_feasibility_gate"])
+        and certificates["pr230_holonomic_source_response_feasibility_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_holonomic_source_response_feasibility_gate"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+        and certificates["pr230_holonomic_source_response_feasibility_gate"].get(
+            "two_source_functional_current_surface_defined"
+        )
+        is False,
+        statuses["pr230_holonomic_source_response_feasibility_gate"],
     )
     report(
         "pr230-invariant-ring-oh-certificate-attempt-blocks-current-surface",

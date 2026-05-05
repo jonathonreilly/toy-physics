@@ -1,5 +1,31 @@
 # Handoff
 
+Latest checkpoint, 2026-05-05 PR541-style holonomic source-response gate wiring:
+
+- Updated the existing
+  `docs/YT_PR230_HOLONOMIC_SOURCE_RESPONSE_FEASIBILITY_GATE_NOTE_2026-05-05.md`
+  verification block and wired its certificate into the assumption/import
+  stress, campaign-status, full-assembly, and retained-route gates.
+- This records the outside-math/holonomic boundary as a live aggregate
+  blocker: PR541-style generating-functional methods are useful only after
+  a same-current-surface `O_H/h` artifact exists.
+- Result: exact negative boundary.  Source-only `Z(s,0)` data do not define
+  `Z(beta,s,h)`, `C_sH`, `C_HH`, or source-Higgs Gram purity.  Picard-Fuchs,
+  D-module, creative-telescoping, and exact tensor/PEPS methods cannot supply
+  the missing operator/source by method name.
+- Verification: holonomic gate `PASS=17 FAIL=0`; assumption stress
+  `PASS=30 FAIL=0`; campaign status `PASS=265 FAIL=0`; full assembly
+  `PASS=85 FAIL=0`; retained-route `PASS=233 FAIL=0`.
+- Claim boundary: no same-source EW action certificate, canonical `O_H`
+  certificate, source-Higgs rows, retained closure, or `proposed_retained`
+  closure is authorized.
+
+Next exact action: a positive non-chunk route now needs a fresh same-surface
+artifact, not another source-only method wrapper.  Best targets remain W/Z
+rows with identity/covariance/strict `g2`, a strict scalar-LSZ
+infinite/tail moment/threshold/FV certificate, genuine Schur `A/B/C` rows, or
+a neutral primitive-cone/irreducibility certificate.
+
 Latest checkpoint, 2026-05-05 action-first O_H artifact attempt:
 
 - Added `scripts/frontier_yt_pr230_action_first_oh_artifact_attempt.py`,

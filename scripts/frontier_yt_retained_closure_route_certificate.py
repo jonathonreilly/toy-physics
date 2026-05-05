@@ -138,6 +138,7 @@ def main() -> int:
         "osp_oh_literature_bridge": "outputs/yt_osp_oh_literature_bridge_2026-05-04.json",
         "fms_oh_certificate_construction_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
         "pr230_action_first_oh_artifact_attempt": "outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json",
+        "pr230_holonomic_source_response_feasibility_gate": "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json",
         "complete_source_spectrum_identity_no_go": "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json",
         "neutral_scalar_top_coupling_tomography_gate": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
         "non_source_response_rank_repair_sufficiency": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
@@ -975,6 +976,24 @@ def main() -> int:
         is False
         and certificates["pr230_action_first_oh_artifact_attempt"].get(
             "canonical_oh_certificate_written"
+        )
+        is False
+    )
+    holonomic_source_response_gate_blocks = (
+        "PR541-style holonomic source-response route"
+        in certificates["pr230_holonomic_source_response_feasibility_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_holonomic_source_response_feasibility_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_holonomic_source_response_feasibility_gate"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+        and certificates["pr230_holonomic_source_response_feasibility_gate"].get(
+            "two_source_functional_current_surface_defined"
         )
         is False
     )
@@ -3098,6 +3117,13 @@ def main() -> int:
         "action-first-oh-artifact-attempt-blocks-current-surface",
         action_first_oh_artifact_attempt_blocks,
         certificates["pr230_action_first_oh_artifact_attempt"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "holonomic-source-response-gate-blocks-missing-oh-h-source",
+        holonomic_source_response_gate_blocks,
+        certificates["pr230_holonomic_source_response_feasibility_gate"].get(
             "actual_current_surface_status", ""
         ),
     )

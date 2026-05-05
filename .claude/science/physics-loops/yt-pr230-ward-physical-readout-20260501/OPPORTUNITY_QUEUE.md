@@ -1382,3 +1382,15 @@ identity/covariance/strict `g2`, strict scalar-LSZ infinite/tail
 moment/threshold/FV authority, Schur `A/B/C` rows, or a neutral
 primitive-cone/irreducibility certificate.  Do not replay source-only
 shortcuts or treat standard EW action notation as proof authority.
+
+2026-05-05 update: the PR541-style holonomic source-response feasibility gate
+is now wired into the aggregate blockers.  The method is relevant as a way to
+compute defined finite-volume rows, but it does not create the missing
+same-current-surface `O_H/h` source artifact.  Source-only `Z(s,0)` leaves
+`C_sH`, `C_HH`, and source-Higgs Gram purity underdetermined.  Do not spend
+another block trying to use Picard-Fuchs, D-module, creative telescoping,
+exact tensor/PEPS, or source-generating functional labels as proof selectors.
+Positive work must now supply a fresh same-surface artifact: W/Z rows with
+identity/covariance/strict `g2`, strict scalar-LSZ infinite/tail
+moment/threshold/FV authority, Schur `A/B/C` rows, or a neutral
+primitive-cone/irreducibility certificate.

@@ -81,6 +81,7 @@ PARENTS = {
     "canonical_higgs_operator": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "canonical_higgs_semantic_firewall": "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
     "pr230_action_first_oh_artifact_attempt": "outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json",
+    "pr230_holonomic_source_response_feasibility_gate": "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json",
     "cross_lane_oh_authority_audit": "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
     "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
     "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
@@ -451,6 +452,12 @@ def main() -> int:
             "exact_negative_boundary_passed"
         )
         is True
+        and certs["pr230_holonomic_source_response_feasibility_gate"].get("proposal_allowed")
+        is False
+        and certs["pr230_holonomic_source_response_feasibility_gate"].get(
+            "two_source_functional_current_surface_defined"
+        )
+        is False
         and certs["canonical_oh_premise_stretch"].get("proposal_allowed") is False
         and certs["canonical_oh_premise_stretch"].get("premise_lattice_stretch_no_go_passed")
         is True
@@ -907,6 +914,20 @@ def main() -> int:
         )
         is True,
         statuses["pr230_action_first_oh_artifact_attempt"],
+    )
+    report(
+        "holonomic-source-response-gate-blocks-missing-oh-h-source",
+        "PR541-style holonomic source-response route"
+        in statuses["pr230_holonomic_source_response_feasibility_gate"]
+        and certs["pr230_holonomic_source_response_feasibility_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_holonomic_source_response_feasibility_gate"].get(
+            "two_source_functional_current_surface_defined"
+        )
+        is False,
+        statuses["pr230_holonomic_source_response_feasibility_gate"],
     )
     report(
         "cross-lane-oh-authority-audit-blocks-adjacent-imports",

@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T22:57:29.385697+00:00",
+  "generated_at": "2026-05-05T23:26:52.442257+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42031,9 +42031,9 @@
     "yt_pr230_holonomic_source_response_feasibility_gate_note_2026-05-05": {
       "claim_id": "yt_pr230_holonomic_source_response_feasibility_gate_note_2026-05-05",
       "current_status": "unknown",
-      "current_status_raw": "exact negative boundary / PR541-style holonomic source-response route",
+      "current_status_raw": "exact negative boundary / PR541-style holonomic source-response route is relevant but blocked by missing current-surface `O_H` and `h` source.",
       "deps": [],
-      "note_hash": "08e9c01d734e9b5a343b6f5f73fb2634e39ee8d97cc4755c355bed29b7d18845",
+      "note_hash": "27e15307e1520c5be342abf44bcc5778efba71c5e523ff93bcba2dcea8a5d665",
       "path": "docs/YT_PR230_HOLONOMIC_SOURCE_RESPONSE_FEASIBILITY_GATE_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_holonomic_source_response_feasibility_gate.py",
       "title": "PR230 Holonomic Source-Response Feasibility Gate"
@@ -42057,6 +42057,16 @@
       "path": "docs/YT_PR230_MATCHING_RUNNING_BRIDGE_GATE_NOTE_2026-05-04.md",
       "runner_path": "scripts/frontier_yt_pr230_matching_running_bridge_gate.py",
       "title": "PR230 Matching/Running Bridge Gate"
+    },
+    "yt_pr230_missing_bridge_literature_assumption_exercises_note_2026-05-05": {
+      "claim_id": "yt_pr230_missing_bridge_literature_assumption_exercises_note_2026-05-05",
+      "current_status": "bounded",
+      "current_status_raw": "bounded support / targeted literature and assumption exercises complete;",
+      "deps": [],
+      "note_hash": "76c16bf569caa05ac7f7606bc70ca369c04fe7f0650d019e699a6dbf1383bf77",
+      "path": "docs/YT_PR230_MISSING_BRIDGE_LITERATURE_ASSUMPTION_EXERCISES_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_missing_bridge_literature_assumption_exercises.py",
+      "title": "PR230 Missing Bridge Literature And Assumption Exercises"
     },
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05": {
       "claim_id": "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
@@ -45132,6 +45142,7 @@
     "yt_pr230_holonomic_source_response_feasibility_gate_note_2026-05-05",
     "yt_pr230_invariant_ring_oh_certificate_attempt_note_2026-05-05",
     "yt_pr230_matching_running_bridge_gate_note_2026-05-04",
+    "yt_pr230_missing_bridge_literature_assumption_exercises_note_2026-05-05",
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
     "yt_pr230_nonchunk_current_surface_exhaustion_gate_note_2026-05-05",
     "yt_pr230_nonchunk_cycle14_route_selector_gate_note_2026-05-05",
@@ -45290,12 +45301,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1058,
-    "node_count": 2011,
-    "root_count": 1524,
-    "runners_with_path": 1509,
+    "leaf_count": 1059,
+    "node_count": 2012,
+    "root_count": 1525,
+    "runners_with_path": 1510,
     "status_counts": {
-      "bounded": 551,
+      "bounded": 552,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
