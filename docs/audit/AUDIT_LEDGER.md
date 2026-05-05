@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 39 |
 | **retained_no_go** | 96 |
-| **retained_bounded** | 186 |
+| **retained_bounded** | 187 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
 | unaudited | 1120 |
-| audit_in_progress | 2 |
+| audit_in_progress | 1 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 6 |
 | ~~audited_renaming~~ | 9 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
-| `audited_clean` | 293 |
+| `audit_in_progress` | 1 |
+| `audited_clean` | 294 |
 | `audited_conditional` | 257 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 45 |
@@ -109,7 +109,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `charged_lepton_two_higgs_canonical_reduction_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `universal_gr_polarization_frame_bundle_blocker_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -385,6 +384,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_complement_canonical_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_constraint_action_stationarity_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_lambda_bypass_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `universal_gr_polarization_frame_bundle_blocker_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-fresh-agent | A | - |
 | `valley_linear_action_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `valley_linear_asymptotic_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `valley_linear_mirror_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -8747,6 +8747,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** Two valid 3+1 polarization frames related by a spatial rotation yield different localized channel coefficients for the same kernel, with frame_delta = 6.767e-02, so the complement is not canonical.  _(class `C`)_
 - **chain closes:** False — The note's obstruction depends on a frame-dependence computation and on upstream exact-stack inputs, but the ledger has no registered runner and no cited one-hop authorities for those ingredients. The conclusion is therefore not auditable as a closed derivation from the provided inputs.
 - **rationale:** Issue: the load-bearing complement-frame ambiguity is asserted from an unregistered runner and unprovided upstream exact-stack inputs. Why this blocks: without the runner output or cited authorities, the audit cannot verify that the quotient kernel is held fixed while only the polarization frame changes. Repair target: register the frame-dependence runner and cite the exact scalar generator, 3+1 lift, and symmetric quotient-kernel authorities used as inputs. Claim boundary until fixed: the note may stand as an open route/obstruction inventory, not as an audited derivation of the polarization-bundle obstruction.
+- **auditor confidence:** high
+
+### `universal_gr_polarization_frame_bundle_blocker_note`
+
+- **Note:** [`UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md`](../../docs/UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded blocker claim that the current universal-GR stack determines a frame-orbit family of candidate localizations, not a canonical Pi_curv projector bundle.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-judicial-universal_gr_polarization_frame_bundle_blocker_note-20260505`  (codex-fresh-agent; independence=judicial_review)
+- **load-bearing step:** Runner result: localization coefficients depend on frame choice, with max channel delta across two valid polarization frames = 6.767e-02 and PASS=11 FAIL=0.  _(class `A`)_
+- **chain closes:** True — The note claims a bounded negative/blocker result, not a positive universal-GR closure theorem: the available quotient/kernel data yield an orbit of localization responses while no distinguished projector bundle or connection is supplied. The SHA-pinned cached runner completed successfully and algebraically verifies frame-dependent channel coefficients across valid 3+1 polarization frames, which is enough for the stated no-canonical-projector blocker. No timeout, stale output, hidden dependency, or unratified physical bridge is load-bearing for this bounded claim because the note explicitly stops before identifying the Hessian with Einstein/Regge dynamics.
+- **rationale:** The note claims a bounded negative/blocker result, not a positive universal-GR closure theorem: the available quotient/kernel data yield an orbit of localization responses while no distinguished projector bundle or connection is supplied. The SHA-pinned cached runner completed successfully and algebraically verifies frame-dependent channel coefficients across valid 3+1 polarization frames, which is enough for the stated no-canonical-projector blocker. No timeout, stale output, hidden dependency, or unratified physical bridge is load-bearing for this bounded claim because the note explicitly stops before identifying the Hessian with Einstein/Regge dynamics.
 - **auditor confidence:** high
 
 ### `universal_qg_optional_textbook_comparison_note`
