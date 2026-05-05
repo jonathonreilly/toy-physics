@@ -4,17 +4,26 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact negative boundary / PR230 non-chunk cycle-27 post-cycle-26 main-audit-status-drift reopen guard: origin/main advanced again only on audit/effective-status surfaces and no listed same-surface artifact is present; positive closure still open
-active_residual: "Cycle 27 checks the only new resume fact after cycle 26: origin/main advanced from 3189b67ea27e8b8670bd682cde145ead7fd1bae8 to d04a2f2a1a3e02243fd3db966abae9597736190b.  The new main diff is still audit/effective-status drift only, no listed PR230 future same-surface path changed or exists, the cycle-26 head remains an ancestor of the aligned PR heads, all six worklist units remain blocked, no route family is executable, and aggregate gates still deny proposal authority."
+actual_current_surface_status: exact negative boundary / PR230 non-chunk cycle-28 post-cycle-27 main-audit-status-drift reopen guard: origin/main advanced again only on audit/effective-status surfaces and no listed same-surface artifact is present; positive closure still open
+active_residual: "Cycle 28 checks the only new resume fact after cycle 27: origin/main advanced from d04a2f2a1a3e02243fd3db966abae9597736190b to f28ac2a44dc7bdd42f628e5ff7d3d2ac669eccef.  The new main diff is still audit/effective-status drift only, no listed PR230 future same-surface path changed or exists, the cycle-27 head remains an ancestor of the aligned PR heads, all six worklist units remain blocked, no route family is executable, and aggregate gates still deny proposal authority."
 latest_checkpoint:
-  utc: "2026-05-05T10:58:56Z"
-  block: 84
-  artifact: "cycle-27 post-cycle-26 main-audit-status-drift reopen guard"
+  utc: "2026-05-05T11:13:12Z"
+  block: 85
+  artifact: "cycle-28 post-cycle-27 main-audit-status-drift reopen guard"
   status: "exact negative boundary / repeated origin/main audit/effective-status drift supplies no listed PR230 same-surface artifact; positive closure remains open"
-  result: "The cycle-27 guard verifies that all parents pass, no parent authorizes a proposal, the cycle-26 head remains an ancestor of the aligned PR heads, origin/main advanced by five commits since the cycle-26 main baseline, changed-path classes are audit/effective-status only, no listed future same-surface path exists or changed on branch, remote PR branch, or origin/main, all six worklist units remain blocked, no route family is executable, process gates through cycle 26 remain closed, and aggregate gates continue to deny proposal authority."
+  result: "The cycle-28 guard verifies that all parents pass, no parent authorizes a proposal, the cycle-27 head remains an ancestor of the aligned PR heads, origin/main advanced by five commits since the cycle-27 main baseline, changed-path classes are audit/effective-status only, no listed future same-surface path exists or changed on branch, remote PR branch, or origin/main, all six worklist units remain blocked, no route family is executable, process gates through cycle 27 remain closed, and aggregate gates continue to deny proposal authority."
   claim_boundary: "no closure proposal, no main-drift reopen, no remote-drift reopen, no process-only route, no chunk packaging, and no admissible reopen until a listed same-surface row, certificate, or theorem exists as a parseable claim-status artifact and the aggregate gates are rerun"
   live_compute: "chunk worker remains separate; this checkpoint loads no chunk data"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard.py
+    - docs/YT_PR230_NONCHUNK_CYCLE28_POST_CYCLE27_MAIN_AUDIT_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md
+    - outputs/yt_pr230_nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard_2026-05-05.json
+    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+    - scripts/frontier_yt_retained_closure_route_certificate.py
+    - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+    - scripts/frontier_yt_pr230_campaign_status_certificate.py
+    - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
     - scripts/frontier_yt_pr230_nonchunk_cycle27_post_cycle26_main_audit_status_drift_guard.py
     - docs/YT_PR230_NONCHUNK_CYCLE27_POST_CYCLE26_MAIN_AUDIT_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md
     - outputs/yt_pr230_nonchunk_cycle27_post_cycle26_main_audit_status_drift_guard_2026-05-05.json

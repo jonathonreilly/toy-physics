@@ -103,6 +103,7 @@ PARENTS = {
     "nonchunk_cycle25_post_cycle24_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle25_post_cycle24_main_audit_status_drift_guard_2026-05-05.json",
     "nonchunk_cycle26_post_cycle25_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle26_post_cycle25_main_audit_status_drift_guard_2026-05-05.json",
     "nonchunk_cycle27_post_cycle26_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle27_post_cycle26_main_audit_status_drift_guard_2026-05-05.json",
+    "nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -684,6 +685,22 @@ def main() -> int:
         ).get("passed")
         is False
     )
+    nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard_closed = (
+        "cycle-28 post-cycle-27 main-audit-status-drift reopen guard"
+        in statuses["nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard"]
+        and certs["nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard"].get(
+            "cycle28_post_cycle27_main_audit_status_drift_guard_passed"
+        )
+        is True
+        and certs["nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
 
     current_state = {
         "production_physical_response": False,
@@ -1168,6 +1185,11 @@ def main() -> int:
         nonchunk_cycle27_post_cycle26_main_audit_status_drift_guard_closed,
         statuses["nonchunk_cycle27_post_cycle26_main_audit_status_drift_guard"],
     )
+    report(
+        "nonchunk-cycle28-post-cycle27-main-audit-status-drift-guard-recorded",
+        nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard_closed,
+        statuses["nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard"],
+    )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
@@ -1229,6 +1251,9 @@ def main() -> int:
             "surfaces and still supplies no listed PR230 same-surface artifact.  "
             "The cycle-27 post-cycle-26 main-audit-status-drift guard records "
             "that origin/main advanced again only on audit/effective-status "
+            "surfaces and still supplies no listed PR230 same-surface artifact.  "
+            "The cycle-28 post-cycle-27 main-audit-status-drift guard records "
+            "that origin/main advanced again only on audit/effective-status "
             "surfaces and still supplies no listed PR230 same-surface artifact."
         ),
         "proposal_allowed": False,
@@ -1274,6 +1299,7 @@ def main() -> int:
             "does not treat cycle-25 post-cycle-24 main-audit-status-drift guard closure as positive evidence",
             "does not treat cycle-26 post-cycle-25 main-audit-status-drift guard closure as positive evidence",
             "does not treat cycle-27 post-cycle-26 main-audit-status-drift guard closure as positive evidence",
+            "does not treat cycle-28 post-cycle-27 main-audit-status-drift guard closure as positive evidence",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks.  In parallel, "
@@ -1303,6 +1329,8 @@ def main() -> int:
             "proposal language.  The cycle-26 post-cycle-25 main-audit-status-"
             "drift guard must rerun after any later origin/main advance before "
             "proposal language.  The cycle-27 post-cycle-26 main-audit-status-"
+            "drift guard must rerun after any later origin/main advance before "
+            "proposal language.  The cycle-28 post-cycle-27 main-audit-status-"
             "drift guard must rerun after any later origin/main advance before "
             "proposal language."
         ),
