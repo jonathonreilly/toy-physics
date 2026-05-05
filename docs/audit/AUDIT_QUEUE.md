@@ -17,7 +17,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 |---:|---|---|---|---|---:|---:|:---:|---|---|
 | 1 | `lensing_k_sweep_note` | bounded_theorem | unaudited | critical | 308 | 10.77 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/lensing_k_sweep.py` |
 | 2 | `g_bare_rigidity_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 292 | 11.20 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_rigidity_theorem.py` |
-| 3 | `wave_retardation_continuum_limit_note` | bounded_theorem | unaudited | critical | 290 | 9.19 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/wave_retardation_continuum_limit.py` |
+| 3 | `wave_retardation_continuum_limit_note` | bounded_theorem | audit_in_progress | critical | 290 | 9.19 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/wave_retardation_continuum_limit.py` |
 | 4 | `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` | bounded_theorem | unaudited | critical | 289 | 11.18 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 5 | `pmns_oriented_cycle_reduced_channel_nonselection_note` | positive_theorem | unaudited | critical | 289 | 10.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py` |
 | 6 | `tensor_support_center_excess_law_note` | bounded_theorem | audit_in_progress | critical | 289 | 9.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_tensor_support_center_excess_law.py` |
