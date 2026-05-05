@@ -1,5 +1,50 @@
 # Handoff
 
+## 2026-05-05 PR230 Non-Chunk Cycle-30 Post-Cycle-29 Main-Audit-Status-Drift Reopen Guard
+
+Cycle 30 checked the only new resume fact after cycle 29: `origin/main`
+advanced from `7c041f2cd55f0ed4816a85b9269df5ed46996255` to
+`359439629a43d8774f4a91cbdc9549a566f6ed5c`.
+
+Result: exact negative boundary.  The runner reloads the worklist,
+route-family audit, future-artifact intake gate, terminal route-exhaustion
+gate, reopen-admissibility gate, cycle-18 through cycle-29 process guards,
+full assembly gate, retained-route certificate, and campaign certificate.  It
+verifies that the new main diff is still audit/effective-status drift only, no
+listed PR230 future same-surface path changed or exists on `origin/main`, all
+six worklist units remain blocked, no route family is executable, process
+gates through cycle 29 remain closed, and aggregate gates still deny proposal
+authority.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_nonchunk_cycle30_post_cycle29_main_audit_status_drift_guard.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=70 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=218 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=245 FAIL=0
+```
+
+Claim boundary: no closure proposal, no main-drift reopen, no remote-drift
+reopen, no process-only route, no chunk packaging, and no admissible reopen
+source remains on this branch.
+
+Next exact action: stop PR230 current-surface non-chunk cycling on this branch.
+Reopen only after a listed same-surface row, certificate, or theorem exists as
+a parseable claim-status artifact on the target branch; then rerun
+reopen-admissibility, worklist, exhaustion, intake, independent-route,
+cycle-16, cycle-17, cycle-18, cycle-19, cycle-20, cycle-21, cycle-22,
+cycle-23, cycle-24, cycle-25, cycle-26, cycle-27, cycle-28, cycle-29,
+cycle-30, assembly, retained-route, and campaign gates before any proposal
+language.
+
 ## 2026-05-05 PR230 Non-Chunk Cycle-29 Post-Cycle-28 Main-Audit-Status-Drift Reopen Guard
 
 Cycle 29 checked the only new resume fact after cycle 28: `origin/main`
