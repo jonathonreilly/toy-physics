@@ -218,3 +218,19 @@ same-surface artifact is present as a parseable claim-status artifact, and
 aggregate gates still deny proposal authority.  Another process-only gate would
 restate the same boundary rather than retire an import, add support, or create
 a new no-go.
+
+## R15: Cycle-21 Remote-Surface Reopen Guard
+
+After cycle 20 closes process-only continuation, test whether fetched remote
+surfaces contain any listed same-surface row, certificate, or theorem that can
+reopen the stopped non-chunk queue.
+
+Status: closed negatively in
+`docs/YT_PR230_NONCHUNK_CYCLE21_REMOTE_REOPEN_GUARD_NOTE_2026-05-05.md`.
+
+Reason: the PR branch and remote PR branch remain aligned at the cycle-20
+head, `origin/main` is visible after fetch, and none of the listed future
+artifact paths exists on the branch, remote PR branch, or `origin/main`.  All
+six worklist units remain blocked, no route family is executable, process
+gates through cycle 20 remain closed, and aggregate gates still deny proposal
+authority.  Remote branch drift is not an admissible non-chunk route.

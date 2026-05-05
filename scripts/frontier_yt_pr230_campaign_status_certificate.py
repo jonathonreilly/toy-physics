@@ -193,6 +193,9 @@ def main() -> int:
         "pr230_nonchunk_cycle20_process_gate_continuation_no_go": load(
             "outputs/yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go_2026-05-05.json"
         ),
+        "pr230_nonchunk_cycle21_remote_reopen_guard": load(
+            "outputs/yt_pr230_nonchunk_cycle21_remote_reopen_guard_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -2578,6 +2581,24 @@ def main() -> int:
         is False,
         statuses["pr230_nonchunk_cycle20_process_gate_continuation_no_go"],
     )
+    report(
+        "pr230-nonchunk-cycle21-remote-reopen-guard-recorded",
+        "cycle-21 remote-surface reopen guard"
+        in str(statuses["pr230_nonchunk_cycle21_remote_reopen_guard"])
+        and certificates["pr230_nonchunk_cycle21_remote_reopen_guard"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_cycle21_remote_reopen_guard"].get(
+            "cycle21_remote_reopen_guard_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_cycle21_remote_reopen_guard"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False,
+        statuses["pr230_nonchunk_cycle21_remote_reopen_guard"],
+    )
 
     remaining_routes = [
         {
@@ -2627,6 +2648,10 @@ def main() -> int:
         {
             "route": "process-gate continuation",
             "needed": "do not continue with process-only gates as science routes before a named same-surface artifact exists",
+        },
+        {
+            "route": "remote-surface reopen guard",
+            "needed": "do not reopen from fetched remote drift unless a listed same-surface artifact is present on the target branch",
         },
     ]
 
@@ -2946,7 +2971,9 @@ def main() -> int:
         "closed non-chunk family until a fresh parseable same-surface artifact "
         "exists.  The cycle-20 process-gate continuation no-go records that "
         "another process-only gate is also not an admissible science route "
-        "until that fresh same-surface artifact exists."
+        "until that fresh same-surface artifact exists.  The cycle-21 "
+        "remote-surface reopen guard records that fetched remote surfaces "
+        "also contain no listed same-surface artifact for admissible reopen."
     )
     result["strict_non_claims"] = [
         "does not claim retained closure",
@@ -2955,6 +2982,7 @@ def main() -> int:
         "does not allow forbidden matrix-element, operator, coupling, target, or unit shortcuts",
         "does not treat chunk completion alone as positive retained closure",
         "does not treat process-only gates as proof inputs",
+        "does not treat remote branch drift as same-surface physics evidence",
     ]
     OUTPUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"\nWrote certificate: {OUTPUT.relative_to(ROOT)}")

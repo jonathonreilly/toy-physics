@@ -96,6 +96,7 @@ PARENTS = {
     "nonchunk_cycle18_reopen_freshness_gate": "outputs/yt_pr230_nonchunk_cycle18_reopen_freshness_gate_2026-05-05.json",
     "nonchunk_cycle19_no_duplicate_route_gate": "outputs/yt_pr230_nonchunk_cycle19_no_duplicate_route_gate_2026-05-05.json",
     "nonchunk_cycle20_process_gate_continuation_no_go": "outputs/yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go_2026-05-05.json",
+    "nonchunk_cycle21_remote_reopen_guard": "outputs/yt_pr230_nonchunk_cycle21_remote_reopen_guard_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -569,6 +570,20 @@ def main() -> int:
         ).get("passed")
         is False
     )
+    nonchunk_cycle21_remote_reopen_guard_closed = (
+        "cycle-21 remote-surface reopen guard"
+        in statuses["nonchunk_cycle21_remote_reopen_guard"]
+        and certs["nonchunk_cycle21_remote_reopen_guard"].get("proposal_allowed")
+        is False
+        and certs["nonchunk_cycle21_remote_reopen_guard"].get(
+            "cycle21_remote_reopen_guard_passed"
+        )
+        is True
+        and certs["nonchunk_cycle21_remote_reopen_guard"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
 
     current_state = {
         "production_physical_response": False,
@@ -1018,6 +1033,11 @@ def main() -> int:
         nonchunk_cycle20_process_gate_continuation_closed,
         statuses["nonchunk_cycle20_process_gate_continuation_no_go"],
     )
+    report(
+        "nonchunk-cycle21-remote-reopen-guard-recorded",
+        nonchunk_cycle21_remote_reopen_guard_closed,
+        statuses["nonchunk_cycle21_remote_reopen_guard"],
+    )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
@@ -1059,7 +1079,9 @@ def main() -> int:
             "artifact exists.  The cycle-20 process-gate continuation no-go "
             "records that another branch-local process gate is not itself a "
             "science route unless a fresh parseable same-surface artifact "
-            "exists first."
+            "exists first.  The cycle-21 remote-surface reopen guard records "
+            "that fetched remote surfaces also contain no listed same-surface "
+            "artifact for admissible reopen."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
@@ -1097,6 +1119,7 @@ def main() -> int:
             "does not treat cycle-18 reopen freshness as positive evidence",
             "does not treat cycle-19 no-duplicate-route closure as positive evidence",
             "does not treat cycle-20 process-gate continuation closure as positive evidence",
+            "does not treat cycle-21 remote-surface reopen guard closure as positive evidence",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks.  In parallel, "
@@ -1113,7 +1136,9 @@ def main() -> int:
             "gate, plus the cycle-18 reopen-freshness gate, before any "
             "retained-route proposal.  The cycle-19 no-duplicate-route gate "
             "and cycle-20 process-gate continuation no-go must also rerun if "
-            "no fresh parseable same-surface artifact has appeared."
+            "no fresh parseable same-surface artifact has appeared.  The "
+            "cycle-21 remote-surface reopen guard must rerun after any fetch "
+            "or target-branch update before proposal language."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

@@ -183,6 +183,12 @@ After cycle 19, another branch-local process gate is not itself an admissible
 science route unless a fresh parseable same-surface artifact exists first.  The
 assembly gate remains open with `PASS=60 FAIL=0`.
 
+2026-05-05 cycle-21 remote-surface reopen update: the gate now also consumes
+`outputs/yt_pr230_nonchunk_cycle21_remote_reopen_guard_2026-05-05.json`.
+After fetch, neither the PR branch, the remote PR branch, nor `origin/main`
+contains a listed same-surface artifact for admissible reopen.  The assembly
+gate remains open with `PASS=61 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 

@@ -18,8 +18,24 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=208 FAIL=0
+# SUMMARY: PASS=209 FAIL=0
 ```
+
+## 2026-05-05 Non-Chunk Cycle-21 Remote-Surface Reopen Update
+
+The retained-route certificate now consumes
+`outputs/yt_pr230_nonchunk_cycle21_remote_reopen_guard_2026-05-05.json`.
+This records the remote-surface reopen guard: after fetch, neither the PR
+branch, the remote PR branch, nor `origin/main` contains a listed
+same-surface artifact for admissible reopen.
+
+Validation: cycle-21 remote-surface reopen guard `PASS=13 FAIL=0`;
+retained-route `PASS=209 FAIL=0`; campaign status `PASS=236 FAIL=0`; full
+positive closure assembly gate `PASS=61 FAIL=0`.
+
+No closure proposal is authorized.  Reopen only after a listed same-surface
+artifact exists as a parseable claim-status artifact, then rerun cycle-20,
+cycle-21, and aggregate gates before proposal language.
 
 ## 2026-05-05 Non-Chunk Cycle-20 Process-Gate Continuation Update
 

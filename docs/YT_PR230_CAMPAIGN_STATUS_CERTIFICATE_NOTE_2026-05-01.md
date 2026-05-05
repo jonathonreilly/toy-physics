@@ -28,8 +28,26 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=235 FAIL=0
+# SUMMARY: PASS=236 FAIL=0
 ```
+
+## 2026-05-05 Cycle-21 Remote-Surface Reopen Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_nonchunk_cycle21_remote_reopen_guard_2026-05-05.json`.
+After fetch, the cycle-21 guard checks whether the branch, remote PR branch,
+or `origin/main` contains a listed same-surface artifact for admissible
+reopen.  None is present, so no non-chunk route is admissible.
+
+Validation: cycle-21 remote-surface reopen guard `PASS=13 FAIL=0`; full
+positive closure assembly gate `PASS=61 FAIL=0`; retained-route `PASS=209
+FAIL=0`; campaign status `PASS=236 FAIL=0`.
+
+The campaign target remains open, but the current PR230 non-chunk scope remains
+stopped for this branch.  Reopen only after an admissible strict future
+artifact exists and the worklist, exhaustion, intake, independent-route,
+cycle-16, cycle-17, cycle-18, cycle-19, cycle-20, cycle-21, assembly,
+retained-route, and campaign gates are rerun.
 
 ## 2026-05-05 Cycle-20 Process-Gate Continuation Update
 

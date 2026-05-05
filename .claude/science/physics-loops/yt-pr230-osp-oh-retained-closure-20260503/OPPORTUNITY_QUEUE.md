@@ -1,5 +1,16 @@
 # Opportunity Queue
 
+Cycle-21 update: the remote-surface reopen guard now checks the only new
+resume fact after cycle 20.  After fetch, neither the PR branch, the remote PR
+branch, nor `origin/main` contains any listed same-surface row, certificate, or
+theorem that can reopen the stopped non-chunk queue.  All six worklist units
+remain blocked, no route family is executable, and aggregate gates still deny
+proposal authority.  The non-chunk scope remains stopped on this branch until
+a listed same-surface artifact exists as a parseable claim-status artifact on
+the target branch and the reopen-admissibility, worklist, exhaustion, intake,
+independent-route, cycle-16, cycle-17, cycle-18, cycle-19, cycle-20, cycle-21,
+assembly, retained-route, and campaign gates all rerun.
+
 Cycle-20 update: the process-gate continuation no-go now checks the only
 remaining process-level continuation after cycle 19.  No further branch-local
 process gate is an admissible science route without a fresh parseable

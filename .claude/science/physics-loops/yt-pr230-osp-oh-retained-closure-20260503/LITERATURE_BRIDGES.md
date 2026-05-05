@@ -1,5 +1,12 @@
 # Literature Bridges
 
+## 2026-05-05 Cycle-21 Remote-Surface Reopen Guard
+
+No external literature was used in cycle 21.
+
+Reason: the route checked branch and remote artifact presence only.  It did
+not introduce a theorem, comparator, or methodological import.
+
 ## Block 1
 
 No external literature was used in block 1.

@@ -427,3 +427,16 @@ This closes the current-surface non-chunk shortcut queue negatively.  All six
 worklist units are blocked and every strict future row/certificate file is
 absent, so the next positive move requires a new same-surface row, certificate,
 or theorem rather than another branch-local shortcut.
+
+Completed in the cycle-21 remote-surface reopen guard:
+
+- `scripts/frontier_yt_pr230_nonchunk_cycle21_remote_reopen_guard.py`
+- `docs/YT_PR230_NONCHUNK_CYCLE21_REMOTE_REOPEN_GUARD_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_cycle21_remote_reopen_guard_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
+This closes the fetched-remote reopen question negatively.  After fetch, the
+PR branch, remote PR branch, and `origin/main` contain no listed same-surface
+artifact for admissible reopen.  Remote branch drift is therefore not an
+executable non-chunk route; the next positive move still requires one listed
+same-surface row, certificate, or theorem on the target branch.
