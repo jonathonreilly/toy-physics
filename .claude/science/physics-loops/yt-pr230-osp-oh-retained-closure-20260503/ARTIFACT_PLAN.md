@@ -264,3 +264,17 @@ covariance formula are supplied.  The W/Z route remains open only through real
 matched rows or a strict same-surface covariance theorem plus the EW action,
 top identity, W/Z mass-fit, non-observed `g_2`, and overlap/correction
 certificates.
+
+Completed in the source-Higgs unratified-Gram continuation:
+
+- `scripts/frontier_yt_source_higgs_unratified_gram_shortcut_no_go.py`
+- `docs/YT_SOURCE_HIGGS_UNRATIFIED_GRAM_SHORTCUT_NO_GO_NOTE_2026-05-05.md`
+- `outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json`
+- refreshed full assembly, retained-route, campaign, and non-chunk worklist
+  certificates.
+
+This closes a source-Higgs shortcut negatively.  Perfect `C_ss/C_sH/C_HH` Gram
+purity against an unratified supplied operator is not PR230 canonical `O_H`
+authority.  A future positive source-Higgs route must first supply a
+same-surface canonical-Higgs identity and normalization certificate, then
+production source-Higgs pole residues.

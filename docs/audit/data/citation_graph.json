@@ -8549,6 +8549,10 @@
       "to": "yt_top_wz_factorization_independence_gate_note_2026-05-05"
     },
     {
+      "from": "yt_top_wz_factorization_independence_gate_note_2026-05-05",
+      "to": "yt_top_wz_deterministic_response_covariance_gate_note_2026-05-05"
+    },
+    {
       "from": "yt_top_wz_matched_covariance_certificate_builder_note_2026-05-04",
       "to": "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05"
     },
@@ -18525,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T01:22:32.552038+00:00",
+  "generated_at": "2026-05-05T04:08:52.709614+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39891,6 +39895,16 @@
       "runner_path": "scripts/frontier_yt_fh_gauge_response_mixed_scalar_obstruction.py",
       "title": "PR #230 FH Gauge-Response Mixed-Scalar Obstruction"
     },
+    "yt_fh_lsz_affine_contact_complete_monotonicity_no_go_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_affine_contact_complete_monotonicity_no_go_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / affine contact complete-monotonicity",
+      "deps": [],
+      "note_hash": "508f3d98403a1a16047babf61193f73e2703642540832760f0bfb6a111c8a671",
+      "path": "docs/YT_FH_LSZ_AFFINE_CONTACT_COMPLETE_MONOTONICITY_NO_GO_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_fh_lsz_affine_contact_complete_monotonicity_no_go.py",
+      "title": "PR #230 FH/LSZ Affine-Contact Complete-Monotonicity No-Go"
+    },
     "yt_fh_lsz_autocorrelation_ess_gate_note_2026-05-02": {
       "claim_id": "yt_fh_lsz_autocorrelation_ess_gate_note_2026-05-02",
       "current_status": "bounded",
@@ -40261,6 +40275,16 @@
       "runner_path": "scripts/frontier_yt_fh_lsz_common_window_response_provenance.py",
       "title": "YT FH/LSZ Common-Window Response Provenance"
     },
+    "yt_fh_lsz_contact_subtraction_identifiability_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_contact_subtraction_identifiability_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / contact-subtraction identifiability obstruction",
+      "deps": [],
+      "note_hash": "b11a9689daa060164c45015e362d26c23e85acfc54582ec3ef57d9e8486c3585",
+      "path": "docs/YT_FH_LSZ_CONTACT_SUBTRACTION_IDENTIFIABILITY_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_fh_lsz_contact_subtraction_identifiability.py",
+      "title": "PR #230 FH/LSZ Contact-Subtraction Identifiability Boundary"
+    },
     "yt_fh_lsz_eight_mode_noise_variance_gate_note_2026-05-01": {
       "claim_id": "yt_fh_lsz_eight_mode_noise_variance_gate_note_2026-05-01",
       "current_status": "bounded",
@@ -40421,6 +40445,16 @@
       "runner_path": null,
       "title": "FH/LSZ Numba Seed-Independence Audit"
     },
+    "yt_fh_lsz_pade_stieltjes_bounds_gate_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_pade_stieltjes_bounds_gate_note_2026-05-05",
+      "current_status": "support",
+      "current_status_raw": "exact-support / open.  This does not authorize",
+      "deps": [],
+      "note_hash": "19e185768eabf7e087c6de972068148266d17a9863510e16cee67f3b2179a217",
+      "path": "docs/YT_FH_LSZ_PADE_STIELTJES_BOUNDS_GATE_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_fh_lsz_pade_stieltjes_bounds_gate.py",
+      "title": "FH/LSZ Pade-Stieltjes Bounds Gate"
+    },
     "yt_fh_lsz_paired_variance_calibration_completion_note_2026-05-04": {
       "claim_id": "yt_fh_lsz_paired_variance_calibration_completion_note_2026-05-04",
       "current_status": "bounded",
@@ -40531,6 +40565,16 @@
       "runner_path": null,
       "title": "FH/LSZ Eight-Mode/x8 Chunks013-018 Checkpoint"
     },
+    "yt_fh_lsz_polefit8x8_chunks019_024_checkpoint_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_polefit8x8_chunks019_024_checkpoint_note_2026-05-05",
+      "current_status": "bounded",
+      "current_status_raw": "bounded production support only.",
+      "deps": [],
+      "note_hash": "abb626562dfc98e6e52ba02e5dfcf94803394a6ad0caa97b620a55d47989a40f",
+      "path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS019_024_CHECKPOINT_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR #230 FH/LSZ Polefit8x8 Chunks019-024 Checkpoint"
+    },
     "yt_fh_lsz_polefit8x8_chunks019_024_launch_checkpoint_note_2026-05-04": {
       "claim_id": "yt_fh_lsz_polefit8x8_chunks019_024_launch_checkpoint_note_2026-05-04",
       "current_status": "unknown",
@@ -40541,6 +40585,56 @@
       "runner_path": null,
       "title": "PR #230 FH/LSZ Polefit8x8 Chunks019-024 Launch Checkpoint"
     },
+    "yt_fh_lsz_polefit8x8_chunks025_030_checkpoint_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_polefit8x8_chunks025_030_checkpoint_note_2026-05-05",
+      "current_status": "bounded",
+      "current_status_raw": "bounded production support only.",
+      "deps": [],
+      "note_hash": "0688e8cb6b051e478e6b97baddef0f1430f95c32c54dd6c27d5497ae6b50058e",
+      "path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS025_030_CHECKPOINT_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR #230 FH/LSZ Polefit8x8 Chunks025-030 Checkpoint"
+    },
+    "yt_fh_lsz_polefit8x8_chunks025_030_launch_checkpoint_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_polefit8x8_chunks025_030_launch_checkpoint_note_2026-05-05",
+      "current_status": "support",
+      "current_status_raw": "run-control support only.",
+      "deps": [],
+      "note_hash": "ad4abd73ab75ab06bc121fa1d7f43cbb31527cb12e01c260fd6e8607099abdd8",
+      "path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS025_030_LAUNCH_CHECKPOINT_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR #230 FH/LSZ Polefit8x8 Chunks025-030 Launch Checkpoint"
+    },
+    "yt_fh_lsz_polefit8x8_chunks031_036_checkpoint_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_polefit8x8_chunks031_036_checkpoint_note_2026-05-05",
+      "current_status": "bounded",
+      "current_status_raw": "bounded production support only.",
+      "deps": [],
+      "note_hash": "9f2cf723fb60543d77aea53c60f7862f50259a1dc2599787531d695bc9e6f0bc",
+      "path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS031_036_CHECKPOINT_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR #230 FH/LSZ Polefit8x8 Chunks031-036 Checkpoint"
+    },
+    "yt_fh_lsz_polefit8x8_chunks031_036_launch_checkpoint_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_polefit8x8_chunks031_036_launch_checkpoint_note_2026-05-05",
+      "current_status": "support",
+      "current_status_raw": "run-control support only.",
+      "deps": [],
+      "note_hash": "9cbe71bd680cadc3ef053dd329d229e8fb2135244862eaa3b930c4ae5b4cfbe0",
+      "path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS031_036_LAUNCH_CHECKPOINT_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR #230 FH/LSZ Polefit8x8 Chunks031-036 Launch Checkpoint"
+    },
+    "yt_fh_lsz_polefit8x8_chunks037_042_launch_checkpoint_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_polefit8x8_chunks037_042_launch_checkpoint_note_2026-05-05",
+      "current_status": "support",
+      "current_status_raw": "run-control support only.",
+      "deps": [],
+      "note_hash": "987c2c1fccbe7bff92a3e56d5ef188935d239e9617f358b555d16f1e370415d0",
+      "path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS037_042_LAUNCH_CHECKPOINT_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR #230 FH/LSZ Polefit8x8 Chunks037-042 Launch Checkpoint"
+    },
     "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04": {
       "claim_id": "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04",
       "current_status": "bounded",
@@ -40550,6 +40644,36 @@
       "path": "docs/YT_FH_LSZ_POLEFIT8X8_LAUNCH_CHECKPOINT_NOTE_2026-05-04.md",
       "runner_path": "scripts/frontier_yt_fh_lsz_polefit8x8_chunk_manifest.py",
       "title": "FH/LSZ Eight-Mode/x8 Pole-Fit Launch Checkpoint"
+    },
+    "yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / current polefit8x8 `C_ss` proxy fails Stieltjes monotonicity",
+      "deps": [],
+      "note_hash": "e9330753e8b95c6d7897e85e9b5facd58cd18edadb515ad63b51e6bf67692b42",
+      "path": "docs/YT_FH_LSZ_POLEFIT8X8_STIELTJES_PROXY_DIAGNOSTIC_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic.py",
+      "title": "PR #230 Polefit8x8 Stieltjes Proxy Diagnostic"
+    },
+    "yt_fh_lsz_polynomial_contact_finite_shell_no_go_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_polynomial_contact_finite_shell_no_go_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / finite-shell polynomial contact",
+      "deps": [],
+      "note_hash": "259373360446bf1df2f2977a0140f36acc7e665ea51ff0690e6ae7173ad77264",
+      "path": "docs/YT_FH_LSZ_POLYNOMIAL_CONTACT_FINITE_SHELL_NO_GO_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_fh_lsz_polynomial_contact_finite_shell_no_go.py",
+      "title": "PR #230 FH/LSZ Polynomial-Contact Finite-Shell No-Go"
+    },
+    "yt_fh_lsz_polynomial_contact_repair_no_go_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_polynomial_contact_repair_no_go_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / polynomial contact repair not",
+      "deps": [],
+      "note_hash": "85aaf865226e008f7caf9ee9fe62d637ef0f8c2966891d4a30b122605fcbb5e1",
+      "path": "docs/YT_FH_LSZ_POLYNOMIAL_CONTACT_REPAIR_NO_GO_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_fh_lsz_polynomial_contact_repair_no_go.py",
+      "title": "PR #230 FH/LSZ Polynomial-Contact Repair No-Go"
     },
     "yt_fh_lsz_production_checkpoint_granularity_gate_note_2026-05-01": {
       "claim_id": "yt_fh_lsz_production_checkpoint_granularity_gate_note_2026-05-01",
@@ -41136,6 +41260,16 @@
       "runner_path": "scripts/frontier_yt_neutral_scalar_positivity_improving_direct_closure_attempt.py",
       "title": "YT Neutral-Scalar Positivity-Improving Direct Closure Attempt"
     },
+    "yt_neutral_scalar_primitive_cone_certificate_gate_note_2026-05-05": {
+      "claim_id": "yt_neutral_scalar_primitive_cone_certificate_gate_note_2026-05-05",
+      "current_status": "support",
+      "current_status_raw": "exact-support / open.  This does not authorize",
+      "deps": [],
+      "note_hash": "a3d0714166c3a977a645042192cb09231e38182435ef06d414349b633c083dd9",
+      "path": "docs/YT_NEUTRAL_SCALAR_PRIMITIVE_CONE_CERTIFICATE_GATE_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_neutral_scalar_primitive_cone_certificate_gate.py",
+      "title": "Neutral-Scalar Primitive-Cone Certificate Gate"
+    },
     "yt_neutral_scalar_rank_one_purity_gate_note_2026-05-02": {
       "claim_id": "yt_neutral_scalar_rank_one_purity_gate_note_2026-05-02",
       "current_status": "open",
@@ -41689,7 +41823,7 @@
       "current_status": "open",
       "current_status_raw": "open / active campaign continuing after current shortcut blocks",
       "deps": [],
-      "note_hash": "b3ca0789a061c294e10b04855a126dda65fc611d8d4349afe225385f637a0749",
+      "note_hash": "97cf116203f34ef6b8914c6e998ffdf4bdfb8cae084fc6f2409f6d2ece716c72",
       "path": "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
@@ -41699,7 +41833,7 @@
       "current_status": "open",
       "current_status_raw": "open / assembly gate; proposal_allowed=false.",
       "deps": [],
-      "note_hash": "efa48459e843bc45a2fc1bc686c3055fa7c55fdbc8a8ed129286fb345e2586ed",
+      "note_hash": "4f986305e31df63876f6d775774f9ee484933bf86d7c5f8930339031914a6bee",
       "path": "docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md",
       "runner_path": null,
       "title": "PR230 Full Positive Closure Assembly Gate Note"
@@ -41729,10 +41863,20 @@
       "current_status": "open",
       "current_status_raw": "open / PR230 non-chunk closure worklist complete; positive closure still blocked",
       "deps": [],
-      "note_hash": "34227a6b2fc237fdf72761abe01d375bc89cfc3230eb73bb40540c10b0382cd5",
+      "note_hash": "939c04e46f11d77e3e605800d8d10ce38b5c15649596410fca5ca35edd5b1427",
       "path": "docs/YT_PR230_NON_CHUNK_CLOSURE_WORKLIST_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_non_chunk_closure_worklist.py",
       "title": "PR #230 Non-Chunk Closure Worklist Gate"
+    },
+    "yt_pr230_nonchunk_route_family_import_audit_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_route_family_import_audit_note_2026-05-05",
+      "current_status": "open",
+      "current_status_raw": "open / non-chunk route-family import audit selects",
+      "deps": [],
+      "note_hash": "47d96ce87b03f51346647a6db519ed33b22be1e1781ad12b147b8260019e7e5b",
+      "path": "docs/YT_PR230_NONCHUNK_ROUTE_FAMILY_IMPORT_AUDIT_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py",
+      "title": "PR #230 Non-Chunk Route-Family Import Audit"
     },
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01": {
       "claim_id": "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
@@ -41821,7 +41965,7 @@
       "current_status": "open",
       "current_status_raw": "open / closure not yet reached",
       "deps": [],
-      "note_hash": "8e1a2058bbedbc18033202a86324dd6c74a79d8fad24ff8f6b2e06814593b3d0",
+      "note_hash": "9c94e3d09a09158b6a80eb9a58d1d45b68b09b936fa2cfc10acbafd4bffefc88",
       "path": "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_retained_closure_route_certificate.py",
       "title": "PR230 Top-Yukawa Retained-Closure Route Certificate"
@@ -42470,6 +42614,16 @@
       "runner_path": "scripts/frontier_yt_source_higgs_production_readiness_gate.py",
       "title": "PR #230 Source-Higgs Production Readiness Gate"
     },
+    "yt_source_higgs_unratified_gram_shortcut_no_go_note_2026-05-05": {
+      "claim_id": "yt_source_higgs_unratified_gram_shortcut_no_go_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / unratified source-Higgs Gram shortcut is",
+      "deps": [],
+      "note_hash": "9e064abbf1b2ef47fd057a8ee2e73030dcd6013133f9deefc575f53e03d6e47c",
+      "path": "docs/YT_SOURCE_HIGGS_UNRATIFIED_GRAM_SHORTCUT_NO_GO_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_source_higgs_unratified_gram_shortcut_no_go.py",
+      "title": "PR230 Source-Higgs Unratified-Gram Shortcut No-Go"
+    },
     "yt_source_higgs_unratified_operator_smoke_checkpoint_note_2026-05-03": {
       "claim_id": "yt_source_higgs_unratified_operator_smoke_checkpoint_note_2026-05-03",
       "current_status": "bounded",
@@ -42682,12 +42836,24 @@
       "runner_path": "scripts/frontier_yt_top_wz_covariance_marginal_derivation_no_go.py",
       "title": "YT Top/W Covariance Marginal-Derivation No-Go"
     },
+    "yt_top_wz_deterministic_response_covariance_gate_note_2026-05-05": {
+      "claim_id": "yt_top_wz_deterministic_response_covariance_gate_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / deterministic W-response covariance shortcut",
+      "deps": [],
+      "note_hash": "8168c0b5d314718ab84c24d556d9d5c99c2b23c1f372a407d8bd49c73f740dfd",
+      "path": "docs/YT_TOP_WZ_DETERMINISTIC_RESPONSE_COVARIANCE_GATE_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_top_wz_deterministic_response_covariance_gate.py",
+      "title": "YT Top/W Deterministic-Response Covariance Gate"
+    },
     "yt_top_wz_factorization_independence_gate_note_2026-05-05": {
       "claim_id": "yt_top_wz_factorization_independence_gate_note_2026-05-05",
       "current_status": "support",
       "current_status_raw": "exact negative boundary / same-source factorization not derived on",
-      "deps": [],
-      "note_hash": "11f26b48e9e67b469339fdcf9c581066fccb07fb1168f97ee99f5e0345d4aee3",
+      "deps": [
+        "yt_top_wz_deterministic_response_covariance_gate_note_2026-05-05"
+      ],
+      "note_hash": "f1fc582494521f20ebddced22fc8f299316613bdeb5d41492d56617f26481339",
       "path": "docs/YT_TOP_WZ_FACTORIZATION_INDEPENDENCE_GATE_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_top_wz_factorization_independence_gate.py",
       "title": "YT Top/W Factorization-Independence Gate"
@@ -44210,6 +44376,7 @@
     "yt_fh_gauge_mass_response_observable_gap_note_2026-05-02",
     "yt_fh_gauge_normalized_response_route_note_2026-05-02",
     "yt_fh_gauge_response_mixed_scalar_obstruction_note_2026-05-02",
+    "yt_fh_lsz_affine_contact_complete_monotonicity_no_go_note_2026-05-05",
     "yt_fh_lsz_autocorrelation_ess_gate_note_2026-05-02",
     "yt_fh_lsz_chunk001_production_checkpoint_note_2026-05-02",
     "yt_fh_lsz_chunk001_target_timeseries_rerun_checkpoint_note_2026-05-03",
@@ -44247,6 +44414,7 @@
     "yt_fh_lsz_common_window_replacement_response_stability_note_2026-05-04",
     "yt_fh_lsz_common_window_response_gate_note_2026-05-04",
     "yt_fh_lsz_common_window_response_provenance_note_2026-05-04",
+    "yt_fh_lsz_contact_subtraction_identifiability_note_2026-05-05",
     "yt_fh_lsz_eight_mode_noise_variance_gate_note_2026-05-01",
     "yt_fh_lsz_finite_shell_identifiability_no_go_note_2026-05-02",
     "yt_fh_lsz_finite_source_linearity_calibration_checkpoint_note_2026-05-03",
@@ -44263,6 +44431,7 @@
     "yt_fh_lsz_multitau_target_timeseries_harness_note_2026-05-03",
     "yt_fh_lsz_noise_subsample_diagnostics_note_2026-05-01",
     "yt_fh_lsz_numba_seed_independence_audit_note_2026-05-02",
+    "yt_fh_lsz_pade_stieltjes_bounds_gate_note_2026-05-05",
     "yt_fh_lsz_paired_variance_calibration_completion_note_2026-05-04",
     "yt_fh_lsz_paired_variance_calibration_gate_note_2026-05-04",
     "yt_fh_lsz_paired_variance_calibration_orchestrator_note_2026-05-04",
@@ -44274,8 +44443,17 @@
     "yt_fh_lsz_polefit8x8_chunks001_006_checkpoint_note_2026-05-04",
     "yt_fh_lsz_polefit8x8_chunks007_012_checkpoint_note_2026-05-04",
     "yt_fh_lsz_polefit8x8_chunks013_018_checkpoint_note_2026-05-04",
+    "yt_fh_lsz_polefit8x8_chunks019_024_checkpoint_note_2026-05-05",
     "yt_fh_lsz_polefit8x8_chunks019_024_launch_checkpoint_note_2026-05-04",
+    "yt_fh_lsz_polefit8x8_chunks025_030_checkpoint_note_2026-05-05",
+    "yt_fh_lsz_polefit8x8_chunks025_030_launch_checkpoint_note_2026-05-05",
+    "yt_fh_lsz_polefit8x8_chunks031_036_checkpoint_note_2026-05-05",
+    "yt_fh_lsz_polefit8x8_chunks031_036_launch_checkpoint_note_2026-05-05",
+    "yt_fh_lsz_polefit8x8_chunks037_042_launch_checkpoint_note_2026-05-05",
     "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04",
+    "yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_note_2026-05-05",
+    "yt_fh_lsz_polynomial_contact_finite_shell_no_go_note_2026-05-05",
+    "yt_fh_lsz_polynomial_contact_repair_no_go_note_2026-05-05",
     "yt_fh_lsz_production_checkpoint_granularity_gate_note_2026-05-01",
     "yt_fh_lsz_production_manifest_note_2026-05-01",
     "yt_fh_lsz_production_postprocess_gate_note_2026-05-01",
@@ -44328,6 +44506,7 @@
     "yt_neutral_scalar_dynamical_rank_one_closure_attempt_note_2026-05-02",
     "yt_neutral_scalar_irreducibility_authority_audit_note_2026-05-04",
     "yt_neutral_scalar_positivity_improving_direct_closure_attempt_note_2026-05-03",
+    "yt_neutral_scalar_primitive_cone_certificate_gate_note_2026-05-05",
     "yt_neutral_scalar_rank_one_purity_gate_note_2026-05-02",
     "yt_neutral_scalar_top_coupling_tomography_gate_note_2026-05-02",
     "yt_no_orthogonal_top_coupling_import_audit_note_2026-05-02",
@@ -44354,6 +44533,7 @@
     "yt_pr230_global_yt_proof_audit_note_2026-05-01",
     "yt_pr230_matching_running_bridge_gate_note_2026-05-04",
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
+    "yt_pr230_nonchunk_route_family_import_audit_note_2026-05-05",
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
     "yt_pr230_queue_exhaustion_certificate_note_2026-05-01",
     "yt_pr230_review_backpressure_pass_note_2026-05-01",
@@ -44423,6 +44603,7 @@
     "yt_source_higgs_legendre_ssb_bridge_note_2026-05-01",
     "yt_source_higgs_pole_residue_extractor_note_2026-05-03",
     "yt_source_higgs_production_readiness_gate_note_2026-05-04",
+    "yt_source_higgs_unratified_gram_shortcut_no_go_note_2026-05-05",
     "yt_source_higgs_unratified_operator_smoke_checkpoint_note_2026-05-03",
     "yt_source_overlap_spectral_sum_rule_no_go_note_2026-05-02",
     "yt_source_pole_canonical_higgs_mixing_obstruction_note_2026-05-02",
@@ -44443,7 +44624,7 @@
     "yt_top_mass_ward_decomp_claim_status_certificate_2026-04-30",
     "yt_top_mass_ward_decomp_handoff_2026-04-30",
     "yt_top_mass_ward_decomp_no_go_note_2026-04-30",
-    "yt_top_wz_factorization_independence_gate_note_2026-05-05",
+    "yt_top_wz_deterministic_response_covariance_gate_note_2026-05-05",
     "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
     "yt_unit_projector_pole_threshold_obstruction_note_2026-05-01",
     "yt_ward_identity_derivation_theorem",
@@ -44470,18 +44651,18 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4631,
-    "leaf_count": 985,
-    "node_count": 1937,
-    "root_count": 1451,
-    "runners_with_path": 1465,
+    "edge_count": 4632,
+    "leaf_count": 1000,
+    "node_count": 1953,
+    "root_count": 1466,
+    "runners_with_path": 1475,
     "status_counts": {
-      "bounded": 541,
-      "open": 98,
+      "bounded": 544,
+      "open": 99,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 419,
-      "unknown": 505
+      "support": 424,
+      "unknown": 512
     }
   }
 }

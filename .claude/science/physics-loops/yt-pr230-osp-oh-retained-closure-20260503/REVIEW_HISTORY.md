@@ -1047,3 +1047,29 @@ Findings checked:
 - The note and runner do not claim retained/proposed-retained closure and do
   not use observed selectors, `H_unit`/Ward authority, `alpha_LM`/plaquette/u0,
   `y_t_bare`, or bare-coupling shortcuts as premises.
+
+# 2026-05-05 Source-Higgs Unratified-Gram Shortcut Review
+
+Disposition: pass as exact negative boundary / open campaign, not as closure.
+
+Findings checked:
+
+- No subagents were used for this review because the user did not explicitly
+  authorize subagents; the review was performed locally.
+- The runner attacks the source-Higgs shortcut directly: a perfect
+  `C_ss/C_sH/C_HH` Gram relation against an unratified supplied operator is
+  rejected unless same-surface canonical-Higgs identity, identity certificate,
+  normalization certificate, production phase, and retained-route gates pass.
+- The counterfamily keeps the unratified Gram rows fixed while varying
+  canonical-Higgs overlap, so perfect Gram purity is not PR230 `O_H`
+  authority by itself.
+- The aggregate assembly, retained-route, campaign, and non-chunk worklist
+  gates consume the new no-go while keeping `proposal_allowed=false`.
+- Audit compatibility was checked with `bash docs/audit/scripts/run_pipeline.sh`,
+  `python3 docs/audit/scripts/audit_lint.py --strict`, and `git diff --check`.
+  Strict lint reported no errors and only the repo's pre-existing criticality
+  and graph-cycle warnings; regenerated audit ledger/queue files remain
+  unaudited review surfaces.
+- The note and runner do not claim retained/proposed-retained closure and do
+  not use observed selectors, `H_unit`/Ward/`yt_ward` authority,
+  `alpha_LM`/plaquette/u0, `y_t_bare`, or bare-coupling shortcuts as premises.

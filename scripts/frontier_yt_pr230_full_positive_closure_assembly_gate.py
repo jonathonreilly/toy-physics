@@ -47,6 +47,7 @@ PARENTS = {
     "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
     "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
+    "source_higgs_unratified_gram_no_go": "outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json",
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_same_source_action_semantic_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
     "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
@@ -178,11 +179,13 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "cross-lane O_h/O_H/Higgs artifacts audited as non-authority for PR230",
                 "production C_sH/C_HH pole residues absent",
                 "Gram-purity postprocessor awaiting production certificate",
+                "perfect Gram purity against an unratified supplied operator is not O_H authority",
             ],
             "parents": [
                 PARENTS["source_higgs_readiness"],
                 PARENTS["source_higgs_gram"],
                 PARENTS["source_higgs_postprocess"],
+                PARENTS["source_higgs_unratified_gram_no_go"],
                 PARENTS["canonical_higgs_semantic_firewall"],
                 PARENTS["cross_lane_oh_authority_audit"],
             ],
@@ -365,6 +368,11 @@ def main() -> int:
         and certs["source_pole_mixing"].get("proposal_allowed") is False
         and certs["source_pole_purity"].get("proposal_allowed") is False
         and certs["canonical_higgs_operator"].get("proposal_allowed") is False
+        and certs["source_higgs_unratified_gram_no_go"].get("proposal_allowed") is False
+        and certs["source_higgs_unratified_gram_no_go"].get(
+            "unratified_gram_shortcut_no_go_passed"
+        )
+        is True
         and certs["wz_same_source_action_semantic_firewall"].get("proposal_allowed") is False
     )
     matching_running_blocks = (
@@ -422,6 +430,16 @@ def main() -> int:
         and certs["cross_lane_oh_authority_audit"].get("proposal_allowed") is False
         and certs["cross_lane_oh_authority_audit"].get("repo_cross_lane_authority_found") is False,
         statuses["cross_lane_oh_authority_audit"],
+    )
+    report(
+        "source-higgs-unratified-gram-shortcut-closed",
+        "unratified source-Higgs Gram shortcut" in statuses["source_higgs_unratified_gram_no_go"]
+        and certs["source_higgs_unratified_gram_no_go"].get("proposal_allowed") is False
+        and certs["source_higgs_unratified_gram_no_go"].get(
+            "unratified_gram_shortcut_no_go_passed"
+        )
+        is True,
+        statuses["source_higgs_unratified_gram_no_go"],
     )
     report(
         "model-class-semantic-firewall-support-only",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T01:22:36.846132+00:00",
+  "generated_at": "2026-05-05T04:08:56.030425+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14725,6 +14725,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_fh_gauge_response_mixed_scalar_obstruction.py"
     },
+    "yt_fh_lsz_affine_contact_complete_monotonicity_no_go_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_affine_contact_complete_monotonicity_no_go.py"
+    },
     "yt_fh_lsz_autocorrelation_ess_gate_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -14941,6 +14953,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_fh_lsz_common_window_response_provenance.py"
     },
+    "yt_fh_lsz_contact_subtraction_identifiability_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_contact_subtraction_identifiability.py"
+    },
     "yt_fh_lsz_eight_mode_noise_variance_gate_note_2026-05-01": {
       "assert_count": 1,
       "counts": {
@@ -15109,6 +15133,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_fh_lsz_noise_subsample_diagnostics_certificate.py"
     },
+    "yt_fh_lsz_pade_stieltjes_bounds_gate_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_pade_stieltjes_bounds_gate.py"
+    },
     "yt_fh_lsz_paired_variance_calibration_gate_note_2026-05-04": {
       "assert_count": 1,
       "counts": {
@@ -15204,6 +15240,42 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_fh_lsz_polefit8x8_chunk_manifest.py"
+    },
+    "yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic.py"
+    },
+    "yt_fh_lsz_polynomial_contact_finite_shell_no_go_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fh_lsz_polynomial_contact_finite_shell_no_go.py"
+    },
+    "yt_fh_lsz_polynomial_contact_repair_no_go_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_polynomial_contact_repair_no_go.py"
     },
     "yt_fh_lsz_production_checkpoint_granularity_gate_note_2026-05-01": {
       "assert_count": 1,
@@ -15865,6 +15937,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_neutral_scalar_positivity_improving_direct_closure_attempt.py"
     },
+    "yt_neutral_scalar_primitive_cone_certificate_gate_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_neutral_scalar_primitive_cone_certificate_gate.py"
+    },
     "yt_neutral_scalar_rank_one_purity_gate_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -16416,6 +16500,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_non_chunk_closure_worklist.py"
+    },
+    "yt_pr230_nonchunk_route_family_import_audit_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 4,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py"
     },
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01": {
       "assert_count": 1,
@@ -17209,6 +17305,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_source_higgs_production_readiness_gate.py"
     },
+    "yt_source_higgs_unratified_gram_shortcut_no_go_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_source_higgs_unratified_gram_shortcut_no_go.py"
+    },
     "yt_source_overlap_spectral_sum_rule_no_go_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -17436,6 +17544,18 @@
       "decoration_candidate": false,
       "dominant_class": "A",
       "runner": "scripts/frontier_yt_top_wz_covariance_marginal_derivation_no_go.py"
+    },
+    "yt_top_wz_deterministic_response_covariance_gate_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_top_wz_deterministic_response_covariance_gate.py"
     },
     "yt_top_wz_factorization_independence_gate_note_2026-05-05": {
       "assert_count": 1,
@@ -31573,6 +31693,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_fh_lsz_affine_contact_complete_monotonicity_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_affine_contact_complete_monotonicity_no_go_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py": {
       "assert_count": 1,
       "claims": [
@@ -31744,6 +31879,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_contact_subtraction_identifiability.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_contact_subtraction_identifiability_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_yt_fh_lsz_eight_mode_noise_variance_gate.py": {
@@ -31941,6 +32091,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_yt_fh_lsz_pade_stieltjes_bounds_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_pade_stieltjes_bounds_gate_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_fh_lsz_paired_variance_calibration_gate.py": {
       "assert_count": 1,
       "claims": [
@@ -32050,6 +32215,51 @@
       "assert_count": 1,
       "claims": [
         "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_polynomial_contact_finite_shell_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_polynomial_contact_finite_shell_no_go_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_fh_lsz_polynomial_contact_repair_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_polynomial_contact_repair_no_go_note_2026-05-05"
       ],
       "counts": {
         "A": 0,
@@ -32871,6 +33081,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_yt_neutral_scalar_primitive_cone_certificate_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_neutral_scalar_primitive_cone_certificate_gate_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_neutral_scalar_rank_one_purity_gate.py": {
       "assert_count": 1,
       "claims": [
@@ -33556,6 +33781,21 @@
         "B": 1,
         "C": 1,
         "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_nonchunk_route_family_import_audit_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 4,
+        "D": 6
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -34552,6 +34792,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_yt_source_higgs_unratified_gram_shortcut_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_source_higgs_unratified_gram_shortcut_no_go_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_source_overlap_sum_rule_no_go.py": {
       "assert_count": 1,
       "claims": [
@@ -34765,6 +35020,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "A",
+      "exists": true
+    },
+    "scripts/frontier_yt_top_wz_deterministic_response_covariance_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_top_wz_deterministic_response_covariance_gate_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_yt_top_wz_factorization_independence_gate.py": {
@@ -38666,13 +38936,13 @@
     "decoration_candidates": 94,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 200,
-      "C": 488,
-      "D": 285,
+      "B": 203,
+      "C": 490,
+      "D": 290,
       "none": 404
     },
-    "runners_classified": 1386,
-    "runners_with_C": 716,
-    "runners_with_D": 494
+    "runners_classified": 1396,
+    "runners_with_C": 726,
+    "runners_with_D": 504
   }
 }

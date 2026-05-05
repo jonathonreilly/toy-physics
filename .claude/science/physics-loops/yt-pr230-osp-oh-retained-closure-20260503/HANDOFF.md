@@ -2588,3 +2588,49 @@ evidence.  A positive scalar route now requires a same-surface
 contact-subtraction certificate, microscopic scalar-denominator theorem, or
 strict moment-threshold-FV certificate; otherwise move to same-surface `O_H`,
 W/Z, Schur, or neutral-rank routes.
+
+## 2026-05-05 Source-Higgs Unratified-Gram Shortcut No-Go
+
+Cycle 2 moved back to the highest-ranked non-chunk source-Higgs route and
+closed the remaining shortcut where perfect `C_ss/C_sH/C_HH` Gram purity
+against an unratified supplied operator might be treated as canonical `O_H`
+authority.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_source_higgs_unratified_gram_shortcut_no_go.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=43 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=192 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=219 FAIL=0
+
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+# SUMMARY: PASS=25 FAIL=0
+
+bash docs/audit/scripts/run_pipeline.sh
+python3 docs/audit/scripts/audit_lint.py --strict
+git diff --check
+# audit_lint: OK, with 5 pre-existing warnings including graph-cycle warnings
+```
+
+Result: exact negative boundary, not closure.  The runner constructs a perfect
+Gram witness with `Res(C_ss)=4`, `Res(C_sH)=6`, and `Res(C_HH)=9`, then shows
+the source-Higgs postprocessor contract still rejects it because the
+canonical-Higgs identity, identity certificate, normalization certificate,
+production phase, and retained-route gate are absent.  A counterfamily keeps
+the unratified Gram rows fixed while changing canonical-Higgs overlap, so the
+rows can certify only the supplied operator, not PR230 `O_H`.
+
+Next exact action: source-Higgs closure requires a real same-surface
+canonical-Higgs operator identity and normalization certificate before
+production `C_ss/C_sH/C_HH` pole residues can be used.  If that surface is not
+available, move to W/Z matched rows, Schur `A/B/C` rows, neutral primitive-cone
+authority, or scalar-LSZ moment/threshold/FV authority.  The chunk worker
+remains separate.

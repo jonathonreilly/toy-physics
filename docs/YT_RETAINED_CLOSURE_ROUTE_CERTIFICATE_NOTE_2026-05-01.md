@@ -18,8 +18,25 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=191 FAIL=0
+# SUMMARY: PASS=192 FAIL=0
 ```
+
+## 2026-05-05 Source-Higgs Unratified-Gram Shortcut Update
+
+The retained-route certificate now consumes
+`outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json`.
+This closes a source-Higgs shortcut distinct from the scalar-LSZ contact
+blocks: a perfect `C_ss/C_sH/C_HH` Gram relation against an unratified supplied
+operator does not certify canonical `O_H`.  A same-surface `O_H` identity and
+normalization certificate, production pole residues, and retained-route
+authorization remain required.
+
+Validation: source-Higgs unratified-Gram no-go `PASS=10 FAIL=0`;
+retained-route `PASS=192 FAIL=0`; campaign status `PASS=219 FAIL=0`; full
+positive closure assembly gate `PASS=43 FAIL=0`; non-chunk worklist
+`PASS=25 FAIL=0`.
+
+No retained or `proposed_retained` closure is authorized.
 
 ## 2026-05-05 FH/LSZ Polefit8x8 Chunks031-036 Completion Update
 

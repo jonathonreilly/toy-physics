@@ -20,8 +20,16 @@ side, and check
 Res(C_sH)^2 = Res(C_ss) Res(C_HH).
 ```
 
-Status: best next positive route.  Requires a real same-surface `O_H` operator
-or a production row that can be audited as the canonical radial observable.
+Status: best next positive route, with the unratified-Gram shortcut now closed
+negatively in
+`docs/YT_SOURCE_HIGGS_UNRATIFIED_GRAM_SHORTCUT_NO_GO_NOTE_2026-05-05.md`.
+Requires a real same-surface `O_H` operator identity and normalization
+certificate before production rows can be audited as the canonical radial
+observable.
+
+Reason: perfect `C_ss/C_sH/C_HH` Gram purity against an unratified supplied
+operator certifies only that supplied operator; it does not identify PR230
+canonical `O_H`.
 
 ## R3: Same-Source W/Z Response
 

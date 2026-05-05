@@ -17,6 +17,10 @@ This is an integration/worklist gate, not a physics closure theorem.
 
 - **Canonical `O_H` / source-Higgs:** derive a same-surface canonical-Higgs
   operator certificate, then produce `C_ss/C_sH/C_HH` source-Higgs rows.
+  Perfect Gram purity against an unratified supplied operator is now closed
+  negatively by
+  `outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json`;
+  the operator identity and normalization certificates remain load-bearing.
 - **Same-source W/Z response:** produce matched top/WZ response rows,
   W/Z mass-response rows, non-observed `g_2`, and strict `delta_perp`; or
   derive a real same-surface product-measure, conditional-independence, or
@@ -60,10 +64,20 @@ block, not as a closure route.  The worklist consumes that audit plus
 `outputs/yt_fh_lsz_polynomial_contact_repair_no_go_2026-05-05.json` and
 remains open.
 
+## 2026-05-05 Source-Higgs Unratified-Gram Update
+
+The worklist now consumes
+`outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json`.
+This closes the source-Higgs shortcut where a perfect `C_ss/C_sH/C_HH` Gram
+relation against an unratified operator is treated as canonical `O_H`
+authority.  The source-Higgs route still requires a same-surface
+canonical-Higgs identity and normalization certificate plus production pole
+residue rows.
+
 ## Verification
 
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
 python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
-# SUMMARY: PASS=24 FAIL=0
+# SUMMARY: PASS=25 FAIL=0
 ```

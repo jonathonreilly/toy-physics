@@ -428,6 +428,9 @@ def main() -> int:
         "source_higgs_unratified_operator_smoke": load(
             "outputs/yt_source_higgs_unratified_operator_smoke_checkpoint_2026-05-03.json"
         ),
+        "source_higgs_unratified_gram_shortcut_no_go": load(
+            "outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json"
+        ),
         "neutral_scalar_rank_one_purity_gate": load(
             "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json"
         ),
@@ -1844,6 +1847,20 @@ def main() -> int:
         )
         is False,
         statuses["source_higgs_unratified_operator_smoke"],
+    )
+    report(
+        "source-higgs-unratified-gram-shortcut-no-go",
+        "unratified source-Higgs Gram shortcut"
+        in str(statuses["source_higgs_unratified_gram_shortcut_no_go"])
+        and certificates["source_higgs_unratified_gram_shortcut_no_go"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["source_higgs_unratified_gram_shortcut_no_go"].get(
+            "unratified_gram_shortcut_no_go_passed"
+        )
+        is True,
+        statuses["source_higgs_unratified_gram_shortcut_no_go"],
     )
     report(
         "neutral-scalar-rank-one-purity-gate-not-passed",

@@ -34,6 +34,7 @@ PARENTS = {
     "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
     "source_higgs_contract": "outputs/yt_source_higgs_gram_purity_contract_witness_2026-05-03.json",
+    "source_higgs_unratified_gram_no_go": "outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json",
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_same_source_action_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
     "same_source_w_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
@@ -151,6 +152,7 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 status(certs["fms_oh_attempt"]),
                 status(certs["cross_lane_oh"]),
                 status(certs["source_higgs_readiness"]),
+                status(certs["source_higgs_unratified_gram_no_go"]),
             ],
             "next_action": (
                 "derive a same-surface O_H certificate or introduce a reviewed EW "
@@ -284,6 +286,7 @@ def main() -> int:
     report("assembly-still-rejects-chunk-only", "scalar_lsz_model_class_fv_ir" in chunk_only_missing, f"missing={chunk_only_missing}")
     report("canonical-oh-route-gated", "canonical-Higgs operator certificate absent" in status(certs["canonical_oh_gate"]), status(certs["canonical_oh_gate"]))
     report("source-higgs-route-gated", "source-Higgs production launch blocked" in status(certs["source_higgs_readiness"]), status(certs["source_higgs_readiness"]))
+    report("source-higgs-unratified-gram-shortcut-closed", "unratified source-Higgs Gram shortcut" in status(certs["source_higgs_unratified_gram_no_go"]), status(certs["source_higgs_unratified_gram_no_go"]))
     report("wz-route-gated", "same-source EW action not defined" in status(certs["wz_same_source_action"]), status(certs["wz_same_source_action"]))
     report("wz-deterministic-response-shortcut-gated", "deterministic W response covariance shortcut not derived" in status(certs["top_wz_deterministic_response_covariance_gate"]), status(certs["top_wz_deterministic_response_covariance_gate"]))
     report("wz-g2-shortcuts-closed", "does not certify PR230 g2" in status(certs["wz_g2_casimir_no_go"]) and "response-only" in status(certs["wz_g2_self_norm_no_go"]), "Casimir and response-only g2 shortcuts rejected")

@@ -298,6 +298,7 @@
     "source_higgs_harness_absence_guard": "bounded-support / source-Higgs harness default-off guard",
     "source_higgs_pole_residue_extractor": "open / source-Higgs pole-residue extractor awaiting valid production rows",
     "source_higgs_production_readiness_gate": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "source_higgs_unratified_gram_shortcut_no_go": "exact negative boundary / unratified source-Higgs Gram shortcut is not O_H authority",
     "source_higgs_unratified_operator_smoke": "bounded-support / source-Higgs unratified-operator smoke checkpoint",
     "source_overlap_sum_rule_no_go": "exact negative boundary / source-overlap spectral sum-rule no-go",
     "source_pole_canonical_higgs_mixing": "exact negative boundary / source-pole canonical-Higgs mixing obstruction",
@@ -331,7 +332,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 218,
+  "pass_count": 219,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

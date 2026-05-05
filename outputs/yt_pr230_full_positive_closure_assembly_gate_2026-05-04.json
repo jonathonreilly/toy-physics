@@ -115,6 +115,7 @@
     "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
     "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+    "source_higgs_unratified_gram_no_go": "outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json",
     "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
     "source_pole_purity": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json",
     "top_wz_covariance_marginal_derivation_no_go": "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
@@ -173,6 +174,7 @@
     "source_higgs_gram": "open / source-Higgs Gram purity gate not passed",
     "source_higgs_postprocess": "open / O_sp-Higgs Gram-purity postprocess awaiting production certificate",
     "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "source_higgs_unratified_gram_no_go": "exact negative boundary / unratified source-Higgs Gram shortcut is not O_H authority",
     "source_pole_mixing": "exact negative boundary / source-pole canonical-Higgs mixing obstruction",
     "source_pole_purity": "open / source-pole purity cross-correlator gate not passed",
     "top_wz_covariance_marginal_derivation_no_go": "exact negative boundary / matched top-W covariance not derivable from marginal response support",
@@ -188,7 +190,7 @@
     "wz_same_source_action": "exact negative boundary / same-source EW action not defined on PR230 surface",
     "wz_same_source_action_semantic_firewall": "bounded-support / same-source EW action semantic firewall passed"
   },
-  "pass_count": 42,
+  "pass_count": 43,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",
   "route_statuses": {
@@ -269,12 +271,14 @@
         "same-surface O_H certificate absent",
         "cross-lane O_h/O_H/Higgs artifacts audited as non-authority for PR230",
         "production C_sH/C_HH pole residues absent",
-        "Gram-purity postprocessor awaiting production certificate"
+        "Gram-purity postprocessor awaiting production certificate",
+        "perfect Gram purity against an unratified supplied operator is not O_H authority"
       ],
       "parents": [
         "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
         "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
         "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
+        "outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json",
         "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
         "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json"
       ],

@@ -85,13 +85,22 @@ degree-seven finite interpolation can manufacture distinct Stieltjes-looking
 residuals without identifying a physical contact.  The assembly gate remains
 open with `PASS=42 FAIL=0`.
 
+2026-05-05 source-Higgs unratified-Gram update: the gate now also consumes
+`outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json`.
+This closes the shortcut where perfect pole-level Gram purity against an
+unratified supplied operator is treated as a canonical-Higgs certificate.  The
+source-Higgs bridge still needs a same-surface `O_H` identity and normalization
+certificate plus production `C_sH/C_HH` pole residues.  The assembly gate
+remains open with `PASS=43 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 
 The current positive non-chunk bridge candidates remain:
 
 - source-Higgs Gram purity, blocked by the missing same-surface `O_H`
-  certificate and missing production `C_sH/C_HH` pole residues;
+  certificate, missing production `C_sH/C_HH` pole residues, and the
+  unratified-Gram shortcut no-go;
 - same-source W/Z response, blocked by the missing same-source EW action,
   missing W/Z correlator mass-fit rows, missing lightweight W-response
   production row certificate, missing strict `delta_perp` tomography/null/purity

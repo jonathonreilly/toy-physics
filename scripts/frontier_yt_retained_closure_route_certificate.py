@@ -206,6 +206,7 @@ def main() -> int:
         "hunit_canonical_higgs_operator_candidate_gate": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
         "source_higgs_harness_absence_guard": "outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json",
         "source_higgs_unratified_operator_smoke": "outputs/yt_source_higgs_unratified_operator_smoke_checkpoint_2026-05-03.json",
+        "source_higgs_unratified_gram_shortcut_no_go": "outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json",
         "neutral_scalar_rank_one_purity_gate": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
         "neutral_scalar_commutant_rank_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
         "neutral_scalar_dynamical_rank_one_closure": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
@@ -1630,6 +1631,18 @@ def main() -> int:
         ).get("used_as_physical_yukawa_readout")
         is False
     )
+    source_higgs_unratified_gram_shortcut_no_go_blocks = (
+        "unratified source-Higgs Gram shortcut"
+        in certificates["source_higgs_unratified_gram_shortcut_no_go"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["source_higgs_unratified_gram_shortcut_no_go"].get("proposal_allowed")
+        is False
+        and certificates["source_higgs_unratified_gram_shortcut_no_go"].get(
+            "unratified_gram_shortcut_no_go_passed"
+        )
+        is True
+    )
     neutral_scalar_rank_one_purity_gate_blocks = (
         "neutral scalar rank-one purity gate not passed"
         in certificates["neutral_scalar_rank_one_purity_gate"].get("actual_current_surface_status", "")
@@ -2704,6 +2717,11 @@ def main() -> int:
         "source-higgs-unratified-operator-smoke-not-evidence",
         source_higgs_unratified_operator_smoke_not_evidence,
         certificates["source_higgs_unratified_operator_smoke"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "source-higgs-unratified-gram-shortcut-no-go-blocks",
+        source_higgs_unratified_gram_shortcut_no_go_blocks,
+        certificates["source_higgs_unratified_gram_shortcut_no_go"].get("actual_current_surface_status", ""),
     )
     report(
         "neutral-scalar-rank-one-purity-gate-blocks",

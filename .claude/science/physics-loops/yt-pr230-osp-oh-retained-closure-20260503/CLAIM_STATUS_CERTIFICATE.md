@@ -1,7 +1,7 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact negative boundary / O_sp-to-O_H identity not derived on current surface
+actual_current_surface_status: exact negative boundary / unratified source-Higgs Gram shortcut is not O_H authority
 conditional_surface_status: conditional-support if C_sH/C_HH Gram purity, W/Z response, or rank-one neutral scalar theorem closes the overlap
 hypothetical_axiom_status: null
 admitted_observation_status: null
@@ -20,6 +20,11 @@ Open imports:
   theorem;
 - source-Higgs Gram-purity contract witness is exact support only; real
   production rows and `O_H` certificate are still absent;
+- source-Higgs unratified-Gram shortcut is closed negatively: a perfect
+  `C_ss/C_sH/C_HH` Gram relation against an unratified supplied operator does
+  not become PR230 `O_H` authority without same-surface canonical-Higgs
+  identity, identity certificate, normalization certificate, production rows,
+  and retained-route gate;
 - same-source W/Z route is contract/gate support only; no W/Z mass-response
   rows, same-source EW production action certificate, sector-overlap identity,
   or canonical-Higgs identity pass;

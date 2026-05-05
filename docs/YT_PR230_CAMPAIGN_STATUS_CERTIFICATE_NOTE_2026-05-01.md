@@ -26,8 +26,28 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=218 FAIL=0
+# SUMMARY: PASS=219 FAIL=0
 ```
+
+## 2026-05-05 Source-Higgs Unratified-Gram Shortcut Update
+
+The campaign status certificate now consumes
+`outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json`.
+This closes the source-Higgs shortcut where perfect Gram purity against an
+unratified supplied operator is treated as canonical `O_H` authority.  The
+counterfamily keeps the unratified rows fixed while the canonical-Higgs overlap
+varies, so the physical bridge remains open until a same-surface `O_H`
+identity and normalization certificate plus production pole residues exist.
+
+Validation: source-Higgs unratified-Gram no-go `PASS=10 FAIL=0`;
+retained-route `PASS=192 FAIL=0`; campaign status `PASS=219 FAIL=0`; full
+positive closure assembly gate `PASS=43 FAIL=0`; non-chunk worklist
+`PASS=25 FAIL=0`.
+
+The campaign remains open.  The next positive source-Higgs route requires a
+real same-surface `O_H` certificate and `C_ss/C_sH/C_HH` pole-residue rows; the
+W/Z, Schur, neutral-rank, and scalar-LSZ routes remain as separate open
+non-chunk work units.
 
 ## 2026-05-05 FH/LSZ Polefit8x8 Chunks031-036 Completion Update
 
