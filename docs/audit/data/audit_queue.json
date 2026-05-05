@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 612,
+    "critical": 611,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -3046,27 +3046,6 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audit_in_progress",
       "blocker": "awaiting_cross_confirmation",
-      "claim_id": "quark_route2_exact_readout_map_note_2026-04-19",
-      "claim_scope": "Audited the restricted Route-2 readout-map claim that the carrier columns reduce admissible bright readouts to channelwise form, the endpoint ratio target is algebraically equivalent to the triple (-1, -2, 21/4), and the provided carrier/algebra leaves beta_E/alpha_E unfixed.",
-      "claim_type": "no_go",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 9,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 12.68,
-      "note_path": "docs/QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_quark_route2_exact_readout_map.py",
-      "transitive_descendants": 289
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
       "claim_id": "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25",
       "claim_scope": "Audited the restricted claim that bare finite Hilbert/local-support/unitary-flow data give a native U(1) phase unit but do not determine an absolute dimensional action quantum or force primitive CAR edge statistics on the rank-four active block.",
       "claim_type": "no_go",
@@ -3212,6 +3191,29 @@
       "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py",
+      "transitive_descendants": 288
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "quark_route2_exact_time_coupling_note_2026-04-19",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "default_positive_theorem",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "quark_route2_exact_readout_map_note_2026-04-19"
+      ],
+      "direct_in_degree": 8,
+      "effective_status": "unaudited",
+      "load_bearing_score": 12.175,
+      "note_path": "docs/QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_quark_route2_exact_time_coupling.py",
       "transitive_descendants": 288
     },
     {
@@ -8779,29 +8781,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_koide_gamma_axis_covariant_full_cube_orbit_law.py",
-      "transitive_descendants": 288
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "quark_route2_exact_time_coupling_note_2026-04-19",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "quark_route2_exact_readout_map_note_2026-04-19"
-      ],
-      "direct_in_degree": 8,
-      "effective_status": "unaudited",
-      "load_bearing_score": 12.175,
-      "note_path": "docs/QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_quark_route2_exact_time_coupling.py",
       "transitive_descendants": 288
     },
     {
@@ -27732,5 +27711,5 @@
     }
   ],
   "ready_count": 83,
-  "total_pending": 950
+  "total_pending": 949
 }

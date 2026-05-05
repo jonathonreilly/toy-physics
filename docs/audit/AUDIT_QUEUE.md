@@ -1,10 +1,10 @@
 # Audit Queue
 
-**Total pending:** 950
+**Total pending:** 949
 **Ready (all deps already at retained-grade or metadata tiers):** 83
 
 By criticality:
-- `critical`: 612
+- `critical`: 611
 - `high`: 23
 - `medium`: 120
 - `leaf`: 195
@@ -18,14 +18,14 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 1 | `lensing_k_sweep_note` | bounded_theorem | unaudited | critical | 308 | 10.77 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/lensing_k_sweep.py` |
 | 2 | `g_bare_rigidity_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 292 | 11.20 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_rigidity_theorem.py` |
 | 3 | `wave_retardation_continuum_limit_note` | bounded_theorem | unaudited | critical | 290 | 9.19 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/wave_retardation_continuum_limit.py` |
-| 4 | `quark_route2_exact_readout_map_note_2026-04-19` | no_go | audit_in_progress | critical | 289 | 12.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_quark_route2_exact_readout_map.py` |
-| 5 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | no_go | audit_in_progress | critical | 289 | 11.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_planck_target3_phase_unit_edge_statistics.py` |
-| 6 | `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` | bounded_theorem | unaudited | critical | 289 | 11.18 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
-| 7 | `pmns_uniform_scalar_deformation_boundary_note` | no_go | audit_in_progress | critical | 289 | 11.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_pmns_uniform_scalar_deformation_boundary.py` |
-| 8 | `pmns_oriented_cycle_reduced_channel_nonselection_note` | positive_theorem | unaudited | critical | 289 | 10.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py` |
-| 9 | `tensor_support_center_excess_law_note` | bounded_theorem | audit_in_progress | critical | 289 | 9.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_tensor_support_center_excess_law.py` |
-| 10 | `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | positive_theorem | audit_in_progress | critical | 288 | 14.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ew_higgs_gauge_mass_diagonalization.py` |
-| 11 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | audit_in_progress | critical | 288 | 14.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py` |
+| 4 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | no_go | audit_in_progress | critical | 289 | 11.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_planck_target3_phase_unit_edge_statistics.py` |
+| 5 | `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` | bounded_theorem | unaudited | critical | 289 | 11.18 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 6 | `pmns_uniform_scalar_deformation_boundary_note` | no_go | audit_in_progress | critical | 289 | 11.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_pmns_uniform_scalar_deformation_boundary.py` |
+| 7 | `pmns_oriented_cycle_reduced_channel_nonselection_note` | positive_theorem | unaudited | critical | 289 | 10.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py` |
+| 8 | `tensor_support_center_excess_law_note` | bounded_theorem | audit_in_progress | critical | 289 | 9.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_tensor_support_center_excess_law.py` |
+| 9 | `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | positive_theorem | audit_in_progress | critical | 288 | 14.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ew_higgs_gauge_mass_diagonalization.py` |
+| 10 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | audit_in_progress | critical | 288 | 14.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py` |
+| 11 | `quark_route2_exact_time_coupling_note_2026-04-19` | positive_theorem | unaudited | critical | 288 | 12.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_quark_route2_exact_time_coupling.py` |
 | 12 | `koide_dweh_cyclic_compression_note_2026-04-18` | positive_theorem | audit_in_progress | critical | 288 | 10.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_dweh_cyclic_compression.py` |
 | 13 | `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16` | bounded_theorem | unaudited | critical | 288 | 9.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/persistent_object_top4_multistage_transfer_sweep.py` |
 | 14 | `dm_neutrino_cascade_geometry_note_2026-04-14` | bounded_theorem | audit_in_progress | critical | 287 | 10.67 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_cascade_geometry.py` |
