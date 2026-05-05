@@ -1,11 +1,14 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_color_projection_mc.py
-runner_sha256: 19518f3981d13df383ab2517aab607ca3e807d4ac4ef84d15b26189a16275ade
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 2328421193d43aa20ac0d48ab33b42394b640713a7fcd207fc1a220a129c6ea0
+timeout_sec: 1800
+exit_code: 1
+elapsed_sec: 0.03
+status: nonzero_exit
 ----- stdout -----
+  File "/private/tmp/timeout-annotations-worktree/scripts/frontier_color_projection_mc.py", line 65
+    def __init__(self, L):
+IndentationError: unexpected indent
 
 ----- stderr -----
 

@@ -1,11 +1,74 @@
 ===== runner cache v1 =====
 runner: scripts/poisson_self_gravity_loop.py
-runner_sha256: 0cf1c79b56047f8d0ff5261e3f626a5934efe48c83d6bf2c7283f79119617e1f
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: 78f50f63f503135148f4ff5eddcc54583ee7d54cd9e4c8af1f3db9cb39a6650e
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 1218.74
+status: ok
 ----- stdout -----
+==============================================================================================
+POISSON SELF-GRAVITY LOOP
+  exact h=0.25 lattice, amplitude-sourced field between propagation steps
+  comparison: one-shot Poisson field vs self-consistent Poisson loop
+==============================================================================================
+h=0.25, W=3, L=6, source_patch=5 nodes
+source patch nodes=[5322, 5347, 5297, 5323, 5321]
+source patch z-centroid = +2.500
+kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.50
+source strengths=(0.001, 0.002, 0.004, 0.008)
+backreaction couplings=(0.0, 0.01, 0.05, 0.1, 0.2, 0.5)
+field gain=9.000157e+00 (calibrated to max source/coupling row)
+Born is checked on the frozen converged field snapshot, not on the
+outer fixed-point map.
+
+REDUCTION CHECK
+  zero-epsilon centroid shift: +0.000000e+00
+  zero-epsilon escape ratio:   1.000000
+  zero-epsilon converged:       True
+  zero-epsilon iters/residual:  2 / 0.000e+00
+
+   eps        s         inst         loop  loop/inst      esc       Born  it ok
+------------------------------------------------------------------------------------------
+  0.00   0.0010 +0.000000e+00 +0.000000e+00        nan    1.000  1.209e-15   2 Y
+  0.00   0.0020 +0.000000e+00 +0.000000e+00        nan    1.000  1.209e-15   2 Y
+  0.00   0.0040 +0.000000e+00 +0.000000e+00        nan    1.000  1.209e-15   2 Y
+  0.00   0.0080 +0.000000e+00 +0.000000e+00        nan    1.000  1.209e-15   2 Y
+  eps=0.00 summary: inst α=n/a loop α=n/a toward=0/4 mean|loop/inst|=0.000 mean escape=1.000 Born mean/max=1.21e-15/1.21e-15 resid=0.000e+00 converged=4/4
+  0.01   0.0010 +1.082579e-04 +1.093399e-04      1.010    1.000  5.253e-16   8 n
+  0.01   0.0020 +2.165242e-04 +2.186884e-04      1.010    1.001  1.365e-15   8 n
+  0.01   0.0040 +4.330824e-04 +4.374113e-04      1.010    1.002  8.569e-16   8 n
+  0.01   0.0080 +8.663006e-04 +8.749610e-04      1.010    1.003  8.729e-17   8 n
+  eps=0.01 summary: inst α=1.00 loop α=1.00 toward=4/4 mean|loop/inst|=1.010 mean escape=1.002 Born mean/max=7.09e-16/1.37e-15 resid=7.826e-06 converged=0/4
+  0.05   0.0010 +5.413742e-04 +5.467858e-04      1.010    1.002  9.440e-16   8 n
+  0.05   0.0020 +1.082961e-03 +1.093788e-03      1.010    1.004  1.919e-16   8 n
+  0.05   0.0040 +2.166771e-03 +2.188441e-03      1.010    1.009  8.509e-16   8 n
+  0.05   0.0080 +4.336946e-03 +4.380344e-03      1.010    1.017  1.033e-15   8 n
+  eps=0.05 summary: inst α=1.00 loop α=1.00 toward=4/4 mean|loop/inst|=1.010 mean escape=1.008 Born mean/max=7.55e-16/1.03e-15 resid=3.922e-05 converged=0/4
+  0.10   0.0010 +1.082961e-03 +1.093788e-03      1.010    1.004  1.919e-16   8 n
+  0.10   0.0020 +2.166771e-03 +2.188441e-03      1.010    1.009  8.509e-16   8 n
+  0.10   0.0040 +4.336946e-03 +4.380344e-03      1.010    1.017  1.033e-15   8 n
+  0.10   0.0080 +8.687561e-03 +8.774557e-03      1.010    1.035  1.979e-15   8 n
+  eps=0.10 summary: inst α=1.00 loop α=1.00 toward=4/4 mean|loop/inst|=1.010 mean escape=1.016 Born mean/max=1.01e-15/1.98e-15 resid=7.865e-05 converged=0/4
+  0.20   0.0010 +2.166771e-03 +2.188441e-03      1.010    1.009  8.509e-16   8 n
+  0.20   0.0020 +4.336946e-03 +4.380344e-03      1.010    1.017  1.033e-15   8 n
+  0.20   0.0040 +8.687561e-03 +8.774557e-03      1.010    1.035  1.979e-15   8 n
+  0.20   0.0080 +1.743035e-02 +1.760487e-02      1.010    1.072  8.491e-16   8 n
+  eps=0.20 summary: inst α=1.00 loop α=1.00 toward=4/4 mean|loop/inst|=1.010 mean escape=1.033 Born mean/max=1.18e-15/1.98e-15 resid=1.581e-04 converged=0/4
+  0.50   0.0010 +5.423314e-03 +5.477595e-03      1.010    1.022  4.285e-16   8 n
+  0.50   0.0020 +1.086803e-02 +1.097688e-02      1.010    1.044  1.023e-15   8 n
+  0.50   0.0040 +2.182289e-02 +2.204119e-02      1.010    1.091  3.369e-16   8 n
+  0.50   0.0080 +4.400734e-02 +4.444162e-02      1.010    1.190  5.872e-17   8 n
+  eps=0.50 summary: inst α=1.01 loop α=1.01 toward=4/4 mean|loop/inst|=1.010 mean escape=1.087 Born mean/max=4.62e-16/1.02e-15 resid=4.013e-04 converged=0/4
+
+SAFE READ
+  exact zero-epsilon reduction shift: +0.000e+00
+  best residual epsilon: 0.00 (resid=0.000e+00)
+  best-loop F~M exponent: n/a
+  best-loop TOWARD rows: 0/4
+  best-loop mean escape ratio: 1.000
+  best-loop Born mean/max: 1.21e-15/1.21e-15
+  the outer loop is nonlinear, but each frozen field snapshot remains
+  Born-linear to the tested precision
 
 ----- stderr -----
 

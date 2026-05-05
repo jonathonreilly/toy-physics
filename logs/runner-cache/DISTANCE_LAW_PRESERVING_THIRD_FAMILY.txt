@@ -1,11 +1,29 @@
 ===== runner cache v1 =====
 runner: scripts/DISTANCE_LAW_PRESERVING_THIRD_FAMILY.py
-runner_sha256: 64f5f39d9ad56bf1055d16b539a6f34d7d3f8350927f2b554e87c071e980d2ae
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.03
-status: timeout
+runner_sha256: 4ec9e317a69c116c085031000112936adb8b2bacc3b6dd80868034402496368d
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 214.22
+status: ok
 ----- stdout -----
+================================================================================================
+DISTANCE LAW PRESERVING THIRD FAMILY
+  direct tail test on the high-drift/high-restore third grown family
+================================================================================================
+family=(drift=0.50, restore=0.90), seeds=[0, 1, 2, 3, 4, 5], b=[5, 6, 7, 8, 10]
+guards: exact zero-source baseline, exact neutral cancellation, sign orientation, weak charge scaling
+
+        zero         plus        minus      neutral       double     exp    alpha      r2    toward
+------------------------------------------------------------------------------------------------------------
+  +0.000e+00   +1.764e-04   -1.764e-04   +0.000e+00   +3.529e-04   1.000   -1.150   0.971         5/5  
+
+SAFE READ
+  sign gate: PASS
+  tail gate: PASS
+  the high-drift/high-restore third family preserves both the signed-source package
+  and the near-Newtonian distance tail on this direct test
+
+{'family': {'drift': 0.5, 'restore': 0.9}, 'seeds': [0, 1, 2, 3, 4, 5], 'distance_bs': [5, 6, 7, 8, 10], 'summary': {'zero': 0.0, 'plus': 0.00017643293128056028, 'minus': -0.00017643762578985143, 'neutral': 0.0, 'double': 0.0003528609988530753, 'exponent': 0.9999809599947574, 'tail_alpha': -1.1501244371653223, 'tail_r2': 0.9713658329628312, 'toward': 5, 'total': 5}, 'sign_ok': True, 'tail_ok': True}
 
 ----- stderr -----
 

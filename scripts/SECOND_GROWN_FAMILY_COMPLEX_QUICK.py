@@ -7,6 +7,14 @@ It is meant to answer whether the basin survives immediately off the anchor row.
 
 from __future__ import annotations
 
+
+# Heavy compute / sweep runner — `AUDIT_TIMEOUT_SEC = 1800`
+# means the audit-lane precompute and live audit runner allow up to
+# 30 min of wall time before recording a timeout. The 120 s default
+# ceiling is too tight under concurrency contention; see
+# `docs/audit/RUNNER_CACHE_POLICY.md`.
+AUDIT_TIMEOUT_SEC = 1800
+
 import math
 import os
 import sys

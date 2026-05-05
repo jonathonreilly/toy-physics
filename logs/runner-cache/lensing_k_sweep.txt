@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/lensing_k_sweep.py
-runner_sha256: 319153d8373726bcf42fc2ed6e2df801471c789fca93742f2c2d777d6a1d5779
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
+runner_sha256: 970c269226c254fe76d0686c415505327da417ef57e9dbfaeea23be897eb9189
+timeout_sec: 1800
+exit_code: -9
+elapsed_sec: 1800.06
 status: timeout
 ----- stdout -----
 ================================================================================
@@ -13,9 +13,21 @@ LENSING SLOPE vs k (PHASE COUPLING) SWEEP
   b ∈ [3.0, 4.0, 5.0, 6.0]
   Reference: k·H=2.5 gives slope ≈ -1.40
 ================================================================================
-  Grew seed 0: nodes=144061, 29.3s
-  Grew seed 1: nodes=144061, 32.9s
-  Grew seed 2: nodes=144061, 24.3s
+  Grew seed 0: nodes=144061, 29.5s
+  Grew seed 1: nodes=144061, 31.7s
+  Grew seed 2: nodes=144061, 28.0s
+
+────────────────────────────────────────────────────────────
+  k·H = 0.5  (k = 2.0)
+────────────────────────────────────────────────────────────
+    seed 0: slope=+0.6088  R²=0.3216  kubo(3)=+4.424
+    seed 1: slope=+0.5606  R²=0.2909  kubo(3)=+4.445
+    seed 2: slope=+0.5785  R²=0.3163  kubo(3)=+4.597
+    Mean: 0.5826 ± 0.0199
+
+────────────────────────────────────────────────────────────
+  k·H = 1.0  (k = 4.0)
+────────────────────────────────────────────────────────────
 
 ----- stderr -----
 

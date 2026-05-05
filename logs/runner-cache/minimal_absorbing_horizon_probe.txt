@@ -1,11 +1,39 @@
 ===== runner cache v1 =====
 runner: scripts/minimal_absorbing_horizon_probe.py
-runner_sha256: cad694a68c75eeb59c028fefedd670ccaf5651d20a4aa95f8b38cd86cad11dad
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: 850c9dc47eae1ff97efd91a955ecffefbdbd77cfceb2433225d662df1021194b
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 183.63
+status: ok
 ----- stdout -----
+============================================================================
+MINIMAL ABSORBING HORIZON PROBE
+  absorptive trapping extension on the retained generated-geometry family
+============================================================================
+h=0.5, W=10, NL=25, seeds=4, z=[3, 4, 5], drift=0.2
+observable: escape_fraction(alpha) = P_det(alpha) / P_det(alpha=0)
+weak-field recovery check: alpha=0 should recover the retained far-field lane
+
+WEAK-FIELD RECOVERY
+  exact grid: 3/3 TOWARD, F~M=1.00
+  sector stencil: 3/3 TOWARD, F~M=1.00
+
+ESCAPE FRACTION VS ABSORPTION
+   alpha     escape  no-return
+--------------------------------
+    0.00     1.0002    -0.0002
+    0.10     0.4353     0.5647
+    0.30     0.0903     0.9097
+    0.50     0.0202     0.9798
+    2.00     0.0000     1.0000
+   10.00     0.0000     1.0000
+
+SAFE READ
+  - The escape fraction drops below 50% at alpha ≈ 0.10.
+  - That is a real trapping threshold on this retained family.
+  - The weak-field reduction check still holds at alpha=0.
+
+Total time: 184s
 
 ----- stderr -----
 

@@ -20,6 +20,14 @@ Self-contained: no external imports beyond stdlib.
 
 from __future__ import annotations
 
+
+# Heavy compute / sweep runner — `AUDIT_TIMEOUT_SEC = 1800`
+# means the audit-lane precompute and live audit runner allow up to
+# 30 min of wall time before recording a timeout. The 120 s default
+# ceiling is too tight under concurrency contention; see
+# `docs/audit/RUNNER_CACHE_POLICY.md`.
+AUDIT_TIMEOUT_SEC = 1800
+
 import math
 
 BETA = 0.8

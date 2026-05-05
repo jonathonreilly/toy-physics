@@ -1,11 +1,87 @@
 ===== runner cache v1 =====
 runner: scripts/persistent_object_top3_multistage_probe.py
-runner_sha256: c7ca3748153330766afc0472fd9b4fccb3f4d712026d55446e0b0a07bc8dc709
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 81a03a040d3b424014bf71aebb52632318a3e89f251159eab33e5f0a4eedb5c8
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 1038.35
+status: ok
 ----- stdout -----
+======================================================================================================================================
+PERSISTENT OBJECT MULTI-STAGE PROBE
+  widened exact-lattice compact branch under the retained blended readout across chained sourced-response segments
+======================================================================================================================================
+h=0.25, top_keep=3, blend=0.25, updates/segment=3, segments=3, strengths=[0.001, 0.002, 0.004, 0.008]
+gates: stage overlap>=0.90, carry_mean>=0.90, carry_min>=0.85, drift<=0.10, alpha in [0.95, 1.05], every stage 4/4 TOWARD
+
+CASE: baseline  (W=3, L=6, source_z=2.0)
+  stage_mean_overlap  = [0.929,0.876,0.876]
+  stage_min_overlap   = [0.876,0.876,0.876]
+  stage_mean_capture  = [0.514,0.514,0.514]
+  stage_alpha         = [1.03,1.03,1.03]
+  stage_toward        = [4,4,4]
+  stage_kappa         = [+3.78524e+00,+3.78524e+00,+3.78524e+00]
+  carry_mean          = [1.000,1.000]
+  carry_min           = [1.000,1.000]
+  max_kappa_drift     = 0.000%
+  admissible          = False
+
+CASE: source1.5  (W=3, L=6, source_z=1.5)
+  stage_mean_overlap  = [0.929,0.884,0.884]
+  stage_min_overlap   = [0.884,0.884,0.884]
+  stage_mean_capture  = [0.514,0.514,0.514]
+  stage_alpha         = [1.01,1.01,1.01]
+  stage_toward        = [4,4,4]
+  stage_kappa         = [+3.11769e+00,+3.11769e+00,+3.11769e+00]
+  carry_mean          = [1.000,1.000]
+  carry_min           = [1.000,1.000]
+  max_kappa_drift     = 0.000%
+  admissible          = False
+
+CASE: source2.75  (W=3, L=6, source_z=2.75)
+  stage_mean_overlap  = [0.931,0.835,0.835]
+  stage_min_overlap   = [0.834,0.834,0.834]
+  stage_mean_capture  = [0.513,0.513,0.513]
+  stage_alpha         = [1.04,1.04,1.04]
+  stage_toward        = [4,4,4]
+  stage_kappa         = [+3.11557e+00,+3.11557e+00,+3.11557e+00]
+  carry_mean          = [1.000,1.000]
+  carry_min           = [1.000,1.000]
+  max_kappa_drift     = 0.000%
+  admissible          = False
+
+CASE: width5  (W=5, L=6, source_z=2.0)
+  stage_mean_overlap  = [0.928,0.884,0.884]
+  stage_min_overlap   = [0.883,0.883,0.883]
+  stage_mean_capture  = [0.513,0.513,0.513]
+  stage_alpha         = [1.01,1.01,1.01]
+  stage_toward        = [4,4,4]
+  stage_kappa         = [+3.03115e+00,+3.03115e+00,+3.03115e+00]
+  carry_mean          = [1.000,1.000]
+  carry_min           = [1.000,1.000]
+  max_kappa_drift     = 0.000%
+  admissible          = False
+
+CASE: length8  (W=3, L=8, source_z=2.0)
+  stage_mean_overlap  = [0.935,0.856,0.856]
+  stage_min_overlap   = [0.856,0.856,0.856]
+  stage_mean_capture  = [0.490,0.490,0.490]
+  stage_alpha         = [0.96,0.96,0.96]
+  stage_toward        = [4,4,4]
+  stage_kappa         = [+4.68694e+00,+4.68694e+00,+4.68694e+00]
+  carry_mean          = [1.000,1.000]
+  carry_min           = [1.000,1.000]
+  max_kappa_drift     = 0.000%
+  admissible          = False
+
+SUMMARY
+  top3 multistage-admissible on 0/5 stable widened-regime cases
+
+SAFE READ
+  - If top3 stays admissible here, the widened local branch survives chained sourced-response segments as the same compact-object family.
+  - If the response drifts or the carry collapses stage-to-stage, the widened branch is still only a transfer result, not a stronger persistent-object regime.
+  - This is still a bounded exact-lattice multistage probe, not matter closure.
+
+Total runtime: 1038.2s
 
 ----- stderr -----
 

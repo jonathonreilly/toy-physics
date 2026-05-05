@@ -1,10 +1,10 @@
 ===== runner cache v1 =====
 runner: scripts/universality_classifier.py
-runner_sha256: f917c4466b1bab392d60e7bcc8c260d4d127ecd7602f9feedc15e5c36e4980c7
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 9ddc562030928ac0fd22b0f5a611e2835f4944000b6567f7369954c8d14068de
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 528.66
+status: ok
 ----- stdout -----
 ==========================================================================================
 UNIVERSALITY CLASSIFIER (5-condition battery: 4 static + 1 dynamic Lane 6 gap)
@@ -19,6 +19,118 @@ PASS = (gravity TOWARD) AND (|F~M-1|<0.10) AND (Born<1e-10) AND (|null|<1e-10)
 
 [ 3/26] A3_orig_Fam3                     PASS  delta=+0.0281  fm=1.007  born=6.3e-17
 
-[ 4/26] B1_pure_grid                   
+[ 4/26] B1_pure_grid                     PASS  delta=+0.0304  fm=1.008  born=4.1e-16
+
+[ 5/26] C1_random_lo                     PASS  delta=+0.0019  fm=1.036  born=2.5e-15
+
+[ 6/26] C2_random_hi                     PASS  delta=+0.0060  fm=0.996  born=7.8e-17
+
+[ 7/26] D1_md1_NN                        PASS  delta=+0.0386  fm=0.972  born=3.1e-16
+
+[ 8/26] D2_md4_long                      PASS  delta=+0.0214  fm=1.015  born=4.0e-16
+
+[ 9/26] E1_PW3_narrow                    PASS  delta=+0.0056  fm=1.031  born=4.3e-16
+
+[10/26] E2_PW10_wide                     FAIL  delta=+0.0282  fm=1.013  born=3.1e-16
+
+[11/26] F1_NL10_short                    PASS  delta=+0.0054  fm=0.998  born=2.5e-16
+
+[12/26] F2_NL40_long                     PASS  delta=+0.0352  fm=1.001  born=5.3e-17
+
+[13/26] G1_asym_y                        PASS  delta=+0.0136  fm=1.014  born=3.9e-16
+
+[14/26] G2_asym_z                        FAIL  delta=-0.0002  fm=1.786  born=2.9e-16
+
+[15/26] H1_ring                          FAIL  delta=-0.0055  fm=1.182  born=7.9e-17
+
+[16/26] H2_cross                         PASS  delta=+0.0032  fm=1.005  born=1.4e-16
+
+[17/26] I1_drift_y                       FAIL  delta=+0.0000  fm=nan  born=0.0e+00
+
+[18/26] J1_aniso_z2                      PASS  delta=+0.0209  fm=1.016  born=1.2e-15
+
+[19/26] J2_aniso_z4                      PASS  delta=+0.0208  fm=1.015  born=1.3e-16
+
+[20/26] K1_NN_no_restore                 PASS  delta=+0.0012  fm=0.992  born=1.9e-16
+
+[21/26] K2_huge_drift_md1                PASS  delta=+0.0000  fm=1.003  born=2.8e-15
+
+[22/26] K3_NL5                           FAIL  delta=+0.0022  fm=0.947  born=4.3e-17
+
+[23/26] K4_PW2                           PASS  delta=+0.0055  fm=1.004  born=6.8e-16
+
+[24/26] L1_seed1                         PASS  delta=+0.0245  fm=1.014  born=7.0e-16
+
+[25/26] L2_seed2                         PASS  delta=+0.0263  fm=1.010  born=9.2e-16
+
+[26/26] L3_seed3                         PASS  delta=+0.0230  fm=1.005  born=1.0e-15
+
+==========================================================================================
+SUMMARY TABLE
+==========================================================================================
+family                    avg_deg   z_sym   fill   reach      delta       fm       born   pass
+----------------------------------------------------------------------------------------------------
+A1_orig_Fam1               122.81   0.000   0.73   0.970    +0.0270    1.006    7.2e-16   PASS
+A2_orig_Fam2               122.81   0.000   0.73   0.970    +0.0269    1.005    4.1e-16   PASS
+A3_orig_Fam3               122.81   0.000   0.73   0.970    +0.0281    1.007    6.3e-17   PASS
+B1_pure_grid               122.81   0.000   0.73   0.970    +0.0304    1.008    4.1e-16   PASS
+C1_random_lo               122.81   0.001   0.73   0.970    +0.0019    1.036    2.5e-15   PASS
+C2_random_hi               122.81   0.002   0.73   0.970    +0.0060    0.996    7.8e-17   PASS
+D1_md1_NN                   21.71   0.000   0.87   0.859    +0.0386    0.972    3.1e-16   PASS
+D2_md4_long                191.07   0.000   0.66   0.978    +0.0214    1.015    4.0e-16   PASS
+E1_PW3_narrow               91.48   0.000   0.54   1.000    +0.0056    1.031    4.3e-16   PASS
+E2_PW10_wide               137.44   0.000   0.81   0.929    +0.0282    1.013    3.1e-16   FAIL
+F1_NL10_short              113.91   0.000   0.67   0.919    +0.0054    0.998    2.5e-16   PASS
+F2_NL40_long               124.86   0.000   0.74   0.981    +0.0352    1.001    5.3e-17   PASS
+G1_asym_y                   66.83   0.000   0.73   0.504    +0.0136    1.014    3.9e-16   PASS
+G2_asym_z                   66.83   0.996   0.73   0.504    -0.0002    1.786    2.9e-16   FAIL
+H1_ring                     17.70   0.000   0.74   0.470    -0.0055    1.182    7.9e-17   FAIL
+H2_cross                    20.74   0.000   0.83   0.922    +0.0032    1.005    1.4e-16   PASS
+I1_drift_y                  10.41   0.000   0.80   0.000    +0.0000      nan    0.0e+00   FAIL
+J1_aniso_z2                203.52   0.000   0.63   0.980    +0.0209    1.016    1.2e-15   PASS
+J2_aniso_z4                271.21   0.000   0.83   0.980    +0.0208    1.015    1.3e-16   PASS
+K1_NN_no_restore            21.71   0.002   0.87   0.859    +0.0012    0.992    1.9e-16   PASS
+K2_huge_drift_md1           21.71   0.002   0.87   0.859    +0.0000    1.003    2.8e-15   PASS
+K3_NL5                      96.14   0.000   0.57   0.818    +0.0022    0.947    4.3e-17   FAIL
+K4_PW2                      66.56   0.000   0.82   1.000    +0.0055    1.004    6.8e-16   PASS
+L1_seed1                   122.81   0.000   0.73   0.970    +0.0245    1.014    7.0e-16   PASS
+L2_seed2                   122.81   0.000   0.73   0.970    +0.0263    1.010    9.2e-16   PASS
+L3_seed3                   122.81   0.000   0.73   0.970    +0.0230    1.005    1.0e-15   PASS
+
+PASS: 21 / 26    FAIL: 5 / 26
+
+FAIL BREAKDOWN:
+  E2_PW10_wide               -> dyn (2.03%)
+  G2_asym_z                  -> grav (delta=-0.0002), F~M (fm=1.786)
+  H1_ring                    -> grav (delta=-0.0055), F~M (fm=1.182)
+  I1_drift_y                 -> grav (delta=+0.0000), F~M (fm=nan), dyn (0.00%)
+  K3_NL5                     -> dyn (0.00%)
+
+CLASSIFIER ANALYSIS (in-sample):
+  best 2-prop AND rule: (avg_deg >= 10.415) AND (reach_frac >= 0.859)
+  in-sample accuracy: 92.3%
+
+LEAVE-ONE-FAMILY-OUT:
+  LOO accuracy: 22/26 = 84.6%
+  misses:
+    E2_PW10_wide: truth=False, pred=True, rule=('avg_deg', '>=', 10.414572361842543, 'reach_frac', '>=', 0.8586760882607826)
+    G1_asym_y: truth=True, pred=False, rule=('avg_deg', '>=', 10.414572361842543, 'reach_frac', '>=', 0.8586760882607826)
+    G2_asym_z: truth=False, pred=True, rule=('avg_deg', '>=', 10.414572361842543, 'reach_frac', '>=', 0.5044330377974802)
+    K3_NL5: truth=False, pred=True, rule=('avg_deg', '>=', 20.738617425504966, 'z_sym', '<=', 0.0020656841095188097)
+
+HELD-OUT FAMILIES (predictions hard-coded before run):
+  family                     predicted   actual  rule pred   agree
+  HELD_dense_sym                  True     True       True      OK
+  HELD_grid_seed7                 True     True       True      OK
+  HELD_ring_md3                  False    False      False      OK
+  HELD_asym_z_seed7              False    False      False      OK
+  HELD_asym_y_seed7               True     True      False      OK
+  HELD_drift_y_seed7             False    False      False      OK
+  HELD_aniso_z3                   True     True       True      OK
+  HELD_cross_seed7                True     True       True      OK
+
+  pre-committed predictions: 8/8 = 100.0%
+  in-sample-fitted rule applied to held-out: 7/8 = 87.5%
+
 ----- stderr -----
 

@@ -1,11 +1,66 @@
 ===== runner cache v1 =====
 runner: scripts/persistent_object_top4_multistage_outer_transfer_sweep.py
-runner_sha256: 6d91d4de283c90e465acb85d20c88de1f13f2a2b4408eb728004b7248b6ddedc
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: e5705edeb4a1d40ddc0c1ec971da517bff9bb09acc67e129971b410d83fd3050
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 1232.31
+status: ok
 ----- stdout -----
+============================================================================================================================================
+PERSISTENT OBJECT TOP4 MULTISTAGE OUTER TRANSFER SWEEP
+  one ring farther than the widened exact-lattice pocket on the retained multistage floor
+============================================================================================================================================
+top_keep=4, cases=source0p50,source2p85,width6,length3,length9
+
+CASE: source0p50  (W=3, L=6, source_z=0.5)
+  stage_mean_overlap  = [0.972,0.945,0.945]
+  carry_mean          = [1.000,1.000]
+  carry_min           = [1.000,1.000]
+  stage_alpha         = [1.02,1.02,1.02]
+  max_kappa_drift     = 0.000%
+  admissible          = False
+
+CASE: source2p85  (W=3, L=6, source_z=2.85)
+  stage_mean_overlap  = [0.960,0.921,0.921]
+  carry_mean          = [1.000,1.000]
+  carry_min           = [1.000,1.000]
+  stage_alpha         = [1.04,1.04,1.04]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+CASE: width6  (W=6, L=6, source_z=2.0)
+  stage_mean_overlap  = [0.954,0.964,0.964]
+  carry_mean          = [1.000,1.000]
+  carry_min           = [1.000,1.000]
+  stage_alpha         = [1.00,1.00,1.00]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+CASE: length3  (W=3, L=3, source_z=2.0)
+  stage_mean_overlap  = [0.946,0.971,0.971]
+  carry_mean          = [1.000,1.000]
+  carry_min           = [1.000,1.000]
+  stage_alpha         = [0.99,0.99,0.99]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+CASE: length9  (W=3, L=9, source_z=2.0)
+  stage_mean_overlap  = [0.967,0.945,0.945]
+  carry_mean          = [1.000,1.000]
+  carry_min           = [1.000,1.000]
+  stage_alpha         = [1.01,1.01,1.01]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+SUMMARY
+  top4 multistage-admissible on 4/5 beyond-pocket cases
+
+SAFE READ
+  - If top4 survives most of this ring, the exact-lattice route is leaving the widened pocket.
+  - If top4 collapses quickly here, the current route should be parked as a widened-pocket multistage positive only.
+  - This is still a bounded exact-lattice transfer sweep, not matter closure.
+
+Total runtime: 1232.1s
 
 ----- stderr -----
 

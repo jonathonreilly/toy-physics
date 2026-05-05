@@ -1,11 +1,56 @@
 ===== runner cache v1 =====
 runner: scripts/poisson_3d_self_field.py
-runner_sha256: af4d08d012db99103bb1dca3c17b447ab455a69c5560cff20c8b4cafab2084a6
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: c0457fc4395e9b58e4c13a5183a54e1b24419a5d32cda6bf16ebb5eae18c9311
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 141.40
+status: ok
 ----- stdout -----
+======================================================================
+POISSON 3D SELF-FIELD HARNESS
+NL=30, W=8, s=0.004, z_src=3.0
+======================================================================
+
+Solving 3D Poisson (this is slower than 2D)...
+
+1a. FIELD PROFILE along z (source layer x=gl)
+    iz           f_3D           ~1/r
+    -3      +0.000022       0.000870
+    -2      +0.000027       0.000976
+    -1      +0.000035       0.001111
+     0      +0.000046       0.001290
+     1      +0.000062       0.001538
+     2      +0.000087       0.001905
+     3      +0.000130       0.002500
+     4      +0.000221       0.003636
+     5      +0.000480       0.006667
+     6      +0.001479       0.040000
+     7      +0.000479       0.006667
+
+1b. FIELD PROFILE along x (transverse iy=iz=0)
+  layer           f_3D          ~1/dx
+      6      +0.000083       0.001905
+      8      +0.000220       0.003636
+     10      +0.001479       0.040000
+     12      +0.000221       0.003636
+     14      +0.000087       0.001905
+     18      +0.000028       0.000976
+
+2. GRAVITY across families
+  Fam1: delta=+0.000769 TOWARD
+  Fam2: delta=+0.000744 TOWARD
+  Fam3: delta=+0.000728 TOWARD
+
+3. F~M across families
+  Fam1: F~M = 0.9999
+  Fam2: F~M = 0.9998
+  Fam3: F~M = 0.9998
+
+4. BORN TEST (Fam1, seed=0, 3D Poisson field)
+  Born |I3|/P = 4.99e-16
+
+5. NULL TEST
+  s=0: delta = +0.000000e+00
 
 ----- stderr -----
 

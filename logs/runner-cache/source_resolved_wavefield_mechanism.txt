@@ -1,11 +1,40 @@
 ===== runner cache v1 =====
 runner: scripts/source_resolved_wavefield_mechanism.py
-runner_sha256: 561db363e5f2654a0931069c76063e5b2e6d0f31db6bb9e9753afdf8302a9afd
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 5c2bcfc41b3c8d7992dc246e1420b24322694aaf8d31ab3a0445105f8d42e6dc
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 543.82
+status: ok
 ----- stdout -----
+============================================================================================================
+SOURCE-RESOLVED WAVEFIELD MECHANISM
+  exact-lattice phase-ramp law as a source-depth mechanism
+  comparison: instantaneous 1/r vs same-site vs finite-speed wavefield
+============================================================================================================
+h=0.25, W=4, L=8, source_cluster=5 nodes
+source_z=2.5, memory_mix=0.9, wave_lag_blend=0.72
+wave_speed2=0.16, damp=0.18, source_blend=0.52
+field kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.5
+source strengths: [0.0005, 0.001, 0.002, 0.004, 0.008]
+source layers: [1, 2, 3, 4] (detector layer=32)
+target max |f|: 0.02
+
+REDUCTION CHECK
+  zero-source same-site shift span: +0.000000e+00 .. +0.000000e+00
+  zero-source wavefield shift span: +0.000000e+00 .. +0.000000e+00
+
+layer  depth       inst       same       wave  phase_lag  ramp_slope  ramp_R2  wave/same
+----------------------------------------------------------------------------------------
+    1   31.0       1.00       1.00       1.01     -0.589     -0.2422    0.969     36.092
+    2   30.0       1.00       1.00       1.01     -0.696     -0.2718    0.967     39.213
+    3   29.0       1.00       1.00       1.01     -0.793     -0.2989    0.966     42.094
+    4   28.0       1.00       1.00       1.01     -0.877     -0.3226    0.965     44.431
+
+MECHANISM READ
+  source-depth scaling of ramp slope: -2.77
+  source-depth scaling of ramp span: -2.65
+  the phase-ramp observable stays coherent while the source layer moves
+  this is a depth-mechanism probe, not a continuum theorem
 
 ----- stderr -----
 

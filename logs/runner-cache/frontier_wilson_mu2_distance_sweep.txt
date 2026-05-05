@@ -1,11 +1,101 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_wilson_mu2_distance_sweep.py
-runner_sha256: 4d5d327a51fc6a6225af1cd26d64f842f37b74ab0a8b086ff82ffcf43b7b5553
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: cac50444e3d13a6e5e0a34bfc890f5f8288b20eb57dff8228a37327d6548d85b
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 190.53
+status: ok
 ----- stdout -----
+============================================================================================
+WILSON OPEN-LATTICE DISTANCE-LAW SWEEP VS MU^2
+============================================================================================
+Surface: sides=(11, 13, 15), G=5.0, separations=(3, 4, 5, 6)
+Packet width fixed at base SIGMA=1.0
+mu^2 sweep=(0.22, 0.05, 0.01, 0.005, 0.001)
+
+--- mu^2=0.22 ---
+  side=11 d=3: a_mut=-0.566674 SNR=9.69 [ATTRACT] [CLEAN] dsep SH=-0.7543 SELF=+0.0237 FREE=-0.0283
+  side=11 d=4: a_mut=-0.247554 SNR=8.47 [ATTRACT] [CLEAN] dsep SH=-0.3114 SELF=+0.0316 FREE=-0.0298
+  side=11 d=5: a_mut=-0.113243 SNR=8.72 [ATTRACT] [CLEAN] dsep SH=-0.1412 SELF=+0.0072 FREE=-0.2111
+  side=11 d=6: a_mut=-0.056988 SNR=8.83 [ATTRACT] [CLEAN] dsep SH=-0.0448 SELF=+0.0303 FREE=-0.2340
+  side=13 d=3: a_mut=-0.567354 SNR=9.74 [ATTRACT] [CLEAN] dsep SH=-0.7705 SELF=+0.0105 FREE=-0.0025
+  side=13 d=4: a_mut=-0.246222 SNR=8.46 [ATTRACT] [CLEAN] dsep SH=-0.3298 SELF=+0.0129 FREE=-0.0026
+  side=13 d=5: a_mut=-0.114091 SNR=8.16 [ATTRACT] [CLEAN] dsep SH=-0.1340 SELF=+0.0235 FREE=-0.0283
+  side=13 d=6: a_mut=-0.056692 SNR=8.15 [ATTRACT] [CLEAN] dsep SH=-0.0480 SELF=+0.0303 FREE=-0.0298
+  side=15 d=3: a_mut=-0.567478 SNR=9.78 [ATTRACT] [CLEAN] dsep SH=-0.7778 SELF=+0.0035 FREE=-0.0002
+  side=15 d=4: a_mut=-0.245780 SNR=8.48 [ATTRACT] [CLEAN] dsep SH=-0.3381 SELF=+0.0043 FREE=-0.0002
+  side=15 d=5: a_mut=-0.113977 SNR=8.16 [ATTRACT] [CLEAN] dsep SH=-0.1478 SELF=+0.0106 FREE=-0.0025
+  side=15 d=6: a_mut=-0.056342 SNR=8.12 [ATTRACT] [CLEAN] dsep SH=-0.0655 SELF=+0.0127 FREE=-0.0026
+  fit: |a_mut| ~ d^-3.315  (R^2=0.9960, clean=12/12, 46.8s)
+
+--- mu^2=0.05 ---
+  side=11 d=3: a_mut=-0.760193 SNR=8.21 [ATTRACT] [CLEAN] dsep SH=-0.9288 SELF=+0.0992 FREE=-0.0283
+  side=11 d=4: a_mut=-0.413043 SNR=6.54 [ATTRACT] [CLEAN] dsep SH=-0.4443 SELF=+0.1322 FREE=-0.0298
+  side=11 d=5: a_mut=-0.233585 SNR=6.47 [ATTRACT] [CLEAN] dsep SH=-0.1606 SELF=+0.1423 FREE=-0.2111
+  side=11 d=6: a_mut=-0.148537 SNR=6.75 [ATTRACT] [CLEAN] dsep SH=+0.0073 SELF=+0.2033 FREE=-0.2340
+  side=13 d=3: a_mut=-0.757645 SNR=8.55 [ATTRACT] [CLEAN] dsep SH=-0.9743 SELF=+0.0498 FREE=-0.0025
+  side=13 d=4: a_mut=-0.403663 SNR=6.62 [ATTRACT] [CLEAN] dsep SH=-0.5023 SELF=+0.0646 FREE=-0.0026
+  side=13 d=5: a_mut=-0.231081 SNR=6.13 [ATTRACT] [CLEAN] dsep SH=-0.2186 SELF=+0.1018 FREE=-0.0283
+  side=13 d=6: a_mut=-0.145062 SNR=6.14 [ATTRACT] [CLEAN] dsep SH=-0.0757 SELF=+0.1269 FREE=-0.0298
+  side=15 d=3: a_mut=-0.755939 SNR=8.74 [ATTRACT] [CLEAN] dsep SH=-0.9955 SELF=+0.0240 FREE=-0.0002
+  side=15 d=4: a_mut=-0.398873 SNR=6.68 [ATTRACT] [CLEAN] dsep SH=-0.5297 SELF=+0.0310 FREE=-0.0002
+  side=15 d=5: a_mut=-0.227491 SNR=6.20 [ATTRACT] [CLEAN] dsep SH=-0.2672 SELF=+0.0519 FREE=-0.0025
+  side=15 d=6: a_mut=-0.140855 SNR=6.14 [ATTRACT] [CLEAN] dsep SH=-0.1349 SELF=+0.0632 FREE=-0.0026
+  fit: |a_mut| ~ d^-2.392  (R^2=0.9978, clean=12/12, 35.2s)
+
+--- mu^2=0.01 ---
+  side=11 d=3: a_mut=-0.839942 SNR=7.89 [ATTRACT] [CLEAN] dsep SH=-0.9693 SELF=+0.1555 FREE=-0.0283
+  side=11 d=4: a_mut=-0.502575 SNR=6.13 [ATTRACT] [CLEAN] dsep SH=-0.4896 SELF=+0.2109 FREE=-0.0298
+  side=11 d=5: a_mut=-0.309391 SNR=6.02 [ATTRACT] [CLEAN] dsep SH=-0.1774 SELF=+0.2208 FREE=-0.2111
+  side=11 d=6: a_mut=-0.214863 SNR=6.43 [ATTRACT] [CLEAN] dsep SH=+0.0212 SELF=+0.3043 FREE=-0.2340
+  side=13 d=3: a_mut=-0.835914 SNR=8.32 [ATTRACT] [CLEAN] dsep SH=-1.0268 SELF=+0.0911 FREE=-0.0025
+  side=13 d=4: a_mut=-0.488824 SNR=6.23 [ATTRACT] [CLEAN] dsep SH=-0.5649 SELF=+0.1208 FREE=-0.0026
+  side=13 d=5: a_mut=-0.306680 SNR=5.67 [ATTRACT] [CLEAN] dsep SH=-0.2544 SELF=+0.1687 FREE=-0.0283
+  side=13 d=6: a_mut=-0.213270 SNR=5.73 [ATTRACT] [CLEAN] dsep SH=-0.0889 SELF=+0.2093 FREE=-0.0298
+  side=15 d=3: a_mut=-0.832438 SNR=8.62 [ATTRACT] [CLEAN] dsep SH=-1.0554 SELF=+0.0534 FREE=-0.0002
+  side=15 d=4: a_mut=-0.480072 SNR=6.32 [ATTRACT] [CLEAN] dsep SH=-0.6033 SELF=+0.0707 FREE=-0.0002
+  side=15 d=5: a_mut=-0.300215 SNR=5.74 [ATTRACT] [CLEAN] dsep SH=-0.3188 SELF=+0.1011 FREE=-0.0025
+  side=15 d=6: a_mut=-0.206494 SNR=5.70 [ATTRACT] [CLEAN] dsep SH=-0.1679 SELF=+0.1232 FREE=-0.0026
+  fit: |a_mut| ~ d^-1.992  (R^2=0.9984, clean=12/12, 35.7s)
+
+--- mu^2=0.005 ---
+  side=11 d=3: a_mut=-0.852256 SNR=7.85 [ATTRACT] [CLEAN] dsep SH=-0.9735 SELF=+0.1660 FREE=-0.0283
+  side=11 d=4: a_mut=-0.517841 SNR=6.08 [ATTRACT] [CLEAN] dsep SH=-0.4957 SELF=+0.2258 FREE=-0.0298
+  side=11 d=5: a_mut=-0.322874 SNR=5.97 [ATTRACT] [CLEAN] dsep SH=-0.1804 SELF=+0.2345 FREE=-0.2111
+  side=11 d=6: a_mut=-0.227107 SNR=6.40 [ATTRACT] [CLEAN] dsep SH=+0.0228 SELF=+0.3219 FREE=-0.2340
+  side=13 d=3: a_mut=-0.848331 SNR=8.28 [ATTRACT] [CLEAN] dsep SH=-1.0328 SELF=+0.1000 FREE=-0.0025
+  side=13 d=4: a_mut=-0.503906 SNR=6.18 [ATTRACT] [CLEAN] dsep SH=-0.5735 SELF=+0.1331 FREE=-0.0026
+  side=13 d=5: a_mut=-0.320845 SNR=5.61 [ATTRACT] [CLEAN] dsep SH=-0.2597 SELF=+0.1824 FREE=-0.0283
+  side=13 d=6: a_mut=-0.226797 SNR=5.68 [ATTRACT] [CLEAN] dsep SH=-0.0910 SELF=+0.2262 FREE=-0.0298
+  side=15 d=3: a_mut=-0.844742 SNR=8.60 [ATTRACT] [CLEAN] dsep SH=-1.0625 SELF=+0.0608 FREE=-0.0002
+  side=15 d=4: a_mut=-0.494767 SNR=6.27 [ATTRACT] [CLEAN] dsep SH=-0.6136 SELF=+0.0807 FREE=-0.0002
+  side=15 d=5: a_mut=-0.314301 SNR=5.68 [ATTRACT] [CLEAN] dsep SH=-0.3264 SELF=+0.1128 FREE=-0.0025
+  side=15 d=6: a_mut=-0.220136 SNR=5.65 [ATTRACT] [CLEAN] dsep SH=-0.1729 SELF=+0.1374 FREE=-0.0026
+  fit: |a_mut| ~ d^-1.927  (R^2=0.9985, clean=12/12, 35.7s)
+
+--- mu^2=0.001 ---
+  side=11 d=3: a_mut=-0.862648 SNR=7.81 [ATTRACT] [CLEAN] dsep SH=-0.9765 SELF=+0.1752 FREE=-0.0283
+  side=11 d=4: a_mut=-0.531049 SNR=6.04 [ATTRACT] [CLEAN] dsep SH=-0.5007 SELF=+0.2389 FREE=-0.0298
+  side=11 d=5: a_mut=-0.334646 SNR=5.93 [ATTRACT] [CLEAN] dsep SH=-0.1831 SELF=+0.2465 FREE=-0.2111
+  side=11 d=6: a_mut=-0.237887 SNR=6.38 [ATTRACT] [CLEAN] dsep SH=+0.0240 SELF=+0.3372 FREE=-0.2340
+  side=13 d=3: a_mut=-0.858946 SNR=8.25 [ATTRACT] [CLEAN] dsep SH=-1.0373 SELF=+0.1082 FREE=-0.0025
+  side=13 d=4: a_mut=-0.517182 SNR=6.14 [ATTRACT] [CLEAN] dsep SH=-0.5804 SELF=+0.1445 FREE=-0.0026
+  side=13 d=5: a_mut=-0.333478 SNR=5.56 [ATTRACT] [CLEAN] dsep SH=-0.2641 SELF=+0.1949 FREE=-0.0283
+  side=13 d=6: a_mut=-0.239026 SNR=5.64 [ATTRACT] [CLEAN] dsep SH=-0.0927 SELF=+0.2415 FREE=-0.0298
+  side=15 d=3: a_mut=-0.855371 SNR=8.58 [ATTRACT] [CLEAN] dsep SH=-1.0679 SELF=+0.0678 FREE=-0.0002
+  side=15 d=4: a_mut=-0.507894 SNR=6.24 [ATTRACT] [CLEAN] dsep SH=-0.6220 SELF=+0.0904 FREE=-0.0002
+  side=15 d=5: a_mut=-0.327099 SNR=5.63 [ATTRACT] [CLEAN] dsep SH=-0.3326 SELF=+0.1239 FREE=-0.0025
+  side=15 d=6: a_mut=-0.232758 SNR=5.61 [ATTRACT] [CLEAN] dsep SH=-0.1771 SELF=+0.1510 FREE=-0.0026
+  fit: |a_mut| ~ d^-1.871  (R^2=0.9986, clean=12/12, 36.4s)
+
+============================================================================================
+SUMMARY
+============================================================================================
+mu^2=   0.22: alpha=-3.315  R^2=0.9960  clean=12/12
+mu^2=   0.05: alpha=-2.392  R^2=0.9978  clean=12/12
+mu^2=   0.01: alpha=-1.992  R^2=0.9984  clean=12/12
+mu^2=  0.005: alpha=-1.927  R^2=0.9985  clean=12/12
+mu^2=  0.001: alpha=-1.871  R^2=0.9986  clean=12/12
 
 ----- stderr -----
 

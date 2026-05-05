@@ -1,11 +1,101 @@
 ===== runner cache v1 =====
 runner: scripts/persistent_object_top4_multistage_transfer_sweep.py
-runner_sha256: bb2757103b9baba516fb2dd67db4c0e63bc49648cc9ecf67346c5e7deb57ba7d
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
+runner_sha256: 9c42a7fd7264638e645362f65184fa2f0c500488a94c4545bf2357a1355af98d
+timeout_sec: 1800
+exit_code: -9
+elapsed_sec: 1800.01
 status: timeout
 ----- stdout -----
+==========================================================================================================================================
+PERSISTENT OBJECT MULTISTAGE TRANSFER SWEEP
+  widened local-pocket transfer of the retained multistage compact-object floor
+==========================================================================================================================================
+top_keep=4, cases=baseline,source0p75,source1p00,source1p25,source1p50,source2p50,source2p75,width4,width5,length4,length5,length7,length8
+
+CASE: baseline  (W=3, L=6, source_z=2.0)
+  stage_mean_overlap  = [0.956,0.956,0.956]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [1.03,1.03,1.03]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+CASE: source0p75  (W=3, L=6, source_z=0.75)
+  stage_mean_overlap  = [0.967,0.960,0.960]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [1.02,1.02,1.02]
+  max_kappa_drift     = 0.000%
+  admissible          = False
+
+CASE: source1p00  (W=3, L=6, source_z=1.0)
+  stage_mean_overlap  = [0.959,0.968,0.968]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [1.11,1.11,1.11]
+  max_kappa_drift     = 0.000%
+  admissible          = False
+
+CASE: source1p25  (W=3, L=6, source_z=1.25)
+  stage_mean_overlap  = [0.956,0.968,0.968]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [0.99,0.99,0.99]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+CASE: source1p50  (W=3, L=6, source_z=1.5)
+  stage_mean_overlap  = [0.958,0.971,0.971]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [1.02,1.02,1.02]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+CASE: source2p50  (W=3, L=6, source_z=2.5)
+  stage_mean_overlap  = [0.945,0.969,0.969]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [1.03,1.03,1.03]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+CASE: source2p75  (W=3, L=6, source_z=2.75)
+  stage_mean_overlap  = [0.960,0.921,0.921]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [1.04,1.04,1.04]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+CASE: width4  (W=4, L=6, source_z=2.0)
+  stage_mean_overlap  = [0.954,0.964,0.964]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [1.00,1.00,1.00]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+CASE: width5  (W=5, L=6, source_z=2.0)
+  stage_mean_overlap  = [0.954,0.964,0.964]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [1.01,1.01,1.01]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+CASE: length4  (W=3, L=4, source_z=2.0)
+  stage_mean_overlap  = [0.948,0.968,0.968]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [0.99,0.99,0.99]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+CASE: length5  (W=3, L=5, source_z=2.0)
+  stage_mean_overlap  = [0.953,0.960,0.960]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [1.00,1.00,1.00]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+CASE: length7  (W=3, L=7, source_z=2.0)
+  stage_mean_overlap  = [0.959,0.952,0.952]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [1.03,1.03,1.03]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
 
 ----- stderr -----
 

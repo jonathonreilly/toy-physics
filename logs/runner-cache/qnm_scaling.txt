@@ -1,11 +1,45 @@
 ===== runner cache v1 =====
 runner: scripts/qnm_scaling.py
-runner_sha256: ae47b3e14dd52c41388e8b5c3ffd5693a3ca20a583a54b6c74f40cc9af62e5f6
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: e8b6a2ac2de6814740725231fa995bb923430daad49af3e662ebccdcf67f34fa
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 954.91
+status: ok
 ----- stdout -----
+===========================================================================
+QUASI-NORMAL MODE SCALING
+h=0.5, W=6, L=30
+===========================================================================
+
+SWEEP 1: G varies, s=0.004 fixed
+     G                           peaks              spacings   mean_dk
+------------------------------------------------------------------------
+  0.02                  6.5, 9.5, 19.0              3.0, 9.5      6.25
+  0.05      6.5, 9.5, 12.5, 14.5, 16.5    3.0, 3.0, 2.0, 2.0      2.50
+  0.10      6.5, 9.5, 11.0, 15.5, 19.0    3.0, 1.5, 4.5, 3.5      3.12
+  0.20  6.5, 8.5, 9.5, 11.5, 13.5, 15.5  2.0, 1.0, 2.0, 2.0, 2.0      1.80
+
+SWEEP 2: s varies, G=0.05 fixed
+     s                           peaks              spacings   mean_dk
+------------------------------------------------------------------------
+ 0.002      6.5, 9.5, 12.5, 14.5, 16.5    3.0, 3.0, 2.0, 2.0      2.50
+ 0.004      6.5, 9.5, 12.5, 14.5, 16.5    3.0, 3.0, 2.0, 2.0      2.50
+ 0.008      6.5, 9.5, 12.5, 14.5, 16.5    3.0, 3.0, 2.0, 2.0      2.50
+ 0.016      6.5, 9.5, 12.5, 14.5, 16.5    3.0, 3.0, 2.0, 2.0      2.50
+
+SWEEP 3: G*s = 0.0002 constant (different partitions)
+     G      s                           peaks   mean_dk
+--------------------------------------------------------
+  0.01  0.020                  6.5, 9.5, 19.0      6.25
+  0.02  0.010                  6.5, 9.5, 19.0      6.25
+  0.05  0.004      6.5, 9.5, 12.5, 14.5, 16.5      2.50
+  0.10  0.002      6.5, 9.5, 11.0, 15.5, 19.0      3.12
+
+SAFE READ
+  if mean_dk ~ 1/G: modes scale with self-gravity (GR-like)
+  if mean_dk ~ 1/s: modes scale with mass
+  if mean_dk ~ 1/(G*s): modes scale with the product (Schwarzschild)
+  if mean_dk constant at fixed G*s: product is the relevant variable
 
 ----- stderr -----
 

@@ -1,11 +1,39 @@
 ===== runner cache v1 =====
 runner: scripts/poisson_self_gravity_born_audit.py
-runner_sha256: 3dc5ff96e69326c35ab8200365e2ae74d2eaba5245028b5014ca6365dd240e6f
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 478123a0f908acd5291a1d22c339e0f07a4d324c6b96ab66c927da58287e8381
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 214.59
+status: ok
 ----- stdout -----
+================================================================================================
+POISSON SELF-GRAVITY BORN AUDIT
+  exact h=0.25 lattice, iterated amplitude-sourced backreaction loop
+  audit target: per-step Born vs end-to-end Born through the full loop
+================================================================================================
+h=0.25, W=3, L=6, slit_nodes=[287, 312, 337]
+couplings=(0.05,), source strengths=(0.004,)
+kernel=exp(-mu r)/(r+eps), mu=0.08, eps=0.50
+field gain=1.691875e+02, relax=0.35, max_iters=6
+
+REDUCTION CHECK
+  zero-eps centroid shift: +0.000000e+00
+  zero-eps escape ratio:   1.000000
+  zero-eps converged:      True
+  zero-eps iters/resid:     1 / 0.000e+00
+  zero-eps Born (frozen):   1.209e-15
+
+   eps        s   stepBorn    endBorn stepConv  endConv  stepIters  endIters
+--------------------------------------------------------------------------------------------
+  0.05   0.0040  1.028e-15  6.830e-05    False    False          6         6
+
+SAFE READ
+  - exact eps = 0 reduction survives exactly
+  - step-local Born is evaluated on a frozen field snapshot and is expected
+    to remain machine-clean if the propagation step is linear
+  - end-to-end Born is the real test of the nonlinear loop
+  - if the end-to-end I3/P is also machine-clean, Born survives the full loop
+  - if the end-to-end I3/P moves away from zero, Born survives only per-step
 
 ----- stderr -----
 

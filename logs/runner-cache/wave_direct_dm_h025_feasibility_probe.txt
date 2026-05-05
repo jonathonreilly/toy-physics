@@ -1,11 +1,22 @@
 ===== runner cache v1 =====
 runner: scripts/wave_direct_dm_h025_feasibility_probe.py
-runner_sha256: 1b66f4636124a1fea8d05f1e683212fc9e5802a2b51fcaf398dfa20304b96e7e
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: 29b13d93485683fc9f18a653b18057effb6f77be624a2419b2cba170f8a71073
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 143.04
+status: ok
 ----- stdout -----
+WAVE DIRECT-DM H=0.25 FEASIBILITY PROBE
+family=Fam1 drift=0.20 restore=0.70
+H=0.25  strength=0.004000
+NL=60  PW=6.000  src_layer=20
+start_z_real=3.000  end_z_real=0.000
+dM(early)  = +0.004989
+dM(late)   = +0.006246
+delta_hist = -0.001256
+R_hist     = -20.12%
+elapsed_s  = 142.94
+rss_mb     = 696.7
 
 ----- stderr -----
 

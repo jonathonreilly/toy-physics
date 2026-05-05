@@ -1,11 +1,63 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_tensor_support_center_excess_law.py
-runner_sha256: 135aa32072f80f2c64d42fc60d71007455f17fd30a7b02f02526dc85dfc5279d
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.03
-status: timeout
+runner_sha256: c5cbe0a90df79c0207e9882d63e6c7081d667d47a6158f84ce85622aab3c5e7d
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 148.60
+status: ok
 ----- stdout -----
+Support-side A1 center-excess law for the tensor frontier
+==============================================================================
+Unit-charge A1 endpoint support potentials:
+  e0      = [0.242753999916 0.076087333249 0.076087333249 0.076087333249
+ 0.076087333249 0.076087333249 0.076087333249]
+  s/sqrt6 = [0.076087333249 0.076087333249 0.076087333249 0.076087333249
+ 0.076087333249 0.076087333249 0.076087333249]
+  max arm-site difference = 4.163e-17
+  center-excess residual from 1/6 = 5.551e-17
+[EXACT] PASS: the two unit-charge A1 basis backgrounds induce the same arm-site support potential
+    max arm-site difference = 4.163e-17
+[EXACT] PASS: the exact surviving A1 support datum is the center-excess scalar, with endpoint size 1/6
+    center-excess residual from 1/6 = 5.551e-17
+r=0.25: delta_A1=1.033673504811e-01, formula=1.033673504811e-01, err=4.163e-17
+r=0.50: delta_A1=7.491495713053e-02, formula=7.491495713053e-02, err=1.388e-17
+r=0.75: delta_A1=5.874507418157e-02, formula=5.874507418157e-02, err=4.163e-17
+r=1.00: delta_A1=4.831632475944e-02, formula=4.831632475944e-02, err=6.939e-18
+r=1.50: delta_A1=3.565646152233e-02, formula=3.565646152233e-02, err=4.163e-17
+r=2.00: delta_A1=2.825347453309e-02, formula=2.825347453309e-02, err=1.041e-17
+[EXACT] PASS: on the canonical Q=1 projective A1 family, the exact support-side scalar is delta_A1(r)=1/(6(1+sqrt(6)r))
+    max formula error = 4.163e-17
+
+Endpoint tensor coefficients:
+  gamma_E(center) = -3.772329167975e-04
+  gamma_E(shell)  = -2.010572657265e-04
+  gamma_T(center) = +3.359952396063e-04
+  gamma_T(shell)  = +4.031967723697e-04
+
+Affine support law from exact A1 endpoints:
+  gamma_E(delta) = -2.010572657265e-04 + (-1.057053906426e-03) delta
+  gamma_T(delta) = +4.031967723697e-04 + (-4.032091965809e-04) delta
+canonical r=0.25: gamma_E err=4.537e-09, gamma_T err=1.000e-08
+canonical r=0.50: gamma_E err=4.838e-09, gamma_T err=1.067e-08
+canonical r=0.75: gamma_E err=4.407e-09, gamma_T err=9.798e-09
+canonical r=1.00: gamma_E err=4.028e-09, gamma_T err=8.802e-09
+canonical r=1.50: gamma_E err=3.327e-09, gamma_T err=7.109e-09
+canonical r=2.00: gamma_E err=2.744e-09, gamma_T err=6.029e-09
+exact local O_h: delta_A1=6.242611227355e-02, gamma_E err=4.381e-07, gamma_T err=1.172e-07
+finite-rank: delta_A1=3.307783365857e-02, gamma_E err=3.380e-06, gamma_T err=4.190e-06
+[BOUNDED] PASS: the current bright tensor coefficients are nearly affine in the exact support-side center-excess scalar on the canonical A1 family
+    max canonical affine-law errors: gamma_E=4.838e-09, gamma_T=1.067e-08
+[BOUNDED] PASS: the same support-side affine law tracks the exact local O_h and finite-rank A1 baselines
+    max audited-family affine-law errors: gamma_E=3.380e-06, gamma_T=4.190e-06
+
+Verdict:
+The shell-blindness pivot can now be sharpened again. After fixing total charge, the exact A1 support block retains one microscopic scalar datum, the support center-excess delta_A1. The current bright tensor coefficients are then almost exactly an affine law in that exact support scalar. So the remaining exact gravity theorem is no longer an arbitrary function of r; it is the derivation of the exact tensor endpoint coefficients at the two A1 support endpoints and the exact tensor observable they belong to.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=5 FAIL=0 TOTAL=5
+All checks passed.
 
 ----- stderr -----
 

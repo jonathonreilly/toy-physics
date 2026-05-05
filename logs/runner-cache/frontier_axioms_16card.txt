@@ -1,11 +1,14 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_axioms_16card.py
-runner_sha256: 8f768d87f0f2998e038b2350370af3f4a4eaf16ce2bb65b8f96170d2f2b6bc58
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 30a3f7caba53025504588f115dc5cd9c0620910c1a979b35dcdf6b4ae17b1433
+timeout_sec: 1800
+exit_code: 1
+elapsed_sec: 0.12
+status: nonzero_exit
 ----- stdout -----
+  File "/private/tmp/timeout-annotations-worktree/scripts/frontier_axioms_16card.py", line 104
+    m2 = mass**2
+IndentationError: unexpected indent
 
 ----- stderr -----
 

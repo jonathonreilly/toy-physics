@@ -1,11 +1,29 @@
 ===== runner cache v1 =====
 runner: scripts/gate_b_h025_joint_package.py
-runner_sha256: 12c6b46f8e00fea14b123952af12a79752b55b206b6a1f7dad5c588363d467d4
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 523f8a7cab48a65cce2335d237cd49ef792619f4acb8c3ea952b4131040a958a
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 167.52
+status: ok
 ----- stdout -----
+============================================================================
+GATE B H=0.25 JOINT PACKAGE HARNESS
+  Born / d_TV / MI / decoherence on exact vs grown geometry
+============================================================================
+h=0.25, W=6, L=3, seeds=1, LAM=10.0
+growth rule: template + drift + restore + NN connectivity from grid labels
+
+geometry                 Born     d_TV       MI    Decoh
+exact grid           2.71e-15    0.850    0.655    49.8%
+grown drift=0.2      3.08e-15    0.916    0.770    48.8%
+
+SAFE INTERPRETATION
+  This harness freezes the h=0.25 joint interference/decoherence
+  comparison only.
+  Promote the retained grown row only if it stays close to the exact grid.
+  Treat the result as a bounded scaling check, not a full closure claim.
+
+Total time: 167s
 
 ----- stderr -----
 

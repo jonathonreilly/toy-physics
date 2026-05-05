@@ -93,6 +93,14 @@ def graph_laplacian(adj):
 def evolve_cn(L, N_nodes, mass, dt, n_steps, psi0, V=None, noise=0, seed=42):
     """Crank-Nicolson: psi_new = (I+iHdt/2)^{-1} (I-iHdt/2) psi.
     H = L + m^2*I + diag(V). This is exactly unitary."""
+
+# Heavy compute / sweep runner — `AUDIT_TIMEOUT_SEC = 1800`
+# means the audit-lane precompute and live audit runner allow up to
+# 30 min of wall time before recording a timeout. The 120 s default
+# ceiling is too tight under concurrency contention; see
+# `docs/audit/RUNNER_CACHE_POLICY.md`.
+AUDIT_TIMEOUT_SEC = 1800
+
     m2 = mass**2
     V_diag = diags(V) if V is not None else diags(np.zeros(N_nodes))
     H = L + m2 * speye(N_nodes) + V_diag

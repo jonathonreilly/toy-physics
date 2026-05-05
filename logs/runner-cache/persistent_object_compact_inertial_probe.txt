@@ -1,11 +1,80 @@
 ===== runner cache v1 =====
 runner: scripts/persistent_object_compact_inertial_probe.py
-runner_sha256: e61c54bad3ee6dccc50c917b863d7a8bde57566d72aa71caac4572d1527b6027
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 7285c5338f657c6867ffa4b7b2b8c5428917ed17fc682afd306ad4224c0413c2
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 728.55
+status: ok
 ----- stdout -----
+================================================================================================================================
+PERSISTENT OBJECT COMPACT INERTIAL PROBE
+  transferable compact repeated-update exact-lattice object with broad vs adaptive readout
+================================================================================================================================
+strengths=[0.001, 0.002, 0.004, 0.008], updates=3, h=0.25, kernel=exp(-mu r)/(r+eps), mu=0.08, eps=0.5
+gates: overlap>=0.90, drift<=0.10, alpha in [0.95, 1.05], all steps 4/4 TOWARD
+field target max=0.02
+
+CASE: baseline  (h=0.25, W=3, L=6, source_z=2.0, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+  object   readout   obj_eff  obj_sup   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+--------------------------------------------------------------------------------------------------------------------------------
+   broad     broad     4.859    5.000    0.956    0.971    497.34    1.000     0.413%         [1.00,1.00,1.00]   True
+   broad  adaptive     4.859    5.000    0.956    0.971    120.37    0.351     1.806%         [1.04,1.04,1.04]   True
+    top2     broad     2.954    3.000    0.788    0.900    497.30    1.000     1.281%         [1.00,1.00,1.00]  False
+    top2  adaptive     2.954    3.000    0.788    0.900    120.36    0.351     6.701%         [1.04,1.04,1.04]  False
+    top3     broad     3.593    3.667    0.876    0.929    497.32    1.000     0.800%         [1.00,1.00,1.00]   True
+    top3  adaptive     3.593    3.667    0.876    0.929    120.41    0.351     4.824%         [1.04,1.04,1.04]   True
+  broad compact verdict: top3
+  adaptive compact verdict: top3
+
+CASE: source1.5  (h=0.25, W=3, L=6, source_z=1.5, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+  object   readout   obj_eff  obj_sup   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+--------------------------------------------------------------------------------------------------------------------------------
+   broad     broad     4.835    5.000    0.951    0.968    496.88    1.000     5.469%         [0.99,0.99,0.99]   True
+   broad  adaptive     4.835    5.000    0.951    0.968    120.36    0.352     4.050%         [1.02,1.02,1.02]   True
+    top2     broad     2.964    3.000    0.787    0.897    496.80    1.000    17.784%         [0.99,0.99,0.99]  False
+    top2  adaptive     2.964    3.000    0.787    0.897    120.32    0.352    14.186%         [1.02,1.01,1.01]  False
+    top3     broad     3.608    3.667    0.884    0.929    496.83    1.000    12.137%         [0.99,0.99,0.99]  False
+    top3  adaptive     3.608    3.667    0.884    0.929    120.40    0.352     8.796%         [1.02,1.02,1.02]   True
+  broad compact verdict: none
+  adaptive compact verdict: top3
+
+CASE: width4  (h=0.25, W=4, L=6, source_z=2.0, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+  object   readout   obj_eff  obj_sup   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+--------------------------------------------------------------------------------------------------------------------------------
+   broad     broad     4.834    5.000    0.949    0.966    694.87    1.000     1.089%         [1.00,1.00,1.00]   True
+   broad  adaptive     4.834    5.000    0.949    0.966    120.29    0.345     2.408%         [1.00,1.00,1.00]   True
+    top2     broad     2.952    3.000    0.796    0.898    694.73    1.000     3.442%         [1.00,1.00,1.00]  False
+    top2  adaptive     2.952    3.000    0.796    0.898    120.14    0.345     8.212%         [1.00,1.01,1.01]  False
+    top3     broad     3.590    3.667    0.884    0.927    694.79    1.000     2.380%         [1.00,1.00,1.00]   True
+    top3  adaptive     3.590    3.667    0.884    0.927    120.19    0.345     5.639%         [1.00,1.01,1.01]   True
+  broad compact verdict: top3
+  adaptive compact verdict: top3
+
+CASE: length7  (h=0.25, W=3, L=7, source_z=2.0, zero_broad=+0.000e+00, zero_adaptive=+0.000e+00)
+  object   readout   obj_eff  obj_sup   min_ov  mean_ov   det_eff  capture  max_drift                   step α    adm
+--------------------------------------------------------------------------------------------------------------------------------
+   broad     broad     4.880    5.000    0.962    0.975    514.84    1.000     0.539%         [1.00,1.00,1.00]   True
+   broad  adaptive     4.880    5.000    0.962    0.975    125.20    0.337     1.162%         [1.06,1.06,1.06]  False
+    top2     broad     2.960    3.000    0.777    0.901    514.80    1.000     1.861%         [1.00,1.00,1.00]   True
+    top2  adaptive     2.960    3.000    0.777    0.901    125.22    0.337     4.693%         [1.06,1.06,1.06]  False
+    top3     broad     3.603    3.667    0.869    0.931    514.82    1.000     1.154%         [1.00,1.00,1.00]   True
+    top3  adaptive     3.603    3.667    0.869    0.931    125.15    0.337     3.292%         [1.06,1.06,1.06]  False
+  broad compact verdict: top2
+  adaptive compact verdict: none
+
+SUMMARY
+  top3 broad admissible on 3/4 cases
+  top3 adaptive admissible on 3/4 cases
+  top2 broad admissible on 1/4 cases
+  top2 adaptive admissible on 0/4 cases
+
+SAFE READ
+  - If top3 stays admissible across nearby cases, the transferable compact object carries a stable weak-field response.
+  - If adaptive readout also stays admissible, the detector-side bridge remains usable on the same object family.
+  - If only broad survives, the object is real but the readout side is still the limiting bottleneck.
+  - This is still a compact-object response probe, not full matter closure.
+
+Total runtime: 728.3s
 
 ----- stderr -----
 

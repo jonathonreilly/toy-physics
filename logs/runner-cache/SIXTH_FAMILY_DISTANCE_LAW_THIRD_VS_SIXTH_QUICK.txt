@@ -1,11 +1,31 @@
 ===== runner cache v1 =====
 runner: scripts/SIXTH_FAMILY_DISTANCE_LAW_THIRD_VS_SIXTH_QUICK.py
-runner_sha256: 685f374217b532cbcd6cbbb96c37815ff39915f3402b77414e56e5308dcc8218
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: 09fdd5c522b6bd3f716f0943fc9ab5ae1aee59a789818caef80ee5e66c0a1364
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 56.03
+status: ok
 ----- stdout -----
+========================================================================================
+QUICK THIRD VS SIXTH DISTANCE LAW SPOT CHECK
+  one retained row per family
+========================================================================================
+distance b values = [5, 6, 7, 8, 10]
+third row = (0.2, 2) (retained sign basin interior)
+sixth row = (0.2, 2) (retained sheared basin interior)
+
+ family drift seed    alpha      r2    toward   ok
+----------------------------------------------------------------------------------------
+  third  0.20    2   -2.158   0.909         5/5     no
+  sixth  0.20    2   -1.077   0.911         5/5    YES
+
+GATE REPLAY
+  third gate: zero=+0.000e+00, neutral=+0.000e+00, plus=+6.711e-06, minus=-6.711e-06
+  sixth gate: zero=+0.000e+00, neutral=+0.000e+00, plus=+3.871e-06, minus=-3.871e-06
+
+SAFE READ
+  sixth row preserves the tail, third row misses
+  connect the third-family miss back to the breakpoint classifier
 
 ----- stderr -----
 

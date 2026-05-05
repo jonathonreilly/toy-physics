@@ -54,6 +54,14 @@ GELL_MANN[7] = np.array([[1, 0, 0], [0, 1, 0], [0, 0, -2]], dtype=complex) / np.
 class Lattice:
     """4D periodic lattice geometry."""
 
+
+# Heavy compute / sweep runner — `AUDIT_TIMEOUT_SEC = 1800`
+# means the audit-lane precompute and live audit runner allow up to
+# 30 min of wall time before recording a timeout. The 120 s default
+# ceiling is too tight under concurrency contention; see
+# `docs/audit/RUNNER_CACHE_POLICY.md`.
+AUDIT_TIMEOUT_SEC = 1800
+
     def __init__(self, L):
         self.L = L
         self.vol = L**NDIM
