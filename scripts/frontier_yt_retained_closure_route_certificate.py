@@ -2013,6 +2013,8 @@ def main() -> int:
             in certificates["fh_lsz_polefit8x8_chunk_combiner_gate"].get("actual_current_surface_status", "")
             or "eight-mode-x8 pole-fit stream"
             in certificates["fh_lsz_polefit8x8_chunk_combiner_gate"].get("actual_current_surface_status", "")
+            or "complete L12 eight-mode-x8 pole-fit summary"
+            in certificates["fh_lsz_polefit8x8_chunk_combiner_gate"].get("actual_current_surface_status", "")
         )
         and certificates["fh_lsz_polefit8x8_chunk_combiner_gate"].get("proposal_allowed") is False
     )

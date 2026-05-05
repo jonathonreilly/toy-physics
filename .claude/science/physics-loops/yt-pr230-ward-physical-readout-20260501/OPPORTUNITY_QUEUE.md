@@ -1,5 +1,20 @@
 # Opportunity Queue
 
+2026-05-05 update: polefit8x8 chunks061-063 are now packaged and pass the
+homogeneous eight-mode/x8 combiner. The separate polefit8x8 stream has
+`63/63` ready chunks and `1008/1008` saved configurations, so no further
+polefit8x8 manifest chunks remain to launch. Rerun diagnostics still block
+the scalar-LSZ shortcut: current `C_ss` fails Stieltjes monotonicity
+(`min_z=110.989`), finite-row contact subtraction remains non-identifying
+(`spread_z_at_max_q=3909.247`), affine contact cannot repair higher
+complete-monotonicity signs, and arbitrary polynomial contact interpolation
+remains non-identifying. The global guard now reports zero active FH/LSZ
+workers. The closure ranking is unchanged but now non-chunk authority is the
+highest-value work: certified `O_H/C_sH/C_HH` pole rows, same-source W/Z
+response rows with identity and `g2` certificates, genuine Schur `A/B/C`
+rows, a rank-one neutral-scalar theorem, same-surface scalar
+contact/denominator authority, or higher-volume honest production evidence.
+
 2026-05-05 update: polefit8x8 chunks061-063 are now active under the global
 collision guard. The launch record reports fixed seeds `2026051961`-
 `2026051963`, selected mass `0.75`, x8 scalar-two-point noise, eight modes,

@@ -162,7 +162,7 @@
     "fh_lsz_model_class_semantic_firewall": "bounded-support / FH-LSZ model-class semantic firewall passed",
     "fh_lsz_pade_stieltjes_bounds": "exact-support / FH-LSZ Pade-Stieltjes bounds gate; strict moment-threshold certificate absent",
     "fh_lsz_pole_saturation": "open / FH-LSZ pole-saturation threshold gate blocks current finite-shell fit",
-    "fh_lsz_polefit8x8_combiner": "bounded-support / FH-LSZ partial eight-mode-x8 pole-fit stream",
+    "fh_lsz_polefit8x8_combiner": "bounded-support / FH-LSZ complete L12 eight-mode-x8 pole-fit summary constructed",
     "fh_lsz_polefit8x8_postprocessor": "bounded-support / FH-LSZ eight-mode-x8 finite-shell pole diagnostic",
     "fh_lsz_polefit8x8_stieltjes_proxy_diagnostic": "exact negative boundary / current polefit8x8 C_ss proxy fails Stieltjes monotonicity",
     "fh_lsz_polynomial_contact_finite_shell": "exact negative boundary / finite-shell polynomial contact non-identifiability no-go",

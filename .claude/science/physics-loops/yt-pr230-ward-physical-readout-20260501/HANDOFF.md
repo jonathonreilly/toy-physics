@@ -1,5 +1,42 @@
 # Handoff
 
+Latest checkpoint, 2026-05-05 polefit8x8 chunks061-063 completion:
+
+- Packaged completed homogeneous eight-mode/x8 chunks061-063 with fixed seeds
+  `2026051961`-`2026051963` and isolated production output directories.
+- Added
+  `docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS061_063_CHECKPOINT_NOTE_2026-05-05.md`.
+- Reran the polefit8x8 combiner and postprocessor. The separate L12
+  polefit8x8 stream is now complete at `63/63` ready chunks and `1008/1008`
+  saved configurations, with eight mode rows and seven positive shells.
+- Because the combined rows changed, reran the scalar-LSZ shortcut
+  diagnostics. The raw `C_ss` proxy still fails Stieltjes monotonicity
+  (`min_z=110.989`); finite-row contact subtraction remains non-identifying
+  (`spread_z_at_max_q=3909.247`); affine contact still fails higher complete
+  monotonicity; arbitrary polynomial contact interpolation remains
+  non-identifying.
+- Narrowly updated `scripts/frontier_yt_retained_closure_route_certificate.py`
+  so its support-only polefit8x8 combiner check recognizes the final
+  `complete L12 eight-mode-x8 pole-fit summary` status wording.
+- Verification: combiner `PASS=6 FAIL=0`; postprocessor `PASS=5 FAIL=0`;
+  Stieltjes proxy diagnostic `PASS=9 FAIL=0`; contact-subtraction boundary
+  `PASS=10 FAIL=0`; affine-contact no-go `PASS=11 FAIL=0`;
+  polynomial-contact no-go `PASS=11 FAIL=0`; full assembly `PASS=56 FAIL=0`;
+  retained-route `PASS=201 FAIL=0`; campaign status `PASS=231 FAIL=0`;
+  non-chunk worklist `PASS=31 FAIL=0`; global collision guard
+  `PASS=8 FAIL=0` with active workers `0`.
+- Claim boundary: finite-shell polefit8x8 diagnostics are support only. The
+  current surface still lacks L16/L24 scaling, FV/IR/zero-mode control,
+  pole-saturation/model-class authority, same-surface scalar
+  contact/denominator authority, and canonical-Higgs/source-overlap closure.
+  No retained or proposed-retained closure is authorized.
+
+Next exact action: do not launch more polefit8x8 manifest chunks; the stream
+is complete. Pivot to certified `O_H/C_sH/C_HH` pole rows, same-source W/Z
+response rows with identity and `g2` certificates, genuine Schur `A/B/C`
+rows, a rank-one neutral-scalar theorem, or a same-surface scalar
+contact/denominator theorem.
+
 Latest checkpoint, 2026-05-05 polefit8x8 chunks061-063 launch:
 
 - After chunks055-060 were packaged and pushed, refreshed the global FH/LSZ

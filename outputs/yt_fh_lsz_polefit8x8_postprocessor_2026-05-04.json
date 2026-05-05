@@ -1,54 +1,54 @@
 {
   "actual_current_surface_status": "bounded-support / FH-LSZ eight-mode-x8 finite-shell pole diagnostic",
   "diagnostic_fit_if_ready": {
-    "chi2": 0.001342338430959755,
+    "chi2": 0.0013444631448239848,
     "dof": 6,
     "fit_kind": "diagnostic_weighted_linear_Gamma_vs_p_hat_sq",
     "input_rows": [
       {
-        "Gamma_ss_real": 8.171334086217405,
+        "Gamma_ss_real": 8.171623087434135,
         "Gamma_ss_real_err": NaN,
         "p_hat_sq": 0.0
       },
       {
-        "Gamma_ss_real": 7.979045912221596,
+        "Gamma_ss_real": 7.97929671646533,
         "Gamma_ss_real_err": NaN,
         "p_hat_sq": 0.26794919243112264
       },
       {
-        "Gamma_ss_real": 7.793233670143669,
+        "Gamma_ss_real": 7.7934323885022865,
         "Gamma_ss_real_err": NaN,
         "p_hat_sq": 0.5358983848622453
       },
       {
-        "Gamma_ss_real": 7.613204958284661,
+        "Gamma_ss_real": 7.613295211186355,
         "Gamma_ss_real_err": NaN,
         "p_hat_sq": 0.803847577293368
       },
       {
-        "Gamma_ss_real": 7.46680601752768,
+        "Gamma_ss_real": 7.467020693692644,
         "Gamma_ss_real_err": NaN,
         "p_hat_sq": 0.9999999999999998
       },
       {
-        "Gamma_ss_real": 7.2969735282625665,
+        "Gamma_ss_real": 7.297120607427111,
         "Gamma_ss_real_err": NaN,
         "p_hat_sq": 1.2679491924311224
       },
       {
-        "Gamma_ss_real": 7.131911490049559,
+        "Gamma_ss_real": 7.131961662506628,
         "Gamma_ss_real_err": NaN,
         "p_hat_sq": 1.5358983848622452
       },
       {
-        "Gamma_ss_real": 6.841440372392708,
+        "Gamma_ss_real": 6.841569275994463,
         "Gamma_ss_real_err": NaN,
         "p_hat_sq": 1.9999999999999996
       }
     ],
-    "intercept": 8.15395563674891,
-    "pole_p_hat_sq": 12.239190536239203,
-    "slope_dGamma_dp_hat_sq": -0.666216904835801,
+    "intercept": 8.154212334145875,
+    "pole_p_hat_sq": 12.237880647217002,
+    "slope_dGamma_dp_hat_sq": -0.6663091894101951,
     "strict_limit": "finite-shell diagnostic only; model-class/FV/IR/source-Higgs gates remain load-bearing"
   },
   "fail_count": 0,
@@ -61,7 +61,7 @@
   "proposal_allowed": false,
   "proposal_allowed_reason": "Finite-shell diagnostic fits do not provide retained scalar LSZ normalization.",
   "readiness": {
-    "complete_l12_target": false,
+    "complete_l12_target": true,
     "diagnostic_fit_ready": true,
     "distinct_shells": 8,
     "has_zero_shell": true,
@@ -69,7 +69,7 @@
     "mode_rows": 8,
     "model_class_blocks_retained_use": true,
     "positive_shells": 7,
-    "saved_configurations": 960
+    "saved_configurations": 1008
   },
   "strict_non_claims": [
     "not retained or proposed_retained y_t closure",

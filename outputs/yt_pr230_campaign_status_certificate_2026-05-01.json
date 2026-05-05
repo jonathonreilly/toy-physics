@@ -177,7 +177,7 @@
     "fh_lsz_pole_fit_model_class_gate": "open / FH-LSZ pole-fit model-class gate blocks finite-shell fit as evidence",
     "fh_lsz_pole_fit_postprocessor": "bounded-support / FH-LSZ scalar-pole fit postprocessor scaffold",
     "fh_lsz_pole_saturation_threshold_gate": "open / FH-LSZ pole-saturation threshold gate blocks current finite-shell fit",
-    "fh_lsz_polefit8x8_chunk_combiner_gate": "bounded-support / FH-LSZ partial eight-mode-x8 pole-fit stream",
+    "fh_lsz_polefit8x8_chunk_combiner_gate": "bounded-support / FH-LSZ complete L12 eight-mode-x8 pole-fit summary constructed",
     "fh_lsz_polefit8x8_chunk_manifest": "bounded-support / FH-LSZ eight-mode-x8 pole-fit chunk manifest",
     "fh_lsz_polefit8x8_postprocessor": "bounded-support / FH-LSZ eight-mode-x8 finite-shell pole diagnostic",
     "fh_lsz_polefit8x8_stieltjes_proxy_diagnostic": "exact negative boundary / current polefit8x8 C_ss proxy fails Stieltjes monotonicity",
