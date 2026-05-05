@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 61 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 213 |
+| **retained_bounded** | 214 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 844 |
-| audit_in_progress | 4 |
+| audit_in_progress | 3 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 31 |
@@ -39,8 +39,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 4 |
-| `audited_clean` | 368 |
+| `audit_in_progress` | 3 |
+| `audited_clean` | 369 |
 | `audited_conditional` | 399 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
@@ -112,7 +112,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
-| `lorentz_violation_derived_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `tensor_block_closure_test_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `wave_radiation_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -294,6 +293,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lensing_adjoint_kernel_reduced_model_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `linear_response_true_kubo_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `literature_backmatch_live_scan_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
+| `lorentz_violation_derived_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | C | - |
 | `main_open_cubic_validation_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `matter_inertial_closure_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
 | `matter_self_focusing_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
@@ -8189,6 +8189,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `metric_universe_for_node_level_classifier_search_not_defined`
   - `only_local_z_asym_added_to_fixed_3_property_AND_search`
   - `no_multiple_testing_or_global_search_certificate`
+- **auditor confidence:** high
+
+### `lorentz_violation_derived_note`
+
+- **Note:** [`LORENTZ_VIOLATION_DERIVED_NOTE.md`](../../docs/LORENTZ_VIOLATION_DERIVED_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** From a Planck-spaced Z^3 cubic lattice with the standard second-order nearest-neighbor finite-difference Laplacian, the leading low-momentum dispersion correction is the CPT-even dimension-6 cubic-anisotropic term -(a^2/12) sum_i p_i^4, with the runner's Planck-scale estimates below the quoted bounds.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-judicial-third-lorentz-violation-derived-20260505`  (codex-gpt-5; independence=judicial_review)
+- **load-bearing step:** E^2 = m^2 + p^2 - (a^2/12) sum_i p_i^4 + O(a^4 p^6).  _(class `C`)_
+- **chain closes:** True — The Planck spacing and standard finite-difference kinetic operator are explicit hypotheses of the bounded scope, not hidden dependencies. Under those hypotheses, the Taylor expansion fixes the a^2/12 coefficient and the cubic p_i^4 anisotropy, and the cached runner uses the corrected (4/a^2) normalization and reproduces the quoted Planck-scale ratios.
+- **rationale:** The second audit is right to phrase the result as conditional on a Planck-spaced Z^3 lattice and the standard nearest-neighbor finite-difference operator, but those conditions are already inside the audited bounded theorem scope and do not by themselves force audited_conditional. The clean verdict applies only to the scoped dispersion correction and arithmetic comparisons to the quoted bounds; broader note language about full sector-specific SME maps, taste-breaking phenomenology, or all-current experimental status is not ratified here.
 - **auditor confidence:** high
 
 ### `main_open_cubic_validation_2026-04-11`

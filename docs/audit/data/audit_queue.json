@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 548,
+    "critical": 547,
     "high": 23,
     "leaf": 180,
     "medium": 115
@@ -3059,27 +3059,6 @@
       "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/frontier_hadron_lane1_sqrt_sigma_b5_framework_link_audit.py",
-      "transitive_descendants": 285
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "cross_confirmation_disagreement",
-      "claim_id": "lorentz_violation_derived_note",
-      "claim_scope": "From a Z^3 cubic lattice with spacing a = l_Planck and the standard second-order finite-difference Laplacian normalization, the leading lattice dispersion correction is a CPT-even dimension-6 cubic-anisotropic p^4 term suppressed by a^2/12, with numerical Planck-scale estimates below the quoted bounds.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "disagreement",
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 8.66,
-      "note_path": "docs/LORENTZ_VIOLATION_DERIVED_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_lorentz_violation.py",
       "transitive_descendants": 285
     },
     {
@@ -25901,6 +25880,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 13,
-  "total_pending": 866
+  "ready_count": 12,
+  "total_pending": 865
 }

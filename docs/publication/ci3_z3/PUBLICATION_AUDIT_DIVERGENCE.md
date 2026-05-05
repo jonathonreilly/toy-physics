@@ -22,11 +22,11 @@ publication tables phrase it.
 | critical | `audited_renaming` | 20 |
 | critical | `audited_numerical_match` | 11 |
 | critical | `audited_failed` | 10 |
-| critical | `audit_in_progress` | 3 |
+| critical | `audit_in_progress` | 2 |
 | critical | `open_gate` | 2 |
 | critical | `retained_pending_chain` | 1 |
 
-**Total non-retained-grade rows in publication tables:** 550
+**Total non-retained-grade rows in publication tables:** 549
 
 ## Per-row breakdown
 
@@ -334,7 +334,6 @@ publication tables phrase it.
 | critical | `lorentz_boost_covariance_2d_theorem_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `lorentz_boost_covariance_3plus1d_theorem_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `lorentz_kernel_positive_closure_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
-| critical | `lorentz_violation_derived_note` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md |
 | critical | `mass_mixing_subspace_disjointness_theorem_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, RESULTS_INDEX.md |
 | critical | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `meson_charges_from_quark_y_note_2026-05-02` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
