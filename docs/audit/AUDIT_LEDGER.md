@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 39 |
 | **retained_no_go** | 95 |
-| **retained_bounded** | 184 |
+| **retained_bounded** | 185 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
 | unaudited | 1120 |
-| audit_in_progress | 5 |
+| audit_in_progress | 4 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 6 |
 | ~~audited_renaming~~ | 9 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 5 |
-| `audited_clean` | 290 |
+| `audit_in_progress` | 4 |
+| `audited_clean` | 291 |
 | `audited_conditional` | 257 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 45 |
@@ -109,7 +109,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `charged_lepton_two_higgs_canonical_reduction_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `fifth_family_radial_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `source_resolved_wavefield_v2_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `universal_gr_polarization_frame_bundle_blocker_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -190,6 +189,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `evolving_network_prototype_v6_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `ew_current_fierz_channel_decomposition_note_2026-05-01` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `ew_current_matching_rule_open_gate_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
+| `fifth_family_radial_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-fresh-agent | C | - |
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `fourth_family_complex_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
@@ -3846,6 +3846,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py_import_error_missing__field_from_sources`
   - `FIFTH_FAMILY_RADIAL_NOTE.md_unaudited_base_family`
   - `live_runner_output_not_reproducible`
+- **auditor confidence:** high
+
+### `fifth_family_radial_boundary_note`
+
+- **Note:** [`FIFTH_FAMILY_RADIAL_BOUNDARY_NOTE.md`](../../docs/FIFTH_FAMILY_RADIAL_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded deterministic runner row: radial-shell fifth-family slice at drift 0.20, seed 0 has plus < 0, minus > 0, zero = neutral = 0.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-judicial-fifth_family_radial_boundary_note-20260505`  (codex-fresh-agent; independence=judicial_review)
+- **load-bearing step:** runner row 0.20 seed 0: zero=+0.000e+00, plus=-2.028e-06, minus=+2.028e-06, neutral=+0.000e+00, ok=no  _(class `C`)_
+- **chain closes:** True — The restricted claim is only the exact bounded deterministic row, not a broader physical closure theorem. The runner source constructs the grown slice, radial-shell connectivity, and family measurement rather than printing the target constants, and the SHA-pinned cached output completes with the row asserted in the note. With deps none and the scope narrowed to this local row plus exact zero/neutral controls, no hidden physical bridge or stale-output blocker remains.
+- **rationale:** The restricted claim is only the exact bounded deterministic row, not a broader physical closure theorem. The runner source constructs the grown slice, radial-shell connectivity, and family measurement rather than printing the target constants, and the SHA-pinned cached output completes with the row asserted in the note. With deps none and the scope narrowed to this local row plus exact zero/neutral controls, no hidden physical bridge or stale-output blocker remains.
 - **auditor confidence:** high
 
 ### `fifth_family_radial_fm_transfer_note`
