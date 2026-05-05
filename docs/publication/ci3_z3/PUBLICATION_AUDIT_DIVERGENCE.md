@@ -18,12 +18,12 @@ publication tables phrase it.
 | criticality | effective_status | count |
 |---|---|---:|
 | critical | `unaudited` | 358 |
-| critical | `audited_conditional` | 145 |
+| critical | `audited_conditional` | 146 |
 | critical | `audited_renaming` | 20 |
 | critical | `audited_numerical_match` | 11 |
 | critical | `audited_failed` | 10 |
-| critical | `audit_in_progress` | 2 |
 | critical | `open_gate` | 2 |
+| critical | `audit_in_progress` | 1 |
 | critical | `retained_pending_chain` | 1 |
 
 **Total non-retained-grade rows in publication tables:** 549
@@ -489,7 +489,7 @@ publication tables phrase it.
 | critical | `teleportation_conclusion_boundary_note` | `audited_renaming` | `audited_renaming` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `teleportation_native_axioms_theory_note` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, RESULTS_INDEX.md |
 | critical | `teleportation_protocol_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, RESULTS_INDEX.md |
-| critical | `tensor_block_closure_test_note` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md |
+| critical | `tensor_block_closure_test_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `tensor_matching_completion_theorem_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `tensor_source_map_eta_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |

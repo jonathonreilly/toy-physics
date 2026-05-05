@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 844 |
-| audit_in_progress | 3 |
+| audit_in_progress | 2 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 31 |
-| ~~audited_conditional~~ | 399 |
+| ~~audited_conditional~~ | 400 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,9 +39,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 3 |
+| `audit_in_progress` | 2 |
 | `audited_clean` | 369 |
-| `audited_conditional` | 399 |
+| `audited_conditional` | 400 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 21 |
@@ -112,7 +112,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
-| `tensor_block_closure_test_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `wave_radiation_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
@@ -846,6 +845,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_operator_consistent_end_to_end_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_poisson_resource_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_record_field_closure_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
+| `tensor_block_closure_test_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | B | - |
 | `tensor_matching_completion_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | C | - |
 | `tensor_source_map_eta_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -11982,6 +11982,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Within the bounded default survey, the obstruction is not three-register cross-encoding itself; the intended logical protocol passes when the A/R Bell measurement is explicitly adapted to the two Alice-side encodings and Bob's corrections are adapted to Bob's chosen encoding.  _(class `C`)_
 - **chain closes:** True — The source note has no declared dependencies and confines the claim to a finite ideal logical-state survey. The runner independently enumerates the bounded KS encoding supports, constructs the logical Pauli/Bell objects and controls, and reproduces the stated pass/fail boundaries with zero unexpected results.
 - **rationale:** The clean verdict applies only to the open-gate artifact: a bounded finite-survey planning result over ideal encoded taste qubits. The runner does not merely restate the conclusion; it builds the surveyed encodings, logical operators, Bell projectors, teleportation trials, no-signaling metrics, and negative controls, and the current output matches the source note. The note explicitly excludes apparatus dynamics, physical resource preparation, durable records, Hamiltonian transport, noise, matter/object transfer, and faster-than-light signaling, so those missing physical bridges do not block the scoped artifact. Residual risk is limited to the finite sampling boundary: dim 2 side 4, dim 3 side 2, and dim 3 side 4 are capped at 512 triples per geometry rather than exhaustive over all possible triples.
+- **auditor confidence:** high
+
+### `tensor_block_closure_test_note`
+
+- **Note:** [`TENSOR_BLOCK_CLOSURE_TEST_NOTE.md`](../../docs/TENSOR_BLOCK_CLOSURE_TEST_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited, conditional on the imported scalar bridge and source-family generators, that the minimal rank-two tensor block is locally sufficient on exact local O_h and finite-rank probes but is not a single universal tensor closure across both families.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-judicial-third-tensor-block-closure-test-20260505`  (codex-gpt-5; independence=judicial_review)
+- **load-bearing step:** The runner finds local rank-two mixed-additivity on exact local O_h and finite-rank families, but cross-family mismatches in K_tensor, eta_coeff, and a_star show that one universal tensor closure law does not close across both.  _(class `B`)_
+- **chain closes:** False — The cached runner output supports the bounded diagnostic, but the runner starts by loading external frontier modules for the tensor completion, exact local O_h family, and finite-rank family. With deps=[], those load-bearing inputs are not closed inside the restricted packet, so this is cross-input verification rather than a first-principles class C theorem.
+- **rationale:** Issue: The note relies on a retained scalar bridge package and retained exact local O_h / finite-rank source families, while the claim metadata lists deps=[] and the restricted packet provides no retained authority for those inputs. Why this blocks: A hostile reviewer cannot verify from the packet that the imported runner objects are the claimed retained families or that probe_family constructs the relevant Einstein residuals from retained primitives. Repair target: Add direct retained-grade dependency edges or self-contained certificates for the scalar bridge and both source-family generators, or replace the runner with a self-contained first-principles construction. Claim boundary until fixed: Conditional on those imported inputs, the cached runner supports local rank-two additivity and non-universality of a single K_tensor/eta/a_star law across the two families.
 - **auditor confidence:** high
 
 ### `tensor_matching_completion_theorem_note`

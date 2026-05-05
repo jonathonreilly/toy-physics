@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 547,
+    "critical": 546,
     "high": 23,
     "leaf": 180,
     "medium": 115
@@ -3059,27 +3059,6 @@
       "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/frontier_hadron_lane1_sqrt_sigma_b5_framework_link_audit.py",
-      "transitive_descendants": 285
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "cross_confirmation_disagreement",
-      "claim_id": "tensor_block_closure_test_note",
-      "claim_scope": "Audited the bounded no-go that the minimal rank-two tensor block closes locally on the two retained source families but fails as a family-universal tensor completion across exact local O_h and finite-rank probes.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "disagreement",
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 8.66,
-      "note_path": "docs/TENSOR_BLOCK_CLOSURE_TEST_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_tensor_block_closure_test.py",
       "transitive_descendants": 285
     },
     {
@@ -25880,6 +25859,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 12,
-  "total_pending": 865
+  "ready_count": 11,
+  "total_pending": 864
 }
