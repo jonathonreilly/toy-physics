@@ -22,9 +22,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 104 |
 | **retained_bounded** | 198 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 16 |
+| open_gate | 17 |
 | unaudited | 872 |
-| audit_in_progress | 43 |
+| audit_in_progress | 42 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 43 |
-| `audited_clean` | 322 |
+| `audit_in_progress` | 42 |
+| `audited_clean` | 323 |
 | `audited_conditional` | 384 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -115,7 +115,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
-| `dm_selector_first_shoulder_exit_threshold_support_note_2026-04-21` | open_gate | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | open_gate | audit_in_progress | audit_in_progress | - | - | - | - |
 | `generation_axiom_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -216,6 +215,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_weak_matching_obstruction_note_2026-04-15` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `dm_pmns_asymptotic_source_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
+| `dm_selector_first_shoulder_exit_threshold_support_note_2026-04-21` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | A | - |
 | `dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `eigenvalue_anderson_phase_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `electric_sign_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -4556,6 +4556,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a bounded note whose executable closure is pending.
 - **auditor confidence:** medium
+
+### `dm_selector_first_shoulder_exit_threshold_support_note_2026-04-21`
+
+- **Note:** [`DM_SELECTOR_FIRST_SHOULDER_EXIT_THRESHOLD_SUPPORT_NOTE_2026-04-21.md`](../../docs/DM_SELECTOR_FIRST_SHOULDER_EXIT_THRESHOLD_SUPPORT_NOTE_2026-04-21.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** The exact threshold-volume family contains a unique earliest middle-branch breakpoint tau_b,min at recovered lift 0, this breakpoint lies inside the prior stabilization window, and evaluating the field there selects lift 0; no physical threshold law is claimed.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-fresh-second-dm_selector_first_shoulder_exit_threshold_support_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** For each recovered lift, tau_b(i) = log(1 + b_i); on the recovered bank the minimum is unique, belongs to lift 0, lies inside the stabilization window, and V_tau at that breakpoint makes lift 0 the unique minimizer.  _(class `A`)_
+- **chain closes:** True — The scoped open-gate claim closes: the asserted breakpoint and minimizer facts are algebraic/numerical consequences of the recovered-bank parameters and exact threshold-volume formula, and the note explicitly withholds the stronger physical-threshold-law claim. The result closes only as a narrowed open selector gate, not as a retained physical selector theorem.
+- **rationale:** The load-bearing step is an algebraic check over existing recovered-bank inputs: compute tau_b = log(1+b), verify its unique minimum at lift 0, compare it with the stabilization-window endpoints, and evaluate V_tau there. The cached runner completes with PASS=11 FAIL=0 and its substantive checks match the note's reported tau_b values and selector values. The runner does not derive a physical law, but the source note does not claim one; it states the remaining selector-side burden explicitly. Residual risk is dependency-grade rather than scope failure, but under the audited open-gate scope the chain closes.
+- **auditor confidence:** high
 
 ### `dm_selector_threshold_stabilization_support_theorem_note_2026-04-21`
 

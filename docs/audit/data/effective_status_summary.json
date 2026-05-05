@@ -38,7 +38,7 @@
   ],
   "cycles_detected": 165,
   "effective_status_counts": {
-    "audit_in_progress": 43,
+    "audit_in_progress": 42,
     "audited_conditional": 384,
     "audited_failed": 15,
     "audited_numerical_match": 21,
@@ -47,7 +47,7 @@
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,
     "meta": 46,
-    "open_gate": 16,
+    "open_gate": 17,
     "retained": 48,
     "retained_bounded": 198,
     "retained_no_go": 104,
