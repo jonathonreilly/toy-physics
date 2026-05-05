@@ -170,6 +170,7 @@ def main() -> int:
         "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
         "top_wz_covariance_marginal_derivation_no_go": "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
         "top_wz_factorization_independence_gate": "outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json",
+        "top_wz_deterministic_response_covariance_gate": "outputs/yt_top_wz_deterministic_response_covariance_gate_2026-05-05.json",
         "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
         "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
         "same_source_w_response_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
@@ -1272,6 +1273,18 @@ def main() -> int:
         is False
         and certificates["top_wz_factorization_independence_gate"].get(
             "strict_factorization_independence_gate_passed"
+        )
+        is False
+    )
+    top_wz_deterministic_response_covariance_gate_blocks = (
+        "deterministic W response covariance shortcut not derived"
+        in certificates["top_wz_deterministic_response_covariance_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["top_wz_deterministic_response_covariance_gate"].get("proposal_allowed")
+        is False
+        and certificates["top_wz_deterministic_response_covariance_gate"].get(
+            "strict_deterministic_response_covariance_gate_passed"
         )
         is False
     )
@@ -2463,6 +2476,11 @@ def main() -> int:
         certificates["top_wz_factorization_independence_gate"].get("actual_current_surface_status", ""),
     )
     report(
+        "top-wz-deterministic-response-covariance-gate-blocks",
+        top_wz_deterministic_response_covariance_gate_blocks,
+        certificates["top_wz_deterministic_response_covariance_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
         "wz-correlator-mass-fit-path-gate-blocks",
         wz_correlator_mass_fit_path_gate_blocks,
         certificates["wz_correlator_mass_fit_path_gate"].get("actual_current_surface_status", ""),
@@ -3157,8 +3175,10 @@ def main() -> int:
             "also blocks treating the Cl(3)/Z^3 same-source label or "
             "3+derived-time locality as independence authority.  A real "
             "paired row set or a strict same-surface product-measure/"
-            "conditional-independence/deterministic-response theorem is "
-            "required.  "
+            "conditional-independence theorem is required; the deterministic "
+            "W-response gate further shows deterministic W alone is not "
+            "covariance authority without paired top rows or a closed "
+            "same-surface covariance formula.  "
             "Continue chunked production only with "
             "seed-controlled replacement chunks or scheduler handoff; do not "
             "treat historical chunk001/chunk002 as independent evidence.  "

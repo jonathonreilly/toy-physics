@@ -54,6 +54,7 @@ PARENTS = {
     "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
     "top_wz_covariance_marginal_derivation_no_go": "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
     "top_wz_factorization_independence_gate": "outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json",
+    "top_wz_deterministic_response_covariance_gate": "outputs/yt_top_wz_deterministic_response_covariance_gate_2026-05-05.json",
     "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
     "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
     "same_source_w_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
@@ -196,6 +197,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "matched top/W covariance certificate absent",
                 "marginal derivation of top/W covariance rejected",
                 "same-source/native top/W factorization-independence shortcut rejected",
+                "deterministic W-response covariance shortcut rejected",
                 "same-source top-response certificate absent",
                 "same-source W-response row builder strict inputs absent",
                 "lightweight same-source W readout production rows absent",
@@ -218,6 +220,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["top_wz_matched_covariance_builder"],
                 PARENTS["top_wz_covariance_marginal_derivation_no_go"],
                 PARENTS["top_wz_factorization_independence_gate"],
+                PARENTS["top_wz_deterministic_response_covariance_gate"],
                 PARENTS["same_source_top_response_builder"],
                 PARENTS["same_source_w_response_row_builder"],
                 PARENTS["same_source_w_lightweight_readout"],
@@ -529,6 +532,18 @@ def main() -> int:
         )
         is False,
         statuses["top_wz_factorization_independence_gate"],
+    )
+    report(
+        "top-wz-deterministic-response-covariance-gate-blocks",
+        "deterministic W response covariance shortcut not derived"
+        in statuses["top_wz_deterministic_response_covariance_gate"]
+        and certs["top_wz_deterministic_response_covariance_gate"].get("proposal_allowed")
+        is False
+        and certs["top_wz_deterministic_response_covariance_gate"].get(
+            "strict_deterministic_response_covariance_gate_passed"
+        )
+        is False,
+        statuses["top_wz_deterministic_response_covariance_gate"],
     )
     report(
         "same-source-top-response-builder-open",

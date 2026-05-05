@@ -2491,3 +2491,52 @@ The non-chunk route stack is now sharper:
   denominator theorem;
 - neutral rank-one: strict primitive-cone certificate;
 - source-overlap: same-surface `O_H/C_sH/C_HH`, W/Z rows, or Schur rows.
+
+## 2026-05-05 Top/W Deterministic-Response Covariance Gate
+
+The remaining W/Z derivation-first escape hatch was narrowed again.  The test:
+does a deterministic W response by itself fix the matched top/W covariance?
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_top_wz_deterministic_response_covariance_gate.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_top_wz_deterministic_response_covariance_gate.py --scout
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=39 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=188 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=214 FAIL=0
+
+python3 scripts/frontier_yt_pr230_global_proof_audit.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_pr230_physics_loop_assumption_audit.py
+# SUMMARY: PASS=34 FAIL=0
+
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+# SUMMARY: PASS=20 FAIL=0
+```
+
+Result: exact negative boundary.  The runner keeps the W response
+deterministic while allowing two same-source top-response functionals with the
+same top marginal and opposite covariance against that W law.  Therefore
+deterministic W response alone is not matched-covariance authority.
+
+The W/Z route now requires one of:
+
+- measured matched top/W response rows;
+- a strict same-surface product-measure or conditional-independence theorem;
+- a closed covariance formula with paired top rows or equivalent same-surface
+  top-response authority.
+
+Even then, the route still needs same-source EW action, W/Z mass-fit,
+non-observed `g_2`, top-response identity, sector/canonical-Higgs identity,
+and orthogonal-correction control.

@@ -74,6 +74,11 @@ A future strict pass needs one of:
 - a closed covariance formula derived on the same Cl(3)/Z^3 3+derived-time
   surface.
 
+The deterministic-response option is now separately gated by
+[`YT_TOP_WZ_DETERMINISTIC_RESPONSE_COVARIANCE_GATE_NOTE_2026-05-05.md`](YT_TOP_WZ_DETERMINISTIC_RESPONSE_COVARIANCE_GATE_NOTE_2026-05-05.md):
+deterministic W response alone is not covariance authority without paired top
+rows or a closed same-surface covariance formula.
+
 ## Non-Claims
 
 This note does not claim retained or proposed_retained top-Yukawa closure.  It

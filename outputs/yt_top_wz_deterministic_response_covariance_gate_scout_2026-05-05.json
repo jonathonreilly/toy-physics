@@ -1,0 +1,147 @@
+{
+  "actual_current_surface_status": "scout-pass / top-W deterministic-response covariance schema",
+  "bare_retained_allowed": false,
+  "candidate_input": "outputs/yt_top_wz_deterministic_response_covariance_certificate_2026-05-05.json",
+  "candidate_validation": {
+    "checks": {
+      "certificate_kind": true,
+      "covariance_finite": true,
+      "deterministic_w_response_proved": true,
+      "electroweak_g2_ref": true,
+      "forbidden_synthesized_matched_response_rows_false": true,
+      "forbidden_used_H_unit_or_Ward_authority_false": true,
+      "forbidden_used_alpha_lm_plaquette_or_u0_false": true,
+      "forbidden_used_c2_or_zmatch_equal_one_false": true,
+      "forbidden_used_kappa_or_cos_theta_by_fiat_false": true,
+      "forbidden_used_observed_WZ_masses_as_selector_false": true,
+      "forbidden_used_observed_g2_as_selector_false": true,
+      "forbidden_used_observed_top_or_yukawa_as_selector_false": true,
+      "one_covariance_mechanism": true,
+      "orthogonal_correction_control_ref": true,
+      "phase_supported": true,
+      "production_phase_if_required": true,
+      "proposal_not_authorized_by_candidate": true,
+      "same_source_coordinate": true,
+      "same_source_ew_action_certificate_ref": true,
+      "same_surface_cl3_z3": true,
+      "sector_or_canonical_higgs_identity_ref": true,
+      "three_spatial_plus_derived_time": true,
+      "top_response_identity_ref": true,
+      "wz_mass_fit_or_theorem_ref": true
+    },
+    "failed_checks": [],
+    "mechanisms": {
+      "closed_covariance_formula": true,
+      "paired_top_rows_with_deterministic_w_rows": true
+    },
+    "present": true,
+    "valid": true
+  },
+  "deterministic_response_covariance_gate_passed": true,
+  "deterministic_w_counterfamily": {
+    "cov_minus": -1.9999999999999737e-05,
+    "cov_plus": 1.9999999999999737e-05,
+    "deterministic_w_alone_fixes_covariance": false,
+    "deterministic_w_response": "R_W(h)=0.516+0.003 h",
+    "geometry": "3 spatial + 1 derived-time source surface",
+    "latent_configuration_coordinate": [
+      -1.5,
+      -0.5,
+      0.5,
+      1.5
+    ],
+    "same_source_coordinate": true,
+    "substrate": "Cl(3)/Z^3",
+    "top_marginals_equal": true,
+    "top_response_minus_rows": [
+      1.426,
+      1.422,
+      1.418,
+      1.414
+    ],
+    "top_response_plus_rows": [
+      1.414,
+      1.418,
+      1.422,
+      1.426
+    ],
+    "w_law_identical": true,
+    "w_response_rows": [
+      0.5115000000000001,
+      0.5145000000000001,
+      0.5175,
+      0.5205
+    ]
+  },
+  "exact_next_action": "To use the deterministic-response W/Z route, supply the future certificate with paired top rows or a closed covariance formula.  Otherwise produce matched top/WZ response rows directly.",
+  "fail_count": 0,
+  "framework_native_scope": {
+    "geometry": "3 spatial + 1 derived-time source surface",
+    "same_source_coordinate": true,
+    "substrate": "Cl(3)/Z^3"
+  },
+  "future_acceptance_contract": {
+    "future_certificate": "outputs/yt_top_wz_deterministic_response_covariance_certificate_2026-05-05.json",
+    "required": [
+      "same-surface Cl(3)/Z^3 and 3+derived-time scope",
+      "deterministic W response proved on the same source coordinate",
+      "paired top response rows or a closed covariance formula",
+      "same-source EW action certificate",
+      "W/Z mass-fit path or theorem certificate",
+      "same-source top-response identity certificate",
+      "non-observed electroweak g2 authority certificate",
+      "sector/canonical-Higgs identity plus orthogonal correction control",
+      "forbidden-import firewall"
+    ]
+  },
+  "mode": "scout",
+  "parent_certificates": {
+    "canonical_higgs_operator": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "delta_perp_tomography_builder": "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json",
+    "electroweak_g2_certificate_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
+    "one_higgs_completeness_orthogonal_null": "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json",
+    "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
+    "same_source_top_response_identity_builder": "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json",
+    "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
+    "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
+    "top_wz_covariance_marginal_no_go": "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
+    "top_wz_factorization_independence_gate": "outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json",
+    "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
+    "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
+    "wz_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
+    "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
+    "wz_same_source_ew_action_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
+    "wz_same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json"
+  },
+  "parent_statuses": {
+    "canonical_higgs_operator": "open / canonical-Higgs operator certificate absent",
+    "delta_perp_tomography_builder": "open / delta_perp tomography correction production rows absent",
+    "electroweak_g2_certificate_builder": "open / electroweak g2 certificate builder inputs absent",
+    "one_higgs_completeness_orthogonal_null": "conditional-support / one-Higgs completeness orthogonal-null theorem; premise absent",
+    "same_source_sector_overlap": "exact negative boundary / same-source sector-overlap identity obstruction",
+    "same_source_top_response_builder": "open / same-source top-response identity or covariance inputs absent",
+    "same_source_top_response_identity_builder": "open / same-source top-response identity blockers remain",
+    "same_source_w_response_decomposition": "exact-support / same-source W-response decomposition theorem; current rows absent",
+    "same_source_w_response_orthogonal_correction": "open / same-source W-response orthogonal-correction gate not passed",
+    "top_wz_covariance_marginal_no_go": "exact negative boundary / matched top-W covariance not derivable from marginal response support",
+    "top_wz_factorization_independence_gate": "exact negative boundary / same-source top-W factorization not derived on current PR230 surface",
+    "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
+    "wz_g2_authority_firewall": "exact negative boundary / WZ response g2 authority absent for PR230",
+    "wz_mass_fit_path_gate": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
+    "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
+    "wz_same_source_ew_action_builder": "open / same-source EW action certificate absent",
+    "wz_same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface"
+  },
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "A deterministic W response does not by itself fix matched top/W covariance.  The current surface lacks paired top/W response rows, a same-source EW action, top-response identity, W/Z mass-fit path, non-observed g2 authority, and a closed covariance theorem.",
+  "strict_deterministic_response_covariance_gate_passed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not create matched top/W rows",
+    "does not define y_t through a matrix element or y_t_bare",
+    "does not use observed W/Z/top/y_t/g2 selectors",
+    "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, kappa_s=1, c2=1, Z_match=1, or cos(theta)=1"
+  ]
+}

@@ -314,6 +314,9 @@ def main() -> int:
         "top_wz_factorization_independence_gate": load(
             "outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json"
         ),
+        "top_wz_deterministic_response_covariance_gate": load(
+            "outputs/yt_top_wz_deterministic_response_covariance_gate_2026-05-05.json"
+        ),
         "same_source_top_response_builder": load(
             "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json"
         ),
@@ -1479,6 +1482,18 @@ def main() -> int:
         statuses["top_wz_factorization_independence_gate"],
     )
     report(
+        "top-wz-deterministic-response-covariance-gate-blocks",
+        "deterministic W response covariance shortcut not derived"
+        in str(statuses["top_wz_deterministic_response_covariance_gate"])
+        and certificates["top_wz_deterministic_response_covariance_gate"].get("proposal_allowed")
+        is False
+        and certificates["top_wz_deterministic_response_covariance_gate"].get(
+            "strict_deterministic_response_covariance_gate_passed"
+        )
+        is False,
+        statuses["top_wz_deterministic_response_covariance_gate"],
+    )
+    report(
         "same-source-w-response-row-builder-open",
         "same-source W-response row builder"
         in str(statuses["same_source_w_response_row_builder"])
@@ -2185,7 +2200,7 @@ def main() -> int:
         },
         {
             "route": "non-source response rank repair",
-            "needed": "certified O_H with C_sH/C_HH pole Gram purity, or same-source top/W/Z response rows with matched covariance, sector-overlap, and canonical-Higgs identity",
+            "needed": "certified O_H with C_sH/C_HH pole Gram purity, or same-source top/W/Z response rows with matched covariance, sector-overlap, and canonical-Higgs identity; deterministic W response must include paired top rows or a closed covariance formula",
         },
         {
             "route": "full positive closure assembly",
@@ -2398,7 +2413,10 @@ def main() -> int:
             "builder now defines the candidate certificate and records absent "
             "same-source W/Z rows.  The gate rejects static EW algebra or "
             "slope-only W/Z outputs without production mass fits and identity "
-            "certificates.  The W/Z harness absence guard now "
+            "certificates.  The top/W covariance gates now also reject deriving "
+            "the matched covariance from marginals, native same-source labels, "
+            "or deterministic W response alone; a paired row set or closed "
+            "same-surface covariance theorem is still required.  The W/Z harness absence guard now "
             "records missing W/Z response rows directly in future production "
             "certificates; that guard is not evidence.  The source-pole/canonical-Higgs "
             "mixing obstruction now blocks the adjacent pole-identity shortcut: "

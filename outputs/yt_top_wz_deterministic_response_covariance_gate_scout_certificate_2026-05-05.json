@@ -1,0 +1,41 @@
+{
+  "certificate_kind": "top_wz_deterministic_response_covariance",
+  "certificates": {
+    "electroweak_g2_certificate": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
+    "orthogonal_correction_control_certificate": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
+    "same_source_ew_action_certificate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "sector_or_canonical_higgs_identity_certificate": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "top_response_identity_certificate": "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json",
+    "wz_mass_fit_or_theorem_certificate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json"
+  },
+  "closed_covariance_formula_proved": true,
+  "cov_dE_top_dM_W": 0.0,
+  "deterministic_w_response_proved": true,
+  "deterministic_w_response_rows": [
+    0.5,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "firewall": {
+    "synthesized_matched_response_rows": false,
+    "used_H_unit_or_Ward_authority": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_c2_or_zmatch_equal_one": false,
+    "used_kappa_or_cos_theta_by_fiat": false,
+    "used_observed_WZ_masses_as_selector": false,
+    "used_observed_g2_as_selector": false,
+    "used_observed_top_or_yukawa_as_selector": false
+  },
+  "phase": "scout",
+  "proposal_allowed": false,
+  "same_source_coordinate": true,
+  "same_surface_cl3_z3": true,
+  "three_spatial_plus_derived_time": true,
+  "top_response_rows": [
+    1.0,
+    1.1,
+    0.9,
+    1.0
+  ]
+}

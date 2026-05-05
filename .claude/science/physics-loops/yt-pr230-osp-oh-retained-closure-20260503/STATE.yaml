@@ -7,13 +7,13 @@ target_status: retained-positive-closure
 actual_current_surface_status: open
 active_residual: "six non-chunk work units remain: same-surface O_H/source-Higgs, W/Z response, scalar-LSZ, Schur rows, neutral rank-one, matching/running after readout"
 latest_checkpoint:
-  utc: "2026-05-05T04:45:00Z"
-  block: 57
-  artifact: "neutral-scalar primitive-cone certificate gate"
-  status: "exact-support / open; neutral rank-one route is executable only after a strict same-surface primitive-cone certificate exists"
-  result: "Pade-Stieltjes gate and neutral primitive-cone gate now define the scalar-LSZ and neutral-rank positive contracts; both future certificates are absent and aggregate gates remain proposal_allowed=false"
-  claim_boundary: "no retained/proposed-retained closure, no chunk packaging, no y_t_bare, no H_unit/Ward/alpha_LM/plaquette/u0/observed-target/unit-shortcut authority; finite source/shell rows are not promoted to scalar-LSZ moment bounds and positivity preservation is not promoted to neutral-sector irreducibility"
-  live_compute: "chunk worker check-in: previous polefit8x8 PIDs 53530-53535 are no longer present; no chunk019-024 root JSONs or output directories were found in this worktree, and this checkpoint does not package chunk artifacts"
+  utc: "2026-05-05T05:25:00Z"
+  block: 58
+  artifact: "top/W deterministic-response covariance gate"
+  status: "exact negative boundary / deterministic W response alone is not matched-covariance authority"
+  result: "The W/Z derivation-first route now rejects marginals, native same-source labels, and deterministic W response alone; a positive route needs matched top/W rows or a closed same-surface covariance formula plus EW action, top identity, W/Z mass-fit, non-observed g2, and overlap/correction certificates"
+  claim_boundary: "no retained/proposed-retained closure, no chunk packaging, no y_t_bare, no H_unit/Ward/alpha_LM/plaquette/u0/observed-target/unit-shortcut authority; deterministic W response is not promoted to top/W covariance without paired top rows or a closed covariance theorem"
+  live_compute: "chunk worker remains separate; this checkpoint is non-chunk W/Z route-gating only"
   checkpoint_files:
     - scripts/frontier_yt_fh_lsz_pade_stieltjes_bounds_gate.py
     - docs/YT_FH_LSZ_PADE_STIELTJES_BOUNDS_GATE_NOTE_2026-05-05.md
@@ -38,6 +38,11 @@ latest_checkpoint:
     - outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json
     - outputs/yt_top_wz_factorization_independence_gate_scout_2026-05-05.json
     - outputs/yt_top_wz_factorization_independence_gate_scout_certificate_2026-05-05.json
+    - scripts/frontier_yt_top_wz_deterministic_response_covariance_gate.py
+    - docs/YT_TOP_WZ_DETERMINISTIC_RESPONSE_COVARIANCE_GATE_NOTE_2026-05-05.md
+    - outputs/yt_top_wz_deterministic_response_covariance_gate_2026-05-05.json
+    - outputs/yt_top_wz_deterministic_response_covariance_gate_scout_2026-05-05.json
+    - outputs/yt_top_wz_deterministic_response_covariance_gate_scout_certificate_2026-05-05.json
     - scripts/frontier_yt_top_wz_matched_covariance_certificate_builder.py
     - docs/YT_TOP_WZ_MATCHED_COVARIANCE_CERTIFICATE_BUILDER_NOTE_2026-05-04.md
     - outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json

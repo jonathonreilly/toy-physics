@@ -1006,3 +1006,20 @@ Findings checked:
 - The note and runner do not claim retained/proposed-retained closure and do
   not use observed selectors, `H_unit`/Ward authority, `alpha_LM`/plaquette/u0,
   or unit-overlap shortcuts.
+
+# 2026-05-05 Top/W Deterministic-Response Covariance Gate Review
+
+Disposition: pass as exact negative boundary, not as closure.
+
+Findings checked:
+
+- The runner tests the deterministic-W shortcut directly after the marginal
+  covariance and native-label factorization no-gos.
+- The witness keeps one deterministic W law but permits two same-source
+  top-response functionals with equal top marginals and opposite matched
+  covariance.
+- Scout mode validates the future certificate schema; current mode writes no
+  strict covariance certificate.
+- The note and runner do not claim retained/proposed-retained closure and do
+  not use observed selectors, `H_unit`/Ward authority, `alpha_LM`/plaquette/u0,
+  or by-fiat normalization shortcuts.

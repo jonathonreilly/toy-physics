@@ -44,6 +44,7 @@ PARENTS = {
     "top_wz_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
     "top_wz_covariance_marginal_no_go": "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
     "top_wz_factorization_gate": "outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json",
+    "top_wz_deterministic_response_covariance_gate": "outputs/yt_top_wz_deterministic_response_covariance_gate_2026-05-05.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "wz_mass_fit_rows": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
     "same_source_w_rows": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
@@ -85,6 +86,7 @@ FUTURE_FILES = {
     "pade_stieltjes_bounds_certificate": "outputs/yt_fh_lsz_pade_stieltjes_bounds_certificate_2026-05-05.json",
     "contact_subtraction_certificate": "outputs/yt_fh_lsz_contact_subtraction_certificate_2026-05-05.json",
     "matched_top_wz_rows": "outputs/yt_top_wz_matched_response_rows_2026-05-04.json",
+    "deterministic_response_covariance_certificate": "outputs/yt_top_wz_deterministic_response_covariance_certificate_2026-05-05.json",
     "wz_mass_response_rows": "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
     "non_observed_g2_certificate": "outputs/yt_electroweak_g2_certificate_2026-05-05.json",
     "delta_perp_rows": "outputs/yt_delta_perp_tomography_rows_2026-05-04.json",
@@ -156,6 +158,7 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
             "current_state": "blocked",
             "remaining": [
                 FUTURE_FILES["matched_top_wz_rows"],
+                FUTURE_FILES["deterministic_response_covariance_certificate"],
                 FUTURE_FILES["wz_mass_response_rows"],
                 FUTURE_FILES["non_observed_g2_certificate"],
                 FUTURE_FILES["delta_perp_rows"],
@@ -164,6 +167,7 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 status(certs["wz_same_source_action"]),
                 status(certs["top_wz_covariance_marginal_no_go"]),
                 status(certs["top_wz_factorization_gate"]),
+                status(certs["top_wz_deterministic_response_covariance_gate"]),
                 status(certs["electroweak_g2_builder"]),
                 status(certs["wz_g2_casimir_no_go"]),
                 status(certs["wz_g2_firewall"]),
@@ -171,7 +175,7 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
             ],
             "next_action": (
                 "produce matched top/WZ response rows and non-observed g2 authority, "
-                "or derive a strict product-measure/conditional-independence theorem"
+                "or derive a strict product-measure/conditional-independence/closed-covariance theorem"
             ),
         },
         {
@@ -272,6 +276,7 @@ def main() -> int:
     report("canonical-oh-route-gated", "canonical-Higgs operator certificate absent" in status(certs["canonical_oh_gate"]), status(certs["canonical_oh_gate"]))
     report("source-higgs-route-gated", "source-Higgs production launch blocked" in status(certs["source_higgs_readiness"]), status(certs["source_higgs_readiness"]))
     report("wz-route-gated", "same-source EW action not defined" in status(certs["wz_same_source_action"]), status(certs["wz_same_source_action"]))
+    report("wz-deterministic-response-shortcut-gated", "deterministic W response covariance shortcut not derived" in status(certs["top_wz_deterministic_response_covariance_gate"]), status(certs["top_wz_deterministic_response_covariance_gate"]))
     report("wz-g2-shortcuts-closed", "does not certify PR230 g2" in status(certs["wz_g2_casimir_no_go"]) and "response-only" in status(certs["wz_g2_self_norm_no_go"]), "Casimir and response-only g2 shortcuts rejected")
     report("scalar-lsz-route-gated", "Stieltjes moment-certificate gate" in status(certs["lsz_stieltjes_moment_gate"]), status(certs["lsz_stieltjes_moment_gate"]))
     report("pade-stieltjes-route-gated", "Pade-Stieltjes bounds gate" in status(certs["lsz_pade_stieltjes_bounds"]), status(certs["lsz_pade_stieltjes_bounds"]))

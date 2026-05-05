@@ -78,6 +78,12 @@ Open imports:
   route needs measured matched rows or a strict product-measure,
   conditional-independence, deterministic-response, or closed covariance
   theorem;
+- deterministic W-response covariance gate is closed negatively on the current
+  PR230 surface: a deterministic W response does not fix
+  `cov_dE_top_dM_W` unless it is paired with top-response rows or a closed
+  same-surface covariance formula, and the current EW action, top identity,
+  W/Z mass-fit, non-observed `g_2`, and overlap/correction certificates remain
+  absent;
 - cross-lane `O_h/O_H` authority is closed negatively: gravity `O_h` shell
   notes, lepton/DM two-Higgs reductions, Higgs mass/vacuum summaries, EW
   one-Higgs algebra, and Koide `O_h` support/no-go surfaces are

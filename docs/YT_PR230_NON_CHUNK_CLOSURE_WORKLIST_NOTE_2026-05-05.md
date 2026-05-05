@@ -19,7 +19,9 @@ This is an integration/worklist gate, not a physics closure theorem.
   operator certificate, then produce `C_ss/C_sH/C_HH` source-Higgs rows.
 - **Same-source W/Z response:** produce matched top/WZ response rows,
   W/Z mass-response rows, non-observed `g_2`, and strict `delta_perp`; or
-  derive a real same-surface product-measure/conditional-independence theorem.
+  derive a real same-surface product-measure, conditional-independence, or
+  closed-covariance theorem.  Deterministic W response alone is now explicitly
+  gated: it needs paired top rows or a closed same-surface covariance formula.
 - **Scalar-LSZ model/FV/IR:** produce a strict Stieltjes/Pade
   moment-threshold-FV certificate, a same-surface contact-subtraction
   certificate, a scalar-denominator/analytic-continuation theorem, or a
@@ -45,5 +47,5 @@ real positive certificate and the aggregate gates pass.
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
 python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
-# SUMMARY: PASS=19 FAIL=0
+# SUMMARY: PASS=20 FAIL=0
 ```

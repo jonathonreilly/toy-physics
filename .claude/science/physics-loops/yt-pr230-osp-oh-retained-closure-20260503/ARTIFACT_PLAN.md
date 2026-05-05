@@ -246,3 +246,21 @@ connected neutral transfer matrix, a positive primitive power, isolated-pole
 and overlap certificates, and the forbidden-import firewall.  The current
 surface has only conditional Perron support and no such primitive-cone
 certificate.
+
+Completed in the deterministic W-response covariance continuation:
+
+- `scripts/frontier_yt_top_wz_deterministic_response_covariance_gate.py`
+- `docs/YT_TOP_WZ_DETERMINISTIC_RESPONSE_COVARIANCE_GATE_NOTE_2026-05-05.md`
+- `outputs/yt_top_wz_deterministic_response_covariance_gate_2026-05-05.json`
+- `outputs/yt_top_wz_deterministic_response_covariance_gate_scout_2026-05-05.json`
+- `outputs/yt_top_wz_deterministic_response_covariance_gate_scout_certificate_2026-05-05.json`
+- refreshed full assembly, retained-route, campaign, global-proof, assumption,
+  and non-chunk worklist certificates.
+
+This closes the deterministic-W shortcut negatively.  Even with a deterministic
+W response, the same top marginal can pair with the same W law to produce
+opposite `cov_dE_top_dM_W` unless the paired top rows or a closed same-surface
+covariance formula are supplied.  The W/Z route remains open only through real
+matched rows or a strict same-surface covariance theorem plus the EW action,
+top identity, W/Z mass-fit, non-observed `g_2`, and overlap/correction
+certificates.
