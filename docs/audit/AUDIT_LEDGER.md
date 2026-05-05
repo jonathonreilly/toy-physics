@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained** | 43 |
 | **retained_no_go** | 100 |
 | **retained_bounded** | 191 |
-| _retained_pending_chain_ | 1 |
+| _retained_pending_chain_ | 2 |
 | open_gate | 16 |
 | unaudited | 880 |
-| audit_in_progress | 55 |
+| audit_in_progress | 54 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,10 +36,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 55 |
+| `audit_in_progress` | 54 |
 | `audited_clean` | 306 |
 | `audited_conditional` | 381 |
-| `audited_decoration` | 5 |
+| `audited_decoration` | 6 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 29 |
@@ -48,11 +48,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 615 |
-| `decoration` | 5 |
+| `decoration` | 6 |
 | `meta` | 54 |
 | `no_go` | 183 |
 | `open_gate` | 111 |
-| `positive_theorem` | 814 |
+| `positive_theorem` | 813 |
 
 | criticality | count |
 |---|---:|
@@ -61,7 +61,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `medium` | 203 |
 | `leaf` | 645 |
 
-- **Retained pending chain closure:** 1
+- **Retained pending chain closure:** 2
 - **Citation cycles detected:** 165
 
 ### Runner classification (static heuristic)
@@ -109,7 +109,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `background_independence_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -850,6 +849,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `yt_schur_stability_gap_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `yt_zero_import_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | fresh_context | codex-gpt-5 | A | `alpha_s_derived_note` |
 | `diamond_signal_budget_hardening_note` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-gpt-5.5 | A | `docs/MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md` |
 | `g_bare_rescaling_freedom_removal_theorem_note_2026-05-03` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | cross_family | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
 | `gellmann_completeness_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | cross_family | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
@@ -1162,6 +1162,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `ai_methodology/raw/prompts_session_ebae4639_jonreilly.md is raw transcript rather than canonical theorem note`
   - `stale embedded PASS=41/JTS-residue transcript state conflicts with live PASS=13/JTS-derived runner state`
   - `canonical ISSR1/JTS theorem notes are not registered as this row's one-hop dependencies`
+- **auditor confidence:** high
+
+### `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24`
+
+- **Note:** [`ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md`](../../docs/ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md)
+- **claim_type:** `decoration`
+- **claim_scope:** Exact algebraic identity alpha_LM^2 = alpha_bare * alpha_s(v) on the coupling surface alpha_LM = alpha_bare/u_0 and alpha_s(v) = alpha_bare/u_0^2, audited only as a corollary of those definitions.
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** _retained_pending_chain_  (reason: `decoration_waiting_on:alpha_s_derived_note`)
+- **auditor:** `codex-fresh-third-alpha_lm_geometric_mean_identity_theorem_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** alpha_LM^2 = (alpha_bare / u_0)^2 = alpha_bare^2 / u_0^2 = alpha_bare * (alpha_bare / u_0^2) = alpha_bare * alpha_s(v).  _(class `A`)_
+- **chain closes:** True — The equation follows exactly by substituting the retained coupling-surface definitions. The closure is algebraic and introduces no independent observable, comparator, or physical bridge.
+- **rationale:** Issue: the stated identity is a true substitution corollary of the retained coupling-surface definitions, not an independent retained theorem. Why this blocks: it adds no independent comparator, falsifiability, or new physical content beyond the parent alpha_s coupling construction. Repair target: keep it boxed as an algebraic corollary unless a later audit shows it supplies genuine compression or becomes load-bearing for a non-decoration claim. Claim boundary until fixed: safe to cite as bookkeeping under alpha_s_derived_note, not as a separate retained positive theorem.
+- **decoration parent:** `alpha_s_derived_note`
 - **auditor confidence:** high
 
 ### `alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30`
