@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 50 |
-| **retained_no_go** | 112 |
+| **retained_no_go** | 113 |
 | **retained_bounded** | 200 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 871 |
-| audit_in_progress | 24 |
+| audit_in_progress | 23 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 24 |
-| `audited_clean` | 336 |
+| `audit_in_progress` | 23 |
+| `audited_clean` | 337 |
 | `audited_conditional` | 390 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -122,7 +122,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `lattice_complementarity_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `lorentz_violation_derived_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `pmns_transfer_operator_dominant_mode_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `s3_boundary_link_theorem_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -328,6 +327,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_record_overlap_kernel_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `persistent_record_refinement_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `physical_lattice_necessity_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
+| `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
@@ -8754,6 +8754,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: The finite additivity theorem is algebraically valid under its assumptions, but the Planck-normalization consequence depends on accepting that the primitive boundary/worldtube count is the microscopic gravitational boundary/action carrier. Why this blocks: without that physical bridge, the derivation of a/l_P=1 is only an internal conditional normalization, not a first-principles Planck result. The runner verifies arithmetic, example invariance, orientation symmetry, and explicit non-identification of the carrier premise, but it cannot establish the carrier premise itself. Repair target: provide an independent derivation that the primitive one-step boundary/worldtube count is the gravitational boundary/action carrier, or demote all Planck-normalization language to a conditional corollary. Claim boundary until fixed: retain only the bounded theorem that a local additive primitive-face rule normalized by c_cell=1/4 uniquely extends to finite primitive-face unions with density c_cell/a^2.
 - **open / conditional deps cited:**
   - `derive primitive one-step boundary/worldtube count as microscopic carrier of gravitational boundary/action density`
+- **auditor confidence:** high
+
+### `planck_boundary_orientation_incidence_no_go_note_2026-04-30`
+
+- **Note:** [`PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md`](../../docs/PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Boundary-incidence-only finite exterior-algebra no-go: oriented primitive four-cell incidence gives a Hodge-dual equivalence between P_1 normal one-forms and P_3 oriented faces/fluxes, so it does not force P_1 = P_A without an added cochain-normal primitivity rule.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-planck-boundary-orientation-incidence-no-go-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Oriented face-incidence data are exactly the Hodge image of normal one-form data, with a perfect normal/face pairing, so boundary incidence identifies the rank-four P_1 and P_3 carriers but does not select P_1.  _(class `A`)_
+- **chain closes:** True — The note grants W, H_cell, Hamming projectors, orientation, and the Euclidean Hodge map; from these inputs the identities *P_1*^-1 = P_3, i_{e_a}Omega = *e^a, and the identity incidence pairing close exactly. The claim is explicitly bounded away from the separate link-local action/source route.
+- **rationale:** The runner constructs the exterior-algebra basis, Hodge star, projectors, oriented face columns, incidence pairing, local number operators, and symmetry tests directly, rather than importing a P_A selector. All ten completed checks are class-A algebraic identity checks and pass with zero reported error. Within the stated boundary-incidence-only scope, the substrate-preserving Hodge equivalence between P_1 and P_3 is sufficient to block an asymmetric derivation of P_1 from boundary incidence alone. Residual risk is scope only: a later physical action/source theorem may select cochain normals, but that route is explicitly outside this note's claim.
 - **auditor confidence:** high
 
 ### `planck_finite_response_no_go_note_2026-04-24`

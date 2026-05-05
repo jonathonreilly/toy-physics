@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 575,
+    "critical": 574,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -3039,27 +3039,6 @@
       "ready": true,
       "runner_path": "scripts/persistent_object_top4_multistage_transfer_sweep.py",
       "transitive_descendants": 288
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "planck_boundary_orientation_incidence_no_go_note_2026-04-30",
-      "claim_scope": "Within the granted finite exterior algebra H_cell ~= Lambda^* span(t,x,y,z) with oriented Euclidean Hodge star, oriented primitive boundary incidence does not force P_1=P_A over the Hodge-dual P_3 carrier.",
-      "claim_type": "no_go",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.66,
-      "note_path": "docs/PLANCK_BOUNDARY_ORIENTATION_INCIDENCE_NO_GO_NOTE_2026-04-30.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_planck_boundary_orientation_incidence_no_go.py",
-      "transitive_descendants": 285
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -26938,6 +26917,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 55,
-  "total_pending": 913
+  "ready_count": 54,
+  "total_pending": 912
 }
