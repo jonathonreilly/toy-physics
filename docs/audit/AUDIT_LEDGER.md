@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 198 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 16 |
-| unaudited | 874 |
+| unaudited | 873 |
 | audit_in_progress | 44 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
-| ~~audited_conditional~~ | 383 |
+| ~~audited_conditional~~ | 384 |
 | ~~audited_failed~~ | 15 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -38,12 +38,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 44 |
 | `audited_clean` | 320 |
-| `audited_conditional` | 383 |
+| `audited_conditional` | 384 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 29 |
-| `unaudited` | 920 |
+| `unaudited` | 919 |
 
 | claim_type | count |
 |---|---:|
@@ -631,6 +631,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_pns_attack_cascade_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
+| `dm_selector_threshold_stabilization_support_theorem_note_2026-04-21` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_split2_dense_grid_lipschitz_dominance_support_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -4541,6 +4542,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a bounded note whose executable closure is pending.
 - **auditor confidence:** medium
+
+### `dm_selector_threshold_stabilization_support_theorem_note_2026-04-21`
+
+- **Note:** [`DM_SELECTOR_THRESHOLD_STABILIZATION_SUPPORT_THEOREM_NOTE_2026-04-21.md`](../../docs/DM_SELECTOR_THRESHOLD_STABILIZATION_SUPPORT_THEOREM_NOTE_2026-04-21.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Within the already-defined intrinsic threshold-volume selector family on the recovered five-lift DM bank, lift 0 has a nonempty high-threshold interval (0.131637578221552..., 0.271641142726493...) on which it is the unique minimizer, narrowing but not closing the microscopic selector-law gate.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-first-dm_selector_threshold_stabilization_support_theorem_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** On the recovered bank, the preferred recovered lift is the unique minimizer of the exact intrinsic threshold-volume selector family for every tau in (tau_star, tau_zero(next)).  _(class `A`)_
+- **chain closes:** False — The local threshold-window computation is substantively supported by the runner's crossover, zero-volume, and branch checks, but the primary runner exits nonzero with PASS=13 FAIL=1 rather than the note's expected PASS=14 FAIL=0. The failed check is the open-selector-register validation needed for the claimed open-gate framing, so the scoped open gate cannot be cleanly closed until the runner artifact and open-dependency framing agree.
+- **rationale:** Issue: the note's reproduction block expects PASS=14 FAIL=0, but cached runner output exits with status 1 and reports PASS=13 FAIL=1, failing the check that the review register still lists the finer right-sensitive microscopic point-selection law as open. Why this blocks: the mathematical stabilization-window checks support the bounded selector-family theorem, but the note is scoped as support on an open DM selector gate and its runner does not currently validate that open-gate framing. Repair target: repair or split the runner so the threshold-window theorem is checked independently from the review-register text check, and add or audit the explicit open selector-law dependency used for the gate framing. Claim boundary until fixed: it is safe to say the cached computation supports a nonempty intrinsic threshold-volume stabilization window for lift 0, but not that this open-gate support note cleanly closes in the audit lane.
+- **open / conditional deps cited:**
+  - `SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`
+- **auditor confidence:** high
 
 ### `dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20`
 
