@@ -22,8 +22,10 @@ This is an integration/worklist gate, not a physics closure theorem.
   derive a real same-surface product-measure/conditional-independence theorem.
 - **Scalar-LSZ model/FV/IR:** produce a strict Stieltjes/Pade
   moment-threshold-FV certificate, a scalar-denominator/analytic-continuation
-  theorem, or a uniform
-  threshold/FV/IR pole-saturation bound.
+  theorem, or a uniform threshold/FV/IR pole-saturation bound.  The current
+  polefit8x8 `C_ss` proxy now has an explicit diagnostic blocker: it fails
+  necessary Stieltjes monotonicity and cannot serve as the strict moment
+  certificate.
 - **Schur/scalar-denominator rows:** supply same-surface Schur `A/B/C` kernel
   rows; current FH/LSZ source rows do not substitute.
 - **Neutral rank-one:** derive a strict primitive-cone/positivity-improving
@@ -42,5 +44,5 @@ real positive certificate and the aggregate gates pass.
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
 python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
-# SUMMARY: PASS=17 FAIL=0
+# SUMMARY: PASS=18 FAIL=0
 ```

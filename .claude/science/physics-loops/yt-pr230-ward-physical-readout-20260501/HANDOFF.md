@@ -1,5 +1,35 @@
 # Handoff
 
+Latest checkpoint, 2026-05-05 polefit8x8 Stieltjes proxy diagnostic:
+
+- Added
+  `scripts/frontier_yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic.py`,
+  `docs/YT_FH_LSZ_POLEFIT8X8_STIELTJES_PROXY_DIAGNOSTIC_NOTE_2026-05-05.md`,
+  and
+  `outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json`.
+- Result: the current polefit8x8 `C_ss(q_hat^2)` proxy is positive but
+  increases across every adjacent shell.  An unsubtracted positive Stieltjes
+  scalar two-point object must be non-increasing in `q_hat^2`, so the current
+  proxy cannot be promoted into the strict Stieltjes moment certificate.
+- The smallest adjacent monotonicity violation is `68.628 sigma` relative to
+  the row standard errors recorded by the combiner.
+- Wired the diagnostic into retained-route, campaign-status, full-assembly,
+  and non-chunk worklist runners.  Validation: diagnostic `PASS=9 FAIL=0`;
+  retained-route `PASS=186 FAIL=0`; campaign status `PASS=212 FAIL=0`;
+  full assembly `PASS=37 FAIL=0`; non-chunk worklist `PASS=18 FAIL=0`
+  after rebasing over the Pade-Stieltjes and neutral primitive-cone gates.
+- Claim boundary: this blocks the current finite-shell proxy shortcut only.
+  It does not rule out a certified contact-subtracted scalar two-point object,
+  a microscopic scalar-denominator theorem, or a different physical-response
+  route.  No retained or proposed-retained closure is authorized.
+- Chunks025-030 were still active at the last poll, and their root artifacts
+  were absent; no active chunk output is counted.
+
+Next exact action: if chunks025-030 finish, package only root JSONs that pass
+the polefit8x8 gate chain.  Otherwise the best non-chunk scalar-LSZ move is a
+certified contact/subtraction or denominator-authority theorem that supplies a
+true Stieltjes scalar two-point object, not the current `C_ss` proxy.
+
 Latest checkpoint, 2026-05-05 polefit8x8 chunks025-030 launch:
 
 - Ran the global FH/LSZ production collision guard after packaging

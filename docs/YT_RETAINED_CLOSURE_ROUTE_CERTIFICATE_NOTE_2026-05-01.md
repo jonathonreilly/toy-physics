@@ -18,8 +18,24 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=172 FAIL=0
+# SUMMARY: PASS=186 FAIL=0
 ```
+
+## 2026-05-05 Polefit8x8 Stieltjes Proxy Diagnostic Update
+
+The retained-route certificate now consumes
+`outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json`.
+The current polefit8x8 `C_ss(q_hat^2)` proxy fails a necessary Stieltjes
+monotonicity check: it increases across every adjacent shell, while a positive
+unsubtracted Stieltjes scalar two-point function must be non-increasing.
+
+Validation: Stieltjes proxy diagnostic `PASS=9 FAIL=0`; retained-route
+`PASS=186 FAIL=0`; campaign status `PASS=212 FAIL=0`; full positive closure
+assembly gate `PASS=37 FAIL=0`; non-chunk worklist `PASS=18 FAIL=0`.
+
+This closes only the shortcut from current finite-shell polefit8x8 rows to the
+strict scalar-LSZ Stieltjes moment certificate.  It is not retained closure and
+does not authorize `proposed_retained` wording.
 
 ## 2026-05-04 FH/LSZ Polefit8x8 Chunks013-018 Completion Update
 

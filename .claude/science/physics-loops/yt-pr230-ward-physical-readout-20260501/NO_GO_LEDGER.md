@@ -1,5 +1,26 @@
 # No-Go Ledger
 
+## Polefit8x8 C_ss proxy is not the strict Stieltjes certificate
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The current polefit8x8 `C_ss(q_hat^2)` proxy is positive but increases across
+every adjacent shell.  A positive unsubtracted Stieltjes scalar two-point
+object `C(x)=int dmu(s)/(x+s)` must be non-increasing in `x=q_hat^2`.  The
+smallest adjacent monotonicity violation is `68.628 sigma` relative to the row
+standard errors recorded by the combiner.
+
+Do not retry the scalar-LSZ route by promoting the current `C_ss` proxy, its
+reciprocal `Gamma_ss_real_proxy`, or the finite-shell diagnostic pole fit into
+the strict moment certificate.  A future positive route needs certified
+contact/subtraction or scalar-denominator authority for the scalar two-point
+object, then the strict Stieltjes/threshold/FV/IR certificate.
+
 ## FH/LSZ polefit8x8 chunks013-018 completion is not closure
 
 Runners:

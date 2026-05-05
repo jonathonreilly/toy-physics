@@ -26,8 +26,26 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=198 FAIL=0
+# SUMMARY: PASS=212 FAIL=0
 ```
+
+## 2026-05-05 Polefit8x8 Stieltjes Proxy Diagnostic Update
+
+The campaign status certificate now consumes
+`outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json`.
+The diagnostic blocks a tempting scalar-LSZ shortcut: the current polefit8x8
+`C_ss(q_hat^2)` finite-shell proxy increases across every adjacent shell, but
+an unsubtracted positive Stieltjes scalar two-point object must be
+non-increasing in `q_hat^2`.
+
+Validation: Stieltjes proxy diagnostic `PASS=9 FAIL=0`; retained-route
+`PASS=186 FAIL=0`; campaign status `PASS=212 FAIL=0`; full positive closure
+assembly gate `PASS=37 FAIL=0`; non-chunk worklist `PASS=18 FAIL=0`.
+
+This is an exact negative boundary for the current proxy only.  It does not
+rule out a certified contact-subtracted scalar two-point object, a microscopic
+scalar-denominator theorem, or a separate physical-response/source-overlap
+route.  No retained or `proposed_retained` closure is authorized.
 
 ## 2026-05-04 FH/LSZ Polefit8x8 Chunks013-018 Completion Update
 

@@ -41,6 +41,12 @@ chunk-only completion: even perfect chunk data would still lack scalar LSZ
 model-class/FV/IR control, a canonical-Higgs/source-overlap bridge, matching
 authority, and retained-route authorization.
 
+2026-05-05 update: the gate also consumes
+`outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json`.
+The current polefit8x8 `C_ss(q_hat^2)` proxy fails necessary Stieltjes
+monotonicity, so the existing finite-shell proxy cannot satisfy the strict
+scalar-LSZ moment-certificate requirement.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 

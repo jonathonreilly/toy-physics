@@ -1,5 +1,38 @@
 # Review History
 
+## Review-Loop Backpressure - Polefit8x8 Stieltjes Proxy Diagnostic
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY FOR CURRENT PROXY ONLY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- the diagnostic proves the current polefit8x8 finite-shell `C_ss` proxy fails
+  a necessary monotonicity condition for an unsubtracted positive Stieltjes
+  scalar two-point object;
+- the blocker is scoped to the current proxy, not to all possible
+  contact-subtracted or denominator-derived scalar two-point objects;
+- aggregate gates now record that current polefit8x8 support cannot satisfy
+  the strict future Stieltjes moment certificate;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Polefit8x8 Chunks013-018 Completion
 
 Local review-loop disposition:

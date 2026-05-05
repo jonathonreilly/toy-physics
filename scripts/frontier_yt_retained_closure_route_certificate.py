@@ -112,6 +112,7 @@ def main() -> int:
         "fh_lsz_stieltjes_model_class": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json",
         "fh_lsz_stieltjes_moment_certificate_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
         "fh_lsz_pade_stieltjes_bounds_gate": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
+        "fh_lsz_polefit8x8_stieltjes_proxy_diagnostic": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json",
         "fh_lsz_pole_saturation_threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
         "fh_lsz_threshold_authority_audit": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json",
         "confinement_gap_threshold_import": "outputs/yt_confinement_gap_threshold_import_audit_2026-05-02.json",
@@ -616,6 +617,20 @@ def main() -> int:
         is False
         and certificates["fh_lsz_pade_stieltjes_bounds_gate"].get(
             "pade_stieltjes_bounds_gate_passed"
+        )
+        is False
+    )
+    stieltjes_proxy_diagnostic_blocks = (
+        "Stieltjes monotonicity"
+        in certificates["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"].get(
+            "stieltjes_proxy_certificate_passed"
         )
         is False
     )
@@ -2110,6 +2125,13 @@ def main() -> int:
         "fh-lsz-pade-stieltjes-bounds-gate-absent",
         pade_stieltjes_bounds_certificate_absent,
         certificates["fh_lsz_pade_stieltjes_bounds_gate"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "fh-lsz-polefit8x8-stieltjes-proxy-diagnostic-blocks-current-proxy",
+        stieltjes_proxy_diagnostic_blocks,
+        certificates["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"].get(
             "actual_current_surface_status", ""
         ),
     )

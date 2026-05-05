@@ -1,0 +1,135 @@
+{
+  "actual_current_surface_status": "exact negative boundary / current polefit8x8 C_ss proxy fails Stieltjes monotonicity",
+  "exact_next_action": "Do not use the current polefit8x8 C_ss proxy as the Stieltjes certificate.  Supply a certified contact-subtracted scalar two-point object or a microscopic denominator theorem, then rerun the strict moment-certificate gate.",
+  "fail_count": 0,
+  "future_positive_route": [
+    "derive a contact/subtraction or microscopic scalar-denominator authority and rerun this check on that certified scalar two-point object",
+    "or produce the strict Stieltjes moment certificate with threshold-gap and FV/IR control required by the existing gate",
+    "or bypass scalar-source LSZ through a certified physical-response/source-overlap route"
+  ],
+  "input_rows": [
+    {
+      "C_ss_real": 0.12236173429229472,
+      "C_ss_real_stderr": 2.987932282661992e-05,
+      "Gamma_ss_real_proxy": 8.172489592303624,
+      "p_hat_sq": 0.0
+    },
+    {
+      "C_ss_real": 0.1253076533525403,
+      "C_ss_real_stderr": 2.9166228876433568e-05,
+      "Gamma_ss_real_proxy": 7.980358527556191,
+      "p_hat_sq": 0.26794919243112264
+    },
+    {
+      "C_ss_real": 0.12829179852750938,
+      "C_ss_real_stderr": 2.8257993938112537e-05,
+      "Gamma_ss_real_proxy": 7.794730539891619,
+      "p_hat_sq": 0.5358983848622453
+    },
+    {
+      "C_ss_real": 0.13131644399544967,
+      "C_ss_real_stderr": 2.6604518918159593e-05,
+      "Gamma_ss_real_proxy": 7.6151925042582755,
+      "p_hat_sq": 0.803847577293368
+    },
+    {
+      "C_ss_real": 0.13391317520187895,
+      "C_ss_real_stderr": 2.6905441929007854e-05,
+      "Gamma_ss_real_proxy": 7.467525122098433,
+      "p_hat_sq": 0.9999999999999998
+    },
+    {
+      "C_ss_real": 0.13702318309941242,
+      "C_ss_real_stderr": 2.6016706208864997e-05,
+      "Gamma_ss_real_proxy": 7.2980351016549125,
+      "p_hat_sq": 1.2679491924311224
+    },
+    {
+      "C_ss_real": 0.14018515882830096,
+      "C_ss_real_stderr": 2.49444980406091e-05,
+      "Gamma_ss_real_proxy": 7.133422741452979,
+      "p_hat_sq": 1.5358983848622452
+    },
+    {
+      "C_ss_real": 0.14613980689580147,
+      "C_ss_real_stderr": 2.467274529322724e-05,
+      "Gamma_ss_real_proxy": 6.842762565801157,
+      "p_hat_sq": 1.9999999999999996
+    }
+  ],
+  "monotonicity_violations": [
+    {
+      "combined_stderr": 4.175455471502334e-05,
+      "delta_C_ss_real": 0.0029459190602455776,
+      "from_p_hat_sq": 0.0,
+      "to_p_hat_sq": 0.26794919243112264,
+      "z_score_if_stderr_trusted": 70.55323857125538
+    },
+    {
+      "combined_stderr": 4.061013578257172e-05,
+      "delta_C_ss_real": 0.0029841451749690884,
+      "from_p_hat_sq": 0.26794919243112264,
+      "to_p_hat_sq": 0.5358983848622453,
+      "z_score_if_stderr_trusted": 73.48276772444987
+    },
+    {
+      "combined_stderr": 3.8811269603983796e-05,
+      "delta_C_ss_real": 0.00302464546794029,
+      "from_p_hat_sq": 0.5358983848622453,
+      "to_p_hat_sq": 0.803847577293368,
+      "z_score_if_stderr_trusted": 77.93214442100663
+    },
+    {
+      "combined_stderr": 3.78378544880907e-05,
+      "delta_C_ss_real": 0.0025967312064292813,
+      "from_p_hat_sq": 0.803847577293368,
+      "to_p_hat_sq": 0.9999999999999998,
+      "z_score_if_stderr_trusted": 68.62786597074607
+    },
+    {
+      "combined_stderr": 3.7426886156259494e-05,
+      "delta_C_ss_real": 0.003110007897533462,
+      "from_p_hat_sq": 0.9999999999999998,
+      "to_p_hat_sq": 1.2679491924311224,
+      "z_score_if_stderr_trusted": 83.0955555465927
+    },
+    {
+      "combined_stderr": 3.604298800677249e-05,
+      "delta_C_ss_real": 0.003161975728888544,
+      "from_p_hat_sq": 1.2679491924311224,
+      "to_p_hat_sq": 1.5358983848622452,
+      "z_score_if_stderr_trusted": 87.72790225645021
+    },
+    {
+      "combined_stderr": 3.508521544471999e-05,
+      "delta_C_ss_real": 0.005954648067500512,
+      "from_p_hat_sq": 1.5358983848622452,
+      "to_p_hat_sq": 1.9999999999999996,
+      "z_score_if_stderr_trusted": 169.71958108345132
+    }
+  ],
+  "parent_certificates": {
+    "polefit8x8_combined": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunked_combined_2026-05-04.json",
+    "polefit8x8_postprocessor": "outputs/yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json",
+    "stieltjes_moment_certificate_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json"
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current C_ss proxy fails a necessary Stieltjes monotonicity check and still lacks contact/subtraction authority, threshold control, FV/IR control, and scalar-denominator authority.",
+  "stieltjes_proxy_certificate_passed": false,
+  "strict_non_claims": [
+    "does not claim scalar LSZ closure",
+    "does not create outputs/yt_fh_lsz_stieltjes_moment_certificate_2026-05-05.json",
+    "does not define y_t_bare",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit, Ward authority, alpha_LM, plaquette, u0, or observed targets"
+  ],
+  "theorem": "For C(x)=int dmu(s)/(x+s) with dmu(s)>=0 and x=q_hat^2>=0, C(x2)-C(x1)=-(x2-x1) int dmu(s)/((x2+s)(x1+s)) <= 0 whenever x2>x1.  Any unsubtracted positive Stieltjes scalar two-point certificate must therefore pass monotonic non-increase before its Hankel moment tests can be load-bearing.",
+  "verdict": "The current eight-mode/x8 finite-shell C_ss proxy cannot be used as the strict positive Stieltjes scalar two-point certificate.  The measured proxy is positive but increases with q_hat^2 across every adjacent shell, while an unsubtracted positive Stieltjes transform must be non-increasing.  This blocks the tempting shortcut from finite-shell polefit8x8 rows to scalar-LSZ model-class authority.",
+  "violation_summary": {
+    "all_adjacent_intervals_violate_nonincrease": true,
+    "max_z_score_if_stderr_trusted": 169.71958108345132,
+    "min_z_score_if_stderr_trusted": 68.62786597074607,
+    "violation_count": 7
+  }
+}

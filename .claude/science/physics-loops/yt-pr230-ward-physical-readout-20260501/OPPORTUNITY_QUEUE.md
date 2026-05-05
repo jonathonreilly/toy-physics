@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-05 update: the polefit8x8 Stieltjes proxy diagnostic is now landed and
+wired into retained-route, campaign-status, full-assembly, and non-chunk
+worklist gates.  It proves the current finite-shell `C_ss(q_hat^2)` proxy is
+not the strict positive Stieltjes scalar two-point certificate: the proxy
+increases across every adjacent shell, while an unsubtracted positive
+Stieltjes transform must be non-increasing.  This closes the shortcut from
+current polefit8x8 rows to scalar-LSZ model-class authority.  The scalar-LSZ
+positive route now needs a certified contact-subtracted scalar two-point
+object, a microscopic scalar-denominator/analytic-continuation theorem, or the
+strict future moment certificate with threshold and FV/IR control.  Chunks025-
+030 remain compute-in-flight and count only after root artifacts pass gates.
+
 2026-05-04 update: polefit8x8 chunks013-018 are now packaged and pass the
 homogeneous eight-mode/x8 combiner.  The separate polefit8x8 stream has
 `18/63` ready chunks and `288/1008` saved configurations; the postprocessor

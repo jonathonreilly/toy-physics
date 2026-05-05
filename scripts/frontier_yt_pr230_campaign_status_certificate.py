@@ -142,6 +142,9 @@ def main() -> int:
         "fh_lsz_pade_stieltjes_bounds_gate": load(
             "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json"
         ),
+        "fh_lsz_polefit8x8_stieltjes_proxy_diagnostic": load(
+            "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -899,6 +902,20 @@ def main() -> int:
         )
         is False,
         statuses["fh_lsz_pade_stieltjes_bounds_gate"],
+    )
+    report(
+        "fh-lsz-polefit8x8-stieltjes-proxy-diagnostic-blocks-current-proxy",
+        "Stieltjes monotonicity"
+        in str(statuses["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"])
+        and certificates["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"].get(
+            "stieltjes_proxy_certificate_passed"
+        )
+        is False,
+        statuses["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"],
     )
     report(
         "fh-lsz-pole-saturation-threshold-gate-blocks",

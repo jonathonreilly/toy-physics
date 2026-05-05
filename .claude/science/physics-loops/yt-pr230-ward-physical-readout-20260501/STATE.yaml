@@ -13,11 +13,28 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-203-polefit8x8-chunks025-030-launch
-blocks_completed: 203
-active_route: "FH/LSZ polefit8x8 production scheduling"
-active_hard_residual: "Launched polefit8x8 chunks025-030 after a fresh global collision guard reported zero active workers.  Post-launch dry run reports running chunks [25, 26, 27, 28, 29, 30], missing=0, all_jobs=6.  This is run-control support only: root artifacts are absent and no chunk counts until combiner/postprocessor/gates pass.  No retained/proposed-retained closure is authorized."
+current_phase: campaign-block-204-polefit8x8-stieltjes-proxy-diagnostic
+blocks_completed: 204
+active_route: "FH/LSZ scalar-LSZ Stieltjes proxy diagnostic"
+active_hard_residual: "The current polefit8x8 C_ss finite-shell proxy fails a necessary Stieltjes monotonicity check: C_ss increases across every adjacent q_hat^2 shell, whereas an unsubtracted positive Stieltjes scalar two-point function must be non-increasing.  New diagnostic PASS=9 FAIL=0; retained-route PASS=186 FAIL=0; campaign status PASS=212 FAIL=0; full assembly PASS=37 FAIL=0; non-chunk worklist PASS=18 FAIL=0 after rebasing over the Pade-Stieltjes and neutral primitive-cone gates.  This blocks using the current polefit8x8 proxy as the strict Stieltjes moment certificate; it does not rule out a certified contact-subtracted scalar two-point object or a microscopic denominator theorem.  No retained/proposed-retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic.py"
+  - "docs/YT_FH_LSZ_POLEFIT8X8_STIELTJES_PROXY_DIAGNOSTIC_NOTE_2026-05-05.md"
+  - "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py"
+  - "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json"
+  - "scripts/frontier_yt_pr230_non_chunk_closure_worklist.py"
+  - "outputs/yt_pr230_non_chunk_closure_worklist_2026-05-05.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/NO_GO_LEDGER.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
   - "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS025_030_LAUNCH_CHECKPOINT_NOTE_2026-05-05.md"
   - "outputs/yt_fh_lsz_global_production_collision_guard_2026-05-04.json"
   - "outputs/yt_fh_lsz_polefit8x8_chunks025_030_prelaunch_status_2026-05-05.json"

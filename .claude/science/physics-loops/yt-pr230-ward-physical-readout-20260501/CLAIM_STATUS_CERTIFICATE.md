@@ -1,5 +1,36 @@
 # Claim Status Certificate
 
+Polefit8x8 Stieltjes proxy diagnostic:
+
+```text
+actual_current_surface_status: exact negative boundary / current polefit8x8 C_ss proxy fails Stieltjes monotonicity
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=186 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=212 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=37 FAIL=0
+
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+# SUMMARY: PASS=18 FAIL=0
+```
+
+The current polefit8x8 `C_ss(q_hat^2)` proxy is not the strict positive
+Stieltjes scalar two-point certificate: it increases across every adjacent
+shell, while an unsubtracted positive Stieltjes transform must be
+non-increasing.  This closes only the current finite-shell proxy shortcut.
+It does not rule out a certified contact-subtracted scalar two-point object,
+microscopic scalar-denominator authority, or a separate physical-response
+route.  No retained or `proposed_retained` wording is authorized.
+
 FH/LSZ polefit8x8 chunks013-018 completion:
 
 ```text
