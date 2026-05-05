@@ -137,6 +137,7 @@ def main() -> int:
         "osp_oh_assumption_route_audit": "outputs/yt_osp_oh_assumption_route_audit_2026-05-04.json",
         "osp_oh_literature_bridge": "outputs/yt_osp_oh_literature_bridge_2026-05-04.json",
         "fms_oh_certificate_construction_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
+        "pr230_action_first_oh_artifact_attempt": "outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json",
         "complete_source_spectrum_identity_no_go": "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json",
         "neutral_scalar_top_coupling_tomography_gate": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
         "non_source_response_rank_repair_sufficiency": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
@@ -956,6 +957,26 @@ def main() -> int:
             "fms_construction_attempt_passed_as_boundary"
         )
         is True
+    )
+    action_first_oh_artifact_attempt_blocks = (
+        "action-first O_H artifact not constructible"
+        in certificates["pr230_action_first_oh_artifact_attempt"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_action_first_oh_artifact_attempt"].get("proposal_allowed")
+        is False
+        and certificates["pr230_action_first_oh_artifact_attempt"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+        and certificates["pr230_action_first_oh_artifact_attempt"].get(
+            "same_source_ew_action_certificate_written"
+        )
+        is False
+        and certificates["pr230_action_first_oh_artifact_attempt"].get(
+            "canonical_oh_certificate_written"
+        )
+        is False
     )
     complete_source_spectrum_identity_no_go_blocks = (
         "complete source spectrum not canonical-Higgs closure"
@@ -3070,6 +3091,13 @@ def main() -> int:
         "fms-oh-certificate-construction-attempt-blocks-current-surface",
         fms_oh_certificate_construction_attempt_blocks,
         certificates["fms_oh_certificate_construction_attempt"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "action-first-oh-artifact-attempt-blocks-current-surface",
+        action_first_oh_artifact_attempt_blocks,
+        certificates["pr230_action_first_oh_artifact_attempt"].get(
             "actual_current_surface_status", ""
         ),
     )

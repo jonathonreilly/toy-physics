@@ -83,6 +83,9 @@ def main() -> int:
         "fresh_artifact_literature_route_review": load(
             "outputs/yt_pr230_fresh_artifact_literature_route_review_2026-05-05.json"
         ),
+        "action_first_oh_artifact_attempt": load(
+            "outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json"
+        ),
         "kinetic_matching": load("outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"),
         "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "scalar_ir": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
@@ -161,6 +164,7 @@ def main() -> int:
         "Carleman/Tauberian scalar-LSZ determinacy",
         "not proof selectors until an infinite same-surface moment/asymptotic certificate exists",
         "FMS/action-first source-Higgs artifact route",
+        "action-first `O_H/C_sH/C_HH`",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -414,6 +418,19 @@ def main() -> int:
         == "O_H/C_sH/C_HH source-Higgs pole rows",
         fresh_artifact_review.get("actual_current_surface_status"),
     )
+    action_first_attempt = certificates["action_first_oh_artifact_attempt"]
+    report(
+        "action-first-oh-artifact-attempt-does-not-certify-current-surface-oh",
+        "action-first O_H artifact not constructible"
+        in str(action_first_attempt.get("actual_current_surface_status"))
+        and action_first_attempt.get("proposal_allowed") is False
+        and action_first_attempt.get("exact_negative_boundary_passed") is True
+        and action_first_attempt.get("same_source_ew_action_certificate_written")
+        is False
+        and action_first_attempt.get("canonical_oh_certificate_written") is False
+        and action_first_attempt.get("source_higgs_rows_written") is False,
+        action_first_attempt.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -471,7 +488,10 @@ def main() -> int:
             "FMS/FH/finite-volume/operator-renormalization literature: it "
             "selects the O_H/C_sH/C_HH contract as the cleanest next target "
             "but does not write a current-surface O_H certificate or authorize "
-            "closure.  No current route "
+            "closure.  The action-first O_H artifact attempt confirms the "
+            "next premise: writing a standard EW/Higgs action is a hypothetical "
+            "new surface unless the same-source action and canonical O_H are "
+            "derived on PR230.  No current route "
             "certificate authorizes retained proposal wording.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."

@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 628,
+    "leaf": 630,
     "medium": 301
   },
-  "generated_at": "2026-05-05T22:10:20.819395+00:00",
+  "generated_at": "2026-05-05T22:57:32.208891+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20106,6 +20106,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_action_first_oh_artifact_attempt_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_ACTION_FIRST_OH_ARTIFACT_ATTEMPT_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_action_first_oh_artifact_attempt.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_assumption_import_stress_note_2026-05-01",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20236,6 +20253,23 @@
       "note_path": "docs/YT_PR230_GNS_SOURCE_HIGGS_FLAT_EXTENSION_ATTEMPT_NOTE_2026-05-05.md",
       "ready": true,
       "runner_path": "scripts/frontier_yt_pr230_gns_source_higgs_flat_extension_attempt.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_pr230_holonomic_source_response_feasibility_gate_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_HOLONOMIC_SOURCE_RESPONSE_FEASIBILITY_GATE_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_holonomic_source_response_feasibility_gate.py",
       "transitive_descendants": 0
     },
     {
@@ -24245,6 +24279,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 775,
-  "total_pending": 1166
+  "ready_count": 777,
+  "total_pending": 1168
 }

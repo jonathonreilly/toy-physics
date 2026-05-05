@@ -773,3 +773,13 @@ treat source-only FH/LSZ rows as source-Higgs Gram purity.  Feynman-Hellmann,
 Lellouch-Luscher, RI/MOM, PSLQ, Picard-Fuchs/D-module, exact tensor/PEPS,
 free-probability, and motivic tools remain certificate engines only; method
 names are not proof selectors.
+
+2026-05-05 action-first `O_H/C_sH/C_HH` artifact attempt:
+
+The action-first `O_H/C_sH/C_HH` route is allowed only as a genuine artifact
+attempt.  It must first derive or certify a same-source EW/Higgs action on the
+PR230 Cl(3)/Z3 surface, then derive a gauge-invariant canonical `O_H`, and
+only then write or consume same-surface `C_ss/C_sH/C_HH` pole rows.  Standard
+EW action formulas, FMS names, gauge-invariant-composite language, and the
+existence of structural EW/Higgs notes are not proof selectors for current
+PR230 closure.

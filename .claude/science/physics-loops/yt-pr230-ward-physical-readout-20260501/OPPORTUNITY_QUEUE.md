@@ -1371,3 +1371,14 @@ this is a priority target, not evidence.  If the action-first `O_H` artifact
 cannot be built, the fallback order is genuine W/Z rows with identity,
 covariance, and strict `g2`; strict scalar-LSZ moment/threshold/FV authority;
 Schur `A/B/C` rows; then a neutral primitive-cone/irreducibility certificate.
+
+2026-05-05 update: the action-first `O_H/C_sH/C_HH` artifact attempt blocks on
+the current surface.  Existing structural EW/Higgs notes and QCD/top FH-LSZ
+rows are not the same-source EW/Higgs action or canonical `O_H` certificate.
+The cleanest positive intake is now narrower: a derivation/certificate tying
+the EW/Higgs action to PR230, or a canonical `O_H` identity/normalization
+theorem that bypasses the action step.  Without that, pivot to W/Z rows with
+identity/covariance/strict `g2`, strict scalar-LSZ infinite/tail
+moment/threshold/FV authority, Schur `A/B/C` rows, or a neutral
+primitive-cone/irreducibility certificate.  Do not replay source-only
+shortcuts or treat standard EW action notation as proof authority.

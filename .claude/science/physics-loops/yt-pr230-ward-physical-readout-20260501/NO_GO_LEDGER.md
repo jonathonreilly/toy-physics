@@ -3181,6 +3181,27 @@ Reopen this route only with same-surface `A/B/C` rows or an equivalent
 precontracted Schur row definition certificate, then rerun the assumption
 stress, assembly, retained-route, and campaign gates.
 
+## 2026-05-05 - Action-First O_H From Current Structural Surfaces
+
+No-go: the current PR230 structural surfaces do not construct the first
+`O_H/C_sH/C_HH` artifact.  Minimal Cl(3)/Z3 axioms, native gauge structure,
+EW gauge-mass diagonalization after a canonical `H` is supplied, SM
+one-Higgs monomial selection, and QCD/top FH-LSZ harness rows do not derive a
+same-source EW/Higgs action, canonical gauge-invariant `O_H`, source-coordinate
+identity, pole normalization, or production `C_ss/C_sH/C_HH` rows.
+
+Writing down a standard EW/Higgs action is a hypothetical new surface until a
+certificate ties it to the PR230 Cl(3)/Z3 source coordinate.  It cannot be
+used to set `kappa_s = 1`, identify `O_s = O_H`, import FMS pole purity, or
+authorize retained/proposed-retained closure.
+
+Reopen this route only with a same-source EW/Higgs action certificate derived
+on PR230, or with a canonical `O_H` identity/normalization theorem that
+bypasses the action step.  Otherwise use the remaining genuine artifact
+contracts: W/Z rows with identity/covariance/strict `g2`, strict scalar-LSZ
+moment/threshold/FV authority, Schur `A/B/C` rows, or a neutral
+primitive-cone/irreducibility certificate.
+
 ## 2026-05-05 - W/Z G2 Bare-To-Low-Scale Running Bridge
 
 No-go: the current PR230 surface does not derive a strict low-scale

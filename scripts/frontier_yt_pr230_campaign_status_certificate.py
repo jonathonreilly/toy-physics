@@ -545,6 +545,9 @@ def main() -> int:
         "pr230_fresh_artifact_literature_route_review": load(
             "outputs/yt_pr230_fresh_artifact_literature_route_review_2026-05-05.json"
         ),
+        "pr230_action_first_oh_artifact_attempt": load(
+            "outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json"
+        ),
         "pr230_invariant_ring_oh_certificate_attempt": load(
             "outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json"
         ),
@@ -2151,6 +2154,28 @@ def main() -> int:
         .get("contract")
         == "O_H/C_sH/C_HH source-Higgs pole rows",
         statuses["pr230_fresh_artifact_literature_route_review"],
+    )
+    report(
+        "pr230-action-first-oh-artifact-attempt-blocks-current-surface",
+        "action-first O_H artifact not constructible"
+        in str(statuses["pr230_action_first_oh_artifact_attempt"])
+        and certificates["pr230_action_first_oh_artifact_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_action_first_oh_artifact_attempt"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+        and certificates["pr230_action_first_oh_artifact_attempt"].get(
+            "same_source_ew_action_certificate_written"
+        )
+        is False
+        and certificates["pr230_action_first_oh_artifact_attempt"].get(
+            "canonical_oh_certificate_written"
+        )
+        is False,
+        statuses["pr230_action_first_oh_artifact_attempt"],
     )
     report(
         "pr230-invariant-ring-oh-certificate-attempt-blocks-current-surface",

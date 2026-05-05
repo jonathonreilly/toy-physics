@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T22:10:17.998089+00:00",
+  "generated_at": "2026-05-05T22:57:29.385697+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41938,6 +41938,16 @@
       "runner_path": "scripts/frontier_yt_positivity_improving_neutral_scalar_rank_one_support.py",
       "title": "YT Positivity-Improving Neutral-Scalar Rank-One Support"
     },
+    "yt_pr230_action_first_oh_artifact_attempt_note_2026-05-05": {
+      "claim_id": "yt_pr230_action_first_oh_artifact_attempt_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / action-first `O_H` artifact not constructible from current PR230 surface",
+      "deps": [],
+      "note_hash": "d0703cf26d4306dcdf0b7b227da873778a7afb0f2b77b116ae0b2d9aac6bd775",
+      "path": "docs/YT_PR230_ACTION_FIRST_OH_ARTIFACT_ATTEMPT_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_action_first_oh_artifact_attempt.py",
+      "title": "PR230 Action-First O_H Artifact Attempt"
+    },
     "yt_pr230_assumption_import_stress_note_2026-05-01": {
       "claim_id": "yt_pr230_assumption_import_stress_note_2026-05-01",
       "current_status": "open",
@@ -42017,6 +42027,16 @@
       "path": "docs/YT_PR230_GNS_SOURCE_HIGGS_FLAT_EXTENSION_ATTEMPT_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_gns_source_higgs_flat_extension_attempt.py",
       "title": "PR230 GNS Source-Higgs Flat-Extension Attempt"
+    },
+    "yt_pr230_holonomic_source_response_feasibility_gate_note_2026-05-05": {
+      "claim_id": "yt_pr230_holonomic_source_response_feasibility_gate_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / PR541-style holonomic source-response route",
+      "deps": [],
+      "note_hash": "08e9c01d734e9b5a343b6f5f73fb2634e39ee8d97cc4755c355bed29b7d18845",
+      "path": "docs/YT_PR230_HOLONOMIC_SOURCE_RESPONSE_FEASIBILITY_GATE_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_holonomic_source_response_feasibility_gate.py",
+      "title": "PR230 Holonomic Source-Response Feasibility Gate"
     },
     "yt_pr230_invariant_ring_oh_certificate_attempt_note_2026-05-05": {
       "claim_id": "yt_pr230_invariant_ring_oh_certificate_attempt_note_2026-05-05",
@@ -45100,6 +45120,7 @@
     "yt_planck_selector_gauge_input_sensitivity_note_2026-05-01",
     "yt_planck_selector_scale_anchor_sensitivity_note_2026-05-01",
     "yt_positivity_improving_neutral_scalar_rank_one_support_note_2026-05-03",
+    "yt_pr230_action_first_oh_artifact_attempt_note_2026-05-05",
     "yt_pr230_assumption_import_stress_note_2026-05-01",
     "yt_pr230_campaign_status_certificate_note_2026-05-01",
     "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05",
@@ -45108,6 +45129,7 @@
     "yt_pr230_full_positive_closure_assembly_gate_note_2026-05-04",
     "yt_pr230_global_yt_proof_audit_note_2026-05-01",
     "yt_pr230_gns_source_higgs_flat_extension_attempt_note_2026-05-05",
+    "yt_pr230_holonomic_source_response_feasibility_gate_note_2026-05-05",
     "yt_pr230_invariant_ring_oh_certificate_attempt_note_2026-05-05",
     "yt_pr230_matching_running_bridge_gate_note_2026-05-04",
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
@@ -45268,17 +45290,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1056,
-    "node_count": 2009,
-    "root_count": 1522,
-    "runners_with_path": 1507,
+    "leaf_count": 1058,
+    "node_count": 2011,
+    "root_count": 1524,
+    "runners_with_path": 1509,
     "status_counts": {
       "bounded": 551,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 430,
-      "unknown": 552
+      "unknown": 554
     }
   }
 }

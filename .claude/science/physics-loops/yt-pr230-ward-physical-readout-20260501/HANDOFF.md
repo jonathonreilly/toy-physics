@@ -1,5 +1,33 @@
 # Handoff
 
+Latest checkpoint, 2026-05-05 action-first O_H artifact attempt:
+
+- Added `scripts/frontier_yt_pr230_action_first_oh_artifact_attempt.py`,
+  `docs/YT_PR230_ACTION_FIRST_OH_ARTIFACT_ATTEMPT_NOTE_2026-05-05.md`, and
+  `outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json`.
+- This tests the first real artifact in the selected `O_H/C_sH/C_HH`
+  contract: same-source EW/Higgs action plus canonical `O_H`
+  identity/normalization on the current PR230 Cl(3)/Z3 surface.
+- Result: exact negative boundary.  Existing structural notes and QCD/top
+  FH-LSZ harness surfaces do not derive the same-source EW/Higgs action,
+  canonical gauge-invariant `O_H`, canonical pole normalization, or production
+  `C_ss/C_sH/C_HH` rows.  A standard EW/Higgs action is only hypothetical
+  until tied to the PR230 source coordinate.
+- Verification: action-first runner `PASS=15 FAIL=0`; assumption stress
+  `PASS=29 FAIL=0`; campaign status `PASS=264 FAIL=0`; full assembly
+  `PASS=84 FAIL=0`; retained-route `PASS=232 FAIL=0`; audit pipeline and
+  strict audit lint complete with warnings only.
+- Claim boundary: no same-source EW action certificate, canonical `O_H`
+  certificate, source-Higgs rows, retained closure, or `proposed_retained`
+  closure is authorized.
+
+Next exact action: reopen this route only with a derivation/certificate tying
+a same-source EW/Higgs action to PR230, or a canonical `O_H`
+identity/normalization theorem that bypasses the action step.  Otherwise
+pivot to W/Z rows with identity/covariance/strict `g2`, strict scalar-LSZ
+moment/threshold/FV authority, Schur `A/B/C` rows, or a neutral
+primitive-cone/irreducibility certificate.
+
 Latest checkpoint, 2026-05-05 fresh artifact literature route review:
 
 - Added
@@ -3381,6 +3409,44 @@ Result: the same-source W/Z response ratio still needs a strict, non-observed
 `g_2(v)` package value is not an allowed PR230 load-bearing input under the
 current alpha/plaquette/u0 and audit-authority firewalls.  No
 retained/proposed-retained wording is authorized.
+
+## 2026-05-05 - Action-First O_H Artifact Attempt
+
+The selected `O_H/C_sH/C_HH` route was tested at its first real artifact:
+same-source EW/Higgs action plus canonical `O_H` identity/normalization on the
+current PR230 Cl(3)/Z3 surface.
+
+```text
+python3 scripts/frontier_yt_pr230_action_first_oh_artifact_attempt.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=29 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=264 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=84 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=232 FAIL=0
+```
+
+Result: exact negative boundary on the current surface.  The existing
+Cl(3)/Z3, native-gauge, EW gauge-mass, SM one-Higgs, and production-harness
+surfaces are structural or QCD/top source surfaces; they do not derive the
+same-source EW/Higgs action, canonical gauge-invariant `O_H`, canonical pole
+normalization, or production `C_ss/C_sH/C_HH` rows needed by the action-first
+FMS route.
+
+Next exact action: reopen this route only with a derivation/certificate tying
+a same-source EW/Higgs action to PR230, or with a canonical `O_H`
+identity/normalization theorem that bypasses the action step.  Otherwise
+pivot to a different genuine artifact contract: W/Z rows with
+identity/covariance/strict `g2`, strict scalar-LSZ moment/threshold/FV
+authority, Schur `A/B/C` rows, or a neutral primitive-cone/irreducibility
+certificate.  No retained/proposed-retained wording is authorized.
 
 ## 2026-05-05 - W/Z G2 Bare-Running Bridge Attempt
 
