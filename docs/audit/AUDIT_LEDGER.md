@@ -18,13 +18,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 41 |
+| **retained** | 42 |
 | **retained_no_go** | 99 |
 | **retained_bounded** | 191 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 16 |
 | unaudited | 880 |
-| audit_in_progress | 58 |
+| audit_in_progress | 57 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 58 |
-| `audited_clean` | 303 |
+| `audit_in_progress` | 57 |
+| `audited_clean` | 304 |
 | `audited_conditional` | 381 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 59 |
@@ -156,7 +156,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_boundary_link_theorem_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `self_consistency_forces_poisson_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `self_gravity_backreaction_closure_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
-| `taste_scalar_isotropy_theorem_note` | positive_theorem | audit_in_progress | audit_in_progress | fresh_context | codex-gpt-5 | A | - |
 | `tensor_block_closure_test_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `tensor_support_center_excess_law_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `three_generation_observable_count_corollary_note_2026-05-03` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -413,6 +412,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `substrate_to_p_a_forcing_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `symmetry_generated_paired_chokepoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `symmetry_spectrum_mirror_compare_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `taste_scalar_isotropy_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `teleportation_3d1_causal_record_channel_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | A | - |
 | `teleportation_3d_initial_ramp_probe_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_3d_operator_consistent_end_to_end_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -10394,6 +10394,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** On 3D discrete causal DAGs, gravity, decoherence, Born compliance, and interference coexist on the same corrected path-sum model, with the large-N table and chokepoint Born fix supporting the claim.  _(class `C`)_
 - **chain closes:** False — The key large-N and Born chokepoint scripts reproduce the quoted tables, but the row has no registered primary runner or manifest tying the multi-script suite to the single synthesis claim, and the all-four coexistence claim is broader than any one runner output.
 - **rationale:** Issue: the note's core numerical tables are reproducible from the named 3D scripts, but the audited row itself has no runner path, dependency list, or manifest proving the full multi-script synthesis as a single claim. Why this blocks: a hostile reader can verify pieces such as the large-N gravity/decoherence table and chokepoint Born check, but cannot certify the broader all-four coexistence and 3D-extension synthesis from this row alone. Repair target: add a registered synthesis runner or manifest that invokes the required 3D scripts, records the exact commands, and asserts the combined gravity, decoherence, Born, and interference predicates. Claim boundary until fixed: treat this as conditional support for the 3D program, with reproducible component results but no audit-clean packaged synthesis.
+- **auditor confidence:** high
+
+### `taste_scalar_isotropy_theorem_note`
+
+- **Note:** [`TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`](../../docs/TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For H(phi)=sum_i phi_i S_i on C^8 with three commuting sigma_x taste-shift involutions and V_f(phi)=sum_s f(lambda_s(phi)^2) for a common smooth f, the fermion Coleman-Weinberg Hessian at phi=(v,0,0) is proportional to delta_ij; bounded gauge-split and thermal-cubic estimates are excluded.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-second-taste_scalar_isotropy_theorem_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The Hessian therefore reduces to the binary orthogonality sum sum_s (-1)^{s_i} (-1)^{s_j}, which is 8 for i=j and 0 for i!=j.  _(class `A`)_
+- **chain closes:** True — The simultaneous eigenvalue formula lambda_s(phi)=sum_i phi_i (-1)^{s_i} gives, by the chain rule, a common coefficient 2 f'(v^2)+4 v^2 f''(v^2) multiplying (-1)^{s_i}(-1)^{s_j} at phi=(v,0,0). Summing over the eight binary signs gives a Hessian proportional to delta_ij with no dependency or bounded companion estimate needed.
+- **rationale:** The proposed positive_theorem type is correct for the scoped exact Hessian-isotropy statement. The source note's proof sketch compresses the derivative step, but the displayed eigenvalue formula plus standard chain rule make the Hessian coefficient common across all sign sectors at the axis, leaving exactly the binary orthogonality identity. The cached runner output for SHA 519c1d8d830ea43f8cdcd866565184a4d2d1c8d4c9b0318557fe22df5f35c59b reports THEOREM PASS=30 and FAIL=0, checking the shift algebra, eigenvalue sign sum, binary orthogonality, and finite-difference Hessian isotropy for representative smooth functions. The six bounded gauge/thermal passes are outside this audited scope and are not used for closure.
 - **auditor confidence:** high
 
 ### `teleportation_3d1_causal_record_channel_note`

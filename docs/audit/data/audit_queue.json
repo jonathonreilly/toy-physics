@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 618,
+    "critical": 617,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -2997,27 +2997,6 @@
       "ready": true,
       "runner_path": "scripts/lensing_k_sweep.py",
       "transitive_descendants": 308
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "taste_scalar_isotropy_theorem_note",
-      "claim_scope": "For H(phi)=sum_i phi_i S_i on C^8 with the three commuting sigma_x taste-shift involutions and V_f(phi)=sum_s f(lambda_s(phi)^2) for a common smooth f, the fermion Coleman-Weinberg Hessian at the axis-aligned point phi=(v,0,0) is proportional to delta_ij; bounded gauge-split and thermal-cubic companion estimates are outside this audited scope.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 12,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 14.248,
-      "note_path": "docs/TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_taste_scalar_isotropy.py",
-      "transitive_descendants": 303
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -27857,6 +27836,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 84,
-  "total_pending": 956
+  "ready_count": 83,
+  "total_pending": 955
 }
