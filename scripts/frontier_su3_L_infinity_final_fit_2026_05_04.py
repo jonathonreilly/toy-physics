@@ -11,25 +11,12 @@ data = {
     3: {'P': 0.6034, 'err': 0.0012},
     4: {'P': 0.5978, 'err': 0.0005},
     6: {'P': 0.5942, 'err': 0.0004},
-    # L=8: TBD — read from /tmp/L8_mc.log when available
+    8: {'P': 0.5949, 'err': 0.0010},  # v2 with 800 thermalize; err inflated to account for residual drift bias
 }
 
-# Try to read L=8 from log
-try:
-    with open('/tmp/L8_mc.log', 'r') as f:
-        for line in f:
-            if 'RESULT' in line and 'Ls=Lt=8' in line:
-                # Parse "RESULT Ls=Lt=8: ⟨P⟩(β=6) = 0.XXXX ± 0.YYYY"
-                parts = line.split('=')
-                if len(parts) >= 3:
-                    try:
-                        val_part = parts[-1].strip()
-                        val_str, err_str = val_part.split('±')
-                        data[8] = {'P': float(val_str.strip()), 'err': float(err_str.strip())}
-                        print(f"Read L=8 from log: {data[8]}")
-                    except: pass
-except FileNotFoundError:
-    pass
+# Use L=8 v2 result directly (overrides any log parsing)
+# v2 = proper 800-thermalize run; v1 had 200 thermalize and was biased
+print(f"Using L=8 v2 result: P = {data[8]['P']:.4f} ± {data[8]['err']:.4f}")
 
 print("="*64)
 print("L→∞ FINAL FIT")
