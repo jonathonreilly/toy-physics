@@ -26758,9 +26758,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "5fb6a4b924dc365e7a719ec619a581c621424fcb74a7a771bff8f2e62b6630ed",
+      "note_hash": "b3f36f2bdcd179956de191b6ee4b26351dbcf82ff297714eb2e7e8b142b81d17",
       "path": "docs/ai_methodology/skills/audit-loop/SKILL.md",
-      "runner_path": "scripts/audit_lint.py",
+      "runner_path": null,
       "title": "Audit Loop"
     },
     "ai_methodology.skills.methodology-paper-synthesizer.skill": {
@@ -54730,6 +54730,6 @@
     "leaf_count": 552,
     "node_count": 1889,
     "root_count": 900,
-    "runners_with_path": 1463
+    "runners_with_path": 1462
   }
 }
