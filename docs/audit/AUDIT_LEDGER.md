@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 61 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 219 |
+| **retained_bounded** | 220 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 839 |
+| unaudited | 838 |
 | audit_in_progress | 1 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
@@ -40,22 +40,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 375 |
+| `audited_clean` | 376 |
 | `audited_conditional` | 400 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 31 |
-| `unaudited` | 885 |
+| `unaudited` | 884 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 624 |
+| `bounded_theorem` | 625 |
 | `decoration` | 9 |
 | `meta` | 55 |
 | `no_go` | 187 |
 | `open_gate` | 112 |
-| `positive_theorem` | 795 |
+| `positive_theorem` | 794 |
 
 | criticality | count |
 |---|---:|
@@ -404,6 +404,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_graph_portability_stress_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | C | - |
 | `staggered_layered_backreaction_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `staggered_layered_gauge_engineering_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | C | - |
+| `staggered_layered_gauge_phase_diagram_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_layered_loop_threshold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `staggered_newton_reproduction_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -11252,6 +11253,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — The cited portability authority is retained, and the runner source builds new layered brickwall graphs, threads flux through detected cycle edges, diagonalizes the Hamiltonian, and computes current spans and residuals rather than printing constants. The completed runner output supports PASS results for both engineered brickwall geometries.
 - **rationale:** The load-bearing result is a numerical first-principles computation inside the provided staggered graph harness: the runner constructs the geometries, detects cycle edges, applies flux in the Hamiltonian, diagonalizes it, and measures persistent-current span. The upstream portability note is explicitly retained in the packet, and no external comparator or calibrated input value is used. The note table has small numerical drift from the cached runner output for the sparse holdout and brickwall rows, but the pass/fail pattern and conclusion are unchanged.
 - **auditor confidence:** medium
+
+### `staggered_layered_gauge_phase_diagram_note`
+
+- **Note:** [`STAGGERED_LAYERED_GAUGE_PHASE_DIAGRAM_NOTE.md`](../../docs/STAGGERED_LAYERED_GAUGE_PHASE_DIAGRAM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** On the fixed layered graph sweep implemented by scripts/frontier_staggered_layered_gauge_phase_diagram.py, the current runner computes 15 gauge-current PASS rows, 10 FAIL rows, and 1 N/A row, with nearest-neighbor brickwall and defect step-1 cases passing, step-2 cases failing throughout, step-3 cases mixed, the sparse holdout failing, and the acyclic DAG control marked N/A.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-20260505`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The practical pass/fail boundary is PASS for nearest-neighbor layered brickwall/plaquette graphs, FAIL for the sparse layered holdout and most long-shift layered loop geometries, and N/A for acyclic layered DAG controls.  _(class `C`)_
+- **chain closes:** True — Both one-hop dependencies are retained positive staggered graph and layered-gauge engineering probes. The runner builds the swept layered graph families, computes the native staggered Hamiltonian persistent-current span, reuses the retained force-side battery, and prints the pass/fail/N/A phase diagram directly.
+- **rationale:** The current cached output supports the bounded phase-diagram classification: PASS=15, FAIL=10, N/A=1, with the same nearest-neighbor brickwall, long-shift, sparse-holdout, defect, and acyclic-control boundary described by the note. Several row-level J-span numerals in the source table have drifted from the current cache, so the clean claim is the current runner's pass/fail/N/A boundary and qualitative geometry criterion, not those stale exact span values. No external comparator or unretained bridge is needed for that finite graph sweep.
+- **auditor confidence:** high
 
 ### `staggered_layered_loop_threshold_note`
 
