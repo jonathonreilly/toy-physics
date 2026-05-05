@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 611,
+    "critical": 610,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -3041,27 +3041,6 @@
       "ready": true,
       "runner_path": "scripts/wave_retardation_continuum_limit.py",
       "transitive_descendants": 290
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25",
-      "claim_scope": "Audited the restricted claim that bare finite Hilbert/local-support/unitary-flow data give a native U(1) phase unit but do not determine an absolute dimensional action quantum or force primitive CAR edge statistics on the rank-four active block.",
-      "claim_type": "no_go",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 7,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 11.68,
-      "note_path": "docs/PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_planck_target3_phase_unit_edge_statistics.py",
-      "transitive_descendants": 289
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -27710,6 +27689,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 83,
-  "total_pending": 949
+  "ready_count": 82,
+  "total_pending": 948
 }
