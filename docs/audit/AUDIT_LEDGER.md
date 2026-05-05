@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 61 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 218 |
+| **retained_bounded** | 219 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 840 |
+| unaudited | 839 |
 | audit_in_progress | 1 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 374 |
+| `audited_clean` | 375 |
 | `audited_conditional` | 400 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 31 |
-| `unaudited` | 886 |
+| `unaudited` | 885 |
 
 | claim_type | count |
 |---|---:|
@@ -385,6 +385,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_generated_wavefield_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_generated_wavefield_transfer_v2_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_geometry_rule_repair_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `source_resolved_green_robustness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_propagating_generated_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_propagating_green_pocket_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `source_resolved_radical_geometry_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -10781,6 +10782,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The adaptive sector-fan repair slightly improves sign count and F~M, but it reduces detector support and does not recover a clean weak-field mass law.  _(class `C`)_
 - **chain closes:** True — The runner reproduces the note's baseline and repair summaries, zero-source checks, and repair deltas exactly. The note states a bounded negative with one partial improvement rather than a closure theorem.
 - **rationale:** The current runner output matches all frozen values: baseline has 7/16 TOWARD, F~M=0.058, N_eff=5.06; repair has 8/16 TOWARD, F~M=0.335, N_eff=2.80; zero-source shifts are 0; delta_TOWARD is +1 and delta_N_eff is -2.26. This closes the bounded read that the sector-fan repair is mixed and does not solve the geometry bottleneck. Residual risk is limited to this one geometry-rule repair on the compact generated family.
+- **auditor confidence:** high
+
+### `source_resolved_green_robustness_note`
+
+- **Note:** [`SOURCE_RESOLVED_GREEN_ROBUSTNESS_NOTE.md`](../../docs/SOURCE_RESOLVED_GREEN_ROBUSTNESS_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** On the fixed h=0.5, W=3, L=20 exact-lattice family and source ladder, the runner computes a local robustness sweep where 9/9 kernel-neighborhood cases and 3/3 cluster-neighborhood cases pass the zero-shift, 4/4 TOWARD, near-linear F~M, and nontrivial |green/inst| gates.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-20260505`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The sweep shows a local kernel and source-cluster neighborhood in which zero-source reduction survives, TOWARD sign is 4/4, F~M stays near 1, and the Green/instantaneous ratio remains nontrivial.  _(class `C`)_
+- **chain closes:** True — The one-hop dependencies are retained_bounded source-resolved Green pocket and scaling controls. The runner constructs each local kernel/cluster case and computes the stated gates directly, so the local robustness claim closes for the fixed exact-lattice sweep.
+- **rationale:** The cached output matches the source tables: all nine kernel cases pass and all three cluster variants pass, with exact zero shifts, 4/4 TOWARD rows, F~M in the stated near-unit range, and nontrivial response ratios. The note already limits the conclusion to a same-family local robustness sweep and does not claim generated-geometry transfer, refinement beyond the tested basin, or a self-consistent field theory. Within that bounded scope, no hidden bridge or unretained dependency remains.
 - **auditor confidence:** high
 
 ### `source_resolved_propagating_generated_transfer_note`

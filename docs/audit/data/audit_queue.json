@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 545,
     "high": 23,
-    "leaf": 177,
+    "leaf": 176,
     "medium": 114
   },
   "cycle_break_target_count": 168,
@@ -21165,30 +21165,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "source_resolved_green_robustness_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "source_resolved_exact_green_pocket_note",
-        "source_resolved_exact_green_scaling_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SOURCE_RESOLVED_GREEN_ROBUSTNESS_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/source_resolved_green_robustness.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "staggered_layered_gauge_phase_diagram_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -25741,6 +25717,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 6,
-  "total_pending": 859
+  "ready_count": 5,
+  "total_pending": 858
 }
