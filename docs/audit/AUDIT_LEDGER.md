@@ -18,13 +18,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 47 |
+| **retained** | 48 |
 | **retained_no_go** | 104 |
 | **retained_bounded** | 198 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 16 |
 | unaudited | 872 |
-| audit_in_progress | 44 |
+| audit_in_progress | 43 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 44 |
-| `audited_clean` | 321 |
+| `audit_in_progress` | 43 |
+| `audited_clean` | 322 |
 | `audited_conditional` | 384 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -112,7 +112,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `background_independence_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -206,6 +205,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_lepton_synthesis_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_cascade_geometry_note_2026-04-14` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
+| `dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | B | - |
@@ -3989,6 +3989,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Any residual-Z2-equivariant functional of a residual-Z2-even input is again residual-Z2 even, so its projection onto the unique odd circulant slot vanishes.  _(class `A`)_
 - **chain closes:** False — The algebraic evenness-preservation step is valid on its own terms, but the restricted packet does not independently establish that the actual retained DM bank and bridge are exactly the assumed residual-Z2-even/equivariant objects or that the odd slot theorem is retained. The runner checks toy representatives, not the full retained stack.
 - **rationale:** The note's load-bearing move is a class A symmetry argument: equivariant maps preserve the fixed subspace, hence an odd projection vanishes. However, with no cited authorities, the packet imports the exact weak-axis split, the even bridge, the odd-slot theorem, and the characterization of the retained DM bank as assumptions rather than retained-grade inputs. The runner supports the algebra with explicit 3x3 examples and representative functionals, but it does not verify the complete current bank or derive it from first principles.
+- **auditor confidence:** high
+
+### `dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_ODD_CIRCULANT_Z2_SLOT_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_ODD_CIRCULANT_Z2_SLOT_THEOREM_NOTE_2026-04-15.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** On the explicitly defined 3x3 Hermitian circulant kernel family K = d I + c_even(S+S^2) + i c_odd(S-S^2), the P23 residual-Z2 action has exactly one odd coefficient c_odd, and the local kernel readout Im[(K01)^2] equals 2 c_even c_odd; the displayed U_Z3 1+2 split lies in the even slice with c_odd = 0.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-second-dm_neutrino_odd_circulant_z2_slot_theorem_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** With P_23 S P_23 = S^2, the exchange leaves I and S + S^2 invariant and flips the sign of i(S - S^2), so c_odd is the unique residual-Z2-odd local slot; Im[(K_01)^2] = 2 c_even c_odd.  _(class `A`)_
+- **chain closes:** True — The claim is a finite-dimensional algebraic decomposition once S, S^2, P23, K, and the local CP-kernel readout Im[(K01)^2] are specified. The note does not claim a nonzero activation law for c_odd, and the runner verifies the bounded local statements directly.
+- **rationale:** The load-bearing theorem is an exact algebraic identity on a specified Hermitian circulant coefficient space, not a numerical fit or a physical bridge to an external observable. The cached runner completes with PASS=10 FAIL=0 and checks the P23 generator exchange, even/odd decomposition, coefficient readout, CP-kernel algebra, and U_Z3 1+2 even-slice construction. Residual risk is only scope discipline: this clean verdict covers the local slot theorem and zero-odd-slice statement, not any future nonzero c_odd activation law or independent derivation of leptogenesis phenomenology.
 - **auditor confidence:** high
 
 ### `dm_neutrino_schur_suppression_theorem_note_2026-04-15`
