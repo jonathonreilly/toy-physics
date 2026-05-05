@@ -1,10 +1,10 @@
 # Audit Queue
 
-**Total pending:** 955
-**Ready (all deps already at retained-grade or metadata tiers):** 83
+**Total pending:** 954
+**Ready (all deps already at retained-grade or metadata tiers):** 84
 
 By criticality:
-- `critical`: 617
+- `critical`: 616
 - `high`: 23
 - `medium`: 120
 - `leaf`: 195
@@ -16,15 +16,15 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
 | 1 | `lensing_k_sweep_note` | bounded_theorem | unaudited | critical | 308 | 10.77 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/lensing_k_sweep.py` |
-| 2 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | audit_in_progress | critical | 293 | 12.70 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_pmns_oriented_cycle_channel_value_law.py` |
-| 3 | `g_bare_rigidity_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 292 | 11.20 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_rigidity_theorem.py` |
-| 4 | `wave_retardation_lab_prediction_note` | no_go | audit_in_progress | critical | 291 | 8.69 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/wave_retardation_velocity_sweep.py` |
-| 5 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | positive_theorem | audit_in_progress | critical | 290 | 14.69 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
-| 6 | `linear_response_true_kubo_note` | bounded_theorem | audit_in_progress | critical | 290 | 9.69 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/linear_response_true_kubo.py` |
-| 7 | `unit_singlet_overlap_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | critical | 290 | 9.19 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_unit_singlet_overlap_narrow.py` |
-| 8 | `quark_route2_exact_readout_map_note_2026-04-19` | no_go | audit_in_progress | critical | 289 | 12.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_quark_route2_exact_readout_map.py` |
-| 9 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | no_go | audit_in_progress | critical | 289 | 11.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_planck_target3_phase_unit_edge_statistics.py` |
-| 10 | `pmns_uniform_scalar_deformation_boundary_note` | no_go | audit_in_progress | critical | 289 | 11.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_pmns_uniform_scalar_deformation_boundary.py` |
+| 2 | `g_bare_rigidity_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 292 | 11.20 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_rigidity_theorem.py` |
+| 3 | `wave_retardation_lab_prediction_note` | no_go | audit_in_progress | critical | 291 | 8.69 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/wave_retardation_velocity_sweep.py` |
+| 4 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | positive_theorem | audit_in_progress | critical | 290 | 14.69 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 5 | `linear_response_true_kubo_note` | bounded_theorem | audit_in_progress | critical | 290 | 9.69 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/linear_response_true_kubo.py` |
+| 6 | `unit_singlet_overlap_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | critical | 290 | 9.19 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_unit_singlet_overlap_narrow.py` |
+| 7 | `quark_route2_exact_readout_map_note_2026-04-19` | no_go | audit_in_progress | critical | 289 | 12.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_quark_route2_exact_readout_map.py` |
+| 8 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | no_go | audit_in_progress | critical | 289 | 11.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_planck_target3_phase_unit_edge_statistics.py` |
+| 9 | `pmns_uniform_scalar_deformation_boundary_note` | no_go | audit_in_progress | critical | 289 | 11.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_pmns_uniform_scalar_deformation_boundary.py` |
+| 10 | `pmns_oriented_cycle_reduced_channel_nonselection_note` | positive_theorem | unaudited | critical | 289 | 10.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py` |
 | 11 | `tensor_support_center_excess_law_note` | bounded_theorem | audit_in_progress | critical | 289 | 9.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_tensor_support_center_excess_law.py` |
 | 12 | `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | positive_theorem | audit_in_progress | critical | 288 | 14.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ew_higgs_gauge_mass_diagonalization.py` |
 | 13 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | audit_in_progress | critical | 288 | 14.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py` |
@@ -62,9 +62,9 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 45 | `koide_q_bridge_single_primitive_note_2026-04-22` | bounded_theorem | audit_in_progress | critical | 285 | 9.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_q_bridge_single_primitive.py` |
 | 46 | `koide_q_readout_factorization_theorem_2026-04-22` | positive_theorem | audit_in_progress | critical | 285 | 9.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_q_readout_factorization_theorem.py` |
 | 47 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | audit_in_progress | critical | 285 | 9.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_transport_gap_constant_no_go.py` |
-| 48 | `s3_boundary_link_theorem_note` | positive_theorem | audit_in_progress | critical | 285 | 9.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_boundary_link_theorem.py` |
-| 49 | `three_generation_observable_count_corollary_note_2026-05-03` | positive_theorem | audit_in_progress | critical | 285 | 9.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_three_generation_observable_count_corollary.py` |
-| 50 | `yt_ew_m_residual_stretch_attempt_note_2026-05-02` | no_go | unaudited | critical | 285 | 9.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/yt_ew_m_residual_channel_check.py` |
+| 48 | `pmns_oriented_cycle_selection_structure_note` | positive_theorem | unaudited | critical | 285 | 9.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_pmns_oriented_cycle_selection_structure.py` |
+| 49 | `s3_boundary_link_theorem_note` | positive_theorem | audit_in_progress | critical | 285 | 9.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_boundary_link_theorem.py` |
+| 50 | `three_generation_observable_count_corollary_note_2026-05-03` | positive_theorem | audit_in_progress | critical | 285 | 9.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_three_generation_observable_count_corollary.py` |
 
 ## Citation cycle break targets
 

@@ -19,13 +19,13 @@ publication tables phrase it.
 |---|---|---:|
 | critical | `unaudited` | 367 |
 | critical | `audited_conditional` | 134 |
-| critical | `audit_in_progress` | 49 |
+| critical | `audit_in_progress` | 48 |
 | critical | `audited_renaming` | 19 |
 | critical | `audited_numerical_match` | 11 |
 | critical | `audited_failed` | 9 |
 | critical | `open_gate` | 1 |
 
-**Total non-retained-grade rows in publication tables:** 590
+**Total non-retained-grade rows in publication tables:** 589
 
 ## Per-row breakdown
 
@@ -433,7 +433,6 @@ publication tables phrase it.
 | critical | `pmns_hw1_source_transfer_boundary_note` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md |
 | critical | `pmns_lower_level_end_to_end_closure_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `pmns_minimal_branch_nonselection_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
-| critical | `pmns_oriented_cycle_channel_value_law_note` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md |
 | critical | `pmns_oriented_cycle_reduced_channel_nonselection_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `pmns_oriented_cycle_selection_structure_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `pmns_right_conjugacy_invariant_no_go_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |

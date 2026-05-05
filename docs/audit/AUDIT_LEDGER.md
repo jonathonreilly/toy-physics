@@ -18,13 +18,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 42 |
+| **retained** | 43 |
 | **retained_no_go** | 99 |
 | **retained_bounded** | 191 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 16 |
 | unaudited | 880 |
-| audit_in_progress | 57 |
+| audit_in_progress | 56 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 57 |
-| `audited_clean` | 304 |
+| `audit_in_progress` | 56 |
+| `audited_clean` | 305 |
 | `audited_conditional` | 381 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 59 |
@@ -149,7 +149,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `pmns_transfer_operator_dominant_mode_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `pmns_uniform_scalar_deformation_boundary_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `quark_route2_exact_readout_map_note_2026-04-19` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -342,6 +341,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `physical_lattice_necessity_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
+| `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `poisson_self_gravity_born_audit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `poisson_self_gravity_loop_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `poisson_self_gravity_loop_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -8486,6 +8486,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Starting from lower-level observable packs only, the lane reconstructs tau, q, blocks, branch, sheet, Hamiltonians, masses, and PMNS.  _(class `B`)_
 - **chain closes:** False — The restricted packet contains no cited authority, runner output, runner source, or derivation showing how the response columns determine the listed intermediate objects and PMNS. The missing step is the actual reconstruction theorem or computation from the stated lower-level packs.
 - **rationale:** The note asserts an end-to-end reconstruction but provides no derivation inside the restricted packet. It also explicitly depends on lower-level observable packs and retained lepton supports that are not supplied as cited authorities here. With no runner source or stdout available, the audit can only judge the text, and the claimed closure remains dependent on missing bridge/computation material.
+- **auditor confidence:** high
+
+### `pmns_oriented_cycle_channel_value_law_note`
+
+- **Note:** [`PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md`](../../docs/PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For a canonical 3x3 active block A and the projected forward-cycle basis P_i C = E12,E23,E31, the forward-cycle coefficients are diag(A C^dagger); the cached runner checks the stated projected cycle/projector identities and coefficient reconstruction.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-second-pmns_oriented_cycle_channel_value_law_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Therefore any canonical active block has the exact native oriented-cycle decomposition A_fwd = c_1 E_12 + c_2 E_23 + c_3 E_31 with coefficient law (c_1, c_2, c_3) = diag(A C^dagger).  _(class `A`)_
+- **chain closes:** True — Within the audited scope, the projected projectors give P_i C = E12,E23,E31, so multiplying A by C^dagger extracts exactly A12,A23,A31 on the diagonal. The note explicitly excludes deriving or selecting those values from the sole axiom, so the scoped algebraic theorem closes without dependencies.
+- **rationale:** The load-bearing step is a class-A matrix identity over the projected forward-cycle basis, not a numerical fit or definition-as-derivation. The cached runner for SHA 531e8147f7aa2e6e9c13b9f5ddf6b03ae7862a18e968627d815d5f748b7f79ec exits 0 with PASS=10 FAIL=0 and checks the projected cycle, projected scalar projectors, edge basis, coefficient extraction, reconstruction, mean identity, and response-profile round trip. Residual risk is only scope creep: this audit does not certify sole-axiom selection of the canonical active block or of the coefficient values.
 - **auditor confidence:** high
 
 ### `pmns_selector_three_identity_support_note_2026-04-21`
