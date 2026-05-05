@@ -1,5 +1,18 @@
 # Opportunity Queue
 
+2026-05-05 update: polefit8x8 chunks061-063 are now active under the global
+collision guard. The launch record reports fixed seeds `2026051961`-
+`2026051963`, selected mass `0.75`, x8 scalar-two-point noise, eight modes,
+isolated output directories, running chunks `[61, 62, 63]`, `missing=0`, and
+`all_jobs=3`. A post-launch guard records three active workers and no further
+polefit8x8 manifest work remains to launch. This is run-control support only;
+do not count chunks061-063 until root artifacts pass the polefit8x8
+combiner/postprocessor and aggregate gates. The closure ranking is unchanged:
+certified `O_H/C_sH/C_HH` pole rows, same-source W/Z response rows with
+identity certificates, genuine Schur `A/B/C` rows, a rank-one neutral-scalar
+theorem, same-surface scalar contact/denominator authority, or continued
+honest production evidence.
+
 2026-05-05 update: polefit8x8 chunks055-060 are now packaged and pass the
 homogeneous eight-mode/x8 combiner. The separate polefit8x8 stream has
 `60/63` ready chunks and `960/1008` saved configurations. Rerun diagnostics

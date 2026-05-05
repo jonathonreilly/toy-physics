@@ -1,6 +1,6 @@
 {
   "active_orchestrator_count": 0,
-  "active_production_worker_count": 0,
+  "active_production_worker_count": 3,
   "actual_current_surface_status": "bounded-support / FH-LSZ global production collision guard current state recorded",
   "fail_count": 0,
   "global_cap": 6,
@@ -19,7 +19,47 @@
   "pass_count": 8,
   "process_snapshot": {
     "active_orchestrators": [],
-    "active_production_workers": [],
+    "active_production_workers": [
+      {
+        "command": "/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.75 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes 0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0 --scalar-two-point-noises 8 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk061 --resume --seed 2026051961 --output outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk061_2026-05-04.json",
+        "cpu_percent": 100.0,
+        "cwd": "/Users/jonBridger/CI3Z2-pr230-status-20260503",
+        "elapsed": "01:04",
+        "masses": "0.75",
+        "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk061_2026-05-04.json",
+        "pid": 86882,
+        "ppid": 1,
+        "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk061",
+        "scalar_two_point_noises": "8",
+        "seed": "2026051961"
+      },
+      {
+        "command": "/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.75 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes 0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0 --scalar-two-point-noises 8 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk062 --resume --seed 2026051962 --output outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk062_2026-05-04.json",
+        "cpu_percent": 99.4,
+        "cwd": "/Users/jonBridger/CI3Z2-pr230-status-20260503",
+        "elapsed": "01:04",
+        "masses": "0.75",
+        "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk062_2026-05-04.json",
+        "pid": 86883,
+        "ppid": 1,
+        "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk062",
+        "scalar_two_point_noises": "8",
+        "seed": "2026051962"
+      },
+      {
+        "command": "/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.75 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes 0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0 --scalar-two-point-noises 8 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk063 --resume --seed 2026051963 --output outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk063_2026-05-04.json",
+        "cpu_percent": 99.8,
+        "cwd": "/Users/jonBridger/CI3Z2-pr230-status-20260503",
+        "elapsed": "01:04",
+        "masses": "0.75",
+        "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk063_2026-05-04.json",
+        "pid": 86884,
+        "ppid": 1,
+        "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_polefit8x8/L12_T24_chunk063",
+        "scalar_two_point_noises": "8",
+        "seed": "2026051963"
+      }
+    ],
     "ps_returncode": 0,
     "ps_stderr": ""
   },
