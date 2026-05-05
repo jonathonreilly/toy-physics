@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 50 |
-| **retained_no_go** | 109 |
+| **retained_no_go** | 110 |
 | **retained_bounded** | 199 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 872 |
-| audit_in_progress | 31 |
+| audit_in_progress | 30 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 31 |
-| `audited_clean` | 332 |
+| `audit_in_progress` | 30 |
+| `audited_clean` | 333 |
 | `audited_conditional` | 386 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -120,7 +120,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `koide_pointed_origin_exhaustion_theorem_note_2026-04-24` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_q23_oh_covariance_nogo_note_2026-04-22` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_q_bridge_single_primitive_note_2026-04-22` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -284,6 +283,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_kappa_two_orbit_dimension_factorization_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
 | `koide_mru_demotion_note_2026-04-20` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | D | - |
 | `koide_native_dimensionless_review_packet_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
+| `koide_pointed_origin_exhaustion_theorem_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -7200,6 +7200,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Under the native zero-section identifications z = 0, spectator = 0, c = 0, the runner verifies Q = 2/3 and delta_open = eta_APS = 2/9.  _(class `A`)_
 - **chain closes:** False — The conditional algebra closes once z = 0, spectator = 0, c = 0 and the APS fixed-point formula are accepted. The restricted packet does not prove the native physical identifications that force those premises.
 - **rationale:** The runner performs meaningful symbolic checks of the conditional algebra, including the Z3 commutant/idempotent calculation, the unit condition c = 0, and the eta formula evaluation. However, the note explicitly says retained-only closure is not claimed and lists the Brannen endpoint, determinant-line readout, and charged-lepton zero-source readout as remaining identification theorems. Those are imported open premises in the restricted packet, so retained status cannot propagate to the final closure claim.
+- **auditor confidence:** high
+
+### `koide_pointed_origin_exhaustion_theorem_note_2026-04-24`
+
+- **Note:** [`KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM_NOTE_2026-04-24.md`](../../docs/KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM_NOTE_2026-04-24.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Within the residual dimensionless Koide atlas specified in the note, unpointed invariant data cannot select the pointed source/boundary-origin representative needed for Q=2/3 and delta=2/9 closure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-koide_pointed_origin_exhaustion_theorem_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The retained unpointed tests are invariant along the source, CP1-line, and endpoint torsor fibres while the open charged-lepton readouts change, so origin-free retained data do not force the simultaneous closing representative.  _(class `A`)_
+- **chain closes:** True — The note scopes the result as an atlas no-go, not a positive Koide closure. The algebraic fibre checks exhibit invariant unpointed data together with changed readouts, so the claimed non-forcing result follows within that scoped atlas.
+- **rationale:** The runner completed from cache with 15/15 PASS lines and checks symbolic algebraic invariance/countermodel facts for the three residual freedoms. It does not hard-code a positive Koide closure; it explicitly reports that the dimensionless lane is not closed and that a physical source/boundary-origin law remains the next theorem. No one-hop dependencies are listed, so there is no open dependency chain in the restricted packet. Residual risk is limited to the note's scoped atlas premise, not to the internal no-go once that atlas is taken as the audited object.
 - **auditor confidence:** high
 
 ### `koide_q_eq_3delta_identity_note_2026-04-21`
