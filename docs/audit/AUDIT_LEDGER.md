@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | _retained_pending_chain_ | 2 |
 | open_gate | 17 |
 | unaudited | 872 |
-| audit_in_progress | 39 |
+| audit_in_progress | 38 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
-| ~~audited_conditional~~ | 385 |
+| ~~audited_conditional~~ | 386 |
 | ~~audited_failed~~ | 15 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 39 |
+| `audit_in_progress` | 38 |
 | `audited_clean` | 325 |
-| `audited_conditional` | 385 |
+| `audited_conditional` | 386 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
@@ -115,7 +115,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | open_gate | audit_in_progress | audit_in_progress | - | - | - | - |
-| `generation_axiom_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_berry_bundle_obstruction_theorem_note_2026-04-19` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -680,6 +679,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `generation_axiom_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `geometry_lane_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `global_coherence_held_out2_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -6067,6 +6067,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a bounded note whose executable closure is pending.
 - **auditor confidence:** medium
+
+### `generation_axiom_boundary_note`
+
+- **Note:** [`GENERATION_AXIOM_BOUNDARY_NOTE.md`](../../docs/GENERATION_AXIOM_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Local M_3(C) observable-algebra reconstruction on H_hw=1 from the translation projectors and C3 cycle generator, plus the reduced-stack witness that the older five-item memo kept substrate fundamentality explicit; physical-species and substrate-fundamentality conclusions remain out of scope.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-judicial-third-generation_axiom_boundary_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The local exact M_3(C) observable algebra on H_hw=1 reconstructs from the supplied translation-projector + cycle generators, with no input from the substrate-fundamentality premise; the older reduced five-item implementation memo still listed substrate fundamentality explicitly.  _(class `B`)_
+- **chain closes:** False — The local M_3(C) reconstruction closes from the runner's explicit finite-dimensional algebra. The reduced-stack older-memo witness does not close from the restricted packet because the runner hard-codes the older five-item memo and related logical PASS checks instead of verifying them from a cited one-hop authority.
+- **rationale:** Issue: the audited scope includes the reduced-stack historical witness that the older five-item implementation memo explicitly retained the substrate premise, but no older-memo authority is supplied or wired as a direct dependency. Why this blocks: the clean local M_3(C) reconstruction does not itself establish that historical reduced-stack witness, and the runner encodes the witness as hard-coded logical PASS checks. Repair target: split the claim so the clean retained scope is only the local M_3(C) reconstruction, or add and audit the older five-item memo or equivalent direct authority and have the runner verify against it. Claim boundary until fixed: one may cite the local finite-dimensional M_3(C) reconstruction on H_hw=1, but not the full generation-axiom-boundary reduced-stack witness as retained-grade.
+- **auditor confidence:** high
 
 ### `geometry_lane_head_to_head_note`
 

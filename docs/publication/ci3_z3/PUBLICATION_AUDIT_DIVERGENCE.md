@@ -18,8 +18,8 @@ publication tables phrase it.
 | criticality | effective_status | count |
 |---|---|---:|
 | critical | `unaudited` | 363 |
-| critical | `audited_conditional` | 137 |
-| critical | `audit_in_progress` | 35 |
+| critical | `audited_conditional` | 138 |
+| critical | `audit_in_progress` | 34 |
 | critical | `audited_renaming` | 19 |
 | critical | `audited_numerical_match` | 11 |
 | critical | `audited_failed` | 9 |
@@ -240,7 +240,7 @@ publication tables phrase it.
 | critical | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
-| critical | `generation_axiom_boundary_note` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
+| critical | `generation_axiom_boundary_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `gr_class_expansion_finite_rank_target_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `grav_decoherence_derived_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `gravitomagnetic_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
