@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-05 update: polefit8x8 chunks025-030 are now packaged and pass the
+homogeneous eight-mode/x8 combiner.  The separate polefit8x8 stream has
+`30/63` ready chunks and `480/1008` saved configurations.  Rerun diagnostics
+still block the scalar-LSZ shortcut: current `C_ss` fails Stieltjes
+monotonicity, and finite-row contact subtraction remains non-identifying.
+Next production action: run the global guard and launch chunks031-036 only if
+capacity is available.  The closure ranking is unchanged: certified
+`O_H/C_sH/C_HH` pole rows, same-source W/Z response rows with identity
+certificates, genuine Schur `A/B/C` rows, a rank-one neutral-scalar theorem,
+same-surface scalar contact/denominator authority, or continued honest
+production evidence.
+
 2026-05-05 update: the contact-subtraction identifiability boundary is now
 landed and wired into retained-route, campaign-status, full-assembly, and
 non-chunk worklist gates.  It proves the current finite polefit8x8 rows do not

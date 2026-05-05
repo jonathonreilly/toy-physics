@@ -1,5 +1,42 @@
 # Claim Status Certificate
 
+FH/LSZ polefit8x8 chunks025-030 completion:
+
+```text
+actual_current_surface_status: bounded-support / polefit8x8 chunks025-030 packaged
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_postprocessor.py
+# SUMMARY: PASS=5 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_contact_subtraction_identifiability.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=187 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=213 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=38 FAIL=0
+```
+
+Chunks025-030 add six ready chunks to the separate homogeneous eight-mode/x8
+polefit stream.  The current stream has `30/63` chunks and `480/1008` saved
+configurations.  It is finite-shell support only: complete L12 statistics,
+L16/L24 scaling, FV/IR/zero-mode control, model-class authority,
+same-surface scalar contact/denominator authority, and canonical-Higgs/source
+overlap closure remain open.  No retained or `proposed_retained` wording is
+authorized.
+
 Contact-subtraction identifiability boundary:
 
 ```text

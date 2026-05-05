@@ -41,6 +41,12 @@ chunk-only completion: even perfect chunk data would still lack scalar LSZ
 model-class/FV/IR control, a canonical-Higgs/source-overlap bridge, matching
 authority, and retained-route authorization.
 
+2026-05-05 chunk update: the separate polefit8x8 stream is now `30/63` chunks
+ready with `480/1008` saved configurations.  This improves bounded production
+support but does not change the assembly verdict: chunk-only completion still
+fails the scalar-LSZ/model-class/FV/IR, source-overlap, matching, and retained
+proposal gates.
+
 2026-05-05 update: the gate also consumes
 `outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json` and
 `outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json`.

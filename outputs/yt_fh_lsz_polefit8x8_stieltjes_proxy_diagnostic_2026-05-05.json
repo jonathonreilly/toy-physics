@@ -9,103 +9,103 @@
   ],
   "input_rows": [
     {
-      "C_ss_real": 0.12236173429229472,
-      "C_ss_real_stderr": 2.987932282661992e-05,
-      "Gamma_ss_real_proxy": 8.172489592303624,
+      "C_ss_real": 0.12237967456067203,
+      "C_ss_real_stderr": 2.6719080325297344e-05,
+      "Gamma_ss_real_proxy": 8.17129154485724,
       "p_hat_sq": 0.0
     },
     {
-      "C_ss_real": 0.1253076533525403,
-      "C_ss_real_stderr": 2.9166228876433568e-05,
-      "Gamma_ss_real_proxy": 7.980358527556191,
+      "C_ss_real": 0.125326747516045,
+      "C_ss_real_stderr": 2.6005255006221332e-05,
+      "Gamma_ss_real_proxy": 7.979142679594192,
       "p_hat_sq": 0.26794919243112264
     },
     {
-      "C_ss_real": 0.12829179852750938,
-      "C_ss_real_stderr": 2.8257993938112537e-05,
-      "Gamma_ss_real_proxy": 7.794730539891619,
+      "C_ss_real": 0.1283122969560426,
+      "C_ss_real_stderr": 2.559468549778462e-05,
+      "Gamma_ss_real_proxy": 7.793485298938895,
       "p_hat_sq": 0.5358983848622453
     },
     {
-      "C_ss_real": 0.13131644399544967,
-      "C_ss_real_stderr": 2.6604518918159593e-05,
-      "Gamma_ss_real_proxy": 7.6151925042582755,
+      "C_ss_real": 0.1313366015892905,
+      "C_ss_real_stderr": 2.417177581691038e-05,
+      "Gamma_ss_real_proxy": 7.614023721484372,
       "p_hat_sq": 0.803847577293368
     },
     {
-      "C_ss_real": 0.13391317520187895,
-      "C_ss_real_stderr": 2.6905441929007854e-05,
-      "Gamma_ss_real_proxy": 7.467525122098433,
+      "C_ss_real": 0.13392587449722265,
+      "C_ss_real_stderr": 2.3839969335043612e-05,
+      "Gamma_ss_real_proxy": 7.466817026613763,
       "p_hat_sq": 0.9999999999999998
     },
     {
-      "C_ss_real": 0.13702318309941242,
-      "C_ss_real_stderr": 2.6016706208864997e-05,
-      "Gamma_ss_real_proxy": 7.2980351016549125,
+      "C_ss_real": 0.1370375517795149,
+      "C_ss_real_stderr": 2.363670017806252e-05,
+      "Gamma_ss_real_proxy": 7.297269887081311,
       "p_hat_sq": 1.2679491924311224
     },
     {
-      "C_ss_real": 0.14018515882830096,
-      "C_ss_real_stderr": 2.49444980406091e-05,
-      "Gamma_ss_real_proxy": 7.133422741452979,
+      "C_ss_real": 0.14020135791630517,
+      "C_ss_real_stderr": 2.261321054138787e-05,
+      "Gamma_ss_real_proxy": 7.132598534437602,
       "p_hat_sq": 1.5358983848622452
     },
     {
-      "C_ss_real": 0.14613980689580147,
-      "C_ss_real_stderr": 2.467274529322724e-05,
-      "Gamma_ss_real_proxy": 6.842762565801157,
+      "C_ss_real": 0.14615577024048843,
+      "C_ss_real_stderr": 2.2562564889852273e-05,
+      "Gamma_ss_real_proxy": 6.842015189373464,
       "p_hat_sq": 1.9999999999999996
     }
   ],
   "monotonicity_violations": [
     {
-      "combined_stderr": 4.175455471502334e-05,
-      "delta_C_ss_real": 0.0029459190602455776,
+      "combined_stderr": 3.728515175466356e-05,
+      "delta_C_ss_real": 0.00294707295537297,
       "from_p_hat_sq": 0.0,
       "to_p_hat_sq": 0.26794919243112264,
-      "z_score_if_stderr_trusted": 70.55323857125538
+      "z_score_if_stderr_trusted": 79.0414633354511
     },
     {
-      "combined_stderr": 4.061013578257172e-05,
-      "delta_C_ss_real": 0.0029841451749690884,
+      "combined_stderr": 3.6487822813496365e-05,
+      "delta_C_ss_real": 0.002985549439997598,
       "from_p_hat_sq": 0.26794919243112264,
       "to_p_hat_sq": 0.5358983848622453,
-      "z_score_if_stderr_trusted": 73.48276772444987
+      "z_score_if_stderr_trusted": 81.82317304208358
     },
     {
-      "combined_stderr": 3.8811269603983796e-05,
-      "delta_C_ss_real": 0.00302464546794029,
+      "combined_stderr": 3.520458310892887e-05,
+      "delta_C_ss_real": 0.003024304633247904,
       "from_p_hat_sq": 0.5358983848622453,
       "to_p_hat_sq": 0.803847577293368,
-      "z_score_if_stderr_trusted": 77.93214442100663
+      "z_score_if_stderr_trusted": 85.90656006038189
     },
     {
-      "combined_stderr": 3.78378544880907e-05,
-      "delta_C_ss_real": 0.0025967312064292813,
+      "combined_stderr": 3.3950241295737404e-05,
+      "delta_C_ss_real": 0.0025892729079321497,
       "from_p_hat_sq": 0.803847577293368,
       "to_p_hat_sq": 0.9999999999999998,
-      "z_score_if_stderr_trusted": 68.62786597074607
+      "z_score_if_stderr_trusted": 76.26670118121498
     },
     {
-      "combined_stderr": 3.7426886156259494e-05,
-      "delta_C_ss_real": 0.003110007897533462,
+      "combined_stderr": 3.3571382652542635e-05,
+      "delta_C_ss_real": 0.0031116772822922523,
       "from_p_hat_sq": 0.9999999999999998,
       "to_p_hat_sq": 1.2679491924311224,
-      "z_score_if_stderr_trusted": 83.0955555465927
+      "z_score_if_stderr_trusted": 92.68838625139497
     },
     {
-      "combined_stderr": 3.604298800677249e-05,
-      "delta_C_ss_real": 0.003161975728888544,
+      "combined_stderr": 3.271163227808659e-05,
+      "delta_C_ss_real": 0.003163806136790265,
       "from_p_hat_sq": 1.2679491924311224,
       "to_p_hat_sq": 1.5358983848622452,
-      "z_score_if_stderr_trusted": 87.72790225645021
+      "z_score_if_stderr_trusted": 96.7180760010465
     },
     {
-      "combined_stderr": 3.508521544471999e-05,
-      "delta_C_ss_real": 0.005954648067500512,
+      "combined_stderr": 3.1944117226774794e-05,
+      "delta_C_ss_real": 0.005954412324183256,
       "from_p_hat_sq": 1.5358983848622452,
       "to_p_hat_sq": 1.9999999999999996,
-      "z_score_if_stderr_trusted": 169.71958108345132
+      "z_score_if_stderr_trusted": 186.40090386321305
     }
   ],
   "parent_certificates": {
@@ -128,8 +128,8 @@
   "verdict": "The current eight-mode/x8 finite-shell C_ss proxy cannot be used as the strict positive Stieltjes scalar two-point certificate.  The measured proxy is positive but increases with q_hat^2 across every adjacent shell, while an unsubtracted positive Stieltjes transform must be non-increasing.  This blocks the tempting shortcut from finite-shell polefit8x8 rows to scalar-LSZ model-class authority.",
   "violation_summary": {
     "all_adjacent_intervals_violate_nonincrease": true,
-    "max_z_score_if_stderr_trusted": 169.71958108345132,
-    "min_z_score_if_stderr_trusted": 68.62786597074607,
+    "max_z_score_if_stderr_trusted": 186.40090386321305,
+    "min_z_score_if_stderr_trusted": 76.26670118121498,
     "violation_count": 7
   }
 }

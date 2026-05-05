@@ -21,6 +21,26 @@ PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificat
 # SUMMARY: PASS=187 FAIL=0
 ```
 
+## 2026-05-05 FH/LSZ Polefit8x8 Chunks025-030 Completion Update
+
+The retained-route surface now sees the completed homogeneous eight-mode/x8
+polefit stream through chunk030.  The polefit8x8 combiner reports `30/63`
+ready chunks, `480/1008` saved configurations, and writes the refreshed
+combined diagnostic support surface.  The postprocessor remains finite-shell
+diagnostic support only.
+
+Validation: polefit8x8 combiner `PASS=6 FAIL=0`; polefit8x8 postprocessor
+`PASS=5 FAIL=0`; Stieltjes proxy diagnostic `PASS=9 FAIL=0`;
+contact-subtraction boundary `PASS=10 FAIL=0`; retained-route
+`PASS=187 FAIL=0`; campaign status `PASS=213 FAIL=0`; full positive closure
+assembly gate `PASS=38 FAIL=0`.
+
+This is not closure.  The stream still lacks complete L12 statistics, L16/L24
+finite-volume scaling, FV/IR/zero-mode control, pole-saturation/model-class
+authority, same-surface scalar contact/denominator authority, and
+canonical-Higgs/source-overlap identity.  No retained or `proposed_retained`
+closure is authorized.
+
 ## 2026-05-05 Contact-Subtraction Identifiability Update
 
 The retained-route certificate now consumes

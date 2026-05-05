@@ -29,6 +29,26 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=213 FAIL=0
 ```
 
+## 2026-05-05 FH/LSZ Polefit8x8 Chunks025-030 Completion Update
+
+The campaign now records completed polefit8x8 chunks025-030 as part of the
+separate homogeneous eight-mode/x8 pole-fit support stream.  The combiner sees
+`30/63` ready chunks and `480/1008` saved configurations; the postprocessor
+forms a finite-shell diagnostic over eight momentum rows, but the model-class,
+FV/IR, source-overlap, contact-subtraction, and matching gates still block
+retained use.
+
+Validation: polefit8x8 combiner `PASS=6 FAIL=0`; polefit8x8 postprocessor
+`PASS=5 FAIL=0`; Stieltjes proxy diagnostic `PASS=9 FAIL=0`;
+contact-subtraction boundary `PASS=10 FAIL=0`; retained-route
+`PASS=187 FAIL=0`; campaign status `PASS=213 FAIL=0`; full positive closure
+assembly gate `PASS=38 FAIL=0`; non-chunk worklist `PASS=19 FAIL=0`.
+
+This update is production-support packaging only.  It does not derive
+`kappa_s`, does not identify the source pole with canonical `O_H`, does not
+supply W/Z or Schur rows, and does not authorize retained or
+`proposed_retained` `y_t` closure.
+
 ## 2026-05-05 Contact-Subtraction Identifiability Update
 
 The campaign status certificate now consumes
