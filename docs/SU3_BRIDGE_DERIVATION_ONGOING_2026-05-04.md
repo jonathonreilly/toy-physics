@@ -248,6 +248,60 @@ The campaign's "closure" was an empirical parameter fit, not a derivation. The f
 
 **Next genuine step**: tackle L_s ≥ 3 with rigorous Schur (or accept import). The L_s=3 APBC version of the cube derivation hasn't been done.
 
+## 10c. NEW SYNTHESIS: why all L_s=2 cube derivations cluster at 0.42, and why the framework's "best candidate" 0.59353 is structurally inconsistent
+
+Reading [docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md](docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md) and [docs/GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](docs/GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md) together gives a sharper picture:
+
+### 10c.1 The framework's "candidate" 0.59353 is constant-lift, which the framework itself disproves
+
+The bridge-support note proposes `P_cand(6) = P_1plaq(Γ_cand × 6) = 0.593530679977098`, where `Γ_cand = (3/2)(2/√3)^(1/4) = 1.5549`. This sits 0.022% above MC's 0.5934.
+
+But the SAME live repo carries the constant-lift obstruction theorem:
+
+- Full Wilson plaquette has exact strong-coupling slope `1/18` (Haar orthogonality of cross-plaquette insertions at β=0).
+- Local one-plaquette block has the SAME exact slope `1/18`.
+- Therefore any exact constant-lift `P(β) = P_1plaq(Γβ)` forces `Γ = 1`.
+- `Γ_cand = 1.5549 ≠ 1` ⟹ **constant-lift candidate is exactly disproven** by the framework's own slope theorem.
+
+Numerical check: `Γ_cand × (1/18) = 0.0864`, vs actual slope `1/18 = 0.0556` — a 1.55× kinematic mismatch.
+
+**The 0.59353 candidate is therefore a numerological coincidence**, not a derivation. The class-level pieces `(3/2)` (link-to-plaquette incidence) and `(2/√3)^(1/4)` (temporal completion endpoint) combine into a `Γ_cand` that fails the slope test.
+
+### 10c.2 What the L_s=2 cube derivations actually establish
+
+The actual exact β=6 evaluation of the V-invariant minimal block via Schur orthogonality gives `P = 0.4225` — and this is the framework's own staging gate's ([docs/GAUGE_SCALAR_BRIDGE_3PLUS1_NATIVE_TUBE_STAGING_GATE_2026-05-03.md](docs/GAUGE_SCALAR_BRIDGE_3PLUS1_NATIVE_TUBE_STAGING_GATE_2026-05-03.md)) named closure target. The staging gate hoped this computation would close the bridge; instead, it gives the lower floor.
+
+Combined with the mixed-cumulant onset `P_full(β) = P_1plaq(β) + β^5/472392 + O(β^6)`:
+- At β=6: correction = 6^5/472392 = 0.01646
+- P_1plaq(6) + correction ≈ 0.4225 + 0.01646 = 0.4390
+- Still 0.15 below MC
+
+So the perturbative correction to the L_s=2 Schur baseline is far too small.
+
+### 10c.3 The structural reason: reduction law β_eff(β) is non-trivial, not constant
+
+The framework's exact statement (susceptibility-flow theorem) is:
+
+```
+β_eff'(β) = χ_L(β) / χ_1plaq(β_eff(β))
+```
+
+with onset `β_eff(β) = β + β^5/26244 + O(β^6)`.
+
+The ANALYTIC content needed to close P(6) is the full nonperturbative continuation of `β_eff(β)` to β=6 — equivalently the full connected susceptibility profile χ_L(β). The framework explicitly states (multiple primitives) that this is **OPEN**.
+
+### 10c.4 Implication for the campaign
+
+- The L_s=2 cube Schur in any geometry (PBC, APBC, V-invariant) gives ~0.42-0.43; this is the framework's exact L_s=2 prediction.
+- The "0.59353 candidate" violates the framework's own constant-lift no-go.
+- To natively derive 0.5934 requires either:
+  (a) Solving the open Perron problem at β=6 on the L_s=2 transfer operator (per framework: open), or
+  (b) L_s ≥ 3 derivation (per PR #510: treewidth ≥ 29 issues for L_s=3 PBC; L_s=3 APBC is the user's next requested computation).
+
+The campaign's k = 12 + 2/π closure is in the framework's tube-power family that the no-go classifies as not closed by local inputs. The (N²-1)/(4π) re-interpretation was goal-seeked from the empirical k value.
+
+**Honest current status**: framework's exact L_s=2 native prediction is ~0.42; MC = 0.5934 is not derivable from current framework primitives at L_s=2; L_s=3 APBC remains open and is the next concrete attempt.
+
 ## 10b. NEW FINDING: V-invariant L_s=2 APBC Schur computation (this iteration)
 
 Per the framework's roadmap spec, the V-invariant minimal block has **6 plaquettes / 12 directed link uses** (NOT the 12/24 PBC structure used by the existing runner). Computed the V-invariant Schur derivation explicitly (`scripts/frontier_su3_v_invariant_apbc_schur_2026_05_04.py`).
