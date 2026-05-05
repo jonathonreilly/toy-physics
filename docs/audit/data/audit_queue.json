@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 545,
     "high": 23,
-    "leaf": 180,
+    "leaf": 179,
     "medium": 114
   },
   "cycle_break_target_count": 168,
@@ -21165,31 +21165,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "source_resolved_wavefield_green_pocket_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "source_resolved_propagating_green_pocket_note",
-        "source_resolved_exact_green_pocket_note",
-        "minimal_source_driven_field_probe_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 1.5,
-      "note_path": "docs/SOURCE_RESOLVED_WAVEFIELD_GREEN_POCKET_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/source_resolved_wavefield_green_pocket.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "poisson_3d_self_field_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -25814,6 +25789,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 9,
-  "total_pending": 862
+  "ready_count": 8,
+  "total_pending": 861
 }

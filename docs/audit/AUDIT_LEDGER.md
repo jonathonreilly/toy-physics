@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 61 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 215 |
+| **retained_bounded** | 216 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 843 |
+| unaudited | 842 |
 | audit_in_progress | 1 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
@@ -40,22 +40,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 371 |
+| `audited_clean` | 372 |
 | `audited_conditional` | 400 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 31 |
-| `unaudited` | 889 |
+| `unaudited` | 888 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 622 |
+| `bounded_theorem` | 623 |
 | `decoration` | 9 |
 | `meta` | 55 |
 | `no_go` | 187 |
 | `open_gate` | 112 |
-| `positive_theorem` | 797 |
+| `positive_theorem` | 796 |
 
 | criticality | count |
 |---|---:|
@@ -388,6 +388,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_radical_geometry_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_self_consistent_generated_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `source_resolved_support_localization_split_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `source_resolved_wavefield_green_pocket_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_wavefield_v2_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `spectral_closure_2026-04-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -10865,6 +10866,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — The runner appears to compute the reported diagnostics rather than merely print constants, but the restricted packet does not close the imported lattice/propagation module or derive the wavefield rule, kernel, normalization, and chosen update parameters from the axiom. The missing step is an internal bridge showing those readout and evolution choices are axiom-derived rather than probe assumptions.
 - **rationale:** The stdout matches a substantive computation in the supplied runner, including zero-source checks, propagation cases, fitted exponents, and detector-line phase-ramp metrics. However, the computation imports the lattice propagator and several load-bearing modeling choices from outside the restricted packet, including the finite-speed update rule, Green kernel parameters, gain normalization, and detector-line proxy. The source note honestly scopes this as a minimal exact-lattice probe rather than a full causal-field theory, so the bounded empirical computation is credible only conditional on those unclosed framework choices.
 - **auditor confidence:** medium
+
+### `source_resolved_wavefield_green_pocket_note`
+
+- **Note:** [`SOURCE_RESOLVED_WAVEFIELD_GREEN_POCKET_NOTE.md`](../../docs/SOURCE_RESOLVED_WAVEFIELD_GREEN_POCKET_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** On the fixed h=0.25, W=3, L=6 exact-lattice source ladder with the stated Green kernel and wavefield-update parameters, the runner computes exact zero-source reduction, 4/4 TOWARD wavefield rows, near-linear wavefield scaling, nonzero phase lag, reduced same-site overlap, and a much larger detector response than the same-site memory control.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-20260505`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The strongest bounded statement is that zero-source reduction survives, the wavefield keeps the weak-field TOWARD sign, the mass-scaling class stays essentially linear, and the wavefield produces a measurable phase lag relative to the same-site memory control.  _(class `C`)_
+- **chain closes:** True — The one-hop dependencies are retained_bounded finite-pocket controls, and the current runner constructs the lattice, source-resolved Green field, same-site baseline, wavefield update, propagation, centroid shifts, exponents, phase lags, and overlaps directly. The result closes only as a bounded finite numerical experiment, not as a full self-consistent field theory or continuum retarded-gravity theorem.
+- **rationale:** The completed cached run matches the source table for zero-source shifts, the four source-strength rows, TOWARD sign, mean phase lag, overlap, and wave/same separation. The source note's headline should be read at bounded finite-pocket scope: the current runner prints wavefield F~M exponent 0.99, so the clean claim is near-linear or essentially linear scaling rather than an exact exponent-1 theorem. No hidden external comparator or unretained dependency is needed for that scoped finite replay.
+- **auditor confidence:** high
 
 ### `source_resolved_wavefield_mechanism_note`
 
