@@ -902,3 +902,20 @@ Findings checked:
   top-Yukawa readout.
 - The aggregate assembly, retained-route, and campaign gates consume the
   no-go and still report `proposal_allowed=false`.
+
+# 2026-05-05 Top/W Factorization-Independence Gate Review
+
+Disposition: pass as exact negative boundary, not as closure.
+
+Findings checked:
+
+- The runner tests the next derivation shortcut directly: whether Cl(3)/Z^3
+  same-source bookkeeping and 3+derived-time locality imply top/W response
+  factorization or independence.
+- The same-source counterfamily keeps the native labels fixed while allowing
+  positive, negative, or zero `cov_dE_top_dM_W`.
+- Scout mode validates the schema with a synthetic product-measure theorem, but
+  current mode writes no production factorization certificate.
+- The note and runner do not claim retained/proposed-retained closure and do
+  not use observed selectors, `H_unit`/Ward authority, `alpha_LM`/plaquette/u0,
+  or by-fiat normalization shortcuts.

@@ -164,6 +164,7 @@ def main() -> int:
         "same_source_top_response_identity_builder": "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json",
         "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
         "top_wz_covariance_marginal_derivation_no_go": "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
+        "top_wz_factorization_independence_gate": "outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json",
         "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
         "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
         "same_source_w_response_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
@@ -1184,6 +1185,18 @@ def main() -> int:
             "marginal_derivation_no_go_passed"
         )
         is True
+    )
+    top_wz_factorization_independence_gate_blocks = (
+        "same-source top-W factorization not derived"
+        in certificates["top_wz_factorization_independence_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["top_wz_factorization_independence_gate"].get("proposal_allowed")
+        is False
+        and certificates["top_wz_factorization_independence_gate"].get(
+            "strict_factorization_independence_gate_passed"
+        )
+        is False
     )
     wz_correlator_mass_fit_path_gate_blocks = (
         "WZ correlator mass-fit path absent"
@@ -2279,6 +2292,11 @@ def main() -> int:
         certificates["top_wz_covariance_marginal_derivation_no_go"].get("actual_current_surface_status", ""),
     )
     report(
+        "top-wz-factorization-independence-gate-blocks",
+        top_wz_factorization_independence_gate_blocks,
+        certificates["top_wz_factorization_independence_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
         "wz-correlator-mass-fit-path-gate-blocks",
         wz_correlator_mass_fit_path_gate_blocks,
         certificates["wz_correlator_mass_fit_path_gate"].get("actual_current_surface_status", ""),
@@ -2930,8 +2948,12 @@ def main() -> int:
             "second sub-blocker: no paired top/W response rows exist on a "
             "matched configuration set.  The covariance marginal-derivation "
             "no-go now blocks deriving that covariance from separate top and "
-            "W response marginals; a real paired row set or a same-surface "
-            "factorization/independence theorem is required.  "
+            "W response marginals; the factorization-independence gate now "
+            "also blocks treating the Cl(3)/Z^3 same-source label or "
+            "3+derived-time locality as independence authority.  A real "
+            "paired row set or a strict same-surface product-measure/"
+            "conditional-independence/deterministic-response theorem is "
+            "required.  "
             "Continue chunked production only with "
             "seed-controlled replacement chunks or scheduler handoff; do not "
             "treat historical chunk001/chunk002 as independent evidence.  "

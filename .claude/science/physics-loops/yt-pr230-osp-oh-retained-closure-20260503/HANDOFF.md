@@ -2277,3 +2277,47 @@ The derivation-first route is not dead, but it is narrower now.  The next
 derivation target must be a same-surface factorization/independence theorem
 for the joint top/W source response.  Otherwise the route needs measured
 matched top/W response rows.
+
+## 2026-05-05 Top/W Factorization-Independence Gate
+
+The next non-chunk derivation shortcut was tested: can the framework-native
+Cl(3)/Z^3 same-source label and 3+derived-time locality force top/W response
+factorization or independence, avoiding matched top/W rows?
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_top_wz_factorization_independence_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_top_wz_factorization_independence_gate.py --scout
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=29 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=178 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=204 FAIL=0
+```
+
+Result: exact negative boundary on the current surface.  The runner constructs
+same-source Cl(3)/Z^3 latent configuration families with identical native
+bookkeeping but positive, negative, or zero `cov_dE_top_dM_W`.  Therefore the
+native same-source label is not product-measure or independence authority.
+
+Allowed future routes are now exact:
+
+- produce measured matched top/W response rows;
+- derive a strict product-measure factorization theorem;
+- derive a strict conditional-independence theorem;
+- derive a deterministic W-response theorem plus finite-sample covariance rule;
+- derive a closed covariance formula on the same Cl(3)/Z^3 3+derived-time
+  surface.
+
+No retained/proposed-retained wording is authorized.  The artifact uses no
+observed W/Z/top/`y_t`/`g_2` selectors, no `H_unit`/Ward authority, no
+`alpha_LM`/plaquette/u0, and no by-fiat `kappa_s`, `c2`, `Z_match`, or
+`cos(theta)`.

@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 548,
-    "medium": 300
+    "leaf": 550,
+    "medium": 301
   },
-  "generated_at": "2026-05-05T00:15:50.282897+00:00",
+  "generated_at": "2026-05-05T00:30:52.281785+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -9694,6 +9694,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_top_wz_factorization_independence_gate_note_2026-05-05",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 2,
+      "load_bearing_score": 2.585,
+      "note_path": "docs/YT_TOP_WZ_FACTORIZATION_INDEPENDENCE_GATE_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_top_wz_factorization_independence_gate.py",
+      "transitive_descendants": 2
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "dm_wilson_to_dweh_hermitian_source_family_target_note_2026-04-18",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -13834,7 +13851,9 @@
       "criticality_rank": 0,
       "cross_confirmation_status": null,
       "current_status": "unknown",
-      "deps": [],
+      "deps": [
+        "yt_top_wz_factorization_independence_gate_note_2026-05-05"
+      ],
       "direct_in_degree": 1,
       "load_bearing_score": 1.5,
       "note_path": "docs/YT_TOP_WZ_COVARIANCE_MARGINAL_DERIVATION_NO_GO_NOTE_2026-05-05.md",
@@ -18523,6 +18542,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_fh_lsz_polefit8x8_chunks019_024_launch_checkpoint_note_2026-05-04",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS019_024_LAUNCH_CHECKPOINT_NOTE_2026-05-04.md",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21090,6 +21126,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_wz_g2_authority_firewall_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_WZ_G2_AUTHORITY_FIREWALL_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_wz_g2_authority_firewall.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_wz_mass_fit_response_row_builder_note_2026-05-04",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -22853,7 +22906,8 @@
       "cross_confirmation_status": null,
       "current_status": "open",
       "deps": [
-        "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05"
+        "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05",
+        "yt_top_wz_factorization_independence_gate_note_2026-05-05"
       ],
       "direct_in_degree": 0,
       "load_bearing_score": 0.0,
@@ -22863,6 +22917,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 696,
-  "total_pending": 1085
+  "ready_count": 699,
+  "total_pending": 1088
 }

@@ -8545,8 +8545,16 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
+      "from": "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05",
+      "to": "yt_top_wz_factorization_independence_gate_note_2026-05-05"
+    },
+    {
       "from": "yt_top_wz_matched_covariance_certificate_builder_note_2026-05-04",
       "to": "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05"
+    },
+    {
+      "from": "yt_top_wz_matched_covariance_certificate_builder_note_2026-05-04",
+      "to": "yt_top_wz_factorization_independence_gate_note_2026-05-05"
     },
     {
       "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
@@ -18517,7 +18525,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T00:15:44.622701+00:00",
+  "generated_at": "2026-05-05T00:30:46.892084+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -40503,6 +40511,16 @@
       "runner_path": null,
       "title": "FH/LSZ Eight-Mode/x8 Chunks013-018 Checkpoint"
     },
+    "yt_fh_lsz_polefit8x8_chunks019_024_launch_checkpoint_note_2026-05-04": {
+      "claim_id": "yt_fh_lsz_polefit8x8_chunks019_024_launch_checkpoint_note_2026-05-04",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "d1ea8db586cf0713ef2d41f06da4bc1194f0e1372c6997fac099e22cb8777de7",
+      "path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS019_024_LAUNCH_CHECKPOINT_NOTE_2026-05-04.md",
+      "runner_path": null,
+      "title": "PR #230 FH/LSZ Polefit8x8 Chunks019-024 Launch Checkpoint"
+    },
     "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04": {
       "claim_id": "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04",
       "current_status": "bounded",
@@ -41651,7 +41669,7 @@
       "current_status": "open",
       "current_status_raw": "open / assembly gate; proposal_allowed=false.",
       "deps": [],
-      "note_hash": "bb2b09cb10af1e6893a3d2e19b52570f66613c2445148d0564a1e724203eea3b",
+      "note_hash": "efa48459e843bc45a2fc1bc686c3055fa7c55fdbc8a8ed129286fb345e2586ed",
       "path": "docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md",
       "runner_path": null,
       "title": "PR230 Full Positive Closure Assembly Gate Note"
@@ -42616,20 +42634,33 @@
       "claim_id": "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05",
       "current_status": "unknown",
       "current_status_raw": "exact negative boundary / covariance derivation shortcut rejected;",
-      "deps": [],
-      "note_hash": "a22f2efc780d3919d69eb119d7c97e1e0cf026c4140e1c82d00a4a4ee5d2a053",
+      "deps": [
+        "yt_top_wz_factorization_independence_gate_note_2026-05-05"
+      ],
+      "note_hash": "c65a6535575c959664bcab38b6a51eb2614673b5842351463086bae145b4180b",
       "path": "docs/YT_TOP_WZ_COVARIANCE_MARGINAL_DERIVATION_NO_GO_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_top_wz_covariance_marginal_derivation_no_go.py",
       "title": "YT Top/W Covariance Marginal-Derivation No-Go"
+    },
+    "yt_top_wz_factorization_independence_gate_note_2026-05-05": {
+      "claim_id": "yt_top_wz_factorization_independence_gate_note_2026-05-05",
+      "current_status": "support",
+      "current_status_raw": "exact negative boundary / same-source factorization not derived on",
+      "deps": [],
+      "note_hash": "11f26b48e9e67b469339fdcf9c581066fccb07fb1168f97ee99f5e0345d4aee3",
+      "path": "docs/YT_TOP_WZ_FACTORIZATION_INDEPENDENCE_GATE_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_top_wz_factorization_independence_gate.py",
+      "title": "YT Top/W Factorization-Independence Gate"
     },
     "yt_top_wz_matched_covariance_certificate_builder_note_2026-05-04": {
       "claim_id": "yt_top_wz_matched_covariance_certificate_builder_note_2026-05-04",
       "current_status": "open",
       "current_status_raw": "open / matched covariance contract; proposal_allowed=false.",
       "deps": [
-        "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05"
+        "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05",
+        "yt_top_wz_factorization_independence_gate_note_2026-05-05"
       ],
-      "note_hash": "943352bef60553e088420a99735cf062f59a30a1bda54d4906e4622f61e4e5fe",
+      "note_hash": "8ff236d89e687a3e199829e6a097f70830fce6a6b8b574607c32bc895df2e1b3",
       "path": "docs/YT_TOP_WZ_MATCHED_COVARIANCE_CERTIFICATE_BUILDER_NOTE_2026-05-04.md",
       "runner_path": "scripts/frontier_yt_top_wz_matched_covariance_certificate_builder.py",
       "title": "YT Top/WZ Matched Covariance Certificate Builder Note"
@@ -42767,6 +42798,16 @@
       "path": "docs/YT_WZ_CORRELATOR_MASS_FIT_PATH_GATE_NOTE_2026-05-04.md",
       "runner_path": "scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py",
       "title": "PR #230 W/Z Correlator Mass-Fit Path Gate"
+    },
+    "yt_wz_g2_authority_firewall_note_2026-05-05": {
+      "claim_id": "yt_wz_g2_authority_firewall_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "bffffee1ef019d165d446fe7fb0e28c265ee1cd1ea68a3992c92b83a6a96f950",
+      "path": "docs/YT_WZ_G2_AUTHORITY_FIREWALL_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_wz_g2_authority_firewall.py",
+      "title": "PR #230 W/Z g2 Authority Firewall"
     },
     "yt_wz_mass_fit_response_row_builder_note_2026-05-04": {
       "claim_id": "yt_wz_mass_fit_response_row_builder_note_2026-05-04",
@@ -44171,6 +44212,7 @@
     "yt_fh_lsz_polefit8x8_chunks001_006_checkpoint_note_2026-05-04",
     "yt_fh_lsz_polefit8x8_chunks007_012_checkpoint_note_2026-05-04",
     "yt_fh_lsz_polefit8x8_chunks013_018_checkpoint_note_2026-05-04",
+    "yt_fh_lsz_polefit8x8_chunks019_024_launch_checkpoint_note_2026-05-04",
     "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04",
     "yt_fh_lsz_production_checkpoint_granularity_gate_note_2026-05-01",
     "yt_fh_lsz_production_manifest_note_2026-05-01",
@@ -44337,7 +44379,7 @@
     "yt_top_mass_ward_decomp_claim_status_certificate_2026-04-30",
     "yt_top_mass_ward_decomp_handoff_2026-04-30",
     "yt_top_mass_ward_decomp_no_go_note_2026-04-30",
-    "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05",
+    "yt_top_wz_factorization_independence_gate_note_2026-05-05",
     "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
     "yt_unit_projector_pole_threshold_obstruction_note_2026-05-01",
     "yt_ward_identity_derivation_theorem",
@@ -44345,6 +44387,7 @@
     "yt_ward_physical_readout_repair_audit_note_2026-05-01",
     "yt_ward_ratio_stationarity_no_go_note_2026-05-01",
     "yt_wz_correlator_mass_fit_path_gate_note_2026-05-04",
+    "yt_wz_g2_authority_firewall_note_2026-05-05",
     "yt_wz_mass_fit_response_row_builder_note_2026-05-04",
     "yt_wz_response_harness_absence_guard_note_2026-05-02",
     "yt_wz_response_harness_implementation_plan_note_2026-05-04",
@@ -44361,18 +44404,18 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4629,
-    "leaf_count": 977,
-    "node_count": 1928,
-    "root_count": 1443,
-    "runners_with_path": 1457,
+    "edge_count": 4631,
+    "leaf_count": 979,
+    "node_count": 1931,
+    "root_count": 1445,
+    "runners_with_path": 1459,
     "status_counts": {
       "bounded": 541,
       "open": 97,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 417,
-      "unknown": 499
+      "support": 418,
+      "unknown": 501
     }
   }
 }

@@ -72,6 +72,12 @@ Open imports:
   strict covariance certificate cannot be derived from separate marginal
   response support without a new same-surface factorization/independence
   theorem;
+- matched top/W factorization-independence gate is closed negatively on the
+  current PR230 surface: the Cl(3)/Z^3 same-source label and 3+derived-time
+  locality do not themselves imply top/W independence, so a future positive
+  route needs measured matched rows or a strict product-measure,
+  conditional-independence, deterministic-response, or closed covariance
+  theorem;
 - positivity-improving/rank-one route is conditional support only; the direct
   neutral-sector irreducibility theorem is blocked on the current surface;
 - scalar denominator / K-prime route is exact support only; same-surface Schur

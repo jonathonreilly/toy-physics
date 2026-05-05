@@ -1,0 +1,31 @@
+{
+  "certificate_kind": "top_wz_factorization_independence",
+  "cl3_z3_substrate": true,
+  "cov_dE_top_dM_W": 0.0,
+  "firewall": {
+    "synthesized_matched_response_rows": false,
+    "used_H_unit_or_Ward_authority": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_c2_or_zmatch_equal_one": false,
+    "used_kappa_or_cos_theta_by_fiat": false,
+    "used_observed_WZ_masses_as_selector": false,
+    "used_observed_top_or_yukawa_as_selector": false
+  },
+  "mechanisms": {
+    "closed_covariance_formula": true,
+    "conditional_independence": false,
+    "deterministic_w_response": false,
+    "product_measure_factorization": true
+  },
+  "phase": "scout",
+  "proposal_allowed": false,
+  "same_source_coordinate": true,
+  "same_surface_top_w_response_scope": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not synthesize matched top/W production rows",
+    "does not use observed W/Z/top/y_t/g2 selectors",
+    "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, c2=1, Z_match=1, kappa_s=1, or cos(theta)=1"
+  ],
+  "three_spatial_plus_derived_time": true
+}

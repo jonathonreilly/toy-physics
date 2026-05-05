@@ -49,6 +49,7 @@ PARENTS = {
     "same_source_top_response_identity_builder": "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json",
     "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
     "top_wz_covariance_marginal_derivation_no_go": "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
+    "top_wz_factorization_independence_gate": "outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json",
     "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
     "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
     "same_source_w_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
@@ -180,6 +181,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "same-source top-response identity certificate absent",
                 "matched top/W covariance certificate absent",
                 "marginal derivation of top/W covariance rejected",
+                "same-source/native top/W factorization-independence shortcut rejected",
                 "same-source top-response certificate absent",
                 "same-source W-response row builder strict inputs absent",
                 "lightweight same-source W readout production rows absent",
@@ -198,6 +200,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["same_source_top_response_identity_builder"],
                 PARENTS["top_wz_matched_covariance_builder"],
                 PARENTS["top_wz_covariance_marginal_derivation_no_go"],
+                PARENTS["top_wz_factorization_independence_gate"],
                 PARENTS["same_source_top_response_builder"],
                 PARENTS["same_source_w_response_row_builder"],
                 PARENTS["same_source_w_lightweight_readout"],
@@ -426,6 +429,18 @@ def main() -> int:
         statuses["top_wz_covariance_marginal_derivation_no_go"],
     )
     report(
+        "top-wz-factorization-independence-gate-blocks",
+        "same-source top-W factorization not derived"
+        in statuses["top_wz_factorization_independence_gate"]
+        and certs["top_wz_factorization_independence_gate"].get("proposal_allowed")
+        is False
+        and certs["top_wz_factorization_independence_gate"].get(
+            "strict_factorization_independence_gate_passed"
+        )
+        is False,
+        statuses["top_wz_factorization_independence_gate"],
+    )
+    report(
         "same-source-top-response-builder-open",
         "same-source top-response" in statuses["same_source_top_response_builder"]
         and certs["same_source_top_response_builder"].get("proposal_allowed") is False
@@ -522,8 +537,8 @@ def main() -> int:
             "Keep the chunk worker on homogeneous production chunks.  In parallel, "
             "pursue one non-chunk bridge that can satisfy this gate: a real "
             "same-surface O_H certificate plus C_sH/C_HH pole rows, a same-source "
-            "EW action plus top/W/Z mass-response rows, matched covariance, and "
-            "sector-overlap identity, "
+            "EW action plus top/W/Z mass-response rows, matched covariance or "
+            "a real top/W factorization theorem, and sector-overlap identity, "
             "same-surface Schur A/B/C kernel rows with scalar denominator closure, "
             "or a neutral-sector irreducibility theorem.  Rerun this assembly "
             "gate before any retained-route proposal."

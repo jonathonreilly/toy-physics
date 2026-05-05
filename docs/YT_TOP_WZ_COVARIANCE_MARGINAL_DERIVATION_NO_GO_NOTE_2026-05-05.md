@@ -66,3 +66,7 @@ and does not use observed W/Z/top/`y_t`/`g_2` selectors, `H_unit`,
 If we want to avoid new W/Z compute, the next derivation target is not the
 covariance itself from marginals.  It is a real same-surface
 factorization/independence theorem for the joint top/W source response.
+That next shortcut is now gated by
+[`YT_TOP_WZ_FACTORIZATION_INDEPENDENCE_GATE_NOTE_2026-05-05.md`](YT_TOP_WZ_FACTORIZATION_INDEPENDENCE_GATE_NOTE_2026-05-05.md):
+framework-native Cl(3)/Z^3 same-source bookkeeping and 3+derived-time locality
+are not themselves independence authority.

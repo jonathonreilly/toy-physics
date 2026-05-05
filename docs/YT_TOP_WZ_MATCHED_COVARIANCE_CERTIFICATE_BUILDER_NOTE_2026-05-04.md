@@ -63,6 +63,13 @@ negatively by
 matched covariance is joint information and is not determined by marginal
 response certificates.
 
+The next derivation shortcut, treating Cl(3)/Z^3 same-source bookkeeping or
+3+derived-time locality as top/W independence, is also gated by
+[`YT_TOP_WZ_FACTORIZATION_INDEPENDENCE_GATE_NOTE_2026-05-05.md`](YT_TOP_WZ_FACTORIZATION_INDEPENDENCE_GATE_NOTE_2026-05-05.md).
+It remains blocked on the current PR230 surface unless a real product-measure,
+conditional-independence, deterministic-response, or closed covariance theorem
+is supplied.
+
 ## Non-Claims
 
 This note does not claim retained or proposed_retained top-Yukawa closure.  It

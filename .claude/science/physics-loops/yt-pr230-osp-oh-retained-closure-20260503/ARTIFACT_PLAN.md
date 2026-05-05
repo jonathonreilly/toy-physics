@@ -159,3 +159,18 @@ W-response certificates do not determine matched covariance.  The remaining
 derivation-first escape hatch is now narrower: derive a same-surface
 factorization/independence theorem for the joint top/W source response, or
 measure matched top/W rows.
+
+Completed in the factorization-independence continuation:
+
+- `scripts/frontier_yt_top_wz_factorization_independence_gate.py`
+- `docs/YT_TOP_WZ_FACTORIZATION_INDEPENDENCE_GATE_NOTE_2026-05-05.md`
+- `outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json`
+- `outputs/yt_top_wz_factorization_independence_gate_scout_2026-05-05.json`
+- `outputs/yt_top_wz_factorization_independence_gate_scout_certificate_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
+This closes the native-label shortcut negatively: the Cl(3)/Z^3 same-source
+label and 3+derived-time locality do not imply top/W independence by
+themselves.  A future positive route needs measured matched top/W rows or a
+strict same-surface product-measure, conditional-independence,
+deterministic-response, or closed covariance theorem.

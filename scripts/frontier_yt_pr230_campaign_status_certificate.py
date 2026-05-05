@@ -296,6 +296,9 @@ def main() -> int:
         "top_wz_covariance_marginal_derivation_no_go": load(
             "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json"
         ),
+        "top_wz_factorization_independence_gate": load(
+            "outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json"
+        ),
         "same_source_top_response_builder": load(
             "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json"
         ),
@@ -1367,6 +1370,18 @@ def main() -> int:
         )
         is True,
         statuses["top_wz_covariance_marginal_derivation_no_go"],
+    )
+    report(
+        "top-wz-factorization-independence-gate-blocks",
+        "same-source top-W factorization not derived"
+        in str(statuses["top_wz_factorization_independence_gate"])
+        and certificates["top_wz_factorization_independence_gate"].get("proposal_allowed")
+        is False
+        and certificates["top_wz_factorization_independence_gate"].get(
+            "strict_factorization_independence_gate_passed"
+        )
+        is False,
+        statuses["top_wz_factorization_independence_gate"],
     )
     report(
         "same-source-w-response-row-builder-open",

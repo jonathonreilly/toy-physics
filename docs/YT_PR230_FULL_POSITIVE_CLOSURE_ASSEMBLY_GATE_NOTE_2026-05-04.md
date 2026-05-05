@@ -51,7 +51,8 @@ The current positive non-chunk bridge candidates remain:
 - same-source W/Z response, blocked by the missing same-source EW action,
   missing W/Z correlator mass-fit rows, missing lightweight W-response
   production row certificate, missing strict `delta_perp` tomography/null/purity
-  correction certificate, missing sector-overlap identity, and missing
+  correction certificate, missing matched top/W rows or a strict same-surface
+  top/W factorization theorem, missing sector-overlap identity, and missing
   canonical-Higgs identity;
 - Schur/K-prime kernel rows, blocked by absent same-surface Schur `A/B/C` rows
   and the separate canonical bridge;
@@ -72,6 +73,7 @@ Keep chunk production separate.  In parallel, pursue one real non-chunk bridge
 that can satisfy the gate: a same-surface `O_H` certificate plus
 `C_sH/C_HH` production rows, a same-source EW action plus W/Z mass-response
 rows plus the lightweight readout certificate, strict `delta_perp` correction
-authority, and sector-overlap identity, same-surface Schur `A/B/C` kernel rows,
-or a neutral-sector irreducibility theorem.  Rerun the assembly gate before
-any retained-route proposal.
+authority, matched top/W rows or a strict top/W factorization theorem, and
+sector-overlap identity, same-surface Schur `A/B/C` kernel rows, or a
+neutral-sector irreducibility theorem.  Rerun the assembly gate before any
+retained-route proposal.

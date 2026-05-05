@@ -300,6 +300,7 @@
     "taste_corner_ladder_pole_obstruction": "exact negative boundary / finite-ladder taste-corner pole-witness obstruction",
     "taste_singlet_ladder_normalization": "exact negative boundary / taste-singlet normalization removes finite ladder crossings",
     "top_wz_covariance_marginal_derivation_no_go": "exact negative boundary / matched top-W covariance not derivable from marginal response support",
+    "top_wz_factorization_independence_gate": "exact negative boundary / same-source top-W factorization not derived on current PR230 surface",
     "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
     "unit_projector_pole_threshold": "exact negative boundary / unit-projector finite-ladder pole-threshold obstruction",
     "wz_correlator_mass_fit_path_gate": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
@@ -316,7 +317,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 203,
+  "pass_count": 204,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

@@ -1,0 +1,109 @@
+{
+  "actual_current_surface_status": "exact negative boundary / same-source top-W factorization not derived on current PR230 surface",
+  "allowed_future_routes": [
+    "produce measured matched top/W response rows on the same configuration set",
+    "supply a product-measure factorization theorem for the top and W response functionals",
+    "supply a conditional-independence theorem strong enough to fix cov_dE_top_dM_W",
+    "supply a deterministic W-response theorem plus a validated finite-sample covariance rule",
+    "supply a closed covariance formula from the same Cl(3)/Z^3 3+derived-time surface"
+  ],
+  "bare_retained_allowed": false,
+  "blocked_shortcut": {
+    "candidate": "derive matched top/W covariance from framework-native same-source label or substrate bookkeeping",
+    "reason": "A same-source Cl(3)/Z^3 latent configuration family can carry positive, negative, or zero top/W covariance without changing the native labels.  Independence is therefore an extra theorem, not a consequence of native bookkeeping."
+  },
+  "exact_next_action": "Either build the actual matched top/W response rows, or derive one of the allowed same-surface factorization mechanisms and rerun this gate in strict mode.  Do not treat Cl(3)/Z^3 same-source bookkeeping or 3+derived-time locality as independence by itself.",
+  "factorization_certificate_output": "outputs/yt_top_wz_factorization_independence_certificate_2026-05-05.json",
+  "factorization_certificate_written": false,
+  "factorization_independence_gate_passed": false,
+  "fail_count": 0,
+  "framework_native_scope": {
+    "geometry": "3 spatial + 1 derived-time source surface",
+    "same_source_coordinate": true,
+    "substrate": "Cl(3)/Z^3"
+  },
+  "mode": "current",
+  "parent_certificates": {
+    "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
+    "same_source_top_response_identity_builder": "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json",
+    "same_source_w_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
+    "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
+    "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
+    "top_wz_covariance_marginal_no_go": "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
+    "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
+    "wz_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
+    "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
+    "wz_same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json"
+  },
+  "parent_statuses": {
+    "same_source_top_response_builder": "open / same-source top-response identity or covariance inputs absent",
+    "same_source_top_response_identity_builder": "open / same-source top-response identity blockers remain",
+    "same_source_w_lightweight_readout": "open / lightweight same-source W-response readout production rows absent",
+    "same_source_w_response_decomposition": "exact-support / same-source W-response decomposition theorem; current rows absent",
+    "same_source_w_response_row_builder": "open / same-source W-response row builder inputs absent",
+    "top_wz_covariance_marginal_no_go": "exact negative boundary / matched top-W covariance not derivable from marginal response support",
+    "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
+    "wz_mass_fit_path_gate": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
+    "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
+    "wz_same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface"
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current Cl(3)/Z^3 same-source surface does not by itself imply top/W independence.  A future positive gate needs an explicit product-measure, conditional-independence, deterministic-response, or closed covariance theorem on the same surface.",
+  "same_source_counterfamily": {
+    "cov_constant_w": 0.0,
+    "cov_negative": -1.9999999999999737e-05,
+    "cov_positive": 1.9999999999999737e-05,
+    "covariance_changes_with_joint_law": true,
+    "geometry": "3 spatial + 1 derived-time source surface",
+    "latent_configuration_coordinate": [
+      -1.5,
+      -0.5,
+      0.5,
+      1.5
+    ],
+    "same_native_labels_for_all_cases": true,
+    "same_source_coordinate": true,
+    "substrate": "Cl(3)/Z^3",
+    "top_response": [
+      1.414,
+      1.418,
+      1.422,
+      1.426
+    ],
+    "w_response_deterministic_constant": [
+      0.516,
+      0.516,
+      0.516,
+      0.516
+    ],
+    "w_response_negative_correlation": [
+      0.5205,
+      0.5175,
+      0.5145000000000001,
+      0.5115000000000001
+    ],
+    "w_response_positive_correlation": [
+      0.5115000000000001,
+      0.5145000000000001,
+      0.5175,
+      0.5205
+    ]
+  },
+  "strict_factorization_independence_gate_passed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not create production matched rows",
+    "does not define y_t through a matrix element or y_t_bare",
+    "does not use observed W/Z/top/y_t/g2 selectors",
+    "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, kappa_s=1, c2=1, Z_match=1, or cos(theta)=1"
+  ],
+  "theorem_input": "outputs/yt_top_wz_factorization_independence_theorem_2026-05-05.json",
+  "theorem_validation": {
+    "failed_checks": [
+      "factorization theorem absent"
+    ],
+    "present": false,
+    "valid": false
+  }
+}

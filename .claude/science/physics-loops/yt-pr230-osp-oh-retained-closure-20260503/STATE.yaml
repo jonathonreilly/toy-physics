@@ -7,17 +7,22 @@ target_status: retained-positive-closure
 actual_current_surface_status: exact-negative-boundary
 active_residual: "same-source top-response identity certificate, matched top/W covariance, strict delta_perp tomography/null/purity authority, or O_sp-O_H identity"
 latest_checkpoint:
-  utc: "2026-05-05T02:20:00Z"
-  block: 51
-  artifact: "top/W covariance marginal-derivation no-go"
-  status: "exact negative boundary; matched covariance is joint data and is not derivable from separate top/W marginals"
-  result: "covariance marginal no-go PASS=11 FAIL=0; assembly PASS=27 FAIL=0; retained-route PASS=176 FAIL=0; campaign PASS=202 FAIL=0"
-  claim_boundary: "no production matched top/W response rows; no production matched covariance certificate; no same-surface factorization/independence theorem for top/W response; no production same-source top-response identity certificate; no production top-response certificate; no W/Z mass-fit rows; no g2 certificate; no final W/Z measurement row file; no physical y_t or retained/proposed-retained wording"
+  utc: "2026-05-05T02:55:00Z"
+  block: 52
+  artifact: "top/W factorization-independence gate"
+  status: "exact negative boundary; Cl(3)/Z^3 same-source bookkeeping and 3+derived-time locality do not imply top/W independence on current PR230 surface"
+  result: "factorization gate PASS=12 FAIL=0; scout PASS=12 FAIL=0; assembly PASS=29 FAIL=0; retained-route PASS=178 FAIL=0; campaign PASS=204 FAIL=0"
+  claim_boundary: "no production matched top/W response rows; no production matched covariance certificate; no strict product-measure/conditional-independence/deterministic-response theorem for top/W response; no production same-source top-response identity certificate; no production top-response certificate; no W/Z mass-fit rows; no g2 certificate; no final W/Z measurement row file; no physical y_t or retained/proposed-retained wording"
   live_compute: "chunk worker check-in: polefit8x8 chunks019-024 are still active in the other worker namespace; this checkpoint does not package chunk artifacts"
   checkpoint_files:
     - scripts/frontier_yt_top_wz_covariance_marginal_derivation_no_go.py
     - docs/YT_TOP_WZ_COVARIANCE_MARGINAL_DERIVATION_NO_GO_NOTE_2026-05-05.md
     - outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json
+    - scripts/frontier_yt_top_wz_factorization_independence_gate.py
+    - docs/YT_TOP_WZ_FACTORIZATION_INDEPENDENCE_GATE_NOTE_2026-05-05.md
+    - outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json
+    - outputs/yt_top_wz_factorization_independence_gate_scout_2026-05-05.json
+    - outputs/yt_top_wz_factorization_independence_gate_scout_certificate_2026-05-05.json
     - scripts/frontier_yt_top_wz_matched_covariance_certificate_builder.py
     - docs/YT_TOP_WZ_MATCHED_COVARIANCE_CERTIFICATE_BUILDER_NOTE_2026-05-04.md
     - outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json
@@ -64,7 +69,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 51
+block: 52
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
