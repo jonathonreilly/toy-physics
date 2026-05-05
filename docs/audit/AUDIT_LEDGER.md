@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | _retained_pending_chain_ | 1 |
 | open_gate | 16 |
 | unaudited | 880 |
-| audit_in_progress | 57 |
+| audit_in_progress | 58 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
-| ~~audited_conditional~~ | 382 |
+| ~~audited_conditional~~ | 381 |
 | ~~audited_failed~~ | 15 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 57 |
+| `audit_in_progress` | 58 |
 | `audited_clean` | 303 |
-| `audited_conditional` | 382 |
+| `audited_conditional` | 381 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
@@ -47,12 +47,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 616 |
+| `bounded_theorem` | 615 |
 | `decoration` | 5 |
 | `meta` | 54 |
 | `no_go` | 183 |
 | `open_gate` | 111 |
-| `positive_theorem` | 813 |
+| `positive_theorem` | 814 |
 
 | criticality | count |
 |---|---:|
@@ -156,6 +156,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_boundary_link_theorem_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `self_consistency_forces_poisson_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `self_gravity_backreaction_closure_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
+| `taste_scalar_isotropy_theorem_note` | positive_theorem | audit_in_progress | audit_in_progress | fresh_context | codex-gpt-5 | A | - |
 | `tensor_block_closure_test_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `tensor_support_center_excess_law_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `three_generation_observable_count_corollary_note_2026-05-03` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -804,7 +805,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `su3_casimir_fundamental_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `synthesis_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `synthesis_note_3d` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | C | - |
-| `taste_scalar_isotropy_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `teleportation_3d_resource_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_hard_blocker_attack_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -10394,25 +10394,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** On 3D discrete causal DAGs, gravity, decoherence, Born compliance, and interference coexist on the same corrected path-sum model, with the large-N table and chokepoint Born fix supporting the claim.  _(class `C`)_
 - **chain closes:** False — The key large-N and Born chokepoint scripts reproduce the quoted tables, but the row has no registered primary runner or manifest tying the multi-script suite to the single synthesis claim, and the all-four coexistence claim is broader than any one runner output.
 - **rationale:** Issue: the note's core numerical tables are reproducible from the named 3D scripts, but the audited row itself has no runner path, dependency list, or manifest proving the full multi-script synthesis as a single claim. Why this blocks: a hostile reader can verify pieces such as the large-N gravity/decoherence table and chokepoint Born check, but cannot certify the broader all-four coexistence and 3D-extension synthesis from this row alone. Repair target: add a registered synthesis runner or manifest that invokes the required 3D scripts, records the exact commands, and asserts the combined gravity, decoherence, Born, and interference predicates. Claim boundary until fixed: treat this as conditional support for the 3D program, with reproducible component results but no audit-clean packaged synthesis.
-- **auditor confidence:** high
-
-### `taste_scalar_isotropy_theorem_note`
-
-- **Note:** [`TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`](../../docs/TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-04-28-taste_scalar_isotropy_theorem_note`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** At phi=(v,0,0), the Hessian reduces to the binary orthogonality sum sum_s (-1)^{s_i}(-1)^{s_j}=8 delta_ij, so the fermion Coleman-Weinberg curvature is isotropic.  _(class `A`)_
-- **chain closes:** False — The exact fermion-CW Hessian isotropy theorem closes on the stated Cl(3)/Z^3 commuting-involution taste block, and the live runner reports THEOREM PASS=30 BOUNDED PASS=6 FAIL=0. The scalar-spectrum split, near-degenerate taste-pair readout, and thermal-transition estimate are explicitly bounded model consequences rather than theorem-grade closures.
-- **rationale:** Issue: the exact isotropy theorem closes for the fermion Coleman-Weinberg block, but the note's scalar-spectrum and electroweak-transition consequences depend on a gauge-only leading split and a scalar-only thermal-cubic estimate that the note explicitly labels bounded.
-Why this blocks: downstream candidate retained-grade/promoted claims cannot use this row as a theorem-grade Higgs/taste spectrum, y_b, generation-splitting, or electroweak-transition closure; they only inherit the no-fermion-CW-splitting boundary.
-Repair target: supply and audit a full scalar-sector theorem, including gauge/taste-breaking and thermal dynamics, with a runner that derives the spectrum or transition result rather than checking the bounded companion model.
-Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resulting exclusion of scalar-CW-only splitting on the stated taste block, not full scalar-spectrum or finite-temperature electroweak closure.
-- **open / conditional deps cited:**
-  - `bounded_gauge_only_taste_scalar_split_model`
-  - `bounded_scalar_only_thermal_cubic_estimate`
 - **auditor confidence:** high
 
 ### `teleportation_3d1_causal_record_channel_note`
