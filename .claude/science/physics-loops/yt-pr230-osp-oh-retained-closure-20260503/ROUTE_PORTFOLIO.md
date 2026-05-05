@@ -95,3 +95,17 @@ Route-family audit: `docs/YT_PR230_NONCHUNK_ROUTE_FAMILY_IMPORT_AUDIT_NOTE_2026-
 compares five non-chunk families and now records the W/Z
 Goldstone-equivalence source-identity no-go as the latest selected shortcut
 boundary.
+
+## R7: Reopen-Admissibility Gate
+
+After current-surface exhaustion, failed future-artifact intake, and terminal
+route exhaustion, test whether a listed future artifact path alone is enough
+to reopen the non-chunk surface.
+
+Status: closed negatively in
+`docs/YT_PR230_NONCHUNK_REOPEN_ADMISSIBILITY_GATE_NOTE_2026-05-05.md`.
+
+Reason: no listed future key or path exists on the current branch, and a path
+alone would not be enough.  A candidate must be a parseable claim-status
+artifact that denies branch-local closure authority by itself and passes the
+forbidden-import text firewall before aggregate reruns can even begin.

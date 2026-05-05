@@ -87,6 +87,7 @@ PARENTS = {
     "nonchunk_current_surface_exhaustion": "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json",
     "nonchunk_future_artifact_intake": "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json",
     "nonchunk_terminal_route_exhaustion": "outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json",
+    "nonchunk_reopen_admissibility": "outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -447,6 +448,18 @@ def main() -> int:
         )
         is True
         and certs["nonchunk_terminal_route_exhaustion"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
+    nonchunk_reopen_admissibility_closed = (
+        "reopen-admissibility gate" in statuses["nonchunk_reopen_admissibility"]
+        and certs["nonchunk_reopen_admissibility"].get("proposal_allowed") is False
+        and certs["nonchunk_reopen_admissibility"].get(
+            "reopen_admissibility_gate_passed"
+        )
+        is True
+        and certs["nonchunk_reopen_admissibility"].get(
             "dramatic_step_gate", {}
         ).get("passed")
         is False
@@ -848,6 +861,11 @@ def main() -> int:
         nonchunk_terminal_route_exhaustion_closed,
         statuses["nonchunk_terminal_route_exhaustion"],
     )
+    report(
+        "nonchunk-reopen-admissibility-recorded",
+        nonchunk_reopen_admissibility_closed,
+        statuses["nonchunk_reopen_admissibility"],
+    )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
@@ -870,7 +888,9 @@ def main() -> int:
             "named future same-surface rows, certificates, or theorems.  The "
             "cycle-9 future-artifact intake gate records that no such named "
             "artifact has appeared on the current surface.  The terminal "
-            "route-exhaustion gate records the corresponding stop/reopen rule."
+            "route-exhaustion gate records the corresponding stop/reopen rule.  "
+            "The cycle-12 reopen-admissibility gate rejects a path-only reopen "
+            "attempt before the aggregate gates may be rerun."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (

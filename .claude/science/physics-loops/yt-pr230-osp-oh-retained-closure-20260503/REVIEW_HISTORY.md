@@ -1,5 +1,32 @@
 # Review History
 
+## 2026-05-05 Non-Chunk Reopen-Admissibility Self-Review
+
+Disposition: pass as exact negative boundary / path-only reopen rejected.
+
+Findings:
+
+- The runner does not produce or infer any new same-surface row, certificate,
+  theorem, or production evidence; it only tests the admissibility floor for a
+  future reopen candidate.
+- The gate loads no chunk MC and does not package or rerun chunk outputs.
+- The parent exhaustion, intake, terminal, assembly, retained-route, and
+  campaign certificates pass and still deny proposal authority.
+- All listed future artifact keys and paths remain absent; no parseable
+  claim-status artifact exists to reopen the non-chunk route surface.
+- Aggregate assembly, retained-route, and campaign certificates now include
+  this cycle-12 boundary and still deny proposal authority.
+- The exact next action is to supply a listed same-surface artifact with
+  claim-status fields, then rerun the reopen-admissibility and aggregate gates.
+
+Review-loop iteration 1: pass after one narrow runner robustness fix.  Local
+review covered code/runner behavior, claim boundary, imports/support, Nature
+retention, repo governance, and audit compatibility for the changed file set.
+No subagents were used because this session did not explicitly authorize
+delegation.  The only issue found was future malformed-candidate robustness in
+the reopen gate; `safe_int` now rejects nonnumeric `fail_count` values instead
+of raising.
+
 ## 2026-05-05 Non-Chunk Terminal Route-Exhaustion Self-Review
 
 Disposition: pass as exact negative boundary / non-chunk stop until new input.

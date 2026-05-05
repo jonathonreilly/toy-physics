@@ -4,17 +4,29 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact negative boundary / PR230 non-chunk terminal route-exhaustion gate: no current route may continue without a named same-surface artifact; positive closure still open
-active_residual: "Cycle 11 encodes the post-intake continuation firewall.  Current-surface exhaustion and future-artifact intake are both closed, all six worklist units remain blocked, the opportunity queue is future-only, and the dramatic-step gate has no executable current-surface route until a named same-surface row, certificate, or theorem exists."
+actual_current_surface_status: exact negative boundary / PR230 non-chunk reopen-admissibility gate: no future artifact candidate is admissible on the current surface; positive closure still open
+active_residual: "Cycle 12 closes the path-only reopen shortcut after terminal route exhaustion.  Current-surface exhaustion, future-artifact intake, and terminal route exhaustion are closed; all listed future artifact keys and paths remain absent; a non-chunk route may reopen only after a parseable same-surface claim-status artifact exists and the aggregate gates are rerun."
 latest_checkpoint:
-  utc: "2026-05-05T07:12:00Z"
-  block: 68
-  artifact: "PR230 non-chunk terminal route-exhaustion gate"
-  status: "exact negative boundary / PR230 non-chunk terminal route-exhaustion gate: no current route may continue without a named same-surface artifact; positive closure still open"
-  result: "The gate verifies that current-surface exhaustion and future-artifact intake remain closed, all six non-chunk worklist units are blocked, every named strict future path is absent on disk, the refreshed opportunity queue is future-only, the handoff records the stop/reopen contract, current/chunk-only assembly is rejected, and no proposal is authorized."
-  claim_boundary: "no closure proposal, no chunk packaging, no new shortcut attempt, and no current-surface non-chunk route until a named strict future same-surface row, certificate, or theorem exists and the aggregate gates are rerun"
+  utc: "2026-05-05T06:41:41Z"
+  block: 69
+  artifact: "PR230 non-chunk reopen-admissibility gate"
+  status: "exact negative boundary / PR230 non-chunk reopen-admissibility gate: no future artifact candidate is admissible on the current surface; positive closure still open"
+  result: "The gate verifies that the terminal route-exhaustion parent remains closed, no parent authorizes a proposal, the future-file presence schemas agree through the terminal gate, every listed future artifact path is absent, and no parseable claim-status candidate can reopen the non-chunk route surface."
+  claim_boundary: "no closure proposal, no chunk packaging, no path-only reopen shortcut, and no current-surface non-chunk route until a listed same-surface row, certificate, or theorem exists as a parseable claim-status artifact and the aggregate gates are rerun"
   live_compute: "chunk worker remains separate; this checkpoint loads no chunk MC"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_nonchunk_reopen_admissibility_gate.py
+    - docs/YT_PR230_NONCHUNK_REOPEN_ADMISSIBILITY_GATE_NOTE_2026-05-05.md
+    - outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json
+    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+    - docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md
+    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+    - scripts/frontier_yt_retained_closure_route_certificate.py
+    - docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md
+    - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+    - scripts/frontier_yt_pr230_campaign_status_certificate.py
+    - docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md
+    - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
     - scripts/frontier_yt_pr230_nonchunk_terminal_route_exhaustion_gate.py
     - docs/YT_PR230_NONCHUNK_TERMINAL_ROUTE_EXHAUSTION_GATE_NOTE_2026-05-05.md
     - outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json
@@ -218,9 +230,21 @@ lock_status:
   repo_lock_attempted: true
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
-cycle: 11
-block: 68
+cycle: 12
+block: 69
 files_touched:
+  - scripts/frontier_yt_pr230_nonchunk_reopen_admissibility_gate.py
+  - docs/YT_PR230_NONCHUNK_REOPEN_ADMISSIBILITY_GATE_NOTE_2026-05-05.md
+  - outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json
+  - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+  - docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md
+  - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+  - scripts/frontier_yt_retained_closure_route_certificate.py
+  - docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md
+  - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+  - scripts/frontier_yt_pr230_campaign_status_certificate.py
+  - docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md
+  - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
   - scripts/frontier_yt_pr230_nonchunk_terminal_route_exhaustion_gate.py
   - docs/YT_PR230_NONCHUNK_TERMINAL_ROUTE_EXHAUSTION_GATE_NOTE_2026-05-05.md
   - outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json

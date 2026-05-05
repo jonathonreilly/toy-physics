@@ -1,5 +1,13 @@
 # Opportunity Queue
 
+Cycle-12 update: the reopen-admissibility gate closes the path-only reopen
+loophole.  A listed future artifact path is not enough to resume non-chunk
+cycling; the candidate must be a parseable claim-status artifact, deny
+branch-local closure authority by itself, pass the forbidden-import text
+firewall, and then trigger the worklist, exhaustion, intake, assembly,
+retained-route, and campaign reruns.  The queue still has no executable
+current-surface non-chunk item.
+
 Cycle-11 update: the terminal route-exhaustion gate converts the cycle-8
 exhaustion and cycle-9 future-artifact intake results into the stop/reopen
 contract.  The queue still has no executable current-surface non-chunk item.

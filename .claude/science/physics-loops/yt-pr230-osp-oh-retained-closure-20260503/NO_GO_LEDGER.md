@@ -30,3 +30,4 @@
 | Any remaining current-surface non-chunk shortcut after the May 5 worklist | closed negatively / queue exhausted on current surface | `YT_PR230_NONCHUNK_CURRENT_SURFACE_EXHAUSTION_GATE_NOTE_2026-05-05.md` |
 | Post-exhaustion non-chunk route without a named strict future same-surface artifact | closed negatively / no executable intake route | `YT_PR230_NONCHUNK_FUTURE_ARTIFACT_INTAKE_GATE_NOTE_2026-05-05.md` |
 | Continuing current-surface non-chunk shortcut cycling after failed future-artifact intake | closed negatively / terminal route-exhaustion firewall | `YT_PR230_NONCHUNK_TERMINAL_ROUTE_EXHAUSTION_GATE_NOTE_2026-05-05.md` |
+| Reopening the non-chunk route surface from a listed file path alone | closed negatively / admissible claim-status artifact absent | `YT_PR230_NONCHUNK_REOPEN_ADMISSIBILITY_GATE_NOTE_2026-05-05.md` |

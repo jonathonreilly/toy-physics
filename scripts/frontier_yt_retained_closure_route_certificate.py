@@ -156,6 +156,7 @@ def main() -> int:
         "pr230_nonchunk_current_surface_exhaustion": "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json",
         "pr230_nonchunk_future_artifact_intake": "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json",
         "pr230_nonchunk_terminal_route_exhaustion": "outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json",
+        "pr230_nonchunk_reopen_admissibility": "outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
@@ -2066,6 +2067,24 @@ def main() -> int:
         ).get("passed")
         is False
     )
+    pr230_nonchunk_reopen_admissibility_blocks = (
+        "reopen-admissibility gate"
+        in certificates["pr230_nonchunk_reopen_admissibility"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_nonchunk_reopen_admissibility"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_reopen_admissibility"].get(
+            "reopen_admissibility_gate_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_reopen_admissibility"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
     interacting_kinetic_still_open = (
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status")
         == "bounded-support / interacting kinetic background sensitivity"
@@ -3084,6 +3103,13 @@ def main() -> int:
         "pr230-nonchunk-terminal-route-exhaustion-blocks-shortcuts",
         pr230_nonchunk_terminal_route_exhaustion_blocks,
         certificates["pr230_nonchunk_terminal_route_exhaustion"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "pr230-nonchunk-reopen-admissibility-blocks-path-only-reopen",
+        pr230_nonchunk_reopen_admissibility_blocks,
+        certificates["pr230_nonchunk_reopen_admissibility"].get(
             "actual_current_surface_status", ""
         ),
     )

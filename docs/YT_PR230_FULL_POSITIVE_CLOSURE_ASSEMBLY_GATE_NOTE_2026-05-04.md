@@ -132,6 +132,13 @@ After the current-surface exhaustion and future-artifact intake gates, the
 terminal gate records that no non-chunk route passes the dramatic-step gate on
 the present branch.  The assembly gate remains open with `PASS=51 FAIL=0`.
 
+2026-05-05 reopen-admissibility update: the gate now also consumes
+`outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json`.
+The cycle-12 admissibility gate rejects a path-only reopen attempt: a listed
+future artifact must be a parseable claim-status artifact before the
+non-chunk route surface can reopen.  The assembly gate remains open with
+`PASS=52 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 
@@ -168,6 +175,7 @@ Keep chunk production separate.  Do not continue current-surface non-chunk
 shortcut cycling.  Reopen only after a strict same-surface artifact exists:
 `O_H/C_sH/C_HH` pole rows, W/Z response rows with the required identities and
 covariance control, Schur `A/B/C` kernel rows, neutral-sector primitive-cone
-irreducibility, or scalar-LSZ moment/threshold/FV authority.  Rerun the
-worklist, exhaustion, intake, assembly, retained-route, and campaign gates
-before any proposal language.
+irreducibility, or scalar-LSZ moment/threshold/FV authority.  A path alone is
+not enough; the candidate must pass the reopen-admissibility gate first.  Then
+rerun the worklist, exhaustion, intake, assembly, retained-route, and campaign
+gates before any proposal language.

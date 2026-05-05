@@ -64,3 +64,18 @@ Do not continue current-surface non-chunk shortcut cycling.  Reopen only after
 one accepted artifact key in the terminal certificate exists on disk, then
 rerun the worklist, exhaustion, future-intake, assembly, retained-route, and
 campaign gates before any proposal language.
+
+## Cycle-12 Reopen-Admissibility Addendum
+
+`scripts/frontier_yt_pr230_nonchunk_reopen_admissibility_gate.py` now enforces
+the first step of that reopen contract.  A listed path by itself is not enough:
+the candidate must be a parseable claim-status artifact, deny branch-local
+closure authority by itself, pass the forbidden-import text firewall, and then
+trigger the aggregate reruns above.
+
+Current validation:
+
+```bash
+python3 scripts/frontier_yt_pr230_nonchunk_reopen_admissibility_gate.py
+# SUMMARY: PASS=11 FAIL=0
+```

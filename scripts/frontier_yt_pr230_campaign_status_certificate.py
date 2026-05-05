@@ -169,6 +169,9 @@ def main() -> int:
         "pr230_nonchunk_terminal_route_exhaustion": load(
             "outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json"
         ),
+        "pr230_nonchunk_reopen_admissibility": load(
+            "outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -2395,6 +2398,22 @@ def main() -> int:
         is False,
         statuses["pr230_nonchunk_terminal_route_exhaustion"],
     )
+    report(
+        "pr230-nonchunk-reopen-admissibility-recorded",
+        "reopen-admissibility gate"
+        in str(statuses["pr230_nonchunk_reopen_admissibility"])
+        and certificates["pr230_nonchunk_reopen_admissibility"].get("proposal_allowed")
+        is False
+        and certificates["pr230_nonchunk_reopen_admissibility"].get(
+            "reopen_admissibility_gate_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_reopen_admissibility"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False,
+        statuses["pr230_nonchunk_reopen_admissibility"],
+    )
 
     remaining_routes = [
         {
@@ -2696,7 +2715,9 @@ def main() -> int:
             "now records the queue-level consequence: without one of the named "
             "future same-surface artifacts, no further current-surface "
             "non-chunk shortcut remains to cycle.  The terminal route-"
-            "exhaustion gate records the stop/reopen rule for that state."
+            "exhaustion gate records the stop/reopen rule for that state.  "
+            "The cycle-12 reopen-admissibility gate rejects a path-only "
+            "reopen attempt before aggregate reruns."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",

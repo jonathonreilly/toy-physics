@@ -1,5 +1,12 @@
 # Artifact Plan
 
+Completed in the reopen-admissibility continuation:
+
+- `scripts/frontier_yt_pr230_nonchunk_reopen_admissibility_gate.py`
+- `docs/YT_PR230_NONCHUNK_REOPEN_ADMISSIBILITY_GATE_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
 Completed in the terminal route-exhaustion continuation:
 
 - `scripts/frontier_yt_pr230_nonchunk_terminal_route_exhaustion_gate.py`

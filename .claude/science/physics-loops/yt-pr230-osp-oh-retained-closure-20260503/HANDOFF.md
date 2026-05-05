@@ -1,5 +1,46 @@
 # Handoff
 
+## 2026-05-05 PR230 Non-Chunk Reopen-Admissibility Gate
+
+Cycle 12 closed the path-only reopen shortcut after terminal route
+exhaustion.  The selected route was not another physics shortcut and not chunk
+packaging; it tested whether any listed future artifact path is currently an
+admissible claim-status artifact for reopening the non-chunk surface.
+
+Result: exact negative boundary.  The runner reloads the worklist,
+current-surface exhaustion gate, future-artifact intake gate, terminal
+route-exhaustion gate, full assembly gate, retained-route certificate, and
+campaign certificate.  It verifies that all parents pass, no parent authorizes
+a proposal, future-file presence schemas agree through the terminal gate, all
+listed future keys and paths are absent, and no parseable claim-status
+candidate can reopen the current non-chunk route surface.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_nonchunk_reopen_admissibility_gate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=52 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=200 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=227 FAIL=0
+```
+
+Claim boundary: no closure proposal, no chunk packaging, no path-only reopen
+shortcut, and no current-surface non-chunk route until a listed same-surface
+row, certificate, or theorem exists as a parseable claim-status artifact and
+the aggregate gates are rerun.
+
+Next exact action: do not reopen from a file path alone.  Supply one listed
+same-surface artifact with claim-status fields, rerun the reopen-admissibility
+gate, then rerun the worklist, exhaustion, future-intake, assembly,
+retained-route, and campaign gates before any proposal language.
+
 ## 2026-05-05 PR230 Non-Chunk Terminal Route-Exhaustion Gate
 
 Cycle 11 encoded the post-intake continuation firewall.  The selected route

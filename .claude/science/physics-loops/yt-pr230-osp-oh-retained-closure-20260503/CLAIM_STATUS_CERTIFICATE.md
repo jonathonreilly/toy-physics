@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact negative boundary / PR230 non-chunk terminal route-exhaustion gate: no current route may continue without a named same-surface artifact; positive closure still open
+actual_current_surface_status: exact negative boundary / PR230 non-chunk reopen-admissibility gate: no future artifact candidate is admissible on the current surface; positive closure still open
 conditional_surface_status: conditional-support if C_sH/C_HH Gram purity, W/Z response, or rank-one neutral scalar theorem closes the overlap
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "The Legendre source-pole operator is derived, but no current-surface premise supplies physical overlap authority, scalar-LSZ authority, same-surface Schur A/B/C kernel rows, W/Z rows, or neutral-rank authority; the current non-chunk route queue is exhausted, the future-artifact intake gate finds no named future artifact, and the terminal route-exhaustion gate allows no further shortcut cycling until a named same-surface artifact exists."
+proposal_allowed_reason: "The Legendre source-pole operator is derived, but no current-surface premise supplies physical overlap authority, scalar-LSZ authority, same-surface Schur A/B/C kernel rows, W/Z rows, or neutral-rank authority; the current non-chunk route queue is exhausted, the future-artifact intake gate finds no named future artifact, the terminal route-exhaustion gate allows no further shortcut cycling until a named same-surface artifact exists, and the reopen-admissibility gate rejects path-only reopening until a parseable claim-status artifact is present."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -153,6 +153,11 @@ Open imports:
   refreshed opportunity queue has no executable current-surface item, the
   stop/reopen contract is recorded, and no proposal is authorized until a
   named same-surface artifact exists and the aggregate gates are rerun;
+- the PR230 non-chunk reopen-admissibility gate is an exact negative
+  boundary: a listed future artifact path is not enough to reopen the
+  non-chunk route surface; the candidate must be a parseable claim-status
+  artifact, deny branch-local closure authority by itself, pass the
+  forbidden-import text firewall, and trigger the aggregate reruns;
 - the Schur/K-prime row absence guard has been refreshed against the current
   46-chunk production surface; it scanned `93` current output/certificate
   files and found `0` complete Schur row hits, so current FH/LSZ source rows

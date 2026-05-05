@@ -1,0 +1,240 @@
+{
+  "actual_current_surface_status": "exact negative boundary / PR230 non-chunk reopen-admissibility gate: no future artifact candidate is admissible on the current surface; positive closure still open",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "candidate_admission": [
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_delta_perp_tomography_rows_2026-05-04.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_electroweak_g2_certificate_2026-05-05.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_fh_lsz_contact_subtraction_certificate_2026-05-05.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_fh_lsz_pade_stieltjes_bounds_certificate_2026-05-05.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_fh_lsz_polynomial_contact_certificate_2026-05-05.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_fh_lsz_stieltjes_moment_certificate_2026-05-05.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_neutral_scalar_irreducibility_certificate_2026-05-04.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_neutral_scalar_primitive_cone_certificate_2026-05-05.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_pr230_certified_physical_readout_2026-05-04.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_schur_kernel_rows_2026-05-03.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_top_wz_deterministic_response_covariance_certificate_2026-05-05.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_top_wz_matched_response_rows_2026-05-04.json",
+      "present": false
+    },
+    {
+      "admissible_for_reopen": false,
+      "issues": [
+        "absent"
+      ],
+      "json_loaded": false,
+      "path": "outputs/yt_wz_source_coordinate_transport_certificate_2026-05-05.json",
+      "present": false
+    }
+  ],
+  "conditional_surface_status": null,
+  "dramatic_step_gate": {
+    "admissible_candidate_paths": [],
+    "passed": false,
+    "reason": "A new route can execute only after a listed future path contains a parseable claim-status artifact that denies branch-local closure authority and passes the forbidden-import text check."
+  },
+  "exact_next_action": "Do not reopen the current non-chunk shortcut loop from a file path alone.  Supply one listed same-surface row, certificate, or theorem as a parseable claim-status artifact, rerun this admissibility gate, then rerun the worklist, exhaustion, future-intake, assembly, retained-route, and campaign gates before any proposal language.",
+  "fail_count": 0,
+  "future_file_presence": {
+    "canonical_oh_certificate": false,
+    "certified_physical_readout": false,
+    "contact_subtraction_certificate": false,
+    "delta_perp_rows": false,
+    "deterministic_response_covariance_certificate": false,
+    "matched_top_wz_rows": false,
+    "neutral_irreducibility_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "non_observed_g2_certificate": false,
+    "pade_stieltjes_bounds_certificate": false,
+    "polynomial_contact_certificate": false,
+    "schur_kernel_rows": false,
+    "source_coordinate_transport_certificate": false,
+    "source_higgs_rows": false,
+    "stieltjes_moment_certificate": false,
+    "wz_mass_response_rows": false
+  },
+  "hypothetical_axiom_status": null,
+  "listed_candidate_paths": [
+    "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+    "outputs/yt_delta_perp_tomography_rows_2026-05-04.json",
+    "outputs/yt_electroweak_g2_certificate_2026-05-05.json",
+    "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
+    "outputs/yt_fh_lsz_contact_subtraction_certificate_2026-05-05.json",
+    "outputs/yt_fh_lsz_pade_stieltjes_bounds_certificate_2026-05-05.json",
+    "outputs/yt_fh_lsz_polynomial_contact_certificate_2026-05-05.json",
+    "outputs/yt_fh_lsz_stieltjes_moment_certificate_2026-05-05.json",
+    "outputs/yt_neutral_scalar_irreducibility_certificate_2026-05-04.json",
+    "outputs/yt_neutral_scalar_primitive_cone_certificate_2026-05-05.json",
+    "outputs/yt_pr230_certified_physical_readout_2026-05-04.json",
+    "outputs/yt_schur_kernel_rows_2026-05-03.json",
+    "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+    "outputs/yt_top_wz_deterministic_response_covariance_certificate_2026-05-05.json",
+    "outputs/yt_top_wz_matched_response_rows_2026-05-04.json",
+    "outputs/yt_wz_source_coordinate_transport_certificate_2026-05-05.json"
+  ],
+  "parent_certificates": {
+    "assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "campaign": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "exhaustion": "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json",
+    "future_intake": "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "terminal": "outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json",
+    "worklist": "outputs/yt_pr230_non_chunk_closure_worklist_2026-05-05.json"
+  },
+  "parent_statuses": {
+    "assembly": "open / full positive PR230 closure assembly gate not passed",
+    "campaign": "open / active campaign continuing after current shortcut blocks",
+    "exhaustion": "exact negative boundary / current PR230 non-chunk route queue exhausted; positive closure still open",
+    "future_intake": "exact negative boundary / PR230 non-chunk future-artifact intake finds no executable current route; positive closure still open",
+    "retained_route": "open / retained closure not yet reached",
+    "terminal": "exact negative boundary / PR230 non-chunk terminal route-exhaustion gate: no current route may continue without a named same-surface artifact; positive closure still open",
+    "worklist": "open / PR230 non-chunk closure worklist complete; positive closure still blocked"
+  },
+  "pass_count": 11,
+  "present_candidate_keys": [],
+  "present_candidate_paths": [],
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The terminal route-exhaustion gate remains closed, all known future artifact keys are absent, and no listed future path contains a parseable claim-status certificate that can reopen the non-chunk route surface.",
+  "reopen_admissibility_gate_passed": true,
+  "required_status_fields": [
+    "actual_current_surface_status",
+    "audit_required_before_effective_retained",
+    "bare_retained_allowed",
+    "proposal_allowed"
+  ],
+  "selected_route": {
+    "block": 69,
+    "cycle": 12,
+    "id": "nonchunk_reopen_admissibility",
+    "reason": "After the terminal stop/reopen gate, the next honest non-chunk route is to reject a path-only reopen attempt and define the admissibility floor for any future candidate."
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed-retained top-Yukawa closure",
+    "does not load, combine, package, or rerun chunk MC",
+    "does not treat file presence as same-surface physics evidence",
+    "does not introduce external readout, coupling, target, or unit shortcuts",
+    "does not edit publication, authority-table, or paper-facing surfaces"
+  ]
+}

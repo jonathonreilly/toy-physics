@@ -160,7 +160,7 @@
     "fh_lsz_finite_source_linearity_calibration": "bounded-support / FH-LSZ finite-source-linearity calibration checkpoint",
     "fh_lsz_finite_source_linearity_gate": "bounded-support / FH-LSZ finite-source-linearity gate passed as response support",
     "fh_lsz_finite_volume_pole_saturation": "exact negative boundary / FH-LSZ finite-volume pole-saturation obstruction",
-    "fh_lsz_global_production_collision_guard": "bounded-support / FH-LSZ global production collision guard current state recorded",
+    "fh_lsz_global_production_collision_guard": "bounded-support / FH-LSZ global production collision guard blocks new launch",
     "fh_lsz_higgs_pole_identity": "open / FH-LSZ canonical-Higgs pole identity gate blocking",
     "fh_lsz_invariant_readout": "exact-support / Feynman-Hellmann scalar-LSZ invariant readout formula",
     "fh_lsz_joint_harness": "bounded-support / joint Feynman-Hellmann scalar-LSZ harness",
@@ -254,6 +254,7 @@
     "pr230_matching_running_bridge_gate": "open / PR230 matching-running bridge awaits certified physical input",
     "pr230_nonchunk_current_surface_exhaustion": "exact negative boundary / current PR230 non-chunk route queue exhausted; positive closure still open",
     "pr230_nonchunk_future_artifact_intake": "exact negative boundary / PR230 non-chunk future-artifact intake finds no executable current route; positive closure still open",
+    "pr230_nonchunk_reopen_admissibility": "exact negative boundary / PR230 non-chunk reopen-admissibility gate: no future artifact candidate is admissible on the current surface; positive closure still open",
     "pr230_nonchunk_route_family_import_audit": "open / non-chunk route-family import audit records Schur compressed-denominator row-bootstrap no-go",
     "pr230_nonchunk_terminal_route_exhaustion": "exact negative boundary / PR230 non-chunk terminal route-exhaustion gate: no current route may continue without a named same-surface artifact; positive closure still open",
     "production_resource": "bounded support / production resource projection",
@@ -340,7 +341,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 226,
+  "pass_count": 227,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

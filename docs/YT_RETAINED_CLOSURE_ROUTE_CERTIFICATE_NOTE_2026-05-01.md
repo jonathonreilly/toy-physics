@@ -18,8 +18,26 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=199 FAIL=0
+# SUMMARY: PASS=200 FAIL=0
 ```
+
+## 2026-05-05 Non-Chunk Reopen-Admissibility Update
+
+The retained-route certificate now consumes
+`outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json`.
+This records the cycle-12 process boundary after terminal route exhaustion: a
+future artifact path cannot reopen the non-chunk surface unless the candidate
+is a parseable claim-status artifact that denies branch-local closure
+authority and passes the forbidden-import text firewall.
+
+Validation: reopen-admissibility gate `PASS=11 FAIL=0`; retained-route
+`PASS=200 FAIL=0`; campaign status `PASS=227 FAIL=0`; full positive closure
+assembly gate `PASS=52 FAIL=0`.
+
+No closure proposal is authorized.  The next action is to supply a real
+same-surface row, certificate, or theorem as an admissible artifact, then
+rerun the worklist, exhaustion, intake, assembly, retained-route, and campaign
+gates before any proposal language.
 
 ## 2026-05-05 Terminal Non-Chunk Route-Exhaustion Update
 
