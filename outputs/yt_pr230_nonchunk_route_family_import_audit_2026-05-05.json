@@ -1,6 +1,6 @@
 {
-  "actual_current_surface_status": "open / non-chunk route-family import audit selects scalar-LSZ polynomial-contact no-go block",
-  "exact_next_action": "Execute scripts/frontier_yt_fh_lsz_polynomial_contact_repair_no_go.py, then rerun aggregate PR230 gates.",
+  "actual_current_surface_status": "open / non-chunk route-family import audit records neutral primitive-cone stretch no-go",
+  "exact_next_action": "Do not repeat source-only primitive-cone, scalar polynomial-contact, or static W/Z transport shortcuts.  The next positive move requires a strict future row/certificate surface: O_H/C_sH/C_HH rows, W/Z mass-response rows with identities, Schur A/B/C rows, scalar-LSZ moment/threshold/FV authority, or a neutral primitive-cone certificate.",
   "fail_count": 0,
   "parent_certificates": {
     "assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
@@ -10,7 +10,7 @@
   },
   "pass_count": 9,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "All audited route families retain open load-bearing imports.  The selected block can sharpen a scalar-LSZ shortcut boundary but cannot supply retained or proposed-retained PR230 closure.",
+  "proposal_allowed_reason": "All audited route families retain open load-bearing imports.  The cycle-5 neutral primitive-cone stretch sharpens the remaining rank-one route but cannot supply retained or proposed-retained PR230 closure.",
   "route_families_audited": [
     {
       "can_execute_now": false,
@@ -70,8 +70,8 @@
       "runner_or_gate_available": true
     },
     {
-      "can_execute_now": true,
-      "current_disposition": "best executable non-chunk block: sharpen the contact-repair boundary",
+      "can_execute_now": false,
+      "current_disposition": "blocked; polynomial-contact repair has already closed negatively",
       "dramatic_step_score": 3,
       "forbidden_imports": [
         "fitted contact term promoted as physical",
@@ -91,7 +91,7 @@
         "no same-surface contact or scalar-denominator certificate assumed"
       ],
       "open_import_count": 3,
-      "retirement_path": "prove low-degree polynomial repairs fail or high-degree repairs overfit finite rows",
+      "retirement_path": "future route must supply a strict contact, moment-threshold, FV/IR, or scalar-denominator certificate",
       "route_family": "scalar-LSZ finite-shell contact/model-class",
       "runner_or_gate_available": true
     },
@@ -120,8 +120,8 @@
     },
     {
       "can_execute_now": false,
-      "current_disposition": "blocked; direct irreducibility theorem not derived",
-      "dramatic_step_score": 2,
+      "current_disposition": "cycle-5 stretch executed; source-only and conditional Perron premises do not force primitive-cone irreducibility",
+      "dramatic_step_score": 4,
       "forbidden_imports": [
         "gauge-vacuum Perron theorem as neutral-sector authority",
         "commutant rank asserted as dynamics",
@@ -131,7 +131,7 @@
         "neutral_irreducibility_certificate": false,
         "neutral_primitive_cone_certificate": false
       },
-      "hard_residual_pressure": 3,
+      "hard_residual_pressure": 4,
       "id": "neutral_scalar_rank_one",
       "minimum_allowed_premises": [
         "same-surface neutral transfer sector",
@@ -144,32 +144,30 @@
     }
   ],
   "selected_route": {
-    "can_execute_now": true,
-    "current_disposition": "best executable non-chunk block: sharpen the contact-repair boundary",
-    "dramatic_step_score": 3,
+    "can_execute_now": false,
+    "current_disposition": "cycle-5 stretch executed; source-only and conditional Perron premises do not force primitive-cone irreducibility",
+    "dramatic_step_score": 4,
     "forbidden_imports": [
-      "fitted contact term promoted as physical",
-      "kappa_s=1, c2=1, or Z_match=1",
-      "H_unit, Ward authority, observed target values, alpha_LM, plaquette, or u0"
+      "gauge-vacuum Perron theorem as neutral-sector authority",
+      "commutant rank asserted as dynamics",
+      "one-Higgs notation used as field-completeness proof"
     ],
     "future_files": {
-      "contact_subtraction_certificate": false,
-      "pade_stieltjes_bounds_certificate": false,
-      "stieltjes_moment_certificate": false
+      "neutral_irreducibility_certificate": false,
+      "neutral_primitive_cone_certificate": false
     },
-    "hard_residual_pressure": 3,
-    "id": "scalar_lsz_polynomial_contact",
+    "hard_residual_pressure": 4,
+    "id": "neutral_scalar_rank_one",
     "minimum_allowed_premises": [
-      "current polefit8x8 finite-shell C_ss rows as diagnostic support only",
-      "Stieltjes necessary conditions for positive scalar two-point transforms",
-      "no same-surface contact or scalar-denominator certificate assumed"
+      "same-surface neutral transfer sector",
+      "primitive-cone or positivity-improving irreducibility certificate"
     ],
-    "open_import_count": 3,
-    "retirement_path": "prove low-degree polynomial repairs fail or high-degree repairs overfit finite rows",
-    "route_family": "scalar-LSZ finite-shell contact/model-class",
+    "open_import_count": 2,
+    "retirement_path": "derive primitive-cone irreducibility or produce the strict certificate",
+    "route_family": "neutral-scalar primitive-cone rank one",
     "runner_or_gate_available": true
   },
-  "selection_reason": "Scalar-LSZ/contact-model control is the only audited family with a current non-chunk executable artifact surface.  O_H/source-Higgs, W/Z, Schur, and neutral-rank routes all require absent future rows or same-surface theorems before they can make a positive closure move.",
+  "selection_reason": "After W/Z source transport, scalar contact repair, and O_H premise stretch no-gos, the neutral primitive-cone route was the next hard non-chunk residual worth a stretch attempt.  It is now blocked on the current surface; every positive route requires absent future rows or a same-surface theorem.",
   "strict_non_claims": [
     "does not package or rerun chunk MC",
     "does not claim retained or proposed_retained top-Yukawa closure",

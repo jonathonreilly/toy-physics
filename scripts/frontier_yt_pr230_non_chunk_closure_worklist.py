@@ -83,6 +83,7 @@ PARENTS = {
     "neutral_dynamic_attempt": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
     "neutral_irreducibility_audit": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
     "neutral_primitive_cone_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+    "neutral_primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -251,6 +252,7 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 status(certs["neutral_dynamic_attempt"]),
                 status(certs["neutral_irreducibility_audit"]),
                 status(certs["neutral_primitive_cone_gate"]),
+                status(certs["neutral_primitive_cone_stretch_no_go"]),
             ],
             "next_action": (
                 "derive primitive-cone/positivity-improving irreducibility for the "
@@ -317,15 +319,20 @@ def main() -> int:
     report("polynomial-contact-finite-shell-route-gated", "finite-shell polynomial contact non-identifiability no-go" in status(certs["lsz_polynomial_contact_finite_shell"]), status(certs["lsz_polynomial_contact_finite_shell"]))
     report("polynomial-contact-repair-route-gated", "polynomial contact repair not scalar-LSZ authority" in status(certs["lsz_polynomial_contact_repair"]), status(certs["lsz_polynomial_contact_repair"]))
     report(
-        "route-family-import-audit-selects-executable-block",
-        "route-family import audit selects scalar-LSZ" in status(certs["nonchunk_route_family_import_audit"])
-        and certs["nonchunk_route_family_import_audit"].get("selected_route", {}).get("id")
-        == "scalar_lsz_polynomial_contact",
+        "route-family-import-audit-refreshed",
+        "non-chunk route-family import audit" in status(certs["nonchunk_route_family_import_audit"])
+        and certs["nonchunk_route_family_import_audit"].get("proposal_allowed") is False,
         status(certs["nonchunk_route_family_import_audit"]),
     )
     report("schur-route-gated", "Schur K-prime row absence guard" in status(certs["schur_absence"]), status(certs["schur_absence"]))
     report("neutral-rank-one-route-gated", "irreducibility authority absent" in status(certs["neutral_irreducibility_audit"]), status(certs["neutral_irreducibility_audit"]))
     report("neutral-primitive-cone-route-gated", "primitive-cone certificate gate" in status(certs["neutral_primitive_cone_gate"]), status(certs["neutral_primitive_cone_gate"]))
+    report(
+        "neutral-primitive-cone-stretch-closed-negatively",
+        "primitive-cone stretch no-go" in status(certs["neutral_primitive_cone_stretch_no_go"])
+        and certs["neutral_primitive_cone_stretch_no_go"].get("primitive_cone_stretch_no_go_passed") is True,
+        status(certs["neutral_primitive_cone_stretch_no_go"]),
+    )
     report("matching-running-awaits-certified-input", "awaits certified physical input" in status(certs["matching_running"]), status(certs["matching_running"]))
     report("all-future-strict-files-currently-absent", no_future_strict_files, f"present={future_files_present}")
     report("all-non-chunk-work-units-blocked-not-hidden", len(blocked_units) == len(units) and not closed_units, f"blocked={blocked_units}")
@@ -361,12 +368,13 @@ def main() -> int:
             "does not turn support/no-go gates into physical y_t evidence",
         ],
         "exact_next_action": (
-            "After the canonical O_H premise stretch no-go, pivot to the "
-            "same-source W/Z response route: derive the same-source EW "
-            "action/row authority or a closed top/W covariance theorem.  "
-            "Other remaining choices are strict scalar-LSZ authority, "
-            "same-surface Schur kernel rows, or neutral-sector primitive-cone "
-            "irreducibility."
+            "After the W/Z source-coordinate transport no-go and the neutral "
+            "primitive-cone stretch no-go, do not spend another block on "
+            "source-only or static-label shortcuts.  The next positive route "
+            "requires a new strict same-surface artifact: O_H/C_sH/C_HH pole "
+            "rows, W/Z response rows with identities and covariance authority, "
+            "scalar-LSZ moment/threshold/FV authority, Schur A/B/C kernel rows, "
+            "or a neutral primitive-cone certificate."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

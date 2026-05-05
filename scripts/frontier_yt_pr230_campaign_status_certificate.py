@@ -238,6 +238,9 @@ def main() -> int:
         "neutral_scalar_primitive_cone_certificate_gate": load(
             "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json"
         ),
+        "neutral_scalar_primitive_cone_stretch_no_go": load(
+            "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json"
+        ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
@@ -1016,7 +1019,7 @@ def main() -> int:
     )
     report(
         "nonchunk-route-family-import-audit-complete",
-        "route-family import audit selects scalar-LSZ"
+        "non-chunk route-family import audit"
         in str(statuses["pr230_nonchunk_route_family_import_audit"])
         and certificates["pr230_nonchunk_route_family_import_audit"].get(
             "proposal_allowed"
@@ -1025,7 +1028,7 @@ def main() -> int:
         and certificates["pr230_nonchunk_route_family_import_audit"]
         .get("selected_route", {})
         .get("id")
-        == "scalar_lsz_polynomial_contact",
+        == "neutral_scalar_rank_one",
         statuses["pr230_nonchunk_route_family_import_audit"],
     )
     report(
@@ -1243,6 +1246,18 @@ def main() -> int:
         )
         is False,
         statuses["neutral_scalar_primitive_cone_certificate_gate"],
+    )
+    report(
+        "neutral-scalar-primitive-cone-stretch-no-go-blocks",
+        "neutral-scalar primitive-cone stretch no-go"
+        in str(statuses["neutral_scalar_primitive_cone_stretch_no_go"])
+        and certificates["neutral_scalar_primitive_cone_stretch_no_go"].get("proposal_allowed")
+        is False
+        and certificates["neutral_scalar_primitive_cone_stretch_no_go"].get(
+            "primitive_cone_stretch_no_go_passed"
+        )
+        is True,
+        statuses["neutral_scalar_primitive_cone_stretch_no_go"],
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",

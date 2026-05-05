@@ -1,0 +1,245 @@
+{
+  "actual_current_surface_status": "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface",
+  "bare_retained_allowed": false,
+  "exact_next_action": "Supply a strict same-surface neutral primitive-cone certificate, or pivot to another future-row route: O_H/C_sH/C_HH pole rows, same-source W/Z rows with identities, Schur A/B/C kernel rows, or a scalar-LSZ moment/threshold/FV certificate.",
+  "fail_count": 0,
+  "minimal_premise_set": {
+    "A_min": [
+      "current PR230 same-source scalar-source surface",
+      "source-created neutral pole support rows as source-side evidence only",
+      "conditional Perron/rank-one support theorem when a primitive cone is supplied",
+      "current no-go memory for O_H, W/Z, Schur, source-only, and neutral rank shortcuts"
+    ],
+    "forbidden_imports": [
+      "external top, Higgs, W, Z, Yukawa, or gauge targets",
+      "unit-operator or matrix-element renaming authority",
+      "Ward-identity readout authority",
+      "lattice gauge-normalization or bare gauge-coupling shortcut",
+      "unit overlap assumptions such as kappa_s=1, cos(theta)=1, c2=1, or Z_match=1",
+      "source-only C_ss rows promoted to O_H, Schur A/B/C rows, or W/Z rows"
+    ]
+  },
+  "parent_certificates": {
+    "commutant_rank_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
+    "direct_positivity_attempt": "outputs/yt_neutral_scalar_positivity_improving_direct_closure_attempt_2026-05-03.json",
+    "dynamical_rank_one_attempt": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
+    "irreducibility_authority_audit": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
+    "non_source_rank_repair": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
+    "positivity_improving_support": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json",
+    "primitive_cone_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+    "schur_row_absence": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
+    "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "top_coupling_tomography": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
+    "wz_source_transport_no_go": "outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json"
+  },
+  "parent_statuses": {
+    "commutant_rank_no_go": "exact negative boundary / neutral scalar commutant does not force rank-one purity",
+    "direct_positivity_attempt": "exact negative boundary / neutral-scalar positivity-improving direct theorem not derived",
+    "dynamical_rank_one_attempt": "exact negative boundary / dynamical rank-one neutral scalar theorem not derived",
+    "irreducibility_authority_audit": "exact negative boundary / neutral-scalar irreducibility authority absent on current PR230 surface",
+    "non_source_rank_repair": "exact-support / non-source response rank-repair sufficiency theorem; current rows absent",
+    "positivity_improving_support": "conditional-support / positivity-improving neutral-scalar rank-one theorem; premise absent",
+    "primitive_cone_gate": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+    "schur_row_absence": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
+    "source_higgs_gram": "open / source-Higgs Gram purity gate not passed",
+    "top_coupling_tomography": "open / neutral scalar top-coupling tomography gate not passed",
+    "wz_source_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
+  },
+  "pass_count": 12,
+  "primitive_cone_stretch_no_go_passed": true,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No same-surface primitive-cone or neutral-sector irreducibility certificate is present; source-only rows and conditional Perron support do not remove the orthogonal neutral direction.",
+  "source_invisible_reducible_counterfamily": {
+    "all_fail_primitive_cone": true,
+    "all_preserve_source_rows": true,
+    "completions": [
+      {
+        "basis": [
+          "source_created_neutral",
+          "orthogonal_neutral"
+        ],
+        "neutral_transfer_matrix": [
+          [
+            0.82,
+            0.0
+          ],
+          [
+            0.0,
+            0.61
+          ]
+        ],
+        "orthogonal_direction_visible_to_source_only_rows": false,
+        "orthogonal_mass_sq": 1.4,
+        "primitive_power": {
+          "first_positive_power": null,
+          "positive": false
+        },
+        "same_source_rows_as_all_other_completions": true,
+        "source_rows": [
+          {
+            "C_ss": 4.0,
+            "p_hat_sq": 0.0
+          },
+          {
+            "C_ss": 1.9306913006394557,
+            "p_hat_sq": 0.2679491924311227
+          },
+          {
+            "C_ss": 1.2724291323938564,
+            "p_hat_sq": 0.5358983848622454
+          },
+          {
+            "C_ss": 0.8,
+            "p_hat_sq": 1.0
+          }
+        ],
+        "source_vector": [
+          1.0,
+          0.0
+        ],
+        "strongly_connected": false
+      },
+      {
+        "basis": [
+          "source_created_neutral",
+          "orthogonal_neutral"
+        ],
+        "neutral_transfer_matrix": [
+          [
+            0.82,
+            0.0
+          ],
+          [
+            0.0,
+            0.61
+          ]
+        ],
+        "orthogonal_direction_visible_to_source_only_rows": false,
+        "orthogonal_mass_sq": 2.0,
+        "primitive_power": {
+          "first_positive_power": null,
+          "positive": false
+        },
+        "same_source_rows_as_all_other_completions": true,
+        "source_rows": [
+          {
+            "C_ss": 4.0,
+            "p_hat_sq": 0.0
+          },
+          {
+            "C_ss": 1.9306913006394557,
+            "p_hat_sq": 0.2679491924311227
+          },
+          {
+            "C_ss": 1.2724291323938564,
+            "p_hat_sq": 0.5358983848622454
+          },
+          {
+            "C_ss": 0.8,
+            "p_hat_sq": 1.0
+          }
+        ],
+        "source_vector": [
+          1.0,
+          0.0
+        ],
+        "strongly_connected": false
+      },
+      {
+        "basis": [
+          "source_created_neutral",
+          "orthogonal_neutral"
+        ],
+        "neutral_transfer_matrix": [
+          [
+            0.82,
+            0.0
+          ],
+          [
+            0.0,
+            0.61
+          ]
+        ],
+        "orthogonal_direction_visible_to_source_only_rows": false,
+        "orthogonal_mass_sq": 3.2,
+        "primitive_power": {
+          "first_positive_power": null,
+          "positive": false
+        },
+        "same_source_rows_as_all_other_completions": true,
+        "source_rows": [
+          {
+            "C_ss": 4.0,
+            "p_hat_sq": 0.0
+          },
+          {
+            "C_ss": 1.9306913006394557,
+            "p_hat_sq": 0.2679491924311227
+          },
+          {
+            "C_ss": 1.2724291323938564,
+            "p_hat_sq": 0.5358983848622454
+          },
+          {
+            "C_ss": 0.8,
+            "p_hat_sq": 1.0
+          }
+        ],
+        "source_vector": [
+          1.0,
+          0.0
+        ],
+        "strongly_connected": false
+      }
+    ],
+    "construction_type": "algebraic non-data counterfamily",
+    "shells_p_hat_sq": [
+      0.0,
+      0.2679491924311227,
+      0.5358983848622454,
+      1.0
+    ],
+    "source_mass_sq": 0.25,
+    "source_residue": 1.0
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not infer neutral irreducibility from source-only rows",
+    "does not synthesize O_H/C_sH/C_HH, W/Z, Schur, or matched response rows",
+    "does not use unit-operator, Ward-readout, external-target, gauge-normalization, bare-Yukawa-symbol, or bare-gauge-coupling algebra",
+    "does not package or rerun chunk MC"
+  ],
+  "stuck_fanout": [
+    {
+      "attempt": "Use C_ss pole data to force the neutral cone to one primitive component.",
+      "disposition": "blocked",
+      "frame": "source-only rows",
+      "wall": "A decoupled orthogonal neutral block leaves C_ss unchanged."
+    },
+    {
+      "attempt": "Apply the existing positivity-improving rank-one theorem directly.",
+      "disposition": "conditional support only",
+      "frame": "conditional Perron support",
+      "wall": "The theorem requires the primitive-cone certificate as an input; current data do not prove strong connectivity."
+    },
+    {
+      "attempt": "Reduce neutral-sector dimension from labels alone.",
+      "disposition": "blocked",
+      "frame": "symmetry or commutant labels",
+      "wall": "Existing commutant and dynamical rank-one no-gos leave rank-two positive completions."
+    },
+    {
+      "attempt": "Use an extra bridge observable to expose the orthogonal direction.",
+      "disposition": "future row route only",
+      "frame": "non-source rank repair",
+      "wall": "The needed O_H/C_sH/C_HH, W/Z, or Schur A/B/C rows are absent."
+    },
+    {
+      "attempt": "Import irreducibility from a nearby positive gauge/Perron surface.",
+      "disposition": "blocked",
+      "frame": "gauge or reflection positivity import",
+      "wall": "The authority audit rejects imports that are not the same neutral scalar transfer sector."
+    }
+  ],
+  "verdict": "Current PR230 source/neutral premises do not force a primitive neutral transfer cone.  Source-only rows are compatible with a reducible orthogonal neutral completion, while the existing Perron rank-one theorem remains conditional on the very primitive-cone certificate that is absent."
+}

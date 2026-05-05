@@ -1,5 +1,48 @@
 # Handoff
 
+## 2026-05-05 Neutral Primitive-Cone Stretch No-Go
+
+Cycle 5 tested the neutral rank-one residual after the W/Z source-coordinate
+transport shortcut closed negatively: whether current PR230 source/neutral
+premises plus conditional Perron support force the primitive-cone
+irreducibility needed by the neutral-rank bridge.
+
+Result: exact negative boundary.  The runner constructs an algebraic non-data
+counterfamily that preserves the same source-only `C_ss` rows while leaving a
+reducible orthogonal neutral completion outside the primitive cone.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_neutral_scalar_primitive_cone_stretch_no_go.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=46 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=194 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=221 FAIL=0
+
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+# SUMMARY: PASS=28 FAIL=0
+```
+
+Claim boundary: no closure proposal, no chunk packaging, no synthetic
+`O_H`/WZ/Schur rows, no external target selector, and no source-only neutral
+irreducibility authority.
+
+Next exact action: do not repeat static W/Z transport or source-only neutral
+irreducibility.  Continue only with a strict same-surface artifact:
+`O_H/C_sH/C_HH` pole rows, W/Z response rows with identities/covariance
+control, Schur `A/B/C` kernel rows, a neutral primitive-cone certificate, or
+scalar-LSZ moment/threshold/FV authority.
+
 ## 2026-05-05 W/Z Source-Coordinate Transport No-Go
 
 Cycle 4 tested the remaining static-algebra W/Z shortcut: treating the

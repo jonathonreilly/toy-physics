@@ -5,16 +5,34 @@ start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
 actual_current_surface_status: open
-active_residual: "WZ source-coordinate transport shortcut closed negatively; current PR230 surface still lacks same-source EW action, source-to-Higgs transport, W/Z mass-fit rows, and matched top/W covariance authority"
+active_residual: "neutral primitive-cone stretch closed negatively; current PR230 surface still lacks same-surface neutral irreducibility, O_H/source-Higgs rows, W/Z response rows, Schur rows, and scalar-LSZ moment/FV authority"
 latest_checkpoint:
-  utc: "2026-05-05T04:39:43Z"
-  block: 62
-  artifact: "WZ source-coordinate transport no-go"
-  status: "exact negative boundary / WZ source-coordinate transport shortcut rejected"
-  result: "The new runner keeps the top source response and static W dictionary fixed while varying the source-to-Higgs Jacobian, transported W source response, and top/W response ratio. Static dM_W/dh cannot become a PR230 dM_W/ds row without a same-surface transport certificate."
-  claim_boundary: "no closure proposal, no chunk packaging, no W/Z measurement rows, no empirical selector, and no static-algebra row authority"
-  live_compute: "chunk worker remains separate; this checkpoint is non-chunk W/Z route-gating only"
+  utc: "2026-05-05T04:59:28Z"
+  block: 63
+  artifact: "neutral-scalar primitive-cone stretch no-go"
+  status: "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface"
+  result: "The runner preserves the same source-only scalar rows while varying a reducible orthogonal neutral completion, so current source/neutral premises plus conditional Perron support do not force primitive-cone irreducibility."
+  claim_boundary: "no closure proposal, no chunk packaging, no synthetic O_H/WZ/Schur rows, no external target selector, and no source-only neutral irreducibility authority"
+  live_compute: "chunk worker remains separate; this checkpoint is non-chunk neutral route-gating only"
   checkpoint_files:
+    - scripts/frontier_yt_neutral_scalar_primitive_cone_stretch_no_go.py
+    - docs/YT_NEUTRAL_SCALAR_PRIMITIVE_CONE_STRETCH_NO_GO_NOTE_2026-05-05.md
+    - outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json
+    - scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py
+    - docs/YT_PR230_NONCHUNK_ROUTE_FAMILY_IMPORT_AUDIT_NOTE_2026-05-05.md
+    - outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json
+    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+    - docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md
+    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+    - scripts/frontier_yt_retained_closure_route_certificate.py
+    - docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md
+    - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+    - scripts/frontier_yt_pr230_campaign_status_certificate.py
+    - docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md
+    - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
+    - scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+    - docs/YT_PR230_NON_CHUNK_CLOSURE_WORKLIST_NOTE_2026-05-05.md
+    - outputs/yt_pr230_non_chunk_closure_worklist_2026-05-05.json
     - scripts/frontier_yt_wz_source_coordinate_transport_no_go.py
     - docs/YT_WZ_SOURCE_COORDINATE_TRANSPORT_NO_GO_NOTE_2026-05-05.md
     - outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json
@@ -155,9 +173,27 @@ lock_status:
   repo_lock_attempted: true
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
-cycle: 4
-block: 62
+cycle: 5
+block: 63
 files_touched:
+  - scripts/frontier_yt_neutral_scalar_primitive_cone_stretch_no_go.py
+  - docs/YT_NEUTRAL_SCALAR_PRIMITIVE_CONE_STRETCH_NO_GO_NOTE_2026-05-05.md
+  - outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json
+  - scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py
+  - docs/YT_PR230_NONCHUNK_ROUTE_FAMILY_IMPORT_AUDIT_NOTE_2026-05-05.md
+  - outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json
+  - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+  - docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md
+  - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+  - scripts/frontier_yt_retained_closure_route_certificate.py
+  - docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md
+  - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+  - scripts/frontier_yt_pr230_campaign_status_certificate.py
+  - docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md
+  - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
+  - scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+  - docs/YT_PR230_NON_CHUNK_CLOSURE_WORKLIST_NOTE_2026-05-05.md
+  - outputs/yt_pr230_non_chunk_closure_worklist_2026-05-05.json
   - scripts/frontier_yt_wz_source_coordinate_transport_no_go.py
   - docs/YT_WZ_SOURCE_COORDINATE_TRANSPORT_NO_GO_NOTE_2026-05-05.md
   - outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json

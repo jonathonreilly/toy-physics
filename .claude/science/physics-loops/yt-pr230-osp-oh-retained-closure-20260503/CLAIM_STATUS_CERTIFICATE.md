@@ -1,7 +1,7 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact negative boundary / WZ source-coordinate transport shortcut rejected; PR230 closure still open
+actual_current_surface_status: exact negative boundary / neutral primitive-cone stretch no-go; PR230 closure still open
 conditional_surface_status: conditional-support if C_sH/C_HH Gram purity, W/Z response, or rank-one neutral scalar theorem closes the overlap
 hypothetical_axiom_status: null
 admitted_observation_status: null
@@ -105,7 +105,9 @@ Open imports:
   framework-native context, but none supplies the PR230 same-surface `O_H`
   identity, canonical LSZ normalization, or `C_sH/C_HH` pole residues;
 - positivity-improving/rank-one route is conditional support only; the direct
-  neutral-sector irreducibility theorem is blocked on the current surface;
+  neutral-sector irreducibility theorem is blocked on the current surface, and
+  the source-only primitive-cone stretch is now closed negatively by an
+  algebraic reducible neutral completion;
 - scalar denominator / K-prime route is exact support only; same-surface Schur
   A/B/C kernel rows and FV/IR pole-control certificates are absent;
 - scalar-LSZ Stieltjes moment-certificate gate is exact support only: it
@@ -116,8 +118,8 @@ Open imports:
   current surface;
 - non-chunk route-family import audit is exact support / routing only: it
   compares source-Higgs, same-source W/Z, scalar-LSZ/contact, Schur/K-prime,
-  and neutral rank-one families, then selects the scalar-LSZ
-  polynomial-contact repair no-go as the only currently executable block; it
+  and neutral rank-one families, and after prior no-go blocks now records the
+  neutral primitive-cone stretch no-go as the selected hard residual; it
   supplies no retained/proposed-retained proposal authority;
 - scalar-LSZ polynomial-contact repair is closed negatively on the current
   polefit8x8 finite-shell rows: low-degree contacts leave robust higher

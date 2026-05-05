@@ -143,11 +143,11 @@ def family_rows(worklist: dict[str, Any]) -> list[dict[str, Any]]:
             ),
             "open_import_count": 3,
             "runner_or_gate_available": True,
-            "can_execute_now": True,
+            "can_execute_now": False,
             "dramatic_step_score": 3,
             "hard_residual_pressure": 3,
-            "current_disposition": "best executable non-chunk block: sharpen the contact-repair boundary",
-            "retirement_path": "prove low-degree polynomial repairs fail or high-degree repairs overfit finite rows",
+            "current_disposition": "blocked; polynomial-contact repair has already closed negatively",
+            "retirement_path": "future route must supply a strict contact, moment-threshold, FV/IR, or scalar-denominator certificate",
         },
         {
             "id": "schur_scalar_denominator_rows",
@@ -189,9 +189,9 @@ def family_rows(worklist: dict[str, Any]) -> list[dict[str, Any]]:
             "open_import_count": 2,
             "runner_or_gate_available": True,
             "can_execute_now": False,
-            "dramatic_step_score": 2,
-            "hard_residual_pressure": 3,
-            "current_disposition": "blocked; direct irreducibility theorem not derived",
+            "dramatic_step_score": 4,
+            "hard_residual_pressure": 4,
+            "current_disposition": "cycle-5 stretch executed; source-only and conditional Perron premises do not force primitive-cone irreducibility",
             "retirement_path": "derive primitive-cone irreducibility or produce the strict certificate",
         },
     ]
@@ -227,8 +227,9 @@ def main() -> int:
         "proposal_allowed remains false",
     )
     report(
-        "selected-route-is-executable-nonchunk",
-        bool(selected["can_execute_now"]) and selected["id"] == "scalar_lsz_polynomial_contact",
+        "selected-route-reflects-cycle5-stretch",
+        selected["id"] == "neutral_scalar_rank_one"
+        and "primitive-cone" in selected["current_disposition"],
         selected["id"],
     )
     report(
@@ -246,8 +247,7 @@ def main() -> int:
                 "y_t_bare",
             )
         )
-        and any("H_unit" in item for item in selected["forbidden_imports"])
-        and selected["can_execute_now"],
+        and selected["id"] == "neutral_scalar_rank_one",
         "forbidden imports are explicit blockers, not premises",
     )
     report(
@@ -258,22 +258,23 @@ def main() -> int:
 
     result = {
         "actual_current_surface_status": (
-            "open / non-chunk route-family import audit selects scalar-LSZ "
-            "polynomial-contact no-go block"
+            "open / non-chunk route-family import audit records neutral primitive-cone stretch no-go"
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "All audited route families retain open load-bearing imports.  The "
-            "selected block can sharpen a scalar-LSZ shortcut boundary but cannot "
-            "supply retained or proposed-retained PR230 closure."
+            "cycle-5 neutral primitive-cone stretch sharpens the remaining "
+            "rank-one route but cannot supply retained or proposed-retained "
+            "PR230 closure."
         ),
         "route_families_audited": rows,
         "selected_route": selected,
         "selection_reason": (
-            "Scalar-LSZ/contact-model control is the only audited family with a "
-            "current non-chunk executable artifact surface.  O_H/source-Higgs, "
-            "W/Z, Schur, and neutral-rank routes all require absent future rows "
-            "or same-surface theorems before they can make a positive closure move."
+            "After W/Z source transport, scalar contact repair, and O_H premise "
+            "stretch no-gos, the neutral primitive-cone route was the next hard "
+            "non-chunk residual worth a stretch attempt.  It is now blocked on "
+            "the current surface; every positive route requires absent future "
+            "rows or a same-surface theorem."
         ),
         "strict_non_claims": [
             "does not package or rerun chunk MC",
@@ -282,8 +283,11 @@ def main() -> int:
             "does not use H_unit, yt_ward, alpha_LM, plaquette, u0, observed targets, bare-coupling algebra, or unit shortcuts",
         ],
         "exact_next_action": (
-            "Execute scripts/frontier_yt_fh_lsz_polynomial_contact_repair_no_go.py, "
-            "then rerun aggregate PR230 gates."
+            "Do not repeat source-only primitive-cone, scalar polynomial-contact, "
+            "or static W/Z transport shortcuts.  The next positive move requires "
+            "a strict future row/certificate surface: O_H/C_sH/C_HH rows, W/Z "
+            "mass-response rows with identities, Schur A/B/C rows, scalar-LSZ "
+            "moment/threshold/FV authority, or a neutral primitive-cone certificate."
         ),
         "parent_certificates": {
             "worklist": rel(WORKLIST),

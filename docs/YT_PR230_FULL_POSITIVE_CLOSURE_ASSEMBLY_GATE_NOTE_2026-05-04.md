@@ -105,6 +105,12 @@ electroweak W-mass algebra plus the PR230 top source response does not
 determine W/Z source-response rows without a same-surface source-to-Higgs
 transport certificate.  The assembly gate remains open with `PASS=45 FAIL=0`.
 
+2026-05-05 neutral primitive-cone stretch update: the gate now also consumes
+`outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json`.
+Source-only neutral support plus conditional Perron/rank-one support does not
+force primitive-cone irreducibility on the current surface.  The assembly gate
+remains open with `PASS=46 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 
@@ -124,7 +130,8 @@ The current positive non-chunk bridge candidates remain:
 - Schur/K-prime kernel rows, blocked by absent same-surface Schur `A/B/C` rows
   and the separate canonical bridge;
 - neutral-scalar rank one, blocked by the absence of a current
-  primitive-cone/positivity-improving neutral-sector theorem.
+  primitive-cone/positivity-improving neutral-sector theorem and by the new
+  source-only primitive-cone stretch no-go.
 
 ## Non-Claims
 
@@ -136,10 +143,9 @@ define `y_t` through a matrix element or `y_t_bare`, or use `H_unit`,
 
 ## Next Action
 
-Keep chunk production separate.  The next non-chunk pivot is same-source W/Z
-response: derive a same-source EW action/row authority or a closed top/W
-covariance theorem, then rerun the W/Z gates and the assembly gate.  Other
-remaining bridge options are a future same-surface `O_H` certificate plus
-`C_sH/C_HH` production rows, same-surface Schur `A/B/C` kernel rows, or a
-neutral-sector irreducibility theorem.  Rerun the assembly gate before any
+Keep chunk production separate.  The next non-chunk step requires a strict
+same-surface artifact: `O_H/C_sH/C_HH` pole rows, W/Z response rows with the
+required identities and covariance control, Schur `A/B/C` kernel rows,
+neutral-sector primitive-cone irreducibility, or scalar-LSZ
+moment/threshold/FV authority.  Rerun the assembly gate before any
 retained-route proposal.

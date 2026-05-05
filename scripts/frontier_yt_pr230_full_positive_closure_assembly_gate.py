@@ -79,6 +79,7 @@ PARENTS = {
     "source_pole_purity": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json",
     "neutral_scalar_irreducibility": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
     "neutral_scalar_primitive_cone": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+    "neutral_scalar_primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
     "schur_kprime_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
     "schur_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
@@ -264,10 +265,12 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "no current primitive-cone/positivity-improving neutral-sector certificate",
                 "rank-two neutral scalar counterfamilies remain allowed",
                 "strict primitive-cone certificate gate absent",
+                "primitive-cone stretch no-go blocks the source-only and conditional-Perron shortcut",
             ],
             "parents": [
                 PARENTS["neutral_scalar_irreducibility"],
                 PARENTS["neutral_scalar_primitive_cone"],
+                PARENTS["neutral_scalar_primitive_cone_stretch_no_go"],
             ],
         },
     }
@@ -752,6 +755,16 @@ def main() -> int:
         and certs["neutral_scalar_primitive_cone"].get("primitive_cone_certificate_gate_passed")
         is False,
         statuses["neutral_scalar_primitive_cone"],
+    )
+    report(
+        "neutral-primitive-cone-stretch-no-go-blocks-source-only-route",
+        "primitive-cone stretch no-go" in statuses["neutral_scalar_primitive_cone_stretch_no_go"]
+        and certs["neutral_scalar_primitive_cone_stretch_no_go"].get("proposal_allowed") is False
+        and certs["neutral_scalar_primitive_cone_stretch_no_go"].get(
+            "primitive_cone_stretch_no_go_passed"
+        )
+        is True,
+        statuses["neutral_scalar_primitive_cone_stretch_no_go"],
     )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])

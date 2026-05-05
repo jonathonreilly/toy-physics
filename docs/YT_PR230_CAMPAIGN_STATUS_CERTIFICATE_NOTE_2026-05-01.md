@@ -26,8 +26,28 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=220 FAIL=0
+# SUMMARY: PASS=221 FAIL=0
 ```
+
+## 2026-05-05 Neutral Primitive-Cone Stretch Update
+
+The campaign status certificate now consumes
+`outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json`.
+This is the cycle-5 hard-residual stretch after the W/Z static-transport
+shortcut closed.  Current PR230 source/neutral premises do not force the
+primitive-cone irreducibility needed by the conditional neutral rank-one
+route.
+
+The no-go is algebraic and non-data: it preserves the source-only scalar rows
+while varying a reducible orthogonal neutral completion.  A same-surface
+neutral primitive-cone certificate or future measurement rows remain required.
+
+Validation: neutral primitive-cone stretch no-go `PASS=12 FAIL=0`;
+route-family audit `PASS=9 FAIL=0`; retained-route `PASS=194 FAIL=0`;
+campaign status `PASS=221 FAIL=0`; full positive closure assembly gate
+`PASS=46 FAIL=0`; non-chunk worklist `PASS=28 FAIL=0`.
+
+The campaign remains open.
 
 ## 2026-05-05 W/Z Source-Coordinate Transport Update
 

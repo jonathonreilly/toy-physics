@@ -1,5 +1,20 @@
 # Review History
 
+## 2026-05-05 Neutral Primitive-Cone Stretch Self-Review
+
+Disposition: pass as exact negative boundary / open campaign.
+
+Findings:
+
+- The runner does not claim neutral irreducibility or rank-one purity; it
+  rejects the source-only route to that conclusion on the current surface.
+- The counterfamily is algebraic and non-data: source-only `C_ss` rows remain
+  fixed while a reducible orthogonal neutral block remains invisible.
+- Aggregate route-family, worklist, assembly, retained-route, and campaign
+  certificates now include the blocker and still deny proposal authority.
+- The neutral route remains open only through a strict same-surface
+  primitive-cone certificate or irreducibility theorem.
+
 ## 2026-05-05 W/Z Source-Coordinate Transport Self-Review
 
 Disposition: pass as exact negative boundary / open campaign.

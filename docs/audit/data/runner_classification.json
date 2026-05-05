@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T04:43:56.654970+00:00",
+  "generated_at": "2026-05-05T05:02:50.905256+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -15960,6 +15960,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_neutral_scalar_primitive_cone_certificate_gate.py"
+    },
+    "yt_neutral_scalar_primitive_cone_stretch_no_go_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_neutral_scalar_primitive_cone_stretch_no_go.py"
     },
     "yt_neutral_scalar_rank_one_purity_gate_note_2026-05-02": {
       "assert_count": 1,
@@ -33135,6 +33147,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_neutral_scalar_primitive_cone_stretch_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_neutral_scalar_primitive_cone_stretch_no_go_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_neutral_scalar_rank_one_purity_gate.py": {
       "assert_count": 1,
       "claims": [
@@ -38987,15 +39014,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 95,
+    "decoration_candidates": 96,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 205,
+      "B": 206,
       "C": 490,
       "D": 290,
       "none": 404
     },
-    "runners_classified": 1398,
+    "runners_classified": 1399,
     "runners_with_C": 726,
     "runners_with_D": 505
   }

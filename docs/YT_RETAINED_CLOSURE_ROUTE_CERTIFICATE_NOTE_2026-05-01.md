@@ -18,8 +18,25 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=193 FAIL=0
+# SUMMARY: PASS=194 FAIL=0
 ```
+
+## 2026-05-05 Neutral Primitive-Cone Stretch Update
+
+The retained-route certificate now consumes
+`outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json`.
+This closes the neutral-rank shortcut where source-only neutral support and a
+conditional Perron theorem shape are treated as primitive-cone irreducibility.
+The runner constructs a source-invisible reducible neutral completion that
+preserves the same source rows while leaving an orthogonal neutral direction
+outside the primitive cone.
+
+Validation: neutral primitive-cone stretch no-go `PASS=12 FAIL=0`;
+route-family audit `PASS=9 FAIL=0`; retained-route `PASS=194 FAIL=0`;
+campaign status `PASS=221 FAIL=0`; full positive closure assembly gate
+`PASS=46 FAIL=0`; non-chunk worklist `PASS=28 FAIL=0`.
+
+No closure proposal is authorized.
 
 ## 2026-05-05 W/Z Source-Coordinate Transport Update
 

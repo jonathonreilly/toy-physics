@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-05T04:43:57.142835+00:00",
+  "computed_at": "2026-05-05T05:02:51.557540+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -35,7 +35,7 @@
     "proposed_retained": 8,
     "retained": 81,
     "support": 296,
-    "unknown": 103
+    "unknown": 104
   },
   "proposed_demoted_by_upstream_count": 130,
   "proposed_demoted_by_upstream_examples": [

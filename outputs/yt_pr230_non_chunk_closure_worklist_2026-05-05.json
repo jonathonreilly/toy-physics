@@ -10,7 +10,7 @@
     "matching_running"
   ],
   "closed_work_unit_ids": [],
-  "exact_next_action": "After the canonical O_H premise stretch no-go, pivot to the same-source W/Z response route: derive the same-source EW action/row authority or a closed top/W covariance theorem.  Other remaining choices are strict scalar-LSZ authority, same-surface Schur kernel rows, or neutral-sector primitive-cone irreducibility.",
+  "exact_next_action": "After the W/Z source-coordinate transport no-go and the neutral primitive-cone stretch no-go, do not spend another block on source-only or static-label shortcuts.  The next positive route requires a new strict same-surface artifact: O_H/C_sH/C_HH pole rows, W/Z response rows with identities and covariance authority, scalar-LSZ moment/threshold/FV authority, Schur A/B/C kernel rows, or a neutral primitive-cone certificate.",
   "fail_count": 0,
   "future_file_presence": {
     "canonical_oh_certificate": false,
@@ -61,6 +61,7 @@
     "neutral_dynamic_attempt": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
     "neutral_irreducibility_audit": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
     "neutral_primitive_cone_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+    "neutral_primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
     "neutral_rank_one": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
     "nonchunk_route_family_import_audit": "outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json",
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
@@ -94,7 +95,7 @@
     "wz_same_source_action_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
     "wz_source_coordinate_transport_no_go": "outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json"
   },
-  "pass_count": 27,
+  "pass_count": 28,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Current and chunk-only assembly are rejected.  The strict future files for O_H/source-Higgs, scalar-LSZ, W/Z response, Schur rows, neutral irreducibility, and certified physical readout are absent.",
   "strict_non_claims": [
@@ -198,7 +199,8 @@
         "exact negative boundary / neutral scalar commutant does not force rank-one purity",
         "exact negative boundary / dynamical rank-one neutral scalar theorem not derived",
         "exact negative boundary / neutral-scalar irreducibility authority absent on current PR230 surface",
-        "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent"
+        "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+        "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface"
       ],
       "current_state": "blocked",
       "id": "neutral_scalar_rank_one",

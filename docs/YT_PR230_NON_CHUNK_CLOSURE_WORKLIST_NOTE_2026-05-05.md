@@ -49,7 +49,9 @@ This is an integration/worklist gate, not a physics closure theorem.
 - **Schur/scalar-denominator rows:** supply same-surface Schur `A/B/C` kernel
   rows; current FH/LSZ source rows do not substitute.
 - **Neutral rank-one:** derive a strict primitive-cone/positivity-improving
-  irreducibility certificate for the neutral top-coupled scalar sector.
+  irreducibility certificate for the neutral top-coupled scalar sector.  The
+  source-only and conditional-Perron shortcut is now closed negatively by
+  `outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json`.
 - **Matching/running:** rerun only after a certified physical readout exists.
 
 ## Boundary
@@ -62,11 +64,12 @@ real positive certificate and the aggregate gates pass.
 ## 2026-05-05 Route-Family Audit
 
 `scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py` now records
-the assumption/import exercise over five non-chunk route families.  It selects
-the scalar-LSZ polynomial-contact repair branch only as an executable no-go
-block, not as a closure route.  The worklist consumes that audit plus
-`outputs/yt_fh_lsz_polynomial_contact_repair_no_go_2026-05-05.json` and
-remains open.
+the assumption/import exercise over five non-chunk route families.  Earlier in
+the cycle it selected the scalar-LSZ polynomial-contact repair branch only as
+an executable no-go block, not as a closure route.  After that block, the
+canonical `O_H` stretch, and the W/Z source-coordinate transport block closed
+negatively, the refreshed audit selects the neutral primitive-cone stretch as
+the next hard residual to close.
 
 ## 2026-05-05 Source-Higgs Unratified-Gram Update
 
@@ -104,10 +107,24 @@ The same-source W/Z route remains open only through real matched rows or a
 strict same-surface theorem plus the required action, transport, W/Z mass-fit,
 coupling, sector-overlap, and canonical-Higgs certificates.
 
+## 2026-05-05 Neutral Primitive-Cone Stretch Update
+
+The worklist now consumes
+`outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json`.
+This closes the shortcut that treats source-created neutral support plus a
+conditional Perron theorem shape as a proof of primitive-cone irreducibility.
+The runner gives a source-invisible reducible neutral completion preserving
+the same `C_ss` rows while leaving an orthogonal neutral direction outside the
+primitive cone.
+
+The neutral route remains open only through a strict same-surface
+primitive-cone certificate or irreducibility theorem for the neutral transfer
+sector.
+
 ## Verification
 
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
 python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
-# SUMMARY: PASS=27 FAIL=0
+# SUMMARY: PASS=28 FAIL=0
 ```

@@ -243,6 +243,19 @@ now sharper but still open.
 
 Completed in the neutral primitive-cone continuation:
 
+- `scripts/frontier_yt_neutral_scalar_primitive_cone_stretch_no_go.py`
+- `docs/YT_NEUTRAL_SCALAR_PRIMITIVE_CONE_STRETCH_NO_GO_NOTE_2026-05-05.md`
+- `outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json`
+- refreshed route-family audit, full assembly, retained-route, campaign, and
+  non-chunk worklist certificates.
+
+This closes the source-only neutral primitive-cone shortcut negatively.  The
+current source rows and conditional Perron support are compatible with a
+reducible orthogonal neutral completion, so a future positive route still
+needs a same-surface primitive-cone certificate or irreducibility theorem.
+
+Completed earlier in the neutral primitive-cone continuation:
+
 - `scripts/frontier_yt_neutral_scalar_primitive_cone_certificate_gate.py`
 - `docs/YT_NEUTRAL_SCALAR_PRIMITIVE_CONE_CERTIFICATE_GATE_NOTE_2026-05-05.md`
 - `outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json`

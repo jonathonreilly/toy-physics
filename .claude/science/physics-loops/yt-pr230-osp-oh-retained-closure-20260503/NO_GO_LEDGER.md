@@ -24,3 +24,4 @@
 | Finite polynomial contact repair as scalar-LSZ authority | closed negatively | `YT_FH_LSZ_POLYNOMIAL_CONTACT_REPAIR_NO_GO_NOTE_2026-05-05.md` |
 | Perfect source-Higgs Gram purity against an unratified supplied operator as PR230 `O_H` authority | closed negatively | `YT_SOURCE_HIGGS_UNRATIFIED_GRAM_SHORTCUT_NO_GO_NOTE_2026-05-05.md` |
 | Same-surface `O_H` identity/normalization from current PR230 primitives | closed negatively | `YT_CANONICAL_OH_PREMISE_STRETCH_NO_GO_NOTE_2026-05-05.md` |
+| Source-only neutral support plus conditional Perron theorem as primitive-cone irreducibility | closed negatively | `YT_NEUTRAL_SCALAR_PRIMITIVE_CONE_STRETCH_NO_GO_NOTE_2026-05-05.md` |
