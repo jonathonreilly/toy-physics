@@ -66,6 +66,7 @@ PARENTS = {
     "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
     "same_source_w_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
     "wz_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+    "wz_harness_smoke_schema": "outputs/yt_pr230_wz_harness_smoke_schema_gate_2026-05-05.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
     "electroweak_g2_certificate_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
@@ -243,6 +244,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "same-source top-response certificate absent",
                 "same-source W-response row builder strict inputs absent",
                 "lightweight same-source W readout production rows absent",
+                "W/Z harness smoke schema path is synthetic infrastructure only",
                 "W/Z mass-fit response-row builder strict inputs absent",
                 "strict electroweak g2 certificate builder inputs absent",
                 "SU(2) generator/Casimir normalization rejected as g2 authority",
@@ -269,6 +271,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["same_source_w_response_row_builder"],
                 PARENTS["same_source_w_lightweight_readout"],
                 PARENTS["wz_certificate_gate"],
+                PARENTS["wz_harness_smoke_schema"],
                 PARENTS["wz_mass_fit_path"],
                 PARENTS["wz_mass_fit_response_row_builder"],
                 PARENTS["electroweak_g2_certificate_builder"],
@@ -1116,6 +1119,13 @@ def main() -> int:
         statuses["same_source_w_lightweight_readout"],
     )
     report(
+        "wz-harness-smoke-schema-support-only",
+        "WZ harness smoke schema path" in statuses["wz_harness_smoke_schema"]
+        and certs["wz_harness_smoke_schema"].get("proposal_allowed") is False
+        and certs["wz_harness_smoke_schema"].get("wz_harness_smoke_schema_gate_passed") is True,
+        statuses["wz_harness_smoke_schema"],
+    )
+    report(
         "wz-mass-fit-response-row-builder-open",
         "WZ mass-fit response-row builder" in statuses["wz_mass_fit_response_row_builder"]
         and certs["wz_mass_fit_response_row_builder"].get("proposal_allowed") is False
@@ -1431,6 +1441,7 @@ def main() -> int:
             "does not define y_t through a matrix element or y_t_bare",
             "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, observed targets, kappa_s=1, c2=1, Z_match=1, or cos(theta)=1",
             "does not treat static EW algebra, W/Z absent guards, source-only C_ss rows, or finite-shell fits as physical y_t readouts",
+            "does not treat W/Z smoke-schema rows as production EW response evidence",
             "does not treat current-surface non-chunk exhaustion as retained closure",
             "does not treat terminal non-chunk route exhaustion as positive closure",
             "does not treat cycle-14 non-chunk route selection closure as positive evidence",

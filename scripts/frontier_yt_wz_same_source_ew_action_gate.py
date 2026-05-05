@@ -160,16 +160,25 @@ def main() -> int:
         '"wz_mass_response"' in production_text
         and '"implementation_status": "absent_guarded"' in production_text
     )
+    current_harness_has_wz_smoke_schema_path = all(
+        token in production_text
+        for token in (
+            "--wz-mass-response-smoke",
+            "smoke_schema_enabled_not_ew_production",
+            "synthetic_scout_contract_not_EW_field",
+        )
+    )
     current_harness_has_real_wz_path = any(
         token in production_text
         for token in (
-            "--wz-source-shifts",
             "wz_correlator_measurement",
             "fit_wz_mass_correlator",
             "gauge_mass_response_analysis",
-            "dM_W_ds",
-            "dM_Z_ds",
+            "per_source_shift_mass_fits",
         )
+    ) or (
+        "--wz-source-shifts" in production_text
+        and not current_harness_has_wz_smoke_schema_path
     )
     minimal_axioms_are_staggered_su3 = (
         "staggered-Dirac partition" in minimal_text
@@ -239,7 +248,16 @@ def main() -> int:
     report("implementation-plan-names-ew-action-work-unit", implementation_plan_names_ew_action, "ew_same_source_action")
     report("current-harness-is-qcd-top", current_harness_is_qcd_top, display(PRODUCTION_HARNESS))
     report("current-harness-wz-absent-guarded", current_harness_wz_absent_guard, display(PRODUCTION_HARNESS))
-    report("current-harness-has-no-real-wz-path", not current_harness_has_real_wz_path, "no W/Z correlator or mass-slope CLI")
+    report(
+        "current-harness-has-wz-smoke-schema-path",
+        current_harness_has_wz_smoke_schema_path,
+        "default-off synthetic schema path only",
+    )
+    report(
+        "current-harness-has-no-real-wz-path",
+        not current_harness_has_real_wz_path,
+        "no production W/Z correlator or mass-slope CLI",
+    )
     report("minimal-axioms-do-not-supply-ew-action", minimal_axioms_are_staggered_su3, display(MINIMAL_AXIOMS))
     report("native-gauge-is-structural-not-production-action", native_gauge_is_structural_not_action, display(NATIVE_GAUGE))
     report("ew-gauge-mass-note-is-static-dictionary", ew_note_is_static_tree_dictionary, display(EW_GAUGE_MASS_NOTE))
@@ -276,8 +294,9 @@ def main() -> int:
             "gauge notes supply structural SU(2)/hypercharge support, but no "
             "same-source SU(2)xU(1)/Higgs production action, W/Z correlator "
             "mass-fit path, top/WZ source-coordinate identity, or canonical "
-            "Higgs pole identity is present.  Static EW algebra and the QCD "
-            "top harness absent guard remain rejected as W/Z measurement data."
+            "Higgs pole identity is present.  Static EW algebra, the QCD "
+            "top harness absent guard, and the synthetic smoke-schema path "
+            "remain rejected as W/Z measurement data."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "No same-source EW action certificate, W/Z correlator rows, sector-overlap identity, or canonical-Higgs identity exists.",
@@ -296,6 +315,7 @@ def main() -> int:
             "qcd_top_harness": display(PRODUCTION_HARNESS),
             "current_harness_is_qcd_top": current_harness_is_qcd_top,
             "current_harness_wz_absent_guard": current_harness_wz_absent_guard,
+            "current_harness_has_wz_smoke_schema_path": current_harness_has_wz_smoke_schema_path,
             "current_harness_has_real_wz_path": current_harness_has_real_wz_path,
             "minimal_axioms_surface": display(MINIMAL_AXIOMS),
             "native_gauge_surface": display(NATIVE_GAUGE),
@@ -305,7 +325,8 @@ def main() -> int:
         },
         "strict_non_claims": [
             "does not claim retained or proposed_retained y_t closure",
-            "does not write or synthesize W/Z measurement rows",
+            "does not write production W/Z measurement rows",
+            "does not treat synthetic smoke-schema rows as W/Z evidence",
             "does not treat static EW gauge-mass algebra as dM_W/ds",
             "does not treat structural SU(2) or beta-function notes as a production EW action",
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",

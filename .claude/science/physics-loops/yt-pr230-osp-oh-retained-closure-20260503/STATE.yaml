@@ -4,17 +4,34 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact negative boundary / PR230 non-chunk cycle-34 post-cycle-33 main non-PR230 drift reopen guard: origin/main advanced again only on audit/status, canonical-index, and unrelated SU3 FSS surfaces with no listed same-surface artifact present; positive closure still open
-active_residual: "Cycle 34 checks the only new resume fact after cycle 33: origin/main advanced from 93f51543a06349b4b46dfd2eef0b810fe78fdb1a to bbef5c4905a034cb75e9d7eaeb12cdcffbb03b25.  The new main diff is non-PR230 drift only, no listed PR230 future same-surface path changed or exists, the cycle-33 head remains an ancestor of the aligned PR heads, all six worklist units remain blocked, no route family is executable, and aggregate gates still deny proposal authority."
+actual_current_surface_status: bounded support / WZ harness smoke schema path; positive closure still open
+active_residual: "Default-off W/Z smoke-schema rows now exercise the direct top-correlator harness contract, selected-mass-only scalar FH/LSZ metadata, numba seed control, scalar target time series, and LSZ C_ss_timeseries.  They are synthetic scout rows only: no same-source EW action, production W/Z rows, top/W covariance, sector identity, canonical-Higgs/source-overlap, or retained/proposed-retained authority is supplied."
 latest_checkpoint:
-  utc: "2026-05-05T12:45:24Z"
-  block: 91
-  artifact: "cycle-34 post-cycle-33 main non-PR230 drift reopen guard"
-  status: "exact negative boundary / repeated origin/main non-PR230 drift supplies no listed PR230 same-surface artifact; positive closure remains open"
-  result: "The cycle-34 guard verifies that all parents pass, no parent authorizes a proposal, the cycle-33 head remains an ancestor of the aligned PR heads, origin/main advanced by four commits since the cycle-33 main baseline, changed-path classes are audit/status, canonical-index, and unrelated SU3 FSS only, no listed future same-surface path exists or changed on branch, remote PR branch, or origin/main, all six worklist units remain blocked, no route family is executable, process gates through cycle 33 remain closed, and aggregate gates continue to deny proposal authority."
-  claim_boundary: "no closure proposal, no main-drift reopen, no remote-drift reopen, no process-only route, no chunk packaging, and no admissible reopen until a listed same-surface row, certificate, or theorem exists as a parseable claim-status artifact and the aggregate gates are rerun"
-  live_compute: "chunk worker remains separate; this checkpoint loads no chunk data"
+  utc: "2026-05-05T13:14:58Z"
+  block: 92
+  artifact: "W/Z harness smoke schema path"
+  status: "bounded support / smoke-schema infrastructure only; positive closure remains open"
+  result: "The harness now has an explicit --wz-mass-response-smoke path that emits synthetic positive W/Z scout correlators only when requested.  The new gate reruns a tiny numba smoke artifact and verifies W/Z metadata, selected-mass-only scalar FH/LSZ behavior, numba seed control, scalar target series, LSZ C_ss_timeseries rows, negative/zero/positive W source shifts, correlator-marked W mass fits, false identity certificates, absent g2 selector authority, and all firewall flags.  W/Z implementation-plan, same-source EW action, and W/Z mass-fit path gates were refreshed to classify this as smoke schema rather than production W/Z evidence.  Full assembly PASS=75 FAIL=0, retained-route PASS=223 FAIL=0, and campaign PASS=250 FAIL=0 still deny proposal authority."
+  claim_boundary: "no closure proposal, no production W/Z rows, no same-source EW action, no top/W covariance, no sector/canonical-Higgs identity, no static EW algebra shortcut, and no use of smoke slopes as physics evidence"
+  live_compute: "chunk artifacts are complete; no production chunk worker is running"
   checkpoint_files:
+    - scripts/yt_direct_lattice_correlator_production.py
+    - scripts/frontier_yt_pr230_wz_harness_smoke_schema_gate.py
+    - docs/YT_PR230_WZ_HARNESS_SMOKE_SCHEMA_GATE_NOTE_2026-05-05.md
+    - outputs/yt_pr230_wz_harness_smoke_schema_gate_2026-05-05.json
+    - outputs/yt_pr230_wz_harness_smoke_schema_smoke_2026-05-05.json
+    - scripts/frontier_yt_wz_response_harness_implementation_plan.py
+    - outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json
+    - scripts/frontier_yt_wz_same_source_ew_action_gate.py
+    - outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json
+    - scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py
+    - outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json
+    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+    - scripts/frontier_yt_retained_closure_route_certificate.py
+    - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+    - scripts/frontier_yt_pr230_campaign_status_certificate.py
+    - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
     - scripts/frontier_yt_pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard.py
     - docs/YT_PR230_NONCHUNK_CYCLE34_POST_CYCLE33_MAIN_NONPR230_DRIFT_GUARD_NOTE_2026-05-05.md
     - outputs/yt_pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard_2026-05-05.json

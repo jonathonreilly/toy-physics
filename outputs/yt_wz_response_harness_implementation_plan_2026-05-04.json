@@ -1,5 +1,5 @@
 {
-  "actual_current_surface_status": "bounded-support / WZ response harness implementation plan",
+  "actual_current_surface_status": "bounded-support / WZ response harness implementation plan with smoke schema path",
   "bare_retained_allowed": false,
   "exact_next_action": "Choose whether to actually implement the EW same-source W/Z correlator harness as a new production workstream.  Until then, continue FH/LSZ chunks and the source-Higgs/Schur/rank-one routes.",
   "fail_count": 0,
@@ -76,11 +76,13 @@
     "wz_row_contract": "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json",
     "wz_row_production_attempt": "outputs/yt_wz_response_row_production_attempt_2026-05-03.json"
   },
-  "pass_count": 15,
+  "pass_count": 16,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "Implementation planning is support only; no production W/Z rows or identity certificates exist.",
+  "proposal_allowed_reason": "Implementation planning and smoke-schema plumbing are support only; no production W/Z rows or identity certificates exist.",
   "qcd_harness_has_real_wz_cli": false,
   "qcd_harness_has_wz_absent_guard": true,
+  "qcd_harness_has_wz_smoke_schema_path": true,
+  "qcd_harness_has_wz_source_shift_cli": true,
   "shortcut_rejections": [
     {
       "reason": "It supplies dM_W/dh after canonical H is assumed, not measured dM_W/ds under the PR230 source.",
@@ -105,11 +107,12 @@
   ],
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",
-    "does not write or synthesize W/Z measurement rows",
+    "does not write production W/Z measurement rows",
+    "does not treat synthetic smoke-schema rows as W/Z evidence",
     "does not treat static EW gauge-mass algebra as dM_W/ds",
     "does not treat the QCD harness absent guard as evidence",
     "does not set kappa_s = 1, k_top = k_gauge, c2 = 1, or Z_match = 1",
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
   ],
-  "verdict": "The W/Z fallback route is now reduced to concrete engineering work units.  Current PR230 still has no same-source W/Z mass response rows: the QCD top harness only emits an absent guard, the repo-wide audit finds no hidden W/Z harness, and the builder/gate remain open.  The plan names the required EW action, W/Z correlator mass fits, matched top/WZ covariance, sector-identity certificates, and builder integration.  It does not write measurement rows or authorize retained/proposed-retained wording."
+  "verdict": "The W/Z fallback route is now reduced to concrete engineering work units.  Current PR230 still has no production same-source W/Z mass response rows: the QCD top harness now has only an absent guard plus a default-off synthetic smoke-schema path, the repo-wide audit finds no hidden production W/Z harness, and the builder/gate remain open.  The plan names the required EW action, W/Z correlator mass fits, matched top/WZ covariance, sector-identity certificates, and builder integration.  It does not write production measurement rows or authorize retained/proposed-retained wording."
 }

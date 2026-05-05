@@ -350,9 +350,10 @@
     "wz_g2_generator_casimir_normalization_no_go": "exact negative boundary / SU2 generator-Casimir normalization does not certify PR230 g2",
     "wz_g2_response_self_normalization_no_go": "exact negative boundary / WZ response-only g2 self-normalization no-go",
     "wz_goldstone_equivalence_source_identity_no_go": "exact negative boundary / WZ Goldstone equivalence does not identify PR230 source coordinate",
+    "wz_harness_smoke_schema": "bounded-support / WZ harness smoke schema path",
     "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
     "wz_response_harness_absence_guard": "bounded-support / WZ response harness absence guard",
-    "wz_response_harness_implementation_plan": "bounded-support / WZ response harness implementation plan",
+    "wz_response_harness_implementation_plan": "bounded-support / WZ response harness implementation plan with smoke schema path",
     "wz_response_measurement_row_contract_gate": "bounded-support / WZ response measurement-row contract gate",
     "wz_response_repo_harness_import_audit": "exact negative boundary / repo-wide WZ response harness import audit",
     "wz_response_row_production_attempt": "exact negative boundary / WZ response row production attempt on current surface",
@@ -363,7 +364,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 249,
+  "pass_count": 250,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

@@ -1,5 +1,58 @@
 # Handoff
 
+## 2026-05-05 PR230 W/Z Harness Smoke-Schema Path
+
+Result: bounded infrastructure support.  The direct top-correlator production
+harness now has a default-off W/Z smoke-schema path:
+`--wz-mass-response-smoke`, `--wz-source-shifts`, and `--wz-boson-channel`.
+It emits synthetic positive W/Z scout correlators only for schema validation
+and only at the selected scalar FH/LSZ mass.
+
+Artifacts:
+
+```bash
+python3 -m py_compile \
+  scripts/yt_direct_lattice_correlator_production.py \
+  scripts/frontier_yt_pr230_wz_harness_smoke_schema_gate.py \
+  scripts/frontier_yt_wz_response_harness_implementation_plan.py \
+  scripts/frontier_yt_wz_same_source_ew_action_gate.py \
+  scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py \
+  scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py \
+  scripts/frontier_yt_retained_closure_route_certificate.py \
+  scripts/frontier_yt_pr230_campaign_status_certificate.py
+
+python3 scripts/frontier_yt_pr230_wz_harness_smoke_schema_gate.py
+# SUMMARY: PASS=22 FAIL=0
+
+python3 scripts/frontier_yt_wz_response_harness_implementation_plan.py
+# SUMMARY: PASS=16 FAIL=0
+
+python3 scripts/frontier_yt_wz_same_source_ew_action_gate.py
+# SUMMARY: PASS=25 FAIL=0
+
+python3 scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=75 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=223 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=250 FAIL=0
+```
+
+Claim boundary: the smoke rows are not production W/Z response evidence, not
+same-source EW action evidence, not top/W covariance evidence, and not
+canonical-Higgs/source-overlap evidence.  PR #230 still has no retained or
+proposed-retained top-Yukawa closure authority.
+
+Next exact action: implement a genuine same-source EW action plus production
+W/Z correlator mass-fit rows and matched top/W covariance, or pivot to
+source-Higgs `C_sH/C_HH` pole rows, Schur A/B/C rows, or neutral-sector
+irreducibility.
+
 ## 2026-05-05 PR230 Non-Chunk Cycle-34 Post-Cycle-33 Main Non-PR230 Drift Reopen Guard
 
 Cycle 34 checked the only new resume fact after cycle 33: `origin/main`

@@ -758,6 +758,7 @@ def selected_mass_policy_metadata(masses: list[float], args: argparse.Namespace)
     source_higgs_enabled = bool(getattr(args, "source_higgs_cross_modes_parsed", [])) and int(
         getattr(args, "source_higgs_cross_noises", 0)
     ) > 0 and bool(getattr(args, "source_higgs_operator_certificate_data", {}))
+    wz_smoke_enabled = wz_mass_response_smoke_enabled(args)
     return {
         "policy": "selected_mass_only_for_scalar_fh_lsz",
         "selected_mass_parameter": selected_mass,
@@ -767,6 +768,7 @@ def selected_mass_policy_metadata(masses: list[float], args: argparse.Namespace)
         "scalar_two_point_lsz_selected_mass_only": bool(getattr(args, "scalar_two_point_modes_parsed", []))
         and int(getattr(args, "scalar_two_point_noises", 0)) > 0,
         "source_higgs_cross_correlator_selected_mass_only": source_higgs_enabled,
+        "wz_mass_response_smoke_selected_mass_only": wz_smoke_enabled,
         "non_selected_masses_scalar_fh_lsz_skipped": [
             float(mass) for mass in masses if abs(float(mass) - selected_mass) > 1.0e-15
         ],
@@ -1714,6 +1716,155 @@ def fit_source_higgs_cross_correlator(
     }
 
 
+def wz_mass_response_smoke_enabled(args: argparse.Namespace) -> bool:
+    return bool(getattr(args, "wz_mass_response_smoke", False)) and bool(
+        getattr(args, "wz_source_shifts_parsed", [])
+    )
+
+
+def synthetic_wz_mass_lat(channel: str, selected_mass: float, source_shift: float) -> float:
+    """Contract-only W/Z mass model for reduced smoke rows.
+
+    This deliberately does not use observed W/Z masses or electroweak tree
+    algebra.  It only creates positive correlators with a planted source slope
+    so downstream schema and covariance plumbing can be validated.
+    """
+    channel_factor = 1.0 if channel == "W" else 1.18
+    base = channel_factor * (0.28 + 0.04 * float(selected_mass))
+    slope = channel_factor * (0.21 + 0.03 * float(selected_mass))
+    return max(base + slope * float(source_shift), 1.0e-6)
+
+
+def measure_wz_mass_response_smoke_correlator(
+    geom: Geometry,
+    selected_mass: float,
+    source_shift: float,
+    channel: str,
+    cfg_index: int,
+) -> list[float]:
+    mass_lat = synthetic_wz_mass_lat(channel, selected_mass, source_shift)
+    amplitude = 1.0 + 0.01 * math.cos(float(cfg_index) + 3.0 * float(source_shift))
+    corr = []
+    for tau in range(geom.time_l):
+        forward = math.exp(-mass_lat * tau)
+        backward = math.exp(-mass_lat * max(geom.time_l - tau, 0))
+        corr.append(float(amplitude * (forward + backward)))
+    return corr
+
+
+def fit_wz_mass_response_smoke(
+    wz_measurements: dict[float, list[list[float]]],
+    source_shifts: list[float],
+    channel: str,
+    selected_mass: float,
+) -> dict[str, Any]:
+    rows = []
+    finite_pairs = []
+    channel_key = "w_mass_fit" if channel == "W" else "z_mass_fit"
+    slope_key = "slope_dM_W_ds" if channel == "W" else "slope_dM_Z_ds"
+    covariance_key = "cov_dE_top_dM_W" if channel == "W" else "cov_dE_top_dM_Z"
+    for source_shift in sorted(source_shifts):
+        arr = np.asarray(wz_measurements.get(source_shift, []), dtype=float)
+        if arr.size == 0:
+            continue
+        mean, err = jackknife_mean_err(arr)
+        fit = fit_mass(mean, err)
+        if not math.isfinite(float(fit.get("m_lat", float("nan")))):
+            fit = fit_energy_from_effective(mean)
+        if not math.isfinite(float(fit.get("m_lat", float("nan")))):
+            fit = fit_first_positive_effective(mean)
+        mass_lat = float(fit.get("m_lat", float("nan")))
+        mass_err = float(fit.get("m_lat_err", 0.0) or 0.0)
+        row = {
+            "source_shift": float(source_shift),
+            "configuration_count": int(arr.shape[0]),
+            channel_key: {
+                "mass_lat": mass_lat,
+                "mass_lat_err": mass_err,
+                "from_correlator": True,
+                "correlator_source": "synthetic_scout_contract_not_EW_field",
+                "fit_window": [int(fit.get("tau_min", 0)), int(fit.get("tau_max", 0))],
+                "chi2_dof": float(fit.get("chi2_dof", float("nan"))),
+            },
+            "effective_mass_method": "single_state_positive_scout_correlator",
+            "jackknife_or_bootstrap_block_count": int(arr.shape[0]),
+            "correlator": [
+                {"tau": int(tau), "mean": float(c), "stderr": float(e)}
+                for tau, (c, e) in enumerate(zip(mean, err))
+            ],
+            "rng_seed_control": {
+                "seed_control_version": "deterministic_wz_smoke_contract_v1",
+                "random_numbers_used": False,
+            },
+        }
+        rows.append(row)
+        if math.isfinite(mass_lat):
+            finite_pairs.append((float(source_shift), mass_lat, max(mass_err, 1.0e-12)))
+
+    slope = float("nan")
+    slope_err = float("nan")
+    fit_kind = "unavailable"
+    if len(finite_pairs) >= 2:
+        shifts = np.asarray([item[0] for item in finite_pairs], dtype=float)
+        masses = np.asarray([item[1] for item in finite_pairs], dtype=float)
+        weights = np.asarray([1.0 / (item[2] * item[2]) for item in finite_pairs], dtype=float)
+        coeffs, cov = np.polyfit(shifts, masses, deg=1, w=np.sqrt(weights), cov="unscaled")
+        slope = float(coeffs[0])
+        slope_err = float(math.sqrt(max(cov[0, 0], 0.0))) if cov.shape == (2, 2) else float("nan")
+        fit_kind = f"linear_dM_{channel}_ds_scout"
+
+    return {
+        "phase": "scout",
+        "source_coordinate": (
+            "same numeric source-shift parameter s used by the top FH smoke run; "
+            "canonical-Higgs/source identity is not certified"
+        ),
+        "same_source_coordinate": True,
+        "same_source_identity_certified": False,
+        "same_source_coordinate_certification_status": "schema_only_not_physics_authority",
+        "selected_mass_parameter": float(selected_mass),
+        "boson_channel": channel,
+        "source_shifts": [float(x) for x in source_shifts],
+        "wz_mass_fits_from_correlators": True,
+        "per_source_shift_rows": rows,
+        "gauge_response": {
+            slope_key: slope,
+            "slope_error": slope_err,
+            covariance_key: float("nan"),
+            "fit_kind": fit_kind,
+            "covariance_status": "absent_in_smoke_schema",
+        },
+        "electroweak_coupling": {
+            "g2": None,
+            "sigma_g2": None,
+            "g2_certificate": None,
+            "used_observed_g2_as_selector": False,
+            "status": "absent_not_required_for_smoke_schema",
+        },
+        "identity_certificates": {
+            "same_source_sector_overlap_identity_passed": False,
+            "canonical_higgs_pole_identity_passed": False,
+            "retained_route_or_proposal_gate_passed": False,
+        },
+        "firewall": {
+            "used_static_EW_mass_algebra": False,
+            "used_observed_WZ_masses_as_selector": False,
+            "used_observed_top_or_yukawa_as_selector": False,
+            "used_static_v_overlap_selector": False,
+            "used_H_unit_or_Ward_authority": False,
+            "used_alpha_lm_plaquette_or_u0": False,
+            "used_c2_or_zmatch_equal_one": False,
+        },
+        "used_as_physical_yukawa_readout": False,
+        "strict_limit": (
+            "W/Z smoke rows validate harness schema only. They are synthetic "
+            "positive correlators, not same-source EW production rows, and "
+            "must not be fed to retained/proposed-retained gates as physics "
+            "evidence."
+        ),
+    }
+
+
 def physical_mass_gev(m_lat: float) -> float:
     a_inv = R0_OVER_A_BETA6_REFERENCE * HBARC_GEV_FM / R0_FM
     return m_lat * a_inv
@@ -1749,6 +1900,9 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
     source_higgs_measurements: dict[float, dict[str, list[dict[str, Any]]]] = {
         m: {momentum_key(mode): [] for mode in args.source_higgs_cross_modes_parsed} for m in masses
     }
+    wz_mass_response_measurements: dict[float, list[list[float]]] = {
+        s: [] for s in args.wz_source_shifts_parsed
+    }
     cg_residuals: dict[float, list[float]] = {m: [] for m in masses}
     selected_mass = selected_scalar_fh_lsz_mass(masses)
     fh_lsz_policy = selected_mass_policy_metadata(masses, args)
@@ -1761,6 +1915,17 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
         plaquettes.append(gauge.plaquette())
         meas_gauge = ape_smear_spatial(gauge, args.ape_alpha, args.ape_steps) if args.ape_steps else gauge
         normal_cache: dict[str, NormalEquationSystem] = {}
+        if wz_mass_response_smoke_enabled(args):
+            for source_shift in args.wz_source_shifts_parsed:
+                wz_mass_response_measurements[source_shift].append(
+                    measure_wz_mass_response_smoke_correlator(
+                        meas_gauge.geom,
+                        selected_mass,
+                        source_shift,
+                        args.wz_boson_channel,
+                        cfg,
+                    )
+                )
         for mass in masses:
             normal_system = get_normal_equation_system(normal_cache, meas_gauge, mass)
             measured = measure_correlator(
@@ -1850,6 +2015,12 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
         "pole_residue_rows": [],
         "used_as_physical_yukawa_readout": False,
     }
+    selected_wz_mass_response_analysis: dict[str, Any] = {
+        "source_coordinate": "disabled",
+        "phase": "disabled",
+        "per_source_shift_rows": [],
+        "used_as_physical_yukawa_readout": False,
+    }
     for mass in masses:
         arr = np.asarray(measurements[mass], dtype=float)
         mean, err = jackknife_mean_err(arr)
@@ -1892,6 +2063,14 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
                     args.source_higgs_operator_certificate_data,
                     args.source_higgs_operator_certificate,
                 )
+
+    if wz_mass_response_smoke_enabled(args):
+        selected_wz_mass_response_analysis = fit_wz_mass_response_smoke(
+            wz_mass_response_measurements,
+            args.wz_source_shifts_parsed,
+            args.wz_boson_channel,
+            selected_mass,
+        )
 
     if selected_fit is None:
         selected_fit = mass_scan[len(mass_scan) // 2]
@@ -1925,6 +2104,7 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
         "scalar_source_response_analysis": selected_source_response_analysis,
         "scalar_two_point_lsz_analysis": selected_scalar_two_point_analysis,
         "source_higgs_cross_correlator_analysis": selected_source_higgs_cross_analysis,
+        "wz_mass_response_analysis": selected_wz_mass_response_analysis,
         "effective_mass": effective_mass(np.array([r["mean"] for r in correlator_rows])),
         "mass_fit": selected_fit,
         "runtime_seconds": elapsed,
@@ -1957,6 +2137,9 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
     source_higgs_measurements: dict[float, dict[str, list[dict[str, Any]]]] = {
         m: {momentum_key(mode): [] for mode in args.source_higgs_cross_modes_parsed} for m in masses
     }
+    wz_mass_response_measurements: dict[float, list[list[float]]] = {
+        s: [] for s in args.wz_source_shifts_parsed
+    }
     cg_residuals: dict[float, list[float]] = {m: [] for m in masses}
     selected_mass = selected_scalar_fh_lsz_mass(masses)
     fh_lsz_policy = selected_mass_policy_metadata(masses, args)
@@ -1970,6 +2153,17 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         gauge_view = gauge_field_from_array(geom, u)
         meas_gauge = ape_smear_spatial(gauge_view, args.ape_alpha, args.ape_steps) if args.ape_steps else gauge_view
         normal_cache: dict[str, NormalEquationSystem] = {}
+        if wz_mass_response_smoke_enabled(args):
+            for source_shift in args.wz_source_shifts_parsed:
+                wz_mass_response_measurements[source_shift].append(
+                    measure_wz_mass_response_smoke_correlator(
+                        meas_gauge.geom,
+                        selected_mass,
+                        source_shift,
+                        args.wz_boson_channel,
+                        cfg,
+                    )
+                )
         for mass in masses:
             normal_system = get_normal_equation_system(normal_cache, meas_gauge, mass)
             measured = measure_correlator(
@@ -2059,6 +2253,12 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         "pole_residue_rows": [],
         "used_as_physical_yukawa_readout": False,
     }
+    selected_wz_mass_response_analysis: dict[str, Any] = {
+        "source_coordinate": "disabled",
+        "phase": "disabled",
+        "per_source_shift_rows": [],
+        "used_as_physical_yukawa_readout": False,
+    }
     for mass in masses:
         arr = np.asarray(measurements[mass], dtype=float)
         mean, err = jackknife_mean_err(arr)
@@ -2101,6 +2301,14 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
                     args.source_higgs_operator_certificate_data,
                     args.source_higgs_operator_certificate,
                 )
+
+    if wz_mass_response_smoke_enabled(args):
+        selected_wz_mass_response_analysis = fit_wz_mass_response_smoke(
+            wz_mass_response_measurements,
+            args.wz_source_shifts_parsed,
+            args.wz_boson_channel,
+            selected_mass,
+        )
 
     if selected_fit is None:
         selected_fit = mass_scan[len(mass_scan) // 2]
@@ -2142,6 +2350,7 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         "scalar_source_response_analysis": selected_source_response_analysis,
         "scalar_two_point_lsz_analysis": selected_scalar_two_point_analysis,
         "source_higgs_cross_correlator_analysis": selected_source_higgs_cross_analysis,
+        "wz_mass_response_analysis": selected_wz_mass_response_analysis,
         "effective_mass": effective_mass(np.array([r["mean"] for r in correlator_rows])),
         "mass_fit": selected_fit,
         "runtime_seconds": elapsed,
@@ -2253,6 +2462,7 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
     source_higgs_firewall = source_higgs_firewall_from_certificate(
         getattr(args, "source_higgs_operator_certificate_data", {})
     )
+    wz_smoke_enabled = wz_mass_response_smoke_enabled(args)
     evidence_scope = {
         "production": "user-requested production targets",
         "pilot": "bounded pilot run; infrastructure and scaling evidence only",
@@ -2378,19 +2588,35 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
                 ),
             },
             "wz_mass_response": {
-                "enabled": False,
-                "implementation_status": "absent_guarded",
+                "enabled": wz_smoke_enabled,
+                "implementation_status": (
+                    "smoke_schema_enabled_not_ew_production"
+                    if wz_smoke_enabled
+                    else "absent_guarded"
+                ),
                 "required_measurement_objects": [
                     "same-source W/Z correlator mass fits",
                     "fitted dM_W/ds or dM_Z/ds under the same scalar source",
                     "covariance with dE_top/ds",
                     "sector-overlap and canonical-Higgs identity certificates",
                 ],
+                "smoke_schema_status": (
+                    "scout_contract_rows_enabled_not_production_evidence"
+                    if wz_smoke_enabled
+                    else "disabled"
+                ),
+                "boson_channel": getattr(args, "wz_boson_channel", "W"),
+                "source_shifts": getattr(args, "wz_source_shifts_parsed", []),
+                "same_source_identity_certified": False,
+                "production_wz_rows_written": False,
                 "used_as_physical_yukawa_readout": False,
                 "strict_limit": (
-                    "This QCD top-correlator harness does not measure W/Z mass "
-                    "response.  Static EW algebra or absent W/Z slopes must not "
-                    "be used as dM_W/ds evidence."
+                    "The optional W/Z smoke path emits synthetic positive "
+                    "correlators for schema validation only.  This QCD "
+                    "top-correlator harness still does not produce same-source "
+                    "EW W/Z mass-response evidence.  Static EW algebra, smoke "
+                    "slopes, or absent W/Z slopes must not be used as dM_W/ds "
+                    "physics evidence."
                 ),
             },
             "evidence_scope": evidence_scope,
@@ -2422,6 +2648,9 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
                     if getattr(args, "source_higgs_operator_certificate", None) is not None
                     else None
                 ),
+                "wz_mass_response_smoke": bool(getattr(args, "wz_mass_response_smoke", False)),
+                "wz_source_shifts": getattr(args, "wz_source_shifts_parsed", []),
+                "wz_boson_channel": getattr(args, "wz_boson_channel", "W"),
                 "fh_lsz_selected_mass_only": True,
                 "fh_lsz_selected_mass_parameter": fh_lsz_policy.get("selected_mass_parameter"),
                 "normal_equation_cache_enabled": True,
@@ -2704,6 +2933,30 @@ def parse_args() -> argparse.Namespace:
             "The certificate carries the identity burden; the harness only measures rows."
         ),
     )
+    parser.add_argument(
+        "--wz-source-shifts",
+        default="",
+        help=(
+            "Optional comma-separated source shifts for W/Z mass-response smoke "
+            "schema rows. Requires --wz-mass-response-smoke. These rows are "
+            "synthetic contract plumbing only, not EW production evidence."
+        ),
+    )
+    parser.add_argument(
+        "--wz-boson-channel",
+        choices=("W", "Z"),
+        default="W",
+        help="Boson label for --wz-mass-response-smoke schema rows.",
+    )
+    parser.add_argument(
+        "--wz-mass-response-smoke",
+        action="store_true",
+        help=(
+            "Emit default-off W/Z mass-response smoke rows from positive "
+            "synthetic correlators to validate schema plumbing. This never "
+            "creates production W/Z evidence or y_t readout authority."
+        ),
+    )
     parser.add_argument("--therm", type=int, default=None, help="Thermalization sweeps.")
     parser.add_argument("--measurements", type=int, default=None, help="Saved configurations per volume.")
     parser.add_argument("--separation", type=int, default=None, help="Sweeps between saved configurations.")
@@ -2814,6 +3067,7 @@ def main() -> int:
     args.scalar_source_shifts_parsed = parse_float_list(args.scalar_source_shifts)
     args.scalar_two_point_modes_parsed = parse_momentum_modes(args.scalar_two_point_modes)
     args.source_higgs_cross_modes_parsed = parse_momentum_modes(args.source_higgs_cross_modes)
+    args.wz_source_shifts_parsed = parse_float_list(args.wz_source_shifts)
     args.source_higgs_operator_certificate_data = load_source_higgs_operator_certificate(
         args.source_higgs_operator_certificate
     )
@@ -2847,6 +3101,11 @@ def main() -> int:
         print(
             f"source_higgs_cross_modes={args.source_higgs_cross_modes_parsed}, "
             f"noise_vectors={args.source_higgs_cross_noises}, operator_id={operator_id}"
+        )
+    if wz_mass_response_smoke_enabled(args):
+        print(
+            f"wz_mass_response_smoke_channel={args.wz_boson_channel}, "
+            f"wz_source_shifts={args.wz_source_shifts_parsed}"
         )
     print(f"therm={args.therm}, measurements={args.measurements}, separation={args.separation}")
     print(f"output={args.output}")

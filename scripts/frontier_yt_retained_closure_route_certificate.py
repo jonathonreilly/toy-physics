@@ -189,6 +189,7 @@ def main() -> int:
         "wz_response_measurement_row_contract_gate": "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json",
         "wz_response_row_production_attempt": "outputs/yt_wz_response_row_production_attempt_2026-05-03.json",
         "wz_response_harness_implementation_plan": "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json",
+        "wz_harness_smoke_schema": "outputs/yt_pr230_wz_harness_smoke_schema_gate_2026-05-05.json",
         "wz_same_source_ew_action_certificate_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
         "wz_same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
         "wz_same_source_ew_action_semantic_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
@@ -1225,6 +1226,12 @@ def main() -> int:
             )
         )
         == 5
+    )
+    wz_harness_smoke_schema_support_only = (
+        "WZ harness smoke schema path"
+        in certificates["wz_harness_smoke_schema"].get("actual_current_surface_status", "")
+        and certificates["wz_harness_smoke_schema"].get("proposal_allowed") is False
+        and certificates["wz_harness_smoke_schema"].get("wz_harness_smoke_schema_gate_passed") is True
     )
     wz_same_source_ew_action_certificate_builder_blocks = (
         "same-source EW action certificate absent"
@@ -3047,6 +3054,11 @@ def main() -> int:
         "wz-response-harness-implementation-plan-support-only",
         wz_response_harness_implementation_plan_support_only,
         certificates["wz_response_harness_implementation_plan"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "wz-harness-smoke-schema-support-only",
+        wz_harness_smoke_schema_support_only,
+        certificates["wz_harness_smoke_schema"].get("actual_current_surface_status", ""),
     )
     report(
         "wz-same-source-ew-action-certificate-builder-blocks",

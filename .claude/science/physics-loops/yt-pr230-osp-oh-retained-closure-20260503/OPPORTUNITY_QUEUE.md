@@ -1,5 +1,19 @@
 # Opportunity Queue
 
+2026-05-05 W/Z smoke-schema update: the direct top-correlator harness now has
+a default-off `--wz-mass-response-smoke` path, certified by
+`outputs/yt_pr230_wz_harness_smoke_schema_gate_2026-05-05.json` with
+`PASS=22 FAIL=0`.  This is bounded infrastructure support only: the rows are
+synthetic scout correlators and are explicitly not production W/Z evidence,
+not top/W covariance, not a same-source EW action, and not a
+canonical-Higgs/source-overlap certificate.  The next ranked W/Z action is now
+concrete but still future-only: implement a genuine same-source EW action plus
+production W/Z correlator mass-fit rows and matched top/W covariance, then
+rerun W/Z mass-fit, same-source EW action, full assembly, retained-route, and
+campaign gates.  The other retained-positive routes remain source-Higgs
+`C_sH/C_HH` pole rows, Schur A/B/C kernel rows, and neutral-sector
+irreducibility.
+
 Cycle-34 update: the post-cycle-33 main non-PR230 drift guard checks the only
 new resume fact after cycle 33.  `origin/main` advanced from
 `93f51543a06349b4b46dfd2eef0b810fe78fdb1a` to

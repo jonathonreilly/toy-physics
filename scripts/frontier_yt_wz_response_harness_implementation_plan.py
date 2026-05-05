@@ -208,13 +208,31 @@ def main() -> int:
         '"wz_mass_response"' in harness_text
         and '"implementation_status": "absent_guarded"' in harness_text
     )
+    qcd_harness_has_wz_smoke_schema_path = all(
+        token in harness_text
+        for token in (
+            "--wz-mass-response-smoke",
+            "smoke_schema_enabled_not_ew_production",
+            "synthetic_scout_contract_not_EW_field",
+        )
+    )
     qcd_harness_has_real_wz_cli = any(
         token in harness_text
         for token in (
-            "--wz-source-shifts",
             "fit_wz_mass_correlator",
             "gauge_mass_response_analysis",
             "wz_correlator_measurement",
+            "per_source_shift_mass_fits",
+        )
+    ) or (
+        "--wz-source-shifts" in harness_text
+        and not qcd_harness_has_wz_smoke_schema_path
+    )
+    qcd_harness_has_wz_source_shift_cli = any(
+        token in harness_text
+        for token in (
+            "--wz-source-shifts",
+            "--wz-mass-response-smoke",
         )
     )
     future_rows_written = FUTURE_ROWS.exists()
@@ -232,35 +250,49 @@ def main() -> int:
     report("rank-repair-requires-identity", rank_repair_requires_wz_identity, status(certs["rank_repair"]))
     report("retained-route-still-open", retained_route_open, status(certs["retained_route"]))
     report("qcd-harness-has-wz-absent-guard", qcd_harness_has_wz_absent_guard, display(PRODUCTION_HARNESS))
-    report("qcd-harness-has-no-real-wz-cli", not qcd_harness_has_real_wz_cli, "no W/Z mass-response CLI path")
+    report(
+        "qcd-harness-has-wz-smoke-schema-path",
+        qcd_harness_has_wz_smoke_schema_path,
+        "default-off synthetic schema path only",
+    )
+    report(
+        "qcd-harness-has-no-real-wz-cli",
+        not qcd_harness_has_real_wz_cli,
+        "no production W/Z mass-response CLI path",
+    )
     report("future-row-file-not-written", not future_rows_written, display(FUTURE_ROWS))
     report("implementation-plan-complete", plan_complete, f"work_units={len(plan)}")
 
     result = {
-        "actual_current_surface_status": "bounded-support / WZ response harness implementation plan",
+        "actual_current_surface_status": "bounded-support / WZ response harness implementation plan with smoke schema path",
         "verdict": (
             "The W/Z fallback route is now reduced to concrete engineering "
-            "work units.  Current PR230 still has no same-source W/Z mass "
-            "response rows: the QCD top harness only emits an absent guard, the "
-            "repo-wide audit finds no hidden W/Z harness, and the builder/gate "
-            "remain open.  The plan names the required EW action, W/Z correlator "
-            "mass fits, matched top/WZ covariance, sector-identity certificates, "
-            "and builder integration.  It does not write measurement rows or "
-            "authorize retained/proposed-retained wording."
+            "work units.  Current PR230 still has no production same-source "
+            "W/Z mass response rows: the QCD top harness now has only an "
+            "absent guard plus a default-off synthetic smoke-schema path, the "
+            "repo-wide audit finds no hidden production W/Z harness, and the "
+            "builder/gate remain open.  The plan names the required EW action, "
+            "W/Z correlator mass fits, matched top/WZ covariance, "
+            "sector-identity certificates, and builder integration.  It does "
+            "not write production measurement rows or authorize "
+            "retained/proposed-retained wording."
         ),
         "proposal_allowed": False,
-        "proposal_allowed_reason": "Implementation planning is support only; no production W/Z rows or identity certificates exist.",
+        "proposal_allowed_reason": "Implementation planning and smoke-schema plumbing are support only; no production W/Z rows or identity certificates exist.",
         "bare_retained_allowed": False,
         "future_rows_path": display(FUTURE_ROWS),
         "future_rows_written": future_rows_written,
         "qcd_harness_has_wz_absent_guard": qcd_harness_has_wz_absent_guard,
+        "qcd_harness_has_wz_source_shift_cli": qcd_harness_has_wz_source_shift_cli,
+        "qcd_harness_has_wz_smoke_schema_path": qcd_harness_has_wz_smoke_schema_path,
         "qcd_harness_has_real_wz_cli": qcd_harness_has_real_wz_cli,
         "implementation_work_units": plan,
         "shortcut_rejections": rejections,
         "parent_certificates": PARENTS,
         "strict_non_claims": [
             "does not claim retained or proposed_retained y_t closure",
-            "does not write or synthesize W/Z measurement rows",
+            "does not write production W/Z measurement rows",
+            "does not treat synthetic smoke-schema rows as W/Z evidence",
             "does not treat static EW gauge-mass algebra as dM_W/ds",
             "does not treat the QCD harness absent guard as evidence",
             "does not set kappa_s = 1, k_top = k_gauge, c2 = 1, or Z_match = 1",

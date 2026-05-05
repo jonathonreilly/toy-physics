@@ -31,6 +31,7 @@
   "bare_retained_allowed": false,
   "current_surface_findings": {
     "current_harness_has_real_wz_path": false,
+    "current_harness_has_wz_smoke_schema_path": true,
     "current_harness_is_qcd_top": true,
     "current_harness_wz_absent_guard": true,
     "ew_tree_dictionary_surface": "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md",
@@ -59,7 +60,7 @@
     "wz_repo_import_audit": "outputs/yt_wz_response_repo_harness_import_audit_2026-05-03.json",
     "wz_row_production_attempt": "outputs/yt_wz_response_row_production_attempt_2026-05-03.json"
   },
-  "pass_count": 24,
+  "pass_count": 25,
   "proposal_allowed": false,
   "proposal_allowed_reason": "No same-source EW action certificate, W/Z correlator rows, sector-overlap identity, or canonical-Higgs identity exists.",
   "same_source_ew_action_ready": false,
@@ -87,10 +88,11 @@
   ],
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",
-    "does not write or synthesize W/Z measurement rows",
+    "does not write production W/Z measurement rows",
+    "does not treat synthetic smoke-schema rows as W/Z evidence",
     "does not treat static EW gauge-mass algebra as dM_W/ds",
     "does not treat structural SU(2) or beta-function notes as a production EW action",
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
   ],
-  "verdict": "The first W/Z implementation work unit is not satisfied on the current PR230 surface.  Existing EW/Higgs notes supply static tree-level dictionaries after canonical H is supplied, and native gauge notes supply structural SU(2)/hypercharge support, but no same-source SU(2)xU(1)/Higgs production action, W/Z correlator mass-fit path, top/WZ source-coordinate identity, or canonical Higgs pole identity is present.  Static EW algebra and the QCD top harness absent guard remain rejected as W/Z measurement data."
+  "verdict": "The first W/Z implementation work unit is not satisfied on the current PR230 surface.  Existing EW/Higgs notes supply static tree-level dictionaries after canonical H is supplied, and native gauge notes supply structural SU(2)/hypercharge support, but no same-source SU(2)xU(1)/Higgs production action, W/Z correlator mass-fit path, top/WZ source-coordinate identity, or canonical Higgs pole identity is present.  Static EW algebra, the QCD top harness absent guard, and the synthetic smoke-schema path remain rejected as W/Z measurement data."
 }

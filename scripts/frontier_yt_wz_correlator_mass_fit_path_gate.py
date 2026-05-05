@@ -241,15 +241,25 @@ def main() -> int:
         and certs["retained_route"].get("proposal_allowed") is False
     )
     harness_has_wz_absent_guard = '"wz_mass_response"' in harness_text and '"implementation_status": "absent_guarded"' in harness_text
+    harness_has_wz_smoke_schema_path = all(
+        token in harness_text
+        for token in (
+            "--wz-mass-response-smoke",
+            "smoke_schema_enabled_not_ew_production",
+            "synthetic_scout_contract_not_EW_field",
+        )
+    )
     harness_has_real_wz_mass_fit_path = any(
         token in harness_text
         for token in (
-            "--wz-source-shifts",
             "wz_correlator_measurement",
             "fit_wz_mass_correlator",
             "wz_effective_mass_plateau",
             "per_source_shift_mass_fits",
         )
+    ) or (
+        "--wz-source-shifts" in harness_text
+        and not harness_has_wz_smoke_schema_path
     )
     ew_note_is_static_dictionary = "M_W = g_2 v / 2" in ew_text and "Assume a neutral Higgs vacuum" in ew_text
     future_mass_fit_rows_present = FUTURE_MASS_FIT_ROWS.exists()
@@ -268,7 +278,16 @@ def main() -> int:
     report("positive-witness-passes-mass-fit-contract", witness_validation["valid"], str(witness_validation["missing_or_failed"]))
     report("rejection-witnesses-fail-contract", all_rejections_fail, str({k: v["missing_or_failed"] for k, v in rejections.items()}))
     report("qcd-harness-has-wz-absent-guard", harness_has_wz_absent_guard, display(PRODUCTION_HARNESS))
-    report("qcd-harness-has-no-real-wz-mass-fit-path", not harness_has_real_wz_mass_fit_path, display(PRODUCTION_HARNESS))
+    report(
+        "qcd-harness-has-wz-smoke-schema-path",
+        harness_has_wz_smoke_schema_path,
+        "default-off synthetic schema path only",
+    )
+    report(
+        "qcd-harness-has-no-real-wz-mass-fit-path",
+        not harness_has_real_wz_mass_fit_path,
+        display(PRODUCTION_HARNESS),
+    )
     report("ew-note-is-static-dictionary-not-correlator-fit", ew_note_is_static_dictionary, display(EW_GAUGE_MASS_NOTE))
     report("future-mass-fit-rows-absent", not future_mass_fit_rows_present, display(FUTURE_MASS_FIT_ROWS))
     report("future-response-rows-absent", not future_response_rows_present, display(FUTURE_RESPONSE_ROWS))
@@ -281,8 +300,9 @@ def main() -> int:
             "two-point correlators, effective-mass plateaus or fit windows, "
             "jackknife/bootstrap errors, and negative/zero/positive source "
             "shifts under the same source coordinate.  The current QCD top "
-            "harness has only a W/Z absent guard and no W/Z mass-fit CLI/path; "
-            "static EW gauge-mass algebra is rejected as measurement evidence."
+            "harness has only a W/Z absent guard plus a synthetic smoke-schema "
+            "path and no production W/Z mass-fit CLI/path; static EW "
+            "gauge-mass algebra is rejected as measurement evidence."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "No W/Z correlator mass-fit rows, same-source EW action, sector identity, or retained-route gate pass.",
@@ -296,6 +316,7 @@ def main() -> int:
         "rejection_validations": rejections,
         "current_surface_findings": {
             "qcd_harness_has_wz_absent_guard": harness_has_wz_absent_guard,
+            "qcd_harness_has_wz_smoke_schema_path": harness_has_wz_smoke_schema_path,
             "qcd_harness_has_real_wz_mass_fit_path": harness_has_real_wz_mass_fit_path,
             "ew_note_is_static_dictionary": ew_note_is_static_dictionary,
         },

@@ -1,5 +1,30 @@
 # Review History
 
+## 2026-05-05 W/Z Harness Smoke-Schema Path Self-Review
+
+Disposition: pass as bounded infrastructure support / no closure authority.
+
+Findings:
+
+- The harness path is default-off and runs only with
+  `--wz-mass-response-smoke` plus explicit `--wz-source-shifts`.
+- The new gate validates selected-mass-only scalar FH/LSZ behavior, numba seed
+  control, scalar target time series, LSZ `C_ss_timeseries`, negative/zero/
+  positive W source shifts, correlator-marked W mass fits, absent observed
+  `g2` selector authority, false identity certificates, and false firewall
+  imports.
+- The W/Z rows are synthetic scout correlators.  They are not production W/Z
+  rows, not same-source EW action evidence, not top/W covariance evidence, and
+  not canonical-Higgs/source-overlap evidence.
+- Refreshed W/Z implementation-plan, same-source EW action, W/Z mass-fit,
+  full assembly, retained-route, and campaign gates all pass while keeping
+  `proposal_allowed=false`.
+
+Review-loop iteration 1: local self-review pass.  No retained or
+proposed-retained wording is authorized; the exact next action is a genuine
+same-source EW action plus production W/Z mass-fit rows, or a different
+canonical-Higgs/source-overlap closure route.
+
 ## 2026-05-05 Non-Chunk Cycle-34 Post-Cycle-33 Main Non-PR230 Drift Guard Self-Review
 
 Disposition: pass as exact negative boundary / no admissible post-cycle-33

@@ -374,6 +374,9 @@ def main() -> int:
         "wz_response_harness_implementation_plan": load(
             "outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json"
         ),
+        "wz_harness_smoke_schema": load(
+            "outputs/yt_pr230_wz_harness_smoke_schema_gate_2026-05-05.json"
+        ),
         "wz_same_source_ew_action_certificate_builder": load(
             "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json"
         ),
@@ -1535,6 +1538,13 @@ def main() -> int:
         and certificates["wz_response_harness_implementation_plan"].get("future_rows_written") is False
         and len(certificates["wz_response_harness_implementation_plan"].get("implementation_work_units", [])) == 5,
         statuses["wz_response_harness_implementation_plan"],
+    )
+    report(
+        "wz-harness-smoke-schema-support-only",
+        "WZ harness smoke schema path" in str(statuses["wz_harness_smoke_schema"])
+        and certificates["wz_harness_smoke_schema"].get("proposal_allowed") is False
+        and certificates["wz_harness_smoke_schema"].get("wz_harness_smoke_schema_gate_passed") is True,
+        statuses["wz_harness_smoke_schema"],
     )
     report(
         "wz-same-source-ew-action-certificate-builder-blocks",
