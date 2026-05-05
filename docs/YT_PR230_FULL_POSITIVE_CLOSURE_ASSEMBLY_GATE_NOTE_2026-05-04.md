@@ -99,6 +99,12 @@ PR230 primitives still do not derive the same-surface `O_H` identity and
 normalization certificate.  The source-overlap bridge remains absent, and the
 assembly gate remains open with `PASS=44 FAIL=0`.
 
+2026-05-05 W/Z source-coordinate transport update: the gate now also consumes
+`outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json`.  Static
+electroweak W-mass algebra plus the PR230 top source response does not
+determine W/Z source-response rows without a same-surface source-to-Higgs
+transport certificate.  The assembly gate remains open with `PASS=45 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 
@@ -109,11 +115,12 @@ The current positive non-chunk bridge candidates remain:
   unratified-Gram shortcut no-go plus the canonical `O_H` premise-stretch
   no-go;
 - same-source W/Z response, blocked by the missing same-source EW action,
-  missing W/Z correlator mass-fit rows, missing lightweight W-response
-  production row certificate, missing strict `delta_perp` tomography/null/purity
-  correction certificate, missing matched top/W rows or a strict same-surface
-  top/W factorization theorem, missing sector-overlap identity, and missing
-  canonical-Higgs identity;
+  missing source-to-Higgs transport certificate, missing W/Z correlator
+  mass-fit rows, missing lightweight W-response production row certificate,
+  missing strict `delta_perp` tomography/null/purity correction certificate,
+  missing matched top/W rows or a strict same-surface top/W factorization
+  theorem, missing sector-overlap identity, and missing canonical-Higgs
+  identity;
 - Schur/K-prime kernel rows, blocked by absent same-surface Schur `A/B/C` rows
   and the separate canonical bridge;
 - neutral-scalar rank one, blocked by the absence of a current

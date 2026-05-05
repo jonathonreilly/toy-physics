@@ -25,6 +25,7 @@
     "pade_stieltjes_bounds_certificate": false,
     "polynomial_contact_certificate": false,
     "schur_kernel_rows": false,
+    "source_coordinate_transport_certificate": false,
     "source_higgs_rows": false,
     "stieltjes_moment_certificate": false,
     "wz_mass_response_rows": false
@@ -90,9 +91,10 @@
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "wz_mass_fit_rows": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
-    "wz_same_source_action_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json"
+    "wz_same_source_action_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
+    "wz_source_coordinate_transport_no_go": "outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json"
   },
-  "pass_count": 26,
+  "pass_count": 27,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Current and chunk-only assembly are rejected.  The strict future files for O_H/source-Higgs, scalar-LSZ, W/Z response, Schur rows, neutral irreducibility, and certified physical readout are absent.",
   "strict_non_claims": [
@@ -128,6 +130,7 @@
         "exact negative boundary / matched top-W covariance not derivable from marginal response support",
         "exact negative boundary / same-source top-W factorization not derived on current PR230 surface",
         "exact negative boundary / deterministic W response covariance shortcut not derived on current PR230 surface",
+        "exact negative boundary / WZ source-coordinate transport shortcut rejected",
         "open / electroweak g2 certificate builder inputs absent",
         "exact negative boundary / SU2 generator-Casimir normalization does not certify PR230 g2",
         "exact negative boundary / WZ response g2 authority absent for PR230",
@@ -136,10 +139,11 @@
       "current_state": "blocked",
       "id": "same_source_wz_response",
       "kind": "new_measurement_rows_or_new_theorem",
-      "next_action": "produce matched top/WZ response rows and non-observed g2 authority, or derive a strict product-measure/conditional-independence/closed-covariance theorem",
+      "next_action": "produce matched top/WZ response rows and non-observed g2 authority, or derive a strict product-measure/conditional-independence/closed-covariance theorem plus source-coordinate transport authority",
       "remaining": [
         "outputs/yt_top_wz_matched_response_rows_2026-05-04.json",
         "outputs/yt_top_wz_deterministic_response_covariance_certificate_2026-05-05.json",
+        "outputs/yt_wz_source_coordinate_transport_certificate_2026-05-05.json",
         "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
         "outputs/yt_electroweak_g2_certificate_2026-05-05.json",
         "outputs/yt_delta_perp_tomography_rows_2026-05-04.json"

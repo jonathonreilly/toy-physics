@@ -165,6 +165,7 @@ def main() -> int:
         "wz_same_source_ew_action_certificate_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
         "wz_same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
         "wz_same_source_ew_action_semantic_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
+        "wz_source_coordinate_transport_no_go": "outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json",
         "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
         "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
         "one_higgs_completeness_orthogonal_null": "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json",
@@ -1199,6 +1200,23 @@ def main() -> int:
             "actual_current_surface_status", ""
         )
         and certificates["wz_same_source_ew_action_semantic_firewall"].get("proposal_allowed") is False
+    )
+    wz_source_coordinate_transport_no_go_blocks = (
+        "WZ source-coordinate transport shortcut rejected"
+        in certificates["wz_source_coordinate_transport_no_go"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["wz_source_coordinate_transport_no_go"].get("proposal_allowed") is False
+        and certificates["wz_source_coordinate_transport_no_go"].get(
+            "wz_source_coordinate_transport_no_go_passed"
+        )
+        is True
+        and certificates["wz_source_coordinate_transport_no_go"].get(
+            "future_transport_certificate_present"
+        )
+        is False
+        and certificates["wz_source_coordinate_transport_no_go"].get("future_wz_rows_present")
+        is False
     )
     same_source_w_response_decomposition_not_closure = (
         "same-source W-response decomposition theorem"
@@ -2509,6 +2527,11 @@ def main() -> int:
         "wz-same-source-ew-action-semantic-firewall-not-closure",
         wz_same_source_ew_action_semantic_firewall_not_closure,
         certificates["wz_same_source_ew_action_semantic_firewall"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "wz-source-coordinate-transport-no-go-blocks",
+        wz_source_coordinate_transport_no_go_blocks,
+        certificates["wz_source_coordinate_transport_no_go"].get("actual_current_surface_status", ""),
     )
     report(
         "same-source-w-response-decomposition-not-closure",

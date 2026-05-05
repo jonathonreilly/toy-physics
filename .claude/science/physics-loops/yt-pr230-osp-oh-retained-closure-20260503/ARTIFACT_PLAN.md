@@ -274,6 +274,23 @@ matched rows or a strict same-surface covariance theorem plus the EW action,
 top identity, W/Z mass-fit, non-observed `g_2`, and overlap/correction
 certificates.
 
+Completed in the W/Z source-coordinate transport continuation:
+
+- `scripts/frontier_yt_wz_source_coordinate_transport_no_go.py`
+- `docs/YT_WZ_SOURCE_COORDINATE_TRANSPORT_NO_GO_NOTE_2026-05-05.md`
+- `outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json`
+- refreshed full assembly, retained-route, campaign, non-chunk worklist, and
+  route-family audit certificates.
+
+This closes the static EW algebra plus uncertified source-coordinate transport
+shortcut negatively.  The runner keeps the top source response and static W
+mass dictionary fixed while varying the source-to-Higgs Jacobian and the
+transported W source response, so static `dM_W/dh` cannot become a PR230
+`dM_W/ds` row by convention.  The W/Z route remains open only through a real
+same-source EW action plus source-transport certificate and W/Z mass-fit rows,
+measured matched top/W rows, or a strict same-surface covariance theorem with
+the required certificates.
+
 Completed in the source-Higgs unratified-Gram continuation:
 
 - `scripts/frontier_yt_source_higgs_unratified_gram_shortcut_no_go.py`

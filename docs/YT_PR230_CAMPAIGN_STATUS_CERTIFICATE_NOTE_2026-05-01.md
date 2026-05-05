@@ -26,8 +26,29 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=219 FAIL=0
+# SUMMARY: PASS=220 FAIL=0
 ```
+
+## 2026-05-05 W/Z Source-Coordinate Transport Update
+
+The campaign status certificate now consumes
+`outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json`.  This tests
+the W/Z derivation shortcut left after the same-source EW action gate: static
+`dM_W/dh` cannot be treated as same-source `dM_W/ds` unless the
+source-to-Higgs Jacobian is certified on the same PR230 surface.
+
+The no-go uses an algebraic counterfamily with fixed top source response and
+fixed static W dictionary but different source-to-Higgs Jacobians.  The
+transported W response and top/W response ratio vary, so the W/Z route still
+needs a real same-source EW action plus source-transport certificate and W/Z
+mass-fit rows, or measured matched top/W rows.
+
+Validation: W/Z source-coordinate transport no-go `PASS=20 FAIL=0`;
+retained-route `PASS=193 FAIL=0`; campaign status `PASS=220 FAIL=0`; full
+positive closure assembly gate `PASS=45 FAIL=0`; non-chunk worklist
+`PASS=27 FAIL=0`.
+
+The campaign remains open.
 
 ## 2026-05-05 Canonical O_H Premise Stretch Update
 

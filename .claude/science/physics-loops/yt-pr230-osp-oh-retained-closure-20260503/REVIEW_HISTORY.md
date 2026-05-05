@@ -1,5 +1,23 @@
 # Review History
 
+## 2026-05-05 W/Z Source-Coordinate Transport Self-Review
+
+Disposition: pass as exact negative boundary / open campaign.
+
+Findings:
+
+- The runner does not create W/Z rows or define a same-source EW action; it
+  only rejects the static-algebra transport shortcut on the current surface.
+- The counterfamily is algebraic and non-data: fixed top response and static W
+  dictionary still allow different source-to-Higgs Jacobians and W source
+  responses.
+- Aggregate worklist, assembly, retained-route, route-family, and campaign
+  certificates now include the transport blocker and still deny proposal
+  authority.
+- The W/Z route remains open only through a real same-source EW action plus
+  transport certificate and rows, measured matched top/W rows, or a strict
+  same-surface covariance theorem with its required certificates.
+
 ## 2026-05-05 Canonical O_H Premise Stretch Self-Review
 
 Disposition: pass as exact negative boundary / open campaign.

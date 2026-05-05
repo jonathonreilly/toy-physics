@@ -10,8 +10,8 @@ scalar-LSZ polynomial-contact no-go block
 The non-chunk route-family exercise compares five live positive families:
 
 - same-surface canonical `O_H` plus source-Higgs `C_sH/C_HH`;
-- same-source W/Z response with matched top/W rows, non-observed `g_2`, and
-  strict `delta_perp`;
+- same-source W/Z response with matched top/W rows, source-coordinate
+  transport, non-observed `g_2`, and strict `delta_perp`;
 - scalar-LSZ finite-shell/contact/model-class control;
 - same-surface Schur `A/B/C` scalar-denominator rows;
 - neutral-sector primitive-cone/rank-one irreducibility.
@@ -21,6 +21,12 @@ non-chunk executable route is scalar-LSZ/contact-model control, because the
 current finite-shell polefit8x8 certificates already expose a concrete
 contact-repair shortcut to test.  The selected block is therefore the
 polynomial-contact repair no-go.
+
+2026-05-05 update: the W/Z family now also carries the
+source-coordinate transport no-go at
+`outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json`.  Static
+W-mass algebra is not row authority unless the source-to-Higgs Jacobian is
+certified on the same surface.
 
 ## Boundary
 

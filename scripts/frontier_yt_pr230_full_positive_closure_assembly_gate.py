@@ -50,6 +50,7 @@ PARENTS = {
     "source_higgs_unratified_gram_no_go": "outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json",
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_same_source_action_semantic_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
+    "wz_source_coordinate_transport_no_go": "outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json",
     "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
     "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
     "one_higgs_completeness_orthogonal_null": "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json",
@@ -199,6 +200,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
             and truth(certs["same_source_w_lightweight_readout"], "strict_lightweight_readout_gate_passed"),
             "blocked_by": [
                 "same-source EW action certificate absent",
+                "source-coordinate transport from static EW algebra rejected",
                 "W/Z correlator mass-fit path absent",
                 "orthogonal-neutral top-coupling null or correction absent",
                 "strict delta_perp tomography correction rows absent",
@@ -221,6 +223,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
             "parents": [
                 PARENTS["wz_same_source_action"],
                 PARENTS["wz_same_source_action_semantic_firewall"],
+                PARENTS["wz_source_coordinate_transport_no_go"],
                 PARENTS["same_source_w_response_decomposition"],
                 PARENTS["same_source_w_response_orthogonal_correction"],
                 PARENTS["one_higgs_completeness_orthogonal_null"],
@@ -380,6 +383,11 @@ def main() -> int:
         )
         is True
         and certs["wz_same_source_action_semantic_firewall"].get("proposal_allowed") is False
+        and certs["wz_source_coordinate_transport_no_go"].get("proposal_allowed") is False
+        and certs["wz_source_coordinate_transport_no_go"].get(
+            "wz_source_coordinate_transport_no_go_passed"
+        )
+        is True
     )
     matching_running_blocks = (
         certs["matching_running"].get("matching_running_bridge_passed") is not True
@@ -548,6 +556,17 @@ def main() -> int:
         in statuses["wz_same_source_action_semantic_firewall"]
         and certs["wz_same_source_action_semantic_firewall"].get("proposal_allowed") is False,
         statuses["wz_same_source_action_semantic_firewall"],
+    )
+    report(
+        "wz-source-coordinate-transport-no-go-blocks",
+        "WZ source-coordinate transport shortcut rejected"
+        in statuses["wz_source_coordinate_transport_no_go"]
+        and certs["wz_source_coordinate_transport_no_go"].get("proposal_allowed") is False
+        and certs["wz_source_coordinate_transport_no_go"].get(
+            "wz_source_coordinate_transport_no_go_passed"
+        )
+        is True,
+        statuses["wz_source_coordinate_transport_no_go"],
     )
     report(
         "same-source-w-orthogonal-correction-gate-open",

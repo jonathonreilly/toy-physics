@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T04:25:21.504929+00:00",
+  "generated_at": "2026-05-05T04:43:53.142209+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -40635,6 +40635,16 @@
       "runner_path": null,
       "title": "PR #230 FH/LSZ Polefit8x8 Chunks031-036 Launch Checkpoint"
     },
+    "yt_fh_lsz_polefit8x8_chunks037_042_checkpoint_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_polefit8x8_chunks037_042_checkpoint_note_2026-05-05",
+      "current_status": "bounded",
+      "current_status_raw": "bounded production support only.",
+      "deps": [],
+      "note_hash": "9c55e161a047efbf7bfd466cc366f402ba5bac8ba7564910ae46ccafd0dbe66e",
+      "path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS037_042_CHECKPOINT_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR #230 FH/LSZ Polefit8x8 Chunks037-042 Checkpoint"
+    },
     "yt_fh_lsz_polefit8x8_chunks037_042_launch_checkpoint_note_2026-05-05": {
       "claim_id": "yt_fh_lsz_polefit8x8_chunks037_042_launch_checkpoint_note_2026-05-05",
       "current_status": "support",
@@ -40644,6 +40654,16 @@
       "path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS037_042_LAUNCH_CHECKPOINT_NOTE_2026-05-05.md",
       "runner_path": null,
       "title": "PR #230 FH/LSZ Polefit8x8 Chunks037-042 Launch Checkpoint"
+    },
+    "yt_fh_lsz_polefit8x8_chunks043_048_launch_checkpoint_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_polefit8x8_chunks043_048_launch_checkpoint_note_2026-05-05",
+      "current_status": "support",
+      "current_status_raw": "run-control support only.",
+      "deps": [],
+      "note_hash": "ce8e6a71839c7b05d24053222ce0e459f5b682aefa8515007cb1a3cdab0a2cc0",
+      "path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS043_048_LAUNCH_CHECKPOINT_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR #230 FH/LSZ Polefit8x8 Chunks043-048 Launch Checkpoint"
     },
     "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04": {
       "claim_id": "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04",
@@ -41833,7 +41853,7 @@
       "current_status": "open",
       "current_status_raw": "open / active campaign continuing after current shortcut blocks",
       "deps": [],
-      "note_hash": "bf8af760b573664dca5dfcf05974df804b4af485081d55a1bbb15bd1b6503e1e",
+      "note_hash": "f55ba45fb67604b23ef8871a67cfe2686428ffc3f60daf40831f907871ffee71",
       "path": "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
@@ -41843,7 +41863,7 @@
       "current_status": "open",
       "current_status_raw": "open / assembly gate; proposal_allowed=false.",
       "deps": [],
-      "note_hash": "8c143d1b2ce7038555db58401f5a90c91dbcaf158eaf32f0c785e28837d0f2b4",
+      "note_hash": "f19b6f33b2155202d9bea33ac01a37ef714ccb31c1a0b4e1e1122252f42a46a8",
       "path": "docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md",
       "runner_path": null,
       "title": "PR230 Full Positive Closure Assembly Gate Note"
@@ -41873,7 +41893,7 @@
       "current_status": "open",
       "current_status_raw": "open / PR230 non-chunk closure worklist complete; positive closure still blocked",
       "deps": [],
-      "note_hash": "fe8a2f5066e99eb85e6ade15afd5c51a5c34dfeccb6b5b87af6c2bcc60c7d5a1",
+      "note_hash": "5b35d96dba9f86682327e6d4f9d5744065797cf63206be6e6c085158b4479c0d",
       "path": "docs/YT_PR230_NON_CHUNK_CLOSURE_WORKLIST_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_non_chunk_closure_worklist.py",
       "title": "PR #230 Non-Chunk Closure Worklist Gate"
@@ -41883,7 +41903,7 @@
       "current_status": "open",
       "current_status_raw": "open / non-chunk route-family import audit selects",
       "deps": [],
-      "note_hash": "47d96ce87b03f51346647a6db519ed33b22be1e1781ad12b147b8260019e7e5b",
+      "note_hash": "edfeb769eed8914f0ea1eb2e2f3dcb2aeaec29b8c0ee35d81a237d1738fe343a",
       "path": "docs/YT_PR230_NONCHUNK_ROUTE_FAMILY_IMPORT_AUDIT_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py",
       "title": "PR #230 Non-Chunk Route-Family Import Audit"
@@ -41975,7 +41995,7 @@
       "current_status": "open",
       "current_status_raw": "open / closure not yet reached",
       "deps": [],
-      "note_hash": "9e53e0a338ba3988651b320ff511be0a2ed60c28339a373b755cdf05165e6817",
+      "note_hash": "261634e17f318e3ebae7325f46966506c77df3c6e80f928f0b397f3de75b54e6",
       "path": "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_retained_closure_route_certificate.py",
       "title": "PR230 Top-Yukawa Retained-Closure Route Certificate"
@@ -43134,6 +43154,16 @@
       "path": "docs/YT_WZ_SAME_SOURCE_EW_ACTION_SEMANTIC_FIREWALL_NOTE_2026-05-04.md",
       "runner_path": null,
       "title": "PR #230 Same-Source EW Action Semantic Firewall"
+    },
+    "yt_wz_source_coordinate_transport_no_go_note_2026-05-05": {
+      "claim_id": "yt_wz_source_coordinate_transport_no_go_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "a26ee956e81c8679460e33fb5c4b3d773333b0128e40334edc7b18b15ac13070",
+      "path": "docs/YT_WZ_SOURCE_COORDINATE_TRANSPORT_NO_GO_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_wz_source_coordinate_transport_no_go.py",
+      "title": "PR #230 W/Z Source-Coordinate Transport No-Go"
     },
     "yt_zero_import_authority_note": {
       "claim_id": "yt_zero_import_authority_note",
@@ -44460,7 +44490,9 @@
     "yt_fh_lsz_polefit8x8_chunks025_030_launch_checkpoint_note_2026-05-05",
     "yt_fh_lsz_polefit8x8_chunks031_036_checkpoint_note_2026-05-05",
     "yt_fh_lsz_polefit8x8_chunks031_036_launch_checkpoint_note_2026-05-05",
+    "yt_fh_lsz_polefit8x8_chunks037_042_checkpoint_note_2026-05-05",
     "yt_fh_lsz_polefit8x8_chunks037_042_launch_checkpoint_note_2026-05-05",
+    "yt_fh_lsz_polefit8x8_chunks043_048_launch_checkpoint_note_2026-05-05",
     "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04",
     "yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_note_2026-05-05",
     "yt_fh_lsz_polynomial_contact_finite_shell_no_go_note_2026-05-05",
@@ -44655,6 +44687,7 @@
     "yt_wz_same_source_ew_action_certificate_builder_note_2026-05-04",
     "yt_wz_same_source_ew_action_gate_note_2026-05-04",
     "yt_wz_same_source_ew_action_semantic_firewall_note_2026-05-04",
+    "yt_wz_source_coordinate_transport_no_go_note_2026-05-05",
     "yt_zero_import_chain_note",
     "yt_zero_mode_prescription_import_audit_note_2026-05-01",
     "yukawa_color_projection_theorem",
@@ -44663,17 +44696,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1001,
-    "node_count": 1954,
-    "root_count": 1467,
-    "runners_with_path": 1476,
+    "leaf_count": 1004,
+    "node_count": 1957,
+    "root_count": 1470,
+    "runners_with_path": 1477,
     "status_counts": {
-      "bounded": 544,
+      "bounded": 545,
       "open": 99,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 424,
-      "unknown": 513
+      "support": 425,
+      "unknown": 514
     }
   }
 }

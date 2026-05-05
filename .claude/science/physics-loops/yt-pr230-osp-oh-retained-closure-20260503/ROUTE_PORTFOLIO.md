@@ -47,6 +47,14 @@ stretch no-go.  Current harness lacks W/Z response rows and sector-overlap
 identity certificates, so the next executable attack is a same-source EW
 action/row authority or closed top/W covariance theorem.
 
+Cycle-4 update: the static-algebra source-coordinate transport shortcut is
+closed negatively in
+`docs/YT_WZ_SOURCE_COORDINATE_TRANSPORT_NO_GO_NOTE_2026-05-05.md`.  Static
+`dM_W/dh` is not a PR230 same-source W row without a same-surface
+source-to-Higgs Jacobian certificate.  W/Z remains viable only through real
+same-source EW action plus transport and mass-fit rows, measured matched top/W
+rows, or a strict same-surface covariance theorem.
+
 ## R4: Dynamical Rank-One Neutral Scalar Theorem
 
 Prove the neutral scalar response space is rank one so `O_sp` cannot contain

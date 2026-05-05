@@ -1,5 +1,47 @@
 # Handoff
 
+## 2026-05-05 W/Z Source-Coordinate Transport No-Go
+
+Cycle 4 tested the remaining static-algebra W/Z shortcut: treating the
+canonical Higgs-coordinate W-mass slope as a PR230 same-source W response by
+transporting coordinates without a certified source-to-Higgs Jacobian.
+
+Result: exact negative boundary.  Static `dM_W/dh` cannot become a PR230
+`dM_W/ds` row by convention.  The runner builds a non-data counterfamily with
+fixed top response and fixed static W dictionary but varying source-to-Higgs
+Jacobian, transported W response, and top/W ratio.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_wz_source_coordinate_transport_no_go.py
+# SUMMARY: PASS=20 FAIL=0
+
+python3 scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=45 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=193 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=220 FAIL=0
+
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+# SUMMARY: PASS=27 FAIL=0
+```
+
+Claim boundary: no closure proposal, no chunk packaging, no W/Z measurement
+rows, no empirical selector, and no static-algebra row authority.
+
+Next exact action: do not spend another block on static-algebra transport.
+Either build a real same-source EW action, source-transport certificate, and
+W/Z mass-fit rows; derive a strict closed covariance theorem with the required
+identity/correction certificates; or pivot to the next queue candidate if no
+executable W/Z route passes the import audit.
+
 ## 2026-05-05 Canonical O_H Premise Stretch No-Go
 
 Cycle 3 completed the required deep-work stretch on the same-surface

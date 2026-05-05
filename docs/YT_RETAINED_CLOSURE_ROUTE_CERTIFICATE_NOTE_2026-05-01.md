@@ -18,8 +18,25 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=192 FAIL=0
+# SUMMARY: PASS=193 FAIL=0
 ```
+
+## 2026-05-05 W/Z Source-Coordinate Transport Update
+
+The retained-route certificate now consumes
+`outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json`.  This closes
+the W/Z shortcut where static electroweak W-mass algebra is transported along
+the PR230 scalar source without a same-surface source-to-Higgs Jacobian
+certificate.  The runner keeps the top source response and static W dictionary
+fixed while varying the transported W source response, so static algebra is
+not row authority.
+
+Validation: W/Z source-coordinate transport no-go `PASS=20 FAIL=0`;
+retained-route `PASS=193 FAIL=0`; campaign status `PASS=220 FAIL=0`; full
+positive closure assembly gate `PASS=45 FAIL=0`; non-chunk worklist
+`PASS=27 FAIL=0`.
+
+No closure proposal is authorized.
 
 ## 2026-05-05 Canonical O_H Premise Stretch Update
 

@@ -38,6 +38,7 @@ PARENTS = {
     "source_higgs_unratified_gram_no_go": "outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json",
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_same_source_action_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
+    "wz_source_coordinate_transport_no_go": "outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json",
     "same_source_w_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
     "same_source_w_orthogonal": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
     "delta_perp_builder": "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json",
@@ -94,6 +95,7 @@ FUTURE_FILES = {
     "polynomial_contact_certificate": "outputs/yt_fh_lsz_polynomial_contact_certificate_2026-05-05.json",
     "matched_top_wz_rows": "outputs/yt_top_wz_matched_response_rows_2026-05-04.json",
     "deterministic_response_covariance_certificate": "outputs/yt_top_wz_deterministic_response_covariance_certificate_2026-05-05.json",
+    "source_coordinate_transport_certificate": "outputs/yt_wz_source_coordinate_transport_certificate_2026-05-05.json",
     "wz_mass_response_rows": "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
     "non_observed_g2_certificate": "outputs/yt_electroweak_g2_certificate_2026-05-05.json",
     "delta_perp_rows": "outputs/yt_delta_perp_tomography_rows_2026-05-04.json",
@@ -168,6 +170,7 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
             "remaining": [
                 FUTURE_FILES["matched_top_wz_rows"],
                 FUTURE_FILES["deterministic_response_covariance_certificate"],
+                FUTURE_FILES["source_coordinate_transport_certificate"],
                 FUTURE_FILES["wz_mass_response_rows"],
                 FUTURE_FILES["non_observed_g2_certificate"],
                 FUTURE_FILES["delta_perp_rows"],
@@ -177,6 +180,7 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 status(certs["top_wz_covariance_marginal_no_go"]),
                 status(certs["top_wz_factorization_gate"]),
                 status(certs["top_wz_deterministic_response_covariance_gate"]),
+                status(certs["wz_source_coordinate_transport_no_go"]),
                 status(certs["electroweak_g2_builder"]),
                 status(certs["wz_g2_casimir_no_go"]),
                 status(certs["wz_g2_firewall"]),
@@ -184,7 +188,8 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
             ],
             "next_action": (
                 "produce matched top/WZ response rows and non-observed g2 authority, "
-                "or derive a strict product-measure/conditional-independence/closed-covariance theorem"
+                "or derive a strict product-measure/conditional-independence/closed-covariance "
+                "theorem plus source-coordinate transport authority"
             ),
         },
         {
@@ -291,6 +296,17 @@ def main() -> int:
     report("source-higgs-route-gated", "source-Higgs production launch blocked" in status(certs["source_higgs_readiness"]), status(certs["source_higgs_readiness"]))
     report("source-higgs-unratified-gram-shortcut-closed", "unratified source-Higgs Gram shortcut" in status(certs["source_higgs_unratified_gram_no_go"]), status(certs["source_higgs_unratified_gram_no_go"]))
     report("wz-route-gated", "same-source EW action not defined" in status(certs["wz_same_source_action"]), status(certs["wz_same_source_action"]))
+    report(
+        "wz-source-coordinate-transport-shortcut-closed",
+        "WZ source-coordinate transport shortcut rejected"
+        in status(certs["wz_source_coordinate_transport_no_go"])
+        and certs["wz_source_coordinate_transport_no_go"].get("proposal_allowed") is False
+        and certs["wz_source_coordinate_transport_no_go"].get(
+            "wz_source_coordinate_transport_no_go_passed"
+        )
+        is True,
+        status(certs["wz_source_coordinate_transport_no_go"]),
+    )
     report("wz-deterministic-response-shortcut-gated", "deterministic W response covariance shortcut not derived" in status(certs["top_wz_deterministic_response_covariance_gate"]), status(certs["top_wz_deterministic_response_covariance_gate"]))
     report("wz-g2-shortcuts-closed", "does not certify PR230 g2" in status(certs["wz_g2_casimir_no_go"]) and "response-only" in status(certs["wz_g2_self_norm_no_go"]), "Casimir and response-only g2 shortcuts rejected")
     report("scalar-lsz-route-gated", "Stieltjes moment-certificate gate" in status(certs["lsz_stieltjes_moment_gate"]), status(certs["lsz_stieltjes_moment_gate"]))

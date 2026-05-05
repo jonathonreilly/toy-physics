@@ -302,6 +302,9 @@ def main() -> int:
         "wz_same_source_ew_action_semantic_firewall": load(
             "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json"
         ),
+        "wz_source_coordinate_transport_no_go": load(
+            "outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json"
+        ),
         "same_source_w_response_decomposition": load(
             "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json"
         ),
@@ -1442,6 +1445,21 @@ def main() -> int:
         in str(statuses["wz_same_source_ew_action_semantic_firewall"])
         and certificates["wz_same_source_ew_action_semantic_firewall"].get("proposal_allowed") is False,
         statuses["wz_same_source_ew_action_semantic_firewall"],
+    )
+    report(
+        "wz-source-coordinate-transport-no-go-blocks",
+        "WZ source-coordinate transport shortcut rejected"
+        in str(statuses["wz_source_coordinate_transport_no_go"])
+        and certificates["wz_source_coordinate_transport_no_go"].get("proposal_allowed") is False
+        and certificates["wz_source_coordinate_transport_no_go"].get(
+            "wz_source_coordinate_transport_no_go_passed"
+        )
+        is True
+        and certificates["wz_source_coordinate_transport_no_go"].get(
+            "future_transport_certificate_present"
+        )
+        is False,
+        statuses["wz_source_coordinate_transport_no_go"],
     )
     report(
         "same-source-w-response-decomposition-not-closure",

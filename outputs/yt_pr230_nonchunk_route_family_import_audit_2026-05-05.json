@@ -39,7 +39,7 @@
     },
     {
       "can_execute_now": false,
-      "current_disposition": "blocked; existing gates are contracts and negative shortcut boundaries",
+      "current_disposition": "blocked; existing gates are contracts and negative shortcut boundaries, including source-coordinate transport",
       "dramatic_step_score": 2,
       "forbidden_imports": [
         "observed W/Z/top/y_t/g2 selectors",
@@ -51,6 +51,7 @@
         "deterministic_response_covariance_certificate": false,
         "matched_top_wz_rows": false,
         "non_observed_g2_certificate": false,
+        "source_coordinate_transport_certificate": false,
         "wz_mass_response_rows": false
       },
       "hard_residual_pressure": 2,
@@ -58,12 +59,13 @@
       "minimum_allowed_premises": [
         "same source coordinate for top and W/Z rows",
         "same-source EW action and W/Z mass-fit rows",
+        "source-coordinate transport from PR230 source to canonical Higgs radial coordinate",
         "matched top/W covariance or closed covariance theorem",
         "non-observed g2 certificate",
         "strict delta_perp correction or null theorem"
       ],
-      "open_import_count": 5,
-      "retirement_path": "produce matched rows or prove a same-surface product/covariance theorem",
+      "open_import_count": 6,
+      "retirement_path": "produce matched rows or prove a same-surface product/covariance theorem plus source-transport authority",
       "route_family": "same-source W/Z response",
       "runner_or_gate_available": true
     },

@@ -1,7 +1,7 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact negative boundary / same-surface O_H identity and normalization certificate not derivable from current PR230 primitives
+actual_current_surface_status: exact negative boundary / WZ source-coordinate transport shortcut rejected; PR230 closure still open
 conditional_surface_status: conditional-support if C_sH/C_HH Gram purity, W/Z response, or rank-one neutral scalar theorem closes the overlap
 hypothetical_axiom_status: null
 admitted_observation_status: null
@@ -93,6 +93,12 @@ Open imports:
   same-surface covariance formula, and the current EW action, top identity,
   W/Z mass-fit, non-observed `g_2`, and overlap/correction certificates remain
   absent;
+- W/Z source-coordinate transport shortcut is closed negatively on the current
+  PR230 surface: static `dM_W/dh` cannot become a same-source `dM_W/ds` row
+  without a same-surface source-to-Higgs Jacobian certificate, so the W/Z
+  route still needs the EW action, source-transport certificate, W/Z mass-fit
+  rows, non-observed `g_2`, sector/canonical identities, and matched
+  covariance or correction authority;
 - cross-lane `O_h/O_H` authority is closed negatively: gravity `O_h` shell
   notes, lepton/DM two-Higgs reductions, Higgs mass/vacuum summaries, EW
   one-Higgs algebra, and Koide `O_h` support/no-go surfaces are

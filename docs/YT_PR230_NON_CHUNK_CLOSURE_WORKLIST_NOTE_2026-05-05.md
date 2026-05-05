@@ -22,10 +22,14 @@ This is an integration/worklist gate, not a physics closure theorem.
   `outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json`;
   the operator identity and normalization certificates remain load-bearing.
 - **Same-source W/Z response:** produce matched top/WZ response rows,
-  W/Z mass-response rows, non-observed `g_2`, and strict `delta_perp`; or
-  derive a real same-surface product-measure, conditional-independence, or
-  closed-covariance theorem.  Deterministic W response alone is now explicitly
-  gated: it needs paired top rows or a closed same-surface covariance formula.
+  a source-coordinate transport certificate, W/Z mass-response rows,
+  non-observed `g_2`, and strict `delta_perp`; or derive a real same-surface
+  product-measure, conditional-independence, or closed-covariance theorem.
+  Deterministic W response alone is now explicitly gated: it needs paired top
+  rows or a closed same-surface covariance formula.  Static W-mass algebra
+  transported by an uncertified source-to-Higgs Jacobian is also closed
+  negatively by
+  `outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json`.
 - **Scalar-LSZ model/FV/IR:** produce a strict Stieltjes/Pade
   moment-threshold-FV certificate, a same-surface contact-subtraction
   certificate, a scalar-denominator/analytic-continuation theorem, or a
@@ -88,10 +92,22 @@ The selected next positive non-chunk route is now same-source W/Z response:
 derive a same-source EW action/row authority or a closed top/W covariance
 theorem, otherwise keep W/Z rows as the next measurement-row target.
 
+## 2026-05-05 W/Z Source-Coordinate Transport Update
+
+The worklist now consumes
+`outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json`.  This closes
+the shortcut that tries to use static electroweak W-mass algebra as a W/Z
+source-response row by transporting the PR230 scalar source into the canonical
+Higgs radial coordinate without a same-surface Jacobian certificate.
+
+The same-source W/Z route remains open only through real matched rows or a
+strict same-surface theorem plus the required action, transport, W/Z mass-fit,
+coupling, sector-overlap, and canonical-Higgs certificates.
+
 ## Verification
 
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
 python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
-# SUMMARY: PASS=26 FAIL=0
+# SUMMARY: PASS=27 FAIL=0
 ```

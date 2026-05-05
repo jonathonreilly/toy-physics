@@ -1,0 +1,112 @@
+{
+  "actual_current_surface_status": "exact negative boundary / WZ source-coordinate transport shortcut rejected",
+  "bare_retained_allowed": false,
+  "blocked_requirements": [
+    "same-source EW action certificate",
+    "same-surface source-to-canonical-Higgs transport certificate",
+    "W/Z correlator mass-fit rows by source shift",
+    "same-source sector-overlap identity",
+    "canonical-Higgs identity certificate",
+    "matched top/W covariance or measured paired rows"
+  ],
+  "counterfamily": {
+    "fixed_quantities": [
+      "top_source_response",
+      "static_dM_W_dh",
+      "same source label",
+      "same static electroweak mass dictionary"
+    ],
+    "rows": [
+      {
+        "canonical_higgs_yukawa": 0.91,
+        "g2": 0.64,
+        "orthogonal_source_projection": 0.4,
+        "orthogonal_top_coupling": 0.9884397513308985,
+        "source_to_higgs_jacobian": 0.7,
+        "static_dM_W_dh": 0.32,
+        "top_over_w_source_response": 3.2589285714285716,
+        "top_source_response": 0.73,
+        "transported_dM_W_ds": 0.22399999999999998
+      },
+      {
+        "canonical_higgs_yukawa": 0.91,
+        "g2": 0.64,
+        "orthogonal_source_projection": 0.4,
+        "orthogonal_top_coupling": 0.3059397513308984,
+        "source_to_higgs_jacobian": 1.0,
+        "static_dM_W_dh": 0.32,
+        "top_over_w_source_response": 2.28125,
+        "top_source_response": 0.73,
+        "transported_dM_W_ds": 0.32
+      },
+      {
+        "canonical_higgs_yukawa": 0.91,
+        "g2": 0.64,
+        "orthogonal_source_projection": 0.4,
+        "orthogonal_top_coupling": -0.37656024866910165,
+        "source_to_higgs_jacobian": 1.3,
+        "static_dM_W_dh": 0.32,
+        "top_over_w_source_response": 1.754807692307692,
+        "top_source_response": 0.73,
+        "transported_dM_W_ds": 0.41600000000000004
+      }
+    ],
+    "varying_quantities": [
+      "source_to_higgs_jacobian",
+      "orthogonal_top_coupling",
+      "transported_dM_W_ds",
+      "top_over_w_source_response"
+    ]
+  },
+  "exact_next_action": "Supply a real same-source EW action and source-transport certificate, then W/Z correlator mass-fit rows; otherwise pursue measured matched top/W rows, source-Higgs rows after canonical-Higgs identity, Schur rows, or neutral-sector irreducibility.",
+  "fail_count": 0,
+  "future_transport_certificate": "outputs/yt_wz_source_coordinate_transport_certificate_2026-05-05.json",
+  "future_transport_certificate_present": false,
+  "future_transport_certificate_valid": false,
+  "future_wz_rows": "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
+  "future_wz_rows_present": false,
+  "parent_certificates": {
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
+    "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "same_source_w_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
+    "same_source_w_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
+    "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
+    "wz_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
+    "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
+    "wz_response_measurement_row_contract": "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json",
+    "wz_same_source_ew_action_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
+    "wz_same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json"
+  },
+  "parent_statuses": {
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "canonical_oh_premise_stretch": "exact negative boundary / same-surface O_H identity and normalization certificate not derivable from current PR230 primitives",
+    "same_source_sector_overlap": "exact negative boundary / same-source sector-overlap identity obstruction",
+    "same_source_w_decomposition": "exact-support / same-source W-response decomposition theorem; current rows absent",
+    "same_source_w_orthogonal_correction": "open / same-source W-response orthogonal-correction gate not passed",
+    "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
+    "wz_mass_fit_path_gate": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
+    "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
+    "wz_response_measurement_row_contract": "bounded-support / WZ response measurement-row contract gate",
+    "wz_same_source_ew_action_builder": "open / same-source EW action certificate absent",
+    "wz_same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface"
+  },
+  "pass_count": 20,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Static electroweak mass algebra does not determine W/Z source rows until a same-surface source-to-canonical-Higgs transport certificate and W/Z mass-fit rows are supplied.",
+  "strict_non_claims": [
+    "does not claim closure",
+    "does not write or synthesize W/Z measurement rows",
+    "does not treat static mass algebra as a source-response row",
+    "does not set the source-to-Higgs Jacobian by convention",
+    "does not use empirical selectors or user-listed shortcut authorities"
+  ],
+  "transport_certificate_validation": {
+    "failed_checks": [
+      "source-coordinate transport certificate absent"
+    ],
+    "present": false,
+    "valid": false
+  },
+  "wz_source_coordinate_transport_no_go_passed": true
+}
