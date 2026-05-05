@@ -1,0 +1,593 @@
+{
+  "actual_current_surface_status": "exact negative boundary / cross-lane O_H authority audit",
+  "bare_retained_allowed": false,
+  "candidate_surfaces": [
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "O_h here names a cubic source class, not the electroweak Higgs radial operator O_H",
+        "surface is a static conformal gravity shell, not PR230 top/source-Higgs",
+        "no PR230 source coordinate, canonical Higgs LSZ normalization, or C_sH/C_HH rows"
+      ],
+      "classification": "cross-lane gravity O_h shell-boundary action",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": false,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": true,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "gravity_oh_schur_boundary_action",
+      "lane": "restricted strong-field gravity",
+      "path": "docs/OH_SCHUR_BOUNDARY_ACTION_NOTE.md",
+      "positive_reuse": "Schur-complement boundary-action method as analogy only",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "O_h is the exact local gravity source class, not O_H",
+        "works on a static conformal bridge surface rather than a dynamic EW gauge-Higgs surface",
+        "does not define a top-sector canonical-Higgs source overlap"
+      ],
+      "classification": "cross-lane static gravity O_h lift",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": false,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": true,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "gravity_oh_static_constraint_lift",
+      "lane": "restricted strong-field gravity",
+      "path": "docs/OH_STATIC_CONSTRAINT_LIFT_NOTE.md",
+      "positive_reuse": "exact local lift method as analogy only",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "Schur boundary bridge is gravitational support, not top Yukawa source-Higgs identity",
+        "no PR230 operator certificate or source-Higgs pole residues"
+      ],
+      "classification": "cross-lane gravity bridge class",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": false,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": true,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "gravity_star_supported_bridge",
+      "lane": "restricted strong-field gravity",
+      "path": "docs/STAR_SUPPORTED_BRIDGE_CLASS_NOTE.md",
+      "positive_reuse": "boundary/support vocabulary only",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "concerns tensor probes of scalar Schur data, not canonical EW Higgs",
+        "no PR230 C_sH/C_HH or O_sp/O_H identity"
+      ],
+      "classification": "cross-lane tensor-source support",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": false,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": true,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "tensor_source_map_eta",
+      "lane": "gravity/tensor source support",
+      "path": "docs/TENSOR_SOURCE_MAP_ETA_NOTE.md",
+      "positive_reuse": "tensor source-map analogy only",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "matches tensor/scalar boundary data, not top/source-Higgs pole data",
+        "no same-surface top-sector Higgs radial certificate"
+      ],
+      "classification": "cross-lane tensor matching support",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": true,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": true,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "tensor_matching_completion",
+      "lane": "gravity/tensor matching support",
+      "path": "docs/TENSOR_MATCHING_COMPLETION_THEOREM_NOTE.md",
+      "positive_reuse": "matching discipline analogy only",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "explicitly separate from the Yukawa/top lane and inherits the YT residual budget",
+        "does not supply a PR230 source coordinate or O_H identity/normalization certificate",
+        "does not contain production C_sH/C_HH pole residues"
+      ],
+      "classification": "Higgs quantitative summary with inherited YT residual",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": false,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": false,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": true
+      },
+      "id": "higgs_vacuum_explicit_systematic",
+      "lane": "Higgs/vacuum quantitative lane",
+      "path": "docs/HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md",
+      "positive_reuse": "Higgs-sector RGE and vacuum-stability context",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "does not derive PR230 source-to-canonical-Higgs overlap",
+        "does not produce an operator certificate accepted by the O_H gate"
+      ],
+      "classification": "derived Higgs-mass result, not O_H authority",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": true,
+        "mentions_cl3_z3": false,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": false,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "higgs_mass_derived",
+      "lane": "Higgs mass quantitative lane",
+      "path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
+      "positive_reuse": "Higgs-sector context after the top/YT bridge exists",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "mechanism support is downstream of having a canonical Higgs field",
+        "does not attach the PR230 scalar source to the canonical radial pole"
+      ],
+      "classification": "mechanism-level Higgs support",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": false,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": false,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "higgs_mechanism",
+      "lane": "Higgs mechanism support",
+      "path": "docs/HIGGS_MECHANISM_NOTE.md",
+      "positive_reuse": "qualitative Higgs-mechanism context",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "concerns PMNS left-handed diagonalizers and right-handed charged-lepton relabeling",
+        "does not define a PR230 top-sector canonical-Higgs radial operator",
+        "does not provide source-Higgs pole residues"
+      ],
+      "classification": "PMNS gauge-redundancy theorem for Higgs Z3 charge",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": true,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": false,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "higgs_z3_charge_pmns_gauge_redundancy",
+      "lane": "PMNS/charged-lepton support",
+      "path": "docs/HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md",
+      "positive_reuse": "single-Higgs charge-gauge redundancy in lepton observables",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "leaves Yukawa coefficients and source overlap free",
+        "does not identify the PR230 scalar source with canonical H"
+      ],
+      "classification": "gauge monomial selection after H is supplied",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": false,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": false,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": true
+      },
+      "id": "sm_one_higgs_yukawa_gauge_selection",
+      "lane": "SM one-Higgs operator selection",
+      "path": "docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md",
+      "positive_reuse": "operator-pattern support once O_H is independently available",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "starts from a supplied Higgs doublet/vacuum rather than deriving it from PR230 source data",
+        "cannot serve as an O_sp/O_H identity or source-Higgs purity certificate"
+      ],
+      "classification": "EW mass dictionary after a canonical Higgs is supplied",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": false,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": false,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": true
+      },
+      "id": "ew_higgs_gauge_mass_diagonalization",
+      "lane": "EW gauge-mass algebra",
+      "path": "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md",
+      "positive_reuse": "W/Z response dictionary after a real O_H/EW action certificate",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "isotropy does not select which scalar direction is the canonical Higgs radial pole",
+        "does not provide source-Higgs C_sH/C_HH rows or canonical LSZ normalization"
+      ],
+      "classification": "exact taste-block isotropy support",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": true,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": false,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "taste_scalar_isotropy",
+      "lane": "Cl(3)/Z3 scalar/taste support",
+      "path": "docs/TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md",
+      "positive_reuse": "framework-native scalar/taste isotropy support",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "classifies charged-lepton Yukawa textures and residual freedom",
+        "does not attach PR230 scalar source to a canonical Higgs pole"
+      ],
+      "classification": "lepton texture reduction, not top-sector O_H certificate",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": false,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": true,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "charged_lepton_two_higgs_canonical_reduction",
+      "lane": "charged-lepton two-Higgs reduction",
+      "path": "docs/CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md",
+      "positive_reuse": "two-Higgs support-counting analogy only",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "works on neutrino support textures, not PR230 top/source-Higgs response",
+        "does not provide O_H identity/normalization or source-Higgs rows"
+      ],
+      "classification": "neutrino texture reduction, not top-sector O_H certificate",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": false,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": true,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "neutrino_dirac_two_higgs_canonical_reduction",
+      "lane": "neutrino two-Higgs reduction",
+      "path": "docs/NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md",
+      "positive_reuse": "two-Higgs support-counting analogy only",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "selects a minimal local neutrino escape class once DM CP support is required",
+        "does not derive a top-sector canonical Higgs radial operator"
+      ],
+      "classification": "DM-side two-Higgs minimality support",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": false,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": true,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "dm_neutrino_two_higgs_minimality",
+      "lane": "DM/neutrino route selection",
+      "path": "docs/DM_NEUTRINO_TWO_HIGGS_MINIMALITY_THEOREM_NOTE_2026-04-15.md",
+      "positive_reuse": "route-selection logic for multi-Higgs lepton lanes",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "right-Gram bridge is in the DM/neutrino lane, not the PR230 top source-Higgs lane",
+        "does not involve PR230 C_sH/C_HH pole residues"
+      ],
+      "classification": "right-Gram bridge for neutrino two-Higgs lane",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": false,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": true,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "dm_neutrino_two_higgs_right_gram_bridge",
+      "lane": "DM/neutrino right-Gram support",
+      "path": "docs/DM_NEUTRINO_TWO_HIGGS_RIGHT_GRAM_BRIDGE_NOTE_2026-04-15.md",
+      "positive_reuse": "Gram-matrix proof style analogy only",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "O_h is the cubic point group in a Koide chart test, not electroweak O_H",
+        "the result is a no-go and cannot be an O_H certificate"
+      ],
+      "classification": "Koide O_h covariance no-go",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": false,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": true,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "koide_q23_oh_covariance_no_go",
+      "lane": "Koide support/no-go",
+      "path": "docs/KOIDE_Q23_OH_COVARIANCE_NOGO_NOTE_2026-04-22.md",
+      "positive_reuse": "negative symmetry-covariance lesson only",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "Koide scalar selector context is outside PR230",
+        "does not supply same-surface top/Higgs pole identity"
+      ],
+      "classification": "Koide scalar potential support",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": false,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": false,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "koide_z3_scalar_potential_support",
+      "lane": "Koide scalar support",
+      "path": "docs/KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md",
+      "positive_reuse": "scalar-potential support analogy only",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_required": {
+        "operator_identity_normalization": false,
+        "pole_residue_rows": false,
+        "same_pr230_surface": false,
+        "top_source_higgs_surface": false
+      },
+      "blocking_reasons": [
+        "obstruction theorem is not a constructive O_H identity",
+        "Koide source domain is not the PR230 top/source-Higgs surface"
+      ],
+      "classification": "Koide one-scalar obstruction",
+      "hints": {
+        "file_present": true,
+        "mentions_canonical_higgs": false,
+        "mentions_cl3_z3": true,
+        "mentions_lsz_normalization": false,
+        "mentions_oh_token": false,
+        "mentions_pr230": false,
+        "mentions_source_coordinate": false,
+        "mentions_source_higgs_rows": false,
+        "mentions_top_yukawa": false
+      },
+      "id": "koide_one_scalar_obstruction",
+      "lane": "Koide scalar obstruction",
+      "path": "docs/KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md",
+      "positive_reuse": "negative scalar-selection analogy only",
+      "usable_as_pr230_oh_certificate": false
+    }
+  ],
+  "cross_lane_oh_authority_audit_passed": true,
+  "exact_next_action": "Continue with a real PR230 same-surface O_H certificate, source-Higgs C_sH/C_HH production rows plus Gram purity, W/Z response rows with identity certificates, Schur A/B/C rows, or a neutral-sector irreducibility theorem.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "canonical_higgs_certificate_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "canonical_higgs_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
+    "canonical_higgs_repo_authority": "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json",
+    "canonical_higgs_semantic_firewall": "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
+    "fms_oh_construction_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
+    "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json"
+  },
+  "pass_count": 13,
+  "positive_reuse": [
+    "gravity Schur/Feshbach tools can inspire future row/certificate construction but are cross-lane",
+    "EW gauge-mass and SM one-Higgs notes can be used after a canonical O_H is independently supplied",
+    "taste-scalar isotropy remains scalar/taste support, not source-Higgs identity",
+    "lepton/DM two-Higgs reductions can inform multi-Higgs route selection, not PR230 closure"
+  ],
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No adjacent cross-lane O_h/O_H/Higgs artifact satisfies the PR230 canonical-Higgs certificate surface.",
+  "repo_cross_lane_authority_found": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not import gravity O_h shell classes as electroweak O_H",
+    "does not import lepton/DM two-Higgs reductions as top-sector O_H",
+    "does not use H_unit, yt_ward_identity, alpha_LM, plaquette, u0, or observed target values",
+    "does not set kappa_s = 1, cos(theta) = 1, c2 = 1, or Z_match = 1"
+  ],
+  "usable_candidates": [],
+  "verdict": "Adjacent O_h/O_H/Higgs/two-Higgs/Schur artifacts do not supply the missing PR230 same-surface canonical-Higgs radial operator certificate.  Gravity O_h notes concern static shell source classes; lepton/DM two-Higgs notes classify flavor textures; EW and SM one-Higgs notes assume a canonical Higgs after it is supplied; Higgs-mass/vacuum notes inherit the top/YT residual; Koide O_h notes are no-go/support surfaces in another lane.  All may remain framework-native context, but none gives the PR230 O_sp/O_H identity, canonical LSZ normalization, or C_sH/C_HH pole residues."
+}

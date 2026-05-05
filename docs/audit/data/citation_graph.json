@@ -18525,7 +18525,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T00:30:46.892084+00:00",
+  "generated_at": "2026-05-05T00:52:55.551940+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39607,6 +39607,16 @@
       "runner_path": "scripts/frontier_yt_constructive_uv_bridge.py",
       "title": "Constructive UV-Localized Bridge Class for `y_t`"
     },
+    "yt_cross_lane_oh_authority_audit_note_2026-05-05": {
+      "claim_id": "yt_cross_lane_oh_authority_audit_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / cross-lane `O_H` authority audit",
+      "deps": [],
+      "note_hash": "e7202282ea61698b9a47ccbf4ddbf25d417862e1f2a47806629bf20dce6ce065",
+      "path": "docs/YT_CROSS_LANE_OH_AUTHORITY_AUDIT_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_cross_lane_oh_authority_audit.py",
+      "title": "PR230 Cross-Lane `O_H` Authority Audit"
+    },
     "yt_d17_source_pole_identity_closure_attempt_note_2026-05-02": {
       "claim_id": "yt_d17_source_pole_identity_closure_attempt_note_2026-05-02",
       "current_status": "unknown",
@@ -39707,6 +39717,16 @@
       "path": "docs/YT_EFT_BRIDGE_THEOREM.md",
       "runner_path": "scripts/frontier_yt_eft_bridge.py",
       "title": "y_t EFT Bridge Theorem: Backward Ward Boundary Transfer at `v`"
+    },
+    "yt_electroweak_g2_certificate_builder_note_2026-05-05": {
+      "claim_id": "yt_electroweak_g2_certificate_builder_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "e8c8d06e2a8bb6984ddc3e14d6f095b8650880ba2e6e8946488f59f628c4c2ff",
+      "path": "docs/YT_ELECTROWEAK_G2_CERTIFICATE_BUILDER_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_electroweak_g2_certificate_builder.py",
+      "title": "PR #230 Electroweak g2 Certificate Builder Gate"
     },
     "yt_ew_color_projection_theorem": {
       "claim_id": "yt_ew_color_projection_theorem",
@@ -42809,6 +42829,16 @@
       "runner_path": "scripts/frontier_yt_wz_g2_authority_firewall.py",
       "title": "PR #230 W/Z g2 Authority Firewall"
     },
+    "yt_wz_g2_response_self_normalization_no_go_note_2026-05-05": {
+      "claim_id": "yt_wz_g2_response_self_normalization_no_go_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": null,
+      "deps": [],
+      "note_hash": "0545f9a6037cfb20e4996b6817ad478cfb79ba405960aca3ff5a5cfabcad18a7",
+      "path": "docs/YT_WZ_G2_RESPONSE_SELF_NORMALIZATION_NO_GO_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_wz_g2_response_self_normalization_no_go.py",
+      "title": "PR #230 W/Z g2 Response Self-Normalization No-Go"
+    },
     "yt_wz_mass_fit_response_row_builder_note_2026-05-04": {
       "claim_id": "yt_wz_mass_fit_response_row_builder_note_2026-05-04",
       "current_status": "open",
@@ -44130,12 +44160,14 @@
     "yt_complete_source_spectrum_identity_no_go_note_2026-05-02",
     "yt_confinement_gap_threshold_import_audit_note_2026-05-02",
     "yt_constructive_uv_bridge_note",
+    "yt_cross_lane_oh_authority_audit_note_2026-05-05",
     "yt_d17_source_pole_identity_closure_attempt_note_2026-05-02",
     "yt_delta_perp_tomography_correction_builder_note_2026-05-04",
     "yt_direct_correlator_momentum_harness_extension_note_2026-05-01",
     "yt_direct_measurement_scale_requirements_note_2026-05-01",
     "yt_effective_mass_plateau_residue_no_go_note_2026-05-02",
     "yt_effective_potential_hessian_source_overlap_no_go_note_2026-05-02",
+    "yt_electroweak_g2_certificate_builder_note_2026-05-05",
     "yt_ew_coupling_bridge_note",
     "yt_exact_coarse_grained_bridge_operator_note",
     "yt_exact_hessian_selector_uniqueness_note",
@@ -44388,6 +44420,7 @@
     "yt_ward_ratio_stationarity_no_go_note_2026-05-01",
     "yt_wz_correlator_mass_fit_path_gate_note_2026-05-04",
     "yt_wz_g2_authority_firewall_note_2026-05-05",
+    "yt_wz_g2_response_self_normalization_no_go_note_2026-05-05",
     "yt_wz_mass_fit_response_row_builder_note_2026-05-04",
     "yt_wz_response_harness_absence_guard_note_2026-05-02",
     "yt_wz_response_harness_implementation_plan_note_2026-05-04",
@@ -44405,17 +44438,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4631,
-    "leaf_count": 979,
-    "node_count": 1931,
-    "root_count": 1445,
-    "runners_with_path": 1459,
+    "leaf_count": 982,
+    "node_count": 1934,
+    "root_count": 1448,
+    "runners_with_path": 1462,
     "status_counts": {
       "bounded": 541,
       "open": 97,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 418,
-      "unknown": 501
+      "unknown": 504
     }
   }
 }

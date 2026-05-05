@@ -191,6 +191,7 @@ def main() -> int:
         "canonical_higgs_operator_semantic_firewall": "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
         "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
         "canonical_higgs_repo_authority_audit": "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json",
+        "cross_lane_oh_authority_audit": "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
         "sm_one_higgs_oh_import_boundary": "outputs/yt_sm_one_higgs_oh_import_boundary_2026-05-03.json",
         "hunit_canonical_higgs_operator_candidate_gate": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
         "source_higgs_harness_absence_guard": "outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json",
@@ -1382,6 +1383,22 @@ def main() -> int:
         )
         is True
     )
+    cross_lane_oh_authority_audit_blocks_adjacent_imports = (
+        "cross-lane O_H authority audit"
+        in certificates["cross_lane_oh_authority_audit"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["cross_lane_oh_authority_audit"].get("proposal_allowed")
+        is False
+        and certificates["cross_lane_oh_authority_audit"].get(
+            "repo_cross_lane_authority_found"
+        )
+        is False
+        and certificates["cross_lane_oh_authority_audit"].get(
+            "cross_lane_oh_authority_audit_passed"
+        )
+        is True
+    )
     sm_one_higgs_oh_import_boundary_blocks_shortcut = (
         "SM one-Higgs gauge selection is not PR230 O_H identity"
         in certificates["sm_one_higgs_oh_import_boundary"].get(
@@ -2435,6 +2452,11 @@ def main() -> int:
         certificates["canonical_higgs_repo_authority_audit"].get("actual_current_surface_status", ""),
     )
     report(
+        "cross-lane-oh-authority-audit-blocks-adjacent-imports",
+        cross_lane_oh_authority_audit_blocks_adjacent_imports,
+        certificates["cross_lane_oh_authority_audit"].get("actual_current_surface_status", ""),
+    )
+    report(
         "sm-one-higgs-oh-import-boundary-blocks-shortcut",
         sm_one_higgs_oh_import_boundary_blocks_shortcut,
         certificates["sm_one_higgs_oh_import_boundary"].get("actual_current_surface_status", ""),
@@ -2930,6 +2952,12 @@ def main() -> int:
             "legacy substitute: H_unit is a named D17/substrate bilinear, but "
             "without pole-purity and canonical-normalization certificates it "
             "is not O_H and re-enters the forbidden matrix-element readout.  "
+            "The cross-lane O_H authority audit blocks another hidden-import "
+            "shortcut: gravity O_h shell notes, lepton/DM two-Higgs reductions, "
+            "Higgs mass/vacuum summaries, EW one-Higgs algebra, and Koide O_h "
+            "support/no-go surfaces are framework-native context, but none "
+            "supplies the PR230 same-surface O_H identity, canonical LSZ "
+            "normalization, or C_sH/C_HH pole residues.  "
             "The source-Higgs harness absence guard now records missing "
             "O_H/C_sH/C_HH rows directly in future production certificates; "
             "that guard is an instrumentation firewall, not evidence.  "

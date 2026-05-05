@@ -380,6 +380,9 @@ def main() -> int:
         "canonical_higgs_repo_authority_audit": load(
             "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json"
         ),
+        "cross_lane_oh_authority_audit": load(
+            "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json"
+        ),
         "sm_one_higgs_oh_import_boundary": load(
             "outputs/yt_sm_one_higgs_oh_import_boundary_2026-05-03.json"
         ),
@@ -1575,6 +1578,14 @@ def main() -> int:
         and certificates["canonical_higgs_repo_authority_audit"].get("repo_authority_found") is False
         and certificates["canonical_higgs_repo_authority_audit"].get("exact_negative_boundary_passed") is True,
         statuses["canonical_higgs_repo_authority_audit"],
+    )
+    report(
+        "cross-lane-oh-authority-audit-blocks-adjacent-imports",
+        "cross-lane O_H authority audit" in str(statuses["cross_lane_oh_authority_audit"])
+        and certificates["cross_lane_oh_authority_audit"].get("proposal_allowed") is False
+        and certificates["cross_lane_oh_authority_audit"].get("repo_cross_lane_authority_found") is False
+        and certificates["cross_lane_oh_authority_audit"].get("cross_lane_oh_authority_audit_passed") is True,
+        statuses["cross_lane_oh_authority_audit"],
     )
     report(
         "sm-one-higgs-oh-import-boundary-blocks-shortcut",

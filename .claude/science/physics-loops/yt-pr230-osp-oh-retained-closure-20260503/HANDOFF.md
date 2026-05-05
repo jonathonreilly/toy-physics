@@ -2321,3 +2321,40 @@ No retained/proposed-retained wording is authorized.  The artifact uses no
 observed W/Z/top/`y_t`/`g_2` selectors, no `H_unit`/Ward authority, no
 `alpha_LM`/plaquette/u0, and no by-fiat `kappa_s`, `c2`, `Z_match`, or
 `cos(theta)`.
+
+## 2026-05-05 Cross-Lane O_H Authority Audit
+
+The 12h campaign was relaunched on the non-chunk `O_H` blocker.  I converted
+the "maybe an adjacent Higgs/O_h proof already exists" question into an
+executable audit over gravity `O_h`, lepton/DM two-Higgs, Higgs
+mass/vacuum, EW one-Higgs, taste scalar, and Koide scalar surfaces.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_cross_lane_oh_authority_audit.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=30 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=179 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=205 FAIL=0
+```
+
+Result: exact negative boundary.  The surveyed artifacts are
+framework-native support/no-go/context surfaces, but none supplies the PR230
+same-surface `O_H` identity, canonical LSZ normalization, or `C_sH/C_HH` pole
+residues.  The route cannot import gravity `O_h` shell classes, lepton/DM
+two-Higgs texture reductions, Higgs mass/vacuum summaries, EW one-Higgs
+algebra, or Koide `O_h` support/no-go notes as the missing top-sector
+canonical-Higgs certificate.
+
+Next exact action on the non-chunk lane: pursue only a real identity route:
+same-surface EW gauge-Higgs/`O_H` certificate plus source-Higgs rows, W/Z
+response rows with strict identity/covariance certificates and non-observed
+`g_2`, Schur `A/B/C` rows, or a direct neutral-sector irreducibility theorem.
+The running chunk worker remains separate.

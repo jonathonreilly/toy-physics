@@ -174,3 +174,18 @@ label and 3+derived-time locality do not imply top/W independence by
 themselves.  A future positive route needs measured matched top/W rows or a
 strict same-surface product-measure, conditional-independence,
 deterministic-response, or closed covariance theorem.
+
+Completed in the cross-lane `O_H` authority continuation:
+
+- `scripts/frontier_yt_cross_lane_oh_authority_audit.py`
+- `docs/YT_CROSS_LANE_OH_AUTHORITY_AUDIT_NOTE_2026-05-05.md`
+- `outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
+This closes the adjacent-artifact shortcut negatively: gravity `O_h` shell
+notes, lepton/DM two-Higgs reductions, Higgs mass/vacuum summaries, EW
+one-Higgs algebra, and Koide `O_h` support/no-go surfaces are
+framework-native context but not PR230 `O_H` authority.  A future positive
+route still needs a real same-surface `O_H` certificate, source-Higgs
+`C_sH/C_HH` rows, W/Z response rows with identity certificates, Schur rows, or
+neutral-sector irreducibility.

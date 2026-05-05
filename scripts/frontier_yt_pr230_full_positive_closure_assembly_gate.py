@@ -62,6 +62,7 @@ PARENTS = {
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
     "canonical_higgs_operator": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "canonical_higgs_semantic_firewall": "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
+    "cross_lane_oh_authority_audit": "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
     "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
     "source_pole_purity": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json",
     "neutral_scalar_irreducibility": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
@@ -161,6 +162,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
             or truth(certs["source_higgs_postprocess"], "osp_higgs_gram_purity_gate_passed"),
             "blocked_by": [
                 "same-surface O_H certificate absent",
+                "cross-lane O_h/O_H/Higgs artifacts audited as non-authority for PR230",
                 "production C_sH/C_HH pole residues absent",
                 "Gram-purity postprocessor awaiting production certificate",
             ],
@@ -169,6 +171,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["source_higgs_gram"],
                 PARENTS["source_higgs_postprocess"],
                 PARENTS["canonical_higgs_semantic_firewall"],
+                PARENTS["cross_lane_oh_authority_audit"],
             ],
         },
         "same_source_wz_response": {
@@ -297,6 +300,7 @@ def main() -> int:
     source_overlap_blocks = (
         any_bridge_passes is False
         and certs["canonical_higgs_semantic_firewall"].get("proposal_allowed") is False
+        and certs["cross_lane_oh_authority_audit"].get("proposal_allowed") is False
         and certs["source_pole_mixing"].get("proposal_allowed") is False
         and certs["source_pole_purity"].get("proposal_allowed") is False
         and certs["canonical_higgs_operator"].get("proposal_allowed") is False
@@ -350,6 +354,13 @@ def main() -> int:
         "semantic firewall passed" in statuses["canonical_higgs_semantic_firewall"]
         and certs["canonical_higgs_semantic_firewall"].get("proposal_allowed") is False,
         statuses["canonical_higgs_semantic_firewall"],
+    )
+    report(
+        "cross-lane-oh-authority-audit-blocks-adjacent-imports",
+        "cross-lane O_H authority audit" in statuses["cross_lane_oh_authority_audit"]
+        and certs["cross_lane_oh_authority_audit"].get("proposal_allowed") is False
+        and certs["cross_lane_oh_authority_audit"].get("repo_cross_lane_authority_found") is False,
+        statuses["cross_lane_oh_authority_audit"],
     )
     report(
         "model-class-semantic-firewall-support-only",

@@ -78,6 +78,11 @@ Open imports:
   route needs measured matched rows or a strict product-measure,
   conditional-independence, deterministic-response, or closed covariance
   theorem;
+- cross-lane `O_h/O_H` authority is closed negatively: gravity `O_h` shell
+  notes, lepton/DM two-Higgs reductions, Higgs mass/vacuum summaries, EW
+  one-Higgs algebra, and Koide `O_h` support/no-go surfaces are
+  framework-native context, but none supplies the PR230 same-surface `O_H`
+  identity, canonical LSZ normalization, or `C_sH/C_HH` pole residues;
 - positivity-improving/rank-one route is conditional support only; the direct
   neutral-sector irreducibility theorem is blocked on the current surface;
 - scalar denominator / K-prime route is exact support only; same-surface Schur

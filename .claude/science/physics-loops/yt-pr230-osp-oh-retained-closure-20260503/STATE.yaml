@@ -7,14 +7,17 @@ target_status: retained-positive-closure
 actual_current_surface_status: exact-negative-boundary
 active_residual: "same-source top-response identity certificate, matched top/W covariance, strict delta_perp tomography/null/purity authority, or O_sp-O_H identity"
 latest_checkpoint:
-  utc: "2026-05-05T02:55:00Z"
-  block: 52
-  artifact: "top/W factorization-independence gate"
-  status: "exact negative boundary; Cl(3)/Z^3 same-source bookkeeping and 3+derived-time locality do not imply top/W independence on current PR230 surface"
-  result: "factorization gate PASS=12 FAIL=0; scout PASS=12 FAIL=0; assembly PASS=29 FAIL=0; retained-route PASS=178 FAIL=0; campaign PASS=204 FAIL=0"
-  claim_boundary: "no production matched top/W response rows; no production matched covariance certificate; no strict product-measure/conditional-independence/deterministic-response theorem for top/W response; no production same-source top-response identity certificate; no production top-response certificate; no W/Z mass-fit rows; no g2 certificate; no final W/Z measurement row file; no physical y_t or retained/proposed-retained wording"
+  utc: "2026-05-05T00:46:52Z"
+  block: 53
+  artifact: "cross-lane O_H authority audit"
+  status: "exact negative boundary; adjacent O_h/O_H/Higgs/two-Higgs/Schur artifacts are framework-native support/no-go/context surfaces, but none is the PR230 same-surface canonical-Higgs O_H certificate"
+  result: "cross-lane O_H audit PASS=13 FAIL=0; assembly PASS=32 FAIL=0; retained-route PASS=181 FAIL=0; campaign PASS=207 FAIL=0"
+  claim_boundary: "no adjacent gravity O_h, lepton/DM two-Higgs, Higgs mass/vacuum, EW one-Higgs, or Koide O_h artifact supplies PR230 O_sp/O_H identity, canonical LSZ normalization, or C_sH/C_HH pole residues; no physical y_t or retained/proposed-retained wording"
   live_compute: "chunk worker check-in: polefit8x8 chunks019-024 are still active in the other worker namespace; this checkpoint does not package chunk artifacts"
   checkpoint_files:
+    - scripts/frontier_yt_cross_lane_oh_authority_audit.py
+    - docs/YT_CROSS_LANE_OH_AUTHORITY_AUDIT_NOTE_2026-05-05.md
+    - outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json
     - scripts/frontier_yt_top_wz_covariance_marginal_derivation_no_go.py
     - docs/YT_TOP_WZ_COVARIANCE_MARGINAL_DERIVATION_NO_GO_NOTE_2026-05-05.md
     - outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json
@@ -69,7 +72,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 52
+block: 53
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -604,18 +607,14 @@ current_result: >
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
-  Monitor the polefit8x8 wave orchestrator.  When chunks complete, let the
-  orchestrator launch the next missing homogeneous eight-mode/x8 chunks and
-  rerun the polefit8x8 combiner, diagnostic postprocessor, retained-route, and
-  campaign certificates.  Do not mix polefit8x8 chunks with the completed
-  four-mode/x16 L12 ensemble as one physical readout.
-  Only take routes that can add a real new same-surface row/theorem: a new EW
-  gauge-Higgs/O_H certificate plus C_sH/C_HH pole residues, a genuine
-  same-source EW action plus W/Z correlator mass-fit rows, strict
+  Continue the non-chunk physics-loop on real identity routes only.  The
+  cross-lane O_H audit now blocks importing gravity O_h, lepton/DM two-Higgs,
+  Higgs mass/vacuum, EW one-Higgs, or Koide O_h surfaces as the PR230 O_H
+  certificate.  The next non-chunk positive move must be a real same-surface
+  EW gauge-Higgs/O_H certificate plus C_sH/C_HH pole residues, a genuine
+  same-source EW action plus W/Z correlator mass-fit rows with strict
   same-source top-response identity and matched covariance certificates,
-  non-observed g2, and response rows, Schur A/B/C kernel rows, or a direct
-  proof of the missing neutral-sector irreducibility premise.  The identity
-  builder now shows the fastest positive path is not another wrapper: it is
-  one real identity route, preferably source-Higgs Gram purity or W/Z response
-  with sector-overlap.  Do not continue source-only neutral-rank loops without
-  a new authority candidate.
+  non-observed g2 and response rows, Schur A/B/C kernel rows, or a direct
+  proof of neutral-sector irreducibility.  The chunk worker remains separate:
+  when chunk outputs complete, rerun the appropriate chunk and aggregate gates
+  without mixing streams as one physical readout.

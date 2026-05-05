@@ -18,3 +18,4 @@
 | External FMS/GEVP/FH/Nielsen literature as direct `O_sp/O_H` proof | blocked / context only | `YT_OSP_OH_LITERATURE_BRIDGE_NOTE_2026-05-04.md` |
 | FMS-style `O_H` certificate from the current PR230 harness | blocked on current surface | `YT_FMS_OH_CERTIFICATE_CONSTRUCTION_ATTEMPT_NOTE_2026-05-04.md` |
 | Neutral-scalar irreducibility authority already present in repo | absent on current surface | `YT_NEUTRAL_SCALAR_IRREDUCIBILITY_AUTHORITY_AUDIT_NOTE_2026-05-04.md` |
+| Adjacent gravity/lepton/DM/Higgs/Koide `O_h/O_H` surfaces as PR230 `O_H` authority | closed negatively | `YT_CROSS_LANE_OH_AUTHORITY_AUDIT_NOTE_2026-05-05.md` |
