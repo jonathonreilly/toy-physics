@@ -174,6 +174,7 @@ def main() -> int:
         "pr230_nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle28_post_cycle27_main_audit_status_drift_guard_2026-05-05.json",
         "pr230_nonchunk_cycle29_post_cycle28_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle29_post_cycle28_main_audit_status_drift_guard_2026-05-05.json",
         "pr230_nonchunk_cycle30_post_cycle29_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle30_post_cycle29_main_audit_status_drift_guard_2026-05-05.json",
+        "pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard": "outputs/yt_pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard_2026-05-05.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
@@ -2423,6 +2424,24 @@ def main() -> int:
         ].get("dramatic_step_gate", {}).get("passed")
         is False
     )
+    pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard_blocks = (
+        "cycle-31 post-cycle-30 main-audit-status-drift reopen guard"
+        in certificates[
+            "pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard"
+        ].get("actual_current_surface_status", "")
+        and certificates[
+            "pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard"
+        ].get("cycle31_post_cycle30_main_audit_status_drift_guard_passed")
+        is True
+        and certificates[
+            "pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard"
+        ].get("dramatic_step_gate", {}).get("passed")
+        is False
+    )
     interacting_kinetic_still_open = (
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status")
         == "bounded-support / interacting kinetic background sensitivity"
@@ -3576,6 +3595,13 @@ def main() -> int:
         ].get("actual_current_surface_status", ""),
     )
     report(
+        "pr230-nonchunk-cycle31-post-cycle30-main-audit-status-drift-guard-blocks-main-drift-reopen",
+        pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard_blocks,
+        certificates[
+            "pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard"
+        ].get("actual_current_surface_status", ""),
+    )
+    report(
         "interacting-kinetic-route-still-needs-ensemble-or-theorem",
         interacting_kinetic_still_open,
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status", ""),
@@ -3982,6 +4008,9 @@ def main() -> int:
             "that origin/main advanced again only on audit/effective-status "
             "surfaces and still supplies no listed PR230 same-surface artifact.  "
             "The cycle-30 post-cycle-29 main-audit-status-drift guard records "
+            "that origin/main advanced again only on audit/effective-status "
+            "surfaces and still supplies no listed PR230 same-surface artifact.  "
+            "The cycle-31 post-cycle-30 main-audit-status-drift guard records "
             "that origin/main advanced again only on audit/effective-status "
             "surfaces and still supplies no listed PR230 same-surface artifact."
         ),

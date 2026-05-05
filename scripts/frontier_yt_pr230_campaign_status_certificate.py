@@ -223,6 +223,9 @@ def main() -> int:
         "pr230_nonchunk_cycle30_post_cycle29_main_audit_status_drift_guard": load(
             "outputs/yt_pr230_nonchunk_cycle30_post_cycle29_main_audit_status_drift_guard_2026-05-05.json"
         ),
+        "pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard": load(
+            "outputs/yt_pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -2788,6 +2791,24 @@ def main() -> int:
         is False,
         statuses["pr230_nonchunk_cycle30_post_cycle29_main_audit_status_drift_guard"],
     )
+    report(
+        "pr230-nonchunk-cycle31-post-cycle30-main-audit-status-drift-guard-recorded",
+        "cycle-31 post-cycle-30 main-audit-status-drift reopen guard"
+        in str(statuses["pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard"])
+        and certificates[
+            "pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard"
+        ].get("cycle31_post_cycle30_main_audit_status_drift_guard_passed")
+        is True
+        and certificates[
+            "pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard"
+        ].get("dramatic_step_gate", {}).get("passed")
+        is False,
+        statuses["pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard"],
+    )
 
     remaining_routes = [
         {
@@ -3222,6 +3243,9 @@ def main() -> int:
         "PR230 same-surface artifact.  The cycle-30 post-cycle-29 "
         "main-audit-status-drift guard records that origin/main advanced again "
         "only on audit/effective-status surfaces and still supplies no listed "
+        "PR230 same-surface artifact.  The cycle-31 post-cycle-30 "
+        "main-audit-status-drift guard records that origin/main advanced again "
+        "only on audit/effective-status surfaces and still supplies no listed "
         "PR230 same-surface artifact."
     )
     result["strict_non_claims"] = [
@@ -3240,6 +3264,7 @@ def main() -> int:
         "does not treat post-cycle-27 origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-28 origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-29 origin/main audit/effective-status drift as same-surface physics evidence",
+        "does not treat post-cycle-30 origin/main audit/effective-status drift as same-surface physics evidence",
     ]
     OUTPUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"\nWrote certificate: {OUTPUT.relative_to(ROOT)}")

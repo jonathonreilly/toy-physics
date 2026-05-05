@@ -1,5 +1,20 @@
 # Opportunity Queue
 
+Cycle-31 update: the post-cycle-30 main-audit-status-drift guard checks the
+only new resume fact after cycle 30.  `origin/main` advanced from
+`359439629a43d8774f4a91cbdc9549a566f6ed5c` to
+`905eed760dff0e6563f0be942f8183da8591fcff`, but the changed paths are still
+audit/effective-status surfaces only.  No listed PR230 same-surface row,
+certificate, or theorem exists or changed on the branch, remote PR branch, or
+`origin/main`.  All six worklist units remain blocked, no route family is
+executable, and aggregate gates still deny proposal authority.  The non-chunk
+scope remains stopped on this branch until a listed same-surface artifact
+exists as a parseable claim-status artifact on the target branch and the
+reopen-admissibility, worklist, exhaustion, intake, independent-route,
+cycle-16, cycle-17, cycle-18, cycle-19, cycle-20, cycle-21, cycle-22,
+cycle-23, cycle-24, cycle-25, cycle-26, cycle-27, cycle-28, cycle-29,
+cycle-30, cycle-31, assembly, retained-route, and campaign gates all rerun.
+
 Cycle-30 update: the post-cycle-29 main-audit-status-drift guard checks the
 only new resume fact after cycle 29.  `origin/main` advanced from
 `7c041f2cd55f0ed4816a85b9269df5ed46996255` to

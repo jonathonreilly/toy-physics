@@ -43,6 +43,13 @@ chunk-only completion: even perfect chunk data would still lack scalar LSZ
 model-class/FV/IR control, a canonical-Higgs/source-overlap bridge, matching
 authority, and retained-route authorization.
 
+2026-05-05 non-chunk cycle-31 update: the gate now also consumes
+`outputs/yt_pr230_nonchunk_cycle31_post_cycle30_main_audit_status_drift_guard_2026-05-05.json`.
+After cycle 30, `origin/main` advanced again by audit/effective-status drift
+only.  No listed PR230 same-surface artifact is present or changed for
+admissible reopen, all six non-chunk worklist units remain blocked, and the
+assembly gate remains open with `PASS=71 FAIL=0`.
+
 2026-05-05 chunk update: the separate polefit8x8 stream is now `36/63` chunks
 ready with `576/1008` saved configurations.  This improves bounded production
 support but does not change the assembly verdict: chunk-only completion still
