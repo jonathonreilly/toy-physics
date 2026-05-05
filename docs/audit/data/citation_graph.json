@@ -6285,6 +6285,10 @@
       "to": "gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19"
     },
     {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_positive_cone_order_witness_note_2026-04-17",
+      "to": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note"
+    },
+    {
       "from": "gauge_vacuum_plaquette_reduction_existence_theorem_note",
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
@@ -35088,6 +35092,17 @@
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py",
       "title": "Gauge-Vacuum Plaquette Scalar-Bridge Support"
     },
+    "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "f0cbd9b5960554583599ecc53aa53f5e7cdae5667c0045cacfad10bf05576622",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_COMPRESSED_RIM_FUNCTIONAL_UNIQUENESS_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_compressed_rim_functional_uniqueness.py",
+      "title": "Gauge-Vacuum Plaquette Compressed Rim-Functional Uniqueness"
+    },
     "gauge_vacuum_plaquette_connected_hierarchy_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
       "claim_type_author_hint": null,
@@ -35268,6 +35283,19 @@
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First Symmetric Three-Sample Minimal Positive Completion"
+    },
+    "gauge_vacuum_plaquette_first_symmetric_three_sample_positive_cone_order_witness_note_2026-04-17": {
+      "claim_id": "gauge_vacuum_plaquette_first_symmetric_three_sample_positive_cone_order_witness_note_2026-04-17",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [
+        "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note"
+      ],
+      "note_hash": "df796429375d1bc51add5ce104c4a794752c505ecf0c687ae97a4049ee33b040",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_POSITIVE_CONE_ORDER_WITNESS_NOTE_2026-04-17.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_positive_cone_order_witness_2026_04_17.py",
+      "title": "Gauge-Vacuum Plaquette First Symmetric Three-Sample Positive-Cone Order Witness"
     },
     "gauge_vacuum_plaquette_framework_point_underdetermination_note": {
       "claim_id": "gauge_vacuum_plaquette_framework_point_underdetermination_note",
@@ -53768,6 +53796,7 @@
     "gate_b_v6_nearfield_comparator_note",
     "gauge_scalar_temporal_completion_theorem_note",
     "gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03",
+    "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17",
     "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
     "gauge_vacuum_plaquette_constant_lift_obstruction_note",
     "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19",
@@ -54305,7 +54334,7 @@
       "bounded_theorem": 59,
       "meta": 8,
       "no_go": 7,
-      "none": 1715,
+      "none": 1717,
       "open_gate": 9,
       "positive_theorem": 74
     },
@@ -54313,14 +54342,14 @@
       "bounded_theorem": 557,
       "meta": 8,
       "no_go": 112,
-      "none": 457,
+      "none": 458,
       "open_gate": 115,
-      "positive_theorem": 623
+      "positive_theorem": 624
     },
-    "edge_count": 6366,
-    "leaf_count": 550,
-    "node_count": 1872,
-    "root_count": 895,
-    "runners_with_path": 1448
+    "edge_count": 6367,
+    "leaf_count": 552,
+    "node_count": 1874,
+    "root_count": 896,
+    "runners_with_path": 1450
   }
 }
