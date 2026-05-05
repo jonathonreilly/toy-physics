@@ -110,3 +110,11 @@ So it does not complete positive PMNS closure. It sharpens the missing object.
 ```bash
 python3 scripts/frontier_pmns_right_conjugacy_invariant_nogo.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [pmns_scalar_bridge_nonrealization_note](PMNS_SCALAR_BRIDGE_NONREALIZATION_NOTE.md)
+- [observable_principle_from_axiom_note](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)

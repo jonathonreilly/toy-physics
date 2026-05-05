@@ -108,3 +108,10 @@ RESIDUAL_Q=derive_physical_background_source_zero_equiv_Z_erasure
 RESIDUAL_SCALAR=derive_Q_background_zero_and_closed_APS_to_open_endpoint_functor
 RESIDUAL_DELTA=selected_line_endpoint_transition_tau_not_removed_by_closed_readout
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [observable_principle_from_axiom_note](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- [hierarchy_bosonic_bilinear_selector_note](HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md)

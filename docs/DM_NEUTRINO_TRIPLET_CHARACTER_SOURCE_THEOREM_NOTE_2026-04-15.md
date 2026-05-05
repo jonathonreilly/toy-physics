@@ -49,3 +49,9 @@ It only fixes the source-direction map:
 ```bash
 python3 scripts/frontier_dm_neutrino_triplet_character_source_theorem.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_neutrino_breaking_triplet_cp_theorem_note_2026-04-15](DM_NEUTRINO_BREAKING_TRIPLET_CP_THEOREM_NOTE_2026-04-15.md)

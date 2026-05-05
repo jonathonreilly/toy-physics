@@ -268,3 +268,11 @@ python3 scripts/frontier_higgs_z3_charge_pmns_gauge_redundancy_theorem.py
 ```
 
 Expected: `PASS = 73, FAIL = 0`.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [three_generation_observable_theorem_note](THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
+- [neutrino_dirac_z3_support_trichotomy_note](NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md)
+- [charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17](CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md)

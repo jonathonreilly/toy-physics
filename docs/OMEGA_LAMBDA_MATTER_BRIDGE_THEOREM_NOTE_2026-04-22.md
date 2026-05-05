@@ -145,3 +145,10 @@ Expected: all PASS (numerical + sympy).
 - `docs/DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md` — retained w = −1.
 - `docs/COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md` — cosmology scale identification synthesis.
 - Standard FRW cosmology references (Weinberg *Cosmology*, Dodelson *Modern Cosmology*).
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [cosmological_constant_spectral_gap_identity_theorem_note](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
+- [cosmology_scale_identification_and_reduction_note](COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md)

@@ -386,3 +386,12 @@ comparison can be reviewed by checking whether every route gives the same
 - a native derivation of `Omega_r,0`, `T_CMB`, recombination, or the sound
   horizon
 - any promotion of the bounded numerical cosmology package
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [cosmology_frw_kinematic_reduction_theorem_note_2026-04-24](COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md)
+- [omega_lambda_matter_bridge_theorem_note_2026-04-22](OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md)
+- [dark_energy_eos_retained_corollary_theorem_note](DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md)
+- [cosmological_constant_spectral_gap_identity_theorem_note](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)

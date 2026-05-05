@@ -369,3 +369,10 @@ PYTHONPATH=scripts python3 scripts/frontier_quark_bimodule_lo_shell_normalizatio
 Expected on this branch:
 
 - `frontier_quark_bimodule_lo_shell_normalization_theorem.py`: `PASS=10 FAIL=0`
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [ckm_atlas_axiom_closure_note](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
+- [quark_projector_parameter_audit_note_2026-04-19](QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md)

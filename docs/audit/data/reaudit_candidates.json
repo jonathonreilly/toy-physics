@@ -49,13 +49,13 @@
       "effective_status": "audited_conditional",
       "generated_order": 1,
       "improved_dependencies": [],
-      "load_bearing_score": 9.18,
+      "load_bearing_score": 9.276,
       "note_hash": "fead708294fd730677f896dbe4ba0f310904ca5dde3062ea8dc1f25fe2f749ef",
       "note_path": "docs/GRAVITOMAGNETIC_NOTE.md",
       "reraudit_after_claim_ids": [],
       "runner_path": "scripts/gravitomagnetic_portable.py",
       "snap_runner_hash": "55241b260ce5236dcc92b17c9c687bd7c04397b880e363dc17be91bc7125d469",
-      "transitive_descendants": 289
+      "transitive_descendants": 309
     }
   ],
   "total_candidates": 0,

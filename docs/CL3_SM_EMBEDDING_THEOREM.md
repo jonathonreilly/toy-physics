@@ -183,3 +183,10 @@ This note is the claim boundary for this reviewed algebraic support packet.
 It sharpens the existing matter / electroweak support layer on current `main`,
 but it does not replace [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md)
 or the accepted three-generation authority stack.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [native_gauge_closure_note](NATIVE_GAUGE_CLOSURE_NOTE.md)
+- [yt_explicit_systematic_budget_note](YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)

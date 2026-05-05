@@ -81,3 +81,10 @@ Both lattice and analytic predictions lie well below observational bounds.
 - BICEP/Keck Collaboration, *Improved Constraints on Primordial Gravitational Waves*, Phys. Rev. Lett. 127 (2021) 151301.
 - LiteBIRD Collaboration, *Probing Cosmic Inflation with the LiteBIRD Cosmic Microwave Background Polarization Survey*, PTEP 2023 (2023) 042F01.
 - CMB-S4 Collaboration, *CMB-S4: Forecasting Constraints on Primordial Gravitational Waves*, ApJ 926 (2022) 54.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [primordial_spectrum_note](PRIMORDIAL_SPECTRUM_NOTE.md)
+- [anomaly_forces_time_theorem](ANOMALY_FORCES_TIME_THEOREM.md)

@@ -88,3 +88,12 @@ It is a current-stack theorem only.
 ```bash
 python3 scripts/frontier_pmns_selector_current_stack_zero_law.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [pmns_selector_unique_amplitude_slot_note](PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md)
+- [pmns_sector_exchange_nonforcing_note](PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md)
+- [pmns_scalar_bridge_nonrealization_note](PMNS_SCALAR_BRIDGE_NONREALIZATION_NOTE.md)
+- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)

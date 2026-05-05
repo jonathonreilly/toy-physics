@@ -61,3 +61,18 @@ All identities verified by the runner are re-statements of retained content from
 - `docs/DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md`
 - `docs/NEUTRINO_MASS_DERIVED_NOTE.md`
 - `docs/KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md`
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [alpha_s_derived_note](ALPHA_S_DERIVED_NOTE.md)
+- [plaquette_self_consistency_note](PLAQUETTE_SELF_CONSISTENCY_NOTE.md)
+- [ckm_atlas_axiom_closure_note](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
+- [koide_selected_line_provenance_note_2026-04-20](KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md)
+- [pmns_selector_three_identity_support_note_2026-04-21](PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md)
+- [anomaly_forces_time_theorem](ANOMALY_FORCES_TIME_THEOREM.md)
+- [cosmological_constant_spectral_gap_identity_theorem_note](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
+- [dark_energy_eos_retained_corollary_theorem_note](DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md)
+- [neutrino_mass_derived_note](NEUTRINO_MASS_DERIVED_NOTE.md)
+- [koide_q_eq_3delta_identity_note_2026-04-21](KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md)

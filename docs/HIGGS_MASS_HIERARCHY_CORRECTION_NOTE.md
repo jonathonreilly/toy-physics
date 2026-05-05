@@ -251,3 +251,10 @@ spacing convergence, not through hierarchy corrections.
 - `HIERARCHY_THEOREM.md` -- L_t=2 uniqueness, C_APBC origin
 - `HIERARCHY_LT2_NOTE.md` -- factorization at L_t > 2
 - `HIGGS_MASS_DERIVED_NOTE.md` -- CW analysis and honest status
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [higgs_mass_from_axiom_note](HIGGS_MASS_FROM_AXIOM_NOTE.md)
+- [higgs_mass_derived_note](HIGGS_MASS_DERIVED_NOTE.md)

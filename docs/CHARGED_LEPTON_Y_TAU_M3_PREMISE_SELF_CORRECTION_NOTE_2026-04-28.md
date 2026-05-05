@@ -347,3 +347,12 @@ level distant and requires parallel-lane progress (Koide flagship
 or new structural content).
 
 A runner is not authored.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [ckm_ew_lattice_a4_bridge_retained_identity_note_2026-04-25](CKM_EW_LATTICE_A4_BRIDGE_RETAINED_IDENTITY_NOTE_2026-04-25.md)
+- [ckm_koide_cross_sector_z3_closure_theorem_note_2026-04-25](CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md)
+- [charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28](CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_SU2_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md)
+- [charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28](CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_U1_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md)

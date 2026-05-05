@@ -134,3 +134,11 @@ KOIDE_NATIVE_ZERO_SECTION_RETAINED_CLOSURE=FALSE
 NATIVE_ROUTE_IMPLIES_VALUES_CONDITIONALLY=TRUE
 NEXT_NATIVE_THEOREM=derive_Brannen_endpoint_as_real_Z3_primitive_and_unit_determinant_readout
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [koide_native_zero_section_closure_route_note_2026-04-24](KOIDE_NATIVE_ZERO_SECTION_CLOSURE_ROUTE_NOTE_2026-04-24.md)
+- [koide_brannen_geometry_dirac_support_note_2026-04-22](KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md)
+- [koide_brannen_phase_reduction_theorem_note_2026-04-20](KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md)
