@@ -1,0 +1,33 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_supermetric_normal_form.py
+runner_sha256: cdefef588fa8ad9f853c257e61a07e73fcfc2bd9131de84ee36ffd3c253a4517
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+[EXACT] PASS: the route still has the exact 3+1 lift and the isotropic Schur localization theorem
+    direct universal route has the exact lifted background and exact localized isotropic Hessian
+[EXACT] PASS: the universal Hessian equals the inverse-metric contraction on the invariant background
+    max Hessian-vs-supermetric error=4.163e-17
+[EXACT] PASS: the canonical basis Gram matrix is exactly diagonal with the inverse-metric weights
+    max offdiag/diag error=(2.220e-16, 2.220e-16)
+[EXACT] PASS: the remaining missing theorem is therefore dynamical gluing, not local tensor normalization
+    current atlas has local supermetric form and separate slice dynamics, but not the final exact gluing law
+UNIVERSAL GR SUPERMETRIC NORMAL FORM
+==============================================================================
+max Hessian-vs-supermetric error = 4.163e-17
+max Gram diagonalization error = 2.220e-16
+max coefficient error = 2.220e-16
+
+Verdict:
+On the invariant `PL S^3 x R` background, the direct-universal Hessian is already exactly the inverse-metric supermetric normal form on symmetric `3+1` perturbations.
+So the live GR gap is no longer local tensor localization or local block normalization. It is the missing exact law that glues this local supermetric form to the route-2 slice dynamics / curvature operator.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=4 FAIL=0 TOTAL=4
+
+----- stderr -----
+

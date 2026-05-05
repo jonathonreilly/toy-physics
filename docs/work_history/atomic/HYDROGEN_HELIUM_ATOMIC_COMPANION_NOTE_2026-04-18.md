@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-18
 **Status:** bounded work-history companion; preserved from branch review, not a
+**Primary runner:** [`scripts/frontier_atomic_helium_hartree_companion.py`](../../../scripts/frontier_atomic_helium_hartree_companion.py) (lattice Hartree companion, |E(He)|/|E(He+)|=1.34)
 flagship authority surface
 **Source branch reviewed:** `origin/frontier/hydrogen-helium-review`
 

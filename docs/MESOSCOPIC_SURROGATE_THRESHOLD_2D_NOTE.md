@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-04 (status line rephrased 2026-04-28 per audit-lane verdict)
 **Status:** bounded control note; finite 2D support sweep found no sharp threshold in two-stage sourced-response stability and is not a persistent-mass or inertial-response theorem.
+**Primary runner:** [`scripts/mesoscopic_surrogate_threshold_2d.py`](../scripts/mesoscopic_surrogate_threshold_2d.py) (2D surrogate scan, stability across all topN)
 
 ## Question
 

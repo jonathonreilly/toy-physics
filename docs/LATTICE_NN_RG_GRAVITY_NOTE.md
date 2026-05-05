@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-03  
 **Status:** bounded - bounded or caveated result note
+**Primary runner:** [`scripts/lattice_nn_rg_gravity.py`](../scripts/lattice_nn_rg_gravity.py) (raw NN gravity vs refinement schedule)
   fine-spacing failures are not schedule-discriminating
 
 This note freezes the RG-style gravity probe on the raw nearest-neighbor lattice.

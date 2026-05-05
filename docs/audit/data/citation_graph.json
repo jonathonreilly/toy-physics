@@ -30767,6 +30767,17 @@
       "runner_path": "scripts/directional_b_geometry_normalized_overlap_map.py",
       "title": "Directional-B Geometry-Normalized Overlap Subcritical `N=12` Note"
     },
+    "discrete_einstein_regge_lift_note": {
+      "claim_id": "discrete_einstein_regge_lift_note",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "f54acc6522c9bde706709c38500f62f2167ad35fdb2341c232191afe9aa1adde",
+      "path": "docs/DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md",
+      "runner_path": "scripts/frontier_discrete_einstein_regge_lift.py",
+      "title": "Discrete Einstein/Regge Lift on the Restricted Strong-Field Class"
+    },
     "dispersion_high_p_tiebreaker_note": {
       "claim_id": "dispersion_high_p_tiebreaker_note",
       "claim_type_author_hint": null,
@@ -34005,9 +34016,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "c36fa4a8ff75e0d71527758ea25c5e8570f9ddc2307109b81077438f9536da94",
+      "note_hash": "ed0cd0949b2189e2d6a0332503af7dc494f707590c582383bb81ce1bdcbc9d26",
       "path": "docs/EQUIVALENCE_PRINCIPLE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/equivalence_principle_harness.py",
       "title": "Equivalence Principle \u2014 Bounded Scaffold Lane"
     },
     "eta_188_structural_origin_partial_note_2026-05-03": {
@@ -39358,9 +39369,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "839494cf59aa08eb5d2930066fe8a4c258b37bd577181543dadf7951300b3235",
+      "note_hash": "d44b6acab32f9d37da7448b02b1dc5fbff6f6a4091fc9a1aa7873c4e8ccfe94e",
       "path": "docs/LATTICE_DISTANCE_LAW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_no_barrier_distance.py",
       "title": "Lattice Distance-Law Note"
     },
     "lattice_family_validation_note": {
@@ -39457,9 +39468,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "87716fca8b20da3f59e3f750b33dc5c8282a630cae8cf2b0cd760c015fcc3ce5",
+      "note_hash": "c5dbb447b039ceda679c28507e8f4b939418f07f4978cf8dd7a157e5d22cf6ad",
       "path": "docs/LATTICE_NN_DETERMINISTIC_RESCALE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_nn_deterministic_rescale.py",
       "title": "Lattice NN Deterministic Rescale Note"
     },
     "lattice_nn_distance_law_note": {
@@ -39534,9 +39545,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "611df22bcdbc3a47a14a44217bc40e4c2ee0ba743499288331b0e5e064d87a52",
+      "note_hash": "49f83d74dc7d0354f1f01f491b3f93847e283b4289b62015c59d5b5c68cddb4f",
       "path": "docs/LATTICE_NN_RG_GRAVITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_nn_rg_gravity.py",
       "title": "NN Lattice RG-Style Gravity Note"
     },
     "lattice_nn_rg_reconciliation_note": {
@@ -40364,9 +40375,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "919ba0bcb2682c6230c5677ed58de9426bd49ccbc79702a9672b9068d15ef965",
+      "note_hash": "dc4562c910e2cff46c3ea1ef0909089772da4331643706019bbb0a00f79eac3e",
       "path": "docs/MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mesoscopic_surrogate_threshold_2d.py",
       "title": "Mesoscopic Surrogate Threshold 2D Note"
     },
     "mesoscopic_surrogate_two_stage_2d_note": {
@@ -50739,9 +50750,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "f91bf6570d524c0ae7d8cc0cb9f0f745fd48b74d26f5606e548743f2da33caa1",
+      "note_hash": "3d6799f8c8fa02bfd6b00cc344ec665d33be29778a81860c30de6f1dc16a827a",
       "path": "docs/UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_supermetric_normal_form.py",
       "title": "Universal GR Supermetric Normal Form on `PL S^3 x R`"
     },
     "universal_gr_tensor_action_blocker_note": {
@@ -51957,9 +51968,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "9ed48adfd4c83a134da948bb3f02d620d8a43e3528b36ce91bc48ac9d5ceef41",
+      "note_hash": "a3c768fa4f3ce3bc3ad4835b449d74050da052c2656d15188abe0236039dbe02",
       "path": "docs/WILSON_NORMALIZATION_RECONCILIATION_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_test_mass_limit.py",
       "title": "Wilson Normalization / Comparison Reconciliation"
     },
     "wilson_test_mass_continuum_note_2026-04-11": {
@@ -52022,9 +52033,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "ea890a9ecab337677464a0535255265be7cf7e9a23fd6355021fb520418d329a",
+      "note_hash": "3e0721a7bbb256e9f3f791aaf6eb4edf7c264d7f66398f5dc67f83db19835820",
       "path": "docs/work_history/atomic/HYDROGEN_HELIUM_ATOMIC_COMPANION_NOTE_2026-04-18.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_atomic_helium_hartree_companion.py",
       "title": "Hydrogen / Helium Atomic Companion Note"
     },
     "work_history.atomic.lane2_atomic_autoresearch_parking_note_2026-05-01": {
@@ -53934,6 +53945,7 @@
     "dirac_v4_convergence_note",
     "dirac_weak_coupling_note",
     "directional_b_density_stencil_note",
+    "discrete_einstein_regge_lift_note",
     "dispersion_high_p_tiebreaker_note",
     "dispersion_relation_note",
     "distance_law_3d_64_closure_note_2026-04-11",
@@ -54650,7 +54662,7 @@
       "bounded_theorem": 59,
       "meta": 8,
       "no_go": 12,
-      "none": 1715,
+      "none": 1716,
       "open_gate": 9,
       "positive_theorem": 84
     },
@@ -54658,14 +54670,14 @@
       "bounded_theorem": 557,
       "meta": 8,
       "no_go": 117,
-      "none": 457,
+      "none": 458,
       "open_gate": 115,
       "positive_theorem": 633
     },
     "edge_count": 6399,
-    "leaf_count": 552,
-    "node_count": 1887,
-    "root_count": 900,
-    "runners_with_path": 1461
+    "leaf_count": 553,
+    "node_count": 1888,
+    "root_count": 901,
+    "runners_with_path": 1470
   }
 }
