@@ -18,8 +18,28 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=187 FAIL=0
+# SUMMARY: PASS=188 FAIL=0
 ```
+
+## 2026-05-05 Affine-Contact Complete-Monotonicity Update
+
+The retained-route certificate now consumes
+`outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json`.
+This sharpens the scalar-LSZ contact boundary: an affine contact subtraction
+can restore first-order monotonicity of the current polefit8x8 rows, but it
+cannot change second or higher divided differences.  Those higher finite
+complete-monotonicity signs have robust violations, so no affine contact slope
+can turn the current rows into a positive Stieltjes scalar-LSZ certificate.
+
+Validation: affine-contact complete-monotonicity no-go `PASS=11 FAIL=0`;
+retained-route `PASS=188 FAIL=0`; campaign status `PASS=214 FAIL=0`; full
+positive closure assembly gate `PASS=39 FAIL=0`; non-chunk worklist
+`PASS=20 FAIL=0`.
+
+This closes only the affine-contact repair route.  It does not rule out a
+higher-polynomial contact certificate, microscopic scalar-denominator theorem,
+or strict Stieltjes moment-threshold-FV certificate.  No retained or
+`proposed_retained` closure is authorized.
 
 ## 2026-05-05 FH/LSZ Polefit8x8 Chunks025-030 Completion Update
 

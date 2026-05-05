@@ -79,6 +79,7 @@
     "cross_lane_oh_authority_audit": "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
     "delta_perp_tomography_builder": "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json",
     "electroweak_g2_certificate_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
+    "fh_lsz_affine_contact_complete_monotonicity": "outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json",
     "fh_lsz_autocorrelation_ess": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
     "fh_lsz_common_window_response": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
     "fh_lsz_contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
@@ -134,6 +135,7 @@
     "cross_lane_oh_authority_audit": "exact negative boundary / cross-lane O_H authority audit",
     "delta_perp_tomography_builder": "open / delta_perp tomography correction production rows absent",
     "electroweak_g2_certificate_builder": "open / electroweak g2 certificate builder inputs absent",
+    "fh_lsz_affine_contact_complete_monotonicity": "exact negative boundary / affine contact complete-monotonicity no-go",
     "fh_lsz_autocorrelation_ess": "bounded-support / FH-LSZ autocorrelation ESS gate passed for target observables",
     "fh_lsz_common_window_response": "bounded-support / FH-LSZ common-window response gate passed as support",
     "fh_lsz_contact_subtraction_identifiability": "exact negative boundary / contact-subtraction identifiability obstruction",
@@ -182,7 +184,7 @@
     "wz_same_source_action": "exact negative boundary / same-source EW action not defined on PR230 surface",
     "wz_same_source_action_semantic_firewall": "bounded-support / same-source EW action semantic firewall passed"
   },
-  "pass_count": 39,
+  "pass_count": 40,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",
   "route_statuses": {

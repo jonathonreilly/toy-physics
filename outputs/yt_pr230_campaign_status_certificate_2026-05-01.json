@@ -32,6 +32,7 @@
     "fh_gauge_mass_response_observable_gap": "open / FH gauge-mass response observable gap",
     "fh_gauge_normalized_response": "bounded-support / FH gauge-normalized response route",
     "fh_gauge_response_mixed_scalar": "exact negative boundary / FH gauge-response mixed-scalar obstruction",
+    "fh_lsz_affine_contact_complete_monotonicity": "exact negative boundary / affine contact complete-monotonicity no-go",
     "fh_lsz_autocorrelation_ess_gate": "bounded-support / FH-LSZ autocorrelation ESS gate passed for target observables",
     "fh_lsz_chunk001_checkpoint": "bounded-support / FH-LSZ chunk001 seed-controlled production checkpoint",
     "fh_lsz_chunk001_target_timeseries_generic": "bounded-support / FH-LSZ chunk001 generic target-timeseries checkpoint",
@@ -327,7 +328,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 214,
+  "pass_count": 215,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

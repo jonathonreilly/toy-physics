@@ -1,5 +1,36 @@
 # Handoff
 
+Latest checkpoint, 2026-05-05 affine-contact complete-monotonicity no-go:
+
+- Added
+  `scripts/frontier_yt_fh_lsz_affine_contact_complete_monotonicity_no_go.py`,
+  `docs/YT_FH_LSZ_AFFINE_CONTACT_COMPLETE_MONOTONICITY_NO_GO_NOTE_2026-05-05.md`,
+  and
+  `outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json`.
+- Result: affine contact subtraction cannot repair the current polefit8x8 rows
+  into a positive Stieltjes scalar-LSZ object.  A slope can restore
+  first-order finite monotonicity, but second-and-higher divided differences
+  are invariant under `C(x)-a x` and have robust complete-monotonicity sign
+  violations.
+- Wired the boundary into retained-route, campaign-status, full-assembly, and
+  non-chunk worklist runners.  Validation: affine-contact no-go
+  `PASS=11 FAIL=0`; retained-route `PASS=188 FAIL=0`; campaign status
+  `PASS=214 FAIL=0`; full assembly `PASS=39 FAIL=0`; non-chunk worklist
+  `PASS=20 FAIL=0`.
+- Claim boundary: this closes only the affine-contact repair route.  It does
+  not rule out a higher-polynomial contact certificate, microscopic
+  scalar-denominator theorem, strict Stieltjes moment-threshold-FV
+  certificate, or physical-response/source-overlap route.  No retained or
+  proposed-retained closure is authorized.
+- Chunks031-036 remain active as PIDs `4430`-`4435`; their root artifacts are
+  absent and no active chunk output is counted.
+
+Next exact action: continue monitoring chunks031-036 for root artifacts.  The
+best scalar-LSZ positive route now needs a same-surface microscopic
+contact/denominator theorem, higher-order contact certificate with independent
+normalization, or strict Stieltjes moment-threshold-FV certificate; affine
+monotonicity repair is closed.
+
 Latest checkpoint, 2026-05-05 polefit8x8 chunks031-036 launch:
 
 - After chunks025-030 were packaged, launched the next homogeneous

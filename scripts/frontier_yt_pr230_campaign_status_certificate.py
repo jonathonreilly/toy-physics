@@ -148,6 +148,9 @@ def main() -> int:
         "fh_lsz_contact_subtraction_identifiability": load(
             "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json"
         ),
+        "fh_lsz_affine_contact_complete_monotonicity": load(
+            "outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -940,6 +943,24 @@ def main() -> int:
         )
         is False,
         statuses["fh_lsz_contact_subtraction_identifiability"],
+    )
+    report(
+        "fh-lsz-affine-contact-complete-monotonicity-blocks",
+        "affine contact complete-monotonicity no-go"
+        in str(statuses["fh_lsz_affine_contact_complete_monotonicity"])
+        and certificates["fh_lsz_affine_contact_complete_monotonicity"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["fh_lsz_affine_contact_complete_monotonicity"].get(
+            "affine_contact_complete_monotonicity_no_go_passed"
+        )
+        is True
+        and certificates["fh_lsz_affine_contact_complete_monotonicity"].get(
+            "affine_contact_stieltjes_certificate_passed"
+        )
+        is False,
+        statuses["fh_lsz_affine_contact_complete_monotonicity"],
     )
     report(
         "fh-lsz-pole-saturation-threshold-gate-blocks",

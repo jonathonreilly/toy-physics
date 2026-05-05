@@ -28,7 +28,9 @@ This is an integration/worklist gate, not a physics closure theorem.
   uniform threshold/FV/IR pole-saturation bound.  The current polefit8x8
   `C_ss` proxy now has explicit blockers: it fails necessary Stieltjes
   monotonicity, and finite-row monotonicity restoration does not identify a
-  unique contact subtraction.
+  unique contact subtraction.  The affine-contact repair is also closed:
+  higher complete-monotonicity divided differences fail and are invariant
+  under `C(x) -> C(x) - a x`.
 - **Schur/scalar-denominator rows:** supply same-surface Schur `A/B/C` kernel
   rows; current FH/LSZ source rows do not substitute.
 - **Neutral rank-one:** derive a strict primitive-cone/positivity-improving

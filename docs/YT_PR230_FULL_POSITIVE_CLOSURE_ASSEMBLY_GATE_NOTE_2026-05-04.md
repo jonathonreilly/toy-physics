@@ -58,6 +58,14 @@ restoration alone; a same-surface contact-subtraction certificate or
 microscopic scalar-denominator theorem is still required before a subtracted
 object can satisfy the scalar-LSZ leg.
 
+2026-05-05 affine-contact update: the gate also consumes
+`outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json`.
+The affine-contact repair route is now closed more sharply: choosing a slope
+can fix first-order finite monotonicity, but second-and-higher
+complete-monotonicity divided differences are invariant under affine
+subtraction and fail robustly on the current rows.  The assembly gate remains
+open with `PASS=39 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 

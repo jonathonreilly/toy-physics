@@ -1,5 +1,26 @@
 # No-Go Ledger
 
+## Affine contact subtraction cannot repair complete monotonicity
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_affine_contact_complete_monotonicity_no_go.py
+# SUMMARY: PASS=11 FAIL=0
+```
+
+The current polefit8x8 rows cannot be made into a positive Stieltjes
+scalar-LSZ object by an affine contact term `C(x) -> C(x)-a x`.  Such a term
+can fix first-order monotonicity, but all second-and-higher divided
+differences are invariant under affine subtraction.  The current rows have
+robust higher complete-monotonicity sign violations.
+
+Do not retry the scalar-LSZ route by selecting an affine contact slope, even
+with finite complete-monotonicity checks.  A positive route needs a
+same-surface microscopic contact/denominator theorem, higher-order contact
+certificate with independent normalization, or strict Stieltjes
+moment-threshold-FV certificate.
+
 ## FH/LSZ polefit8x8 chunks031-036 active launch is not closure
 
 Runners:

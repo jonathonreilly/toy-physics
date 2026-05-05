@@ -1,5 +1,16 @@
 # Opportunity Queue
 
+2026-05-05 update: the affine-contact complete-monotonicity no-go is landed
+and wired into retained-route, campaign-status, full-assembly, and non-chunk
+worklist gates.  It proves that affine contact subtraction cannot turn the
+current polefit8x8 rows into a positive Stieltjes object: first-order
+monotonicity can be repaired, but second-and-higher divided differences are
+invariant under `C(x)-a x` and fail complete-monotonicity signs.  The scalar-
+LSZ positive route now needs a same-surface microscopic contact/denominator
+theorem, higher-order contact certificate with independent normalization, or a
+strict Stieltjes moment-threshold-FV certificate.  Chunks031-036 remain
+compute-in-flight and count only after root artifacts pass gates.
+
 2026-05-05 update: polefit8x8 chunks031-036 are now active under the global
 collision guard.  The launch record reports fixed seeds `2026051931`-
 `2026051936`, selected mass `0.75`, x8 scalar-two-point noise, eight modes,

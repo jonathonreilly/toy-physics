@@ -26,8 +26,28 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=213 FAIL=0
+# SUMMARY: PASS=214 FAIL=0
 ```
+
+## 2026-05-05 Affine-Contact Complete-Monotonicity Update
+
+The campaign status certificate now consumes
+`outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json`.
+This closes the narrower affine-contact repair shortcut.  For a positive
+Stieltjes object, finite divided differences must obey alternating signs.
+Subtracting `a x` changes only first divided differences; the current
+polefit8x8 rows have robust second-and-higher sign violations that are
+invariant under affine contact subtraction.
+
+Validation: affine-contact complete-monotonicity no-go `PASS=11 FAIL=0`;
+retained-route `PASS=188 FAIL=0`; campaign status `PASS=214 FAIL=0`; full
+positive closure assembly gate `PASS=39 FAIL=0`; non-chunk worklist
+`PASS=20 FAIL=0`.
+
+This does not close scalar LSZ.  It says the next positive scalar route needs
+a same-surface microscopic contact/denominator theorem, a higher-order contact
+certificate with independent normalization, or a strict Stieltjes
+moment-threshold-FV certificate.
 
 ## 2026-05-05 FH/LSZ Polefit8x8 Chunks025-030 Completion Update
 

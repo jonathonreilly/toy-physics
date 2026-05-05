@@ -38,6 +38,7 @@ PARENTS = {
     "fh_lsz_pade_stieltjes_bounds": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
     "fh_lsz_polefit8x8_stieltjes_proxy_diagnostic": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json",
     "fh_lsz_contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
+    "fh_lsz_affine_contact_complete_monotonicity": "outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json",
     "fh_lsz_pole_saturation": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
     "fh_lsz_finite_volume": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
     "fh_lsz_soft_continuum": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
@@ -329,6 +330,12 @@ def main() -> int:
             "contact_subtraction_identifiability_obstruction_passed"
         )
         is True
+        and certs["fh_lsz_affine_contact_complete_monotonicity"].get("proposal_allowed")
+        is False
+        and certs["fh_lsz_affine_contact_complete_monotonicity"].get(
+            "affine_contact_complete_monotonicity_no_go_passed"
+        )
+        is True
         and certs["fh_lsz_pole_saturation"].get("proposal_allowed") is False
         and certs["fh_lsz_finite_volume"].get("proposal_allowed") is False
         and certs["fh_lsz_soft_continuum"].get("proposal_allowed") is False
@@ -443,6 +450,18 @@ def main() -> int:
         )
         is True,
         statuses["fh_lsz_contact_subtraction_identifiability"],
+    )
+    report(
+        "affine-contact-complete-monotonicity-blocks",
+        "affine contact complete-monotonicity no-go"
+        in statuses["fh_lsz_affine_contact_complete_monotonicity"]
+        and certs["fh_lsz_affine_contact_complete_monotonicity"].get("proposal_allowed")
+        is False
+        and certs["fh_lsz_affine_contact_complete_monotonicity"].get(
+            "affine_contact_complete_monotonicity_no_go_passed"
+        )
+        is True,
+        statuses["fh_lsz_affine_contact_complete_monotonicity"],
     )
     report(
         "wz-action-semantic-firewall-support-only",

@@ -1,5 +1,32 @@
 # Claim Status Certificate
 
+Affine-contact complete-monotonicity no-go:
+
+```text
+actual_current_surface_status: exact negative boundary / affine contact complete-monotonicity no-go
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_affine_contact_complete_monotonicity_no_go.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=188 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=214 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=39 FAIL=0
+```
+
+Affine contact subtraction cannot supply the scalar-LSZ object for the current
+polefit8x8 rows.  It fixes only first-order monotonicity; higher complete-
+monotonicity divided differences are invariant and fail robustly.  This does
+not rule out a higher-polynomial contact certificate or microscopic
+denominator theorem.  No retained or `proposed_retained` wording is
+authorized.
+
 FH/LSZ polefit8x8 chunks031-036 guarded launch:
 
 ```text

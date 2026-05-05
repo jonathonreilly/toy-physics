@@ -39,6 +39,7 @@
     "electroweak_g2_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
     "fms_oh_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
     "kprime_attempt": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
+    "lsz_affine_contact_complete_monotonicity": "outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json",
     "lsz_contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
     "lsz_fv_obstruction": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
     "lsz_model_class": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
@@ -85,7 +86,7 @@
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_same_source_action_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json"
   },
-  "pass_count": 20,
+  "pass_count": 21,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Current and chunk-only assembly are rejected.  The strict future files for O_H/source-Higgs, scalar-LSZ, W/Z response, Schur rows, neutral irreducibility, and certified physical readout are absent.",
   "strict_non_claims": [
@@ -144,6 +145,7 @@
         "exact-support / FH-LSZ Pade-Stieltjes bounds gate; strict moment-threshold certificate absent",
         "exact negative boundary / current polefit8x8 C_ss proxy fails Stieltjes monotonicity",
         "exact negative boundary / contact-subtraction identifiability obstruction",
+        "exact negative boundary / affine contact complete-monotonicity no-go",
         "open / FH-LSZ pole-saturation threshold gate blocks current finite-shell fit",
         "exact negative boundary / FH-LSZ finite-volume pole-saturation obstruction",
         "exact negative boundary / FH-LSZ soft-continuum threshold no-go",
