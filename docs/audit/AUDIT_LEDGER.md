@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 200 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
-| unaudited | 872 |
+| unaudited | 871 |
 | audit_in_progress | 24 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
-| ~~audited_conditional~~ | 389 |
+| ~~audited_conditional~~ | 390 |
 | ~~audited_failed~~ | 15 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -38,12 +38,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 24 |
 | `audited_clean` | 336 |
-| `audited_conditional` | 389 |
+| `audited_conditional` | 390 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 29 |
-| `unaudited` | 918 |
+| `unaudited` | 917 |
 
 | claim_type | count |
 |---|---:|
@@ -712,6 +712,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_a1_physical_bridge_attempt_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_berry_bundle_obstruction_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `koide_circulant_wilson_target_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -7075,6 +7076,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: The first load-bearing step imports the Koide Q = 2/3 iff sigma = 1/2 equivalence from docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md, while the available dependency packet does not provide that note as a direct retained-grade input. Why this blocks: The runner verifies the topology, freeness, Betti numbers, and flat-holonomy non-uniqueness for the fixed-latitude model, but it does not independently prove that this model is the actual positive projectivized Koide cone. Repair target: Add the Koide algebraic equivalence note as a direct dependency and verify that it is retained-grade, or narrow the audited theorem to the abstract fixed-latitude locus. Claim boundary until fixed: The bundle and Berry-holonomy obstruction is supported for the defined fixed-latitude locus, but retained status for the actual Koide-cone theorem remains conditional.
 - **open / conditional deps cited:**
   - `CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`
+- **auditor confidence:** high
+
+### `koide_circulant_wilson_target_note_2026-04-18`
+
+- **Note:** [`KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md`](../../docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the asserted reduction of the charged-lepton Koide constructive target to the 3-real C3-covariant circulant Hermitian family inside the adjacent-chain algebra, with Koide imposing one real equation and leaving a 2-real cone.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-koide_circulant_wilson_target_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** By the exact Koide bridge note, the spectral Koide condition is a_0^2 = 2 |z|^2, which on the circulant coordinates becomes 3 a^2 = 6 |b|^2 = 6 (x^2 + y^2).  _(class `B`)_
+- **chain closes:** False — The finite linear-algebra checks for the C3 commutant, adjacent-chain containment, and codimension-one equation close locally. The identification of that equation as the spectral Koide target imports an exact Koide bridge note that is not present in the direct dependency packet, while the microscopic selector and final readout are explicitly left open.
+- **rationale:** Issue: the load-bearing Koide spectral bridge a_0^2 = 2|z|^2 is imported from a named bridge note outside the listed one-hop dependencies, and the note explicitly does not derive the selector mechanism or final charged-lepton readout. Why this blocks: the algebraic target-size reduction can be true without establishing that this is a retained physical Koide observable target from the restricted inputs. Repair target: add and retain the exact Koide bridge dependency, and keep the microscopic selector/readout claims scoped as future work unless separate retained bridge theorems exist. Claim boundary until fixed: the note supports a finite algebraic reduction of a stipulated cyclic Koide target, not a closed retained theorem deriving the physical Wilson-side Koide target.
+- **open / conditional deps cited:**
+  - `KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md`
+  - `KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `koide_cyclic_wilson_descendant_law_note_2026-04-18`
