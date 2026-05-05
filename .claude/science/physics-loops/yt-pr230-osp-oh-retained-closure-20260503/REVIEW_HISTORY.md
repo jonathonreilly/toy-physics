@@ -1,5 +1,25 @@
 # Review History
 
+## 2026-05-05 Scalar-LSZ Holonomic Exact-Authority Attempt Self-Review
+
+Disposition: pass as exact negative boundary / no strict scalar-LSZ authority.
+
+Findings:
+
+- The runner tests outside-math scalar-LSZ authority directly rather than
+  using method names as proof inputs.
+- The rational-holonomic counterfamily agrees on every sampled shell while
+  changing the isolated-pole residue, so finite-shell exact interpolation and
+  PSLQ/value recognition are not analytic-continuation authority.
+- The artifact writes no strict Stieltjes, Pade, scalar-denominator, or
+  contact-subtraction certificate and keeps proposal authority false.
+- The forbidden-import firewall remains intact: no observed selector,
+  `H_unit`/Ward authority, `alpha_LM`/plaquette/`u0`, unit `kappa_s`, unit
+  `c2`, or unit `Z_match`.
+
+Review-loop iteration 1: local self-review pass.  No retained or
+proposed-retained wording is authorized.
+
 ## 2026-05-05 Invariant-Ring O_H Certificate Attempt Self-Review
 
 Disposition: pass as exact negative boundary / no current `O_H` certificate

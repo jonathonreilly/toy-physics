@@ -4,17 +4,20 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact negative boundary / invariant-ring O_H certificate attempt blocked on current PR230 surface
-active_residual: "Both target production chunks001-063 and polefit8x8 chunks001-063 are complete with required FH/LSZ target schema, but positive closure still fails the assembly checklist.  The cleanest physics route remains source-Higgs.  Its first theorem step now fails on the current surface: invariant-ring/commutant/Schur reasoning cannot derive canonical O_H because the current neutral scalar labels still admit a two-singlet completion, with source-only rows fixed and source-to-O_H overlap variable.  A positive clean closure now needs a new same-surface representation/action certificate proving multiplicity one or selecting a canonical radial generator with LSZ metric, then C_ss/C_sH/C_HH rows, scalar-LSZ authority, matching/running authority, and retained-route/campaign proposal authorization.  No retained or proposed_retained closure is authorized."
+actual_current_surface_status: exact negative boundary / scalar-LSZ holonomic exact authority not derivable from current finite-shell PR230 data
+active_residual: "Both target production chunks001-063 and polefit8x8 chunks001-063 are complete with required FH/LSZ target schema, but positive closure still fails the assembly checklist.  The cleanest physics route remains source-Higgs, but its invariant-ring theorem step is blocked by a two-singlet neutral completion.  The strict scalar-LSZ outside-math leg is now also narrowed: finite shell values, exact interpolation, PSLQ/value recognition, or the existence of some rational holonomic continuation do not determine the physical scalar denominator or pole residue.  A positive scalar-LSZ leg needs a same-surface exact scalar-denominator/Picard-Fuchs/WZ/tensor certificate or strict Stieltjes/Pade moment certificate with contact subtraction, threshold, and FV/IR authority; PR230 still also needs source-overlap/physical-response bridge, matching/running authority, and retained-route/campaign proposal authorization.  No retained or proposed_retained closure is authorized."
 latest_checkpoint:
-  utc: "2026-05-05T14:32:56Z"
-  block: 98
-  artifact: "invariant-ring O_H certificate attempt"
-  status: "exact negative boundary / current invariant-ring data do not certify O_H"
-  result: "The runner records a two-singlet neutral scalar completion with degree-one invariant dimension 2 and commutant dimension 4.  Source-only rows stay fixed while the candidate source-to-O_H overlap varies from one to zero, so Schur/commutant/invariant-ring reasoning cannot supply the canonical O_H identity or normalization certificate without new same-surface representation/action/metric data."
-  claim_boundary: "no retained or proposed_retained closure; no canonical O_H certificate written; kappa_s, c2, and Z_match remain underived; outside-math tools remain certificate-producing methods only"
+  utc: "2026-05-05T14:40:33Z"
+  block: 99
+  artifact: "scalar-LSZ holonomic exact-authority attempt"
+  status: "exact negative boundary / current finite-shell scalar data do not certify exact LSZ authority"
+  result: "The runner records a rational-holonomic counterfamily: two rational continuations agree on every sampled shell while carrying different residues at the same isolated pole.  This blocks finite-shell exact interpolation, PSLQ/value recognition, or method-name holonomic authority as scalar-LSZ proof without a same-surface denominator/moment/threshold/FV certificate."
+  claim_boundary: "no retained or proposed_retained closure; no strict Stieltjes, Pade, scalar-denominator, or contact-subtraction certificate written; kappa_s, c2, and Z_match remain underived"
   live_compute: "chunk artifacts are complete; no production chunk worker is running"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_scalar_lsz_holonomic_exact_authority_attempt.py
+    - docs/YT_PR230_SCALAR_LSZ_HOLONOMIC_EXACT_AUTHORITY_ATTEMPT_NOTE_2026-05-05.md
+    - outputs/yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_2026-05-05.json
     - scripts/frontier_yt_pr230_invariant_ring_oh_certificate_attempt.py
     - docs/YT_PR230_INVARIANT_RING_OH_CERTIFICATE_ATTEMPT_NOTE_2026-05-05.md
     - outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json

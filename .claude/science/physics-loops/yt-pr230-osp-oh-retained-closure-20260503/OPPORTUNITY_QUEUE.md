@@ -1,5 +1,18 @@
 # Opportunity Queue
 
+2026-05-05 scalar-LSZ holonomic exact-authority update:
+`outputs/yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_2026-05-05.json`
+passes with `PASS=15 FAIL=0`, but closes negatively on the current finite-shell
+surface.  The scalar-LSZ outside-math route now has a precise blocker:
+rational holonomic continuations can agree on all sampled shells while
+changing the isolated-pole residue.  Finite-shell exact interpolation,
+PSLQ/value recognition, or method-name holonomic authority is therefore not a
+strict scalar-LSZ certificate.  A positive leg needs a same-surface exact
+scalar-denominator/Picard-Fuchs/WZ/tensor certificate or a strict Stieltjes/
+Pade moment certificate with contact subtraction, threshold, and FV/IR
+authority.  Even then, source-overlap/physical-response and matching/running
+remain separate blockers.
+
 2026-05-05 invariant-ring `O_H` certificate attempt update:
 `outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json`
 passes with `PASS=15 FAIL=0`, but closes negatively on the current surface.

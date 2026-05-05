@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact negative boundary / invariant-ring O_H certificate attempt blocked on current PR230 surface
-conditional_surface_status: conditional-support if a future same-surface representation/action proves multiplicity one or selects the canonical radial generator with LSZ normalization
+actual_current_surface_status: exact negative boundary / scalar-LSZ holonomic exact authority not derivable from current finite-shell PR230 data
+conditional_surface_status: conditional-support if a future same-surface scalar-denominator/Picard-Fuchs/WZ/tensor certificate or strict Stieltjes/Pade moment certificate supplies contact subtraction, threshold, FV/IR, and pole-residue authority
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "The invariant-ring O_H certificate attempt records a two-singlet neutral scalar completion on the current PR230 surface.  Invariant-ring, commutant, or Schur-lemma reasoning therefore does not derive the canonical O_H identity or normalization certificate without new same-surface representation/action/metric data.  It does not supply C_sH/C_HH pole rows, neutral irreducibility, Schur rows, strict scalar-LSZ authority, W/Z response rows, matching/running authority, or retained-route/campaign proposal authorization."
+proposal_allowed_reason: "The scalar-LSZ holonomic exact-authority attempt shows current finite-shell data do not determine the physical scalar denominator or pole residue: rational holonomic continuations can agree on all sampled shells while changing the isolated-pole residue.  It does not supply same-surface scalar-denominator authority, strict Stieltjes/Pade moment authority, contact subtraction, threshold/FV/IR control, C_sH/C_HH pole rows, W/Z response rows, matching/running authority, or retained-route/campaign proposal authorization."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -15,6 +15,11 @@ Retained/proposed-retained wording is not allowed for this block.
 
 Open imports:
 
+- scalar-LSZ holonomic exact-authority attempt is closed negatively on current
+  finite-shell data: exact interpolation, PSLQ/value recognition, or the
+  existence of some holonomic continuation does not select the physical scalar
+  denominator or pole residue; strict scalar-LSZ still needs same-surface
+  denominator/moment/contact/threshold/FV/IR authority;
 - invariant-ring `O_H` certificate attempt is closed negatively on the current
   PR230 surface: current neutral scalar labels admit a two-singlet completion,
   source-only rows stay fixed while source-to-candidate-`O_H` overlap varies,

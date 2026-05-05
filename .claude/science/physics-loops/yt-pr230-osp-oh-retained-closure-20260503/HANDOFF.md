@@ -1,5 +1,45 @@
 # Handoff
 
+## 2026-05-05 PR230 Scalar-LSZ Holonomic Exact-Authority Attempt
+
+Result: exact negative boundary / scalar-LSZ holonomic exact authority is not
+derivable from current finite-shell PR230 data.  This block tests the strict
+scalar-LSZ outside-math leg: holonomic/Picard-Fuchs/WZ, exact tensor/PEPS,
+PSLQ/value recognition, and finite-shell exact interpolation.
+
+The runner records a rational-holonomic counterfamily.  Two rational
+continuations agree on every sampled shell but have different residues at the
+same isolated pole.  Therefore exact interpolation, PSLQ hits, or the
+existence of some holonomic continuation do not identify the physical scalar
+denominator or LSZ residue without a same-surface denominator/moment
+certificate plus contact subtraction, threshold, and FV/IR control.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_scalar_lsz_holonomic_exact_authority_attempt.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=21 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=77 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=225 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=255 FAIL=0
+```
+
+Claim boundary: no retained or proposed-retained closure.  This block writes
+no strict Stieltjes, Pade, scalar-denominator, or contact-subtraction
+certificate, and it does not set `kappa_s`, `c2`, or `Z_match` to one.  Exact
+next action: derive a same-surface exact scalar denominator/Picard-Fuchs/WZ/
+tensor certificate with boundary data, or produce the strict Stieltjes/Pade
+moment certificate with threshold and FV/IR authority.
+
 ## 2026-05-05 PR230 Invariant-Ring O_H Certificate Attempt
 
 Result: exact negative boundary / invariant-ring `O_H` certificate attempt
