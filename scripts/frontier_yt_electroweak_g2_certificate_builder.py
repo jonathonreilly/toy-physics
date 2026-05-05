@@ -31,6 +31,7 @@ PARENTS = {
     "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
     "wz_g2_generator_casimir_normalization_no_go": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
     "wz_g2_response_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
+    "wz_g2_bare_running_bridge_attempt": "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json",
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
 }
 
@@ -120,6 +121,24 @@ def main() -> int:
         )
         is True
     )
+    bare_running_bridge_blocked = (
+        "WZ g2 bare-to-low-scale running bridge"
+        in parents["wz_g2_bare_running_bridge_attempt"].get(
+            "actual_current_surface_status", ""
+        )
+        and parents["wz_g2_bare_running_bridge_attempt"].get(
+            "wz_g2_bare_running_bridge_passed"
+        )
+        is False
+        and parents["wz_g2_bare_running_bridge_attempt"].get(
+            "strict_electroweak_g2_certificate_written"
+        )
+        is False
+        and parents["wz_g2_bare_running_bridge_attempt"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+    )
     generator_casimir_normalization_blocked = (
         "generator-Casimir normalization does not certify PR230 g2"
         in parents["wz_g2_generator_casimir_normalization_no_go"].get(
@@ -180,6 +199,13 @@ def main() -> int:
             "accepted": False,
             "rejection": "response-only top/W/Z rows determine ratios, not absolute g2",
         },
+        {
+            "name": "bare_to_low_scale_running_bridge",
+            "path": PARENTS["wz_g2_bare_running_bridge_attempt"],
+            "present": bare_running_bridge_blocked,
+            "accepted": False,
+            "rejection": "bare/structural g2 plus beta-function running still needs same-source EW action, scale ratio, thresholds, and finite matching",
+        },
     ]
     accepted_candidates = [candidate for candidate in candidates if candidate["accepted"]]
 
@@ -202,6 +228,7 @@ def main() -> int:
     report("generator-casimir-normalization-blocked", generator_casimir_normalization_blocked, PARENTS["wz_g2_generator_casimir_normalization_no_go"])
     report("w-mass-probe-not-independent-g2-authority", w_mass_route_uses_existing_g2_or_observed_context, rel(W_MASS_NOTE))
     report("response-only-self-normalization-blocked", response_self_normalization_blocked, PARENTS["wz_g2_response_self_normalization_no_go"])
+    report("bare-running-bridge-blocked", bare_running_bridge_blocked, PARENTS["wz_g2_bare_running_bridge_attempt"])
     report("no-accepted-g2-candidate", not accepted_candidates, f"accepted={accepted_candidates}")
     report("strict-electroweak-g2-certificate-not-built", not builder_passed, f"builder_passed={builder_passed}")
     report("does-not-authorize-retained-proposal", True, "builder gate only")
@@ -224,6 +251,7 @@ def main() -> int:
             "SU(2) generator/Casimir normalization as physical g2",
             "W-mass companion rows that reuse the existing EW g2 lane",
             "response-only W/Z self-normalization",
+            "bare/structural g2 plus beta-function running without same-source EW action, scale ratio, thresholds, and finite matching",
         ],
         "required_future_certificate_fields": [
             "g2",

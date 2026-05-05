@@ -470,6 +470,9 @@ def main() -> int:
         "wz_g2_response_self_normalization_no_go": load(
             "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json"
         ),
+        "pr230_wz_g2_bare_running_bridge_attempt": load(
+            "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json"
+        ),
         "wz_correlator_mass_fit_path_gate": load(
             "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json"
         ),
@@ -1989,6 +1992,28 @@ def main() -> int:
         )
         is True,
         statuses["wz_g2_response_self_normalization_no_go"],
+    )
+    report(
+        "pr230-wz-g2-bare-running-bridge-attempt-blocks",
+        "WZ g2 bare-to-low-scale running bridge"
+        in str(statuses["pr230_wz_g2_bare_running_bridge_attempt"])
+        and certificates["pr230_wz_g2_bare_running_bridge_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_wz_g2_bare_running_bridge_attempt"].get(
+            "wz_g2_bare_running_bridge_passed"
+        )
+        is False
+        and certificates["pr230_wz_g2_bare_running_bridge_attempt"].get(
+            "strict_electroweak_g2_certificate_written"
+        )
+        is False
+        and certificates["pr230_wz_g2_bare_running_bridge_attempt"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True,
+        statuses["pr230_wz_g2_bare_running_bridge_attempt"],
     )
     report(
         "same-source-sector-overlap-identity-blocks",

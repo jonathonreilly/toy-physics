@@ -222,6 +222,7 @@ def main() -> int:
         "wz_g2_generator_casimir_normalization_no_go": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
         "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
         "wz_g2_response_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
+        "pr230_wz_g2_bare_running_bridge_attempt": "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json",
         "wz_correlator_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
@@ -1628,6 +1629,28 @@ def main() -> int:
         is False
         and certificates["wz_g2_response_self_normalization_no_go"].get(
             "g2_response_self_normalization_no_go_passed"
+        )
+        is True
+    )
+    wz_g2_bare_running_bridge_attempt_blocks = (
+        "WZ g2 bare-to-low-scale running bridge"
+        in certificates["pr230_wz_g2_bare_running_bridge_attempt"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_wz_g2_bare_running_bridge_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_wz_g2_bare_running_bridge_attempt"].get(
+            "wz_g2_bare_running_bridge_passed"
+        )
+        is False
+        and certificates["pr230_wz_g2_bare_running_bridge_attempt"].get(
+            "strict_electroweak_g2_certificate_written"
+        )
+        is False
+        and certificates["pr230_wz_g2_bare_running_bridge_attempt"].get(
+            "exact_negative_boundary_passed"
         )
         is True
     )
@@ -3357,6 +3380,13 @@ def main() -> int:
         "wz-g2-response-self-normalization-no-go-blocks",
         wz_g2_response_self_normalization_no_go_blocks,
         certificates["wz_g2_response_self_normalization_no_go"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "wz-g2-bare-running-bridge-attempt-blocks",
+        wz_g2_bare_running_bridge_attempt_blocks,
+        certificates["pr230_wz_g2_bare_running_bridge_attempt"].get(
             "actual_current_surface_status", ""
         ),
     )

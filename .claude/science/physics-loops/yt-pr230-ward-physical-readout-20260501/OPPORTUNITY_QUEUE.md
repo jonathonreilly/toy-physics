@@ -1347,3 +1347,17 @@ same-source W/Z response rows with identity/covariance/strict `g2`; genuine
 Schur `A/B/C` rows; a strict same-surface off-diagonal neutral generator or
 primitive transfer certificate; or strict scalar-LSZ infinite/tail
 moment/threshold/FV authority.
+
+2026-05-05 update: the W/Z `g2` bare-running bridge attempt is landed as an
+exact negative boundary.  Structural bare `g2` and SU(2) beta-function
+formulas do not fix the low-scale response coefficient without a same-source
+EW action, scale ratio, thresholds, and finite matching.  Do not spend another
+block trying to certify `g2` from generator/Casimir normalization,
+response-only self-normalization, convention choices, PSLQ/value recognition,
+or theorem names.  W/Z can reopen with a strict non-observed `g2` certificate
+from same-source EW action plus scale/matching, or with a genuinely same-source
+observable whose identity/covariance certificate cancels `g2`.  The cleanest
+positive queue remains: certified `O_H/C_sH/C_HH` pole rows; genuine W/Z rows
+with identity/covariance/strict `g2`; Schur `A/B/C` rows; strict scalar-LSZ
+moment/threshold/FV authority; or a neutral primitive-cone / irreducibility
+certificate.

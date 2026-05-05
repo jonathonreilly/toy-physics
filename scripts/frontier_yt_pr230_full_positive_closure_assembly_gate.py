@@ -76,6 +76,7 @@ PARENTS = {
     "wz_g2_generator_casimir_normalization_no_go": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
     "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
     "wz_g2_response_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
+    "wz_g2_bare_running_bridge_attempt": "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
     "canonical_higgs_operator": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "canonical_higgs_semantic_firewall": "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
@@ -258,6 +259,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "SU(2) generator/Casimir normalization rejected as g2 authority",
                 "strict non-observed g2 authority certificate absent",
                 "response-only g2 self-normalization rejected",
+                "bare-to-low-scale g2 running bridge not derivable without EW action, scale, thresholds, and matching",
                 "sector-overlap identity not derived",
                 "canonical-Higgs identity not derived",
             ],
@@ -287,6 +289,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["wz_g2_generator_casimir_normalization_no_go"],
                 PARENTS["wz_g2_authority_firewall"],
                 PARENTS["wz_g2_response_self_normalization_no_go"],
+                PARENTS["wz_g2_bare_running_bridge_attempt"],
                 PARENTS["same_source_sector_overlap"],
             ],
         },
@@ -1264,6 +1267,23 @@ def main() -> int:
         )
         is True,
         statuses["wz_g2_response_self_normalization_no_go"],
+    )
+    report(
+        "wz-g2-bare-running-bridge-attempt-blocks",
+        "WZ g2 bare-to-low-scale running bridge"
+        in statuses["wz_g2_bare_running_bridge_attempt"]
+        and certs["wz_g2_bare_running_bridge_attempt"].get("proposal_allowed") is False
+        and certs["wz_g2_bare_running_bridge_attempt"].get(
+            "wz_g2_bare_running_bridge_passed"
+        )
+        is False
+        and certs["wz_g2_bare_running_bridge_attempt"].get(
+            "strict_electroweak_g2_certificate_written"
+        )
+        is False
+        and certs["wz_g2_bare_running_bridge_attempt"].get("exact_negative_boundary_passed")
+        is True,
+        statuses["wz_g2_bare_running_bridge_attempt"],
     )
     report("scalar-lsz-model-fv-ir-blocked", scalar_lsz_blocks, "model-class/FV/IR/threshold controls still block retained use")
     report("source-overlap-bridge-absent", source_overlap_blocks, f"route_passes={any_bridge_passes}")

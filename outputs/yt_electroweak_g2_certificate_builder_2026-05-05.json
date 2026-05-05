@@ -44,17 +44,25 @@
       "path": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
       "present": true,
       "rejection": "response-only top/W/Z rows determine ratios, not absolute g2"
+    },
+    {
+      "accepted": false,
+      "name": "bare_to_low_scale_running_bridge",
+      "path": "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json",
+      "present": true,
+      "rejection": "bare/structural g2 plus beta-function running still needs same-source EW action, scale ratio, thresholds, and finite matching"
     }
   ],
   "exact_next_action": "Build a real allowed authority path for g2, e.g. a non-plaquette absolute EW normalization theorem or a strict measurement/certificate that satisfies the required future fields, then rerun the W/Z mass-fit response-row builder and full PR230 assembly gate.",
   "fail_count": 0,
   "parent_certificates": {
     "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
+    "wz_g2_bare_running_bridge_attempt": "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json",
     "wz_g2_generator_casimir_normalization_no_go": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
     "wz_g2_response_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json"
   },
-  "pass_count": 13,
+  "pass_count": 14,
   "proposal_allowed": false,
   "proposal_allowed_reason": "No accepted non-observed, non-forbidden PR230 g2 authority candidate is present.",
   "rejected_shortcuts": [
@@ -63,7 +71,8 @@
     "bare g2^2=1/4 without an allowed PR230 low-scale running/matching bridge",
     "SU(2) generator/Casimir normalization as physical g2",
     "W-mass companion rows that reuse the existing EW g2 lane",
-    "response-only W/Z self-normalization"
+    "response-only W/Z self-normalization",
+    "bare/structural g2 plus beta-function running without same-source EW action, scale ratio, thresholds, and finite matching"
   ],
   "required_future_certificate_fields": [
     "g2",

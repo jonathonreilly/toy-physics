@@ -3180,3 +3180,24 @@ selectors for missing row labels or normalizations.
 Reopen this route only with same-surface `A/B/C` rows or an equivalent
 precontracted Schur row definition certificate, then rerun the assumption
 stress, assembly, retained-route, and campaign gates.
+
+## 2026-05-05 - W/Z G2 Bare-To-Low-Scale Running Bridge
+
+No-go: the current PR230 surface does not derive a strict low-scale
+electroweak `g2` certificate from structural bare `g2` or the SU(2)
+beta-function formula.  The missing load-bearing inputs are a same-source EW
+action, bare coupling boundary condition, scale ratio, threshold content, and
+finite matching scheme.
+
+The certificate constructs a finite running/matching counterfamily in which
+the bare coupling and beta coefficient are held fixed while the low-scale
+`g2` changes.  Thus generator/Casimir normalization, response-only
+self-normalization, beta-function theorem names, PSLQ/value recognition,
+Picard-Fuchs/D-module, creative telescoping, exact tensor/PEPS, and
+free-probability methods cannot select the missing absolute coupling by
+convention.
+
+Reopen this route only with a same-source EW action plus scale/threshold/
+matching certificate, or with a different genuine physical-response observable
+whose certified ratio cancels `g2` without importing observed masses or
+forbidden package normalizations.

@@ -159,6 +159,7 @@
     "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
     "wz_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
     "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
+    "wz_g2_bare_running_bridge_attempt": "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json",
     "wz_g2_generator_casimir_normalization_no_go": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
     "wz_g2_response_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
     "wz_goldstone_equivalence_no_go": "outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json",
@@ -257,6 +258,7 @@
     "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
     "wz_certificate_gate": "open / same-source WZ response certificate gate not passed",
     "wz_g2_authority_firewall": "exact negative boundary / WZ response g2 authority absent for PR230",
+    "wz_g2_bare_running_bridge_attempt": "exact negative boundary / WZ g2 bare-to-low-scale running bridge not derivable on current PR230 surface",
     "wz_g2_generator_casimir_normalization_no_go": "exact negative boundary / SU2 generator-Casimir normalization does not certify PR230 g2",
     "wz_g2_response_self_normalization_no_go": "exact negative boundary / WZ response-only g2 self-normalization no-go",
     "wz_goldstone_equivalence_no_go": "exact negative boundary / WZ Goldstone equivalence does not identify PR230 source coordinate",
@@ -268,7 +270,7 @@
     "wz_smoke_to_production_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
   },
-  "pass_count": 82,
+  "pass_count": 83,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",
   "route_statuses": {
@@ -314,6 +316,7 @@
         "SU(2) generator/Casimir normalization rejected as g2 authority",
         "strict non-observed g2 authority certificate absent",
         "response-only g2 self-normalization rejected",
+        "bare-to-low-scale g2 running bridge not derivable without EW action, scale, thresholds, and matching",
         "sector-overlap identity not derived",
         "canonical-Higgs identity not derived"
       ],
@@ -343,6 +346,7 @@
         "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
         "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
         "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
+        "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json",
         "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json"
       ],
       "passes_current_surface": false

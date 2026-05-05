@@ -3886,6 +3886,29 @@ Same-source top/W/Z response rows determine ratios such as `y_t/g2` and
 `g2` cancellation/self-normalization is rejected on the actual PR230 surface.
 No effective-retention or proposed-retention wording is allowed.
 
+W/Z g2 bare-running bridge attempt:
+
+```text
+actual_current_surface_status: exact negative boundary / WZ g2 bare-to-low-scale running bridge not derivable on current PR230 surface
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_wz_g2_bare_running_bridge_attempt.py
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_electroweak_g2_certificate_builder.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=83 FAIL=0
+```
+
+The current surface lacks the same-source EW action, scale ratio, thresholds,
+and finite matching needed to turn structural bare `g2` into a low-scale
+response coefficient.  The strict electroweak `g2` certificate remains absent;
+the W/Z route remains open and cannot authorize effective-retention or
+proposed-retention wording.
+
 Electroweak `g2` certificate builder:
 
 ```text

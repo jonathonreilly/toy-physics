@@ -13,11 +13,26 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-229-schur-abc-definition-derivation
-blocks_completed: 229
-active_route: "Schur A/B/C definition derivation with outside-math firewall"
-active_hard_residual: "A Schur K-prime closure would need same-surface neutral scalar kernel basis, source/orthogonal projector, A/B/C block rows, block-derivative rows, and contact/FV/IR/canonical-bridge authority.  The current PR230 surface supplies source-denominator support but not the missing row definitions.  A finite nondegenerate counterfamily keeps D_eff = A - B C^{-1} B fixed while changing A/B/C rows, so exact tensor, PSLQ, Picard-Fuchs, creative telescoping, free-probability, Feshbach, and finite ladder support cannot define the rows by method name.  Runner PASS=19 FAIL=0, assumption stress PASS=26 FAIL=0, full assembly PASS=82 FAIL=0, retained-route PASS=230 FAIL=0, campaign status PASS=261 FAIL=0.  This is an exact negative boundary only; no Schur row file or definition certificate is written and no retained/proposed-retained closure is authorized."
+current_phase: campaign-block-230-wz-g2-bare-running-bridge
+blocks_completed: 230
+active_route: "W/Z g2 bare-to-low-scale running bridge"
+active_hard_residual: "A W/Z physical-response closure still needs strict non-observed g2 authority in addition to same-source W/Z rows, identity, covariance, and correction certificates.  The current PR230 surface has structural bare g2 and SU(2) beta-function support, but it lacks the same-source EW action, bare coupling boundary condition, scale ratio, threshold content, and finite matching scheme needed to transport bare g2 to a low-scale response coefficient.  A finite counterfamily changes low-scale g2 while preserving the same bare value and beta coefficient, so bare g2, beta-function formulas, generator/Casimir normalization, response-only self-normalization, and outside-math method names cannot supply strict g2 by convention.  Runner PASS=19 FAIL=0, g2 builder PASS=14 FAIL=0, assumption stress PASS=27 FAIL=0, full assembly PASS=83 FAIL=0, retained-route PASS=231 FAIL=0, campaign status PASS=262 FAIL=0.  This is an exact negative boundary only; no strict electroweak g2 certificate is written and no retained/proposed-retained closure is authorized."
 files_touched:
+  - "docs/YT_PR230_WZ_G2_BARE_RUNNING_BRIDGE_ATTEMPT_NOTE_2026-05-05.md"
+  - "scripts/frontier_yt_pr230_wz_g2_bare_running_bridge_attempt.py"
+  - "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json"
+  - "scripts/frontier_yt_electroweak_g2_certificate_builder.py"
+  - "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json"
+  - "scripts/frontier_yt_pr230_assumption_import_stress.py"
+  - "outputs/yt_pr230_assumption_import_stress_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py"
+  - "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/ASSUMPTIONS_AND_IMPORTS.md"
+  - ".claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/ASSUMPTIONS_AND_IMPORTS.md"
   - "docs/YT_PR230_SCHUR_ABC_DEFINITION_DERIVATION_ATTEMPT_NOTE_2026-05-05.md"
   - "scripts/frontier_yt_pr230_schur_abc_definition_derivation_attempt.py"
   - "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json"

@@ -74,6 +74,9 @@ def main() -> int:
         "schur_abc_definition_derivation_attempt": load(
             "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json"
         ),
+        "wz_g2_bare_running_bridge_attempt": load(
+            "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json"
+        ),
         "scalar_lsz_carleman_tauberian_determinacy_attempt": load(
             "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json"
         ),
@@ -150,6 +153,8 @@ def main() -> int:
         "not proof selectors until the mixed generator is derived on the same PR230 surface",
         "Schur A/B/C definition derivation",
         "not proof selectors until same-surface Schur A/B/C rows and projectors exist",
+        "W/Z g2 bare-running bridge",
+        "not proof selectors until same-source EW action, scale ratio, thresholds, and finite matching exist",
         "Carleman/Tauberian scalar-LSZ determinacy",
         "not proof selectors until an infinite same-surface moment/asymptotic certificate exists",
     ]
@@ -379,6 +384,17 @@ def main() -> int:
         and schur_abc_attempt.get("exact_negative_boundary_passed") is True,
         schur_abc_attempt.get("actual_current_surface_status"),
     )
+    wz_g2_running_attempt = certificates["wz_g2_bare_running_bridge_attempt"]
+    report(
+        "wz-g2-bare-running-attempt-does-not-certify-low-scale-g2",
+        "WZ g2 bare-to-low-scale running bridge"
+        in str(wz_g2_running_attempt.get("actual_current_surface_status"))
+        and wz_g2_running_attempt.get("proposal_allowed") is False
+        and wz_g2_running_attempt.get("wz_g2_bare_running_bridge_passed") is False
+        and wz_g2_running_attempt.get("strict_electroweak_g2_certificate_written") is False
+        and wz_g2_running_attempt.get("exact_negative_boundary_passed") is True,
+        wz_g2_running_attempt.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -424,7 +440,11 @@ def main() -> int:
             "attempt adds it for row-definition machinery: outside math can compute defined "
             "Schur rows but cannot supply the missing neutral kernel basis, "
             "source/orthogonal projector, or A/B/C labels from source-only "
-            "denominator data.  The Carleman/Tauberian scalar-LSZ "
+            "denominator data.  The W/Z g2 bare-running bridge attempt adds "
+            "the same firewall for electroweak running: structural bare g2 "
+            "and beta-function formulas do not supply the same-source EW "
+            "action, scale ratio, thresholds, finite matching, or strict g2 "
+            "certificate.  The Carleman/Tauberian scalar-LSZ "
             "determinacy attempt adds the same firewall for moment theory: "
             "finite scalar shell/moment prefixes are not proof selectors until "
             "an infinite same-surface moment/asymptotic certificate exists.  No current route "

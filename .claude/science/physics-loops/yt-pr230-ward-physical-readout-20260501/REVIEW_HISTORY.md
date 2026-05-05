@@ -5570,3 +5570,23 @@ does not define the neutral scalar kernel basis, source/orthogonal projector,
 bridge.  Outside-math tools remain allowed only as future row-certificate
 engines after those objects are defined.  No effective-retention or
 proposed-retention wording is allowed.
+
+## 2026-05-05 - Block 207 W/Z G2 Bare-Running Bridge Attempt
+
+Review stance: W/Z electroweak-coupling no-go / exact negative boundary.
+
+- Added `scripts/frontier_yt_pr230_wz_g2_bare_running_bridge_attempt.py`.
+- Added `docs/YT_PR230_WZ_G2_BARE_RUNNING_BRIDGE_ATTEMPT_NOTE_2026-05-05.md`.
+- Added `outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json`.
+- Refreshed the strict electroweak `g2` builder and wired the attempt into
+  assumption stress, full assembly, retained-route, and campaign-status
+  certificates.
+- Validation: runner `PASS=19 FAIL=0`, `g2` builder `PASS=14 FAIL=0`,
+  assumption stress `PASS=27 FAIL=0`, full assembly `PASS=83 FAIL=0`,
+  retained-route `PASS=231 FAIL=0`, campaign status `PASS=262 FAIL=0`.
+
+Disposition: exact negative boundary.  Bare `g2` and beta-function formulas
+do not supply the same-source EW action, scale ratio, thresholds, or finite
+matching needed for strict low-scale `g2` authority.  The strict electroweak
+`g2` certificate is not written.  No effective-retention or proposed-retention
+wording is allowed.

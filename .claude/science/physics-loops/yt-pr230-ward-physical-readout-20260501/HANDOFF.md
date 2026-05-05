@@ -3353,6 +3353,46 @@ Result: the same-source W/Z response ratio still needs a strict, non-observed
 current alpha/plaquette/u0 and audit-authority firewalls.  No
 retained/proposed-retained wording is authorized.
 
+## 2026-05-05 - W/Z G2 Bare-Running Bridge Attempt
+
+The W/Z `g2` route is now explicitly blocked at the bare-to-low-scale
+running/matching layer:
+
+```text
+python3 scripts/frontier_yt_pr230_wz_g2_bare_running_bridge_attempt.py
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_electroweak_g2_certificate_builder.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=27 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=83 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=231 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=262 FAIL=0
+```
+
+The runner treats bare `g2`, structural beta-function formulas,
+generator/Casimir normalization, response-only self-normalization, and outside
+math method names as support only.  A finite running counterfamily keeps the
+same bare value and beta coefficient while changing low-scale `g2`, so the
+current PR230 surface cannot write a strict electroweak `g2` certificate
+without a same-source EW action, scale ratio, threshold content, and finite
+matching scheme.
+
+Next exact action: supply that strict non-observed `g2` certificate, or route
+around `g2` with a genuinely same-source physical observable and identity /
+covariance certificate.  Otherwise the cleanest positive queue remains
+`O_H/C_sH/C_HH` pole rows, genuine W/Z response rows, Schur `A/B/C` rows,
+strict scalar-LSZ moment/threshold/FV authority, or a neutral primitive-cone
+certificate.  No retained/proposed-retained wording is authorized.
+
 Next exact action: keep chunks019-024 running; package them only after root
 artifacts land and pass the polefit8x8 combiner/postprocessor/gates.  In
 parallel, either supply an allowed `g2` certificate, derive a `g2`-canceling

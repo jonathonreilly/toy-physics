@@ -1,0 +1,157 @@
+{
+  "actual_current_surface_status": "exact negative boundary / WZ g2 bare-to-low-scale running bridge not derivable on current PR230 surface",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "bridge_contract": [
+    {
+      "current_satisfied": false,
+      "id": "same_source_ew_action",
+      "required": "same-source SU(2)xU(1)/Higgs lattice action with gauge kinetic normalization"
+    },
+    {
+      "current_satisfied": false,
+      "id": "bare_coupling_boundary_condition",
+      "required": "accepted bare electroweak coupling boundary condition in that action"
+    },
+    {
+      "current_satisfied": false,
+      "id": "scale_ratio",
+      "required": "same-surface relation between lattice cutoff/renormalization scale and the physical readout scale"
+    },
+    {
+      "current_satisfied": false,
+      "id": "threshold_content",
+      "required": "field content and threshold ordering for running from the bare scale to readout scale"
+    },
+    {
+      "current_satisfied": false,
+      "id": "finite_matching_scheme",
+      "required": "scheme and finite matching constants for converting action coupling to g2(v)"
+    },
+    {
+      "current_satisfied": true,
+      "id": "forbidden_import_firewall",
+      "required": "no observed values, package alpha/plaquette/u0/R_conn, H_unit, Ward, or unit normalizations"
+    }
+  ],
+  "conditional_surface_status": "conditional-support if a future same-source EW action, accepted bare coupling boundary condition, scale ratio, threshold content, finite matching scheme, and forbidden-import firewall certificate are supplied",
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "Supply a same-source EW action and strict non-observed g2 running/matching certificate with scale ratio, threshold content, finite matching scheme, and firewall fields, then rerun the electroweak g2 builder, W/Z mass-fit row builder, assembly, retained-route, and campaign gates.",
+  "fail_count": 0,
+  "forbidden_inputs_checked": [
+    "observed g2, observed W/Z mass, observed top mass, or observed y_t",
+    "alpha_LM / plaquette / u0 / R_conn package coupling authority",
+    "H_unit matrix-element readout",
+    "yt_ward_identity",
+    "response-only self-normalization",
+    "SU(2) generator/Casimir normalization as physical g2",
+    "unit c2, Z_match, or kappa_s"
+  ],
+  "hypothetical_axiom_status": null,
+  "missing_bridge_contract": [
+    "same_source_ew_action",
+    "bare_coupling_boundary_condition",
+    "scale_ratio",
+    "threshold_content",
+    "finite_matching_scheme"
+  ],
+  "parent_certificates": {
+    "electroweak_g2_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
+    "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "matching_running_bridge": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
+    "retained_closure_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
+    "wz_g2_generator_casimir_no_go": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
+    "wz_g2_response_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
+    "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
+    "wz_same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json"
+  },
+  "parent_statuses": {
+    "electroweak_g2_builder": "open / electroweak g2 certificate builder inputs absent",
+    "full_positive_closure_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
+    "matching_running_bridge": "open / PR230 matching-running bridge awaits certified physical input",
+    "retained_closure_route": "open / retained closure not yet reached",
+    "wz_g2_authority_firewall": "exact negative boundary / WZ response g2 authority absent for PR230",
+    "wz_g2_generator_casimir_no_go": "exact negative boundary / SU2 generator-Casimir normalization does not certify PR230 g2",
+    "wz_g2_response_self_normalization_no_go": "exact negative boundary / WZ response-only g2 self-normalization no-go",
+    "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
+    "wz_same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface"
+  },
+  "pass_count": 19,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current PR230 surface has structural SU(2) beta-function and bare-coupling candidates, but no same-source EW action, scale ratio, threshold/matching scheme, or strict g2 certificate.  The low-scale g2 changes under unprovided running and finite-matching data.",
+  "running_and_matching_counterfamily": {
+    "bare_g2_squared": 0.25,
+    "beta_abs_coefficient_used_for_counterfamily": 3.1666666666666665,
+    "counterfamily_interpretation": "The same structural bare coupling and one-loop beta coefficient produce different low-scale g2 values when the unprovided scale ratio or finite matching shift is changed.",
+    "finite_matching_scheme_family": [
+      {
+        "finite_matching_shift_in_inverse_g2": -0.08,
+        "g2_low_scale": 0.5050762722761054
+      },
+      {
+        "finite_matching_shift_in_inverse_g2": -0.03,
+        "g2_low_scale": 0.5018856132284956
+      },
+      {
+        "finite_matching_shift_in_inverse_g2": 0.0,
+        "g2_low_scale": 0.5
+      },
+      {
+        "finite_matching_shift_in_inverse_g2": 0.04,
+        "g2_low_scale": 0.4975185951049946
+      },
+      {
+        "finite_matching_shift_in_inverse_g2": 0.1,
+        "g2_low_scale": 0.49386479832479485
+      }
+    ],
+    "g2_max": 0.5213462778387279,
+    "g2_min": 0.4810778752916608,
+    "g2_spread": 0.040268402547067095,
+    "scale_ratio_family": [
+      {
+        "g2_low_scale": 0.5213462778387279,
+        "inverse_coupling_shift": -0.32085041486740296,
+        "log_scale_ratio": -8.0
+      },
+      {
+        "g2_low_scale": 0.5050899694012186,
+        "inverse_coupling_shift": -0.08021260371685074,
+        "log_scale_ratio": -2.0
+      },
+      {
+        "g2_low_scale": 0.5,
+        "inverse_coupling_shift": 0.0,
+        "log_scale_ratio": 0.0
+      },
+      {
+        "g2_low_scale": 0.49264557301663786,
+        "inverse_coupling_shift": 0.12031890557527611,
+        "log_scale_ratio": 3.0
+      },
+      {
+        "g2_low_scale": 0.4810778752916608,
+        "inverse_coupling_shift": 0.32085041486740296,
+        "log_scale_ratio": 8.0
+      }
+    ]
+  },
+  "strict_electroweak_g2_certificate_path": "outputs/yt_electroweak_g2_certificate_2026-05-04.json",
+  "strict_electroweak_g2_certificate_written": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not write the strict electroweak g2 certificate",
+    "does not import observed g2, W/Z/top/y_t values, alpha_LM, plaquette, u0, R_conn, H_unit, or Ward authority",
+    "does not treat g2^2=1/4, beta-function names, SU2 Casimir data, or package g2(v) as proof authority",
+    "does not set c2=1, Z_match=1, or kappa_s=1"
+  ],
+  "support_documents": {
+    "ew_color": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
+    "ew_higgs_mass": "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md",
+    "minimal_axioms": "docs/MINIMAL_AXIOMS_2026-04-11.md",
+    "su2_beta": "docs/SU2_WEAK_BETA_COEFFICIENT_STRUCTURAL_CLOSED_FORM_THEOREM_NOTE_2026-04-26.md"
+  },
+  "wz_g2_bare_running_bridge_passed": false
+}
