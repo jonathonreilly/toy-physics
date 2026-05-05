@@ -1,5 +1,51 @@
 # Handoff
 
+## 2026-05-05 PR230 Non-Chunk Cycle-20 Process-Gate Continuation No-Go
+
+Cycle 20 tested the only process-level continuation after the cycle-19
+no-duplicate-route gate: whether another branch-local process gate can itself
+count as a new PR230 non-chunk science route without first receiving a fresh
+parseable same-surface row, certificate, or theorem.
+
+Result: exact negative boundary.  The runner reloads the worklist,
+route-family audit, current-surface exhaustion gate, future-artifact intake
+gate, terminal route-exhaustion gate, reopen-admissibility gate, cycle-14
+selector, cycle-15 independent-route admission gate, cycle-16 reopen-source
+guard, cycle-17 stop-condition gate, cycle-18 reopen-freshness gate, cycle-19
+no-duplicate-route gate, full assembly gate, retained-route certificate, and
+campaign certificate.  It verifies that all parents pass, no parent authorizes
+a proposal, local and remote PR heads remain aligned at the cycle-19 head, all
+six worklist units remain blocked, no route family is executable, every listed
+reopen-source key and future path remains absent, and aggregate gates still
+deny proposal authority.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=60 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=208 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=235 FAIL=0
+```
+
+Claim boundary: no closure proposal, no chunk packaging, no process-only
+continuation as a science route, and no admissible reopen source remains on
+this branch.
+
+Next exact action: stop PR230 current-surface non-chunk cycling on this branch.
+Reopen only after a listed same-surface row, certificate, or theorem exists as
+a parseable claim-status artifact; then rerun reopen-admissibility, worklist,
+exhaustion, intake, independent-route admission, cycle-16, cycle-17, cycle-18,
+cycle-19, cycle-20, assembly, retained-route, and campaign gates before any
+proposal language.
+
 ## 2026-05-05 PR230 Non-Chunk Cycle-19 No-Duplicate-Route Gate
 
 Cycle 19 tested the only admissible continuation after the cycle-18

@@ -4,17 +4,26 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact negative boundary / PR230 non-chunk cycle-19 no-duplicate-route gate: no new current-surface non-chunk route is admissible without a fresh parseable same-surface artifact; positive closure still open
-active_residual: "Cycle 19 tests the only admissible continuation after cycle 18: whether another non-chunk route can be selected without replaying an already closed family.  All six worklist units remain blocked, no route family is executable, no listed reopen artifact is present, local and remote PR heads remain aligned at the cycle-18 head, and aggregate gates still deny proposal authority."
+actual_current_surface_status: exact negative boundary / PR230 non-chunk cycle-20 process-gate continuation no-go: no further branch-local process gate is an admissible science route without a fresh parseable same-surface artifact; positive closure still open
+active_residual: "Cycle 20 tests the only admissible process-level continuation after cycle 19: whether another branch-local process gate can itself count as a new science route without fresh same-surface input.  All six worklist units remain blocked, no route family is executable, no listed reopen artifact is present, local and remote PR heads remain aligned at the cycle-19 head, and aggregate gates still deny proposal authority."
 latest_checkpoint:
-  utc: "2026-05-05T08:50:37Z"
-  block: 76
-  artifact: "cycle-19 no-duplicate-route gate"
-  status: "exact negative boundary / no new current-surface non-chunk route is admissible without a fresh parseable same-surface artifact; positive closure still open"
-  result: "The no-duplicate-route gate verifies that all parents pass, no parent authorizes a proposal, the cycle-18 head remains on local and remote branch history, local and remote PR heads remain aligned at that head, all six worklist units remain blocked, no route family is executable, every listed reopen-source key and future path remains absent, and aggregate gates continue to deny proposal authority."
-  claim_boundary: "no closure proposal, no chunk packaging, no replay of a closed non-chunk family as a new route, and no admissible reopen until a listed same-surface row, certificate, or theorem exists as a parseable claim-status artifact and the aggregate gates are rerun"
+  utc: "2026-05-05T09:10:01Z"
+  block: 77
+  artifact: "cycle-20 process-gate continuation no-go"
+  status: "exact negative boundary / no further branch-local process gate is an admissible science route without a fresh parseable same-surface artifact; positive closure still open"
+  result: "The process-gate continuation no-go verifies that all parents pass, no parent authorizes a proposal, the cycle-19 head remains on local and remote branch history, local and remote PR heads remain aligned at that head, all six worklist units remain blocked, no route family is executable, process gates through cycle 19 remain closed, every listed reopen-source key and future path remains absent, and aggregate gates continue to deny proposal authority."
+  claim_boundary: "no closure proposal, no chunk packaging, no process-only continuation as a science route, and no admissible reopen until a listed same-surface row, certificate, or theorem exists as a parseable claim-status artifact and the aggregate gates are rerun"
   live_compute: "chunk worker remains separate; this checkpoint loads no chunk MC"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go.py
+    - docs/YT_PR230_NONCHUNK_CYCLE20_PROCESS_GATE_CONTINUATION_NO_GO_NOTE_2026-05-05.md
+    - outputs/yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go_2026-05-05.json
+    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+    - scripts/frontier_yt_retained_closure_route_certificate.py
+    - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+    - scripts/frontier_yt_pr230_campaign_status_certificate.py
+    - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
     - scripts/frontier_yt_pr230_nonchunk_cycle19_no_duplicate_route_gate.py
     - docs/YT_PR230_NONCHUNK_CYCLE19_NO_DUPLICATE_ROUTE_GATE_NOTE_2026-05-05.md
     - outputs/yt_pr230_nonchunk_cycle19_no_duplicate_route_gate_2026-05-05.json

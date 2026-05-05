@@ -18,8 +18,25 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=207 FAIL=0
+# SUMMARY: PASS=208 FAIL=0
 ```
+
+## 2026-05-05 Non-Chunk Cycle-20 Process-Gate Continuation Update
+
+The retained-route certificate now consumes
+`outputs/yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go_2026-05-05.json`.
+This records the post-cycle-19 process-continuation firewall: all six
+non-chunk worklist units remain blocked, no route family is executable, no
+listed same-surface artifact is present for admissible reopen, and another
+branch-local process gate is not itself an admissible science route.
+
+Validation: cycle-20 process-gate continuation no-go `PASS=15 FAIL=0`;
+retained-route `PASS=208 FAIL=0`; campaign status `PASS=235 FAIL=0`; full
+positive closure assembly gate `PASS=60 FAIL=0`.
+
+No closure proposal is authorized.  Reopen only after a listed same-surface
+artifact exists as a parseable claim-status artifact, then rerun cycle-19,
+cycle-20, and aggregate gates before proposal language.
 
 ## 2026-05-05 Non-Chunk Cycle-19 No-Duplicate-Route Update
 

@@ -95,6 +95,7 @@ PARENTS = {
     "nonchunk_cycle17_stop_condition_gate": "outputs/yt_pr230_nonchunk_cycle17_stop_condition_gate_2026-05-05.json",
     "nonchunk_cycle18_reopen_freshness_gate": "outputs/yt_pr230_nonchunk_cycle18_reopen_freshness_gate_2026-05-05.json",
     "nonchunk_cycle19_no_duplicate_route_gate": "outputs/yt_pr230_nonchunk_cycle19_no_duplicate_route_gate_2026-05-05.json",
+    "nonchunk_cycle20_process_gate_continuation_no_go": "outputs/yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -552,6 +553,22 @@ def main() -> int:
         ).get("passed")
         is False
     )
+    nonchunk_cycle20_process_gate_continuation_closed = (
+        "cycle-20 process-gate continuation no-go"
+        in statuses["nonchunk_cycle20_process_gate_continuation_no_go"]
+        and certs["nonchunk_cycle20_process_gate_continuation_no_go"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["nonchunk_cycle20_process_gate_continuation_no_go"].get(
+            "process_gate_continuation_no_go_passed"
+        )
+        is True
+        and certs["nonchunk_cycle20_process_gate_continuation_no_go"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
 
     current_state = {
         "production_physical_response": False,
@@ -996,6 +1013,11 @@ def main() -> int:
         nonchunk_cycle19_no_duplicate_route_closed,
         statuses["nonchunk_cycle19_no_duplicate_route_gate"],
     )
+    report(
+        "nonchunk-cycle20-process-gate-continuation-no-go-recorded",
+        nonchunk_cycle20_process_gate_continuation_closed,
+        statuses["nonchunk_cycle20_process_gate_continuation_no_go"],
+    )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
@@ -1034,7 +1056,10 @@ def main() -> int:
             "admissible reopen.  The cycle-19 no-duplicate-route gate records "
             "that another current-surface route selection would only replay a "
             "closed non-chunk family until a fresh parseable same-surface "
-            "artifact exists."
+            "artifact exists.  The cycle-20 process-gate continuation no-go "
+            "records that another branch-local process gate is not itself a "
+            "science route unless a fresh parseable same-surface artifact "
+            "exists first."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
@@ -1071,6 +1096,7 @@ def main() -> int:
             "does not treat cycle-17 non-chunk stop condition as positive evidence",
             "does not treat cycle-18 reopen freshness as positive evidence",
             "does not treat cycle-19 no-duplicate-route closure as positive evidence",
+            "does not treat cycle-20 process-gate continuation closure as positive evidence",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks.  In parallel, "
@@ -1086,8 +1112,8 @@ def main() -> int:
             "the cycle-16 reopen-source guard, and the cycle-17 stop-condition "
             "gate, plus the cycle-18 reopen-freshness gate, before any "
             "retained-route proposal.  The cycle-19 no-duplicate-route gate "
-            "must also rerun if no fresh parseable same-surface artifact has "
-            "appeared."
+            "and cycle-20 process-gate continuation no-go must also rerun if "
+            "no fresh parseable same-surface artifact has appeared."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

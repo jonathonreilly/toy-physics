@@ -28,8 +28,27 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=234 FAIL=0
+# SUMMARY: PASS=235 FAIL=0
 ```
+
+## 2026-05-05 Cycle-20 Process-Gate Continuation Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go_2026-05-05.json`.
+After the cycle-19 no-duplicate-route gate, the cycle-20 gate checks whether a
+new branch-local process gate can itself count as an admissible science route.
+It cannot.  Without a fresh parseable same-surface artifact, process-only
+continuation would restate the stopped surface rather than move claim state.
+
+Validation: cycle-20 process-gate continuation no-go `PASS=15 FAIL=0`; full
+positive closure assembly gate `PASS=60 FAIL=0`; retained-route `PASS=208
+FAIL=0`; campaign status `PASS=235 FAIL=0`.
+
+The campaign target remains open, but the current PR230 non-chunk scope is now
+stopped for this branch.  Reopen only after an admissible strict future artifact
+exists and the worklist, exhaustion, intake, independent-route, cycle-16,
+cycle-17, cycle-18, cycle-19, cycle-20, assembly, retained-route, and campaign
+gates are rerun.
 
 ## 2026-05-05 Cycle-19 No-Duplicate-Route Update
 

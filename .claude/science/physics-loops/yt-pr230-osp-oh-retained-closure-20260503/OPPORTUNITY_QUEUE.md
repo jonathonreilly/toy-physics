@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+Cycle-20 update: the process-gate continuation no-go now checks the only
+remaining process-level continuation after cycle 19.  No further branch-local
+process gate is an admissible science route without a fresh parseable
+same-surface artifact; a process-only continuation would restate the stopped
+surface rather than move claim state.  All six worklist units remain blocked,
+no route family is executable, and aggregate gates still deny proposal
+authority.  The non-chunk scope is stopped on this branch until a listed
+same-surface row, certificate, or theorem exists as a parseable claim-status
+artifact and the reopen-admissibility, worklist, exhaustion, intake,
+independent-route, cycle-16, cycle-17, cycle-18, cycle-19, cycle-20, assembly,
+retained-route, and campaign gates all rerun.
+
 Cycle-19 update: the no-duplicate-route gate has now checked the only
 admissible continuation after cycle 18.  No current-surface non-chunk route is
 admissible without a fresh parseable same-surface artifact; all six worklist

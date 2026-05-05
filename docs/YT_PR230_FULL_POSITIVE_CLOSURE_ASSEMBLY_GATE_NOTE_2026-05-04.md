@@ -176,6 +176,13 @@ After cycle 18, another current-surface route selection would only replay a
 closed non-chunk family unless a fresh parseable same-surface artifact exists.
 The assembly gate remains open with `PASS=59 FAIL=0`.
 
+2026-05-05 cycle-20 process-gate continuation update: the gate now also
+consumes
+`outputs/yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go_2026-05-05.json`.
+After cycle 19, another branch-local process gate is not itself an admissible
+science route unless a fresh parseable same-surface artifact exists first.  The
+assembly gate remains open with `PASS=60 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 
@@ -215,5 +222,5 @@ covariance control, Schur `A/B/C` kernel rows, neutral-sector primitive-cone
 irreducibility, or scalar-LSZ moment/threshold/FV authority.  A path alone is
 not enough; the candidate must pass the reopen-admissibility gate first.  Then
 rerun the worklist, exhaustion, intake, independent-route, cycle-16, cycle-17,
-cycle-18, cycle-19, assembly, retained-route, and campaign gates before any proposal
-language.
+cycle-18, cycle-19, cycle-20, assembly, retained-route, and campaign gates
+before any proposal language.

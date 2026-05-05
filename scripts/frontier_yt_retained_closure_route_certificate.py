@@ -163,6 +163,7 @@ def main() -> int:
         "pr230_nonchunk_cycle17_stop_condition_gate": "outputs/yt_pr230_nonchunk_cycle17_stop_condition_gate_2026-05-05.json",
         "pr230_nonchunk_cycle18_reopen_freshness_gate": "outputs/yt_pr230_nonchunk_cycle18_reopen_freshness_gate_2026-05-05.json",
         "pr230_nonchunk_cycle19_no_duplicate_route_gate": "outputs/yt_pr230_nonchunk_cycle19_no_duplicate_route_gate_2026-05-05.json",
+        "pr230_nonchunk_cycle20_process_gate_continuation_no_go": "outputs/yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go_2026-05-05.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
@@ -2214,6 +2215,24 @@ def main() -> int:
         ).get("passed")
         is False
     )
+    pr230_nonchunk_cycle20_process_gate_continuation_blocks = (
+        "cycle-20 process-gate continuation no-go"
+        in certificates["pr230_nonchunk_cycle20_process_gate_continuation_no_go"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_nonchunk_cycle20_process_gate_continuation_no_go"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_cycle20_process_gate_continuation_no_go"].get(
+            "process_gate_continuation_no_go_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_cycle20_process_gate_continuation_no_go"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
     interacting_kinetic_still_open = (
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status")
         == "bounded-support / interacting kinetic background sensitivity"
@@ -3290,6 +3309,13 @@ def main() -> int:
         ),
     )
     report(
+        "pr230-nonchunk-cycle20-process-gate-continuation-blocks-churn",
+        pr230_nonchunk_cycle20_process_gate_continuation_blocks,
+        certificates["pr230_nonchunk_cycle20_process_gate_continuation_no_go"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "interacting-kinetic-route-still-needs-ensemble-or-theorem",
         interacting_kinetic_still_open,
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status", ""),
@@ -3666,7 +3692,9 @@ def main() -> int:
             "admissible reopen.  The cycle-19 no-duplicate-route gate records "
             "that another current-surface route selection would only replay a "
             "closed non-chunk family until a fresh parseable same-surface "
-            "artifact exists."
+            "artifact exists.  The cycle-20 process-gate continuation no-go "
+            "records that another process-only gate is also not an admissible "
+            "science route until that fresh same-surface artifact exists."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

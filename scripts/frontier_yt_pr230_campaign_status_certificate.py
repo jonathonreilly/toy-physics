@@ -190,6 +190,9 @@ def main() -> int:
         "pr230_nonchunk_cycle19_no_duplicate_route_gate": load(
             "outputs/yt_pr230_nonchunk_cycle19_no_duplicate_route_gate_2026-05-05.json"
         ),
+        "pr230_nonchunk_cycle20_process_gate_continuation_no_go": load(
+            "outputs/yt_pr230_nonchunk_cycle20_process_gate_continuation_no_go_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -2557,6 +2560,24 @@ def main() -> int:
         is False,
         statuses["pr230_nonchunk_cycle19_no_duplicate_route_gate"],
     )
+    report(
+        "pr230-nonchunk-cycle20-process-gate-continuation-no-go-recorded",
+        "cycle-20 process-gate continuation no-go"
+        in str(statuses["pr230_nonchunk_cycle20_process_gate_continuation_no_go"])
+        and certificates["pr230_nonchunk_cycle20_process_gate_continuation_no_go"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_cycle20_process_gate_continuation_no_go"].get(
+            "process_gate_continuation_no_go_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_cycle20_process_gate_continuation_no_go"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False,
+        statuses["pr230_nonchunk_cycle20_process_gate_continuation_no_go"],
+    )
 
     remaining_routes = [
         {
@@ -2602,6 +2623,10 @@ def main() -> int:
         {
             "route": "non-chunk stop condition",
             "needed": "no executable current-surface non-chunk route remains on this branch before a named same-surface artifact exists",
+        },
+        {
+            "route": "process-gate continuation",
+            "needed": "do not continue with process-only gates as science routes before a named same-surface artifact exists",
         },
     ]
 
@@ -2882,7 +2907,9 @@ def main() -> int:
             "cycle-19 no-duplicate-route gate records that another "
             "current-surface route selection would only replay a closed "
             "non-chunk family until a fresh parseable same-surface artifact "
-            "exists."
+            "exists.  The cycle-20 process-gate continuation no-go records "
+            "that another process-only gate is also not an admissible science "
+            "route until that fresh same-surface artifact exists."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
@@ -2917,7 +2944,9 @@ def main() -> int:
         "for admissible reopen.  The cycle-19 no-duplicate-route gate records "
         "that another current-surface route selection would only replay a "
         "closed non-chunk family until a fresh parseable same-surface artifact "
-        "exists."
+        "exists.  The cycle-20 process-gate continuation no-go records that "
+        "another process-only gate is also not an admissible science route "
+        "until that fresh same-surface artifact exists."
     )
     result["strict_non_claims"] = [
         "does not claim retained closure",
@@ -2925,6 +2954,7 @@ def main() -> int:
         "does not use external target values as proof inputs",
         "does not allow forbidden matrix-element, operator, coupling, target, or unit shortcuts",
         "does not treat chunk completion alone as positive retained closure",
+        "does not treat process-only gates as proof inputs",
     ]
     OUTPUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"\nWrote certificate: {OUTPUT.relative_to(ROOT)}")
