@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 588,
+    "critical": 587,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -3039,27 +3039,6 @@
       "ready": true,
       "runner_path": "scripts/persistent_object_top4_multistage_transfer_sweep.py",
       "transitive_descendants": 288
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "self_gravity_backreaction_closure_note",
-      "claim_scope": "A bounded no-go for the exact-lattice Poisson-like self-gravity backreaction runner and retained audit row under exact epsilon-zero reduction, convergence, and Born-control checks.",
-      "claim_type": "no_go",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.165,
-      "note_path": "docs/SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
-      "transitive_descendants": 286
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -22449,6 +22428,30 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "self_gravity_failure_diagnosis",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "poisson_self_gravity_loop_v3_note",
+        "self_gravity_backreaction_closure_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/SELF_GRAVITY_FAILURE_DIAGNOSIS.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "staggered_graph_failure_map_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -26309,30 +26312,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "self_gravity_failure_diagnosis",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "poisson_self_gravity_loop_v3_note",
-        "self_gravity_backreaction_closure_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SELF_GRAVITY_FAILURE_DIAGNOSIS.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "shapiro_experimental_card",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -27215,5 +27194,5 @@
     }
   ],
   "ready_count": 67,
-  "total_pending": 926
+  "total_pending": 925
 }
