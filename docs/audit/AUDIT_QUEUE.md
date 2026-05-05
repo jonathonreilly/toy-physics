@@ -1,10 +1,10 @@
 # Audit Queue
 
-**Total pending:** 943
-**Ready (all deps already at retained-grade or metadata tiers):** 79
+**Total pending:** 942
+**Ready (all deps already at retained-grade or metadata tiers):** 80
 
 By criticality:
-- `critical`: 605
+- `critical`: 604
 - `high`: 23
 - `medium`: 120
 - `leaf`: 195
@@ -20,13 +20,13 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 3 | `pmns_oriented_cycle_reduced_channel_nonselection_note` | positive_theorem | unaudited | critical | 289 | 10.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py` |
 | 4 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | audit_in_progress | critical | 288 | 14.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py` |
 | 5 | `quark_route2_exact_time_coupling_note_2026-04-19` | positive_theorem | unaudited | critical | 288 | 12.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_quark_route2_exact_time_coupling.py` |
-| 6 | `koide_dweh_cyclic_compression_note_2026-04-18` | positive_theorem | audit_in_progress | critical | 288 | 10.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_dweh_cyclic_compression.py` |
-| 7 | `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16` | bounded_theorem | unaudited | critical | 288 | 9.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/persistent_object_top4_multistage_transfer_sweep.py` |
-| 8 | `kubo_continuum_limit_note` | positive_theorem | unaudited | critical | 288 | 9.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/kubo_continuum_limit.py` |
-| 9 | `dm_neutrino_cascade_geometry_note_2026-04-14` | bounded_theorem | audit_in_progress | critical | 287 | 10.67 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_cascade_geometry.py` |
-| 10 | `hierarchy_spatial_bc_and_u0_scaling_note` | bounded_theorem | audit_in_progress | critical | 287 | 10.17 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_hierarchy_spatial_bc_and_u0_scaling.py` |
-| 11 | `dm_selector_first_shoulder_exit_threshold_support_note_2026-04-21` | open_gate | unaudited | critical | 287 | 9.17 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_selector_first_shoulder_exit_threshold_support_2026_04_21.py` |
-| 12 | `dm_selector_threshold_stabilization_support_theorem_note_2026-04-21` | open_gate | unaudited | critical | 287 | 8.67 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_selector_threshold_stabilization_support_2026_04_21.py` |
+| 6 | `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16` | bounded_theorem | unaudited | critical | 288 | 9.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/persistent_object_top4_multistage_transfer_sweep.py` |
+| 7 | `kubo_continuum_limit_note` | positive_theorem | unaudited | critical | 288 | 9.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/kubo_continuum_limit.py` |
+| 8 | `dm_neutrino_cascade_geometry_note_2026-04-14` | bounded_theorem | audit_in_progress | critical | 287 | 10.67 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_cascade_geometry.py` |
+| 9 | `hierarchy_spatial_bc_and_u0_scaling_note` | bounded_theorem | audit_in_progress | critical | 287 | 10.17 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_hierarchy_spatial_bc_and_u0_scaling.py` |
+| 10 | `dm_selector_first_shoulder_exit_threshold_support_note_2026-04-21` | open_gate | unaudited | critical | 287 | 9.17 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_selector_first_shoulder_exit_threshold_support_2026_04_21.py` |
+| 11 | `dm_selector_threshold_stabilization_support_theorem_note_2026-04-21` | open_gate | unaudited | critical | 287 | 8.67 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_selector_threshold_stabilization_support_2026_04_21.py` |
+| 12 | `koide_cyclic_wilson_descendant_law_note_2026-04-18` | positive_theorem | unaudited | critical | 286 | 10.66 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_cyclic_wilson_descendant_law.py` |
 | 13 | `hierarchy_matsubara_decomposition_note` | positive_theorem | audit_in_progress | critical | 286 | 10.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_hierarchy_matsubara_decomposition.py` |
 | 14 | `dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15` | positive_theorem | audit_in_progress | critical | 286 | 9.66 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_odd_circulant_z2_slot_theorem.py` |
 | 15 | `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | positive_theorem | audit_in_progress | critical | 286 | 9.66 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_z3_character_transfer_theorem.py` |
