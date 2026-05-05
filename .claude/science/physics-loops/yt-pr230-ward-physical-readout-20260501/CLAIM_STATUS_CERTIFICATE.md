@@ -1,5 +1,26 @@
 # Claim Status Certificate
 
+Exact tensor/PEPS Schur-row feasibility:
+
+```text
+actual_current_surface_status: exact negative boundary / exact tensor Schur A/B/C row feasibility blocked on current PR230 surface
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_exact_tensor_schur_row_feasibility_attempt.py
+# SUMMARY: PASS=18 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=256 FAIL=0
+```
+
+Exact tensor/PEPS contraction can evaluate a defined finite tensor network, but
+the current PR230 surface does not yet define the neutral scalar kernel basis,
+source/orthogonal projector, `A/B/C` row operators, contact/FV/IR conventions,
+or certified row contraction.  The row-definition counterfamily keeps the
+source-only tensor marginal fixed while changing `A/B/C` rows.  No Schur rows
+were written, and no retained or `proposed_retained` wording is authorized.
+
 FH/LSZ polefit8x8 chunks061-063 completion:
 
 ```text

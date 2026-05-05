@@ -1,5 +1,18 @@
 # Opportunity Queue
 
+2026-05-05 update: the exact tensor/PEPS Schur-row feasibility attempt is now
+landed and blocks on the current PR230 surface.  Exact contraction remains a
+useful outside-math tool only after the row network is defined: the current
+surface lacks a neutral scalar kernel basis, source/orthogonal projector,
+`A/B/C` row definitions, contact/FV/IR conventions, and a certified exact row
+contraction.  The runner's row-definition counterfamily keeps the exact
+source-only marginal fixed while changing `A/B/C` rows, so exact tensor/PEPS
+cannot be treated as row authority by method name.  Highest-value positive
+work remains: define genuine Schur rows by theorem/measurement, produce
+certified `O_H/C_sH/C_HH` pole rows, produce same-source W/Z response rows
+with identity/covariance/`g2` authority, prove a strict scalar-LSZ
+moment/threshold/FV certificate, or prove neutral-sector irreducibility.
+
 2026-05-05 update: polefit8x8 chunks061-063 are now packaged and pass the
 homogeneous eight-mode/x8 combiner. The separate polefit8x8 stream has
 `63/63` ready chunks and `1008/1008` saved configurations, so no further

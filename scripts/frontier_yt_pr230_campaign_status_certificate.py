@@ -347,6 +347,9 @@ def main() -> int:
         "schur_compressed_denominator_row_bootstrap_no_go": load(
             "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json"
         ),
+        "pr230_exact_tensor_schur_row_feasibility_attempt": load(
+            "outputs/yt_pr230_exact_tensor_schur_row_feasibility_attempt_2026-05-05.json"
+        ),
         "fh_lsz_higgs_pole_identity": load(
             "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json"
         ),
@@ -1486,6 +1489,29 @@ def main() -> int:
         )
         is True,
         statuses["schur_compressed_denominator_row_bootstrap_no_go"],
+    )
+    report(
+        "pr230-exact-tensor-schur-row-feasibility-blocks-current-surface",
+        "exact tensor Schur A/B/C row feasibility"
+        in str(statuses["pr230_exact_tensor_schur_row_feasibility_attempt"])
+        and certificates["pr230_exact_tensor_schur_row_feasibility_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_exact_tensor_schur_row_feasibility_attempt"].get(
+            "exact_tensor_schur_row_feasibility_passed"
+        )
+        is False
+        and certificates["pr230_exact_tensor_schur_row_feasibility_attempt"].get(
+            "schur_rows_written"
+        )
+        is False
+        and not any(
+            certificates["pr230_exact_tensor_schur_row_feasibility_attempt"].get(
+                "future_file_presence", {}
+            ).values()
+        ),
+        statuses["pr230_exact_tensor_schur_row_feasibility_attempt"],
     )
     report(
         "fh-lsz-higgs-pole-identity-gate-blocks",
@@ -3013,6 +3039,10 @@ def main() -> int:
         {
             "route": "full positive closure assembly",
             "needed": "production response plus scalar-LSZ model/FV/IR control plus one accepted O_H/WZ/Schur/rank-one bridge and retained-route approval",
+        },
+        {
+            "route": "exact tensor/PEPS Schur row production",
+            "needed": "same-surface neutral scalar kernel basis, source/orthogonal projector, A/B/C row definitions, and certified exact contraction",
         },
         {
             "route": "current-surface non-chunk queue exhausted",

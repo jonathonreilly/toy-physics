@@ -1,0 +1,163 @@
+{
+  "actual_current_surface_status": "exact negative boundary / exact tensor Schur A/B/C row feasibility blocked on current PR230 surface",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support if a future same-surface neutral scalar kernel basis, source/orthogonal projector, A/B/C row definitions, and certified exact tensor contraction are supplied",
+  "exact_next_action": "Define a same-surface neutral scalar kernel basis and source/orthogonal projector, then emit A/B/C or precontracted matrix Schur rows from a certified exact tensor/PEPS contraction.  If that cannot be supplied, pivot to O_H/C_sH/C_HH pole rows, same-source W/Z response rows with g2 and identity authority, strict scalar-LSZ moment/threshold/FV authority, or a neutral-sector irreducibility certificate.",
+  "exact_tensor_schur_row_feasibility_passed": false,
+  "fail_count": 0,
+  "future_file_presence": {
+    "exact_tensor_schur_kernel_rows": false,
+    "schur_abc_kernel_rows": false,
+    "schur_kernel_rows": false,
+    "schur_scalar_kernel_rows": false
+  },
+  "future_tensor_row_contract": [
+    {
+      "comment": "The source-only object can be simulated or tensorized in principle.",
+      "current_satisfied": true,
+      "id": "same_surface_source_functional",
+      "required": "PR230 source functional or finite tensor network for the source-only scalar marginal"
+    },
+    {
+      "current_satisfied": false,
+      "id": "neutral_scalar_kernel_basis",
+      "required": "same-surface neutral scalar kernel basis containing source and orthogonal directions"
+    },
+    {
+      "current_satisfied": false,
+      "id": "source_orthogonal_projector",
+      "required": "projector and normalization selecting the source block and orthogonal complement"
+    },
+    {
+      "current_satisfied": false,
+      "id": "schur_abc_row_definitions",
+      "required": "definitions of A(q), B(q), C(q), or equivalent precontracted matrix Schur rows"
+    },
+    {
+      "current_satisfied": false,
+      "id": "contact_threshold_fv_ir_conventions",
+      "required": "contact/subtraction, threshold, FV/IR, and limiting-order conventions for row use at the pole"
+    },
+    {
+      "current_satisfied": false,
+      "id": "canonical_bridge_or_neutral_irreducibility",
+      "required": "O_H/source-Higgs identity, same-source W/Z identity, or neutral irreducibility authority that makes the rows physical"
+    },
+    {
+      "current_satisfied": false,
+      "id": "exact_contraction_certificate",
+      "required": "actual exact tensor/PEPS contraction or certified numerical tensor contraction of the defined row network"
+    },
+    {
+      "current_satisfied": true,
+      "id": "forbidden_import_firewall",
+      "required": "reject H_unit, Ward, observed selectors, alpha/plaquette/u0, reduced pilots, unit c2/Z_match/kappa_s, and PSLQ selectors"
+    }
+  ],
+  "hypothetical_axiom_status": null,
+  "missing_future_tensor_row_contract": [
+    "neutral_scalar_kernel_basis",
+    "source_orthogonal_projector",
+    "schur_abc_row_definitions",
+    "contact_threshold_fv_ir_conventions",
+    "canonical_bridge_or_neutral_irreducibility",
+    "exact_contraction_certificate"
+  ],
+  "parent_certificates": {
+    "clean_source_higgs_math_selector": "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json",
+    "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "invariant_ring_oh_attempt": "outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json",
+    "neutral_primitive_stretch": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
+    "retained_closure_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "scalar_lsz_holonomic_attempt": "outputs/yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_2026-05-05.json",
+    "schur_absence_guard": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
+    "schur_candidate_extraction": "outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json",
+    "schur_compressed_bootstrap": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
+    "schur_contract": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
+    "schur_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json"
+  },
+  "parent_statuses": {
+    "clean_source_higgs_math_selector": "exact support / clean source-Higgs outside-math route selector; positive closure still open",
+    "full_positive_closure_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
+    "invariant_ring_oh_attempt": "exact negative boundary / invariant-ring O_H certificate attempt blocked on current PR230 surface",
+    "neutral_primitive_stretch": "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface",
+    "retained_closure_route": "open / retained closure not yet reached",
+    "scalar_lsz_holonomic_attempt": "exact negative boundary / scalar-LSZ holonomic exact-authority not derivable from current finite-shell PR230 data",
+    "schur_absence_guard": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
+    "schur_candidate_extraction": "exact negative boundary / Schur row candidate extraction from finite ladder support",
+    "schur_compressed_bootstrap": "exact negative boundary / Schur compressed-denominator row-bootstrap no-go",
+    "schur_contract": "open / Schur kernel row contract gate not passed; current rows absent",
+    "schur_sufficiency": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent",
+    "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem"
+  },
+  "pass_count": 18,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Exact tensor/PEPS contraction can evaluate a defined finite tensor network, but the current PR230 surface does not define the neutral scalar kernel basis, source/orthogonal partition, or A/B/C row operators.  The same source-only marginal is compatible with inequivalent Schur row definitions.",
+  "row_definition_gauge_counterfamily": {
+    "checks": {
+      "abc_rows_differ": true,
+      "both_match_exact_tensor_source_marginal": true,
+      "exact_tensor_source_marginal_samples": [
+        -0.215729,
+        -0.086016,
+        0.0,
+        0.142671,
+        0.34249599999999997
+      ],
+      "first_source_marginal_samples": [
+        -0.215729,
+        -0.086016,
+        0.0,
+        0.142671,
+        0.34249599999999997
+      ],
+      "interpretation": "An exact source-only tensor marginal does not select the Schur source/orthogonal row partition.  Distinct A/B/C rows can share the same source marginal until the row network itself is defined.",
+      "orthogonal_block_nonzero_on_grid": true,
+      "rows_finite_on_grid": true,
+      "same_source_marginal_on_grid": true,
+      "sample_points": [
+        -0.31,
+        -0.12,
+        0.0,
+        0.19,
+        0.44
+      ],
+      "second_source_marginal_samples": [
+        -0.215729,
+        -0.086016,
+        0.0,
+        0.142671,
+        0.34249599999999997
+      ]
+    },
+    "partition_A_rows": {
+      "A_at_pole": 0.032666666666666656,
+      "A_prime_at_pole": 0.718488888888889,
+      "B_at_pole": 0.21,
+      "B_prime_at_pole": -0.03,
+      "C_at_pole": 1.35,
+      "C_prime_at_pole": 0.09
+    },
+    "partition_B_rows": {
+      "A_at_pole": 0.09817777777777777,
+      "A_prime_at_pole": 0.6784926419753086,
+      "B_at_pole": -0.47,
+      "B_prime_at_pole": 0.14,
+      "C_at_pole": 2.25,
+      "C_prime_at_pole": -0.16
+    },
+    "shared_D_eff_prime_at_pole": 0.73,
+    "shared_pole": 0.0
+  },
+  "schur_rows_written": false,
+  "strict_non_claims": [
+    "does not produce Schur A/B/C rows",
+    "does not write a future Schur row file",
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not use H_unit, Ward identity, observed targets, alpha_LM, plaquette, u0, reduced pilots, unit c2/Z_match/kappa_s, or PSLQ selectors",
+    "does not treat exact tensor/PEPS as authority before the row network is defined"
+  ]
+}

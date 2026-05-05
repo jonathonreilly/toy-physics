@@ -1,5 +1,37 @@
 # Review History
 
+## Review-Loop Backpressure - Exact Tensor/PEPS Schur-Row Feasibility
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY / ROW-DEFINITION AUTHORITY ABSENT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- exact tensor/PEPS was tested as a Schur `A/B/C` row-production route, not as
+  a method-name shortcut;
+- the current surface lacks the neutral scalar kernel basis,
+  source/orthogonal projector, row definitions, contact/FV/IR conventions, and
+  certified exact contraction required before exact tensor methods can emit
+  genuine rows;
+- a row-definition counterfamily preserves the exact source-only marginal
+  while changing `A/B/C` rows;
+- no Schur row file was written and retained/proposed-retained wording remains
+  barred.
+
+Checks:
+
+```bash
+python3 scripts/frontier_yt_pr230_exact_tensor_schur_row_feasibility_attempt.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Polefit8x8 Chunks061-063 Completion
 
 Local review-loop disposition:

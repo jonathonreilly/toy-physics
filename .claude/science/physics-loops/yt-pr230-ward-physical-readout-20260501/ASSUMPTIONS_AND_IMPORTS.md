@@ -23,6 +23,7 @@
 | Feynman-Hellmann scalar-source response data | alternate observable route | synthetic support only | unavailable for closure |
 | Same-source scalar pole derivative `D'_ss(pole)` | removes source-coordinate normalization with `dE/ds` | sufficiency theorem support only; production pole data absent | open import until postprocess/model-class/FV/IR/Higgs-identity gates pass |
 | Source-Higgs cross-correlator `C_sH` and canonical `C_HH` residue | possible source-pole purity observable | open gate; no hidden current authority | open import; requires a canonical-Higgs source operator and cross-correlator implementation, not assumed |
+| Exact tensor/PEPS Schur row production | possible outside-math row engine | exact negative boundary for current PR230 surface | allowed only after a same-surface neutral kernel basis, source/orthogonal projector, `A/B/C` row definitions, contact/FV/IR conventions, and certified contraction are supplied; method name and source-only marginals are not proof inputs |
 | Single finite source-shift radius as a zero-source derivative | possible FH shortcut | exact negative boundary for PR230 FH response closure | allowed as diagnostic support only; one finite radius does not exclude odd nonlinear response |
 | Reduced mass-bracket `dE/dm_bare` response | lightweight response scout | bounded support | bare-source data; forbidden as physical `y_t` evidence |
 | Reduced cold-gauge momentum pilots | implementation support | bounded support | forbidden as strict evidence |

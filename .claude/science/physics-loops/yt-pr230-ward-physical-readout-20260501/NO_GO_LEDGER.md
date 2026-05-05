@@ -1,5 +1,24 @@
 # No-Go Ledger
 
+## Exact tensor/PEPS Schur-row feasibility is not current-surface closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_pr230_exact_tensor_schur_row_feasibility_attempt.py
+# SUMMARY: PASS=18 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=256 FAIL=0
+```
+
+Exact tensor/PEPS contraction is not a row-definition oracle.  The current
+PR230 surface has no same-surface neutral scalar kernel basis,
+source/orthogonal projector, `A/B/C` row definitions, contact/FV/IR
+conventions, or certified exact contraction of a row network.  The
+counterfamily keeps the exact source-only marginal fixed while changing
+`A/B/C` rows.  Do not treat exact tensor/PEPS, exact source-only marginals, or
+compressed denominators as retained closure or `proposed_retained` evidence.
+
 ## FH/LSZ polefit8x8 chunks061-063 completion is not closure
 
 Runners:

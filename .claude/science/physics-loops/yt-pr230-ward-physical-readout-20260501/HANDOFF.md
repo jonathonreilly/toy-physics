@@ -1,5 +1,34 @@
 # Handoff
 
+Latest checkpoint, 2026-05-05 exact tensor/PEPS Schur-row feasibility:
+
+- Added `scripts/frontier_yt_pr230_exact_tensor_schur_row_feasibility_attempt.py`,
+  `docs/YT_PR230_EXACT_TENSOR_SCHUR_ROW_FEASIBILITY_ATTEMPT_NOTE_2026-05-05.md`,
+  and
+  `outputs/yt_pr230_exact_tensor_schur_row_feasibility_attempt_2026-05-05.json`.
+- The attempt distinguishes exact contraction from row authority.  Exact
+  tensor/PEPS can evaluate a defined row network, but the current PR230
+  surface lacks the neutral scalar kernel basis, source/orthogonal projector,
+  `A/B/C` row definitions, contact/FV/IR conventions, and certified exact
+  contraction needed to write genuine Schur rows.
+- The runner records a row-definition counterfamily: two finite row families
+  match the same exact source-only tensor marginal while carrying different
+  `A/B/C` rows.
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py` now loads this
+  boundary and reports it as a current-surface block.
+- Verification: exact tensor Schur feasibility `PASS=18 FAIL=0`; campaign
+  status `PASS=256 FAIL=0`.
+- Claim boundary: no Schur rows were written, no retained or
+  `proposed_retained` closure is authorized, and exact tensor/PEPS is not used
+  as a proof selector.
+
+Next exact action: define a same-surface neutral scalar kernel basis and
+source/orthogonal projector, then emit genuine `A/B/C` or precontracted
+matrix Schur rows from a certified exact tensor/PEPS contraction.  If that
+cannot be supplied, pivot to `O_H/C_sH/C_HH` pole rows, same-source W/Z
+response rows with identity/covariance/`g2` authority, strict scalar-LSZ
+moment/threshold/FV authority, or a neutral-sector irreducibility certificate.
+
 Latest checkpoint, 2026-05-05 polefit8x8 chunks061-063 completion:
 
 - Packaged completed homogeneous eight-mode/x8 chunks061-063 with fixed seeds
