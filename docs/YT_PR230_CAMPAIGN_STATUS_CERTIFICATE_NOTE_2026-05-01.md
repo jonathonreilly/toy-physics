@@ -26,8 +26,25 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=223 FAIL=0
+# SUMMARY: PASS=226 FAIL=0
 ```
+
+## 2026-05-05 Terminal Non-Chunk Route-Exhaustion Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json`.
+This is the cycle-11 continuation firewall after current-surface exhaustion
+and future-artifact intake: the non-chunk queue has no executable current
+route unless a named same-surface row, certificate, or theorem first exists.
+
+Validation: terminal route-exhaustion gate `PASS=15 FAIL=0`; retained-route
+`PASS=199 FAIL=0`; campaign status `PASS=226 FAIL=0`; full positive closure
+assembly gate `PASS=51 FAIL=0`.
+
+The campaign remains open as a physics target, but the current non-chunk
+shortcut loop should stop.  Reopen only after a strict future artifact exists
+and the worklist, exhaustion, intake, assembly, retained-route, and campaign
+gates are rerun.
 
 ## 2026-05-05 Schur Compressed-Denominator Row-Bootstrap Update
 

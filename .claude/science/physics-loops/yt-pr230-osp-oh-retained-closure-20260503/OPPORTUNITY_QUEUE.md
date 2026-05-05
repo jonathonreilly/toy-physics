@@ -1,5 +1,12 @@
 # Opportunity Queue
 
+Cycle-11 update: the terminal route-exhaustion gate converts the cycle-8
+exhaustion and cycle-9 future-artifact intake results into the stop/reopen
+contract.  The queue still has no executable current-surface non-chunk item.
+Do not cycle another shortcut until one named same-surface row, certificate,
+or theorem exists on disk and the worklist, exhaustion, intake, assembly,
+retained-route, and campaign gates are rerun.
+
 Cycle-9 update: the future-artifact intake gate found no named strict
 same-surface row, certificate, or theorem on the current branch.  The queue
 therefore has no executable current-surface non-chunk item.  The ranked rows

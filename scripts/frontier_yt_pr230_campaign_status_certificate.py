@@ -166,6 +166,9 @@ def main() -> int:
         "pr230_nonchunk_future_artifact_intake": load(
             "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json"
         ),
+        "pr230_nonchunk_terminal_route_exhaustion": load(
+            "outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -2374,6 +2377,24 @@ def main() -> int:
         is False,
         statuses["pr230_nonchunk_future_artifact_intake"],
     )
+    report(
+        "pr230-nonchunk-terminal-route-exhaustion-recorded",
+        "terminal route-exhaustion gate"
+        in str(statuses["pr230_nonchunk_terminal_route_exhaustion"])
+        and certificates["pr230_nonchunk_terminal_route_exhaustion"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_terminal_route_exhaustion"].get(
+            "terminal_route_exhaustion_gate_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_terminal_route_exhaustion"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False,
+        statuses["pr230_nonchunk_terminal_route_exhaustion"],
+    )
 
     remaining_routes = [
         {
@@ -2403,6 +2424,10 @@ def main() -> int:
         {
             "route": "current-surface non-chunk queue exhausted",
             "needed": "a new same-surface row, certificate, or theorem before continuing non-chunk shortcut cycling",
+        },
+        {
+            "route": "terminal non-chunk route exhaustion",
+            "needed": "do not reopen until a named same-surface artifact exists and aggregate gates are rerun",
         },
     ]
 
@@ -2670,7 +2695,8 @@ def main() -> int:
             "theorem.  The cycle-8 non-chunk current-surface exhaustion gate "
             "now records the queue-level consequence: without one of the named "
             "future same-surface artifacts, no further current-surface "
-            "non-chunk shortcut remains to cycle."
+            "non-chunk shortcut remains to cycle.  The terminal route-"
+            "exhaustion gate records the stop/reopen rule for that state."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
@@ -2686,6 +2712,23 @@ def main() -> int:
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
     }
+    result["verdict"] = (
+        "The current PR #230 physics-loop checkpoint remains open.  All loaded "
+        "non-production shortcuts are blocked, support-only, or conditional; "
+        "complete chunk evidence alone would still miss scalar-LSZ control, a "
+        "same-surface physical-readout bridge, matching/running authority, and "
+        "proposal authorization.  The current-surface non-chunk exhaustion, "
+        "future-artifact intake, and terminal route-exhaustion gates now record "
+        "that no further current-surface non-chunk shortcut may be cycled until "
+        "a named same-surface artifact exists and the aggregate gates are rerun."
+    )
+    result["strict_non_claims"] = [
+        "does not claim retained closure",
+        "does not count non-independent historical chunks as production evidence",
+        "does not use external target values as proof inputs",
+        "does not allow forbidden matrix-element, operator, coupling, target, or unit shortcuts",
+        "does not treat chunk completion alone as positive retained closure",
+    ]
     OUTPUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"\nWrote certificate: {OUTPUT.relative_to(ROOT)}")
     print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")

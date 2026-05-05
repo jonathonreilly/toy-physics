@@ -86,6 +86,7 @@ PARENTS = {
     "schur_compressed_bootstrap_no_go": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
     "nonchunk_current_surface_exhaustion": "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json",
     "nonchunk_future_artifact_intake": "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json",
+    "nonchunk_terminal_route_exhaustion": "outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -436,6 +437,18 @@ def main() -> int:
         and certs["nonchunk_future_artifact_intake"].get("dramatic_step_gate", {}).get(
             "passed"
         )
+        is False
+    )
+    nonchunk_terminal_route_exhaustion_closed = (
+        "terminal route-exhaustion gate" in statuses["nonchunk_terminal_route_exhaustion"]
+        and certs["nonchunk_terminal_route_exhaustion"].get("proposal_allowed") is False
+        and certs["nonchunk_terminal_route_exhaustion"].get(
+            "terminal_route_exhaustion_gate_passed"
+        )
+        is True
+        and certs["nonchunk_terminal_route_exhaustion"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
         is False
     )
 
@@ -830,6 +843,11 @@ def main() -> int:
         nonchunk_future_artifact_intake_closed,
         statuses["nonchunk_future_artifact_intake"],
     )
+    report(
+        "nonchunk-terminal-route-exhaustion-recorded",
+        nonchunk_terminal_route_exhaustion_closed,
+        statuses["nonchunk_terminal_route_exhaustion"],
+    )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
@@ -851,7 +869,8 @@ def main() -> int:
             "hidden non-chunk shortcut remains executable without one of the "
             "named future same-surface rows, certificates, or theorems.  The "
             "cycle-9 future-artifact intake gate records that no such named "
-            "artifact has appeared on the current surface."
+            "artifact has appeared on the current surface.  The terminal "
+            "route-exhaustion gate records the corresponding stop/reopen rule."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
@@ -881,6 +900,7 @@ def main() -> int:
             "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, observed targets, kappa_s=1, c2=1, Z_match=1, or cos(theta)=1",
             "does not treat static EW algebra, W/Z absent guards, source-only C_ss rows, or finite-shell fits as physical y_t readouts",
             "does not treat current-surface non-chunk exhaustion as retained closure",
+            "does not treat terminal non-chunk route exhaustion as positive closure",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks.  In parallel, "

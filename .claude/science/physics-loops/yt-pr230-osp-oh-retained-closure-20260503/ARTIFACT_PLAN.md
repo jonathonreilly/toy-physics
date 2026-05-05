@@ -1,5 +1,12 @@
 # Artifact Plan
 
+Completed in the terminal route-exhaustion continuation:
+
+- `scripts/frontier_yt_pr230_nonchunk_terminal_route_exhaustion_gate.py`
+- `docs/YT_PR230_NONCHUNK_TERMINAL_ROUTE_EXHAUSTION_GATE_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
 Completed in the future-artifact intake continuation:
 
 - `scripts/frontier_yt_pr230_nonchunk_future_artifact_intake_gate.py`
@@ -57,7 +64,7 @@ Completed during 2026-05-04 campaign continuation:
   response-stability, response-window, retained-route, and campaign
   certificates
 
-Next positive artifact candidates:
+Future positive artifact candidates, not executable on the current surface:
 
 - same-source W/Z response: derive same-source EW action/row authority or a
   closed top/W covariance theorem;

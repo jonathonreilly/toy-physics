@@ -4,17 +4,29 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact negative boundary / PR230 non-chunk future-artifact intake finds no executable current route; positive closure still open
-active_residual: "Cycle 9 tests the only honest post-exhaustion non-chunk route: strict future same-surface artifact intake.  No named future row, certificate, or theorem is present, all six worklist units remain blocked, and the dramatic-step gate has no executable current-surface route."
+actual_current_surface_status: exact negative boundary / PR230 non-chunk terminal route-exhaustion gate: no current route may continue without a named same-surface artifact; positive closure still open
+active_residual: "Cycle 11 encodes the post-intake continuation firewall.  Current-surface exhaustion and future-artifact intake are both closed, all six worklist units remain blocked, the opportunity queue is future-only, and the dramatic-step gate has no executable current-surface route until a named same-surface row, certificate, or theorem exists."
 latest_checkpoint:
-  utc: "2026-05-05T06:04:48Z"
-  block: 67
-  artifact: "PR230 non-chunk future-artifact intake gate"
-  status: "exact negative boundary / PR230 non-chunk future-artifact intake finds no executable current route; positive closure still open"
-  result: "The gate verifies that cycle-8 exhaustion remains closed, all six non-chunk worklist units are still blocked, the strict future row/certificate schemas agree, no listed future path exists on disk, current/chunk-only assembly is rejected, and no retained/proposed-retained proposal is authorized."
-  claim_boundary: "no closure proposal, no chunk packaging, no new shortcut attempt, and no current-surface non-chunk route unless a named strict future same-surface row, certificate, or theorem is supplied"
+  utc: "2026-05-05T07:12:00Z"
+  block: 68
+  artifact: "PR230 non-chunk terminal route-exhaustion gate"
+  status: "exact negative boundary / PR230 non-chunk terminal route-exhaustion gate: no current route may continue without a named same-surface artifact; positive closure still open"
+  result: "The gate verifies that current-surface exhaustion and future-artifact intake remain closed, all six non-chunk worklist units are blocked, every named strict future path is absent on disk, the refreshed opportunity queue is future-only, the handoff records the stop/reopen contract, current/chunk-only assembly is rejected, and no proposal is authorized."
+  claim_boundary: "no closure proposal, no chunk packaging, no new shortcut attempt, and no current-surface non-chunk route until a named strict future same-surface row, certificate, or theorem exists and the aggregate gates are rerun"
   live_compute: "chunk worker remains separate; this checkpoint loads no chunk MC"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_nonchunk_terminal_route_exhaustion_gate.py
+    - docs/YT_PR230_NONCHUNK_TERMINAL_ROUTE_EXHAUSTION_GATE_NOTE_2026-05-05.md
+    - outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json
+    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+    - docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md
+    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+    - scripts/frontier_yt_retained_closure_route_certificate.py
+    - docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md
+    - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+    - scripts/frontier_yt_pr230_campaign_status_certificate.py
+    - docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md
+    - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
     - scripts/frontier_yt_pr230_nonchunk_future_artifact_intake_gate.py
     - docs/YT_PR230_NONCHUNK_FUTURE_ARTIFACT_INTAKE_GATE_NOTE_2026-05-05.md
     - outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json
@@ -206,9 +218,21 @@ lock_status:
   repo_lock_attempted: true
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
-cycle: 9
-block: 67
+cycle: 11
+block: 68
 files_touched:
+  - scripts/frontier_yt_pr230_nonchunk_terminal_route_exhaustion_gate.py
+  - docs/YT_PR230_NONCHUNK_TERMINAL_ROUTE_EXHAUSTION_GATE_NOTE_2026-05-05.md
+  - outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json
+  - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+  - docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md
+  - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+  - scripts/frontier_yt_retained_closure_route_certificate.py
+  - docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md
+  - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+  - scripts/frontier_yt_pr230_campaign_status_certificate.py
+  - docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md
+  - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
   - scripts/frontier_yt_pr230_nonchunk_future_artifact_intake_gate.py
   - docs/YT_PR230_NONCHUNK_FUTURE_ARTIFACT_INTAKE_GATE_NOTE_2026-05-05.md
   - outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json
@@ -851,12 +875,13 @@ current_result: >
   certificates still deny proposal authority with PASS=155 and PASS=181
   respectively.  Chunks049-052 continue running under the wave orchestrator.
 proposal_allowed: false
-proposal_allowed_reason: "The current non-chunk route queue remains exhausted on this surface: all six worklist units are blocked, all strict future row/certificate paths are absent, the cycle-9 intake gate has no executable dramatic-step route, and current/chunk-only assembly still fails.  No independent non-source row, matched covariance theorem, Schur row certificate, scalar-LSZ authority, O_H/source-Higgs rows, or rank-one theorem has passed."
+proposal_allowed_reason: "The current non-chunk route queue remains exhausted on this surface: all six worklist units are blocked, all strict future row/certificate paths are absent, the cycle-11 terminal route-exhaustion gate has no executable dramatic-step route, and current/chunk-only assembly still fails.  No independent non-source row, matched covariance theorem, Schur row certificate, scalar-LSZ authority, O_H/source-Higgs rows, or rank-one theorem has passed."
 next_exact_action: >
   Stop current-surface non-chunk shortcut cycling.  Reopen this non-chunk loop
-  only when one of the named strict future same-surface artifacts is supplied:
+  only when one of the named strict future same-surface artifacts exists:
   real Schur A/B/C kernel rows, a same-source EW action plus W/Z response rows
   and covariance/correction authority, source-Higgs rows after a real
   same-surface O_H certificate, scalar-LSZ contact/threshold/FV authority, or
-  a direct neutral-sector irreducibility/primitive-cone proof.  The chunk
-  worker remains separate.
+  a direct neutral-sector irreducibility/primitive-cone proof.  Then rerun the
+  worklist, exhaustion, intake, assembly, retained-route, and campaign gates.
+  The chunk worker remains separate.

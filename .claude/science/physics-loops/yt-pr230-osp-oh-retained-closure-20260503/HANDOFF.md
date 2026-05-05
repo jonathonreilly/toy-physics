@@ -1,5 +1,46 @@
 # Handoff
 
+## 2026-05-05 PR230 Non-Chunk Terminal Route-Exhaustion Gate
+
+Cycle 11 encoded the post-intake continuation firewall.  The selected route
+was not another shortcut attempt; it tested whether the already refreshed
+non-chunk queue has any executable dramatic-step item after current-surface
+exhaustion and future-artifact intake.
+
+Result: exact negative boundary.  The runner reloads the worklist,
+current-surface exhaustion gate, future-artifact intake gate, full assembly
+gate, retained-route certificate, campaign certificate, opportunity queue, and
+handoff.  It verifies that all six non-chunk work units remain blocked, every
+named future row/certificate path is absent on disk, the opportunity queue is
+future-only, the handoff records the stop/reopen contract, current and
+chunk-only assembly remain rejected, and no proposal is authorized.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_nonchunk_terminal_route_exhaustion_gate.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=51 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=199 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=226 FAIL=0
+```
+
+Claim boundary: no retained/proposed-retained closure, no chunk packaging, no
+new shortcut attempt, and no current-surface non-chunk route until a named
+strict same-surface row, certificate, or theorem exists and the aggregate gates
+are rerun.
+
+Next exact action: stop current-surface non-chunk shortcut cycling.  Reopen
+only when one accepted future artifact key exists on disk, then rerun the
+worklist, exhaustion, future-intake, assembly, retained-route, and campaign
+gates before any proposal language.
+
 ## 2026-05-05 PR230 Non-Chunk Future-Artifact Intake Gate
 
 Cycle 9 tested the only honest post-exhaustion non-chunk route: whether a

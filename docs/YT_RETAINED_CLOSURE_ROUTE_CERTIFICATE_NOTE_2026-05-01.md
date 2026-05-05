@@ -18,8 +18,24 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=196 FAIL=0
+# SUMMARY: PASS=199 FAIL=0
 ```
+
+## 2026-05-05 Terminal Non-Chunk Route-Exhaustion Update
+
+The retained-route certificate now consumes
+`outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json`.
+This records the post-intake continuation boundary: after current-surface
+exhaustion and future-artifact intake, no non-chunk route is executable on the
+present branch until a named same-surface row, certificate, or theorem exists.
+
+Validation: terminal route-exhaustion gate `PASS=15 FAIL=0`; retained-route
+`PASS=199 FAIL=0`; campaign status `PASS=226 FAIL=0`; full positive closure
+assembly gate `PASS=51 FAIL=0`.
+
+No closure proposal is authorized.  The next action is to stop current-surface
+non-chunk shortcut cycling until a named same-surface artifact exists and the
+aggregate gates are rerun.
 
 ## 2026-05-05 Schur Compressed-Denominator Row-Bootstrap Update
 

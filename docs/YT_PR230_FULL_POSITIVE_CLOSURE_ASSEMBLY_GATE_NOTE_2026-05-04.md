@@ -126,6 +126,12 @@ denominator and pole derivative, so the missing kernel rows cannot be
 reconstructed from compressed scalar data.  The assembly gate remains open
 with `PASS=48 FAIL=0`.
 
+2026-05-05 terminal route-exhaustion update: the gate now also consumes
+`outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json`.
+After the current-surface exhaustion and future-artifact intake gates, the
+terminal gate records that no non-chunk route passes the dramatic-step gate on
+the present branch.  The assembly gate remains open with `PASS=51 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 
@@ -158,9 +164,10 @@ operator/readout, target-value, coupling-normalization, or unit shortcuts.
 
 ## Next Action
 
-Keep chunk production separate.  The next non-chunk step requires a strict
-same-surface artifact: `O_H/C_sH/C_HH` pole rows, W/Z response rows with the
-required identities and covariance control, Schur `A/B/C` kernel rows,
-neutral-sector primitive-cone irreducibility, or scalar-LSZ
-moment/threshold/FV authority.  Rerun the assembly gate before any
-retained-route proposal.
+Keep chunk production separate.  Do not continue current-surface non-chunk
+shortcut cycling.  Reopen only after a strict same-surface artifact exists:
+`O_H/C_sH/C_HH` pole rows, W/Z response rows with the required identities and
+covariance control, Schur `A/B/C` kernel rows, neutral-sector primitive-cone
+irreducibility, or scalar-LSZ moment/threshold/FV authority.  Rerun the
+worklist, exhaustion, intake, assembly, retained-route, and campaign gates
+before any proposal language.
