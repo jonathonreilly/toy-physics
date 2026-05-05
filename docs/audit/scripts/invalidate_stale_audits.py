@@ -146,6 +146,26 @@ def detect_invalidation(row: dict, rows: dict[str, dict]) -> str | None:
         if status_rank(after) < status_rank(before):
             return f"dep_weakened:{d}:{before}->{after}"
 
+    # Detect audit-side dep narrowing that doesn't move effective_status
+    # (e.g. claim_scope tightened, claim_type retyped within the same
+    # retained tier). Older snapshots predate these maps; in that case
+    # we fall back to the existing checks above.
+    snap_dep_type = snap.get("dep_claim_type") or {}
+    if snap_dep_type:
+        for d in current_deps:
+            before = snap_dep_type.get(d)
+            after = rows.get(d, {}).get("claim_type")
+            if before is not None and after != before:
+                return f"dep_claim_type_changed:{d}:{before}->{after}"
+
+    snap_dep_scope = snap.get("dep_claim_scope") or {}
+    if snap_dep_scope:
+        for d in current_deps:
+            before = snap_dep_scope.get(d)
+            after = rows.get(d, {}).get("claim_scope")
+            if before is not None and after != before:
+                return f"dep_claim_scope_changed:{d}"
+
     snap_crit = snap.get("criticality") or "leaf"
     cur_crit = row.get("criticality") or "leaf"
     if CRITICALITY_RANK.get(cur_crit, 0) > CRITICALITY_RANK.get(snap_crit, 0):
