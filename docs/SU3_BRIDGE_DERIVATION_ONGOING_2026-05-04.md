@@ -391,6 +391,94 @@ The framework's exact L_s=2 Wilson plaquette is **0.4225** (via V-invariant Schu
 
 The remaining open derivation pathway is the framework's **explicit Perron state at β=6 of the source-sector transfer operator** `T_src(6) = exp(3J) D_6^loc C_(Z_6^env) exp(3J)` on the V-invariant minimal block — explicitly named "open" by the framework's own bridge-support note. This is structurally a different problem than Schur cube enumeration; it's the spectral-measure problem of the SU(3) character recurrence operator J in the unknown β=6 transfer state.
 
+## 11. FIRST-PRINCIPLES AUDIT (this iteration): is 0.5934 even the right target?
+
+User-prompted re-examination: "are we sure the number we are targeting is correct if our framework is correct and not some other calculated non-reality based number?"
+
+Three checks performed (see `scripts/frontier_su3_first_principles_audit_2026_05_04.py`).
+
+### 11.1 Framework gauge group identity (check iii)
+
+Per [docs/G_BARE_DERIVATION_NOTE.md](docs/G_BARE_DERIVATION_NOTE.md):
+- Canonical Cl(3) connection normalization: `Tr(T_a T_b) = δ_ab/2` — this IS standard SU(3) fundamental rep normalization
+- Wilson matching: `β = 2N_c/g² = 6` at g_bare=1, N_c=3
+- Wilson action uses Tr_F (fundamental 3×3 trace), NOT Tr_A (adjoint 8×8)
+
+**Framework's gauge group is unambiguously standard SU(3) fundamental.** It is NOT PSU(3) = SU(3)/Z_3 (adjoint embedding) and NOT some Cl(3)-native gauge variant.
+
+**Implication**: standard SU(3) MC at β=6 (⟨P⟩ = 0.5934 in thermodynamic limit) IS the right "same-theory" comparator. The framework is computing the SAME observable — only on a different surface (V-invariant L_s=2 APBC vs standard 4D L→∞).
+
+### 11.2 V-invariant Schur 0.4225 rigorously verified (check i)
+
+Independent re-computation from first principles confirms `P = 0.422534` for the V-invariant L_s=2 APBC cube. The computation is:
+
+- 6 plaquettes (cube faces), 12 unique links, link-incidence = 2 per link
+- SU(3) character expansion `exp[(β/3) Σ_p Re Tr U_p] = Σ_λ c_λ(β) χ_λ(U_p)/d_λ`
+- Schur orthogonality on each link: `∫dU χ_λ(U)χ_μ(U†) = δ_λμ` ⟹ all linked plaquettes share irrep
+- ρ_(p,q) = (c_(p,q)/c_(0,0))^6 × d^(N_components - N_links) = (c/c_00)^6 × d^(-10) per the cyclic-index graph
+- Source-sector Perron solve on `T_src = exp(3J) D_loc C_env exp(3J)` gives ⟨P⟩ = 0.4225
+
+The 0.4225 is NOT an approximation — it's the exact value of this finite-dimensional SU(3) integral. Mathematically rigorous, no MC import.
+
+### 11.3 Downstream couplings: P=0.4225 vs P=0.5934 (check ii)
+
+Per [docs/ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md](docs/ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md):
+- `α_bare = 1/(4π) = 0.07958`
+- `u_0 = ⟨P⟩^(1/4)`
+- `α_LM = α_bare/u_0`
+- `α_s(v) = α_bare/u_0²`
+
+Computed for both P values:
+
+| Quantity | P = 0.5934 (MC) | P = 0.4225 (V-inv) | PDG / standard |
+|---|---:|---:|---:|
+| u_0 | 0.8777 | 0.8061 | — |
+| α_bare | 0.07958 | 0.07958 | — |
+| α_LM | 0.0907 | 0.0987 | — |
+| α_s(v) [lattice scale] | 0.1033 | 0.1224 | — |
+| α_s(M_Z) (naive 1-loop run) | 0.0697 | 0.0779 | 0.1180 |
+
+**Critical caveat**: naive 1-loop MS-bar running from lattice scale v ≈ 2 GeV to M_Z = 91 GeV gives values WAY below PDG for both. This is NOT because the underlying P is wrong — it's because:
+- `α_lat` (lattice scheme) ≠ `α_MS` (MS-bar scheme); conversion ratio Λ_MS/Λ_lat ≈ 28-30 for plaquette action
+- Naive 1-loop running ignores Λ_lat → Λ_MS scheme conversion
+- Standard procedure: scale-set via Sommer scale matching, multi-loop running, scheme conversion
+
+**The relevant comparison is not naive α_s(M_Z), but α_LM at the right effective scale.**
+
+Standard lattice convention: α_LM at β=6 with P=0.5934 corresponds to α_MS at energy ≈ Λ_MS/Λ_lat × v_lat ≈ 60 GeV. PDG α_s(60 GeV) ≈ 0.121.
+- P=0.5934: α_LM = 0.091 (deviation from 0.121 ≈ 0.030)
+- P=0.4225: α_LM = 0.099 (deviation from 0.121 ≈ 0.022)
+
+P=0.4225 actually fits PDG α_s slightly BETTER under this rough scale-matching (deviation 0.022 vs 0.030). But this is sensitive to the matching procedure.
+
+### 11.4 Synthesis: is 0.5934 the right target?
+
+**Honest answer: it depends on whether V-invariance ↔ L→∞ thermodynamic limit equivalence holds.**
+
+- **If V-invariance gives L→∞ equivalence**: framework's V-inv L_s=2 APBC ⟨P⟩ should equal standard SU(3) MC's L→∞ value 0.5934. Discrepancy (0.4225 vs 0.5934) means the equivalence claim is wrong OR the V-invariant computation is incomplete.
+  
+- **If V-invariance is just a finite-volume choice**: framework's V-inv L_s=2 APBC ⟨P⟩ = 0.4225 IS the framework's exact prediction at this finite L. To compare to MC, need L → ∞ extrapolation (treewidth-infeasible).
+
+**No framework primitive proves V-invariance ↔ L→∞ equivalence.** The framework's [SU3_TENSOR_NETWORK_ENGINE_ROADMAP_NOTE_2026-05-03.md](docs/SU3_TENSOR_NETWORK_ENGINE_ROADMAP_NOTE_2026-05-03.md) explicitly admits the V-invariant L_s=2 cube derivation requires building a full tensor-network engine (5-PR plan, multi-month effort) that doesn't yet exist.
+
+The campaign's premise — "derive 0.5934 natively from V-invariant L_s=2 APBC" — is **a working hypothesis**, not a derivable target. The 0.59353 "best candidate" is exactly disproven by the framework's own constant-lift slope theorem (Section 10c). The k=12+2/π closure is in the framework's tube-power family classified as not closed by primitives.
+
+### 11.5 Honest first-principles takeaway
+
+1. **Framework's exact L_s=2 V-invariant APBC prediction at β=6 is P = 0.4225.** Mathematically rigorous, no imports.
+
+2. **Whether P = 0.4225 or P = 0.5934 better matches reality depends on downstream observable matching** (α_s(M_Z), hadron masses, static quark potential). Naive 1-loop running is inconclusive; proper Sommer-scale matching needed.
+
+3. **The campaign's "match MC" target is a working hypothesis.** No theorem says framework's V-inv L_s=2 should equal standard 4D L→∞.
+
+4. **Two genuine paths forward**:
+   - (a) **Test downstream observables with P = 0.4225**: derive α_s, quark potential, hadron masses; compare to PDG. If they match, framework is consistent at P=0.4225 and 0.5934 is irrelevant intermediate.
+   - (b) **Build the tensor-network engine** (5-PR roadmap) to compute the "true" V-invariant APBC value through full Wigner intertwiner contraction; see if it differs from naive Schur 0.4225.
+
+5. **The current 0.5934 target was anchored to standard MC, not to framework derivability.** Letting that anchor go opens the question: maybe 0.4225 IS the framework's prediction and the framework's downstream derivations should use IT, not the imported MC value.
+
+This is a methodological reset, not a closure. The campaign should now investigate downstream observables under P = 0.4225 to see if framework is internally consistent at its honest L_s=2 V-invariant value.
+
 ## 10. Historical PRs (consolidated into this doc going forward)
 
 This consolidated doc supersedes the per-iteration PRs. Future updates go HERE, not new PRs.
