@@ -5,6 +5,7 @@
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / blocker note  
 **Purpose:** identify the minimal missing primitive on the straight-to-full-GR path
+**Primary runner:** [`scripts/frontier_universal_gr_tensor_action_blocker.py`](../scripts/frontier_universal_gr_tensor_action_blocker.py) (PASS=5/0)
 
 ## Verdict
 

@@ -1,0 +1,87 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_z3_scalar_potential.py
+runner_sha256: c9ebfbb9cf28791d5d30941d283e1f033a919a8a22bcf327ad33fdda8d86990a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.93
+status: ok
+----- stdout -----
+========================================================================================
+PART 1: Clifford involution T_m² = I pins the scalar potential structure
+========================================================================================
+  [PASS] T_m is real and symmetric (reflection in the 23-block)
+  [PASS] T_m² = I_3  (Clifford involution — T_m is its own inverse)  (key: the Z³ action on the selected slice is an involution)
+  [PASS] Tr(T_m²) = Tr(I) = 3  (sets the quadratic coefficient g₂ = 3/2)  (Tr(T_m^2)=3 → coefficient of m² in Tr(K²)/2 is 3/2)
+  [PASS] Tr(T_m³) = Tr(T_m) = 1  (sets the cubic coupling g₃ = 1/6)  (Tr(T_m^3)=1 → coefficient of m³ in Tr(K³)/6 is 1/6)
+  [note] T_m² = I with Tr(T_m²)=3 and Tr(T_m³)=1 forces V(m) = (3/2)m² + (1/6)m³ + linear + const.
+
+========================================================================================
+PART 2: exact Z³ scalar potential V(m) = Tr(K²)/2 + Tr(K³)/6
+========================================================================================
+  [PASS] Tr(K_frozen) = 0  (frozen bank carries no trace on the selected slice)  (follows from cp1=-2√6/9 and cp2=2√2/9 bank identities)
+  [PASS] [NUMERIC] General lemma: Tr(K_frozen(δ,q)) = 0 for ALL (δ,q) on the affine slice, not just the Koide selector  (structural identity of kz_from_h ∘ active_affine_h — m² cross-term vanishes throughout the chamber)
+  [PASS] Linear coupling c1 = Tr(K_frozen T_m) is non-zero (frozen sector talks to T_m)  (c1 = -0.2526249213)
+  [PASS] Quadratic-cross coupling c2 = Tr(K_frozen² T_m) is non-zero  (c2 = 2.9166666667  (exact: 35/12))
+  [note] Tr(K_sel²) expansion verified numerically above (Tr(K_f²)=7.198576, c1=-0.252625, quadratic coeff=3).
+  [note] Tr(K_sel³) expansion verified numerically above (Tr(K_f³)=5.919600, c2=2.916667, cubic coeff=1).
+  [note] V(m) = const + (c1+c2/2)m + (3/2)m² + (1/6)m³ — linear coeff=1.205708, quad=3/2, cubic=1/6.
+
+========================================================================================
+PART 3: det(K_sel) cubic leading coefficient = -1 from Levi-Civita ε
+========================================================================================
+  [note] det(K_sel(m)) is exactly cubic in m: K_sel = K_frozen + m·T_m is affine in m.
+  [PASS] [NUMERIC] Leading coefficient of det(K_sel) is exactly -1  (fitted lead coeff = -1.0000000000  (from Leibniz/Levi-Civita det formula))
+  [note] The -1 leading coefficient: det(T_m) = -1 (odd permutation matrix) → leading term -m³.
+  [PASS] [NUMERIC] Quadratic det coefficient matches -c1 to machine precision  (det m² coeff=0.25262492 vs -c1=0.25262492)
+
+========================================================================================
+PART 4: exact critical-point equation and V_eff minimum location
+========================================================================================
+  [note] dV/dm = 0 is the quadratic m² + 6m + 2(c1 + c2/2) = 0: c1+c2/2 = 1.2057084120, discriminant = 26.3543327038.
+  [PASS] [NUMERIC] V_eff has one physical minimum at m_V ≈ -0.433 (positive-branch side)  (m_V = -0.43317644)
+  [PASS] [NUMERIC] V_eff has one unphysical maximum at m₂ ≈ -5.567 (outside positive branch)  (m₂ = -5.56682356)
+  [PASS] [NUMERIC] Numerical V_eff minimization agrees with analytic critical-point formula  (numeric m_V=-0.435689, analytic m_V=-0.433176)
+  [PASS] [NUMERIC] kappa at V_eff minimum is kappa_V ≈ -0.7596 (distinct from physical kappa_*≈-0.6079)  (kappa(m_V) = -0.759567)
+
+========================================================================================
+PART 5: honest status — V_eff minimum ≠ physical selected point
+========================================================================================
+  [PASS] [NUMERIC] Positivity threshold m_pos is where u_small = 0  (m_pos = -1.2957949041)
+  [PASS] [NUMERIC] kappa(m_pos) = -1/√3 exactly (algebraic identity at the positivity threshold)  (kappa(m_pos) = -0.577350269190  vs  -1/√3 = -0.577350269190)
+  [PASS] [NUMERIC] Physical m_* is selected by the H_* witness ratio w/v = r_* ≈ 4.1009  (m_* = -1.16046947)
+  [PASS] GAP: V_eff minimum at m_V ≈ -0.433 is NOT the physical selected point m_* ≈ -1.161  (|m_V - m_*| = 0.727293  (gap of ~0.73 in m units))
+  [note] The Z³ potential V(m) alone does not select m_*; the physical point requires the H_* witness or an equivalent selector (microscopic gap flagged honestly).
+
+========================================================================================
+PART 6: scale analysis — slot values at m_* match PDG to 0.03%
+========================================================================================
+  [PASS] [NUMERIC] At m_* the Koide triplet (u_*, v_*, w_*) satisfies Q = 2/3 on the cone
+  [PASS] [NUMERIC] Slot direction at m_* is essentially the PDG √m direction (cos-sim ≥ 0.9999)  (cos-sim = 1.0000000000)
+  [PASS] [NUMERIC] After one overall scale fit, all three sqrt(mass) values match PDG to < 0.05%  (rel sqrt-mass errors = [-2.3012e-04, -1.0761e-05, 7.0602e-07])
+  [note] Predicted masses after one-scale fit: (e, mu, tau) = (0.5108, 105.6561, 1776.86) MeV.
+  [note] Dimensionless ratio v_*/|m_*| = 1.30872304 (v_*=1.51873313, |m_*|=1.16046947).
+
+========================================================================================
+PART 7: transport gap observation — 1/η_ratio ≈ 4π/√6
+========================================================================================
+  [PASS] [NUMERIC] Transport gap factor 1/η_ratio ≈ 5.29 is close to 4π/√6 ≈ 5.13  (1/η_ratio=5.2910, 4π/√6=5.1302  (3.2% mismatch))
+  [note] 4π/√6 = full solid angle 4π divided by Koide |z|=√6/2 times 2 (|z|=√6/2=1.224745).
+  [note] This geometric connection is an OBSERVATION only — not yet a formal derivation (flag: formal transport-Koide coupling needs a lattice calculation).
+
+Interpretation:
+  The Clifford involution T_m² = I forces the Z³-invariant scalar
+  potential V(m) = const + (c1+c2/2)m + (3/2)m² + (1/6)m³.  The
+  cubic coupling 1/6 is pinned exactly by Tr(T_m³)=1 (a Clifford
+  trace identity); the quadratic coefficient 3/2 is pinned by
+  Tr(T_m²)=3. The potential det(K_sel)=-m³+... carries the Levi-
+  Civita sign -1 as its leading coefficient. The V_eff minimum sits
+  at m_V ≈ -0.433, not at the physical m_* ≈ -1.161. The scalar
+  potential alone does not close the selection; an additional
+  microscopic law (the H_* witness ratio or equivalent) is needed
+  to pin m_*. After one overall scale, the slot triplet at m_*
+  reproduces all three charged-lepton masses to < 0.05%.
+
+PASS=22 FAIL=0
+
+----- stderr -----
+

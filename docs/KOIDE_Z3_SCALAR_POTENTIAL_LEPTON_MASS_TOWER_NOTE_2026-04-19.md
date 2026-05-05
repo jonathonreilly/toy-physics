@@ -3,6 +3,7 @@
 **Date:** 2026-04-19
 **Type:** positive_theorem
 **Claim scope:** the local Clifford-trace algebra (`T_m^2 = I_3`,
+**Primary runner:** [`scripts/frontier_koide_z3_scalar_potential.py`](../scripts/frontier_koide_z3_scalar_potential.py) (PASS=22/0)
 `Tr(T_m^2) = 3`, `Tr(T_m^3) = 1`) and the resulting V(m) coefficient
 assignment `g_2 = 3/2, g_3 = 1/6` are in-scope and verifiable directly
 from the displayed `T_m`. The **broader claim** that V(m) constitutes

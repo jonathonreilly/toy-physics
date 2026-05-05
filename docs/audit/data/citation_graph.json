@@ -11765,6 +11765,22 @@
       "to": "oh_schur_boundary_action_note"
     },
     {
+      "from": "s3_time_observable_hessian_route_note",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "s3_time_observable_hessian_route_note",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "s3_time_observable_hessian_route_note",
+      "to": "s3_general_r_derivation_note"
+    },
+    {
+      "from": "s3_time_observable_hessian_route_note",
+      "to": "s3_time_transfer_matrix_bridge_note"
+    },
+    {
       "from": "s3_time_spacetime_tensor_primitive_note",
       "to": "s3_general_r_derivation_note"
     },
@@ -32827,9 +32843,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "51c11b91609e462a2844b7b177ecf106ee354f825ddabc2a7992d7a387f29b32",
+      "note_hash": "bbe0ff8ad8f45b3e7a2c8c4957f09ef54b435b73a120921f4613ced4ced30eb2",
       "path": "docs/DM_NEUTRINO_WEAK_VECTOR_THEOREM_NOTE_2026-04-15.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_neutrino_weak_vector_theorem.py",
       "title": "DM Neutrino Weak Vector Theorem"
     },
     "dm_neutrino_yukawa_cascade_candidate_note_2026-04-14": {
@@ -35373,9 +35389,9 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "d3f1ac27aca3ec69e276e2de1415565b2fcf371ddb927d7105179934e0799121",
+      "note_hash": "ce0c9dca9ae8b03878b530848b13bddee60537ff60e8ca6a8da88e472354ca62",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion `3d+1` Exact-Solve Doublet Theorem"
     },
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20": {
@@ -36169,9 +36185,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "7a749d2cf4576fe5b9f6e5af1baaac73fc5029252d033af94b7fd6eef0fdc63b",
+      "note_hash": "a634275d4a83214326ec81042027a498fa5ccde56e0369705f07491322061ca4",
       "path": "docs/GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_gravity_full_self_consistency.py",
       "title": "Full Self-Consistency Forces Poisson on the Entire Framework Surface"
     },
     "gravity_law_cleanup_note": {
@@ -36796,9 +36812,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "1955e32190736ec8b0713dce07a7ba3a0b2c5cca56fd3e9b0803ff0ca132e5d3",
+      "note_hash": "4e40863ccf7bab6ffecfe88a81aef0323aa16e337a6024612038fe9184228131",
       "path": "docs/HIGGS_MASS_HIERARCHY_CORRECTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_higgs_mass_retention_analysis.py",
       "title": "Higgs Mass: Hierarchy Correction Analysis (Negative Result)"
     },
     "higgs_mass_retention_analysis_note_2026-04-18": {
@@ -38802,9 +38818,9 @@
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "dfd4aafc5cb26893333c2b84eaec7ebf53daffb8bc409c68bbfc3f90cd0ba9f5",
+      "note_hash": "9a6c36a67f25f10cbe2c7aeb5b3c3654cd90048ed44d3b93215262d636e71d5e",
       "path": "docs/KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_z3_scalar_potential.py",
       "title": "Koide Z\u00b3 Scalar Potential \u2014 Lepton Mass Tower Note"
     },
     "koide_z3_scalar_potential_support_note_2026-04-19": {
@@ -42835,9 +42851,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "6f508bfa6c4d683283edc6bcaeed14ced40b21aa64938a475a5f3dd3c31d4d7a",
+      "note_hash": "ee2d09c8b7d8103ae71164da9f599b37abad582d129d9f0988fec0e24500c2e6",
       "path": "docs/PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_active_four_real_source_from_transport.py",
       "title": "PMNS Active Four-Real Source From Transport"
     },
     "pmns_branch_conditioned_quadratic_sheet_closure_note": {
@@ -43283,9 +43299,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "8b75a900f7e1e7408230c8ae7ad8cbab72e734669b8f0032864149697d3b757b",
+      "note_hash": "2a76a4a3deb5cd9b701acce86596459225e3fc877266e2ef758e5db61633a7c8",
       "path": "docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py",
       "title": "PMNS Selector Three-Identity Support Note"
     },
     "pmns_selector_three_identity_support_proposal_readme_2026-04-21": {
@@ -47042,9 +47058,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "39edfe0f9b867e3519ad876638932aeab882213992e6eb1494834d360683d668",
+      "note_hash": "31b86538d85ce5b136ae72e6b898f1f5b322105c3606fd451b3d9ec846517d41",
       "path": "docs/RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_oh_schur_boundary_action.py",
       "title": "Restricted Strong-Field Closure on the Exact `O_h` Shell Class"
     },
     "retained_cross_lane_consistency_support_note_2026-04-22": {
@@ -47147,9 +47163,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "67c521b4acbaec1fa762128cb3e5c1408b0963c16e9e50451cc95ee5629e2493",
+      "note_hash": "05d184ea284b36593b3f2e7f543f599587c92a0394c1c0d0278b0c7fd9916778",
       "path": "docs/S3_ANOMALY_SPACETIME_LIFT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_anomaly_spacetime_lift.py",
       "title": "`S^3` + Anomaly-Forced Time: Axiom-First Spacetime Lift"
     },
     "s3_boundary_link_theorem_note": {
@@ -47252,6 +47268,22 @@
       "runner_path": null,
       "title": "Constructed Route-2 Support Tensor Primitive: Response Jacobian of the Bounded Prototype"
     },
+    "s3_time_observable_hessian_route_note": {
+      "claim_id": "s3_time_observable_hessian_route_note",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [
+        "observable_principle_from_axiom_note",
+        "anomaly_forces_time_theorem",
+        "s3_general_r_derivation_note",
+        "s3_time_transfer_matrix_bridge_note"
+      ],
+      "note_hash": "37459f04459e8abf6a224c530925a4fc538148ac229f28ea8afa0566806fac38",
+      "path": "docs/S3_TIME_OBSERVABLE_HESSIAN_ROUTE_NOTE.md",
+      "runner_path": null,
+      "title": "`S^3` + Anomaly-Forced Time: Observable-Hessian Route"
+    },
     "s3_time_primitive_chain_note": {
       "claim_id": "s3_time_primitive_chain_note",
       "claim_type_author_hint": null,
@@ -47262,6 +47294,17 @@
       "path": "docs/S3_TIME_PRIMITIVE_CHAIN_NOTE.md",
       "runner_path": null,
       "title": "Route 2 Primitive Chain: Readout and Time-Coupling Update"
+    },
+    "s3_time_spacetime_observable_route_note": {
+      "claim_id": "s3_time_spacetime_observable_route_note",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "e7429b11bf70e992474aada43fa025ffb9d2092f7c4d6c41ef99085081e1bc36",
+      "path": "docs/S3_TIME_SPACETIME_OBSERVABLE_ROUTE_NOTE.md",
+      "runner_path": null,
+      "title": "Route 2 Observable Pass: `S^3` + Anomaly-Forced Time"
     },
     "s3_time_spacetime_tensor_primitive_note": {
       "claim_id": "s3_time_spacetime_tensor_primitive_note",
@@ -50750,9 +50793,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "45d3d57924457fd80d7fd4daf7bfda3717e7d90ab93a92c707bd6c0f0b0b0375",
+      "note_hash": "7fb0e1d0764e8425221c51099acf3f40ba6635096c81450a307a021d0084a56c",
       "path": "docs/UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_tensor_action_blocker.py",
       "title": "Universal GR Tensor Action Blocker Note"
     },
     "universal_gr_tensor_quotient_uniqueness_note": {
@@ -54410,6 +54453,7 @@
     "s3_mass_matrix_no_go_note",
     "s3_time_constructed_support_tensor_primitive_note",
     "s3_time_primitive_chain_note",
+    "s3_time_spacetime_observable_route_note",
     "s3_time_tensor_build_memo",
     "s3_time_tensor_primitive_prototype_note",
     "s3_time_theta_to_slice_coupling_note",
@@ -54650,7 +54694,7 @@
       "bounded_theorem": 59,
       "meta": 8,
       "no_go": 12,
-      "none": 1715,
+      "none": 1717,
       "open_gate": 9,
       "positive_theorem": 84
     },
@@ -54658,14 +54702,14 @@
       "bounded_theorem": 557,
       "meta": 8,
       "no_go": 117,
-      "none": 457,
+      "none": 459,
       "open_gate": 115,
       "positive_theorem": 633
     },
-    "edge_count": 6399,
-    "leaf_count": 552,
-    "node_count": 1887,
-    "root_count": 900,
-    "runners_with_path": 1461
+    "edge_count": 6403,
+    "leaf_count": 554,
+    "node_count": 1889,
+    "root_count": 901,
+    "runners_with_path": 1471
   }
 }

@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-13  
 **Status:** Promotable restricted strong-field gravity theorem; not full nonlinear GR
+**Primary runner:** [`scripts/frontier_oh_schur_boundary_action.py`](../scripts/frontier_oh_schur_boundary_action.py) (PASS=6/0)
 
 ## Statement
 

@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 795,
     "high": 25,
-    "leaf": 208,
+    "leaf": 210,
     "medium": 137
   },
   "cycle_break_target_count": 192,
@@ -4687,7 +4687,7 @@
       "note_path": "docs/DM_NEUTRINO_WEAK_VECTOR_THEOREM_NOTE_2026-04-15.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_neutrino_weak_vector_theorem.py",
       "transitive_descendants": 275
     },
     {
@@ -5110,7 +5110,7 @@
       "note_path": "docs/RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_oh_schur_boundary_action.py",
       "transitive_descendants": 270
     },
     {
@@ -5236,7 +5236,7 @@
       "note_path": "docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py",
       "transitive_descendants": 270
     },
     {
@@ -5299,7 +5299,7 @@
       "note_path": "docs/UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_tensor_action_blocker.py",
       "transitive_descendants": 270
     },
     {
@@ -5404,7 +5404,7 @@
       "note_path": "docs/GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_gravity_full_self_consistency.py",
       "transitive_descendants": 269
     },
     {
@@ -5467,7 +5467,7 @@
       "note_path": "docs/HIGGS_MASS_HIERARCHY_CORRECTION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_higgs_mass_retention_analysis.py",
       "transitive_descendants": 269
     },
     {
@@ -5824,7 +5824,7 @@
       "note_path": "docs/PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_active_four_real_source_from_transport.py",
       "transitive_descendants": 267
     },
     {
@@ -5929,7 +5929,7 @@
       "note_path": "docs/S3_ANOMALY_SPACETIME_LIFT_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_anomaly_spacetime_lift.py",
       "transitive_descendants": 267
     },
     {
@@ -6457,7 +6457,7 @@
       "note_path": "docs/KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_z3_scalar_potential.py",
       "transitive_descendants": 266
     },
     {
@@ -8160,7 +8160,7 @@
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.py",
       "transitive_descendants": 265
     },
     {
@@ -28004,6 +28004,27 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "s3_time_spacetime_observable_route_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "default_positive_theorem",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/S3_TIME_SPACETIME_OBSERVABLE_ROUTE_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "session_synthesis_2026-04-10_graph_axioms",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -32133,6 +32154,32 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "s3_time_observable_hessian_route_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "default_positive_theorem",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "observable_principle_from_axiom_note",
+        "anomaly_forces_time_theorem",
+        "s3_general_r_derivation_note",
+        "s3_time_transfer_matrix_bridge_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/S3_TIME_OBSERVABLE_HESSIAN_ROUTE_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "scalar_selector_proof_chains_2026-04-19",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -33223,6 +33270,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 298,
-  "total_pending": 1165
+  "ready_count": 299,
+  "total_pending": 1167
 }

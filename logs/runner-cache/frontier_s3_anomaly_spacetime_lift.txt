@@ -1,0 +1,27 @@
+===== runner cache v1 =====
+runner: scripts/frontier_s3_anomaly_spacetime_lift.py
+runner_sha256: ca061988a98ba012797215d698dccf3b005c891aa4d5a7b2aed3e3c943d8630b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+Route 2: S^3 + anomaly-forced time spacetime lift
+========================================================================
+  Candidate background: PL S^3 x R
+
+  [PASS] S^3 topology theorem is present and closed (S^3 compactification is already a retained topology tool)
+  [PASS] Anomaly-forced time theorem is present and exact (single-clock closure is already a retained time tool)
+  [PASS] Atlas contains both ingredients as reusable tools (the atlas exposes the required topology/time primitives)
+  [PASS] Combined kinematic background is admissible (PL S^3 x R is the clean background candidate from the two exact inputs)
+  [PASS] No exact dynamics bridge is present in the atlas (gap documented) (no exact S^3 -> curvature / anomaly -> Einstein-field theorem yet exists on main; gap is documented in the spacetime-lift note)
+
+Summary:
+  Kinematic lift: yes
+  Dynamical lift / GR closure: blocked
+  Missing theorem: exact dynamics bridge from PL S^3 x R to the metric law
+
+PASS=5 FAIL=0
+
+----- stderr -----
+

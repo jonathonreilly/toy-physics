@@ -1,6 +1,7 @@
 # PMNS Active Four-Real Source From Transport
 
 **Status:** open - open or unresolved claim state
+**Primary runner:** [`scripts/frontier_pmns_active_four_real_source_from_transport.py`](../scripts/frontier_pmns_active_four_real_source_from_transport.py) (PASS=7/0)
 ## Question
 Once the active transport / response profile is derived at lower level, does the
 remaining four-real active orbit-breaking source still need a separate theorem

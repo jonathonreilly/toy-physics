@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-21
 **Status:** Support proposal on the affine Hermitian PMNS chart. Not a proposed_retained
+**Primary runner:** [`scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py`](../scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py) (all checks pass)
 closure theorem.
 
 ## Statement
