@@ -1,5 +1,21 @@
 # Literature Bridges
 
+## 2026-05-05 Cycle-27 Post-Cycle-26 Main-Audit-Status-Drift Reopen Guard
+
+No external literature was used in cycle 27.
+
+Reason: the route checked git refs, audit/effective-status drift, and listed
+PR230 future artifact paths only.  It did not introduce a theorem, comparator,
+or methodological import.
+
+## 2026-05-05 Cycle-26 Post-Cycle-25 Main-Audit-Status-Drift Reopen Guard
+
+No external literature was used in cycle 26.
+
+Reason: the route checked git refs, audit/effective-status drift, and listed
+PR230 future artifact paths only.  It did not introduce a theorem, comparator,
+or methodological import.
+
 ## 2026-05-05 Cycle-25 Post-Cycle-24 Main-Audit-Status-Drift Reopen Guard
 
 No external literature was used in cycle 25.
