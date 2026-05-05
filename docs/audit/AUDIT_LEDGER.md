@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 198 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 16 |
-| unaudited | 875 |
+| unaudited | 874 |
 | audit_in_progress | 44 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
-| ~~audited_conditional~~ | 382 |
+| ~~audited_conditional~~ | 383 |
 | ~~audited_failed~~ | 15 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 44 |
 | `audited_clean` | 320 |
-| `audited_conditional` | 382 |
+| `audited_conditional` | 383 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 29 |
-| `unaudited` | 921 |
+| `unaudited` | 920 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 616 |
+| `bounded_theorem` | 617 |
 | `decoration` | 6 |
 | `meta` | 54 |
 | `no_go` | 184 |
 | `open_gate` | 111 |
-| `positive_theorem` | 811 |
+| `positive_theorem` | 810 |
 
 | criticality | count |
 |---|---:|
@@ -722,6 +722,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_second_order_support_batch_note_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `koide_reviewer_stress_test_note_2026-04-21` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_theta_hierarchy_open_scalar_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `kubo_continuum_limit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `lattice_3d_dense_refinement_reconciliation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `lattice_3d_l2_numpy_h0125_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -7184,6 +7185,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** `scripts/frontier_koide_z3_joint_projector_identity.py` (PASS=55 FAIL=0)  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 27 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `kubo_continuum_limit_note`
+
+- **Note:** [`KUBO_CONTINUUM_LIMIT_NOTE.md`](../../docs/KUBO_CONTINUUM_LIMIT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the specified Fam1 grown-DAG static 1/r-field harness at H = 0.50, 0.35, 0.25, the cached runner computes kubo_true = 7.061910, 5.972756, 5.986043, with 0.2% last-step drift under the runner's 5% criterion.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-first-kubo_continuum_limit_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** `kubo_true` converges at the last step to within 0.2%, giving a direct physical continuum limit for the linear gravitational response coefficient.  _(class `C`)_
+- **chain closes:** False — The cached runner substantively computes the reported three-refinement stabilization and is not merely timing out or printing constants. The retained physical continuum claim still depends on conditional upstream Kubo/continuum authorities and on treating a three-point, Fam1-only numerical stabilization as an H -> 0 continuum theorem.
+- **rationale:** Issue: the numerical runner closes the bounded last-step-drift calculation, but the broader claim that this is a direct physical continuum prediction imports the true-Kubo response interpretation and continuum framing from conditional one-hop notes. Why this blocks: a hostile reviewer can accept the cached table while rejecting retained-grade physical continuum closure because the Kubo observable bridge is not retained-grade and three refinement points do not by themselves prove an H -> 0 theorem. Repair target: first retain the true-Kubo derivative authority and either split the claim to the bounded numerical stabilization or add a continuum/asymptotic theorem or stronger refinement certificate. Claim boundary until fixed: it is safe to say the cached runner reports a Fam1 static Kubo coefficient stabilizing from 5.972756 to 5.986043 between H = 0.35 and H = 0.25 under the specified harness.
+- **open / conditional deps cited:**
+  - `LINEAR_RESPONSE_TRUE_KUBO_NOTE.md`
+  - `WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md`
 - **auditor confidence:** high
 
 ### `lattice_3d_dense_refinement_reconciliation_note`

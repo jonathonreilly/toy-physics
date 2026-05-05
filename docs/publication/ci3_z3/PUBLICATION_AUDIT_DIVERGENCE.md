@@ -17,8 +17,8 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 364 |
-| critical | `audited_conditional` | 135 |
+| critical | `unaudited` | 363 |
+| critical | `audited_conditional` | 136 |
 | critical | `audit_in_progress` | 38 |
 | critical | `audited_renaming` | 19 |
 | critical | `audited_numerical_match` | 11 |
@@ -339,7 +339,7 @@ publication tables phrase it.
 | critical | `koide_transport_gap_constant_no_go_note_2026-04-20` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md |
 | critical | `koide_weighted_character_source_axis_theorem_note_2026-04-20` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `koide_z3_scalar_potential_support_note_2026-04-19` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, RESULTS_INDEX.md |
-| critical | `kubo_continuum_limit_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| critical | `kubo_continuum_limit_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `kubo_range_of_validity_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `lattice_complementarity_note` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md |
 | critical | `left_handed_charge_matching_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md |

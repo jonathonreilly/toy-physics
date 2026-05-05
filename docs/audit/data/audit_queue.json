@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 599,
+    "critical": 598,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -3038,30 +3038,6 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/persistent_object_top4_multistage_transfer_sweep.py",
-      "transitive_descendants": 288
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "kubo_continuum_limit_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "wave_retardation_continuum_limit_note",
-        "linear_response_true_kubo_note"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.175,
-      "note_path": "docs/KUBO_CONTINUUM_LIMIT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/kubo_continuum_limit.py",
       "transitive_descendants": 288
     },
     {
@@ -27450,6 +27426,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 75,
-  "total_pending": 937
+  "ready_count": 74,
+  "total_pending": 936
 }
