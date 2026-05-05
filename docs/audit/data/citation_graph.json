@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T07:28:03.897979+00:00",
+  "generated_at": "2026-05-05T07:47:01.995104+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -40695,6 +40695,16 @@
       "runner_path": null,
       "title": "PR #230 FH/LSZ Polefit8x8 Chunks049-054 Launch Checkpoint"
     },
+    "yt_fh_lsz_polefit8x8_chunks055_060_checkpoint_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_polefit8x8_chunks055_060_checkpoint_note_2026-05-05",
+      "current_status": "bounded",
+      "current_status_raw": "bounded production support only.",
+      "deps": [],
+      "note_hash": "8a6c8d052a82874b9c476894c3a581eee210839003173b2e98a062ad81683d53",
+      "path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS055_060_CHECKPOINT_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR #230 FH/LSZ Polefit8x8 Chunks055-060 Checkpoint"
+    },
     "yt_fh_lsz_polefit8x8_chunks055_060_launch_checkpoint_note_2026-05-05": {
       "claim_id": "yt_fh_lsz_polefit8x8_chunks055_060_launch_checkpoint_note_2026-05-05",
       "current_status": "support",
@@ -40704,6 +40714,16 @@
       "path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS055_060_LAUNCH_CHECKPOINT_NOTE_2026-05-05.md",
       "runner_path": null,
       "title": "PR #230 FH/LSZ Polefit8x8 Chunks055-060 Launch Checkpoint"
+    },
+    "yt_fh_lsz_polefit8x8_chunks061_063_launch_checkpoint_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_polefit8x8_chunks061_063_launch_checkpoint_note_2026-05-05",
+      "current_status": "support",
+      "current_status_raw": "run-control support only.",
+      "deps": [],
+      "note_hash": "e60804f115e1a67dbec82e5b5a5f0f83b2660fa82639f7a1379bd9f09e9b531a",
+      "path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS061_063_LAUNCH_CHECKPOINT_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR #230 FH/LSZ Polefit8x8 Chunks061-063 Launch Checkpoint"
     },
     "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04": {
       "claim_id": "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04",
@@ -41903,7 +41923,7 @@
       "current_status": "open",
       "current_status_raw": "open / active campaign continuing after current shortcut blocks",
       "deps": [],
-      "note_hash": "df5ea8283e63b4c1fa506bb09a1aed85d189d11e06221471a1ddb8d98c1a9ffe",
+      "note_hash": "a4f8fac1c6ba623bf6b88fa143f45bdaffc5fe997ac075de9269f9aacc88e5dc",
       "path": "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
@@ -41967,6 +41987,16 @@
       "path": "docs/YT_PR230_NONCHUNK_CYCLE14_ROUTE_SELECTOR_GATE_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_nonchunk_cycle14_route_selector_gate.py",
       "title": "PR230 Non-Chunk Cycle-14 Route-Selector Gate"
+    },
+    "yt_pr230_nonchunk_cycle15_independent_route_admission_gate_note_2026-05-05": {
+      "claim_id": "yt_pr230_nonchunk_cycle15_independent_route_admission_gate_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / no independent current-surface non-chunk",
+      "deps": [],
+      "note_hash": "9a97077a81b1ce95d7c927d1898e0ae3167a76de943275a52294bc6ff3e4586b",
+      "path": "docs/YT_PR230_NONCHUNK_CYCLE15_INDEPENDENT_ROUTE_ADMISSION_GATE_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_nonchunk_cycle15_independent_route_admission_gate.py",
+      "title": "PR230 Non-Chunk Cycle-15 Independent-Route Admission Gate"
     },
     "yt_pr230_nonchunk_future_artifact_intake_gate_note_2026-05-05": {
       "claim_id": "yt_pr230_nonchunk_future_artifact_intake_gate_note_2026-05-05",
@@ -44626,7 +44656,9 @@
     "yt_fh_lsz_polefit8x8_chunks043_048_launch_checkpoint_note_2026-05-05",
     "yt_fh_lsz_polefit8x8_chunks049_054_checkpoint_note_2026-05-05",
     "yt_fh_lsz_polefit8x8_chunks049_054_launch_checkpoint_note_2026-05-05",
+    "yt_fh_lsz_polefit8x8_chunks055_060_checkpoint_note_2026-05-05",
     "yt_fh_lsz_polefit8x8_chunks055_060_launch_checkpoint_note_2026-05-05",
+    "yt_fh_lsz_polefit8x8_chunks061_063_launch_checkpoint_note_2026-05-05",
     "yt_fh_lsz_polefit8x8_launch_checkpoint_note_2026-05-04",
     "yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_note_2026-05-05",
     "yt_fh_lsz_polynomial_contact_finite_shell_no_go_note_2026-05-05",
@@ -44713,6 +44745,7 @@
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
     "yt_pr230_nonchunk_current_surface_exhaustion_gate_note_2026-05-05",
     "yt_pr230_nonchunk_cycle14_route_selector_gate_note_2026-05-05",
+    "yt_pr230_nonchunk_cycle15_independent_route_admission_gate_note_2026-05-05",
     "yt_pr230_nonchunk_future_artifact_intake_gate_note_2026-05-05",
     "yt_pr230_nonchunk_reopen_admissibility_gate_note_2026-05-05",
     "yt_pr230_nonchunk_route_family_import_audit_note_2026-05-05",
@@ -44839,17 +44872,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1017,
-    "node_count": 1970,
-    "root_count": 1483,
-    "runners_with_path": 1486,
+    "leaf_count": 1020,
+    "node_count": 1973,
+    "root_count": 1486,
+    "runners_with_path": 1487,
     "status_counts": {
-      "bounded": 547,
+      "bounded": 548,
       "open": 101,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 427,
-      "unknown": 521
+      "support": 428,
+      "unknown": 522
     }
   }
 }

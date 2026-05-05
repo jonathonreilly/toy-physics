@@ -70,7 +70,7 @@
     "scalar_lsz_model_class_fv_ir": false,
     "source_overlap_or_physical_response_bridge": false
   },
-  "exact_next_action": "Keep the chunk worker on homogeneous production chunks.  In parallel, pursue one non-chunk bridge that can satisfy this gate: a real same-surface O_H certificate plus C_sH/C_HH pole rows, a same-source EW action plus top/W/Z mass-response rows, matched covariance or a real top/W factorization theorem, and sector-overlap identity, with source identity supplied by real rows or a certificate rather than Goldstone bookkeeping, a strict Stieltjes moment certificate or same-surface Schur A/B/C kernel rows with scalar denominator closure, or a neutral-sector irreducibility theorem.  Rerun this assembly gate before any retained-route proposal.",
+  "exact_next_action": "Keep the chunk worker on homogeneous production chunks.  In parallel, pursue one non-chunk bridge that can satisfy this gate: a real same-surface O_H certificate plus C_sH/C_HH pole rows, a same-source EW action plus top/W/Z mass-response rows, matched covariance or a real top/W factorization theorem, and sector-overlap identity, with source identity supplied by real rows or a certificate rather than Goldstone bookkeeping, a strict Stieltjes moment certificate or same-surface Schur A/B/C kernel rows with scalar denominator closure, or a neutral-sector irreducibility theorem.  Rerun this assembly gate, including the cycle-15 independent-route admission gate, before any retained-route proposal.",
   "fail_count": 0,
   "parent_certificates": {
     "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
@@ -105,6 +105,7 @@
     "neutral_scalar_primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
     "nonchunk_current_surface_exhaustion": "outputs/yt_pr230_nonchunk_current_surface_exhaustion_gate_2026-05-05.json",
     "nonchunk_cycle14_route_selector": "outputs/yt_pr230_nonchunk_cycle14_route_selector_gate_2026-05-05.json",
+    "nonchunk_cycle15_independent_route_admission": "outputs/yt_pr230_nonchunk_cycle15_independent_route_admission_gate_2026-05-05.json",
     "nonchunk_future_artifact_intake": "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json",
     "nonchunk_reopen_admissibility": "outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json",
     "nonchunk_terminal_route_exhaustion": "outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json",
@@ -175,6 +176,7 @@
     "neutral_scalar_primitive_cone_stretch_no_go": "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface",
     "nonchunk_current_surface_exhaustion": "exact negative boundary / current PR230 non-chunk route queue exhausted; positive closure still open",
     "nonchunk_cycle14_route_selector": "exact negative boundary / PR230 non-chunk cycle-14 route-selector gate: no executable current-surface non-chunk route remains after the W/Z covariance-theorem import no-go; positive closure still open",
+    "nonchunk_cycle15_independent_route_admission": "exact negative boundary / PR230 non-chunk cycle-15 independent-route admission gate: no independent current-surface route is admitted after cycle-14 route selection; positive closure still open",
     "nonchunk_future_artifact_intake": "exact negative boundary / PR230 non-chunk future-artifact intake finds no executable current route; positive closure still open",
     "nonchunk_reopen_admissibility": "exact negative boundary / PR230 non-chunk reopen-admissibility gate: no future artifact candidate is admissible on the current surface; positive closure still open",
     "nonchunk_terminal_route_exhaustion": "exact negative boundary / PR230 non-chunk terminal route-exhaustion gate: no current route may continue without a named same-surface artifact; positive closure still open",
@@ -212,7 +214,7 @@
     "wz_same_source_action_semantic_firewall": "bounded-support / same-source EW action semantic firewall passed",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
   },
-  "pass_count": 54,
+  "pass_count": 55,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",
   "route_statuses": {
@@ -326,7 +328,8 @@
     "does not treat static EW algebra, W/Z absent guards, source-only C_ss rows, or finite-shell fits as physical y_t readouts",
     "does not treat current-surface non-chunk exhaustion as retained closure",
     "does not treat terminal non-chunk route exhaustion as positive closure",
-    "does not treat cycle-14 non-chunk route selection closure as positive evidence"
+    "does not treat cycle-14 non-chunk route selection closure as positive evidence",
+    "does not treat cycle-15 independent-route exhaustion as positive evidence"
   ],
   "synthetic_positive_witness": {
     "evaluation": {
@@ -344,5 +347,5 @@
       "source_overlap_or_physical_response_bridge": true
     }
   },
-  "verdict": "The non-chunk closure assembly is now explicit.  Chunk completion can supply only the production-response leg; it cannot by itself supply scalar LSZ model-class/FV/IR control, the O_sp-to-O_H or same-source physical-response bridge, matching/running authority, or retained-proposal authorization.  On the current PR230 surface all allowed bridge routes are absent, blocked, or support-only, so full positive closure remains open. The cycle-8 current-surface exhaustion gate now records that no hidden non-chunk shortcut remains executable without one of the named future same-surface rows, certificates, or theorems.  The cycle-9 future-artifact intake gate records that no such named artifact has appeared on the current surface.  The terminal route-exhaustion gate records the corresponding stop/reopen rule.  The cycle-12 reopen-admissibility gate rejects a path-only reopen attempt before the aggregate gates may be rerun.  The cycle-14 route-selector gate now records that no current-surface non-chunk route is selected after the W/Z covariance-theorem import no-go."
+  "verdict": "The non-chunk closure assembly is now explicit.  Chunk completion can supply only the production-response leg; it cannot by itself supply scalar LSZ model-class/FV/IR control, the O_sp-to-O_H or same-source physical-response bridge, matching/running authority, or retained-proposal authorization.  On the current PR230 surface all allowed bridge routes are absent, blocked, or support-only, so full positive closure remains open. The cycle-8 current-surface exhaustion gate now records that no hidden non-chunk shortcut remains executable without one of the named future same-surface rows, certificates, or theorems.  The cycle-9 future-artifact intake gate records that no such named artifact has appeared on the current surface.  The terminal route-exhaustion gate records the corresponding stop/reopen rule.  The cycle-12 reopen-admissibility gate rejects a path-only reopen attempt before the aggregate gates may be rerun.  The cycle-14 route-selector gate now records that no current-surface non-chunk route is selected after the W/Z covariance-theorem import no-go.  The cycle-15 independent-route admission gate records that no independent current route is admitted without a new same-surface artifact."
 }

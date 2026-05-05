@@ -254,6 +254,7 @@
     "pr230_matching_running_bridge_gate": "open / PR230 matching-running bridge awaits certified physical input",
     "pr230_nonchunk_current_surface_exhaustion": "exact negative boundary / current PR230 non-chunk route queue exhausted; positive closure still open",
     "pr230_nonchunk_cycle14_route_selector": "exact negative boundary / PR230 non-chunk cycle-14 route-selector gate: no executable current-surface non-chunk route remains after the W/Z covariance-theorem import no-go; positive closure still open",
+    "pr230_nonchunk_cycle15_independent_route_admission": "exact negative boundary / PR230 non-chunk cycle-15 independent-route admission gate: no independent current-surface route is admitted after cycle-14 route selection; positive closure still open",
     "pr230_nonchunk_future_artifact_intake": "exact negative boundary / PR230 non-chunk future-artifact intake finds no executable current route; positive closure still open",
     "pr230_nonchunk_reopen_admissibility": "exact negative boundary / PR230 non-chunk reopen-admissibility gate: no future artifact candidate is admissible on the current surface; positive closure still open",
     "pr230_nonchunk_route_family_import_audit": "exact negative boundary / non-chunk route-family import audit confirms no executable current-surface route after W/Z covariance-theorem import no-go",
@@ -343,7 +344,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 229,
+  "pass_count": 230,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [
@@ -378,6 +379,10 @@
     {
       "needed": "do not reopen until a named same-surface artifact exists and aggregate gates are rerun",
       "route": "terminal non-chunk route exhaustion"
+    },
+    {
+      "needed": "no independent current route is admissible before a named same-surface artifact exists",
+      "route": "independent non-chunk route admission"
     }
   ],
   "strict_non_claims": [
@@ -387,5 +392,5 @@
     "does not allow forbidden matrix-element, operator, coupling, target, or unit shortcuts",
     "does not treat chunk completion alone as positive retained closure"
   ],
-  "verdict": "The current PR #230 physics-loop checkpoint remains open.  All loaded non-production shortcuts are blocked, support-only, or conditional; complete chunk evidence alone would still miss scalar-LSZ control, a same-surface physical-readout bridge, matching/running authority, and proposal authorization.  The current-surface non-chunk exhaustion, future-artifact intake, and terminal route-exhaustion gates now record that no further current-surface non-chunk shortcut may be cycled until a named same-surface artifact exists and the aggregate gates are rerun."
+  "verdict": "The current PR #230 physics-loop checkpoint remains open.  All loaded non-production shortcuts are blocked, support-only, or conditional; complete chunk evidence alone would still miss scalar-LSZ control, a same-surface physical-readout bridge, matching/running authority, and proposal authorization.  The current-surface non-chunk exhaustion, future-artifact intake, and terminal route-exhaustion gates now record that no further current-surface non-chunk shortcut may be cycled until a named same-surface artifact exists and the aggregate gates are rerun.  The cycle-15 independent-route admission gate also records that no independent current route is admitted on this branch."
 }

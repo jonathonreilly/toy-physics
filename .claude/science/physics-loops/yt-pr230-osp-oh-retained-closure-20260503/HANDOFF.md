@@ -1,5 +1,43 @@
 # Handoff
 
+## 2026-05-05 PR230 Non-Chunk Cycle-15 Independent-Route Admission Gate
+
+Cycle 15 tested the only remaining non-chunk continuation clause after the
+cycle-14 route selector: whether the loop can pivot to an independent current
+route without a new same-surface artifact.
+
+Result: exact negative boundary.  The runner reloads the worklist,
+route-family audit, current-surface exhaustion gate, future-artifact intake
+gate, terminal route-exhaustion gate, reopen-admissibility gate, cycle-14
+selector, full assembly gate, retained-route certificate, and campaign
+certificate.  It verifies that all parents pass, no parent authorizes a
+proposal, all six non-chunk work units remain blocked, all listed future
+artifacts are absent, and the stuck fanout has no admitted current route.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_nonchunk_cycle15_independent_route_admission_gate.py
+# SUMMARY: PASS=16 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=55 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=230 FAIL=0
+```
+
+Claim boundary: no closure proposal, no chunk packaging, no independent
+current-surface route, and no non-chunk reopen until a listed same-surface
+row, certificate, or theorem exists as a parseable claim-status artifact and
+the aggregate gates rerun.
+
+Next exact action: treat the PR230 non-chunk current surface as globally
+exhausted for this branch.  Reopen only after an admissible strict future
+artifact exists, then rerun reopen-admissibility, worklist, exhaustion,
+intake, independent-route admission, assembly, retained-route, and campaign
+gates before any proposal language.
+
 ## 2026-05-05 PR230 Non-Chunk Reopen-Admissibility Gate
 
 Cycle 12 closed the path-only reopen shortcut after terminal route

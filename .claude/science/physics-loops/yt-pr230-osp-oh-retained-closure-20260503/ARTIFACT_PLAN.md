@@ -1,5 +1,12 @@
 # Artifact Plan
 
+Completed in the cycle-15 independent-route admission continuation:
+
+- `scripts/frontier_yt_pr230_nonchunk_cycle15_independent_route_admission_gate.py`
+- `docs/YT_PR230_NONCHUNK_CYCLE15_INDEPENDENT_ROUTE_ADMISSION_GATE_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_cycle15_independent_route_admission_gate_2026-05-05.json`
+- refreshed full assembly and campaign certificates.
+
 Completed in the cycle-14 route-selector continuation:
 
 - `scripts/frontier_yt_pr230_nonchunk_cycle14_route_selector_gate.py`

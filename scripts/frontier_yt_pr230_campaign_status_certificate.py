@@ -175,6 +175,9 @@ def main() -> int:
         "pr230_nonchunk_cycle14_route_selector": load(
             "outputs/yt_pr230_nonchunk_cycle14_route_selector_gate_2026-05-05.json"
         ),
+        "pr230_nonchunk_cycle15_independent_route_admission": load(
+            "outputs/yt_pr230_nonchunk_cycle15_independent_route_admission_gate_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -2452,6 +2455,24 @@ def main() -> int:
         is False,
         statuses["pr230_nonchunk_cycle14_route_selector"],
     )
+    report(
+        "pr230-nonchunk-cycle15-independent-route-admission-recorded",
+        "cycle-15 independent-route admission gate"
+        in str(statuses["pr230_nonchunk_cycle15_independent_route_admission"])
+        and certificates["pr230_nonchunk_cycle15_independent_route_admission"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_cycle15_independent_route_admission"].get(
+            "independent_route_admission_gate_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_cycle15_independent_route_admission"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False,
+        statuses["pr230_nonchunk_cycle15_independent_route_admission"],
+    )
 
     remaining_routes = [
         {
@@ -2485,6 +2506,10 @@ def main() -> int:
         {
             "route": "terminal non-chunk route exhaustion",
             "needed": "do not reopen until a named same-surface artifact exists and aggregate gates are rerun",
+        },
+        {
+            "route": "independent non-chunk route admission",
+            "needed": "no independent current route is admissible before a named same-surface artifact exists",
         },
     ]
 
@@ -2755,7 +2780,9 @@ def main() -> int:
             "non-chunk shortcut remains to cycle.  The terminal route-"
             "exhaustion gate records the stop/reopen rule for that state.  "
             "The cycle-12 reopen-admissibility gate rejects a path-only "
-            "reopen attempt before aggregate reruns."
+            "reopen attempt before aggregate reruns.  The cycle-15 "
+            "independent-route admission gate records that no independent "
+            "current route is admitted without a new same-surface artifact."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
@@ -2779,7 +2806,9 @@ def main() -> int:
         "proposal authorization.  The current-surface non-chunk exhaustion, "
         "future-artifact intake, and terminal route-exhaustion gates now record "
         "that no further current-surface non-chunk shortcut may be cycled until "
-        "a named same-surface artifact exists and the aggregate gates are rerun."
+        "a named same-surface artifact exists and the aggregate gates are rerun.  "
+        "The cycle-15 independent-route admission gate also records that no "
+        "independent current route is admitted on this branch."
     )
     result["strict_non_claims"] = [
         "does not claim retained closure",

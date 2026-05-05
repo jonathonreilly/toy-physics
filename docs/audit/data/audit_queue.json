@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 589,
+    "leaf": 592,
     "medium": 301
   },
-  "generated_at": "2026-05-05T07:28:06.457835+00:00",
+  "generated_at": "2026-05-05T07:47:05.242358+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -18848,6 +18848,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_fh_lsz_polefit8x8_chunks055_060_checkpoint_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS055_060_CHECKPOINT_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_fh_lsz_polefit8x8_chunks055_060_launch_checkpoint_note_2026-05-05",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -18857,6 +18874,23 @@
       "direct_in_degree": 0,
       "load_bearing_score": 0.0,
       "note_path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS055_060_LAUNCH_CHECKPOINT_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_fh_lsz_polefit8x8_chunks061_063_launch_checkpoint_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS061_063_LAUNCH_CHECKPOINT_NOTE_2026-05-05.md",
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 0
@@ -20151,6 +20185,23 @@
       "note_path": "docs/YT_PR230_NONCHUNK_CYCLE14_ROUTE_SELECTOR_GATE_NOTE_2026-05-05.md",
       "ready": true,
       "runner_path": "scripts/frontier_yt_pr230_nonchunk_cycle14_route_selector_gate.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_pr230_nonchunk_cycle15_independent_route_admission_gate_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_NONCHUNK_CYCLE15_INDEPENDENT_ROUTE_ADMISSION_GATE_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_nonchunk_cycle15_independent_route_admission_gate.py",
       "transitive_descendants": 0
     },
     {
@@ -23582,6 +23633,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 736,
-  "total_pending": 1127
+  "ready_count": 739,
+  "total_pending": 1130
 }

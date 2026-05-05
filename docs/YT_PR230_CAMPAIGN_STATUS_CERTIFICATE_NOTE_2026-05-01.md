@@ -28,8 +28,29 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=229 FAIL=0
+# SUMMARY: PASS=230 FAIL=0
 ```
+
+## 2026-05-05 Cycle-15 Independent-Route Admission Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_nonchunk_cycle15_independent_route_admission_gate_2026-05-05.json`.
+After the cycle-14 route selector chose no executable current route, the
+cycle-15 gate checks the remaining independent-route pivot clause.  No
+independent current-surface route is admitted; the same-source W/Z,
+canonical-Higgs/source-Higgs, scalar-LSZ, Schur-row, neutral-rank, and
+downstream matching frames are all future-only until a listed same-surface
+artifact exists and the aggregate gates rerun.
+
+Validation: cycle-15 independent-route admission gate `PASS=16 FAIL=0`; full
+positive closure assembly gate `PASS=55 FAIL=0`; retained-route
+`PASS=201 FAIL=0`; campaign status `PASS=230 FAIL=0`.
+
+The campaign remains open as a physics target, but the current non-chunk
+surface is globally exhausted for this branch.  Reopen only after an
+admissible strict future artifact exists and the worklist, exhaustion, intake,
+independent-route admission, assembly, retained-route, and campaign gates are
+rerun.
 
 ## 2026-05-05 Cycle-14 Route-Selector Update
 

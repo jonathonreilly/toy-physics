@@ -1,5 +1,25 @@
 # Review History
 
+## 2026-05-05 Non-Chunk Cycle-15 Independent-Route Admission Self-Review
+
+Disposition: pass as exact negative boundary / no independent current route.
+
+Findings:
+
+- The runner does not produce or infer any new same-surface row, certificate,
+  theorem, or production evidence; it only checks whether an independent route
+  can be admitted after the cycle-14 selector.
+- The gate loads no chunk MC and does not package or rerun chunk outputs.
+- The stuck fanout covers same-source W/Z, canonical-Higgs/source-Higgs,
+  scalar-LSZ, Schur-row, neutral-rank, and downstream matching frames; every
+  frame remains future-only.
+- The worklist, route-family, exhaustion, intake, terminal, reopen,
+  retained-route, assembly, and campaign certificates still deny proposal
+  authority.
+- The exact next action is to supply a listed same-surface artifact with
+  claim-status fields, then rerun the reopen-admissibility and aggregate gates
+  before selecting any positive route.
+
 ## 2026-05-05 Non-Chunk Cycle-14 Route-Selector Self-Review
 
 Disposition: pass as exact negative boundary / no executable current route.

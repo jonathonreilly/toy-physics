@@ -129,3 +129,16 @@ Status: closed negatively in
 Reason: all five route families are future-only.  The selected current route is
 `no_current_surface_nonchunk_route`; reopen requires a listed same-surface
 artifact with claim-status fields and full aggregate reruns.
+
+## R9: Cycle-15 Independent-Route Admission
+
+After the route selector closes, test whether an independent current-surface
+non-chunk route can still be admitted without a new same-surface artifact.
+
+Status: closed negatively in
+`docs/YT_PR230_NONCHUNK_CYCLE15_INDEPENDENT_ROUTE_ADMISSION_GATE_NOTE_2026-05-05.md`.
+
+Reason: the stuck fanout covers same-source W/Z, canonical-Higgs/source-Higgs,
+scalar-LSZ, Schur-row, neutral-rank, and downstream matching frames.  Every
+frame is future-only until one listed same-surface row, certificate, or theorem
+exists as a parseable claim-status artifact and the aggregate gates rerun.

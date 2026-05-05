@@ -33,3 +33,4 @@
 | Continuing current-surface non-chunk shortcut cycling after failed future-artifact intake | closed negatively / terminal route-exhaustion firewall | `YT_PR230_NONCHUNK_TERMINAL_ROUTE_EXHAUSTION_GATE_NOTE_2026-05-05.md` |
 | Reopening the non-chunk route surface from a listed file path alone | closed negatively / admissible claim-status artifact absent | `YT_PR230_NONCHUNK_REOPEN_ADMISSIBILITY_GATE_NOTE_2026-05-05.md` |
 | Selecting another current-surface non-chunk route after the W/Z covariance-theorem import no-go | closed negatively / no executable selector row remains | `YT_PR230_NONCHUNK_CYCLE14_ROUTE_SELECTOR_GATE_NOTE_2026-05-05.md` |
+| Pivoting to an independent current-surface non-chunk route after the cycle-14 selector without a new same-surface artifact | closed negatively / no admitted independent route remains | `YT_PR230_NONCHUNK_CYCLE15_INDEPENDENT_ROUTE_ADMISSION_GATE_NOTE_2026-05-05.md` |

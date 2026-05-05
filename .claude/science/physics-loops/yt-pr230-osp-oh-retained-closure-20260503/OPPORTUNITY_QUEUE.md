@@ -1,5 +1,13 @@
 # Opportunity Queue
 
+Cycle-15 update: the independent-route admission gate has now checked the
+only remaining continuation clause after the cycle-14 selector.  No
+independent current-surface route is admitted.  The stuck fanout covered the
+same-source W/Z, canonical-Higgs/source-Higgs, scalar-LSZ, Schur-row,
+neutral-rank, and downstream matching frames; every frame is future-only until
+a listed same-surface row, certificate, or theorem exists as a parseable
+claim-status artifact and the aggregate gates rerun.
+
 Cycle-14 update: the route-family selector has been refreshed after the
 cycle-13 W/Z covariance-theorem import no-go.  No executable current-surface
 non-chunk route is selected.  The same-source W/Z route remains the top-ranked
