@@ -18,17 +18,17 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 61 |
+| **retained** | 62 |
 | **retained_no_go** | 120 |
 | **retained_bounded** | 220 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 845 |
+| unaudited | 842 |
 | audit_in_progress | 2 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 31 |
-| ~~audited_conditional~~ | 401 |
+| ~~audited_conditional~~ | 403 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 2 |
-| `audited_clean` | 376 |
-| `audited_conditional` | 401 |
+| `audited_clean` | 377 |
+| `audited_conditional` | 403 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 31 |
-| `unaudited` | 891 |
+| `unaudited` | 888 |
 
 | claim_type | count |
 |---|---:|
@@ -111,8 +111,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `gravitomagnetic_note` | positive_theorem | audit_in_progress | audit_in_progress | cross_family | codex-gpt-5.5 | C | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
+| `su3_wigner_intertwiner_block1_theorem_note_2026-05-03` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -242,6 +242,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `graph_scalar_plus_spinor_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `graph_true_kg_vs_cn_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `gravitational_entanglement_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
+| `gravitomagnetic_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
 | `gravity_law_cleanup_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
 | `growing_graph_dynamic_limit_diagnostic_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
 | `growing_graph_dynamic_propagation_replacement_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
@@ -795,6 +796,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | E | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `plaquette_v1_picard_fuchs_ode_note_2026-05-05` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_c3_nontrivial_current_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_graph_first_axis_alignment_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -842,6 +844,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `su3_adjoint_casimir_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `su3_casimir_fundamental_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `su3_dabc_symmetric_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `su3_wilson_closed_form_fanout_theorem_note_2026-05-04` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `synthesis_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `synthesis_note_3d` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | C | - |
 | `teleportation_3d_resource_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -6482,6 +6485,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a bounded note with executable but unratified support.
 - **auditor confidence:** medium
 
+### `gravitomagnetic_note`
+
+- **Note:** [`GRAVITOMAGNETIC_NOTE.md`](../../docs/GRAVITOMAGNETIC_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the restricted claim that the provided portable runner computes a velocity-dependent, approximately antisymmetric phase correction for an imposed moving source across three grown families at the stated parameter values.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260505-224540-97101c7f-gravitomagnetic_note-002`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The computed phase lag deltas relative to v=0 change sign with source velocity and agree across three grown families at c=0.5, s=0.004, z0=3.0.  _(class `C`)_
+- **chain closes:** True — The runner source genuinely grows the families and computes the phases from its propagation rule rather than printing constants. Within the bounded scope of the imposed trajectory and stated parameters, the tabulated antisymmetric trend follows from the provided computation.
+- **rationale:** The load-bearing evidence is a first-principles replay computation within the provided discrete propagator model, producing phase values not supplied by an upstream authority. The source code does not import another note, compare to external data, or hard-code the contested phase table. The clean verdict applies only to the bounded observable in this runner, not to equivalence with GR frame-dragging or self-consistency of the moving source.
+- **auditor confidence:** high
+
 ### `graviton_mass_derived_note`
 
 - **Note:** [`GRAVITON_MASS_DERIVED_NOTE.md`](../../docs/GRAVITON_MASS_DERIVED_NOTE.md)
@@ -9228,6 +9244,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The runner completed from cache with 27/27 PASS and checks the relevant algebraic invariances, finite-matrix obstruction, CAR construction, non-CAR alternatives, and identical unitary-flow compatibility. The proof does not derive a positive physical hbar or CAR bridge; it cleanly establishes the bounded negative result that those structures are not forced by the stated one-axiom surface. The final route through a separate Clifford/coframe principle is explicitly outside this no-go scope, so it does not weaken the scoped boundary claim.
 - **auditor confidence:** high
 
+### `plaquette_v1_picard_fuchs_ode_note_2026-05-05`
+
+- **Note:** [`PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md`](../../docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded V=1 SU(3) single-plaquette Picard-Fuchs ODE check, Frobenius-series regular branch claim, and numerical Weyl/ODE agreement reported for beta in {2,4,6,8,10}.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260505-224540-97101c7f-plaquette_v1_picard_fuch-005`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The runner verifies the stated third-order Picard-Fuchs equation for the single-plaquette SU(3) Wilson integral and identifies the analytic Frobenius solution at beta=0 with the physical integral.  _(class `A`)_
+- **chain closes:** False — The runner performs a truncated symbolic series residual check and numerical agreement checks, but the restricted packet does not prove the Bessel-determinant identity, the Weyl integration formula, or that finite truncation establishes the Picard-Fuchs ODE exactly for J(beta). The missing step is an exact derivation of the ODE from the integral/accepted normalization, rather than finite-order and numerical verification.
+- **rationale:** The code does perform nontrivial symbolic and numerical checks, and the reported beta=6 value is computed by direct Weyl quadrature rather than merely printed. However, the ODE itself is hard-coded and only checked against a truncated series generated from an unproved Bessel-determinant identity, plus numerical comparator agreement at finitely many beta values. Because no cited retained authority or in-packet proof closes those analytic identities, the bounded theorem remains conditional on missing derivation steps.
+- **auditor confidence:** high
+
 ### `pmns_active_four_real_source_from_transport_note`
 
 - **Note:** [`PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md`](../../docs/PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md)
@@ -11522,6 +11551,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** At NMAX = 4 and n_grid = 80, the runner computes a finite fusion table on 0 <= p,q <= 4 using numerical Cartan-torus character orthogonality; the returned table has non-negative integer entries after rounding, maximum integer residual < 3.6e-15, and passes V1-V9 plus the numerical-noise check.  _(class `A`)_
 - **chain closes:** True — The source note scopes the claim to the finite default runner surface and explicitly excludes Wilson-plaquette, lattice-gauge, and bridge-parent claims. The runner completed cleanly and reproduced the note's stated PASS=10 FAIL=0 summary with the same residual and table size.
 - **rationale:** The bounded theorem is supported by the completed runner output: NMAX=4, n_grid=80, table shape (25,25,25), 3049 nonzero entries, max integer residual 3.553e-15, and SUMMARY: BOUNDED PASS=10 FAIL=0. The validation suite checks standard SU(3) landmark decompositions, commutativity, singlet selection, dimension overflow, crossing, Pieri, and rounding noise without importing the deferred gauge-scalar bridge. Residual risk is limited to the declared finite numerical surface: this audit does not certify arbitrary-representation fusion, Wigner intertwiners, Haar-integral PRs, cube Perron computation, or any Wilson-plaquette bridge claim.
+- **auditor confidence:** high
+
+### `su3_wilson_closed_form_fanout_theorem_note_2026-05-04`
+
+- **Note:** [`SU3_WILSON_CLOSED_FORM_FANOUT_THEOREM_NOTE_2026-05-04.md`](../../docs/SU3_WILSON_CLOSED_FORM_FANOUT_THEOREM_NOTE_2026-05-04.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The provided runner evaluates M1, M2, M4, and M5 SU(3) Wilson plaquette estimates at beta=6 and compares them to the stated MC reference 0.5934 with epsilon_witness=3.03e-4.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260505-224540-97101c7f-su3_wilson_closed_form_f-006`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Numerical evaluation gives the four closed-form estimates and their gaps to the canonical MC value <P>_MC=0.5934, all >=0.05 and >=564x epsilon_witness.  _(class `D`)_
+- **chain closes:** False — The runner does compute the listed estimates and gaps, but the MC comparator 0.5934 and witness threshold are imported as hard-coded external premises. The restricted packet provides no cited retained authority or derivation fixing that comparator and normalization.
+- **rationale:** Issue: the theorem's ruling-out step is an external comparator check against a hard-coded canonical MC value, not a derivation from the stated axiom packet. Why this blocks: without a retained authority for the MC reference, epsilon target, and matching observable normalization, the bounded comparison is conditional on imported data. Repair target: add or derive a retained one-hop authority certifying <P>_MC(beta=6)=0.5934 and the epsilon_witness normalization. Claim boundary until fixed: the runner supports the arithmetic of four far misses relative to the stated comparator only.
 - **auditor confidence:** high
 
 ### `substrate_to_p_a_forcing_theorem_note_2026-04-30`
