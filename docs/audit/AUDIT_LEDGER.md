@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 49 |
-| **retained_no_go** | 105 |
+| **retained_no_go** | 106 |
 | **retained_bounded** | 198 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 17 |
 | unaudited | 872 |
-| audit_in_progress | 38 |
+| audit_in_progress | 37 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 38 |
-| `audited_clean` | 325 |
+| `audit_in_progress` | 37 |
+| `audited_clean` | 326 |
 | `audited_conditional` | 386 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -132,7 +132,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `lattice_complementarity_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `lorentz_violation_derived_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `matter_inertial_closure_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `persistent_object_compact_inertial_probe_note_2026-04-16` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -304,6 +303,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `linear_response_true_kubo_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `literature_backmatch_live_scan_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
 | `main_open_cubic_validation_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `matter_inertial_closure_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `minimal_source_driven_field_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -7731,6 +7731,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The matched comparison does not support a clean 4D flattens-the-ceiling claim, based on the reported pur_min table and per-seed exponent fits.  _(class `C`)_
 - **chain closes:** False — The note reports a specific numerical sweep and exponent comparison, but no runner, log, or dependency artifact is registered for reproducing the table. The audit cannot verify the measured pur_min values or fitted alpha values from the supplied context.
 - **rationale:** Issue: the load-bearing matched 2D-vs-4D numerical table and exponent fits are presented without a registered runner or frozen output. Why this blocks: the conclusion that the dimensional escape framing should stay provisional depends on those exact measured values and seed/radius choices. Repair target: register the matched-sweep runner or attach a frozen log that reproduces the pur_min table, degree matching, and alpha fits. Claim boundary until fixed: the note may serve as a cautionary support memo, but not as an audited numerical refutation or validation of the 4D ceiling claim.
+- **auditor confidence:** high
+
+### `matter_inertial_closure_note`
+
+- **Note:** [`MATTER_INERTIAL_CLOSURE_NOTE.md`](../../docs/MATTER_INERTIAL_CLOSURE_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Gaussian source-layer packets with sigma 0.5, 1.0, and 1.5 propagated on the grown-DAG under f(y,z)=-g*z do not satisfy the matter/inertial closure criteria: persistence, Newton-linearity, equivalence-slope invariance, null, and family portability.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-matter_inertial_closure_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Three Gaussian packets of different initial widths, under the same uniform force field, give response slopes differing by a factor of 10; equivalence principle fails at the persistent-object level on the grown-DAG propagator.  _(class `C`)_
+- **chain closes:** True — The runner constructs the grown-DAG packets and field response directly, then reports failures in persistence, Newton R2 threshold, equivalence-slope agreement, and family portability. The note explicitly bounds the conclusion to this attempted Gaussian-packet/uniform-linear-field closure route rather than a universal impossibility theorem for all matter mechanisms.
+- **rationale:** The load-bearing negative follows from the cached completed runner: slope relative deviation across packets is 123.07%, with persistence and family-portability criteria also failing. The runner does not merely print constants; it grows the DAG, constructs Gaussian sources, applies the linear field, propagates amplitudes, fits delta_z versus g, and computes the stated failure metrics. This supports a clean scoped no-go for the specified Gaussian-packet closure attempt, not a broader no-go against solitons, coherent states, topological defects, modified actions, or other structural alternatives. Residual risk is confined to whether the audit lane should treat the author's 10% and R2 > 0.99 thresholds as the intended closure criteria, but the equivalence failure is large enough that the conclusion is not threshold-fragile.
 - **auditor confidence:** high
 
 ### `matter_radiation_equality_structural_identity_theorem_note_2026-04-24`

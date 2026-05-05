@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 590,
+    "critical": 589,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -3059,27 +3059,6 @@
       "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 286
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "matter_inertial_closure_note",
-      "claim_scope": "Audited the specific negative claim that Gaussian layer-1 packets with sigma 0.5, 1.0, and 1.5 on the grown-DAG propagator under f(y,z)=-g*z fail the stated persistence/Newton/equivalence/family-portability closure criteria.",
-      "claim_type": "no_go",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.165,
-      "note_path": "docs/MATTER_INERTIAL_CLOSURE_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/matter_inertial_closure.py",
       "transitive_descendants": 286
     },
     {
@@ -22443,6 +22422,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "matter_self_focusing_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "matter_inertial_closure_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/MATTER_SELF_FOCUSING_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/matter_self_focusing.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "qnm_hardening_feasibility_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -25544,29 +25546,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "matter_self_focusing_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "matter_inertial_closure_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/MATTER_SELF_FOCUSING_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/matter_self_focusing.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "mirror_mutual_information_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -27257,5 +27236,5 @@
     }
   ],
   "ready_count": 68,
-  "total_pending": 928
+  "total_pending": 927
 }
