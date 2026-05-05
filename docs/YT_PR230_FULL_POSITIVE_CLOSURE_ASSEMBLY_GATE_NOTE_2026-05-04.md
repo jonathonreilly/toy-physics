@@ -157,6 +157,12 @@ executable until a listed same-surface artifact exists as a parseable
 claim-status artifact and the aggregate gates rerun.  The assembly gate
 remains open with `PASS=54 FAIL=0`.
 
+2026-05-05 cycle-17 stop-condition update: the gate now also consumes
+`outputs/yt_pr230_nonchunk_cycle17_stop_condition_gate_2026-05-05.json`.
+After cycle 16 found no admissible reopen source, the refreshed non-chunk queue
+has no executable current-surface route on this branch.  The assembly gate
+remains open with `PASS=57 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 
@@ -195,5 +201,5 @@ shortcut cycling.  Reopen only after a strict same-surface artifact exists:
 covariance control, Schur `A/B/C` kernel rows, neutral-sector primitive-cone
 irreducibility, or scalar-LSZ moment/threshold/FV authority.  A path alone is
 not enough; the candidate must pass the reopen-admissibility gate first.  Then
-rerun the worklist, exhaustion, intake, assembly, retained-route, and campaign
-gates before any proposal language.
+rerun the worklist, exhaustion, intake, independent-route, cycle-16, cycle-17,
+assembly, retained-route, and campaign gates before any proposal language.

@@ -1,5 +1,34 @@
 # Review History
 
+## 2026-05-05 Non-Chunk Cycle-17 Stop-Condition Gate Self-Review
+
+Disposition: pass as exact negative boundary / non-chunk stop condition
+satisfied on this branch.
+
+Findings:
+
+- The runner does not produce or infer any new same-surface row, certificate,
+  theorem, or production evidence; it only tests whether the refreshed PR230
+  non-chunk queue has an executable current-surface route after cycle 16.
+- The gate loads no chunk MC and does not package or rerun chunk outputs.
+- All six worklist units remain blocked, every listed reopen-source key is
+  absent across parent surfaces, and the cycle-15 stuck fanout admits no
+  independent current route.
+- The opportunity queue, handoff, no-go ledger, route portfolio, and claim
+  certificate record the stop/reopen contract, and retained-route, assembly,
+  and campaign certificates still deny proposal authority.
+- The exact next action is to stop PR230 current-surface non-chunk route
+  cycling until a listed same-surface artifact with claim-status fields exists,
+  then rerun cycle-17 plus aggregate gates before selecting any positive route.
+
+Review-loop iteration 1: pass with no required code or claim edits.  Local
+review covered runner behavior, claim boundary, imports/support, Nature
+retention, repo governance, and audit compatibility for the changed file set.
+No subagents were used because this session did not explicitly authorize
+delegation.  The cycle-17 artifact is a process guard only: it reports no
+executable non-chunk queue item, keeps `proposal_allowed=false`, and leaves all
+positive-route proof obligations future-only.
+
 ## 2026-05-05 Non-Chunk Cycle-16 Reopen-Source Guard Self-Review
 
 Disposition: pass as exact negative boundary / no admissible reopen source.

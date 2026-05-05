@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 593,
+    "leaf": 595,
     "medium": 301
   },
-  "generated_at": "2026-05-05T08:02:27.198203+00:00",
+  "generated_at": "2026-05-05T08:22:53.215990+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -18882,6 +18882,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_fh_lsz_polefit8x8_chunks061_063_checkpoint_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS061_063_CHECKPOINT_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_fh_lsz_polefit8x8_chunks061_063_launch_checkpoint_note_2026-05-05",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20219,6 +20236,23 @@
       "note_path": "docs/YT_PR230_NONCHUNK_CYCLE16_REOPEN_SOURCE_GUARD_NOTE_2026-05-05.md",
       "ready": true,
       "runner_path": "scripts/frontier_yt_pr230_nonchunk_cycle16_reopen_source_guard.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_pr230_nonchunk_cycle17_stop_condition_gate_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_NONCHUNK_CYCLE17_STOP_CONDITION_GATE_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_nonchunk_cycle17_stop_condition_gate.py",
       "transitive_descendants": 0
     },
     {
@@ -23650,6 +23684,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 740,
-  "total_pending": 1131
+  "ready_count": 742,
+  "total_pending": 1133
 }

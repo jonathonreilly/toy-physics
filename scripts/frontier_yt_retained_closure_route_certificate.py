@@ -157,6 +157,10 @@ def main() -> int:
         "pr230_nonchunk_future_artifact_intake": "outputs/yt_pr230_nonchunk_future_artifact_intake_gate_2026-05-05.json",
         "pr230_nonchunk_terminal_route_exhaustion": "outputs/yt_pr230_nonchunk_terminal_route_exhaustion_gate_2026-05-05.json",
         "pr230_nonchunk_reopen_admissibility": "outputs/yt_pr230_nonchunk_reopen_admissibility_gate_2026-05-05.json",
+        "pr230_nonchunk_cycle14_route_selector": "outputs/yt_pr230_nonchunk_cycle14_route_selector_gate_2026-05-05.json",
+        "pr230_nonchunk_cycle15_independent_route_admission": "outputs/yt_pr230_nonchunk_cycle15_independent_route_admission_gate_2026-05-05.json",
+        "pr230_nonchunk_cycle16_reopen_source_guard": "outputs/yt_pr230_nonchunk_cycle16_reopen_source_guard_2026-05-05.json",
+        "pr230_nonchunk_cycle17_stop_condition_gate": "outputs/yt_pr230_nonchunk_cycle17_stop_condition_gate_2026-05-05.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
@@ -2100,6 +2104,78 @@ def main() -> int:
         ).get("passed")
         is False
     )
+    pr230_nonchunk_cycle14_route_selector_blocks = (
+        "cycle-14 route-selector gate"
+        in certificates["pr230_nonchunk_cycle14_route_selector"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_nonchunk_cycle14_route_selector"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_cycle14_route_selector"].get(
+            "route_selector_gate_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_cycle14_route_selector"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
+    pr230_nonchunk_cycle15_independent_route_admission_blocks = (
+        "cycle-15 independent-route admission gate"
+        in certificates["pr230_nonchunk_cycle15_independent_route_admission"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_nonchunk_cycle15_independent_route_admission"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_cycle15_independent_route_admission"].get(
+            "independent_route_admission_gate_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_cycle15_independent_route_admission"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
+    pr230_nonchunk_cycle16_reopen_source_guard_blocks = (
+        "cycle-16 reopen-source guard"
+        in certificates["pr230_nonchunk_cycle16_reopen_source_guard"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_nonchunk_cycle16_reopen_source_guard"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_cycle16_reopen_source_guard"].get(
+            "reopen_source_guard_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_cycle16_reopen_source_guard"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
+    pr230_nonchunk_cycle17_stop_condition_blocks = (
+        "cycle-17 stop-condition gate"
+        in certificates["pr230_nonchunk_cycle17_stop_condition_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_nonchunk_cycle17_stop_condition_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_cycle17_stop_condition_gate"].get(
+            "stop_condition_gate_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_cycle17_stop_condition_gate"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
     interacting_kinetic_still_open = (
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status")
         == "bounded-support / interacting kinetic background sensitivity"
@@ -3134,6 +3210,34 @@ def main() -> int:
         ),
     )
     report(
+        "pr230-nonchunk-cycle14-route-selector-blocks-current-selection",
+        pr230_nonchunk_cycle14_route_selector_blocks,
+        certificates["pr230_nonchunk_cycle14_route_selector"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "pr230-nonchunk-cycle15-independent-route-admission-blocks-pivot",
+        pr230_nonchunk_cycle15_independent_route_admission_blocks,
+        certificates["pr230_nonchunk_cycle15_independent_route_admission"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "pr230-nonchunk-cycle16-reopen-source-guard-blocks-reopen",
+        pr230_nonchunk_cycle16_reopen_source_guard_blocks,
+        certificates["pr230_nonchunk_cycle16_reopen_source_guard"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "pr230-nonchunk-cycle17-stop-condition-blocks-route-cycling",
+        pr230_nonchunk_cycle17_stop_condition_blocks,
+        certificates["pr230_nonchunk_cycle17_stop_condition_gate"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "interacting-kinetic-route-still-needs-ensemble-or-theorem",
         interacting_kinetic_still_open,
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status", ""),
@@ -3502,7 +3606,10 @@ def main() -> int:
             "without a named future same-surface row, certificate, or theorem.  "
             "The future-artifact intake gate records that no such named input "
             "is present on the current surface.  The terminal route-exhaustion "
-            "gate records the stop/reopen rule for further non-chunk work."
+            "gate records the stop/reopen rule for further non-chunk work.  "
+            "The cycle-14 through cycle-17 gates record that no current route, "
+            "independent pivot, reopen source, or executable non-chunk queue "
+            "item remains on this branch."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

@@ -4,17 +4,26 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact negative boundary / PR230 non-chunk cycle-16 reopen-source guard: no post-checkpoint same-surface row, certificate, or theorem is present for admissible reopen; positive closure still open
-active_residual: "Cycle 16 tests the post-checkpoint reopen-source condition after cycle 15 closed independent current-route admission.  The branch has no listed same-surface row, certificate, or theorem as a parseable claim-status artifact; all six worklist units remain blocked, and aggregate gates still deny proposal authority."
+actual_current_surface_status: exact negative boundary / PR230 non-chunk cycle-17 stop-condition gate: refreshed non-chunk opportunity queue has no executable current-surface route; positive closure still open
+active_residual: "Cycle 17 tests the non-chunk stop condition after cycle 16 found no admissible reopen source.  The branch has no listed same-surface row, certificate, or theorem as a parseable claim-status artifact; all six worklist units remain blocked, the cycle-15 stuck fanout admits no independent route, and aggregate gates still deny proposal authority."
 latest_checkpoint:
-  utc: "2026-05-05T07:56:40Z"
-  block: 73
-  artifact: "cycle-16 reopen-source guard"
-  status: "exact negative boundary / no post-checkpoint same-surface artifact is present for admissible non-chunk reopen; positive closure still open"
-  result: "The reopen-source guard verifies that all parents pass, no parent authorizes a proposal, the checkpoint head remains on branch history, all six worklist units remain blocked, every listed reopen-source key remains absent across parent surfaces, the route-family selector remains closed, and the assembly, retained-route, and campaign gates continue to deny proposal authority."
-  claim_boundary: "no closure proposal, no chunk packaging, no path-only reopen, no independent current route, and no further non-chunk route selection until a listed same-surface row, certificate, or theorem exists as a parseable claim-status artifact and the aggregate gates are rerun"
+  utc: "2026-05-05T08:53:00Z"
+  block: 74
+  artifact: "cycle-17 stop-condition gate"
+  status: "exact negative boundary / refreshed PR230 non-chunk queue has no executable current-surface route; positive closure still open"
+  result: "The stop-condition gate verifies that all parents pass, no parent authorizes a proposal, the cycle-16 checkpoint head remains on branch history, all six worklist units remain blocked, every listed reopen-source key remains absent across parent surfaces, the route-family selector remains closed, the cycle-15 stuck fanout admits no independent route, and the assembly, retained-route, and campaign gates continue to deny proposal authority."
+  claim_boundary: "no closure proposal, no chunk packaging, no path-only reopen, no independent current route, no admissible reopen source, and no further non-chunk route selection until a listed same-surface row, certificate, or theorem exists as a parseable claim-status artifact and the aggregate gates are rerun"
   live_compute: "chunk worker remains separate; this checkpoint loads no chunk MC"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_nonchunk_cycle17_stop_condition_gate.py
+    - docs/YT_PR230_NONCHUNK_CYCLE17_STOP_CONDITION_GATE_NOTE_2026-05-05.md
+    - outputs/yt_pr230_nonchunk_cycle17_stop_condition_gate_2026-05-05.json
+    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+    - scripts/frontier_yt_retained_closure_route_certificate.py
+    - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+    - scripts/frontier_yt_pr230_campaign_status_certificate.py
+    - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
     - scripts/frontier_yt_pr230_nonchunk_cycle16_reopen_source_guard.py
     - docs/YT_PR230_NONCHUNK_CYCLE16_REOPEN_SOURCE_GUARD_NOTE_2026-05-05.md
     - outputs/yt_pr230_nonchunk_cycle16_reopen_source_guard_2026-05-05.json
@@ -971,7 +980,7 @@ current_result: >
   certificates still deny proposal authority with PASS=155 and PASS=181
   respectively.  Chunks049-052 continue running under the wave orchestrator.
 proposal_allowed: false
-proposal_allowed_reason: "The current non-chunk route queue remains exhausted on this surface: all six worklist units are blocked, all strict future row/certificate paths are absent, the terminal and reopen-admissibility gates have no executable dramatic-step route, current/chunk-only assembly still fails, cycle 13 closes current-branch covariance-theorem import for the W/Z route, cycle 14 selects no executable current-surface non-chunk route, and cycle 15 admits no independent current route.  No independent non-source row, matched covariance theorem, Schur row certificate, scalar-LSZ authority, O_H/source-Higgs rows, or rank-one theorem has passed."
+proposal_allowed_reason: "The current non-chunk route queue remains exhausted on this surface: all six worklist units are blocked, all strict future row/certificate paths are absent, the terminal and reopen-admissibility gates have no executable dramatic-step route, current/chunk-only assembly still fails, cycle 13 closes current-branch covariance-theorem import for the W/Z route, cycle 14 selects no executable current-surface non-chunk route, cycle 15 admits no independent current route, cycle 16 finds no admissible same-surface reopen source, and cycle 17 records that no executable non-chunk queue item remains on this branch.  No independent non-source row, matched covariance theorem, Schur row certificate, scalar-LSZ authority, O_H/source-Higgs rows, or rank-one theorem has passed."
 next_exact_action: >
   Stop current-surface non-chunk shortcut cycling.  Reopen this non-chunk loop
   only when one of the named strict future same-surface artifacts exists:
@@ -981,5 +990,6 @@ next_exact_action: >
   certificate, scalar-LSZ contact/threshold/FV authority, or a direct
   neutral-sector irreducibility/primitive-cone proof.  Then rerun the
   reopen-admissibility gate plus the worklist, exhaustion, intake,
-  independent-route admission, assembly, retained-route, and campaign gates.
+  independent-route admission, cycle-16 reopen-source guard, cycle-17
+  stop-condition gate, assembly, retained-route, and campaign gates.
   The chunk worker remains separate.

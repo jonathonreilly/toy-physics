@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact negative boundary / PR230 non-chunk cycle-16 reopen-source guard: no post-checkpoint same-surface row, certificate, or theorem is present for admissible reopen; positive closure still open
+actual_current_surface_status: exact negative boundary / PR230 non-chunk cycle-17 stop-condition gate: refreshed non-chunk opportunity queue has no executable current-surface route; positive closure still open
 conditional_surface_status: conditional-support if C_sH/C_HH Gram purity, W/Z response, or rank-one neutral scalar theorem closes the overlap
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "The Legendre source-pole operator is derived, but no current-surface premise supplies physical overlap authority, scalar-LSZ authority, same-surface Schur A/B/C kernel rows, W/Z rows, or neutral-rank authority; the current non-chunk route queue is exhausted, the future-artifact intake gate finds no named future artifact, the terminal route-exhaustion gate allows no further shortcut cycling until a named same-surface artifact exists, the reopen-admissibility gate rejects path-only reopening until a parseable claim-status artifact is present, the cycle-14 route-selector gate selects no executable current-surface non-chunk route, the cycle-15 independent-route admission gate admits no independent current route, and the cycle-16 reopen-source guard finds no post-checkpoint same-surface artifact to consume."
+proposal_allowed_reason: "The Legendre source-pole operator is derived, but no current-surface premise supplies physical overlap authority, scalar-LSZ authority, same-surface Schur A/B/C kernel rows, W/Z rows, or neutral-rank authority; the current non-chunk route queue is exhausted, the future-artifact intake gate finds no named future artifact, the terminal route-exhaustion gate allows no further shortcut cycling until a named same-surface artifact exists, the reopen-admissibility gate rejects path-only reopening until a parseable claim-status artifact is present, the cycle-14 route-selector gate selects no executable current-surface non-chunk route, the cycle-15 independent-route admission gate admits no independent current route, the cycle-16 reopen-source guard finds no post-checkpoint same-surface artifact to consume, and the cycle-17 stop-condition gate records no executable current-surface non-chunk route on this branch."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -337,6 +337,11 @@ Open imports:
   completion, because production response still must be combined with
   scalar-LSZ model-class/FV/IR control, one accepted `O_sp/O_H` or physical
   response bridge, matching/running authority, and retained-route approval;
+- the PR230 non-chunk cycle-17 stop-condition gate is an exact negative
+  boundary: after the cycle-16 reopen-source guard, the refreshed non-chunk
+  queue has no executable current-surface route on this branch, so route
+  cycling stays stopped until a listed same-surface row, certificate, or
+  theorem exists as a parseable claim-status artifact and aggregate gates rerun;
 - the canonical-Higgs operator semantic firewall is bounded support only: it
   hardens the future `O_H` certificate gate against static EW algebra,
   `H_unit`, Ward, observed-selector, and self-declared identity spoofs, but it

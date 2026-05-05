@@ -92,6 +92,7 @@ PARENTS = {
     "nonchunk_cycle14_route_selector": "outputs/yt_pr230_nonchunk_cycle14_route_selector_gate_2026-05-05.json",
     "nonchunk_cycle15_independent_route_admission": "outputs/yt_pr230_nonchunk_cycle15_independent_route_admission_gate_2026-05-05.json",
     "nonchunk_cycle16_reopen_source_guard": "outputs/yt_pr230_nonchunk_cycle16_reopen_source_guard_2026-05-05.json",
+    "nonchunk_cycle17_stop_condition_gate": "outputs/yt_pr230_nonchunk_cycle17_stop_condition_gate_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
 }
 
@@ -503,6 +504,20 @@ def main() -> int:
         )
         is True
         and certs["nonchunk_cycle16_reopen_source_guard"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False
+    )
+    nonchunk_cycle17_stop_condition_closed = (
+        "cycle-17 stop-condition gate"
+        in statuses["nonchunk_cycle17_stop_condition_gate"]
+        and certs["nonchunk_cycle17_stop_condition_gate"].get("proposal_allowed")
+        is False
+        and certs["nonchunk_cycle17_stop_condition_gate"].get(
+            "stop_condition_gate_passed"
+        )
+        is True
+        and certs["nonchunk_cycle17_stop_condition_gate"].get(
             "dramatic_step_gate", {}
         ).get("passed")
         is False
@@ -936,6 +951,11 @@ def main() -> int:
         nonchunk_cycle16_reopen_source_guard_closed,
         statuses["nonchunk_cycle16_reopen_source_guard"],
     )
+    report(
+        "nonchunk-cycle17-stop-condition-gate-recorded",
+        nonchunk_cycle17_stop_condition_closed,
+        statuses["nonchunk_cycle17_stop_condition_gate"],
+    )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
@@ -967,7 +987,9 @@ def main() -> int:
             "independent current route is admitted without a new same-surface "
             "artifact.  The cycle-16 reopen-source guard records that no "
             "post-checkpoint parseable same-surface artifact exists for "
-            "admissible reopen."
+            "admissible reopen.  The cycle-17 stop-condition gate records that "
+            "the refreshed non-chunk queue has no executable current-surface "
+            "route on this branch."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
@@ -1001,6 +1023,7 @@ def main() -> int:
             "does not treat cycle-14 non-chunk route selection closure as positive evidence",
             "does not treat cycle-15 independent-route exhaustion as positive evidence",
             "does not treat cycle-16 reopen-source absence as positive evidence",
+            "does not treat cycle-17 non-chunk stop condition as positive evidence",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks.  In parallel, "
@@ -1013,8 +1036,8 @@ def main() -> int:
             "or same-surface Schur A/B/C kernel rows with scalar denominator closure, "
             "or a neutral-sector irreducibility theorem.  Rerun this assembly "
             "gate, including the cycle-15 independent-route admission gate, "
-            "and the cycle-16 reopen-source guard before any retained-route "
-            "proposal."
+            "the cycle-16 reopen-source guard, and the cycle-17 stop-condition "
+            "gate before any retained-route proposal."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

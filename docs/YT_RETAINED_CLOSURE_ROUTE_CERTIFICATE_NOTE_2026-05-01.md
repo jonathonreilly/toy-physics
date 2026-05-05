@@ -18,8 +18,24 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=200 FAIL=0
+# SUMMARY: PASS=205 FAIL=0
 ```
+
+## 2026-05-05 Non-Chunk Cycle-17 Stop-Condition Update
+
+The retained-route certificate now consumes
+`outputs/yt_pr230_nonchunk_cycle17_stop_condition_gate_2026-05-05.json`.
+This records the stop condition after cycle 16: all non-chunk worklist units
+remain blocked, no listed reopen source is present, and the stuck fanout admits
+no independent current route.
+
+Validation: cycle-17 stop-condition gate `PASS=21 FAIL=0`; retained-route
+`PASS=205 FAIL=0`; campaign status `PASS=232 FAIL=0`; full positive closure
+assembly gate `PASS=57 FAIL=0`.
+
+No closure proposal is authorized.  Reopen only after a listed same-surface
+row, certificate, or theorem exists as a parseable claim-status artifact, then
+rerun cycle-17 plus aggregate gates before proposal language.
 
 ## 2026-05-05 Non-Chunk Reopen-Admissibility Update
 

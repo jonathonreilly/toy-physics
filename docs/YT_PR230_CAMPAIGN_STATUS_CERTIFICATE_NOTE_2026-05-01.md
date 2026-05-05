@@ -28,8 +28,25 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=230 FAIL=0
+# SUMMARY: PASS=232 FAIL=0
 ```
+
+## 2026-05-05 Cycle-17 Stop-Condition Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_nonchunk_cycle17_stop_condition_gate_2026-05-05.json`.
+After the cycle-16 reopen-source guard found no admissible parseable
+same-surface artifact, the cycle-17 gate checks the refreshed non-chunk queue.
+No executable current-surface non-chunk route remains on this branch.
+
+Validation: cycle-17 stop-condition gate `PASS=21 FAIL=0`; full positive
+closure assembly gate `PASS=57 FAIL=0`; retained-route `PASS=205 FAIL=0`;
+campaign status `PASS=232 FAIL=0`.
+
+The campaign target remains open, but the current PR230 non-chunk scope is
+stopped for this branch.  Reopen only after an admissible strict future
+artifact exists and the worklist, exhaustion, intake, independent-route,
+cycle-16, cycle-17, assembly, retained-route, and campaign gates are rerun.
 
 ## 2026-05-05 Cycle-15 Independent-Route Admission Update
 

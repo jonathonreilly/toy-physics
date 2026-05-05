@@ -1,5 +1,16 @@
 # Opportunity Queue
 
+Cycle-17 update: the stop-condition gate has now checked the refreshed PR230
+non-chunk queue after cycle 16 found no admissible reopen source.  All parent
+certificates pass, no parent authorizes proposal language, all six worklist
+units remain blocked, every listed reopen-source key remains absent, the
+cycle-15 stuck fanout admits no independent route, and aggregate gates still
+deny proposal authority.  The non-chunk scope is stopped on this branch until a
+listed same-surface row, certificate, or theorem exists as a parseable
+claim-status artifact and the reopen-admissibility, worklist, exhaustion,
+intake, independent-route, cycle-16, cycle-17, assembly, retained-route, and
+campaign gates all rerun.
+
 Cycle-16 update: the post-checkpoint reopen-source guard has now checked the
 only admissible action after the cycle-15 stop contract.  No listed
 same-surface row, certificate, or theorem is present as a parseable

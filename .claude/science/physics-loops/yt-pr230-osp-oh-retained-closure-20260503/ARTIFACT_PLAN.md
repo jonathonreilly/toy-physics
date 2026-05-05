@@ -1,5 +1,12 @@
 # Artifact Plan
 
+Completed in the cycle-17 stop-condition continuation:
+
+- `scripts/frontier_yt_pr230_nonchunk_cycle17_stop_condition_gate.py`
+- `docs/YT_PR230_NONCHUNK_CYCLE17_STOP_CONDITION_GATE_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_cycle17_stop_condition_gate_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
 Completed in the cycle-16 reopen-source guard continuation:
 
 - `scripts/frontier_yt_pr230_nonchunk_cycle16_reopen_source_guard.py`

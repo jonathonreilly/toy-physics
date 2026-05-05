@@ -157,3 +157,18 @@ is absent across the parent surfaces, the route-family selector remains closed,
 and aggregate gates still deny proposal authority.  The branch should not
 select another current-surface non-chunk route until a listed artifact exists
 and the aggregate gates rerun.
+
+## R11: Cycle-17 Stop-Condition Gate
+
+After cycle 16 closes admissible reopen source, test whether the refreshed
+PR230 non-chunk queue itself satisfies the stop condition on this branch.
+
+Status: closed negatively in
+`docs/YT_PR230_NONCHUNK_CYCLE17_STOP_CONDITION_GATE_NOTE_2026-05-05.md`.
+
+Reason: all parent gates pass without proposal authority, all six worklist
+units remain blocked, every listed reopen-source key is absent, the cycle-15
+stuck fanout admits no independent route, and aggregate gates still deny
+proposal authority.  No executable current-surface non-chunk queue item remains
+until a listed same-surface row, certificate, or theorem exists as a parseable
+claim-status artifact and the aggregate gates rerun.

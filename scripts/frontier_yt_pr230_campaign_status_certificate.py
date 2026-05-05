@@ -181,6 +181,9 @@ def main() -> int:
         "pr230_nonchunk_cycle16_reopen_source_guard": load(
             "outputs/yt_pr230_nonchunk_cycle16_reopen_source_guard_2026-05-05.json"
         ),
+        "pr230_nonchunk_cycle17_stop_condition_gate": load(
+            "outputs/yt_pr230_nonchunk_cycle17_stop_condition_gate_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -2494,6 +2497,24 @@ def main() -> int:
         is False,
         statuses["pr230_nonchunk_cycle16_reopen_source_guard"],
     )
+    report(
+        "pr230-nonchunk-cycle17-stop-condition-gate-recorded",
+        "cycle-17 stop-condition gate"
+        in str(statuses["pr230_nonchunk_cycle17_stop_condition_gate"])
+        and certificates["pr230_nonchunk_cycle17_stop_condition_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_cycle17_stop_condition_gate"].get(
+            "stop_condition_gate_passed"
+        )
+        is True
+        and certificates["pr230_nonchunk_cycle17_stop_condition_gate"].get(
+            "dramatic_step_gate", {}
+        ).get("passed")
+        is False,
+        statuses["pr230_nonchunk_cycle17_stop_condition_gate"],
+    )
 
     remaining_routes = [
         {
@@ -2535,6 +2556,10 @@ def main() -> int:
         {
             "route": "post-checkpoint non-chunk reopen source",
             "needed": "no admissible reopen source exists until a named same-surface artifact is present and aggregate gates rerun",
+        },
+        {
+            "route": "non-chunk stop condition",
+            "needed": "no executable current-surface non-chunk route remains on this branch before a named same-surface artifact exists",
         },
     ]
 
@@ -2837,7 +2862,9 @@ def main() -> int:
         "The cycle-15 independent-route admission gate also records that no "
         "independent current route is admitted on this branch.  The cycle-16 "
         "reopen-source guard records that no post-checkpoint same-surface "
-        "artifact is present for admissible reopen."
+        "artifact is present for admissible reopen.  The cycle-17 stop-condition "
+        "gate records that the refreshed non-chunk queue has no executable "
+        "current-surface route on this branch."
     )
     result["strict_non_claims"] = [
         "does not claim retained closure",
