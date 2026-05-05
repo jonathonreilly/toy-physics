@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 773,
+    "critical": 772,
     "high": 25,
     "leaf": 208,
     "medium": 139
@@ -4030,27 +4030,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "fourth_family_quadrant_note",
-      "claim_scope": "Audited the bounded computational claim that the quadrant-reflection connectivity runner exhibits a narrow signed-source basin on the tested drift/seed grid, not family-wide or geometry-generic closure.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.219,
-      "note_path": "docs/FOURTH_FAMILY_QUADRANT_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/FOURTH_FAMILY_QUADRANT_SWEEP.py",
-      "transitive_descendants": 297
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audit_in_progress",
@@ -32798,6 +32777,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 291,
-  "total_pending": 1145
+  "ready_count": 290,
+  "total_pending": 1144
 }

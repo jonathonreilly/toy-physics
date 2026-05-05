@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 39 |
 | **retained_no_go** | 95 |
-| **retained_bounded** | 183 |
+| **retained_bounded** | 184 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
 | unaudited | 1120 |
-| audit_in_progress | 6 |
+| audit_in_progress | 5 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 6 |
 | ~~audited_renaming~~ | 9 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 6 |
-| `audited_clean` | 289 |
+| `audit_in_progress` | 5 |
+| `audited_clean` | 290 |
 | `audited_conditional` | 257 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 45 |
@@ -110,7 +110,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 |---|---|---|---|---|---|---|---|
 | `charged_lepton_two_higgs_canonical_reduction_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `fifth_family_radial_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `fourth_family_quadrant_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `source_resolved_wavefield_v2_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `universal_gr_polarization_frame_bundle_blocker_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -194,6 +193,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `fourth_family_complex_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
+| `fourth_family_quadrant_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `gate_b_connectivity_tolerance_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `gate_b_grown_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `gate_b_grown_propagating_field_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -3952,6 +3952,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — The completed runner directly computes the anchor guards and crossover counts on the scoped grown family. It reports anchor gamma=0 plus Born proxy true, but anchor TOWARD@0.1 -> AWAY@0.5 false, matching the note's narrow boundary/no-go conclusion.
 - **rationale:** The scoped claim is a negative boundary result, not a broad family theorem. The load-bearing runner evidence is completed and current: the baseline/Born guard passes, while the required complex-action directional crossover fails on the anchor row and is not seed-robust across the tested drifts. This closes the narrow no-go that the fourth-family quadrant-reflection basin does not carry the clean complex-action companion on the tested slice.
 - **auditor confidence:** high
+
+### `fourth_family_quadrant_note`
+
+- **Note:** [`FOURTH_FAMILY_QUADRANT_NOTE.md`](../../docs/FOURTH_FAMILY_QUADRANT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite quadrant-reflection connectivity sweeps on the grown slice exhibit a nonempty but seed/drift-limited signed-source basin with zero-source, neutral-cancellation, sign-orientation, and near-linear charge-scaling controls.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-second-fourth_family_quadrant_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The quick diagnostic sweep gives a real but narrow basin, not a family-wide closure.  _(class `C`)_
+- **chain closes:** True — The cached current runner completes and computes the quadrant-reflection connectivity, source propagation, detector centroid shifts, and row gate rather than printing preset outcomes. It confirms a nonempty narrow basin: the note's quick subset has 5/9 passing rows and the current full default sweep has 23/45 passing rows, so the bounded non-universal claim closes.
+- **rationale:** The load-bearing claim is bounded to existence of a narrow computational basin, not family-wide or geometry-generic closure. The runner constructs the quadrant-reflection adjacency rule, evaluates zero, plus, minus, neutral, and double-source responses, and counts passing rows under explicit gates; it does not hard-code the pass count or target response signs. The note overstates the representative drift=0.50 quick row as mostly passing, but that wording is not needed for the audited bounded conclusion and the current runner output still supports the stated safe read. Residual risk is limited to the unexpanded imported grown-slice generator, which was not a listed one-hop note in the restricted packet.
+- **auditor confidence:** medium
 
 ### `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25`
 
