@@ -15108,6 +15108,54 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_su3_fusion_engine.py"
     },
+    "su3_wigner_intertwiner_block1_theorem_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_wigner_intertwiner_engine.py"
+    },
+    "su3_wigner_intertwiner_block2_theorem_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_wigner_4fold_haar_projector.py"
+    },
+    "su3_wigner_intertwiner_block3_theorem_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 97,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_wigner_l3_cube_geometry.py"
+    },
+    "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 56,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_wigner_l3_cube_partition.py"
+    },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "assert_count": 2,
       "counts": {
@@ -31937,6 +31985,66 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_su3_wigner_4fold_haar_projector.py": {
+      "assert_count": 1,
+      "claims": [
+        "su3_wigner_intertwiner_block2_theorem_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_su3_wigner_intertwiner_engine.py": {
+      "assert_count": 1,
+      "claims": [
+        "su3_wigner_intertwiner_block1_theorem_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_su3_wigner_l3_cube_geometry.py": {
+      "assert_count": 1,
+      "claims": [
+        "su3_wigner_intertwiner_block3_theorem_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 97,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_su3_wigner_l3_cube_partition.py": {
+      "assert_count": 1,
+      "claims": [
+        "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 56,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_substrate_to_p_a_forcing.py": {
       "assert_count": 2,
       "claims": [
@@ -38335,12 +38443,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 164,
-      "C": 563,
+      "C": 567,
       "D": 210,
       "none": 420
     },
-    "runners_classified": 1367,
-    "runners_with_C": 671,
-    "runners_with_D": 341
+    "runners_classified": 1371,
+    "runners_with_C": 675,
+    "runners_with_D": 342
   }
 }

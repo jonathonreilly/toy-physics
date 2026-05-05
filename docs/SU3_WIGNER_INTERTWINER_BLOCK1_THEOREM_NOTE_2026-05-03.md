@@ -209,7 +209,8 @@ verdict_rationale_template: |
 ## 7. Cross-references
 
 - Continued: future Block 2 (4-fold Haar projector via CG)
-- Eventual target: [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`](GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md)
+- Eventual target context, not a load-bearing dependency:
+  `GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`
 - L_s=2 cube derivation (P_cube = 0.4291): commit e7365f2d2 + PR #492
 - K-Z external lift: PR #484
 

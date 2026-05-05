@@ -259,7 +259,8 @@ lessons_applied_from_pr484_review:
 - Block 1 (CG decomposition): [`SU3_WIGNER_INTERTWINER_BLOCK1_THEOREM_NOTE_2026-05-03.md`](SU3_WIGNER_INTERTWINER_BLOCK1_THEOREM_NOTE_2026-05-03.md)
 - Block 2 (4-fold Haar projector): [`SU3_WIGNER_INTERTWINER_BLOCK2_THEOREM_NOTE_2026-05-03.md`](SU3_WIGNER_INTERTWINER_BLOCK2_THEOREM_NOTE_2026-05-03.md)
 - Continued: future Block 4 (cube partition function) + Block 5 (verdict)
-- Eventual target: [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`](GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md)
+- Eventual target context, not a load-bearing dependency:
+  `GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`
 - L_s=2 cube structural skeleton (separate route, on main): commit `e7365f2d2`
 - PR #484 review feedback (lessons learned): `docs/work_history/repo/review_feedback/PR484_KZ_EXTERNAL_LIFT_REVIEW_2026-05-03.md`
 

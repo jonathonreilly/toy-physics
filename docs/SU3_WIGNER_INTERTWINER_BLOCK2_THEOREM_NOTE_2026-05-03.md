@@ -271,7 +271,8 @@ verdict_rationale_template: |
 
 - Prior: [`SU3_WIGNER_INTERTWINER_BLOCK1_THEOREM_NOTE_2026-05-03.md`](SU3_WIGNER_INTERTWINER_BLOCK1_THEOREM_NOTE_2026-05-03.md) (PR #495)
 - Continued: future Block 3 (L=3 cube geometry encoder)
-- Eventual target: [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`](GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md)
+- Eventual target context, not a load-bearing dependency:
+  `GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`
 - L_s=2 cube derivation (P_cube=0.4291, awaiting Block 5 for L≥3 extension): commit e7365f2d2 + PR #492
 - K-Z external lift (with 2026-05-03 GLYZ correction): PR #484 (closed) + commit 8dbfea08f
 

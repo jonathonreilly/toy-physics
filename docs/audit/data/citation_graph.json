@@ -6626,6 +6626,10 @@
     },
     {
       "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
       "to": "gauge_vacuum_plaquette_constant_lift_obstruction_note"
     },
     {
@@ -13243,6 +13247,30 @@
     {
       "from": "su3_tensor_network_engine_roadmap_note_2026-05-03",
       "to": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
+    },
+    {
+      "from": "su3_wigner_intertwiner_block2_theorem_note_2026-05-03",
+      "to": "su3_wigner_intertwiner_block1_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_wigner_intertwiner_block3_theorem_note_2026-05-03",
+      "to": "su3_wigner_intertwiner_block1_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_wigner_intertwiner_block3_theorem_note_2026-05-03",
+      "to": "su3_wigner_intertwiner_block2_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
+      "to": "su3_wigner_intertwiner_block1_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
+      "to": "su3_wigner_intertwiner_block2_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
+      "to": "su3_wigner_intertwiner_block3_theorem_note_2026-05-03"
     },
     {
       "from": "symmetry_head_to_head_note",
@@ -36210,9 +36238,10 @@
         "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
         "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
         "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
+        "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note"
       ],
-      "note_hash": "d32a28f0fe668a9971911e79925bb541a76f1a8a4c1c763955bded77fe118eb9",
+      "note_hash": "3e6a8bbacad28b40f4f0d587054433b6fd1534d8c85f3552893c4f1a3151b0d6",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py",
       "title": "Gauge-Vacuum Plaquette Source-Sector Reference Perron Solve"
@@ -49998,6 +50027,59 @@
       "runner_path": "scripts/frontier_su3_fusion_engine.py",
       "title": "SU(3) Tensor-Network Engine Roadmap (5-PR Plan)"
     },
+    "su3_wigner_intertwiner_block1_theorem_note_2026-05-03": {
+      "claim_id": "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "2bcc4093bcaf509e038d164cbee6e4c978af0cd1e4e76aa332a24e3cb466cca9",
+      "path": "docs/SU3_WIGNER_INTERTWINER_BLOCK1_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_su3_wigner_intertwiner_engine.py",
+      "title": "SU(3) Wigner Intertwiner Engine \u2014 Block 1: (1,1) \u2297 (1,1) CG decomposition"
+    },
+    "su3_wigner_intertwiner_block2_theorem_note_2026-05-03": {
+      "claim_id": "su3_wigner_intertwiner_block2_theorem_note_2026-05-03",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "su3_wigner_intertwiner_block1_theorem_note_2026-05-03"
+      ],
+      "note_hash": "97c943f3ad27bd644e03d373c981ac86b68751b20a93ead35b49df5b16d6fb3a",
+      "path": "docs/SU3_WIGNER_INTERTWINER_BLOCK2_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_su3_wigner_4fold_haar_projector.py",
+      "title": "SU(3) Wigner Intertwiner Engine \u2014 Block 2: 4-fold Haar Projector"
+    },
+    "su3_wigner_intertwiner_block3_theorem_note_2026-05-03": {
+      "claim_id": "su3_wigner_intertwiner_block3_theorem_note_2026-05-03",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
+        "su3_wigner_intertwiner_block2_theorem_note_2026-05-03"
+      ],
+      "note_hash": "ca98526e0c8f14309685c206420546ac1f8209c3f4fe19d1ca4d273ccc6c354f",
+      "path": "docs/SU3_WIGNER_INTERTWINER_BLOCK3_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_su3_wigner_l3_cube_geometry.py",
+      "title": "SU(3) Wigner Engine \u2014 Block 3: L_s=3 PBC Cube Geometry + Tensor-Network Setup"
+    },
+    "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03": {
+      "claim_id": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
+        "su3_wigner_intertwiner_block2_theorem_note_2026-05-03",
+        "su3_wigner_intertwiner_block3_theorem_note_2026-05-03"
+      ],
+      "note_hash": "5fecffbdb4a2346aa24279f34bb7e6ed0786f2d46f009a47dfd0331ddb5d94a8",
+      "path": "docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_su3_wigner_l3_cube_partition.py",
+      "title": "SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Verdict"
+    },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "claim_id": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
       "claim_type_author_hint": null,
@@ -55003,6 +55085,7 @@
     "structureless_dag_gravity_harness_note",
     "structureless_dag_gravity_note",
     "su3_fusion_engine_pr1_theorem_note_2026-05-03",
+    "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
     "substrate_to_p_a_forcing_theorem_note_2026-04-30",
     "symmetry_generated_paired_chokepoint_note",
     "symmetry_spectrum_mirror_compare_note",
@@ -55153,25 +55236,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 60,
+      "bounded_theorem": 63,
       "meta": 8,
       "no_go": 12,
       "none": 1715,
       "open_gate": 10,
-      "positive_theorem": 85
+      "positive_theorem": 86
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 558,
+      "bounded_theorem": 561,
       "meta": 8,
       "no_go": 117,
       "none": 457,
       "open_gate": 116,
-      "positive_theorem": 634
+      "positive_theorem": 635
     },
-    "edge_count": 6493,
+    "edge_count": 6500,
     "leaf_count": 546,
-    "node_count": 1890,
-    "root_count": 876,
-    "runners_with_path": 1463
+    "node_count": 1894,
+    "root_count": 877,
+    "runners_with_path": 1467
   }
 }

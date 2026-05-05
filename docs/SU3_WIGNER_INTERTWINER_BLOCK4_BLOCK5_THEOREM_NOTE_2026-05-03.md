@@ -43,7 +43,8 @@ and the explicit motivation for the L_s ≥ 3 engineering effort.
 
 This finding is **consistent with the gauge-scalar temporal observable
 bridge no-go theorem**
-([`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`](GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md)):
+(`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`;
+contextual reference, not a load-bearing dependency):
 within the current Wilson-framework primitive stack, BRIDGE is not
 derivable; to escape the no-go, additional primitives (the exact L_s ≥ 3
 cube Wigner-Racah Perron data) must be added.
@@ -323,11 +324,13 @@ verdict_rationale_template: |
   [`SU3_WIGNER_INTERTWINER_BLOCK1_THEOREM_NOTE_2026-05-03.md`](SU3_WIGNER_INTERTWINER_BLOCK1_THEOREM_NOTE_2026-05-03.md),
   [`SU3_WIGNER_INTERTWINER_BLOCK2_THEOREM_NOTE_2026-05-03.md`](SU3_WIGNER_INTERTWINER_BLOCK2_THEOREM_NOTE_2026-05-03.md),
   and [`SU3_WIGNER_INTERTWINER_BLOCK3_THEOREM_NOTE_2026-05-03.md`](SU3_WIGNER_INTERTWINER_BLOCK3_THEOREM_NOTE_2026-05-03.md).
-- Open gate retired: [`SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md`](SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md)
-  — the candidate ansatz is verified consistent with the all-forward
+- Open gate context, not a load-bearing dependency:
+  `SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md` — the
+  candidate ansatz is verified consistent with the all-forward
   index graph. The "open gate" remains open for the standard Wilson
   convention (which requires L_s ≥ 3 to escape the L_s=2 degeneracies).
-- Bridge no-go: [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`](GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md)
+- Bridge no-go context, not a load-bearing dependency:
+  `GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`
   — Block 5 verdict aligns with the no-go's identification of L_s ≥ 3
   data as the necessary additional primitive.
 
