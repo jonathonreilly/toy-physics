@@ -1,5 +1,36 @@
 # Handoff
 
+## 2026-05-05 PR230 Positive Closure Completion Audit
+
+Result: open / retained closure not achieved.  The audit runner maps the
+active positive-closure objective to concrete artifacts and verifies that both
+chunk families are complete but not sufficient for closure.
+
+Artifacts:
+
+```bash
+python3 -m py_compile \
+  scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=18 FAIL=0
+```
+
+The audit confirms:
+
+- target production chunks `001-063` are present with scalar FH effective
+  energies/slopes, LSZ `C_ss_timeseries`, and numba seed control;
+- polefit8x8 chunks `001-063` are present with the same required schema;
+- current-surface and chunk-only assembly are both rejected;
+- retained-route and campaign certificates deny proposal authority;
+- scalar-LSZ, source-Higgs, same-source W/Z, Schur, neutral-rank, and
+  matching/running routes remain open or blocked.
+
+Claim boundary: no retained or proposed-retained closure.  Completed chunks
+are production support only; the exact next action is a fresh parseable
+same-surface artifact for `O_H/C_sH/C_HH`, genuine W/Z response, Schur A/B/C
+rows, or neutral irreducibility, followed by aggregate gate reruns.
+
 ## 2026-05-05 PR230 W/Z Smoke-To-Production Promotion No-Go
 
 Result: exact negative boundary.  The W/Z smoke-schema rows cannot be

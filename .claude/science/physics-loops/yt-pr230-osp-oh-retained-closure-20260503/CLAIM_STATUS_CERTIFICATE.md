@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact negative boundary / WZ smoke rows cannot be promoted to production WZ response; positive closure still open
+actual_current_surface_status: open / positive closure completion audit: retained closure not achieved
 conditional_surface_status: conditional-support if C_sH/C_HH Gram purity, W/Z response, or rank-one neutral scalar theorem closes the overlap
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "The W/Z smoke-schema harness path is infrastructure support only and now has an explicit promotion no-go.  It validates selected-mass-only scalar FH/LSZ metadata, seed control, scalar target time series, LSZ C_ss_timeseries rows, and contract-shaped synthetic W/Z scout rows, but those rows are scout-phase synthetic rows with production_wz_rows_written=false, false same-source/sector/canonical identity certificates, absent g2, and absent matched covariance.  No current-surface premise supplies physical overlap authority, scalar-LSZ authority, same-source Schur A/B/C kernel rows, production W/Z rows, same-source EW action, top/W covariance, sector identity, canonical-Higgs identity, or neutral-rank authority.  Full assembly, retained-route, and campaign certificates still deny proposal authority."
+proposal_allowed_reason: "The completion audit verifies target production and polefit8x8 chunks001-063 are complete with required target schema, but current-surface and chunk-only assembly are both rejected.  No current-surface premise supplies scalar-LSZ authority, physical overlap authority, same-source Schur A/B/C kernel rows, production W/Z rows, same-source EW action, top/W covariance, non-observed g2, sector identity, canonical-Higgs identity, neutral-rank authority, matching/running authority, or retained-route/campaign proposal authorization."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -15,6 +15,12 @@ Retained/proposed-retained wording is not allowed for this block.
 
 Open imports:
 
+- positive closure completion audit is open: target production and polefit8x8
+  chunks001-063 are complete with schema, but
+  `outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json`
+  records `closure_achieved=false` because scalar-LSZ authority,
+  source-overlap/physical-response bridge authority, matching/running
+  authority, and proposal authorization are absent;
 - same-surface `O_H` realization or equivalent overlap row;
 - canonical `O_H` premise stretch is closed negatively on the current PR230
   primitives: the allowed premise set leaves all same-surface identity,

@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-05 completion-audit update:
+`outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json` passes
+with `PASS=18 FAIL=0` and records `closure_achieved=false`.  Both target
+production chunks001-063 and polefit8x8 chunks001-063 are complete with the
+required target schema, so the remaining positive work is no longer chunk
+replacement.  The queue is now gated on a fresh parseable same-surface artifact
+for one of four bridge families: source-Higgs `O_H/C_sH/C_HH` pole rows,
+genuine same-source W/Z action/rows/covariance/non-observed `g2`, Schur A/B/C
+kernel rows, or neutral-sector primitive-cone/irreducibility.  Without one of
+those artifacts, additional current-surface process gates would not be a
+productive positive-closure route.
+
 2026-05-05 W/Z smoke-promotion update: the smoke-schema path now has an
 explicit promotion no-go,
 `outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json`,

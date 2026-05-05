@@ -4,17 +4,20 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact negative boundary / WZ smoke rows cannot be promoted to production WZ response; positive closure still open
-active_residual: "The W/Z smoke-schema path is certified as infrastructure only and now has a paired promotion no-go: synthetic scout rows cannot be reclassified as production W/Z response, top/W covariance, same-source EW action, sector identity, canonical-Higgs identity, or retained/proposed-retained top-Yukawa evidence.  Positive closure now requires a genuine same-source EW action plus production W/Z mass-fit rows and matched covariance, source-Higgs C_sH/C_HH pole rows, Schur A/B/C rows, or a neutral-sector irreducibility theorem."
+actual_current_surface_status: open / positive closure completion audit: retained closure not achieved
+active_residual: "Both target production chunks001-063 and polefit8x8 chunks001-063 are complete with required FH/LSZ target schema, but positive closure still fails the assembly checklist.  Missing items are scalar-LSZ model-class/FV/IR/pole authority, one accepted source-overlap or same-source physical-response bridge, matching/running authority from certified physical input, and retained-route/campaign proposal authorization.  The next productive input must be a fresh parseable same-surface artifact: O_H/C_sH/C_HH pole rows, genuine same-source EW action plus W/Z rows/covariance/non-observed g2, Schur A/B/C rows, or neutral-sector irreducibility."
 latest_checkpoint:
-  utc: "2026-05-05T13:28:15Z"
-  block: 93
-  artifact: "W/Z smoke-to-production promotion no-go"
-  status: "exact negative boundary / smoke rows cannot be promoted; positive closure remains open"
-  result: "The new no-go runner reloads the W/Z smoke-schema artifact and strict W/Z route certificates, then verifies the smoke rows are scout-phase synthetic rows with production_wz_rows_written=false, false same-source/sector/canonical/retained identity certificates, absent g2 and covariance, absent same-source EW action, absent W/Z mass-fit path, absent strict W/Z response rows, absent matched top/W covariance, open same-source W/Z gate, and aggregate proposal denial.  It passes with PASS=22 FAIL=0.  Aggregate gates now include the blocker: full assembly PASS=76 FAIL=0, retained-route PASS=224 FAIL=0, and campaign PASS=251 FAIL=0, all with proposal_allowed=false."
-  claim_boundary: "no closure proposal, no smoke-row promotion, no production W/Z rows, no same-source EW action, no top/W covariance, no sector/canonical-Higgs identity, no static EW algebra shortcut, and no use of smoke slopes as physics evidence"
+  utc: "2026-05-05T13:37:01Z"
+  block: 94
+  artifact: "positive closure completion audit"
+  status: "open / retained closure not achieved"
+  result: "The new completion-audit runner maps the positive-closure objective to concrete artifacts.  It verifies target production chunks001-063 and polefit8x8 chunks001-063 are present with scalar FH effective energies/slopes, LSZ C_ss_timeseries, and numba_gauge_seed_v1 seed control.  It also verifies assembly current-surface and chunk-only closure are both rejected; retained-route and campaign certificates deny proposal authority; scalar-LSZ, source-Higgs, same-source W/Z, Schur, neutral-rank, and matching/running routes remain open or blocked.  The audit passes with PASS=18 FAIL=0 and records closure_achieved=false."
+  claim_boundary: "no retained or proposed_retained closure; completed chunks are support only and do not supply scalar-LSZ authority, source-overlap/physical-response bridge authority, matching/running authority, or proposal authorization"
   live_compute: "chunk artifacts are complete; no production chunk worker is running"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+    - docs/YT_PR230_POSITIVE_CLOSURE_COMPLETION_AUDIT_NOTE_2026-05-05.md
+    - outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json
     - scripts/frontier_yt_pr230_wz_smoke_to_production_promotion_no_go.py
     - docs/YT_PR230_WZ_SMOKE_TO_PRODUCTION_PROMOTION_NO_GO_NOTE_2026-05-05.md
     - outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json

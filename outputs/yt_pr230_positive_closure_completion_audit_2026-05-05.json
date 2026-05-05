@@ -1,0 +1,272 @@
+{
+  "actual_current_surface_status": "open / positive closure completion audit: retained closure not achieved",
+  "bare_retained_allowed": false,
+  "closure_achieved": false,
+  "completion_audit_passed": true,
+  "completion_criteria": {
+    "assembly_chunk_only_passed": false,
+    "assembly_current_surface_passed": false,
+    "campaign_allows_proposal": false,
+    "matching_running_bridge": false,
+    "polefit8x8_chunks_complete_with_schema": true,
+    "production_chunks_complete_with_schema": true,
+    "retained_proposal_firewall": false,
+    "retained_route_allows_proposal": false,
+    "scalar_lsz_model_class_fv_ir": false,
+    "source_overlap_or_physical_response_bridge": false
+  },
+  "exact_next_action": "Supply one fresh parseable same-surface artifact: a real O_H/C_sH/C_HH pole certificate, a genuine same-source EW action plus production W/Z mass-fit rows, matched covariance and non-observed g2 certificate, same-surface Schur A/B/C kernel rows with scalar denominator closure, or a neutral-sector primitive-cone/irreducibility certificate.  Then rerun assembly, retained-route, and campaign gates before any proposal wording.",
+  "fail_count": 0,
+  "missing_requirements": [
+    "assembly_current_surface_passed",
+    "assembly_chunk_only_passed",
+    "scalar_lsz_model_class_fv_ir",
+    "source_overlap_or_physical_response_bridge",
+    "matching_running_bridge",
+    "retained_proposal_firewall",
+    "retained_route_allows_proposal",
+    "campaign_allows_proposal"
+  ],
+  "objective": "resume positive closure on PR #230",
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "electroweak_g2_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
+    "fh_lsz_pade_stieltjes": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
+    "fh_lsz_stieltjes_moment": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
+    "neutral_primitive_cone": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "schur_kprime_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
+    "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+    "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
+    "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
+    "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
+    "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "wz_smoke_promotion_no_go": "outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "electroweak_g2_builder": "open / electroweak g2 certificate builder inputs absent",
+    "fh_lsz_pade_stieltjes": "exact-support / FH-LSZ Pade-Stieltjes bounds gate; strict moment-threshold certificate absent",
+    "fh_lsz_stieltjes_moment": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "matching_running": "open / PR230 matching-running bridge awaits certified physical input",
+    "neutral_primitive_cone": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+    "retained_route": "open / retained closure not yet reached",
+    "schur_kprime_rows": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
+    "source_higgs_gram": "open / source-Higgs Gram purity gate not passed",
+    "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
+    "wz_mass_fit_path": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
+    "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
+    "wz_same_source_action": "exact negative boundary / same-source EW action not defined on PR230 surface",
+    "wz_smoke_promotion_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response"
+  },
+  "pass_count": 18,
+  "prompt_to_artifact_checklist": [
+    {
+      "details": {
+        "complete_id_set": true,
+        "complete_with_schema": true,
+        "count": 63,
+        "expected_count": 63,
+        "extra_ids": [],
+        "missing_ids": [],
+        "schema": {
+          "bad_seed_control": [],
+          "missing_lsz_C_ss_timeseries": [],
+          "missing_source_effective_energies": [],
+          "missing_source_slopes": [],
+          "schema_ok": true,
+          "unreadable": []
+        }
+      },
+      "evidence": "production chunk root JSON files 001-063",
+      "requirement": "complete target production chunks with FH/LSZ target schema",
+      "status": "satisfied"
+    },
+    {
+      "details": {
+        "complete_id_set": true,
+        "complete_with_schema": true,
+        "count": 63,
+        "expected_count": 63,
+        "extra_ids": [],
+        "missing_ids": [],
+        "schema": {
+          "bad_seed_control": [],
+          "missing_lsz_C_ss_timeseries": [],
+          "missing_source_effective_energies": [],
+          "missing_source_slopes": [],
+          "schema_ok": true,
+          "unreadable": []
+        }
+      },
+      "evidence": "polefit8x8 chunk root JSON files 001-063",
+      "requirement": "complete polefit8x8 chunks with LSZ C_ss timeseries schema",
+      "status": "satisfied"
+    },
+    {
+      "details": "strict moment-threshold/Stieltjes/Pade/FV certificate absent on current surface",
+      "evidence": [
+        "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
+        "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
+        "full assembly current_evaluation"
+      ],
+      "requirement": "scalar-LSZ model-class/FV/IR/pole authority",
+      "status": "missing"
+    },
+    {
+      "details": {
+        "neutral_open": true,
+        "route_statuses": {
+          "neutral_scalar_rank_one": {
+            "blocked_by": [
+              "no current primitive-cone/positivity-improving neutral-sector certificate",
+              "rank-two neutral scalar counterfamilies remain allowed",
+              "strict primitive-cone certificate gate absent",
+              "primitive-cone stretch no-go blocks the source-only and conditional-Perron shortcut"
+            ],
+            "parents": [
+              "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
+              "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+              "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json"
+            ],
+            "passes_current_surface": false
+          },
+          "same_source_wz_response": {
+            "blocked_by": [
+              "same-source EW action certificate absent",
+              "source-coordinate transport from static EW algebra rejected",
+              "longitudinal/Goldstone-equivalence source-identity shortcut rejected",
+              "W/Z correlator mass-fit path absent",
+              "orthogonal-neutral top-coupling null or correction absent",
+              "strict delta_perp tomography correction rows absent",
+              "same-source top-response identity certificate absent",
+              "matched top/W covariance certificate absent",
+              "marginal derivation of top/W covariance rejected",
+              "same-source/native top/W factorization-independence shortcut rejected",
+              "deterministic W-response covariance shortcut rejected",
+              "current-branch covariance-theorem import shortcut rejected",
+              "same-source top-response certificate absent",
+              "same-source W-response row builder strict inputs absent",
+              "lightweight same-source W readout production rows absent",
+              "W/Z harness smoke schema path is synthetic infrastructure only",
+              "W/Z smoke rows cannot be promoted to production W/Z response",
+              "W/Z mass-fit response-row builder strict inputs absent",
+              "strict electroweak g2 certificate builder inputs absent",
+              "SU(2) generator/Casimir normalization rejected as g2 authority",
+              "strict non-observed g2 authority certificate absent",
+              "response-only g2 self-normalization rejected",
+              "sector-overlap identity not derived",
+              "canonical-Higgs identity not derived"
+            ],
+            "parents": [
+              "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+              "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json",
+              "outputs/yt_wz_source_coordinate_transport_no_go_2026-05-05.json",
+              "outputs/yt_wz_goldstone_equivalence_source_identity_no_go_2026-05-05.json",
+              "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
+              "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
+              "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json",
+              "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json",
+              "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json",
+              "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
+              "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
+              "outputs/yt_top_wz_factorization_independence_gate_2026-05-05.json",
+              "outputs/yt_top_wz_deterministic_response_covariance_gate_2026-05-05.json",
+              "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
+              "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
+              "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
+              "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+              "outputs/yt_pr230_wz_harness_smoke_schema_gate_2026-05-05.json",
+              "outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json",
+              "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
+              "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
+              "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
+              "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
+              "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
+              "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
+              "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json"
+            ],
+            "passes_current_surface": false
+          },
+          "schur_kprime_kernel_rows": {
+            "blocked_by": [
+              "same-surface Schur A/B/C rows absent",
+              "finite FH/LSZ source rows explicitly rejected as kernel rows",
+              "compressed scalar denominator and pole derivative do not reconstruct A/B/C rows",
+              "canonical bridge still required after K-prime sufficiency"
+            ],
+            "parents": [
+              "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
+              "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+              "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json"
+            ],
+            "passes_current_surface": false
+          },
+          "source_higgs_gram_purity": {
+            "blocked_by": [
+              "same-surface O_H certificate absent",
+              "cross-lane O_h/O_H/Higgs artifacts audited as non-authority for PR230",
+              "current primitives do not derive same-surface O_H identity and normalization",
+              "production C_sH/C_HH pole residues absent",
+              "Gram-purity postprocessor awaiting production certificate",
+              "perfect Gram purity against an unratified supplied operator is not O_H authority"
+            ],
+            "parents": [
+              "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+              "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+              "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
+              "outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json",
+              "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
+              "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
+              "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json"
+            ],
+            "passes_current_surface": false
+          }
+        },
+        "same_source_wz_open": true,
+        "schur_open": true,
+        "source_higgs_open": true
+      },
+      "evidence": [
+        "source-Higgs route",
+        "same-source W/Z route",
+        "Schur/K-prime route",
+        "neutral primitive-cone route"
+      ],
+      "requirement": "one accepted source-overlap or physical-response bridge",
+      "status": "missing"
+    },
+    {
+      "details": "open / PR230 matching-running bridge awaits certified physical input",
+      "evidence": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
+      "requirement": "matching/running bridge from certified physical readout",
+      "status": "missing"
+    },
+    {
+      "details": {
+        "campaign_proposal_allowed": false,
+        "retained_route_proposal_allowed": false
+      },
+      "evidence": [
+        "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+        "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+      ],
+      "requirement": "retained/proposed-retained proposal authorization",
+      "status": "missing"
+    }
+  ],
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Chunk production is complete, but scalar-LSZ authority, an accepted source-overlap or same-source physical-response bridge, matching/running authority, and retained-route/campaign proposal authorization remain absent.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat completed chunks as scalar-LSZ or source-overlap authority",
+    "does not treat W/Z smoke rows as production response rows",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not set c2=1, Z_match=1, or kappa_s=1"
+  ]
+}
