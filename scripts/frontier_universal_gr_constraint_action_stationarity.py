@@ -23,7 +23,7 @@ from typing import Sequence
 import numpy as np
 
 
-ROOT = Path("/Users/jonreilly/Projects/Physics")
+ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 
 OBSERVABLE = DOCS / "OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md"
@@ -243,9 +243,10 @@ def main() -> int:
             f"coordinate deltas = total {max_total_delta:.3e}, perp {max_perp_delta:.3e}",
         ),
         Check(
-            "current blocker still names curvature localization as the missing object",
-            has(blk, "curvature-localization operator") and has(blk, "Pi_curv"),
-            "blocker still points to the same complement-frame ambiguity",
+            "current blocker still records the curvature-localization boundary",
+            has(blk, "historical/superseded as the live direct-universal blocker")
+            and has(blk, "curvature-localization map is supplied"),
+            "blocker records the older frame-orbit boundary while preserving the curvature-localization caveat",
         ),
         Check(
             "new note records the constraint-style bypass question",

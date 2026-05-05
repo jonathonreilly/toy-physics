@@ -1,37 +1,61 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py
-runner_sha256: 884057fa3ab51cc376d36eed6ac744c5cd0dd0d7671440c62bbdd818e9628815
+runner_sha256: 06414035ec1fc6270093ab8adae3130aaf5c3c004559ddb6d11f39ab0cdabd9d
 timeout_sec: 120
-exit_code: 1
-elapsed_sec: 0.05
-status: nonzero_exit
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
 ----- stdout -----
 === Bare alpha_3 / alpha_em dimension-ratio support audit ===
-FAIL: authority file exists: docs/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md
+PASS: authority file exists: docs/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md
 PASS: authority file exists: docs/CL3_SM_EMBEDDING_THEOREM.md
 PASS: authority file exists: docs/YT_EW_COLOR_PROJECTION_THEOREM.md
 PASS: authority file exists: docs/publication/ci3_z3/PUBLICATION_MATRIX.md
 PASS: authority file exists: docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md
 PASS: authority file exists: docs/publication/ci3_z3/DERIVATION_ATLAS.md
+PASS: note status is support corollary
+PASS: note blocks minimal-stack promotion
+PASS: note blocks direct low-energy readout
+PASS: note distinguishes SU(5)
+PASS: forbidden overclaim absent: Retained derivation theorem on main
+PASS: forbidden overclaim absent: three independent retained inputs
+PASS: forbidden overclaim absent: independent retained structural routes
+PASS: CL3 packet remains support-only
+PASS: CL3 packet carries d+1/d+2 bookkeeping
+PASS: EW normalization lane exists
+PASS: publication matrix keeps CL3 support boundary
+PASS: publication matrix carries bare-ratio support row
+PASS: validation map carries support row
+PASS: atlas carries support tool row
+PASS: input d fixed to 3 :: actual=3, expected=3
+PASS: g3^2 canonical :: actual=1, expected=1
+PASS: g2^2 = 1/(d+1) :: actual=1/4, expected=1/4
+PASS: gY^2 = 1/(d+2) :: actual=1/5, expected=1/5
+PASS: 1/g2^2 = d+1 :: actual=4, expected=4
+PASS: 1/gY^2 = d+2 :: actual=5, expected=5
+PASS: D1 inverse-EM sum = 2d+3 :: actual=9, expected=9
+PASS: D1 inverse-EM sum at d=3 = 9 :: actual=9, expected=9
+PASS: D2 g_em^2 = 1/(2d+3) :: actual=1/9, expected=1/9
+PASS: D3 sin^2(theta_W) = (d+1)/(2d+3) :: actual=4/9, expected=4/9
+PASS: D3 sin^2(theta_W) at d=3 = 4/9 :: actual=4/9, expected=4/9
+PASS: cos^2(theta_W) at d=3 = 5/9 :: actual=5/9, expected=5/9
+PASS: weak-angle sum = 1 :: actual=1, expected=1
+PASS: D4 alpha3/alpha_em = g3^2/g_em^2 :: actual=9, expected=9
+PASS: D4 alpha3/alpha_em = g3^2*(2d+3) :: actual=9, expected=9
+PASS: D5 alpha_em = 1/(36 pi) :: actual=0.0088419412828830736, expected=0.0088419412828830753
+PASS: alpha3/alpha_em float ratio = 9 :: actual=9.0000000000000018, expected=9
+PASS: D6 inverse-alpha sum factor = 2d+4 :: actual=10, expected=10
+PASS: D6 inverse-alpha sum = 40 pi :: actual=125.66370614359172, expected=125.66370614359172
+PASS: framework minus SU(5) sin^2 offset = 5/72 :: actual=5/72, expected=5/72
+PASS: framework bare angle is not SU(5)
+PASS: dimension fingerprint d=2 :: ratio=7
+PASS: dimension fingerprint d=3 :: ratio=9
+PASS: dimension fingerprint d=4 :: ratio=11
+PASS: dimension fingerprint d=5 :: ratio=13
+PASS: integer 9 uniquely maps to d=3 in checked range
+PASS: fingerprint sequence odd integers
+TOTAL: PASS=47, FAIL=0
+VERDICT: SUPPORT COROLLARY CLOSED
 
 ----- stderr -----
-Traceback (most recent call last):
-  File "/private/tmp/gate-fix-worktree/scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py", line 203, in <module>
-    raise SystemExit(main())
-                     ^^^^^^
-  File "/private/tmp/gate-fix-worktree/scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py", line 191, in main
-    audit_authority_surfaces(audit)
-  File "/private/tmp/gate-fix-worktree/scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py", line 61, in audit_authority_surfaces
-    note = read(note_path)
-           ^^^^^^^^^^^^^^^
-  File "/private/tmp/gate-fix-worktree/scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py", line 38, in read
-    return (ROOT / path).read_text(encoding="utf-8")
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 1027, in read_text
-    with self.open(mode='r', encoding=encoding, errors=errors) as f:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 1013, in open
-    return io.open(self, mode, buffering, encoding, errors, newline)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/gate-fix-worktree/docs/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md'
 

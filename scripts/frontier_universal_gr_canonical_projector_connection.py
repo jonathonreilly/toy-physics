@@ -23,7 +23,7 @@ from typing import Sequence
 import numpy as np
 
 
-ROOT = Path("/Users/jonreilly/Projects/Physics")
+ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 
 OBSERVABLE = DOCS / "OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md"
@@ -31,8 +31,6 @@ ROUTE2 = DOCS / "S3_ANOMALY_SPACETIME_LIFT_NOTE.md"
 VARIATIONAL = DOCS / "UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md"
 UNIQUENESS = DOCS / "UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md"
 A1_NOTE = DOCS / "UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md"
-COMMON = DOCS / "ROUTE2_POLARIZATION_COMMON_PRIMITIVE_NOTE.md"
-SYNTHESIS = DOCS / "POLARIZATION_COMMON_PRIMITIVE_SYNTHESIS_NOTE.md"
 CURRENT = DOCS / "UNIVERSAL_GR_CANONICAL_PROJECTOR_CONNECTION_NOTE.md"
 
 
@@ -157,8 +155,6 @@ def main() -> int:
     var = read(VARIATIONAL)
     uni = read(UNIQUENESS)
     a1 = read(A1_NOTE)
-    common = read(COMMON)
-    synth = read(SYNTHESIS)
     current = read(CURRENT)
 
     frame = canonical_polarization_frame()

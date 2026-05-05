@@ -1,6 +1,6 @@
 ===== runner cache v1 =====
 runner: scripts/PORTABLE_PACKAGE_EXTENSION_COMPARE.py
-runner_sha256: a933f0100accf1b107898a8273af615a5c726eac8a16fc2b377f32afcf2c528c
+runner_sha256: 4523e6c6ce0b5968ab560415fbfe15e3d722365aee20c511853d6e468a265338
 timeout_sec: 120
 exit_code: 0
 elapsed_sec: 0.04
@@ -36,7 +36,7 @@ the first two grown families and becomes selective or breaks on newer families,
 while complex action is the most selective branch and does not track the broad
 portable package cleanly.
 
-Source root: /Users/jonreilly/Projects/Physics
+Source root: /private/tmp/review-pr-518-salvage-20260504
 
 ----- stderr -----
 

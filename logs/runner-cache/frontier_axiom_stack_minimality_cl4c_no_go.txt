@@ -1,10 +1,10 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_axiom_stack_minimality_cl4c_no_go.py
-runner_sha256: f33762f86437f1420ca08781572a38ba17edf27ab2410c7e3581522a9ece49c6
+runner_sha256: 8a326d19d5c3e1902295ceae89b55aa67279bac9d68520cccbd365d2c0cb8e1d
 timeout_sec: 120
-exit_code: 1
-elapsed_sec: 0.09
-status: nonzero_exit
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
 ----- stdout -----
 ========================================================================
 Axiom-Stack Minimality / Cl_4(C) No-Go Theorem (Block 4) audit
@@ -16,23 +16,45 @@ Section 1: 9 retained no-go/audit chain authority audits
 [PASS] A1 Grassmann no-go exists with Hamming-weight obstruction — A1 cycle 2 result
 [PASS] A2 action-unit no-go exists — A2 cycle 3 result
 [PASS] A4 parity-gate no-go exists — A4 cycle 4 result
+[PASS] A5 audit identifies Cl_4(C) module on P_A H_cell as minimal carrier-axiom class — A5 cycle 5 result
+[PASS] Cycle 6 stuck fan-out exists with α-ε orthogonal premises — Cycle 6 fan-out 5 orthogonal premises
+[PASS] Cycle 6: all five orthogonal premises do NOT force Cl_4(C) — fan-out synthesis confirms non-derivability
+[PASS] CL4C consequence map exists with cascade structure — consequence map of Axiom* downstream cascade
+
+Section 2: algebraic verification (numerical)
+------------------------------------------------------------------------
+[PASS] S_4 has 24 elements on C^4 — |S_4| = 24
+[PASS] S_4 has Hermitian permutation elements (involutions: identity + transpositions + 22+33 swaps) — Hermitian perm count: 10
+[PASS] No two Hermitian S_4 permutations form a Cl_2 anticommuting pair (with squares I) — S_4 permutations do not generate Clifford anticommutators per Cycle 6 (α)
+[PASS] P_A on H_cell ≅ C^16 has rank 4 (Hamming-weight-1 subspace) — Tr P_A = 4 (= dim P_A H_cell)
+[PASS] Bulk Cl(3)-style σ_x on qubit 0 does NOT preserve P_A (leaks out) — ||σ_x⊗I⊗I⊗I · P_A leaving P_A|| = 2.000
+[PASS] Weight-preserving A_min operators on P_A H_cell ⊆ S_4 permutation algebra (per α) — S_4 permutation subalgebra is the natural weight-preserving algebra
+[PASS] 4-dim S_4 perm algebra contains no Cl_4 anticommuting structure — no anticommuting pair → no anticommuting quadruple
+[PASS] Cl_4(C) minimal faithful irrep has dim = 4 (matches P_A H_cell) — Cl_4 ≅ M_4(C) on C^4 via standard Dirac matrices
+[PASS] But A_min-derivable weight-preserving algebra ≠ M_4(C) — S_4 permutation algebra is rank 24 in U(4), not span = M_4(C)
+
+Section 3: V1 status firewall fields
+------------------------------------------------------------------------
+[PASS] V1 carries actual_current_surface_status: proposed_retained — V1 firewall
+[PASS] V1 carries audit_required_before_effective_retained: true — V1 firewall
+[PASS] V1 carries bare_retained_allowed: false — V1 firewall
+[PASS] V1 records axiom_star_decision_status: science_level_decision_required — V1 firewall: Axiom* adoption is science-level decision
+[PASS] V1 records g1_c1_lane_status: forced_open_unless_axiom_star_adopted — V1 firewall: G1/C1 forced open without Axiom*
+
+Section 4: forbidden imports check
+------------------------------------------------------------------------
+[PASS] forbidden import not used as proof input: H_0_obs — no observational comparator enters proof
+[PASS] forbidden import not used as proof input: H_inf_obs — no observational comparator enters proof
+[PASS] forbidden import not used as proof input: Lambda_obs — no observational comparator enters proof
+
+========================================================================
+FAIL count: 0
+AXIOM_STACK_MINIMALITY_THEOREM_VERIFIED = True
+AXIOM_STAR_STATUS = science_level_decision_required
+G1_C1_LANE_STATUS = forced_open_unless_axiom_star_adopted
+(This flag verifies the V1 axiom-stack minimality theorem composes 9 retained no-go/audit cycles. Independent audit required before the repo treats this as effective retained.)
+
+All Block 4 chain authorities + algebraic identities verified.
 
 ----- stderr -----
-Traceback (most recent call last):
-  File "/private/tmp/gate-fix-worktree/scripts/frontier_axiom_stack_minimality_cl4c_no_go.py", line 317, in <module>
-    sys.exit(main())
-             ^^^^^^
-  File "/private/tmp/gate-fix-worktree/scripts/frontier_axiom_stack_minimality_cl4c_no_go.py", line 76, in main
-    a5 = read_doc("HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md")
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/private/tmp/gate-fix-worktree/scripts/frontier_axiom_stack_minimality_cl4c_no_go.py", line 34, in read_doc
-    return (DOCS_DIR / path_rel).read_text(encoding="utf-8")
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 1027, in read_text
-    with self.open(mode='r', encoding=encoding, errors=errors) as f:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 1013, in open
-    return io.open(self, mode, buffering, encoding, errors, newline)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/gate-fix-worktree/docs/HUBBLE_LANE5_C1_A5_MINIMAL_CARRIER_AXIOM_AUDIT_NOTE_2026-04-28.md'
 

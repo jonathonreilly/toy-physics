@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/portable_package_hierarchy_classifier.py
-runner_sha256: ff476245ede862766177127b6be0092c010facebe9fdb969f68bc7dd7ff8bce9
+runner_sha256: 919ed460b7695473b4deec133ed5be6b8c11b5bbfa56bd130e100ed0ddb733e5
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.05
+elapsed_sec: 0.07
 status: ok
 ----- stdout -----
 # Portable Package Hierarchy Classifier
@@ -17,9 +17,9 @@ Can the retained nested family structure be compressed into one safe classifier:
 
 ## Retained Cards
 
-- broad portable package: [`docs/SIGN_PORTABILITY_INVARIANT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SIGN_PORTABILITY_INVARIANT_NOTE.md), [`docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md), [`docs/PORTABLE_CARD_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PORTABLE_CARD_EXTENSION_NOTE.md)
-- distance-tail boundary: [`docs/DISTANCE_LAW_PORTABILITY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PORTABILITY_NOTE.md), [`docs/DISTANCE_LAW_BREAKPOINT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_BREAKPOINT_NOTE.md)
-- complex-action branch: [`docs/COMPLEX_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/COMPLEX_ACTION_NOTE.md), [`docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md)
+- broad portable package: [`docs/SIGN_PORTABILITY_INVARIANT_NOTE.md`](docs/SIGN_PORTABILITY_INVARIANT_NOTE.md), [`docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md`](docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md), [`docs/PORTABLE_CARD_EXTENSION_NOTE.md`](docs/PORTABLE_CARD_EXTENSION_NOTE.md)
+- distance-tail boundary: [`docs/DISTANCE_LAW_PORTABILITY_NOTE.md`](docs/DISTANCE_LAW_PORTABILITY_NOTE.md), [`docs/DISTANCE_LAW_BREAKPOINT_NOTE.md`](docs/DISTANCE_LAW_BREAKPOINT_NOTE.md)
+- complex-action branch: [`docs/COMPLEX_ACTION_NOTE.md`](docs/COMPLEX_ACTION_NOTE.md), [`docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md`](docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md)
 
 ## Classifier
 

@@ -20,7 +20,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-ROOT = Path("/Users/jonreilly/Projects/Physics")
+ROOT = Path(__file__).resolve().parents[1]
 
 
 @dataclass(frozen=True)
@@ -123,9 +123,9 @@ def render_markdown(rows: list[LayerRow]) -> str:
         "",
         "## Retained Cards",
         "",
-        "- broad portable package: [`docs/SIGN_PORTABILITY_INVARIANT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SIGN_PORTABILITY_INVARIANT_NOTE.md), [`docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md), [`docs/PORTABLE_CARD_EXTENSION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/PORTABLE_CARD_EXTENSION_NOTE.md)",
-        "- distance-tail boundary: [`docs/DISTANCE_LAW_PORTABILITY_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_PORTABILITY_NOTE.md), [`docs/DISTANCE_LAW_BREAKPOINT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DISTANCE_LAW_BREAKPOINT_NOTE.md)",
-        "- complex-action branch: [`docs/COMPLEX_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/COMPLEX_ACTION_NOTE.md), [`docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md)",
+        "- broad portable package: [`docs/SIGN_PORTABILITY_INVARIANT_NOTE.md`](docs/SIGN_PORTABILITY_INVARIANT_NOTE.md), [`docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md`](docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md), [`docs/PORTABLE_CARD_EXTENSION_NOTE.md`](docs/PORTABLE_CARD_EXTENSION_NOTE.md)",
+        "- distance-tail boundary: [`docs/DISTANCE_LAW_PORTABILITY_NOTE.md`](docs/DISTANCE_LAW_PORTABILITY_NOTE.md), [`docs/DISTANCE_LAW_BREAKPOINT_NOTE.md`](docs/DISTANCE_LAW_BREAKPOINT_NOTE.md)",
+        "- complex-action branch: [`docs/COMPLEX_ACTION_NOTE.md`](docs/COMPLEX_ACTION_NOTE.md), [`docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md`](docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md)",
         "",
         "## Classifier",
         "",

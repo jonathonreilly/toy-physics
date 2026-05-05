@@ -22,7 +22,7 @@ from typing import Sequence
 import numpy as np
 
 
-ROOT = Path("/Users/jonreilly/Projects/Physics")
+ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 
 OBSERVABLE = DOCS / "OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md"
@@ -30,8 +30,8 @@ ROUTE2 = DOCS / "S3_ANOMALY_SPACETIME_LIFT_NOTE.md"
 VARIATIONAL = DOCS / "UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md"
 UNIQUENESS = DOCS / "UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md"
 A1_NOTE = DOCS / "UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md"
-WDECOMP = DOCS / "POLARIZATION_UNIVERSAL_WEIGHT_DECOMPOSITION_NOTE.md"
 CONNECTION = DOCS / "UNIVERSAL_GR_CANONICAL_PROJECTOR_CONNECTION_NOTE.md"
+CURRENT = DOCS / "UNIVERSAL_GR_INVARIANT_FRAME_OBSTRUCTION_NOTE.md"
 
 
 @dataclass
@@ -197,8 +197,8 @@ def main() -> int:
     var = read(VARIATIONAL)
     uni = read(UNIQUENESS)
     a1 = read(A1_NOTE)
-    wdec = read(WDECOMP)
     conn = read(CONNECTION)
+    current = read(CURRENT)
 
     frame = canonical_polarization_frame()
     projector = pi_a1()
@@ -253,7 +253,15 @@ def main() -> int:
         ("quotient-kernel spectrum is frame-invariant", spec_delta < 1e-12, f"max spectrum delta under rotation = {spec_delta:.3e}"),
         ("current universal notes still stop at an orbit bundle", has(conn, "orbit bundle") and has(conn, "SO(3)") and has(conn, "distinguished connection"), "notes record only an orbit bundle, not a canonical section"),
         ("exact invariant section note is present", has(a1, "Pi_A1") and has(a1, "lapse") and has(a1, "spatial trace"), "A1 invariant section is explicitly recorded"),
-        ("weight decomposition note is present", has(wdec, "weight-1 doublets") and has(wdec, "weight-2 sector"), "weight decomposition is explicitly recorded"),
+        (
+            "weight decomposition is recorded in the live obstruction note",
+            has(current, "weight-1 doublets")
+            and has(current, "weight-2 sector")
+            and weights.get(0, 0) == 4
+            and doublets.get(1, 0) == 2
+            and doublets.get(2, 0) == 1,
+            "weight decomposition is explicitly recorded and recomputed by the runner",
+        ),
     ]
 
     print("UNIVERSAL GR INVARIANT FRAME OBSTRUCTION AUDIT")
