@@ -4,17 +4,20 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact support / post-cycle35 non-chunk gate stack compatibility repaired; positive closure still open
-active_residual: "Both target production chunks001-063 and polefit8x8 chunks001-063 are complete with required FH/LSZ target schema, but positive closure still fails the assembly checklist.  The branch and remote PR head match, origin/main has not advanced past the cycle-35 audit-ledger baseline, and no listed PR230 same-surface artifact exists locally, on the PR remote, or on origin/main.  The non-chunk exhaustion/intake/terminal/reopen gates have been made rerunnable against the current route-audit wording and expanded future-artifact key set.  Missing closure items remain scalar-LSZ model-class/FV/IR/pole authority, one accepted source-overlap or same-source physical-response bridge, matching/running authority from certified physical input, and retained-route/campaign proposal authorization.  The next productive input must be a fresh parseable same-surface artifact: O_H/C_sH/C_HH pole rows, genuine same-source EW action plus W/Z rows/covariance/non-observed g2, Schur A/B/C rows, or neutral-sector irreducibility."
+actual_current_surface_status: exact support / clean source-Higgs outside-math route selector; positive closure still open
+active_residual: "Both target production chunks001-063 and polefit8x8 chunks001-063 are complete with required FH/LSZ target schema, but positive closure still fails the assembly checklist.  The cleanest physics route is now explicitly ranked as source-Higgs: derive a same-surface canonical O_H identity/normalization certificate, then produce C_ss/C_sH/C_HH pole rows and scalar-LSZ authority.  Outside-math tools are allowed only as certificate-producing methods, not as proof selectors.  Missing closure items remain scalar-LSZ model-class/FV/IR/pole authority, one accepted source-overlap or physical-response bridge, matching/running authority from certified physical input, and retained-route/campaign proposal authorization.  No retained or proposed_retained closure is authorized."
 latest_checkpoint:
-  utc: "2026-05-05T13:59:56Z"
-  block: 96
-  artifact: "post-cycle35 non-chunk gate stack compatibility repair"
-  status: "exact support / audit-gate compatibility repair only"
-  result: "The cycle-8 exhaustion and terminal gates were updated for the current route-family no-route closeout wording and for the expanded future-artifact key set including top_wz_closed_covariance_theorem.  Regenerated exhaustion PASS=15 FAIL=0, future-intake PASS=12 FAIL=0, terminal PASS=15 FAIL=0, and reopen-admissibility PASS=11 FAIL=0.  This repairs rerunnability only; no same-surface row, certificate, theorem, or proposal authority was added."
-  claim_boundary: "no retained or proposed_retained closure; gate-stack compatibility is not PR230 physics evidence and cannot reopen the non-chunk queue"
+  utc: "2026-05-05T14:17:43Z"
+  block: 97
+  artifact: "clean source-Higgs outside-math route selector"
+  status: "exact support / route selection and claim-firewall clarification only"
+  result: "The new selector ranks the clean source-Higgs O_H/C_sH/C_HH route first, classifies invariant-ring/commutant, GNS, exact tensor/PEPS, holonomic/WZ/Picard-Fuchs, free-probability, PSLQ, and motivic tools as algorithmic methods only, and preserves proposal_allowed=false because all same-surface O_H rows/certificates remain absent.  W/Z response is demoted to a robust fallback for the clean-physics goal."
+  claim_boundary: "no retained or proposed_retained closure; outside-math tools are not proof inputs unless they output same-surface PR230 certificates and aggregate gates pass"
   live_compute: "chunk artifacts are complete; no production chunk worker is running"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py
+    - docs/YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md
+    - outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json
     - scripts/frontier_yt_pr230_nonchunk_current_surface_exhaustion_gate.py
     - scripts/frontier_yt_pr230_nonchunk_terminal_route_exhaustion_gate.py
     - docs/YT_PR230_NONCHUNK_GATE_STACK_COMPATIBILITY_REPAIR_NOTE_2026-05-05.md

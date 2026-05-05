@@ -1,5 +1,30 @@
 # Handoff
 
+## 2026-05-05 PR230 Clean Source-Higgs Math-Tool Route Selector
+
+Result: exact support / route selection and claim-firewall clarification only.
+The user prioritized the cleanest physics closure and allowed outside math
+tools.  The new selector ranks direct source-Higgs `O_H/C_sH/C_HH` closure
+first and classifies invariant-ring/commutant, GNS/flat-extension, exact
+tensor/PEPS, holonomic/WZ/Picard-Fuchs, free-probability, PSLQ, and motivic
+tools as certificate-producing methods only.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py
+# SUMMARY: PASS=14 FAIL=0
+```
+
+Claim boundary: no retained or proposed-retained closure.  The selector does
+not supply `O_H`, `C_sH/C_HH`, neutral irreducibility, Schur rows, strict
+scalar-LSZ authority, W/Z production rows, matching/running, or proposal
+authorization.  PSLQ/value recognition is explicitly barred as a proof
+selector.  Exact next action: attempt a same-surface
+invariant-ring/commutant/primitive-cone derivation of canonical `O_H` identity
+and normalization; only after that, produce `C_ss/C_sH/C_HH` pole rows and
+rerun GNS/Gram-purity plus scalar-LSZ aggregate gates.
+
 ## 2026-05-05 PR230 Non-Chunk Gate Stack Compatibility Repair
 
 Result: exact support / audit-gate compatibility repair only.  Rerunning the

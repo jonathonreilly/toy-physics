@@ -17,7 +17,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PACK = ROOT / ".claude" / "science" / "physics-loops" / "yt-pr230-ward-physical-readout-20260501"
+ACTIVE_PACK = (
+    ROOT
+    / ".claude"
+    / "science"
+    / "physics-loops"
+    / "yt-pr230-osp-oh-retained-closure-20260503"
+)
 ASSUMPTIONS = PACK / "ASSUMPTIONS_AND_IMPORTS.md"
+ACTIVE_ASSUMPTIONS = ACTIVE_PACK / "ASSUMPTIONS_AND_IMPORTS.md"
 OUTPUT = ROOT / "outputs" / "yt_pr230_assumption_import_stress_2026-05-01.json"
 
 PASS_COUNT = 0
@@ -44,8 +52,13 @@ def main() -> int:
     print("=" * 72)
 
     text = ASSUMPTIONS.read_text(encoding="utf-8")
+    active_text = ACTIVE_ASSUMPTIONS.read_text(encoding="utf-8")
+    combined_text = f"{text}\n\n{active_text}"
     certificates = {
         "campaign": load("outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"),
+        "clean_source_higgs_math_tool_selector": load(
+            "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json"
+        ),
         "kinetic_matching": load("outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"),
         "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "scalar_ir": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
@@ -105,13 +118,22 @@ def main() -> int:
         "`source_higgs_cross_correlator` guard is claim",
         "`wz_mass_response` guard is claim",
         "Reduced cold-gauge momentum pilots",
+        "Outside-math algorithms",
+        "not proof selectors",
+        "PSLQ",
+        "invariant-ring/commutant",
     ]
-    missing_terms = [term for term in required_terms if term not in text]
+    missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
         name for name, cert in certificates.items() if cert.get("proposal_allowed") is True
     ]
 
     report("assumption-ledger-present", ASSUMPTIONS.exists(), str(ASSUMPTIONS.relative_to(ROOT)))
+    report(
+        "active-assumption-ledger-present",
+        ACTIVE_ASSUMPTIONS.exists(),
+        str(ACTIVE_ASSUMPTIONS.relative_to(ROOT)),
+    )
     report("refreshed-kinetic-imports-present", "Heavy kinetic-action coefficient `c2`" in text and "Z_match" in text, "c2 and Z_match imports named")
     report("forbidden-imports-explicit", not missing_terms, f"missing={missing_terms}")
     report("all-loaded-certificates-no-fail", all(int(cert.get("fail_count", 0)) == 0 for cert in certificates.values()), f"count={len(certificates)}")
@@ -229,6 +251,19 @@ def main() -> int:
         in certificates["source_functional_lsz_identifiability"].get("forbidden_shortcuts_checked", []),
         certificates["source_functional_lsz_identifiability"].get("actual_current_surface_status"),
     )
+    math_selector = certificates["clean_source_higgs_math_tool_selector"]
+    report(
+        "outside-math-tools-not-proof-selectors",
+        "clean source-Higgs outside-math route selector"
+        in str(math_selector.get("actual_current_surface_status"))
+        and math_selector.get("proposal_allowed") is False
+        and math_selector.get("clean_physics_priority") == "source_higgs"
+        and math_selector.get("forbidden_firewall", {}).get(
+            "used_pslq_or_value_recognition_as_proof_selector"
+        )
+        is False,
+        math_selector.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -255,7 +290,10 @@ def main() -> int:
             "orthogonal neutral top coupling.  "
             "Static EW W/Z algebra is not dM_W/ds, "
             "and slope-only W/Z outputs need production mass fits plus sector-"
-            "overlap and canonical-Higgs identity certificates.  No current route "
+            "overlap and canonical-Higgs identity certificates.  "
+            "Outside-math tools are now included in the assumption firewall: "
+            "they may be used only to emit future same-surface certificates, "
+            "not as PSLQ, exact-value, or theorem-name proof selectors.  No current route "
             "certificate authorizes retained proposal wording.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
@@ -274,6 +312,7 @@ def main() -> int:
             "does not use yt_ward_identity as y_t authority",
             "does not set kappa_s to one without scalar LSZ/canonical normalization",
             "does not use source-only LSZ data as canonical-Higgs identity",
+            "does not use outside-math value recognition as a proof selector",
         ],
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

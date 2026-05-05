@@ -2,6 +2,7 @@
 
 | Route | Current disposition | Key artifact |
 |---|---|---|
+| Outside-math tool name, PSLQ hit, exact constant, or value recognition as PR230 proof selector | forbidden / support-only until a same-surface certificate is emitted | `YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md` |
 | H_unit as `O_H` | forbidden / audited renaming | `YT_HUNIT_CANONICAL_HIGGS_OPERATOR_CANDIDATE_GATE_NOTE_2026-05-02.md` |
 | Static EW algebra as `O_H` | rejected | `YT_CANONICAL_HIGGS_OPERATOR_CANDIDATE_STRESS_NOTE_2026-05-03.md` |
 | Source-only LSZ as physical `y_t` | blocked by overlap | `YT_SOURCE_FUNCTIONAL_LSZ_IDENTIFIABILITY_THEOREM_NOTE_2026-05-03.md` |

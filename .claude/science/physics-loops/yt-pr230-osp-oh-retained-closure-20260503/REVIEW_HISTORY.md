@@ -1,5 +1,26 @@
 # Review History
 
+## 2026-05-05 Clean Source-Higgs Math-Tool Selector Self-Review
+
+Disposition: pass as exact support / route selection only.
+
+Findings:
+
+- The runner does not create or promote physics evidence; it only classifies
+  outside-math tools as methods that may generate future same-surface
+  certificates.
+- It ranks `O_H/C_sH/C_HH` source-Higgs closure first for the clean-physics
+  goal and demotes same-source W/Z response to fallback.
+- It explicitly blocks PSLQ, motivic value recognition, exact toy
+  contractions, smoke rows, and reduced pilots as proof selectors or
+  production evidence.
+- It preserves every forbidden-import firewall: no `H_unit`, Ward readout,
+  observed target selector, `alpha_LM`/plaquette/`u0`, `c2=1`, `Z_match=1`,
+  or `kappa_s=1`.
+
+Review-loop iteration 1: local self-review pass.  No retained or
+proposed-retained wording is authorized.
+
 ## 2026-05-05 Non-Chunk Gate Stack Compatibility Repair Self-Review
 
 Disposition: pass as exact support / audit-gate compatibility repair only.

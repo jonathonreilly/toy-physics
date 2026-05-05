@@ -1,5 +1,21 @@
 # Opportunity Queue
 
+2026-05-05 clean source-Higgs math-tool selector update:
+`outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`
+passes with `PASS=14 FAIL=0`.  The cleanest physics closure is now the
+foreground route: derive a same-surface canonical `O_H` identity and
+normalization certificate, then produce `C_ss/C_sH/C_HH` pole rows and strict
+scalar-LSZ authority.  Outside-math tools are admitted only as algorithms that
+emit same-surface certificates: invariant-ring/commutant and primitive-cone
+methods for `O_H` or neutral irreducibility, GNS/flat-extension or moment
+methods for rank-one source-Higgs pole purity, exact tensor/PEPS methods for
+row production after an operator/action exists, and holonomic/WZ/Picard-Fuchs
+methods for scalar-LSZ analytic authority.  PSLQ/motivic/value-recognition
+tools are support-only after the quantity already exists; they are not proof
+selectors.  W/Z response remains a robust fallback, but it is demoted behind
+the direct source-Higgs route for the clean-physics goal.  Proposal authority
+remains false because no listed same-surface artifact is present.
+
 2026-05-05 gate-stack compatibility update:
 the post-cycle35 audit rerun found that the older exhaustion/intake/terminal/
 reopen stack needed compatibility repairs for the current

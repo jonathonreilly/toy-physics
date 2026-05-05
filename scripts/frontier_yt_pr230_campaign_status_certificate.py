@@ -518,6 +518,9 @@ def main() -> int:
         "canonical_oh_premise_stretch": load(
             "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json"
         ),
+        "pr230_clean_source_higgs_math_tool_route_selector": load(
+            "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json"
+        ),
         "sm_one_higgs_oh_import_boundary": load(
             "outputs/yt_sm_one_higgs_oh_import_boundary_2026-05-03.json"
         ),
@@ -1931,6 +1934,24 @@ def main() -> int:
         )
         is False,
         statuses["source_higgs_production_readiness_gate"],
+    )
+    report(
+        "pr230-clean-source-higgs-math-tool-selector-support-only",
+        "clean source-Higgs outside-math route selector"
+        in str(statuses["pr230_clean_source_higgs_math_tool_route_selector"])
+        and certificates["pr230_clean_source_higgs_math_tool_route_selector"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_clean_source_higgs_math_tool_route_selector"].get(
+            "clean_physics_priority"
+        )
+        == "source_higgs"
+        and certificates["pr230_clean_source_higgs_math_tool_route_selector"]
+        .get("selected_clean_route", {})
+        .get("id")
+        == "source_higgs_invariant_ring_then_gns_pole_rows",
+        statuses["pr230_clean_source_higgs_math_tool_route_selector"],
     )
     report(
         "canonical-higgs-operator-realization-gate-not-passed",
