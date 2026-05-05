@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 39 |
 | **retained_no_go** | 95 |
-| **retained_bounded** | 182 |
+| **retained_bounded** | 183 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 1121 |
+| unaudited | 1120 |
 | audit_in_progress | 6 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 6 |
@@ -37,13 +37,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 6 |
-| `audited_clean` | 288 |
+| `audited_clean` | 289 |
 | `audited_conditional` | 257 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 6 |
 | `audited_renaming` | 9 |
-| `unaudited` | 1167 |
+| `unaudited` | 1166 |
 
 | claim_type | count |
 |---|---:|
@@ -375,6 +375,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_three_register_cross_encoding_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | C | - |
 | `thales_right_angle_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `third_grown_family_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `third_grown_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `triple_stack_collapse_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `two_field_retarded_family_closure_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `two_field_retarded_probe_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -8440,6 +8441,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The diagnosed boundary is that the third family has a small signed-source basin centered in the tested drift window while the edge drifts fall into an opposite-sign regime, so a retained bounded basin exists but is narrow and drift-sensitive.  _(class `C`)_
 - **chain closes:** True — The cached runner completes and directly computes the finite sweep claimed by the note: 5 of 15 rows satisfy the signed-source package, all zero-source and neutral controls remain zero, and edge drift rows are sign-reversed. This closes only the finite tested-window boundary claim, not a continuous-drift theorem.
 - **rationale:** The runner does not print constants or compare to an external target; it constructs the third connectivity family, propagates source fields, and computes the row outcomes used in the note. The note's stated boundary matches the cached output: edge drifts 0.0 and 0.5 are sign-reversed, while accepted rows occur only in the interior tested window. Residual risk is scope-limited: the result is a finite bounded compute over the listed drifts and seeds, not a proof for all drifts or seeds.
+- **auditor confidence:** high
+
+### `third_grown_family_sign_note`
+
+- **Note:** [`THIRD_GROWN_FAMILY_SIGN_NOTE.md`](../../docs/THIRD_GROWN_FAMILY_SIGN_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite bounded computational claim that the third no-restore grown-family slice has five signed-source passing rows over drifts [0.0, 0.1, 0.2, 0.3, 0.5] and seeds [0, 1, 2], with exact zero/neutral controls and near-linear charge scaling on the passing rows.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-second-third_grown_family_sign_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The family has a real bounded basin: 5/15 tested rows pass exact zero and neutral controls, correct +1/-1 sign orientation, and near-linear double-source scaling.  _(class `C`)_
+- **chain closes:** True — The cached SHA-fresh runner output matches the note's counted pass set, drift coverage, and mean exponent, and the one-hop boundary dependency is retained_bounded. The conclusion must remain bounded to the tested finite sweep and does not support a family-wide or geometry-generic theorem.
+- **rationale:** The runner constructs the third cross-quadrant load-balanced connectivity, computes zero, plus, minus, neutral, double-source responses for all 15 drift/seed rows, and marks five rows as passing without hard-coded target pass values. The source note's numeric claims match the cached runner output: 5/15 passed rows, drift coverage [0.1, 0.2, 0.3], and mean passing exponent 0.999842. The upstream boundary note is retained_bounded and supports the narrow interpretation that edge failures are structural rather than control leakage.
 - **auditor confidence:** high
 
 ### `three_family_card_note`

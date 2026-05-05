@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 774,
+    "critical": 773,
     "high": 25,
     "leaf": 208,
     "medium": 139
@@ -4030,29 +4030,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "third_grown_family_sign_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "third_grown_family_boundary_note"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.729,
-      "note_path": "docs/THIRD_GROWN_FAMILY_SIGN_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/THIRD_GROWN_FAMILY_SIGN_SWEEP.py",
-      "transitive_descendants": 299
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audit_in_progress",
@@ -24089,6 +24066,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "third_grown_family_complex_boundary_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "third_grown_family_sign_note"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 4.822,
+      "note_path": "docs/THIRD_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/THIRD_GROWN_FAMILY_COMPLEX.py",
+      "transitive_descendants": 19
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "higher_symmetry_gravity_probe_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -25774,29 +25774,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/COMPLEX_SELECTIVITY_COMPARE.py",
-      "transitive_descendants": 19
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "third_grown_family_complex_boundary_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "third_grown_family_sign_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 4.822,
-      "note_path": "docs/THIRD_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/THIRD_GROWN_FAMILY_COMPLEX.py",
       "transitive_descendants": 19
     },
     {
@@ -32822,5 +32799,5 @@
     }
   ],
   "ready_count": 291,
-  "total_pending": 1146
+  "total_pending": 1145
 }
