@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 195 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 16 |
-| unaudited | 877 |
+| unaudited | 876 |
 | audit_in_progress | 46 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
-| ~~audited_conditional~~ | 381 |
+| ~~audited_conditional~~ | 382 |
 | ~~audited_failed~~ | 15 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 46 |
 | `audited_clean` | 317 |
-| `audited_conditional` | 381 |
+| `audited_conditional` | 382 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 29 |
-| `unaudited` | 923 |
+| `unaudited` | 922 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 616 |
 | `decoration` | 6 |
 | `meta` | 54 |
-| `no_go` | 183 |
+| `no_go` | 184 |
 | `open_gate` | 111 |
-| `positive_theorem` | 812 |
+| `positive_theorem` | 811 |
 
 | criticality | count |
 |---|---:|
@@ -770,6 +770,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_graph_first_axis_alignment_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_graph_first_cycle_frame_support_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `pmns_lower_level_end_to_end_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `pmns_oriented_cycle_reduced_channel_nonselection_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `poisson_exhaustive_uniqueness_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `primordial_spectrum_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -8594,6 +8595,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Therefore any canonical active block has the exact native oriented-cycle decomposition A_fwd = c_1 E_12 + c_2 E_23 + c_3 E_31 with coefficient law (c_1, c_2, c_3) = diag(A C^dagger).  _(class `A`)_
 - **chain closes:** True — Within the audited scope, the projected projectors give P_i C = E12,E23,E31, so multiplying A by C^dagger extracts exactly A12,A23,A31 on the diagonal. The note explicitly excludes deriving or selecting those values from the sole axiom, so the scoped algebraic theorem closes without dependencies.
 - **rationale:** The load-bearing step is a class-A matrix identity over the projected forward-cycle basis, not a numerical fit or definition-as-derivation. The cached runner for SHA 531e8147f7aa2e6e9c13b9f5ddf6b03ae7862a18e968627d815d5f748b7f79ec exits 0 with PASS=10 FAIL=0 and checks the projected cycle, projected scalar projectors, edge basis, coefficient extraction, reconstruction, mean identity, and response-profile round trip. Residual risk is only scope creep: this audit does not certify sole-axiom selection of the canonical active block or of the coefficient values.
+- **auditor confidence:** high
+
+### `pmns_oriented_cycle_reduced_channel_nonselection_note`
+
+- **Note:** [`PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md`](../../docs/PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Within the stated graph-first reduced oriented-cycle channel, the current exact constraints permit distinct realized reduced-channel values, so they do not select a unique value.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-first-pmns_oriented_cycle_reduced_channel_nonselection_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** There exist distinct reduced-channel points satisfying the residual antiunitary symmetry, the retained diagonal-plus-forward-cycle support, the native observable law, and exact lower-level active-response realization; therefore the current exact bank does not select a unique reduced-channel value.  _(class `A`)_
+- **chain closes:** False — The algebraic witness argument is locally coherent and the cached runner passes 8 checks, but the restricted packet supplies only the native oriented-cycle value-law dependency. The no-selection conclusion also relies on the graph-first residual reduction and the lower-level active-response realization theorem as closed inputs, and those dependency authorities are not provided as direct one-hop retained-grade dependencies.
+- **rationale:** Issue: the note's negative closeout depends on two load-bearing upstream facts beyond the provided value-law note: that the graph-first residual channel is exactly the stated three-real family and that every such reduced block is exactly realized on the lower-level active-response chain. Why this blocks: two explicit examples prove nonselection only after those constraints are known to be the complete current exact bank constraints; otherwise the argument is conditional on unratified carrier/realization closure. Repair target: add direct dependency edges to the notes proving the graph-first residual reduction and lower-level active-response realization, then re-audit once those dependencies are retained-grade. Claim boundary until fixed: the runner gives strong algebraic support that the listed constraints alone do not collapse the reduced channel to a unique value.
+- **open / conditional deps cited:**
+  - `PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md`
 - **auditor confidence:** high
 
 ### `pmns_selector_three_identity_support_note_2026-04-21`
