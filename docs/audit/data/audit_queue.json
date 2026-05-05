@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 616,
+    "critical": 615,
     "high": 23,
     "leaf": 195,
     "medium": 120
@@ -3023,27 +3023,6 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audit_in_progress",
       "blocker": "awaiting_cross_confirmation",
-      "claim_id": "wave_retardation_lab_prediction_note",
-      "claim_scope": "Audited the restricted claim that the provided wave-retardation velocity sweeps block a clean lab v/c scaling card because the measured M \u2212 I gap depends on sweep geometry and is non-monotonic under the trajectory-fixed sweep.",
-      "claim_type": "no_go",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 8.69,
-      "note_path": "docs/WAVE_RETARDATION_LAB_PREDICTION_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/wave_retardation_velocity_sweep.py",
-      "transitive_descendants": 291
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
       "claim_id": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
       "claim_scope": "Audited only the stated algebraic identity alpha_LM^2 = alpha_bare * alpha_s(v) on the retained coupling surface defined by alpha_LM = alpha_bare/u_0 and alpha_s(v) = alpha_bare/u_0^2.",
       "claim_type": "positive_theorem",
@@ -3101,6 +3080,29 @@
       "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/frontier_unit_singlet_overlap_narrow.py",
+      "transitive_descendants": 290
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "wave_retardation_continuum_limit_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "wave_retardation_lab_prediction_note"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.185,
+      "note_path": "docs/WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/wave_retardation_continuum_limit.py",
       "transitive_descendants": 290
     },
     {
@@ -8478,29 +8480,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": null,
-      "transitive_descendants": 290
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "wave_retardation_continuum_limit_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "wave_retardation_lab_prediction_note"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.185,
-      "note_path": "docs/WAVE_RETARDATION_CONTINUUM_LIMIT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/wave_retardation_continuum_limit.py",
       "transitive_descendants": 290
     },
     {
@@ -27816,5 +27795,5 @@
     }
   ],
   "ready_count": 84,
-  "total_pending": 954
+  "total_pending": 953
 }
