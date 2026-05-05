@@ -13181,8 +13181,20 @@
       "to": "anomaly_forces_time_theorem"
     },
     {
+      "from": "su3_bridge_clean_tube_k12_support_2026-05-04",
+      "to": "su3_cube_full_rho_perron_2026-05-04"
+    },
+    {
+      "from": "su3_bridge_clean_tube_k12_support_2026-05-04",
+      "to": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
+    },
+    {
       "from": "su3_casimir_fundamental_theorem_note_2026-05-02",
       "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "su3_cube_full_rho_perron_2026-05-04",
+      "to": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
     },
     {
       "from": "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03",
@@ -43360,6 +43372,17 @@
       "runner_path": "scripts/frontier_plaquette_self_consistency.py",
       "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant"
     },
+    "plaquette_v1_picard_fuchs_ode_note_2026-05-05": {
+      "claim_id": "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "6a9425a0a67d5aac8d8a86826f62ce1713a14fba9276d48b394db8f15d7174ce",
+      "path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py",
+      "title": "Plaquette V=1 Picard-Fuchs ODE Note"
+    },
     "pmns_active_four_real_source_from_transport_note": {
       "claim_id": "pmns_active_four_real_source_from_transport_note",
       "claim_type_author_hint": null,
@@ -49927,6 +49950,20 @@
       "runner_path": "scripts/frontier_su3_anomaly_forced_3bar_completion.py",
       "title": "SU(3) Anomaly-Forced 3\u0304 Singlet Completion Theorem"
     },
+    "su3_bridge_clean_tube_k12_support_2026-05-04": {
+      "claim_id": "su3_bridge_clean_tube_k12_support_2026-05-04",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "su3_cube_full_rho_perron_2026-05-04",
+        "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
+      ],
+      "note_hash": "c10ff84a303e3fcd6d6f4603be4813bd7598afa4397769077cf61d152a68fa84",
+      "path": "docs/SU3_BRIDGE_CLEAN_TUBE_K12_SUPPORT_2026-05-04.md",
+      "runner_path": "scripts/frontier_su3_bridge_rho_modification_scoping_2026_05_04.py",
+      "title": "SU(3) Bridge Clean-Tube k=12 Support Calculation: \u03c1 = (c/c_00)^12 \u2192 P = 0.5888"
+    },
     "su3_casimir_fundamental_theorem_note_2026-05-02": {
       "claim_id": "su3_casimir_fundamental_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -49939,6 +49976,19 @@
       "path": "docs/SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/su3_casimir_fundamental_check.py",
       "title": "SU(3) Quadratic Casimir on Color Fundamental Equals 4/3"
+    },
+    "su3_cube_full_rho_perron_2026-05-04": {
+      "claim_id": "su3_cube_full_rho_perron_2026-05-04",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
+      ],
+      "note_hash": "6cd1e774c40a8b0dd968b3e4452b81a4165f93dd4a1824f401c9de5e3652935e",
+      "path": "docs/SU3_CUBE_FULL_RHO_PERRON_2026-05-04.md",
+      "runner_path": "scripts/frontier_su3_cube_full_rho_perron_2026_05_04.py",
+      "title": "SU(3) L_s=2 APBC Cube Full-\u03c1 Perron Solve: APBC \u2261 PBC Under Existing Implementation"
     },
     "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03": {
       "claim_id": "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03",
@@ -50079,6 +50129,17 @@
       "path": "docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_su3_wigner_l3_cube_partition.py",
       "title": "SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Verdict"
+    },
+    "su3_wilson_closed_form_fanout_theorem_note_2026-05-04": {
+      "claim_id": "su3_wilson_closed_form_fanout_theorem_note_2026-05-04",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "e5fc0ff1ad3e58c555d7b8e8c42eb111495829bc6e4115dbb13385fab882f49a",
+      "path": "docs/SU3_WILSON_CLOSED_FORM_FANOUT_THEOREM_NOTE_2026-05-04.md",
+      "runner_path": "scripts/frontier_su3_wilson_closed_form_fanout_2026_05_04.py",
+      "title": "SU(3) Wilson Plaquette Closed-Form Fan-Out at \u03b2 = 6"
     },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "claim_id": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
@@ -54949,6 +55010,7 @@
     "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
     "planck_source_unit_normalization_support_theorem_note_2026-04-25",
     "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25",
+    "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
     "pmns_active_four_real_source_from_transport_note",
     "pmns_c3_nontrivial_current_boundary_note",
     "pmns_commutant_eigenoperator_selector_note",
@@ -55086,6 +55148,7 @@
     "structureless_dag_gravity_note",
     "su3_fusion_engine_pr1_theorem_note_2026-05-03",
     "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
+    "su3_wilson_closed_form_fanout_theorem_note_2026-05-04",
     "substrate_to_p_a_forcing_theorem_note_2026-04-30",
     "symmetry_generated_paired_chokepoint_note",
     "symmetry_spectrum_mirror_compare_note",
@@ -55236,7 +55299,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 63,
+      "bounded_theorem": 67,
       "meta": 8,
       "no_go": 12,
       "none": 1715,
@@ -55244,17 +55307,17 @@
       "positive_theorem": 86
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 561,
+      "bounded_theorem": 565,
       "meta": 8,
       "no_go": 117,
       "none": 457,
       "open_gate": 116,
       "positive_theorem": 635
     },
-    "edge_count": 6500,
-    "leaf_count": 546,
-    "node_count": 1894,
-    "root_count": 877,
-    "runners_with_path": 1467
+    "edge_count": 6503,
+    "leaf_count": 549,
+    "node_count": 1898,
+    "root_count": 879,
+    "runners_with_path": 1471
   }
 }

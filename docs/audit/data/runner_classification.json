@@ -11928,6 +11928,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_plaquette_self_consistency.py"
     },
+    "plaquette_v1_picard_fuchs_ode_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py"
+    },
     "pmns_branch_conditioned_quadratic_sheet_closure_note": {
       "assert_count": 1,
       "counts": {
@@ -15036,6 +15048,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_su3_anomaly_forced_3bar_completion.py"
     },
+    "su3_bridge_clean_tube_k12_support_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 5,
+        "D": 11
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_su3_bridge_rho_modification_scoping_2026_05_04.py"
+    },
     "su3_casimir_fundamental_theorem_note_2026-05-02": {
       "assert_count": 0,
       "counts": {
@@ -15047,6 +15071,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/su3_casimir_fundamental_check.py"
+    },
+    "su3_cube_full_rho_perron_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_cube_full_rho_perron_2026_05_04.py"
     },
     "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03": {
       "assert_count": 1,
@@ -15155,6 +15191,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_su3_wigner_l3_cube_partition.py"
+    },
+    "su3_wilson_closed_form_fanout_theorem_note_2026-05-04": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 39,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_wilson_closed_form_fanout_2026_05_04.py"
     },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "assert_count": 2,
@@ -31939,6 +31987,36 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_su3_bridge_rho_modification_scoping_2026_05_04.py": {
+      "assert_count": 1,
+      "claims": [
+        "su3_bridge_clean_tube_k12_support_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 5,
+        "D": 11
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_su3_cube_full_rho_perron_2026_05_04.py": {
+      "assert_count": 1,
+      "claims": [
+        "su3_cube_full_rho_perron_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_su3_cube_index_graph_shortcut_open_gate.py": {
       "assert_count": 1,
       "claims": [
@@ -31979,6 +32057,21 @@
         "A": 0,
         "B": 0,
         "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py": {
+      "assert_count": 1,
+      "claims": [
+        "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
         "D": 0
       },
       "decoration_candidate": false,
@@ -32040,6 +32133,21 @@
         "B": 0,
         "C": 56,
         "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_su3_wilson_closed_form_fanout_2026_05_04.py": {
+      "assert_count": 1,
+      "claims": [
+        "su3_wilson_closed_form_fanout_theorem_note_2026-05-04"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 39,
+        "D": 1
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -38443,12 +38551,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 164,
-      "C": 567,
-      "D": 210,
+      "C": 570,
+      "D": 211,
       "none": 420
     },
-    "runners_classified": 1371,
-    "runners_with_C": 675,
-    "runners_with_D": 342
+    "runners_classified": 1375,
+    "runners_with_C": 679,
+    "runners_with_D": 344
   }
 }
