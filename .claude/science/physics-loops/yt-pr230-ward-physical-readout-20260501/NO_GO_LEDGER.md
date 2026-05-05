@@ -2698,3 +2698,22 @@ are representation data.  They remain unchanged across many candidate `g2`
 values, while `m_W/v = g2/2` and a fixed W-response ratio readout for `y_t`
 vary with `g2`.  Do not use generator normalization, Casimir 3/4, or
 `g2^2=1/4` as the missing low-scale electroweak `g2` certificate.
+## 2026-05-05 - Polefit8x8 Chunks019-024 Support Boundary
+
+Chunks019-024 completed and passed the dedicated polefit8x8
+combiner/postprocessor:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_postprocessor.py
+# SUMMARY: PASS=5 FAIL=0
+```
+
+This does not close PR #230.  The stream is still partial L12 support
+(`24/63` chunks, `384/1008` saved configurations) and remains blocked by
+complete-statistics, L16/L24 finite-volume scaling, FV/IR/zero-mode,
+model-class/pole-saturation, and canonical-Higgs/source-overlap gates.  Do not
+use the finite-shell diagnostic as retained or proposed-retained `y_t`
+evidence.

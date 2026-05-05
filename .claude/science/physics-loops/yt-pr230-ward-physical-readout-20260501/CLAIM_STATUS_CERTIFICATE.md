@@ -3229,6 +3229,35 @@ The launch proves only that six seed-controlled production jobs are running
 under the global cap.  It does not certify completed chunks, target
 observables, pole fits, scalar-pole saturation, FV/IR control,
 source-Higgs/canonical-Higgs identity, or W/Z physical response.  No
+Polefit8x8 chunks019-024 completion:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ partial eight-mode-x8 pole-fit stream
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_postprocessor.py
+# SUMMARY: PASS=5 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=183 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=209 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=34 FAIL=0
+```
+
+The polefit8x8 support stream now has `24/63` ready L12 chunks and `384`
+saved configurations.  It remains support-only: no complete L12 target, L16/L24
+finite-volume scaling, FV/IR/zero-mode control, pole-saturation/model-class
+authority, or canonical-Higgs/source-overlap bridge is present.  No retained
+or proposed-retained wording is allowed.
+
 effective-retention or proposed-retention wording is allowed.
 
 W/Z `g2` authority firewall:

@@ -1,24 +1,24 @@
 {
   "actual_current_surface_status": "bounded-support / FH-LSZ partial eight-mode-x8 pole-fit stream",
   "chunk_summary": {
-    "available_saved_configurations": 288,
+    "available_saved_configurations": 384,
     "expected_chunks": 63,
-    "missing_chunks": 45,
-    "present_chunks": 18,
-    "ready_chunks": 18,
+    "missing_chunks": 39,
+    "present_chunks": 24,
+    "ready_chunks": 24,
     "target_saved_configurations": 1000
   },
   "combined_output_target": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunked_combined_2026-05-04.json",
   "combined_summary": {
     "available": true,
-    "chunk_count": 18,
+    "chunk_count": 24,
     "combined_output_target": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunked_combined_2026-05-04.json",
     "complete_l12_target": false,
     "mode_rows": {
       "0,0,0": {
-        "C_ss_real_weighted": 0.12234709904730992,
-        "C_ss_real_weighted_stderr": 3.5616292026506213e-05,
-        "Gamma_ss_real_proxy": 8.173467191186232,
+        "C_ss_real_weighted": 0.12236173429229472,
+        "C_ss_real_weighted_stderr": 2.987932282661992e-05,
+        "Gamma_ss_real_proxy": 8.172489592303624,
         "momentum_mode": [
           0,
           0,
@@ -27,9 +27,9 @@
         "p_hat_sq": 0.0
       },
       "1,0,0": {
-        "C_ss_real_weighted": 0.12529901427671616,
-        "C_ss_real_weighted_stderr": 3.431458113040102e-05,
-        "Gamma_ss_real_proxy": 7.980908754729335,
+        "C_ss_real_weighted": 0.1253076533525403,
+        "C_ss_real_weighted_stderr": 2.9166228876433568e-05,
+        "Gamma_ss_real_proxy": 7.980358527556191,
         "momentum_mode": [
           1,
           0,
@@ -38,9 +38,9 @@
         "p_hat_sq": 0.26794919243112264
       },
       "1,1,0": {
-        "C_ss_real_weighted": 0.12829998567117484,
-        "C_ss_real_weighted_stderr": 3.339302330489654e-05,
-        "Gamma_ss_real_proxy": 7.794233138598627,
+        "C_ss_real_weighted": 0.12829179852750938,
+        "C_ss_real_weighted_stderr": 2.8257993938112537e-05,
+        "Gamma_ss_real_proxy": 7.794730539891619,
         "momentum_mode": [
           1,
           1,
@@ -49,9 +49,9 @@
         "p_hat_sq": 0.5358983848622453
       },
       "1,1,1": {
-        "C_ss_real_weighted": 0.13132075459875409,
-        "C_ss_real_weighted_stderr": 3.059760909377056e-05,
-        "Gamma_ss_real_proxy": 7.614942535591306,
+        "C_ss_real_weighted": 0.13131644399544967,
+        "C_ss_real_weighted_stderr": 2.6604518918159593e-05,
+        "Gamma_ss_real_proxy": 7.6151925042582755,
         "momentum_mode": [
           1,
           1,
@@ -60,9 +60,9 @@
         "p_hat_sq": 0.803847577293368
       },
       "2,0,0": {
-        "C_ss_real_weighted": 0.13390356036217435,
-        "C_ss_real_weighted_stderr": 3.165722789933693e-05,
-        "Gamma_ss_real_proxy": 7.468061321859253,
+        "C_ss_real_weighted": 0.13391317520187895,
+        "C_ss_real_weighted_stderr": 2.6905441929007854e-05,
+        "Gamma_ss_real_proxy": 7.467525122098433,
         "momentum_mode": [
           2,
           0,
@@ -71,9 +71,9 @@
         "p_hat_sq": 0.9999999999999998
       },
       "2,1,0": {
-        "C_ss_real_weighted": 0.1370255333627716,
-        "C_ss_real_weighted_stderr": 3.075705185893581e-05,
-        "Gamma_ss_real_proxy": 7.297909925681702,
+        "C_ss_real_weighted": 0.13702318309941242,
+        "C_ss_real_weighted_stderr": 2.6016706208864997e-05,
+        "Gamma_ss_real_proxy": 7.2980351016549125,
         "momentum_mode": [
           2,
           1,
@@ -82,9 +82,9 @@
         "p_hat_sq": 1.2679491924311224
       },
       "2,1,1": {
-        "C_ss_real_weighted": 0.14018444306081912,
-        "C_ss_real_weighted_stderr": 2.8755810510700048e-05,
-        "Gamma_ss_real_proxy": 7.133459163982621,
+        "C_ss_real_weighted": 0.14018515882830096,
+        "C_ss_real_weighted_stderr": 2.49444980406091e-05,
+        "Gamma_ss_real_proxy": 7.133422741452979,
         "momentum_mode": [
           2,
           1,
@@ -93,9 +93,9 @@
         "p_hat_sq": 1.5358983848622452
       },
       "2,2,0": {
-        "C_ss_real_weighted": 0.14614648880204983,
-        "C_ss_real_weighted_stderr": 2.890415325530283e-05,
-        "Gamma_ss_real_proxy": 6.842449710539841,
+        "C_ss_real_weighted": 0.14613980689580147,
+        "C_ss_real_weighted_stderr": 2.467274529322724e-05,
+        "Gamma_ss_real_proxy": 6.842762565801157,
         "momentum_mode": [
           2,
           2,
@@ -104,56 +104,14 @@
         "p_hat_sq": 1.9999999999999996
       }
     },
-    "saved_configurations": 288,
+    "saved_configurations": 384,
     "source_response": {
-      "mean": 1.2459077261334814,
-      "stderr": 0.06117241631664582
+      "mean": 1.2460334577721777,
+      "stderr": 0.05923805433339578
     }
   },
   "fail_count": 0,
   "first_blocking_issues": [
-    {
-      "chunk_index": 19,
-      "issues": [
-        "chunk output absent"
-      ],
-      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk019_2026-05-04.json"
-    },
-    {
-      "chunk_index": 20,
-      "issues": [
-        "chunk output absent"
-      ],
-      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk020_2026-05-04.json"
-    },
-    {
-      "chunk_index": 21,
-      "issues": [
-        "chunk output absent"
-      ],
-      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk021_2026-05-04.json"
-    },
-    {
-      "chunk_index": 22,
-      "issues": [
-        "chunk output absent"
-      ],
-      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk022_2026-05-04.json"
-    },
-    {
-      "chunk_index": 23,
-      "issues": [
-        "chunk output absent"
-      ],
-      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk023_2026-05-04.json"
-    },
-    {
-      "chunk_index": 24,
-      "issues": [
-        "chunk output absent"
-      ],
-      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk024_2026-05-04.json"
-    },
     {
       "chunk_index": 25,
       "issues": [
@@ -181,19 +139,61 @@
         "chunk output absent"
       ],
       "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk028_2026-05-04.json"
+    },
+    {
+      "chunk_index": 29,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk029_2026-05-04.json"
+    },
+    {
+      "chunk_index": 30,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk030_2026-05-04.json"
+    },
+    {
+      "chunk_index": 31,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk031_2026-05-04.json"
+    },
+    {
+      "chunk_index": 32,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk032_2026-05-04.json"
+    },
+    {
+      "chunk_index": 33,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk033_2026-05-04.json"
+    },
+    {
+      "chunk_index": 34,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk034_2026-05-04.json"
     }
   ],
   "first_missing_outputs": [
-    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk019_2026-05-04.json",
-    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk020_2026-05-04.json",
-    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk021_2026-05-04.json",
-    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk022_2026-05-04.json",
-    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk023_2026-05-04.json",
-    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk024_2026-05-04.json",
     "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk025_2026-05-04.json",
     "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk026_2026-05-04.json",
     "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk027_2026-05-04.json",
-    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk028_2026-05-04.json"
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk028_2026-05-04.json",
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk029_2026-05-04.json",
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk030_2026-05-04.json",
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk031_2026-05-04.json",
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk032_2026-05-04.json",
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk033_2026-05-04.json",
+    "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk034_2026-05-04.json"
   ],
   "manifest": "outputs/yt_fh_lsz_polefit8x8_chunk_manifest_2026-05-04.json",
   "pass_count": 6,
@@ -205,5 +205,5 @@
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
     "does not mix eight-mode/x8 and four-mode/x16 chunks as one homogeneous ensemble"
   ],
-  "verdict": "The separate eight-mode/x8 pole-fit stream has an auditable combiner gate.  Present chunks=18, ready chunks=18, expected chunks=63.  The combiner writes a diagnostic L12 same-source scalar-LSZ support summary when ready chunks exist, but that summary is not physical y_t evidence and cannot be mixed with the four-mode/x16 L12 stream."
+  "verdict": "The separate eight-mode/x8 pole-fit stream has an auditable combiner gate.  Present chunks=24, ready chunks=24, expected chunks=63.  The combiner writes a diagnostic L12 same-source scalar-LSZ support summary when ready chunks exist, but that summary is not physical y_t evidence and cannot be mixed with the four-mode/x16 L12 stream."
 }

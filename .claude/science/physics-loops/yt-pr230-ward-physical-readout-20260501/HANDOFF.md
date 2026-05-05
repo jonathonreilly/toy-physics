@@ -1,5 +1,30 @@
 # Handoff
 
+Latest checkpoint, 2026-05-05 polefit8x8 chunks019-024 completion:
+
+- Packaged completed homogeneous eight-mode/x8 chunks019-024 with fixed seeds
+  2026051919-2026051924 and isolated production output directories.
+- Added
+  `docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS019_024_CHECKPOINT_NOTE_2026-05-05.md`.
+- Reran the polefit8x8 combiner and postprocessor.  The stream now has
+  `24/63` ready chunks, `384/1008` saved configurations, eight mode rows,
+  seven positive shells, and a finite-shell diagnostic fit.
+- Verification: combiner `PASS=6 FAIL=0`; postprocessor `PASS=5 FAIL=0`;
+  retained-route `PASS=183 FAIL=0`; campaign status `PASS=209 FAIL=0`;
+  full positive assembly gate `PASS=34 FAIL=0`.
+- Claim boundary: finite-shell polefit8x8 diagnostics are support only.  The
+  current surface still lacks complete L12 statistics, L16/L24 scaling,
+  FV/IR/zero-mode control, pole-saturation/model-class authority, and
+  canonical-Higgs/source-overlap closure.  No retained or proposed-retained
+  closure is authorized.
+
+Next exact action: before launching chunks025-030 or any other FH/LSZ workers,
+rerun the global production collision guard.  If capacity is available, use
+the polefit8x8 orchestrator from the repo cwd with fixed seeds; otherwise
+continue a non-chunk closure route such as real `O_H/C_sH/C_HH` rows, W/Z
+response rows with strict `g2` and identity certificates, Schur `A/B/C` rows,
+or a rank-one neutral-scalar theorem.
+
 Latest checkpoint, 2026-05-04 polefit8x8 chunks013-018 completion:
 
 - Packaged completed homogeneous eight-mode/x8 chunks013-018 with fixed seeds
