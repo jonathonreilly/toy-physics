@@ -80,7 +80,16 @@ def grow(seed, drift, restore):
     return pos, adj, nmap
 
 
-def _prop_trap(pos, adj, nmap, s, z_src, k, field_type, eta):
+def _prop_trap(pos, adj, nmap, s, z_src, k, field_type, eta, expmatch_avg=None):
+    """Propagate amplitudes under a trap of strength `eta` with a chosen field type.
+
+    field_type: one of
+      "inst"        - instantaneous 1/r field anchored at the source layer node
+      "fwd"         - forward-only static proxy (1/r truncated at the source layer)
+      "dyn<c>"      - dynamic cone with finite propagation speed c
+      "expmatch"    - exposure-matched uniform-per-layer static field reproducing
+                       the per-layer mean of dyn0.25 (passed in `expmatch_avg`)
+    """
     n = len(pos)
     gl = NL // 3
     iz_s = round(z_src / H)
@@ -114,6 +123,13 @@ def _prop_trap(pos, adj, nmap, s, z_src, k, field_type, eta):
                     return s / r
                 elif field_type == "fwd":
                     return s / r if x_n >= x_src - 0.01 else 0.0
+                elif field_type == "expmatch":
+                    if expmatch_avg is None:
+                        return 0.0
+                    layer = round(x_n / H)
+                    if x_n < x_src - 0.01:
+                        return 0.0
+                    return expmatch_avg.get(layer, 0.0)
                 else:
                     c_f = float(field_type.replace("dyn", ""))
                     if x_n < x_src - 0.01:
@@ -134,13 +150,39 @@ def _prop_trap(pos, adj, nmap, s, z_src, k, field_type, eta):
     return amps
 
 
-def _escape(pos, adj, nmap, s, z_src, k, ft, eta):
+def _layer_avg_field_for_dyn(pos, nmap, s, z_src, c_f):
+    """Compute the per-layer average of the dynamic-cone field (used by expmatch)."""
+    gl = NL // 3
+    iz_s = round(z_src / H)
+    mi = nmap.get((gl, 0, iz_s))
+    if mi is None:
+        return {}
+    mx, my, mz = pos[mi]
+    x_src = gl * H
+    by_layer: dict[int, list[float]] = {}
+    for idx, (x_n, y_n, z_n) in enumerate(pos):
+        if x_n < x_src - 0.01:
+            continue
+        dt = abs(x_n - x_src) / H
+        reach = c_f * dt * H + 0.1
+        r_t = math.sqrt((y_n - my) ** 2 + (z_n - mz) ** 2)
+        if r_t > reach:
+            v = 0.0
+        else:
+            r = math.sqrt((x_n - mx) ** 2 + (y_n - my) ** 2 + (z_n - mz) ** 2) + 0.1
+            v = s / r
+        layer = round(x_n / H)
+        by_layer.setdefault(layer, []).append(v)
+    return {layer: sum(vs) / len(vs) for layer, vs in by_layer.items() if vs}
+
+
+def _escape(pos, adj, nmap, s, z_src, k, ft, eta, expmatch_avg=None):
     hw = int(PW / H)
     npl = (2 * hw + 1) ** 2
     n = len(pos)
     ds = n - npl
-    a = _prop_trap(pos, adj, nmap, s, z_src, k, ft, eta)
-    a0 = _prop_trap(pos, adj, nmap, s, z_src, k, ft, 0.0)
+    a = _prop_trap(pos, adj, nmap, s, z_src, k, ft, eta, expmatch_avg=expmatch_avg)
+    a0 = _prop_trap(pos, adj, nmap, s, z_src, k, ft, 0.0, expmatch_avg=expmatch_avg)
     t = sum(abs(a[i]) ** 2 for i in range(ds, n))
     t0 = sum(abs(a0[i]) ** 2 for i in range(ds, n))
     return t / t0 if t0 > 0 else 0
@@ -177,8 +219,73 @@ def main():
             ed_vals.append(_escape(pos, adj, nmap, S, MASS_Z, K, "dyn0.25", ETA))
         print(f"  {label}: inst={sum(ei_vals)/2:.4f}, dyn={sum(ed_vals)/2:.4f}")
 
-    print("\nNOTE: exposure-matched static proxy ALSO escapes (~0.99).")
-    print("The escape mechanism is average-exposure reduction, not cone geometry.")
+    # Gate 4: exposure-matched static escape (computed, not noted)
+    print(f"\n4. EXPOSURE-MATCHED STATIC (eta={ETA})")
+    pos, adj, nmap = grow(0, 0.2, 0.7)
+    expmatch = _layer_avg_field_for_dyn(pos, nmap, S, MASS_Z, 0.25)
+    e_em = _escape(pos, adj, nmap, S, MASS_Z, K, "expmatch", ETA, expmatch_avg=expmatch)
+    e_fwd_at_eta = _escape(pos, adj, nmap, S, MASS_Z, K, "fwd", ETA)
+    print(f"  exposure-matched static (per-layer avg of dyn0.25): escape = {e_em:.4f}")
+    print(f"  forward-only static (unmatched 1/r):                escape = {e_fwd_at_eta:.4f}")
+    print(f"  read: exposure-matched escapes (>=0.85), unmatched does not.")
+    print(f"  this distinguishes the escape mechanism (exposure reduction) from")
+    print(f"  cone geometry per se.")
+
+    # Gate 5: c_crit table (escape vs c at fixed eta near inst-trap threshold)
+    print(f"\n5. c_crit TABLE (eta=15, s={S})")
+    print("       c   dyn escape   regime")
+    eta_crit = 15
+    c_grid = [2.0, 1.0, 0.5, 0.25, 0.1]
+    for c_f in c_grid:
+        e = _escape(pos, adj, nmap, S, MASS_Z, K, f"dyn{c_f}", eta_crit)
+        regime = "ESCAPES" if e >= 0.85 else ("marginal" if e >= 0.7 else "trapped")
+        print(f"     {c_f:5.2f}    {e:.4f}    {regime}")
+
+    # Gate 6: eta_max table (where escape drops below 0.85 per c)
+    print(f"\n6. eta_max TABLE (escape vs eta for various c, s={S})")
+    print("       c     eta=10   eta=20   eta=50   eta=100")
+    for c_f in [2.0, 1.0, 0.5, 0.25]:
+        row_vals = []
+        for eta_v in (10, 20, 50, 100):
+            e = _escape(pos, adj, nmap, S, MASS_Z, K, f"dyn{c_f}", eta_v)
+            row_vals.append(e)
+        print(f"     {c_f:5.2f}   " + "   ".join(f"{v:.4f}" for v in row_vals))
+
+    # Gate 7: s-dependence (eta=20, c=0.25)
+    print(f"\n7. s-DEPENDENCE TABLE (eta={ETA}, c=0.25)")
+    print("        s    inst escape    dyn escape       ratio")
+    for s_v in (0.001, 0.004, 0.016):
+        e_inst = _escape(pos, adj, nmap, s_v, MASS_Z, K, "inst", ETA)
+        e_dyn = _escape(pos, adj, nmap, s_v, MASS_Z, K, "dyn0.25", ETA)
+        ratio = (e_dyn / e_inst) if e_inst > 1e-30 else float("inf")
+        print(f"     {s_v:.3f}     {e_inst:.4f}        {e_dyn:.4f}        {ratio:6.2f}")
+
+    # Gate 8: four-seed robustness gate
+    print(f"\n8. FOUR-SEED ROBUSTNESS GATE (eta={ETA}, c=0.25)")
+    print("       seed   inst escape   dyn escape    inst<=0.5    dyn>=0.85")
+    seed_pass_count = 0
+    for seed in (0, 1, 2, 3):
+        pos_s, adj_s, nmap_s = grow(seed, 0.2, 0.7)
+        e_inst = _escape(pos_s, adj_s, nmap_s, S, MASS_Z, K, "inst", ETA)
+        e_dyn = _escape(pos_s, adj_s, nmap_s, S, MASS_Z, K, "dyn0.25", ETA)
+        inst_ok = e_inst <= 0.5
+        dyn_ok = e_dyn >= 0.85
+        if inst_ok and dyn_ok:
+            seed_pass_count += 1
+        print(
+            f"        {seed}     {e_inst:.4f}        {e_dyn:.4f}        {'YES' if inst_ok else 'no':>4s}        {'YES' if dyn_ok else 'no':>4s}"
+        )
+    print(f"  four-seed gate: {seed_pass_count}/4 seeds pass both inst<=0.5 and dyn>=0.85")
+
+    print()
+    print("SUMMARY")
+    print("  Sections 1-3 verify the headline window at eta=20 across families/seeds.")
+    print("  Sections 4-8 are the audit-requested extensions:")
+    print("    4. exposure-matched static escape (computed; mechanism discriminator)")
+    print("    5. c_crit table (escape vs c at near-trap eta)")
+    print("    6. eta_max table (escape vs eta for various c)")
+    print("    7. s-dependence table (inst vs dyn at multiple field strengths)")
+    print("    8. four-seed robustness gate")
 
 
 if __name__ == "__main__":

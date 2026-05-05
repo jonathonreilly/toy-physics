@@ -6,7 +6,7 @@
     "medium": 0
   },
   "by_criticality_runner_drift": {
-    "critical": 0,
+    "critical": 1,
     "high": 0,
     "leaf": 0,
     "medium": 0
@@ -32,7 +32,32 @@
     "retained_bounded",
     "retained_no_go"
   ],
-  "runner_drift_candidates": [],
+  "runner_drift_candidates": [
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "audited_conditional",
+      "candidate_reason": "runner_artifact_repaired_since_audit",
+      "claim_id": "causal_escape_window_note",
+      "claim_scope": "Audited only the runner-backed finite-window diagnostic at eta=20, s=0.004, including eta=0 null, instantaneous/fwd/dynamic escape values, and three-family portability as printed by scripts/causal_escape_window.py.",
+      "claim_type": "bounded_theorem",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "current_dep_effective_status": {},
+      "current_runner_hash": "90a437aae43f3f032ffd78c55316543da7344d22b94e84c7e45608417bf47c66",
+      "deps": [],
+      "direct_in_degree": 1,
+      "effective_status": "audited_conditional",
+      "generated_order": 1,
+      "improved_dependencies": [],
+      "load_bearing_score": 8.776,
+      "note_hash": "9e22a9134a48246a2df0f06162aef738ae23699218d40773b0c7858ea9c45897",
+      "note_path": "docs/CAUSAL_ESCAPE_WINDOW_NOTE.md",
+      "reraudit_after_claim_ids": [],
+      "runner_path": "scripts/causal_escape_window.py",
+      "snap_runner_hash": "3744a986af9154aeef92f734c123062b2f9e385410d8167d22e5637683cecca7",
+      "transitive_descendants": 309
+    }
+  ],
   "total_candidates": 0,
-  "total_runner_drift_candidates": 0
+  "total_runner_drift_candidates": 1
 }
