@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 871 |
-| audit_in_progress | 23 |
+| audit_in_progress | 22 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
-| ~~audited_conditional~~ | 390 |
+| ~~audited_conditional~~ | 391 |
 | ~~audited_failed~~ | 15 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 23 |
+| `audit_in_progress` | 22 |
 | `audited_clean` | 337 |
-| `audited_conditional` | 390 |
+| `audited_conditional` | 391 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
@@ -122,7 +122,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `lattice_complementarity_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `lorentz_violation_derived_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `pmns_transfer_operator_dominant_mode_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `s3_boundary_link_theorem_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `tensor_block_closure_test_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -774,6 +773,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_c3_nontrivial_current_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_graph_first_axis_alignment_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_graph_first_cycle_frame_support_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
+| `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | A | - |
 | `pmns_lower_level_end_to_end_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `pmns_oriented_cycle_reduced_channel_nonselection_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -8912,6 +8912,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Once one axis is selected, the graph-first SU(3) integration on that axis canonically fixes the selected-axis fiber/base split and residual swap, and the diagonal projectors transported by the canonical forward cycle give the ordered frame E12, E23, E31.  _(class `E`)_
 - **chain closes:** False — The runner hard-codes the forward cycle matrix and matrix units, and imports the selector and SU(3) basis machinery from unavailable modules. The missing step is a derivation inside the packet that graph-first SU(3) integration uniquely produces this cycle/frame rather than defining or assuming it.
 - **rationale:** The algebraic checks E11 C = E12, E22 C = E23, E33 C = E31 are valid once C and the matrix units are already fixed, but the canonical graph-first origin of C and the selected-axis SU(3) integration are not derived in the restricted packet. The runner also relies on imported modules not provided, so the claimed selector minima and graph-basis construction cannot be audited as first-principles compute here. This makes the result conditional on missing graph-first selector/integration definitions and bridge theorems, not a closed positive theorem from the supplied inputs.
+- **auditor confidence:** high
+
+### `pmns_hw1_source_transfer_boundary_note`
+
+- **Note:** [`PMNS_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md`](../../docs/PMNS_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Boundary assertion that supplied hw=1 source/transfer observables determine the retained PMNS pair and downstream Hermitian data, while transfer-only summaries and the sole Cl(3) on Z^3 axiom do not determine the pack.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-judicial-third-pmns-hw1-source-transfer-boundary-20260505`  (codex-gpt-5; independence=judicial_review)
+- **load-bearing step:** If the hw=1 source/transfer pack is supplied, the retained PMNS lane closes exactly.  _(class `A`)_
+- **chain closes:** False — The local response-column inversion and transfer-only ambiguity checks close as finite algebraic fixtures, but the retained-PMNS closure step is imported through an uncited helper bridge and Part 4 compares the closure against the same closure call. The restricted packet does not supply an independent theorem or certificate for the pack-to-retained-PMNS map.
+- **rationale:** Issue: The positive retained-lane claim imports the bridge from supplied active/passive source-response columns to the retained PMNS pair and downstream Hermitian data without a cited retained theorem, and the runner's Part 4 self-compares two calls to close_from_lower_level_observables on the same columns. Why this blocks: Under hostile review, that is evidence that the helper is internally consistent on the fixture, not that the retained observables follow from the supplied pack within the restricted claim chain. Repair target: Add or cite a retained bridge theorem deriving the active/passive response-column pack to D_0^trip, D_-^trip, H_nu, H_e, and PMNS data, and revise the runner to compare against an independent proof certificate or construct that bridge step-by-step. Claim boundary until fixed: The note may claim finite algebraic fixture evidence for transfer seed/branch recovery, active/passive response-column inversion, q/a_i recovery, circularity guard, and transfer-only ambiguity, but not retained PMNS lane closure from the supplied pack.
 - **auditor confidence:** high
 
 ### `pmns_lower_level_end_to_end_closure_note`
