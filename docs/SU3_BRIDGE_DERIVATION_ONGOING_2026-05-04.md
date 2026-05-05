@@ -391,6 +391,81 @@ The framework's exact L_s=2 Wilson plaquette is **0.4225** (via V-invariant Schu
 
 The remaining open derivation pathway is the framework's **explicit Perron state at β=6 of the source-sector transfer operator** `T_src(6) = exp(3J) D_6^loc C_(Z_6^env) exp(3J)` on the V-invariant minimal block — explicitly named "open" by the framework's own bridge-support note. This is structurally a different problem than Schur cube enumeration; it's the spectral-measure problem of the SU(3) character recurrence operator J in the unknown β=6 transfer state.
 
+## 12. PATH A RESULT: downstream α_s(M_Z) test resolves the target question
+
+User-prompted (2026-05-04): "yes path A now to start, then b later"
+"and remember - multi-month isnt a thing here, we move much much faster"
+
+Test: feed both P values through framework's chain (`α_bare/u_0²` → α_s(v=246.28 GeV))
+and run via framework's standard SM 2-loop RGE bridge to M_Z, compare to PDG.
+
+Script: `scripts/frontier_su3_alpha_s_path_a_test_2026_05_04.py`
+
+**Framework-native primitives**: α_bare = 1/(4π), u_0 = ⟨P⟩^(1/4),
+α_LM = α_bare/u_0, α_s(v) = α_bare/u_0², v = 246.28 GeV (framework EW).
+
+**Imported infrastructure** (per framework's own bounded scope in
+[QCD_LOW_ENERGY_RUNNING_BRIDGE_NOTE_2026-05-01.md](docs/QCD_LOW_ENERGY_RUNNING_BRIDGE_NOTE_2026-05-01.md)):
+2-loop SM RGE coefficients (Machacek-Vaughn 1984), PDG quark thresholds,
+PDG-fit boundary values for g_1, g_2, y_t, λ at v.
+
+### 12.1 Results
+
+| Quantity | P=0.5934 (MC anchor) | P=0.4225 (V-inv Schur) | PDG |
+|---|---:|---:|---:|
+| u_0 = P^(1/4) | 0.8777 | 0.8062 | — |
+| α_LM = α_bare/u_0 | 0.0907 | 0.0987 | — |
+| α_s(v=246 GeV) | 0.1033 | 0.1224 | — |
+| **α_s(M_Z=91.19 GeV)** | **0.1181** | **0.1439** | **0.1180 ± 0.0009** |
+| Deviation from PDG | +0.0001 (+0.1σ) | +0.0259 (**+28.8σ**) | — |
+
+**Sensitivity scan**: P value needed for exact PDG match: **P* = 0.5940**, essentially MC's 0.5934.
+
+| P | α_s(M_Z) | Dev from PDG |
+|---:|---:|---:|
+| 0.4225 (V-inv) | 0.1439 | +21.9% |
+| 0.5000 | 0.1303 | +10.5% |
+| 0.5500 | 0.1233 | +4.5% |
+| 0.5934 (MC) | 0.1181 | +0.06% ★ |
+| 0.6500 | 0.1121 | -5.0% |
+
+### 12.2 Critical interpretation
+
+**The framework's downstream α_s(M_Z) is highly sensitive to P** (via u_0² = √P), so the test is a strong physical discriminator.
+
+**Path A SETTLES the campaign target question:**
+
+- **P ≈ 0.59 IS required for downstream physics consistency.** At P=0.4225, framework predicts α_s(M_Z) = 0.144 — a 28.8σ deviation from PDG. This is NOT a valid framework prediction.
+
+- **MC's 0.5934 is the right target after all.** The framework's chain is structurally tied to thermodynamic-limit gauge physics; downstream α_s requires P ≈ 0.59.
+
+- **The V-invariant L_s=2 APBC value 0.4225 IS a finite-volume artifact.** It's mathematically correct for that finite block, but doesn't capture the L→∞ physics that downstream observables require.
+
+- **The campaign's "derive 0.5934 natively" target is NOT misframed.** The framework genuinely needs P ≈ 0.5934 (or P*=0.594 for exact PDG match) to internally consistent. The 0.17 gap is a real open derivation problem.
+
+### 12.3 Resolution of the user's reframing question
+
+Earlier (Section 11.0): "framework has no 4D periodic lattice — maybe 0.5934 isn't the right target"
+
+**Path A answer**: even though the framework's surface differs from MC's (V-inv L_s=2 APBC vs L→∞ 4D PBC), framework's downstream α_s STILL needs P ≈ 0.59 to match PDG. So the "0.5934 target" is correct — but the **DERIVATION PATH** requires either:
+
+1. **Show V-invariance ↔ thermodynamic limit equivalence** (open framework primitive)
+2. **Compute V-invariant L_s=2 APBC with full Wigner intertwiner contraction** (not naive Schur — see Path B)
+3. **Build the L_s≥3 derivation** (treewidth-hard but not multi-month given AI cycle speeds)
+
+The framework's V-invariance hypothesis remains the load-bearing piece. Path A confirms it MUST hold (or else downstream physics fails); Path B will test whether the FULL contraction (not naive Schur) on V-invariant L_s=2 APBC actually gives ≈ 0.5934.
+
+### 12.4 Implication: naive Schur 0.4225 is likely an under-counting
+
+Given the strong physics requirement P ≈ 0.59, the most likely explanation is that the **naive Schur formula** `(c/c_00)^6 × d^(N_comp-N_links)` undercounts by missing higher-Wigner-intertwiner contributions even at link-incidence=2.
+
+- Naive Schur uses single-character per plaquette identification at each link via δ_ab
+- But the V-invariant cube has CLOSED-LOOP topology (sphere) where MULTI-IRREP contributions are possible
+- Each plaquette can contribute via MULTIPLE irreps simultaneously, with the closed-loop topology providing fusion-channel constraints
+- Full Wigner intertwiner contraction across the cube surface gives the COMPLETE answer
+
+This is exactly what the framework's [SU3_TENSOR_NETWORK_ENGINE_ROADMAP_NOTE_2026-05-03.md](docs/SU3_TENSOR_NETWORK_ENGINE_ROADMAP_NOTE_2026-05-03.md) targets, but the 5-PR plan timeline is irrelevant given AI development speed — Path B is the immediate next step.
+
 ## 11.0 CRITICAL CLARIFICATION: framework has NO 4D periodic lattice
 
 User-prompted realization (2026-05-04): "we don't have a 4D periodic lattice do we?"
