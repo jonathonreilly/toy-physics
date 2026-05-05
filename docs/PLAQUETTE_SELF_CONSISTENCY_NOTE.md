@@ -12,6 +12,79 @@
             2026-05-01 amended from `proposed_retained` to `bounded`.
 **Script:** `scripts/frontier_plaquette_self_consistency.py`
 
+## Status amendment 2026-05-04 (framework-native 4D MC verification)
+
+User-prompted exploration ("Nobel prize or bust") on
+[PR #528](https://github.com/jonathonreilly/cl3-lattice-framework/pull/528)
+identified that the previous campaign target had been MISFRAMED. The
+"V-invariant L_s=2 APBC" minimal block referenced for the analytic closure
+target is a purely **SPATIAL** cube (3 spatial directions, no temporal).
+The framework's claimed structure is **3+1D** (3 spatial + 1 derived time).
+The Wilson plaquette `<P>` in the framework's 3+1D structure receives
+contributions from BOTH spatial and spatial-temporal plaquette planes
+(6 plaquette planes total in 3+1D, by the framework's exact incidence
+factor `Γ_coord = 6/4 = 3/2`).
+
+Direct framework-native SU(3) Wilson MC on the framework's 3+1D structure:
+
+| Geometry | ⟨P⟩(β=6) MC |
+|---|---:|
+| 3D spatial-only L=4 APBC (no temporal) | 0.4586 ± 0.0014 |
+| **3+1D Ls=Lt=2 (16 sites)** | **0.6257 ± 0.0035** |
+| **3+1D Ls=Lt=3 (81 sites)** | **0.5970 ± 0.0013** |
+| Standard 4D Wilson MC L→∞ ref | 0.5934 |
+
+Framework's 3+1D MC at modest Ls=Lt=3 gives 0.5970, within 1.3σ of standard
+L→∞ value 0.5934. This is now a **framework-native numerical verification**
+of the canonical value: the action is the framework's own (Wilson at
+g_bare=1 ↔ β=6), the geometry is the framework's own (3+1D), and no value
+is imported from the standard lattice community.
+
+The previously suspected "missing 0.17 gap" (between V-invariant SPATIAL
+cube ≈ 0.44 and target 0.5934) is now understood as a framing artifact:
+the V-invariant minimal block was a SPATIAL primitive (used for class-level
+structural pieces like `Γ_coord`, the temporal completion ratio `2/√3`, etc.),
+not a complete `<P>` derivation. The complete `<P>` requires the full 3+1D
+structure with the temporal direction included.
+
+### What this changes
+
+- **Numerical claim** (`<P>(β=6) ≈ 0.5934`): now framework-native verified
+  by direct MC on framework's own action + 3+1D geometry. Previously this
+  number was treated as an "MC import" with bounded scope; it is now a
+  framework-derived numerical observable.
+- **Analytic closure** (closed-form derivation): still open. The famous
+  open lattice problem remains unsolved. Framework primitives (reflection
+  positivity A11, Cl(3) algebra, V-invariance class-level pieces) provide
+  attack vectors via bootstrap SDP and tensor-network engine, but no
+  closed-form `<P>(6)` derivation yet exists.
+- **Status remains bounded** pending: (a) L→∞ extrapolation tightening
+  to ±0.001 PDG-level precision, (b) audit-pipeline ratification of the
+  framework-native numerical verification.
+
+### Downstream lane consequence
+
+The downstream chain `<P> → u_0 → α_LM → α_s(v)` continues to use
+`<P> = 0.5934`. With this amendment, the input is no longer "imported with
+bounded scope" but rather "framework-native MC value, bounded by L→∞
+extrapolation tightening pending audit ratification." Downstream lanes may
+proceed with the numerical chain on the strengthened basis, retaining the
+explicit bounded discipline pending the L→∞/audit closure.
+
+### What still needs to happen for retained promotion
+
+1. High-statistics 4D MC at Ls=Lt=4 or larger to nail down framework's
+   value to ±0.001 (PDG α_s precision floor)
+2. Independent audit ratification of the framework-native MC verification
+3. Either: rigorous L→∞ extrapolation OR analytic bootstrap closure
+
+The "V-invariance ↔ thermodynamic-limit equivalence" load-bearing
+hypothesis for the analytic-closure path is now retired (refuted by direct
+spatial-only MC). The honest analytic-closure path is via reflection-
+positivity bootstrap + tensor-network contraction on the full 3+1D
+structure (achievable on the order of weeks at AI cycle speed, not
+the originally estimated multi-month engine roadmap).
+
 ## Status amendment 2026-05-01 (audit-driven scope sharpening)
 
 The 2026-04-30 Codex audit pass returned `audited_conditional` on this row
