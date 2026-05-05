@@ -1,5 +1,40 @@
 # Handoff
 
+Latest checkpoint, 2026-05-05 polefit8x8 chunks037-042 completion:
+
+- Packaged completed homogeneous eight-mode/x8 chunks037-042 with fixed seeds
+  `2026051937`-`2026051942` and isolated production output directories.
+- Added
+  `docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS037_042_CHECKPOINT_NOTE_2026-05-05.md`.
+- Reran the polefit8x8 combiner and postprocessor.  The stream now has
+  `42/63` ready chunks, `672/1008` saved configurations, eight mode rows, and
+  seven positive shells.
+- Because the combined rows changed, reran the scalar-LSZ shortcut
+  diagnostics.  The raw `C_ss` proxy still fails Stieltjes monotonicity
+  (`min_z=90.213`); finite-row contact-subtraction restoration remains
+  non-identifying (`spread_z_at_max_q=3153.018`); affine contact still fails
+  higher complete-monotonicity; arbitrary polynomial contact interpolation
+  remains non-identifying.
+- Verification: combiner `PASS=6 FAIL=0`; postprocessor `PASS=5 FAIL=0`;
+  Stieltjes proxy diagnostic `PASS=9 FAIL=0`; contact-subtraction boundary
+  `PASS=10 FAIL=0`; affine-contact no-go `PASS=11 FAIL=0`;
+  polynomial-contact no-go `PASS=11 FAIL=0`; full assembly `PASS=44 FAIL=0`;
+  retained-route `PASS=192 FAIL=0`; campaign status `PASS=219 FAIL=0`;
+  non-chunk worklist `PASS=26 FAIL=0`; global collision guard
+  `PASS=8 FAIL=0` with active workers `0`.
+- Claim boundary: finite-shell polefit8x8 diagnostics are support only.  The
+  current surface still lacks complete L12 statistics, L16/L24 scaling,
+  FV/IR/zero-mode control, pole-saturation/model-class authority,
+  same-surface scalar contact/denominator authority, and
+  canonical-Higgs/source-overlap closure.  No retained or proposed-retained
+  closure is authorized.
+
+Next exact action: if capacity remains open, launch the next homogeneous
+polefit8x8 wave; otherwise pivot to certified `O_H/C_sH/C_HH` pole rows,
+same-source W/Z response rows with identity certificates, genuine Schur
+`A/B/C` rows, a rank-one neutral-scalar theorem, or a same-surface scalar
+contact/denominator theorem.
+
 Latest checkpoint, 2026-05-05 polefit8x8 chunks037-042 launch:
 
 - After chunks031-036 were packaged and pushed, refreshed the workspace lock

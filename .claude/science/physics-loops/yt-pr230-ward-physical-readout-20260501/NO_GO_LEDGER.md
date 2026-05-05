@@ -1,5 +1,25 @@
 # No-Go Ledger
 
+## FH/LSZ polefit8x8 chunks037-042 completion is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py
+# SUMMARY: PASS=6 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_postprocessor.py
+# SUMMARY: PASS=5 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=192 FAIL=0
+```
+
+The separate eight-mode/x8 polefit stream now has `42/63` ready chunks and
+`672/1008` saved configurations.  The finite-shell diagnostic fit does not
+identify the scalar pole residue, contact-subtracted Stieltjes object, or
+canonical-Higgs overlap.  Do not treat these chunks, the combined same-source
+`C_ss` rows, the diagnostic `Gamma_ss(p_hat^2)` fit, or the source-response
+average as retained closure or `proposed_retained` evidence.
+
 ## FH/LSZ polefit8x8 chunks037-042 active launch is not closure
 
 Runners:
