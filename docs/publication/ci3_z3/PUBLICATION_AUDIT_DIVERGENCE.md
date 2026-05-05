@@ -19,14 +19,14 @@ publication tables phrase it.
 |---|---|---:|
 | critical | `unaudited` | 367 |
 | critical | `audited_conditional` | 134 |
-| critical | `audit_in_progress` | 46 |
+| critical | `audit_in_progress` | 45 |
 | critical | `audited_renaming` | 19 |
 | critical | `audited_numerical_match` | 11 |
 | critical | `audited_failed` | 9 |
 | critical | `open_gate` | 1 |
 | critical | `retained_pending_chain` | 1 |
 
-**Total non-retained-grade rows in publication tables:** 588
+**Total non-retained-grade rows in publication tables:** 587
 
 ## Per-row breakdown
 
@@ -534,7 +534,6 @@ publication tables phrase it.
 | critical | `translation_covariance_local_op_theorem_note_2026-05-02` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `u1_fermion_number_conservation_theorem_note_2026-05-02` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `unified_matter_content_ewsb_harness_theorem_note_2026-05-03` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
-| critical | `unit_singlet_overlap_narrow_theorem_note_2026-05-02` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md |
 | critical | `universal_gr_a1_invariant_section_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `universal_gr_block_constraint_interpretation_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `universal_gr_casimir_block_localization_note` | `audited_renaming` | `audited_renaming` | DERIVATION_ATLAS.md |

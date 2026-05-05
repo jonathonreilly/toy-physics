@@ -18,13 +18,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 43 |
+| **retained** | 44 |
 | **retained_no_go** | 100 |
 | **retained_bounded** | 192 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 16 |
 | unaudited | 880 |
-| audit_in_progress | 53 |
+| audit_in_progress | 52 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 53 |
-| `audited_clean` | 307 |
+| `audit_in_progress` | 52 |
+| `audited_clean` | 308 |
 | `audited_conditional` | 381 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -156,7 +156,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `tensor_block_closure_test_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `tensor_support_center_excess_law_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `three_generation_observable_count_corollary_note_2026-05-03` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `unit_singlet_overlap_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `wave_equation_gravity_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `wave_equation_self_field_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `wave_radiation_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -443,6 +442,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `two_field_retarded_family_closure_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `two_field_retarded_probe_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `two_sign_comparison_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
+| `unit_singlet_overlap_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_block_normalization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_canonical_projector_connection_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_complement_canonical_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -11141,6 +11141,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the active support note depends on printed signed-source rows from an archived failed wrapper and has no registered runner or log for a signed-source-only recomputation. Why this blocks: a hostile audit can verify that the printed archive table contains the quoted zero, neutral, antisymmetry, and doubled-source values, but cannot ratify them as current support evidence from this row alone. Repair target: attach or register the exact signed-source-only runner/log that recomputes the three seed rows, and declare the archived wrapper or extracted table as an explicit dependency. Claim boundary until fixed: safe as a salvage pointer to archived printed control observations; not safe as independently audited numerical support.
 - **open / conditional deps cited:**
   - `archive_unlanded/unified-basin-signed-source-salvage-2026-04-30/UNIFIED_BASIN_FREEZE_NOTE.md`
+- **auditor confidence:** high
+
+### `unit_singlet_overlap_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`UNIT_SINGLET_OVERLAP_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/UNIT_SINGLET_OVERLAP_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For positive integers N_iso and N_c, with H_unit explicitly defined as (1/sqrt(N_iso*N_c))*I on an orthonormal pair basis, the basis-state tree-level matrix element is 1/sqrt(N_iso*N_c) and contains no gauge-coupling parameter.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-second-unit_singlet_overlap_narrow_theorem_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Given H_unit = (1 / sqrt(N_iso * N_c)) * I on the canonical pair basis, <basis pair (alpha_0,a_0)|H_unit|basis pair (alpha_0,a_0)> = 1 / sqrt(N_iso * N_c).  _(class `A`)_
+- **chain closes:** True — The scoped claim closes as finite-dimensional algebra: the diagonal identity operator contributes one unit on a normalized basis state and the prefactor gives 1/sqrt(N_iso*N_c). Gauge-coupling independence follows within the scope because no g_bare symbol or gauge-field operator appears in the stated H_unit definition.
+- **rationale:** The note explicitly states H_unit and the canonical pair-basis normalization as hypotheses, and it does not claim to derive that normalization from a physical residue, identify (N_iso,N_c) with Standard-Model content, or force a g_bare selection. Under that narrow scope, the overlap and absence of g_bare dependence are exact algebraic consequences rather than a renaming or tuned numerical match. The cached runner exits cleanly with PASS=19/FAIL=0; eighteen checks exercise the algebraic overlap/no-g_bare content, while one parent-ledger context check is non-load-bearing and not needed for closure. Residual risk is downstream over-citation outside this narrow theorem, not failure of the audited claim itself.
 - **auditor confidence:** high
 
 ### `universal_gr_block_constraint_interpretation_note`
