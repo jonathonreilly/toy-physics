@@ -13,14 +13,17 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-227-scalar-lsz-carleman-tauberian-determinacy
-blocks_completed: 227
-active_route: "scalar-LSZ Carleman/Tauberian moment determinacy certificate"
-active_hard_residual: "Carleman/Tauberian scalar-LSZ determinacy cannot be certified from the current finite PR230 FH/LSZ rows.  Finite positive Stieltjes moment prefixes can preserve all checked moments while changing the isolated scalar pole residue, while Carleman determinacy and Tauberian threshold reconstruction require infinite or tail/asymptotic same-surface authority with contact, threshold, FV/IR, and pole-residue control.  Runner PASS=14 FAIL=0, assumption stress PASS=24 FAIL=0, full assembly PASS=80 FAIL=0, retained-route PASS=228 FAIL=0, campaign status PASS=259 FAIL=0.  This is an exact negative boundary only; no Carleman/Tauberian or infinite-moment certificate is written and no retained/proposed-retained closure is authorized."
+current_phase: campaign-block-228-neutral-offdiagonal-generator-derivation
+blocks_completed: 228
+active_route: "neutral off-diagonal generator / primitive-cone derivation certificate"
+active_hard_residual: "A neutral primitive-cone/Burnside closure would need a same-surface mixed source/orthogonal neutral generator.  The current PR230 source-only, source-Higgs, W/Z, Schur, and neutral primitive artifacts are absent, absence-guarded, or block diagonal, so the mixed generator is not derivable on the current surface.  Runner PASS=15 FAIL=0, assumption stress PASS=25 FAIL=0, full assembly PASS=81 FAIL=0, retained-route PASS=229 FAIL=0, campaign status PASS=260 FAIL=0.  This is an exact negative boundary only; no off-diagonal generator or primitive transfer certificate is written and no retained/proposed-retained closure is authorized."
 files_touched:
   - "docs/YT_PR230_SCALAR_LSZ_CARLEMAN_TAUBERIAN_DETERMINACY_ATTEMPT_NOTE_2026-05-05.md"
   - "scripts/frontier_yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt.py"
   - "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json"
+  - "docs/YT_NEUTRAL_OFFDIAGONAL_GENERATOR_DERIVATION_ATTEMPT_NOTE_2026-05-05.md"
+  - "scripts/frontier_yt_neutral_offdiagonal_generator_derivation_attempt.py"
+  - "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json"
   - "docs/YT_NEUTRAL_SCALAR_BURNSIDE_IRREDUCIBILITY_ATTEMPT_NOTE_2026-05-05.md"
   - "scripts/frontier_yt_neutral_scalar_burnside_irreducibility_attempt.py"
   - "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json"
@@ -1524,7 +1527,8 @@ claim_state_movement:
   - "packaged final polefit8x8 chunks061-063: the separate L12 eight-mode/x8 stream is complete at 63/63 chunks and 1008/1008 saved configurations; combiner PASS=6 FAIL=0, full assembly PASS=56 FAIL=0, retained-route PASS=201 FAIL=0, campaign PASS=231 FAIL=0, but Stieltjes/contact/FV/IR/model-class/canonical-Higgs gates still block retained/proposed-retained closure"
   - "attempted neutral-scalar Burnside/double-commutant irreducibility: current source-only neutral generators form a dimension-2 block-diagonal algebra with dimension-2 commutant and no primitive positive transfer power; runner PASS=17 FAIL=0, assumption stress PASS=23 FAIL=0, full assembly PASS=78 FAIL=0, retained-route PASS=226 FAIL=0, campaign PASS=258 FAIL=0"
   - "attempted Carleman/Tauberian scalar-LSZ determinacy: finite positive Stieltjes moment prefixes can keep checked moments fixed while changing the isolated pole residue, and Carleman/Tauberian authority requires infinite same-surface moment/tail/asymptotic data plus contact/threshold/FV/IR control; runner PASS=14 FAIL=0, assumption stress PASS=24 FAIL=0, full assembly PASS=80 FAIL=0, retained-route PASS=228 FAIL=0, campaign PASS=259 FAIL=0"
-actual_current_surface_status: "exact negative boundary plus open positive closure / Carleman/Tauberian scalar-LSZ determinacy blocked by finite-prefix non-uniqueness"
+  - "attempted neutral off-diagonal generator derivation: current source-only, source-Higgs, W/Z, Schur, and neutral primitive artifacts do not supply a same-surface mixed source/orthogonal neutral generator; outside-math tools remain certificate engines only; runner PASS=15 FAIL=0, assumption stress PASS=25 FAIL=0, full assembly PASS=81 FAIL=0, retained-route PASS=229 FAIL=0, campaign PASS=260 FAIL=0; no retained/proposed-retained closure was authorized"
+actual_current_surface_status: "exact negative boundary plus open positive closure / neutral off-diagonal generator not derivable from current PR230 surface"
 conditional_surface_status: "If future same-surface O_H plus production C_ss/C_sH/C_HH pole rows supply a full PSD source-Higgs moment matrix with flat-extension rank stability and pole/FV/IR authority, the GNS route can be re-evaluated. If a future same-surface neutral scalar kernel basis, source/orthogonal projector, A/B/C row definitions, contact/FV/IR conventions, and certified exact tensor/PEPS contraction are supplied, the Schur-complement route can be re-evaluated. If a future same-surface off-diagonal neutral generator or primitive transfer certificate is supplied, the Burnside/primitive-cone route can be re-evaluated. If real same-source W/Z mass-response rows with covariance, sector-overlap/canonical-Higgs identity, and strict g2 certificates are supplied, the gauge-normalized response route can be evaluated. If strict scalar-LSZ moment/threshold/FV authority from an infinite/tail-certified same-surface moment/asymptotic certificate or higher-volume FV/IR production evidence is supplied, the complete L12 polefit8x8 finite-shell stream can be re-evaluated."
 hypothetical_axiom_status: null
 admitted_observation_status: null

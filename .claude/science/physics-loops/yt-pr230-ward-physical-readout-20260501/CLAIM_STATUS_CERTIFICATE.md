@@ -3946,3 +3946,21 @@ different pole weights.  Carleman/Tauberian tools remain admissible only as a
 future same-surface infinite/tail moment or asymptotic certificate with
 contact, threshold, FV/IR, and pole-residue authority.  No effective-retention
 or proposed-retention wording is allowed.
+
+Neutral off-diagonal generator derivation attempt:
+
+```text
+actual_current_surface_status: exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_neutral_offdiagonal_generator_derivation_attempt.py
+# SUMMARY: PASS=15 FAIL=0
+```
+
+The current surface supplies no same-surface mixed source/orthogonal neutral
+generator.  Source-only FH/LSZ rows remain block diagonal, and source-Higgs,
+W/Z, and Schur rows remain absent or absence-guarded.  Burnside,
+Perron-Frobenius, Schur-commutant, GNS, and exact tensor tools remain future
+certificate engines only; no effective-retention or proposed-retention wording
+is allowed.

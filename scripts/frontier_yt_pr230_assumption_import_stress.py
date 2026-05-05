@@ -68,6 +68,9 @@ def main() -> int:
         "neutral_scalar_burnside_irreducibility_attempt": load(
             "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json"
         ),
+        "neutral_offdiagonal_generator_derivation_attempt": load(
+            "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json"
+        ),
         "scalar_lsz_carleman_tauberian_determinacy_attempt": load(
             "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json"
         ),
@@ -140,6 +143,8 @@ def main() -> int:
         "not proof selectors until O_H/C_sH/C_HH rows exist",
         "Burnside/double-commutant neutral irreducibility",
         "not proof selectors until a same-surface off-diagonal neutral generator or primitive transfer exists",
+        "Neutral off-diagonal generator derivation",
+        "not proof selectors until the mixed generator is derived on the same PR230 surface",
         "Carleman/Tauberian scalar-LSZ determinacy",
         "not proof selectors until an infinite same-surface moment/asymptotic certificate exists",
     ]
@@ -332,6 +337,20 @@ def main() -> int:
         )
         is False,
         burnside_attempt.get("actual_current_surface_status"),
+    )
+    offdiag_attempt = certificates["neutral_offdiagonal_generator_derivation_attempt"]
+    report(
+        "neutral-offdiagonal-generator-attempt-does-not-certify-primitive-cone",
+        "neutral off-diagonal generator not derivable"
+        in str(offdiag_attempt.get("actual_current_surface_status"))
+        and offdiag_attempt.get("proposal_allowed") is False
+        and offdiag_attempt.get("offdiagonal_generator_certificate_passed") is False
+        and offdiag_attempt.get("offdiagonal_generator_written") is False
+        and offdiag_attempt.get("future_file_presence", {}).get(
+            "offdiagonal_generator_certificate"
+        )
+        is False,
+        offdiag_attempt.get("actual_current_surface_status"),
     )
     carleman_attempt = certificates["scalar_lsz_carleman_tauberian_determinacy_attempt"]
     report(

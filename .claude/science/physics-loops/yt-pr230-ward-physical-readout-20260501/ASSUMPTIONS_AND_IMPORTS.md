@@ -741,6 +741,17 @@ no-orthogonal-top-coupling theorem, a same-surface `O_H/C_sH/C_HH` row, or a
 W/Z response row.  Retained/proposed-retained wording still requires a full
 rank/identity certificate on the current surface.
 
+2026-05-05 neutral off-diagonal generator derivation:
+
+Neutral off-diagonal generator derivation is an allowed outside-math route
+only if it derives a mixed source/orthogonal neutral generator on the same
+PR230 Cl(3)/Z3 surface.  Burnside, Perron-Frobenius, Schur commutants, GNS
+flat extension, exact tensor methods, and PSLQ/value recognition are not proof
+selectors until the mixed generator is derived on the same PR230 surface.  A
+synthetic primitive matrix or source-only block-diagonal witness must not be
+used as a neutral irreducibility, primitive-cone, source-Higgs, W/Z, Schur, or
+retained/proposed-retained top-Yukawa certificate.
+
 2026-05-02 FH/LSZ chunk011 target-timeseries checkpoint:
 
 Target time-series presence in one chunk is not production evidence and not a

@@ -1,0 +1,185 @@
+{
+  "actual_current_surface_status": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support if a future same-surface off-diagonal source/orthogonal neutral generator or primitive transfer certificate is supplied and passes the contract",
+  "derivation_attempts": [
+    {
+      "candidate_matrix": [
+        [
+          0.82,
+          0.0
+        ],
+        [
+          0.0,
+          0.61
+        ]
+      ],
+      "math_tool": "commutant/Burnside intake",
+      "offdiagonal_norm": 0.0,
+      "reason": "source-only rows are invariant under an orthogonal neutral completion",
+      "result": "blocked",
+      "route": "source-functional FH/LSZ rows",
+      "same_surface_artifact": "C_ss and dE_top/ds only"
+    },
+    {
+      "candidate_matrix": null,
+      "math_tool": "GNS flat extension or Gram rank",
+      "offdiagonal_norm": null,
+      "reason": "open / source-Higgs cross-correlator rows absent",
+      "result": "blocked",
+      "route": "source-Higgs O_H/C_sH/C_HH rows",
+      "same_surface_artifact": "absent"
+    },
+    {
+      "candidate_matrix": null,
+      "math_tool": "non-source rank repair / covariance row",
+      "offdiagonal_norm": null,
+      "reason": "open / same-source WZ response certificate gate not passed",
+      "result": "blocked",
+      "route": "same-source W/Z response rows",
+      "same_surface_artifact": "absent_guarded"
+    },
+    {
+      "candidate_matrix": null,
+      "math_tool": "Schur complement / exact tensor contraction",
+      "offdiagonal_norm": null,
+      "reason": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
+      "result": "blocked",
+      "route": "Schur A/B/C kernel rows",
+      "same_surface_artifact": "absent"
+    },
+    {
+      "candidate_matrix": [
+        [
+          0.82,
+          0.0
+        ],
+        [
+          0.0,
+          0.61
+        ]
+      ],
+      "math_tool": "Schur multiplicity-one",
+      "offdiagonal_norm": 0.0,
+      "reason": "exact negative boundary / invariant-ring O_H certificate attempt blocked on current PR230 surface",
+      "result": "blocked",
+      "route": "invariant-ring neutral labels",
+      "same_surface_artifact": "two-singlet completion allowed"
+    },
+    {
+      "candidate_matrix": [
+        [
+          0.62,
+          0.18
+        ],
+        [
+          0.11,
+          0.71
+        ]
+      ],
+      "math_tool": "Perron-Frobenius / primitive matrix / Burnside",
+      "offdiagonal_norm": 0.18,
+      "primitive_power": {
+        "first_positive_power": 1,
+        "positive": true
+      },
+      "reason": "would close the neutral primitive shape if derived on the PR230 surface",
+      "result": "future contract witness only",
+      "route": "future off-diagonal generator acceptance shape",
+      "same_surface_artifact": "not present",
+      "strongly_connected": true
+    }
+  ],
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "Make this route positive by deriving or measuring a same-surface off-diagonal neutral generator, then rerun primitive-cone/Burnside gates.  Otherwise prioritize O_H/C_sH/C_HH pole rows, real W/Z response rows with strict g2 and identity certificates, Schur A/B/C rows, or strict scalar-LSZ infinite/tail moment authority.",
+  "fail_count": 0,
+  "future_certificate_contract": [
+    {
+      "current_satisfied": false,
+      "id": "same_surface_origin",
+      "required": "derivation from PR230 Cl(3)/Z3 action/source functional or a production same-ensemble non-source response row"
+    },
+    {
+      "current_satisfied": false,
+      "id": "offdiagonal_source_orthogonal_entry",
+      "required": "nonzero source/orthogonal neutral coupling with sign and normalization"
+    },
+    {
+      "current_satisfied": false,
+      "id": "primitive_or_burnside_check",
+      "required": "full matrix algebra/scalar commutant or positive primitive transfer power"
+    },
+    {
+      "current_satisfied": false,
+      "id": "pole_and_overlap_authority",
+      "required": "isolated lowest neutral pole plus source and canonical-Higgs overlap authority"
+    },
+    {
+      "current_satisfied": true,
+      "id": "claim_firewall",
+      "required": "no H_unit/Ward/observed/alpha/plaquette/u0/unit-normalization selectors"
+    }
+  ],
+  "future_file_presence": {
+    "neutral_primitive_cone_certificate": false,
+    "offdiagonal_generator_certificate": false,
+    "schur_kernel_rows": false,
+    "schur_scalar_kernel_rows": false,
+    "source_higgs_measurement_rows": false,
+    "top_wz_matched_response_rows": false
+  },
+  "hypothetical_axiom_status": null,
+  "offdiagonal_generator_certificate_passed": false,
+  "offdiagonal_generator_written": false,
+  "outside_math_tools_used_as_certificate_engines": [
+    "Burnside/double-commutant",
+    "Perron-Frobenius primitive matrix",
+    "Schur multiplicity-one / commutant",
+    "GNS flat extension",
+    "exact tensor/Schur row contract"
+  ],
+  "parent_certificates": {
+    "clean_math_selector": "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json",
+    "full_positive_closure_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "gns_source_higgs_flat_extension": "outputs/yt_pr230_gns_source_higgs_flat_extension_attempt_2026-05-05.json",
+    "invariant_ring_oh_attempt": "outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json",
+    "neutral_burnside_attempt": "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
+    "neutral_primitive_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+    "neutral_primitive_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_wz_response_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+    "schur_row_absence_guard": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
+    "schur_row_contract_gate": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
+    "source_higgs_cross_correlator_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "source_higgs_harness_absence_guard": "outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json",
+    "wz_response_harness_absence_guard": "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json"
+  },
+  "parent_statuses": {
+    "clean_math_selector": "exact support / clean source-Higgs outside-math route selector; positive closure still open",
+    "full_positive_closure_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "gns_source_higgs_flat_extension": "exact negative boundary / GNS source-Higgs flat-extension attempt blocked by missing O_H/C_sH/C_HH rows",
+    "invariant_ring_oh_attempt": "exact negative boundary / invariant-ring O_H certificate attempt blocked on current PR230 surface",
+    "neutral_burnside_attempt": "exact negative boundary / Burnside neutral irreducibility attempt blocked by non-full current generator algebra",
+    "neutral_primitive_gate": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+    "neutral_primitive_stretch_no_go": "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface",
+    "retained_route": "open / retained closure not yet reached",
+    "same_source_wz_response_gate": "open / same-source WZ response certificate gate not passed",
+    "schur_row_absence_guard": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
+    "schur_row_contract_gate": "open / Schur kernel row contract gate not passed; current rows absent",
+    "source_higgs_cross_correlator_builder": "open / source-Higgs cross-correlator rows absent",
+    "source_higgs_harness_absence_guard": "bounded-support / source-Higgs harness default-off guard",
+    "wz_response_harness_absence_guard": "bounded-support / WZ response harness absence guard"
+  },
+  "pass_count": 15,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No current same-surface artifact supplies a nonzero off-diagonal neutral generator.  Existing source-only rows are block diagonal, and O_H/C_sH/C_HH, W/Z, Schur, and primitive-cone row files are absent.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not write a neutral off-diagonal generator certificate",
+    "does not treat the synthetic primitive matrix as PR230 evidence",
+    "does not promote source-only C_ss, GNS labels, Schur method names, or Burnside theorem names to physical rows",
+    "does not import H_unit, Ward authority, observed targets, alpha_LM, plaquette, u0, reduced pilots, c2=1, Z_match=1, kappa_s=1, or PSLQ selectors"
+  ]
+}

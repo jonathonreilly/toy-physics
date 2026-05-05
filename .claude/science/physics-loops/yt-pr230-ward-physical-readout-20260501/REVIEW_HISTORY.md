@@ -5529,3 +5529,24 @@ residue.  Carleman determinacy and Tauberian threshold reconstruction remain
 future scalar-LSZ tools only after infinite/tail/asymptotic same-surface
 authority exists with contact, threshold, FV/IR, and pole-residue control.  No
 effective-retention or proposed-retention wording is allowed.
+
+## 2026-05-05 - Block 205 Neutral Off-Diagonal Generator Derivation Attempt
+
+Review stance: neutral primitive-cone no-go / exact negative boundary.
+
+- Added `scripts/frontier_yt_neutral_offdiagonal_generator_derivation_attempt.py`.
+- Added `docs/YT_NEUTRAL_OFFDIAGONAL_GENERATOR_DERIVATION_ATTEMPT_NOTE_2026-05-05.md`.
+- Added `outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json`.
+- Wired the attempt into assumption stress, retained-route, campaign-status,
+  and full assembly gates.
+- Validation: runner `PASS=15 FAIL=0`, assumption stress `PASS=25 FAIL=0`,
+  full assembly `PASS=81 FAIL=0`, retained-route `PASS=229 FAIL=0`,
+  campaign status `PASS=260 FAIL=0`.
+
+Disposition: exact negative boundary.  Current source-only rows and neutral
+support artifacts are block diagonal or absence-guarded; they do not derive
+the mixed source/orthogonal neutral generator needed by Burnside,
+Perron-Frobenius primitive-cone, Schur-commutant, or GNS routes.  A future
+same-surface off-diagonal generator or primitive transfer certificate is still
+the positive intake needed for this lane.  No effective-retention or
+proposed-retention wording is allowed.

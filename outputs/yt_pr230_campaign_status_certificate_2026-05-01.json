@@ -233,6 +233,7 @@
     "mass_response": "bounded-support / reduced mass-response bracket",
     "momentum_harness": "bounded-support / momentum harness extension",
     "momentum_pilot": "bounded-support / momentum pilot scaling",
+    "neutral_offdiagonal_generator_derivation_attempt": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
     "neutral_scalar_burnside_irreducibility_attempt": "exact negative boundary / Burnside neutral irreducibility attempt blocked by non-full current generator algebra",
     "neutral_scalar_commutant_rank_no_go": "exact negative boundary / neutral scalar commutant does not force rank-one purity",
     "neutral_scalar_dynamical_rank_one_closure": "exact negative boundary / dynamical rank-one neutral scalar theorem not derived",
@@ -373,7 +374,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 259,
+  "pass_count": 260,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

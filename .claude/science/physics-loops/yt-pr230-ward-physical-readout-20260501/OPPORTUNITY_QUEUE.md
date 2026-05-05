@@ -1321,3 +1321,15 @@ pole-residue authority.  The cleanest positive queue remains: certified
 covariance, and strict `g2`; genuine Schur `A/B/C` rows; a neutral
 off-diagonal generator or primitive transfer certificate; or a strict
 scalar-LSZ infinite/tail moment certificate.
+
+2026-05-05 update: the neutral off-diagonal generator derivation attempt is
+now an exact negative boundary on the current surface.  Burnside,
+Perron-Frobenius, Schur-commutant, GNS, and exact tensor methods can certify a
+mixed neutral generator if one is supplied, but the current PR230 artifacts are
+source-only, absent-guarded, or block diagonal.  Do not spend another block
+trying to extract the mixed generator from source-only rows or theorem names.
+The cleanest positive queue is unchanged: certified `O_H/C_sH/C_HH` pole rows;
+same-source W/Z response rows with identity/covariance/strict `g2`; genuine
+Schur `A/B/C` rows; a strict same-surface off-diagonal neutral generator or
+primitive transfer certificate; or strict scalar-LSZ infinite/tail
+moment/threshold/FV authority.

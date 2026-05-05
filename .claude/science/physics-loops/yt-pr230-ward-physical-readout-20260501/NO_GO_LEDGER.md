@@ -3141,3 +3141,19 @@ or theorem names as scalar-LSZ proof selectors.  The route can reopen only
 with an infinite or tail-certified same-surface scalar moment/asymptotic
 certificate plus contact, threshold, FV/IR, isolated-pole, and residue-interval
 authority.
+
+## 2026-05-05 - Neutral Off-Diagonal Generator From Current Rows
+
+No-go: the current PR230 surface does not derive the off-diagonal
+source/orthogonal neutral generator needed by primitive-cone, Burnside, or
+Perron-Frobenius rank-one closure.  The available source functional and
+FH/LSZ rows are source-only; source-Higgs, W/Z, and Schur non-source rows are
+absent or absence-guarded; and the current Burnside witness remains block
+diagonal.
+
+Outside-math tools remain allowed as certificate engines, but not as proof
+selectors.  A synthetic primitive matrix, theorem name, GNS rank label, Schur
+method name, exact tensor method name, or PSLQ/value recognition result is not
+a same-surface mixed generator.  Reopen this route only with a real
+same-surface off-diagonal generator certificate or primitive transfer
+certificate, then rerun the aggregate closure gates.

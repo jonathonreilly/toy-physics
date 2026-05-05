@@ -10,6 +10,7 @@
     "invariant_ring_oh_certificate_attempt": "exact negative boundary / invariant-ring O_H certificate attempt blocked on current PR230 surface",
     "kinetic_matching": "exact negative boundary / heavy kinetic matching obstruction",
     "momentum_pilot": "bounded-support / momentum pilot scaling",
+    "neutral_offdiagonal_generator_derivation_attempt": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
     "neutral_scalar_burnside_irreducibility_attempt": "exact negative boundary / Burnside neutral irreducibility attempt blocked by non-full current generator algebra",
     "projector_norm": "exact negative boundary / projector-normalization obstruction",
     "same_source_wz_response_certificate_gate": "open / same-source WZ response certificate gate not passed",
@@ -24,7 +25,7 @@
   },
   "fail_count": 0,
   "missing_forbidden_terms": [],
-  "pass_count": 24,
+  "pass_count": 25,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
   "strict_non_claims": [

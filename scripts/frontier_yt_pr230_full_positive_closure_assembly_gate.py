@@ -87,6 +87,7 @@ PARENTS = {
     "neutral_scalar_primitive_cone": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
     "neutral_scalar_primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
     "neutral_scalar_burnside_irreducibility": "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
+    "neutral_offdiagonal_generator_derivation": "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
     "schur_kprime_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
     "schur_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
     "schur_compressed_bootstrap_no_go": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
@@ -310,12 +311,14 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "strict primitive-cone certificate gate absent",
                 "primitive-cone stretch no-go blocks the source-only and conditional-Perron shortcut",
                 "Burnside/double-commutant route has no same-surface off-diagonal neutral generator",
+                "direct off-diagonal generator derivation attempt finds only absent or block-diagonal current rows",
             ],
             "parents": [
                 PARENTS["neutral_scalar_irreducibility"],
                 PARENTS["neutral_scalar_primitive_cone"],
                 PARENTS["neutral_scalar_primitive_cone_stretch_no_go"],
                 PARENTS["neutral_scalar_burnside_irreducibility"],
+                PARENTS["neutral_offdiagonal_generator_derivation"],
             ],
         },
     }
@@ -1302,6 +1305,22 @@ def main() -> int:
         )
         is True,
         statuses["neutral_scalar_burnside_irreducibility"],
+    )
+    report(
+        "neutral-offdiagonal-generator-derivation-attempt-blocks-current-surface",
+        "neutral off-diagonal generator not derivable"
+        in statuses["neutral_offdiagonal_generator_derivation"]
+        and certs["neutral_offdiagonal_generator_derivation"].get("proposal_allowed")
+        is False
+        and certs["neutral_offdiagonal_generator_derivation"].get(
+            "offdiagonal_generator_certificate_passed"
+        )
+        is False
+        and certs["neutral_offdiagonal_generator_derivation"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True,
+        statuses["neutral_offdiagonal_generator_derivation"],
     )
     report(
         "nonchunk-current-surface-exhaustion-recorded",

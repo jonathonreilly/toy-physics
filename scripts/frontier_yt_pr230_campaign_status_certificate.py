@@ -328,6 +328,9 @@ def main() -> int:
         "neutral_scalar_burnside_irreducibility_attempt": load(
             "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json"
         ),
+        "neutral_offdiagonal_generator_derivation_attempt": load(
+            "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json"
+        ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
@@ -1438,6 +1441,24 @@ def main() -> int:
         )
         is True,
         statuses["neutral_scalar_burnside_irreducibility_attempt"],
+    )
+    report(
+        "neutral-offdiagonal-generator-derivation-attempt-blocks-current-surface",
+        "neutral off-diagonal generator not derivable"
+        in str(statuses["neutral_offdiagonal_generator_derivation_attempt"])
+        and certificates["neutral_offdiagonal_generator_derivation_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["neutral_offdiagonal_generator_derivation_attempt"].get(
+            "offdiagonal_generator_certificate_passed"
+        )
+        is False
+        and certificates["neutral_offdiagonal_generator_derivation_attempt"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True,
+        statuses["neutral_offdiagonal_generator_derivation_attempt"],
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",

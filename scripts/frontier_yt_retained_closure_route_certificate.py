@@ -147,6 +147,7 @@ def main() -> int:
         "neutral_scalar_primitive_cone_certificate_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
         "neutral_scalar_primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
         "neutral_scalar_burnside_irreducibility_attempt": "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
+        "neutral_offdiagonal_generator_derivation_attempt": "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "pr230_matching_running_bridge_gate": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
@@ -1110,6 +1111,24 @@ def main() -> int:
         )
         is False
         and certificates["neutral_scalar_burnside_irreducibility_attempt"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+    )
+    neutral_offdiagonal_generator_derivation_blocks = (
+        "neutral off-diagonal generator not derivable"
+        in certificates["neutral_offdiagonal_generator_derivation_attempt"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["neutral_offdiagonal_generator_derivation_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["neutral_offdiagonal_generator_derivation_attempt"].get(
+            "offdiagonal_generator_certificate_passed"
+        )
+        is False
+        and certificates["neutral_offdiagonal_generator_derivation_attempt"].get(
             "exact_negative_boundary_passed"
         )
         is True
@@ -3063,6 +3082,13 @@ def main() -> int:
         "neutral-scalar-burnside-irreducibility-attempt-blocks-source-only-generators",
         neutral_scalar_burnside_irreducibility_blocks,
         certificates["neutral_scalar_burnside_irreducibility_attempt"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "neutral-offdiagonal-generator-derivation-attempt-blocks-current-surface",
+        neutral_offdiagonal_generator_derivation_blocks,
+        certificates["neutral_offdiagonal_generator_derivation_attempt"].get(
             "actual_current_surface_status", ""
         ),
     )

@@ -100,6 +100,7 @@
     "fh_lsz_stieltjes_moment_certificate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
     "fh_lsz_target_ess": "outputs/yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
+    "neutral_offdiagonal_generator_derivation": "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
     "neutral_scalar_burnside_irreducibility": "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
     "neutral_scalar_irreducibility": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
     "neutral_scalar_primitive_cone": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
@@ -196,6 +197,7 @@
     "fh_lsz_stieltjes_moment_certificate": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
     "fh_lsz_target_ess": "bounded-support / FH-LSZ target-observable ESS certificate passed",
     "matching_running": "open / PR230 matching-running bridge awaits certified physical input",
+    "neutral_offdiagonal_generator_derivation": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
     "neutral_scalar_burnside_irreducibility": "exact negative boundary / Burnside neutral irreducibility attempt blocked by non-full current generator algebra",
     "neutral_scalar_irreducibility": "exact negative boundary / neutral-scalar irreducibility authority absent on current PR230 surface",
     "neutral_scalar_primitive_cone": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
@@ -264,7 +266,7 @@
     "wz_smoke_to_production_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
   },
-  "pass_count": 80,
+  "pass_count": 81,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",
   "route_statuses": {
@@ -274,13 +276,15 @@
         "rank-two neutral scalar counterfamilies remain allowed",
         "strict primitive-cone certificate gate absent",
         "primitive-cone stretch no-go blocks the source-only and conditional-Perron shortcut",
-        "Burnside/double-commutant route has no same-surface off-diagonal neutral generator"
+        "Burnside/double-commutant route has no same-surface off-diagonal neutral generator",
+        "direct off-diagonal generator derivation attempt finds only absent or block-diagonal current rows"
       ],
       "parents": [
         "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
         "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
         "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
-        "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json"
+        "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
+        "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json"
       ],
       "passes_current_surface": false
     },
