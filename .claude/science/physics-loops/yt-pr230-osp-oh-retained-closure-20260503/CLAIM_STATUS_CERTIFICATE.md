@@ -87,6 +87,12 @@ Open imports:
   neutral-sector irreducibility theorem is blocked on the current surface;
 - scalar denominator / K-prime route is exact support only; same-surface Schur
   A/B/C kernel rows and FV/IR pole-control certificates are absent;
+- scalar-LSZ Stieltjes moment-certificate gate is exact support only: it
+  defines the future positive certificate contract using Hankel/shifted-Hankel
+  moment positivity, tight pole-residue interval, threshold-gap control,
+  FV/IR control, denominator/analytic-continuation authority, and the
+  forbidden-import firewall, but the strict certificate is absent on the
+  current surface;
 - the Schur/K-prime row absence guard has been refreshed against the current
   46-chunk production surface; it scanned `93` current output/certificate
   files and found `0` complete Schur row hits, so current FH/LSZ source rows

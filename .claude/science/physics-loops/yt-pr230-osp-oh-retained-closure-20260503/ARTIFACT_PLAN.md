@@ -189,3 +189,17 @@ framework-native context but not PR230 `O_H` authority.  A future positive
 route still needs a real same-surface `O_H` certificate, source-Higgs
 `C_sH/C_HH` rows, W/Z response rows with identity certificates, Schur rows, or
 neutral-sector irreducibility.
+
+Completed in the scalar-LSZ moment-certificate continuation:
+
+- `scripts/frontier_yt_fh_lsz_stieltjes_moment_certificate_gate.py`
+- `docs/YT_FH_LSZ_STIELTJES_MOMENT_CERTIFICATE_GATE_NOTE_2026-05-05.md`
+- `outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
+This makes the non-chunk scalar-LSZ acceptance surface stricter and executable:
+future finite-shell or pole-fit rows must supply positive Stieltjes moment
+Hankel checks, a tight positive residue interval, threshold-gap control, FV/IR
+control, analytic-continuation or scalar-denominator authority, and the PR230
+forbidden-import firewall.  The current surface has no such strict moment
+certificate, so this is exact support, not scalar-LSZ closure.

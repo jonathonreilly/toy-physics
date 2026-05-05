@@ -34,6 +34,7 @@ PARENTS = {
     "fh_lsz_polefit8x8_postprocessor": "outputs/yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json",
     "fh_lsz_model_class": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
     "fh_lsz_model_class_semantic_firewall": "outputs/yt_fh_lsz_model_class_semantic_firewall_2026-05-04.json",
+    "fh_lsz_stieltjes_moment_certificate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
     "fh_lsz_pole_saturation": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
     "fh_lsz_finite_volume": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
     "fh_lsz_soft_continuum": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
@@ -121,7 +122,10 @@ def closure_conditions() -> list[dict[str, Any]]:
                 "analytic-continuation authority plus FV/IR/zero-mode/threshold control"
             ),
             "why_needed": "Converts finite-shell same-source C_ss rows into a pole LSZ normalization.",
-            "current_surface": "finite-shell/postprocessor gates remain support-only or exact negative boundaries",
+            "current_surface": (
+                "finite-shell/postprocessor gates remain support-only or exact negative "
+                "boundaries; strict Stieltjes moment certificate is absent"
+            ),
         },
         {
             "id": "source_overlap_or_physical_response_bridge",
@@ -293,6 +297,9 @@ def main() -> int:
     scalar_lsz_blocks = (
         certs["fh_lsz_model_class"].get("proposal_allowed") is False
         and certs["fh_lsz_model_class_semantic_firewall"].get("proposal_allowed") is False
+        and certs["fh_lsz_stieltjes_moment_certificate"].get("proposal_allowed") is False
+        and certs["fh_lsz_stieltjes_moment_certificate"].get("moment_certificate_gate_passed")
+        is False
         and certs["fh_lsz_pole_saturation"].get("proposal_allowed") is False
         and certs["fh_lsz_finite_volume"].get("proposal_allowed") is False
         and certs["fh_lsz_soft_continuum"].get("proposal_allowed") is False
@@ -367,6 +374,14 @@ def main() -> int:
         "model-class semantic firewall passed" in statuses["fh_lsz_model_class_semantic_firewall"]
         and certs["fh_lsz_model_class_semantic_firewall"].get("proposal_allowed") is False,
         statuses["fh_lsz_model_class_semantic_firewall"],
+    )
+    report(
+        "stieltjes-moment-certificate-gate-absent",
+        "Stieltjes moment-certificate gate" in statuses["fh_lsz_stieltjes_moment_certificate"]
+        and certs["fh_lsz_stieltjes_moment_certificate"].get("proposal_allowed") is False
+        and certs["fh_lsz_stieltjes_moment_certificate"].get("moment_certificate_gate_passed")
+        is False,
+        statuses["fh_lsz_stieltjes_moment_certificate"],
     )
     report(
         "wz-action-semantic-firewall-support-only",
@@ -578,7 +593,8 @@ def main() -> int:
             "same-surface O_H certificate plus C_sH/C_HH pole rows, a same-source "
             "EW action plus top/W/Z mass-response rows, matched covariance or "
             "a real top/W factorization theorem, and sector-overlap identity, "
-            "same-surface Schur A/B/C kernel rows with scalar denominator closure, "
+            "a strict Stieltjes moment certificate or same-surface Schur A/B/C "
+            "kernel rows with scalar denominator closure, "
             "or a neutral-sector irreducibility theorem.  Rerun this assembly "
             "gate before any retained-route proposal."
         ),

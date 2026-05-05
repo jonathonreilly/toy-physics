@@ -1,0 +1,221 @@
+{
+  "acceptance_contract": {
+    "certificate_kind": "fh_lsz_stieltjes_moment_certificate",
+    "mathematical_checks": [
+      "Hankel H_ij=m_{i+j} positive semidefinite through order 3",
+      "shifted Hankel H'_ij=m_{i+j+1} positive semidefinite through order 2",
+      "positive pole residue with tight residue interval"
+    ],
+    "required_fields": [
+      "same_surface_cl3_z3",
+      "source_coordinate",
+      "zero_source_limit_declared",
+      "moments",
+      "pole_location_certified",
+      "pole_residue",
+      "residue_interval.lower_bound_positive",
+      "residue_interval.relative_width_over_lower <= 0.02",
+      "threshold_gap_certified",
+      "fv_ir_control_certified",
+      "analytic_continuation_or_denominator_authority",
+      "firewall.used_observed_targets_as_selectors == false",
+      "firewall.used_hunit_or_ward_authority == false",
+      "firewall.used_alpha_lm_or_plaquette == false",
+      "firewall.set_kappa_c2_zmatch_equal_one == false"
+    ]
+  },
+  "actual_current_surface_status": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
+  "exact_next_action": "Either produce the strict Stieltjes moment certificate from production scalar data, or derive a stronger microscopic scalar denominator theorem that supplies the same positivity, threshold, and FV/IR authority without finite-shell fitting.",
+  "fail_count": 0,
+  "future_certificate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_2026-05-05.json",
+  "future_certificate_checks": {},
+  "future_certificate_missing_or_failed_checks": [],
+  "moment_certificate_gate_passed": false,
+  "parent_certificates": {
+    "common_window_response": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
+    "finite_volume_obstruction": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
+    "model_class_gate": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
+    "model_class_semantic_firewall": "outputs/yt_fh_lsz_model_class_semantic_firewall_2026-05-04.json",
+    "pole_saturation_threshold": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
+    "polefit8x8_postprocessor": "outputs/yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json",
+    "soft_continuum_no_go": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
+    "stieltjes_obstruction": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json"
+  },
+  "pass_count": 10,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No strict positive Stieltjes moment certificate is present; finite-shell pole fits remain support-only.",
+  "strict_non_claims": [
+    "does not claim scalar LSZ closure",
+    "does not accept finite-shell pole fits as physical residue evidence",
+    "does not define y_t_bare",
+    "does not use H_unit, Ward authority, alpha_LM, plaquette, u0, or observed targets",
+    "does not set kappa_s, c2, or Z_match to one"
+  ],
+  "verdict": "The scalar-LSZ model-class route now has a strict positive Stieltjes moment certificate contract.  Future finite-shell or pole-fit rows must be accompanied by Hankel moment positivity, a tight positive pole-residue interval, threshold-gap control, FV/IR control, analytic-continuation or scalar-denominator authority, and the PR230 forbidden-import firewall.  The current surface supplies no such certificate, so this is an exact support gate rather than closure.",
+  "witness_family": {
+    "invalid_checks": {
+      "hankel_order_2": {
+        "minimum_principal_minor": -0.5,
+        "principal_minors": [
+          {
+            "determinant": 1.0,
+            "indices": [
+              0
+            ]
+          },
+          {
+            "determinant": 0.5,
+            "indices": [
+              1
+            ]
+          },
+          {
+            "determinant": -0.5,
+            "indices": [
+              0,
+              1
+            ]
+          }
+        ],
+        "psd": false
+      },
+      "violates_psd": true
+    },
+    "invalid_shell_like_moments": [
+      1.0,
+      1.0,
+      0.5,
+      0.25,
+      0.125,
+      0.0625
+    ],
+    "positive_atoms": [
+      {
+        "mass_squared": 0.8,
+        "weight": 1.2
+      },
+      {
+        "mass_squared": 2.4,
+        "weight": 0.45
+      },
+      {
+        "mass_squared": 5.25,
+        "weight": 0.18
+      }
+    ],
+    "positive_checks": {
+      "hankel_order_2": {
+        "minimum_principal_minor": 0.009103539816209455,
+        "principal_minors": [
+          {
+            "determinant": 0.8278196078431372,
+            "indices": [
+              0
+            ]
+          },
+          {
+            "determinant": 0.21794781323717455,
+            "indices": [
+              1
+            ]
+          },
+          {
+            "determinant": 0.009103539816209455,
+            "indices": [
+              0,
+              1
+            ]
+          }
+        ],
+        "psd": true
+      },
+      "hankel_order_3": {
+        "minimum_principal_minor": 4.88831039600077e-07,
+        "principal_minors": [
+          {
+            "determinant": 0.8278196078431372,
+            "indices": [
+              0
+            ]
+          },
+          {
+            "determinant": 0.21794781323717455,
+            "indices": [
+              1
+            ]
+          },
+          {
+            "determinant": 0.06451587029016258,
+            "indices": [
+              2
+            ]
+          },
+          {
+            "determinant": 0.009103539816209455,
+            "indices": [
+              0,
+              1
+            ]
+          },
+          {
+            "determinant": 0.005906253148394783,
+            "indices": [
+              0,
+              2
+            ]
+          },
+          {
+            "determinant": 0.00018490684675635978,
+            "indices": [
+              1,
+              2
+            ]
+          },
+          {
+            "determinant": 4.88831039600077e-07,
+            "indices": [
+              0,
+              1,
+              2
+            ]
+          }
+        ],
+        "psd": true
+      },
+      "shifted_hankel_order_2": {
+        "minimum_principal_minor": 0.0012556939060189634,
+        "principal_minors": [
+          {
+            "determinant": 0.41390570601050874,
+            "indices": [
+              0
+            ]
+          },
+          {
+            "determinant": 0.11779722408477108,
+            "indices": [
+              1
+            ]
+          },
+          {
+            "determinant": 0.0012556939060189634,
+            "indices": [
+              0,
+              1
+            ]
+          }
+        ],
+        "psd": true
+      }
+    },
+    "positive_moments": [
+      0.8278196078431372,
+      0.41390570601050874,
+      0.21794781323717455,
+      0.11779722408477108,
+      0.06451587029016258,
+      0.03557575184503594
+    ],
+    "theorem": "If C(q^2) is a positive Stieltjes transform int dmu(s)/(q^2+s), then the moment sequence m_n has positive Hankel matrices H_ij=m_{i+j} and shifted Hankel matrices H'_ij=m_{i+j+1}.  A finite-shell fit that does not provide this moment-positivity certificate is not a scalar-LSZ model-class certificate."
+  }
+}

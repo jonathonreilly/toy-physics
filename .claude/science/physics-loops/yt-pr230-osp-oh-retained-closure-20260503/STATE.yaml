@@ -4,17 +4,20 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact-negative-boundary
-active_residual: "same-source top-response identity certificate, matched top/W covariance, strict delta_perp tomography/null/purity authority, or O_sp-O_H identity"
+actual_current_surface_status: exact-support
+active_residual: "scalar-LSZ Stieltjes moment certificate, threshold/pole-saturation, FV/IR control, or microscopic scalar-denominator theorem"
 latest_checkpoint:
-  utc: "2026-05-05T00:46:52Z"
-  block: 53
-  artifact: "cross-lane O_H authority audit"
-  status: "exact negative boundary; adjacent O_h/O_H/Higgs/two-Higgs/Schur artifacts are framework-native support/no-go/context surfaces, but none is the PR230 same-surface canonical-Higgs O_H certificate"
-  result: "cross-lane O_H audit PASS=13 FAIL=0; assembly PASS=32 FAIL=0; retained-route PASS=181 FAIL=0; campaign PASS=207 FAIL=0"
-  claim_boundary: "no adjacent gravity O_h, lepton/DM two-Higgs, Higgs mass/vacuum, EW one-Higgs, or Koide O_h artifact supplies PR230 O_sp/O_H identity, canonical LSZ normalization, or C_sH/C_HH pole residues; no physical y_t or retained/proposed-retained wording"
-  live_compute: "chunk worker check-in: polefit8x8 chunks019-024 are still active in the other worker namespace; this checkpoint does not package chunk artifacts"
+  utc: "2026-05-05T02:05:00Z"
+  block: 54
+  artifact: "FH/LSZ Stieltjes moment-certificate gate"
+  status: "exact support; scalar-LSZ finite-shell and pole-fit rows now require a strict positive Stieltjes moment certificate plus threshold, FV/IR, denominator/analytic-continuation, and firewall authority"
+  result: "moment gate PASS=10 FAIL=0; assembly PASS=33 FAIL=0; retained-route PASS=182 FAIL=0; campaign PASS=208 FAIL=0"
+  claim_boundary: "no scalar LSZ closure, no y_t readout, no y_t_bare, no H_unit/Ward/alpha_LM/plaquette/u0/observed-target/unit-shortcut authority; current surface lacks the strict moment certificate"
+  live_compute: "chunk worker check-in: polefit8x8 chunks019-024 are still active in the other worker namespace with no root JSON outputs yet; this checkpoint does not package chunk artifacts"
   checkpoint_files:
+    - scripts/frontier_yt_fh_lsz_stieltjes_moment_certificate_gate.py
+    - docs/YT_FH_LSZ_STIELTJES_MOMENT_CERTIFICATE_GATE_NOTE_2026-05-05.md
+    - outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json
     - scripts/frontier_yt_cross_lane_oh_authority_audit.py
     - docs/YT_CROSS_LANE_OH_AUTHORITY_AUDIT_NOTE_2026-05-05.md
     - outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json
@@ -72,8 +75,11 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 53
+block: 54
 files_touched:
+  - scripts/frontier_yt_fh_lsz_stieltjes_moment_certificate_gate.py
+  - docs/YT_FH_LSZ_STIELTJES_MOMENT_CERTIFICATE_GATE_NOTE_2026-05-05.md
+  - outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
   - outputs/yt_source_higgs_gram_purity_contract_witness_2026-05-03.json

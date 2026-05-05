@@ -26,6 +26,35 @@ python3 scripts/frontier_yt_pr230_source_overlap_route_selection.py
 Next exact action: pursue the highest-ranked positive route, source-Higgs Gram
 purity with `O_sp` as the normalized source side.
 
+## 2026-05-05 Scalar-LSZ Moment-Certificate Gate
+
+The next non-chunk blocker is now sharpened into an executable positive
+contract:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_stieltjes_moment_certificate_gate.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=33 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=182 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=208 FAIL=0
+```
+
+Result: no scalar-LSZ closure.  The new gate proves the strict certificate
+shape needed before finite-shell or pole-fit rows can become physical scalar
+LSZ residue evidence: Stieltjes moment Hankel positivity, tight positive
+residue interval, threshold-gap authority, FV/IR control, analytic-continuation
+or scalar-denominator authority, and the forbidden-import firewall.
+
+Live chunk check-in: polefit8x8 chunks019-024 were still running in the other
+worker namespace with no root JSON outputs at the time of this checkpoint.
+Those jobs were not packaged here.
+
 ## Finite-Source Calibration Checkpoint
 
 The active multi-radius finite-source-linearity production job is now tracked

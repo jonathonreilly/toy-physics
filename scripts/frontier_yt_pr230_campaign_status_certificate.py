@@ -136,6 +136,9 @@ def main() -> int:
         "fh_lsz_stieltjes_model_class": load(
             "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json"
         ),
+        "fh_lsz_stieltjes_moment_certificate_gate": load(
+            "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -863,6 +866,18 @@ def main() -> int:
         "fh-lsz-stieltjes-model-class-not-enough",
         "Stieltjes model-class obstruction" in str(statuses["fh_lsz_stieltjes_model_class"]),
         statuses["fh_lsz_stieltjes_model_class"],
+    )
+    report(
+        "fh-lsz-stieltjes-moment-certificate-gate-absent",
+        "Stieltjes moment-certificate gate"
+        in str(statuses["fh_lsz_stieltjes_moment_certificate_gate"])
+        and certificates["fh_lsz_stieltjes_moment_certificate_gate"].get("proposal_allowed")
+        is False
+        and certificates["fh_lsz_stieltjes_moment_certificate_gate"].get(
+            "moment_certificate_gate_passed"
+        )
+        is False,
+        statuses["fh_lsz_stieltjes_moment_certificate_gate"],
     )
     report(
         "fh-lsz-pole-saturation-threshold-gate-blocks",

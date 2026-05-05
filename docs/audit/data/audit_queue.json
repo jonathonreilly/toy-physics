@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 550,
+    "leaf": 554,
     "medium": 301
   },
-  "generated_at": "2026-05-05T00:30:52.281785+00:00",
+  "generated_at": "2026-05-05T01:08:43.886798+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -17216,6 +17216,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_cross_lane_oh_authority_audit_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_CROSS_LANE_OH_AUTHORITY_AUDIT_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_cross_lane_oh_authority_audit.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_d17_source_pole_identity_closure_attempt_note_2026-05-02",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -17312,6 +17329,23 @@
       "note_path": "docs/YT_EFFECTIVE_POTENTIAL_HESSIAN_SOURCE_OVERLAP_NO_GO_NOTE_2026-05-02.md",
       "ready": true,
       "runner_path": "scripts/frontier_yt_effective_potential_hessian_source_overlap_no_go.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_electroweak_g2_certificate_builder_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_ELECTROWEAK_G2_CERTIFICATE_BUILDER_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_electroweak_g2_certificate_builder.py",
       "transitive_descendants": 0
     },
     {
@@ -18757,6 +18791,23 @@
       "note_path": "docs/YT_FH_LSZ_STIELTJES_MODEL_CLASS_OBSTRUCTION_NOTE_2026-05-02.md",
       "ready": true,
       "runner_path": "scripts/frontier_yt_fh_lsz_stieltjes_model_class_obstruction.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_fh_lsz_stieltjes_moment_certificate_gate_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_FH_LSZ_STIELTJES_MOMENT_CERTIFICATE_GATE_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_fh_lsz_stieltjes_moment_certificate_gate.py",
       "transitive_descendants": 0
     },
     {
@@ -21143,6 +21194,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_wz_g2_response_self_normalization_no_go_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_WZ_G2_RESPONSE_SELF_NORMALIZATION_NO_GO_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_wz_g2_response_self_normalization_no_go.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_wz_mass_fit_response_row_builder_note_2026-05-04",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -22917,6 +22985,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 699,
-  "total_pending": 1088
+  "ready_count": 703,
+  "total_pending": 1092
 }

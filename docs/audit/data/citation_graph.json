@@ -18525,7 +18525,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T00:52:55.551940+00:00",
+  "generated_at": "2026-05-05T01:08:37.591447+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -40661,6 +40661,16 @@
       "runner_path": "scripts/frontier_yt_fh_lsz_stieltjes_model_class_obstruction.py",
       "title": "PR #230 FH/LSZ Stieltjes Model-Class Obstruction"
     },
+    "yt_fh_lsz_stieltjes_moment_certificate_gate_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_stieltjes_moment_certificate_gate_note_2026-05-05",
+      "current_status": "support",
+      "current_status_raw": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
+      "deps": [],
+      "note_hash": "11dde3c612844b7b948cf0c6f665f7240e53e4c5a426221de79941241d577b9c",
+      "path": "docs/YT_FH_LSZ_STIELTJES_MOMENT_CERTIFICATE_GATE_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_fh_lsz_stieltjes_moment_certificate_gate.py",
+      "title": "PR #230 FH/LSZ Stieltjes Moment-Certificate Gate"
+    },
     "yt_fh_lsz_target_observable_ess_certificate_note_2026-05-03": {
       "claim_id": "yt_fh_lsz_target_observable_ess_certificate_note_2026-05-03",
       "current_status": "bounded",
@@ -44257,6 +44267,7 @@
     "yt_fh_lsz_selected_mass_replacement_wave_checkpoint_note_2026-05-03",
     "yt_fh_lsz_soft_continuum_threshold_no_go_note_2026-05-02",
     "yt_fh_lsz_stieltjes_model_class_obstruction_note_2026-05-02",
+    "yt_fh_lsz_stieltjes_moment_certificate_gate_note_2026-05-05",
     "yt_fh_lsz_target_observable_ess_certificate_note_2026-05-03",
     "yt_fh_lsz_target_timeseries_harness_note_2026-05-02",
     "yt_fh_lsz_target_timeseries_higgs_identity_no_go_note_2026-05-02",
@@ -44438,16 +44449,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4631,
-    "leaf_count": 982,
-    "node_count": 1934,
-    "root_count": 1448,
-    "runners_with_path": 1462,
+    "leaf_count": 983,
+    "node_count": 1935,
+    "root_count": 1449,
+    "runners_with_path": 1463,
     "status_counts": {
       "bounded": 541,
       "open": 97,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 418,
+      "support": 419,
       "unknown": 504
     }
   }

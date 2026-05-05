@@ -110,6 +110,7 @@ def main() -> int:
         "fh_lsz_pole_fit_model_class_gate": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
         "fh_lsz_model_class_semantic_firewall": "outputs/yt_fh_lsz_model_class_semantic_firewall_2026-05-04.json",
         "fh_lsz_stieltjes_model_class": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json",
+        "fh_lsz_stieltjes_moment_certificate_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
         "fh_lsz_pole_saturation_threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
         "fh_lsz_threshold_authority_audit": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json",
         "confinement_gap_threshold_import": "outputs/yt_confinement_gap_threshold_import_audit_2026-05-02.json",
@@ -590,6 +591,18 @@ def main() -> int:
             )
         )
         >= 8.0
+    )
+    stieltjes_moment_certificate_absent = (
+        "Stieltjes moment-certificate gate"
+        in certificates["fh_lsz_stieltjes_moment_certificate_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["fh_lsz_stieltjes_moment_certificate_gate"].get("proposal_allowed")
+        is False
+        and certificates["fh_lsz_stieltjes_moment_certificate_gate"].get(
+            "moment_certificate_gate_passed"
+        )
+        is False
     )
     pole_saturation_threshold_gate_blocks = (
         "pole-saturation threshold gate"
@@ -2044,6 +2057,13 @@ def main() -> int:
         "fh-lsz-stieltjes-model-class-not-enough",
         stieltjes_model_class_not_enough,
         certificates["fh_lsz_stieltjes_model_class"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "fh-lsz-stieltjes-moment-certificate-gate-absent",
+        stieltjes_moment_certificate_absent,
+        certificates["fh_lsz_stieltjes_moment_certificate_gate"].get(
+            "actual_current_surface_status", ""
+        ),
     )
     report(
         "fh-lsz-pole-saturation-threshold-gate-blocks",

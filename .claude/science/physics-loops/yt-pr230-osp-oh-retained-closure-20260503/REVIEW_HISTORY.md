@@ -155,6 +155,24 @@ Findings:
 - No retained/proposed-retained claim is authorized.  The next positive block
   must add real rows or a real same-surface identity theorem.
 
+## 2026-05-05 Scalar-LSZ Moment-Certificate Gate Self-Review
+
+Disposition: exact support; strict certificate absent.
+
+Findings:
+
+- The new runner adds a mathematical Stieltjes moment acceptance contract
+  rather than a semantic label: positive finite measures pass Hankel and
+  shifted-Hankel PSD checks, while an invalid finite-shell-like moment witness
+  is rejected by a negative `2 x 2` Hankel determinant.
+- It explicitly keeps current finite-shell and pole-fit rows support-only
+  because the future strict certificate is absent.
+- The aggregate assembly, retained-route, and campaign gates now include this
+  blocker and still deny proposal authority.
+- No retained/proposed-retained claim is authorized; future closure needs a
+  strict moment certificate from production scalar data or a stronger
+  same-surface scalar-denominator/analytic-continuation theorem.
+
 ## 2026-05-04 Same-Source EW Action Gate Self-Review
 
 Disposition: exact negative boundary for current W/Z work unit; continue
