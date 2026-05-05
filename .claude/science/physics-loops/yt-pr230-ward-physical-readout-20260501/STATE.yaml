@@ -13,11 +13,21 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-196-fh-lsz-polefit8x8-chunks013-018-package
-blocks_completed: 196
+current_phase: campaign-block-197-fh-lsz-polefit8x8-chunks019-024-launch
+blocks_completed: 197
 active_route: "FH/LSZ polefit8x8 production support"
-active_hard_residual: "Polefit8x8 chunks013-018 completed with fixed seeds 2026051913-2026051918 and passed the homogeneous eight-mode/x8 combiner.  The stream now has 18/63 ready chunks and 288/1008 saved configurations.  The postprocessor forms a finite-shell diagnostic over eight momentum rows, but complete L12 statistics, L16/L24 scaling, FV/IR/zero-mode control, pole-saturation/model-class authority, and canonical-Higgs/source-overlap closure remain load-bearing blockers.  Combiner PASS=6 FAIL=0; postprocessor PASS=5 FAIL=0; full positive closure assembly gate PASS=23 FAIL=0; retained-route PASS=172 FAIL=0; campaign status PASS=198 FAIL=0.  No retained/proposed_retained closure is authorized."
+active_hard_residual: "Polefit8x8 chunks019-024 launched after fast-forwarding to origin/claude/yt-direct-lattice-correlator-2026-04-30 at 85e9cfeea.  Pre-launch collision guard allowed new workers; post-launch guard records active_workers=6, active_orchestrators=0, and launch_guard_allows_new_workers=false.  The post-launch dry-run status records running_chunks=[19,20,21,22,23,24], missing_chunks=[], completed_chunks=[]; this is run-control only.  Chunks013-018 remain the latest packaged completed set; the stream remains 18/63 ready chunks and 288/1008 saved configurations until chunks019-024 complete and pass the combiner/postprocessor/gates.  No effective-retention or proposed-retention closure is authorized."
 files_touched:
+  - "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS019_024_LAUNCH_CHECKPOINT_NOTE_2026-05-04.md"
+  - "outputs/yt_fh_lsz_polefit8x8_wave_orchestrator_status_2026-05-04.json"
+  - "outputs/yt_fh_lsz_polefit8x8_chunks019_024_post_launch_status_2026-05-04.json"
+  - "outputs/yt_fh_lsz_global_production_collision_guard_2026-05-04.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/NO_GO_LEDGER.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
   - "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS013_018_CHECKPOINT_NOTE_2026-05-04.md"
   - "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk013_2026-05-04.json"
   - "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk014_2026-05-04.json"

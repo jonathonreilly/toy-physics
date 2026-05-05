@@ -2629,3 +2629,18 @@ witness, but the current row file
 `C_ss` data and `kappa_s=1` shortcuts are explicitly rejected.  Do not treat
 the contract gate, Schur sufficiency theorem, or absent-row status as
 retained/proposed-retained top-Yukawa evidence.
+
+Polefit8x8 launch state is not production evidence:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py --start-index 19 --end-index 24 --max-concurrent 6 --global-max-production-jobs 6 --runtime-minutes 0 --poll-seconds 60 --launch
+
+python3 scripts/frontier_yt_fh_lsz_global_production_collision_guard.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+Chunks019-024 are running, not completed or certified.  Process rows, PIDs,
+logs, launch return codes, and output directories do not count as top-Yukawa
+evidence.  The completed polefit8x8 support set remains chunks001-018 until
+new root artifacts pass the homogeneous combiner/postprocessor/gates.  Do not
+use launch state as retained/proposed-retained evidence.

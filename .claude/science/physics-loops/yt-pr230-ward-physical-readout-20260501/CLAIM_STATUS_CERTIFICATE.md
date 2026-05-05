@@ -3207,3 +3207,26 @@ They do not derive `kappa_s`, `Z_match`, `c2`, source-Higgs overlap, W/Z
 response identity, scalar-pole control, finite-source-linearity, or
 canonical-Higgs normalization.  No retained or `proposed_retained` wording is
 allowed.
+
+FH/LSZ chunks019-024 launch checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ polefit8x8 run-control checkpoint
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py --start-index 19 --end-index 24 --max-concurrent 6 --global-max-production-jobs 6 --runtime-minutes 0 --poll-seconds 60 --launch
+# launched chunks019-024
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py --start-index 19 --end-index 24 --max-concurrent 6 --global-max-production-jobs 6 --dry-run --status-output outputs/yt_fh_lsz_polefit8x8_chunks019_024_post_launch_status_2026-05-04.json
+# poll=1 completed=0 running=[19, 20, 21, 22, 23, 24] missing=0 all_jobs=6 launched_total=0
+
+python3 scripts/frontier_yt_fh_lsz_global_production_collision_guard.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+The launch proves only that six seed-controlled production jobs are running
+under the global cap.  It does not certify completed chunks, target
+observables, pole fits, scalar-pole saturation, FV/IR control,
+source-Higgs/canonical-Higgs identity, or W/Z physical response.  No
+effective-retention or proposed-retention wording is allowed.

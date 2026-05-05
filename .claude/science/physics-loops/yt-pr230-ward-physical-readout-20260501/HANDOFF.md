@@ -2673,3 +2673,25 @@ chunks with the v2 schema, backfill v2 rows for the full ready set if
 multi-tau covariance is prioritized, run multi-radius source-response
 calibration, or pursue actual same-surface `O_H/C_sH/C_HH` or W/Z response
 identity rows.
+
+Block 197 launched FH/LSZ polefit8x8 chunks019-024:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py --start-index 19 --end-index 24 --max-concurrent 6 --global-max-production-jobs 6 --runtime-minutes 0 --poll-seconds 60 --launch
+# launched chunks019-024 under PIDs 53530-53535 with seeds 2026051919-2026051924
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py --start-index 19 --end-index 24 --max-concurrent 6 --global-max-production-jobs 6 --dry-run --status-output outputs/yt_fh_lsz_polefit8x8_chunks019_024_post_launch_status_2026-05-04.json
+# poll=1 completed=0 running=[19, 20, 21, 22, 23, 24] missing=0 all_jobs=6 launched_total=0
+
+python3 scripts/frontier_yt_fh_lsz_global_production_collision_guard.py
+# SUMMARY: PASS=8 FAIL=0
+# active_workers=6, active_orchestrators=0, launch_guard_allows_new_workers=false
+```
+
+This is run-control support only.  Chunks013-018 remain the latest packaged
+completed polefit8x8 set and the stream stays at 18/63 ready chunks until
+chunks019-024 finish and pass the combiner/postprocessor/gates.  Do not launch
+more FH/LSZ workers while the guard reports six active workers.  Next exact
+action: when chunks019-024 complete, run the polefit8x8 combiner,
+postprocessor, retained-route certificate, campaign-status certificate, and
+full positive closure assembly gate; package only completed artifacts.

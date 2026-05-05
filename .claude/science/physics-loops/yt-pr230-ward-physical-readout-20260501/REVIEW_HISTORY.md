@@ -4744,3 +4744,24 @@ now has an executable future row contract, and the gate rejects source-only
 `C_ss` plus `kappa_s=1` shortcuts.  The current Schur row file is absent, and
 canonical-Higgs/source identity remains open.  No retained or proposed-retained
 wording is allowed.
+
+## 2026-05-04 - Block 197 FH/LSZ Polefit8x8 Chunks019-024 Launch
+
+Review stance: run-control checkpoint / claim firewall.
+
+- Fast-forwarded over same-source top-response certificate-builder commits.
+- Reran the global production collision guard before launch; it allowed new
+  workers.
+- Launched chunks019-024 via
+  `scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py`.
+- Added
+  `docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS019_024_LAUNCH_CHECKPOINT_NOTE_2026-05-04.md`.
+- Added
+  `outputs/yt_fh_lsz_polefit8x8_chunks019_024_post_launch_status_2026-05-04.json`.
+- Updated the global production collision guard certificate after launch.
+
+Disposition: bounded infrastructure support.  The post-launch status records
+chunks019-024 running and the global guard blocks additional FH/LSZ launches
+while six workers are active.  The checkpoint does not count chunks019-024 as
+completed evidence and authorizes no effective-retention or proposed-retention
+wording.

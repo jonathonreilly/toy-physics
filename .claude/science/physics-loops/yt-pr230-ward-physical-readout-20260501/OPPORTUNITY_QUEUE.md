@@ -994,3 +994,12 @@ exist for chunks017-018.  The next useful production choices are:
 
 Do not spend a foreground block claiming closure from chunks017-018; the
 response-window acceptance gate remains open.
+
+Chunks019-024 polefit8x8 launch update: six production workers are currently
+running for chunks019-024 with seeds 2026051919-2026051924.  The post-launch
+guard records `active_workers=6` and blocks additional FH/LSZ launches.  The
+next production opportunity is to wait for these workers to finish, then
+package the completed outputs through the polefit8x8 combiner and
+postprocessor.  This scheduling state does not outrank identity work if a real
+same-surface `O_H/C_sH/C_HH`, W/Z response, Schur row, or no-orthogonal-top-
+coupling theorem opportunity becomes available.
