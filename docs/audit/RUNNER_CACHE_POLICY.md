@@ -31,6 +31,19 @@ want to pay: long compute jobs (`frontier_alpha_s`, lattice plaquette
 sweeps, etc.) would block every audit, and the same expensive run would
 happen many times across audits that share a runner.
 
+The same rule applies outside formal audits. Analysis agents should not run
+primary runners directly just to inspect stdout. They should use the cache-first
+analysis command:
+
+```bash
+python3 scripts/cached_runner_output.py scripts/<runner>.py
+```
+
+This command prints a fresh SHA-pinned cache if one exists. If the cache is
+missing or stale, it runs the runner once, writes the canonical cache, and then
+prints that cached result. Use `--check-only` when analysis must refuse live
+execution, and use `--refresh` only when intentionally replacing a fresh cache.
+
 ## Cache file format
 
 ```
@@ -175,6 +188,7 @@ python3 scripts/precompute_audit_runners.py --cleanup-orphans
 | --------------------------------------------- | --------------------------------------------- |
 | `scripts/runner_cache.py`                     | Shared module: SHA, paths, format, execution |
 | `scripts/precompute_audit_runners.py`         | Refresh tool with all the modes above         |
+| `scripts/cached_runner_output.py`             | Cache-first stdout command for analysis work  |
 | `scripts/codex_audit_runner.py`               | Reads cache via `runner_cache.cache_excerpt_for_audit` |
 | `docs/audit/scripts/pre_commit_audit_check.sh`| Pre-commit gate                               |
 | `.github/workflows/audit.yml`                 | CI gate                                       |

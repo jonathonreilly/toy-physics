@@ -48,6 +48,7 @@ The graph-cycle warning is currently expected. Treat any error as a blocker.
 ## Long-Running Runner / Timeout Guard
 
 - A wall-time timeout, missing stdout, or noncompletion of a runner is not scientific evidence against the claim. Do not apply `audited_conditional`, `audited_failed`, or any other terminal non-clean verdict solely because the runner may need a long compute run.
+- When analysis needs runner stdout, use `python3 scripts/cached_runner_output.py <runner_path>` instead of running the runner directly. This reuses a fresh SHA-pinned cache, or writes one if the cache is missing/stale, so later audits and non-audit analysis do not rerun the same expensive computation.
 - If the load-bearing step cannot be judged without a long run and there is no completed log, cached certificate, sliced deterministic runner, or independent derivation in the restricted packet, record a session-local `compute_required` skip with the claim id, runner path, timeout/budget used, and the exact artifact needed; then continue with the next ready row.
 - Apply a non-clean verdict only when there is a substantive audit reason beyond wall-time noncompletion, such as a completed output mismatch, stale number, unsupported dependency, import/API failure, hard-coded contested premise, or an over-broad claim not supported by completed finite evidence.
 - If a prior audit row appears to have used timeout/noncompletion as the primary reason for a terminal verdict, do not treat that prior verdict as settled science. Queue it for policy repair or re-audit under this guard.
