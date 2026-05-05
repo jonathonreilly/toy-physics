@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
 | unaudited | 872 |
-| audit_in_progress | 26 |
+| audit_in_progress | 25 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
-| ~~audited_conditional~~ | 387 |
+| ~~audited_conditional~~ | 388 |
 | ~~audited_failed~~ | 15 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -36,9 +36,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 26 |
+| `audit_in_progress` | 25 |
 | `audited_clean` | 336 |
-| `audited_conditional` | 387 |
+| `audited_conditional` | 388 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
@@ -112,7 +112,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `background_independence_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_berry_bundle_obstruction_theorem_note_2026-04-19` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_cone_completing_root_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -637,6 +636,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_wilson_direct_descendant_canonical_fiber_schur_entropy_candidate_no_go_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_wilson_to_dweh_local_chain_path_algebra_current_bank_boundary_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -4710,6 +4710,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** canonical transport-column theorem reduces the live object to the  _(class `B`)_
 - **chain closes:** False — No. The source row is author-declared unknown, so the audit packet does not assert a closed derivation to ratify.
 - **rationale:** Issue: the source note's own Status line is unknown, not a closed theorem/result tier. Why this blocks: a leaf audit cannot turn an explicitly unsettled source claim into a closed chain without an author reclassification and supporting derivation. Repair target: update the source note to a precise support/bounded/candidate retained-grade claim with a runner or cited theorem package. Claim boundary until fixed: safe to cite only as an unknown note in its current wording.
+- **auditor confidence:** high
+
+### `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18`
+
+- **Note:** [`DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_POSITIVE_CLOSURE_MANIFOLD_THEOREM_NOTE_2026-04-18.md`](../../docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_POSITIVE_CLOSURE_MANIFOLD_THEOREM_NOTE_2026-04-18.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Local manifold claim for the eta_1=1 constructive positive closure set near the stated fixed native N_e seed-surface point.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-judicial-third-dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** At the stated constructive positive root, F=0 and partial F/partial e is nonzero, so the implicit-function theorem gives a local e=e(a,b,c,d) family and the strict positivity inequalities persist nearby.  _(class `A`)_
+- **chain closes:** False — The implicit-function-theorem step is valid mathematics, but the restricted packet does not certify an exact base root or an exact nonzero derivative. The runner supplies double-precision tolerance checks and a finite-difference derivative, which are numerical evidence rather than an exact regular-root certificate.
+- **rationale:** Issue: The note promotes abs(F(base)) < 1e-10 and a finite-difference dF/de = 0.034474247845 from a floating-point runner into an exact regular-root theorem. Why this blocks: the exact local 4-real manifold conclusion requires a certified exact zero of F and a certified nonzero exact derivative, not only decimal agreement and tolerance-based PASS lines. Repair target: provide an interval or analytic regular-root certificate that brackets an exact root and proves partial F/partial e is bounded away from zero at that root. Claim boundary until fixed: the packet supports strong numerical evidence for a nearby non-isolated constructive positive closure branch, not a retained exact theorem.
 - **auditor confidence:** high
 
 ### `dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_note_2026-04-19`
