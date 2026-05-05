@@ -22,8 +22,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 215 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 18 |
-| unaudited | 844 |
+| open_gate | 19 |
+| unaudited | 843 |
 | audit_in_progress | 1 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 370 |
+| `audited_clean` | 371 |
 | `audited_conditional` | 400 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 31 |
-| `unaudited` | 890 |
+| `unaudited` | 889 |
 
 | claim_type | count |
 |---|---:|
@@ -233,6 +233,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
+| `gauge_wilson_isotropy_boundary_note_2026-05-04` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | A | - |
 | `global_coherence_off_scaffold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
 | `graph_first_selector_derivation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `graph_first_su3_integration_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -6241,6 +6242,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — The note gives the finite transfer-kernel factorization and the SU(3) tensor-product recurrence needed to identify the local plaquette source with J. The open beta=6 transfer-state/Perron data are explicitly outside scope.
 - **rationale:** The scoped theorem is exact operator algebra on a finite Wilson source surface, not a numerical beta=6 plaquette prediction. The runner supports the character identity, recurrence, self-adjointness, slice counting, and scoped operator realization with THEOREM PASS=7 SUPPORT=2 FAIL=0. No support-class promotion is needed because the audited object is a bounded exact theorem with the remaining state-identification gap excluded.
 - **auditor confidence:** medium
+
+### `gauge_wilson_isotropy_boundary_note_2026-05-04`
+
+- **Note:** [`GAUGE_WILSON_ISOTROPY_BOUNDARY_NOTE_2026-05-04.md`](../../docs/GAUGE_WILSON_ISOTROPY_BOUNDARY_NOTE_2026-05-04.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited the boundary claim that two proposed PR #528 mechanisms do not force a new anisotropic Wilson gauge action, leaving the accepted isotropic Wilson surface scoped and unchanged.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-fresh-agent-boole-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The Cl(3) pseudoscalar is central rather than a fourth anticommuting generator, and the staggered eta plaquette products are identical across all six orientations, so these two routes do not derive a spatial/temporal gauge-coupling split.  _(class `A`)_
+- **chain closes:** True — The packet supplies the cited retained Wilson-surface authority and the runner directly verifies the two negative boundary checks. The note does not claim a global no-go, only that these two mechanisms fail to justify a new anisotropy axiom.
+- **rationale:** The claim is correctly scoped as an open gate and narrow boundary record, not as retained theorem propagation. The algebraic Clifford checks and staggered eta-product checks close from the supplied runner and do not import an unapproved physical bridge. The cited retained_bounded Wilson grammar supports the statement that no new anisotropic action is added here, while the note explicitly leaves broader spacetime-emergence routes open.
+- **auditor confidence:** high
 
 ### `gellmann_completeness_theorem_note_2026-05-02`
 

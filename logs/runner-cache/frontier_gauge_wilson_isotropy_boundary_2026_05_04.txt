@@ -1,0 +1,52 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_wilson_isotropy_boundary_2026_05_04.py
+runner_sha256: dd411687cae540d9a4524b91fbc4bb6663624c48eee90aa66164d6d9d48f3685
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.57
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE WILSON ISOTROPY BOUNDARY CHECKS
+==============================================================================
+
+Part 1: Cl(3) Pauli-irrep checks
+  [PASS] {G_1, G_1} = 2 delta_11
+  [PASS] {G_1, G_2} = 2 delta_12
+  [PASS] {G_1, G_3} = 2 delta_13
+  [PASS] {G_2, G_1} = 2 delta_21
+  [PASS] {G_2, G_2} = 2 delta_22
+  [PASS] {G_2, G_3} = 2 delta_23
+  [PASS] {G_3, G_1} = 2 delta_31
+  [PASS] {G_3, G_2} = 2 delta_32
+  [PASS] {G_3, G_3} = 2 delta_33
+  [PASS] Cl(3) pseudoscalar squares to -I
+  [PASS] pseudoscalar commutes with G_1
+  [PASS] pseudoscalar does not anticommute with G_1
+         max |{I_cl3, G_1}| = 2
+  [PASS] pseudoscalar commutes with G_2
+  [PASS] pseudoscalar does not anticommute with G_2
+         max |{I_cl3, G_2}| = 2
+  [PASS] pseudoscalar commutes with G_3
+  [PASS] pseudoscalar does not anticommute with G_3
+         max |{I_cl3, G_3}| = 2
+  [PASS] pseudoscalar is not a standalone fourth Clifford generator for Cl(3,1)
+         it is central in odd-dimensional Cl(3)
+
+Part 2: staggered eta-product orientation check
+  xy values: [-1]
+  xz values: [-1]
+  xt values: [-1]
+  yz values: [-1]
+  yt values: [-1]
+  zt values: [-1]
+  [PASS] all six staggered plaquette orientation products have the same sign
+         orientation value sets = {(0, 1): {-1}, (0, 2): {-1}, (0, 3): {-1}, (1, 2): {-1}, (1, 3): {-1}, (2, 3): {-1}}
+  [PASS] the eta-product check supplies no spatial/temporal gauge-coupling split
+
+==============================================================================
+SUMMARY: PASS=19 FAIL=0
+==============================================================================
+
+----- stderr -----
+
