@@ -40,6 +40,7 @@ PARENTS = {
     "fh_lsz_contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
     "fh_lsz_affine_contact_complete_monotonicity": "outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json",
     "fh_lsz_polynomial_contact_finite_shell": "outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json",
+    "fh_lsz_polynomial_contact_repair": "outputs/yt_fh_lsz_polynomial_contact_repair_no_go_2026-05-05.json",
     "fh_lsz_pole_saturation": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
     "fh_lsz_finite_volume": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
     "fh_lsz_soft_continuum": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
@@ -343,6 +344,16 @@ def main() -> int:
             "polynomial_contact_finite_shell_no_go_passed"
         )
         is True
+        and certs["fh_lsz_polynomial_contact_repair"].get("proposal_allowed")
+        is False
+        and certs["fh_lsz_polynomial_contact_repair"].get(
+            "polynomial_contact_repair_no_go_passed"
+        )
+        is True
+        and certs["fh_lsz_polynomial_contact_repair"].get(
+            "stieltjes_certificate_from_polynomial_contact_passed"
+        )
+        is False
         and certs["fh_lsz_pole_saturation"].get("proposal_allowed") is False
         and certs["fh_lsz_finite_volume"].get("proposal_allowed") is False
         and certs["fh_lsz_soft_continuum"].get("proposal_allowed") is False
@@ -481,6 +492,22 @@ def main() -> int:
         )
         is True,
         statuses["fh_lsz_polynomial_contact_finite_shell"],
+    )
+    report(
+        "polynomial-contact-repair-no-go-blocks",
+        "polynomial contact repair not scalar-LSZ authority"
+        in statuses["fh_lsz_polynomial_contact_repair"]
+        and certs["fh_lsz_polynomial_contact_repair"].get("proposal_allowed")
+        is False
+        and certs["fh_lsz_polynomial_contact_repair"].get(
+            "polynomial_contact_repair_no_go_passed"
+        )
+        is True
+        and certs["fh_lsz_polynomial_contact_repair"].get(
+            "stieltjes_certificate_from_polynomial_contact_passed"
+        )
+        is False,
+        statuses["fh_lsz_polynomial_contact_repair"],
     )
     report(
         "wz-action-semantic-firewall-support-only",

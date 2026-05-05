@@ -1023,3 +1023,27 @@ Findings checked:
 - The note and runner do not claim retained/proposed-retained closure and do
   not use observed selectors, `H_unit`/Ward authority, `alpha_LM`/plaquette/u0,
   or by-fiat normalization shortcuts.
+
+# 2026-05-05 Non-Chunk Route-Family + Polynomial Contact Review
+
+Disposition: pass as exact negative boundary / open campaign, not as closure.
+
+Findings checked:
+
+- No subagents were used for this review because the user did not explicitly
+  authorize subagents; the review was performed locally.
+- The route-family audit compares at least three route families; current
+  output records five families and selects the scalar-LSZ polynomial-contact
+  branch only as an executable no-go block.
+- The polynomial-contact runner tests the shortcut directly: low-degree
+  polynomial contacts leave higher divided-difference violations invariant,
+  while high-degree contacts can interpolate multiple Stieltjes-looking finite
+  residuals without identifying a physical contact.
+- After rebasing onto the chunk031-036 polefit8x8 update, the existing
+  finite-shell polynomial-contact no-go and this stricter repair no-go both
+  pass on the updated combined surface.
+- The aggregates consume the new route audit and no-go while keeping
+  `proposal_allowed=false`.
+- The note and runner do not claim retained/proposed-retained closure and do
+  not use observed selectors, `H_unit`/Ward authority, `alpha_LM`/plaquette/u0,
+  `y_t_bare`, or bare-coupling shortcuts as premises.

@@ -1,0 +1,177 @@
+{
+  "actual_current_surface_status": "open / non-chunk route-family import audit selects scalar-LSZ polynomial-contact no-go block",
+  "exact_next_action": "Execute scripts/frontier_yt_fh_lsz_polynomial_contact_repair_no_go.py, then rerun aggregate PR230 gates.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "campaign": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "worklist": "outputs/yt_pr230_non_chunk_closure_worklist_2026-05-05.json"
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "All audited route families retain open load-bearing imports.  The selected block can sharpen a scalar-LSZ shortcut boundary but cannot supply retained or proposed-retained PR230 closure.",
+  "route_families_audited": [
+    {
+      "can_execute_now": false,
+      "current_disposition": "blocked until same-surface O_H and C_sH/C_HH rows exist",
+      "dramatic_step_score": 2,
+      "forbidden_imports": [
+        "H_unit or Ward readout",
+        "static EW algebra as O_H identity",
+        "observed top/Higgs/W/Z selectors"
+      ],
+      "future_files": {
+        "canonical_oh_certificate": false,
+        "source_higgs_rows": false
+      },
+      "hard_residual_pressure": 2,
+      "id": "canonical_oh_source_higgs",
+      "minimum_allowed_premises": [
+        "Cl(3)/Z3 scalar-source surface",
+        "Legendre/LSZ O_sp as normalized source-pole support",
+        "same-surface canonical O_H certificate or real O_H production surface"
+      ],
+      "open_import_count": 2,
+      "retirement_path": "derive O_H certificate, then run source-Higgs Gram-purity rows",
+      "route_family": "source-Higgs / canonical O_H",
+      "runner_or_gate_available": true
+    },
+    {
+      "can_execute_now": false,
+      "current_disposition": "blocked; existing gates are contracts and negative shortcut boundaries",
+      "dramatic_step_score": 2,
+      "forbidden_imports": [
+        "observed W/Z/top/y_t/g2 selectors",
+        "alpha_LM, plaquette, u0, or bare-coupling algebra",
+        "deterministic W response without paired top rows or covariance theorem"
+      ],
+      "future_files": {
+        "delta_perp_rows": false,
+        "deterministic_response_covariance_certificate": false,
+        "matched_top_wz_rows": false,
+        "non_observed_g2_certificate": false,
+        "wz_mass_response_rows": false
+      },
+      "hard_residual_pressure": 2,
+      "id": "same_source_wz_response",
+      "minimum_allowed_premises": [
+        "same source coordinate for top and W/Z rows",
+        "same-source EW action and W/Z mass-fit rows",
+        "matched top/W covariance or closed covariance theorem",
+        "non-observed g2 certificate",
+        "strict delta_perp correction or null theorem"
+      ],
+      "open_import_count": 5,
+      "retirement_path": "produce matched rows or prove a same-surface product/covariance theorem",
+      "route_family": "same-source W/Z response",
+      "runner_or_gate_available": true
+    },
+    {
+      "can_execute_now": true,
+      "current_disposition": "best executable non-chunk block: sharpen the contact-repair boundary",
+      "dramatic_step_score": 3,
+      "forbidden_imports": [
+        "fitted contact term promoted as physical",
+        "kappa_s=1, c2=1, or Z_match=1",
+        "H_unit, Ward authority, observed target values, alpha_LM, plaquette, or u0"
+      ],
+      "future_files": {
+        "contact_subtraction_certificate": false,
+        "pade_stieltjes_bounds_certificate": false,
+        "stieltjes_moment_certificate": false
+      },
+      "hard_residual_pressure": 3,
+      "id": "scalar_lsz_polynomial_contact",
+      "minimum_allowed_premises": [
+        "current polefit8x8 finite-shell C_ss rows as diagnostic support only",
+        "Stieltjes necessary conditions for positive scalar two-point transforms",
+        "no same-surface contact or scalar-denominator certificate assumed"
+      ],
+      "open_import_count": 3,
+      "retirement_path": "prove low-degree polynomial repairs fail or high-degree repairs overfit finite rows",
+      "route_family": "scalar-LSZ finite-shell contact/model-class",
+      "runner_or_gate_available": true
+    },
+    {
+      "can_execute_now": false,
+      "current_disposition": "blocked; no same-surface Schur A/B/C rows present",
+      "dramatic_step_score": 2,
+      "forbidden_imports": [
+        "finite FH/LSZ source rows substituted as Schur rows",
+        "legacy Schur bridge stack",
+        "fitted scalar-kernel residue selector"
+      ],
+      "future_files": {
+        "schur_kernel_rows": false
+      },
+      "hard_residual_pressure": 2,
+      "id": "schur_scalar_denominator_rows",
+      "minimum_allowed_premises": [
+        "same-surface Schur A/B/C partition rows",
+        "Schur-complement K-prime sufficiency theorem"
+      ],
+      "open_import_count": 1,
+      "retirement_path": "supply real same-surface Schur kernel rows",
+      "route_family": "Schur/K-prime scalar denominator rows",
+      "runner_or_gate_available": true
+    },
+    {
+      "can_execute_now": false,
+      "current_disposition": "blocked; direct irreducibility theorem not derived",
+      "dramatic_step_score": 2,
+      "forbidden_imports": [
+        "gauge-vacuum Perron theorem as neutral-sector authority",
+        "commutant rank asserted as dynamics",
+        "one-Higgs notation used as field-completeness proof"
+      ],
+      "future_files": {
+        "neutral_irreducibility_certificate": false,
+        "neutral_primitive_cone_certificate": false
+      },
+      "hard_residual_pressure": 3,
+      "id": "neutral_scalar_rank_one",
+      "minimum_allowed_premises": [
+        "same-surface neutral transfer sector",
+        "primitive-cone or positivity-improving irreducibility certificate"
+      ],
+      "open_import_count": 2,
+      "retirement_path": "derive primitive-cone irreducibility or produce the strict certificate",
+      "route_family": "neutral-scalar primitive-cone rank one",
+      "runner_or_gate_available": true
+    }
+  ],
+  "selected_route": {
+    "can_execute_now": true,
+    "current_disposition": "best executable non-chunk block: sharpen the contact-repair boundary",
+    "dramatic_step_score": 3,
+    "forbidden_imports": [
+      "fitted contact term promoted as physical",
+      "kappa_s=1, c2=1, or Z_match=1",
+      "H_unit, Ward authority, observed target values, alpha_LM, plaquette, or u0"
+    ],
+    "future_files": {
+      "contact_subtraction_certificate": false,
+      "pade_stieltjes_bounds_certificate": false,
+      "stieltjes_moment_certificate": false
+    },
+    "hard_residual_pressure": 3,
+    "id": "scalar_lsz_polynomial_contact",
+    "minimum_allowed_premises": [
+      "current polefit8x8 finite-shell C_ss rows as diagnostic support only",
+      "Stieltjes necessary conditions for positive scalar two-point transforms",
+      "no same-surface contact or scalar-denominator certificate assumed"
+    ],
+    "open_import_count": 3,
+    "retirement_path": "prove low-degree polynomial repairs fail or high-degree repairs overfit finite rows",
+    "route_family": "scalar-LSZ finite-shell contact/model-class",
+    "runner_or_gate_available": true
+  },
+  "selection_reason": "Scalar-LSZ/contact-model control is the only audited family with a current non-chunk executable artifact surface.  O_H/source-Higgs, W/Z, Schur, and neutral-rank routes all require absent future rows or same-surface theorems before they can make a positive closure move.",
+  "strict_non_claims": [
+    "does not package or rerun chunk MC",
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not define y_t_bare",
+    "does not use H_unit, yt_ward, alpha_LM, plaquette, u0, observed targets, bare-coupling algebra, or unit shortcuts"
+  ]
+}

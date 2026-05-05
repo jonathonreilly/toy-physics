@@ -154,6 +154,12 @@ def main() -> int:
         "fh_lsz_polynomial_contact_finite_shell": load(
             "outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json"
         ),
+        "fh_lsz_polynomial_contact_repair": load(
+            "outputs/yt_fh_lsz_polynomial_contact_repair_no_go_2026-05-05.json"
+        ),
+        "pr230_nonchunk_route_family_import_audit": load(
+            "outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -982,6 +988,36 @@ def main() -> int:
         )
         is False,
         statuses["fh_lsz_polynomial_contact_finite_shell"],
+    )
+    report(
+        "fh-lsz-polynomial-contact-repair-no-go-blocks",
+        "polynomial contact repair not scalar-LSZ authority"
+        in str(statuses["fh_lsz_polynomial_contact_repair"])
+        and certificates["fh_lsz_polynomial_contact_repair"].get("proposal_allowed")
+        is False
+        and certificates["fh_lsz_polynomial_contact_repair"].get(
+            "polynomial_contact_repair_no_go_passed"
+        )
+        is True
+        and certificates["fh_lsz_polynomial_contact_repair"].get(
+            "stieltjes_certificate_from_polynomial_contact_passed"
+        )
+        is False,
+        statuses["fh_lsz_polynomial_contact_repair"],
+    )
+    report(
+        "nonchunk-route-family-import-audit-complete",
+        "route-family import audit selects scalar-LSZ"
+        in str(statuses["pr230_nonchunk_route_family_import_audit"])
+        and certificates["pr230_nonchunk_route_family_import_audit"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_nonchunk_route_family_import_audit"]
+        .get("selected_route", {})
+        .get("id")
+        == "scalar_lsz_polynomial_contact",
+        statuses["pr230_nonchunk_route_family_import_audit"],
     )
     report(
         "fh-lsz-pole-saturation-threshold-gate-blocks",

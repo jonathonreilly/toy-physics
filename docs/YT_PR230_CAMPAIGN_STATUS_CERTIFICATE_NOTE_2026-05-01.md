@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=216 FAIL=0
+# SUMMARY: PASS=218 FAIL=0
 ```
 
 ## 2026-05-05 FH/LSZ Polefit8x8 Chunks031-036 Completion Update
@@ -71,6 +71,32 @@ This leaves the positive scalar route exactly where it should be: supply a
 same-surface microscopic contact/denominator theorem, a strict polynomial
 contact certificate with independent normalization, or bypass scalar-source
 normalization with a physical-response route.
+
+## 2026-05-05 Non-Chunk Route-Family + Polynomial-Contact Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json` and
+`outputs/yt_fh_lsz_polynomial_contact_repair_no_go_2026-05-05.json`.  The
+audit records the required route-family comparison across five non-chunk
+families and selects the scalar-LSZ polynomial-contact repair branch as the
+best executable block on the current surface.
+
+The selected block closes negatively.  Low-degree polynomial contacts cannot
+repair the current finite-shell proxy because robust higher
+complete-monotonicity sign violations are invariant under those subtractions.
+High-degree polynomial contacts can interpolate different positive
+Stieltjes-looking finite residuals, so they are fitted contact choices rather
+than scalar-LSZ authority.
+
+Validation: route-family audit `PASS=9 FAIL=0`; polynomial-contact repair
+no-go `PASS=13 FAIL=0`; retained-route `PASS=191 FAIL=0`; campaign status
+`PASS=218 FAIL=0`; full positive closure assembly gate `PASS=42 FAIL=0`;
+non-chunk worklist `PASS=24 FAIL=0`.
+
+The campaign remains open.  The next positive scalar route needs a
+same-surface contact-subtraction certificate, microscopic scalar-denominator
+theorem, strict moment-threshold-FV certificate, or an independent
+source-overlap/physical-response route.
 
 ## 2026-05-05 Affine-Contact Complete-Monotonicity Update
 

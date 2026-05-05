@@ -74,6 +74,17 @@ two distinct positive one-pole Stieltjes residuals can reproduce the same
 measured rows while assigning different pole locations and residues.  The
 assembly gate remains open with `PASS=41 FAIL=0`.
 
+2026-05-05 non-chunk route-family update: the gate now also consumes
+`outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json` and
+`outputs/yt_fh_lsz_polynomial_contact_repair_no_go_2026-05-05.json`.  The
+route-family audit compares five live non-chunk families and selects the
+scalar-LSZ polynomial-contact repair shortcut as the only currently executable
+non-chunk block.  That block is closed negatively: degree `0..5` polynomial
+contacts leave higher complete-monotonicity violations invariant, while
+degree-seven finite interpolation can manufacture distinct Stieltjes-looking
+residuals without identifying a physical contact.  The assembly gate remains
+open with `PASS=42 FAIL=0`.
+
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.
 

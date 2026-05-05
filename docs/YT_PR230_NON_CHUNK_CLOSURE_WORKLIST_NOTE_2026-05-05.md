@@ -33,7 +33,11 @@ This is an integration/worklist gate, not a physics closure theorem.
   under `C(x) -> C(x) - a x`.  The arbitrary polynomial-contact shortcut is
   closed as well: finite shell rows can be matched by distinct degree-7
   contact interpolants with different Stieltjes pole data unless an independent
-  microscopic contact/denominator certificate is supplied.
+  microscopic contact/denominator certificate is supplied.  The stricter
+  repair no-go also records that low-degree contacts leave higher
+  divided-difference violations invariant, while high-degree contacts can
+  interpolate mutually different finite Stieltjes-looking residuals without a
+  same-surface contact or scalar-denominator theorem.
 - **Schur/scalar-denominator rows:** supply same-surface Schur `A/B/C` kernel
   rows; current FH/LSZ source rows do not substitute.
 - **Neutral rank-one:** derive a strict primitive-cone/positivity-improving
@@ -47,10 +51,19 @@ use `H_unit`, Ward authority, `alpha_LM`, plaquette/u0, observed targets, or
 unit shortcuts.  It keeps PR #230 draft/open until one work unit supplies a
 real positive certificate and the aggregate gates pass.
 
+## 2026-05-05 Route-Family Audit
+
+`scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py` now records
+the assumption/import exercise over five non-chunk route families.  It selects
+the scalar-LSZ polynomial-contact repair branch only as an executable no-go
+block, not as a closure route.  The worklist consumes that audit plus
+`outputs/yt_fh_lsz_polynomial_contact_repair_no_go_2026-05-05.json` and
+remains open.
+
 ## Verification
 
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
 python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
-# SUMMARY: PASS=22 FAIL=0
+# SUMMARY: PASS=24 FAIL=0
 ```

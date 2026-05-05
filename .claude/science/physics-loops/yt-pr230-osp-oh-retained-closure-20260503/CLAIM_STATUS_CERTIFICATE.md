@@ -99,6 +99,16 @@ Open imports:
   FV/IR control, denominator/analytic-continuation authority, and the
   forbidden-import firewall, but the strict certificate is absent on the
   current surface;
+- non-chunk route-family import audit is exact support / routing only: it
+  compares source-Higgs, same-source W/Z, scalar-LSZ/contact, Schur/K-prime,
+  and neutral rank-one families, then selects the scalar-LSZ
+  polynomial-contact repair no-go as the only currently executable block; it
+  supplies no retained/proposed-retained proposal authority;
+- scalar-LSZ polynomial-contact repair is closed negatively on the current
+  polefit8x8 finite-shell rows: low-degree contacts leave robust higher
+  complete-monotonicity violations invariant, while high-degree finite
+  interpolation can manufacture distinct Stieltjes-looking residuals without a
+  same-surface contact or scalar-denominator theorem;
 - the PR230 non-chunk closure worklist is now complete as an open integration
   gate: all current non-chunk routes are represented by explicit blockers, and
   the six remaining positive units require named future surfaces rather than

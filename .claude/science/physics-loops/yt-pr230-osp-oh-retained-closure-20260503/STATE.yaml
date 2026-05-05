@@ -7,14 +7,36 @@ target_status: retained-positive-closure
 actual_current_surface_status: open
 active_residual: "six non-chunk work units remain: same-surface O_H/source-Higgs, W/Z response, scalar-LSZ, Schur rows, neutral rank-one, matching/running after readout"
 latest_checkpoint:
-  utc: "2026-05-05T05:25:00Z"
-  block: 58
-  artifact: "top/W deterministic-response covariance gate"
-  status: "exact negative boundary / deterministic W response alone is not matched-covariance authority"
-  result: "The W/Z derivation-first route now rejects marginals, native same-source labels, and deterministic W response alone; a positive route needs matched top/W rows or a closed same-surface covariance formula plus EW action, top identity, W/Z mass-fit, non-observed g2, and overlap/correction certificates"
-  claim_boundary: "no retained/proposed-retained closure, no chunk packaging, no y_t_bare, no H_unit/Ward/alpha_LM/plaquette/u0/observed-target/unit-shortcut authority; deterministic W response is not promoted to top/W covariance without paired top rows or a closed covariance theorem"
-  live_compute: "chunk worker remains separate; this checkpoint is non-chunk W/Z route-gating only"
+  utc: "2026-05-05T03:47:32Z"
+  block: 59
+  artifact: "non-chunk route-family import audit plus scalar-LSZ polynomial-contact finite-shell/repair no-gos"
+  status: "exact negative boundary / finite polynomial contact repair is not scalar-LSZ authority"
+  result: "After rebasing through the chunk031-036 polefit8x8 package and chunk037-042 launch checkpoint, the route-family audit compared five live non-chunk route families and selected the scalar-LSZ polynomial-contact shortcut as the best executable block.  The finite-shell no-go closes arbitrary degree-seven interpolation as non-identifying; the repair runner adds the low-degree invariant boundary: low-degree contacts leave robust higher complete-monotonicity violations invariant, while high-degree finite interpolation can manufacture distinct Stieltjes-looking residuals without a same-surface contact or scalar-denominator theorem."
+  claim_boundary: "no retained/proposed-retained closure, no chunk packaging, no y_t_bare, no H_unit/Ward/alpha_LM/plaquette/u0/observed-target/bare-coupling/unit-shortcut authority; polynomial contact fits are not promoted to a physical scalar-LSZ certificate"
+  live_compute: "chunk worker remains separate; this checkpoint is non-chunk scalar-LSZ route-gating only"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py
+    - docs/YT_PR230_NONCHUNK_ROUTE_FAMILY_IMPORT_AUDIT_NOTE_2026-05-05.md
+    - outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json
+    - scripts/frontier_yt_fh_lsz_polynomial_contact_repair_no_go.py
+    - docs/YT_FH_LSZ_POLYNOMIAL_CONTACT_REPAIR_NO_GO_NOTE_2026-05-05.md
+    - outputs/yt_fh_lsz_polynomial_contact_repair_no_go_2026-05-05.json
+    - scripts/frontier_yt_fh_lsz_polynomial_contact_finite_shell_no_go.py
+    - docs/YT_FH_LSZ_POLYNOMIAL_CONTACT_FINITE_SHELL_NO_GO_NOTE_2026-05-05.md
+    - outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json
+    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+    - docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md
+    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+    - scripts/frontier_yt_retained_closure_route_certificate.py
+    - docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md
+    - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+    - scripts/frontier_yt_pr230_campaign_status_certificate.py
+    - docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md
+    - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
+    - scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+    - docs/YT_PR230_NON_CHUNK_CLOSURE_WORKLIST_NOTE_2026-05-05.md
+    - outputs/yt_pr230_non_chunk_closure_worklist_2026-05-05.json
+    - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
     - scripts/frontier_yt_fh_lsz_pade_stieltjes_bounds_gate.py
     - docs/YT_FH_LSZ_PADE_STIELTJES_BOUNDS_GATE_NOTE_2026-05-05.md
     - outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json
@@ -89,7 +111,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 55
+block: 59
 files_touched:
   - scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
   - docs/YT_PR230_NON_CHUNK_CLOSURE_WORKLIST_NOTE_2026-05-05.md

@@ -45,3 +45,22 @@ Continue seed-controlled chunks and postprocessing.
 
 Status: useful source-pole evidence only.  Cannot by itself close physical
 `y_t` while `O_sp/O_H` remains open.
+
+## R6: Scalar-LSZ Polynomial Contact Repair
+
+Test whether finite polynomial contact subtraction can convert the current
+polefit8x8 finite-shell `C_ss` proxy into scalar-LSZ Stieltjes authority.
+
+Status: closed negatively in
+`docs/YT_FH_LSZ_POLYNOMIAL_CONTACT_REPAIR_NO_GO_NOTE_2026-05-05.md`.
+
+Reason: low-degree polynomial contacts leave robust higher divided-difference
+violations invariant, while degree-seven finite interpolation can manufacture
+distinct Stieltjes-looking residuals without identifying the physical contact.
+This is an exact negative boundary, not global closure.  A positive scalar
+route still needs a same-surface contact-subtraction certificate, microscopic
+scalar-denominator theorem, or strict moment-threshold-FV certificate.
+
+Route-family audit: `docs/YT_PR230_NONCHUNK_ROUTE_FAMILY_IMPORT_AUDIT_NOTE_2026-05-05.md`
+compared five non-chunk families and selected this block only because it was
+the best current executable no-go test.

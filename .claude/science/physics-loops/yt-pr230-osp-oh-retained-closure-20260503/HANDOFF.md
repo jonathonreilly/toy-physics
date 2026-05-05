@@ -2540,3 +2540,51 @@ The W/Z route now requires one of:
 Even then, the route still needs same-source EW action, W/Z mass-fit,
 non-observed `g_2`, top-response identity, sector/canonical-Higgs identity,
 and orthogonal-correction control.
+
+## 2026-05-05 Non-Chunk Route-Family Audit + Polynomial Contact No-Go
+
+The non-chunk assumption/import exercise was run across five route families:
+same-surface source-Higgs/`O_H`, same-source W/Z response, scalar-LSZ/contact,
+Schur/K-prime rows, and neutral rank-one.  The selected executable block was
+the scalar-LSZ polynomial-contact repair shortcut, because the current
+polefit8x8 finite-shell rows already expose that failure mode.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_nonchunk_route_family_import_audit.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_polynomial_contact_repair_no_go.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_polynomial_contact_finite_shell_no_go.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=42 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=191 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=218 FAIL=0
+
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+# SUMMARY: PASS=24 FAIL=0
+```
+
+Result: exact negative boundary, not closure.  Low-degree polynomial contacts
+cannot repair the current proxy because higher complete-monotonicity divided
+differences are invariant and fail robustly.  High-degree finite polynomial
+contacts can interpolate different positive Stieltjes-looking residuals, so
+they are fitted contact choices rather than same-surface scalar-LSZ authority.
+After rebasing through the chunk031-036 polefit8x8 package and chunk037-042
+launch checkpoint, the repair witness still passes with zero-shell residual
+spread `1546.515` row standard errors.
+
+Next exact action: do not use finite polynomial contact repairs as scalar-LSZ
+evidence.  A positive scalar route now requires a same-surface
+contact-subtraction certificate, microscopic scalar-denominator theorem, or
+strict moment-threshold-FV certificate; otherwise move to same-surface `O_H`,
+W/Z, Schur, or neutral-rank routes.

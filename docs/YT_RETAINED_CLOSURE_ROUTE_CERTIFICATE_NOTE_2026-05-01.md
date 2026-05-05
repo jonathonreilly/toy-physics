@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=190 FAIL=0
+# SUMMARY: PASS=191 FAIL=0
 ```
 
 ## 2026-05-05 FH/LSZ Polefit8x8 Chunks031-036 Completion Update
@@ -65,6 +65,27 @@ interpolation are too permissive.  A same-surface microscopic
 contact/denominator theorem, strict contact certificate, or physical-response
 bypass remains required.  No retained or `proposed_retained` closure is
 authorized.
+
+## 2026-05-05 Non-Chunk Route-Family + Polynomial-Contact Update
+
+The retained-route certificate now consumes
+`outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json` and
+`outputs/yt_fh_lsz_polynomial_contact_repair_no_go_2026-05-05.json`.  The
+route-family audit compares source-Higgs/`O_H`, same-source W/Z,
+scalar-LSZ/contact, Schur/K-prime, and neutral rank-one families before
+selecting the scalar-LSZ polynomial-contact repair no-go as the executable
+non-chunk block.
+
+Validation: route-family audit `PASS=9 FAIL=0`; polynomial-contact repair
+no-go `PASS=13 FAIL=0`; retained-route `PASS=191 FAIL=0`; campaign status
+`PASS=218 FAIL=0`; full positive closure assembly gate `PASS=42 FAIL=0`;
+non-chunk worklist `PASS=24 FAIL=0`.
+
+This closes only the finite polynomial-contact repair shortcut.  It does not
+rule out a same-surface contact-subtraction certificate, microscopic
+scalar-denominator theorem, strict moment-threshold-FV certificate, or a
+separate physical-response/source-overlap route.  No retained or
+`proposed_retained` closure is authorized.
 
 ## 2026-05-05 Affine-Contact Complete-Monotonicity Update
 

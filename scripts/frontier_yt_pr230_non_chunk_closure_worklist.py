@@ -63,6 +63,8 @@ PARENTS = {
     "lsz_contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
     "lsz_affine_contact_complete_monotonicity": "outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json",
     "lsz_polynomial_contact_finite_shell": "outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json",
+    "lsz_polynomial_contact_repair": "outputs/yt_fh_lsz_polynomial_contact_repair_no_go_2026-05-05.json",
+    "nonchunk_route_family_import_audit": "outputs/yt_pr230_nonchunk_route_family_import_audit_2026-05-05.json",
     "lsz_pole_saturation": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
     "lsz_threshold_authority": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json",
     "lsz_fv_obstruction": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
@@ -200,6 +202,7 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 status(certs["lsz_contact_subtraction_identifiability"]),
                 status(certs["lsz_affine_contact_complete_monotonicity"]),
                 status(certs["lsz_polynomial_contact_finite_shell"]),
+                status(certs["lsz_polynomial_contact_repair"]),
                 status(certs["lsz_pole_saturation"]),
                 status(certs["lsz_fv_obstruction"]),
                 status(certs["lsz_soft_continuum"]),
@@ -290,6 +293,14 @@ def main() -> int:
     report("contact-subtraction-route-gated", "contact-subtraction identifiability obstruction" in status(certs["lsz_contact_subtraction_identifiability"]), status(certs["lsz_contact_subtraction_identifiability"]))
     report("affine-contact-complete-monotonicity-route-gated", "affine contact complete-monotonicity no-go" in status(certs["lsz_affine_contact_complete_monotonicity"]), status(certs["lsz_affine_contact_complete_monotonicity"]))
     report("polynomial-contact-finite-shell-route-gated", "finite-shell polynomial contact non-identifiability no-go" in status(certs["lsz_polynomial_contact_finite_shell"]), status(certs["lsz_polynomial_contact_finite_shell"]))
+    report("polynomial-contact-repair-route-gated", "polynomial contact repair not scalar-LSZ authority" in status(certs["lsz_polynomial_contact_repair"]), status(certs["lsz_polynomial_contact_repair"]))
+    report(
+        "route-family-import-audit-selects-executable-block",
+        "route-family import audit selects scalar-LSZ" in status(certs["nonchunk_route_family_import_audit"])
+        and certs["nonchunk_route_family_import_audit"].get("selected_route", {}).get("id")
+        == "scalar_lsz_polynomial_contact",
+        status(certs["nonchunk_route_family_import_audit"]),
+    )
     report("schur-route-gated", "Schur K-prime row absence guard" in status(certs["schur_absence"]), status(certs["schur_absence"]))
     report("neutral-rank-one-route-gated", "irreducibility authority absent" in status(certs["neutral_irreducibility_audit"]), status(certs["neutral_irreducibility_audit"]))
     report("neutral-primitive-cone-route-gated", "primitive-cone certificate gate" in status(certs["neutral_primitive_cone_gate"]), status(certs["neutral_primitive_cone_gate"]))
