@@ -4,17 +4,20 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact support / clean source-Higgs outside-math route selector; positive closure still open
-active_residual: "Both target production chunks001-063 and polefit8x8 chunks001-063 are complete with required FH/LSZ target schema, but positive closure still fails the assembly checklist.  The cleanest physics route is now explicitly ranked as source-Higgs: derive a same-surface canonical O_H identity/normalization certificate, then produce C_ss/C_sH/C_HH pole rows and scalar-LSZ authority.  Outside-math tools are allowed only as certificate-producing methods, not as proof selectors.  Missing closure items remain scalar-LSZ model-class/FV/IR/pole authority, one accepted source-overlap or physical-response bridge, matching/running authority from certified physical input, and retained-route/campaign proposal authorization.  No retained or proposed_retained closure is authorized."
+actual_current_surface_status: exact negative boundary / invariant-ring O_H certificate attempt blocked on current PR230 surface
+active_residual: "Both target production chunks001-063 and polefit8x8 chunks001-063 are complete with required FH/LSZ target schema, but positive closure still fails the assembly checklist.  The cleanest physics route remains source-Higgs.  Its first theorem step now fails on the current surface: invariant-ring/commutant/Schur reasoning cannot derive canonical O_H because the current neutral scalar labels still admit a two-singlet completion, with source-only rows fixed and source-to-O_H overlap variable.  A positive clean closure now needs a new same-surface representation/action certificate proving multiplicity one or selecting a canonical radial generator with LSZ metric, then C_ss/C_sH/C_HH rows, scalar-LSZ authority, matching/running authority, and retained-route/campaign proposal authorization.  No retained or proposed_retained closure is authorized."
 latest_checkpoint:
-  utc: "2026-05-05T14:17:43Z"
-  block: 97
-  artifact: "clean source-Higgs outside-math route selector"
-  status: "exact support / route selection and claim-firewall clarification only"
-  result: "The new selector ranks the clean source-Higgs O_H/C_sH/C_HH route first, classifies invariant-ring/commutant, GNS, exact tensor/PEPS, holonomic/WZ/Picard-Fuchs, free-probability, PSLQ, and motivic tools as algorithmic methods only, and preserves proposal_allowed=false because all same-surface O_H rows/certificates remain absent.  W/Z response is demoted to a robust fallback for the clean-physics goal."
-  claim_boundary: "no retained or proposed_retained closure; outside-math tools are not proof inputs unless they output same-surface PR230 certificates and aggregate gates pass"
+  utc: "2026-05-05T14:32:56Z"
+  block: 98
+  artifact: "invariant-ring O_H certificate attempt"
+  status: "exact negative boundary / current invariant-ring data do not certify O_H"
+  result: "The runner records a two-singlet neutral scalar completion with degree-one invariant dimension 2 and commutant dimension 4.  Source-only rows stay fixed while the candidate source-to-O_H overlap varies from one to zero, so Schur/commutant/invariant-ring reasoning cannot supply the canonical O_H identity or normalization certificate without new same-surface representation/action/metric data."
+  claim_boundary: "no retained or proposed_retained closure; no canonical O_H certificate written; kappa_s, c2, and Z_match remain underived; outside-math tools remain certificate-producing methods only"
   live_compute: "chunk artifacts are complete; no production chunk worker is running"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_invariant_ring_oh_certificate_attempt.py
+    - docs/YT_PR230_INVARIANT_RING_OH_CERTIFICATE_ATTEMPT_NOTE_2026-05-05.md
+    - outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json
     - scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py
     - docs/YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md
     - outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json

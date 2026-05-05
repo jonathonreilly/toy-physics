@@ -59,6 +59,9 @@ def main() -> int:
         "clean_source_higgs_math_tool_selector": load(
             "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json"
         ),
+        "invariant_ring_oh_certificate_attempt": load(
+            "outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json"
+        ),
         "kinetic_matching": load("outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"),
         "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "scalar_ir": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
@@ -122,6 +125,8 @@ def main() -> int:
         "not proof selectors",
         "PSLQ",
         "invariant-ring/commutant",
+        "Invariant-ring/commutant/Schur multiplicity-one argument",
+        "two-singlet completion",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -264,6 +269,18 @@ def main() -> int:
         is False,
         math_selector.get("actual_current_surface_status"),
     )
+    invariant_attempt = certificates["invariant_ring_oh_certificate_attempt"]
+    report(
+        "invariant-ring-attempt-does-not-certify-oh",
+        "invariant-ring O_H certificate attempt blocked"
+        in str(invariant_attempt.get("actual_current_surface_status"))
+        and invariant_attempt.get("proposal_allowed") is False
+        and invariant_attempt.get("invariant_ring_certificate_passed") is False
+        and invariant_attempt.get("canonical_oh_certificate_written") is False
+        and invariant_attempt.get("future_file_presence", {}).get("canonical_oh_certificate")
+        is False,
+        invariant_attempt.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -293,7 +310,10 @@ def main() -> int:
             "overlap and canonical-Higgs identity certificates.  "
             "Outside-math tools are now included in the assumption firewall: "
             "they may be used only to emit future same-surface certificates, "
-            "not as PSLQ, exact-value, or theorem-name proof selectors.  No current route "
+            "not as PSLQ, exact-value, or theorem-name proof selectors.  The "
+            "invariant-ring O_H certificate attempt confirms this boundary: "
+            "current neutral labels still admit a two-singlet completion and "
+            "do not prove multiplicity one, write O_H, or fix kappa_s.  No current route "
             "certificate authorizes retained proposal wording.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."

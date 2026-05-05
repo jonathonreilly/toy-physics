@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact support / clean source-Higgs outside-math route selector; positive closure still open
-conditional_surface_status: conditional-support if C_sH/C_HH Gram purity, W/Z response, or rank-one neutral scalar theorem closes the overlap
+actual_current_surface_status: exact negative boundary / invariant-ring O_H certificate attempt blocked on current PR230 surface
+conditional_surface_status: conditional-support if a future same-surface representation/action proves multiplicity one or selects the canonical radial generator with LSZ normalization
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "The clean source-Higgs math-tool selector only ranks certificate-producing methods and keeps outside math as algorithmic support.  It does not supply a same-surface O_H identity/normalization certificate, C_sH/C_HH pole rows, neutral irreducibility, Schur rows, strict scalar-LSZ authority, W/Z response rows, matching/running authority, or retained-route/campaign proposal authorization."
+proposal_allowed_reason: "The invariant-ring O_H certificate attempt records a two-singlet neutral scalar completion on the current PR230 surface.  Invariant-ring, commutant, or Schur-lemma reasoning therefore does not derive the canonical O_H identity or normalization certificate without new same-surface representation/action/metric data.  It does not supply C_sH/C_HH pole rows, neutral irreducibility, Schur rows, strict scalar-LSZ authority, W/Z response rows, matching/running authority, or retained-route/campaign proposal authorization."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -15,6 +15,12 @@ Retained/proposed-retained wording is not allowed for this block.
 
 Open imports:
 
+- invariant-ring `O_H` certificate attempt is closed negatively on the current
+  PR230 surface: current neutral scalar labels admit a two-singlet completion,
+  source-only rows stay fixed while source-to-candidate-`O_H` overlap varies,
+  multiplicity one is not derived, no canonical `O_H` certificate is written,
+  and future closure requires same-surface representation/action plus metric
+  authority;
 - clean source-Higgs outside-math route selection is exact support only:
   invariant-ring/commutant, GNS/flat-extension, exact tensor/PEPS,
   holonomic/WZ/Picard-Fuchs, free-probability, PSLQ, and motivic tools are

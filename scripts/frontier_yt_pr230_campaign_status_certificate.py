@@ -521,6 +521,9 @@ def main() -> int:
         "pr230_clean_source_higgs_math_tool_route_selector": load(
             "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json"
         ),
+        "pr230_invariant_ring_oh_certificate_attempt": load(
+            "outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json"
+        ),
         "sm_one_higgs_oh_import_boundary": load(
             "outputs/yt_sm_one_higgs_oh_import_boundary_2026-05-03.json"
         ),
@@ -1952,6 +1955,28 @@ def main() -> int:
         .get("id")
         == "source_higgs_invariant_ring_then_gns_pole_rows",
         statuses["pr230_clean_source_higgs_math_tool_route_selector"],
+    )
+    report(
+        "pr230-invariant-ring-oh-certificate-attempt-blocks-current-surface",
+        "invariant-ring O_H certificate attempt blocked"
+        in str(statuses["pr230_invariant_ring_oh_certificate_attempt"])
+        and certificates["pr230_invariant_ring_oh_certificate_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_invariant_ring_oh_certificate_attempt"].get(
+            "invariant_ring_certificate_passed"
+        )
+        is False
+        and certificates["pr230_invariant_ring_oh_certificate_attempt"].get(
+            "canonical_oh_certificate_written"
+        )
+        is False
+        and certificates["pr230_invariant_ring_oh_certificate_attempt"].get(
+            "future_file_presence", {}
+        ).get("canonical_oh_certificate")
+        is False,
+        statuses["pr230_invariant_ring_oh_certificate_attempt"],
     )
     report(
         "canonical-higgs-operator-realization-gate-not-passed",

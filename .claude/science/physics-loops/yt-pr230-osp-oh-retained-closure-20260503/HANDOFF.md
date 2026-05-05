@@ -1,5 +1,43 @@
 # Handoff
 
+## 2026-05-05 PR230 Invariant-Ring O_H Certificate Attempt
+
+Result: exact negative boundary / invariant-ring `O_H` certificate attempt
+blocked on the current PR230 surface.  This block executes the selected clean
+source-Higgs theorem route and asks whether invariant-ring, commutant, or
+Schur-lemma style reasoning can derive the canonical `O_H` identity and
+normalization certificate from current representation data.
+
+The runner records a two-singlet neutral scalar completion: the degree-one
+invariant space has dimension `2`, the commutant remains rank-two, source-only
+rows stay fixed, and the source-to-candidate-`O_H` overlap varies from one to
+zero.  Therefore multiplicity one is not derived, no canonical `O_H`
+certificate is written, and proposal authority stays false.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_invariant_ring_oh_certificate_attempt.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=21 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=225 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=254 FAIL=0
+```
+
+Claim boundary: no retained or proposed-retained closure.  This block does
+not set `kappa_s`, `c2`, or `Z_match` to one and does not use `H_unit`, Ward
+authority, observed targets, `alpha_LM`/plaquette/`u0`, or PSLQ/value
+recognition.  Exact next action: supply same-surface representation/action
+and metric data proving multiplicity one or selecting the canonical radial
+generator; only then rerun the canonical-Higgs certificate gate and produce
+`C_ss/C_sH/C_HH` pole rows.
+
 ## 2026-05-05 PR230 Clean Source-Higgs Math-Tool Route Selector
 
 Result: exact support / route selection and claim-firewall clarification only.

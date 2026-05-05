@@ -1,5 +1,18 @@
 # Opportunity Queue
 
+2026-05-05 invariant-ring `O_H` certificate attempt update:
+`outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json`
+passes with `PASS=15 FAIL=0`, but closes negatively on the current surface.
+The direct clean route remains the priority, yet its first theorem step now
+has a precise blocker: current neutral scalar representation data admit a
+two-singlet completion, so invariant-ring/commutant/Schur reasoning does not
+prove multiplicity one or canonical `O_H` normalization.  The next positive
+source-Higgs action requires new same-surface representation/action and metric
+data proving multiplicity one or selecting the canonical radial generator;
+otherwise pivot to the next clean theorem route, neutral primitive-cone /
+irreducibility, or to actual `O_H/C_sH/C_HH` rows after a real `O_H`
+certificate exists.
+
 2026-05-05 clean source-Higgs math-tool selector update:
 `outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json`
 passes with `PASS=14 FAIL=0`.  The cleanest physics closure is now the

@@ -1,5 +1,28 @@
 # Review History
 
+## 2026-05-05 Invariant-Ring O_H Certificate Attempt Self-Review
+
+Disposition: pass as exact negative boundary / no current `O_H` certificate
+authority.
+
+Findings:
+
+- The runner executes the clean source-Higgs route selector's first theorem
+  step, but explicitly fails the certificate because multiplicity one is not
+  derived.
+- The counterfamily keeps source-only rows fixed while varying the
+  source-to-candidate-`O_H` overlap, so it exposes exactly why source-only
+  invariant data cannot certify the canonical Higgs overlap.
+- No canonical `O_H` certificate file is written, no source-Higgs production
+  rows are fabricated, and no retained/proposed-retained wording is
+  authorized.
+- The forbidden-import firewall remains intact: no `H_unit`, Ward authority,
+  observed selector, `alpha_LM`/plaquette/`u0`, unit `c2`, unit `Z_match`,
+  unit `kappa_s`, or PSLQ/value-recognition selector is used.
+
+Review-loop iteration 1: local self-review pass.  No retained or
+proposed-retained wording is authorized.
+
 ## 2026-05-05 Clean Source-Higgs Math-Tool Selector Self-Review
 
 Disposition: pass as exact support / route selection only.
