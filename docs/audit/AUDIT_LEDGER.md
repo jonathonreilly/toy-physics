@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 61 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 216 |
+| **retained_bounded** | 217 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 842 |
+| unaudited | 841 |
 | audit_in_progress | 1 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
@@ -40,22 +40,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 372 |
+| `audited_clean` | 373 |
 | `audited_conditional` | 400 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 31 |
-| `unaudited` | 888 |
+| `unaudited` | 887 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 623 |
+| `bounded_theorem` | 624 |
 | `decoration` | 9 |
 | `meta` | 55 |
 | `no_go` | 187 |
 | `open_gate` | 112 |
-| `positive_theorem` | 796 |
+| `positive_theorem` | 795 |
 
 | criticality | count |
 |---|---:|
@@ -332,6 +332,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `pmns_uniform_scalar_deformation_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
+| `poisson_3d_self_field_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `poisson_self_field_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `poisson_self_gravity_born_audit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `poisson_self_gravity_loop_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
@@ -9404,6 +9405,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** For the scalar family D_0^trip = u_0 I_3 and D_-^trip = u_- I_3, both lower-level response profiles remain scalar column sets, so neither sector realizes the required one-sided minimal PMNS class.  _(class `A`)_
 - **chain closes:** True — Within the scoped uniform-scalar lane, the note reduces the deformation to sector-scalar triplet blocks and scalar resolvent profiles. The cached runner constructs the uniform scalar Hamiltonian, verifies the scalar/degenerate response chain, and confirms the live retained lower-level PMNS closure rejects the resulting scalar packs.
 - **rationale:** The claim is a bounded no-go, not a positive PMNS construction: it only closes the uniform translation-invariant scalar deformation route. The load-bearing algebra shows that a uniform scalar condensate cannot split or mix the hw=1 generation triplets, and the induced active/passive response profiles remain scalar. The runner does not merely print constants; it constructs the finite Hamiltonian, computes the response profiles, and invokes the live retained closure stack, which rejects the scalar lane with PASS=22 FAIL=0. Residual risk is confined to the already-scoped reliance on the retained PMNS closure criterion itself, not to this uniform-scalar boundary argument.
+- **auditor confidence:** high
+
+### `poisson_3d_self_field_note`
+
+- **Note:** [`POISSON_3D_SELF_FIELD_NOTE.md`](../../docs/POISSON_3D_SELF_FIELD_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** On the fixed NL=30, W=8, h=0.5 lattice with the stated 6-point Gauss-Seidel 3D Poisson solve and source ladder, the runner computes a static 3D self-field with no explicit longitudinal falloff factor, TOWARD gravity in all three tested families, near-unit F~M exponents, machine-precision Born preservation, and exact s=0 null behavior.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-20260505`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Solve laplacian_3D(f) = -source on the full (x, y, z) lattice with a delta source at the mass position, with both axes coming from the 3D Poisson solve rather than an explicit longitudinal factor.  _(class `C`)_
+- **chain closes:** True — The retained one-hop dependencies cover the earlier bounded 2D Poisson pocket and the bounded no-go for a minimal backreaction loop. The current runner directly solves the fixed 3D Poisson grid and propagates beams through that field, so the scoped finite-lattice result closes without importing an external comparator.
+- **rationale:** The cached runner completed and reproduces the load-bearing bounded behavior: 3/3 TOWARD families, F~M = 0.9999/0.9998/0.9998, exact s=0 null, and a Born residual at machine precision. The source note's literal Born number is stale relative to the current cache (4.99e-16 rather than 1.10e-15), and the printed profile is evidence for this finite Poisson field, not a standalone continuum 1/r theorem. With those boundaries, the claim is clean as a bounded finite-run theorem.
 - **auditor confidence:** high
 
 ### `poisson_exhaustive_uniqueness_note`
