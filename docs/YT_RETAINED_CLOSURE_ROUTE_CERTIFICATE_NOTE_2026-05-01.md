@@ -18,8 +18,27 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=186 FAIL=0
+# SUMMARY: PASS=187 FAIL=0
 ```
+
+## 2026-05-05 Contact-Subtraction Identifiability Update
+
+The retained-route certificate now consumes
+`outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json`.
+After the current `C_ss` proxy failed Stieltjes monotonicity, this boundary
+blocks the next shortcut: choosing a local contact subtraction only because it
+restores finite-row monotonicity.  The current rows admit a continuum of
+affine contact slopes that make the residual positive and non-increasing, with
+representative choices changing the high-momentum residual by `2425.007` row
+standard errors.
+
+Validation: contact-subtraction boundary `PASS=10 FAIL=0`; retained-route
+`PASS=187 FAIL=0`; campaign status `PASS=213 FAIL=0`; full positive closure
+assembly gate `PASS=38 FAIL=0`; non-chunk worklist `PASS=19 FAIL=0`.
+
+This closes only the arbitrary-contact-choice shortcut.  It is not retained
+closure and does not rule out a same-surface contact-subtraction certificate or
+microscopic scalar-denominator theorem.
 
 ## 2026-05-05 Polefit8x8 Stieltjes Proxy Diagnostic Update
 

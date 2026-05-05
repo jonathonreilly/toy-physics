@@ -113,6 +113,7 @@ def main() -> int:
         "fh_lsz_stieltjes_moment_certificate_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
         "fh_lsz_pade_stieltjes_bounds_gate": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
         "fh_lsz_polefit8x8_stieltjes_proxy_diagnostic": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json",
+        "fh_lsz_contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
         "fh_lsz_pole_saturation_threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
         "fh_lsz_threshold_authority_audit": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json",
         "confinement_gap_threshold_import": "outputs/yt_confinement_gap_threshold_import_audit_2026-05-02.json",
@@ -631,6 +632,24 @@ def main() -> int:
         is False
         and certificates["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"].get(
             "stieltjes_proxy_certificate_passed"
+        )
+        is False
+    )
+    contact_subtraction_identifiability_blocks = (
+        "contact-subtraction identifiability obstruction"
+        in certificates["fh_lsz_contact_subtraction_identifiability"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["fh_lsz_contact_subtraction_identifiability"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["fh_lsz_contact_subtraction_identifiability"].get(
+            "contact_subtraction_identifiability_obstruction_passed"
+        )
+        is True
+        and certificates["fh_lsz_contact_subtraction_identifiability"].get(
+            "contact_subtraction_certificate_present"
         )
         is False
     )
@@ -2132,6 +2151,13 @@ def main() -> int:
         "fh-lsz-polefit8x8-stieltjes-proxy-diagnostic-blocks-current-proxy",
         stieltjes_proxy_diagnostic_blocks,
         certificates["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "fh-lsz-contact-subtraction-identifiability-blocks-arbitrary-subtraction",
+        contact_subtraction_identifiability_blocks,
+        certificates["fh_lsz_contact_subtraction_identifiability"].get(
             "actual_current_surface_status", ""
         ),
     )

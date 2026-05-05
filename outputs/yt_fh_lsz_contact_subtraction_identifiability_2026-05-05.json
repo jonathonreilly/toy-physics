@@ -1,0 +1,226 @@
+{
+  "actual_current_surface_status": "exact negative boundary / contact-subtraction identifiability obstruction",
+  "adjacent_raw_slopes": [
+    {
+      "delta_C_ss_real": 0.0029459190602455776,
+      "from_p_hat_sq": 0.0,
+      "slope": 0.010994319607822059,
+      "to_p_hat_sq": 0.26794919243112264
+    },
+    {
+      "delta_C_ss_real": 0.0029841451749690884,
+      "from_p_hat_sq": 0.26794919243112264,
+      "slope": 0.011136981410146157,
+      "to_p_hat_sq": 0.5358983848622453
+    },
+    {
+      "delta_C_ss_real": 0.00302464546794029,
+      "from_p_hat_sq": 0.5358983848622453,
+      "slope": 0.011288130561236105,
+      "to_p_hat_sq": 0.803847577293368
+    },
+    {
+      "delta_C_ss_real": 0.0025967312064292813,
+      "from_p_hat_sq": 0.803847577293368,
+      "slope": 0.013238333590775921,
+      "to_p_hat_sq": 0.9999999999999998
+    },
+    {
+      "delta_C_ss_real": 0.003110007897533462,
+      "from_p_hat_sq": 0.9999999999999998,
+      "slope": 0.011606707485535349,
+      "to_p_hat_sq": 1.2679491924311224
+    },
+    {
+      "delta_C_ss_real": 0.003161975728888544,
+      "from_p_hat_sq": 1.2679491924311224,
+      "slope": 0.011800654072511676,
+      "to_p_hat_sq": 1.5358983848622452
+    },
+    {
+      "delta_C_ss_real": 0.005954648067500512,
+      "from_p_hat_sq": 1.5358983848622452,
+      "slope": 0.012830483396902329,
+      "to_p_hat_sq": 1.9999999999999996
+    }
+  ],
+  "admissible_affine_contact_slope_interval": {
+    "interval_nonempty": true,
+    "lower_bound_from_monotonicity": 0.013238333590775921,
+    "upper_bound_from_residual_positivity": 0.07306990344790075
+  },
+  "contact_families": [
+    {
+      "affine_contact_slope": 0.02819622605505713,
+      "label": "contact_family_a",
+      "passes_positive_nonincrease_necessary_check": true,
+      "residual_rows": [
+        {
+          "contact_term": 0.0,
+          "p_hat_sq": 0.0,
+          "raw_C_ss_real": 0.12236173429229472,
+          "residual_C_ss_real": 0.12236173429229472
+        },
+        {
+          "contact_term": 0.007555156001057937,
+          "p_hat_sq": 0.26794919243112264,
+          "raw_C_ss_real": 0.1253076533525403,
+          "residual_C_ss_real": 0.11775249735148235
+        },
+        {
+          "contact_term": 0.015110312002115874,
+          "p_hat_sq": 0.5358983848622453,
+          "raw_C_ss_real": 0.12829179852750938,
+          "residual_C_ss_real": 0.1131814865253935
+        },
+        {
+          "contact_term": 0.022665468003173813,
+          "p_hat_sq": 0.803847577293368,
+          "raw_C_ss_real": 0.13131644399544967,
+          "residual_C_ss_real": 0.10865097599227586
+        },
+        {
+          "contact_term": 0.028196226055057123,
+          "p_hat_sq": 0.9999999999999998,
+          "raw_C_ss_real": 0.13391317520187895,
+          "residual_C_ss_real": 0.10571694914682184
+        },
+        {
+          "contact_term": 0.03575138205611506,
+          "p_hat_sq": 1.2679491924311224,
+          "raw_C_ss_real": 0.13702318309941242,
+          "residual_C_ss_real": 0.10127180104329736
+        },
+        {
+          "contact_term": 0.043306538057173,
+          "p_hat_sq": 1.5358983848622452,
+          "raw_C_ss_real": 0.14018515882830096,
+          "residual_C_ss_real": 0.09687862077112797
+        },
+        {
+          "contact_term": 0.05639245211011425,
+          "p_hat_sq": 1.9999999999999996,
+          "raw_C_ss_real": 0.14613980689580147,
+          "residual_C_ss_real": 0.08974735478568723
+        }
+      ]
+    },
+    {
+      "affine_contact_slope": 0.05811201098361954,
+      "label": "contact_family_b",
+      "passes_positive_nonincrease_necessary_check": true,
+      "residual_rows": [
+        {
+          "contact_term": 0.0,
+          "p_hat_sq": 0.0,
+          "raw_C_ss_real": 0.12236173429229472,
+          "residual_C_ss_real": 0.12236173429229472
+        },
+        {
+          "contact_term": 0.015571066413609384,
+          "p_hat_sq": 0.26794919243112264,
+          "raw_C_ss_real": 0.1253076533525403,
+          "residual_C_ss_real": 0.1097365869389309
+        },
+        {
+          "contact_term": 0.03114213282721877,
+          "p_hat_sq": 0.5358983848622453,
+          "raw_C_ss_real": 0.12829179852750938,
+          "residual_C_ss_real": 0.09714966570029061
+        },
+        {
+          "contact_term": 0.04671319924082815,
+          "p_hat_sq": 0.803847577293368,
+          "raw_C_ss_real": 0.13131644399544967,
+          "residual_C_ss_real": 0.08460324475462153
+        },
+        {
+          "contact_term": 0.058112010983619525,
+          "p_hat_sq": 0.9999999999999998,
+          "raw_C_ss_real": 0.13391317520187895,
+          "residual_C_ss_real": 0.07580116421825943
+        },
+        {
+          "contact_term": 0.0736830773972289,
+          "p_hat_sq": 1.2679491924311224,
+          "raw_C_ss_real": 0.13702318309941242,
+          "residual_C_ss_real": 0.06334010570218351
+        },
+        {
+          "contact_term": 0.08925414381083831,
+          "p_hat_sq": 1.5358983848622452,
+          "raw_C_ss_real": 0.14018515882830096,
+          "residual_C_ss_real": 0.05093101501746265
+        },
+        {
+          "contact_term": 0.11622402196723905,
+          "p_hat_sq": 1.9999999999999996,
+          "raw_C_ss_real": 0.14613980689580147,
+          "residual_C_ss_real": 0.029915784928562422
+        }
+      ]
+    }
+  ],
+  "contact_subtraction_certificate_present": false,
+  "contact_subtraction_identifiability_obstruction_passed": true,
+  "exact_next_action": "Supply a same-surface contact-subtraction certificate or microscopic scalar-denominator theorem before applying Stieltjes moment tests to a subtracted object.",
+  "fail_count": 0,
+  "pass_count": 10,
+  "proposal_allowed": false,
+  "raw_rows": [
+    {
+      "C_ss_real": 0.12236173429229472,
+      "C_ss_real_stderr": 2.987932282661992e-05,
+      "p_hat_sq": 0.0
+    },
+    {
+      "C_ss_real": 0.1253076533525403,
+      "C_ss_real_stderr": 2.9166228876433568e-05,
+      "p_hat_sq": 0.26794919243112264
+    },
+    {
+      "C_ss_real": 0.12829179852750938,
+      "C_ss_real_stderr": 2.8257993938112537e-05,
+      "p_hat_sq": 0.5358983848622453
+    },
+    {
+      "C_ss_real": 0.13131644399544967,
+      "C_ss_real_stderr": 2.6604518918159593e-05,
+      "p_hat_sq": 0.803847577293368
+    },
+    {
+      "C_ss_real": 0.13391317520187895,
+      "C_ss_real_stderr": 2.6905441929007854e-05,
+      "p_hat_sq": 0.9999999999999998
+    },
+    {
+      "C_ss_real": 0.13702318309941242,
+      "C_ss_real_stderr": 2.6016706208864997e-05,
+      "p_hat_sq": 1.2679491924311224
+    },
+    {
+      "C_ss_real": 0.14018515882830096,
+      "C_ss_real_stderr": 2.49444980406091e-05,
+      "p_hat_sq": 1.5358983848622452
+    },
+    {
+      "C_ss_real": 0.14613980689580147,
+      "C_ss_real_stderr": 2.467274529322724e-05,
+      "p_hat_sq": 1.9999999999999996
+    }
+  ],
+  "residual_spread_at_max_q": {
+    "absolute_spread": 0.0598315698571248,
+    "row_stderr": 2.467274529322724e-05,
+    "z_score_if_stderr_trusted": 2425.006587067909
+  },
+  "stieltjes_certificate_from_contact_subtraction_passed": false,
+  "strict_non_claims": [
+    "does not claim a valid contact-subtracted scalar two-point function",
+    "does not create a Stieltjes moment certificate",
+    "does not determine a pole residue or kappa_s",
+    "does not use H_unit, Ward authority, observed targets, alpha_LM, plaquette, u0, c2=1, Z_match=1, or kappa_s=1"
+  ],
+  "theorem": "If a local contact ambiguity C(x) -> C(x) - a x is not fixed by a same-surface renormalization, denominator, or canonical source theorem, then finite C(x_i) rows plus monotonicity do not determine a unique Stieltjes object.  Any a above the largest adjacent raw slope and below min_i C(x_i)/x_i gives positive non-increasing finite residual rows.",
+  "verdict": "The current finite polefit8x8 rows do not select a contact subtraction. A continuum of affine local terms can make the residual pass the necessary positive non-increasing Stieltjes precheck, and distinct choices change the residual by many row standard errors.  Therefore monotonicity-restoration alone cannot define the scalar LSZ object, pole residue, or kappa_s."
+}

@@ -21,11 +21,12 @@ This is an integration/worklist gate, not a physics closure theorem.
   W/Z mass-response rows, non-observed `g_2`, and strict `delta_perp`; or
   derive a real same-surface product-measure/conditional-independence theorem.
 - **Scalar-LSZ model/FV/IR:** produce a strict Stieltjes/Pade
-  moment-threshold-FV certificate, a scalar-denominator/analytic-continuation
-  theorem, or a uniform threshold/FV/IR pole-saturation bound.  The current
-  polefit8x8 `C_ss` proxy now has an explicit diagnostic blocker: it fails
-  necessary Stieltjes monotonicity and cannot serve as the strict moment
-  certificate.
+  moment-threshold-FV certificate, a same-surface contact-subtraction
+  certificate, a scalar-denominator/analytic-continuation theorem, or a
+  uniform threshold/FV/IR pole-saturation bound.  The current polefit8x8
+  `C_ss` proxy now has explicit blockers: it fails necessary Stieltjes
+  monotonicity, and finite-row monotonicity restoration does not identify a
+  unique contact subtraction.
 - **Schur/scalar-denominator rows:** supply same-surface Schur `A/B/C` kernel
   rows; current FH/LSZ source rows do not substitute.
 - **Neutral rank-one:** derive a strict primitive-cone/positivity-improving
@@ -44,5 +45,5 @@ real positive certificate and the aggregate gates pass.
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
 python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
-# SUMMARY: PASS=18 FAIL=0
+# SUMMARY: PASS=19 FAIL=0
 ```

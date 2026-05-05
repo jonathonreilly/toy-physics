@@ -145,6 +145,9 @@ def main() -> int:
         "fh_lsz_polefit8x8_stieltjes_proxy_diagnostic": load(
             "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json"
         ),
+        "fh_lsz_contact_subtraction_identifiability": load(
+            "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -916,6 +919,24 @@ def main() -> int:
         )
         is False,
         statuses["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"],
+    )
+    report(
+        "fh-lsz-contact-subtraction-identifiability-blocks-arbitrary-subtraction",
+        "contact-subtraction identifiability obstruction"
+        in str(statuses["fh_lsz_contact_subtraction_identifiability"])
+        and certificates["fh_lsz_contact_subtraction_identifiability"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["fh_lsz_contact_subtraction_identifiability"].get(
+            "contact_subtraction_identifiability_obstruction_passed"
+        )
+        is True
+        and certificates["fh_lsz_contact_subtraction_identifiability"].get(
+            "contact_subtraction_certificate_present"
+        )
+        is False,
+        statuses["fh_lsz_contact_subtraction_identifiability"],
     )
     report(
         "fh-lsz-pole-saturation-threshold-gate-blocks",

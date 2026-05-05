@@ -1,5 +1,38 @@
 # Review History
 
+## Review-Loop Backpressure - Contact-Subtraction Identifiability Boundary
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY FOR ARBITRARY CONTACT CHOICE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- the runner proves finite-row monotonicity restoration does not identify the
+  contact subtraction;
+- the admissible affine contact-slope interval is nonempty, so multiple
+  subtracted residuals pass the necessary positive non-increase check;
+- the blocker is scoped to arbitrary contact choice, not to a future
+  same-surface contact-subtraction certificate or microscopic denominator
+  theorem;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_contact_subtraction_identifiability.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+```
+
 ## Review-Loop Backpressure - Polefit8x8 Stieltjes Proxy Diagnostic
 
 Local review-loop disposition:

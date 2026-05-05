@@ -1,5 +1,37 @@
 # Claim Status Certificate
 
+Contact-subtraction identifiability boundary:
+
+```text
+actual_current_surface_status: exact negative boundary / contact-subtraction identifiability obstruction
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_contact_subtraction_identifiability.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=187 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=213 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=38 FAIL=0
+
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+# SUMMARY: PASS=19 FAIL=0
+```
+
+The current finite polefit8x8 rows do not select a contact subtraction.  A
+continuum of affine local terms can make the finite residual positive and
+non-increasing, with representative choices changing the max-q residual by
+`2425.007` row standard errors.  This blocks arbitrary
+monotonicity-restoring contact subtraction as scalar-LSZ authority.  It does
+not rule out a same-surface contact-subtraction certificate, microscopic
+denominator theorem, or physical-response route.  No retained or
+`proposed_retained` wording is authorized.
+
 Polefit8x8 Stieltjes proxy diagnostic:
 
 ```text

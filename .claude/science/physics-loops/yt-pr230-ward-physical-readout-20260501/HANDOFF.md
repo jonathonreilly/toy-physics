@@ -1,5 +1,38 @@
 # Handoff
 
+Latest checkpoint, 2026-05-05 contact-subtraction identifiability boundary:
+
+- Added
+  `scripts/frontier_yt_fh_lsz_contact_subtraction_identifiability.py`,
+  `docs/YT_FH_LSZ_CONTACT_SUBTRACTION_IDENTIFIABILITY_NOTE_2026-05-05.md`,
+  and
+  `outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json`.
+- Result: the current finite polefit8x8 rows do not select a local contact
+  subtraction after the raw `C_ss` proxy fails Stieltjes monotonicity.  The
+  measured rows admit a continuum of affine contact slopes that make the
+  residual positive and non-increasing; two representative choices change the
+  high-momentum residual by `2425.007` row standard errors.
+- The admissible affine slope interval is
+  `[0.0132383335908, 0.0730699034479)`, set by monotonicity below and
+  residual positivity above.  No current-surface certificate selects a point
+  in that interval.
+- Wired the boundary into retained-route, campaign-status, full-assembly, and
+  non-chunk worklist runners.  Validation: contact-subtraction boundary
+  `PASS=10 FAIL=0`; retained-route `PASS=187 FAIL=0`; campaign status
+  `PASS=213 FAIL=0`; full assembly `PASS=38 FAIL=0`; non-chunk worklist
+  `PASS=19 FAIL=0`.
+- Claim boundary: this blocks only arbitrary monotonicity-restoring contact
+  subtraction.  It does not rule out a same-surface contact-subtraction
+  certificate, microscopic scalar-denominator theorem, or physical-response
+  route.  No retained or proposed-retained closure is authorized.
+- Chunks025-030 were still active at the last poll, and their root artifacts
+  were absent; no active chunk output is counted.
+
+Next exact action: if chunks025-030 finish, package only root JSONs that pass
+the polefit8x8 gate chain.  Otherwise the best scalar-LSZ positive move is a
+same-surface contact-subtraction certificate or microscopic scalar-denominator
+theorem that fixes the subtracted object before Stieltjes tests are applied.
+
 Latest checkpoint, 2026-05-05 polefit8x8 Stieltjes proxy diagnostic:
 
 - Added

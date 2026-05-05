@@ -152,6 +152,7 @@
     "fh_lsz_common_window_replacement_response_stability": "bounded-support / FH-LSZ common-window replacement response-stability passed",
     "fh_lsz_common_window_response_gate": "bounded-support / FH-LSZ common-window response gate passed as support",
     "fh_lsz_common_window_response_provenance": "bounded-support / FH-LSZ common-window response provenance",
+    "fh_lsz_contact_subtraction_identifiability": "exact negative boundary / contact-subtraction identifiability obstruction",
     "fh_lsz_eight_mode_noise_variance": "bounded-support / FH-LSZ eight-mode noise variance gate passed for launch support",
     "fh_lsz_finite_shell_identifiability": "exact negative boundary / FH-LSZ finite-shell pole-fit identifiability no-go",
     "fh_lsz_finite_source_linearity_calibration": "bounded-support / FH-LSZ finite-source-linearity calibration checkpoint",
@@ -325,7 +326,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 212,
+  "pass_count": 213,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

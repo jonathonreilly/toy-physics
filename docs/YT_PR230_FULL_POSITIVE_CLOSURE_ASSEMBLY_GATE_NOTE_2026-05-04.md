@@ -42,10 +42,15 @@ model-class/FV/IR control, a canonical-Higgs/source-overlap bridge, matching
 authority, and retained-route authorization.
 
 2026-05-05 update: the gate also consumes
+`outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json` and
 `outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json`.
 The current polefit8x8 `C_ss(q_hat^2)` proxy fails necessary Stieltjes
 monotonicity, so the existing finite-shell proxy cannot satisfy the strict
-scalar-LSZ moment-certificate requirement.
+scalar-LSZ moment-certificate requirement.  The contact-subtraction boundary
+also blocks choosing a local subtraction from finite-row monotonicity
+restoration alone; a same-surface contact-subtraction certificate or
+microscopic scalar-denominator theorem is still required before a subtracted
+object can satisfy the scalar-LSZ leg.
 
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.

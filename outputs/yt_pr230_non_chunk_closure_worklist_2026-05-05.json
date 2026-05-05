@@ -15,6 +15,7 @@
   "future_file_presence": {
     "canonical_oh_certificate": false,
     "certified_physical_readout": false,
+    "contact_subtraction_certificate": false,
     "delta_perp_rows": false,
     "matched_top_wz_rows": false,
     "neutral_irreducibility_certificate": false,
@@ -37,6 +38,7 @@
     "electroweak_g2_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
     "fms_oh_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
     "kprime_attempt": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
+    "lsz_contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
     "lsz_fv_obstruction": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
     "lsz_model_class": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
     "lsz_model_class_firewall": "outputs/yt_fh_lsz_model_class_semantic_firewall_2026-05-04.json",
@@ -81,7 +83,7 @@
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_same_source_action_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json"
   },
-  "pass_count": 18,
+  "pass_count": 19,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Current and chunk-only assembly are rejected.  The strict future files for O_H/source-Higgs, scalar-LSZ, W/Z response, Schur rows, neutral irreducibility, and certified physical readout are absent.",
   "strict_non_claims": [
@@ -137,6 +139,7 @@
         "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
         "exact-support / FH-LSZ Pade-Stieltjes bounds gate; strict moment-threshold certificate absent",
         "exact negative boundary / current polefit8x8 C_ss proxy fails Stieltjes monotonicity",
+        "exact negative boundary / contact-subtraction identifiability obstruction",
         "open / FH-LSZ pole-saturation threshold gate blocks current finite-shell fit",
         "exact negative boundary / FH-LSZ finite-volume pole-saturation obstruction",
         "exact negative boundary / FH-LSZ soft-continuum threshold no-go",
@@ -148,7 +151,8 @@
       "next_action": "produce a strict Stieltjes moment certificate, derive a scalar denominator/analytic-continuation theorem, or prove a uniform threshold/FV/IR pole-saturation bound",
       "remaining": [
         "outputs/yt_fh_lsz_stieltjes_moment_certificate_2026-05-05.json",
-        "outputs/yt_fh_lsz_pade_stieltjes_bounds_certificate_2026-05-05.json"
+        "outputs/yt_fh_lsz_pade_stieltjes_bounds_certificate_2026-05-05.json",
+        "outputs/yt_fh_lsz_contact_subtraction_certificate_2026-05-05.json"
       ]
     },
     {

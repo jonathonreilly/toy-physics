@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-05 update: the contact-subtraction identifiability boundary is now
+landed and wired into retained-route, campaign-status, full-assembly, and
+non-chunk worklist gates.  It proves the current finite polefit8x8 rows do not
+select a local contact subtraction after the raw `C_ss` proxy fails Stieltjes
+monotonicity.  A continuum of affine contact slopes makes the finite residual
+positive and non-increasing, and representative choices change the max-q
+residual by thousands of row standard errors.  The scalar-LSZ positive route
+therefore needs a same-surface contact-subtraction certificate or microscopic
+scalar-denominator theorem before any subtracted object can be used in
+Stieltjes tests.  Chunks025-030 remain compute-in-flight and count only after
+root artifacts pass gates.
+
 2026-05-05 update: the polefit8x8 Stieltjes proxy diagnostic is now landed and
 wired into retained-route, campaign-status, full-assembly, and non-chunk
 worklist gates.  It proves the current finite-shell `C_ss(q_hat^2)` proxy is

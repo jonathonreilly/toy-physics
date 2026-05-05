@@ -1,5 +1,25 @@
 # No-Go Ledger
 
+## Contact-subtraction monotonicity restoration does not identify scalar LSZ
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_contact_subtraction_identifiability.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+The current finite polefit8x8 rows admit a continuum of affine local contact
+subtractions `C_sub(x)=C_raw(x)-a x` that make the residual positive and
+non-increasing.  The admissible slope interval is nonempty, and representative
+choices change the max-q residual by `2425.007` row standard errors.
+
+Do not retry the scalar-LSZ route by choosing a contact term from finite-row
+monotonicity restoration.  A future positive route needs a same-surface
+contact-subtraction certificate or microscopic scalar-denominator theorem that
+fixes the subtracted object before any Stieltjes moment test can be
+load-bearing.
+
 ## Polefit8x8 C_ss proxy is not the strict Stieltjes certificate
 
 Runner:

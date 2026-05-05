@@ -13,11 +13,14 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-204-polefit8x8-stieltjes-proxy-diagnostic
-blocks_completed: 204
-active_route: "FH/LSZ scalar-LSZ Stieltjes proxy diagnostic"
-active_hard_residual: "The current polefit8x8 C_ss finite-shell proxy fails a necessary Stieltjes monotonicity check: C_ss increases across every adjacent q_hat^2 shell, whereas an unsubtracted positive Stieltjes scalar two-point function must be non-increasing.  New diagnostic PASS=9 FAIL=0; retained-route PASS=186 FAIL=0; campaign status PASS=212 FAIL=0; full assembly PASS=37 FAIL=0; non-chunk worklist PASS=18 FAIL=0 after rebasing over the Pade-Stieltjes and neutral primitive-cone gates.  This blocks using the current polefit8x8 proxy as the strict Stieltjes moment certificate; it does not rule out a certified contact-subtracted scalar two-point object or a microscopic denominator theorem.  No retained/proposed-retained closure is authorized."
+current_phase: campaign-block-205-contact-subtraction-identifiability
+blocks_completed: 205
+active_route: "FH/LSZ contact-subtraction identifiability boundary"
+active_hard_residual: "The current finite polefit8x8 rows do not select a contact subtraction after the C_ss proxy failed Stieltjes monotonicity.  A continuum of affine local terms C_sub(x)=C_raw(x)-a x passes the necessary positive non-increase precheck: admissible slope interval lower=0.0132383335908, upper=0.0730699034479, with two representative choices changing the max-q residual by 2425.007 row standard errors.  New boundary PASS=10 FAIL=0; retained-route PASS=187 FAIL=0; campaign status PASS=213 FAIL=0; full assembly PASS=38 FAIL=0; non-chunk worklist PASS=19 FAIL=0.  This blocks arbitrary monotonicity-restoring contact subtraction as scalar LSZ authority; it does not rule out a same-surface contact-subtraction certificate or microscopic denominator theorem.  No retained/proposed-retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_fh_lsz_contact_subtraction_identifiability.py"
+  - "docs/YT_FH_LSZ_CONTACT_SUBTRACTION_IDENTIFIABILITY_NOTE_2026-05-05.md"
+  - "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json"
   - "scripts/frontier_yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic.py"
   - "docs/YT_FH_LSZ_POLEFIT8X8_STIELTJES_PROXY_DIAGNOSTIC_NOTE_2026-05-05.md"
   - "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json"

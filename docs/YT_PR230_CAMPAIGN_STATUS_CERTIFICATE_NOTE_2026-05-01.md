@@ -26,8 +26,27 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=212 FAIL=0
+# SUMMARY: PASS=213 FAIL=0
 ```
+
+## 2026-05-05 Contact-Subtraction Identifiability Update
+
+The campaign status certificate now consumes
+`outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json`.
+This closes the shortcut where the failed raw `C_ss` Stieltjes proxy is
+repaired by choosing a local contact term from finite-row monotonicity alone.
+The measured rows admit a continuum of affine contact slopes that make the
+finite residual positive and non-increasing, and distinct choices shift the
+high-momentum residual by `2425.007` row standard errors.
+
+Validation: contact-subtraction boundary `PASS=10 FAIL=0`; retained-route
+`PASS=187 FAIL=0`; campaign status `PASS=213 FAIL=0`; full positive closure
+assembly gate `PASS=38 FAIL=0`; non-chunk worklist `PASS=19 FAIL=0`.
+
+This is an exact negative boundary for arbitrary contact choice only.  It does
+not rule out a same-surface contact-subtraction certificate, microscopic
+scalar-denominator theorem, or a separate physical-response/source-overlap
+route.  No retained or `proposed_retained` closure is authorized.
 
 ## 2026-05-05 Polefit8x8 Stieltjes Proxy Diagnostic Update
 
