@@ -16,11 +16,29 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-next-artifact"
   holder_id: "codex-thread-pr230-next-artifact"
-current_phase: campaign-block-233-holonomic-source-response-gate-wiring
-blocks_completed: 233
-active_route: "PR541-style holonomic source-response feasibility gate integration"
-active_hard_residual: "The PR541-style holonomic/source-generating-functional route is relevant but blocked by the same missing current-surface O_H/h-source artifact as the action-first O_H route.  Creative telescoping, Picard-Fuchs/D-module, and tensor methods can compute defined Z(beta,s,h) rows only after the PR230 action/measure, source operator, canonical O_H, and source coordinates are defined on the same current surface.  Source-only Z(s,0) does not determine C_sH, C_HH, or Gram purity.  Holonomic gate PASS=17 FAIL=0, assumption stress PASS=30 FAIL=0, campaign status PASS=265 FAIL=0, full assembly PASS=85 FAIL=0, retained-route PASS=233 FAIL=0.  No retained/proposed-retained closure is authorized."
+current_phase: campaign-block-234-complete-bernstein-inverse-diagnostic
+blocks_completed: 234
+active_route: "strict scalar-LSZ complete-Bernstein inverse-propagator diagnostic"
+active_hard_residual: "The completed L12 eight-mode/x8 polefit proxy fails both scalar Stieltjes monotonicity and the inverse-denominator necessary condition.  For a nonzero positive Stieltjes propagator C(x), Gamma(x)=1/C(x) must be complete Bernstein and in particular monotone non-decreasing, but current Gamma_ss decreases across every adjacent q_hat^2 shell.  Complete-Bernstein diagnostic PASS=14 FAIL=0, assumption stress PASS=31 FAIL=0, campaign status PASS=266 FAIL=0, full assembly PASS=86 FAIL=0, retained-route PASS=234 FAIL=0.  No retained/proposed-retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_fh_lsz_complete_bernstein_inverse_diagnostic.py"
+  - "docs/YT_FH_LSZ_COMPLETE_BERNSTEIN_INVERSE_DIAGNOSTIC_NOTE_2026-05-05.md"
+  - "outputs/yt_fh_lsz_complete_bernstein_inverse_diagnostic_2026-05-05.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/ASSUMPTIONS_AND_IMPORTS.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/NO_GO_LEDGER.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
+  - "scripts/frontier_yt_pr230_assumption_import_stress.py"
+  - "outputs/yt_pr230_assumption_import_stress_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py"
+  - "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
   - "docs/YT_PR230_HOLONOMIC_SOURCE_RESPONSE_FEASIBILITY_GATE_NOTE_2026-05-05.md"
   - "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/ASSUMPTIONS_AND_IMPORTS.md"

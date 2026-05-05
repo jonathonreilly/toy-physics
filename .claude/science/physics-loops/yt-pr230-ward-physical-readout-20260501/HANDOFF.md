@@ -1,5 +1,31 @@
 # Handoff
 
+Latest checkpoint, 2026-05-05 complete-Bernstein scalar-LSZ inverse diagnostic:
+
+- Added `scripts/frontier_yt_fh_lsz_complete_bernstein_inverse_diagnostic.py`,
+  `docs/YT_FH_LSZ_COMPLETE_BERNSTEIN_INVERSE_DIAGNOSTIC_NOTE_2026-05-05.md`,
+  and
+  `outputs/yt_fh_lsz_complete_bernstein_inverse_diagnostic_2026-05-05.json`.
+- This tests a stricter outside-math scalar-LSZ condition on the completed
+  L12 eight-mode/x8 rows: if `C_ss(q_hat^2)` were a nonzero positive
+  Stieltjes scalar propagator, then `Gamma_ss = 1/C_ss` would be complete
+  Bernstein and hence monotone non-decreasing.
+- Result: exact negative boundary.  The current `Gamma_ss_real_proxy` is
+  positive but decreases across every adjacent shell, so the polefit8x8
+  inverse proxy is not scalar-LSZ denominator authority.
+- Verification: complete-Bernstein diagnostic `PASS=14 FAIL=0`; assumption
+  stress `PASS=31 FAIL=0`; campaign status `PASS=266 FAIL=0`; full assembly
+  `PASS=86 FAIL=0`; retained-route `PASS=234 FAIL=0`.
+- Claim boundary: no scalar-LSZ closure, canonical-Higgs/source-overlap bridge,
+  retained closure, or `proposed_retained` closure is authorized.
+
+Next exact action: do not spend more effort treating current finite-shell
+`C_ss` or `Gamma_ss` proxies as physical LSZ objects.  A scalar route needs a
+certified contact-subtracted scalar two-point object or microscopic scalar
+denominator theorem, with Stieltjes, Pade, complete-Bernstein, threshold, and
+FV/IR gates rerun.  Otherwise pivot to certified `O_H/C_sH/C_HH` pole rows or
+genuine same-source W/Z response rows.
+
 Latest checkpoint, 2026-05-05 PR541-style holonomic source-response gate wiring:
 
 - Updated the existing

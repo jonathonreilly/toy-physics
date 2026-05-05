@@ -1,0 +1,188 @@
+{
+  "actual_current_surface_status": "exact negative boundary / current polefit8x8 inverse proxy fails complete-Bernstein monotonicity",
+  "bare_retained_allowed": false,
+  "complete_bernstein_inverse_certificate_passed": false,
+  "exact_next_action": "Do not use the current polefit8x8 Gamma_ss proxy as an LSZ denominator.  Supply a certified contact-subtracted scalar object or a microscopic denominator theorem, then rerun Stieltjes, Pade, and complete-Bernstein inverse checks.",
+  "fail_count": 0,
+  "future_positive_route": [
+    "derive a certified contact-subtracted scalar two-point object and rerun Stieltjes plus complete-Bernstein checks",
+    "derive a microscopic scalar denominator theorem whose inverse passes complete-Bernstein/Pick/Hankel tests with threshold and FV/IR authority",
+    "or bypass scalar-source LSZ through certified O_H/C_sH/C_HH rows or same-source W/Z response rows"
+  ],
+  "input_rows": [
+    {
+      "C_ss_real": 0.12237470932032389,
+      "C_ss_real_stderr": 1.7896843706078766e-05,
+      "Gamma_ss_real_proxy": 8.171623087434135,
+      "p_hat_sq": 0.0
+    },
+    {
+      "C_ss_real": 0.12532432813740257,
+      "C_ss_real_stderr": 1.724724331030412e-05,
+      "Gamma_ss_real_proxy": 7.97929671646533,
+      "p_hat_sq": 0.26794919243112264
+    },
+    {
+      "C_ss_real": 0.12831316808179513,
+      "C_ss_real_stderr": 1.706675266829964e-05,
+      "Gamma_ss_real_proxy": 7.7934323885022865,
+      "p_hat_sq": 0.5358983848622453
+    },
+    {
+      "C_ss_real": 0.13134916908655814,
+      "C_ss_real_stderr": 1.6745268675325484e-05,
+      "Gamma_ss_real_proxy": 7.613295211186355,
+      "p_hat_sq": 0.803847577293368
+    },
+    {
+      "C_ss_real": 0.1339222215956486,
+      "C_ss_real_stderr": 1.6032587467355515e-05,
+      "Gamma_ss_real_proxy": 7.467020693692644,
+      "p_hat_sq": 0.9999999999999998
+    },
+    {
+      "C_ss_real": 0.13704035520287086,
+      "C_ss_real_stderr": 1.5967993179991006e-05,
+      "Gamma_ss_real_proxy": 7.297120607427111,
+      "p_hat_sq": 1.2679491924311224
+    },
+    {
+      "C_ss_real": 0.14021387765684315,
+      "C_ss_real_stderr": 1.5792296771502457e-05,
+      "Gamma_ss_real_proxy": 7.131961662506628,
+      "p_hat_sq": 1.5358983848622452
+    },
+    {
+      "C_ss_real": 0.1461652962440615,
+      "C_ss_real_stderr": 1.5339279324632943e-05,
+      "Gamma_ss_real_proxy": 6.841569275994463,
+      "p_hat_sq": 1.9999999999999996
+    }
+  ],
+  "inverse_monotonicity_violations": [
+    {
+      "delta_Gamma_ss_real_proxy": -0.19232637096880456,
+      "from_p_hat_sq": 0.0,
+      "slope_delta_Gamma_over_delta_x": -0.7177717880909187,
+      "to_p_hat_sq": 0.26794919243112264
+    },
+    {
+      "delta_Gamma_ss_real_proxy": -0.18586432796304386,
+      "from_p_hat_sq": 0.26794919243112264,
+      "slope_delta_Gamma_over_delta_x": -0.6936551152727247,
+      "to_p_hat_sq": 0.5358983848622453
+    },
+    {
+      "delta_Gamma_ss_real_proxy": -0.18013717731593104,
+      "from_p_hat_sq": 0.5358983848622453,
+      "slope_delta_Gamma_over_delta_x": -0.6722810980750985,
+      "to_p_hat_sq": 0.803847577293368
+    },
+    {
+      "delta_Gamma_ss_real_proxy": -0.146274517493711,
+      "from_p_hat_sq": 0.803847577293368,
+      "slope_delta_Gamma_over_delta_x": -0.7457186379618729,
+      "to_p_hat_sq": 0.9999999999999998
+    },
+    {
+      "delta_Gamma_ss_real_proxy": -0.16990008626553355,
+      "from_p_hat_sq": 0.9999999999999998,
+      "slope_delta_Gamma_over_delta_x": -0.6340757541533066,
+      "to_p_hat_sq": 1.2679491924311224
+    },
+    {
+      "delta_Gamma_ss_real_proxy": -0.1651589449204831,
+      "from_p_hat_sq": 1.2679491924311224,
+      "slope_delta_Gamma_over_delta_x": -0.6163815737677125,
+      "to_p_hat_sq": 1.5358983848622452
+    },
+    {
+      "delta_Gamma_ss_real_proxy": -0.29039238651216515,
+      "from_p_hat_sq": 1.5358983848622452,
+      "slope_delta_Gamma_over_delta_x": -0.6257086315589983,
+      "to_p_hat_sq": 1.9999999999999996
+    }
+  ],
+  "parent_certificates": {
+    "pade_stieltjes_bounds_gate": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
+    "polefit8x8_combined": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunked_combined_2026-05-04.json",
+    "polefit8x8_postprocessor": "outputs/yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json",
+    "polefit8x8_stieltjes_proxy_diagnostic": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json",
+    "stieltjes_moment_certificate_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json"
+  },
+  "pass_count": 14,
+  "positive_witness": {
+    "adjacent_gamma_slopes": [
+      0.8094808449695667,
+      0.79158090586662,
+      0.7762398754765175,
+      0.7622899318971303,
+      0.750220300040546
+    ],
+    "all_adjacent_gamma_slopes_positive": true,
+    "first_divided_differences": [
+      0.8094808449695667,
+      0.79158090586662,
+      0.7762398754765175,
+      0.7622899318971303,
+      0.750220300040546
+    ],
+    "interpretation": "This witness is not PR230 evidence.  It records the mathematical shape expected from a future certified positive Stieltjes scalar object before inverse-denominator LSZ use.",
+    "model": "C(x)=R/(x+m2)+W/(x+M2), Gamma=1/C",
+    "rows": [
+      {
+        "C": 2.8273809523809526,
+        "Gamma": 0.35368421052631577,
+        "x": 0.0
+      },
+      {
+        "C": 1.7983851235625155,
+        "Gamma": 0.5560544217687075,
+        "x": 0.25
+      },
+      {
+        "C": 1.2601938759809201,
+        "Gamma": 0.7935286935286935,
+        "x": 0.55
+      },
+      {
+        "C": 0.9387796887796886,
+        "Gamma": 1.0652126499454746,
+        "x": 0.9
+      },
+      {
+        "C": 0.6913919413919414,
+        "Gamma": 1.4463576158940397,
+        "x": 1.4
+      },
+      {
+        "C": 0.5272899449035813,
+        "Gamma": 1.8964897959183673,
+        "x": 2.0
+      }
+    ],
+    "second_divided_differences": [
+      -0.03254534382353952,
+      -0.023601585215542283,
+      -0.01641169832869079,
+      -0.010972392596894894
+    ]
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current inverse proxy violates a necessary complete-Bernstein condition and still lacks contact/subtraction authority, threshold control, FV/IR control, and a strict moment or denominator certificate.",
+  "strict_non_claims": [
+    "does not claim scalar LSZ closure",
+    "does not create outputs/yt_fh_lsz_stieltjes_moment_certificate_2026-05-05.json",
+    "does not create outputs/yt_fh_lsz_pade_stieltjes_bounds_certificate_2026-05-05.json",
+    "does not define y_t_bare",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit, Ward authority, alpha_LM, plaquette, u0, or observed targets"
+  ],
+  "theorem": "A nonzero positive Stieltjes function C(x) has reciprocal Gamma(x)=1/C(x) in the complete-Bernstein class.  In particular Gamma is nonnegative and monotone non-decreasing on x>0.  Therefore a scalar two-point proxy whose inverse denominator decreases with q_hat^2 cannot be a strict unsubtracted positive Stieltjes/LSZ denominator certificate.",
+  "verdict": "The completed L12 eight-mode/x8 C_ss proxy also fails the inverse denominator test: Gamma_ss=1/C_ss is positive but decreases with q_hat^2 across every adjacent shell.  A reciprocal of a positive Stieltjes scalar propagator must be a complete Bernstein function, hence monotone non-decreasing.  The current finite-shell proxy is therefore not a strict scalar-LSZ denominator certificate.",
+  "violation_summary": {
+    "all_adjacent_intervals_violate_non_decrease": true,
+    "gamma_span": 1.3300538114396723,
+    "violation_count": 7
+  }
+}

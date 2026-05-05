@@ -37,6 +37,7 @@ PARENTS = {
     "fh_lsz_stieltjes_moment_certificate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
     "fh_lsz_pade_stieltjes_bounds": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
     "fh_lsz_polefit8x8_stieltjes_proxy_diagnostic": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json",
+    "fh_lsz_complete_bernstein_inverse_diagnostic": "outputs/yt_fh_lsz_complete_bernstein_inverse_diagnostic_2026-05-05.json",
     "pr230_scalar_lsz_holonomic_exact_authority": "outputs/yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_2026-05-05.json",
     "pr230_scalar_lsz_carleman_tauberian_determinacy": "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json",
     "fh_lsz_contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
@@ -176,7 +177,8 @@ def closure_conditions() -> list[dict[str, Any]]:
             "why_needed": "Converts finite-shell same-source C_ss rows into a pole LSZ normalization.",
             "current_surface": (
                 "finite-shell/postprocessor gates remain support-only or exact negative "
-                "boundaries; strict Stieltjes/Pade moment-threshold certificate is absent"
+                "boundaries; strict Stieltjes/Pade moment-threshold certificate is absent; "
+                "current inverse proxy fails complete-Bernstein monotonicity"
             ),
         },
         {
@@ -392,6 +394,14 @@ def main() -> int:
         is False
         and certs["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"].get(
             "stieltjes_proxy_certificate_passed"
+        )
+        is False
+        and certs["fh_lsz_complete_bernstein_inverse_diagnostic"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["fh_lsz_complete_bernstein_inverse_diagnostic"].get(
+            "complete_bernstein_inverse_certificate_passed"
         )
         is False
         and certs["pr230_scalar_lsz_holonomic_exact_authority"].get("proposal_allowed")
@@ -988,6 +998,20 @@ def main() -> int:
         )
         is False,
         statuses["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"],
+    )
+    report(
+        "complete-bernstein-inverse-diagnostic-blocks-current-denominator",
+        "complete-Bernstein monotonicity"
+        in statuses["fh_lsz_complete_bernstein_inverse_diagnostic"]
+        and certs["fh_lsz_complete_bernstein_inverse_diagnostic"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["fh_lsz_complete_bernstein_inverse_diagnostic"].get(
+            "complete_bernstein_inverse_certificate_passed"
+        )
+        is False,
+        statuses["fh_lsz_complete_bernstein_inverse_diagnostic"],
     )
     report(
         "scalar-lsz-holonomic-exact-authority-attempt-blocks-current-finite-shell",

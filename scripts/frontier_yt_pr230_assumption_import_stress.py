@@ -80,6 +80,9 @@ def main() -> int:
         "scalar_lsz_carleman_tauberian_determinacy_attempt": load(
             "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json"
         ),
+        "fh_lsz_complete_bernstein_inverse_diagnostic": load(
+            "outputs/yt_fh_lsz_complete_bernstein_inverse_diagnostic_2026-05-05.json"
+        ),
         "fresh_artifact_literature_route_review": load(
             "outputs/yt_pr230_fresh_artifact_literature_route_review_2026-05-05.json"
         ),
@@ -166,6 +169,8 @@ def main() -> int:
         "not proof selectors until same-source EW action, scale ratio, thresholds, and finite matching exist",
         "Carleman/Tauberian scalar-LSZ determinacy",
         "not proof selectors until an infinite same-surface moment/asymptotic certificate exists",
+        "Complete-Bernstein inverse-propagator diagnostic",
+        "not proof selectors until a certified scalar denominator object passes the inverse tests",
         "FMS/action-first source-Higgs artifact route",
         "action-first `O_H/C_sH/C_HH`",
         "PR541-style holonomic source-response route",
@@ -385,6 +390,20 @@ def main() -> int:
         and carleman_attempt.get("finite_prefix_stieltjes_counterfamily_passed")
         is True,
         carleman_attempt.get("actual_current_surface_status"),
+    )
+    complete_bernstein = certificates["fh_lsz_complete_bernstein_inverse_diagnostic"]
+    report(
+        "complete-bernstein-inverse-diagnostic-does-not-certify-current-denominator",
+        "complete-Bernstein monotonicity"
+        in str(complete_bernstein.get("actual_current_surface_status"))
+        and complete_bernstein.get("proposal_allowed") is False
+        and complete_bernstein.get("complete_bernstein_inverse_certificate_passed")
+        is False
+        and complete_bernstein.get("violation_summary", {}).get(
+            "all_adjacent_intervals_violate_non_decrease"
+        )
+        is True,
+        complete_bernstein.get("actual_current_surface_status"),
     )
     schur_abc_attempt = certificates["schur_abc_definition_derivation_attempt"]
     report(

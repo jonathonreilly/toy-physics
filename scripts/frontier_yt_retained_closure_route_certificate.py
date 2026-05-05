@@ -113,6 +113,7 @@ def main() -> int:
         "fh_lsz_stieltjes_moment_certificate_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
         "fh_lsz_pade_stieltjes_bounds_gate": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
         "fh_lsz_polefit8x8_stieltjes_proxy_diagnostic": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json",
+        "fh_lsz_complete_bernstein_inverse_diagnostic": "outputs/yt_fh_lsz_complete_bernstein_inverse_diagnostic_2026-05-05.json",
         "pr230_scalar_lsz_holonomic_exact_authority_attempt": "outputs/yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_2026-05-05.json",
         "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt": "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json",
         "fh_lsz_contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
@@ -681,6 +682,20 @@ def main() -> int:
         is False
         and certificates["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"].get(
             "stieltjes_proxy_certificate_passed"
+        )
+        is False
+    )
+    complete_bernstein_inverse_diagnostic_blocks = (
+        "complete-Bernstein monotonicity"
+        in certificates["fh_lsz_complete_bernstein_inverse_diagnostic"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["fh_lsz_complete_bernstein_inverse_diagnostic"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["fh_lsz_complete_bernstein_inverse_diagnostic"].get(
+            "complete_bernstein_inverse_certificate_passed"
         )
         is False
     )
@@ -2974,6 +2989,13 @@ def main() -> int:
         "fh-lsz-polefit8x8-stieltjes-proxy-diagnostic-blocks-current-proxy",
         stieltjes_proxy_diagnostic_blocks,
         certificates["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "fh-lsz-complete-bernstein-inverse-diagnostic-blocks-current-denominator",
+        complete_bernstein_inverse_diagnostic_blocks,
+        certificates["fh_lsz_complete_bernstein_inverse_diagnostic"].get(
             "actual_current_surface_status", ""
         ),
     )

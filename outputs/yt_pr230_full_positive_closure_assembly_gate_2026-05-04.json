@@ -27,7 +27,7 @@
       "why_needed": "Supplies the physical response data; pilots and partial chunks are not y_t evidence."
     },
     {
-      "current_surface": "finite-shell/postprocessor gates remain support-only or exact negative boundaries; strict Stieltjes/Pade moment-threshold certificate is absent",
+      "current_surface": "finite-shell/postprocessor gates remain support-only or exact negative boundaries; strict Stieltjes/Pade moment-threshold certificate is absent; current inverse proxy fails complete-Bernstein monotonicity",
       "id": "scalar_lsz_model_class_fv_ir",
       "required": "isolated scalar-pole derivative/residue with model-class or analytic-continuation authority plus FV/IR/zero-mode/threshold control",
       "why_needed": "Converts finite-shell same-source C_ss rows into a pole LSZ normalization."
@@ -83,6 +83,7 @@
     "fh_lsz_affine_contact_complete_monotonicity": "outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json",
     "fh_lsz_autocorrelation_ess": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
     "fh_lsz_common_window_response": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
+    "fh_lsz_complete_bernstein_inverse_diagnostic": "outputs/yt_fh_lsz_complete_bernstein_inverse_diagnostic_2026-05-05.json",
     "fh_lsz_contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
     "fh_lsz_finite_source_linearity": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
     "fh_lsz_finite_volume": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
@@ -184,6 +185,7 @@
     "fh_lsz_affine_contact_complete_monotonicity": "exact negative boundary / affine contact complete-monotonicity no-go",
     "fh_lsz_autocorrelation_ess": "bounded-support / FH-LSZ autocorrelation ESS gate passed for target observables",
     "fh_lsz_common_window_response": "bounded-support / FH-LSZ common-window response gate passed as support",
+    "fh_lsz_complete_bernstein_inverse_diagnostic": "exact negative boundary / current polefit8x8 inverse proxy fails complete-Bernstein monotonicity",
     "fh_lsz_contact_subtraction_identifiability": "exact negative boundary / contact-subtraction identifiability obstruction",
     "fh_lsz_finite_source_linearity": "bounded-support / FH-LSZ finite-source-linearity gate passed as response support",
     "fh_lsz_finite_volume": "exact negative boundary / FH-LSZ finite-volume pole-saturation obstruction",
@@ -274,7 +276,7 @@
     "wz_smoke_to_production_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
   },
-  "pass_count": 85,
+  "pass_count": 86,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",
   "route_statuses": {

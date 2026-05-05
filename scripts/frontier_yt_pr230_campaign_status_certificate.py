@@ -145,6 +145,9 @@ def main() -> int:
         "fh_lsz_polefit8x8_stieltjes_proxy_diagnostic": load(
             "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json"
         ),
+        "fh_lsz_complete_bernstein_inverse_diagnostic": load(
+            "outputs/yt_fh_lsz_complete_bernstein_inverse_diagnostic_2026-05-05.json"
+        ),
         "pr230_scalar_lsz_holonomic_exact_authority_attempt": load(
             "outputs/yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_2026-05-05.json"
         ),
@@ -1078,6 +1081,20 @@ def main() -> int:
         )
         is False,
         statuses["fh_lsz_polefit8x8_stieltjes_proxy_diagnostic"],
+    )
+    report(
+        "fh-lsz-complete-bernstein-inverse-diagnostic-blocks-current-denominator",
+        "complete-Bernstein monotonicity"
+        in str(statuses["fh_lsz_complete_bernstein_inverse_diagnostic"])
+        and certificates["fh_lsz_complete_bernstein_inverse_diagnostic"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["fh_lsz_complete_bernstein_inverse_diagnostic"].get(
+            "complete_bernstein_inverse_certificate_passed"
+        )
+        is False,
+        statuses["fh_lsz_complete_bernstein_inverse_diagnostic"],
     )
     report(
         "pr230-scalar-lsz-holonomic-exact-authority-attempt-blocks-current-finite-shell",

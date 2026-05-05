@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T23:26:55.310310+00:00",
+  "generated_at": "2026-05-05T23:55:05.511946+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14964,6 +14964,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_fh_lsz_common_window_response_provenance.py"
+    },
+    "yt_fh_lsz_complete_bernstein_inverse_diagnostic_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_complete_bernstein_inverse_diagnostic.py"
     },
     "yt_fh_lsz_contact_subtraction_identifiability_note_2026-05-05": {
       "assert_count": 1,
@@ -32316,6 +32328,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_fh_lsz_complete_bernstein_inverse_diagnostic.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fh_lsz_complete_bernstein_inverse_diagnostic_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_fh_lsz_contact_subtraction_identifiability.py": {
       "assert_count": 1,
       "claims": [
@@ -39881,13 +39908,13 @@
     "decoration_candidates": 108,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 221,
+      "B": 222,
       "C": 498,
       "D": 299,
       "none": 404
     },
-    "runners_classified": 1431,
-    "runners_with_C": 744,
-    "runners_with_D": 525
+    "runners_classified": 1432,
+    "runners_with_C": 745,
+    "runners_with_D": 526
   }
 }

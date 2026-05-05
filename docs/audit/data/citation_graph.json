@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T23:26:52.442257+00:00",
+  "generated_at": "2026-05-05T23:55:03.072660+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -40285,6 +40285,16 @@
       "runner_path": "scripts/frontier_yt_fh_lsz_common_window_response_provenance.py",
       "title": "YT FH/LSZ Common-Window Response Provenance"
     },
+    "yt_fh_lsz_complete_bernstein_inverse_diagnostic_note_2026-05-05": {
+      "claim_id": "yt_fh_lsz_complete_bernstein_inverse_diagnostic_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / current polefit8x8 inverse proxy fails complete-Bernstein monotonicity.",
+      "deps": [],
+      "note_hash": "bee3bdf62cba4abbaeb3f4be8f6344c9b456d4a896bf1bfb162f08efa714559b",
+      "path": "docs/YT_FH_LSZ_COMPLETE_BERNSTEIN_INVERSE_DIAGNOSTIC_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_fh_lsz_complete_bernstein_inverse_diagnostic.py",
+      "title": "PR #230 FH/LSZ Complete-Bernstein Inverse Diagnostic"
+    },
     "yt_fh_lsz_contact_subtraction_identifiability_note_2026-05-05": {
       "claim_id": "yt_fh_lsz_contact_subtraction_identifiability_note_2026-05-05",
       "current_status": "unknown",
@@ -45005,6 +45015,7 @@
     "yt_fh_lsz_common_window_replacement_response_stability_note_2026-05-04",
     "yt_fh_lsz_common_window_response_gate_note_2026-05-04",
     "yt_fh_lsz_common_window_response_provenance_note_2026-05-04",
+    "yt_fh_lsz_complete_bernstein_inverse_diagnostic_note_2026-05-05",
     "yt_fh_lsz_contact_subtraction_identifiability_note_2026-05-05",
     "yt_fh_lsz_eight_mode_noise_variance_gate_note_2026-05-01",
     "yt_fh_lsz_finite_shell_identifiability_no_go_note_2026-05-02",
@@ -45301,17 +45312,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1059,
-    "node_count": 2012,
-    "root_count": 1525,
-    "runners_with_path": 1510,
+    "leaf_count": 1060,
+    "node_count": 2013,
+    "root_count": 1526,
+    "runners_with_path": 1511,
     "status_counts": {
       "bounded": 552,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 430,
-      "unknown": 554
+      "unknown": 555
     }
   }
 }

@@ -1,5 +1,30 @@
 # No-Go Ledger
 
+## Current polefit8x8 inverse proxy is not complete-Bernstein denominator authority
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_complete_bernstein_inverse_diagnostic.py
+# SUMMARY: PASS=14 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=31 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=86 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=234 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=266 FAIL=0
+```
+
+For a nonzero positive Stieltjes scalar propagator `C(x)`, the reciprocal
+`Gamma(x)=1/C(x)` is complete Bernstein, hence monotone non-decreasing.  The
+current L12 eight-mode/x8 `Gamma_ss_real_proxy` decreases across every
+adjacent `q_hat^2` shell.  Do not treat current `C_ss`, current `Gamma_ss`,
+or inverse-denominator language as retained closure or `proposed_retained`
+evidence until a certified contact-subtracted scalar object or microscopic
+denominator theorem passes the strict scalar-LSZ gates.
+
 ## Burnside/double-commutant does not certify neutral irreducibility from source-only generators
 
 Runners:

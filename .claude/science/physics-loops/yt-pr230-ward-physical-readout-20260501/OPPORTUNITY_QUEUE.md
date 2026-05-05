@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-05 update: the complete-Bernstein scalar-LSZ inverse diagnostic is
+now landed and blocks the current polefit8x8 inverse-propagator shortcut.  A
+positive Stieltjes scalar propagator would have a complete-Bernstein
+reciprocal `Gamma=1/C`, hence a monotone non-decreasing denominator.  The
+current `Gamma_ss_real_proxy` decreases across all adjacent eight-mode/x8
+shells, so neither current `C_ss` nor current `Gamma_ss` may be promoted to
+scalar-LSZ denominator authority.  The scalar route now needs a certified
+contact-subtracted scalar two-point object or microscopic denominator theorem
+before rerunning Stieltjes/Pade/complete-Bernstein/threshold/FV gates.  The
+highest-value positive route remains certified `O_H/C_sH/C_HH` pole rows or
+genuine same-source W/Z response rows with identity/covariance/`g2` authority.
+
 2026-05-05 update: the Schur `A/B/C` definition derivation attempt is now
 landed and blocks on the current PR230 source-only surface.  The row-definition
 counterfamily keeps `D_eff = A - B C^{-1} B` fixed while changing finite

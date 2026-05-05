@@ -1,5 +1,26 @@
 # Review History
 
+## 2026-05-05 - Block 234 Complete-Bernstein Scalar-LSZ Inverse Diagnostic
+
+Review stance: scalar-LSZ model-class diagnostic / exact negative boundary.
+
+- Added
+  `scripts/frontier_yt_fh_lsz_complete_bernstein_inverse_diagnostic.py`.
+- Added
+  `docs/YT_FH_LSZ_COMPLETE_BERNSTEIN_INVERSE_DIAGNOSTIC_NOTE_2026-05-05.md`
+  and
+  `outputs/yt_fh_lsz_complete_bernstein_inverse_diagnostic_2026-05-05.json`.
+- Wired the certificate into assumption/import stress, campaign status, full
+  assembly, and retained-route gates.
+- Validation: complete-Bernstein diagnostic `PASS=14 FAIL=0`, assumption stress
+  `PASS=31 FAIL=0`, campaign status `PASS=266 FAIL=0`, full assembly
+  `PASS=86 FAIL=0`, retained-route `PASS=234 FAIL=0`.
+
+Disposition: exact negative boundary.  Current polefit8x8 `Gamma_ss` is
+positive but decreases with `q_hat^2`, so it fails a necessary
+complete-Bernstein inverse condition and is not scalar-LSZ denominator
+authority.  No effective-retention or proposed-retention wording is allowed.
+
 ## 2026-05-05 - Block 233 PR541-Style Holonomic Source-Response Gate Wiring
 
 Review stance: compute-method boundary / exact negative boundary.
