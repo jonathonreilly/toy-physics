@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 39 |
 | **retained_no_go** | 95 |
-| **retained_bounded** | 179 |
+| **retained_bounded** | 180 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
 | unaudited | 1121 |
-| audit_in_progress | 9 |
+| audit_in_progress | 8 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 6 |
 | ~~audited_renaming~~ | 9 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 9 |
-| `audited_clean` | 285 |
+| `audit_in_progress` | 8 |
+| `audited_clean` | 286 |
 | `audited_conditional` | 257 |
 | `audited_decoration` | 4 |
 | `audited_failed` | 45 |
@@ -110,7 +110,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 |---|---|---|---|---|---|---|---|
 | `alt_connectivity_family_basin_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `charged_lepton_two_higgs_canonical_reduction_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `claude_complex_action_carryover_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `fifth_family_radial_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `fourth_family_quadrant_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -144,6 +143,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `cl3_color_automorphism_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `claude_complex_action_carryover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `cycle_battery_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `cycle_battery_scaled_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `cycle_break_frontier_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -2082,6 +2082,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — No. The active map is tied to the stale Axiom* carrier-axiom narrative and should not remain in docs after the failed wrapper frame is retired.
 - **rationale:** Issue: the consequence map depends on the stale carrier-axiom wrapper frame and presents an active downstream cascade from that frame. Why this blocks: after the forced/minimal Axiom* narrative failed audit, leaving this map in active docs would keep a failed closure story available as support. Repair target: if Axiom* is later adopted or reintroduced, rebuild a new consequence map from the audited extension decision and current dependencies. Claim boundary until fixed: the 2026-04-28 map is archive-only recovery material, not an active claim note.
 - **auditor confidence:** high
+
+### `claude_complex_action_carryover_note`
+
+- **Note:** [`CLAUDE_COMPLEX_ACTION_CARRYOVER_NOTE.md`](../../docs/CLAUDE_COMPLEX_ACTION_CARRYOVER_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Fixed-parameter exact ordered 3D lattice replay of the complex-action harness at h=0.5, W=6, L=30, s=0.1, z_src=3, limited to gamma=0 reduction, Born residuals on the frozen field, and the listed gamma sweep crossover.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-second-claude_complex_action_carryover_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Exact-lattice replay at h=0.5, W=6, L=30, s=0.1, z_src=3 gives exact gamma=0 reduction, machine-clean Born residuals, and a TOWARD-to-AWAY crossover between gamma=0.05 and 0.10 on this fixed family.  _(class `C`)_
+- **chain closes:** True — The live runner constructs the fixed lattice, frozen field, complex propagator, Born residual test, and gamma sweep directly rather than importing the tabulated target values. The note's scope is explicitly bounded to this family and disclaims geometry-generic, continuum, and effective-theory conclusions.
+- **rationale:** The bounded claim is a narrow computational replay, and the current runner output matches the source note's numerical table for the fixed parameters. The gamma=0 reduction is an algebraic reduction of S = L(1-f) + i*gamma*L*f, while the Born residuals and crossover sweep are computed by the runner over the instantiated lattice and frozen field. No upstream dependency, external physical bridge, continuum limit, or geometry-independent inference is needed for the audited scope; those broader claims are explicitly excluded.
+- **auditor confidence:** medium
 
 ### `claude_complex_action_grown_companion_note`
 

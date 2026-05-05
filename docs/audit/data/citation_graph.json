@@ -42822,7 +42822,7 @@
         "gauge_vacuum_plaquette_framework_point_underdetermination_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note"
       ],
-      "note_hash": "0f3e16396488421abf456e4c04088abe4809a19147dd2017e42be77b5f7e636f",
+      "note_hash": "3e720246dbd70289a394e672bb24b88574467b1b671bc932d8336b9b072e8630",
       "path": "docs/PLAQUETTE_4D_MC_SUPPORT_NOTE_2026-05-04.md",
       "runner_path": "scripts/frontier_su3_4d_mc_support_2026_05_04.py",
       "title": "Plaquette 3+1D Wilson MC Support Note"

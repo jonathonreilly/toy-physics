@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 777,
+    "critical": 776,
     "high": 25,
     "leaf": 208,
     "medium": 139
@@ -4030,27 +4030,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "claude_complex_action_carryover_note",
-      "claim_scope": "Narrow fixed-parameter exact ordered 3D lattice carryover for one frozen instantaneous field family, checking gamma=0 behavior, Born residuals, and the gamma sweep crossover.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.238,
-      "note_path": "docs/CLAUDE_COMPLEX_ACTION_CARRYOVER_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/exact_lattice_complex_action_carryover.py",
-      "transitive_descendants": 301
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audit_in_progress",
@@ -32886,6 +32865,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 290,
-  "total_pending": 1149
+  "ready_count": 289,
+  "total_pending": 1148
 }
