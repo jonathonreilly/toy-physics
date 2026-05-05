@@ -1,0 +1,67 @@
+# Plaquette V=1 Picard-Fuchs ODE Note
+
+**Date:** 2026-05-05
+**Claim type:** bounded_theorem
+**Status:** bounded support theorem, unaudited.
+**Primary runner:** `scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py`
+
+## Claim
+
+For the single-plaquette SU(3) Wilson integral
+
+```text
+J(beta) = integral_SU(3) exp(beta Re Tr U / 3) dU,
+```
+
+the runner verifies the third-order Picard-Fuchs equation
+
+```text
+6 beta^2 J'''(beta)
++ beta(60 - beta) J''(beta)
++ (-4 beta^2 - 2 beta + 120) J'(beta)
+- beta(beta + 10) J(beta) = 0.
+```
+
+The analytic Frobenius solution at beta = 0 gives the physical
+single-plaquette integral. Numerical integration of the ODE agrees with
+direct Weyl integration at beta in {2, 4, 6, 8, 10}. At beta = 6,
+
+```text
+<P>_V=1(beta=6) = J'(6) / J(6) = 0.422531739650.
+```
+
+## Scope
+
+This is a bounded single-plaquette result. It does not compute the
+thermodynamic-limit Wilson plaquette value and does not promote any
+plaquette, bridge, or downstream coupling status. The comparison to
+larger-volume values remains outside this note.
+
+The two broader exploratory notes from PR #541 are not landed here:
+their `research_finding` claim type is not canonical for the audit lane,
+and they referenced retained plaquette status that current main does not
+grant. This note salvages only the runner-backed V=1 Picard-Fuchs result.
+
+## Audit Consequence
+
+```yaml
+claim_id: plaquette_v1_picard_fuchs_ode_note_2026-05-05
+note_path: docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md
+runner_path: scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py
+claim_type: bounded_theorem
+intrinsic_status: unaudited
+deps: []
+audit_authority: independent audit lane only
+```
+
+## Command
+
+```bash
+python3 scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py
+```
+
+Expected summary:
+
+```text
+SUMMARY: THEOREM PASS=4 FAIL=0
+```
