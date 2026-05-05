@@ -23,7 +23,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 201 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 18 |
-| unaudited | 871 |
+| unaudited | 870 |
 | audit_in_progress | 18 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
@@ -32,6 +32,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | ~~audited_failed~~ | 15 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
+| `decoration_under_hierarchy_matsubara_decomposition_note` | 1 |
 | `decoration_under_wide_lattice_h2t_distance_law_note` | 1 |
 
 | audit_status | count |
@@ -39,20 +40,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audit_in_progress` | 18 |
 | `audited_clean` | 340 |
 | `audited_conditional` | 391 |
-| `audited_decoration` | 6 |
+| `audited_decoration` | 7 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 30 |
-| `unaudited` | 917 |
+| `unaudited` | 916 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 617 |
-| `decoration` | 6 |
+| `decoration` | 7 |
 | `meta` | 54 |
 | `no_go` | 184 |
 | `open_gate` | 111 |
-| `positive_theorem` | 810 |
+| `positive_theorem` | 809 |
 
 | criticality | count |
 |---|---:|
@@ -861,6 +862,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `diamond_signal_budget_hardening_note` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-gpt-5.5 | A | `docs/MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md` |
 | `g_bare_rescaling_freedom_removal_theorem_note_2026-05-03` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | cross_family | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
 | `gellmann_completeness_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | cross_family | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
+| `hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_hierarchy_matsubara_decomposition_note` | fresh_context | codex-gpt-5 | A | `hierarchy_matsubara_decomposition_note` |
 | `wide_lattice_h2t_skeptic_audit_note` | decoration | ~~audited_decoration~~ | `decoration_under_wide_lattice_h2t_distance_law_note` | cross_family | codex-gpt-5 | B | `wide_lattice_h2t_distance_law_note` |
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | cross_family | codex-gpt-5.5 | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
@@ -6675,6 +6677,20 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — The scoped theorem closes as finite-dimensional algebra for the specified APBC staggered Dirac operator: L_s=2 fixes each spatial sin^2 contribution to 1, leaving only the temporal APBC Matsubara sum. The note explicitly leaves the physical EWSB order-parameter selection, observed normalization, spatial APBC issue, and alpha_LM derivation outside this closure.
 - **rationale:** I ratify the second audit on the class disagreement. The determinant, free-energy density, and condensate formulas are exact algebraic identities over the already specified finite APBC staggered-Dirac operator, and the cached runner constructs that matrix directly and verifies those formulas to machine precision. This is not a first-principles class C computation from the framework axiom producing a new independent number; the load-bearing theorem is a class A diagonalization/Matsubara identity. The final D-class observed-prefactor comparison is interpretive and non-load-bearing for the clean scoped theorem.
 - **auditor confidence:** high
+
+### `hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`HIERARCHY_MATSUBARA_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/HIERARCHY_MATSUBARA_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `decoration`
+- **claim_scope:** Algebraic restatement of the retained Matsubara decomposition determinant formula on the L_s = 2 APBC block with admitted mean-field factorization.
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** `decoration_under_hierarchy_matsubara_decomposition_note`  (reason: `decoration_parent_retained`)
+- **auditor:** `codex-fresh-hierarchy-matsubara-determinant-narrow-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** At L_s = 2, the standard staggered dispersion reduces to lambda^2 = u_0^2 [3 + sin^2(omega)], so |det(D + m)|_full = prod_omega [m^2 + u_0^2(3 + sin^2 omega)]^4.  _(class `A`)_
+- **chain closes:** True — The determinant identity follows as A-class algebra from the retained parent decomposition formula plus the admitted L_s = 2 spatial pinning and taste-degeneracy setup. It closes only as a corollary/restatement of the parent, not as an independent retained positive theorem.
+- **rationale:** Issue: The note restates the determinant formula already supplied by the retained parent decomposition note using only A-class algebra and an A-only runner, with no independent comparator, compression theorem, or new physical observable. Why this blocks: Under the algebraic-decoration policy, a single-parent A-class corollary with zero D checks should not be surfaced as a separate retained positive theorem. Repair target: Box this result under hierarchy_matsubara_decomposition_note, or add a genuine independent theorem, comparator, or compression result showing the narrow determinant claim carries load-bearing content beyond the parent. Claim boundary until fixed: The exact determinant identity may be cited as an algebraic corollary of the retained Matsubara decomposition, not as a separate retained theorem.
+- **decoration parent:** `hierarchy_matsubara_decomposition_note`
+- **auditor confidence:** medium
 
 ### `hierarchy_spatial_bc_and_u0_scaling_note`
 
