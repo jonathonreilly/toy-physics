@@ -18,8 +18,53 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=188 FAIL=0
+# SUMMARY: PASS=190 FAIL=0
 ```
+
+## 2026-05-05 FH/LSZ Polefit8x8 Chunks031-036 Completion Update
+
+The retained-route surface now sees the completed homogeneous eight-mode/x8
+polefit stream through chunk036.  The polefit8x8 combiner reports `36/63`
+ready chunks, `576/1008` saved configurations, and writes the refreshed
+combined diagnostic support surface.  The postprocessor remains finite-shell
+diagnostic support only.
+
+Validation: polefit8x8 combiner `PASS=6 FAIL=0`; polefit8x8 postprocessor
+`PASS=5 FAIL=0`; Stieltjes proxy diagnostic `PASS=9 FAIL=0`;
+contact-subtraction boundary `PASS=10 FAIL=0`; affine-contact no-go
+`PASS=11 FAIL=0`; polynomial-contact no-go `PASS=11 FAIL=0`;
+retained-route `PASS=190 FAIL=0`; campaign status `PASS=216 FAIL=0`; full
+positive closure assembly gate `PASS=41 FAIL=0`; non-chunk worklist
+`PASS=22 FAIL=0`.
+
+This is not closure.  The stream still lacks complete L12 statistics, L16/L24
+finite-volume scaling, FV/IR/zero-mode control, pole-saturation/model-class
+authority, same-surface scalar contact/denominator authority, and
+canonical-Higgs/source-overlap identity.  No retained or `proposed_retained`
+closure is authorized.
+
+## 2026-05-05 Polynomial-Contact Finite-Shell Update
+
+The retained-route certificate now consumes
+`outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json`.
+This closes the next contact shortcut after the affine boundary: if arbitrary
+higher-degree polynomial contact terms are admitted on the finite shell set,
+the current rows do not identify a scalar-LSZ object.  The runner constructs
+two distinct positive one-pole Stieltjes residuals, interpolates degree-7
+contact polynomials that reproduce the same measured `C_ss` rows, and finds
+different pole locations and residues.
+
+Validation: polynomial-contact finite-shell no-go `PASS=11 FAIL=0`;
+retained-route `PASS=190 FAIL=0`; campaign status `PASS=216 FAIL=0`; full
+positive closure assembly gate `PASS=41 FAIL=0`; non-chunk worklist
+`PASS=22 FAIL=0`.
+
+This does not claim either contact polynomial is physical.  It proves the
+opposite boundary: finite rows plus unconstrained polynomial contact
+interpolation are too permissive.  A same-surface microscopic
+contact/denominator theorem, strict contact certificate, or physical-response
+bypass remains required.  No retained or `proposed_retained` closure is
+authorized.
 
 ## 2026-05-05 Affine-Contact Complete-Monotonicity Update
 

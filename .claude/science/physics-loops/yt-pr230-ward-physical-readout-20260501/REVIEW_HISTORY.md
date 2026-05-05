@@ -1,5 +1,45 @@
 # Review History
 
+## Review-Loop Backpressure - Chunks031-036 Packaging And Polynomial-Contact No-Go
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT FOR CHUNKS; EXACT NEGATIVE BOUNDARY FOR POLYNOMIAL CONTACT SHORTCUT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- chunks031-036 completed with fixed seeds, production metadata, and the
+  separate eight-mode/x8 polefit namespace;
+- the polefit8x8 stream now has `36/63` ready chunks and `576/1008` saved
+  configurations, but remains finite-shell support only;
+- the scalar-LSZ diagnostics still reject current finite rows as retained
+  evidence;
+- the new polynomial-contact no-go proves arbitrary finite-shell polynomial
+  interpolation is non-identifying without independent contact/denominator
+  authority;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_postprocessor.py
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic.py
+python3 scripts/frontier_yt_fh_lsz_contact_subtraction_identifiability.py
+python3 scripts/frontier_yt_fh_lsz_affine_contact_complete_monotonicity_no_go.py
+python3 scripts/frontier_yt_fh_lsz_polynomial_contact_finite_shell_no_go.py
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+```
+
 ## Review-Loop Backpressure - Affine-Contact Complete-Monotonicity No-Go
 
 Local review-loop disposition:

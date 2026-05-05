@@ -41,8 +41,8 @@ chunk-only completion: even perfect chunk data would still lack scalar LSZ
 model-class/FV/IR control, a canonical-Higgs/source-overlap bridge, matching
 authority, and retained-route authorization.
 
-2026-05-05 chunk update: the separate polefit8x8 stream is now `30/63` chunks
-ready with `480/1008` saved configurations.  This improves bounded production
+2026-05-05 chunk update: the separate polefit8x8 stream is now `36/63` chunks
+ready with `576/1008` saved configurations.  This improves bounded production
 support but does not change the assembly verdict: chunk-only completion still
 fails the scalar-LSZ/model-class/FV/IR, source-overlap, matching, and retained
 proposal gates.
@@ -65,6 +65,14 @@ can fix first-order finite monotonicity, but second-and-higher
 complete-monotonicity divided differences are invariant under affine
 subtraction and fail robustly on the current rows.  The assembly gate remains
 open with `PASS=39 FAIL=0`.
+
+2026-05-05 polynomial-contact update: the gate also consumes
+`outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json`.
+This closes the broader finite-shell contact interpolation shortcut.  If an
+arbitrary degree-7 contact polynomial is admitted on the eight shell points,
+two distinct positive one-pole Stieltjes residuals can reproduce the same
+measured rows while assigning different pole locations and residues.  The
+assembly gate remains open with `PASS=41 FAIL=0`.
 
 The matching/running bridge contract is executable, but the candidate bridge
 certificate is absent, so this condition remains open on the current surface.

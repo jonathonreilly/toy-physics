@@ -62,6 +62,7 @@ PARENTS = {
     "lsz_polefit8x8_stieltjes_proxy_diagnostic": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json",
     "lsz_contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
     "lsz_affine_contact_complete_monotonicity": "outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json",
+    "lsz_polynomial_contact_finite_shell": "outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json",
     "lsz_pole_saturation": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
     "lsz_threshold_authority": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json",
     "lsz_fv_obstruction": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
@@ -86,6 +87,7 @@ FUTURE_FILES = {
     "stieltjes_moment_certificate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_2026-05-05.json",
     "pade_stieltjes_bounds_certificate": "outputs/yt_fh_lsz_pade_stieltjes_bounds_certificate_2026-05-05.json",
     "contact_subtraction_certificate": "outputs/yt_fh_lsz_contact_subtraction_certificate_2026-05-05.json",
+    "polynomial_contact_certificate": "outputs/yt_fh_lsz_polynomial_contact_certificate_2026-05-05.json",
     "matched_top_wz_rows": "outputs/yt_top_wz_matched_response_rows_2026-05-04.json",
     "deterministic_response_covariance_certificate": "outputs/yt_top_wz_deterministic_response_covariance_certificate_2026-05-05.json",
     "wz_mass_response_rows": "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
@@ -187,6 +189,7 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 FUTURE_FILES["stieltjes_moment_certificate"],
                 FUTURE_FILES["pade_stieltjes_bounds_certificate"],
                 FUTURE_FILES["contact_subtraction_certificate"],
+                FUTURE_FILES["polynomial_contact_certificate"],
             ],
             "current_blockers": [
                 status(certs["lsz_model_class"]),
@@ -196,6 +199,7 @@ def work_units(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
                 status(certs["lsz_polefit8x8_stieltjes_proxy_diagnostic"]),
                 status(certs["lsz_contact_subtraction_identifiability"]),
                 status(certs["lsz_affine_contact_complete_monotonicity"]),
+                status(certs["lsz_polynomial_contact_finite_shell"]),
                 status(certs["lsz_pole_saturation"]),
                 status(certs["lsz_fv_obstruction"]),
                 status(certs["lsz_soft_continuum"]),
@@ -285,6 +289,7 @@ def main() -> int:
     report("scalar-lsz-current-proxy-blocked", "Stieltjes monotonicity" in status(certs["lsz_polefit8x8_stieltjes_proxy_diagnostic"]), status(certs["lsz_polefit8x8_stieltjes_proxy_diagnostic"]))
     report("contact-subtraction-route-gated", "contact-subtraction identifiability obstruction" in status(certs["lsz_contact_subtraction_identifiability"]), status(certs["lsz_contact_subtraction_identifiability"]))
     report("affine-contact-complete-monotonicity-route-gated", "affine contact complete-monotonicity no-go" in status(certs["lsz_affine_contact_complete_monotonicity"]), status(certs["lsz_affine_contact_complete_monotonicity"]))
+    report("polynomial-contact-finite-shell-route-gated", "finite-shell polynomial contact non-identifiability no-go" in status(certs["lsz_polynomial_contact_finite_shell"]), status(certs["lsz_polynomial_contact_finite_shell"]))
     report("schur-route-gated", "Schur K-prime row absence guard" in status(certs["schur_absence"]), status(certs["schur_absence"]))
     report("neutral-rank-one-route-gated", "irreducibility authority absent" in status(certs["neutral_irreducibility_audit"]), status(certs["neutral_irreducibility_audit"]))
     report("neutral-primitive-cone-route-gated", "primitive-cone certificate gate" in status(certs["neutral_primitive_cone_gate"]), status(certs["neutral_primitive_cone_gate"]))

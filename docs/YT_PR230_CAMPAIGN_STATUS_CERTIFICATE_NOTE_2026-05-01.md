@@ -26,8 +26,51 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=214 FAIL=0
+# SUMMARY: PASS=216 FAIL=0
 ```
+
+## 2026-05-05 FH/LSZ Polefit8x8 Chunks031-036 Completion Update
+
+The campaign now records completed polefit8x8 chunks031-036 as part of the
+separate homogeneous eight-mode/x8 pole-fit support stream.  The combiner sees
+`36/63` ready chunks and `576/1008` saved configurations; the postprocessor
+forms a finite-shell diagnostic over eight momentum rows, but the model-class,
+FV/IR, source-overlap, contact-subtraction, and matching gates still block
+retained use.
+
+Validation: polefit8x8 combiner `PASS=6 FAIL=0`; polefit8x8 postprocessor
+`PASS=5 FAIL=0`; Stieltjes proxy diagnostic `PASS=9 FAIL=0`;
+contact-subtraction boundary `PASS=10 FAIL=0`; affine-contact no-go
+`PASS=11 FAIL=0`; polynomial-contact no-go `PASS=11 FAIL=0`;
+retained-route `PASS=190 FAIL=0`; campaign status `PASS=216 FAIL=0`; full
+positive closure assembly gate `PASS=41 FAIL=0`; non-chunk worklist
+`PASS=22 FAIL=0`.
+
+This update is production-support packaging only.  It does not derive
+`kappa_s`, does not identify the source pole with canonical `O_H`, does not
+supply W/Z or Schur rows, and does not authorize retained or
+`proposed_retained` `y_t` closure.
+
+## 2026-05-05 Polynomial-Contact Finite-Shell Update
+
+The campaign status certificate now consumes
+`outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json`.
+This closes the finite-shell arbitrary polynomial contact shortcut.  On the
+current eight shell points, two different positive one-pole Stieltjes
+residuals can be made to reproduce the same measured `C_ss` rows by
+interpolating degree-7 polynomial contact terms.  The witnesses pass finite
+complete-monotonicity checks but assign different pole locations and residues,
+so arbitrary polynomial contact subtraction does not identify scalar LSZ.
+
+Validation: polynomial-contact finite-shell no-go `PASS=11 FAIL=0`;
+retained-route `PASS=190 FAIL=0`; campaign status `PASS=216 FAIL=0`; full
+positive closure assembly gate `PASS=41 FAIL=0`; non-chunk worklist
+`PASS=22 FAIL=0`.
+
+This leaves the positive scalar route exactly where it should be: supply a
+same-surface microscopic contact/denominator theorem, a strict polynomial
+contact certificate with independent normalization, or bypass scalar-source
+normalization with a physical-response route.
 
 ## 2026-05-05 Affine-Contact Complete-Monotonicity Update
 

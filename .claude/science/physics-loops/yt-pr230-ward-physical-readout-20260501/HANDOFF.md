@@ -1,5 +1,47 @@
 # Handoff
 
+Latest checkpoint, 2026-05-05 polefit8x8 chunks031-036 completion plus polynomial-contact finite-shell no-go:
+
+- Packaged completed homogeneous eight-mode/x8 chunks031-036 with fixed seeds
+  `2026051931`-`2026051936` and isolated production output directories.
+- Added
+  `docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS031_036_CHECKPOINT_NOTE_2026-05-05.md`.
+- Reran the polefit8x8 combiner and postprocessor.  The stream now has
+  `36/63` ready chunks, `576/1008` saved configurations, eight mode rows, and
+  seven positive shells.
+- Because the combined rows changed, reran the scalar-LSZ shortcut
+  diagnostics.  The raw `C_ss` proxy still fails Stieltjes monotonicity
+  (`min_z=83.688`); finite-row contact-subtraction restoration remains
+  non-identifying (`spread_z_at_max_q=2914.015`); affine contact still fails
+  higher complete-monotonicity; arbitrary polynomial contact interpolation is
+  also non-identifying.
+- Added
+  `scripts/frontier_yt_fh_lsz_polynomial_contact_finite_shell_no_go.py`,
+  `docs/YT_FH_LSZ_POLYNOMIAL_CONTACT_FINITE_SHELL_NO_GO_NOTE_2026-05-05.md`,
+  and
+  `outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json`.
+  It constructs two positive one-pole Stieltjes residuals that both reproduce
+  the same eight finite rows after degree-7 polynomial contact interpolation
+  but assign different pole data.
+- Verification: combiner `PASS=6 FAIL=0`; postprocessor `PASS=5 FAIL=0`;
+  Stieltjes proxy diagnostic `PASS=9 FAIL=0`; contact-subtraction boundary
+  `PASS=10 FAIL=0`; affine-contact no-go `PASS=11 FAIL=0`;
+  polynomial-contact no-go `PASS=11 FAIL=0`; full assembly `PASS=41 FAIL=0`;
+  retained-route `PASS=190 FAIL=0`; campaign status `PASS=216 FAIL=0`;
+  non-chunk worklist `PASS=22 FAIL=0`.
+- Claim boundary: finite-shell polefit8x8 diagnostics are support only.  The
+  current surface still lacks complete L12 statistics, L16/L24 scaling,
+  FV/IR/zero-mode control, pole-saturation/model-class authority,
+  same-surface scalar contact/denominator authority, and
+  canonical-Higgs/source-overlap closure.  No retained or proposed-retained
+  closure is authorized.
+
+Next exact action: run the global production collision guard.  If capacity is
+available, launch the next homogeneous polefit8x8 wave; otherwise pivot to
+certified `O_H/C_sH/C_HH` pole rows, same-source W/Z response rows with
+identity certificates, genuine Schur `A/B/C` rows, a rank-one neutral-scalar
+theorem, or a same-surface scalar contact/denominator theorem.
+
 Latest checkpoint, 2026-05-05 affine-contact complete-monotonicity no-go:
 
 - Added

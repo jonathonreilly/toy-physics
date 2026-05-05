@@ -23,6 +23,7 @@
     "neutral_primitive_cone_certificate": false,
     "non_observed_g2_certificate": false,
     "pade_stieltjes_bounds_certificate": false,
+    "polynomial_contact_certificate": false,
     "schur_kernel_rows": false,
     "source_higgs_rows": false,
     "stieltjes_moment_certificate": false,
@@ -47,6 +48,7 @@
     "lsz_pade_stieltjes_bounds": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
     "lsz_pole_saturation": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
     "lsz_polefit8x8_stieltjes_proxy_diagnostic": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json",
+    "lsz_polynomial_contact_finite_shell": "outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json",
     "lsz_soft_continuum": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
     "lsz_stieltjes_moment_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
     "lsz_stieltjes_obstruction": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json",
@@ -86,7 +88,7 @@
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_same_source_action_firewall": "outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json"
   },
-  "pass_count": 21,
+  "pass_count": 22,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Current and chunk-only assembly are rejected.  The strict future files for O_H/source-Higgs, scalar-LSZ, W/Z response, Schur rows, neutral irreducibility, and certified physical readout are absent.",
   "strict_non_claims": [
@@ -146,6 +148,7 @@
         "exact negative boundary / current polefit8x8 C_ss proxy fails Stieltjes monotonicity",
         "exact negative boundary / contact-subtraction identifiability obstruction",
         "exact negative boundary / affine contact complete-monotonicity no-go",
+        "exact negative boundary / finite-shell polynomial contact non-identifiability no-go",
         "open / FH-LSZ pole-saturation threshold gate blocks current finite-shell fit",
         "exact negative boundary / FH-LSZ finite-volume pole-saturation obstruction",
         "exact negative boundary / FH-LSZ soft-continuum threshold no-go",
@@ -158,7 +161,8 @@
       "remaining": [
         "outputs/yt_fh_lsz_stieltjes_moment_certificate_2026-05-05.json",
         "outputs/yt_fh_lsz_pade_stieltjes_bounds_certificate_2026-05-05.json",
-        "outputs/yt_fh_lsz_contact_subtraction_certificate_2026-05-05.json"
+        "outputs/yt_fh_lsz_contact_subtraction_certificate_2026-05-05.json",
+        "outputs/yt_fh_lsz_polynomial_contact_certificate_2026-05-05.json"
       ]
     },
     {

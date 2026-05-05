@@ -39,6 +39,7 @@ PARENTS = {
     "fh_lsz_polefit8x8_stieltjes_proxy_diagnostic": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json",
     "fh_lsz_contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
     "fh_lsz_affine_contact_complete_monotonicity": "outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json",
+    "fh_lsz_polynomial_contact_finite_shell": "outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json",
     "fh_lsz_pole_saturation": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
     "fh_lsz_finite_volume": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
     "fh_lsz_soft_continuum": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
@@ -336,6 +337,12 @@ def main() -> int:
             "affine_contact_complete_monotonicity_no_go_passed"
         )
         is True
+        and certs["fh_lsz_polynomial_contact_finite_shell"].get("proposal_allowed")
+        is False
+        and certs["fh_lsz_polynomial_contact_finite_shell"].get(
+            "polynomial_contact_finite_shell_no_go_passed"
+        )
+        is True
         and certs["fh_lsz_pole_saturation"].get("proposal_allowed") is False
         and certs["fh_lsz_finite_volume"].get("proposal_allowed") is False
         and certs["fh_lsz_soft_continuum"].get("proposal_allowed") is False
@@ -462,6 +469,18 @@ def main() -> int:
         )
         is True,
         statuses["fh_lsz_affine_contact_complete_monotonicity"],
+    )
+    report(
+        "polynomial-contact-finite-shell-blocks",
+        "finite-shell polynomial contact non-identifiability no-go"
+        in statuses["fh_lsz_polynomial_contact_finite_shell"]
+        and certs["fh_lsz_polynomial_contact_finite_shell"].get("proposal_allowed")
+        is False
+        and certs["fh_lsz_polynomial_contact_finite_shell"].get(
+            "polynomial_contact_finite_shell_no_go_passed"
+        )
+        is True,
+        statuses["fh_lsz_polynomial_contact_finite_shell"],
     )
     report(
         "wz-action-semantic-firewall-support-only",

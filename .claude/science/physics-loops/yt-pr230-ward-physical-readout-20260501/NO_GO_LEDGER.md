@@ -1,5 +1,46 @@
 # No-Go Ledger
 
+## Arbitrary finite-shell polynomial contact interpolation does not identify scalar LSZ
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_polynomial_contact_finite_shell_no_go.py
+# SUMMARY: PASS=11 FAIL=0
+```
+
+If an arbitrary polynomial contact term is admitted on the finite polefit8x8
+shell set, the rows cannot determine the scalar-LSZ object.  For the current
+eight shell points, two distinct positive one-pole Stieltjes residuals can
+both reproduce the same measured `C_ss` rows after degree-7 contact
+interpolation, while assigning different pole locations and residues.
+
+Do not retry scalar LSZ by fitting a higher-degree polynomial contact term to
+make finite Stieltjes checks pass.  A positive route needs a same-surface
+microscopic contact/denominator theorem, a strict polynomial-contact
+certificate with independent normalization and degree/order authority, or a
+physical-response bypass.
+
+## FH/LSZ polefit8x8 chunks031-036 completion is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py
+# SUMMARY: PASS=6 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_postprocessor.py
+# SUMMARY: PASS=5 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=190 FAIL=0
+```
+
+The separate eight-mode/x8 polefit stream now has `36/63` ready chunks and
+`576/1008` saved configurations.  The finite-shell diagnostic fit does not
+identify the scalar pole residue, contact-subtracted Stieltjes object, or
+canonical-Higgs overlap.  Do not treat these chunks, the combined same-source
+`C_ss` rows, the diagnostic `Gamma_ss(p_hat^2)` fit, or the source-response
+average as retained closure or `proposed_retained` evidence.
+
 ## Affine contact subtraction cannot repair complete monotonicity
 
 Runner:

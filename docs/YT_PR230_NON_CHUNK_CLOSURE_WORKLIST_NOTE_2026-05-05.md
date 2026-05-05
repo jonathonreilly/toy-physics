@@ -30,7 +30,10 @@ This is an integration/worklist gate, not a physics closure theorem.
   monotonicity, and finite-row monotonicity restoration does not identify a
   unique contact subtraction.  The affine-contact repair is also closed:
   higher complete-monotonicity divided differences fail and are invariant
-  under `C(x) -> C(x) - a x`.
+  under `C(x) -> C(x) - a x`.  The arbitrary polynomial-contact shortcut is
+  closed as well: finite shell rows can be matched by distinct degree-7
+  contact interpolants with different Stieltjes pole data unless an independent
+  microscopic contact/denominator certificate is supplied.
 - **Schur/scalar-denominator rows:** supply same-surface Schur `A/B/C` kernel
   rows; current FH/LSZ source rows do not substitute.
 - **Neutral rank-one:** derive a strict primitive-cone/positivity-improving
@@ -49,5 +52,5 @@ real positive certificate and the aggregate gates pass.
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
 python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
-# SUMMARY: PASS=20 FAIL=0
+# SUMMARY: PASS=22 FAIL=0
 ```

@@ -13,11 +13,24 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-208-affine-contact-complete-monotonicity
-blocks_completed: 208
-active_route: "FH/LSZ affine-contact complete-monotonicity no-go while chunks031-036 run"
-active_hard_residual: "The current polefit8x8 rows cannot be repaired into a positive Stieltjes scalar-LSZ object by affine contact subtraction.  Affine slope choices can restore first-order monotonicity, but second-and-higher divided differences are invariant under C(x)-a*x and have robust complete-monotonicity sign violations on the current rows.  New runner PASS=11 FAIL=0; full assembly PASS=39 FAIL=0; retained-route PASS=188 FAIL=0; campaign status PASS=214 FAIL=0; non-chunk worklist PASS=20 FAIL=0.  Chunks031-036 remain live compute state under PIDs 4430-4435; root artifacts are still absent and not counted.  No retained/proposed-retained closure is authorized."
+current_phase: campaign-block-210-polefit8x8-chunks031-036-packaged
+blocks_completed: 210
+active_route: "FH/LSZ polefit8x8 chunks031-036 packaged plus finite-shell polynomial-contact no-go"
+active_hard_residual: "Chunks031-036 completed and passed the polefit8x8 combiner/postprocessor, moving the separate homogeneous eight-mode/x8 stream to 36/63 ready chunks and 576/1008 saved configurations.  The refreshed scalar-LSZ diagnostics remain blocked: raw C_ss fails Stieltjes monotonicity with min adjacent violation 83.688 sigma, contact-subtraction finite-row restoration remains non-identifying with max-q residual spread 2914.015 row standard errors, affine contact cannot repair higher complete-monotonicity signs, and arbitrary degree-7 polynomial contact interpolation can fit distinct positive one-pole Stieltjes residuals to the same rows with different pole data.  Full assembly PASS=41 FAIL=0; retained-route PASS=190 FAIL=0; campaign status PASS=216 FAIL=0; non-chunk worklist PASS=22 FAIL=0.  No retained/proposed-retained closure is authorized."
 files_touched:
+  - "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS031_036_CHECKPOINT_NOTE_2026-05-05.md"
+  - "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk031_2026-05-04.json"
+  - "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk032_2026-05-04.json"
+  - "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk033_2026-05-04.json"
+  - "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk034_2026-05-04.json"
+  - "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk035_2026-05-04.json"
+  - "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk036_2026-05-04.json"
+  - "outputs/yt_fh_lsz_polefit8x8_chunk_combiner_gate_2026-05-04.json"
+  - "outputs/yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json"
+  - "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunked_combined_2026-05-04.json"
+  - "scripts/frontier_yt_fh_lsz_polynomial_contact_finite_shell_no_go.py"
+  - "docs/YT_FH_LSZ_POLYNOMIAL_CONTACT_FINITE_SHELL_NO_GO_NOTE_2026-05-05.md"
+  - "outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json"
   - "scripts/frontier_yt_fh_lsz_affine_contact_complete_monotonicity_no_go.py"
   - "docs/YT_FH_LSZ_AFFINE_CONTACT_COMPLETE_MONOTONICITY_NO_GO_NOTE_2026-05-05.md"
   - "outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json"

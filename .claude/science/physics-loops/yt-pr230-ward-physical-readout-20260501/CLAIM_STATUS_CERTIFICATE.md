@@ -1,5 +1,40 @@
 # Claim Status Certificate
 
+FH/LSZ polefit8x8 chunks031-036 completion and polynomial-contact finite-shell no-go:
+
+```text
+actual_current_surface_status: bounded-support / chunks031-036 packaged; exact negative boundary / finite-shell polynomial contact non-identifiability no-go
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_postprocessor.py
+# SUMMARY: PASS=5 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_polynomial_contact_finite_shell_no_go.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=41 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=190 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=216 FAIL=0
+
+python3 scripts/frontier_yt_pr230_non_chunk_closure_worklist.py
+# SUMMARY: PASS=22 FAIL=0
+```
+
+Chunks031-036 add six ready chunks to the partial polefit8x8 L12 support
+stream (`36/63`, `576/1008` saved configurations), but they do not close
+scalar LSZ or canonical-Higgs/source-overlap.  The polynomial-contact no-go
+also blocks using arbitrary finite-shell polynomial interpolation as LSZ
+authority.  No retained or `proposed_retained` wording is authorized.
+
 Affine-contact complete-monotonicity no-go:
 
 ```text

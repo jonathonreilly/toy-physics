@@ -1,5 +1,29 @@
 # Opportunity Queue
 
+2026-05-05 update: polefit8x8 chunks031-036 are now packaged and pass the
+homogeneous eight-mode/x8 combiner.  The separate polefit8x8 stream has
+`36/63` ready chunks and `576/1008` saved configurations.  Rerun diagnostics
+still block the scalar-LSZ shortcut: current `C_ss` fails Stieltjes
+monotonicity, finite-row contact subtraction remains non-identifying, affine
+contact cannot repair higher complete-monotonicity signs, and arbitrary
+polynomial contact interpolation can fit distinct Stieltjes residuals to the
+same rows.  Next production action: run the global guard and launch the next
+homogeneous wave only if capacity is available.  The closure ranking is
+unchanged: certified `O_H/C_sH/C_HH` pole rows, same-source W/Z response rows
+with identity certificates, genuine Schur `A/B/C` rows, a rank-one
+neutral-scalar theorem, same-surface scalar contact/denominator authority, or
+continued honest production evidence.
+
+2026-05-05 update: the finite-shell polynomial-contact no-go is landed and
+wired into retained-route, campaign-status, full-assembly, and non-chunk
+worklist gates.  It proves finite shell rows plus an arbitrary polynomial
+contact subtraction do not identify scalar LSZ: two positive one-pole
+Stieltjes residuals can reproduce the same current eight rows after degree-7
+contact interpolation while assigning different pole data.  A positive scalar
+route now needs a same-surface microscopic contact/denominator theorem, strict
+polynomial-contact certificate with independent normalization, strict
+Stieltjes moment-threshold-FV certificate, or physical-response bypass.
+
 2026-05-05 update: the affine-contact complete-monotonicity no-go is landed
 and wired into retained-route, campaign-status, full-assembly, and non-chunk
 worklist gates.  It proves that affine contact subtraction cannot turn the

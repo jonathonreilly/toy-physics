@@ -115,6 +115,7 @@ def main() -> int:
         "fh_lsz_polefit8x8_stieltjes_proxy_diagnostic": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json",
         "fh_lsz_contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
         "fh_lsz_affine_contact_complete_monotonicity": "outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json",
+        "fh_lsz_polynomial_contact_finite_shell": "outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json",
         "fh_lsz_pole_saturation_threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
         "fh_lsz_threshold_authority_audit": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json",
         "confinement_gap_threshold_import": "outputs/yt_confinement_gap_threshold_import_audit_2026-05-02.json",
@@ -670,6 +671,24 @@ def main() -> int:
         is True
         and certificates["fh_lsz_affine_contact_complete_monotonicity"].get(
             "affine_contact_stieltjes_certificate_passed"
+        )
+        is False
+    )
+    polynomial_contact_finite_shell_blocks = (
+        "finite-shell polynomial contact non-identifiability no-go"
+        in certificates["fh_lsz_polynomial_contact_finite_shell"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["fh_lsz_polynomial_contact_finite_shell"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["fh_lsz_polynomial_contact_finite_shell"].get(
+            "polynomial_contact_finite_shell_no_go_passed"
+        )
+        is True
+        and certificates["fh_lsz_polynomial_contact_finite_shell"].get(
+            "stieltjes_certificate_from_polynomial_contact_passed"
         )
         is False
     )
@@ -2197,6 +2216,13 @@ def main() -> int:
         "fh-lsz-affine-contact-complete-monotonicity-blocks",
         affine_contact_complete_monotonicity_blocks,
         certificates["fh_lsz_affine_contact_complete_monotonicity"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "fh-lsz-polynomial-contact-finite-shell-blocks",
+        polynomial_contact_finite_shell_blocks,
+        certificates["fh_lsz_polynomial_contact_finite_shell"].get(
             "actual_current_surface_status", ""
         ),
     )
