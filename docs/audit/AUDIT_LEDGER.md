@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 50 |
 | **retained_no_go** | 108 |
-| **retained_bounded** | 198 |
+| **retained_bounded** | 199 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 17 |
 | unaudited | 872 |
-| audit_in_progress | 34 |
+| audit_in_progress | 33 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 29 |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 34 |
-| `audited_clean` | 329 |
+| `audit_in_progress` | 33 |
+| `audited_clean` | 330 |
 | `audited_conditional` | 386 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 59 |
@@ -130,7 +130,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `lattice_complementarity_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `lorentz_violation_derived_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `persistent_object_compact_inertial_probe_note_2026-04-16` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `pmns_transfer_operator_dominant_mode_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -323,6 +322,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_inertial_object_probe_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `persistent_object_adaptive_readout_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `persistent_object_adaptive_readout_v2_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
+| `persistent_object_compact_inertial_probe_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `persistent_object_compact_update_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `persistent_object_green_scout_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `persistent_object_readout_localization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -8441,6 +8441,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** `top3` with the fixed blended readout is admissible on the full nearby exact-family neighborhood; totals: `top3`: `6 / 6`, `top2`: `1 / 6`.  _(class `C`)_
 - **chain closes:** False — The provided runner/source is the boundary probe over four top3 cases and five blends; it does not compute the six-case transfer table, source2.5, length5, or any top2 rows. The missing step is the cited transfer sweep or cached log for the fixed blend across both object modes.
 - **rationale:** Issue: The restricted packet supplies a completed boundary-probe runner, not the transfer-sweep evidence that the note's load-bearing 6/6 top3 and 1/6 top2 totals require. Why this blocks: the available computation supports only a four-case top3 blend scan, so the full nearby-family transfer conclusion imports unprovided results. Repair target: provide or wire the cited transfer sweep runner/log, or slice it into a cached certificate covering all six cases and both top2/top3. Claim boundary until fixed: the packet supports at most that blend 0.25 passes the four displayed top3 boundary cases.
+- **auditor confidence:** high
+
+### `persistent_object_compact_inertial_probe_note_2026-04-16`
+
+- **Note:** [`PERSISTENT_OBJECT_COMPACT_INERTIAL_PROBE_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_COMPACT_INERTIAL_PROBE_NOTE_2026-04-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded finite-run claim that the top3 compact exact-lattice object carries a stable weak-field response across the four specified nearby cases when allowing the passing broad or adaptive readout per case; not a single-readout, readout-invariant, persistent inertial-mass, or matter-closure claim.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-persistent_object_compact_inertial_probe_note-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** For top3, broad and adaptive readouts are each admissible on 3/4 cases, with complementary misses, so every one of the four tested nearby cases has at least one passing retained readout.  _(class `C`)_
+- **chain closes:** True — The cached runner completed successfully and reproduces the note's pass map: top3 broad passes baseline, width4, and length7, while top3 adaptive passes baseline, source1.5, and width4, so the union covers all four cases under the stated gates. The note explicitly narrows the result to readout-dependent bounded response and excludes persistent inertial mass, matter closure, and readout-invariant law.
+- **rationale:** The load-bearing claim is a bounded computational theorem over four enumerated exact-lattice cases, not a universal physical closure. The runner constructs the cases, source updates, broad/adaptive readouts, F~M exponents, kappa drifts, and admissibility gates, and the cached output matches the source note's table and stated complementary misses without hard-coding the top3 pass map. No one-hop dependencies are listed, and no external comparator or hidden retained dependency is needed for this scoped finite-run result. Residual risk is limited to the imported helper implementations behind the runner-defined lattice/readout machinery, so this clean verdict should not be cited beyond the bounded runner-defined scope.
 - **auditor confidence:** high
 
 ### `persistent_object_compact_update_note`
