@@ -18,7 +18,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 62 |
+| **retained** | 61 |
 | **retained_no_go** | 119 |
 | **retained_bounded** | 213 |
 | _retained_pending_chain_ | 2 |
@@ -28,7 +28,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 31 |
-| ~~audited_conditional~~ | 398 |
+| ~~audited_conditional~~ | 399 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,8 +40,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 5 |
-| `audited_clean` | 368 |
-| `audited_conditional` | 398 |
+| `audited_clean` | 367 |
+| `audited_conditional` | 399 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 21 |
@@ -352,7 +352,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `replay_environment_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | B | - |
 | `retarded_field_causality_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
-| `s3_boundary_link_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `s3_mass_matrix_no_go_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `scalar_3plus1_temporal_ratio_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `scalar_kg_rerun_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -805,6 +804,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retardation_discriminator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `retarded_field_compact_refinement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `s3_anomaly_spacetime_lift_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `s3_boundary_link_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `s3_cap_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `s3_general_r_derivation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `s3_time_primitive_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -9830,12 +9830,12 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **Note:** [`S3_BOUNDARY_LINK_THEOREM_NOTE.md`](../../docs/S3_BOUNDARY_LINK_THEOREM_NOTE.md)
 - **claim_type:** `positive_theorem`
 - **claim_scope:** For every R >= 2 and every boundary vertex v of the cubical ball B_R in Z^3, the cubical vertex link link(v,B_R) is a PL 2-disk.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-110856-be71e5c1-s3_boundary_link_theorem-017`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The cube membership condition separates as Phi(s)=f_1(s_1)+f_2(s_2)+f_3(s_3) <= R^2, making the present incident-cube set a downset and the absent set an upset in Q_3.  _(class `A`)_
-- **chain closes:** True — The farthest-corner criterion follows directly from coordinatewise maximization of squared Euclidean norm, and the downset/upset argument gives connected present and absent triangle sets in the octahedral link. For a proper connected union of octahedral triangles with connected complement in S^2, the resulting compact orientable surface has one boundary component and is a PL disk.
-- **rationale:** The proof is an exact combinatorial derivation from the definition of B_R and the standard octahedral vertex link in Z^3. The runner genuinely constructs the cubical balls and vertex links for R=2..10 and checks both the disk conclusion and the downset/upset mechanism, rather than printing constants or importing the contested premise. No external comparator, tuned numerical scale, or open cited dependency is used.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-adjudicator-s3-boundary-link-current-main-20260505`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Connectedness of both the present and absent triangle sets in the octahedral S^2 is used to conclude H_1(link(v,B_R); Z)=0, one boundary component, local 2-manifoldness, and hence PL 2-disk.  _(class `A`)_
+- **chain closes:** False — The Phi separability and downset/upset connectivity mechanism closes, and the cached runner verifies the finite R=2..10 cases. The all-R proof does not close the topological bridge from connected present/absent triangle sets to H_1=0, single boundary component, vertex-link/local 2-manifoldness, and PL disk classification.
+- **rationale:** Issue: Properties 3-4 treat an arbitrary simplicial 1-cycle as a Jordan curve and infer compact 2-manifold-with-boundary status from edge incidence, without proving the required vertex-link/local-surface condition. Why this blocks: under hostile review, connected present and absent triangle sets in the octahedral dual graph plus finite R=2..10 checks do not by themselves constitute the written all-R PL-disk proof. Repair target: prove a finite octahedral downset/upset-to-PL-disk lemma, including integral H_1, single boundary component, and vertex-link checks, then cite it in the note and/or runner. Claim boundary until fixed: the separable Phi downset/upset mechanism and finite R=2..10 PL-disk verification remain supported, but the stated all-R PL-disk theorem is conditional.
 - **auditor confidence:** high
 
 ### `s3_cap_uniqueness_note`
