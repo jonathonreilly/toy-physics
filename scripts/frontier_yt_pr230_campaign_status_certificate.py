@@ -202,6 +202,9 @@ def main() -> int:
         "pr230_nonchunk_cycle23_main_effective_status_drift_guard": load(
             "outputs/yt_pr230_nonchunk_cycle23_main_effective_status_drift_guard_2026-05-05.json"
         ),
+        "pr230_nonchunk_cycle24_post_cycle23_main_status_drift_guard": load(
+            "outputs/yt_pr230_nonchunk_cycle24_post_cycle23_main_status_drift_guard_2026-05-05.json"
+        ),
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
@@ -2641,6 +2644,24 @@ def main() -> int:
         is False,
         statuses["pr230_nonchunk_cycle23_main_effective_status_drift_guard"],
     )
+    report(
+        "pr230-nonchunk-cycle24-post-cycle23-main-status-drift-guard-recorded",
+        "cycle-24 post-cycle-23 main-status-drift reopen guard"
+        in str(statuses["pr230_nonchunk_cycle24_post_cycle23_main_status_drift_guard"])
+        and certificates[
+            "pr230_nonchunk_cycle24_post_cycle23_main_status_drift_guard"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "pr230_nonchunk_cycle24_post_cycle23_main_status_drift_guard"
+        ].get("cycle24_post_cycle23_main_status_drift_guard_passed")
+        is True
+        and certificates[
+            "pr230_nonchunk_cycle24_post_cycle23_main_status_drift_guard"
+        ].get("dramatic_step_gate", {}).get("passed")
+        is False,
+        statuses["pr230_nonchunk_cycle24_post_cycle23_main_status_drift_guard"],
+    )
 
     remaining_routes = [
         {
@@ -2988,6 +3009,9 @@ def main() -> int:
             "supplies no listed PR230 same-surface artifact.  The cycle-23 "
             "main-effective-status-drift guard records that origin/main "
             "advanced again only on audit/effective-status surfaces and still "
+            "supplies no listed PR230 same-surface artifact.  The cycle-24 "
+            "post-cycle-23 main-status-drift guard records that origin/main "
+            "advanced again only on audit/effective-status surfaces and still "
             "supplies no listed PR230 same-surface artifact."
         ),
         "proposal_allowed": False,
@@ -3031,6 +3055,9 @@ def main() -> int:
         "The cycle-22 main-audit-drift guard records that the latest origin/main "
         "advance is audit/effective-status drift only and supplies no listed "
         "PR230 same-surface artifact.  The cycle-23 main-effective-status-drift "
+        "guard records that origin/main advanced again only on "
+        "audit/effective-status surfaces and still supplies no listed PR230 "
+        "same-surface artifact.  The cycle-24 post-cycle-23 main-status-drift "
         "guard records that origin/main advanced again only on "
         "audit/effective-status surfaces and still supplies no listed PR230 "
         "same-surface artifact."

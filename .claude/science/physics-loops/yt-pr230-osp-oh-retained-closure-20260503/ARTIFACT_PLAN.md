@@ -1,5 +1,12 @@
 # Artifact Plan
 
+Completed in the cycle-24 post-cycle-23 main-status-drift continuation:
+
+- `scripts/frontier_yt_pr230_nonchunk_cycle24_post_cycle23_main_status_drift_guard.py`
+- `docs/YT_PR230_NONCHUNK_CYCLE24_POST_CYCLE23_MAIN_STATUS_DRIFT_GUARD_NOTE_2026-05-05.md`
+- `outputs/yt_pr230_nonchunk_cycle24_post_cycle23_main_status_drift_guard_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
 Completed in the cycle-23 main-effective-status-drift continuation:
 
 - `scripts/frontier_yt_pr230_nonchunk_cycle23_main_effective_status_drift_guard.py`
