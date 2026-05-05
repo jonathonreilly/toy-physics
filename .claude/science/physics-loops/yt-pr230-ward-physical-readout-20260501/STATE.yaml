@@ -13,11 +13,20 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-214-polefit8x8-chunks043-048-completion
-blocks_completed: 214
-active_route: "FH/LSZ polefit8x8 chunks043-048 packaged support"
-active_hard_residual: "Chunks043-048 completed and were packaged through the polefit8x8 gate chain with fixed seeds 2026051943-2026051948, selected mass 0.75, eight scalar two-point modes, x8 noise, and isolated production output directories.  The combiner now records 48/63 ready chunks and 768/1008 saved configurations; postprocessor PASS=5 FAIL=0; Stieltjes proxy diagnostic PASS=9 FAIL=0 still finds adjacent monotonicity violations at min_z=95.313; contact-subtraction identifiability PASS=10 FAIL=0 still finds spread_z_at_max_q=3336.791; affine and polynomial contact no-gos remain blocking.  After rebasing over three remote no-go commits, full assembly PASS=47 FAIL=0, retained route PASS=195 FAIL=0, campaign status PASS=222 FAIL=0, non-chunk worklist PASS=29 FAIL=0, and global guard PASS=8 FAIL=0 with active_workers=2 and launch still allowed under cap.  This is bounded support only and no retained/proposed-retained closure is authorized."
+current_phase: campaign-block-215-polefit8x8-chunks049-054-launch
+blocks_completed: 215
+active_route: "FH/LSZ polefit8x8 chunks049-054 guarded launch"
+active_hard_residual: "Chunks049-054 are active under the global FH/LSZ production collision guard with fixed seeds 2026051949-2026051954, selected mass 0.75, eight scalar two-point modes, x8 noise, and isolated production output directories.  Launch status records poll=2, completed=0, running=[49,50,51,52,53,54], missing=0, all_jobs=6, launched_total=6; refreshed guard PASS=8 FAIL=0 records active_workers=6 at global_cap=6 and blocks further launches.  This is run-control support only: root artifacts are absent, chunk-local dirs/logs/launch records are not physics evidence, and no retained/proposed-retained closure is authorized."
 files_touched:
+  - "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS049_054_LAUNCH_CHECKPOINT_NOTE_2026-05-05.md"
+  - "outputs/yt_fh_lsz_polefit8x8_chunks049_054_launch_status_2026-05-05.json"
+  - "outputs/yt_fh_lsz_global_production_collision_guard_2026-05-04.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/NO_GO_LEDGER.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
   - "docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS043_048_CHECKPOINT_NOTE_2026-05-05.md"
   - "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk043_2026-05-04.json"
   - "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk044_2026-05-04.json"

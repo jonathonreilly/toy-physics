@@ -1,5 +1,25 @@
 # Claim Status Certificate
 
+FH/LSZ polefit8x8 chunks049-054 guarded launch:
+
+```text
+actual_current_surface_status: bounded-support / polefit8x8 production wave active
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py --start-index 49 --end-index 54 --max-concurrent 6 --global-max-production-jobs 6 --runtime-minutes 1 --poll-seconds 60 --launch --run-gates --status-output outputs/yt_fh_lsz_polefit8x8_chunks049_054_launch_status_2026-05-05.json
+# poll=2 completed=0 running=[49, 50, 51, 52, 53, 54] missing=0 all_jobs=6 launched_total=6
+
+python3 scripts/frontier_yt_fh_lsz_global_production_collision_guard.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+Chunks049-054 are active run-control state only.  Running processes, logs,
+chunk-local directories, launch status JSON, and guard occupancy are not
+physics evidence.  Count these chunks only after root artifacts land and pass
+the polefit8x8 combiner/postprocessor and aggregate gates.  No retained or
+`proposed_retained` wording is authorized.
+
 FH/LSZ polefit8x8 chunks043-048 completion:
 
 ```text
