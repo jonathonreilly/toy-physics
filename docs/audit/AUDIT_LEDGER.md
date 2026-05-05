@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 220 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 846 |
+| unaudited | 847 |
 | audit_in_progress | 2 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 31 |
-| ~~audited_conditional~~ | 403 |
+| ~~audited_conditional~~ | 402 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 377 |
-| `audited_conditional` | 403 |
+| `audited_conditional` | 402 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 31 |
-| `unaudited` | 892 |
+| `unaudited` | 893 |
 
 | claim_type | count |
 |---|---:|
@@ -69,7 +69,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1378
+- runners classified: 1379
 - runners with (C) first-principles compute hits: 681
 - runners with (D) external comparator hits: 344
 - decoration candidates (no C, no D): 116
@@ -827,7 +827,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_trace_tensor_no_go_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `scaling_failure_mechanisms` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
-| `second_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `session_synthesis_2026-04-10_graph_axioms` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `seventh_family_diagonal_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `source_resolved_generated_support_mass_scaling_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -10218,19 +10217,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** 9 candidate families tested, with best second candidate drift=0.05, restore=0.30, passing the full control battery for F~M, Born, gravity TOWARD, and complex-action crossover.  _(class `C`)_
 - **chain closes:** False — The only cited battery script is absent from the repository and is described as 'to be frozen', so the numeric control battery cannot be rerun or checked from the provided artifact chain.
 - **rationale:** Issue: The note's retained positive result rests on a missing artifact, scripts/second_grown_family_battery.py, explicitly labeled as not yet frozen, and no frozen output is provided in the artifact chain. Why this blocks: the quoted F~M, Born, gravity, and complex-action control-battery numbers are unreviewable from the allowed source and artifacts, so the candidate retained-grade second-family claim cannot be independently reproduced or checked. Repair target: restore or recreate the exact battery script, add a frozen log and preferably a PASS/FAIL assertion runner, or replace this note with audit-clean sign/complex second-family notes that actually carry the evidence. Claim boundary until fixed: it is safe to say this note records a historical candidate at drift=0.05, restore=0.30; it is not safe to claim a retained second independent grown family from the current artifact chain.
-- **auditor confidence:** high
-
-### `second_grown_family_sign_note`
-
-- **Note:** [`SECOND_GROWN_FAMILY_SIGN_NOTE.md`](../../docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Finite signed-source fixed-field sweep on the no-restore geometry-sector grown slice for five drift values and three seeds.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260504-234846-c679ece8-second_grown_family_sign-007`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The sweep passed on all tested rows: drift values 0.0, 0.1, 0.2, 0.3, 0.5; seeds 0, 1, 2; total 15/15 rows passed.  _(class `C`)_
-- **chain closes:** False — The restricted packet contains only the note's assertion of the sweep result. It provides no runner output, runner source, cached certificate, or independent derivation establishing the 15/15 pass count and exponent statistic.
-- **rationale:** Issue: The bounded claim rests on a reported C-type finite computation, but no executable runner, source, stdout, or certificate is included. Why this blocks: the auditor cannot verify that the sweep instantiated the stated geometry, controls, sign tests, and weak-charge scaling rather than merely reporting them. Repair target: provide the runner source and completed output, or an independent derivation/certificate for the listed rows. Claim boundary until fixed: the note may be treated as an unsupported report of a bounded positive sweep, not an audited closure result.
 - **auditor confidence:** high
 
 ### `self_consistency_forces_poisson_note`

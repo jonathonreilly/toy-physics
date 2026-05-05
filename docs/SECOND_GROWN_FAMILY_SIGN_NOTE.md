@@ -1,6 +1,10 @@
 # Second Grown Family Signed-Source Note
 
 **Status:** bounded - bounded or caveated result note
+**Type:** bounded_theorem
+**Primary runner:** `scripts/SECOND_GROWN_FAMILY_SIGN_SWEEP.py`
+**Runner cache:** `logs/runner-cache/SECOND_GROWN_FAMILY_SIGN_SWEEP.txt`
+
 This note records a genuinely different grown-family slice from the retained drift/restore neighborhood:
 
 - family: no-restore Gate B grown geometry

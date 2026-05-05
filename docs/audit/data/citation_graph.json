@@ -48224,13 +48224,13 @@
     },
     "second_grown_family_sign_note": {
       "claim_id": "second_grown_family_sign_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "ddc482ea329ae362fa57fc689c8a9b043c3bd7503bfc3b072d59282627a3d89f",
+      "note_hash": "0647fd18e12cdccae36f081d3f3e9b0156086e29bc765e1cbba4e5f539a4243b",
       "path": "docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/SECOND_GROWN_FAMILY_SIGN_SWEEP.py",
       "title": "Second Grown Family Signed-Source Note"
     },
     "self_consistency_forces_poisson_note": {
@@ -55382,10 +55382,10 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 69,
+      "bounded_theorem": 70,
       "meta": 8,
       "no_go": 12,
-      "none": 1715,
+      "none": 1714,
       "open_gate": 12,
       "positive_theorem": 86
     },
@@ -55401,6 +55401,6 @@
     "leaf_count": 553,
     "node_count": 1902,
     "root_count": 879,
-    "runners_with_path": 1475
+    "runners_with_path": 1476
   }
 }
