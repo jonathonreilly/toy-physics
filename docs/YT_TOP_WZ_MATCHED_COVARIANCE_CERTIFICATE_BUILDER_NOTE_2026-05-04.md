@@ -57,6 +57,12 @@ Default/current mode passes as an open status and does not write
 `outputs/yt_top_wz_matched_covariance_certificate_2026-05-04.json`.  Strict
 mode intentionally fails until matched top/W response rows exist.
 
+The derivation-first shortcut from separate top and W marginals is now closed
+negatively by
+[`YT_TOP_WZ_COVARIANCE_MARGINAL_DERIVATION_NO_GO_NOTE_2026-05-05.md`](YT_TOP_WZ_COVARIANCE_MARGINAL_DERIVATION_NO_GO_NOTE_2026-05-05.md):
+matched covariance is joint information and is not determined by marginal
+response certificates.
+
 ## Non-Claims
 
 This note does not claim retained or proposed_retained top-Yukawa closure.  It
@@ -67,5 +73,6 @@ and does not use `H_unit`, `yt_ward_identity`, `alpha_LM`, plaquette, u0,
 ## Next Action
 
 Produce matched same-source top/W response rows from the future W/Z response
-measurement stream, rerun this builder in strict mode, then rerun the
-same-source top-response certificate builder.
+measurement stream, or derive a same-surface factorization/independence
+theorem fixing the joint covariance.  Then rerun this builder in strict mode
+and rerun the same-source top-response certificate builder.

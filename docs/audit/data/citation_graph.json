@@ -8545,6 +8545,10 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
+      "from": "yt_top_wz_matched_covariance_certificate_builder_note_2026-05-04",
+      "to": "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05"
+    },
+    {
       "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
       "to": "yt_ward_identity_derivation_theorem"
     },
@@ -18513,7 +18517,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-05T00:00:46.559817+00:00",
+  "generated_at": "2026-05-05T00:15:44.622701+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42608,12 +42612,24 @@
       "runner_path": "scripts/frontier_yt_top_mass_ward_decomp_no_go.py",
       "title": "Top-Sector Ward-Decomposition Pass: Bounded No-Go for Audit-Clean Yukawa Pin"
     },
+    "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05": {
+      "claim_id": "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / covariance derivation shortcut rejected;",
+      "deps": [],
+      "note_hash": "a22f2efc780d3919d69eb119d7c97e1e0cf026c4140e1c82d00a4a4ee5d2a053",
+      "path": "docs/YT_TOP_WZ_COVARIANCE_MARGINAL_DERIVATION_NO_GO_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_top_wz_covariance_marginal_derivation_no_go.py",
+      "title": "YT Top/W Covariance Marginal-Derivation No-Go"
+    },
     "yt_top_wz_matched_covariance_certificate_builder_note_2026-05-04": {
       "claim_id": "yt_top_wz_matched_covariance_certificate_builder_note_2026-05-04",
       "current_status": "open",
       "current_status_raw": "open / matched covariance contract; proposal_allowed=false.",
-      "deps": [],
-      "note_hash": "eee5920fa5702cae5eb04d4af0d71028ccf120cdf40976ca92d63c0cb5877108",
+      "deps": [
+        "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05"
+      ],
+      "note_hash": "943352bef60553e088420a99735cf062f59a30a1bda54d4906e4622f61e4e5fe",
       "path": "docs/YT_TOP_WZ_MATCHED_COVARIANCE_CERTIFICATE_BUILDER_NOTE_2026-05-04.md",
       "runner_path": "scripts/frontier_yt_top_wz_matched_covariance_certificate_builder.py",
       "title": "YT Top/WZ Matched Covariance Certificate Builder Note"
@@ -44321,7 +44337,7 @@
     "yt_top_mass_ward_decomp_claim_status_certificate_2026-04-30",
     "yt_top_mass_ward_decomp_handoff_2026-04-30",
     "yt_top_mass_ward_decomp_no_go_note_2026-04-30",
-    "yt_top_wz_matched_covariance_certificate_builder_note_2026-05-04",
+    "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05",
     "yt_trace_anomaly_stationarity_no_go_note_2026-05-01",
     "yt_unit_projector_pole_threshold_obstruction_note_2026-05-01",
     "yt_ward_identity_derivation_theorem",
@@ -44345,18 +44361,18 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4628,
+    "edge_count": 4629,
     "leaf_count": 977,
-    "node_count": 1927,
+    "node_count": 1928,
     "root_count": 1443,
-    "runners_with_path": 1456,
+    "runners_with_path": 1457,
     "status_counts": {
       "bounded": 541,
       "open": 97,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 417,
-      "unknown": 498
+      "unknown": 499
     }
   }
 }

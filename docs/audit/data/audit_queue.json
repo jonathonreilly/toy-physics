@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 547,
+    "leaf": 548,
     "medium": 300
   },
-  "generated_at": "2026-05-05T00:00:52.106311+00:00",
+  "generated_at": "2026-05-05T00:15:50.282897+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -13829,6 +13829,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 1,
+      "load_bearing_score": 1.5,
+      "note_path": "docs/YT_TOP_WZ_COVARIANCE_MARGINAL_DERIVATION_NO_GO_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_top_wz_covariance_marginal_derivation_no_go.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "legacy_exploratory_drivers_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21005,23 +21022,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "yt_top_wz_matched_covariance_certificate_builder_note_2026-05-04",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "open",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/YT_TOP_WZ_MATCHED_COVARIANCE_CERTIFICATE_BUILDER_NOTE_2026-05-04.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_yt_top_wz_matched_covariance_certificate_builder.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "yt_unit_projector_pole_threshold_obstruction_note_2026-05-01",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -22842,8 +22842,27 @@
       "ready": false,
       "runner_path": "scripts/frontier_yt_p1_bz_quadrature_2_loop_full_staggered_pt.py",
       "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_top_wz_matched_covariance_certificate_builder_note_2026-05-04",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "open",
+      "deps": [
+        "yt_top_wz_covariance_marginal_derivation_no_go_note_2026-05-05"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_TOP_WZ_MATCHED_COVARIANCE_CERTIFICATE_BUILDER_NOTE_2026-05-04.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_yt_top_wz_matched_covariance_certificate_builder.py",
+      "transitive_descendants": 0
     }
   ],
   "ready_count": 696,
-  "total_pending": 1084
+  "total_pending": 1085
 }

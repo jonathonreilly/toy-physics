@@ -293,6 +293,9 @@ def main() -> int:
         "top_wz_matched_covariance_builder": load(
             "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json"
         ),
+        "top_wz_covariance_marginal_derivation_no_go": load(
+            "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json"
+        ),
         "same_source_top_response_builder": load(
             "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json"
         ),
@@ -1349,6 +1352,18 @@ def main() -> int:
         )
         is False,
         statuses["top_wz_matched_covariance_builder"],
+    )
+    report(
+        "top-wz-covariance-marginal-derivation-no-go-blocks",
+        "matched top-W covariance not derivable from marginal response support"
+        in str(statuses["top_wz_covariance_marginal_derivation_no_go"])
+        and certificates["top_wz_covariance_marginal_derivation_no_go"].get("proposal_allowed")
+        is False
+        and certificates["top_wz_covariance_marginal_derivation_no_go"].get(
+            "marginal_derivation_no_go_passed"
+        )
+        is True,
+        statuses["top_wz_covariance_marginal_derivation_no_go"],
     )
     report(
         "same-source-w-response-row-builder-open",

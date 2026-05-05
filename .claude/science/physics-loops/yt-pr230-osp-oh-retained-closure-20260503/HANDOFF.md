@@ -2245,3 +2245,35 @@ Chunk-worker check-in: four-mode L12 chunk025 output was present at this
 checkpoint.  Active local compute had polefit8x8 chunks019-024 running under
 the other worker's namespace.  This continuation did not package or stage
 chunk artifacts.
+
+## 2026-05-05 Top/W Covariance Marginal-Derivation No-Go
+
+The requested derivation-first shortcut was tested directly: can
+`cov_dE_top_dM_W` be derived from separate top-response and W-response marginal
+support, avoiding matched W/Z production rows?
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_top_wz_covariance_marginal_derivation_no_go.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=27 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=176 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=202 FAIL=0
+```
+
+Result: exact negative boundary.  The runner constructs two matched ensembles
+with the same top marginal and the same W marginal but opposite
+`cov_dE_top_dM_W`.  Therefore matched covariance is joint data, not a function
+of the marginal response certificates.
+
+The derivation-first route is not dead, but it is narrower now.  The next
+derivation target must be a same-surface factorization/independence theorem
+for the joint top/W source response.  Otherwise the route needs measured
+matched top/W response rows.

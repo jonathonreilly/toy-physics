@@ -887,3 +887,18 @@ Findings checked:
   several 2026-05-04 PR230 notes; those lines were narrowed to
   `proposal_allowed=false`, the audit pipeline was rerun, and strict lint
   now reports only pre-existing warnings plus graph-cycle warnings.
+
+# 2026-05-05 Top/W Covariance Marginal-Derivation Review
+
+Disposition: pass as exact negative boundary, not as closure.
+
+Findings checked:
+
+- The runner tests the load-bearing shortcut directly: whether a matched
+  covariance can be derived from separate top and W marginals.
+- The counterexample keeps the top marginal, W marginal, means, and variances
+  fixed while reversing the matched covariance sign.
+- The note does not write production matched rows and does not claim a physical
+  top-Yukawa readout.
+- The aggregate assembly, retained-route, and campaign gates consume the
+  no-go and still report `proposal_allowed=false`.

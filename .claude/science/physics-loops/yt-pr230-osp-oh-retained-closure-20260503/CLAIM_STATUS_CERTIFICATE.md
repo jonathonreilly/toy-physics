@@ -67,6 +67,11 @@ Open imports:
   strict mode fails until
   `outputs/yt_top_wz_matched_response_rows_2026-05-04.json` supplies paired
   top and W/Z source-response rows on a matched configuration set;
+- matched top/W covariance marginal derivation is closed negatively: the same
+  top and W response marginals admit different matched covariances, so a
+  strict covariance certificate cannot be derived from separate marginal
+  response support without a new same-surface factorization/independence
+  theorem;
 - positivity-improving/rank-one route is conditional support only; the direct
   neutral-sector irreducibility theorem is blocked on the current surface;
 - scalar denominator / K-prime route is exact support only; same-surface Schur

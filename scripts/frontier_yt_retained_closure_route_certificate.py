@@ -163,6 +163,7 @@ def main() -> int:
         "delta_perp_tomography_correction_builder": "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json",
         "same_source_top_response_identity_builder": "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json",
         "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
+        "top_wz_covariance_marginal_derivation_no_go": "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
         "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
         "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
         "same_source_w_response_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
@@ -1170,6 +1171,18 @@ def main() -> int:
             "strict_top_wz_matched_covariance_builder_passed"
         )
         is False
+    )
+    top_wz_covariance_marginal_derivation_no_go_blocks = (
+        "matched top-W covariance not derivable from marginal response support"
+        in certificates["top_wz_covariance_marginal_derivation_no_go"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["top_wz_covariance_marginal_derivation_no_go"].get("proposal_allowed")
+        is False
+        and certificates["top_wz_covariance_marginal_derivation_no_go"].get(
+            "marginal_derivation_no_go_passed"
+        )
+        is True
     )
     wz_correlator_mass_fit_path_gate_blocks = (
         "WZ correlator mass-fit path absent"
@@ -2254,6 +2267,11 @@ def main() -> int:
         certificates["top_wz_matched_covariance_builder"].get("actual_current_surface_status", ""),
     )
     report(
+        "top-wz-covariance-marginal-derivation-no-go-blocks",
+        top_wz_covariance_marginal_derivation_no_go_blocks,
+        certificates["top_wz_covariance_marginal_derivation_no_go"].get("actual_current_surface_status", ""),
+    )
+    report(
         "wz-correlator-mass-fit-path-gate-blocks",
         wz_correlator_mass_fit_path_gate_blocks,
         certificates["wz_correlator_mass_fit_path_gate"].get("actual_current_surface_status", ""),
@@ -2898,7 +2916,10 @@ def main() -> int:
             "WZ/rank-one identity route, and retained-route authorization are "
             "all still absent.  The matched covariance builder exposes the "
             "second sub-blocker: no paired top/W response rows exist on a "
-            "matched configuration set.  "
+            "matched configuration set.  The covariance marginal-derivation "
+            "no-go now blocks deriving that covariance from separate top and "
+            "W response marginals; a real paired row set or a same-surface "
+            "factorization/independence theorem is required.  "
             "Continue chunked production only with "
             "seed-controlled replacement chunks or scheduler handoff; do not "
             "treat historical chunk001/chunk002 as independent evidence.  "

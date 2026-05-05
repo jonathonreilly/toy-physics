@@ -146,3 +146,16 @@ That file must contain paired top and W/Z source-response rows on a matched
 configuration set with correlator-derived W/Z mass fits and clean selector
 firewalls.  The production covariance certificate remains absent on the
 current surface.
+
+Completed in the covariance derivation-first continuation:
+
+- `scripts/frontier_yt_top_wz_covariance_marginal_derivation_no_go.py`
+- `docs/YT_TOP_WZ_COVARIANCE_MARGINAL_DERIVATION_NO_GO_NOTE_2026-05-05.md`
+- `outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json`
+- refreshed full assembly, retained-route, and campaign certificates.
+
+This closes the marginal shortcut negatively: separate top-response and
+W-response certificates do not determine matched covariance.  The remaining
+derivation-first escape hatch is now narrower: derive a same-surface
+factorization/independence theorem for the joint top/W source response, or
+measure matched top/W rows.

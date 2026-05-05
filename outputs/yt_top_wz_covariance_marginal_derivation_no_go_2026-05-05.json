@@ -1,0 +1,113 @@
+{
+  "actual_current_surface_status": "exact negative boundary / matched top-W covariance not derivable from marginal response support",
+  "allowed_future_routes": [
+    "measure matched top/W response rows on the same configuration set",
+    "derive a same-surface factorization or independence theorem that fixes cov_dE_top_dM_W",
+    "derive a deterministic W-response theorem with a validated rule for finite-sample covariance against top response"
+  ],
+  "bare_retained_allowed": false,
+  "blocked_shortcut": {
+    "candidate": "derive cov_dE_top_dM_W from top marginal support plus W marginal or static EW response",
+    "reason": "The same top marginal and same W marginal admit multiple joint couplings with different covariance, so the covariance is not a function of the marginal response certificates."
+  },
+  "counterexample": {
+    "covariance_gap": 4.000000000000007e-05,
+    "covariance_sign_changes": true,
+    "negative_cov_dE_top_dM_W": -2.0000000000000036e-05,
+    "negative_pairing": [
+      {
+        "configuration_id": "same-marginal-neg-0",
+        "dE_top_ds": 1.419,
+        "dM_W_ds": 0.521
+      },
+      {
+        "configuration_id": "same-marginal-neg-1",
+        "dE_top_ds": 1.423,
+        "dM_W_ds": 0.518
+      },
+      {
+        "configuration_id": "same-marginal-neg-2",
+        "dE_top_ds": 1.427,
+        "dM_W_ds": 0.515
+      },
+      {
+        "configuration_id": "same-marginal-neg-3",
+        "dE_top_ds": 1.431,
+        "dM_W_ds": 0.512
+      }
+    ],
+    "positive_cov_dE_top_dM_W": 2.0000000000000036e-05,
+    "positive_pairing": [
+      {
+        "configuration_id": "same-marginal-pos-0",
+        "dE_top_ds": 1.419,
+        "dM_W_ds": 0.512
+      },
+      {
+        "configuration_id": "same-marginal-pos-1",
+        "dE_top_ds": 1.423,
+        "dM_W_ds": 0.515
+      },
+      {
+        "configuration_id": "same-marginal-pos-2",
+        "dE_top_ds": 1.427,
+        "dM_W_ds": 0.518
+      },
+      {
+        "configuration_id": "same-marginal-pos-3",
+        "dE_top_ds": 1.431,
+        "dM_W_ds": 0.521
+      }
+    ],
+    "same_top_marginal": true,
+    "same_top_mean": true,
+    "same_top_variance": true,
+    "same_w_marginal": true,
+    "same_w_mean": true,
+    "same_w_variance": true,
+    "top_marginal": [
+      1.419,
+      1.423,
+      1.427,
+      1.431
+    ],
+    "w_marginal": [
+      0.512,
+      0.515,
+      0.518,
+      0.521
+    ]
+  },
+  "exact_next_action": "Either produce matched top/W response rows or derive a real factorization/independence theorem for the joint top/W source response.  Do not derive covariance from marginal top and W response support alone.",
+  "fail_count": 0,
+  "future_matched_rows_present": false,
+  "marginal_derivation_no_go_passed": true,
+  "parent_certificates": {
+    "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
+    "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
+    "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
+    "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
+    "wz_response_measurement_row_contract": "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json",
+    "wz_row_production_attempt": "outputs/yt_wz_response_row_production_attempt_2026-05-03.json",
+    "wz_same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json"
+  },
+  "parent_statuses": {
+    "fh_gauge_normalized_response": "bounded-support / FH gauge-normalized response route",
+    "same_source_top_response_builder": "open / same-source top-response identity or covariance inputs absent",
+    "same_source_w_response_decomposition": "exact-support / same-source W-response decomposition theorem; current rows absent",
+    "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
+    "wz_response_measurement_row_contract": "bounded-support / WZ response measurement-row contract gate",
+    "wz_row_production_attempt": "exact negative boundary / WZ response row production attempt on current surface",
+    "wz_same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Separate top-response and W-response support do not determine the matched covariance.  A strict certificate needs paired rows or an independent factorization/independence theorem.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not synthesize production matched rows",
+    "does not treat static EW algebra as W/Z measurement rows",
+    "does not use observed W/Z, top, y_t, or g2 selectors",
+    "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, c2=1, Z_match=1, or kappa_s=1"
+  ]
+}

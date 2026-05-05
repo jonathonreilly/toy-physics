@@ -48,6 +48,7 @@ PARENTS = {
     "delta_perp_tomography_builder": "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json",
     "same_source_top_response_identity_builder": "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json",
     "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
+    "top_wz_covariance_marginal_derivation_no_go": "outputs/yt_top_wz_covariance_marginal_derivation_no_go_2026-05-05.json",
     "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
     "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
     "same_source_w_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
@@ -177,6 +178,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "strict delta_perp tomography correction rows absent",
                 "same-source top-response identity certificate absent",
                 "matched top/W covariance certificate absent",
+                "marginal derivation of top/W covariance rejected",
                 "same-source top-response certificate absent",
                 "same-source W-response row builder strict inputs absent",
                 "lightweight same-source W readout production rows absent",
@@ -193,6 +195,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["delta_perp_tomography_builder"],
                 PARENTS["same_source_top_response_identity_builder"],
                 PARENTS["top_wz_matched_covariance_builder"],
+                PARENTS["top_wz_covariance_marginal_derivation_no_go"],
                 PARENTS["same_source_top_response_builder"],
                 PARENTS["same_source_w_response_row_builder"],
                 PARENTS["same_source_w_lightweight_readout"],
@@ -406,6 +409,18 @@ def main() -> int:
         )
         is False,
         statuses["top_wz_matched_covariance_builder"],
+    )
+    report(
+        "top-wz-covariance-marginal-derivation-no-go-blocks",
+        "matched top-W covariance not derivable from marginal response support"
+        in statuses["top_wz_covariance_marginal_derivation_no_go"]
+        and certs["top_wz_covariance_marginal_derivation_no_go"].get("proposal_allowed")
+        is False
+        and certs["top_wz_covariance_marginal_derivation_no_go"].get(
+            "marginal_derivation_no_go_passed"
+        )
+        is True,
+        statuses["top_wz_covariance_marginal_derivation_no_go"],
     )
     report(
         "same-source-top-response-builder-open",
