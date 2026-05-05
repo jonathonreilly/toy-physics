@@ -4850,3 +4850,19 @@ Disposition: bounded production support.  The polefit8x8 stream now has
 diagnostics remain support only; model-class, FV/IR, pole-saturation, and
 canonical-Higgs/source-overlap gates remain open.  No effective-retention or
 proposed-retention wording is allowed.
+
+## 2026-05-05 - Block 203 Polefit8x8 Chunks025-030 Launch
+
+Review stance: run-control support / claim firewall.
+
+- Added `docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS025_030_LAUNCH_CHECKPOINT_NOTE_2026-05-05.md`.
+- Wrote launch status artifacts for chunks025-030 and refreshed the global
+  production collision guard.
+- Launched chunks025-030 from the repo cwd with fixed seeds 2026051925-2026051930.
+- Post-launch dry run reports running chunks `[25, 26, 27, 28, 29, 30]`,
+  `missing=0`, and `all_jobs=6`.
+
+Disposition: bounded run-control support.  The launch adds no ready chunks and
+does not count as evidence until root artifacts pass the polefit8x8
+combiner/postprocessor and aggregate gates.  No effective-retention or
+proposed-retention wording is allowed.

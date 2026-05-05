@@ -2717,3 +2717,12 @@ complete-statistics, L16/L24 finite-volume scaling, FV/IR/zero-mode,
 model-class/pole-saturation, and canonical-Higgs/source-overlap gates.  Do not
 use the finite-shell diagnostic as retained or proposed-retained `y_t`
 evidence.
+
+## 2026-05-05 - Polefit8x8 Chunks025-030 Launch Is Not Evidence
+
+Chunks025-030 were launched under the polefit8x8 orchestrator after a fresh
+global collision guard allowed capacity.  This is not production evidence:
+active PIDs, logs, chunk-local directories, and scheduler return status do not
+provide scalar LSZ normalization or canonical-Higgs/source-overlap closure.
+The chunks can be counted only after root artifacts land and pass the
+polefit8x8 combiner/postprocessor and aggregate gates.

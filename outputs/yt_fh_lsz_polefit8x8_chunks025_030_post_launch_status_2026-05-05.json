@@ -1,0 +1,32 @@
+{
+  "actual_current_surface_status": "bounded-support / FH-LSZ eight-mode-x8 pole-fit wave orchestration status",
+  "all_production_job_count": 6,
+  "available_launch_slots": 0,
+  "completed_chunks": [],
+  "gate_runs": [],
+  "global_max_production_jobs": 6,
+  "launched_chunks": [],
+  "manifest": "outputs/yt_fh_lsz_polefit8x8_chunk_manifest_2026-05-04.json",
+  "missing_chunks": [],
+  "newly_completed_chunks": [],
+  "poll_count": 1,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Wave orchestration is run control only; pole-fit and retained gates decide evidence status.",
+  "range": {
+    "end_index": 30,
+    "start_index": 25
+  },
+  "running_chunks": [
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not mix eight-mode/x8 chunks with the four-mode/x16 L12 ensemble",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ]
+}

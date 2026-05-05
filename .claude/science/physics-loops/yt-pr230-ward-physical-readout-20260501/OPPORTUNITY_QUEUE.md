@@ -1048,3 +1048,10 @@ gates.  Next production work is chunks025-030 only after a fresh global
 collision guard reports capacity.  Non-chunk positive work remains real
 same-surface `O_H/C_sH/C_HH`, W/Z response rows with strict `g2` and identity
 certificates, Schur `A/B/C` rows, or a rank-one neutral-scalar theorem.
+
+2026-05-05 update: chunks025-030 were launched after the global collision
+guard reported capacity.  Post-launch dry run reports all six selected chunks
+running and no selected missing chunks.  Do not launch additional FH/LSZ
+workers while these are active.  Their logs/directories/status records are
+run-control support only and must not be counted until root artifacts pass the
+polefit8x8 combiner/postprocessor and aggregate gates.

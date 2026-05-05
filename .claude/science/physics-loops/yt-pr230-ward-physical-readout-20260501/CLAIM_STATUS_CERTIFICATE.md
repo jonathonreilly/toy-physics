@@ -3258,6 +3258,23 @@ finite-volume scaling, FV/IR/zero-mode control, pole-saturation/model-class
 authority, or canonical-Higgs/source-overlap bridge is present.  No retained
 or proposed-retained wording is allowed.
 
+Polefit8x8 chunks025-030 launch checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ eight-mode-x8 pole-fit wave orchestration status
+proposal_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_global_production_collision_guard.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py --start-index 25 --end-index 30 --max-concurrent 6 --global-max-production-jobs 6 --dry-run --status-output outputs/yt_fh_lsz_polefit8x8_chunks025_030_post_launch_status_2026-05-05.json
+# running=[25, 26, 27, 28, 29, 30] missing=0 all_jobs=6
+```
+
+The launch checkpoint is run-control support only.  It does not add ready
+chunks, does not count as production evidence, and authorizes no retained or
+proposed-retained wording.
+
 effective-retention or proposed-retention wording is allowed.
 
 W/Z `g2` authority firewall:
