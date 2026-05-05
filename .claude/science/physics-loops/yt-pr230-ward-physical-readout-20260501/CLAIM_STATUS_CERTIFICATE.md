@@ -1,5 +1,28 @@
 # Claim Status Certificate
 
+GNS/source-Higgs flat-extension attempt:
+
+```text
+actual_current_surface_status: exact negative boundary / GNS source-Higgs flat-extension attempt blocked by missing O_H/C_sH/C_HH rows
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_gns_source_higgs_flat_extension_attempt.py
+# SUMMARY: PASS=20 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=22 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=257 FAIL=0
+```
+
+Source-only `C_ss` moments have multiple PSD source-Higgs extensions with
+different GNS ranks and source-Higgs overlaps.  Therefore GNS rank labels,
+flat-extension language, or source-only moment projections do not certify
+`O_H` or source-pole purity.  No GNS certificate or source-Higgs row file was
+written, and no retained or `proposed_retained` wording is authorized.
+
 Exact tensor/PEPS Schur-row feasibility:
 
 ```text

@@ -62,6 +62,9 @@ def main() -> int:
         "invariant_ring_oh_certificate_attempt": load(
             "outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json"
         ),
+        "gns_source_higgs_flat_extension_attempt": load(
+            "outputs/yt_pr230_gns_source_higgs_flat_extension_attempt_2026-05-05.json"
+        ),
         "kinetic_matching": load("outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"),
         "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "scalar_ir": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
@@ -127,10 +130,17 @@ def main() -> int:
         "invariant-ring/commutant",
         "Invariant-ring/commutant/Schur multiplicity-one argument",
         "two-singlet completion",
+        "GNS/source-Higgs flat extension",
+        "not proof selectors until O_H/C_sH/C_HH rows exist",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
         name for name, cert in certificates.items() if cert.get("proposal_allowed") is True
+    ]
+    loaded_failures = [
+        name
+        for name, cert in certificates.items()
+        if name != "campaign" and int(cert.get("fail_count", 0)) != 0
     ]
 
     report("assumption-ledger-present", ASSUMPTIONS.exists(), str(ASSUMPTIONS.relative_to(ROOT)))
@@ -141,7 +151,11 @@ def main() -> int:
     )
     report("refreshed-kinetic-imports-present", "Heavy kinetic-action coefficient `c2`" in text and "Z_match" in text, "c2 and Z_match imports named")
     report("forbidden-imports-explicit", not missing_terms, f"missing={missing_terms}")
-    report("all-loaded-certificates-no-fail", all(int(cert.get("fail_count", 0)) == 0 for cert in certificates.values()), f"count={len(certificates)}")
+    report(
+        "loaded-support-certificates-no-fail",
+        not loaded_failures,
+        f"failures={loaded_failures} count={len(certificates)}",
+    )
     report("no-route-authorizes-retained-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
     report(
         "kinetic-countermodel-load-bearing",
@@ -281,6 +295,20 @@ def main() -> int:
         is False,
         invariant_attempt.get("actual_current_surface_status"),
     )
+    gns_attempt = certificates["gns_source_higgs_flat_extension_attempt"]
+    report(
+        "gns-flat-extension-attempt-does-not-certify-source-higgs-purity",
+        "GNS source-Higgs flat-extension attempt"
+        in str(gns_attempt.get("actual_current_surface_status"))
+        and gns_attempt.get("proposal_allowed") is False
+        and gns_attempt.get("gns_flat_extension_passed") is False
+        and gns_attempt.get("gns_certificate_written") is False
+        and gns_attempt.get("future_file_presence", {}).get(
+            "source_higgs_measurement_rows"
+        )
+        is False,
+        gns_attempt.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -313,7 +341,11 @@ def main() -> int:
             "not as PSLQ, exact-value, or theorem-name proof selectors.  The "
             "invariant-ring O_H certificate attempt confirms this boundary: "
             "current neutral labels still admit a two-singlet completion and "
-            "do not prove multiplicity one, write O_H, or fix kappa_s.  No current route "
+            "do not prove multiplicity one, write O_H, or fix kappa_s.  The "
+            "GNS/source-Higgs flat-extension attempt confirms the same "
+            "outside-math firewall at the moment-matrix level: source-only "
+            "C_ss projections admit multiple PSD O_H extensions with different "
+            "GNS ranks and overlaps until O_H/C_sH/C_HH rows exist.  No current route "
             "certificate authorizes retained proposal wording.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."

@@ -1,0 +1,196 @@
+{
+  "actual_current_surface_status": "exact negative boundary / GNS source-Higgs flat-extension attempt blocked by missing O_H/C_sH/C_HH rows",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support if future same-surface O_H, C_sH, and C_HH pole rows provide a full PSD moment matrix with flat-extension rank stability and pole/FV/IR authority",
+  "exact_next_action": "Produce a same-surface canonical O_H certificate and production C_ss/C_sH/C_HH pole rows, then run a GNS/moment flat-extension certificate on the full source-Higgs moment matrix.  Otherwise pivot to same-source W/Z response rows with identity/covariance/g2 authority, genuine Schur rows, strict scalar-LSZ moment/threshold/FV authority, or a neutral-sector irreducibility certificate.",
+  "fail_count": 0,
+  "future_file_presence": {
+    "canonical_oh_certificate": false,
+    "gns_flat_extension_certificate": false,
+    "source_higgs_measurement_rows": false,
+    "source_higgs_production_certificate": false
+  },
+  "future_gns_contract": [
+    {
+      "current_satisfied": false,
+      "id": "canonical_higgs_operator",
+      "required": "same-surface O_H identity and normalization certificate"
+    },
+    {
+      "current_satisfied": false,
+      "id": "source_higgs_moment_rows",
+      "required": "production pole rows for C_ss, C_sH, and C_HH at the same isolated pole"
+    },
+    {
+      "current_satisfied": false,
+      "id": "positive_moment_matrix",
+      "required": "PSD moment/localizing matrix with uncertainties or exact bounds"
+    },
+    {
+      "current_satisfied": false,
+      "id": "flat_extension_rank_stability",
+      "required": "rank M_d = rank M_{d-1} for the full source-Higgs matrix, not only the source projection"
+    },
+    {
+      "current_satisfied": false,
+      "id": "pole_fv_ir_model_control",
+      "required": "isolated-pole, threshold, FV/IR, and contact/model-class authority"
+    },
+    {
+      "current_satisfied": true,
+      "id": "forbidden_import_firewall",
+      "required": "reject H_unit, Ward, observed selectors, alpha/plaquette/u0, reduced pilots, unit kappa_s, and rank/value selectors"
+    }
+  ],
+  "gns_certificate_written": false,
+  "gns_flat_extension_passed": false,
+  "hypothetical_axiom_status": null,
+  "missing_future_gns_contract": [
+    "canonical_higgs_operator",
+    "source_higgs_moment_rows",
+    "positive_moment_matrix",
+    "flat_extension_rank_stability",
+    "pole_fv_ir_model_control"
+  ],
+  "parent_certificates": {
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "clean_source_higgs_math_selector": "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json",
+    "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "invariant_ring_oh_attempt": "outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json",
+    "isolated_pole_gram_factorization": "outputs/yt_isolated_pole_gram_factorization_theorem_2026-05-03.json",
+    "retained_closure_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_higgs_pole_residue_extractor": "outputs/yt_source_higgs_pole_residue_extractor_2026-05-03.json",
+    "source_higgs_production_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+    "source_higgs_unratified_gram_no_go": "outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json"
+  },
+  "parent_statuses": {
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "clean_source_higgs_math_selector": "exact support / clean source-Higgs outside-math route selector; positive closure still open",
+    "full_positive_closure_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
+    "invariant_ring_oh_attempt": "exact negative boundary / invariant-ring O_H certificate attempt blocked on current PR230 surface",
+    "isolated_pole_gram_factorization": "exact-support / isolated-pole Gram factorization theorem",
+    "retained_closure_route": "open / retained closure not yet reached",
+    "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem",
+    "source_higgs_builder": "open / source-Higgs cross-correlator rows absent",
+    "source_higgs_gram_purity_gate": "open / source-Higgs Gram purity gate not passed",
+    "source_higgs_pole_residue_extractor": "open / source-Higgs pole-residue extractor awaiting valid production rows",
+    "source_higgs_production_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "source_higgs_unratified_gram_no_go": "exact negative boundary / unratified source-Higgs Gram shortcut is not O_H authority"
+  },
+  "pass_count": 20,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current source-only moment projection has multiple positive source-Higgs extensions with different GNS ranks and overlaps.  A GNS flat-extension certificate requires the full source-Higgs moment matrix and a canonical O_H identity, not only C_ss.",
+  "source_only_projection_counterfamily": [
+    {
+      "case": "pure_rank_one_extension",
+      "eigenvalues": [
+        0.0,
+        13.0
+      ],
+      "flat_over_source_projection": true,
+      "gns_rank": 1,
+      "gram_determinant": 0.0,
+      "matrix": [
+        [
+          4.0,
+          6.0
+        ],
+        [
+          6.0,
+          9.0
+        ]
+      ],
+      "moment_matrix_basis": [
+        "O_s",
+        "O_H_candidate"
+      ],
+      "normalized_overlap_rho_sH": 1.0,
+      "positive_semidefinite": true,
+      "source_only_projection": [
+        [
+          4.0
+        ]
+      ],
+      "source_only_rank": 1,
+      "source_projection_changed": false
+    },
+    {
+      "case": "mixed_rank_two_extension",
+      "eigenvalues": [
+        2.594875162046673,
+        10.405124837953327
+      ],
+      "flat_over_source_projection": false,
+      "gns_rank": 2,
+      "gram_determinant": 27.0,
+      "matrix": [
+        [
+          4.0,
+          3.0
+        ],
+        [
+          3.0,
+          9.0
+        ]
+      ],
+      "moment_matrix_basis": [
+        "O_s",
+        "O_H_candidate"
+      ],
+      "normalized_overlap_rho_sH": 0.5,
+      "positive_semidefinite": true,
+      "source_only_projection": [
+        [
+          4.0
+        ]
+      ],
+      "source_only_rank": 1,
+      "source_projection_changed": false
+    },
+    {
+      "case": "orthogonal_rank_two_extension",
+      "eigenvalues": [
+        4.0,
+        9.0
+      ],
+      "flat_over_source_projection": false,
+      "gns_rank": 2,
+      "gram_determinant": 36.0,
+      "matrix": [
+        [
+          4.0,
+          0.0
+        ],
+        [
+          0.0,
+          9.0
+        ]
+      ],
+      "moment_matrix_basis": [
+        "O_s",
+        "O_H_candidate"
+      ],
+      "normalized_overlap_rho_sH": 0.0,
+      "positive_semidefinite": true,
+      "source_only_projection": [
+        [
+          4.0
+        ]
+      ],
+      "source_only_rank": 1,
+      "source_projection_changed": false
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not write a GNS flat-extension certificate",
+    "does not treat source-only C_ss moments as source-Higgs Gram rows",
+    "does not use GNS rank, PSLQ, exact values, or method names as O_H selectors",
+    "does not use H_unit, Ward identity, observed targets, alpha_LM, plaquette, u0, reduced pilots, or kappa_s = 1"
+  ]
+}

@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-05 update: the GNS/source-Higgs flat-extension attempt is now landed
+and blocks on the current PR230 surface.  The source-only `C_ss` projection
+has multiple PSD source-Higgs moment extensions with different GNS ranks and
+overlaps, so GNS rank/flatness is not a proof selector until the full
+same-surface `O_H/C_sH/C_HH` pole matrix exists.  The cleanest positive route
+therefore still starts with a canonical `O_H` certificate plus production
+`C_ss/C_sH/C_HH` pole rows; then GNS/flat-extension and Gram-purity gates can
+be decisive.  Other viable positive routes remain same-source W/Z response
+rows with identity/covariance/`g2` authority, genuine Schur rows, strict
+scalar-LSZ moment/threshold/FV authority, or a neutral-sector irreducibility
+certificate.
+
 2026-05-05 update: the exact tensor/PEPS Schur-row feasibility attempt is now
 landed and blocks on the current PR230 surface.  Exact contraction remains a
 useful outside-math tool only after the row network is defined: the current

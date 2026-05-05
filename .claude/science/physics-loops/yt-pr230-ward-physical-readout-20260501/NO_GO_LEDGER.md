@@ -1,5 +1,25 @@
 # No-Go Ledger
 
+## GNS/source-Higgs flat extension is not current-surface closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_pr230_gns_source_higgs_flat_extension_attempt.py
+# SUMMARY: PASS=20 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=22 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=257 FAIL=0
+```
+
+The source-only `C_ss` projection admits PSD source-Higgs moment extensions
+with different GNS ranks and different overlaps.  Thus GNS flatness, moment
+rank, and exact moment language do not certify source-Higgs pole purity until
+same-surface `O_H/C_sH/C_HH` pole rows define the full moment matrix.  Do not
+treat source-only moments, GNS rank labels, or moment-rank value recognition
+as retained closure or `proposed_retained` evidence.
+
 ## Exact tensor/PEPS Schur-row feasibility is not current-surface closure
 
 Runners:

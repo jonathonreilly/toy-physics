@@ -1,5 +1,33 @@
 # Handoff
 
+Latest checkpoint, 2026-05-05 GNS/source-Higgs flat-extension attempt:
+
+- Added `scripts/frontier_yt_pr230_gns_source_higgs_flat_extension_attempt.py`,
+  `docs/YT_PR230_GNS_SOURCE_HIGGS_FLAT_EXTENSION_ATTEMPT_NOTE_2026-05-05.md`,
+  and
+  `outputs/yt_pr230_gns_source_higgs_flat_extension_attempt_2026-05-05.json`.
+- This tests the clean source-Higgs stage-2 route: GNS flat extension and
+  truncated moment-rank certificates.
+- Result: exact negative boundary.  Three PSD source-Higgs moment extensions
+  share the same source-only `C_ss` projection while carrying different ranks
+  and overlaps (`rho_sH = 1, 0.5, 0`).  Therefore source-only moments do not
+  certify GNS flatness, source-Higgs purity, or `O_H`.
+- Updated the assumption stress runner so the GNS/moment-rank route is also
+  under the outside-math proof-selector firewall.
+- Verification: GNS flat-extension attempt `PASS=20 FAIL=0`; assumption
+  stress `PASS=22 FAIL=0`; full assembly `PASS=77 FAIL=0`; retained-route
+  `PASS=225 FAIL=0`; campaign status `PASS=257 FAIL=0`.
+- Claim boundary: no GNS certificate or source-Higgs row file was written, no
+  retained or `proposed_retained` closure is authorized, and `C_ss` projection
+  data remain source-only.
+
+Next exact action: produce a same-surface canonical `O_H` certificate and
+production `C_ss/C_sH/C_HH` pole rows, then run GNS/flat-extension and
+Gram-purity certificates on the full moment matrix.  If that cannot be
+supplied, pivot to same-source W/Z response rows with
+identity/covariance/`g2` authority, genuine Schur rows, strict scalar-LSZ
+moment/threshold/FV authority, or a neutral-sector irreducibility certificate.
+
 Latest checkpoint, 2026-05-05 exact tensor/PEPS Schur-row feasibility:
 
 - Added `scripts/frontier_yt_pr230_exact_tensor_schur_row_feasibility_attempt.py`,

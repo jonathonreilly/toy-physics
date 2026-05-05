@@ -530,6 +530,9 @@ def main() -> int:
         "pr230_invariant_ring_oh_certificate_attempt": load(
             "outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json"
         ),
+        "pr230_gns_source_higgs_flat_extension_attempt": load(
+            "outputs/yt_pr230_gns_source_higgs_flat_extension_attempt_2026-05-05.json"
+        ),
         "sm_one_higgs_oh_import_boundary": load(
             "outputs/yt_sm_one_higgs_oh_import_boundary_2026-05-03.json"
         ),
@@ -2030,6 +2033,29 @@ def main() -> int:
         statuses["pr230_invariant_ring_oh_certificate_attempt"],
     )
     report(
+        "pr230-gns-source-higgs-flat-extension-blocks-source-only-projection",
+        "GNS source-Higgs flat-extension attempt"
+        in str(statuses["pr230_gns_source_higgs_flat_extension_attempt"])
+        and certificates["pr230_gns_source_higgs_flat_extension_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_gns_source_higgs_flat_extension_attempt"].get(
+            "gns_flat_extension_passed"
+        )
+        is False
+        and certificates["pr230_gns_source_higgs_flat_extension_attempt"].get(
+            "gns_certificate_written"
+        )
+        is False
+        and not any(
+            certificates["pr230_gns_source_higgs_flat_extension_attempt"].get(
+                "future_file_presence", {}
+            ).values()
+        ),
+        statuses["pr230_gns_source_higgs_flat_extension_attempt"],
+    )
+    report(
         "canonical-higgs-operator-realization-gate-not-passed",
         "canonical-Higgs operator realization gate not passed"
         in str(statuses["canonical_higgs_operator_realization_gate"]),
@@ -3043,6 +3069,10 @@ def main() -> int:
         {
             "route": "exact tensor/PEPS Schur row production",
             "needed": "same-surface neutral scalar kernel basis, source/orthogonal projector, A/B/C row definitions, and certified exact contraction",
+        },
+        {
+            "route": "GNS source-Higgs flat extension",
+            "needed": "same-surface O_H plus production C_ss/C_sH/C_HH pole rows giving a full PSD moment matrix with flat-extension rank stability",
         },
         {
             "route": "current-surface non-chunk queue exhausted",
