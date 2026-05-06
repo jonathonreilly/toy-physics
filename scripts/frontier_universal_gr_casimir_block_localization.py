@@ -1,39 +1,20 @@
 #!/usr/bin/env python3
-"""Canonical block localization on the direct universal route via the SO(3) Casimir.
+"""Exact Casimir block localization on the direct universal GR route.
 
-This runner checks whether the direct universal route already carries enough
-exact structure to canonically split the universal symmetric `3+1` space into
+This runner constructs the symmetric 3+1 polarization representation and the
+SO(3) generators over exact SymPy radicals. It verifies that Pi_A1 fixes the
+lapse/spatial-trace core and that the complement Casimir splits the remaining
+channels into the shift vector and traceless spatial-shear blocks.
 
-    lapse ⊕ shift ⊕ trace ⊕ traceless-shear
-
-without choosing a full complement frame.
-
-Key idea:
-  - `Pi_A1` already fixes lapse and spatial trace.
-  - On the 8D complement, the universal SO(3) generators define a Casimir
-    operator whose spectral projectors split the complement into the vector
-    (`j=1`) and traceless-symmetric (`j=2`) irreps.
-
-If this works, the old "missing complement-frame bundle" blocker was too
-strong. The direct universal route would then already have a canonical block
-localization operator, even if it does not choose bases inside the shift/shear
-blocks.
+Scope: representation-level block localization only. This does not identify
+the block-localized universal Hessian with Einstein/Regge dynamics.
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
-from importlib.machinery import SourceFileLoader
-from pathlib import Path
 
-import numpy as np
-
-
-ROOT = Path(__file__).resolve().parents[1]
-U = SourceFileLoader(
-    "universal_conn",
-    str(ROOT / "scripts" / "frontier_universal_gr_canonical_projector_connection.py"),
-).load_module()
+import sympy as sp
 
 
 @dataclass
@@ -55,94 +36,202 @@ def record(name: str, ok: bool, detail: str, status: str = "EXACT") -> None:
         print(f"    {detail}")
 
 
-def spectral_projector(op: np.ndarray, target: float, tol: float = 1e-9) -> np.ndarray:
-    vals, vecs = np.linalg.eig(op)
-    mask = np.abs(vals - target) < tol
-    V = vecs[:, mask]
-    if V.size == 0:
-        return np.zeros_like(op)
-    return np.real_if_close(V @ np.linalg.inv(V.T @ V) @ V.T, tol=1e-7)
+def is_zero(mat: sp.Matrix) -> bool:
+    return all(sp.simplify(entry) == 0 for entry in mat)
+
+
+def sym(i: int, j: int, n: int = 4) -> sp.Matrix:
+    m = sp.zeros(n, n)
+    if i == j:
+        m[i, j] = sp.Integer(1)
+    else:
+        m[i, j] = 1 / sp.sqrt(2)
+        m[j, i] = 1 / sp.sqrt(2)
+    return m
+
+
+def diag(vals: tuple[sp.Expr, ...]) -> sp.Matrix:
+    return sp.diag(*vals)
+
+
+def frob(a: sp.Matrix, b: sp.Matrix) -> sp.Expr:
+    return sp.simplify(sum(a[i, j] * b[i, j] for i in range(a.rows) for j in range(a.cols)))
+
+
+def canonical_polarization_frame() -> list[sp.Matrix]:
+    """Orthonormal symmetric 3+1 polarization basis.
+
+    Coordinate order is (t, x, y, z). Basis order:
+      0 lapse h_tt
+      1,2,3 shift h_tx, h_ty, h_tz
+      4 spatial trace
+      5,6,7,8,9 traceless spatial shear
+    """
+
+    return [
+        sym(0, 0),
+        sym(0, 1),
+        sym(0, 2),
+        sym(0, 3),
+        diag((0, 1 / sp.sqrt(3), 1 / sp.sqrt(3), 1 / sp.sqrt(3))),
+        diag((0, 1 / sp.sqrt(2), -1 / sp.sqrt(2), 0)),
+        diag((0, 1 / sp.sqrt(6), 1 / sp.sqrt(6), -2 / sp.sqrt(6))),
+        sym(1, 2),
+        sym(1, 3),
+        sym(2, 3),
+    ]
+
+
+def so3_generator(axis: str) -> sp.Matrix:
+    """Infinitesimal spatial rotation matrix embedded in 3+1 dimensions."""
+
+    a = sp.zeros(4, 4)
+    if axis == "x":
+        a[2, 3] = -1
+        a[3, 2] = 1
+    elif axis == "y":
+        a[1, 3] = 1
+        a[3, 1] = -1
+    elif axis == "z":
+        a[1, 2] = -1
+        a[2, 1] = 1
+    else:
+        raise ValueError(axis)
+    return a
+
+
+def lifted_generator(axis: str) -> sp.Matrix:
+    """Generator of h -> R(theta)^T h R(theta) on the 10D basis."""
+
+    frame = canonical_polarization_frame()
+    a = so3_generator(axis)
+    out = sp.zeros(len(frame), len(frame))
+    for j, basis in enumerate(frame):
+        image = a.T * basis + basis * a
+        for i, ref in enumerate(frame):
+            out[i, j] = frob(ref, image)
+    return sp.simplify(out)
+
+
+def pi_a1() -> sp.Matrix:
+    p = sp.zeros(10, 10)
+    p[0, 0] = 1
+    p[4, 4] = 1
+    return p
+
+
+def submatrix(mat: sp.Matrix, idx: list[int]) -> sp.Matrix:
+    return mat.extract(idx, idx)
+
+
+def lift_complement_projector(projector_c: sp.Matrix, comp_idx: list[int]) -> sp.Matrix:
+    out = sp.zeros(10, 10)
+    for i_c, i in enumerate(comp_idx):
+        for j_c, j in enumerate(comp_idx):
+            out[i, j] = projector_c[i_c, j_c]
+    return out
+
+
+def diagonal_projector_from_casimir(casimir: sp.Matrix, eigenvalue: int) -> sp.Matrix:
+    diag_entries = [1 if sp.simplify(casimir[i, i] - eigenvalue) == 0 else 0 for i in range(casimir.rows)]
+    return sp.diag(*diag_entries)
+
+
+def compact_diag(mat: sp.Matrix) -> list[int]:
+    return [int(sp.simplify(mat[i, i])) for i in range(mat.rows)]
+
+
+def commutator(a: sp.Matrix, b: sp.Matrix) -> sp.Matrix:
+    return sp.simplify(a * b - b * a)
+
+
+def closes_so3(gx: sp.Matrix, gy: sp.Matrix, gz: sp.Matrix) -> bool:
+    pairs = ((gx, gy, gz), (gy, gz, gx), (gz, gx, gy))
+    return all(is_zero(commutator(a, b) - c) or is_zero(commutator(a, b) + c) for a, b, c in pairs)
 
 
 def main() -> int:
-    Gx = U.generator("x")
-    Gy = U.generator("y")
-    Gz = U.generator("z")
-    Pi_A1 = U.pi_a1()
+    frame = canonical_polarization_frame()
+    gram = sp.Matrix([[frob(a, b) for b in frame] for a in frame])
+    gx = lifted_generator("x")
+    gy = lifted_generator("y")
+    gz = lifted_generator("z")
+    pi = pi_a1()
+    comp = sp.eye(10) - pi
 
-    # Full 10D canonical blocks from the universal canonical basis:
-    P_lapse = np.zeros((10, 10), dtype=float)
-    P_lapse[0, 0] = 1.0
-    P_trace = np.zeros((10, 10), dtype=float)
-    P_trace[4, 4] = 1.0
+    p_lapse = sp.zeros(10, 10)
+    p_lapse[0, 0] = 1
+    p_trace = sp.zeros(10, 10)
+    p_trace[4, 4] = 1
 
     comp_idx = [i for i in range(10) if i not in (0, 4)]
-    Gc = [G[np.ix_(comp_idx, comp_idx)] for G in (Gx, Gy, Gz)]
-    C = sum(G @ G for G in Gc)
+    gc = [submatrix(g, comp_idx) for g in (gx, gy, gz)]
+    casimir = sp.simplify(sum((g * g for g in gc), sp.zeros(8, 8)))
+    casimir_diag = compact_diag(casimir)
+    casimir_offdiag_zero = all(casimir[i, j] == 0 for i in range(8) for j in range(8) if i != j)
 
-    vals = np.linalg.eigvals(C)
-    vals_real = sorted(round(float(np.real_if_close(v)), 6) for v in vals)
+    p_shift_c = diagonal_projector_from_casimir(casimir, -2)
+    p_shear_c = diagonal_projector_from_casimir(casimir, -6)
+    p_shift = lift_complement_projector(p_shift_c, comp_idx)
+    p_shear = lift_complement_projector(p_shear_c, comp_idx)
 
-    P_shift_c = spectral_projector(C, -2.0)
-    P_shear_c = spectral_projector(C, -6.0)
+    p_sum = sp.simplify(p_lapse + p_trace + p_shift + p_shear)
+    projectors = [p_lapse, p_trace, p_shift, p_shear]
+    orthogonal = all(is_zero(projectors[i] * projectors[j]) for i in range(4) for j in range(i + 1, 4))
+    idempotent = all(is_zero(p * p - p) for p in projectors)
+    complete = is_zero(p_sum - sp.eye(10))
 
-    P_shift = np.zeros((10, 10), dtype=float)
-    P_shear = np.zeros((10, 10), dtype=float)
-    P_shift[np.ix_(comp_idx, comp_idx)] = P_shift_c
-    P_shear[np.ix_(comp_idx, comp_idx)] = P_shear_c
-
-    # Basic projector algebra.
-    I = np.eye(10)
-    P_sum = P_lapse + P_trace + P_shift + P_shear
-    sum_err = float(np.max(np.abs(P_sum - I)))
-    orth_err = max(
-        float(np.linalg.norm(P_lapse @ P_trace, ord="fro")),
-        float(np.linalg.norm(P_lapse @ P_shift, ord="fro")),
-        float(np.linalg.norm(P_lapse @ P_shear, ord="fro")),
-        float(np.linalg.norm(P_trace @ P_shift, ord="fro")),
-        float(np.linalg.norm(P_trace @ P_shear, ord="fro")),
-        float(np.linalg.norm(P_shift @ P_shear, ord="fro")),
-    )
-    idem_err = max(
-        float(np.linalg.norm(P_lapse @ P_lapse - P_lapse, ord="fro")),
-        float(np.linalg.norm(P_trace @ P_trace - P_trace, ord="fro")),
-        float(np.linalg.norm(P_shift @ P_shift - P_shift, ord="fro")),
-        float(np.linalg.norm(P_shear @ P_shear - P_shear, ord="fro")),
-    )
-
-    # Commutation with the universal SO(3) generators.
-    comm_shift = max(float(np.linalg.norm(P_shift @ G - G @ P_shift, ord="fro")) for G in (Gx, Gy, Gz))
-    comm_shear = max(float(np.linalg.norm(P_shear @ G - G @ P_shear, ord="fro")) for G in (Gx, Gy, Gz))
-    comm_lapse = max(float(np.linalg.norm(P_lapse @ G - G @ P_lapse, ord="fro")) for G in (Gx, Gy, Gz))
-    comm_trace = max(float(np.linalg.norm(P_trace @ G - G @ P_trace, ord="fro")) for G in (Gx, Gy, Gz))
+    comm_lapse = all(is_zero(commutator(p_lapse, g)) for g in (gx, gy, gz))
+    comm_trace = all(is_zero(commutator(p_trace, g)) for g in (gx, gy, gz))
+    comm_shift = all(is_zero(commutator(p_shift, g)) for g in (gx, gy, gz))
+    comm_shear = all(is_zero(commutator(p_shear, g)) for g in (gx, gy, gz))
+    a1_mixing_zero = all(is_zero(pi * g * comp) and is_zero(comp * g * pi) for g in (gx, gy, gz))
+    closure_ok = closes_so3(gx, gy, gz)
 
     ranks = {
-        "lapse": int(np.linalg.matrix_rank(P_lapse, tol=1e-12)),
-        "shift": int(np.linalg.matrix_rank(P_shift, tol=1e-12)),
-        "trace": int(np.linalg.matrix_rank(P_trace, tol=1e-12)),
-        "shear": int(np.linalg.matrix_rank(P_shear, tol=1e-12)),
+        "lapse": p_lapse.rank(),
+        "shift": p_shift.rank(),
+        "trace": p_trace.rank(),
+        "shear": p_shear.rank(),
     }
-
-    # In the current canonical basis these should land exactly on the expected
-    # coordinate blocks.
-    diag_shift = np.diag(P_shift)[comp_idx]
-    diag_shear = np.diag(P_shear)[comp_idx]
+    diag_shift = [int(p_shift[i, i]) for i in comp_idx]
+    diag_shear = [int(p_shear[i, i]) for i in comp_idx]
 
     print("UNIVERSAL GR CASIMIR BLOCK LOCALIZATION")
     print("=" * 78)
-    print(f"Casimir eigenvalues on complement = {vals_real}")
+    print("basis_order = [lapse, shift_x, shift_y, shift_z, trace, shear_1, shear_2, shear_xy, shear_xz, shear_yz]")
+    print(f"basis_orthonormal = {gram == sp.eye(10)}")
+    print(f"so3_closure_exact = {closure_ok}")
+    print(f"A1_complement_mixing_zero = {a1_mixing_zero}")
+    print(f"Casimir diagonal on complement = {casimir_diag}")
+    print(f"Casimir off-diagonal zero on complement = {casimir_offdiag_zero}")
     print(f"ranks = {ranks}")
-    print(f"sum error = {sum_err:.3e}")
-    print(f"orthogonality error = {orth_err:.3e}")
-    print(f"idempotence error = {idem_err:.3e}")
-    print(f"comm errors: lapse={comm_lapse:.3e}, trace={comm_trace:.3e}, shift={comm_shift:.3e}, shear={comm_shear:.3e}")
-    print(f"diag P_shift on complement = {np.array2string(diag_shift, precision=6, floatmode='fixed')}")
-    print(f"diag P_shear on complement = {np.array2string(diag_shear, precision=6, floatmode='fixed')}")
+    print(f"projector complete = {complete}")
+    print(f"projector orthogonal = {orthogonal}")
+    print(f"projector idempotent = {idempotent}")
+    print(f"commutes: lapse={comm_lapse}, trace={comm_trace}, shift={comm_shift}, shear={comm_shear}")
+    print(f"diag P_shift on complement = {diag_shift}")
+    print(f"diag P_shear on complement = {diag_shear}")
 
     record(
-        "the universal complement Casimir has exactly the j=1 and j=2 eigenvalue split",
-        vals_real == [-6.0, -6.0, -6.0, -6.0, -6.0, -2.0, -2.0, -2.0],
-        f"Casimir eigenvalues={vals_real}",
+        "the displayed 10D polarization basis is exactly orthonormal",
+        gram == sp.eye(10),
+        "Frobenius Gram matrix equals the 10D identity",
+    )
+    record(
+        "the lifted spatial generators close the SO(3) Lie algebra exactly",
+        closure_ok,
+        "all three commutators match the embedded generators up to orientation sign",
+    )
+    record(
+        "Pi_A1 is invariant and its complement is an invariant subrepresentation",
+        a1_mixing_zero,
+        "Pi_A1 G (I-Pi_A1) and (I-Pi_A1) G Pi_A1 are zero for all generators",
+    )
+    record(
+        "the complement Casimir has exactly the j=1 and j=2 split",
+        casimir_diag == [-2, -2, -2, -6, -6, -6, -6, -6] and casimir_offdiag_zero,
+        f"Casimir diagonal={casimir_diag}",
     )
     record(
         "the spectral projectors define a canonical shift/shear split on the complement",
@@ -151,34 +240,24 @@ def main() -> int:
     )
     record(
         "the four block projectors are exact, orthogonal, and complete",
-        sum_err < 1e-12 and orth_err < 1e-12 and idem_err < 1e-12,
-        f"sum={sum_err:.3e}, orth={orth_err:.3e}, idem={idem_err:.3e}",
+        complete and orthogonal and idempotent,
+        f"complete={complete}, orthogonal={orthogonal}, idempotent={idempotent}",
     )
     record(
-        "the shift/shear projectors commute with the universal SO(3) generators",
-        comm_shift < 1e-12 and comm_shear < 1e-12 and comm_lapse < 1e-12 and comm_trace < 1e-12,
-        f"comm errors=({comm_lapse:.3e},{comm_trace:.3e},{comm_shift:.3e},{comm_shear:.3e})",
+        "the block projectors commute with the universal SO(3) generators",
+        comm_lapse and comm_trace and comm_shift and comm_shear,
+        f"commutes=({comm_lapse},{comm_trace},{comm_shift},{comm_shear})",
     )
     record(
-        "in the current canonical basis the Casimir projectors land exactly on the expected shift and shear coordinates",
-        np.max(np.abs(diag_shift - np.array([1, 1, 1, 0, 0, 0, 0, 0], dtype=float))) < 1e-12
-        and np.max(np.abs(diag_shear - np.array([0, 0, 0, 1, 1, 1, 1, 1], dtype=float))) < 1e-12,
+        "in the current canonical basis the Casimir projectors land on the expected coordinates",
+        diag_shift == [1, 1, 1, 0, 0, 0, 0, 0] and diag_shear == [0, 0, 0, 1, 1, 1, 1, 1],
         "P_shift selects h0i and P_shear selects spatial traceless-symmetric channels",
     )
 
-    print("\nVerdict:")
+    print("\nBoundary:")
     print(
-        "The direct universal route already carries a canonical block-localization "
-        "operator. Pi_A1 fixes lapse and trace, and the complement Casimir "
-        "spectrally fixes the shift and traceless-shear blocks. So the old "
-        "full complement-frame blocker was too strong."
-    )
-    print(
-        "The remaining question is not whether a canonical lapse/shift/trace/shear "
-        "block split exists. It does. The remaining question is whether this "
-        "canonical block-localized Hessian is already enough to identify the "
-        "Einstein/Regge dynamics law, or whether an extra theorem is still needed "
-        "inside the shift/shear blocks."
+        "This proves the representation-level lapse/shift/trace/shear block split. "
+        "It does not prove Einstein/Regge dynamics for the block-localized Hessian."
     )
 
     print("\n" + "=" * 78)

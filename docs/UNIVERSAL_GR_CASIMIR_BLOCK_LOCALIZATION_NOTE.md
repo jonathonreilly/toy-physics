@@ -1,135 +1,148 @@
 # Universal GR Casimir Block Localization on `PL S^3 x R`
 
-**Status:** support - exact Casimir block-localization step
-**Date:** 2026-04-14  
-**Branch:** `codex/review-active`  
+**Claim type:** positive_theorem
+**Status:** exact support theorem; audit status is set only by the independent audit lane
+**Date:** 2026-04-14
+**Updated:** 2026-05-06
 **Role:** direct universal route / canonical block-localization theorem step
+**Script:** `scripts/frontier_universal_gr_casimir_block_localization.py` (PASS=8 FAIL=0 on current worktree)
 
 ## Verdict
 
-The direct universal route already has a canonical lapse/shift/trace/shear
-block split.
+The direct universal route has a canonical lapse / shift / trace / shear
+block split at the representation level.
 
-The old universal blocker was too strong because it asked for a full canonical
-complement frame. That is more than GR needs at this stage.
+Equivalently, the route has a canonical block-localization operator onto the
+lapse / shift / trace / shear channels.
 
-What is actually needed is a canonical block localization into:
+The previous packet only asserted the Casimir spectrum. This note now fixes
+the actual symmetric `3+1` representation, the invariant `Pi_A1` projector,
+the complement generators, the Casimir, and the four projectors used by the
+claim.
 
-- lapse
-- shift
-- spatial trace
-- traceless spatial shear
+This is a block-localization theorem, not a full GR theorem. It does not choose
+a basis inside the shift or shear irreps, and it does not identify the
+block-localized universal Hessian with the Einstein/Regge operator.
 
-and the current universal stack already supplies exactly that.
+## Representation Fixed in the Packet
 
-## Exact ingredients
+Use coordinate order `(t, x, y, z)` and the Frobenius inner product on real
+symmetric `4 x 4` perturbations. The runner constructs the following
+orthonormal polarization basis:
 
-The universal stack already had:
+1. `e_0 = h_tt` (lapse)
+2. `e_1,e_2,e_3 = h_tx,h_ty,h_tz` (shift)
+3. `e_4 = (h_xx + h_yy + h_zz) / sqrt(3)` (spatial trace)
+4. `e_5 = (h_xx - h_yy) / sqrt(2)`
+5. `e_6 = (h_xx + h_yy - 2 h_zz) / sqrt(6)`
+6. `e_7,e_8,e_9 = h_xy,h_xz,h_yz`
 
-- exact scalar observable generator `W[J]`
-- exact `PL S^3 x R` lift
-- exact unique symmetric `3+1` quotient kernel
-- exact invariant projector `Pi_A1`
+Here the off-diagonal symmetric tensors are normalized as
+`(E_ab + E_ba) / sqrt(2)`.
 
-with
+Spatial rotations act by
+
+`rho(R) h = R^T h R`,
+
+with `R = diag(1, R_3)` and `R_3 in SO(3)`. The infinitesimal generators are
+
+`(G_a)_{ij} = <e_i, A_a^T e_j + e_j A_a>`,
+
+where `A_a` is the embedded skew generator for rotations around spatial axis
+`a`.
+
+## A1 Projector
+
+In this basis,
 
 `Pi_A1 = diag(1,0,0,0,1,0,0,0,0,0)`.
 
-So lapse and spatial trace were already canonically fixed.
+So `Pi_A1` fixes exactly the lapse and spatial-trace channels. The runner
+checks that `Pi_A1` has no generator mixing with its complement:
 
-## Casimir theorem on the complement
+`A1_complement_mixing_zero = True`.
 
-On the 8D complement of `Pi_A1`, the universal `SO(3)` generators define the
-Casimir operator
+Thus the 8D complement is an invariant `SO(3)` subrepresentation, not an
+extra chosen definition.
 
-`C = G_x^2 + G_y^2 + G_z^2`.
+## Complement Casimir
 
-Its exact spectrum on the current canonical universal representation is:
+Order the complement as
 
-- `-2` with multiplicity `3`
-- `-6` with multiplicity `5`
+`(h_tx,h_ty,h_tz, q_1,q_2,h_xy,h_xz,h_yz)`,
 
-These are exactly the `j=1` and `j=2` irreps:
+where `q_1 = (h_xx-h_yy)/sqrt(2)` and
+`q_2 = (h_xx+h_yy-2h_zz)/sqrt(6)`.
 
-- `j=1`: shift vector block
-- `j=2`: traceless spatial shear block
+The runner constructs
 
-So the spectral projectors of `C` canonically split the complement into:
+`C = G_x^2 + G_y^2 + G_z^2`
 
-- shift (`dim 3`)
-- traceless shear (`dim 5`)
+on this complement. The computed matrix is diagonal in the displayed
+complement order:
 
-## Canonical block projectors
+`diag(C) = (-2,-2,-2,-6,-6,-6,-6,-6)`,
 
-The full universal block projectors are therefore:
+with off-diagonal entries exactly zero. Therefore the exact spectrum is:
 
-- `P_lapse`
-- `P_shift`
-- `P_trace`
-- `P_shear`
+- `-2` with multiplicity `3`;
+- `-6` with multiplicity `5`.
 
-with ranks:
+With the real anti-Hermitian convention used here, these are `-j(j+1)` for:
 
-- `1`
-- `3`
-- `1`
-- `5`
+- `j=1`: the shift-vector block;
+- `j=2`: the traceless spatial-shear block.
 
-They are:
+## Canonical Block Projectors
 
-- exact
-- orthogonal
-- complete
-- commuting with the universal `SO(3)` generators
+The spectral projectors of the complement Casimir give:
 
-So the universal route now has an exact canonical block-localization operator
-into the physically relevant GR channel blocks.
+- `P_lapse = diag(1,0,0,0,0,0,0,0,0,0)`;
+- `P_shift = diag(0,1,1,1,0,0,0,0,0,0)`;
+- `P_trace = diag(0,0,0,0,1,0,0,0,0,0)`;
+- `P_shear = diag(0,0,0,0,0,1,1,1,1,1)`.
 
-## What this changes
+The runner checks:
 
-This sharply upgrades the direct universal route.
+- ranks: `1,3,1,5`;
+- completeness: `True`;
+- orthogonality: `True`;
+- idempotence: `True`;
+- commutation with `G_x,G_y,G_z`: `True`.
 
-Before:
+So the four projectors are exact, orthogonal, complete, and canonical under
+the displayed universal `SO(3)` action.
 
-> the route was blocked by the absence of a canonical complement-frame bundle.
+## What This Does and Does Not Close
 
-Now:
+Closed here:
 
-> the route already has a canonical block localization into lapse / shift /
-> trace / shear, and the real remaining question is whether that canonical
-> block-localized Hessian is already enough to identify the Einstein/Regge law.
+- the invariant `A1` core is lapse plus spatial trace;
+- the complement is an actual `SO(3)` representation;
+- its Casimir splits the complement into the `j=1` shift block and `j=2`
+  traceless-shear block;
+- the resulting four block projectors are explicit and checkable.
 
-So the missing object is smaller than previously stated.
+Not closed here:
 
-## Remaining open issue
+- no preferred basis is chosen inside the degenerate `j=1` or `j=2` blocks;
+- no full complement-frame bundle or distinguished connection is claimed;
+- no Einstein/Regge dynamics identification is claimed.
 
-The current theorem does **not** yet prove full GR.
+The old blocker asking for a full canonical complement frame was too strong
+for block localization. The remaining GR route question is whether the
+canonical block-localized universal Hessian matches the Einstein/Regge law
+blockwise, or whether an additional theorem is needed inside the shift/shear
+channels.
 
-What remains open is whether the canonical block-localized universal Hessian:
+## Source Dependencies
 
-- already matches Einstein/Regge dynamics blockwise, or
-- still needs an extra theorem inside the shift/shear blocks
+This section records the source authorities and runner needed for a
+restricted-packet re-audit. It does not promote this note by itself.
 
-for example:
-
-- channel normalization
-- sign convention
-- constraint interpretation
-- blockwise curvature identification
-
-But the direct universal route is now materially stronger:
-
-- canonical block localization is no longer missing.
-
-## Bottom line
-
-The direct universal route has cleared a real obstacle.
-
-It now has a canonical, exact block-localization operator:
-
-`lapse ⊕ shift ⊕ trace ⊕ traceless-shear`.
-
-That means the flagship GR route should now focus on:
-
-> identifying the canonical block-localized universal Hessian with the
-> Einstein/Regge law, rather than searching for a full complement frame.
+- [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- [S3_ANOMALY_SPACETIME_LIFT_NOTE.md](S3_ANOMALY_SPACETIME_LIFT_NOTE.md)
+- [UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md](UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md)
+- [UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md](UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md)
+- [UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md](UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md)
+- `scripts/frontier_universal_gr_casimir_block_localization.py`

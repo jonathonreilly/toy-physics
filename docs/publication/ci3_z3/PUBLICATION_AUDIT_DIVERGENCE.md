@@ -17,9 +17,9 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 319 |
+| critical | `unaudited` | 320 |
 | critical | `audited_conditional` | 183 |
-| critical | `audited_renaming` | 21 |
+| critical | `audited_renaming` | 20 |
 | critical | `audited_numerical_match` | 11 |
 | critical | `audited_failed` | 7 |
 | critical | `open_gate` | 1 |
@@ -497,7 +497,7 @@ publication tables phrase it.
 | critical | `unified_matter_content_ewsb_harness_theorem_note_2026-05-03` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `universal_gr_a1_invariant_section_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `universal_gr_block_constraint_interpretation_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
-| critical | `universal_gr_casimir_block_localization_note` | `audited_renaming` | `audited_renaming` | DERIVATION_ATLAS.md |
+| critical | `universal_gr_casimir_block_localization_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `universal_gr_discrete_global_closure_note` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `universal_gr_invariant_nonlinear_completion_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `universal_gr_isotropic_glue_operator_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |

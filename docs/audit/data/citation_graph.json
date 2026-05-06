@@ -13969,6 +13969,26 @@
       "to": "universal_gr_isotropic_schur_localization_note"
     },
     {
+      "from": "universal_gr_casimir_block_localization_note",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "universal_gr_casimir_block_localization_note",
+      "to": "s3_anomaly_spacetime_lift_note"
+    },
+    {
+      "from": "universal_gr_casimir_block_localization_note",
+      "to": "universal_gr_tensor_variational_candidate_note"
+    },
+    {
+      "from": "universal_gr_casimir_block_localization_note",
+      "to": "universal_gr_tensor_quotient_uniqueness_note"
+    },
+    {
+      "from": "universal_gr_casimir_block_localization_note",
+      "to": "universal_gr_a1_invariant_section_note"
+    },
+    {
       "from": "universal_gr_curvature_localization_blocker_note",
       "to": "universal_gr_isotropic_glue_operator_note"
     },
@@ -51852,13 +51872,19 @@
     },
     "universal_gr_casimir_block_localization_note": {
       "claim_id": "universal_gr_casimir_block_localization_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "bfdc6443d9f4919b73786224e769d26996ba555990b9970e6919c91f0653d0f0",
+      "deps": [
+        "observable_principle_from_axiom_note",
+        "s3_anomaly_spacetime_lift_note",
+        "universal_gr_tensor_variational_candidate_note",
+        "universal_gr_tensor_quotient_uniqueness_note",
+        "universal_gr_a1_invariant_section_note"
+      ],
+      "note_hash": "0a6510b78f86f90d4c2bdce77163b90504ba323d7d9fe0dfc7c17b5263721d58",
       "path": "docs/UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_casimir_block_localization.py",
       "title": "Universal GR Casimir Block Localization on `PL S^3 x R`"
     },
     "universal_gr_complement_canonical_note": {
@@ -55863,7 +55889,6 @@
     "universal_gr_block_constraint_interpretation_note",
     "universal_gr_block_normalization_note",
     "universal_gr_canonical_projector_connection_note",
-    "universal_gr_casimir_block_localization_note",
     "universal_gr_complement_canonical_note",
     "universal_gr_constraint_action_stationarity_note",
     "universal_gr_discrete_global_closure_note",
@@ -55955,9 +55980,9 @@
       "bounded_theorem": 78,
       "meta": 10,
       "no_go": 14,
-      "none": 1706,
+      "none": 1705,
       "open_gate": 10,
-      "positive_theorem": 89
+      "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 577,
@@ -55967,10 +55992,10 @@
       "open_gate": 113,
       "positive_theorem": 628
     },
-    "edge_count": 6612,
+    "edge_count": 6617,
     "leaf_count": 550,
     "node_count": 1907,
-    "root_count": 865,
-    "runners_with_path": 1482
+    "root_count": 864,
+    "runners_with_path": 1483
   }
 }

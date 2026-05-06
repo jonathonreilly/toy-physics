@@ -19,26 +19,26 @@
     {
       "claim_id": "observable_principle_from_axiom_note",
       "criticality": "critical",
-      "load_bearing_score": 35.397,
-      "transitive_descendants": 336
+      "load_bearing_score": 35.901,
+      "transitive_descendants": 337
     },
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 35.224,
-      "transitive_descendants": 597
+      "load_bearing_score": 35.226,
+      "transitive_descendants": 598
     },
     {
       "claim_id": "minimal_axioms_2026-04-11",
       "criticality": "critical",
-      "load_bearing_score": 33.582,
-      "transitive_descendants": 541
+      "load_bearing_score": 33.585,
+      "transitive_descendants": 542
     },
     {
       "claim_id": "alpha_s_derived_note",
       "criticality": "critical",
-      "load_bearing_score": 32.533,
-      "transitive_descendants": 523
+      "load_bearing_score": 32.536,
+      "transitive_descendants": 524
     },
     {
       "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
@@ -61,8 +61,8 @@
     {
       "claim_id": "native_gauge_closure_note",
       "criticality": "critical",
-      "load_bearing_score": 29.2,
-      "transitive_descendants": 587
+      "load_bearing_score": 29.202,
+      "transitive_descendants": 588
     },
     {
       "claim_id": "yt_ew_color_projection_theorem",
@@ -73,14 +73,14 @@
     {
       "claim_id": "minimal_axioms_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 25.753,
-      "transitive_descendants": 609
+      "load_bearing_score": 25.755,
+      "transitive_descendants": 610
     },
     {
       "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 25.729,
-      "transitive_descendants": 599
+      "load_bearing_score": 25.731,
+      "transitive_descendants": 600
     },
     {
       "claim_id": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
@@ -91,8 +91,8 @@
     {
       "claim_id": "anomaly_forces_time_theorem",
       "criticality": "critical",
-      "load_bearing_score": 25.469,
-      "transitive_descendants": 500
+      "load_bearing_score": 25.472,
+      "transitive_descendants": 501
     },
     {
       "claim_id": "three_generation_observable_theorem_note",
@@ -133,14 +133,14 @@
     {
       "claim_id": "plaquette_self_consistency_note",
       "criticality": "critical",
-      "load_bearing_score": 22.095,
-      "transitive_descendants": 546
+      "load_bearing_score": 22.098,
+      "transitive_descendants": 547
     },
     {
       "claim_id": "universal_gr_discrete_global_closure_note",
       "criticality": "critical",
-      "load_bearing_score": 21.547,
-      "transitive_descendants": 528
+      "load_bearing_score": 21.55,
+      "transitive_descendants": 529
     },
     {
       "claim_id": "ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25",

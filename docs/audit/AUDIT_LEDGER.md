@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 801 |
+| unaudited | 802 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
-| ~~audited_renaming~~ | 30 |
+| ~~audited_renaming~~ | 29 |
 | ~~audited_conditional~~ | 462 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
@@ -43,8 +43,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 9 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 20 |
-| `audited_renaming` | 30 |
-| `unaudited` | 850 |
+| `audited_renaming` | 29 |
+| `unaudited` | 851 |
 
 | claim_type | count |
 |---|---:|
@@ -67,7 +67,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1386
+- runners classified: 1387
 - runners with (C) first-principles compute hits: 684
 - runners with (D) external comparator hits: 345
 - decoration candidates (no C, no D): 119
@@ -78,27 +78,27 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `observable_principle_from_axiom_note` | positive_theorem | critical | 336 | 35.40 | `audited_conditional` | ~~audited_conditional~~ |
-| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 597 | 35.22 | `audited_clean` | **retained_bounded** |
-| 3 | `minimal_axioms_2026-04-11` | meta | critical | 541 | 33.58 | `unaudited` | meta |
-| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 523 | 32.53 | `audited_conditional` | ~~audited_conditional~~ |
+| 1 | `observable_principle_from_axiom_note` | positive_theorem | critical | 337 | 35.90 | `audited_conditional` | ~~audited_conditional~~ |
+| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 598 | 35.23 | `audited_clean` | **retained_bounded** |
+| 3 | `minimal_axioms_2026-04-11` | meta | critical | 542 | 33.59 | `unaudited` | meta |
+| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 524 | 32.54 | `audited_conditional` | ~~audited_conditional~~ |
 | 5 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 361 | 31.50 | `unaudited` | unaudited |
 | 6 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 361 | 30.50 | `unaudited` | unaudited |
 | 7 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 298 | 29.22 | `unaudited` | unaudited |
-| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 587 | 29.20 | `audited_clean` | **retained_bounded** |
+| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 588 | 29.20 | `audited_clean` | **retained_bounded** |
 | 9 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 389 | 26.61 | `audited_conditional` | ~~audited_conditional~~ |
-| 10 | `minimal_axioms_2026-05-03` | meta | critical | 609 | 25.75 | `unaudited` | meta |
-| 11 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 599 | 25.73 | `audited_clean` | open_gate |
+| 10 | `minimal_axioms_2026-05-03` | meta | critical | 610 | 25.75 | `unaudited` | meta |
+| 11 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 600 | 25.73 | `audited_clean` | open_gate |
 | 12 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 361 | 25.50 | `unaudited` | unaudited |
-| 13 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 500 | 25.47 | `unaudited` | unaudited |
+| 13 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 501 | 25.47 | `unaudited` | unaudited |
 | 14 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 314 | 24.30 | `unaudited` | unaudited |
 | 15 | `three_generation_structure_note` | bounded_theorem | critical | 418 | 24.21 | `audited_conditional` | ~~audited_conditional~~ |
 | 16 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 361 | 24.00 | `unaudited` | unaudited |
 | 17 | `left_handed_charge_matching_note` | bounded_theorem | critical | 439 | 23.78 | `audited_conditional` | ~~audited_conditional~~ |
 | 18 | `one_generation_matter_closure_note` | bounded_theorem | critical | 422 | 23.73 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 361 | 22.50 | `unaudited` | unaudited |
-| 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 546 | 22.09 | `audited_conditional` | ~~audited_conditional~~ |
-| 21 | `universal_gr_discrete_global_closure_note` | positive_theorem | critical | 528 | 21.55 | `audited_conditional` | ~~audited_conditional~~ |
+| 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 547 | 22.10 | `audited_conditional` | ~~audited_conditional~~ |
+| 21 | `universal_gr_discrete_global_closure_note` | positive_theorem | critical | 529 | 21.55 | `audited_conditional` | ~~audited_conditional~~ |
 | 22 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 361 | 21.50 | `unaudited` | unaudited |
 | 23 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 319 | 21.32 | `audited_clean` | **retained** |
 | 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 394 | 21.13 | `unaudited` | unaudited |
@@ -1055,7 +1055,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `single_axiom_hilbert_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `single_axiom_information_note` | meta | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
-| `universal_gr_casimir_block_localization_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_gr_supermetric_normal_form_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `universal_gr_tensor_action_blocker_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `yt_color_projection_correction_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -13236,19 +13235,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — For the bounded claim actually made, the chain closes: the note claims only an invariant Pi_A1 section plus an associated SO(3) orbit bundle/natural orbit connection, and explicitly denies a distinguished Pi_curv.
 - **rationale:** The note is carefully bounded: it does not claim full curvature localization, a distinguished connection, or canonical Pi_curv. The load-bearing projector/orbit statement is an algebraic closure over the displayed 3+1 projector and residual spatial-rotation action, with no external comparator or tuned numerical match. Residual risk is runner hygiene: the unregistered script entry point fails as written because it tries to read a missing ROUTE2_POLARIZATION_COMMON_PRIMITIVE_NOTE.md, although the current-checkout algebra checks pass when those unused stale reads are bypassed.
 - **auditor confidence:** medium
-
-### `universal_gr_casimir_block_localization_note`
-
-- **Note:** [`UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md`](../../docs/UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited whether the note proves an exact canonical lapse/shift/trace/shear block localization for the universal GR route from the restricted packet alone.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-universal_gr_casimir_blo-239`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** On the 8D complement of Pi_A1, the universal SO(3) generators define C = G_x^2 + G_y^2 + G_z^2 with spectrum -2 of multiplicity 3 and -6 of multiplicity 5, giving the j=1 shift and j=2 shear blocks.  _(class `E`)_
-- **chain closes:** False — The chain does not close because no cited authority, runner, generator matrices, representation construction, or independent algebraic derivation is provided for the asserted Casimir spectrum and its identification with shift/shear blocks.
-- **rationale:** The note asserts the projector, complement representation, Casimir spectrum, and physical block labels, but the restricted packet provides no upstream inputs or runner source/output to verify those assertions. The load-bearing step functions as an introduced classification/definition within the note rather than a derivation from provided axioms or retained inputs. Because no actual computation or algebraic closure is present, the claimed positive theorem is not audited clean.
-- **auditor confidence:** high
 
 ### `universal_gr_complement_canonical_note`
 
