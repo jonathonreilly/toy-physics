@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 62 |
 | **retained_no_go** | 119 |
-| **retained_bounded** | 222 |
+| **retained_bounded** | 223 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
 | unaudited | 784 |
-| audit_in_progress | 2 |
+| audit_in_progress | 1 |
 | meta | 48 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
@@ -39,8 +39,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
-| `audited_clean` | 378 |
+| `audit_in_progress` | 1 |
+| `audited_clean` | 379 |
 | `audited_conditional` | 467 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
@@ -111,7 +111,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `dm_leptogenesis_flavor_column_functional_theorem_note_2026-04-16` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
@@ -164,6 +163,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_dple_abcc_no_go_note_2026-04-19` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_full_closure_same_surface_converged_thermal_selector_support_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
 | `dm_full_closure_same_surface_thermal_selector_sensitivity_boundary_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `dm_leptogenesis_flavor_column_functional_theorem_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_leptogenesis_pmns_analytic_stationary_classification_theorem_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_leptogenesis_pmns_multistart_selector_support_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -4200,6 +4200,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — No. The registered runner returned nonzero, so the current executable chain is not cleanly reproducible.
 - **rationale:** Issue: the primary runner returned nonzero in the restricted audit environment. Why this blocks: a nonzero runner leaves either stale artifact/import drift or an explicit open-burden FAIL in the executable witness, so the chain cannot be ratified cleanly. Repair target: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun. Claim boundary until fixed: safe to cite as a bounded note with non-clean executable support.
 - **auditor confidence:** medium
+
+### `dm_leptogenesis_flavor_column_functional_theorem_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_FLAVOR_COLUMN_FUNCTIONAL_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_FLAVOR_COLUMN_FUNCTIONAL_THEOREM_NOTE_2026-04-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** One-source flavored DM transport with supplied common kernel and supplied canonical N_e active PMNS packet reduces to F_K(P)=sum_alpha Psi_K(P_alpha), selecting the middle canonical column.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-audit-2026-05-06-dm-lepto-flavor-column-functional-copernicus`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For dY_alpha/dz = P_alpha S_K(z) - P_alpha W_K(z)Y_alpha, the integrating-factor solution gives Y_alpha(infinity)=Psi_K(P_alpha), hence F_K(P)=sum_alpha Psi_K(P_alpha).  _(class `A`)_
+- **chain closes:** True — The claimed closure is the transport-facing integrating-factor reduction and canonical supplied-packet column selection, not a derivation of the PMNS active packet or five-real source. The runner computes the kernel, compares the functional against direct flavored transport, and verifies the canonical middle-column ordering and near-closing comparator.
+- **rationale:** Within the bounded scope stated in the note, the load-bearing step is a genuine algebraic solution of decoupled scalar transport equations over supplied S_K and W_K, and the conclusion follows. The runner source is not a trivial printout: it computes direct transport factors, the scalar functional, the channel optimum, and the canonical packet ordering, with the cache showing 12 passes and zero fails. The residual boundary is explicit: this does not close the PMNS-side value law, the active five-real source, or a derivation of the canonical active packet from Cl(3) on Z^3.
+- **auditor confidence:** high
 
 ### `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16`
 
