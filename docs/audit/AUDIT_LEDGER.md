@@ -22,8 +22,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 14 |
-| unaudited | 788 |
+| open_gate | 13 |
+| unaudited | 789 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 32 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 376 |
+| `audited_clean` | 375 |
 | `audited_conditional` | 468 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 32 |
-| `unaudited` | 837 |
+| `unaudited` | 838 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 643 |
+| `bounded_theorem` | 644 |
 | `decoration` | 10 |
 | `meta` | 56 |
 | `no_go` | 190 |
-| `open_gate` | 111 |
+| `open_gate` | 110 |
 | `positive_theorem` | 789 |
 
 | criticality | count |
@@ -439,7 +439,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_no_signaling_audit` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_noise_fault_controls_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_preparation_readout_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
-| `teleportation_resource_fidelity_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_taste_readout_operator_model_note` | open_gate | ~~audited_clean~~ | open_gate | cross_family | codex-gpt-5.5 | A | - |
 | `teleportation_three_register_cross_encoding_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | C | - |
@@ -13024,19 +13023,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: The note's closure claim depends load-bearingly on the imported native apparatus/transducer model and on finite proxy gates for routing, durability, thermal stability, and ledger commutation. Why this blocks: A conditional upstream apparatus plus discrete/proxy checks do not close a retained theorem or standalone physical bridge; the runner verifies internal consistency of the candidate stack rather than deriving the Bell transducer, readout, hardware carrier, bath model, or conservation theorem. Repair target: Declare the native apparatus row as a dependency and close it cleanly, then replace the eikonal carrier, pointer bath, and ledger split with retained derivations or narrow the claim to an explicit finite-model planning gate. Claim boundary until fixed: It may be cited as a planning-level open gate showing that the proposed finite record-sector stack passes the listed local routing, bounded error, no-early-decode, correction-fidelity, and algebraic ledger checks under ideal imported premises.
 - **open / conditional deps cited:**
   - `teleportation_native_record_apparatus_note`
-- **auditor confidence:** high
-
-### `teleportation_resource_fidelity_note`
-
-- **Note:** [`TELEPORTATION_RESOURCE_FIDELITY_NOTE.md`](../../docs/TELEPORTATION_RESOURCE_FIDELITY_NOTE.md)
-- **claim_type:** `open_gate`
-- **claim_scope:** Bounded open-gate harness for ordinary single-qubit state teleportation using a supplied two-qubit resource density matrix with ideal Bell measurement, two-bit classical record, and Bob-side Pauli correction.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** open_gate  (reason: `audited_open_gate`)
-- **auditor:** `fresh-agent-mencius-2nd-019deb92-73bc-7ee3-a526-26a5109bce08`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** For this fixed Bell-basis measurement and fixed Pauli-correction convention, the exact average fidelity obeys F_avg = (1 + 2 * <Phi+|rho|Phi+>) / 3, so the fixed-protocol threshold is <Phi+|rho|Phi+> > 1/2.  _(class `C`)_
-- **chain closes:** True — The bounded harness closes on its own terms: the runner constructs the fixed teleportation channel from Bell projectors and Pauli corrections, computes average fidelity from the Choi matrix, and verifies the Bell-overlap formula and threshold brackets numerically. It does not close any larger claim about native resource preparation, optimized teleportation protocols, matter transfer, or FTL transport.
-- **rationale:** The note is explicitly scoped to a fixed density-matrix teleportation protocol and keeps the physical boundary narrow. The runner does not merely hard-code the threshold: it computes the corrected channel and Choi average fidelity independently of the Bell-overlap prediction, then checks the formula error, isotropic bracket, no-pre-message Bob input-independence, trace preservation, and resource physicality. Current runner output matches the note and all acceptance gates pass. Residual risk is only scope risk: this clean verdict makes the bounded open-gate harness citeable, not the broader teleportation lane retained.
 - **auditor confidence:** high
 
 ### `teleportation_resource_from_poisson_note`

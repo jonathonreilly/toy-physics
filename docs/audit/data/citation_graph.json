@@ -51265,9 +51265,9 @@
       "claim_id": "teleportation_resource_fidelity_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "08c0992a4559abcdb437660213d268011c8eb74e2e15043d43c477ea544d4a72",
+      "note_hash": "776ea6b8703f0beb959ee4e4b3d436a87fc345f90b20c585093f9f55ea32faa9",
       "path": "docs/TELEPORTATION_RESOURCE_FIDELITY_NOTE.md",
       "runner_path": "scripts/frontier_teleportation_resource_fidelity.py",
       "title": "Teleportation Resource-Fidelity Note"
@@ -55948,11 +55948,11 @@
       "positive_theorem": 88
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 574,
+      "bounded_theorem": 575,
       "meta": 10,
       "no_go": 118,
       "none": 456,
-      "open_gate": 114,
+      "open_gate": 113,
       "positive_theorem": 634
     },
     "edge_count": 6612,
