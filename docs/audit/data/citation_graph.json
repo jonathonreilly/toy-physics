@@ -50448,7 +50448,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "0cc52b5ef5ee97dedf40a1d9bf431da9a186d4fab4f895256c6324a132c8eabc",
+      "note_hash": "bf07080aef58187f0293b2bfa7b848ee151294ead34c46c196c3812c7cd561b6",
       "path": "docs/TELEPORTATION_ACCEPTANCE_SUITE_NOTE.md",
       "runner_path": "scripts/frontier_teleportation_acceptance_suite.py",
       "title": "Teleportation Acceptance Suite Note"

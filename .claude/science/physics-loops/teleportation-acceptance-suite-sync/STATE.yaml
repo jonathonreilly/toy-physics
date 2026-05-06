@@ -1,0 +1,33 @@
+loop_slug: teleportation-acceptance-suite-sync
+mode: run
+target_prompt: docs/audit/MISSING_DERIVATION_PROMPTS.md#teleportation_acceptance_suite_note
+target_note: docs/TELEPORTATION_ACCEPTANCE_SUITE_NOTE.md
+target_runner: scripts/frontier_teleportation_acceptance_suite.py
+branch: physics-loop/teleportation-acceptance-suite-sync-block01-20260506
+base_ref: origin/main
+cycle_count: 1
+active_route: strict_lane_inventory_synchronization
+actual_current_surface_status: bounded-support
+conditional_surface_status: null
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+open_imports: []
+files_touched:
+  - docs/TELEPORTATION_ACCEPTANCE_SUITE_NOTE.md
+  - scripts/frontier_teleportation_acceptance_suite.py
+  - outputs/frontier_teleportation_acceptance_suite_default_list_probes_2026-05-06.txt
+  - outputs/frontier_teleportation_acceptance_suite_strict_list_probes_2026-05-06.txt
+  - outputs/frontier_teleportation_acceptance_suite_required_only_2026-05-06.txt
+  - docs/audit/data/audit_ledger.json
+  - docs/audit/data/citation_graph.json
+  - docs/audit/data/effective_status_summary.json
+  - .claude/science/physics-loops/teleportation-acceptance-suite-sync/
+runner_result: "required-only -> required: {'PASS': 8}; strict list-probes -> 24 lines"
+review_findings: none
+review_loop_disposition: pass
+pr_status: pending
+next_exact_action: "Commit, push, open PR, and request independent audit."
+stop_condition: "Single selected prompt resolved and PR shipped."

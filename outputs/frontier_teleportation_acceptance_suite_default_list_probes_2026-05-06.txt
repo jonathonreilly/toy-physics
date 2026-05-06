@@ -1,0 +1,12 @@
+core_protocol                      required frontier_teleportation_protocol.py
+poisson_end_to_end_selected        required frontier_teleportation_end_to_end_poisson.py
+causal_channel                     required frontier_teleportation_causal_channel.py
+measurement_record                 required frontier_teleportation_measurement_record.py
+resource_fidelity_summary          required frontier_teleportation_resource_fidelity.py
+noise_fault_summary                required frontier_teleportation_noise_fault_controls.py
+encoding_portability_summary       required frontier_teleportation_encoding_portability.py
+logical_readout_summary            required frontier_teleportation_logical_readout_audit.py
+adiabatic_prep_hook                optional frontier_teleportation_adiabatic_time_evolution.py, frontier_teleportation_adiabatic_prep_probe.py
+taste_readout_operator_hook        optional frontier_teleportation_taste_readout_operator_model.py, frontier_teleportation_preparation_readout_probe.py
+bell_measurement_circuit_hook      optional frontier_teleportation_bell_measurement_circuit.py
+cross_encoding_hook                optional frontier_teleportation_cross_encoding_maps.py

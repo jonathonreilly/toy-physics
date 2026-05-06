@@ -1,0 +1,71 @@
+NATIVE TASTE-QUBIT TELEPORTATION ACCEPTANCE SUITE
+Status: bounded planning artifact; ordinary quantum state teleportation only
+Repository root: /Users/jonBridger/Documents/teleportation-acceptance-suite-sync-block01-20260506
+Exit policy: required failures are blocking
+
+Required probes:
+PASS    core_protocol                      [required]   0.09s gates 6/6 (frontier_teleportation_protocol.py)
+  metric: minimum corrected-state fidelity: 1.0000000000000000
+  metric: maximum infidelity: 0.000e+00
+  metric: max Bell probability error from 1/4: 1.388e-16
+  metric: max pairwise pre-message Bob-state distance across inputs: 1.943e-16
+  metric: post-delivery correction fidelity: 1.0000000000000000
+PASS    poisson_end_to_end_selected        [required]   0.22s gates 5/5 (frontier_teleportation_end_to_end_poisson.py)
+  metric: High-fidelity threshold: 0.900
+  metric: 1d_null             2.00000  0.50000  Phi+  0.66667  0.50000  0.02943 1.388e-16    yes
+  metric: 1d_poisson_chsh     2.82267  0.99796  Phi+  0.99864  0.99796  0.99796 1.665e-16    yes   yes
+  metric: null controls do not pass high-fidelity protocol: PASS
+  metric: at least one Poisson case passes end-to-end gates: PASS
+PASS    causal_channel                     [required]   0.09s gates 7/7 (frontier_teleportation_causal_channel.py)
+  metric: path latency ticks: 4
+  metric: correct-record fidelity: 1.0000000000000000
+  metric: wrong-bit control fidelity: 0.3333333333333334
+  metric: max pairwise pre-delivery Bob-state distance across inputs: 1.388e-16
+PASS    measurement_record                 [required]   0.14s gates 5/5 (frontier_teleportation_measurement_record.py)
+  metric: max premeasurement isometry norm error: 4.441e-16
+  metric: max Bell-record probability error from 1/4: 1.110e-16
+  metric: max Bob trace distance to I/2 before receiving record: 2.220e-16
+  metric: minimum post-delivery corrected fidelity: 1.0000000000000000
+  metric: maximum post-delivery infidelity: 0.000e+00
+PASS    resource_fidelity_summary          [required]   0.25s gates 6/6 (frontier_teleportation_resource_fidelity.py)
+  metric: ideal Phi+ resource                         1.000000  1.000000  1.000000  1.000000 5.000e-01  2.82843 1.110e-16 1.388e-16  1.110e-16  beats 2/3
+  metric: isotropic v=1/3 boundary                    0.666667  0.666667  0.500000  0.500000 0.000e+00  0.94281 0.000e+00 2.220e-16  1.665e-16     at 2/3
+  metric: isotropic v=0.30                            0.650000  0.650000  0.475000  0.475000 0.000e+00  0.84853 5.551e-17 2.220e-16  1.665e-16  below 2/3
+  metric: classical qubit average-fidelity benchmark: 0.6666666667
+  metric: max exact-vs-Bell-overlap formula error in this run: 4.441e-16
+PASS    noise_fault_summary                [required]   2.02s gates 7/7 (frontier_teleportation_noise_fault_controls.py)
+  metric: ideal reference                      1.000   1.000   1.000  1.000000  1.000000  1.000000  1.000000 1.388e-16    beats 2/3
+  metric: resource boundary v=1/3              0.333   1.000   1.000  0.666667  0.666667  0.666667  0.666667 2.220e-16       at 2/3
+  metric: combined moderate controls           0.850   0.855   0.950  0.784603  0.816225  0.750455  0.778283 1.943e-16    beats 2/3
+  metric: stress below deadline threshold      0.600   0.525   0.750  0.557577  0.582253  0.531611  0.545158 1.943e-16    below 2/3
+  metric: max output trace error by deadline: 1.998e-15
+  metric: max output trace error eventually: 2.331e-15
+  metric: ideal reference fidelity: PASS
+PASS    encoding_portability_summary       [required]   0.08s gates n/a (frontier_teleportation_encoding_portability.py)
+  metric: encoding cases surveyed: 23
+  metric: logical Pauli pass: 13/23
+  metric: teleportation/no-signaling pass: 13/13 run (10 skipped before teleportation)
+  metric: maximum infidelity: 4.441e-16
+  metric: max pairwise pre-message Bob-state distance across inputs: 1.943e-16
+  metric: logical Pauli pass: 23/23
+  metric: teleportation/no-signaling pass: 23/23 run (0 skipped before teleportation)
+  metric: maximum infidelity: 6.661e-16
+PASS    logical_readout_summary            [required]   0.15s gates n/a (frontier_teleportation_logical_readout_audit.py)
+  metric: trace extraction validity: trace error=0.000e+00, hermitian error=0.000e+00, min eig=2.557e-17, branch probability sum=1.000000000000, valid=YES
+  metric: traced logical resource: best Bell=0.997963 (Phi+), CHSH=2.822668, purity=0.997967, negativity=0.497963
+  metric: high-fidelity postselection mass (best Bell >= 0.900): count=8, p=0.998982, attempts=1.00102
+  metric: Bob before classical message under traced resource: probe states=14, marginal bias from I/2=3.189e-02, max no-record to resource marginal=3.331e-16, max pairwise input distance=1.415e-16, max branch probability span=3.189e-02, max corrected trace error=6.661e-16
+  metric: native taste-only readout/apparatus: NOT ESTABLISHED by this audit
+
+Optional hooks:
+
+Suite summary:
+  required: {'PASS': 8}
+  optional: {}
+  total probe runtime: 3.05s
+
+Limitations:
+  PASS does not prove native preparation, taste-only readout hardware,
+  durable measurement records, Bell-circuit synthesis, finite-time dynamics,
+  or physical transport. Optional absent hooks report SKIP.
+  No matter, mass, charge, energy, object, or FTL transport is claimed.
