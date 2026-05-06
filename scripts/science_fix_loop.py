@@ -643,6 +643,16 @@ def main() -> int:
     p.add_argument("--category",
                    choices=CATEGORIES, default=None,
                    help="Restrict to one category")
+    p.add_argument("--difficulty",
+                   default="easy,medium,unknown",
+                   help="Comma-separated difficulty buckets to attempt. "
+                        "Default 'easy,medium,unknown' — skips hard rows "
+                        "(those need human review). Pass "
+                        "'easy,medium,hard,unknown' to attempt everything, "
+                        "or 'easy' for the smallest fast-win batch. Rows "
+                        "without a rating are treated as 'unknown'. The "
+                        "ratings file is produced by "
+                        "scripts/classify_missing_derivations.py.")
     p.add_argument("--claim-id", default=None,
                    help="Run on this specific claim_id only")
     p.add_argument("--retry-failed", action="store_true",
@@ -696,6 +706,36 @@ def main() -> int:
         candidates = [r for r in candidates if r["category"] == args.category]
     if args.claim_id:
         candidates = [r for r in candidates if r["claim_id"] == args.claim_id]
+
+    # Difficulty filtering + sort. If a difficulty file exists, attach the
+    # rating to each row, restrict to allowed difficulties (default
+    # easy+medium), and sort easy → medium → hard so we attempt fast
+    # wins first. Rows without a rating are treated as "unknown" and
+    # included unless --difficulty explicitly excludes them.
+    difficulty_file = REPO_ROOT / "docs" / "audit" / "data" / "missing_derivation_difficulty.json"
+    ratings: dict = {}
+    if difficulty_file.exists():
+        try:
+            ratings = (json.loads(difficulty_file.read_text(encoding="utf-8"))
+                       .get("ratings", {}))
+        except Exception:
+            ratings = {}
+    for r in candidates:
+        rating = ratings.get(r["claim_id"]) or {}
+        r["difficulty"] = rating.get("difficulty", "unknown")
+
+    # Filter by allowed difficulties.
+    allowed = set(d.strip() for d in args.difficulty.split(",") if d.strip())
+    if allowed:
+        candidates = [r for r in candidates if r["difficulty"] in allowed]
+
+    # Sort: easy (rank 0) → medium (1) → hard (2) → unknown (3),
+    # then descendants desc so highest-leverage easy attempted first.
+    DIFFICULTY_ORDER = {"easy": 0, "medium": 1, "hard": 2, "unknown": 3}
+    candidates.sort(key=lambda r: (
+        DIFFICULTY_ORDER.get(r["difficulty"], 99),
+        -r["descendants"],
+    ))
 
     # Atomic claim: takes the lock, marks N rows as in_progress, and
     # returns them. Other workers running this loop in parallel will skip
