@@ -150,6 +150,8 @@ def main() -> int:
         "pr230_origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
         "pr230_z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
         "pr230_source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
+        "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
+        "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
         "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
         "pr230_wz_response_route_completion": "outputs/yt_pr230_wz_response_route_completion_2026-05-06.json",
         "pr230_schur_route_completion": "outputs/yt_pr230_schur_route_completion_2026-05-06.json",
@@ -1218,6 +1220,40 @@ def main() -> int:
             "algebra", {}
         ).get("source_relative_projection_onto_taste_axis_span")
         == 0.0
+    )
+    kinetic_taste_mixing_bridge_blocks_shortcut = (
+        "current staggered kinetic taste symmetry"
+        in certificates["pr230_kinetic_taste_mixing_bridge"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_kinetic_taste_mixing_bridge"].get("proposal_allowed")
+        is False
+        and certificates["pr230_kinetic_taste_mixing_bridge"].get(
+            "kinetic_taste_mixing_bridge_closes_pr230"
+        )
+        is False
+        and certificates["pr230_kinetic_taste_mixing_bridge"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+    )
+    one_higgs_taste_axis_completeness_blocks_shortcut = (
+        "one-Higgs taste-axis completeness not derived"
+        in certificates["pr230_one_higgs_taste_axis_completeness"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_one_higgs_taste_axis_completeness"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_one_higgs_taste_axis_completeness"].get(
+            "one_higgs_taste_axis_completeness_derived"
+        )
+        is False
+        and certificates["pr230_one_higgs_taste_axis_completeness"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
     )
     action_first_route_completion_blocks = (
         "action-first O_H/C_sH/C_HH route not complete on current PR230 surface"
@@ -3598,6 +3634,20 @@ def main() -> int:
         ),
     )
     report(
+        "kinetic-taste-mixing-shortcut-closed",
+        kinetic_taste_mixing_bridge_blocks_shortcut,
+        certificates["pr230_kinetic_taste_mixing_bridge"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "one-higgs-taste-axis-completeness-shortcut-closed",
+        one_higgs_taste_axis_completeness_blocks_shortcut,
+        certificates["pr230_one_higgs_taste_axis_completeness"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "action-first-route-current-surface-closed",
         action_first_route_completion_blocks,
         certificates["pr230_action_first_route_completion"].get(
@@ -4941,6 +4991,8 @@ def main() -> int:
         "origin_main_composite_higgs_intake_not_closure": origin_main_composite_higgs_intake_not_closure,
         "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
         "source_coordinate_transport_completion_blocks": source_coordinate_transport_completion_blocks,
+        "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
+        "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,
         "wz_response_route_completion_blocks": wz_response_route_completion_blocks,
         "schur_route_completion_blocks": schur_route_completion_blocks,

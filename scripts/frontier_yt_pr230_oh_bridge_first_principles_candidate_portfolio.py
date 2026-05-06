@@ -37,6 +37,8 @@ CERTS = {
     "positivity_improving_rank_one_support": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json",
     "negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
     "source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
+    "kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
+    "one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
     "action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
     "wz_response_route_completion": "outputs/yt_pr230_wz_response_route_completion_2026-05-06.json",
     "schur_route_completion": "outputs/yt_pr230_schur_route_completion_2026-05-06.json",
@@ -180,6 +182,28 @@ def main() -> int:
         )
         == 0.0
     )
+    kinetic_taste_mixing_current_surface_closed = (
+        "current staggered kinetic taste symmetry"
+        in status(certs["kinetic_taste_mixing_bridge"])
+        and certs["kinetic_taste_mixing_bridge"].get("proposal_allowed") is False
+        and certs["kinetic_taste_mixing_bridge"].get(
+            "kinetic_taste_mixing_bridge_closes_pr230"
+        )
+        is False
+        and certs["kinetic_taste_mixing_bridge"].get("exact_negative_boundary_passed")
+        is True
+    )
+    one_higgs_taste_axis_current_surface_closed = (
+        "one-Higgs taste-axis completeness not derived"
+        in status(certs["one_higgs_taste_axis_completeness"])
+        and certs["one_higgs_taste_axis_completeness"].get("proposal_allowed") is False
+        and certs["one_higgs_taste_axis_completeness"].get(
+            "one_higgs_taste_axis_completeness_derived"
+        )
+        is False
+        and certs["one_higgs_taste_axis_completeness"].get("exact_negative_boundary_passed")
+        is True
+    )
     action_first_current_surface_closed = (
         "action-first O_H/C_sH/C_HH route not complete on current PR230 surface"
         in status(certs["action_first_route_completion"])
@@ -236,6 +260,7 @@ def main() -> int:
                 "no theorem transports the uniform additive mass source into the taste-axis Higgs source",
                 "taste isotropy gives scalar/taste support but not the PR230 source coordinate",
                 "unit-preserving, trace-preserving, and taste-equivariant maps cannot send I_8 to trace-zero S_i on the current surface",
+                "taste-even Wilson-staggered kinetic transfer also gives zero C_sH against one trace-zero taste-axis insertion on the current surface",
             ],
             next_artifacts=[
                 "source-coordinate transport theorem with explicit linear/nonlinear map",
@@ -245,10 +270,12 @@ def main() -> int:
             current_boundaries=[
                 "taste_condensate_oh_bridge",
                 "source_coordinate_transport_completion",
+                "kinetic_taste_mixing_bridge",
             ],
             blocked_shortcuts_not_global_closure=[
                 "existing Higgs/taste theorem names alone",
                 "setting the uniform-source projection onto taste axes to one",
+                "hidden kinetic mixing from a taste-even transfer",
             ],
         ),
         candidate(
@@ -267,6 +294,7 @@ def main() -> int:
                 "source-Higgs production rows are guarded off in current chunks",
                 "finite rows still need isolated-pole residue, FV/IR, and contact control",
                 "same-source EW/Higgs action and Gram-purity certificates are absent on the current PR230 surface",
+                "SM one-Higgs notation plus the taste scalar theorem does not derive a same-source taste-axis completeness/orthogonal-null certificate",
             ],
             next_artifacts=[
                 "canonical O_H certificate with same_surface_cl3_z3=true and LSZ normalization",
@@ -281,6 +309,7 @@ def main() -> int:
             blocked_shortcuts_not_global_closure=[
                 "unratified source-Higgs smoke operator",
                 "semantic O_H labels without source coordinate and normalization",
+                "one-Higgs/taste-axis completeness by notation",
             ],
         ),
         candidate(
@@ -406,6 +435,8 @@ def main() -> int:
     report("rank-one-conditional-support-present", rank_one_support, status(certs["positivity_improving_rank_one_support"]))
     report("negative-boundaries-scoped", negative_boundaries_scoped, status(certs["negative_route_applicability_review"]))
     report("source-coordinate-current-surface-closed", source_transport_current_surface_closed, status(certs["source_coordinate_transport_completion"]))
+    report("kinetic-taste-mixing-current-surface-closed", kinetic_taste_mixing_current_surface_closed, status(certs["kinetic_taste_mixing_bridge"]))
+    report("one-higgs-taste-axis-current-surface-closed", one_higgs_taste_axis_current_surface_closed, status(certs["one_higgs_taste_axis_completeness"]))
     report("action-first-current-surface-closed", action_first_current_surface_closed, status(certs["action_first_route_completion"]))
     report("wz-response-current-surface-closed", wz_response_current_surface_closed, status(certs["wz_response_route_completion"]))
     report("schur-current-surface-closed", schur_current_surface_closed, status(certs["schur_route_completion"]))
@@ -442,6 +473,8 @@ def main() -> int:
             "The derivation-native neutral primitive/rank-one lane remains future-open but needs an actual same-surface primitive transfer or off-diagonal generator certificate.",
             "Schur is a good algebraic row-compression route after a neutral kernel basis exists; current source-only rows cannot define A/B/C.",
             "Source-coordinate transport now has an exact current-surface boundary: I_8 cannot be transported to trace-zero S_i by current algebraic/symmetry maps, but a future non-shortcut transport certificate could reopen it.",
+            "The adjacent kinetic-mixing shortcut is also closed: current taste-even Wilson-staggered dynamics cannot secretly supply the missing C_sH row.",
+            "The one-Higgs/taste-axis completeness shortcut is closed: current SM one-Higgs notation and taste scalar support do not select an EW Higgs taste axis or null all orthogonal top couplings.",
         ],
         "negative_boundary_interpretation": {
             "blocks_only": ["shortcut", "current_surface"],

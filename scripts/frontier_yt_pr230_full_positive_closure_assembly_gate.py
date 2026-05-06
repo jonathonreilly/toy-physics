@@ -93,6 +93,8 @@ PARENTS = {
     "pr230_origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
     "pr230_z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
     "pr230_source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
+    "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
+    "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
     "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
     "pr230_wz_response_route_completion": "outputs/yt_pr230_wz_response_route_completion_2026-05-06.json",
     "pr230_schur_route_completion": "outputs/yt_pr230_schur_route_completion_2026-05-06.json",
@@ -532,6 +534,44 @@ def main() -> int:
             "source_relative_projection_onto_taste_axis_span"
         )
         == 0.0
+    )
+    kinetic_taste_mixing_bridge_blocks_shortcut = (
+        "current staggered kinetic taste symmetry"
+        in statuses["pr230_kinetic_taste_mixing_bridge"]
+        and certs["pr230_kinetic_taste_mixing_bridge"].get("proposal_allowed")
+        is False
+        and certs["pr230_kinetic_taste_mixing_bridge"].get(
+            "kinetic_taste_mixing_bridge_closes_pr230"
+        )
+        is False
+        and certs["pr230_kinetic_taste_mixing_bridge"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+        and all(
+            abs(row.get("C_sH_proxy", 1.0)) < 1.0e-12
+            for row in certs["pr230_kinetic_taste_mixing_bridge"]
+            .get("taste_symmetry_model", {})
+            .get("cross_rows_for_representative_even_transfer", [])
+        )
+    )
+    one_higgs_taste_axis_completeness_blocks_shortcut = (
+        "one-Higgs taste-axis completeness not derived"
+        in statuses["pr230_one_higgs_taste_axis_completeness"]
+        and certs["pr230_one_higgs_taste_axis_completeness"].get("proposal_allowed")
+        is False
+        and certs["pr230_one_higgs_taste_axis_completeness"].get(
+            "one_higgs_taste_axis_completeness_derived"
+        )
+        is False
+        and certs["pr230_one_higgs_taste_axis_completeness"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+        and certs["pr230_one_higgs_taste_axis_completeness"]
+        .get("axis_permutation_checks", {})
+        .get("all_axes_same_orbit")
+        is True
     )
     action_first_route_completion_blocks = (
         "action-first O_H/C_sH/C_HH route not complete on current PR230 surface"
@@ -1206,6 +1246,16 @@ def main() -> int:
         "source-coordinate-transport-current-surface-closed",
         source_coordinate_transport_completion_blocks,
         statuses["pr230_source_coordinate_transport_completion"],
+    )
+    report(
+        "kinetic-taste-mixing-shortcut-closed",
+        kinetic_taste_mixing_bridge_blocks_shortcut,
+        statuses["pr230_kinetic_taste_mixing_bridge"],
+    )
+    report(
+        "one-higgs-taste-axis-completeness-shortcut-closed",
+        one_higgs_taste_axis_completeness_blocks_shortcut,
+        statuses["pr230_one_higgs_taste_axis_completeness"],
     )
     report(
         "action-first-route-current-surface-closed",
@@ -2048,6 +2098,16 @@ def main() -> int:
             "support for a lazy cyclic neutral transfer, but it does not supply "
             "the missing same-surface PR230 action/off-diagonal generator or "
             "strict primitive certificate."
+            " A separate kinetic taste-mixing check now closes the adjacent "
+            "shortcut: taste-even Wilson-staggered dynamics also gives zero "
+            "C_sH against one trace-zero taste-axis insertion unless a real "
+            "symmetry-breaking EW/Higgs source or measured source-Higgs row is "
+            "supplied."
+            " The one-Higgs taste-axis completeness check also blocks using "
+            "SM one-Higgs notation plus the taste scalar theorem as an "
+            "orthogonal-null proof: the taste axes remain in one permutation "
+            "orbit until a same-source axis/completeness certificate is "
+            "supplied."
             " The first-principles O_H bridge candidate portfolio now ranks "
             "the surviving source-transport, action-first O_H, W/Z response, "
             "Schur-row, and neutral-primitive routes as open positive "
@@ -2123,6 +2183,8 @@ def main() -> int:
         "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
         "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
         "source_coordinate_transport_completion_blocks": source_coordinate_transport_completion_blocks,
+        "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
+        "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,
         "wz_response_route_completion_blocks": wz_response_route_completion_blocks,
         "schur_route_completion_blocks": schur_route_completion_blocks,

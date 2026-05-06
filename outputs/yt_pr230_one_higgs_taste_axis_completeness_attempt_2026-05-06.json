@@ -1,0 +1,146 @@
+{
+  "actual_current_surface_status": "exact negative boundary / one-Higgs taste-axis completeness not derived from current PR230 taste/EW stack",
+  "audit_required_before_effective_retained": true,
+  "axis_permutation_checks": {
+    "all_axes_same_orbit": true,
+    "axis_0_orbit_under_taste_permutations": [
+      0,
+      1,
+      2
+    ],
+    "permutation_rows": [
+      {
+        "axis_images": [
+          1,
+          0,
+          2
+        ],
+        "permutation": "swap_01"
+      },
+      {
+        "axis_images": [
+          0,
+          2,
+          1
+        ],
+        "permutation": "swap_12"
+      }
+    ]
+  },
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "A future same-source EW/Higgs action or one-Higgs completeness certificate could still collapse the orthogonal scalar ambiguity. The current taste/EW support does not do so.",
+  "counterfamily": [
+    {
+      "delta_perp_zero": false,
+      "orthogonal_axis": 1,
+      "orthogonal_top_coupling_y_chi": -0.25,
+      "same_listed_neutral_scalar_charges": true,
+      "same_sm_one_higgs_pattern": true,
+      "selected_higgs_axis": 0
+    },
+    {
+      "delta_perp_zero": true,
+      "orthogonal_axis": 1,
+      "orthogonal_top_coupling_y_chi": 0.0,
+      "same_listed_neutral_scalar_charges": true,
+      "same_sm_one_higgs_pattern": true,
+      "selected_higgs_axis": 0
+    },
+    {
+      "delta_perp_zero": false,
+      "orthogonal_axis": 1,
+      "orthogonal_top_coupling_y_chi": 0.25,
+      "same_listed_neutral_scalar_charges": true,
+      "same_sm_one_higgs_pattern": true,
+      "selected_higgs_axis": 0
+    },
+    {
+      "delta_perp_zero": false,
+      "orthogonal_axis": 2,
+      "orthogonal_top_coupling_y_chi": -0.25,
+      "same_listed_neutral_scalar_charges": true,
+      "same_sm_one_higgs_pattern": true,
+      "selected_higgs_axis": 1
+    },
+    {
+      "delta_perp_zero": true,
+      "orthogonal_axis": 2,
+      "orthogonal_top_coupling_y_chi": 0.0,
+      "same_listed_neutral_scalar_charges": true,
+      "same_sm_one_higgs_pattern": true,
+      "selected_higgs_axis": 1
+    },
+    {
+      "delta_perp_zero": false,
+      "orthogonal_axis": 2,
+      "orthogonal_top_coupling_y_chi": 0.25,
+      "same_listed_neutral_scalar_charges": true,
+      "same_sm_one_higgs_pattern": true,
+      "selected_higgs_axis": 1
+    },
+    {
+      "delta_perp_zero": false,
+      "orthogonal_axis": 0,
+      "orthogonal_top_coupling_y_chi": -0.25,
+      "same_listed_neutral_scalar_charges": true,
+      "same_sm_one_higgs_pattern": true,
+      "selected_higgs_axis": 2
+    },
+    {
+      "delta_perp_zero": true,
+      "orthogonal_axis": 0,
+      "orthogonal_top_coupling_y_chi": 0.0,
+      "same_listed_neutral_scalar_charges": true,
+      "same_sm_one_higgs_pattern": true,
+      "selected_higgs_axis": 2
+    },
+    {
+      "delta_perp_zero": false,
+      "orthogonal_axis": 0,
+      "orthogonal_top_coupling_y_chi": 0.25,
+      "same_listed_neutral_scalar_charges": true,
+      "same_sm_one_higgs_pattern": true,
+      "selected_higgs_axis": 2
+    }
+  ],
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "Do not use one-Higgs notation or taste-axis language as the orthogonal-null proof.  Reopen only with a real one-Higgs completeness certificate, same-source EW/Higgs action, C_sH/C_HH rows, W/Z response packet, Schur rows, or primitive rank-one theorem.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claims_retained_or_proposed_retained": false,
+    "selects_taste_axis_by_fiat": false,
+    "sets_orthogonal_top_coupling_to_zero": false,
+    "uses_alpha_lm_plaquette_or_u0": false,
+    "uses_hunit_matrix_element_readout": false,
+    "uses_observed_targets": false,
+    "uses_yt_ward_identity": false
+  },
+  "future_reopen_files": {
+    "canonical_oh_certificate": false,
+    "one_higgs_completeness_certificate": false,
+    "same_source_ew_action_certificate": false,
+    "source_higgs_rows": false
+  },
+  "one_higgs_taste_axis_completeness_derived": false,
+  "parent_statuses": {
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "kinetic_taste_mixing_bridge": "exact negative boundary / current staggered kinetic taste symmetry does not supply the PR230 source-Higgs bridge",
+    "no_orthogonal_selection_rule": "exact negative boundary / no-orthogonal-top-coupling selection rule not derived",
+    "one_higgs_completeness_gate": "conditional-support / one-Higgs completeness orthogonal-null theorem; premise absent",
+    "retained_route": "open / retained closure not yet reached",
+    "sm_one_higgs_oh_import_boundary": "exact negative boundary / SM one-Higgs gauge selection is not PR230 O_H identity",
+    "source_pole_mixing": "exact negative boundary / source-pole canonical-Higgs mixing obstruction",
+    "taste_condensate_oh_bridge": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge"
+  },
+  "pass_count": 19,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The taste scalar theorem leaves the three trace-zero axes in the same permutation orbit, while the SM/EW one-Higgs theorems assume canonical H after it is supplied.  No same-surface certificate selects a taste axis as H or forbids orthogonal neutral top couplings.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not define O_H by one-Higgs notation or by taste-axis naming",
+    "does not set y_chi=0, cos(theta)=1, or source-Higgs overlap to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not globally rule out a future same-source EW action, O_H certificate, W/Z route, Schur rows, or primitive rank-one theorem"
+  ]
+}

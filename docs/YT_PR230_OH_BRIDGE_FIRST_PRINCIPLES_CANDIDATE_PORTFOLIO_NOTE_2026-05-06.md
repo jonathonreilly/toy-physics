@@ -34,6 +34,13 @@ Six read-only probes and a local synthesis pass converged on the same boundary:
   taste-axis Higgs operators are trace-zero taste-shift axes;
 - no Cl/taste automorphism can map the identity source to a trace-zero taste
   axis because trace and spectrum are invariant;
+- the adjacent kinetic-mixing shortcut is also closed on the current surface:
+  taste-even Wilson-staggered dynamics gives zero `C_sH` against one
+  trace-zero taste-axis insertion unless a real symmetry-breaking Higgs/taste
+  source or measured source-Higgs row is supplied;
+- the one-Higgs/taste-axis completeness shortcut is closed on the current
+  surface: SM one-Higgs notation plus the taste scalar theorem does not select
+  an electroweak Higgs taste axis or null all orthogonal top couplings;
 - source-only LSZ data and `C_ss` do not determine `C_sH/C_HH`;
 - W/Z response can cancel the unknown source normalization, but only with real
   same-source W/Z mass-response rows, matched covariance, `delta_perp`
@@ -67,14 +74,18 @@ supplied.
    firewall.  The current-surface shortcut is now closed by
    `YT_PR230_SOURCE_COORDINATE_TRANSPORT_COMPLETION_ATTEMPT`: `I_8` cannot be
    transported to trace-zero `S_i` by unit-preserving, trace-preserving, or
-   taste-equivariant maps without a new source-axis/Jacobian certificate.
+   taste-equivariant maps without a new source-axis/Jacobian certificate.  The
+   dynamic kinetic-mixing variant is also closed by
+   `YT_PR230_KINETIC_TASTE_MIXING_BRIDGE_ATTEMPT`: taste-even transfer
+   polynomials force the current-surface cross row to vanish.
 
 2. **Action-first canonical `O_H` rows.**  Derive a same-source EW/Higgs action
    on the PR230 `Cl(3)/Z^3` source surface, certify canonical `O_H`, then run
    production `C_ss/C_sH/C_HH` rows and Gram purity.  The current-surface route
    is now explicitly closed by `YT_PR230_ACTION_FIRST_ROUTE_COMPLETION`: the
    same-source EW/Higgs action, canonical `O_H`, production rows, and
-   Gram-purity certificate are all absent.
+   Gram-purity certificate are all absent.  The notation-only one-Higgs escape
+   is also closed by `YT_PR230_ONE_HIGGS_TASTE_AXIS_COMPLETENESS_ATTEMPT`.
 
 3. **W/Z same-source response.**  Bypass direct `O_H` by measuring matched
    top/W/Z source-response slopes.  This requires W/Z mass-fit rows, matched
@@ -108,15 +119,15 @@ not define `y_t` through `H_unit`, `yt_ward_identity`, observed targets,
 
 ```bash
 python3 scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py
-# SUMMARY: PASS=21 FAIL=0
+# SUMMARY: PASS=23 FAIL=0
 python3 scripts/frontier_yt_pr230_assumption_import_stress.py
 # SUMMARY: PASS=51 FAIL=0
 python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
-# SUMMARY: PASS=107 FAIL=0
+# SUMMARY: PASS=111 FAIL=0
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=253 FAIL=0
+# SUMMARY: PASS=257 FAIL=0
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=285 FAIL=0
+# SUMMARY: PASS=287 FAIL=0
 ```
 
 Strict audit lint reports only the existing warning baseline after the audit

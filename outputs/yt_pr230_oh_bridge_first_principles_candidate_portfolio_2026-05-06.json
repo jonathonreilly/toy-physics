@@ -12,10 +12,12 @@
     "electroweak_g2_certificate_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
     "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
     "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
     "negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
     "neutral_primitive_cone_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
     "neutral_primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
     "neutral_primitive_route_completion": "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json",
+    "one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
     "positivity_improving_rank_one_support": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json",
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "schur_abc_definition_attempt": "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json",
@@ -33,11 +35,11 @@
   "current_global_status": {
     "assembly_still_open": true,
     "campaign_status_fail_count": 0,
-    "campaign_status_pass_count": 280,
+    "campaign_status_pass_count": 285,
     "full_positive_assembly_fail_count": 0,
-    "full_positive_assembly_pass_count": 100,
+    "full_positive_assembly_pass_count": 109,
     "retained_route_fail_count": 0,
-    "retained_route_pass_count": 248
+    "retained_route_pass_count": 255
   },
   "fail_count": 0,
   "negative_boundary_interpretation": {
@@ -63,25 +65,28 @@
     ],
     "same_surface_required": true
   },
-  "pass_count": 21,
+  "pass_count": 23,
   "proposal_allowed": false,
   "proposal_allowed_reason": "This is a route-selection and artifact-planning certificate.  It identifies positive candidates to pursue, but no route currently supplies O_H, C_sH/C_HH rows, W/Z rows with strict g2, Schur A/B/C rows, or a neutral primitive-cone theorem.",
   "ranked_positive_candidates": [
     {
       "blocked_shortcuts_not_global_closure": [
         "existing Higgs/taste theorem names alone",
-        "setting the uniform-source projection onto taste axes to one"
+        "setting the uniform-source projection onto taste axes to one",
+        "hidden kinetic mixing from a taste-even transfer"
       ],
       "blocks_first_principles_derivation": false,
       "candidate_status": "positive_candidate_open",
       "current_boundaries": [
         "taste_condensate_oh_bridge",
-        "source_coordinate_transport_completion"
+        "source_coordinate_transport_completion",
+        "kinetic_taste_mixing_bridge"
       ],
       "exact_current_blockers": [
         "no theorem transports the uniform additive mass source into the taste-axis Higgs source",
         "taste isotropy gives scalar/taste support but not the PR230 source coordinate",
-        "unit-preserving, trace-preserving, and taste-equivariant maps cannot send I_8 to trace-zero S_i on the current surface"
+        "unit-preserving, trace-preserving, and taste-equivariant maps cannot send I_8 to trace-zero S_i on the current surface",
+        "taste-even Wilson-staggered kinetic transfer also gives zero C_sH against one trace-zero taste-axis insertion on the current surface"
       ],
       "first_principles_anchor": "Cl(3)/Z^3 staggered source algebra and taste-shift operator representation",
       "next_artifacts": [
@@ -108,7 +113,8 @@
     {
       "blocked_shortcuts_not_global_closure": [
         "unratified source-Higgs smoke operator",
-        "semantic O_H labels without source coordinate and normalization"
+        "semantic O_H labels without source coordinate and normalization",
+        "one-Higgs/taste-axis completeness by notation"
       ],
       "blocks_first_principles_derivation": false,
       "candidate_status": "positive_candidate_open",
@@ -121,7 +127,8 @@
         "canonical O_H identity/normalization certificate is absent",
         "source-Higgs production rows are guarded off in current chunks",
         "finite rows still need isolated-pole residue, FV/IR, and contact control",
-        "same-source EW/Higgs action and Gram-purity certificates are absent on the current PR230 surface"
+        "same-source EW/Higgs action and Gram-purity certificates are absent on the current PR230 surface",
+        "SM one-Higgs notation plus the taste scalar theorem does not derive a same-source taste-axis completeness/orthogonal-null certificate"
       ],
       "first_principles_anchor": "same-surface Cl(3)/Z^3 EW/Higgs action, FMS radial operator, and FH/LSZ source functional",
       "next_artifacts": [
@@ -286,6 +293,8 @@
     "The W/Z physical-observable bypass remains a future route, but the current surface lacks same-source EW action, W/Z rows, matched covariance, strict g2, and delta_perp control.",
     "The derivation-native neutral primitive/rank-one lane remains future-open but needs an actual same-surface primitive transfer or off-diagonal generator certificate.",
     "Schur is a good algebraic row-compression route after a neutral kernel basis exists; current source-only rows cannot define A/B/C.",
-    "Source-coordinate transport now has an exact current-surface boundary: I_8 cannot be transported to trace-zero S_i by current algebraic/symmetry maps, but a future non-shortcut transport certificate could reopen it."
+    "Source-coordinate transport now has an exact current-surface boundary: I_8 cannot be transported to trace-zero S_i by current algebraic/symmetry maps, but a future non-shortcut transport certificate could reopen it.",
+    "The adjacent kinetic-mixing shortcut is also closed: current taste-even Wilson-staggered dynamics cannot secretly supply the missing C_sH row.",
+    "The one-Higgs/taste-axis completeness shortcut is closed: current SM one-Higgs notation and taste scalar support do not select an EW Higgs taste axis or null all orthogonal top couplings."
   ]
 }

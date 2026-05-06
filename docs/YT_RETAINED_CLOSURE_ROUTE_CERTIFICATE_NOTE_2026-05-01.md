@@ -18,8 +18,28 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=222 FAIL=0
+# SUMMARY: PASS=257 FAIL=0
 ```
+
+## 2026-05-06 Hard-Route Shortcut Closure Update
+
+The retained-route certificate now consumes two additional PR230 hard-route
+checks:
+
+- `outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json`
+- `outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json`
+
+They close two adjacent shortcuts without claiming closure:
+
+- taste-even Wilson-staggered kinetic dynamics does not secretly supply the
+  missing `C_sH` row against a trace-zero taste-axis insertion;
+- SM one-Higgs notation plus the taste scalar theorem does not select the
+  electroweak Higgs taste axis or prove the orthogonal-neutral top coupling is
+  zero.
+
+Validation: kinetic taste-mixing `PASS=21 FAIL=0`; one-Higgs taste-axis
+completeness `PASS=19 FAIL=0`; retained-route `PASS=257 FAIL=0`; full positive
+closure assembly gate `PASS=111 FAIL=0`.
 
 ## 2026-05-05 Non-Chunk Cycle-34 Post-Cycle-33 Main Non-PR230 Drift Reopen Update
 
