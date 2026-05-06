@@ -70,6 +70,28 @@ LOG_DIR = REPO_ROOT / "logs" / "codex-audit-runs"
 AUDIT_REASONING_EFFORT = "xhigh"
 MODEL_FALLBACK = "gpt-5.5"
 
+# Minimum audit-model rank (numeric tuple). The audit lane refuses to
+# run on anything below this unless --allow-low-model is passed (a
+# break-glass for testing only). A stale model cache, a misconfigured
+# CODEX_AUDIT_MODEL env var, or a forced env override that points
+# below the floor will all be rejected. Setting this to (5, 5) means
+# only gpt-5.5 and newer are accepted.
+MIN_AUDIT_MODEL_RANK = (5, 5)
+
+
+def _meets_floor(model: str | None) -> bool:
+    """True if model parses to a rank >= MIN_AUDIT_MODEL_RANK."""
+    if not model:
+        return False
+    rank = _model_rank(model)
+    if not rank:
+        return False
+    floor = MIN_AUDIT_MODEL_RANK
+    width = max(len(rank), len(floor))
+    rank_padded = rank + (0,) * (width - len(rank))
+    floor_padded = floor + (0,) * (width - len(floor))
+    return rank_padded >= floor_padded
+
 
 def codex_family_for_model(model: str) -> str:
     return f"codex-{model}"
@@ -857,12 +879,46 @@ def main() -> int:
                    help="With --from-reaudit-candidates, skip the "
                         "runner_drift_candidates stream (only re-audit on "
                         "dependency-strengthening). Default includes both.")
+    p.add_argument("--allow-low-model", action="store_true",
+                   help="Permit running with an audit model below the "
+                        "MIN_AUDIT_MODEL_RANK floor (currently gpt-5.5). "
+                        "Break-glass for testing only — verdicts produced "
+                        "this way will be tagged with the actual sub-floor "
+                        "family and won't satisfy the standard "
+                        "independence rule for clean verdicts.")
     args = p.parse_args()
 
     # Reasoning-effort policy: per repo audit-lane decision (2026-05-04),
     # ALL audits run at xhigh. We do not expose a knob to lower it.
     reasoning_effort = AUDIT_REASONING_EFFORT
     audit_model, auditor_family, model_source, model_warnings = resolve_audit_model()
+
+    # Model-quality floor: the audit lane refuses to run on anything
+    # below MIN_AUDIT_MODEL_RANK (currently gpt-5.5). A stale model
+    # cache, a misconfigured CODEX_AUDIT_MODEL, or a forced env
+    # override that resolves to gpt-5 / gpt-4 / etc. is a quality
+    # regression that silently degrades verdicts. Refuse to start.
+    if not _meets_floor(audit_model) and not args.allow_low_model:
+        floor_str = ".".join(str(x) for x in MIN_AUDIT_MODEL_RANK)
+        print(
+            f"\nREFUSING to run: resolved audit model {audit_model!r} "
+            f"is below the MIN_AUDIT_MODEL_RANK floor (gpt-{floor_str}+).\n"
+            f"  Source: {model_source}\n"
+            f"  Set CODEX_AUDIT_MODEL to a 5.5+ slug, refresh the local\n"
+            f"  models_cache.json, or pass --allow-low-model for testing only.\n"
+            f"  Existing audits at sub-floor model versions will be re-audited\n"
+            f"  on the next batch once this is resolved."
+        )
+        return 2
+    if not _meets_floor(audit_model):
+        floor_str = ".".join(str(x) for x in MIN_AUDIT_MODEL_RANK)
+        print(
+            f"WARNING: --allow-low-model: running below gpt-{floor_str} floor "
+            f"(model={audit_model!r}). Verdicts WILL be tagged with this "
+            f"family in the ledger and will not satisfy the standard "
+            f"cross_family / fresh_context independence rule for clean "
+            f"verdicts. Use only for testing."
+        )
 
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     run_id = uuid.uuid4().hex[:8]

@@ -30,6 +30,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -79,6 +80,46 @@ ALLOWED_CLAIM_TYPES = {
 
 ALLOWED_INDEPENDENCE = {"weak", "fresh_context", "cross_family", "strong", "external", "judicial_review"}
 CLEAN_INDEPENDENCE = ALLOWED_INDEPENDENCE - {"weak"}
+
+# Minimum auditor-family rank for incoming Codex audits. Existing ledger rows
+# are not invalidated by this script, but every new audit blob applied after
+# this policy must meet the floor. This catches manual `apply_audit.py`
+# invocations that bypass the runner's model floor, e.g. a hand-written audit
+# blob with auditor_family=codex-gpt-5. Set to (5, 5) so codex-gpt-5.5 and
+# newer are accepted.
+MIN_NEW_AUDIT_FAMILY_RANK = (5, 5)
+_FAMILY_RANK_RE = re.compile(r"codex-gpt-(\d+(?:\.\d+)*)$")
+
+
+def _family_rank(family: str | None) -> tuple[int, ...] | None:
+    if not family:
+        return None
+    m = _FAMILY_RANK_RE.match(family)
+    if not m:
+        return None
+    return tuple(int(p) for p in m.group(1).split("."))
+
+
+def _family_meets_floor(family: str | None) -> bool:
+    """True if family parses to a rank >= MIN_NEW_AUDIT_FAMILY_RANK.
+
+    Non-codex families (e.g. claude-* manual reviews, legacy-confirmed-clean)
+    pass the floor — only codex-gpt-* families are rank-checked. This
+    keeps the door open for human / Claude judicial reviews which are
+    not bound by the codex model schedule.
+    """
+    if not family or not family.startswith("codex-gpt-"):
+        return True
+    rank = _family_rank(family)
+    if not rank:
+        # Unparseable codex-gpt-* — refuse to bless something we can't measure.
+        return False
+    floor = MIN_NEW_AUDIT_FAMILY_RANK
+    width = max(len(rank), len(floor))
+    rank_padded = rank + (0,) * (width - len(rank))
+    floor_padded = floor + (0,) * (width - len(floor))
+    return rank_padded >= floor_padded
+
 ALLOWED_JUDICIAL_SIDES = {"first", "second", "neither"}
 JUDICIAL_REVIEWABLE_STATUSES = {"disagreement", "third_confirmed_first", "third_confirmed_second"}
 TERMINAL_CROSS_CONFIRM_VERDICTS = {
@@ -469,6 +510,20 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     independence = audit["independence"]
     if independence not in ALLOWED_INDEPENDENCE:
         return False, f"independence {independence!r} not in {sorted(ALLOWED_INDEPENDENCE)}"
+
+    # Model-floor check: incoming Codex audits must come from a codex-gpt-*
+    # family at or above MIN_NEW_AUDIT_FAMILY_RANK, or a non-codex family
+    # (claude-*, legacy-confirmed-clean, judicial reviews, etc.). Existing
+    # sub-floor rows are left for the re-audit queue; this rejects only newly
+    # applied audit blobs.
+    if not _family_meets_floor(audit["auditor_family"]):
+        floor_str = ".".join(str(x) for x in MIN_NEW_AUDIT_FAMILY_RANK)
+        return False, (
+            f"auditor_family {audit['auditor_family']!r} is below the "
+            f"incoming-audit codex-gpt-{floor_str}+ floor. Codex audit blobs "
+            f"must be produced by codex-gpt-{floor_str} or newer; non-codex "
+            f"families remain allowed for human / judicial reviews."
+        )
 
     criticality = row.get("criticality") or "leaf"
     if verdict == "audited_clean":
