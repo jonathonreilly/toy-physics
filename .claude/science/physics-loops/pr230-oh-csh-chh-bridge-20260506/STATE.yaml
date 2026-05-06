@@ -1,9 +1,9 @@
 loop_slug: pr230-oh-csh-chh-bridge-20260506
 branch: physics-loop/pr230-oh-csh-chh-bridge-20260506
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
-active_route: same_source_ew_action_mass_source_contract_refresh
+active_route: same_source_ew_higgs_action_ansatz_gate
 target_status: best-honest-status
-actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-008 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=8/63, finite-mode rho_sx/Delta_sx scouts, and no combined row packet written, source-Higgs readiness gate hardened to classify completed taste-radial source-Higgs-shaped fields as C_sx/C_xx aliases rather than canonical C_sH/C_HH rows, chunks009-010 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, conditional Higgs mass-source action bridge deriving the future dS/ds=sum O_H source derivative only after a same-surface EW/Higgs action exists, same-source EW action certificate contract refreshed to require centered Phi-dagger-Phi source coupling plus the mass-source bridge, exact post-FMS source-overlap necessity gate blocking inference of Res C_sH from source-only rows/FMS C_HH/C_sx-C_xx chunks, exact source-Higgs overlap/kappa row-contract support integrated into the source-Higgs builder/postprocessor while the future row packet remains absent, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
+actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-008 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=8/63, finite-mode rho_sx/Delta_sx scouts, and no combined row packet written, source-Higgs readiness gate hardened to classify completed taste-radial source-Higgs-shaped fields as C_sx/C_xx aliases rather than canonical C_sH/C_HH rows, chunks009-010 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, conditional Higgs mass-source action bridge deriving the future dS/ds=sum O_H source derivative only after a same-surface EW/Higgs action exists, same-source EW action certificate contract refreshed to require centered Phi-dagger-Phi source coupling plus the mass-source bridge, conditional same-source EW/Higgs action-extension ansatz specified with source derivative and FMS checks but not adopted on the current surface, exact post-FMS source-overlap necessity gate blocking inference of Res C_sH from source-only rows/FMS C_HH/C_sx-C_xx chunks, exact source-Higgs overlap/kappa row-contract support integrated into the source-Higgs builder/postprocessor while the future row packet remains absent, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
 proposal_allowed: false
 bare_retained_allowed: false
 hard_residual: >
@@ -99,6 +99,14 @@ hard_residual: >
   status remains open because the action certificate, O_H certificate, W/Z
   rows, source-Higgs rows, sector-overlap, LSZ, and retained-route authority
   are absent.
+  The same-source EW/Higgs action ansatz gate now gives a concrete action-
+  extension shape for that clean route: add dynamic SU(2)xU(1)/Higgs fields on
+  the PR230 lattice, use the same scalar source coordinate s, and couple it to
+  centered Phi^dagger Phi.  The runner checks dS/ds contains sum O_H and the
+  local FMS expansion has linear coefficient v, but it intentionally writes no
+  accepted future EW-action, canonical-O_H, source-Higgs-row, or W/Z-row
+  certificate paths.  The ansatz is conditional support only until a same-
+  surface adoption theorem and downstream rows/gates exist.
   The post-FMS source-overlap necessity gate now checks the next inference
   directly.  Even granting the conditional FMS composite O_H expansion and a
   fixed C_HH residue, current source-only rows and completed C_sx/C_xx
@@ -153,6 +161,7 @@ files_touched:
   - scripts/frontier_yt_pr230_fms_post_degree_route_rescore.py
   - scripts/frontier_yt_pr230_fms_composite_oh_conditional_theorem.py
   - scripts/frontier_yt_pr230_higgs_mass_source_action_bridge.py
+  - scripts/frontier_yt_pr230_same_source_ew_higgs_action_ansatz_gate.py
   - scripts/frontier_yt_wz_same_source_ew_action_certificate_builder.py
   - scripts/frontier_yt_wz_same_source_ew_action_semantic_firewall.py
   - scripts/frontier_yt_wz_same_source_ew_action_gate.py
@@ -191,6 +200,7 @@ files_touched:
   - docs/YT_PR230_FMS_POST_DEGREE_ROUTE_RESCORE_NOTE_2026-05-06.md
   - docs/YT_PR230_FMS_COMPOSITE_OH_CONDITIONAL_THEOREM_NOTE_2026-05-06.md
   - docs/YT_PR230_HIGGS_MASS_SOURCE_ACTION_BRIDGE_NOTE_2026-05-06.md
+  - docs/YT_PR230_SAME_SOURCE_EW_HIGGS_ACTION_ANSATZ_GATE_NOTE_2026-05-06.md
   - docs/YT_WZ_SAME_SOURCE_EW_ACTION_CERTIFICATE_BUILDER_NOTE_2026-05-04.md
   - docs/YT_WZ_SAME_SOURCE_EW_ACTION_GATE_NOTE_2026-05-04.md
   - docs/YT_PR230_POST_FMS_SOURCE_OVERLAP_NECESSITY_GATE_NOTE_2026-05-06.md
@@ -213,6 +223,7 @@ files_touched:
   - outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json
   - outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json
   - outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json
+  - outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json
   - outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json
   - outputs/yt_wz_same_source_ew_action_semantic_firewall_2026-05-04.json
   - outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json

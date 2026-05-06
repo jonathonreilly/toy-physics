@@ -90,6 +90,13 @@ that sharper contract.  Future candidates must attach the bridge and couple the
 shared source to centered `Phi^dagger Phi`; a self-declared canonical radial
 source is no longer sufficient.
 
+The same-source EW/Higgs action ansatz gate gives the concrete conditional
+extension shape for the route: dynamic `SU(2)xU(1)`/Higgs fields on the PR230
+lattice, shared source coordinate `s`, and `s` coupled to centered
+`Phi^dagger Phi`.  It verifies the source derivative and local FMS expansion,
+but is not current-surface adoption and does not write accepted action,
+canonical-`O_H`, source-Higgs, or W/Z row certificate paths.
+
 The `origin/main` composite-Higgs stretch packet is context for this route
 only.  Its Z3 multi-channel candidate does not become PR230 authority until it
 derives the needed premises and emits same-source action/`O_H`/row artifacts on

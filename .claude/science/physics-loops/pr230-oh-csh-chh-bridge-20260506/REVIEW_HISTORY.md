@@ -123,6 +123,10 @@ Local verification completed:
   assumption/import stress PASS=68 FAIL=0, full assembly PASS=127 FAIL=0,
   retained route PASS=278 FAIL=0, campaign status PASS=308 FAIL=0, and
   completion audit PASS=41 FAIL=0;
+- after adding the same-source EW/Higgs action ansatz gate,
+  `frontier_yt_pr230_same_source_ew_higgs_action_ansatz_gate.py`: PASS=15
+  FAIL=0.  The artifact is conditional support only and writes no accepted
+  future action, canonical-`O_H`, source-Higgs, or W/Z row certificate paths;
 - `python3 -m py_compile` for the chunk checkpoint, row combiner,
   source-Higgs readiness, assumption stress, full assembly, retained route,
   campaign status, and completion-audit runners after the chunks007-008

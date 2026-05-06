@@ -184,6 +184,16 @@ gate is `PASS=25 FAIL=0`, and the semantic firewall remains `PASS=12 FAIL=0`.
 This is still contract support only: no EW/Higgs action, W/Z rows, canonical
 `O_H`, source-Higgs rows, LSZ, or closure is supplied.
 
+The same-source EW/Higgs action ansatz gate is now packaged as the cleanest
+action-first positive candidate without adoption.  It specifies dynamic
+`SU(2)xU(1)`/Higgs fields on the PR230 lattice, keeps the same scalar source
+coordinate `s`, couples `s` to centered `Phi^dagger Phi`, and checks both
+`dS/ds = sum_x O_H(x)` and
+`Phi^dagger Phi - v^2/2 = v h + (h^2 + pi^2)/2`.  It intentionally writes no
+accepted future EW-action, canonical-`O_H`, `C_sH/C_HH`, or W/Z response
+certificate paths.  Status is conditional support only until same-surface
+adoption plus downstream row/Gram/LSZ gates exist.
+
 The post-FMS source-overlap necessity gate now checks the next inference
 directly.  It proves that current PR230 source-only rows, FMS `C_HH` support,
 and taste-radial `C_sx/C_xx` chunks do not determine `Res C_sH`: a

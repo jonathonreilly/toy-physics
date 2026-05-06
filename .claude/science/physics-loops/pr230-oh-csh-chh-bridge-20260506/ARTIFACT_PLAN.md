@@ -35,6 +35,10 @@ This block lands:
 - a refreshed same-source EW action certificate builder, semantic firewall,
   and W/Z action gate requiring future candidates to couple the source to
   centered `Phi^dagger Phi` and attach the Higgs mass-source action bridge;
+- an executable same-source EW/Higgs action ansatz gate specifying the
+  concrete conditional action-extension shape while keeping current-surface
+  adoption, accepted future certificate paths, row packets, and closure
+  explicitly absent;
 - an executable post-FMS source-overlap necessity gate proving that current
   source-only rows, conditional FMS `C_HH` support, and taste-radial
   `C_sx/C_xx` chunks still do not determine `Res C_sH` or canonical `y_t`;

@@ -100,6 +100,14 @@ Allowed context:
   the Higgs mass-source action bridge, but still reports the action certificate
   absent and supplies no W/Z rows, canonical `O_H`, source-Higgs rows, LSZ, or
   closure.
+- the same-source EW/Higgs action ansatz gate as conditional action-extension
+  support only: it specifies a concrete lattice `SU(2)xU(1)`/Higgs ansatz with
+  the PR230 scalar source coupled to centered `Phi^dagger Phi`, and checks the
+  source derivative plus local FMS expansion.  It is conditional
+  action-extension support only, not an adopted current-surface action, does
+  not write accepted future certificate paths, and supplies no canonical
+  `O_H`, `C_sH/C_HH` rows, W/Z rows, LSZ, `kappa_s`, or closure.
+  Exact stress phrases: conditional action-extension support only; does not write accepted future certificate paths.
 - the post-FMS source-overlap necessity gate as exact current-surface boundary
   only: it proves current source-only rows, FMS `C_HH` support, and
   taste-radial `C_sx/C_xx` chunks do not infer `Res C_sH` or exclude an
@@ -139,6 +147,10 @@ Open imports after this block:
 - Same-source EW action contract refresh is not a proof selector until a real
   same-surface EW/Higgs action candidate satisfies that refreshed contract and
   the downstream W/Z or source-Higgs row gates pass.
+- Same-source EW/Higgs action ansatz is not a proof selector until a
+  same-surface adoption theorem accepts it as actual PR230 action authority and
+  the downstream canonical `O_H`, source-Higgs row, W/Z row, Gram/LSZ/FV/IR,
+  and retained-route gates pass.
 - Post-FMS `C_HH` support is not a source-overlap proof selector until a
   same-surface `Res C_sH` row, Gram-purity theorem, or physical-response
   bypass exists on PR230.

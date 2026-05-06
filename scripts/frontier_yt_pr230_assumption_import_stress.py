@@ -182,6 +182,9 @@ def main() -> int:
         "higgs_mass_source_action_bridge": load(
             "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json"
         ),
+        "same_source_ew_higgs_action_ansatz_gate": load(
+            "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json"
+        ),
         "post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -334,6 +337,10 @@ def main() -> int:
         "Degree-one Higgs-action premise is not proof selectors until a same-surface EW/Higgs action or canonical-operator theorem derives the degree-one premise",
         "FMS post-degree route rescore",
         "FMS/lattice literature is route guidance only, not PR230 proof authority",
+        "Same-source EW/Higgs action ansatz",
+        "conditional action-extension support only",
+        "not an adopted current-surface action",
+        "does not write accepted future certificate paths",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -1033,6 +1040,21 @@ def main() -> int:
         and mass_source_bridge.get("forbidden_firewall", {}).get("set_kappa_s_equal_one")
         is False,
         mass_source_bridge.get("actual_current_surface_status"),
+    )
+    ew_higgs_action_ansatz = certificates["same_source_ew_higgs_action_ansatz_gate"]
+    report(
+        "same-source-ew-higgs-action-ansatz-not-current-closure",
+        "same-source EW/Higgs action-extension ansatz"
+        in str(ew_higgs_action_ansatz.get("actual_current_surface_status"))
+        and ew_higgs_action_ansatz.get("proposal_allowed") is False
+        and ew_higgs_action_ansatz.get(
+            "same_source_ew_higgs_action_ansatz_gate_passed"
+        )
+        is True
+        and ew_higgs_action_ansatz.get("current_surface_adoption_passed") is False
+        and ew_higgs_action_ansatz.get("future_default_certificates_written")
+        is False,
+        ew_higgs_action_ansatz.get("actual_current_surface_status"),
     )
     post_fms_overlap = certificates["post_fms_source_overlap_necessity_gate"]
     report(

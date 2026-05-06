@@ -15,6 +15,12 @@
    gate now require that centered-composite source coupling plus bridge
    attachment for future candidates; the current action certificate remains
    absent.
+   The same-source EW/Higgs action ansatz gate now supplies the concrete
+   conditional action-extension shape for this route: dynamic `SU(2)xU(1)`/
+   Higgs fields, shared scalar source coordinate `s`, and `s` coupled to
+   centered `Phi^dagger Phi`.  It verifies the source derivative and local FMS
+   expansion, but it is not an adopted current-surface action and writes no
+   accepted future certificate paths.
    The post-FMS source-overlap necessity gate shows that even with FMS `C_HH`
    support, current source-only rows and `C_sx/C_xx` chunks do not determine
    `Res C_sH`; this route must supply the actual source-overlap row or a

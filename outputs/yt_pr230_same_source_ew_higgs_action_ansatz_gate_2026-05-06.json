@@ -1,0 +1,144 @@
+{
+  "accepted_future_certificate_presence": {
+    "canonical_higgs_operator_certificate": false,
+    "same_source_ew_action_certificate": false,
+    "source_higgs_rows": false,
+    "wz_response_rows": false
+  },
+  "action_ansatz": {
+    "action_terms": [
+      "S_PR230_top[s] with the existing additive top scalar source coordinate",
+      "S_SU2[U] Wilson plaquette term",
+      "S_U1[B] compact U(1) plaquette term",
+      "S_H[Phi,U,B] gauge-covariant Higgs hopping/kinetic term",
+      "V_H[Phi] local Higgs potential",
+      "s * sum_x (Phi(x)^dagger Phi(x) - <Phi^dagger Phi>)"
+    ],
+    "fields": {
+      "existing_pr230_top_sector": "Cl(3)/Z3 SU(3) staggered top sector",
+      "higgs_doublet": "Phi(x), gauge-covariant complex SU(2) doublet",
+      "su2_link_field": "U_mu(x) in SU(2)_L",
+      "u1_link_field": "B_mu(x) in U(1)_Y"
+    },
+    "lattice": "same hypercubic sites and scalar source coordinate s as the top FH/LSZ harness",
+    "name": "PR230 same-source EW/Higgs action-extension ansatz",
+    "source_derivative": {
+      "O_H_definition": "O_H = Phi^dagger Phi - <Phi^dagger Phi>",
+      "higgs_source_derivative": "dS/ds contains sum_x O_H(x)",
+      "same_source_coordinate_as_top_fh_lsz": true,
+      "with_respect_to": "s"
+    },
+    "why_this_is_the_clean_contract": "It makes the missing source-to-Higgs object a gauge-invariant action derivative instead of a source-only normalization choice."
+  },
+  "action_extension_ansatz_specified": true,
+  "actual_current_surface_status": "conditional support / same-source EW/Higgs action-extension ansatz specified; actual current-surface adoption absent",
+  "admitted_observation_status": null,
+  "adoption_requirements": [
+    {
+      "current_satisfied": false,
+      "id": "same_surface_adoption",
+      "required": "repo accepts this action-extension as an actual PR230 same-surface action, not only an ansatz"
+    },
+    {
+      "current_satisfied": false,
+      "id": "canonical_oh_certificate",
+      "required": "accepted canonical O_H identity/normalization certificate on the actual current surface"
+    },
+    {
+      "current_satisfied": false,
+      "id": "source_higgs_pole_rows",
+      "required": "production C_ss/C_sH/C_HH pole rows with Gram/FV/IR/model-class checks"
+    },
+    {
+      "current_satisfied": false,
+      "id": "or_wz_physical_response_rows",
+      "required": "same-source W/Z response rows with identity, covariance, strict g2, and delta_perp authority"
+    },
+    {
+      "current_satisfied": false,
+      "id": "retained_route_certificate",
+      "required": "retained/proposed_retained route certificate passes after the physical row packet exists"
+    }
+  ],
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "support if the ansatz is separately adopted as a same-surface PR230 EW/Higgs action and followed by canonical O_H plus C_sH/C_HH or W/Z rows",
+  "current_surface_adoption_passed": false,
+  "exact_next_action": "Either promote this ansatz through a same-surface adoption theorem and then produce canonical O_H/C_sH/C_HH pole rows, or implement genuine same-source W/Z response rows with identity/covariance/g2 authority.",
+  "fail_count": 0,
+  "fms_phi_dagger_phi_expansion_check": {
+    "coefficients": {
+      "constant_after_centering": "0",
+      "linear_h": "1",
+      "quadratic_h2": "1/2",
+      "quadratic_pi2": "1/2"
+    },
+    "constant_removed_by_centering": true,
+    "expression": "O_H = Phi^dagger Phi - v^2/2 = v*h + (h^2 + pi^2)/2",
+    "linear_coefficient_is_v": true,
+    "quadratic_coefficients_canonical": true
+  },
+  "forbidden_firewall": {
+    "claims_retained_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_targets": false,
+    "used_observed_wz_masses_or_g2": false,
+    "used_reduced_pilots_as_production_evidence": false,
+    "used_yt_ward_identity_as_authority": false,
+    "wrote_accepted_future_certificate_paths": false
+  },
+  "future_default_certificates_written": false,
+  "gauge_invariance_check": {
+    "gauge_invariance_argument": "G^dagger G = I",
+    "has_su2_u1_higgs_fields": true,
+    "operator": "Phi^dagger Phi",
+    "operator_gauge_invariant": true
+  },
+  "hypothetical_axiom_status": "hypothetical action-extension ansatz; not an accepted current-surface axiom",
+  "missing_adoption_requirements": [
+    "same_surface_adoption",
+    "canonical_oh_certificate",
+    "source_higgs_pole_rows",
+    "or_wz_physical_response_rows",
+    "retained_route_certificate"
+  ],
+  "parent_statuses": {
+    "canonical_higgs_operator_certificate_gate": "open / canonical-Higgs operator certificate absent",
+    "fms_composite_oh_conditional_theorem": "conditional-support / FMS composite O_H theorem; current PR230 surface lacks same-surface EW/Higgs action and source-overlap pole rows",
+    "full_positive_closure_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
+    "higgs_mass_source_action_bridge": "conditional-support / Higgs mass-source action bridge; same-surface EW/Higgs action and source-Higgs rows absent",
+    "post_fms_source_overlap_necessity_gate": "exact negative boundary / post-FMS source-overlap not derivable from current PR230 source-only or C_sx/C_xx rows",
+    "retained_closure_route": "open / retained closure not yet reached",
+    "source_higgs_overlap_kappa_contract": "exact-support / source-Higgs overlap-kappa row contract; current row packet absent",
+    "wz_same_source_ew_action_certificate_builder": "open / same-source EW action certificate absent",
+    "wz_same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface"
+  },
+  "pass_count": 15,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The ansatz gives a concrete action contract but does not adopt the action on the current PR230 surface, does not write accepted future certificate paths, and supplies no C_sH/C_HH or W/Z production rows.",
+  "same_source_ew_higgs_action_ansatz_gate_passed": true,
+  "source_derivative_check": {
+    "derivative_rows": [
+      {
+        "derivative_wrt_s": "sum_x (Phi(x)^dagger Phi(x) - <Phi^dagger Phi>)",
+        "equals_sum_oh": true,
+        "source_term": "s * sum_x (Phi(x)^dagger Phi(x) - <Phi^dagger Phi>)"
+      }
+    ],
+    "exact_source_derivative_present": true,
+    "source_terms": [
+      "s * sum_x (Phi(x)^dagger Phi(x) - <Phi^dagger Phi>)"
+    ]
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not write the accepted same-source EW action certificate path",
+    "does not write the accepted canonical O_H certificate path",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ]
+}

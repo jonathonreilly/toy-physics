@@ -644,6 +644,9 @@ def main() -> int:
         "pr230_higgs_mass_source_action_bridge": load(
             "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json"
         ),
+        "pr230_same_source_ew_higgs_action_ansatz_gate": load(
+            "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -2767,6 +2770,29 @@ def main() -> int:
         and higgs_mass_source_action_bridge.get("source_higgs_rows_absent") is True,
         statuses["pr230_higgs_mass_source_action_bridge"],
     )
+    same_source_ew_higgs_action_ansatz_gate = certificates[
+        "pr230_same_source_ew_higgs_action_ansatz_gate"
+    ]
+    report(
+        "pr230-same-source-ew-higgs-action-ansatz-support-not-proof",
+        "same-source EW/Higgs action-extension ansatz"
+        in str(statuses["pr230_same_source_ew_higgs_action_ansatz_gate"])
+        and same_source_ew_higgs_action_ansatz_gate.get("proposal_allowed")
+        is False
+        and same_source_ew_higgs_action_ansatz_gate.get(
+            "same_source_ew_higgs_action_ansatz_gate_passed"
+        )
+        is True
+        and same_source_ew_higgs_action_ansatz_gate.get(
+            "current_surface_adoption_passed"
+        )
+        is False
+        and same_source_ew_higgs_action_ansatz_gate.get(
+            "future_default_certificates_written"
+        )
+        is False,
+        statuses["pr230_same_source_ew_higgs_action_ansatz_gate"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -4647,6 +4673,22 @@ def main() -> int:
         and higgs_mass_source_action_bridge.get("canonical_oh_absent") is True
         and higgs_mass_source_action_bridge.get("source_higgs_rows_absent") is True
     )
+    result["same_source_ew_higgs_action_ansatz_support_not_proof"] = (
+        same_source_ew_higgs_action_ansatz_gate.get(
+            "same_source_ew_higgs_action_ansatz_gate_passed"
+        )
+        is True
+        and same_source_ew_higgs_action_ansatz_gate.get("proposal_allowed")
+        is False
+        and same_source_ew_higgs_action_ansatz_gate.get(
+            "current_surface_adoption_passed"
+        )
+        is False
+        and same_source_ew_higgs_action_ansatz_gate.get(
+            "future_default_certificates_written"
+        )
+        is False
+    )
     result["post_fms_source_overlap_necessity_blocks_current_inference"] = (
         post_fms_source_overlap_necessity_gate.get(
             "post_fms_source_overlap_necessity_gate_passed"
@@ -4811,6 +4853,7 @@ def main() -> int:
         "does not treat the two-source taste-radial row production manifest as row data or pole evidence",
         "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
         "does not treat FMS/lattice literature or method names as PR230 proof authority",
+        "does not treat the same-source EW/Higgs action ansatz as adopted current-surface action authority",
         "does not treat two completed taste-radial chunks as combined L12 pole evidence, canonical O_H, or scalar LSZ normalization",
         "does not treat Schur sufficiency or row-definition machinery as proof without same-surface neutral-kernel A/B/C rows",
         "does not treat determinant positivity, conditional Perron support, or source-only generators as a primitive neutral rank-one theorem",
