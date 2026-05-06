@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 523,
+    "critical": 522,
     "high": 15,
     "leaf": 181,
     "medium": 95
@@ -3345,26 +3345,27 @@
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "su3_wigner_intertwiner_block2_theorem_note_2026-05-03",
-      "claim_scope": "Finite-rank construction of the SU(3) adjoint four-fold Haar projector on V_(1,1)^tensor4 = C^4096, including Hermitian idempotent rank-8 projection onto invariants and numerical validation of equivariance/projector identities.",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "su3_wigner_intertwiner_block3_theorem_note_2026-05-03",
+      "claim_scope": null,
       "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
+      "claim_type_provenance": "author_hint",
       "criticality": "critical",
       "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
+      "cross_confirmation_status": null,
       "deps": [
-        "su3_wigner_intertwiner_block1_theorem_note_2026-05-03"
+        "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
+        "su3_wigner_intertwiner_block2_theorem_note_2026-05-03"
       ],
-      "direct_in_degree": 2,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 10.124,
-      "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK2_THEOREM_NOTE_2026-05-03.md",
-      "queue_reason": "audit_in_progress",
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.622,
+      "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK3_THEOREM_NOTE_2026-05-03.md",
+      "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": "scripts/frontier_su3_wigner_4fold_haar_projector.py",
-      "transitive_descendants": 557
+      "runner_path": "scripts/frontier_su3_wigner_l3_cube_geometry.py",
+      "transitive_descendants": 556
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -3717,30 +3718,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_radial_scaling_protected_angle_narrow.py",
       "transitive_descendants": 287
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "su3_wigner_intertwiner_block3_theorem_note_2026-05-03",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
-        "su3_wigner_intertwiner_block2_theorem_note_2026-05-03"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.622,
-      "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK3_THEOREM_NOTE_2026-05-03.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_su3_wigner_l3_cube_geometry.py",
-      "transitive_descendants": 556
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24932,5 +24909,5 @@
     }
   ],
   "ready_count": 19,
-  "total_pending": 814
+  "total_pending": 813
 }
