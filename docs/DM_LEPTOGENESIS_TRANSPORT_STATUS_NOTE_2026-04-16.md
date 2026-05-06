@@ -218,3 +218,61 @@ end state is:
   quantitative mapping item is now closed separately.
 
 So the DM flagship lane remains open.
+
+## Citations
+
+The auditor's `missing_dependency_edge` flag asked for the full
+`dm_leptogenesis_exact_common` source or retained upstream notes
+deriving `exact_package`, `H_RAD_COEFFICIENT_EXACT`, `D_THERMAL_EXACT`,
+`S_OVER_NGAMMA_EXACT`, and `kappa_axiom_reference` from the stated
+axiom. The runner-side carrier of these constants is
+
+- `scripts/dm_leptogenesis_exact_common.py` — defines
+  `D_THERMAL_EXACT = 135*ζ(3)/(4π⁴ g_*)`,
+  `S_OVER_NGAMMA_EXACT = (π⁴ / (45 ζ(3))) * g_S_today`,
+  `H_RAD_COEFFICIENT_EXACT = sqrt(4π³ g_* / 45) / M_Pl`, and the
+  `exact_package` that the runner imports verbatim.
+
+The corresponding load-bearing repo-native theorem authorities are
+registered as one-hop dependency edges below; together they cover the
+exact source / equilibrium / radiation-expansion blocks the runner
+quotes as `gamma`, `E1`, `E2`, `K00`, `d_N`, `s/n_gamma`, `H_rad(T)`,
+and `kappa_axiom`.
+
+- [DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md](DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md)
+  — the source `exact_package` itself: exact `gamma = 1/2`,
+  `E1 = sqrt(8/3)`, `E2 = sqrt(8)/3`, and the axiom-side kernel closure
+  the runner imports through `dm_leptogenesis_exact_common`.
+- [DM_LEPTOGENESIS_HRAD_THEOREM_NOTE_2026-04-16.md](DM_LEPTOGENESIS_HRAD_THEOREM_NOTE_2026-04-16.md)
+  — exact derivation of the radiation-expansion law
+  `H_rad(T) = sqrt(4π³ g_*/45) * T² / M_Pl`, i.e. the
+  `H_RAD_COEFFICIENT_EXACT` constant.
+- [DM_LEPTOGENESIS_EQUILIBRIUM_CONVERSION_THEOREM_NOTE_2026-04-16.md](DM_LEPTOGENESIS_EQUILIBRIUM_CONVERSION_THEOREM_NOTE_2026-04-16.md)
+  — exact equilibrium conversion factors `d_N = D_THERMAL_EXACT` and
+  `s/n_gamma = S_OVER_NGAMMA_EXACT`, with the corresponding `g_*` and
+  `g_S` accountings used in the runner.
+- [DM_LEPTOGENESIS_TRANSPORT_DECOMPOSITION_THEOREM_NOTE_2026-04-16.md](DM_LEPTOGENESIS_TRANSPORT_DECOMPOSITION_THEOREM_NOTE_2026-04-16.md)
+  — exact transport decomposition that introduces `kappa_axiom` and
+  defines its place in the `eta / eta_obs` reduction reported in this
+  note's "Exact transport result" section.
+- [DM_LEPTOGENESIS_TRANSPORT_INTEGRAL_THEOREM_NOTE_2026-04-16.md](DM_LEPTOGENESIS_TRANSPORT_INTEGRAL_THEOREM_NOTE_2026-04-16.md)
+  — exact transport-integral identity that supplies the
+  `epsilon_1 / epsilon_DI` numerator the runner uses for the same
+  reduction.
+- [DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_LAW_DERIVATION_NOTE_2026-04-16.md](DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_LAW_DERIVATION_NOTE_2026-04-16.md)
+  — the projected-source law underlying the projected-source chamber
+  reported in this status note.
+- [DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_TRIPLET_SIGN_THEOREM_NOTE_2026-04-16.md](DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_TRIPLET_SIGN_THEOREM_NOTE_2026-04-16.md)
+  — sign-orientation theorem for the projected-source triplet `(γ, E1, E2)`.
+- [DM_LEPTOGENESIS_NE_CHARGED_SOURCE_RESPONSE_REDUCTION_NOTE_2026-04-16.md](DM_LEPTOGENESIS_NE_CHARGED_SOURCE_RESPONSE_REDUCTION_NOTE_2026-04-16.md)
+  — charged-source response reduction supplying the projection law
+  `K00 = 2`.
+
+These additions are strictly additive: the verdict, the exact
+transport result, the PMNS-assisted support status, the
+source-surface blocker-reduction status, and the open-DM-gate
+inventory above are unchanged.
+
+Until each linked authority is itself audit-clean, this note remains
+`audited_conditional` even with the registered edges; the wiring is
+the prerequisite for unlock, not the unlock itself.

@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 771 |
+| unaudited | 772 |
 | audit_in_progress | 3 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 34 |
-| ~~audited_conditional~~ | 473 |
+| ~~audited_conditional~~ | 472 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 378 |
-| `audited_conditional` | 473 |
+| `audited_conditional` | 472 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 34 |
-| `unaudited` | 817 |
+| `unaudited` | 818 |
 
 | claim_type | count |
 |---|---:|
@@ -54,8 +54,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `decoration` | 10 |
 | `meta` | 56 |
 | `no_go` | 186 |
-| `open_gate` | 116 |
-| `positive_theorem` | 789 |
+| `open_gate` | 115 |
+| `positive_theorem` | 790 |
 
 | criticality | count |
 |---|---:|
@@ -654,7 +654,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_stationary_cp_incompatibility_theorem_note_2026-04-16` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_projection_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
-| `dm_leptogenesis_transport_status_note_2026-04-16` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_washout_axiom_boundary_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -4670,19 +4669,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** On the diagnostic radiation branch E_H(z)=1 with K_H = 47.23597962989828, the direct transport solve gives kappa_axiom,ref = 0.004829545290766509 and the formal integral reproduces it.  _(class `G`)_
 - **chain closes:** False — The restricted packet does not derive K_H, E_H(z)=1, the transport equations, or the normalization choices from Cl(3) on Z^3. The runner checks consistency at the chosen imported reference input rather than closing the theorem-native derivation from the axiom.
 - **rationale:** The runner performs useful numerical checks that the direct solve and formal integral agree and that the old fit is larger on the stated branch. However, its load-bearing computation is anchored to a specific imported K_H value and imported common-module constants/functions, while the restricted packet supplies no derivation of those inputs from the axiom. That makes the claim a numerical match or branch-specific consistency check, not a first-principles theorem-native closure.
-- **auditor confidence:** high
-
-### `dm_leptogenesis_transport_status_note_2026-04-16`
-
-- **Note:** [`DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md)
-- **claim_type:** `open_gate`
-- **claim_scope:** Audited the restricted packet's claim that the one-flavor theorem-native radiation transport branch is internally computed and undershoots eta_obs, leaving the DM selector/gate open.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-dm_leptogenesis_transpor-078`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** On the exact theorem-native radiation branch, the direct transport solve gives kappa_axiom = 0.004829545290766509 and eta/eta_obs = 0.188785929502, so the transport chain is closed while the DM gate remains open.  _(class `B`)_
-- **chain closes:** False — The open-gate conclusion follows only after importing the exact source package, projection denominator, equilibrium constants, radiation normalization, and kappa solver from dm_leptogenesis_exact_common, whose derivations are not included in the restricted packet. The runner checks those imported values against hard-coded expected numbers rather than deriving them from Cl(3) on Z^3 in the provided code.
-- **rationale:** The note is honest that the full DM lane remains open, but the positive transport-chain closure is not established from the restricted packet alone. The runner source imports the load-bearing package and constants from dm_leptogenesis_exact_common and then performs equality/tolerance checks against expected values; the provided code does not expose a first-principles derivation from the axiom. With no cited authorities and no helper-module source supplied, the claimed exact transport closure depends on unprovided premise/normalization/solver material.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_washout_axiom_boundary_note_2026-04-15`
