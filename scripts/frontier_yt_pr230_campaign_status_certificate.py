@@ -2288,7 +2288,15 @@ def main() -> int:
         and certificates["source_higgs_production_readiness_gate"].get(
             "current_chunk_wave_can_supply_source_higgs_rows"
         )
-        is False,
+        is False
+        and certificates["source_higgs_production_readiness_gate"].get(
+            "taste_radial_rows_are_c_sx_c_xx_not_c_sH_c_HH"
+        )
+        is True
+        and certificates["source_higgs_production_readiness_gate"].get(
+            "taste_radial_rows_lack_canonical_oh_identity"
+        )
+        is True,
         statuses["source_higgs_production_readiness_gate"],
     )
     report(

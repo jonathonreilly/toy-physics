@@ -211,6 +211,17 @@ Current result is `ready=6/63`, no bad chunk audits, and
 physics evidence: partial diagnostics are not combined L12 pole evidence,
 canonical `O_H`, scalar LSZ normalization, `kappa_s`, or top-Yukawa closure.
 
+The source-Higgs production-readiness gate has been hardened against a subtle
+schema overread.  Completed two-source taste-radial row artifacts populate
+legacy source-Higgs-shaped fields for finite timeseries transport, but the row
+metadata now classifies those fields as explicit `C_sx/C_xx` second-source
+aliases, not canonical `C_sH/C_HH` pole rows.  The gate scans completed row
+chunks, requires finite mode rows plus alias metadata, requires zero pole
+residue rows, requires `canonical_higgs_operator_identity_passed=false`, and
+requires `used_as_physical_yukawa_readout=false`.  The current readiness result
+is `PASS=25 FAIL=0` with six completed taste-radial chunks scanned; it remains
+a firewall/infrastructure check only.
+
 The FH/LSZ postprocess state is refreshed after the completed L12 replacement
 campaign.  The four-mode/x16 and separate eight-mode/x8 L12 chunked surfaces
 are complete and seed-controlled, but remain bounded support only.  They do
@@ -258,3 +269,7 @@ same-surface PR230 `O_H` certificate.
 Do not close it by treating the conditional FMS `C_HH` residue or completed
 `C_sx/C_xx` chunks as `Res C_sH`; the post-FMS necessity gate blocks that
 inference on the current surface.
+Do not close it by treating source-Higgs schema field names in completed
+taste-radial chunks as physical `C_sH/C_HH`; the readiness gate now records
+those rows as `C_sx/C_xx` aliases with canonical `O_H` identity false and no
+Yukawa readout.

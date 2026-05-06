@@ -11,6 +11,11 @@
    support, current source-only rows and `C_sx/C_xx` chunks do not determine
    `Res C_sH`; this route must supply the actual source-overlap row or a
    physical-response bypass.
+   The source-Higgs readiness gate now explicitly scans completed taste-radial
+   rows and classifies any source-Higgs-shaped timeseries fields there as
+   `C_sx/C_xx` aliases, with no pole-residue rows, no canonical `O_H` identity,
+   and no physical Yukawa readout.  Future `C_sH/C_HH` closure must therefore
+   come from a real canonical `O_H` packet, not from schema reuse.
    The source-Higgs overlap/kappa contract now fixes the exact future readout
    formula, `kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))`, but records that
    the current row packet is absent and `kappa_s = 1` is still forbidden.  The

@@ -1,9 +1,9 @@
 loop_slug: pr230-oh-csh-chh-bridge-20260506
 branch: physics-loop/pr230-oh-csh-chh-bridge-20260506
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
-active_route: two_source_taste_radial_chunks005_006_checkpoint
+active_route: source_higgs_readiness_taste_radial_alias_firewall
 target_status: best-honest-status
-actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-006 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=6/63 and no combined row packet written, chunks007-008 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, exact post-FMS source-overlap necessity gate blocking inference of Res C_sH from source-only rows/FMS C_HH/C_sx-C_xx chunks, exact source-Higgs overlap/kappa row-contract support integrated into the source-Higgs builder/postprocessor while the future row packet remains absent, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
+actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-006 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=6/63 and no combined row packet written, source-Higgs readiness gate hardened to classify completed taste-radial source-Higgs-shaped fields as C_sx/C_xx aliases rather than canonical C_sH/C_HH rows, chunks007-008 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, exact post-FMS source-overlap necessity gate blocking inference of Res C_sH from source-only rows/FMS C_HH/C_sx-C_xx chunks, exact source-Higgs overlap/kappa row-contract support integrated into the source-Higgs builder/postprocessor while the future row packet remains absent, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
 proposal_allowed: false
 bare_retained_allowed: false
 hard_residual: >
@@ -65,6 +65,14 @@ hard_residual: >
   aggregation boundary only: partial diagnostics are not combined L12 pole
   evidence, canonical O_H authority, scalar LSZ normalization, kappa_s, or
   y_t closure.
+  The source-Higgs production-readiness gate now scans completed two-source
+  taste-radial chunks and treats source-Higgs-shaped timeseries fields there as
+  explicit C_sx/C_xx aliases unless a canonical O_H identity, pole-residue
+  packet, and physical-readout certificate exist.  The current scan sees six
+  completed taste-radial chunks, finite mode rows, zero pole-residue rows,
+  canonical_higgs_operator_identity_passed=false, and
+  used_as_physical_yukawa_readout=false.  This prevents schema reuse from being
+  read as physical C_sH/C_HH evidence.
   The FMS/lattice literature rescore after the degree gate selects the
   action-first gauge-invariant composite O_H route as the cleanest future
   physics artifact.  This is route guidance only: FMS method names and
@@ -104,6 +112,7 @@ files_touched:
   - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
   - scripts/frontier_yt_retained_closure_route_certificate.py
   - scripts/frontier_yt_pr230_campaign_status_certificate.py
+  - scripts/frontier_yt_source_higgs_production_readiness_gate.py
   - scripts/frontier_yt_source_higgs_cross_correlator_certificate_builder.py
   - scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py
   - scripts/frontier_yt_pr230_source_coordinate_transport_gate.py
@@ -139,6 +148,7 @@ files_touched:
   - docs/YT_PR230_OH_BRIDGE_FIRST_PRINCIPLES_CANDIDATE_PORTFOLIO_NOTE_2026-05-06.md
   - docs/YT_SOURCE_HIGGS_CROSS_CORRELATOR_CERTIFICATE_BUILDER_NOTE_2026-05-03.md
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_POSTPROCESSOR_NOTE_2026-05-03.md
+  - docs/YT_SOURCE_HIGGS_PRODUCTION_READINESS_GATE_NOTE_2026-05-04.md
   - docs/YT_PR230_SOURCE_COORDINATE_TRANSPORT_GATE_NOTE_2026-05-06.md
   - docs/YT_PR230_SOURCE_COORDINATE_TRANSPORT_COMPLETION_ATTEMPT_NOTE_2026-05-06.md
   - docs/YT_PR230_ACTION_FIRST_ROUTE_COMPLETION_NOTE_2026-05-06.md
@@ -172,6 +182,7 @@ files_touched:
   - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
   - outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json
   - outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json
+  - outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json
   - outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json
   - outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json
   - outputs/yt_pr230_action_first_route_completion_2026-05-06.json
@@ -243,7 +254,7 @@ verification:
   fh_lsz_production_postprocess_gate_pass_fail: "12/0"
   source_higgs_builder_pass_fail: "5/0"
   source_higgs_gram_postprocessor_pass_fail: "3/0"
-  source_higgs_production_readiness_pass_fail: "21/0"
+  source_higgs_production_readiness_pass_fail: "25/0"
   completion_audit_pass_fail: "40/0"
   runner_pass_fail: "21/0"
   candidate_portfolio_pass_fail: "21/0"
@@ -251,7 +262,7 @@ verification:
   full_positive_assembly_pass_fail: "126/0"
   retained_route_certificate_pass_fail: "277/0"
   campaign_status_certificate_pass_fail: "307/0"
-  audit_pipeline: "complete; audit metadata regenerated after adding the post-FMS source-overlap gate and two-source row-combiner gate note"
+  audit_pipeline: "complete; audit metadata regenerated after source-Higgs readiness alias-firewall hardening"
   audit_lint_strict: "no errors; five pre-existing warnings"
   diff_check: clean
 next_exact_action: >
@@ -260,7 +271,10 @@ next_exact_action: >
   explicit C_sx/C_xx row contract, a no-resume production manifest,
   completed-mode checkpoints for chunks001-006, and a combiner gate that
   refuses to write the future combined row packet until all 63 chunks are
-  schema-clean.  Chunks007-008 are active under the two-worker cap and remain
+  schema-clean.  The source-Higgs readiness gate now also scans completed
+  taste-radial chunks and records their source-Higgs-shaped fields as C_sx/C_xx
+  aliases, not canonical C_sH/C_HH rows, with canonical O_H identity false and
+  no physical readout.  Chunks007-008 are active under the two-worker cap and remain
   non-evidence until completed JSON exists and completed-mode checkpoints pass.
   After each active chunk finishes, rerun the per-chunk checkpoint without
   --allow-pending-active, then launch the next safe bounded wave and rerun the

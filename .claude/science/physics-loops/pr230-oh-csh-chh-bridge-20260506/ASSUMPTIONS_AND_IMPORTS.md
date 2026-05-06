@@ -166,6 +166,10 @@ Open imports after this block:
 - Completed two-source taste-radial chunks001-006 are not proof selectors
   until combined row evidence, pole/FV/IR authority, and canonical
   `O_H`/source-overlap or physical-response authority exist.
+- Source-Higgs schema field names in completed two-source taste-radial chunks
+  are not proof selectors; the readiness gate now treats them as explicit
+  `C_sx/C_xx` second-source aliases unless a real canonical `O_H` identity,
+  pole-residue row packet, and physical-readout certificate are present.
 - Partial two-source taste-radial row-combiner diagnostics are not proof
   selectors; the combined row packet is intentionally absent until 63/63
   manifest chunks are present and schema-clean, and even a complete packet

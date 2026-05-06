@@ -28,6 +28,9 @@ FUTURE_PRODUCTION_CERT = (
     ROOT / "outputs" / "yt_source_higgs_cross_correlator_production_certificate_2026-05-03.json"
 )
 CHUNK_PATTERN = "yt_pr230_fh_lsz_production_L12_T24_chunk*_2026-05-01.json"
+TASTE_RADIAL_ROW_PATTERN = (
+    "yt_pr230_two_source_taste_radial_rows_L12_T24_chunk*_2026-05-06.json"
+)
 
 PARENTS = {
     "canonical_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
@@ -98,6 +101,11 @@ def source_higgs_rows_present(ensemble: dict[str, Any]) -> bool:
     return isinstance(rows, dict) and bool(rows)
 
 
+def source_higgs_analysis(ensemble: dict[str, Any]) -> dict[str, Any]:
+    analysis = ensemble.get("source_higgs_cross_correlator_analysis", {})
+    return analysis if isinstance(analysis, dict) else {}
+
+
 def scan_completed_chunks() -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for path in sorted((ROOT / "outputs").glob(CHUNK_PATTERN), key=chunk_index):
@@ -125,6 +133,56 @@ def scan_completed_chunks() -> list[dict[str, Any]]:
                 "source_higgs_noises": source_meta.get("noise_vectors_per_configuration", 0),
                 "source_higgs_rows_present": source_higgs_rows_present(ensemble),
                 "used_as_physical_yukawa_readout": source_meta.get("used_as_physical_yukawa_readout"),
+            }
+        )
+    return rows
+
+
+def scan_taste_radial_rows() -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    row_dir = ROOT / "outputs" / "yt_pr230_two_source_taste_radial_rows"
+    for path in sorted(row_dir.glob(TASTE_RADIAL_ROW_PATTERN), key=chunk_index):
+        idx = chunk_index(path)
+        if idx < 0:
+            continue
+        data = load_json(path)
+        metadata = data.get("metadata", {}) if isinstance(data.get("metadata", {}), dict) else {}
+        source_meta = metadata.get("source_higgs_cross_correlator", {})
+        if not isinstance(source_meta, dict):
+            source_meta = {}
+        ensembles = data.get("ensembles", [])
+        ensemble = ensembles[0] if isinstance(ensembles, list) and ensembles and isinstance(ensembles[0], dict) else {}
+        analysis = source_higgs_analysis(ensemble)
+        aliases = analysis.get("two_source_taste_radial_row_aliases", {})
+        if not isinstance(aliases, dict):
+            aliases = {}
+        operator = analysis.get("operator", {})
+        if not isinstance(operator, dict):
+            operator = {}
+        mode_rows = analysis.get("mode_rows", {})
+        rows.append(
+            {
+                "chunk_index": idx,
+                "path": display(path),
+                "phase": metadata.get("phase"),
+                "source_higgs_metadata_enabled": source_meta.get("enabled") is True,
+                "source_higgs_analysis_present": bool(analysis),
+                "mode_row_count": len(mode_rows) if isinstance(mode_rows, dict) else 0,
+                "pole_residue_row_count": len(analysis.get("pole_residue_rows", []))
+                if isinstance(analysis.get("pole_residue_rows", []), list)
+                else 0,
+                "two_source_taste_radial_aliases_available": aliases.get("available") is True,
+                "c_sx_aliases_c_sh_schema_field": aliases.get("C_sx_aliases_C_sH_schema_field")
+                is True,
+                "c_xx_aliases_c_hh_schema_field": aliases.get("C_xx_aliases_C_HH_schema_field")
+                is True,
+                "canonical_higgs_operator_identity_passed": analysis.get(
+                    "canonical_higgs_operator_identity_passed"
+                )
+                is True,
+                "operator_id": operator.get("operator_id"),
+                "operator_certificate_path": operator.get("certificate_path"),
+                "used_as_physical_yukawa_readout": analysis.get("used_as_physical_yukawa_readout"),
             }
         )
     return rows
@@ -161,6 +219,7 @@ def main() -> int:
     proposal_allowed = [name for name, cert in certs.items() if cert.get("proposal_allowed") is True]
     harness_text = PRODUCTION_HARNESS.read_text(encoding="utf-8") if PRODUCTION_HARNESS.exists() else ""
     chunks = scan_completed_chunks()
+    taste_radial_rows = scan_taste_radial_rows()
 
     canonical_operator_absent = (
         "canonical-Higgs operator certificate absent" in status(certs["canonical_operator_gate"])
@@ -230,6 +289,23 @@ def main() -> int:
         or row["used_as_physical_yukawa_readout"] is False
         for row in chunks
     )
+    taste_radial_rows_scanned = bool(taste_radial_rows)
+    taste_radial_rows_are_c_sx_c_xx = taste_radial_rows_scanned and all(
+        row["source_higgs_metadata_enabled"] is True
+        and row["source_higgs_analysis_present"] is True
+        and row["mode_row_count"] > 0
+        and row["pole_residue_row_count"] == 0
+        and row["two_source_taste_radial_aliases_available"] is True
+        and row["c_sx_aliases_c_sh_schema_field"] is True
+        and row["c_xx_aliases_c_hh_schema_field"] is True
+        for row in taste_radial_rows
+    )
+    taste_radial_rows_not_canonical_source_higgs = taste_radial_rows_scanned and all(
+        row["canonical_higgs_operator_identity_passed"] is False for row in taste_radial_rows
+    )
+    taste_radial_rows_not_yukawa_readout = taste_radial_rows_scanned and all(
+        row["used_as_physical_yukawa_readout"] is False for row in taste_radial_rows
+    )
     operator_cert_present = OPERATOR_CERT.exists()
     future_rows_present = FUTURE_ROWS.exists()
     future_production_cert_present = FUTURE_PRODUCTION_CERT.exists()
@@ -257,6 +333,26 @@ def main() -> int:
     report("completed-chunks-source-higgs-absent-guarded", completed_chunks_guarded, "no completed chunk was launched with O_H certificate")
     report("completed-chunks-have-no-source-higgs-rows", no_completed_chunk_rows, "C_sH/C_HH rows absent from completed chunks")
     report("completed-chunks-not-yukawa-readout", no_completed_chunk_yukawa_readout, "source-Higgs metadata is non-readout")
+    report(
+        "taste-radial-row-chunks-scanned",
+        taste_radial_rows_scanned,
+        f"count={len(taste_radial_rows)}",
+    )
+    report(
+        "taste-radial-rows-are-csx-cxx-not-csh-chh",
+        taste_radial_rows_are_c_sx_c_xx,
+        "schema aliases are explicit second-source C_sx/C_xx rows",
+    )
+    report(
+        "taste-radial-rows-lack-canonical-oh-identity",
+        taste_radial_rows_not_canonical_source_higgs,
+        "canonical_higgs_operator_identity_passed=false for completed taste-radial chunks",
+    )
+    report(
+        "taste-radial-rows-not-yukawa-readout",
+        taste_radial_rows_not_yukawa_readout,
+        "used_as_physical_yukawa_readout=false",
+    )
     report("operator-certificate-file-absent", not operator_cert_present, display(OPERATOR_CERT))
     report("future-source-higgs-row-file-absent", not future_rows_present, display(FUTURE_ROWS))
     report("future-production-certificate-absent", not future_production_cert_present, display(FUTURE_PRODUCTION_CERT))
@@ -268,7 +364,10 @@ def main() -> int:
             "The source-Higgs production row path is instrumented but not launch-ready. "
             "The current completed FH/LSZ chunks were produced with source-Higgs rows "
             "absent-guarded, no canonical-Higgs operator certificate, and no C_sH/C_HH "
-            "rows.  A future source-Higgs production launch can reuse the existing "
+            "rows.  The completed two-source taste-radial chunks do contain finite "
+            "schema C_sH/C_HH fields, but the artifact itself marks them as "
+            "C_sx/C_xx second-source aliases with canonical_higgs_operator_identity_passed=false "
+            "and used_as_physical_yukawa_readout=false.  A future source-Higgs production launch can reuse the existing "
             "default-off harness only after a same-surface O_H certificate exists; "
             "until then no source-Higgs row, pole-residue, Gram-purity, retained, or "
             "proposed_retained claim is authorized."
@@ -284,6 +383,9 @@ def main() -> int:
         "future_production_certificate": display(FUTURE_PRODUCTION_CERT),
         "future_production_certificate_present": future_production_cert_present,
         "completed_chunk_scan": chunks,
+        "taste_radial_completed_row_scan": taste_radial_rows,
+        "taste_radial_rows_are_c_sx_c_xx_not_c_sH_c_HH": taste_radial_rows_are_c_sx_c_xx,
+        "taste_radial_rows_lack_canonical_oh_identity": taste_radial_rows_not_canonical_source_higgs,
         "current_chunk_wave_can_supply_source_higgs_rows": any(row["source_higgs_rows_present"] for row in chunks),
         "future_launch_template_blocked_until_operator_certificate": future_launch_template(),
         "parent_certificates": PARENTS,

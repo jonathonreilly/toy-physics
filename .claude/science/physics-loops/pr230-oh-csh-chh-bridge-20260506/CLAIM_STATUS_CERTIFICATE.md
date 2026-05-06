@@ -83,3 +83,8 @@ choose `eps=1/2` only by importing a new optimization principle.
 The refreshed FH/LSZ postprocess gate recognizes completed L12 chunked support
 and rejects it as closure evidence without the remaining scalar-LSZ and bridge
 authority.
+The refreshed source-Higgs production-readiness gate now also scans completed
+two-source taste-radial chunks and records their source-Higgs-shaped timeseries
+fields as `C_sx/C_xx` aliases, not canonical `C_sH/C_HH` rows.  The scan
+requires alias metadata, zero pole-residue rows, canonical `O_H` identity
+false, and no physical Yukawa readout; it is a firewall, not evidence.

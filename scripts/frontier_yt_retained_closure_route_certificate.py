@@ -2653,6 +2653,14 @@ def main() -> int:
             "current_chunk_wave_can_supply_source_higgs_rows"
         )
         is False
+        and certificates["source_higgs_production_readiness_gate"].get(
+            "taste_radial_rows_are_c_sx_c_xx_not_c_sH_c_HH"
+        )
+        is True
+        and certificates["source_higgs_production_readiness_gate"].get(
+            "taste_radial_rows_lack_canonical_oh_identity"
+        )
+        is True
     )
     canonical_higgs_operator_semantic_firewall_not_closure = (
         "canonical-Higgs operator semantic firewall passed"
