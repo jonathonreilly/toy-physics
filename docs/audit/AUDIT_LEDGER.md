@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 787 |
+| unaudited | 786 |
 | audit_in_progress | 2 |
 | meta | 48 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
-| ~~audited_conditional~~ | 464 |
+| ~~audited_conditional~~ | 465 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 378 |
-| `audited_conditional` | 464 |
+| `audited_conditional` | 465 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 32 |
-| `unaudited` | 835 |
+| `unaudited` | 834 |
 
 | claim_type | count |
 |---|---:|
@@ -925,6 +925,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_positive_background_local_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_qg_canonical_smooth_gravitational_weak_measure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | B | - |
 | `universal_qg_canonical_textbook_geometric_action_equivalence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `universal_qg_canonical_textbook_weak_measure_equivalence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | B | - |
 | `universal_qg_inverse_limit_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_qg_projective_schur_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_qg_smooth_gravitational_global_atlas_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -13688,6 +13689,25 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md`
   - `UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md`
   - `UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_qg_canonical_textbook_weak_measure_equivalence_note`
+
+- **Note:** [`UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md`](../../docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Canonical equivalence between the project-native PL weak Gaussian Sobolev completion and the standard textbook closed-coercive weak Sobolev/Gaussian cylinder formulation on the completed carrier.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-06-universal-qg-canonical-textbook-weak-measure`  (codex-current; independence=weak)
+- **load-bearing step:** the closed coercive PL weak bilinear form determines the standard textbook weak operator, stationary solution, and Gaussian cylinder/Cameron-Martin covariance on the same completed carrier  _(class `B`)_
+- **chain closes:** False — The direct ledger dependency is only the optional textbook comparison meta note, which explicitly carries no theorem authority. The runner verifies basis-invariance and textbook weak/Gaussian algebra after importing PL weak-form, PL Sobolev carrier, Gaussian completion, and external FE/Galerkin bridge premises that are not direct retained-grade dependencies.
+- **rationale:** Issue: the note promotes a canonical textbook weak/measure equivalence, but the current ledger cites only a meta packaging hub and not the actual PL weak, Sobolev, Gaussian, and FE/Galerkin authority rows. Why this blocks: the runner's completed checks demonstrate finite algebraic consistency and basis independence only after those premises are imported. Repair target: wire scripts/frontier_universal_qg_canonical_textbook_weak_measure_equivalence.py as the runner and add direct retained-grade dependencies for the PL weak form, PL Sobolev interface, PL field/Gaussian completion, and external FE/Galerkin smooth equivalence. Claim boundary until fixed: the coordinate/basis-invariance checks pass, but retained status must wait for those upstream theorem rows to be direct retained-grade authorities.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md`
+  - `UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md`
+  - `UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md`
+  - `UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md`
+  - `UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_qg_inverse_limit_closure_note`

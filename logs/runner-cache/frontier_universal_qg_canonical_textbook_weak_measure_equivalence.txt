@@ -1,0 +1,37 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_qg_canonical_textbook_weak_measure_equivalence.py
+runner_sha256: b26ac50526abb27f46ab23c68a181c7d479de3dc874eb301a4115fe1057647a5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+[EXACT] PASS: the route already has an exact PL weak-form system, an exact PL Sobolev carrier, and an exact external FE/Galerkin smooth weak/measure realization
+    this theorem starts from the already-closed project-native weak/Dirichlet system, H1-type carrier, and exact external FE/Galerkin weak/measure bridge
+[EXACT] PASS: the completed weak-field carrier and the completed coercive form are textbook Sobolev weak-problem data
+    min H1-gram eigenvalue=5.000000e-01, min coercive-form eigenvalue=1.028379e+00
+[EXACT] PASS: the weak problem and its stationary solution are basis-independent on the completed carrier
+    max energy-invariance error=1.998e-15, max transformed-solution error=1.457e-16
+[EXACT] PASS: the Gaussian cylinder / Cameron-Martin formulation is basis-independent on the same completed carrier
+    max covariance-pairing error=7.216e-16, max weak-operator spectral error=3.553e-15
+[EXACT] PASS: the remaining stronger issue is therefore not canonical textbook weak/measure equivalence, but only later textbook geometric/action and continuum-gravitational closures already discharged elsewhere on the branch
+    the exact discrete route already determines one canonical textbook closed-coercive weak Sobolev / Gaussian cylinder object; later notes close the smooth gravitational weak/Gaussian identifications, the geometric/action comparison, and the canonical textbook continuum gravitational target built on it
+UNIVERSAL QG CANONICAL TEXTBOOK WEAK/MEASURE EQUIVALENCE
+==============================================================================
+min H1-gram eigenvalue              = 5.000000e-01
+min coercive-form eigenvalue        = 1.028379e+00
+max energy-invariance error         = 1.998e-15
+max transformed-solution error      = 1.457e-16
+max covariance-pairing error        = 7.216e-16
+max weak-operator spectral error    = 3.553e-15
+
+Verdict:
+The exact project-native PL weak Gaussian Sobolev completion is already canonically equivalent to the standard textbook closed-coercive weak Sobolev / Gaussian cylinder formulation on the completed carrier. So the chosen external FE/Galerkin realization is not an arbitrary target anymore; it is a coordinate realization of one canonical textbook weak/measure object.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=5 FAIL=0 TOTAL=5
+
+----- stderr -----
+
