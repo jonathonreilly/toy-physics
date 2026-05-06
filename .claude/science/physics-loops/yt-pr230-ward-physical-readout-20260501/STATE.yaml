@@ -11,16 +11,21 @@ worktree: "/private/tmp/pr230-wroute-build"
 branch: "codex/pr230-wroute-build tracking origin/claude/yt-direct-lattice-correlator-2026-04-30"
 repo_lock:
   default_lock_status: "not used for this worktree"
-  workspace_lock_status: "acquired for block 239"
+  workspace_lock_status: "acquired for post-O_sp completion audit block"
   workspace_lock_path: "/Users/jonBridger/physics_worker_lock.json"
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-240-genuine-source-pole-artifact-intake
-blocks_completed: 240
-active_route: "PR230 genuine source-pole artifact intake and completed L12 compute status"
-active_hard_residual: "The branch contains one genuine same-source source-side artifact: the Legendre/LSZ normalized source-pole operator O_sp.  It is exact source-side support but not canonical O_H.  Completed L12 four-mode/x16 and eight-mode/x8 streams are real finite-shell support, with source responses agreeing at z=0.010398804406050486, but they still fail strict scalar-LSZ denominator shortcuts.  The negative-route applicability review keeps selected no-gos scoped to current-surface route filters with future reopen artifacts preserved.  Closure still needs O_sp-Higgs pole rows or a same-surface canonical O_H identity/normalization certificate, scalar-LSZ FV/IR/model-class authority, matching/running, and retained-route authorization.  Source-pole intake PASS=14 FAIL=0, L12 compute status PASS=14 FAIL=0, negative-route applicability review PASS=9 FAIL=0, assumption stress PASS=42 FAIL=0, campaign status PASS=277 FAIL=0, full assembly PASS=97 FAIL=0, retained-route PASS=245 FAIL=0.  No retained/proposed-retained closure is authorized."
+current_phase: campaign-block-241-post-osp-positive-closure-completion-audit
+blocks_completed: 241
+active_route: "PR230 post-O_sp positive-closure completion audit"
+active_hard_residual: "The completion audit now explicitly consumes the genuine O_sp source-pole artifact while keeping it support-only: O_sp is exact same-source source-side LSZ normalization, not canonical O_H.  It also consumes the taste-condensate O_H bridge audit as a blocked shortcut because the taste-Higgs axes are orthogonal to the PR230 uniform scalar source.  The audit confirms production and polefit8x8 chunk families are complete with target schema, but closure still lacks a canonical O_H certificate, O_sp-Higgs pole rows (Res_C_sp_sp=1, Res_C_spH, Res_C_HH), scalar-LSZ FV/IR/model-class authority, an accepted source-overlap or same-source physical-response bridge, matching/running, and retained-route/campaign proposal authorization.  Post-O_sp completion audit PASS=24 FAIL=0.  No retained/proposed-retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_pr230_positive_closure_completion_audit.py"
+  - "docs/YT_PR230_POSITIVE_CLOSURE_COMPLETION_AUDIT_NOTE_2026-05-05.md"
+  - "outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
   - "scripts/frontier_yt_pr230_genuine_source_pole_artifact_intake.py"
   - "docs/YT_PR230_GENUINE_SOURCE_POLE_ARTIFACT_INTAKE_NOTE_2026-05-06.md"
   - "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json"

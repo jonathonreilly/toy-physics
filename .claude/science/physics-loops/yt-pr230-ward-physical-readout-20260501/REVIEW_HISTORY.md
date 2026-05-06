@@ -1,5 +1,26 @@
 # Review History
 
+## 2026-05-06 - Block 241 Post-O_sp Positive-Closure Completion Audit
+
+Review stance: completion audit / no closure promotion.
+
+- Updated
+  `scripts/frontier_yt_pr230_positive_closure_completion_audit.py` and
+  `outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json`.
+- Updated
+  `docs/YT_PR230_POSITIVE_CLOSURE_COMPLETION_AUDIT_NOTE_2026-05-05.md` to
+  distinguish exact source-side `O_sp` support from actual closure.
+- Folded in the new taste-condensate `O_H` bridge audit as a blocked shortcut:
+  its taste-Higgs axes are orthogonal to the PR230 uniform scalar source.
+- Validation: py_compile passed; completion audit `PASS=24 FAIL=0`.
+
+Disposition: `O_sp` is now consumed by the completion audit as real
+same-source source-side support.  It is still not canonical `O_H`, does not
+provide `Res_C_spH` or `Res_C_HH`, and does not authorize retained or
+`proposed_retained` wording.  The next positive artifact remains same-surface
+`O_sp`-Higgs rows or an equivalent W/Z, Schur, scalar-LSZ, or neutral
+primitive certificate.
+
 ## 2026-05-06 - Block 240 Genuine Source-Pole Artifact Intake
 
 Review stance: exact source-side support / no closure promotion.

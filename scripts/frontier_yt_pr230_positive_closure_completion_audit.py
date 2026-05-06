@@ -23,6 +23,11 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "outputs" / "yt_pr230_positive_closure_completion_audit_2026-05-05.json"
 
 PARENTS = {
+    "genuine_source_pole_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
+    "taste_condensate_oh_bridge": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
     "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
@@ -39,6 +44,16 @@ PARENTS = {
     "neutral_primitive_cone": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
     "fh_lsz_stieltjes_moment": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
     "fh_lsz_pade_stieltjes": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
+}
+
+FUTURE_BRIDGE_FILES = {
+    "canonical_higgs_operator_certificate": "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+    "source_higgs_cross_correlator_rows": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+    "source_higgs_production_certificate": "outputs/yt_source_higgs_cross_correlator_production_certificate_2026-05-03.json",
+    "top_wz_matched_response_rows": "outputs/yt_top_wz_matched_response_rows_2026-05-04.json",
+    "schur_abc_kernel_rows": "outputs/yt_schur_abc_kernel_rows_2026-05-05.json",
+    "neutral_primitive_cone_certificate": "outputs/yt_neutral_scalar_primitive_cone_certificate_2026-05-05.json",
+    "carleman_tauberian_certificate": "outputs/yt_fh_lsz_carleman_tauberian_certificate_2026-05-05.json",
 }
 
 PRODUCTION_PATTERN = "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk*_2026-05-01.json"
@@ -163,6 +178,9 @@ def main() -> int:
     missing_parents = [name for name, cert in certs.items() if not cert]
     proposal_allowed = [name for name, cert in certs.items() if cert.get("proposal_allowed") is True]
     parent_statuses = {name: status(cert) for name, cert in certs.items()}
+    future_bridge_presence = {
+        name: (ROOT / path).exists() for name, path in FUTURE_BRIDGE_FILES.items()
+    }
 
     production = chunk_family_summary(PRODUCTION_PATTERN)
     polefit = chunk_family_summary(POLEFIT_PATTERN)
@@ -170,8 +188,40 @@ def main() -> int:
     current_eval = assembly.get("current_evaluation", {})
     chunk_eval = assembly.get("chunk_only_evaluation", {})
     route_statuses = assembly.get("route_statuses", {})
+    genuine_source_pole = certs["genuine_source_pole_intake"]
+
+    source_pole_intaken = (
+        genuine_source_pole.get("artifact_is_genuine_current_surface_support") is True
+        and genuine_source_pole.get("artifact_is_physics_closure") is False
+        and genuine_source_pole.get("proposal_allowed") is False
+    )
+    canonical_oh_absent = (
+        certs["canonical_higgs_operator_gate"].get("candidate_present") is False
+        and certs["canonical_higgs_operator_gate"].get("candidate_valid") is False
+        and not future_bridge_presence["canonical_higgs_operator_certificate"]
+    )
+    osp_higgs_rows_absent = (
+        certs["source_higgs_builder"].get("input_present") is False
+        and certs["source_higgs_builder"].get("candidate_written") is False
+        and certs["source_higgs_postprocess"].get("candidate_present") is False
+        and certs["source_higgs_postprocess"].get("osp_higgs_gram_purity_gate_passed")
+        is False
+        and not future_bridge_presence["source_higgs_cross_correlator_rows"]
+        and not future_bridge_presence["source_higgs_production_certificate"]
+    )
+    no_future_bridge_files_present = not any(future_bridge_presence.values())
+    taste_condensate_bridge_blocked = (
+        certs["taste_condensate_oh_bridge"].get("taste_condensate_oh_bridge_audit_passed")
+        is True
+        and certs["taste_condensate_oh_bridge"].get("proposal_allowed") is False
+        and "does not supply PR230 O_H bridge"
+        in parent_statuses["taste_condensate_oh_bridge"]
+    )
 
     completion_criteria = {
+        "genuine_source_pole_support_intaken": source_pole_intaken,
+        "canonical_oh_certificate": not canonical_oh_absent,
+        "osp_higgs_pole_rows": not osp_higgs_rows_absent,
         "production_chunks_complete_with_schema": production["complete_with_schema"],
         "polefit8x8_chunks_complete_with_schema": polefit["complete_with_schema"],
         "assembly_current_surface_passed": current_eval.get("assembly_passed") is True,
@@ -215,6 +265,12 @@ def main() -> int:
 
     report("parent-certificates-present", not missing_parents, f"missing={missing_parents}")
     report("no-parent-authorizes-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
+    report("genuine-source-pole-support-intaken", source_pole_intaken, parent_statuses["genuine_source_pole_intake"])
+    report("source-pole-support-not-closure", source_pole_intaken and genuine_source_pole.get("artifact_is_physics_closure") is False, genuine_source_pole.get("proposal_allowed_reason", ""))
+    report("canonical-oh-certificate-still-absent", canonical_oh_absent, parent_statuses["canonical_higgs_operator_gate"])
+    report("osp-higgs-pole-rows-still-absent", osp_higgs_rows_absent, parent_statuses["source_higgs_builder"])
+    report("taste-condensate-oh-bridge-blocked", taste_condensate_bridge_blocked, parent_statuses["taste_condensate_oh_bridge"])
+    report("future-bridge-artifact-files-absent", no_future_bridge_files_present, str(future_bridge_presence))
     report("production-chunks-complete", production["complete_id_set"], f"count={production['count']} missing={production['missing_ids']}")
     report("production-chunk-schema-complete", production["schema"]["schema_ok"], str(production["schema"]))
     report("polefit8x8-chunks-complete", polefit["complete_id_set"], f"count={polefit['count']} missing={polefit['missing_ids']}")
@@ -233,6 +289,43 @@ def main() -> int:
     report("closure-not-achieved-recorded", closure_achieved is False, f"missing={missing_requirements}")
 
     checklist = [
+        {
+            "requirement": "identify the strongest genuine current artifact in the clean source-Higgs contract",
+            "evidence": PARENTS["genuine_source_pole_intake"],
+            "status": "satisfied / support-only" if source_pole_intaken else "missing",
+            "details": {
+                "artifact": "O_sp source-pole operator",
+                "artifact_is_physics_closure": genuine_source_pole.get(
+                    "artifact_is_physics_closure"
+                ),
+                "proposal_allowed": genuine_source_pole.get("proposal_allowed"),
+                "current_blocker": genuine_source_pole.get(
+                    "proposal_allowed_reason"
+                ),
+            },
+        },
+        {
+            "requirement": "upgrade O_sp source-side support to source-Higgs bridge evidence",
+            "evidence": [
+                PARENTS["canonical_higgs_operator_gate"],
+                PARENTS["source_higgs_builder"],
+                PARENTS["source_higgs_postprocess"],
+            ],
+            "status": "missing",
+            "details": {
+                "canonical_oh_absent": canonical_oh_absent,
+                "osp_higgs_rows_absent": osp_higgs_rows_absent,
+                "taste_condensate_oh_bridge_blocked": taste_condensate_bridge_blocked,
+                "future_bridge_file_presence": future_bridge_presence,
+                "needed": [
+                    "same-surface canonical O_H identity/normalization certificate",
+                    "Res_C_sp_sp=1",
+                    "Res_C_spH",
+                    "Res_C_HH",
+                    "O_sp-Higgs Gram purity plus FV/IR/model-class authority",
+                ],
+            },
+        },
         {
             "requirement": "complete target production chunks with FH/LSZ target schema",
             "evidence": "production chunk root JSON files 001-063",
@@ -298,11 +391,19 @@ def main() -> int:
         "missing_requirements": missing_requirements,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
-            "Chunk production is complete, but scalar-LSZ authority, an accepted "
-            "source-overlap or same-source physical-response bridge, matching/"
-            "running authority, and retained-route/campaign proposal authorization "
-            "remain absent."
+            "Chunk production is complete and O_sp supplies exact same-source "
+            "source-side support, but canonical O_H/O_sp-Higgs overlap rows, "
+            "scalar-LSZ authority, an accepted source-overlap or same-source "
+            "physical-response bridge, matching/running authority, and retained-"
+            "route/campaign proposal authorization remain absent."
         ),
+        "post_osp_support_evidence": {
+            "source_pole_intaken": source_pole_intaken,
+            "canonical_oh_absent": canonical_oh_absent,
+            "osp_higgs_rows_absent": osp_higgs_rows_absent,
+            "taste_condensate_oh_bridge_blocked": taste_condensate_bridge_blocked,
+            "future_bridge_file_presence": future_bridge_presence,
+        },
         "bare_retained_allowed": False,
         "prompt_to_artifact_checklist": checklist,
         "parent_certificates": PARENTS,
@@ -315,12 +416,14 @@ def main() -> int:
             "does not set c2=1, Z_match=1, or kappa_s=1",
         ],
         "exact_next_action": (
-            "Supply one fresh parseable same-surface artifact: a real O_H/C_sH/C_HH "
-            "pole certificate, a genuine same-source EW action plus production W/Z "
-            "mass-fit rows, matched covariance and non-observed g2 certificate, "
-            "same-surface Schur A/B/C kernel rows with scalar denominator closure, "
-            "or a neutral-sector primitive-cone/irreducibility certificate.  Then "
-            "rerun assembly, retained-route, and campaign gates before any proposal wording."
+            "Supply one fresh parseable same-surface artifact beyond O_sp: "
+            "O_sp-Higgs pole rows with canonical O_H identity/normalization "
+            "(Res_C_sp_sp=1, Res_C_spH, Res_C_HH), a genuine same-source EW "
+            "action plus production W/Z mass-fit rows, matched covariance and "
+            "non-observed g2 certificate, same-surface Schur A/B/C kernel rows "
+            "with scalar denominator closure, or a neutral-sector primitive-"
+            "cone/irreducibility certificate.  Then rerun assembly, retained-"
+            "route, and campaign gates before any proposal wording."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

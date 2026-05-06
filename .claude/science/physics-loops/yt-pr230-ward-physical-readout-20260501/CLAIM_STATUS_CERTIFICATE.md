@@ -1,5 +1,24 @@
 # Claim Status Certificate
 
+Post-`O_sp` positive-closure completion audit:
+
+```text
+actual_current_surface_status: open / positive closure completion audit: retained closure not achieved
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=24 FAIL=0
+```
+
+The audit explicitly records that `O_sp` is the genuine same-source source-side
+artifact, and consumes the taste-condensate bridge audit as another blocked
+shortcut.  Positive closure still lacks canonical `O_H`, `O_sp`-Higgs pole
+rows, scalar-LSZ FV/IR/model-class authority, an accepted source-overlap or
+same-source physical-response bridge, matching/running closure, and
+retained-route/campaign authorization.  No effective-retention or
+proposed-retention wording is allowed.
+
 Genuine source-pole artifact intake and L12 compute status:
 
 ```text

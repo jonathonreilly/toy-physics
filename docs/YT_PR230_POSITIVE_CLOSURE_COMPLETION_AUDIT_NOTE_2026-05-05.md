@@ -9,6 +9,11 @@ active PR #230 positive-closure objective to concrete branch artifacts, checks
 the completed chunk families, and verifies that retained/proposed-retained
 top-Yukawa closure is still not authorized.
 
+2026-05-06 refresh: the audit now explicitly consumes the post-`O_sp` source
+pole intake.  `O_sp` is real same-source source-side support, not closure.  The
+completion checklist therefore separates "genuine artifact found" from the
+still-missing source-Higgs bridge.
+
 ## Audit Result
 
 The production chunk work is complete as support:
@@ -19,9 +24,22 @@ The production chunk work is complete as support:
   energies, per-configuration slopes, LSZ `C_ss_timeseries`, and
   `rng_seed_control.seed_control_version = numba_gauge_seed_v1`.
 
+The current strongest positive artifact is also recorded:
+
+- `O_sp`, the Legendre/LSZ-normalized same-source source-pole operator, is
+  intaken as exact source-side support;
+- `O_sp` does not identify the canonical Higgs operator and does not supply
+  `Res_C_spH` or `Res_C_HH`;
+- the taste-condensate `O_H` shortcut is also blocked: the current audit finds
+  the taste-Higgs axes orthogonal to the PR230 uniform scalar source;
+- the future bridge files for canonical `O_H`, source-Higgs rows, W/Z rows,
+  Schur rows, scalar-LSZ authority, and neutral primitive-cone authority remain
+  absent.
+
 The completion audit still rejects positive closure because these required
 items remain missing:
 
+- canonical `O_H` identity/normalization or `O_sp`-Higgs pole rows;
 - scalar-LSZ model-class/FV/IR/pole authority;
 - one accepted source-overlap or same-source physical-response bridge;
 - matching/running authority from a certified physical readout;
@@ -30,6 +48,8 @@ items remain missing:
 The audit also records the current blocked bridge routes:
 
 - source-Higgs is blocked by the missing same-surface `O_H` certificate;
+- the taste-condensate Higgs stack is blocked as a PR230 `O_H` bridge by
+  source-coordinate mismatch;
 - same-source W/Z is blocked by missing EW action, W/Z rows, matched
   covariance, non-observed `g2`, and identity certificates;
 - Schur/K-prime is blocked by absent same-surface A/B/C rows;
@@ -40,10 +60,11 @@ The audit also records the current blocked bridge routes:
 ## Claim Boundary
 
 This audit does not claim retained or proposed-retained closure.  It records
-that completed chunks can satisfy only the production-support leg; they do not
+that completed chunks can satisfy only the production-support leg, and `O_sp`
+can satisfy only the same-source source-side normalization leg.  They do not
 derive scalar-LSZ authority, source-to-canonical-Higgs overlap, W/Z physical
-response authority, Schur kernel rows, neutral irreducibility, matching/
-running authority, or retained-route authorization.
+response authority, Schur kernel rows, neutral irreducibility, matching/running
+authority, or retained-route authorization.
 
 ## Verification
 
@@ -52,7 +73,7 @@ python3 -m py_compile \
   scripts/frontier_yt_pr230_positive_closure_completion_audit.py
 
 python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
-# SUMMARY: PASS=18 FAIL=0
+# SUMMARY: PASS=24 FAIL=0
 ```
 
 Certificate:

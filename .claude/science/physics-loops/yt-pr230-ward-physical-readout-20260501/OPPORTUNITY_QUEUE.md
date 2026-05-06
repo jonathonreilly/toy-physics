@@ -1,5 +1,16 @@
 # Opportunity Queue
 
+2026-05-06 completion-audit refresh: the post-`O_sp` completion audit now
+consumes `O_sp` as exact source-side support while still rejecting positive
+closure.  The immediate positive queue is unchanged and sharpened: the next
+artifact must go beyond `O_sp` by adding canonical `O_H` identity/normalization
+and pole rows (`Res_C_sp_sp=1`, `Res_C_spH`, `Res_C_HH`), or by supplying an
+equivalent same-surface W/Z, Schur, scalar-LSZ, or neutral primitive
+certificate.  The taste-condensate `O_H` shortcut is now consumed as blocked:
+its taste-Higgs axes are orthogonal to the PR230 uniform scalar source.
+Completed chunks and `O_sp` together do not satisfy the source-overlap/physical
+response bridge.
+
 2026-05-06 update: the genuine-source-pole artifact intake is landed.  The
 branch does have one real artifact inside the source-Higgs contract:
 `O_sp`, the Legendre/LSZ-normalized same-source source-pole operator.  This is

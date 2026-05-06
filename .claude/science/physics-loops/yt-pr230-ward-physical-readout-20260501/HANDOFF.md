@@ -1,5 +1,39 @@
 # Handoff
 
+Latest checkpoint, 2026-05-06 post-`O_sp` positive-closure completion audit:
+
+- Refreshed `scripts/frontier_yt_pr230_positive_closure_completion_audit.py`,
+  `docs/YT_PR230_POSITIVE_CLOSURE_COMPLETION_AUDIT_NOTE_2026-05-05.md`, and
+  `outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json`.
+- The audit now explicitly separates the genuine `O_sp` source-pole artifact
+  from actual closure.  `O_sp` is exact same-source source-side LSZ support,
+  but it is not canonical `O_H` and does not supply `Res_C_spH` or
+  `Res_C_HH`.
+- Current support evidence remains strong: target production chunks `001-063`
+  and polefit8x8 chunks `001-063` are complete and retain the required scalar
+  FH/LSZ target schema.
+- Completion still fails on the actual PR230 surface.  Missing items are:
+  canonical `O_H` certificate, `O_sp`-Higgs pole rows, scalar-LSZ
+  FV/IR/model-class authority, an accepted source-overlap or same-source
+  physical-response bridge, matching/running, retained-proposal firewall,
+  retained-route proposal authorization, and campaign proposal authorization.
+- The audit also consumes the remote taste-condensate `O_H` bridge audit:
+  the taste-Higgs axes are orthogonal to the PR230 uniform scalar source, so
+  that stack does not supply the missing canonical `O_H` bridge.
+- Verification: `python3 -m py_compile
+  scripts/frontier_yt_pr230_positive_closure_completion_audit.py`; completion
+  audit `PASS=24 FAIL=0`.
+- Claim boundary: no retained/proposed-retained closure is authorized.
+
+Next exact action: supply one fresh parseable same-surface artifact beyond
+`O_sp`: `O_sp`-Higgs pole rows with canonical `O_H`
+identity/normalization (`Res_C_sp_sp=1`, `Res_C_spH`, `Res_C_HH`), or a
+genuine same-source EW action plus production W/Z mass-fit rows, matched
+covariance and non-observed `g2` certificate, same-surface Schur `A/B/C`
+kernel rows, or a neutral-sector primitive-cone/irreducibility certificate.
+Then rerun assembly, retained-route, and campaign gates before any proposal
+wording.
+
 Latest checkpoint, 2026-05-06 genuine source-pole artifact intake and L12
 compute status:
 
