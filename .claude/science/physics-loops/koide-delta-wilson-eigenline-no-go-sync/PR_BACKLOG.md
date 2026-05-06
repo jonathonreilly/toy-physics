@@ -1,6 +1,9 @@
 # PR Backlog
 
-Status: pending PR creation.
+Status: PR opened.
+
+PR:
+https://github.com/jonathonreilly/cl3-lattice-framework/pull/556
 
 Intended branch:
 `physics-loop/koide-delta-wilson-eigenline-no-go-sync-block01-20260506`
