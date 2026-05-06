@@ -104,6 +104,7 @@ PARENTS = {
     "pr230_two_source_taste_radial_row_production_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
     "pr230_taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
     "pr230_degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
+    "pr230_fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
     "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
     "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
@@ -753,6 +754,24 @@ def main() -> int:
             "odd_parity_filter_nonunique"
         )
         is True
+    )
+    fms_post_degree_route_support_not_closure = (
+        "FMS post-degree route rescore"
+        in statuses["pr230_fms_post_degree_route_rescore"]
+        and certs["pr230_fms_post_degree_route_rescore"].get("proposal_allowed")
+        is False
+        and certs["pr230_fms_post_degree_route_rescore"].get(
+            "fms_post_degree_route_rescore_passed"
+        )
+        is True
+        and certs["pr230_fms_post_degree_route_rescore"].get(
+            "forbidden_firewall", {}
+        ).get("used_literature_as_proof_authority")
+        is False
+        and certs["pr230_fms_post_degree_route_rescore"].get(
+            "forbidden_firewall", {}
+        ).get("used_degree_or_odd_parity_as_oh_authority")
+        is False
     )
     kinetic_taste_mixing_bridge_blocks_shortcut = (
         "current staggered kinetic taste symmetry"
@@ -1524,6 +1543,11 @@ def main() -> int:
         "degree-one-higgs-action-premise-not-derived",
         degree_one_higgs_action_premise_not_derived,
         statuses["pr230_degree_one_higgs_action_premise_gate"],
+    )
+    report(
+        "fms-post-degree-route-rescore-support-not-closure",
+        fms_post_degree_route_support_not_closure,
+        statuses["pr230_fms_post_degree_route_rescore"],
     )
     report(
         "kinetic-taste-mixing-shortcut-closed",
@@ -2478,6 +2502,7 @@ def main() -> int:
         "two_source_taste_radial_row_manifest_support_not_closure": two_source_taste_radial_row_manifest_support_not_closure,
         "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
+        "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,

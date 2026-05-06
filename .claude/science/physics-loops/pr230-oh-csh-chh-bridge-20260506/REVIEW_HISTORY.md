@@ -38,10 +38,14 @@ Local verification completed:
   PASS=2 FAIL=0 for chunk001 and PASS=2 FAIL=0 for chunk002 in
   `--allow-pending-active` mode; both certificates record active PIDs and no
   completed row JSON, so they are non-evidence pending checkpoints;
+- `frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py`:
+  PASS=15 FAIL=0 for completed chunk001 and PASS=15 FAIL=0 for completed
+  chunk002; both certificates remain bounded row support only;
 - `frontier_yt_pr230_taste_radial_canonical_oh_selector_gate.py`: PASS=17
   FAIL=0;
 - `frontier_yt_pr230_degree_one_higgs_action_premise_gate.py`: PASS=15
   FAIL=0;
+- `frontier_yt_pr230_fms_post_degree_route_rescore.py`: PASS=11 FAIL=0;
 - `frontier_yt_pr230_two_source_taste_radial_chart_certificate.py`: PASS=22
   FAIL=0 after accepting the support-only action certificate;
 - `frontier_yt_fh_lsz_production_postprocess_gate.py`: PASS=12 FAIL=0;
@@ -50,16 +54,15 @@ Local verification completed:
 - `frontier_yt_pr230_taste_condensate_oh_bridge_audit.py`: PASS=21 FAIL=0;
 - `frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py`:
   PASS=16 FAIL=0;
-- `frontier_yt_pr230_assumption_import_stress.py`: PASS=62 FAIL=0;
-- `frontier_yt_pr230_full_positive_closure_assembly_gate.py`: PASS=122
+- `frontier_yt_pr230_assumption_import_stress.py`: PASS=63 FAIL=0;
+- `frontier_yt_pr230_full_positive_closure_assembly_gate.py`: PASS=123
   FAIL=0;
-- `frontier_yt_retained_closure_route_certificate.py`: PASS=268 FAIL=0;
-- `frontier_yt_pr230_campaign_status_certificate.py`: PASS=298 FAIL=0;
-- `frontier_yt_pr230_positive_closure_completion_audit.py`: PASS=36 FAIL=0;
+- `frontier_yt_retained_closure_route_certificate.py`: PASS=271 FAIL=0;
+- `frontier_yt_pr230_campaign_status_certificate.py`: PASS=301 FAIL=0;
+- `frontier_yt_pr230_positive_closure_completion_audit.py`: PASS=37 FAIL=0;
 - `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
-  metadata intentionally regenerated for the taste-radial canonical-`O_H`
-  selector and active-pending chunk checkpoint note rows plus updated note
-  hashes;
+  metadata intentionally regenerated for the FMS post-degree route-rescore note
+  and updated two-source chunk-checkpoint note hash;
 - `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
   pre-existing warnings;
 - `git diff --check`: clean.

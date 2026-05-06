@@ -170,6 +170,9 @@ def main() -> int:
         "degree_one_higgs_action_premise_gate": load(
             "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json"
         ),
+        "fms_post_degree_route_rescore": load(
+            "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json"
+        ),
         "action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -311,6 +314,8 @@ def main() -> int:
         "not proof selectors until the planned chunks are actually run, combined, pole-tested, and bridged to canonical O_H or physical response",
         "Degree-one Higgs-action premise",
         "Degree-one Higgs-action premise is not proof selectors until a same-surface EW/Higgs action or canonical-operator theorem derives the degree-one premise",
+        "FMS post-degree route rescore",
+        "FMS/lattice literature is route guidance only, not PR230 proof authority",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -941,6 +946,23 @@ def main() -> int:
         and degree_one_premise.get("odd_parity_filter_nonunique") is True
         and degree_one_premise.get("production_bridge_absent") is True,
         degree_one_premise.get("actual_current_surface_status"),
+    )
+    fms_post_degree = certificates["fms_post_degree_route_rescore"]
+    report(
+        "fms-post-degree-route-rescore-support-not-proof",
+        "FMS post-degree route rescore"
+        in str(fms_post_degree.get("actual_current_surface_status"))
+        and fms_post_degree.get("proposal_allowed") is False
+        and fms_post_degree.get("fms_post_degree_route_rescore_passed") is True
+        and fms_post_degree.get("forbidden_firewall", {}).get(
+            "used_literature_as_proof_authority"
+        )
+        is False
+        and fms_post_degree.get("forbidden_firewall", {}).get(
+            "used_degree_or_odd_parity_as_oh_authority"
+        )
+        is False,
+        fms_post_degree.get("actual_current_surface_status"),
     )
     action_first_completion = certificates["action_first_route_completion"]
     report(

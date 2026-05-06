@@ -50,7 +50,21 @@ python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py \
   --chunk-index 1 \
   --allow-pending-active \
   --output outputs/yt_pr230_two_source_taste_radial_chunk001_pending_checkpoint_2026-05-06.json
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py \
+  --chunk-index 1 \
+  --output outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py \
+  --chunk-index 2 \
+  --output outputs/yt_pr230_two_source_taste_radial_chunk002_checkpoint_2026-05-06.json
 ```
 
 Expected pending summary while chunk001 is active and not yet complete:
 `PASS=2 FAIL=0`.
+
+Completed chunk001 and chunk002 now pass completed mode with `PASS=15 FAIL=0`
+each.  The runner accepts the explicit metadata non-readout firewall for older
+completed artifacts and the production harness now also writes the same
+`used_as_physical_yukawa_readout: false` flag directly under future scalar
+source-response and scalar-LSZ analysis objects.

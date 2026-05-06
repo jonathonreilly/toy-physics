@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T15:46:57.080749+00:00",
+  "generated_at": "2026-05-06T16:06:45.019523+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16608,6 +16608,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_exact_tensor_schur_row_feasibility_attempt.py"
+    },
+    "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_fms_post_degree_route_rescore.py"
     },
     "yt_pr230_fresh_artifact_literature_route_review_note_2026-05-05": {
       "assert_count": 1,
@@ -34749,6 +34761,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_fms_post_degree_route_rescore.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_fresh_artifact_literature_route_review.py": {
       "assert_count": 1,
       "claims": [
@@ -40800,12 +40827,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 235,
-      "C": 513,
+      "C": 514,
       "D": 304,
       "none": 404
     },
-    "runners_classified": 1465,
-    "runners_with_C": 778,
-    "runners_with_D": 557
+    "runners_classified": 1466,
+    "runners_with_C": 779,
+    "runners_with_D": 558
   }
 }

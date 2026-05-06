@@ -1,7 +1,7 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: open / first-principles O_H bridge positive-candidate portfolio with scalar reparam gate, exact two-source taste-radial chart and action-source support, bounded two-source C_sx/C_xx row-contract support, bounded two-source row-production manifest support, bounded row-wave launcher support with chunks001-002 active under a two-worker cap, open active-pending chunk001/chunk002 checkpoints with no completed row JSON, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional lazy-Z3 primitive support, H1 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and FH/LSZ L12 bounded-support postprocess refresh recorded
+actual_current_surface_status: open / first-principles O_H bridge positive-candidate portfolio with scalar reparam gate, exact two-source taste-radial chart and action-source support, bounded two-source C_sx/C_xx row-contract support, bounded two-source row-production manifest support, bounded row-wave launcher support, completed chunks001-002 with completed-mode checkpoints, chunks003-004 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, FMS post-degree action-first composite-O_H route rescore, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional lazy-Z3 primitive support, H1 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and FH/LSZ L12 bounded-support postprocess refresh recorded
 conditional_surface_status: conditional-support if the two-source taste-radial source is promoted by production C_sx/C_xx rows plus canonical-O_H/source-overlap identity, or if certified O_H/C_sH/C_HH rows, W/Z response rows with strict g2/covariance/delta_perp, Schur A/B/C rows, or same-surface neutral primitive-cone transfer lands
 hypothetical_axiom_status: null
 admitted_observation_status: null
@@ -17,11 +17,12 @@ action; scalar reparametrization of the current uniform source line is closed.
 The two-source taste-radial chart, action certificate, and row contract are
 support for the second source-axis option, not closure: the source vertex and
 schema now exist, and the manifest now records exact no-resume chunk commands,
-and the launcher records active chunks001-002 under a two-worker cap, but the
-active-pending chunk checkpoints still record no completed row JSON.  The
-route still needs completed production `C_sx/C_xx` rows and either canonical
-`O_H` identity/source-overlap authority or a physical-response bypass before it
-can be load-bearing.
+and the launcher has completed chunks001-002 and advanced to active
+chunks003-004 under a two-worker cap.  The completed chunk001/chunk002
+checkpoints pass, but they remain bounded row support only.  The route still
+needs combined production `C_sx/C_xx` rows, pole/FV/IR authority, and either
+canonical `O_H` identity/source-overlap authority or a physical-response bypass
+before it can be load-bearing.
 The taste-radial selector gate adds exact conditional support for the
 degree-one radial target and an exact boundary against using `Z3` symmetry
 alone as canonical `O_H` authority.
@@ -29,6 +30,9 @@ The degree-one Higgs-action premise gate adds the matching boundary against
 using degree or odd parity as canonical `O_H` authority without a same-surface
 EW/Higgs action, canonical-operator theorem, completed row bridge, or
 physical-response bridge.
+The FMS post-degree route rescore selects action-first gauge-invariant
+composite `O_H` rows as the cleanest next non-chunk artifact, but FMS/lattice
+literature is route guidance only and not current PR230 proof authority.
 The route-completion artifacts are scoped current-surface boundaries; they
 preserve first-principles reopen routes after a same-surface row, certificate,
 or theorem is supplied.  The `origin/main` composite-Higgs packet remains

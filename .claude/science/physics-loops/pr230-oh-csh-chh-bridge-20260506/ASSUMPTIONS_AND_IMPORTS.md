@@ -63,6 +63,10 @@ Allowed context:
   pending mode records only active PIDs and the absence of row JSON.  Pending
   checkpoints are not row data, pole evidence, canonical `O_H`, scalar LSZ
   normalization, or `y_t` closure.
+- the completed two-source taste-radial chunk001/chunk002 checkpoints as
+  bounded row support only: they validate real chunk JSON, seed control,
+  selected-mass-only FH/LSZ, and `C_sx/C_xx` timeseries, but not combined L12
+  pole evidence, canonical `O_H`, scalar LSZ normalization, or `y_t` closure.
 - the taste-radial canonical-`O_H` selector gate as exact conditional support
   only: it proves the cyclic degree-one radial source is unique in
   `span{S0,S1,S2}`, but also proves current `Z3`/trace/source filters do not
@@ -71,6 +75,10 @@ Allowed context:
   boundary only: degree-one filtering selects the implemented taste-radial
   `E1` source, but degree is not proof selectors until a same-surface EW/Higgs
   action or canonical-operator theorem derives the degree-one premise.
+- the FMS post-degree route rescore as route support only: FMS/lattice
+  literature is route guidance only, not PR230 proof authority, and it does
+  not supply the same-surface EW/Higgs action, canonical `O_H`, source-Higgs
+  rows, or Gram-purity certificate.
 
 Open imports after this block:
 
@@ -127,10 +135,17 @@ Open imports after this block:
   workers and partial directories are explicitly non-evidence.
 - Two-source taste-radial active-pending chunk checkpoints are not proof
   selectors; they explicitly certify that completed row JSON is absent.
+- Completed two-source taste-radial chunks001-002 are not proof selectors
+  until combined row evidence, pole/FV/IR authority, and canonical
+  `O_H`/source-overlap or physical-response authority exist.
 - Taste-radial degree-one uniqueness is not a proof selector until a
   same-surface EW/Higgs action or canonical-operator theorem derives the
   degree-one Higgs-action premise.
 - Degree-one Higgs-action premise is not proof selectors until a same-surface EW/Higgs action or canonical-operator theorem derives the degree-one premise.
+- FMS/lattice literature is route guidance only, not PR230 proof authority.
+- FMS post-degree route rescore is not proof selectors until a same-surface
+  EW/Higgs action, canonical `O_H` certificate, source-Higgs rows, and
+  Gram-purity certificate exist.
 - source-coordinate transport from the PR230 uniform mass source to a canonical
   taste-axis Higgs source;
 - same-surface canonical `O_H` identity and normalization;

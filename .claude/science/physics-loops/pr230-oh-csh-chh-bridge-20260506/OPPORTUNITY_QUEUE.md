@@ -1,18 +1,22 @@
 # Opportunity Queue
 
-1. Action-first same-source EW/Higgs action plus canonical `O_H` certificate,
-   followed by source-Higgs `C_sH/C_HH` rows.
+1. Action-first same-source EW/Higgs action plus gauge-invariant composite
+   canonical `O_H` certificate, followed by source-Higgs `C_ss/C_sH/C_HH`
+   pole rows and Gram-purity/scalar-LSZ/FV/IR gates.  The FMS post-degree
+   rescore selects this as the cleanest non-chunk artifact after the degree
+   shortcut failed.  FMS/lattice literature is route guidance only, not PR230
+   proof authority.
 2. Genuine two-source source-coordinate transport theorem from the uniform mass
    source to canonical Higgs/taste radial source; scalar reparametrization of
    the current source line is blocked.  The exact two-source taste-radial chart
    and gauge-covariant action/source vertex now exist as support, and the
    row contract now labels `C_sx/C_xx` explicitly.  A no-resume production
    manifest now records the row chunk commands, and the row-wave launcher has
-   chunks001-002 active under a two-worker cap.  The per-chunk checkpoint
-   runner is ready, and the current chunk001/chunk002 pending certificates
-   explicitly record no completed row JSON, so they are non-evidence.  The
-   remaining work is completed production `C_sx/C_xx` rows, completed-mode
-   per-chunk schema gates, combined pole/FV/IR diagnostics, plus either
+   completed chunks001-002 and advanced to active chunks003-004 under a
+   two-worker cap.  The completed chunk001/chunk002 certificates pass
+   `PASS=15 FAIL=0` each and remain bounded row support.  The remaining work
+   is more completed production `C_sx/C_xx` rows, completed-mode per-chunk
+   schema gates, combined pole/FV/IR diagnostics, plus either
    canonical-`O_H` identity/source-overlap authority or a physical-response
    bypass.  The taste-radial selector gate
    proves uniqueness inside the degree-one taste-axis subspace, but also

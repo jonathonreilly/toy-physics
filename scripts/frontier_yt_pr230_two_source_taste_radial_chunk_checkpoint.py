@@ -244,6 +244,8 @@ def main() -> int:
     source_higgs = ensemble.get("source_higgs_cross_correlator_analysis", {})
     seed_control = ensemble.get("rng_seed_control", {})
     source_higgs_meta = metadata.get("source_higgs_cross_correlator", {})
+    source_meta = metadata.get("scalar_source_response", {})
+    lsz_meta = metadata.get("scalar_two_point_lsz", {})
     policy = metadata.get("fh_lsz_measurement_policy", {})
 
     source_energy_fits = source.get("energy_fits", []) if isinstance(source, dict) else []
@@ -309,14 +311,28 @@ def main() -> int:
         and len(source.get("per_configuration_slopes")) == EXPECTED_MEASUREMENTS
         and isinstance(source.get("per_configuration_effective_energies"), list)
         and len(source.get("per_configuration_effective_energies")) == EXPECTED_MEASUREMENTS
-        and source.get("used_as_physical_yukawa_readout") is False
+        and (
+            source.get("used_as_physical_yukawa_readout") is False
+            or (
+                source.get("used_as_physical_yukawa_readout") is None
+                and isinstance(source_meta, dict)
+                and source_meta.get("used_as_physical_yukawa_readout") is False
+            )
+        )
     )
     lsz_ok = (
         isinstance(lsz, dict)
         and EXPECTED_MODES <= set(lsz_mode_rows)
         and all(lsz_timeseries_status.values())
         and lsz.get("physical_higgs_normalization") == "not_derived"
-        and lsz.get("used_as_physical_yukawa_readout") is False
+        and (
+            lsz.get("used_as_physical_yukawa_readout") is False
+            or (
+                lsz.get("used_as_physical_yukawa_readout") is None
+                and isinstance(lsz_meta, dict)
+                and lsz_meta.get("used_as_physical_yukawa_readout") is False
+            )
+        )
     )
     source_higgs_ok = (
         isinstance(source_higgs, dict)

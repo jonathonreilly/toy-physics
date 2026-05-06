@@ -151,6 +151,23 @@ surface has no EW/Higgs action, canonical-operator theorem, completed
 degree as canonical `O_H` identity.  Degree-one filtering is a useful target
 selector, not proof authority.
 
+The FMS post-degree rescore is packaged as route support.  The literature
+review points to the action-first gauge-invariant composite `O_H` route as the
+cleanest next physics artifact after the degree shortcut failed.  This does
+not import FMS or lattice-Higgs literature as proof authority: the current
+surface still needs a same-source EW/Higgs action, canonical/composite `O_H`
+certificate, source-Higgs pole rows, Gram-purity, and scalar-LSZ/FV/IR
+authority.
+
+Chunks001-002 of the two-source taste-radial production wave have completed.
+The completed-mode chunk checkpoint now passes `PASS=15 FAIL=0` for both
+chunks, including production metadata, `numba_gauge_seed_v1`, the preserved
+three-mass scan, selected-mass-only FH/LSZ/source rows, and `C_sx/C_xx`
+timeseries.  Chunks003-004 are active under the supervisor's two-worker cap.
+Completed chunks001-002 are still bounded row support only: they are not
+combined L12 evidence, pole/FV/IR evidence, canonical `O_H`, `kappa_s`, or
+top-Yukawa closure.
+
 The FH/LSZ postprocess state is refreshed after the completed L12 replacement
 campaign.  The four-mode/x16 and separate eight-mode/x8 L12 chunked surfaces
 are complete and seed-controlled, but remain bounded support only.  They do
@@ -161,12 +178,13 @@ same-source W/Z response authority.
 Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then
-   run source-Higgs pole rows;
+   run source-Higgs pole rows; this is now the cleanest non-chunk route after
+   the FMS post-degree rescore, but FMS literature is route guidance only;
 2. launch production `C_sx/C_xx` rows for the exact two-source taste-radial
    source using the no-resume manifest and row contract; chunks001-002 are
-   active under the two-worker launcher cap, and after they complete the next
-   action is rerunning the per-chunk checkpoint without pending mode, then the
-   next bounded wave, then
+   complete and checkpointed, chunks003-004 are active under the two-worker
+   launcher cap, and after they complete the next action is rerunning the
+   per-chunk checkpoint without pending mode, then the next bounded wave, then
    prove/reject its canonical-`O_H` identity or supply another bridge; the
    selector gate reduces the identity route to deriving the degree-one
    Higgs-action premise from a same-surface EW/Higgs action or
@@ -187,3 +205,5 @@ Do not close it by treating degree-one taste-radial uniqueness as canonical
 `O_H`; that uniqueness is conditional on a missing same-surface degree-one
 Higgs-action premise.
 Do not close it by treating the degree-one filter itself as that premise.
+Do not close it by treating FMS method names or FMS/lattice literature as a
+same-surface PR230 `O_H` certificate.

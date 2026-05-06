@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T15:46:54.177552+00:00",
+  "generated_at": "2026-05-06T16:06:42.492857+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42038,6 +42038,16 @@
       "runner_path": "scripts/frontier_yt_pr230_exact_tensor_schur_row_feasibility_attempt.py",
       "title": "PR230 Exact Tensor Schur Row Feasibility Attempt"
     },
+    "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06": {
+      "claim_id": "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / FMS route rescore after the degree-one shortcut",
+      "deps": [],
+      "note_hash": "6b9642da7b40814a96274ca30647b73d2090f93f44bb5da6bb30d04ea883e783",
+      "path": "docs/YT_PR230_FMS_POST_DEGREE_ROUTE_RESCORE_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_fms_post_degree_route_rescore.py",
+      "title": "PR230 FMS Post-Degree Route Rescore"
+    },
     "yt_pr230_fresh_artifact_literature_route_review_note_2026-05-05": {
       "claim_id": "yt_pr230_fresh_artifact_literature_route_review_note_2026-05-05",
       "current_status": "bounded",
@@ -42713,7 +42723,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded support / row-chunk schema checkpoint infrastructure.",
       "deps": [],
-      "note_hash": "6cd9d89a886d2c5787a7cf2876cd41d5129e4c1eb19d5c97db8d3d32801c0739",
+      "note_hash": "e185c3315e3a40e67705aae8c1d64f62fca6cdd0a11c8ce17c6370159d5f7583",
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNK_CHECKPOINT_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py",
       "title": "PR230 Two-Source Taste-Radial Chunk Checkpoint Note"
@@ -45500,6 +45510,7 @@
     "yt_pr230_derived_bridge_rank_one_closure_attempt_note_2026-05-05",
     "yt_pr230_det_positivity_bridge_intake_gate_note_2026-05-05",
     "yt_pr230_exact_tensor_schur_row_feasibility_attempt_note_2026-05-05",
+    "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06",
     "yt_pr230_fresh_artifact_literature_route_review_note_2026-05-05",
     "yt_pr230_full_positive_closure_assembly_gate_note_2026-05-04",
     "yt_pr230_genuine_source_pole_artifact_intake_note_2026-05-06",
@@ -45697,12 +45708,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1095,
-    "node_count": 2048,
-    "root_count": 1561,
-    "runners_with_path": 1544,
+    "leaf_count": 1096,
+    "node_count": 2049,
+    "root_count": 1562,
+    "runners_with_path": 1545,
     "status_counts": {
-      "bounded": 560,
+      "bounded": 561,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,

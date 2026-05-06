@@ -614,11 +614,20 @@ def main() -> int:
         "pr230_two_source_taste_radial_row_production_manifest": load(
             "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json"
         ),
+        "pr230_two_source_taste_radial_chunk001_checkpoint": load(
+            "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json"
+        ),
+        "pr230_two_source_taste_radial_chunk002_checkpoint": load(
+            "outputs/yt_pr230_two_source_taste_radial_chunk002_checkpoint_2026-05-06.json"
+        ),
         "pr230_taste_radial_canonical_oh_selector_gate": load(
             "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
         ),
         "pr230_degree_one_higgs_action_premise_gate": load(
             "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json"
+        ),
+        "pr230_fms_post_degree_route_rescore": load(
+            "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json"
         ),
         "pr230_action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
@@ -2650,6 +2659,60 @@ def main() -> int:
         is True,
         statuses["pr230_degree_one_higgs_action_premise_gate"],
     )
+    fms_post_degree_route_rescore = certificates[
+        "pr230_fms_post_degree_route_rescore"
+    ]
+    report(
+        "pr230-fms-post-degree-route-rescore-support-not-proof",
+        "FMS post-degree route rescore"
+        in str(statuses["pr230_fms_post_degree_route_rescore"])
+        and fms_post_degree_route_rescore.get("proposal_allowed") is False
+        and fms_post_degree_route_rescore.get(
+            "fms_post_degree_route_rescore_passed"
+        )
+        is True
+        and fms_post_degree_route_rescore.get("forbidden_firewall", {}).get(
+            "used_literature_as_proof_authority"
+        )
+        is False
+        and fms_post_degree_route_rescore.get("forbidden_firewall", {}).get(
+            "used_degree_or_odd_parity_as_oh_authority"
+        )
+        is False,
+        statuses["pr230_fms_post_degree_route_rescore"],
+    )
+    two_source_chunk001 = certificates[
+        "pr230_two_source_taste_radial_chunk001_checkpoint"
+    ]
+    two_source_chunk002 = certificates[
+        "pr230_two_source_taste_radial_chunk002_checkpoint"
+    ]
+    report(
+        "pr230-two-source-taste-radial-chunk001-checkpoint-not-closure",
+        "two-source taste-radial chunk001"
+        in str(statuses["pr230_two_source_taste_radial_chunk001_checkpoint"])
+        and two_source_chunk001.get("checkpoint_passed") is True
+        and two_source_chunk001.get("completed") is True
+        and two_source_chunk001.get("proposal_allowed") is False
+        and two_source_chunk001.get("chunk_summary", {}).get(
+            "pole_residue_rows_count"
+        )
+        == 0,
+        statuses["pr230_two_source_taste_radial_chunk001_checkpoint"],
+    )
+    report(
+        "pr230-two-source-taste-radial-chunk002-checkpoint-not-closure",
+        "two-source taste-radial chunk002"
+        in str(statuses["pr230_two_source_taste_radial_chunk002_checkpoint"])
+        and two_source_chunk002.get("checkpoint_passed") is True
+        and two_source_chunk002.get("completed") is True
+        and two_source_chunk002.get("proposal_allowed") is False
+        and two_source_chunk002.get("chunk_summary", {}).get(
+            "pole_residue_rows_count"
+        )
+        == 0,
+        statuses["pr230_two_source_taste_radial_chunk002_checkpoint"],
+    )
     action_first_route_completion = certificates["pr230_action_first_route_completion"]
     report(
         "pr230-action-first-route-current-surface-closed",
@@ -4375,6 +4438,37 @@ def main() -> int:
         )
         is False
     )
+    result["fms_post_degree_route_rescore_support_not_proof"] = (
+        fms_post_degree_route_rescore.get("fms_post_degree_route_rescore_passed")
+        is True
+        and fms_post_degree_route_rescore.get("proposal_allowed") is False
+        and fms_post_degree_route_rescore.get("forbidden_firewall", {}).get(
+            "used_literature_as_proof_authority"
+        )
+        is False
+        and fms_post_degree_route_rescore.get("forbidden_firewall", {}).get(
+            "used_degree_or_odd_parity_as_oh_authority"
+        )
+        is False
+    )
+    result["two_source_taste_radial_chunk001_checkpoint_not_closure"] = (
+        two_source_chunk001.get("checkpoint_passed") is True
+        and two_source_chunk001.get("completed") is True
+        and two_source_chunk001.get("proposal_allowed") is False
+        and two_source_chunk001.get("chunk_summary", {}).get(
+            "pole_residue_rows_count"
+        )
+        == 0
+    )
+    result["two_source_taste_radial_chunk002_checkpoint_not_closure"] = (
+        two_source_chunk002.get("checkpoint_passed") is True
+        and two_source_chunk002.get("completed") is True
+        and two_source_chunk002.get("proposal_allowed") is False
+        and two_source_chunk002.get("chunk_summary", {}).get(
+            "pole_residue_rows_count"
+        )
+        == 0
+    )
     result["origin_main_composite_higgs_intake_not_closure"] = (
         origin_main_composite_higgs.get("origin_main_composite_higgs_intake_guard_passed")
         is True
@@ -4471,6 +4565,8 @@ def main() -> int:
         "does not treat the two-source taste-radial chart as canonical O_H or source-Higgs production rows",
         "does not treat the two-source taste-radial row production manifest as row data or pole evidence",
         "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
+        "does not treat FMS/lattice literature or method names as PR230 proof authority",
+        "does not treat two completed taste-radial chunks as combined L12 pole evidence, canonical O_H, or scalar LSZ normalization",
         "does not treat Schur sufficiency or row-definition machinery as proof without same-surface neutral-kernel A/B/C rows",
         "does not treat determinant positivity, conditional Perron support, or source-only generators as a primitive neutral rank-one theorem",
     ]

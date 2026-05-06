@@ -1,0 +1,106 @@
+{
+  "actual_current_surface_status": "bounded-support / FMS post-degree route rescore; action-first composite O_H route selected as cleanest future artifact, no current closure",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support if a future same-surface EW/Higgs action, gauge-invariant composite O_H certificate, source-Higgs pole rows, and Gram-purity certificate are supplied",
+  "fail_count": 0,
+  "fms_post_degree_route_rescore_passed": true,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "used_alpha_lm_or_plaquette_or_u0": false,
+    "used_degree_or_odd_parity_as_oh_authority": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_literature_as_proof_authority": false,
+    "used_observed_targets_as_selectors": false,
+    "used_reduced_pilots_as_production_evidence": false,
+    "used_yt_ward_identity": false
+  },
+  "future_artifact_presence": {
+    "canonical_oh_certificate": false,
+    "gram_purity_certificate": false,
+    "same_source_ew_higgs_action": false,
+    "source_higgs_rows": false
+  },
+  "hypothetical_axiom_status": null,
+  "literature_rows": [
+    {
+      "id": "weak_and_higgs_from_lattice_2026",
+      "pr230_boundary": "Does not supply a PR230 same-source EW/Higgs action, canonical O_H certificate, or source-Higgs rows.",
+      "role": "Recent lattice review/context: manifest gauge-invariant weak/Higgs lattice formulation is connected to perturbative language through FMS.",
+      "url": "https://arxiv.org/abs/2603.12882"
+    },
+    {
+      "id": "fms_bound_state_spectrum_2020",
+      "pr230_boundary": "Does not identify the current PR230 taste-radial source with canonical O_H.",
+      "role": "FMS relates gauge-invariant bound-state operators to elementary BEH variables after the gauge-Higgs theory/action is supplied.",
+      "url": "https://arxiv.org/abs/1912.08680"
+    },
+    {
+      "id": "observable_spectrum_beh_2019",
+      "pr230_boundary": "Does not replace same-surface operator identity, normalization, or pole-row production.",
+      "role": "Physical spectra in BEH gauge theories are built from gauge-invariant states; FMS can map them to elementary W/Z/Higgs states in suitable theories.",
+      "url": "https://arxiv.org/abs/1709.07477"
+    },
+    {
+      "id": "su3_fundamental_higgs_lattice_2018",
+      "pr230_boundary": "Does not allow importing elementary-Higgs labels without the same-surface FMS/action checks.",
+      "role": "Lattice gauge-Higgs examples show the gauge-invariant spectrum can differ from elementary perturbative spectra outside SM-like conditions.",
+      "url": "https://arxiv.org/abs/1804.04453"
+    }
+  ],
+  "parent_certificates": {
+    "action_first_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
+    "action_first_oh_attempt": "outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json",
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_oh_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "degree_one_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
+    "fms_oh_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
+    "fresh_literature_review": "outputs/yt_pr230_fresh_artifact_literature_route_review_2026-05-05.json",
+    "full_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "source_higgs_gram_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json"
+  },
+  "parent_statuses": {
+    "action_first_completion": "exact negative boundary / action-first O_H/C_sH/C_HH route not complete on current PR230 surface",
+    "action_first_oh_attempt": "exact negative boundary / action-first O_H artifact not constructible from current PR230 surface",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_oh_gate": "open / canonical-Higgs operator certificate absent",
+    "degree_one_gate": "exact negative boundary / degree-one Higgs-action premise not derived on the current PR230 surface",
+    "fms_oh_attempt": "exact negative boundary / FMS O_H certificate construction blocked on current PR230 surface",
+    "fresh_literature_review": "bounded-support / fresh artifact literature route review; selected O_H/C_sH/C_HH action-first FMS contract, no current closure",
+    "full_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "retained_route": "open / retained closure not yet reached",
+    "same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface",
+    "source_higgs_gram_gate": "open / source-Higgs Gram purity gate not passed",
+    "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "FMS literature supports the action-first gauge-invariant composite-O_H route as the cleanest way forward after the degree-one shortcut fails, but the current PR230 surface still lacks the same-source EW/Higgs action, canonical O_H identity/normalization, source-Higgs rows, and Gram-purity certificate.",
+  "recommended_contract": {
+    "cleanest_next_artifact": "same-surface EW/Higgs action plus gauge-invariant composite O_H certificate",
+    "forbidden_shortcut_retired": "degree, odd parity, Z3 invariance, or FMS method names as canonical O_H authority",
+    "minimum_future_artifacts": [
+      "outputs/yt_pr230_same_source_ew_higgs_action_certificate_2026-05-06.json",
+      "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+      "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+      "outputs/yt_source_higgs_gram_purity_certificate_2026-05-03.json"
+    ],
+    "route_id": "fms_action_first_composite_oh_rows_after_degree_gate",
+    "why_after_degree_gate": "FMS/lattice literature points to gauge-invariant composite operators as the physical Higgs route; the degree-one source filter is only a target selector."
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not use literature or FMS as proof authority",
+    "does not identify the degree-one taste-radial source with canonical O_H",
+    "does not write or imply source-Higgs production rows",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ]
+}

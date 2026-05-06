@@ -159,8 +159,11 @@ def main() -> int:
         "pr230_two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
         "pr230_two_source_taste_radial_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
         "pr230_two_source_taste_radial_row_production_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
+        "pr230_two_source_taste_radial_chunk001_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json",
+        "pr230_two_source_taste_radial_chunk002_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk002_checkpoint_2026-05-06.json",
         "pr230_taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
         "pr230_degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
+        "pr230_fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
         "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
         "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
         "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
@@ -1460,6 +1463,72 @@ def main() -> int:
             "degree_one_premise_authorized_on_current_surface"
         )
         is False
+    )
+    fms_post_degree_route_support_not_closure = (
+        "FMS post-degree route rescore"
+        in certificates["pr230_fms_post_degree_route_rescore"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_fms_post_degree_route_rescore"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_fms_post_degree_route_rescore"].get(
+            "fms_post_degree_route_rescore_passed"
+        )
+        is True
+        and certificates["pr230_fms_post_degree_route_rescore"].get(
+            "forbidden_firewall", {}
+        ).get("used_literature_as_proof_authority")
+        is False
+        and certificates["pr230_fms_post_degree_route_rescore"].get(
+            "forbidden_firewall", {}
+        ).get("used_degree_or_odd_parity_as_oh_authority")
+        is False
+    )
+    two_source_taste_radial_chunk001_checkpoint_not_closure = (
+        "two-source taste-radial chunk001"
+        in certificates["pr230_two_source_taste_radial_chunk001_checkpoint"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_two_source_taste_radial_chunk001_checkpoint"].get(
+            "checkpoint_passed"
+        )
+        is True
+        and certificates["pr230_two_source_taste_radial_chunk001_checkpoint"].get(
+            "completed"
+        )
+        is True
+        and certificates["pr230_two_source_taste_radial_chunk001_checkpoint"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_two_source_taste_radial_chunk001_checkpoint"].get(
+            "chunk_summary", {}
+        ).get("pole_residue_rows_count")
+        == 0
+    )
+    two_source_taste_radial_chunk002_checkpoint_not_closure = (
+        "two-source taste-radial chunk002"
+        in certificates["pr230_two_source_taste_radial_chunk002_checkpoint"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_two_source_taste_radial_chunk002_checkpoint"].get(
+            "checkpoint_passed"
+        )
+        is True
+        and certificates["pr230_two_source_taste_radial_chunk002_checkpoint"].get(
+            "completed"
+        )
+        is True
+        and certificates["pr230_two_source_taste_radial_chunk002_checkpoint"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_two_source_taste_radial_chunk002_checkpoint"].get(
+            "chunk_summary", {}
+        ).get("pole_residue_rows_count")
+        == 0
     )
     kinetic_taste_mixing_bridge_blocks_shortcut = (
         "current staggered kinetic taste symmetry"
@@ -3951,6 +4020,27 @@ def main() -> int:
         ),
     )
     report(
+        "fms-post-degree-route-rescore-support-not-closure",
+        fms_post_degree_route_support_not_closure,
+        certificates["pr230_fms_post_degree_route_rescore"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "two-source-taste-radial-chunk001-checkpoint-not-closure",
+        two_source_taste_radial_chunk001_checkpoint_not_closure,
+        certificates["pr230_two_source_taste_radial_chunk001_checkpoint"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "two-source-taste-radial-chunk002-checkpoint-not-closure",
+        two_source_taste_radial_chunk002_checkpoint_not_closure,
+        certificates["pr230_two_source_taste_radial_chunk002_checkpoint"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "kinetic-taste-mixing-shortcut-closed",
         kinetic_taste_mixing_bridge_blocks_shortcut,
         certificates["pr230_kinetic_taste_mixing_bridge"].get(
@@ -5266,6 +5356,10 @@ def main() -> int:
             "no-resume chunk commands and a collision guard for C_sx/C_xx rows, "
             "but it is run-control support only until rows are actually run, "
             "combined, pole-tested, and bridged to O_H or physical response.  "
+            "The completed two-source taste-radial chunk001/chunk002 checkpoints "
+            "are bounded row support only: they validate seed-controlled "
+            "timeseries rows but do not supply combined L12 pole evidence, "
+            "FV/IR authority, canonical O_H, or scalar-LSZ normalization.  "
             "The taste-radial canonical-O_H selector gate proves uniqueness only "
             "inside the degree-one source-axis subspace and blocks the "
             "symmetry-only selector because the full Z3 trace-zero taste algebra "
@@ -5335,6 +5429,9 @@ def main() -> int:
         "two_source_taste_radial_row_manifest_support_not_closure": two_source_taste_radial_row_manifest_support_not_closure,
         "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
+        "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
+        "two_source_taste_radial_chunk001_checkpoint_not_closure": two_source_taste_radial_chunk001_checkpoint_not_closure,
+        "two_source_taste_radial_chunk002_checkpoint_not_closure": two_source_taste_radial_chunk002_checkpoint_not_closure,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,

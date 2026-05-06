@@ -40,6 +40,7 @@
     "electroweak_g2_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
     "fh_lsz_pade_stieltjes": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
     "fh_lsz_stieltjes_moment": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
+    "fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
     "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
     "genuine_source_pole_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
@@ -75,6 +76,7 @@
     "electroweak_g2_builder": "open / electroweak g2 certificate builder inputs absent",
     "fh_lsz_pade_stieltjes": "exact-support / FH-LSZ Pade-Stieltjes bounds gate; strict moment-threshold certificate absent",
     "fh_lsz_stieltjes_moment": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
+    "fms_post_degree_route_rescore": "bounded-support / FMS post-degree route rescore; action-first composite O_H route selected as cleanest future artifact, no current closure",
     "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
     "genuine_source_pole_intake": "exact-support / genuine same-source O_sp source-pole artifact intake; canonical O_H bridge open",
     "matching_running": "open / PR230 matching-running bridge awaits certified physical input",
@@ -103,10 +105,11 @@
     "z3_lazy_transfer_promotion_attempt": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
   },
-  "pass_count": 36,
+  "pass_count": 37,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "degree_one_higgs_action_premise_not_derived": true,
+    "fms_post_degree_route_support_not_closure": true,
     "future_bridge_file_presence": {
       "canonical_higgs_operator_certificate": false,
       "carleman_tauberian_certificate": false,
