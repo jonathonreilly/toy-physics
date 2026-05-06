@@ -92,6 +92,15 @@ def main() -> int:
         "holonomic_source_response_feasibility_gate": load(
             "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json"
         ),
+        "derived_bridge_rank_one_closure_attempt": load(
+            "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
+        ),
+        "source_sector_pattern_transfer_gate": load(
+            "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json"
+        ),
+        "det_positivity_bridge_intake_gate": load(
+            "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json"
+        ),
         "kinetic_matching": load("outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"),
         "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "scalar_ir": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
@@ -467,6 +476,40 @@ def main() -> int:
         and holonomic_source_response.get("pr541_route_immediate_closure") is False,
         holonomic_source_response.get("actual_current_surface_status"),
     )
+    derived_bridge = certificates["derived_bridge_rank_one_closure_attempt"]
+    report(
+        "derived-bridge-rank-one-attempt-does-not-certify-source-to-oh",
+        "derived rank-one bridge not closed"
+        in str(derived_bridge.get("actual_current_surface_status"))
+        and derived_bridge.get("proposal_allowed") is False
+        and derived_bridge.get("derived_bridge_closure_passed") is False
+        and derived_bridge.get("exact_negative_boundary_passed") is True
+        and derived_bridge.get("future_artifact_presence", {}).get("source_higgs_rows")
+        is False,
+        derived_bridge.get("actual_current_surface_status"),
+    )
+    source_sector_transfer = certificates["source_sector_pattern_transfer_gate"]
+    report(
+        "source-sector-pattern-transfer-does-not-import-yukawa",
+        "source-sector pattern is relevant"
+        in str(source_sector_transfer.get("actual_current_surface_status"))
+        and source_sector_transfer.get("proposal_allowed") is False
+        and source_sector_transfer.get("approach_relevant") is True
+        and source_sector_transfer.get("direct_closure_available") is False
+        and source_sector_transfer.get("bounded_support_passed") is True,
+        source_sector_transfer.get("actual_current_surface_status"),
+    )
+    det_positivity_intake = certificates["det_positivity_bridge_intake_gate"]
+    report(
+        "det-positivity-bridge-intake-does-not-certify-rank-one",
+        "determinant positivity is useful"
+        in str(det_positivity_intake.get("actual_current_surface_status"))
+        and det_positivity_intake.get("proposal_allowed") is False
+        and det_positivity_intake.get("candidate_present") is True
+        and det_positivity_intake.get("determinant_bridge_closes_pr230") is False
+        and det_positivity_intake.get("intake_gate_passed") is True,
+        det_positivity_intake.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -531,7 +574,22 @@ def main() -> int:
             "gate adds the same boundary for creative-telescoping/tensor "
             "methods: they can compute defined Z(beta,s,h) rows only after "
             "a same-current-surface O_H/h-source artifact exists; they do "
-            "not supply the missing operator/source by method name.  No current route "
+            "not supply the missing operator/source by method name.  The "
+            "derived rank-one bridge attempt adds the same boundary for the "
+            "cleanest source-only theorem route: positivity preservation, "
+            "reflection positivity, determinant positivity, labels, and "
+            "conditional Perron support do not supply the missing same-surface "
+            "primitive-cone/off-diagonal-generator certificate, canonical O_H, "
+            "or C_sH/C_HH rows.  The source-sector pattern transfer gate adds "
+            "the same boundary for the SU3-plaquette analogy: finite-source "
+            "and SD/holonomic/tensor methods are relevant bridge-computation "
+            "tools only after a same-surface O_H/h source, C_sH/C_HH rows, "
+            "same-source W/Z rows, or a neutral rank-one theorem exists; "
+            "the plaquette value or exponent shift is not a Yukawa input.  The "
+            "determinant-positivity bridge intake adds the same boundary for "
+            "the latest staggered-Wilson positivity theorem: positive fermion "
+            "measure is useful support, but it is not a primitive neutral "
+            "transfer, canonical O_H identity, source-Higgs row, or y_t value.  No current route "
             "certificate authorizes retained proposal wording.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
@@ -552,6 +610,9 @@ def main() -> int:
             "does not use source-only LSZ data as canonical-Higgs identity",
             "does not use outside-math value recognition as a proof selector",
             "does not use Burnside or double-commutant theorem names without same-surface neutral generators",
+            "does not treat positivity preservation as a primitive neutral scalar rank-one bridge",
+            "does not import SU3 source-sector constants or exponent shifts into y_t",
+            "does not treat staggered-Wilson determinant positivity as source-Higgs overlap authority",
         ],
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

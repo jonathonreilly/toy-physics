@@ -256,6 +256,8 @@
     "positivity_improving_neutral_scalar_rank_one": "conditional-support / positivity-improving neutral-scalar rank-one theorem; premise absent",
     "pr230_action_first_oh_artifact_attempt": "exact negative boundary / action-first O_H artifact not constructible from current PR230 surface",
     "pr230_clean_source_higgs_math_tool_route_selector": "exact support / clean source-Higgs outside-math route selector; positive closure still open",
+    "pr230_derived_bridge_rank_one_closure_attempt": "exact negative boundary / derived rank-one bridge not closed on current PR230 surface",
+    "pr230_det_positivity_bridge_intake_gate": "bounded-support / staggered-Wilson determinant positivity is useful positivity-preservation support, not PR230 y_t closure",
     "pr230_exact_tensor_schur_row_feasibility_attempt": "exact negative boundary / exact tensor Schur A/B/C row feasibility blocked on current PR230 surface",
     "pr230_fresh_artifact_literature_route_review": "bounded-support / fresh artifact literature route review; selected O_H/C_sH/C_HH action-first FMS contract, no current closure",
     "pr230_gns_source_higgs_flat_extension_attempt": "exact negative boundary / GNS source-Higgs flat-extension attempt blocked by missing O_H/C_sH/C_HH rows",
@@ -292,6 +294,7 @@
     "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt": "exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows",
     "pr230_scalar_lsz_holonomic_exact_authority_attempt": "exact negative boundary / scalar-LSZ holonomic exact-authority not derivable from current finite-shell PR230 data",
     "pr230_schur_abc_definition_derivation_attempt": "exact negative boundary / Schur A/B/C definition not derivable from current PR230 source-only surface",
+    "pr230_source_sector_pattern_transfer_gate": "bounded-support / SU3 source-sector pattern is relevant to PR230 as a bridge-computation method, not as source-only y_t closure",
     "pr230_wz_g2_bare_running_bridge_attempt": "exact negative boundary / WZ g2 bare-to-low-scale running bridge not derivable on current PR230 surface",
     "production_resource": "bounded support / production resource projection",
     "projector_norm": "exact negative boundary / projector-normalization obstruction",
@@ -380,7 +383,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 266,
+  "pass_count": 269,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

@@ -83,6 +83,9 @@ PARENTS = {
     "canonical_higgs_semantic_firewall": "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
     "pr230_action_first_oh_artifact_attempt": "outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json",
     "pr230_holonomic_source_response_feasibility_gate": "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json",
+    "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
+    "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
+    "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
     "cross_lane_oh_authority_audit": "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
     "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
     "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
@@ -466,6 +469,30 @@ def main() -> int:
         is False
         and certs["pr230_holonomic_source_response_feasibility_gate"].get(
             "two_source_functional_current_surface_defined"
+        )
+        is False
+        and certs["pr230_derived_bridge_rank_one_closure_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_derived_bridge_rank_one_closure_attempt"].get(
+            "derived_bridge_closure_passed"
+        )
+        is False
+        and certs["pr230_derived_bridge_rank_one_closure_attempt"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+        and certs["pr230_source_sector_pattern_transfer_gate"].get("proposal_allowed")
+        is False
+        and certs["pr230_source_sector_pattern_transfer_gate"].get(
+            "direct_closure_available"
+        )
+        is False
+        and certs["pr230_det_positivity_bridge_intake_gate"].get("proposal_allowed")
+        is False
+        and certs["pr230_det_positivity_bridge_intake_gate"].get(
+            "determinant_bridge_closes_pr230"
         )
         is False
         and certs["canonical_oh_premise_stretch"].get("proposal_allowed") is False
@@ -938,6 +965,60 @@ def main() -> int:
         )
         is False,
         statuses["pr230_holonomic_source_response_feasibility_gate"],
+    )
+    report(
+        "derived-bridge-rank-one-attempt-blocks-current-source-only-closure",
+        "derived rank-one bridge not closed"
+        in statuses["pr230_derived_bridge_rank_one_closure_attempt"]
+        and certs["pr230_derived_bridge_rank_one_closure_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_derived_bridge_rank_one_closure_attempt"].get(
+            "derived_bridge_closure_passed"
+        )
+        is False
+        and certs["pr230_derived_bridge_rank_one_closure_attempt"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True,
+        statuses["pr230_derived_bridge_rank_one_closure_attempt"],
+    )
+    report(
+        "source-sector-pattern-transfer-relevant-not-closure",
+        "source-sector pattern is relevant"
+        in statuses["pr230_source_sector_pattern_transfer_gate"]
+        and certs["pr230_source_sector_pattern_transfer_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_source_sector_pattern_transfer_gate"].get(
+            "bounded_support_passed"
+        )
+        is True
+        and certs["pr230_source_sector_pattern_transfer_gate"].get(
+            "direct_closure_available"
+        )
+        is False,
+        statuses["pr230_source_sector_pattern_transfer_gate"],
+    )
+    report(
+        "det-positivity-bridge-intake-relevant-not-closure",
+        "determinant positivity is useful"
+        in statuses["pr230_det_positivity_bridge_intake_gate"]
+        and certs["pr230_det_positivity_bridge_intake_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_det_positivity_bridge_intake_gate"].get(
+            "intake_gate_passed"
+        )
+        is True
+        and certs["pr230_det_positivity_bridge_intake_gate"].get(
+            "determinant_bridge_closes_pr230"
+        )
+        is False,
+        statuses["pr230_det_positivity_bridge_intake_gate"],
     )
     report(
         "cross-lane-oh-authority-audit-blocks-adjacent-imports",

@@ -1,0 +1,62 @@
+{
+  "actual_current_surface_status": "bounded-support / staggered-Wilson determinant positivity is useful positivity-preservation support, not PR230 y_t closure",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "candidate_note_source": "origin/main",
+  "candidate_present": true,
+  "candidate_runner_source": "origin/main",
+  "candidate_scope_narrow": true,
+  "conditional_surface_status": "If supplemented by a same-surface theorem upgrading positivity preservation to primitive positivity improvement in the neutral scalar response sector, or by O_H/C_sH/C_HH rows, determinant positivity would be relevant support for the bridge.",
+  "determinant_bridge_closes_pr230": false,
+  "exact_next_action": "Use determinant positivity only as measure/positivity-preservation support.  Continue PR230 through a real neutral primitive-cone certificate, canonical O_H plus C_sH/C_HH rows, same-source W/Z rows, or strict production FH/LSZ plus matching.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claims_retained_or_proposed_retained_closure": false,
+    "sets_source_higgs_overlap_to_one": false,
+    "uses_det_positivity_as_canonical_oh_identity": false,
+    "uses_det_positivity_as_yukawa_value": false,
+    "uses_hunit_matrix_element_readout": false,
+    "uses_observed_top_or_yukawa_targets": false,
+    "uses_yt_ward_identity_as_authority": false
+  },
+  "hypothetical_axiom_status": null,
+  "intake_gate_passed": true,
+  "parent_statuses": {
+    "derived_bridge_rank_one": "exact negative boundary / derived rank-one bridge not closed on current PR230 surface",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "neutral_positivity_direct": "exact negative boundary / neutral-scalar positivity-improving direct theorem not derived",
+    "neutral_primitive_cone": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+    "retained_route": "open / retained closure not yet reached",
+    "source_sector_transfer": "bounded-support / SU3 source-sector pattern is relevant to PR230 as a bridge-computation method, not as source-only y_t closure"
+  },
+  "pass_count": 15,
+  "positive_vs_primitive_counterexample": {
+    "euclidean_measure_positive": true,
+    "fermion_determinant_positive": true,
+    "lesson": "Configuration-by-configuration determinant positivity is compatible with a reducible positive neutral scalar response sector.",
+    "neutral_transfer_matrix": [
+      [
+        0.94,
+        0.0
+      ],
+      [
+        0.0,
+        0.91
+      ]
+    ],
+    "neutral_transfer_nonnegative": true,
+    "neutral_transfer_strongly_connected": false,
+    "orthogonal_neutral_scalar_survives": true,
+    "primitive_power_strictly_positive": false,
+    "source_only_rows_can_match": true
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The determinant bridge gives configuration-by-configuration positive fermion measure on a symmetric-canonical surface; it does not define canonical O_H, produce C_sH/C_HH rows, prove neutral primitive-cone irreducibility, or exclude orthogonal neutral scalar top coupling.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not use determinant positivity as y_t, O_H, or kappa_s",
+    "does not use H_unit, yt_ward_identity, or observed targets",
+    "does not treat positivity preservation as positivity improvement"
+  ]
+}

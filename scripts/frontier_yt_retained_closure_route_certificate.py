@@ -140,6 +140,9 @@ def main() -> int:
         "fms_oh_certificate_construction_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
         "pr230_action_first_oh_artifact_attempt": "outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json",
         "pr230_holonomic_source_response_feasibility_gate": "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json",
+        "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
+        "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
+        "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
         "complete_source_spectrum_identity_no_go": "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json",
         "neutral_scalar_top_coupling_tomography_gate": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
         "non_source_response_rank_repair_sufficiency": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
@@ -1009,6 +1012,60 @@ def main() -> int:
         is True
         and certificates["pr230_holonomic_source_response_feasibility_gate"].get(
             "two_source_functional_current_surface_defined"
+        )
+        is False
+    )
+    derived_bridge_rank_one_closure_attempt_blocks = (
+        "derived rank-one bridge not closed"
+        in certificates["pr230_derived_bridge_rank_one_closure_attempt"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_derived_bridge_rank_one_closure_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_derived_bridge_rank_one_closure_attempt"].get(
+            "derived_bridge_closure_passed"
+        )
+        is False
+        and certificates["pr230_derived_bridge_rank_one_closure_attempt"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+    )
+    source_sector_pattern_transfer_gate_not_closure = (
+        "source-sector pattern is relevant"
+        in certificates["pr230_source_sector_pattern_transfer_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_source_sector_pattern_transfer_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_source_sector_pattern_transfer_gate"].get(
+            "bounded_support_passed"
+        )
+        is True
+        and certificates["pr230_source_sector_pattern_transfer_gate"].get(
+            "direct_closure_available"
+        )
+        is False
+    )
+    det_positivity_bridge_intake_gate_not_closure = (
+        "determinant positivity is useful"
+        in certificates["pr230_det_positivity_bridge_intake_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_det_positivity_bridge_intake_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_det_positivity_bridge_intake_gate"].get(
+            "intake_gate_passed"
+        )
+        is True
+        and certificates["pr230_det_positivity_bridge_intake_gate"].get(
+            "determinant_bridge_closes_pr230"
         )
         is False
     )
@@ -3146,6 +3203,27 @@ def main() -> int:
         "holonomic-source-response-gate-blocks-missing-oh-h-source",
         holonomic_source_response_gate_blocks,
         certificates["pr230_holonomic_source_response_feasibility_gate"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "derived-bridge-rank-one-attempt-blocks-current-source-only-closure",
+        derived_bridge_rank_one_closure_attempt_blocks,
+        certificates["pr230_derived_bridge_rank_one_closure_attempt"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "source-sector-pattern-transfer-gate-relevant-not-closure",
+        source_sector_pattern_transfer_gate_not_closure,
+        certificates["pr230_source_sector_pattern_transfer_gate"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "det-positivity-bridge-intake-gate-relevant-not-closure",
+        det_positivity_bridge_intake_gate_not_closure,
+        certificates["pr230_det_positivity_bridge_intake_gate"].get(
             "actual_current_surface_status", ""
         ),
     )

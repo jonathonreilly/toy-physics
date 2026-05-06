@@ -554,6 +554,15 @@ def main() -> int:
         "pr230_holonomic_source_response_feasibility_gate": load(
             "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json"
         ),
+        "pr230_derived_bridge_rank_one_closure_attempt": load(
+            "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
+        ),
+        "pr230_source_sector_pattern_transfer_gate": load(
+            "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json"
+        ),
+        "pr230_det_positivity_bridge_intake_gate": load(
+            "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json"
+        ),
         "pr230_invariant_ring_oh_certificate_attempt": load(
             "outputs/yt_pr230_invariant_ring_oh_certificate_attempt_2026-05-05.json"
         ),
@@ -2214,6 +2223,60 @@ def main() -> int:
         )
         is False,
         statuses["pr230_holonomic_source_response_feasibility_gate"],
+    )
+    report(
+        "pr230-derived-bridge-rank-one-attempt-blocks-current-source-only-closure",
+        "derived rank-one bridge not closed"
+        in str(statuses["pr230_derived_bridge_rank_one_closure_attempt"])
+        and certificates["pr230_derived_bridge_rank_one_closure_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_derived_bridge_rank_one_closure_attempt"].get(
+            "derived_bridge_closure_passed"
+        )
+        is False
+        and certificates["pr230_derived_bridge_rank_one_closure_attempt"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True,
+        statuses["pr230_derived_bridge_rank_one_closure_attempt"],
+    )
+    report(
+        "pr230-source-sector-pattern-transfer-relevant-not-closure",
+        "source-sector pattern is relevant"
+        in str(statuses["pr230_source_sector_pattern_transfer_gate"])
+        and certificates["pr230_source_sector_pattern_transfer_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_source_sector_pattern_transfer_gate"].get(
+            "approach_relevant"
+        )
+        is True
+        and certificates["pr230_source_sector_pattern_transfer_gate"].get(
+            "direct_closure_available"
+        )
+        is False,
+        statuses["pr230_source_sector_pattern_transfer_gate"],
+    )
+    report(
+        "pr230-det-positivity-bridge-intake-relevant-not-closure",
+        "determinant positivity is useful"
+        in str(statuses["pr230_det_positivity_bridge_intake_gate"])
+        and certificates["pr230_det_positivity_bridge_intake_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_det_positivity_bridge_intake_gate"].get(
+            "determinant_bridge_closes_pr230"
+        )
+        is False
+        and certificates["pr230_det_positivity_bridge_intake_gate"].get(
+            "intake_gate_passed"
+        )
+        is True,
+        statuses["pr230_det_positivity_bridge_intake_gate"],
     )
     report(
         "pr230-invariant-ring-oh-certificate-attempt-blocks-current-surface",
