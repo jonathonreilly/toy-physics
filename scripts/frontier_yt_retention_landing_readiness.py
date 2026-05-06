@@ -154,7 +154,7 @@ PILLAR_B_LOGS = {
     "yt_right_handed_species_dependence_2026-04-18.log",
     "yt_species_uniformity_extent_2026-04-18.log",
     "yt_ew_delta_r_retention_2026-04-18.log",
-    # SSB matching-gap companion (Round 2 new)
+    # SSB matching-gap arithmetic-boundary companion (Round 2 repaired)
     "yt_ssb_matching_gap_2026-04-18.log",
 }
 
@@ -245,8 +245,7 @@ def main() -> int:
     elif not unexpected_broken:
         emit(f"[PASS] cross-reference integrity: 0 UNEXPECTED broken links "
              f"across {len(notes)} notes ({len(tolerated_broken)} expected "
-             f"broken links: intentionally EMBEDDED-only P1.4 and out-of-repo "
-             f"Koide cross-references)")
+             f"broken links: intentionally EMBEDDED-only P1.4 references)")
         for note_rel, raw in tolerated_broken[:40]:
             emit(f"   [tolerated] note={note_rel} -> {raw}")
     else:

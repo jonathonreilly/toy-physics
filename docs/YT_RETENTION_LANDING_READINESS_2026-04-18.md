@@ -39,7 +39,7 @@ Known caveats declared up front for the reviewer:
   package is **bound-constrained**, not MC-pinned (see §R2.2 of
   the manifest).
 
-The YT UV-to-IR transport submission bundles **1623 PASS markers
+The YT UV-to-IR transport submission bundles **1611 PASS markers
 across 39 proposal-runners, 0 FAIL** on the branch's internal
 replay. The canonical framework-native `Δ_R` central proposed by
 this branch is **`−3.77 % ± 0.45 %`** (full-staggered-PT 4D BZ
@@ -63,16 +63,18 @@ submission:
    color-factor retention note, each with runner and log.
    Combined contribution: +15 PASS markers in Pillar A.
 3. **Agent I (files on disk).** SSB matching-gap analysis note,
-   runner, and log. Contribution: 25 PASS markers in Pillar B.
-   This note provides an independent Hubbard–Stratonovich route
-   corroborating the Class #5 §0 Clifford-chirality matching-gap
-   closure; the matching gap is doubly closed on the proposal side.
+   runner, and log. Contribution: 13 PASS markers in Pillar B.
+   After the audit repair, this note is a scoped `H_unit`
+   component-overlap arithmetic boundary. It does not corroborate a
+   physical SSB/Yukawa matching closure.
 
-The only known open scientific item at this point is
-**framework-native 2-loop Δ_R closure** — a coverage item, not an
-accuracy item. The proposed 2-loop value is loop-geometric
-bound-constrained (P1.17 retains a schematic magnitude-envelope
-check; §R2.2 Agent C honesty fix made this explicit). The
+The known open scientific items at this point are **framework-native
+2-loop Δ_R closure** and the physical SSB/Yukawa operator-matching
+theorem outside the repaired arithmetic note. The 2-loop item is a
+coverage item, not an accuracy item. The proposed 2-loop value is
+loop-geometric bound-constrained (P1.17 retains a schematic
+magnitude-envelope check; §R2.2 Agent C honesty fix made this
+explicit). The
 equivalent coverage question on P3 is closed by the K-series
 geometric bound (P3.5) at 0.137 % fractional tail on m_t. Both P2
 and P3 residuals sit inside the packaged ~2 % m_t(pole) envelope;
@@ -140,7 +142,7 @@ Gap 4.
 
 ## 4. Pillar B status (retention-analysis class notes + SSB companion)
 
-**Runners:** 11 · **PASS:** 601 · **FAIL:** 0 · **anomalies:** none.
+**Runners:** 11 · **PASS:** 589 · **FAIL:** 0 · **anomalies:** none.
 
 | Class / note                                          | Runner PASS | Status                                         |
 |-------------------------------------------------------|------------:|------------------------------------------------|
@@ -154,16 +156,16 @@ Gap 4.
 | Right-handed species dependence (Class #4)            |          58 | §4.2 Δ_R correction inherited (Round 2)        |
 | Species-uniformity extent                             |          48 | retained                                       |
 | EW Δ_R retention                                      |          69 | retained                                       |
-| SSB matching-gap companion (Round 2, Agent I)         |          25 | independent HS route corroborating Class #5 §0 |
+| SSB matching-gap companion (Round 2, Agent I)         |          13 | scoped H_unit arithmetic boundary; physical matching remains open |
 
 **Pillar B proposal-side self-audit: PASS.** Every retention-
 analysis class note terminates PASS on the branch's internal replay
 with no FAIL markers. The Round 2 corrections (Class #2 §0 Fourier,
 Class #5 §0 matching-gap closure, b-Yukawa §0 scope, Class #1 §10
 scrutiny audit, Class #4 §4.2 inheritance) are scope / framing
-tightening, not numerical changes. The Round 2 SSB companion note
-provides an independent closure of the Class #5 matching gap via
-the Hubbard–Stratonovich / effective-action route. Reviewer
+tightening, not numerical changes. The Round 2 SSB companion note now
+records only the exact `H_unit` component-overlap arithmetic; it does
+not provide an independent physical matching closure. Reviewer
 acceptance of Pillar B is a separate decision.
 
 ---
@@ -191,23 +193,17 @@ MC-pinned.
 
 ## 6. Cross-reference integrity sweep
 
-The landing-readiness runner resolved 481 repo-internal Markdown
+The landing-readiness runner resolved 713 repo-internal Markdown
 link targets across 38 session-dated YT notes. Broken references
 identified (post-Round-2 final state):
 
-- **4** references to `docs/YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md`
+- **5** references to `docs/YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md`
   (slot P1.4 — **intentionally EMBEDDED-only by design**; runner
   and log exist with 21 PASS).
-- **4** references to `docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`
-  — the Koide circulant note lives in the sister workspace
-  `codex/science-workspace-2026-04-18`, not in this repo; these
-  are informational / cross-repo references flagged in the b-Yukawa,
-  Class #2, Class #6, and landing-readiness notes.
 
-**Total broken:** 8, all of which are **expected and accounted for**:
-- 4 P1.4 references are the intentionally EMBEDDED-only slot's
-  expected link targets;
-- 4 Koide cross-repo references are out-of-repo by design.
+**Total broken:** 5, all of which are **expected and accounted for**:
+the P1.4 references are the intentionally EMBEDDED-only slot's expected link
+targets.
 
 No Agent H or Agent I artifact is missing. All six Round-2 landed
 artifacts (M.1 note, P1.1 note, P1.2 note/runner/log, P3.1
@@ -260,7 +256,7 @@ correctly.
 
 | Check                                                          | Status | Gating? |
 |----------------------------------------------------------------|:------:|:-------:|
-| Grand total PASS (retention manifest + landing-readiness)      | 1623   | —       |
+| Grand total PASS (retention manifest + landing-readiness)      | 1611   | —       |
 | Grand total FAIL                                               | 0      | —       |
 | Canonical `Δ_R` central on disk and cited as canonical         | PASS   | no      |
 | Canonical `Δ_R` central ≠ superseded literature-cited central  | PASS   | no      |
@@ -290,18 +286,17 @@ non-gating items is the reviewer's call.
 ## 9. Self-audit verdict
 
 **Proposal-side verdict: READY FOR REVIEW.** The submission's
-internal self-audit terminates at **1623 PASS markers / 0 FAIL
+internal self-audit terminates at **1611 PASS markers / 0 FAIL
 markers across 39 proposal-runners**, with the canonical 1-loop
 framework-native central `Δ_R = −3.77 % ± 0.45 %` and the proposed
 m_t(pole) band `172.57 ± 6.9 GeV` consistent with PDG at ~0.1σ.
 All six in-flight Round-2 deliverables (Agents A, H, I) are on
 disk. The remaining proposal-side open items — framework-native
 2-loop Δ_R MC closure (coverage, not accuracy) and P1.4 standalone
-note promotion (documentation hygiene) — are declared up front
-for the reviewer's accept / revise / reject decision. The 8
-broken cross-references are all expected: 4 to the EMBEDDED-only
-P1.4 slot and 4 to
-the Koide circulant note in the sister workspace.
+note promotion (documentation hygiene), plus the physical SSB/Yukawa
+operator-matching theorem outside the scoped arithmetic note — are declared up
+front for the reviewer's accept / revise / reject decision. The 5 broken
+cross-references are all expected P1.4 embedded-only references.
 
 This report is a navigation index over the YT submission bundle.
 It does not introduce physics of its own; the retained claims
@@ -314,8 +309,9 @@ the reviewer's call.
 `docs/YT_RETENTION_MASTER_MANIFEST_2026-04-18.md` §Part 7 ("reviewer
 reading guide"), then descend into P1.15 (canonical central) and
 P1.17 (bound-constrained 2-loop coverage) to verify the Round 2
-honesty fix, and cross-read Class #5 §0 + the new SSB matching-gap
-note for the doubly closed matching-gap argument.
+honesty fix, and cross-read the repaired SSB matching-gap note only
+as a scoped `H_unit` arithmetic boundary; do not treat it as closing
+the physical matching theorem.
 
 ---
 

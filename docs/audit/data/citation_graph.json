@@ -54868,7 +54868,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "c8328aee1557adb8e262b74bfccf4561f3c78599aeae80bb3b27607850795466",
+      "note_hash": "b0d7aa577657d03cdc7e6d3ce6988137628156b80b44fb7e56fa6f4e90a69f4a",
       "path": "docs/YT_RETENTION_LANDING_READINESS_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_retention_landing_readiness.py",
       "title": "YT Retention Landing Readiness Report (Submission Under Review)"
@@ -54879,7 +54879,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "c259b60a3a0c54cdeac43445e8b1d9164eb4d66b18ab0ca01e4b538c355f8cbc",
+      "note_hash": "cf7fc60df291fc9c81f7c1257d5fdeaf4497fc9015986abdb4d422d8a88a0960",
       "path": "docs/YT_RETENTION_MASTER_MANIFEST_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_retention_manifest.py",
       "title": "YT Retention Master Manifest (Reviewer Entry Point \u2014 Submission Under Review)"
@@ -54918,13 +54918,13 @@
     "yt_ssb_matching_gap_analysis_note_2026-04-18": {
       "claim_id": "yt_ssb_matching_gap_analysis_note_2026-04-18",
       "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem, scoped to exact algebraic identity",
+      "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "7c6fefe5e4d02d56056dcfa4ea94e30cc510379a83426d7445b01ce755f185a4",
+      "note_hash": "67d4ba4957a298427e6cfb27b4f45729cfbc5926581e6f5f9eb55bffc96eb2b7",
       "path": "docs/YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_ssb_matching_gap.py",
-      "title": "Yukawa SSB Matching-Gap Analysis Note"
+      "title": "Yukawa SSB Matching-Gap Arithmetic Boundary Note"
     },
     "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17": {
       "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
@@ -55941,9 +55941,9 @@
       "bounded_theorem": 575,
       "meta": 10,
       "no_go": 118,
-      "none": 456,
+      "none": 457,
       "open_gate": 113,
-      "positive_theorem": 634
+      "positive_theorem": 633
     },
     "edge_count": 6610,
     "leaf_count": 549,

@@ -1,447 +1,280 @@
-# Yukawa SSB Matching-Gap Analysis Note
+# Yukawa SSB Matching-Gap Arithmetic Boundary Note
 
 **Date:** 2026-04-18
-**Status:** **MATCHING GAP CLOSED** on the proposed_retained tree-level canonical
-surface via two independent algebraic paths: (i) the retained Clifford
-chirality decomposition already captured in §0 of
-`docs/YT_CLASS_5_NON_QL_YUKAWA_VERTEX_NOTE_2026-04-18.md`, and (ii) a
-complementary Hubbard-Stratonovich (HS) / effective-action bilinear-source
-derivation documented here. Both paths give the same closure: the Ward
-4-fermion matrix element `y_t_bare = ⟨0 | H_unit | t̄ t⟩ = 1/√6` on
-Q_L × Q_L\* matches the physical trilinear coefficient
-`g_Y[H_unit · ψ̄ψ] = 1/√6` after the composite Higgs H_unit acquires its
-SSB expectation value, by the *identical-operator* identity: H_unit
-appears on both sides of the matching as the SAME retained composite
-operator (D17), and the 1/√6 is its defining normalization constant.
-**No new primitives required.** This note is short by design (a
-gap-characterization note, not a new theorem).
+**Repair date:** 2026-05-06
+**Type:** positive_theorem, scoped to exact algebraic identity
+**Claim scope:** bounded `H_unit` normalization arithmetic. Given the
+unit-normalized scalar-singlet component
+
+```text
+H_unit = (1 / sqrt(N_iso * N_c)) * sum_{alpha,a} E_{alpha,a}
+```
+
+on the canonical orthonormal pair basis, each single component overlap is
+`1 / sqrt(N_iso * N_c)`. For the framework values `(N_iso, N_c) = (2, 3)`,
+that value is `1 / sqrt(6)`. If two labels are both explicitly defined to be
+this same `H_unit` component overlap, both labels evaluate to `1 / sqrt(6)`.
+
+**Boundary:** this note does not close a retained matching theorem for the
+physical Standard Model Yukawa trilinear. In particular, it does not identify
+the Ward four-fermion matrix element with the `Qbar_L-H-u_R` trilinear
+coefficient. That stronger matching statement would require a separate
+tree-level operator-matching theorem deriving the HS/source normalization,
+SSB VEV division, chirality projection, LSZ/external-state normalization, and
+absence of extra factors from the retained action. Those steps are not derived
+here.
+
+**Status authority:** this source note does not set its own audit outcome.
+Independent audit must decide the final audit status for the scoped
+finite-dimensional theorem.
 **Primary runner:** `scripts/frontier_yt_ssb_matching_gap.py`
 **Log:** `logs/retained/yt_ssb_matching_gap_2026-04-18.log`
 
 ---
 
-## Relationship to Class #5 §0
+## 1. Repair Summary
 
-The Class #5 note `docs/YT_CLASS_5_NON_QL_YUKAWA_VERTEX_NOTE_2026-04-18.md`
-§0 (amendment 2026-04-18) already closes the matching gap via a
-**Clifford chirality decomposition** route: H_unit's defining bilinear
-ψ̄ψ decomposes by the 4D Dirac identity (§0.1.3 of that note) into
-`ψ̄_L ψ_R + ψ̄_R ψ_L`, so H_unit is intrinsically a chirality-flipping
-(LH-RH) operator once the block-assignment α ↔ (u_R, d_R) is forced by
-retained U(1)_Y charge conservation. That path is complete.
+The earlier version of this note overclaimed that the SSB matching gap was
+closed by a Hubbard-Stratonovich / effective-action route and a direct
+identical-operator route. The audit correctly objected that this equated two
+different readout structures by naming both of them `H_unit`.
 
-**This note adds a complementary second path** — the Hubbard-Stratonovich /
-effective-action perspective — as an independent cross-check. The
-complementary path trades the Clifford identity for a bilinear-source
-argument that stays entirely on (ψ̄ψ) as a scalar composite without
-chirality decomposition. The two paths give the **same** matching
-coefficient 1/√6 because they refer to the **same** retained composite
-operator H_unit. Either path alone suffices. This note argues that the
-matching is therefore *doubly closed*.
+This repaired note keeps only the part that is actually proved by the local
+algebra:
 
-Readers who find §0 of Class #5 persuasive can treat this note as a
-short confirmation. Readers who prefer the bilinear-source perspective
-can use §2 below as the primary closure.
+```text
+<alpha_0,a_0 | H_unit | alpha_0,a_0>
+  = 1 / sqrt(N_iso * N_c).
+```
+
+At `(N_iso, N_c) = (2, 3)`, the result is `1 / sqrt(6)`. This is exact
+finite-dimensional arithmetic. It is not a physical SSB matching theorem.
 
 ---
 
-## Authority notice
+## 2. Definitions
 
-This note does **not** modify:
+Let
 
-- the retained Ward-identity tree-level theorem
-  (`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`);
-- the retained composite-Higgs uniqueness D17 (H_unit definition);
-- Class #5 §0 closure sketch (Clifford chirality route);
-- any publication-surface file.
+```text
+D = N_iso * N_c
+```
 
-What this note adds: a narrow, complementary algebraic identity that
-the Ward 4-fermion 1PI coefficient flows through **the same operator
-H_unit** to the physical trilinear after SSB on the canonical surface,
-via a bilinear-source / HS argument that factorizes the 4-fermion
-channel through scalar exchange. The closure is algebraic at tree
-level.
+with `N_iso, N_c` positive integers. Let the pair Hilbert space have
+orthonormal basis
+
+```text
+|alpha,a>,  1 <= alpha <= N_iso,  1 <= a <= N_c.
+```
+
+Let `E_{alpha,a}` be the diagonal Wick-contractor / matrix-unit operator that
+acts as the identity on the basis pair `|alpha,a>` and as zero on all other
+basis pairs:
+
+```text
+<beta,b | E_{alpha,a} | beta,b> =
+  1, if (beta,b) = (alpha,a),
+  0, otherwise.
+```
+
+The scoped operator in this note is
+
+```text
+H_unit = (1 / sqrt(D)) * sum_{alpha=1..N_iso} sum_{a=1..N_c} E_{alpha,a}.
+```
+
+Equivalently, in this basis,
+
+```text
+H_unit = (1 / sqrt(D)) * I_D.
+```
+
+For the framework instance used in the original note,
+
+```text
+N_iso = 2,  N_c = 3,  D = 6,
+H_unit = (1 / sqrt(6)) * I_6.
+```
 
 ---
 
-## §1 Precise statement of the gap
+## 3. Theorem
 
-### §1.1 The two sides
+For any basis pair `|alpha_0,a_0>`,
 
-**Ward side (retained, `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`).**
-On the Q_L × Q_L\* 4-fermion 1PI Green's function
-
-```
-    Γ⁽⁴⁾(q²) = -c_S · g_bare² / (2 N_c · q²) · O_S                     (1.1)
-```
-
-on the scalar-singlet channel `O_S = (ψ̄ψ)_{(1,1)} (ψ̄ψ)_{(1,1)}`, the
-composite Higgs operator is uniquely (D17):
-
-```
-    H_unit(x) = (1/√(N_c · N_iso)) Σ_{α,a} ψ̄_{α,a}(x) ψ_{α,a}(x)
-             = (1/√6) Σ_{α,a} ψ̄_{α,a}(x) ψ_{α,a}(x)                    (1.2)
+```text
+F(alpha_0,a_0)
+  := <alpha_0,a_0 | H_unit | alpha_0,a_0>
+   = 1 / sqrt(N_iso * N_c).                                      (T1)
 ```
 
-and the Ward matrix element is
+For `(N_iso, N_c) = (2, 3)`,
 
-```
-    y_t_bare := ⟨0 | H_unit(0) | t̄_{top,up} t_{top,up}⟩  =  1/√6        (1.3)
-```
-
-by the CG overlap of the unit-norm singlet (Block 5 of the Ward
-theorem).
-
-**Physical trilinear side (SM-convention).** The physical Yukawa
-Lagrangian after EWSB is
-
-```
-    L_Y = -y_t · (Q̄_L · H̃) · u_R + h.c.                                (1.4)
+```text
+F(alpha_0,a_0) = 1 / sqrt(6).                                    (T2)
 ```
 
-giving the mass term `-y_t · v/√2 · ū_L u_R + h.c.` when H̃ picks up
-its VEV. On the framework's composite surface (`H is composite`,
-D9 → D17), the Higgs doublet is identified with H_unit projected onto
-the iso doublet; call this identified scalar `H_composite`. The
-framework prediction for the trilinear Yukawa coefficient is
+If two quantities are defined as aliases of this same component overlap,
+for example
 
-```
-    y_t_phys := ⟨0 | L_Y | q̄_L (x) H_composite(x) u_R(x)⟩ / V(EWSB)      (1.5)
+```text
+A := F(alpha_0,a_0),
+B := F(alpha_0,a_0),
 ```
 
-where `V(EWSB)` is the EWSB-expectation-value normalization.
+then
 
-### §1.2 The gap question
-
-**Q:** Does `y_t_bare` from (1.3) equal `y_t_phys` from (1.5)?
-
-Both are numerically 1/√6 in the retained framework, but (1.3) is a
-**4-fermion Q_L × Q_L\* matrix element** and (1.5) is a **trilinear
-Q_L × H_composite × u_R matrix element** with one scalar and two
-fermions on opposite chirality blocks. The structural shape is
-different. The question is: is the equality
-
-```
-    y_t_phys  =  y_t_bare  =  1/√6                                      (1.6)
+```text
+A = B = 1 / sqrt(6)
 ```
 
-an algebraic identity on the retained surface, or an independent
-assumption?
+in the framework instance. This last equality is only an alias equality inside
+the finite-dimensional `H_unit` arithmetic. It carries no independent
+operator-matching content.
 
 ---
 
-## §2 Path A: Hubbard-Stratonovich bilinear source (this note)
+## 4. Proof
 
-### §2.1 HS transformation on the scalar-singlet channel
+By definition,
 
-The standard HS transformation introduces an auxiliary scalar field
-σ(x) coupled to the fermion bilinear. On the scalar-singlet channel
-relevant to the Ward 4-fermion 1PI, the exact Gaussian identity
-(Stratonovich 1957, Hubbard 1959) is
-
-```
-    exp[-(G/2) (ψ̄ψ)²]  =  N · ∫ Dσ · exp[-(1/(2G)) σ² + σ · (ψ̄ψ)]    (2.1)
+```text
+<alpha_0,a_0 | H_unit | alpha_0,a_0>
+  = <alpha_0,a_0 |
+      (1 / sqrt(D)) * sum_{alpha,a} E_{alpha,a}
+    | alpha_0,a_0>
 ```
 
-where G is the coupling strength on the scalar channel, N is a
-normalization constant, and σ is real (scalar composite in the singlet).
-The RHS is a Gaussian path integral over σ coupled linearly to (ψ̄ψ).
+Linearity gives
 
-Identifying σ with the retained composite H_unit (up to normalization):
-on the canonical surface, set
-
-```
-    σ(x) := √(N_c · N_iso) · H_unit(x)  =  √6 · H_unit(x)                (2.2)
+```text
+= (1 / sqrt(D)) *
+  sum_{alpha,a}
+  <alpha_0,a_0 | E_{alpha,a} | alpha_0,a_0>.
 ```
 
-Then the linear coupling `σ · (ψ̄ψ)` in (2.1) becomes
+All summands vanish except the one with `(alpha,a) = (alpha_0,a_0)`, and that
+summand equals `1` by the canonical basis-pair normalization. Therefore
 
-```
-    σ · (ψ̄ψ)  =  √6 · H_unit · (ψ̄ψ)
-              =  √6 · [(1/√6) Σ_{α,a} ψ̄_{α,a} ψ_{α,a}] · (ψ̄ψ)
-              =  (Σ_{α,a} ψ̄_{α,a} ψ_{α,a}) · (ψ̄ψ)                       (2.3)
-```
-
-i.e., the linear coupling of σ to (ψ̄ψ) via HS has a √6 rescaling
-factor that precisely **cancels** the 1/√6 normalization in H_unit's
-definition. This is the key algebraic identity of Path A.
-
-### §2.2 Effective trilinear coefficient
-
-After HS (2.1), the 4-fermion 1PI channel factorizes through σ
-exchange:
-
-```
-    Γ⁽⁴⁾|_scalar-singlet  =  [tree σ-exchange with coupling √6 · H_unit to (ψ̄ψ)]
-                          =  [σ-propagator] · [σ - (ψ̄ψ) vertex]²           (2.4)
+```text
+<alpha_0,a_0 | H_unit | alpha_0,a_0>
+  = (1 / sqrt(D)) * 1
+  = 1 / sqrt(D)
+  = 1 / sqrt(N_iso * N_c).
 ```
 
-The σ - (ψ̄ψ) vertex on the canonical surface, after reidentifying
-σ = √6 · H_unit, has coefficient
+Substituting `(N_iso, N_c) = (2, 3)` gives `D = 6` and hence
+`1 / sqrt(6)`.
 
-```
-    V[H_unit, ψ̄ψ]  =  √6                                                (2.5)
-```
-
-The effective trilinear coupling `g_Y[H_unit · ψ̄ψ]` is read off as the
-coefficient of the `H_unit · (ψ̄ψ)` term in the σ-integrated-out
-effective action. Direct algebra:
-
-```
-    Γ_eff[H_unit, ψ, ψ̄] ⊃ V[H_unit, ψ̄ψ] · (H_unit) · (ψ̄ψ) / Z_H_unit   (2.6)
-```
-
-where Z_H_unit = √(N_c · N_iso) = √6 is the H_unit normalization (from
-D17, eq. 1.3 of `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`). Substituting:
-
-```
-    g_Y[H_unit · ψ̄ψ]  =  V[H_unit, ψ̄ψ] / Z_H_unit  =  √6 / √6  =  1     (2.7)
-```
-
-on the BARE (`σ ↔ H_unit`) coupling. Per Dirac-bilinear fermion pair,
-multiplying by the per-component CG factor `1/√(N_c · N_iso) = 1/√6`
-(from the unit-norm singlet overlap, Ward theorem Block 5), the
-physical matching per channel is
-
-```
-    y_t_phys  =  g_Y[H_unit · ψ̄ψ] / √(N_c · N_iso)  =  1 / √6           (2.8)
-```
-
-**This is the same 1/√6 as the Ward 4-fermion matrix element (1.3).**
-
-### §2.3 The critical algebraic identity
-
-The matching via Path A reduces to the arithmetic identity
-
-```
-    (1/√6) · √6  =  1                                                   (2.9)
-```
-
-applied twice:
-1. Once in the HS rescaling σ = √6 · H_unit (2.2), which cancels the
-   1/√6 in H_unit's definition.
-2. Once in the effective action normalization (2.6–2.8), which
-   reintroduces the 1/√6 via the unit-norm singlet overlap.
-
-The net effect: **H_unit carries its 1/√6 definition consistently
-through HS transformation**. The coefficient the Ward 4-fermion 1PI
-sees (1.3) is precisely the coefficient the physical trilinear sees
-(1.5) because both are matrix elements of the SAME operator H_unit
-with its SAME defining normalization 1/√6.
-
-### §2.4 Operational summary
-
-Path A gives the following operational closure of the matching gap:
-
-- **Step 1** (HS): replace (ψ̄ψ)² with σ-exchange.
-- **Step 2** (identify): on canonical surface, σ := √6 · H_unit.
-- **Step 3** (coefficient): the σ-(ψ̄ψ) vertex has coefficient √6 by
-  (2.5).
-- **Step 4** (normalize): divide by Z_H_unit = √6 to get the physical
-  trilinear vertex coefficient 1 per component.
-- **Step 5** (CG): project onto the singlet with 1/√6 overlap.
-- **Conclusion**: y_t_phys = 1/√6 = y_t_bare. Matching is exact.
+No gauge coupling, source normalization, SSB VEV, LSZ residue, chirality
+projector, or physical Yukawa readout map appears in this proof. The theorem
+is exactly the component-overlap arithmetic of the stated operator.
 
 ---
 
-## §3 Path B: direct effective-action integration
+## 5. What This Claims
 
-An alternative (and simpler) argument: without introducing an HS
-auxiliary field, compute the tree-level effective action Γ_eff in the
-variable H_unit directly by Legendre transform.
-
-On the retained canonical surface, H_unit is the unique scalar-singlet
-composite on Q_L (D17, Ward Block 5). The effective action for the
-source J_H coupled to H_unit is
-
-```
-    Γ_eff[H_unit, ψ, ψ̄]  =  S_bare[ψ, ψ̄]  +  J_H · H_unit + ...         (3.1)
-```
-
-where the J_H · H_unit term in the source-coupled action generates, via
-the D9 identification `H_unit = (1/√6) Σ ψ̄ψ`, the effective trilinear
-J_H · (1/√6) Σ ψ̄ψ. On the canonical external state |q̄ q⟩ (physical
-fermion pair at tree level), the H_unit-fermion-fermion vertex is
-
-```
-    ⟨q̄(p) q(p') | H_unit(0) | vacuum⟩  =  (1/√6) · ⟨q̄ q | Σ ψ̄ψ | 0⟩
-                                        =  (1/√6) · 1                   (3.2)
-```
-
-because the external state |q̄ q⟩ picks out one component of the
-Σ ψ̄ψ sum (the top-color, up-iso component on the canonical surface).
-
-**The trilinear coefficient 1/√6 is IDENTICAL to the Ward 4-fermion
-coefficient 1/√6** because both are matrix elements of the SAME operator
-H_unit.
-
-**Path B is essentially trivial**: once H_unit is recognized as the
-retained composite from D17, its matrix element in any physical
-external state carries its defining 1/√6 factor. The Ward 4-fermion
-channel and the physical trilinear are both matrix elements of H_unit;
-they share the 1/√6 coefficient by construction.
+- The finite-dimensional identity `(T1)` for any positive `N_iso, N_c`.
+- The framework arithmetic instance `(N_iso, N_c) = (2, 3)` gives
+  `1 / sqrt(6)`.
+- Two labels defined as the same `H_unit` component overlap evaluate to the
+  same number.
+- The scoped overlap expression contains no gauge-coupling parameter and no
+  SSB/readout normalization symbol.
 
 ---
 
-## §4 Verification: the √6 · (1/√6) = 1 identity closes matching
+## 6. What This Does Not Claim
 
-Both paths (A and B) rely on the same closing arithmetic: the 1/√6
-in H_unit's definition (D17) multiplied by the √6 that either HS
-rescaling (Path A, §2.2) or the singlet-overlap CG (Path B, §3.2)
-introduces gives the algebraic 1 that closes the matching:
+- Does not derive the physical Yukawa trilinear coefficient.
+- Does not close the SSB matching gap.
+- Does not prove a Hubbard-Stratonovich normalization theorem.
+- Does not divide by or derive an EWSB VEV normalization.
+- Does not perform a chirality projection from the scalar-singlet bilinear to
+  the `Qbar_L-H-u_R` Standard Model monomial.
+- Does not derive LSZ or external-state normalization factors.
+- Does not prove that no additional finite, sign, color, chirality, source, or
+  field-normalization factors enter the physical trilinear readout.
+- Does not use observed masses, PDG values, fitted selectors, or admitted unit
+  conventions.
 
+The physical matching problem remains open until those ingredients are
+derived by a separate retained action-level operator-matching theorem.
+
+---
+
+## 7. Relation To The Ward And Class 5 Notes
+
+`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` is the parent authority for the
+framework's `H_unit` definition and for its Ward-side use. This note does not
+rederive that parent theorem; it isolates the local arithmetic consequence of
+the normalized operator once the definition is stated.
+
+`docs/YT_CLASS_5_NON_QL_YUKAWA_VERTEX_NOTE_2026-04-18.md` discusses
+non-`Q_L` Yukawa trilinear Clebsch-Gordan factors. This note does not certify
+that the Class 5 trilinear coefficient is the same Green-function object as the
+Ward four-fermion coefficient. It only records that the same numerical
+`1 / sqrt(6)` appears when a readout is explicitly defined to be the same
+`H_unit` component overlap.
+
+---
+
+## 8. Audit Repair Mapping
+
+Auditor objection:
+
+```text
+The Ward 4-fermion channel and the physical trilinear are both matrix
+elements of H_unit; they share the 1/sqrt(6) coefficient by construction.
 ```
-    (1/√6) · √6  =  1                                                  (4.1)
+
+Repair:
+
+1. The theorem statement now removes the physical trilinear from the claimed
+   result.
+2. The proof derives only the diagonal matrix element of
+   `H_unit = I_D / sqrt(D)` on an orthonormal pair basis.
+3. Any two-name equality is explicitly identified as alias arithmetic, not as
+   physical operator matching.
+4. The missing physical steps named by the audit are listed as open boundary
+   conditions rather than silently passed.
+
+The intended re-audit scope is therefore:
+
+```text
+Given H_unit = I_(N_iso*N_c) / sqrt(N_iso*N_c), the diagonal component
+overlap equals 1 / sqrt(N_iso*N_c); at (2,3) it equals 1 / sqrt(6).
 ```
 
-In Path A: √6 is the HS rescaling factor canceling H_unit's
-normalization, then 1/√6 is re-introduced via the CG overlap on the
-external state.
+---
 
-In Path B: √6 is absent; the 1/√6 is directly the matrix element of
-H_unit on a singlet-component external state.
+## 9. Validation
 
-Both paths give `y_t_phys = 1/√6`, identical to the Ward 4-fermion
-result (1.3). **Matching is closed at tree level on the retained
-surface.**
+Primary runner: `scripts/frontier_yt_ssb_matching_gap.py`.
+
+The repaired runner verifies:
+
+1. positive integer dimensions and `D = N_iso * N_c`;
+2. the framework instance `D = 6`;
+3. explicit matrix form `H_unit = I_6 / sqrt(6)`;
+4. diagonal component overlaps are all `1 / sqrt(6)`;
+5. off-diagonal overlaps are zero;
+6. two labels defined as the same component overlap are numerically equal;
+7. alternative dimensions `(3,4)` give `1 / sqrt(12)`;
+8. the degenerate dimension `(1,1)` gives `1`;
+9. the proof expression contains no `g_bare`, `y_t_phys`, `V_EWSB`,
+   `Z_LSZ`, `P_chiral`, or HS source-normalization symbol;
+10. the runner outcome explicitly says the SSB matching theorem remains open.
+
+The runner is intentionally an arithmetic verifier, not a physical matching
+verifier.
 
 ---
 
-## §5 What remains open
+## 10. Cross-References
 
-The tree-level matching is closed. What is NOT closed by this note:
-
-1. **1-loop corrections to the HS factorization.** The HS transformation
-   (2.1) is exact at the Gaussian level, but higher-loop fluctuations
-   of σ around its mean field introduce corrections to the factorized
-   σ-exchange representation. These are standard loop corrections to
-   the effective Yukawa coupling and are OUT OF SCOPE of this
-   tree-level gap-closure. They couple to the broader open question
-   of 1-loop renormalization of y_t_bare (Ward theorem is tree-level;
-   1-loop lattice PT is separately treated in the UV_GAUGE_TO_YUKAWA_
-   BRIDGE support note).
-
-2. **Ward identities at 1-loop.** The tree-level Ward identity on the
-   scalar-singlet channel (Ward theorem eq. T1) might receive 1-loop
-   corrections to the coefficient 1/√6. These corrections are OUT OF
-   SCOPE of this note.
-
-3. **The downstream empirical gap (m_b 33×).** The matching closure
-   here does NOT resolve the empirical m_b falsification. The Ward
-   prediction y_u(M_Pl) = y_d(M_Pl) = g_s(M_Pl)/√6 is structurally
-   sound (and now doubly verified via both Clifford chirality and HS),
-   but empirically falsified by 33× on m_b. Closing the matching gap
-   does not close the empirical mass-hierarchy gap. See the retained
-   `YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md` for
-   discussion.
-
-4. **Iso-selector identification R1.** Path B avoids the iso-selector
-   identification by staying on the total Σ ψ̄ψ without chirality
-   decomposition; Path A similarly avoids R1 by treating σ as a
-   singlet scalar coupled to (ψ̄ψ) as a whole. R1 is invoked only
-   in Class #5 §0's Clifford chirality path, where it is forced by
-   retained U(1)_Y. Neither path in this note requires R1.
-
----
-
-## §6 Outcome
-
-**Outcome: matching gap CLOSED doubly via (a) Clifford chirality
-decomposition [Class #5 §0] and (b) Hubbard-Stratonovich /
-effective-action bilinear source [this note, §2-§3].**
-
-The algebraic identity `(1/√6) · √6 = 1` appears in both paths and
-closes the matching at tree level. No new primitives required. The
-Ward 4-fermion coefficient 1/√6 and the physical trilinear coefficient
-1/√6 are the SAME factor from H_unit's defining normalization (D17).
-
-**Confidence (this note's bilinear-source derivation):**
-
-- HIGH on the exact HS identity (2.1) — standard Gaussian identity,
-  textbook result (Hubbard 1959, Stratonovich 1957).
-- HIGH on the identification σ = √6 · H_unit on the canonical surface
-  — follows directly from D17's H_unit definition.
-- HIGH on the algebraic coefficient identity (2.7–2.8) — elementary
-  arithmetic.
-- HIGH on the identical-operator closure (Path B, §3) — tautological
-  on the retained surface once D17 is granted.
-- HIGH on the combined matching closure — doubly verified (Clifford
-  chirality route in Class #5 §0 gives the same 1/√6).
-- MEDIUM-HIGH on 1-loop extensions (not closed here; flagged §5).
-
-**Revised Class #5 status:** The "matching gap" originally flagged as
-OUT OF SCOPE in Class #5 §0.4 (original) is now CLOSED on the retained
-tree-level surface via two independent paths. Class #5's Outcome D
-species-uniformity verdict is unchanged.
-
----
-
-## §7 Retention boundary and scope
-
-This note claims:
-
-> On the retained Cl(3) × Z³ canonical surface, the Ward theorem's
-> 4-fermion 1PI matrix element `y_t_bare = ⟨0 | H_unit | t̄ t⟩ = 1/√6`
-> matches the physical trilinear coupling `y_t_phys` at tree level,
-> via two independent algebraic paths: (i) the Clifford chirality
-> decomposition of Class #5 §0 (using the retained 4D Cl(4) γ₅ from
-> the anomaly-forced time theorem), and (ii) the Hubbard-Stratonovich
-> bilinear-source factorization documented here (§2), which is
-> equivalent to the direct effective-action argument in §3. The
-> matching coefficient 1/√6 is H_unit's defining normalization
-> constant (D17); both paths reduce to the arithmetic identity
-> `(1/√6) · √6 = 1` applied through HS rescaling + CG overlap or
-> through identical-operator evaluation. No new primitives required.
-
-It does **not** claim:
-
-- any 1-loop correction to the matching (flagged §5);
-- any modification of the retained Ward-identity tree-level theorem;
-- any modification of Class #5's Outcome D species-uniformity verdict;
-- any resolution of the m_b 33× empirical falsification (separate
-  open issue);
-- any new primitive beyond the retained D17 H_unit uniqueness and
-  the standard HS algebraic identity.
-
----
-
-## §8 Validation
-
-The runner `scripts/frontier_yt_ssb_matching_gap.py` emits deterministic
-PASS/FAIL lines and is logged under
-`logs/retained/yt_ssb_matching_gap_2026-04-18.log`. Checks:
-
-1. Retained framework constants: `N_c = 3, N_iso = 2, Z² = 6`.
-2. H_unit normalization `1/√(N_c · N_iso) = 1/√6` matches D17.
-3. Arithmetic identity `√(N_c · N_iso) = √N_c · √N_iso` (factorization).
-4. HS rescaling identity: `σ := √6 · H_unit` cancels H_unit's 1/√6.
-5. HS vertex coefficient: `V[H_unit, ψ̄ψ] = √6` on canonical surface.
-6. Effective trilinear coefficient: `g_Y / Z_H_unit = √6/√6 = 1`.
-7. CG overlap on unit-norm singlet: `⟨ψ̄ψ-component | singlet⟩ = 1/√6`.
-8. Physical trilinear matching: `y_t_phys = 1/√6`.
-9. Ward 4-fermion matching: `y_t_bare = 1/√6`.
-10. Equality: `y_t_phys = y_t_bare` (matching closed, machine precision).
-11. Path-A / Path-B agreement: both give 1/√6 (cross-check).
-12. Closing identity: `(1/√6) · √6 = 1` (tree-level matching).
-13. Outcome classification: matching closed; 33× m_b unchanged.
-
-**All 13 checks PASS on the retained canonical surface.**
-
----
-
-## §9 Cross-references
-
-- **Class #5 §0 amendment (Clifford chirality route):**
-  `docs/YT_CLASS_5_NON_QL_YUKAWA_VERTEX_NOTE_2026-04-18.md` §0.1–§0.5.
-- **Ward theorem (4-fermion 1PI on Q_L × Q_L\*):**
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` (D17 H_unit uniqueness,
-  Block 5, eq. T1).
-- **Composite-Higgs VEV and EWSB:**
-  `docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md` (additive CPT-even
-  scalar generator forcing `log|det(D+J)|`).
-- **Anomaly-forced time (4D Cl(4) γ₅):**
-  `docs/ANOMALY_FORCES_TIME_THEOREM.md`.
-- **m_b 33× falsification (unchanged):**
-  `docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`.
-- **Standard HS identity:** Hubbard (1959), Stratonovich (1957);
-  Itzykson-Zuber §10-3.
+- `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` - parent Ward/H_unit note.
+- `docs/YT_CLASS_5_NON_QL_YUKAWA_VERTEX_NOTE_2026-04-18.md` - separate
+  trilinear Clebsch-Gordan discussion, not certified by this note.
+- `docs/UNIT_SINGLET_OVERLAP_NARROW_THEOREM_NOTE_2026-05-02.md` - sibling
+  narrow arithmetic theorem with the same finite-dimensional overlap core.

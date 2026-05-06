@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 792 |
+| unaudited | 793 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
-| ~~audited_renaming~~ | 31 |
+| ~~audited_renaming~~ | 30 |
 | ~~audited_conditional~~ | 467 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
@@ -43,8 +43,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 20 |
-| `audited_renaming` | 31 |
-| `unaudited` | 841 |
+| `audited_renaming` | 30 |
+| `unaudited` | 842 |
 
 | claim_type | count |
 |---|---:|
@@ -70,7 +70,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 - runners classified: 1384
 - runners with (C) first-principles compute hits: 683
 - runners with (D) external comparator hits: 345
-- decoration candidates (no C, no D): 119
+- decoration candidates (no C, no D): 118
 
 ## Top 25 by load-bearing score (topology only)
 
@@ -1066,7 +1066,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_supermetric_normal_form_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `universal_gr_tensor_action_blocker_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `yt_color_projection_correction_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
-| `yt_ssb_matching_gap_analysis_note_2026-04-18` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 
 
 ## Audit findings (full)
@@ -14563,19 +14562,6 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **rationale:** The runner performs a substantive numerical scan, but it imports the load-bearing construction and thresholds from an unprovided upstream module, so the chain cannot close from the restricted packet alone. The stdout overstates the conclusion as an open basin and first escape statement: the code only shows no failure in a selected finite grid of perturbation modes and amplitudes. This supports a bounded computational claim only conditional on the upstream base definitions and on the scan family being the intended admissible universe.
 - **open / conditional deps cited:**
   - `scripts/frontier_yt_exact_schur_normal_form_uniqueness.py`
-- **auditor confidence:** high
-
-### `yt_ssb_matching_gap_analysis_note_2026-04-18`
-
-- **Note:** [`YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md`](../../docs/YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Bounded H_unit normalization arithmetic: two quantities defined as the same H_unit component overlap each evaluate to 1/sqrt(6). Excludes any retained matching theorem for the physical Yukawa trilinear; the SSB matching gap is not closed by identifying the Ward 4-fermion matrix element with the Qbar_L-H-u_R trilinear coefficient via a shared 1/sqrt(6) normalization without deriving HS/source normalization, SSB VEV division, chirality projection, LSZ/external-state normalization, and absence of extra factors.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `claude-opus-4.7-1m:cluster2-narrow-2026-05-02-yt-ssb-matching`  (claude-opus; independence=fresh_context)
-- **load-bearing step:** The Ward 4-fermion channel and the physical trilinear are both matrix elements of H_unit; they share the 1/sqrt(6) coefficient by construction.  _(class `F`)_
-- **chain closes:** False — The matching closure equates a Ward 4-fermion matrix element with a physical trilinear coefficient by declaring both share the H_unit normalization 1/sqrt(6); these are different Green-function/readout structures and the chain reduces to symbol identification.
-- **rationale:** Re-audit confirms the original renaming verdict: shared H_unit normalization is asserted, not derived from a tree-level operator-matching theorem. Scope narrowed from the migration backfill to the bounded H_unit arithmetic.
 - **auditor confidence:** high
 
 ### `yt_zero_import_chain_note`

@@ -17824,12 +17824,12 @@
       "assert_count": 0,
       "counts": {
         "A": 0,
-        "B": 1,
+        "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": true,
-      "dominant_class": "B",
+      "decoration_candidate": false,
+      "dominant_class": null,
       "runner": "scripts/frontier_yt_ssb_matching_gap.py"
     },
     "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17": {
@@ -34414,12 +34414,12 @@
       ],
       "counts": {
         "A": 0,
-        "B": 1,
+        "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": true,
-      "dominant_class": "B",
+      "decoration_candidate": false,
+      "dominant_class": null,
       "exists": true
     },
     "scripts/frontier_yt_uv_to_ir_transport_obstruction.py": {
@@ -38803,13 +38803,13 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 119,
+    "decoration_candidates": 118,
     "dominant_class_distribution": {
       "A": 12,
-      "B": 166,
+      "B": 165,
       "C": 574,
       "D": 212,
-      "none": 420
+      "none": 421
     },
     "runners_classified": 1384,
     "runners_with_C": 683,
