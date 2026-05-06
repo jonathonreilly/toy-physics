@@ -1,0 +1,30 @@
+loop_slug: radial-scaling-t4-domain-20260506
+target: retained
+mode: run
+cycle_count: 1
+active_route: finite_tangent_domain_repair
+actual_current_surface_status: proposed_retained
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+claim_id: radial_scaling_protected_angle_narrow_theorem_note_2026-05-02
+files_touched:
+  - docs/RADIAL_SCALING_PROTECTED_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md
+  - scripts/frontier_radial_scaling_protected_angle_narrow.py
+  - logs/runner-cache/frontier_radial_scaling_protected_angle_narrow.txt
+  - docs/audit/AUDIT_LEDGER.md
+  - docs/audit/AUDIT_QUEUE.md
+  - docs/audit/data/audit_ledger.json
+  - docs/audit/data/audit_queue.json
+  - docs/audit/data/auditor_reliability.json
+  - docs/audit/data/citation_graph.json
+  - docs/audit/data/effective_status_summary.json
+  - docs/publication/ci3_z3/DERIVATION_ATLAS_EFFECTIVE_STATUS.md
+  - docs/publication/ci3_z3/PUBLICATION_AUDIT_DIVERGENCE.md
+open_imports: []
+no_go_routes: []
+review_findings: []
+review_loop_disposition: pass
+runner_result: "PASS=13, FAIL=0"
+pr_status: blocked_git_metadata_outside_sandbox
+next_exact_action: "Commit and push from an environment with write access to /Users/jonBridger/Toy Physics/.git/worktrees, then open the review PR."
+stop_condition: "Source closure complete; independent audit remains."

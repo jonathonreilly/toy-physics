@@ -32,7 +32,7 @@ import sys
 
 try:
     import sympy
-    from sympy import Rational, sqrt, simplify, symbols, atan, sin, cos, pi, nsimplify
+    from sympy import Rational, sqrt, simplify, symbols, atan, sin, cos, pi, nsimplify, factor, fraction
 except ImportError:
     print("FAIL: sympy required for exact algebra")
     sys.exit(1)
@@ -135,10 +135,19 @@ beta_orig_tan = simplify(eta / (1 - rho))
 beta_bar_tan = simplify(eta_bar / (1 - rho_bar))
 beta_diff = simplify(beta_bar_tan - beta_orig_tan)
 beta_diff_expected = simplify(eta * (mu - 1) / ((1 - mu * rho) * (1 - rho)))
+beta_diff_factored = factor(beta_diff)
+beta_diff_num, beta_diff_den = fraction(beta_diff_factored)
+finite_tangent_denominator = (1 - mu * rho) * (1 - rho)
 
 check("tan(beta_bar) - tan(beta) factors as eta*(mu - 1)/((1 - mu*rho)*(1 - rho))",
       simplify(beta_diff - beta_diff_expected) == 0,
       detail=f"diff = {beta_diff}")
+check("T4 denominator is nonzero exactly under rho != 1 and mu*rho != 1",
+      simplify(beta_diff_den - finite_tangent_denominator) == 0,
+      detail=f"denominator = {beta_diff_den}")
+check("T4 finite-tangent equality reduces to eta*(mu - 1) = 0, hence mu = 1 since eta > 0",
+      simplify(beta_diff_num - eta * (mu - 1)) == 0 and simplify(beta_diff.subs(mu, 1)) == 0,
+      detail=f"numerator = {beta_diff_num}")
 note_text = (ROOT / "docs" / "RADIAL_SCALING_PROTECTED_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md").read_text()
 check("source note states finite-tangent exclusions rho != 1 and mu*rho != 1",
       "rho != 1" in note_text and "mu*rho != 1" in note_text,
@@ -207,6 +216,8 @@ print("""
     (v)   on the finite-tangent subdomain rho != 1 and mu*rho != 1, the
           angle at (1, 0), tan(beta_bar) = eta_bar / (1 - rho_bar), is
           NOT equal to tan(beta) = eta / (1 - rho) unless mu = 1
+          (the equality numerator is eta*(mu - 1) and the excluded
+          denominator is (1 - mu*rho)*(1 - rho))
           (counter-illustrates non-protection: only the origin-angle
           and radial distance behave canonically on the whole stated
           radial-scaling domain).

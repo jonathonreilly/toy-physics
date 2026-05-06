@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_radial_scaling_protected_angle_narrow.py
-runner_sha256: 906990b4bce12bb68a8d39cd3736a0456c72d9bc1c2f8874609dc8222cb91d34
+runner_sha256: 284191756cba6e56db6a04631a21364f2c6dceeb204835fd5e41f9e1c5ec0bd7
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.48
+elapsed_sec: 0.44
 status: ok
 ----- stdout -----
 
@@ -36,6 +36,8 @@ Part 4: radial distance scales as mu
 Part 5: angle at (1, 0) is NOT preserved on finite-tangent domain
 ----------------------------------------------------------------------------------------
   [PASS (A)] tan(beta_bar) - tan(beta) factors as eta*(mu - 1)/((1 - mu*rho)*(1 - rho))  (diff = eta*(mu - 1)/(mu*rho**2 - mu*rho - rho + 1))
+  [PASS (A)] T4 denominator is nonzero exactly under rho != 1 and mu*rho != 1  (denominator = (rho - 1)*(mu*rho - 1))
+  [PASS (A)] T4 finite-tangent equality reduces to eta*(mu - 1) = 0, hence mu = 1 since eta > 0  (numerator = eta*(mu - 1))
   [PASS (A)] source note states finite-tangent exclusions rho != 1 and mu*rho != 1  (domain guard is explicit in the theorem statement)
   [PASS (A)] tan(beta_bar) != tan(beta) at (rho, eta) = (1/6, sqrt(5)/6), mu = 99/100 (NOT protected)  (diff = -2*sqrt(5)/835)
 
@@ -69,6 +71,8 @@ Narrow theorem summary
     (v)   on the finite-tangent subdomain rho != 1 and mu*rho != 1, the
           angle at (1, 0), tan(beta_bar) = eta_bar / (1 - rho_bar), is
           NOT equal to tan(beta) = eta / (1 - rho) unless mu = 1
+          (the equality numerator is eta*(mu - 1) and the excluded
+          denominator is (1 - mu*rho)*(1 - rho))
           (counter-illustrates non-protection: only the origin-angle
           and radial distance behave canonically on the whole stated
           radial-scaling domain).
@@ -86,7 +90,7 @@ Narrow theorem summary
 
 
 ========================================================================================
-  TOTAL: PASS=11, FAIL=0
+  TOTAL: PASS=13, FAIL=0
 ========================================================================================
 
 ----- stderr -----

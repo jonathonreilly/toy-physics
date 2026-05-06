@@ -47852,7 +47852,7 @@
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "659c721b903772ac02ca6476593157fdd72e290a1fffa780cec7aca974c2f293",
+      "note_hash": "d76f243cdc07a5ca16e2909a864c0352168fb3f3bb057334fbc93552cd2aeef3",
       "path": "docs/RADIAL_SCALING_PROTECTED_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_radial_scaling_protected_angle_narrow.py",
       "title": "Radial-Scaling Protected-Angle Narrow Theorem"
