@@ -1,0 +1,36 @@
+loop_slug: mesoscopic-surrogate-threshold-2d-20260506
+target_note: docs/MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md
+target_claim_id: mesoscopic_surrogate_threshold_2d_note
+target_status: bounded-support
+actual_current_surface_status: bounded-support
+conditional_surface_status: null
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "Branch supplies a bounded finite-run evidence packet only; independent audit lane has not ratified it."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+cycle_count: 1
+active_route: runner-registration-and-cache
+hard_residual: "No missing theorem residual; auditor blocker was absent runner/source/stdout evidence."
+files_touched:
+  - docs/MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md
+  - scripts/mesoscopic_surrogate_threshold_2d.py
+  - logs/runner-cache/mesoscopic_surrogate_threshold_2d.txt
+  - docs/audit/AUDIT_LEDGER.md
+  - docs/audit/AUDIT_QUEUE.md
+  - docs/audit/data/audit_ledger.json
+  - docs/audit/data/audit_queue.json
+  - docs/audit/data/auditor_reliability.json
+  - docs/audit/data/citation_graph.json
+  - docs/audit/data/effective_status_summary.json
+  - docs/audit/data/runner_classification.json
+open_imports:
+  - "The 2D ordered-lattice generator is imported by code; the audited claim should be scoped to this runner-defined finite harness."
+no_go_routes: []
+review_findings:
+  - "Fixed: source note now declares Claim type bounded_theorem."
+  - "Fixed: note wording no longer implies an audit verdict before independent audit."
+pr_status: "not opened in this worker; outer science-fix loop owns commit/push/PR"
+next_exact_action: "Let the independent audit runner re-audit mesoscopic_surrogate_threshold_2d_note from the registered runner/cache packet."
+stop_condition: "Named target evidence packet supplied and local checks pass."

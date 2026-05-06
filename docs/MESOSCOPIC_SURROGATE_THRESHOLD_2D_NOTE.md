@@ -2,6 +2,15 @@
 
 **Date:** 2026-04-04 (status line rephrased 2026-04-28 per audit-lane verdict)
 **Status:** bounded control note; finite 2D support sweep found no sharp threshold in two-stage sourced-response stability and is not a persistent-mass or inertial-response theorem.
+**Claim type:** bounded_theorem
+
+## Artifact chain
+
+- Script: [`scripts/mesoscopic_surrogate_threshold_2d.py`](../scripts/mesoscopic_surrogate_threshold_2d.py)
+- Audit cache stdout:
+  [`logs/runner-cache/mesoscopic_surrogate_threshold_2d.txt`](../logs/runner-cache/mesoscopic_surrogate_threshold_2d.txt)
+- Frozen legacy log:
+  [`logs/2026-04-04-mesoscopic-surrogate-threshold-2d.txt`](../logs/2026-04-04-mesoscopic-surrogate-threshold-2d.txt)
 
 ## Question
 
@@ -19,21 +28,29 @@ breaks?
   - relative stage-1 / stage-2 ratio difference `<= 1%`
   - source carry `>= 0.99`
 
-Frozen log:
-
-- [`logs/2026-04-04-mesoscopic-surrogate-threshold-2d.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-threshold-2d.txt)
-
 ## Result
 
 Every scanned `topN` value stayed stable.
 
 The frozen rows show:
 
-- stage-1 and stage-2 sourced-response ratios are equal to printed precision
+- the runner recomputes every listed support row from the 2D ordered-lattice
+  harness
+- the maximum relative stage-1 / stage-2 sourced-response ratio difference is
+  `0.0066069`, below the `0.01` stability ceiling
 - the support carry stays at `1.000` across the scan
 - no support cutoff in the scanned range causes a stability collapse
 
 The smallest scanned support, `topN = 1`, is already stable.
+
+The current audit cache supplies the finite-computation packet with assertion
+gates:
+
+- `frozen_topN_support_list_scanned`
+- `all_scanned_topN_stable`
+- `stage_ratio_relative_error_within_one_percent`
+- `support_carry_floor`
+- `no_sharp_collapse_in_scanned_range`
 
 ## Safe read
 

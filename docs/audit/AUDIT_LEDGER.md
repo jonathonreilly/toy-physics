@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 803 |
+| unaudited | 804 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
 | ~~audited_conditional~~ | 462 |
-| ~~audited_failed~~ | 11 |
+| ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_hierarchy_matsubara_decomposition_note` | 1 |
@@ -41,10 +41,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 374 |
 | `audited_conditional` | 462 |
 | `audited_decoration` | 9 |
-| `audited_failed` | 55 |
+| `audited_failed` | 54 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 852 |
+| `unaudited` | 853 |
 
 | claim_type | count |
 |---|---:|
@@ -67,7 +67,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1388
+- runners classified: 1389
 - runners with (C) first-principles compute hits: 684
 - runners with (D) external comparator hits: 345
 - decoration candidates (no C, no D): 120
@@ -983,7 +983,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | A | - |
 | `lattice_3d_dense_spent_delay_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `lattice_nn_deterministic_rescale_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | C | - |
-| `mesoscopic_surrogate_threshold_2d_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | C | - |
 | `moonshot_other_testables_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `nonlinear_born_gravity_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | G | - |
 | `portable_card_extension_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
@@ -8932,19 +8931,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the table and safe read are consistent with the cited frozen log, but there is no primary runner registered for this note. Why this blocks: the audit lane cannot verify that the localization-family sweep still reproduces the reported score/capture tradeoff or classify its load-bearing checks from a current run. Repair target: restore or register the sweep runner that produced the log and emit classified PASS lines for top-N baseline, degenerate point-source exclusions, non-degenerate localized rows, and the broad-control comparison. Claim boundary until fixed: this is a bounded frozen-log summary, not a fully auditable current localization result.
 - **open / conditional deps cited:**
   - `logs/2026-04-04-mesoscopic-surrogate-localization-family-sweep.txt`
-- **auditor confidence:** high
-
-### `mesoscopic_surrogate_threshold_2d_note`
-
-- **Note:** [`MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** A bounded finite 2D ordered-lattice support sweep over the listed topN values found no sharp collapse of the two-stage sourced-response stability criterion.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-mesoscopic_surrogate_thr-253`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Every scanned topN value stayed stable, with stage-1 and stage-2 sourced-response ratios equal to printed precision and support carry 1.000 across the scan.  _(class `C`)_
-- **chain closes:** False — The conclusion depends on a finite computational sweep, but the restricted packet provides no runner output, no runner source, and not the cited frozen log contents. The missing step is an inspectable completed computation or certificate showing the listed topN rows satisfy the stated criteria.
-- **rationale:** The note makes a bounded and appropriately scoped claim, not a persistent-mass or inertial-response theorem. However, its load-bearing evidence is the asserted support sweep, and that evidence is not included in the restricted packet except as prose summary. With no cited authority, no stdout, no runner source, and no log contents, the audit cannot verify that the finite sweep was actually computed or satisfied the thresholds.
 - **auditor confidence:** high
 
 ### `minimal_absorbing_horizon_probe_note`

@@ -10296,6 +10296,18 @@
       "dominant_class": null,
       "runner": "scripts/mesoscopic_surrogate_source_2d.py"
     },
+    "mesoscopic_surrogate_threshold_2d_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/mesoscopic_surrogate_threshold_2d.py"
+    },
     "mesoscopic_surrogate_two_stage_2d_note": {
       "assert_count": 0,
       "counts": {
@@ -36272,6 +36284,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/mesoscopic_surrogate_threshold_2d.py": {
+      "assert_count": 1,
+      "claims": [
+        "mesoscopic_surrogate_threshold_2d_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/mesoscopic_surrogate_two_stage_2d.py": {
       "assert_count": 0,
       "claims": [
@@ -38904,9 +38931,9 @@
       "B": 166,
       "C": 574,
       "D": 212,
-      "none": 422
+      "none": 423
     },
-    "runners_classified": 1388,
+    "runners_classified": 1389,
     "runners_with_C": 684,
     "runners_with_D": 345
   }
