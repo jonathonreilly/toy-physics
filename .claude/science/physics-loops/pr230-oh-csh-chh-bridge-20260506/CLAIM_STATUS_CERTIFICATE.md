@@ -1,7 +1,7 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: open / first-principles O_H bridge positive-candidate portfolio with scalar reparam gate, exact two-source taste-radial chart and action-source support, bounded two-source C_sx/C_xx row-contract support, bounded two-source row-production manifest support, bounded row-wave launcher support, completed chunks001-002 with completed-mode checkpoints, chunks003-004 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, FMS post-degree action-first composite-O_H route rescore, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional lazy-Z3 primitive support, H1 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and FH/LSZ L12 bounded-support postprocess refresh recorded
+actual_current_surface_status: open / first-principles O_H bridge positive-candidate portfolio with scalar reparam gate, exact two-source taste-radial chart and action-source support, bounded two-source C_sx/C_xx row-contract support, bounded two-source row-production manifest support, bounded row-wave launcher support, completed chunks001-002 with completed-mode checkpoints, chunks003-004 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, FMS post-degree action-first composite-O_H route rescore, conditional FMS composite-O_H theorem, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional lazy-Z3 primitive support, H1 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and FH/LSZ L12 bounded-support postprocess refresh recorded
 conditional_surface_status: conditional-support if the two-source taste-radial source is promoted by production C_sx/C_xx rows plus canonical-O_H/source-overlap identity, or if certified O_H/C_sH/C_HH rows, W/Z response rows with strict g2/covariance/delta_perp, Schur A/B/C rows, or same-surface neutral primitive-cone transfer lands
 hypothetical_axiom_status: null
 admitted_observation_status: null
@@ -33,6 +33,11 @@ physical-response bridge.
 The FMS post-degree route rescore selects action-first gauge-invariant
 composite `O_H` rows as the cleanest next non-chunk artifact, but FMS/lattice
 literature is route guidance only and not current PR230 proof authority.
+The FMS composite-`O_H` conditional theorem derives the exact
+`Phi^dagger Phi` expansion for that future route: `O_H = v h + h^2/2 +
+pi^2/2`, with one-pole residue `v^2 Z_h`.  It remains support only because the
+same-surface EW/Higgs action, nonzero `v`, canonical LSZ normalization,
+`C_sH/C_HH` pole rows, and Gram/FV/IR checks are still absent.
 The route-completion artifacts are scoped current-surface boundaries; they
 preserve first-principles reopen routes after a same-surface row, certificate,
 or theorem is supplied.  The `origin/main` composite-Higgs packet remains

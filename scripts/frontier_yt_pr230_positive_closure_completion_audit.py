@@ -38,6 +38,7 @@ PARENTS = {
     "taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
     "degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
     "fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
+    "fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
@@ -369,6 +370,28 @@ def main() -> int:
         ).get("used_literature_as_proof_authority")
         is False
     )
+    fms_composite_oh_conditional_support_not_closure = (
+        "FMS composite O_H theorem"
+        in parent_statuses["fms_composite_oh_conditional_theorem"]
+        and certs["fms_composite_oh_conditional_theorem"].get("proposal_allowed")
+        is False
+        and certs["fms_composite_oh_conditional_theorem"].get(
+            "fms_composite_oh_conditional_theorem_passed"
+        )
+        is True
+        and certs["fms_composite_oh_conditional_theorem"].get(
+            "current_closure_authority_present"
+        )
+        is False
+        and certs["fms_composite_oh_conditional_theorem"].get(
+            "same_surface_action_absent"
+        )
+        is True
+        and certs["fms_composite_oh_conditional_theorem"].get(
+            "source_higgs_rows_absent"
+        )
+        is True
+    )
     origin_main_composite_higgs_not_closure = (
         certs["origin_main_composite_higgs_intake_guard"].get(
             "origin_main_composite_higgs_intake_guard_passed"
@@ -500,6 +523,7 @@ def main() -> int:
     report("taste-radial-canonical-oh-selector-blocks-symmetry-shortcut", taste_radial_canonical_oh_selector_blocks_symmetry_shortcut, parent_statuses["taste_radial_canonical_oh_selector_gate"])
     report("degree-one-higgs-action-premise-not-derived", degree_one_higgs_action_premise_not_derived, parent_statuses["degree_one_higgs_action_premise_gate"])
     report("fms-post-degree-route-rescore-support-not-closure", fms_post_degree_route_support_not_closure, parent_statuses["fms_post_degree_route_rescore"])
+    report("fms-composite-oh-conditional-support-not-closure", fms_composite_oh_conditional_support_not_closure, parent_statuses["fms_composite_oh_conditional_theorem"])
     report("origin-main-composite-higgs-intake-not-closure", origin_main_composite_higgs_not_closure, parent_statuses["origin_main_composite_higgs_intake_guard"])
     report("origin-main-ew-m-residual-intake-not-closure", origin_main_ew_m_residual_not_closure, parent_statuses["origin_main_ew_m_residual_intake_guard"])
     report("z3-triplet-conditional-primitive-support-not-closure", z3_triplet_conditional_primitive_not_closure, parent_statuses["z3_triplet_conditional_primitive_cone"])
@@ -648,6 +672,7 @@ def main() -> int:
             "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
             "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
             "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
+            "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
             "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
             "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,
             "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,

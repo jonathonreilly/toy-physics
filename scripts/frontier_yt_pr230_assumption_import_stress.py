@@ -173,6 +173,9 @@ def main() -> int:
         "fms_post_degree_route_rescore": load(
             "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json"
         ),
+        "fms_composite_oh_conditional_theorem": load(
+            "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json"
+        ),
         "action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -964,6 +967,28 @@ def main() -> int:
         is False,
         fms_post_degree.get("actual_current_surface_status"),
     )
+    fms_composite = certificates["fms_composite_oh_conditional_theorem"]
+    report(
+        "fms-composite-oh-conditional-theorem-support-not-proof",
+        "FMS composite O_H theorem"
+        in str(fms_composite.get("actual_current_surface_status"))
+        and fms_composite.get("proposal_allowed") is False
+        and fms_composite.get("fms_composite_oh_conditional_theorem_passed")
+        is True
+        and fms_composite.get("current_closure_authority_present") is False
+        and fms_composite.get("same_surface_action_absent") is True
+        and fms_composite.get("canonical_oh_absent") is True
+        and fms_composite.get("source_higgs_rows_absent") is True
+        and fms_composite.get("forbidden_firewall", {}).get(
+            "used_literature_as_proof_authority"
+        )
+        is False
+        and fms_composite.get("forbidden_firewall", {}).get(
+            "set_kappa_s_equal_one"
+        )
+        is False,
+        fms_composite.get("actual_current_surface_status"),
+    )
     action_first_completion = certificates["action_first_route_completion"]
     report(
         "action-first-route-current-surface-closed",
@@ -1154,7 +1179,11 @@ def main() -> int:
             "trace-zero invariant taste algebra.  The degree-one Higgs-action "
             "premise gate blocks the next shortcut too: degree-one filtering "
             "selects E1, but current PR230 artifacts do not authorize using "
-            "degree as canonical O_H identity.  "
+            "degree as canonical O_H identity.  The FMS composite-O_H "
+            "conditional theorem derives the correct operator expansion "
+            "`O_H = v h + h^2/2 + pi^2/2` and its pole-residue scaling, but "
+            "keeps it conditional on a same-surface EW/Higgs action, canonical "
+            "LSZ normalization, and C_sH/C_HH pole rows.  "
             "Positive closure still requires "
             "production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
@@ -1189,6 +1218,7 @@ def main() -> int:
             "does not treat the two-source taste-radial row contract as production C_sx/C_xx rows or pole evidence",
             "does not treat the two-source taste-radial production manifest as row data or pole evidence",
             "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
+            "does not treat the FMS composite expansion as PR230 closure before same-surface EW/Higgs action and C_sH/C_HH rows exist",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

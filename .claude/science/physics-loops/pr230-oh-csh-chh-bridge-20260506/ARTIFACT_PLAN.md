@@ -22,6 +22,9 @@ This block lands:
 - an executable taste-radial canonical-`O_H` selector gate that proves
   degree-one Z3 radial uniqueness while blocking symmetry-only canonical
   `O_H` selection from the full trace-zero cyclic taste algebra;
+- an executable FMS composite-`O_H` conditional theorem that derives the
+  `Phi^dagger Phi` radial expansion and pole-residue scaling while preserving
+  the missing same-surface action/source-overlap firewall;
 - a refreshed FH/LSZ production postprocess gate that recognizes completed L12
   chunked support while preserving all no-closure firewalls;
 - a paired JSON certificate;

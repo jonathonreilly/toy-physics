@@ -1,9 +1,9 @@
 loop_slug: pr230-oh-csh-chh-bridge-20260506
 branch: physics-loop/pr230-oh-csh-chh-bridge-20260506
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
-active_route: fms_post_degree_route_rescore
+active_route: fms_composite_oh_conditional_theorem
 target_status: best-honest-status
-actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-002 with completed-mode checkpoints, chunks003-004 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
+actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-002 with completed-mode checkpoints, chunks003-004 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
 proposal_allowed: false
 bare_retained_allowed: false
 hard_residual: >
@@ -64,6 +64,12 @@ hard_residual: >
   literature do not supply the missing same-surface EW/Higgs action, canonical
   O_H certificate, source-Higgs rows, Gram-purity certificate, or scalar-LSZ
   normalization.
+  The FMS composite O_H conditional theorem now derives the exact local bridge
+  for a future same-surface gauge-Higgs action: with
+  Phi^dagger Phi=((v+h)^2+pi^2)/2, the centered composite has linear term
+  v h and pole residue v^2 Z_h.  This sharpens the route but does not close it:
+  v, Z_h, the same-surface action, the source-overlap row C_sH, C_HH pole
+  rows, and Gram/FV/IR checks remain load-bearing.
 files_touched:
   - scripts/frontier_yt_pr230_taste_condensate_oh_bridge_audit.py
   - scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py
@@ -94,6 +100,7 @@ files_touched:
   - scripts/frontier_yt_pr230_taste_radial_canonical_oh_selector_gate.py
   - scripts/frontier_yt_pr230_degree_one_higgs_action_premise_gate.py
   - scripts/frontier_yt_pr230_fms_post_degree_route_rescore.py
+  - scripts/frontier_yt_pr230_fms_composite_oh_conditional_theorem.py
   - scripts/yt_direct_lattice_correlator_production.py
   - scripts/frontier_yt_fh_lsz_production_postprocess_gate.py
   - scripts/frontier_yt_pr230_positive_closure_completion_audit.py
@@ -122,6 +129,7 @@ files_touched:
   - docs/YT_PR230_TASTE_RADIAL_CANONICAL_OH_SELECTOR_GATE_NOTE_2026-05-06.md
   - docs/YT_PR230_DEGREE_ONE_HIGGS_ACTION_PREMISE_GATE_NOTE_2026-05-06.md
   - docs/YT_PR230_FMS_POST_DEGREE_ROUTE_RESCORE_NOTE_2026-05-06.md
+  - docs/YT_PR230_FMS_COMPOSITE_OH_CONDITIONAL_THEOREM_NOTE_2026-05-06.md
   - docs/YT_FH_LSZ_PRODUCTION_POSTPROCESS_GATE_NOTE_2026-05-01.md
   - outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json
   - outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json
@@ -138,6 +146,7 @@ files_touched:
   - outputs/yt_pr230_schur_route_completion_2026-05-06.json
   - outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json
   - outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json
+  - outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json
   - outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json
   - outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json
   - outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json

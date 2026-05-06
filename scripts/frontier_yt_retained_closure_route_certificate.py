@@ -164,6 +164,7 @@ def main() -> int:
         "pr230_taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
         "pr230_degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
         "pr230_fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
+        "pr230_fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
         "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
         "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
         "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
@@ -1485,6 +1486,32 @@ def main() -> int:
             "forbidden_firewall", {}
         ).get("used_degree_or_odd_parity_as_oh_authority")
         is False
+    )
+    fms_composite_oh_conditional_support_not_closure = (
+        "FMS composite O_H theorem"
+        in certificates["pr230_fms_composite_oh_conditional_theorem"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_fms_composite_oh_conditional_theorem"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_fms_composite_oh_conditional_theorem"].get(
+            "fms_composite_oh_conditional_theorem_passed"
+        )
+        is True
+        and certificates["pr230_fms_composite_oh_conditional_theorem"].get(
+            "current_closure_authority_present"
+        )
+        is False
+        and certificates["pr230_fms_composite_oh_conditional_theorem"].get(
+            "same_surface_action_absent"
+        )
+        is True
+        and certificates["pr230_fms_composite_oh_conditional_theorem"].get(
+            "source_higgs_rows_absent"
+        )
+        is True
     )
     two_source_taste_radial_chunk001_checkpoint_not_closure = (
         "two-source taste-radial chunk001"
@@ -4027,6 +4054,13 @@ def main() -> int:
         ),
     )
     report(
+        "fms-composite-oh-conditional-support-not-closure",
+        fms_composite_oh_conditional_support_not_closure,
+        certificates["pr230_fms_composite_oh_conditional_theorem"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "two-source-taste-radial-chunk001-checkpoint-not-closure",
         two_source_taste_radial_chunk001_checkpoint_not_closure,
         certificates["pr230_two_source_taste_radial_chunk001_checkpoint"].get(
@@ -5430,6 +5464,7 @@ def main() -> int:
         "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
         "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
+        "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
         "two_source_taste_radial_chunk001_checkpoint_not_closure": two_source_taste_radial_chunk001_checkpoint_not_closure,
         "two_source_taste_radial_chunk002_checkpoint_not_closure": two_source_taste_radial_chunk002_checkpoint_not_closure,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,

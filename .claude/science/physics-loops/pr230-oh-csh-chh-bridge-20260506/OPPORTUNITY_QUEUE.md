@@ -4,8 +4,10 @@
    canonical `O_H` certificate, followed by source-Higgs `C_ss/C_sH/C_HH`
    pole rows and Gram-purity/scalar-LSZ/FV/IR gates.  The FMS post-degree
    rescore selects this as the cleanest non-chunk artifact after the degree
-   shortcut failed.  FMS/lattice literature is route guidance only, not PR230
-   proof authority.
+   shortcut failed.  The FMS composite-`O_H` conditional theorem now derives
+   the local `Phi^dagger Phi` bridge for this future route, but the same-
+   surface action, `v`, LSZ normalization, and pole rows are still missing.
+   FMS/lattice literature is route guidance only, not PR230 proof authority.
 2. Genuine two-source source-coordinate transport theorem from the uniform mass
    source to canonical Higgs/taste radial source; scalar reparametrization of
    the current source line is blocked.  The exact two-source taste-radial chart

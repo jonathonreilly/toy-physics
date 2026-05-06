@@ -1,0 +1,121 @@
+{
+  "actual_current_surface_status": "conditional-support / FMS composite O_H theorem; current PR230 surface lacks same-surface EW/Higgs action and source-overlap pole rows",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "canonical_oh_absent": true,
+  "conditional_surface_status": "exact-support if a future PR230 same-surface EW/Higgs action supplies a dynamic Higgs doublet Phi, nonzero radial background v, canonical Higgs LSZ normalization, and C_ss/C_sH/C_HH pole rows",
+  "current_closure_authority_present": false,
+  "fail_count": 0,
+  "fms_composite_oh_conditional_theorem_passed": true,
+  "fms_expansion": {
+    "centered_composite": "O_H = v h + h^2/2 + pi^a pi^a/2",
+    "convention": "Phi^dagger Phi = ((v+h)^2 + pi^a pi^a)/2",
+    "one_particle_pole_residue_map": "Res C_OH,OH = v^2 Z_h at the isolated Higgs pole",
+    "sample": {
+      "centered_composite": 0.4140625,
+      "d2O_dh2": 1.0,
+      "d2O_dpi_a2": 1.0,
+      "dO_dh_at_origin": 3.0,
+      "dO_dpi_a_at_origin": 0.0,
+      "h": 0.125,
+      "pi2": 0.0625,
+      "v": 3.0
+    }
+  },
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "defined_oh_by_name_only": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_degree_or_odd_parity_as_oh_authority": false,
+    "used_hunit_as_operator": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_literature_as_proof_authority": false,
+    "used_observed_targets_as_selectors": false,
+    "used_taste_radial_axis_as_canonical_oh": false,
+    "used_yt_ward_identity": false
+  },
+  "future_file_presence": {
+    "canonical_oh_certificate": false,
+    "same_source_ew_action_legacy": false,
+    "same_source_ew_higgs_action": false,
+    "source_higgs_production_certificate": false,
+    "source_higgs_rows": false,
+    "taste_radial_combined_rows": false
+  },
+  "hypothetical_axiom_status": null,
+  "parent_certificates": {
+    "action_first_oh_attempt": "outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json",
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
+    "fms_oh_construction_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
+    "fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
+    "full_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_ew_action_builder": "outputs/yt_wz_same_source_ew_action_certificate_builder_2026-05-04.json",
+    "same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json"
+  },
+  "parent_statuses": {
+    "action_first_oh_attempt": "exact negative boundary / action-first O_H artifact not constructible from current PR230 surface",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "degree_one_higgs_action_premise_gate": "exact negative boundary / degree-one Higgs-action premise not derived on the current PR230 surface",
+    "fms_oh_construction_attempt": "exact negative boundary / FMS O_H certificate construction blocked on current PR230 surface",
+    "fms_post_degree_route_rescore": "bounded-support / FMS post-degree route rescore; action-first composite O_H route selected as cleanest future artifact, no current closure",
+    "full_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "retained_route": "open / retained closure not yet reached",
+    "same_source_ew_action_builder": "open / same-source EW action certificate absent",
+    "same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface",
+    "source_higgs_builder": "open / source-Higgs cross-correlator rows absent",
+    "source_higgs_gram": "open / source-Higgs Gram purity gate not passed",
+    "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate"
+  },
+  "pass_count": 15,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The FMS composite expansion derives a real operator bridge only after the same-surface EW/Higgs action and h-source exist.  The current PR230 branch has neither that action nor canonical O_H/source-overlap pole rows, so this is support for the next artifact, not closure.",
+  "remaining_load_bearing_inputs": [
+    "same-surface EW/Higgs action with dynamic Phi on Cl(3)/Z^3",
+    "nonzero radial background and canonical Higgs LSZ normalization",
+    "canonical/gauge-invariant composite O_H certificate",
+    "same-ensemble C_ss/C_sH/C_HH pole rows or an equivalent source-overlap theorem",
+    "finite-volume/IR/isolated-pole and Gram-purity checks"
+  ],
+  "residue_counterfamily": {
+    "lesson": "Composite O_H does not by itself certify the PR230 source overlap; C_sH or a source-coordinate theorem remains load-bearing.",
+    "mixed_source_same_Css_CHH_different_CsH": {
+      "Res_C_HH": 18.0,
+      "Res_C_sH": 9.0,
+      "Res_C_ss": 18.0,
+      "gram_determinant": 243.0,
+      "gram_purity": false,
+      "normalization_factor_is_v_sqrt_Zh_not_one": true,
+      "rho_sH": 0.5
+    },
+    "pure_source": {
+      "Res_C_HH": 18.0,
+      "Res_C_sH": 18.0,
+      "Res_C_ss": 18.0,
+      "gram_determinant": 0.0,
+      "gram_purity": true,
+      "normalization_factor_is_v_sqrt_Zh_not_one": true,
+      "rho_sH": 1.0
+    }
+  },
+  "same_surface_action_absent": true,
+  "source_higgs_rows_absent": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not use FMS literature as proof authority",
+    "does not identify the current taste-radial source with canonical O_H",
+    "does not treat finite C_sx/C_xx rows as C_sH/C_HH pole evidence",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ]
+}

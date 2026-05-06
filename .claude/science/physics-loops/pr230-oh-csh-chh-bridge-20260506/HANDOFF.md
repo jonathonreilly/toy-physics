@@ -159,6 +159,14 @@ surface still needs a same-source EW/Higgs action, canonical/composite `O_H`
 certificate, source-Higgs pole rows, Gram-purity, and scalar-LSZ/FV/IR
 authority.
 
+The FMS composite-`O_H` conditional theorem now gives the exact future bridge
+inside that route.  If a same-surface EW/Higgs action supplies a dynamic
+doublet with `Phi^dagger Phi=((v+h)^2+pi^2)/2`, then the centered composite is
+`v h + h^2/2 + pi^2/2` and has one-Higgs pole residue `v^2 Z_h`.  This
+sharpens the missing artifact but does not close PR230: the action, nonzero
+`v`, canonical LSZ normalization, `C_sH/C_HH` pole rows, and Gram/FV/IR
+authority are still absent.
+
 Chunks001-002 of the two-source taste-radial production wave have completed.
 The completed-mode chunk checkpoint now passes `PASS=15 FAIL=0` for both
 chunks, including production metadata, `numba_gauge_seed_v1`, the preserved
@@ -179,7 +187,8 @@ Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then
    run source-Higgs pole rows; this is now the cleanest non-chunk route after
-   the FMS post-degree rescore, but FMS literature is route guidance only;
+   the FMS post-degree rescore and composite-expansion theorem, but FMS
+   literature and the conditional expansion are route support only;
 2. launch production `C_sx/C_xx` rows for the exact two-source taste-radial
    source using the no-resume manifest and row contract; chunks001-002 are
    complete and checkpointed, chunks003-004 are active under the two-worker

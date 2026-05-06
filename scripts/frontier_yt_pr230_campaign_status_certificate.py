@@ -629,6 +629,9 @@ def main() -> int:
         "pr230_fms_post_degree_route_rescore": load(
             "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json"
         ),
+        "pr230_fms_composite_oh_conditional_theorem": load(
+            "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json"
+        ),
         "pr230_action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -2681,6 +2684,28 @@ def main() -> int:
         is False,
         statuses["pr230_fms_post_degree_route_rescore"],
     )
+    fms_composite_oh_conditional_theorem = certificates[
+        "pr230_fms_composite_oh_conditional_theorem"
+    ]
+    report(
+        "pr230-fms-composite-oh-conditional-support-not-proof",
+        "FMS composite O_H theorem"
+        in str(statuses["pr230_fms_composite_oh_conditional_theorem"])
+        and fms_composite_oh_conditional_theorem.get("proposal_allowed") is False
+        and fms_composite_oh_conditional_theorem.get(
+            "fms_composite_oh_conditional_theorem_passed"
+        )
+        is True
+        and fms_composite_oh_conditional_theorem.get(
+            "current_closure_authority_present"
+        )
+        is False
+        and fms_composite_oh_conditional_theorem.get("same_surface_action_absent")
+        is True
+        and fms_composite_oh_conditional_theorem.get("source_higgs_rows_absent")
+        is True,
+        statuses["pr230_fms_composite_oh_conditional_theorem"],
+    )
     two_source_chunk001 = certificates[
         "pr230_two_source_taste_radial_chunk001_checkpoint"
     ]
@@ -4450,6 +4475,21 @@ def main() -> int:
             "used_degree_or_odd_parity_as_oh_authority"
         )
         is False
+    )
+    result["fms_composite_oh_conditional_support_not_proof"] = (
+        fms_composite_oh_conditional_theorem.get(
+            "fms_composite_oh_conditional_theorem_passed"
+        )
+        is True
+        and fms_composite_oh_conditional_theorem.get("proposal_allowed") is False
+        and fms_composite_oh_conditional_theorem.get(
+            "current_closure_authority_present"
+        )
+        is False
+        and fms_composite_oh_conditional_theorem.get("same_surface_action_absent")
+        is True
+        and fms_composite_oh_conditional_theorem.get("source_higgs_rows_absent")
+        is True
     )
     result["two_source_taste_radial_chunk001_checkpoint_not_closure"] = (
         two_source_chunk001.get("checkpoint_passed") is True

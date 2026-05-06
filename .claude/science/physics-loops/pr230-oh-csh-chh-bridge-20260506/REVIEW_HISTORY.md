@@ -46,6 +46,8 @@ Local verification completed:
 - `frontier_yt_pr230_degree_one_higgs_action_premise_gate.py`: PASS=15
   FAIL=0;
 - `frontier_yt_pr230_fms_post_degree_route_rescore.py`: PASS=11 FAIL=0;
+- `frontier_yt_pr230_fms_composite_oh_conditional_theorem.py`: PASS=15
+  FAIL=0;
 - `frontier_yt_pr230_two_source_taste_radial_chart_certificate.py`: PASS=22
   FAIL=0 after accepting the support-only action certificate;
 - `frontier_yt_fh_lsz_production_postprocess_gate.py`: PASS=12 FAIL=0;
@@ -54,15 +56,17 @@ Local verification completed:
 - `frontier_yt_pr230_taste_condensate_oh_bridge_audit.py`: PASS=21 FAIL=0;
 - `frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py`:
   PASS=16 FAIL=0;
-- `frontier_yt_pr230_assumption_import_stress.py`: PASS=63 FAIL=0;
-- `frontier_yt_pr230_full_positive_closure_assembly_gate.py`: PASS=123
+- `frontier_yt_pr230_assumption_import_stress.py`: PASS=64 FAIL=0;
+- `frontier_yt_pr230_full_positive_closure_assembly_gate.py`: PASS=124
   FAIL=0;
-- `frontier_yt_retained_closure_route_certificate.py`: PASS=271 FAIL=0;
-- `frontier_yt_pr230_campaign_status_certificate.py`: PASS=301 FAIL=0;
-- `frontier_yt_pr230_positive_closure_completion_audit.py`: PASS=37 FAIL=0;
+- `frontier_yt_retained_closure_route_certificate.py`: PASS=272 FAIL=0;
+- `frontier_yt_pr230_campaign_status_certificate.py`: PASS=302 FAIL=0;
+- `frontier_yt_pr230_positive_closure_completion_audit.py`: PASS=38 FAIL=0;
 - `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
-  metadata intentionally regenerated for the FMS post-degree route-rescore note
-  and updated two-source chunk-checkpoint note hash;
+  metadata intentionally regenerated for the FMS composite-`O_H` conditional
+  theorem note, the FMS post-degree route-rescore note, and updated PR230
+  aggregate note hashes;
 - `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
   pre-existing warnings;
 - `git diff --check`: clean.
+- conflict-marker scan for `<<<<<<<`/`>>>>>>>`: clean.

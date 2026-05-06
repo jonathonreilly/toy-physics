@@ -79,6 +79,11 @@ Allowed context:
   literature is route guidance only, not PR230 proof authority, and it does
   not supply the same-surface EW/Higgs action, canonical `O_H`, source-Higgs
   rows, or Gram-purity certificate.
+- the FMS composite-`O_H` conditional theorem as exact route support only:
+  given a future same-surface gauge-Higgs action with
+  `Phi^dagger Phi=((v+h)^2+pi^2)/2`, it derives the linear `v h` component and
+  pole-residue scaling `v^2 Z_h`, but it does not supply the action, `v`,
+  `Z_h`, source-overlap row `C_sH`, `C_HH` pole rows, or Gram/FV/IR authority.
 
 Open imports after this block:
 
@@ -100,6 +105,8 @@ Open imports after this block:
 - Action-first O_H/C_sH/C_HH route completion is a current-surface boundary,
   not a global theorem against the future FMS route.
 - action-first O_H/C_sH/C_HH is not proof selectors until same-source EW/Higgs action, canonical O_H, source-Higgs rows, and Gram-purity certificate exist.
+- FMS composite `Phi^dagger Phi` expansion is not a proof selector until the
+  same-surface EW/Higgs action and source-Higgs pole rows exist on PR230.
 - W/Z same-source response route completion is a current-surface boundary, not
   a global theorem against the future physical-response bypass.
 - W/Z same-source response is not proof selectors until same-source EW action, W/Z response rows, matched covariance, strict g2, and delta_perp control exist.

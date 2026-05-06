@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T16:06:42.492857+00:00",
+  "generated_at": "2026-05-06T16:51:14.651098+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42038,6 +42038,16 @@
       "runner_path": "scripts/frontier_yt_pr230_exact_tensor_schur_row_feasibility_attempt.py",
       "title": "PR230 Exact Tensor Schur Row Feasibility Attempt"
     },
+    "yt_pr230_fms_composite_oh_conditional_theorem_note_2026-05-06": {
+      "claim_id": "yt_pr230_fms_composite_oh_conditional_theorem_note_2026-05-06",
+      "current_status": "support",
+      "current_status_raw": "conditional-support / FMS composite `O_H` theorem; current PR230",
+      "deps": [],
+      "note_hash": "a95fea38e78220bbfcc0207feefa82762accb4a140645095870e700d315038d3",
+      "path": "docs/YT_PR230_FMS_COMPOSITE_OH_CONDITIONAL_THEOREM_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_fms_composite_oh_conditional_theorem.py",
+      "title": "PR230 FMS Composite `O_H` Conditional Theorem"
+    },
     "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06": {
       "claim_id": "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06",
       "current_status": "bounded",
@@ -45510,6 +45520,7 @@
     "yt_pr230_derived_bridge_rank_one_closure_attempt_note_2026-05-05",
     "yt_pr230_det_positivity_bridge_intake_gate_note_2026-05-05",
     "yt_pr230_exact_tensor_schur_row_feasibility_attempt_note_2026-05-05",
+    "yt_pr230_fms_composite_oh_conditional_theorem_note_2026-05-06",
     "yt_pr230_fms_post_degree_route_rescore_note_2026-05-06",
     "yt_pr230_fresh_artifact_literature_route_review_note_2026-05-05",
     "yt_pr230_full_positive_closure_assembly_gate_note_2026-05-04",
@@ -45708,16 +45719,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1096,
-    "node_count": 2049,
-    "root_count": 1562,
-    "runners_with_path": 1545,
+    "leaf_count": 1097,
+    "node_count": 2050,
+    "root_count": 1563,
+    "runners_with_path": 1546,
     "status_counts": {
       "bounded": 561,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 439,
+      "support": 440,
       "unknown": 573
     }
   }
