@@ -5221,6 +5221,14 @@
       "to": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18"
     },
     {
+      "from": "dm_selector_first_shoulder_exit_threshold_support_note_2026-04-21",
+      "to": "dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18"
+    },
+    {
+      "from": "dm_selector_first_shoulder_exit_threshold_support_note_2026-04-21",
+      "to": "dm_selector_threshold_stabilization_support_theorem_note_2026-04-21"
+    },
+    {
       "from": "dm_selector_relative_action_recovered_branch_separation_support_theorem_note_2026-04-21",
       "to": "dm_leptogenesis_pmns_observable_relative_action_law_note_2026-04-16"
     },
@@ -34011,8 +34019,11 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
-      "deps": [],
-      "note_hash": "27974cf3d96605b26780884d27790446e927cdb5282711864c3e1b895b8cd745",
+      "deps": [
+        "dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18",
+        "dm_selector_threshold_stabilization_support_theorem_note_2026-04-21"
+      ],
+      "note_hash": "5ed33df184be15fff3b1847497c16fc22e2948a64fb996aace768651c8b57f5d",
       "path": "docs/DM_SELECTOR_FIRST_SHOULDER_EXIT_THRESHOLD_SUPPORT_NOTE_2026-04-21.md",
       "runner_path": "scripts/frontier_dm_selector_first_shoulder_exit_threshold_support_2026_04_21.py",
       "title": "DM Selector First-Shoulder-Exit Threshold Support Note"
@@ -55352,7 +55363,6 @@
     "dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20",
     "dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20",
     "dm_pns_attack_cascade_note_2026-04-19",
-    "dm_selector_first_shoulder_exit_threshold_support_note_2026-04-21",
     "dm_selector_threshold_stabilization_support_theorem_note_2026-04-21",
     "dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20",
     "dm_split2_dense_grid_lipschitz_dominance_support_note_2026-04-21",
@@ -55945,10 +55955,10 @@
       "open_gate": 117,
       "positive_theorem": 633
     },
-    "edge_count": 6610,
+    "edge_count": 6612,
     "leaf_count": 548,
     "node_count": 1906,
-    "root_count": 865,
+    "root_count": 864,
     "runners_with_path": 1481
   }
 }
