@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 223 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 779 |
+| unaudited | 778 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
-| ~~audited_conditional~~ | 470 |
+| ~~audited_conditional~~ | 471 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 381 |
-| `audited_conditional` | 470 |
+| `audited_conditional` | 471 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 32 |
-| `unaudited` | 828 |
+| `unaudited` | 827 |
 
 | claim_type | count |
 |---|---:|
@@ -842,6 +842,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_scale_conditional_completion_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `plaquette_self_consistency_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `plaquette_v1_picard_fuchs_ode_note_2026-05-05` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | A | - |
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_c3_nontrivial_current_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_graph_first_axis_alignment_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -10130,6 +10131,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md`
   - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md`
   - `GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md`
+- **auditor confidence:** high
+
+### `plaquette_v1_picard_fuchs_ode_note_2026-05-05`
+
+- **Note:** [`PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md`](../../docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded V=1 single-plaquette SU(3) Wilson-integral Picard-Fuchs ODE and beta=6 logarithmic-derivative value, excluding any thermodynamic-limit or bridge promotion.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-06-plaquette-v1-picard-fuchs`  (codex-current; independence=weak)
+- **load-bearing step:** For the single-plaquette SU(3) Wilson integral J(beta), the third-order Picard-Fuchs equation holds and its analytic Frobenius solution gives the physical V=1 plaquette integral.  _(class `A`)_
+- **chain closes:** False — The restricted packet gives a proposed ODE, a truncated Taylor residual check, sampled ODE-vs-Weyl numerical agreement, and the beta=6 value. It does not provide an exact derivation that this differential operator annihilates the full SU(3) integral rather than the checked finite truncation and sample points.
+- **rationale:** Issue: the exact Picard-Fuchs equation for the full single-plaquette SU(3) integral is asserted, but the runner verifies only a finite Taylor truncation plus sampled numerical agreement with direct Weyl integration. Why this blocks: finite-order residual cancellation and pointwise numerical agreement strongly support the candidate ODE and beta=6 value, but they do not constitute an exact proof that the ODE annihilates J(beta) globally or that the analytic Frobenius branch is the full physical integral. Repair target: add an exact holonomic/creative-telescoping or Bessel-determinant derivation/certificate for the differential operator, with the Frobenius branch identification, or narrow the claim to a finite computational certificate. Claim boundary until fixed: the V=1 beta=6 value and proposed ODE are well-supported by the current runner, but the exact Picard-Fuchs theorem is not retained-grade yet.
 - **auditor confidence:** high
 
 ### `pmns_active_four_real_source_from_transport_note`
