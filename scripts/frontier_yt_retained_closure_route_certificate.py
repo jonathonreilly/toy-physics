@@ -142,6 +142,8 @@ def main() -> int:
         "pr230_holonomic_source_response_feasibility_gate": "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json",
         "pr230_oh_source_higgs_authority_rescan_gate": "outputs/yt_pr230_oh_source_higgs_authority_rescan_gate_2026-05-05.json",
         "pr230_minimal_axioms_yukawa_summary_firewall": "outputs/yt_pr230_minimal_axioms_yukawa_summary_firewall_2026-05-05.json",
+        "pr230_genuine_source_pole_artifact_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
+        "pr230_l12_chunk_compute_status": "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json",
         "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
         "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
         "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -1054,6 +1056,40 @@ def main() -> int:
             "yt_ward_audit_status", {}
         ).get("effective_status")
         == "audited_renaming"
+    )
+    genuine_source_pole_artifact_support_only = (
+        "genuine same-source O_sp source-pole artifact"
+        in certificates["pr230_genuine_source_pole_artifact_intake"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_genuine_source_pole_artifact_intake"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_genuine_source_pole_artifact_intake"].get(
+            "artifact_is_genuine_current_surface_support"
+        )
+        is True
+        and certificates["pr230_genuine_source_pole_artifact_intake"].get(
+            "artifact_is_physics_closure"
+        )
+        is False
+    )
+    l12_chunk_compute_status_support_only = (
+        "completed L12 same-source chunk compute status"
+        in certificates["pr230_l12_chunk_compute_status"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_l12_chunk_compute_status"].get("proposal_allowed")
+        is False
+        and certificates["pr230_l12_chunk_compute_status"].get(
+            "strict_closure_blockers", {}
+        ).get("scalar_lsz_denominator_certificate_absent")
+        is True
+        and certificates["pr230_l12_chunk_compute_status"].get(
+            "strict_closure_blockers", {}
+        ).get("canonical_oh_or_source_higgs_overlap_absent")
+        is True
     )
     derived_bridge_rank_one_closure_attempt_blocks = (
         "derived rank-one bridge not closed"
@@ -3293,6 +3329,20 @@ def main() -> int:
         "minimal-axioms-yukawa-summary-firewall-blocks-hidden-summary-authority",
         minimal_axioms_yukawa_summary_firewall_blocks,
         certificates["pr230_minimal_axioms_yukawa_summary_firewall"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "genuine-source-pole-artifact-support-only",
+        genuine_source_pole_artifact_support_only,
+        certificates["pr230_genuine_source_pole_artifact_intake"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "completed-l12-chunk-compute-status-support-only",
+        l12_chunk_compute_status_support_only,
+        certificates["pr230_l12_chunk_compute_status"].get(
             "actual_current_surface_status", ""
         ),
     )

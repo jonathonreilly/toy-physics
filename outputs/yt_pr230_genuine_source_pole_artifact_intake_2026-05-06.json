@@ -1,0 +1,77 @@
+{
+  "actual_current_surface_status": "exact-support / genuine same-source O_sp source-pole artifact intake; canonical O_H bridge open",
+  "artifact_contract": "O_H/C_sH/C_HH source-Higgs pole rows",
+  "artifact_is_genuine_current_surface_support": true,
+  "artifact_is_physics_closure": false,
+  "canonical_higgs_operator_identity_passed": false,
+  "cleanest_next_artifact": {
+    "acceptance_condition": "Res_C_spH^2 = Res_C_sp_sp * Res_C_HH with same-surface O_H identity/normalization and FV/IR/model-class authority",
+    "name": "O_sp-Higgs pole-residue Gram rows",
+    "required_rows": [
+      "Res_C_sp_sp = 1 from O_sp",
+      "Res_C_spH",
+      "Res_C_HH"
+    ],
+    "why_cleanest": "O_sp has already removed source-unit gauge freedom, so the next measurement is exactly the remaining source-to-canonical-Higgs overlap."
+  },
+  "contact_term_invariant": true,
+  "current_closure_blockers": {
+    "aggregate_proposal_allowed": false,
+    "canonical_oh_certificate_absent": true,
+    "csp_higgs_or_csh_chh_pole_rows_absent": true,
+    "osp_higgs_gram_purity_not_passed": true
+  },
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "used_alpha_lm_or_plaquette": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_targets_as_selectors": false,
+    "used_yt_ward_identity": false
+  },
+  "genuine_artifact": {
+    "artifact_id": "legendre_lsz_source_pole_operator_v1",
+    "artifact_is_genuine_current_surface_support": true,
+    "artifact_is_physics_closure": false,
+    "artifact_path": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
+    "proof_role": "source-side LSZ pole normalization only"
+  },
+  "literature_context": [
+    {
+      "id": "fms_gauge_invariant_higgs_operator_language",
+      "not_used_as": "PR230 source-to-Higgs identity or kappa_s selector",
+      "role": "context for gauge-invariant composite Higgs operators after a gauge-Higgs action is supplied",
+      "source": "https://doi.org/10.1103/PhysRevD.101.056006"
+    },
+    {
+      "id": "fh_qft_source_response_method",
+      "not_used_as": "canonical-Higgs normalization or source-pole purity authority",
+      "role": "context for source-response measurements from two-point functions",
+      "source": "https://doi.org/10.1103/PhysRevD.96.014504"
+    }
+  ],
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "fresh_artifact_review": "outputs/yt_pr230_fresh_artifact_literature_route_review_2026-05-05.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "oh_source_higgs_rescan": "outputs/yt_pr230_oh_source_higgs_authority_rescan_gate_2026-05-05.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "source_higgs_contract_witness": "outputs/yt_source_higgs_gram_purity_contract_witness_2026-05-03.json",
+    "source_higgs_postprocessor": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
+    "source_pole_operator": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json"
+  },
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "O_sp is source-side support only; canonical O_H identity and O_sp-Higgs overlap rows are still missing.",
+  "same_surface_source_coordinate": true,
+  "source_rescaling_invariant": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not identify O_sp with O_H",
+    "does not set kappa_s = 1 or cos(theta) = 1",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not treat literature, PSLQ, D-modules, GNS, or FMS terminology as proof selectors"
+  ],
+  "verdict": "The current PR230 surface contains one genuine artifact in the source-Higgs contract: the Legendre/LSZ-normalized source-pole operator O_sp.  It is same-surface, same-source, invariant under source-coordinate rescaling, insensitive to analytic source contact terms, and passes the forbidden-import firewall.  It is not physical top-Yukawa closure because O_sp = O_H, C_spH/C_HH pole rows, Gram purity, scalar-LSZ production authority, and aggregate retained-route authorization remain absent."
+}

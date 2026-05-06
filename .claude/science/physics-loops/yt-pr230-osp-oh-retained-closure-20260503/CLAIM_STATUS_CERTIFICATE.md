@@ -527,3 +527,13 @@ Open imports:
   positivity preservation and conditional Perron support still cannot be
   treated as source-Higgs purity evidence;
 - independent audit after any proposed positive certificate.
+- the PR230 genuine source-pole artifact intake is exact support only:
+  `O_sp` is a real same-source source-pole artifact, but it is not identified
+  with canonical `O_H` and it does not provide `C_spH/C_HH` rows or Gram purity;
+- the PR230 completed-L12 chunk compute status is bounded support only: the
+  four-mode/x16 and polefit8x8 streams agree at `z = 0.010398804406050486`,
+  but the finite-shell polefit8x8 rows still fail Stieltjes and
+  complete-Bernstein scalar-denominator shortcuts and do not compute
+  `m_t(pole)` or `y_t(v)`;
+- after these two support artifacts, assembly, retained-route, and campaign
+  gates still deny proposal authority.

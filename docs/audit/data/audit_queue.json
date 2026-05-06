@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 639,
+    "leaf": 641,
     "medium": 301
   },
-  "generated_at": "2026-05-06T01:20:50.773414+00:00",
+  "generated_at": "2026-05-06T01:30:35.028285+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20276,6 +20276,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_genuine_source_pole_artifact_intake_note_2026-05-06",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_GENUINE_SOURCE_POLE_ARTIFACT_INTAKE_NOTE_2026-05-06.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_genuine_source_pole_artifact_intake.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_global_yt_proof_audit_note_2026-05-01",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20338,6 +20355,23 @@
       "note_path": "docs/YT_PR230_INVARIANT_RING_OH_CERTIFICATE_ATTEMPT_NOTE_2026-05-05.md",
       "ready": true,
       "runner_path": "scripts/frontier_yt_pr230_invariant_ring_oh_certificate_attempt.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_pr230_l12_chunk_compute_status_note_2026-05-06",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_L12_CHUNK_COMPUTE_STATUS_NOTE_2026-05-06.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_l12_chunk_compute_status.py",
       "transitive_descendants": 0
     },
     {
@@ -24432,6 +24466,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 786,
-  "total_pending": 1177
+  "ready_count": 788,
+  "total_pending": 1179
 }

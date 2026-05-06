@@ -1,0 +1,183 @@
+{
+  "actual_current_surface_status": "bounded-support / completed L12 same-source chunk compute status; physical y_t closure still open",
+  "fail_count": 0,
+  "four_mode_summary": {
+    "chunk_count": 63,
+    "combined_path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunked_combined_2026-05-01.json",
+    "mode_count": 4,
+    "saved_configurations": 1008,
+    "source_response": {
+      "mean": 1.2448751329919734,
+      "stderr": 0.035821721982903024
+    }
+  },
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "complete_bernstein_inverse_diagnostic": "outputs/yt_fh_lsz_complete_bernstein_inverse_diagnostic_2026-05-05.json",
+    "four_mode_combined": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunked_combined_2026-05-01.json",
+    "four_mode_combiner": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "genuine_source_pole_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
+    "polefit8x8_combined": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunked_combined_2026-05-04.json",
+    "polefit8x8_combiner": "outputs/yt_fh_lsz_polefit8x8_chunk_combiner_gate_2026-05-04.json",
+    "polefit8x8_postprocessor": "outputs/yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json",
+    "positive_closure_completion_audit": "outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "stieltjes_proxy_diagnostic": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json"
+  },
+  "pass_count": 14,
+  "polefit8x8_summary": {
+    "chunk_count": 63,
+    "combined_path": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunked_combined_2026-05-04.json",
+    "mode_count": 8,
+    "monotonicity_summary": {
+      "C_ss_increases_with_p_hat_sq_pairs": [
+        [
+          "0,0,0",
+          "1,0,0"
+        ],
+        [
+          "1,0,0",
+          "1,1,0"
+        ],
+        [
+          "1,1,0",
+          "1,1,1"
+        ],
+        [
+          "1,1,1",
+          "2,0,0"
+        ],
+        [
+          "2,0,0",
+          "2,1,0"
+        ],
+        [
+          "2,1,0",
+          "2,1,1"
+        ],
+        [
+          "2,1,1",
+          "2,2,0"
+        ]
+      ],
+      "Gamma_ss_decreases_with_p_hat_sq_pairs": [
+        [
+          "0,0,0",
+          "1,0,0"
+        ],
+        [
+          "1,0,0",
+          "1,1,0"
+        ],
+        [
+          "1,1,0",
+          "1,1,1"
+        ],
+        [
+          "1,1,1",
+          "2,0,0"
+        ],
+        [
+          "2,0,0",
+          "2,1,0"
+        ],
+        [
+          "2,1,0",
+          "2,1,1"
+        ],
+        [
+          "2,1,1",
+          "2,2,0"
+        ]
+      ],
+      "complete_bernstein_inverse_shortcut_blocked": true,
+      "rows": [
+        {
+          "C_ss_real_weighted": 0.12237470932032389,
+          "Gamma_ss_real_proxy": 8.171623087434135,
+          "mode_key": "0,0,0",
+          "p_hat_sq": 0.0
+        },
+        {
+          "C_ss_real_weighted": 0.12532432813740257,
+          "Gamma_ss_real_proxy": 7.97929671646533,
+          "mode_key": "1,0,0",
+          "p_hat_sq": 0.26794919243112264
+        },
+        {
+          "C_ss_real_weighted": 0.12831316808179513,
+          "Gamma_ss_real_proxy": 7.7934323885022865,
+          "mode_key": "1,1,0",
+          "p_hat_sq": 0.5358983848622453
+        },
+        {
+          "C_ss_real_weighted": 0.13134916908655814,
+          "Gamma_ss_real_proxy": 7.613295211186355,
+          "mode_key": "1,1,1",
+          "p_hat_sq": 0.803847577293368
+        },
+        {
+          "C_ss_real_weighted": 0.1339222215956486,
+          "Gamma_ss_real_proxy": 7.467020693692644,
+          "mode_key": "2,0,0",
+          "p_hat_sq": 0.9999999999999998
+        },
+        {
+          "C_ss_real_weighted": 0.13704035520287086,
+          "Gamma_ss_real_proxy": 7.297120607427111,
+          "mode_key": "2,1,0",
+          "p_hat_sq": 1.2679491924311224
+        },
+        {
+          "C_ss_real_weighted": 0.14021387765684315,
+          "Gamma_ss_real_proxy": 7.131961662506628,
+          "mode_key": "2,1,1",
+          "p_hat_sq": 1.5358983848622452
+        },
+        {
+          "C_ss_real_weighted": 0.1461652962440615,
+          "Gamma_ss_real_proxy": 6.841569275994463,
+          "mode_key": "2,2,0",
+          "p_hat_sq": 1.9999999999999996
+        }
+      ],
+      "stieltjes_proxy_shortcut_blocked": true
+    },
+    "saved_configurations": 1008,
+    "source_response": {
+      "mean": 1.245372948398497,
+      "stderr": 0.03175795951253233
+    }
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Only L12 finite-volume source-response support is present; L16/L24, FV/IR/threshold authority, scalar-LSZ denominator authority, canonical O_H/source overlap, and matching/running closure remain open.",
+  "source_response_consistency": {
+    "combined_stderr": 0.04787236946527757,
+    "consistent_within_one_sigma": true,
+    "delta": 0.0004978154065236051,
+    "four_mode_mean": 1.2448751329919734,
+    "four_mode_stderr": 0.035821721982903024,
+    "polefit8x8_mean": 1.245372948398497,
+    "polefit8x8_stderr": 0.03175795951253233,
+    "z_score": 0.010398804406050486
+  },
+  "strict_closure_blockers": {
+    "aggregate_proposal_allowed": false,
+    "canonical_oh_or_source_higgs_overlap_absent": true,
+    "finite_shell_only": true,
+    "matching_running_bridge_absent": true,
+    "scalar_lsz_denominator_certificate_absent": true,
+    "single_volume_only": true
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not compute m_t(pole) or y_t(v)",
+    "does not define y_t_bare",
+    "does not identify O_sp with O_H",
+    "does not set kappa_s, c2, Z_match, or cos(theta) to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not treat L12 finite-shell rows as strict scalar-LSZ or FV/IR evidence"
+  ],
+  "verdict": "The completed chunk campaign provides real, internally consistent L12 same-source FH/LSZ support data.  The four-mode/x16 and eight-mode/x8 source responses agree within one sigma.  The same data also block the tempting finite-shell scalar-LSZ shortcut: the polefit8x8 C_ss proxy increases with p_hat^2 and its inverse Gamma_ss decreases with p_hat^2, so it is not a strict Stieltjes or complete-Bernstein denominator certificate.  This artifact is therefore compute support, not m_t/y_t closure."
+}

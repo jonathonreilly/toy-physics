@@ -4356,3 +4356,52 @@ only when a listed same-surface row, certificate, or theorem exists as a
 parseable claim-status artifact; then rerun reopen-admissibility, worklist,
 current-surface exhaustion, future-artifact intake, assembly, retained-route,
 and campaign gates before any proposal language or route selection.
+
+## 2026-05-06 O_sp Intake And L12 Compute Status
+
+This block records the strongest current support now present after the chunk
+campaign completed, without treating it as physical `y_t` closure.
+
+Two artifacts were added:
+
+- `scripts/frontier_yt_pr230_genuine_source_pole_artifact_intake.py`
+  certifies that the Legendre/LSZ source-pole operator `O_sp` is a genuine
+  same-source source-side artifact, invariant under source rescaling and
+  analytic source contact terms.  It remains source-side support only because
+  `O_sp = O_H`, `C_spH/C_HH` pole rows, Gram purity, scalar-LSZ production
+  authority, and matching/running remain absent.
+- `scripts/frontier_yt_pr230_l12_chunk_compute_status.py` certifies that both
+  completed L12 chunk streams are real and internally consistent.  The
+  four-mode/x16 source response is `1.2448751329919734 +/- 0.035821721982903024`;
+  the polefit8x8 source response is `1.245372948398497 +/- 0.03175795951253233`;
+  their difference is `z = 0.010398804406050486`.  The same polefit8x8 rows
+  still fail the Stieltjes and complete-Bernstein scalar-denominator shortcuts.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_genuine_source_pole_artifact_intake.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_l12_chunk_compute_status.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=40 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=95 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=243 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=276 FAIL=0
+```
+
+Result: bounded/exact support, not closure.  The support surface is stronger
+and cleaner: the source-side artifact is real, and the completed L12 compute
+data are internally consistent.  Positive closure still requires one of the
+missing same-surface bridge artifacts: canonical `O_H` with `C_spH/C_HH`, W/Z
+matched response rows, Schur rows, neutral primitive-cone irreducibility,
+strict scalar-LSZ authority, and then matching/running.

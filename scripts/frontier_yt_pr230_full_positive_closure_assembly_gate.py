@@ -85,6 +85,8 @@ PARENTS = {
     "pr230_holonomic_source_response_feasibility_gate": "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json",
     "pr230_oh_source_higgs_authority_rescan_gate": "outputs/yt_pr230_oh_source_higgs_authority_rescan_gate_2026-05-05.json",
     "pr230_minimal_axioms_yukawa_summary_firewall": "outputs/yt_pr230_minimal_axioms_yukawa_summary_firewall_2026-05-05.json",
+    "pr230_genuine_source_pole_artifact_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
+    "pr230_l12_chunk_compute_status": "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json",
     "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
     "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -238,6 +240,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["source_higgs_gram"],
                 PARENTS["source_higgs_postprocess"],
                 PARENTS["source_higgs_unratified_gram_no_go"],
+                PARENTS["pr230_genuine_source_pole_artifact_intake"],
                 PARENTS["canonical_higgs_semantic_firewall"],
                 PARENTS["cross_lane_oh_authority_audit"],
                 PARENTS["canonical_oh_premise_stretch"],
@@ -389,6 +392,34 @@ def main() -> int:
         certs["fh_lsz_polefit8x8_combiner"].get("proposal_allowed") is False
         and certs["fh_lsz_polefit8x8_postprocessor"].get("proposal_allowed") is False
         and "eight-mode" in statuses["fh_lsz_polefit8x8_postprocessor"]
+    )
+    genuine_source_pole_support_only = (
+        certs["pr230_genuine_source_pole_artifact_intake"].get(
+            "artifact_is_genuine_current_surface_support"
+        )
+        is True
+        and certs["pr230_genuine_source_pole_artifact_intake"].get(
+            "artifact_is_physics_closure"
+        )
+        is False
+        and certs["pr230_genuine_source_pole_artifact_intake"].get(
+            "proposal_allowed"
+        )
+        is False
+    )
+    l12_chunk_compute_support_only = (
+        "completed L12 same-source chunk compute status"
+        in statuses["pr230_l12_chunk_compute_status"]
+        and certs["pr230_l12_chunk_compute_status"].get("proposal_allowed")
+        is False
+        and certs["pr230_l12_chunk_compute_status"].get(
+            "strict_closure_blockers", {}
+        ).get("scalar_lsz_denominator_certificate_absent")
+        is True
+        and certs["pr230_l12_chunk_compute_status"].get(
+            "strict_closure_blockers", {}
+        ).get("canonical_oh_or_source_higgs_overlap_absent")
+        is True
     )
     scalar_lsz_blocks = (
         certs["fh_lsz_model_class"].get("proposal_allowed") is False
@@ -965,6 +996,16 @@ def main() -> int:
     report("finite-source-support-present", finite_source_support, statuses["fh_lsz_finite_source_linearity"])
     report("target-ess-support-present", ess_support, statuses["fh_lsz_target_ess"])
     report("polefit8x8-support-only", polefit_support_only, statuses["fh_lsz_polefit8x8_postprocessor"])
+    report(
+        "genuine-source-pole-artifact-support-only",
+        genuine_source_pole_support_only,
+        statuses["pr230_genuine_source_pole_artifact_intake"],
+    )
+    report(
+        "completed-l12-chunk-compute-status-support-only",
+        l12_chunk_compute_support_only,
+        statuses["pr230_l12_chunk_compute_status"],
+    )
     report(
         "canonical-higgs-semantic-firewall-support-only",
         "semantic firewall passed" in statuses["canonical_higgs_semantic_firewall"]

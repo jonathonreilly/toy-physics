@@ -391,6 +391,14 @@ current branch.  The queue remains future-only until a listed artifact exists
 and the reopen-admissibility, worklist, exhaustion, intake, independent-route,
 cycle-16 guard, assembly, retained-route, and campaign gates all rerun.
 
+2026-05-06 support update: the branch now has a genuine `O_sp` source-pole
+artifact intake and a completed-L12 chunk compute status.  These strengthen
+the support surface but do not reopen a positive current-surface non-chunk
+route.  `O_sp` is not `O_H`, and the completed L12 finite-shell rows still
+fail scalar-LSZ denominator shortcut tests.  The queue remains future-only
+until a canonical `O_H/C_spH/C_HH`, W/Z matched-response, Schur-row,
+neutral-primitive, strict scalar-LSZ, or matching/running artifact appears.
+
 Cycle-15 update: the independent-route admission gate has now checked the
 only remaining continuation clause after the cycle-14 selector.  No
 independent current-surface route is admitted.  The stuck fanout covered the

@@ -563,6 +563,12 @@ def main() -> int:
         "pr230_minimal_axioms_yukawa_summary_firewall": load(
             "outputs/yt_pr230_minimal_axioms_yukawa_summary_firewall_2026-05-05.json"
         ),
+        "pr230_genuine_source_pole_artifact_intake": load(
+            "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json"
+        ),
+        "pr230_l12_chunk_compute_status": load(
+            "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -2289,6 +2295,40 @@ def main() -> int:
         ).get("effective_status")
         == "audited_renaming",
         statuses["pr230_minimal_axioms_yukawa_summary_firewall"],
+    )
+    report(
+        "pr230-genuine-source-pole-artifact-support-only",
+        "genuine same-source O_sp source-pole artifact"
+        in str(statuses["pr230_genuine_source_pole_artifact_intake"])
+        and certificates["pr230_genuine_source_pole_artifact_intake"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_genuine_source_pole_artifact_intake"].get(
+            "artifact_is_genuine_current_surface_support"
+        )
+        is True
+        and certificates["pr230_genuine_source_pole_artifact_intake"].get(
+            "artifact_is_physics_closure"
+        )
+        is False,
+        statuses["pr230_genuine_source_pole_artifact_intake"],
+    )
+    report(
+        "pr230-l12-chunk-compute-status-support-only",
+        "completed L12 same-source chunk compute status"
+        in str(statuses["pr230_l12_chunk_compute_status"])
+        and certificates["pr230_l12_chunk_compute_status"].get("proposal_allowed")
+        is False
+        and certificates["pr230_l12_chunk_compute_status"].get(
+            "strict_closure_blockers", {}
+        ).get("scalar_lsz_denominator_certificate_absent")
+        is True
+        and certificates["pr230_l12_chunk_compute_status"].get(
+            "strict_closure_blockers", {}
+        ).get("canonical_oh_or_source_higgs_overlap_absent")
+        is True,
+        statuses["pr230_l12_chunk_compute_status"],
     )
     report(
         "pr230-derived-bridge-rank-one-attempt-blocks-current-source-only-closure",

@@ -4,20 +4,26 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact negative boundary / source-only staggered logdet Hessian does not derive the neutral Higgs mixing bridge
+actual_current_surface_status: bounded-support / genuine O_sp intake plus completed-L12 chunk compute status; physical y_t closure still open
 active_residual: "Both target production chunks001-063 and polefit8x8 chunks001-063 are complete with required FH/LSZ target schema, but positive closure still fails the assembly checklist.  The cleanest physics route remains source-Higgs, but its invariant-ring theorem step is blocked by a two-singlet neutral completion.  The strict scalar-LSZ outside-math leg is narrowed: finite shell values, exact interpolation, PSLQ/value recognition, or the existence of some rational holonomic continuation do not determine the physical scalar denominator or pole residue.  The minimal-axioms firewall blocks reuse of old y_t/m_t summary rows as PR230 proof authority.  The latest logdet Hessian attempt also blocks source-only determinant curvature as the missing h/O_H bridge: W(s,0) can be fixed while h-Hessian rows and off-diagonal generator vary.  A positive leg still needs a same-surface bridge: two-source Z(s,h)/O_H/C_sH/C_HH, genuine W/Z response, Schur rows, neutral irreducibility, strict scalar-LSZ authority, and matching/running.  No retained or proposed_retained closure is authorized."
 latest_checkpoint:
-  utc: "2026-05-05T22:35:00Z"
-  block: 101
-  artifact: "logdet Hessian neutral-mixing attempt"
-  status: "exact negative boundary / source-only determinant Hessian underdetermines h/O_H"
-  result: "The runner constructs W_eps(s,h)=log(1+s-eps^2 h^2): W_eps(s,0) and every source-only derivative are identical for all eps, while h-Hessian rows and off-diagonal generator norm vary.  Source-only staggered logdet data cannot derive the neutral Higgs mixing bridge."
-  claim_boundary: "no retained or proposed_retained closure; no two-source Z(s,h), canonical O_H, C_sH/C_HH, W/Z, Schur, scalar-LSZ, or matching/running authority written"
+  utc: "2026-05-06T00:00:00Z"
+  block: 102
+  artifact: "genuine O_sp intake and completed-L12 compute status"
+  status: "bounded-support / source-side and L12 compute support only"
+  result: "O_sp is a genuine same-source source-pole artifact, but not O_H.  The completed four-mode/x16 and polefit8x8 L12 streams agree in source response at z=0.010398804406050486, but the polefit8x8 finite-shell C_ss/Gamma_ss rows fail Stieltjes and complete-Bernstein denominator shortcuts.  Aggregate gates still deny retained/proposed_retained authority."
+  claim_boundary: "no retained or proposed_retained closure; no O_sp=O_H identity, C_spH/C_HH rows, W/Z rows, Schur rows, scalar-LSZ denominator authority, FV/IR authority, or matching/running authority written"
   live_compute: "chunk artifacts are complete; no production chunk worker is running"
   checkpoint_files:
     - scripts/frontier_yt_pr230_logdet_hessian_neutral_mixing_attempt.py
     - docs/YT_PR230_LOGDET_HESSIAN_NEUTRAL_MIXING_ATTEMPT_NOTE_2026-05-05.md
     - outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json
+    - scripts/frontier_yt_pr230_genuine_source_pole_artifact_intake.py
+    - docs/YT_PR230_GENUINE_SOURCE_POLE_ARTIFACT_INTAKE_NOTE_2026-05-06.md
+    - outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json
+    - scripts/frontier_yt_pr230_l12_chunk_compute_status.py
+    - docs/YT_PR230_L12_CHUNK_COMPUTE_STATUS_NOTE_2026-05-06.md
+    - outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json
     - scripts/frontier_yt_pr230_assumption_import_stress.py
     - outputs/yt_pr230_assumption_import_stress_2026-05-01.json
     - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py

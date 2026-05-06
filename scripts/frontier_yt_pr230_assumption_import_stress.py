@@ -113,6 +113,12 @@ def main() -> int:
         "minimal_axioms_yukawa_summary_firewall": load(
             "outputs/yt_pr230_minimal_axioms_yukawa_summary_firewall_2026-05-05.json"
         ),
+        "genuine_source_pole_artifact_intake": load(
+            "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json"
+        ),
+        "l12_chunk_compute_status": load(
+            "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json"
+        ),
         "kinetic_matching": load("outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"),
         "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "scalar_ir": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
@@ -204,6 +210,10 @@ def main() -> int:
         "same-surface neutral primitive-cone certificate exists",
         "MINIMAL_AXIOMS y_t/m_t summary",
         "not proof authority until the summarized Ward/H_unit y_t lane is repaired",
+        "Genuine source-pole O_sp artifact",
+        "source-side support only until canonical O_H and C_spH/C_HH rows exist",
+        "Completed L12 chunk compute status",
+        "not physical y_t closure until scalar-LSZ, O_H/source-overlap, FV/IR, and matching/running gates pass",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -586,6 +596,35 @@ def main() -> int:
         )
         == "audited_renaming",
         minimal_axioms_firewall.get("actual_current_surface_status"),
+    )
+    source_pole_intake = certificates["genuine_source_pole_artifact_intake"]
+    report(
+        "genuine-source-pole-artifact-not-oh-closure",
+        "genuine same-source O_sp source-pole artifact"
+        in str(source_pole_intake.get("actual_current_surface_status"))
+        and source_pole_intake.get("proposal_allowed") is False
+        and source_pole_intake.get("artifact_is_genuine_current_surface_support")
+        is True
+        and source_pole_intake.get("artifact_is_physics_closure") is False
+        and source_pole_intake.get("canonical_higgs_operator_identity_passed")
+        is False,
+        source_pole_intake.get("actual_current_surface_status"),
+    )
+    l12_compute_status = certificates["l12_chunk_compute_status"]
+    report(
+        "completed-l12-chunk-compute-status-not-physical-yt",
+        "completed L12 same-source chunk compute status"
+        in str(l12_compute_status.get("actual_current_surface_status"))
+        and l12_compute_status.get("proposal_allowed") is False
+        and l12_compute_status.get("strict_closure_blockers", {}).get(
+            "scalar_lsz_denominator_certificate_absent"
+        )
+        is True
+        and l12_compute_status.get("strict_closure_blockers", {}).get(
+            "canonical_oh_or_source_higgs_overlap_absent"
+        )
+        is True,
+        l12_compute_status.get("actual_current_surface_status"),
     )
 
     result = {
