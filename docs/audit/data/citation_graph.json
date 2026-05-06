@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T10:58:27.471437+00:00",
+  "generated_at": "2026-05-06T11:13:53.753861+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43189,7 +43189,7 @@
       "current_status": "open",
       "current_status_raw": "open / measurement rows absent",
       "deps": [],
-      "note_hash": "28d455ce35769d560ba8de2a7227c46e0c1724f464c8ba151c6f9b513aba5efa",
+      "note_hash": "cd0da468ee2289da6695fb9f9071feb384765f9730037d09e96df9de35b2337c",
       "path": "docs/YT_SOURCE_HIGGS_CROSS_CORRELATOR_CERTIFICATE_BUILDER_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_yt_source_higgs_cross_correlator_certificate_builder.py",
       "title": "Source-Higgs Cross-Correlator Certificate Builder"
@@ -43249,7 +43249,7 @@
       "current_status": "open",
       "current_status_raw": "open / `O_sp`-Higgs postprocessor awaiting production certificate",
       "deps": [],
-      "note_hash": "ce1996961413c452326535d8afa8df87e21518de9141810c97bc00bdf9496191",
+      "note_hash": "c6ec9ad32533d747058bbea11dd96e047bfb287504d22034e9f24b1e04741812",
       "path": "docs/YT_SOURCE_HIGGS_GRAM_PURITY_POSTPROCESSOR_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py",
       "title": "Source-Higgs Gram-Purity Postprocessor"

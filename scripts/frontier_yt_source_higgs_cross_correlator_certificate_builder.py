@@ -26,6 +26,9 @@ DEFAULT_INPUT = ROOT / "outputs" / "yt_source_higgs_cross_correlator_measurement
 DEFAULT_OUTPUT = ROOT / "outputs" / "yt_source_higgs_cross_correlator_production_certificate_2026-05-03.json"
 STATUS_OUTPUT = ROOT / "outputs" / "yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json"
 SOURCE_POLE_OPERATOR = ROOT / "outputs" / "yt_legendre_source_pole_operator_construction_2026-05-03.json"
+GENUINE_SOURCE_POLE_INTAKE = (
+    ROOT / "outputs" / "yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json"
+)
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -135,11 +138,29 @@ def validate_measurement_input(data: dict[str, Any]) -> tuple[dict[str, bool], l
     return checks, [key for key, ok in checks.items() if not ok]
 
 
-def source_pole_summary(source_pole: dict[str, Any]) -> dict[str, Any]:
+def source_pole_summary(source_pole: dict[str, Any], intake: dict[str, Any]) -> dict[str, Any]:
     candidate = source_pole.get("operator_candidate", {})
+    intake_ok = (
+        intake.get("artifact_is_genuine_current_surface_support") is True
+        and intake.get("artifact_is_physics_closure") is False
+        and intake.get("same_surface_source_coordinate") is True
+        and intake.get("source_rescaling_invariant") is True
+        and intake.get("contact_term_invariant") is True
+        and intake.get("canonical_higgs_operator_identity_passed") is False
+        and intake.get("proposal_allowed") is False
+    )
     return {
         "operator_id": candidate.get("operator_id"),
         "certificate": str(SOURCE_POLE_OPERATOR.relative_to(ROOT)),
+        "genuine_intake_certificate": str(GENUINE_SOURCE_POLE_INTAKE.relative_to(ROOT)),
+        "genuine_source_pole_intake_passed": intake_ok,
+        "artifact_is_genuine_current_surface_support": intake.get(
+            "artifact_is_genuine_current_surface_support"
+        ),
+        "artifact_is_physics_closure": intake.get("artifact_is_physics_closure"),
+        "same_surface_source_coordinate": intake.get("same_surface_source_coordinate"),
+        "source_rescaling_invariant": intake.get("source_rescaling_invariant"),
+        "contact_term_invariant": intake.get("contact_term_invariant"),
         "source_pole_operator_constructed": source_pole.get("source_pole_operator_constructed") is True,
         "source_pole_residue_normalized_to_one": candidate.get("source_pole_residue_normalized_to_one") is True,
         "canonical_higgs_operator_identity_passed": source_pole.get("canonical_higgs_operator_identity_passed") is True,
@@ -151,18 +172,21 @@ def source_pole_summary(source_pole: dict[str, Any]) -> dict[str, Any]:
 
 
 def build_candidate(
-    data: dict[str, Any], input_path: Path, source_pole: dict[str, Any]
+    data: dict[str, Any], input_path: Path, source_pole: dict[str, Any], intake: dict[str, Any]
 ) -> tuple[dict[str, Any], dict[str, bool], list[str]]:
     checks, missing = validate_measurement_input(data)
     row = pick_pole_row(data.get("pole_residue_rows", []))
     gram = compute_gram(row) if all(checks[k] for k in ("has_selected_res_c_ss", "has_selected_res_c_sh", "has_selected_res_c_hh")) else {}
     operator = data.get("operator", {})
     firewall = data.get("firewall", {})
-    sp_summary = source_pole_summary(source_pole)
+    sp_summary = source_pole_summary(source_pole, intake)
     checks["legendre_lsz_source_pole_operator_available"] = (
         sp_summary["source_pole_operator_constructed"] is True
         and sp_summary["source_pole_residue_normalized_to_one"] is True
         and sp_summary["canonical_higgs_operator_identity_passed"] is False
+    )
+    checks["genuine_source_pole_intake_available"] = (
+        sp_summary["genuine_source_pole_intake_passed"] is True
     )
     missing = [key for key, ok in checks.items() if not ok]
     candidate = {
@@ -185,6 +209,10 @@ def build_candidate(
         },
         "source_pole_operator": sp_summary,
         "selected_source_side_normalization": "legendre_lsz_source_pole_operator_v1",
+        "selected_source_side_support_certificate": str(
+            GENUINE_SOURCE_POLE_INTAKE.relative_to(ROOT)
+        ),
+        "source_side_contract_version": "genuine_osp_lsz_intake_required_v1",
         "hunit_used_as_operator": operator.get("hunit_used_as_operator"),
         "observed_targets_used_as_selectors": firewall.get("used_observed_targets_as_selectors"),
         "firewall": {
@@ -251,11 +279,21 @@ def main() -> int:
 
     data = load_json(args.input)
     source_pole = load_json(SOURCE_POLE_OPERATOR)
+    intake = load_json(GENUINE_SOURCE_POLE_INTAKE)
     input_present = bool(data)
     source_pole_ok = (
         source_pole.get("source_pole_operator_constructed") is True
         and source_pole.get("operator_candidate", {}).get("source_pole_residue_normalized_to_one") is True
         and source_pole.get("canonical_higgs_operator_identity_passed") is False
+    )
+    source_pole_intake_ok = (
+        intake.get("artifact_is_genuine_current_surface_support") is True
+        and intake.get("artifact_is_physics_closure") is False
+        and intake.get("same_surface_source_coordinate") is True
+        and intake.get("source_rescaling_invariant") is True
+        and intake.get("contact_term_invariant") is True
+        and intake.get("canonical_higgs_operator_identity_passed") is False
+        and intake.get("proposal_allowed") is False
     )
     candidate_written = False
     candidate = {}
@@ -263,9 +301,14 @@ def main() -> int:
     missing: list[str] = []
 
     report("source-pole-operator-certificate-state-recorded", source_pole_ok, str(SOURCE_POLE_OPERATOR.relative_to(ROOT)))
+    report(
+        "genuine-source-pole-intake-recorded",
+        source_pole_intake_ok,
+        str(GENUINE_SOURCE_POLE_INTAKE.relative_to(ROOT)),
+    )
     report("measurement-row-input-state-recorded", True, f"present={input_present}")
     if input_present:
-        candidate, checks, missing = build_candidate(data, args.input, source_pole)
+        candidate, checks, missing = build_candidate(data, args.input, source_pole, intake)
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(candidate, indent=2, sort_keys=True) + "\n", encoding="utf-8")
         candidate_written = True
@@ -295,8 +338,11 @@ def main() -> int:
         "input_rows": str(args.input.relative_to(ROOT)) if args.input.is_relative_to(ROOT) else str(args.input),
         "candidate_output": str(args.output.relative_to(ROOT)) if args.output.is_relative_to(ROOT) else str(args.output),
         "source_pole_operator_certificate": str(SOURCE_POLE_OPERATOR.relative_to(ROOT)),
+        "genuine_source_pole_intake_certificate": str(GENUINE_SOURCE_POLE_INTAKE.relative_to(ROOT)),
         "source_pole_operator_available": source_pole_ok,
+        "genuine_source_pole_intake_available": source_pole_intake_ok,
         "source_side_normalization": "O_sp = sqrt(dGamma_ss/dx|pole) O_s; Res(C_sp,sp)=1",
+        "source_side_contract_version": "genuine_osp_lsz_intake_required_v1",
         "input_present": input_present,
         "candidate_written": candidate_written,
         "candidate_checks": checks,

@@ -10,6 +10,13 @@ The first-principles candidate portfolio is now packaged.  It preserves five
 surviving positive candidates: action-first `O_H`, source-coordinate
 transport, W/Z response, Schur rows, and neutral primitive/rank-one.
 
+The source-Higgs row contract is also hardened after the genuine `O_sp` intake.
+Future `C_ss/C_sH/C_HH` candidate rows must attach
+`outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json` and
+must preserve that artifact as source-side support only.  The builder and
+Gram-purity postprocessor now reject a candidate that treats `O_sp` as
+canonical `O_H` or physical `y_t` closure before the pole-residue overlap gate.
+
 Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then

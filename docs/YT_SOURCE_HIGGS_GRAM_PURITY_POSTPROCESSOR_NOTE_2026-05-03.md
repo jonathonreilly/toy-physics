@@ -7,9 +7,11 @@
 ## Purpose
 
 This is the executable postprocessor for the selected PR #230 source-overlap
-route.  It now uses the Legendre/LSZ source-pole operator from
-`outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json` as the
-normalized source side:
+route.  It uses the Legendre/LSZ source-pole operator from
+`outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json`, and
+now requires the stronger May 6 genuine source-pole intake certificate
+`outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json`, as the
+normalized source-side contract:
 
 ```text
 O_sp = sqrt(dGamma_ss/dx | pole) O_s,        Res(C_sp,sp) = 1.
@@ -39,12 +41,18 @@ The future candidate certificate must supply:
 
 - production phase metadata;
 - same-ensemble and same-source-coordinate flags;
-- the Legendre/LSZ `O_sp` source-side normalization certificate;
+- the Legendre/LSZ `O_sp` source-side normalization certificate and genuine
+  source-pole intake certificate;
 - a certified same-surface canonical-Higgs operator identity;
 - `Res_C_ss`, `Res_C_sH`, and `Res_C_HH`;
 - no `H_unit` by fiat;
 - no observed-target selectors;
 - retained-route authorization before any proposed-retained wording.
+
+The source-pole intake must certify `O_sp` as genuine same-source support,
+source-rescaling invariant, contact-term invariant, and explicitly not physics
+closure.  A candidate that treats `O_sp` as canonical `O_H` before the
+Gram-purity pass is rejected by schema checks.
 
 ## Current Result
 

@@ -10,8 +10,9 @@
 This runner is the concrete production-data input contract for the selected
 PR #230 source-Higgs Gram-purity route.  It does not create `O_H`, `C_sH`, or
 `C_HH` data.  When same-ensemble measurement rows are available, it validates
-the claim firewall, computes the pole-residue Gram quantities, and writes the
-candidate certificate consumed by
+the claim firewall, requires the May 6 genuine `O_sp` intake certificate,
+computes the pole-residue Gram quantities, and writes the candidate certificate
+consumed by
 `scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py`.
 
 ## Required Measurement Rows
@@ -28,6 +29,12 @@ The input row file must provide:
 - finite-volume, infrared, and zero-mode control;
 - firewall flags showing no observed-target selectors, no `yt_ward_identity`,
   no `H_unit` matrix-element readout, and no `alpha_LM` or plaquette authority.
+
+The source side must also attach
+`outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json`.  The
+builder checks that this intake marks `O_sp` as genuine current-surface support,
+same-source, source-rescaling invariant, and contact-term invariant, while also
+marking it explicitly as non-closure with no canonical `O_H` identity.
 
 ## Computed Quantities
 
@@ -47,7 +54,9 @@ and retained-route authorization remains outside this support artifact.
 No same-ensemble source-Higgs measurement row file is present.  The builder
 therefore writes only the status certificate and does not write a production
 candidate certificate.  That is the expected honest state before `O_H/C_sH/C_HH`
-rows exist.
+rows exist.  The status certificate now records both the older Legendre/LSZ
+source-pole construction and the stronger May 6 genuine `O_sp` intake artifact
+as required source-side contract inputs for any future candidate rows.
 
 ## Claim Boundary
 

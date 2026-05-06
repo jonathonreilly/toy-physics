@@ -1,9 +1,9 @@
 loop_slug: pr230-oh-csh-chh-bridge-20260506
 branch: physics-loop/pr230-oh-csh-chh-bridge-20260506
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
-active_route: oh_bridge_first_principles_candidate_portfolio
+active_route: source_higgs_contract_hardening_after_osp_intake
 target_status: best-honest-status
-actual_current_surface_status: open positive-candidate portfolio
+actual_current_surface_status: open / source-Higgs contract hardened; no closure
 proposal_allowed: false
 bare_retained_allowed: false
 hard_residual: >
@@ -16,15 +16,25 @@ files_touched:
   - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
   - scripts/frontier_yt_retained_closure_route_certificate.py
   - scripts/frontier_yt_pr230_campaign_status_certificate.py
+  - scripts/frontier_yt_source_higgs_cross_correlator_certificate_builder.py
+  - scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py
   - docs/YT_PR230_TASTE_CONDENSATE_OH_BRIDGE_AUDIT_NOTE_2026-05-06.md
   - docs/YT_PR230_OH_BRIDGE_FIRST_PRINCIPLES_CANDIDATE_PORTFOLIO_NOTE_2026-05-06.md
+  - docs/YT_SOURCE_HIGGS_CROSS_CORRELATOR_CERTIFICATE_BUILDER_NOTE_2026-05-03.md
+  - docs/YT_SOURCE_HIGGS_GRAM_PURITY_POSTPROCESSOR_NOTE_2026-05-03.md
   - outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json
   - outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json
   - outputs/yt_pr230_assumption_import_stress_2026-05-01.json
   - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
   - outputs/yt_retained_closure_route_certificate_2026-05-01.json
   - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
+  - outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json
+  - outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json
 verification:
+  source_higgs_builder_pass_fail: "4/0"
+  source_higgs_gram_postprocessor_pass_fail: "2/0"
+  source_higgs_production_readiness_pass_fail: "21/0"
+  completion_audit_pass_fail: "24/0"
   runner_pass_fail: "21/0"
   candidate_portfolio_pass_fail: "16/0"
   assumption_import_stress_pass_fail: "45/0"
@@ -35,9 +45,11 @@ verification:
   audit_lint_strict: "no errors; five pre-existing warnings"
   diff_check: clean
 next_exact_action: >
-  Pursue the ranked positive candidates: action-first canonical O_H and
-  C_sH/C_HH rows, source-coordinate transport, neutral primitive/rank-one,
-  Schur A/B/C rows, or W/Z response with strict g2/covariance/delta_perp.
+  Supply the next same-surface artifact beyond the genuine O_sp intake:
+  certified canonical O_H plus C_sH/C_HH pole rows, source-coordinate
+  transport, neutral primitive/rank-one, Schur A/B/C rows, or W/Z response with
+  strict g2/covariance/delta_perp.  Future source-Higgs rows must attach the
+  genuine O_sp intake certificate and must not treat O_sp as physics closure.
 stop_condition: >
-  This block stops after packaging the first-principles candidate portfolio
-  and preserving reopen conditions in aggregate PR230 gates.
+  This block stops after hardening the source-Higgs row contract against stale
+  source-pole support while preserving open status and all claim firewalls.

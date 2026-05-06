@@ -142,6 +142,16 @@ def validate_candidate(candidate: dict[str, Any]) -> dict[str, bool]:
         == "legendre_lsz_source_pole_operator_v1",
         "source_pole_operator_constructed": source_pole.get("source_pole_operator_constructed") is True,
         "source_pole_residue_unit": source_pole.get("source_pole_residue_normalized_to_one") is True,
+        "genuine_source_pole_intake_passed": source_pole.get("genuine_source_pole_intake_passed") is True,
+        "genuine_source_pole_current_surface_support": source_pole.get(
+            "artifact_is_genuine_current_surface_support"
+        )
+        is True,
+        "source_pole_support_not_physics_closure": source_pole.get("artifact_is_physics_closure")
+        is False,
+        "source_pole_same_surface_coordinate": source_pole.get("same_surface_source_coordinate") is True,
+        "source_pole_rescaling_invariant": source_pole.get("source_rescaling_invariant") is True,
+        "source_pole_contact_term_invariant": source_pole.get("contact_term_invariant") is True,
         "source_pole_not_claimed_as_higgs_by_fiat": source_pole.get("canonical_higgs_operator_identity_passed") is False,
         "canonical_higgs_operator_identity": candidate.get("canonical_higgs_operator_identity_passed") is True,
         "has_identity_certificate": isinstance(operator.get("identity_certificate"), str)
@@ -220,6 +230,7 @@ def main() -> int:
         "candidate_present": candidate_present,
         "candidate_checks": checks,
         "candidate_missing_or_failed_checks": missing_checks,
+        "required_source_side_contract": "genuine_osp_lsz_intake_required_v1",
         "gram_purity": gate,
         "source_higgs_gram_purity_gate_passed": gate_passed,
         "osp_higgs_gram_purity_gate_passed": gate_passed,
@@ -229,11 +240,12 @@ def main() -> int:
             "does not treat H_unit as O_H",
             "does not set kappa_s = 1 or cos(theta) = 1",
             "does not identify O_sp with O_H without an O_sp-Higgs Gram-purity pass",
+            "does not treat the genuine O_sp intake artifact as physical y_t closure",
             "does not use yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
         ],
         "exact_next_action": (
             "Supply a production same-surface O_H/C_sH/C_HH certificate, "
-            "attach the Legendre/LSZ O_sp source-side normalization, then "
+            "attach the genuine Legendre/LSZ O_sp source-side intake, then "
             "rerun this postprocessor and the retained-route gate."
         ),
         "pass_count": PASS_COUNT,

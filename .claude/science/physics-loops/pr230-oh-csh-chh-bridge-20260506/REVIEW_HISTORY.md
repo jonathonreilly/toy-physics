@@ -4,6 +4,11 @@ No external review-loop has been run yet for this block.
 
 Local verification completed:
 
+- `frontier_yt_source_higgs_cross_correlator_certificate_builder.py`: PASS=4
+  FAIL=0;
+- `frontier_yt_source_higgs_gram_purity_postprocessor.py`: PASS=2 FAIL=0;
+- `frontier_yt_source_higgs_production_readiness_gate.py`: PASS=21 FAIL=0;
+- `frontier_yt_pr230_positive_closure_completion_audit.py`: PASS=24 FAIL=0;
 - `python3 -m py_compile` for the new runner and four aggregate PR230 gates;
 - `frontier_yt_pr230_taste_condensate_oh_bridge_audit.py`: PASS=21 FAIL=0;
 - `frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py`:

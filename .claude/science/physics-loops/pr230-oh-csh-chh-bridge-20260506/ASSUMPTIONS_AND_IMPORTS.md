@@ -15,6 +15,8 @@ Allowed context:
 - the PR230 production harness source coordinate, which is the uniform additive
   scalar mass shift `m_bare + s`;
 - existing source-Higgs gates as acceptance surfaces.
+- the May 6 genuine `O_sp` intake artifact as source-side support only, not as
+  canonical-Higgs identity or physical `y_t` closure.
 
 Open imports after this block:
 
@@ -26,6 +28,9 @@ Open imports after this block:
   taste-axis Higgs source;
 - same-surface canonical `O_H` identity and normalization;
 - production `C_sH/C_HH` pole residues;
+- future source-Higgs production rows must attach
+  `outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json` and
+  must preserve its support-only status;
 - W/Z response rows with strict non-observed `g2`, matched covariance, and
   `delta_perp` authority;
 - Schur `A/B/C` rows from a real neutral scalar kernel basis;
