@@ -29,6 +29,9 @@ OUTPUT = (
     / "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json"
 )
 REMOTE_MAIN = "origin/main"
+H2_SUPPORT = (
+    "outputs/yt_pr230_z3_triplet_positive_cone_support_certificate_2026-05-06.json"
+)
 
 COMPOSITE_PATHS = {
     "note": "docs/COMPOSITE_HIGGS_MECHANISM_STRETCH_ATTEMPT_NOTE_2026-05-03.md",
@@ -248,6 +251,7 @@ def main() -> int:
     candidate_text = "\n\n".join(text for text, _source in texts.values())
     sources = {name: source for name, (_text, source) in texts.items()}
     certs = {name: load_json(path) for name, path in PARENTS.items()}
+    h2_support = load_json(H2_SUPPORT)
     statuses = {name: status(cert) for name, cert in certs.items()}
     missing_parents = [name for name, cert in certs.items() if not cert]
     proposal_allowed_parents = [
@@ -292,6 +296,21 @@ def main() -> int:
         and certs["same_surface_z3_taste_triplet"].get("pr230_closure_authorized")
         is False
     )
+    h2_positive_cone_support_supplied = (
+        "Z3-triplet positive-cone H2 support"
+        in status(h2_support)
+        and h2_support.get("proposal_allowed") is False
+        and h2_support.get("z3_triplet_positive_cone_h2_support_passed") is True
+        and h2_support.get("pr230_closure_authorized") is False
+        and h2_support.get("supplies_conditional_premises", {}).get(
+            "H2_positive_cone_equal_magnitude_support"
+        )
+        is True
+        and h2_support.get("supplies_conditional_premises", {}).get(
+            "H3_lazy_positive_physical_transfer"
+        )
+        is False
+    )
     neutral_route_currently_blocked = (
         "neutral primitive-rank-one route not complete"
         in statuses["neutral_primitive_route_completion"]
@@ -328,6 +347,7 @@ def main() -> int:
     report("composite-z3-triplet-named", composite_triplet_named, "Phi_i triplet with branch-local hypotheses")
     report("composite-intake-context-only", composite_is_context_only, statuses["origin_main_composite_higgs_intake_guard"])
     report("same-surface-z3-triplet-supplied", same_surface_z3_triplet_supplied, statuses["same_surface_z3_taste_triplet"])
+    report("z3-positive-cone-h2-support-supplied", h2_positive_cone_support_supplied, status(h2_support))
     report("z3-primitive-matrix-theorem-passed", theorem_math_passed, "L=(I+P)/2 has L^2>0 and rank-one PF limit")
     report("pure-z3-cycle-not-enough", witness["pure_cyclic_generator_is_not_primitive"], "P remains periodic, so laziness/off-diagonal self term is load-bearing")
     report("neutral-route-currently-blocked", neutral_route_currently_blocked, statuses["neutral_primitive_route_completion"])
@@ -339,10 +359,13 @@ def main() -> int:
 
     conditional_premises = [
         "H1: Z3 cyclic action on the PR230-relevant taste-scalar triplet is derived on the same surface (supplied by yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json)",
-        "H2: the three bilinear channels sit in one positive cone with nonzero equal-magnitude support",
+        "H2: the three bilinear channels sit in one positive cone with nonzero equal-magnitude support (supplied by yt_pr230_z3_triplet_positive_cone_support_certificate_2026-05-06.json when present)",
         "H3: the same-surface neutral transfer contains a positive lazy term I plus the Z3 cycle P, or an equivalent aperiodic positive connector",
         "H4: the resulting neutral transfer is the physical scalar transfer coupled to the PR230 source/canonical-Higgs sector",
     ]
+    remaining_conditional_premises = ["H3", "H4"]
+    if not h2_positive_cone_support_supplied:
+        remaining_conditional_premises.insert(0, "H2")
     missing_current_surface_premises = [
         "same-surface PR230 EW/Higgs or composite action tying the Z3 taste triplet to the top FH/LSZ source coordinate",
         "derived off-diagonal neutral generator or production non-source response row",
@@ -355,9 +378,10 @@ def main() -> int:
             "same-surface PR230 primitive premise absent"
         ),
         "conditional_surface_status": (
-            "H1 is now supplied as an exact same-surface Z3 taste-triplet "
-            "artifact.  If H2-H4 are also supplied, the neutral "
-            "primitive/rank-one mathematical premise is satisfied."
+            "H1 is supplied as an exact same-surface Z3 taste-triplet "
+            "artifact and H2 is supplied when the positive-cone support "
+            "certificate is present.  If H3-H4 are also supplied, the neutral "
+            "primitive/rank-one mathematical premise becomes load-bearing."
         ),
         "hypothetical_axiom_status": "would support neutral primitive route under H1-H4; not retained on actual surface",
         "admitted_observation_status": None,
@@ -371,9 +395,12 @@ def main() -> int:
         "audit_required_before_effective_retained": True,
         "z3_triplet_conditional_primitive_theorem_passed": theorem_math_passed,
         "same_surface_z3_triplet_supplied": same_surface_z3_triplet_supplied,
-        "remaining_unsupplied_conditional_premises": ["H2", "H3", "H4"],
+        "h2_positive_cone_support_supplied": h2_positive_cone_support_supplied,
+        "remaining_unsupplied_conditional_premises": remaining_conditional_premises,
         "pr230_closure_authorized": False,
         "writes_strict_future_certificate": False,
+        "h2_support_certificate": H2_SUPPORT,
+        "h2_support_status": status(h2_support),
         "strict_future_certificate_presence": future_present,
         "composite_sources": sources,
         "parent_statuses": statuses,

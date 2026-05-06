@@ -228,14 +228,25 @@ def main() -> int:
         and certs["same_surface_z3_taste_triplet"].get("pr230_closure_authorized")
         is False
     )
-    conditional_parent_waits_for_h2 = (
+    conditional_parent_remaining = certs["z3_triplet_conditional_primitive"].get(
+        "remaining_unsupplied_conditional_premises", []
+    )
+    conditional_parent_waits_for_or_consumes_h2 = (
         "Z3-triplet primitive-cone theorem"
         in statuses["z3_triplet_conditional_primitive"]
-        and "H2"
-        in certs["z3_triplet_conditional_primitive"].get(
-            "remaining_unsupplied_conditional_premises", []
-        )
         and certs["z3_triplet_conditional_primitive"].get("proposal_allowed") is False
+        and (
+            "H2" in conditional_parent_remaining
+            or (
+                "H2" not in conditional_parent_remaining
+                and "H3" in conditional_parent_remaining
+                and "H4" in conditional_parent_remaining
+                and certs["z3_triplet_conditional_primitive"].get(
+                    "h2_positive_cone_support_supplied"
+                )
+                is True
+            )
+        )
     )
     h3_still_absent = (
         "Z3 lazy-transfer promotion not derivable"
@@ -274,7 +285,7 @@ def main() -> int:
         and taste_text_support
         and substrate_text_support
         and h1_loaded
-        and conditional_parent_waits_for_h2
+        and conditional_parent_waits_for_or_consumes_h2
         and max(plus_hermitian_errors) < 1.0e-14
         and max(plus_idempotent_errors) < 1.0e-14
         and plus_projectors_psd
@@ -294,7 +305,11 @@ def main() -> int:
     report("taste-theorem-support-loaded", taste_text_support, TEXTS["taste_scalar_isotropy"])
     report("substrate-support-loaded", substrate_text_support, TEXTS["minimal_axioms"])
     report("h1-same-surface-z3-triplet-loaded", h1_loaded, statuses["same_surface_z3_taste_triplet"])
-    report("conditional-parent-waits-for-h2", conditional_parent_waits_for_h2, statuses["z3_triplet_conditional_primitive"])
+    report(
+        "conditional-parent-h2-context-consistent",
+        conditional_parent_waits_for_or_consumes_h2,
+        f"{statuses['z3_triplet_conditional_primitive']} remaining={conditional_parent_remaining}",
+    )
     report("projectors-hermitian", max(plus_hermitian_errors) < 1.0e-14, str(plus_hermitian_errors))
     report("projectors-idempotent", max(plus_idempotent_errors) < 1.0e-14, str(plus_idempotent_errors))
     report("projectors-positive-semidefinite", plus_projectors_psd, str(plus_eigs))

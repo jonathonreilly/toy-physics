@@ -52,6 +52,12 @@ The same-surface cyclic triplet action premise is now supplied by
 `Cl(3)/Z^3` taste block, the tensor-factor cycle maps
 `S0 -> S1 -> S2 -> S0` exactly while fixing the source identity `I_8`.
 
+The positive-cone/equal-magnitude H2 premise is now supplied algebraically by
+`YT_PR230_Z3_TRIPLET_POSITIVE_CONE_SUPPORT_CERTIFICATE`: the projectors
+`Q_i^+=(I+S_i)/2` are positive semidefinite, nonzero, equal-rank/equal-norm,
+and cycled by the same Z3 operator.  This does not instantiate the physical
+transfer; it only removes H2 from the remaining conditional-premise list.
+
 The current PR230 surface still lacks:
 
 - same-surface EW/Higgs or composite action tying the Z3 taste triplet to the
@@ -87,5 +93,5 @@ normalization selectors by name.
 
 ```bash
 python3 scripts/frontier_yt_pr230_z3_triplet_conditional_primitive_cone_theorem.py
-# SUMMARY: PASS=14 FAIL=0
+# SUMMARY: PASS=15 FAIL=0
 ```

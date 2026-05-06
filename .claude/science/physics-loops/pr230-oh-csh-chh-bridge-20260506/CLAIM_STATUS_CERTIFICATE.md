@@ -96,6 +96,10 @@ equal-rank/equal-norm, and Z3-cycled.  It is exact support only.  It does not
 instantiate a physical neutral transfer, prove primitive irreducibility, couple
 the triplet to the PR230 source/canonical-Higgs sector, set `kappa_s`, or
 authorize retained/proposed-retained closure.
+The conditional primitive theorem has been refreshed to consume that H2
+certificate, so the only remaining unsupplied premises in that contract are
+H3/H4: physical transfer/off-diagonal dynamics and source/canonical-Higgs
+coupling authority.
 The H1 lift attempt may guide a future composite-Higgs certificate, but it
 currently blocks the shortcut from Koide/lepton Z3 to the quark-bilinear
 triplet action.

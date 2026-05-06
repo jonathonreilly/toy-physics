@@ -10,11 +10,11 @@
   },
   "conditional_premises": [
     "H1: Z3 cyclic action on the PR230-relevant taste-scalar triplet is derived on the same surface (supplied by yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json)",
-    "H2: the three bilinear channels sit in one positive cone with nonzero equal-magnitude support",
+    "H2: the three bilinear channels sit in one positive cone with nonzero equal-magnitude support (supplied by yt_pr230_z3_triplet_positive_cone_support_certificate_2026-05-06.json when present)",
     "H3: the same-surface neutral transfer contains a positive lazy term I plus the Z3 cycle P, or an equivalent aperiodic positive connector",
     "H4: the resulting neutral transfer is the physical scalar transfer coupled to the PR230 source/canonical-Higgs sector"
   ],
-  "conditional_surface_status": "H1 is now supplied as an exact same-surface Z3 taste-triplet artifact.  If H2-H4 are also supplied, the neutral primitive/rank-one mathematical premise is satisfied.",
+  "conditional_surface_status": "H1 is supplied as an exact same-surface Z3 taste-triplet artifact and H2 is supplied when the positive-cone support certificate is present.  If H3-H4 are also supplied, the neutral primitive/rank-one mathematical premise becomes load-bearing.",
   "exact_next_action": "Try to derive H1-H4 on the same PR230 surface, or implement a production non-source response row/off-diagonal neutral generator. Only then can this primitive theorem be promoted from conditional support to a strict neutral primitive-cone certificate.",
   "fail_count": 0,
   "firewall": {
@@ -28,6 +28,9 @@
     "uses_reduced_pilots_as_production_evidence": false,
     "uses_yt_ward_identity_as_authority": false
   },
+  "h2_positive_cone_support_supplied": true,
+  "h2_support_certificate": "outputs/yt_pr230_z3_triplet_positive_cone_support_certificate_2026-05-06.json",
+  "h2_support_status": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent",
   "hypothetical_axiom_status": "would support neutral primitive route under H1-H4; not retained on actual surface",
   "literature_context": {
     "fms_role": "motivates gauge-invariant composite Higgs operators only after a same-surface gauge-Higgs/composite action exists",
@@ -50,7 +53,7 @@
     "retained_route": "open / retained closure not yet reached",
     "same_surface_z3_taste_triplet": "exact-support / same-surface Z3 taste-triplet artifact; physical neutral transfer still absent"
   },
-  "pass_count": 14,
+  "pass_count": 15,
   "pr230_closure_authorized": false,
   "primitive_witness": {
     "L2": [
@@ -219,7 +222,6 @@
   "proposal_allowed": false,
   "proposal_allowed_reason": "The finite-matrix primitive theorem is exact, but the current PR230 surface still lacks the same-surface action/off-diagonal generator that would instantiate the theorem.",
   "remaining_unsupplied_conditional_premises": [
-    "H2",
     "H3",
     "H4"
   ],

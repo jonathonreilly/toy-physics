@@ -277,6 +277,12 @@ primitive contract.  It does not supply physical neutral transfer,
 off-diagonal dynamics, primitive irreducibility, source-Higgs coupling, or
 `kappa_s`; H3/H4 remain the blockers.
 
+The conditional primitive theorem has been refreshed after the H2 artifact.
+Its certificate now records `h2_positive_cone_support_supplied=true` and
+`remaining_unsupplied_conditional_premises=["H3","H4"]`.  The theorem remains
+conditional support only: no strict neutral primitive-cone certificate is
+written and no PR230 closure language is authorized.
+
 Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then

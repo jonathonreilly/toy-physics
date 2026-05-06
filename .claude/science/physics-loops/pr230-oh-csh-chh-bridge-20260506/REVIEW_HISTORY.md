@@ -162,6 +162,23 @@ Local verification completed:
   intentional artifact;
 - `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
   pre-existing warnings;
+- after refreshing the conditional primitive theorem to consume H2,
+  `frontier_yt_pr230_z3_triplet_conditional_primitive_cone_theorem.py`:
+  PASS=15 FAIL=0 with `remaining_unsupplied_conditional_premises=["H3","H4"]`;
+  `frontier_yt_pr230_z3_triplet_positive_cone_support_certificate.py`:
+  PASS=19 FAIL=0 against the refreshed parent;
+- aggregate gates after the H2-consumption refresh remained clean:
+  assumption/import stress PASS=71 FAIL=0, full assembly PASS=130 FAIL=0,
+  retained route PASS=285 FAIL=0, campaign status PASS=317 FAIL=0, and
+  completion audit PASS=44 FAIL=0;
+- final H2-consumption refresh validation: `python3 -m py_compile` for the
+  refreshed theorem/H2/aggregate runners, `git diff --check`, and
+  conflict-marker scan were clean;
+- `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
+  metadata regenerated for validation and then reverted because it was not an
+  intentional artifact;
+- `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
+  pre-existing warnings;
 - `python3 -m py_compile` for the chunk checkpoint, row combiner,
   source-Higgs readiness, assumption stress, full assembly, retained route,
   campaign status, and completion-audit runners after the chunks007-008
