@@ -35,6 +35,9 @@ This block lands:
   measured overlap
   `kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))` while proving that the
   current row packet is absent and `kappa_s = 1` remains forbidden;
+- a source-Higgs builder/postprocessor integration refresh so future
+  `O_H/C_sH/C_HH` row certificates must attach the overlap/kappa contract and
+  emit the same `kappa_spH` field before Gram-purity evaluation;
 - a refreshed FH/LSZ production postprocess gate that recognizes completed L12
   chunked support while preserving all no-closure firewalls;
 - a paired JSON certificate;

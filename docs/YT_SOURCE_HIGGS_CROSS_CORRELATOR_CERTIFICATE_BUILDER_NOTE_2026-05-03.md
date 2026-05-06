@@ -36,6 +36,17 @@ builder checks that this intake marks `O_sp` as genuine current-surface support,
 same-source, source-rescaling invariant, and contact-term invariant, while also
 marking it explicitly as non-closure with no canonical `O_H` identity.
 
+The builder now also requires the May 6 source-Higgs overlap/kappa contract
+`outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json`.  For
+future rows it emits the same exact readout
+
+```text
+kappa_spH = Res(C_sH) / sqrt(Res(C_ss) Res(C_HH)).
+```
+
+This is an overlap field in the future row certificate, not a permission to
+set `kappa_s = 1`.
+
 ## Computed Quantities
 
 For the selected pole row, the builder computes:
@@ -43,6 +54,7 @@ For the selected pole row, the builder computes:
 ```text
 Delta = Res(C_ss) Res(C_HH) - Res(C_sH)^2
 rho_sH = Res(C_sH) / sqrt(Res(C_ss) Res(C_HH))
+kappa_spH = rho_sH after O_sp source-side normalization
 ```
 
 The builder records the central-value purity check, but it does not authorize

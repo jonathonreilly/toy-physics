@@ -12,6 +12,10 @@ Local verification completed:
 - `frontier_yt_source_higgs_cross_correlator_certificate_builder.py`: PASS=4
   FAIL=0;
 - `frontier_yt_source_higgs_gram_purity_postprocessor.py`: PASS=2 FAIL=0;
+- after the source-Higgs overlap/kappa contract integration refresh,
+  `frontier_yt_source_higgs_cross_correlator_certificate_builder.py`: PASS=5
+  FAIL=0 and `frontier_yt_source_higgs_gram_purity_postprocessor.py`: PASS=3
+  FAIL=0; both still record production rows absent and proposal disallowed;
 - `frontier_yt_source_higgs_production_readiness_gate.py`: PASS=21 FAIL=0;
 - `frontier_yt_pr230_positive_closure_completion_audit.py`: PASS=26 FAIL=0;
 - `frontier_yt_pr230_source_coordinate_transport_gate.py`: PASS=21 FAIL=0;

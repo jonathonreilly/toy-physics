@@ -1,7 +1,7 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: open / first-principles O_H bridge positive-candidate portfolio with scalar reparam gate, exact two-source taste-radial chart and action-source support, bounded two-source C_sx/C_xx row-contract support, bounded two-source row-production manifest support, bounded row-wave launcher support, completed chunks001-004 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=4/63 and no combined row packet written, chunks005-006 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, FMS post-degree action-first composite-O_H route rescore, conditional FMS composite-O_H theorem, exact post-FMS source-overlap necessity boundary, exact source-Higgs overlap/kappa row-contract support with the future kappa_spH formula and current row packet absent, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional lazy-Z3 primitive support, H1 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and FH/LSZ L12 bounded-support postprocess refresh recorded
+actual_current_surface_status: open / first-principles O_H bridge positive-candidate portfolio with scalar reparam gate, exact two-source taste-radial chart and action-source support, bounded two-source C_sx/C_xx row-contract support, bounded two-source row-production manifest support, bounded row-wave launcher support, completed chunks001-004 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=4/63 and no combined row packet written, chunks005-006 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, FMS post-degree action-first composite-O_H route rescore, conditional FMS composite-O_H theorem, exact post-FMS source-overlap necessity boundary, exact source-Higgs overlap/kappa row-contract support with the future kappa_spH formula integrated into the source-Higgs builder/postprocessor and current row packet absent, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional lazy-Z3 primitive support, H1 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and FH/LSZ L12 bounded-support postprocess refresh recorded
 conditional_surface_status: conditional-support if the two-source taste-radial source is promoted by production C_sx/C_xx rows plus canonical-O_H/source-overlap identity, or if certified O_H/C_sH/C_HH rows, W/Z response rows with strict g2/covariance/delta_perp, Schur A/B/C rows, or same-surface neutral primitive-cone transfer lands
 hypothetical_axiom_status: null
 admitted_observation_status: null
@@ -53,6 +53,11 @@ overlap formula
 `kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))` after the genuine `O_sp`
 source-side normalization.  It is source-scale invariant, but the current row
 packet is absent; it is not `kappa_s = 1` and not closure.
+The source-Higgs cross-correlator builder and Gram-purity postprocessor now
+consume that contract explicitly, so a future candidate row packet will carry
+the same `kappa_spH` field into the Gram-purity gate.  The current builder and
+postprocessor still report rows/candidate certificate absent and
+`proposal_allowed=false`.
 The route-completion artifacts are scoped current-surface boundaries; they
 preserve first-principles reopen routes after a same-surface row, certificate,
 or theorem is supplied.  The `origin/main` composite-Higgs packet remains

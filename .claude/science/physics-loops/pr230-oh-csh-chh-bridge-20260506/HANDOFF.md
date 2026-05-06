@@ -185,6 +185,15 @@ changing canonical `y_t` unless the row packet passes Gram purity.  The current
 surface still has no certified `O_H/C_sH/C_HH` pole-row packet, so this is
 exact support only and not `kappa_s = 1` or closure.
 
+That contract is now wired into the source-Higgs row pipeline.  The
+source-Higgs cross-correlator certificate builder records the May 6 contract,
+requires it for future row candidates, and will emit
+`source_higgs_overlap_kappa_spH` alongside the raw residues.  The Gram-purity
+postprocessor records the same contract and computes
+`kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))` as the measured overlap field
+before checking `|kappa_spH| = 1`/Gram purity.  Current status is still rows
+absent, proposal disallowed, and no `kappa_s = 1`.
+
 Chunks001-004 of the two-source taste-radial production wave have completed.
 The completed-mode chunk checkpoint now passes `PASS=15 FAIL=0` for
 chunks001-004, including production metadata, `numba_gauge_seed_v1`, the
@@ -214,7 +223,9 @@ Best next work:
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then
    run source-Higgs pole rows; this is now the cleanest non-chunk route after
    the FMS post-degree rescore and composite-expansion theorem, but FMS
-   literature and the conditional expansion are route support only;
+   literature and the conditional expansion are route support only; the row
+   builder/postprocessor are now ready to consume the overlap/kappa contract
+   when those rows exist;
 2. launch production `C_sx/C_xx` rows for the exact two-source taste-radial
    source using the no-resume manifest and row contract; chunks001-004 are
    complete and checkpointed, the combiner gate records `ready=4/63` and writes

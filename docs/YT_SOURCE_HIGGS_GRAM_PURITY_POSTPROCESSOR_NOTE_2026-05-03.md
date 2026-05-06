@@ -28,6 +28,7 @@ rho_sH = Res(C_sH) / sqrt(Res(C_ss) Res(C_HH))
 Res(C_sp,H) = Res(C_sH) / sqrt(Res(C_ss))
 Delta_spH = Res(C_HH) - Res(C_sp,H)^2
 rho_spH = Res(C_sp,H) / sqrt(Res(C_HH))
+kappa_spH = rho_spH = Res(C_sH) / sqrt(Res(C_ss) Res(C_HH))
 ```
 
 and checks whether `Delta_spH = 0` and `|rho_spH| = 1` within the declared
@@ -43,6 +44,7 @@ The future candidate certificate must supply:
 - same-ensemble and same-source-coordinate flags;
 - the Legendre/LSZ `O_sp` source-side normalization certificate and genuine
   source-pole intake certificate;
+- the May 6 source-Higgs overlap/kappa contract;
 - a certified same-surface canonical-Higgs operator identity;
 - `Res_C_ss`, `Res_C_sH`, and `Res_C_HH`;
 - no `H_unit` by fiat;
@@ -68,3 +70,7 @@ does not set `kappa_s = 1` or `cos(theta) = 1`, and does not use
 `yt_ward_identity`, observed targets, `alpha_LM`, plaquette, or `u0`.  It also
 does not identify `O_sp` with `O_H` unless the `O_sp`-Higgs Gram-purity gate
 passes.
+
+The `kappa_spH` field is a measured future-row overlap.  It is not a unit
+normalization convention and cannot replace the missing row packet, Gram
+purity, FV/IR/model-class control, or retained-route authorization.

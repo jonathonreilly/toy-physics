@@ -186,6 +186,10 @@ Open imports after this block:
 - future source-Higgs production rows must attach
   `outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json` and
   must preserve its support-only status;
+- future source-Higgs production rows must also attach
+  `outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json` and
+  report `kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))` as a measured
+  overlap field; this is not permission to set `kappa_s = 1`;
 - W/Z response rows with strict non-observed `g2`, matched covariance, and
   `delta_perp` authority;
 - Schur `A/B/C` rows from a real neutral scalar kernel basis;

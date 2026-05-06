@@ -10,9 +10,12 @@
   "genuine_source_pole_intake_certificate": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
   "input_present": false,
   "input_rows": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
-  "pass_count": 4,
+  "pass_count": 5,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Builder output is support only; retained-route gate remains authoritative.",
+  "source_higgs_overlap_kappa_contract_available": true,
+  "source_higgs_overlap_kappa_contract_certificate": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
+  "source_higgs_overlap_kappa_formula": "kappa_spH = Res(C_sH) / sqrt(Res(C_ss) Res(C_HH))",
   "source_pole_operator_available": true,
   "source_pole_operator_certificate": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
   "source_side_contract_version": "genuine_osp_lsz_intake_required_v1",
@@ -22,6 +25,7 @@
     "does not manufacture O_H, C_sH, or C_HH data",
     "does not treat H_unit, static EW algebra, or observed targets as O_H",
     "does not set kappa_s = 1 or cos(theta) = 1",
+    "does not treat the source-Higgs overlap/kappa contract as row evidence",
     "does not identify O_sp with O_H without an O_sp-Higgs Gram-purity pass"
   ],
   "verdict": "No source-Higgs O_H/C_sH/C_HH measurement rows are present, so no production candidate certificate was written."

@@ -29,6 +29,9 @@ SOURCE_POLE_OPERATOR = ROOT / "outputs" / "yt_legendre_source_pole_operator_cons
 GENUINE_SOURCE_POLE_INTAKE = (
     ROOT / "outputs" / "yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json"
 )
+SOURCE_HIGGS_OVERLAP_KAPPA_CONTRACT = (
+    ROOT / "outputs" / "yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json"
+)
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -90,6 +93,7 @@ def compute_gram(row: dict[str, Any]) -> dict[str, Any]:
         "Dprime_ss_at_pole": dgamma_ss,
         "Res_C_sp_sp": 1.0 if c_ss > 0.0 else None,
         "Res_C_spH": c_sp_h,
+        "source_higgs_overlap_kappa_spH": rho_sp_h,
         "osp_higgs_gram_determinant": delta_sp_h,
         "normalized_overlap_rho_spH": rho_sp_h,
         "purity_gate_passed_by_central_values": product > 0.0 and abs(delta) <= 1.0e-9 and abs(abs(rho) - 1.0) <= 1.0e-9,
@@ -171,8 +175,42 @@ def source_pole_summary(source_pole: dict[str, Any], intake: dict[str, Any]) -> 
     }
 
 
+def overlap_kappa_contract_summary(contract: dict[str, Any], gram: dict[str, Any]) -> dict[str, Any]:
+    contract_ok = (
+        contract.get("source_higgs_overlap_kappa_contract_passed") is True
+        and contract.get("proposal_allowed") is False
+        and contract.get("current_blockers", {}).get("source_higgs_row_packet_absent")
+        is True
+        and contract.get("forbidden_firewall", {}).get("set_kappa_s_equal_one") is False
+    )
+    kappa = gram.get("source_higgs_overlap_kappa_spH")
+    return {
+        "certificate": str(SOURCE_HIGGS_OVERLAP_KAPPA_CONTRACT.relative_to(ROOT)),
+        "contract_passed": contract_ok,
+        "contract_status": contract.get("actual_current_surface_status"),
+        "formula": contract.get("overlap_formula", {}).get(
+            "equivalent_raw_rows",
+            "Res(C_sH) / sqrt(Res(C_ss) Res(C_HH))",
+        ),
+        "source_higgs_overlap_kappa_spH": kappa if finite(kappa) else None,
+        "pure_bridge_condition": contract.get("overlap_formula", {}).get(
+            "pure_bridge_condition",
+            "abs(kappa_spH) = 1 with same-pole O_sp-Higgs Gram purity",
+        ),
+        "strict_limit": (
+            "This is the measured source-Higgs overlap readout for future rows; "
+            "it does not set kappa_s = 1 or identify O_sp with O_H without "
+            "same-pole Gram/FV/IR/retained-route gates."
+        ),
+    }
+
+
 def build_candidate(
-    data: dict[str, Any], input_path: Path, source_pole: dict[str, Any], intake: dict[str, Any]
+    data: dict[str, Any],
+    input_path: Path,
+    source_pole: dict[str, Any],
+    intake: dict[str, Any],
+    overlap_contract: dict[str, Any],
 ) -> tuple[dict[str, Any], dict[str, bool], list[str]]:
     checks, missing = validate_measurement_input(data)
     row = pick_pole_row(data.get("pole_residue_rows", []))
@@ -187,6 +225,10 @@ def build_candidate(
     )
     checks["genuine_source_pole_intake_available"] = (
         sp_summary["genuine_source_pole_intake_passed"] is True
+    )
+    kappa_summary = overlap_kappa_contract_summary(overlap_contract, gram)
+    checks["source_higgs_overlap_kappa_contract_available"] = (
+        kappa_summary["contract_passed"] is True
     )
     missing = [key for key, ok in checks.items() if not ok]
     candidate = {
@@ -213,6 +255,7 @@ def build_candidate(
             GENUINE_SOURCE_POLE_INTAKE.relative_to(ROOT)
         ),
         "source_side_contract_version": "genuine_osp_lsz_intake_required_v1",
+        "source_higgs_overlap_kappa_contract": kappa_summary,
         "hunit_used_as_operator": operator.get("hunit_used_as_operator"),
         "observed_targets_used_as_selectors": firewall.get("used_observed_targets_as_selectors"),
         "firewall": {
@@ -234,6 +277,7 @@ def build_candidate(
                 "Dprime_ss_at_pole",
                 "Res_C_sp_sp",
                 "Res_C_spH",
+                "source_higgs_overlap_kappa_spH",
             )
             if key in gram
         },
@@ -242,6 +286,7 @@ def build_candidate(
             "normalized_overlap_rho_sH": gram.get("normalized_overlap_rho_sH"),
             "osp_higgs_gram_determinant": gram.get("osp_higgs_gram_determinant"),
             "normalized_overlap_rho_spH": gram.get("normalized_overlap_rho_spH"),
+            "source_higgs_overlap_kappa_spH": gram.get("source_higgs_overlap_kappa_spH"),
             "purity_gate_passed": False,
             "central_values_pass": gram.get("purity_gate_passed_by_central_values", False),
             "osp_higgs_central_values_pass": gram.get("osp_higgs_purity_gate_passed_by_central_values", False),
@@ -280,6 +325,7 @@ def main() -> int:
     data = load_json(args.input)
     source_pole = load_json(SOURCE_POLE_OPERATOR)
     intake = load_json(GENUINE_SOURCE_POLE_INTAKE)
+    overlap_contract = load_json(SOURCE_HIGGS_OVERLAP_KAPPA_CONTRACT)
     input_present = bool(data)
     source_pole_ok = (
         source_pole.get("source_pole_operator_constructed") is True
@@ -295,6 +341,14 @@ def main() -> int:
         and intake.get("canonical_higgs_operator_identity_passed") is False
         and intake.get("proposal_allowed") is False
     )
+    overlap_kappa_contract_ok = (
+        overlap_contract.get("source_higgs_overlap_kappa_contract_passed") is True
+        and overlap_contract.get("proposal_allowed") is False
+        and overlap_contract.get("current_blockers", {}).get("source_higgs_row_packet_absent")
+        is True
+        and overlap_contract.get("forbidden_firewall", {}).get("set_kappa_s_equal_one")
+        is False
+    )
     candidate_written = False
     candidate = {}
     checks: dict[str, bool] = {}
@@ -306,9 +360,16 @@ def main() -> int:
         source_pole_intake_ok,
         str(GENUINE_SOURCE_POLE_INTAKE.relative_to(ROOT)),
     )
+    report(
+        "source-higgs-overlap-kappa-contract-recorded",
+        overlap_kappa_contract_ok,
+        str(SOURCE_HIGGS_OVERLAP_KAPPA_CONTRACT.relative_to(ROOT)),
+    )
     report("measurement-row-input-state-recorded", True, f"present={input_present}")
     if input_present:
-        candidate, checks, missing = build_candidate(data, args.input, source_pole, intake)
+        candidate, checks, missing = build_candidate(
+            data, args.input, source_pole, intake, overlap_contract
+        )
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(candidate, indent=2, sort_keys=True) + "\n", encoding="utf-8")
         candidate_written = True
@@ -339,10 +400,15 @@ def main() -> int:
         "candidate_output": str(args.output.relative_to(ROOT)) if args.output.is_relative_to(ROOT) else str(args.output),
         "source_pole_operator_certificate": str(SOURCE_POLE_OPERATOR.relative_to(ROOT)),
         "genuine_source_pole_intake_certificate": str(GENUINE_SOURCE_POLE_INTAKE.relative_to(ROOT)),
+        "source_higgs_overlap_kappa_contract_certificate": str(
+            SOURCE_HIGGS_OVERLAP_KAPPA_CONTRACT.relative_to(ROOT)
+        ),
         "source_pole_operator_available": source_pole_ok,
         "genuine_source_pole_intake_available": source_pole_intake_ok,
+        "source_higgs_overlap_kappa_contract_available": overlap_kappa_contract_ok,
         "source_side_normalization": "O_sp = sqrt(dGamma_ss/dx|pole) O_s; Res(C_sp,sp)=1",
         "source_side_contract_version": "genuine_osp_lsz_intake_required_v1",
+        "source_higgs_overlap_kappa_formula": "kappa_spH = Res(C_sH) / sqrt(Res(C_ss) Res(C_HH))",
         "input_present": input_present,
         "candidate_written": candidate_written,
         "candidate_checks": checks,
@@ -352,6 +418,7 @@ def main() -> int:
             "does not manufacture O_H, C_sH, or C_HH data",
             "does not treat H_unit, static EW algebra, or observed targets as O_H",
             "does not set kappa_s = 1 or cos(theta) = 1",
+            "does not treat the source-Higgs overlap/kappa contract as row evidence",
             "does not identify O_sp with O_H without an O_sp-Higgs Gram-purity pass",
         ],
         "exact_next_action": (

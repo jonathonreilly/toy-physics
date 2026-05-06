@@ -28,6 +28,11 @@ source-side normalization.  It is exact support for this route and blocks
 `kappa_s = 1` as a shortcut because the current certified `O_H/C_sH/C_HH` row
 packet is absent.
 
+The existing source-Higgs certificate builder and Gram-purity postprocessor now
+consume this contract directly, so future row candidates must expose the same
+`kappa_spH` field before purity evaluation.  This improves the route contract
+but does not create row evidence.
+
 ## Route C: Source-Coordinate Transport
 
 The scalar-reparametrization version is now blocked on the current surface:

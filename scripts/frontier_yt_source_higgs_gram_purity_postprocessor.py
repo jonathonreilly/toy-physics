@@ -23,6 +23,9 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT = ROOT / "outputs" / "yt_source_higgs_cross_correlator_production_certificate_2026-05-03.json"
 DEFAULT_OUTPUT = ROOT / "outputs" / "yt_source_higgs_gram_purity_postprocess_2026-05-03.json"
+SOURCE_HIGGS_OVERLAP_KAPPA_CONTRACT = (
+    ROOT / "outputs" / "yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json"
+)
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -112,6 +115,7 @@ def compute_gate(candidate: dict[str, Any], tolerance: float, sigma: float) -> d
         "Dprime_ss_at_pole": dgamma_ss,
         "Res_C_sp_sp": c_sp_sp,
         "Res_C_spH": c_sp_h,
+        "source_higgs_overlap_kappa_spH": rho_sp_h,
         "gram_determinant": delta,
         "normalized_overlap_rho_sH": rho,
         "rho_abs_error_from_one": rho_abs_error,
@@ -125,6 +129,7 @@ def compute_gate(candidate: dict[str, Any], tolerance: float, sigma: float) -> d
         "positive_residues": positive_residues,
         "raw_source_higgs_purity_gate_passed": raw_purity_gate_passed,
         "osp_higgs_purity_gate_passed": osp_higgs_purity_gate_passed,
+        "pure_bridge_condition_abs_kappa_one": rho_sp_h_abs_error <= rho_bound,
         "purity_gate_passed": purity_gate_passed,
     }
 
@@ -134,6 +139,7 @@ def validate_candidate(candidate: dict[str, Any]) -> dict[str, bool]:
     firewall = candidate.get("firewall", {})
     operator = candidate.get("canonical_higgs_operator", {})
     source_pole = candidate.get("source_pole_operator", {})
+    overlap_contract = candidate.get("source_higgs_overlap_kappa_contract", {})
     return {
         "production_phase": candidate.get("phase") == "production",
         "same_ensemble": candidate.get("same_ensemble") is True,
@@ -153,6 +159,7 @@ def validate_candidate(candidate: dict[str, Any]) -> dict[str, bool]:
         "source_pole_rescaling_invariant": source_pole.get("source_rescaling_invariant") is True,
         "source_pole_contact_term_invariant": source_pole.get("contact_term_invariant") is True,
         "source_pole_not_claimed_as_higgs_by_fiat": source_pole.get("canonical_higgs_operator_identity_passed") is False,
+        "source_higgs_overlap_kappa_contract_attached": overlap_contract.get("contract_passed") is True,
         "canonical_higgs_operator_identity": candidate.get("canonical_higgs_operator_identity_passed") is True,
         "has_identity_certificate": isinstance(operator.get("identity_certificate"), str)
         and bool(operator.get("identity_certificate")),
@@ -186,13 +193,25 @@ def main() -> int:
     print("=" * 72)
 
     candidate = load_json(args.input)
+    overlap_contract = load_json(SOURCE_HIGGS_OVERLAP_KAPPA_CONTRACT)
     candidate_present = bool(candidate)
     checks = validate_candidate(candidate) if candidate_present else {}
     missing_checks = [key for key, ok in checks.items() if not ok]
     gate = None
     gate_passed = False
+    overlap_contract_available = (
+        overlap_contract.get("source_higgs_overlap_kappa_contract_passed") is True
+        and overlap_contract.get("proposal_allowed") is False
+        and overlap_contract.get("forbidden_firewall", {}).get("set_kappa_s_equal_one")
+        is False
+    )
 
     report("candidate-certificate-state-recorded", True, f"present={candidate_present}")
+    report(
+        "source-higgs-overlap-kappa-contract-recorded",
+        overlap_contract_available,
+        str(SOURCE_HIGGS_OVERLAP_KAPPA_CONTRACT.relative_to(ROOT)),
+    )
     if not candidate_present:
         report("candidate-certificate-absent", True, str(args.input.relative_to(ROOT)))
     else:
@@ -200,6 +219,16 @@ def main() -> int:
         if all(checks[key] for key in ("has_res_c_ss", "has_res_c_sh", "has_res_c_hh")):
             gate = compute_gate(candidate, args.tolerance, args.sigma)
             gate_passed = bool(gate["purity_gate_passed"]) and not missing_checks
+            candidate_kappa = candidate.get("source_higgs_overlap_kappa_contract", {}).get(
+                "source_higgs_overlap_kappa_spH"
+            )
+            if finite(candidate_kappa):
+                report(
+                    "candidate-kappa-matches-gram",
+                    abs(float(candidate_kappa) - float(gate["source_higgs_overlap_kappa_spH"]))
+                    <= args.tolerance,
+                    f"kappa={gate['source_higgs_overlap_kappa_spH']}",
+                )
             report("gram-determinant-computed", True, f"Delta={gate['gram_determinant']}")
             report("normalized-overlap-computed", True, f"rho={gate['normalized_overlap_rho_sH']}")
             report("purity-gate-evaluated", True, f"passed={gate_passed}")
@@ -231,6 +260,11 @@ def main() -> int:
         "candidate_checks": checks,
         "candidate_missing_or_failed_checks": missing_checks,
         "required_source_side_contract": "genuine_osp_lsz_intake_required_v1",
+        "required_source_higgs_overlap_kappa_contract": str(
+            SOURCE_HIGGS_OVERLAP_KAPPA_CONTRACT.relative_to(ROOT)
+        ),
+        "source_higgs_overlap_kappa_contract_available": overlap_contract_available,
+        "source_higgs_overlap_kappa_formula": "kappa_spH = Res(C_sH) / sqrt(Res(C_ss) Res(C_HH))",
         "gram_purity": gate,
         "source_higgs_gram_purity_gate_passed": gate_passed,
         "osp_higgs_gram_purity_gate_passed": gate_passed,
@@ -239,6 +273,7 @@ def main() -> int:
             "does not define O_H by fiat",
             "does not treat H_unit as O_H",
             "does not set kappa_s = 1 or cos(theta) = 1",
+            "does not treat the source-Higgs overlap/kappa contract as row evidence",
             "does not identify O_sp with O_H without an O_sp-Higgs Gram-purity pass",
             "does not treat the genuine O_sp intake artifact as physical y_t closure",
             "does not use yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
