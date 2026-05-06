@@ -242,6 +242,27 @@ Local verification completed:
   intentional artifact;
 - `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
   pre-existing warnings.
+- two-source taste-radial Schur-subblock witness packaged:
+  `frontier_yt_pr230_two_source_taste_radial_schur_subblock_witness.py`
+  PASS=16 FAIL=0.  The witness records finite same-ensemble
+  `C_ss/C_sx/C_xx` subblocks and positive finite Gram determinants for
+  chunks001-012 while preserving the strict `K'(pole)`, canonical `O_H`,
+  scalar-LSZ, `kappa_s`, and closure firewalls;
+- Schur route completion refreshed to consume the witness:
+  `frontier_yt_pr230_schur_route_completion.py` PASS=12 FAIL=0 and still
+  records strict A/B/C `K'(pole)` rows absent;
+- aggregate gates after the Schur-subblock block:
+  assumption/import stress PASS=73 FAIL=0, full assembly PASS=132 FAIL=0,
+  campaign status PASS=319 FAIL=0, retained route PASS=286 FAIL=0, and
+  positive-closure completion audit PASS=44 FAIL=0.
+- final Schur-subblock witness validation: `python3 -m py_compile` for the
+  new witness runner and touched aggregate gates, `git diff --check`, and
+  conflict-marker scan were clean;
+- `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
+  metadata regenerated for validation and then reverted because it was not an
+  intentional artifact;
+- `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
+  pre-existing warnings.
 - completed two-source taste-radial chunks011-012 packaged:
   `frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index
   11` PASS=15 FAIL=0 and `--chunk-index 12` PASS=15 FAIL=0;

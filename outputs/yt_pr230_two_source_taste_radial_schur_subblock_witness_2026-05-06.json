@@ -1,0 +1,307 @@
+{
+  "actual_current_surface_status": "bounded-support / two-source taste-radial Schur-subblock witness; strict Schur K-prime pole rows and canonical O_H authority absent",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "canonical_higgs_operator_identity_passed": false,
+  "conditional_surface_status": "conditional-support for the Schur route after a complete 63/63 row packet, pole/derivative/FV/IR authority, and a canonical O_H/source-overlap or physical-response bridge are supplied",
+  "exact_next_action": "Continue chunk production to 63/63, then either fit a real pole/derivative Schur kernel packet for the source/complement block or supply canonical O_H/source-overlap or W/Z physical-response authority.",
+  "expected_chunks": 63,
+  "fail_count": 0,
+  "finite_correlator_subblock_rows_present": true,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "treated_partial_rows_as_pole_or_fv_ir_authority": false,
+    "treated_taste_radial_x_as_canonical_O_H": false,
+    "used_alpha_lm_or_plaquette_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_as_selector": false,
+    "used_reduced_cold_pilots_as_production_evidence": false,
+    "used_yt_ward_identity": false
+  },
+  "hypothetical_axiom_status": null,
+  "isolated_pole_fv_ir_authority_present": false,
+  "mode_count": 4,
+  "observation_count": 48,
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "schur_abc_definition": "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json",
+    "schur_kernel_contract": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
+    "schur_route_completion": "outputs/yt_pr230_schur_route_completion_2026-05-06.json",
+    "schur_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+    "two_source_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+    "two_source_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json",
+    "two_source_combiner": "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json",
+    "two_source_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "retained_route": "open / retained closure not yet reached",
+    "schur_abc_definition": "exact negative boundary / Schur A/B/C definition not derivable from current PR230 source-only surface",
+    "schur_kernel_contract": "open / Schur kernel row contract gate not passed; current rows absent",
+    "schur_route_completion": "exact negative boundary / strict Schur A/B/C route not complete; bounded two-source correlator subblock support present",
+    "schur_sufficiency": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent",
+    "two_source_action": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
+    "two_source_chart": "exact-support / same-surface two-source taste-radial chart; canonical O_H and production rows absent",
+    "two_source_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure",
+    "two_source_row_contract": "bounded-support / two-source taste-radial C_sx/C_xx row contract; production rows absent"
+  },
+  "partial_mode_schur_summary": {
+    "0,0,0": {
+      "A_corr_C_ss": {
+        "count": 12,
+        "max": 0.12263744149963891,
+        "mean": 0.12242221066026125,
+        "min": 0.12229063737483167,
+        "stdev": 0.00010257168046348407
+      },
+      "B_corr_C_sx": {
+        "count": 12,
+        "max": 0.00015573928662202072,
+        "mean": -2.2899858555939913e-06,
+        "min": -0.00017610843791869552,
+        "stdev": 9.457319352023253e-05
+      },
+      "C_corr_C_xx": {
+        "count": 12,
+        "max": 0.28098398790515866,
+        "mean": 0.28082999857175567,
+        "min": 0.2807215251756578,
+        "stdev": 7.384842446137051e-05
+      },
+      "corr_schur_source_given_x": {
+        "count": 12,
+        "max": 0.1226374341530643,
+        "mean": 0.12242218144460043,
+        "min": 0.12229063737481549,
+        "stdev": 0.00010257231636557402
+      },
+      "corr_schur_x_given_source": {
+        "count": 12,
+        "max": 0.2809839854448348,
+        "mean": 0.2808299315567005,
+        "min": 0.2807214608379589,
+        "stdev": 7.387021874590021e-05
+      },
+      "gram_determinant": {
+        "count": 12,
+        "max": 0.03443592420766044,
+        "mean": 0.034379821177112475,
+        "min": 0.03433470107898061,
+        "stdev": 3.0358427172888103e-05
+      },
+      "positive_gram_determinant_all_ready_rows": true,
+      "rho_sx": {
+        "count": 12,
+        "max": 0.0008395823086115359,
+        "mean": -1.2406738623003136e-05,
+        "min": -0.0009500004592309483,
+        "stdev": 0.0005100768431146039
+      },
+      "row_count": 12
+    },
+    "0,0,1": {
+      "A_corr_C_ss": {
+        "count": 12,
+        "max": 0.12556337097096704,
+        "mean": 0.1253831261558277,
+        "min": 0.1252366082875804,
+        "stdev": 0.00010269890893651439
+      },
+      "B_corr_C_sx": {
+        "count": 12,
+        "max": 0.000202931992194099,
+        "mean": 1.4263968949189966e-06,
+        "min": -0.0001826668847958663,
+        "stdev": 0.00011196081023541891
+      },
+      "C_corr_C_xx": {
+        "count": 12,
+        "max": 0.27049978536538605,
+        "mean": 0.2703082314991493,
+        "min": 0.27015348272265305,
+        "stdev": 9.01445986573039e-05
+      },
+      "corr_schur_source_given_x": {
+        "count": 12,
+        "max": 0.12556321865111505,
+        "mean": 0.125383083640701,
+        "min": 0.12523657556380116,
+        "stdev": 0.00010269269026641048
+      },
+      "corr_schur_x_given_source": {
+        "count": 12,
+        "max": 0.27049975002563525,
+        "mean": 0.2703081398488619,
+        "min": 0.27015346274382257,
+        "stdev": 9.013250279737182e-05
+      },
+      "gram_determinant": {
+        "count": 12,
+        "max": 0.033947435240421556,
+        "mean": 0.03389208081551127,
+        "min": 0.03383865682795415,
+        "stdev": 3.143433933222263e-05
+      },
+      "positive_gram_determinant_all_ready_rows": true,
+      "rho_sx": {
+        "count": 12,
+        "max": 0.001101404308940309,
+        "mean": 7.65026304858403e-06,
+        "min": -0.0009923711191002188,
+        "stdev": 0.0006081143760276873
+      },
+      "row_count": 12
+    },
+    "0,1,0": {
+      "A_corr_C_ss": {
+        "count": 12,
+        "max": 0.1255458424073733,
+        "mean": 0.12537668255026516,
+        "min": 0.12525595886729696,
+        "stdev": 9.137683982916097e-05
+      },
+      "B_corr_C_sx": {
+        "count": 12,
+        "max": 0.0002204249021318783,
+        "mean": 1.86981432206162e-05,
+        "min": -0.00014886923346183443,
+        "stdev": 0.00010926700934360031
+      },
+      "C_corr_C_xx": {
+        "count": 12,
+        "max": 0.2695806303435817,
+        "mean": 0.26946121453649335,
+        "min": 0.2692957665257382,
+        "stdev": 8.257694318077007e-05
+      },
+      "corr_schur_source_given_x": {
+        "count": 12,
+        "max": 0.12554581107412985,
+        "mean": 0.1253766406375425,
+        "min": 0.12525594681357044,
+        "stdev": 9.136639357488023e-05
+      },
+      "corr_schur_x_given_source": {
+        "count": 12,
+        "max": 0.2695806302399532,
+        "mean": 0.2694611244712576,
+        "min": 0.26929563515477994,
+        "stdev": 8.257398689365889e-05
+      },
+      "gram_determinant": {
+        "count": 12,
+        "max": 0.03382809941874459,
+        "mean": 0.033784143818147275,
+        "min": 0.0337481081634675,
+        "stdev": 2.9286080372565507e-05
+      },
+      "positive_gram_determinant_all_ready_rows": true,
+      "rho_sx": {
+        "count": 12,
+        "max": 0.0011987200649805207,
+        "mean": 0.00010163797159093695,
+        "min": -0.0008101191598295551,
+        "stdev": 0.0005944364971895605
+      },
+      "row_count": 12
+    },
+    "1,0,0": {
+      "A_corr_C_ss": {
+        "count": 12,
+        "max": 0.125589595529513,
+        "mean": 0.12536247042033016,
+        "min": 0.1252270651766998,
+        "stdev": 9.966199380623619e-05
+      },
+      "B_corr_C_sx": {
+        "count": 12,
+        "max": 0.00014059692879366014,
+        "mean": -1.719823040749212e-05,
+        "min": -0.00022224996656396842,
+        "stdev": 0.00010156455127421763
+      },
+      "C_corr_C_xx": {
+        "count": 12,
+        "max": 0.26896071660046295,
+        "mean": 0.26883025853861026,
+        "min": 0.2687000227731026,
+        "stdev": 7.710369251006521e-05
+      },
+      "corr_schur_source_given_x": {
+        "count": 12,
+        "max": 0.125589593552489,
+        "mean": 0.12536243414028284,
+        "min": 0.12522706356010144,
+        "stdev": 9.966606312660054e-05
+      },
+      "corr_schur_x_given_source": {
+        "count": 12,
+        "max": 0.26896071565579527,
+        "mean": 0.2688301807456304,
+        "min": 0.26869998850154686,
+        "stdev": 7.715384253173376e-05
+      },
+      "gram_determinant": {
+        "count": 12,
+        "max": 0.03376377487020449,
+        "mean": 0.03370121689772343,
+        "min": 0.033655914077499474,
+        "stdev": 3.0133630901355533e-05
+      },
+      "positive_gram_determinant_all_ready_rows": true,
+      "rho_sx": {
+        "count": 12,
+        "max": 0.0007655918501494505,
+        "mean": -9.374291469097774e-05,
+        "min": -0.0012109740601922983,
+        "stdev": 0.0005533078201467625
+      },
+      "row_count": 12
+    }
+  },
+  "pass_count": 16,
+  "pole_derivative_rows_present": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This witness supplies finite two-source C_ss/C_sx/C_xx subblocks for the certified taste-radial complement x only.  It does not provide K'(pole), A/B/C pole derivatives, canonical O_H identity, kappa_s, or retained-route authorization.",
+  "ready_chunk_indices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "ready_chunks": 12,
+  "row_definition": {
+    "A_corr": "C_ss(q), finite correlator row for the uniform scalar source s",
+    "B_corr": "C_sx(q), finite correlator cross row between s and taste-radial source x",
+    "C_corr": "C_xx(q), finite correlator row for taste-radial source x",
+    "corr_schur_source_given_x": "gram_determinant / C_corr",
+    "gram_determinant": "A_corr*C_corr - B_corr^2",
+    "strict_limit": "These are correlator subblocks for a certified two-source chart. They are not the strict Schur kernel rows A(pole), B(pole), C(pole) and derivatives required by the K-prime sufficiency theorem."
+  },
+  "same_surface_source_complement_partition_supported": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat taste-radial x as canonical O_H",
+    "does not treat partial C_sx/C_xx rows as canonical C_sH/C_HH rows",
+    "does not treat finite correlator subblocks as K'(pole) Schur kernel rows",
+    "does not set kappa_s = 1, c2 = 1, or Z_match = 1",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "strict_schur_kernel_row_contract_passed": false,
+  "strict_schur_kernel_rows_written": false,
+  "two_source_taste_radial_schur_subblock_witness_passed": true,
+  "used_as_physical_yukawa_readout": false
+}

@@ -620,6 +620,9 @@ def main() -> int:
         "pr230_two_source_taste_radial_row_combiner_gate": load(
             "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json"
         ),
+        "pr230_two_source_taste_radial_schur_subblock_witness": load(
+            "outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json"
+        ),
         "pr230_two_source_taste_radial_chunk001_checkpoint": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json"
         ),
@@ -2718,6 +2721,28 @@ def main() -> int:
         and two_source_taste_radial_row_combiner.get("fail_count") == 0,
         statuses["pr230_two_source_taste_radial_row_combiner_gate"],
     )
+    two_source_taste_radial_schur_subblock = certificates[
+        "pr230_two_source_taste_radial_schur_subblock_witness"
+    ]
+    report(
+        "pr230-two-source-taste-radial-schur-subblock-support-not-closure",
+        "two-source taste-radial Schur-subblock witness"
+        in str(statuses["pr230_two_source_taste_radial_schur_subblock_witness"])
+        and two_source_taste_radial_schur_subblock.get("proposal_allowed") is False
+        and two_source_taste_radial_schur_subblock.get(
+            "two_source_taste_radial_schur_subblock_witness_passed"
+        )
+        is True
+        and two_source_taste_radial_schur_subblock.get(
+            "strict_schur_kernel_row_contract_passed"
+        )
+        is False
+        and two_source_taste_radial_schur_subblock.get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False,
+        statuses["pr230_two_source_taste_radial_schur_subblock_witness"],
+    )
     taste_radial_selector_gate = certificates[
         "pr230_taste_radial_canonical_oh_selector_gate"
     ]
@@ -2974,7 +2999,7 @@ def main() -> int:
     schur_route_completion = certificates["pr230_schur_route_completion"]
     report(
         "pr230-schur-route-current-surface-closed",
-        "Schur A/B/C route not complete on current PR230 surface"
+        "strict Schur A/B/C route not complete"
         in str(statuses["pr230_schur_route_completion"])
         and schur_route_completion.get("proposal_allowed") is False
         and schur_route_completion.get("schur_route_completion_passed") is True,
@@ -4660,6 +4685,21 @@ def main() -> int:
         and two_source_taste_radial_row_combiner.get("ready_chunks")
         < two_source_taste_radial_row_combiner.get("expected_chunks")
         and two_source_taste_radial_row_combiner.get("fail_count") == 0
+    )
+    result["two_source_taste_radial_schur_subblock_support_not_closure"] = (
+        two_source_taste_radial_schur_subblock.get(
+            "two_source_taste_radial_schur_subblock_witness_passed"
+        )
+        is True
+        and two_source_taste_radial_schur_subblock.get("proposal_allowed") is False
+        and two_source_taste_radial_schur_subblock.get(
+            "strict_schur_kernel_row_contract_passed"
+        )
+        is False
+        and two_source_taste_radial_schur_subblock.get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False
     )
     result["taste_radial_canonical_oh_selector_blocks_symmetry_shortcut"] = (
         taste_radial_selector_gate.get("taste_radial_canonical_oh_selector_gate_passed")

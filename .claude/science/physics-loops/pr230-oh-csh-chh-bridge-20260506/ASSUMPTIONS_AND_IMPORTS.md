@@ -72,6 +72,12 @@ Allowed context:
   row packet until 63/63 chunks are schema-clean.  Partial diagnostics are not
   combined L12 pole evidence, canonical `O_H`, scalar LSZ normalization,
   `kappa_s`, or `y_t` closure.
+- the Two-source taste-radial Schur-subblock witness as bounded row support
+  only: chunks001-012 supply finite `C_ss/C_sx/C_xx` correlator subblocks for
+  the certified `s/x` source chart with positive Gram determinants, but finite
+  C_ss/C_sx/C_xx correlator subblocks are not strict K-prime pole rows, do not
+  provide `A'`, `B'`, or `C'` pole derivatives, and do not identify `x` with
+  canonical `O_H`.
 - the taste-radial canonical-`O_H` selector gate as exact conditional support
   only: it proves the cyclic degree-one radial source is unique in
   `span{S0,S1,S2}`, but also proves current `Z3`/trace/source filters do not
@@ -233,6 +239,10 @@ Open imports after this block:
 - Finite-mode `rho_sx` and `Delta_sx` diagnostics in the partial combiner are
   not proof selectors; they are not isolated-pole residues and do not certify
   Gram purity, scalar LSZ normalization, canonical `C_sH/C_HH`, or `y_t`.
+- Two-source taste-radial Schur-subblock witness rows are not proof selectors;
+  finite C_ss/C_sx/C_xx correlator subblocks are not strict K-prime pole rows,
+  do not provide pole derivatives or FV/IR authority, and do not turn
+  taste-radial `x` into canonical `O_H`.
 - Taste-radial degree-one uniqueness is not a proof selector until a
   same-surface EW/Higgs action or canonical-operator theorem derives the
   degree-one Higgs-action premise.

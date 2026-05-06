@@ -170,6 +170,9 @@ def main() -> int:
         "two_source_taste_radial_row_combiner_gate": load(
             "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json"
         ),
+        "two_source_taste_radial_schur_subblock_witness": load(
+            "outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json"
+        ),
         "taste_radial_canonical_oh_selector_gate": load(
             "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
         ),
@@ -342,6 +345,8 @@ def main() -> int:
         "Partial two-source taste-radial row-combiner diagnostics are not proof",
         "the combined row packet is intentionally absent until 63/63",
         "manifest chunks are present and schema-clean",
+        "Two-source taste-radial Schur-subblock witness",
+        "finite C_ss/C_sx/C_xx correlator subblocks are not strict K-prime pole rows",
         "Degree-one Higgs-action premise",
         "Degree-one Higgs-action premise is not proof selectors until a same-surface EW/Higgs action or canonical-operator theorem derives the degree-one premise",
         "FMS post-degree route rescore",
@@ -992,6 +997,27 @@ def main() -> int:
         in two_source_row_combiner.get("strict_non_claims", []),
         two_source_row_combiner.get("actual_current_surface_status"),
     )
+    two_source_schur_subblock = certificates["two_source_taste_radial_schur_subblock_witness"]
+    report(
+        "two-source-taste-radial-schur-subblock-not-kprime-closure",
+        "two-source taste-radial Schur-subblock witness"
+        in str(two_source_schur_subblock.get("actual_current_surface_status"))
+        and two_source_schur_subblock.get("proposal_allowed") is False
+        and two_source_schur_subblock.get(
+            "two_source_taste_radial_schur_subblock_witness_passed"
+        )
+        is True
+        and two_source_schur_subblock.get("strict_schur_kernel_row_contract_passed")
+        is False
+        and two_source_schur_subblock.get("pole_derivative_rows_present") is False
+        and two_source_schur_subblock.get("canonical_higgs_operator_identity_passed")
+        is False
+        and two_source_schur_subblock.get("forbidden_firewall", {}).get(
+            "treated_taste_radial_x_as_canonical_O_H"
+        )
+        is False,
+        two_source_schur_subblock.get("actual_current_surface_status"),
+    )
     taste_radial_selector = certificates["taste_radial_canonical_oh_selector_gate"]
     report(
         "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
@@ -1178,7 +1204,7 @@ def main() -> int:
     schur_route_completion = certificates["schur_route_completion"]
     report(
         "schur-route-current-surface-closed",
-        "Schur A/B/C route not complete on current PR230 surface"
+        "strict Schur A/B/C route not complete"
         in str(schur_route_completion.get("actual_current_surface_status"))
         and schur_route_completion.get("proposal_allowed") is False
         and schur_route_completion.get("schur_route_completion_passed") is True,
@@ -1341,6 +1367,12 @@ def main() -> int:
             "and a collision guard for those rows, but it is dry-run run control "
             "only until the chunks are actually run, combined, pole-tested, and "
             "bridged to canonical O_H or physical response.  "
+            "The two-source taste-radial Schur-subblock witness is a real "
+            "finite row artifact beyond source-only data: chunks001-012 now "
+            "supply C_ss/C_sx/C_xx correlator subblocks for the certified s/x "
+            "chart with positive Gram determinants.  It is still not strict "
+            "Schur K-prime closure because it has no pole derivatives, no "
+            "isolated-pole/FV/IR authority, and no canonical O_H bridge.  "
             "The taste-radial canonical-O_H selector gate proves the degree-one "
             "radial axis is unique only after a degree-one Higgs-action premise "
             "is supplied; current Z3/trace/source filters leave a three-dimensional "
@@ -1392,6 +1424,7 @@ def main() -> int:
             "does not treat the two-source taste-radial action source vertex as canonical O_H or measured C_sx/C_xx rows",
             "does not treat the two-source taste-radial row contract as production C_sx/C_xx rows or pole evidence",
             "does not treat the two-source taste-radial production manifest as row data or pole evidence",
+            "does not treat finite C_ss/C_sx/C_xx Schur subblocks as strict K-prime pole rows or canonical O_H evidence",
             "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
             "does not treat the FMS composite expansion as PR230 closure before same-surface EW/Higgs action and C_sH/C_HH rows exist",
             "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",

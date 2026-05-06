@@ -31,6 +31,33 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=295 FAIL=0
 ```
 
+## 2026-05-06 Two-Source Taste-Radial Schur-Subblock Witness Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json`.
+Completed chunks001-012 provide a real finite same-ensemble
+source/complement correlator block for the certified taste-radial chart:
+
+```text
+G(q) = [[C_ss(q), C_sx(q)], [C_sx(q), C_xx(q)]]
+```
+
+The witness records positive finite
+`Delta_sx = C_ss C_xx - C_sx^2`, `C_{s|x}`, and `rho_sx` diagnostics for all
+ready modes.  This is bounded Schur-route support only.  It is not strict
+`K'(pole)` A/B/C row evidence, does not provide pole derivatives or FV/IR
+authority, does not identify taste-radial `x` with canonical `O_H`, and does
+not set `kappa_s`.
+
+Validation: Schur-subblock witness `PASS=16 FAIL=0`; Schur route completion
+`PASS=12 FAIL=0`; assumption/import stress `PASS=73 FAIL=0`; full positive
+closure assembly gate `PASS=132 FAIL=0`; retained-route `PASS=286 FAIL=0`;
+campaign status `PASS=319 FAIL=0`; completion audit `PASS=44 FAIL=0`.
+
+The campaign target remains open.  Chunks013-014 are active under the
+two-worker cap and remain non-evidence until completed JSON exists and
+completed-mode checkpoints pass.
+
 ## 2026-05-06 Two-Source Taste-Radial Row-Contract Update
 
 The campaign status certificate now consumes

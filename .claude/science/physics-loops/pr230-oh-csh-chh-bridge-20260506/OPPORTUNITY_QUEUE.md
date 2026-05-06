@@ -58,7 +58,11 @@
    `PASS=15 FAIL=0` each and remain bounded row support.  The row-combiner
    gate now records `ready=12/63`, no bad chunk audits, finite-mode
    `rho_sx`/`Delta_sx` scouts, and writes no combined row packet until all 63
-   chunks are schema-clean.  Chunks013-014 remain
+   chunks are schema-clean.  The Schur-subblock witness packages chunks001-012
+   as a real finite same-ensemble `C_ss/C_sx/C_xx` source/complement block with
+   positive finite Gram determinants, but still lacks strict `K'(pole)` A/B/C
+   rows, pole derivatives, FV/IR authority, canonical `O_H`, and `kappa_s`.
+   Chunks013-014 remain
    non-evidence until completed JSON exists and completed-mode checkpoints
    pass.  The remaining work is more completed production `C_sx/C_xx` rows,
    completed-mode per-chunk schema gates, combiner reruns until a full row
@@ -81,7 +85,11 @@
    action or off-diagonal generator that makes that matrix load-bearing for
    PR230, plus the coupling of that transfer to the source/canonical-Higgs
    sector.  Do not treat H2 cone support as H3/H4.
-4. Schur A/B/C row production from a real neutral kernel basis.
+4. Schur A/B/C row production from a real neutral kernel basis, now informed by
+   the bounded `C_ss/C_sx/C_xx` source/complement subblock witness.  The next
+   Schur artifact must turn finite correlator subblocks into strict pole-row
+   authority or prove that the source/complement block cannot saturate the
+   required scalar pole.
 5. Same-source W/Z response rows with matched top/W covariance, `delta_perp`
    authority, strict non-observed `g2`, and the radial-spurion/no-independent-
    top-source action contract if the route uses response ratios to cancel the

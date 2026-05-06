@@ -261,6 +261,16 @@ level, while `Delta_sx` is positive.  These are route diagnostics only:
 finite-mode, partial-chunk `C_sx/C_xx` rows are not isolated-pole residues,
 not canonical `C_sH/C_HH`, and not physical Yukawa evidence.
 
+The Schur route now has a genuine bounded support artifact built from those
+completed rows.  `YT_PR230_TWO_SOURCE_TASTE_RADIAL_SCHUR_SUBBLOCK_WITNESS`
+packages the finite same-ensemble source/complement block
+`G(q)=[[C_ss,C_sx],[C_sx,C_xx]]` for chunks001-012, verifies production seed
+control and the non-readout alias metadata, and records positive finite
+`Delta_sx`, `C_{s|x}`, and `rho_sx` diagnostics for all ready modes.  This is
+not source-only data, so it is real Schur-route progress.  It is still not
+closure: strict `K'(pole)` A/B/C rows, pole derivatives, FV/IR authority,
+canonical `O_H`, `kappa_s`, and physical `y_t` remain absent.
+
 The source-Higgs production-readiness gate has been hardened against a subtle
 schema overread.  Completed two-source taste-radial row artifacts populate
 legacy source-Higgs-shaped fields for finite timeseries transport, but the row

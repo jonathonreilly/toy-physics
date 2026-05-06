@@ -1,9 +1,9 @@
 {
-  "actual_current_surface_status": "exact negative boundary / Schur A/B/C route not complete on current PR230 surface",
+  "actual_current_surface_status": "exact negative boundary / strict Schur A/B/C route not complete; bounded two-source correlator subblock support present",
   "bare_retained_allowed": false,
   "conditional_surface_status": "The Schur route remains hard-physics open if a same-surface neutral kernel basis plus A/B/C rows or equivalent row theorem is supplied.",
   "exact_negative_boundary_passed": true,
-  "exact_next_action": "Move to neutral primitive/rank-one theorem or supply actual Schur row artifacts.",
+  "exact_next_action": "Continue 63/63 C_sx/C_xx row production and either derive strict Schur kernel pole/derivative rows for the s/x block or supply canonical O_H/source-overlap or W/Z physical-response authority.",
   "fail_count": 0,
   "forbidden_firewall": {
     "claimed_retained_or_proposed_retained": false,
@@ -28,7 +28,8 @@
     "schur_candidate_extraction": "outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json",
     "schur_compressed_bootstrap": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
     "schur_contract": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
-    "schur_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json"
+    "schur_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+    "two_source_schur_subblock_witness": "outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json"
   },
   "parent_statuses": {
     "candidate_portfolio": "open / first-principles O_H bridge positive-candidate portfolio",
@@ -39,16 +40,20 @@
     "schur_candidate_extraction": "exact negative boundary / Schur row candidate extraction from finite ladder support",
     "schur_compressed_bootstrap": "exact negative boundary / Schur compressed-denominator row-bootstrap no-go",
     "schur_contract": "open / Schur kernel row contract gate not passed; current rows absent",
-    "schur_sufficiency": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent"
+    "schur_sufficiency": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent",
+    "two_source_schur_subblock_witness": "bounded-support / two-source taste-radial Schur-subblock witness; strict Schur K-prime pole rows and canonical O_H authority absent"
   },
-  "pass_count": 11,
+  "pass_count": 12,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "Schur sufficiency is exact support, but current PR230 has no neutral kernel basis, source/orthogonal projector, A/B/C rows, or derivatives.",
+  "proposal_allowed_reason": "The two-source taste-radial chunks now supply finite C_ss/C_sx/C_xx correlator subblocks for a certified s/x chart, but strict Schur K-prime closure still lacks kernel pole rows, derivatives, isolated-pole/FV/IR authority, and canonical O_H/source-overlap or physical-response authority.",
   "schur_route_completion_passed": true,
   "strict_non_claims": [
     "does not infer A/B/C rows from source-only C_ss or compressed denominator data",
+    "does not treat finite C_ss/C_sx/C_xx correlator subblocks as K-prime pole-derivative rows",
     "does not use outside-math tool names as physical row authority",
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
     "does not claim retained or proposed_retained closure"
-  ]
+  ],
+  "strict_schur_kernel_rows_present": false,
+  "two_source_correlator_subblock_support_loaded": true
 }
