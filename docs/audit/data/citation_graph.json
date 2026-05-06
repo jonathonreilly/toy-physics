@@ -51049,7 +51049,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "3d0b17f53d074134c3e2b0a62cc5dc2698b144d2e88b0a810ab22da7199c2dca",
+      "note_hash": "534a30e224c4c31e307fff9d5b84c8866260e830260a68a014ac30a1a374f556",
       "path": "docs/TELEPORTATION_INITIAL_STATE_PREPARATION_PROBE_NOTE.md",
       "runner_path": "scripts/frontier_teleportation_initial_state_preparation_probe.py",
       "title": "Teleportation Initial-State Preparation Probe"
