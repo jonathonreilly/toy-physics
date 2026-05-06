@@ -7157,6 +7157,18 @@
       "to": "cl3_color_automorphism_theorem"
     },
     {
+      "from": "g_bare_rigidity_theorem_note",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "g_bare_rigidity_theorem_note",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "g_bare_rigidity_theorem_note",
+      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
+    },
+    {
       "from": "g_bare_structural_normalization_theorem_note_2026-04-18",
       "to": "g_bare_rigidity_theorem_note"
     },
@@ -35343,11 +35355,11 @@
     },
     "fourth_family_complex_boundary_note": {
       "claim_id": "fourth_family_complex_boundary_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (negative boundary result on the tested grown slice)",
+      "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "6ab940f31df88fa81e7725af247f5462911742153cd86ff3688115688a915422",
+      "note_hash": "dcaad42bbc2621bfbb23e096dba02579d27aa3849d12743489c71975235d4f2f",
       "path": "docs/FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md",
       "runner_path": "scripts/FOURTH_FAMILY_COMPLEX.py",
       "title": "Fourth Family Complex Boundary Note"
@@ -35544,8 +35556,12 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [],
-      "note_hash": "25395cb8b3a6aa932093144eec973794608cbcdba46a379004f77ef9fd6988ee",
+      "deps": [
+        "graph_first_su3_integration_note",
+        "native_gauge_closure_note",
+        "su3_casimir_fundamental_theorem_note_2026-05-02"
+      ],
+      "note_hash": "f791389f50661b505316a70f4add8b5bb929896b8dae12053385bd04727b06f6",
       "path": "docs/G_BARE_RIGIDITY_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_g_bare_rigidity_theorem.py",
       "title": "Gauge-Normalization Rigidity Theorem"
@@ -55379,7 +55395,6 @@
     "fourth_family_complex_boundary_note",
     "fourth_family_quadrant_note",
     "framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30",
-    "g_bare_rigidity_theorem_note",
     "gap_physics_note",
     "gate_b_connectivity_tolerance_note",
     "gate_b_farfield_note",
@@ -55917,23 +55932,23 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 76,
       "meta": 10,
-      "no_go": 12,
-      "none": 1710,
+      "no_go": 13,
+      "none": 1709,
       "open_gate": 11,
       "positive_theorem": 87
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 573,
       "meta": 10,
-      "no_go": 116,
+      "no_go": 117,
       "none": 456,
       "open_gate": 117,
-      "positive_theorem": 634
+      "positive_theorem": 633
     },
-    "edge_count": 6607,
-    "leaf_count": 549,
+    "edge_count": 6610,
+    "leaf_count": 548,
     "node_count": 1906,
-    "root_count": 866,
+    "root_count": 865,
     "runners_with_path": 1480
   }
 }

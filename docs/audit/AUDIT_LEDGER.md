@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 779 |
+| unaudited | 782 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 32 |
-| ~~audited_conditional~~ | 471 |
+| ~~audited_conditional~~ | 468 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 382 |
-| `audited_conditional` | 471 |
+| `audited_conditional` | 468 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 32 |
-| `unaudited` | 828 |
+| `unaudited` | 831 |
 
 | claim_type | count |
 |---|---:|
@@ -57,10 +57,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | criticality | count |
 |---|---:|
-| `critical` | 946 |
+| `critical` | 947 |
 | `high` | 26 |
 | `medium` | 177 |
-| `leaf` | 650 |
+| `leaf` | 649 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 191
@@ -79,13 +79,13 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
 | 1 | `observable_principle_from_axiom_note` | positive_theorem | critical | 336 | 35.40 | `audited_conditional` | ~~audited_conditional~~ |
-| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 596 | 34.72 | `audited_clean` | **retained_bounded** |
+| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 597 | 35.22 | `audited_clean` | **retained_bounded** |
 | 3 | `minimal_axioms_2026-04-11` | meta | critical | 541 | 33.58 | `unaudited` | meta |
 | 4 | `alpha_s_derived_note` | bounded_theorem | critical | 523 | 32.03 | `audited_conditional` | ~~audited_conditional~~ |
 | 5 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 361 | 31.50 | `unaudited` | unaudited |
 | 6 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 361 | 30.50 | `unaudited` | unaudited |
 | 7 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 298 | 29.22 | `unaudited` | unaudited |
-| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 586 | 28.70 | `audited_clean` | **retained_bounded** |
+| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 587 | 29.20 | `audited_clean` | **retained_bounded** |
 | 9 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 389 | 26.61 | `audited_conditional` | ~~audited_conditional~~ |
 | 10 | `minimal_axioms_2026-05-03` | meta | critical | 609 | 25.75 | `unaudited` | meta |
 | 11 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 599 | 25.73 | `audited_clean` | open_gate |
@@ -707,12 +707,10 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fine_h_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `flagship_paper_contribution_statement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
-| `fourth_family_complex_boundary_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `g_bare_constraint_vs_convention_theorem_note_2026-05-03` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | A | - |
 | `g_bare_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `g_bare_rigidity_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | F | - |
 | `g_bare_two_ward_closure_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `gap_physics_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -896,7 +894,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structured_mirror_bornsafe_scan_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `structured_mirror_reconciliation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `su3_adjoint_casimir_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `su3_casimir_fundamental_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `su3_dabc_symmetric_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `su3_wilson_closed_form_fanout_theorem_note_2026-05-04` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
@@ -6040,21 +6037,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The claim is a bounded numerical computation, not a broad universality theorem: the current runner reproduces the frozen fixed exponent, all six grown-seed exponents, the grown aggregate, and the 0.3 sigma fixed-grown comparison. The source note keeps the conclusion on the specified grown row and explicitly does not claim other geometries, drift/restore values, or observables. Residual boundary: the quoted uncertainty is the finite six-seed grown spread used by the runner, so the retained content is only this finite transfer check.
 - **auditor confidence:** high
 
-### `fourth_family_complex_boundary_note`
-
-- **Note:** [`FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`](../../docs/FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md)
-- **claim_type:** `no_go`
-- **claim_scope:** Bounded no-go that the fourth-family quadrant-reflection grown slice does not carry a clean complex-action companion under the stated anchor-row TOWARD -> AWAY gates.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-2026-05-06-fourth-family-complex-boundary`  (codex-current; independence=weak)
-- **load-bearing step:** The anchor row preserves the gamma=0 baseline and Born proxy, but the fourth-family quadrant-reflection slice does not produce a clean TOWARD -> AWAY complex-action crossover, so the complex-action companion is a boundary failure on this family.  _(class `C`)_
-- **chain closes:** False — The cited frozen log reports the claimed boundary miss, but the registered runner's current cache is only a timeout and the script prints gate booleans rather than enforcing PASS/FAIL assertions. The note also relies on the retained fourth-family quadrant basin without wiring that retained-bounded row as a direct dependency.
-- **rationale:** Issue: the source note's no-go/boundary conclusion is supported by a frozen log table, but the current registered runner cache contains no completed stdout and the runner itself does not fail/assert on the anchor_ok or crossover_ok gates. Why this blocks: timeout alone is not a scientific verdict, and a print-only diagnostic plus an unwired fourth-family quadrant premise is not enough for retained no-go closure under the audit lane. Repair target: add an audit-compatible runner contract that asserts the expected boundary miss and produces a completed cache, and add fourth_family_quadrant_note as a direct retained-bounded dependency. Claim boundary until fixed: safe to cite as a reported boundary diagnostic that the archived drift table misses the clean complex-action crossover, not as an audited retained no-go.
-- **open / conditional deps cited:**
-  - `FOURTH_FAMILY_QUADRANT_NOTE.md`
-- **auditor confidence:** high
-
 ### `fourth_family_quadrant_note`
 
 - **Note:** [`FOURTH_FAMILY_QUADRANT_NOTE.md`](../../docs/FOURTH_FAMILY_QUADRANT_NOTE.md)
@@ -6158,22 +6140,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The audited load-bearing step is a straightforward algebraic rescaling identity over the canonical trace normalization and beta matching formula. There are no external comparator checks, no new first-principles computation needed for the conclusion, and the source explicitly depends on one upstream normalization authority plus standard trace algebra. The cited authority is retained_bounded, so the narrow algebraic chain can close, but the theorem is best classified as decoration because it packages a direct consequence of the upstream canonical-normalization claim rather than adding independent closure.
 - **decoration parent:** `cl3_color_automorphism_theorem`
 - **auditor confidence:** high
-
-### `g_bare_rigidity_theorem_note`
-
-- **Note:** [`G_BARE_RIGIDITY_THEOREM_NOTE.md`](../../docs/G_BARE_RIGIDITY_THEOREM_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-judge-20260430-phase-b-g-bare`  (codex-gpt-5; independence=judicial_review)
-- **load-bearing step:** The note identifies standard g_bare=1 notation with the canonical holonomy U=exp(i A^a T_a a) after assuming a concrete SU(3) embedding and fixed Hilbert-space trace form.  _(class `F`)_
-- **chain closes:** False — The first auditor's renaming concern is real, but the second verdict better captures the blocker: the no-free-coupling conclusion is conditional on upstream SU(3) embedding, trace normalization, and physical holonomy identification that are not closed in this row. Thus the conditional/F reading holds.
-- **rationale:** The first auditor's renaming concern is real, but the second verdict better captures the blocker: the no-free-coupling conclusion is conditional on upstream SU(3) embedding, trace normalization, and physical holonomy identification that are not closed in this row. Thus the conditional/F reading holds.
-- **open / conditional deps cited:**
-  - `SU3_CANONICAL_CLOSURE_NOTE.md`
-  - `SU3_FORMAL_THEOREM_NOTE.md`
-- **auditor confidence:** judicial
 
 ### `g_bare_two_ward_closure_note_2026-04-18`
 
@@ -12553,21 +12519,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The step Σ_{c,d} f^{acd} f^{bcd} = N δ^{ab}, followed by the trace/Schur argument, gives C_2(adj)=N=3.  _(class `A`)_
 - **chain closes:** False — The SU(3) algebraic Casimir calculation closes, but the cited authority explicitly defers the bridge identifying the 3D symmetric-base SU(3) with physical SM color SU(3)_c. The source note uses physical color/gluon wording that needs that missing bridge.
 - **rationale:** The runner genuinely computes the Gell-Mann structure constants, adjoint generators, closure, trace normalization, and Casimir value, and all checks are algebraic class A rather than external or fitted checks. However, the only cited authority is retained_bounded with explicit language that the physical-color identification is deferred to a separate bridge theorem. Therefore the algebraic SU(3) result is valid within the restricted carrier, but the claim as phrased for SU(3)_c/gluon color charge does not close from the provided packet alone.
-- **open / conditional deps cited:**
-  - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
-- **auditor confidence:** high
-
-### `su3_casimir_fundamental_theorem_note_2026-05-02`
-
-- **Note:** [`SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md`](../../docs/SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Algebraic SU(3) quadratic Casimir on the 3-dimensional symmetric-base fundamental carrier in Gell-Mann normalization equals 4/3; physical color-triplet readouts are conditional on the deferred color-identification bridge.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-su3_casimir_fundamental_-288`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** From the cited Gell-Mann fundamental generators with Tr[T^a T^b]=(1/2)δ^{ab}, Tr[C_2]=Σ_a Tr[T^aT^a]=4 and C_2=c_2(3)I_3, hence c_2(3)=4/3.  _(class `A`)_
-- **chain closes:** False — The algebraic Casimir computation closes for the symmetric-base SU(3) carrier. The broader claim that this is the universal physical quark color charge squared relies on the cited authority's explicitly deferred bridge identifying that carrier with physical SM color.
-- **rationale:** The runner genuinely constructs the standard Gell-Mann generators, checks trace normalization and closure, and computes C_2=4/3 as an algebraic identity, not as a fitted numerical match. However, the only cited upstream authority is retained_bounded and explicitly states that identifying the 3D symmetric base subspace with physical SM color is deferred to a separate bridge theorem. Therefore the algebraic Casimir result is valid within the carrier, but the source note's quark/color-charge and perturbative-QCD readouts do not close from the restricted packet.
 - **open / conditional deps cited:**
   - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
 - **auditor confidence:** high

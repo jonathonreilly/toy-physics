@@ -1,8 +1,8 @@
 {
   "criticality_counts": {
-    "critical": 959,
+    "critical": 960,
     "high": 26,
-    "leaf": 717,
+    "leaf": 716,
     "medium": 204
   },
   "flagship_signal_used": false,
@@ -25,8 +25,8 @@
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 34.722,
-      "transitive_descendants": 596
+      "load_bearing_score": 35.224,
+      "transitive_descendants": 597
     },
     {
       "claim_id": "minimal_axioms_2026-04-11",
@@ -61,8 +61,8 @@
     {
       "claim_id": "native_gauge_closure_note",
       "criticality": "critical",
-      "load_bearing_score": 28.697,
-      "transitive_descendants": 586
+      "load_bearing_score": 29.2,
+      "transitive_descendants": 587
     },
     {
       "claim_id": "yt_ew_color_projection_theorem",
