@@ -5,10 +5,12 @@
 
 ## Artifact chain
 
-- Script: [`scripts/persistent_object_top4_multistage_transfer_sweep.py`](/Users/jonreilly/Projects/Physics/scripts/persistent_object_top4_multistage_transfer_sweep.py)
-- Batch A log: [`logs/2026-04-16-persistent-object-top4-multistage-transfer-batch-a.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-16-persistent-object-top4-multistage-transfer-batch-a.txt)
-- Batch B log: [`logs/2026-04-16-persistent-object-top4-multistage-transfer-batch-b.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-16-persistent-object-top4-multistage-transfer-batch-b.txt)
-- Batch C log: [`logs/2026-04-16-persistent-object-top4-multistage-transfer-batch-c.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-16-persistent-object-top4-multistage-transfer-batch-c.txt)
+- Script: [`scripts/persistent_object_top4_multistage_transfer_sweep.py`](../scripts/persistent_object_top4_multistage_transfer_sweep.py)
+  (thin wrapper; the load-bearing `Case` / `_run_case` admissibility computation lives in
+  [`scripts/persistent_object_top3_multistage_probe.py`](../scripts/persistent_object_top3_multistage_probe.py),
+  which this script imports and re-runs at `top_keep=4`)
+- SHA-pinned audit-lane cache: [`logs/runner-cache/persistent_object_top4_multistage_transfer_sweep.txt`](../logs/runner-cache/persistent_object_top4_multistage_transfer_sweep.txt)
+  (see `docs/audit/RUNNER_CACHE_POLICY.md`)
 
 ## Question
 
