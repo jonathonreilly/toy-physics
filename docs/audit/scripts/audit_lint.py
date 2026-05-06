@@ -39,8 +39,32 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
+
+_CODEX_FAMILY_RE = re.compile(r"^codex-gpt-(\d+(?:\.\d+)*)$")
+
+
+def _codex_family_meets_minimum(family: str, minimum: str) -> bool:
+    """True iff a 'codex-gpt-X.Y' family meets a 'gpt-X.Y' minimum.
+    Returns True for non-codex families (claude/human/etc.) — those are
+    not subject to the codex floor.
+    """
+    if not isinstance(family, str) or not family.startswith("codex-gpt-"):
+        return True
+    fam_match = _CODEX_FAMILY_RE.match(family)
+    if not fam_match:
+        return True
+    fam_rank = tuple(int(p) for p in fam_match.group(1).split("."))
+    min_match = re.match(r"gpt-(\d+(?:\.\d+)*)", minimum)
+    if not min_match:
+        return True
+    min_rank = tuple(int(p) for p in min_match.group(1).split("."))
+    width = max(len(fam_rank), len(min_rank))
+    return (fam_rank + (0,) * (width - len(fam_rank))) >= (
+        min_rank + (0,) * (width - len(min_rank))
+    )
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = REPO_ROOT / "docs" / "audit" / "data"
@@ -247,6 +271,24 @@ def main() -> int:
                 warnings.append(
                     f"{cid}: auditor_family={fam!r} is legacy; run "
                     "scripts/canonicalize_auditor_family.py migration"
+                )
+
+            # Below-minimum codex model warning (audit-lane policy 2026-05-06):
+            # gpt-5.5+ is required for new audits. Existing rows labeled
+            # codex-gpt-5 (or below) with unverified provenance are surfaced
+            # for re-audit. apply_audit.py and codex_audit_runner.py enforce
+            # the floor for new audits; this lint check surfaces the cleanup
+            # backlog. Skip when there's a previous_auditor_family marker (=
+            # legacy migration label, not a fresh below-minimum audit).
+            if (
+                isinstance(fam, str)
+                and fam.startswith("codex-gpt-")
+                and not _codex_family_meets_minimum(fam, "gpt-5.5")
+                and not row.get("previous_auditor_family")
+            ):
+                warnings.append(
+                    f"{cid}: auditor_family={fam!r} is below the audit-lane minimum "
+                    "(gpt-5.5); model provenance unverified — queue for re-audit"
                 )
 
         # Claude-authored note rule (per FRESH_LOOK_REQUIREMENTS.md §1).

@@ -2180,10 +2180,10 @@
       "max_transitive_descendants": 361,
       "nodes": [
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "ckm_atlas_axiom_closure_note",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md",
           "title": "CKM Atlas/Axiom Closure Note",
           "transitive_descendants": 361
@@ -2332,10 +2332,10 @@
       "max_transitive_descendants": 361,
       "nodes": [
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "ckm_atlas_axiom_closure_note",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md",
           "title": "CKM Atlas/Axiom Closure Note",
           "transitive_descendants": 361
@@ -2400,10 +2400,10 @@
           "transitive_descendants": 361
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md",
           "title": "CKM Atlas Triangle Right-Angle Identity",
           "transitive_descendants": 361
@@ -2528,10 +2528,10 @@
       "max_transitive_descendants": 304,
       "nodes": [
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "higgs_mass_derived_note",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
           "title": "Higgs Mass: Canonical Authority Boundary",
           "transitive_descendants": 304
@@ -2565,10 +2565,10 @@
       "max_transitive_descendants": 304,
       "nodes": [
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "higgs_mass_derived_note",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
           "title": "Higgs Mass: Canonical Authority Boundary",
           "transitive_descendants": 304
@@ -9480,10 +9480,10 @@
       "max_transitive_descendants": 286,
       "nodes": [
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md",
           "title": "P1 BZ Quadrature Full Staggered-PT Note (4D Kawamoto\u2013Smit Quadrature)",
           "transitive_descendants": 286
@@ -10302,10 +10302,10 @@
           "transitive_descendants": 286
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md",
           "title": "P1 BZ Quadrature Full Staggered-PT Note (4D Kawamoto\u2013Smit Quadrature)",
           "transitive_descendants": 286
@@ -11442,10 +11442,10 @@
           "transitive_descendants": 286
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md",
           "title": "P1 BZ Quadrature Full Staggered-PT Note (4D Kawamoto\u2013Smit Quadrature)",
           "transitive_descendants": 286
@@ -11648,10 +11648,10 @@
           "transitive_descendants": 286
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md",
           "title": "P1 BZ Quadrature Full Staggered-PT Note (4D Kawamoto\u2013Smit Quadrature)",
           "transitive_descendants": 286
@@ -14263,10 +14263,10 @@
           "transitive_descendants": 286
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
           "title": "DM Neutrino Source-Surface Active Half-Plane Theorem",
           "transitive_descendants": 286
