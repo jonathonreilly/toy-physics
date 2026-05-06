@@ -157,6 +157,8 @@ class ApplyAuditTest(unittest.TestCase):
             "claim_scope": "test scope",
             "auditor": "test-auditor",
             "auditor_family": "codex-gpt-5.5",
+            "auditor_model": "gpt-5.5",
+            "auditor_reasoning_effort": "xhigh",
             "independence": "cross_family",
             "load_bearing_step_class": "C",
             "load_bearing_step": "test step",
@@ -186,6 +188,8 @@ class ApplyAuditTest(unittest.TestCase):
             "claim_scope": "test",
             "auditor": "weak-auditor",
             "auditor_family": "claude-opus",
+            "auditor_model": "claude-opus-4.1",
+            "auditor_reasoning_effort": "xhigh",
             "independence": "weak",
             "load_bearing_step_class": "C",
         }
@@ -687,6 +691,74 @@ class CodexAuditRunnerReauditCandidatesTest(unittest.TestCase):
 
         dep_only = m.load_reaudit_candidates(include_runner_drift=False)
         self.assertEqual([r["claim_id"] for r in dep_only], ["medium_dep"])
+
+
+class RelabelUnverifiedCodexAuditsTest(unittest.TestCase):
+    def test_relabels_below_floor_row_and_matching_cross_confirmation(self):
+        m = _import("relabel_unverified_codex_audits")
+        row = {
+            "audit_status": "audited_conditional",
+            "auditor": "codex-audit-loop",
+            "auditor_family": "codex-gpt-5",
+            "cross_confirmation": {
+                "first_audit": {
+                    "auditor": "codex-audit-loop",
+                    "auditor_family": "codex-gpt-5",
+                },
+                "second_audit": {
+                    "auditor": "independent-human",
+                    "auditor_family": "codex-gpt-5",
+                },
+            },
+        }
+
+        relabeled, cc_count = m.relabel_row(row)
+
+        self.assertTrue(relabeled)
+        self.assertEqual(cc_count, 1)
+        self.assertEqual(row["auditor_family"], "codex-gpt-5.5")
+        self.assertEqual(row["previous_auditor_family"], "codex-gpt-5")
+        self.assertEqual(
+            row["cross_confirmation"]["first_audit"]["auditor_family"],
+            "codex-gpt-5.5",
+        )
+        self.assertEqual(
+            row["cross_confirmation"]["second_audit"]["auditor_family"],
+            "codex-gpt-5",
+        )
+        self.assertEqual(
+            row["relabel_reason"],
+            "operator_pre_floor_policy_relabel_2026-05-06",
+        )
+
+    def test_skips_pending_or_already_marked_rows(self):
+        m = _import("relabel_unverified_codex_audits")
+        self.assertFalse(
+            m.is_unverified_codex_label(
+                {"audit_status": "unaudited", "auditor_family": "codex-gpt-5"}
+            )
+        )
+        self.assertFalse(
+            m.is_unverified_codex_label(
+                {
+                    "audit_status": "audited_clean",
+                    "auditor_family": "codex-gpt-5",
+                    "previous_auditor_family": "codex-current",
+                }
+            )
+        )
+        self.assertFalse(
+            m.is_unverified_codex_label(
+                {"audit_status": "audited_clean", "auditor_family": "claude-opus"}
+            )
+        )
+
+    def test_audit_lint_model_floor_helper(self):
+        m = _import("audit_lint")
+        self.assertFalse(m.codex_family_meets_minimum("codex-gpt-5"))
+        self.assertTrue(m.codex_family_meets_minimum("codex-gpt-5.5"))
+        self.assertTrue(m.codex_family_meets_minimum("codex-gpt-6"))
+        self.assertTrue(m.codex_family_meets_minimum("claude-opus"))
 
 
 if __name__ == "__main__":

@@ -39,6 +39,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -140,6 +141,26 @@ TERMINAL_VERDICTS = {
     "audited_failed",
     "audited_numerical_match",
 }
+
+_CODEX_FAMILY_RE = re.compile(r"^codex-gpt-(\d+(?:\.\d+)*)$")
+
+
+def codex_family_meets_minimum(family: str, minimum: str = "gpt-5.5") -> bool:
+    """True iff a codex-gpt family label meets the audit-lane model floor."""
+    if not isinstance(family, str) or not family.startswith("codex-gpt-"):
+        return True
+    fam_match = _CODEX_FAMILY_RE.match(family)
+    if not fam_match:
+        return True
+    min_match = re.match(r"gpt-(\d+(?:\.\d+)*)", minimum)
+    if not min_match:
+        return True
+    fam_rank = tuple(int(part) for part in fam_match.group(1).split("."))
+    min_rank = tuple(int(part) for part in min_match.group(1).split("."))
+    width = max(len(fam_rank), len(min_rank))
+    fam_padded = fam_rank + (0,) * (width - len(fam_rank))
+    min_padded = min_rank + (0,) * (width - len(min_rank))
+    return fam_padded >= min_padded
 
 
 def load_json(path: Path):
@@ -247,6 +268,17 @@ def main() -> int:
                 warnings.append(
                     f"{cid}: auditor_family={fam!r} is legacy; run "
                     "scripts/canonicalize_auditor_family.py migration"
+                )
+            elif (
+                isinstance(fam, str)
+                and fam.startswith("codex-gpt-")
+                and not codex_family_meets_minimum(fam)
+                and not row.get("previous_auditor_family")
+            ):
+                warnings.append(
+                    f"{cid}: auditor_family={fam!r} is below the audit-lane "
+                    "minimum (gpt-5.5); model provenance is unverified, so "
+                    "relabel with explicit operator confirmation or queue for re-audit"
                 )
 
         # Claude-authored note rule (per FRESH_LOOK_REQUIREMENTS.md §1).
