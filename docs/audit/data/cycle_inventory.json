@@ -2180,10 +2180,10 @@
       "max_transitive_descendants": 361,
       "nodes": [
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "ckm_atlas_axiom_closure_note",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md",
           "title": "CKM Atlas/Axiom Closure Note",
           "transitive_descendants": 361
@@ -2332,10 +2332,10 @@
       "max_transitive_descendants": 361,
       "nodes": [
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "ckm_atlas_axiom_closure_note",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md",
           "title": "CKM Atlas/Axiom Closure Note",
           "transitive_descendants": 361
@@ -2400,10 +2400,10 @@
           "transitive_descendants": 361
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md",
           "title": "CKM Atlas Triangle Right-Angle Identity",
           "transitive_descendants": 361

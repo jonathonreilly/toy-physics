@@ -2,7 +2,7 @@
 """
 CKM atlas triangle right-angle identity verification.
 
-Verifies the retained atlas/Wolfenstein triangle identities in
+Verifies the cited atlas/Wolfenstein triangle identities in
   docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md
 
 The exact right angle belongs to the rescaled atlas triangle built from
@@ -93,7 +93,7 @@ DELTA_CKM = math.atan(math.sqrt(5.0))
 
 
 def part0_inputs() -> None:
-    banner("Part 0: retained CKM atlas inputs")
+    banner("Part 0: cited CKM atlas inputs")
     check("n_pair = 2", N_PAIR == 2)
     check("n_color = 3", N_COLOR == 3)
     check("n_quark = 6", N_QUARK == 6)
@@ -124,7 +124,7 @@ def part1_atlas_triangle() -> None:
         f"tan(gamma_0) = {math.tan(gamma0):.15f}",
     )
     check(
-        "gamma_0 equals retained delta_CKM",
+        "gamma_0 equals cited delta_CKM",
         abs(gamma0 - DELTA_CKM) < 1e-15,
         f"gamma_0 = {math.degrees(gamma0):.12f} deg",
     )
@@ -155,7 +155,7 @@ def part1_atlas_triangle() -> None:
 
 
 def part2_area_jarlskog() -> None:
-    banner("Part 2: area reproduces retained atlas-Jarlskog factorisation")
+    banner("Part 2: area reproduces cited atlas-Jarlskog factorisation")
     lambda_sq = ALPHA_S_V / 2.0
     a_sq = Fraction(2, 3)
     area0 = math.sqrt(5.0) / 12.0
@@ -200,7 +200,7 @@ def part3_barred_triangle_guardrail() -> None:
         f"eta_bar={apex.imag:.8f}, eta={ETA:.8f}",
     )
     check(
-        "exact barred alpha is not promoted as exactly 90 degrees",
+        "exact barred alpha is not claimed as exactly 90 degrees",
         abs(alpha_bar - 90.0) > 0.1,
         f"alpha_bar={alpha_bar:.8f} deg",
     )
@@ -250,8 +250,8 @@ def main() -> int:
     print("=" * 88)
     if FAIL_COUNT == 0:
         print("PASSED: 26/26")
-        print("CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_RETAINED=TRUE")
-        print("BARRED_UNITARITY_TRIANGLE_EXACT_RIGHT_ANGLE_PROMOTED=FALSE")
+        print("CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_ATLAS_IDENTITY_PASS=TRUE")
+        print("BARRED_UNITARITY_TRIANGLE_EXACT_RIGHT_ANGLE_CLAIMED=FALSE")
         return 0
     return 1
 

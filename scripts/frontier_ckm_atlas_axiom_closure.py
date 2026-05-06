@@ -3,12 +3,12 @@
 CKM Atlas/Axiom No-Import Package
 =================================
 
-STATUS: promoted package-native quantitative package on the canonical
+STATUS: package-native quantitative calculation on the canonical
 tensor/projector surface, with canonical CMT coupling and an exact tensor-slot
 theorem for 1->3 mixing.
 
 This route does not reuse the old mass-input CKM formulas. It carries the
-promoted CKM atlas/axiom package on a strict no-import surface by combining
+CKM atlas/axiom package on a strict no-import surface by combining
 only package-native exact/derived inputs:
 
   1. canonical alpha_s(v) from the coupling-map theorem on the plaquette surface
@@ -135,7 +135,7 @@ ALPHA_BARE = CANONICAL_ALPHA_BARE
 ALPHA_LM = CANONICAL_ALPHA_LM
 V_DERIVED_CURRENT = M_PLANCK * SELECTOR_CORRECTION * ALPHA_LM**16
 
-# Exact structural counts from the retained atlas surface
+# Exact structural counts from the cited atlas surface
 RESIDUAL_COLOR_PAIR = 2
 COLOR_RANK = 3
 QUARK_BLOCK_DIM = 2 * 3

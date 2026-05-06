@@ -57,7 +57,7 @@ def close(a: float, b: float, tol: float = 1e-12) -> bool:
     return abs(a - b) <= tol
 
 
-# Retained inputs.
+# Cited inputs.
 ALPHA_S_V = CANONICAL_ALPHA_S_V
 LAMBDA_SQ = ALPHA_S_V / 2.0
 RHO = Fraction(1, 6)
@@ -78,7 +78,7 @@ SIN_2BETA_PDG_ERR = 0.011
 
 
 def audit_inputs() -> None:
-    banner("Retained inputs")
+    banner("Cited inputs")
 
     print(f"  alpha_s(v)       = {ALPHA_S_V:.15f}")
     print(f"  lambda^2         = {LAMBDA_SQ:.15f}")

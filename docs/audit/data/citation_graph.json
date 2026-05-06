@@ -2438,6 +2438,10 @@
     },
     {
       "from": "ckm_atlas_axiom_closure_note",
+      "to": "alpha_s_derived_note"
+    },
+    {
+      "from": "ckm_atlas_axiom_closure_note",
       "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
     },
     {
@@ -3050,15 +3054,15 @@
     },
     {
       "from": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
-      "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
       "to": "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24"
     },
     {
       "from": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
       "to": "alpha_s_derived_note"
+    },
+    {
+      "from": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
+      "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
     },
     {
       "from": "ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26",
@@ -3146,7 +3150,7 @@
     },
     {
       "from": "ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25",
-      "to": "alpha_s_derived_note"
+      "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
     },
     {
       "from": "ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25",
@@ -3154,7 +3158,7 @@
     },
     {
       "from": "ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25",
-      "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
+      "to": "alpha_s_derived_note"
     },
     {
       "from": "ckm_second_row_magnitudes_theorem_note_2026-04-25",
@@ -29905,8 +29909,9 @@
       "claim_id": "ckm_atlas_axiom_closure_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": null,
       "deps": [
+        "alpha_s_derived_note",
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
         "ckm_wolfenstein_eta_inverse_square_gap_theorem_note_2026-04-26",
@@ -29929,7 +29934,7 @@
         "s3_time_bilinear_tensor_primitive_note",
         "s3_time_bilinear_tensor_action_note"
       ],
-      "note_hash": "e9eef3e8c0db41afc5b4ae990ae00671b9dc60597a3fc8490785135af351fe01",
+      "note_hash": "3245d6f53f76cc987acba5e6e529e6e46f29c543fee3ec3305aac05a3405a251",
       "path": "docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md",
       "runner_path": "scripts/frontier_ckm_atlas_axiom_closure.py",
       "title": "CKM Atlas/Axiom Closure Note"
@@ -29938,11 +29943,11 @@
       "claim_id": "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": null,
       "deps": [
         "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
       ],
-      "note_hash": "9dd9fc637017469dbad787bb801d4b0bca7b2dd3311dbefadefddf1104b16484",
+      "note_hash": "3ccab6188977fefbd4c89b3bb05eb701f2a98b506da07c127da4696e92530d03",
       "path": "docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_ckm_atlas_triangle_right_angle.py",
       "title": "CKM Atlas Triangle Right-Angle Identity"
@@ -30395,14 +30400,14 @@
       "claim_id": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": null,
       "deps": [
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
         "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
-        "alpha_s_derived_note"
+        "alpha_s_derived_note",
+        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
       ],
-      "note_hash": "29d85d721c9cddefae587a79338c35f3dfc859ab382a4efa415df838f3d4a1da",
+      "note_hash": "131ddaed1b20e5c8c765e2eb7533b837e02e43b55c770762dfd8d971e24444b6",
       "path": "docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_ckm_magnitudes_structural_counts.py",
       "title": "CKM Magnitudes Structural Counts Theorem"
@@ -30491,14 +30496,14 @@
       "claim_id": "ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": null,
       "deps": [
         "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
-        "alpha_s_derived_note",
+        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
+        "alpha_s_derived_note"
       ],
-      "note_hash": "e823ee5dd442f5df436fe3267291114da20399f38f8498cab503302e8db4553c",
+      "note_hash": "ee105a01721c343487e86b442b630a9ab2c63d4af89701b4146dc5378ccdaf7e",
       "path": "docs/CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_ckm_nlo_barred_triangle_protected_gamma.py",
       "title": "CKM NLO Barred-Triangle and Protected-Gamma Theorem"
@@ -55941,11 +55946,11 @@
       "bounded_theorem": 576,
       "meta": 10,
       "no_go": 118,
-      "none": 457,
+      "none": 461,
       "open_gate": 113,
-      "positive_theorem": 632
+      "positive_theorem": 628
     },
-    "edge_count": 6610,
+    "edge_count": 6611,
     "leaf_count": 549,
     "node_count": 1906,
     "root_count": 865,

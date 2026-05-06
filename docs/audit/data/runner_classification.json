@@ -1513,7 +1513,7 @@
       "runner": "scripts/frontier_ckm_atlas_axiom_closure.py"
     },
     "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24": {
-      "assert_count": 1,
+      "assert_count": 2,
       "counts": {
         "A": 0,
         "B": 0,
@@ -20853,7 +20853,7 @@
       "exists": true
     },
     "scripts/frontier_ckm_atlas_triangle_right_angle.py": {
-      "assert_count": 1,
+      "assert_count": 2,
       "claims": [
         "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24"
       ],

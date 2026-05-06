@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 794 |
+| unaudited | 798 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 30 |
-| ~~audited_conditional~~ | 467 |
+| ~~audited_conditional~~ | 463 |
 | ~~audited_failed~~ | 12 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 374 |
-| `audited_conditional` | 467 |
+| `audited_conditional` | 463 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 30 |
-| `unaudited` | 843 |
+| `unaudited` | 847 |
 
 | claim_type | count |
 |---|---:|
@@ -81,7 +81,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 1 | `observable_principle_from_axiom_note` | positive_theorem | critical | 336 | 35.40 | `audited_conditional` | ~~audited_conditional~~ |
 | 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 597 | 35.22 | `audited_clean` | **retained_bounded** |
 | 3 | `minimal_axioms_2026-04-11` | meta | critical | 541 | 33.58 | `unaudited` | meta |
-| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 523 | 32.03 | `audited_conditional` | ~~audited_conditional~~ |
+| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 523 | 32.53 | `audited_conditional` | ~~audited_conditional~~ |
 | 5 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 361 | 31.50 | `unaudited` | unaudited |
 | 6 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 361 | 30.50 | `unaudited` | unaudited |
 | 7 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 298 | 29.22 | `unaudited` | unaudited |
@@ -89,17 +89,17 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 9 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 389 | 26.61 | `audited_conditional` | ~~audited_conditional~~ |
 | 10 | `minimal_axioms_2026-05-03` | meta | critical | 609 | 25.75 | `unaudited` | meta |
 | 11 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 599 | 25.73 | `audited_clean` | open_gate |
-| 12 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 361 | 25.50 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 361 | 25.50 | `unaudited` | unaudited |
 | 13 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 500 | 25.47 | `unaudited` | unaudited |
 | 14 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 314 | 24.30 | `unaudited` | unaudited |
 | 15 | `three_generation_structure_note` | bounded_theorem | critical | 418 | 24.21 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 361 | 24.00 | `audited_conditional` | ~~audited_conditional~~ |
+| 16 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 361 | 24.00 | `unaudited` | unaudited |
 | 17 | `left_handed_charge_matching_note` | bounded_theorem | critical | 439 | 23.78 | `audited_conditional` | ~~audited_conditional~~ |
 | 18 | `one_generation_matter_closure_note` | bounded_theorem | critical | 422 | 23.73 | `audited_conditional` | ~~audited_conditional~~ |
-| 19 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 361 | 22.50 | `audited_conditional` | ~~audited_conditional~~ |
+| 19 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 361 | 22.50 | `unaudited` | unaudited |
 | 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 546 | 22.09 | `audited_conditional` | ~~audited_conditional~~ |
 | 21 | `universal_gr_discrete_global_closure_note` | positive_theorem | critical | 528 | 21.55 | `audited_conditional` | ~~audited_conditional~~ |
-| 22 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 361 | 21.50 | `audited_conditional` | ~~audited_conditional~~ |
+| 22 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 361 | 21.50 | `unaudited` | unaudited |
 | 23 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 319 | 21.32 | `audited_clean` | **retained** |
 | 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 394 | 21.13 | `unaudited` | unaudited |
 | 25 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 286 | 20.66 | `audited_conditional` | ~~audited_conditional~~ |
@@ -551,8 +551,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `chiral_walk_synthesis_2026-04-09` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `chiral_walk_synthesis_2026-04-10_addendum` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
-| `ckm_atlas_axiom_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_barred_circumradius_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_barred_orthocenter_euler_line_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -565,10 +563,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_from_mass_hierarchy_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `ckm_jarlskog_exact_nlo_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_kaon_epsilon_k_jarlskog_decomposition_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_n9_structural_family_koide_bridge_support_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_second_row_magnitudes_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_sin_2_beta_bar_nlo_n_quark_ratio_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -2627,56 +2623,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `CL3_TASTE_GENERATION_THEOREM.md`
 - **auditor confidence:** high
 
-### `ckm_atlas_axiom_closure_note`
-
-- **Note:** [`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](../../docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The promoted CKM atlas package combines the canonical alpha_s(v), EWSB 1+2 split, dim(Q_L)=6, Z3 CP source, center-excess scalar, bilinear tensor carrier, and Schur-complement cascade.  _(class `B`)_
-- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md, CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md, CKM_WOLFENSTEIN_ETA_INVERSE_SQUARE_GAP_THEOREM_NOTE_2026-04-26.md, CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md, CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md, CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md, CKM_SIN_2_BETA_BAR_NLO_N_QUARK_RATIO_THEOREM_NOTE_2026-04-25.md, CKM_BARRED_TRIANGLE_PYTHAGOREAN_RHO_LAMBDA_SUM_RULE_THEOREM_NOTE_2026-04-25.md, and 13 more direct blockers.
-- **rationale:** Issue: The load-bearing step still imports unratified direct authority: WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md, CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md, CKM_WOLFENSTEIN_ETA_INVERSE_SQUARE_GAP_THEOREM_NOTE_2026-04-26.md, CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md, CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md, CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md, CKM_SIN_2_BETA_BAR_NLO_N_QUARK_RATIO_THEOREM_NOTE_2026-04-25.md, CKM_BARRED_TRIANGLE_PYTHAGOREAN_RHO_LAMBDA_SUM_RULE_THEOREM_NOTE_2026-04-25.md, and 13 more direct blockers. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
-- **open / conditional deps cited:**
-  - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_WOLFENSTEIN_ETA_INVERSE_SQUARE_GAP_THEOREM_NOTE_2026-04-26.md`
-  - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_SIN_2_BETA_BAR_NLO_N_QUARK_RATIO_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_BARRED_TRIANGLE_PYTHAGOREAN_RHO_LAMBDA_SUM_RULE_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_BARRED_ORTHOCENTER_EULER_LINE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_BARRED_WEITZENBOCK_BROCARD_POLYNOMIAL_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_CLASSICAL_NUMBER_THEORY_INTEGER_CHARACTERIZATION_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_THALES_CROSS_SYSTEM_CP_RATIO_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_KAON_EPSILON_K_JARLSKOG_DECOMPOSITION_THEOREM_NOTE_2026-04-25.md`
-  - `S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md`
-  - `S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md`
-- **auditor confidence:** high
-
-### `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24`
-
-- **Note:** [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`](../../docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The atlas triangle with rho=1/6 and eta=sqrt(5)/6 is exactly right-angled, alpha_0=pi/2.  _(class `A`)_
-- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md.
-- **rationale:** Issue: The load-bearing step still imports unratified direct authority: CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
-- **open / conditional deps cited:**
-  - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-- **auditor confidence:** high
-
 ### `ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25`
 
 - **Note:** [`CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](../../docs/CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md)
@@ -2926,24 +2872,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The correct audited object is a bounded theorem: exact closed forms follow conditionally from explicitly supplied identities and the count constraint. The runner's own PASS labels identify the load-bearing operations as Pattern A algebraic substitution; the provided automated classifier breakdown conflicts with those labels but does not expose a failed algebraic step. Because the note disclaims derivation of the hypotheses and physical/comparator interpretation, there are no hidden dependencies within the scoped row.
 - **auditor confidence:** high
 
-### `ckm_magnitudes_structural_counts_theorem_note_2026-04-25`
-
-- **Note:** [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](../../docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The five atlas-leading off-diagonal CKM magnitude identities are derived from lambda^2=alpha_s(v)/n_pair, A^2=n_pair/n_color, rho=1/n_quark, and eta^2=(n_quark-1)/n_quark^2.  _(class `A`)_
-- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md, CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md, CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md, ALPHA_S_DERIVED_NOTE.md.
-- **rationale:** Issue: The load-bearing step still imports unratified direct authority: WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md, CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md, CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md, ALPHA_S_DERIVED_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
-- **open / conditional deps cited:**
-  - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
-  - `ALPHA_S_DERIVED_NOTE.md`
-- **auditor confidence:** high
-
 ### `ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25`
 
 - **Note:** [`CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md`](../../docs/CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md)
@@ -2980,24 +2908,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
   - `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`
   - `CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`
-- **auditor confidence:** high
-
-### `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25`
-
-- **Note:** [`CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`](../../docs/CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** Under the NLO barred-apex map, gamma_bar is exactly preserved because rho_bar and eta_bar scale by the same factor.  _(class `A`)_
-- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md, ALPHA_S_DERIVED_NOTE.md, WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md, CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md.
-- **rationale:** Issue: The load-bearing step still imports unratified direct authority: CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md, ALPHA_S_DERIVED_NOTE.md, WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md, CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
-- **open / conditional deps cited:**
-  - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
-  - `ALPHA_S_DERIVED_NOTE.md`
-  - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
 - **auditor confidence:** high
 
 ### `ckm_schur_complement_theorem`

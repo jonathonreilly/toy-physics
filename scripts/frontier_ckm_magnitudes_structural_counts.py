@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit the retained CKM structural-counts magnitude package.
+"""Verify the CKM structural-counts magnitude package.
 
 Verifies the compact structural-counts forms
 
@@ -9,7 +9,7 @@ Verifies the compact structural-counts forms
   (M4) |V_ub|_0^2 = alpha_s(v)^3/(8 N_color^2)
   (M5) |V_td|_0^2 = (N_quark-1) alpha_s(v)^3/(8 N_color^2)
 
-on the already-retained CKM atlas surface. This runner intentionally does not
+on the cited CKM atlas surface. This runner intentionally does not
 certify any dimension-uniqueness or cross-sector promotion.
 """
 
@@ -96,7 +96,7 @@ def audit_authorities() -> None:
 
 
 def audit_inputs() -> None:
-    banner("Retained CKM structural counts")
+    banner("Cited CKM structural counts")
 
     print(f"  N_pair   = {N_PAIR}")
     print(f"  N_color  = {N_COLOR}")
@@ -192,7 +192,7 @@ def audit_pdg_comparators() -> None:
 
 def summary() -> None:
     banner("Summary")
-    print("  Retained CKM structural-counts surface:")
+    print("  Cited CKM structural-counts surface:")
     print("    |V_us|_0^2 = alpha_s(v)/N_pair")
     print("    |V_cb|_0^2 = alpha_s(v)^2/(N_pair N_color)")
     print("    |V_ts|_0^2 = alpha_s(v)^2/(N_pair N_color)")
