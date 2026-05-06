@@ -1,0 +1,36 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_qg_external_fe_smooth_equivalence.py
+runner_sha256: 555c4400743e9bdab7ab09afd6dd703444eeeb2b28c677ecfbf3a06abf6583e2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.15
+status: ok
+----- stdout -----
+[EXACT] PASS: the route already has an exact PL weak-form system and an exact PL Sobolev carrier
+    this theorem starts from the already-closed project-native weak/Dirichlet system and H1-type carrier
+[EXACT] PASS: the chosen external smooth Sobolev target carries the same FE ladder by exact prolongation
+    max FE prolongation associativity error=0.000e+00, max H1-type mismatch=1.776e-15, min H1-type norm=5.491068e-01
+[EXACT] PASS: the discrete bilinear and source data are exactly the Galerkin restrictions of the closed external weak form
+    max bilinear-form Galerkin error=3.553e-15, max source-functional error=1.110e-16
+[EXACT] PASS: the discrete Gaussian cylinder family is exactly the FE/Galerkin cylinder family of the external Gaussian formulation
+    max covariance-cylinder error=8.882e-16
+[EXACT] PASS: the remaining stronger issue is therefore no longer existence of a chosen external smooth weak/measure formulation, but only later textbook geometric/action and continuum-gravitational closures already discharged elsewhere on the branch
+    the exact discrete route is already the FE/Galerkin cylinder realization of one chosen external smooth Sobolev weak Gaussian formulation; later notes close the canonical textbook and smooth gravitational weak/Gaussian identifications, the geometric/action comparison, and the continuum gravitational closure built on this step
+UNIVERSAL QG EXTERNAL FE-SMOOTH EQUIVALENCE
+==============================================================================
+max FE prolongation associativity error = 0.000e+00
+max H1-type mismatch                    = 1.776e-15
+max bilinear-form Galerkin error        = 3.553e-15
+max source-functional error             = 1.110e-16
+max covariance-cylinder error           = 8.882e-16
+
+Verdict:
+The exact project-native PL weak Gaussian Sobolev completion is already exactly the FE/Galerkin cylinder realization of a chosen external smooth Sobolev weak-field and Gaussian formulation. So the remaining issue is no longer absence of such an external formulation. Later notes close the canonical textbook and smooth gravitational weak/Gaussian identifications built on this step and then the project-native smooth geometric/action comparison and then the canonical textbook continuum gravitational closure.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=5 FAIL=0 TOTAL=5
+
+----- stderr -----
+
