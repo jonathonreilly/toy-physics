@@ -51024,7 +51024,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "78615c5f216d405760da1db1824a8df4f322624c6cbbdb41f9d41b748caa2f8a",
+      "note_hash": "b3c5dbddaa9f77d0e20b4991d7be97fa81b596cc018a0516011526d1977ac0d7",
       "path": "docs/TELEPORTATION_ENCODING_PORTABILITY_NOTE.md",
       "runner_path": "scripts/frontier_teleportation_encoding_portability.py",
       "title": "Taste-Qubit Encoding Portability Note"
