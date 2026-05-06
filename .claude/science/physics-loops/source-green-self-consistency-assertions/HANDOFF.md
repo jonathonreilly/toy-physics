@@ -33,4 +33,4 @@ python3 docs/audit/scripts/audit_lint.py
 
 ## PR
 
-Pending at initial handoff creation.
+Opened: https://github.com/jonathonreilly/cl3-lattice-framework/pull/558
