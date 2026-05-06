@@ -63,12 +63,12 @@ Allowed context:
   pending mode records only active PIDs and the absence of row JSON.  Pending
   checkpoints are not row data, pole evidence, canonical `O_H`, scalar LSZ
   normalization, or `y_t` closure.
-- the completed two-source taste-radial chunks001-006 checkpoints as
+- the completed two-source taste-radial chunks001-008 checkpoints as
   bounded row support only: they validate real chunk JSON, seed control,
   selected-mass-only FH/LSZ, and `C_sx/C_xx` timeseries, but not combined L12
   pole evidence, canonical `O_H`, scalar LSZ normalization, or `y_t` closure.
 - the two-source taste-radial row-combiner gate as bounded aggregation support
-  only: it records `ready=6/63` and refuses to write the combined measurement
+  only: it records `ready=8/63` and refuses to write the combined measurement
   row packet until 63/63 chunks are schema-clean.  Partial diagnostics are not
   combined L12 pole evidence, canonical `O_H`, scalar LSZ normalization,
   `kappa_s`, or `y_t` closure.
@@ -163,7 +163,7 @@ Open imports after this block:
   workers and partial directories are explicitly non-evidence.
 - Two-source taste-radial active-pending chunk checkpoints are not proof
   selectors; they explicitly certify that completed row JSON is absent.
-- Completed two-source taste-radial chunks001-006 are not proof selectors
+- Completed two-source taste-radial chunks001-008 are not proof selectors
   until combined row evidence, pole/FV/IR authority, and canonical
   `O_H`/source-overlap or physical-response authority exist.
 - Source-Higgs schema field names in completed two-source taste-radial chunks

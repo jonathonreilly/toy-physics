@@ -59,6 +59,13 @@ Local verification completed:
   FAIL=0 after adding finite-mode `rho_sx` and `Delta_sx` scouts for
   chunks001-006; combined rows remain unwritten and the diagnostics are
   explicitly non-evidence;
+- `frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py`:
+  PASS=15 FAIL=0 for completed chunk007 and PASS=15 FAIL=0 for completed
+  chunk008; both certificates remain bounded row support only;
+- `frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py`: PASS=13
+  FAIL=0 after completed chunks007-008 landed; records `ready=8/63`, no bad
+  chunk audits, finite-mode `rho_sx`/`Delta_sx` scouts, and
+  `combined_rows_written=false`;
 - `frontier_yt_pr230_taste_radial_canonical_oh_selector_gate.py`: PASS=17
   FAIL=0;
 - `frontier_yt_pr230_degree_one_higgs_action_premise_gate.py`: PASS=15
@@ -76,7 +83,7 @@ Local verification completed:
   harness sparse-vertex support, and aggregate PR230 gates;
 - `python3 -m py_compile scripts/frontier_yt_source_higgs_production_readiness_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py` after hardening the source-Higgs readiness gate for completed taste-radial `C_sx/C_xx` aliases;
 - `frontier_yt_source_higgs_production_readiness_gate.py`: PASS=25 FAIL=0
-  after scanning six completed taste-radial chunks and confirming finite
+  after scanning eight completed taste-radial chunks and confirming finite
   alias mode rows, zero pole-residue rows, canonical `O_H` identity false, and
   no physical Yukawa readout;
 - `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
@@ -99,6 +106,15 @@ Local verification completed:
 - `frontier_yt_retained_closure_route_certificate.py`: PASS=277 FAIL=0;
 - `frontier_yt_pr230_campaign_status_certificate.py`: PASS=307 FAIL=0;
 - `frontier_yt_pr230_positive_closure_completion_audit.py`: PASS=40 FAIL=0;
+- `python3 -m py_compile` for the chunk checkpoint, row combiner,
+  source-Higgs readiness, assumption stress, full assembly, retained route,
+  campaign status, and completion-audit runners after the chunks007-008
+  checkpoint refresh;
+- `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
+  metadata regenerated after chunks007-008 completed checkpoints and
+  `ready=8/63` combiner refresh;
+- `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
+  pre-existing warnings;
 - `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
   metadata regenerated after adding the post-FMS source-overlap necessity note
   and the two-source row-combiner gate note;
