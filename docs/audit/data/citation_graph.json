@@ -2181,6 +2181,22 @@
       "to": "causal_field_portability_note"
     },
     {
+      "from": "chain_closure_44ppm_brainstorm_note_2026-05-05",
+      "to": "chain_closure_9ppm_brainstorm_note_2026-05-05"
+    },
+    {
+      "from": "chain_closure_9ppm_brainstorm_note_2026-05-05",
+      "to": "chain_refactoring_bare_to_pdg_note_2026-05-05"
+    },
+    {
+      "from": "chain_closure_9ppm_brainstorm_note_2026-05-05",
+      "to": "chain_residual_precision_correction_note_2026-05-05"
+    },
+    {
+      "from": "chain_closure_derivation_blocked_note_2026-05-05",
+      "to": "chain_closure_44ppm_brainstorm_note_2026-05-05"
+    },
+    {
       "from": "chain_refactoring_bare_to_pdg_note_2026-05-05",
       "to": "plaquette_minimal_block_closed_form_note_2026-05-05"
     },
@@ -2191,6 +2207,22 @@
     {
       "from": "chain_refactoring_bare_to_pdg_note_2026-05-05",
       "to": "su3_bridge_pr525_flaw_fix_note_2026-05-05"
+    },
+    {
+      "from": "chain_residual_2loop_lattice_artifact_note_2026-05-05",
+      "to": "chain_refactoring_bare_to_pdg_note_2026-05-05"
+    },
+    {
+      "from": "chain_residual_2loop_lattice_artifact_note_2026-05-05",
+      "to": "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05"
+    },
+    {
+      "from": "chain_residual_precision_correction_note_2026-05-05",
+      "to": "chain_refactoring_bare_to_pdg_note_2026-05-05"
+    },
+    {
+      "from": "chain_residual_precision_correction_note_2026-05-05",
+      "to": "chain_residual_2loop_lattice_artifact_note_2026-05-05"
     },
     {
       "from": "charged_lepton_koide_cone_algebraic_equivalence_note",
@@ -6413,6 +6445,14 @@
       "to": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
     },
     {
+      "from": "gauge_vacuum_plaquette_bridge_support_note",
+      "to": "theorem3_deep_audit_loophole_note_2026-05-06"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_bridge_support_note",
+      "to": "route1_v2_onset_reduced_note_2026-05-06"
+    },
+    {
       "from": "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17",
       "to": "gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17"
     },
@@ -6634,6 +6674,10 @@
     },
     {
       "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "theorem3_deep_audit_loophole_note_2026-05-06"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
       "to": "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note"
     },
     {
@@ -6655,6 +6699,10 @@
     {
       "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
       "to": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+      "to": "route1_v2_onset_reduced_note_2026-05-06"
     },
     {
       "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
@@ -12133,6 +12181,18 @@
       "to": "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
     },
     {
+      "from": "route1_v2_onset_reduced_note_2026-05-06",
+      "to": "theorem3_deep_audit_loophole_note_2026-05-06"
+    },
+    {
+      "from": "route1_v2_onset_reduced_note_2026-05-06",
+      "to": "route2_lpt_deep_audit_note_2026-05-06"
+    },
+    {
+      "from": "route2_lpt_deep_audit_note_2026-05-06",
+      "to": "chain_closure_derivation_blocked_note_2026-05-05"
+    },
+    {
       "from": "r_base_group_theory_derivation_theorem_note_2026-04-24",
       "to": "hypercharge_identification_note"
     },
@@ -13399,6 +13459,18 @@
     {
       "from": "tensor_scalar_ratio_consolidation_theorem_note_2026-04-22",
       "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "theorem3_deep_audit_loophole_note_2026-05-06",
+      "to": "chain_closure_derivation_blocked_note_2026-05-05"
+    },
+    {
+      "from": "theorem3_deep_audit_loophole_note_2026-05-06",
+      "to": "chain_closure_44ppm_brainstorm_note_2026-05-05"
+    },
+    {
+      "from": "theorem3_deep_audit_loophole_note_2026-05-06",
+      "to": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
     },
     {
       "from": "third_grown_family_complex_boundary_note",
@@ -29102,6 +29174,46 @@
       "runner_path": "scripts/central_band_mass_window_summary.py",
       "title": "Central-Band Mass Window Note"
     },
+    "chain_closure_44ppm_brainstorm_note_2026-05-05": {
+      "claim_id": "chain_closure_44ppm_brainstorm_note_2026-05-05",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "research_finding (cleaner closure form; multi-route derivation brainstorm)",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "chain_closure_9ppm_brainstorm_note_2026-05-05"
+      ],
+      "note_hash": "e3c9f69f3ffeb7d93b65afc399abac001bebffa3ee9285f88a236260c5f1ebc6",
+      "path": "docs/CHAIN_CLOSURE_44PPM_BRAINSTORM_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "Chain Closure to 4.4 ppm + Derivation Route Brainstorm"
+    },
+    "chain_closure_9ppm_brainstorm_note_2026-05-05": {
+      "claim_id": "chain_closure_9ppm_brainstorm_note_2026-05-05",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "research_finding (sub-promille closure with empirical correction form)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "chain_refactoring_bare_to_pdg_note_2026-05-05",
+        "chain_residual_precision_correction_note_2026-05-05"
+      ],
+      "note_hash": "7af04a8f8ce9d462a8c28636d8be98882bb5af5acefeb8e121a34792dc3790ae",
+      "path": "docs/CHAIN_CLOSURE_9PPM_BRAINSTORM_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "Chain Closure to 9 ppm: Counterfactual Pass + Brainstorm + Empirical Closure Form"
+    },
+    "chain_closure_derivation_blocked_note_2026-05-05": {
+      "claim_id": "chain_closure_derivation_blocked_note_2026-05-05",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "research_finding (honest synthesis of derivation attempts)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "chain_closure_44ppm_brainstorm_note_2026-05-05"
+      ],
+      "note_hash": "548a09c9f07f3a242b7cda69cae28c3739666814ba6bfb81aa059ca796d50df0",
+      "path": "docs/CHAIN_CLOSURE_DERIVATION_BLOCKED_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "Chain Closure Derivation: Both Routes BLOCKED \u2014 Honest Synthesis"
+    },
     "chain_refactoring_bare_to_pdg_note_2026-05-05": {
       "claim_id": "chain_refactoring_bare_to_pdg_note_2026-05-05",
       "claim_type_author_hint": null,
@@ -29116,6 +29228,34 @@
       "path": "docs/CHAIN_REFACTORING_BARE_TO_PDG_NOTE_2026-05-05.md",
       "runner_path": null,
       "title": "Closed-Form Chain Refactoring: v = 246.06 GeV from Framework Primitives + V=1 PF ODE"
+    },
+    "chain_residual_2loop_lattice_artifact_note_2026-05-05": {
+      "claim_id": "chain_residual_2loop_lattice_artifact_note_2026-05-05",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "dual-side localization of the 0.089% v-gap",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "chain_refactoring_bare_to_pdg_note_2026-05-05",
+        "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05"
+      ],
+      "note_hash": "643b7f15759110f5fb66034c1524b406419afe5e52cbf3bc620fd849439195f3",
+      "path": "docs/CHAIN_RESIDUAL_2LOOP_LATTICE_ARTIFACT_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "Chain Refactoring Residual: 2-Loop Closure + Lattice Artifact Identification"
+    },
+    "chain_residual_precision_correction_note_2026-05-05": {
+      "claim_id": "chain_residual_precision_correction_note_2026-05-05",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "honest precision correction",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "chain_refactoring_bare_to_pdg_note_2026-05-05",
+        "chain_residual_2loop_lattice_artifact_note_2026-05-05"
+      ],
+      "note_hash": "62bb53bcebadbc1439cd35674ba61a42325e463a68475a9b2ec4c09452981ec7",
+      "path": "docs/CHAIN_RESIDUAL_PRECISION_CORRECTION_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "Correction: Chain Residual 2-Loop Precision Overclaim"
     },
     "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26": {
       "claim_id": "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
@@ -35744,9 +35884,11 @@
         "gauge_scalar_temporal_completion_theorem_note",
         "scalar_3plus1_temporal_ratio_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
-        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
+        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+        "theorem3_deep_audit_loophole_note_2026-05-06",
+        "route1_v2_onset_reduced_note_2026-05-06"
       ],
-      "note_hash": "4bb4612cdd000f0bdd93b85ffdddb1249a0859e83fedc3d4ac58c923e952ff25",
+      "note_hash": "ad463626aaa476c82a87405446c16b1174d30dc1399c76b97093e446731fd47e",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py",
       "title": "Gauge-Vacuum Plaquette Scalar-Bridge Support"
@@ -36292,15 +36434,17 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
+        "theorem3_deep_audit_loophole_note_2026-05-06",
         "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
         "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
         "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
         "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
         "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
         "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
+        "route1_v2_onset_reduced_note_2026-05-06",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note"
       ],
-      "note_hash": "d32a28f0fe668a9971911e79925bb541a76f1a8a4c1c763955bded77fe118eb9",
+      "note_hash": "11c6b2710a41583ef48c2cc67b8c17f69667cfa4e8cb581a285250d2893b832c",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py",
       "title": "Gauge-Vacuum Plaquette Source-Sector Reference Perron Solve"
@@ -43441,7 +43585,7 @@
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
         "scalar_3plus1_temporal_ratio_note"
       ],
-      "note_hash": "21db3c8f323c12176b898d3c883aa9390dccec5a616a398e820e0425cd3e819e",
+      "note_hash": "27044a02e26f3db737dc9b4ef51e21ca546ecc4ff5afe3cde3450fc9820bfdd5",
       "path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
       "runner_path": "scripts/frontier_plaquette_self_consistency.py",
       "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant"
@@ -47783,6 +47927,33 @@
       "runner_path": "scripts/frontier_rh_sector_anomaly_cancellation_identities.py",
       "title": "RH-Sector Anomaly Cancellation Identities: SU(3)\u00b2\u00d7Y, Y\u00b3, and Gravitational\u00b2\u00d7Y"
     },
+    "route1_v2_onset_reduced_note_2026-05-06": {
+      "claim_id": "route1_v2_onset_reduced_note_2026-05-06",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "research_finding (audit-following structural progress)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "theorem3_deep_audit_loophole_note_2026-05-06",
+        "route2_lpt_deep_audit_note_2026-05-06"
+      ],
+      "note_hash": "b8d29074c80e603469bf28c0c260d0001d4580a8f3a8d9c7ff871261f6658967",
+      "path": "docs/ROUTE1_V2_ONSET_REDUCED_NOTE_2026-05-06.md",
+      "runner_path": null,
+      "title": "Route 1 v2 with Onset-Jet Constraint: REDUCED but Not Closed"
+    },
+    "route2_lpt_deep_audit_note_2026-05-06": {
+      "claim_id": "route2_lpt_deep_audit_note_2026-05-06",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "research_finding (deep audit of prior Route 2 verdict)",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "chain_closure_derivation_blocked_note_2026-05-05"
+      ],
+      "note_hash": "75cd3aa0ab44996e127ba56cf43ffdcc3de936c26b54a03935f697d3c8a206bc",
+      "path": "docs/ROUTE2_LPT_DEEP_AUDIT_NOTE_2026-05-06.md",
+      "runner_path": null,
+      "title": "Route 2 LPT Deep Audit: Block Stands With Corrected Reasoning"
+    },
     "s3_anomaly_spacetime_lift_note": {
       "claim_id": "s3_anomaly_spacetime_lift_note",
       "claim_type_author_hint": null,
@@ -50812,6 +50983,21 @@
       "path": "docs/THALES_RIGHT_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_thales_right_angle_narrow.py",
       "title": "Thales Right-Angle Narrow Theorem"
+    },
+    "theorem3_deep_audit_loophole_note_2026-05-06": {
+      "claim_id": "theorem3_deep_audit_loophole_note_2026-05-06",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "research_finding (audit-grade structural correction to existing framework theorem)",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "chain_closure_derivation_blocked_note_2026-05-05",
+        "chain_closure_44ppm_brainstorm_note_2026-05-05",
+        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
+      ],
+      "note_hash": "4f9fc3c6f3286bc7ca69c3eb6ca0b860cd2c23c158d4f47c5a470af2043cbaac",
+      "path": "docs/THEOREM3_DEEP_AUDIT_LOOPHOLE_NOTE_2026-05-06.md",
+      "runner_path": null,
+      "title": "Theorem 3 Deep Audit: Loophole Identified \u2014 Route 1 REOPENS"
     },
     "third_grown_family_boundary_note": {
       "claim_id": "third_grown_family_boundary_note",
@@ -55301,21 +55487,21 @@
       "bounded_theorem": 60,
       "meta": 8,
       "no_go": 12,
-      "none": 1720,
+      "none": 1728,
       "open_gate": 10,
       "positive_theorem": 85
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 560,
+      "bounded_theorem": 563,
       "meta": 8,
-      "no_go": 117,
-      "none": 460,
+      "no_go": 118,
+      "none": 463,
       "open_gate": 116,
-      "positive_theorem": 634
+      "positive_theorem": 635
     },
-    "edge_count": 6510,
+    "edge_count": 6528,
     "leaf_count": 545,
-    "node_count": 1895,
+    "node_count": 1903,
     "root_count": 877,
     "runners_with_path": 1464
   }

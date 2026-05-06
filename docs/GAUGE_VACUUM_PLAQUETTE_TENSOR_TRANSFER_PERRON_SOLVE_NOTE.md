@@ -41,9 +41,19 @@ Two questions:
 
 ## Answer
 
-(1) **No.** The local Wilson character coefficients `c_lambda(6)` and
-the `SU(3)` intertwiner data, taken together, do not determine
-`rho_(p,q)(6)`. This is the no-go in Theorem 3 below.
+(1) **No** — *under the restricted constraint set* {positivity,
+conjugation symmetry, normalization}. The local Wilson character
+coefficients `c_lambda(6)` and the `SU(3)` intertwiner data, taken
+together with that restricted set, do not determine `rho_(p,q)(6)`.
+This is the no-go in Theorem 3 below.
+
+> **AUDIT CORRECTION (2026-05-06):** Theorem 3's witnesses were shown
+> by deep audit to fail the framework's onset jet constraint
+> (`c_5 = 1/472392`). Whether the full framework constraint set
+> (positivity + conjugation symmetry + normalization + onset jet +
+> susceptibility flow + cumulant hierarchy) determines `rho_(p,q)(6)`
+> is **OPEN**, not proven impossible. See
+> [`THEOREM3_DEEP_AUDIT_LOOPHOLE_NOTE_2026-05-06.md`](THEOREM3_DEEP_AUDIT_LOOPHOLE_NOTE_2026-05-06.md).
 
 (2) **Yes for two structural reference choices,** as Theorems 1 and 2
 below: `rho = 1` (Dirac-delta environment) and
@@ -168,10 +178,45 @@ image span `exp(3 J) chi_(0,0)`. The runner reports:
 - `u_0,triv = 0.8062409160`,
 - `alpha_s,triv(v) = 1.5384037545`.
 
-## Theorem 3: explicit no-go on `rho_(p,q)(6)` closure
+## Theorem 3: no-go on `rho_(p,q)(6)` closure from local-only data
 
-Consider three explicit one-parameter families inside the admissible
-class of residual data:
+> **AUDIT CORRECTION (2026-05-06):** the original Theorem 3 below was
+> over-stated. The "proof by exhibiting three admissible families"
+> uses ONLY positivity + conjugation symmetry + normalization. It does
+> NOT invoke the framework's own connected-hierarchy onset jet
+> constraint `c_5 = 1/472392` nor the susceptibility-flow ODE.
+>
+> Numerical audit (NMAX=7-8, MODE_MAX=200-300; see
+> [`THEOREM3_DEEP_AUDIT_LOOPHOLE_NOTE_2026-05-06.md`](THEOREM3_DEEP_AUDIT_LOOPHOLE_NOTE_2026-05-06.md))
+> shows **NONE of the three witnesses below satisfy the framework's
+> own onset-jet constraint** `chi_L(beta) - chi_1plaq(beta) = 5*beta^4
+> /472392 + O(beta^5)`. The witness set used in the original proof is
+> **structurally inadmissible** once ALL framework constraints are
+> imposed.
+>
+> **Corrected scope:** Theorem 3 below is a no-go relative to the
+> RESTRICTED constraint set {positivity, conjugation symmetry,
+> normalization}. It is **NOT** a no-go relative to the FULL framework
+> constraint set including onset jet and susceptibility flow.
+>
+> **Implication for downstream work:** downstream notes should NOT
+> cite Theorem 3 as proof that local data + intertwiners + ALL
+> framework constraints fail to pin `rho_(p,q)(6)`. The full-constraint
+> case is OPEN (probe at NMAX=7 shows 22x narrowing of the spread
+> below; specific pin on `rho_(1,0)(0) ≈ 1.87-2.02`).
+>
+> **Path to closing the genuine no-go question:** derive the next-order
+> onset coefficient `c_6` from the framework's connected-hierarchy
+> theorem and apply as additional constraint. See
+> [`ROUTE1_V2_ONSET_REDUCED_NOTE_2026-05-06.md`](ROUTE1_V2_ONSET_REDUCED_NOTE_2026-05-06.md)
+> for the named next-step.
+
+(Original Theorem 3 statement and proof preserved below for citation
+continuity.)
+
+Consider three explicit one-parameter families inside the **restricted**
+admissible class (positivity, conjugation symmetry, normalization;
+**NOT** including onset jet or susceptibility flow):
 
 1. **Decay family.** `rho_(p,q)(6) = exp(-tau (p+q))` for `tau >= 0`.
    At `tau = 0`, recovers the Theorem 1 reference; as
@@ -188,10 +233,27 @@ class of residual data:
 
 Each family uses only `c_lambda` and `SU(3)` intertwiners, plus a
 single exogenous parameter `(tau, beta_env, k)`. Each member of each
-family is strictly admissible (positive, conjugation-symmetric,
-normalized at `(0,0)`). None coincides with either reference solve.
+family is strictly admissible **in the restricted constraint class**
+(positive, conjugation-symmetric, normalized at `(0,0)`). None coincides
+with either reference solve.
 
-The runner reports the following Perron-value spreads:
+> **AUDIT NOTE:** numerical verification of each family against the
+> framework's onset jet `c_5 = 1/472392 = 2.117e-6`:
+>
+> | family | `c_5` (target 2.117e-6) | satisfies onset? |
+> |---|---|---|
+> | rho=1 (Thm 1 ref) | 1.06e-6 (factor 2 low) | **NO** |
+> | rho=delta (Thm 2 ref) | ≈ 0 (gives P=P_1plaq exactly) | **NO** |
+> | decay tau ∈ [0, 5] | always wrong by factor 2-5 | **NO** |
+> | one-plaq env beta_env ∈ [0, 20] | always too small | **NO** |
+> | tube k=1, k=2 | wrong sign (negative) | **NO** |
+> | tube k=12 | factor 8.7 too high | **NO** |
+>
+> **Conclusion:** the witnesses below are NOT in the full-constraint
+> admissible class.
+
+The runner reports the following Perron-value spreads (in the restricted
+class, ignoring onset jet):
 
 - family 1 spread: `0.0297` over `tau in [0, 5]` (range `[0.4225, 0.4524]`);
 - family 2 spread: `0.0653` over `beta_env in [0, 20]` (range
@@ -199,18 +261,49 @@ The runner reports the following Perron-value spreads:
 - family 3 spread: `0.1638` over `k in [0, 20]` (range `[0.4524, 0.6163]`);
 - combined spread: `>= 0.1937`.
 
-In particular, distinct admissible rho choices, all built from the same
-`c_lambda(6)` and `SU(3)` intertwiner data, produce strictly different
-values of `P(6)`. **Therefore `c_lambda(6)` and `SU(3)` intertwiners
-do not, by themselves, fix `rho_(p,q)(6)`.** Closed-form derivation of
-`rho_(p,q)(6)` from those local inputs alone does not exist.
+> **AUDIT CORRECTION:** with the onset-jet constraint applied,
+> the constant-rho subclass spread shrinks to **0.0087** (a 22×
+> reduction). The constrained class is bounded above by P(6) ≤ 0.485
+> (still below canonical 0.5934). Closing the chain at PDG precision
+> requires a beta-dependent rho or higher-order onset constraints.
+> See companion audit notes for details.
+
+In particular, distinct admissible rho choices **in the restricted
+class**, all built from the same `c_lambda(6)` and `SU(3)` intertwiner
+data, produce strictly different values of `P(6)`. **Therefore
+`c_lambda(6)` and `SU(3)` intertwiners + {positivity, conjugation
+symmetry, normalization} alone do not fix `rho_(p,q)(6)`.**
+
+> **AUDIT QUALIFICATION:** this conclusion holds only for the
+> RESTRICTED constraint set. Whether `c_lambda(6)` + intertwiners +
+> ALL framework constraints (positivity, conjugation, normalization,
+> onset jet, susceptibility flow, mixed cumulant hierarchy) determine
+> `rho_(p,q)(6)` is **OPEN**. Audit-following Route 1 v2 probe shows
+> 22× narrowing under onset constraint; full closure remains a named
+> open problem requiring c_6 onset coefficient or higher.
+
+Closed-form derivation of `rho_(p,q)(6)` from local inputs alone
+**within the restricted constraint set** does not exist. **The
+full-constraint case is OPEN, NOT proven impossible.**
 
 The canonical same-surface plaquette value `0.5934` lies inside the
-combined admissible span (reached for example near `k = 12` in family
-3), but no parameter choice is canonically picked out by the local
-input class. The runner does not select a parameter to match `0.5934`;
-instead it sweeps the parameter and reports the resulting `P(6)`
-sequence as evidence of non-uniqueness.
+combined restricted-admissible span (reached for example near `k = 12`
+in family 3), but no parameter choice is canonically picked out by the
+restricted local input class. The runner does not select a parameter
+to match `0.5934`; instead it sweeps the parameter and reports the
+resulting `P(6)` sequence as evidence of non-uniqueness **in the
+restricted class**.
+
+> **DOWNSTREAM-WORK GUIDANCE:** consumers of this note should:
+> - Cite Theorem 3 as a no-go ONLY in the restricted-constraint sense
+> - NOT cite Theorem 3 as ruling out closure under the full framework
+>   constraint set
+> - Reference the audit notes
+>   ([`THEOREM3_DEEP_AUDIT_LOOPHOLE_NOTE_2026-05-06.md`](THEOREM3_DEEP_AUDIT_LOOPHOLE_NOTE_2026-05-06.md),
+>   [`ROUTE1_V2_ONSET_REDUCED_NOTE_2026-05-06.md`](ROUTE1_V2_ONSET_REDUCED_NOTE_2026-05-06.md))
+>   for the corrected scope
+> - Recognize that chain-closure work via the onset-constrained
+>   rho class is REOPEN, with named next-step (c_6 onset derivation)
 
 ## Theorem 4: NMAX truncation tail bound
 
@@ -349,7 +442,19 @@ The "computed `rho_(p,q)(6)`" reported by the runner is therefore the
 INPUT definition of each reference solve, plus the explicit Perron
 eigenvector content (which IS computed from local Wilson data). The
 no-go in Theorem 3 makes this distinction explicit: the physical
-`rho_(p,q)(6)` is not derivable from local Wilson data alone.
+`rho_(p,q)(6)` is not derivable from local Wilson data alone *under
+the restricted constraint set used in Theorem 3's witnesses* (positivity
++ conjugation symmetry + normalization).
+
+> **AUDIT-CORRECTED SCOPE (2026-05-06):** the original "no derivation
+> from local data" claim is true only relative to the restricted
+> constraint set. With the framework's full constraint set (positivity
+> + conjugation + normalization + onset jet + susceptibility flow +
+> cumulant hierarchy), the question is **OPEN**. Audit-following
+> Route 1 v2 probe shows 22× narrowing under onset jet alone; full
+> closure requires next-order constraints (c_6 onset coefficient or
+> susceptibility-flow integration). See companion audit notes for the
+> path forward.
 
 ### Status purity
 

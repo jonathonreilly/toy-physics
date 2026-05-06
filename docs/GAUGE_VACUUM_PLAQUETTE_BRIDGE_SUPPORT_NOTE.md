@@ -459,13 +459,26 @@ solves are structural input — not derived from any physical 3D Wilson
 environment — and the note does not claim either reference corresponds
 to the physical environment.
 
-The same theorem records an exact no-go: three distinct admissible
-parametric families (`exp(-tau(p+q))`, one-plaquette environment
-ansatz `c_(p,q)(beta_env) / c_(0,0)(beta_env)`, tube-power ansatz
-`(c_(p,q)(6) / c_(0,0)(6))^k`) all use only `c_lambda(6)` and `SU(3)`
-intertwiners and yet produce strictly different `P(6)` values, so
-`c_lambda(6)` and `SU(3)` intertwiners do not, by themselves, fix
-`rho_(p,q)(6)` on the source sector.
+The same theorem records a no-go *under the restricted constraint set*
+{positivity, conjugation symmetry, normalization}: three distinct
+admissible parametric families (`exp(-tau(p+q))`, one-plaquette
+environment ansatz `c_(p,q)(beta_env) / c_(0,0)(beta_env)`, tube-power
+ansatz `(c_(p,q)(6) / c_(0,0)(6))^k`) all use only `c_lambda(6)` and
+`SU(3)` intertwiners and yet produce strictly different `P(6)` values,
+so `c_lambda(6)` and `SU(3)` intertwiners + restricted-constraint set
+do not, by themselves, fix `rho_(p,q)(6)` on the source sector.
+
+> **AUDIT CORRECTION (2026-05-06):** the original "exact no-go" was
+> over-stated. The witnesses fail the framework's connected-hierarchy
+> onset jet `c_5 = 1/472392`. With the framework's full constraint
+> set (adding onset jet + susceptibility flow + cumulant hierarchy),
+> the question of whether `rho_(p,q)(6)` is determined by local data
+> + intertwiners is **OPEN**, not proven impossible. Audit-following
+> Route 1 v2 probe shows 22× narrowing of the under-determination
+> under onset jet alone. See
+> [`THEOREM3_DEEP_AUDIT_LOOPHOLE_NOTE_2026-05-06.md`](THEOREM3_DEEP_AUDIT_LOOPHOLE_NOTE_2026-05-06.md)
+> and
+> [`ROUTE1_V2_ONSET_REDUCED_NOTE_2026-05-06.md`](ROUTE1_V2_ONSET_REDUCED_NOTE_2026-05-06.md).
 
 The remaining theorem-grade target is therefore the boundary character
 measure of the unmarked 3D spatial Wilson environment with marked-
@@ -513,8 +526,13 @@ Current clean read:
   truncation tail bound; the rho values in those reference solves are
   structural input rather than derived from a physical 3D Wilson
   environment
-- exact no-go that `c_lambda(6)` and `SU(3)` intertwiners do not, by
-  themselves, fix `rho_(p,q)(6)`: closed
+- no-go *under restricted constraint set* (positivity + conjugation +
+  normalization, NOT including onset jet) that `c_lambda(6)` and
+  `SU(3)` intertwiners alone do not fix `rho_(p,q)(6)`: closed.
+  **AUDIT-CORRECTED 2026-05-06**: original "exact" claim downgraded.
+  Full-constraint case (adding onset jet + susceptibility flow + cumulant
+  hierarchy) is **OPEN**, not proven impossible. See companion audit
+  notes; Route 1 v2 shows 22× narrowing under onset jet alone.
 - explicit boundary character measure `Z_6^env` of the actual physical
   3D spatial Wilson environment / physical-vacuum reduction: still open
 - canonical plaquette on the live package: still `0.5934`

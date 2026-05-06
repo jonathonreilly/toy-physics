@@ -175,22 +175,30 @@ The live repo now also carries a materially stronger exact support stack:
   Perron moments or Jacobi coefficients until the explicit
   `beta = 6` tensor-transfer matrix elements generating the boundary
   character data are fixed
-- explicit source-sector reference Perron solve theorem with explicit
-  no-go on closed-form `rho_(p,q)(6)`: two structural reference choices
-  of the residual environment (input rho = 1 and input
-  rho = delta_{(p,q),(0,0)}) give explicit Perron data
+- explicit source-sector reference Perron solve theorem with no-go
+  *under restricted constraint set* on closed-form `rho_(p,q)(6)`:
+  two structural reference choices of the residual environment (input
+  rho = 1 and input rho = delta_{(p,q),(0,0)}) give explicit Perron data
   `P_loc(6) = 0.4524071590`, `P_triv(6) = 0.4225317396` from
   `c_lambda(6)` and `SU(3)` intertwiners alone, with super-polynomial
   NMAX truncation tail bound; three distinct admissible parametric
   rho families produce strictly different `P(6)` and demonstrate the
-  no-go that local Wilson data does not fix `rho_(p,q)(6)`; the rho
-  values in the reference solves are structural input, NOT derived
-  from any physical 3D Wilson environment, and the note does not claim
-  either reference corresponds to the physical environment; the missing
-  object is the boundary character measure of the unmarked 3D spatial
-  Wilson environment with marked-plaquette boundary, equivalently the
-  Perron eigenvector of the explicit positive tensor-transfer operator
-  on a 3D `SU(3)` lattice gauge network with one boundary plaquette
+  no-go *under the restricted constraint set* (positivity + conjugation
+  + normalization) that local Wilson data + restricted constraints
+  do not fix `rho_(p,q)(6)`; the rho values in the reference solves
+  are structural input, NOT derived from any physical 3D Wilson
+  environment, and the note does not claim either reference corresponds
+  to the physical environment; the missing object is the boundary
+  character measure of the unmarked 3D spatial Wilson environment
+  with marked-plaquette boundary, equivalently the Perron eigenvector
+  of the explicit positive tensor-transfer operator on a 3D `SU(3)`
+  lattice gauge network with one boundary plaquette.
+  **AUDIT CORRECTION (2026-05-06):** original "no-go" was over-stated.
+  The witnesses fail the framework's onset jet `c_5 = 1/472392`. With
+  the framework's full constraint set (adding onset jet + susceptibility
+  flow + cumulant hierarchy), the question is **OPEN**, not proven
+  impossible. Route 1 v2 probe shows 22× narrowing under onset jet
+  alone. See `THEOREM3_DEEP_AUDIT_LOOPHOLE_NOTE_2026-05-06.md`.
 - exact scalar `3+1` bridge endpoint ratio
   `A_inf / A_2 = 2 / sqrt(3)`
 - exact plaquette four-link coupling map

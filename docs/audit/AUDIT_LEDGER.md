@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 61 |
-| **retained_no_go** | 120 |
-| **retained_bounded** | 220 |
+| **retained_no_go** | 119 |
+| **retained_bounded** | 219 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 19 |
-| unaudited | 844 |
+| open_gate | 18 |
+| unaudited | 855 |
 | audit_in_progress | 1 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 21 |
@@ -40,32 +40,32 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 376 |
+| `audited_clean` | 373 |
 | `audited_conditional` | 400 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 31 |
-| `unaudited` | 890 |
+| `unaudited` | 901 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 627 |
+| `bounded_theorem` | 630 |
 | `decoration` | 9 |
 | `meta` | 55 |
-| `no_go` | 187 |
+| `no_go` | 188 |
 | `open_gate` | 112 |
-| `positive_theorem` | 798 |
+| `positive_theorem` | 802 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 900 |
+| `critical` | 922 |
 | `high` | 34 |
-| `medium` | 213 |
+| `medium` | 199 |
 | `leaf` | 641 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 165
+- **Citation cycles detected:** 173
 
 ### Runner classification (static heuristic)
 
@@ -81,30 +81,30 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
 | 1 | `observable_principle_from_axiom_note` | positive_theorem | critical | 332 | 34.38 | `audited_conditional` | ~~audited_conditional~~ |
-| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 580 | 34.18 | `audited_clean` | **retained_bounded** |
+| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 594 | 34.22 | `audited_clean` | **retained_bounded** |
 | 3 | `minimal_axioms_2026-04-11` | meta | critical | 480 | 33.41 | `unaudited` | meta |
 | 4 | `alpha_s_derived_note` | bounded_theorem | critical | 399 | 31.64 | `unaudited` | unaudited |
 | 5 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 357 | 30.98 | `unaudited` | unaudited |
 | 6 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 358 | 30.49 | `unaudited` | unaudited |
 | 7 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 296 | 29.21 | `unaudited` | unaudited |
-| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 570 | 28.66 | `audited_clean` | **retained_bounded** |
+| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 584 | 28.69 | `audited_clean` | **retained_bounded** |
 | 9 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 351 | 26.46 | `audited_conditional` | ~~audited_conditional~~ |
-| 10 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 575 | 25.67 | `audited_clean` | open_gate |
+| 10 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 589 | 25.70 | `audited_clean` | open_gate |
 | 11 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 344 | 25.43 | `audited_conditional` | ~~audited_conditional~~ |
 | 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 437 | 25.27 | `unaudited` | unaudited |
-| 13 | `minimal_axioms_2026-05-03` | meta | critical | 585 | 25.20 | `unaudited` | meta |
+| 13 | `minimal_axioms_2026-05-03` | meta | critical | 599 | 25.23 | `unaudited` | meta |
 | 14 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 300 | 23.73 | `unaudited` | unaudited |
 | 15 | `left_handed_charge_matching_note` | positive_theorem | critical | 416 | 23.70 | `unaudited` | unaudited |
 | 16 | `three_generation_structure_note` | bounded_theorem | critical | 357 | 22.98 | `unaudited` | unaudited |
 | 17 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 319 | 22.82 | `audited_conditional` | ~~audited_conditional~~ |
 | 18 | `one_generation_matter_closure_note` | positive_theorem | critical | 365 | 22.52 | `unaudited` | unaudited |
 | 19 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 354 | 22.47 | `audited_conditional` | ~~audited_conditional~~ |
-| 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 428 | 21.75 | `unaudited` | unaudited |
+| 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 442 | 21.79 | `unaudited` | unaudited |
 | 21 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 336 | 21.40 | `audited_conditional` | ~~audited_conditional~~ |
 | 22 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 305 | 21.26 | `audited_clean` | **retained** |
 | 23 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 284 | 20.66 | `audited_conditional` | ~~audited_conditional~~ |
 | 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 306 | 20.26 | `unaudited` | unaudited |
-| 25 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | critical | 446 | 19.30 | `audited_clean` | **retained_bounded** |
+| 25 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | critical | 455 | 19.33 | `audited_clean` | **retained_bounded** |
 
 
 ## Applied audits
@@ -223,8 +223,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_v6_nearfield_comparator_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
-| `gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
-| `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
@@ -415,7 +413,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structured_chokepoint_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
 | `structureless_dag_gravity_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `structureless_dag_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
-| `su3_fusion_engine_pr1_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `substrate_to_p_a_forcing_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `symmetry_generated_paired_chokepoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `symmetry_spectrum_mirror_compare_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -5847,32 +5844,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — The bounded statement closes as an inverse-function theorem for the explicitly defined local response map and the Wilson finite-integral expectation range. It does not evaluate beta_eff(6), P(6), or the parent observable bridge.
 - **rationale:** The audited claim is only the implicit coordinate theorem, not the parent physical bridge. The note defines R_O, proves strict monotonicity through Var_gamma(X) > 0, bounds the finite Wilson expectation into the response range, and obtains the identity by the inverse-function theorem. The completed runner produced SUMMARY: THEOREM PASS=8 SUPPORT=3 FAIL=0 and did not consume plaquette comparator data. Residual risk is confined to the explicitly excluded tasks: independent evaluation of beta_eff(6), P(6), environment Perron data, and closure of the parent bridge.
 - **auditor confidence:** medium
-
-### `gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03`
-
-- **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md)
-- **claim_type:** `no_go`
-- **claim_scope:** No-go that the cited current Wilson packet does not entail the exact observable bridge <P>_full = R_O(beta_eff) at beta=6 without adding an exact nonperturbative completion object.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_no_go**  (reason: `self`)
-- **auditor:** `fresh-agent-van-der-waerden`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** A derivation from the current Wilson packet would have to assign the same output to two completion witnesses that agree on every retained premise, but BRIDGE gives unequal readouts R_O(beta_eff^-(6)) and R_O(beta_eff^+(6)).  _(class `A`)_
-- **chain closes:** True — The cited onset and underdetermination notes leave beta_eff(6), Perron/Jacobi data, and the exact beta-6 spectral measure unselected. The two analytic witnesses share the cited packet but give distinct local-response bridge readouts by injectivity, so the narrow non-entailment claim follows.
-- **rationale:** The note proves a narrow formal no-go, not a positive plaquette bridge: current retained primitives plus the finite onset/regularity data do not select the missing beta-6 completion object. The proof uses a valid two-witness non-entailment argument and explicitly keeps fitted beta_eff, external plaquette values, and perturbative imports outside the derivation. Residual risk is only scope creep: this clean verdict applies to the current-packet non-entailment claim, not to any stronger claim that Wilson theory cannot determine the physical plaquette.
-- **auditor confidence:** high
-
-### `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02`
-
-- **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md)
-- **claim_type:** `open_gate`
-- **claim_scope:** Open-gate claim that the full interacting Wilson plaquette expectation to completed local one-plaquette response bridge is not derived from A_min/current retained Wilson inputs; positive bridge promotion remains blocked pending a new exact nonperturbative primitive.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** open_gate  (reason: `audited_open_gate`)
-- **auditor:** `fresh-agent-gauge-scalar-stretch`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The bridge <P>_full = R_O(beta_eff) cannot be derived analytically from A_min alone, so the observable-level bridge remains open rather than promoted as a positive plaquette derivation.  _(class `A`)_
-- **chain closes:** True — The chain closes only as an open gate: the retained bounded completion theorem supplies the kernel-level result, while the retained no-go dependency confirms that the current Wilson packet does not determine the observable bridge. The positive bridge itself remains unproved.
-- **rationale:** The audited claim is not a positive derivation of <P>_full = R_O(beta_eff); it is the open-gate/named-obstruction statement that this bridge is not closed by A_min. The one-hop dependencies are retained-grade for this scope: the temporal completion theorem is retained_bounded at kernel level, and the no-go theorem is retained_no_go for the bridge from the current Wilson packet. The runner completes and checks the note structurally, with PASS=33 and FAIL=0, but does not compute a positive bridge; that is consistent with the open_gate scope.
-- **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17`
 
@@ -11494,19 +11465,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The algebraic d^{abc} construction closes cleanly over the supplied SU(3) Gell-Mann generators and standard trace projection. The runner actually computes the tensors from explicit matrices; only the reference-table comparison is a hard-coded external/canonical-value check. However, the only cited authority is retained_bounded and explicitly says the identification of the 3D symmetric base with physical SM color SU(3)_c is deferred, while this note repeatedly labels the generators as SU(3)_c and includes physics-facing corollaries. The audited result is therefore retained only as an algebraic SU(3) statement, conditional on the missing physical-color bridge for any SU(3)_c/SM reading.
 - **open / conditional deps cited:**
   - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
-- **auditor confidence:** high
-
-### `su3_fusion_engine_pr1_theorem_note_2026-05-03`
-
-- **Note:** [`SU3_FUSION_ENGINE_PR1_THEOREM_NOTE_2026-05-03.md`](../../docs/SU3_FUSION_ENGINE_PR1_THEOREM_NOTE_2026-05-03.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded verification that scripts/frontier_su3_fusion_engine.py at NMAX=4 and n_grid=80 returns a rounded SU(3) finite-box fusion table with residual 3.553e-15, 3049 nonzero entries, and PASS on V1-V9 plus numerical-noise diagnostics.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `fresh-agent-su3-fusion-engine-pr1`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** At NMAX = 4 and n_grid = 80, the runner computes a finite fusion table on 0 <= p,q <= 4 using numerical Cartan-torus character orthogonality; the returned table has non-negative integer entries after rounding, maximum integer residual < 3.6e-15, and passes V1-V9 plus the numerical-noise check.  _(class `A`)_
-- **chain closes:** True — The source note scopes the claim to the finite default runner surface and explicitly excludes Wilson-plaquette, lattice-gauge, and bridge-parent claims. The runner completed cleanly and reproduced the note's stated PASS=10 FAIL=0 summary with the same residual and table size.
-- **rationale:** The bounded theorem is supported by the completed runner output: NMAX=4, n_grid=80, table shape (25,25,25), 3049 nonzero entries, max integer residual 3.553e-15, and SUMMARY: BOUNDED PASS=10 FAIL=0. The validation suite checks standard SU(3) landmark decompositions, commutativity, singlet selection, dimension overflow, crossing, Pieri, and rounding noise without importing the deferred gauge-scalar bridge. Residual risk is limited to the declared finite numerical surface: this audit does not certify arbitrary-representation fusion, Wigner intertwiners, Haar-integral PRs, cube Perron computation, or any Wilson-plaquette bridge claim.
 - **auditor confidence:** high
 
 ### `substrate_to_p_a_forcing_theorem_note_2026-04-30`
