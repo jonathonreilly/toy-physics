@@ -20,15 +20,15 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 61 |
 | **retained_no_go** | 119 |
-| **retained_bounded** | 222 |
+| **retained_bounded** | 220 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 790 |
+| unaudited | 793 |
 | audit_in_progress | 3 |
 | meta | 48 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
-| ~~audited_conditional~~ | 461 |
+| ~~audited_conditional~~ | 460 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,29 +40,30 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 377 |
-| `audited_conditional` | 461 |
+| `audited_clean` | 375 |
+| `audited_conditional` | 460 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 32 |
-| `unaudited` | 838 |
+| `unaudited` | 841 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 641 |
+| `bounded_theorem` | 639 |
 | `decoration` | 10 |
 | `meta` | 55 |
 | `no_go` | 186 |
 | `open_gate` | 115 |
 | `positive_theorem` | 791 |
+| `unset` | 2 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 944 |
+| `critical` | 946 |
 | `high` | 26 |
 | `medium` | 177 |
-| `leaf` | 651 |
+| `leaf` | 649 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 189
@@ -165,8 +166,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_dple_abcc_no_go_note_2026-04-19` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_full_closure_same_surface_converged_thermal_selector_support_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
 | `dm_full_closure_same_surface_thermal_selector_sensitivity_boundary_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
-| `dm_leptogenesis_flavor_column_functional_theorem_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
-| `dm_leptogenesis_ne_active_column_axiom_boundary_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_leptogenesis_pmns_analytic_stationary_classification_theorem_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_leptogenesis_pmns_multistart_selector_support_note_2026-04-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -634,7 +633,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_equilibrium_conversion_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_leptogenesis_hrad_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_pmns_breaking_triplet_source_law_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -4195,19 +4193,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the primary runner returned nonzero in the restricted audit environment. Why this blocks: a nonzero runner leaves either stale artifact/import drift or an explicit open-burden FAIL in the executable witness, so the chain cannot be ratified cleanly. Repair target: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun. Claim boundary until fixed: safe to cite as a bounded note with non-clean executable support.
 - **auditor confidence:** medium
 
-### `dm_leptogenesis_flavor_column_functional_theorem_note_2026-04-16`
-
-- **Note:** [`DM_LEPTOGENESIS_FLAVOR_COLUMN_FUNCTIONAL_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_FLAVOR_COLUMN_FUNCTIONAL_THEOREM_NOTE_2026-04-16.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `codex-audit-loop-round2-20260430-06`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Once an active PMNS packet is supplied, one-source flavored transport reduces to the exact scalar column functional F_K(P)=sum_alpha Psi_K(P_alpha), which selects the canonical N_e middle column and reproduces the direct transport ordering.  _(class `C`)_
-- **chain closes:** True — The source note states a bounded transport-facing theorem, not a PMNS value-law theorem. The registered runner independently solves the one-source transport profile, verifies the functional against direct multisource transport, finds the small-leakage optimum, and reproduces the canonical middle-column selection and near-closing eta comparator.
-- **rationale:** The prior infrastructure blocker is resolved: the runner exits 0 and emits classified PASS checks. The bounded transport-facing claim closes on its own terms because the runner verifies the exact one-variable channel functional, its current-branch optimum, and the canonical N_e middle-column selection against direct transport. This clean verdict is limited to the scoped reduction after an active PMNS packet is supplied; it does not derive the PMNS active packet or active five-real source from Cl(3).
-- **auditor confidence:** high
-
 ### `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16`
 
 - **Note:** [`DM_LEPTOGENESIS_FULL_MICROSCOPIC_REDUCTION_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_FULL_MICROSCOPIC_REDUCTION_NOTE_2026-04-16.md)
@@ -4234,19 +4219,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The runner genuinely computes the cubic-lattice deficit and checks algebraic consequences of an H proportional to T^2 branch, but it imports constants and helper functions from dm_leptogenesis_exact_common that are not included in the audit packet. The note also relies on an 'already-retained Poisson/Newton chain' and the exact radiation density formula without providing those authorities. Therefore the restricted chain does not close as a first-principles theorem from Cl(3) on Z^3 alone.
 - **auditor confidence:** high
 
-### `dm_leptogenesis_ne_active_column_axiom_boundary_note_2026-04-16`
-
-- **Note:** [`DM_LEPTOGENESIS_NE_ACTIVE_COLUMN_AXIOM_BOUNDARY_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_NE_ACTIVE_COLUMN_AXIOM_BOUNDARY_NOTE_2026-04-16.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** **Script:** `scripts/frontier_dm_leptogenesis_ne_active_column_axiom_boundary.py`  _(class `C`)_
-- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 2 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
-- **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
-- **auditor confidence:** high
-
 ### `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16`
 
 - **Note:** [`DM_LEPTOGENESIS_NE_CHARGED_SOURCE_RESPONSE_REDUCTION_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_NE_CHARGED_SOURCE_RESPONSE_REDUCTION_NOTE_2026-04-16.md)
@@ -4258,19 +4230,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Once dW_e^H is supplied, it reconstructs H_e, determines the N_e transport packet, and the exact selector gives eta/eta_obs = 0.989512704600.  _(class `G`)_
 - **chain closes:** False — The runner constructs the charge -1 block so its Schur complement equals a hard-coded canonical H_e target, then checks transport numerics from that chosen input. The missing step is an independent derivation of D_- or dW_e^H from Cl(3) on Z^3 rather than target-fitting the Schur complement.
 - **rationale:** The algebraic Schur-factorization and Hermitian-response reconstruction checks are valid as finite-dimensional identities, but the numerical near-closure is obtained after choosing canonical_h inputs and building D_- to realize that target. The source code also hard-codes the old one-flavor ratio and checks the PMNS miss against a fixed expected value, so it is not a first-principles compute from the stated axiom. The note itself concedes that evaluating D_- or dW_e^H from the sole axiom remains open.
-- **auditor confidence:** high
-
-### `dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16`
-
-- **Note:** [`DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_LAW_DERIVATION_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_LAW_DERIVATION_NOTE_2026-04-16.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the restricted claim that, given the charged-lepton projected Hermitian response pack and the imported PMNS/DM selector machinery, the `N_e` transport-facing packet and selected flavored column are downstream algorithmic.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-dm_leptogenesis_ne_proje-017`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** `dW_e^H` reconstructs the active charged-lepton Hermitian block `H_e`, after which the `N_e` packet is taken to be exactly `|U_e|^2^T` and the imported transport selector picks the column.  _(class `A`)_
-- **chain closes:** False — The linear reconstruction of a Hermitian `3 x 3` matrix from nine real responses is algebraic, but the restricted packet does not derive `dW_e^H` from `Cl(3)` on `Z^3` or independently close the bridge `H_e -> |U_e|^2^T` and the transport selector from cited retained inputs. The runner imports those structures from helper modules and uses canonical numerical inputs rather than deriving them from the axiom.
-- **rationale:** The core reconstruction `dW_e^H -> H_e` is a valid finite-dimensional algebraic identity, not a first-principles computation from the sole axiom. The remaining scientific conclusion depends on supplied canonical `H_e`, imported diagonalizer/interface code, imported DM transport constants, and the open target explicitly named by the note: deriving `dW_e^H` on `E_e` from `Cl(3)` on `Z^3`. Therefore the result is a conditional reduction, not a closed positive theorem from the restricted inputs.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16`

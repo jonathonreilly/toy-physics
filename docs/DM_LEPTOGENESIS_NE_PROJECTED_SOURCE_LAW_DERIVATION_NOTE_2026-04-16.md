@@ -143,3 +143,58 @@ not:
 ```bash
 python3 scripts/frontier_dm_leptogenesis_ne_projected_source_law_derivation.py
 ```
+
+## Citations
+
+The auditor's `missing_dependency_edge` flag asked for retained-grade
+cited authorities (or an independent derivation) for `dW_e^H` from
+`Cl(3)` on `Z^3`, plus the `H_e -> N_e packet` bridge and the exact
+transport selector. The runner imports the load-bearing ingredients
+from named theorem-side modules, each backed by a dedicated
+repo-native theorem note. The corresponding markdown links are
+registered as one-hop dependency edges below so the audit-graph chain
+becomes traceable.
+
+Runner-side carriers (named so the audit lane sees both halves of the
+chain):
+
+- `scripts/dm_leptogenesis_exact_common.py` — supplies `exact_package`
+  and the source-side normalisation used by the runner.
+- `scripts/frontier_dm_leptogenesis_flavor_column_functional_theorem.py`
+  — supplies the transport-relevant flavored column functional and the
+  `F_K` action on packet columns.
+- `scripts/frontier_dm_leptogenesis_pmns_projector_interface.py`
+  — supplies the PMNS-projector interface used by §2 to convert
+  `H_e` into the `N_e` packet `|U_PMNS|^2 = |U_e|^2^T`.
+
+Theorem-side authorities (load-bearing one-hop deps):
+
+- [DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md](DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md)
+  — supplies the source-side `exact_package` with `gamma`, `E1`, `E2`,
+  used as the source-oriented input to the projected-source law.
+- [DM_LEPTOGENESIS_FLAVOR_COLUMN_FUNCTIONAL_THEOREM_NOTE_2026-04-16.md](DM_LEPTOGENESIS_FLAVOR_COLUMN_FUNCTIONAL_THEOREM_NOTE_2026-04-16.md)
+  — supplies the exact transport selector `F_K` referenced in §"Bottom
+  line" item 3 and §"Exact reduction" §3.
+- [DM_LEPTOGENESIS_PMNS_PROJECTOR_INTERFACE_NOTE_2026-04-16.md](DM_LEPTOGENESIS_PMNS_PROJECTOR_INTERFACE_NOTE_2026-04-16.md)
+  — supplies the PMNS-projector interface used to bridge from `H_e`
+  to the `N_e` packet (§"Exact reduction" §2).
+- [DM_LEPTOGENESIS_NE_CHARGED_SOURCE_RESPONSE_REDUCTION_NOTE_2026-04-16.md](DM_LEPTOGENESIS_NE_CHARGED_SOURCE_RESPONSE_REDUCTION_NOTE_2026-04-16.md)
+  — charged-source response reduction, supplying the
+  `dW_e^H -> H_e` reconstruction step in §"Exact reduction" §1.
+- [DM_LEPTOGENESIS_NE_ACTIVE_COLUMN_AXIOM_BOUNDARY_NOTE_2026-04-16.md](DM_LEPTOGENESIS_NE_ACTIVE_COLUMN_AXIOM_BOUNDARY_NOTE_2026-04-16.md)
+  — axiom-side boundary on the `N_e` active-column problem this note
+  reduces.
+- [DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_TRIPLET_SIGN_THEOREM_NOTE_2026-04-16.md](DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_TRIPLET_SIGN_THEOREM_NOTE_2026-04-16.md)
+  — sign orientation companion for the projected-source triplet,
+  paired with the projected-source law derived here.
+
+These additions are strictly additive: the verdict, the bottom-line
+transplant statement, the exact-reduction §§1–4, the consequence
+section, and the explicitly recorded "what this does not close" gap
+(deriving `dW_e^H` on `E_e` from `Cl(3)` on `Z^3`) are all unchanged.
+This PR registers the dependency edges; it does not derive
+`dW_e^H` itself.
+
+Until each linked authority is itself audit-clean, this note remains
+`audited_conditional` even with the registered edges; the wiring is
+the prerequisite for unlock, not the unlock itself.

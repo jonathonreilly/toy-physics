@@ -4101,6 +4101,30 @@
       "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
     },
     {
+      "from": "dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16",
+      "to": "dm_leptogenesis_exact_kernel_closure_note_2026-04-15"
+    },
+    {
+      "from": "dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16",
+      "to": "dm_leptogenesis_flavor_column_functional_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16",
+      "to": "dm_leptogenesis_pmns_projector_interface_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16",
+      "to": "dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16",
+      "to": "dm_leptogenesis_ne_active_column_axiom_boundary_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16",
+      "to": "dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16"
+    },
+    {
       "from": "dm_leptogenesis_pmns_microscopic_selector_reduction_theorem_note_2026-04-17",
       "to": "dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16"
     },
@@ -32075,8 +32099,15 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [],
-      "note_hash": "568f01ae96814376b807c94748a44b9c4ae55f4bfcfa8e8a6e4a6dd7661656f4",
+      "deps": [
+        "dm_leptogenesis_exact_kernel_closure_note_2026-04-15",
+        "dm_leptogenesis_flavor_column_functional_theorem_note_2026-04-16",
+        "dm_leptogenesis_pmns_projector_interface_note_2026-04-16",
+        "dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16",
+        "dm_leptogenesis_ne_active_column_axiom_boundary_note_2026-04-16",
+        "dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16"
+      ],
+      "note_hash": "2740c6394633e4dbbbd3ae797e1e882b8d136159a7429531a976202425e51acd",
       "path": "docs/DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_LAW_DERIVATION_NOTE_2026-04-16.md",
       "runner_path": "scripts/frontier_dm_leptogenesis_ne_projected_source_law_derivation.py",
       "title": "DM Leptogenesis `N_e` Projected-Source-Law Derivation"
@@ -55129,7 +55160,6 @@
     "dm_leptogenesis_hrad_theorem_note_2026-04-16",
     "dm_leptogenesis_ne_active_column_axiom_boundary_note_2026-04-16",
     "dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16",
-    "dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16",
     "dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16",
     "dm_leptogenesis_pmns_active_projector_reduction_note_2026-04-16",
     "dm_leptogenesis_pmns_analytic_stationary_classification_theorem_note_2026-04-16",
@@ -55798,10 +55828,10 @@
       "open_gate": 118,
       "positive_theorem": 635
     },
-    "edge_count": 6583,
-    "leaf_count": 552,
+    "edge_count": 6589,
+    "leaf_count": 550,
     "node_count": 1905,
-    "root_count": 869,
+    "root_count": 868,
     "runners_with_path": 1478
   }
 }
