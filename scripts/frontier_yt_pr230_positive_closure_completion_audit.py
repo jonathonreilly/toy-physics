@@ -25,6 +25,7 @@ OUTPUT = ROOT / "outputs" / "yt_pr230_positive_closure_completion_audit_2026-05-
 PARENTS = {
     "genuine_source_pole_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
     "taste_condensate_oh_bridge": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
+    "source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
@@ -48,6 +49,7 @@ PARENTS = {
 
 FUTURE_BRIDGE_FILES = {
     "canonical_higgs_operator_certificate": "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+    "source_coordinate_transport_certificate": "outputs/yt_pr230_source_coordinate_transport_certificate_2026-05-06.json",
     "source_higgs_cross_correlator_rows": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
     "source_higgs_production_certificate": "outputs/yt_source_higgs_cross_correlator_production_certificate_2026-05-03.json",
     "top_wz_matched_response_rows": "outputs/yt_top_wz_matched_response_rows_2026-05-04.json",
@@ -217,6 +219,15 @@ def main() -> int:
         and "does not supply PR230 O_H bridge"
         in parent_statuses["taste_condensate_oh_bridge"]
     )
+    source_coordinate_transport_blocked = (
+        certs["source_coordinate_transport_gate"].get("source_coordinate_transport_gate_passed")
+        is True
+        and certs["source_coordinate_transport_gate"].get("proposal_allowed") is False
+        and certs["source_coordinate_transport_gate"].get("future_transport_certificate_present")
+        is False
+        and "source-coordinate transport to canonical O_H not derivable"
+        in parent_statuses["source_coordinate_transport_gate"]
+    )
 
     completion_criteria = {
         "genuine_source_pole_support_intaken": source_pole_intaken,
@@ -270,6 +281,7 @@ def main() -> int:
     report("canonical-oh-certificate-still-absent", canonical_oh_absent, parent_statuses["canonical_higgs_operator_gate"])
     report("osp-higgs-pole-rows-still-absent", osp_higgs_rows_absent, parent_statuses["source_higgs_builder"])
     report("taste-condensate-oh-bridge-blocked", taste_condensate_bridge_blocked, parent_statuses["taste_condensate_oh_bridge"])
+    report("source-coordinate-transport-blocked", source_coordinate_transport_blocked, parent_statuses["source_coordinate_transport_gate"])
     report("future-bridge-artifact-files-absent", no_future_bridge_files_present, str(future_bridge_presence))
     report("production-chunks-complete", production["complete_id_set"], f"count={production['count']} missing={production['missing_ids']}")
     report("production-chunk-schema-complete", production["schema"]["schema_ok"], str(production["schema"]))
@@ -402,6 +414,7 @@ def main() -> int:
             "canonical_oh_absent": canonical_oh_absent,
             "osp_higgs_rows_absent": osp_higgs_rows_absent,
             "taste_condensate_oh_bridge_blocked": taste_condensate_bridge_blocked,
+            "source_coordinate_transport_blocked": source_coordinate_transport_blocked,
             "future_bridge_file_presence": future_bridge_presence,
         },
         "bare_retained_allowed": False,
@@ -418,11 +431,13 @@ def main() -> int:
         "exact_next_action": (
             "Supply one fresh parseable same-surface artifact beyond O_sp: "
             "O_sp-Higgs pole rows with canonical O_H identity/normalization "
-            "(Res_C_sp_sp=1, Res_C_spH, Res_C_HH), a genuine same-source EW "
-            "action plus production W/Z mass-fit rows, matched covariance and "
-            "non-observed g2 certificate, same-surface Schur A/B/C kernel rows "
-            "with scalar denominator closure, or a neutral-sector primitive-"
-            "cone/irreducibility certificate.  Then rerun assembly, retained-"
+            "(Res_C_sp_sp=1, Res_C_spH, Res_C_HH), a real source-coordinate "
+            "transport certificate from the uniform PR230 source to canonical "
+            "O_H, a genuine same-source EW action plus production W/Z mass-fit "
+            "rows, matched covariance and non-observed g2 certificate, "
+            "same-surface Schur A/B/C kernel rows with scalar denominator "
+            "closure, or a neutral-sector primitive-cone/irreducibility "
+            "certificate.  Then rerun assembly, retained-"
             "route, and campaign gates before any proposal wording."
         ),
         "pass_count": PASS_COUNT,

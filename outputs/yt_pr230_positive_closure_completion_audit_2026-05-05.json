@@ -18,7 +18,7 @@
     "scalar_lsz_model_class_fv_ir": false,
     "source_overlap_or_physical_response_bridge": false
   },
-  "exact_next_action": "Supply one fresh parseable same-surface artifact beyond O_sp: O_sp-Higgs pole rows with canonical O_H identity/normalization (Res_C_sp_sp=1, Res_C_spH, Res_C_HH), a genuine same-source EW action plus production W/Z mass-fit rows, matched covariance and non-observed g2 certificate, same-surface Schur A/B/C kernel rows with scalar denominator closure, or a neutral-sector primitive-cone/irreducibility certificate.  Then rerun assembly, retained-route, and campaign gates before any proposal wording.",
+  "exact_next_action": "Supply one fresh parseable same-surface artifact beyond O_sp: O_sp-Higgs pole rows with canonical O_H identity/normalization (Res_C_sp_sp=1, Res_C_spH, Res_C_HH), a real source-coordinate transport certificate from the uniform PR230 source to canonical O_H, a genuine same-source EW action plus production W/Z mass-fit rows, matched covariance and non-observed g2 certificate, same-surface Schur A/B/C kernel rows with scalar denominator closure, or a neutral-sector primitive-cone/irreducibility certificate.  Then rerun assembly, retained-route, and campaign gates before any proposal wording.",
   "fail_count": 0,
   "missing_requirements": [
     "canonical_oh_certificate",
@@ -45,6 +45,7 @@
     "neutral_primitive_cone": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "schur_kprime_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
+    "source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
@@ -68,6 +69,7 @@
     "neutral_primitive_cone": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
     "retained_route": "open / retained closure not yet reached",
     "schur_kprime_rows": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
+    "source_coordinate_transport_gate": "exact negative boundary / source-coordinate transport to canonical O_H not derivable on current PR230 surface",
     "source_higgs_builder": "open / source-Higgs cross-correlator rows absent",
     "source_higgs_gram": "open / source-Higgs Gram purity gate not passed",
     "source_higgs_postprocess": "open / O_sp-Higgs Gram-purity postprocess awaiting production certificate",
@@ -79,7 +81,7 @@
     "wz_same_source_action": "exact negative boundary / same-source EW action not defined on PR230 surface",
     "wz_smoke_promotion_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response"
   },
-  "pass_count": 24,
+  "pass_count": 25,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "future_bridge_file_presence": {
@@ -87,11 +89,13 @@
       "carleman_tauberian_certificate": false,
       "neutral_primitive_cone_certificate": false,
       "schur_abc_kernel_rows": false,
+      "source_coordinate_transport_certificate": false,
       "source_higgs_cross_correlator_rows": false,
       "source_higgs_production_certificate": false,
       "top_wz_matched_response_rows": false
     },
     "osp_higgs_rows_absent": true,
+    "source_coordinate_transport_blocked": true,
     "source_pole_intaken": true,
     "taste_condensate_oh_bridge_blocked": true
   },
@@ -115,6 +119,7 @@
           "carleman_tauberian_certificate": false,
           "neutral_primitive_cone_certificate": false,
           "schur_abc_kernel_rows": false,
+          "source_coordinate_transport_certificate": false,
           "source_higgs_cross_correlator_rows": false,
           "source_higgs_production_certificate": false,
           "top_wz_matched_response_rows": false

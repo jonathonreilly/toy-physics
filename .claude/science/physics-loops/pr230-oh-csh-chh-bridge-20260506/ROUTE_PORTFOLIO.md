@@ -23,8 +23,11 @@ positive bridge.
 
 ## Route C: Source-Coordinate Transport
 
-Derive a theorem mapping the uniform PR230 mass source to a canonical taste-axis
-Higgs source.  This is the direct repair exposed by Route A.
+The scalar-reparametrization version is now blocked on the current surface:
+analytic reparametrizations preserve the `I_8` tangent, Cl/taste automorphisms
+fix `I_8`, and a trace-zero taste-axis tangent is a new source axis.  The route
+remains open only as a genuine two-source transport certificate or action-first
+construction, not as relabeling the current uniform source line.
 
 ## Route D: Equivalent Physical Response
 

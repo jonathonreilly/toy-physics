@@ -24,6 +24,7 @@ Open imports after this block:
 - uniform mass source is orthogonal to taste-axis Higgs operators in the
   exact taste-block Hilbert-Schmidt algebra.
 - Higgs/taste-stack theorem names are not proof selectors until source-coordinate transport or C_sH/C_HH rows exist.
+- Source-coordinate transport to O_H is not proof selectors until a same-surface transport certificate exists.
 - source-coordinate transport from the PR230 uniform mass source to a canonical
   taste-axis Higgs source;
 - same-surface canonical `O_H` identity and normalization;

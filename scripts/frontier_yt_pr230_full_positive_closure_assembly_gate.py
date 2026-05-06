@@ -89,6 +89,7 @@ PARENTS = {
     "pr230_l12_chunk_compute_status": "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json",
     "pr230_negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
     "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
+    "pr230_source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
     "pr230_oh_bridge_candidate_portfolio": "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json",
     "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
@@ -459,6 +460,20 @@ def main() -> int:
         )
         == 0.0
     )
+    source_coordinate_transport_blocks_current_shortcut = (
+        "source-coordinate transport to canonical O_H not derivable"
+        in statuses["pr230_source_coordinate_transport_gate"]
+        and certs["pr230_source_coordinate_transport_gate"].get("proposal_allowed")
+        is False
+        and certs["pr230_source_coordinate_transport_gate"].get(
+            "source_coordinate_transport_gate_passed"
+        )
+        is True
+        and certs["pr230_source_coordinate_transport_gate"].get(
+            "future_transport_certificate_present"
+        )
+        is False
+    )
     oh_bridge_candidate_portfolio_open = (
         "first-principles O_H bridge positive-candidate portfolio"
         in statuses["pr230_oh_bridge_candidate_portfolio"]
@@ -615,6 +630,7 @@ def main() -> int:
         )
         is True
         and taste_condensate_oh_bridge_blocks_shortcut
+        and source_coordinate_transport_blocks_current_shortcut
         and certs["wz_same_source_action_semantic_firewall"].get("proposal_allowed") is False
         and certs["wz_source_coordinate_transport_no_go"].get("proposal_allowed") is False
         and certs["wz_source_coordinate_transport_no_go"].get(
@@ -1071,6 +1087,11 @@ def main() -> int:
         "taste-condensate-oh-bridge-blocks-current-shortcut",
         taste_condensate_oh_bridge_blocks_shortcut,
         statuses["pr230_taste_condensate_oh_bridge_audit"],
+    )
+    report(
+        "source-coordinate-transport-blocks-current-shortcut",
+        source_coordinate_transport_blocks_current_shortcut,
+        statuses["pr230_source_coordinate_transport_gate"],
     )
     report(
         "oh-bridge-first-principles-candidate-portfolio-open",
@@ -1945,6 +1966,7 @@ def main() -> int:
         ),
         "negative_route_applicability_review_passed": negative_route_review_passed,
         "taste_condensate_oh_bridge_blocks_shortcut": taste_condensate_oh_bridge_blocks_shortcut,
+        "source_coordinate_transport_blocks_current_shortcut": source_coordinate_transport_blocks_current_shortcut,
         "oh_bridge_candidate_portfolio_open": oh_bridge_candidate_portfolio_open,
         "proposal_allowed": False,
         "proposal_allowed_reason": (

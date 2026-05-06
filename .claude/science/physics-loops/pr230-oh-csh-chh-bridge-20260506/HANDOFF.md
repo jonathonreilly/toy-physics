@@ -17,11 +17,17 @@ must preserve that artifact as source-side support only.  The builder and
 Gram-purity postprocessor now reject a candidate that treats `O_sp` as
 canonical `O_H` or physical `y_t` closure before the pole-residue overlap gate.
 
+The scalar-reparametrization version of source-coordinate transport is now
+closed.  The current one-dimensional source line has linear tangent `I_8`;
+analytic reparametrization keeps that tangent proportional to `I_8`, and
+Cl/taste automorphisms fix the identity.  A trace-zero taste/Higgs tangent is a
+new source axis, not a current-surface derivation.
+
 Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then
    run source-Higgs pole rows;
-2. derive source-coordinate transport;
+2. derive a genuine two-source source-coordinate transport certificate;
 3. derive a neutral off-diagonal generator / primitive-cone theorem;
 4. produce Schur A/B/C rows from a real neutral kernel basis;
 5. build W/Z response rows only if strict `g2`, covariance, and `delta_perp`

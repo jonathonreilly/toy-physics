@@ -146,6 +146,7 @@ def main() -> int:
         "pr230_l12_chunk_compute_status": "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json",
         "pr230_negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
         "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
+        "pr230_source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
         "pr230_oh_bridge_candidate_portfolio": "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json",
         "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
         "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
@@ -1134,6 +1135,24 @@ def main() -> int:
             "algebra", {}
         ).get("uniform_source_relative_projection_onto_taste_axis_span")
         == 0.0
+    )
+    source_coordinate_transport_blocks_current_shortcut = (
+        "source-coordinate transport to canonical O_H not derivable"
+        in certificates["pr230_source_coordinate_transport_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_source_coordinate_transport_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_source_coordinate_transport_gate"].get(
+            "source_coordinate_transport_gate_passed"
+        )
+        is True
+        and certificates["pr230_source_coordinate_transport_gate"].get(
+            "future_transport_certificate_present"
+        )
+        is False
     )
     oh_bridge_candidate_portfolio_open = (
         "first-principles O_H bridge positive-candidate portfolio"
@@ -3436,6 +3455,13 @@ def main() -> int:
         ),
     )
     report(
+        "source-coordinate-transport-blocks-current-shortcut",
+        source_coordinate_transport_blocks_current_shortcut,
+        certificates["pr230_source_coordinate_transport_gate"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "oh-bridge-first-principles-candidate-portfolio-open",
         oh_bridge_candidate_portfolio_open,
         certificates["pr230_oh_bridge_candidate_portfolio"].get(
@@ -4747,6 +4773,7 @@ def main() -> int:
             "runner-cache surfaces and still supplies no listed PR230 "
             "same-surface artifact."
         ),
+        "source_coordinate_transport_blocks_current_shortcut": source_coordinate_transport_blocks_current_shortcut,
         "oh_bridge_candidate_portfolio_open": oh_bridge_candidate_portfolio_open,
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

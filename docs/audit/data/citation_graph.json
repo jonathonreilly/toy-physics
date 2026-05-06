@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T11:13:53.753861+00:00",
+  "generated_at": "2026-05-06T11:26:06.832487+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42538,6 +42538,16 @@
       "runner_path": "scripts/frontier_yt_pr230_schur_abc_definition_derivation_attempt.py",
       "title": "PR #230 Schur A/B/C Definition Derivation Attempt Note"
     },
+    "yt_pr230_source_coordinate_transport_gate_note_2026-05-06": {
+      "claim_id": "yt_pr230_source_coordinate_transport_gate_note_2026-05-06",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / source-coordinate transport to canonical O_H not derivable on the current PR230 surface",
+      "deps": [],
+      "note_hash": "8f41819e07ed6c0981686243e359cb53ed1dc41e4cf6948df96c20f7c19b180c",
+      "path": "docs/YT_PR230_SOURCE_COORDINATE_TRANSPORT_GATE_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_source_coordinate_transport_gate.py",
+      "title": "PR230 Source-Coordinate Transport Gate"
+    },
     "yt_pr230_source_overlap_route_selection_note_2026-05-03": {
       "claim_id": "yt_pr230_source_overlap_route_selection_note_2026-05-03",
       "current_status": "bounded",
@@ -45320,6 +45330,7 @@
     "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05",
     "yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_note_2026-05-05",
     "yt_pr230_schur_abc_definition_derivation_attempt_note_2026-05-05",
+    "yt_pr230_source_coordinate_transport_gate_note_2026-05-06",
     "yt_pr230_source_overlap_route_selection_note_2026-05-03",
     "yt_pr230_source_sector_pattern_transfer_gate_note_2026-05-05",
     "yt_pr230_taste_condensate_oh_bridge_audit_note_2026-05-06",
@@ -45444,17 +45455,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1072,
-    "node_count": 2025,
-    "root_count": 1538,
-    "runners_with_path": 1521,
+    "leaf_count": 1073,
+    "node_count": 2026,
+    "root_count": 1539,
+    "runners_with_path": 1522,
     "status_counts": {
       "bounded": 555,
       "open": 103,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 433,
-      "unknown": 560
+      "unknown": 561
     }
   }
 }

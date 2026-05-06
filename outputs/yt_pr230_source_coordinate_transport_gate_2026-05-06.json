@@ -1,0 +1,158 @@
+{
+  "actual_current_surface_status": "exact negative boundary / source-coordinate transport to canonical O_H not derivable on current PR230 surface",
+  "admitted_observation_status": null,
+  "algebra": {
+    "I_projection_relative_norm_onto_span_S_i": 0.0,
+    "Tr_S_i": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rho_I_S_i": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source_operator": "I_8 uniform additive scalar mass source",
+    "taste_axis_operator": "S_i = sigma_x on one taste tensor factor"
+  },
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "The route reopens if a future same-surface source-coordinate transport certificate supplies an invertible linear LSZ Jacobian from the PR230 source to a certified canonical O_H, or if direct O_H/C_sH/C_HH pole rows or an equivalent physical-response bridge land.",
+  "exact_next_action": "Do not spend another block on scalar reparametrization of the uniform source as O_H.  The next positive artifact must be direct canonical O_H/C_sH/C_HH rows, a genuine two-source source-transport certificate, strict W/Z response rows with g2/covariance authority, Schur A/B/C rows, or a neutral primitive/off-diagonal-generator certificate.",
+  "fail_count": 0,
+  "future_canonical_oh_certificate_present": false,
+  "future_source_higgs_rows_present": false,
+  "future_transport_certificate": "outputs/yt_pr230_source_coordinate_transport_certificate_2026-05-06.json",
+  "future_transport_certificate_present": false,
+  "future_transport_certificate_validation": {
+    "failed_checks": [
+      "source-coordinate transport certificate absent"
+    ],
+    "present": false,
+    "valid": false
+  },
+  "hypothetical_axiom_status": "Adding a new trace-zero taste/Higgs source axis would define a new two-source surface; it is not derived by reparametrizing the current one-dimensional uniform mass source.",
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "genuine_source_pole_artifact_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
+    "negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
+    "oh_bridge_candidate_portfolio": "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "source_higgs_postprocessor": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
+    "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+    "source_pole_mixing_obstruction": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
+    "source_reparametrization_gauge_no_go": "outputs/yt_source_reparametrization_gauge_no_go_2026-05-01.json",
+    "taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "genuine_source_pole_artifact_intake": "exact-support / genuine same-source O_sp source-pole artifact intake; canonical O_H bridge open",
+    "negative_route_applicability_review": "exact support / selected PR230 negative-route applicability review passed",
+    "oh_bridge_candidate_portfolio": "open / first-principles O_H bridge positive-candidate portfolio",
+    "retained_route": "open / retained closure not yet reached",
+    "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem",
+    "source_higgs_builder": "open / source-Higgs cross-correlator rows absent",
+    "source_higgs_postprocessor": "open / O_sp-Higgs Gram-purity postprocess awaiting production certificate",
+    "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "source_pole_mixing_obstruction": "exact negative boundary / source-pole canonical-Higgs mixing obstruction",
+    "source_reparametrization_gauge_no_go": "exact negative boundary / source reparametrization gauge",
+    "taste_condensate_oh_bridge_audit": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge"
+  },
+  "pass_count": 21,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Allowed current-surface coordinate changes preserve the identity-source linear tangent.  The desired trace-zero Higgs/taste tangent requires a new source axis or a singular/non-LSZ map.",
+  "source_coordinate_transport_gate_passed": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not write a source-coordinate transport certificate",
+    "does not write canonical O_H or source-Higgs pole rows",
+    "does not identify O_sp with O_H",
+    "does not add a trace-zero Higgs source axis and call it current-surface derivation",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, kappa_s=1, c2=1, or Z_match=1"
+  ],
+  "transport_candidate_rows": [
+    {
+      "adds_new_source_axis": false,
+      "allowed_current_surface_coordinate_change": true,
+      "can_be_canonical_oh_transport": false,
+      "candidate": "analytic scalar reparametrization with f'(0)=0.25",
+      "failure_reason": "tangent remains proportional to the uniform identity source",
+      "invertible_linear_tangent": true,
+      "tangent_trace": 2.0,
+      "taste_axis_overlap": 0.0,
+      "taste_span_projection_relative_norm": 0.0
+    },
+    {
+      "adds_new_source_axis": false,
+      "allowed_current_surface_coordinate_change": true,
+      "can_be_canonical_oh_transport": false,
+      "candidate": "analytic scalar reparametrization with f'(0)=1.0",
+      "failure_reason": "tangent remains proportional to the uniform identity source",
+      "invertible_linear_tangent": true,
+      "tangent_trace": 8.0,
+      "taste_axis_overlap": 0.0,
+      "taste_span_projection_relative_norm": 0.0
+    },
+    {
+      "adds_new_source_axis": false,
+      "allowed_current_surface_coordinate_change": true,
+      "can_be_canonical_oh_transport": false,
+      "candidate": "analytic scalar reparametrization with f'(0)=4.0",
+      "failure_reason": "tangent remains proportional to the uniform identity source",
+      "invertible_linear_tangent": true,
+      "tangent_trace": 32.0,
+      "taste_axis_overlap": 0.0,
+      "taste_span_projection_relative_norm": 0.0
+    },
+    {
+      "adds_new_source_axis": false,
+      "allowed_current_surface_coordinate_change": true,
+      "can_be_canonical_oh_transport": false,
+      "candidate": "Cl/taste automorphism or conjugation of uniform source",
+      "failure_reason": "identity is central and trace/spectrum are invariant",
+      "invertible_linear_tangent": true,
+      "tangent_trace": 8.0,
+      "taste_axis_overlap": 0.0,
+      "taste_span_projection_relative_norm": 0.0
+    },
+    {
+      "adds_new_source_axis": true,
+      "allowed_current_surface_coordinate_change": false,
+      "can_be_canonical_oh_transport": false,
+      "candidate": "linear injection into trace-zero taste/Higgs axis",
+      "failure_reason": "this is the desired O_H source, but it is a new source coupling not present in PR230",
+      "invertible_linear_tangent": true,
+      "tangent_trace": 0.0,
+      "taste_axis_overlap": 0.9999999999999998,
+      "taste_span_projection_relative_norm": 1.0
+    },
+    {
+      "adds_new_source_axis": true,
+      "allowed_current_surface_coordinate_change": false,
+      "can_be_canonical_oh_transport": false,
+      "candidate": "nonlinear extension s I + c s^2 S_1",
+      "failure_reason": "linear LSZ tangent is still I; the taste axis appears only in a new higher-order source extension",
+      "invertible_linear_tangent": true,
+      "second_derivative_trace_zero_axis_norm": 2.8284271247461903,
+      "tangent_trace": 8.0,
+      "taste_axis_overlap": 0.0,
+      "taste_span_projection_relative_norm": 0.0
+    },
+    {
+      "adds_new_source_axis": true,
+      "allowed_current_surface_coordinate_change": false,
+      "can_be_canonical_oh_transport": false,
+      "candidate": "singular or zero-Jacobian map onto taste axis",
+      "failure_reason": "zero/noninvertible tangent cannot supply a canonical linear LSZ normalization",
+      "invertible_linear_tangent": false,
+      "tangent_trace": 0.0,
+      "taste_axis_overlap": null,
+      "taste_span_projection_relative_norm": null
+    }
+  ]
+}

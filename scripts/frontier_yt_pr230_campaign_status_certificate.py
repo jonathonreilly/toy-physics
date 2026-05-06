@@ -575,6 +575,9 @@ def main() -> int:
         "pr230_taste_condensate_oh_bridge_audit": load(
             "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json"
         ),
+        "pr230_source_coordinate_transport_gate": load(
+            "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json"
+        ),
         "pr230_oh_bridge_candidate_portfolio": load(
             "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json"
         ),
@@ -2361,6 +2364,18 @@ def main() -> int:
         )
         == 0.0,
         statuses["pr230_taste_condensate_oh_bridge_audit"],
+    )
+    source_coordinate_transport = certificates["pr230_source_coordinate_transport_gate"]
+    report(
+        "pr230-source-coordinate-transport-blocks-current-shortcut",
+        "source-coordinate transport to canonical O_H not derivable"
+        in str(statuses["pr230_source_coordinate_transport_gate"])
+        and source_coordinate_transport.get("proposal_allowed") is False
+        and source_coordinate_transport.get("source_coordinate_transport_gate_passed")
+        is True
+        and source_coordinate_transport.get("future_transport_certificate_present")
+        is False,
+        statuses["pr230_source_coordinate_transport_gate"],
     )
     oh_bridge_candidate_portfolio = certificates["pr230_oh_bridge_candidate_portfolio"]
     report(

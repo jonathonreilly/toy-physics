@@ -303,6 +303,7 @@
     "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt": "exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows",
     "pr230_scalar_lsz_holonomic_exact_authority_attempt": "exact negative boundary / scalar-LSZ holonomic exact-authority not derivable from current finite-shell PR230 data",
     "pr230_schur_abc_definition_derivation_attempt": "exact negative boundary / Schur A/B/C definition not derivable from current PR230 source-only surface",
+    "pr230_source_coordinate_transport_gate": "exact negative boundary / source-coordinate transport to canonical O_H not derivable on current PR230 surface",
     "pr230_source_sector_pattern_transfer_gate": "bounded-support / SU3 source-sector pattern is relevant to PR230 as a bridge-computation method, not as source-only y_t closure",
     "pr230_taste_condensate_oh_bridge_audit": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge",
     "pr230_wz_g2_bare_running_bridge_attempt": "exact negative boundary / WZ g2 bare-to-low-scale running bridge not derivable on current PR230 surface",
@@ -394,7 +395,7 @@
   },
   "fail_count": 0,
   "oh_bridge_candidate_portfolio_open": true,
-  "pass_count": 279,
+  "pass_count": 280,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T11:13:56.386726+00:00",
+  "generated_at": "2026-05-06T11:26:09.321580+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16992,6 +16992,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_schur_abc_definition_derivation_attempt.py"
+    },
+    "yt_pr230_source_coordinate_transport_gate_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 4,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_source_coordinate_transport_gate.py"
     },
     "yt_pr230_source_overlap_route_selection_note_2026-05-03": {
       "assert_count": 1,
@@ -34953,6 +34965,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_source_coordinate_transport_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_source_coordinate_transport_gate_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 4,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_source_overlap_route_selection.py": {
       "assert_count": 1,
       "claims": [
@@ -40179,12 +40206,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 225,
-      "C": 502,
+      "C": 503,
       "D": 302,
       "none": 404
     },
-    "runners_classified": 1442,
-    "runners_with_C": 755,
-    "runners_with_D": 536
+    "runners_classified": 1443,
+    "runners_with_C": 756,
+    "runners_with_D": 537
   }
 }

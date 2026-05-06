@@ -131,6 +131,9 @@ def main() -> int:
         "taste_condensate_oh_bridge_audit": load(
             "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json"
         ),
+        "source_coordinate_transport_gate": load(
+            "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json"
+        ),
         "oh_bridge_candidate_portfolio": load(
             "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json"
         ),
@@ -235,6 +238,8 @@ def main() -> int:
         "Taste-condensate O_H bridge",
         "uniform mass source is orthogonal to taste-axis Higgs operators",
         "not proof selectors until source-coordinate transport or C_sH/C_HH rows exist",
+        "Source-coordinate transport to O_H",
+        "not proof selectors until a same-surface transport certificate exists",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -684,6 +689,18 @@ def main() -> int:
         )
         == 0.0,
         taste_bridge.get("actual_current_surface_status"),
+    )
+    source_coordinate_transport = certificates["source_coordinate_transport_gate"]
+    report(
+        "source-coordinate-transport-does-not-supply-current-oh",
+        "source-coordinate transport to canonical O_H not derivable"
+        in str(source_coordinate_transport.get("actual_current_surface_status"))
+        and source_coordinate_transport.get("proposal_allowed") is False
+        and source_coordinate_transport.get("source_coordinate_transport_gate_passed")
+        is True
+        and source_coordinate_transport.get("future_transport_certificate_present")
+        is False,
+        source_coordinate_transport.get("actual_current_surface_status"),
     )
     candidate_portfolio = certificates["oh_bridge_candidate_portfolio"]
     report(
