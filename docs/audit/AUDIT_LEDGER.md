@@ -42,18 +42,18 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 462 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 55 |
-| `audited_numerical_match` | 20 |
+| `audited_numerical_match` | 19 |
 | `audited_renaming` | 28 |
-| `unaudited` | 852 |
+| `unaudited` | 853 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 646 |
+| `bounded_theorem` | 647 |
 | `decoration` | 10 |
 | `meta` | 56 |
 | `no_go` | 190 |
 | `open_gate` | 110 |
-| `positive_theorem` | 788 |
+| `positive_theorem` | 787 |
 
 | criticality | count |
 |---|---:|
@@ -1018,7 +1018,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `hierarchy_dimensional_compression_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `lattice_distance_law_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
-| `mirror_chokepoint_boundary_fit_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `monopole_derived_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `quark_e_channel_endpoint_quotient_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -9019,19 +9018,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The exact 2D mirror family is Born-clean and retains a strong bounded joint coexistence pocket, strongest at N = 60.  _(class `C`)_
 - **chain closes:** False — The runner performs a real finite computation rather than printing constants, and its main MI/decoherence/gravity rows support the bounded-pocket read. The restricted packet does not provide or derive the imported gen_2d_mirror and propagate_LINEAR implementation from the stated axiom, so the exact-generator and linear-propagator premise remains unclosed.
 - **rationale:** Issue: the load-bearing computation imports the exact 2D mirror generator and linear propagator from scripts/mirror_born_audit.py, but that authority or derivation is not included in the restricted packet. Why this blocks: the note’s bounded-pocket conclusion depends on those imported operators being the claimed exact linear family, not merely on the visible aggregation code. Repair target: add and audit the generator/propagator dependency or provide an independent derivation from the axiom; also refresh the stale Born table entries against the current runner stdout. Claim boundary until fixed: the visible runner supports a bounded numerical pocket conditional on the imported mirror generator and propagator being valid.
-- **auditor confidence:** high
-
-### `mirror_chokepoint_boundary_fit_note`
-
-- **Note:** [`MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](../../docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Bounded finite-window report of the boundary-mirror N=40..100 pocket: Born-clean, gravity-positive, decohering through N=100 with weak descriptive exponent fit alpha = -0.245 (R^2 = 0.126) and a gravity wall at N=120. Excludes any retained mirror family theorem or asymptotic law; the audit row carries no registered runner/log artifacts.
-- **audit_status:** ~~audited_numerical_match~~
-- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
-- **auditor:** `claude-opus-4.7-1m:cluster2-narrow-2026-05-02-mirror`  (claude-opus; independence=fresh_context)
-- **load-bearing step:** The boundary mirror family is a Born-clean, gravity-positive, decohering pocket through N=100, with canonical exponent fit alpha=-0.245 but no bounded asymptotic claim.  _(class `G`)_
-- **chain closes:** False — The retained surface depends on a selected dense-boundary mirror parameter pocket and a weak descriptive fit; finite fitted rows with R^2=0.126 do not establish a retained family theorem or asymptotic law.
-- **rationale:** Re-audit confirms the original numerical-match verdict: a finite parameter-pocket fit with weak R^2, not a derived asymptotic. Scope narrowed from the migration backfill to a bounded finite-window report.
 - **auditor confidence:** high
 
 ### `mirror_gravity_probe_note`

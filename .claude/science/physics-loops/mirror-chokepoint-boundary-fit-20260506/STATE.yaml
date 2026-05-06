@@ -1,0 +1,26 @@
+loop: mirror-chokepoint-boundary-fit-20260506
+mode: run
+target: audited-clean-ready finite-window closure
+actual_current_surface_status: bounded-support
+conditional_surface_status: null
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "Independent audit has not rerun; branch only supplies a registered finite-window certificate and narrowed source note."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+cycle_count: 1
+active_route: "Registered live certificate for the named dense boundary card"
+hard_residual: "Avoid converting a weak four-point descriptive fit into an asymptotic or family theorem."
+files_touched:
+  - docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md
+  - scripts/mirror_chokepoint_boundary_fit_certificate.py
+  - logs/runner-cache/mirror_chokepoint_boundary_fit_certificate.txt
+open_imports: []
+no_go_routes:
+  - "Asymptotic mirror-family law from alpha=-0.245 remains excluded."
+review_findings:
+  - "Local checks pass for independent audit intake; no independent audit verdict applied."
+pr_status: "not opened from local science-fix workspace"
+next_exact_action: "Run audit re-seeding/re-audit on mirror_chokepoint_boundary_fit_note against the new primary runner."
+stop_condition: "Named target source note has an audit-ready finite-window certificate; independent audit remains outside this loop."

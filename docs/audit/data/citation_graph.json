@@ -41529,11 +41529,11 @@
       "claim_id": "mirror_chokepoint_boundary_fit_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "f2f183a168cfec6464ae8389dff3f7c1f109d18ba871604f4da2f5270a4bbcc0",
+      "note_hash": "d3cad846c1d00cf8c414450493fd0cb1d56a6099b384c8347fb6f9856622cb3b",
       "path": "docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md",
-      "runner_path": "scripts/mirror_chokepoint_joint.py",
+      "runner_path": "scripts/mirror_chokepoint_boundary_fit_certificate.py",
       "title": "Mirror Chokepoint Boundary Fit Note"
     },
     "mirror_chokepoint_note": {
@@ -55985,12 +55985,12 @@
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 577,
+      "bounded_theorem": 578,
       "meta": 10,
       "no_go": 118,
       "none": 461,
       "open_gate": 113,
-      "positive_theorem": 628
+      "positive_theorem": 627
     },
     "edge_count": 6617,
     "leaf_count": 550,
