@@ -17,7 +17,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 |---:|---|---|---|---|---:|---:|:---:|---|---|
 | 1 | `fourth_family_complex_boundary_note` | no_go | unaudited | critical | 502 | 9.47 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/FOURTH_FAMILY_COMPLEX.py` |
 | 2 | `su3_casimir_fundamental_theorem_note_2026-05-02` | positive_theorem | unaudited | critical | 295 | 8.71 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/su3_casimir_fundamental_check.py` |
-| 3 | `dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18` | - | unaudited | critical | 292 | 9.20 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization.py` |
+| 3 | `dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18` | positive_theorem | unaudited | critical | 292 | 9.20 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization.py` |
 | 4 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | unaudited | critical | 552 | 12.61 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py` |
 | 5 | `universal_qg_canonical_refinement_net_note` | positive_theorem | unaudited | critical | 519 | 17.52 |  | fresh_context_or_stronger_with_cross_confirmation | - |
 | 6 | `universal_qg_uv_finite_partition_note` | positive_theorem | unaudited | critical | 519 | 15.52 |  | fresh_context_or_stronger_with_cross_confirmation | - |
