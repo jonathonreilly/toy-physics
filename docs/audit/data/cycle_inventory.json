@@ -20,17 +20,17 @@
         {
           "audit_status": "unaudited",
           "claim_id": "universal_qg_uv_finite_partition_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md",
           "title": "Universal QG UV-Finite Partition Density Note",
           "transitive_descendants": 518
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "universal_qg_projective_schur_closure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "claim_type": null,
+          "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md",
           "title": "Universal QG Projective Schur Closure Note",
           "transitive_descendants": 518
@@ -61,7 +61,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "universal_qg_canonical_refinement_net_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md",
           "title": "Universal QG Canonical Geometric Refinement Net on `PL S^3 x R`",
@@ -70,17 +70,17 @@
         {
           "audit_status": "unaudited",
           "claim_id": "universal_qg_uv_finite_partition_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md",
           "title": "Universal QG UV-Finite Partition Density Note",
           "transitive_descendants": 518
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "universal_qg_projective_schur_closure_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "claim_type": null,
+          "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md",
           "title": "Universal QG Projective Schur Closure Note",
           "transitive_descendants": 518
@@ -114,10 +114,10 @@
           "transitive_descendants": 510
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "yt_zero_import_authority_note",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
           "title": "y_t Lane: Zero-Import Authority",
           "transitive_descendants": 510
@@ -148,7 +148,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_remaining_closure_gates_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_REMAINING_CLOSURE_GATES_NOTE.md",
           "title": "Signed Gravity Remaining Closure Gates Note",
@@ -157,7 +157,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_staggered_dirac_aps_boundary_realization_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md",
           "title": "Signed Gravity Staggered-Dirac APS Boundary Realization Note",
@@ -166,7 +166,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_native_boundary_complex_containment_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md",
           "title": "Signed Gravity Native Boundary-Complex Containment Note",
@@ -210,7 +210,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_cl3z3_source_character_derivation_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md",
           "title": "Signed Gravity Cl(3)/Z^3 Source-Character Derivation Note",
@@ -219,7 +219,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_source_character_uniqueness_theorem_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_SOURCE_CHARACTER_UNIQUENESS_THEOREM_NOTE.md",
           "title": "Signed Gravity Source-Character Uniqueness Theorem Note",
@@ -228,7 +228,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_nature_grade_closure_blocker_audit_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_NATURE_GRADE_CLOSURE_BLOCKER_AUDIT_NOTE.md",
           "title": "Signed Gravity Nature-Grade Closure Blocker Audit Note",
@@ -237,7 +237,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_remaining_closure_gates_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_REMAINING_CLOSURE_GATES_NOTE.md",
           "title": "Signed Gravity Remaining Closure Gates Note",
@@ -246,7 +246,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_staggered_dirac_aps_boundary_realization_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md",
           "title": "Signed Gravity Staggered-Dirac APS Boundary Realization Note",
@@ -255,7 +255,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_native_boundary_complex_containment_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md",
           "title": "Signed Gravity Native Boundary-Complex Containment Note",
@@ -281,10 +281,10 @@
       "max_transitive_descendants": 499,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "angular_kernel_underdetermination_no_go_note",
           "claim_type": "no_go",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md",
           "title": "Angular Kernel Underdetermination No-Go (with Phase 4 decoupling)",
           "transitive_descendants": 499
@@ -320,7 +320,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_clean_derivation_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
           "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)",
@@ -329,7 +329,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "broad_gravity_derivation_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/BROAD_GRAVITY_DERIVATION_NOTE.md",
           "title": "Broad Gravity Bundle: Per-Signature Derivation Chains",
@@ -357,7 +357,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_clean_derivation_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
           "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)",
@@ -366,7 +366,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
@@ -394,7 +394,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_clean_derivation_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
           "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)",
@@ -403,7 +403,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "newton_law_derived_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEWTON_LAW_DERIVED_NOTE.md",
           "title": "Newton's Law Derived from Cl(3) on Z^3",
@@ -435,7 +435,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
@@ -444,7 +444,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
@@ -453,7 +453,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "antigravity_sign_selector_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md",
           "title": "Signed Gravitational Response Selector Boundary Note",
@@ -485,7 +485,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
@@ -494,7 +494,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
@@ -503,7 +503,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
@@ -535,7 +535,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_aps_locked_axiom_extension_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
           "title": "Signed Gravity APS-Locked Axiom Extension Note",
@@ -544,7 +544,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_retained_boundary_source_principle_no_go_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
           "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
@@ -553,7 +553,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_aps_action_origin_superselection_stability_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
           "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
@@ -585,7 +585,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_aps_locked_source_action_proposal_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
           "title": "Signed Gravity APS-Locked Source Action Proposal",
@@ -594,7 +594,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_aps_locked_axiom_extension_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
           "title": "Signed Gravity APS-Locked Axiom Extension Note",
@@ -603,7 +603,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_retained_boundary_source_principle_no_go_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
           "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
@@ -635,7 +635,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
@@ -644,7 +644,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
@@ -653,7 +653,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_aps_boundary_index_chi_probe_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md",
           "title": "Signed Gravity APS Boundary-Index `chi_g` Probe Note",
@@ -685,7 +685,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
@@ -694,7 +694,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
@@ -703,7 +703,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_mechanism_separation_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_MECHANISM_SEPARATION_NOTE.md",
           "title": "Signed Gravity Mechanism Separation Note",
@@ -735,7 +735,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
@@ -744,7 +744,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
@@ -753,7 +753,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_nonlocal_boundary_chi_target_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_NONLOCAL_BOUNDARY_CHI_TARGET_NOTE.md",
           "title": "Signed Gravity Nonlocal / Boundary `chi_g` Target Note",
@@ -785,7 +785,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
@@ -794,7 +794,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
@@ -803,7 +803,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_nonlocal_projector_charge_chi_probe_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_NONLOCAL_PROJECTOR_CHARGE_CHI_PROBE_NOTE.md",
           "title": "Signed Gravity Nonlocal Projector-Charge `chi_g` Probe Note",
@@ -835,7 +835,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
@@ -844,7 +844,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_aps_locked_source_action_proposal_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
           "title": "Signed Gravity APS-Locked Source Action Proposal",
@@ -853,7 +853,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_aps_wald_gauss_bridge_audit_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md",
           "title": "Signed Gravity APS / Wald / Gauss Bridge Audit Note",
@@ -889,7 +889,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_clean_derivation_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
           "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)",
@@ -898,7 +898,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
@@ -907,7 +907,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
@@ -916,7 +916,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "antigravity_sign_selector_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md",
           "title": "Signed Gravitational Response Selector Boundary Note",
@@ -952,7 +952,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
@@ -961,7 +961,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
@@ -970,7 +970,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
@@ -979,7 +979,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_aps_boundary_index_chi_probe_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md",
           "title": "Signed Gravity APS Boundary-Index `chi_g` Probe Note",
@@ -1015,7 +1015,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
@@ -1024,7 +1024,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
@@ -1033,7 +1033,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
@@ -1042,7 +1042,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_mechanism_separation_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_MECHANISM_SEPARATION_NOTE.md",
           "title": "Signed Gravity Mechanism Separation Note",
@@ -1078,7 +1078,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
@@ -1087,7 +1087,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
@@ -1096,7 +1096,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
@@ -1105,7 +1105,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_nonlocal_boundary_chi_target_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_NONLOCAL_BOUNDARY_CHI_TARGET_NOTE.md",
           "title": "Signed Gravity Nonlocal / Boundary `chi_g` Target Note",
@@ -1141,7 +1141,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
@@ -1150,7 +1150,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
@@ -1159,7 +1159,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
@@ -1168,7 +1168,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_nonlocal_projector_charge_chi_probe_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_NONLOCAL_PROJECTOR_CHARGE_CHI_PROBE_NOTE.md",
           "title": "Signed Gravity Nonlocal Projector-Charge `chi_g` Probe Note",
@@ -1204,7 +1204,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_aps_locked_axiom_extension_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
           "title": "Signed Gravity APS-Locked Axiom Extension Note",
@@ -1213,7 +1213,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_retained_boundary_source_principle_no_go_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
           "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
@@ -1222,7 +1222,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_aps_action_origin_superselection_stability_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
           "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
@@ -1231,7 +1231,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_source_line_origin_tensor_lift_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md",
           "title": "Signed Gravity Source-Line Origin / Partial Tensor-Lift Note",
@@ -1267,7 +1267,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_aps_locked_source_action_proposal_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
           "title": "Signed Gravity APS-Locked Source Action Proposal",
@@ -1276,7 +1276,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_aps_locked_axiom_extension_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
           "title": "Signed Gravity APS-Locked Axiom Extension Note",
@@ -1285,7 +1285,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_retained_boundary_source_principle_no_go_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
           "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
@@ -1294,7 +1294,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_aps_action_origin_superselection_stability_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
           "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
@@ -1334,7 +1334,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_clean_derivation_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
           "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)",
@@ -1343,7 +1343,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
@@ -1352,7 +1352,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
@@ -1361,7 +1361,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "antigravity_sign_selector_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md",
           "title": "Signed Gravitational Response Selector Boundary Note",
@@ -1370,7 +1370,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "frontier_extension_lane_opening_note_2026-04-25",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md",
           "title": "Frontier Extension Lane Opening Note",
@@ -1410,7 +1410,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
@@ -1419,7 +1419,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
@@ -1428,7 +1428,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
@@ -1437,7 +1437,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_boundary_coframe_chi_probe_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_BOUNDARY_COFRAME_CHI_PROBE_NOTE.md",
           "title": "Signed Gravity Boundary Coframe `chi_g` Probe Note",
@@ -1446,7 +1446,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_source_action_escape_hatch_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_SOURCE_ACTION_ESCAPE_HATCH_NOTE.md",
           "title": "Signed Gravity Source-Action Escape Hatch Audit",
@@ -1490,7 +1490,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_clean_derivation_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
           "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)",
@@ -1499,7 +1499,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
@@ -1508,7 +1508,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
@@ -1517,7 +1517,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
           "title": "Signed Gravitational Response Lane Backlog",
@@ -1526,7 +1526,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_boundary_coframe_chi_probe_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_BOUNDARY_COFRAME_CHI_PROBE_NOTE.md",
           "title": "Signed Gravity Boundary Coframe `chi_g` Probe Note",
@@ -1535,7 +1535,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_source_action_escape_hatch_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_SOURCE_ACTION_ESCAPE_HATCH_NOTE.md",
           "title": "Signed Gravity Source-Action Escape Hatch Audit",
@@ -1590,19 +1590,19 @@
           "transitive_descendants": 499
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
           "transitive_descendants": 499
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
           "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
           "transitive_descendants": 499
@@ -1610,7 +1610,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lorentz_kernel_positive_closure_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
@@ -1628,7 +1628,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "planck_scale_lane_status_note_2026-04-23",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
@@ -1708,19 +1708,19 @@
           "transitive_descendants": 499
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
           "transitive_descendants": 499
         },
         {
-          "audit_status": "audited_conditional",
+          "audit_status": "unaudited",
           "claim_id": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
           "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
+          "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
           "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
           "transitive_descendants": 499
@@ -1728,7 +1728,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lorentz_kernel_positive_closure_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
@@ -1746,7 +1746,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "planck_scale_lane_status_note_2026-04-23",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
@@ -1755,7 +1755,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_clean_derivation_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
           "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)",
@@ -1764,7 +1764,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gravity_signed_source_density_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
           "title": "Gravity Signed Source-Density Boundary Note",
@@ -1773,7 +1773,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
@@ -1782,7 +1782,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "antigravity_sign_selector_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md",
           "title": "Signed Gravitational Response Selector Boundary Note",
@@ -1791,7 +1791,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "frontier_extension_lane_opening_note_2026-04-25",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md",
           "title": "Frontier Extension Lane Opening Note",
@@ -1828,7 +1828,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
           "title": "Hypercharge Squared Trace Catalog Theorem",
@@ -1865,7 +1865,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
           "title": "LHCM Matter Assignment from SU(3) Representation Content",
@@ -1906,7 +1906,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
           "title": "LHCM Matter Assignment from SU(3) Representation Content",
@@ -1915,7 +1915,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "rh_sector_anomaly_cancellation_identities_note_2026-05-02",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md",
           "title": "RH-Sector Anomaly Cancellation Identities: SU(3)\u00b2\u00d7Y, Y\u00b3, and Gravitational\u00b2\u00d7Y",
@@ -1947,7 +1947,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md",
           "title": "Standard Model Hypercharge Uniqueness from Anomaly Cancellation",
@@ -1965,7 +1965,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
           "title": "Hypercharge Squared Trace Catalog Theorem",
@@ -2010,7 +2010,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
           "title": "LHCM Matter Assignment from SU(3) Representation Content",
@@ -2019,7 +2019,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "rh_sector_anomaly_cancellation_identities_note_2026-05-02",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md",
           "title": "RH-Sector Anomaly Cancellation Identities: SU(3)\u00b2\u00d7Y, Y\u00b3, and Gravitational\u00b2\u00d7Y",
@@ -2064,7 +2064,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md",
           "title": "Standard Model Hypercharge Uniqueness from Anomaly Cancellation",
@@ -2082,7 +2082,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "hypercharge_squared_trace_catalog_theorem_note_2026-04-25",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
           "title": "Hypercharge Squared Trace Catalog Theorem",
@@ -2127,7 +2127,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md",
           "title": "Standard Model Hypercharge Uniqueness from Anomaly Cancellation",
@@ -2145,7 +2145,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
           "title": "LHCM Matter Assignment from SU(3) Representation Content",
@@ -2154,7 +2154,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "rh_sector_anomaly_cancellation_identities_note_2026-05-02",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md",
           "title": "RH-Sector Anomaly Cancellation Identities: SU(3)\u00b2\u00d7Y, Y\u00b3, and Gravitational\u00b2\u00d7Y",
@@ -2191,7 +2191,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
           "title": "Wolfenstein Lambda and A Structural Identities Theorem",
@@ -2219,7 +2219,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
           "title": "CKM CP-Phase Structural Identity Theorem",
@@ -2256,7 +2256,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
           "title": "CKM CP-Phase Structural Identity Theorem",
@@ -2293,7 +2293,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
           "title": "Wolfenstein Lambda and A Structural Identities Theorem",
@@ -2302,7 +2302,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
           "title": "CKM CP-Phase Structural Identity Theorem",
@@ -2343,7 +2343,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
           "title": "Wolfenstein Lambda and A Structural Identities Theorem",
@@ -2352,7 +2352,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
           "title": "CKM CP-Phase Structural Identity Theorem",
@@ -2384,7 +2384,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
           "title": "CKM CP-Phase Structural Identity Theorem",
@@ -2434,7 +2434,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
           "title": "Wolfenstein Lambda and A Structural Identities Theorem",
@@ -2443,7 +2443,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
           "title": "CKM CP-Phase Structural Identity Theorem",
@@ -2484,7 +2484,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
           "title": "Wolfenstein Lambda and A Structural Identities Theorem",
@@ -2493,7 +2493,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
           "title": "CKM CP-Phase Structural Identity Theorem",
@@ -2537,10 +2537,10 @@
           "transitive_descendants": 304
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "higgs_from_lattice_note",
           "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/HIGGS_FROM_LATTICE_NOTE.md",
           "title": "Higgs From Lattice: Bounded Quantitative Support",
           "transitive_descendants": 304
@@ -2574,10 +2574,10 @@
           "transitive_descendants": 304
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "higgs_mechanism_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "claim_type": "bounded_theorem",
+          "effective_status": "audited_conditional",
           "note_path": "docs/HIGGS_MECHANISM_NOTE.md",
           "title": "Higgs Mechanism Note",
           "transitive_descendants": 304
@@ -2604,7 +2604,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_dirac_z3_support_trichotomy_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md",
           "title": "Neutrino Dirac `Z_3` Support Trichotomy",
@@ -2613,7 +2613,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
@@ -2641,7 +2641,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
@@ -2650,7 +2650,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lepton_single_higgs_pmns_triviality_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md",
           "title": "Lepton Single-Higgs PMNS Triviality Theorem",
@@ -2682,7 +2682,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_dirac_z3_support_trichotomy_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md",
           "title": "Neutrino Dirac `Z_3` Support Trichotomy",
@@ -2691,7 +2691,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "neutrino_mass_reduction_to_dirac_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
           "title": "Neutrino Mass Reduction To The Dirac Lane",
@@ -2700,7 +2700,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lepton_single_higgs_pmns_triviality_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md",
           "title": "Lepton Single-Higgs PMNS Triviality Theorem",
@@ -2728,7 +2728,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "ckm_neutron_edm_bound_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CKM_NEUTRON_EDM_BOUND_NOTE.md",
           "title": "CKM Neutron-EDM Corollary and Bounded Prediction",
@@ -2737,7 +2737,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md",
           "title": "Universal Theta-Induced EDM Response Vanishing Theorem",
@@ -2765,7 +2765,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "cosmological_constant_result_2026-04-12",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md",
           "title": "Cosmological Constant \u2014 Spectral-Gap Companion",
@@ -2774,7 +2774,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "cosmological_constant_vacuum_energy_audit_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md",
           "title": "Cosmological Constant Vacuum-Energy Audit",
@@ -2802,7 +2802,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "universal_gr_tensor_variational_candidate_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
           "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
@@ -2811,7 +2811,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "universal_gr_tensor_quotient_uniqueness_note",
-          "claim_type": "bounded_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md",
           "title": "Universal GR Tensor Quotient Uniqueness Candidate on `PL S^3 x R`",
@@ -2837,10 +2837,10 @@
       "max_transitive_descendants": 290,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audit_in_progress",
           "claim_id": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audit_in_progress",
           "note_path": "docs/KOIDE_GAMMA_AXIS_COVARIANT_FULL_CUBE_ORBIT_LAW_NOTE_2026-04-18.md",
           "title": "Koide `Gamma` Axis-Covariant Full-Cube Orbit Law",
           "transitive_descendants": 290
@@ -2848,7 +2848,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_selector_bridge_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selector Bridge Note",
@@ -2876,7 +2876,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_selector_bridge_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selector Bridge Note",
@@ -2885,7 +2885,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_CYCLIC_RETURN_CANDIDATE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Cyclic Return Candidate",
@@ -2913,7 +2913,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lensing_long_path_test_note",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/LENSING_LONG_PATH_TEST_NOTE.md",
           "title": "Lensing Long-Path Test \u2014 Falsifies the Finite-Path Explanation",
@@ -2922,7 +2922,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lensing_finite_path_explanation_note",
-          "claim_type": "open_gate",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/LENSING_FINITE_PATH_EXPLANATION_NOTE.md",
           "title": "Lensing Slope \u2014 Finite-Path Surrogate FALSIFIED at a Second T_phys",
@@ -2952,10 +2952,10 @@
       "max_transitive_descendants": 290,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audit_in_progress",
           "claim_id": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audit_in_progress",
           "note_path": "docs/KOIDE_GAMMA_AXIS_COVARIANT_FULL_CUBE_ORBIT_LAW_NOTE_2026-04-18.md",
           "title": "Koide `Gamma` Axis-Covariant Full-Cube Orbit Law",
           "transitive_descendants": 290
@@ -2963,7 +2963,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_selector_bridge_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Selector Bridge Note",
@@ -2972,7 +2972,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/KOIDE_GAMMA_ORBIT_CYCLIC_RETURN_CANDIDATE_NOTE_2026-04-18.md",
           "title": "Koide `Gamma`-Orbit Cyclic Return Candidate",
@@ -3000,7 +3000,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md",
           "title": "Higgs `Z_3` Charge Gauge-Redundancy Theorem for PMNS",
@@ -3009,7 +3009,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md",
           "title": "`U_e = I` via `Z_3` Trichotomy (Charged-Lepton Lane)",
@@ -3037,7 +3037,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "quark_issr1_bicac_forcing_theorem_note_2026-04-19",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md",
           "title": "Quark ISSR1 BICAC Forcing Theorem",
@@ -3046,7 +3046,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "quark_jts_residue_note_2026-04-19",
-          "claim_type": "positive_theorem",
+          "claim_type": null,
           "effective_status": "unaudited",
           "note_path": "docs/QUARK_JTS_RESIDUE_NOTE_2026-04-19.md",
           "title": "Quark JTS Residue",
