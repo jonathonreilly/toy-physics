@@ -1,7 +1,7 @@
 # Teleportation Taste Readout/Operator Model
 
 **Date:** 2026-04-25
-**Status:** planning / first artifact; not a promotion claim
+**Status:** open_gate / finite operator-factorization audit; not a physical promotion claim
 **Runner:** `scripts/frontier_teleportation_taste_readout_operator_model.py`
 
 ## Scope
@@ -62,6 +62,77 @@ Key result: native sublattice parity `Z` is `xi_5`, the product of all taste
 `Z` signs. It equals retained-bit logical `Z` only in 1D. In 2D and 3D its
 logical candidate averages to zero because it changes sign across spectator
 taste sectors, so it leaks spectator information.
+
+## Algebraic Closure of the Native-Parity Obstruction
+
+Write each site coordinate as
+
+```text
+x_i = 2 c_i + eta_i,      eta_i in {0,1}.
+```
+
+For this note the retained logical axis is `r = dim - 1`, so the logical bit is
+`b = eta_r`.  The environment label is the cell vector together with the
+spectator taste bits,
+
+```text
+e = (c, s),      s = (eta_i)_{i != r}.
+```
+
+The site basis is therefore identified as `|x> = |b>_logical tensor |e>_env`.
+For an operator to be usable after tracing cells and spectator tastes, every
+environment diagonal block must be the same `2 x 2` logical operator and all
+environment off-diagonal blocks must vanish.
+
+Native sublattice parity acts by
+
+```text
+Z_native |x> = (-1)^(sum_i x_i) |x>
+             = (-1)^(sum_i eta_i) |x>
+             = (-1)^b (-1)^(sum_{i != r} eta_i) |b,e>.
+```
+
+Thus on a fixed environment sector,
+
+```text
+Z_native|_e = sigma_s Z_logical,
+sigma_s = (-1)^(sum_{i != r} eta_i).
+```
+
+For `dim = 1`, the spectator tuple is empty, `sigma_s = 1` for every cell, and
+`Z_native = Z_logical tensor I_env`.  For `dim > 1`, at least one spectator bit
+exists.  Holding the cell fixed and flipping one spectator bit changes
+`sigma_s` while leaving the retained bit untouched, so two environment sectors
+carry opposite logical blocks, `+Z_logical` and `-Z_logical`.  No single
+`O_logical` can equal both blocks, hence `Z_native` cannot factor as
+`O_logical tensor I_env`.
+
+This also gives the runner's projection numbers.  The Frobenius projection used
+by the runner is the environment average of the logical blocks:
+
+```text
+O_candidate = (1 / n_env) sum_e sigma_s Z_logical
+            = (1 / 2^(dim-1)) sum_s (-1)^|s| Z_logical
+            = 0                 for dim > 1.
+```
+
+The residual blocks are therefore `sigma_s Z_logical`; their Frobenius norm is
+the full operator norm, giving relative residual `1.000000` and max residual
+`1.000000` in every 2D and 3D audited case.  The native `Z+` projector has
+blocks `(I + sigma_s Z_logical)/2`, so its projection is `I/2` and its residual
+is `sigma_s Z_logical/2`, giving the table's relative residual `0.707107`.
+
+The same sign is inherited by any native-parity correction or Bell stabilizer.
+Because the fixed row-major pair-hop equals `X_logical tensor I_env` only for
+the retained last taste axis, `Z_native` followed by fixed `X` has blocks
+`sigma_s Z_logical X_logical` and fails by the same averaging argument.  On two
+registers, native `ZZ` has environment-pair blocks
+`sigma_s sigma_t (Z_logical tensor Z_logical)`, so its projected candidate is
+again zero and the relative residual is `1.000000`.  A native-`Z`/fixed-`X`
+Bell projector keeps the environment-blind `I tensor I` and `X tensor X` terms
+but averages away the signed `Z tensor Z` and `ZX tensor ZX` terms, producing a
+mixed logical candidate rather than the Bell `Phi+` projector.  This is the
+`0.707107` two-register Bell-projector failure reported in the table.
 
 The fixed row-major pair-hop `X` matches the axis-adapted retained-bit `X` on
 this lane for every audited case:
