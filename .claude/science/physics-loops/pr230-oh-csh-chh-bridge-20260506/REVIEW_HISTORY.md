@@ -242,3 +242,20 @@ Local verification completed:
   intentional artifact;
 - `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
   pre-existing warnings.
+- completed two-source taste-radial chunks011-012 packaged:
+  `frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index
+  11` PASS=15 FAIL=0 and `--chunk-index 12` PASS=15 FAIL=0;
+- two-source taste-radial row combiner refreshed after chunks011-012:
+  PASS=13 FAIL=0, `ready=12/63`, `combined_rows_written=false`;
+- source-Higgs production readiness refreshed after chunks011-012:
+  PASS=25 FAIL=0 and still records taste-radial schema fields as `C_sx/C_xx`
+  aliases, not canonical `C_sH/C_HH` rows;
+- aggregate gates after the chunks011-012 block:
+  assumption/import stress PASS=72 FAIL=0, retained route PASS=285 FAIL=0,
+  campaign status PASS=318 FAIL=0, and positive-closure completion audit
+  PASS=44 FAIL=0;
+- `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
+  metadata regenerated for validation and then reverted because it was not an
+  intentional artifact;
+- `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
+  pre-existing warnings.

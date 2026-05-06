@@ -53,12 +53,12 @@
    and gauge-covariant action/source vertex now exist as support, and the
    row contract now labels `C_sx/C_xx` explicitly.  A no-resume production
    manifest now records the row chunk commands, and the row-wave launcher has
-   completed chunks001-010 and currently records active chunks011-012 under a
-   two-worker cap.  The completed chunks001-010 certificates pass
+   completed chunks001-012 and currently records active chunks013-014 under a
+   two-worker cap.  The completed chunks001-012 certificates pass
    `PASS=15 FAIL=0` each and remain bounded row support.  The row-combiner
-   gate now records `ready=10/63`, no bad chunk audits, finite-mode
+   gate now records `ready=12/63`, no bad chunk audits, finite-mode
    `rho_sx`/`Delta_sx` scouts, and writes no combined row packet until all 63
-   chunks are schema-clean.  Chunks011-012 remain
+   chunks are schema-clean.  Chunks013-014 remain
    non-evidence until completed JSON exists and completed-mode checkpoints
    pass.  The remaining work is more completed production `C_sx/C_xx` rows,
    completed-mode per-chunk schema gates, combiner reruns until a full row

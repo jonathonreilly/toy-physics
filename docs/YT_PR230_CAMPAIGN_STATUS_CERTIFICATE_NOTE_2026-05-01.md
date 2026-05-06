@@ -1592,3 +1592,13 @@ bare-mass component cancels the common `dv/ds` overlap in top/W and top/Z
 response ratios.  It also blocks using the current additive top mass FH source
 as that radial spurion.  This is support only; no retained/proposed-retained
 wording is authorized.
+
+Latest two-source taste-radial chunks011-012 checkpoint: completed-mode
+chunk checkpoints now pass `PASS=15 FAIL=0` for chunks011 and 012.  The
+row-combiner gate now records `ready=12/63`, no bad chunk audits, and
+`combined_rows_written=false`; it still writes no combined row packet.  The
+source-Higgs readiness gate scans twelve completed taste-radial chunks and
+continues to classify their schema fields as explicit `C_sx/C_xx` aliases, not
+canonical `C_sH/C_HH` pole rows.  Chunks013-014 are active under the
+two-worker supervisor cap.  This is bounded production-row support only; no
+retained/proposed-retained wording is authorized.
