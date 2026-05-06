@@ -1,0 +1,66 @@
+==============================================================================
+NEUTRINO WEAK VECTOR THEOREM
+==============================================================================
+
+Part 0: Explicit Clifford and chirality packet
+  max C^8 spatial Clifford error = 0.000e+00
+  max C^16 spatial Clifford error = 0.000e+00
+  max {Gamma_i, gamma_5} error = 0.000e+00
+  max chiral projector algebra error = 0.000e+00
+
+  [PASS] C^8 Gamma_i satisfy {Gamma_i,Gamma_j}=2 delta_ij
+  [PASS] C^16 Gamma_i satisfy {Gamma_i,Gamma_j}=2 delta_ij
+  [PASS] gamma_5 anticommutes with each spatial Gamma_i
+  [PASS] P_L and P_R are complementary orthogonal projectors
+
+Part 1: Derived weak SU(2) on the taste space
+  max su(2) commutator error = 0.000e+00
+  ||sum_a B_a^2 - (3/4)I|| = 0.000e+00
+
+  [PASS] bivectors form exact su(2)  (max err = 0.000e+00)
+  [PASS] fermion-space Casimir is 3/4  (err = 0.000e+00)
+  [PASS] bivector trace Gram matrix is diagonal  (Tr(B_a^dag B_b) = 2 delta_ab)
+
+Part 2: Spatial Gamma_i form an exact weak vector on C^8
+  max vector-law error = 0.000e+00
+  max double-commutator error = 0.000e+00
+  max sum_a B_a G_i B_a + (1/4) G_i error = 0.000e+00
+
+  [PASS] Gamma_i obey exact weak-vector commutator law
+  [PASS] Gamma_i carry spin-1 Casimir  (sum_a ad(B_a)^2 = 2)
+  [PASS] Gamma_i are trace-orthogonal  (Tr(Gamma_i^dag Gamma_j) = 8 delta_ij)
+  [PASS] conjugation average matches vector identity
+
+Part 3: Chiral bridges Y_i = P_R Gamma_i P_L form the same weak vector on C^16
+  max [B_a, gamma_5] error = 0.000e+00
+  max bridge vector-law error = 0.000e+00
+  max bridge double-commutator error = 0.000e+00
+
+  [PASS] weak generators commute with gamma_5
+  [PASS] bridge family obeys exact weak-vector commutator law
+  [PASS] bridge family carries spin-1 Casimir  (sum_a ad(B_a)^2 = 2)
+  [PASS] bridge family is trace-orthogonal  (Tr(Y_i^dag Y_j) = 8 delta_ij)
+
+Part 4: Weak-vector covariance does not fix absolute normalization
+  lambda = 0.500000: max cov err = 0.000e+00, max Casimir err = 0.000e+00
+  [PASS] scaled family lambda=0.500000 preserves weak-vector covariance  (Tr-scaled norm = 2.000000)
+  lambda = 1.414214: max cov err = 0.000e+00, max Casimir err = 0.000e+00
+  [PASS] scaled family lambda=1.414214 preserves weak-vector covariance  (Tr-scaled norm = 16.000000)
+  lambda = 2.000000: max cov err = 0.000e+00, max Casimir err = 0.000e+00
+  [PASS] scaled family lambda=2.000000 preserves weak-vector covariance  (Tr-scaled norm = 32.000000)
+
+Honest read:
+  1. The direct local chiral bridges Y_i = P_R Gamma_i P_L are now an
+     exact weak-vector family, not just an axis-picked operator guess.
+  2. This is real theorem-grade progress: the bridge family carries the
+     spin-1 Casimir and exact adjoint SU(2) transformation law.
+  3. But covariance alone is homogeneous. Rescaled families lambda Y_i
+     satisfy the same weak-vector equations, so the representation law
+     does not by itself select the physical base normalization.
+  4. The later bosonic-normalization theorem closes that base step.
+     What remains beyond this runner is the second-order suppression
+     law, not weak-vector classification.
+
+==============================================================================
+RESULT: 18 PASS, 0 FAIL
+==============================================================================
