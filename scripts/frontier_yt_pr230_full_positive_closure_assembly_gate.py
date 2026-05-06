@@ -96,6 +96,7 @@ PARENTS = {
     "pr230_z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
     "pr230_z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
     "pr230_z3_lazy_transfer_promotion_attempt": "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json",
+    "pr230_z3_lazy_selector_no_go": "outputs/yt_pr230_z3_lazy_selector_no_go_2026-05-06.json",
     "pr230_source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
     "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
@@ -358,6 +359,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "Burnside/double-commutant route has no same-surface off-diagonal neutral generator",
                 "direct off-diagonal generator derivation attempt finds only absent or block-diagonal current rows",
                 "source-only logdet Hessian leaves the second neutral source h/O_H underdetermined",
+                "Z3 entropy/gap/reversibility selectors either import an external principle or select a different transfer",
             ],
             "parents": [
                 PARENTS["neutral_scalar_irreducibility"],
@@ -367,6 +369,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["neutral_offdiagonal_generator_derivation"],
                 PARENTS["pr230_logdet_hessian_neutral_mixing_attempt"],
                 PARENTS["pr230_neutral_primitive_route_completion"],
+                PARENTS["pr230_z3_lazy_selector_no_go"],
             ],
         },
     }
@@ -581,6 +584,22 @@ def main() -> int:
         and certs["pr230_z3_lazy_transfer_promotion_attempt"].get(
             "pr230_closure_authorized"
         )
+        is False
+    )
+    z3_lazy_selector_no_go_blocks = (
+        "Z3 lazy selector shortcuts do not derive"
+        in statuses["pr230_z3_lazy_selector_no_go"]
+        and certs["pr230_z3_lazy_selector_no_go"].get("proposal_allowed")
+        is False
+        and certs["pr230_z3_lazy_selector_no_go"].get(
+            "z3_lazy_selector_no_go_passed"
+        )
+        is True
+        and certs["pr230_z3_lazy_selector_no_go"].get(
+            "physical_lazy_transfer_instantiated"
+        )
+        is False
+        and certs["pr230_z3_lazy_selector_no_go"].get("pr230_closure_authorized")
         is False
     )
     same_surface_z3_taste_triplet_support_not_closure = (
@@ -849,6 +868,7 @@ def main() -> int:
         and z3_triplet_conditional_primitive_not_closure
         and z3_generation_action_lift_not_derived
         and z3_lazy_transfer_promotion_not_derived
+        and z3_lazy_selector_no_go_blocks
         and certs["wz_same_source_action_semantic_firewall"].get("proposal_allowed") is False
         and certs["wz_source_coordinate_transport_no_go"].get("proposal_allowed") is False
         and certs["wz_source_coordinate_transport_no_go"].get(
@@ -1335,6 +1355,11 @@ def main() -> int:
         "z3-lazy-transfer-promotion-not-derived",
         z3_lazy_transfer_promotion_not_derived,
         statuses["pr230_z3_lazy_transfer_promotion_attempt"],
+    )
+    report(
+        "z3-lazy-selector-no-go-blocks-current-shortcut",
+        z3_lazy_selector_no_go_blocks,
+        statuses["pr230_z3_lazy_selector_no_go"],
     )
     report(
         "same-surface-z3-taste-triplet-support-not-closure",
@@ -2290,6 +2315,7 @@ def main() -> int:
         "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
         "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
         "z3_lazy_transfer_promotion_not_derived": z3_lazy_transfer_promotion_not_derived,
+        "z3_lazy_selector_no_go_blocks": z3_lazy_selector_no_go_blocks,
         "same_surface_z3_taste_triplet_support_not_closure": same_surface_z3_taste_triplet_support_not_closure,
         "source_coordinate_transport_completion_blocks": source_coordinate_transport_completion_blocks,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,

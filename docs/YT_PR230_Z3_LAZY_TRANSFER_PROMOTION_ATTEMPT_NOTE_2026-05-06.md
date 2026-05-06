@@ -70,6 +70,12 @@ primitive compatible transfer does not identify which compatible transfer is
 physical.  A same-surface action, off-diagonal generator, or row certificate
 has to supply that selection.
 
+Follow-on selector testing is recorded in
+`docs/YT_PR230_Z3_LAZY_SELECTOR_NO_GO_NOTE_2026-05-06.md`.  That check shows
+that entropy and spectral-gap objectives can choose `eps=1/2` only by importing
+an external optimization principle, while stochasticity, aperiodicity, and
+reversibility do not derive the PR230 physical transfer.
+
 ## Claim Boundary
 
 This note does not claim retained or proposed-retained top-Yukawa closure.  It

@@ -74,6 +74,14 @@ dynamics.  Current artifacts are compatible with pure periodic `P` dynamics or
 lazy primitive `L` dynamics, so choosing `L` would import an unproved physical
 transfer term.
 
+The adjacent lazy-selector shortcut is also closed.  Stochasticity and
+Z3-commutation leave the full directed family `T_eps=eps I+(1-eps)P`;
+aperiodicity/primitive status leaves every `0<eps<1`; entropy and spectral-gap
+maximization choose `eps=1/2` only after importing an external optimization
+principle; and reversibility either selects identity in the directed family or
+the uniform transfer in the symmetric family.  None of these selectors is a
+same-surface PR230 transfer/action row.
+
 The FH/LSZ postprocess state is refreshed after the completed L12 replacement
 campaign.  The four-mode/x16 and separate eight-mode/x8 L12 chunked surfaces
 are complete and seed-controlled, but remain bounded support only.  They do
@@ -87,7 +95,8 @@ Best next work:
    run source-Higgs pole rows;
 2. derive a genuine two-source source-coordinate transport certificate;
 3. derive a same-surface H1 quark-bilinear Z3 action certificate, or bypass it
-   with a neutral off-diagonal generator / primitive-cone theorem;
+   with a neutral transfer row, off-diagonal generator, or primitive-cone
+   theorem;
 4. produce Schur A/B/C rows from a real neutral kernel basis;
 5. build W/Z response rows only if strict `g2`, covariance, and `delta_perp`
    authority are also supplied.
@@ -95,3 +104,5 @@ Best next work:
 Do not close the larger source-Higgs route based on this block alone.
 Do not close it from completed L12 FH/LSZ support rows either.
 Do not close it from the origin/main EW M-residual CMT/Fierz packet.
+Do not close it by adding entropy, spectral-gap, reversibility, or Markov-lazy
+selectors unless the same-surface PR230 action derives that selector.

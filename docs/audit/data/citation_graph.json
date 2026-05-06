@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T13:28:31.183426+00:00",
+  "generated_at": "2026-05-06T13:39:39.451673+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41983,7 +41983,7 @@
       "current_status": "open",
       "current_status_raw": "open / active campaign continuing after current shortcut blocks",
       "deps": [],
-      "note_hash": "ac89eb28ac733dc670809f4c9cc24ea68d3fc0fb3ac9053ed3062d83500c31e2",
+      "note_hash": "5eb37fd9c319d6b56ce9339d2465713b1bc700208b0a4a66f4e34f1bc10a93ba",
       "path": "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_pr230_campaign_status_certificate.py",
       "title": "PR230 Top-Yukawa Physics-Loop Campaign Status Certificate"
@@ -42718,12 +42718,22 @@
       "runner_path": "scripts/frontier_yt_pr230_z3_generation_action_lift_attempt.py",
       "title": "PR230 Z3 Generation-Action Lift Attempt"
     },
+    "yt_pr230_z3_lazy_selector_no_go_note_2026-05-06": {
+      "claim_id": "yt_pr230_z3_lazy_selector_no_go_note_2026-05-06",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / Z3 lazy selector shortcuts do not derive",
+      "deps": [],
+      "note_hash": "db6f0c51e57e64e0a110c7b8db2992fad6ad7cbbbfe13f50b6fe7fcc13404085",
+      "path": "docs/YT_PR230_Z3_LAZY_SELECTOR_NO_GO_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_z3_lazy_selector_no_go.py",
+      "title": "PR230 Z3 Lazy-Selector No-Go"
+    },
     "yt_pr230_z3_lazy_transfer_promotion_attempt_note_2026-05-06": {
       "claim_id": "yt_pr230_z3_lazy_transfer_promotion_attempt_note_2026-05-06",
       "current_status": "unknown",
       "current_status_raw": "exact negative boundary / Z3 lazy-transfer promotion not derivable",
       "deps": [],
-      "note_hash": "1403d4c7f56dfac78631cb5ab4e11e3220658b839693fdf52ccdd7d4ba8e3f07",
+      "note_hash": "7aa6426f83cc07357aaf047e1ac0dbe4e704f8284519636dfc5b2491f845c08e",
       "path": "docs/YT_PR230_Z3_LAZY_TRANSFER_PROMOTION_ATTEMPT_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_z3_lazy_transfer_promotion_attempt.py",
       "title": "PR230 Z3 Lazy-Transfer Promotion Attempt"
@@ -42785,7 +42795,7 @@
       "current_status": "open",
       "current_status_raw": "open / closure not yet reached",
       "deps": [],
-      "note_hash": "6222836832d890755786eb4ea634c73a4c896c9148078ad6d951d60609d49d53",
+      "note_hash": "a40ea3bbca4476380aba8177f9069d16718fa6cf9207f5b0e22d262eeda3be49",
       "path": "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_retained_closure_route_certificate.py",
       "title": "PR230 Top-Yukawa Retained-Closure Route Certificate"
@@ -45478,6 +45488,7 @@
     "yt_pr230_wz_response_route_completion_note_2026-05-06",
     "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05",
     "yt_pr230_z3_generation_action_lift_attempt_note_2026-05-06",
+    "yt_pr230_z3_lazy_selector_no_go_note_2026-05-06",
     "yt_pr230_z3_lazy_transfer_promotion_attempt_note_2026-05-06",
     "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06",
     "yt_production_resource_projection_note_2026-05-01",
@@ -45598,17 +45609,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1086,
-    "node_count": 2039,
-    "root_count": 1552,
-    "runners_with_path": 1535,
+    "leaf_count": 1087,
+    "node_count": 2040,
+    "root_count": 1553,
+    "runners_with_path": 1536,
     "status_counts": {
       "bounded": 556,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 436,
-      "unknown": 571
+      "unknown": 572
     }
   }
 }

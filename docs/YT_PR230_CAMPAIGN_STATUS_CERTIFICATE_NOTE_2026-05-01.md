@@ -28,8 +28,25 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=249 FAIL=0
+# SUMMARY: PASS=292 FAIL=0
 ```
+
+## 2026-05-06 Z3 Lazy-Selector No-Go Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_z3_lazy_selector_no_go_2026-05-06.json`.
+
+This closes the adjacent shortcut after the Z3 lazy-transfer promotion
+boundary.  Stochasticity and Z3 symmetry leave a family
+`T_eps=eps I+(1-eps)P`; aperiodicity leaves every `0<eps<1`; entropy and
+spectral-gap objectives select `eps=1/2` only by importing an external
+optimization principle; and reversibility selects identity or the uniform
+symmetric transfer rather than the directed lazy matrix.  No current-surface
+physical transfer/action row is derived.
+
+Validation: Z3 lazy-selector no-go `PASS=22 FAIL=0`; full positive closure
+assembly gate `PASS=116 FAIL=0`; retained-route `PASS=262 FAIL=0`; campaign
+status `PASS=292 FAIL=0`.
 
 ## 2026-05-05 Cycle-34 Post-Cycle-33 Main Non-PR230 Drift Reopen Update
 

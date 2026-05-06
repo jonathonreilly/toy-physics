@@ -1,0 +1,540 @@
+{
+  "actual_current_surface_status": "exact negative boundary / Z3 lazy selector shortcuts do not derive the PR230 physical neutral transfer",
+  "admitted_observation_status": null,
+  "aggregate_gates_still_open": true,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "If a future same-surface action principle or transfer row supplies the lazy coefficient, the conditional primitive theorem can use it. The selector criteria tested here do not supply that action.",
+  "conditional_theorem_only": true,
+  "directed_reversibility_selects_identity_not_lazy": true,
+  "directed_transfer_family": [
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "doubly_stochastic": true,
+      "eps": "0",
+      "matrix": [
+        [
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ]
+      ],
+      "primitive": false,
+      "primitive_power": null,
+      "reversible_with_uniform_measure": false,
+      "row_entropy": 0.0,
+      "row_stochastic": true,
+      "second_eigen_modulus_squared": "1"
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "doubly_stochastic": true,
+      "eps": "1/8",
+      "matrix": [
+        [
+          "1/8",
+          "0",
+          "7/8"
+        ],
+        [
+          "7/8",
+          "1/8",
+          "0"
+        ],
+        [
+          "0",
+          "7/8",
+          "1/8"
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 2,
+      "reversible_with_uniform_measure": false,
+      "row_entropy": 0.37677016125643675,
+      "row_stochastic": true,
+      "second_eigen_modulus_squared": "43/64"
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "doubly_stochastic": true,
+      "eps": "1/4",
+      "matrix": [
+        [
+          "1/4",
+          "0",
+          "3/4"
+        ],
+        [
+          "3/4",
+          "1/4",
+          "0"
+        ],
+        [
+          "0",
+          "3/4",
+          "1/4"
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 2,
+      "reversible_with_uniform_measure": false,
+      "row_entropy": 0.5623351446188083,
+      "row_stochastic": true,
+      "second_eigen_modulus_squared": "7/16"
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "doubly_stochastic": true,
+      "eps": "1/3",
+      "matrix": [
+        [
+          "1/3",
+          "0",
+          "2/3"
+        ],
+        [
+          "2/3",
+          "1/3",
+          "0"
+        ],
+        [
+          "0",
+          "2/3",
+          "1/3"
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 2,
+      "reversible_with_uniform_measure": false,
+      "row_entropy": 0.6365141682948128,
+      "row_stochastic": true,
+      "second_eigen_modulus_squared": "1/3"
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "doubly_stochastic": true,
+      "eps": "1/2",
+      "matrix": [
+        [
+          "1/2",
+          "0",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "1/2",
+          "0"
+        ],
+        [
+          "0",
+          "1/2",
+          "1/2"
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 2,
+      "reversible_with_uniform_measure": false,
+      "row_entropy": 0.6931471805599453,
+      "row_stochastic": true,
+      "second_eigen_modulus_squared": "1/4"
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "doubly_stochastic": true,
+      "eps": "2/3",
+      "matrix": [
+        [
+          "2/3",
+          "0",
+          "1/3"
+        ],
+        [
+          "1/3",
+          "2/3",
+          "0"
+        ],
+        [
+          "0",
+          "1/3",
+          "2/3"
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 2,
+      "reversible_with_uniform_measure": false,
+      "row_entropy": 0.6365141682948128,
+      "row_stochastic": true,
+      "second_eigen_modulus_squared": "1/3"
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "doubly_stochastic": true,
+      "eps": "3/4",
+      "matrix": [
+        [
+          "3/4",
+          "0",
+          "1/4"
+        ],
+        [
+          "1/4",
+          "3/4",
+          "0"
+        ],
+        [
+          "0",
+          "1/4",
+          "3/4"
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 2,
+      "reversible_with_uniform_measure": false,
+      "row_entropy": 0.5623351446188083,
+      "row_stochastic": true,
+      "second_eigen_modulus_squared": "7/16"
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "doubly_stochastic": true,
+      "eps": "7/8",
+      "matrix": [
+        [
+          "7/8",
+          "0",
+          "1/8"
+        ],
+        [
+          "1/8",
+          "7/8",
+          "0"
+        ],
+        [
+          "0",
+          "1/8",
+          "7/8"
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 2,
+      "reversible_with_uniform_measure": false,
+      "row_entropy": 0.37677016125643675,
+      "row_stochastic": true,
+      "second_eigen_modulus_squared": "43/64"
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "doubly_stochastic": true,
+      "eps": "1",
+      "matrix": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "primitive": false,
+      "primitive_power": null,
+      "reversible_with_uniform_measure": true,
+      "row_entropy": 0.0,
+      "row_stochastic": true,
+      "second_eigen_modulus_squared": "1"
+    }
+  ],
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "Supply a same-surface neutral transfer/action row or an equivalent off-diagonal-generator / primitive-cone certificate, or bypass this Z3 route through canonical O_H/C_sH/C_HH, same-source W/Z response, Schur A/B/C rows, or scalar-LSZ authority.",
+  "external_directed_selectors_pick_lazy": true,
+  "external_selector_not_parent_authority": true,
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claims_retained_or_proposed_retained_closure": false,
+    "imports_entropy_or_spectral_gap_objective_as_pr230_dynamics": false,
+    "imports_markov_lazy_averaging_convention_as_pr230_dynamics": false,
+    "sets_c2_equal_one": false,
+    "sets_kappa_s_equal_one": false,
+    "sets_lazy_coefficient_by_definition": false,
+    "sets_z_match_equal_one": false,
+    "treats_symmetry_automorphism_as_physical_transfer": false,
+    "uses_alpha_lm_plaquette_or_u0": false,
+    "uses_hunit_matrix_element_readout": false,
+    "uses_observed_top_mass_or_yukawa_as_selector": false,
+    "uses_reduced_pilots_as_production_evidence": false,
+    "uses_yt_ward_identity_as_authority": false
+  },
+  "generation_action_still_absent": true,
+  "hypothetical_axiom_status": "Adding entropy maximization, spectral-gap maximization, or Markov lazy averaging as a new axiom can select a transfer, but that is not retained-grade closure on the current PR230 surface.",
+  "markov_lazy_convention_is_definition": true,
+  "neutral_route_still_open": true,
+  "no_future_transfer_artifact": true,
+  "offdiagonal_generator_absent": true,
+  "parent_cycle_valid": true,
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "neutral_offdiagonal_generator": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
+    "neutral_primitive_route_completion": "exact negative boundary / neutral primitive-rank-one route not complete on current PR230 surface",
+    "retained_route": "open / retained closure not yet reached",
+    "same_surface_z3_taste_triplet": "exact-support / same-surface Z3 taste-triplet artifact; physical neutral transfer still absent",
+    "z3_generation_action_lift": "exact negative boundary / Z3 generation-action lift to PR230 quark-bilinear triplet not derived on current surface",
+    "z3_lazy_transfer_promotion_attempt": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
+    "z3_triplet_conditional_primitive": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
+  },
+  "pass_count": 22,
+  "physical_lazy_transfer_instantiated": false,
+  "pr230_closure_authorized": false,
+  "promotion_boundary_valid": true,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Every successful selection of eps=1/2 imports an external optimization or convention; current same-surface artifacts provide only the Z3 symmetry action, not the physical transfer row.",
+  "reversible_selectors_pick_uniform_not_lazy": true,
+  "reversible_transfer_family": [
+    {
+      "b": "0",
+      "commutes_with_z3_cycle": true,
+      "doubly_stochastic": true,
+      "matrix": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "primitive": false,
+      "primitive_power": null,
+      "reversible_with_uniform_measure": true,
+      "row_distribution": [
+        "1",
+        "0",
+        "0"
+      ],
+      "row_entropy": 0.0,
+      "row_stochastic": true,
+      "second_eigenvalue": "1"
+    },
+    {
+      "b": "1/8",
+      "commutes_with_z3_cycle": true,
+      "doubly_stochastic": true,
+      "matrix": [
+        [
+          "3/4",
+          "1/8",
+          "1/8"
+        ],
+        [
+          "1/8",
+          "3/4",
+          "1/8"
+        ],
+        [
+          "1/8",
+          "1/8",
+          "3/4"
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 1,
+      "reversible_with_uniform_measure": true,
+      "row_distribution": [
+        "3/4",
+        "1/8",
+        "1/8"
+      ],
+      "row_entropy": 0.7356219397587946,
+      "row_stochastic": true,
+      "second_eigenvalue": "5/8"
+    },
+    {
+      "b": "1/4",
+      "commutes_with_z3_cycle": true,
+      "doubly_stochastic": true,
+      "matrix": [
+        [
+          "1/2",
+          "1/4",
+          "1/4"
+        ],
+        [
+          "1/4",
+          "1/2",
+          "1/4"
+        ],
+        [
+          "1/4",
+          "1/4",
+          "1/2"
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 1,
+      "reversible_with_uniform_measure": true,
+      "row_distribution": [
+        "1/2",
+        "1/4",
+        "1/4"
+      ],
+      "row_entropy": 1.0397207708399179,
+      "row_stochastic": true,
+      "second_eigenvalue": "1/4"
+    },
+    {
+      "b": "1/3",
+      "commutes_with_z3_cycle": true,
+      "doubly_stochastic": true,
+      "matrix": [
+        [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        [
+          "1/3",
+          "1/3",
+          "1/3"
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 1,
+      "reversible_with_uniform_measure": true,
+      "row_distribution": [
+        "1/3",
+        "1/3",
+        "1/3"
+      ],
+      "row_entropy": 1.0986122886681096,
+      "row_stochastic": true,
+      "second_eigenvalue": "0"
+    },
+    {
+      "b": "1/2",
+      "commutes_with_z3_cycle": true,
+      "doubly_stochastic": true,
+      "matrix": [
+        [
+          "0",
+          "1/2",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "0",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "1/2",
+          "0"
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 2,
+      "reversible_with_uniform_measure": true,
+      "row_distribution": [
+        "0",
+        "1/2",
+        "1/2"
+      ],
+      "row_entropy": 0.6931471805599453,
+      "row_stochastic": true,
+      "second_eigenvalue": "-1/2"
+    }
+  ],
+  "selectors": {
+    "aperiodicity_or_primitivity": {
+      "reason": "every 0 < eps < 1 in the directed family is primitive",
+      "selected_eps": null,
+      "status": "insufficient"
+    },
+    "markov_lazy_average_convention": {
+      "reason": "L=(I+P)/2 is a chosen convention unless a same-surface action supplies it",
+      "selected_eps": "1/2",
+      "status": "definition_not_derivation"
+    },
+    "max_row_entropy_on_directed_family": {
+      "reason": "selects eps=1/2 only after importing entropy maximization",
+      "selected_eps": "1/2",
+      "status": "external_selector"
+    },
+    "max_spectral_gap_on_directed_family": {
+      "reason": "selects eps=1/2 only after importing gap optimization",
+      "selected_eps": "1/2",
+      "status": "external_selector"
+    },
+    "reversible_z3_family": {
+      "reason": "R_b gives symmetric transfers; entropy/gap pick uniform b=1/3, not L",
+      "selected_b": "1/3",
+      "status": "different_continuum"
+    },
+    "uniform_detailed_balance_on_directed_family": {
+      "reason": "selects reversible identity at eps=1, not primitive lazy transfer",
+      "selected_eps": "1",
+      "status": "wrong_target"
+    },
+    "z3_commuting_doubly_stochastic": {
+      "reason": "the whole directed T_eps family satisfies it",
+      "selected_eps": null,
+      "status": "insufficient"
+    }
+  },
+  "strict_future_artifact_presence": {
+    "canonical_oh_certificate": false,
+    "neutral_offdiagonal_generator_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "same_source_ew_action_certificate": false,
+    "same_surface_neutral_transfer": false,
+    "source_higgs_rows": false
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not define y_t through a matrix element or bare coupling",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not treat entropy or spectral-gap optimization as PR230 dynamics",
+    "does not treat Markov lazy averaging as a same-surface action row",
+    "does not set kappa_s, c2, Z_match, or a source-Higgs overlap to one"
+  ],
+  "writes_strict_future_certificate": false,
+  "z3_lazy_selector_no_go_passed": true
+}

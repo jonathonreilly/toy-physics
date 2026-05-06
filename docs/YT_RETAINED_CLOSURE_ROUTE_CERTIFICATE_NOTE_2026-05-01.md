@@ -18,8 +18,26 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=259 FAIL=0
+# SUMMARY: PASS=262 FAIL=0
 ```
+
+## 2026-05-06 Z3 Lazy-Selector No-Go Update
+
+The retained-route certificate now consumes
+`outputs/yt_pr230_z3_lazy_selector_no_go_2026-05-06.json`.
+
+This is an exact negative boundary for selector shortcuts.  Entropy and
+spectral-gap maximization can pick the lazy coefficient `eps=1/2` inside the
+directed compatible family only if that optimization rule is imported as an
+extra premise.  Z3 symmetry, stochasticity, and aperiodicity underdetermine
+`eps`, while reversibility selects a different target.  The missing retained
+bridge remains a same-surface neutral transfer/action row, off-diagonal
+generator, primitive-cone certificate, or a bypass through `O_H/C_sH/C_HH`,
+W/Z response, Schur rows, or scalar-LSZ authority.
+
+Validation: Z3 lazy-selector no-go `PASS=22 FAIL=0`; full positive closure
+assembly gate `PASS=116 FAIL=0`; retained-route `PASS=262 FAIL=0`; campaign
+status `PASS=292 FAIL=0`.
 
 ## 2026-05-06 Same-Surface Z3 Taste-Triplet Artifact Update
 
