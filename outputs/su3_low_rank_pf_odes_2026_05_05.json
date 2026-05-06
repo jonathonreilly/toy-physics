@@ -1,0 +1,79 @@
+{
+  "(0,0)": {
+    "order": 3,
+    "max_poly_deg": 2,
+    "P_polys": [
+      "-beta**2 - 10*beta",
+      "-4*beta**2 - 2*beta + 120",
+      "-beta**2 + 60*beta",
+      "6*beta**2"
+    ],
+    "verify_max_rel_err": 8.32805257165126e-11
+  },
+  "(1,0)": {
+    "order": 3,
+    "max_poly_deg": 4,
+    "P_polys": [
+      "-beta**4 - 20*beta**3 - 138*beta**2 - 240*beta - 1200",
+      "-4*beta**4 - 42*beta**3 + 30*beta**2 + 1200*beta",
+      "-beta**4 + 50*beta**3 + 660*beta**2",
+      "6*beta**4 + 60*beta**3"
+    ],
+    "verify_max_rel_err": 5.850110794382308e-12
+  },
+  "(1,1)": {
+    "order": 3,
+    "max_poly_deg": 3,
+    "P_polys": [
+      "-beta**3 - 13*beta**2 - 30*beta - 288",
+      "-4*beta**3 - 5*beta**2 + 78*beta",
+      "-beta**3 + 66*beta**2",
+      "6*beta**3"
+    ],
+    "verify_max_rel_err": 5.112140761307604e-12
+  },
+  "(2,0)": {
+    "order": 3,
+    "max_poly_deg": 5,
+    "P_polys": [
+      "-beta**5 - 17*beta**4 - 27*beta**3 + 540*beta**2 + 2100*beta + 30240",
+      "-4*beta**5 - 30*beta**4 + 321*beta**3 + 1428*beta**2 - 9072*beta",
+      "-beta**5 + 53*beta**4 + 546*beta**3 - 6048*beta**2",
+      "6*beta**5 + 42*beta**4 - 504*beta**3"
+    ],
+    "verify_max_rel_err": 1.5782449634871387e-08
+  },
+  "(2,1)": {
+    "order": 3,
+    "max_poly_deg": 5,
+    "P_polys": [
+      "-beta**5 - 50*beta**4 - 1320*beta**3 - 14304*beta**2 - 64224*beta - 483840",
+      "-4*beta**5 - 162*beta**4 - 3312*beta**3 - 6048*beta**2 + 41472*beta",
+      "-beta**5 + 20*beta**4 + 1872*beta**3 + 55296*beta**2",
+      "6*beta**5 + 240*beta**4 + 4608*beta**3"
+    ],
+    "verify_max_rel_err": 2.9064550637842238e-11
+  },
+  "(2,2)": {
+    "order": 3,
+    "max_poly_deg": 5,
+    "P_polys": [
+      "-beta**5 - 22*beta**4 - 924*beta**3 - 12960*beta**2 - 69696*beta - 691200",
+      "-4*beta**5 - 50*beta**4 - 3060*beta**3 - 6624*beta**2 - 8640*beta",
+      "-beta**5 + 48*beta**4 + 72*beta**3 + 51840*beta**2",
+      "6*beta**5 + 72*beta**4 + 4320*beta**3"
+    ],
+    "verify_max_rel_err": 3.067488737421028e-11
+  },
+  "(3,0)": {
+    "order": 3,
+    "max_poly_deg": 6,
+    "P_polys": [
+      "-beta**6 - 37*beta**5 - 387*beta**4 - 864*beta**3 - 3888*beta**2 + 104976*beta + 734832",
+      "-4*beta**6 - 110*beta**5 - 195*beta**4 + 3564*beta**3 + 16524*beta**2 - 81648*beta",
+      "-beta**6 + 33*beta**5 + 1782*beta**4 + 972*beta**3 - 75816*beta**2",
+      "6*beta**6 + 162*beta**5 - 5832*beta**3"
+    ],
+    "verify_max_rel_err": 3.128902436186098e-08
+  }
+}

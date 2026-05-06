@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 787 |
+| unaudited | 790 |
 | audit_in_progress | 3 |
 | meta | 48 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
-| ~~audited_conditional~~ | 462 |
+| ~~audited_conditional~~ | 461 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,16 +41,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 377 |
-| `audited_conditional` | 462 |
+| `audited_conditional` | 461 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 32 |
-| `unaudited` | 835 |
+| `unaudited` | 838 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 639 |
+| `bounded_theorem` | 641 |
 | `decoration` | 10 |
 | `meta` | 55 |
 | `no_go` | 186 |
@@ -61,7 +61,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `critical` | 944 |
 | `high` | 26 |
-| `medium` | 175 |
+| `medium` | 177 |
 | `leaf` | 651 |
 
 - **Retained pending chain closure:** 2
@@ -69,8 +69,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1380
-- runners with (C) first-principles compute hits: 682
+- runners classified: 1381
+- runners with (C) first-principles compute hits: 683
 - runners with (D) external comparator hits: 344
 - decoration candidates (no C, no D): 117
 
@@ -844,7 +844,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_scale_conditional_completion_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `plaquette_self_consistency_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
-| `plaquette_v1_picard_fuchs_ode_note_2026-05-05` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_c3_nontrivial_current_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_graph_first_axis_alignment_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -10143,19 +10142,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md`
   - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md`
   - `GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md`
-- **auditor confidence:** high
-
-### `plaquette_v1_picard_fuchs_ode_note_2026-05-05`
-
-- **Note:** [`PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md`](../../docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited only the bounded V=1 SU(3) single-plaquette Picard-Fuchs ODE check, Frobenius-series regular branch claim, and numerical Weyl/ODE agreement reported for beta in {2,4,6,8,10}.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-224540-97101c7f-plaquette_v1_picard_fuch-005`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The runner verifies the stated third-order Picard-Fuchs equation for the single-plaquette SU(3) Wilson integral and identifies the analytic Frobenius solution at beta=0 with the physical integral.  _(class `A`)_
-- **chain closes:** False — The runner performs a truncated symbolic series residual check and numerical agreement checks, but the restricted packet does not prove the Bessel-determinant identity, the Weyl integration formula, or that finite truncation establishes the Picard-Fuchs ODE exactly for J(beta). The missing step is an exact derivation of the ODE from the integral/accepted normalization, rather than finite-order and numerical verification.
-- **rationale:** The code does perform nontrivial symbolic and numerical checks, and the reported beta=6 value is computed by direct Weyl quadrature rather than merely printed. However, the ODE itself is hard-coded and only checked against a truncated series generated from an unproved Bessel-determinant identity, plus numerical comparator agreement at finitely many beta values. Because no cited retained authority or in-packet proof closes those analytic identities, the bounded theorem remains conditional on missing derivation steps.
 - **auditor confidence:** high
 
 ### `pmns_active_four_real_source_from_transport_note`

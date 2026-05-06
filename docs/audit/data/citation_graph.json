@@ -1278,6 +1278,14 @@
     },
     {
       "from": "canonical_harness_index",
+      "to": "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05"
+    },
+    {
+      "from": "canonical_harness_index",
       "to": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
     },
     {
@@ -13365,6 +13373,10 @@
       "to": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
     },
     {
+      "from": "su3_bridge_pr525_flaw_fix_note_2026-05-05",
+      "to": "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05"
+    },
+    {
       "from": "su3_casimir_fundamental_theorem_note_2026-05-02",
       "to": "cl3_color_automorphism_theorem"
     },
@@ -13415,6 +13427,10 @@
     {
       "from": "su3_dabc_symmetric_theorem_note_2026-05-02",
       "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05",
+      "to": "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
     },
     {
       "from": "su3_tensor_network_engine_roadmap_note_2026-05-03",
@@ -28920,6 +28936,8 @@
         "plaquette_4d_mc_support_note_2026-05-04",
         "gauge_wilson_isotropy_boundary_note_2026-05-04",
         "plaquette_4d_mc_fss_numerical_theorem_note_2026-05-05",
+        "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
+        "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05",
         "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05",
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19",
@@ -29128,7 +29146,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "8bafd4e1544a5515af9c1240f77d74e4a2d9dca279ac2419e6264a3b7568c43b",
+      "note_hash": "e24099ed1e3ba9e6f0da388da5c5e464748f7cd9fd0322433b51318ec7b25052",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -50368,6 +50386,19 @@
       "runner_path": "scripts/frontier_su3_bridge_rho_modification_scoping_2026_05_04.py",
       "title": "SU(3) Bridge Clean-Tube k=12 Support Calculation: \u03c1 = (c/c_00)^12 \u2192 P = 0.5888"
     },
+    "su3_bridge_pr525_flaw_fix_note_2026-05-05": {
+      "claim_id": "su3_bridge_pr525_flaw_fix_note_2026-05-05",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05"
+      ],
+      "note_hash": "095f2d52d20a78e5af24abfdf90de37483b9fbdceb80e1b18d89206ccb66ffcc",
+      "path": "docs/SU3_BRIDGE_PR525_FLAW_FIX_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR #525 Methodological Correction: K-Tube Denominator Test"
+    },
     "su3_casimir_fundamental_theorem_note_2026-05-02": {
       "claim_id": "su3_casimir_fundamental_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -50463,6 +50494,19 @@
       "path": "docs/SU3_FUSION_ENGINE_PR1_THEOREM_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_su3_fusion_engine.py",
       "title": "SU(3) Fusion Engine via Cartan-Torus Character Orthogonality (PR 1)"
+    },
+    "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05": {
+      "claim_id": "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
+      ],
+      "note_hash": "06cbf385c20e763cfd476e7205de98c9ba7320d88775734f9b8402963bde174c",
+      "path": "docs/SU3_LOW_RANK_IRREP_PICARD_FUCHS_ODES_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_su3_low_rank_picard_fuchs_odes_2026_05_05.py",
+      "title": "SU(3) Low-Rank Irrep Character Coefficients: Picard-Fuchs ODE Catalog"
     },
     "su3_tensor_network_engine_roadmap_note_2026-05-03": {
       "claim_id": "su3_tensor_network_engine_roadmap_note_2026-05-03",
@@ -55739,7 +55783,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 71,
+      "bounded_theorem": 73,
       "meta": 10,
       "no_go": 12,
       "none": 1711,
@@ -55747,17 +55791,17 @@
       "positive_theorem": 87
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 568,
+      "bounded_theorem": 570,
       "meta": 10,
       "no_go": 116,
       "none": 456,
       "open_gate": 118,
       "positive_theorem": 635
     },
-    "edge_count": 6579,
+    "edge_count": 6583,
     "leaf_count": 552,
-    "node_count": 1903,
+    "node_count": 1905,
     "root_count": 869,
-    "runners_with_path": 1477
+    "runners_with_path": 1478
   }
 }
