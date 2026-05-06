@@ -1,0 +1,165 @@
+{
+  "actual_current_surface_status": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent",
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "This supplies the algebraic H2 cone-support premise for the conditional Z3 primitive route. H3 and H4 remain absent: no same-surface physical lazy transfer/off-diagonal generator and no coupling to the PR230 source/canonical-Higgs sector are derived.",
+  "exact_next_action": "Derive or measure H3/H4: a same-surface physical lazy neutral transfer/off-diagonal generator coupled to the PR230 source or canonical-Higgs sector. Otherwise continue with O_H/C_sH/C_HH, W/Z response, Schur rows, or completed row production.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claims_retained_or_proposed_retained_closure": false,
+    "sets_kappa_s_c2_or_zmatch_to_one": false,
+    "sets_source_higgs_overlap_to_one": false,
+    "treats_positive_projector_cone_as_physical_transfer": false,
+    "treats_symmetry_automorphism_as_dynamics": false,
+    "uses_alpha_lm_plaquette_or_u0": false,
+    "uses_hunit_matrix_element_readout": false,
+    "uses_observed_top_or_yukawa_targets": false,
+    "uses_reduced_pilots_as_production_evidence": false,
+    "uses_yt_ward_identity_as_authority": false
+  },
+  "operator_witness": {
+    "axis_hilbert_schmidt_norms": [
+      2.8284271247461903,
+      2.8284271247461903,
+      2.8284271247461903
+    ],
+    "axis_labels": [
+      "S0=sigma_xII",
+      "S1=Isigma_xI",
+      "S2=IIsigma_x"
+    ],
+    "axis_reconstruction_max_errors": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "axis_traces": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "negative_projectors": "Q_i_minus=(I-S_i)/2",
+    "positive_cone_barycenter_eigenvalues": [
+      0.0,
+      0.333333333333,
+      0.333333333333,
+      0.333333333333,
+      0.666666666667,
+      0.666666666667,
+      0.666666666667,
+      1.0
+    ],
+    "positive_projectors": "Q_i_plus=(I+S_i)/2",
+    "projector_eigenvalues": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "projector_hilbert_schmidt_norms": [
+      2.0,
+      2.0,
+      2.0
+    ],
+    "projector_ranks": [
+      4,
+      4,
+      4
+    ],
+    "projector_traces": [
+      4.0,
+      4.0,
+      4.0
+    ],
+    "uniform_positive_cone_support": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "z3_cycle_images_Q_minus": [
+      1,
+      2,
+      0
+    ],
+    "z3_cycle_images_Q_plus": [
+      1,
+      2,
+      0
+    ]
+  },
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "neutral_primitive_route": "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_surface_z3_taste_triplet": "outputs/yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json",
+    "z3_lazy_transfer_promotion": "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json",
+    "z3_triplet_conditional_primitive": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "neutral_primitive_route": "exact negative boundary / neutral primitive-rank-one route not complete on current PR230 surface",
+    "retained_route": "open / retained closure not yet reached",
+    "same_surface_z3_taste_triplet": "exact-support / same-surface Z3 taste-triplet artifact; physical neutral transfer still absent",
+    "z3_lazy_transfer_promotion": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
+    "z3_triplet_conditional_primitive": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
+  },
+  "pass_count": 19,
+  "pr230_closure_authorized": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The certificate proves equal nonzero PSD cone support for the same-surface triplet, but does not instantiate physical dynamics, canonical O_H, source-Higgs rows, or retained-route closure.",
+  "remaining_unsupplied_conditional_premises": [
+    "H3",
+    "H4"
+  ],
+  "strict_future_artifact_presence": {
+    "canonical_oh_certificate": false,
+    "neutral_offdiagonal_generator_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "same_surface_neutral_transfer": false,
+    "source_higgs_rows": false
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not write a neutral primitive-cone certificate",
+    "does not treat PSD cone support as a physical transfer operator",
+    "does not treat symmetry averaging as dynamics",
+    "does not identify O_s, O_sp, or taste projectors with canonical O_H",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, or reduced pilots",
+    "does not set source-Higgs overlap, kappa_s, c2, or Z_match to one"
+  ],
+  "supplies_conditional_premises": {
+    "H1_same_surface_z3_cyclic_action_on_triplet": true,
+    "H2_positive_cone_equal_magnitude_support": true,
+    "H3_lazy_positive_physical_transfer": false,
+    "H4_transfer_couples_to_pr230_source_canonical_higgs_sector": false
+  },
+  "z3_triplet_positive_cone_h2_support_passed": true
+}

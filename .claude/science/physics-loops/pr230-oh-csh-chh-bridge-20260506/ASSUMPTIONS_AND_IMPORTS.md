@@ -125,6 +125,12 @@ Allowed context:
   `kappa_spH = Res(C_sH)/sqrt(Res(C_ss) Res(C_HH))` and proves source-scale
   invariance, but the current surface has no certified `O_H` row packet and
   does not set `kappa_s = 1`.
+- the Z3-triplet positive-cone H2 support certificate as exact algebraic
+  support only: the projectors `Q_i^+=(I+S_i)/2` are PSD, nonzero,
+  equal-rank/equal-norm, and cycled by the same Z3 operator.  This supplies
+  H2 for the conditional primitive route, but it is not a physical neutral
+  transfer, primitive irreducibility theorem, source-Higgs coupling, scalar
+  LSZ normalization, `kappa_s`, or `y_t` closure.
 
 Open imports after this block:
 
@@ -176,6 +182,9 @@ Open imports after this block:
 - The conditional lazy-Z3 theorem is not a proof selector until the PR230
   surface supplies the positive transfer/action, off-diagonal neutral
   generator, or strict primitive-cone certificate.
+- Z3 positive-cone H2 support is not a proof selector until the PR230 surface
+  supplies the physical transfer/action or off-diagonal generator (H3) and the
+  source/canonical-Higgs coupling authority (H4).
 - Koide/lepton Z3 is not a quark-bilinear generation-action proof selector
   until a same-surface H1 certificate selects the cyclic action and ties it to
   the PR230 source/action surface.

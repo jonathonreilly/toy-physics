@@ -268,6 +268,15 @@ not supply L16/L24 or equivalent multivolume scaling, an isolated scalar pole
 derivative, FV/IR/model-class authority, or canonical-Higgs/source-overlap /
 same-source W/Z response authority.
 
+The neutral Z3 primitive route now has a genuine H2 support artifact.
+`YT_PR230_Z3_TRIPLET_POSITIVE_CONE_SUPPORT_CERTIFICATE` proves that
+`Q_i^+=(I+S_i)/2` are positive semidefinite, nonzero, equal-rank/equal-norm
+projectors cycled by the same Z3 operator as the taste triplet.  This supplies
+the algebraic positive-cone/equal-magnitude premise for the conditional
+primitive contract.  It does not supply physical neutral transfer,
+off-diagonal dynamics, primitive irreducibility, source-Higgs coupling, or
+`kappa_s`; H3/H4 remain the blockers.
+
 Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then
@@ -292,9 +301,9 @@ Best next work:
    selector gate reduces the identity route to deriving the degree-one
    Higgs-action premise from a same-surface EW/Higgs action or
    canonical-operator theorem, not merely citing `Z3`, odd parity, or degree;
-3. derive a same-surface H1 quark-bilinear Z3 action certificate, or bypass it
-   with a neutral transfer row, off-diagonal generator, or primitive-cone
-   theorem;
+3. derive the remaining neutral primitive premises after H1/H2 support:
+   a physical lazy positive transfer/action or off-diagonal generator (H3),
+   plus coupling to the PR230 source/canonical-Higgs sector (H4);
 4. produce Schur A/B/C rows from a real neutral kernel basis;
 5. build W/Z response rows only if strict `g2`, covariance, and `delta_perp`
    authority are also supplied.
@@ -319,3 +328,6 @@ those rows as `C_sx/C_xx` aliases with canonical `O_H` identity false and no
 Yukawa readout.
 Do not close it by treating finite-mode `rho_sx` or `Delta_sx` scouts from the
 partial combiner as pole-residue Gram purity.
+Do not close it by treating Z3 positive-cone H2 support as a physical neutral
+transfer, primitive irreducibility theorem, source-Higgs coupling, or
+canonical-Higgs authority.

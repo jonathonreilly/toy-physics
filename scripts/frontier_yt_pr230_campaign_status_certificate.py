@@ -590,6 +590,9 @@ def main() -> int:
         "pr230_z3_triplet_conditional_primitive_cone": load(
             "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json"
         ),
+        "pr230_z3_triplet_positive_cone_support_certificate": load(
+            "outputs/yt_pr230_z3_triplet_positive_cone_support_certificate_2026-05-06.json"
+        ),
         "pr230_z3_generation_action_lift_attempt": load(
             "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json"
         ),
@@ -2546,6 +2549,29 @@ def main() -> int:
         and z3_triplet_conditional_primitive.get("pr230_closure_authorized")
         is False,
         statuses["pr230_z3_triplet_conditional_primitive_cone"],
+    )
+    z3_positive_cone_support = certificates[
+        "pr230_z3_triplet_positive_cone_support_certificate"
+    ]
+    report(
+        "pr230-z3-triplet-positive-cone-h2-support-not-transfer",
+        "Z3-triplet positive-cone H2 support"
+        in str(statuses["pr230_z3_triplet_positive_cone_support_certificate"])
+        and z3_positive_cone_support.get("proposal_allowed") is False
+        and z3_positive_cone_support.get(
+            "z3_triplet_positive_cone_h2_support_passed"
+        )
+        is True
+        and z3_positive_cone_support.get("pr230_closure_authorized") is False
+        and z3_positive_cone_support.get("supplies_conditional_premises", {}).get(
+            "H2_positive_cone_equal_magnitude_support"
+        )
+        is True
+        and z3_positive_cone_support.get("supplies_conditional_premises", {}).get(
+            "H3_lazy_positive_physical_transfer"
+        )
+        is False,
+        statuses["pr230_z3_triplet_positive_cone_support_certificate"],
     )
     z3_generation_action_lift = certificates["pr230_z3_generation_action_lift_attempt"]
     report(
@@ -4764,6 +4790,20 @@ def main() -> int:
         and z3_triplet_conditional_primitive.get("pr230_closure_authorized")
         is False
         and z3_triplet_conditional_primitive.get("proposal_allowed") is False
+    )
+    result["z3_triplet_positive_cone_h2_support_not_transfer"] = (
+        z3_positive_cone_support.get("z3_triplet_positive_cone_h2_support_passed")
+        is True
+        and z3_positive_cone_support.get("pr230_closure_authorized") is False
+        and z3_positive_cone_support.get("proposal_allowed") is False
+        and z3_positive_cone_support.get("supplies_conditional_premises", {}).get(
+            "H2_positive_cone_equal_magnitude_support"
+        )
+        is True
+        and z3_positive_cone_support.get("supplies_conditional_premises", {}).get(
+            "H3_lazy_positive_physical_transfer"
+        )
+        is False
     )
     result["z3_generation_action_lift_not_derived"] = (
         z3_generation_action_lift.get("h1_generation_action_lift_attempt_passed")

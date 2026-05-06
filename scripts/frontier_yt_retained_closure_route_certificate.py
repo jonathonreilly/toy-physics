@@ -151,6 +151,7 @@ def main() -> int:
         "pr230_origin_main_ew_m_residual_intake_guard": "outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json",
         "pr230_same_surface_z3_taste_triplet": "outputs/yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json",
         "pr230_z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
+        "pr230_z3_triplet_positive_cone_support": "outputs/yt_pr230_z3_triplet_positive_cone_support_certificate_2026-05-06.json",
         "pr230_z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
         "pr230_z3_lazy_transfer_promotion_attempt": "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json",
         "pr230_z3_lazy_selector_no_go": "outputs/yt_pr230_z3_lazy_selector_no_go_2026-05-06.json",
@@ -1251,6 +1252,32 @@ def main() -> int:
         and certificates["pr230_z3_triplet_conditional_primitive_cone"].get(
             "writes_strict_future_certificate"
         )
+        is False
+    )
+    z3_triplet_positive_cone_h2_support_not_transfer = (
+        "Z3-triplet positive-cone H2 support"
+        in certificates["pr230_z3_triplet_positive_cone_support"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_z3_triplet_positive_cone_support"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_z3_triplet_positive_cone_support"].get(
+            "z3_triplet_positive_cone_h2_support_passed"
+        )
+        is True
+        and certificates["pr230_z3_triplet_positive_cone_support"].get(
+            "pr230_closure_authorized"
+        )
+        is False
+        and certificates["pr230_z3_triplet_positive_cone_support"].get(
+            "supplies_conditional_premises", {}
+        ).get("H2_positive_cone_equal_magnitude_support")
+        is True
+        and certificates["pr230_z3_triplet_positive_cone_support"].get(
+            "supplies_conditional_premises", {}
+        ).get("H3_lazy_positive_physical_transfer")
         is False
     )
     z3_generation_action_lift_not_derived = (
@@ -4052,6 +4079,13 @@ def main() -> int:
         ),
     )
     report(
+        "z3-triplet-positive-cone-h2-support-not-transfer",
+        z3_triplet_positive_cone_h2_support_not_transfer,
+        certificates["pr230_z3_triplet_positive_cone_support"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "z3-generation-action-lift-not-derived",
         z3_generation_action_lift_not_derived,
         certificates["pr230_z3_generation_action_lift_attempt"].get(
@@ -5377,6 +5411,10 @@ def main() -> int:
             "cyclic action on the PR230 taste axes, but it remains support only: "
             "the physical lazy neutral transfer, source/Higgs row, and strict "
             "primitive certificate are still absent.  "
+            "The Z3-triplet positive-cone H2 support certificate now supplies "
+            "the equal-magnitude PSD cone row for that triplet exactly, but it "
+            "is still algebraic support only and not a physical transfer, "
+            "primitive irreducibility theorem, or source-Higgs coupling row.  "
             "The first-principles O_H bridge candidate portfolio ranks the "
             "surviving source-transport, action-first O_H, W/Z response, "
             "Schur-row, and neutral-primitive routes as open positive "
@@ -5555,6 +5593,7 @@ def main() -> int:
         "origin_main_composite_higgs_intake_not_closure": origin_main_composite_higgs_intake_not_closure,
         "origin_main_ew_m_residual_intake_not_closure": origin_main_ew_m_residual_intake_not_closure,
         "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
+        "z3_triplet_positive_cone_h2_support_not_transfer": z3_triplet_positive_cone_h2_support_not_transfer,
         "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
         "z3_lazy_transfer_promotion_not_derived": z3_lazy_transfer_promotion_not_derived,
         "z3_lazy_selector_no_go_blocks": z3_lazy_selector_no_go_blocks,

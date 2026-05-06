@@ -73,7 +73,8 @@
     "wz_smoke_promotion_no_go": "outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json",
     "z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
     "z3_lazy_transfer_promotion_attempt": "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json",
-    "z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json"
+    "z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
+    "z3_triplet_positive_cone_support": "outputs/yt_pr230_z3_triplet_positive_cone_support_certificate_2026-05-06.json"
   },
   "parent_statuses": {
     "campaign_status": "open / active campaign continuing after current shortcut blocks",
@@ -115,9 +116,10 @@
     "wz_smoke_promotion_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
     "z3_generation_action_lift_attempt": "exact negative boundary / Z3 generation-action lift to PR230 quark-bilinear triplet not derived on current surface",
     "z3_lazy_transfer_promotion_attempt": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
-    "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
+    "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
+    "z3_triplet_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent"
   },
-  "pass_count": 43,
+  "pass_count": 44,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "degree_one_higgs_action_premise_not_derived": true,
@@ -152,7 +154,8 @@
     "two_source_taste_radial_support_not_closure": true,
     "z3_generation_action_lift_not_derived": true,
     "z3_lazy_transfer_promotion_not_derived": true,
-    "z3_triplet_conditional_primitive_not_closure": true
+    "z3_triplet_conditional_primitive_not_closure": true,
+    "z3_triplet_positive_cone_h2_support_not_transfer": true
   },
   "prompt_to_artifact_checklist": [
     {
@@ -423,6 +426,7 @@
     "does not claim retained or proposed_retained y_t closure",
     "does not treat completed chunks as scalar-LSZ or source-overlap authority",
     "does not treat W/Z smoke rows as production response rows",
+    "does not treat Z3 H2 positive-cone support as physical neutral transfer or primitive irreducibility",
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
     "does not set c2=1, Z_match=1, or kappa_s=1"
   ]

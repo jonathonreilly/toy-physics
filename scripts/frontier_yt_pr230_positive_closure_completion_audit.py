@@ -29,6 +29,7 @@ PARENTS = {
     "origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
     "origin_main_ew_m_residual_intake_guard": "outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json",
     "z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
+    "z3_triplet_positive_cone_support": "outputs/yt_pr230_z3_triplet_positive_cone_support_certificate_2026-05-06.json",
     "z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
     "z3_lazy_transfer_promotion_attempt": "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json",
     "two_source_taste_radial_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json",
@@ -528,6 +529,28 @@ def main() -> int:
         and "same-surface PR230 primitive premise absent"
         in parent_statuses["z3_triplet_conditional_primitive_cone"]
     )
+    z3_triplet_positive_cone_h2_support_not_transfer = (
+        certs["z3_triplet_positive_cone_support"].get(
+            "z3_triplet_positive_cone_h2_support_passed"
+        )
+        is True
+        and certs["z3_triplet_positive_cone_support"].get("proposal_allowed")
+        is False
+        and certs["z3_triplet_positive_cone_support"].get(
+            "pr230_closure_authorized"
+        )
+        is False
+        and certs["z3_triplet_positive_cone_support"].get(
+            "supplies_conditional_premises", {}
+        ).get("H2_positive_cone_equal_magnitude_support")
+        is True
+        and certs["z3_triplet_positive_cone_support"].get(
+            "supplies_conditional_premises", {}
+        ).get("H3_lazy_positive_physical_transfer")
+        is False
+        and "Z3-triplet positive-cone H2 support"
+        in parent_statuses["z3_triplet_positive_cone_support"]
+    )
     z3_generation_action_lift_not_derived = (
         certs["z3_generation_action_lift_attempt"].get(
             "h1_generation_action_lift_attempt_passed"
@@ -626,6 +649,7 @@ def main() -> int:
     report("origin-main-composite-higgs-intake-not-closure", origin_main_composite_higgs_not_closure, parent_statuses["origin_main_composite_higgs_intake_guard"])
     report("origin-main-ew-m-residual-intake-not-closure", origin_main_ew_m_residual_not_closure, parent_statuses["origin_main_ew_m_residual_intake_guard"])
     report("z3-triplet-conditional-primitive-support-not-closure", z3_triplet_conditional_primitive_not_closure, parent_statuses["z3_triplet_conditional_primitive_cone"])
+    report("z3-triplet-positive-cone-h2-support-not-transfer", z3_triplet_positive_cone_h2_support_not_transfer, parent_statuses["z3_triplet_positive_cone_support"])
     report("z3-generation-action-lift-not-derived", z3_generation_action_lift_not_derived, parent_statuses["z3_generation_action_lift_attempt"])
     report("z3-lazy-transfer-promotion-not-derived", z3_lazy_transfer_promotion_not_derived, parent_statuses["z3_lazy_transfer_promotion_attempt"])
     report("future-bridge-artifact-files-support-only-or-absent", no_unclosed_future_bridge_files_present, str(future_bridge_presence))
@@ -780,6 +804,7 @@ def main() -> int:
             "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
             "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,
             "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
+            "z3_triplet_positive_cone_h2_support_not_transfer": z3_triplet_positive_cone_h2_support_not_transfer,
             "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
             "z3_lazy_transfer_promotion_not_derived": z3_lazy_transfer_promotion_not_derived,
             "future_bridge_file_presence": future_bridge_presence,
@@ -792,6 +817,7 @@ def main() -> int:
             "does not claim retained or proposed_retained y_t closure",
             "does not treat completed chunks as scalar-LSZ or source-overlap authority",
             "does not treat W/Z smoke rows as production response rows",
+            "does not treat Z3 H2 positive-cone support as physical neutral transfer or primitive irreducibility",
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
             "does not set c2=1, Z_match=1, or kappa_s=1",
         ],

@@ -68,11 +68,12 @@
 3. Neutral off-diagonal generator / primitive-cone theorem.  The lazy-Z3
    matrix step is now conditionally solved, and direct promotion from cyclic
    symmetry `P` to lazy physical transfer `L=(I+P)/2` is blocked.  The missing
-   artifact is still the same-surface positive transfer/action or
-   off-diagonal generator that makes that matrix load-bearing for PR230.  If
-   pursuing the origin/main composite route directly, first supply H1: a
-   same-surface quark-bilinear Z3 action certificate selecting the cyclic
-   action.
+   H2 positive-cone/equal-magnitude premise is now supplied algebraically by
+   `Q_i^+=(I+S_i)/2` PSD projectors cycled by the same Z3 operator.  The
+   remaining artifact is still the same-surface physical positive transfer/
+   action or off-diagonal generator that makes that matrix load-bearing for
+   PR230, plus the coupling of that transfer to the source/canonical-Higgs
+   sector.  Do not treat H2 cone support as H3/H4.
 4. Schur A/B/C row production from a real neutral kernel basis.
 5. Same-source W/Z response rows with matched top/W covariance, `delta_perp`
    authority, and strict non-observed `g2`.

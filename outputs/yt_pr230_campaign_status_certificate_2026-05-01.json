@@ -344,6 +344,7 @@
     "pr230_z3_lazy_selector_no_go": "exact negative boundary / Z3 lazy selector shortcuts do not derive the PR230 physical neutral transfer",
     "pr230_z3_lazy_transfer_promotion_attempt": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
     "pr230_z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
+    "pr230_z3_triplet_positive_cone_support_certificate": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent",
     "production_resource": "bounded support / production resource projection",
     "projector_norm": "exact negative boundary / projector-normalization obstruction",
     "reflection_positivity_lsz_shortcut": "exact negative boundary / reflection positivity not scalar LSZ closure",
@@ -439,7 +440,7 @@
   "oh_bridge_candidate_portfolio_open": true,
   "origin_main_composite_higgs_intake_not_closure": true,
   "origin_main_ew_m_residual_intake_not_closure": true,
-  "pass_count": 316,
+  "pass_count": 317,
   "post_fms_source_overlap_necessity_blocks_current_inference": true,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
@@ -574,5 +575,6 @@
   "z3_generation_action_lift_not_derived": true,
   "z3_lazy_selector_no_go_blocks": true,
   "z3_lazy_transfer_promotion_not_derived": true,
-  "z3_triplet_conditional_primitive_not_closure": true
+  "z3_triplet_conditional_primitive_not_closure": true,
+  "z3_triplet_positive_cone_h2_support_not_transfer": true
 }

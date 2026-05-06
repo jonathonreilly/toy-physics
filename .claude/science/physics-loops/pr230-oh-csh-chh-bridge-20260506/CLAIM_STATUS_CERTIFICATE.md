@@ -90,6 +90,12 @@ rows with strict `g2`, covariance, and `delta_perp` authority.
 The lazy-Z3 primitive theorem may support a future neutral primitive certificate
 only after a same-surface positive transfer or off-diagonal generator is
 derived; it is not itself a PR230 closure artifact.
+The Z3-triplet positive-cone H2 certificate supplies the algebraic cone-support
+premise for that future route: `Q_i^+=(I+S_i)/2` are PSD, nonzero,
+equal-rank/equal-norm, and Z3-cycled.  It is exact support only.  It does not
+instantiate a physical neutral transfer, prove primitive irreducibility, couple
+the triplet to the PR230 source/canonical-Higgs sector, set `kappa_s`, or
+authorize retained/proposed-retained closure.
 The H1 lift attempt may guide a future composite-Higgs certificate, but it
 currently blocks the shortcut from Koide/lepton Z3 to the quark-bilinear
 triplet action.

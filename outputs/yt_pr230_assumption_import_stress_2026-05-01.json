@@ -64,11 +64,12 @@
     "wz_response_route_completion": "exact negative boundary / WZ same-source response route not complete on current PR230 surface",
     "z3_generation_action_lift_attempt": "exact negative boundary / Z3 generation-action lift to PR230 quark-bilinear triplet not derived on current surface",
     "z3_lazy_transfer_promotion_attempt": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
-    "z3_triplet_conditional_primitive_cone_theorem": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
+    "z3_triplet_conditional_primitive_cone_theorem": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
+    "z3_triplet_positive_cone_support_certificate": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent"
   },
   "fail_count": 0,
   "missing_forbidden_terms": [],
-  "pass_count": 70,
+  "pass_count": 71,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
   "strict_non_claims": [

@@ -94,6 +94,7 @@ PARENTS = {
     "pr230_origin_main_ew_m_residual_intake_guard": "outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json",
     "pr230_same_surface_z3_taste_triplet": "outputs/yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json",
     "pr230_z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
+    "pr230_z3_triplet_positive_cone_support": "outputs/yt_pr230_z3_triplet_positive_cone_support_certificate_2026-05-06.json",
     "pr230_z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
     "pr230_z3_lazy_transfer_promotion_attempt": "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json",
     "pr230_z3_lazy_selector_no_go": "outputs/yt_pr230_z3_lazy_selector_no_go_2026-05-06.json",
@@ -557,6 +558,28 @@ def main() -> int:
         and certs["pr230_z3_triplet_conditional_primitive_cone"].get(
             "writes_strict_future_certificate"
         )
+        is False
+    )
+    z3_triplet_positive_cone_h2_support_not_transfer = (
+        "Z3-triplet positive-cone H2 support"
+        in statuses["pr230_z3_triplet_positive_cone_support"]
+        and certs["pr230_z3_triplet_positive_cone_support"].get("proposal_allowed")
+        is False
+        and certs["pr230_z3_triplet_positive_cone_support"].get(
+            "z3_triplet_positive_cone_h2_support_passed"
+        )
+        is True
+        and certs["pr230_z3_triplet_positive_cone_support"].get(
+            "pr230_closure_authorized"
+        )
+        is False
+        and certs["pr230_z3_triplet_positive_cone_support"].get(
+            "supplies_conditional_premises", {}
+        ).get("H2_positive_cone_equal_magnitude_support")
+        is True
+        and certs["pr230_z3_triplet_positive_cone_support"].get(
+            "supplies_conditional_premises", {}
+        ).get("H3_lazy_positive_physical_transfer")
         is False
     )
     z3_generation_action_lift_not_derived = (
@@ -1137,6 +1160,7 @@ def main() -> int:
         and origin_main_composite_higgs_not_closure
         and origin_main_ew_m_residual_not_closure
         and z3_triplet_conditional_primitive_not_closure
+        and z3_triplet_positive_cone_h2_support_not_transfer
         and z3_generation_action_lift_not_derived
         and z3_lazy_transfer_promotion_not_derived
         and z3_lazy_selector_no_go_blocks
@@ -1616,6 +1640,11 @@ def main() -> int:
         "z3-triplet-conditional-primitive-support-not-closure",
         z3_triplet_conditional_primitive_not_closure,
         statuses["pr230_z3_triplet_conditional_primitive_cone"],
+    )
+    report(
+        "z3-triplet-positive-cone-h2-support-not-transfer",
+        z3_triplet_positive_cone_h2_support_not_transfer,
+        statuses["pr230_z3_triplet_positive_cone_support"],
     )
     report(
         "z3-generation-action-lift-not-derived",
@@ -2558,6 +2587,10 @@ def main() -> int:
             "support for a lazy cyclic neutral transfer, but it does not supply "
             "the missing same-surface PR230 action/off-diagonal generator or "
             "strict primitive certificate."
+            " The Z3-triplet positive-cone H2 support certificate now supplies "
+            "the equal-magnitude PSD cone row for the taste triplet exactly, "
+            "but it is algebraic support only and does not instantiate a "
+            "physical neutral transfer or source/Higgs coupling."
             " The H1 generation-action lift attempt shows that Koide/lepton Z3 "
             "does not yet select cyclic quark-bilinear action over the trivial "
             "action on the PR230 surface."
@@ -2649,6 +2682,7 @@ def main() -> int:
         "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
         "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,
         "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
+        "z3_triplet_positive_cone_h2_support_not_transfer": z3_triplet_positive_cone_h2_support_not_transfer,
         "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
         "z3_lazy_transfer_promotion_not_derived": z3_lazy_transfer_promotion_not_derived,
         "z3_lazy_selector_no_go_blocks": z3_lazy_selector_no_go_blocks,
@@ -2705,6 +2739,7 @@ def main() -> int:
             "does not treat current-surface non-chunk exhaustion as retained closure",
             "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
             "does not treat conditional Z3-triplet primitive support as a strict PR230 primitive certificate",
+            "does not treat Z3 H2 positive-cone support as physical neutral transfer, primitive irreducibility, or source-Higgs coupling authority",
             "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
             "does not treat the two-source taste-radial chart as canonical O_H or production source-Higgs rows",
             "does not treat the two-source taste-radial row production manifest as C_sx/C_xx row data or pole evidence",

@@ -7,6 +7,9 @@ This block lands:
 - an executable `origin/main` composite-Higgs intake guard for cross-lane
   candidate context;
 - an executable conditional lazy-Z3 primitive-cone theorem runner;
+- an executable Z3-triplet positive-cone H2 support certificate proving the
+  same-surface PSD/equal-magnitude projector row while preserving the missing
+  physical-transfer and source-Higgs coupling firewalls;
 - an executable H1 Z3 generation-action lift attempt runner;
 - an executable Z3 lazy-transfer promotion attempt runner that blocks treating
   the same-surface cyclic symmetry as a physical lazy neutral transfer;
