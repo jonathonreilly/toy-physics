@@ -16,9 +16,10 @@ Verifies the standalone Euclidean-geometry / similar-triangles identity:
                cos(2 * gamma_bar)  =  cos(2 * gamma);
     (iii)  the radial distance scales as mu:
                sqrt(rho_bar^2 + eta_bar^2)  =  mu * sqrt(rho^2 + eta^2);
-    (iv)   the angle at (1, 0) (i.e. arctan(eta_bar / (1 - rho_bar))) does
-           NOT in general equal the original angle at (1, 0); it is moved
-           by the radial scaling.
+    (iv)   on the finite-tangent subdomain rho != 1 and mu*rho != 1, the
+           angle at (1, 0) (i.e. arctan(eta_bar / (1 - rho_bar))) does NOT
+           in general equal the original angle at (1, 0); its tangent
+           readout is preserved iff mu = 1.
 
 This is class-A pure plane geometry / similar-triangles identity. No
 CKM-specific input, no Wolfenstein / atlas-triangle / alpha_s / CP-phase
@@ -124,13 +125,24 @@ check("sqrt(rho_bar^2 + eta_bar^2) = mu * sqrt(rho^2 + eta^2)",
 
 
 # ----------------------------------------------------------------------------
-section("Part 5: angle at (1, 0) is NOT preserved (counter-illustrates non-protection)")
+section("Part 5: angle at (1, 0) is NOT preserved on finite-tangent domain")
 # ----------------------------------------------------------------------------
 # The angle from (1, 0) to (rho_bar, eta_bar):
 #   tan(beta_bar) = eta_bar / (1 - rho_bar)
-# is NOT equal to tan(beta) = eta / (1 - rho) when mu != 1, in general.
+# is NOT equal to tan(beta) = eta / (1 - rho) when mu != 1, provided both
+# finite tangent readouts are defined: rho != 1 and mu*rho != 1.
 beta_orig_tan = simplify(eta / (1 - rho))
 beta_bar_tan = simplify(eta_bar / (1 - rho_bar))
+beta_diff = simplify(beta_bar_tan - beta_orig_tan)
+beta_diff_expected = simplify(eta * (mu - 1) / ((1 - mu * rho) * (1 - rho)))
+
+check("tan(beta_bar) - tan(beta) factors as eta*(mu - 1)/((1 - mu*rho)*(1 - rho))",
+      simplify(beta_diff - beta_diff_expected) == 0,
+      detail=f"diff = {beta_diff}")
+note_text = (ROOT / "docs" / "RADIAL_SCALING_PROTECTED_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md").read_text()
+check("source note states finite-tangent exclusions rho != 1 and mu*rho != 1",
+      "rho != 1" in note_text and "mu*rho != 1" in note_text,
+      detail="domain guard is explicit in the theorem statement")
 
 # Try a concrete substitution to confirm they differ.
 diff_at_concrete = simplify((beta_bar_tan - beta_orig_tan).subs(
@@ -192,10 +204,12 @@ print("""
           exact (doubled-angle preserved);
     (iv)  sqrt(rho_bar^2 + eta_bar^2) = mu * sqrt(rho^2 + eta^2)
           (radial distance scales as mu);
-    (v)   the angle at (1, 0), tan(beta_bar) = eta_bar / (1 - rho_bar),
-          is NOT in general equal to tan(beta) = eta / (1 - rho)
+    (v)   on the finite-tangent subdomain rho != 1 and mu*rho != 1, the
+          angle at (1, 0), tan(beta_bar) = eta_bar / (1 - rho_bar), is
+          NOT equal to tan(beta) = eta / (1 - rho) unless mu = 1
           (counter-illustrates non-protection: only the origin-angle
-          and radial distance behave canonically).
+          and radial distance behave canonically on the whole stated
+          radial-scaling domain).
 
   Audit-lane class:
     (A) — pure plane geometry / similar-triangles identity. No CKM-

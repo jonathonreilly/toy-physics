@@ -1,0 +1,31 @@
+loop_slug: radial-scaling-angle-domain-repair
+mode: run
+target_prompt: docs/audit/MISSING_DERIVATION_PROMPTS.md#radial_scaling_protected_angle_narrow_theorem_note_2026-05-02
+target_note: docs/RADIAL_SCALING_PROTECTED_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md
+target_runner: scripts/frontier_radial_scaling_protected_angle_narrow.py
+branch: physics-loop/radial-scaling-angle-domain-repair-block01-20260506
+base_ref: origin/main
+cycle_count: 1
+active_route: finite_tangent_domain_repair
+actual_current_surface_status: proposed_retained
+conditional_surface_status: null
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: true
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+open_imports: []
+files_touched:
+  - docs/RADIAL_SCALING_PROTECTED_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md
+  - docs/audit/data/audit_ledger.json
+  - docs/audit/data/citation_graph.json
+  - docs/audit/data/effective_status_summary.json
+  - scripts/frontier_radial_scaling_protected_angle_narrow.py
+  - outputs/frontier_radial_scaling_protected_angle_narrow_2026-05-06.txt
+  - .claude/science/physics-loops/radial-scaling-angle-domain-repair/
+runner_result: "python3 scripts/frontier_radial_scaling_protected_angle_narrow.py -> PASS=11 FAIL=0"
+review_findings: none
+review_loop_disposition: pass
+pr_status: pending
+next_exact_action: "Commit, push, open PR, and request independent audit."
+stop_condition: "Single selected prompt resolved and PR shipped."
