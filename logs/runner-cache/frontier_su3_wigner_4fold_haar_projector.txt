@@ -1,0 +1,83 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_wigner_4fold_haar_projector.py
+runner_sha256: 043cafb0fa7f64891ea5b46f95819a7418b879f273b3f100bfea14a8ce6e7308
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 107.12
+status: ok
+----- stdout -----
+==============================================================================
+SU(3) Wigner Engine — Block 2: 4-fold Haar Projector P^G_((1,1)⊗4)
+==============================================================================
+
+--- Building primitives ---
+  [0.00s] Gell-Mann basis + structure constants + adjoint generators built.
+
+--- Section A: total generators on V^⊗4 (= C^4096) ---
+  [3.74s] 8 total generators (each 4096 x 4096) built.
+  Hermiticity error: max |T_a - T_a†| = 0.000e+00
+  PASS: total generators are Hermitian.
+
+--- Section B: quadratic Casimir on V^⊗4 ---
+  [14.17s] C_2_total computed.
+  C_total shape: (4096, 4096), dtype: complex128
+  C_total memory: 256.0 MB
+
+--- Section C: 4-fold Haar projector via zero-Casimir eigenspace ---
+  [54.83s] Diagonalization complete.
+  Number of singlets found (zero-Casimir eigenvectors): 8
+  Expected from fusion counting: 8
+  PASS: rank of P^G = 8 matches N^0_((1,1)⊗4) fusion count.
+
+--- Section D: projector properties ---
+  Hermiticity ||P - P†||: 0.000e+00
+  Idempotency ||P² - P||: 1.596e-16
+  Trace(P): 8.0000000000 (expected 8)
+  PASS: projector is Hermitian, idempotent, with trace = 8.
+
+--- Section E: SU(3) equivariance ---
+  For random g, check ||[D(g)^⊗4, P^G]|| = 0
+  ||[D(g)^⊗4, P^G]|| = 7.078e-16
+  PASS: P^G commutes with D(g)^⊗4 (SU(3) equivariance).
+
+  Verification on 5 additional random group elements:
+    seed=21: ||[D(g)^⊗4, P^G]|| = 8.812e-16
+    seed=31: ||[D(g)^⊗4, P^G]|| = 9.298e-16
+    seed=41: ||[D(g)^⊗4, P^G]|| = 6.731e-16
+    seed=51: ||[D(g)^⊗4, P^G]|| = 8.188e-16
+    seed=61: ||[D(g)^⊗4, P^G]|| = 4.303e-16
+  PASS: SU(3) equivariance holds for all 6 tested elements.
+
+--- Section F: Monte Carlo Haar-integration cross-check ---
+  Average D(g)^⊗4 over n_samples random SU(3) elements should
+  converge to P^G (Schur orthogonality).
+  Drawing 200 random SU(3) elements...
+  [7.58s] Monte Carlo average computed.
+  Max ||P_MC - P^G||: 1.110e-02
+  RMS ||P_MC - P^G||: 1.107e-03
+  Expected MC noise scale: ~1/sqrt(N) = 7.071e-02
+  PASS: Monte Carlo average converges toward P^G at expected rate.
+
+--- Section G: P^G acts trivially on its own basis ---
+  max ||v_k - P^G v_k|| = 3.192e-16
+  PASS: each singlet basis vector is invariant under P^G.
+
+==============================================================================
+SUMMARY: THEOREM PASS=7 FAIL=0
+==============================================================================
+
+Headline:
+  4-fold Haar projector P^G_((1,1)⊗4) on V_(1,1)^⊗4 = C^4096:
+    rank = 8 (matches fusion-count expectation of 8)
+    Hermitian: True
+    Idempotent: True
+    SU(3)-equivariant on 6 random group elements
+    Monte Carlo cross-check converges at expected sqrt(N) rate
+
+Block 2 deliverable: P^G_((1,1)⊗4) is constructable, rank-8, and
+validated against fusion counting + group equivariance + MC integration.
+Available for Block 3 (L=3 cube tensor-network setup) as the link-
+integration primitive.
+
+----- stderr -----
+
