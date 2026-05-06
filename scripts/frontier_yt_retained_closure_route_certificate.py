@@ -148,6 +148,7 @@ def main() -> int:
         "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
         "pr230_source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
         "pr230_origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
+        "pr230_same_surface_z3_taste_triplet": "outputs/yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json",
         "pr230_z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
         "pr230_z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
         "pr230_source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
@@ -1222,6 +1223,24 @@ def main() -> int:
         )
         is False
         and certificates["pr230_z3_generation_action_lift_attempt"].get(
+            "pr230_closure_authorized"
+        )
+        is False
+    )
+    same_surface_z3_taste_triplet_support_not_closure = (
+        "same-surface Z3 taste-triplet artifact"
+        in certificates["pr230_same_surface_z3_taste_triplet"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_same_surface_z3_taste_triplet"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_same_surface_z3_taste_triplet"].get(
+            "same_surface_z3_triplet_artifact_passed"
+        )
+        is True
+        and certificates["pr230_same_surface_z3_taste_triplet"].get(
             "pr230_closure_authorized"
         )
         is False
@@ -3657,6 +3676,13 @@ def main() -> int:
         ),
     )
     report(
+        "same-surface-z3-taste-triplet-support-not-closure",
+        same_surface_z3_taste_triplet_support_not_closure,
+        certificates["pr230_same_surface_z3_taste_triplet"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "source-coordinate-transport-current-surface-closed",
         source_coordinate_transport_completion_blocks,
         certificates["pr230_source_coordinate_transport_completion"].get(
@@ -4859,6 +4885,10 @@ def main() -> int:
             "projection onto those axes.  It is framework-native context, but "
             "not PR230 O_H authority without source-coordinate transport or "
             "C_sH/C_HH pole rows.  "
+            "The same-surface Z3 taste-triplet artifact now supplies the exact "
+            "cyclic action on the PR230 taste axes, but it remains support only: "
+            "the physical lazy neutral transfer, source/Higgs row, and strict "
+            "primitive certificate are still absent.  "
             "The first-principles O_H bridge candidate portfolio ranks the "
             "surviving source-transport, action-first O_H, W/Z response, "
             "Schur-row, and neutral-primitive routes as open positive "
@@ -5021,6 +5051,7 @@ def main() -> int:
         "origin_main_composite_higgs_intake_not_closure": origin_main_composite_higgs_intake_not_closure,
         "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
         "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
+        "same_surface_z3_taste_triplet_support_not_closure": same_surface_z3_taste_triplet_support_not_closure,
         "source_coordinate_transport_completion_blocks": source_coordinate_transport_completion_blocks,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,

@@ -50,6 +50,9 @@ Six read-only probes and a local synthesis pass converged on the same boundary:
 - Perron/Krein-Rutman rank-one closure is a real theorem route only after a
   same-surface neutral primitive transfer operator or off-diagonal generator is
   certified.
+- the same-surface Z3 taste-triplet artifact supplies exact cyclic action on
+  the PR230 taste axes, but not the physical lazy transfer, source/Higgs row,
+  or strict primitive certificate.
 
 The current negative results are therefore shortcut blockers, not global
 route closures.
@@ -106,7 +109,11 @@ supplied.
    overlaps.  The current-surface route is now closed by
    `YT_PR230_NEUTRAL_PRIMITIVE_ROUTE_COMPLETION`: conditional Perron support
    and positivity inputs are not yet a primitive transfer, off-diagonal
-   generator, or irreducibility certificate.
+   generator, or irreducibility certificate.  The new
+   `YT_PR230_SAME_SURFACE_Z3_TASTE_TRIPLET_ARTIFACT` supplies the cyclic Z3
+   triplet action on the PR230 taste axes exactly, so the remaining primitive
+   route blocker is now sharper: derive or measure the physical lazy neutral
+   transfer and source/Higgs row on that same surface.
 
 ## Non-Claims
 
@@ -122,12 +129,16 @@ python3 scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio
 # SUMMARY: PASS=23 FAIL=0
 python3 scripts/frontier_yt_pr230_assumption_import_stress.py
 # SUMMARY: PASS=51 FAIL=0
+python3 scripts/frontier_yt_pr230_same_surface_z3_taste_triplet_artifact.py
+# SUMMARY: PASS=26 FAIL=0
+python3 scripts/frontier_yt_pr230_z3_triplet_conditional_primitive_cone_theorem.py
+# SUMMARY: PASS=14 FAIL=0
 python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
-# SUMMARY: PASS=111 FAIL=0
+# SUMMARY: PASS=113 FAIL=0
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=257 FAIL=0
+# SUMMARY: PASS=259 FAIL=0
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=287 FAIL=0
+# SUMMARY: PASS=289 FAIL=0
 ```
 
 Strict audit lint reports only the existing warning baseline after the audit

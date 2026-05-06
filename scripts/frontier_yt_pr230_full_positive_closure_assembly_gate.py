@@ -91,6 +91,7 @@ PARENTS = {
     "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
     "pr230_source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
     "pr230_origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
+    "pr230_same_surface_z3_taste_triplet": "outputs/yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json",
     "pr230_z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
     "pr230_z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
     "pr230_source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
@@ -538,6 +539,20 @@ def main() -> int:
         )
         is False
         and certs["pr230_z3_generation_action_lift_attempt"].get(
+            "pr230_closure_authorized"
+        )
+        is False
+    )
+    same_surface_z3_taste_triplet_support_not_closure = (
+        "same-surface Z3 taste-triplet artifact"
+        in statuses["pr230_same_surface_z3_taste_triplet"]
+        and certs["pr230_same_surface_z3_taste_triplet"].get("proposal_allowed")
+        is False
+        and certs["pr230_same_surface_z3_taste_triplet"].get(
+            "same_surface_z3_triplet_artifact_passed"
+        )
+        is True
+        and certs["pr230_same_surface_z3_taste_triplet"].get(
             "pr230_closure_authorized"
         )
         is False
@@ -1268,6 +1283,11 @@ def main() -> int:
         "z3-generation-action-lift-not-derived",
         z3_generation_action_lift_not_derived,
         statuses["pr230_z3_generation_action_lift_attempt"],
+    )
+    report(
+        "same-surface-z3-taste-triplet-support-not-closure",
+        same_surface_z3_taste_triplet_support_not_closure,
+        statuses["pr230_same_surface_z3_taste_triplet"],
     )
     report(
         "source-coordinate-transport-current-surface-closed",
@@ -2128,6 +2148,9 @@ def main() -> int:
             " The H1 generation-action lift attempt shows that Koide/lepton Z3 "
             "does not yet select cyclic quark-bilinear action over the trivial "
             "action on the PR230 surface."
+            " The same-surface Z3 taste-triplet artifact now supplies the "
+            "cyclic triplet action on the PR230 taste axes exactly; it still "
+            "does not supply the physical lazy transfer or source/Higgs row."
             " A separate kinetic taste-mixing check now closes the adjacent "
             "shortcut: taste-even Wilson-staggered dynamics also gives zero "
             "C_sH against one trace-zero taste-axis insertion unless a real "
@@ -2213,6 +2236,7 @@ def main() -> int:
         "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
         "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
         "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
+        "same_surface_z3_taste_triplet_support_not_closure": same_surface_z3_taste_triplet_support_not_closure,
         "source_coordinate_transport_completion_blocks": source_coordinate_transport_completion_blocks,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,

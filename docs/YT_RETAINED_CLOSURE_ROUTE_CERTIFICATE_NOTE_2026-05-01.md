@@ -18,8 +18,24 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=257 FAIL=0
+# SUMMARY: PASS=259 FAIL=0
 ```
+
+## 2026-05-06 Same-Surface Z3 Taste-Triplet Artifact Update
+
+The retained-route certificate now consumes
+`outputs/yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json`.
+This supplies the exact cyclic Z3 action on the PR230 taste axes while fixing
+the source identity `I_8`.
+
+This is exact support, not closure: the physical lazy neutral transfer,
+source/Higgs row, off-diagonal neutral generator, strict primitive certificate,
+and canonical `O_H`/`C_sH/C_HH` bridge remain absent.
+
+Validation: same-surface Z3 artifact `PASS=26 FAIL=0`; Z3 conditional
+primitive theorem `PASS=14 FAIL=0`; retained-route `PASS=259 FAIL=0`; full
+positive closure assembly gate `PASS=113 FAIL=0`; campaign status
+`PASS=289 FAIL=0`.
 
 ## 2026-05-06 Hard-Route Shortcut Closure Update
 
@@ -38,8 +54,8 @@ They close two adjacent shortcuts without claiming closure:
   zero.
 
 Validation: kinetic taste-mixing `PASS=21 FAIL=0`; one-Higgs taste-axis
-completeness `PASS=19 FAIL=0`; retained-route `PASS=257 FAIL=0`; full positive
-closure assembly gate `PASS=111 FAIL=0`.
+completeness `PASS=19 FAIL=0`; retained-route `PASS=258 FAIL=0`; full positive
+closure assembly gate `PASS=112 FAIL=0`.
 
 ## 2026-05-05 Non-Chunk Cycle-34 Post-Cycle-33 Main Non-PR230 Drift Reopen Update
 

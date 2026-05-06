@@ -47,10 +47,15 @@ premises.  It does not derive those premises on the current PR230 surface.
 
 ## Missing Current-Surface Premises
 
+The same-surface cyclic triplet action premise is now supplied by
+`YT_PR230_SAME_SURFACE_Z3_TASTE_TRIPLET_ARTIFACT`: on the PR230
+`Cl(3)/Z^3` taste block, the tensor-factor cycle maps
+`S0 -> S1 -> S2 -> S0` exactly while fixing the source identity `I_8`.
+
 The current PR230 surface still lacks:
 
-- same-surface EW/Higgs or composite action tying the triplet to the top FH/LSZ
-  source coordinate;
+- same-surface EW/Higgs or composite action tying the Z3 taste triplet to the
+  top FH/LSZ source coordinate;
 - a derived off-diagonal neutral generator or production non-source response
   row;
 - a strict neutral primitive-cone certificate on the PR230 surface;
@@ -82,5 +87,5 @@ normalization selectors by name.
 
 ```bash
 python3 scripts/frontier_yt_pr230_z3_triplet_conditional_primitive_cone_theorem.py
-# SUMMARY: PASS=13 FAIL=0
+# SUMMARY: PASS=14 FAIL=0
 ```

@@ -581,6 +581,9 @@ def main() -> int:
         "pr230_origin_main_composite_higgs_intake_guard": load(
             "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json"
         ),
+        "pr230_same_surface_z3_taste_triplet": load(
+            "outputs/yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json"
+        ),
         "pr230_z3_triplet_conditional_primitive_cone": load(
             "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json"
         ),
@@ -2445,6 +2448,20 @@ def main() -> int:
         and z3_generation_action_lift.get("pr230_closure_authorized") is False,
         statuses["pr230_z3_generation_action_lift_attempt"],
     )
+    same_surface_z3_taste_triplet = certificates["pr230_same_surface_z3_taste_triplet"]
+    report(
+        "pr230-same-surface-z3-taste-triplet-support-not-closure",
+        "same-surface Z3 taste-triplet artifact"
+        in str(statuses["pr230_same_surface_z3_taste_triplet"])
+        and same_surface_z3_taste_triplet.get("proposal_allowed") is False
+        and same_surface_z3_taste_triplet.get(
+            "same_surface_z3_triplet_artifact_passed"
+        )
+        is True
+        and same_surface_z3_taste_triplet.get("pr230_closure_authorized")
+        is False,
+        statuses["pr230_same_surface_z3_taste_triplet"],
+    )
     source_transport_completion = certificates["pr230_source_coordinate_transport_completion"]
     report(
         "pr230-source-coordinate-transport-current-surface-closed",
@@ -4106,7 +4123,10 @@ def main() -> int:
         "hard theorem routes: current Schur machinery lacks the neutral kernel "
         "basis plus same-surface A/B/C rows, and current conditional Perron/"
         "positivity support lacks a primitive transfer or off-diagonal "
-        "generator theorem.  The first-principles "
+        "generator theorem.  The same-surface Z3 taste-triplet artifact now "
+        "supplies the exact cyclic action on the PR230 taste axes, but it "
+        "does not supply the physical lazy transfer, source/Higgs row, or "
+        "strict primitive certificate.  The first-principles "
         "O_H bridge candidate portfolio records the surviving positive "
         "candidate routes and keeps them open without authorizing closure."
     )
@@ -4141,6 +4161,13 @@ def main() -> int:
         and z3_generation_action_lift.get("same_surface_h1_derived") is False
         and z3_generation_action_lift.get("pr230_closure_authorized") is False
         and z3_generation_action_lift.get("proposal_allowed") is False
+    )
+    result["same_surface_z3_taste_triplet_support_not_closure"] = (
+        same_surface_z3_taste_triplet.get("same_surface_z3_triplet_artifact_passed")
+        is True
+        and same_surface_z3_taste_triplet.get("pr230_closure_authorized")
+        is False
+        and same_surface_z3_taste_triplet.get("proposal_allowed") is False
     )
     result["action_first_route_completion_blocks"] = (
         action_first_route_completion.get("action_first_route_completion_passed") is True

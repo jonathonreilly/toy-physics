@@ -9,12 +9,12 @@
     "runner": "origin/main"
   },
   "conditional_premises": [
-    "H1: Z3 cyclic action on the PR230-relevant Higgs-like bilinear triplet is derived on the same surface",
+    "H1: Z3 cyclic action on the PR230-relevant taste-scalar triplet is derived on the same surface (supplied by yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json)",
     "H2: the three bilinear channels sit in one positive cone with nonzero equal-magnitude support",
     "H3: the same-surface neutral transfer contains a positive lazy term I plus the Z3 cycle P, or an equivalent aperiodic positive connector",
     "H4: the resulting neutral transfer is the physical scalar transfer coupled to the PR230 source/canonical-Higgs sector"
   ],
-  "conditional_surface_status": "If the named same-surface Z3 triplet transfer premises are supplied, the neutral primitive/rank-one mathematical premise is satisfied.",
+  "conditional_surface_status": "H1 is now supplied as an exact same-surface Z3 taste-triplet artifact.  If H2-H4 are also supplied, the neutral primitive/rank-one mathematical premise is satisfied.",
   "exact_next_action": "Try to derive H1-H4 on the same PR230 surface, or implement a production non-source response row/off-diagonal neutral generator. Only then can this primitive theorem be promoted from conditional support to a strict neutral primitive-cone certificate.",
   "fail_count": 0,
   "firewall": {
@@ -35,7 +35,7 @@
     "perron_frobenius_role": "standard primitive nonnegative matrix theorem; used only after the transfer matrix is explicitly defined"
   },
   "missing_current_surface_premises": [
-    "same-surface PR230 EW/Higgs or composite action tying the triplet to the top FH/LSZ source coordinate",
+    "same-surface PR230 EW/Higgs or composite action tying the Z3 taste triplet to the top FH/LSZ source coordinate",
     "derived off-diagonal neutral generator or production non-source response row",
     "strict neutral primitive-cone certificate on the PR230 surface",
     "canonical O_H/source-Higgs pole overlap or accepted physical-response bridge"
@@ -47,9 +47,10 @@
     "neutral_primitive_cone_gate": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
     "neutral_primitive_route_completion": "exact negative boundary / neutral primitive-rank-one route not complete on current PR230 surface",
     "origin_main_composite_higgs_intake_guard": "exact negative boundary / origin/main composite-Higgs stretch packet is conditional cross-lane context, not PR230 same-surface O_H/C_sH/C_HH closure",
-    "retained_route": "open / retained closure not yet reached"
+    "retained_route": "open / retained closure not yet reached",
+    "same_surface_z3_taste_triplet": "exact-support / same-surface Z3 taste-triplet artifact; physical neutral transfer still absent"
   },
-  "pass_count": 13,
+  "pass_count": 14,
   "pr230_closure_authorized": false,
   "primitive_witness": {
     "L2": [
@@ -217,6 +218,12 @@
   },
   "proposal_allowed": false,
   "proposal_allowed_reason": "The finite-matrix primitive theorem is exact, but the current PR230 surface still lacks the same-surface action/off-diagonal generator that would instantiate the theorem.",
+  "remaining_unsupplied_conditional_premises": [
+    "H2",
+    "H3",
+    "H4"
+  ],
+  "same_surface_z3_triplet_supplied": true,
   "strict_future_certificate_presence": {
     "canonical_oh_certificate": false,
     "neutral_offdiagonal_generator_certificate": false,
