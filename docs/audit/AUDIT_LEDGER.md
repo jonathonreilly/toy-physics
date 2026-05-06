@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 786 |
+| unaudited | 785 |
 | audit_in_progress | 1 |
 | meta | 48 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
-| ~~audited_conditional~~ | 466 |
+| ~~audited_conditional~~ | 467 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,21 +41,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 378 |
-| `audited_conditional` | 466 |
+| `audited_conditional` | 467 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 32 |
-| `unaudited` | 834 |
+| `unaudited` | 833 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 641 |
 | `decoration` | 10 |
 | `meta` | 55 |
-| `no_go` | 187 |
+| `no_go` | 188 |
 | `open_gate` | 115 |
-| `positive_theorem` | 790 |
+| `positive_theorem` | 789 |
 
 | criticality | count |
 |---|---:|
@@ -705,6 +705,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fine_h_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `flagship_paper_contribution_statement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `fourth_family_complex_boundary_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `g_bare_constraint_vs_convention_theorem_note_2026-05-03` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | A | - |
@@ -6004,6 +6005,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Mass-law transfer agrees within uncertainty on the retained grown-row neighborhood (drift=0.2, restore=0.7).  _(class `C`)_
 - **chain closes:** True — The live runner recomputes the fixed-lattice F~M exponent, six grown-seed F~M exponents at drift=0.2 and restore=0.7, their mean/spread, and the fixed-grown sigma comparison. The note explicitly excludes geometry-generic transfer, other drift/restore values, and other observables.
 - **rationale:** The claim is a bounded numerical computation, not a broad universality theorem: the current runner reproduces the frozen fixed exponent, all six grown-seed exponents, the grown aggregate, and the 0.3 sigma fixed-grown comparison. The source note keeps the conclusion on the specified grown row and explicitly does not claim other geometries, drift/restore values, or observables. Residual boundary: the quoted uncertainty is the finite six-seed grown spread used by the runner, so the retained content is only this finite transfer check.
+- **auditor confidence:** high
+
+### `fourth_family_complex_boundary_note`
+
+- **Note:** [`FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`](../../docs/FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go that the fourth-family quadrant-reflection grown slice does not carry a clean complex-action companion under the stated anchor-row TOWARD -> AWAY gates.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-06-fourth-family-complex-boundary`  (codex-current; independence=weak)
+- **load-bearing step:** The anchor row preserves the gamma=0 baseline and Born proxy, but the fourth-family quadrant-reflection slice does not produce a clean TOWARD -> AWAY complex-action crossover, so the complex-action companion is a boundary failure on this family.  _(class `C`)_
+- **chain closes:** False — The cited frozen log reports the claimed boundary miss, but the registered runner's current cache is only a timeout and the script prints gate booleans rather than enforcing PASS/FAIL assertions. The note also relies on the retained fourth-family quadrant basin without wiring that retained-bounded row as a direct dependency.
+- **rationale:** Issue: the source note's no-go/boundary conclusion is supported by a frozen log table, but the current registered runner cache contains no completed stdout and the runner itself does not fail/assert on the anchor_ok or crossover_ok gates. Why this blocks: timeout alone is not a scientific verdict, and a print-only diagnostic plus an unwired fourth-family quadrant premise is not enough for retained no-go closure under the audit lane. Repair target: add an audit-compatible runner contract that asserts the expected boundary miss and produces a completed cache, and add fourth_family_quadrant_note as a direct retained-bounded dependency. Claim boundary until fixed: safe to cite as a reported boundary diagnostic that the archived drift table misses the clean complex-action crossover, not as an audited retained no-go.
+- **open / conditional deps cited:**
+  - `FOURTH_FAMILY_QUADRANT_NOTE.md`
 - **auditor confidence:** high
 
 ### `fourth_family_quadrant_note`
