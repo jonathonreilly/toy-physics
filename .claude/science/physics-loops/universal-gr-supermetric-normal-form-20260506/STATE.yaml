@@ -1,0 +1,18 @@
+loop: universal-gr-supermetric-normal-form-20260506
+goal: close the missing universal Hessian derivation in UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE
+mode: science-fix
+target_status: exact-support pending independent re-audit
+current_status: runner-backed local derivation added
+cycle_count: 1
+active_route: direct log-det Hessian
+hard_residual: full Einstein/Regge gluing law remains out of scope
+files_touched:
+  - docs/UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md
+  - scripts/frontier_universal_gr_supermetric_normal_form.py
+  - outputs/frontier_universal_gr_supermetric_normal_form_2026-05-06.txt
+open_imports:
+  - upstream scalar-observable selection premises
+  - final Einstein/Regge gluing law
+runner_status: "python3 scripts/frontier_universal_gr_supermetric_normal_form.py => PASS=4 FAIL=0"
+review_status: "PASS WITH BOUNDED CLAIMS; independent audit still required"
+next_exact_action: independent re-audit of the note with runner/output included

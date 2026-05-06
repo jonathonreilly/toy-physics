@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 777 |
+| unaudited | 778 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 21 |
-| ~~audited_renaming~~ | 32 |
+| ~~audited_renaming~~ | 31 |
 | ~~audited_conditional~~ | 471 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
@@ -43,8 +43,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
-| `audited_renaming` | 32 |
-| `unaudited` | 826 |
+| `audited_renaming` | 31 |
+| `unaudited` | 827 |
 
 | claim_type | count |
 |---|---:|
@@ -67,10 +67,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1381
+- runners classified: 1382
 - runners with (C) first-principles compute hits: 683
 - runners with (D) external comparator hits: 344
-- decoration candidates (no C, no D): 117
+- decoration candidates (no C, no D): 118
 
 ## Top 25 by load-bearing score (topology only)
 
@@ -1077,7 +1077,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `single_axiom_information_note` | meta | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_gr_casimir_block_localization_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
-| `universal_gr_supermetric_normal_form_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `universal_gr_tensor_action_blocker_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `yt_color_projection_correction_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
@@ -13738,19 +13737,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The runner source genuinely computes the sign, invertibility, stationary equation, and completion identity for sampled dense finite-dimensional instances, so it supports the algebraic sign correction rather than merely printing constants. However, the load-bearing derivation is class A linear algebra over imported inputs, and the one cited authority is not retained-grade. The claim also relies on an exact universal B_D/Lambda_R background bridge that is not closed by the restricted packet, so clean status cannot propagate.
 - **open / conditional deps cited:**
   - `UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`
-- **auditor confidence:** high
-
-### `universal_gr_supermetric_normal_form_note`
-
-- **Note:** [`UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md`](../../docs/UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the asserted identification of the universal Hessian on the SO(3)-invariant lifted background with the inverse-metric supermetric normal form.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-universal_gr_supermetric-241`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** For symmetric perturbations h,k on D = diag(a,b,b,b), the universal Hessian is B(h,k) = -Tr(D^-1 h D^-1 k), exactly the inverse-metric contraction pairing.  _(class `F`)_
-- **chain closes:** False — The restricted packet provides no cited authority, runner, or derivation establishing that the universal Hessian equals the inverse-metric contraction. The subsequent lapse/shift/trace/shear weights would follow algebraically only after that missing identification is granted.
-- **rationale:** The load-bearing step is an asserted identity between the existing object called the universal Hessian and the inverse-metric pairing, not a first-principles computation or algebraic closure over provided retained inputs. No upstream authorities or runner evidence are available in the packet. Therefore the theorem-level conclusion does not close from the restricted inputs and reduces to an unsupported identification/substitution.
 - **auditor confidence:** high
 
 ### `universal_gr_tensor_action_blocker_note`

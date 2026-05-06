@@ -51933,9 +51933,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "f91bf6570d524c0ae7d8cc0cb9f0f745fd48b74d26f5606e548743f2da33caa1",
+      "note_hash": "68cd285201eabf099a47d04c01edd1680ae0813c79619cc1bdd7c2e059d800b3",
       "path": "docs/UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_supermetric_normal_form.py",
       "title": "Universal GR Supermetric Normal Form on `PL S^3 x R`"
     },
     "universal_gr_tensor_action_blocker_note": {
@@ -55852,6 +55852,6 @@
     "leaf_count": 550,
     "node_count": 1905,
     "root_count": 867,
-    "runners_with_path": 1478
+    "runners_with_path": 1479
   }
 }
