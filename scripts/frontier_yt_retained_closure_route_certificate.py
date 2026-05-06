@@ -5542,7 +5542,7 @@ def main() -> int:
             "no-resume chunk commands and a collision guard for C_sx/C_xx rows, "
             "but it is run-control support only until rows are actually run, "
             "combined, pole-tested, and bridged to O_H or physical response.  "
-            "The completed two-source taste-radial chunks001-004 checkpoints "
+            "The completed two-source taste-radial chunks001-006 checkpoints "
             "are bounded row support only: they validate seed-controlled "
             "timeseries rows but do not supply combined L12 pole evidence, "
             "FV/IR authority, canonical O_H, or scalar-LSZ normalization.  "

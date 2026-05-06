@@ -9,8 +9,6 @@
   "fail_count": 0,
   "manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
   "missing_chunk_indices": [
-    5,
-    6,
     7,
     8,
     9,
@@ -72,103 +70,105 @@
   "partial_mode_diagnostics": {
     "0,0,0": {
       "C_ss_real": {
-        "count": 4,
-        "mean": 0.12245589100677827,
-        "stdev": 0.0001226658456862016
+        "count": 6,
+        "mean": 0.12245387476289682,
+        "stdev": 0.00010963519482560494
       },
       "C_sx_real": {
-        "count": 4,
-        "mean": -1.6407884924226813e-05,
-        "stdev": 9.774587503399179e-05
+        "count": 6,
+        "mean": 1.7909775004350626e-05,
+        "stdev": 0.00010234340428278316
       },
       "C_xx_real": {
-        "count": 4,
-        "mean": 0.28083339527826845,
-        "stdev": 5.2936531971838124e-05
+        "count": 6,
+        "mean": 0.2808538278639152,
+        "stdev": 7.663401793578713e-05
       },
       "configuration_count": {
-        "count": 4,
+        "count": 6,
         "mean": 16.0,
         "stdev": 0.0
       }
     },
     "0,0,1": {
       "C_ss_real": {
-        "count": 4,
-        "mean": 0.12542187705051253,
-        "stdev": 9.388771177053481e-05
+        "count": 6,
+        "mean": 0.12542656585713344,
+        "stdev": 0.00010879711574208357
       },
       "C_sx_real": {
-        "count": 4,
-        "mean": -3.102248950838893e-05,
-        "stdev": 0.00010884583517787526
+        "count": 6,
+        "mean": 2.4231341037245853e-05,
+        "stdev": 0.00012765472554861868
       },
       "C_xx_real": {
-        "count": 4,
-        "mean": 0.2702853875249814,
-        "stdev": 4.082753881864539e-05
+        "count": 6,
+        "mean": 0.2703337728612362,
+        "stdev": 9.239395591664652e-05
       },
       "configuration_count": {
-        "count": 4,
+        "count": 6,
         "mean": 16.0,
         "stdev": 0.0
       }
     },
     "0,1,0": {
       "C_ss_real": {
-        "count": 4,
-        "mean": 0.12542741267469237,
-        "stdev": 9.805016881776433e-05
+        "count": 6,
+        "mean": 0.12540559927514236,
+        "stdev": 0.0001036142947865469
       },
       "C_sx_real": {
-        "count": 4,
-        "mean": 1.1541449611306051e-05,
-        "stdev": 0.00011210855092696254
+        "count": 6,
+        "mean": 4.764294121244065e-05,
+        "stdev": 0.00012130709413716323
       },
       "C_xx_real": {
-        "count": 4,
-        "mean": 0.269469989224638,
-        "stdev": 7.579032014089264e-05
+        "count": 6,
+        "mean": 0.26948905227096137,
+        "stdev": 6.624538007979999e-05
       },
       "configuration_count": {
-        "count": 4,
+        "count": 6,
         "mean": 16.0,
         "stdev": 0.0
       }
     },
     "1,0,0": {
       "C_ss_real": {
-        "count": 4,
-        "mean": 0.12540169055864026,
-        "stdev": 0.00012594041714959403
+        "count": 6,
+        "mean": 0.1253940530773229,
+        "stdev": 0.00011435304107114617
       },
       "C_sx_real": {
-        "count": 4,
-        "mean": -5.097495845889201e-05,
-        "stdev": 9.811640955018538e-05
+        "count": 6,
+        "mean": -8.737307646572784e-06,
+        "stdev": 0.00010835320214336735
       },
       "C_xx_real": {
-        "count": 4,
-        "mean": 0.26884669121964666,
-        "stdev": 6.484533813813611e-05
+        "count": 6,
+        "mean": 0.2688562212338778,
+        "stdev": 7.523696124912833e-05
       },
       "configuration_count": {
-        "count": 4,
+        "count": 6,
         "mean": 16.0,
         "stdev": 0.0
       }
     }
   },
   "pass_count": 12,
-  "present_chunks": 4,
+  "present_chunks": 6,
   "proposal_allowed": false,
   "ready_chunk_indices": [
     1,
     2,
     3,
-    4
+    4,
+    5,
+    6
   ],
-  "ready_chunks": 4,
+  "ready_chunks": 6,
   "row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
   "strict_non_claims": [
     "does not treat partial chunks as combined L12 row evidence",

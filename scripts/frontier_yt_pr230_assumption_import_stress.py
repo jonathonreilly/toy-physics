@@ -935,14 +935,16 @@ def main() -> int:
         two_source_row_manifest.get("actual_current_surface_status"),
     )
     two_source_row_combiner = certificates["two_source_taste_radial_row_combiner_gate"]
+    combiner_ready_chunks = int(two_source_row_combiner.get("ready_chunks", 0))
+    combiner_expected_chunks = int(two_source_row_combiner.get("expected_chunks", 0))
     report(
         "two-source-taste-radial-row-combiner-partial-not-evidence",
         "two-source taste-radial C_sx/C_xx row combiner gate"
         in str(two_source_row_combiner.get("actual_current_surface_status"))
         and two_source_row_combiner.get("proposal_allowed") is False
         and two_source_row_combiner.get("combined_rows_written") is False
-        and two_source_row_combiner.get("ready_chunks") == 4
-        and two_source_row_combiner.get("expected_chunks") == 63
+        and 0 < combiner_ready_chunks < combiner_expected_chunks
+        and combiner_expected_chunks == 63
         and two_source_row_combiner.get("bad_chunk_audits") == []
         and "does not authorize retained or proposed_retained y_t closure"
         in two_source_row_combiner.get("strict_non_claims", []),

@@ -194,19 +194,19 @@ postprocessor records the same contract and computes
 before checking `|kappa_spH| = 1`/Gram purity.  Current status is still rows
 absent, proposal disallowed, and no `kappa_s = 1`.
 
-Chunks001-004 of the two-source taste-radial production wave have completed.
+Chunks001-006 of the two-source taste-radial production wave have completed.
 The completed-mode chunk checkpoint now passes `PASS=15 FAIL=0` for
-chunks001-004, including production metadata, `numba_gauge_seed_v1`, the
+chunks001-006, including production metadata, `numba_gauge_seed_v1`, the
 preserved three-mass scan, selected-mass-only FH/LSZ/source rows, and
-`C_sx/C_xx` timeseries.  Chunks005-006 are active under the supervisor's
-two-worker cap.  Completed chunks001-004 are still bounded row support only:
+`C_sx/C_xx` timeseries.  Chunks007-008 are active under the supervisor's
+two-worker cap.  Completed chunks001-006 are still bounded row support only:
 they are not combined L12 evidence, pole/FV/IR evidence, canonical `O_H`,
 `kappa_s`, or top-Yukawa closure.
 
 The two-source row-combiner gate is now packaged.  It audits completed chunk
 JSON against the 63-chunk manifest and refuses to write the future combined
 measurement-row packet until every manifest chunk is present and schema-clean.
-Current result is `ready=4/63`, no bad chunk audits, and
+Current result is `ready=6/63`, no bad chunk audits, and
 `combined_rows_written=false`.  The combiner is an aggregation boundary, not
 physics evidence: partial diagnostics are not combined L12 pole evidence,
 canonical `O_H`, scalar LSZ normalization, `kappa_s`, or top-Yukawa closure.
@@ -227,9 +227,9 @@ Best next work:
    builder/postprocessor are now ready to consume the overlap/kappa contract
    when those rows exist;
 2. launch production `C_sx/C_xx` rows for the exact two-source taste-radial
-   source using the no-resume manifest and row contract; chunks001-004 are
-   complete and checkpointed, the combiner gate records `ready=4/63` and writes
-   no combined packet, chunks005-006 are active under the two-worker launcher
+   source using the no-resume manifest and row contract; chunks001-006 are
+   complete and checkpointed, the combiner gate records `ready=6/63` and writes
+   no combined packet, chunks007-008 are active under the two-worker launcher
    cap, and after they complete the next action is rerunning the per-chunk
    checkpoint without pending mode, rerunning the combiner, then the next
    bounded wave, then prove/reject its canonical-`O_H` identity or supply

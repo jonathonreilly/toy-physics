@@ -48,8 +48,11 @@ Local verification completed:
 - `frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py`:
   PASS=15 FAIL=0 for completed chunk003 and PASS=15 FAIL=0 for completed
   chunk004; both certificates remain bounded row support only;
+- `frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py`:
+  PASS=15 FAIL=0 for completed chunk005 and PASS=15 FAIL=0 for completed
+  chunk006; both certificates remain bounded row support only;
 - `frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py`: PASS=12
-  FAIL=0; records `ready=4/63`, no bad chunk audits, and
+  FAIL=0; records `ready=6/63`, no bad chunk audits, and
   `combined_rows_written=false`, so it remains support-only aggregation
   infrastructure;
 - `frontier_yt_pr230_taste_radial_canonical_oh_selector_gate.py`: PASS=17
@@ -70,7 +73,9 @@ Local verification completed:
 - `frontier_yt_pr230_taste_condensate_oh_bridge_audit.py`: PASS=21 FAIL=0;
 - `frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py`:
   PASS=16 FAIL=0;
-- `frontier_yt_pr230_assumption_import_stress.py`: PASS=66 FAIL=0;
+- `frontier_yt_pr230_assumption_import_stress.py`: PASS=67 FAIL=0 after
+  making the partial-combiner support check independent of the current ready
+  chunk count;
 - `frontier_yt_pr230_full_positive_closure_assembly_gate.py`: PASS=126
   FAIL=0;
 - `frontier_yt_retained_closure_route_certificate.py`: PASS=277 FAIL=0;

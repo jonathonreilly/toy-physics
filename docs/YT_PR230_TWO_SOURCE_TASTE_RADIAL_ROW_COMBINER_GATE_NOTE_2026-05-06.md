@@ -23,10 +23,10 @@ file until all 63 manifest chunks are present and schema-clean.
 
 ## Current Result
 
-Chunks001-004 are present and schema-clean.  The set is still partial:
-`ready=4/63`, so no combined row packet is written.
+Chunks001-006 are present and schema-clean.  The set is still partial:
+`ready=6/63`, so no combined row packet is written.
 
-Chunks005-006 are active under the row-wave supervisor's two-worker cap.  Live
+Chunks007-008 are active under the row-wave supervisor's two-worker cap.  Live
 status and logs are run-control state only.
 
 ## Claim Boundary

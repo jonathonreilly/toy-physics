@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T18:01:55.853959+00:00",
+  "generated_at": "2026-05-06T18:12:58.542101+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42753,7 +42753,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded support / row-chunk schema checkpoint infrastructure.",
       "deps": [],
-      "note_hash": "ccc9387b2ac19b894d98f43939993b619640846b9212df376b02569116e589ee",
+      "note_hash": "7d9f0fd184aaa3f467a5447f0b09cde36491cba4c7c52a8fae470027fb2e971a",
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNK_CHECKPOINT_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py",
       "title": "PR230 Two-Source Taste-Radial Chunk Checkpoint Note"
@@ -42763,7 +42763,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded support / partial `C_sx/C_xx` row combiner gate.",
       "deps": [],
-      "note_hash": "a156184c567b8ab19335b43a3826b98bbdef558ba9665ae03d19ec0d83d5164e",
+      "note_hash": "0ceb7ca47f7ce326d1f9b508615e07b24cf6809f920acdcdff5e5d2e2feeb1f8",
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_COMBINER_GATE_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py",
       "title": "PR230 Two-Source Taste-Radial Row Combiner Gate"
