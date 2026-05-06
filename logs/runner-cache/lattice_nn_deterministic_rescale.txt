@@ -1,0 +1,29 @@
+===== runner cache v1 =====
+runner: scripts/lattice_nn_deterministic_rescale.py
+runner_sha256: b958225c40bc8b6c917c0c1f530d87b17a6ad10b0ad257ecfd218e6f4361adda
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 4.73
+status: ok
+----- stdout -----
+=====================================================================================================
+NEAREST-NEIGHBOR LATTICE DETERMINISTIC RESCALE
+  3 edges/node with fixed per-step rescale spacing/sqrt(3)
+  Physical: W=20.0, L=40.0, k=5.0, mass at y=8.0
+=====================================================================================================
+
+        h     nodes    npl     gravity         k=0        MI     1-pur      d_TV        Born   time
+  ---------------------------------------------------------------------------------------------
+   1.0000      1681     41   -0.116678   +0.00e+00    0.5022    0.4229    0.7455  6.16e-16     0s
+   0.5000      6561     81   +0.138226   +0.00e+00    0.7420    0.4844    0.9072  4.95e-16     0s
+   0.2500     25921    161   +0.077415   +0.00e+00    0.9470    0.4989    0.9878  3.95e-16     0s
+   0.1250    103041    321   +0.034466   +0.00e+00    0.9972    0.5000    0.9996  5.63e-16     1s
+   0.0625    410881    641   +0.014810   +0.00e+00    1.0000    0.5000    1.0000  5.04e-16     3s
+
+Interpretation:
+  - Born-safe extension works only if the Born column stays machine-clean
+  - This schedule is deterministic and geometry-only, not layer normalization
+  - If h=0.125 or h=0.0625 violates Born, the extension is ambiguous or fails
+
+----- stderr -----
+

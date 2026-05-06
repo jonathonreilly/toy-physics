@@ -1,0 +1,18 @@
+loop: lattice-nn-deterministic-rescale-closure-20260506
+target: docs/LATTICE_NN_DETERMINISTIC_RESCALE_NOTE.md
+mode: run
+actual_current_surface_status: open
+conditional_surface_status: proposed_retained
+active_route: runner-cache registration and note evidence closure
+files_touched:
+  - docs/LATTICE_NN_DETERMINISTIC_RESCALE_NOTE.md
+  - docs/audit/data/audit_ledger.json
+  - logs/runner-cache/lattice_nn_deterministic_rescale.txt
+  - scripts/canonical_regression_gate.py
+open_imports: []
+no_go_routes:
+  - continuum theorem promotion
+  - absolute-path historical log dependence
+review_findings: pass
+next_exact_action: rerun audit for lattice_nn_deterministic_rescale_note
+stop_condition: requested bounded target prepared for re-audit
