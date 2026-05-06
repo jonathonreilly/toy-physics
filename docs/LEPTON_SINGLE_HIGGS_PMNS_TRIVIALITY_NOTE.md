@@ -42,9 +42,22 @@ So the full single-Higgs lepton-sector rescue route is closed negatively:
 
 This theorem reuses:
 
-- `One-generation matter closure`
-- `Three-generation matter structure`
-- `Neutrino Dirac monomial no-mixing theorem`
+- [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
+  — supplies the underlying single-generation matter closure on which
+  the three-generation extension and the `Z_3` generation-charge
+  structure rest.
+- [`THREE_GENERATION_STRUCTURE_NOTE.md`](THREE_GENERATION_STRUCTURE_NOTE.md)
+  — supplies the three-generation `Z_3` charge structure used for the
+  support analysis on both lepton Yukawa sectors.
+- [`NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md`](NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md)
+  — supplies the upstream Dirac-lane reduction; the Neutrino Dirac
+  monomial no-mixing content used in the bottom-line is established
+  there together with `NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md`
+  on the single-Higgs fixed-offset class.
+- [`NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md`](NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md)
+  — companion theorem giving the three-pattern support reduction on
+  the single-Higgs `Z_3` charge condition; the present triviality
+  theorem is the PMNS-readout consequence on that same surface.
 
 and keeps the bridge condition explicit:
 

@@ -40,9 +40,18 @@ search. The remaining unknown is:
 
 This theorem reuses the retained/current atlas stack:
 
-- `One-generation matter closure`
-- `Three-generation matter structure`
-- `Neutrino mass reduction to Dirac lane`
+- [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
+  — supplies the `Z_3` generation-charge structure inherited by the
+  three-generation lattice.
+- [`THREE_GENERATION_STRUCTURE_NOTE.md`](THREE_GENERATION_STRUCTURE_NOTE.md)
+  — supplies the retained left/right `Z_3` charge triplets
+  `q_L = (0, +1, -1)` and `q_R = (0, -1, +1)` used in the support
+  derivation.
+- [`THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`](THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
+  — companion observable-side theorem for the three-generation surface.
+- [`NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md`](NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md)
+  — Neutrino mass reduction to the Dirac lane, supplying the upstream
+  reduction that this theorem operates on.
 
 and adds one explicit conditional input:
 

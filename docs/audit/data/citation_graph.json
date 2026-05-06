@@ -8857,6 +8857,22 @@
       "to": "gauge_matter_closure_gates_2026-04-12"
     },
     {
+      "from": "lepton_single_higgs_pmns_triviality_note",
+      "to": "one_generation_matter_closure_note"
+    },
+    {
+      "from": "lepton_single_higgs_pmns_triviality_note",
+      "to": "three_generation_structure_note"
+    },
+    {
+      "from": "lepton_single_higgs_pmns_triviality_note",
+      "to": "neutrino_mass_reduction_to_dirac_note"
+    },
+    {
+      "from": "lepton_single_higgs_pmns_triviality_note",
+      "to": "neutrino_dirac_z3_support_trichotomy_note"
+    },
+    {
       "from": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
       "to": "graph_first_selector_derivation_note"
     },
@@ -9543,6 +9559,30 @@
     {
       "from": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
       "to": "pmns_right_polar_section_note"
+    },
+    {
+      "from": "neutrino_dirac_two_higgs_canonical_reduction_note",
+      "to": "dm_neutrino_two_higgs_minimality_theorem_note_2026-04-15"
+    },
+    {
+      "from": "neutrino_dirac_two_higgs_canonical_reduction_note",
+      "to": "lepton_single_higgs_pmns_triviality_note"
+    },
+    {
+      "from": "neutrino_dirac_z3_support_trichotomy_note",
+      "to": "one_generation_matter_closure_note"
+    },
+    {
+      "from": "neutrino_dirac_z3_support_trichotomy_note",
+      "to": "three_generation_structure_note"
+    },
+    {
+      "from": "neutrino_dirac_z3_support_trichotomy_note",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "neutrino_dirac_z3_support_trichotomy_note",
+      "to": "neutrino_mass_reduction_to_dirac_note"
     },
     {
       "from": "neutrino_lane4_4f_phase2_attack_frame_fanout_note_2026-04-28",
@@ -40425,8 +40465,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [],
-      "note_hash": "e0fca5dffaa7e58424ec2af58e7e698218b85240fb8ecc00d946282fc9513639",
+      "deps": [
+        "one_generation_matter_closure_note",
+        "three_generation_structure_note",
+        "neutrino_mass_reduction_to_dirac_note",
+        "neutrino_dirac_z3_support_trichotomy_note"
+      ],
+      "note_hash": "f02ffa0bbcde84a561878f979f53f9ec0c1f672360adb38b8786c3c48b419129",
       "path": "docs/LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md",
       "runner_path": "scripts/frontier_lepton_single_higgs_pmns_triviality.py",
       "title": "Lepton Single-Higgs PMNS Triviality Theorem"
@@ -41556,8 +41601,11 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [],
-      "note_hash": "b99d149e027518d2eef1fe0155c880d6e74575c83030af20bcea3e385ccecfdf",
+      "deps": [
+        "dm_neutrino_two_higgs_minimality_theorem_note_2026-04-15",
+        "lepton_single_higgs_pmns_triviality_note"
+      ],
+      "note_hash": "4578a1224018809dcf61d7358d6d86daa45a6a51a3fd3c7237b833d28acdf00c",
       "path": "docs/NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_dirac_two_higgs_canonical_reduction.py",
       "title": "Neutrino Dirac Two-Higgs Canonical Reduction Theorem"
@@ -41567,8 +41615,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "830f3a016c11b31834983cb618ef0f97a8b1ab53fe1d4c539ac8d381832c36bd",
+      "deps": [
+        "one_generation_matter_closure_note",
+        "three_generation_structure_note",
+        "three_generation_observable_theorem_note",
+        "neutrino_mass_reduction_to_dirac_note"
+      ],
+      "note_hash": "764b935ed106edf8f923669badac0e4b594d7e7069b19dbd7064c159db4b385f",
       "path": "docs/NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_dirac_z3_support_trichotomy.py",
       "title": "Neutrino Dirac `Z_3` Support Trichotomy"
@@ -55070,7 +55123,6 @@
     "lensing_beta_sweep_note",
     "lensing_deflection_note",
     "lensing_k_sweep_note",
-    "lepton_single_higgs_pmns_triviality_note",
     "light_cone_framing_note",
     "linear_response_derivation_note",
     "linear_response_second_order_kubo_note",
@@ -55111,8 +55163,6 @@
     "multipole_tidal_response_note",
     "nature_discovery_directions_2026-04-11",
     "nature_ranked_directions_2026-04-11",
-    "neutrino_dirac_two_higgs_canonical_reduction_note",
-    "neutrino_dirac_z3_support_trichotomy_note",
     "neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28",
     "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
     "neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29",
@@ -55464,10 +55514,10 @@
       "open_gate": 118,
       "positive_theorem": 636
     },
-    "edge_count": 6521,
+    "edge_count": 6531,
     "leaf_count": 553,
     "node_count": 1903,
-    "root_count": 876,
+    "root_count": 873,
     "runners_with_path": 1477
   }
 }

@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 771 |
+| unaudited | 774 |
 | audit_in_progress | 3 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 34 |
-| ~~audited_conditional~~ | 473 |
+| ~~audited_conditional~~ | 470 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 378 |
-| `audited_conditional` | 473 |
+| `audited_conditional` | 470 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 34 |
-| `unaudited` | 817 |
+| `unaudited` | 820 |
 
 | claim_type | count |
 |---|---:|
@@ -65,7 +65,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `leaf` | 652 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 171
+- **Citation cycles detected:** 174
 
 ### Runner classification (static heuristic)
 
@@ -81,30 +81,30 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
 | 1 | `observable_principle_from_axiom_note` | positive_theorem | critical | 333 | 34.88 | `audited_conditional` | ~~audited_conditional~~ |
-| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 583 | 34.19 | `audited_clean` | **retained_bounded** |
-| 3 | `minimal_axioms_2026-04-11` | meta | critical | 493 | 33.95 | `unaudited` | meta |
-| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 501 | 31.97 | `audited_conditional` | ~~audited_conditional~~ |
+| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 592 | 34.21 | `audited_clean` | **retained_bounded** |
+| 3 | `minimal_axioms_2026-04-11` | meta | critical | 502 | 33.97 | `unaudited` | meta |
+| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 510 | 32.00 | `audited_conditional` | ~~audited_conditional~~ |
 | 5 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 358 | 30.99 | `audited_conditional` | ~~audited_conditional~~ |
 | 6 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 359 | 30.49 | `audited_conditional` | ~~audited_conditional~~ |
 | 7 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 296 | 29.21 | `unaudited` | unaudited |
-| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 573 | 28.66 | `audited_clean` | **retained_bounded** |
+| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 582 | 28.69 | `audited_clean` | **retained_bounded** |
 | 9 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 352 | 26.46 | `audited_conditional` | ~~audited_conditional~~ |
-| 10 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 578 | 25.68 | `audited_clean` | open_gate |
+| 10 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 587 | 25.70 | `audited_clean` | open_gate |
 | 11 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 345 | 25.43 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 444 | 25.30 | `unaudited` | unaudited |
-| 13 | `minimal_axioms_2026-05-03` | meta | critical | 588 | 25.20 | `unaudited` | meta |
-| 14 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 300 | 23.73 | `unaudited` | unaudited |
-| 15 | `left_handed_charge_matching_note` | bounded_theorem | critical | 417 | 23.71 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `three_generation_structure_note` | bounded_theorem | critical | 358 | 22.99 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 320 | 22.83 | `audited_conditional` | ~~audited_conditional~~ |
-| 18 | `one_generation_matter_closure_note` | bounded_theorem | critical | 366 | 22.52 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 453 | 25.33 | `unaudited` | unaudited |
+| 13 | `minimal_axioms_2026-05-03` | meta | critical | 597 | 25.22 | `unaudited` | meta |
+| 14 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 312 | 24.29 | `unaudited` | unaudited |
+| 15 | `three_generation_structure_note` | bounded_theorem | critical | 373 | 24.05 | `audited_conditional` | ~~audited_conditional~~ |
+| 16 | `left_handed_charge_matching_note` | bounded_theorem | critical | 426 | 23.74 | `audited_conditional` | ~~audited_conditional~~ |
+| 17 | `one_generation_matter_closure_note` | bounded_theorem | critical | 375 | 23.55 | `audited_conditional` | ~~audited_conditional~~ |
+| 18 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 320 | 22.83 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 355 | 22.48 | `audited_conditional` | ~~audited_conditional~~ |
-| 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 524 | 22.04 | `audited_conditional` | ~~audited_conditional~~ |
+| 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 533 | 22.06 | `audited_conditional` | ~~audited_conditional~~ |
 | 21 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 337 | 21.40 | `audited_conditional` | ~~audited_conditional~~ |
-| 22 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 305 | 21.26 | `audited_clean` | **retained** |
+| 22 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 317 | 21.31 | `audited_clean` | **retained** |
 | 23 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 284 | 20.66 | `audited_conditional` | ~~audited_conditional~~ |
 | 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 306 | 20.26 | `unaudited` | unaudited |
-| 25 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | critical | 542 | 19.59 | `audited_clean` | **retained_bounded** |
+| 25 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | critical | 551 | 19.61 | `audited_clean` | **retained_bounded** |
 
 
 ## Applied audits
@@ -805,7 +805,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lensing_beta_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `lensing_deflection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `lensing_k_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
-| `lepton_single_higgs_pmns_triviality_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `light_cone_framing_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | F | - |
 | `linear_response_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -826,8 +825,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_grown_combined_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `mirror_program_synthesis` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `mirror_vs_central_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
-| `neutrino_dirac_two_higgs_canonical_reduction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `neutrino_dirac_z3_support_trichotomy_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `neutrino_lane4_theorem_plan_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `neutrino_lane4_workstream_closeout_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `neutrino_majorana_lower_level_pairing_nogo_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
@@ -8993,21 +8990,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The numerical load-bearing step is not a mere printout or imported value; the included runner grows DAGs and computes Kubo responses and power-law fits. However, the provided runner cache is incomplete due to timeout, so the all-seeds k·H=5.0 claim and final summary are not certified by the restricted packet. The note also explicitly bounds itself away from a framework theorem and acknowledges that the wave-interference mechanism is stronger than the table alone without registered kernel/mode evidence.
 - **auditor confidence:** high
 
-### `lepton_single_higgs_pmns_triviality_note`
-
-- **Note:** [`LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md`](../../docs/LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the conditional algebraic obstruction that, for the specified conjugate Z_3 generation charges and one fixed effective offset in both lepton Yukawa sectors, both left Gram matrices are diagonal and |U_PMNS| is a permutation matrix.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-lepton_single_higgs_pmns-030`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** For any fixed effective offset s in Z_3, q_L(i)+s+q_R(j)=0 mod 3 gives exactly one allowed target in each row and one allowed source in each column, so the Yukawa matrix is monomial.  _(class `A`)_
-- **chain closes:** False — The algebraic step closes from the stated charge pattern and fixed-offset premise. The restricted packet does not provide retained-grade cited authorities for the imported three-generation matter structure, neutrino monomial theorem, or bridge that both lepton sectors share the required single-Higgs fixed-offset support condition.
-- **rationale:** The runner performs real finite Z_3 support enumeration and monomial matrix checks rather than merely printing constants, so the local algebra is credible as class A. It also includes observation/permutation incompatibility checks, which are comparator checks rather than derivations of the support theorem. However, the note relies on upstream retained inputs and a bridge condition that are named but not supplied as cited authorities in the restricted packet, so the theorem is conditional on those missing retained-grade premises.
-- **open / conditional deps cited:**
-  - `LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md`
-- **auditor confidence:** high
-
 ### `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02`
 
 - **Note:** [`LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md)
@@ -9525,34 +9507,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Exact native Cl(3)/SU(2) closure is established algebraically, while SU(3) and the bounded hypercharge-like abelian surface are inherited only through retained graph-first dependencies and explicitly not promoted to anomaly-complete U(1)_Y or phenomenology.  _(class `A`)_
 - **chain closes:** True — The native SU(2) chain is checked by exact finite algebra, and the graph-first SU(3)/abelian pieces are limited to retained-bounded cited authorities. The stated exclusions prevent an unratified jump to anomaly-complete U(1)_Y or downstream phenomenology.
 - **rationale:** Issue checked: whether the native gauge aggregator closes without importing a full Standard Model identification. Within the restricted scope, the claim closes as exact algebra plus retained dependency composition: the runner checks Clifford/SU(2), parity/hopping, dependency retained-grade status, and the selected-axis abelian eigenvalue surface. No hidden anomaly-complete U(1)_Y or phenomenology claim is asserted.
-- **auditor confidence:** high
-
-### `neutrino_dirac_two_higgs_canonical_reduction_note`
-
-- **Note:** [`NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`](../../docs/NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the algebraic reduction and parameter count for a stipulated distinct-charge two-Higgs Dirac texture of the form D_a P_a + D_b P_b, with diagonal lepton-field rephasings and generation relabeling allowed.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-033337-de2b049d-neutrino_dirac_two_higgs-016`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Right-multiplying by P_a^dag makes one term diagonal, the relative permutation R = P_b P_a^dag is always a nontrivial 3-cycle, and all nontrivial 3-cycles are conjugate by generation relabeling, after which diagonal rephasings remove five phase directions leaving one invariant phase.  _(class `A`)_
-- **chain closes:** False — The algebraic canonicalization and generic 7-parameter count close for the stipulated texture family. The restricted packet does not close the imported premises that the minimal surviving neutrino lane has exactly this D_a P_a + D_b P_b support and that the charged-lepton boundary is monomial single-Higgs.
-- **rationale:** The runner performs finite-dimensional algebra checks: permutation conjugacy, one sample phase reduction, a rank count, and a parameter-count comparison. It does not derive the two-Higgs support family or charged-lepton boundary from axiom-side inputs, and no cited retained-grade authorities are provided in the restricted packet. Therefore the internal reduction is plausible class-A algebra, but the full theorem as framed remains conditional on imported bridge and boundary premises.
-- **open / conditional deps cited:**
-  - `NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`
-- **auditor confidence:** high
-
-### `neutrino_dirac_z3_support_trichotomy_note`
-
-- **Note:** [`NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md`](../../docs/NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the conditional support classification of Y_nu under supplied Z_3 generation charges and a single Higgs doublet with definite q_H.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-neutrino_dirac_z3_suppor-018`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Given q_L=(0,+1,-1), q_R=(0,-1,+1), and fixed q_H, the invariance condition q_L(i)+q_H+q_R(j)=0 mod 3 has exactly one solution in each row and column.  _(class `A`)_
-- **chain closes:** False — The algebraic trichotomy closes once q_L, q_R, the Dirac-lane reduction, and the single-Higgs definite-q_H condition are granted. The restricted packet does not close those imported premises as retained-grade dependencies.
-- **rationale:** The runner genuinely checks the finite Z_3 algebra and the three resulting permutation supports, so the internal support classification is an algebraic identity check rather than a mere printout. However, the load-bearing inputs are hard-coded or assumed: the generation charges, the Dirac-lane reduction, and the single-Higgs definite-Z_3 bridge are not established by cited retained authorities in the restricted packet. Therefore the audited result is valid only as the stated bounded conditional theorem.
 - **auditor confidence:** high
 
 ### `neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28`

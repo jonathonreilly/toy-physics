@@ -49,13 +49,13 @@
       "effective_status": "audited_conditional",
       "generated_order": 1,
       "improved_dependencies": [],
-      "load_bearing_score": 9.304,
+      "load_bearing_score": 9.333,
       "note_hash": "9e22a9134a48246a2df0f06162aef738ae23699218d40773b0c7858ea9c45897",
       "note_path": "docs/CAUSAL_ESCAPE_WINDOW_NOTE.md",
       "reraudit_after_claim_ids": [],
       "runner_path": "scripts/causal_escape_window.py",
       "snap_runner_hash": "3744a986af9154aeef92f734c123062b2f9e385410d8167d22e5637683cecca7",
-      "transitive_descendants": 446
+      "transitive_descendants": 455
     }
   ],
   "total_candidates": 0,
