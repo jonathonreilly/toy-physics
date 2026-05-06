@@ -38666,7 +38666,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "c3536063039b40ebf321b289152c201861356707ab023ebe0456c2ccf14eab0d",
+      "note_hash": "4f8e060cde5f2ac993a952b99053a4eefc50e4f7f1e339baa7ed130f9185c31e",
       "path": "docs/KOIDE_HOSTILE_REVIEW_GUARD_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_koide_hostile_review_guard.py",
       "title": "Koide Hostile-Review Guard"

@@ -16,17 +16,24 @@ It does not prove a physics theorem and does not close `Q` or `delta`.
 
 ## Checks
 
-The runner scans current 2026-04-24 Koide no-go notes, the consolidated
-objection-review packet, and their no-go scripts, and verifies:
+The runner scans current 2026-04-24 Koide no-go notes and the consolidated
+objection-review packet.  For the paired no-go scripts, it executes each target
+script and verifies emitted stdout lines rather than source-text substrings, so
+comments, dead strings, or unrelated literals cannot satisfy the script-output
+checks.  The guard verifies:
 
 1. no-go notes exist;
 2. every no-go note names a residual scalar or primitive;
 3. no no-go note promotes a closure flag as `TRUE`;
 4. no no-go note states a forbidden target as an assumption;
 5. no-go scripts exist;
-6. every no-go script prints an explicit negative `CLOSES` flag;
-7. every no-go script prints an explicit residual label;
-8. no no-go script promotes a closure flag as `TRUE`.
+6. every no-go script emits an explicit negative `CLOSES` flag on stdout;
+7. every no-go script emits an explicit `RESIDUAL...=` label on stdout;
+8. no no-go script output promotes a closure flag as `TRUE`.
+
+The script-output checks are label-hygiene checks, not target-proof checks: a
+no-go script may return a nonzero code while still emitting the negative
+closeout and residual labels that this guard is designed to police.
 
 ## Cleanup Forced By The Guard
 
@@ -45,6 +52,9 @@ The first guard run correctly failed on packet hygiene:
 Those artifacts were updated rather than exempted.
 
 ## Executable Result
+
+2026-05-06 rerun transcript:
+`outputs/frontier_koide_hostile_review_guard_2026-05-06.txt`.
 
 ```text
 PASSED: 8/8

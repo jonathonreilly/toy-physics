@@ -1,0 +1,30 @@
+loop_slug: koide-hostile-review-guard-exec-sync
+date: "2026-05-06"
+branch: physics-loop/koide-hostile-review-guard-exec-sync-block01-20260506
+base: origin/main
+mode: run
+target_status: bounded-support
+actual_current_surface_status: bounded-support
+publication_effective_status_after_block: unaudited
+cycle_count: 1
+block_count: 1
+active_route: executed_stdout_verification
+hard_residual: "Archived audit objected that source-text substrings could satisfy claimed script print checks."
+files_touched:
+  - scripts/frontier_koide_hostile_review_guard.py
+  - docs/KOIDE_HOSTILE_REVIEW_GUARD_NOTE_2026-04-24.md
+  - outputs/frontier_koide_hostile_review_guard_2026-05-06.txt
+  - docs/audit/data/audit_ledger.json
+  - docs/audit/data/citation_graph.json
+  - docs/audit/data/runner_classification.json
+  - docs/audit/data/effective_status_summary.json
+open_imports:
+  - independent_reaudit_required
+no_go_routes:
+  - shallow_source_substring_scan_as_print_verification
+review_findings:
+  - "Author-side audit_lint completed with warnings only; no errors."
+subagents_used: false
+pr_status: pending
+next_exact_action: "Commit, push, open PR, then record PR URL in loop pack."
+stop_condition: "One review PR opened for this science block."
