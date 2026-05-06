@@ -1,5 +1,18 @@
 # Opportunity Queue
 
+2026-05-05 logdet Hessian neutral-mixing update:
+`outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json`
+passes with `PASS=17 FAIL=0`.  The determinant/Hessian shortcut is now closed
+at the right mathematical level: source-only `W(s,0)` can be held fixed for
+all source derivatives while the second-source `h` Hessian and off-diagonal
+neutral generator vary.  This means determinant positivity and source-only
+logdet curvature are not enough; the next admissible positive artifact must
+define the two-source `Z(s,h)`/canonical `O_H` on the same PR230 surface, or
+derive a true neutral primitive/off-diagonal generator theorem.  Aggregate
+gates after wiring: assumption/import stress `PASS=38 FAIL=0`, full assembly
+`PASS=93 FAIL=0`, retained route `PASS=241 FAIL=0`, and campaign status
+`PASS=273 FAIL=0`.
+
 2026-05-05 minimal-axioms Yukawa-summary firewall update:
 `outputs/yt_pr230_minimal_axioms_yukawa_summary_firewall_2026-05-05.json`
 passes with `PASS=12 FAIL=0`.  The old minimal-axioms memo does contain

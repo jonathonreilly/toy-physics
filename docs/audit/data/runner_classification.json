@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T01:14:27.295351+00:00",
+  "generated_at": "2026-05-06T01:20:50.387966+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16644,6 +16644,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_invariant_ring_oh_certificate_attempt.py"
+    },
+    "yt_pr230_logdet_hessian_neutral_mixing_attempt_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_logdet_hessian_neutral_mixing_attempt.py"
     },
     "yt_pr230_matching_running_bridge_gate_note_2026-05-04": {
       "assert_count": 1,
@@ -34458,6 +34470,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_logdet_hessian_neutral_mixing_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_logdet_hessian_neutral_mixing_attempt_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_matching_running_bridge_gate.py": {
       "assert_count": 1,
       "claims": [
@@ -40043,13 +40070,13 @@
     "decoration_candidates": 108,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 223,
+      "B": 224,
       "C": 501,
       "D": 300,
       "none": 404
     },
-    "runners_classified": 1437,
-    "runners_with_C": 749,
-    "runners_with_D": 530
+    "runners_classified": 1438,
+    "runners_with_C": 750,
+    "runners_with_D": 531
   }
 }

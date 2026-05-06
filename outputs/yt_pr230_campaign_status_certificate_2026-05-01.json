@@ -263,6 +263,7 @@
     "pr230_gns_source_higgs_flat_extension_attempt": "exact negative boundary / GNS source-Higgs flat-extension attempt blocked by missing O_H/C_sH/C_HH rows",
     "pr230_holonomic_source_response_feasibility_gate": "exact negative boundary / PR541-style holonomic source-response route is relevant but blocked by missing current-surface O_H and h-source",
     "pr230_invariant_ring_oh_certificate_attempt": "exact negative boundary / invariant-ring O_H certificate attempt blocked on current PR230 surface",
+    "pr230_logdet_hessian_neutral_mixing_attempt": "exact negative boundary / source-only staggered logdet Hessian does not derive the neutral Higgs mixing bridge",
     "pr230_matching_running_bridge_gate": "open / PR230 matching-running bridge awaits certified physical input",
     "pr230_minimal_axioms_yukawa_summary_firewall": "exact negative boundary / minimal-axioms Yukawa summary is not PR230 proof authority",
     "pr230_nonchunk_current_surface_exhaustion": "exact negative boundary / current PR230 non-chunk route queue exhausted; positive closure still open",
@@ -386,7 +387,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 272,
+  "pass_count": 273,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact negative boundary / minimal-axioms Yukawa summary is not PR230 proof authority
-conditional_surface_status: conditional-support only if a future same-surface bridge supplies canonical O_H/source-Higgs rows, genuine same-source W/Z response, Schur rows, neutral irreducibility, or strict scalar-LSZ authority plus matching/running
+actual_current_surface_status: exact negative boundary / source-only staggered logdet Hessian does not derive the neutral Higgs mixing bridge
+conditional_surface_status: conditional-support only if a future same-surface bridge supplies two-source Z(s,h) with canonical O_H/source-Higgs rows, genuine same-source W/Z response, Schur rows, neutral irreducibility, or strict scalar-LSZ authority plus matching/running
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "The latest firewall verifies that the old minimal-axioms y_t/m_t summary rows are not PR230 proof authority: the memo is audited_conditional and the summarized Ward lane is audited_renaming because of the H_unit matrix-element bridge.  Current PR230 still lacks same-surface O_H/C_sH/C_HH, W/Z response, Schur-row, neutral-irreducibility, scalar-LSZ, and matching/running authority."
+proposal_allowed_reason: "The latest determinant/logdet attempt shows that the current source-only mass logdet W(s,0) underdetermines any second neutral source h: W(s,0) and all source derivatives can be fixed while h-Hessian rows and the off-diagonal generator vary.  Current PR230 still lacks same-surface O_H/C_sH/C_HH, W/Z response, Schur-row, neutral-irreducibility, scalar-LSZ, and matching/running authority."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -15,6 +15,12 @@ Retained/proposed-retained wording is not allowed for this block.
 
 Open imports:
 
+- logdet Hessian neutral-mixing attempt is an exact negative boundary:
+  `outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json`
+  records `PASS=17 FAIL=0` and blocks source-only staggered determinant/
+  Hessian data from serving as the missing `h/O_H` bridge; the source-only
+  tower is identical while `h` Hessian rows and the off-diagonal generator
+  vary;
 - minimal-axioms Yukawa summary firewall is an exact negative boundary:
   `outputs/yt_pr230_minimal_axioms_yukawa_summary_firewall_2026-05-05.json`
   records `PASS=12 FAIL=0` and blocks the old `y_t/g_s`, `y_t(v)`, and

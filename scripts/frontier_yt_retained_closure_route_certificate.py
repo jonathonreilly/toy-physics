@@ -157,6 +157,7 @@ def main() -> int:
         "neutral_scalar_primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
         "neutral_scalar_burnside_irreducibility_attempt": "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
         "neutral_offdiagonal_generator_derivation_attempt": "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
+        "pr230_logdet_hessian_neutral_mixing_attempt": "outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "pr230_matching_running_bridge_gate": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
@@ -1303,6 +1304,24 @@ def main() -> int:
             "exact_negative_boundary_passed"
         )
         is True
+    )
+    logdet_hessian_neutral_mixing_blocks = (
+        "source-only staggered logdet Hessian does not derive"
+        in certificates["pr230_logdet_hessian_neutral_mixing_attempt"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_logdet_hessian_neutral_mixing_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_logdet_hessian_neutral_mixing_attempt"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+        and certificates["pr230_logdet_hessian_neutral_mixing_attempt"].get(
+            "logdet_hessian_bridge_closes_pr230"
+        )
+        is False
     )
     scalar_carrier_projector_closure_blocked = (
         "scalar carrier-projector closure attempt blocked"
@@ -3365,6 +3384,13 @@ def main() -> int:
         "neutral-offdiagonal-generator-derivation-attempt-blocks-current-surface",
         neutral_offdiagonal_generator_derivation_blocks,
         certificates["neutral_offdiagonal_generator_derivation_attempt"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "logdet-hessian-neutral-mixing-blocks-source-only-determinant-route",
+        logdet_hessian_neutral_mixing_blocks,
+        certificates["pr230_logdet_hessian_neutral_mixing_attempt"].get(
             "actual_current_surface_status", ""
         ),
     )

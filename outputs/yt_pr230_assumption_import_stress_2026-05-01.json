@@ -15,6 +15,7 @@
     "hunit_canonical_higgs_operator_candidate_gate": "exact negative boundary / H_unit not canonical-Higgs operator realization",
     "invariant_ring_oh_certificate_attempt": "exact negative boundary / invariant-ring O_H certificate attempt blocked on current PR230 surface",
     "kinetic_matching": "exact negative boundary / heavy kinetic matching obstruction",
+    "logdet_hessian_neutral_mixing_attempt": "exact negative boundary / source-only staggered logdet Hessian does not derive the neutral Higgs mixing bridge",
     "minimal_axioms_yukawa_summary_firewall": "exact negative boundary / minimal-axioms Yukawa summary is not PR230 proof authority",
     "momentum_pilot": "bounded-support / momentum pilot scaling",
     "neutral_offdiagonal_generator_derivation_attempt": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
@@ -37,7 +38,7 @@
   },
   "fail_count": 0,
   "missing_forbidden_terms": [],
-  "pass_count": 37,
+  "pass_count": 38,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
   "strict_non_claims": [

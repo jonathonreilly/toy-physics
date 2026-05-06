@@ -71,6 +71,9 @@ def main() -> int:
         "neutral_offdiagonal_generator_derivation_attempt": load(
             "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json"
         ),
+        "logdet_hessian_neutral_mixing_attempt": load(
+            "outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json"
+        ),
         "schur_abc_definition_derivation_attempt": load(
             "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json"
         ),
@@ -181,6 +184,8 @@ def main() -> int:
         "not proof selectors until a same-surface off-diagonal neutral generator or primitive transfer exists",
         "Neutral off-diagonal generator derivation",
         "not proof selectors until the mixed generator is derived on the same PR230 surface",
+        "Staggered logdet Hessian neutral-mixing attempt",
+        "source-only logdet tower does not define h/O_H",
         "Schur A/B/C definition derivation",
         "not proof selectors until same-surface Schur A/B/C rows and projectors exist",
         "W/Z g2 bare-running bridge",
@@ -550,6 +555,20 @@ def main() -> int:
         )
         is True,
         reflection_det_upgrade.get("actual_current_surface_status"),
+    )
+    logdet_hessian_mixing = certificates["logdet_hessian_neutral_mixing_attempt"]
+    report(
+        "logdet-hessian-neutral-mixing-does-not-derive-oh",
+        "source-only staggered logdet Hessian does not derive"
+        in str(logdet_hessian_mixing.get("actual_current_surface_status"))
+        and logdet_hessian_mixing.get("proposal_allowed") is False
+        and logdet_hessian_mixing.get("exact_negative_boundary_passed") is True
+        and logdet_hessian_mixing.get("logdet_hessian_bridge_closes_pr230") is False
+        and logdet_hessian_mixing.get("forbidden_firewall", {}).get(
+            "uses_minimal_axioms_yukawa_summary_as_proof"
+        )
+        is False,
+        logdet_hessian_mixing.get("actual_current_surface_status"),
     )
     minimal_axioms_firewall = certificates["minimal_axioms_yukawa_summary_firewall"]
     report(

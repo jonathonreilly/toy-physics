@@ -89,6 +89,7 @@ PARENTS = {
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
     "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
     "pr230_reflection_det_primitive_upgrade_gate": "outputs/yt_pr230_reflection_det_primitive_upgrade_gate_2026-05-05.json",
+    "pr230_logdet_hessian_neutral_mixing_attempt": "outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json",
     "cross_lane_oh_authority_audit": "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
     "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
     "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
@@ -328,6 +329,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "primitive-cone stretch no-go blocks the source-only and conditional-Perron shortcut",
                 "Burnside/double-commutant route has no same-surface off-diagonal neutral generator",
                 "direct off-diagonal generator derivation attempt finds only absent or block-diagonal current rows",
+                "source-only logdet Hessian leaves the second neutral source h/O_H underdetermined",
             ],
             "parents": [
                 PARENTS["neutral_scalar_irreducibility"],
@@ -335,6 +337,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["neutral_scalar_primitive_cone_stretch_no_go"],
                 PARENTS["neutral_scalar_burnside_irreducibility"],
                 PARENTS["neutral_offdiagonal_generator_derivation"],
+                PARENTS["pr230_logdet_hessian_neutral_mixing_attempt"],
             ],
         },
     }
@@ -1583,6 +1586,24 @@ def main() -> int:
         )
         is True,
         statuses["neutral_offdiagonal_generator_derivation"],
+    )
+    report(
+        "logdet-hessian-neutral-mixing-attempt-blocks-source-only-determinant-route",
+        "source-only staggered logdet Hessian does not derive"
+        in statuses["pr230_logdet_hessian_neutral_mixing_attempt"]
+        and certs["pr230_logdet_hessian_neutral_mixing_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_logdet_hessian_neutral_mixing_attempt"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+        and certs["pr230_logdet_hessian_neutral_mixing_attempt"].get(
+            "logdet_hessian_bridge_closes_pr230"
+        )
+        is False,
+        statuses["pr230_logdet_hessian_neutral_mixing_attempt"],
     )
     report(
         "nonchunk-current-surface-exhaustion-recorded",

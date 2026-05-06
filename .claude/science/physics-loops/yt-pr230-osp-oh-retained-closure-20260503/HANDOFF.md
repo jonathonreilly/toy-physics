@@ -1,5 +1,44 @@
 # Handoff
 
+## 2026-05-05 PR230 Logdet Hessian Neutral-Mixing Attempt
+
+Result: exact negative boundary / source-only staggered logdet Hessian does
+not derive the neutral Higgs mixing bridge.  This block tests the determinant
+route directly: whether the PR230 one-source mass logdet can supply the
+missing `h/O_H`, `C_sH/C_HH`, or neutral off-diagonal generator.
+
+The runner uses a two-source determinant counterfamily
+`W_eps(s,h)=log(1+s-eps^2 h^2)`.  For all `eps`, the entire source-only tower
+`W_eps(s,0)=log(1+s)` is identical.  But the `h` Hessian, mixed
+`s-h-h` row, and off-diagonal generator norm vary with `eps`, while the
+determinant remains positive near the origin.  Therefore source-only
+determinant/Hessian data underdetermine the bridge.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_logdet_hessian_neutral_mixing_attempt.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=38 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=93 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=241 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=273 FAIL=0
+```
+
+Claim boundary: no retained or proposed-retained closure.  This block writes
+no two-source `Z(s,h)`, no canonical `O_H`, no `C_sH/C_HH`, no W/Z row, no
+Schur row, no scalar-LSZ authority, and no matching/running bridge.  Exact
+next action: construct a real two-source same-surface functional or derive a
+neutral primitive/off-diagonal transfer theorem.
+
 ## 2026-05-05 PR230 Minimal-Axioms Yukawa-Summary Firewall
 
 Result: exact negative boundary / minimal-axioms Yukawa summary is not PR230

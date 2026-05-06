@@ -334,6 +334,9 @@ def main() -> int:
         "neutral_offdiagonal_generator_derivation_attempt": load(
             "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json"
         ),
+        "pr230_logdet_hessian_neutral_mixing_attempt": load(
+            "outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json"
+        ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
@@ -1509,6 +1512,24 @@ def main() -> int:
         )
         is True,
         statuses["neutral_offdiagonal_generator_derivation_attempt"],
+    )
+    report(
+        "pr230-logdet-hessian-neutral-mixing-attempt-blocks-source-only-determinant-route",
+        "source-only staggered logdet Hessian does not derive"
+        in str(statuses["pr230_logdet_hessian_neutral_mixing_attempt"])
+        and certificates["pr230_logdet_hessian_neutral_mixing_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_logdet_hessian_neutral_mixing_attempt"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+        and certificates["pr230_logdet_hessian_neutral_mixing_attempt"].get(
+            "logdet_hessian_bridge_closes_pr230"
+        )
+        is False,
+        statuses["pr230_logdet_hessian_neutral_mixing_attempt"],
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",

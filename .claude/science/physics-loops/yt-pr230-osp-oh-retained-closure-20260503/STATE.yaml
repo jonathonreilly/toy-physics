@@ -4,17 +4,28 @@ requested_runtime: 12h
 start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
-actual_current_surface_status: exact negative boundary / minimal-axioms Yukawa summary is not PR230 proof authority
-active_residual: "Both target production chunks001-063 and polefit8x8 chunks001-063 are complete with required FH/LSZ target schema, but positive closure still fails the assembly checklist.  The cleanest physics route remains source-Higgs, but its invariant-ring theorem step is blocked by a two-singlet neutral completion.  The strict scalar-LSZ outside-math leg is narrowed: finite shell values, exact interpolation, PSLQ/value recognition, or the existence of some rational holonomic continuation do not determine the physical scalar denominator or pole residue.  The latest minimal-axioms firewall also blocks reuse of old y_t/m_t summary rows as PR230 proof authority because the memo is audited_conditional and the summarized Ward lane is audited_renaming.  A positive leg still needs a same-surface bridge: O_H/C_sH/C_HH, genuine W/Z response, Schur rows, neutral irreducibility, strict scalar-LSZ authority, and matching/running.  No retained or proposed_retained closure is authorized."
+actual_current_surface_status: exact negative boundary / source-only staggered logdet Hessian does not derive the neutral Higgs mixing bridge
+active_residual: "Both target production chunks001-063 and polefit8x8 chunks001-063 are complete with required FH/LSZ target schema, but positive closure still fails the assembly checklist.  The cleanest physics route remains source-Higgs, but its invariant-ring theorem step is blocked by a two-singlet neutral completion.  The strict scalar-LSZ outside-math leg is narrowed: finite shell values, exact interpolation, PSLQ/value recognition, or the existence of some rational holonomic continuation do not determine the physical scalar denominator or pole residue.  The minimal-axioms firewall blocks reuse of old y_t/m_t summary rows as PR230 proof authority.  The latest logdet Hessian attempt also blocks source-only determinant curvature as the missing h/O_H bridge: W(s,0) can be fixed while h-Hessian rows and off-diagonal generator vary.  A positive leg still needs a same-surface bridge: two-source Z(s,h)/O_H/C_sH/C_HH, genuine W/Z response, Schur rows, neutral irreducibility, strict scalar-LSZ authority, and matching/running.  No retained or proposed_retained closure is authorized."
 latest_checkpoint:
-  utc: "2026-05-05T22:10:00Z"
-  block: 100
-  artifact: "minimal-axioms Yukawa-summary firewall"
-  status: "exact negative boundary / old minimal-axioms y_t and m_t summaries are not PR230 proof authority"
-  result: "The runner verifies that MINIMAL_AXIOMS_2026-04-11 contains old y_t/m_t summary rows, but the memo is audited_conditional and the summarized Ward lane is audited_renaming because of the H_unit matrix-element bridge.  The rows remain context only and cannot supply PR230 closure."
-  claim_boundary: "no retained or proposed_retained closure; no O_H, C_sH/C_HH, W/Z, Schur, neutral-rank, scalar-LSZ, or matching/running authority written"
+  utc: "2026-05-05T22:35:00Z"
+  block: 101
+  artifact: "logdet Hessian neutral-mixing attempt"
+  status: "exact negative boundary / source-only determinant Hessian underdetermines h/O_H"
+  result: "The runner constructs W_eps(s,h)=log(1+s-eps^2 h^2): W_eps(s,0) and every source-only derivative are identical for all eps, while h-Hessian rows and off-diagonal generator norm vary.  Source-only staggered logdet data cannot derive the neutral Higgs mixing bridge."
+  claim_boundary: "no retained or proposed_retained closure; no two-source Z(s,h), canonical O_H, C_sH/C_HH, W/Z, Schur, scalar-LSZ, or matching/running authority written"
   live_compute: "chunk artifacts are complete; no production chunk worker is running"
   checkpoint_files:
+    - scripts/frontier_yt_pr230_logdet_hessian_neutral_mixing_attempt.py
+    - docs/YT_PR230_LOGDET_HESSIAN_NEUTRAL_MIXING_ATTEMPT_NOTE_2026-05-05.md
+    - outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json
+    - scripts/frontier_yt_pr230_assumption_import_stress.py
+    - outputs/yt_pr230_assumption_import_stress_2026-05-01.json
+    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+    - scripts/frontier_yt_retained_closure_route_certificate.py
+    - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+    - scripts/frontier_yt_pr230_campaign_status_certificate.py
+    - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
     - scripts/frontier_yt_pr230_minimal_axioms_yukawa_summary_firewall.py
     - docs/YT_PR230_MINIMAL_AXIOMS_YUKAWA_SUMMARY_FIREWALL_NOTE_2026-05-05.md
     - outputs/yt_pr230_minimal_axioms_yukawa_summary_firewall_2026-05-05.json

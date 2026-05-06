@@ -1,5 +1,25 @@
 # Review History
 
+## 2026-05-05 Logdet Hessian Neutral-Mixing Attempt Self-Review
+
+Disposition: pass as exact negative boundary / no determinant-Hessian bridge.
+
+Findings:
+
+- The runner tests the actual determinant idea rather than treating
+  determinant positivity as a semantic shortcut.
+- The counterfamily keeps `W(s,0)` and every source-only derivative fixed
+  while varying `partial_h^2 W`, `partial_s partial_h^2 W`, and the neutral
+  off-diagonal generator norm.
+- Positivity near the origin is preserved in every member of the family, so
+  determinant positivity does not select the missing `h/O_H` source.
+- Proposal authority remains false; no `H_unit`, Ward identity, observed
+  target, minimal-axioms summary, `alpha_LM`/plaquette/`u0`, `y_t_bare`,
+  or unit-overlap convention enters the proof.
+
+Review-loop iteration 1: local self-review pass.  No retained or
+proposed-retained wording is authorized.
+
 ## 2026-05-05 Minimal-Axioms Yukawa-Summary Firewall Self-Review
 
 Disposition: pass as exact negative boundary / no hidden summary authority.

@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 638,
+    "leaf": 639,
     "medium": 301
   },
-  "generated_at": "2026-05-06T01:14:27.685058+00:00",
+  "generated_at": "2026-05-06T01:20:50.773414+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20344,6 +20344,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_logdet_hessian_neutral_mixing_attempt_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_LOGDET_HESSIAN_NEUTRAL_MIXING_ATTEMPT_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_logdet_hessian_neutral_mixing_attempt.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_matching_running_bridge_gate_note_2026-05-04",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -24415,6 +24432,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 785,
-  "total_pending": 1176
+  "ready_count": 786,
+  "total_pending": 1177
 }

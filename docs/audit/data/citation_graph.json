@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T01:14:24.830114+00:00",
+  "generated_at": "2026-05-06T01:20:47.915489+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42078,6 +42078,16 @@
       "runner_path": "scripts/frontier_yt_pr230_invariant_ring_oh_certificate_attempt.py",
       "title": "PR230 Invariant-Ring O_H Certificate Attempt"
     },
+    "yt_pr230_logdet_hessian_neutral_mixing_attempt_note_2026-05-05": {
+      "claim_id": "yt_pr230_logdet_hessian_neutral_mixing_attempt_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / source-only staggered logdet Hessian does not",
+      "deps": [],
+      "note_hash": "e82d249e49a0eb700dd0e3300f21ace8d1962a14c383264e047b9358dcf8fd85",
+      "path": "docs/YT_PR230_LOGDET_HESSIAN_NEUTRAL_MIXING_ATTEMPT_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_logdet_hessian_neutral_mixing_attempt.py",
+      "title": "PR230 Logdet Hessian Neutral-Mixing Attempt"
+    },
     "yt_pr230_matching_running_bridge_gate_note_2026-05-04": {
       "claim_id": "yt_pr230_matching_running_bridge_gate_note_2026-05-04",
       "current_status": "open",
@@ -45214,6 +45224,7 @@
     "yt_pr230_gns_source_higgs_flat_extension_attempt_note_2026-05-05",
     "yt_pr230_holonomic_source_response_feasibility_gate_note_2026-05-05",
     "yt_pr230_invariant_ring_oh_certificate_attempt_note_2026-05-05",
+    "yt_pr230_logdet_hessian_neutral_mixing_attempt_note_2026-05-05",
     "yt_pr230_matching_running_bridge_gate_note_2026-05-04",
     "yt_pr230_minimal_axioms_yukawa_summary_firewall_note_2026-05-05",
     "yt_pr230_missing_bridge_literature_assumption_exercises_note_2026-05-05",
@@ -45378,17 +45389,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1066,
-    "node_count": 2019,
-    "root_count": 1532,
-    "runners_with_path": 1516,
+    "leaf_count": 1067,
+    "node_count": 2020,
+    "root_count": 1533,
+    "runners_with_path": 1517,
     "status_counts": {
       "bounded": 554,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 431,
-      "unknown": 558
+      "unknown": 559
     }
   }
 }

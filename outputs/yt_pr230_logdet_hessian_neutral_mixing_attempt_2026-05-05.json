@@ -1,0 +1,139 @@
+{
+  "actual_current_surface_status": "exact negative boundary / source-only staggered logdet Hessian does not derive the neutral Higgs mixing bridge",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "A future two-source same-surface determinant functional Z(s,h), with h identified as canonical O_H and with C_sH/C_HH or primitive-cone rows, would be relevant.  The current W(s,0) surface is insufficient.",
+  "counterfamily": [
+    {
+      "D_matrix_symbolic": [
+        [
+          1.0,
+          "epsilon*h"
+        ],
+        [
+          "epsilon*h",
+          1.0
+        ]
+      ],
+      "W_source_only": "log(1+s)",
+      "d_h_W_at_zero": 0.0,
+      "d_h_h_W_at_zero": -0.0,
+      "d_s_d_h_W_at_zero": 0.0,
+      "d_s_d_h_h_W_at_zero": 0.0,
+      "det_at_s_0p1_h_0p1": 1.1,
+      "det_positive_near_origin": true,
+      "epsilon": 0.0,
+      "offdiagonal_generator_norm": 0.0,
+      "source_derivatives_at_zero": [
+        1.0,
+        -1.0,
+        2.0,
+        -6.0,
+        24.0,
+        -120.0,
+        720.0,
+        -5040.0
+      ]
+    },
+    {
+      "D_matrix_symbolic": [
+        [
+          1.0,
+          "epsilon*h"
+        ],
+        [
+          "epsilon*h",
+          1.0
+        ]
+      ],
+      "W_source_only": "log(1+s)",
+      "d_h_W_at_zero": 0.0,
+      "d_h_h_W_at_zero": -0.125,
+      "d_s_d_h_W_at_zero": 0.0,
+      "d_s_d_h_h_W_at_zero": 0.125,
+      "det_at_s_0p1_h_0p1": 1.099375,
+      "det_positive_near_origin": true,
+      "epsilon": 0.25,
+      "offdiagonal_generator_norm": 0.25,
+      "source_derivatives_at_zero": [
+        1.0,
+        -1.0,
+        2.0,
+        -6.0,
+        24.0,
+        -120.0,
+        720.0,
+        -5040.0
+      ]
+    },
+    {
+      "D_matrix_symbolic": [
+        [
+          1.0,
+          "epsilon*h"
+        ],
+        [
+          "epsilon*h",
+          1.0
+        ]
+      ],
+      "W_source_only": "log(1+s)",
+      "d_h_W_at_zero": 0.0,
+      "d_h_h_W_at_zero": -1.125,
+      "d_s_d_h_W_at_zero": 0.0,
+      "d_s_d_h_h_W_at_zero": 1.125,
+      "det_at_s_0p1_h_0p1": 1.094375,
+      "det_positive_near_origin": true,
+      "epsilon": 0.75,
+      "offdiagonal_generator_norm": 0.75,
+      "source_derivatives_at_zero": [
+        1.0,
+        -1.0,
+        2.0,
+        -6.0,
+        24.0,
+        -120.0,
+        720.0,
+        -5040.0
+      ]
+    }
+  ],
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "Either construct a two-source PR230 functional Z(s,h) with a same-surface canonical O_H certificate, or derive a true neutral off-diagonal/primitive transfer theorem.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claims_retained_or_proposed_retained_closure": false,
+    "defines_yt_bare": false,
+    "sets_c2_zmatch_or_kappa_to_one": false,
+    "sets_source_higgs_overlap_to_one": false,
+    "uses_alpha_lm_plaquette_u0_or_rconn": false,
+    "uses_hunit_matrix_element_readout": false,
+    "uses_minimal_axioms_yukawa_summary_as_proof": false,
+    "uses_observed_top_or_yukawa_targets": false,
+    "uses_yt_ward_identity_as_authority": false
+  },
+  "hypothetical_axiom_status": null,
+  "logdet_hessian_bridge_closes_pr230": false,
+  "parent_statuses": {
+    "det_positivity_intake": "bounded-support / staggered-Wilson determinant positivity is useful positivity-preservation support, not PR230 y_t closure",
+    "effective_potential_hessian_no_go": "exact negative boundary / effective-potential Hessian not source-overlap identity",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "minimal_axioms_firewall": "exact negative boundary / minimal-axioms Yukawa summary is not PR230 proof authority",
+    "neutral_offdiagonal_attempt": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
+    "reflection_det_primitive_upgrade": "exact negative boundary / reflection plus determinant positivity does not upgrade PR230 to a neutral primitive-cone bridge",
+    "retained_route": "open / retained closure not yet reached",
+    "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem"
+  },
+  "pass_count": 17,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The counterfamily keeps the entire source-only logdet tower fixed while varying the neutral h-Hessian and off-diagonal generator.  Thus source-only determinant/Hessian data cannot replace a same-surface O_H/h source or neutral primitive certificate.",
+  "strict_non_claims": [
+    "Does not define y_t_bare.",
+    "Does not use H_unit or the Ward identity as proof authority.",
+    "Does not use minimal-axioms y_t/m_t summary rows as proof authority.",
+    "Does not use observed top/yukawa targets.",
+    "Does not identify source-only mass derivatives with canonical O_H.",
+    "Does not supply C_sH/C_HH, W/Z, Schur, scalar-LSZ, or matching/running authority."
+  ]
+}
