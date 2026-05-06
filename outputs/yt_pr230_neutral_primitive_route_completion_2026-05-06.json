@@ -2,8 +2,12 @@
   "actual_current_surface_status": "exact negative boundary / neutral primitive-rank-one route not complete on current PR230 surface",
   "bare_retained_allowed": false,
   "conditional_surface_status": "The route remains hard-physics open if a same-surface primitive neutral transfer, off-diagonal generator, or irreducibility/rank-one certificate is supplied.",
+  "conditional_z3_remaining_unsupplied_premises": [
+    "H3",
+    "H4"
+  ],
   "exact_negative_boundary_passed": true,
-  "exact_next_action": "A positive theorem must construct the missing same-surface neutral off-diagonal/primitive transfer certificate; otherwise use future physical rows.",
+  "exact_next_action": "A positive theorem must construct H3/H4: the missing same-surface neutral off-diagonal/primitive transfer certificate and its coupling to the PR230 source/canonical-Higgs sector; otherwise use future physical rows.",
   "fail_count": 0,
   "forbidden_firewall": {
     "claimed_retained_or_proposed_retained": false,
@@ -20,6 +24,8 @@
     "neutral_scalar_irreducibility_certificate": false,
     "neutral_scalar_rank_one_purity_certificate": false
   },
+  "h3_physical_transfer_or_offdiagonal_generator_absent": true,
+  "h4_source_canonical_higgs_coupling_absent": true,
   "neutral_primitive_route_completion_passed": true,
   "parent_certificates": {
     "neutral_burnside_attempt": "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
@@ -49,13 +55,20 @@
     "primitive_gate": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
     "primitive_stretch_no_go": "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface"
   },
-  "pass_count": 12,
+  "pass_count": 14,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Conditional Perron support exists, but the current surface has no primitive-cone/irreducibility/off-diagonal-generator certificate.",
   "strict_non_claims": [
     "does not treat positivity alone as rank-one purity",
     "does not treat commutant rank, source-only rows, or decoupling shortcuts as irreducibility",
+    "does not treat Z3 H2 positive-cone support as a physical neutral transfer",
+    "does not treat H1/H2 support as source/canonical-Higgs coupling authority",
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
     "does not claim retained or proposed_retained closure"
-  ]
+  ],
+  "z3_h2_positive_cone_support_only": true,
+  "z3_support_certificates": {
+    "conditional_z3_primitive": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
+    "z3_h2_support": "outputs/yt_pr230_z3_triplet_positive_cone_support_certificate_2026-05-06.json"
+  }
 }

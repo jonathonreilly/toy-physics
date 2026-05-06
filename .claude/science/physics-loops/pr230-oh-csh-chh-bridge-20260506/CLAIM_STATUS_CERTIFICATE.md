@@ -100,6 +100,9 @@ The conditional primitive theorem has been refreshed to consume that H2
 certificate, so the only remaining unsupplied premises in that contract are
 H3/H4: physical transfer/off-diagonal dynamics and source/canonical-Higgs
 coupling authority.
+The neutral primitive route completion gate now records the same central
+route state and remains an exact negative boundary for current closure.
+H2 support cannot substitute for H3/H4.
 The H1 lift attempt may guide a future composite-Higgs certificate, but it
 currently blocks the shortcut from Koide/lepton Z3 to the quark-bilinear
 triplet action.

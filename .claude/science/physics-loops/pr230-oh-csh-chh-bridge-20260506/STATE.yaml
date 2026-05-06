@@ -5,6 +5,7 @@ active_route: neutral_z3_positive_cone_h2_support
 target_status: best-honest-status
 actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-010 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=10/63, finite-mode rho_sx/Delta_sx scouts, and no combined row packet written, source-Higgs readiness gate hardened to classify completed taste-radial source-Higgs-shaped fields as C_sx/C_xx aliases rather than canonical C_sH/C_HH rows, chunks011-012 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, conditional Higgs mass-source action bridge deriving the future dS/ds=sum O_H source derivative only after a same-surface EW/Higgs action exists, same-source EW action certificate contract refreshed to require centered Phi-dagger-Phi source coupling plus the mass-source bridge, conditional same-source EW/Higgs action-extension ansatz specified with source derivative and FMS checks but not adopted on the current surface, exact ansatz-only same-source EW action adoption shortcut boundary added against the accepted builder schema, exact post-FMS source-overlap necessity gate blocking inference of Res C_sH from source-only rows/FMS C_HH/C_sx-C_xx chunks, exact source-Higgs overlap/kappa row-contract support integrated into the source-Higgs builder/postprocessor while the future row packet remains absent, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
 latest_support_artifact: exact-support / Z3-triplet positive-cone H2 support supplied and consumed by the conditional primitive theorem; H3/H4 physical transfer and source-Higgs coupling still absent
+latest_route_gate_refresh: exact negative boundary / neutral primitive route completion now records H2 support and H3/H4 residuals
 proposal_allowed: false
 bare_retained_allowed: false
 hard_residual: >
@@ -144,7 +145,14 @@ hard_residual: >
   The conditional primitive theorem has been refreshed to consume that H2
   support when present.  Its remaining unsupplied conditional premises are now
   exactly H3/H4, not H2-H4.
+  The neutral primitive route completion gate now consumes that refreshed
+  status too.  It records the central route state as H2 support-only with H3
+  physical transfer/off-diagonal dynamics and H4 source/canonical-Higgs
+  coupling still absent.
 files_touched:
+  - scripts/frontier_yt_pr230_neutral_primitive_route_completion.py
+  - docs/YT_PR230_NEUTRAL_PRIMITIVE_ROUTE_COMPLETION_NOTE_2026-05-06.md
+  - outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json
   - scripts/frontier_yt_pr230_z3_triplet_conditional_primitive_cone_theorem.py
   - docs/YT_PR230_Z3_TRIPLET_CONDITIONAL_PRIMITIVE_CONE_THEOREM_NOTE_2026-05-06.md
   - outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json

@@ -283,6 +283,11 @@ Its certificate now records `h2_positive_cone_support_supplied=true` and
 conditional support only: no strict neutral primitive-cone certificate is
 written and no PR230 closure language is authorized.
 
+The central neutral primitive route completion gate now consumes the same
+H2-aware state.  It passes `PASS=14 FAIL=0` and records H2 as support-only
+while rejecting route completion on the missing H3 physical transfer/
+off-diagonal generator and H4 source/canonical-Higgs coupling authority.
+
 Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then

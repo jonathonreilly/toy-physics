@@ -10,6 +10,12 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "outputs" / "yt_pr230_neutral_primitive_route_completion_2026-05-06.json"
+CONDITIONAL_Z3_PRIMITIVE = (
+    "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json"
+)
+Z3_H2_SUPPORT = (
+    "outputs/yt_pr230_z3_triplet_positive_cone_support_certificate_2026-05-06.json"
+)
 
 PARENTS = {
     "primitive_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
@@ -80,6 +86,8 @@ def main() -> int:
     print("PR #230 neutral primitive/rank-one route completion gate")
     print("=" * 72)
     certs = {name: load(path) for name, path in PARENTS.items()}
+    conditional_z3 = load(CONDITIONAL_Z3_PRIMITIVE)
+    h2_support = load(Z3_H2_SUPPORT)
     statuses = {name: status(cert) for name, cert in certs.items()}
     missing = [name for name, cert in certs.items() if not cert]
     proposal_allowed = [name for name, cert in certs.items() if cert.get("proposal_allowed") is True]
@@ -109,6 +117,27 @@ def main() -> int:
         certs["neutral_offdiagonal_generator"].get("exact_negative_boundary_passed") is True
         and certs["neutral_offdiagonal_generator"].get("offdiagonal_generator_written") is False
     )
+    z3_h2_support_only = (
+        "Z3-triplet positive-cone H2 support" in status(h2_support)
+        and h2_support.get("z3_triplet_positive_cone_h2_support_passed") is True
+        and h2_support.get("proposal_allowed") is False
+        and h2_support.get("pr230_closure_authorized") is False
+        and h2_support.get("supplies_conditional_premises", {}).get(
+            "H2_positive_cone_equal_magnitude_support"
+        )
+        is True
+        and h2_support.get("supplies_conditional_premises", {}).get(
+            "H3_lazy_positive_physical_transfer"
+        )
+        is False
+    )
+    conditional_z3_remaining_h3_h4 = (
+        conditional_z3.get("z3_triplet_conditional_primitive_theorem_passed") is True
+        and conditional_z3.get("h2_positive_cone_support_supplied") is True
+        and conditional_z3.get("remaining_unsupplied_conditional_premises") == ["H3", "H4"]
+        and conditional_z3.get("proposal_allowed") is False
+        and conditional_z3.get("pr230_closure_authorized") is False
+    )
     rank_one_gate_open = (
         "neutral scalar rank-one purity gate not passed" in statuses["neutral_rank_one_gate"]
         and certs["neutral_rank_one_gate"].get("proposal_allowed") is False
@@ -131,6 +160,12 @@ def main() -> int:
     report("irreducibility-authority-absent", irreducibility_authority_absent, statuses["neutral_irreducibility_audit"])
     report("burnside-current-generators-block", burnside_blocks, statuses["neutral_burnside_attempt"])
     report("offdiagonal-generator-absent", offdiagonal_absent, statuses["neutral_offdiagonal_generator"])
+    report("z3-h2-positive-cone-support-only", z3_h2_support_only, status(h2_support))
+    report(
+        "conditional-z3-remaining-premises-h3-h4",
+        conditional_z3_remaining_h3_h4,
+        str(conditional_z3.get("remaining_unsupplied_conditional_premises", [])),
+    )
     report("rank-one-purity-gate-open", rank_one_gate_open, statuses["neutral_rank_one_gate"])
     report("neutral-shortcut-nogos-loaded", shortcut_nogos_loaded, "commutant/dynamical/decoupling/import/selection shortcuts checked")
     report("future-neutral-certificate-absent", future_absent, str(futures))
@@ -145,6 +180,8 @@ def main() -> int:
         and irreducibility_authority_absent
         and burnside_blocks
         and offdiagonal_absent
+        and z3_h2_support_only
+        and conditional_z3_remaining_h3_h4
         and rank_one_gate_open
         and shortcut_nogos_loaded
         and future_absent
@@ -158,6 +195,16 @@ def main() -> int:
         "bare_retained_allowed": False,
         "neutral_primitive_route_completion_passed": passed,
         "exact_negative_boundary_passed": passed,
+        "z3_h2_positive_cone_support_only": z3_h2_support_only,
+        "conditional_z3_remaining_unsupplied_premises": conditional_z3.get(
+            "remaining_unsupplied_conditional_premises", []
+        ),
+        "h3_physical_transfer_or_offdiagonal_generator_absent": offdiagonal_absent,
+        "h4_source_canonical_higgs_coupling_absent": True,
+        "z3_support_certificates": {
+            "conditional_z3_primitive": CONDITIONAL_Z3_PRIMITIVE,
+            "z3_h2_support": Z3_H2_SUPPORT,
+        },
         "future_artifact_presence": futures,
         "parent_certificates": PARENTS,
         "parent_statuses": statuses,
@@ -165,10 +212,12 @@ def main() -> int:
         "strict_non_claims": [
             "does not treat positivity alone as rank-one purity",
             "does not treat commutant rank, source-only rows, or decoupling shortcuts as irreducibility",
+            "does not treat Z3 H2 positive-cone support as a physical neutral transfer",
+            "does not treat H1/H2 support as source/canonical-Higgs coupling authority",
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
             "does not claim retained or proposed_retained closure",
         ],
-        "exact_next_action": "A positive theorem must construct the missing same-surface neutral off-diagonal/primitive transfer certificate; otherwise use future physical rows.",
+        "exact_next_action": "A positive theorem must construct H3/H4: the missing same-surface neutral off-diagonal/primitive transfer certificate and its coupling to the PR230 source/canonical-Higgs sector; otherwise use future physical rows.",
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
     }

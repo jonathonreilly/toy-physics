@@ -171,6 +171,21 @@ Local verification completed:
   assumption/import stress PASS=71 FAIL=0, full assembly PASS=130 FAIL=0,
   retained route PASS=285 FAIL=0, campaign status PASS=317 FAIL=0, and
   completion audit PASS=44 FAIL=0;
+- after refreshing the neutral primitive route completion gate to consume the
+  H2-aware state, `frontier_yt_pr230_neutral_primitive_route_completion.py`:
+  PASS=14 FAIL=0 and records remaining H3/H4 residuals;
+- aggregate gates after the neutral route refresh remained clean:
+  assumption/import stress PASS=71 FAIL=0, full assembly PASS=130 FAIL=0,
+  retained route PASS=285 FAIL=0, campaign status PASS=317 FAIL=0, and
+  completion audit PASS=44 FAIL=0;
+- final neutral route refresh validation: `python3 -m py_compile` for the
+  neutral route and aggregate runners, `git diff --check`, and conflict-marker
+  scan were clean;
+- `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
+  metadata regenerated for validation and then reverted because it was not an
+  intentional artifact;
+- `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
+  pre-existing warnings;
 - final H2-consumption refresh validation: `python3 -m py_compile` for the
   refreshed theorem/H2/aggregate runners, `git diff --check`, and
   conflict-marker scan were clean;
