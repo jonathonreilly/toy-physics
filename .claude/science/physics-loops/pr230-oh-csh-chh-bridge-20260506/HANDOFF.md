@@ -200,6 +200,17 @@ schema still lacks canonical-Higgs, same-source sector-overlap, W/Z mass-fit
 path, accepted certificate input, and action-gate readiness prerequisites.
 The accepted EW action certificate path remains unwritten.
 
+The radial-spurion sector-overlap theorem now gives a clean positive contract
+for that missing sector-overlap item.  If a future adopted action makes the
+source a single canonical-Higgs radial spurion, with no independent additive
+top bare-mass source, the unknown `dv/ds` cancels exactly in top/W and top/Z
+response ratios.  The theorem also shows why the current PR230 additive
+top-mass FH source cannot be reused as that contract: an extra additive top
+slope shifts the ratio.  The next action on the W/Z response branch is
+therefore not just "same source"; it is a no-independent-top-source radial
+spurion action plus production W/Z mass-fit rows, or a separate row theorem
+that measures/subtracts the additive component.
+
 The post-FMS source-overlap necessity gate now checks the next inference
 directly.  It proves that current PR230 source-only rows, FMS `C_HH` support,
 and taste-radial `C_sx/C_xx` chunks do not determine `Res C_sH`: a
@@ -288,6 +299,19 @@ H2-aware state.  It passes `PASS=14 FAIL=0` and records H2 as support-only
 while rejecting route completion on the missing H3 physical transfer/
 off-diagonal generator and H4 source/canonical-Higgs coupling authority.
 
+The radial-spurion sector-overlap theorem block is now checkpointed.  It proves
+the conditional response-ratio identity for a future clean contract where the
+same scalar source is a canonical-Higgs radial spurion `v(s)` for top, W, and Z
+masses with no independent additive top source.  Under that future contract,
+common `dv/ds` cancels in top/W or top/Z response ratios.  The same runner also
+constructs the counterfamily showing why the current PR230 additive top mass
+FH source cannot be treated as that radial spurion: an independent additive top
+source shifts `dm_t/ds` and spoils the ratio.  The same-source EW action
+adoption attempt and aggregate gates consume this theorem as exact support only;
+closure remains open because the accepted same-surface EW/Higgs action,
+canonical-Higgs operator certificate, sector-overlap certificate, and W/Z
+mass-fit/response rows are still absent.
+
 Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then
@@ -295,12 +319,15 @@ Best next work:
    the FMS post-degree rescore and composite-expansion theorem.  The future
    action certificate should couple the source to centered `Phi^dagger Phi`
    and attach the Higgs mass-source action bridge for `dS/ds=sum O_H`; FMS
-   literature, the conditional expansion, and the mass-source bridge remain
-   route support only until the same-surface action, canonical `O_H`, LSZ, and
-   pole rows exist.  The adoption attempt shows ansatz-only promotion is
-   blocked until canonical-Higgs, sector-overlap, and W/Z mass-fit path
-   certificates exist.  The row builder/postprocessor are now ready to consume
-   the overlap/kappa contract when those rows exist;
+	   literature, the conditional expansion, and the mass-source bridge remain
+	   route support only until the same-surface action, canonical `O_H`, LSZ, and
+	   pole rows exist.  The adoption attempt shows ansatz-only promotion is
+	   blocked until canonical-Higgs, sector-overlap, and W/Z mass-fit path
+	   certificates exist.  The radial-spurion theorem supplies the future algebra
+	   that would cancel a common `dv/ds` only after that clean same-source
+	   contract is actually certified; it does not license the current additive
+	   top-source rows.  The row builder/postprocessor are now ready to consume
+	   the overlap/kappa contract when those rows exist;
 2. launch production `C_sx/C_xx` rows for the exact two-source taste-radial
    source using the no-resume manifest and row contract; chunks001-010 are
    complete and checkpointed, the combiner gate records `ready=10/63` and writes

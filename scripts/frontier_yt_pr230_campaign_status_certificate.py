@@ -671,6 +671,9 @@ def main() -> int:
         "pr230_same_source_ew_action_adoption_attempt": load(
             "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json"
         ),
+        "pr230_radial_spurion_sector_overlap_theorem": load(
+            "outputs/yt_pr230_radial_spurion_sector_overlap_theorem_2026-05-06.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -2861,6 +2864,28 @@ def main() -> int:
         is False,
         statuses["pr230_same_source_ew_action_adoption_attempt"],
     )
+    radial_spurion_sector_overlap_theorem = certificates[
+        "pr230_radial_spurion_sector_overlap_theorem"
+    ]
+    report(
+        "pr230-radial-spurion-sector-overlap-support-not-closure",
+        "radial-spurion sector-overlap theorem"
+        in str(statuses["pr230_radial_spurion_sector_overlap_theorem"])
+        and radial_spurion_sector_overlap_theorem.get("proposal_allowed") is False
+        and radial_spurion_sector_overlap_theorem.get(
+            "radial_spurion_sector_overlap_theorem_passed"
+        )
+        is True
+        and radial_spurion_sector_overlap_theorem.get(
+            "current_surface_sector_overlap_identity_supplied"
+        )
+        is False
+        and radial_spurion_sector_overlap_theorem.get(
+            "current_surface_closure_authorized"
+        )
+        is False,
+        statuses["pr230_radial_spurion_sector_overlap_theorem"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -4727,6 +4752,19 @@ def main() -> int:
         )
         is False
     )
+    result["radial_spurion_sector_overlap_support_not_closure"] = (
+        radial_spurion_sector_overlap_theorem.get(
+            "radial_spurion_sector_overlap_theorem_passed"
+        )
+        is True
+        and radial_spurion_sector_overlap_theorem.get("proposal_allowed") is False
+        and radial_spurion_sector_overlap_theorem.get(
+            "current_surface_sector_overlap_identity_supplied"
+        )
+        is False
+        and radial_spurion_sector_overlap_theorem.get("current_surface_closure_authorized")
+        is False
+    )
     result["post_fms_source_overlap_necessity_blocks_current_inference"] = (
         post_fms_source_overlap_necessity_gate.get(
             "post_fms_source_overlap_necessity_gate_passed"
@@ -4881,6 +4919,7 @@ def main() -> int:
         "does not treat FMS/lattice literature or method names as PR230 proof authority",
         "does not treat the same-source EW/Higgs action ansatz as adopted current-surface action authority",
         "does not treat the same-source EW action adoption attempt as an accepted action certificate",
+        "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",
         "does not treat two completed taste-radial chunks as combined L12 pole evidence, canonical O_H, or scalar LSZ normalization",
         "does not treat Schur sufficiency or row-definition machinery as proof without same-surface neutral-kernel A/B/C rows",
         "does not treat determinant positivity, conditional Perron support, or source-only generators as a primitive neutral rank-one theorem",

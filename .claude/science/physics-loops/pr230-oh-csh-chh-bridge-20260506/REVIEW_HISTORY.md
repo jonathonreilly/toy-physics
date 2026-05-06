@@ -223,3 +223,22 @@ Local verification completed:
   pre-existing warnings;
 - `git diff --check`: clean.
 - conflict-marker scan for `<<<<<<<`/`>>>>>>>`: clean.
+- radial-spurion sector-overlap theorem block:
+  `frontier_yt_pr230_radial_spurion_sector_overlap_theorem.py` PASS=14
+  FAIL=0.  The theorem supplies conditional sector-overlap algebra for a
+  future no-independent-top-source canonical radial spurion and blocks treating
+  the current additive top mass source as that spurion;
+- same-source EW action adoption attempt refreshed to consume the theorem:
+  PASS=10 FAIL=0 while preserving the current-surface sector-overlap blocker;
+- aggregate gates after the radial-spurion block:
+  assumption/import stress PASS=72 FAIL=0, full assembly PASS=131 FAIL=0,
+  campaign status PASS=318 FAIL=0, retained route PASS=285 FAIL=0, and
+  positive-closure completion audit PASS=44 FAIL=0;
+- final radial-spurion block validation: `python3 -m py_compile` for the new
+  theorem runner and touched aggregate gates, `git diff --check`, and the
+  route runners above were clean;
+- `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
+  metadata regenerated for validation and then reverted because it was not an
+  intentional artifact;
+- `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
+  pre-existing warnings.

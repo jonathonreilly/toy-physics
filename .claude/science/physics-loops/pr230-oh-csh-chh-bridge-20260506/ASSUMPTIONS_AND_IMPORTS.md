@@ -115,6 +115,12 @@ Allowed context:
   mass-fit path certificate, accepted action-certificate input, and current
   action gate are still absent.  It writes no accepted EW action certificate.
   Exact adoption stress phrases: ansatz-only action-adoption shortcut blocked; canonical-Higgs operator certificate; W/Z correlator mass-fit path certificate.
+- the radial-spurion sector-overlap theorem as exact conditional support only:
+  if a future adopted same-surface EW/Higgs action makes `s` a single
+  canonical-Higgs radial spurion with no independent additive top bare-mass
+  source, then `dv/ds` cancels in top/W and top/Z response ratios.  The current
+  PR230 additive mass FH source is not that contract, and the theorem does not
+  supply W/Z mass-fit rows, canonical `O_H`, `kappa_s`, or closure.
 - the post-FMS source-overlap necessity gate as exact current-surface boundary
   only: it proves current source-only rows, FMS `C_HH` support, and
   taste-radial `C_sx/C_xx` chunks do not infer `Res C_sH` or exclude an
@@ -164,6 +170,10 @@ Open imports after this block:
   same-surface adoption theorem accepts it as actual PR230 action authority and
   the downstream canonical `O_H`, source-Higgs row, W/Z row, Gram/LSZ/FV/IR,
   and retained-route gates pass.
+- Radial-spurion sector-overlap algebra is not a proof selector until the
+  PR230 action is actually adopted as a no-independent-top-source canonical
+  radial-spurion action or equivalent production rows measure/subtract the
+  additive top-source component.
 - Post-FMS `C_HH` support is not a source-overlap proof selector until a
   same-surface `Res C_sH` row, Gram-purity theorem, or physical-response
   bypass exists on PR230.

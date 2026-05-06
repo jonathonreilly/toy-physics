@@ -8,8 +8,9 @@
   "ansatz_side_satisfied": true,
   "audit_required_before_effective_retained": true,
   "bare_retained_allowed": false,
+  "conditional_radial_spurion_sector_overlap_contract_supplied": true,
   "conditional_surface_status": "support if canonical-Higgs, sector-overlap, and W/Z mass-fit path certificates are supplied and the accepted action certificate validates",
-  "exact_next_action": "Attack the first missing schema prerequisite directly: a real canonical-Higgs operator certificate, a same-source sector-overlap identity theorem, or a W/Z correlator mass-fit path certificate.  Only after those exist should the accepted same-source EW action certificate path be written.",
+  "exact_next_action": "Tighten the action ansatz into a no-independent-top-source radial spurion action if pursuing the sector-overlap route; otherwise attack a real canonical-Higgs operator certificate or W/Z correlator mass-fit path certificate.  Only after those exist should the accepted same-source EW action certificate path be written.",
   "fail_count": 0,
   "forbidden_firewall": {
     "claimed_closure": false,
@@ -38,6 +39,7 @@
     "full_positive_closure_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
     "higgs_mass_source_action_bridge": "conditional-support / Higgs mass-source action bridge; same-surface EW/Higgs action and source-Higgs rows absent",
     "post_fms_source_overlap_necessity_gate": "exact negative boundary / post-FMS source-overlap not derivable from current PR230 source-only or C_sx/C_xx rows",
+    "radial_spurion_sector_overlap_theorem": "exact-support / conditional radial-spurion sector-overlap theorem; current PR230 additive-source shortcut blocked",
     "retained_closure_route": "open / retained closure not yet reached",
     "same_source_ew_higgs_action_ansatz_gate": "conditional support / same-source EW/Higgs action-extension ansatz specified; actual current-surface adoption absent",
     "same_source_sector_overlap_identity": "exact negative boundary / same-source sector-overlap identity obstruction",
@@ -46,7 +48,7 @@
     "wz_same_source_ew_action_certificate_builder": "open / same-source EW action certificate absent",
     "wz_same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface"
   },
-  "pass_count": 9,
+  "pass_count": 10,
   "prerequisite_rows": [
     {
       "evidence": "conditional support / same-source EW/Higgs action-extension ansatz specified; actual current-surface adoption absent",
@@ -64,9 +66,14 @@
       "satisfied": false
     },
     {
-      "evidence": "exact negative boundary / same-source sector-overlap identity obstruction",
+      "evidence": "exact negative boundary / same-source sector-overlap identity obstruction; radial_spurion_contract=exact-support / conditional radial-spurion sector-overlap theorem; current PR230 additive-source shortcut blocked",
       "id": "same_source_sector_overlap_identity",
       "satisfied": false
+    },
+    {
+      "evidence": "exact-support / conditional radial-spurion sector-overlap theorem; current PR230 additive-source shortcut blocked",
+      "id": "conditional_radial_spurion_sector_overlap_contract",
+      "satisfied": true
     },
     {
       "evidence": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
@@ -92,6 +99,7 @@
     "does not write the accepted same-source EW action certificate path",
     "does not promote the ansatz to current action authority",
     "does not supply canonical O_H, sector-overlap, W/Z rows, or source-Higgs pole rows",
+    "does not treat the conditional radial-spurion theorem as current additive-source sector-overlap closure",
     "does not set kappa_s, c2, Z_match, or cos(theta) to one",
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
   ]

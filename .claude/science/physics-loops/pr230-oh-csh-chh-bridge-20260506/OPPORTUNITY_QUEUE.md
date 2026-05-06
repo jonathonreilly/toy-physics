@@ -25,6 +25,13 @@
    promotion shortcut against the accepted builder schema: the action-form side
    is present, but canonical-Higgs, sector-overlap, W/Z mass-fit path, accepted
    action-certificate input, and action-gate readiness are still missing.
+   The radial-spurion sector-overlap theorem now supplies the clean conditional
+   algebra for the sector-overlap item: if the adopted same-source EW/Higgs
+   action makes `s` a single canonical-Higgs radial spurion and removes any
+   independent additive top bare-mass source, then the common `dv/ds` overlap
+   cancels from top/W and top/Z response ratios.  It also blocks treating the
+   current additive top mass FH source as that radial spurion.  This tightens
+   the future action contract; it is not current closure.
    The post-FMS source-overlap necessity gate shows that even with FMS `C_HH`
    support, current source-only rows and `C_sx/C_xx` chunks do not determine
    `Res C_sH`; this route must supply the actual source-overlap row or a
@@ -76,7 +83,9 @@
    sector.  Do not treat H2 cone support as H3/H4.
 4. Schur A/B/C row production from a real neutral kernel basis.
 5. Same-source W/Z response rows with matched top/W covariance, `delta_perp`
-   authority, and strict non-observed `g2`.
+   authority, strict non-observed `g2`, and the radial-spurion/no-independent-
+   top-source action contract if the route uses response ratios to cancel the
+   source overlap.
 6. Strict scalar-LSZ denominator/moment theorem as an independent closure
    blocker retirement.  The completed L12 FH/LSZ chunked rows and finite-shell
    diagnostic are already recognized as bounded support; they are not a closure

@@ -102,6 +102,14 @@ promoted directly into the accepted action certificate.  The action-form side
 is available, but the accepted schema still lacks canonical-Higgs,
 sector-overlap, W/Z mass-fit path, valid input, and action-gate readiness.
 
+The radial-spurion sector-overlap theorem now resolves the algebraic part of
+the sector-overlap item conditionally.  A future adopted action that makes the
+source a single canonical-Higgs radial spurion, with no independent additive
+top bare-mass source, cancels the common `dv/ds` in top/W and top/Z response
+ratios.  The current additive top source fails that contract, so the route
+must either adopt this tightened action or measure/subtract the additive top
+component.
+
 The `origin/main` composite-Higgs stretch packet is context for this route
 only.  Its Z3 multi-channel candidate does not become PR230 authority until it
 derives the needed premises and emits same-source action/`O_H`/row artifacts on
@@ -111,7 +119,9 @@ the PR230 surface.
 
 Measure matched top/W/Z source-response slopes so the source normalization
 cancels.  This survives current no-gos but needs W/Z mass-fit rows, matched
-covariance, `delta_perp` authority, and strict non-observed `g2`.  The current
+covariance, `delta_perp` authority, strict non-observed `g2`, and either the
+radial-spurion/no-independent-top-source contract or equivalent additive-source
+subtraction rows.  The current
 surface is closed by `YT_PR230_WZ_RESPONSE_ROUTE_COMPLETION` because those rows
 and certificates are absent.
 

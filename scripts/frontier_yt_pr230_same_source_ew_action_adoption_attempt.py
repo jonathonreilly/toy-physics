@@ -36,6 +36,7 @@ PARENTS = {
     "wz_same_source_ew_action_gate": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "canonical_higgs_operator_certificate_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "radial_spurion_sector_overlap_theorem": "outputs/yt_pr230_radial_spurion_sector_overlap_theorem_2026-05-06.json",
     "wz_correlator_mass_fit_path_gate": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
     "post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
@@ -96,6 +97,7 @@ def adoption_prerequisites(certs: dict[str, dict[str, Any]]) -> list[dict[str, A
     gate = certs["wz_same_source_ew_action_gate"]
     canonical = certs["canonical_higgs_operator_certificate_gate"]
     sector = certs["same_source_sector_overlap_identity"]
+    radial = certs["radial_spurion_sector_overlap_theorem"]
     wz_mass = certs["wz_correlator_mass_fit_path_gate"]
     mass_bridge = certs["higgs_mass_source_action_bridge"]
 
@@ -121,8 +123,19 @@ def adoption_prerequisites(certs: dict[str, dict[str, Any]]) -> list[dict[str, A
         },
         {
             "id": "same_source_sector_overlap_identity",
-            "satisfied": sector.get("sector_overlap_identity_gate_passed") is True,
-            "evidence": status(sector),
+            "satisfied": (
+                sector.get("sector_overlap_identity_gate_passed") is True
+                or radial.get("current_surface_sector_overlap_identity_supplied") is True
+            ),
+            "evidence": f"{status(sector)}; radial_spurion_contract={status(radial)}",
+        },
+        {
+            "id": "conditional_radial_spurion_sector_overlap_contract",
+            "satisfied": (
+                radial.get("radial_spurion_sector_overlap_theorem_passed") is True
+                and radial.get("current_surface_sector_overlap_identity_supplied") is False
+            ),
+            "evidence": status(radial),
         },
         {
             "id": "wz_correlator_mass_fit_path_certificate",
@@ -158,12 +171,18 @@ def main() -> int:
         row["id"]
         for row in prerequisites
         if row["id"] not in {"action_form_from_ansatz", "centered_phi_dagger_phi_source_bridge"}
+        and row["id"] != "conditional_radial_spurion_sector_overlap_contract"
         and row["satisfied"] is not True
     ]
     ansatz_side_satisfied = all(
         row["satisfied"] is True
         for row in prerequisites
         if row["id"] in {"action_form_from_ansatz", "centered_phi_dagger_phi_source_bridge"}
+    )
+    conditional_radial_contract_supplied = any(
+        row["id"] == "conditional_radial_spurion_sector_overlap_contract"
+        and row["satisfied"] is True
+        for row in prerequisites
     )
     schema_side_satisfied = not missing_prereqs
     accepted_path_present = ACCEPTED_ACTION_CERT.exists()
@@ -188,6 +207,7 @@ def main() -> int:
     report("parent-certificates-present", not missing, f"missing={missing}")
     report("no-parent-authorizes-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
     report("ansatz-action-form-side-satisfied", ansatz_side_satisfied, str([row for row in prerequisites if row["id"] in {"action_form_from_ansatz", "centered_phi_dagger_phi_source_bridge"}]))
+    report("conditional-radial-spurion-sector-overlap-contract-supplied", conditional_radial_contract_supplied, "support only; current surface identity remains absent")
     report("accepted-builder-schema-side-not-satisfied", not schema_side_satisfied, f"missing={missing_prereqs}")
     report("accepted-action-certificate-path-absent", not accepted_path_present, display(ACCEPTED_ACTION_CERT))
     report("accepted-action-certificate-not-written", not accepted_path_written_by_this_attempt, "runner is read-only for accepted future path")
@@ -214,6 +234,7 @@ def main() -> int:
         "bare_retained_allowed": False,
         "same_source_ew_action_adoption_attempt_passed": ansatz_only_shortcut_blocked,
         "ansatz_side_satisfied": ansatz_side_satisfied,
+        "conditional_radial_spurion_sector_overlap_contract_supplied": conditional_radial_contract_supplied,
         "schema_side_satisfied": schema_side_satisfied,
         "adoption_allowed_now": adoption_allowed_now,
         "accepted_action_certificate_path": display(ACCEPTED_ACTION_CERT),
@@ -227,15 +248,17 @@ def main() -> int:
             "does not write the accepted same-source EW action certificate path",
             "does not promote the ansatz to current action authority",
             "does not supply canonical O_H, sector-overlap, W/Z rows, or source-Higgs pole rows",
+            "does not treat the conditional radial-spurion theorem as current additive-source sector-overlap closure",
             "does not set kappa_s, c2, Z_match, or cos(theta) to one",
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
         ],
         "exact_next_action": (
-            "Attack the first missing schema prerequisite directly: a real "
-            "canonical-Higgs operator certificate, a same-source sector-overlap "
-            "identity theorem, or a W/Z correlator mass-fit path certificate.  "
-            "Only after those exist should the accepted same-source EW action "
-            "certificate path be written."
+            "Tighten the action ansatz into a no-independent-top-source radial "
+            "spurion action if pursuing the sector-overlap route; otherwise "
+            "attack a real canonical-Higgs operator certificate or W/Z "
+            "correlator mass-fit path certificate.  Only after those exist "
+            "should the accepted same-source EW action certificate path be "
+            "written."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

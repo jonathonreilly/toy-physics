@@ -1,0 +1,176 @@
+{
+  "actual_current_surface_status": "exact-support / conditional radial-spurion sector-overlap theorem; current PR230 additive-source shortcut blocked",
+  "additive_top_source_counterfamily": [
+    {
+      "dv_ds": 1.1,
+      "independent_additive_top_slope": -0.4,
+      "input_g2": 0.6,
+      "input_y_t": 0.9,
+      "top_slope": 0.30003571337468204,
+      "w_slope": 0.33,
+      "y_inferred_if_radial_spurion_assumed": 0.3857405227734199
+    },
+    {
+      "dv_ds": 1.1,
+      "independent_additive_top_slope": 0.0,
+      "input_g2": 0.6,
+      "input_y_t": 0.9,
+      "top_slope": 0.7000357133746821,
+      "w_slope": 0.33,
+      "y_inferred_if_radial_spurion_assumed": 0.8999999999999999
+    },
+    {
+      "dv_ds": 1.1,
+      "independent_additive_top_slope": 0.4,
+      "input_g2": 0.6,
+      "input_y_t": 0.9,
+      "top_slope": 1.100035713374682,
+      "w_slope": 0.33,
+      "y_inferred_if_radial_spurion_assumed": 1.4142594772265797
+    }
+  ],
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "clean_radial_spurion_contract": {
+    "all_top_w_z_masses_depend_on_same_v_of_s": true,
+    "no_independent_additive_top_bare_mass_source": true,
+    "same_ensemble_same_source_shift_response_rows_required": true,
+    "single_scalar_source_coordinate": true,
+    "source_is_canonical_higgs_radial_spurion": true
+  },
+  "conditional_surface_status": "If a same-surface EW/Higgs action is adopted with the scalar source as a single canonical-Higgs radial spurion, and no independent additive top bare-mass source is present, then the sector-overlap identity k_top = k_W = k_Z is algebraically supplied in response ratios.",
+  "current_pr230_risk_surface": {
+    "canonical_higgs_operator_certificate_absent": true,
+    "existing_fh_lsz_source_is_additive_bare_mass_shift": true,
+    "radial_spurion_contract_currently_satisfied": false,
+    "same_source_ew_higgs_ansatz_not_adopted": true,
+    "wz_mass_fit_rows_absent": true
+  },
+  "current_surface_closure_authorized": false,
+  "current_surface_sector_overlap_identity_supplied": false,
+  "exact_next_action": "Tighten the action-first route to a no-independent-top-source radial-spurion action contract, then either implement same-source W/Z mass-fit rows under that source or produce O_H/C_sH/C_HH pole rows with Gram/FV/IR authority.  Reusing the existing additive top bare-mass FH source alone cannot satisfy the sector-overlap identity.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_as_operator": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_mass_or_yt": false,
+    "used_observed_wz_masses_or_g2": false,
+    "used_reduced_pilot_as_production": false,
+    "used_yt_ward_identity": false
+  },
+  "formula": {
+    "shared_overlap_cancelled": "dv/ds",
+    "shortcut_blocker": "an independent additive top source adds a_top to dm_t/ds and changes the ratio unless a_top=0 or is measured and subtracted",
+    "top_mass_branch": "m_t(s) = y_t * v(s) / sqrt(2)",
+    "top_w_ratio": "y_t = g2 * (dm_t/ds) / (sqrt(2) * dM_W/ds)",
+    "top_z_ratio": "y_t = sqrt(g2^2 + gY^2) * (dm_t/ds) / (sqrt(2) * dM_Z/ds)",
+    "w_mass_branch": "M_W(s) = g2 * v(s) / 2",
+    "z_mass_branch": "M_Z(s) = sqrt(g2^2 + gY^2) * v(s) / 2"
+  },
+  "hypothetical_axiom_status": null,
+  "parent_conditionals": {
+    "adoption_attempt_names_sector_overlap_prerequisite": true,
+    "aggregate_route_still_open": true,
+    "ansatz_supplies_centered_phi_dagger_phi_source": true,
+    "fms_composite_bridge_loaded": true,
+    "mass_source_bridge_loaded": true,
+    "prior_sector_overlap_obstruction_loaded": true,
+    "wz_mass_fit_rows_absent": true
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "fms_composite_oh_conditional_theorem": "conditional-support / FMS composite O_H theorem; current PR230 surface lacks same-surface EW/Higgs action and source-overlap pole rows",
+    "higgs_mass_source_action_bridge": "conditional-support / Higgs mass-source action bridge; same-surface EW/Higgs action and source-Higgs rows absent",
+    "retained_closure_route": "open / retained closure not yet reached",
+    "same_source_ew_action_adoption_attempt": "exact negative boundary / ansatz-only same-source EW action adoption shortcut blocked",
+    "same_source_ew_higgs_action_ansatz_gate": "conditional support / same-source EW/Higgs action-extension ansatz specified; actual current-surface adoption absent",
+    "same_source_sector_overlap_identity_obstruction": "exact negative boundary / same-source sector-overlap identity obstruction",
+    "wz_correlator_mass_fit_path_gate": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface"
+  },
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The theorem is conditional support for a future radial-spurion action/response packet.  The current PR230 FH/LSZ source is an additive top mass shift, the same-source EW/Higgs ansatz is not adopted, canonical O_H is absent, and W/Z mass-fit rows are absent.",
+  "radial_spurion_sector_overlap_theorem_passed": true,
+  "radial_spurion_witness_rows": [
+    {
+      "dv_ds": 0.25,
+      "input_g2": 0.5,
+      "input_gY": 0.2,
+      "input_y_t": 0.7,
+      "top_slope": 0.1237436867076458,
+      "w_slope": 0.0625,
+      "y_from_w_response_ratio": 0.6999999999999998,
+      "y_from_z_response_ratio": 0.6999999999999998,
+      "z_slope": 0.06731456008918131
+    },
+    {
+      "dv_ds": 0.25,
+      "input_g2": 0.8,
+      "input_gY": 0.35,
+      "input_y_t": 1.3,
+      "top_slope": 0.22980970388562794,
+      "w_slope": 0.1,
+      "y_from_w_response_ratio": 1.2999999999999998,
+      "y_from_z_response_ratio": 1.2999999999999998,
+      "z_slope": 0.10915155747858113
+    },
+    {
+      "dv_ds": 1.0,
+      "input_g2": 0.5,
+      "input_gY": 0.2,
+      "input_y_t": 0.7,
+      "top_slope": 0.4949747468305832,
+      "w_slope": 0.25,
+      "y_from_w_response_ratio": 0.6999999999999998,
+      "y_from_z_response_ratio": 0.6999999999999998,
+      "z_slope": 0.26925824035672524
+    },
+    {
+      "dv_ds": 1.0,
+      "input_g2": 0.8,
+      "input_gY": 0.35,
+      "input_y_t": 1.3,
+      "top_slope": 0.9192388155425117,
+      "w_slope": 0.4,
+      "y_from_w_response_ratio": 1.2999999999999998,
+      "y_from_z_response_ratio": 1.2999999999999998,
+      "z_slope": 0.4366062299143245
+    },
+    {
+      "dv_ds": 3.0,
+      "input_g2": 0.5,
+      "input_gY": 0.2,
+      "input_y_t": 0.7,
+      "top_slope": 1.4849242404917495,
+      "w_slope": 0.75,
+      "y_from_w_response_ratio": 0.6999999999999998,
+      "y_from_z_response_ratio": 0.6999999999999997,
+      "z_slope": 0.8077747210701758
+    },
+    {
+      "dv_ds": 3.0,
+      "input_g2": 0.8,
+      "input_gY": 0.35,
+      "input_y_t": 1.3,
+      "top_slope": 2.7577164466275352,
+      "w_slope": 1.2000000000000002,
+      "y_from_w_response_ratio": 1.2999999999999998,
+      "y_from_z_response_ratio": 1.2999999999999998,
+      "z_slope": 1.3098186897429736
+    }
+  ],
+  "sector_overlap_identity_conditionally_supplied": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not identify the current additive top mass source with a canonical radial spurion",
+    "does not set kappa_s, c2, Z_match, k_top/k_gauge, or g2 to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not write accepted same-source EW action, canonical O_H, W/Z row, or source-Higgs row certificates"
+  ]
+}

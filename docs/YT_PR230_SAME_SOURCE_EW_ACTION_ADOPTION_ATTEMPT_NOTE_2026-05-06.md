@@ -25,6 +25,14 @@ that are absent:
 - a W/Z correlator mass-fit path certificate;
 - the accepted same-source EW action certificate input itself.
 
+The radial-spurion sector-overlap theorem now supplies a conditional positive
+contract for the second item: if an adopted action makes `s` a single
+canonical-Higgs radial spurion and removes any independent additive top
+bare-mass source, the unknown source overlap cancels in top/W and top/Z
+response ratios.  That contract is support only.  It does not satisfy the
+current-surface sector-overlap identity because the existing PR230 FH/LSZ
+source is an additive top mass shift and the EW/Higgs action is not adopted.
+
 The runner intentionally does not write the accepted future certificate path.
 It records the sharper next action: attack one missing schema prerequisite
 directly before trying to create the accepted EW action certificate.
@@ -43,4 +51,4 @@ Validation:
 
 `scripts/frontier_yt_pr230_same_source_ew_action_adoption_attempt.py` writes
 `outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json` and
-passes with `PASS=9 FAIL=0`.
+passes with `PASS=10 FAIL=0`.

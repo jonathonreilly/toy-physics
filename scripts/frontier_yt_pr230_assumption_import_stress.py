@@ -191,6 +191,9 @@ def main() -> int:
         "same_source_ew_action_adoption_attempt": load(
             "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json"
         ),
+        "radial_spurion_sector_overlap_theorem": load(
+            "outputs/yt_pr230_radial_spurion_sector_overlap_theorem_2026-05-06.json"
+        ),
         "post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -1102,6 +1105,23 @@ def main() -> int:
         is False,
         ew_action_adoption_attempt.get("actual_current_surface_status"),
     )
+    radial_spurion = certificates["radial_spurion_sector_overlap_theorem"]
+    report(
+        "radial-spurion-sector-overlap-theorem-support-not-current-closure",
+        "radial-spurion sector-overlap theorem"
+        in str(radial_spurion.get("actual_current_surface_status"))
+        and radial_spurion.get("proposal_allowed") is False
+        and radial_spurion.get("radial_spurion_sector_overlap_theorem_passed")
+        is True
+        and radial_spurion.get("current_surface_sector_overlap_identity_supplied")
+        is False
+        and radial_spurion.get("current_surface_closure_authorized") is False
+        and radial_spurion.get("forbidden_firewall", {}).get(
+            "set_kappa_s_equal_one"
+        )
+        is False,
+        radial_spurion.get("actual_current_surface_status"),
+    )
     post_fms_overlap = certificates["post_fms_source_overlap_necessity_gate"]
     report(
         "post-fms-source-overlap-necessity-gate-blocks-current-inference",
@@ -1335,6 +1355,10 @@ def main() -> int:
             "source-overlap necessity gate then blocks the next inference: "
             "current source-only rows and taste-radial C_sx/C_xx chunks do "
             "not determine Res C_sH or exclude orthogonal neutral top coupling.  "
+            "The radial-spurion sector-overlap theorem gives a clean conditional "
+            "positive contract for the W/Z response route, but it also blocks "
+            "using the current additive top bare-mass source as if it were "
+            "already a canonical-Higgs radial spurion.  "
             "Positive closure still requires "
             "production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
@@ -1370,6 +1394,7 @@ def main() -> int:
             "does not treat the two-source taste-radial production manifest as row data or pole evidence",
             "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
             "does not treat the FMS composite expansion as PR230 closure before same-surface EW/Higgs action and C_sH/C_HH rows exist",
+            "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",
             "does not infer Res C_sH from source-only rows, FMS C_HH, or taste-radial C_sx/C_xx chunks",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],

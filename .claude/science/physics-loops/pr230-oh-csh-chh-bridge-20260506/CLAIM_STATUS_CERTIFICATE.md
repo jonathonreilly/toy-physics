@@ -62,6 +62,13 @@ the accepted action certificate is blocked until a canonical-Higgs certificate,
 same-source sector-overlap theorem, W/Z correlator mass-fit path certificate,
 accepted action-certificate input, and action-gate readiness exist.  It writes
 no accepted action certificate.
+The radial-spurion sector-overlap theorem supplies a conditional positive
+contract for the sector-overlap theorem slot: for an adopted action whose
+single scalar source moves only the canonical Higgs radial branch `v(s)`, with
+no independent additive top bare-mass source, the common `dv/ds` cancels in
+top/W and top/Z response ratios.  The current PR230 additive top mass source
+does not satisfy that contract, so this is support only and not current
+sector-overlap closure.
 The post-FMS source-overlap necessity gate now checks the next step directly.
 It proves that FMS `C_HH` support plus current source-only rows or taste-radial
 `C_sx/C_xx` chunks do not determine `Res C_sH`.  A fixed-residue counterfamily

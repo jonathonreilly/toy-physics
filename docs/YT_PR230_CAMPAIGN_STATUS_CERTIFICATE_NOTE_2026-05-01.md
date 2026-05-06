@@ -1582,3 +1582,13 @@ normal-cache harness path, and a collision guard with no active row-production
 workers.  This is bounded run-control support only: the combined row file
 `outputs/yt_pr230_two_source_taste_radial_measurement_rows_2026-05-06.json`
 is absent, and no retained/proposed-retained wording is authorized.
+
+Latest radial-spurion sector-overlap checkpoint: campaign status now includes
+`scripts/frontier_yt_pr230_radial_spurion_sector_overlap_theorem.py` and
+reports `PASS=318 FAIL=0` after aggregate reruns.  The theorem supplies
+conditional support for a future same-source W/Z response route: an adopted
+single canonical-Higgs radial source with no independent additive top
+bare-mass component cancels the common `dv/ds` overlap in top/W and top/Z
+response ratios.  It also blocks using the current additive top mass FH source
+as that radial spurion.  This is support only; no retained/proposed-retained
+wording is authorized.

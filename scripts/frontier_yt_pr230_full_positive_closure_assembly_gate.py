@@ -110,6 +110,7 @@ PARENTS = {
     "pr230_higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
     "pr230_same_source_ew_higgs_action_ansatz_gate": "outputs/yt_pr230_same_source_ew_higgs_action_ansatz_gate_2026-05-06.json",
     "pr230_same_source_ew_action_adoption_attempt": "outputs/yt_pr230_same_source_ew_action_adoption_attempt_2026-05-06.json",
+    "pr230_radial_spurion_sector_overlap_theorem": "outputs/yt_pr230_radial_spurion_sector_overlap_theorem_2026-05-06.json",
     "pr230_post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "pr230_source_higgs_overlap_kappa_contract": "outputs/yt_pr230_source_higgs_overlap_kappa_contract_2026-05-06.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
@@ -881,6 +882,26 @@ def main() -> int:
         is False
         and certs["pr230_same_source_ew_action_adoption_attempt"].get(
             "accepted_action_certificate_written_by_this_attempt"
+        )
+        is False
+    )
+    radial_spurion_sector_overlap_support_not_closure = (
+        "radial-spurion sector-overlap theorem"
+        in statuses["pr230_radial_spurion_sector_overlap_theorem"]
+        and certs["pr230_radial_spurion_sector_overlap_theorem"].get(
+            "radial_spurion_sector_overlap_theorem_passed"
+        )
+        is True
+        and certs["pr230_radial_spurion_sector_overlap_theorem"].get(
+            "current_surface_sector_overlap_identity_supplied"
+        )
+        is False
+        and certs["pr230_radial_spurion_sector_overlap_theorem"].get(
+            "current_surface_closure_authorized"
+        )
+        is False
+        and certs["pr230_radial_spurion_sector_overlap_theorem"].get(
+            "proposal_allowed"
         )
         is False
     )
@@ -1725,6 +1746,11 @@ def main() -> int:
         "same-source-ew-action-adoption-attempt-blocks-shortcut",
         same_source_ew_action_adoption_attempt_blocks_shortcut,
         statuses["pr230_same_source_ew_action_adoption_attempt"],
+    )
+    report(
+        "radial-spurion-sector-overlap-support-not-closure",
+        radial_spurion_sector_overlap_support_not_closure,
+        statuses["pr230_radial_spurion_sector_overlap_theorem"],
     )
     report(
         "post-fms-source-overlap-necessity-blocks-current-inference",
@@ -2699,6 +2725,7 @@ def main() -> int:
         "higgs_mass_source_action_bridge_support_not_closure": higgs_mass_source_action_bridge_support_not_closure,
         "same_source_ew_higgs_action_ansatz_support_not_closure": same_source_ew_higgs_action_ansatz_support_not_closure,
         "same_source_ew_action_adoption_attempt_blocks_shortcut": same_source_ew_action_adoption_attempt_blocks_shortcut,
+        "radial_spurion_sector_overlap_support_not_closure": radial_spurion_sector_overlap_support_not_closure,
         "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
         "source_higgs_overlap_kappa_contract_support_not_closure": source_higgs_overlap_kappa_contract_support_not_closure,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
@@ -2744,6 +2771,7 @@ def main() -> int:
             "does not treat the two-source taste-radial chart as canonical O_H or production source-Higgs rows",
             "does not treat the two-source taste-radial row production manifest as C_sx/C_xx row data or pole evidence",
             "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
+            "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",
             "does not treat current Schur sufficiency or row-definition machinery as proof without a neutral kernel basis plus same-surface A/B/C rows",
             "does not treat conditional Perron support, determinant positivity, or source-only generators as a primitive neutral rank-one theorem",
             "does not treat terminal non-chunk route exhaustion as positive closure",

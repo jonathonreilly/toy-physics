@@ -259,8 +259,12 @@ The current positive non-chunk bridge candidates remain:
   mass-fit rows, missing lightweight W-response production row certificate,
   missing strict `delta_perp` tomography/null/purity correction certificate,
   missing matched top/W rows or a strict same-surface top/W joint covariance
-  theorem, missing sector-overlap identity, missing canonical-Higgs identity,
-  and the Goldstone-equivalence plus covariance-theorem import no-gos;
+  theorem, missing current-surface sector-overlap identity, missing
+  canonical-Higgs identity, and the Goldstone-equivalence plus
+  covariance-theorem import no-gos.  The radial-spurion theorem supplies
+  conditional sector-overlap algebra only for a future adopted
+  no-independent-top-source canonical radial source; it rejects the current
+  additive top mass FH source as that contract;
 - Schur/K-prime kernel rows, blocked by absent same-surface Schur `A/B/C` rows
   and the separate canonical bridge; compressed denominator data also does not
   reconstruct those rows;
@@ -280,7 +284,8 @@ operator/readout, target-value, coupling-normalization, or unit shortcuts.
 Keep chunk production separate.  Do not continue current-surface non-chunk
 shortcut cycling.  Reopen only after a strict same-surface artifact exists:
 `O_H/C_sH/C_HH` pole rows, W/Z response rows with the required identities and
-covariance control, Schur `A/B/C` kernel rows, neutral-sector primitive-cone
+covariance control plus the radial-spurion/no-independent-top-source contract
+or equivalent additive-source subtraction rows, Schur `A/B/C` kernel rows, neutral-sector primitive-cone
 irreducibility, or scalar-LSZ moment/threshold/FV authority.  A path alone is
 not enough; the candidate must pass the reopen-admissibility gate first.  Then
 rerun the worklist, exhaustion, intake, independent-route, cycle-16, cycle-17,

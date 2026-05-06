@@ -49,6 +49,10 @@ This block lands:
   promotion of the ansatz into the accepted EW action certificate until
   canonical-Higgs, sector-overlap, W/Z mass-fit path, and action-gate
   prerequisites are supplied;
+- an executable radial-spurion sector-overlap theorem that supplies the
+  conditional positive top/W/Z response-ratio algebra for a future adopted
+  no-independent-top-source canonical radial source while blocking reuse of
+  the current additive top mass FH source as sector-overlap closure;
 - an executable post-FMS source-overlap necessity gate proving that current
   source-only rows, conditional FMS `C_HH` support, and taste-radial
   `C_sx/C_xx` chunks still do not determine `Res C_sH` or canonical `y_t`;
