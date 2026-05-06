@@ -4641,6 +4641,22 @@
       "to": "three_generation_observable_theorem_note"
     },
     {
+      "from": "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
+      "to": "dm_leptogenesis_exact_kernel_closure_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
+      "to": "dm_neutrino_postcanonical_polar_section_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
+      "to": "dm_neutrino_positive_polar_h_cp_theorem_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
+      "to": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16"
+    },
+    {
       "from": "dm_neutrino_source_surface_microscopic_polynomial_impossibility_theorem_note_2026-04-17",
       "to": "three_generation_observable_theorem_note"
     },
@@ -33055,8 +33071,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [],
-      "note_hash": "14c592f09d3b7f5fde41389e14bd32916f99682303a17569aae54b36470d51a3",
+      "deps": [
+        "dm_leptogenesis_exact_kernel_closure_note_2026-04-15",
+        "dm_neutrino_postcanonical_polar_section_note_2026-04-15",
+        "dm_neutrino_positive_polar_h_cp_theorem_note_2026-04-15",
+        "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16"
+      ],
+      "note_hash": "c4351cdfe0f6685d032982dfe26b11dc8120312ee1b67c4a5e8af20c593bece0",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_intrinsic_slot_theorem.py",
       "title": "DM Neutrino Source-Surface Intrinsic Slot Theorem"
@@ -55172,7 +55193,6 @@
     "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
     "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18",
     "dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17",
-    "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
     "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
     "dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18",
     "dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18",
@@ -55798,10 +55818,10 @@
       "open_gate": 118,
       "positive_theorem": 635
     },
-    "edge_count": 6583,
+    "edge_count": 6587,
     "leaf_count": 552,
     "node_count": 1905,
-    "root_count": 869,
+    "root_count": 868,
     "runners_with_path": 1478
   }
 }

@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 790 |
+| unaudited | 791 |
 | audit_in_progress | 3 |
 | meta | 48 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
-| ~~audited_conditional~~ | 461 |
+| ~~audited_conditional~~ | 460 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 377 |
-| `audited_conditional` | 461 |
+| `audited_conditional` | 460 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 32 |
-| `unaudited` | 838 |
+| `unaudited` | 839 |
 
 | claim_type | count |
 |---|---:|
@@ -80,31 +80,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `observable_principle_from_axiom_note` | positive_theorem | critical | 333 | 34.88 | `audited_conditional` | ~~audited_conditional~~ |
-| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 593 | 34.71 | `audited_clean` | **retained_bounded** |
-| 3 | `minimal_axioms_2026-04-11` | meta | critical | 545 | 34.09 | `unaudited` | meta |
-| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 520 | 32.02 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 359 | 31.49 | `unaudited` | unaudited |
-| 6 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 359 | 30.49 | `unaudited` | unaudited |
-| 7 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 296 | 29.21 | `unaudited` | unaudited |
-| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 583 | 28.69 | `audited_clean` | **retained_bounded** |
-| 9 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 386 | 26.60 | `audited_conditional` | ~~audited_conditional~~ |
-| 10 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 596 | 25.72 | `audited_clean` | open_gate |
-| 11 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 359 | 25.49 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 497 | 25.46 | `unaudited` | unaudited |
-| 13 | `minimal_axioms_2026-05-03` | meta | critical | 606 | 25.25 | `unaudited` | meta |
-| 14 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 312 | 24.29 | `unaudited` | unaudited |
-| 15 | `three_generation_structure_note` | bounded_theorem | critical | 415 | 24.20 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 359 | 23.99 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `left_handed_charge_matching_note` | bounded_theorem | critical | 436 | 23.77 | `audited_conditional` | ~~audited_conditional~~ |
-| 18 | `one_generation_matter_closure_note` | bounded_theorem | critical | 419 | 23.71 | `audited_conditional` | ~~audited_conditional~~ |
-| 19 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 359 | 22.49 | `audited_conditional` | ~~audited_conditional~~ |
-| 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 543 | 22.09 | `audited_conditional` | ~~audited_conditional~~ |
-| 21 | `universal_gr_discrete_global_closure_note` | positive_theorem | critical | 525 | 21.54 | `audited_conditional` | ~~audited_conditional~~ |
-| 22 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 359 | 21.49 | `audited_conditional` | ~~audited_conditional~~ |
-| 23 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 317 | 21.31 | `audited_clean` | **retained** |
-| 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 391 | 21.11 | `unaudited` | unaudited |
-| 25 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 284 | 20.66 | `audited_conditional` | ~~audited_conditional~~ |
+| 1 | `observable_principle_from_axiom_note` | positive_theorem | critical | 335 | 34.89 | `audited_conditional` | ~~audited_conditional~~ |
+| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 595 | 34.72 | `audited_clean` | **retained_bounded** |
+| 3 | `minimal_axioms_2026-04-11` | meta | critical | 547 | 34.10 | `unaudited` | meta |
+| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 522 | 32.03 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 361 | 31.50 | `unaudited` | unaudited |
+| 6 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 361 | 30.50 | `unaudited` | unaudited |
+| 7 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 298 | 29.22 | `unaudited` | unaudited |
+| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 585 | 28.70 | `audited_clean` | **retained_bounded** |
+| 9 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 388 | 26.60 | `audited_conditional` | ~~audited_conditional~~ |
+| 10 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 598 | 25.73 | `audited_clean` | open_gate |
+| 11 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 361 | 25.50 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 499 | 25.47 | `unaudited` | unaudited |
+| 13 | `minimal_axioms_2026-05-03` | meta | critical | 608 | 25.25 | `unaudited` | meta |
+| 14 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 314 | 24.30 | `unaudited` | unaudited |
+| 15 | `three_generation_structure_note` | bounded_theorem | critical | 417 | 24.21 | `audited_conditional` | ~~audited_conditional~~ |
+| 16 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 361 | 24.00 | `audited_conditional` | ~~audited_conditional~~ |
+| 17 | `left_handed_charge_matching_note` | bounded_theorem | critical | 438 | 23.78 | `audited_conditional` | ~~audited_conditional~~ |
+| 18 | `one_generation_matter_closure_note` | bounded_theorem | critical | 421 | 23.72 | `audited_conditional` | ~~audited_conditional~~ |
+| 19 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 361 | 22.50 | `audited_conditional` | ~~audited_conditional~~ |
+| 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 545 | 22.09 | `audited_conditional` | ~~audited_conditional~~ |
+| 21 | `universal_gr_discrete_global_closure_note` | positive_theorem | critical | 527 | 21.54 | `audited_conditional` | ~~audited_conditional~~ |
+| 22 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 361 | 21.50 | `audited_conditional` | ~~audited_conditional~~ |
+| 23 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 319 | 21.32 | `audited_clean` | **retained** |
+| 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 393 | 21.12 | `unaudited` | unaudited |
+| 25 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 286 | 20.66 | `audited_conditional` | ~~audited_conditional~~ |
 
 
 ## Applied audits
@@ -662,7 +662,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
-| `dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -4892,24 +4891,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** That does not prove the local dominance theorem, but it does move the endpoint  _(class `B`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 2 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified B-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
-- **auditor confidence:** high
-
-### `dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16`
-
-- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited only the asserted shift-invariance and constant intrinsic Z_3 slot-pair readout on the provided source-oriented quotient-gauge formulas.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-dm_neutrino_source_surfa-080`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** On the quotient gauge, the intrinsic slot pair simplifies exactly to the constant pair above and the coordinates m, delta, and r31 drop out completely on the live source-oriented sheet.  _(class `A`)_
-- **chain closes:** False — The packet does not provide the definitions of U_Z3, the full H construction, exact_package, slot_pair_from_h, cp_pair_from_h, or quotient_gauge_h. The runner imports those load-bearing bridge/readout objects from unprovided modules, so the claimed closure from axiom is not established inside the restricted packet.
-- **rationale:** The numerical runner reports all checks passing, but its source relies on imported framework objects and quotient-bundle/readout functions that are not included as cited authorities. The central simplification is an algebraic identity over those imported definitions, not a first-principles computation from the axiom in the restricted packet. Because the note lists no upstream authorities while the runner depends on several unprovided bridge definitions, the derivation is conditional on missing dependencies.
-- **open / conditional deps cited:**
-  - `scripts/dm_leptogenesis_exact_common.py`
-  - `scripts/frontier_dm_neutrino_postcanonical_polar_section.py`
-  - `scripts/frontier_dm_neutrino_positive_polar_h_cp_theorem.py`
-  - `scripts/frontier_dm_neutrino_source_surface_shift_quotient_bundle_theorem.py`
 - **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17`

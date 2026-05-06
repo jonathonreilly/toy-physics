@@ -105,3 +105,49 @@ explicit shift-quotient bundle.
 ```bash
 PYTHONPATH=scripts python3 scripts/frontier_dm_neutrino_source_surface_intrinsic_slot_theorem.py
 ```
+
+## Citations
+
+The auditor's `missing_dependency_edge` flag asked for retained-grade
+cited authorities or inline derivations for `exact_package`,
+`U_Z3 / slot_pair_from_h`, `cp_pair_from_h`, and `quotient_gauge_h`,
+all of which are imported by the runner from named theorem-side
+modules. The corresponding load-bearing repo-native authority notes
+are registered as one-hop dependency edges below.
+
+Runner-side carriers (named so the audit lane sees both halves of the
+chain):
+
+- `scripts/dm_leptogenesis_exact_common.py` — `exact_package` (returns
+  the exact `(gamma, E1, E2, ...)` source surface).
+- `scripts/frontier_dm_neutrino_postcanonical_polar_section.py`
+  — `slot_pair_from_h` and the `U_Z3` rotation.
+- `scripts/frontier_dm_neutrino_positive_polar_h_cp_theorem.py`
+  — `cp_pair_from_h`.
+- `scripts/frontier_dm_neutrino_source_surface_shift_quotient_bundle_theorem.py`
+  — the explicit shift-quotient gauge `quotient_gauge_h`.
+
+Theorem-side authorities (load-bearing one-hop deps):
+
+- [DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md](DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md)
+  — supplies the `exact_package` with `gamma = 1/2`, `E2 = sqrt(8)/3`
+  used as the source-oriented values in the Bottom-line slot pair.
+- [DM_NEUTRINO_POSTCANONICAL_POLAR_SECTION_NOTE_2026-04-15.md](DM_NEUTRINO_POSTCANONICAL_POLAR_SECTION_NOTE_2026-04-15.md)
+  — defines the `Z_3` rotation `U_Z3` and the slot-pair readout
+  `slot_pair_from_h(H)` used in §1's `K_Z3(H) = U_Z3^dag H U_Z3`
+  decomposition.
+- [DM_NEUTRINO_POSITIVE_POLAR_H_CP_THEOREM_NOTE_2026-04-15.md](DM_NEUTRINO_POSITIVE_POLAR_H_CP_THEOREM_NOTE_2026-04-15.md)
+  — supplies the CP-pair readout `cp_pair_from_h(H)` and the exact
+  source-oriented CP package re-derived in §3.
+- [DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md](DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md)
+  — supplies the explicit shift-quotient gauge `quotient_gauge_h`
+  (the `(d1, d2, d3, phi_+, r12, r23)` parametrisation in §2) on which
+  the slot pair is read off and shown to be constant.
+
+These additions are strictly additive: the verdict, the Bottom-line
+constants, the §"Exact content" clauses, and the "Consequence"
+inventory are unchanged.
+
+Until each linked authority is itself audit-clean, this note remains
+`audited_conditional` even with the registered edges; the wiring is
+the prerequisite for unlock, not the unlock itself.
