@@ -1,7 +1,7 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: open / first-principles O_H bridge positive-candidate portfolio with scalar reparam gate, exact two-source taste-radial chart and action-source support, bounded two-source C_sx/C_xx row-contract support, bounded two-source row-production manifest support, bounded row-wave launcher support, completed chunks001-004 with completed-mode checkpoints, chunks005-006 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, FMS post-degree action-first composite-O_H route rescore, conditional FMS composite-O_H theorem, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional lazy-Z3 primitive support, H1 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and FH/LSZ L12 bounded-support postprocess refresh recorded
+actual_current_surface_status: open / first-principles O_H bridge positive-candidate portfolio with scalar reparam gate, exact two-source taste-radial chart and action-source support, bounded two-source C_sx/C_xx row-contract support, bounded two-source row-production manifest support, bounded row-wave launcher support, completed chunks001-004 with completed-mode checkpoints, chunks005-006 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, FMS post-degree action-first composite-O_H route rescore, conditional FMS composite-O_H theorem, exact post-FMS source-overlap necessity boundary, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional lazy-Z3 primitive support, H1 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and FH/LSZ L12 bounded-support postprocess refresh recorded
 conditional_surface_status: conditional-support if the two-source taste-radial source is promoted by production C_sx/C_xx rows plus canonical-O_H/source-overlap identity, or if certified O_H/C_sH/C_HH rows, W/Z response rows with strict g2/covariance/delta_perp, Schur A/B/C rows, or same-surface neutral primitive-cone transfer lands
 hypothetical_axiom_status: null
 admitted_observation_status: null
@@ -19,10 +19,11 @@ support for the second source-axis option, not closure: the source vertex and
 schema now exist, and the manifest now records exact no-resume chunk commands,
 and the launcher has completed chunks001-004 and advanced to active
 chunks005-006 under a two-worker cap.  The completed chunks001-004
-checkpoints pass, but they remain bounded row support only.  The route still
-needs combined production `C_sx/C_xx` rows, pole/FV/IR authority, and either
-canonical `O_H` identity/source-overlap authority or a physical-response bypass
-before it can be load-bearing.
+checkpoints pass, but they remain bounded row support only.  Chunks005-006
+remain non-evidence until completed JSON exists and completed-mode checkpoints
+pass.  The route still needs combined production `C_sx/C_xx` rows, pole/FV/IR
+authority, and either canonical `O_H` identity/source-overlap authority or a
+physical-response bypass before it can be load-bearing.
 The taste-radial selector gate adds exact conditional support for the
 degree-one radial target and an exact boundary against using `Z3` symmetry
 alone as canonical `O_H` authority.
@@ -38,6 +39,13 @@ The FMS composite-`O_H` conditional theorem derives the exact
 pi^2/2`, with one-pole residue `v^2 Z_h`.  It remains support only because the
 same-surface EW/Higgs action, nonzero `v`, canonical LSZ normalization,
 `C_sH/C_HH` pole rows, and Gram/FV/IR checks are still absent.
+The post-FMS source-overlap necessity gate now checks the next step directly.
+It proves that FMS `C_HH` support plus current source-only rows or taste-radial
+`C_sx/C_xx` chunks do not determine `Res C_sH`.  A fixed-residue counterfamily
+varies the source-Higgs overlap and Gram determinant, and an orthogonal neutral
+top-coupling counterfamily holds the measured source response fixed while
+changing canonical `y_t`.  This is exact current-surface boundary evidence,
+not closure.
 The route-completion artifacts are scoped current-surface boundaries; they
 preserve first-principles reopen routes after a same-surface row, certificate,
 or theorem is supplied.  The `origin/main` composite-Higgs packet remains

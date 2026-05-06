@@ -1,0 +1,172 @@
+{
+  "actual_current_surface_status": "exact negative boundary / post-FMS source-overlap not derivable from current PR230 source-only or C_sx/C_xx rows",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "canonical_oh_absent": true,
+  "conditional_surface_status": "exact-support if future PR230 artifacts supply canonical O_H plus C_ss/C_sH/C_HH pole rows with Gram/FV/IR checks, or a same-source physical-response bypass",
+  "current_source_overlap_authority_present": false,
+  "fail_count": 0,
+  "fms_bridge_conditional_not_closure": true,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "treated_C_sx_C_xx_as_C_sH_C_HH_pole_rows": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_as_operator": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_targets_as_selectors": false,
+    "used_taste_radial_axis_as_canonical_oh": false,
+    "used_yt_ward_identity": false
+  },
+  "future_file_presence": {
+    "canonical_oh_certificate": false,
+    "source_higgs_production_certificate": false,
+    "source_higgs_rows": false,
+    "top_wz_matched_response_rows": false,
+    "two_source_combined_rows": false
+  },
+  "hypothetical_axiom_status": null,
+  "orthogonal_top_counterfamily": [
+    {
+      "canonical_y_t": 0.5,
+      "orthogonal_y_chi_required": 0.944911182523068,
+      "rho_sH": 0.75,
+      "same_source_y": 1.0
+    },
+    {
+      "canonical_y_t": 1.0,
+      "orthogonal_y_chi_required": 0.3779644730092272,
+      "rho_sH": 0.75,
+      "same_source_y": 1.0
+    },
+    {
+      "canonical_y_t": 1.5,
+      "orthogonal_y_chi_required": -0.1889822365046136,
+      "rho_sH": 0.75,
+      "same_source_y": 1.0
+    }
+  ],
+  "overlap_counterfamily": [
+    {
+      "Res_C_HH": 18.0,
+      "Res_C_sH": 18.0,
+      "Res_C_ss": 18.0,
+      "canonical_y_t_if_y_chi_zero": 1.0,
+      "gram_determinant": 0.0,
+      "gram_purity": true,
+      "rho_sH": 1.0,
+      "same_source_y": 1.0
+    },
+    {
+      "Res_C_HH": 18.0,
+      "Res_C_sH": 13.5,
+      "Res_C_ss": 18.0,
+      "canonical_y_t_if_y_chi_zero": 1.3333333333333333,
+      "gram_determinant": 141.75,
+      "gram_purity": false,
+      "rho_sH": 0.75,
+      "same_source_y": 1.0
+    },
+    {
+      "Res_C_HH": 18.0,
+      "Res_C_sH": 9.0,
+      "Res_C_ss": 18.0,
+      "canonical_y_t_if_y_chi_zero": 2.0,
+      "gram_determinant": 243.0,
+      "gram_purity": false,
+      "rho_sH": 0.5,
+      "same_source_y": 1.0
+    },
+    {
+      "Res_C_HH": 18.0,
+      "Res_C_sH": 4.5,
+      "Res_C_ss": 18.0,
+      "canonical_y_t_if_y_chi_zero": 4.0,
+      "gram_determinant": 303.75,
+      "gram_purity": false,
+      "rho_sH": 0.25,
+      "same_source_y": 1.0
+    },
+    {
+      "Res_C_HH": 18.0,
+      "Res_C_sH": 0.0,
+      "Res_C_ss": 18.0,
+      "canonical_y_t_if_y_chi_zero": null,
+      "gram_determinant": 324.0,
+      "gram_purity": false,
+      "rho_sH": 0.0,
+      "same_source_y": 1.0
+    },
+    {
+      "Res_C_HH": 18.0,
+      "Res_C_sH": -4.5,
+      "Res_C_ss": 18.0,
+      "canonical_y_t_if_y_chi_zero": -4.0,
+      "gram_determinant": 303.75,
+      "gram_purity": false,
+      "rho_sH": -0.25,
+      "same_source_y": 1.0
+    }
+  ],
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_higgs_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "fms_composite_oh": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
+    "full_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "oh_source_higgs_rescan": "outputs/yt_pr230_oh_source_higgs_authority_rescan_gate_2026-05-05.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "source_functional_lsz": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
+    "two_source_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+    "two_source_chunk001": "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json",
+    "two_source_chunk002": "outputs/yt_pr230_two_source_taste_radial_chunk002_checkpoint_2026-05-06.json",
+    "two_source_chunk003": "outputs/yt_pr230_two_source_taste_radial_chunk003_checkpoint_2026-05-06.json",
+    "two_source_chunk004": "outputs/yt_pr230_two_source_taste_radial_chunk004_checkpoint_2026-05-06.json",
+    "two_source_launcher": "outputs/yt_pr230_two_source_taste_radial_row_wave_launcher_2026-05-06.json",
+    "two_source_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_gate": "open / canonical-Higgs operator certificate absent",
+    "fms_composite_oh": "conditional-support / FMS composite O_H theorem; current PR230 surface lacks same-surface EW/Higgs action and source-overlap pole rows",
+    "full_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "oh_source_higgs_rescan": "exact negative boundary / O_H/source-Higgs authority rescan found no current same-surface canonical O_H or C_sH/C_HH row certificate",
+    "retained_route": "open / retained closure not yet reached",
+    "source_functional_lsz": "exact negative boundary / source-functional LSZ identifiability theorem",
+    "source_higgs_builder": "open / source-Higgs cross-correlator rows absent",
+    "source_higgs_gram": "open / source-Higgs Gram purity gate not passed",
+    "source_pole_mixing": "exact negative boundary / source-pole canonical-Higgs mixing obstruction",
+    "two_source_action": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
+    "two_source_chunk001": "bounded-support / two-source taste-radial chunk001 C_sx/C_xx row checkpoint",
+    "two_source_chunk002": "bounded-support / two-source taste-radial chunk002 C_sx/C_xx row checkpoint",
+    "two_source_chunk003": "bounded-support / two-source taste-radial chunk003 C_sx/C_xx row checkpoint",
+    "two_source_chunk004": "bounded-support / two-source taste-radial chunk004 C_sx/C_xx row checkpoint",
+    "two_source_launcher": "bounded-support / two-source taste-radial C_sx/C_xx row wave launcher status; run-control only, not physics evidence",
+    "two_source_row_contract": "bounded-support / two-source taste-radial C_sx/C_xx row contract; production rows absent"
+  },
+  "pass_count": 14,
+  "post_fms_source_overlap_necessity_gate_passed": true,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The FMS expansion gives the future composite operator but does not determine the PR230 source overlap.  Current source-only rows and taste-radial C_sx/C_xx chunks leave Res C_sH and orthogonal top couplings underdetermined.",
+  "remaining_positive_contract": [
+    "same-surface canonical O_H certificate",
+    "same-ensemble C_ss/C_sH/C_HH pole rows with C_HH from the certified O_H",
+    "Gram purity Res(C_sH)^2 = Res(C_ss) Res(C_HH) with uncertainty control",
+    "FV/IR/isolated-pole and scalar-LSZ authority",
+    "or a physical-response bypass such as matched top/W/Z rows with strict g2/covariance/delta_perp"
+  ],
+  "source_higgs_rows_absent": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not treat FMS expansion as source-overlap authority",
+    "does not treat C_sx/C_xx taste-radial rows as canonical C_sH/C_HH pole rows",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "two_source_rows_are_c_sx_not_c_sH": true
+}

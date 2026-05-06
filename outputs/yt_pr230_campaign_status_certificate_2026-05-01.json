@@ -307,6 +307,7 @@
     "pr230_oh_source_higgs_authority_rescan_gate": "exact negative boundary / O_H/source-Higgs authority rescan found no current same-surface canonical O_H or C_sH/C_HH row certificate",
     "pr230_origin_main_composite_higgs_intake_guard": "exact negative boundary / origin/main composite-Higgs stretch packet is conditional cross-lane context, not PR230 same-surface O_H/C_sH/C_HH closure",
     "pr230_origin_main_ew_m_residual_intake_guard": "exact negative boundary / origin/main EW M-residual CMT packet is context-only channel bookkeeping, not PR230 same-source EW/WZ or O_H closure",
+    "pr230_post_fms_source_overlap_necessity_gate": "exact negative boundary / post-FMS source-overlap not derivable from current PR230 source-only or C_sx/C_xx rows",
     "pr230_reflection_det_primitive_upgrade_gate": "exact negative boundary / reflection plus determinant positivity does not upgrade PR230 to a neutral primitive-cone bridge",
     "pr230_same_surface_z3_taste_triplet": "exact-support / same-surface Z3 taste-triplet artifact; physical neutral transfer still absent",
     "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt": "exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows",
@@ -426,7 +427,8 @@
   "oh_bridge_candidate_portfolio_open": true,
   "origin_main_composite_higgs_intake_not_closure": true,
   "origin_main_ew_m_residual_intake_not_closure": true,
-  "pass_count": 304,
+  "pass_count": 305,
+  "post_fms_source_overlap_necessity_blocks_current_inference": true,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

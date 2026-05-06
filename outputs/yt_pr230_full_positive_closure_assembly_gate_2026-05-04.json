@@ -165,6 +165,7 @@
     "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
     "pr230_origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
     "pr230_origin_main_ew_m_residual_intake_guard": "outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json",
+    "pr230_post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "pr230_reflection_det_primitive_upgrade_gate": "outputs/yt_pr230_reflection_det_primitive_upgrade_gate_2026-05-05.json",
     "pr230_same_surface_z3_taste_triplet": "outputs/yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json",
     "pr230_scalar_lsz_carleman_tauberian_determinacy": "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json",
@@ -303,6 +304,7 @@
     "pr230_one_higgs_taste_axis_completeness": "exact negative boundary / one-Higgs taste-axis completeness not derived from current PR230 taste/EW stack",
     "pr230_origin_main_composite_higgs_intake_guard": "exact negative boundary / origin/main composite-Higgs stretch packet is conditional cross-lane context, not PR230 same-surface O_H/C_sH/C_HH closure",
     "pr230_origin_main_ew_m_residual_intake_guard": "exact negative boundary / origin/main EW M-residual CMT packet is context-only channel bookkeeping, not PR230 same-source EW/WZ or O_H closure",
+    "pr230_post_fms_source_overlap_necessity_gate": "exact negative boundary / post-FMS source-overlap not derivable from current PR230 source-only or C_sx/C_xx rows",
     "pr230_reflection_det_primitive_upgrade_gate": "exact negative boundary / reflection plus determinant positivity does not upgrade PR230 to a neutral primitive-cone bridge",
     "pr230_same_surface_z3_taste_triplet": "exact-support / same-surface Z3 taste-triplet artifact; physical neutral transfer still absent",
     "pr230_scalar_lsz_carleman_tauberian_determinacy": "exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows",
@@ -359,7 +361,8 @@
     "wz_smoke_to_production_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
   },
-  "pass_count": 124,
+  "pass_count": 125,
+  "post_fms_source_overlap_necessity_blocks_current_inference": true,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",
   "route_statuses": {

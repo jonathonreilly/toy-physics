@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 669,
+    "leaf": 670,
     "medium": 301
   },
-  "generated_at": "2026-05-06T17:09:48.874821+00:00",
+  "generated_at": "2026-05-06T17:23:00.635720+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -21177,6 +21177,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_post_fms_source_overlap_necessity_gate_note_2026-05-06",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_POST_FMS_SOURCE_OVERLAP_NECESSITY_GATE_NOTE_2026-05-06.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_post_fms_source_overlap_necessity_gate.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_reflection_det_primitive_upgrade_gate_note_2026-05-05",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -24942,6 +24959,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 816,
-  "total_pending": 1207
+  "ready_count": 817,
+  "total_pending": 1208
 }

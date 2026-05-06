@@ -39,6 +39,7 @@ PARENTS = {
     "degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
     "fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
     "fms_composite_oh_conditional_theorem": "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json",
+    "post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
@@ -392,6 +393,24 @@ def main() -> int:
         )
         is True
     )
+    post_fms_source_overlap_necessity_blocks_current_inference = (
+        "post-FMS source-overlap not derivable"
+        in parent_statuses["post_fms_source_overlap_necessity_gate"]
+        and certs["post_fms_source_overlap_necessity_gate"].get("proposal_allowed")
+        is False
+        and certs["post_fms_source_overlap_necessity_gate"].get(
+            "post_fms_source_overlap_necessity_gate_passed"
+        )
+        is True
+        and certs["post_fms_source_overlap_necessity_gate"].get(
+            "current_source_overlap_authority_present"
+        )
+        is False
+        and certs["post_fms_source_overlap_necessity_gate"].get(
+            "two_source_rows_are_c_sx_not_c_sH"
+        )
+        is True
+    )
     origin_main_composite_higgs_not_closure = (
         certs["origin_main_composite_higgs_intake_guard"].get(
             "origin_main_composite_higgs_intake_guard_passed"
@@ -524,6 +543,7 @@ def main() -> int:
     report("degree-one-higgs-action-premise-not-derived", degree_one_higgs_action_premise_not_derived, parent_statuses["degree_one_higgs_action_premise_gate"])
     report("fms-post-degree-route-rescore-support-not-closure", fms_post_degree_route_support_not_closure, parent_statuses["fms_post_degree_route_rescore"])
     report("fms-composite-oh-conditional-support-not-closure", fms_composite_oh_conditional_support_not_closure, parent_statuses["fms_composite_oh_conditional_theorem"])
+    report("post-fms-source-overlap-necessity-blocks-current-inference", post_fms_source_overlap_necessity_blocks_current_inference, parent_statuses["post_fms_source_overlap_necessity_gate"])
     report("origin-main-composite-higgs-intake-not-closure", origin_main_composite_higgs_not_closure, parent_statuses["origin_main_composite_higgs_intake_guard"])
     report("origin-main-ew-m-residual-intake-not-closure", origin_main_ew_m_residual_not_closure, parent_statuses["origin_main_ew_m_residual_intake_guard"])
     report("z3-triplet-conditional-primitive-support-not-closure", z3_triplet_conditional_primitive_not_closure, parent_statuses["z3_triplet_conditional_primitive_cone"])
@@ -673,6 +693,7 @@ def main() -> int:
             "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
             "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
             "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
+            "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
             "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
             "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,
             "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,

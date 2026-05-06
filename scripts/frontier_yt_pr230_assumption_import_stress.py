@@ -176,6 +176,9 @@ def main() -> int:
         "fms_composite_oh_conditional_theorem": load(
             "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json"
         ),
+        "post_fms_source_overlap_necessity_gate": load(
+            "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
+        ),
         "action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -989,6 +992,23 @@ def main() -> int:
         is False,
         fms_composite.get("actual_current_surface_status"),
     )
+    post_fms_overlap = certificates["post_fms_source_overlap_necessity_gate"]
+    report(
+        "post-fms-source-overlap-necessity-gate-blocks-current-inference",
+        "post-FMS source-overlap not derivable"
+        in str(post_fms_overlap.get("actual_current_surface_status"))
+        and post_fms_overlap.get("proposal_allowed") is False
+        and post_fms_overlap.get("post_fms_source_overlap_necessity_gate_passed")
+        is True
+        and post_fms_overlap.get("current_source_overlap_authority_present")
+        is False
+        and post_fms_overlap.get("two_source_rows_are_c_sx_not_c_sH") is True
+        and post_fms_overlap.get("forbidden_firewall", {}).get(
+            "treated_C_sx_C_xx_as_C_sH_C_HH_pole_rows"
+        )
+        is False,
+        post_fms_overlap.get("actual_current_surface_status"),
+    )
     action_first_completion = certificates["action_first_route_completion"]
     report(
         "action-first-route-current-surface-closed",
@@ -1183,7 +1203,10 @@ def main() -> int:
             "conditional theorem derives the correct operator expansion "
             "`O_H = v h + h^2/2 + pi^2/2` and its pole-residue scaling, but "
             "keeps it conditional on a same-surface EW/Higgs action, canonical "
-            "LSZ normalization, and C_sH/C_HH pole rows.  "
+            "LSZ normalization, and C_sH/C_HH pole rows.  The post-FMS "
+            "source-overlap necessity gate then blocks the next inference: "
+            "current source-only rows and taste-radial C_sx/C_xx chunks do "
+            "not determine Res C_sH or exclude orthogonal neutral top coupling.  "
             "Positive closure still requires "
             "production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
@@ -1219,6 +1242,7 @@ def main() -> int:
             "does not treat the two-source taste-radial production manifest as row data or pole evidence",
             "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
             "does not treat the FMS composite expansion as PR230 closure before same-surface EW/Higgs action and C_sH/C_HH rows exist",
+            "does not infer Res C_sH from source-only rows, FMS C_HH, or taste-radial C_sx/C_xx chunks",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

@@ -167,15 +167,23 @@ sharpens the missing artifact but does not close PR230: the action, nonzero
 `v`, canonical LSZ normalization, `C_sH/C_HH` pole rows, and Gram/FV/IR
 authority are still absent.
 
+The post-FMS source-overlap necessity gate now checks the next inference
+directly.  It proves that current PR230 source-only rows, FMS `C_HH` support,
+and taste-radial `C_sx/C_xx` chunks do not determine `Res C_sH`: a
+fixed-residue counterfamily varies the source-Higgs overlap and Gram
+determinant, and an orthogonal neutral top-coupling counterfamily keeps the
+measured source response fixed while changing canonical `y_t`.  The route now
+needs a same-surface `C_ss/C_sH/C_HH` pole row packet with Gram/FV/IR checks or
+a physical-response bypass.
+
 Chunks001-004 of the two-source taste-radial production wave have completed.
-The completed-mode chunk checkpoint now passes `PASS=15 FAIL=0` for both
-chunks001-002 and now passes `PASS=15 FAIL=0` for chunks003-004 too, including
-production metadata, `numba_gauge_seed_v1`, the preserved three-mass scan,
-selected-mass-only FH/LSZ/source rows, and `C_sx/C_xx` timeseries.
-Chunks005-006 are active under the supervisor's two-worker cap.  Completed
-chunks001-004 are still bounded row support only: they are not
-combined L12 evidence, pole/FV/IR evidence, canonical `O_H`, `kappa_s`, or
-top-Yukawa closure.
+The completed-mode chunk checkpoint now passes `PASS=15 FAIL=0` for
+chunks001-004, including production metadata, `numba_gauge_seed_v1`, the
+preserved three-mass scan, selected-mass-only FH/LSZ/source rows, and
+`C_sx/C_xx` timeseries.  Chunks005-006 are active under the supervisor's
+two-worker cap.  Completed chunks001-004 are still bounded row support only:
+they are not combined L12 evidence, pole/FV/IR evidence, canonical `O_H`,
+`kappa_s`, or top-Yukawa closure.
 
 The FH/LSZ postprocess state is refreshed after the completed L12 replacement
 campaign.  The four-mode/x16 and separate eight-mode/x8 L12 chunked surfaces
@@ -217,3 +225,6 @@ Higgs-action premise.
 Do not close it by treating the degree-one filter itself as that premise.
 Do not close it by treating FMS method names or FMS/lattice literature as a
 same-surface PR230 `O_H` certificate.
+Do not close it by treating the conditional FMS `C_HH` residue or completed
+`C_sx/C_xx` chunks as `Res C_sH`; the post-FMS necessity gate blocks that
+inference on the current surface.

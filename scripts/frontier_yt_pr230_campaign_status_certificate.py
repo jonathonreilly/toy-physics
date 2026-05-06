@@ -638,6 +638,9 @@ def main() -> int:
         "pr230_fms_composite_oh_conditional_theorem": load(
             "outputs/yt_pr230_fms_composite_oh_conditional_theorem_2026-05-06.json"
         ),
+        "pr230_post_fms_source_overlap_necessity_gate": load(
+            "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
+        ),
         "pr230_action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -2712,6 +2715,29 @@ def main() -> int:
         is True,
         statuses["pr230_fms_composite_oh_conditional_theorem"],
     )
+    post_fms_source_overlap_necessity_gate = certificates[
+        "pr230_post_fms_source_overlap_necessity_gate"
+    ]
+    report(
+        "pr230-post-fms-source-overlap-necessity-blocks-current-inference",
+        "post-FMS source-overlap not derivable"
+        in str(statuses["pr230_post_fms_source_overlap_necessity_gate"])
+        and post_fms_source_overlap_necessity_gate.get("proposal_allowed")
+        is False
+        and post_fms_source_overlap_necessity_gate.get(
+            "post_fms_source_overlap_necessity_gate_passed"
+        )
+        is True
+        and post_fms_source_overlap_necessity_gate.get(
+            "current_source_overlap_authority_present"
+        )
+        is False
+        and post_fms_source_overlap_necessity_gate.get(
+            "two_source_rows_are_c_sx_not_c_sH"
+        )
+        is True,
+        statuses["pr230_post_fms_source_overlap_necessity_gate"],
+    )
     two_source_chunk001 = certificates[
         "pr230_two_source_taste_radial_chunk001_checkpoint"
     ]
@@ -4527,6 +4553,22 @@ def main() -> int:
         and fms_composite_oh_conditional_theorem.get("same_surface_action_absent")
         is True
         and fms_composite_oh_conditional_theorem.get("source_higgs_rows_absent")
+        is True
+    )
+    result["post_fms_source_overlap_necessity_blocks_current_inference"] = (
+        post_fms_source_overlap_necessity_gate.get(
+            "post_fms_source_overlap_necessity_gate_passed"
+        )
+        is True
+        and post_fms_source_overlap_necessity_gate.get("proposal_allowed")
+        is False
+        and post_fms_source_overlap_necessity_gate.get(
+            "current_source_overlap_authority_present"
+        )
+        is False
+        and post_fms_source_overlap_necessity_gate.get(
+            "two_source_rows_are_c_sx_not_c_sH"
+        )
         is True
     )
     result["two_source_taste_radial_chunk001_checkpoint_not_closure"] = (
