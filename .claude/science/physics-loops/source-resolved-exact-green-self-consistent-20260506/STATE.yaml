@@ -1,0 +1,52 @@
+loop_slug: source-resolved-exact-green-self-consistent-20260506
+mode: run
+target: best-honest-status
+date: 2026-05-06
+branch: claude/science-fix/source_resolved_exact_green_self_consistent_note-9e374e18
+goal: |
+  Resolve the missing-derivation prompt for
+  docs/SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md.
+runtime_used: focused-session
+cycle: 1
+cycles_completed: 1
+active_route: stale-prompt verification against current source and audit ledger
+hard_residual_attacked: |
+  The historical audit blocker asked for explicit PASS/FAIL assertions and
+  calibration-boundary language. Current origin/main already contains those
+  repairs and the independent audit ledger records audited_clean for the note.
+files_touched:
+  - .claude/science/physics-loops/source-resolved-exact-green-self-consistent-20260506/*
+source_files_left_unchanged:
+  - docs/SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md
+  - scripts/source_resolved_exact_green_self_consistent.py
+  - outputs/source_resolved_exact_green_self_consistent_assertions_2026-05-06.txt
+open_imports: []
+no_go_routes: []
+review_findings: |
+  No source repair remains. Editing the note after its clean audit would create
+  hash drift without adding physics content. Live runner rerun on 2026-05-06
+  returned exit code 0 with PASSED: 6/6.
+pr_status: not_opened
+next_exact_action: |
+  No source-note edit is needed. If the audit queue is regenerated later, the
+  stale prompt should disappear because the live ledger already records the
+  clean bounded finite-run closure.
+stop_condition: |
+  Current source, runner output, and audit ledger are mutually consistent.
+verification:
+  runner_command: "python3 scripts/source_resolved_exact_green_self_consistent.py"
+  runner_exit_code: 0
+  runner_pass_summary: "PASSED: 6/6"
+  diff_check_command: "git diff --check"
+  diff_check_exit_code: 0
+status_fields:
+  actual_current_surface_status: bounded-support
+  audit_status_current: audited_clean
+  effective_status_current: retained_bounded
+  conditional_surface_status: null
+  hypothetical_axiom_status: null
+  admitted_observation_status: null
+  proposal_allowed: false
+  proposal_allowed_reason: "Already independently audited clean as a narrow bounded finite-run claim; no branch-local retained proposal is needed."
+  audit_required_before_effective_retained: false
+  bare_retained_allowed: false
