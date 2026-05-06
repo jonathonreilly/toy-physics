@@ -1,13 +1,22 @@
 # Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)
 
-**Date:** 2026-04-17
-**Status:** support / open identification gate. This note records the
-structural identification of the unit-normalized H_unit-to-top matrix element
-with the Standard Model top Yukawa readout within A_min; it is not a
-first-principles derivation of the Standard Model top Yukawa value.
-**Claim type:** open_gate author hint; independent audit lane sets the actual
-`claim_type`, `audit_status`, and pipeline-derived `effective_status`.
+**Date:** 2026-04-17 (audit-prep refresh: 2026-05-06)
+**Status:** bounded structural identification on the canonical evaluation
+surface. This note records the structural identification of the unit-normalized
+H_unit-to-top matrix element with the framework's top-Yukawa readout on the
+canonical Wilson-staggered surface within `A_min = {Cl(3), Z^3}`. It is **not**
+a first-principles derivation of the Standard Model top Yukawa value.
+**Claim type:** bounded_theorem author hint; independent audit lane sets the
+actual `claim_type`, `audit_status`, and pipeline-derived `effective_status`.
+**Admitted context inputs (open-gate dependencies under
+`MINIMAL_AXIOMS_2026-05-03.md`):**
+- `staggered_dirac_realization_derivation_target` (parent: pending packaging,
+  see `MINIMAL_AXIOMS_2026-05-03.md` §"recategorized from axiom to open gate")
+- `g_bare_derivation_target` (parent: `G_BARE_DERIVATION_NOTE.md`)
+The note conditions on closure of these two derivation targets; they are
+explicitly listed as `admitted_context_inputs`, not derived here.
 **Primary runner:** `scripts/frontier_yt_ward_identity_derivation.py`
+(45 PASS / 0 FAIL on current source).
 **Support (NOT part of the authority chain):**
 `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
 documents the perturbative 1-loop vertex correction, which is OPEN
@@ -18,22 +27,45 @@ for quantitative lane reuse (not part of this support-tier identification).
 ## Audit boundary
 
 This note identifies the unit-normalized `H_unit` matrix element on the
-Q_L scalar-singlet channel within A_min, including the `1/sqrt(6)`
-Clebsch-Gordan overlap and the canonical-surface ratio calculation.
+Q_L scalar-singlet channel within `A_min = {Cl(3), Z^3}`, including the
+`1/sqrt(6)` Clebsch-Gordan overlap and the canonical-surface ratio
+calculation.
 
-The identified Standard Model construct is the top Yukawa readout used
-on that same canonical surface, not an independently derived SM input.
+**The identification map: framework readout, not SM Yukawa derivation.**
+The framework's top-Yukawa readout is *defined* by the unit-normalized
+H_unit matrix element on the canonical evaluation surface. The note proves
+that this defined readout equals `g_bare / sqrt(6)` on the canonical
+surface, and that the ratio `y_t(M_Pl) / g_s(M_Pl) = 1/sqrt(6)` is exact
+and tadpole-invariant. The note does **not** prove that the framework's
+defined readout equals the Standard Model top-Yukawa observable; that
+identification is a separate question handled downstream (RG running,
+matching, threshold corrections).
 
 This note does **not** claim to derive the numerical Standard Model top
 Yukawa value from first principles, to derive the existence of the SM
 Yukawa construct independent of this identification, or to supply a
 precision prediction after RG running and matching.
 
+**Conditional on the named open gates (g_bare, staggered-Dirac), the
+exact algebraic claims `(T1)` and `(T2)` below are runner-verified at
+machine precision.**
+
 Prior audit history: the audit lane previously recorded
 `audit_status=audited_renaming` for `yt_ward_identity_derivation_theorem`,
-cross-confirmed as class E by `codex-audit-loop-round-2` and
-`codex-fresh-context-20260430-01-yt-ward`. This edit keeps that boundary
-visible and re-queues the changed source for independent audit authority.
+cross-confirmed as class E by `codex-fresh-context-20260430-01-yt-ward`
+(2026-04-30) and `fresh-agent-popper-019ded72` (2026-05-03). The repeat
+finding identifies the load-bearing step as the *definition* of `y_t_bare`
+as the H_unit matrix element. This refresh:
+1. Tightens scope language so the audited claim is the framework readout
+   identity, not the SM Yukawa map;
+2. Replaces the stale `MINIMAL_AXIOMS_2026-04-11.md` citation (now
+   superseded) with `MINIMAL_AXIOMS_2026-05-03.md`;
+3. Lists `g_bare = 1` and the staggered-Dirac realization as
+   `admitted_context_inputs` (open gates) per the restored axiom set;
+4. Narrows the claim_type author hint from `open_gate` to
+   `bounded_theorem` to match the restored axiom set's per-lane bookkeeping
+   rule for quantitative `y_t` results
+   (`MINIMAL_AXIOMS_2026-05-03.md`:182-191).
 
 ---
 
@@ -100,11 +132,11 @@ on the same surface.
 | D13 | Wilson plaquette coupling `β = 2 N_c/g_bare²` at canonical surface | DERIVED from D5 + D7 + standard Wilson action | standard lattice QFT applied to D5, D7 |
 | D14 | CMT exact identity `<O(U)> = u_0^{n_link} <O_V(V)>_eff` (change-of-variables `U = u_0 V`) | DERIVED structural | [`YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md):213-221 |
 | D15 | `n_link = 1` per single vertex, `n_link = 2` per vacuum polarization | DERIVED structural | [`YT_VERTEX_POWER_DERIVATION.md`](YT_VERTEX_POWER_DERIVATION.md):29-38 |
-| C1 | Canonical plaquette / `u_0 = ⟨P⟩^{1/4}` evaluation surface | CANONICAL NORM CHOICE | [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md):18-20 |
-| C2 | `g_bare = 1` on canonical surface | CANONICAL NORM CHOICE | [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md):18-20 |
+| C1 | Canonical plaquette / `u_0 = ⟨P⟩^{1/4}` evaluation surface | ADMITTED context input (canonical-surface choice; closure target = staggered-Dirac realization derivation, see `MINIMAL_AXIOMS_2026-05-03.md`:56-93) | [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md):182-191 |
+| C2 | `g_bare = 1` on canonical surface | ADMITTED context input (open-gate derivation target; canonical parent: `G_BARE_DERIVATION_NOTE.md`) | [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md):95-136 |
 | S1 | SU(3) fundamental Casimir `C_F = (N_c²-1)/(2N_c) = 4/3` | STANDARD Lie-algebra fact | applied to D7 |
 | S2 | Lorentz-group Fierz: `(γ^μ)(γ_μ) = c_S(1)(1) + c_P(iγ_5)(iγ_5) + c_V(γ^μ)(γ_μ) + c_A(γ^μγ_5)(γ_μγ_5) + 0·σσ`, with `|c_S| = 1` | STANDARD Clifford-algebra identity | Itzykson-Zuber §2-5; verified by Block 8 of runner |
-| D16 | Tree-level Feynman-rule completeness of the bare action on the scalar-singlet channel: at O(α_LM), the bare Cl(3) × Z³ action (Wilson plaquette + staggered Dirac, C1-C2) yields exactly ONE tree diagram contributing to `Γ⁽⁴⁾(q²)` on the color-singlet × iso-singlet × Dirac-scalar channel — the single-gluon-exchange diagram, projected via D12 + S2 with coefficient (3.5) | DERIVED from tree-level Feynman rules of the cited action + the absence of any fundamental scalar field or bare contact 4-fermion vertex in the bare action (D9 composite-Higgs) | framework-native; follows from [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md):18-20 + D9 |
+| D16 | Tree-level Feynman-rule completeness of the bare action on the scalar-singlet channel: at O(α_LM), the bare Cl(3) × Z³ action (Wilson plaquette + staggered Dirac, C1-C2) yields exactly ONE tree diagram contributing to `Γ⁽⁴⁾(q²)` on the color-singlet × iso-singlet × Dirac-scalar channel — the single-gluon-exchange diagram, projected via D12 + S2 with coefficient (3.5) | DERIVED from tree-level Feynman rules of the cited action + the absence of any fundamental scalar field or bare contact 4-fermion vertex in the bare action (D9 composite-Higgs) | framework-native; follows from [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md):32-43 + D9 |
 | D17 | Scalar-singlet composite uniqueness on the Q_L block: the unique unit-normalized (Z² = 6) color-singlet × iso-singlet × Dirac-scalar composite operator on Q_L = (2,3) is `H_unit = (1/√(N_c · N_iso)) Σ ψ̄ψ`. Other (1,8), (3,1), (8,3) irreps give `Z² = 8, 9/2, 24` respectively (Block 5 verified) — each distinct from `Z² = 6`, hence none are the framework's scalar singlet on this block | DERIVED and numerically verified (Block 5) | [`YUKAWA_COLOR_PROJECTION_THEOREM.md`](YUKAWA_COLOR_PROJECTION_THEOREM.md):33-40 (D9); Block 5 of runner |
 
 The only AXIOMS are AX1 (Cl(3)) and AX2 (Z³). The remaining inputs are
@@ -222,7 +254,7 @@ claimed.**
 **Representation A — direct OGE computation in the bare action.**
 
 The cited bare action contains only the Wilson plaquette and the
-staggered Dirac operator (D16, [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md):18-20) — no
+staggered Dirac operator (D16, [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md):32-43; conditional on staggered-Dirac realization gate, see :56-93) — no
 fundamental scalar field, no contact 4-fermion operator. At tree
 order in α_LM, the only Feynman diagram contributing to `Γ⁽⁴⁾(q²)` is
 single-gluon exchange:
@@ -282,6 +314,21 @@ block:
 ```
     y_t_bare := ⟨0 | H_unit(0) | t̄_{top,up} t_{top,up}⟩            (3.7)
 ```
+
+> **Identification-map boundary (audit-prep clarification, 2026-05-06).**
+> Equation (3.7) is the **framework's definition** of `y_t_bare`. The
+> audited claim of this note is that this defined readout satisfies the
+> exact algebraic identities `(T1)` and `(T2)`. Whether this defined
+> readout coincides with the Standard Model top-Yukawa observable as
+> measured at low energy is a **separate, downstream question** that
+> requires (a) an RG running map from `M_Pl` to the matching scale, and
+> (b) a matching prescription connecting the framework's composite-Higgs
+> readout to the SM bare-Yukawa vertex. Neither (a) nor (b) is in scope
+> for this note; both are explicitly named as out-of-scope in the audit
+> boundary above. The prior `audited_renaming` verdicts correctly
+> identified that (3.7) is a definition, not a derivation, of the SM
+> map; this refresh clarifies that the **audited scope is only the
+> framework readout identity**, not the SM map.
 
 Computing this matrix element directly from (3.6):
 
@@ -357,7 +404,7 @@ framework but is not the source of the value.
 **Inputs used (cited framework inputs plus exact group-theoretic identities):**
 
 1. The bare Cl(3) × Z³ lattice action
-   ([`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md):18-20) — contains exactly Wilson plaquette and
+   ([`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md):32-43; conditional on staggered-Dirac and `g_bare = 1` derivation gates) — contains exactly Wilson plaquette and
    staggered Dirac, no fundamental scalar, no contact 4-fermion.
 2. D9: composite-Higgs structural axiom, no independent fundamental
    Yukawa parameter ([`YUKAWA_COLOR_PROJECTION_THEOREM.md`](YUKAWA_COLOR_PROJECTION_THEOREM.md):33-40).
@@ -417,7 +464,11 @@ This is the support-tier structural identification recorded by the note.
     y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)      (T2, exact on canonical surface)
 ```
 
-These are exact algebraic identities on the stated matching surface.
+These are exact algebraic identities on the stated canonical evaluation
+surface. `y_t_bare` here is the framework's defined readout (Eq. 3.7),
+not the SM observable; see the identification-map boundary clarification
+following Eq. (3.7).
+
 No precision bound, no NLO claim, no systematic is attached to this
 identification. Perturbative and higher-order corrections are out of scope
 and are discussed in the support note
@@ -426,10 +477,13 @@ Downstream quantitative reuse carries whatever systematic the
 downstream package carries independently; the note does not
 narrow that.
 
-This is a framework-native structural identification within A_min using
-the Cl(3) × Z³ chain (D1-D15) and canonical-surface normalization
-choices (C1-C2). No new axioms. No framework conventions beyond
-canonical normalization. No package-status-doc imports.
+This is a framework-native structural identification within
+`A_min = {Cl(3), Z^3}` plus the named open-gate `admitted_context_inputs`
+(staggered-Dirac realization, `g_bare = 1`), using the chain (D1-D15)
+and canonical-surface normalization choices (C1-C2 — both admitted as
+open-gate context inputs per `MINIMAL_AXIOMS_2026-05-03.md`). No new
+axioms. No framework conventions beyond canonical normalization. No
+package-status-doc imports.
 
 ---
 
