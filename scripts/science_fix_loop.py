@@ -87,9 +87,68 @@ STATE_FILE = REPO_ROOT / "logs" / "science-fix-state.json"
 WORKTREE_BASE = Path("/tmp") / "science-fix-worktrees"
 LOG_DIR = REPO_ROOT / "logs" / "science-fix-runs"
 
-DEFAULT_CODEX_TIMEOUT = 900   # 15 min
+# Three timeout thresholds for one codex attempt:
+#
+#   stale-kill (default 4 min)       — no progress signal at all (no
+#                                      file edits AND no stream bytes
+#                                      since last poll). Catches truly
+#                                      stuck codex quickly.
+#   edit-deadline (default 15 min)   — no file edits AT ALL by this
+#                                      mark, even if codex is emitting
+#                                      reasoning text. Codex is
+#                                      "thinking-only" — likely
+#                                      analyzing a problem too hard
+#                                      for this loop. Kill and let a
+#                                      human take it.
+#   absolute max (default 30 min)    — hard backstop. Never extend
+#                                      past this regardless.
+#
+# A legit physics problem solvable in ~15 min of code-writing fits
+# inside all three. Hard physics that needs >15 min of pre-writing
+# analysis is gated by edit-deadline. Truly runaway is gated by
+# absolute max. Combined with the prompt's self-screen preamble (codex
+# is asked to decline upfront if it judges the problem too hard for
+# 15 min), most hard problems exit in <1 min via SCIENCE_FIX_DECLINED.
+DEFAULT_CODEX_TIMEOUT = 1800     # 30 min absolute max
+DEFAULT_EDIT_DEADLINE = 900      # 15 min: must have started editing
+DEFAULT_STALE_AFTER = 240        # 4 min stale-kill
 DEFAULT_MODEL = "gpt-5.5"
 DEFAULT_REASONING = "xhigh"
+
+# Self-screen preamble: codex evaluates difficulty first and may
+# decline cheaply. Detected via a marker string in stdout so the loop
+# can record the decline as outcome=declined_too_hard without burning
+# subscription minutes.
+DECLINE_MARKER = "SCIENCE_FIX_DECLINED"
+SCREENING_PREAMBLE = f"""You are about to attempt a missing-derivation closure as part of an
+autonomous science-fix loop. Hard physics problems that need >15 min
+of focused human-level analysis BEFORE writing any file edit should be
+declined upfront — a human will take them.
+
+STEP 1. Read the prompt below and judge: can the closure plausibly be
+done in roughly 15 minutes of code-writing time by an AI? Quick
+indicators that the answer is NO:
+
+  - the missing step requires inventing a new theorem or category
+    of argument, not just spelling out an existing chain
+  - the runner needs substantial new computation infrastructure
+  - the load-bearing step is a known open problem in physics
+  - the auditor's verdict_rationale explicitly notes that no-go
+    obstructions block the natural path
+
+If your honest answer is NO, exit immediately. Print exactly this
+single line and STOP without making any file edits:
+
+    {DECLINE_MARKER}: <one-sentence reason>
+
+If your honest answer is YES, proceed to STEP 2.
+
+STEP 2. Begin the prompt below. Use the physics-loop skill. Make
+real edits. Do not over-prescribe approach — explore the framework
+and let the skill drive.
+
+============================== PROMPT ==============================
+"""
 
 CATEGORIES = ("renaming", "failed", "numerical_match", "open_gate")
 CATEGORY_HEADER_RE = re.compile(r"^## audited_(\w+)|^## (open_gate)\b", re.MULTILINE)
@@ -298,43 +357,52 @@ def _newest_mtime(worktree: Path) -> float:
 def run_codex(prompt_body: str, worktree: Path, timeout_sec: int,
               model: str, reasoning: str,
               run_log: Path,
-              stale_after_sec: int = 240,
+              stale_after_sec: int = DEFAULT_STALE_AFTER,
+              edit_deadline_sec: int = DEFAULT_EDIT_DEADLINE,
               poll_interval_sec: int = 30,
               progress_callback=None) -> tuple[bool, str, str, float, str]:
-    """Run codex exec against the worktree with a progress-check guard.
+    """Run codex exec against the worktree with three progress guards.
 
     Returns (ok, stdout, stderr, elapsed, stop_reason).
 
     Behavior:
-      - Hard timeout at `timeout_sec` (default 900s = 15 min) — backstop.
-      - Stale-kill at `stale_after_sec` (default 240s = 4 min) — if no
-        file in the worktree has been touched within this window,
-        codex is considered stuck on a hard physics problem and is
-        terminated. Captured cleanly so the partial diff (if any) is
-        preserved.
-      - Poll every `poll_interval_sec` seconds (default 30s).
-      - `progress_callback(elapsed, stale_for)` is called on each poll
-        if provided, for live-status output.
+      - Stale-kill at `stale_after_sec` (default 240s = 4 min): no
+        progress signal at all (no file-mtime advance AND no codex
+        stream-byte advance) since last poll → kill.
+      - Edit-deadline at `edit_deadline_sec` (default 900s = 15 min):
+        codex hasn't made ANY file edit yet by this point → kill.
+        Codex is "thinking-only" — likely a hard problem.
+      - Hard timeout at `timeout_sec` (default 1800s = 30 min):
+        absolute backstop, never extended.
+      - Self-screen preamble (added at call-time) lets codex decline
+        upfront via a SCIENCE_FIX_DECLINED marker; the loop detects
+        that string in stdout and records outcome=declined_too_hard.
 
     `stop_reason` values:
-      - "ok"          codex finished naturally
-      - "stalled"     killed because no file was touched for stale_after_sec
-      - "timeout"     hit the hard backstop
-      - "error"       exception raised
+      - "ok"             codex finished naturally
+      - "stalled"        no progress signal for stale_after_sec
+      - "thinking_only"  no file edits by edit_deadline_sec
+      - "timeout"        hit the absolute hard backstop
+      - "error"          exception raised
     """
+    wrapped_prompt = SCREENING_PREAMBLE + prompt_body
     cmd = [
         "codex", "exec",
         "-C", str(worktree),
         "-s", "workspace-write",
         "-m", model,
         "-c", f'model_reasoning_effort="{reasoning}"',
-        prompt_body,
+        wrapped_prompt,
     ]
     t0 = time.time()
     baseline_mtime = _newest_mtime(worktree)
-    last_progress_time = t0  # wall time of last detected mtime change
+    initial_mtime = baseline_mtime
+    last_progress_time = t0
+    last_progress_kind = "init"
+    last_stream_bytes = 0
     stop_reason = "ok"
     stale_enabled = stale_after_sec > 0 and stale_after_sec < timeout_sec
+    edit_deadline_enabled = edit_deadline_sec > 0 and edit_deadline_sec < timeout_sec
 
     def _terminate_tree(proc: subprocess.Popen, sig: int) -> None:
         try:
@@ -369,23 +437,48 @@ def run_codex(prompt_body: str, worktree: Path, timeout_sec: int,
 
                 now = time.time()
                 elapsed = now - t0
+
+                # Progress signal #1: any file in the worktree touched.
                 cur_mtime = _newest_mtime(worktree)
                 if cur_mtime > baseline_mtime:
                     last_progress_time = now
+                    last_progress_kind = "mtime"
                     baseline_mtime = cur_mtime
+
+                # Progress signal #2: codex stdout/stderr stream grew
+                # (codex is THINKING — emitting reasoning text or
+                # tool-call traces). Counts as progress so we don't
+                # kill an actively-thinking codex.
+                try:
+                    cur_stream_bytes = stdout_fh.tell() + stderr_fh.tell()
+                except Exception:
+                    cur_stream_bytes = last_stream_bytes
+                if cur_stream_bytes > last_stream_bytes:
+                    last_progress_time = now
+                    last_progress_kind = "stream"
+                    last_stream_bytes = cur_stream_bytes
+
                 stale_for = now - last_progress_time
+                files_touched = baseline_mtime > initial_mtime
 
                 if progress_callback:
-                    progress_callback(elapsed, stale_for)
+                    progress_callback(elapsed, stale_for, last_progress_kind,
+                                       cur_stream_bytes, files_touched)
 
+                # Three kill conditions, checked in order of severity:
                 if stale_enabled and stale_for >= stale_after_sec:
                     stop_reason = "stalled"
+                    break
+                if (edit_deadline_enabled
+                        and elapsed >= edit_deadline_sec
+                        and not files_touched):
+                    stop_reason = "thinking_only"
                     break
                 if elapsed >= timeout_sec:
                     stop_reason = "timeout"
                     break
 
-            if stop_reason in ("stalled", "timeout"):
+            if stop_reason in ("stalled", "timeout", "thinking_only"):
                 _terminate_tree(proc, signal.SIGTERM)
                 try:
                     proc.wait(timeout=10)
@@ -507,15 +600,25 @@ def main() -> int:
     p.add_argument("--n", type=int, default=5,
                    help="How many prompts to attempt this run (default 5)")
     p.add_argument("--codex-timeout-sec", type=int, default=DEFAULT_CODEX_TIMEOUT,
-                   help=f"Hard backstop timeout for codex exec (default "
-                        f"{DEFAULT_CODEX_TIMEOUT}s = 15 min)")
-    p.add_argument("--stale-after-sec", type=int, default=240,
-                   help="Kill codex early if no file in the worktree has "
-                        "been touched within this window (default 240s = "
-                        "4 min). This catches HARD physics problems where "
-                        "codex stops making edits and is just thinking; it "
-                        "lets us bail out faster than the hard backstop. "
-                        "Set to a value >= --codex-timeout-sec to disable.")
+                   help=f"Absolute max budget per attempt — never extended. "
+                        f"Default {DEFAULT_CODEX_TIMEOUT}s = 30 min. "
+                        f"This is just a runaway safety net; the typical "
+                        f"kill condition is stale-kill or edit-deadline.")
+    p.add_argument("--edit-deadline-sec", type=int, default=DEFAULT_EDIT_DEADLINE,
+                   help=f"Kill codex if no file edit has been made by "
+                        f"this many elapsed seconds, even if codex is "
+                        f"emitting reasoning text. Default "
+                        f"{DEFAULT_EDIT_DEADLINE}s = 15 min. Codex is "
+                        f"considered 'thinking-only' past this point — "
+                        f"likely a HARD problem. Set to a value "
+                        f">= --codex-timeout-sec to disable.")
+    p.add_argument("--stale-after-sec", type=int, default=DEFAULT_STALE_AFTER,
+                   help=f"Kill codex if NO progress signal at all "
+                        f"(no file edit AND no stream byte) within this "
+                        f"window. Default {DEFAULT_STALE_AFTER}s = 4 min. "
+                        f"This is the fastest kill — catches truly stuck "
+                        f"codex. Set to a value >= --codex-timeout-sec to "
+                        f"disable.")
     p.add_argument("--poll-interval-sec", type=int, default=30,
                    help="How often to check codex's progress (default 30s).")
     p.add_argument("--model", default=DEFAULT_MODEL,
@@ -635,12 +738,20 @@ def main() -> int:
             continue
 
         try:
-            def _progress(elapsed_, stale_):
-                # Live status to stdout so the operator can see progress
-                # without having to tail the codex stderr.
+            def _progress(elapsed_, stale_, last_kind, stream_bytes, files_touched):
+                # Live status to stdout. last_kind is "init" / "mtime" /
+                # "stream" — telling them whether codex is editing files
+                # or just thinking. files_touched flips True when codex
+                # has made any file edit at all in this attempt; it
+                # gates the edit-deadline.
+                touched = "Y" if files_touched else "N"
                 print(f"    [progress] elapsed={elapsed_:5.0f}s  "
-                      f"stalled_for={stale_:5.0f}s "
-                      f"(stale_kill@{args.stale_after_sec}s, hard@{args.codex_timeout_sec}s)",
+                      f"stalled_for={stale_:5.0f}s  "
+                      f"last={last_kind}  bytes={stream_bytes}  "
+                      f"edited={touched}  "
+                      f"(stale@{args.stale_after_sec}s, "
+                      f"edit_deadline@{args.edit_deadline_sec}s, "
+                      f"max@{args.codex_timeout_sec}s)",
                       flush=True)
 
             ok, stdout, stderr, elapsed, stop_reason = run_codex(
@@ -648,9 +759,21 @@ def main() -> int:
                 args.codex_timeout_sec, args.model, args.reasoning,
                 run_log,
                 stale_after_sec=args.stale_after_sec,
+                edit_deadline_sec=args.edit_deadline_sec,
                 poll_interval_sec=args.poll_interval_sec,
                 progress_callback=_progress,
             )
+
+            # Detect codex's self-screen decline — if the prompt's
+            # screening preamble caused codex to print
+            # SCIENCE_FIX_DECLINED at the top, mark this row as
+            # declined cheaply (it'll be retried only via
+            # --retry-failed since it's not punted on a real attempt).
+            decline_match = None
+            if stdout and DECLINE_MARKER in stdout:
+                # Extract the one-line reason after the marker
+                m = re.search(rf"{re.escape(DECLINE_MARKER)}:\s*([^\n]+)", stdout)
+                decline_match = m.group(1).strip() if m else "(no reason given)"
             outcome["elapsed_sec"] = round(elapsed, 1)
             outcome["codex_returncode_ok"] = ok
             outcome["codex_stop_reason"] = stop_reason
@@ -658,10 +781,16 @@ def main() -> int:
             outcome["codex_stderr_tail"] = (stderr or "")[-500:]
 
             # Decide whether this attempt produced anything worth promoting
-            # to a PR. Order: structural codex failures first (no edits to
-            # promote), then check the worktree.
+            # to a PR. Order: codex's self-screen decline first (cheap
+            # exit), then structural codex failures, then check the
+            # worktree state.
             promote_edits = False
-            if stop_reason == "error":
+            if decline_match is not None:
+                print(f"  DECLINED self-screen ({elapsed:.0f}s): {decline_match}")
+                outcome["outcome"] = "declined_too_hard"
+                outcome["decline_reason"] = decline_match
+                punted += 1
+            elif stop_reason == "error":
                 print(f"  RUN ERROR: {(stderr or '').strip()[:200]}")
                 outcome["outcome"] = "run_error"
                 errored += 1
@@ -670,17 +799,23 @@ def main() -> int:
                 outcome["outcome"] = "codex_failed"
                 errored += 1
             else:
-                # stop_reason in {ok, timeout, stalled} — codex either
-                # finished or was killed early. Any of these can still
-                # have produced useful partial edits.
+                # stop_reason in {ok, timeout, stalled, thinking_only}
+                # — codex either finished or was killed early. Any of
+                # these can still have produced useful partial edits.
                 worktree_has_changes = has_changes(worktree)
                 if stop_reason == "stalled" and not worktree_has_changes:
                     print(f"  STALLED with no edits after {elapsed:.0f}s — "
                           f"likely a HARD physics problem")
                     outcome["outcome"] = "stalled_no_edits"
                     punted += 1
+                elif stop_reason == "thinking_only":
+                    # By definition: no file edit by edit_deadline_sec.
+                    print(f"  THINKING-ONLY past {elapsed:.0f}s — codex "
+                          f"never started editing; treating as HARD")
+                    outcome["outcome"] = "thinking_only"
+                    punted += 1
                 elif stop_reason == "timeout" and not worktree_has_changes:
-                    print(f"  HARD TIMEOUT with no edits after {elapsed:.0f}s")
+                    print(f"  ABSOLUTE MAX with no edits after {elapsed:.0f}s")
                     outcome["outcome"] = "timeout_no_edits"
                     punted += 1
                 elif not worktree_has_changes:
@@ -692,8 +827,10 @@ def main() -> int:
 
             if promote_edits:
                 summary = diff_summary(worktree)
-                tag = {"ok": "edits made", "stalled": "STALLED but partial edits",
-                       "timeout": "HARD TIMEOUT but partial edits"}[stop_reason]
+                tag = {"ok": "edits made",
+                       "stalled": "STALLED but partial edits",
+                       "thinking_only": "THINKING-ONLY but partial edits",
+                       "timeout": "ABSOLUTE MAX but partial edits"}[stop_reason]
                 print(f"  {tag} in {elapsed:.0f}s; diff:\n    {summary}")
                 ok2, msg = commit_and_push(cid, worktree, branch, summary)
                 if not ok2:
