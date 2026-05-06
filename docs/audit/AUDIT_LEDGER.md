@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 777 |
+| unaudited | 778 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 21 |
-| ~~audited_renaming~~ | 32 |
+| ~~audited_renaming~~ | 31 |
 | ~~audited_conditional~~ | 471 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
@@ -43,8 +43,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
-| `audited_renaming` | 32 |
-| `unaudited` | 826 |
+| `audited_renaming` | 31 |
+| `unaudited` | 827 |
 
 | claim_type | count |
 |---|---:|
@@ -67,8 +67,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1381
-- runners with (C) first-principles compute hits: 683
+- runners classified: 1382
+- runners with (C) first-principles compute hits: 684
 - runners with (D) external comparator hits: 344
 - decoration candidates (no C, no D): 117
 
@@ -1076,7 +1076,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `single_axiom_hilbert_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `single_axiom_information_note` | meta | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
-| `universal_gr_casimir_block_localization_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_gr_supermetric_normal_form_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `universal_gr_tensor_action_blocker_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `yt_color_projection_correction_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -13561,19 +13560,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — For the bounded claim actually made, the chain closes: the note claims only an invariant Pi_A1 section plus an associated SO(3) orbit bundle/natural orbit connection, and explicitly denies a distinguished Pi_curv.
 - **rationale:** The note is carefully bounded: it does not claim full curvature localization, a distinguished connection, or canonical Pi_curv. The load-bearing projector/orbit statement is an algebraic closure over the displayed 3+1 projector and residual spatial-rotation action, with no external comparator or tuned numerical match. Residual risk is runner hygiene: the unregistered script entry point fails as written because it tries to read a missing ROUTE2_POLARIZATION_COMMON_PRIMITIVE_NOTE.md, although the current-checkout algebra checks pass when those unused stale reads are bypassed.
 - **auditor confidence:** medium
-
-### `universal_gr_casimir_block_localization_note`
-
-- **Note:** [`UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md`](../../docs/UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited whether the note proves an exact canonical lapse/shift/trace/shear block localization for the universal GR route from the restricted packet alone.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-universal_gr_casimir_blo-239`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** On the 8D complement of Pi_A1, the universal SO(3) generators define C = G_x^2 + G_y^2 + G_z^2 with spectrum -2 of multiplicity 3 and -6 of multiplicity 5, giving the j=1 shift and j=2 shear blocks.  _(class `E`)_
-- **chain closes:** False — The chain does not close because no cited authority, runner, generator matrices, representation construction, or independent algebraic derivation is provided for the asserted Casimir spectrum and its identification with shift/shear blocks.
-- **rationale:** The note asserts the projector, complement representation, Casimir spectrum, and physical block labels, but the restricted packet provides no upstream inputs or runner source/output to verify those assertions. The load-bearing step functions as an introduced classification/definition within the note rather than a derivation from provided axioms or retained inputs. Because no actual computation or algebraic closure is present, the claimed positive theorem is not audited clean.
-- **auditor confidence:** high
 
 ### `universal_gr_complement_canonical_note`
 

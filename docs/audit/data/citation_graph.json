@@ -13917,6 +13917,26 @@
       "to": "universal_gr_isotropic_schur_localization_note"
     },
     {
+      "from": "universal_gr_casimir_block_localization_note",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "universal_gr_casimir_block_localization_note",
+      "to": "s3_anomaly_spacetime_lift_note"
+    },
+    {
+      "from": "universal_gr_casimir_block_localization_note",
+      "to": "universal_gr_tensor_variational_candidate_note"
+    },
+    {
+      "from": "universal_gr_casimir_block_localization_note",
+      "to": "universal_gr_tensor_quotient_uniqueness_note"
+    },
+    {
+      "from": "universal_gr_casimir_block_localization_note",
+      "to": "universal_gr_a1_invariant_section_note"
+    },
+    {
       "from": "universal_gr_curvature_localization_blocker_note",
       "to": "universal_gr_isotropic_glue_operator_note"
     },
@@ -51741,10 +51761,16 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "bfdc6443d9f4919b73786224e769d26996ba555990b9970e6919c91f0653d0f0",
+      "deps": [
+        "observable_principle_from_axiom_note",
+        "s3_anomaly_spacetime_lift_note",
+        "universal_gr_tensor_variational_candidate_note",
+        "universal_gr_tensor_quotient_uniqueness_note",
+        "universal_gr_a1_invariant_section_note"
+      ],
+      "note_hash": "bf212f29213d45f7bc012fbcf9f63e0d6318c4b0ab6235ae30ed9acc85ea3712",
       "path": "docs/UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_casimir_block_localization.py",
       "title": "Universal GR Casimir Block Localization on `PL S^3 x R`"
     },
     "universal_gr_complement_canonical_note": {
@@ -55743,7 +55769,6 @@
     "universal_gr_block_constraint_interpretation_note",
     "universal_gr_block_normalization_note",
     "universal_gr_canonical_projector_connection_note",
-    "universal_gr_casimir_block_localization_note",
     "universal_gr_complement_canonical_note",
     "universal_gr_constraint_action_stationarity_note",
     "universal_gr_discrete_global_closure_note",
@@ -55848,10 +55873,10 @@
       "open_gate": 118,
       "positive_theorem": 635
     },
-    "edge_count": 6593,
+    "edge_count": 6598,
     "leaf_count": 550,
     "node_count": 1905,
-    "root_count": 867,
-    "runners_with_path": 1478
+    "root_count": 866,
+    "runners_with_path": 1479
   }
 }

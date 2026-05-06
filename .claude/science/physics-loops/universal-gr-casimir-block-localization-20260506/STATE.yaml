@@ -1,0 +1,36 @@
+loop: universal-gr-casimir-block-localization-20260506
+current_goal: "Close the missing derivation for docs/UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md."
+target_status: exact-support
+actual_current_surface_status: exact-support
+conditional_surface_status: null
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+cycle_count: 1
+active_route: "Self-contained SO(3) representation/Casimir runner plus note proof text."
+hard_residual: "Independent re-audit has not yet been run on the repaired packet."
+files_touched:
+  - docs/UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md
+  - scripts/frontier_universal_gr_casimir_block_localization.py
+  - docs/audit/data/citation_graph.json
+  - docs/audit/data/audit_ledger.json
+  - docs/audit/data/runner_classification.json
+  - docs/audit/data/effective_status_summary.json
+  - docs/audit/AUDIT_LEDGER.md
+open_imports:
+  - "Upstream universal-route authority status is left to the audit graph; this block only repairs the local representation algebra."
+no_go_routes: []
+review_findings: []
+runner_status:
+  command: "python3 scripts/frontier_universal_gr_casimir_block_localization.py"
+  result: "PASS=8 FAIL=0 TOTAL=8"
+audit_sync_status:
+  build_citation_graph: passed
+  seed_audit_ledger: "passed; one re-audit required due note hash change"
+  classify_runner_passes: passed
+  compute_effective_status: passed
+  audit_lint: "passed with pre-existing warnings and no errors"
+next_exact_action: "Run an independent audit on universal_gr_casimir_block_localization_note."
+stop_condition: "Closure artifact and local audit sync completed."
