@@ -1,0 +1,823 @@
+{
+  "ratings": {
+    "born_scattering_comparison_note": {
+      "category": "numerical_match",
+      "claim_id": "born_scattering_comparison_note",
+      "descendants": 439,
+      "difficulty": "hard",
+      "elapsed_sec": 9.8,
+      "raw_tail": "1.28 on b in {3..6}, closer to the imported lattice slope -1.43 than the tested beam-averaged corrections.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing it requires first-principles lattice/dispersion and 3D beam/L-independence derivations, not a small writeup or runner fix.\ntokens used\n9,020\n",
+      "reason": "Closing it requires first-principles lattice/dispersion and 3D beam/L-independence derivations, not a small writeup or runner fix."
+    },
+    "carrier_orbit_invariance_stretch_attempt_note_2026-05-03": {
+      "category": "open_gate",
+      "claim_id": "carrier_orbit_invariance_stretch_attempt_note_2026-05-03",
+      "descendants": 0,
+      "difficulty": "hard",
+      "elapsed_sec": 9.6,
+      "raw_tail": "ny (V*)^- element, with registry closure named as the remaining meta-mathematical residual.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing the open gate requires proving registry closure/structural exhaustion, which the audit explicitly leaves as a meta-mathematical residual.\ntokens used\n1,411\n",
+      "reason": "Closing the open gate requires proving registry closure/structural exhaustion, which the audit explicitly leaves as a meta-mathematical residual."
+    },
+    "ckm_down_type_scale_convention_support_note_2026-04-22": {
+      "category": "numerical_match",
+      "claim_id": "ckm_down_type_scale_convention_support_note_2026-04-22",
+      "descendants": 286,
+      "difficulty": "hard",
+      "elapsed_sec": 6.4,
+      "raw_tail": " +0.20%, while the common-scale mismatch is explained by the imported transport factor.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The load-bearing step depends on hard-coded transport and non-theorem-grade 5/6/threshold choices, so closing it requires substantive new derivation.\ntokens used\n1,252\n",
+      "reason": "The load-bearing step depends on hard-coded transport and non-theorem-grade 5/6/threshold choices, so closing it requires substantive new derivation."
+    },
+    "ckm_schur_complement_theorem": {
+      "category": "failed",
+      "claim_id": "ckm_schur_complement_theorem",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 16.1,
+      "raw_tail": "(M_eff)_13 = -a*b/m_2 = -c_12*c_23*sqrt(m_1*m_3), hence c_13^eff = c_12*c_23 in NNI normalization.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The algebraic identity is simple, but closing the broader CKM theorem requires overcoming failed fitted heuristic checks with new physics.\ntokens used\n1,681\n",
+      "reason": "The algebraic identity is simple, but closing the broader CKM theorem requires overcoming failed fitted heuristic checks with new physics."
+    },
+    "dark_energy_eos_note": {
+      "category": "renaming",
+      "claim_id": "dark_energy_eos_note",
+      "descendants": 295,
+      "difficulty": "hard",
+      "elapsed_sec": 15.0,
+      "raw_tail": "rk energy is identified with the fixed S^3 graph-Laplacian spectral gap, Lambda = lambda_1(S^3) = 3/R^2, with R fixed thereafter.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing it requires a new physical derivation of the Lambda-to-S^3 spectral-gap identity, not just algebra.\ntokens used\n1,443\n",
+      "reason": "Closing it requires a new physical derivation of the Lambda-to-S^3 spectral-gap identity, not just algebra."
+    },
+    "dm_leptogenesis_exact_kernel_closure_note_2026-04-15": {
+      "category": "renaming",
+      "claim_id": "dm_leptogenesis_exact_kernel_closure_note_2026-04-15",
+      "descendants": 283,
+      "difficulty": "hard",
+      "elapsed_sec": 7.5,
+      "raw_tail": "and K00 = 2, yielding the exact CP tensor channels and the epsilon_1 / epsilon_DI = 0.9276209209 kernel result.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The missing step requires deriving hard-coded CP/source-package values from first principles, not just downstream arithmetic.\ntokens used\n8,932\n",
+      "reason": "The missing step requires deriving hard-coded CP/source-package values from first principles, not just downstream arithmetic."
+    },
+    "dm_leptogenesis_full_microscopic_reduction_note_2026-04-16": {
+      "category": "numerical_match",
+      "claim_id": "dm_leptogenesis_full_microscopic_reduction_note_2026-04-16",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 7.6,
+      "raw_tail": "actors exactly through the Schur value L_e = Schur_{E_e}(D_-), and L_e reproduces the canonical charged-lepton Hermitian block H_e.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The missing step requires deriving D and L_e = H_e from first principles rather than a hard-coded target.\ntokens used\n8,937\n",
+      "reason": "The missing step requires deriving D and L_e = H_e from first principles rather than a hard-coded target."
+    },
+    "dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16": {
+      "category": "numerical_match",
+      "claim_id": "dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16",
+      "descendants": 287,
+      "difficulty": "unknown",
+      "elapsed_sec": 95.1,
+      "raw_tail": "om the stated axiom. The note itself concedes that evaluating D_- or dW_e^H from the sole axiom remains open.\n\nAuditor-quoted load-bearing step:\nOnce dW_e^H is supplied, it reconstructs H_e, determines the N_e transport packet, and the exact selector gives eta/eta_obs = 0.989512704600.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\n",
+      "reason": "<one short sentence>"
+    },
+    "dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16": {
+      "category": "renaming",
+      "claim_id": "dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16",
+      "descendants": 282,
+      "difficulty": "hard",
+      "elapsed_sec": 8.9,
+      "raw_tail": "ng all positive off-seed sources on the same seed surface satisfying eta_{i_*}/eta_obs = 1, choose the one minimizing I_seed.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: It requires deriving an invented selector principle from first principles despite missing framework components.\ntokens used\n8,940\n",
+      "reason": "It requires deriving an invented selector principle from first principles despite missing framework components."
+    },
+    "dm_leptogenesis_pmns_observable_relative_action_law_note_2026-04-16": {
+      "category": "renaming",
+      "claim_id": "dm_leptogenesis_pmns_observable_relative_action_law_note_2026-04-16",
+      "descendants": 284,
+      "difficulty": "hard",
+      "elapsed_sec": 8.0,
+      "raw_tail": "seed surface satisfying eta_{i_*} / eta_obs = 1, choose the one minimizing S_rel(H_e || H_seed).\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The missing step is a new selector law not derived from the sole axiom, so closing it would require substantive new physics or theorem work.\ntokens used\n1,314\n",
+      "reason": "The missing step is a new selector law not derived from the sole axiom, so closing it would require substantive new physics or theorem work."
+    },
+    "dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16": {
+      "category": "renaming",
+      "claim_id": "dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 9.7,
+      "raw_tail": "ith kappa_axiom[H] declared to be the direct transport functional and kappa_fit(K) demoted to a comparator.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing this requires a first-principles transport computation rather than replacing hard-coded benchmark premises with notation.\ntokens used\n8,999\n",
+      "reason": "Closing this requires a first-principles transport computation rather than replacing hard-coded benchmark premises with notation."
+    },
+    "dm_leptogenesis_transport_integral_theorem_note_2026-04-16": {
+      "category": "numerical_match",
+      "claim_id": "dm_leptogenesis_transport_integral_theorem_note_2026-04-16",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 9.9,
+      "raw_tail": " transport solve gives kappa_axiom,ref = 0.004829545290766509 and the formal integral reproduces it.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing it requires deriving imported branch inputs like K_H and E_H from the axiom, not just writing up the checked transport identity.\ntokens used\n9,063\n",
+      "reason": "Closing it requires deriving imported branch inputs like K_H and E_H from the axiom, not just writing up the checked transport identity."
+    },
+    "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15": {
+      "category": "renaming",
+      "claim_id": "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15",
+      "descendants": 283,
+      "difficulty": "hard",
+      "elapsed_sec": 7.6,
+      "raw_tail": "nique additive CPT-even bosonic observable fixes the coefficient law K00 = 2 tau_+.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The missing step is the load-bearing coefficient law and hard-coded tau values, which require new retained authority or physics beyond algebraic cleanup.\ntokens used\n1,235\n",
+      "reason": "The missing step is the load-bearing coefficient law and hard-coded tau values, which require new retained authority or physics beyond algebraic cleanup."
+    },
+    "dm_neutrino_weak_vector_theorem_note_2026-04-15": {
+      "category": "failed",
+      "claim_id": "dm_neutrino_weak_vector_theorem_note_2026-04-15",
+      "descendants": 293,
+      "difficulty": "medium",
+      "elapsed_sec": 13.0,
+      "raw_tail": "\nThe chiral bridge family Y_i = P_R Gamma_i P_L obeys [B_a, Y_b] = i eps_{abc} Y_c under the derived weak bivectors.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: medium\nREASON: The gap is a missing specified algebra/check for an algebraic identity, not a stated no-go or new-physics obstruction.\ntokens used\n1,532\n",
+      "reason": "The gap is a missing specified algebra/check for an algebraic identity, not a stated no-go or new-physics obstruction."
+    },
+    "dm_pmns_chamber_spectral_completeness_theorem_note_2026-04-20": {
+      "category": "numerical_match",
+      "claim_id": "dm_pmns_chamber_spectral_completeness_theorem_note_2026-04-20",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 9.8,
+      "raw_tail": "he two electron-axis-3 branches, and the independent all-permutation chamber solve finds no other chamber chi^2 = 0 roots.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing this requires a certified global root-count/chamber-exhaustion proof, not a small writeup or runner tweak.\ntokens used\n3,978\n",
+      "reason": "Closing this requires a certified global root-count/chamber-exhaustion proof, not a small writeup or runner tweak."
+    },
+    "dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20": {
+      "category": "numerical_match",
+      "claim_id": "dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 19.1,
+      "raw_tail": " PMNS angle map equals the physical target triple, with rank dF_Ne = 3 at those points.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing this would require replacing hard-coded numerical target fitting with a cited, first-principles derivation and available framework machinery.\ntokens used\n1,632\n",
+      "reason": "Closing this would require replacing hard-coded numerical target fitting with a cited, first-principles derivation and available framework machinery."
+    },
+    "dm_selector_first_shoulder_exit_threshold_support_note_2026-04-21": {
+      "category": "open_gate",
+      "claim_id": "dm_selector_first_shoulder_exit_threshold_support_note_2026-04-21",
+      "descendants": 283,
+      "difficulty": "easy",
+      "elapsed_sec": 10.9,
+      "raw_tail": "unique, belongs to lift 0, lies inside the stabilization window, and V_tau at that breakpoint makes lift 0 the unique minimizer.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: easy\nREASON: The auditor frames it as a straightforward algebraic check over existing inputs with passing runner support.\ntokens used\n1,519\n",
+      "reason": "The auditor frames it as a straightforward algebraic check over existing inputs with passing runner support."
+    },
+    "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25": {
+      "category": "open_gate",
+      "claim_id": "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25",
+      "descendants": 281,
+      "difficulty": "easy",
+      "elapsed_sec": 7.9,
+      "raw_tail": "C, gives I_e^* D_-^(-1) I_e=L_e^(-1); under D_-=D_-^*>0, completing the square gives u^*L_eu=min_v [u;v]^*D_-[u;v].\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: easy\nREASON: The missing derivation is a standard Schur-complement identity and quadratic completion already backed by passing checks.\ntokens used\n1,279\n",
+      "reason": "The missing derivation is a standard Schur-complement identity and quadratic completion already backed by passing checks."
+    },
+    "equivalence_principle_note": {
+      "category": "failed",
+      "claim_id": "equivalence_principle_note",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 13.4,
+      "raw_tail": "h field strength and source strength, with exponents 1.008 and 0.998, while layer scaling is sub-quadratic at 1.14.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The bounded claim is carried by unverifiable numerical exponents with no runner, fit tables, source, or cited authority.\ntokens used\n13,391\n",
+      "reason": "The bounded claim is carried by unverifiable numerical exponents with no runner, fit tables, source, or cited authority."
+    },
+    "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02": {
+      "category": "open_gate",
+      "claim_id": "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02",
+      "descendants": 7,
+      "difficulty": "hard",
+      "elapsed_sec": 10.5,
+      "raw_tail": "analytically from A_min alone, so the observable-level bridge remains open rather than promoted as a positive plaquette derivation.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The audit says the bridge is blocked by a retained no-go and needs a new exact nonperturbative primitive.\ntokens used\n1,480\n",
+      "reason": "The audit says the bridge is blocked by a retained no-go and needs a new exact nonperturbative primitive."
+    },
+    "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19": {
+      "category": "failed",
+      "claim_id": "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19",
+      "descendants": 0,
+      "difficulty": "hard",
+      "elapsed_sec": 12.7,
+      "raw_tail": "ox has minimum gap 7.791551e-03 at the stated boundary corner, so no sampled point realizes the completed triple exactly.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing a continuous no-go from a finite dense grid requires a new rigorous global certificate, not just a writeup.\ntokens used\n1,574\n",
+      "reason": "Closing a continuous no-go from a finite dense grid requires a new rigorous global certificate, not just a writeup."
+    },
+    "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19": {
+      "category": "failed",
+      "claim_id": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 13.9,
+      "raw_tail": "the coefficient order and therefore uniquely minimizes every positive bulk-tail functional.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The audit says universal uniqueness and Loewner-minimality over all admissible extensions are unproved imported premises requiring a new theorem.\ntokens used\n9,246\n",
+      "reason": "The audit says universal uniqueness and Loewner-minimality over all admissible extensions are unproved imported premises requiring a new theorem."
+    },
+    "gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17": {
+      "category": "renaming",
+      "claim_id": "gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17",
+      "descendants": 12,
+      "difficulty": "hard",
+      "elapsed_sec": 9.0,
+      "raw_tail": "-space boundary function B_beta(W)(U) = integral_(Omega^rim(U)) dmu_H(Xi^rim) exp[(beta / 3) A^rim(U, Xi^rim; W)].\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing this would require a first-principles theorem-grade derivation with no cited authority, not a small notation fix.\ntokens used\n13,149\n",
+      "reason": "Closing this would require a first-principles theorem-grade derivation with no cited authority, not a small notation fix."
+    },
+    "gauge_vacuum_plaquette_residual_environment_identification_theorem_note": {
+      "category": "renaming",
+      "claim_id": "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
+      "descendants": 426,
+      "difficulty": "hard",
+      "elapsed_sec": 11.2,
+      "raw_tail": "led and identified exactly with the compressed unmarked spatial Wilson environment operator R_beta^env.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: It requires computing the actual Wilson-environment data or proving a new compression equivalence, not just writing up known algebra.\ntokens used\n4,080\n",
+      "reason": "It requires computing the actual Wilson-environment data or proving a new compression equivalence, not just writing up known algebra."
+    },
+    "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note": {
+      "category": "renaming",
+      "claim_id": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+      "descendants": 428,
+      "difficulty": "hard",
+      "elapsed_sec": 15.3,
+      "raw_tail": "sserted to have the same normalized coefficients rho_(p,q)(beta) as the boundary class function, so R_beta^env=C_(Z_beta^env).\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The audit requires independent beta=6 Wilson coefficient computation and spectrum verification, not a writeup.\ntokens used\n9,224\n",
+      "reason": "The audit requires independent beta=6 Wilson coefficient computation and spectrum verification, not a writeup."
+    },
+    "gauge_wilson_isotropy_boundary_note_2026-05-04": {
+      "category": "open_gate",
+      "claim_id": "gauge_wilson_isotropy_boundary_note_2026-05-04",
+      "descendants": 18,
+      "difficulty": "easy",
+      "elapsed_sec": 10.8,
+      "raw_tail": "s all six orientations, so these two routes do not derive a spatial/temporal gauge-coupling split.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: easy\nREASON: The rationale says the needed Clifford and eta-product checks already close from supplied algebraic support without a new physical bridge.\ntokens used\n1,398\n",
+      "reason": "The rationale says the needed Clifford and eta-product checks already close from supplied algebraic support without a new physical bridge."
+    },
+    "graviton_mass_derived_note": {
+      "category": "renaming",
+      "claim_id": "graviton_mass_derived_note",
+      "descendants": 295,
+      "difficulty": "medium",
+      "elapsed_sec": 17.7,
+      "raw_tail": "is identified with the lowest S^3 TT Lichnerowicz eigenvalue: m_g^2 c^2 / hbar^2 = lambda_2^TT = 6/R^2, with R = c/H_0.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: medium\nREASON: Closing it needs a modest framework/operator bridge for the eigenvalue-to-mass identification, not just arithmetic.\ntokens used\n4,213\n",
+      "reason": "Closing it needs a modest framework/operator bridge for the eigenvalue-to-mass identification, not just arithmetic."
+    },
+    "gravity_full_self_consistency_note": {
+      "category": "renaming",
+      "claim_id": "gravity_full_self_consistency_note",
+      "descendants": 285,
+      "difficulty": "hard",
+      "elapsed_sec": 7.4,
+      "raw_tail": "ion.\n\nAuditor-quoted load-bearing step:\nSelf-consistency requires L^{-1} = G_0, so L = G_0^{-1} = H = -Delta_lat.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The load-bearing L^{-1}=G_0 identity is stipulated, so closing it needs a new first-principles theorem or physics argument.\ntokens used\n3,816\n",
+      "reason": "The load-bearing L^{-1}=G_0 identity is stipulated, so closing it needs a new first-principles theorem or physics argument."
+    },
+    "hierarchy_dimensional_compression_note": {
+      "category": "numerical_match",
+      "claim_id": "hierarchy_dimensional_compression_note",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 12.2,
+      "raw_tail": "6468 is in the right few-percent range, while the inverse sixteenth root R^(-1/16) ~= 0.99105 is too small.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: It requires a first-principles determinant-to-VEV theorem and order-parameter/sign derivation beyond the audited numerical match.\ntokens used\n9,236\n",
+      "reason": "It requires a first-principles determinant-to-VEV theorem and order-parameter/sign derivation beyond the audited numerical match."
+    },
+    "higher_symmetry_gravity_probe_note": {
+      "category": "failed",
+      "claim_id": "higher_symmetry_gravity_probe_note",
+      "descendants": 11,
+      "difficulty": "medium",
+      "elapsed_sec": 14.3,
+      "raw_tail": "with high R^2 at N = 80 and degrading but still positive bump-fits at N = 100, 120.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: medium\nREASON: The gap is a mismatched runner record versus the stated parameters, likely requiring rerun or small runner/note reconciliation rather than new physics.\ntokens used\n1,555\n",
+      "reason": "The gap is a mismatched runner record versus the stated parameters, likely requiring rerun or small runner/note reconciliation rather than new physics."
+    },
+    "hypercharge_identification_note": {
+      "category": "renaming",
+      "claim_id": "hypercharge_identification_note",
+      "descendants": 324,
+      "difficulty": "hard",
+      "elapsed_sec": 9.8,
+      "raw_tail": "e is identified with the left-handed lepton doublet, so the traceless commutant U(1) matches SM hypercharge on that surface.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: It requires a new theorem deriving the SM carrier map and hypercharge normalization, not just algebraic cleanup.\ntokens used\n4,006\n",
+      "reason": "It requires a new theorem deriving the SM carrier map and hypercharge normalization, not just algebraic cleanup."
+    },
+    "koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24": {
+      "category": "failed",
+      "claim_id": "koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24",
+      "descendants": 281,
+      "difficulty": "medium",
+      "elapsed_sec": 15.7,
+      "raw_tail": "lson data leave a rank-two same-character zero-mode sector, so they select a spectral projector/eigenspace rather than a unique rank-one eigenline.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: medium\nREASON: It mainly requires narrowing a stale claim and rerunning verification, not new physics.\ntokens used\n1,602\n",
+      "reason": "It mainly requires narrowing a stale claim and rerunning verification, not new physics."
+    },
+    "koide_frobenius_isotype_split_uniqueness_note_2026-04-21": {
+      "category": "failed",
+      "claim_id": "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 14.9,
+      "raw_tail": "rp = Tr(M^2) = N, AM-GM uniquely maximizes log(E_+ E_perp) at E_+ = E_perp = N/2, hence kappa = 2 and Q = 2/3.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The audit flags an unclosed uniqueness theorem for the Frobenius split, with positive invariant combinations still unexcluded.\ntokens used\n1,666\n",
+      "reason": "The audit flags an unclosed uniqueness theorem for the Frobenius split, with positive invariant combinations still unexcluded."
+    },
+    "koide_hostile_review_guard_note_2026-04-24": {
+      "category": "failed",
+      "claim_id": "koide_hostile_review_guard_note_2026-04-24",
+      "descendants": 281,
+      "difficulty": "medium",
+      "elapsed_sec": 12.0,
+      "raw_tail": "o-go notes, objection-review packet, and no-go scripts, and verifies the eight listed hygiene checks while emitting negative Q and delta closure flags.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: medium\nREASON: The gap is a modest guard/runner verification change, not new physics or a theorem.\ntokens used\n1,424\n",
+      "reason": "The gap is a modest guard/runner verification change, not new physics or a theorem."
+    },
+    "koide_mru_weight_class_obstruction_theorem_note_2026-04-19": {
+      "category": "renaming",
+      "claim_id": "koide_mru_weight_class_obstruction_theorem_note_2026-04-19",
+      "descendants": 282,
+      "difficulty": "hard",
+      "elapsed_sec": 7.6,
+      "raw_tail": "f the real doublet and therefore retains only the doublet radius, giving the two-slot carrier (rho_+, rho_perp).\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The missing step requires a first-principles justification of a structural quotient choice rather than an algebraic writeup.\ntokens used\n8,898\n",
+      "reason": "The missing step requires a first-principles justification of a structural quotient choice rather than an algebraic writeup."
+    },
+    "lattice_distance_law_note": {
+      "category": "numerical_match",
+      "claim_id": "lattice_distance_law_note",
+      "descendants": 10,
+      "difficulty": "hard",
+      "elapsed_sec": 12.9,
+      "raw_tail": "ndent magnitude law on the far-field window b >= 7: |delta| ~= 23.5071 * b^(-1.052), R^2 = 0.9850.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing a theorem-level distance law from a selected numerical fit without authorities or artifacts requires new first-principles physics.\ntokens used\n1,461\n",
+      "reason": "Closing a theorem-level distance law from a selected numerical fit without authorities or artifacts requires new first-principles physics."
+    },
+    "lattice_nn_continuum_note": {
+      "category": "open_gate",
+      "claim_id": "lattice_nn_continuum_note",
+      "descendants": 4,
+      "difficulty": "easy",
+      "elapsed_sec": 9.5,
+      "raw_tail": "ositive refinement trend through h = 0.25, while h = 0.125 remains unresolved and no full continuum theorem is claimed.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: easy\nREASON: The auditor says the bounded finite-spacing claim is already supported by runner output and makes no continuum claim.\ntokens used\n1,362\n",
+      "reason": "The auditor says the bounded finite-spacing claim is already supported by runner output and makes no continuum claim."
+    },
+    "lattice_nn_deterministic_rescale_note": {
+      "category": "failed",
+      "claim_id": "lattice_nn_deterministic_rescale_note",
+      "descendants": 3,
+      "difficulty": "medium",
+      "elapsed_sec": 13.2,
+      "raw_tail": " step:\nThe canonical rows assert that the fixed geometry-only rescale schedule remains Born-clean and extends the NN lattice through h = 0.0625.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: medium\nREASON: The gap is missing reproducible runner evidence, not a new theorem or physics obstruction.\ntokens used\n1,503\n",
+      "reason": "The gap is missing reproducible runner evidence, not a new theorem or physics obstruction."
+    },
+    "lattice_nn_high_precision_note": {
+      "category": "open_gate",
+      "claim_id": "lattice_nn_high_precision_note",
+      "descendants": 2,
+      "difficulty": "hard",
+      "elapsed_sec": 14.5,
+      "raw_tail": "ntinuation did not complete in a practical runtime window and did not produce a retained numerical result.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing this would require completing an unresolved high-precision continuation that previously timed out with no retained result.\ntokens used\n1,558\n",
+      "reason": "Closing this would require completing an unresolved high-precision continuation that previously timed out with no retained result."
+    },
+    "lattice_nn_light_cone_note": {
+      "category": "renaming",
+      "claim_id": "lattice_nn_light_cone_note",
+      "descendants": 0,
+      "difficulty": "easy",
+      "elapsed_sec": 12.3,
+      "raw_tail": "rd causal neighborhood in the graph/DAG sense, with no emergent-relativity or physical spacetime light-cone claim retained.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: easy\nREASON: The audit has already narrowed the claim to a graph-reachability label with physical light-cone claims retracted.\ntokens used\n1,362\n",
+      "reason": "The audit has already narrowed the claim to a graph-reachability label with physical light-cone claims retracted."
+    },
+    "mesoscopic_surrogate_threshold_2d_note": {
+      "category": "failed",
+      "claim_id": "mesoscopic_surrogate_threshold_2d_note",
+      "descendants": 35,
+      "difficulty": "medium",
+      "elapsed_sec": 15.9,
+      "raw_tail": "esponse ratios equal to printed precision and support carry 1.000 across the scan.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: medium\nREASON: The gap is missing reproducible finite-sweep evidence, not a new physics theorem, but it likely needs locating or rerunning a small runner/log pipeline.\ntokens used\n1,564\n",
+      "reason": "The gap is missing reproducible finite-sweep evidence, not a new physics theorem, but it likely needs locating or rerunning a small runner/log pipeline."
+    },
+    "mirror_chokepoint_boundary_fit_note": {
+      "category": "numerical_match",
+      "claim_id": "mirror_chokepoint_boundary_fit_note",
+      "descendants": 16,
+      "difficulty": "medium",
+      "elapsed_sec": 14.7,
+      "raw_tail": " pocket through N=100, with canonical exponent fit alpha=-0.245 but no bounded asymptotic claim.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: medium\nREASON: Closing a bounded finite-window numerical pocket likely needs reproducible runner evidence and modest derivation cleanup, not new physics.\ntokens used\n9,283\n",
+      "reason": "Closing a bounded finite-window numerical pocket likely needs reproducible runner evidence and modest derivation cleanup, not new physics."
+    },
+    "monopole_derived_note": {
+      "category": "numerical_match",
+      "claim_id": "monopole_derived_note",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 13.3,
+      "raw_tail": "527 and beta = 1/(4*pi*alpha_EM(M_Pl)) using alpha_EM^{-1}(M_Pl) ~ 72.1 from one-loop SM RG running.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing it would require deriving the Planck-scale coupling from the lattice axiom and resolving an orders-of-magnitude runner mismatch.\ntokens used\n1,517\n",
+      "reason": "Closing it would require deriving the Planck-scale coupling from the lattice axiom and resolving an orders-of-magnitude runner mismatch."
+    },
+    "newton_derivation_note": {
+      "category": "open_gate",
+      "claim_id": "newton_derivation_note",
+      "descendants": 24,
+      "difficulty": "hard",
+      "elapsed_sec": 10.7,
+      "raw_tail": " an extensive quantity attached to the same composition law as the field-source parameter s, then m proportional to s.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing retained grade requires a new theorem bridging persistent-pattern inertial mass to the source composition law.\ntokens used\n8,971\n",
+      "reason": "Closing retained grade requires a new theorem bridging persistent-pattern inertial mass to the source composition law."
+    },
+    "nonlinear_born_gravity_note": {
+      "category": "failed",
+      "claim_id": "nonlinear_born_gravity_note",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 6.7,
+      "raw_tail": "ty are both consequences of linear amplitude superposition, so nonlinear propagators that give I_3 != 0 also flip the gravitational force sign.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing the universal claim would require new first-principles physics beyond the toy runner.\ntokens used\n3,768\n",
+      "reason": "Closing the universal claim would require new first-principles physics beyond the toy runner."
+    },
+    "persistent_object_multistage_floor_sweep_note_2026-04-16": {
+      "category": "failed",
+      "claim_id": "persistent_object_multistage_floor_sweep_note_2026-04-16",
+      "descendants": 282,
+      "difficulty": "medium",
+      "elapsed_sec": 15.2,
+      "raw_tail": "totals on the stable widened-regime rows are top3: 0/5, top4: 5/5, top5: 5/5, top6: 5/5, so top4 is the first self-maintaining floor.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: medium\nREASON: Closing needs completed top4/top5/top6 evidence or a small runner/provenance update, not new physics.\ntokens used\n9,205\n",
+      "reason": "Closing needs completed top4/top5/top6 evidence or a small runner/provenance update, not new physics."
+    },
+    "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30": {
+      "category": "renaming",
+      "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "descendants": 435,
+      "difficulty": "hard",
+      "elapsed_sec": 11.5,
+      "raw_tail": "he unique irreducible complex Cl_4(C) module and thereby assigns the displayed gamma generators to P_A H_cell.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The auditor says the carrier is hard-wired and blocked by no-go non-uniqueness, requiring a new theorem rather than a writeup.\ntokens used\n9,080\n",
+      "reason": "The auditor says the carrier is hard-wired and blocked by no-go non-uniqueness, requiring a new theorem rather than a writeup."
+    },
+    "pmns_commutant_eigenoperator_selector_note": {
+      "category": "renaming",
+      "claim_id": "pmns_commutant_eigenoperator_selector_note",
+      "descendants": 282,
+      "difficulty": "hard",
+      "elapsed_sec": 15.7,
+      "raw_tail": "isposition is `pass`; `pending`, `passed_with_notes`,\n   `demote`, or `block` cannot certify a retained-grade proposal.\n7. The PR body and handoff explicitly say independent audit is still required\n   before the repo may treat the claim as effective retained/promoted.\n\nIf any item fails, use `open`, `exact-support`, `bounded-support`,\n\ncodex\nDIFFICULTY: hard\nREASON: The audit says the load-bearing selector readout needs a new bridge theorem, not just a notation or runner fix.\ntokens used\n12,291\n",
+      "reason": "The audit says the load-bearing selector readout needs a new bridge theorem, not just a notation or runner fix."
+    },
+    "pmns_corner_transport_active_block_note": {
+      "category": "renaming",
+      "claim_id": "pmns_corner_transport_active_block_note",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 8.7,
+      "raw_tail": "w=1 triplet, the direct corner-to-corner transport matrix is T_act = diag(x_1, x_2, x_3) + diag(y_1, y_2, y_3 e^{i delta}) C.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing it requires a new first-principles operator-construction theorem rather than a small algebraic writeup.\ntokens used\n1,348\n",
+      "reason": "Closing it requires a new first-principles operator-construction theorem rather than a small algebraic writeup."
+    },
+    "pmns_sole_axiom_hw1_source_transfer_boundary_note": {
+      "category": "renaming",
+      "claim_id": "pmns_sole_axiom_hw1_source_transfer_boundary_note",
+      "descendants": 283,
+      "difficulty": "hard",
+      "elapsed_sec": 9.4,
+      "raw_tail": "sole-axiom active/passive blocks are therefore exactly (I3, I3), so source insertion and graph-first transfer only produce the trivial free pack.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The runner hard-codes the contested I3 blocks instead of deriving them from the sole axiom.\ntokens used\n1,335\n",
+      "reason": "The runner hard-codes the contested I3 blocks instead of deriving them from the sole axiom."
+    },
+    "pmns_transfer_operator_dominant_mode_note": {
+      "category": "renaming",
+      "claim_id": "pmns_transfer_operator_dominant_mode_note",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 16.3,
+      "raw_tail": "oubly-degenerate orthogonal mode, and those two eigenvalues reconstruct (xbar, ybar).\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: It requires a new native dynamical derivation from primitive corner-to-corner transport rather than an algebraic rewrite of supplied seed coefficients.\ntokens used\n1,705\n",
+      "reason": "It requires a new native dynamical derivation from primitive corner-to-corner transport rather than an algebraic rewrite of supplied seed coefficients."
+    },
+    "quark_cp_carrier_completion_note_2026-04-18": {
+      "category": "numerical_match",
+      "claim_id": "quark_cp_carrier_completion_note_2026-04-18",
+      "descendants": 304,
+      "difficulty": "hard",
+      "elapsed_sec": 14.5,
+      "raw_tail": "r in each sector, with xi_u and xi_d solved numerically, closes the full quark mass-ratio plus CKM CP target surface.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Tuned degrees of freedom and external target matching would need new first-principles physics to become retained-grade.\ntokens used\n1,642\n",
+      "reason": "Tuned degrees of freedom and external target matching would need new first-principles physics to become retained-grade."
+    },
+    "quark_e_channel_endpoint_quotient_law_note_2026-04-19": {
+      "category": "numerical_match",
+      "claim_id": "quark_e_channel_endpoint_quotient_law_note_2026-04-19",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 8.4,
+      "raw_tail": "r quotient is best rationalized by 15/8, implying r_E = 21/4 and D_E = 21/8 under the shell-multiplicity bridge.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing 15/8 from exact tensor machinery would require new retained-grade physics rather than a small rational-scan writeup.\ntokens used\n7,997\n",
+      "reason": "Closing 15/8 from exact tensor machinery would require new retained-grade physics rather than a small rational-scan writeup."
+    },
+    "quark_endpoint_ratio_chain_law_note_2026-04-19": {
+      "category": "numerical_match",
+      "claim_id": "quark_endpoint_ratio_chain_law_note_2026-04-19",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 8.9,
+      "raw_tail": ") are nearest to the small rational candidates 5/6, -2, and -8/9.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The load-bearing step is a contested numerical rational-selection premise, so closing it would require a first-principles derivation rather than a small algebraic writeup.\ntokens used\n1,328\n",
+      "reason": "The load-bearing step is a contested numerical rational-selection premise, so closing it would require a first-principles derivation rather than a small algebraic writeup."
+    },
+    "radial_scaling_protected_angle_narrow_theorem_note_2026-05-02": {
+      "category": "failed",
+      "claim_id": "radial_scaling_protected_angle_narrow_theorem_note_2026-05-02",
+      "descendants": 281,
+      "difficulty": "medium",
+      "elapsed_sec": 10.3,
+      "raw_tail": "verbroad universal T4 statement.\n\nAuditor-quoted load-bearing step:\neta_bar / rho_bar = (mu eta) / (mu rho) = eta / rho, since mu > 0 cancels.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: medium\nREASON: It needs domain exclusions and a small symbolic/runner check for T4 rather than new physics.\ntokens used\n9,039\n",
+      "reason": "It needs domain exclusions and a small symbolic/runner check for T4 rather than new physics."
+    },
+    "rconn_derived_note": {
+      "category": "renaming",
+      "claim_id": "rconn_derived_note",
+      "descendants": 288,
+      "difficulty": "hard",
+      "elapsed_sec": 6.2,
+      "raw_tail": "assuming planar dynamics populates all color channels according to dimensionality, giving Pi_adjoint/Pi_total = (N_c^2 - 1)/N_c^2.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The missing step requires a new dynamical physics bridge beyond the cited Fierz channel-counting identity.\ntokens used\n1,240\n",
+      "reason": "The missing step requires a new dynamical physics bridge beyond the cited Fierz channel-counting identity."
+    },
+    "restricted_strong_field_closure_note": {
+      "category": "renaming",
+      "claim_id": "restricted_strong_field_closure_note",
+      "descendants": 286,
+      "difficulty": "hard",
+      "elapsed_sec": 10.9,
+      "raw_tail": "bridge, local 3+1 lift, and Schur boundary action form one exact restricted strong-field closure package.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The missing step is an asserted exact closure package requiring a genuine derivation or new theorem, not a small algebraic writeup.\ntokens used\n9,124\n",
+      "reason": "The missing step is an asserted exact closure package requiring a genuine derivation or new theorem, not a small algebraic writeup."
+    },
+    "s3_time_bilinear_tensor_action_note": {
+      "category": "renaming",
+      "claim_id": "s3_time_bilinear_tensor_action_note",
+      "descendants": 316,
+      "difficulty": "hard",
+      "elapsed_sec": 7.9,
+      "raw_tail": ";q)=vec K_R(q) \\otimes exp(-t Lambda_R) u_*` from named upstream inputs.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing it would require a retained theorem identifying a definition-only tensor construction with Einstein/Regge dynamics, which is a substantive new physics step.\ntokens used\n8,890\n",
+      "reason": "Closing it would require a retained theorem identifying a definition-only tensor construction with Einstein/Regge dynamics, which is a substantive new physics step."
+    },
+    "s3_time_bilinear_tensor_primitive_note": {
+      "category": "renaming",
+      "claim_id": "s3_time_bilinear_tensor_primitive_note",
+      "descendants": 321,
+      "difficulty": "hard",
+      "elapsed_sec": 16.2,
+      "raw_tail": "oscopic tensor carrier K_R(q) = [[u_E(q), u_T(q)], [delta_A1(q) u_E(q), delta_A1(q) u_T(q)]].\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The audit says the carrier is only defined under imported coordinates and assumed decoupling, with upstream physical derivations still missing.\ntokens used\n4,159\n",
+      "reason": "The audit says the carrier is only defined under imported coordinates and assumed decoupling, with upstream physical derivations still missing."
+    },
+    "s3_time_constructed_support_tensor_primitive_note": {
+      "category": "renaming",
+      "claim_id": "s3_time_constructed_support_tensor_primitive_note",
+      "descendants": 285,
+      "difficulty": "hard",
+      "elapsed_sec": 14.3,
+      "raw_tail": "(0) := d Theta_R^(0) / d delta_A1 on the microscopic support block A1 x {E_x, T1x}.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing nonzero affine compatibility from absent endpoint structure would require new retained inputs or first-principles physics beyond a local writeup.\ntokens used\n4,181\n",
+      "reason": "Closing nonzero affine compatibility from absent endpoint structure would require new retained inputs or first-principles physics beyond a local writeup."
+    },
+    "s3_time_tensor_primitive_prototype_note": {
+      "category": "renaming",
+      "claim_id": "s3_time_tensor_primitive_prototype_note",
+      "descendants": 285,
+      "difficulty": "hard",
+      "elapsed_sec": 14.8,
+      "raw_tail": "a_E(q), gamma_T(q)) after normalizing by the exact reduced anisotropic shell amplitude.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The audit says the key coefficients and support law are only definitional and unverifiable, so closure would require new first-principles derivation.\ntokens used\n9,199\n",
+      "reason": "The audit says the key coefficients and support law are only definitional and unverifiable, so closure would require new first-principles derivation."
+    },
+    "shapiro_static_discriminator_note": {
+      "category": "failed",
+      "claim_id": "shapiro_static_discriminator_note",
+      "descendants": 307,
+      "difficulty": "hard",
+      "elapsed_sec": 7.8,
+      "raw_tail": "causal phase curve to numerical precision, while the frozen activation-delay proxy stays near-flat.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The runner hard-codes the causal/static equivalence and lacks the independent propagation and scheduling evidence needed for the theorem.\ntokens used\n1,298\n",
+      "reason": "The runner hard-codes the causal/static equivalence and lacks the independent propagation and scheduling evidence needed for the theorem."
+    },
+    "single_axiom_hilbert_note": {
+      "category": "renaming",
+      "claim_id": "single_axiom_hilbert_note",
+      "descendants": 304,
+      "difficulty": "hard",
+      "elapsed_sec": 8.7,
+      "raw_tail": " product structure is claimed to encode graph topology, locality, unitarity, and the Born rule as one axiom.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The audit says the chain hard-codes graph, locality, unitarity, and Born-rule structure instead of deriving them from the axiom.\ntokens used\n3,847\n",
+      "reason": "The audit says the chain hard-codes graph, locality, unitarity, and Born-rule structure instead of deriving them from the axiom."
+    },
+    "single_axiom_information_note": {
+      "category": "renaming",
+      "claim_id": "single_axiom_information_note",
+      "descendants": 282,
+      "difficulty": "hard",
+      "elapsed_sec": 11.6,
+      "raw_tail": "ian operator H whose nonzero entries define the graph and whose exponentiation exp(iHt) defines unitary dynamics.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: It requires a new first-principles derivation of sparse Hermitian graph structure and unitarity from a single verbal axiom.\ntokens used\n1,463\n",
+      "reason": "It requires a new first-principles derivation of sparse Hermitian graph structure and unitarity from a single verbal axiom."
+    },
+    "source_resolved_exact_green_self_consistent_note": {
+      "category": "numerical_match",
+      "claim_id": "source_resolved_exact_green_self_consistent_note",
+      "descendants": 0,
+      "difficulty": "medium",
+      "elapsed_sec": 10.6,
+      "raw_tail": " reduction, TOWARD sign in 4/4 rows, linear F~M scaling, and nontrivial self-consistent Green deflections after one reweighting update.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: medium\nREASON: The repair is a bounded numerical assertion-wrapper and claim-scope clarification, not new physics.\ntokens used\n1,434\n",
+      "reason": "The repair is a bounded numerical assertion-wrapper and claim-scope clarification, not new physics."
+    },
+    "staggered_dirac_realization_gate_note_2026-05-03": {
+      "category": "open_gate",
+      "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
+      "descendants": 567,
+      "difficulty": "hard",
+      "elapsed_sec": 8.3,
+      "raw_tail": "ered-Dirac realization itself.\n\nAuditor-quoted load-bearing step:\nThis note's load-bearing content is identity assignment only.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing the unresolved A1+A2-to-staggered-Dirac chain would require a substantive new retained-grade theorem.\ntokens used\n1,267\n",
+      "reason": "Closing the unresolved A1+A2-to-staggered-Dirac chain would require a substantive new retained-grade theorem."
+    },
+    "teleportation_3d1_causal_record_channel_note": {
+      "category": "open_gate",
+      "claim_id": "teleportation_3d1_causal_record_channel_note",
+      "descendants": 0,
+      "difficulty": "hard",
+      "elapsed_sec": 14.5,
+      "raw_tail": "e, while explicitly not deriving the Bell bits, Bell resource, or measurement dynamics.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The audit says the runner only checks a supplied channel, so retention would require deriving the supplied Bell record/resource/measurement dynamics.\ntokens used\n1,590\n",
+      "reason": "The audit says the runner only checks a supplied channel, so retention would require deriving the supplied Bell record/resource/measurement dynamics."
+    },
+    "teleportation_3d_initial_ramp_probe_note": {
+      "category": "open_gate",
+      "claim_id": "teleportation_3d_initial_ramp_probe_note",
+      "descendants": 0,
+      "difficulty": "hard",
+      "elapsed_sec": 14.1,
+      "raw_tail": "ative basis and no scalable preparation, control, noise, or readout proof is supplied.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The rationale leaves unresolved preparation, scaling, control, noise, and readout gaps, so closure would require substantive new proof beyond writeup.\ntokens used\n1,659\n",
+      "reason": "The rationale leaves unresolved preparation, scaling, control, noise, and readout gaps, so closure would require substantive new proof beyond writeup."
+    },
+    "teleportation_acceptance_suite_note": {
+      "category": "failed",
+      "claim_id": "teleportation_acceptance_suite_note",
+      "descendants": 281,
+      "difficulty": "easy",
+      "elapsed_sec": 11.5,
+      "raw_tail": "nd reports coarse PASS/FAIL/SKIP categories, including the documented default, optional, and strict-lane probe surfaces.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: easy\nREASON: The fix is a bounded documentation sync to the existing runner probe surface, with no new physics or theorem needed.\ntokens used\n1,402\n",
+      "reason": "The fix is a bounded documentation sync to the existing runner probe surface, with no new physics or theorem needed."
+    },
+    "teleportation_bell_measurement_circuit_note": {
+      "category": "open_gate",
+      "claim_id": "teleportation_bell_measurement_circuit_note",
+      "descendants": 1,
+      "difficulty": "hard",
+      "elapsed_sec": 11.2,
+      "raw_tail": "te stabilizer or CNOT-H circuit measurement, while physical implementation of those logical primitives remains open.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing the open physical native implementation would require new apparatus physics beyond the verified logical algebra.\ntokens used\n9,000\n",
+      "reason": "Closing the open physical native implementation would require new apparatus physics beyond the verified logical algebra."
+    },
+    "teleportation_conclusion_boundary_note": {
+      "category": "renaming",
+      "claim_id": "teleportation_conclusion_boundary_note",
+      "descendants": 281,
+      "difficulty": "hard",
+      "elapsed_sec": 16.1,
+      "raw_tail": "g obligations, but is not closed as unconditional nature-grade theory.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The audit says the load-bearing step is a status assignment rather than a derivation, so closing it would require new physics or a new theorem beyond a small writeup.\ntokens used\n1,604\n",
+      "reason": "The audit says the load-bearing step is a status assignment rather than a derivation, so closing it would require new physics or a new theorem beyond a small writeup."
+    },
+    "teleportation_encoding_portability_note": {
+      "category": "open_gate",
+      "claim_id": "teleportation_encoding_portability_note",
+      "descendants": 1,
+      "difficulty": "easy",
+      "elapsed_sec": 17.2,
+      "raw_tail": "air-hop X while selecting a non-last logical taste axis fails because X flips the last taste bit rather than the selected logical bit.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: easy\nREASON: The missing step is a finite algebraic operator-targeting explanation already confirmed by the runner.\ntokens used\n4,180\n",
+      "reason": "The missing step is a finite algebraic operator-targeting explanation already confirmed by the runner."
+    },
+    "teleportation_initial_state_preparation_probe_note": {
+      "category": "open_gate",
+      "claim_id": "teleportation_initial_state_preparation_probe_note",
+      "descendants": 0,
+      "difficulty": "easy",
+      "elapsed_sec": 13.4,
+      "raw_tail": "n the native site basis and the artifact supplies no cooling/control/readout protocol, noise model, or scaling proof.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: easy\nREASON: The auditor says the scoped gate already closes cleanly with finite runner-verified facts and explicit open boundaries.\ntokens used\n1,519\n",
+      "reason": "The auditor says the scoped gate already closes cleanly with finite runner-verified facts and explicit open boundaries."
+    },
+    "teleportation_logical_readout_audit": {
+      "category": "open_gate",
+      "claim_id": "teleportation_logical_readout_audit",
+      "descendants": 1,
+      "difficulty": "hard",
+      "elapsed_sec": 7.2,
+      "raw_tail": "factor as logical taste operators tensor identity on the environment, or an explicit blind/heralded environment workflow is supplied.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing it requires a new operational factorization or blind-environment proof beyond trace extraction.\ntokens used\n3,790\n",
+      "reason": "Closing it requires a new operational factorization or blind-environment proof beyond trace extraction."
+    },
+    "teleportation_native_transport_theory_note": {
+      "category": "open_gate",
+      "claim_id": "teleportation_native_transport_theory_note",
+      "descendants": 0,
+      "difficulty": "hard",
+      "elapsed_sec": 7.9,
+      "raw_tail": "ratus/noise, and conservation ledgers are derived from native dynamics.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The missing closure requires native physical derivations of Bell resources, records, apparatus/noise, and conservation ledgers rather than a small algebraic writeup.\ntokens used\n1,242\n",
+      "reason": "The missing closure requires native physical derivations of Bell resources, records, apparatus/noise, and conservation ledgers rather than a small algebraic writeup."
+    },
+    "teleportation_resource_fidelity_note": {
+      "category": "open_gate",
+      "claim_id": "teleportation_resource_fidelity_note",
+      "descendants": 1,
+      "difficulty": "easy",
+      "elapsed_sec": 9.0,
+      "raw_tail": "erage fidelity obeys F_avg = (1 + 2 * <Phi+|rho|Phi+>) / 3, so the fixed-protocol threshold is <Phi+|rho|Phi+> > 1/2.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: easy\nREASON: The auditor says the bounded protocol already computes and checks the identity, leaving only scoped proof writeup risk.\ntokens used\n1,357\n",
+      "reason": "The auditor says the bounded protocol already computes and checks the identity, leaving only scoped proof writeup risk."
+    },
+    "teleportation_taste_readout_operator_model_note": {
+      "category": "open_gate",
+      "claim_id": "teleportation_taste_readout_operator_model_note",
+      "descendants": 2,
+      "difficulty": "medium",
+      "elapsed_sec": 14.2,
+      "raw_tail": "nges across spectator taste sectors and fails to factor as O_logical tensor I_env for the retained last taste bit.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: medium\nREASON: It needs a bounded finite-dimensional operator-factorization argument tied to the runner, but no new physics or theorem.\ntokens used\n1,615\n",
+      "reason": "It needs a bounded finite-dimensional operator-factorization argument tied to the runner, but no new physics or theorem."
+    },
+    "teleportation_three_register_cross_encoding_note": {
+      "category": "open_gate",
+      "claim_id": "teleportation_three_register_cross_encoding_note",
+      "descendants": 0,
+      "difficulty": "medium",
+      "elapsed_sec": 15.6,
+      "raw_tail": "explicitly adapted to the two Alice-side encodings and Bob's corrections are adapted to Bob's chosen encoding.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: medium\nREASON: Closing retained grade likely needs a modest finite-enumeration or sampling-bound runner/proof improvement, not new physics.\ntokens used\n1,713\n",
+      "reason": "Closing retained grade likely needs a modest finite-enumeration or sampling-bound runner/proof improvement, not new physics."
+    },
+    "universal_gr_casimir_block_localization_note": {
+      "category": "renaming",
+      "claim_id": "universal_gr_casimir_block_localization_note",
+      "descendants": 281,
+      "difficulty": "medium",
+      "elapsed_sec": 17.2,
+      "raw_tail": "2 + G_z^2 with spectrum -2 of multiplicity 3 and -6 of multiplicity 5, giving the j=1 shift and j=2 shear blocks.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: medium\nREASON: It needs adding verifiable upstream inputs or a small computation rather than just polishing an already-derived identity.\ntokens used\n9,295\n",
+      "reason": "It needs adding verifiable upstream inputs or a small computation rather than just polishing an already-derived identity."
+    },
+    "universal_gr_supermetric_normal_form_note": {
+      "category": "renaming",
+      "claim_id": "universal_gr_supermetric_normal_form_note",
+      "descendants": 281,
+      "difficulty": "medium",
+      "elapsed_sec": 15.1,
+      "raw_tail": "ns h,k on D = diag(a,b,b,b), the universal Hessian is B(h,k) = -Tr(D^-1 h D^-1 k), exactly the inverse-metric contraction pairing.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: medium\nREASON: It needs a first-principles algebraic computation or small runner evidence, but not clearly new physics.\ntokens used\n1,585\n",
+      "reason": "It needs a first-principles algebraic computation or small runner evidence, but not clearly new physics."
+    },
+    "universal_gr_tensor_action_blocker_note": {
+      "category": "renaming",
+      "claim_id": "universal_gr_tensor_action_blocker_note",
+      "descendants": 287,
+      "difficulty": "hard",
+      "elapsed_sec": 20.1,
+      "raw_tail": " induced curvature-localization map Pi_curv identifying the Hessian kernel with Einstein/Regge dynamics.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing it would require a new covariant projector/localization theorem identifying the Hessian kernel with Einstein/Regge dynamics.\ntokens used\n8,027\n",
+      "reason": "Closing it would require a new covariant projector/localization theorem identifying the Hessian kernel with Einstein/Regge dynamics."
+    },
+    "universal_qg_optional_textbook_comparison_note": {
+      "category": "renaming",
+      "claim_id": "universal_qg_optional_textbook_comparison_note",
+      "descendants": 342,
+      "difficulty": "easy",
+      "elapsed_sec": 14.6,
+      "raw_tail": "ed load-bearing step:\nThis note is packaging-only and is not a theorem, claim, or new authority surface.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: easy\nREASON: The audit target is only a packaging/scope disclaimer, so closure should be a small wording or metadata fix rather than new physics.\ntokens used\n9,095\n",
+      "reason": "The audit target is only a packaging/scope disclaimer, so closure should be a small wording or metadata fix rather than new physics."
+    },
+    "wave_direct_dm_h025_seed0_crossfamily_note": {
+      "category": "numerical_match",
+      "claim_id": "wave_direct_dm_h025_seed0_crossfamily_note",
+      "descendants": 8,
+      "difficulty": "easy",
+      "elapsed_sec": 16.1,
+      "raw_tail": ", and weak-field control, but it still does not define a stable amplitude law or a portability claim beyond Fam1/Fam2.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: easy\nREASON: The narrowed claim is only a bounded two-row numerical observation with no structural theorem or new physics required.\ntokens used\n1,593\n",
+      "reason": "The narrowed claim is only a bounded two-row numerical observation with no structural theorem or new physics required."
+    },
+    "work_history.ckm.ckm_mass_basis_nni_note": {
+      "category": "numerical_match",
+      "claim_id": "work_history.ckm.ckm_mass_basis_nni_note",
+      "descendants": 286,
+      "difficulty": "hard",
+      "elapsed_sec": 10.7,
+      "raw_tail": "c_ij^geom * sqrt(m_i/m_j) for i < j applies the quark mass-ratio suppression that brings |V_ub| near PDG.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Auditor says the match relies on hard-coded calibrated masses and fitted coefficients, not a first-principles framework derivation.\ntokens used\n1,434\n",
+      "reason": "Auditor says the match relies on hard-coded calibrated masses and fitted coefficients, not a first-principles framework derivation."
+    },
+    "yt_bridge_action_invariant_note": {
+      "category": "numerical_match",
+      "claim_id": "yt_bridge_action_invariant_note",
+      "descendants": 282,
+      "difficulty": "hard",
+      "elapsed_sec": 8.9,
+      "raw_tail": "the low-energy endpoint is controlled almost entirely by the normalized gauge-surplus action I2.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing the audited numerical reduction would require a first-principles interacting bridge-selection theorem beyond the finite ansatz scan.\ntokens used\n8,982\n",
+      "reason": "Closing the audited numerical reduction would require a first-principles interacting bridge-selection theorem beyond the finite ansatz scan."
+    },
+    "yt_bridge_moment_closure_note": {
+      "category": "numerical_match",
+      "claim_id": "yt_bridge_moment_closure_note",
+      "descendants": 282,
+      "difficulty": "hard",
+      "elapsed_sec": 13.8,
+      "raw_tail": "nearly affine on the viable UV-localized window, reducing the endpoint response to the two moments I2 and c2.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing this would require deriving the moment-selection band from microscopic axioms rather than a hard-coded numerical proxy.\ntokens used\n1,572\n",
+      "reason": "Closing this would require deriving the moment-selection band from microscopic axioms rather than a hard-coded numerical proxy."
+    },
+    "yt_bridge_nonlocal_corrections_note": {
+      "category": "numerical_match",
+      "claim_id": "yt_bridge_nonlocal_corrections_note",
+      "descendants": 324,
+      "difficulty": "hard",
+      "elapsed_sec": 7.5,
+      "raw_tail": "s L2/operator-norm ratio 5.024e-3 and integrated effects at or below about 1.03e-3 on the selected viable bridge families.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing this would require justifying hard-coded physical inputs and modeling choices beyond the numerical runner.\ntokens used\n1,278\n",
+      "reason": "Closing this would require justifying hard-coded physical inputs and modeling choices beyond the numerical runner."
+    },
+    "yt_color_projection_correction_note": {
+      "category": "renaming",
+      "claim_id": "yt_color_projection_correction_note",
+      "descendants": 319,
+      "difficulty": "hard",
+      "elapsed_sec": 9.9,
+      "raw_tail": " channel, so y_t(physical)/y_t(Ward) = sqrt(Z_phi^{connected/total}) = sqrt((N_c^2 - 1)/N_c^2) = sqrt(8/9).\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The missing step requires deriving a contested physical scalar mapping, not just writing up the existing color-counting identity.\ntokens used\n8,961\n",
+      "reason": "The missing step requires deriving a contested physical scalar mapping, not just writing up the existing color-counting identity."
+    },
+    "yt_constructive_uv_bridge_note": {
+      "category": "numerical_match",
+      "claim_id": "yt_constructive_uv_bridge_note",
+      "descendants": 326,
+      "difficulty": "hard",
+      "elapsed_sec": 8.6,
+      "raw_tail": "_t(v)=0.9176, after which the best fits are compared for stability.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: Closing this would require a first-principles derivation of why the interacting lattice bridge lies in the scanned UV-localized class, which the audit says remains open.\ntokens used\n1,212\n",
+      "reason": "Closing this would require a first-principles derivation of why the interacting lattice bridge lies in the scanned UV-localized class, which the audit says remains open."
+    },
+    "yt_ew_coupling_bridge_note": {
+      "category": "numerical_match",
+      "claim_id": "yt_ew_coupling_bridge_note",
+      "descendants": 282,
+      "difficulty": "hard",
+      "elapsed_sec": 7.7,
+      "raw_tail": "nds the error from using it instead of the exact lattice taste-staircase at O(3%).\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: hard\nREASON: The rationale identifies fitted load-bearing parameters, imported EW inputs, and a missing rigorous surrogate theorem requiring new physics-level closure.\ntokens used\n1,236\n",
+      "reason": "The rationale identifies fitted load-bearing parameters, imported EW inputs, and a missing rigorous surrogate theorem requiring new physics-level closure."
+    },
+    "yt_ssb_matching_gap_analysis_note_2026-04-18": {
+      "category": "renaming",
+      "claim_id": "yt_ssb_matching_gap_analysis_note_2026-04-18",
+      "descendants": 0,
+      "difficulty": "easy",
+      "elapsed_sec": 13.4,
+      "raw_tail": " channel and the physical trilinear are both matrix elements of H_unit; they share the 1/sqrt(6) coefficient by construction.\n\nGoal: close the chain so a re-audit of this same note can land\naudited_clean at retained-grade. Use the physics-loop skill to iterate.\nDo not over-prescribe approach \u2014 explore the framework, let the skill\ndrive.\ncodex\nDIFFICULTY: easy\nREASON: The retained scope is only bounded H_unit normalization arithmetic, not the excluded operator-matching theorem.\ntokens used\n1,604\n",
+      "reason": "The retained scope is only bounded H_unit normalization arithmetic, not the excluded operator-matching theorem."
+    }
+  }
+}
