@@ -3462,6 +3462,46 @@ Result: the same-source W/Z response ratio still needs a strict, non-observed
 current alpha/plaquette/u0 and audit-authority firewalls.  No
 retained/proposed-retained wording is authorized.
 
+## 2026-05-05 - Derived-Bridge Rank-One Closure Attempt
+
+The clean source-only theorem route is now explicitly bounded on the current
+surface:
+
+```text
+python3 scripts/frontier_yt_pr230_derived_bridge_rank_one_closure_attempt.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=32 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=267 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=87 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=235 FAIL=0
+```
+
+The route would close only if PR230 supplied a same-surface primitive
+positivity-improving neutral scalar transfer certificate: neutral basis,
+nonnegative transfer matrix, strongly connected positive-entry graph, positive
+primitive power, isolated pole, source overlap, and canonical-Higgs/source
+overlap authority.  Current artifacts supply conditional Perron/rank-one
+support and the contract, but not the strict primitive-cone certificate,
+neutral off-diagonal generator, irreducibility theorem, canonical `O_H`, or
+`C_sH/C_HH` rows.
+
+Next exact action: do not replay positivity-preservation, reflection
+positivity, determinant positivity, Burnside-label, or source-only
+counterparts.  A positive reopen needs one real same-surface artifact:
+certified `O_H/C_sH/C_HH` pole rows, genuine same-source W/Z rows with
+identity/covariance/strict `g2`, strict scalar-LSZ infinite/tail
+moment/threshold/FV authority, Schur `A/B/C` rows, or a neutral
+primitive-cone/off-diagonal-generator certificate.  No retained/proposed-
+retained wording is authorized.
+
 ## 2026-05-05 - Reflection + Determinant Primitive-Upgrade Gate
 
 The combined positivity shortcut is now explicitly blocked:

@@ -3282,3 +3282,23 @@ contracts.  Literature methods are not proof selectors:
 The selected future target is the `O_H/C_sH/C_HH` contract via an action-first
 same-source EW/Higgs and FMS `O_H` certificate.  Do not treat this route
 selection as an `O_H` certificate or retained/proposed-retained support.
+
+## 2026-05-05 - Derived Source-Only Rank-One Bridge
+
+No-go on the current surface: source-only scalar pole data plus positivity
+preservation does not derive the source-to-canonical-Higgs bridge.
+
+The positive theorem contract would require a same-surface neutral scalar
+transfer matrix on a certified cone, nonnegative entries, strong connectivity,
+a strictly positive primitive power, isolated lowest neutral pole authority,
+positive source overlap, and canonical-Higgs/source-overlap authority or an
+equivalent bypass theorem.  The current surface has conditional rank-one
+support only; the strict primitive-cone certificate, neutral off-diagonal
+generator, irreducibility theorem, canonical `O_H`, and `C_sH/C_HH` rows are
+absent.
+
+Reopen this route only with a real same-surface primitive-cone/off-diagonal
+generator certificate or with direct measured bridge rows.  Do not reopen it
+with reflection positivity, determinant positivity, Euclidean measure
+positivity, Burnside theorem names, synthetic primitive matrices,
+source-only `C_ss`, or source-only response rows.

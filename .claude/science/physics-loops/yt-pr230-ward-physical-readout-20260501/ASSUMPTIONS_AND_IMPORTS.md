@@ -805,3 +805,17 @@ until a same-surface neutral primitive-cone certificate exists.  They supply
 positivity preservation only; a reducible block-diagonal neutral transfer can
 preserve positive spectral/fermion-measure support while leaving an
 orthogonal neutral top-coupled scalar invisible to source-only rows.
+
+2026-05-05 derived rank-one bridge:
+
+The source-only rank-one route may use Perron-Frobenius/Krein-Rutman or
+primitive-cone mathematics only after PR230 supplies a same-surface neutral
+scalar transfer certificate.  The load-bearing premises are a defined neutral
+basis, a nonnegative transfer matrix on a certified cone, strong connectivity,
+a positive primitive power, isolated pole authority, positive source overlap,
+and canonical-Higgs/source-overlap authority.  Positivity preservation from
+reflection positivity, determinant positivity, positive Euclidean measure, or
+synthetic finite matrices is not enough and must not be used as positivity
+improvement.  Conditional rank-one support is not a source-to-Higgs
+normalization and cannot set `kappa_s = 1` or authorize
+retained/proposed-retained closure.

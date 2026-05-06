@@ -1406,3 +1406,19 @@ Positive work must now supply a fresh same-surface artifact: W/Z rows with
 identity/covariance/strict `g2`, strict scalar-LSZ infinite/tail
 moment/threshold/FV authority, Schur `A/B/C` rows, or a neutral
 primitive-cone/irreducibility certificate.
+
+2026-05-05 update: the derived rank-one bridge attempt is now wired into the
+aggregate blockers.  This is the cleanest source-only theorem route, and it
+still fails on missing primitive-cone/off-diagonal-generator, irreducibility,
+canonical `O_H`, and `C_sH/C_HH` artifacts.  Positivity preservation is not
+positivity improvement.  The priority order remains genuine artifacts, not
+more method-name shortcuts:
+
+1. Certified `O_H/C_sH/C_HH` pole rows or a same-surface canonical `O_H`
+   identity/normalization theorem.
+2. Genuine same-source W/Z rows with identity, matched covariance, and strict
+   non-observed `g2` authority.
+3. Strict scalar-LSZ infinite/tail moment, threshold, and finite-volume
+   authority.
+4. Schur `A/B/C` rows or an equivalent precontracted kernel certificate.
+5. Neutral primitive-cone/off-diagonal-generator certificate.
