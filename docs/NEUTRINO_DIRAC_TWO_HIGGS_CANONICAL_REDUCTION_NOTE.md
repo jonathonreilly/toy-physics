@@ -53,8 +53,16 @@ i.e. **seven real axiom-side numbers**.
 
 This theorem reuses:
 
-- `Neutrino Dirac two-Higgs escape theorem`
-- `Lepton single-Higgs PMNS triviality theorem`
+- [`DM_NEUTRINO_TWO_HIGGS_MINIMALITY_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_TWO_HIGGS_MINIMALITY_THEOREM_NOTE_2026-04-15.md)
+  — the Neutrino Dirac two-Higgs escape / minimality theorem, supplying
+  the *minimal surviving neutrino-side extension class* assumption used
+  in the question.
+- [`LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md`](LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md)
+  — the Lepton single-Higgs PMNS triviality theorem, which is what
+  closes the full single-Higgs lepton sector negatively for PMNS and
+  forces the bridge condition that the charged-lepton lane stay on the
+  monomial single-Higgs class while only the neutrino lane goes
+  two-Higgs.
 
 and keeps the exact bridge condition explicit:
 

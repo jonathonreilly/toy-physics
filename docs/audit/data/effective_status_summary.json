@@ -4,8 +4,8 @@
     "decoration": 10,
     "meta": 55,
     "no_go": 186,
-    "open_gate": 116,
-    "positive_theorem": 790
+    "open_gate": 115,
+    "positive_theorem": 791
   },
   "cycle_examples": [
     [
@@ -48,10 +48,10 @@
       "frontier_extension_lane_opening_note_2026-04-25"
     ]
   ],
-  "cycles_detected": 186,
+  "cycles_detected": 189,
   "effective_status_counts": {
     "audit_in_progress": 3,
-    "audited_conditional": 466,
+    "audited_conditional": 462,
     "audited_failed": 13,
     "audited_numerical_match": 21,
     "audited_renaming": 32,
@@ -67,7 +67,7 @@
     "retained_bounded": 222,
     "retained_no_go": 119,
     "retained_pending_chain": 2,
-    "unaudited": 783
+    "unaudited": 787
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [
