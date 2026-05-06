@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 632,
+    "leaf": 636,
     "medium": 301
   },
-  "generated_at": "2026-05-05T23:55:05.891586+00:00",
+  "generated_at": "2026-05-06T00:51:51.547393+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20191,6 +20191,40 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_derived_bridge_rank_one_closure_attempt_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_DERIVED_BRIDGE_RANK_ONE_CLOSURE_ATTEMPT_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_derived_bridge_rank_one_closure_attempt.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_pr230_det_positivity_bridge_intake_gate_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_DET_POSITIVITY_BRIDGE_INTAKE_GATE_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_det_positivity_bridge_intake_gate.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_exact_tensor_schur_row_feasibility_attempt_note_2026-05-05",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20871,6 +20905,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_reflection_det_primitive_upgrade_gate_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_REFLECTION_DET_PRIMITIVE_UPGRADE_GATE_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_reflection_det_primitive_upgrade_gate.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_review_backpressure_pass_note_2026-05-01",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -20950,6 +21001,23 @@
       "note_path": "docs/YT_PR230_SOURCE_OVERLAP_ROUTE_SELECTION_NOTE_2026-05-03.md",
       "ready": true,
       "runner_path": "scripts/frontier_yt_pr230_source_overlap_route_selection.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_pr230_source_sector_pattern_transfer_gate_note_2026-05-05",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_SOURCE_SECTOR_PATTERN_TRANSFER_GATE_NOTE_2026-05-05.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_source_sector_pattern_transfer_gate.py",
       "transitive_descendants": 0
     },
     {
@@ -24313,6 +24381,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 779,
-  "total_pending": 1170
+  "ready_count": 783,
+  "total_pending": 1174
 }

@@ -23,3 +23,12 @@ Current conclusion: the cleanest target is the `O_H/C_sH/C_HH` contract via an
 action-first FMS/canonical-operator route.  No literature source is imported as
 `H_unit`, `yt_ward_identity`, observed-target, alpha/plaquette/u0, `g2`,
 `kappa_s`, `c2`, or `Z_match` authority.
+
+2026-05-05 derived rank-one bridge boundary:
+
+Perron-Frobenius, Krein-Rutman, primitive-matrix, reflection-positivity, and
+determinant-positivity literature can define a future certificate shape, but
+none is imported as PR230 evidence.  The current surface still needs the
+same-surface neutral transfer matrix, primitive cone, pole isolation, and
+canonical-Higgs/source-overlap authority before those theorems can become
+load-bearing.

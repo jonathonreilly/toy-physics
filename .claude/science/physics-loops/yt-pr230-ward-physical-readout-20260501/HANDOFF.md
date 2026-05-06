@@ -3803,3 +3803,21 @@ authority.  Otherwise pivot to certified `O_H/C_sH/C_HH` pole rows, genuine
 same-source W/Z response rows, strict scalar-LSZ moment/threshold/FV
 authority, or a neutral primitive-cone certificate.  No
 retained/proposed-retained wording is authorized.
+
+## 2026-05-05 - Current Next Action After Derived-Bridge Block
+
+The derived source-only rank-one bridge is now blocked on the current surface:
+conditional Perron/rank-one support and positivity preservation do not provide
+a same-surface primitive-cone/off-diagonal-generator certificate, canonical
+`O_H`, or `C_sH/C_HH` pole rows.
+
+Current validation: derived-bridge runner `PASS=17 FAIL=0`, assumption stress
+`PASS=35 FAIL=0`, campaign status `PASS=270 FAIL=0`, full assembly `PASS=90
+FAIL=0`, retained-route `PASS=238 FAIL=0`.
+
+Exact next action: target one genuine artifact, with priority order certified
+`O_H/C_sH/C_HH` pole rows or same-surface canonical `O_H`; genuine
+same-source W/Z rows with identity/covariance/strict `g2`; strict scalar-LSZ
+infinite/tail moment, threshold, and finite-volume authority; Schur `A/B/C`
+rows; or a neutral primitive-cone/off-diagonal-generator certificate.  Do not
+claim retained or proposed-retained closure.

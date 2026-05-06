@@ -43,6 +43,26 @@ they do not supply the missing PR230 `O_H/h` source artifact.  Source-only
 `Z(s,0)` does not determine `C_sH`, `C_HH`, or source-Higgs Gram purity.  No
 effective-retention or proposed-retention wording is allowed.
 
+## 2026-05-05 - Block 235 Derived-Bridge Rank-One Closure Attempt
+
+Review stance: source-only rank-one bridge no-go / exact negative boundary.
+
+- Added `scripts/frontier_yt_pr230_derived_bridge_rank_one_closure_attempt.py`.
+- Added `docs/YT_PR230_DERIVED_BRIDGE_RANK_ONE_CLOSURE_ATTEMPT_NOTE_2026-05-05.md`.
+- Added `outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json`.
+- Wired the artifact into assumption stress, campaign status, full positive
+  closure assembly, and retained-route certificates.
+- Validation: runner `PASS=17 FAIL=0`, assumption stress `PASS=35 FAIL=0`,
+  campaign status `PASS=270 FAIL=0`, full assembly `PASS=90 FAIL=0`,
+  retained-route `PASS=238 FAIL=0`.
+
+Disposition: exact negative boundary.  Conditional Perron/rank-one support and
+positivity preservation do not identify the PR230 scalar source with canonical
+`O_H`.  The route still needs a same-surface primitive-cone/off-diagonal
+generator certificate, isolated-pole and overlap authority, and canonical
+`O_H` or `C_sH/C_HH` rows.  No effective-retention or proposed-retention
+wording is allowed.
+
 ## Review-Loop Backpressure - Neutral Burnside Irreducibility Attempt
 
 Local review-loop disposition:

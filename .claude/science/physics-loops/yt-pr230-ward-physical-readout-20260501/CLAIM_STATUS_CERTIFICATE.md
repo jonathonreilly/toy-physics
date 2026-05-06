@@ -4112,3 +4112,27 @@ counterfamily keeps the effective denominator fixed while changing the rows
 needed for `K'(pole)`.  Outside-math tools may compute future defined row
 certificates, but cannot act as row-definition or normalization selectors.
 No effective-retention or proposed-retention wording is allowed.
+
+Derived rank-one bridge closure attempt:
+
+```text
+actual_current_surface_status: exact negative boundary / derived rank-one bridge not closed on current PR230 surface
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_derived_bridge_rank_one_closure_attempt.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=90 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=238 FAIL=0
+```
+
+The certificate blocks current source-only source-to-Higgs closure.  A future
+positive bridge needs a strict same-surface primitive-cone or
+off-diagonal-generator certificate plus canonical-Higgs/source-overlap
+authority.  Positivity preservation, determinant/reflection positivity,
+synthetic primitive matrices, and conditional Perron support are not enough.
+No effective-retention or proposed-retention wording is allowed.

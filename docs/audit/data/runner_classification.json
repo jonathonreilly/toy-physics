@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T23:55:05.511946+00:00",
+  "generated_at": "2026-05-06T00:51:51.175158+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16518,11 +16518,11 @@
       "counts": {
         "A": 0,
         "B": 3,
-        "C": 3,
+        "C": 5,
         "D": 4
       },
       "decoration_candidate": false,
-      "dominant_class": "D",
+      "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_assumption_import_stress.py"
     },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
@@ -16548,6 +16548,30 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py"
+    },
+    "yt_pr230_derived_bridge_rank_one_closure_attempt_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_derived_bridge_rank_one_closure_attempt.py"
+    },
+    "yt_pr230_det_positivity_bridge_intake_gate_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_det_positivity_bridge_intake_gate.py"
     },
     "yt_pr230_exact_tensor_schur_row_feasibility_attempt_note_2026-05-05": {
       "assert_count": 1,
@@ -16861,6 +16885,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_queue_exhaustion_certificate.py"
     },
+    "yt_pr230_reflection_det_primitive_upgrade_gate_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_reflection_det_primitive_upgrade_gate.py"
+    },
     "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05": {
       "assert_count": 1,
       "counts": {
@@ -16908,6 +16944,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_source_overlap_route_selection.py"
+    },
+    "yt_pr230_source_sector_pattern_transfer_gate_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 5,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_source_sector_pattern_transfer_gate.py"
     },
     "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05": {
       "assert_count": 1,
@@ -34241,11 +34289,11 @@
       "counts": {
         "A": 0,
         "B": 3,
-        "C": 3,
+        "C": 5,
         "D": 4
       },
       "decoration_candidate": false,
-      "dominant_class": "D",
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_yt_pr230_campaign_status_certificate.py": {
@@ -34276,6 +34324,36 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_derived_bridge_rank_one_closure_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_derived_bridge_rank_one_closure_attempt_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_det_positivity_bridge_intake_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_det_positivity_bridge_intake_gate_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_yt_pr230_exact_tensor_schur_row_feasibility_attempt.py": {
@@ -34668,6 +34746,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_reflection_det_primitive_upgrade_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_reflection_det_primitive_upgrade_gate_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt.py": {
       "assert_count": 1,
       "claims": [
@@ -34726,6 +34819,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_source_sector_pattern_transfer_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_source_sector_pattern_transfer_gate_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 5,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_yt_pr230_wz_g2_bare_running_bridge_attempt.py": {
@@ -39908,13 +40016,13 @@
     "decoration_candidates": 108,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 222,
-      "C": 498,
+      "B": 223,
+      "C": 501,
       "D": 299,
       "none": 404
     },
-    "runners_classified": 1432,
-    "runners_with_C": 745,
-    "runners_with_D": 526
+    "runners_classified": 1436,
+    "runners_with_C": 748,
+    "runners_with_D": 529
   }
 }
