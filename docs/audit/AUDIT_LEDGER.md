@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 792 |
+| unaudited | 791 |
 | audit_in_progress | 2 |
 | meta | 48 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
-| ~~audited_conditional~~ | 459 |
+| ~~audited_conditional~~ | 460 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 378 |
-| `audited_conditional` | 459 |
+| `audited_conditional` | 460 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 32 |
-| `unaudited` | 840 |
+| `unaudited` | 839 |
 
 | claim_type | count |
 |---|---:|
@@ -922,6 +922,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_lorentzian_global_atlas_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_polarization_frame_bundle_attempt` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `universal_gr_positive_background_local_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `universal_qg_canonical_textbook_geometric_action_equivalence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_inverse_limit_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_qg_projective_schur_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `vector_sector_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -13623,6 +13624,28 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The route lacks a covariant 3+1 polarization-frame/projector bundle with distinguished connection and induced curvature-localization map Pi_curv identifying the Hessian kernel with Einstein/Regge dynamics.  _(class `E`)_
 - **chain closes:** False — The note honestly states the missing bridge rather than deriving it. The missing step is the curvature-localization/projector-bundle theorem connecting the symmetric 3+1 Hessian kernel to Einstein/Regge tensor dynamics on full metric space.
 - **rationale:** No runner, cited authority, or derivation is provided, so the audit must judge from the note text alone. The load-bearing move introduces and names the missing primitive Pi_curv/projector bundle and uses that definition to classify the route as blocked. This is an honest bounded blocker statement, but it is not a first-principles computation or algebraic closure from retained inputs.
+- **auditor confidence:** high
+
+### `universal_qg_canonical_textbook_geometric_action_equivalence_note`
+
+- **Note:** [`UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`](../../docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Claim that the project-native smooth geometric/action family is canonically equivalent to a standard textbook Einstein-Hilbert-style weak/stationary action family on the chosen smooth realization of PL S^3 x R.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-06-universal-qg-textbook-action`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The note identifies the project-native bilinear family B_D(h,k) = -Tr(D^-1 h D^-1 k), with K_GR(D) = H_D tensor Lambda_R, as exactly the textbook Einstein-Hilbert-style quadratic weak/stationary action kernel on the chosen realization.  _(class `B`)_
+- **chain closes:** False — The only ledger dependency is a meta packaging hub that explicitly carries no theorem authority. The source text relies on several substantive universal-QG smooth/textbook/GR closure theorem rows, but those rows are not wired as direct dependencies and are currently unaudited.
+- **rationale:** Issue: the textbook Einstein-Hilbert-style action equivalence is asserted from an 'already-closed' theorem chain, but the ledger wires only universal_qg_optional_textbook_comparison_note, whose own text says it is metadata only and must not act as theorem authority. Why this blocks: a positive theorem cannot be retained from a packaging hub or from source prose that cites unwired and unaudited smooth/textbook/GR closure rows. Repair target: add the actual load-bearing theorem dependencies, including the canonical textbook continuum/weak-measure/geometric-action/local-global smooth identification and Lorentzian stationarity rows as appropriate, then audit or retain those dependencies before re-auditing this equivalence. Claim boundary until fixed: this row is a roadmap/identification proposal for the chosen textbook target, not retained evidence that the project-native K_GR(D) family is exactly a textbook Einstein-Hilbert-style action kernel.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md`
+  - `UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md`
+  - `UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md`
+  - `UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md`
+  - `UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_qg_inverse_limit_closure_note`
