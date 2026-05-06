@@ -1,0 +1,79 @@
+
+========================================================================================
+A. Finite Wilson-Dirac support model
+========================================================================================
+[PASS] A.1 L=3 Wilson-Dirac operator is Hermitian and Z3-equivariant
+       ||D-D†||=0.00e+00; ||UDU†-D||=5.06e-15
+[PASS] A.2 body-diagonal action has three retained fixed sites
+       fixed_sites=[(0, 0, 0), (1, 1, 1), (2, 2, 2)]
+[PASS] A.3 finite Wilson eta proxy equals the APS comparator but does not select a line
+       |eta|/fixed_site=0.222222222222; exact APS comparator=0.222222222222
+
+========================================================================================
+B. Zero-mode character sector is not a selected line
+========================================================================================
+[PASS] B.1 Wilson zero-mode space has dimension four
+       zero eigenvalues=4
+[PASS] B.2 each spin-lift Z3 character in the zero-mode space has multiplicity two
+       counts: exp(+i*pi/3)=2, exp(-i*pi/3)=2
+[PASS] B.3 a CP1 family of rank-one lines has the same Wilson zero-mode and character data
+       alpha=0.000000: ||D psi||=2.21e-15, ||U psi-zeta psi||=2.92e-15, selected_weight=1.000000
+       alpha=0.523599: ||D psi||=2.22e-15, ||U psi-zeta psi||=3.01e-15, selected_weight=0.750000
+       alpha=0.785398: ||D psi||=2.11e-15, ||U psi-zeta psi||=2.88e-15, selected_weight=0.500000
+       alpha=1.047198: ||D psi||=2.06e-15, ||U psi-zeta psi||=2.64e-15, selected_weight=0.250000
+       alpha=1.570796: ||D psi||=1.92e-15, ||U psi-zeta psi||=2.03e-15, selected_weight=0.000000
+[PASS] B.4 Wilson data select a rank-two character projector, not a canonical rank-one eigenline
+       A selected line inside the rank-two character sector is extra boundary/readout data.
+
+========================================================================================
+C. Selected/spectator and endpoint-lift residual
+========================================================================================
+[PASS] C.1 rank-two eigenline freedom gives the same selected/spectator residual
+       delta/eta_APS - 1 = 9*c/2 - sin(alpha)**2
+[PASS] C.2 closure requires choosing alpha=0 and endpoint offset c=0
+       alpha=0 selects line_0; alpha=pi/2 selects the equally retained orthogonal line.
+[PASS] C.3 eigenvector endpoint lift still carries an exact open-path offset
+       Multiplying a Wilson eigenline lift by exp(i*s*t) leaves projectors unchanged and shifts the open endpoint by s.
+
+========================================================================================
+D. Hostile-review objections
+========================================================================================
+[PASS] D.1 finite Wilson eta equality does not identify the selected Brannen line
+       The ambient scalar check is compatible with APS, but the selected endpoint still requires a line inside a multiplicity-two character sector.
+[PASS] D.2 picking the line with selected_weight=1 is the missing theorem
+       The endpoints alpha=0 and alpha=pi/2 are both retained Wilson eigenlines with the same character.
+
+========================================================================================
+E. Verdict
+========================================================================================
+[PASS] E.1 lattice Wilson selected-eigenline route does not close delta
+       RESIDUAL_ENDPOINT=-theta0 + theta_end - 2/9
+[PASS] E.2 residual is rank-one selected-line choice plus endpoint lift
+       Need a retained theorem selecting a unique rank-one Wilson eigenline and fixing its endpoint lift.
+
+========================================================================================
+Summary
+========================================================================================
+PASSED: 14/14
+  [PASS] A.1 L=3 Wilson-Dirac operator is Hermitian and Z3-equivariant
+  [PASS] A.2 body-diagonal action has three retained fixed sites
+  [PASS] A.3 finite Wilson eta proxy equals the APS comparator but does not select a line
+  [PASS] B.1 Wilson zero-mode space has dimension four
+  [PASS] B.2 each spin-lift Z3 character in the zero-mode space has multiplicity two
+  [PASS] B.3 a CP1 family of rank-one lines has the same Wilson zero-mode and character data
+  [PASS] B.4 Wilson data select a rank-two character projector, not a canonical rank-one eigenline
+  [PASS] C.1 rank-two eigenline freedom gives the same selected/spectator residual
+  [PASS] C.2 closure requires choosing alpha=0 and endpoint offset c=0
+  [PASS] C.3 eigenvector endpoint lift still carries an exact open-path offset
+  [PASS] D.1 finite Wilson eta equality does not identify the selected Brannen line
+  [PASS] D.2 picking the line with selected_weight=1 is the missing theorem
+  [PASS] E.1 lattice Wilson selected-eigenline route does not close delta
+  [PASS] E.2 residual is rank-one selected-line choice plus endpoint lift
+
+VERDICT: lattice Wilson selected-eigenline route does not close delta.
+KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO=TRUE
+DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_CLOSES_DELTA=FALSE
+RESIDUAL_ENDPOINT=theta_end-theta0-eta_APS
+RESIDUAL_EIGENLINE=rank_two_zero_mode_character_sector_not_canonically_split
+RESIDUAL_TRIVIALIZATION=wilson_eigenline_endpoint_lift_not_fixed
+RESIDUAL_SCALAR=minus_spectator_channel_plus_c_over_eta_APS

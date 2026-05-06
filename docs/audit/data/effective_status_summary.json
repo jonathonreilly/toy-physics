@@ -52,7 +52,7 @@
   "effective_status_counts": {
     "audit_in_progress": 3,
     "audited_conditional": 473,
-    "audited_failed": 16,
+    "audited_failed": 15,
     "audited_numerical_match": 22,
     "audited_renaming": 34,
     "decoration_under_cl3_color_automorphism_theorem": 2,
@@ -67,7 +67,7 @@
     "retained_bounded": 222,
     "retained_no_go": 119,
     "retained_pending_chain": 2,
-    "unaudited": 771
+    "unaudited": 772
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

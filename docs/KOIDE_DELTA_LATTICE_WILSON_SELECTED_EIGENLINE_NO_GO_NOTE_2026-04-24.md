@@ -17,11 +17,12 @@ Wilson operator + body-diagonal Z3 action
 
 ## Result
 
-Negative.  In this finite Wilson realization, the ambient eta proxy is not the
-exact APS value `2/9`; the runner reports the mismatch rather than promoting
-it.  Independently, the zero-mode character sector relevant to the selected
-endpoint has rank two.  The retained data select a spectral
-projector/eigenspace, not a unique rank-one line inside it.
+Negative.  In this finite Wilson realization, the ambient eta proxy equals the
+exact APS comparator `2/9` for the frozen L=3 construction, so this note no
+longer claims a retained ambient eta-mismatch residual.  The no-go is narrower:
+the zero-mode character sector relevant to the selected endpoint has rank two.
+The retained data select a spectral projector/eigenspace, not a unique rank-one
+line inside it.
 
 The runner constructs two orthonormal zero-mode lines with the same spin-lift
 `Z3` character.  Every normalized mixture:
@@ -60,8 +61,8 @@ They are not consequences of the finite Wilson data.
 
 ## Endpoint Lift
 
-Even if the ambient APS value is supplied externally and a rank-one line is
-selected, multiplying its lift by:
+Even after the finite ambient scalar matches the APS comparator, selecting a
+rank-one line is still independent data.  Multiplying a selected lift by:
 
 ```text
 exp(i s t)
@@ -76,7 +77,6 @@ endpoint by `s`.  Thus the endpoint basepoint remains an independent residual.
 RESIDUAL_ENDPOINT = theta_end-theta0-eta_APS
 RESIDUAL_EIGENLINE = rank_two_zero_mode_character_sector_not_canonically_split
 RESIDUAL_TRIVIALIZATION = wilson_eigenline_endpoint_lift_not_fixed
-RESIDUAL_AMBIENT = finite_Wilson_eta_proxy_not_exact_APS_value
 RESIDUAL_SCALAR = minus_spectator_channel_plus_c_over_eta_APS
 ```
 
@@ -88,6 +88,9 @@ RESIDUAL_SCALAR = minus_spectator_channel_plus_c_over_eta_APS
 - A retained theorem fixing the Wilson eigenline endpoint lift/basepoint.
 
 ## Verification
+
+2026-05-06 rerun transcript:
+`outputs/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go_2026-05-06.txt`.
 
 Run:
 
@@ -105,6 +108,5 @@ DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_CLOSES_DELTA=FALSE
 RESIDUAL_ENDPOINT=theta_end-theta0-eta_APS
 RESIDUAL_EIGENLINE=rank_two_zero_mode_character_sector_not_canonically_split
 RESIDUAL_TRIVIALIZATION=wilson_eigenline_endpoint_lift_not_fixed
-RESIDUAL_AMBIENT=finite_Wilson_eta_proxy_not_exact_APS_value
 RESIDUAL_SCALAR=minus_spectator_channel_plus_c_over_eta_APS
 ```
