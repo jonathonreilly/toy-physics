@@ -127,6 +127,15 @@ def main() -> int:
     firewall = assert_firewall()
     result = {
         "actual_current_surface_status": "no-go / exact-negative-boundary",
+        "proposal_allowed": False,
+        "bare_retained_allowed": False,
+        "investigation_route_closed": False,
+        "certification_scope": "current_surface_blocker_only",
+        "future_reopen_conditions": [
+            "derive beta_lambda(M_Pl)=0 independently",
+            "complete a retained Ward-free y_t selector",
+            "use a future Ward-ratio repair only as comparator unless it derives Planck stationarity",
+        ],
         "target": "test whether y_t/g_s=1/sqrt(6) implies beta_lambda(M_Pl)=0",
         "verdict": (
             "The Ward ratio does not imply Planck quartic beta stationarity. "

@@ -17,6 +17,8 @@
     "ward_decomp_no_go": true,
     "ward_ratio_no_go": true
   },
+  "bare_retained_allowed": false,
+  "certification_scope": "current_queue_exhaustion_only",
   "claim_firewall": {
     "checks": {
       "bare_retained_blocked": true,
@@ -28,7 +30,9 @@
     "direct_certificate_phase": "reduced_scope"
   },
   "fail_count": 0,
+  "investigation_closed": false,
   "pass_count": 33,
+  "proposal_allowed": false,
   "remaining_positive_routes": [
     "complete production direct-correlator campaign and supply an independent heavy top-sector mass parameter pin",
     "derive beta_lambda(M_Pl)=0 from new substrate scale/trace boundary structure",
@@ -37,83 +41,140 @@
   ],
   "runners": {
     "assumption_audit": {
+      "bare_retained_allowed": false,
+      "certification_scope": "current_surface_blocker_only",
       "fail_count": 0,
       "pass_count": 34,
       "path": "outputs/yt_pr230_physics_loop_assumption_audit_2026-05-01.json",
+      "proposal_allowed": false,
+      "remaining_open_premise": "see paired runner/note for current-surface missing premise",
       "status": "open / no full retained closure"
     },
     "beta_lambda_no_go": {
+      "bare_retained_allowed": false,
+      "certification_scope": "current_surface_blocker_only",
       "fail_count": 0,
       "pass_count": 20,
       "path": "outputs/yt_beta_lambda_planck_stationarity_no_go_2026-05-01.json",
+      "proposal_allowed": false,
+      "remaining_open_premise": "derive a substrate scale-stationarity theorem, or adopt it explicitly as a new conditional selector",
       "status": "no-go / exact-negative-boundary"
     },
     "fixed_point_no_go": {
+      "bare_retained_allowed": false,
+      "certification_scope": "current_surface_blocker_only",
       "fail_count": 0,
       "pass_count": 8,
       "path": "outputs/yt_asymptotic_safety_fixed_point_no_go_2026-05-01.json",
+      "proposal_allowed": false,
+      "remaining_open_premise": "a non-SM UV fixed-point theorem or new asymptotic-safety structure beyond the current substrate",
       "status": "no-go / exact-negative-boundary"
     },
     "gauge_input_sensitivity": {
+      "bare_retained_allowed": false,
+      "certification_scope": "current_surface_blocker_only",
       "fail_count": 0,
       "pass_count": 8,
       "path": "outputs/yt_planck_selector_gauge_input_sensitivity_2026-05-01.json",
+      "proposal_allowed": false,
+      "remaining_open_premise": "see paired runner/note for current-surface missing premise",
       "status": "conditional-support / assumption-sensitivity boundary"
     },
     "observed_inversion_no_go": {
+      "bare_retained_allowed": false,
+      "certification_scope": "current_surface_blocker_only",
       "fail_count": 0,
       "pass_count": 8,
       "path": "outputs/yt_observed_mass_inversion_no_go_2026-05-01.json",
+      "proposal_allowed": false,
+      "remaining_open_premise": "substrate-derived top mass parameter, production correlator evidence, or an independently derived UV selector",
       "status": "no-go / exact-negative-boundary for observed-comparator inversion as proof"
     },
     "planck_selector": {
+      "bare_retained_allowed": false,
+      "certification_scope": "current_surface_blocker_only",
       "fail_count": 0,
       "pass_count": 19,
       "path": "outputs/yt_planck_double_criticality_selector_2026-04-30.json",
+      "proposal_allowed": false,
+      "remaining_open_premise": "see paired runner/note for current-surface missing premise",
       "status": "conditional-support / open selector route"
     },
     "qfp_no_go": {
+      "bare_retained_allowed": false,
+      "certification_scope": "current_surface_blocker_only",
       "fail_count": 0,
       "pass_count": 7,
       "path": "outputs/yt_qfp_selector_no_go_2026-05-01.json",
+      "proposal_allowed": false,
+      "remaining_open_premise": "a UV boundary condition such as a retained Ward repair, Planck stationarity, or production measurement",
       "status": "no-go / exact-negative-boundary for QFP-as-selector"
     },
     "rge_only_no_go": {
+      "bare_retained_allowed": false,
+      "certification_scope": "current_surface_blocker_only",
       "fail_count": 0,
       "pass_count": 7,
       "path": "outputs/yt_rge_only_selector_no_go_2026-05-01.json",
+      "proposal_allowed": false,
+      "remaining_open_premise": "a y_t boundary condition from measurement or retained substrate theorem",
       "status": "no-go / exact-negative-boundary for RGE-only selector"
     },
     "scale_anchor_sensitivity": {
+      "bare_retained_allowed": false,
+      "certification_scope": "current_surface_blocker_only",
       "fail_count": 0,
       "pass_count": 7,
       "path": "outputs/yt_planck_selector_scale_anchor_sensitivity_2026-05-01.json",
+      "proposal_allowed": false,
+      "remaining_open_premise": "see paired runner/note for current-surface missing premise",
       "status": "conditional-support / assumption-sensitivity boundary"
     },
     "scale_stationarity_no_go": {
+      "bare_retained_allowed": false,
+      "certification_scope": "current_surface_blocker_only",
       "fail_count": 0,
       "pass_count": 24,
       "path": "outputs/yt_scale_stationarity_substrate_no_go_2026-05-01.json",
+      "proposal_allowed": false,
+      "remaining_open_premise": "a new theorem deriving a scale current/trace-stationarity condition from extra substrate structure, or an explicit new Planck scale-stationarity selector premise",
       "status": "no-go / exact-negative-boundary"
     },
     "trace_anomaly_no_go": {
+      "bare_retained_allowed": false,
+      "certification_scope": "current_surface_blocker_only",
       "fail_count": 0,
       "pass_count": 14,
       "path": "outputs/yt_trace_anomaly_stationarity_no_go_2026-05-01.json",
+      "proposal_allowed": false,
+      "remaining_open_premise": "a new quantum EMT/trace-anomaly theorem with operator independence and a Planck conformal/stationarity boundary",
       "status": "no-go / exact-negative-boundary"
     },
     "vacuum_stability_no_go": {
+      "bare_retained_allowed": false,
+      "certification_scope": "current_surface_blocker_only",
       "fail_count": 0,
       "pass_count": 13,
       "path": "outputs/yt_vacuum_stability_stationarity_no_go_2026-05-01.json",
+      "proposal_allowed": false,
+      "remaining_open_premise": "a new multiple-point/double-zero theorem or explicit Planck tangency selector",
       "status": "no-go / exact-negative-boundary"
     },
     "ward_ratio_no_go": {
+      "bare_retained_allowed": false,
+      "certification_scope": "current_surface_blocker_only",
       "fail_count": 0,
       "pass_count": 7,
       "path": "outputs/yt_ward_ratio_stationarity_no_go_2026-05-01.json",
+      "proposal_allowed": false,
+      "remaining_open_premise": "beta_lambda(M_Pl)=0 remains independent of any future Ward-ratio repair",
       "status": "no-go / exact-negative-boundary"
     }
   },
+  "strict_non_claims": [
+    "not a retained or proposed_retained y_t closure",
+    "not a permanent no-go against future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette/u0, kappa_s=1, c2=1, or Z_match=1 as proof input"
+  ],
   "verdict": "The current PR #230 physics-loop queue has closed the explored non-MC shortcuts negatively or demoted them to conditional support. No retained y_t closure is available on the current surface.  The remaining positive routes are production correlator evidence plus an independent top-mass parameter pin, a new substrate theorem for Planck stationarity, or an explicit new selector premise."
 }

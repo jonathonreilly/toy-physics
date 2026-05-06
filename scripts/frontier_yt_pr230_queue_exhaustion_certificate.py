@@ -91,6 +91,12 @@ def assert_runner_outputs() -> dict[str, dict[str, object]]:
             "pass_count": data.get("pass_count"),
             "fail_count": data.get("fail_count"),
             "status": data.get("actual_current_surface_status") or data.get("status", {}).get("actual_current_surface_status"),
+            "proposal_allowed": data.get("proposal_allowed", False),
+            "bare_retained_allowed": data.get("bare_retained_allowed", False),
+            "certification_scope": data.get("certification_scope", "current_surface_blocker_only"),
+            "remaining_open_premise": data.get("remaining_open_premise")
+            or data.get("proposal_allowed_reason")
+            or "see paired runner/note for current-surface missing premise",
         }
     return results
 
@@ -133,6 +139,10 @@ def main() -> int:
 
     result = {
         "actual_current_surface_status": "open / queue exhausted for current non-MC PR230 routes",
+        "proposal_allowed": False,
+        "bare_retained_allowed": False,
+        "investigation_closed": False,
+        "certification_scope": "current_queue_exhaustion_only",
         "verdict": (
             "The current PR #230 physics-loop queue has closed the explored "
             "non-MC shortcuts negatively or demoted them to conditional support. "
@@ -149,6 +159,11 @@ def main() -> int:
             "derive beta_lambda(M_Pl)=0 from new substrate scale/trace boundary structure",
             "adopt beta_lambda(M_Pl)=0 as an explicit selector premise and keep the result conditional",
             "re-permit and independently re-audit the old Ward/H_unit route as a definition source rather than a derivation",
+        ],
+        "strict_non_claims": [
+            "not a retained or proposed_retained y_t closure",
+            "not a permanent no-go against future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
+            "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette/u0, kappa_s=1, c2=1, or Z_match=1 as proof input",
         ],
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

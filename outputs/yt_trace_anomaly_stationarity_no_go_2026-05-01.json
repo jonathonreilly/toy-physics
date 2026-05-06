@@ -11,8 +11,17 @@
     "scalar_trace_requires_tensor": true,
     "vacuum_bounded": true
   },
+  "bare_retained_allowed": false,
+  "certification_scope": "current_surface_blocker_only",
   "fail_count": 0,
+  "future_reopen_conditions": [
+    "derive a quantum EMT/trace-anomaly theorem on the current substrate",
+    "derive operator-independence plus a Planck conformal/stationarity boundary",
+    "supply a retained bridge from trace stationarity to beta_lambda(M_Pl)=0"
+  ],
+  "investigation_route_closed": false,
   "pass_count": 14,
+  "proposal_allowed": false,
   "remaining_open_premise": "a new quantum EMT/trace-anomaly theorem with operator independence and a Planck conformal/stationarity boundary",
   "routes": [
     {

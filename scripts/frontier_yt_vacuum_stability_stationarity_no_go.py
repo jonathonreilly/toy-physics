@@ -203,6 +203,15 @@ def main() -> int:
 
     result = {
         "actual_current_surface_status": "no-go / exact-negative-boundary",
+        "proposal_allowed": False,
+        "bare_retained_allowed": False,
+        "investigation_route_closed": False,
+        "certification_scope": "current_surface_blocker_only",
+        "future_reopen_conditions": [
+            "derive a multiple-point or double-zero theorem",
+            "derive an independent Planck tangency selector",
+            "supply a retained theorem converting one-sided stability into beta_lambda(M_Pl)=0",
+        ],
         "target": "derive beta_lambda(M_Pl)=0 from lambda(M_Pl)=0 plus one-sided vacuum stability",
         "verdict": (
             "One-sided vacuum stability at a lambda=0 upper boundary gives a "

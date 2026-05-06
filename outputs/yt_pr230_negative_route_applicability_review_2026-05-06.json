@@ -1,0 +1,215 @@
+{
+  "actual_current_surface_status": "exact support / selected PR230 negative-route applicability review passed",
+  "bare_retained_allowed": false,
+  "certification_scope": "current_surface_blocker_meta_review_only",
+  "fail_count": 0,
+  "future_reopen_paths_preserved": true,
+  "investigation_route_closed": false,
+  "loop_wording_issues": [],
+  "negative_results_are_current_surface_blockers_only": true,
+  "no_retained_negative_overclaim": true,
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This is a meta-review of route blockers. It adds no y_t closure evidence and no retained/proposed_retained theorem.",
+  "retained_negative_audit_rows": [],
+  "route_reviews": [
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks source-only O_sp -> O_H identity on the current surface.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen with C_sH/C_HH Gram purity, W/Z response, or neutral rank-one theorem.",
+      "id": "source_only_osp_oh_identity",
+      "path": "outputs/yt_osp_oh_identity_stretch_attempt_2026-05-03.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / O_sp-to-O_H identity not derived on current surface"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks assumption-only closure of O_sp -> O_H.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen when one concrete missing premise is supplied.",
+      "id": "osp_oh_assumption_overclaim",
+      "path": "outputs/yt_osp_oh_assumption_route_audit_2026-05-04.json",
+      "proposal_allowed": false,
+      "status": "open / O_sp-to-O_H assumption-route audit complete; retained closure still blocked"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks source-only LSZ data as physical y_t.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen with source-Higgs overlap, W/Z response, or orthogonal-null theorem.",
+      "id": "source_functional_lsz_identifiability",
+      "path": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / source-functional LSZ identifiability theorem"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks claims that a retained same-surface O_H authority is already in the repo.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen with a new registered same-surface O_H certificate.",
+      "id": "canonical_higgs_repo_authority_absent",
+      "path": "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / repo-wide canonical-Higgs O_H authority audit"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks reusing H_unit as O_H without the missing certificates.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen only through a non-Ward O_H/operator-normalization certificate.",
+      "id": "hunit_not_canonical_higgs",
+      "path": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / H_unit not canonical-Higgs operator realization"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks launching source-Higgs rows before O_H is certified.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen by supplying the source-Higgs operator certificate and production rows.",
+      "id": "source_higgs_readiness_missing_oh",
+      "path": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+      "proposal_allowed": false,
+      "status": "open / source-Higgs production launch blocked by missing O_H certificate"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks finite ladder/Feshbach support as Schur A/B/C rows.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen with same-surface Schur scalar kernel rows.",
+      "id": "schur_row_candidate_extraction",
+      "path": "outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / Schur row candidate extraction from finite ladder support"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks treating current FH/LSZ rows as Schur kernel rows.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen when complete same-surface Schur rows are written.",
+      "id": "schur_kprime_row_absence",
+      "path": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
+      "proposal_allowed": false,
+      "status": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks symmetry-label/commutant-only rank-one purity.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen with a dynamical irreducibility or positivity-improving theorem.",
+      "id": "neutral_scalar_commutant_rank",
+      "path": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / neutral scalar commutant does not force rank-one purity"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks claims that neutral irreducibility authority already exists.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen with a registered primitive-cone/positivity-improvement certificate.",
+      "id": "neutral_irreducibility_authority_absent",
+      "path": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / neutral-scalar irreducibility authority absent on current PR230 surface"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks one-Higgs monomial selection as orthogonal-neutral null theorem.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen with an actual orthogonal-neutral top-coupling exclusion or measurement.",
+      "id": "one_higgs_orthogonal_null",
+      "path": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / no-orthogonal-top-coupling selection rule not derived"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks static EW algebra as a same-source EW production action.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen with same-source EW action certificate plus W/Z rows.",
+      "id": "wz_same_source_ew_action_absent",
+      "path": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / same-source EW action not defined on PR230 surface"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks static/slope-only W/Z data as W/Z correlator mass fits.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen with W/Z two-point correlator rows and mass-fit windows.",
+      "id": "wz_mass_fit_path_absent",
+      "path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks current QCD-only outputs as W/Z response rows.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen with same-source W/Z response measurement rows.",
+      "id": "wz_response_row_production_attempt",
+      "path": "outputs/yt_wz_response_row_production_attempt_2026-05-03.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / WZ response row production attempt on current surface"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks top/WZ response combination without sector-overlap identity.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen with a same-source sector-overlap identity or measured correction.",
+      "id": "same_source_sector_overlap",
+      "path": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / same-source sector-overlap identity obstruction"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks a spectral sum-rule shortcut to source-Higgs overlap.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen with a complete same-surface overlap theorem or direct rows.",
+      "id": "source_overlap_sum_rule",
+      "path": "outputs/yt_source_overlap_sum_rule_no_go_2026-05-02.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / source-overlap spectral sum-rule no-go"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks short-distance/OPE data as scalar LSZ pole residue.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen with model-class analytic continuation or pole-control theorem.",
+      "id": "short_distance_ope_lsz",
+      "path": "outputs/yt_short_distance_ope_lsz_no_go_2026-05-02.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / short-distance OPE not scalar LSZ closure"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks effective-mass plateau fits as scalar LSZ residue closure.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen with explicit residue extraction and FV/IR/model-class control.",
+      "id": "effective_mass_plateau_residue",
+      "path": "outputs/yt_effective_mass_plateau_residue_no_go_2026-05-02.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / effective-mass plateau not scalar LSZ residue closure"
+    },
+    {
+      "applies_on_current_surface": true,
+      "current_scope": "Blocks one finite source-shift radius as the zero-source FH derivative.",
+      "fail_count": 0,
+      "future_reopen_condition": "Reopen with multi-radius finite-source-linearity plus zero-source derivative control.",
+      "id": "finite_source_shift_derivative",
+      "path": "outputs/yt_finite_source_shift_derivative_no_go_2026-05-02.json",
+      "proposal_allowed": false,
+      "status": "exact negative boundary / finite source-shift slope not zero-source derivative certificate"
+    }
+  ],
+  "selected_negative_results_apply_on_current_surface": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not prove any permanent no-go against future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette/u0, kappa_s=1, c2=1, Z_match=1, or cos(theta)=1",
+    "does not modify or certify chunk outputs"
+  ],
+  "verdict": "The selected PR230 negative results are valid as current-surface route blockers and assumption firewalls. They do not certify a permanent retained negative theorem and must not close future routes that supply the named missing evidence: C_sH/C_HH Gram purity, same-source W/Z response rows, Schur A/B/C rows, neutral rank-one/irreducibility, scalar-LSZ pole control, or production data plus matching."
+}

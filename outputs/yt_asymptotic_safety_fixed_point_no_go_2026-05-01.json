@@ -5,6 +5,8 @@
     "selector_conditional": true,
     "selector_premise_open": true
   },
+  "bare_retained_allowed": false,
+  "certification_scope": "current_surface_blocker_only",
   "fail_count": 0,
   "full_fixed_point": {
     "beta_g1": "41*g1**3/10",
@@ -17,12 +19,19 @@
     "full_solution_y": "[{y: 0}]",
     "gauge_solution": "[{g1: 0, g2: 0, g3: 0}]"
   },
+  "future_reopen_conditions": [
+    "derive a non-SM UV fixed-point theorem from the substrate",
+    "derive asymptotic-safety structure beyond the current perturbative SM bridge",
+    "supply an independent retained partial-beta selector"
+  ],
+  "investigation_route_closed": false,
   "partial_fixed_point": {
     "compatibility_condition": "(427*g1**4 + 3690*g1**2*g2**2 + 21760*g1**2*g3**2 + 2025*g2**4 + 57600*g2**2*g3**2 + 102400*g3**4)/32400",
     "y2_from_beta_y_zero": "17*g1**2/90 + g2**2/2 + 16*g3**2/9",
     "y4_from_beta_lambda_zero": "g2**4/8 + (3*g1**2 + 5*g2**2)**2/400"
   },
   "pass_count": 8,
+  "proposal_allowed": false,
   "remaining_open_premise": "a non-SM UV fixed-point theorem or new asymptotic-safety structure beyond the current substrate",
   "target": "derive beta_lambda(M_Pl)=0 from a perturbative SM fixed point/asymptotic-safety route",
   "verdict": "The one-loop SM beta-vector has only the Gaussian gauge fixed point in the perturbative subsystem.  Imposing full beta-vector vanishing then forces y_t=0, not the PR #230 selector value. Partial beta conditions are extra selectors, not substrate closure."

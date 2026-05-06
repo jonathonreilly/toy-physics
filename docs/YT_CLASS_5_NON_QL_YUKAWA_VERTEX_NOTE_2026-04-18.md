@@ -997,8 +997,8 @@ this class.
 - The retained b-quark Outcome A (33× falsification on m_b)
   is unchanged.
 - The retained H_unit flavor-column no-go (Class #1), gen-
-  hierarchy no-go (Class #2), RH species no-go (Class #4) are
-  all consistent with this note and remain as-is.
+  hierarchy amended narrow no-go / Fourier-circulant conditional route
+  (Class #2), RH species no-go (Class #4) are all consistent with this note.
 
 ### 6.3 What this note adds
 

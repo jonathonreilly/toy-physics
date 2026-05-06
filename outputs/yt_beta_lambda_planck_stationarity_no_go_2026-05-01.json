@@ -8,8 +8,17 @@
     "taste_mentions_beta": false,
     "vacuum_inherits_yt": true
   },
+  "bare_retained_allowed": false,
+  "certification_scope": "current_surface_blocker_only",
   "fail_count": 0,
+  "future_reopen_conditions": [
+    "derive a substrate scale-stationarity theorem",
+    "derive an equivalent Planck-boundary selector from retained primitives",
+    "adopt a new explicit selector premise and keep the result conditional"
+  ],
+  "investigation_route_closed": false,
   "pass_count": 20,
+  "proposal_allowed": false,
   "remaining_open_premise": "derive a substrate scale-stationarity theorem, or adopt it explicitly as a new conditional selector",
   "routes": [
     {

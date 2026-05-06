@@ -98,6 +98,15 @@ def main() -> int:
 
     result = {
         "actual_current_surface_status": "no-go / exact-negative-boundary for observed-comparator inversion as proof",
+        "proposal_allowed": False,
+        "bare_retained_allowed": False,
+        "investigation_route_closed": False,
+        "certification_scope": "current_surface_blocker_only",
+        "future_reopen_conditions": [
+            "derive substrate top mass or y_t without observed target inversion",
+            "supply production correlator evidence plus matching/running",
+            "derive an independently retained UV selector before comparing to observations",
+        ],
         "target": "derive y_t by inverting observed top or Higgs-sector comparators",
         "verdict": (
             "Observed m_t, y_t, and m_H values may be used as comparators after "

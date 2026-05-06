@@ -1,5 +1,6 @@
 {
   "actual_current_surface_status": "open / K-prime closure attempt blocked",
+  "bare_retained_allowed": false,
   "blocker_rows": [
     {
       "blocked": true,
@@ -38,8 +39,12 @@
     }
   ],
   "blocking_count": 7,
+  "certification_scope": "current_surface_blocker_only",
+  "current_closure_gate_passed": false,
   "exact_next_action": "Continue seed-controlled FH/LSZ production replacement chunks, or derive K'(pole) together with the physical scalar carrier/projector and zero-mode/IR/volume limiting prescription.",
+  "explicit_positive_kprime_inputs_present": false,
   "fail_count": 0,
+  "investigation_route_closed": false,
   "kprime_closed": false,
   "parent_certificates": {
     "carrier_projector": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
@@ -54,7 +59,7 @@
     "total_momentum_derivative_scout": "outputs/yt_scalar_ladder_total_momentum_derivative_scout_2026-05-01.json",
     "ward_identity": "outputs/yt_scalar_kernel_ward_identity_obstruction_2026-05-01.json"
   },
-  "pass_count": 9,
+  "pass_count": 10,
   "proposal_allowed": false,
   "proposal_allowed_reason": "K'(pole) is named but not derived or measured on a retained current surface.",
   "strict_non_claims": [

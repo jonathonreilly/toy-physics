@@ -7,7 +7,15 @@
     "no_hunit_inversion_route": true,
     "selector_note_observed_values_comparators_only": true
   },
+  "bare_retained_allowed": false,
+  "certification_scope": "current_surface_blocker_only",
   "fail_count": 0,
+  "future_reopen_conditions": [
+    "derive substrate top mass or y_t without observed target inversion",
+    "supply production correlator evidence plus matching/running",
+    "derive an independently retained UV selector before comparing to observations"
+  ],
+  "investigation_route_closed": false,
   "numeric": {
     "mt_pole_pdg_2025_gev": 172.56,
     "naive_y_from_pole_mass": 0.9908798917333252,
@@ -16,6 +24,7 @@
     "yt_v_comparator": 0.9176
   },
   "pass_count": 8,
+  "proposal_allowed": false,
   "remaining_open_premise": "substrate-derived top mass parameter, production correlator evidence, or an independently derived UV selector",
   "target": "derive y_t by inverting observed top or Higgs-sector comparators",
   "verdict": "Observed m_t, y_t, and m_H values may be used as comparators after a substrate calculation.  They cannot be load-bearing proof inputs for a retained y_t derivation.  Naively inverting the pole mass also does not produce the running y_t(v) comparator without a matching and running bridge."

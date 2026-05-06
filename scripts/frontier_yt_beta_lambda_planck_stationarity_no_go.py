@@ -271,6 +271,15 @@ def main() -> int:
 
     result = {
         "actual_current_surface_status": "no-go / exact-negative-boundary",
+        "proposal_allowed": False,
+        "bare_retained_allowed": False,
+        "investigation_route_closed": False,
+        "certification_scope": "current_surface_blocker_only",
+        "future_reopen_conditions": [
+            "derive a substrate scale-stationarity theorem",
+            "derive an equivalent Planck-boundary selector from retained primitives",
+            "adopt a new explicit selector premise and keep the result conditional",
+        ],
         "target": "derive beta_lambda(M_Pl)=0 from current Cl(3)/Z^3 substrate premises",
         "verdict": (
             "The current substrate derives lambda(M_Pl)=0 and finite scalar "

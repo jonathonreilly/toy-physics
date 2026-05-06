@@ -6,7 +6,15 @@
     "selector_note_requires_sm_rge_bridge": true,
     "selector_note_requires_stationarity": true
   },
+  "bare_retained_allowed": false,
+  "certification_scope": "current_surface_blocker_only",
   "fail_count": 0,
+  "future_reopen_conditions": [
+    "supply a retained y_t boundary condition",
+    "complete a retained production measurement plus matching bridge",
+    "derive a retained Planck or Ward-free selector"
+  ],
+  "investigation_route_closed": false,
   "numeric": {
     "monotonic": true,
     "samples": [
@@ -35,6 +43,7 @@
     "yt_v_spread": 0.40000000000000013
   },
   "pass_count": 7,
+  "proposal_allowed": false,
   "remaining_open_premise": "a y_t boundary condition from measurement or retained substrate theorem",
   "target": "derive y_t from the SM RGE bridge without a boundary condition",
   "verdict": "The RGE bridge transports boundary data.  It does not select a unique y_t by itself.  A measured mass, production certificate, Ward repair, or independently derived Planck stationarity condition remains load-bearing."

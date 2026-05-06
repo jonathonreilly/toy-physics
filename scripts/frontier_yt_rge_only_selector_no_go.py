@@ -118,6 +118,15 @@ def main() -> int:
 
     result = {
         "actual_current_surface_status": "no-go / exact-negative-boundary for RGE-only selector",
+        "proposal_allowed": False,
+        "bare_retained_allowed": False,
+        "investigation_route_closed": False,
+        "certification_scope": "current_surface_blocker_only",
+        "future_reopen_conditions": [
+            "supply a retained y_t boundary condition",
+            "complete a retained production measurement plus matching bridge",
+            "derive a retained Planck or Ward-free selector",
+        ],
         "target": "derive y_t from the SM RGE bridge without a boundary condition",
         "verdict": (
             "The RGE bridge transports boundary data.  It does not select a "

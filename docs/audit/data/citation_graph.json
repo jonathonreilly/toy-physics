@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T01:30:32.161974+00:00",
+  "generated_at": "2026-05-06T02:06:08.501125+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39478,7 +39478,7 @@
         "lepton_shared_higgs_universality_collapse_note",
         "neutrino_dirac_two_higgs_canonical_reduction_note"
       ],
-      "note_hash": "51d8547a3e121158d0c0a5cc237f89af3f709a4a69a13f915100ff38ffb1ae78",
+      "note_hash": "1a12b9603d204889c7076e30290d803f12d18adad9401da6bcd35af9f9aa7ce1",
       "path": "docs/YT_CLASS_3_SUSY_2HDM_ANALYSIS_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_class_3_susy_2hdm.py",
       "title": "Class #3: SUSY / 2HDM Retention Analysis Note"
@@ -39497,7 +39497,7 @@
         "anomaly_forces_time_theorem",
         "yukawa_color_projection_theorem"
       ],
-      "note_hash": "35dc87dbbd639ef21996a9f98398f3b794cb6670080f9a0ec698bb07a414772e",
+      "note_hash": "5c97e40b95bec6d297602dc4c0e7f232cf146625aa84d000edd1a8cb6e7bb7ad",
       "path": "docs/YT_CLASS_5_NON_QL_YUKAWA_VERTEX_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_class_5_non_ql_yukawa.py",
       "title": "Class 5 Non-Q_L-Block Yukawa Vertex Retention Analysis Note"
@@ -39516,7 +39516,7 @@
         "native_gauge_closure_note",
         "yt_generation_hierarchy_primitive_analysis_note_2026-04-18"
       ],
-      "note_hash": "1cd133f03d9d9cac5c9ca756409a39989af4771dfebde2b2dea7f1aeda1818ae",
+      "note_hash": "98530837446ed2893bfe35dc490e6fd79bf9e3b6113f0c7339b19144c30b724b",
       "path": "docs/YT_CLASS_6_C3_BREAKING_OPERATOR_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_class_6_c3_breaking.py",
       "title": "YT Class #6 \u2014 C_{3[111]}-Breaking Operator Retention Analysis Note"
@@ -41128,7 +41128,7 @@
         "charged_lepton_mass_hierarchy_review_note_2026-04-17",
         "structural_no_go_survey_note"
       ],
-      "note_hash": "a06abba5d43e6fef3b504d58ca99e605561f88c79a52916882da976e934c2ce3",
+      "note_hash": "27964b92e30417f28f8aeeb5f62d1db8457e9a7f5ced3274991ee1a06309021f",
       "path": "docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_generation_hierarchy_primitive.py",
       "title": "Generation-Hierarchy Primitive Retention Analysis Note"
@@ -42137,6 +42137,16 @@
       "path": "docs/YT_PR230_MISSING_BRIDGE_LITERATURE_ASSUMPTION_EXERCISES_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_pr230_missing_bridge_literature_assumption_exercises.py",
       "title": "PR230 Missing Bridge Literature And Assumption Exercises"
+    },
+    "yt_pr230_negative_route_applicability_review_note_2026-05-06": {
+      "claim_id": "yt_pr230_negative_route_applicability_review_note_2026-05-06",
+      "current_status": "support",
+      "current_status_raw": "exact support / selected negative-route applicability review",
+      "deps": [],
+      "note_hash": "4ac1773eab7437e61f50694d827e344025fb1fd49ec4c20ef03fbd88612125f2",
+      "path": "docs/YT_PR230_NEGATIVE_ROUTE_APPLICABILITY_REVIEW_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_negative_route_applicability_review.py",
+      "title": "PR230 Negative-Route Applicability Review"
     },
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05": {
       "claim_id": "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
@@ -45250,6 +45260,7 @@
     "yt_pr230_matching_running_bridge_gate_note_2026-05-04",
     "yt_pr230_minimal_axioms_yukawa_summary_firewall_note_2026-05-05",
     "yt_pr230_missing_bridge_literature_assumption_exercises_note_2026-05-05",
+    "yt_pr230_negative_route_applicability_review_note_2026-05-06",
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
     "yt_pr230_nonchunk_current_surface_exhaustion_gate_note_2026-05-05",
     "yt_pr230_nonchunk_cycle14_route_selector_gate_note_2026-05-05",
@@ -45411,16 +45422,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1069,
-    "node_count": 2022,
-    "root_count": 1535,
-    "runners_with_path": 1519,
+    "leaf_count": 1070,
+    "node_count": 2023,
+    "root_count": 1536,
+    "runners_with_path": 1520,
     "status_counts": {
       "bounded": 555,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 432,
+      "support": 433,
       "unknown": 559
     }
   }

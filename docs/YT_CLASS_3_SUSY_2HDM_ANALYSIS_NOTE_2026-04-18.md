@@ -58,7 +58,9 @@ analysis. It does **not** modify:
   whose Outcome C closure is unchanged;
 - the retained generation-hierarchy primitive analysis (candidate
   class #2) (`docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`),
-  whose Outcome D (retained no-go) is unchanged;
+  whose amended Outcome D is a retained narrow no-go for the original
+  position-basis/candidate surfaces, while the Fourier/circulant route remains
+  conditional on A1/P1/unit/phase gaps;
 - the retained right-handed species-dependence analysis (candidate
   class #4) (`docs/YT_RIGHT_HANDED_SPECIES_DEPENDENCE_NOTE_2026-04-18.md`),
   whose Outcome C is unchanged;
@@ -102,7 +104,7 @@ retained SUSY completion, and therefore no framework-native tan β.
   right-handed completion from anomaly cancellation on the SM branch.
 - **H_unit flavor-column (class #1 closed):**
   [`docs/YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md`](YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md).
-- **Generation-hierarchy primitive (class #2 closed):**
+- **Generation-hierarchy primitive (class #2 narrowed):**
   [`docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`](YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md).
 - **Right-handed species dependence (class #4 closed):**
   [`docs/YT_RIGHT_HANDED_SPECIES_DEPENDENCE_NOTE_2026-04-18.md`](YT_RIGHT_HANDED_SPECIES_DEPENDENCE_NOTE_2026-04-18.md).
@@ -216,15 +218,15 @@ classes identified in the b-quark retention analysis are now:
 | # | Class | Status |
 |---|---|---|
 | 1 | H_unit flavor-column decomposition | **closed (Outcome C)** — Ward `YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18` |
-| 2 | Generation-hierarchy primitive | **closed (Outcome D)** — `YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18` |
+| 2 | Generation-hierarchy primitive | **narrow no-go (amended Outcome D)** for original position-basis/candidate surfaces; Fourier/circulant route conditional |
 | 3 | SUSY-like / 2HDM with tan β | **closed (Outcome B, this note)** |
 | 4 | Right-handed sector species dependence | **closed (Outcome C)** — `YT_RIGHT_HANDED_SPECIES_DEPENDENCE_NOTE_2026-04-18` |
 
-**All four candidate primitives identified in the b-quark retention
-analysis are now closed as insufficient to break Yukawa unification on
-the current retained Cl(3)/Z³ surface.** The charged-flavor mass
-hierarchy retention gap stands: a primitive beyond the currently
-enumerated classes is required.
+**The originally enumerated candidate primitives identified in the b-quark
+retention analysis remain insufficient to break Yukawa unification on the
+current retained Cl(3)/Z³ surface.** The Class #2 statement is now narrow:
+the Fourier/circulant mechanism is not closed by the no-go and remains
+conditional on A1/P1/unit/phase gaps.
 
 ### §0.5 Confidence
 
@@ -602,23 +604,22 @@ following would need to be retained:
 
 All four sub-paths close. **Outcome B (retained no-go) is confirmed.**
 
-### 5.3 Status across four candidate classes (now all closed)
+### 5.3 Status across four candidate classes (amended)
 
-With this note closing class #3, the four candidate classes identified
-in `YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18` §5.1 are all
-closed:
+With this note closing class #3, the original candidate classes identified in
+`YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18` §5.1 stand as:
 
 ```
     Class #1  H_unit flavor-column        : C (no-go)  — class-1 note
-    Class #2  Generation hierarchy         : D (no-go) — class-2 note
+    Class #2  Generation hierarchy         : D (narrow no-go; Fourier route conditional) — class-2 note
     Class #3  SUSY / 2HDM with tan β       : B (no-go) — THIS note
     Class #4  Right-handed species dep.    : C (no-go) — class-4 note
 ```
 
-**None of the four candidate primitives identified in the b-quark
-retention analysis are sufficient to break Yukawa unification on the
-retained Cl(3)/Z³ surface.** The retention gap (33× m_b falsification,
-0.57× m_t undershoot) stands.
+**None of the original candidate primitives identified in the b-quark
+retention analysis are sufficient as currently retained.** The amended Class
+#2 Fourier/circulant route is preserved as conditional support, not counted as
+closed by the class #2 no-go.
 
 ---
 
@@ -653,8 +654,9 @@ retained SUSY completion. Specifically:
 - A cross-reference survey of the admitted-extension 2HDM notes,
   confirming that even within those extensions, internal obstructions
   prevent class #3 from resolving the b-quark retention gap.
-- A completeness table: with class #3 closed, all four candidate
-  classes identified in the b-quark retention analysis are now closed.
+- A candidate-class table: with class #3 closed, the original candidate
+  classes remain insufficient as retained inputs, while amended Class #2 keeps
+  the Fourier/circulant route open/conditional.
 
 ### 6.3 What does not change
 
@@ -711,10 +713,11 @@ This note claims:
 > framework-native parameter, and there is no retained mechanism for
 > 2HDM-style species differentiation of up-type vs down-type Yukawas.
 > Candidate class #3 (SUSY / 2HDM) from the b-quark retention analysis
-> is **closed as Outcome B (retained no-go)**. With class #3 closed,
-> all four candidate classes identified in the b-quark retention
-> analysis are now closed; the 33× falsification on m_b is not
-> resolved by any of them under the current retained surface.
+  > is **closed as Outcome B (retained no-go)**. With class #3 closed,
+  > the original candidate-class list does not resolve the 33× falsification
+  > on m_b under the current retained surface. The amended Class #2
+  > Fourier/circulant route is not closed here; it remains conditional on its
+  > named non-retained gaps.
 
 It does **not** claim:
 
@@ -856,10 +859,10 @@ The runner verifies:
 13. **Species-differentiation test on class #3:** verify that no
     retained mechanism (a)–(d) in §5.2 holds. Outcome B (no-go)
     confirmed.
-14. **Completeness table across classes #1–#4:** verify that with
-    class #3 closed, all four candidate classes identified in the
-    b-quark retention note are now closed; the retention gap
-    persists.
+14. **Candidate table across classes #1–#4:** verify that with
+    class #3 closed, the original candidate classes remain insufficient as
+    retained inputs; amended Class #2 preserves the Fourier/circulant route as
+    conditional.
 15. **Retention status:** this note closes candidate class #3 as
     retained no-go. No modification of Ward theorem, D9, D16, D17,
     b-quark analysis, or publication surface.

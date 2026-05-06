@@ -160,7 +160,13 @@ This note is a **retention-analysis note** on the generation-hierarchy primitive
   starting point of this analysis;
 - any publication-surface file. No publication table is modified.
 
-What this note adds is narrow and decisive: a framework-native decision on whether the retained three-generation structure supplies ABSOLUTE generation-dependent Yukawa weights at M_Pl capable of rescuing the fermion mass hierarchy. The answer is NO: the retained C_{3[111]} cyclic structure is symmetric, the retained algebra on H_hw=1 is the full M_3(C) with no canonical scale selector, and any generation-resolved hierarchy must come from content OUTSIDE the current retained surface.
+What this note adds, after the §0 amendment, is narrow and decisive: a
+framework-native decision on whether the tested position-basis diagonal and
+candidate-path surfaces supply ABSOLUTE generation-dependent Yukawa weights at
+M_Pl capable of rescuing the fermion mass hierarchy. The answer for those
+tested surfaces is NO. The broader Fourier-basis circulant mechanism is not
+closed negatively by this note; it remains a positive algebraic mechanism with
+named non-retained A1/P1/unit/phase gaps.
 
 ---
 
@@ -520,7 +526,8 @@ Any retained primitive must therefore be BOTH generation- AND species-dependent.
 
 ### 5.1 Summary of closures
 
-All four paths close negatively on the retained surface:
+All four original position-basis/candidate paths close negatively on the
+retained surface:
 
 1. **Path A (C_{3[111]} cycle)** — the cyclic operator permutes generations, producing either uniform weights (flat) or complex/negative weights (characters), neither of which gives a real positive hierarchy.
 2. **Path B (orbit-algebra hierarchy)** — the 3 within 8 = 1 + 1 + 3 + 3 sits at a single S_3 permutation carrier (A_1 ⊕ E); it does NOT carry a 3-level hierarchy.
@@ -529,11 +536,20 @@ All four paths close negatively on the retained surface:
 
 ### 5.2 Retention-gap statement
 
-The retained three-generation structure is generationally **SYMMETRIC** — the three generations X_1, X_2, X_3 are cyclically equivalent under the retained C_{3[111]} operator. The observed generation-resolved mass hierarchy is **ASYMMETRIC** (5 orders of magnitude spread for up-type, 3 orders for down-type, 3.5 orders for lepton). Any bridge between the retained symmetric structure and the observed asymmetric hierarchy requires a primitive that BREAKS the cyclic symmetry.
+The retained three-generation position-basis diagonal structure is
+generationally **SYMMETRIC** — the three generations X_1, X_2, X_3 are
+cyclically equivalent under the retained C_{3[111]} operator. The observed
+generation-resolved mass hierarchy is **ASYMMETRIC** (5 orders of magnitude
+spread for up-type, 3 orders for down-type, 3.5 orders for lepton). Any bridge
+from this position-basis diagonal surface to the observed asymmetric hierarchy
+requires a primitive that breaks the cyclic symmetry or an independent retained
+readout of the Fourier-basis circulant spectrum.
 
-The current retained surface does not contain such a primitive.
+The current retained surface does not contain such a primitive/readout.
 
-This is a **retained obstruction**, identical in status to the charged-lepton bounded package's observational-pin requirement, now extended across all three species (up, down, lepton).
+This is a **retained narrow obstruction** for the tested position-basis and
+candidate-path surfaces, not a permanent no-go against the amended
+Fourier/circulant route.
 
 ### 5.3 Named missing primitives (sharply posed, not retained)
 
@@ -561,7 +577,11 @@ This result is structurally uniform across all three species:
 | Down-type | generation hierarchy not derived; Block 6 uniformity applies | required, 3 pins (m_d, m_s, m_b) |
 | Lepton | generation hierarchy not derived; Block 6 uniformity applies | required, 3 pins (m_e, m_μ, m_τ) — documented in charged-lepton bounded |
 
-Total: 9 observational pins (3 generations × 3 species) required to close the fermion mass matrix on the current retained surface. No sole-axiom prediction is available.
+Original position-basis conclusion: 9 observational pins (3 generations × 3
+species) would be required to close the fermion mass matrix from these tested
+surfaces alone. The §0 Fourier/circulant amendment narrows this: the remaining
+charged-lepton path has named A1/P1/unit/phase gaps rather than a global
+"no hierarchy mechanism" no-go.
 
 ---
 
@@ -569,7 +589,7 @@ Total: 9 observational pins (3 generations × 3 species) required to close the f
 
 This note claims:
 
-> On the retained `Cl(3)/Z^3` framework, the three-generation observable theorem's irreducible M_3(C) algebra on H_hw=1 is **generationally symmetric** under the retained C_{3[111]} cyclic operator: the three generations X_1, X_2, X_3 are cyclically equivalent. Any retained operator commuting with the full M_3(C) algebra is a scalar multiple of the identity on generations; no retained scalar selector distinguishes one generation from another. Four candidate paths for deriving absolute generation-dependent Yukawa weights at M_Pl from the retained surface (C_{3[111]} cycle, orbit-algebra hierarchy, hw-grading, the retained algebra itself) each close negatively for the same deep structural reason: the retained algebra carries no C_{3[111]}-breaking content. The observed fermion mass hierarchy — 5 orders of magnitude spread for up-type, 3 orders for down-type, 3.5 orders for lepton — cannot be reproduced from the retained surface alone. This is **Outcome D (retained no-go)**, extending the charged-lepton bounded package's observational-pin requirement uniformly across all three species. Closing the hierarchy requires one of five sharply-posed missing primitives (C_{3[111]}-breaking retained operator; propagator-resolvent at framework-derived scale; spontaneous symmetry breaking of C_3; flavor-column Higgs structure; non-Q_L-block Yukawa), none of which is present on the current retained surface.
+> On the retained `Cl(3)/Z^3` framework, the three-generation observable theorem's irreducible M_3(C) algebra on H_hw=1 is **generationally symmetric** under the retained C_{3[111]} cyclic operator in the position-basis diagonal readout: the three generations X_1, X_2, X_3 are cyclically equivalent. Any retained operator commuting with the full M_3(C) algebra is a scalar multiple of the identity on generations; no retained full-algebra scalar selector distinguishes one generation from another. Four original candidate paths for deriving absolute generation-dependent Yukawa weights at M_Pl from the retained surface (C_{3[111]} cycle position-basis weights, orbit-algebra hierarchy, hw-grading, the retained full algebra itself) each close negatively for this narrow reason. This is **Outcome D (retained narrow no-go)** for those tested position-basis/candidate surfaces. It does not close the §0 Fourier-basis circulant-spectrum mechanism, whose current blockers are the named A1/P1/unit/phase primitives rather than cyclic algebraic structure itself.
 
 It does **not** claim:
 
@@ -579,13 +599,18 @@ It does **not** claim:
 - any modification of the retained Ward identity Block 6 species uniformity;
 - any modification of the bottom-Yukawa retention analysis (Outcome A, Yukawa unification empirically falsified);
 - any modification of the charged-lepton bounded package (19 runners / 518 PASS inherited as-is);
-- any derivation of absolute generation-dependent Yukawa weights from the retained surface;
-- that no derivation is conceivable — the five named missing primitives are explicit construction targets for future retention work;
+- any derivation of absolute generation-dependent Yukawa weights from the tested position-basis/candidate surfaces;
+- that no derivation is conceivable — the five named missing primitives and the amended Fourier/circulant A1/P1/unit/phase gaps are explicit construction targets for future retention work;
 - that the observed hierarchy has no explanation — the 9-pin observational-pin closure supplies the observed masses as comparators; this is not a derivation, it is a bounded accommodation.
 
 ### 6.1 Retention gap is explicit
 
-The retention gap is: the absolute generation-dependent Yukawa weights (w_1^{species}, w_2^{species}, w_3^{species}) for species ∈ {up, down, lepton} are NOT derivable from the current retained surface. Nine observational pins are required (3 × 3) to close the fermion mass-spectrum problem. This is a specific, quantifiable gap — not a vague "framework doesn't address hierarchy" statement.
+The retention gap is: the absolute generation-dependent Yukawa weights
+(w_1^{species}, w_2^{species}, w_3^{species}) for species ∈ {up, down, lepton}
+are NOT derivable from the original position-basis/candidate surfaces. The
+amended Fourier/circulant route is not ruled out; it shifts the concrete gap to
+A1/P1/unit/phase primitives. This is a specific, quantifiable gap — not a
+vague "framework doesn't address hierarchy" statement.
 
 ### 6.2 Consistency with charged-lepton bounded
 
@@ -593,7 +618,12 @@ The charged-lepton bounded package (`docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_N
 
 ### 6.3 Relation to b-Yukawa retention analysis (Outcome A)
 
-The b-Yukawa retention analysis establishes Outcome A: under Block 6 species uniformity (no generation-hierarchy primitive), the Yukawa unification BC at M_Pl is empirically falsified by 33× on m_b. This note (Outcome D) establishes that NO retained generation-hierarchy primitive exists to rescue this BC. The two outcomes are complementary: the b-Yukawa retention identifies the EMPIRICAL FAILURE on the retained surface; the present note identifies the STRUCTURAL CAUSE (retained cyclic symmetry forbids generation-resolved content). Together, they establish the retained-surface limit on the fermion mass hierarchy as **both diagnosed and sharply bounded**.
+The b-Yukawa retention analysis establishes Outcome A: under Block 6 species
+uniformity on the original candidate surfaces, the Yukawa unification BC at
+M_Pl is empirically falsified by 33× on m_b. This note (Outcome D) establishes
+that those tested position-basis/candidate primitives do not rescue this BC.
+The amended Fourier/circulant path remains a separate conditional route with
+named A1/P1/unit/phase gaps.
 
 ---
 
@@ -620,7 +650,7 @@ The b-Yukawa retention analysis establishes Outcome A: under Block 6 species uni
 
 ### 7.3 Open
 
-- **Absolute generation-dependent Yukawa weights from the retained surface**: not derivable. Nine observational pins required. A new primitive (one of five named in §5.3) would close this gap; none is currently retained.
+- **Absolute generation-dependent Yukawa weights from the original position-basis/candidate surfaces**: not derivable. A new primitive (one of five named in §5.3) or the amended Fourier/circulant A1/P1/unit/phase route would close or reopen this gap; none is currently fully retained.
 - Analogous analyses for neutrino generations (m_ν1, m_ν2, m_ν3 absolute scales, beyond the retained mixing angles) are open and would likely show the same generation-symmetric obstruction on the retained neutrino surface.
 
 ---
@@ -649,4 +679,7 @@ The runner `scripts/frontier_yt_generation_hierarchy_primitive.py` emits determi
 
 ## 9. Status
 
-**RETAINED RETENTION-ANALYSIS NOTE** — Outcome D documented. The retained generation-hierarchy primitive does NOT exist on the current surface. Extension of the charged-lepton bounded observational-pin requirement to the full fermion sector.
+**RETAINED NARROW RETENTION-ANALYSIS NOTE** — Outcome D documented for the
+original position-basis/candidate surfaces. The broader Fourier-basis circulant
+mechanism is explicitly not closed by this negative result; it remains open
+conditional support pending A1/P1/unit/phase closure.

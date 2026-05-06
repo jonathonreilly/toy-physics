@@ -100,6 +100,15 @@ def main() -> int:
 
     output = {
         "actual_current_surface_status": "bounded cutoff obstruction / pilot compute evidence",
+        "proposal_allowed": False,
+        "bare_retained_allowed": False,
+        "investigation_route_closed": False,
+        "certification_scope": "current_surface_blocker_only",
+        "future_reopen_conditions": [
+            "run at a much finer scale",
+            "derive or implement a validated heavy-quark effective treatment",
+            "supply a different retained y_t selector or production matching bridge",
+        ],
         "verdict": (
             "At the current Sommer scale, the physical top target would require "
             "a lattice mass around 81.4.  The pilot mass scan up to bare mass 16 "

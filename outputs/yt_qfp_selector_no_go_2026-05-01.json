@@ -5,7 +5,15 @@
     "requires_gauge_anchor": true,
     "requires_ward_bc": true
   },
+  "bare_retained_allowed": false,
+  "certification_scope": "current_surface_blocker_only",
   "fail_count": 0,
+  "future_reopen_conditions": [
+    "supply a retained UV boundary condition",
+    "complete a retained Ward repair without H_unit renaming",
+    "derive Planck stationarity or obtain production measurement evidence"
+  ],
+  "investigation_route_closed": false,
   "numeric": {
     "compression_ratio": 2.9328318010059573,
     "samples": [
@@ -40,6 +48,7 @@
     "yt_v_spread": 0.20458043307979712
   },
   "pass_count": 7,
+  "proposal_allowed": false,
   "remaining_open_premise": "a UV boundary condition such as a retained Ward repair, Planck stationarity, or production measurement",
   "target": "derive y_t from IR quasi-fixed-point focusing without a UV boundary condition",
   "verdict": "QFP focusing is useful bounded support for transport robustness, but it is not a standalone selector.  Different UV y_t values still map to different IR values, so a UV boundary condition or other selector remains load-bearing."

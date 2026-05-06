@@ -1,11 +1,13 @@
 {
   "actual_current_surface_status": "no-go / exact-negative-boundary",
+  "bare_retained_allowed": false,
   "beta_stationarity_boundary": {
     "codimension_relation": true,
     "double_criticality_conditional": true,
     "finite_source_not_rg": true,
     "selector_open": true
   },
+  "certification_scope": "current_surface_blocker_only",
   "fail_count": 0,
   "fixed_surface_boundary": {
     "continuum_extra": true,
@@ -15,6 +17,12 @@
     "physical_fixed": true,
     "renormalization_extra": true
   },
+  "future_reopen_conditions": [
+    "derive a scale current or trace-stationarity condition from extra substrate structure",
+    "derive a retained continuum/EFT bridge that supplies the RG-scale tangent",
+    "adopt an explicit Planck scale-stationarity selector and keep the result conditional"
+  ],
+  "investigation_route_closed": false,
   "noether_boundary": {
     "anomaly_deferred": true,
     "full_emt_deferred": true,
@@ -23,6 +31,7 @@
     "u1_current": true
   },
   "pass_count": 24,
+  "proposal_allowed": false,
   "remaining_open_premise": "a new theorem deriving a scale current/trace-stationarity condition from extra substrate structure, or an explicit new Planck scale-stationarity selector premise",
   "routes": [
     {

@@ -293,6 +293,15 @@ def main() -> int:
 
     result = {
         "actual_current_surface_status": "no-go / exact-negative-boundary",
+        "proposal_allowed": False,
+        "bare_retained_allowed": False,
+        "investigation_route_closed": False,
+        "certification_scope": "current_surface_blocker_only",
+        "future_reopen_conditions": [
+            "derive a scale current or trace-stationarity condition from extra substrate structure",
+            "derive a retained continuum/EFT bridge that supplies the RG-scale tangent",
+            "adopt an explicit Planck scale-stationarity selector and keep the result conditional",
+        ],
         "target": "derive beta_lambda(M_Pl)=0 from fixed Cl(3)/Z^3 substrate scale stationarity",
         "verdict": (
             "The current fixed-lattice substrate has translation and U(1) "

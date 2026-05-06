@@ -669,22 +669,27 @@ generation-label decoration. This is Primitive 5 of the prior note.
 None of these four extension primitives is present on the current retained
 surface.
 
-### 5.4 Consistency with prior Outcome D (generation-hierarchy retention)
+### 5.4 Consistency with amended prior Outcome D
 
 The prior retention analysis
 (`docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`,
-Outcome D) established that the retained three-generation structure does NOT
-supply absolute generation-dependent Yukawa weights at M_Pl. The Class #6
-result (Outcome B) is the structural REASON behind that: the retained
-surface has NO framework-native C_3-breaking content to produce such weights.
+Outcome D) is now read narrowly after its §0 amendment. It established that the
+tested position-basis/candidate surfaces do NOT supply absolute
+generation-dependent Yukawa weights at M_Pl. The Class #6 result (Outcome B)
+is the structural reason for that narrow statement: the retained surface has no
+framework-native C_3-breaking operator on H_hw=1 to produce position-basis
+generation-asymmetric content.
 
-**These are consistent retention closures:**
-- Outcome D (prior note): no retained generation-hierarchy primitive;
+**These are consistent narrow retention closures:**
+- Outcome D (prior note): no retained position-basis/candidate generation-hierarchy primitive;
 - Outcome B (present note): no retained C_3-breaking operator.
 
-The Class #6 closure is tighter than the general generation-hierarchy
-no-go: it identifies the SPECIFIC STRUCTURAL MECHANISM (1-dim commutant →
-scalar-only invariant content) that forces the prior outcome.
+The Class #6 closure is tighter than the original position-basis
+generation-hierarchy no-go: it identifies the specific structural mechanism
+(1-dim full-algebra commutant -> scalar-only invariant content) that forces
+that prior outcome. It does not close the amended Fourier-basis circulant
+route, which uses C_3-commuting operators and remains conditional on A1/P1 and
+unit/phase gaps.
 
 ---
 
@@ -717,7 +722,7 @@ It does **not** claim:
 - any modification of the retained S_3 / Z_2 mass-matrix notes;
 - any modification of the prior retention analysis
   (`docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`,
-  Outcome D);
+  amended narrow Outcome D);
 - any publication-surface modification;
 - that no C_3-breaking mechanism can exist — the four extension primitives
   of §5.3 are explicit construction targets for future retention work;
@@ -735,16 +740,16 @@ scalar-only invariant) of the generation-hierarchy retention gap.
 
 ### 6.2 Relation to Outcome D
 
-Outcome B (this note) implies Outcome D (prior note) but with a sharper
-structural argument:
+Outcome B (this note) implies the narrow position-basis portion of Outcome D
+(prior note) but with a sharper structural argument:
 
 | Outcome | Statement | Structural reason |
 |---|---|---|
-| D (prior) | No retained generation-hierarchy primitive at M_Pl | All candidate weights fail empirically or structurally |
+| D (prior, amended) | No retained position-basis/candidate generation-hierarchy primitive at M_Pl | Original candidate weights fail empirically or structurally |
 | B (this note) | No retained C_3-breaking operator on H_hw=1 | 1-dim commutant on H_hw=1 |
 
-Outcome B is the ROOT CAUSE; Outcome D is the DOWNSTREAM CONSEQUENCE for
-absolute generation-dependent Yukawa weights.
+Outcome B is the root cause of the position-basis no-go. It is not a no-go
+against the amended Fourier/circulant route.
 
 ---
 
@@ -773,8 +778,9 @@ absolute generation-dependent Yukawa weights.
 - **Class #6 extension primitives**: four candidate primitives named in §5.3
   (operator-level addition, vacuum dynamical stabilizer, flavor-column
   Higgs, non-Q_L-block Yukawa). None currently retained.
-- Downstream consequences for the fermion mass hierarchy (9 observational
-  pins), inherited from Outcome D as-is.
+- Downstream consequences for the original position-basis fermion hierarchy
+  analysis, inherited from amended Outcome D. The Fourier/circulant route is
+  not closed by this note.
 
 ---
 
@@ -812,9 +818,10 @@ PASS/FAIL lines and is logged under
     mechanism; no retained dynamical stabilizer selects a unique vacuum.
 14. Outcome B verdict: no framework-native retained C_{3[111]}-breaking
     operator on H_hw=1 (all three lines close negatively).
-15. Consistency with prior Outcome D
+15. Consistency with amended prior Outcome D
     (`docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`):
-    Class #6 Outcome B is the structural root-cause of Outcome D.
+    Class #6 Outcome B is the structural root-cause of the position-basis
+    portion of Outcome D.
 
 ---
 
@@ -824,5 +831,6 @@ PASS/FAIL lines and is logged under
 closes as retained no-go. No framework-native C_{3[111]}-breaking operator
 exists on H_hw=1. The graph-first axis selection is a vacuum-manifold
 mechanism without retained dynamical stabilizer and does NOT supply
-implicit breaking on H_hw=1. This is the structural root-cause of the prior
-generation-hierarchy retention no-go (Outcome D).
+implicit breaking on H_hw=1. This is the structural root-cause of the
+position-basis/candidate portion of the amended generation-hierarchy Outcome D,
+not a closure of the Fourier-basis circulant route.

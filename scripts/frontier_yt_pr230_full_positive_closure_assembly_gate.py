@@ -132,6 +132,7 @@ PARENTS = {
     "nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard": "outputs/yt_pr230_nonchunk_cycle34_post_cycle33_main_nonpr230_drift_guard_2026-05-05.json",
     "nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard": "outputs/yt_pr230_nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard_2026-05-05.json",
     "matching_running": "outputs/yt_pr230_matching_running_bridge_gate_2026-05-04.json",
+    "negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
 }
 
 PASS_COUNT = 0
@@ -579,6 +580,11 @@ def main() -> int:
     matching_running_blocks = (
         certs["matching_running"].get("matching_running_bridge_passed") is not True
         and certs["matching_running"].get("proposal_allowed") is False
+    )
+    negative_route_review_passed = (
+        certs["negative_route_applicability_review"].get("no_retained_negative_overclaim") is True
+        and certs["negative_route_applicability_review"].get("future_reopen_paths_preserved") is True
+        and certs["negative_route_applicability_review"].get("selected_negative_results_apply_on_current_surface") is True
     )
     retained_route_open = (
         "retained closure not yet reached" in statuses["retained_route"]
@@ -1777,6 +1783,11 @@ def main() -> int:
         statuses["nonchunk_cycle35_post_cycle34_main_audit_ledger_drift_guard"],
     )
     report("matching-running-bridge-open", matching_running_blocks, statuses["matching_running"])
+    report(
+        "negative-route-applicability-review-preserves-reopen",
+        negative_route_review_passed,
+        statuses["negative_route_applicability_review"],
+    )
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
     report("current-surface-assembly-rejected", not current_eval["assembly_passed"], f"missing={current_eval['missing']}")
@@ -1858,6 +1869,7 @@ def main() -> int:
             "runner-cache surfaces and still supplies no listed PR230 "
             "same-surface artifact."
         ),
+        "negative_route_applicability_review_passed": negative_route_review_passed,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The assembly gate rejects the current surface and also rejects a "

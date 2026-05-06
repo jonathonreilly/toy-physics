@@ -763,6 +763,9 @@ def main() -> int:
         "interacting_kinetic": load("outputs/yt_interacting_kinetic_background_sensitivity_2026-05-01.json"),
         "direct_scale": load("outputs/yt_direct_measurement_scale_requirements_2026-05-01.json"),
         "retained_closure_route": load("outputs/yt_retained_closure_route_certificate_2026-05-01.json"),
+        "negative_route_applicability_review": load(
+            "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json"
+        ),
     }
     for path in sorted((ROOT / "outputs").glob(GENERIC_CHUNK_TARGET_PATTERN)):
         certificates[generic_chunk_target_key(path)] = load(str(path.relative_to(ROOT)))
@@ -789,6 +792,13 @@ def main() -> int:
     report("campaign-certificates-present", all_present, f"count={len(certificates)}")
     report("campaign-runners-have-no-fails", all_no_fail, "all loaded certificates have FAIL=0")
     report("no-retained-proposal-authorized", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
+    report(
+        "negative-route-applicability-review-preserves-reopen",
+        certificates["negative_route_applicability_review"].get("no_retained_negative_overclaim") is True
+        and certificates["negative_route_applicability_review"].get("future_reopen_paths_preserved") is True
+        and certificates["negative_route_applicability_review"].get("selected_negative_results_apply_on_current_surface") is True,
+        statuses["negative_route_applicability_review"],
+    )
     report(
         "direct-route-needs-scale-or-heavy-treatment",
         "scale requirement" in str(statuses["direct_scale"]),
@@ -3511,7 +3521,12 @@ def main() -> int:
             "finite ladder IR/zero-mode shortcut, and static/HQET without "
             "matching.  It also isolates a constructive heavy kinetic-mass "
             "route, a tiny nonzero-momentum correlator scout, and production "
-            "harness momentum fields.  A bounded two-volume pilot has large "
+            "harness momentum fields.  The negative-route applicability review "
+            "confirms these retired shortcut routes are current-surface blockers "
+            "only, not permanent retained negative theorems; the named future "
+            "source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, and production "
+            "routes remain open when their missing artifacts are supplied.  A "
+            "bounded two-volume pilot has large "
             "finite-volume drift, so that route still needs production data "
             "and a derived matching theorem.  The free staggered action fixes "
             "its kinetic coefficient, but interacting renormalization remains "

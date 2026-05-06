@@ -125,7 +125,18 @@ def main() -> int:
     ]
     support_available = [row for row in support_rows if row["available"]]
     blocked_rows = [row for row in blockers if row["blocked"]]
-    kprime_closed = not missing and not proposal_allowed and len(blocked_rows) == 0
+    explicit_positive_kprime_inputs = (
+        certs["determinant_gate"].get("scalar_pole_determinant_gate_passed") is True
+        and certs["eigen_derivative_gate"].get("scalar_ladder_eigen_derivative_gate_passed") is True
+        and certs["scalar_denominator_closure"].get("scalar_denominator_theorem_closed") is True
+        and certs["carrier_projector"].get("current_closure_gate_passed") is True
+    )
+    kprime_closed = (
+        explicit_positive_kprime_inputs
+        and not missing
+        and not proposal_allowed
+        and len(blocked_rows) == 0
+    )
 
     report("all-parent-certificates-present", not missing, f"missing={missing}")
     report("no-parent-authorizes-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
@@ -135,6 +146,7 @@ def main() -> int:
     report("ward-feshbach-kprime-still-blocking", blockers[2]["blocked"], CERTS["ward_identity"])
     report("kernel-enhancement-still-blocking", blockers[3]["blocked"], CERTS["kernel_enhancement_import"])
     report("carrier-projector-still-blocking", blockers[5]["blocked"], CERTS["carrier_projector"])
+    report("explicit-positive-kprime-inputs-required", not explicit_positive_kprime_inputs, "no positive K'(pole) certificate present")
     report("kprime-theorem-not-closed", not kprime_closed, f"blocker_count={len(blocked_rows)}")
 
     result = {
@@ -152,12 +164,17 @@ def main() -> int:
             "threshold stack."
         ),
         "proposal_allowed": False,
+        "bare_retained_allowed": False,
+        "investigation_route_closed": False,
+        "certification_scope": "current_surface_blocker_only",
         "proposal_allowed_reason": "K'(pole) is named but not derived or measured on a retained current surface.",
         "parent_certificates": CERTS,
         "support_rows": support_rows,
         "blocker_rows": blockers,
         "support_count": len(support_available),
         "blocking_count": len(blocked_rows),
+        "explicit_positive_kprime_inputs_present": explicit_positive_kprime_inputs,
+        "current_closure_gate_passed": kprime_closed,
         "kprime_closed": kprime_closed,
         "strict_non_claims": [
             "does not claim retained or proposed_retained y_t closure",

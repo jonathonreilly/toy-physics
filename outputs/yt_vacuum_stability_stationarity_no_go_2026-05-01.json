@@ -7,7 +7,14 @@
     "vacuum_bounded": true,
     "vacuum_inherits_yt": true
   },
+  "bare_retained_allowed": false,
+  "certification_scope": "current_surface_blocker_only",
   "fail_count": 0,
+  "future_reopen_conditions": [
+    "derive a multiple-point or double-zero theorem",
+    "derive an independent Planck tangency selector",
+    "supply a retained theorem converting one-sided stability into beta_lambda(M_Pl)=0"
+  ],
   "inequality_boundary": {
     "g1_MPl": 0.6166064056,
     "g2_MPl": 0.506356441,
@@ -44,7 +51,9 @@
     ],
     "y_star": 0.3889651024951219
   },
+  "investigation_route_closed": false,
   "pass_count": 13,
+  "proposal_allowed": false,
   "remaining_open_premise": "a new multiple-point/double-zero theorem or explicit Planck tangency selector",
   "routes": [
     {

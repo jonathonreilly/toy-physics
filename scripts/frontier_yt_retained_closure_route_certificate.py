@@ -302,6 +302,7 @@ def main() -> int:
         "fh_lsz_polefit8x8_postprocessor": "outputs/yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
         "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+        "negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
     }
     for path in sorted((ROOT / "outputs").glob(GENERIC_CHUNK_TARGET_PATTERN)):
         required_certificates[generic_chunk_target_key(path)] = str(path.relative_to(ROOT))
@@ -2425,6 +2426,19 @@ def main() -> int:
         )
         is False
     )
+    negative_route_applicability_review_passed = (
+        "negative-route applicability review passed"
+        in certificates["negative_route_applicability_review"].get("actual_current_surface_status", "")
+        and certificates["negative_route_applicability_review"].get("no_retained_negative_overclaim")
+        is True
+        and certificates["negative_route_applicability_review"].get("future_reopen_paths_preserved")
+        is True
+        and certificates["negative_route_applicability_review"].get(
+            "selected_negative_results_apply_on_current_surface"
+        )
+        is True
+        and certificates["negative_route_applicability_review"].get("proposal_allowed") is False
+    )
     pr230_nonchunk_current_surface_exhaustion_blocks = (
         "current PR230 non-chunk route queue exhausted"
         in certificates["pr230_nonchunk_current_surface_exhaustion"].get(
@@ -4029,6 +4043,11 @@ def main() -> int:
         certificates["full_positive_closure_assembly_gate"].get("actual_current_surface_status", ""),
     )
     report(
+        "negative-route-applicability-review-preserves-reopen",
+        negative_route_applicability_review_passed,
+        certificates["negative_route_applicability_review"].get("actual_current_surface_status", ""),
+    )
+    report(
         "pr230-nonchunk-current-surface-exhaustion-blocks-shortcuts",
         pr230_nonchunk_current_surface_exhaustion_blocks,
         certificates["pr230_nonchunk_current_surface_exhaustion"].get(
@@ -4520,6 +4539,7 @@ def main() -> int:
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "No route currently satisfies retained-proposal conditions.",
+        "negative_route_applicability_review_passed": negative_route_applicability_review_passed,
         "direct_certificates": direct_meta,
         "required_certificates": required_certificates,
         "closure_routes": closure_routes,
@@ -4580,6 +4600,10 @@ def main() -> int:
             "The future-artifact intake gate records that no such named input "
             "is present on the current surface.  The terminal route-exhaustion "
             "gate records the stop/reopen rule for further non-chunk work.  "
+            "The negative-route applicability review then scopes the no-go stack: "
+            "selected blockers are correct for their current surfaces, no retained "
+            "negative YT row is being used, and future source-Higgs, W/Z, Schur, "
+            "rank-one, scalar-LSZ, or production evidence can reopen the route.  "
             "The cycle-14 through cycle-17 gates record that no current route, "
             "independent pivot, reopen source, or executable non-chunk queue "
             "item remains on this branch.  The cycle-18 reopen-freshness gate "

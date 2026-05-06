@@ -151,6 +151,15 @@ def main() -> int:
     authority = assert_authority_boundary()
     result = {
         "actual_current_surface_status": "no-go / exact-negative-boundary for QFP-as-selector",
+        "proposal_allowed": False,
+        "bare_retained_allowed": False,
+        "investigation_route_closed": False,
+        "certification_scope": "current_surface_blocker_only",
+        "future_reopen_conditions": [
+            "supply a retained UV boundary condition",
+            "complete a retained Ward repair without H_unit renaming",
+            "derive Planck stationarity or obtain production measurement evidence",
+        ],
         "target": "derive y_t from IR quasi-fixed-point focusing without a UV boundary condition",
         "verdict": (
             "QFP focusing is useful bounded support for transport robustness, "

@@ -168,6 +168,15 @@ def main() -> int:
 
     result = {
         "actual_current_surface_status": "no-go / exact-negative-boundary",
+        "proposal_allowed": False,
+        "bare_retained_allowed": False,
+        "investigation_route_closed": False,
+        "certification_scope": "current_surface_blocker_only",
+        "future_reopen_conditions": [
+            "derive a non-SM UV fixed-point theorem from the substrate",
+            "derive asymptotic-safety structure beyond the current perturbative SM bridge",
+            "supply an independent retained partial-beta selector",
+        ],
         "target": "derive beta_lambda(M_Pl)=0 from a perturbative SM fixed point/asymptotic-safety route",
         "verdict": (
             "The one-loop SM beta-vector has only the Gaussian gauge fixed "

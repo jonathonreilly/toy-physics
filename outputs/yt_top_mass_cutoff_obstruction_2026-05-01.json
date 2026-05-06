@@ -1,8 +1,16 @@
 {
   "actual_current_surface_status": "bounded cutoff obstruction / pilot compute evidence",
+  "bare_retained_allowed": false,
   "certificate": "outputs/yt_direct_lattice_correlator_mass_bracket_certificate_2026-05-01.json",
+  "certification_scope": "current_surface_blocker_only",
   "fail_count": 0,
+  "future_reopen_conditions": [
+    "run at a much finer scale",
+    "derive or implement a validated heavy-quark effective treatment",
+    "supply a different retained y_t selector or production matching bridge"
+  ],
   "gev_per_lattice_unit": 2.119291769496,
+  "investigation_route_closed": false,
   "mass_scan": [
     {
       "chi2_dof": 0.25619107364486265,
@@ -56,6 +64,7 @@
   "open_route": "requires a much finer scale, heavy-quark effective treatment, or a different y_t selector",
   "pass_count": 8,
   "pdg_mt_gev": 172.56,
+  "proposal_allowed": false,
   "slopes": [
     0.8858019821963996,
     0.5730600072016161,

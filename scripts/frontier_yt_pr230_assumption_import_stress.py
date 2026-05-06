@@ -119,6 +119,9 @@ def main() -> int:
         "l12_chunk_compute_status": load(
             "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json"
         ),
+        "negative_route_applicability_review": load(
+            "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json"
+        ),
         "kinetic_matching": load("outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"),
         "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "scalar_ir": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
@@ -237,6 +240,14 @@ def main() -> int:
         "loaded-support-certificates-no-fail",
         not loaded_failures,
         f"failures={loaded_failures} count={len(certificates)}",
+    )
+    negative_route_review = certificates["negative_route_applicability_review"]
+    report(
+        "negative-route-applicability-review-preserves-future-reopen",
+        negative_route_review.get("no_retained_negative_overclaim") is True
+        and negative_route_review.get("future_reopen_paths_preserved") is True
+        and negative_route_review.get("selected_negative_results_apply_on_current_surface") is True,
+        negative_route_review.get("actual_current_surface_status"),
     )
     report("no-route-authorizes-retained-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
     report(
@@ -710,7 +721,11 @@ def main() -> int:
             "combined positivity shortcut explicit: OS/spectral positivity "
             "and positive fermion measure still admit a reducible neutral "
             "transfer with an orthogonal top-coupled scalar.  No current route "
-            "certificate authorizes retained proposal wording.  Positive "
+            "certificate authorizes retained proposal wording.  The negative-route "
+            "applicability review confirms these blockers apply only on their "
+            "current surfaces and preserve future reopen paths through C_sH/C_HH, "
+            "W/Z rows, Schur rows, neutral rank-one/irreducibility, scalar-LSZ "
+            "pole control, or production evidence plus matching.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
         ),
@@ -734,6 +749,7 @@ def main() -> int:
             "does not import SU3 source-sector constants or exponent shifts into y_t",
             "does not treat staggered-Wilson determinant positivity as source-Higgs overlap authority",
             "does not treat reflection plus determinant positivity as a primitive neutral bridge",
+            "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

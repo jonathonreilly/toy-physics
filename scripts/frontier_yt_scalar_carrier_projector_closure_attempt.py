@@ -125,7 +125,18 @@ def main() -> int:
     ]
     support_available = [row for row in support_rows if row["available"]]
     blocked_rows = [row for row in blockers if row["blocked"]]
-    theorem_closed = not missing and not proposal_allowed and len(blocked_rows) == 0
+    explicit_positive_carrier_inputs = (
+        certs["taste_projector_attempt"].get("physical_scalar_projector_closed") is True
+        and certs["unit_projector_threshold"].get("unit_projector_threshold_closed") is True
+        and certs["kernel_enhancement_import"].get("scalar_kernel_enhancement_authority_present") is True
+        and certs["scalar_denominator_closure"].get("scalar_denominator_theorem_closed") is True
+    )
+    theorem_closed = (
+        explicit_positive_carrier_inputs
+        and not missing
+        and not proposal_allowed
+        and len(blocked_rows) == 0
+    )
 
     report("all-parent-certificates-present", not missing, f"missing={missing}")
     report("no-parent-authorizes-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
@@ -135,6 +146,7 @@ def main() -> int:
     report("unit-projector-threshold-still-blocking", blockers[3]["blocked"], CERTS["unit_projector_threshold"])
     report("kernel-enhancement-still-blocking", blockers[4]["blocked"], CERTS["kernel_enhancement_import"])
     report("fitted-kernel-selector-still-blocking", blockers[5]["blocked"], CERTS["fitted_kernel_selector"])
+    report("explicit-positive-carrier-inputs-required", not explicit_positive_carrier_inputs, "no positive scalar carrier/projector certificate present")
     report("scalar-carrier-projector-theorem-not-closed", not theorem_closed, f"blocker_count={len(blocked_rows)}")
 
     result = {
@@ -151,12 +163,17 @@ def main() -> int:
             "and the scalar denominator/threshold stack remains open."
         ),
         "proposal_allowed": False,
+        "bare_retained_allowed": False,
+        "investigation_route_closed": False,
+        "certification_scope": "current_surface_blocker_only",
         "proposal_allowed_reason": "Physical scalar carrier/projector and K'(pole) remain open imports; finite witnesses are not retained LSZ residue evidence.",
         "parent_certificates": CERTS,
         "support_rows": support_rows,
         "blocker_rows": blockers,
         "support_count": len(support_available),
         "blocking_count": len(blocked_rows),
+        "explicit_positive_carrier_inputs_present": explicit_positive_carrier_inputs,
+        "current_closure_gate_passed": theorem_closed,
         "theorem_closed": theorem_closed,
         "strict_non_claims": [
             "does not claim retained or proposed_retained y_t closure",

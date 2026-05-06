@@ -218,6 +218,15 @@ def main() -> int:
 
     result = {
         "actual_current_surface_status": "no-go / exact-negative-boundary",
+        "proposal_allowed": False,
+        "bare_retained_allowed": False,
+        "investigation_route_closed": False,
+        "certification_scope": "current_surface_blocker_only",
+        "future_reopen_conditions": [
+            "derive a quantum EMT/trace-anomaly theorem on the current substrate",
+            "derive operator-independence plus a Planck conformal/stationarity boundary",
+            "supply a retained bridge from trace stationarity to beta_lambda(M_Pl)=0",
+        ],
         "target": "derive beta_lambda(M_Pl)=0 from existing trace-anomaly or EMT surfaces",
         "verdict": (
             "The current repo surface does not contain a quantum EMT/trace-anomaly "
