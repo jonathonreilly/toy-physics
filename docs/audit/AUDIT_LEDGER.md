@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 777 |
+| unaudited | 778 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 21 |
-| ~~audited_renaming~~ | 32 |
+| ~~audited_renaming~~ | 31 |
 | ~~audited_conditional~~ | 471 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
@@ -43,8 +43,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
-| `audited_renaming` | 32 |
-| `unaudited` | 826 |
+| `audited_renaming` | 31 |
+| `unaudited` | 827 |
 
 | claim_type | count |
 |---|---:|
@@ -1061,7 +1061,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `graviton_mass_derived_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `gravity_full_self_consistency_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `koide_mru_weight_class_obstruction_theorem_note_2026-04-19` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
-| `lattice_nn_light_cone_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 | `planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `pmns_corner_transport_active_block_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -8752,19 +8751,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The h = 0.125 continuation did not complete in a practical runtime window and did not produce a retained numerical result.  _(class `C`)_
 - **chain closes:** True — The source note and cited scripts consistently bound the safe claim to Born-clean refinement through h = 0.25 and treat h = 0.125 as unresolved. The audit does not require completing the long run because the scoped claim is the open boundary, not a positive extension.
 - **rationale:** The seeded positive_theorem label is not the note's actual scoped claim. The note explicitly says the h = 0.125 attempt did not complete, produced no retained numerical result, and should not be promoted as a canonical Born-clean extension. Under the timeout/noncompletion policy, this is a clean open gate rather than a failed or conditional theorem.
-- **auditor confidence:** high
-
-### `lattice_nn_light_cone_note`
-
-- **Note:** [`LATTICE_NN_LIGHT_CONE_NOTE.md`](../../docs/LATTICE_NN_LIGHT_CONE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Administrative branch-freeze: the NN/DAG light-cone branch is frozen as a topological forward-reachability statement (influence confined to the forward causal neighborhood in the graph/DAG sense). Explicit retraction of any emergent-relativity, Lorentz-invariance, physical-spacetime light-cone, or universal-speed-law reading. Excludes any independent retained light-cone theorem; the cited fixed-mass verification log is missing and the causal-field script is marked retracted for distance-law purposes.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `claude-opus-4.7-1m:cluster2-narrow-2026-05-02-lattice-nn`  (claude-opus; independence=fresh_context)
-- **load-bearing step:** The NN light-cone branch is frozen as a topological causal-bound statement: influence is confined to the relevant forward causal neighborhood in the graph/DAG sense, with no emergent-relativity or physical spacetime light-cone claim retained.  _(class `F`)_
-- **chain closes:** False — The remaining content is a relabeling of directed-graph forward reachability under the name 'topological causal cone', not an independently derived light-cone theorem. Renaming verdict captures the symbol-relabel character of what survives after the physical interpretation is retracted.
-- **rationale:** Re-audit confirms the original renaming verdict: the residual claim is a graph-reachability label, not a derived physical light-cone law. Scope narrowed to the administrative branch-freeze with explicit emergent-relativity retraction.
 - **auditor confidence:** high
 
 ### `lattice_nn_rg_gravity_note`

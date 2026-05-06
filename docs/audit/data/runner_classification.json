@@ -9661,7 +9661,7 @@
       "runner": "scripts/lattice_nn_distance_law.py"
     },
     "lattice_nn_light_cone_note": {
-      "assert_count": 0,
+      "assert_count": 3,
       "counts": {
         "A": 0,
         "B": 0,
@@ -9670,7 +9670,7 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
-      "runner": "scripts/causal_field_gravity.py"
+      "runner": "scripts/lattice_nn_topological_causal_bound_check.py"
     },
     "lattice_nn_mass_response_note": {
       "assert_count": 0,
@@ -19057,21 +19057,6 @@
       "assert_count": 0,
       "claims": [
         "causal_escape_window_note"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": true
-    },
-    "scripts/causal_field_gravity.py": {
-      "assert_count": 0,
-      "claims": [
-        "lattice_nn_light_cone_note"
       ],
       "counts": {
         "A": 0,
@@ -35709,6 +35694,21 @@
       "assert_count": 0,
       "claims": [
         "lattice_nn_rg_alpha_sweep_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
+    "scripts/lattice_nn_topological_causal_bound_check.py": {
+      "assert_count": 3,
+      "claims": [
+        "lattice_nn_light_cone_note"
       ],
       "counts": {
         "A": 0,
