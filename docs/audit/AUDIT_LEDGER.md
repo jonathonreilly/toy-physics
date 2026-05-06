@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 771 |
+| unaudited | 772 |
 | audit_in_progress | 3 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 34 |
-| ~~audited_conditional~~ | 473 |
+| ~~audited_conditional~~ | 472 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,21 +41,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 378 |
-| `audited_conditional` | 473 |
+| `audited_conditional` | 472 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 34 |
-| `unaudited` | 817 |
+| `unaudited` | 818 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 639 |
+| `bounded_theorem` | 638 |
 | `decoration` | 10 |
 | `meta` | 56 |
 | `no_go` | 186 |
 | `open_gate` | 116 |
-| `positive_theorem` | 789 |
+| `positive_theorem` | 790 |
 
 | criticality | count |
 |---|---:|
@@ -872,7 +872,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_anomaly_spacetime_lift_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `s3_boundary_link_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `s3_cap_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `s3_general_r_derivation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `s3_taste_cube_decomposition_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `s3_time_primitive_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `s3_time_spacetime_tensor_primitive_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -11004,19 +11003,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Every alternative closure is excluded by either the PL manifold condition or nontrivial pi_1, so the cone cap is the unique closure up to PL homeomorphism.  _(class `A`)_
 - **chain closes:** False — The restricted packet does not derive or provide a retained exhaustive PL closure classification for arbitrary caps X. The runner verifies finite cubical facts but hard-codes the load-bearing exclusion/classification steps as theorem assertions.
 - **rationale:** Issue: the proof relies on an exhaustive exclusion of all non-cone PL closures, but the restricted packet supplies no retained theorem proving that handles, boundary identifications, and multi-cones exhaust arbitrary PL 3-complex caps X. Why this blocks: the finite runner checks support boundary/link facts for tested cubical balls, but they do not prove the global uniqueness bridge. Repair target: add and audit a direct PL closure/Schoenflies-style classification dependency, and wire the prior cone-cap manifold verification as a retained dependency if it remains load-bearing. Claim boundary until fixed: conditional on that external PL-topology infrastructure, the cone-capped construction may be carried as a bounded S^3 closure argument.
-- **auditor confidence:** high
-
-### `s3_general_r_derivation_note`
-
-- **Note:** [`S3_GENERAL_R_DERIVATION_NOTE.md`](../../docs/S3_GENERAL_R_DERIVATION_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audit of the restricted packet's all-R claim that the cone-capped cubical ball M_R = B_R cup cone(partial B_R) is PL homeomorphic to S^3 for every R >= 2.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-005357-f2a031da-s3_general_r_derivation_-004`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** M_R satisfies all hypotheses of the PL Poincare conjecture by Step 3; therefore M_R is PL homeomorphic to S^3 for every R >= 2.  _(class `B`)_
-- **chain closes:** False — The conclusion imports Perelman/Moise, Seifert-van Kampen, surface classification, and prior PL-manifold/link results that are not supplied as retained dependencies in this restricted packet. The runner hard-codes the theorem/citation steps as true and finite-checks only bounded R cases, so it does not independently close the all-R derivation.
-- **rationale:** Issue: the load-bearing S^3 conclusion depends on external theorem inputs and prior runner/citation claims, while the packet declares no cited authorities. Why this blocks: the restricted evidence cannot promote the all-R result to closed because the all-R PL-manifold hypotheses and Perelman/Moise closure are imported rather than derived inside the packet. Repair target: add retained dependency edges or full restricted proofs for the general-R link/boundary claims, van Kampen closure, Perelman/Moise bridge, and any prior cap-link results. Claim boundary until fixed: the packet supports a bounded, externally conditioned theorem path, not an audited-clean closed derivation.
 - **auditor confidence:** high
 
 ### `s3_mass_matrix_no_go_note`

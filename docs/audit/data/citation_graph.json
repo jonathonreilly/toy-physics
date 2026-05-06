@@ -12137,6 +12137,14 @@
       "to": "native_gauge_closure_note"
     },
     {
+      "from": "s3_general_r_derivation_note",
+      "to": "s3_cap_uniqueness_note"
+    },
+    {
+      "from": "s3_general_r_derivation_note",
+      "to": "s3_boundary_link_theorem_note"
+    },
+    {
       "from": "s3_taste_cube_decomposition_note",
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
@@ -47853,8 +47861,11 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": "Constructive computation (R=2..6) + theorem chain with standard mathematical citation (Perelman 2003)",
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "48e40fcc07bb904550e7f5010bcf46a0ca88aac97833a0a1dd9f3949092ac4c8",
+      "deps": [
+        "s3_cap_uniqueness_note",
+        "s3_boundary_link_theorem_note"
+      ],
+      "note_hash": "b6f41ef30c3ce887a17dd0d5847b68db2897e23f51bf19ae3da77469df1f6495",
       "path": "docs/S3_GENERAL_R_DERIVATION_NOTE.md",
       "runner_path": "scripts/frontier_s3_cap_uniqueness.py",
       "title": "S^3 Topology: General-R Derivation"
@@ -55208,7 +55219,6 @@
     "s3_anomaly_spacetime_lift_note",
     "s3_boundary_link_theorem_note",
     "s3_cap_uniqueness_note",
-    "s3_general_r_derivation_note",
     "s3_mass_matrix_no_go_note",
     "s3_time_constructed_support_tensor_primitive_note",
     "s3_time_primitive_chain_note",
@@ -55464,10 +55474,10 @@
       "open_gate": 118,
       "positive_theorem": 636
     },
-    "edge_count": 6521,
+    "edge_count": 6523,
     "leaf_count": 553,
     "node_count": 1903,
-    "root_count": 876,
+    "root_count": 875,
     "runners_with_path": 1477
   }
 }

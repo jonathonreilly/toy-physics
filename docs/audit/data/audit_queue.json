@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 505,
+    "critical": 506,
     "high": 15,
     "leaf": 179,
     "medium": 93
@@ -4764,6 +4764,30 @@
       "ready": false,
       "runner_path": "scripts/frontier_ckm_nlo_barred_triangle_protected_gamma.py",
       "transitive_descendants": 337
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "s3_general_r_derivation_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "s3_cap_uniqueness_note",
+        "s3_boundary_link_theorem_note"
+      ],
+      "direct_in_degree": 17,
+      "effective_status": "unaudited",
+      "load_bearing_score": 16.897,
+      "note_path": "docs/S3_GENERAL_R_DERIVATION_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_s3_cap_uniqueness.py",
+      "transitive_descendants": 336
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24107,5 +24131,5 @@
     }
   ],
   "ready_count": 5,
-  "total_pending": 792
+  "total_pending": 793
 }

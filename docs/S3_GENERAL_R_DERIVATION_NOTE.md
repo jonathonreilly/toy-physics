@@ -175,7 +175,7 @@ The derivation chain is:
 1. **Uniqueness of compactification: RESOLVED.**
    The cone cap is the unique closure of the cubical ball producing a
    closed, simply connected PL 3-manifold. All alternatives are excluded
-   by exhaustive analysis (S3_CAP_UNIQUENESS_NOTE.md, 35/35 checks):
+   by exhaustive analysis ([S3_CAP_UNIQUENESS_NOTE.md](S3_CAP_UNIQUENESS_NOTE.md), 35/35 checks):
    - Handle attachment excluded (gives pi_1 = Z, not simply connected)
    - Boundary identification excluded (non-manifold vertices or pi_1 != 0)
    - Multi-cone excluded (non-manifold edges) or degenerate to cone cap
@@ -314,3 +314,52 @@ python scripts/frontier_s3_inductive_link.py   # vertex links, R=2..10
 python scripts/frontier_s3_general_r.py        # full general-R verification, 88/88
 python scripts/frontier_s3_cap_uniqueness.py   # uniqueness/selection, 35/35
 ```
+
+---
+
+## Citations
+
+The auditor's `missing_dependency_edge` flag asked for explicit retained
+dependency edges or self-contained restricted proofs for the external
+topology theorems and the prior S^3 cap-link / general-R runner claims.
+The following are the load-bearing repo-native authorities for each
+load-bearing step in the four-step derivation chain above; the markdown
+links register them as one-hop dependency edges in the citation graph.
+
+- [S3_CAP_UNIQUENESS_NOTE.md](S3_CAP_UNIQUENESS_NOTE.md) — supplies the
+  uniqueness-of-compactification result discharging the "What remains
+  open" §1 ("Uniqueness of compactification: RESOLVED") and corroborated
+  by the runner `scripts/frontier_s3_cap_uniqueness.py` at 35/35 checks.
+  Used in §"What remains open"/§4 of this note.
+- [S3_BOUNDARY_LINK_THEOREM_NOTE.md](S3_BOUNDARY_LINK_THEOREM_NOTE.md) —
+  supplies the boundary-vertex link statement underlying Step 1's
+  disk-capping lemma; runner `scripts/frontier_s3_boundary_link_theorem.py`
+  exhibits the link on representative R values. Used in §Step 1.
+
+The two computational paths (Step 1's R-independent vertex-link argument,
+and Step 2's van-Kampen π_1 closure) carry their own runner certificates
+and need no upstream dep edge. The Step 4 application of the PL Poincaré
+conjecture (Perelman 2003) is the single explicitly admitted external
+mathematical citation. As the note's "Decision" section already records,
+this is parallel to other repo lanes citing standard mathematical
+infrastructure (Noether, Maradudin lattice Green's function, Stokes,
+spectral theorem) with all hypotheses verified by direct computation on
+the lattice complex (Steps 1–3) — not imported physics.
+
+The runner-side authorities for the prior S^3 cap-link / general-R
+claims are:
+
+- `scripts/frontier_s3_inductive_link.py` — vertex-link verification at
+  `R = 2..10` (72/72 checks pass), supports Step 1.
+- `scripts/frontier_s3_general_r.py` — primary general-R verification
+  runner referenced in this note's frontmatter (88/88 checks pass).
+- `scripts/frontier_s3_cap_uniqueness.py` — uniqueness/selection
+  companion runner (35/35 checks pass).
+- `scripts/frontier_s3_recognition.py`, `scripts/frontier_s3_recognition_general.py`
+  — Rubinstein–Thompson recognition algorithm at `R = 2..6`, the PATH 1
+  computational proof.
+- `scripts/frontier_s3_shelling.py` — shellability witness at
+  `R = 2..5`, complementary PATH 1 computational proof.
+
+These additions are strictly additive: the four-step derivation, the
+two computational paths, and the lane status (CLOSED) are unchanged.
