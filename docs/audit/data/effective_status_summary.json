@@ -1,12 +1,11 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 639,
+    "bounded_theorem": 638,
     "decoration": 10,
     "meta": 56,
-    "no_go": 185,
+    "no_go": 184,
     "open_gate": 116,
-    "positive_theorem": 779,
-    "unset": 10
+    "positive_theorem": 792
   },
   "cycle_examples": [
     [
@@ -29,18 +28,30 @@
       "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
     ],
     [
-      "angular_kernel_underdetermination_no_go_note",
-      "architecture_note_directional_measure"
+      "anomaly_forces_time_theorem",
+      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+      "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+      "lorentz_kernel_positive_closure_note",
+      "lorentz_boost_covariance_3plus1d_theorem_note",
+      "planck_scale_lane_status_note_2026-04-23",
+      "gravity_clean_derivation_note",
+      "gravity_signed_source_density_boundary_note",
+      "signed_gravity_chi_selector_theorem_or_nogo_note",
+      "antigravity_sign_selector_boundary_note",
+      "frontier_extension_lane_opening_note_2026-04-25"
     ],
     [
-      "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17",
-      "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17"
+      "gravity_clean_derivation_note",
+      "gravity_signed_source_density_boundary_note",
+      "signed_gravity_chi_selector_theorem_or_nogo_note",
+      "antigravity_sign_selector_boundary_note",
+      "frontier_extension_lane_opening_note_2026-04-25"
     ]
   ],
-  "cycles_detected": 165,
+  "cycles_detected": 171,
   "effective_status_counts": {
     "audit_in_progress": 2,
-    "audited_conditional": 475,
+    "audited_conditional": 469,
     "audited_failed": 16,
     "audited_numerical_match": 22,
     "audited_renaming": 34,
@@ -53,10 +64,10 @@
     "meta": 46,
     "open_gate": 19,
     "retained": 62,
-    "retained_bounded": 220,
-    "retained_no_go": 120,
+    "retained_bounded": 218,
+    "retained_no_go": 117,
     "retained_pending_chain": 2,
-    "unaudited": 770
+    "unaudited": 782
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

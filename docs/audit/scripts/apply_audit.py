@@ -198,6 +198,19 @@ def snapshot_audit_state(row: dict, rows: dict[str, dict]) -> dict:
             d: rows.get(d, {}).get("effective_status") or "unaudited"
             for d in deps
         },
+        # Per-dep claim_type and claim_scope, so invalidate_stale_audits
+        # can detect upstream audit-side narrowing or retyping that
+        # happens without a note-text edit (silent w.r.t. note-hash
+        # drift and dep_effective_status weakening when both before and
+        # after live in the retained tier).
+        "dep_claim_type": {
+            d: rows.get(d, {}).get("claim_type")
+            for d in deps
+        },
+        "dep_claim_scope": {
+            d: rows.get(d, {}).get("claim_scope")
+            for d in deps
+        },
         "criticality": row.get("criticality"),
         "load_bearing_score": row.get("load_bearing_score"),
         "transitive_descendants": row.get("transitive_descendants"),

@@ -170,16 +170,24 @@ def main():
         print(f"  {'v_z':>6s} {'mean_phase':>12s} {'delta':>12s}")
         print("  " + "-" * 34)
 
-        phase_static = None
+        # Pass 1: collect all phases (so the v=0 baseline is known before
+        # delta is computed for any row, including v<0).
+        phases: dict[float, float] = {}
         for v in V_VALUES:
             ps = []
             for seed in SEEDS:
                 pos, adj, nmap = grow(seed, drift, restore)
                 ps.append(measure_phase(pos, adj, nmap, S, MASS_Z, v, C_FIELD))
-            mean_p = sum(ps) / len(ps)
-            if v == 0.0:
-                phase_static = mean_p
-            delta = mean_p - phase_static if phase_static is not None else 0.0
+            phases[v] = sum(ps) / len(ps)
+
+        if 0.0 not in phases:
+            raise RuntimeError("V_VALUES must include v=0.0 for the static baseline")
+        phase_static = phases[0.0]
+
+        # Pass 2: print phase + delta-from-static, antisymmetric in v.
+        for v in V_VALUES:
+            mean_p = phases[v]
+            delta = mean_p - phase_static
             print(f"  {v:+6.1f} {mean_p:+12.6f} {delta:+12.6f}")
         print()
 

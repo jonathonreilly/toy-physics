@@ -601,6 +601,10 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
+      "from": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+      "to": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
+    },
+    {
       "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
       "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
     },
@@ -1271,6 +1275,10 @@
     {
       "from": "canonical_harness_index",
       "to": "plaquette_4d_mc_fss_numerical_theorem_note_2026-05-05"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
     },
     {
       "from": "canonical_harness_index",
@@ -6755,6 +6763,30 @@
     {
       "from": "graviton_spectral_tower_theorem_note_2026-04-24",
       "to": "confinement_string_tension_note"
+    },
+    {
+      "from": "gravity_clean_derivation_note",
+      "to": "self_consistency_forces_poisson_note"
+    },
+    {
+      "from": "gravity_clean_derivation_note",
+      "to": "poisson_exhaustive_uniqueness_note"
+    },
+    {
+      "from": "gravity_clean_derivation_note",
+      "to": "gravity_full_self_consistency_note"
+    },
+    {
+      "from": "gravity_clean_derivation_note",
+      "to": "gravity_signed_source_density_boundary_note"
+    },
+    {
+      "from": "gravity_clean_derivation_note",
+      "to": "broad_gravity_derivation_note"
+    },
+    {
+      "from": "gravity_clean_derivation_note",
+      "to": "newton_law_derived_note"
     },
     {
       "from": "gravity_cosmology_tower_lambda_spectral_bridge_theorem_note_2026-04-25",
@@ -13009,6 +13041,10 @@
       "to": "graph_dirac_requirements_2026-04-10"
     },
     {
+      "from": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
       "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
       "to": "anomaly_forces_time_theorem"
     },
@@ -13899,6 +13935,14 @@
     {
       "from": "universal_qg_uv_finite_partition_note",
       "to": "universal_qg_projective_schur_closure_note"
+    },
+    {
+      "from": "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24",
+      "to": "strong_cp_theta_zero_note"
+    },
+    {
+      "from": "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24",
+      "to": "ckm_neutron_edm_bound_note"
     },
     {
       "from": "unpromoted_branch_retainability_audit_note",
@@ -28081,8 +28125,10 @@
       "claim_type_author_hint": "positive_theorem",
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "0bfd9d6f48db445e1f13c17858bd34f039cb379e3a748bf21d715f33a6015717",
+      "deps": [
+        "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
+      ],
+      "note_hash": "2e9cbb6d6cb15fbde038f3b627b441d0c55c95eeb4caeb6b7e41ef112256da73",
       "path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
       "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action"
@@ -28642,6 +28688,7 @@
         "plaquette_4d_mc_support_note_2026-05-04",
         "gauge_wilson_isotropy_boundary_note_2026-05-04",
         "plaquette_4d_mc_fss_numerical_theorem_note_2026-05-05",
+        "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05",
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
@@ -28849,7 +28896,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "48b12dd073598aa81506ae83f58989c03784f29404d8fc13ed1ac555fa688de4",
+      "note_hash": "8bafd4e1544a5515af9c1240f77d74e4a2d9dca279ac2419e6264a3b7568c43b",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -36647,8 +36694,15 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "5be3d259dc3b28ca373d03610b045f4e2f1980dad03890c7a0b0adb8e63ded6d",
+      "deps": [
+        "self_consistency_forces_poisson_note",
+        "poisson_exhaustive_uniqueness_note",
+        "gravity_full_self_consistency_note",
+        "gravity_signed_source_density_boundary_note",
+        "broad_gravity_derivation_note",
+        "newton_law_derived_note"
+      ],
+      "note_hash": "827753a7d1f5cf08a09122ff3eb9ca529611225654574efe4de6bff62ed68e15",
       "path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
       "runner_path": null,
       "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law (Conditional)"
@@ -48224,13 +48278,13 @@
     },
     "second_grown_family_sign_note": {
       "claim_id": "second_grown_family_sign_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "ddc482ea329ae362fa57fc689c8a9b043c3bd7503bfc3b072d59282627a3d89f",
+      "note_hash": "0647fd18e12cdccae36f081d3f3e9b0156086e29bc765e1cbba4e5f539a4243b",
       "path": "docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/SECOND_GROWN_FAMILY_SIGN_SWEEP.py",
       "title": "Second Grown Family Signed-Source Note"
     },
     "self_consistency_forces_poisson_note": {
@@ -49774,6 +49828,19 @@
       "path": "docs/STAGGERED_TWO_FIELD_WAVE_NOTE.md",
       "runner_path": "scripts/frontier_two_field_wave.py",
       "title": "Staggered Two-Field Wave Coupling \u2014 Rerun-Corrected Note"
+    },
+    "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05": {
+      "claim_id": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "minimal_axioms_2026-04-11"
+      ],
+      "note_hash": "dd7b78a9c0b70f696c0722b7d46410abb16abb17f1426e28d19788b079e0e0c6",
+      "path": "docs/STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py",
+      "title": "Staggered + Wilson Determinant-Positivity Bridge Theorem Note"
     },
     "stale_narrative_review_2026-05-03": {
       "claim_id": "stale_narrative_review_2026-05-03",
@@ -51811,8 +51878,11 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "985f7031e3166a327a21381b4eea8fbbf29c2d1a8845cb9c13305558f74fde3f",
+      "deps": [
+        "strong_cp_theta_zero_note",
+        "ckm_neutron_edm_bound_note"
+      ],
+      "note_hash": "f8c223e0d5da13b5657fc547167b09477dd96ea4397a8b551d13eb43e4b30668",
       "path": "docs/UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_universal_theta_induced_edm_vanishing.py",
       "title": "Universal Theta-Induced EDM Response Vanishing Theorem"
@@ -54605,7 +54675,6 @@
     "axiom_change_proposal_2026-04-10",
     "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
     "axiom_first_cpt_theorem_stretch_note_2026-04-29",
-    "axiom_first_reflection_positivity_theorem_note_2026-04-29",
     "axiom_reduction_note",
     "b_independence_mechanism_note",
     "background_independence_note",
@@ -54896,7 +54965,6 @@
     "gravitational_wave_probe_note",
     "gravitomagnetic_note",
     "graviton_mass_derived_note",
-    "gravity_clean_derivation_note",
     "gravity_design_blueprint",
     "gravity_full_self_consistency_note",
     "gravity_law_cleanup_note",
@@ -55306,7 +55374,6 @@
     "universal_gr_supermetric_normal_form_note",
     "universal_gr_tensor_action_blocker_note",
     "universal_qg_optional_textbook_comparison_note",
-    "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24",
     "valley_linear_action_note",
     "valley_linear_asymptotic_bridge_note",
     "valley_linear_mirror_transfer_note",
@@ -55382,12 +55449,12 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 69,
+      "bounded_theorem": 70,
       "meta": 8,
       "no_go": 12,
-      "none": 1715,
+      "none": 1714,
       "open_gate": 12,
-      "positive_theorem": 86
+      "positive_theorem": 87
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 567,
@@ -55395,12 +55462,12 @@
       "no_go": 117,
       "none": 457,
       "open_gate": 118,
-      "positive_theorem": 635
+      "positive_theorem": 636
     },
-    "edge_count": 6510,
+    "edge_count": 6521,
     "leaf_count": 553,
-    "node_count": 1902,
-    "root_count": 879,
-    "runners_with_path": 1475
+    "node_count": 1903,
+    "root_count": 876,
+    "runners_with_path": 1477
   }
 }
