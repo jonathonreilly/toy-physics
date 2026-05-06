@@ -18,16 +18,18 @@ the independent audit lane verifies correctness after merge.
 
 For each prompt the loop:
 
-1. Creates a clean worktree off `origin/main` on a new branch
+1. Atomically reserves up to `--n` rows in `logs/science-fix-state.json`
+   as `in_progress`
+2. Creates a clean worktree off `origin/main` on a new branch
    (`claude/science-fix/<claim-slug>-<run-id>`)
-2. Runs `codex exec -C <worktree> -s workspace-write -m gpt-5.5
+3. Runs `codex exec -C <worktree> -s workspace-write -m gpt-5.5
    --config model_reasoning_effort=xhigh "<prompt body>"`
-3. After codex returns:
+4. After codex returns:
    - If no edits were made (codex punted) → record `no_edits`, move on
    - If timeout → record `timeout`, move on
    - If edits were made → commit, push, `gh pr create`, record
      `pr_opened` with the PR URL
-4. State is persisted to `logs/science-fix-state.json`, so the same
+5. State is persisted to `logs/science-fix-state.json`, so the same
    row is not re-attempted unless `--retry-failed` is passed
 
 ## State file
@@ -37,7 +39,8 @@ For each prompt the loop:
   "attempts": {
     "<claim_id>": {
       "attempted_at": "2026-05-06T...",
-      "outcome": "pr_opened" | "no_edits" | "timeout" | "codex_failed" | "push_failed" | "pr_failed" | "error",
+      "outcome": "in_progress" | "stale_in_progress" | "pr_opened" | "no_edits" | "timeout" | "codex_failed" | "push_failed" | "pr_failed" | "error",
+      "worker_id": "pid12345-abcd1234",
       "elapsed_sec": 248.3,
       "category": "renaming",
       "descendants": 435,
@@ -75,6 +78,11 @@ python3 scripts/science_fix_loop.py --claim-id <claim_id>
 # (skips only rows that successfully opened a PR)
 python3 scripts/science_fix_loop.py --n 5 --retry-failed
 
+# Explicitly recover rows reserved by a known-dead worker.
+# This is disabled by default; only run when no older worker is alive, or
+# choose a cutoff longer than the maximum expected live worker runtime.
+python3 scripts/science_fix_loop.py --n 5 --retry-failed --reclaim-stale-sec 7200
+
 # Tighter timeout for exploratory runs
 python3 scripts/science_fix_loop.py --n 5 --codex-timeout-sec 600
 ```
@@ -89,6 +97,12 @@ python3 scripts/science_fix_loop.py --n 5 --codex-timeout-sec 600
 - **No auto-merge.** Successful attempts open PRs; humans review.
 - **Per-row idempotence.** State file prevents re-attempting the same
   row until `--retry-failed` is passed.
+- **Concurrent workers do not overlap.** Real runs take a file lock and
+  mark rows `in_progress` before starting work, so other workers skip
+  those rows. Dry-runs only read state and never reserve rows.
+- **Explicit stale recovery.** `--reclaim-stale-sec` is disabled by
+  default. Use it only to recover rows from a known-dead worker; an
+  automatic cutoff can misclassify a slow live worker as stale.
 - **Per-attempt timeout.** Default 15 min; codex is killed if it
   exceeds that.
 
@@ -96,6 +110,8 @@ python3 scripts/science_fix_loop.py --n 5 --codex-timeout-sec 600
 
 | Outcome | Meaning | Action |
 |---|---|---|
+| `in_progress` | A worker has reserved the row and may still be editing | Leave it alone unless the worker is known dead |
+| `stale_in_progress` | An explicit stale-reclaim run demoted an old reservation | Retry with `--retry-failed` after confirming no older worker is alive |
 | `pr_opened` | Codex made edits, PR exists | Run review-loop on the PR; land or close |
 | `no_edits` | Codex punted — couldn't see how to close | This row is hard; either revise the note manually or accept the verdict |
 | `timeout` | Codex didn't finish in budget | Try `--retry-failed` with longer `--codex-timeout-sec`, or skip |
