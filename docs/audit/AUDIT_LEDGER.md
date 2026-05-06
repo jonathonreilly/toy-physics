@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 777 |
+| unaudited | 778 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
 | ~~audited_conditional~~ | 471 |
-| ~~audited_failed~~ | 13 |
+| ~~audited_failed~~ | 12 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_hierarchy_matsubara_decomposition_note` | 1 |
@@ -41,10 +41,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 382 |
 | `audited_conditional` | 471 |
 | `audited_decoration` | 9 |
-| `audited_failed` | 57 |
+| `audited_failed` | 56 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 32 |
-| `unaudited` | 826 |
+| `unaudited` | 827 |
 
 | claim_type | count |
 |---|---:|
@@ -1004,7 +1004,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mesoscopic_surrogate_threshold_2d_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | C | - |
 | `moonshot_other_testables_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `nonlinear_born_gravity_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | G | - |
-| `persistent_object_multistage_floor_sweep_note_2026-04-16` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | C | - |
 | `portable_card_extension_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `portable_package_extension_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `second_grown_family_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -9834,19 +9833,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The repeated self-consistent Green-like source object survives three updates with positive weak-field response and F~M=1.00 while remaining broad rather than sharply localized.  _(class `C`)_
 - **chain closes:** True — The registered runner reproduces the zero-source reduction and frozen scout table: source N_eff stays about 4.788, detector N_eff stays about 497, all deltas are positive, and each update step has F~M=1.00 with 4/4 TOWARD. The note correctly keeps the claim at bounded quasi-persistent source-object scope.
 - **rationale:** The bounded Green-scout claim is current with the primary runner and the output supports repeated source-object survival plus weak-field linear response. The object remains broad, with source N_eff near 4.788 out of 5 and detector response still broad, so the note does not claim a persistent inertial object or mass theorem. Residual risk is limited to the stated minimal exact-lattice loop rather than a hidden closure claim.
-- **auditor confidence:** high
-
-### `persistent_object_multistage_floor_sweep_note_2026-04-16`
-
-- **Note:** [`PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the bounded exact-lattice multistage floor claim that, under the frozen h=0.25, blend=0.25, three-update/three-segment setup and five stable widened rows, top4 is the first retained object width passing the stated persistence, carry, direction, alpha, and kappa-drift gates.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-persistent_object_multis-119`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Multistage-admissible totals on the stable widened-regime rows are top3: 0/5, top4: 5/5, top5: 5/5, top6: 5/5, so top4 is the first self-maintaining floor.  _(class `C`)_
-- **chain closes:** False — The provided runner source appears to implement a real first-principles lattice computation parameterized by top_keep, but the restricted packet only includes completed stdout for top3. The load-bearing top4/top5/top6 pass totals are asserted in the note without the corresponding completed runner outputs or certificates in the packet.
-- **rationale:** The top3 completed output supports the negative part of the floor comparison: top3 fails 0/5 under the stated gates. However, the claim’s conclusion requires completed top4 evidence showing 5/5 admissibility and preferably top5/top6 corroboration; those outputs are not included in the restricted packet. Since no cited authorities are provided and the note’s asserted top4 rows cannot be verified from the available stdout alone, the chain does not close on its own terms.
 - **auditor confidence:** high
 
 ### `persistent_object_readout_localization_note`

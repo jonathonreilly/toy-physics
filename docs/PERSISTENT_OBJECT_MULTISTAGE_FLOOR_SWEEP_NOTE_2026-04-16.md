@@ -5,11 +5,49 @@
 
 ## Artifact chain
 
-- Script: [`scripts/persistent_object_top3_multistage_probe.py`](/Users/jonreilly/Projects/Physics/scripts/persistent_object_top3_multistage_probe.py)
-- `top3` log: [`logs/2026-04-16-persistent-object-top3-multistage-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-16-persistent-object-top3-multistage-probe.txt)
-- `top4` log: [`logs/2026-04-16-persistent-object-top4-multistage-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-16-persistent-object-top4-multistage-probe.txt)
-- `top5` log: [`logs/2026-04-16-persistent-object-top5-multistage-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-16-persistent-object-top5-multistage-probe.txt)
-- `top6` log: [`logs/2026-04-16-persistent-object-top6-multistage-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-16-persistent-object-top6-multistage-probe.txt)
+- Audit closure runner:
+  [`scripts/persistent_object_multistage_floor_certificate.py`](../scripts/persistent_object_multistage_floor_certificate.py)
+- Audit closure cache:
+  [`logs/runner-cache/persistent_object_multistage_floor_certificate.txt`](../logs/runner-cache/persistent_object_multistage_floor_certificate.txt)
+- Slow parameterized multistage probe:
+  [`scripts/persistent_object_top3_multistage_probe.py`](../scripts/persistent_object_top3_multistage_probe.py)
+- `top3` completed cache:
+  [`logs/runner-cache/persistent_object_top3_multistage_probe.txt`](../logs/runner-cache/persistent_object_top3_multistage_probe.txt)
+- `top4` completed transfer cache, whose listed cases include the same five
+  stable widened-regime rows:
+  [`logs/runner-cache/persistent_object_top4_multistage_transfer_sweep.txt`](../logs/runner-cache/persistent_object_top4_multistage_transfer_sweep.txt)
+- `top5` completed repair-pass log:
+  [`outputs/persistent_object_top5_multistage_probe_2026-05-06.txt`](../outputs/persistent_object_top5_multistage_probe_2026-05-06.txt)
+
+## Audit closure certificate
+
+The audit-facing certificate is the first listed runner so the restricted
+audit packet contains the load-bearing floor comparison directly. It reports:
+
+- `top3`: `0 / 5` on the five stable widened-regime rows, from the fresh
+  SHA-pinned `top3` cache.
+- `top4`: `5 / 5` on those same rows, extracted from the fresh SHA-pinned
+  `top4` transfer-sweep cache.
+- `top5`: `5 / 5` from a completed live run of the same parameterized
+  multistage probe with `--top-keep 5`.
+- `top6`: `5 / 5` by exact source-cardinality identity. The source cluster has
+  five nodes, and `_topk_weights` keeps `min(top_keep, len(source_probs))`;
+  therefore `top6` has the same effective retained support and same gate
+  result as `top5` in this setup.
+
+Current certificate summary:
+
+```text
+FLOOR TABLE
+  top3: 0/5
+  top4: 5/5
+  top5: 5/5
+  top6: 5/5
+[PASS] first admissible retained object width is top4
+
+SUMMARY: PASS=28 FAIL=0
+STATUS: FLOOR CERTIFICATE PASS
+```
 
 ## Question
 

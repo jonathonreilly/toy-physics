@@ -1,0 +1,60 @@
+===== runner cache v1 =====
+runner: scripts/persistent_object_multistage_floor_certificate.py
+runner_sha256: fb1b9868b46ef4213ff3e3b518b0d4b60b5d48e69faaa36f607057690fd19e14
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+==============================================================================
+PERSISTENT OBJECT MULTISTAGE FLOOR CERTIFICATE
+Scope: five stable widened-regime rows; widths top3/top4/top5/top6
+==============================================================================
+[PASS] logs/runner-cache/persistent_object_top3_multistage_probe.txt names scripts/persistent_object_top3_multistage_probe.py
+[PASS] logs/runner-cache/persistent_object_top3_multistage_probe.txt is SHA-fresh (sha=81a03a040d3b)
+[PASS] logs/runner-cache/persistent_object_top3_multistage_probe.txt exited cleanly
+[PASS] logs/runner-cache/persistent_object_top4_multistage_transfer_sweep.txt names scripts/persistent_object_top4_multistage_transfer_sweep.py
+[PASS] logs/runner-cache/persistent_object_top4_multistage_transfer_sweep.txt is SHA-fresh (sha=c9f10056bf35)
+[PASS] logs/runner-cache/persistent_object_top4_multistage_transfer_sweep.txt exited cleanly
+
+TOP3 NEGATIVE SIDE
+[PASS] top3 baseline is inadmissible
+[PASS] top3 source1.5 is inadmissible
+[PASS] top3 source2.75 is inadmissible
+[PASS] top3 width5 is inadmissible
+[PASS] top3 length8 is inadmissible
+[PASS] top3 summary is 0/5 on stable widened-regime rows
+
+TOP4 POSITIVE SIDE
+[PASS] top4 stable row baseline passes in transfer cache
+[PASS] top4 stable row source1.5 passes in transfer cache
+[PASS] top4 stable row source2.75 passes in transfer cache
+[PASS] top4 stable row width5 passes in transfer cache
+[PASS] top4 stable row length8 passes in transfer cache
+[PASS] top4 stable-row total is 5/5 (passed=5/5)
+
+TOP5 CORROBORATION
+[PASS] top5 completed live-run log is present (outputs/persistent_object_top5_multistage_probe_2026-05-06.txt)
+[PASS] top5 baseline clears all gates (overlap=(0.971, 1.0, 1.0), alpha=(1.03, 1.03, 1.03), carry=(1.0, 1.0), drift=0.000%)
+[PASS] top5 source1.5 clears all gates (overlap=(0.968, 1.0, 1.0), alpha=(1.02, 1.02, 1.02), carry=(1.0, 1.0), drift=0.000%)
+[PASS] top5 source2.75 clears all gates (overlap=(0.987, 1.0, 1.0), alpha=(1.03, 1.03, 1.03), carry=(1.0, 1.0), drift=0.000%)
+[PASS] top5 width5 clears all gates (overlap=(0.966, 1.0, 1.0), alpha=(1.01, 1.01, 1.01), carry=(1.0, 1.0), drift=0.000%)
+[PASS] top5 length8 clears all gates (overlap=(0.983, 1.0, 1.0), alpha=(0.96, 0.96, 0.96), carry=(1.0, 1.0), drift=0.000%)
+[PASS] top5 stable-row total is 5/5 (passed=5/5)
+
+TOP6 CORROBORATION
+[PASS] top6 has the same effective retained source support as top5 (source_nodes=5, eff5=5, eff6=5)
+[PASS] top6 inherits the top5 5/5 gate result
+
+FLOOR TABLE
+  top3: 0/5
+  top4: 5/5
+  top5: 5/5
+  top6: 5/5
+[PASS] first admissible retained object width is top4
+
+SUMMARY: PASS=28 FAIL=0
+STATUS: FLOOR CERTIFICATE PASS
+
+----- stderr -----
+
