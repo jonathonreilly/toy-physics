@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-05 update: the `O_H/source-Higgs` authority rescan is now landed and
+blocks the "maybe we already had it" route.  The current PR230 branch contains
+no same-surface canonical `O_H` identity/normalization certificate and no
+production `C_ss/C_sH/C_HH` pole-row certificate.  Existing FMS, action-first,
+invariant-ring, GNS, holonomic, Perron, determinant-positivity, and
+reflection-positivity artifacts remain certificate engines only.  The
+highest-value positive queue is unchanged but now sharper: produce a genuine
+same-surface canonical `O_H` certificate or source-Higgs pole rows; otherwise
+move to genuine same-source W/Z rows with identity/covariance/strict `g2`,
+strict scalar-LSZ denominator authority, Schur rows, or a neutral
+primitive/off-diagonal-generator certificate.
+
 2026-05-05 update: the complete-Bernstein scalar-LSZ inverse diagnostic is
 now landed and blocks the current polefit8x8 inverse-propagator shortcut.  A
 positive Stieltjes scalar propagator would have a complete-Bernstein

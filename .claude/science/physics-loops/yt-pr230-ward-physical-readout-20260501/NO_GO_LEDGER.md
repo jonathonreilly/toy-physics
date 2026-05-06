@@ -3302,3 +3302,22 @@ generator certificate or with direct measured bridge rows.  Do not reopen it
 with reflection positivity, determinant positivity, Euclidean measure
 positivity, Burnside theorem names, synthetic primitive matrices,
 source-only `C_ss`, or source-only response rows.
+
+## 2026-05-05 - O_H/Source-Higgs Authority Rescan
+
+No-go on the current surface: the PR230 branch does not already contain a
+same-surface canonical `O_H` identity/normalization certificate or production
+`C_ss/C_sH/C_HH` pole-row certificate.
+
+The rescan consumes the known canonical-Higgs, FMS, action-first,
+invariant-ring, GNS, holonomic, source-Higgs builder, Gram-purity, and
+derived-rank-one surfaces.  None supplies the missing current-surface
+operator or rows.  A finite positive counterfamily keeps `C_ss` fixed while
+varying `C_sH/C_HH`, so source-only rows and positivity do not identify the
+source-Higgs overlap.
+
+Reopen this route only with a real same-surface `O_H` certificate or
+production source-Higgs pole rows.  Do not reopen it with method names,
+cross-lane `O_H` references, unratified Gram purity, FMS language,
+GNS/flat-extension rank, holonomic derivative machinery, or positivity
+preservation alone.

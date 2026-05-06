@@ -92,6 +92,9 @@ def main() -> int:
         "holonomic_source_response_feasibility_gate": load(
             "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json"
         ),
+        "oh_source_higgs_authority_rescan_gate": load(
+            "outputs/yt_pr230_oh_source_higgs_authority_rescan_gate_2026-05-05.json"
+        ),
         "derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -187,6 +190,8 @@ def main() -> int:
         "action-first `O_H/C_sH/C_HH`",
         "PR541-style holonomic source-response route",
         "not proof selectors until a same-current-surface O_H/h-source artifact exists",
+        "O_H/source-Higgs authority rescan",
+        "not proof selectors until canonical O_H or C_sH/C_HH pole rows exist",
         "Reflection plus determinant positivity primitive-upgrade",
         "same-surface neutral primitive-cone certificate exists",
     ]
@@ -480,6 +485,18 @@ def main() -> int:
         is False
         and holonomic_source_response.get("pr541_route_immediate_closure") is False,
         holonomic_source_response.get("actual_current_surface_status"),
+    )
+    oh_source_higgs_rescan = certificates["oh_source_higgs_authority_rescan_gate"]
+    report(
+        "oh-source-higgs-authority-rescan-finds-no-current-certificate",
+        "O_H/source-Higgs authority rescan found no"
+        in str(oh_source_higgs_rescan.get("actual_current_surface_status"))
+        and oh_source_higgs_rescan.get("proposal_allowed") is False
+        and oh_source_higgs_rescan.get("oh_source_higgs_authority_found") is False
+        and oh_source_higgs_rescan.get("exact_negative_boundary_passed") is True
+        and oh_source_higgs_rescan.get("canonical_oh_absent") is True
+        and oh_source_higgs_rescan.get("source_higgs_rows_absent") is True,
+        oh_source_higgs_rescan.get("actual_current_surface_status"),
     )
     derived_bridge = certificates["derived_bridge_rank_one_closure_attempt"]
     report(

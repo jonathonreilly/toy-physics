@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T00:51:48.822515+00:00",
+  "generated_at": "2026-05-06T00:57:54.353743+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42388,6 +42388,16 @@
       "runner_path": "scripts/frontier_yt_pr230_nonchunk_terminal_route_exhaustion_gate.py",
       "title": "PR230 Non-Chunk Terminal Route-Exhaustion Gate"
     },
+    "yt_pr230_oh_source_higgs_authority_rescan_gate_note_2026-05-05": {
+      "claim_id": "yt_pr230_oh_source_higgs_authority_rescan_gate_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / no current same-surface `O_H` or `C_sH/C_HH` row authority",
+      "deps": [],
+      "note_hash": "d982523ed4a29e6a63f69839d922aa10d773416c08595081d0c69e60f18ef540",
+      "path": "docs/YT_PR230_OH_SOURCE_HIGGS_AUTHORITY_RESCAN_GATE_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR230 O_H / Source-Higgs Authority Rescan Gate"
+    },
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01": {
       "claim_id": "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
       "current_status": "open",
@@ -45225,6 +45235,7 @@
     "yt_pr230_nonchunk_reopen_admissibility_gate_note_2026-05-05",
     "yt_pr230_nonchunk_route_family_import_audit_note_2026-05-05",
     "yt_pr230_nonchunk_terminal_route_exhaustion_gate_note_2026-05-05",
+    "yt_pr230_oh_source_higgs_authority_rescan_gate_note_2026-05-05",
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
     "yt_pr230_positive_closure_completion_audit_note_2026-05-05",
     "yt_pr230_queue_exhaustion_certificate_note_2026-05-01",
@@ -45356,9 +45367,9 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1064,
-    "node_count": 2017,
-    "root_count": 1530,
+    "leaf_count": 1065,
+    "node_count": 2018,
+    "root_count": 1531,
     "runners_with_path": 1515,
     "status_counts": {
       "bounded": 554,
@@ -45366,7 +45377,7 @@
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 431,
-      "unknown": 556
+      "unknown": 557
     }
   }
 }

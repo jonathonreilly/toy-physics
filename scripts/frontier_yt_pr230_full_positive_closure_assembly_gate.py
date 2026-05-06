@@ -83,6 +83,7 @@ PARENTS = {
     "canonical_higgs_semantic_firewall": "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
     "pr230_action_first_oh_artifact_attempt": "outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json",
     "pr230_holonomic_source_response_feasibility_gate": "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json",
+    "pr230_oh_source_higgs_authority_rescan_gate": "outputs/yt_pr230_oh_source_higgs_authority_rescan_gate_2026-05-05.json",
     "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
     "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -472,6 +473,18 @@ def main() -> int:
             "two_source_functional_current_surface_defined"
         )
         is False
+        and certs["pr230_oh_source_higgs_authority_rescan_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_oh_source_higgs_authority_rescan_gate"].get(
+            "oh_source_higgs_authority_found"
+        )
+        is False
+        and certs["pr230_oh_source_higgs_authority_rescan_gate"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
         and certs["pr230_derived_bridge_rank_one_closure_attempt"].get(
             "proposal_allowed"
         )
@@ -978,6 +991,24 @@ def main() -> int:
         )
         is False,
         statuses["pr230_holonomic_source_response_feasibility_gate"],
+    )
+    report(
+        "oh-source-higgs-authority-rescan-finds-no-current-certificate",
+        "O_H/source-Higgs authority rescan found no"
+        in statuses["pr230_oh_source_higgs_authority_rescan_gate"]
+        and certs["pr230_oh_source_higgs_authority_rescan_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_oh_source_higgs_authority_rescan_gate"].get(
+            "oh_source_higgs_authority_found"
+        )
+        is False
+        and certs["pr230_oh_source_higgs_authority_rescan_gate"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True,
+        statuses["pr230_oh_source_higgs_authority_rescan_gate"],
     )
     report(
         "derived-bridge-rank-one-attempt-blocks-current-source-only-closure",

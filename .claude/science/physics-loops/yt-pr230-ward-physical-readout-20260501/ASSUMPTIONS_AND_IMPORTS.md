@@ -819,3 +819,14 @@ synthetic finite matrices is not enough and must not be used as positivity
 improvement.  Conditional rank-one support is not a source-to-Higgs
 normalization and cannot set `kappa_s = 1` or authorize
 retained/proposed-retained closure.
+
+2026-05-05 O_H/source-Higgs authority rescan:
+
+O_H/source-Higgs authority rescan is an exact current-surface inventory gate,
+not a proof selector.  Existing FMS, action-first, invariant-ring, GNS,
+holonomic, Perron, positivity, and determinant/reflection-positivity artifacts
+are not proof selectors until canonical O_H or C_sH/C_HH pole rows exist on the
+same PR230 surface.  A source-only row family with fixed `C_ss` and variable
+`C_sH/C_HH` remains positive, so source-only rows plus positivity cannot select
+the canonical-Higgs overlap, set `kappa_s = 1`, or authorize
+retained/proposed-retained closure.

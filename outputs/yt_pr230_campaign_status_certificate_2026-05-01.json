@@ -291,6 +291,7 @@
     "pr230_nonchunk_reopen_admissibility": "exact negative boundary / PR230 non-chunk reopen-admissibility gate: no future artifact candidate is admissible on the current surface; positive closure still open",
     "pr230_nonchunk_route_family_import_audit": "exact negative boundary / non-chunk route-family import audit confirms no executable current-surface route after W/Z covariance-theorem import no-go",
     "pr230_nonchunk_terminal_route_exhaustion": "exact negative boundary / PR230 non-chunk terminal route-exhaustion gate: no current route may continue without a named same-surface artifact; positive closure still open",
+    "pr230_oh_source_higgs_authority_rescan_gate": "exact negative boundary / O_H/source-Higgs authority rescan found no current same-surface canonical O_H or C_sH/C_HH row certificate",
     "pr230_reflection_det_primitive_upgrade_gate": "exact negative boundary / reflection plus determinant positivity does not upgrade PR230 to a neutral primitive-cone bridge",
     "pr230_scalar_lsz_carleman_tauberian_determinacy_attempt": "exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows",
     "pr230_scalar_lsz_holonomic_exact_authority_attempt": "exact negative boundary / scalar-LSZ holonomic exact-authority not derivable from current finite-shell PR230 data",
@@ -384,7 +385,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 270,
+  "pass_count": 271,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

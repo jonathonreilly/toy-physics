@@ -140,6 +140,7 @@ def main() -> int:
         "fms_oh_certificate_construction_attempt": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
         "pr230_action_first_oh_artifact_attempt": "outputs/yt_pr230_action_first_oh_artifact_attempt_2026-05-05.json",
         "pr230_holonomic_source_response_feasibility_gate": "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json",
+        "pr230_oh_source_higgs_authority_rescan_gate": "outputs/yt_pr230_oh_source_higgs_authority_rescan_gate_2026-05-05.json",
         "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
         "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
         "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -1015,6 +1016,24 @@ def main() -> int:
             "two_source_functional_current_surface_defined"
         )
         is False
+    )
+    oh_source_higgs_authority_rescan_blocks = (
+        "O_H/source-Higgs authority rescan found no"
+        in certificates["pr230_oh_source_higgs_authority_rescan_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_oh_source_higgs_authority_rescan_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_oh_source_higgs_authority_rescan_gate"].get(
+            "oh_source_higgs_authority_found"
+        )
+        is False
+        and certificates["pr230_oh_source_higgs_authority_rescan_gate"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
     )
     derived_bridge_rank_one_closure_attempt_blocks = (
         "derived rank-one bridge not closed"
@@ -3222,6 +3241,13 @@ def main() -> int:
         "holonomic-source-response-gate-blocks-missing-oh-h-source",
         holonomic_source_response_gate_blocks,
         certificates["pr230_holonomic_source_response_feasibility_gate"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "oh-source-higgs-authority-rescan-finds-no-current-certificate",
+        oh_source_higgs_authority_rescan_blocks,
+        certificates["pr230_oh_source_higgs_authority_rescan_gate"].get(
             "actual_current_surface_status", ""
         ),
     )

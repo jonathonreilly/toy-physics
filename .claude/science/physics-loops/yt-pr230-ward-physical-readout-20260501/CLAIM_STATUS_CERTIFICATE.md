@@ -4136,3 +4136,33 @@ off-diagonal-generator certificate plus canonical-Higgs/source-overlap
 authority.  Positivity preservation, determinant/reflection positivity,
 synthetic primitive matrices, and conditional Perron support are not enough.
 No effective-retention or proposed-retention wording is allowed.
+
+O_H/source-Higgs authority rescan:
+
+```text
+actual_current_surface_status: exact negative boundary / O_H/source-Higgs authority rescan found no current same-surface canonical O_H or C_sH/C_HH row certificate
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_oh_source_higgs_authority_rescan_gate.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=36 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=91 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=239 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=271 FAIL=0
+```
+
+The rescan found no hidden PR230 same-surface canonical `O_H` certificate and
+no source-Higgs production `C_ss/C_sH/C_HH` pole-row certificate.  A positive
+source-Higgs lane still needs a genuine current-surface `O_H` identity and
+normalization certificate or production pole rows; FMS, invariant-ring, GNS,
+holonomic, Perron, and positivity methods remain certificate engines only.
+No effective-retention or proposed-retention wording is allowed.

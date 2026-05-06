@@ -5694,3 +5694,23 @@ identity/normalization needed to begin the selected `O_H/C_sH/C_HH` contract.
 A standard EW action written by definition is hypothetical new-surface
 support only until tied to the PR230 source coordinate.  No
 effective-retention or proposed-retention wording is allowed.
+
+## 2026-05-05 - Block 239 O_H/Source-Higgs Authority Rescan
+
+Review stance: current-surface authority rescan / exact negative boundary.
+
+- Added `scripts/frontier_yt_pr230_oh_source_higgs_authority_rescan_gate.py`.
+- Added `docs/YT_PR230_OH_SOURCE_HIGGS_AUTHORITY_RESCAN_GATE_NOTE_2026-05-05.md`.
+- Added `outputs/yt_pr230_oh_source_higgs_authority_rescan_gate_2026-05-05.json`.
+- Wired the rescan into assumption stress, campaign status, full positive
+  closure assembly, and retained-route certificates.
+- Validation: runner `PASS=14 FAIL=0`, assumption stress `PASS=36 FAIL=0`,
+  campaign status `PASS=271 FAIL=0`, full assembly `PASS=91 FAIL=0`,
+  retained-route `PASS=239 FAIL=0`.
+
+Disposition: exact negative boundary.  The rescan did not find a hidden
+same-surface canonical `O_H` certificate or source-Higgs production
+`C_ss/C_sH/C_HH` rows.  Source-only rows plus positivity admit a positive
+counterfamily with fixed `C_ss` and variable source-Higgs overlap, so no
+source-Higgs bridge or `kappa_s = 1` normalization may be inferred.  No
+effective-retention or proposed-retention wording is allowed.

@@ -3821,3 +3821,35 @@ same-source W/Z rows with identity/covariance/strict `g2`; strict scalar-LSZ
 infinite/tail moment, threshold, and finite-volume authority; Schur `A/B/C`
 rows; or a neutral primitive-cone/off-diagonal-generator certificate.  Do not
 claim retained or proposed-retained closure.
+
+## 2026-05-05 - O_H/Source-Higgs Authority Rescan
+
+The "maybe we already had O_H and missed it" route is now executable and
+blocked on the current surface:
+
+```text
+python3 scripts/frontier_yt_pr230_oh_source_higgs_authority_rescan_gate.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=36 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=271 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=91 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=239 FAIL=0
+```
+
+The branch contains no current same-surface canonical `O_H` certificate and no
+source-Higgs production `C_ss/C_sH/C_HH` row certificate.  Existing FMS,
+action-first, invariant-ring, GNS, holonomic, Perron, determinant-positivity,
+and reflection-positivity artifacts are useful future certificate engines, not
+the missing bridge.  The next positive action remains to produce one genuine
+same-surface artifact: canonical `O_H`, source-Higgs pole rows, W/Z rows with
+identity/covariance/strict `g2`, Schur rows, strict scalar-LSZ authority, or a
+neutral primitive/off-diagonal-generator certificate.  No
+retained/proposed-retained wording is authorized.

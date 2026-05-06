@@ -554,6 +554,9 @@ def main() -> int:
         "pr230_holonomic_source_response_feasibility_gate": load(
             "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json"
         ),
+        "pr230_oh_source_higgs_authority_rescan_gate": load(
+            "outputs/yt_pr230_oh_source_higgs_authority_rescan_gate_2026-05-05.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -2226,6 +2229,24 @@ def main() -> int:
         )
         is False,
         statuses["pr230_holonomic_source_response_feasibility_gate"],
+    )
+    report(
+        "pr230-oh-source-higgs-authority-rescan-finds-no-current-certificate",
+        "O_H/source-Higgs authority rescan found no"
+        in str(statuses["pr230_oh_source_higgs_authority_rescan_gate"])
+        and certificates["pr230_oh_source_higgs_authority_rescan_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_oh_source_higgs_authority_rescan_gate"].get(
+            "oh_source_higgs_authority_found"
+        )
+        is False
+        and certificates["pr230_oh_source_higgs_authority_rescan_gate"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True,
+        statuses["pr230_oh_source_higgs_authority_rescan_gate"],
     )
     report(
         "pr230-derived-bridge-rank-one-attempt-blocks-current-source-only-closure",

@@ -32,3 +32,11 @@ none is imported as PR230 evidence.  The current surface still needs the
 same-surface neutral transfer matrix, primitive cone, pole isolation, and
 canonical-Higgs/source-overlap authority before those theorems can become
 load-bearing.
+
+2026-05-05 O_H/source-Higgs authority rescan:
+
+FMS, GNS/flat-extension, invariant-ring, holonomic/D-module, Perron-Frobenius,
+and positivity literature remains admissible only as future certificate
+machinery after a same-surface canonical `O_H` or `C_sH/C_HH` row object is
+present.  The rescan found no such current PR230 authority, so no literature
+method is imported as the missing operator, overlap, or normalization selector.
