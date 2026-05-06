@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
 | unaudited | 786 |
-| audit_in_progress | 2 |
+| audit_in_progress | 1 |
 | meta | 48 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
-| ~~audited_conditional~~ | 465 |
+| ~~audited_conditional~~ | 466 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,9 +39,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
+| `audit_in_progress` | 1 |
 | `audited_clean` | 378 |
-| `audited_conditional` | 465 |
+| `audited_conditional` | 466 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
@@ -112,7 +112,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
-| `second_grown_family_complex_note` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -876,6 +875,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_trace_tensor_no_go_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `scaling_failure_mechanisms` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `second_grown_family_complex_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | C | - |
 | `session_synthesis_2026-04-10_graph_axioms` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `seventh_family_diagonal_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `sign_portability_invariant_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -11122,6 +11122,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the note asserts a multi-step exact closure chain and a structural full-packet no-go without registering the theorem/proof/runner dependencies that establish those steps. Why this blocks: a clean audit cannot verify canonical branch selection, rho1 slice selection, exact reduced-packet solve, least-distortion internal dressing, compression-interlacing obstruction, or exact live-target reproduction from this source note alone. Repair target: add explicit audited dependency edges or a primary runner/proof bundle for each step of the closure chain and no-go. Claim boundary until fixed: the row may serve as a bounded reviewer-scope inventory of claimed limits and remaining objections, not as a clean audited line-law closure theorem.
 - **open / conditional deps cited:**
   - `science_3plus1_line_law_known_limits_note_2026-04-20 -> missing audited Wilson/Perron, rho1, complex-Givens, reduced-packet, interlacing-no-go, and live-target dependencies`
+- **auditor confidence:** high
+
+### `second_grown_family_complex_note`
+
+- **Note:** [`SECOND_GROWN_FAMILY_COMPLEX_NOTE.md`](../../docs/SECOND_GROWN_FAMILY_COMPLEX_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Narrow drift=0.20 no-restore geometry-sector grown-family complex-action companion, conditional on printed runner guards being accepted or asserted.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-judicial-third-2026-05-06-second-grown-family-complex-print-gates`  (codex-current; independence=judicial_review)
+- **load-bearing step:** The cached run shows anchor_ok=True and crossover_ok=True at drift=0.20, but the runner only prints those booleans and does not assert or fail if the gates are false.  _(class `C`)_
+- **chain closes:** False — The second audit is correct under the current packet: timeout is irrelevant because the completed cache exists and the dependency is now retained_bounded, but the load-bearing gates are diagnostic prints rather than executable PASS/FAIL assertions, so audited_clean is too strong.
+- **rationale:** The second audit is correct under the current packet: timeout is irrelevant because the completed cache exists and the dependency is now retained_bounded, but the load-bearing gates are diagnostic prints rather than executable PASS/FAIL assertions, so audited_clean is too strong.
 - **auditor confidence:** high
 
 ### `second_grown_family_note`
