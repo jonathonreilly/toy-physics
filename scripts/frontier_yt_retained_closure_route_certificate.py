@@ -161,6 +161,8 @@ def main() -> int:
         "pr230_two_source_taste_radial_row_production_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
         "pr230_two_source_taste_radial_chunk001_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json",
         "pr230_two_source_taste_radial_chunk002_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk002_checkpoint_2026-05-06.json",
+        "pr230_two_source_taste_radial_chunk003_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk003_checkpoint_2026-05-06.json",
+        "pr230_two_source_taste_radial_chunk004_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk004_checkpoint_2026-05-06.json",
         "pr230_taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
         "pr230_degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
         "pr230_fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
@@ -1553,6 +1555,50 @@ def main() -> int:
         )
         is False
         and certificates["pr230_two_source_taste_radial_chunk002_checkpoint"].get(
+            "chunk_summary", {}
+        ).get("pole_residue_rows_count")
+        == 0
+    )
+    two_source_taste_radial_chunk003_checkpoint_not_closure = (
+        "two-source taste-radial chunk003"
+        in certificates["pr230_two_source_taste_radial_chunk003_checkpoint"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_two_source_taste_radial_chunk003_checkpoint"].get(
+            "checkpoint_passed"
+        )
+        is True
+        and certificates["pr230_two_source_taste_radial_chunk003_checkpoint"].get(
+            "completed"
+        )
+        is True
+        and certificates["pr230_two_source_taste_radial_chunk003_checkpoint"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_two_source_taste_radial_chunk003_checkpoint"].get(
+            "chunk_summary", {}
+        ).get("pole_residue_rows_count")
+        == 0
+    )
+    two_source_taste_radial_chunk004_checkpoint_not_closure = (
+        "two-source taste-radial chunk004"
+        in certificates["pr230_two_source_taste_radial_chunk004_checkpoint"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_two_source_taste_radial_chunk004_checkpoint"].get(
+            "checkpoint_passed"
+        )
+        is True
+        and certificates["pr230_two_source_taste_radial_chunk004_checkpoint"].get(
+            "completed"
+        )
+        is True
+        and certificates["pr230_two_source_taste_radial_chunk004_checkpoint"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_two_source_taste_radial_chunk004_checkpoint"].get(
             "chunk_summary", {}
         ).get("pole_residue_rows_count")
         == 0
@@ -4075,6 +4121,20 @@ def main() -> int:
         ),
     )
     report(
+        "two-source-taste-radial-chunk003-checkpoint-not-closure",
+        two_source_taste_radial_chunk003_checkpoint_not_closure,
+        certificates["pr230_two_source_taste_radial_chunk003_checkpoint"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "two-source-taste-radial-chunk004-checkpoint-not-closure",
+        two_source_taste_radial_chunk004_checkpoint_not_closure,
+        certificates["pr230_two_source_taste_radial_chunk004_checkpoint"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "kinetic-taste-mixing-shortcut-closed",
         kinetic_taste_mixing_bridge_blocks_shortcut,
         certificates["pr230_kinetic_taste_mixing_bridge"].get(
@@ -5390,7 +5450,7 @@ def main() -> int:
             "no-resume chunk commands and a collision guard for C_sx/C_xx rows, "
             "but it is run-control support only until rows are actually run, "
             "combined, pole-tested, and bridged to O_H or physical response.  "
-            "The completed two-source taste-radial chunk001/chunk002 checkpoints "
+            "The completed two-source taste-radial chunks001-004 checkpoints "
             "are bounded row support only: they validate seed-controlled "
             "timeseries rows but do not supply combined L12 pole evidence, "
             "FV/IR authority, canonical O_H, or scalar-LSZ normalization.  "
@@ -5467,6 +5527,8 @@ def main() -> int:
         "fms_composite_oh_conditional_support_not_closure": fms_composite_oh_conditional_support_not_closure,
         "two_source_taste_radial_chunk001_checkpoint_not_closure": two_source_taste_radial_chunk001_checkpoint_not_closure,
         "two_source_taste_radial_chunk002_checkpoint_not_closure": two_source_taste_radial_chunk002_checkpoint_not_closure,
+        "two_source_taste_radial_chunk003_checkpoint_not_closure": two_source_taste_radial_chunk003_checkpoint_not_closure,
+        "two_source_taste_radial_chunk004_checkpoint_not_closure": two_source_taste_radial_chunk004_checkpoint_not_closure,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,

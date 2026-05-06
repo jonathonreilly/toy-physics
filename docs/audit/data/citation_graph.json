@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T16:51:14.651098+00:00",
+  "generated_at": "2026-05-06T17:09:45.196363+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42733,7 +42733,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded support / row-chunk schema checkpoint infrastructure.",
       "deps": [],
-      "note_hash": "e185c3315e3a40e67705aae8c1d64f62fca6cdd0a11c8ce17c6370159d5f7583",
+      "note_hash": "ccc9387b2ac19b894d98f43939993b619640846b9212df376b02569116e589ee",
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNK_CHECKPOINT_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py",
       "title": "PR230 Two-Source Taste-Radial Chunk Checkpoint Note"

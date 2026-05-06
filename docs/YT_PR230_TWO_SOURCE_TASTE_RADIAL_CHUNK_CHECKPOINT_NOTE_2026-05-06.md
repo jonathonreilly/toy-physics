@@ -58,13 +58,24 @@ python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py \
 python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py \
   --chunk-index 2 \
   --output outputs/yt_pr230_two_source_taste_radial_chunk002_checkpoint_2026-05-06.json
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py \
+  --chunk-index 3 \
+  --output outputs/yt_pr230_two_source_taste_radial_chunk003_checkpoint_2026-05-06.json
+
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py \
+  --chunk-index 4 \
+  --output outputs/yt_pr230_two_source_taste_radial_chunk004_checkpoint_2026-05-06.json
 ```
 
 Expected pending summary while chunk001 is active and not yet complete:
 `PASS=2 FAIL=0`.
 
-Completed chunk001 and chunk002 now pass completed mode with `PASS=15 FAIL=0`
-each.  The runner accepts the explicit metadata non-readout firewall for older
-completed artifacts and the production harness now also writes the same
+Completed chunks001-004 now pass completed mode with `PASS=15 FAIL=0`
+each.  Chunks005-006 are active under the row-wave supervisor's two-worker cap
+and remain non-evidence until their completed JSONs exist and completed-mode
+checkpoints pass.  The runner accepts the explicit metadata non-readout
+firewall for older completed artifacts and the production harness now also
+writes the same
 `used_as_physical_yukawa_readout: false` flag directly under future scalar
 source-response and scalar-LSZ analysis objects.

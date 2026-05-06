@@ -167,12 +167,13 @@ sharpens the missing artifact but does not close PR230: the action, nonzero
 `v`, canonical LSZ normalization, `C_sH/C_HH` pole rows, and Gram/FV/IR
 authority are still absent.
 
-Chunks001-002 of the two-source taste-radial production wave have completed.
+Chunks001-004 of the two-source taste-radial production wave have completed.
 The completed-mode chunk checkpoint now passes `PASS=15 FAIL=0` for both
-chunks, including production metadata, `numba_gauge_seed_v1`, the preserved
-three-mass scan, selected-mass-only FH/LSZ/source rows, and `C_sx/C_xx`
-timeseries.  Chunks003-004 are active under the supervisor's two-worker cap.
-Completed chunks001-002 are still bounded row support only: they are not
+chunks001-002 and now passes `PASS=15 FAIL=0` for chunks003-004 too, including
+production metadata, `numba_gauge_seed_v1`, the preserved three-mass scan,
+selected-mass-only FH/LSZ/source rows, and `C_sx/C_xx` timeseries.
+Chunks005-006 are active under the supervisor's two-worker cap.  Completed
+chunks001-004 are still bounded row support only: they are not
 combined L12 evidence, pole/FV/IR evidence, canonical `O_H`, `kappa_s`, or
 top-Yukawa closure.
 
@@ -190,8 +191,8 @@ Best next work:
    the FMS post-degree rescore and composite-expansion theorem, but FMS
    literature and the conditional expansion are route support only;
 2. launch production `C_sx/C_xx` rows for the exact two-source taste-radial
-   source using the no-resume manifest and row contract; chunks001-002 are
-   complete and checkpointed, chunks003-004 are active under the two-worker
+   source using the no-resume manifest and row contract; chunks001-004 are
+   complete and checkpointed, chunks005-006 are active under the two-worker
    launcher cap, and after they complete the next action is rerunning the
    per-chunk checkpoint without pending mode, then the next bounded wave, then
    prove/reject its canonical-`O_H` identity or supply another bridge; the

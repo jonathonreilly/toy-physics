@@ -63,7 +63,7 @@ Allowed context:
   pending mode records only active PIDs and the absence of row JSON.  Pending
   checkpoints are not row data, pole evidence, canonical `O_H`, scalar LSZ
   normalization, or `y_t` closure.
-- the completed two-source taste-radial chunk001/chunk002 checkpoints as
+- the completed two-source taste-radial chunks001-004 checkpoints as
   bounded row support only: they validate real chunk JSON, seed control,
   selected-mass-only FH/LSZ, and `C_sx/C_xx` timeseries, but not combined L12
   pole evidence, canonical `O_H`, scalar LSZ normalization, or `y_t` closure.
@@ -142,7 +142,7 @@ Open imports after this block:
   workers and partial directories are explicitly non-evidence.
 - Two-source taste-radial active-pending chunk checkpoints are not proof
   selectors; they explicitly certify that completed row JSON is absent.
-- Completed two-source taste-radial chunks001-002 are not proof selectors
+- Completed two-source taste-radial chunks001-004 are not proof selectors
   until combined row evidence, pole/FV/IR authority, and canonical
   `O_H`/source-overlap or physical-response authority exist.
 - Taste-radial degree-one uniqueness is not a proof selector until a

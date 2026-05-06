@@ -620,6 +620,12 @@ def main() -> int:
         "pr230_two_source_taste_radial_chunk002_checkpoint": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk002_checkpoint_2026-05-06.json"
         ),
+        "pr230_two_source_taste_radial_chunk003_checkpoint": load(
+            "outputs/yt_pr230_two_source_taste_radial_chunk003_checkpoint_2026-05-06.json"
+        ),
+        "pr230_two_source_taste_radial_chunk004_checkpoint": load(
+            "outputs/yt_pr230_two_source_taste_radial_chunk004_checkpoint_2026-05-06.json"
+        ),
         "pr230_taste_radial_canonical_oh_selector_gate": load(
             "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
         ),
@@ -2712,6 +2718,12 @@ def main() -> int:
     two_source_chunk002 = certificates[
         "pr230_two_source_taste_radial_chunk002_checkpoint"
     ]
+    two_source_chunk003 = certificates[
+        "pr230_two_source_taste_radial_chunk003_checkpoint"
+    ]
+    two_source_chunk004 = certificates[
+        "pr230_two_source_taste_radial_chunk004_checkpoint"
+    ]
     report(
         "pr230-two-source-taste-radial-chunk001-checkpoint-not-closure",
         "two-source taste-radial chunk001"
@@ -2737,6 +2749,32 @@ def main() -> int:
         )
         == 0,
         statuses["pr230_two_source_taste_radial_chunk002_checkpoint"],
+    )
+    report(
+        "pr230-two-source-taste-radial-chunk003-checkpoint-not-closure",
+        "two-source taste-radial chunk003"
+        in str(statuses["pr230_two_source_taste_radial_chunk003_checkpoint"])
+        and two_source_chunk003.get("checkpoint_passed") is True
+        and two_source_chunk003.get("completed") is True
+        and two_source_chunk003.get("proposal_allowed") is False
+        and two_source_chunk003.get("chunk_summary", {}).get(
+            "pole_residue_rows_count"
+        )
+        == 0,
+        statuses["pr230_two_source_taste_radial_chunk003_checkpoint"],
+    )
+    report(
+        "pr230-two-source-taste-radial-chunk004-checkpoint-not-closure",
+        "two-source taste-radial chunk004"
+        in str(statuses["pr230_two_source_taste_radial_chunk004_checkpoint"])
+        and two_source_chunk004.get("checkpoint_passed") is True
+        and two_source_chunk004.get("completed") is True
+        and two_source_chunk004.get("proposal_allowed") is False
+        and two_source_chunk004.get("chunk_summary", {}).get(
+            "pole_residue_rows_count"
+        )
+        == 0,
+        statuses["pr230_two_source_taste_radial_chunk004_checkpoint"],
     )
     action_first_route_completion = certificates["pr230_action_first_route_completion"]
     report(
@@ -4505,6 +4543,24 @@ def main() -> int:
         and two_source_chunk002.get("completed") is True
         and two_source_chunk002.get("proposal_allowed") is False
         and two_source_chunk002.get("chunk_summary", {}).get(
+            "pole_residue_rows_count"
+        )
+        == 0
+    )
+    result["two_source_taste_radial_chunk003_checkpoint_not_closure"] = (
+        two_source_chunk003.get("checkpoint_passed") is True
+        and two_source_chunk003.get("completed") is True
+        and two_source_chunk003.get("proposal_allowed") is False
+        and two_source_chunk003.get("chunk_summary", {}).get(
+            "pole_residue_rows_count"
+        )
+        == 0
+    )
+    result["two_source_taste_radial_chunk004_checkpoint_not_closure"] = (
+        two_source_chunk004.get("checkpoint_passed") is True
+        and two_source_chunk004.get("completed") is True
+        and two_source_chunk004.get("proposal_allowed") is False
+        and two_source_chunk004.get("chunk_summary", {}).get(
             "pole_residue_rows_count"
         )
         == 0

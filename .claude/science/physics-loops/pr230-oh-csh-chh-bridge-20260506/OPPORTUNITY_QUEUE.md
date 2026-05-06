@@ -14,8 +14,8 @@
    and gauge-covariant action/source vertex now exist as support, and the
    row contract now labels `C_sx/C_xx` explicitly.  A no-resume production
    manifest now records the row chunk commands, and the row-wave launcher has
-   completed chunks001-002 and advanced to active chunks003-004 under a
-   two-worker cap.  The completed chunk001/chunk002 certificates pass
+   completed chunks001-004 and advanced to active chunks005-006 under a
+   two-worker cap.  The completed chunks001-004 certificates pass
    `PASS=15 FAIL=0` each and remain bounded row support.  The remaining work
    is more completed production `C_sx/C_xx` rows, completed-mode per-chunk
    schema gates, combined pole/FV/IR diagnostics, plus either
