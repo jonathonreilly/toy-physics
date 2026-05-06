@@ -5,12 +5,12 @@
         "B": 1,
         "C": 4,
         "F": 2,
-        "G": 2
+        "G": 1
       },
       "bias_direction_breakdown": {},
       "criticality_counts": {
         "leaf": 7,
-        "medium": 2
+        "medium": 1
       },
       "cross_confirmation_outcomes": {},
       "cross_confirmation_pairs_agreed_first_try": 0,
@@ -18,11 +18,11 @@
       "judicial_third_pass_count": 0,
       "overturned_by_third": 0,
       "ratified_by_third": 0,
-      "total_audits": 9,
+      "total_audits": 8,
       "verdict_changed_after_re_audit": 16,
       "verdict_counts": {
         "audited_clean": 5,
-        "audited_numerical_match": 2,
+        "audited_numerical_match": 1,
         "audited_renaming": 2
       }
     },
@@ -199,7 +199,7 @@
   "totals": {
     "auditor_families_observed": 5,
     "overall_agreement_rate": 0.758,
-    "total_audits_recorded": 972,
+    "total_audits_recorded": 971,
     "total_cross_confirmation_family_participations": 184,
     "total_cross_confirmation_pairs": 128,
     "total_third_pass_decisions": 62

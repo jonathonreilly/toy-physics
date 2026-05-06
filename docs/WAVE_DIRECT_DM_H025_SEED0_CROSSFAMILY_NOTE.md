@@ -1,19 +1,21 @@
 # Wave Direct-dM H=0.25 Seed0 Cross-Family Compression Note
 
 **Date:** 2026-04-08  
-**Status:** proposed_retained same-seed cross-family compression on the controlled seed-`0` fine-`H` surface
+**Status:** bounded support theorem on the controlled seed-`0` fine-`H` surface
+**Type:** bounded_theorem
+**Runner:** [`scripts/wave_direct_dm_h025_seed0_crossfamily_assertions.py`](../scripts/wave_direct_dm_h025_seed0_crossfamily_assertions.py)
 
-This note compresses the retained `H = 0.25` seed-`0` evidence across the
+This note compresses the controlled `H = 0.25` seed-`0` evidence across the
 two families that currently have it:
 
-> Keep the retained `Fam1`, seed `0`, `H = 0.25` control ladder together
-> with the retained `Fam2`, seed `0`, `H = 0.25` control ladder, and ask
+> Keep the controlled `Fam1`, seed `0`, `H = 0.25` control ladder together
+> with the controlled `Fam2`, seed `0`, `H = 0.25` control ladder, and ask
 > what survives if we hold the seed fixed but compare the same fine-`H`
 > row across families.
 
 ## Evidence surface
 
-The seed-`0` retained rows are:
+The seed-`0` source rows are:
 
 | family | `H` | `dM(early)` | `dM(late)` | `delta_hist` | `R_hist` | late gain |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -33,18 +35,25 @@ Per-family summaries:
 | `Fam1` | `0.000e+00` | `- - -` | `7.77%` |
 | `Fam2` | `0.000e+00` | `- - -` | `6.67%` |
 
+The runner is log-backed: it reads the frozen control logs listed in the
+artifact chain and asserts the two-row compression table, the exact nulls,
+the nonzero negative sign pattern, the weak-field spread bounds, and the
+selected-row ordering.  It deliberately does not rerun the expensive fine-`H`
+controls and does not certify any family-wide law.
+
 ## What the seed-0 surface does not say
 
 - not a stable amplitude law
 - not a family-independent `H = 0.25` portability result
 - not a third-family extrapolation
+
 The common sign stays negative, but the normalized magnitudes remain
 family-dependent.
 `Fam1` is the shallower weak branch; `Fam2` is the deeper weak branch.
 
 ## What actually survives
 
-The cleanest retained statement is:
+The cleanest bounded statement is:
 
 > seed `0` occupies the lower-magnitude side of the fine-`H` direct-`dM`
 > story in both families, and the two families sit at different depths
@@ -67,11 +76,35 @@ The honest boundary is:
 > ordering, and weak-field control, but it still does not define a stable
 > amplitude law or a portability claim beyond `Fam1`/`Fam2`.
 
+## Assertion closeout
+
+Primary runner:
+
+- [`scripts/wave_direct_dm_h025_seed0_crossfamily_assertions.py`](../scripts/wave_direct_dm_h025_seed0_crossfamily_assertions.py)
+
+Transcript:
+
+- [`outputs/wave_direct_dm_h025_seed0_crossfamily_assertions_2026-05-06.txt`](../outputs/wave_direct_dm_h025_seed0_crossfamily_assertions_2026-05-06.txt)
+
+The runner prints:
+
+- `WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_ASSERTIONS=TRUE`
+- `WAVE_DIRECT_DM_H025_SEED0_SHARED_SIGN=negative`
+- `WAVE_DIRECT_DM_H025_SEED0_COMMON_ORDERING=Fam2_deeper_than_Fam1_at_strength_0.004`
+- `WAVE_DIRECT_DM_H025_SEED0_WEAK_FIELD_CONTROL=TRUE`
+- `WAVE_DIRECT_DM_H025_SEED0_PORTABILITY_LAW=FALSE`
+- `WAVE_DIRECT_DM_H025_STABLE_AMPLITUDE_LAW=FALSE`
+- `RESIDUAL_SCOPE=fam3_and_family_wide_portability_not_claimed`
+
 ## Artifact chain
 
-- `docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md`
-- `docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`
-- `docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md`
-- `docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md`
-- `docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md`
-- `docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md`
+- Source log: [`logs/2026-04-08-wave-direct-dm-h025-control-fam1-seed0.txt`](../logs/2026-04-08-wave-direct-dm-h025-control-fam1-seed0.txt)
+- Source log: [`logs/2026-04-08-wave-direct-dm-h025-control-fam2-seed0.txt`](../logs/2026-04-08-wave-direct-dm-h025-control-fam2-seed0.txt)
+- Primary assertion runner: [`scripts/wave_direct_dm_h025_seed0_crossfamily_assertions.py`](../scripts/wave_direct_dm_h025_seed0_crossfamily_assertions.py)
+- Assertion transcript: [`outputs/wave_direct_dm_h025_seed0_crossfamily_assertions_2026-05-06.txt`](../outputs/wave_direct_dm_h025_seed0_crossfamily_assertions_2026-05-06.txt)
+- Context note: [`docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md`](WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md)
+- Context note: [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`](WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md)
+- Context note: [`docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md`](WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md)
+- Context note: [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md`](WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md)
+- Context note: [`docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md`](WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md)
+- Context note: [`docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md`](WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md)

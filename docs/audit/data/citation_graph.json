@@ -14485,6 +14485,30 @@
       "to": "wave_direct_dm_h025_two_point_synthesis_note"
     },
     {
+      "from": "wave_direct_dm_h025_seed0_crossfamily_note",
+      "to": "wave_direct_dm_h025_fam1_seed0_control_note"
+    },
+    {
+      "from": "wave_direct_dm_h025_seed0_crossfamily_note",
+      "to": "wave_direct_dm_h025_fam2_seed0_control_note"
+    },
+    {
+      "from": "wave_direct_dm_h025_seed0_crossfamily_note",
+      "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+    },
+    {
+      "from": "wave_direct_dm_h025_seed0_crossfamily_note",
+      "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+    },
+    {
+      "from": "wave_direct_dm_h025_seed0_crossfamily_note",
+      "to": "wave_direct_dm_h025_high_band_boundary_note"
+    },
+    {
+      "from": "wave_direct_dm_h025_seed0_crossfamily_note",
+      "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
+    },
+    {
       "from": "wave_direct_dm_h025_seed1_crossfamily_note",
       "to": "wave_direct_dm_h025_fam1_seed1_control_note"
     },
@@ -52777,13 +52801,20 @@
     },
     "wave_direct_dm_h025_seed0_crossfamily_note": {
       "claim_id": "wave_direct_dm_h025_seed0_crossfamily_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "011cd531e7269d6d0be5306edf8f264f8d3ada36af1cb085d38de244516a8143",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "wave_direct_dm_h025_fam1_seed0_control_note",
+        "wave_direct_dm_h025_fam2_seed0_control_note",
+        "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+        "wave_direct_dm_h025_fam2_seed1_control_note",
+        "wave_direct_dm_h025_high_band_boundary_note",
+        "wave_direct_dm_h025_fam2_seed0_boundary_note"
+      ],
+      "note_hash": "6ec9e494348387b55a0dae684e6ca490cd8e147f666bd3dd82db624a0f3b676a",
       "path": "docs/WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/wave_direct_dm_h025_seed0_crossfamily_assertions.py",
       "title": "Wave Direct-dM H=0.25 Seed0 Cross-Family Compression Note"
     },
     "wave_direct_dm_h025_seed1_crossfamily_note": {
@@ -55767,7 +55798,6 @@
     "wave_3plus1d_promotions_note",
     "wave_amplification_near_horizon_note",
     "wave_direct_dm_family_scout_note",
-    "wave_direct_dm_h025_seed0_crossfamily_note",
     "wave_direct_dm_h025_two_point_synthesis_note",
     "wave_equation_gravity_note",
     "wave_equation_self_field_note",
@@ -55833,25 +55863,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 73,
+      "bounded_theorem": 74,
       "meta": 10,
       "no_go": 12,
-      "none": 1711,
+      "none": 1710,
       "open_gate": 12,
       "positive_theorem": 87
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 570,
+      "bounded_theorem": 571,
       "meta": 10,
       "no_go": 116,
       "none": 456,
       "open_gate": 118,
-      "positive_theorem": 635
+      "positive_theorem": 634
     },
-    "edge_count": 6593,
+    "edge_count": 6599,
     "leaf_count": 550,
     "node_count": 1905,
-    "root_count": 867,
-    "runners_with_path": 1478
+    "root_count": 866,
+    "runners_with_path": 1479
   }
 }
