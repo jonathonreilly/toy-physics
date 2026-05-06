@@ -158,6 +158,7 @@ def main() -> int:
         "pr230_two_source_taste_radial_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json",
         "pr230_two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
         "pr230_two_source_taste_radial_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
+        "pr230_two_source_taste_radial_row_production_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
         "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
         "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
         "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
@@ -1386,6 +1387,28 @@ def main() -> int:
         and certificates["pr230_two_source_taste_radial_row_contract"].get(
             "future_file_presence", {}
         ).get("taste_radial_production_rows")
+        is False
+    )
+    two_source_taste_radial_row_manifest_support_not_closure = (
+        "two-source taste-radial C_sx/C_xx production manifest"
+        in certificates["pr230_two_source_taste_radial_row_production_manifest"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_two_source_taste_radial_row_production_manifest"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_two_source_taste_radial_row_production_manifest"].get(
+            "manifest_passed"
+        )
+        is True
+        and certificates["pr230_two_source_taste_radial_row_production_manifest"].get(
+            "dry_run_only"
+        )
+        is True
+        and certificates["pr230_two_source_taste_radial_row_production_manifest"].get(
+            "future_combined_rows_present"
+        )
         is False
     )
     kinetic_taste_mixing_bridge_blocks_shortcut = (
@@ -3857,6 +3880,13 @@ def main() -> int:
         ),
     )
     report(
+        "two-source-taste-radial-row-production-manifest-support-not-closure",
+        two_source_taste_radial_row_manifest_support_not_closure,
+        certificates["pr230_two_source_taste_radial_row_production_manifest"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "kinetic-taste-mixing-shortcut-closed",
         kinetic_taste_mixing_bridge_blocks_shortcut,
         certificates["pr230_kinetic_taste_mixing_bridge"].get(
@@ -5168,6 +5198,10 @@ def main() -> int:
             "artifact for the source-coordinate family, but it is not a listed "
             "closure artifact for these gates until a production action/row "
             "certificate or canonical O_H identity lands.  "
+            "The two-source taste-radial row-production manifest records exact "
+            "no-resume chunk commands and a collision guard for C_sx/C_xx rows, "
+            "but it is run-control support only until rows are actually run, "
+            "combined, pole-tested, and bridged to O_H or physical response.  "
             "The cycle-14 through cycle-17 gates record that no current route, "
             "independent pivot, reopen source, or executable non-chunk queue "
             "item remains on this branch.  The cycle-18 reopen-freshness gate "
@@ -5230,6 +5264,7 @@ def main() -> int:
         "two_source_taste_radial_chart_support_not_closure": two_source_taste_radial_chart_support_not_closure,
         "two_source_taste_radial_action_support_not_closure": two_source_taste_radial_action_support_not_closure,
         "two_source_taste_radial_row_contract_support_not_closure": two_source_taste_radial_row_contract_support_not_closure,
+        "two_source_taste_radial_row_manifest_support_not_closure": two_source_taste_radial_row_manifest_support_not_closure,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,

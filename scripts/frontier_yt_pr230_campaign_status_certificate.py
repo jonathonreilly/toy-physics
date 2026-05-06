@@ -611,6 +611,9 @@ def main() -> int:
         "pr230_two_source_taste_radial_row_contract": load(
             "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json"
         ),
+        "pr230_two_source_taste_radial_row_production_manifest": load(
+            "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json"
+        ),
         "pr230_action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -2589,6 +2592,20 @@ def main() -> int:
         is False,
         statuses["pr230_two_source_taste_radial_row_contract"],
     )
+    two_source_taste_radial_row_manifest = certificates[
+        "pr230_two_source_taste_radial_row_production_manifest"
+    ]
+    report(
+        "pr230-two-source-taste-radial-row-production-manifest-support-not-closure",
+        "two-source taste-radial C_sx/C_xx production manifest"
+        in str(statuses["pr230_two_source_taste_radial_row_production_manifest"])
+        and two_source_taste_radial_row_manifest.get("proposal_allowed") is False
+        and two_source_taste_radial_row_manifest.get("manifest_passed") is True
+        and two_source_taste_radial_row_manifest.get("dry_run_only") is True
+        and two_source_taste_radial_row_manifest.get("future_combined_rows_present")
+        is False,
+        statuses["pr230_two_source_taste_radial_row_production_manifest"],
+    )
     action_first_route_completion = certificates["pr230_action_first_route_completion"]
     report(
         "pr230-action-first-route-current-surface-closed",
@@ -4285,6 +4302,13 @@ def main() -> int:
         )
         is False
     )
+    result["two_source_taste_radial_row_production_manifest_support_not_closure"] = (
+        two_source_taste_radial_row_manifest.get("manifest_passed") is True
+        and two_source_taste_radial_row_manifest.get("proposal_allowed") is False
+        and two_source_taste_radial_row_manifest.get("dry_run_only") is True
+        and two_source_taste_radial_row_manifest.get("future_combined_rows_present")
+        is False
+    )
     result["origin_main_composite_higgs_intake_not_closure"] = (
         origin_main_composite_higgs.get("origin_main_composite_higgs_intake_guard_passed")
         is True
@@ -4379,6 +4403,7 @@ def main() -> int:
         "does not treat conditional Z3-triplet primitive support as a strict PR230 primitive certificate",
         "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
         "does not treat the two-source taste-radial chart as canonical O_H or source-Higgs production rows",
+        "does not treat the two-source taste-radial row production manifest as row data or pole evidence",
         "does not treat Schur sufficiency or row-definition machinery as proof without same-surface neutral-kernel A/B/C rows",
         "does not treat determinant positivity, conditional Perron support, or source-only generators as a primitive neutral rank-one theorem",
     ]

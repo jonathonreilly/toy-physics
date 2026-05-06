@@ -1571,3 +1571,14 @@ reports `PASS=229 FAIL=0`.  No executable current-surface non-chunk route is
 selected after the W/Z covariance-theorem import no-go.  Positive closure
 still requires a listed future same-surface artifact and full aggregate reruns
 before any proposal language.
+
+Latest two-source taste-radial row-production manifest checkpoint: campaign
+status now includes
+`scripts/frontier_yt_pr230_two_source_taste_radial_row_production_manifest.py`
+and reports `PASS=296 FAIL=0` after aggregate reruns.  The new manifest records
+63 no-resume L12_T24 chunk commands for the taste-radial `C_sx/C_xx` row wave,
+distinct seeds/output paths/production directories, the selected-mass
+normal-cache harness path, and a collision guard with no active row-production
+workers.  This is bounded run-control support only: the combined row file
+`outputs/yt_pr230_two_source_taste_radial_measurement_rows_2026-05-06.json`
+is absent, and no retained/proposed-retained wording is authorized.

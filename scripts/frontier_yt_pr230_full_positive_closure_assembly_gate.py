@@ -101,6 +101,7 @@ PARENTS = {
     "pr230_two_source_taste_radial_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json",
     "pr230_two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
     "pr230_two_source_taste_radial_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
+    "pr230_two_source_taste_radial_row_production_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
     "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
     "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
@@ -681,6 +682,26 @@ def main() -> int:
         and certs["pr230_two_source_taste_radial_row_contract"].get(
             "future_file_presence", {}
         ).get("taste_radial_production_rows")
+        is False
+    )
+    two_source_taste_radial_row_manifest_support_not_closure = (
+        "two-source taste-radial C_sx/C_xx production manifest"
+        in statuses["pr230_two_source_taste_radial_row_production_manifest"]
+        and certs["pr230_two_source_taste_radial_row_production_manifest"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_two_source_taste_radial_row_production_manifest"].get(
+            "manifest_passed"
+        )
+        is True
+        and certs["pr230_two_source_taste_radial_row_production_manifest"].get(
+            "dry_run_only"
+        )
+        is True
+        and certs["pr230_two_source_taste_radial_row_production_manifest"].get(
+            "future_combined_rows_present"
+        )
         is False
     )
     kinetic_taste_mixing_bridge_blocks_shortcut = (
@@ -1438,6 +1459,11 @@ def main() -> int:
         "two-source-taste-radial-row-contract-support-not-closure",
         two_source_taste_radial_row_contract_support_not_closure,
         statuses["pr230_two_source_taste_radial_row_contract"],
+    )
+    report(
+        "two-source-taste-radial-row-production-manifest-support-not-closure",
+        two_source_taste_radial_row_manifest_support_not_closure,
+        statuses["pr230_two_source_taste_radial_row_production_manifest"],
     )
     report(
         "kinetic-taste-mixing-shortcut-closed",
@@ -2389,6 +2415,7 @@ def main() -> int:
         "two_source_taste_radial_chart_support_not_closure": two_source_taste_radial_chart_support_not_closure,
         "two_source_taste_radial_action_support_not_closure": two_source_taste_radial_action_support_not_closure,
         "two_source_taste_radial_row_contract_support_not_closure": two_source_taste_radial_row_contract_support_not_closure,
+        "two_source_taste_radial_row_manifest_support_not_closure": two_source_taste_radial_row_manifest_support_not_closure,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,
@@ -2429,6 +2456,7 @@ def main() -> int:
             "does not treat conditional Z3-triplet primitive support as a strict PR230 primitive certificate",
             "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
             "does not treat the two-source taste-radial chart as canonical O_H or production source-Higgs rows",
+            "does not treat the two-source taste-radial row production manifest as C_sx/C_xx row data or pole evidence",
             "does not treat current Schur sufficiency or row-definition machinery as proof without a neutral kernel basis plus same-surface A/B/C rows",
             "does not treat conditional Perron support, determinant positivity, or source-only generators as a primitive neutral rank-one theorem",
             "does not treat terminal non-chunk route exhaustion as positive closure",
@@ -2454,7 +2482,9 @@ def main() -> int:
             "does not treat cycle-33 post-cycle-32 main-audit-status-drift guard closure as positive evidence",
         ],
         "exact_next_action": (
-            "Keep the chunk worker on homogeneous production chunks.  In parallel, "
+            "Keep the chunk worker on homogeneous production chunks and launch "
+            "the taste-radial C_sx/C_xx row chunks only under the no-resume "
+            "manifest/collision guard.  In parallel, "
             "pursue one non-chunk bridge that can satisfy this gate: a real "
             "same-surface O_H certificate plus C_sH/C_HH pole rows, a same-source "
             "EW action plus top/W/Z mass-response rows, matched covariance or "
