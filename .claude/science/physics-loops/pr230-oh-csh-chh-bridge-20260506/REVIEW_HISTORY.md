@@ -30,7 +30,7 @@ Local verification completed:
 - `frontier_yt_pr230_two_source_taste_radial_row_contract.py`: PASS=12
   FAIL=0;
 - `frontier_yt_pr230_two_source_taste_radial_row_production_manifest.py`:
-  PASS=16 FAIL=0;
+  PASS=17 FAIL=0;
 - `frontier_yt_pr230_two_source_taste_radial_chart_certificate.py`: PASS=22
   FAIL=0 after accepting the support-only action certificate;
 - `frontier_yt_fh_lsz_production_postprocess_gate.py`: PASS=12 FAIL=0;

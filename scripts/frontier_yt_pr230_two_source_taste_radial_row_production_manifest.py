@@ -160,16 +160,18 @@ def chunk_state(index: int) -> dict[str, Any]:
     out = chunk_output(index)
     pdir = chunk_production_dir(index)
     entries = sorted(child.name for child in pdir.iterdir()) if pdir.exists() else []
+    output_present = out.exists()
     return {
         "chunk_index": index,
         "seed": chunk_seed(index),
         "output": rel(out),
-        "output_present": out.exists(),
+        "output_present": output_present,
         "production_output_dir": rel(pdir),
         "production_output_dir_present": pdir.exists(),
         "production_output_dir_entries": entries,
         "empty_or_partial_dir_counts_as_evidence": False,
-        "command": production_command(index),
+        "eligible_to_launch": not output_present,
+        "command": None if output_present else production_command(index),
     }
 
 
@@ -183,14 +185,27 @@ def main() -> int:
     active_rows = active_process_rows()
     chunks = [chunk_state(index) for index in range(1, CHUNK_COUNT + 1)]
     completed_chunks = [row["chunk_index"] for row in chunks if row["output_present"]]
+    launch_queue = [row["chunk_index"] for row in chunks if row["eligible_to_launch"]]
     partial_dirs = [
         row["chunk_index"]
         for row in chunks
         if row["production_output_dir_present"] and not row["output_present"]
     ]
-    commands_have_no_resume = all("--resume" not in row["command"] for row in chunks)
+    active_chunks = [
+        int(row["chunk_index"]) for row in active_rows if isinstance(row.get("chunk_index"), int)
+    ]
+    duplicate_active_chunks = sorted(
+        chunk for chunk in set(active_chunks) if active_chunks.count(chunk) > 1
+    )
+    unknown_active_rows = [row for row in active_rows if row.get("chunk_index") is None]
+    blocking_partial_dirs = sorted(chunk for chunk in partial_dirs if chunk not in active_chunks)
+    commands = [row["command"] for row in chunks if isinstance(row.get("command"), list)]
+    commands_have_no_resume = all("--resume" not in command for command in commands)
     commands_use_distinct_outputs = len({row["output"] for row in chunks}) == CHUNK_COUNT
     commands_use_distinct_dirs = len({row["production_output_dir"] for row in chunks}) == CHUNK_COUNT
+    completed_outputs_excluded_from_launch = all(
+        row["command"] is None for row in chunks if row["output_present"]
+    )
     operator_payload = action.get("operator_certificate_payload", {})
     sparse_vertex = action.get("sparse_vertex", {}) or operator_payload.get("sparse_vertex", {})
 
@@ -219,9 +234,9 @@ def main() -> int:
         is False
     )
     future_combined_absent = not FUTURE_COMBINED_ROWS.exists()
-    no_active_collision = not active_rows
-    no_completed_chunk_overwrite = not completed_chunks
-    no_partial_dir_collision = not partial_dirs
+    no_active_collision = not duplicate_active_chunks and not unknown_active_rows
+    no_completed_chunk_overwrite = completed_outputs_excluded_from_launch
+    no_partial_dir_collision = not blocking_partial_dirs
 
     report("harness-present", HARNESS.exists(), rel(HARNESS))
     report("harness-has-taste-radial-row-cli", harness_has_cli, rel(HARNESS))
@@ -230,13 +245,18 @@ def main() -> int:
     report("row-contract-present", bool(row_contract), rel(ROW_CONTRACT))
     report("row-contract-support-only", row_contract_ok, row_contract.get("actual_current_surface_status", ""))
     report("future-combined-row-file-absent", future_combined_absent, rel(FUTURE_COMBINED_ROWS))
-    report("process-table-has-no-active-row-collision", no_active_collision, f"active={len(active_rows)}")
+    report("active-row-processes-recorded", True, f"active={len(active_rows)} chunks={active_chunks}")
+    report(
+        "process-table-has-no-active-row-collision",
+        no_active_collision,
+        f"duplicate_chunks={duplicate_active_chunks} unknown_rows={len(unknown_active_rows)}",
+    )
     report("planned-chunk-count-is-production-wave", len(chunks) == CHUNK_COUNT, f"chunks={len(chunks)}")
     report("planned-commands-have-no-resume", commands_have_no_resume, "new row wave must not reuse old artifacts")
     report("planned-output-paths-distinct", commands_use_distinct_outputs, "one JSON per chunk")
     report("planned-production-dirs-distinct", commands_use_distinct_dirs, "one artifact dir per chunk")
-    report("no-completed-chunk-would-be-overwritten", no_completed_chunk_overwrite, f"present={completed_chunks}")
-    report("no-partial-output-dir-collision", no_partial_dir_collision, f"partial_dirs={partial_dirs}")
+    report("completed-chunks-excluded-from-launch", no_completed_chunk_overwrite, f"present={completed_chunks}")
+    report("no-blocking-partial-output-dir-collision", no_partial_dir_collision, f"blocking_partial_dirs={blocking_partial_dirs}")
     report(
         "selected-mass-and-normal-cache-preserved",
         "selected_mass_only_for_scalar_fh_lsz" in harness_text
@@ -246,7 +266,11 @@ def main() -> int:
     report("does-not-authorize-retained-proposal", True, "manifest and run control only")
 
     launch_guard_allows_new_workers = (
-        FAIL_COUNT == 0 and no_active_collision and no_completed_chunk_overwrite and no_partial_dir_collision
+        FAIL_COUNT == 0
+        and no_active_collision
+        and no_completed_chunk_overwrite
+        and no_partial_dir_collision
+        and len(active_rows) < MAX_CONCURRENT_RECOMMENDED
     )
     result = {
         "actual_current_surface_status": (
@@ -293,8 +317,13 @@ def main() -> int:
             "evidence_requires_completed_chunk_certificates": True,
         },
         "active_process_rows": active_rows,
+        "active_chunk_indices": active_chunks,
+        "duplicate_active_chunk_indices": duplicate_active_chunks,
+        "unknown_active_process_rows": unknown_active_rows,
         "completed_chunk_indices": completed_chunks,
         "partial_output_dir_indices": partial_dirs,
+        "blocking_partial_output_dir_indices": blocking_partial_dirs,
+        "launch_queue_indices": launch_queue,
         "chunk_commands": chunks,
         "strict_non_claims": [
             "does not claim retained or proposed_retained y_t closure",

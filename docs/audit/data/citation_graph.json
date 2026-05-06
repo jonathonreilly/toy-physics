@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T14:40:04.827649+00:00",
+  "generated_at": "2026-05-06T14:44:18.076335+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42703,7 +42703,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded-support / two-source taste-radial `C_sx/C_xx` production manifest; rows absent",
       "deps": [],
-      "note_hash": "3a125827df676499a902954b78afea10f8b6c0fc3b31b2dff37028453c5f0a3f",
+      "note_hash": "8ec8cd181bf9e810ff862deb19eb0123e8ac71c5b7cc82aec0eaeab07f61e084",
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_PRODUCTION_MANIFEST_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_row_production_manifest.py",
       "title": "PR230 two-source taste-radial row production manifest"

@@ -35,7 +35,7 @@ python3 -m py_compile scripts/frontier_yt_pr230_two_source_taste_radial_row_prod
 python3 scripts/frontier_yt_pr230_two_source_taste_radial_row_production_manifest.py
 ```
 
-Result: `PASS=16 FAIL=0`.
+Result: `PASS=17 FAIL=0`.
 
 Exact next action: launch the missing chunks with max concurrency `2-3` using
 the recorded commands, then add per-chunk schema gates, a combiner for

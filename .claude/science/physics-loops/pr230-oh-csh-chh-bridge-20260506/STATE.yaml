@@ -120,7 +120,7 @@ verification:
   two_source_taste_radial_chart_pass_fail: "22/0"
   two_source_taste_radial_action_pass_fail: "15/0"
   two_source_taste_radial_row_contract_pass_fail: "12/0"
-  two_source_taste_radial_row_production_manifest_pass_fail: "16/0"
+  two_source_taste_radial_row_production_manifest_pass_fail: "17/0"
   fh_lsz_production_postprocess_gate_pass_fail: "12/0"
   source_higgs_builder_pass_fail: "4/0"
   source_higgs_gram_postprocessor_pass_fail: "2/0"
