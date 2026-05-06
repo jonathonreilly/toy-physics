@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 514,
     "high": 15,
-    "leaf": 186,
+    "leaf": 187,
     "medium": 97
   },
   "cycle_break_target_count": 194,
@@ -23634,6 +23634,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_MINIMALITY_PROOF_NOTE_2026-05-06.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_su3_v1_picard_fuchs_minimality_2026_05_06.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03",
       "claim_scope": null,
       "claim_type": "open_gate",
@@ -24931,5 +24954,5 @@
     }
   ],
   "ready_count": 14,
-  "total_pending": 812
+  "total_pending": 813
 }

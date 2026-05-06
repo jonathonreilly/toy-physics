@@ -11952,6 +11952,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_plaquette_self_consistency.py"
     },
+    "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_su3_v1_picard_fuchs_minimality_2026_05_06.py"
+    },
     "plaquette_v1_picard_fuchs_ode_note_2026-05-05": {
       "assert_count": 1,
       "counts": {
@@ -32243,6 +32255,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_su3_v1_picard_fuchs_minimality_2026_05_06.py": {
+      "assert_count": 1,
+      "claims": [
+        "plaquette_v1_picard_fuchs_ode_minimality_proof_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py": {
       "assert_count": 1,
       "claims": [
@@ -38805,14 +38832,14 @@
   "stats": {
     "decoration_candidates": 118,
     "dominant_class_distribution": {
-      "A": 12,
+      "A": 13,
       "B": 165,
       "C": 574,
       "D": 212,
       "none": 421
     },
-    "runners_classified": 1384,
-    "runners_with_C": 683,
+    "runners_classified": 1385,
+    "runners_with_C": 684,
     "runners_with_D": 345
   }
 }
