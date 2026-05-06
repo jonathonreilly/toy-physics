@@ -1,0 +1,38 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_isotropic_glue_operator.py
+runner_sha256: 1589651b6ad6c8bf1abf55fdbe284fdf9d53a79827909979cc3f50271f5793bd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+[EXACT] PASS: the exact ingredients for isotropic gluing are present
+    localized universal Hessian and exact symmetric-positive slice generator are both already on the branch
+[EXACT] PASS: the gluing theorem only needs the already-proved SPD property of Lambda_R
+    witness symmetry=0.000e+00, witness min eig=1.363463e+00
+[EXACT] PASS: the isotropic glued operator K_GR^iso = M_D ⊗ Lambda_R is exact, symmetric, and positive
+    symmetry=0.000e+00, min eig=2.782578e-02
+[EXACT] PASS: the A1, shift, and shear restrictions are exactly the supermetric weights times the same slice generator
+    A1=0.000e+00, shift=0.000e+00, shear=0.000e+00
+[EXACT] PASS: the covariant glued operator is uniquely reconstructed from the canonical block traces and Lambda_R
+    max reconstruction error=8.862e-17
+UNIVERSAL GR ISOTROPIC GLUE OPERATOR
+==============================================================================
+Lambda_R symmetry error = 0.000e+00
+Lambda_R min eigenvalue = 1.363463e+00
+max glued symmetry error = 0.000e+00
+min glued eigenvalue = 2.782578e-02
+max block-weight mismatch = 0.000e+00
+max uniqueness reconstruction error = 8.862e-17
+
+Verdict:
+On the invariant `PL S^3 x R` background, the exact local universal supermetric and the exact slice generator `Lambda_R` already glue into a unique covariant quadratic operator `K_GR^iso = M_D ⊗ Lambda_R`.
+This closes the direct-universal branch at the exact isotropic quadratic Einstein/Regge-operator level. The remaining gravity gap, if one insists on more, is nonlinear completion beyond this exact quadratic/invariant surface.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=5 FAIL=0 TOTAL=5
+
+----- stderr -----
+
