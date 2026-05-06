@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 788 |
+| unaudited | 787 |
 | audit_in_progress | 2 |
 | meta | 48 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
-| ~~audited_conditional~~ | 463 |
+| ~~audited_conditional~~ | 464 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 378 |
-| `audited_conditional` | 463 |
+| `audited_conditional` | 464 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 32 |
-| `unaudited` | 836 |
+| `unaudited` | 835 |
 
 | claim_type | count |
 |---|---:|
@@ -923,6 +923,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_lorentzian_global_atlas_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_polarization_frame_bundle_attempt` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `universal_gr_positive_background_local_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `universal_qg_canonical_smooth_gravitational_weak_measure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | B | - |
 | `universal_qg_canonical_textbook_geometric_action_equivalence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_inverse_limit_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_qg_projective_schur_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -13647,6 +13648,24 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The route lacks a covariant 3+1 polarization-frame/projector bundle with distinguished connection and induced curvature-localization map Pi_curv identifying the Hessian kernel with Einstein/Regge dynamics.  _(class `E`)_
 - **chain closes:** False — The note honestly states the missing bridge rather than deriving it. The missing step is the curvature-localization/projector-bundle theorem connecting the symmetric 3+1 Hessian kernel to Einstein/Regge tensor dynamics on full metric space.
 - **rationale:** No runner, cited authority, or derivation is provided, so the audit must judge from the note text alone. The load-bearing move introduces and names the missing primitive Pi_curv/projector bundle and uses that definition to classify the route as blocked. This is an honest bounded blocker statement, but it is not a first-principles computation or algebraic closure from retained inputs.
+- **auditor confidence:** high
+
+### `universal_qg_canonical_smooth_gravitational_weak_measure_note`
+
+- **Note:** [`UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md`](../../docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Canonical smooth global gravitational weak/measure identification with the canonical textbook weak Sobolev/Gaussian object on the chosen smooth realization of PL S^3 x R.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-06-universal-qg-canonical-smooth-grav-weak-measure`  (codex-current; independence=weak)
+- **load-bearing step:** the weak action on the chosen smooth realization is the same closed coercive action already determining the canonical textbook weak problem; the stationary family and Gaussian covariance are the same canonical objects in smooth gravitational coordinates  _(class `B`)_
+- **chain closes:** False — The only direct ledger dependency is the optional textbook comparison meta note, which explicitly provides no theorem authority. The runner's substantive premises are canonical textbook weak/measure equivalence and smooth global gravitational solution-class closure, but those rows are not wired as dependencies and are not retained-grade in the current ledger.
+- **rationale:** Issue: the note identifies the smooth global gravitational weak/Gaussian realization with the canonical textbook weak/Gaussian object, but the direct dependency is only a meta packaging note. Why this blocks: the completed runner verifies coordinate-equivalence algebra after importing the canonical textbook weak/measure object and the smooth global gravitational solution class, both unwired and not retained-grade. Repair target: wire scripts/frontier_universal_qg_canonical_smooth_gravitational_weak_measure.py as the runner and replace the meta-only dependency with direct retained-grade dependencies for canonical textbook weak/measure equivalence and smooth global gravitational solution-class closure. Claim boundary until fixed: the finite coordinate-equivalence checks pass, but the theorem cannot retain until those upstream objects are direct retained-grade authorities.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md`
+  - `UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md`
+  - `UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md`
+  - `UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_qg_canonical_textbook_geometric_action_equivalence_note`

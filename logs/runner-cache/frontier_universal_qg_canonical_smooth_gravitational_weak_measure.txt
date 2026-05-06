@@ -1,0 +1,35 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_qg_canonical_smooth_gravitational_weak_measure.py
+runner_sha256: 4c6796908883bea1a83657b134c1847bb9d7aa440cf4373baaad1877e7983c82
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
+[EXACT] PASS: the route already has exact canonical textbook weak/measure equivalence and an exact smooth global gravitational weak/Gaussian solution class
+    this theorem starts from the already-closed canonical textbook weak/Gaussian object and the already-closed smooth global gravitational solution class
+[EXACT] PASS: the global smooth gravitational weak action is the same canonical weak action in smooth gravitational coordinates
+    max global weak action error=1.776e-15
+[EXACT] PASS: the global smooth gravitational stationary class is the same canonical stationary class in smooth gravitational coordinates
+    max global stationary-class error=1.421e-14
+[EXACT] PASS: the global smooth gravitational Gaussian covariance is the same canonical Gaussian object in smooth gravitational coordinates
+    max covariance error=1.421e-14, max covariance pairing error=1.421e-14
+[EXACT] PASS: the chosen smooth gravitational weak/measure realization is therefore the same canonical textbook weak/Gaussian object, not an additional target choice
+    the smooth global gravitational weak/Gaussian solution class is exactly the canonical textbook weak/Gaussian object expressed in smooth gravitational coordinates
+UNIVERSAL QG CANONICAL SMOOTH GRAVITATIONAL WEAK/MEASURE EQUIVALENCE
+==============================================================================
+max global weak action error            = 1.776e-15
+max global stationary-class error       = 1.421e-14
+max covariance error                    = 1.421e-14
+max covariance pairing error            = 1.421e-14
+
+Verdict:
+The chosen smooth global gravitational weak/Gaussian realization of the direct-universal route is exactly the same canonical textbook weak/Gaussian object, not an additional continuum target choice.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=5 FAIL=0 TOTAL=5
+
+----- stderr -----
+
