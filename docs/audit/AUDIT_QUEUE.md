@@ -16,7 +16,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
 | 1 | `g_bare_rigidity_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 294 | 11.21 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_rigidity_theorem.py` |
-| 2 | `radial_scaling_protected_angle_narrow_theorem_note_2026-05-02` | positive_theorem | unaudited | critical | 287 | 8.67 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_radial_scaling_protected_angle_narrow.py` |
+| 2 | `radial_scaling_protected_angle_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | critical | 287 | 8.67 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_radial_scaling_protected_angle_narrow.py` |
 | 3 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | unaudited | critical | 551 | 12.61 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py` |
 | 4 | `universal_qg_canonical_refinement_net_note` | positive_theorem | unaudited | critical | 518 | 17.52 |  | fresh_context_or_stronger_with_cross_confirmation | - |
 | 5 | `universal_qg_uv_finite_partition_note` | positive_theorem | unaudited | critical | 518 | 15.52 |  | fresh_context_or_stronger_with_cross_confirmation | - |

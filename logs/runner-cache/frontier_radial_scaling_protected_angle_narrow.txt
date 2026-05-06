@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_radial_scaling_protected_angle_narrow.py
-runner_sha256: 687ec3aaf8105a0c3cbf043568af831cb43b9af9a34ccbe5f3ce3cd40d42a5bd
+runner_sha256: 906990b4bce12bb68a8d39cd3736a0456c72d9bc1c2f8874609dc8222cb91d34
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.49
+elapsed_sec: 0.48
 status: ok
 ----- stdout -----
 
@@ -33,8 +33,10 @@ Part 4: radial distance scales as mu
   [PASS (A)] sqrt(rho_bar^2 + eta_bar^2) = mu * sqrt(rho^2 + eta^2)  (r_bar = mu*sqrt(eta**2 + rho**2))
 
 ----------------------------------------------------------------------------------------
-Part 5: angle at (1, 0) is NOT preserved (counter-illustrates non-protection)
+Part 5: angle at (1, 0) is NOT preserved on finite-tangent domain
 ----------------------------------------------------------------------------------------
+  [PASS (A)] tan(beta_bar) - tan(beta) factors as eta*(mu - 1)/((1 - mu*rho)*(1 - rho))  (diff = eta*(mu - 1)/(mu*rho**2 - mu*rho - rho + 1))
+  [PASS (A)] source note states finite-tangent exclusions rho != 1 and mu*rho != 1  (domain guard is explicit in the theorem statement)
   [PASS (A)] tan(beta_bar) != tan(beta) at (rho, eta) = (1/6, sqrt(5)/6), mu = 99/100 (NOT protected)  (diff = -2*sqrt(5)/835)
 
 ----------------------------------------------------------------------------------------
@@ -64,10 +66,12 @@ Narrow theorem summary
           exact (doubled-angle preserved);
     (iv)  sqrt(rho_bar^2 + eta_bar^2) = mu * sqrt(rho^2 + eta^2)
           (radial distance scales as mu);
-    (v)   the angle at (1, 0), tan(beta_bar) = eta_bar / (1 - rho_bar),
-          is NOT in general equal to tan(beta) = eta / (1 - rho)
+    (v)   on the finite-tangent subdomain rho != 1 and mu*rho != 1, the
+          angle at (1, 0), tan(beta_bar) = eta_bar / (1 - rho_bar), is
+          NOT equal to tan(beta) = eta / (1 - rho) unless mu = 1
           (counter-illustrates non-protection: only the origin-angle
-          and radial distance behave canonically).
+          and radial distance behave canonically on the whole stated
+          radial-scaling domain).
 
   Audit-lane class:
     (A) — pure plane geometry / similar-triangles identity. No CKM-
@@ -82,7 +86,7 @@ Narrow theorem summary
 
 
 ========================================================================================
-  TOTAL: PASS=9, FAIL=0
+  TOTAL: PASS=11, FAIL=0
 ========================================================================================
 
 ----- stderr -----
