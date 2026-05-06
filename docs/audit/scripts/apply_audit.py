@@ -45,12 +45,16 @@ REQUIRED_FIELDS = {
     "claim_scope",
     "auditor",
     "auditor_family",
+    "auditor_model",
+    "auditor_reasoning_effort",
     "independence",
 }
 JUDICIAL_REQUIRED_FIELDS = {
     "claim_id",
     "third_auditor",
     "auditor_family",
+    "auditor_model",
+    "auditor_reasoning_effort",
     "independence",
     "sided_with",
     "ratified_verdict",
@@ -59,6 +63,10 @@ JUDICIAL_REQUIRED_FIELDS = {
     "first_auditor_error",
     "second_auditor_error",
 }
+
+# Reasoning-effort policy for incoming audits. The audit lane runs at xhigh
+# only; weaker effort levels are not accepted as ratifying evidence.
+REQUIRED_REASONING_EFFORT = "xhigh"
 
 ALLOWED_VERDICTS = {
     "audited_clean",
@@ -182,6 +190,8 @@ def audit_summary_from_row(row: dict) -> dict:
     return {
         "auditor": row.get("auditor"),
         "auditor_family": row.get("auditor_family"),
+        "auditor_model": row.get("auditor_model"),
+        "auditor_reasoning_effort": row.get("auditor_reasoning_effort"),
         "independence": row.get("independence"),
         "audit_date": row.get("audit_date"),
         "claim_type": row.get("claim_type"),
@@ -195,6 +205,8 @@ def audit_summary_from_blob(audit: dict) -> dict:
     return {
         "auditor": audit.get("auditor"),
         "auditor_family": audit.get("auditor_family"),
+        "auditor_model": audit.get("auditor_model"),
+        "auditor_reasoning_effort": audit.get("auditor_reasoning_effort"),
         "independence": audit.get("independence"),
         "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
         "claim_type": audit.get("claim_type"),
@@ -208,6 +220,8 @@ def judicial_summary_from_blob(judgment: dict) -> dict:
     return {
         "auditor": judgment.get("third_auditor"),
         "auditor_family": judgment.get("auditor_family"),
+        "auditor_model": judgment.get("auditor_model"),
+        "auditor_reasoning_effort": judgment.get("auditor_reasoning_effort"),
         "independence": judgment.get("independence"),
         "audit_date": judgment.get("audit_date") or datetime.now(timezone.utc).isoformat(),
         "claim_type": judgment.get("ratified_claim_type"),
@@ -370,6 +384,34 @@ def note_hash_drift_error(row: dict) -> str | None:
     return None
 
 
+def validate_auditor_provenance(audit: dict) -> str | None:
+    """Validate model and reasoning-effort provenance on an incoming audit."""
+    auditor_model = audit.get("auditor_model")
+    if not isinstance(auditor_model, str) or not auditor_model.strip():
+        return "auditor_model must be a non-empty string (e.g. 'gpt-5.5')"
+    auditor_reasoning = audit.get("auditor_reasoning_effort")
+    if not isinstance(auditor_reasoning, str) or not auditor_reasoning.strip():
+        return "auditor_reasoning_effort must be a non-empty string (e.g. 'xhigh')"
+    if auditor_reasoning != REQUIRED_REASONING_EFFORT:
+        return (
+            f"auditor_reasoning_effort={auditor_reasoning!r} must equal "
+            f"{REQUIRED_REASONING_EFFORT!r}: the audit lane only accepts "
+            f"verdicts produced at {REQUIRED_REASONING_EFFORT} reasoning "
+            "effort. Re-run the audit with the correct setting."
+        )
+    declared_family = audit.get("auditor_family")
+    if isinstance(declared_family, str) and declared_family.startswith("codex-gpt-"):
+        expected = f"codex-{auditor_model}"
+        if declared_family != expected:
+            return (
+                f"auditor_family={declared_family!r} does not match "
+                f"auditor_model={auditor_model!r}: expected family "
+                f"{expected!r}. Either fix the family label or fix the "
+                "model field; they must agree."
+            )
+    return None
+
+
 def apply_judicial_review(ledger: dict, judgment: dict) -> tuple[bool, str]:
     missing = JUDICIAL_REQUIRED_FIELDS - set(judgment)
     if missing:
@@ -383,6 +425,9 @@ def apply_judicial_review(ledger: dict, judgment: dict) -> tuple[bool, str]:
 
     if judgment.get("independence") != "judicial_review":
         return False, "judicial third-auditor review requires independence='judicial_review'"
+    provenance_error = validate_auditor_provenance(judgment)
+    if provenance_error:
+        return False, provenance_error
     side = judgment.get("sided_with")
     if side not in ALLOWED_JUDICIAL_SIDES:
         return False, f"sided_with {side!r} not in {sorted(ALLOWED_JUDICIAL_SIDES)}"
@@ -451,6 +496,8 @@ def apply_judicial_review(ledger: dict, judgment: dict) -> tuple[bool, str]:
     row["audit_status"] = ratified_verdict
     row["auditor"] = judgment["third_auditor"]
     row["auditor_family"] = judgment["auditor_family"]
+    row["auditor_model"] = judgment["auditor_model"]
+    row["auditor_reasoning_effort"] = judgment["auditor_reasoning_effort"]
     row["independence"] = judgment["independence"]
     row["audit_date"] = third["audit_date"]
     row["claim_type"] = ratified_claim_type or chosen_claim_type or row.get("claim_type")
@@ -510,6 +557,10 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     independence = audit["independence"]
     if independence not in ALLOWED_INDEPENDENCE:
         return False, f"independence {independence!r} not in {sorted(ALLOWED_INDEPENDENCE)}"
+
+    provenance_error = validate_auditor_provenance(audit)
+    if provenance_error:
+        return False, provenance_error
 
     # Model-floor check: incoming Codex audits must come from a codex-gpt-*
     # family at or above MIN_NEW_AUDIT_FAMILY_RANK, or a non-codex family
@@ -718,16 +769,7 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
         first = prior.get("first_audit")
         if first is None:
             row["cross_confirmation"] = {
-                "first_audit": {
-                    "auditor": audit["auditor"],
-                    "auditor_family": audit["auditor_family"],
-                    "independence": independence,
-                    "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
-                    "claim_type": claim_type,
-                    "claim_scope": claim_scope,
-                    "load_bearing_step_class": audit.get("load_bearing_step_class"),
-                    "verdict": "audited_clean",
-                },
+                "first_audit": audit_summary_from_blob(audit),
                 "second_audit": None,
                 "status": "awaiting_second",
             }
@@ -748,16 +790,7 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
             first.get("load_bearing_step_class") != audit.get("load_bearing_step_class")
             or first.get("claim_type") != claim_type
         ):
-            row["cross_confirmation"]["second_audit"] = {
-                "auditor": audit["auditor"],
-                "auditor_family": audit["auditor_family"],
-                "independence": independence,
-                "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
-                "claim_type": claim_type,
-                "claim_scope": claim_scope,
-                "load_bearing_step_class": audit.get("load_bearing_step_class"),
-                "verdict": "audited_clean",
-            }
+            row["cross_confirmation"]["second_audit"] = audit_summary_from_blob(audit)
             row["cross_confirmation"]["status"] = "disagreement"
             row["audit_status"] = "audit_in_progress"
             row["blocker"] = "cross_confirmation_disagreement"
@@ -770,22 +803,15 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
                 "promote to third-auditor review"
             )
         # Concordant second audit: promote.
-        row["cross_confirmation"]["second_audit"] = {
-            "auditor": audit["auditor"],
-            "auditor_family": audit["auditor_family"],
-            "independence": independence,
-            "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
-            "claim_type": claim_type,
-            "claim_scope": claim_scope,
-            "load_bearing_step_class": audit.get("load_bearing_step_class"),
-            "verdict": "audited_clean",
-        }
+        row["cross_confirmation"]["second_audit"] = audit_summary_from_blob(audit)
         row["cross_confirmation"]["status"] = "confirmed"
 
     # Apply the audit fields.
     row["audit_status"] = verdict
     row["auditor"] = audit["auditor"]
     row["auditor_family"] = audit["auditor_family"]
+    row["auditor_model"] = audit["auditor_model"]
+    row["auditor_reasoning_effort"] = audit["auditor_reasoning_effort"]
     row["independence"] = independence
     row["audit_date"] = audit.get("audit_date") or datetime.now(timezone.utc).isoformat()
     row["claim_type"] = claim_type

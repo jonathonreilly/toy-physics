@@ -243,7 +243,9 @@ REQUIRED_VERDICT_FIELDS = {
 # expects `verdict` etc. plus the runner-side fields auditor/auditor_family/
 # independence/audit_date. Independence is determined per-row by the role.
 def add_auditor_metadata(verdict_blob: dict, auditor_name: str,
-                         auditor_family: str, independence: str) -> dict:
+                         auditor_family: str, independence: str,
+                         auditor_model: str,
+                         auditor_reasoning_effort: str) -> dict:
     blob = dict(verdict_blob)
     # Runner-side fields are authoritative — overwrite anything the model
     # may have placed in the JSON for these. The prompt schema does not
@@ -251,6 +253,10 @@ def add_auditor_metadata(verdict_blob: dict, auditor_name: str,
     # through.
     blob["auditor"] = auditor_name
     blob["auditor_family"] = auditor_family
+    # Stamp the exact model + reasoning effort the runner used. apply_audit
+    # validates that codex-gpt-* family labels agree with this exact model.
+    blob["auditor_model"] = auditor_model
+    blob["auditor_reasoning_effort"] = auditor_reasoning_effort
     blob["independence"] = independence
     blob["audit_date"] = datetime.now(timezone.utc).isoformat()
     # Some downstream callers want runner_check_breakdown even when missing.
@@ -1160,7 +1166,9 @@ def main() -> int:
                 continue
 
             full_blob = add_auditor_metadata(
-                blob, row_auditor, auditor_family, row_independence
+                blob, row_auditor, auditor_family, row_independence,
+                auditor_model=audit_model,
+                auditor_reasoning_effort=reasoning_effort,
             )
             ok, msg = apply_one(full_blob, propagate=not args.no_propagate)
             if ok:
