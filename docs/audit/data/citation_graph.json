@@ -43493,7 +43493,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "6766577b3de718e6f03aaed580e640b382c7315db5cb9551efb442032e65fe46",
+      "note_hash": "99086620f123764230cf1006eaba1364e683df6dacdf761b100b5246cae56bca",
       "path": "docs/PERSISTENT_OBJECT_TOP4_MULTISTAGE_TRANSFER_SWEEP_NOTE_2026-04-16.md",
       "runner_path": "scripts/persistent_object_top4_multistage_transfer_sweep.py",
       "title": "Persistent Object Top4 Multistage Transfer Sweep"

@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 798 |
+| unaudited | 799 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 30 |
-| ~~audited_conditional~~ | 463 |
+| ~~audited_conditional~~ | 462 |
 | ~~audited_failed~~ | 12 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 374 |
-| `audited_conditional` | 463 |
+| `audited_conditional` | 462 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 30 |
-| `unaudited` | 847 |
+| `unaudited` | 848 |
 
 | claim_type | count |
 |---|---:|
@@ -820,7 +820,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ordered_lattice_quasi_persistent_relaunch_2d_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | configured_numerical_proxy_to_surrogate_theorem_bridge | - |
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
-| `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -9645,19 +9644,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The widened exact-lattice top3 branch fails the three-segment multistage persistence bar on all five stable widened rows, specifically because later-stage mean update overlap falls below 0.90 while compressed carry and kappa drift remain clean.  _(class `C`)_
 - **chain closes:** True — The current top_keep=3 runner execution reproduced the note's 0/5 admissible summary and the row-level overlap/carry/drift pattern: baseline, source1.5, source2.75, width5, and length8 all fail by sub-threshold stage overlap with carry_mean=1.000 and max_kappa_drift=0.000%.
 - **rationale:** Clean within the declared bounded-negative scope. The note does not claim persistent inertial-mass closure; it claims the top3 branch is compression-stabilized but not self-maintaining under the retained multistage persistence gate. The current registered runner computes the five stable widened-regime rows and reproduces the frozen 0/5 result, with the failure localized to stage-2/stage-3 overlap below 0.90 while TOWARD, F~M, carry, and kappa drift remain stable. Residual risk is the note's stated limitation: this is a diagnosis of the top3 exact-lattice branch, not a proof about other object architectures or broader floors.
-- **auditor confidence:** high
-
-### `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16`
-
-- **Note:** [`PERSISTENT_OBJECT_TOP4_MULTISTAGE_TRANSFER_SWEEP_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_TOP4_MULTISTAGE_TRANSFER_SWEEP_NOTE_2026-04-16.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded finite top_keep=4 transfer sweep over the 13 listed widened-pocket cases under the frozen h=0.25, blend=0.25, three-update, three-segment setup.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-223857-7d3fceeb-persistent_object_top4_m-004`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The retained multistage `top4` floor transfers across 11/13 tested widened-pocket rows, with only `source0.75` and `source1.00` failing and the residual inward-source boundary between 1.00 and 1.25.  _(class `B`)_
-- **chain closes:** False — The note and stdout agree on the 11/13 pass count and failed rows, but the provided runner is only a wrapper around `scripts.persistent_object_top3_multistage_probe._run_case`. The restricted packet does not include the hard computation, multistage gates, readout, or admissibility predicate implementation, so first-principles closure is not verified.
-- **rationale:** Issue: the 11/13 transfer result is supported by stdout, but the primary runner delegates the hard admissibility computation to an unprovided `_run_case` implementation. Why this blocks: stdout from a wrapper is not enough to verify a class (C) exact-lattice computation or the gates/readout/admissibility predicate. Repair target: include the transitive runner source or cached certificate for `Case` and `_run_case`, and cite the earlier retained `top4` floor result if that status remains part of the claim. Claim boundary until fixed: the packet supports only a conditional report that this wrapper run printed 11/13 admissible rows for the listed cases.
 - **auditor confidence:** high
 
 ### `persistent_record_matched_compare_note`
