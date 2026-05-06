@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T10:20:15.034592+00:00",
+  "generated_at": "2026-05-06T10:39:04.721865+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42548,6 +42548,16 @@
       "runner_path": "scripts/frontier_yt_pr230_source_sector_pattern_transfer_gate.py",
       "title": "PR230 Source-Sector Pattern Transfer Gate"
     },
+    "yt_pr230_taste_condensate_oh_bridge_audit_note_2026-05-06": {
+      "claim_id": "yt_pr230_taste_condensate_oh_bridge_audit_note_2026-05-06",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge",
+      "deps": [],
+      "note_hash": "dd1d49a85ee2b5684eb04e42da97d0602def040808e0cee7013ad8ec60442d96",
+      "path": "docs/YT_PR230_TASTE_CONDENSATE_OH_BRIDGE_AUDIT_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_taste_condensate_oh_bridge_audit.py",
+      "title": "PR230 Taste-Condensate O_H Bridge Audit"
+    },
     "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05": {
       "claim_id": "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05",
       "current_status": "unknown",
@@ -45301,6 +45311,7 @@
     "yt_pr230_schur_abc_definition_derivation_attempt_note_2026-05-05",
     "yt_pr230_source_overlap_route_selection_note_2026-05-03",
     "yt_pr230_source_sector_pattern_transfer_gate_note_2026-05-05",
+    "yt_pr230_taste_condensate_oh_bridge_audit_note_2026-05-06",
     "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05",
     "yt_pr230_wz_harness_smoke_schema_gate_note_2026-05-05",
     "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05",
@@ -45422,17 +45433,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1070,
-    "node_count": 2023,
-    "root_count": 1536,
-    "runners_with_path": 1519,
+    "leaf_count": 1071,
+    "node_count": 2024,
+    "root_count": 1537,
+    "runners_with_path": 1520,
     "status_counts": {
       "bounded": 555,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 433,
-      "unknown": 559
+      "unknown": 560
     }
   }
 }

@@ -88,6 +88,7 @@ PARENTS = {
     "pr230_genuine_source_pole_artifact_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
     "pr230_l12_chunk_compute_status": "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json",
     "pr230_negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
+    "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
     "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
     "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -236,6 +237,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "production C_sH/C_HH pole residues absent",
                 "Gram-purity postprocessor awaiting production certificate",
                 "perfect Gram purity against an unratified supplied operator is not O_H authority",
+                "Higgs/taste condensate stack has zero projection from the PR230 uniform mass source onto the trace-zero taste-Higgs axes",
             ],
             "parents": [
                 PARENTS["source_higgs_readiness"],
@@ -246,6 +248,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["canonical_higgs_semantic_firewall"],
                 PARENTS["cross_lane_oh_authority_audit"],
                 PARENTS["canonical_oh_premise_stretch"],
+                PARENTS["pr230_taste_condensate_oh_bridge_audit"],
             ],
         },
         "same_source_wz_response": {
@@ -441,6 +444,20 @@ def main() -> int:
         )
         is True
     )
+    taste_condensate_oh_bridge_blocks_shortcut = (
+        "taste-condensate Higgs stack does not supply PR230 O_H bridge"
+        in statuses["pr230_taste_condensate_oh_bridge_audit"]
+        and certs["pr230_taste_condensate_oh_bridge_audit"].get("proposal_allowed")
+        is False
+        and certs["pr230_taste_condensate_oh_bridge_audit"].get(
+            "taste_condensate_oh_bridge_audit_passed"
+        )
+        is True
+        and certs["pr230_taste_condensate_oh_bridge_audit"].get("algebra", {}).get(
+            "uniform_source_relative_projection_onto_taste_axis_span"
+        )
+        == 0.0
+    )
     scalar_lsz_blocks = (
         certs["fh_lsz_model_class"].get("proposal_allowed") is False
         and certs["fh_lsz_model_class_semantic_firewall"].get("proposal_allowed") is False
@@ -584,6 +601,7 @@ def main() -> int:
             "unratified_gram_shortcut_no_go_passed"
         )
         is True
+        and taste_condensate_oh_bridge_blocks_shortcut
         and certs["wz_same_source_action_semantic_firewall"].get("proposal_allowed") is False
         and certs["wz_source_coordinate_transport_no_go"].get("proposal_allowed") is False
         and certs["wz_source_coordinate_transport_no_go"].get(
@@ -1035,6 +1053,11 @@ def main() -> int:
         "negative-route-applicability-review-preserves-reopen",
         negative_route_applicability_review_passed,
         statuses["pr230_negative_route_applicability_review"],
+    )
+    report(
+        "taste-condensate-oh-bridge-blocks-current-shortcut",
+        taste_condensate_oh_bridge_blocks_shortcut,
+        statuses["pr230_taste_condensate_oh_bridge_audit"],
     )
     report(
         "canonical-higgs-semantic-firewall-support-only",
@@ -1828,6 +1851,11 @@ def main() -> int:
             "or retained-proposal authorization.  On the current PR230 surface "
             "all allowed bridge routes are absent, blocked, or support-only, so "
             "full positive closure remains open."
+            " The taste-condensate/Higgs stack has also been checked directly: "
+            "on the current PR230 surface the uniform FH/LSZ mass source is "
+            "orthogonal to the trace-zero taste-axis Higgs operators, so that "
+            "stack is not an O_H bridge without a new source-coordinate "
+            "transport theorem or production C_sH/C_HH rows."
             " The cycle-8 current-surface exhaustion gate now records that no "
             "hidden non-chunk shortcut remains executable without one of the "
             "named future same-surface rows, certificates, or theorems.  The "
@@ -1894,6 +1922,7 @@ def main() -> int:
             "same-surface artifact."
         ),
         "negative_route_applicability_review_passed": negative_route_review_passed,
+        "taste_condensate_oh_bridge_blocks_shortcut": taste_condensate_oh_bridge_blocks_shortcut,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The assembly gate rejects the current surface and also rejects a "
@@ -1923,6 +1952,7 @@ def main() -> int:
             "does not treat static EW algebra, W/Z absent guards, source-only C_ss rows, or finite-shell fits as physical y_t readouts",
             "does not treat W/Z smoke-schema rows as production EW response evidence",
             "does not treat current-surface non-chunk exhaustion as retained closure",
+            "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
             "does not treat terminal non-chunk route exhaustion as positive closure",
             "does not treat cycle-14 non-chunk route selection closure as positive evidence",
             "does not treat cycle-15 independent-route exhaustion as positive evidence",

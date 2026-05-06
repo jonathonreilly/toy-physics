@@ -1,0 +1,39 @@
+loop_slug: pr230-oh-csh-chh-bridge-20260506
+branch: physics-loop/pr230-oh-csh-chh-bridge-20260506
+base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
+active_route: taste_condensate_oh_bridge_audit
+target_status: best-honest-status
+actual_current_surface_status: exact negative boundary
+proposal_allowed: false
+bare_retained_allowed: false
+hard_residual: >
+  PR230 still lacks a same-surface canonical O_H identity/normalization
+  certificate and production C_sH/C_HH pole rows.
+files_touched:
+  - scripts/frontier_yt_pr230_taste_condensate_oh_bridge_audit.py
+  - scripts/frontier_yt_pr230_assumption_import_stress.py
+  - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+  - scripts/frontier_yt_retained_closure_route_certificate.py
+  - scripts/frontier_yt_pr230_campaign_status_certificate.py
+  - docs/YT_PR230_TASTE_CONDENSATE_OH_BRIDGE_AUDIT_NOTE_2026-05-06.md
+  - outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json
+  - outputs/yt_pr230_assumption_import_stress_2026-05-01.json
+  - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+  - outputs/yt_retained_closure_route_certificate_2026-05-01.json
+  - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
+verification:
+  runner_pass_fail: "21/0"
+  assumption_import_stress_pass_fail: "44/0"
+  full_positive_assembly_pass_fail: "98/0"
+  retained_route_certificate_pass_fail: "246/0"
+  campaign_status_certificate_pass_fail: "278/0"
+  audit_pipeline: "complete; one new audit row seeded"
+  audit_lint_strict: "no errors; five pre-existing warnings"
+  diff_check: clean
+next_exact_action: >
+  Either derive a source-coordinate transport theorem from the PR230 uniform
+  mass source to a canonical taste-axis Higgs source, or supply a certified
+  same-surface O_H and run source-Higgs C_sH/C_HH pole rows.
+stop_condition: >
+  This block stops after packaging the taste-condensate route audit and
+  preserving reopen conditions in aggregate PR230 gates.

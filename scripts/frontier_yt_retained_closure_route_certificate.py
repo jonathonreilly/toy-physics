@@ -145,6 +145,7 @@ def main() -> int:
         "pr230_genuine_source_pole_artifact_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
         "pr230_l12_chunk_compute_status": "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json",
         "pr230_negative_route_applicability_review": "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json",
+        "pr230_taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
         "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
         "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
         "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -1114,6 +1115,24 @@ def main() -> int:
             "no_retained_negative_overclaim"
         )
         is True
+    )
+    taste_condensate_oh_bridge_blocks_shortcut = (
+        "taste-condensate Higgs stack does not supply PR230 O_H bridge"
+        in certificates["pr230_taste_condensate_oh_bridge_audit"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_taste_condensate_oh_bridge_audit"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_taste_condensate_oh_bridge_audit"].get(
+            "taste_condensate_oh_bridge_audit_passed"
+        )
+        is True
+        and certificates["pr230_taste_condensate_oh_bridge_audit"].get(
+            "algebra", {}
+        ).get("uniform_source_relative_projection_onto_taste_axis_span")
+        == 0.0
     )
     derived_bridge_rank_one_closure_attempt_blocks = (
         "derived rank-one bridge not closed"
@@ -3391,6 +3410,13 @@ def main() -> int:
         ),
     )
     report(
+        "taste-condensate-oh-bridge-blocks-current-shortcut",
+        taste_condensate_oh_bridge_blocks_shortcut,
+        certificates["pr230_taste_condensate_oh_bridge_audit"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "derived-bridge-rank-one-attempt-blocks-current-source-only-closure",
         derived_bridge_rank_one_closure_attempt_blocks,
         certificates["pr230_derived_bridge_rank_one_closure_attempt"].get(
@@ -4530,6 +4556,13 @@ def main() -> int:
             "support/no-go surfaces are framework-native context, but none "
             "supplies the PR230 same-surface O_H identity, canonical LSZ "
             "normalization, or C_sH/C_HH pole residues.  "
+            "The taste-condensate O_H bridge audit blocks the strongest "
+            "remaining Higgs/taste-stack shortcut: the exact taste-Higgs "
+            "operators are trace-zero taste shifts, while the current PR230 "
+            "FH/LSZ source is the uniform additive mass source with zero "
+            "projection onto those axes.  It is framework-native context, but "
+            "not PR230 O_H authority without source-coordinate transport or "
+            "C_sH/C_HH pole rows.  "
             "The source-Higgs harness absence guard now records missing "
             "O_H/C_sH/C_HH rows directly in future production certificates; "
             "that guard is an instrumentation firewall, not evidence.  "

@@ -24,8 +24,16 @@ ACTIVE_PACK = (
     / "physics-loops"
     / "yt-pr230-osp-oh-retained-closure-20260503"
 )
+TASTE_BRIDGE_PACK = (
+    ROOT
+    / ".claude"
+    / "science"
+    / "physics-loops"
+    / "pr230-oh-csh-chh-bridge-20260506"
+)
 ASSUMPTIONS = PACK / "ASSUMPTIONS_AND_IMPORTS.md"
 ACTIVE_ASSUMPTIONS = ACTIVE_PACK / "ASSUMPTIONS_AND_IMPORTS.md"
+TASTE_BRIDGE_ASSUMPTIONS = TASTE_BRIDGE_PACK / "ASSUMPTIONS_AND_IMPORTS.md"
 OUTPUT = ROOT / "outputs" / "yt_pr230_assumption_import_stress_2026-05-01.json"
 
 PASS_COUNT = 0
@@ -53,7 +61,8 @@ def main() -> int:
 
     text = ASSUMPTIONS.read_text(encoding="utf-8")
     active_text = ACTIVE_ASSUMPTIONS.read_text(encoding="utf-8")
-    combined_text = f"{text}\n\n{active_text}"
+    taste_bridge_text = TASTE_BRIDGE_ASSUMPTIONS.read_text(encoding="utf-8")
+    combined_text = f"{text}\n\n{active_text}\n\n{taste_bridge_text}"
     certificates = {
         "campaign": load("outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"),
         "clean_source_higgs_math_tool_selector": load(
@@ -118,6 +127,9 @@ def main() -> int:
         ),
         "l12_chunk_compute_status": load(
             "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json"
+        ),
+        "taste_condensate_oh_bridge_audit": load(
+            "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json"
         ),
         "negative_route_applicability_review": load(
             "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json"
@@ -217,6 +229,9 @@ def main() -> int:
         "source-side support only until canonical O_H and C_spH/C_HH rows exist",
         "Completed L12 chunk compute status",
         "not physical y_t closure until scalar-LSZ, O_H/source-overlap, FV/IR, and matching/running gates pass",
+        "Taste-condensate O_H bridge",
+        "uniform mass source is orthogonal to taste-axis Higgs operators",
+        "not proof selectors until source-coordinate transport or C_sH/C_HH rows exist",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -233,6 +248,11 @@ def main() -> int:
         "active-assumption-ledger-present",
         ACTIVE_ASSUMPTIONS.exists(),
         str(ACTIVE_ASSUMPTIONS.relative_to(ROOT)),
+    )
+    report(
+        "taste-bridge-assumption-ledger-present",
+        TASTE_BRIDGE_ASSUMPTIONS.exists(),
+        str(TASTE_BRIDGE_ASSUMPTIONS.relative_to(ROOT)),
     )
     report("refreshed-kinetic-imports-present", "Heavy kinetic-action coefficient `c2`" in text and "Z_match" in text, "c2 and Z_match imports named")
     report("forbidden-imports-explicit", not missing_terms, f"missing={missing_terms}")
@@ -649,6 +669,19 @@ def main() -> int:
         and negative_route_review.get("no_retained_negative_overclaim") is True,
         negative_route_review.get("actual_current_surface_status"),
     )
+    taste_bridge = certificates["taste_condensate_oh_bridge_audit"]
+    report(
+        "taste-condensate-oh-bridge-does-not-supply-current-oh",
+        "taste-condensate Higgs stack does not supply PR230 O_H bridge"
+        in str(taste_bridge.get("actual_current_surface_status"))
+        and taste_bridge.get("proposal_allowed") is False
+        and taste_bridge.get("taste_condensate_oh_bridge_audit_passed") is True
+        and taste_bridge.get("algebra", {}).get(
+            "uniform_source_relative_projection_onto_taste_axis_span"
+        )
+        == 0.0,
+        taste_bridge.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -737,8 +770,15 @@ def main() -> int:
             "applicability review confirms these blockers apply only on their "
             "current surfaces and preserve future reopen paths through C_sH/C_HH, "
             "W/Z rows, Schur rows, neutral rank-one/irreducibility, scalar-LSZ "
-            "pole control, or production evidence plus matching.  Positive "
-            "closure still requires production evidence plus heavy matching, "
+            "pole control, or production evidence plus matching.  "
+            "The taste-condensate O_H bridge audit adds the strongest existing "
+            "Higgs/taste-stack shortcut to the firewall: the exact taste-axis "
+            "Higgs operators are trace-zero shift directions, while the PR230 "
+            "FH/LSZ source is the uniform additive mass source and has zero "
+            "projection onto that taste-axis span.  That stack cannot be used "
+            "as O_H authority until a source-coordinate transport certificate "
+            "or C_sH/C_HH rows exist.  Positive closure still requires "
+            "production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
         ),
         "proposal_allowed": False,
@@ -761,6 +801,7 @@ def main() -> int:
             "does not import SU3 source-sector constants or exponent shifts into y_t",
             "does not treat staggered-Wilson determinant positivity as source-Higgs overlap authority",
             "does not treat reflection plus determinant positivity as a primitive neutral bridge",
+            "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

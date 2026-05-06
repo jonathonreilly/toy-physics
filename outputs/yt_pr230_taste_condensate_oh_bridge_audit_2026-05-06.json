@@ -1,0 +1,93 @@
+{
+  "actual_current_surface_status": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge",
+  "admitted_observation_status": null,
+  "algebra": {
+    "Tr_S_i": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Tr_S_i_S_i": [
+      8.0,
+      8.0,
+      8.0
+    ],
+    "source_operator_model": "I_8 uniform additive scalar mass source",
+    "taste_axis_pair_overlaps": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "taste_operator_model": "S_i = sigma_x on taste tensor factor i",
+    "uniform_source_projection_norm_onto_taste_axis_span": 0.0,
+    "uniform_source_relative_projection_onto_taste_axis_span": 0.0,
+    "uniform_source_to_taste_axis_overlaps": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "audit_required_before_effective_retained": true,
+  "audit_rows": {
+    "higgs_from_lattice": {
+      "current_status_raw": "bounded quantitative support only",
+      "effective_status": "audited_conditional",
+      "ledger_key": "higgs_from_lattice_note",
+      "verdict_rationale": "Issue: the bounded Higgs support claim delegates its authority to HIGGS_MASS_DERIVED_NOTE and a runner whose quantitative behavior depends on accepted y_t(v) and comparison inputs. Why this blocks: the note supports bounded consistency studies but does not derive a Higgs mass or a standalone lattice-to-Higgs quantitative theorem from retained inputs. Repair target: make the Higgs authority boundary and accepted y_t(v) route explicit retained dependencies, or restrict this row to bounded/support scaffolding without theorem-surface language. Claim boundary until fixed: bounded quantitative Higgs-support posture only, not an audited Higgs-from-lattice closure."
+    },
+    "higgs_mass_derived": {
+      "current_status_raw": null,
+      "effective_status": "audited_conditional",
+      "ledger_key": "higgs_mass_derived_note",
+      "verdict_rationale": "Issue: The load-bearing step still imports unratified direct authority: TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md, HIGGS_MECHANISM_NOTE.md, HIGGS_FROM_LATTICE_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row."
+    },
+    "higgs_mechanism": {
+      "current_status_raw": "mechanism-level support only",
+      "effective_status": "audited_conditional",
+      "ledger_key": "higgs_mechanism_note",
+      "verdict_rationale": "Issue: the mechanism note depends on HIGGS_MASS_DERIVED_NOTE and the bounded Higgs runner's comparison-input machinery, while explicitly disclaiming exact Higgs-mass closure. Why this blocks: the mechanism-level statements are support claims conditional on an external Higgs authority boundary and do not independently derive EWSB or hierarchy closure from retained one-hop inputs. Repair target: make the Higgs authority note a retained dependency and provide a runner that isolates the mechanism-level theorem from SM-input consistency checks. Claim boundary until fixed: this remains support for a possible Higgs mechanism route, not an audited retained Higgs mechanism theorem."
+    },
+    "taste_scalar_isotropy": {
+      "current_status_raw": "exact support theorem with bounded downstream scalar-spectrum consequences",
+      "effective_status": "audited_conditional",
+      "ledger_key": "taste_scalar_isotropy_theorem_note",
+      "verdict_rationale": "Issue: the exact isotropy theorem closes for the fermion Coleman-Weinberg block, but the note's scalar-spectrum and electroweak-transition consequences depend on a gauge-only leading split and a scalar-only thermal-cubic estimate that the note explicitly labels bounded.\nWhy this blocks: downstream proposed-retained/promoted claims cannot use this row as a theorem-grade Higgs/taste spectrum, y_b, generation-splitting, or electroweak-transition closure; they only inherit the no-fermion-CW-splitting boundary.\nRepair target: supply and audit a full scalar-sector theorem, including gauge/taste-breaking and thermal dynamics, with a runner that derives the spectrum or transition result rather than checking the bounded companion model.\nClaim boundary until fixed: safe to claim exact fermion-CW isotropy and the resulting exclusion of scalar-CW-only splitting on the stated taste block, not full scalar-spectrum or finite-temperature electroweak closure."
+    }
+  },
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "The taste-condensate route can reopen only with a same-surface source-coordinate transport certificate from the PR230 uniform mass source to a canonical taste-axis Higgs operator, or with production C_sH/C_HH pole rows for a separately certified O_H.",
+  "exact_next_action": "Do not use the Higgs/taste condensate stack as the PR230 O_H bridge unless a new source-coordinate transport certificate is supplied. Continue the positive bridge through a certified O_H plus C_sH/C_HH pole rows, or through an equivalent W/Z/Schur/rank-one route.",
+  "fail_count": 0,
+  "future_file_presence": {
+    "canonical_oh_certificate": false,
+    "source_coordinate_transport_certificate": false,
+    "source_higgs_rows": false
+  },
+  "future_reopen_conditions": [
+    "derive a source-coordinate transport theorem mapping the PR230 uniform mass source to a canonical taste-axis Higgs source",
+    "or supply a same-surface canonical O_H identity/normalization certificate plus production C_sH/C_HH pole rows",
+    "or supply an equivalent W/Z sector-overlap, Schur-row, or neutral rank-one theorem accepted by the existing gates"
+  ],
+  "hypothetical_axiom_status": null,
+  "parent_statuses": {
+    "canonical_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "canonical_scalar_import_audit": "exact negative boundary / canonical scalar normalization import audit",
+    "cross_lane_oh_authority": "exact negative boundary / cross-lane O_H authority audit",
+    "negative_route_review": "exact support / selected PR230 negative-route applicability review passed",
+    "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "source_higgs_unratified_gram_no_go": "exact negative boundary / unratified source-Higgs Gram shortcut is not O_H authority",
+    "source_higgs_unratified_smoke": "bounded-support / source-Higgs unratified-operator smoke checkpoint",
+    "source_pole_mixing": "exact negative boundary / source-pole canonical-Higgs mixing obstruction"
+  },
+  "pass_count": 21,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The exact taste-block Higgs axes are trace-zero taste-shift directions, while the current PR230 scalar source is the uniform additive mass source. Their Hilbert-Schmidt overlap is zero, and the Higgs/taste authority stack is audited conditional. No current same-surface O_H identity, normalization certificate, or C_sH/C_HH pole row exists.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not demote the exact taste-CW isotropy theorem",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not set kappa_s = 1, cos(theta) = 1, c2 = 1, or Z_match = 1",
+    "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes"
+  ],
+  "taste_condensate_oh_bridge_audit_passed": true
+}

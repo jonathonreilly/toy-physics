@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T10:20:17.495484+00:00",
+  "generated_at": "2026-05-06T10:39:07.002046+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16517,7 +16517,7 @@
       "assert_count": 1,
       "counts": {
         "A": 0,
-        "B": 3,
+        "B": 4,
         "C": 5,
         "D": 4
       },
@@ -17004,6 +17004,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_source_sector_pattern_transfer_gate.py"
+    },
+    "yt_pr230_taste_condensate_oh_bridge_audit_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_taste_condensate_oh_bridge_audit.py"
     },
     "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05": {
       "assert_count": 1,
@@ -34336,7 +34348,7 @@
       ],
       "counts": {
         "A": 0,
-        "B": 3,
+        "B": 4,
         "C": 5,
         "D": 4
       },
@@ -34942,6 +34954,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_taste_condensate_oh_bridge_audit.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_taste_condensate_oh_bridge_audit_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_yt_pr230_wz_g2_bare_running_bridge_attempt.py": {
@@ -40124,13 +40151,13 @@
     "decoration_candidates": 107,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 224,
+      "B": 225,
       "C": 502,
       "D": 301,
       "none": 404
     },
-    "runners_classified": 1440,
-    "runners_with_C": 753,
-    "runners_with_D": 534
+    "runners_classified": 1441,
+    "runners_with_C": 754,
+    "runners_with_D": 535
   }
 }

@@ -572,6 +572,9 @@ def main() -> int:
         "pr230_negative_route_applicability_review": load(
             "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json"
         ),
+        "pr230_taste_condensate_oh_bridge_audit": load(
+            "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -2343,6 +2346,19 @@ def main() -> int:
         is True,
         statuses["pr230_l12_chunk_compute_status"],
     )
+    taste_bridge = certificates["pr230_taste_condensate_oh_bridge_audit"]
+    report(
+        "pr230-taste-condensate-oh-bridge-blocks-current-shortcut",
+        "taste-condensate Higgs stack does not supply PR230 O_H bridge"
+        in str(statuses["pr230_taste_condensate_oh_bridge_audit"])
+        and taste_bridge.get("proposal_allowed") is False
+        and taste_bridge.get("taste_condensate_oh_bridge_audit_passed") is True
+        and taste_bridge.get("algebra", {}).get(
+            "uniform_source_relative_projection_onto_taste_axis_span"
+        )
+        == 0.0,
+        statuses["pr230_taste_condensate_oh_bridge_audit"],
+    )
     report(
         "pr230-negative-route-applicability-review-preserves-reopen",
         "negative-route applicability review passed"
@@ -3927,7 +3943,12 @@ def main() -> int:
         "Burnside/double-commutant attempt records that the current source-only "
         "neutral generator algebra is not full and has a non-scalar commutant; "
         "it remains blocked until a same-surface off-diagonal neutral generator "
-        "or primitive transfer certificate exists."
+        "or primitive transfer certificate exists.  The taste-condensate "
+        "O_H bridge audit also records that the existing Higgs/taste stack is "
+        "not a PR230 O_H bridge on the current source surface: the uniform "
+        "mass source has zero projection onto the trace-zero taste-axis Higgs "
+        "operators, so that route requires source-coordinate transport or "
+        "C_sH/C_HH pole rows before it can reopen."
     )
     result["strict_non_claims"] = [
         "does not claim retained closure",
@@ -3949,6 +3970,7 @@ def main() -> int:
         "does not treat post-cycle-31 origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-32 origin/main audit/effective-status/runner-cache drift as same-surface physics evidence",
         "does not treat Burnside/double-commutant theorem names as proof without same-surface neutral generators",
+        "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
     ]
     OUTPUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"\nWrote certificate: {OUTPUT.relative_to(ROOT)}")
