@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 223 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 781 |
+| unaudited | 780 |
 | audit_in_progress | 1 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 32 |
-| ~~audited_conditional~~ | 469 |
+| ~~audited_conditional~~ | 470 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 379 |
-| `audited_conditional` | 469 |
+| `audited_conditional` | 470 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 32 |
-| `unaudited` | 830 |
+| `unaudited` | 829 |
 
 | claim_type | count |
 |---|---:|
@@ -929,6 +929,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_qg_canonical_smooth_gravitational_weak_measure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | B | - |
 | `universal_qg_canonical_textbook_geometric_action_equivalence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `universal_qg_canonical_textbook_weak_measure_equivalence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | B | - |
+| `universal_qg_continuum_bridge_reduction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | B | - |
 | `universal_qg_external_fe_smooth_equivalence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | B | - |
 | `universal_qg_inverse_limit_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_qg_projective_schur_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -13769,6 +13770,35 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md`
   - `UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md`
   - `UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_qg_continuum_bridge_reduction_note`
+
+- **Note:** [`UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md`](../../docs/UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Chosen-target continuum/QG bridge reduction claiming the internal route no longer has a live continuum theorem gap beyond optional external textbook packaging comparison.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-06-universal-qg-continuum-bridge`  (codex-current; independence=weak)
+- **load-bearing step:** The internal continuum/QG bridge is now closed through the chosen canonical textbook continuum gravitational target on the chosen realization.  _(class `B`)_
+- **chain closes:** False — The only direct ledger dependency is the optional textbook comparison meta note. The runner and source note rely on a long universal-GR/QG closure stack that is not exposed as one-hop retained-grade authority for this row.
+- **rationale:** Issue: the note converts a long upstream continuum/GR/QG closure stack into an end-state bridge claim while directly citing only a metadata hub. Why this blocks: the completed runner verifies Gaussian factorization/log-additivity and text-presence after importing upstream closure premises that are unaudited or conditional, so the end-state cannot become retained from the restricted one-hop packet. Repair target: wire scripts/frontier_universal_qg_continuum_bridge_reduction.py as the runner and add direct retained-grade dependencies for the UV-finite partition, discrete/global GR closure, refinement net, Gaussian completion, PL weak/Sobolev interface, smooth gravitational, geometric/action, and textbook continuum closure rows. Claim boundary until fixed: the finite Gaussian factorization checks pass, but the continuum-bridge end-state cannot retain until the actual upstream stack is retained-grade and directly citeable.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
+  - `UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`
+  - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
+  - `UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md`
+  - `UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md`
+  - `UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md`
+  - `UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md`
+  - `UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md`
+  - `UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_qg_external_fe_smooth_equivalence_note`
