@@ -28,8 +28,35 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=320 FAIL=0
+# SUMMARY: PASS=321 FAIL=0
 ```
+
+## 2026-05-06 Two-Source Taste-Radial Schur A/B/C Finite-Row Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json`.
+Completed chunks001-016 provide finite inverse rows for the measured
+source/complement block:
+
+```text
+K(q) = G(q)^(-1) = [[A_f(q), B_f(q)], [B_f(q), C_f(q)]]
+```
+
+The runner computes `A_f=K_ss`, `B_f=K_sx`, and `C_f=K_xx` from the real
+`C_ss/C_sx/C_xx` rows, checks `G K = I` chunk by chunk, and records
+zero-to-first-shell finite differences.  This is bounded Schur-route support
+only.  It is not strict neutral-kernel A/B/C pole-row evidence, not an
+isolated-pole `K'(pole)` derivative, not FV/IR authority, not canonical `O_H`,
+and not `kappa_s`.
+
+Validation: finite Schur A/B/C rows `PASS=17 FAIL=0`; Schur route completion
+`PASS=14 FAIL=0`; assumption/import stress `PASS=75 FAIL=0`; full positive
+closure assembly gate `PASS=134 FAIL=0`; retained-route `PASS=288 FAIL=0`;
+campaign status `PASS=321 FAIL=0`; completion audit `PASS=44 FAIL=0`.
+
+The campaign target remains open.  Chunks017-018 are active under the
+two-worker cap and remain non-evidence until completed JSON exists and
+completed-mode checkpoints pass.
 
 ## 2026-05-06 Two-Source Taste-Radial Schur-Subblock Witness Update
 

@@ -65,6 +65,11 @@
    The finite-shell Schur inverse-slope scout now computes the zero-to-first-
    shell inverse-block slope from those rows.  It is a useful diagnostic for
    the Schur route, but it is not isolated-pole `K'(pole)` authority.
+   The finite Schur A/B/C inverse-row certificate now computes the full finite
+   inverse block `K(q)=G(q)^(-1)` and records `A_f=K_ss`, `B_f=K_sx`, and
+   `C_f=K_xx` for the same chunks001-016.  This is bounded row support for
+   the Schur contract only; it is not strict neutral-kernel pole-row
+   authority, not FV/IR authority, and not canonical `O_H`.
    Chunks017-018 remain
    non-evidence until completed JSON exists and completed-mode checkpoints
    pass.  The remaining work is more completed production `C_sx/C_xx` rows,
@@ -89,11 +94,11 @@
    PR230, plus the coupling of that transfer to the source/canonical-Higgs
    sector.  Do not treat H2 cone support as H3/H4.
 4. Schur A/B/C row production from a real neutral kernel basis, now informed by
-   the bounded `C_ss/C_sx/C_xx` source/complement subblock witness and finite-
-   shell inverse-slope scout.  The next Schur artifact must turn finite
-   correlator subblocks into strict pole-row authority with FV/IR control, or
-   prove that the source/complement block cannot saturate the required scalar
-   pole.
+   the bounded `C_ss/C_sx/C_xx` source/complement subblock witness, finite-
+   shell inverse-slope scout, and finite inverse `A_f/B_f/C_f` rows.  The next
+   Schur artifact must turn finite inverse-correlator rows into strict
+   neutral-kernel pole-row authority with FV/IR control, or prove that the
+   source/complement block cannot saturate the required scalar pole.
 5. Same-source W/Z response rows with matched top/W covariance, `delta_perp`
    authority, strict non-observed `g2`, and the radial-spurion/no-independent-
    top-source action contract if the route uses response ratios to cancel the

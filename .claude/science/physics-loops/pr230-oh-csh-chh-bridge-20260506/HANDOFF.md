@@ -280,6 +280,14 @@ a zero-to-first-shell finite difference is not an isolated-pole `K'(pole)`
 derivative, not strict A/B/C kernel-row evidence, not FV/IR authority, not
 canonical `O_H`, and not `kappa_s`.
 
+The finite Schur A/B/C row certificate is now packaged as the next bounded
+Schur artifact.  `YT_PR230_TWO_SOURCE_TASTE_RADIAL_SCHUR_ABC_FINITE_ROWS`
+computes the finite inverse block `K(q)=G(q)^(-1)` from chunks001-016 and
+records `A_f=K_ss`, `B_f=K_sx`, and `C_f=K_xx`, with inverse-identity checks.
+This is real finite row support for the Schur contract, but it is not strict
+neutral-kernel A/B/C pole-row authority, not isolated-pole `K'(pole)`, not
+FV/IR authority, not canonical `O_H`, not `kappa_s`, and not closure.
+
 The source-Higgs production-readiness gate has been hardened against a subtle
 schema overread.  Completed two-source taste-radial row artifacts populate
 legacy source-Higgs-shaped fields for finite timeseries transport, but the row
@@ -350,10 +358,12 @@ Best next work:
 2. launch production `C_sx/C_xx` rows for the exact two-source taste-radial
    source using the no-resume manifest and row contract; chunks001-016 are
    complete and checkpointed, the combiner gate records `ready=16/63` and writes
-   no combined packet, chunks017-018 are active under the two-worker launcher
-   cap, and after they complete the next action is rerunning the per-chunk
-   checkpoint without pending mode, rerunning the combiner, then the next
-   bounded wave, then prove/reject its canonical-`O_H` identity or supply
+   no combined packet, the Schur subblock, finite-shell slope, and finite
+   `A_f/B_f/C_f` inverse rows are support-only diagnostics, chunks017-018 are
+   active under the two-worker launcher cap, and after they complete the next
+   action is rerunning the per-chunk checkpoint without pending mode, rerunning
+   the combiner, then the next bounded wave, then prove/reject its
+   canonical-`O_H` identity or supply
    another bridge; the
    selector gate reduces the identity route to deriving the degree-one
    Higgs-action premise from a same-surface EW/Higgs action or
@@ -361,7 +371,9 @@ Best next work:
 3. derive the remaining neutral primitive premises after H1/H2 support:
    a physical lazy positive transfer/action or off-diagonal generator (H3),
    plus coupling to the PR230 source/canonical-Higgs sector (H4);
-4. produce Schur A/B/C rows from a real neutral kernel basis;
+4. turn the finite `A_f/B_f/C_f` inverse rows into strict neutral-kernel
+   A/B/C pole rows with FV/IR control, or prove that the current
+   source/complement block cannot saturate the required scalar pole;
 5. build W/Z response rows only if strict `g2`, covariance, and `delta_perp`
    authority are also supplied.
 
@@ -385,6 +397,8 @@ those rows as `C_sx/C_xx` aliases with canonical `O_H` identity false and no
 Yukawa readout.
 Do not close it by treating finite-mode `rho_sx` or `Delta_sx` scouts from the
 partial combiner as pole-residue Gram purity.
+Do not close it by treating finite Schur `A_f/B_f/C_f` inverse rows as strict
+neutral-kernel A/B/C pole rows or isolated-pole `K'(pole)` authority.
 Do not close it by treating Z3 positive-cone H2 support as a physical neutral
 transfer, primitive irreducibility theorem, source-Higgs coupling, or
 canonical-Higgs authority.

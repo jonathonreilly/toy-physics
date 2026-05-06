@@ -105,6 +105,7 @@ PARENTS = {
     "pr230_two_source_taste_radial_row_production_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
     "pr230_two_source_taste_radial_schur_subblock_witness": "outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json",
     "pr230_two_source_taste_radial_schur_kprime_finite_shell_scout": "outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json",
+    "pr230_two_source_taste_radial_schur_abc_finite_rows": "outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json",
     "pr230_taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
     "pr230_degree_one_higgs_action_premise_gate": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
     "pr230_fms_post_degree_route_rescore": "outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json",
@@ -356,6 +357,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "finite FH/LSZ source rows explicitly rejected as kernel rows",
                 "compressed scalar denominator and pole derivative do not reconstruct A/B/C rows",
                 "outside-math row-definition machinery still lacks a same-surface neutral kernel basis and projector",
+                "finite inverse A/B/C rows from C_ss/C_sx/C_xx are bounded support, not strict pole rows",
                 "canonical bridge still required after K-prime sufficiency",
             ],
             "parents": [
@@ -363,6 +365,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["schur_kprime_sufficiency"],
                 PARENTS["schur_compressed_bootstrap_no_go"],
                 PARENTS["schur_abc_definition_derivation"],
+                PARENTS["pr230_two_source_taste_radial_schur_abc_finite_rows"],
                 PARENTS["pr230_schur_route_completion"],
             ],
         },
@@ -779,6 +782,34 @@ def main() -> int:
         )
         is False
         and certs["pr230_two_source_taste_radial_schur_kprime_finite_shell_scout"].get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False
+    )
+    two_source_taste_radial_schur_abc_finite_rows_not_closure = (
+        "finite Schur A/B/C inverse-block rows"
+        in statuses["pr230_two_source_taste_radial_schur_abc_finite_rows"]
+        and certs["pr230_two_source_taste_radial_schur_abc_finite_rows"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_two_source_taste_radial_schur_abc_finite_rows"].get(
+            "two_source_taste_radial_schur_abc_finite_rows_passed"
+        )
+        is True
+        and certs["pr230_two_source_taste_radial_schur_abc_finite_rows"].get(
+            "finite_schur_abc_rows_written"
+        )
+        is True
+        and certs["pr230_two_source_taste_radial_schur_abc_finite_rows"].get(
+            "strict_schur_abc_kernel_rows_written"
+        )
+        is False
+        and certs["pr230_two_source_taste_radial_schur_abc_finite_rows"].get(
+            "strict_schur_kprime_authority_passed"
+        )
+        is False
+        and certs["pr230_two_source_taste_radial_schur_abc_finite_rows"].get(
             "canonical_higgs_operator_identity_passed"
         )
         is False
@@ -1767,6 +1798,11 @@ def main() -> int:
         "two-source-taste-radial-kprime-finite-shell-scout-not-closure",
         two_source_taste_radial_kprime_scout_not_closure,
         statuses["pr230_two_source_taste_radial_schur_kprime_finite_shell_scout"],
+    )
+    report(
+        "two-source-taste-radial-schur-abc-finite-rows-not-closure",
+        two_source_taste_radial_schur_abc_finite_rows_not_closure,
+        statuses["pr230_two_source_taste_radial_schur_abc_finite_rows"],
     )
     report(
         "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
@@ -2776,6 +2812,7 @@ def main() -> int:
         "two_source_taste_radial_row_manifest_support_not_closure": two_source_taste_radial_row_manifest_support_not_closure,
         "two_source_taste_radial_schur_subblock_support_not_closure": two_source_taste_radial_schur_subblock_support_not_closure,
         "two_source_taste_radial_kprime_finite_shell_scout_not_closure": two_source_taste_radial_kprime_scout_not_closure,
+        "two_source_taste_radial_schur_abc_finite_rows_not_closure": two_source_taste_radial_schur_abc_finite_rows_not_closure,
         "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
         "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,

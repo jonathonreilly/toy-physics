@@ -1,6 +1,8 @@
 # PR230 Schur Route Completion
 
-**Status:** exact negative boundary / strict Schur `A/B/C` route not complete; bounded two-source correlator subblock and finite-shell inverse-slope support present
+**Status:** exact negative boundary / strict Schur `A/B/C` route not complete;
+bounded two-source correlator subblock, finite inverse A/B/C rows, and
+finite-shell inverse-slope support present
 **Runner:** `scripts/frontier_yt_pr230_schur_route_completion.py`
 **Certificate:** `outputs/yt_pr230_schur_route_completion_2026-05-06.json`
 
@@ -16,13 +18,20 @@ for the certified source/complement chart.  It is still not the strict Schur
 kernel packet because it has no pole derivatives, isolated-pole/FV/IR
 authority, canonical `O_H`, or source-overlap bridge.
 
-The finite-shell K-prime scout adds the next bounded diagnostic from the same
-rows:
+The finite Schur A/B/C row certificate adds an explicit inverse-block row
+artifact from the same measured subblocks:
+`outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json`.
+It computes `K(q)=G(q)^(-1)` and records finite `A_f=K_ss`, `B_f=K_sx`, and
+`C_f=K_xx` rows with chunk-level inverse-identity checks.  These rows are
+still finite inverse-correlator-block rows, not strict neutral-kernel A/B/C
+pole rows.
+
+The finite-shell K-prime scout adds the companion bounded diagnostic from the
+same rows:
 `outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json`.
 It inverts the finite 2x2 correlator block and compares the zero mode with the
 first nonzero momentum shell.  This supplies a real finite-shell inverse-slope
-diagnostic, but it is not an isolated-pole `K'(pole)` derivative and does not
-write strict Schur A/B/C rows.
+diagnostic, but it is not an isolated-pole `K'(pole)` derivative.
 
 Existing artifacts also prove sufficiency and reject source-only shortcuts,
 compressed-denominator bootstraps, finite ladder row extraction, and
@@ -33,5 +42,5 @@ kernel basis certificate plus Schur `A/B/C` rows or an equivalent theorem.
 
 ```bash
 python3 scripts/frontier_yt_pr230_schur_route_completion.py
-# SUMMARY: PASS=13 FAIL=0
+# SUMMARY: PASS=14 FAIL=0
 ```

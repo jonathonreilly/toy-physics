@@ -83,6 +83,12 @@ Allowed context:
   completed `C_ss/C_sx/C_xx` rows, but finite zero-to-first-shell inverse
   slopes are not isolated-pole K'(pole) rows, do not provide FV/IR authority,
   and do not identify `x` with canonical `O_H`.
+- the finite Schur A/B/C inverse-block row certificate as bounded row support
+  only: it computes `K(q)=G(q)^(-1)` and finite
+  `A_f=K_ss`, `B_f=K_sx`, `C_f=K_xx` rows from completed chunks001-016,
+  but finite inverse-correlator rows are not strict neutral-kernel A/B/C
+  pole rows, are not isolated-pole `K'(pole)` derivatives, do not provide
+  FV/IR authority, and do not identify `x` with canonical `O_H`.
 - the taste-radial canonical-`O_H` selector gate as exact conditional support
   only: it proves the cyclic degree-one radial source is unique in
   `span{S0,S1,S2}`, but also proves current `Z3`/trace/source filters do not
@@ -252,6 +258,12 @@ Open imports after this block:
   zero-to-first-shell inverse slopes are not isolated-pole K'(pole) rows, are
   not strict Schur A/B/C kernel rows, and do not provide FV/IR authority.
 - Exact stress phrase: finite zero-to-first-shell inverse slopes are not isolated-pole K'(pole) rows.
+- Finite Schur A/B/C inverse-block rows are not proof selectors; finite
+  `A_f/B_f/C_f` rows from `G(q)^(-1)` are not strict neutral-kernel A/B/C
+  pole rows, not isolated-pole `K'(pole)` derivatives, not FV/IR authority,
+  not canonical `O_H`, and not `kappa_s`.
+- Exact stress phrase: finite inverse-correlator rows are not strict
+  neutral-kernel A/B/C pole rows.
 - Taste-radial degree-one uniqueness is not a proof selector until a
   same-surface EW/Higgs action or canonical-operator theorem derives the
   degree-one Higgs-action premise.

@@ -348,3 +348,16 @@ Local verification completed:
   intentional artifact;
 - `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
   pre-existing warnings.
+- finite Schur A/B/C inverse-row certificate packaged:
+  `frontier_yt_pr230_two_source_taste_radial_schur_abc_finite_rows.py`
+  PASS=17 FAIL=0.  The certificate computes finite `K(q)=G(q)^(-1)` rows
+  with `A_f=K_ss`, `B_f=K_sx`, and `C_f=K_xx` from chunks001-016 while
+  preserving the strict neutral-kernel A/B/C pole-row, isolated-pole
+  `K'(pole)`, FV/IR, canonical `O_H`, `kappa_s`, and closure firewalls;
+- Schur route completion refreshed to consume the finite A/B/C rows:
+  `frontier_yt_pr230_schur_route_completion.py` PASS=14 FAIL=0 and still
+  records strict pole rows absent plus proposal disallowed;
+- aggregate gates after the finite A/B/C row block:
+  assumption/import stress PASS=75 FAIL=0, full assembly PASS=134 FAIL=0,
+  campaign status PASS=321 FAIL=0, retained route PASS=288 FAIL=0, and
+  positive-closure completion audit PASS=44 FAIL=0.

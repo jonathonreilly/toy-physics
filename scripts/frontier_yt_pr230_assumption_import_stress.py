@@ -176,6 +176,9 @@ def main() -> int:
         "two_source_taste_radial_schur_kprime_finite_shell_scout": load(
             "outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json"
         ),
+        "two_source_taste_radial_schur_abc_finite_rows": load(
+            "outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json"
+        ),
         "taste_radial_canonical_oh_selector_gate": load(
             "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
         ),
@@ -1040,6 +1043,31 @@ def main() -> int:
         )
         is False,
         two_source_kprime_scout.get("actual_current_surface_status"),
+    )
+    two_source_abc_finite_rows = certificates[
+        "two_source_taste_radial_schur_abc_finite_rows"
+    ]
+    report(
+        "two-source-taste-radial-schur-abc-finite-rows-not-pole-closure",
+        "finite Schur A/B/C inverse-block rows"
+        in str(two_source_abc_finite_rows.get("actual_current_surface_status"))
+        and two_source_abc_finite_rows.get("proposal_allowed") is False
+        and two_source_abc_finite_rows.get(
+            "two_source_taste_radial_schur_abc_finite_rows_passed"
+        )
+        is True
+        and two_source_abc_finite_rows.get("finite_schur_abc_rows_written") is True
+        and two_source_abc_finite_rows.get("strict_schur_abc_kernel_rows_written")
+        is False
+        and two_source_abc_finite_rows.get("strict_schur_kprime_authority_passed")
+        is False
+        and two_source_abc_finite_rows.get("canonical_higgs_operator_identity_passed")
+        is False
+        and two_source_abc_finite_rows.get("forbidden_firewall", {}).get(
+            "treated_finite_inverse_rows_as_strict_kernel_rows"
+        )
+        is False,
+        two_source_abc_finite_rows.get("actual_current_surface_status"),
     )
     taste_radial_selector = certificates["taste_radial_canonical_oh_selector_gate"]
     report(
