@@ -49242,7 +49242,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "e0fe47e8229bc47f997510c7a6434e2f1fd31266f81b09c27ef010d78b7a0a70",
+      "note_hash": "187819327e9e189ab64f0dcad668e59de811af88e3326bfd03f6535448a82800",
       "path": "docs/SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md",
       "runner_path": "scripts/source_resolved_exact_green_self_consistent.py",
       "title": "Source-Resolved Exact Green Self-Consistent Pocket"

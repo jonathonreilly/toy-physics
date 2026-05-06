@@ -1,7 +1,8 @@
 # Source-Resolved Exact Green Self-Consistent Pocket
 
 **Date:** 2026-04-05  
-**Status:** bounded self-consistent refinement-positive on the compact exact lattice
+**Status:** bounded self-consistent refinement-positive on the compact exact
+lattice with explicit assertion wrapper
 
 ## Artifact chain
 
@@ -29,8 +30,12 @@ The frozen pocket uses:
 - fixed cross5 source cluster clipped at the boundary, leaving 4 in-bounds source nodes
 - source strengths `s = 0.001, 0.002, 0.004, 0.008`
 - kernel `exp(-mu r) / (r + eps)` with `mu = 0.08`, `eps = 0.5`
-- calibration gain `1.757890e+00`
+- calibration gain input `1.757890330808e+00`
 - one self-consistency update from the propagated source-cluster amplitudes
+
+The calibration gain is part of the frozen setup.  It is chosen to set the
+base-field cap at the strongest source row and is not evidence of an
+independently derived physical amplitude.
 
 Reduction check:
 
@@ -54,6 +59,17 @@ Note: `max |f|` scales linearly with source strength `s` (target cap of
 `2.0e-02` reached at `s = 0.008`); previous frozen readout misreported
 this column as fixed and rounded the deflections.
 
+2026-05-06 assertion rerun:
+`outputs/source_resolved_exact_green_self_consistent_assertions_2026-05-06.txt`.
+
+```text
+PASSED: 6/6
+SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_ASSERTIONS=TRUE
+CALIBRATED_GAIN_IS_INPUT=TRUE
+SOURCE_RESOLVED_GREEN_FULL_SELF_CONSISTENT_FIELD_THEORY=FALSE
+RESIDUAL_SCOPE=fully_converged_self_consistent_field_theory_and_uncalibrated_amplitude
+```
+
 ## Safe read
 
 The strongest bounded statement is:
@@ -64,6 +80,8 @@ The strongest bounded statement is:
 - the mass-scaling class stays essentially linear
 - the dynamic field remains nontrivial relative to the chosen instantaneous
   comparator, with mean `|green/inst| = 1.330`
+- the runner now asserts zero-source exactness, the calibrated gain boundary,
+  `TOWARD` sign, exponent tolerances, and frozen table reproduction
 
 ## Honest limitation
 
@@ -77,6 +95,8 @@ theory.
   is a bounded refinement update rather than a symmetry-clean family proof
 - the `|green/inst|` amplitude ratio is comparator- and calibration-dependent,
   so it should not be promoted as a standalone physical observable
+- the calibrated gain is admitted as a setup input rather than derived from
+  retained dynamics
 - still, it is the smallest exact-lattice refinement of the Green pocket that
   preserves the hard gates cleanly
 
