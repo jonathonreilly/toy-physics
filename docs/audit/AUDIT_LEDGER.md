@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 62 |
-| **retained_no_go** | 117 |
-| **retained_bounded** | 218 |
+| **retained_no_go** | 119 |
+| **retained_bounded** | 222 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
 | unaudited | 775 |
-| audit_in_progress | 8 |
+| audit_in_progress | 2 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 34 |
@@ -39,8 +39,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 8 |
-| `audited_clean` | 372 |
+| `audit_in_progress` | 2 |
+| `audited_clean` | 378 |
 | `audited_conditional` | 470 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
@@ -111,14 +111,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `alt_connectivity_family_complex_failure_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
-| `fifth_family_complex_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
-| `second_grown_family_sign_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `staggered_newton_reproduction_note_2026-04-11` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `staggered_self_consistent_two_body_note_2026-04-11` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `su3_wigner_intertwiner_block1_theorem_note_2026-05-03` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `third_grown_family_complex_boundary_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -127,6 +121,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `action_uniqueness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `alt_connectivity_family_basin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `alt_connectivity_family_complex_failure_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `alt_connectivity_family_failure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | B | - |
 | `alt_connectivity_family_fm_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `alt_connectivity_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -208,6 +203,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ew_current_fierz_channel_decomposition_note_2026-05-01` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `ew_current_matching_rule_open_gate_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `fifth_family_complex_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `fifth_family_radial_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-fresh-agent | C | - |
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
@@ -361,6 +357,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_3plus1_temporal_ratio_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `scalar_kg_rerun_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `schur_covariance_inheritance_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `second_grown_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `self_consistency_forces_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `self_consistency_structured_null_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `self_gravity_backreaction_closure_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
@@ -413,6 +410,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_layered_gauge_phase_diagram_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_layered_loop_threshold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `staggered_newton_reproduction_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `staggered_self_consistent_two_body_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `staggered_test_mass_companion_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_two_field_wave_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `structured_chokepoint_bridge_extension_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -452,6 +451,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `tensor_support_center_excess_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `thales_right_angle_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `third_grown_family_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `third_grown_family_complex_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `third_grown_family_complex_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `three_generation_observable_count_corollary_note_2026-05-03` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
@@ -1355,6 +1355,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Sweep summary: tested drifts 0.0 through 0.5 over seeds 0 through 4, with passing rows 32/45 and clean zero, neutral, sign-orientation, and near-linear charge-scaling controls on passing rows.  _(class `C`)_
 - **chain closes:** True — The dependency is retained_bounded and supplies the alternative family/sign setup; the basin runner extends it over the explicitly listed finite drift/seed grid and computes the row outcomes. The source note's bounded, non-universal safe read follows from the cached runner output.
 - **rationale:** The load-bearing result is a finite deterministic sweep, not a generic physics bridge, and the note correctly limits the claim to a bounded basin rather than universal closure. The cached runner completes successfully and computes the 32/45 row count from the grown geometries, alternative connectivity construction, propagated source fields, and explicit ok gate; it does not use an external comparator or import the 32/45 result as an input. Residual risk is that the runner's final mean-exponent summary appears to index the neutral column rather than the exponent column, but the row-level exponents and ok predicate still support the source note's near-linear scaling statement.
+- **auditor confidence:** high
+
+### `alt_connectivity_family_complex_failure_note`
+
+- **Note:** [`ALT_CONNECTIVITY_FAMILY_COMPLEX_FAILURE_NOTE.md`](../../docs/ALT_CONNECTIVITY_FAMILY_COMPLEX_FAILURE_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** For drifts 0.15, 0.20, and 0.25 with seeds 0, 1, and 2, the parity-rotated sector-transition alternative connectivity family on the no-restore grown slice does not show the tested complex-action crossover.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260506-024729-44a0cde4-alt_connectivity_family_-005`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The sweep shows there is no TOWARD -> AWAY crossover because the branch never flips sign for gamma = 0.1, 0.2, or 0.5 relative to gamma = 0.  _(class `C`)_
+- **chain closes:** True — The completed runner computes the alternative-family propagation, detector centroid shifts, escape ratios, and weak-field slopes for all stated drift/seed/gamma rows, and every row lacks the required sign flip. The conclusion is bounded to the tested slice and does not require an additional cited premise beyond the retained_bounded family definition.
+- **rationale:** The load-bearing step is a direct numerical sweep of the stated alternative family rather than a definition, renaming, or external comparator match. The runner source performs propagation and centroid measurements over the listed drift/seed/gamma grid, and the cached stdout consistently shows no TOWARD -> AWAY crossover. The cited upstream authority is retained_bounded and is used only to identify the alternative family and prior controls, while the current no-go is explicitly scoped as a boundary failure on this tested slice.
 - **auditor confidence:** high
 
 ### `alt_connectivity_family_failure_note`
@@ -5929,6 +5942,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Four alternatives (bare Laplacian, biharmonic, heat kernel) all pass the  _(class `B`)_
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
+- **auditor confidence:** medium
+
+### `fifth_family_complex_boundary_note`
+
+- **Note:** [`FIFTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`](../../docs/FIFTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The audited packet supports only the sampled targeted boundary claim for drifts 0.05, 0.20, 0.30 and seeds 0, 1 in the radial-shell fifth-family runner.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260506-024729-44a0cde4-fifth_family_complex_bou-006`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The fresh log confirms every boundary-row statement: one anchor row passes the exact gamma=0 plus Born/F~M gates, one row exhibits the TOWARD -> AWAY crossover, and the sampled outer rows do not show the crossover.  _(class `C`)_
+- **chain closes:** True — Within the restricted packet, the runner performs a nontrivial propagation, Born-proxy, F~M scaling, and crossover computation rather than printing constants. The conclusion is bounded to the sampled rows and follows from the included runner output and source.
+- **rationale:** The runner source computes the row values from generated geometry, field construction, radial-shell connectivity, propagation, detector centroids, Born proxy, and weak-source scaling checks. The stdout matches the note's bounded statements: one gated anchor, one crossover row, and no crossover in the named outer sampled rows. The audited scope is narrow and sampled, but no external comparator, renaming, or tuned numerical target is doing the load-bearing work in this packet.
 - **auditor confidence:** medium
 
 ### `fifth_family_complex_note`
@@ -11325,6 +11351,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: The note's retained positive result rests on a missing artifact, scripts/second_grown_family_battery.py, explicitly labeled as not yet frozen, and no frozen output is provided in the artifact chain. Why this blocks: the quoted F~M, Born, gravity, and complex-action control-battery numbers are unreviewable from the allowed source and artifacts, so the candidate retained-grade second-family claim cannot be independently reproduced or checked. Repair target: restore or recreate the exact battery script, add a frozen log and preferably a PASS/FAIL assertion runner, or replace this note with audit-clean sign/complex second-family notes that actually carry the evidence. Claim boundary until fixed: it is safe to say this note records a historical candidate at drift=0.05, restore=0.30; it is not safe to claim a retained second independent grown family from the current artifact chain.
 - **auditor confidence:** high
 
+### `second_grown_family_sign_note`
+
+- **Note:** [`SECOND_GROWN_FAMILY_SIGN_NOTE.md`](../../docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The audited packet supports that the signed-source fixed-field diagnostics pass on the tested no-restore geometry-sector grown-family slice for the listed drifts and seeds.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260506-024729-44a0cde4-second_grown_family_sign-002`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The sweep passed on all tested rows: drift values 0.0, 0.1, 0.2, 0.3, 0.5 across seeds 0, 1, 2, for 15/15 rows passed.  _(class `C`)_
+- **chain closes:** True — The included runner performs an actual parameter sweep, constructs the no-restore family and geometry-sector connectivity, propagates fields for zero, plus, minus, neutral, and double sources, and checks the stated pass criteria. The conclusion is bounded to the tested rows and does not require broader geometry-generic closure.
+- **rationale:** The runner is not a print-only artifact and does not hard-code the reported row values; it computes source fields, propagates amplitudes, measures detector centroid shifts, and applies explicit pass criteria. The note's conclusion is narrow and matches the completed runner output: 15/15 tested drift-seed rows pass, with exact zero and neutral baselines and near-linear charge scaling. No cited upstream authority is imported, and no external comparator or tuned observational value is used.
+- **auditor confidence:** medium
+
 ### `self_consistency_forces_poisson_note`
 
 - **Note:** [`SELF_CONSISTENCY_FORCES_POISSON_NOTE.md`](../../docs/SELF_CONSISTENCY_FORCES_POISSON_NOTE.md)
@@ -12429,6 +12468,32 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The C-class runner checks the load-bearing computational bridge rather than merely restating a definition: it evolves the packet, extracts early-time accelerations, and fits distance exponents across readouts and sizes. The clean verdict applies only to the bounded robustness statement; it does not promote a self-consistent two-body law, irregular-graph transfer, or a retained staggered trajectory card. Residual risk is confined to the calibrated surface choices such as sigma, distance window, and external 1/r source.
 - **auditor confidence:** high
 
+### `staggered_newton_reproduction_note_2026-04-11`
+
+- **Note:** [`STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md`](../../docs/STAGGERED_NEWTON_REPRODUCTION_NOTE_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Open 3D staggered cubic lattices with sides 12, 14, and 16, imposed external V~-1/r source, mass 0.30, sigma 1.30, d=3..6, dt 0.10, 12 steps, and 2x2x2 blocked-centroid trajectory readout.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260506-024729-44a0cde4-staggered_newton_reprodu-004`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The computed 2x2x2 blocked-centroid acceleration follows an approximately inverse-square distance law on the audited d=3..6 surface, with per-side exponents near -2 and global exponent -1.982.  _(class `C`)_
+- **chain closes:** True — The included runner builds the stated staggered Hamiltonian, potential, free and gravitating evolutions, raw and blocked centroids, and distance-law fits; its cached output matches the note. The closure is bounded to the stated external source, open boundaries, calibration window, and blocked observable.
+- **rationale:** The runner is not a print-only or hard-coded numerical-match artifact: it computes the finite staggered-lattice evolution and fitted blocked-trajectory exponent from the stated operators and parameters. The note's load-bearing numerical claims match the completed runner output. The result is clean only as a bounded finite-surface computation; it does not establish self-consistent two-body closure, both-masses scaling, irregular-graph transfer, or a general staggered trajectory theorem.
+- **auditor confidence:** high
+
+### `staggered_self_consistent_two_body_note_2026-04-11`
+
+- **Note:** [`STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md`](../../docs/STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite open 3D staggered lattices with sides 12, 14, 16; separations d=3..7; mass=0.30; G=50.0; mu2=0.001; dt=0.08; steps=6; sigma=0.80, testing exact partner-force attraction and blocked-centroid mutual motion.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260506-024729-44a0cde4-staggered_self_consisten-009`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the calibrated open-cubic surface, the exact partner-force channel has attractive rows 15/15 and a global |F_partner(t0)| fit of d^-1.947 with R^2=0.9992, while the blocked trajectory channel is only 10/15 inward.  _(class `C`)_
+- **chain closes:** True — The runner constructs the staggered lattice, solves the sourced Poisson fields, evolves the two orbitals, computes partner-only forces and blocked centroids, and its completed output matches the note. The closure is only for the explicitly calibrated finite surface, not for universal staggered Newton dynamics or a clean trajectory channel.
+- **rationale:** The runner source performs a genuine computation rather than printing hard-coded expected values: it builds the lattice operators, solves fields from the current densities, computes partner-force observables, and fits the resulting distance law. The note accurately reports the runner output and keeps the conclusion bounded to the calibrated open-cubic surface. It also explicitly excludes full Newton closure and trajectory-level closure, so those open extensions are not imported into the audited claim.
+- **auditor confidence:** high
+
 ### `staggered_test_mass_companion_note_2026-04-11`
 
 - **Note:** [`STAGGERED_TEST_MASS_COMPANION_NOTE_2026-04-11.md`](../../docs/STAGGERED_TEST_MASS_COMPANION_NOTE_2026-04-11.md)
@@ -13308,6 +13373,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — The cached runner completes and directly computes the finite sweep claimed by the note: 5 of 15 rows satisfy the signed-source package, all zero-source and neutral controls remain zero, and edge drift rows are sign-reversed. This closes only the finite tested-window boundary claim, not a continuous-drift theorem.
 - **rationale:** The runner does not print constants or compare to an external target; it constructs the third connectivity family, propagates source fields, and computes the row outcomes used in the note. The note's stated boundary matches the cached output: edge drifts 0.0 and 0.5 are sign-reversed, while accepted rows occur only in the interior tested window. Residual risk is scope-limited: the result is a finite bounded compute over the listed drifts and seeds, not a proof for all drifts or seeds.
 - **auditor confidence:** high
+
+### `third_grown_family_complex_boundary_note`
+
+- **Note:** [`THIRD_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md`](../../docs/THIRD_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Audited the restricted claim that the third grown-family signed basin has a diagnosed boundary: gamma=0 and weak-field controls survive, but the complex-action TOWARD -> AWAY crossover is not robust across the tested retained drift/seed window.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260506-024729-44a0cde4-third_grown_family_compl-008`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The complex branch does not retain a clean narrow companion because it lacks a seed-consistent TOWARD -> AWAY crossover across the retained interior drift window.  _(class `C`)_
+- **chain closes:** True — The cited upstream sign basin is retained_bounded, and the provided runner independently computes the complex-action propagation, controls, and crossover counters. The reported anchor crossover fails on the runner's own criterion, supporting the no-go boundary claim.
+- **rationale:** The load-bearing step is a first-principles numerical probe over the provided grown-family geometry and connectivity, not a definition, renaming, or external comparator match. The runner source constructs fields, propagates complex amplitudes, computes detector centroids/probabilities, Born proxy, weak-field exponents, and TOWARD counters rather than printing constants. The upstream sign-basin authority is retained_bounded, which is retained-grade under the rubric. Although the note's representative table is more granular than the runner stdout and not numerically identical in presentation, both support the same boundary conclusion: the complex companion does not cleanly retain the required crossover.
+- **auditor confidence:** medium
 
 ### `third_grown_family_complex_note`
 
