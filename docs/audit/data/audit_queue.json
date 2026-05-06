@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 522,
+    "critical": 521,
     "high": 15,
     "leaf": 181,
     "medium": 95
@@ -3345,27 +3345,28 @@
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "su3_wigner_intertwiner_block3_theorem_note_2026-05-03",
-      "claim_scope": "Finite L_s=3 periodic 3D cube geometry and tensor-network index setup: 27 sites, 81 directed links, 81 unique unoriented plaquettes, 4 plaquettes per directed link, 486 plaquette-adjacency edges with uniform degree 12, 324 tensor indices, and 81 four-slot link contractions using the retained Block 2 rank-8 four-fold Haar projector; downstream Block 4/5 partition-function or epsilon-witness claims are out of scope.",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
+      "claim_scope": null,
       "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
+      "claim_type_provenance": "author_hint",
       "criticality": "critical",
       "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
+      "cross_confirmation_status": null,
       "deps": [
         "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
-        "su3_wigner_intertwiner_block2_theorem_note_2026-05-03"
+        "su3_wigner_intertwiner_block2_theorem_note_2026-05-03",
+        "su3_wigner_intertwiner_block3_theorem_note_2026-05-03"
       ],
-      "direct_in_degree": 1,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.622,
-      "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK3_THEOREM_NOTE_2026-05-03.md",
-      "queue_reason": "audit_in_progress",
+      "direct_in_degree": 3,
+      "effective_status": "unaudited",
+      "load_bearing_score": 10.619,
+      "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md",
+      "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": "scripts/frontier_su3_wigner_l3_cube_geometry.py",
-      "transitive_descendants": 556
+      "runner_path": "scripts/frontier_su3_wigner_l3_cube_partition.py",
+      "transitive_descendants": 555
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -3718,31 +3719,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_radial_scaling_protected_angle_narrow.py",
       "transitive_descendants": 287
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
-        "su3_wigner_intertwiner_block2_theorem_note_2026-05-03",
-        "su3_wigner_intertwiner_block3_theorem_note_2026-05-03"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.619,
-      "note_path": "docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_su3_wigner_l3_cube_partition.py",
-      "transitive_descendants": 555
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -24909,5 +24885,5 @@
     }
   ],
   "ready_count": 19,
-  "total_pending": 813
+  "total_pending": 812
 }
