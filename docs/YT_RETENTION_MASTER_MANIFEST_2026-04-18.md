@@ -7,7 +7,7 @@ obstruction program as **proposed** by this branch, organised around
 the 27 sub-theorem slots (1 master + 17 P1 + 4 P2 + 5 P3) that
 address the P1 / P2 / P3 missing primitives of the master
 obstruction theorem, plus the 10 retention-analysis class notes and
-the Round 2 SSB matching-gap companion note that scope the candidate
+the repaired Round 2 SSB matching-gap arithmetic-boundary note that scope the candidate
 primitives for the Yukawa-hierarchy gap.
 
 The word "retained" as used below refers to each sub-theorem's
@@ -85,8 +85,10 @@ reading order for reviewers entering from different directions.
 
 (The manifest itself is not counted. The Round 2 SSB matching-gap
 note `YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md` is not a
-P1/P2/P3 primitive slot — it is a companion retention-analysis note
-supporting Class #5 via an independent Hubbard–Stratonovich route.)
+P1/P2/P3 primitive slot. After audit repair it is a companion
+retention-analysis arithmetic-boundary note for the `H_unit`
+component overlap, not an independent physical SSB/Yukawa matching
+route.)
 
 ---
 
@@ -705,15 +707,12 @@ corrections that preserve the underlying numerics.
 
 - **Note:** `docs/YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md`
 - **Runner:** `scripts/frontier_yt_ssb_matching_gap.py`
-- **Log:** `logs/retained/yt_ssb_matching_gap_2026-04-18.log` (25 PASS, 0 FAIL)
-- **Content:** short gap-characterization note that doubly closes the
-  Class #5 matching gap via a second, independent Hubbard–Stratonovich
-  / effective-action bilinear-source derivation. Both the Clifford-
-  chirality path (Class #5 §0) and the bilinear-source path flow
-  through the **same retained D17 composite operator H_unit** with the
-  same normalization constant 1/√6, so the Ward 4-fermion matrix
-  element matches the physical trilinear coefficient without any new
-  primitive.
+- **Log:** `logs/retained/yt_ssb_matching_gap_2026-04-18.log` (19 PASS, 0 FAIL)
+- **Content:** audit-repaired arithmetic-boundary note. It verifies that,
+  given `H_unit = I_(N_iso*N_c) / sqrt(N_iso*N_c)`, each single
+  component overlap is `1 / sqrt(N_iso*N_c)`, hence `1 / sqrt(6)` at
+  `(N_iso,N_c)=(2,3)`. It does **not** close the physical SSB/Yukawa
+  matching theorem.
 
 ### §R2.8 First-round reviewer findings (2026-04-18)
 
@@ -898,11 +897,11 @@ them as prior (i.e. no double counting).
 | P3.3  | K_2 two-loop integral citation                 | note + runner + log                      |   30 |
 | P3.4  | K_3 color-factor retention (10-tensor)         | note + runner + log                      |   18 |
 | P3.5  | K-series geometric bound                       | note + runner + log                      |   28 |
-| —     | SSB matching-gap note (Round 2, Agent I)       | note + runner + log                      |   25 |
+| —     | SSB matching-gap arithmetic-boundary note (Round 2, Agent I) | note + runner + log        |   19 |
 |       |                                                | **Core retention runner PASS total (Pillar A)** | **868** |
-|       |                                                | **Pillar B (retention-analysis + SSB) PASS** |   601 |
+|       |                                                | **Pillar B (retention-analysis + SSB) PASS** |   595 |
 |       |                                                | **Pillar C (manifest + master) PASS**    |   154 |
-|       |                                                | **Grand total retained PASS** (session tally via landing-readiness runner) | **1623** |
+|       |                                                | **Grand total retained PASS** (session tally via landing-readiness runner) | **1617** |
 |       |                                                | **Retained runner FAIL total**           |    0 |
 |       |                                                | **Retained slots on disk (of 27 P1/P2/P3 + master)** |   26 |
 |       |                                                | **EMBEDDED-only slots (post-Round-2)**   |    1 (P1.4 by design) |
@@ -915,15 +914,16 @@ Per-pillar retention PASS totals (via the landing-readiness runner
 | Pillar                                                     | Runners | PASS  | FAIL |
 |------------------------------------------------------------|--------:|------:|-----:|
 | A (P1 + P2 + P3 primitive suite)                           |      26 |   868 |    0 |
-| B (retention-analysis class notes + SSB companion)         |      11 |   601 |    0 |
+| B (retention-analysis class notes + SSB companion)         |      11 |   595 |    0 |
 | C (master obstruction + manifest)                          |       2 |   154 |    0 |
-| **Grand total**                                            |  **39** |**1623**|    0 |
+| **Grand total**                                            |  **39** |**1617**|    0 |
 
 Note: Pillar A now covers all 17 P1 slots (P1.1–P1.17), all 4 P2
 slots, and all 5 P3 slots; only P1.4 (I_1 symbolic decomposition)
 remains EMBEDDED-only by design (its runner and log are on disk).
 Pillar B includes the ten retention-analysis class notes plus the
-Round 2 SSB matching-gap companion note (Agent I). Pillar C is the
+Round 2 SSB matching-gap arithmetic-boundary companion note (Agent I).
+Pillar C is the
 master obstruction theorem (recreated by Agent A) plus the retention
 manifest itself.
 
@@ -941,7 +941,7 @@ This manifest makes the following claims and no others:
    (`scripts/frontier_yt_retention_landing_readiness.py`) verifies
    this at run time.
 3. The on-disk retained runners, when run, emitted `[PASS]` lines
-   summing to **1623 across 39 log files** and 0 `[FAIL]` lines, on
+   summing to **1617 across 39 log files** and 0 `[FAIL]` lines, on
    the dates recorded in their log filenames (tally via the
    landing-readiness runner).
 4. The retained YT-lane precision on `Δ_R` and `m_t(pole)` reported in
@@ -960,6 +960,9 @@ The manifest does **not** claim:
   staggered-PT note proposes (±0.45 % on Δ_R);
 - any framework-native 2-loop MC pin of `Δ_R^{(2)}` — the proposed
   2-loop coverage is loop-geometric bound-constrained;
+- any physical SSB/Yukawa matching closure from the Round 2 SSB
+  companion note, which is now scoped to `H_unit` component-overlap
+  arithmetic;
 - any new bound, value, or derivation; the manifest introduces no
   new physics;
 - any modification of the master obstruction theorem's packaged
@@ -1002,10 +1005,10 @@ produces the structured landing-readiness log. As of 2026-04-18
 (post-Round-2 reconciliation including §R2.8 runner-note agreement)
 the expected result is:
 
-- cross-reference integrity sweep: 8 expected broken references
-  (4 to the EMBEDDED-only P1.4 note, 4 to the Koide sister-workspace
-  note), 0 unexpected broken references;
-- grand total PASS = 1623 across 39 proposal-runners, 0 FAIL.
+- cross-reference integrity sweep: 5 expected broken references
+  (to the EMBEDDED-only P1.4 note and related tolerated session links),
+  0 unexpected broken references;
+- grand total PASS = 1617 across 39 proposal-runners, 0 FAIL.
 
 The legacy pre-§R2.8 figure "1552 across 35 runners" reflected the
 earlier state where M.1, P1.1, P1.2, P3.1, P3.2 were `embedded`-

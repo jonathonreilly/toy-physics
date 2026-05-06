@@ -1,49 +1,31 @@
 #!/usr/bin/env python3
-"""
-Frontier runner: Yukawa SSB matching-gap analysis.
+"""Verifier for the scoped YT SSB matching-gap arithmetic boundary note.
 
-Status
-------
-Closes the matching gap between the Ward theorem's 4-fermion 1PI
-Q_L x Q_L* matrix element y_t_bare = <0|H_unit|t_bar t> = 1/sqrt(6)
-and the physical SM trilinear Q_bar_L x H x q_R Yukawa coefficient
-y_t_phys = 1/sqrt(6), at tree level on the retained Cl(3) x Z^3
-canonical surface, via a Hubbard-Stratonovich / effective-action
-bilinear-source argument.  Complements the Clifford chirality
-decomposition route already given in Class #5 Section 0.
+This runner intentionally checks only the finite-dimensional H_unit component
+overlap:
 
-Both paths (Clifford chirality and HS) agree on the SAME closing
-algebraic identity (1/sqrt(6)) * sqrt(6) = 1.  The matching is
-doubly closed at tree level.
+    H_unit = I_(N_iso * N_c) / sqrt(N_iso * N_c)
 
-Authority
----------
-Retained foundations (NOT modified):
-  - docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md (D17 H_unit uniqueness)
-  - docs/YT_CLASS_5_NON_QL_YUKAWA_VERTEX_NOTE_2026-04-18.md (Section 0 Clifford route)
-  - docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md (SSB scalar generator)
-  - docs/ANOMALY_FORCES_TIME_THEOREM.md (4D chirality)
+and therefore
 
-Authority note (this runner):
-  docs/YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md
+    <alpha_0,a_0 | H_unit | alpha_0,a_0> = 1 / sqrt(N_iso * N_c).
 
-Self-contained except for numpy.  Deterministic.
+It does not claim to derive the physical Standard Model Yukawa trilinear or to
+close the SSB matching gap. The physical matching theorem remains open until
+HS/source normalization, SSB VEV division, chirality projection, LSZ/external
+state normalization, and absence of extra factors are derived separately.
 """
 
 from __future__ import annotations
 
 import math
 import sys
+from dataclasses import dataclass
 
-import numpy as np
-
-
-# ---------------------------------------------------------------------------
-# PASS/FAIL bookkeeping
-# ---------------------------------------------------------------------------
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
+TOL = 1.0e-14
 
 
 def check(name: str, condition: bool, detail: str = "") -> None:
@@ -54,436 +36,262 @@ def check(name: str, condition: bool, detail: str = "") -> None:
     else:
         FAIL_COUNT += 1
         status = "FAIL"
+
     line = f"  [{status}] {name}"
     if detail:
         line += f"  ({detail})"
     print(line)
 
 
-# ---------------------------------------------------------------------------
-# Retained framework constants
-# ---------------------------------------------------------------------------
+@dataclass(frozen=True)
+class PairSpace:
+    n_iso: int
+    n_c: int
 
-N_C = 3           # SU(3) color fundamental dim
-N_ISO = 2         # SU(2)_L doublet dim
-Z_SQ_RETAINED = N_C * N_ISO   # H_unit normalization Z^2 from D17
-Z_RETAINED = math.sqrt(Z_SQ_RETAINED)  # Z = sqrt(6)
+    @property
+    def dim(self) -> int:
+        return self.n_iso * self.n_c
 
-# Tolerances
-TOL_MACHINE = 1e-14
-TOL_NUM = 1e-10
+    @property
+    def h_unit_prefactor(self) -> float:
+        return 1.0 / math.sqrt(self.dim)
+
+    def index(self, alpha: int, color: int) -> int:
+        if not (1 <= alpha <= self.n_iso):
+            raise ValueError(f"alpha={alpha} outside 1..{self.n_iso}")
+        if not (1 <= color <= self.n_c):
+            raise ValueError(f"color={color} outside 1..{self.n_c}")
+        return (alpha - 1) * self.n_c + (color - 1)
+
+    def h_unit_matrix_element(
+        self,
+        alpha_left: int,
+        color_left: int,
+        alpha_right: int,
+        color_right: int,
+    ) -> float:
+        left = self.index(alpha_left, color_left)
+        right = self.index(alpha_right, color_right)
+        if left != right:
+            return 0.0
+        return self.h_unit_prefactor
+
+    def component_overlap(self, alpha: int, color: int) -> float:
+        return self.h_unit_matrix_element(alpha, color, alpha, color)
 
 
-# ---------------------------------------------------------------------------
-# Block 1: retained constants
-# ---------------------------------------------------------------------------
+def close(a: float, b: float) -> bool:
+    return abs(a - b) < TOL
 
-def block_1_retained_constants() -> None:
-    print("\n=== Block 1: retained framework constants ===\n")
 
+def block_1_dimensions() -> PairSpace:
+    print("\n=== Block 1: canonical dimensions ===\n")
+
+    space = PairSpace(n_iso=2, n_c=3)
+
+    check("1.1  N_iso is positive", space.n_iso > 0, f"N_iso={space.n_iso}")
+    check("1.2  N_c is positive", space.n_c > 0, f"N_c={space.n_c}")
     check(
-        "1.1  N_c = 3 (retained SU(3)_c fundamental)",
-        N_C == 3,
-        detail=f"N_c = {N_C}",
+        "1.3  D = N_iso * N_c = 6",
+        space.dim == 6,
+        f"D={space.dim}",
+    )
+    check(
+        "1.4  H_unit prefactor = 1/sqrt(6)",
+        close(space.h_unit_prefactor, 1.0 / math.sqrt(6.0)),
+        f"prefactor={space.h_unit_prefactor:.12f}",
     )
 
-    check(
-        "1.2  N_iso = 2 (retained SU(2)_L doublet)",
-        N_ISO == 2,
-        detail=f"N_iso = {N_ISO}",
-    )
-
-    check(
-        "1.3  Z^2 = N_c * N_iso = 6 (H_unit normalization from D17)",
-        Z_SQ_RETAINED == 6,
-        detail=f"Z^2 = {Z_SQ_RETAINED}",
-    )
-
-    check(
-        "1.4  Z = sqrt(6) (H_unit canonical normalization constant)",
-        abs(Z_RETAINED - math.sqrt(6.0)) < TOL_MACHINE,
-        detail=f"Z = {Z_RETAINED:.12f}, sqrt(6) = {math.sqrt(6.0):.12f}",
-    )
+    return space
 
 
-# ---------------------------------------------------------------------------
-# Block 2: statement of the gap
-# ---------------------------------------------------------------------------
+def block_2_matrix_form(space: PairSpace) -> None:
+    print("\n=== Block 2: explicit H_unit matrix form ===\n")
 
-def block_2_gap_statement() -> None:
-    print("\n=== Block 2: statement of the matching gap ===\n")
+    diag = [
+        space.h_unit_matrix_element(alpha, color, alpha, color)
+        for alpha in range(1, space.n_iso + 1)
+        for color in range(1, space.n_c + 1)
+    ]
+    off_diag = []
+    for alpha_l in range(1, space.n_iso + 1):
+        for color_l in range(1, space.n_c + 1):
+            for alpha_r in range(1, space.n_iso + 1):
+                for color_r in range(1, space.n_c + 1):
+                    if (alpha_l, color_l) != (alpha_r, color_r):
+                        off_diag.append(
+                            space.h_unit_matrix_element(
+                                alpha_l,
+                                color_l,
+                                alpha_r,
+                                color_r,
+                            )
+                        )
 
-    print("  Ward side (retained, eq. 1.3 of note):")
-    print("    y_t_bare := <0 | H_unit(0) | t_bar_{top,up} t_{top,up}>")
-    print("             =  (1/sqrt(N_c * N_iso)) * 1")
-    print("             =  1/sqrt(6)")
-    print()
-    print("  Physical trilinear side (SM, eq. 1.5 of note):")
-    print("    y_t_phys := <0 | L_Y | q_bar_L(x) H_composite(x) u_R(x)> / V_EWSB")
-    print()
-    print("  Gap question: is y_t_phys = y_t_bare = 1/sqrt(6)")
-    print("    an algebraic identity on the retained surface?")
-
-    # Numerical statement
-    y_t_bare = 1.0 / math.sqrt(6.0)
-    print()
-    print(f"  Numerical: y_t_bare = 1/sqrt(6) = {y_t_bare:.12f}")
-
-    check(
-        "2.1  y_t_bare (Ward 4-fermion 1PI matrix element) = 1/sqrt(6)",
-        abs(y_t_bare - 1.0 / math.sqrt(6.0)) < TOL_MACHINE,
-        detail=f"y_t_bare = {y_t_bare:.12f}",
-    )
-
-
-# ---------------------------------------------------------------------------
-# Block 3: H_unit normalization identity (D17)
-# ---------------------------------------------------------------------------
-
-def block_3_h_unit_normalization() -> None:
-    print("\n=== Block 3: H_unit normalization from D17 (retained) ===\n")
-
-    # H_unit defined as (1/Z) * sum psi-bar psi with Z^2 = N_c * N_iso
-    H_unit_prefactor = 1.0 / math.sqrt(N_C * N_ISO)
     expected = 1.0 / math.sqrt(6.0)
-
     check(
-        "3.1  H_unit prefactor = 1/sqrt(N_c * N_iso)",
-        abs(H_unit_prefactor - expected) < TOL_MACHINE,
-        detail=f"prefactor = {H_unit_prefactor:.12f}",
+        "2.1  all six diagonal entries equal 1/sqrt(6)",
+        all(close(value, expected) for value in diag),
+        f"diag entries={[round(value, 12) for value in diag]}",
     )
-
-    # Arithmetic factorization identity sqrt(A*B) = sqrt(A) * sqrt(B)
-    left = math.sqrt(N_C * N_ISO)
-    right = math.sqrt(N_C) * math.sqrt(N_ISO)
-
     check(
-        "3.2  sqrt(N_c * N_iso) = sqrt(N_c) * sqrt(N_iso) (arithmetic factorization)",
-        abs(left - right) < TOL_MACHINE,
-        detail=f"sqrt(6) = {left:.12f}, sqrt(3)*sqrt(2) = {right:.12f}",
+        "2.2  all off-diagonal entries vanish",
+        all(close(value, 0.0) for value in off_diag),
+        f"off-diagonal count={len(off_diag)}",
     )
-
-
-# ---------------------------------------------------------------------------
-# Block 4: HS rescaling identity (Path A)
-# ---------------------------------------------------------------------------
-
-def block_4_hs_rescaling() -> None:
-    print("\n=== Block 4: HS rescaling sigma := sqrt(6) * H_unit (Path A) ===\n")
-
-    # On the canonical surface, sigma is identified with sqrt(6) * H_unit.
-    # This cancels the 1/sqrt(6) in H_unit's definition so that
-    # sigma * (psi-bar psi) = (sum psi-bar psi) * (psi-bar psi) (no extra factor).
-
-    sigma_rescaling = math.sqrt(Z_SQ_RETAINED)   # = sqrt(6)
-    h_unit_prefactor = 1.0 / math.sqrt(Z_SQ_RETAINED)   # = 1/sqrt(6)
-    product = sigma_rescaling * h_unit_prefactor
-
     check(
-        "4.1  HS rescaling factor sigma/H_unit = sqrt(6)",
-        abs(sigma_rescaling - math.sqrt(6.0)) < TOL_MACHINE,
-        detail=f"rescaling = {sigma_rescaling:.12f}",
-    )
-
-    check(
-        "4.2  HS cancellation: sqrt(6) * (1/sqrt(6)) = 1 "
-        "(sigma coupling = bare Sum psi-bar psi)",
-        abs(product - 1.0) < TOL_MACHINE,
-        detail=f"sqrt(6) * (1/sqrt(6)) = {product:.12f}",
+        "2.3  trace(H_unit) = sqrt(6)",
+        close(sum(diag), math.sqrt(6.0)),
+        f"trace={sum(diag):.12f}",
     )
 
 
-# ---------------------------------------------------------------------------
-# Block 5: HS vertex coefficient (Path A)
-# ---------------------------------------------------------------------------
+def block_3_component_overlaps(space: PairSpace) -> None:
+    print("\n=== Block 3: component overlap theorem ===\n")
 
-def block_5_hs_vertex_coefficient() -> None:
-    print("\n=== Block 5: HS vertex coefficient V[H_unit, psi-bar psi] (Path A) ===\n")
-
-    # From (2.5) of the note: V[H_unit, psi-bar psi] = sqrt(6) on canonical surface
-    V_hunit_psibarpsi = math.sqrt(6.0)
-    # Z_H_unit = sqrt(N_c * N_iso) = sqrt(6)
-    Z_H_unit = math.sqrt(6.0)
-    # Effective trilinear coefficient g_Y[H_unit * psi-bar psi] = V / Z = 1
-    g_Y = V_hunit_psibarpsi / Z_H_unit
-
-    check(
-        "5.1  HS vertex coefficient V[H_unit, psi-bar psi] = sqrt(6)",
-        abs(V_hunit_psibarpsi - math.sqrt(6.0)) < TOL_MACHINE,
-        detail=f"V = {V_hunit_psibarpsi:.12f}",
-    )
-
-    check(
-        "5.2  Effective trilinear bare coupling g_Y = V / Z_H_unit = 1",
-        abs(g_Y - 1.0) < TOL_MACHINE,
-        detail=f"g_Y = sqrt(6)/sqrt(6) = {g_Y:.12f}",
-    )
-
-
-# ---------------------------------------------------------------------------
-# Block 6: singlet overlap CG (common to Paths A and B)
-# ---------------------------------------------------------------------------
-
-def block_6_singlet_overlap() -> None:
-    print("\n=== Block 6: singlet CG overlap on external state (Paths A and B) ===\n")
-
-    # Unit-norm singlet state in Q_L x Q_L* bilinear Hilbert space (dim 36):
-    # |S> = (1/sqrt(6)) * sum_{alpha,a} |alpha,a> x |alpha,a>*
-    # Overlap with canonical top-pair external state:
-    # <top-pair | S> = 1/sqrt(6)
-    dim_ql = N_C * N_ISO  # 6
-    # Construct explicit singlet state as 6-dim flat vector with equal components 1/sqrt(6)
-    singlet = np.ones(dim_ql) / math.sqrt(dim_ql)
-
-    # External top-pair basis vector: canonical component (top-color, up-iso)
-    top_pair_basis = np.zeros(dim_ql)
-    top_pair_basis[0] = 1.0   # pick any single basis component
-
-    overlap = float(np.dot(singlet, top_pair_basis))
     expected = 1.0 / math.sqrt(6.0)
+    overlaps = []
+    for alpha in range(1, space.n_iso + 1):
+        for color in range(1, space.n_c + 1):
+            overlaps.append(space.component_overlap(alpha, color))
 
     check(
-        "6.1  Singlet unit-normalization |S|^2 = 1",
-        abs(float(np.dot(singlet, singlet)) - 1.0) < TOL_MACHINE,
-        detail=f"|S|^2 = {float(np.dot(singlet, singlet)):.12f}",
+        "3.1  every basis component overlap is 1/sqrt(6)",
+        all(close(value, expected) for value in overlaps),
+        f"overlaps={[round(value, 12) for value in overlaps]}",
     )
 
+    alpha_0, color_0 = 1, 1
+    ward_component_label = space.component_overlap(alpha_0, color_0)
+    candidate_component_label = space.component_overlap(alpha_0, color_0)
     check(
-        "6.2  <top-pair | S> = 1/sqrt(6) (Ward Block 5)",
-        abs(overlap - expected) < TOL_MACHINE,
-        detail=f"overlap = {overlap:.12f}, 1/sqrt(6) = {expected:.12f}",
-    )
-
-
-# ---------------------------------------------------------------------------
-# Block 7: Path A yields y_t_phys = 1/sqrt(6)
-# ---------------------------------------------------------------------------
-
-def block_7_path_a_closure() -> None:
-    print("\n=== Block 7: Path A closure (HS + CG overlap) y_t_phys = 1/sqrt(6) ===\n")
-
-    # From Block 5: g_Y[H_unit * psi-bar psi] = 1 (bare)
-    g_Y_bare = 1.0
-    # CG overlap on external state: 1/sqrt(6)
-    cg_overlap = 1.0 / math.sqrt(6.0)
-    # Physical trilinear coefficient
-    y_t_phys_path_a = g_Y_bare * cg_overlap
-
-    check(
-        "7.1  Path A: y_t_phys = g_Y * <top-pair|S> = 1 * (1/sqrt(6)) = 1/sqrt(6)",
-        abs(y_t_phys_path_a - 1.0 / math.sqrt(6.0)) < TOL_MACHINE,
-        detail=f"y_t_phys (Path A) = {y_t_phys_path_a:.12f}",
-    )
-
-
-# ---------------------------------------------------------------------------
-# Block 8: Path B direct effective action
-# ---------------------------------------------------------------------------
-
-def block_8_path_b_closure() -> None:
-    print("\n=== Block 8: Path B closure (direct effective action) ===\n")
-
-    # H_unit matrix element on canonical external state:
-    # <q-bar q | H_unit | 0> = (1/sqrt(6)) * <q-bar q | Sum psi-bar psi | 0>
-    # The external state |q-bar q> picks out ONE component of the sum:
-    # <q-bar q | Sum psi-bar psi | 0> = 1 (canonical Wick contraction on one component)
-    h_unit_prefactor = 1.0 / math.sqrt(6.0)
-    external_wick = 1.0
-    y_t_phys_path_b = h_unit_prefactor * external_wick
-
-    check(
-        "8.1  Path B: y_t_phys = (1/sqrt(6)) * 1 = 1/sqrt(6) "
-        "(direct H_unit matrix element on canonical external state)",
-        abs(y_t_phys_path_b - 1.0 / math.sqrt(6.0)) < TOL_MACHINE,
-        detail=f"y_t_phys (Path B) = {y_t_phys_path_b:.12f}",
-    )
-
-
-# ---------------------------------------------------------------------------
-# Block 9: Path A and Path B agree
-# ---------------------------------------------------------------------------
-
-def block_9_path_agreement() -> None:
-    print("\n=== Block 9: Path A and Path B agree (cross-check) ===\n")
-
-    # Both paths give 1/sqrt(6)
-    y_t_phys_path_a = 1.0 * (1.0 / math.sqrt(6.0))           # g_Y=1 * CG
-    y_t_phys_path_b = (1.0 / math.sqrt(6.0)) * 1.0           # H_unit prefactor * Wick
-
-    check(
-        "9.1  Path A = Path B = 1/sqrt(6) (cross-check, machine precision)",
-        abs(y_t_phys_path_a - y_t_phys_path_b) < TOL_MACHINE,
-        detail=(
-            f"|Path A - Path B| = "
-            f"{abs(y_t_phys_path_a - y_t_phys_path_b):.2e}"
+        "3.2  two labels defined as the same H_unit component overlap agree",
+        close(ward_component_label, candidate_component_label),
+        (
+            f"A={ward_component_label:.12f}, "
+            f"B={candidate_component_label:.12f}"
         ),
     )
+    check(
+        "3.3  the shared component value is 1/sqrt(6)",
+        close(ward_component_label, expected),
+        f"value={ward_component_label:.12f}",
+    )
 
 
-# ---------------------------------------------------------------------------
-# Block 10: y_t_phys = y_t_bare (matching closed)
-# ---------------------------------------------------------------------------
+def block_4_general_dimensions() -> None:
+    print("\n=== Block 4: general positive-dimension spot checks ===\n")
 
-def block_10_matching_closure() -> None:
-    print("\n=== Block 10: matching closure y_t_phys = y_t_bare = 1/sqrt(6) ===\n")
+    alt = PairSpace(n_iso=3, n_c=4)
+    alt_expected = 1.0 / math.sqrt(12.0)
+    alt_values = [
+        alt.component_overlap(alpha, color)
+        for alpha in range(1, alt.n_iso + 1)
+        for color in range(1, alt.n_c + 1)
+    ]
+    check(
+        "4.1  (N_iso,N_c)=(3,4) gives 1/sqrt(12) on every component",
+        all(close(value, alt_expected) for value in alt_values),
+        f"value={alt_values[0]:.12f}",
+    )
 
-    y_t_bare = 1.0 / math.sqrt(6.0)   # Ward theorem
-    y_t_phys = 1.0 / math.sqrt(6.0)   # derived via HS / direct effective action
+    minimal = PairSpace(n_iso=1, n_c=1)
+    check(
+        "4.2  (N_iso,N_c)=(1,1) gives component overlap 1",
+        close(minimal.component_overlap(1, 1), 1.0),
+        f"value={minimal.component_overlap(1, 1):.12f}",
+    )
+
+
+def block_5_forbidden_imports() -> None:
+    print("\n=== Block 5: forbidden physical-readout imports are absent ===\n")
+
+    proof_symbols = {
+        "N_iso",
+        "N_c",
+        "D",
+        "I_D",
+        "E_alpha_a",
+        "H_unit",
+        "alpha_0",
+        "a_0",
+    }
+    forbidden_symbols = {
+        "g_bare",
+        "y_t_phys",
+        "V_EWSB",
+        "Z_LSZ",
+        "P_chiral",
+        "sigma_HS",
+        "source_normalization",
+    }
+
+    leaked = sorted(proof_symbols & forbidden_symbols)
+    check(
+        "5.1  algebraic proof uses no gauge-coupling/readout symbols",
+        not leaked,
+        f"leaked={leaked}",
+    )
+
+    physical_matching_claimed = False
+    hs_source_normalization_derived = False
+    ssb_vev_division_derived = False
+    chirality_projection_derived = False
+    lsz_normalization_derived = False
+    no_extra_factors_derived = False
 
     check(
-        "10.1  y_t_phys = y_t_bare (matching closed, machine precision)",
-        abs(y_t_phys - y_t_bare) < TOL_MACHINE,
-        detail=(
-            f"y_t_phys = {y_t_phys:.12f}, y_t_bare = {y_t_bare:.12f}, "
-            f"diff = {abs(y_t_phys - y_t_bare):.2e}"
-        ),
+        "5.2  runner does not claim physical Yukawa matching closure",
+        physical_matching_claimed is False,
     )
-
-
-# ---------------------------------------------------------------------------
-# Block 11: closing algebraic identity (1/sqrt(6)) * sqrt(6) = 1
-# ---------------------------------------------------------------------------
-
-def block_11_closing_identity() -> None:
-    print("\n=== Block 11: closing algebraic identity (1/sqrt(6)) * sqrt(6) = 1 ===\n")
-
-    # This is the core arithmetic that closes the matching in both paths.
-    # In Path A: sqrt(6) from HS rescaling cancels 1/sqrt(6) in H_unit; then
-    #            1/sqrt(6) reappears via CG overlap.
-    # In Path B: H_unit's 1/sqrt(6) appears directly; sqrt(6) appears implicitly
-    #            as Z_H_unit if one normalizes via Legendre transform.
-    product = (1.0 / math.sqrt(6.0)) * math.sqrt(6.0)
-
     check(
-        "11.1  (1/sqrt(6)) * sqrt(6) = 1 (tree-level matching identity)",
-        abs(product - 1.0) < TOL_MACHINE,
-        detail=f"(1/sqrt(6)) * sqrt(6) = {product:.12f}",
+        "5.3  HS/source normalization remains outside this proof",
+        hs_source_normalization_derived is False,
     )
-
-    # Secondary: Z * (1/Z) = 1 for H_unit normalization
-    Z = math.sqrt(6.0)
-    inv_Z = 1.0 / math.sqrt(6.0)
     check(
-        "11.2  Z * (1/Z) = 1 with Z = sqrt(N_c * N_iso) (H_unit unit-norm closure)",
-        abs(Z * inv_Z - 1.0) < TOL_MACHINE,
-        detail=f"sqrt(6) * (1/sqrt(6)) = {Z * inv_Z:.12f}",
+        "5.4  SSB VEV division remains outside this proof",
+        ssb_vev_division_derived is False,
     )
-
-
-# ---------------------------------------------------------------------------
-# Block 12: cross-verification with Class #5 Section 0 Clifford route
-# ---------------------------------------------------------------------------
-
-def block_12_clifford_cross_check() -> None:
-    print(
-        "\n=== Block 12: cross-check with Class #5 Section 0 "
-        "(Clifford chirality route) ===\n"
-    )
-
-    # Class #5 Section 0 derives y_t_phys = 1/sqrt(6) via:
-    #   H_unit = (1/sqrt(6)) * [psi-bar_L psi_R + psi-bar_R psi_L + ...]
-    # After iso-selector identification (forced by U(1)_Y), H_unit becomes
-    # the SM Yukawa trilinear with coefficient 1/sqrt(6).
-    y_t_phys_clifford = 1.0 / math.sqrt(6.0)
-
-    # This runner (Paths A, B) gives the same 1/sqrt(6)
-    y_t_phys_hs = 1.0 / math.sqrt(6.0)
-
     check(
-        "12.1  Clifford-chirality route (Class #5 Section 0) gives 1/sqrt(6)",
-        abs(y_t_phys_clifford - 1.0 / math.sqrt(6.0)) < TOL_MACHINE,
-        detail=f"y_t_phys (Clifford) = {y_t_phys_clifford:.12f}",
+        "5.5  chirality projection remains outside this proof",
+        chirality_projection_derived is False,
     )
-
     check(
-        "12.2  HS / direct-EA route (this runner) gives 1/sqrt(6)",
-        abs(y_t_phys_hs - 1.0 / math.sqrt(6.0)) < TOL_MACHINE,
-        detail=f"y_t_phys (HS) = {y_t_phys_hs:.12f}",
+        "5.6  LSZ/external-state normalization remains outside this proof",
+        lsz_normalization_derived is False,
     )
-
     check(
-        "12.3  Clifford and HS paths agree (matching doubly closed)",
-        abs(y_t_phys_clifford - y_t_phys_hs) < TOL_MACHINE,
-        detail=(
-            f"|Clifford - HS| = "
-            f"{abs(y_t_phys_clifford - y_t_phys_hs):.2e}"
-        ),
+        "5.7  absence of extra physical factors remains outside this proof",
+        no_extra_factors_derived is False,
     )
 
-
-# ---------------------------------------------------------------------------
-# Block 13: outcome classification
-# ---------------------------------------------------------------------------
-
-def block_13_outcome() -> None:
-    print("\n=== Block 13: outcome classification ===\n")
-
-    # Outcome: matching gap CLOSED at tree level via two independent paths.
-    # Class #5 Outcome D species-uniformity verdict UNCHANGED.
-    # 33x m_b empirical falsification UNCHANGED (separate issue).
-
-    matching_closed = True
-    class_5_outcome_unchanged = True
-    m_b_gap_unchanged = True
-
-    check(
-        "13.1  Matching gap CLOSED at tree level on canonical surface "
-        "(dual Clifford + HS paths)",
-        matching_closed,
-        detail="Outcome = CLOSED via both paths independently",
-    )
-
-    check(
-        "13.2  Class #5 Outcome D (species uniformity CG[up]=CG[down]=1/sqrt(6)) UNCHANGED",
-        class_5_outcome_unchanged,
-        detail="No new primitives; §0 amendment of Class #5 supersedes §0.4 original",
-    )
-
-    check(
-        "13.3  m_b 33x empirical falsification UNCHANGED (structural closure != empirical)",
-        m_b_gap_unchanged,
-        detail="Structural matching closure does NOT close empirical mass-hierarchy gap",
-    )
-
-
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
 
 def main() -> int:
     print("=" * 72)
-    print("Yukawa SSB matching-gap analysis (tree-level, retained surface)")
+    print("YT SSB matching-gap arithmetic boundary verifier")
     print("=" * 72)
 
-    block_1_retained_constants()
-    block_2_gap_statement()
-    block_3_h_unit_normalization()
-    block_4_hs_rescaling()
-    block_5_hs_vertex_coefficient()
-    block_6_singlet_overlap()
-    block_7_path_a_closure()
-    block_8_path_b_closure()
-    block_9_path_agreement()
-    block_10_matching_closure()
-    block_11_closing_identity()
-    block_12_clifford_cross_check()
-    block_13_outcome()
+    space = block_1_dimensions()
+    block_2_matrix_form(space)
+    block_3_component_overlaps(space)
+    block_4_general_dimensions()
+    block_5_forbidden_imports()
 
     print("\n" + "=" * 72)
     print(f"RESULT: {PASS_COUNT} PASS, {FAIL_COUNT} FAIL")
     print("=" * 72)
+
     if FAIL_COUNT == 0:
         print(
-            "\n  OUTCOME: matching gap CLOSED at tree level.\n"
-            "  The Ward 4-fermion 1/sqrt(6) and the physical trilinear 1/sqrt(6)\n"
-            "  are the SAME factor from H_unit's defining normalization (D17).\n"
-            "  Two independent closures (Clifford chirality, HS + CG) agree.\n"
-            "  Open: 1-loop corrections to the factorization (flagged §5 of note).\n"
+            "\n  OUTCOME: exact H_unit component-overlap arithmetic verified.\n"
+            "  Framework instance: <component|H_unit|component> = 1/sqrt(6).\n"
+            "  Boundary: this does NOT close the physical SSB/Yukawa matching\n"
+            "  theorem; that operator-matching problem remains open.\n"
         )
         return 0
-    else:
-        print("\n  OUTCOME: matching closure FAILED (unexpected).\n")
-        return 1
+
+    print("\n  OUTCOME: arithmetic verifier FAILED.\n")
+    return 1
 
 
 if __name__ == "__main__":
