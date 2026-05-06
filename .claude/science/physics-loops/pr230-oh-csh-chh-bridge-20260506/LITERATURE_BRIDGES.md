@@ -13,3 +13,8 @@ not a source-overlap selector.
 The H1 lift attempt uses only finite Z3 representation bookkeeping and local
 repo authority scans.  No external literature is load-bearing for the
 generation-action boundary.
+
+The Z3 lazy-transfer promotion attempt also uses only finite matrix algebra.
+It records a non-identifiability boundary: Perron-Frobenius applies to
+`L=(I+P)/2` after `L` is supplied as physical transfer, but the theorem does
+not license importing the lazy/self term from outside the PR230 surface.

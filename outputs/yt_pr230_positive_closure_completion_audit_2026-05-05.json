@@ -58,6 +58,7 @@
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
     "wz_smoke_promotion_no_go": "outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json",
     "z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
+    "z3_lazy_transfer_promotion_attempt": "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json",
     "z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json"
   },
   "parent_statuses": {
@@ -85,9 +86,10 @@
     "wz_same_source_action": "exact negative boundary / same-source EW action not defined on PR230 surface",
     "wz_smoke_promotion_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
     "z3_generation_action_lift_attempt": "exact negative boundary / Z3 generation-action lift to PR230 quark-bilinear triplet not derived on current surface",
+    "z3_lazy_transfer_promotion_attempt": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
   },
-  "pass_count": 28,
+  "pass_count": 29,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "future_bridge_file_presence": {
@@ -106,6 +108,7 @@
     "source_pole_intaken": true,
     "taste_condensate_oh_bridge_blocked": true,
     "z3_generation_action_lift_not_derived": true,
+    "z3_lazy_transfer_promotion_not_derived": true,
     "z3_triplet_conditional_primitive_not_closure": true
   },
   "prompt_to_artifact_checklist": [

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T12:50:17.077790+00:00",
+  "generated_at": "2026-05-06T13:08:17.541854+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17017,6 +17017,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_reflection_det_primitive_upgrade_gate.py"
     },
+    "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 4,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_same_surface_z3_taste_triplet_artifact.py"
+    },
     "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05": {
       "assert_count": 1,
       "counts": {
@@ -17172,6 +17184,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_z3_generation_action_lift_attempt.py"
+    },
+    "yt_pr230_z3_lazy_transfer_promotion_attempt_note_2026-05-06": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_z3_lazy_transfer_promotion_attempt.py"
     },
     "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06": {
       "assert_count": 1,
@@ -35115,6 +35139,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_same_surface_z3_taste_triplet_artifact.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 4,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt.py": {
       "assert_count": 1,
       "claims": [
@@ -35308,6 +35347,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_yt_pr230_z3_lazy_transfer_promotion_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_z3_lazy_transfer_promotion_attempt_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_yt_pr230_z3_triplet_conditional_primitive_cone_theorem.py": {
@@ -40476,12 +40530,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 230,
-      "C": 507,
+      "C": 509,
       "D": 303,
       "none": 404
     },
-    "runners_classified": 1453,
-    "runners_with_C": 766,
-    "runners_with_D": 547
+    "runners_classified": 1455,
+    "runners_with_C": 768,
+    "runners_with_D": 549
   }
 }

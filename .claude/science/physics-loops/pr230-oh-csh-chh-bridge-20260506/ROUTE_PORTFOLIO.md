@@ -86,3 +86,11 @@ Koide/lepton Z3 to the PR230 quark-bilinear triplet.  Current generation-blind
 source/action checks cannot choose between trivial and cyclic quark actions.
 This route reopens only with a same-surface quark-bilinear Z3 action
 certificate or with a bypassing non-source bridge.
+
+The Z3 lazy-transfer promotion attempt closes the sharper shortcut opened by
+the same-surface taste-triplet artifact.  The current surface supplies the
+cyclic symmetry `P`, and `L=(I+P)/2` is primitive as mathematics, but the
+identity/self edge in `L` is a physical dynamics premise.  Current PR230
+artifacts do not instantiate that lazy transfer, so this route reopens only
+with a same-surface neutral transfer/action, off-diagonal generator, or strict
+primitive-cone certificate.

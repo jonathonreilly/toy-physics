@@ -1,0 +1,158 @@
+{
+  "actual_current_surface_status": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_lazy_theorem_loaded": true,
+  "conditional_surface_status": "If a future same-surface neutral transfer, action row, or off-diagonal generator instantiates L=(I+P)/2 or an equivalent aperiodic positive transfer, the conditional Z3 primitive theorem can become neutral primitive support.  That premise is absent now.",
+  "countermodel_identifiability_gap": true,
+  "countermodels": {
+    "encoded_parent_data_common_to_both": [
+      "same-surface cyclic triplet action P",
+      "P fixes the PR230 source identity I_8",
+      "no same-surface neutral-transfer output file",
+      "no off-diagonal neutral-generator certificate",
+      "no strict primitive-cone certificate"
+    ],
+    "identifiability_conclusion": "The current parent artifacts specify the symmetry P but do not select model A versus model B as physical PR230 dynamics.  Promoting B would import an unproved lazy/self-transfer term.",
+    "model_A_pure_cycle_dynamics": {
+      "physical_transfer": "P",
+      "primitive": false,
+      "reason": "P^k has zeros for every tested k and P^3=I, so the chain is periodic."
+    },
+    "model_B_lazy_cycle_dynamics": {
+      "physical_transfer": "L=(I+P)/2",
+      "primitive": true,
+      "reason": "L^2=(I+2P+P^2)/4 is strictly positive."
+    }
+  },
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "Supply outputs/yt_pr230_same_surface_neutral_transfer_operator_2026-05-06.json or an equivalent strict off-diagonal-generator / primitive-cone certificate, or bypass this route with O_H/C_sH/C_HH, same-source W/Z response, Schur A/B/C rows, or scalar-LSZ authority.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claims_retained_or_proposed_retained_closure": false,
+    "imports_external_markov_lazy_averaging_as_dynamics": false,
+    "sets_c2_equal_one": false,
+    "sets_kappa_s_equal_one": false,
+    "sets_z_match_equal_one": false,
+    "treats_symmetry_automorphism_as_physical_transfer": false,
+    "uses_alpha_lm_plaquette_or_u0": false,
+    "uses_hunit_matrix_element_readout": false,
+    "uses_observed_top_mass_or_yukawa_as_selector": false,
+    "uses_reduced_pilots_as_production_evidence": false,
+    "uses_yt_ward_identity_as_authority": false
+  },
+  "hypothetical_axiom_status": "Under an accepted new same-surface lazy-transfer axiom this would supply the finite primitive-cone step; no closure is authorized on the actual current surface.",
+  "lazy_matrix_primitive_as_math": true,
+  "parent_encodes_only_symmetry": true,
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "neutral_offdiagonal_generator": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
+    "neutral_primitive_cone_gate": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+    "neutral_primitive_route_completion": "exact negative boundary / neutral primitive-rank-one route not complete on current PR230 surface",
+    "retained_route": "open / retained closure not yet reached",
+    "same_surface_z3_taste_triplet": "exact-support / same-surface Z3 taste-triplet artifact; physical neutral transfer still absent",
+    "z3_generation_action_lift": "exact negative boundary / Z3 generation-action lift to PR230 quark-bilinear triplet not derived on current surface",
+    "z3_triplet_conditional_primitive": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
+  },
+  "pass_count": 17,
+  "physical_lazy_transfer_instantiated": false,
+  "pr230_closure_authorized": false,
+  "primitive_witness": {
+    "L2": [
+      [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/4",
+        "1/4"
+      ],
+      [
+        "1/4",
+        "1/2",
+        "1/4"
+      ]
+    ],
+    "L2_is_strictly_positive": true,
+    "L_differs_from_P": true,
+    "P2": [
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "0",
+        "0"
+      ]
+    ],
+    "P3_equals_identity": true,
+    "cyclic_generator_P": [
+      [
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ]
+    ],
+    "lazy_transfer_L": [
+      [
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/2",
+        "0"
+      ],
+      [
+        "0",
+        "1/2",
+        "1/2"
+      ]
+    ],
+    "load_bearing_new_term": "the identity/self edge with coefficient 1/2 in L",
+    "pure_cyclic_generator_is_not_primitive": true
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The proof would require importing the lazy self term or treating a symmetry automorphism as dynamics.  Current PR230 artifacts do neither.",
+  "same_surface_cycle_supplied": true,
+  "strict_future_artifact_presence": {
+    "canonical_oh_certificate": false,
+    "neutral_offdiagonal_generator_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "same_source_ew_action_certificate": false,
+    "same_surface_neutral_transfer": false,
+    "source_higgs_rows": false
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not write a neutral primitive-cone certificate",
+    "does not treat symmetry averaging as a physical same-surface transfer",
+    "does not identify O_sp, O_s, or the taste triplet with canonical O_H",
+    "does not use H_unit, Ward authority, observed targets, alpha_LM, plaquette, or u0",
+    "does not set kappa_s, c2, Z_match, or a source-Higgs overlap to one"
+  ],
+  "writes_strict_future_certificate": false,
+  "z3_lazy_transfer_promotion_attempt_passed": true
+}

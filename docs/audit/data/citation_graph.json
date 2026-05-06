@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T12:50:14.568812+00:00",
+  "generated_at": "2026-05-06T13:08:15.136557+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42473,7 +42473,7 @@
       "current_status": "open",
       "current_status_raw": "open / first-principles `O_H` bridge positive-candidate portfolio",
       "deps": [],
-      "note_hash": "d0f8a4834713493d40e0cb02a7f11df0da53fe5d7e17180bef4efd96cc621b40",
+      "note_hash": "acde3075e7736e31e086a0ca7a8193cce4c357d94e0c9af208b1572061953685",
       "path": "docs/YT_PR230_OH_BRIDGE_FIRST_PRINCIPLES_CANDIDATE_PORTFOLIO_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py",
       "title": "PR230 O_H Bridge First-Principles Candidate Portfolio"
@@ -42557,6 +42557,16 @@
       "path": "docs/YT_PR230_REVIEW_BACKPRESSURE_PASS_NOTE_2026-05-01.md",
       "runner_path": null,
       "title": "YT PR230 Review-Backpressure Pass Note"
+    },
+    "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06": {
+      "claim_id": "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06",
+      "current_status": "support",
+      "current_status_raw": "exact-support / same-surface Z3 taste-triplet artifact; physical",
+      "deps": [],
+      "note_hash": "84267ab9523e74c7899b3af7b53a6f10aea5e22bb5fbb801554a99615669abbf",
+      "path": "docs/YT_PR230_SAME_SURFACE_Z3_TASTE_TRIPLET_ARTIFACT_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_same_surface_z3_taste_triplet_artifact.py",
+      "title": "PR230 Same-Surface Z3 Taste-Triplet Artifact"
     },
     "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05": {
       "claim_id": "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05",
@@ -42698,12 +42708,22 @@
       "runner_path": "scripts/frontier_yt_pr230_z3_generation_action_lift_attempt.py",
       "title": "PR230 Z3 Generation-Action Lift Attempt"
     },
+    "yt_pr230_z3_lazy_transfer_promotion_attempt_note_2026-05-06": {
+      "claim_id": "yt_pr230_z3_lazy_transfer_promotion_attempt_note_2026-05-06",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / Z3 lazy-transfer promotion not derivable",
+      "deps": [],
+      "note_hash": "965549e474ac30509e9f2c76ee3fd403f6759cdc947492b85b327979ac7736b9",
+      "path": "docs/YT_PR230_Z3_LAZY_TRANSFER_PROMOTION_ATTEMPT_NOTE_2026-05-06.md",
+      "runner_path": "scripts/frontier_yt_pr230_z3_lazy_transfer_promotion_attempt.py",
+      "title": "PR230 Z3 Lazy-Transfer Promotion Attempt"
+    },
     "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06": {
       "claim_id": "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06",
       "current_status": "support",
       "current_status_raw": "conditional-support / exact Z3-triplet primitive-cone theorem;",
       "deps": [],
-      "note_hash": "c7a1523e1bf193fa1bd1395ecb8d8c3dcfea14e54d62c69507abb020be4aa67a",
+      "note_hash": "a3fba0392d2539b3a3567b3e5a10e8160d8a5c22cb358f5d806eef241ad68648",
       "path": "docs/YT_PR230_Z3_TRIPLET_CONDITIONAL_PRIMITIVE_CONE_THEOREM_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_z3_triplet_conditional_primitive_cone_theorem.py",
       "title": "PR230 Z3-Triplet Conditional Primitive-Cone Theorem"
@@ -42755,7 +42775,7 @@
       "current_status": "open",
       "current_status_raw": "open / closure not yet reached",
       "deps": [],
-      "note_hash": "76e902ea2ca5ce537dc7e48c8176d40e4fb28fc7007bd9e27e383f158eec203c",
+      "note_hash": "6222836832d890755786eb4ea634c73a4c896c9148078ad6d951d60609d49d53",
       "path": "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_retained_closure_route_certificate.py",
       "title": "PR230 Top-Yukawa Retained-Closure Route Certificate"
@@ -45432,6 +45452,7 @@
     "yt_pr230_queue_exhaustion_certificate_note_2026-05-01",
     "yt_pr230_reflection_det_primitive_upgrade_gate_note_2026-05-05",
     "yt_pr230_review_backpressure_pass_note_2026-05-01",
+    "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06",
     "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05",
     "yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_note_2026-05-05",
     "yt_pr230_schur_abc_definition_derivation_attempt_note_2026-05-05",
@@ -45446,6 +45467,7 @@
     "yt_pr230_wz_response_route_completion_note_2026-05-06",
     "yt_pr230_wz_smoke_to_production_promotion_no_go_note_2026-05-05",
     "yt_pr230_z3_generation_action_lift_attempt_note_2026-05-06",
+    "yt_pr230_z3_lazy_transfer_promotion_attempt_note_2026-05-06",
     "yt_pr230_z3_triplet_conditional_primitive_cone_theorem_note_2026-05-06",
     "yt_production_resource_projection_note_2026-05-01",
     "yt_qfp_insensitivity_support_note",
@@ -45565,17 +45587,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1083,
-    "node_count": 2036,
-    "root_count": 1549,
-    "runners_with_path": 1532,
+    "leaf_count": 1085,
+    "node_count": 2038,
+    "root_count": 1551,
+    "runners_with_path": 1534,
     "status_counts": {
       "bounded": 556,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 435,
-      "unknown": 569
+      "support": 436,
+      "unknown": 570
     }
   }
 }

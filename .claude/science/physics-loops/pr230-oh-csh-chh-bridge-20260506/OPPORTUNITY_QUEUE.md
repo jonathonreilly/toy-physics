@@ -6,11 +6,13 @@
    source to canonical Higgs/taste radial source; scalar reparametrization of
    the current source line is blocked.
 3. Neutral off-diagonal generator / primitive-cone theorem.  The lazy-Z3
-   matrix step is now conditionally solved; the missing artifact is the
-   same-surface positive transfer/action or off-diagonal generator that makes
-   that matrix load-bearing for PR230.  If pursuing the origin/main composite
-   route directly, first supply H1: a same-surface quark-bilinear Z3 action
-   certificate selecting the cyclic action.
+   matrix step is now conditionally solved, and direct promotion from cyclic
+   symmetry `P` to lazy physical transfer `L=(I+P)/2` is blocked.  The missing
+   artifact is still the same-surface positive transfer/action or
+   off-diagonal generator that makes that matrix load-bearing for PR230.  If
+   pursuing the origin/main composite route directly, first supply H1: a
+   same-surface quark-bilinear Z3 action certificate selecting the cyclic
+   action.
 4. Schur A/B/C row production from a real neutral kernel basis.
 5. Same-source W/Z response rows with matched top/W covariance, `delta_perp`
    authority, and strict non-observed `g2`.

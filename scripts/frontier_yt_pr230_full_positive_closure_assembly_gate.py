@@ -94,6 +94,7 @@ PARENTS = {
     "pr230_same_surface_z3_taste_triplet": "outputs/yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json",
     "pr230_z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
     "pr230_z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
+    "pr230_z3_lazy_transfer_promotion_attempt": "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json",
     "pr230_source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
     "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
@@ -543,6 +544,26 @@ def main() -> int:
         )
         is False
     )
+    z3_lazy_transfer_promotion_not_derived = (
+        "Z3 lazy-transfer promotion not derivable"
+        in statuses["pr230_z3_lazy_transfer_promotion_attempt"]
+        and certs["pr230_z3_lazy_transfer_promotion_attempt"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_z3_lazy_transfer_promotion_attempt"].get(
+            "z3_lazy_transfer_promotion_attempt_passed"
+        )
+        is True
+        and certs["pr230_z3_lazy_transfer_promotion_attempt"].get(
+            "physical_lazy_transfer_instantiated"
+        )
+        is False
+        and certs["pr230_z3_lazy_transfer_promotion_attempt"].get(
+            "pr230_closure_authorized"
+        )
+        is False
+    )
     same_surface_z3_taste_triplet_support_not_closure = (
         "same-surface Z3 taste-triplet artifact"
         in statuses["pr230_same_surface_z3_taste_triplet"]
@@ -807,6 +828,7 @@ def main() -> int:
         and origin_main_composite_higgs_not_closure
         and z3_triplet_conditional_primitive_not_closure
         and z3_generation_action_lift_not_derived
+        and z3_lazy_transfer_promotion_not_derived
         and certs["wz_same_source_action_semantic_firewall"].get("proposal_allowed") is False
         and certs["wz_source_coordinate_transport_no_go"].get("proposal_allowed") is False
         and certs["wz_source_coordinate_transport_no_go"].get(
@@ -1283,6 +1305,11 @@ def main() -> int:
         "z3-generation-action-lift-not-derived",
         z3_generation_action_lift_not_derived,
         statuses["pr230_z3_generation_action_lift_attempt"],
+    )
+    report(
+        "z3-lazy-transfer-promotion-not-derived",
+        z3_lazy_transfer_promotion_not_derived,
+        statuses["pr230_z3_lazy_transfer_promotion_attempt"],
     )
     report(
         "same-surface-z3-taste-triplet-support-not-closure",
@@ -2236,6 +2263,7 @@ def main() -> int:
         "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
         "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,
         "z3_generation_action_lift_not_derived": z3_generation_action_lift_not_derived,
+        "z3_lazy_transfer_promotion_not_derived": z3_lazy_transfer_promotion_not_derived,
         "same_surface_z3_taste_triplet_support_not_closure": same_surface_z3_taste_triplet_support_not_closure,
         "source_coordinate_transport_completion_blocks": source_coordinate_transport_completion_blocks,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,

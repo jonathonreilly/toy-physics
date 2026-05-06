@@ -590,6 +590,9 @@ def main() -> int:
         "pr230_z3_generation_action_lift_attempt": load(
             "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json"
         ),
+        "pr230_z3_lazy_transfer_promotion_attempt": load(
+            "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json"
+        ),
         "pr230_source_coordinate_transport_completion": load(
             "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json"
         ),
@@ -2456,6 +2459,23 @@ def main() -> int:
         and z3_generation_action_lift.get("pr230_closure_authorized") is False,
         statuses["pr230_z3_generation_action_lift_attempt"],
     )
+    z3_lazy_transfer_promotion = certificates[
+        "pr230_z3_lazy_transfer_promotion_attempt"
+    ]
+    report(
+        "pr230-z3-lazy-transfer-promotion-not-derived",
+        "Z3 lazy-transfer promotion not derivable"
+        in str(statuses["pr230_z3_lazy_transfer_promotion_attempt"])
+        and z3_lazy_transfer_promotion.get("proposal_allowed") is False
+        and z3_lazy_transfer_promotion.get(
+            "z3_lazy_transfer_promotion_attempt_passed"
+        )
+        is True
+        and z3_lazy_transfer_promotion.get("physical_lazy_transfer_instantiated")
+        is False
+        and z3_lazy_transfer_promotion.get("pr230_closure_authorized") is False,
+        statuses["pr230_z3_lazy_transfer_promotion_attempt"],
+    )
     same_surface_z3_taste_triplet = certificates["pr230_same_surface_z3_taste_triplet"]
     report(
         "pr230-same-surface-z3-taste-triplet-support-not-closure",
@@ -4169,6 +4189,14 @@ def main() -> int:
         and z3_generation_action_lift.get("same_surface_h1_derived") is False
         and z3_generation_action_lift.get("pr230_closure_authorized") is False
         and z3_generation_action_lift.get("proposal_allowed") is False
+    )
+    result["z3_lazy_transfer_promotion_not_derived"] = (
+        z3_lazy_transfer_promotion.get("z3_lazy_transfer_promotion_attempt_passed")
+        is True
+        and z3_lazy_transfer_promotion.get("physical_lazy_transfer_instantiated")
+        is False
+        and z3_lazy_transfer_promotion.get("pr230_closure_authorized") is False
+        and z3_lazy_transfer_promotion.get("proposal_allowed") is False
     )
     result["same_surface_z3_taste_triplet_support_not_closure"] = (
         same_surface_z3_taste_triplet.get("same_surface_z3_triplet_artifact_passed")

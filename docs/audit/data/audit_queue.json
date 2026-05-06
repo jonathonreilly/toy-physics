@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 655,
+    "leaf": 657,
     "medium": 301
   },
-  "generated_at": "2026-05-06T12:50:17.457770+00:00",
+  "generated_at": "2026-05-06T13:08:17.916422+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -21143,6 +21143,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_SAME_SURFACE_Z3_TASTE_TRIPLET_ARTIFACT_NOTE_2026-05-06.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_same_surface_z3_taste_triplet_artifact.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -21375,6 +21392,23 @@
       "note_path": "docs/YT_PR230_Z3_GENERATION_ACTION_LIFT_ATTEMPT_NOTE_2026-05-06.md",
       "ready": true,
       "runner_path": "scripts/frontier_yt_pr230_z3_generation_action_lift_attempt.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_pr230_z3_lazy_transfer_promotion_attempt_note_2026-05-06",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_Z3_LAZY_TRANSFER_PROMOTION_ATTEMPT_NOTE_2026-05-06.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_z3_lazy_transfer_promotion_attempt.py",
       "transitive_descendants": 0
     },
     {
@@ -24704,6 +24738,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 802,
-  "total_pending": 1193
+  "ready_count": 804,
+  "total_pending": 1195
 }

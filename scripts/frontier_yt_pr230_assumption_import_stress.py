@@ -143,6 +143,9 @@ def main() -> int:
         "z3_generation_action_lift_attempt": load(
             "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json"
         ),
+        "z3_lazy_transfer_promotion_attempt": load(
+            "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json"
+        ),
         "source_coordinate_transport_completion_attempt": load(
             "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json"
         ),
@@ -275,6 +278,8 @@ def main() -> int:
         "not proof selectors until neutral kernel basis plus Schur A/B/C rows or equivalent row theorem exists",
         "Neutral primitive/rank-one route completion",
         "not proof selectors until same-surface primitive transfer, off-diagonal generator, or irreducibility certificate exists",
+        "Z3 lazy-transfer promotion attempt",
+        "same-surface neutral transfer/action or off-diagonal generator",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -772,6 +777,18 @@ def main() -> int:
         and z3_generation_lift.get("pr230_closure_authorized") is False,
         z3_generation_lift.get("actual_current_surface_status"),
     )
+    z3_lazy_transfer = certificates["z3_lazy_transfer_promotion_attempt"]
+    report(
+        "z3-lazy-transfer-promotion-not-derived",
+        "Z3 lazy-transfer promotion not derivable"
+        in str(z3_lazy_transfer.get("actual_current_surface_status"))
+        and z3_lazy_transfer.get("proposal_allowed") is False
+        and z3_lazy_transfer.get("z3_lazy_transfer_promotion_attempt_passed")
+        is True
+        and z3_lazy_transfer.get("physical_lazy_transfer_instantiated") is False
+        and z3_lazy_transfer.get("pr230_closure_authorized") is False,
+        z3_lazy_transfer.get("actual_current_surface_status"),
+    )
     source_transport_completion = certificates["source_coordinate_transport_completion_attempt"]
     report(
         "source-coordinate-transport-current-surface-closed",
@@ -939,7 +956,12 @@ def main() -> int:
             "action/off-diagonal generator premise remains absent.  The H1 "
             "Z3 generation-action lift attempt shows that the current surface "
             "does not distinguish trivial from cyclic quark-bilinear Z3 action, "
-            "so the origin/main H1 premise is still not derived.  The first-principles O_H bridge "
+            "so the origin/main H1 premise is still not derived.  The Z3 "
+            "lazy-transfer promotion attempt makes the remaining neutral "
+            "primitive gap explicit: the same-surface artifact supplies the "
+            "cyclic symmetry P, and the lazy matrix L=(I+P)/2 is primitive as "
+            "mathematics, but current PR230 artifacts do not instantiate L as "
+            "physical dynamics.  The first-principles O_H bridge "
             "candidate portfolio keeps five positive candidates open while "
             "recording that no candidate currently supplies closure authority.  "
             "The source-coordinate, action-first, W/Z response, Schur, and "
@@ -977,6 +999,7 @@ def main() -> int:
             "does not treat cross-lane composite-Higgs stretch packets as PR230 O_H authority",
             "does not treat conditional Z3-triplet primitive-cone support as a PR230 primitive certificate",
             "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
+            "does not treat Z3 symmetry averaging or a mathematical lazy matrix as a PR230 physical transfer",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

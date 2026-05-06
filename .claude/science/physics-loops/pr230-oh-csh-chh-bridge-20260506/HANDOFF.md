@@ -59,6 +59,14 @@ has no selector for it.  Future composite-Higgs work must supply a
 same-surface quark-bilinear Z3 action certificate, not just cite Koide/lepton
 Z3.
 
+The Z3 lazy-transfer promotion shortcut is now also closed on the current
+surface.  The same-surface taste-triplet artifact supplies the cyclic symmetry
+`P`, and the conditional theorem proves `L=(I+P)/2` is primitive as
+mathematics, but the identity/self edge in `L` is not encoded as PR230
+dynamics.  Current artifacts are compatible with pure periodic `P` dynamics or
+lazy primitive `L` dynamics, so choosing `L` would import an unproved physical
+transfer term.
+
 The FH/LSZ postprocess state is refreshed after the completed L12 replacement
 campaign.  The four-mode/x16 and separate eight-mode/x8 L12 chunked surfaces
 are complete and seed-controlled, but remain bounded support only.  They do

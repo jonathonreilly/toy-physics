@@ -8,6 +8,8 @@ This block lands:
   candidate context;
 - an executable conditional lazy-Z3 primitive-cone theorem runner;
 - an executable H1 Z3 generation-action lift attempt runner;
+- an executable Z3 lazy-transfer promotion attempt runner that blocks treating
+  the same-surface cyclic symmetry as a physical lazy neutral transfer;
 - a refreshed FH/LSZ production postprocess gate that recognizes completed L12
   chunked support while preserving all no-closure firewalls;
 - a paired JSON certificate;

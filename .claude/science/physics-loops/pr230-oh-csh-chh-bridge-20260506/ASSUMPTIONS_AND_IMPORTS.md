@@ -27,6 +27,10 @@ Allowed context:
   boundary: Koide/lepton Z3 can be held fixed while quark-bilinear generation
   action is trivial or cyclic, and current PR230 source/action data do not
   select between them.
+- the Z3 lazy-transfer promotion attempt as an exact current-surface boundary:
+  the same-surface artifact supplies the cyclic symmetry `P`, and
+  `L=(I+P)/2` is primitive as mathematics, but current PR230 artifacts do not
+  instantiate `L` as physical dynamics.
 
 Open imports after this block:
 
@@ -60,6 +64,9 @@ Open imports after this block:
 - Koide/lepton Z3 is not a quark-bilinear generation-action proof selector
   until a same-surface H1 certificate selects the cyclic action and ties it to
   the PR230 source/action surface.
+- Z3 lazy-transfer promotion attempt is not proof selectors until a
+  same-surface neutral transfer/action or off-diagonal generator instantiates
+  the lazy transfer.
 - source-coordinate transport from the PR230 uniform mass source to a canonical
   taste-axis Higgs source;
 - same-surface canonical `O_H` identity and normalization;
