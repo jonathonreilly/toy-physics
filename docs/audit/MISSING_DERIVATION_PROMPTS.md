@@ -102,6 +102,16 @@ drive.
 
 **Note:** [docs/UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](docs/UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md)  |  **Descendants:** 342  |  **Class:** E
 
+**Status:** _rewrite landed 2026-05-05_ (worktree `naughty-sutherland-f91d6e`).
+Closure approach: added explicit `**Type:** meta` header at top of note so
+the seeder records `claim_type_author_hint=meta`. After re-seed, the row
+state is `audit_status=unaudited / claim_type=meta /
+claim_type_provenance=author_hint / effective_status=meta` — exactly the
+clean state. The note hash drift archived the prior `audited_renaming`
+audit. Note body restructured so it cannot be read as a theorem-bearing
+claim row (no "Verdict" or "Statement" headers; explicit "What this note
+is *not* for" boundary). `audit_lint` reports `OK: no errors`.
+
 ```
 Use the physics-loop skill to close the missing derivation in docs/UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md.
 

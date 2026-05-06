@@ -25,9 +25,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | open_gate | 19 |
 | unaudited | 782 |
 | audit_in_progress | 2 |
-| meta | 46 |
+| meta | 47 |
 | ~~audited_numerical_match~~ | 22 |
-| ~~audited_renaming~~ | 34 |
+| ~~audited_renaming~~ | 33 |
 | ~~audited_conditional~~ | 469 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
@@ -45,8 +45,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 22 |
-| `audited_renaming` | 34 |
-| `unaudited` | 828 |
+| `audited_renaming` | 33 |
+| `unaudited` | 829 |
 
 | claim_type | count |
 |---|---:|
@@ -1076,7 +1076,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_casimir_block_localization_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `universal_gr_supermetric_normal_form_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `universal_gr_tensor_action_blocker_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
-| `universal_qg_optional_textbook_comparison_note` | meta | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `yt_color_projection_correction_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 
@@ -13761,19 +13760,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
   - `UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`
   - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
-- **auditor confidence:** high
-
-### `universal_qg_optional_textbook_comparison_note`
-
-- **Note:** [`UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md`](../../docs/UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md)
-- **claim_type:** `meta`
-- **claim_scope:** Audited only the note's self-declared packaging/scope boundary, not the underlying canonical textbook continuum closure.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260504-215947-6c64ef12-universal_qg_optional_te-003`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** This note is packaging-only and is not a theorem, claim, or new authority surface.  _(class `E`)_
-- **chain closes:** True — The note's operative content is a scope definition limiting its use to optional comparison and denying theorem authority. No upstream scientific derivation is presented or needed for that meta boundary.
-- **rationale:** The load-bearing step is a definitional scope statement, not a first-principles computation or algebraic theorem. The note explicitly disclaims being a theorem, claim, or new authority surface, so the audit cannot ratify the seeded positive-theorem hint. With no cited authorities or runner, the only closed item is the packaging boundary itself.
 - **auditor confidence:** high
 
 ### `universal_qg_projective_schur_closure_note`
