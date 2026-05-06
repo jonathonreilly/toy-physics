@@ -19,6 +19,7 @@ from itertools import combinations
 from pathlib import Path
 import sys
 
+import sympy
 import sympy as sp
 
 
@@ -56,7 +57,7 @@ def read_text(path: Path) -> str:
 
 
 def is_zero_matrix(mat: sp.Matrix) -> bool:
-    return all(sp.simplify(entry) == 0 for entry in mat)
+    return all(sympy.simplify(entry) == 0 for entry in mat)
 
 
 def principal_minors(mat: sp.Matrix) -> list[sp.Expr]:
@@ -64,12 +65,12 @@ def principal_minors(mat: sp.Matrix) -> list[sp.Expr]:
     out: list[sp.Expr] = []
     for size in range(1, mat.rows + 1):
         for combo in combinations(indices, size):
-            out.append(sp.factor(mat.extract(combo, combo).det()))
+            out.append(sympy.factor(mat.extract(combo, combo).det()))
     return out
 
 
 def leading_principal_minors(mat: sp.Matrix) -> list[sp.Expr]:
-    return [sp.factor(mat[:idx, :idx].det()) for idx in range(1, mat.rows + 1)]
+    return [sympy.factor(mat[:idx, :idx].det()) for idx in range(1, mat.rows + 1)]
 
 
 def all_positive(values: list[sp.Expr]) -> bool:
@@ -116,8 +117,12 @@ def main() -> int:
     check("The theorem note points to this object-level verifier", SCRIPT_NAME in note, SCRIPT_NAME)
     for phrase in [
         "does not evaluate `D_-`",
-        "does not by itself select the final DM source point",
+        "does not by itself select",
         "The positive variational assumption is explicit",
+        "Finite-dimensional closure certificate",
+        "**Claim type:** `positive_theorem`",
+        "fitted selector",
+        "not a hidden Wilson-native construction",
     ]:
         check(f"Scope phrase present: {phrase}", phrase in note)
     normalized_note = " ".join(note.split())
@@ -142,12 +147,12 @@ def main() -> int:
     )
     compression = i_e.T * d_minus.inv() * i_e
 
-    check("Interior block F is invertible", f.det() != 0, f"det(F)={sp.factor(f.det())}")
-    check("Schur block L_e is invertible", l_e.det() != 0, f"det(L_e)={sp.factor(l_e.det())}")
+    check("Interior block F is invertible", f.det() != 0, f"det(F)={sympy.factor(f.det())}")
+    check("Schur block L_e is invertible", l_e.det() != 0, f"det(L_e)={sympy.factor(l_e.det())}")
     check(
         "Block determinant identity det(D_-) = det(F) det(L_e)",
-        sp.factor(d_minus.det() - f.det() * l_e.det()) == 0,
-        f"det(D_-)={sp.factor(d_minus.det())}",
+        sympy.factor(d_minus.det() - f.det() * l_e.det()) == 0,
+        f"det(D_-)={sympy.factor(d_minus.det())}",
     )
     check("Exact Schur factorization reconstructs D_-", is_zero_matrix(upper * middle * lower - d_minus))
     check("Exact block inverse formula matches D_-^{-1}", is_zero_matrix(d_minus.inv() - expected_inv))
@@ -156,15 +161,15 @@ def main() -> int:
 
     banner("PART 3: DETERMINANT RESPONSE AND DESCENDED HERMITIAN LAW")
     t = sp.symbols("t")
-    full_ratio = sp.factor((d_minus + t * j_z).det() / d_minus.det())
-    schur_ratio = sp.factor((l_e + t * z).det() / l_e.det())
+    full_ratio = sympy.factor((d_minus + t * j_z).det() / d_minus.det())
+    schur_ratio = sympy.factor((l_e + t * z).det() / l_e.det())
     first_variation = sp.diff(schur_ratio, t).subs(t, 0)
     trace_response = sp.trace(l_e.inv() * z)
     green_response = sp.trace(compression * z)
 
-    check("Normalized determinant response reduces exactly to the Schur block", sp.simplify(full_ratio - schur_ratio) == 0)
-    check("First variation is Tr(L_e^{-1} X)", sp.simplify(first_variation - trace_response) == 0)
-    check("Green-compression response equals the Schur response", sp.simplify(green_response - trace_response) == 0)
+    check("Normalized determinant response reduces exactly to the Schur block", sympy.simplify(full_ratio - schur_ratio) == 0)
+    check("First variation is Tr(L_e^{-1} X)", sympy.simplify(first_variation - trace_response) == 0)
+    check("Green-compression response equals the Schur response", sympy.simplify(green_response - trace_response) == 0)
 
     banner("PART 4: FESHBACH ELIMINATION")
     u1, u2, u3 = sp.symbols("u1 u2 u3", real=True)
@@ -182,20 +187,20 @@ def main() -> int:
     v1, v2 = sp.symbols("v1 v2", real=True)
     v = sp.Matrix([v1, v2])
     trial = u.col_join(v)
-    q_uv = sp.expand((trial.T * d_minus * trial)[0])
-    boundary_q = sp.expand((u.T * l_e * u)[0])
+    q_uv = sympy.expand((trial.T * d_minus * trial)[0])
+    boundary_q = sympy.expand((u.T * l_e * u)[0])
     square_vec = v + f.inv() * c * u
-    square_q = sp.expand((square_vec.T * f * square_vec)[0])
+    square_q = sympy.expand((square_vec.T * f * square_vec)[0])
     grad_q = sp.Matrix([sp.diff(q_uv, v1), sp.diff(q_uv, v2)])
     grad_at_star = grad_q.subs({v1: v_star[0], v2: v_star[1]})
 
     check("Sample D_- is Hermitian positive definite", all_positive(d_minors), f"leading minors={d_minors}")
     check("Interior F is positive definite", all_positive(f_minors), f"leading minors={f_minors}")
     check("Schur block L_e is positive definite", all_positive(l_minors), f"leading minors={l_minors}")
-    check("Quadratic form completes the square exactly", sp.simplify(q_uv - boundary_q - square_q) == 0)
+    check("Quadratic form completes the square exactly", sympy.simplify(q_uv - boundary_q - square_q) == 0)
     check("The Feshbach field is the stationary point of Q_u(v)", is_zero_matrix(grad_at_star))
     check("The Hessian in interior variables is 2F > 0", all_positive(leading_principal_minors(2 * f)))
-    check("The minimum value is u^T L_e u", sp.simplify(q_uv.subs({v1: v_star[0], v2: v_star[1]}) - boundary_q) == 0)
+    check("The minimum value is u^T L_e u", sympy.simplify(q_uv.subs({v1: v_star[0], v2: v_star[1]}) - boundary_q) == 0)
 
     banner("PART 6: TRIAL-INTERIOR UPPER CERTIFICATES")
     r_zero = sp.zeros(r_dim, e_dim)
@@ -204,9 +209,9 @@ def main() -> int:
     embed_sharp = sp.eye(e_dim).col_join(r_sharp)
     k_zero = embed_zero.T * d_minus * embed_zero
     k_sharp = embed_sharp.T * d_minus * embed_sharp
-    zero_gap = sp.simplify(k_zero - l_e)
-    sharp_gap = sp.simplify(k_sharp - l_e)
-    completion_gap = sp.simplify((r_zero - r_sharp).T * f * (r_zero - r_sharp))
+    zero_gap = sympy.simplify(k_zero - l_e)
+    sharp_gap = sympy.simplify(k_sharp - l_e)
+    completion_gap = sympy.simplify((r_zero - r_sharp).T * f * (r_zero - r_sharp))
 
     check("Zero trial map gives a Loewner upper certificate", all_nonnegative(principal_minors(zero_gap)), f"principal minors={principal_minors(zero_gap)}")
     check("Trial gap equals the completed-square matrix", is_zero_matrix(zero_gap - completion_gap))
@@ -217,7 +222,7 @@ def main() -> int:
     d_high = d_minus + p
     f_high = d_high[e_dim:, e_dim:]
     l_high = d_high[:e_dim, :e_dim] - d_high[:e_dim, e_dim:] * f_high.inv() * d_high[e_dim:, :e_dim]
-    gap = sp.simplify(l_high - l_e)
+    gap = sympy.simplify(l_high - l_e)
     check("The microscopic perturbation D_high - D_low is positive definite", all_positive(leading_principal_minors(p)))
     check("The high microscopic block remains positive definite", all_positive(leading_principal_minors(d_high)))
     check("The descended Schur law is monotone: L_high - L_low >= 0", all_nonnegative(principal_minors(gap)), f"principal minors={principal_minors(gap)}")

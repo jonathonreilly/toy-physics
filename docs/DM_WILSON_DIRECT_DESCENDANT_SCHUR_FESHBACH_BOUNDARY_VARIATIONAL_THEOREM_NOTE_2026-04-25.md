@@ -1,12 +1,15 @@
 # DM Wilson Direct-Descendant Schur-Feshbach Boundary Variational Theorem
 
 **Date:** 2026-04-25
-**Status:** exact positive boundary theorem for the open DM direct-descendant
-microscopic object `L_e = Schur_{E_e}(D_-)`; this proves the boundary-resolvent,
-Feshbach-elimination, and positive Dirichlet variational character of `L_e`
-once the charged microscopic block is supplied, but does not evaluate `D_-`,
-does not by itself select the final DM source point, and does not claim
-Wilson-native parent closure
+**Closure update:** 2026-05-06
+**Status:** exact support theorem on the open DM direct-descendant microscopic
+gate. The finite-dimensional Schur-Feshbach subclaim is closed under its stated
+block-invertibility and positive-Hermitian hypotheses: it proves the
+boundary-resolvent, Feshbach-elimination, and positive Dirichlet variational
+character of `L_e = Schur_{E_e}(D_-)` once the charged microscopic block is
+supplied. It does not evaluate `D_-`, does not by itself select the final DM
+source point, and does not claim Wilson-native parent closure.
+**Claim type:** `positive_theorem`
 **Script:** `scripts/frontier_dm_wilson_direct_descendant_schur_feshbach_boundary_variational.py`
 
 ## Question
@@ -62,6 +65,41 @@ The theorem moves the program forward without independently closing the DM
 lane: it proves what `L_e` is as a boundary object once `D_-` is supplied,
 while leaving the actual microscopic evaluation and right-sensitive selector
 law to the separate selector/closure stack.
+
+## Finite-dimensional closure certificate
+
+The theorem-grade claim in this note is only the finite-dimensional block
+statement below.
+
+For every finite-dimensional split
+
+`E_- = E_e (+) E_r`
+
+and every block operator
+
+`D_- = [[A, B], [C, F]]`,
+
+the hypotheses and conclusions are:
+
+1. If `F` is invertible and `L_e := A - B F^(-1) C` is invertible, then `D_-`
+   is invertible and the boundary Green compression satisfies
+   `I_e^* D_-^(-1) I_e = L_e^(-1)`.
+2. If `F` is invertible, then the vector
+   `v_*(u) = -F^(-1) C u` is the unique eliminated interior field solving
+   `D_- [u; v_*(u)] = [L_e u; 0]`.
+3. If additionally `D_- = D_-^* > 0`, then `F > 0`, `C = B^*`, `L_e > 0`,
+   and the exact Dirichlet boundary principle holds:
+   `u^* L_e u = min_v [u; v]^* D_- [u; v]`.
+4. Under the same positive-Hermitian hypothesis, trial-interior upper
+   certificates and Loewner monotonicity follow from the same completed-square
+   formula.
+
+No observed target value, fitted selector, Wilson-native support construction,
+or final DM closure is an input to this certificate. The only mathematical
+inputs are finite-dimensional block algebra, the explicit invertibility
+hypotheses, and, for the variational part only, positive Hermiticity of
+`D_-`. Thus the closed result is a reusable boundary theorem for a supplied
+charged block, not a hidden Wilson-native construction of that block.
 
 ## Setup
 

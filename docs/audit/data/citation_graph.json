@@ -34548,11 +34548,11 @@
     },
     "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25": {
       "claim_id": "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "`positive_theorem`",
+      "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "c246a58d8b4b57388030c8c2e7717e43b12cff68917828866d6802f98d3f355e",
+      "note_hash": "48293be312e68e18b7df06fef4348069e9dd05889f09cb538f5f2842dc343fac",
       "path": "docs/DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_schur_feshbach_boundary_variational.py",
       "title": "DM Wilson Direct-Descendant Schur-Feshbach Boundary Variational Theorem"
@@ -55943,17 +55943,17 @@
       "bounded_theorem": 76,
       "meta": 10,
       "no_go": 13,
-      "none": 1709,
+      "none": 1708,
       "open_gate": 11,
-      "positive_theorem": 87
+      "positive_theorem": 88
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 573,
       "meta": 10,
       "no_go": 117,
       "none": 456,
-      "open_gate": 117,
-      "positive_theorem": 633
+      "open_gate": 116,
+      "positive_theorem": 634
     },
     "edge_count": 6612,
     "leaf_count": 548,
