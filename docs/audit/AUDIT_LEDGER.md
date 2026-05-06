@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 218 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 782 |
-| audit_in_progress | 2 |
+| unaudited | 775 |
+| audit_in_progress | 8 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 34 |
-| ~~audited_conditional~~ | 469 |
+| ~~audited_conditional~~ | 470 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,23 +39,23 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
+| `audit_in_progress` | 8 |
 | `audited_clean` | 372 |
-| `audited_conditional` | 469 |
+| `audited_conditional` | 470 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 34 |
-| `unaudited` | 828 |
+| `unaudited` | 821 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 638 |
+| `bounded_theorem` | 639 |
 | `decoration` | 10 |
 | `meta` | 56 |
-| `no_go` | 184 |
+| `no_go` | 186 |
 | `open_gate` | 116 |
-| `positive_theorem` | 792 |
+| `positive_theorem` | 789 |
 
 | criticality | count |
 |---|---:|
@@ -111,8 +111,14 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
+| `alt_connectivity_family_complex_failure_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
+| `fifth_family_complex_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
+| `second_grown_family_sign_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
+| `staggered_newton_reproduction_note_2026-04-11` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
+| `staggered_self_consistent_two_body_note_2026-04-11` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `su3_wigner_intertwiner_block1_theorem_note_2026-05-03` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
+| `third_grown_family_complex_boundary_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -887,6 +893,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `spectral_trajectory_theorem_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `staggered_backreaction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `staggered_backreaction_shell_spectral_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
+| `staggered_fermion_card_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `star_supported_bridge_class_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `strong_cp_theta_zero_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `structured_mirror_bornsafe_scan_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -12290,6 +12297,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The current retained harness reproduces the force-based staggered card surface: 1D n=61 and 3D n=9/11/13 all score 17/17, with the documented n>9 C17 family-coverage gate.  _(class `C`)_
 - **chain closes:** True — The source note scopes the result to the force-based card and states the weaker row semantics and family-coverage caveats. The repo-local runner completed and reproduced the stated 17/17 outputs without external imports or stale numerical mismatch.
 - **rationale:** The load-bearing claim is bounded to a fixed finite runner and operating point, not a repo-wide centroid-gravity claim or a universal physical theorem. The runner computes the card rows and reproduces the note's listed values for 1D n=61 and 3D n=9/11/13, including the documented C17 limitation at n=11 and n=13. Residual risk is scope leakage: this clean verdict should not be read as validating centroid-based card semantics, dynamic/cosmological extensions, or full six-family 3D coverage above n=9.
+- **auditor confidence:** high
+
+### `staggered_fermion_card_2026-04-11`
+
+- **Note:** [`STAGGERED_FERMION_CARD_2026-04-11.md`](../../docs/STAGGERED_FERMION_CARD_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the provided canonical 1D/3D staggered 17-card runner for parity-coupled diagonal potentials at the stated fixed operating point and lattice sizes.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260506-014608-b9095ce7-staggered_fermion_card_2-004`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The diagonal coupling is taken to be H_diag = (m + Phi(x)) * epsilon(x), so the force direction is inferred from mass-gap modulation under the computed staggered evolution.  _(class `C`)_
+- **chain closes:** False — The runner genuinely computes the reported 17-card observables from an instantiated staggered Hamiltonian, but the broader note's self-gravity sign chain and Poisson-to-attraction interpretation are not closed by this restricted packet. In particular, the canonical runner uses a prescribed negative external potential rather than deriving Phi from the stated positive-source screened Poisson equation.
+- **rationale:** The provided source code is not a print-only artifact: it constructs the staggered Hamiltonian, evolves states by Crank-Nicolson, and computes the reported 17/17 rows for 1D and three 3D sizes. That supports a bounded numerical-theorem claim for the canonical fixed-parameter card. The source note, however, also imports the parity-coupling justification and screened-Poisson/self-gravity bridge without a cited retained authority or derivation in the packet, and the runner does not test that bridge because it uses a hand-built negative potential. The clean scope must therefore be limited to the canonical runner output, not the full claimed gravitational sign closure.
 - **auditor confidence:** high
 
 ### `staggered_geometry_superposition_note_2026-04-11`
