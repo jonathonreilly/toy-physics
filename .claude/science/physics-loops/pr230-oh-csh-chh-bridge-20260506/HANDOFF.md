@@ -185,6 +185,14 @@ two-worker cap.  Completed chunks001-004 are still bounded row support only:
 they are not combined L12 evidence, pole/FV/IR evidence, canonical `O_H`,
 `kappa_s`, or top-Yukawa closure.
 
+The two-source row-combiner gate is now packaged.  It audits completed chunk
+JSON against the 63-chunk manifest and refuses to write the future combined
+measurement-row packet until every manifest chunk is present and schema-clean.
+Current result is `ready=4/63`, no bad chunk audits, and
+`combined_rows_written=false`.  The combiner is an aggregation boundary, not
+physics evidence: partial diagnostics are not combined L12 pole evidence,
+canonical `O_H`, scalar LSZ normalization, `kappa_s`, or top-Yukawa closure.
+
 The FH/LSZ postprocess state is refreshed after the completed L12 replacement
 campaign.  The four-mode/x16 and separate eight-mode/x8 L12 chunked surfaces
 are complete and seed-controlled, but remain bounded support only.  They do
@@ -200,10 +208,12 @@ Best next work:
    literature and the conditional expansion are route support only;
 2. launch production `C_sx/C_xx` rows for the exact two-source taste-radial
    source using the no-resume manifest and row contract; chunks001-004 are
-   complete and checkpointed, chunks005-006 are active under the two-worker
-   launcher cap, and after they complete the next action is rerunning the
-   per-chunk checkpoint without pending mode, then the next bounded wave, then
-   prove/reject its canonical-`O_H` identity or supply another bridge; the
+   complete and checkpointed, the combiner gate records `ready=4/63` and writes
+   no combined packet, chunks005-006 are active under the two-worker launcher
+   cap, and after they complete the next action is rerunning the per-chunk
+   checkpoint without pending mode, rerunning the combiner, then the next
+   bounded wave, then prove/reject its canonical-`O_H` identity or supply
+   another bridge; the
    selector gate reduces the identity route to deriving the degree-one
    Higgs-action premise from a same-surface EW/Higgs action or
    canonical-operator theorem, not merely citing `Z3`, odd parity, or degree;

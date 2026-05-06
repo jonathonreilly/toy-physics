@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 670,
+    "leaf": 671,
     "medium": 301
   },
-  "generated_at": "2026-05-06T17:23:00.635720+00:00",
+  "generated_at": "2026-05-06T17:32:43.130378+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -21466,6 +21466,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_two_source_taste_radial_row_combiner_gate_note_2026-05-06",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_COMBINER_GATE_NOTE_2026-05-06.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_two_source_taste_radial_row_contract_note_2026-05-06",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -24959,6 +24976,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 817,
-  "total_pending": 1208
+  "ready_count": 818,
+  "total_pending": 1209
 }

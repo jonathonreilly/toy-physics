@@ -1,9 +1,9 @@
 loop_slug: pr230-oh-csh-chh-bridge-20260506
 branch: physics-loop/pr230-oh-csh-chh-bridge-20260506
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
-active_route: post_fms_source_overlap_necessity_gate
+active_route: two_source_taste_radial_row_combiner_gate_package
 target_status: best-honest-status
-actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-004 with completed-mode checkpoints, chunks005-006 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, exact post-FMS source-overlap necessity gate blocking inference of Res C_sH from source-only rows/FMS C_HH/C_sx-C_xx chunks, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
+actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, exact two-source taste-radial chart support, exact two-source taste-radial action/source-vertex support, bounded two-source taste-radial C_sx/C_xx row-contract support, bounded two-source taste-radial row-production manifest support, bounded two-source row-wave launcher support, completed two-source taste-radial chunks001-004 with completed-mode checkpoints, bounded two-source row-combiner gate support with ready=4/63 and no combined row packet written, chunks005-006 active under the two-worker cap, degree-one taste-radial selector support plus symmetry-only O_H selector boundary, exact degree-one Higgs-action premise boundary, bounded FMS post-degree route rescore selecting action-first composite O_H rows as the cleanest future artifact, conditional FMS composite O_H theorem deriving the Phi-dagger-Phi radial expansion but not current PR230 closure, exact post-FMS source-overlap necessity gate blocking inference of Res C_sH from source-only rows/FMS C_HH/C_sx-C_xx chunks, five current-surface route completions, origin/main composite-Higgs context-only intake, origin/main EW M-residual context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, Z3 lazy-transfer promotion boundary, Z3 lazy-selector no-go boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
 proposal_allowed: false
 bare_retained_allowed: false
 hard_residual: >
@@ -58,6 +58,13 @@ hard_residual: >
   kappa_s, or y_t closure.  Chunks005-006 are currently active under the same
   two-worker supervisor and remain non-evidence until completed JSON exists and
   the completed-mode checkpoint passes.
+  The row-combiner gate now audits completed chunk JSON against the manifest
+  and refuses to write the future combined measurement-row packet until all 63
+  chunks are present and schema-clean.  It currently records ready=4/63
+  chunks, no bad chunk audits, and combined_rows_written=false.  This is an
+  aggregation boundary only: partial diagnostics are not combined L12 pole
+  evidence, canonical O_H authority, scalar LSZ normalization, kappa_s, or
+  y_t closure.
   The FMS/lattice literature rescore after the degree gate selects the
   action-first gauge-invariant composite O_H route as the cleanest future
   physics artifact.  This is route guidance only: FMS method names and
@@ -105,6 +112,7 @@ files_touched:
   - scripts/frontier_yt_pr230_two_source_taste_radial_row_production_manifest.py
   - scripts/frontier_yt_pr230_two_source_taste_radial_row_wave_launcher.py
   - scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py
+  - scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py
   - scripts/frontier_yt_pr230_taste_radial_canonical_oh_selector_gate.py
   - scripts/frontier_yt_pr230_degree_one_higgs_action_premise_gate.py
   - scripts/frontier_yt_pr230_fms_post_degree_route_rescore.py
@@ -135,6 +143,7 @@ files_touched:
   - docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_PRODUCTION_MANIFEST_NOTE_2026-05-06.md
   - docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_WAVE_LAUNCHER_NOTE_2026-05-06.md
   - docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNK_CHECKPOINT_NOTE_2026-05-06.md
+  - docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_ROW_COMBINER_GATE_NOTE_2026-05-06.md
   - docs/YT_PR230_TASTE_RADIAL_CANONICAL_OH_SELECTOR_GATE_NOTE_2026-05-06.md
   - docs/YT_PR230_DEGREE_ONE_HIGGS_ACTION_PREMISE_GATE_NOTE_2026-05-06.md
   - docs/YT_PR230_FMS_POST_DEGREE_ROUTE_RESCORE_NOTE_2026-05-06.md
@@ -169,6 +178,7 @@ files_touched:
   - outputs/yt_pr230_two_source_taste_radial_row_wave_launcher_2026-05-06.json
   - outputs/yt_pr230_two_source_taste_radial_chunk001_pending_checkpoint_2026-05-06.json
   - outputs/yt_pr230_two_source_taste_radial_chunk002_pending_checkpoint_2026-05-06.json
+  - outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json
   - outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json
   - outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json
   - outputs/yt_pr230_fms_post_degree_route_rescore_2026-05-06.json
@@ -210,6 +220,7 @@ verification:
   two_source_taste_radial_chunk002_completed_checkpoint_pass_fail: "15/0"
   two_source_taste_radial_chunk003_completed_checkpoint_pass_fail: "15/0"
   two_source_taste_radial_chunk004_completed_checkpoint_pass_fail: "15/0"
+  two_source_taste_radial_row_combiner_gate_pass_fail: "12/0"
   taste_radial_canonical_oh_selector_gate_pass_fail: "17/0"
   degree_one_higgs_action_premise_gate_pass_fail: "15/0"
   fms_post_degree_route_rescore_pass_fail: "11/0"
@@ -222,23 +233,25 @@ verification:
   completion_audit_pass_fail: "39/0"
   runner_pass_fail: "21/0"
   candidate_portfolio_pass_fail: "21/0"
-  assumption_import_stress_pass_fail: "65/0"
+  assumption_import_stress_pass_fail: "66/0"
   full_positive_assembly_pass_fail: "125/0"
-  retained_route_certificate_pass_fail: "275/0"
-  campaign_status_certificate_pass_fail: "305/0"
-  audit_pipeline: "complete; audit metadata regenerated after merging chunks003-004 checkpoints and adding the post-FMS source-overlap gate"
+  retained_route_certificate_pass_fail: "276/0"
+  campaign_status_certificate_pass_fail: "306/0"
+  audit_pipeline: "complete; audit metadata regenerated after adding the post-FMS source-overlap gate and two-source row-combiner gate note"
   audit_lint_strict: "no errors; five pre-existing warnings"
   diff_check: clean
 next_exact_action: >
   The genuine two-source source-coordinate lane now has an exact taste-radial
   chart, a concrete gauge-covariant taste-radial action/source vertex, an
-  explicit C_sx/C_xx row contract, a no-resume production manifest, and
-  completed-mode checkpoints for chunks001-004.  Current launcher status shows
-  chunks005-006 active under the two-worker cap; chunks005-006 remain
+  explicit C_sx/C_xx row contract, a no-resume production manifest,
+  completed-mode checkpoints for chunks001-004, and a combiner gate that
+  refuses to write the future combined row packet until all 63 chunks are
+  schema-clean.  Chunks005-006 are active under the two-worker cap and remain
   non-evidence until completed JSON exists and completed-mode checkpoints pass.
   After each active chunk finishes, rerun the per-chunk checkpoint without
-  --allow-pending-active, then launch the next safe bounded wave and combine
-  measured production C_sx/C_xx rows for that vertex.
+  --allow-pending-active, then launch the next safe bounded wave and rerun the
+  combiner until measured production C_sx/C_xx rows can be combined for that
+  vertex.
   In parallel, the cleanest non-chunk positive artifact after the FMS rescore
   is action-first: derive a same-surface EW/Higgs action plus a
   gauge-invariant composite O_H certificate, then run C_ss/C_sH/C_HH pole rows
@@ -294,9 +307,10 @@ stop_condition: >
   Higgs-action premise shortcut on the current surface, then packaging
   completed chunk001/chunk002 row checkpoints, rescoring FMS/lattice
   literature as action-first route guidance only, then packaging completed
-  chunk003/chunk004 row checkpoints as bounded support only, leaving canonical
-  O_H, scalar-LSZ normalization, combined pole rows, and closure open, then
-  adding the post-FMS source-overlap necessity gate that proves current
-  source-only rows, FMS C_HH support, and C_sx/C_xx chunks still do not
-  determine Res C_sH or canonical y_t without a source-overlap row or
-  physical-response bypass.
+  chunk003/chunk004 row checkpoints as bounded support only, then adding the
+  post-FMS source-overlap necessity gate that proves current source-only rows,
+  FMS C_HH support, and C_sx/C_xx chunks still do not determine Res C_sH or
+  canonical y_t without a source-overlap row or physical-response bypass, then
+  adding a support-only combiner gate that records ready=4/63 and intentionally
+  writes no combined row packet, leaving canonical O_H, scalar-LSZ
+  normalization, combined pole rows, and closure open.

@@ -164,6 +164,9 @@ def main() -> int:
         "two_source_taste_radial_row_production_manifest": load(
             "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json"
         ),
+        "two_source_taste_radial_row_combiner_gate": load(
+            "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json"
+        ),
         "taste_radial_canonical_oh_selector_gate": load(
             "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
         ),
@@ -318,6 +321,9 @@ def main() -> int:
         "not proof selectors until production C_sx/C_xx rows, pole/FV/IR authority, and canonical O_H/source-overlap or physical-response authority exist",
         "Two-source taste-radial row production manifest",
         "not proof selectors until the planned chunks are actually run, combined, pole-tested, and bridged to canonical O_H or physical response",
+        "Partial two-source taste-radial row-combiner diagnostics are not proof",
+        "the combined row packet is intentionally absent until 63/63",
+        "manifest chunks are present and schema-clean",
         "Degree-one Higgs-action premise",
         "Degree-one Higgs-action premise is not proof selectors until a same-surface EW/Higgs action or canonical-operator theorem derives the degree-one premise",
         "FMS post-degree route rescore",
@@ -924,6 +930,20 @@ def main() -> int:
         and two_source_row_manifest.get("production_policy", {}).get("resume_allowed")
         is False,
         two_source_row_manifest.get("actual_current_surface_status"),
+    )
+    two_source_row_combiner = certificates["two_source_taste_radial_row_combiner_gate"]
+    report(
+        "two-source-taste-radial-row-combiner-partial-not-evidence",
+        "two-source taste-radial C_sx/C_xx row combiner gate"
+        in str(two_source_row_combiner.get("actual_current_surface_status"))
+        and two_source_row_combiner.get("proposal_allowed") is False
+        and two_source_row_combiner.get("combined_rows_written") is False
+        and two_source_row_combiner.get("ready_chunks") == 4
+        and two_source_row_combiner.get("expected_chunks") == 63
+        and two_source_row_combiner.get("bad_chunk_audits") == []
+        and "does not authorize retained or proposed_retained y_t closure"
+        in two_source_row_combiner.get("strict_non_claims", []),
+        two_source_row_combiner.get("actual_current_surface_status"),
     )
     taste_radial_selector = certificates["taste_radial_canonical_oh_selector_gate"]
     report(

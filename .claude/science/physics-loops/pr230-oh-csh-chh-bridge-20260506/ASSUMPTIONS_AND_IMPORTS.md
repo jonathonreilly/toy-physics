@@ -67,6 +67,11 @@ Allowed context:
   bounded row support only: they validate real chunk JSON, seed control,
   selected-mass-only FH/LSZ, and `C_sx/C_xx` timeseries, but not combined L12
   pole evidence, canonical `O_H`, scalar LSZ normalization, or `y_t` closure.
+- the two-source taste-radial row-combiner gate as bounded aggregation support
+  only: it records `ready=4/63` and refuses to write the combined measurement
+  row packet until 63/63 chunks are schema-clean.  Partial diagnostics are not
+  combined L12 pole evidence, canonical `O_H`, scalar LSZ normalization,
+  `kappa_s`, or `y_t` closure.
 - the taste-radial canonical-`O_H` selector gate as exact conditional support
   only: it proves the cyclic degree-one radial source is unique in
   `span{S0,S1,S2}`, but also proves current `Z3`/trace/source filters do not
@@ -153,6 +158,11 @@ Open imports after this block:
 - Completed two-source taste-radial chunks001-004 are not proof selectors
   until combined row evidence, pole/FV/IR authority, and canonical
   `O_H`/source-overlap or physical-response authority exist.
+- Partial two-source taste-radial row-combiner diagnostics are not proof
+  selectors; the combined row packet is intentionally absent until 63/63
+  manifest chunks are present and schema-clean, and even a complete packet
+  still requires pole/FV/IR authority plus canonical `O_H`/source-overlap or
+  physical-response authority.
 - Taste-radial degree-one uniqueness is not a proof selector until a
   same-surface EW/Higgs action or canonical-operator theorem derives the
   degree-one Higgs-action premise.

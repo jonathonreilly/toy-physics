@@ -53,6 +53,7 @@
     "taste_radial_canonical_oh_selector_gate": "exact-support / degree-one taste-radial uniqueness with exact negative boundary for symmetry-only canonical O_H selection",
     "two_source_taste_radial_action_certificate": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
     "two_source_taste_radial_chart_certificate": "exact-support / same-surface two-source taste-radial chart; canonical O_H and production rows absent",
+    "two_source_taste_radial_row_combiner_gate": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure",
     "two_source_taste_radial_row_contract": "bounded-support / two-source taste-radial C_sx/C_xx row contract; production rows absent",
     "two_source_taste_radial_row_production_manifest": "bounded-support / two-source taste-radial C_sx/C_xx production manifest; rows absent",
     "wz_g2_bare_running_bridge_attempt": "exact negative boundary / WZ g2 bare-to-low-scale running bridge not derivable on current PR230 surface",
@@ -63,7 +64,7 @@
   },
   "fail_count": 0,
   "missing_forbidden_terms": [],
-  "pass_count": 65,
+  "pass_count": 66,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
   "strict_non_claims": [

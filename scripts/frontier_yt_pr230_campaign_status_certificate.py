@@ -614,6 +614,9 @@ def main() -> int:
         "pr230_two_source_taste_radial_row_production_manifest": load(
             "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json"
         ),
+        "pr230_two_source_taste_radial_row_combiner_gate": load(
+            "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json"
+        ),
         "pr230_two_source_taste_radial_chunk001_checkpoint": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json"
         ),
@@ -2633,6 +2636,21 @@ def main() -> int:
         is False,
         statuses["pr230_two_source_taste_radial_row_production_manifest"],
     )
+    two_source_taste_radial_row_combiner = certificates[
+        "pr230_two_source_taste_radial_row_combiner_gate"
+    ]
+    report(
+        "pr230-two-source-taste-radial-row-combiner-support-not-closure",
+        "two-source taste-radial C_sx/C_xx row combiner gate"
+        in str(statuses["pr230_two_source_taste_radial_row_combiner_gate"])
+        and two_source_taste_radial_row_combiner.get("proposal_allowed") is False
+        and two_source_taste_radial_row_combiner.get("combined_rows_written")
+        is False
+        and two_source_taste_radial_row_combiner.get("ready_chunks")
+        < two_source_taste_radial_row_combiner.get("expected_chunks")
+        and two_source_taste_radial_row_combiner.get("fail_count") == 0,
+        statuses["pr230_two_source_taste_radial_row_combiner_gate"],
+    )
     taste_radial_selector_gate = certificates[
         "pr230_taste_radial_canonical_oh_selector_gate"
     ]
@@ -4504,6 +4522,13 @@ def main() -> int:
         and two_source_taste_radial_row_manifest.get("dry_run_only") is True
         and two_source_taste_radial_row_manifest.get("future_combined_rows_present")
         is False
+    )
+    result["two_source_taste_radial_row_combiner_support_not_closure"] = (
+        two_source_taste_radial_row_combiner.get("proposal_allowed") is False
+        and two_source_taste_radial_row_combiner.get("combined_rows_written") is False
+        and two_source_taste_radial_row_combiner.get("ready_chunks")
+        < two_source_taste_radial_row_combiner.get("expected_chunks")
+        and two_source_taste_radial_row_combiner.get("fail_count") == 0
     )
     result["taste_radial_canonical_oh_selector_blocks_symmetry_shortcut"] = (
         taste_radial_selector_gate.get("taste_radial_canonical_oh_selector_gate_passed")

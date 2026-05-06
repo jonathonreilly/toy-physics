@@ -1,0 +1,180 @@
+{
+  "action_certificate": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+  "actual_current_surface_status": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure",
+  "bad_chunk_audits": [],
+  "bare_retained_allowed": false,
+  "combined_rows_output": "outputs/yt_pr230_two_source_taste_radial_measurement_rows_2026-05-06.json",
+  "combined_rows_written": false,
+  "expected_chunks": 63,
+  "fail_count": 0,
+  "manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
+  "missing_chunk_indices": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63
+  ],
+  "partial_mode_diagnostics": {
+    "0,0,0": {
+      "C_ss_real": {
+        "count": 4,
+        "mean": 0.12245589100677827,
+        "stdev": 0.0001226658456862016
+      },
+      "C_sx_real": {
+        "count": 4,
+        "mean": -1.6407884924226813e-05,
+        "stdev": 9.774587503399179e-05
+      },
+      "C_xx_real": {
+        "count": 4,
+        "mean": 0.28083339527826845,
+        "stdev": 5.2936531971838124e-05
+      },
+      "configuration_count": {
+        "count": 4,
+        "mean": 16.0,
+        "stdev": 0.0
+      }
+    },
+    "0,0,1": {
+      "C_ss_real": {
+        "count": 4,
+        "mean": 0.12542187705051253,
+        "stdev": 9.388771177053481e-05
+      },
+      "C_sx_real": {
+        "count": 4,
+        "mean": -3.102248950838893e-05,
+        "stdev": 0.00010884583517787526
+      },
+      "C_xx_real": {
+        "count": 4,
+        "mean": 0.2702853875249814,
+        "stdev": 4.082753881864539e-05
+      },
+      "configuration_count": {
+        "count": 4,
+        "mean": 16.0,
+        "stdev": 0.0
+      }
+    },
+    "0,1,0": {
+      "C_ss_real": {
+        "count": 4,
+        "mean": 0.12542741267469237,
+        "stdev": 9.805016881776433e-05
+      },
+      "C_sx_real": {
+        "count": 4,
+        "mean": 1.1541449611306051e-05,
+        "stdev": 0.00011210855092696254
+      },
+      "C_xx_real": {
+        "count": 4,
+        "mean": 0.269469989224638,
+        "stdev": 7.579032014089264e-05
+      },
+      "configuration_count": {
+        "count": 4,
+        "mean": 16.0,
+        "stdev": 0.0
+      }
+    },
+    "1,0,0": {
+      "C_ss_real": {
+        "count": 4,
+        "mean": 0.12540169055864026,
+        "stdev": 0.00012594041714959403
+      },
+      "C_sx_real": {
+        "count": 4,
+        "mean": -5.097495845889201e-05,
+        "stdev": 9.811640955018538e-05
+      },
+      "C_xx_real": {
+        "count": 4,
+        "mean": 0.26884669121964666,
+        "stdev": 6.484533813813611e-05
+      },
+      "configuration_count": {
+        "count": 4,
+        "mean": 16.0,
+        "stdev": 0.0
+      }
+    }
+  },
+  "pass_count": 12,
+  "present_chunks": 4,
+  "proposal_allowed": false,
+  "ready_chunk_indices": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "ready_chunks": 4,
+  "row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
+  "strict_non_claims": [
+    "does not treat partial chunks as combined L12 row evidence",
+    "does not treat C_sx/C_xx aliases as canonical-Higgs C_sH/C_HH rows",
+    "does not derive canonical O_H or kappa_s",
+    "does not supply pole/FV/IR authority",
+    "does not authorize retained or proposed_retained y_t closure"
+  ]
+}

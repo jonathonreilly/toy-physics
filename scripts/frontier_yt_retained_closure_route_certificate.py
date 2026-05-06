@@ -159,6 +159,7 @@ def main() -> int:
         "pr230_two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
         "pr230_two_source_taste_radial_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
         "pr230_two_source_taste_radial_row_production_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
+        "pr230_two_source_taste_radial_row_combiner_gate": "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json",
         "pr230_two_source_taste_radial_chunk001_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json",
         "pr230_two_source_taste_radial_chunk002_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk002_checkpoint_2026-05-06.json",
         "pr230_two_source_taste_radial_chunk003_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk003_checkpoint_2026-05-06.json",
@@ -1419,6 +1420,30 @@ def main() -> int:
             "future_combined_rows_present"
         )
         is False
+    )
+    two_source_taste_radial_row_combiner_support_not_closure = (
+        "two-source taste-radial C_sx/C_xx row combiner gate"
+        in certificates["pr230_two_source_taste_radial_row_combiner_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_two_source_taste_radial_row_combiner_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_two_source_taste_radial_row_combiner_gate"].get(
+            "combined_rows_written"
+        )
+        is False
+        and certificates["pr230_two_source_taste_radial_row_combiner_gate"].get(
+            "ready_chunks"
+        )
+        < certificates["pr230_two_source_taste_radial_row_combiner_gate"].get(
+            "expected_chunks"
+        )
+        and certificates["pr230_two_source_taste_radial_row_combiner_gate"].get(
+            "fail_count"
+        )
+        == 0
     )
     taste_radial_canonical_oh_selector_blocks_symmetry_shortcut = (
         "degree-one taste-radial uniqueness"
@@ -4102,6 +4127,13 @@ def main() -> int:
         ),
     )
     report(
+        "two-source-taste-radial-row-combiner-support-not-closure",
+        two_source_taste_radial_row_combiner_support_not_closure,
+        certificates["pr230_two_source_taste_radial_row_combiner_gate"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
         taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         certificates["pr230_taste_radial_canonical_oh_selector_gate"].get(
@@ -5551,6 +5583,7 @@ def main() -> int:
         "two_source_taste_radial_action_support_not_closure": two_source_taste_radial_action_support_not_closure,
         "two_source_taste_radial_row_contract_support_not_closure": two_source_taste_radial_row_contract_support_not_closure,
         "two_source_taste_radial_row_manifest_support_not_closure": two_source_taste_radial_row_manifest_support_not_closure,
+        "two_source_taste_radial_row_combiner_support_not_closure": two_source_taste_radial_row_combiner_support_not_closure,
         "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
         "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,
