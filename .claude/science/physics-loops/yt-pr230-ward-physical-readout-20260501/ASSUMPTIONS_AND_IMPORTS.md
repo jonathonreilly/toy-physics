@@ -16,12 +16,14 @@
 | Observed `m_t`, observed `y_t` | comparator only | external observation | forbidden as proof input |
 | `alpha_LM` / plaquette normalization | prior quantitative bridge | audited non-clean in this lane | forbidden as load-bearing proof input |
 | Production MC data | direct-measurement route evidence | not complete | unavailable for closure |
+| Completed L12 chunk compute status | quantified same-source FH/LSZ support | bounded support, not closure | allowed as compute/status support only; single-volume finite-shell rows still need scalar-LSZ denominator authority, `O_H`/source-overlap rows, FV/IR, and matching/running |
 | Static heavy-quark additive mass | HQET direct route | not derived on current surface | open import |
 | Heavy kinetic-action coefficient `c2` | converts `E(p)-E(0)` into a lattice kinetic mass | not derived on current surface | open import |
 | Lattice-HQET-to-SM top mass matching | HQET direct route | not derived on current surface | open import |
 | Nonzero-momentum production ensembles | kinetic route evidence | scout and reduced cold pilots only | unavailable for closure |
 | Feynman-Hellmann scalar-source response data | alternate observable route | synthetic support only | unavailable for closure |
 | Same-source scalar pole derivative `D'_ss(pole)` | removes source-coordinate normalization with `dE/ds` | sufficiency theorem support only; production pole data absent | open import until postprocess/model-class/FV/IR/Higgs-identity gates pass |
+| Genuine source-pole `O_sp` artifact | same-source source-pole normalization inside the `O_H/C_sH/C_HH` contract | exact support | real source-side artifact only; it does not identify `O_sp` with canonical `O_H` and remains support-only until same-surface `O_H` identity/normalization plus `C_spH/C_HH` pole rows pass |
 | Source-Higgs cross-correlator `C_sH` and canonical `C_HH` residue | possible source-pole purity observable | open gate; no hidden current authority | open import; requires a canonical-Higgs source operator and cross-correlator implementation, not assumed |
 | FMS/action-first source-Higgs artifact route | possible clean route to `O_H/C_sH/C_HH` rows | bounded support only; no current artifact | allowed only after a same-source EW/Higgs action, gauge-invariant `O_H`, canonical pole normalization, and production `C_ss/C_sH/C_HH` rows exist; FMS literature, gauge-invariant-composite language, and action names are not proof selectors |
 | Exact tensor/PEPS Schur row production | possible outside-math row engine | exact negative boundary for current PR230 surface | allowed only after a same-surface neutral kernel basis, source/orthogonal projector, `A/B/C` row definitions, contact/FV/IR conventions, and certified contraction are supplied; method name and source-only marginals are not proof inputs |
