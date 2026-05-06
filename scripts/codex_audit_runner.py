@@ -70,6 +70,12 @@ LOG_DIR = REPO_ROOT / "logs" / "codex-audit-runs"
 AUDIT_REASONING_EFFORT = "xhigh"
 MODEL_FALLBACK = "gpt-5.5"
 
+# Minimum acceptable Codex model for new audits. The audit lane's policy
+# (2026-05-06) is that gpt-5.5 at xhigh is the strongest model currently
+# available and should be used for ALL audits. Anything below this is
+# rejected unless --allow-low-model is explicitly passed.
+MINIMUM_AUDIT_MODEL = "gpt-5.5"
+
 
 def codex_family_for_model(model: str) -> str:
     return f"codex-{model}"
@@ -81,6 +87,24 @@ def _model_rank(model: str) -> tuple[int, ...]:
     if not m:
         return ()
     return tuple(int(part) for part in m.group(1).split("."))
+
+
+def _model_meets_minimum(model: str, minimum: str = MINIMUM_AUDIT_MODEL) -> bool:
+    """True iff the model's GPT rank is >= the minimum's rank.
+
+    Compares numeric tuples padded to equal length so that gpt-5.5 >= gpt-5.5
+    and gpt-5.6 >= gpt-5.5 but gpt-5 (rank (5,)) is below gpt-5.5 (rank (5,5)).
+    Non-codex models (claude, human, external) are not checked here; this
+    function is only meaningful for codex GPT model strings.
+    """
+    m_rank = _model_rank(model)
+    min_rank = _model_rank(minimum)
+    if not m_rank or not min_rank:
+        return False
+    width = max(len(m_rank), len(min_rank))
+    m_padded = m_rank + (0,) * (width - len(m_rank))
+    min_padded = min_rank + (0,) * (width - len(min_rank))
+    return m_padded >= min_padded
 
 
 def _model_newer_than(left: str, right: str) -> bool:
@@ -857,12 +881,33 @@ def main() -> int:
                    help="With --from-reaudit-candidates, skip the "
                         "runner_drift_candidates stream (only re-audit on "
                         "dependency-strengthening). Default includes both.")
+    p.add_argument("--allow-low-model", action="store_true",
+                   help="Permit running with a Codex model below the audit "
+                        f"lane minimum ({MINIMUM_AUDIT_MODEL}). Default refuses "
+                        "so a stale Codex cache cannot silently downgrade the "
+                        "audit floor. Use only for testing or for explicitly "
+                        "controlled lower-tier diagnostic batches.")
     args = p.parse_args()
 
     # Reasoning-effort policy: per repo audit-lane decision (2026-05-04),
     # ALL audits run at xhigh. We do not expose a knob to lower it.
     reasoning_effort = AUDIT_REASONING_EFFORT
     audit_model, auditor_family, model_source, model_warnings = resolve_audit_model()
+
+    # Minimum-model floor: refuse to audit on anything below the policy
+    # floor. Without this, a stale Codex cache or a missing CODEX_AUDIT_MODEL
+    # silently downgrades quality and inflates the retained-grade tier with
+    # weaker verdicts (see PR analysis 2026-05-06).
+    if not _model_meets_minimum(audit_model) and not args.allow_low_model:
+        print(
+            f"REFUSING to run: resolved Codex model {audit_model!r} is below "
+            f"the audit lane minimum {MINIMUM_AUDIT_MODEL!r}.\n"
+            f"  Source: {model_source}\n"
+            f"  Refresh ~/.codex/models_cache.json to expose a newer model, "
+            f"set CODEX_AUDIT_MODEL=gpt-5.5 (or higher), or pass "
+            f"--allow-low-model to bypass for testing."
+        )
+        return 2
 
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     run_id = uuid.uuid4().hex[:8]
@@ -875,6 +920,12 @@ def main() -> int:
     print(f"Auditor (base): {auditor_name_base}  ({auditor_family})")
     print(f"Codex model: {audit_model}  reasoning_effort={reasoning_effort}")
     print(f"Model policy source: {model_source}")
+    if args.allow_low_model and not _model_meets_minimum(audit_model):
+        print(
+            f"WARNING: --allow-low-model set; auditing with {audit_model!r} "
+            f"which is below {MINIMUM_AUDIT_MODEL!r}. Verdicts from this run "
+            "may be subject to re-audit."
+        )
     for warning in model_warnings:
         print(f"MODEL POLICY WARNING: {warning}")
     with run_log.open("a", encoding="utf-8") as f:

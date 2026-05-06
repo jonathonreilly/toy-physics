@@ -30,12 +30,47 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 LEDGER_PATH = REPO_ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
+
+# Audit-lane policy floor (2026-05-06): all NEW Codex audits must run on
+# gpt-5.5 or newer. The runner enforces this at invocation time; this
+# duplicate floor in apply_audit.py catches manual JSON applies that bypass
+# the runner. Existing rows with auditor_family=codex-gpt-5 are grandfathered
+# in audit_lint.py (warning, not error) so they can be re-audited gradually.
+MINIMUM_CODEX_MODEL = "gpt-5.5"
+_CODEX_FAMILY_RE = re.compile(r"^codex-gpt-(\d+(?:\.\d+)*)$")
+
+
+def _codex_model_rank(family: str) -> tuple[int, ...] | None:
+    """Extract numeric GPT rank from auditor_family string (e.g. 'codex-gpt-5.5' -> (5,5))."""
+    m = _CODEX_FAMILY_RE.match(family)
+    if not m:
+        return None
+    return tuple(int(part) for part in m.group(1).split("."))
+
+
+def _codex_family_meets_minimum(family: str, minimum: str = MINIMUM_CODEX_MODEL) -> bool:
+    """True iff a 'codex-gpt-X.Y' family meets the minimum.
+
+    Returns True for non-codex families (claude, human, external, legacy
+    relabel buckets) — those are not subject to the codex model floor.
+    """
+    if not family or not family.startswith("codex-gpt-"):
+        return True
+    fam_rank = _codex_model_rank(family)
+    min_rank = _codex_model_rank(f"codex-{minimum}")
+    if not fam_rank or not min_rank:
+        return True
+    width = max(len(fam_rank), len(min_rank))
+    fam_padded = fam_rank + (0,) * (width - len(fam_rank))
+    min_padded = min_rank + (0,) * (width - len(min_rank))
+    return fam_padded >= min_padded
 
 REQUIRED_FIELDS = {
     "claim_id",
@@ -342,6 +377,12 @@ def apply_judicial_review(ledger: dict, judgment: dict) -> tuple[bool, str]:
 
     if judgment.get("independence") != "judicial_review":
         return False, "judicial third-auditor review requires independence='judicial_review'"
+    fam = judgment.get("auditor_family") or ""
+    if not _codex_family_meets_minimum(fam):
+        return False, (
+            f"judicial third-auditor auditor_family {fam!r} is below the "
+            f"audit-lane minimum ({MINIMUM_CODEX_MODEL}); use codex-gpt-5.5 or newer"
+        )
     side = judgment.get("sided_with")
     if side not in ALLOWED_JUDICIAL_SIDES:
         return False, f"sided_with {side!r} not in {sorted(ALLOWED_JUDICIAL_SIDES)}"
@@ -469,6 +510,18 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     independence = audit["independence"]
     if independence not in ALLOWED_INDEPENDENCE:
         return False, f"independence {independence!r} not in {sorted(ALLOWED_INDEPENDENCE)}"
+
+    # Minimum-model floor for new codex audits (audit-lane policy 2026-05-06).
+    # Catches manual JSON applies that bypass the codex_audit_runner. Existing
+    # rows with codex-gpt-5 are grandfathered in audit_lint as warnings.
+    fam = audit.get("auditor_family") or ""
+    if not _codex_family_meets_minimum(fam):
+        return False, (
+            f"auditor_family {fam!r} is below the audit-lane minimum "
+            f"({MINIMUM_CODEX_MODEL}); use codex-gpt-5.5 or newer for new audits, "
+            "or run scripts/canonicalize_auditor_family.py if this is a legacy "
+            "migration label"
+        )
 
     criticality = row.get("criticality") or "leaf"
     if verdict == "audited_clean":

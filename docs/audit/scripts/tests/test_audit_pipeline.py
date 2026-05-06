@@ -689,5 +689,277 @@ class CodexAuditRunnerReauditCandidatesTest(unittest.TestCase):
         self.assertEqual([r["claim_id"] for r in dep_only], ["medium_dep"])
 
 
+class ModelFloorTest(unittest.TestCase):
+    """Audit-lane policy 2026-05-06: gpt-5.5 is the minimum acceptable
+    Codex model for new audits. The runner refuses below-floor models;
+    apply_audit refuses below-floor families on new audits; lint warns
+    on rows that already carry below-floor families."""
+
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._tmp.cleanup)
+        self.tmp_root = Path(self._tmp.name)
+        self.fx = CleanLedgerFixture(self.tmp_root)
+
+    def test_runner_model_meets_minimum_helper(self):
+        m = _import_codex_audit_runner()
+        # gpt-5.5 meets gpt-5.5
+        self.assertTrue(m._model_meets_minimum("gpt-5.5"))
+        # gpt-5.6 meets gpt-5.5
+        self.assertTrue(m._model_meets_minimum("gpt-5.6"))
+        # gpt-6 meets gpt-5.5
+        self.assertTrue(m._model_meets_minimum("gpt-6"))
+        # gpt-5 (bare) does NOT meet gpt-5.5
+        self.assertFalse(m._model_meets_minimum("gpt-5"))
+        # gpt-5.4 does NOT meet gpt-5.5
+        self.assertFalse(m._model_meets_minimum("gpt-5.4"))
+        # gpt-4 does NOT meet gpt-5.5
+        self.assertFalse(m._model_meets_minimum("gpt-4"))
+
+    def test_runner_model_fallback_is_canonical(self):
+        m = _import_codex_audit_runner()
+        # MODEL_FALLBACK must itself meet the minimum, otherwise a stale
+        # cache would silently downgrade.
+        self.assertTrue(m._model_meets_minimum(m.MODEL_FALLBACK))
+        self.assertEqual(m.MINIMUM_AUDIT_MODEL, "gpt-5.5")
+
+    def test_apply_audit_rejects_below_floor_codex_family_on_new_audit(self):
+        m = _import("apply_audit")
+        _patch_repo_root(m, self.tmp_root)
+
+        path = "docs/TEST_FLOOR.md"
+        body = "# test floor\n"
+        self.fx.write_note(path, body)
+        import hashlib
+        h = hashlib.sha256(body.encode("utf-8")).hexdigest()
+        self.fx.write_ledger({
+            "schema_version": 1,
+            "rows": {
+                "test_floor": {
+                    "claim_id": "test_floor",
+                    "note_path": path,
+                    "note_hash": h,
+                    "deps": [],
+                    "audit_status": "unaudited",
+                    "claim_type": None,
+                    "criticality": "leaf",
+                    "previous_audits": [],
+                }
+            },
+        })
+        led = self.fx.read_ledger()
+
+        below_floor_audit = {
+            "claim_id": "test_floor",
+            "verdict": "audited_clean",
+            "claim_type": "positive_theorem",
+            "claim_scope": "test",
+            "auditor": "below-floor-auditor",
+            "auditor_family": "codex-gpt-5",   # below gpt-5.5
+            "independence": "cross_family",
+            "load_bearing_step_class": "C",
+        }
+        ok, msg = m.apply_one(led, below_floor_audit)
+        self.assertFalse(ok)
+        self.assertIn("below the audit-lane minimum", msg)
+        self.assertIn("codex-gpt-5", msg)
+
+    def test_apply_audit_accepts_at_floor_codex_family(self):
+        m = _import("apply_audit")
+        _patch_repo_root(m, self.tmp_root)
+        path = "docs/TEST_AT_FLOOR.md"
+        body = "# test at floor\n"
+        self.fx.write_note(path, body)
+        import hashlib
+        h = hashlib.sha256(body.encode("utf-8")).hexdigest()
+        self.fx.write_ledger({
+            "schema_version": 1,
+            "rows": {
+                "test_at_floor": {
+                    "claim_id": "test_at_floor",
+                    "note_path": path,
+                    "note_hash": h,
+                    "deps": [],
+                    "audit_status": "unaudited",
+                    "claim_type": None,
+                    "criticality": "leaf",
+                    "previous_audits": [],
+                }
+            },
+        })
+        led = self.fx.read_ledger()
+        audit = {
+            "claim_id": "test_at_floor",
+            "verdict": "audited_clean",
+            "claim_type": "positive_theorem",
+            "claim_scope": "test",
+            "auditor": "at-floor",
+            "auditor_family": "codex-gpt-5.5",
+            "independence": "cross_family",
+            "load_bearing_step_class": "C",
+        }
+        ok, msg = m.apply_one(led, audit)
+        self.assertTrue(ok, msg)
+
+    def test_apply_audit_accepts_non_codex_families(self):
+        """Non-codex families (claude, human, external) are not subject to
+        the codex floor; the policy is specifically about Codex GPT models."""
+        m = _import("apply_audit")
+        _patch_repo_root(m, self.tmp_root)
+        path = "docs/TEST_HUMAN.md"
+        body = "# test human\n"
+        self.fx.write_note(path, body)
+        import hashlib
+        h = hashlib.sha256(body.encode("utf-8")).hexdigest()
+        self.fx.write_ledger({
+            "schema_version": 1,
+            "rows": {
+                "test_human": {
+                    "claim_id": "test_human",
+                    "note_path": path,
+                    "note_hash": h,
+                    "deps": [],
+                    "audit_status": "unaudited",
+                    "claim_type": None,
+                    "criticality": "leaf",
+                    "previous_audits": [],
+                }
+            },
+        })
+        led = self.fx.read_ledger()
+        audit = {
+            "claim_id": "test_human",
+            "verdict": "audited_clean",
+            "claim_type": "positive_theorem",
+            "claim_scope": "test",
+            "auditor": "alice",
+            "auditor_family": "human",
+            "independence": "strong",
+            "load_bearing_step_class": "C",
+        }
+        ok, msg = m.apply_one(led, audit)
+        self.assertTrue(ok, msg)
+
+
+class RelabelUnverifiedAuditsTest(unittest.TestCase):
+    """The relabel_unverified_codex_audits.py migration must update
+    auditor_family from below-floor codex strings to codex-gpt-5.5 on
+    rows where previous_auditor_family is unset (= not a
+    canonicalize-migration relabel). The original family is preserved in
+    previous_auditor_family for traceability."""
+
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._tmp.cleanup)
+        self.tmp_root = Path(self._tmp.name)
+        self.fx = CleanLedgerFixture(self.tmp_root)
+
+    def test_identifies_below_floor_without_previous_marker(self):
+        m = _import("relabel_unverified_codex_audits")
+        row = {
+            "audit_status": "audited_clean",
+            "auditor_family": "codex-gpt-5",
+            "claim_type": "positive_theorem",
+            "claim_scope": "real scope",
+        }
+        self.assertTrue(m.is_unverified_codex_label(row))
+
+    def test_skips_canonical_relabels(self):
+        """Rows with previous_auditor_family set went through the
+        canonicalize_auditor_family migration; they're known relabels of
+        legacy strings and shouldn't be re-relabeled by this script."""
+        m = _import("relabel_unverified_codex_audits")
+        row = {
+            "audit_status": "audited_clean",
+            "auditor_family": "codex-gpt-5",
+            "previous_auditor_family": "codex-current",
+        }
+        self.assertFalse(m.is_unverified_codex_label(row))
+
+    def test_skips_rows_at_or_above_floor(self):
+        m = _import("relabel_unverified_codex_audits")
+        for fam in ("codex-gpt-5.5", "codex-gpt-5.6", "codex-gpt-6"):
+            row = {"audit_status": "audited_clean", "auditor_family": fam}
+            self.assertFalse(m.is_unverified_codex_label(row), f"family={fam}")
+
+    def test_skips_unaudited_rows(self):
+        m = _import("relabel_unverified_codex_audits")
+        row = {"audit_status": "unaudited", "auditor_family": "codex-gpt-5"}
+        self.assertFalse(m.is_unverified_codex_label(row))
+
+    def test_skips_non_codex_families(self):
+        m = _import("relabel_unverified_codex_audits")
+        for fam in ("claude-opus", "human", "external"):
+            row = {"audit_status": "audited_clean", "auditor_family": fam}
+            self.assertFalse(m.is_unverified_codex_label(row), f"family={fam}")
+
+    def test_relabel_row_in_place(self):
+        m = _import("relabel_unverified_codex_audits")
+        row = {
+            "audit_status": "audited_clean",
+            "auditor_family": "codex-gpt-5",
+            "auditor": "operator-x",
+            "claim_type": "positive_theorem",
+            "claim_scope": "scope",
+        }
+        relabeled, cc_count = m.relabel_row(row)
+        self.assertTrue(relabeled)
+        self.assertEqual(row["auditor_family"], m.NEW_FAMILY)
+        self.assertEqual(row["previous_auditor_family"], "codex-gpt-5")
+        self.assertEqual(row["relabel_reason"], m.REASON_TAG)
+        self.assertEqual(cc_count, 0)
+        # Audit fields are preserved (not reset)
+        self.assertEqual(row["audit_status"], "audited_clean")
+        self.assertEqual(row["claim_type"], "positive_theorem")
+
+    def test_relabel_skips_when_not_eligible(self):
+        m = _import("relabel_unverified_codex_audits")
+        # Already at floor
+        row = {"audit_status": "audited_clean", "auditor_family": "codex-gpt-5.5"}
+        relabeled, _ = m.relabel_row(row)
+        self.assertFalse(relabeled)
+        self.assertEqual(row["auditor_family"], "codex-gpt-5.5")
+
+    def test_relabel_cross_confirmation_matching_auditor(self):
+        """Cross-confirmation entries with the same auditor identity as the
+        row's main auditor must be relabeled together — they're summaries of
+        the same audit and must agree on family."""
+        m = _import("relabel_unverified_codex_audits")
+        row = {
+            "audit_status": "audited_clean",
+            "auditor_family": "codex-gpt-5",
+            "auditor": "operator-A",
+            "cross_confirmation": {
+                "first_audit": {
+                    "auditor": "operator-A",
+                    "auditor_family": "codex-gpt-5",
+                },
+                "second_audit": {
+                    "auditor": "operator-B",     # different identity
+                    "auditor_family": "codex-gpt-5",
+                },
+                "third_audit": {
+                    "auditor": "operator-C",     # different identity
+                    "auditor_family": "codex-gpt-5.5",  # already at floor
+                },
+            },
+        }
+        relabeled, cc_count = m.relabel_row(row)
+        self.assertTrue(relabeled)
+        self.assertEqual(cc_count, 1)
+        # First audit: same identity, was below floor -> relabeled
+        self.assertEqual(
+            row["cross_confirmation"]["first_audit"]["auditor_family"], m.NEW_FAMILY
+        )
+        # Second audit: different identity -> unchanged
+        self.assertEqual(
+            row["cross_confirmation"]["second_audit"]["auditor_family"], "codex-gpt-5"
+        )
+        # Third audit: at floor, unchanged
+        self.assertEqual(
+            row["cross_confirmation"]["third_audit"]["auditor_family"], "codex-gpt-5.5"
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
