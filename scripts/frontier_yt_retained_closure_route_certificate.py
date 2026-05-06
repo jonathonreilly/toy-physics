@@ -501,10 +501,15 @@ def main() -> int:
         "production manifest" in certificates["fh_lsz_production_manifest"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_production_manifest"].get("proposal_allowed") is False
     )
-    production_postprocess_gate_not_ready = (
-        "postprocess gate" in certificates["fh_lsz_production_postprocess_gate"].get("actual_current_surface_status", "")
+    production_postprocess_gate_blocks_closure = (
+        "FH-LSZ" in certificates["fh_lsz_production_postprocess_gate"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_production_postprocess_gate"].get("proposal_allowed") is False
         and certificates["fh_lsz_production_postprocess_gate"].get("retained_proposal_gate_ready") is False
+        and any(
+            row.get("satisfied_now") is False
+            for row in certificates["fh_lsz_production_postprocess_gate"].get("postprocess_requirements", [])
+            if isinstance(row, dict)
+        )
     )
     production_checkpoint_not_foreground_safe = (
         "checkpoint granularity gate"
@@ -3328,8 +3333,8 @@ def main() -> int:
         certificates["fh_lsz_production_manifest"].get("actual_current_surface_status", ""),
     )
     report(
-        "fh-lsz-production-postprocess-gate-not-ready",
-        production_postprocess_gate_not_ready,
+        "fh-lsz-production-postprocess-gate-blocks-closure",
+        production_postprocess_gate_blocks_closure,
         certificates["fh_lsz_production_postprocess_gate"].get("actual_current_surface_status", ""),
     )
     report(

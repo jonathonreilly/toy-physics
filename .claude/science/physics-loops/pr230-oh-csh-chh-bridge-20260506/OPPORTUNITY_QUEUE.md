@@ -15,7 +15,10 @@
 5. Same-source W/Z response rows with matched top/W covariance, `delta_perp`
    authority, and strict non-observed `g2`.
 6. Strict scalar-LSZ denominator/moment theorem as an independent closure
-   blocker retirement.
+   blocker retirement.  The completed L12 FH/LSZ chunked rows and finite-shell
+   diagnostic are already recognized as bounded support; they are not a closure
+   route without multivolume scaling, isolated-pole/FV/IR/model-class authority,
+   and a bridge to canonical `O_H` or same-source W/Z response.
 
 Context-only watch item: the `origin/main` composite-Higgs stretch packet may
 inform an action-first route, but it is not an executable PR230 closure route

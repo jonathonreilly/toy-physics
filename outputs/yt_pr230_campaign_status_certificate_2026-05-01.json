@@ -187,7 +187,7 @@
     "fh_lsz_polynomial_contact_repair": "exact negative boundary / polynomial contact repair not scalar-LSZ authority",
     "fh_lsz_production_checkpoint_granularity": "open / FH-LSZ production checkpoint granularity gate blocks foreground launch",
     "fh_lsz_production_manifest": "bounded-support / joint FH-LSZ production manifest",
-    "fh_lsz_production_postprocess_gate": "open / FH-LSZ production postprocess gate blocks manifest-as-evidence",
+    "fh_lsz_production_postprocess_gate": "bounded-support / FH-LSZ L12 chunked postprocess surface complete; closure gates remain open",
     "fh_lsz_ready_chunk_response_stability": "bounded-support / FH-LSZ ready chunk response-stability diagnostic",
     "fh_lsz_ready_chunk_set_checkpoint": "bounded-support / FH-LSZ complete L12 ready chunk-set checkpoint",
     "fh_lsz_response_window_acceptance_gate": "open / FH-LSZ response-window acceptance gate not passed",

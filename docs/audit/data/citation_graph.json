@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T12:32:02.681213+00:00",
+  "generated_at": "2026-05-06T12:50:14.568812+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -40807,10 +40807,10 @@
     },
     "yt_fh_lsz_production_postprocess_gate_note_2026-05-01": {
       "claim_id": "yt_fh_lsz_production_postprocess_gate_note_2026-05-01",
-      "current_status": "open",
-      "current_status_raw": "open / FH-LSZ production postprocess gate blocks manifest-as-evidence",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / FH-LSZ L12 chunked postprocess surface complete; closure gates remain open",
       "deps": [],
-      "note_hash": "3805f8b8341aafd51568531107f21962ccd2973741bcb9c01d9962997104220a",
+      "note_hash": "71f773eca0b13a353e7f02ca56493626113111588e677dd0c7d463f66f02c0b0",
       "path": "docs/YT_FH_LSZ_PRODUCTION_POSTPROCESS_GATE_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_yt_fh_lsz_production_postprocess_gate.py",
       "title": "PR #230 FH/LSZ Production Postprocess Gate"
@@ -45570,8 +45570,8 @@
     "root_count": 1549,
     "runners_with_path": 1532,
     "status_counts": {
-      "bounded": 555,
-      "open": 103,
+      "bounded": 556,
+      "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 435,

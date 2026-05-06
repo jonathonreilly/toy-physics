@@ -59,6 +59,13 @@ has no selector for it.  Future composite-Higgs work must supply a
 same-surface quark-bilinear Z3 action certificate, not just cite Koide/lepton
 Z3.
 
+The FH/LSZ postprocess state is refreshed after the completed L12 replacement
+campaign.  The four-mode/x16 and separate eight-mode/x8 L12 chunked surfaces
+are complete and seed-controlled, but remain bounded support only.  They do
+not supply L16/L24 or equivalent multivolume scaling, an isolated scalar pole
+derivative, FV/IR/model-class authority, or canonical-Higgs/source-overlap /
+same-source W/Z response authority.
+
 Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then
@@ -71,3 +78,4 @@ Best next work:
    authority are also supplied.
 
 Do not close the larger source-Higgs route based on this block alone.
+Do not close it from completed L12 FH/LSZ support rows either.

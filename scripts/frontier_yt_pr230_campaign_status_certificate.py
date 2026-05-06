@@ -994,9 +994,17 @@ def main() -> int:
         statuses["fh_lsz_production_manifest"],
     )
     report(
-        "fh-lsz-production-postprocess-gate-not-ready",
-        "postprocess gate" in str(statuses["fh_lsz_production_postprocess_gate"])
-        or "open" in str(statuses["fh_lsz_production_postprocess_gate"]),
+        "fh-lsz-production-postprocess-gate-blocks-closure",
+        certificates["fh_lsz_production_postprocess_gate"].get("proposal_allowed") is False
+        and certificates["fh_lsz_production_postprocess_gate"].get("retained_proposal_gate_ready")
+        is False
+        and any(
+            row.get("satisfied_now") is False
+            for row in certificates["fh_lsz_production_postprocess_gate"].get(
+                "postprocess_requirements", []
+            )
+            if isinstance(row, dict)
+        ),
         statuses["fh_lsz_production_postprocess_gate"],
     )
     report(

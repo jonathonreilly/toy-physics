@@ -1,6 +1,65 @@
 {
-  "actual_current_surface_status": "open / FH-LSZ production postprocess gate blocks manifest-as-evidence",
-  "exact_next_action": "Either launch/schedule the manifest and then run this gate on the completed production files plus a pole-fit certificate, or pivot to a new analytic scalar denominator/residue theorem.",
+  "actual_current_surface_status": "bounded-support / FH-LSZ L12 chunked postprocess surface complete; closure gates remain open",
+  "completed_chunked_support_surfaces": {
+    "l12_four_mode_x16_combiner": {
+      "chunk_summary": {
+        "available_saved_configurations": 1008,
+        "expected_chunks": 63,
+        "missing_chunks": 0,
+        "present_chunks": 63,
+        "ready_chunks": 63,
+        "target_saved_configurations": 1000
+      },
+      "combined_output_target": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunked_combined_2026-05-01.json",
+      "path": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
+      "ready": true,
+      "status": "bounded-support / FH-LSZ complete L12 chunk summary constructed"
+    },
+    "l12_polefit8x8_combiner": {
+      "chunk_summary": {
+        "available_saved_configurations": 1008,
+        "expected_chunks": 63,
+        "missing_chunks": 0,
+        "present_chunks": 63,
+        "ready_chunks": 63,
+        "target_saved_configurations": 1000
+      },
+      "combined_output_target": "outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunked_combined_2026-05-04.json",
+      "path": "outputs/yt_fh_lsz_polefit8x8_chunk_combiner_gate_2026-05-04.json",
+      "ready": true,
+      "status": "bounded-support / FH-LSZ complete L12 eight-mode-x8 pole-fit summary constructed"
+    },
+    "l12_polefit8x8_postprocessor": {
+      "path": "outputs/yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json",
+      "readiness": {
+        "complete_l12_target": true,
+        "diagnostic_fit_ready": true,
+        "distinct_shells": 8,
+        "has_zero_shell": true,
+        "input_exists": true,
+        "mode_rows": 8,
+        "model_class_blocks_retained_use": true,
+        "positive_shells": 7,
+        "saved_configurations": 1008
+      },
+      "ready": true,
+      "status": "bounded-support / FH-LSZ eight-mode-x8 finite-shell pole diagnostic"
+    },
+    "l12_ready_chunk_checkpoint": {
+      "chunk_summary": {
+        "available_saved_configurations": 1008,
+        "expected_chunks": 63,
+        "missing_chunks": 0,
+        "present_chunks": 63,
+        "ready_chunks": 63,
+        "target_saved_configurations": 1000
+      },
+      "path": "outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json",
+      "ready": true,
+      "status": "bounded-support / FH-LSZ complete L12 ready chunk-set checkpoint"
+    }
+  },
+  "exact_next_action": "Do not spend closure wording on the completed L12 support rows.  Supply a fresh same-surface bridge artifact: O_sp-Higgs pole rows with canonical O_H identity/normalization, a real source-coordinate transport certificate, genuine same-source W/Z production response rows with covariance and non-observed g2 authority, same-surface Schur A/B/C kernel rows, a strict scalar-LSZ moment-threshold-FV certificate, or a neutral primitive-cone/irreducibility certificate.",
   "expected_scalar_modes": [
     "0,0,0",
     "0,0,1",
@@ -13,32 +72,39 @@
     0.01
   ],
   "fail_count": 0,
+  "l12_postprocess_support_ready": true,
   "manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
   "minimum_scalar_two_point_noises": 16,
-  "pass_count": 9,
+  "model_class_blocks_finite_shell_use": true,
+  "pass_count": 12,
   "postprocess_requirements": [
     {
-      "reason": "each expected production JSON must be present before evidence is considered",
-      "requirement": "all_manifest_outputs_exist",
+      "reason": "the original monolithic L12/L16/L24 manifest files remain absent; they are not evidence",
+      "requirement": "monolithic_manifest_outputs_exist",
       "satisfied_now": false
     },
     {
-      "reason": "reduced_scope and pilot outputs are scout evidence only",
-      "requirement": "all_outputs_mark_phase_production",
+      "reason": "63 seed-controlled L12 four-mode/x16 chunks are complete and the combiner wrote a support-only L12 summary",
+      "requirement": "l12_chunked_same_source_surface_complete",
+      "satisfied_now": true
+    },
+    {
+      "reason": "dynamic ready-chunk checkpoint agrees that all 63 L12 chunks are ready with schema and seed control",
+      "requirement": "l12_ready_chunk_checkpoint_consistent",
+      "satisfied_now": true
+    },
+    {
+      "reason": "separate L12 eight-mode/x8 chunks and diagnostic postprocessor are complete but support-only",
+      "requirement": "l12_polefit8x8_finite_shell_diagnostic_complete",
+      "satisfied_now": true
+    },
+    {
+      "reason": "the completed artifact is L12-only; no L16/L24 same-source FH/LSZ production surface is accepted",
+      "requirement": "l16_l24_or_equivalent_multivolume_scaling_surface",
       "satisfied_now": false
     },
     {
-      "reason": "the accepted observable is dE_top/ds from symmetric source shifts on the same ensembles",
-      "requirement": "common_ensemble_correlated_dE_ds_fit",
-      "satisfied_now": false
-    },
-    {
-      "reason": "Gamma_ss(q) must be measured for the same additive source with sufficient noise vectors",
-      "requirement": "same_source_scalar_two_point_lsz_modes",
-      "satisfied_now": false
-    },
-    {
-      "reason": "no production pole-fit certificate derives dGamma_ss/dp^2 at an isolated scalar pole",
+      "reason": "finite-shell diagnostics do not derive dGamma_ss/dp^2 at an isolated scalar pole",
       "requirement": "isolated_scalar_pole_and_inverse_derivative_fit",
       "satisfied_now": false
     },
@@ -48,12 +114,22 @@
       "satisfied_now": false
     },
     {
-      "reason": "this gate only accepts same-source LSZ residue measurement and forbids kappa_s=1, H_unit, yt_ward_identity, observed y_t/top mass, c2=1, and Z_match=1 as proof selectors",
+      "reason": "the model-class gate deliberately blocks finite-shell fits as retained evidence",
+      "requirement": "finite_shell_model_class_gate_passes",
+      "satisfied_now": false
+    },
+    {
+      "reason": "completed FH/LSZ source-source rows still do not provide canonical O_H/source-overlap or same-source W/Z response authority",
+      "requirement": "source_overlap_or_physical_response_bridge",
+      "satisfied_now": false
+    },
+    {
+      "reason": "this gate forbids kappa_s=1, H_unit, yt_ward_identity, observed y_t/top mass, c2=1, Z_match=1, alpha_LM, plaquette, and u0 as proof selectors",
       "requirement": "no_forbidden_normalization_imports",
       "satisfied_now": true
     },
     {
-      "reason": "the retained-proposal certificate has not been run on production pole data and currently remains false",
+      "reason": "the retained-proposal certificate remains false; L12 support cannot authorize proposal wording",
       "requirement": "retained_proposal_certificate_passes",
       "satisfied_now": false
     }
@@ -103,12 +179,13 @@
     }
   ],
   "proposal_allowed": false,
-  "proposal_allowed_reason": "No production FH/LSZ output and pole-derivative postprocess certificate currently satisfy the acceptance gate.",
+  "proposal_allowed_reason": "Completed L12 chunked FH/LSZ rows are support-only and do not satisfy the scalar-LSZ/model-class/FV/IR/source-overlap closure gates.",
   "raw_production_bundle_ready": false,
   "retained_proposal_gate_ready": false,
   "strict_non_claims": [
-    "not production evidence",
     "not retained or proposed_retained y_t closure",
+    "does not treat L12-only chunked support as multivolume production closure",
+    "does not treat finite-shell diagnostics as an isolated scalar pole derivative",
     "does not set kappa_s = 1",
     "does not set c2 or Z_match to one",
     "does not use H_unit matrix-element readout",
@@ -117,5 +194,5 @@
     "does not use alpha_LM, plaquette, or u0 as proof input",
     "does not treat reduced cold pilots as production evidence"
   ],
-  "verdict": "The joint FH/LSZ production manifest is a valid launch surface but not evidence.  The expected production files are absent or incomplete, and even complete raw production files would still need a same-source scalar pole fit, dGamma_ss/dp^2 at the pole, finite-volume/IR/zero-mode control, and a retained-proposal certificate before physical y_t wording is allowed."
+  "verdict": "The original monolithic joint FH/LSZ manifest remains a launch surface, not evidence, and its L12/L16/L24 output files are still absent.  The replacement seed-controlled L12 chunked surfaces are now complete: the four-mode/x16 stream supplies same-source dE/ds and C_ss(q) support rows, and the separate eight-mode/x8 stream supplies a finite-shell diagnostic.  This is bounded support only. It still lacks accepted L16/L24 or equivalent multivolume scaling, an isolated scalar pole derivative, FV/IR/zero-mode control, a finite-shell model-class certificate, and a canonical-Higgs/source-overlap or same-source W/Z physical-response bridge."
 }

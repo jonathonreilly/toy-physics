@@ -5,7 +5,7 @@
     "leaf": 655,
     "medium": 301
   },
-  "generated_at": "2026-05-06T12:32:05.564564+00:00",
+  "generated_at": "2026-05-06T12:50:17.457770+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -19039,7 +19039,7 @@
       "criticality": "leaf",
       "criticality_rank": 0,
       "cross_confirmation_status": null,
-      "current_status": "open",
+      "current_status": "bounded",
       "deps": [],
       "direct_in_degree": 0,
       "load_bearing_score": 0.0,

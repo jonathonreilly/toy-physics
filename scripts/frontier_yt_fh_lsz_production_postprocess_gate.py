@@ -21,6 +21,11 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "outputs" / "yt_fh_lsz_production_manifest_2026-05-01.json"
 OUTPUT = ROOT / "outputs" / "yt_fh_lsz_production_postprocess_gate_2026-05-01.json"
+CHUNK_COMBINER = ROOT / "outputs" / "yt_fh_lsz_chunk_combiner_gate_2026-05-01.json"
+READY_CHUNK_SET = ROOT / "outputs" / "yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json"
+POLEFIT8X8_COMBINER = ROOT / "outputs" / "yt_fh_lsz_polefit8x8_chunk_combiner_gate_2026-05-04.json"
+POLEFIT8X8_POSTPROCESSOR = ROOT / "outputs" / "yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json"
+MODEL_CLASS_GATE = ROOT / "outputs" / "yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json"
 
 EXPECTED_SOURCE_SHIFTS = [-0.01, 0.0, 0.01]
 EXPECTED_MODE_KEYS = {"0,0,0", "1,0,0", "0,1,0", "0,0,1"}
@@ -173,6 +178,46 @@ def audit_output(command_row: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def ready_chunk_surface(data: dict[str, Any]) -> bool:
+    summary = data.get("chunk_summary", {}) if isinstance(data.get("chunk_summary"), dict) else {}
+    combined = data.get("combined_summary", {}) if isinstance(data.get("combined_summary"), dict) else {}
+    return (
+        int(summary.get("expected_chunks", 0)) == 63
+        and int(summary.get("present_chunks", -1)) == 63
+        and int(summary.get("ready_chunks", -1)) == 63
+        and combined.get("available") is True
+        and data.get("proposal_allowed") is False
+    )
+
+
+def ready_chunk_checkpoint(data: dict[str, Any]) -> bool:
+    summary = data.get("chunk_summary", {}) if isinstance(data.get("chunk_summary"), dict) else {}
+    return (
+        int(summary.get("expected_chunks", 0)) == 63
+        and int(summary.get("present_chunks", -1)) == 63
+        and int(summary.get("ready_chunks", -1)) == 63
+        and int(summary.get("missing_chunks", -1)) == 0
+        and data.get("proposal_allowed") is False
+    )
+
+
+def ready_polefit8x8_surface(combiner: dict[str, Any], postprocessor: dict[str, Any]) -> bool:
+    summary = combiner.get("chunk_summary", {}) if isinstance(combiner.get("chunk_summary"), dict) else {}
+    readiness = postprocessor.get("readiness", {}) if isinstance(postprocessor.get("readiness"), dict) else {}
+    return (
+        int(summary.get("expected_chunks", 0)) == 63
+        and int(summary.get("present_chunks", -1)) == 63
+        and int(summary.get("ready_chunks", -1)) == 63
+        and readiness.get("diagnostic_fit_ready") is True
+        and combiner.get("proposal_allowed") is False
+        and postprocessor.get("proposal_allowed") is False
+    )
+
+
+def rel(path: Path) -> str:
+    return str(path.relative_to(ROOT))
+
+
 def command_has_required_flags(command: str) -> bool:
     required = [
         "--production-targets",
@@ -189,6 +234,11 @@ def main() -> int:
     print("=" * 72)
 
     manifest = load_json(MANIFEST)
+    chunk_combiner = load_json(CHUNK_COMBINER)
+    ready_chunk_set = load_json(READY_CHUNK_SET)
+    polefit8x8_combiner = load_json(POLEFIT8X8_COMBINER)
+    polefit8x8_postprocessor = load_json(POLEFIT8X8_POSTPROCESSOR)
+    model_class_gate = load_json(MODEL_CLASS_GATE)
     commands = manifest.get("commands", []) if manifest else []
     output_audits = [audit_output(row) for row in commands if isinstance(row, dict)]
 
@@ -206,32 +256,47 @@ def main() -> int:
     all_raw_production_bundle_ready = all(
         row.get("retained_evidence_ready") for row in output_audits
     ) if output_audits else False
+    l12_chunked_surface_ready = ready_chunk_surface(chunk_combiner)
+    l12_ready_checkpoint_consistent = ready_chunk_checkpoint(ready_chunk_set)
+    polefit8x8_surface_ready = ready_polefit8x8_surface(
+        polefit8x8_combiner, polefit8x8_postprocessor
+    )
+    model_class_blocks = (
+        "blocks finite-shell fit" in str(model_class_gate.get("actual_current_surface_status", ""))
+        and model_class_gate.get("proposal_allowed") is False
+    )
+    l12_postprocess_support_ready = l12_chunked_surface_ready and polefit8x8_surface_ready
 
     postprocess_requirements = [
         {
-            "requirement": "all_manifest_outputs_exist",
+            "requirement": "monolithic_manifest_outputs_exist",
             "satisfied_now": all_outputs_exist,
-            "reason": "each expected production JSON must be present before evidence is considered",
+            "reason": "the original monolithic L12/L16/L24 manifest files remain absent; they are not evidence",
         },
         {
-            "requirement": "all_outputs_mark_phase_production",
-            "satisfied_now": all_outputs_production,
-            "reason": "reduced_scope and pilot outputs are scout evidence only",
+            "requirement": "l12_chunked_same_source_surface_complete",
+            "satisfied_now": l12_chunked_surface_ready,
+            "reason": "63 seed-controlled L12 four-mode/x16 chunks are complete and the combiner wrote a support-only L12 summary",
         },
         {
-            "requirement": "common_ensemble_correlated_dE_ds_fit",
-            "satisfied_now": all_source_response_ready,
-            "reason": "the accepted observable is dE_top/ds from symmetric source shifts on the same ensembles",
+            "requirement": "l12_ready_chunk_checkpoint_consistent",
+            "satisfied_now": l12_ready_checkpoint_consistent,
+            "reason": "dynamic ready-chunk checkpoint agrees that all 63 L12 chunks are ready with schema and seed control",
         },
         {
-            "requirement": "same_source_scalar_two_point_lsz_modes",
-            "satisfied_now": all_scalar_lsz_ready,
-            "reason": "Gamma_ss(q) must be measured for the same additive source with sufficient noise vectors",
+            "requirement": "l12_polefit8x8_finite_shell_diagnostic_complete",
+            "satisfied_now": polefit8x8_surface_ready,
+            "reason": "separate L12 eight-mode/x8 chunks and diagnostic postprocessor are complete but support-only",
+        },
+        {
+            "requirement": "l16_l24_or_equivalent_multivolume_scaling_surface",
+            "satisfied_now": False,
+            "reason": "the completed artifact is L12-only; no L16/L24 same-source FH/LSZ production surface is accepted",
         },
         {
             "requirement": "isolated_scalar_pole_and_inverse_derivative_fit",
             "satisfied_now": False,
-            "reason": "no production pole-fit certificate derives dGamma_ss/dp^2 at an isolated scalar pole",
+            "reason": "finite-shell diagnostics do not derive dGamma_ss/dp^2 at an isolated scalar pole",
         },
         {
             "requirement": "finite_volume_ir_zero_mode_limit_control",
@@ -239,52 +304,100 @@ def main() -> int:
             "reason": "no current production postprocess proves the FV/IR/zero-mode limiting order for the pole derivative",
         },
         {
+            "requirement": "finite_shell_model_class_gate_passes",
+            "satisfied_now": False,
+            "reason": "the model-class gate deliberately blocks finite-shell fits as retained evidence",
+        },
+        {
+            "requirement": "source_overlap_or_physical_response_bridge",
+            "satisfied_now": False,
+            "reason": "completed FH/LSZ source-source rows still do not provide canonical O_H/source-overlap or same-source W/Z response authority",
+        },
+        {
             "requirement": "no_forbidden_normalization_imports",
             "satisfied_now": True,
-            "reason": "this gate only accepts same-source LSZ residue measurement and forbids kappa_s=1, H_unit, yt_ward_identity, observed y_t/top mass, c2=1, and Z_match=1 as proof selectors",
+            "reason": "this gate forbids kappa_s=1, H_unit, yt_ward_identity, observed y_t/top mass, c2=1, Z_match=1, alpha_LM, plaquette, and u0 as proof selectors",
         },
         {
             "requirement": "retained_proposal_certificate_passes",
             "satisfied_now": False,
-            "reason": "the retained-proposal certificate has not been run on production pole data and currently remains false",
+            "reason": "the retained-proposal certificate remains false; L12 support cannot authorize proposal wording",
         },
     ]
 
     retained_proposal_gate_ready = all(item["satisfied_now"] for item in postprocess_requirements)
 
-    report("manifest-loaded", manifest_loaded, str(MANIFEST.relative_to(ROOT)))
+    report("manifest-loaded", manifest_loaded, rel(MANIFEST))
     report("manifest-explicitly-not-evidence", manifest_is_not_evidence, f"proposal_allowed={manifest.get('proposal_allowed')}")
     report("three-production-output-targets", commands_present, f"commands={len(commands)}")
     report("commands-are-production-targeted-and-resumable", commands_production_targeted, "manifest commands contain production/FH/LSZ flags")
-    report("current-production-outputs-not-yet-all-present", not all_outputs_exist, f"all_outputs_exist={all_outputs_exist}")
-    report("no-current-output-qualifies-for-retained-evidence", not all_raw_production_bundle_ready, f"raw_bundle_ready={all_raw_production_bundle_ready}")
-    report("pole-fit-requirement-explicit", not postprocess_requirements[4]["satisfied_now"], postprocess_requirements[4]["reason"])
-    report("fv-ir-zero-mode-control-explicit", not postprocess_requirements[5]["satisfied_now"], postprocess_requirements[5]["reason"])
+    report("monolithic-outputs-still-absent-recorded", not all_outputs_exist, f"all_outputs_exist={all_outputs_exist}")
+    report("l12-chunked-support-surface-complete", l12_chunked_surface_ready, rel(CHUNK_COMBINER))
+    report("l12-ready-checkpoint-consistent", l12_ready_checkpoint_consistent, rel(READY_CHUNK_SET))
+    report("polefit8x8-diagnostic-surface-complete", polefit8x8_surface_ready, rel(POLEFIT8X8_POSTPROCESSOR))
+    report("l12-support-only-not-retained-evidence", not all_raw_production_bundle_ready and l12_postprocess_support_ready, f"l12_postprocess_support_ready={l12_postprocess_support_ready}")
+    report("model-class-gate-still-blocks-finite-shell-use", model_class_blocks, rel(MODEL_CLASS_GATE))
+    report("multivolume-pole-fv-ir-bridge-requirements-explicit", True, "L16/L24, isolated pole, FV/IR, model-class, and source-overlap remain required")
     report("no-retained-proposal-gate-ready", not retained_proposal_gate_ready, f"retained_proposal_gate_ready={retained_proposal_gate_ready}")
 
     result = {
-        "actual_current_surface_status": "open / FH-LSZ production postprocess gate blocks manifest-as-evidence",
+        "actual_current_surface_status": "bounded-support / FH-LSZ L12 chunked postprocess surface complete; closure gates remain open",
         "verdict": (
-            "The joint FH/LSZ production manifest is a valid launch surface but "
-            "not evidence.  The expected production files are absent or "
-            "incomplete, and even complete raw production files would still "
-            "need a same-source scalar pole fit, dGamma_ss/dp^2 at the pole, "
-            "finite-volume/IR/zero-mode control, and a retained-proposal "
-            "certificate before physical y_t wording is allowed."
+            "The original monolithic joint FH/LSZ manifest remains a launch "
+            "surface, not evidence, and its L12/L16/L24 output files are still "
+            "absent.  The replacement seed-controlled L12 chunked surfaces are "
+            "now complete: the four-mode/x16 stream supplies same-source dE/ds "
+            "and C_ss(q) support rows, and the separate eight-mode/x8 stream "
+            "supplies a finite-shell diagnostic.  This is bounded support only. "
+            "It still lacks accepted L16/L24 or equivalent multivolume scaling, "
+            "an isolated scalar pole derivative, FV/IR/zero-mode control, a "
+            "finite-shell model-class certificate, and a canonical-Higgs/source-"
+            "overlap or same-source W/Z physical-response bridge."
         ),
         "proposal_allowed": False,
-        "proposal_allowed_reason": "No production FH/LSZ output and pole-derivative postprocess certificate currently satisfy the acceptance gate.",
-        "manifest": str(MANIFEST.relative_to(ROOT)),
+        "proposal_allowed_reason": "Completed L12 chunked FH/LSZ rows are support-only and do not satisfy the scalar-LSZ/model-class/FV/IR/source-overlap closure gates.",
+        "manifest": rel(MANIFEST),
+        "completed_chunked_support_surfaces": {
+            "l12_four_mode_x16_combiner": {
+                "path": rel(CHUNK_COMBINER),
+                "ready": l12_chunked_surface_ready,
+                "status": chunk_combiner.get("actual_current_surface_status"),
+                "chunk_summary": chunk_combiner.get("chunk_summary", {}),
+                "combined_output_target": chunk_combiner.get("combined_output_target"),
+            },
+            "l12_ready_chunk_checkpoint": {
+                "path": rel(READY_CHUNK_SET),
+                "ready": l12_ready_checkpoint_consistent,
+                "status": ready_chunk_set.get("actual_current_surface_status"),
+                "chunk_summary": ready_chunk_set.get("chunk_summary", {}),
+            },
+            "l12_polefit8x8_combiner": {
+                "path": rel(POLEFIT8X8_COMBINER),
+                "ready": ready_chunk_surface(polefit8x8_combiner),
+                "status": polefit8x8_combiner.get("actual_current_surface_status"),
+                "chunk_summary": polefit8x8_combiner.get("chunk_summary", {}),
+                "combined_output_target": polefit8x8_combiner.get("combined_output_target"),
+            },
+            "l12_polefit8x8_postprocessor": {
+                "path": rel(POLEFIT8X8_POSTPROCESSOR),
+                "ready": polefit8x8_surface_ready,
+                "status": polefit8x8_postprocessor.get("actual_current_surface_status"),
+                "readiness": polefit8x8_postprocessor.get("readiness", {}),
+            },
+        },
         "expected_source_shifts": EXPECTED_SOURCE_SHIFTS,
         "expected_scalar_modes": sorted(EXPECTED_MODE_KEYS),
         "minimum_scalar_two_point_noises": MIN_NOISE_VECTORS,
         "production_output_audits": output_audits,
         "postprocess_requirements": postprocess_requirements,
         "raw_production_bundle_ready": all_raw_production_bundle_ready,
+        "l12_postprocess_support_ready": l12_postprocess_support_ready,
+        "model_class_blocks_finite_shell_use": model_class_blocks,
         "retained_proposal_gate_ready": retained_proposal_gate_ready,
         "strict_non_claims": [
-            "not production evidence",
             "not retained or proposed_retained y_t closure",
+            "does not treat L12-only chunked support as multivolume production closure",
+            "does not treat finite-shell diagnostics as an isolated scalar pole derivative",
             "does not set kappa_s = 1",
             "does not set c2 or Z_match to one",
             "does not use H_unit matrix-element readout",
@@ -294,9 +407,13 @@ def main() -> int:
             "does not treat reduced cold pilots as production evidence",
         ],
         "exact_next_action": (
-            "Either launch/schedule the manifest and then run this gate on the "
-            "completed production files plus a pole-fit certificate, or pivot "
-            "to a new analytic scalar denominator/residue theorem."
+            "Do not spend closure wording on the completed L12 support rows.  "
+            "Supply a fresh same-surface bridge artifact: O_sp-Higgs pole rows "
+            "with canonical O_H identity/normalization, a real source-coordinate "
+            "transport certificate, genuine same-source W/Z production response "
+            "rows with covariance and non-observed g2 authority, same-surface "
+            "Schur A/B/C kernel rows, a strict scalar-LSZ moment-threshold-FV "
+            "certificate, or a neutral primitive-cone/irreducibility certificate."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

@@ -1,14 +1,17 @@
 loop_slug: pr230-oh-csh-chh-bridge-20260506
 branch: physics-loop/pr230-oh-csh-chh-bridge-20260506
 base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
-active_route: z3_generation_action_lift_after_conditional_primitive
+active_route: fh_lsz_postprocess_state_refresh_after_completed_l12_chunks
 target_status: best-honest-status
-actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, five current-surface route completions, origin/main composite-Higgs context-only intake, conditional Z3 primitive-cone support, and H1 Z3 generation-action lift boundary recorded
+actual_current_surface_status: open positive-candidate portfolio; scalar reparam gate, five current-surface route completions, origin/main composite-Higgs context-only intake, conditional Z3 primitive-cone support, H1 Z3 generation-action lift boundary, and bounded-support FH/LSZ L12 chunked postprocess refresh recorded
 proposal_allowed: false
 bare_retained_allowed: false
 hard_residual: >
   PR230 still lacks a same-surface canonical O_H identity/normalization
-  certificate and production C_sH/C_HH pole rows.
+  certificate and production C_sH/C_HH pole rows.  Completed L12 FH/LSZ
+  source-source support rows do not supply scalar-LSZ model/FV/IR authority,
+  canonical-Higgs/source-overlap authority, or same-source W/Z response
+  authority.
 files_touched:
   - scripts/frontier_yt_pr230_taste_condensate_oh_bridge_audit.py
   - scripts/frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py
@@ -27,6 +30,7 @@ files_touched:
   - scripts/frontier_yt_pr230_origin_main_composite_higgs_intake_guard.py
   - scripts/frontier_yt_pr230_z3_triplet_conditional_primitive_cone_theorem.py
   - scripts/frontier_yt_pr230_z3_generation_action_lift_attempt.py
+  - scripts/frontier_yt_fh_lsz_production_postprocess_gate.py
   - docs/YT_PR230_TASTE_CONDENSATE_OH_BRIDGE_AUDIT_NOTE_2026-05-06.md
   - docs/YT_PR230_OH_BRIDGE_FIRST_PRINCIPLES_CANDIDATE_PORTFOLIO_NOTE_2026-05-06.md
   - docs/YT_SOURCE_HIGGS_CROSS_CORRELATOR_CERTIFICATE_BUILDER_NOTE_2026-05-03.md
@@ -40,6 +44,7 @@ files_touched:
   - docs/YT_PR230_ORIGIN_MAIN_COMPOSITE_HIGGS_INTAKE_GUARD_NOTE_2026-05-06.md
   - docs/YT_PR230_Z3_TRIPLET_CONDITIONAL_PRIMITIVE_CONE_THEOREM_NOTE_2026-05-06.md
   - docs/YT_PR230_Z3_GENERATION_ACTION_LIFT_ATTEMPT_NOTE_2026-05-06.md
+  - docs/YT_FH_LSZ_PRODUCTION_POSTPROCESS_GATE_NOTE_2026-05-01.md
   - outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json
   - outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json
   - outputs/yt_pr230_assumption_import_stress_2026-05-01.json
@@ -57,6 +62,7 @@ files_touched:
   - outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json
   - outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json
   - outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json
+  - outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json
 verification:
   source_coordinate_transport_gate_pass_fail: "21/0"
   source_coordinate_transport_completion_pass_fail: "20/0"
@@ -67,6 +73,7 @@ verification:
   origin_main_composite_higgs_intake_guard_pass_fail: "19/0"
   z3_triplet_conditional_primitive_pass_fail: "13/0"
   z3_generation_action_lift_pass_fail: "19/0"
+  fh_lsz_production_postprocess_gate_pass_fail: "12/0"
   source_higgs_builder_pass_fail: "4/0"
   source_higgs_gram_postprocessor_pass_fail: "2/0"
   source_higgs_production_readiness_pass_fail: "21/0"
@@ -74,9 +81,9 @@ verification:
   runner_pass_fail: "21/0"
   candidate_portfolio_pass_fail: "21/0"
   assumption_import_stress_pass_fail: "54/0"
-  full_positive_assembly_pass_fail: "112/0"
-  retained_route_certificate_pass_fail: "258/0"
-  campaign_status_certificate_pass_fail: "288/0"
+  full_positive_assembly_pass_fail: "113/0"
+  retained_route_certificate_pass_fail: "259/0"
+  campaign_status_certificate_pass_fail: "289/0"
   audit_pipeline: "complete after rebase; H1 row preserved; two rebase rows newly seeded; two rows marked re-audit required"
   audit_lint_strict: "no errors; five pre-existing warnings"
   diff_check: clean
@@ -85,15 +92,20 @@ next_exact_action: >
   scalar-reparam transport no-go: certified canonical O_H plus C_sH/C_HH pole
   rows, a genuine two-source source-coordinate transport certificate, neutral
   primitive/rank-one, Schur A/B/C rows, or W/Z response with strict
-  g2/covariance/delta_perp.  The conditional Z3 theorem retires only the
-  finite-matrix primitive step after a same-surface lazy positive transfer is
-  supplied.  The H1 lift attempt now also shows Koide/lepton Z3 does not
-  select cyclic quark-bilinear action over the trivial action on the current
-  PR230 surface.
+  g2/covariance/delta_perp.  Do not spend closure wording on the completed L12
+  FH/LSZ chunked support rows: they are bounded support only until L16/L24 or
+  equivalent multivolume scaling, isolated-pole derivative authority,
+  FV/IR/model-class control, and an accepted source-overlap or physical-response
+  bridge are supplied.  The conditional Z3 theorem retires only the finite-
+  matrix primitive step after a same-surface lazy positive transfer is supplied.
+  The H1 lift attempt now also shows Koide/lepton Z3 does not select cyclic
+  quark-bilinear action over the trivial action on the current PR230 surface.
 stop_condition: >
   This block stops after preserving the scalar-reparametrization gate and
   recording current-surface completion boundaries for all five surviving
   non-chunk route families, recording the origin/main composite-Higgs packet as
   non-closing context, and adding a conditional Z3 primitive-cone theorem as
   support for a future same-surface neutral primitive artifact, then attacking
-  H1 and recording the current-surface generation-action lift boundary.
+  H1, recording the current-surface generation-action lift boundary, and
+  refreshing the FH/LSZ postprocess gate so completed L12 chunks are recognized
+  as support-only rather than closure evidence.

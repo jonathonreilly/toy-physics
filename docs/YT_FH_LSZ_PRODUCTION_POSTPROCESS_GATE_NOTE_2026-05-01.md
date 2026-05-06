@@ -1,13 +1,16 @@
 # PR #230 FH/LSZ Production Postprocess Gate
 
-**Status:** open / FH-LSZ production postprocess gate blocks manifest-as-evidence
+**Status:** bounded-support / FH-LSZ L12 chunked postprocess surface complete; closure gates remain open
+**Runner:** `scripts/frontier_yt_fh_lsz_production_postprocess_gate.py`
+**Certificate:** `outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json`
 
 ## Question
 
-The joint Feynman-Hellmann / same-source scalar-LSZ route now has exact
-production launch commands.  The remaining risk is procedural: a manifest, a
-partial production file, or a reduced smoke output must not be mistaken for
-physical `y_t` evidence.
+The joint Feynman-Hellmann / same-source scalar-LSZ route has exact monolithic
+production launch commands and a completed seed-controlled L12 replacement
+surface.  The remaining risk is procedural and physical: a manifest, a partial
+production file, an L12-only combined support row, or a finite-shell diagnostic
+must not be mistaken for physical `y_t` evidence.
 
 This note adds an executable gate for the postprocess step.  It answers:
 
@@ -19,43 +22,64 @@ certificate?
 ## Inputs
 
 - `outputs/yt_fh_lsz_production_manifest_2026-05-01.json`
-- Expected manifest outputs:
+- Original expected monolithic manifest outputs:
   - `outputs/yt_pr230_fh_lsz_production_L12_T24_2026-05-01.json`
   - `outputs/yt_pr230_fh_lsz_production_L16_T32_2026-05-01.json`
   - `outputs/yt_pr230_fh_lsz_production_L24_T48_2026-05-01.json`
+- Completed replacement support surfaces:
+  - `outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json`
+  - `outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json`
+  - `outputs/yt_fh_lsz_polefit8x8_chunk_combiner_gate_2026-05-04.json`
+  - `outputs/yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json`
+- Blocking model-class gate:
+  - `outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json`
 
 ## Gate
 
-The route is not eligible for retained-proposal wording unless all of the
-following are true:
+The route is not eligible for retained-proposal wording unless all load-bearing
+requirements below are true:
 
-1. Every manifest output exists.
-2. Every output declares `metadata.phase == "production"`.
-3. Every output contains common-ensemble scalar source response data with
-   source shifts `[-0.01, 0.0, 0.01]`, a `linear_dE_ds` fit, and finite
-   `slope_dE_ds_lat`.
-4. Every output contains same-source scalar two-point LSZ data with at least
-   sixteen noise vectors and the four declared momentum modes.
-5. A postprocess fit isolates the scalar pole and derives
+1. The original monolithic manifest is not used as evidence by itself.
+2. The L12 four-mode/x16 chunked support surface is complete.
+3. The dynamic L12 ready-chunk checkpoint agrees with the combiner.
+4. The separate L12 eight-mode/x8 finite-shell diagnostic surface is complete.
+5. L16/L24 or equivalent multivolume same-source FH/LSZ scaling is accepted.
+6. A postprocess fit isolates the scalar pole and derives
    `dGamma_ss/dp^2` at the pole.
-6. The finite-volume, IR, and zero-mode limiting order is controlled in the
+7. The finite-volume, IR, and zero-mode limiting order is controlled in the
    analysis or by a separate theorem certificate.
-7. The proof does not import `kappa_s = 1`, `H_unit`, `yt_ward_identity`,
+8. Finite-shell fits pass a model-class, scalar-denominator, pole-saturation,
+   continuum, moment-threshold, or equivalent strict acceptance certificate.
+9. A canonical-Higgs/source-overlap bridge, same-source W/Z response bridge,
+   Schur A/B/C bridge, or neutral primitive-cone bridge is present.
+10. The proof does not import `kappa_s = 1`, `H_unit`, `yt_ward_identity`,
    observed top mass or observed `y_t`, `c2 = 1`, `Z_match = 1`,
    `alpha_LM`, plaquette, or `u0` as proof input.
-8. A retained-proposal certificate passes after the production pole analysis.
+11. A retained-proposal certificate passes after the production pole analysis
+    and bridge checks.
 
 ## Result
 
-Current status remains open.  The manifest is valid launch planning, but the
-three production outputs are absent, and no scalar pole-fit / inverse
-derivative postprocess certificate exists.
+Current status is bounded support.  The original monolithic manifest remains
+valid launch planning, but the three monolithic production outputs are absent.
+The replacement L12 chunked surfaces are complete:
 
-Therefore this block is an exact acceptance boundary, not closure:
+- the four-mode/x16 stream supplies same-source `dE/ds` and `C_ss(q)` support;
+- the separate eight-mode/x8 stream supplies a finite-shell diagnostic fit;
+- both surfaces explicitly remain non-readout support.
+
+The completed L12 support does not close the physics route.  It still lacks
+accepted L16/L24 or equivalent multivolume scaling, an isolated scalar pole
+inverse-derivative fit, finite-volume/IR/zero-mode control, model-class
+authority, and a canonical-Higgs/source-overlap or same-source W/Z response
+bridge.
+
+Therefore this block is a support/readiness boundary, not closure:
 
 ```text
 proposal_allowed: false
 retained_proposal_gate_ready: false
+l12_postprocess_support_ready: true
 ```
 
 ## Verification
@@ -63,11 +87,15 @@ retained_proposal_gate_ready: false
 ```bash
 python3 -m py_compile scripts/frontier_yt_fh_lsz_production_postprocess_gate.py
 python3 scripts/frontier_yt_fh_lsz_production_postprocess_gate.py
-# SUMMARY: PASS=9 FAIL=0
+# SUMMARY: PASS=12 FAIL=0
 ```
 
 ## Next Action
 
-Either launch/schedule the production manifest and later run this gate on the
-completed production files plus a pole-fit certificate, or pivot to a new
-analytic scalar denominator / residue theorem.
+Do not spend closure wording on the completed L12 support rows.  Supply one
+fresh same-surface bridge artifact: `O_sp`-Higgs pole rows with canonical
+`O_H` identity/normalization, a real source-coordinate transport certificate,
+genuine same-source W/Z production response rows with covariance and
+non-observed `g2` authority, same-surface Schur A/B/C kernel rows, a strict
+scalar-LSZ moment-threshold-FV certificate, or a neutral primitive-cone /
+irreducibility certificate.
