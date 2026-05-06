@@ -1,5 +1,44 @@
 # Handoff
 
+## 2026-05-05 PR230 Minimal-Axioms Yukawa-Summary Firewall
+
+Result: exact negative boundary / minimal-axioms Yukawa summary is not PR230
+proof authority.  The new runner checks `docs/MINIMAL_AXIOMS_2026-04-11.md`
+because that memo still contains old summary language for
+`y_t(M_Pl)/g_s(M_Pl)=1/sqrt(6)`, `y_t(v)=0.9176`, and
+`m_t(pole)=172.57 GeV`.
+
+The firewall confirms the memo itself is `audited_conditional`, while the
+summarized Ward lane remains `audited_renaming` because of the `H_unit`
+matrix-element definition trap.  Therefore those summary rows are framework
+context only; they cannot be imported as PR230 retained proof authority, and
+the direct PR230 route still needs a same-surface physical bridge.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_pr230_minimal_axioms_yukawa_summary_firewall.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=37 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=92 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=240 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=272 FAIL=0
+```
+
+Claim boundary: no retained or proposed-retained closure.  This block is a
+hidden-authority firewall only; it writes no `O_H`, no `C_sH/C_HH`, no W/Z
+row, no Schur row, no scalar-LSZ authority, and no matching/running bridge.
+Exact next action: attack a fresh same-surface physics bridge rather than
+reusing old summary values.
+
 ## 2026-05-05 PR230 Scalar-LSZ Holonomic Exact-Authority Attempt
 
 Result: exact negative boundary / scalar-LSZ holonomic exact authority is not

@@ -107,6 +107,9 @@ def main() -> int:
         "reflection_det_primitive_upgrade_gate": load(
             "outputs/yt_pr230_reflection_det_primitive_upgrade_gate_2026-05-05.json"
         ),
+        "minimal_axioms_yukawa_summary_firewall": load(
+            "outputs/yt_pr230_minimal_axioms_yukawa_summary_firewall_2026-05-05.json"
+        ),
         "kinetic_matching": load("outputs/yt_heavy_kinetic_matching_obstruction_2026-05-01.json"),
         "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "scalar_ir": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
@@ -194,6 +197,8 @@ def main() -> int:
         "not proof selectors until canonical O_H or C_sH/C_HH pole rows exist",
         "Reflection plus determinant positivity primitive-upgrade",
         "same-surface neutral primitive-cone certificate exists",
+        "MINIMAL_AXIOMS y_t/m_t summary",
+        "not proof authority until the summarized Ward/H_unit y_t lane is repaired",
     ]
     missing_terms = [term for term in required_terms if term not in combined_text]
     proposal_allowed = [
@@ -545,6 +550,23 @@ def main() -> int:
         )
         is True,
         reflection_det_upgrade.get("actual_current_surface_status"),
+    )
+    minimal_axioms_firewall = certificates["minimal_axioms_yukawa_summary_firewall"]
+    report(
+        "minimal-axioms-yukawa-summary-not-proof-authority",
+        "minimal-axioms Yukawa summary is not PR230 proof authority"
+        in str(minimal_axioms_firewall.get("actual_current_surface_status"))
+        and minimal_axioms_firewall.get("proposal_allowed") is False
+        and minimal_axioms_firewall.get("exact_negative_boundary_passed") is True
+        and minimal_axioms_firewall.get("forbidden_firewall", {}).get(
+            "uses_minimal_axioms_yukawa_summary_as_authority"
+        )
+        is False
+        and minimal_axioms_firewall.get("yt_ward_audit_status", {}).get(
+            "effective_status"
+        )
+        == "audited_renaming",
+        minimal_axioms_firewall.get("actual_current_surface_status"),
     )
 
     result = {

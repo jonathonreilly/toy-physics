@@ -557,6 +557,9 @@ def main() -> int:
         "pr230_oh_source_higgs_authority_rescan_gate": load(
             "outputs/yt_pr230_oh_source_higgs_authority_rescan_gate_2026-05-05.json"
         ),
+        "pr230_minimal_axioms_yukawa_summary_firewall": load(
+            "outputs/yt_pr230_minimal_axioms_yukawa_summary_firewall_2026-05-05.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -2247,6 +2250,24 @@ def main() -> int:
         )
         is True,
         statuses["pr230_oh_source_higgs_authority_rescan_gate"],
+    )
+    report(
+        "pr230-minimal-axioms-yukawa-summary-not-proof-authority",
+        "minimal-axioms Yukawa summary is not PR230 proof authority"
+        in str(statuses["pr230_minimal_axioms_yukawa_summary_firewall"])
+        and certificates["pr230_minimal_axioms_yukawa_summary_firewall"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_minimal_axioms_yukawa_summary_firewall"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+        and certificates["pr230_minimal_axioms_yukawa_summary_firewall"].get(
+            "yt_ward_audit_status", {}
+        ).get("effective_status")
+        == "audited_renaming",
+        statuses["pr230_minimal_axioms_yukawa_summary_firewall"],
     )
     report(
         "pr230-derived-bridge-rank-one-attempt-blocks-current-source-only-closure",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T01:02:32.470992+00:00",
+  "generated_at": "2026-05-06T01:14:27.295351+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16656,6 +16656,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_matching_running_bridge_gate.py"
+    },
+    "yt_pr230_minimal_axioms_yukawa_summary_firewall_note_2026-05-05": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_minimal_axioms_yukawa_summary_firewall.py"
     },
     "yt_pr230_missing_bridge_literature_assumption_exercises_note_2026-05-05": {
       "assert_count": 1,
@@ -34461,6 +34473,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_minimal_axioms_yukawa_summary_firewall.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_minimal_axioms_yukawa_summary_firewall_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_missing_bridge_literature_assumption_exercises.py": {
       "assert_count": 1,
       "claims": [
@@ -40018,11 +40045,11 @@
       "A": 9,
       "B": 223,
       "C": 501,
-      "D": 299,
+      "D": 300,
       "none": 404
     },
-    "runners_classified": 1436,
-    "runners_with_C": 748,
-    "runners_with_D": 529
+    "runners_classified": 1437,
+    "runners_with_C": 749,
+    "runners_with_D": 530
   }
 }

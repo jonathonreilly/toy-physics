@@ -1,0 +1,63 @@
+{
+  "actual_current_surface_status": "exact negative boundary / minimal-axioms Yukawa summary is not PR230 proof authority",
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "Continue only with genuine bridge artifacts: canonical O_H and C_sH/C_HH rows, same-source W/Z rows with covariance and g2, Schur A/B/C rows, neutral primitive/irreducibility, or strict scalar-LSZ plus overlap authority.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claims_retained_or_proposed_retained_closure": false,
+    "defines_yt_bare": false,
+    "sets_kappa_s_equal_one": false,
+    "uses_alpha_lm_plaquette_u0_or_rconn": false,
+    "uses_hunit_matrix_element_readout": false,
+    "uses_minimal_axioms_yukawa_summary_as_authority": false,
+    "uses_observed_top_or_yukawa_targets": false,
+    "uses_yt_ward_identity_as_authority": false
+  },
+  "forbidden_summary_rows": [
+    {
+      "allowed_use": "historical context only",
+      "memo_claim": "retained exact lattice-scale y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)",
+      "why_not_pr230_authority": "routes through the audited Ward/H_unit structural-identification lane"
+    },
+    {
+      "allowed_use": "comparator or stale summary only, not a proof input",
+      "memo_claim": "derived y_t(v) = 0.9176",
+      "why_not_pr230_authority": "depends on the old top-Yukawa chain and downstream running/matching"
+    },
+    {
+      "allowed_use": "comparator or stale summary only, not a proof input",
+      "memo_claim": "derived m_t(pole) = 172.57 GeV",
+      "why_not_pr230_authority": "depends on the old top-Yukawa chain and downstream running/matching"
+    }
+  ],
+  "minimal_axioms_audit_status": {
+    "audit_status": "audited_conditional",
+    "effective_status": "audited_conditional",
+    "verdict_rationale_excerpt": "Issue: The load-bearing step still imports unratified direct authority: G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md, G_BARE_RIGIDITY_THEOREM_NOTE.md, G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md, G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md, G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md, G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md, PHYSICAL_LATTICE_NECESSITY_NOTE.md, GENERATION_AXIOM_BOUNDARY_NOTE.md, and 10 more direct blockers. Why this "
+  },
+  "parent_certificates": {
+    "assumption_stress": "outputs/yt_pr230_assumption_import_stress_2026-05-01.json",
+    "audit_ledger": "docs/audit/data/audit_ledger.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "oh_source_higgs_authority_rescan": "outputs/yt_pr230_oh_source_higgs_authority_rescan_gate_2026-05-05.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "A framework summary memo is not an independent derivation and the summarized y_t chain is explicitly audit-demoted.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not use MINIMAL_AXIOMS y_t/m_t summary as proof input",
+    "does not use H_unit or yt_ward_identity as y_t authority",
+    "does not use observed top mass, observed y_t, alpha_LM, plaquette, u0, R_conn, kappa_s=1, c2=1, or Z_match=1",
+    "does not edit MINIMAL_AXIOMS or promote/demote any audit ledger row"
+  ],
+  "verdict": "MINIMAL_AXIOMS_2026-04-11 remains useful framework context, but its historical y_t and m_t summary cannot be imported as a PR230 closure proof.  The memo's own audit row is not clean, and the load-bearing y_t lane it summarizes is the audited_renaming Ward/H_unit matrix-element identification.  PR230 still needs a same-surface O_H/source-Higgs bridge, W/Z response bridge, Schur rows, neutral irreducibility theorem, or strict scalar-LSZ plus overlap authority.",
+  "yt_ward_audit_status": {
+    "audit_status": "audited_renaming",
+    "effective_status": "audited_renaming",
+    "verdict_rationale_excerpt": "Issue: The load-bearing move defines y_t_bare as the H_unit matrix element and then identifies that matrix element with the top Yukawa readout. Why this blocks: The source note and runner verify the scalar-singlet algebra, Clebsch-Gordan normalization, Fierz coefficients, and tadpole cancellation, but they do not derive the physical observable bridge from independent retained inputs. Repair target: Supply a retained theorem and runner check constructing the map from the composite H_unit matrix e"
+  }
+}

@@ -1,5 +1,19 @@
 # Opportunity Queue
 
+2026-05-05 minimal-axioms Yukawa-summary firewall update:
+`outputs/yt_pr230_minimal_axioms_yukawa_summary_firewall_2026-05-05.json`
+passes with `PASS=12 FAIL=0`.  The old minimal-axioms memo does contain
+summary language for the Ward-era top/Yukawa result, but the memo is
+`audited_conditional` and the summarized y_t Ward route is
+`audited_renaming` because of the `H_unit` matrix-element bridge.  This
+removes a tempting hidden-authority shortcut: PR230 may cite the memo as
+context for the substrate, but not as proof authority for `m_t`, `y_t`, or
+`y_t/g_s`.  Aggregate gates after wiring remain clean: assumption/import
+stress `PASS=37 FAIL=0`, full assembly `PASS=92 FAIL=0`, retained route
+`PASS=240 FAIL=0`, and campaign status `PASS=272 FAIL=0`.  The queue should
+now spend effort on genuine same-surface bridge construction, not on more
+summary-value reuse.
+
 2026-05-05 scalar-LSZ holonomic exact-authority update:
 `outputs/yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_2026-05-05.json`
 passes with `PASS=15 FAIL=0`, but closes negatively on the current finite-shell

@@ -2,6 +2,7 @@
 
 | Route | Current disposition | Key artifact |
 |---|---|---|
+| `MINIMAL_AXIOMS_2026-04-11` y_t/m_t summary rows as PR230 proof authority | closed negatively / context only because the memo is audited_conditional and the summarized Ward lane is audited_renaming | `YT_PR230_MINIMAL_AXIOMS_YUKAWA_SUMMARY_FIREWALL_NOTE_2026-05-05.md` |
 | Outside-math tool name, PSLQ hit, exact constant, or value recognition as PR230 proof selector | forbidden / support-only until a same-surface certificate is emitted | `YT_PR230_CLEAN_SOURCE_HIGGS_MATH_TOOL_ROUTE_SELECTOR_NOTE_2026-05-05.md` |
 | Holonomic/Picard-Fuchs/WZ/PSLQ or finite-shell exact interpolation as scalar-LSZ authority | closed negatively on current finite-shell data | `YT_PR230_SCALAR_LSZ_HOLONOMIC_EXACT_AUTHORITY_ATTEMPT_NOTE_2026-05-05.md` |
 | Invariant-ring/commutant/Schur-lemma multiplicity-one as current PR230 `O_H` certificate | closed negatively on current representation data | `YT_PR230_INVARIANT_RING_OH_CERTIFICATE_ATTEMPT_NOTE_2026-05-05.md` |

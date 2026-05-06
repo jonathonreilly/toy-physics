@@ -1,5 +1,28 @@
 # Review History
 
+## 2026-05-05 Minimal-Axioms Yukawa-Summary Firewall Self-Review
+
+Disposition: pass as exact negative boundary / no hidden summary authority.
+
+Findings:
+
+- The runner inspects the exact minimal-axioms summary rows that look useful
+  for PR230: `y_t/g_s=1/sqrt(6)`, `y_t(v)=0.9176`, and
+  `m_t(pole)=172.57 GeV`.
+- It verifies the memo row is `audited_conditional`, while
+  `yt_ward_identity_derivation_theorem` remains `audited_renaming` with the
+  `H_unit` matrix-element trap in the audit rationale.
+- It keeps proposal authority false and does not use the summary rows as
+  proof inputs, observed selectors, or replacement evidence for `O_H`,
+  `C_sH/C_HH`, W/Z response, Schur rows, scalar-LSZ authority, or
+  matching/running.
+- Aggregate gates rerun cleanly after wiring: assumption/import stress
+  `PASS=37 FAIL=0`, full assembly `PASS=92 FAIL=0`, retained route
+  `PASS=240 FAIL=0`, and campaign status `PASS=272 FAIL=0`.
+
+Review-loop iteration 1: local self-review pass.  No retained or
+proposed-retained wording is authorized.
+
 ## 2026-05-05 Scalar-LSZ Holonomic Exact-Authority Attempt Self-Review
 
 Disposition: pass as exact negative boundary / no strict scalar-LSZ authority.

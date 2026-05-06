@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T01:02:30.127622+00:00",
+  "generated_at": "2026-05-06T01:14:24.830114+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42088,6 +42088,16 @@
       "runner_path": "scripts/frontier_yt_pr230_matching_running_bridge_gate.py",
       "title": "PR230 Matching/Running Bridge Gate"
     },
+    "yt_pr230_minimal_axioms_yukawa_summary_firewall_note_2026-05-05": {
+      "claim_id": "yt_pr230_minimal_axioms_yukawa_summary_firewall_note_2026-05-05",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary / the `MINIMAL_AXIOMS_2026-04-11.md`",
+      "deps": [],
+      "note_hash": "96103d62525565aecb108f488d01f4e5cdf8d395fdd0287ef5a56ecf5a1128db",
+      "path": "docs/YT_PR230_MINIMAL_AXIOMS_YUKAWA_SUMMARY_FIREWALL_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_yt_pr230_minimal_axioms_yukawa_summary_firewall.py",
+      "title": "PR230 Minimal-Axioms Yukawa Summary Firewall"
+    },
     "yt_pr230_missing_bridge_literature_assumption_exercises_note_2026-05-05": {
       "claim_id": "yt_pr230_missing_bridge_literature_assumption_exercises_note_2026-05-05",
       "current_status": "bounded",
@@ -45205,6 +45215,7 @@
     "yt_pr230_holonomic_source_response_feasibility_gate_note_2026-05-05",
     "yt_pr230_invariant_ring_oh_certificate_attempt_note_2026-05-05",
     "yt_pr230_matching_running_bridge_gate_note_2026-05-04",
+    "yt_pr230_minimal_axioms_yukawa_summary_firewall_note_2026-05-05",
     "yt_pr230_missing_bridge_literature_assumption_exercises_note_2026-05-05",
     "yt_pr230_non_chunk_closure_worklist_note_2026-05-05",
     "yt_pr230_nonchunk_current_surface_exhaustion_gate_note_2026-05-05",
@@ -45367,17 +45378,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4632,
-    "leaf_count": 1065,
-    "node_count": 2018,
-    "root_count": 1531,
-    "runners_with_path": 1515,
+    "leaf_count": 1066,
+    "node_count": 2019,
+    "root_count": 1532,
+    "runners_with_path": 1516,
     "status_counts": {
       "bounded": 554,
       "open": 102,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 431,
-      "unknown": 557
+      "unknown": 558
     }
   }
 }

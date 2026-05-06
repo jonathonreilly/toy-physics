@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-06T01:02:32.999090+00:00
+**Generated:** 2026-05-06T01:14:27.824368+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,7 +24,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 389 |
 | support | 302 |
 | open | 71 |
-| unknown | 146 |
+| unknown | 147 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 41 |
@@ -39,23 +39,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1175 |
+| `unaudited` | 1176 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 73 |
 | `high` | 335 |
 | `medium` | 393 |
-| `leaf` | 1120 |
+| `leaf` | 1121 |
 
 - **Proposed claims demoted by upstream:** 130
 - **Citation cycles detected:** 61
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1436
-- runners with (C) first-principles compute hits: 748
-- runners with (D) external comparator hits: 529
+- runners classified: 1437
+- runners with (C) first-principles compute hits: 749
+- runners with (D) external comparator hits: 530
 - decoration candidates (no C, no D): 108
 
 ## Top 25 by load-bearing score (topology only)
