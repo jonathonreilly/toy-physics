@@ -602,6 +602,9 @@ def main() -> int:
         "pr230_source_coordinate_transport_completion": load(
             "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json"
         ),
+        "pr230_two_source_taste_radial_chart": load(
+            "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json"
+        ),
         "pr230_action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -2534,6 +2537,22 @@ def main() -> int:
         is True,
         statuses["pr230_source_coordinate_transport_completion"],
     )
+    two_source_taste_radial_chart = certificates["pr230_two_source_taste_radial_chart"]
+    report(
+        "pr230-two-source-taste-radial-chart-support-not-closure",
+        "two-source taste-radial chart"
+        in str(statuses["pr230_two_source_taste_radial_chart"])
+        and two_source_taste_radial_chart.get("proposal_allowed") is False
+        and two_source_taste_radial_chart.get(
+            "two_source_taste_radial_chart_support_passed"
+        )
+        is True
+        and two_source_taste_radial_chart.get("forbidden_firewall", {}).get(
+            "identified_taste_radial_axis_with_canonical_oh"
+        )
+        is False,
+        statuses["pr230_two_source_taste_radial_chart"],
+    )
     action_first_route_completion = certificates["pr230_action_first_route_completion"]
     report(
         "pr230-action-first-route-current-surface-closed",
@@ -4201,6 +4220,15 @@ def main() -> int:
         is True
         and source_transport_completion.get("proposal_allowed") is False
     )
+    result["two_source_taste_radial_chart_support_not_closure"] = (
+        two_source_taste_radial_chart.get("two_source_taste_radial_chart_support_passed")
+        is True
+        and two_source_taste_radial_chart.get("proposal_allowed") is False
+        and two_source_taste_radial_chart.get("forbidden_firewall", {}).get(
+            "identified_taste_radial_axis_with_canonical_oh"
+        )
+        is False
+    )
     result["origin_main_composite_higgs_intake_not_closure"] = (
         origin_main_composite_higgs.get("origin_main_composite_higgs_intake_guard_passed")
         is True
@@ -4294,6 +4322,7 @@ def main() -> int:
         "does not treat cross-lane composite-Higgs stretch packets as PR230 O_H authority",
         "does not treat conditional Z3-triplet primitive support as a strict PR230 primitive certificate",
         "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
+        "does not treat the two-source taste-radial chart as canonical O_H or source-Higgs production rows",
         "does not treat Schur sufficiency or row-definition machinery as proof without same-surface neutral-kernel A/B/C rows",
         "does not treat determinant positivity, conditional Perron support, or source-only generators as a primitive neutral rank-one theorem",
     ]

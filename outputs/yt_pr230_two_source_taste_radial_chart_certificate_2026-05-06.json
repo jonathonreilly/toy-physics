@@ -1,0 +1,96 @@
+{
+  "actual_current_surface_status": "exact-support / same-surface two-source taste-radial chart; canonical O_H and production rows absent",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "certificate_kind": "pr230_two_source_taste_radial_chart",
+  "chart_grams": {
+    "hs_normalized_s_hat_and_h_taste": [
+      [
+        0.9999999999999998,
+        0.0
+      ],
+      [
+        0.0,
+        1.0000000000000002
+      ]
+    ],
+    "raw_pr230_s_and_h_taste": [
+      [
+        8.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0000000000000002
+      ]
+    ]
+  },
+  "conditional_surface_status": "conditional-support if a future same-surface production action uses this second source axis and supplies C_sx/C_xx rows, or if a separate certificate identifies the taste-radial axis with canonical O_H",
+  "exact_next_action": "If pursuing the source-coordinate route, implement a genuine two-source production/action row for h_taste and measure C_sx/C_xx, then separately prove or reject whether x is canonical O_H.  Otherwise pivot to W/Z response, Schur A/B/C, neutral primitive, or strict scalar-LSZ authority.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "identified_taste_radial_axis_with_canonical_oh": false,
+    "set_kappa_s_equal_one": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_targets": false,
+    "used_yt_ward_identity": false
+  },
+  "future_file_presence": {
+    "canonical_oh_certificate": false,
+    "source_higgs_rows": false,
+    "taste_radial_measurement_rows": false,
+    "two_source_production_action": false
+  },
+  "hypothetical_axiom_status": "Adding the h_taste source as dynamics is a new two-source surface until a production action or measurement-row certificate lands.",
+  "new_second_source_axis": {
+    "S_i": "sigma_x on taste tensor factor i",
+    "hs_norm": 1.0,
+    "operator": "R_hat = (S0 + S1 + S2)/sqrt(24)",
+    "orthogonal_to_pr230_source": true,
+    "trace": 0.0,
+    "z3_invariant": true
+  },
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_surface_z3_taste_triplet": "outputs/yt_pr230_same_surface_z3_taste_triplet_artifact_2026-05-06.json",
+    "source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
+    "source_coordinate_transport_gate": "outputs/yt_pr230_source_coordinate_transport_gate_2026-05-06.json",
+    "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+    "taste_condensate_oh_bridge_audit": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "retained_route": "open / retained closure not yet reached",
+    "same_surface_z3_taste_triplet": "exact-support / same-surface Z3 taste-triplet artifact; physical neutral transfer still absent",
+    "source_coordinate_transport_completion": "exact negative boundary / source-coordinate transport not derivable from current PR230 surface",
+    "source_coordinate_transport_gate": "exact negative boundary / source-coordinate transport to canonical O_H not derivable on current PR230 surface",
+    "source_higgs_builder": "open / source-Higgs cross-correlator rows absent",
+    "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "taste_condensate_oh_bridge_audit": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge"
+  },
+  "pass_count": 21,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The artifact certifies an exact algebraic two-source chart only. It does not supply a same-source EW/Higgs action, canonical O_H identity/normalization, source-Higgs pole rows, or physical y_t readout.",
+  "source_coordinate": {
+    "hs_normalized_source_tangent": "I_8/sqrt(8)",
+    "raw_pr230_source_tangent": "I_8 from m_bare+s",
+    "raw_source_norm_squared": 8.0
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not reparametrize the existing one-source line into O_H",
+    "does not identify the taste-radial source with canonical O_H",
+    "does not write source-Higgs C_sH/C_HH rows",
+    "does not supply a same-source EW/Higgs production action",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not set kappa_s, c2, or Z_match to one"
+  ],
+  "two_source_taste_radial_chart_support_passed": true
+}

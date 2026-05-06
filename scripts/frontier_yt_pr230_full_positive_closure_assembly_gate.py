@@ -98,6 +98,7 @@ PARENTS = {
     "pr230_z3_lazy_transfer_promotion_attempt": "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json",
     "pr230_z3_lazy_selector_no_go": "outputs/yt_pr230_z3_lazy_selector_no_go_2026-05-06.json",
     "pr230_source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
+    "pr230_two_source_taste_radial_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
     "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
     "pr230_action_first_route_completion": "outputs/yt_pr230_action_first_route_completion_2026-05-06.json",
@@ -629,6 +630,24 @@ def main() -> int:
             "source_relative_projection_onto_taste_axis_span"
         )
         == 0.0
+    )
+    two_source_taste_radial_chart_support_not_closure = (
+        "two-source taste-radial chart"
+        in statuses["pr230_two_source_taste_radial_chart"]
+        and certs["pr230_two_source_taste_radial_chart"].get("proposal_allowed")
+        is False
+        and certs["pr230_two_source_taste_radial_chart"].get(
+            "two_source_taste_radial_chart_support_passed"
+        )
+        is True
+        and certs["pr230_two_source_taste_radial_chart"].get(
+            "forbidden_firewall", {}
+        ).get("identified_taste_radial_axis_with_canonical_oh")
+        is False
+        and certs["pr230_two_source_taste_radial_chart"].get(
+            "future_file_presence", {}
+        ).get("taste_radial_measurement_rows")
+        is False
     )
     kinetic_taste_mixing_bridge_blocks_shortcut = (
         "current staggered kinetic taste symmetry"
@@ -1370,6 +1389,11 @@ def main() -> int:
         "source-coordinate-transport-current-surface-closed",
         source_coordinate_transport_completion_blocks,
         statuses["pr230_source_coordinate_transport_completion"],
+    )
+    report(
+        "two-source-taste-radial-chart-support-not-closure",
+        two_source_taste_radial_chart_support_not_closure,
+        statuses["pr230_two_source_taste_radial_chart"],
     )
     report(
         "kinetic-taste-mixing-shortcut-closed",
@@ -2318,6 +2342,7 @@ def main() -> int:
         "z3_lazy_selector_no_go_blocks": z3_lazy_selector_no_go_blocks,
         "same_surface_z3_taste_triplet_support_not_closure": same_surface_z3_taste_triplet_support_not_closure,
         "source_coordinate_transport_completion_blocks": source_coordinate_transport_completion_blocks,
+        "two_source_taste_radial_chart_support_not_closure": two_source_taste_radial_chart_support_not_closure,
         "kinetic_taste_mixing_bridge_blocks_shortcut": kinetic_taste_mixing_bridge_blocks_shortcut,
         "one_higgs_taste_axis_completeness_blocks_shortcut": one_higgs_taste_axis_completeness_blocks_shortcut,
         "action_first_route_completion_blocks": action_first_route_completion_blocks,
@@ -2357,6 +2382,7 @@ def main() -> int:
             "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
             "does not treat conditional Z3-triplet primitive support as a strict PR230 primitive certificate",
             "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
+            "does not treat the two-source taste-radial chart as canonical O_H or production source-Higgs rows",
             "does not treat current Schur sufficiency or row-definition machinery as proof without a neutral kernel basis plus same-surface A/B/C rows",
             "does not treat conditional Perron support, determinant positivity, or source-only generators as a primitive neutral rank-one theorem",
             "does not treat terminal non-chunk route exhaustion as positive closure",

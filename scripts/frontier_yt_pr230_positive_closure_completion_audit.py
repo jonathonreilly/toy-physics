@@ -31,6 +31,7 @@ PARENTS = {
     "z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
     "z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
     "z3_lazy_transfer_promotion_attempt": "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json",
+    "two_source_taste_radial_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json",
     "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
@@ -57,6 +58,8 @@ FUTURE_BRIDGE_FILES = {
     "source_coordinate_transport_certificate": "outputs/yt_pr230_source_coordinate_transport_certificate_2026-05-06.json",
     "source_higgs_cross_correlator_rows": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
     "source_higgs_production_certificate": "outputs/yt_source_higgs_cross_correlator_production_certificate_2026-05-03.json",
+    "two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+    "two_source_taste_radial_rows": "outputs/yt_pr230_two_source_taste_radial_measurement_rows_2026-05-06.json",
     "top_wz_matched_response_rows": "outputs/yt_top_wz_matched_response_rows_2026-05-04.json",
     "schur_abc_kernel_rows": "outputs/yt_schur_abc_kernel_rows_2026-05-05.json",
     "neutral_primitive_cone_certificate": "outputs/yt_neutral_scalar_primitive_cone_certificate_2026-05-05.json",
@@ -233,6 +236,19 @@ def main() -> int:
         and "source-coordinate transport to canonical O_H not derivable"
         in parent_statuses["source_coordinate_transport_gate"]
     )
+    two_source_taste_radial_support_not_closure = (
+        certs["two_source_taste_radial_chart"].get(
+            "two_source_taste_radial_chart_support_passed"
+        )
+        is True
+        and certs["two_source_taste_radial_chart"].get("proposal_allowed") is False
+        and certs["two_source_taste_radial_chart"].get("forbidden_firewall", {}).get(
+            "identified_taste_radial_axis_with_canonical_oh"
+        )
+        is False
+        and "two-source taste-radial chart"
+        in parent_statuses["two_source_taste_radial_chart"]
+    )
     origin_main_composite_higgs_not_closure = (
         certs["origin_main_composite_higgs_intake_guard"].get(
             "origin_main_composite_higgs_intake_guard_passed"
@@ -357,6 +373,7 @@ def main() -> int:
     report("osp-higgs-pole-rows-still-absent", osp_higgs_rows_absent, parent_statuses["source_higgs_builder"])
     report("taste-condensate-oh-bridge-blocked", taste_condensate_bridge_blocked, parent_statuses["taste_condensate_oh_bridge"])
     report("source-coordinate-transport-blocked", source_coordinate_transport_blocked, parent_statuses["source_coordinate_transport_gate"])
+    report("two-source-taste-radial-chart-support-not-closure", two_source_taste_radial_support_not_closure, parent_statuses["two_source_taste_radial_chart"])
     report("origin-main-composite-higgs-intake-not-closure", origin_main_composite_higgs_not_closure, parent_statuses["origin_main_composite_higgs_intake_guard"])
     report("origin-main-ew-m-residual-intake-not-closure", origin_main_ew_m_residual_not_closure, parent_statuses["origin_main_ew_m_residual_intake_guard"])
     report("z3-triplet-conditional-primitive-support-not-closure", z3_triplet_conditional_primitive_not_closure, parent_statuses["z3_triplet_conditional_primitive_cone"])
@@ -497,6 +514,7 @@ def main() -> int:
             "osp_higgs_rows_absent": osp_higgs_rows_absent,
             "taste_condensate_oh_bridge_blocked": taste_condensate_bridge_blocked,
             "source_coordinate_transport_blocked": source_coordinate_transport_blocked,
+            "two_source_taste_radial_support_not_closure": two_source_taste_radial_support_not_closure,
             "origin_main_composite_higgs_not_closure": origin_main_composite_higgs_not_closure,
             "origin_main_ew_m_residual_not_closure": origin_main_ew_m_residual_not_closure,
             "z3_triplet_conditional_primitive_not_closure": z3_triplet_conditional_primitive_not_closure,

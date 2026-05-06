@@ -32,6 +32,14 @@ current-surface completion attempt also blocks unit/trace/taste-equivariant
 maps from sending `I_8` to trace-zero `S_i` without a new source-axis/Jacobian
 certificate.
 
+`YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHART_CERTIFICATE` now supplies exact support
+for the genuine two-source variant: the same `Cl(3)/Z^3` taste algebra has the
+orthonormal Hilbert-Schmidt chart
+`I_8/sqrt(8), (S0+S1+S2)/sqrt(24)`, and the second axis is Z3-invariant and
+orthogonal to the PR230 source.  This is not canonical `O_H` or a production
+row.  It reopens only the engineering target "turn on a real second source and
+measure rows"; it does not authorize closure.
+
 ## Route D: Equivalent Physical Response
 
 Use same-source W/Z rows, Schur A/B/C rows, or a neutral rank-one theorem to

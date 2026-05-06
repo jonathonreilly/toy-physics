@@ -37,6 +37,10 @@ Allowed context:
   the same-surface artifact supplies the cyclic symmetry `P`, and
   `L=(I+P)/2` is primitive as mathematics, but current PR230 artifacts do not
   instantiate `L` as physical dynamics.
+- the two-source taste-radial chart certificate as exact source-coordinate
+  support only: `I_8/sqrt(8)` and `(S0+S1+S2)/sqrt(24)` form an orthonormal
+  same-surface chart, but the second coordinate is not a production action,
+  canonical `O_H`, or a measured source-Higgs row.
 
 Open imports after this block:
 
@@ -76,6 +80,9 @@ Open imports after this block:
 - Z3 lazy-transfer promotion attempt is not proof selectors until a
   same-surface neutral transfer/action or off-diagonal generator instantiates
   the lazy transfer.
+- Two-source taste-radial chart is not proof selectors until a same-surface
+  production/action row turns on the second source and separate authority
+  identifies it with canonical `O_H` or supplies measured `C_sx/C_xx` rows.
 - source-coordinate transport from the PR230 uniform mass source to a canonical
   taste-axis Higgs source;
 - same-surface canonical `O_H` identity and normalization;

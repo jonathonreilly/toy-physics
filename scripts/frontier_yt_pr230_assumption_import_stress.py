@@ -152,6 +152,9 @@ def main() -> int:
         "source_coordinate_transport_completion_attempt": load(
             "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json"
         ),
+        "two_source_taste_radial_chart_certificate": load(
+            "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json"
+        ),
         "action_first_route_completion": load(
             "outputs/yt_pr230_action_first_route_completion_2026-05-06.json"
         ),
@@ -826,6 +829,24 @@ def main() -> int:
         == 0.0,
         source_transport_completion.get("actual_current_surface_status"),
     )
+    two_source_chart = certificates["two_source_taste_radial_chart_certificate"]
+    report(
+        "two-source-taste-radial-chart-support-not-oh-closure",
+        "two-source taste-radial chart"
+        in str(two_source_chart.get("actual_current_surface_status"))
+        and two_source_chart.get("proposal_allowed") is False
+        and two_source_chart.get("two_source_taste_radial_chart_support_passed")
+        is True
+        and two_source_chart.get("new_second_source_axis", {}).get(
+            "orthogonal_to_pr230_source"
+        )
+        is True
+        and two_source_chart.get("forbidden_firewall", {}).get(
+            "identified_taste_radial_axis_with_canonical_oh"
+        )
+        is False,
+        two_source_chart.get("actual_current_surface_status"),
+    )
     action_first_completion = certificates["action_first_route_completion"]
     report(
         "action-first-route-current-surface-closed",
@@ -993,7 +1014,12 @@ def main() -> int:
             "transport certificate, a same-source EW/Higgs action plus O_H and "
             "C_sH/C_HH rows, production W/Z rows with strict g2/covariance/"
             "delta_perp, neutral-kernel A/B/C rows, or a primitive transfer/"
-            "off-diagonal-generator theorem.  "
+            "off-diagonal-generator theorem.  The two-source taste-radial chart "
+            "certificate is the first positive source-chart support after the "
+            "one-source no-go: it gives an exact orthonormal same-surface "
+            "`I_8/sqrt(8), (S0+S1+S2)/sqrt(24)` chart, but it is a new second "
+            "source axis until a production action/row certificate lands and "
+            "it does not identify that axis with canonical O_H.  "
             "Positive closure still requires "
             "production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
@@ -1023,6 +1049,7 @@ def main() -> int:
             "does not treat conditional Z3-triplet primitive-cone support as a PR230 primitive certificate",
             "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
             "does not treat Z3 symmetry averaging or a mathematical lazy matrix as a PR230 physical transfer",
+            "does not treat the two-source taste-radial chart as canonical O_H or as production source-Higgs rows",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

@@ -4,7 +4,10 @@
    followed by source-Higgs `C_sH/C_HH` rows.
 2. Genuine two-source source-coordinate transport theorem from the uniform mass
    source to canonical Higgs/taste radial source; scalar reparametrization of
-   the current source line is blocked.
+   the current source line is blocked.  The exact two-source taste-radial chart
+   now exists as support, so the remaining work is a production/action row for
+   the second source plus either canonical-`O_H` identity or measured
+   `C_sx/C_xx` rows.
 3. Neutral off-diagonal generator / primitive-cone theorem.  The lazy-Z3
    matrix step is now conditionally solved, and direct promotion from cyclic
    symmetry `P` to lazy physical transfer `L=(I+P)/2` is blocked.  The missing

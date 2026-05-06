@@ -54,6 +54,7 @@
     "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
     "taste_condensate_oh_bridge": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
     "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
+    "two_source_taste_radial_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
     "wz_same_source_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
@@ -83,6 +84,7 @@
     "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
     "taste_condensate_oh_bridge": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge",
     "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
+    "two_source_taste_radial_chart": "exact-support / same-surface two-source taste-radial chart; canonical O_H and production rows absent",
     "wz_mass_fit_path": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
     "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent",
     "wz_same_source_action": "exact negative boundary / same-source EW action not defined on PR230 surface",
@@ -91,7 +93,7 @@
     "z3_lazy_transfer_promotion_attempt": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent"
   },
-  "pass_count": 30,
+  "pass_count": 31,
   "post_osp_support_evidence": {
     "canonical_oh_absent": true,
     "future_bridge_file_presence": {
@@ -102,7 +104,9 @@
       "source_coordinate_transport_certificate": false,
       "source_higgs_cross_correlator_rows": false,
       "source_higgs_production_certificate": false,
-      "top_wz_matched_response_rows": false
+      "top_wz_matched_response_rows": false,
+      "two_source_taste_radial_action": false,
+      "two_source_taste_radial_rows": false
     },
     "origin_main_composite_higgs_not_closure": true,
     "origin_main_ew_m_residual_not_closure": true,
@@ -110,6 +114,7 @@
     "source_coordinate_transport_blocked": true,
     "source_pole_intaken": true,
     "taste_condensate_oh_bridge_blocked": true,
+    "two_source_taste_radial_support_not_closure": true,
     "z3_generation_action_lift_not_derived": true,
     "z3_lazy_transfer_promotion_not_derived": true,
     "z3_triplet_conditional_primitive_not_closure": true
@@ -137,7 +142,9 @@
           "source_coordinate_transport_certificate": false,
           "source_higgs_cross_correlator_rows": false,
           "source_higgs_production_certificate": false,
-          "top_wz_matched_response_rows": false
+          "top_wz_matched_response_rows": false,
+          "two_source_taste_radial_action": false,
+          "two_source_taste_radial_rows": false
         },
         "needed": [
           "same-surface canonical O_H identity/normalization certificate",
@@ -223,7 +230,8 @@
               "primitive-cone stretch no-go blocks the source-only and conditional-Perron shortcut",
               "Burnside/double-commutant route has no same-surface off-diagonal neutral generator",
               "direct off-diagonal generator derivation attempt finds only absent or block-diagonal current rows",
-              "source-only logdet Hessian leaves the second neutral source h/O_H underdetermined"
+              "source-only logdet Hessian leaves the second neutral source h/O_H underdetermined",
+              "Z3 entropy/gap/reversibility selectors either import an external principle or select a different transfer"
             ],
             "parents": [
               "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
@@ -232,7 +240,8 @@
               "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
               "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
               "outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json",
-              "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json"
+              "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json",
+              "outputs/yt_pr230_z3_lazy_selector_no_go_2026-05-06.json"
             ],
             "passes_current_surface": false
           },

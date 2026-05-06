@@ -82,6 +82,16 @@ principle; and reversibility either selects identity in the directed family or
 the uniform transfer in the symmetric family.  None of these selectors is a
 same-surface PR230 transfer/action row.
 
+The two-source source-coordinate lane now has one genuine support artifact.
+`YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHART_CERTIFICATE` verifies the exact
+same-surface Hilbert-Schmidt chart
+`I_8/sqrt(8), (S0+S1+S2)/sqrt(24)`: the second axis is Z3-invariant,
+trace-zero, normalized, and orthogonal to the PR230 source.  This does not
+undo the one-source no-go and does not identify the second axis with canonical
+`O_H`; it gives the next concrete production target: turn on that source in an
+action/row harness and measure `C_sx/C_xx`, or separately prove/reject
+`x = O_H`.
+
 The FH/LSZ postprocess state is refreshed after the completed L12 replacement
 campaign.  The four-mode/x16 and separate eight-mode/x8 L12 chunked surfaces
 are complete and seed-controlled, but remain bounded support only.  They do
@@ -93,7 +103,8 @@ Best next work:
 
 1. derive a same-source EW/Higgs action and canonical `O_H` certificate, then
    run source-Higgs pole rows;
-2. derive a genuine two-source source-coordinate transport certificate;
+2. promote the exact two-source taste-radial chart with a production/action row
+   plus measured `C_sx/C_xx`, or prove/reject its canonical-`O_H` identity;
 3. derive a same-surface H1 quark-bilinear Z3 action certificate, or bypass it
    with a neutral transfer row, off-diagonal generator, or primitive-cone
    theorem;

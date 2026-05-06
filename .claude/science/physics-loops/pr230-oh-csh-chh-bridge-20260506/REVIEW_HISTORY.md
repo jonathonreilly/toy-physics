@@ -25,18 +25,20 @@ Local verification completed:
 - `frontier_yt_pr230_z3_lazy_selector_no_go.py`: PASS=22 FAIL=0;
 - `frontier_yt_pr230_origin_main_ew_m_residual_intake_guard.py`: PASS=18
   FAIL=0;
+- `frontier_yt_pr230_two_source_taste_radial_chart_certificate.py`: PASS=21
+  FAIL=0;
 - `frontier_yt_fh_lsz_production_postprocess_gate.py`: PASS=12 FAIL=0;
 - `python3 -m py_compile` for the new lazy-selector runner and aggregate
   PR230 gates;
 - `frontier_yt_pr230_taste_condensate_oh_bridge_audit.py`: PASS=21 FAIL=0;
 - `frontier_yt_pr230_oh_bridge_first_principles_candidate_portfolio.py`:
   PASS=16 FAIL=0;
-- `frontier_yt_pr230_assumption_import_stress.py`: PASS=56 FAIL=0;
-- `frontier_yt_pr230_full_positive_closure_assembly_gate.py`: PASS=116
+- `frontier_yt_pr230_assumption_import_stress.py`: PASS=57 FAIL=0;
+- `frontier_yt_pr230_full_positive_closure_assembly_gate.py`: PASS=117
   FAIL=0;
-- `frontier_yt_retained_closure_route_certificate.py`: PASS=262 FAIL=0;
-- `frontier_yt_pr230_campaign_status_certificate.py`: PASS=292 FAIL=0;
-- `frontier_yt_pr230_positive_closure_completion_audit.py`: PASS=30 FAIL=0;
+- `frontier_yt_retained_closure_route_certificate.py`: PASS=263 FAIL=0;
+- `frontier_yt_pr230_campaign_status_certificate.py`: PASS=293 FAIL=0;
+- `frontier_yt_pr230_positive_closure_completion_audit.py`: PASS=31 FAIL=0;
 - `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
   metadata regenerated for the EW M-residual intake row and updated note hash;
 - `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
