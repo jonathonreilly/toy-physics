@@ -1,0 +1,129 @@
+{
+  "actual_current_surface_status": "exact negative boundary / derived rank-one bridge not closed on current PR230 surface",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "If a future current-surface certificate supplies a primitive positivity-improving neutral scalar transfer sector with an isolated lowest pole plus canonical-Higgs/source overlap authority, the existing Perron/rank-one support theorem could bridge O_sp to the physical Higgs readout.",
+  "derived_bridge_closure_passed": false,
+  "determinant_or_reflection_positivity_boundary": {
+    "candidate": "measure/reflection/determinant positivity",
+    "counterexample_shape": {
+      "neutral_transfer_matrix": [
+        [
+          0.91,
+          0.0
+        ],
+        [
+          0.0,
+          0.88
+        ]
+      ],
+      "nonnegative": true,
+      "primitive_power_positive": false,
+      "source_only_rows_can_match": true,
+      "strongly_connected": false
+    },
+    "usable_support": [
+      "positive Euclidean measure",
+      "positive spectral representation",
+      "fermion determinant positivity if the staggered+Wilson bridge is later accepted"
+    ],
+    "why_not_bridge": "Positivity preservation is weaker than positivity improvement.  A block-diagonal positive neutral transfer keeps all source-only C_ss rows while preserving an orthogonal neutral scalar direction."
+  },
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "Make the derived bridge positive by deriving one real current-surface neutral off-diagonal generator or primitive-cone certificate.  The certificate must define the neutral basis and transfer matrix, prove strong connectivity/positive primitive power, certify pole isolation, and supply source plus canonical-Higgs overlap authority.  Otherwise return to measured O_H/C_sH/C_HH or W/Z response rows.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "set_kappa_s_equal_one": false,
+    "treated_determinant_positivity_as_neutral_rank_one": false,
+    "treated_reflection_positivity_as_improvement": false,
+    "treated_synthetic_primitive_matrix_as_evidence": false,
+    "used_alpha_lm_plaquette_u0_or_rconn": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_targets": false,
+    "used_yt_ward_identity_as_authority": false
+  },
+  "future_artifact_presence": {
+    "canonical_oh_certificate": false,
+    "neutral_irreducibility_certificate": false,
+    "neutral_offdiagonal_generator_certificate": false,
+    "primitive_cone_certificate": false,
+    "source_higgs_rows": false
+  },
+  "hypothetical_axiom_status": null,
+  "parent_certificates": {
+    "burnside_attempt": "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "irreducibility_authority_audit": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
+    "missing_bridge_assumptions": "outputs/yt_pr230_missing_bridge_literature_assumption_exercises_2026-05-05.json",
+    "offdiagonal_generator_attempt": "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
+    "positivity_direct_attempt": "outputs/yt_neutral_scalar_positivity_improving_direct_closure_attempt_2026-05-03.json",
+    "positivity_rank_one_support": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json",
+    "primitive_cone_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+    "primitive_cone_stretch_no_go": "outputs/yt_neutral_scalar_primitive_cone_stretch_no_go_2026-05-05.json",
+    "retained_closure_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "source_higgs_gram_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json"
+  },
+  "parent_statuses": {
+    "burnside_attempt": "exact negative boundary / Burnside neutral irreducibility attempt blocked by non-full current generator algebra",
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "full_positive_closure_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
+    "irreducibility_authority_audit": "exact negative boundary / neutral-scalar irreducibility authority absent on current PR230 surface",
+    "missing_bridge_assumptions": "bounded-support / targeted literature and assumption exercises complete; missing O_s/O_sp-to-O_H bridge remains open",
+    "offdiagonal_generator_attempt": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
+    "positivity_direct_attempt": "exact negative boundary / neutral-scalar positivity-improving direct theorem not derived",
+    "positivity_rank_one_support": "conditional-support / positivity-improving neutral-scalar rank-one theorem; premise absent",
+    "primitive_cone_gate": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+    "primitive_cone_stretch_no_go": "exact negative boundary / neutral-scalar primitive-cone stretch no-go on current PR230 surface",
+    "retained_closure_route": "open / retained closure not yet reached",
+    "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem",
+    "source_higgs_gram_gate": "open / source-Higgs Gram purity gate not passed"
+  },
+  "pass_count": 17,
+  "positive_contract": [
+    {
+      "id": "same_surface_neutral_basis",
+      "needed": "current PR230 Cl(3)/Z3 neutral scalar basis, including source and orthogonal sectors"
+    },
+    {
+      "id": "nonnegative_neutral_transfer",
+      "needed": "same-surface neutral transfer matrix with nonnegative entries on a certified cone"
+    },
+    {
+      "id": "primitive_cone",
+      "needed": "directed positive-entry graph strongly connected and some finite transfer power strictly positive"
+    },
+    {
+      "id": "isolated_lowest_neutral_pole",
+      "needed": "nondegenerate lowest isolated neutral scalar pole with FV/IR/threshold controls"
+    },
+    {
+      "id": "positive_source_overlap",
+      "needed": "O_sp/source pole overlaps the unique neutral pole with nonzero residue"
+    },
+    {
+      "id": "canonical_higgs_authority",
+      "needed": "canonical O_H exists on the same surface or is bypassed by a theorem that all neutral scalar probes couple to the unique pole"
+    },
+    {
+      "id": "orthogonal_neutral_null",
+      "needed": "no surviving orthogonal neutral top-coupled direction after rank-one theorem"
+    },
+    {
+      "id": "forbidden_import_firewall",
+      "needed": "reject H_unit/Ward, observed targets, alpha_LM/plaquette/u0, and unit-overlap shortcuts"
+    }
+  ],
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current surface has conditional rank-one support and a clear primitive-cone contract, but no strict primitive-cone certificate, no neutral off-diagonal generator, no irreducibility theorem, no canonical O_H certificate, and no C_sH/C_HH rows.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not define y_t_bare",
+    "does not identify O_sp with O_H",
+    "does not treat positivity preservation, reflection positivity, or determinant positivity as positivity improvement",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, R_conn, or unit-overlap shortcuts",
+    "does not treat synthetic primitive matrices as PR230 evidence"
+  ]
+}
