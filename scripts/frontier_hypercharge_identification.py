@@ -1,31 +1,54 @@
 #!/usr/bin/env python3
 """Hypercharge U(1)_Y identification from commutant + left-handed consistency.
 
-Physics context
----------------
+Physics context (rewritten 2026-05-05 for re-audit at bounded_theorem)
+---------------------------------------------------------------------
 The commutant of {SU(2)_weak, SWAP_{23}} in End(C^8) is gl(3) + gl(1).
-The gl(3) part gives SU(3)_color.  But the gl(1) part -- is it hypercharge?
 
-This script shows that the unique traceless U(1) generator from the commutant
-matches hypercharge U(1)_Y on the left-handed doublet surface.  The evidence
-has three legs:
+This runner verifies a CHAIN claim, not an internal SM-Y derivation. The
+chain has three independently-cited links:
 
-  1. EIGENVALUE MATCHING: The U(1) generator assigns eigenvalues in the
-     ratio 1:(-3) to the (2,3) and (2,1) subspaces, matching Y_quark/Y_lepton.
+  (L1)  STRUCTURAL RATIO. The unique traceless U(1) generator in the commutant
+        has eigenvalue ratio +1:(-3) on the (2,3) and (2,1) sub-blocks of
+        the LH-doublet sector. -- Source:
+        LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md
+        (bounded_theorem, audited_conditional only on staggered-Dirac gate).
 
-  2. ELECTRIC CHARGE: Q = T_3 + Y/2 gives the correct charges
-     (2/3, -1/3, 0, -1) for up, down, neutrino, electron.
+  (L2)  MATTER ASSIGNMENT. Sym^2(C^2) carries the SU(3) fundamental
+        representation; Anti^2(C^2) carries the SU(3) trivial representation.
+        Under the SM-definition convention `color-charged = quark, color-
+        singlet = lepton', this gives Q_L <-> (2,3) and L_L <-> (2,1).
+        -- Source:
+        LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md
+        (positive_theorem; chain target).
 
-  3. LEFT-HANDED CONSISTENCY: The traceless direction on this surface is
-     unique up to normalization.  Tr[Y] = 0 and the SU(2)^2-U(1) mixed trace
-     vanish on the left-handed sector, while Tr[Y^3] != 0 is expected because
-     the right-handed fermions are not included here.
+  (L3)  ABSOLUTE NORMALIZATION (admitted SM convention). Setting alpha = 1/3
+        in Y_alpha = alpha (P_sym - 3 P_anti) reproduces the SM convention
+        Y(L_L) = -1. This is *not* derived in the framework -- it is the
+        still-open LHCM repair item (2).
 
-  4. GUT NORMALIZATION: The ratio of eigenvalues matches the SU(5) GUT
-     embedding with the standard sqrt(3/5) normalization factor.
+This runner reports each numerical block with one of four labels:
+
+   [STRUCTURAL]   = follows from algebra alone, no SM-target import,
+                    matches link (L1) of the chain;
+   [CHAIN-L2]     = matter-assignment labels imported from LHCM matter
+                    assignment note;
+   [CHAIN-L3]     = uses the admitted SM convention alpha = 1/3
+                    (or Q = T_3 + Y/2);
+   [CONSISTENCY]  = downstream consistency check under the chain
+                    (informational only; not load-bearing).
+
+The previous header phrasing "shows that the unique traceless U(1)
+generator from the commutant matches hypercharge U(1)_Y on the left-handed
+doublet surface" was the load-bearing step that the audit lane ratified
+as `audited_renaming` because the matter-assignment step was internal
+rather than chained. The current header makes the chain assembly explicit
+and routes the matter-assignment step through the LHCM matter-assignment
+note's authority.
 
 PStack experiment: frontier-hypercharge-identification
-Depends on: frontier-su3-commutant
+Depends on: frontier-su3-commutant, frontier-lh-doublet-traceless-abelian-ratio,
+            frontier-lhcm-matter-assignment
 """
 
 from __future__ import annotations
@@ -91,20 +114,27 @@ U8 = np.kron(I2, U_sym_anti)
 # The (2,1) = 2 states are the lepton doublet (1 singlet x 2 weak)
 
 print("=" * 72)
-print("HYPERCHARGE U(1)_Y IDENTIFICATION FROM COMMUTANT")
+print("HYPERCHARGE U(1)_Y IDENTIFICATION (CHAIN VERIFICATION)")
 print("=" * 72)
 print()
 print("Setup: C^8 = (C^2)^{x3}, SU(2)_weak on factor 1, SWAP_{23} on factors 2,3")
-print("Commutant of {SU(2), SWAP_{23}} = gl(3,C) + gl(1,C)")
-print("  gl(3) acts on Sym^2(C^2) = C^3 [color triplet]")
-print("  gl(1) acts on Anti^2(C^2) = C^1 [singlet]")
+print("Commutant of {SU(2), SWAP_{23}} = gl(3,C) + gl(1,C)  [retained upstream]")
+print()
+print("CHAIN UNDER VERIFICATION:")
+print("  (L1) [STRUCTURAL]  ratio +1:(-3) on (Sym^2, Anti^2) sub-blocks")
+print("                     -- supplied by LH_DOUBLET_TRACELESS_ABELIAN_")
+print("                        EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02")
+print("  (L2) [CHAIN-L2]    Sym^2 -> SU(3) fundamental, Anti^2 -> SU(3) singlet")
+print("                     -- supplied by LHCM_MATTER_ASSIGNMENT_FROM_SU3_")
+print("                        REPRESENTATION_NOTE_2026-05-02")
+print("  (L3) [CHAIN-L3]    alpha = 1/3 (admitted SM convention, LHCM repair (2))")
 print()
 
 # ============================================================================
 # PART 1: The U(1) generator from the commutant
 # ============================================================================
 print("=" * 72)
-print("PART 1: The U(1) generator from the commutant")
+print("PART 1: The U(1) generator from the commutant  [STRUCTURAL + CHAIN-L3]")
 print("=" * 72)
 print()
 
@@ -162,19 +192,25 @@ for ev in unique_eigvals:
     print(f"    Y = {ev:+.4f}  multiplicity {mult}")
 
 print()
-print("  Interpretation:")
-print("    Y = +1/3 on 6 states = (2,3) = quark doublet (3 colors x 2 weak)")
-print("    Y = -1   on 2 states = (2,1) = lepton doublet (1 singlet x 2 weak)")
+print("  Structural ratio (alpha-independent):")
+print("    Y_alpha eigenvalues stand in ratio +1:(-3) on (Sym^2, Anti^2)")
+print("    [STRUCTURAL: cited from narrow ratio theorem]")
 print()
-print("  These match the Standard Model hypercharge assignments on the")
-print("  left-handed doublet surface: Q_L has Y = 1/3, L_L has Y = -1.")
+print("  At admitted SM-convention scale alpha = 1/3 [CHAIN-L3]:")
+print("    Y = +1/3 on 6 states = (2,3) sub-block")
+print("    Y = -1   on 2 states = (2,1) sub-block")
+print()
+print("  Identification with SM Y(Q_L) = +1/3 and Y(L_L) = -1 [CHAIN-L2 + CHAIN-L3]:")
+print("    requires the LHCM matter-assignment chain (color-triplet sector = Q_L,")
+print("    color-singlet sector = L_L) plus the admitted alpha = 1/3 normalization.")
+print("    Neither is internal to this runner; both are imported one-hop above.")
 
 # ============================================================================
 # PART 2: Verify commutation with SU(2) and SU(3)
 # ============================================================================
 print()
 print("=" * 72)
-print("PART 2: Commutation relations")
+print("PART 2: Commutation relations  [STRUCTURAL]")
 print("=" * 72)
 print()
 
@@ -224,8 +260,13 @@ print("  generator in the Standard Model sense.")
 # ============================================================================
 print()
 print("=" * 72)
-print("PART 3: Electric charge Q = T_3 + Y/2")
+print("PART 3: Electric charge Q = T_3 + Y/2  [CHAIN-L2 + CHAIN-L3 + admitted GMN]")
 print("=" * 72)
+print()
+print("  Note: Q = T_3 + Y/2 (Gell-Mann--Nishijima) is itself an SM-convention")
+print("  bridge, not a derived framework relation. The matter-assignment labels")
+print("  below ('u-type quark', 'electron', etc.) are imported from the LHCM")
+print("  matter-assignment note's chain to the SM-definition convention.")
 print()
 
 T3 = S[2]  # S_3 = sigma_z / 2 on factor 1
@@ -314,7 +355,7 @@ else:
 # ============================================================================
 print()
 print("=" * 72)
-print("PART 4: Consistency checks on the left-handed surface")
+print("PART 4: Consistency checks on the left-handed surface  [CONSISTENCY]")
 print("=" * 72)
 print()
 
@@ -410,7 +451,7 @@ print(f"    SU(2)^2-U(1) mixed anomaly vanishes: {abs(su2_mixed_anomaly) < 1e-10
 # ============================================================================
 print()
 print("=" * 72)
-print("PART 5: Uniqueness of the traceless U(1) direction")
+print("PART 5: Uniqueness of the traceless U(1) direction  [STRUCTURAL]")
 print("=" * 72)
 print()
 
@@ -440,8 +481,9 @@ print("  Requiring Tr[Y] = 0 (remove the overall phase):")
 print("    6*alpha + 2*beta = 0  =>  beta = -3*alpha")
 print("  This leaves a ONE-parameter family: Y = alpha * (P_sym - 3*P_anti)")
 print()
-print("  The normalization alpha is fixed by convention. Standard choice: alpha = 1/3")
-print("  gives Y_quark = 1/3, Y_lepton = -1.")
+print("  The normalization alpha is fixed by SM convention [CHAIN-L3, admitted].")
+print("  Standard choice alpha = 1/3 gives Y_(Sym^2 sub-block) = +1/3,")
+print("  Y_(Anti^2 sub-block) = -1.")
 print()
 
 # Verify: Tr[Y^3] on the left-handed surface is not zero
@@ -460,12 +502,14 @@ print()
 
 # The KEY point: within our 8-dimensional left-handed sector,
 # Tr[Y] = 0 UNIQUELY fixes Y up to normalization.
-print("  UNIQUENESS THEOREM:")
+print("  STRUCTURAL UNIQUENESS THEOREM:")
 print("  Within the commutant of {SU(2), SWAP_23} in End(C^8),")
 print("  there is exactly ONE traceless U(1) generator (up to normalization).")
-print("  Its eigenvalues are in the ratio 1:(-3) on the (2,3) vs (2,1) subspaces.")
-print("  This matches the Standard Model hypercharge on the left-handed")
-print("  doublet surface.")
+print("  Its eigenvalues are in the ratio 1:(-3) on the (Sym^2, Anti^2) sub-blocks.")
+print()
+print("  This matches the SM hypercharge ratio on the LH-doublet surface ONLY")
+print("  via the chain (L1 ratio + L2 matter assignment + L3 admitted scale).")
+print("  No internal SM-Y identification is performed in this note.")
 
 
 # ============================================================================
@@ -473,7 +517,7 @@ print("  doublet surface.")
 # ============================================================================
 print()
 print("=" * 72)
-print("PART 6: GUT normalization (SU(5) embedding)")
+print("PART 6: GUT normalization (SU(5) embedding)  [STRUCTURAL ratio]")
 print("=" * 72)
 print()
 
@@ -568,7 +612,7 @@ print("  compute here applies only to the doublet sector.")
 # ============================================================================
 print()
 print("=" * 72)
-print("PART 7: Explicit matrices")
+print("PART 7: Explicit matrices  [STRUCTURAL display, alpha = 1/3 for readability]")
 print("=" * 72)
 print()
 
@@ -601,7 +645,7 @@ print(Q_sa.real)
 # ============================================================================
 print()
 print("=" * 72)
-print("PART 8: No other traceless U(1) exists on this surface")
+print("PART 8: No other traceless U(1) exists on this surface  [STRUCTURAL]")
 print("=" * 72)
 print()
 
@@ -635,28 +679,30 @@ print()
 # is a convention (we choose a = 1/3 to match the SM).
 
 print("  General U(1) in commutant: Y = a*P_sym + b*P_anti")
-print("  Eigenvalues: a (x6 quark states), b (x2 lepton states)")
+print("  Eigenvalues: a (x6 on Sym^2 sub-block), b (x2 on Anti^2 sub-block)")
 print()
 print("  Constraint Tr[Y] = 0:  6a + 2b = 0  =>  b = -3a")
 print()
 print("  This is the ONLY constraint needed to fix Y up to normalization!")
-print("  Result: Y_quark : Y_lepton = 1 : (-3)")
+print("  Result: Y_(Sym^2) : Y_(Anti^2) = 1 : (-3)        [STRUCTURAL, alpha-free]")
 print()
-print("  With standard normalization a = 1/3:")
-print("    Y_quark = +1/3  (left-handed quark doublet)")
-print("    Y_lepton = -1   (left-handed lepton doublet)")
+print("  Under chain L2 (LHCM matter assignment): Sym^2 sector = Q_L (color")
+print("  triplet), Anti^2 sector = L_L (color singlet).")
+print("  Under chain L3 (admitted SM convention): alpha = 1/3.")
+print("  Combined: Y(Q_L) = +1/3, Y(L_L) = -1.   [CHAIN-L2 + CHAIN-L3]")
 print()
 
 # Verify: no OTHER traceless U(1) exists
 # In the 2-dim space of U(1) generators, the traceless condition
 # removes one dimension, leaving exactly 1.  QED.
-print("  PROOF OF UNIQUENESS:")
+print("  PROOF OF STRUCTURAL UNIQUENESS:")
 print("    dim(U(1) space in commutant) = 2  (center of u(3), plus u(1))")
 print("    dim(traceless subspace) = 1       (one linear constraint)")
-print("    => UNIQUE traceless U(1) generator (up to normalization)")
+print("    => UNIQUE traceless U(1) generator (up to normalization)  [STRUCTURAL]")
 print()
-print("  Therefore: the commutant U(1) is uniquely fixed on this surface,")
-print("  and its eigenvalues match U(1)_Y.")
+print("  Therefore: the commutant U(1) is uniquely fixed on this surface")
+print("  up to scale, and -- under chain L2 + L3 -- its eigenvalues coincide")
+print("  with the SM hypercharge values for the LH-doublet sector.")
 
 
 # ============================================================================
@@ -664,8 +710,13 @@ print("  and its eigenvalues match U(1)_Y.")
 # ============================================================================
 print()
 print("=" * 72)
-print("PART 9: Gell-Mann--Nishijima formula verification")
+print("PART 9: Gell-Mann--Nishijima formula verification  [CHAIN-L2 + CHAIN-L3]")
 print("=" * 72)
+print()
+print("  Q = T_3 + Y/2 is admitted as the SM-convention bridge between")
+print("  the framework T_3 and the SM-defined electric charge. This block")
+print("  verifies the chain consequents under the matter assignment;")
+print("  it does not derive the GMN formula from framework primitives.")
 print()
 
 print("  The Gell-Mann--Nishijima formula states: Q = T_3 + Y/2")
@@ -676,15 +727,17 @@ print("    T_3 = sigma_3/2 on factor 1  [derived from bipartite lattice]")
 print("    Y   = (1/3)*P_sym - P_anti   [unique traceless U(1) in commutant]")
 print("    Q   = T_3 + Y/2")
 print()
-print("  Resulting charges for one left-handed generation:")
-print(f"    {'Particle':15s} {'T_3':>6s} {'Y':>6s} {'Q':>6s}")
+print("  Resulting charges for one LH-doublet generation under chain L2 + L3:")
+print(f"    {'Particle (L2)':15s} {'T_3':>6s} {'Y':>6s} {'Q':>6s}")
 print("    " + "-" * 40)
 print(f"    {'u_L (3 colors)':15s} {'+1/2':>6s} {'+1/3':>6s} {'+2/3':>6s}")
 print(f"    {'d_L (3 colors)':15s} {'-1/2':>6s} {'+1/3':>6s} {'-1/3':>6s}")
 print(f"    {'nu_L':15s} {'+1/2':>6s} {'-1':>6s} {'0':>6s}")
 print(f"    {'e_L':15s} {'-1/2':>6s} {'-1':>6s} {'-1':>6s}")
 print()
-print("  These match the Standard Model EXACTLY.")
+print("  These match the SM LH-doublet pattern under chain L2 + L3.")
+print("  The Particle column labels are imported from LHCM matter assignment;")
+print("  the alpha = 1/3 scale is the admitted SM convention.")
 
 
 # ============================================================================
@@ -693,32 +746,34 @@ print("  These match the Standard Model EXACTLY.")
 print()
 print()
 print("=" * 72)
-print("FINAL SUMMARY")
+print("FINAL SUMMARY  (chain-claim verification)")
 print("=" * 72)
 print()
-print("  THEOREM: The unique traceless U(1) in the commutant su(3) + u(1)")
-print("  matches hypercharge U(1)_Y on the left-handed doublet surface.")
-print("  This is established by THREE independent arguments:")
+print("  CHAIN ASSEMBLY THEOREM (this note):")
+print("  Under the chain (L1 ratio + L2 matter assignment + L3 admitted scale),")
+print("  the unique traceless U(1) in the gl(3)+gl(1) commutant of")
+print("  {SU(2)_weak, SWAP_{23}} reproduces SM hypercharge on the LH-doublet")
+print("  surface. The runner above checks each link of the chain numerically")
+print("  and tags every block as STRUCTURAL / CHAIN-L2 / CHAIN-L3 / CONSISTENCY.")
 print()
-print("  1. EIGENVALUE MATCHING")
-print("     The unique traceless U(1) in the commutant has eigenvalues")
-print("     +1/3 (on 6 quark states) and -1 (on 2 lepton states).")
-print("     These are exactly the SM hypercharge values for left-handed fermions.")
+print("  STRUCTURAL FACTS verified (no SM-target import):")
+print("    * gl(3)+gl(1) commutant decomposition (upstream retained)")
+print("    * tracelessness on (Sym^2, Anti^2) gives ratio +1:(-3)")
+print("    * uniqueness up to alpha (one-parameter traceless family)")
+print("    * GUT-normalization ratio sqrt(3/5) is alpha-independent")
+print("    * commutation [Y, S_i] = [Y, T_a] = 0 with weak and color")
 print()
-print("  2. ELECTRIC CHARGE")
-print("     Q = T_3 + Y/2 produces charges 2/3, -1/3, 0, -1 --")
-print("     the up quark, down quark, neutrino, and electron charges.")
+print("  CHAIN CONSEQUENTS (under L2 matter assignment, L3 admitted scale):")
+print("    * Sym^2 sector identified with Q_L (color triplet); Anti^2 with L_L")
+print("    * Y_alpha at alpha = 1/3 reproduces (+1/3, -1) on (Q_L, L_L)")
+print("    * Q = T_3 + Y/2 reproduces SM charges (2/3, -1/3, 0, -1)")
 print()
-print("  3. UNIQUENESS")
-print("     The commutant u(3)+u(1) contains a 2-dimensional space of U(1)")
-print("     generators.  The tracelessness condition (removing the trivial")
-print("     overall phase) reduces this to a UNIQUE generator (up to")
-print("     normalization).  This unique generator matches hypercharge.")
-print()
-print("  4. GUT NORMALIZATION")
-print("     The eigenvalue ratio 1:(-3) is consistent with the SU(5) GUT")
-print("     embedding, where Y_GUT = sqrt(3/5) * Y_SM.")
-print()
-print("  BOTTOM LINE: The commutant U(1) is uniquely fixed on this surface")
-print("  and matches hypercharge on the left-handed sector.")
+print("  WHAT IS NOT CLAIMED:")
+print("    * Internal derivation of (Sym^2 = SU(3)-fundamental) -- chained")
+print("      to LHCM matter-assignment note (its own audit row)")
+print("    * Derivation of alpha = 1/3 from framework -- still-open LHCM")
+print("      repair item (2); admitted as SM convention here")
+print("    * Internal SM-Y identification step (this was the previous load-")
+print("      bearing step that the audit lane ratified as `audited_renaming';")
+print("      the rewrite removes it from the load-bearing chain)")
 print("=" * 72)

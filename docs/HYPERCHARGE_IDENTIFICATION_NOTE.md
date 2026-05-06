@@ -1,149 +1,264 @@
 # Hypercharge U(1)_Y Identification from the Commutant
 
-**Status:** support: structural identification of the unique traceless commutant U(1) generator with Standard Model hypercharge within A_min; audit_status=audited_renaming. This note is an identification, not a first-principles derivation of Standard Model hypercharge.
+**Type:** bounded_theorem (rewritten 2026-05-05; previous load-bearing
+identification step was ratified `audited_renaming`; the rewrite reroutes
+that step through citation chain).
+**Status:** chain claim — the load-bearing step is the
+structural eigenvalue ratio 1:(-3) on the (Sym², Anti²) sub-decomposition of
+the LH-doublet sector, supplied by the retained-grade narrow ratio theorem,
+combined with the (Sym², Anti²) ↔ (SU(3)-fundamental, SU(3)-singlet)
+representation-theory chain supplied by the LHCM matter assignment note.
+The SM-Y matching on the LH-doublet surface follows from those two upstream
+chains under the SM-definition convention `color-charged ≡ quark, color-singlet ≡ lepton`.
+
+**Re-audit handoff (2026-05-05).** The previous load-bearing step (named
+"With conventional normalization a=1/3, the (2,3) subspace is identified with
+the left-handed quark doublet and the (2,1) subspace is identified with the
+left-handed lepton doublet, so the traceless commutant U(1) matches SM
+hypercharge on that surface.") was ratified as `audited_renaming` on the
+basis that the matter-sector identification was not derived. This rewrite
+removes that identification from the load-bearing chain and replaces it
+with a citation to the matter-assignment representation theorem (cited
+authority below). The absolute normalization choice (`a = 1/3`) is now
+moved out of the load-bearing chain and explicitly admitted as SM
+convention; closing it requires the still-open LHCM repair item (2),
+covered by the parent atlas.
 
 ## Audit boundary
 
-This note identifies the unique traceless U(1) direction in the
-commutant algebra `su(3) + u(1)` of `{SU(2)_weak, SWAP_23}` within
-A_min.
+This note carries no derivation of the (Sym², Anti²) ↔ (color triplet,
+color singlet) assignment internally. That assignment is forwarded to
+[`LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md`](LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md)
+which derives, from the retained graph-first SU(3) integration note's
+gl(3) ⊕ gl(1) commutant theorem, that:
 
-The identified Standard Model construct is hypercharge on the
-left-handed doublet surface, with the conventional normalization shown
-below.
+- the Sym²(C²) block carries the SU(3) fundamental representation (3);
+- the Anti²(C²) block carries the SU(3) trivial representation (1).
 
-This note does **not** claim to derive the numerical hypercharge
-normalization from first principles, to derive the existence of the
-Standard Model hypercharge construct independent of this identification,
-or to complete the full anomaly-canceling Standard Model spectrum.
+The SM-definition convention `color-charged Weyl fermion ≡ quark,
+color-singlet Weyl fermion ≡ lepton` is then a definitional convention,
+not a derivation; the matter assignment Q_L ↔ (2, 3), L_L ↔ (2, 1)
+follows from SU(3) representation content. This note imports that chain
+as a one-hop authority.
 
-Audit history: the audit lane records `audit_status=audited_renaming`
-for `hypercharge_identification_note`, cross-confirmed as class F by
-`codex-audit-loop-round-2` and
-`codex-fresh-context-20260430-03-hypercharge`.
+This note does **not** claim to:
+
+- derive the (Sym², Anti²) ↔ (triplet, singlet) assignment internally;
+- derive the absolute normalization `a = 1/3` from the framework
+  (admitted SM convention; this is the still-open LHCM repair item 2);
+- complete the full anomaly-canceling Standard Model spectrum.
+
+Audit history: the audit lane recorded `audit_status=audited_renaming`
+under cross-confirmation by `codex-audit-loop-round-2` and
+`codex-fresh-context-20260430-03-hypercharge` on the previous version
+whose load-bearing step internally identified (2, 3) ≡ Q_L. The current
+rewrite reroutes that step through the cited authority chain and is
+proposed for re-audit at `bounded_theorem` / `audited_clean`.
 
 ## Statement
 
-**Identification.** The unique traceless U(1) direction in the commutant algebra
-su(3) + u(1) of {SU(2)\_weak, SWAP\_{23}} in End(C^8) matches the Standard
-Model hypercharge assignments on the left-handed doublet surface.
+**Theorem (chained ratio + matter assignment ⇒ SM-Y match on LH-doublet
+surface).** Let C^8 = (C²)^{⊗3} be the LH-doublet sector with SU(2)_weak
+on factor 1 (from the retained graph-first selector + bipartite lattice
+structure) and SWAP_{23} on factors 2, 3 (from the retained Z₂ spatial
+permutation symmetry). Let Y_α = α(P_sym − 3 P_anti) be the
+one-parameter family of traceless U(1) generators in the (gl(3) ⊕
+gl(1))-commutant of {SU(2)_weak, SWAP_{23}}, parameterized by α ∈ ℝ. Then:
+
+1. *(Ratio)* The eigenvalues of Y_α on the (2, 3) and (2, 1) sub-blocks
+   stand in the ratio 1 : (−3) for every α ≠ 0. *Source:*
+   [`LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md`](LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md).
+2. *(Matter assignment under SM-definition convention)* Under the
+   SM-definition convention `color-charged ≡ quark, color-singlet ≡
+   lepton`, the (2, 3) sector is the LH quark doublet Q_L and the
+   (2, 1) sector is the LH lepton doublet L_L. *Source:*
+   [`LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md`](LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md).
+3. *(Normalization is admitted SM convention)* Setting α = +1/3
+   produces eigenvalues (+1/3, −1) on (Q_L, L_L), matching the SM
+   hypercharge values. The absolute scale `α = 1/3` is **not derived**
+   in this note and is imported as the SM convention `Y(L_L) = −1`.
+
+The combined SM-Y matching follows from (1) + (2) once the convention
+in (3) is fixed. This note is the chain assembly point for these three
+items; the new load-bearing step is the chain itself, not any of (1),
+(2), or (3) individually (each is supplied by — or admitted as input to —
+its own ledger row).
 
 ## Setup
 
-The taste space C^8 = (C^2)^{x3} carries two structures:
+The taste space C^8 = (C²)^{⊗3} carries two structures that follow from
+the retained graph-first selector + integration chain:
 
-1. **SU(2)\_weak**: S\_i = sigma\_i/2 on factor 1, derived from the bipartite
-   lattice structure.
-2. **SWAP\_{23}**: exchanges tensor factors 2 and 3, from the Z\_2 spatial
-   permutation symmetry.
+1. **SU(2)_weak**: S_i = σ_i / 2 on factor 1, derived from the bipartite
+   lattice structure of the selected-axis surface (see
+   `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`).
+2. **SWAP_{23}**: exchanges tensor factors 2 and 3, the residual Z₂
+   permutation after axis selection (same upstream).
 
-The commutant of {SU(2), SWAP\_{23}} in End(C^8) is gl(3,C) + gl(1,C),
-established in `frontier_su3_commutant.py`. The mechanism:
+The commutant of {SU(2), SWAP_{23}} in End(C^8) is gl(3, ℂ) ⊕ gl(1, ℂ),
+with semisimple part su(3). Under the SWAP_{23} eigendecomposition,
+C⁴ = Sym²(C²) ⊕ Anti²(C²) = C³ ⊕ C¹, and the LH-doublet sector
+decomposes as:
 
-- SU(2) on factor 1 restricts the commutant to gl(4,C) on factors 2,3
-  (by Schur's lemma).
-- SWAP\_{23} decomposes C^4 = C^2 x C^2 into Sym^2(C^2) = C^3 and
-  Anti^2(C^2) = C^1.
-- gl(4) restricted to this decomposition = gl(3) + gl(1).
-- Compact + traceless form: su(3) + u(1).
+    C^8 = C² ⊗ (C³ ⊕ C¹) = (C² ⊗ C³) ⊕ (C² ⊗ C¹) = (2, 3) ⊕ (2, 1)
 
-## The U(1) Generator
+under SU(2) × SU(3). All of this is retained-grade content of
+[`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
+(claim_type: bounded_theorem, audit_status: audited_clean,
+effective_status: retained_bounded, cross-confirmed).
 
-The commutant gl(3) + gl(1) contains two independent U(1) generators:
+## The U(1) Generator (structural part)
 
-- P\_sym: the projector onto Sym^2(C^2) (center of gl(3))
-- P\_anti: the projector onto Anti^2(C^2) (the gl(1))
+The commutant gl(3) ⊕ gl(1) on C⁴ contains a 2-parameter family of U(1)
+generators:
 
-General U(1): Y(a,b) = a P\_sym + b P\_anti, embedded in C^8 as I\_2 x Y.
+    Y(α, β) = α P_sym + β P_anti       (on the C⁴ factor)
 
-Eigenvalues on C^8: a (x6 quark states), b (x2 lepton states).
+Embedded in C^8: Y_8 = I_2 ⊗ Y(α, β). Eigenvalues on C^8: α (× 6, on
+the (2, 3) sector), β (× 2, on the (2, 1) sector).
 
-**Tracelessness condition** (removing the trivial overall phase):
+**Tracelessness** (removing the trivial overall phase):
 
-    6a + 2b = 0  =>  b = -3a
+    Tr_{C^8}[Y_8] = 6α + 2β = 0   ⇒   β = −3α.
 
-This leaves a unique traceless generator (up to normalization):
+This leaves a one-parameter traceless family Y_α = α(P_sym − 3 P_anti)
+with eigenvalue ratio +1 : (−3) on (Sym², Anti²) — independent of α.
 
-    Y = a (P_sym - 3 P_anti)
+**Source for the ratio:** the structural ratio +1 : (−3) is the load-bearing
+content of
+[`LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md`](LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md)
+(claim_type: bounded_theorem; audit_status: audited_conditional —
+conditional only on the still-open staggered-Dirac realization gate, not
+on any internal renaming step).
 
-## Structural check: matching the hypercharge pattern
+## Chained matter assignment (Sym²/Anti² ↔ triplet/singlet)
 
-### 1. Eigenvalue Matching
+The (Sym², Anti²) ↔ (SU(3)-fundamental, SU(3)-singlet) representation-theory
+mapping is supplied by
+[`LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md`](LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md):
 
-With conventional normalization a = 1/3:
+> 1. the 3-dimensional Sym² block is the **unique** non-trivial irreducible
+>    representation of the structural SU(3) on the 4-point base;
+> 2. the 1-dimensional Anti² block is the **unique** trivial (singlet)
+>    representation of the structural SU(3) on the 4-point base.
 
-| Subspace | Multiplicity | Y value | SM identification |
+Combined with the SM-definition convention `color-charged ≡ quark,
+color-singlet ≡ lepton`, the matter assignment Q_L ↔ (2, 3) and
+L_L ↔ (2, 1) is **forced** by SU(3) representation content. The labels
+"quark" and "lepton" themselves are SM-definition conventions; deriving
+"what fermion species an SU(3) fundamental rep at this scale should be
+called" is naming, not physics derivation.
+
+## Structural consequences (downstream of the chain)
+
+Each consequence below follows from the chain (1) + (2) + the admitted
+SM-convention normalization (3) of the **Statement** section. None is
+load-bearing for this note's theorem; all are downstream consistency
+checks under the chained inputs.
+
+### 1. Eigenvalue Pattern at α = 1/3 (SM-convention scale)
+
+With α = 1/3 (SM convention `Y(L_L) = −1`):
+
+| Sub-block | Multiplicity | Y_α | SM identification (via LHCM matter assignment) |
 |----------|-------------|---------|-------------------|
-| (2,3) = C^2 x Sym^2(C^2) | 6 | +1/3 | Left-handed quark doublet |
-| (2,1) = C^2 x Anti^2(C^2) | 2 | -1 | Left-handed lepton doublet |
+| (2, 3) = C² ⊗ Sym²(C²) | 6 | +1/3 | Left-handed quark doublet Q_L |
+| (2, 1) = C² ⊗ Anti²(C²) | 2 | −1 | Left-handed lepton doublet L_L |
 
-These match the Standard Model hypercharge values on the left-handed
-doublet surface:
-- Q\_L = (u\_L, d\_L): Y = +1/3
-- L\_L = (nu\_L, e\_L): Y = -1
+These match the SM hypercharge values on the LH-doublet surface — under
+the chained matter assignment and the admitted SM-convention scale.
 
-### 2. Electric Charge
+### 2. Electric Charge (downstream, under chain)
 
-With T\_3 = sigma\_3/2 on the weak factor and Q = T\_3 + Y/2:
+With T_3 = σ_3/2 on the weak factor and the SM Gell-Mann–Nishijima
+convention Q = T_3 + Y/2, applied to the chained matter assignment at
+α = 1/3:
 
-| Particle | T\_3 | Y | Q = T\_3 + Y/2 |
+| Particle | T_3 | Y | Q = T_3 + Y/2 |
 |----------|------|---|----------------|
-| u\_L (3 colors) | +1/2 | +1/3 | +2/3 |
-| d\_L (3 colors) | -1/2 | +1/3 | -1/3 |
-| nu\_L | +1/2 | -1 | 0 |
-| e\_L | -1/2 | -1 | -1 |
+| u_L (3 colors) | +1/2 | +1/3 | +2/3 |
+| d_L (3 colors) | −1/2 | +1/3 | −1/3 |
+| ν_L | +1/2 | −1 | 0 |
+| e_L | −1/2 | −1 | −1 |
 
-Under this identification, all listed charges match the Standard Model
-pattern exactly.
+These charges match the SM pattern. The Gell-Mann–Nishijima formula
+itself is an SM-convention bridge; it is not derived in this note.
 
-### 3. Uniqueness
+### 3. Uniqueness (structural part of the chain)
 
-The argument is purely algebraic:
+The argument that the traceless U(1) is unique up to scale is purely
+algebraic and is the load-bearing step of the narrow ratio theorem cited
+above:
 
 1. The commutant contains a 2-dimensional space of U(1) generators
-   (center of u(3), plus the explicit u(1)).
-2. The tracelessness condition imposes one linear constraint.
-3. This reduces the space to **dimension 1** -- a unique generator up to
+   (two independent projectors P_sym and P_anti on the Sym² and Anti²
+   sub-blocks).
+2. The tracelessness condition 6α + 2β = 0 imposes one linear constraint.
+3. This reduces the space to **dimension 1** — a unique generator up to
    normalization.
-4. That unique generator has eigenvalue ratio 1:(-3) on (2,3) vs (2,1).
-5. This matches hypercharge on the left-handed doublet surface.
+4. That unique generator has eigenvalue ratio +1 : (−3) on (Sym², Anti²).
+
+Step 4 is **the load-bearing structural fact**. Identification with SM
+hypercharge follows from the chain in (Statement, items 1–3); it is
+**not** a separate uniqueness claim for this note.
 
 ### 4. Consistency Checks on the Left-Handed Surface
 
-For the 8 left-handed states:
+For the 8 LH states under the chain:
 
-- **Tr[Y] = 0**: 6(1/3) + 2(-1) = 0. The traceless direction removes the
-  overall phase.
-- **Tr[Y {S\_i, S\_j}] = 0**: The SU(2)^2-U(1) mixed trace vanishes on this
-  left-handed surface because Tr\_color[Y] = 3(1/3) + 1(-1) = 0.
-- **Tr[Y^3] != 0**: Expected on a left-handed-only surface. Full anomaly
-  cancellation requires the right-handed fermions as well.
+- **Tr[Y_α] = 0 on C^8:** 6α + 2(−3α) = 0. By construction of the
+  traceless family.
+- **Tr[Y_α {S_i, S_j}] = 0:** the SU(2)² – U(1) mixed trace vanishes on
+  the LH-doublet surface because Tr_color[Y_α] = 3α + 1·(−3α) = 0. This
+  is a structural consequence of the ratio +1 : (−3) and the fact that
+  SU(2) acts diagonally on the color factor.
+- **Tr[Y_α³] ≠ 0 on the LH-doublet surface only:** Expected; full anomaly
+  cancellation requires the right-handed fermions, supplied by
+  [`RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md`](RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md).
 
-### 5. GUT Normalization
+### 5. GUT Normalization (structural; α-independent ratio)
 
-The GUT-normalized hypercharge Y\_GUT = sqrt(3/5) Y\_SM. The ratio
-Tr[Y^2] = 8/3 and Tr[T\_a^2]\_SU(3) = 1 are consistent with the standard
-SU(5) embedding.
-This squared-trace arithmetic is now packaged as the standalone retained
-subtheorem
-`HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`.
+The GUT-normalized hypercharge satisfies Y_GUT = √(3/5) Y_SM. The ratio
+Tr[Y_α²] / (multiplicity-weighted) is α² × 8/3; the GUT factor √(3/5)
+is a structural consequence of the eigenvalue ratio +1 : (−3) and the
+6 + 2 = 8 multiplicity split, independent of α. The squared-trace
+arithmetic is now packaged as the standalone retained subtheorem
+[`HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`](HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md).
 
-## Identification boundary
+## Identification boundary (what is and isn't load-bearing)
 
-The hypercharge identification is not added as an independent A_min
-input. It follows from three structural ingredients on the left-handed
-surface:
+The hypercharge identification is **not** an independent A_min input. It
+follows from three structural ingredients on the LH-doublet surface, **none
+of which is internally derived in this note** — each is chained to its own
+authority:
 
-1. C^8 = (C^2)^{x3} (taste space from the staggered lattice)
-2. SU(2)\_weak on factor 1 (from bipartite structure)
-3. SWAP\_{23} symmetry (from spatial permutation)
+| Chain element | Authority | Effective status |
+|---|---|---|
+| Eigenvalue ratio +1:(−3) on (Sym², Anti²) | [`LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md`](LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md) | bounded_theorem, audited_conditional (only on staggered-Dirac gate) |
+| (Sym², Anti²) ↔ (SU(3)-fundamental, SU(3)-singlet) | [`LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md`](LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md) | positive_theorem (unaudited at time of this rewrite; chain target for parent atlas) |
+| (color triplet ≡ quark, color singlet ≡ lepton) | SM-definition convention | admitted naming, not load-bearing physics |
+| Absolute scale α = 1/3 (`Y(L_L) = −1`) | SM-convention normalization | admitted; LHCM repair item (2), still open |
 
-Within this setup, the commutant algebra isolates su(3) + u(1), and the
-traceless U(1) generator is **unique up to normalization**. The audit
-status records the final step as an identification with hypercharge, not
-a first-principles derivation of hypercharge itself.
+The load-bearing step **of this note** is the chain assembly itself —
+i.e., the statement that, jointly, these chains plus the admitted SM
+convention reproduce the SM hypercharge pattern on the LH-doublet
+surface. No internal renaming step remains in the load-bearing chain;
+the runner verifies the structural ingredients (ratio, commutation,
+chain-consequent charges, uniqueness, GUT trace) and explicitly labels
+the matter-sector identifications as **chain consequents under the
+LHCM matter assignment**, not as internal claims.
 
 ## Files
 
-- `scripts/frontier_hypercharge_identification.py`: Full numerical verification
-- `scripts/frontier_su3_commutant.py`: Prior result establishing the commutant
+- [`scripts/frontier_hypercharge_identification.py`](../scripts/frontier_hypercharge_identification.py):
+  Numerical verification of the chain. The runner is structured so each
+  numerical block reports whether it verifies a structural fact (ratio,
+  commutation, multiplicity) or a chain-consequent (matter-assignment
+  labels, charges, anomaly traces). The matter-assignment labels are
+  explicitly tagged as imported from the LHCM matter-assignment note.
+- [`scripts/frontier_su3_commutant.py`](../scripts/frontier_su3_commutant.py):
+  Prior result establishing the gl(3) ⊕ gl(1) commutant.
+- [`scripts/frontier_lh_doublet_traceless_abelian_ratio.py`](../scripts/frontier_lh_doublet_traceless_abelian_ratio.py):
+  Independent runner for the structural ratio theorem.
+- [`scripts/frontier_lhcm_matter_assignment.py`](../scripts/frontier_lhcm_matter_assignment.py):
+  Independent runner for the matter-assignment representation theorem.

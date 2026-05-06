@@ -1,22 +1,29 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_hypercharge_identification.py
-runner_sha256: 170bd619ac42577c62adc2fb1bf76bde61fac469e6b445b85b3ec291ae59873d
+runner_sha256: 9be65cd23e988c88e4ff6210afce9632306c956bbb74391d9018a34c5d937f97
 timeout_sec: 120
 exit_code: 0
 elapsed_sec: 0.07
 status: ok
 ----- stdout -----
 ========================================================================
-HYPERCHARGE U(1)_Y IDENTIFICATION FROM COMMUTANT
+HYPERCHARGE U(1)_Y IDENTIFICATION (CHAIN VERIFICATION)
 ========================================================================
 
 Setup: C^8 = (C^2)^{x3}, SU(2)_weak on factor 1, SWAP_{23} on factors 2,3
-Commutant of {SU(2), SWAP_{23}} = gl(3,C) + gl(1,C)
-  gl(3) acts on Sym^2(C^2) = C^3 [color triplet]
-  gl(1) acts on Anti^2(C^2) = C^1 [singlet]
+Commutant of {SU(2), SWAP_{23}} = gl(3,C) + gl(1,C)  [retained upstream]
+
+CHAIN UNDER VERIFICATION:
+  (L1) [STRUCTURAL]  ratio +1:(-3) on (Sym^2, Anti^2) sub-blocks
+                     -- supplied by LH_DOUBLET_TRACELESS_ABELIAN_
+                        EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02
+  (L2) [CHAIN-L2]    Sym^2 -> SU(3) fundamental, Anti^2 -> SU(3) singlet
+                     -- supplied by LHCM_MATTER_ASSIGNMENT_FROM_SU3_
+                        REPRESENTATION_NOTE_2026-05-02
+  (L3) [CHAIN-L3]    alpha = 1/3 (admitted SM convention, LHCM repair (2))
 
 ========================================================================
-PART 1: The U(1) generator from the commutant
+PART 1: The U(1) generator from the commutant  [STRUCTURAL + CHAIN-L3]
 ========================================================================
 
 The traceless U(1) generator in the commutant:
@@ -28,15 +35,21 @@ The traceless U(1) generator in the commutant:
     Y = -1.0000  multiplicity 2
     Y = +0.3333  multiplicity 6
 
-  Interpretation:
-    Y = +1/3 on 6 states = (2,3) = quark doublet (3 colors x 2 weak)
-    Y = -1   on 2 states = (2,1) = lepton doublet (1 singlet x 2 weak)
+  Structural ratio (alpha-independent):
+    Y_alpha eigenvalues stand in ratio +1:(-3) on (Sym^2, Anti^2)
+    [STRUCTURAL: cited from narrow ratio theorem]
 
-  These match the Standard Model hypercharge assignments on the
-  left-handed doublet surface: Q_L has Y = 1/3, L_L has Y = -1.
+  At admitted SM-convention scale alpha = 1/3 [CHAIN-L3]:
+    Y = +1/3 on 6 states = (2,3) sub-block
+    Y = -1   on 2 states = (2,1) sub-block
+
+  Identification with SM Y(Q_L) = +1/3 and Y(L_L) = -1 [CHAIN-L2 + CHAIN-L3]:
+    requires the LHCM matter-assignment chain (color-triplet sector = Q_L,
+    color-singlet sector = L_L) plus the admitted alpha = 1/3 normalization.
+    Neither is internal to this runner; both are imported one-hop above.
 
 ========================================================================
-PART 2: Commutation relations
+PART 2: Commutation relations  [STRUCTURAL]
 ========================================================================
 
   [Y, S_i] = 0 for all i (commutes with SU(2)_weak): True
@@ -47,8 +60,13 @@ PART 2: Commutation relations
   generator in the Standard Model sense.
 
 ========================================================================
-PART 3: Electric charge Q = T_3 + Y/2
+PART 3: Electric charge Q = T_3 + Y/2  [CHAIN-L2 + CHAIN-L3 + admitted GMN]
 ========================================================================
+
+  Note: Q = T_3 + Y/2 (Gell-Mann--Nishijima) is itself an SM-convention
+  bridge, not a derived framework relation. The matter-assignment labels
+  below ('u-type quark', 'electron', etc.) are imported from the LHCM
+  matter-assignment note's chain to the SM-definition convention.
 
   Q = T_3 + Y/2 as 8x8 matrix
   Q is Hermitian: True
@@ -79,7 +97,7 @@ PART 3: Electric charge Q = T_3 + Y/2
     electron:      Q = -1    (1 singlet)
 
 ========================================================================
-PART 4: Consistency checks on the left-handed surface
+PART 4: Consistency checks on the left-handed surface  [CONSISTENCY]
 ========================================================================
 
   Consistency check 1: Tr[Y] = 6*(0.3333) + 2*(-1.0000)
@@ -114,7 +132,7 @@ PART 4: Consistency checks on the left-handed surface
     SU(2)^2-U(1) mixed anomaly vanishes: True
 
 ========================================================================
-PART 5: Uniqueness of the traceless U(1) direction
+PART 5: Uniqueness of the traceless U(1) direction  [STRUCTURAL]
 ========================================================================
 
   The commutant contains a 2-parameter family of U(1) generators:
@@ -124,8 +142,9 @@ PART 5: Uniqueness of the traceless U(1) direction
     6*alpha + 2*beta = 0  =>  beta = -3*alpha
   This leaves a ONE-parameter family: Y = alpha * (P_sym - 3*P_anti)
 
-  The normalization alpha is fixed by convention. Standard choice: alpha = 1/3
-  gives Y_quark = 1/3, Y_lepton = -1.
+  The normalization alpha is fixed by SM convention [CHAIN-L3, admitted].
+  Standard choice alpha = 1/3 gives Y_(Sym^2 sub-block) = +1/3,
+  Y_(Anti^2 sub-block) = -1.
 
   Check Tr[Y^3] for generic alpha:
     Tr[Y^3] = 6*(alpha)^3 + 2*(-3*alpha)^3 = 6*alpha^3 - 54*alpha^3 = -48*alpha^3
@@ -135,15 +154,17 @@ PART 5: Uniqueness of the traceless U(1) direction
   fermions are included.  For a single left-handed generation, Tr[Y^3] != 0
   is expected.
 
-  UNIQUENESS THEOREM:
+  STRUCTURAL UNIQUENESS THEOREM:
   Within the commutant of {SU(2), SWAP_23} in End(C^8),
   there is exactly ONE traceless U(1) generator (up to normalization).
-  Its eigenvalues are in the ratio 1:(-3) on the (2,3) vs (2,1) subspaces.
-  This matches the Standard Model hypercharge on the left-handed
-  doublet surface.
+  Its eigenvalues are in the ratio 1:(-3) on the (Sym^2, Anti^2) sub-blocks.
+
+  This matches the SM hypercharge ratio on the LH-doublet surface ONLY
+  via the chain (L1 ratio + L2 matter assignment + L3 admitted scale).
+  No internal SM-Y identification is performed in this note.
 
 ========================================================================
-PART 6: GUT normalization (SU(5) embedding)
+PART 6: GUT normalization (SU(5) embedding)  [STRUCTURAL ratio]
 ========================================================================
 
   Tr[Y^2] over 8 states = 2.666667
@@ -177,7 +198,7 @@ PART 6: GUT normalization (SU(5) embedding)
   compute here applies only to the doublet sector.
 
 ========================================================================
-PART 7: Explicit matrices
+PART 7: Explicit matrices  [STRUCTURAL display, alpha = 1/3 for readability]
 ========================================================================
 
   Y (hypercharge) in original basis |a,b,c>:
@@ -231,32 +252,39 @@ PART 7: Explicit matrices
  [ 0.        0.        0.        0.        0.        0.        0.       -1.      ]]
 
 ========================================================================
-PART 8: No other traceless U(1) exists on this surface
+PART 8: No other traceless U(1) exists on this surface  [STRUCTURAL]
 ========================================================================
 
   General U(1) in commutant: Y = a*P_sym + b*P_anti
-  Eigenvalues: a (x6 quark states), b (x2 lepton states)
+  Eigenvalues: a (x6 on Sym^2 sub-block), b (x2 on Anti^2 sub-block)
 
   Constraint Tr[Y] = 0:  6a + 2b = 0  =>  b = -3a
 
   This is the ONLY constraint needed to fix Y up to normalization!
-  Result: Y_quark : Y_lepton = 1 : (-3)
+  Result: Y_(Sym^2) : Y_(Anti^2) = 1 : (-3)        [STRUCTURAL, alpha-free]
 
-  With standard normalization a = 1/3:
-    Y_quark = +1/3  (left-handed quark doublet)
-    Y_lepton = -1   (left-handed lepton doublet)
+  Under chain L2 (LHCM matter assignment): Sym^2 sector = Q_L (color
+  triplet), Anti^2 sector = L_L (color singlet).
+  Under chain L3 (admitted SM convention): alpha = 1/3.
+  Combined: Y(Q_L) = +1/3, Y(L_L) = -1.   [CHAIN-L2 + CHAIN-L3]
 
-  PROOF OF UNIQUENESS:
+  PROOF OF STRUCTURAL UNIQUENESS:
     dim(U(1) space in commutant) = 2  (center of u(3), plus u(1))
     dim(traceless subspace) = 1       (one linear constraint)
-    => UNIQUE traceless U(1) generator (up to normalization)
+    => UNIQUE traceless U(1) generator (up to normalization)  [STRUCTURAL]
 
-  Therefore: the commutant U(1) is uniquely fixed on this surface,
-  and its eigenvalues match U(1)_Y.
+  Therefore: the commutant U(1) is uniquely fixed on this surface
+  up to scale, and -- under chain L2 + L3 -- its eigenvalues coincide
+  with the SM hypercharge values for the LH-doublet sector.
 
 ========================================================================
-PART 9: Gell-Mann--Nishijima formula verification
+PART 9: Gell-Mann--Nishijima formula verification  [CHAIN-L2 + CHAIN-L3]
 ========================================================================
+
+  Q = T_3 + Y/2 is admitted as the SM-convention bridge between
+  the framework T_3 and the SM-defined electric charge. This block
+  verifies the chain consequents under the matter assignment;
+  it does not derive the GMN formula from framework primitives.
 
   The Gell-Mann--Nishijima formula states: Q = T_3 + Y/2
   where Q is electric charge, T_3 is weak isospin, Y is hypercharge.
@@ -266,46 +294,50 @@ PART 9: Gell-Mann--Nishijima formula verification
     Y   = (1/3)*P_sym - P_anti   [unique traceless U(1) in commutant]
     Q   = T_3 + Y/2
 
-  Resulting charges for one left-handed generation:
-    Particle           T_3      Y      Q
+  Resulting charges for one LH-doublet generation under chain L2 + L3:
+    Particle (L2)      T_3      Y      Q
     ----------------------------------------
     u_L (3 colors)    +1/2   +1/3   +2/3
     d_L (3 colors)    -1/2   +1/3   -1/3
     nu_L              +1/2     -1      0
     e_L               -1/2     -1     -1
 
-  These match the Standard Model EXACTLY.
+  These match the SM LH-doublet pattern under chain L2 + L3.
+  The Particle column labels are imported from LHCM matter assignment;
+  the alpha = 1/3 scale is the admitted SM convention.
 
 
 ========================================================================
-FINAL SUMMARY
+FINAL SUMMARY  (chain-claim verification)
 ========================================================================
 
-  THEOREM: The unique traceless U(1) in the commutant su(3) + u(1)
-  matches hypercharge U(1)_Y on the left-handed doublet surface.
-  This is established by THREE independent arguments:
+  CHAIN ASSEMBLY THEOREM (this note):
+  Under the chain (L1 ratio + L2 matter assignment + L3 admitted scale),
+  the unique traceless U(1) in the gl(3)+gl(1) commutant of
+  {SU(2)_weak, SWAP_{23}} reproduces SM hypercharge on the LH-doublet
+  surface. The runner above checks each link of the chain numerically
+  and tags every block as STRUCTURAL / CHAIN-L2 / CHAIN-L3 / CONSISTENCY.
 
-  1. EIGENVALUE MATCHING
-     The unique traceless U(1) in the commutant has eigenvalues
-     +1/3 (on 6 quark states) and -1 (on 2 lepton states).
-     These are exactly the SM hypercharge values for left-handed fermions.
+  STRUCTURAL FACTS verified (no SM-target import):
+    * gl(3)+gl(1) commutant decomposition (upstream retained)
+    * tracelessness on (Sym^2, Anti^2) gives ratio +1:(-3)
+    * uniqueness up to alpha (one-parameter traceless family)
+    * GUT-normalization ratio sqrt(3/5) is alpha-independent
+    * commutation [Y, S_i] = [Y, T_a] = 0 with weak and color
 
-  2. ELECTRIC CHARGE
-     Q = T_3 + Y/2 produces charges 2/3, -1/3, 0, -1 --
-     the up quark, down quark, neutrino, and electron charges.
+  CHAIN CONSEQUENTS (under L2 matter assignment, L3 admitted scale):
+    * Sym^2 sector identified with Q_L (color triplet); Anti^2 with L_L
+    * Y_alpha at alpha = 1/3 reproduces (+1/3, -1) on (Q_L, L_L)
+    * Q = T_3 + Y/2 reproduces SM charges (2/3, -1/3, 0, -1)
 
-  3. UNIQUENESS
-     The commutant u(3)+u(1) contains a 2-dimensional space of U(1)
-     generators.  The tracelessness condition (removing the trivial
-     overall phase) reduces this to a UNIQUE generator (up to
-     normalization).  This unique generator matches hypercharge.
-
-  4. GUT NORMALIZATION
-     The eigenvalue ratio 1:(-3) is consistent with the SU(5) GUT
-     embedding, where Y_GUT = sqrt(3/5) * Y_SM.
-
-  BOTTOM LINE: The commutant U(1) is uniquely fixed on this surface
-  and matches hypercharge on the left-handed sector.
+  WHAT IS NOT CLAIMED:
+    * Internal derivation of (Sym^2 = SU(3)-fundamental) -- chained
+      to LHCM matter-assignment note (its own audit row)
+    * Derivation of alpha = 1/3 from framework -- still-open LHCM
+      repair item (2); admitted as SM convention here
+    * Internal SM-Y identification step (this was the previous load-
+      bearing step that the audit lane ratified as `audited_renaming';
+      the rewrite removes it from the load-bearing chain)
 ========================================================================
 
 ----- stderr -----

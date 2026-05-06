@@ -128,6 +128,17 @@ drive.
 
 **Note:** [docs/HYPERCHARGE_IDENTIFICATION_NOTE.md](docs/HYPERCHARGE_IDENTIFICATION_NOTE.md)  |  **Descendants:** 324  |  **Class:** F
 
+**Status:** _rewrite landed 2026-05-05_ (worktree `naughty-sutherland-f91d6e`).
+Closure approach: load-bearing identification step removed from this note;
+note retyped to `bounded_theorem` (chain claim) with one-hop authorities
+[`LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md`](../LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md)
+(structural ratio +1:(-3)) and
+[`LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md`](../LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md)
+(matter-sector identification under SM-definition convention). Absolute
+normalization `α = 1/3` explicitly admitted as still-open LHCM repair item
+(2). Runner relabeled with explicit STRUCTURAL / CHAIN-L2 / CHAIN-L3 /
+CONSISTENCY tags; cache refreshed. Awaiting re-audit on the new note hash.
+
 ```
 Use the physics-loop skill to close the missing derivation in docs/HYPERCHARGE_IDENTIFICATION_NOTE.md.
 
