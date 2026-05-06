@@ -25,7 +25,7 @@
   "hypothetical_axiom_status": null,
   "isolated_pole_fv_ir_authority_present": false,
   "mode_count": 4,
-  "observation_count": 48,
+  "observation_count": 56,
   "parent_certificates": {
     "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
@@ -43,7 +43,7 @@
     "retained_route": "open / retained closure not yet reached",
     "schur_abc_definition": "exact negative boundary / Schur A/B/C definition not derivable from current PR230 source-only surface",
     "schur_kernel_contract": "open / Schur kernel row contract gate not passed; current rows absent",
-    "schur_route_completion": "exact negative boundary / strict Schur A/B/C route not complete; bounded two-source correlator subblock support present",
+    "schur_route_completion": "exact negative boundary / strict Schur A/B/C route not complete; bounded two-source correlator subblock and finite-shell inverse-slope support present",
     "schur_sufficiency": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent",
     "two_source_action": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
     "two_source_chart": "exact-support / same-surface two-source taste-radial chart; canonical O_H and production rows absent",
@@ -53,215 +53,215 @@
   "partial_mode_schur_summary": {
     "0,0,0": {
       "A_corr_C_ss": {
-        "count": 12,
+        "count": 14,
         "max": 0.12263744149963891,
-        "mean": 0.12242221066026125,
+        "mean": 0.12241968420380137,
         "min": 0.12229063737483167,
-        "stdev": 0.00010257168046348407
+        "stdev": 9.73812116921923e-05
       },
       "B_corr_C_sx": {
-        "count": 12,
+        "count": 14,
         "max": 0.00015573928662202072,
-        "mean": -2.2899858555939913e-06,
+        "mean": 1.7720098783147212e-06,
         "min": -0.00017610843791869552,
-        "stdev": 9.457319352023253e-05
+        "stdev": 8.829461513098091e-05
       },
       "C_corr_C_xx": {
-        "count": 12,
+        "count": 14,
         "max": 0.28098398790515866,
-        "mean": 0.28082999857175567,
+        "mean": 0.2808432144178068,
         "min": 0.2807215251756578,
-        "stdev": 7.384842446137051e-05
+        "stdev": 7.583497890081e-05
       },
       "corr_schur_source_given_x": {
-        "count": 12,
+        "count": 14,
         "max": 0.1226374341530643,
-        "mean": 0.12242218144460043,
+        "mean": 0.1224196584134211,
         "min": 0.12229063737481549,
-        "stdev": 0.00010257231636557402
+        "stdev": 9.738071577716506e-05
       },
       "corr_schur_x_given_source": {
-        "count": 12,
+        "count": 14,
         "max": 0.2809839854448348,
-        "mean": 0.2808299315567005,
+        "mean": 0.2808431552596334,
         "min": 0.2807214608379589,
-        "stdev": 7.387021874590021e-05
+        "stdev": 7.586195827661209e-05
       },
       "gram_determinant": {
-        "count": 12,
+        "count": 14,
         "max": 0.03443592420766044,
-        "mean": 0.034379821177112475,
+        "mean": 0.034380730233761224,
         "min": 0.03433470107898061,
-        "stdev": 3.0358427172888103e-05
+        "stdev": 2.869508975951403e-05
       },
       "positive_gram_determinant_all_ready_rows": true,
       "rho_sx": {
-        "count": 12,
+        "count": 14,
         "max": 0.0008395823086115359,
-        "mean": -1.2406738623003136e-05,
+        "mean": 9.501729196573994e-06,
         "min": -0.0009500004592309483,
-        "stdev": 0.0005100768431146039
+        "stdev": 0.00047621105403840053
       },
-      "row_count": 12
+      "row_count": 14
     },
     "0,0,1": {
       "A_corr_C_ss": {
-        "count": 12,
+        "count": 14,
         "max": 0.12556337097096704,
-        "mean": 0.1253831261558277,
+        "mean": 0.12537159604086398,
         "min": 0.1252366082875804,
-        "stdev": 0.00010269890893651439
+        "stdev": 9.928502698354574e-05
       },
       "B_corr_C_sx": {
-        "count": 12,
+        "count": 14,
         "max": 0.000202931992194099,
-        "mean": 1.4263968949189966e-06,
+        "mean": 5.25594200258336e-06,
         "min": -0.0001826668847958663,
-        "stdev": 0.00011196081023541891
+        "stdev": 0.00010536783345400442
       },
       "C_corr_C_xx": {
-        "count": 12,
+        "count": 14,
         "max": 0.27049978536538605,
-        "mean": 0.2703082314991493,
+        "mean": 0.27032138669663075,
         "min": 0.27015348272265305,
-        "stdev": 9.01445986573039e-05
+        "stdev": 9.31258472387749e-05
       },
       "corr_schur_source_given_x": {
-        "count": 12,
+        "count": 14,
         "max": 0.12556321865111505,
-        "mean": 0.125383083640701,
+        "mean": 0.1253715578011356,
         "min": 0.12523657556380116,
-        "stdev": 0.00010269269026641048
+        "stdev": 9.927601382291374e-05
       },
       "corr_schur_x_given_source": {
-        "count": 12,
+        "count": 14,
         "max": 0.27049975002563525,
-        "mean": 0.2703081398488619,
+        "mean": 0.2703213042601604,
         "min": 0.27015346274382257,
-        "stdev": 9.013250279737182e-05
+        "stdev": 9.312687699019195e-05
       },
       "gram_determinant": {
-        "count": 12,
+        "count": 14,
         "max": 0.033947435240421556,
-        "mean": 0.03389208081551127,
+        "mean": 0.03389061328222627,
         "min": 0.03383865682795415,
-        "stdev": 3.143433933222263e-05
+        "stdev": 2.9170097343357042e-05
       },
       "positive_gram_determinant_all_ready_rows": true,
       "rho_sx": {
-        "count": 12,
+        "count": 14,
         "max": 0.001101404308940309,
-        "mean": 7.65026304858403e-06,
+        "mean": 2.847060927652276e-05,
         "min": -0.0009923711191002188,
-        "stdev": 0.0006081143760276873
+        "stdev": 0.0005723144542733065
       },
-      "row_count": 12
+      "row_count": 14
     },
     "0,1,0": {
       "A_corr_C_ss": {
-        "count": 12,
+        "count": 14,
         "max": 0.1255458424073733,
-        "mean": 0.12537668255026516,
+        "mean": 0.12537056321245568,
         "min": 0.12525595886729696,
-        "stdev": 9.137683982916097e-05
+        "stdev": 8.869501083026013e-05
       },
       "B_corr_C_sx": {
-        "count": 12,
+        "count": 14,
         "max": 0.0002204249021318783,
-        "mean": 1.86981432206162e-05,
+        "mean": 1.9715662113039482e-05,
         "min": -0.00014886923346183443,
-        "stdev": 0.00010926700934360031
+        "stdev": 0.00010160483499739577
       },
       "C_corr_C_xx": {
-        "count": 12,
+        "count": 14,
         "max": 0.2695806303435817,
-        "mean": 0.26946121453649335,
+        "mean": 0.2694727827075661,
         "min": 0.2692957665257382,
-        "stdev": 8.257694318077007e-05
+        "stdev": 8.265246405769485e-05
       },
       "corr_schur_source_given_x": {
-        "count": 12,
+        "count": 14,
         "max": 0.12554581107412985,
-        "mean": 0.1253766406375425,
+        "mean": 0.1253705261954866,
         "min": 0.12525594681357044,
-        "stdev": 9.136639357488023e-05
+        "stdev": 8.868297437488888e-05
       },
       "corr_schur_x_given_source": {
-        "count": 12,
+        "count": 14,
         "max": 0.2695806302399532,
-        "mean": 0.2694611244712576,
+        "mean": 0.2694727031615864,
         "min": 0.26929563515477994,
-        "stdev": 8.257398689365889e-05
+        "stdev": 8.265845894926547e-05
       },
       "gram_determinant": {
-        "count": 12,
+        "count": 14,
         "max": 0.03382809941874459,
-        "mean": 0.033784143818147275,
+        "mean": 0.03378394612500529,
         "min": 0.0337481081634675,
-        "stdev": 2.9286080372565507e-05
+        "stdev": 2.814510412715395e-05
       },
       "positive_gram_determinant_all_ready_rows": true,
       "rho_sx": {
-        "count": 12,
+        "count": 14,
         "max": 0.0011987200649805207,
-        "mean": 0.00010163797159093695,
+        "mean": 0.0001071782620301405,
         "min": -0.0008101191598295551,
-        "stdev": 0.0005944364971895605
+        "stdev": 0.0005527514126701489
       },
-      "row_count": 12
+      "row_count": 14
     },
     "1,0,0": {
       "A_corr_C_ss": {
-        "count": 12,
+        "count": 14,
         "max": 0.125589595529513,
-        "mean": 0.12536247042033016,
+        "mean": 0.12536587818884784,
         "min": 0.1252270651766998,
-        "stdev": 9.966199380623619e-05
+        "stdev": 9.393989013810841e-05
       },
       "B_corr_C_sx": {
-        "count": 12,
+        "count": 14,
         "max": 0.00014059692879366014,
-        "mean": -1.719823040749212e-05,
+        "mean": -1.3665882398005884e-05,
         "min": -0.00022224996656396842,
-        "stdev": 0.00010156455127421763
+        "stdev": 9.400818032735056e-05
       },
       "C_corr_C_xx": {
-        "count": 12,
+        "count": 14,
         "max": 0.26896071660046295,
-        "mean": 0.26883025853861026,
+        "mean": 0.2688395915431531,
         "min": 0.2687000227731026,
-        "stdev": 7.710369251006521e-05
+        "stdev": 7.834069800371506e-05
       },
       "corr_schur_source_given_x": {
-        "count": 12,
+        "count": 14,
         "max": 0.125589593552489,
-        "mean": 0.12536243414028284,
+        "mean": 0.125365846962994,
         "min": 0.12522706356010144,
-        "stdev": 9.966606312660054e-05
+        "stdev": 9.394466950229262e-05
       },
       "corr_schur_x_given_source": {
-        "count": 12,
+        "count": 14,
         "max": 0.26896071565579527,
-        "mean": 0.2688301807456304,
+        "mean": 0.26883952458765753,
         "min": 0.26869998850154686,
-        "stdev": 7.715384253173376e-05
+        "stdev": 7.839099831206462e-05
       },
       "gram_determinant": {
-        "count": 12,
+        "count": 14,
         "max": 0.03376377487020449,
-        "mean": 0.03370121689772343,
+        "mean": 0.0337033040083279,
         "min": 0.033655914077499474,
-        "stdev": 3.0133630901355533e-05
+        "stdev": 2.8297976349619222e-05
       },
       "positive_gram_determinant_all_ready_rows": true,
       "rho_sx": {
-        "count": 12,
+        "count": 14,
         "max": 0.0007655918501494505,
-        "mean": -9.374291469097774e-05,
+        "mean": -7.449488197755346e-05,
         "min": -0.0012109740601922983,
-        "stdev": 0.0005533078201467625
+        "stdev": 0.0005121423372918047
       },
-      "row_count": 12
+      "row_count": 14
     }
   },
   "pass_count": 16,
@@ -280,9 +280,11 @@
     9,
     10,
     11,
-    12
+    12,
+    13,
+    14
   ],
-  "ready_chunks": 12,
+  "ready_chunks": 14,
   "row_definition": {
     "A_corr": "C_ss(q), finite correlator row for the uniform scalar source s",
     "B_corr": "C_sx(q), finite correlator cross row between s and taste-radial source x",

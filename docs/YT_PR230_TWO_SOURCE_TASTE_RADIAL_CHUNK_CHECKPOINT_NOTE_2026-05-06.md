@@ -103,8 +103,8 @@ python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py \
 Expected pending summary while chunk001 is active and not yet complete:
 `PASS=2 FAIL=0`.
 
-Completed chunks001-012 now pass completed mode with `PASS=15 FAIL=0`
-each.  Chunks013-014 are active under the row-wave supervisor's two-worker cap
+Completed chunks001-014 now pass completed mode with `PASS=15 FAIL=0`
+each.  Chunks015-016 are active under the row-wave supervisor's two-worker cap
 and remain non-evidence until their completed JSONs exist and completed-mode
 checkpoints pass.  The runner accepts the explicit metadata non-readout
 firewall for older completed artifacts and the production harness now also

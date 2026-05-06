@@ -242,6 +242,19 @@ Local verification completed:
   intentional artifact;
 - `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
   pre-existing warnings.
+- two-source taste-radial finite-shell Schur K-prime scout packaged:
+  `frontier_yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout.py`
+  PASS=14 FAIL=0.  The scout computes finite zero-to-first-shell inverse-block
+  slopes from the measured chunks001-012 `C_ss/C_sx/C_xx` rows while preserving
+  the strict `K'(pole)`, A/B/C kernel-row, FV/IR, canonical `O_H`, `kappa_s`,
+  and closure firewalls;
+- Schur route completion refreshed to consume the finite-shell scout:
+  `frontier_yt_pr230_schur_route_completion.py` PASS=13 FAIL=0 and still
+  records strict A/B/C `K'(pole)` rows absent;
+- aggregate gates after the finite-shell Schur scout:
+  assumption/import stress PASS=74 FAIL=0, full assembly PASS=133 FAIL=0,
+  campaign status PASS=320 FAIL=0, retained route PASS=287 FAIL=0, and
+  positive-closure completion audit PASS=44 FAIL=0.
 - two-source taste-radial Schur-subblock witness packaged:
   `frontier_yt_pr230_two_source_taste_radial_schur_subblock_witness.py`
   PASS=16 FAIL=0.  The witness records finite same-ensemble
@@ -275,6 +288,35 @@ Local verification completed:
   assumption/import stress PASS=72 FAIL=0, retained route PASS=285 FAIL=0,
   campaign status PASS=318 FAIL=0, and positive-closure completion audit
   PASS=44 FAIL=0;
+- `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
+  metadata regenerated for validation and then reverted because it was not an
+  intentional artifact;
+- `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
+  pre-existing warnings.
+- completed two-source taste-radial chunks013-014 packaged:
+  `frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index
+  13` PASS=15 FAIL=0 and `--chunk-index 14` PASS=15 FAIL=0;
+- two-source taste-radial row combiner refreshed after chunks013-014:
+  PASS=13 FAIL=0, `ready=14/63`, `combined_rows_written=false`;
+- source-Higgs production readiness refreshed after chunks013-014:
+  PASS=25 FAIL=0 and still records taste-radial schema fields as `C_sx/C_xx`
+  aliases, not canonical `C_sH/C_HH` rows;
+- Schur-subblock witness and finite-shell K-prime scout refreshed on
+  chunks001-014: witness PASS=16 FAIL=0, finite-shell scout PASS=14 FAIL=0,
+  Schur route completion PASS=13 FAIL=0;
+- aggregate gates after the chunks013-014 and finite-shell refresh:
+  assumption/import stress PASS=74 FAIL=0, full assembly PASS=133 FAIL=0,
+  campaign status PASS=320 FAIL=0, retained route PASS=287 FAIL=0, and
+  positive-closure completion audit PASS=44 FAIL=0.
+- final chunks013-014 / finite-shell scout block validation:
+  `python3 -m py_compile` for the finite-shell scout and touched aggregate
+  gates was clean; row combiner PASS=13 FAIL=0, source-Higgs readiness
+  PASS=25 FAIL=0, Schur-subblock witness PASS=16 FAIL=0, finite-shell scout
+  PASS=14 FAIL=0, Schur route PASS=13 FAIL=0, assumption/import stress
+  PASS=74 FAIL=0, full assembly PASS=133 FAIL=0, campaign status
+  PASS=320 FAIL=0, retained route PASS=287 FAIL=0, and completion audit
+  PASS=44 FAIL=0;
+- `git diff --check` and anchored conflict-marker scan were clean;
 - `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
   metadata regenerated for validation and then reverted because it was not an
   intentional artifact;

@@ -173,6 +173,9 @@ def main() -> int:
         "two_source_taste_radial_schur_subblock_witness": load(
             "outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json"
         ),
+        "two_source_taste_radial_schur_kprime_finite_shell_scout": load(
+            "outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json"
+        ),
         "taste_radial_canonical_oh_selector_gate": load(
             "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json"
         ),
@@ -347,6 +350,8 @@ def main() -> int:
         "manifest chunks are present and schema-clean",
         "Two-source taste-radial Schur-subblock witness",
         "finite C_ss/C_sx/C_xx correlator subblocks are not strict K-prime pole rows",
+        "finite-shell Schur inverse-slope scout",
+        "finite zero-to-first-shell inverse slopes are not isolated-pole K'(pole) rows",
         "Degree-one Higgs-action premise",
         "Degree-one Higgs-action premise is not proof selectors until a same-surface EW/Higgs action or canonical-operator theorem derives the degree-one premise",
         "FMS post-degree route rescore",
@@ -1018,6 +1023,24 @@ def main() -> int:
         is False,
         two_source_schur_subblock.get("actual_current_surface_status"),
     )
+    two_source_kprime_scout = certificates[
+        "two_source_taste_radial_schur_kprime_finite_shell_scout"
+    ]
+    report(
+        "two-source-taste-radial-finite-shell-kprime-scout-not-pole-closure",
+        "finite-shell Schur inverse-slope scout"
+        in str(two_source_kprime_scout.get("actual_current_surface_status"))
+        and two_source_kprime_scout.get("proposal_allowed") is False
+        and two_source_kprime_scout.get("finite_shell_schur_kprime_scout_passed") is True
+        and two_source_kprime_scout.get("strict_schur_kprime_authority_passed") is False
+        and two_source_kprime_scout.get("pole_location_or_derivative_rows_present") is False
+        and two_source_kprime_scout.get("canonical_higgs_operator_identity_passed") is False
+        and two_source_kprime_scout.get("forbidden_firewall", {}).get(
+            "treated_finite_shell_slope_as_kprime_pole"
+        )
+        is False,
+        two_source_kprime_scout.get("actual_current_surface_status"),
+    )
     taste_radial_selector = certificates["taste_radial_canonical_oh_selector_gate"]
     report(
         "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
@@ -1373,6 +1396,10 @@ def main() -> int:
             "chart with positive Gram determinants.  It is still not strict "
             "Schur K-prime closure because it has no pole derivatives, no "
             "isolated-pole/FV/IR authority, and no canonical O_H bridge.  "
+            "The finite-shell Schur inverse-slope scout computes a zero-to-first-shell "
+            "inverse-block slope from those rows, but that finite difference is "
+            "not an isolated-pole K'(pole) derivative, not strict A/B/C kernel "
+            "row authority, and not FV/IR authority.  "
             "The taste-radial canonical-O_H selector gate proves the degree-one "
             "radial axis is unique only after a degree-one Higgs-action premise "
             "is supplied; current Z3/trace/source filters leave a three-dimensional "
@@ -1425,6 +1452,7 @@ def main() -> int:
             "does not treat the two-source taste-radial row contract as production C_sx/C_xx rows or pole evidence",
             "does not treat the two-source taste-radial production manifest as row data or pole evidence",
             "does not treat finite C_ss/C_sx/C_xx Schur subblocks as strict K-prime pole rows or canonical O_H evidence",
+            "does not treat finite zero-to-first-shell Schur inverse slopes as isolated-pole K'(pole) evidence",
             "does not treat degree-one taste-radial uniqueness as canonical O_H without a same-surface degree-one Higgs-action premise",
             "does not treat the FMS composite expansion as PR230 closure before same-surface EW/Higgs action and C_sH/C_HH rows exist",
             "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",

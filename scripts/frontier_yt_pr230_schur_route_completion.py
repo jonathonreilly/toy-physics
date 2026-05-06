@@ -20,6 +20,7 @@ PARENTS = {
     "schur_abc_definition": "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json",
     "exact_tensor_schur_feasibility": "outputs/yt_pr230_exact_tensor_schur_row_feasibility_attempt_2026-05-05.json",
     "two_source_schur_subblock_witness": "outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json",
+    "two_source_schur_kprime_finite_shell_scout": "outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json",
     "neutral_offdiagonal_generator": "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
     "candidate_portfolio": "outputs/yt_pr230_oh_bridge_first_principles_candidate_portfolio_2026-05-06.json",
 }
@@ -127,6 +128,27 @@ def main() -> int:
         is False
         and certs["two_source_schur_subblock_witness"].get("proposal_allowed") is False
     )
+    two_source_kprime_finite_shell_scout = (
+        "finite-shell Schur inverse-slope scout"
+        in statuses["two_source_schur_kprime_finite_shell_scout"]
+        and certs["two_source_schur_kprime_finite_shell_scout"].get(
+            "finite_shell_schur_kprime_scout_passed"
+        )
+        is True
+        and certs["two_source_schur_kprime_finite_shell_scout"].get(
+            "strict_schur_kprime_authority_passed"
+        )
+        is False
+        and certs["two_source_schur_kprime_finite_shell_scout"].get(
+            "pole_location_or_derivative_rows_present"
+        )
+        is False
+        and certs["two_source_schur_kprime_finite_shell_scout"].get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False
+        and certs["two_source_schur_kprime_finite_shell_scout"].get("proposal_allowed") is False
+    )
     neutral_basis_absent = (
         certs["neutral_offdiagonal_generator"].get("offdiagonal_generator_written") is False
         and not any(futures.values())
@@ -147,6 +169,11 @@ def main() -> int:
         two_source_subblock_support,
         statuses["two_source_schur_subblock_witness"],
     )
+    report(
+        "two-source-finite-shell-kprime-scout-not-closure",
+        two_source_kprime_finite_shell_scout,
+        statuses["two_source_schur_kprime_finite_shell_scout"],
+    )
     report("strict-neutral-kernel-rows-still-absent", neutral_basis_absent, str(futures))
     report("forbidden-firewall-clean", clean_firewall, str(firewall()))
 
@@ -161,18 +188,20 @@ def main() -> int:
         and abc_definition_blocks
         and exact_tensor_blocks
         and two_source_subblock_support
+        and two_source_kprime_finite_shell_scout
         and neutral_basis_absent
         and clean_firewall
     )
     result = {
-        "actual_current_surface_status": "exact negative boundary / strict Schur A/B/C route not complete; bounded two-source correlator subblock support present",
+        "actual_current_surface_status": "exact negative boundary / strict Schur A/B/C route not complete; bounded two-source correlator subblock and finite-shell inverse-slope support present",
         "conditional_surface_status": "The Schur route remains hard-physics open if a same-surface neutral kernel basis plus A/B/C rows or equivalent row theorem is supplied.",
         "proposal_allowed": False,
-        "proposal_allowed_reason": "The two-source taste-radial chunks now supply finite C_ss/C_sx/C_xx correlator subblocks for a certified s/x chart, but strict Schur K-prime closure still lacks kernel pole rows, derivatives, isolated-pole/FV/IR authority, and canonical O_H/source-overlap or physical-response authority.",
+        "proposal_allowed_reason": "The two-source taste-radial chunks now supply finite C_ss/C_sx/C_xx correlator subblocks and a finite-shell inverse-block slope scout for a certified s/x chart, but strict Schur K-prime closure still lacks kernel pole rows, derivatives, isolated-pole/FV/IR authority, and canonical O_H/source-overlap or physical-response authority.",
         "bare_retained_allowed": False,
         "schur_route_completion_passed": passed,
         "exact_negative_boundary_passed": passed,
         "two_source_correlator_subblock_support_loaded": two_source_subblock_support,
+        "two_source_finite_shell_kprime_scout_loaded": two_source_kprime_finite_shell_scout,
         "strict_schur_kernel_rows_present": False,
         "future_artifact_presence": futures,
         "parent_certificates": PARENTS,
@@ -181,6 +210,7 @@ def main() -> int:
         "strict_non_claims": [
             "does not infer A/B/C rows from source-only C_ss or compressed denominator data",
             "does not treat finite C_ss/C_sx/C_xx correlator subblocks as K-prime pole-derivative rows",
+            "does not treat finite zero-to-first-shell inverse slopes as isolated-pole K'(pole) rows",
             "does not use outside-math tool names as physical row authority",
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
             "does not claim retained or proposed_retained closure",

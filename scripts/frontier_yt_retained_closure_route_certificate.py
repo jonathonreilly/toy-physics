@@ -162,6 +162,7 @@ def main() -> int:
         "pr230_two_source_taste_radial_row_production_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
         "pr230_two_source_taste_radial_row_combiner_gate": "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json",
         "pr230_two_source_taste_radial_schur_subblock_witness": "outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json",
+        "pr230_two_source_taste_radial_schur_kprime_finite_shell_scout": "outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json",
         "pr230_two_source_taste_radial_chunk001_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json",
         "pr230_two_source_taste_radial_chunk002_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk002_checkpoint_2026-05-06.json",
         "pr230_two_source_taste_radial_chunk003_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk003_checkpoint_2026-05-06.json",
@@ -1501,6 +1502,32 @@ def main() -> int:
         and certificates["pr230_two_source_taste_radial_schur_subblock_witness"].get(
             "canonical_higgs_operator_identity_passed"
         )
+        is False
+    )
+    two_source_taste_radial_kprime_scout_not_closure = (
+        "finite-shell Schur inverse-slope scout"
+        in certificates[
+            "pr230_two_source_taste_radial_schur_kprime_finite_shell_scout"
+        ].get("actual_current_surface_status", "")
+        and certificates[
+            "pr230_two_source_taste_radial_schur_kprime_finite_shell_scout"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "pr230_two_source_taste_radial_schur_kprime_finite_shell_scout"
+        ].get("finite_shell_schur_kprime_scout_passed")
+        is True
+        and certificates[
+            "pr230_two_source_taste_radial_schur_kprime_finite_shell_scout"
+        ].get("strict_schur_kprime_authority_passed")
+        is False
+        and certificates[
+            "pr230_two_source_taste_radial_schur_kprime_finite_shell_scout"
+        ].get("pole_location_or_derivative_rows_present")
+        is False
+        and certificates[
+            "pr230_two_source_taste_radial_schur_kprime_finite_shell_scout"
+        ].get("canonical_higgs_operator_identity_passed")
         is False
     )
     taste_radial_canonical_oh_selector_blocks_symmetry_shortcut = (
@@ -4186,6 +4213,13 @@ def main() -> int:
         ),
     )
     report(
+        "two-source-taste-radial-kprime-finite-shell-scout-not-closure",
+        two_source_taste_radial_kprime_scout_not_closure,
+        certificates[
+            "pr230_two_source_taste_radial_schur_kprime_finite_shell_scout"
+        ].get("actual_current_surface_status", ""),
+    )
+    report(
         "taste-radial-canonical-oh-selector-blocks-symmetry-shortcut",
         taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         certificates["pr230_taste_radial_canonical_oh_selector_gate"].get(
@@ -5635,6 +5669,7 @@ def main() -> int:
         "two_source_taste_radial_row_manifest_support_not_closure": two_source_taste_radial_row_manifest_support_not_closure,
         "two_source_taste_radial_row_combiner_support_not_closure": two_source_taste_radial_row_combiner_support_not_closure,
         "two_source_taste_radial_schur_subblock_support_not_closure": two_source_taste_radial_schur_subblock_support_not_closure,
+        "two_source_taste_radial_kprime_finite_shell_scout_not_closure": two_source_taste_radial_kprime_scout_not_closure,
         "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": taste_radial_canonical_oh_selector_blocks_symmetry_shortcut,
         "degree_one_higgs_action_premise_not_derived": degree_one_higgs_action_premise_not_derived,
         "fms_post_degree_route_support_not_closure": fms_post_degree_route_support_not_closure,

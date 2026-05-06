@@ -28,14 +28,14 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=295 FAIL=0
+# SUMMARY: PASS=320 FAIL=0
 ```
 
 ## 2026-05-06 Two-Source Taste-Radial Schur-Subblock Witness Update
 
 The campaign status certificate now consumes
 `outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json`.
-Completed chunks001-012 provide a real finite same-ensemble
+Completed chunks001-014 provide a real finite same-ensemble
 source/complement correlator block for the certified taste-radial chart:
 
 ```text
@@ -50,13 +50,37 @@ authority, does not identify taste-radial `x` with canonical `O_H`, and does
 not set `kappa_s`.
 
 Validation: Schur-subblock witness `PASS=16 FAIL=0`; Schur route completion
-`PASS=12 FAIL=0`; assumption/import stress `PASS=73 FAIL=0`; full positive
-closure assembly gate `PASS=132 FAIL=0`; retained-route `PASS=286 FAIL=0`;
-campaign status `PASS=319 FAIL=0`; completion audit `PASS=44 FAIL=0`.
+`PASS=13 FAIL=0`; assumption/import stress `PASS=74 FAIL=0`; full positive
+closure assembly gate `PASS=133 FAIL=0`; retained-route `PASS=287 FAIL=0`;
+campaign status `PASS=320 FAIL=0`; completion audit `PASS=44 FAIL=0`.
 
-The campaign target remains open.  Chunks013-014 are active under the
-two-worker cap and remain non-evidence until completed JSON exists and
-completed-mode checkpoints pass.
+The campaign target remains open.  Chunks013-014 have completed and passed
+completed-mode checkpoints; chunks015-016 are active under the two-worker cap
+and remain non-evidence until completed JSON exists and completed-mode
+checkpoints pass.
+
+## 2026-05-06 Two-Source Taste-Radial Schur K-Prime Finite-Shell Scout Update
+
+The campaign status certificate now consumes
+`outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json`.
+The scout inverts the finite 2x2 `C_ss/C_sx/C_xx` correlator block from
+chunks001-014 and compares the zero mode with the first nonzero momentum shell:
+
+```text
+K_{s|x}(q) = C_xx(q) / (C_ss(q) C_xx(q) - C_sx(q)^2)
+dK_{s|x}/d p_hat^2 ~= (K_shell - K_0) / (p_hat^2_shell - p_hat^2_0)
+```
+
+This is bounded diagnostic support only.  A zero-to-first-shell finite
+difference is not an isolated-pole `K'(pole)` derivative, not strict Schur
+A/B/C kernel-row evidence, not FV/IR authority, not canonical `O_H`, and not
+`kappa_s`.
+
+Validation: finite-shell K-prime scout `PASS=14 FAIL=0`; Schur route
+completion `PASS=13 FAIL=0`; assumption/import stress `PASS=74 FAIL=0`; full
+positive closure assembly gate `PASS=133 FAIL=0`; retained-route `PASS=287
+FAIL=0`; campaign status `PASS=320 FAIL=0`; completion audit `PASS=44
+FAIL=0`.
 
 ## 2026-05-06 Two-Source Taste-Radial Row-Contract Update
 
@@ -1620,12 +1644,12 @@ response ratios.  It also blocks using the current additive top mass FH source
 as that radial spurion.  This is support only; no retained/proposed-retained
 wording is authorized.
 
-Latest two-source taste-radial chunks011-012 checkpoint: completed-mode
-chunk checkpoints now pass `PASS=15 FAIL=0` for chunks011 and 012.  The
-row-combiner gate now records `ready=12/63`, no bad chunk audits, and
+Latest two-source taste-radial chunks013-014 checkpoint: completed-mode
+chunk checkpoints now pass `PASS=15 FAIL=0` for chunks013 and 014.  The
+row-combiner gate now records `ready=14/63`, no bad chunk audits, and
 `combined_rows_written=false`; it still writes no combined row packet.  The
-source-Higgs readiness gate scans twelve completed taste-radial chunks and
+source-Higgs readiness gate scans fourteen completed taste-radial chunks and
 continues to classify their schema fields as explicit `C_sx/C_xx` aliases, not
-canonical `C_sH/C_HH` pole rows.  Chunks013-014 are active under the
+canonical `C_sH/C_HH` pole rows.  Chunks015-016 are active under the
 two-worker supervisor cap.  This is bounded production-row support only; no
 retained/proposed-retained wording is authorized.

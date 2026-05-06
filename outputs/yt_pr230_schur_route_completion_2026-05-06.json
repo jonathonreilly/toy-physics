@@ -1,5 +1,5 @@
 {
-  "actual_current_surface_status": "exact negative boundary / strict Schur A/B/C route not complete; bounded two-source correlator subblock support present",
+  "actual_current_surface_status": "exact negative boundary / strict Schur A/B/C route not complete; bounded two-source correlator subblock and finite-shell inverse-slope support present",
   "bare_retained_allowed": false,
   "conditional_surface_status": "The Schur route remains hard-physics open if a same-surface neutral kernel basis plus A/B/C rows or equivalent row theorem is supplied.",
   "exact_negative_boundary_passed": true,
@@ -29,6 +29,7 @@
     "schur_compressed_bootstrap": "outputs/yt_schur_compressed_denominator_row_bootstrap_no_go_2026-05-05.json",
     "schur_contract": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
     "schur_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+    "two_source_schur_kprime_finite_shell_scout": "outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json",
     "two_source_schur_subblock_witness": "outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json"
   },
   "parent_statuses": {
@@ -41,19 +42,22 @@
     "schur_compressed_bootstrap": "exact negative boundary / Schur compressed-denominator row-bootstrap no-go",
     "schur_contract": "open / Schur kernel row contract gate not passed; current rows absent",
     "schur_sufficiency": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent",
+    "two_source_schur_kprime_finite_shell_scout": "bounded-support / finite-shell Schur inverse-slope scout from two-source taste-radial rows; strict K-prime pole authority absent",
     "two_source_schur_subblock_witness": "bounded-support / two-source taste-radial Schur-subblock witness; strict Schur K-prime pole rows and canonical O_H authority absent"
   },
-  "pass_count": 12,
+  "pass_count": 13,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "The two-source taste-radial chunks now supply finite C_ss/C_sx/C_xx correlator subblocks for a certified s/x chart, but strict Schur K-prime closure still lacks kernel pole rows, derivatives, isolated-pole/FV/IR authority, and canonical O_H/source-overlap or physical-response authority.",
+  "proposal_allowed_reason": "The two-source taste-radial chunks now supply finite C_ss/C_sx/C_xx correlator subblocks and a finite-shell inverse-block slope scout for a certified s/x chart, but strict Schur K-prime closure still lacks kernel pole rows, derivatives, isolated-pole/FV/IR authority, and canonical O_H/source-overlap or physical-response authority.",
   "schur_route_completion_passed": true,
   "strict_non_claims": [
     "does not infer A/B/C rows from source-only C_ss or compressed denominator data",
     "does not treat finite C_ss/C_sx/C_xx correlator subblocks as K-prime pole-derivative rows",
+    "does not treat finite zero-to-first-shell inverse slopes as isolated-pole K'(pole) rows",
     "does not use outside-math tool names as physical row authority",
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
     "does not claim retained or proposed_retained closure"
   ],
   "strict_schur_kernel_rows_present": false,
-  "two_source_correlator_subblock_support_loaded": true
+  "two_source_correlator_subblock_support_loaded": true,
+  "two_source_finite_shell_kprime_scout_loaded": true
 }

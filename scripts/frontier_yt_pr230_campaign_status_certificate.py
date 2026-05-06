@@ -623,6 +623,9 @@ def main() -> int:
         "pr230_two_source_taste_radial_schur_subblock_witness": load(
             "outputs/yt_pr230_two_source_taste_radial_schur_subblock_witness_2026-05-06.json"
         ),
+        "pr230_two_source_taste_radial_schur_kprime_finite_shell_scout": load(
+            "outputs/yt_pr230_two_source_taste_radial_schur_kprime_finite_shell_scout_2026-05-06.json"
+        ),
         "pr230_two_source_taste_radial_chunk001_checkpoint": load(
             "outputs/yt_pr230_two_source_taste_radial_chunk001_checkpoint_2026-05-06.json"
         ),
@@ -2743,6 +2746,32 @@ def main() -> int:
         is False,
         statuses["pr230_two_source_taste_radial_schur_subblock_witness"],
     )
+    two_source_taste_radial_kprime_scout = certificates[
+        "pr230_two_source_taste_radial_schur_kprime_finite_shell_scout"
+    ]
+    report(
+        "pr230-two-source-taste-radial-kprime-finite-shell-scout-not-closure",
+        "finite-shell Schur inverse-slope scout"
+        in str(statuses["pr230_two_source_taste_radial_schur_kprime_finite_shell_scout"])
+        and two_source_taste_radial_kprime_scout.get("proposal_allowed") is False
+        and two_source_taste_radial_kprime_scout.get(
+            "finite_shell_schur_kprime_scout_passed"
+        )
+        is True
+        and two_source_taste_radial_kprime_scout.get(
+            "strict_schur_kprime_authority_passed"
+        )
+        is False
+        and two_source_taste_radial_kprime_scout.get(
+            "pole_location_or_derivative_rows_present"
+        )
+        is False
+        and two_source_taste_radial_kprime_scout.get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False,
+        statuses["pr230_two_source_taste_radial_schur_kprime_finite_shell_scout"],
+    )
     taste_radial_selector_gate = certificates[
         "pr230_taste_radial_canonical_oh_selector_gate"
     ]
@@ -4697,6 +4726,25 @@ def main() -> int:
         )
         is False
         and two_source_taste_radial_schur_subblock.get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False
+    )
+    result["two_source_taste_radial_kprime_finite_shell_scout_not_closure"] = (
+        two_source_taste_radial_kprime_scout.get(
+            "finite_shell_schur_kprime_scout_passed"
+        )
+        is True
+        and two_source_taste_radial_kprime_scout.get("proposal_allowed") is False
+        and two_source_taste_radial_kprime_scout.get(
+            "strict_schur_kprime_authority_passed"
+        )
+        is False
+        and two_source_taste_radial_kprime_scout.get(
+            "pole_location_or_derivative_rows_present"
+        )
+        is False
+        and two_source_taste_radial_kprime_scout.get(
             "canonical_higgs_operator_identity_passed"
         )
         is False
