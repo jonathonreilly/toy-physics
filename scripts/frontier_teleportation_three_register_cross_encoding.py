@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Three-register cross-encoding taste-qubit teleportation audit.
 
-Status: planning / first three-register cross-map artifact.  This runner
-extends the bounded cross-encoding audit from two independently chosen
+Status: exact-support telemetry for the ideal logical three-register
+cross-encoding map.  It extends the bounded cross-encoding audit from two
+independently chosen
 encodings to three independently chosen encodings:
 
     A = Alice unknown input encoding
@@ -1092,7 +1093,7 @@ def print_summary(
     max_triples_per_geometry: int,
 ) -> bool:
     print("THREE-REGISTER CROSS-ENCODING TASTE-QUBIT TELEPORTATION AUDIT")
-    print("Status: numerical planning audit; quantum state teleportation only")
+    print("Status: exact-support logical audit; quantum state teleportation only")
     print()
     print(f"Requested dimensions: {dims}")
     print(f"Requested side lengths: {sides}")

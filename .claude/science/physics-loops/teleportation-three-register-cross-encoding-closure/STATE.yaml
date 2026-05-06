@@ -1,0 +1,29 @@
+loop_slug: teleportation-three-register-cross-encoding-closure
+mode: targeted_short_run
+target_status: exact-support
+actual_current_surface_status: exact-support
+active_route: encoded_isometry_teleportation_derivation
+hard_residual: "Sampling cap left unsurveyed default A/R/B triples as residual risk in the prior audit rationale."
+files_touched:
+  - docs/TELEPORTATION_THREE_REGISTER_CROSS_ENCODING_NOTE.md
+  - scripts/frontier_teleportation_three_register_cross_encoding.py
+  - .claude/science/physics-loops/teleportation-three-register-cross-encoding-closure/GOAL.md
+  - .claude/science/physics-loops/teleportation-three-register-cross-encoding-closure/ASSUMPTIONS_AND_IMPORTS.md
+  - .claude/science/physics-loops/teleportation-three-register-cross-encoding-closure/ROUTE_PORTFOLIO.md
+  - .claude/science/physics-loops/teleportation-three-register-cross-encoding-closure/ARTIFACT_PLAN.md
+  - .claude/science/physics-loops/teleportation-three-register-cross-encoding-closure/NO_GO_LEDGER.md
+  - .claude/science/physics-loops/teleportation-three-register-cross-encoding-closure/LITERATURE_BRIDGES.md
+  - .claude/science/physics-loops/teleportation-three-register-cross-encoding-closure/OPPORTUNITY_QUEUE.md
+  - .claude/science/physics-loops/teleportation-three-register-cross-encoding-closure/CLAIM_STATUS_CERTIFICATE.md
+  - .claude/science/physics-loops/teleportation-three-register-cross-encoding-closure/REVIEW_HISTORY.md
+  - .claude/science/physics-loops/teleportation-three-register-cross-encoding-closure/HANDOFF.md
+  - .claude/science/physics-loops/teleportation-three-register-cross-encoding-closure/PR_BACKLOG.md
+open_imports:
+  - independent re-audit before effective retained status
+  - physical native teleportation obligations outside this note
+no_go_routes:
+  - exhaustive all-default telemetry as necessary proof route
+review_disposition: pass
+pr_status: not_opened_for_short_local_science_fix
+next_exact_action: "Submit the edited note and runner for independent re-audit."
+stop_condition: "Targeted exact-support source-note derivation and local verification complete."
