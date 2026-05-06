@@ -13,6 +13,8 @@ from __future__ import annotations
 import re
 import subprocess
 import sys
+import tempfile
+import textwrap
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -54,6 +56,14 @@ NEGATIVE_CLOSEOUT_EMISSION_PATTERN = re.compile(
     r"^[A-Z0-9_]*CLOSES[A-Z0-9_]*\s*=\s*FALSE\s*$",
     re.I,
 )
+POSITIVE_CLOSEOUT_EMISSION_PATTERN = re.compile(
+    r"^[A-Z0-9_]*CLOSES[A-Z0-9_]*\s*=\s*TRUE\s*$",
+    re.I,
+)
+CONDITIONAL_TRUE_CLOSEOUT_PATTERN = re.compile(
+    r"^CONDITIONAL[A-Z0-9_]*CLOSES[A-Z0-9_]*IF[A-Z0-9_]*\s*=\s*TRUE\s*$",
+    re.I,
+)
 RESIDUAL_EMISSION_PATTERN = re.compile(r"^RESIDUAL[A-Z0-9_]*\s*=", re.I)
 
 
@@ -71,7 +81,10 @@ class ScriptEmission:
 
     @property
     def rel(self) -> str:
-        return str(self.path.relative_to(ROOT))
+        try:
+            return str(self.path.relative_to(ROOT))
+        except ValueError:
+            return str(self.path)
 
     @property
     def lines(self) -> list[str]:
@@ -91,7 +104,14 @@ class ScriptEmission:
 
     @property
     def promotion_hits(self) -> list[str]:
-        return pattern_hits("\n".join(self.lines), FORBIDDEN_PROMOTION_PATTERNS)
+        hits = [
+            line
+            for line in self.lines
+            if POSITIVE_CLOSEOUT_EMISSION_PATTERN.search(line)
+            and not CONDITIONAL_TRUE_CLOSEOUT_PATTERN.search(line)
+        ]
+        hits.extend(pattern_hits("\n".join(self.lines), FORBIDDEN_PROMOTION_PATTERNS))
+        return list(dict.fromkeys(hits))
 
 
 def check(name: str, condition: bool, detail: str = "") -> bool:
@@ -132,10 +152,13 @@ def pattern_hits(text: str, patterns: list[re.Pattern[str]]) -> list[str]:
 
 
 def run_script_for_emissions(path: Path) -> ScriptEmission:
-    rel = str(path.relative_to(ROOT))
+    try:
+        script_arg = str(path.relative_to(ROOT))
+    except ValueError:
+        script_arg = str(path)
     try:
         result = subprocess.run(
-            [sys.executable, rel],
+            [sys.executable, script_arg],
             cwd=ROOT,
             check=False,
             capture_output=True,
@@ -156,6 +179,125 @@ def run_script_for_emissions(path: Path) -> ScriptEmission:
         stdout=result.stdout,
         stderr=result.stderr,
     )
+
+
+def self_check(name: str, condition: bool, detail: str = "") -> bool:
+    status = "PASS" if condition else "FAIL"
+    print(f"  [{status}] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+    return condition
+
+
+def temporary_script(directory: Path, name: str, source: str) -> Path:
+    path = directory / name
+    path.write_text(textwrap.dedent(source).lstrip(), encoding="utf-8")
+    return path
+
+
+def run_self_tests() -> int:
+    print("=" * 88)
+    print("Koide hostile-review guard self-test")
+    print("=" * 88)
+    print(
+        "Purpose: prove script checks consume emitted stdout lines, not source "
+        "comments, dead branches, or unrelated literals."
+    )
+
+    pass_count = 0
+    fail_count = 0
+
+    def record(name: str, condition: bool, detail: str = "") -> None:
+        nonlocal pass_count, fail_count
+        if self_check(name, condition, detail):
+            pass_count += 1
+        else:
+            fail_count += 1
+
+    with tempfile.TemporaryDirectory(prefix="koide_guard_selftest_") as tmp:
+        tmp_path = Path(tmp)
+        dead_literal_script = temporary_script(
+            tmp_path,
+            "dead_literals_do_not_emit.py",
+            """
+            # Q_SELFTEST_CLOSES_Q=FALSE
+            DEAD_LITERAL = "RESIDUAL_SCALAR=dead_literal"
+            if False:
+                print("Q_SELFTEST_CLOSES_Q=FALSE")
+                print("RESIDUAL_SCALAR=dead_branch")
+            print("NO_EMITTED_GUARD_LABELS")
+            """,
+        )
+        good_script = temporary_script(
+            tmp_path,
+            "emitted_labels_pass.py",
+            """
+            print("Q_SELFTEST_CLOSES_Q=FALSE")
+            print("RESIDUAL_SCALAR=self_test_residual")
+            """,
+        )
+        true_script = temporary_script(
+            tmp_path,
+            "true_closeout_fails.py",
+            """
+            print("Q_SELFTEST_CLOSES_Q=TRUE")
+            print("RESIDUAL_SCALAR=self_test_residual")
+            """,
+        )
+        conditional_true_script = temporary_script(
+            tmp_path,
+            "conditional_true_closeout_allowed.py",
+            """
+            print("CONDITIONAL_Q_CLOSES_IF_BACKGROUND_Z_ZERO=TRUE")
+            print("RESIDUAL_Q=background_zero_law")
+            """,
+        )
+
+        dead_emission = run_script_for_emissions(dead_literal_script)
+        good_emission = run_script_for_emissions(good_script)
+        true_emission = run_script_for_emissions(true_script)
+        conditional_true_emission = run_script_for_emissions(conditional_true_script)
+
+    record(
+        "comments, dead strings, and dead print branches do not count as emitted negative closeouts",
+        dead_emission.returncode == 0 and not dead_emission.negative_closeouts,
+        detail="stdout=" + repr(dead_emission.stdout.strip()),
+    )
+    record(
+        "comments, dead strings, and dead print branches do not count as emitted residuals",
+        dead_emission.returncode == 0 and not dead_emission.residuals,
+        detail="stdout=" + repr(dead_emission.stdout.strip()),
+    )
+    record(
+        "real stdout negative CLOSES labels are detected",
+        good_emission.negative_closeouts == ["Q_SELFTEST_CLOSES_Q=FALSE"],
+        detail="\n".join(good_emission.negative_closeouts),
+    )
+    record(
+        "real stdout RESIDUAL labels are detected",
+        good_emission.residuals == ["RESIDUAL_SCALAR=self_test_residual"],
+        detail="\n".join(good_emission.residuals),
+    )
+    record(
+        "real stdout TRUE closeout labels are rejected",
+        true_emission.promotion_hits == ["Q_SELFTEST_CLOSES_Q=TRUE"],
+        detail="\n".join(true_emission.promotion_hits),
+    )
+    record(
+        "conditional TRUE closeout labels are not treated as promoted closure",
+        conditional_true_emission.promotion_hits == [],
+        detail="\n".join(conditional_true_emission.lines),
+    )
+
+    print()
+    print("=" * 88)
+    print("Self-test summary")
+    print("=" * 88)
+    print(f"SELF_TEST_PASSED={str(fail_count == 0).upper()}")
+    print(f"SELF_TEST_PASS_COUNT={pass_count}")
+    print(f"SELF_TEST_FAIL_COUNT={fail_count}")
+    return 0 if fail_count == 0 else 1
 
 
 def format_emission_lines(
@@ -272,7 +414,14 @@ def audit_no_go_scripts() -> None:
     )
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    args = sys.argv[1:] if argv is None else argv
+    if args == ["--self-test"]:
+        return run_self_tests()
+    if args:
+        print("usage: frontier_koide_hostile_review_guard.py [--self-test]", file=sys.stderr)
+        return 2
+
     print("=" * 88)
     print("Koide hostile-review guard")
     print("=" * 88)

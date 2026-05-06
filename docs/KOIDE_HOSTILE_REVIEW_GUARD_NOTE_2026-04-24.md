@@ -21,7 +21,9 @@ The runner scans current 2026-04-24 Koide no-go notes and the consolidated
 objection-review packet.  For the paired no-go scripts, it executes each target
 script and verifies emitted stdout lines rather than source-text substrings, so
 comments, dead strings, or unrelated literals cannot satisfy the script-output
-checks.  The guard verifies:
+checks.  The runner also exposes a `--self-test` mode that executes temporary
+scripts with comment-only, dead-branch, real-stdout, and TRUE-closeout fixtures
+to keep that distinction regression-tested.  The guard verifies:
 
 1. no-go notes exist;
 2. every no-go note names a residual scalar or primitive;
@@ -30,7 +32,11 @@ checks.  The guard verifies:
 5. no-go scripts exist;
 6. every no-go script emits an explicit negative `CLOSES` flag on stdout;
 7. every no-go script emits an explicit `RESIDUAL...=` label on stdout;
-8. no no-go script output promotes a closure flag as `TRUE`.
+8. no no-go script output promotes an unconditional closure flag as `TRUE`.
+
+Conditional support labels of the form `CONDITIONAL_*_CLOSES_IF_*=TRUE` are
+not treated as promoted closure by this guard; they remain conditional labels
+and still require the negative unconditional `CLOSES...=FALSE` lines.
 
 The script-output checks are label-hygiene checks, not target-proof checks: a
 no-go script may return a nonzero code while still emitting the negative
@@ -57,6 +63,9 @@ Those artifacts were updated rather than exempted.
 2026-05-06 rerun transcript:
 `outputs/frontier_koide_hostile_review_guard_2026-05-06.txt`.
 
+2026-05-06 stdout-regression self-test transcript:
+`outputs/frontier_koide_hostile_review_guard_self_test_2026-05-06.txt`.
+
 ```text
 PASSED: 8/8
 
@@ -64,6 +73,12 @@ KOIDE_HOSTILE_REVIEW_GUARD_PASSED=TRUE
 HOSTILE_REVIEW_GUARD_CLOSES_Q=FALSE
 HOSTILE_REVIEW_GUARD_CLOSES_DELTA=FALSE
 RESIDUAL_SCALAR=not_applicable_review_guard
+```
+
+```text
+SELF_TEST_PASSED=TRUE
+SELF_TEST_PASS_COUNT=6
+SELF_TEST_FAIL_COUNT=0
 ```
 
 ## Boundary

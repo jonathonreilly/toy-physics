@@ -39111,7 +39111,7 @@
       "claim_type_author_hint_raw": "meta",
       "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "2995ad58ec60bba9ddb64f67f7eefbbbb25e1a807317dae6844ffc0a58f69292",
+      "note_hash": "b9d5df0054730d03dd9a295ef546c2b107b44ebab9fa67ffce45d44e42efad99",
       "path": "docs/KOIDE_HOSTILE_REVIEW_GUARD_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_koide_hostile_review_guard.py",
       "title": "Koide Hostile-Review Guard"
