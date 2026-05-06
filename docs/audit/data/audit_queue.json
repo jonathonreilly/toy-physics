@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 507,
+    "critical": 506,
     "high": 15,
     "leaf": 180,
     "medium": 93
@@ -3123,50 +3123,23 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "sign_portability_invariant_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "alt_connectivity_family_basin_note",
-        "second_grown_family_sign_note",
-        "third_grown_family_sign_note",
-        "fourth_family_quadrant_note",
-        "fifth_family_radial_boundary_note"
-      ],
-      "direct_in_degree": 5,
-      "effective_status": "unaudited",
-      "load_bearing_score": 11.323,
-      "note_path": "docs/SIGN_PORTABILITY_INVARIANT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py",
-      "transitive_descendants": 452
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
+      "audit_status": "audit_in_progress",
+      "blocker": "awaiting_cross_confirmation",
       "claim_id": "second_grown_family_complex_note",
-      "claim_scope": null,
+      "claim_scope": "The no-restore Gate B grown geometry-sector slice at the tested anchor drift row carries the complex-action companion under the runner's stated gates.",
       "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
+      "claim_type_provenance": "audited_pending_cross_confirmation",
       "criticality": "critical",
       "criticality_rank": 3,
-      "cross_confirmation_status": null,
+      "cross_confirmation_status": "awaiting_second",
       "deps": [
         "second_grown_family_sign_note"
       ],
       "direct_in_degree": 4,
-      "effective_status": "unaudited",
+      "effective_status": "audit_in_progress",
       "load_bearing_score": 10.817,
       "note_path": "docs/SECOND_GROWN_FAMILY_COMPLEX_NOTE.md",
-      "queue_reason": "unaudited",
+      "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/SECOND_GROWN_FAMILY_COMPLEX.py",
       "transitive_descendants": 450
@@ -24179,6 +24152,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 8,
-  "total_pending": 795
+  "ready_count": 7,
+  "total_pending": 794
 }
