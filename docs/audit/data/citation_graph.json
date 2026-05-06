@@ -37939,11 +37939,11 @@
     },
     "higher_symmetry_gravity_probe_note": {
       "claim_id": "higher_symmetry_gravity_probe_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "971b3ee0105d2d2096c760de050a990b158b380ea7b071a3007633a75f48bf76",
+      "note_hash": "a4fdb7d7708abea425641cb6a1ebcbb577866ab280778175f0d3d4eedfb140ff",
       "path": "docs/HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md",
       "runner_path": "scripts/higher_symmetry_gravity_probe.py",
       "title": "Higher-Symmetry Gravity Probe Note"
@@ -55977,18 +55977,18 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 78,
+      "bounded_theorem": 79,
       "meta": 10,
       "no_go": 14,
-      "none": 1704,
+      "none": 1703,
       "open_gate": 10,
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 577,
+      "bounded_theorem": 578,
       "meta": 10,
       "no_go": 118,
-      "none": 461,
+      "none": 460,
       "open_gate": 113,
       "positive_theorem": 628
     },

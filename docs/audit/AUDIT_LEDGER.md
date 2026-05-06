@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 224 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 803 |
+| unaudited | 804 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 28 |
 | ~~audited_conditional~~ | 462 |
-| ~~audited_failed~~ | 11 |
+| ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_hierarchy_matsubara_decomposition_note` | 1 |
@@ -41,10 +41,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 374 |
 | `audited_conditional` | 462 |
 | `audited_decoration` | 9 |
-| `audited_failed` | 55 |
+| `audited_failed` | 54 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 28 |
-| `unaudited` | 852 |
+| `unaudited` | 853 |
 
 | claim_type | count |
 |---|---:|
@@ -974,7 +974,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | A | - |
 | `grown_transfer_basin_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `h0125_failure_derivation` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
-| `higher_symmetry_gravity_probe_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | C | - |
 | `hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-gpt-5 | A | - |
 | `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-gpt-5 | A | - |
 | `if_program_closing_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
@@ -7512,19 +7511,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The supplied runner genuinely computes Clifford/projector identities and numerical comparisons, but it also imports the G1 observational chamber pin and PDG charged-lepton masses for comparator scoring. Its own caveat states that the H-lift and lambda choice are not retained primitives, so the numerical near-match cannot be treated as a closed retained derivation. With no cited authorities supplied, the note's references to Theorem 2, the Dirac-bridge theorem, variational surveys, S_2-breaking surveys, and observational-pin closure remain open dependencies rather than closed inputs.
 - **open / conditional deps cited:**
   - `HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md`
-- **auditor confidence:** high
-
-### `higher_symmetry_gravity_probe_note`
-
-- **Note:** [`HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md`](../../docs/HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited only the fit-window-restricted gravity-side positive bump claim for dense Z2 x Z2, using the provided note, runner stdout, and runner source.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-higher_symmetry_gravity_-260`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Within the fit window M ∈ {2,3,5,8} the dense Z2 x Z2 extension shows a positive mass-bump fit with high R^2 at N = 80 and degrading but still positive bump-fits at N = 100, 120.  _(class `C`)_
-- **chain closes:** False — The provided runner stdout does not match the note's declared setup or reported numbers: it uses z2z2_quarter=12, connect_radius=5.0, N up to 100, and different deltas/fits, while the note claims z2z2_quarter=16, connect_radius=5.2, and includes N=120. A matching completed run or cached certificate for the note's actual parameter surface is missing.
-- **rationale:** The runner source appears to perform an actual framework computation rather than merely printing constants, so the intended load-bearing step is class C. However, the completed runner output provided in the restricted packet is not the output for the claim as written and directly conflicts with the note's parameter setup and tabulated results. Because the claimed N=80,100,120 dense-extension mass-window and distance-sweep values are not supported by the supplied completed runner record, the chain does not close on its own terms.
 - **auditor confidence:** high
 
 ### `holographic_probe_note_2026-04-11`

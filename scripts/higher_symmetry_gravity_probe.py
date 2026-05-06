@@ -13,10 +13,15 @@ The probe is intentionally review-safe:
   - same slit / detector / gravity-layer layout as the joint validator
   - fixed-anchor mass prefixes for the mass window
   - fixed mass count for the distance sweep
-  - fit only the declared positive / falling windows
+  - fit only positive rows inside the declared mass window / falling distance
+    tail
 
 The goal is not to force a universal gravity law, only to decide whether the
 retained Z2xZ2 lane is a gravity-side contender or mainly a decoherence lead.
+
+The audit-facing default invocation is the dense extension surface used by
+docs/HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md: N in {80,100,120},
+z2z2_quarter=16, connect_radius=5.2.
 """
 
 from __future__ import annotations
@@ -142,16 +147,16 @@ def fit_power_law(rows, fit_window):
     alpha = sxy / sxx
     coeff = math.exp(my - alpha * mx)
     r2 = (sxy * sxy) / (sxx * syy) if syy > 1e-12 else math.nan
-    return alpha, coeff, r2
+    return alpha, coeff, r2, [x for x, _ in fit]
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--n-layers", nargs="+", type=int, default=[25, 40, 60, 80, 100])
+    parser.add_argument("--n-layers", nargs="+", type=int, default=[80, 100, 120])
     parser.add_argument("--n-seeds", type=int, default=16)
-    parser.add_argument("--z2z2-quarter", type=int, default=12)
+    parser.add_argument("--z2z2-quarter", type=int, default=16)
     parser.add_argument("--xyz-range", type=float, default=12.0)
-    parser.add_argument("--connect-radius", type=float, default=5.0)
+    parser.add_argument("--connect-radius", type=float, default=5.2)
     parser.add_argument("--anchor-b", type=float, default=5.0)
     parser.add_argument("--m-values", nargs="+", type=int, default=[1, 2, 3, 5, 8, 12, 16])
     parser.add_argument("--fit-window", nargs="+", type=int, default=[2, 3, 5, 8])
@@ -216,9 +221,14 @@ def main():
 
         fit = fit_power_law(rows, args.fit_window)
         if fit is not None:
-            alpha, coeff, r2 = fit
+            alpha, coeff, r2, fit_points = fit
             window_s = ",".join(str(v) for v in args.fit_window)
-            print(f"  Fit window M in {{{window_s}}}: delta ~= {coeff:.4f} * M^{alpha:.3f}  (R^2={r2:.3f})")
+            fit_s = ",".join(str(v) for v in fit_points)
+            print(
+                f"  Positive-row fit inside M in {{{window_s}}} "
+                f"(fit rows {{{fit_s}}}): delta ~= {coeff:.4f} * M^{alpha:.3f}  "
+                f"(R^2={r2:.3f})"
+            )
         else:
             print("  Not enough positive mass-window rows for a review-safe fit.")
         print()
