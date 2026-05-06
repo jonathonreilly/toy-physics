@@ -36674,14 +36674,14 @@
     },
     "gauge_wilson_isotropy_boundary_note_2026-05-04": {
       "claim_id": "gauge_wilson_isotropy_boundary_note_2026-05-04",
-      "claim_type_author_hint": "open_gate",
-      "claim_type_author_hint_raw": "open_gate",
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
       "deps": [
         "gauge_scalar_temporal_completion_theorem_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note"
       ],
-      "note_hash": "111e8e50a1a364f058b8baf19b2510d277196d4a93e4bd71d72fd93e4918c3bb",
+      "note_hash": "aa8a7476c7a75bcdd815f58d78303a07c41e984bdefb57202db176e54ae2674a",
       "path": "docs/GAUGE_WILSON_ISOTROPY_BOUNDARY_NOTE_2026-05-04.md",
       "runner_path": "scripts/frontier_gauge_wilson_isotropy_boundary_2026_05_04.py",
       "title": "Gauge Wilson Isotropy Boundary Note"
@@ -55835,17 +55835,17 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 73,
       "meta": 10,
-      "no_go": 12,
+      "no_go": 13,
       "none": 1711,
-      "open_gate": 12,
+      "open_gate": 11,
       "positive_theorem": 87
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 570,
       "meta": 10,
-      "no_go": 116,
+      "no_go": 117,
       "none": 456,
-      "open_gate": 118,
+      "open_gate": 117,
       "positive_theorem": 635
     },
     "edge_count": 6593,

@@ -1,0 +1,28 @@
+loop_slug: gauge-wilson-isotropy-boundary-20260506
+mode: run
+target_status: retained_no_go_after_independent_reaudit
+cycle_count: 1
+active_route: retag_exact_negative_boundary
+hard_residual: "Convert open-gate wording into an explicit no_go derivation without broadening beyond the two checked mechanisms."
+files_touched:
+  - docs/GAUGE_WILSON_ISOTROPY_BOUNDARY_NOTE_2026-05-04.md
+  - .claude/science/physics-loops/gauge-wilson-isotropy-boundary-20260506/GOAL.md
+  - .claude/science/physics-loops/gauge-wilson-isotropy-boundary-20260506/ASSUMPTIONS_AND_IMPORTS.md
+  - .claude/science/physics-loops/gauge-wilson-isotropy-boundary-20260506/NO_GO_LEDGER.md
+  - .claude/science/physics-loops/gauge-wilson-isotropy-boundary-20260506/ROUTE_PORTFOLIO.md
+  - .claude/science/physics-loops/gauge-wilson-isotropy-boundary-20260506/ARTIFACT_PLAN.md
+  - .claude/science/physics-loops/gauge-wilson-isotropy-boundary-20260506/CLAIM_STATUS_CERTIFICATE.md
+  - .claude/science/physics-loops/gauge-wilson-isotropy-boundary-20260506/REVIEW_HISTORY.md
+  - docs/audit/data/citation_graph.json
+  - docs/audit/data/audit_ledger.json
+  - docs/audit/data/effective_status_summary.json
+open_imports: []
+no_go_routes:
+  - "Cl(3) pseudoscalar as fourth anticommuting generator"
+  - "staggered eta plaquette products as spatial/temporal split"
+review_findings:
+  - "Removed source-note target_effective_status metadata during local review; branch-local certificate retains proposal fields."
+pr_status: "not_attempted_in_local_science_fix_worktree"
+repo_lock_status: "default lock path unavailable in sandbox; branch-local lock acquired under this loop pack and released at block closure"
+next_exact_action: "Independent re-audit of gauge_wilson_isotropy_boundary_note_2026-05-04 as claim_type=no_go."
+stop_condition: "Reached for the requested single target after note edit, audit-data reseed, checks, and local review."
