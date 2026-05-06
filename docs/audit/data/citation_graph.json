@@ -2830,6 +2830,10 @@
     },
     {
       "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+      "to": "ckm_atlas_axiom_closure_note"
+    },
+    {
+      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
     },
     {
@@ -2839,6 +2843,18 @@
     {
       "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "to": "alpha_s_derived_note"
+    },
+    {
+      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+      "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
+    },
+    {
+      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
+    },
+    {
+      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
     },
     {
       "from": "ckm_cp_product_alpha_s_cross_sector_extraction_theorem_note_2026-04-25",
@@ -12137,6 +12153,14 @@
       "to": "native_gauge_closure_note"
     },
     {
+      "from": "s3_general_r_derivation_note",
+      "to": "s3_cap_uniqueness_note"
+    },
+    {
+      "from": "s3_general_r_derivation_note",
+      "to": "s3_boundary_link_theorem_note"
+    },
+    {
       "from": "s3_taste_cube_decomposition_note",
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
@@ -13753,6 +13777,34 @@
       "to": "universal_gr_discrete_global_closure_note"
     },
     {
+      "from": "universal_gr_lorentzian_signature_extension_note",
+      "to": "universal_gr_positive_background_local_closure_note"
+    },
+    {
+      "from": "universal_gr_lorentzian_signature_extension_note",
+      "to": "universal_gr_positive_background_extension_note"
+    },
+    {
+      "from": "universal_gr_lorentzian_signature_extension_note",
+      "to": "universal_gr_isotropic_glue_operator_note"
+    },
+    {
+      "from": "universal_gr_lorentzian_signature_extension_note",
+      "to": "universal_gr_discrete_global_closure_note"
+    },
+    {
+      "from": "universal_gr_lorentzian_signature_extension_note",
+      "to": "universal_gr_invariant_nonlinear_completion_note"
+    },
+    {
+      "from": "universal_gr_lorentzian_signature_extension_note",
+      "to": "universal_gr_constraint_action_stationarity_note"
+    },
+    {
+      "from": "universal_gr_lorentzian_signature_extension_note",
+      "to": "universal_gr_lorentzian_global_atlas_closure_note"
+    },
+    {
       "from": "universal_gr_positive_background_extension_note",
       "to": "universal_gr_positive_background_local_closure_note"
     },
@@ -13790,7 +13842,23 @@
     },
     {
       "from": "universal_qg_abstract_gaussian_completion_note",
-      "to": "universal_qg_optional_textbook_comparison_note"
+      "to": "universal_gr_discrete_global_closure_note"
+    },
+    {
+      "from": "universal_qg_abstract_gaussian_completion_note",
+      "to": "universal_qg_uv_finite_partition_note"
+    },
+    {
+      "from": "universal_qg_abstract_gaussian_completion_note",
+      "to": "universal_qg_projective_schur_closure_note"
+    },
+    {
+      "from": "universal_qg_abstract_gaussian_completion_note",
+      "to": "universal_qg_canonical_refinement_net_note"
+    },
+    {
+      "from": "universal_qg_abstract_gaussian_completion_note",
+      "to": "universal_qg_inverse_limit_closure_note"
     },
     {
       "from": "universal_qg_canonical_refinement_net_note",
@@ -13826,7 +13894,35 @@
     },
     {
       "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
-      "to": "universal_qg_optional_textbook_comparison_note"
+      "to": "universal_qg_canonical_textbook_weak_measure_equivalence_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
+      "to": "universal_qg_smooth_gravitational_local_identification_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
+      "to": "universal_qg_smooth_gravitational_global_solution_class_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
+      "to": "universal_qg_smooth_gravitational_global_atlas_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
+      "to": "universal_qg_canonical_smooth_geometric_action_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
+      "to": "universal_qg_canonical_textbook_geometric_action_equivalence_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
+      "to": "universal_gr_lorentzian_global_atlas_closure_note"
+    },
+    {
+      "from": "universal_qg_canonical_textbook_continuum_gr_closure_note",
+      "to": "universal_gr_discrete_global_closure_note"
     },
     {
       "from": "universal_qg_canonical_textbook_geometric_action_equivalence_note",
@@ -13922,7 +14018,35 @@
     },
     {
       "from": "universal_qg_smooth_gravitational_global_solution_class_note",
-      "to": "universal_qg_optional_textbook_comparison_note"
+      "to": "universal_qg_smooth_gravitational_local_identification_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_solution_class_note",
+      "to": "universal_qg_smooth_gravitational_global_atlas_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_solution_class_note",
+      "to": "universal_gr_discrete_global_closure_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_solution_class_note",
+      "to": "universal_qg_pl_sobolev_interface_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_solution_class_note",
+      "to": "universal_qg_pl_weak_form_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_solution_class_note",
+      "to": "universal_qg_canonical_refinement_net_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_solution_class_note",
+      "to": "universal_qg_projective_schur_closure_note"
+    },
+    {
+      "from": "universal_qg_smooth_gravitational_global_solution_class_note",
+      "to": "universal_qg_inverse_limit_closure_note"
     },
     {
       "from": "universal_qg_smooth_gravitational_local_identification_note",
@@ -14419,6 +14543,22 @@
     {
       "from": "wilson_two_body_open_refined_note_2026-04-11",
       "to": "wilson_mu2_distance_sweep_note_2026-04-11"
+    },
+    {
+      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+      "to": "ckm_atlas_axiom_closure_note"
+    },
+    {
+      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+      "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+      "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
+    },
+    {
+      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
     },
     {
       "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
@@ -29834,11 +29974,15 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
+        "ckm_atlas_axiom_closure_note",
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "left_handed_charge_matching_note",
-        "alpha_s_derived_note"
+        "alpha_s_derived_note",
+        "ckm_first_row_magnitudes_theorem_note_2026-04-24",
+        "ckm_third_row_magnitudes_theorem_note_2026-04-24",
+        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
       ],
-      "note_hash": "d53f4e350f9ed37a94fb12d82f64010980813d1ba0657648d35f299b6730a288",
+      "note_hash": "adaaf7d70547c5422d78ada160dd0960b6915021af02fd00ba0e657e59b918a5",
       "path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_ckm_cp_phase_structural_identity.py",
       "title": "CKM CP-Phase Structural Identity Theorem"
@@ -47853,8 +47997,11 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": "Constructive computation (R=2..6) + theorem chain with standard mathematical citation (Perelman 2003)",
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "48e40fcc07bb904550e7f5010bcf46a0ca88aac97833a0a1dd9f3949092ac4c8",
+      "deps": [
+        "s3_cap_uniqueness_note",
+        "s3_boundary_link_theorem_note"
+      ],
+      "note_hash": "ebc7974078c0f5dee37c16ada66efad06c628861ee9ffb9b206d5d54102c58aa",
       "path": "docs/S3_GENERAL_R_DERIVATION_NOTE.md",
       "runner_path": "scripts/frontier_s3_cap_uniqueness.py",
       "title": "S^3 Topology: General-R Derivation"
@@ -51502,8 +51649,16 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "62779cce3628d562890e032d44dbd7265700ca2801f3bd6d3c2d2c19c89900b6",
+      "deps": [
+        "universal_gr_positive_background_local_closure_note",
+        "universal_gr_positive_background_extension_note",
+        "universal_gr_isotropic_glue_operator_note",
+        "universal_gr_discrete_global_closure_note",
+        "universal_gr_invariant_nonlinear_completion_note",
+        "universal_gr_constraint_action_stationarity_note",
+        "universal_gr_lorentzian_global_atlas_closure_note"
+      ],
+      "note_hash": "5f17dbf6fab98373f0bb4cf1dc6730ea6e2455d70168892589831d22856ec7c3",
       "path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`"
@@ -51615,9 +51770,13 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "universal_qg_optional_textbook_comparison_note"
+        "universal_gr_discrete_global_closure_note",
+        "universal_qg_uv_finite_partition_note",
+        "universal_qg_projective_schur_closure_note",
+        "universal_qg_canonical_refinement_net_note",
+        "universal_qg_inverse_limit_closure_note"
       ],
-      "note_hash": "067f0989b6bec10f252a04932398e27776615bfcfb094dd909b3c6c4bfaac026",
+      "note_hash": "8e73c7b7d975c7a597eace0376c8516b9b98cc29385bc808afb114fdbec9dbf9",
       "path": "docs/UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Abstract Gaussian Completion on `PL S^3 x R`"
@@ -51672,9 +51831,16 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "universal_qg_optional_textbook_comparison_note"
+        "universal_qg_canonical_textbook_weak_measure_equivalence_note",
+        "universal_qg_smooth_gravitational_local_identification_note",
+        "universal_qg_smooth_gravitational_global_solution_class_note",
+        "universal_qg_smooth_gravitational_global_atlas_note",
+        "universal_qg_canonical_smooth_geometric_action_note",
+        "universal_qg_canonical_textbook_geometric_action_equivalence_note",
+        "universal_gr_lorentzian_global_atlas_closure_note",
+        "universal_gr_discrete_global_closure_note"
       ],
-      "note_hash": "b1b657db581cb1111dacf9d92c1c7d6696738a2c9402ab24b0c006db30b83ab4",
+      "note_hash": "eccae0d7add02be53f85fa61caeead5422bcc04e1126afa062bbfa7d4ed070ad",
       "path": "docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Canonical Textbook Continuum Gravitational Closure"
@@ -51748,11 +51914,11 @@
     },
     "universal_qg_optional_textbook_comparison_note": {
       "claim_id": "universal_qg_optional_textbook_comparison_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "2b76941ca0b72d46923e20d0ab5b17bcda9291ec124ace0ec4394530a0bf98fe",
+      "note_hash": "6548a36e16ed6eef6bc7d5614bc008e446d3d3f580bb447b77912caf12b534bf",
       "path": "docs/UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Optional Textbook Comparison Note"
@@ -51839,9 +52005,16 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "universal_qg_optional_textbook_comparison_note"
+        "universal_qg_smooth_gravitational_local_identification_note",
+        "universal_qg_smooth_gravitational_global_atlas_note",
+        "universal_gr_discrete_global_closure_note",
+        "universal_qg_pl_sobolev_interface_note",
+        "universal_qg_pl_weak_form_note",
+        "universal_qg_canonical_refinement_net_note",
+        "universal_qg_projective_schur_closure_note",
+        "universal_qg_inverse_limit_closure_note"
       ],
-      "note_hash": "376c4c1de29234d74f1e4d783db6d2037a3aebc5e70913b73f4a53dc705bb093",
+      "note_hash": "7ff05c854eb1bebeb918b4cb92ce2f72f5131761d0fb727a056328731bfc90fa",
       "path": "docs/UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md",
       "runner_path": null,
       "title": "Universal QG Smooth Gravitational Global Solution Class"
@@ -52833,11 +53006,15 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
+        "ckm_atlas_axiom_closure_note",
+        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+        "ckm_first_row_magnitudes_theorem_note_2026-04-24",
+        "ckm_third_row_magnitudes_theorem_note_2026-04-24",
         "native_gauge_closure_note",
         "graph_first_su3_integration_note",
         "alpha_s_derived_note"
       ],
-      "note_hash": "9399cd3dd739a6aa0ebff3cc48a048b3a9a03cb23f8133699c34b0b4e93d080d",
+      "note_hash": "2f1ea9aebcfa1e03d90bd06e19a81cacbb16218273d4bf46f95df9141f6ff101",
       "path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_wolfenstein_lambda_a_structural_identities.py",
       "title": "Wolfenstein Lambda and A Structural Identities Theorem"
@@ -55208,7 +55385,6 @@
     "s3_anomaly_spacetime_lift_note",
     "s3_boundary_link_theorem_note",
     "s3_cap_uniqueness_note",
-    "s3_general_r_derivation_note",
     "s3_mass_matrix_no_go_note",
     "s3_time_constructed_support_tensor_primitive_note",
     "s3_time_primitive_chain_note",
@@ -55368,7 +55544,6 @@
     "universal_gr_isotropic_schur_localization_note",
     "universal_gr_lambda_bypass_note",
     "universal_gr_lorentzian_global_atlas_closure_note",
-    "universal_gr_lorentzian_signature_extension_note",
     "universal_gr_polarization_frame_bundle_attempt",
     "universal_gr_polarization_frame_bundle_blocker_note",
     "universal_gr_supermetric_normal_form_note",
@@ -55450,24 +55625,24 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 70,
-      "meta": 8,
+      "meta": 9,
       "no_go": 12,
-      "none": 1714,
+      "none": 1713,
       "open_gate": 12,
       "positive_theorem": 87
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 567,
-      "meta": 8,
+      "meta": 9,
       "no_go": 117,
-      "none": 457,
+      "none": 456,
       "open_gate": 118,
       "positive_theorem": 636
     },
-    "edge_count": 6521,
-    "leaf_count": 553,
+    "edge_count": 6556,
+    "leaf_count": 552,
     "node_count": 1903,
-    "root_count": 876,
+    "root_count": 874,
     "runners_with_path": 1477
   }
 }

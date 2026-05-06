@@ -70,5 +70,43 @@ This theorem does **not** by itself yet prove:
 
 Both of those have now been discharged by later authority notes. So what
 remains beyond this theorem is only the separate optional comparison note
-[UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](./UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md),
+`UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md`,
 which is packaging-only and not part of the theorem stack.
+
+## Citations
+
+This section registers authority notes for the local smooth gravitational
+identification, finite-atlas patching, discrete-global stationary family,
+canonical weak/Gaussian object, refinement net, and Schur/projective closure
+used by the exhaustion argument. The following are the load-bearing
+repo-native authorities for each ingredient in the "Exact content" section;
+the markdown links register them as one-hop dependency edges in the citation
+graph.
+
+Gravity-stack authorities:
+
+- [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md](UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md)
+  — exact positive-background local smooth gravitational identification.
+- [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md](UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md)
+  — exact finite-atlas smooth gravitational stationary patching.
+- [UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
+  — exact discrete-global stationary family on `PL S^3 × R`.
+
+Continuum / QG-stack authorities:
+
+- [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
+  and [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
+  — exact canonical textbook weak Sobolev / Gaussian cylinder object.
+- [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+  — exact canonical barycentric-dyadic refinement net.
+- [UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md](UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md)
+  — exact Schur/projective Gaussian closure on the refinement net.
+- [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
+  — exact inverse-limit Gaussian cylinder closure.
+
+The exhaustion / global step that this note adds is the projective
+limit of those ingredients along the canonical time-slab exhaustion;
+the verdict and the "Exact content" inventory above are unchanged.
+
+These links are dependency wiring only; the independent audit lane determines
+status after the pipeline sees the registered edges.

@@ -60,7 +60,42 @@ its chosen canonical textbook external realization.
 
 What remains, if desired, is only the separate optional comparison note:
 
-- [UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](./UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md)
+- `UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md`
 
 That note is packaging-only. It does not change the closed theorem stack on
 the chosen canonical textbook target.
+
+## Citations
+
+This section registers the upstream notes proving the six listed exact
+equivalences and the `K_GR(D) = H_D ⊗ Λ_R` sector-unification bridge on
+`PL S^3 × R`. The following are the load-bearing repo-native authorities for
+each item in "Exact content" §1–6 above; the markdown links register them as
+one-hop dependency edges in the citation graph.
+
+- [UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md](UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md)
+  — exact canonical textbook weak/measure equivalence (item 1).
+- [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md](UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md)
+  — exact smooth local gravitational identification (item 2).
+- [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md](UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md)
+  and [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md](UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md)
+  — exact smooth finite-atlas + global weak/Gaussian gravitational
+  solution class (item 3).
+- [UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md](UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md)
+  — exact canonical smooth geometric/action equivalence (item 4).
+- [UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md](UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md)
+  — exact canonical textbook Einstein-Hilbert-style geometric/action
+  equivalence (item 5).
+- [UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md](UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md)
+  — exact global Lorentzian Einstein/Regge stationary action family on
+  `PL S^3 × R` (item 6).
+- [UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
+  — discrete-global stationary family carrying `K_GR(D)` across the
+  positive-background and Lorentzian sectors (the sector-unification
+  bridge).
+
+These additions are strictly additive: the verdict, the closed sectors
+(positive-background weak/Gaussian + Lorentzian stationary), the listed
+exact equivalences, and the "no remaining theorem gap" assertion are
+unchanged. These links are dependency wiring only; the independent audit lane
+determines status after the pipeline sees the registered edges.
