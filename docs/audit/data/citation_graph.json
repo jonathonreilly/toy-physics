@@ -18529,7 +18529,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-06T01:00:23.642096+00:00",
+  "generated_at": "2026-05-06T01:02:30.127622+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42393,7 +42393,7 @@
       "current_status": "unknown",
       "current_status_raw": "exact negative boundary / no current same-surface `O_H` or `C_sH/C_HH` row authority",
       "deps": [],
-      "note_hash": "3b18053d5b37544201714e5ab344daa1f1d2b0d68500aab22d8cef4eaf26ffa8",
+      "note_hash": "fa8c53dc79d5a9e4bebe45705a90d7a558ba3f39219d9dd54c3227849e69bcfd",
       "path": "docs/YT_PR230_OH_SOURCE_HIGGS_AUTHORITY_RESCAN_GATE_NOTE_2026-05-05.md",
       "runner_path": null,
       "title": "PR230 O_H / Source-Higgs Authority Rescan Gate"

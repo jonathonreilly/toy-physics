@@ -3318,6 +3318,6 @@ source-Higgs overlap.
 
 Reopen this route only with a real same-surface `O_H` certificate or
 production source-Higgs pole rows.  Do not reopen it with method names,
-cross-lane `O_H` references, unratified Gram purity, FMS language,
-GNS/flat-extension rank, holonomic derivative machinery, or positivity
-preservation alone.
+cross-lane `O_H` references, the unratified smoke operator, unratified Gram
+purity, FMS language, GNS/flat-extension rank, holonomic derivative machinery,
+or positivity preservation alone.

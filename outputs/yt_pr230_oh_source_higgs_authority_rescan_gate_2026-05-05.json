@@ -48,9 +48,10 @@
     "source_higgs_gram_gate": "open / source-Higgs Gram purity gate not passed",
     "source_higgs_postprocess": "open / O_sp-Higgs Gram-purity postprocess awaiting production certificate",
     "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
-    "source_higgs_unratified_gram_no_go": "exact negative boundary / unratified source-Higgs Gram shortcut is not O_H authority"
+    "source_higgs_unratified_gram_no_go": "exact negative boundary / unratified source-Higgs Gram shortcut is not O_H authority",
+    "source_higgs_unratified_operator": ""
   },
-  "pass_count": 14,
+  "pass_count": 15,
   "proposal_allowed": false,
   "proposal_allowed_reason": "No canonical O_H identity/normalization certificate or production source-Higgs pole-row certificate exists on the current PR230 surface.",
   "source_higgs_projection_counterfamily": [

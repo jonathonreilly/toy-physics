@@ -3829,7 +3829,7 @@ blocked on the current surface:
 
 ```text
 python3 scripts/frontier_yt_pr230_oh_source_higgs_authority_rescan_gate.py
-# SUMMARY: PASS=14 FAIL=0
+# SUMMARY: PASS=15 FAIL=0
 
 python3 scripts/frontier_yt_pr230_assumption_import_stress.py
 # SUMMARY: PASS=36 FAIL=0
@@ -3847,9 +3847,10 @@ python3 scripts/frontier_yt_retained_closure_route_certificate.py
 The branch contains no current same-surface canonical `O_H` certificate and no
 source-Higgs production `C_ss/C_sH/C_HH` row certificate.  Existing FMS,
 action-first, invariant-ring, GNS, holonomic, Perron, determinant-positivity,
-and reflection-positivity artifacts are useful future certificate engines, not
-the missing bridge.  The next positive action remains to produce one genuine
-same-surface artifact: canonical `O_H`, source-Higgs pole rows, W/Z rows with
+reflection-positivity, and the unratified smoke-operator certificate are useful
+future plumbing/certificate engines, not the missing bridge.  The next
+positive action remains to produce one genuine same-surface artifact:
+canonical `O_H`, source-Higgs pole rows, W/Z rows with
 identity/covariance/strict `g2`, Schur rows, strict scalar-LSZ authority, or a
 neutral primitive/off-diagonal-generator certificate.  No
 retained/proposed-retained wording is authorized.

@@ -16,6 +16,11 @@ determinant/reflection-positivity artifacts remain useful certificate engines
 or future-theorem shapes only.  They do not supply the missing operator or
 rows on the actual PR230 surface.
 
+The rescan also explicitly consumes the unratified source-Higgs smoke operator
+certificate.  That file is useful estimator plumbing, but it marks the operator
+as smoke-only, lacks identity and normalization certificates, and sets
+`proposal_allowed: false`.
+
 ## Counterfamily
 
 The executable gate includes the minimal source-Higgs projection counterfamily:
@@ -55,7 +60,7 @@ retained/proposed-retained wording is authorized.
 
 ```bash
 python3 scripts/frontier_yt_pr230_oh_source_higgs_authority_rescan_gate.py
-# SUMMARY: PASS=14 FAIL=0
+# SUMMARY: PASS=15 FAIL=0
 
 python3 scripts/frontier_yt_pr230_assumption_import_stress.py
 # SUMMARY: PASS=36 FAIL=0

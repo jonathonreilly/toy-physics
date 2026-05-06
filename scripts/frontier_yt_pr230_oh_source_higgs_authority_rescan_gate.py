@@ -45,6 +45,7 @@ PARENTS = {
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
     "source_higgs_gram_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "source_higgs_postprocess": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
+    "source_higgs_unratified_operator": "outputs/yt_source_higgs_unratified_operator_certificate_2026-05-03.json",
     "source_higgs_unratified_gram_no_go": "outputs/yt_source_higgs_unratified_gram_shortcut_no_go_2026-05-05.json",
     "derived_bridge_rank_one": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
     "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
@@ -185,6 +186,11 @@ def main() -> int:
         is False
         and certs["source_higgs_postprocess"].get("osp_higgs_gram_purity_gate_passed")
         is False
+        and certs["source_higgs_unratified_operator"].get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False
+        and certs["source_higgs_unratified_operator"].get("proposal_allowed") is False
         and certs["source_higgs_unratified_gram_no_go"].get(
             "unratified_gram_shortcut_no_go_passed"
         )
@@ -228,6 +234,16 @@ def main() -> int:
     report("method-candidates-not-current-authority", method_candidates_not_authority, "FMS/action-first/invariant/GNS/holonomic support only")
     report("source-higgs-production-rows-absent", source_higgs_rows_absent, statuses["source_higgs_builder"])
     report("gram-gates-waiting-on-real-rows", gram_gates_waiting, statuses["source_higgs_gram_gate"])
+    report(
+        "unratified-source-higgs-smoke-operator-rejected",
+        certs["source_higgs_unratified_operator"].get("phase") == "smoke"
+        and certs["source_higgs_unratified_operator"].get("proposal_allowed") is False
+        and certs["source_higgs_unratified_operator"].get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False,
+        certs["source_higgs_unratified_operator"].get("verdict", ""),
+    )
     report("derived-rank-one-bridge-does-not-close-oh", derived_bridge_does_not_close, statuses["derived_bridge_rank_one"])
     report("aggregate-gates-still-open", aggregate_gates_open, "proposal_allowed remains false")
     report("source-only-counterfamily-blocks-overlap-selection", counterfamily_blocks_source_only_selection, "same C_ss with variable C_sH/C_HH overlap")

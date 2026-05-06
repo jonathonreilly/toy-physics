@@ -5704,7 +5704,7 @@ Review stance: current-surface authority rescan / exact negative boundary.
 - Added `outputs/yt_pr230_oh_source_higgs_authority_rescan_gate_2026-05-05.json`.
 - Wired the rescan into assumption stress, campaign status, full positive
   closure assembly, and retained-route certificates.
-- Validation: runner `PASS=14 FAIL=0`, assumption stress `PASS=36 FAIL=0`,
+- Validation: runner `PASS=15 FAIL=0`, assumption stress `PASS=36 FAIL=0`,
   campaign status `PASS=271 FAIL=0`, full assembly `PASS=91 FAIL=0`,
   retained-route `PASS=239 FAIL=0`.
 
