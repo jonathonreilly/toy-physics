@@ -1274,6 +1274,26 @@
     },
     {
       "from": "canonical_harness_index",
+      "to": "plaquette_closure_mathematical_probes_note_2026-05-05"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "plaquette_minimal_block_closed_form_note_2026-05-05"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "su3_bridge_pr525_flaw_fix_note_2026-05-05"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "chain_refactoring_bare_to_pdg_note_2026-05-05"
+    },
+    {
+      "from": "canonical_harness_index",
       "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19"
     },
     {
@@ -2159,6 +2179,18 @@
     {
       "from": "causal_source_placement_robustness_note",
       "to": "causal_field_portability_note"
+    },
+    {
+      "from": "chain_refactoring_bare_to_pdg_note_2026-05-05",
+      "to": "plaquette_minimal_block_closed_form_note_2026-05-05"
+    },
+    {
+      "from": "chain_refactoring_bare_to_pdg_note_2026-05-05",
+      "to": "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05"
+    },
+    {
+      "from": "chain_refactoring_bare_to_pdg_note_2026-05-05",
+      "to": "su3_bridge_pr525_flaw_fix_note_2026-05-05"
     },
     {
       "from": "charged_lepton_koide_cone_algebraic_equivalence_note",
@@ -10857,6 +10889,22 @@
       "to": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
     },
     {
+      "from": "plaquette_minimal_block_closed_form_note_2026-05-05",
+      "to": "plaquette_closure_mathematical_probes_note_2026-05-05"
+    },
+    {
+      "from": "plaquette_minimal_block_closed_form_note_2026-05-05",
+      "to": "su3_cube_perron_solve_combined_theorem_note_2026-05-03"
+    },
+    {
+      "from": "plaquette_minimal_block_closed_form_note_2026-05-05",
+      "to": "plaquette_4d_mc_fss_numerical_theorem_note_2026-05-05"
+    },
+    {
+      "from": "plaquette_minimal_block_closed_form_note_2026-05-05",
+      "to": "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03"
+    },
+    {
       "from": "plaquette_self_consistency_note",
       "to": "gauge_vacuum_plaquette_bridge_support_note"
     },
@@ -13177,6 +13225,10 @@
       "to": "anomaly_forces_time_theorem"
     },
     {
+      "from": "su3_bridge_pr525_flaw_fix_note_2026-05-05",
+      "to": "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05"
+    },
+    {
       "from": "su3_casimir_fundamental_theorem_note_2026-05-02",
       "to": "cl3_color_automorphism_theorem"
     },
@@ -13223,6 +13275,22 @@
     {
       "from": "su3_dabc_symmetric_theorem_note_2026-05-02",
       "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05",
+      "to": "plaquette_closure_mathematical_probes_note_2026-05-05"
+    },
+    {
+      "from": "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05",
+      "to": "plaquette_minimal_block_closed_form_note_2026-05-05"
+    },
+    {
+      "from": "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05",
+      "to": "gauge_vacuum_plaquette_reduction_existence_theorem_note"
+    },
+    {
+      "from": "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05",
+      "to": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
     },
     {
       "from": "su3_tensor_network_engine_roadmap_note_2026-05-03",
@@ -28574,6 +28642,11 @@
         "plaquette_4d_mc_support_note_2026-05-04",
         "gauge_wilson_isotropy_boundary_note_2026-05-04",
         "plaquette_4d_mc_fss_numerical_theorem_note_2026-05-05",
+        "plaquette_closure_mathematical_probes_note_2026-05-05",
+        "plaquette_minimal_block_closed_form_note_2026-05-05",
+        "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05",
+        "su3_bridge_pr525_flaw_fix_note_2026-05-05",
+        "chain_refactoring_bare_to_pdg_note_2026-05-05",
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
@@ -28781,7 +28854,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "48b12dd073598aa81506ae83f58989c03784f29404d8fc13ed1ac555fa688de4",
+      "note_hash": "5a97c931a2518e3b346a045938d56623bb041712c215adc39185083623adb6d2",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -29028,6 +29101,21 @@
       "path": "docs/CENTRAL_BAND_MASS_WINDOW_NOTE.md",
       "runner_path": "scripts/central_band_mass_window_summary.py",
       "title": "Central-Band Mass Window Note"
+    },
+    "chain_refactoring_bare_to_pdg_note_2026-05-05": {
+      "claim_id": "chain_refactoring_bare_to_pdg_note_2026-05-05",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "chain refactoring sidestepping L\u2192\u221e analytic closure",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "plaquette_minimal_block_closed_form_note_2026-05-05",
+        "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05",
+        "su3_bridge_pr525_flaw_fix_note_2026-05-05"
+      ],
+      "note_hash": "a2df1332b62b8b1f0854ffc0668b2a5c55cba6381cd648ff2fccec6d6330ce18",
+      "path": "docs/CHAIN_REFACTORING_BARE_TO_PDG_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "Closed-Form Chain Refactoring: v = 246.06 GeV from Framework Primitives + V=1 PF ODE"
     },
     "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26": {
       "claim_id": "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
@@ -43297,6 +43385,33 @@
       "runner_path": "scripts/frontier_plaquette_bootstrap_framework_specific_positivity.py",
       "title": "Plaquette Bootstrap \u2014 Framework-Specific Positivity (3x3 Extension)"
     },
+    "plaquette_closure_mathematical_probes_note_2026-05-05": {
+      "claim_id": "plaquette_closure_mathematical_probes_note_2026-05-05",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "research_finding (exploration)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "5c9ceddef2ac2f8173eb7a46834b66ed56c58fd8e70be061c55b2c6acea185a9",
+      "path": "docs/PLAQUETTE_CLOSURE_MATHEMATICAL_PROBES_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "Plaquette \u27e8P\u27e9(\u03b2=6) Closure: Mathematical Probes Synthesis Note"
+    },
+    "plaquette_minimal_block_closed_form_note_2026-05-05": {
+      "claim_id": "plaquette_minimal_block_closed_form_note_2026-05-05",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "research_finding (positive identification + numerical verification)",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "plaquette_closure_mathematical_probes_note_2026-05-05",
+        "su3_cube_perron_solve_combined_theorem_note_2026-05-03",
+        "plaquette_4d_mc_fss_numerical_theorem_note_2026-05-05",
+        "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03"
+      ],
+      "note_hash": "ba053bb137c6d967a047418decc4d5771377f816e2eff22b5ce8ef01afd8c9f9",
+      "path": "docs/PLAQUETTE_MINIMAL_BLOCK_CLOSED_FORM_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "Framework's L_s=2 PBC Minimal-Block Plaquette: Closed-Form Identification"
+    },
     "plaquette_self_consistency_note": {
       "claim_id": "plaquette_self_consistency_note",
       "claim_type_author_hint": null,
@@ -49898,6 +50013,19 @@
       "runner_path": "scripts/frontier_su3_anomaly_forced_3bar_completion.py",
       "title": "SU(3) Anomaly-Forced 3\u0304 Singlet Completion Theorem"
     },
+    "su3_bridge_pr525_flaw_fix_note_2026-05-05": {
+      "claim_id": "su3_bridge_pr525_flaw_fix_note_2026-05-05",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "methodological correction",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05"
+      ],
+      "note_hash": "06355416e05af7b30427e60d19d98b0221667f3c9033d65732cd9fd779cfbc8e",
+      "path": "docs/SU3_BRIDGE_PR525_FLAW_FIX_NOTE_2026-05-05.md",
+      "runner_path": null,
+      "title": "PR #525 Methodological Flaw: 1-Loop Interpretation Should Be Reopened"
+    },
     "su3_casimir_fundamental_theorem_note_2026-05-02": {
       "claim_id": "su3_casimir_fundamental_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -49980,6 +50108,22 @@
       "path": "docs/SU3_FUSION_ENGINE_PR1_THEOREM_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_su3_fusion_engine.py",
       "title": "SU(3) Fusion Engine via Cartan-Torus Character Orthogonality (PR 1)"
+    },
+    "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05": {
+      "claim_id": "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "research_finding (novel mathematical extension)",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "plaquette_closure_mathematical_probes_note_2026-05-05",
+        "plaquette_minimal_block_closed_form_note_2026-05-05",
+        "gauge_vacuum_plaquette_reduction_existence_theorem_note",
+        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
+      ],
+      "note_hash": "d562abdbe7e34e33fab37e11a1cee424c27086e68d30cbd05ae422a5fd4bd0ff",
+      "path": "docs/SU3_LOW_RANK_IRREP_PICARD_FUCHS_ODES_NOTE_2026-05-05.md",
+      "runner_path": "scripts/frontier_su3_low_rank_picard_fuchs_odes_2026_05_05.py",
+      "title": "SU(3) Low-Rank Irrep Character Coefficients: Picard-Fuchs ODE Catalog"
     },
     "su3_tensor_network_engine_roadmap_note_2026-05-03": {
       "claim_id": "su3_tensor_network_engine_roadmap_note_2026-05-03",
@@ -54867,6 +55011,7 @@
     "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
     "planck_source_unit_normalization_support_theorem_note_2026-04-25",
     "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25",
+    "plaquette_closure_mathematical_probes_note_2026-05-05",
     "pmns_active_four_real_source_from_transport_note",
     "pmns_c3_nontrivial_current_boundary_note",
     "pmns_commutant_eigenoperator_selector_note",
@@ -55156,22 +55301,22 @@
       "bounded_theorem": 60,
       "meta": 8,
       "no_go": 12,
-      "none": 1715,
+      "none": 1720,
       "open_gate": 10,
       "positive_theorem": 85
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 558,
+      "bounded_theorem": 560,
       "meta": 8,
       "no_go": 117,
-      "none": 457,
+      "none": 460,
       "open_gate": 116,
       "positive_theorem": 634
     },
-    "edge_count": 6493,
-    "leaf_count": 546,
-    "node_count": 1890,
-    "root_count": 876,
-    "runners_with_path": 1463
+    "edge_count": 6510,
+    "leaf_count": 545,
+    "node_count": 1895,
+    "root_count": 877,
+    "runners_with_path": 1464
   }
 }

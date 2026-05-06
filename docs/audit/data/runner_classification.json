@@ -15096,6 +15096,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_su3_fusion_engine.py"
     },
+    "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_low_rank_picard_fuchs_odes_2026_05_05.py"
+    },
     "su3_tensor_network_engine_roadmap_note_2026-05-03": {
       "assert_count": 1,
       "counts": {
@@ -31937,6 +31949,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_su3_low_rank_picard_fuchs_odes_2026_05_05.py": {
+      "assert_count": 0,
+      "claims": [
+        "su3_low_rank_irrep_picard_fuchs_odes_note_2026-05-05"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_substrate_to_p_a_forcing.py": {
       "assert_count": 2,
       "claims": [
@@ -38335,12 +38362,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 164,
-      "C": 563,
+      "C": 564,
       "D": 209,
       "none": 421
     },
-    "runners_classified": 1367,
-    "runners_with_C": 671,
+    "runners_classified": 1368,
+    "runners_with_C": 672,
     "runners_with_D": 340
   }
 }
