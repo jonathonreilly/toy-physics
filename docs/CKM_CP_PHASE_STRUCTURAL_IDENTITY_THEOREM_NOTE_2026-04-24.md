@@ -4,7 +4,7 @@
 **Status:** proposed_retained standalone structural-identity theorem on `main`.
 This note extracts, names, and regression-tests the CKM CP-phase identities
 already present inside
-`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`. It does
+[`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md). It does
 not change the status of the parent CKM atlas package.
 
 **Primary runner:** `scripts/frontier_ckm_cp_phase_structural_identity.py`
@@ -72,10 +72,10 @@ the finite-`lambda` exact standard-matrix `J` readout.
 
 | Ingredient | Authority |
 | --- | --- |
-| Parent CKM atlas/axiom package | `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md` |
-| Quark-block dimension `dim(Q_L) = 2 x 3 = 6` | [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md), parent CKM atlas |
-| Exact `1 + 5` center-excess projector weights | parent CKM atlas; tensor support notes used there |
-| Bright/tensor CP radius `r^2 = 1/6` | parent CKM atlas |
+| Parent CKM atlas/axiom package | [`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
+| Quark-block dimension `dim(Q_L) = 2 x 3 = 6` | [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md), [parent CKM atlas](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
+| Exact `1 + 5` center-excess projector weights | [parent CKM atlas](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md); tensor support notes used there |
+| Bright/tensor CP radius `r^2 = 1/6` | [parent CKM atlas](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
 | Canonical `alpha_s(v)` for the J factorisation | [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md), `scripts/canonical_plaquette_surface.py` |
 
 No quark mass, fitted CKM observable, or observation-side phase is used as a
@@ -152,9 +152,9 @@ J_0 = lambda^6 A^2 eta
   input already used by the CKM atlas.
 - It does not derive CKM magnitudes beyond the parent atlas package.
 - First- and third-row magnitude identities are named separately in
-  `CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`
+  [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
   and
-  `CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`,
+  [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
   which preserves the finite-`lambda` standard-matrix guardrail.
 - It does not promote the older bounded Cabibbo, mass-basis NNI, or partial
   Jarlskog route-history notes as controlling authority.
@@ -209,6 +209,6 @@ depend on `sympy`.
 | Third-row CKM magnitudes | standalone atlas-leading identities with finite-`lambda` guardrail in the third-row companion note |
 
 This is the same extraction pattern as
-`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`:
+[`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md):
 an implicit retained result is named, bounded, and regression-tested without
 expanding the parent theorem's scope.

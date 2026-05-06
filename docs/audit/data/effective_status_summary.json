@@ -48,10 +48,10 @@
       "frontier_extension_lane_opening_note_2026-04-25"
     ]
   ],
-  "cycles_detected": 171,
+  "cycles_detected": 179,
   "effective_status_counts": {
     "audit_in_progress": 2,
-    "audited_conditional": 469,
+    "audited_conditional": 467,
     "audited_failed": 16,
     "audited_numerical_match": 22,
     "audited_renaming": 34,
@@ -67,7 +67,7 @@
     "retained_bounded": 218,
     "retained_no_go": 117,
     "retained_pending_chain": 2,
-    "unaudited": 782
+    "unaudited": 784
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

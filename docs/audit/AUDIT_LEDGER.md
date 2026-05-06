@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 218 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 19 |
-| unaudited | 782 |
+| unaudited | 784 |
 | audit_in_progress | 2 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 22 |
 | ~~audited_renaming~~ | 34 |
-| ~~audited_conditional~~ | 469 |
+| ~~audited_conditional~~ | 467 |
 | ~~audited_failed~~ | 16 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 372 |
-| `audited_conditional` | 469 |
+| `audited_conditional` | 467 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 22 |
 | `audited_renaming` | 34 |
-| `unaudited` | 828 |
+| `unaudited` | 830 |
 
 | claim_type | count |
 |---|---:|
@@ -65,7 +65,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `leaf` | 652 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 171
+- **Citation cycles detected:** 179
 
 ### Runner classification (static heuristic)
 
@@ -82,28 +82,28 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 |---:|---|---|---|---:|---:|---|---|
 | 1 | `observable_principle_from_axiom_note` | positive_theorem | critical | 333 | 34.88 | `audited_conditional` | ~~audited_conditional~~ |
 | 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 583 | 34.19 | `audited_clean` | **retained_bounded** |
-| 3 | `minimal_axioms_2026-04-11` | meta | critical | 493 | 33.95 | `unaudited` | meta |
+| 3 | `minimal_axioms_2026-04-11` | meta | critical | 526 | 34.04 | `unaudited` | meta |
 | 4 | `alpha_s_derived_note` | bounded_theorem | critical | 501 | 31.97 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 358 | 30.99 | `audited_conditional` | ~~audited_conditional~~ |
-| 6 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 359 | 30.49 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 359 | 31.49 | `unaudited` | unaudited |
+| 6 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 359 | 30.49 | `unaudited` | unaudited |
 | 7 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 296 | 29.21 | `unaudited` | unaudited |
 | 8 | `native_gauge_closure_note` | bounded_theorem | critical | 573 | 28.66 | `audited_clean` | **retained_bounded** |
-| 9 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 352 | 26.46 | `audited_conditional` | ~~audited_conditional~~ |
+| 9 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 386 | 26.60 | `audited_conditional` | ~~audited_conditional~~ |
 | 10 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 578 | 25.68 | `audited_clean` | open_gate |
-| 11 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 345 | 25.43 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 444 | 25.30 | `unaudited` | unaudited |
+| 11 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 359 | 25.49 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 478 | 25.40 | `unaudited` | unaudited |
 | 13 | `minimal_axioms_2026-05-03` | meta | critical | 588 | 25.20 | `unaudited` | meta |
-| 14 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 300 | 23.73 | `unaudited` | unaudited |
-| 15 | `left_handed_charge_matching_note` | bounded_theorem | critical | 417 | 23.71 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `three_generation_structure_note` | bounded_theorem | critical | 358 | 22.99 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 320 | 22.83 | `audited_conditional` | ~~audited_conditional~~ |
-| 18 | `one_generation_matter_closure_note` | bounded_theorem | critical | 366 | 22.52 | `audited_conditional` | ~~audited_conditional~~ |
-| 19 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 355 | 22.48 | `audited_conditional` | ~~audited_conditional~~ |
+| 14 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 359 | 23.99 | `audited_conditional` | ~~audited_conditional~~ |
+| 15 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 300 | 23.73 | `unaudited` | unaudited |
+| 16 | `left_handed_charge_matching_note` | bounded_theorem | critical | 418 | 23.71 | `audited_conditional` | ~~audited_conditional~~ |
+| 17 | `three_generation_structure_note` | bounded_theorem | critical | 391 | 23.11 | `audited_conditional` | ~~audited_conditional~~ |
+| 18 | `one_generation_matter_closure_note` | bounded_theorem | critical | 400 | 22.65 | `audited_conditional` | ~~audited_conditional~~ |
+| 19 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 359 | 22.49 | `audited_conditional` | ~~audited_conditional~~ |
 | 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 524 | 22.04 | `audited_conditional` | ~~audited_conditional~~ |
-| 21 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 337 | 21.40 | `audited_conditional` | ~~audited_conditional~~ |
+| 21 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 359 | 21.49 | `audited_conditional` | ~~audited_conditional~~ |
 | 22 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 305 | 21.26 | `audited_clean` | **retained** |
-| 23 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 284 | 20.66 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 306 | 20.26 | `unaudited` | unaudited |
+| 23 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 381 | 21.08 | `unaudited` | unaudited |
+| 24 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 284 | 20.66 | `audited_conditional` | ~~audited_conditional~~ |
 | 25 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | critical | 542 | 19.59 | `audited_clean` | **retained_bounded** |
 
 
@@ -563,7 +563,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `ckm_classical_number_theory_integer_characterization_theorem_note_2026-04-25` | decoration | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_first_row_magnitudes_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_from_mass_hierarchy_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `ckm_jarlskog_exact_nlo_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -935,7 +934,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_matrixfree_shared_geometry_compare_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wilson_normalization_reconciliation_note_2026-04-11` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `wilson_two_body_open_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
-| `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `work_history.potential_publication_discoveries_log` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `yt_bridge_endpoint_shift_bound_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -2826,24 +2824,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`
   - `CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md`
-- **auditor confidence:** high
-
-### `ckm_cp_phase_structural_identity_theorem_note_2026-04-24`
-
-- **Note:** [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](../../docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the algebraic CKM CP-phase identities rho=1/6, eta=sqrt(5)/6, cos^2(delta_CKM)=1/6, tan(delta_CKM)=sqrt(5), and the conditional J_0 factorisation from the restricted source packet.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-ckm_cp_phase_structural_-045`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Combining the retained angular weights w_A1 = 1/6, w_perp = 5/6 with the retained CP radius r^2 = 1/6 gives rho^2 = 1/36, eta^2 = 5/36, hence cos^2(delta_CKM)=1/6 and tan(delta_CKM)=sqrt(5).  _(class `A`)_
-- **chain closes:** False — The algebra from the stated inputs is correct, but the restricted packet does not provide the parent CKM atlas authority that fixes the 1+5 projector split and bright/tensor CP radius r^2=1/6. The alpha_s(v) input for J_0 is also carried by an unaudited/bounded authority with explicit open upstream scope.
-- **rationale:** The runner verifies exact fraction arithmetic and three downstream comparator checks, but it hard-codes the load-bearing retained inputs DIM_A1=1, DIM_PERP=5, and RADIUS_SQUARED=1/6 rather than deriving them from the underlying atlas. The phase identities follow algebraically once those inputs are granted. However, the cited authorities in the restricted packet are marked unaudited, and the alpha_s authority is explicitly bounded with open plaquette/running-bridge scope, so the claim cannot be audited clean from this packet alone.
-- **open / conditional deps cited:**
-  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
-  - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
-  - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
-  - `ALPHA_S_DERIVED_NOTE.md`
 - **auditor confidence:** high
 
 ### `ckm_down_type_scale_convention_support_note_2026-04-22`
@@ -14222,23 +14202,6 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **chain closes:** False — The source note reports bounded model-computation outputs, post-selected law fits, and a failed both-masses observable, but the audit ledger registers no primary runner or current output. The numerical surface cannot be independently verified from the allowed inputs.
 - **rationale:** Issue: the mutual-attraction, distance-falloff, partner-source, screening, and both-masses claims depend on script outputs that are named in prose but not registered as audit runners. Why this blocks: a fresh auditor cannot check current numeric agreement, post-selection boundaries, or the failed action-reaction readout from the note alone. Repair target: register the relevant Wilson runners/logs and emit a single current machine-checkable summary for the bounded surface and both-masses failure. Claim boundary until fixed: bounded Wilson calibration and failed-Newton summary, not retained Newton-law derivation.
 - **auditor confidence:** medium
-
-### `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24`
-
-- **Note:** [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](../../docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the stated Wolfenstein lambda, A, product, |V_cb|, and atlas-leading |V_ub| algebra on the claimed CKM atlas surface using only the provided authorities and runner.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-wolfenstein_lambda_a_str-044`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The parent CKM atlas defines lambda^2 = alpha_s(v)/n_pair and A^2 = n_pair/n_color; substituting n_pair = 2 and n_color = 3 gives W1-W3 and the CKM corollaries.  _(class `F`)_
-- **chain closes:** False — The downstream algebra closes after the lambda and A identifications are imported, but the restricted packet does not provide the parent CKM atlas authority that makes those identifications. The alpha_s(v) authority is also marked unaudited, and the CP-radius corollary relies on a missing CP-phase authority.
-- **rationale:** The runner passes, but it only hard-codes or imports the stated inputs and checks algebraic consequences; it does not derive the Wolfenstein identifications from first principles. The load-bearing step is an atlas-level symbol identification for lambda and A, with the parent CKM atlas absent from the restricted packet. In addition, docs/ALPHA_S_DERIVED_NOTE.md is explicitly marked effective_status: unaudited, so retained-grade closure cannot be assigned from this packet.
-- **open / conditional deps cited:**
-  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
-  - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-  - `ALPHA_S_DERIVED_NOTE.md`
-- **auditor confidence:** high
 
 ### `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18`
 

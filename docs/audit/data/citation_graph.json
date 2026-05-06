@@ -2830,6 +2830,10 @@
     },
     {
       "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+      "to": "ckm_atlas_axiom_closure_note"
+    },
+    {
+      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
     },
     {
@@ -2839,6 +2843,18 @@
     {
       "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "to": "alpha_s_derived_note"
+    },
+    {
+      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+      "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
+    },
+    {
+      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
+    },
+    {
+      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
     },
     {
       "from": "ckm_cp_product_alpha_s_cross_sector_extraction_theorem_note_2026-04-25",
@@ -14419,6 +14435,22 @@
     {
       "from": "wilson_two_body_open_refined_note_2026-04-11",
       "to": "wilson_mu2_distance_sweep_note_2026-04-11"
+    },
+    {
+      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+      "to": "ckm_atlas_axiom_closure_note"
+    },
+    {
+      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+      "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+      "to": "ckm_first_row_magnitudes_theorem_note_2026-04-24"
+    },
+    {
+      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+      "to": "ckm_third_row_magnitudes_theorem_note_2026-04-24"
     },
     {
       "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
@@ -29834,11 +29866,15 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
+        "ckm_atlas_axiom_closure_note",
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "left_handed_charge_matching_note",
-        "alpha_s_derived_note"
+        "alpha_s_derived_note",
+        "ckm_first_row_magnitudes_theorem_note_2026-04-24",
+        "ckm_third_row_magnitudes_theorem_note_2026-04-24",
+        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
       ],
-      "note_hash": "d53f4e350f9ed37a94fb12d82f64010980813d1ba0657648d35f299b6730a288",
+      "note_hash": "adaaf7d70547c5422d78ada160dd0960b6915021af02fd00ba0e657e59b918a5",
       "path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_ckm_cp_phase_structural_identity.py",
       "title": "CKM CP-Phase Structural Identity Theorem"
@@ -52833,11 +52869,15 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
+        "ckm_atlas_axiom_closure_note",
+        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+        "ckm_first_row_magnitudes_theorem_note_2026-04-24",
+        "ckm_third_row_magnitudes_theorem_note_2026-04-24",
         "native_gauge_closure_note",
         "graph_first_su3_integration_note",
         "alpha_s_derived_note"
       ],
-      "note_hash": "9399cd3dd739a6aa0ebff3cc48a048b3a9a03cb23f8133699c34b0b4e93d080d",
+      "note_hash": "2f1ea9aebcfa1e03d90bd06e19a81cacbb16218273d4bf46f95df9141f6ff101",
       "path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_wolfenstein_lambda_a_structural_identities.py",
       "title": "Wolfenstein Lambda and A Structural Identities Theorem"
@@ -55464,7 +55504,7 @@
       "open_gate": 118,
       "positive_theorem": 636
     },
-    "edge_count": 6521,
+    "edge_count": 6529,
     "leaf_count": 553,
     "node_count": 1903,
     "root_count": 876,
