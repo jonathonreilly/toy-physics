@@ -41,6 +41,72 @@ The second set is a control: it shows what works if the taste `X` operator is
 retargeted to the selected logical axis.  It is not a claim that the current
 fixed pair-hop gate already implements every logical axis.
 
+## Algebraic Closure Of The Targeting Step
+
+For a fixed cell `c`, selected logical taste axis `a`, and spectator taste bits
+`s_k` on all axes `k != a`, the audited two-dimensional encoded subspace is
+
+```text
+|0_L> = |c> tensor |eta_a=0, eta_k=s_k for k != a>
+|1_L> = |c> tensor |eta_a=1, eta_k=s_k for k != a>.
+```
+
+The sublattice-parity operator gives
+
+```text
+Z |b_L> = (-1)^(b + sum_{k != a} s_k) |b_L>,
+```
+
+so the restricted operator is `(+/-) Z_logical` for every audited cell, axis,
+and spectator choice.  The spectator-dependent sign is the sign-count effect
+reported below; it is not a portability obstruction.
+
+The current fixed `X` is the row-major pair-hop.  On an even side-length
+Kogut-Susskind cell/taste decomposition, each even-odd row-major pair used by
+that hop differs only in the last coordinate, so this operator acts inside each
+cell as
+
+```text
+X_fixed |c> tensor |eta_0,...,eta_{d-1}>
+  = |c> tensor |eta_0,...,1 - eta_{d-1}>.
+```
+
+Therefore, when the selected logical axis is the last axis `a=d-1`,
+`X_fixed |0_L> = |1_L>` and `X_fixed |1_L> = |0_L>`, giving the required
+logical `X`.  When `a != d-1`, the last taste bit is a spectator.  Then
+
+```text
+X_fixed |b_L>
+  = |c> tensor |eta_a=b, eta_{d-1}=1-s_{d-1},
+                eta_k=s_k for k != a,d-1>,
+```
+
+which is orthogonal to the selected encoded subspace because the spectator
+assignment has changed while the logical bit has not.  Hence the restricted
+operator is exactly
+
+```text
+P_encoded X_fixed P_encoded = 0
+```
+
+for every non-last-axis encoding in dimensions 2 and 3.  The two encoded basis
+columns each leave the subspace with unit norm, so the runner's Frobenius
+leakage diagnostic is `sqrt(2)`.  With the restricted `X` equal to zero, the
+Bell-projector candidates collapse to duplicated half-projectors:
+
+```text
+P_zx = (1/4) (I + (-1)^x Z tensor Z),
+```
+
+because the `X tensor X` stabilizer factor vanishes.  This gives the observed
+worst-case idempotence and duplicate-branch orthogonality errors of `1/4`.
+
+Retargeting `X` to `I_cells tensor sigma_x` on the selected axis replaces the
+last-bit flip in the displayed formula by an `a`-bit flip.  It therefore maps
+`|0_L>` and `|1_L>` into each other for every audited cell, spectator, and
+logical axis, which closes the operator-targeting gap on the finite surface
+surveyed here.
+
 ## Default Run
 
 Command:
