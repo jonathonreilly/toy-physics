@@ -28,6 +28,6 @@ files_touched:
 runner_result: "required-only -> required: {'PASS': 8}; strict list-probes -> 24 lines"
 review_findings: none
 review_loop_disposition: pass
-pr_status: pending
-next_exact_action: "Commit, push, open PR, and request independent audit."
+pr_status: "opened: https://github.com/jonathonreilly/cl3-lattice-framework/pull/551"
+next_exact_action: "Request independent audit of teleportation_acceptance_suite_note."
 stop_condition: "Single selected prompt resolved and PR shipped."

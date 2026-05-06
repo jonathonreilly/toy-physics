@@ -54,5 +54,7 @@ documentation. This branch does not propose retained physics closure.
 
 ## Next Exact Action
 
-Open a PR against `main` and request independent audit of
+PR opened: https://github.com/jonathonreilly/cl3-lattice-framework/pull/551
+
+Next exact action: independent audit of
 `teleportation_acceptance_suite_note`.
