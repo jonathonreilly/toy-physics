@@ -115,6 +115,7 @@ DEFAULT_EDIT_DEADLINE = 900      # 15 min: must have started editing
 DEFAULT_STALE_AFTER = 240        # 4 min stale-kill
 DEFAULT_MODEL = "gpt-5.5"
 DEFAULT_REASONING = "xhigh"
+DIFFICULTY_ORDER = {"easy": 0, "medium": 1, "hard": 2, "unknown": 3}
 
 # Self-screen preamble: codex evaluates difficulty first and may
 # decline cheaply. Detected via a marker string in stdout so the loop
@@ -643,6 +644,16 @@ def main() -> int:
     p.add_argument("--category",
                    choices=CATEGORIES, default=None,
                    help="Restrict to one category")
+    p.add_argument("--difficulty",
+                   default="easy,medium,unknown",
+                   help="Comma-separated difficulty buckets to attempt. "
+                        "Default 'easy,medium,unknown' — skips hard rows "
+                        "(those need human review). Pass "
+                        "'easy,medium,hard,unknown' to attempt everything, "
+                        "or 'easy' for the smallest fast-win batch. Rows "
+                        "without a rating are treated as 'unknown'. The "
+                        "ratings file is produced by "
+                        "scripts/classify_missing_derivations.py.")
     p.add_argument("--claim-id", default=None,
                    help="Run on this specific claim_id only")
     p.add_argument("--retry-failed", action="store_true",
@@ -666,6 +677,15 @@ def main() -> int:
         p.error("--stale-after-sec must be non-negative")
     if args.poll_interval_sec <= 0:
         p.error("--poll-interval-sec must be positive")
+    allowed_difficulties = {
+        d.strip().lower() for d in args.difficulty.split(",") if d.strip()
+    }
+    invalid_difficulties = allowed_difficulties - set(DIFFICULTY_ORDER)
+    if invalid_difficulties:
+        bad = ", ".join(sorted(invalid_difficulties))
+        p.error(f"--difficulty contains invalid bucket(s): {bad}")
+    if not allowed_difficulties:
+        p.error("--difficulty must include at least one bucket")
 
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     run_id = uuid.uuid4().hex[:8]
@@ -696,6 +716,34 @@ def main() -> int:
         candidates = [r for r in candidates if r["category"] == args.category]
     if args.claim_id:
         candidates = [r for r in candidates if r["claim_id"] == args.claim_id]
+
+    # Difficulty filtering + sort. If a difficulty file exists, attach the
+    # rating to each row, restrict to allowed difficulties (default
+    # easy+medium+unknown), and sort easy → medium → hard → unknown so
+    # we attempt fast wins first. Rows without a rating are treated as
+    # "unknown" and included unless --difficulty explicitly excludes them.
+    difficulty_file = REPO_ROOT / "docs" / "audit" / "data" / "missing_derivation_difficulty.json"
+    ratings: dict = {}
+    if difficulty_file.exists():
+        try:
+            ratings = (json.loads(difficulty_file.read_text(encoding="utf-8"))
+                       .get("ratings", {}))
+        except Exception:
+            ratings = {}
+    for r in candidates:
+        rating = ratings.get(r["claim_id"]) or {}
+        difficulty = str(rating.get("difficulty", "unknown")).strip().lower()
+        r["difficulty"] = difficulty if difficulty in DIFFICULTY_ORDER else "unknown"
+
+    # Filter by allowed difficulties.
+    candidates = [r for r in candidates if r["difficulty"] in allowed_difficulties]
+
+    # Sort: easy (rank 0) → medium (1) → hard (2) → unknown (3),
+    # then descendants desc so highest-leverage easy attempted first.
+    candidates.sort(key=lambda r: (
+        DIFFICULTY_ORDER.get(r["difficulty"], 99),
+        -r["descendants"],
+    ))
 
     # Atomic claim: takes the lock, marks N rows as in_progress, and
     # returns them. Other workers running this loop in parallel will skip
@@ -731,7 +779,8 @@ def main() -> int:
     if args.dry_run:
         print("\n[dry-run] Would attempt:")
         for r in targets:
-            print(f"  [{r['category']:<15s}] desc={r['descendants']:4d}  {r['claim_id']}")
+            print(f"  [{r['category']:<15s}] diff={r['difficulty']:<7s} "
+                  f"desc={r['descendants']:4d}  {r['claim_id']}")
         return 0
 
     applied = punted = errored = pr_failed = 0
