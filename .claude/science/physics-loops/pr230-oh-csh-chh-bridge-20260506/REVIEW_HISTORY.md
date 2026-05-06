@@ -34,6 +34,10 @@ Local verification completed:
 - `frontier_yt_pr230_two_source_taste_radial_row_wave_launcher.py`:
   PASS=12 FAIL=0 with `--max-concurrent 2`, recording active chunks001-002
   and launching no extra worker in dry-run/status mode;
+- `frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py`:
+  PASS=2 FAIL=0 for chunk001 and PASS=2 FAIL=0 for chunk002 in
+  `--allow-pending-active` mode; both certificates record active PIDs and no
+  completed row JSON, so they are non-evidence pending checkpoints;
 - `frontier_yt_pr230_taste_radial_canonical_oh_selector_gate.py`: PASS=17
   FAIL=0;
 - `frontier_yt_pr230_two_source_taste_radial_chart_certificate.py`: PASS=22
@@ -52,7 +56,8 @@ Local verification completed:
 - `frontier_yt_pr230_positive_closure_completion_audit.py`: PASS=35 FAIL=0;
 - `bash docs/audit/scripts/run_pipeline.sh`: complete, no errors, audit
   metadata intentionally regenerated for the taste-radial canonical-`O_H`
-  selector note row and updated note hashes;
+  selector and active-pending chunk checkpoint note rows plus updated note
+  hashes;
 - `python3 docs/audit/scripts/audit_lint.py --strict`: no errors, five
   pre-existing warnings;
 - `git diff --check`: clean.

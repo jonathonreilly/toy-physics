@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T15:15:25.544488+00:00",
+  "generated_at": "2026-05-06T15:30:19.263686+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17184,6 +17184,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_two_source_taste_radial_chart_certificate.py"
+    },
+    "yt_pr230_two_source_taste_radial_chunk_checkpoint_note_2026-05-06": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py"
     },
     "yt_pr230_two_source_taste_radial_row_contract_note_2026-05-06": {
       "assert_count": 1,
@@ -35445,6 +35457,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py": {
+      "assert_count": 2,
+      "claims": [
+        "yt_pr230_two_source_taste_radial_chunk_checkpoint_note_2026-05-06"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_two_source_taste_radial_row_contract.py": {
       "assert_count": 1,
       "claims": [
@@ -40745,13 +40772,13 @@
     "decoration_candidates": 107,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 234,
+      "B": 235,
       "C": 512,
       "D": 304,
       "none": 404
     },
-    "runners_classified": 1463,
-    "runners_with_C": 776,
-    "runners_with_D": 556
+    "runners_classified": 1464,
+    "runners_with_C": 777,
+    "runners_with_D": 557
   }
 }

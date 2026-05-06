@@ -125,6 +125,14 @@ row workers with distinct seeds and output directories.  This is still
 run-control support only: active processes, logs, empty directories, and
 partial directories are not `C_sx/C_xx` row evidence.
 
+The per-chunk checkpoint runner is now ready.  In completed mode,
+`YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNK_CHECKPOINT` requires real chunk JSON,
+the matching per-volume artifact, production metadata, `numba_gauge_seed_v1`
+seed control, the preserved three-mass scan, selected-mass-only FH/LSZ/source-
+operator rows, and `C_sx/C_xx` timeseries for the four production modes.
+Pending mode has been run for chunks001-002 and records only active PIDs plus
+the absence of completed row JSON.  Pending checkpoints are non-evidence.
+
 The taste-radial canonical-`O_H` selector surface is now sharpened.  The
 selector gate proves the positive finite-algebra fact: inside the degree-one
 axis span `span{S0,S1,S2}`, the cyclic `Z3` invariant line is uniquely
@@ -149,7 +157,8 @@ Best next work:
 2. launch production `C_sx/C_xx` rows for the exact two-source taste-radial
    source using the no-resume manifest and row contract; chunks001-002 are
    active under the two-worker launcher cap, and after they complete the next
-   action is per-chunk schema gates plus the next bounded wave, then
+   action is rerunning the per-chunk checkpoint without pending mode, then the
+   next bounded wave, then
    prove/reject its canonical-`O_H` identity or supply another bridge; the
    selector gate reduces the identity route to deriving the degree-one
    Higgs-action premise, not merely citing `Z3` symmetry;
